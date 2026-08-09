@@ -1,5 +1,31 @@
 {
-  "lastProcessedContactIds": [],
-  "lastRunAt": null,
-  "totalProcessed": 0
+  "lastProcessedContactIds": [
+    "ctc_4TDd5YHBwJaiC9Nk3",
+    "ctc_BthsCdyJyuD3dD6jn",
+    "ctc_DZuJ5nzCoyy6cWHbY",
+    "ctc_GoMDaEMKJRtpf3Rcw",
+    "ctc_D3GfF2rgobBB4bQAe",
+    "ctc_2AJcyGjLozyisLHG8",
+    "ctc_DodMdktEF7CX4Ewxh",
+    "ctc_5oFsztEcSQzabBg6n",
+    "ctc_4uSRtEPLmq73GHBvq",
+    "ctc_6M9MTHK6TH8JpLYMw",
+    "ctc_CX8fQRedM6afmskG6",
+    "ctc_F4QnvCmims3Tyg2gs",
+    "ctc_E5FwxycX7v2A7Lnne",
+    "ctc_GwStrBbpbRc3ka5Rv",
+    "ctc_6Pw9susMYG2pPGavc",
+    "ctc_HYHn8K8D8JYxh77dR",
+    "ctc_4nvLtLRpwejmuTuH9",
+    "ctc_Gebd9z7oKnQrNNWjy",
+    "ctc_696ZnpZGm5PHjWwBL",
+    "ctc_8ZqpsPA2mQ2Wztx4p",
+    "ctc_2mypsT4g6S9jsbzoP",
+    "ctc_7cJab6sLMXtxc6mN6",
+    "ctc_D5F2nC69pjMjAuvk2",
+    "ctc_4bNdNptqov3SdpjGc",
+    "ctc_2qids6yFoikvs2Jex"
+  ],
+  "lastRunAt": "2026-08-09T20:30:00Z",
+  "totalProcessed": 25
 }
