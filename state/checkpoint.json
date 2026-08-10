@@ -1,5 +1,9 @@
 {
-  "lastProcessedContactIds": [],
-  "lastRunAt": null,
-  "totalProcessed": 0
+  "lastProcessedContactIds": [
+    "ctc_2mypsT4g6S9jsbzoP",
+    "ctc_4uSRtEPLmq73GHBvq",
+    "ctc_A3ku5pTFGPBpGw5NC"
+  ],
+  "lastRunAt": "2026-08-10T00:00:00Z",
+  "totalProcessed": 3
 }
