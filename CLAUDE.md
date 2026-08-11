@@ -64,16 +64,22 @@ plain commit message like `pipeline: process N contacts, YYYY-MM-DD`.
 2. Pull contacts from `New Businesses` (`clt_Zzi8BjZSMvbEH9ihr`) via
    `search_contacts` (paginate with `limit`/`offset`), skip any contact ID
    already in the checkpoint's `lastProcessedContactIds`.
-3. For each new contact, look up its linked company (`companyId`) to get
-   `companyName`, `companyDomain`/website, `companyDescription`,
-   `companyFoundedOn`, `companyIndustry`, `companyLocation` (fallback to the
-   contact's own `location` field if company location is empty). Apply the
-   input pre filter from the spec: only carry the 11 listed fields forward,
-   nothing else.
+3. For each new contact, pull its full lemlist record via
+   `call_api GET /contacts/{id}` (load the `api-reference` skill first,
+   once per session) — **not** a company lookup, see the Efficiency
+   playbook below for why. Read `fields.summary`, `fields.tagline`, and
+   `fields.jobDescription`: these usually name the company and often
+   contain a genuine recency signal ("I founded X this year", "in
+   Gründung", "we launched on..."). Apply the input pre filter from the
+   spec conceptually — carry forward only what's needed for Stage 1/2/4,
+   don't quote the raw dump back into state files.
 4. Run Stage 1 through Stage 5 exactly as specified in
    `docs/enrichment-pipeline-spec.md` for each contact, using WebSearch/
-   WebFetch for research. Use `companyFoundedOn`/`companyDescription` as
-   starting hypotheses per the spec, never as unverified fact.
+   WebFetch for research (see search budget in the Efficiency playbook).
+   Treat the contact's own self-reported `summary`/`tagline` language as a
+   starting hypothesis per the spec, never as unverified fact — it still
+   needs at least one independent corroboration attempt before HIGH
+   confidence.
 5. Append the result to `state/enriched_leads.jsonl`. Route:
    - `EXCLUDE` → record only, never imported.
    - Tier 1 (`campaignEligibility = INCLUDE` AND `businessLaunchStatus =
@@ -132,6 +138,48 @@ Weekly, independent of the Tier 2 review: pull 5 to 10 `TIER_1` rows from
 `state/enriched_leads.jsonl` that were actually imported and confirm in
 lemlist they actually sent, surface them to Raka for a quick skim. This is
 informational only, never blocks anything.
+
+## Efficiency playbook (learned 2026-08-10/11, read before starting a run)
+
+The single biggest cost driver is **WebSearch/WebFetch research per
+contact**, not lemlist API calls — lemlist pulls are cheap and paginated.
+Don't try to save cost by feeding contacts from a manually uploaded
+CSV/XLSX instead of `search_contacts`; it doesn't reduce the actual cost
+(research is identical either way) and it breaks the point of this being
+an unattended Cloud Routine (no human is there to upload a file each day).
+CSV input stays what the spec says it is: fine for one-off manual test
+runs, never the standing source.
+
+- **There is no lemlist company-record lookup.** `search_companies` only
+  returns `id`/`name`/`domain`/`crmSyncStatus` — no description, founded
+  date, or industry — and there is no `GET /companies/{id}` endpoint
+  (`call_api` will reject it, the catalog only has `GET /companies` list
+  and `/notes`). Don't spend a call rediscovering this. Go straight to
+  `call_api GET /contacts/{id}` for the full lemlist-enriched contact
+  record (`summary`/`tagline`/`jobDescription` usually name the company),
+  then corroborate with WebSearch/WebFetch. If a contact's record has none
+  of those three fields and no company name anywhere, that's a fast
+  `EXCLUDE` (no identifiable company) — don't burn a search on it.
+- **Cap research per contact.** One WebSearch to find/confirm the launch
+  and company identity, one more only if the first was ambiguous, one
+  WebFetch on the actual site if a domain was found. If a second targeted
+  search for a website/domain comes up empty, conclude `NO_WEBSITE` (or
+  `UNKNOWN` if genuinely inconclusive) and move on — don't keep trying
+  domain variations. Diminishing returns past ~3 tool calls per contact.
+- **Batch tool calls aggressively.** Pull a full page of contacts, then
+  fire all the `GET /contacts/{id}` calls for that page in one message
+  (parallel), then all the WebSearches for the promising ones in one
+  message, then all the WebFetches. Don't go contact-by-contact
+  sequentially.
+- **Commit once per batch (~15-20 contacts), not per contact.** The spec's
+  "or after every contact for a long batch" is about crash resilience for
+  a genuinely long unattended run, not a reason to commit after every
+  single row in an interactive session.
+- **Talk less mid-run.** Don't narrate every batch to Raka. Only surface:
+  a Tier 1/Tier 2-INCLUDE hit as it happens (or batch these and mention
+  once at the end), a genuine blocker, or the final end-of-session tally
+  (processed / tier breakdown / queue size / remaining count). The run log
+  file is the detailed record — the chat reply doesn't need to duplicate it.
 
 ## Guardrails (non negotiable, re read before generating any message)
 
