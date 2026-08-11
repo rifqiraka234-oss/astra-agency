@@ -12,6 +12,22 @@ context. Everything you need is below and in `docs/enrichment-pipeline-spec.md`.
 ## Live configuration
 
 - **Source contact list (lemlist):** `New Businesses` — `clt_Zzi8BjZSMvbEH9ihr`
+  — **critical, changes Stage 1 entirely (2026-08-11):** Raka built this
+  list by filtering lemlist for companies created in 2026. Every contact
+  in it is already a confirmed recent launch — that's the point of the
+  list. There is no need to hunt a contact's bio/tagline/summary for a
+  recency phrase before treating `businessLaunchStatus = QUALIFIED`; list
+  membership itself is the evidence. Default every contact to `QUALIFIED`,
+  `businessLaunchConfidence = MEDIUM`, `howLongAgoBusinessWasCreated =
+  "recently"` (exact month is essentially never knowable from this alone,
+  so don't claim one) unless something *specifically contradicts* a 2026
+  founding — e.g. the contact's own bio says "27 years' experience", "since
+  2012", "established", lists multiple older sister companies, or is
+  clearly an employee describing someone else's company. Those are real
+  counter-evidence and should still route to EXCLUDE/DO_NOT_USE. This
+  means Stage 1 is rarely the bottleneck anymore — **spend the research
+  budget on Stage 2 (the website check) instead**, which is now the actual
+  decision point for INCLUDE vs EXCLUDE on nearly every contact.
 - **Target campaign (lemlist):** `Small Business Owners v0.2 - Auto Enrichment Pipeline` — `cam_Co5CJXrpPFf5MRAfD`
   - Its sequence already uses `{{connectionMessage}}` (LinkedIn invite step),
     `{{firstMessage}}` (message step, +1 day after acceptance), and native
@@ -208,12 +224,17 @@ runs, never the standing source.
   then corroborate with WebSearch/WebFetch. If a contact's record has none
   of those three fields and no company name anywhere, that's a fast
   `EXCLUDE` (no identifiable company) — don't burn a search on it.
-- **Cap research per contact.** One WebSearch to find/confirm the launch
-  and company identity, one more only if the first was ambiguous, one
-  WebFetch on the actual site if a domain was found. If a second targeted
-  search for a website/domain comes up empty, conclude `NO_WEBSITE` (or
-  `UNKNOWN` if genuinely inconclusive) and move on — don't keep trying
-  domain variations. Diminishing returns past ~3 tool calls per contact.
+- **Cap research per contact.** Since list membership already confirms the
+  launch (see Live configuration above), research is mostly Stage 2 now:
+  one WebSearch to find the company's site/domain and confirm identity,
+  one more only if the first was ambiguous, one WebFetch on the actual
+  site if a domain was found. If a second targeted search for a
+  website/domain comes up empty, conclude `NO_WEBSITE` — that's a
+  confident, good finding (see "Always try to find a way" above), not a
+  reason to keep trying domain variations. Diminishing returns past ~3
+  tool calls per contact. Only spend extra effort re-verifying launch
+  recency when the contact's own bio actively contradicts a 2026 founding
+  (established language, decades of experience, sister companies, etc).
 - **Batch tool calls aggressively.** Pull a full page of contacts, then
   fire all the `GET /contacts/{id}` calls for that page in one message
   (parallel), then all the WebSearches for the promising ones in one
