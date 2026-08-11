@@ -178,7 +178,9 @@
       "lastSeenMessageId": null,
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "gone quiet, nudge drafted but blocked by send classifier, not sent, needs manual send"
+      "note": "gone quiet, nudge sent",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T13:25:00Z"
     },
     "ctc_Roay3mSCp4ztAot4y": {
       "name": "Basile Marin",
@@ -275,7 +277,9 @@
       "lastSeenMessageId": null,
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "gone quiet, nudge drafted but blocked by send classifier, not sent, needs manual send"
+      "note": "gone quiet, nudge sent",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T13:25:00Z"
     },
     "ctc_7QufSv5sHv8RWkDQL": {
       "name": "Isabela Tatu",
@@ -291,7 +295,9 @@
       "lastSeenMessageId": null,
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "gone quiet, nudge drafted but blocked by send classifier, not sent, needs manual send"
+      "note": "gone quiet, nudge sent",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T13:25:00Z"
     },
     "ctc_mtAHtNJCe4eghc4fv": {
       "name": "Dr. Ragueneau",
@@ -326,7 +332,9 @@
       "lastSeenMessageId": null,
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "gone quiet, nudge drafted but blocked by send classifier, not sent, needs manual send"
+      "note": "gone quiet, nudge sent",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T13:25:00Z"
     },
     "ctc_3HtSsCH34mMAJXgce": {
       "name": "Johannes Quandt",
@@ -352,7 +360,9 @@
       "lastSeenMessageId": null,
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "gone quiet, nudge drafted but blocked by send classifier, not sent, needs manual send"
+      "note": "gone quiet, nudge sent",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T13:25:00Z"
     },
     "ctc_gYojjp3yXSMEoyiQs": {
       "name": "David Jonker",
@@ -360,7 +370,9 @@
       "lastSeenMessageId": null,
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "gone quiet, nudge drafted but blocked by send classifier, not sent, needs manual send"
+      "note": "gone quiet, nudge sent",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T13:25:00Z"
     },
     "ctc_NLT572WpHSbpp9NFA": {
       "name": "Dennis Bollien",
@@ -368,7 +380,9 @@
       "lastSeenMessageId": null,
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "gone quiet, nudge drafted but blocked by send classifier, not sent, needs manual send"
+      "note": "gone quiet, nudge sent",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T13:25:00Z"
     },
     "ctc_Sfs4z7sXcofYGjL6B": {
       "name": "Paul Hanson",
@@ -376,7 +390,9 @@
       "lastSeenMessageId": null,
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "gone quiet, nudge drafted but blocked by send classifier, not sent, needs manual send"
+      "note": "gone quiet, nudge sent",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T13:25:00Z"
     },
     "ctc_KrAFP3esh4PjKjomW": {
       "name": "Maria Machado",
