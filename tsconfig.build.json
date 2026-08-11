@@ -1,0 +1,10 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/core" },
+    { "path": "packages/prompts" },
+    { "path": "packages/db" },
+    { "path": "packages/integrations" },
+    { "path": "apps/worker" }
+  ]
+}

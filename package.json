@@ -1,0 +1,43 @@
+{
+  "name": "astra-reply-agent",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Astra Agency autonomous Lemlist reply agent: guarded sales workflow with a deterministic controller.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "tsc -b tsconfig.build.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:unit": "vitest run --project unit",
+    "test:integration": "vitest run --project integration",
+    "test:watch": "vitest",
+    "db:migrate": "tsx packages/db/src/cli/migrate.ts",
+    "db:seed": "tsx packages/db/src/cli/seed.ts",
+    "dev": "./scripts/dev.sh",
+    "dev:worker": "npm run dev --workspace @astra/worker",
+    "dev:dashboard": "npm run dev --workspace @astra/dashboard",
+    "check": "npm run lint && npm run typecheck && npm run test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "tsx": "^4.23.12",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.67.0",
+    "vitest": "^2.1.8"
+  }
+}

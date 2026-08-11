@@ -1,0 +1,25 @@
+{
+  "$schema": "./scheduling.schema.json",
+  "version": 1,
+  "timezone": "Europe/Amsterdam",
+  "workingDays": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"],
+  "workday": {
+    "start": "09:00",
+    "end": "18:00"
+  },
+  "recurringExclusions": [
+    {
+      "label": "Monday internal sync",
+      "weekday": "MONDAY",
+      "start": "10:30",
+      "end": "11:15"
+    },
+    {
+      "label": "Tuesday team standup",
+      "weekday": "TUESDAY",
+      "start": "09:30",
+      "end": "10:30"
+    }
+  ],
+  "blackoutDates": []
+}
