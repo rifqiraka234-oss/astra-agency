@@ -1,0 +1,6 @@
+# Prototype HTML files and research summaries are working artifacts of the
+# prototype build pipeline (docs/prototype-build-spec.md). They live on
+# Netlify once hosted and can be regenerated from state/prototypes.jsonl
+# plus the spec, so per CLAUDE.md they are intentionally not committed here,
+# only the metadata row and, once a meeting is booked, the meeting brief are.
+state/prototypes/
