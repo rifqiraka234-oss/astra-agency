@@ -46,6 +46,13 @@ files as the database:
   Raka go/no go. Cleared (not deleted, truncated to empty) once a batch is
   approved and imported; approved/rejected rows get appended to
   `state/tier2_history.jsonl` with a `decision` field for the record.
+- `state/tier2_queue.md` — human readable mirror of `tier2_queue.jsonl`,
+  regenerated (fully overwritten, not appended) every time the JSONL
+  changes. Raka reads this one, not the JSON — one table row per contact
+  (name, company, why it's stuck, what's been tried) grouped under a short
+  header explaining these are genuinely blocked, not just under-researched
+  (see "Always try to find a way" below). Keep it short enough to skim in
+  under a minute.
 - `logs/failures.jsonl` — one entry per contact that could not be processed
   (site totally unreachable after retry, lemlist API error, etc), with
   `contactId`, `reason`, `timestamp`. Never silently drop a contact — either
@@ -102,6 +109,10 @@ plain commit message like `pipeline: process N contacts, YYYY-MM-DD`.
      congratulations message here would violate the no-fabrication
      guardrail below. They only leave the queue by being re-researched to a
      confident `INCLUDE`/`EXCLUDE`, or via the weekly digest.
+   Before parking a contact in Tier 2/REVIEW, apply the "Always try to
+   find a way" rule below — most rows resolve to a confident `INCLUDE`
+   or `EXCLUDE` with a bit more digging, and `NO_WEBSITE` is itself a
+   confident, good answer, not a reason to give up.
 6. Add the contact ID to `checkpoint.json`'s `lastProcessedContactIds` and
    update `lastRunAt`/`totalProcessed` as you go (so a crash mid batch loses
    at most the in flight contact, not the whole run).
@@ -121,16 +132,16 @@ plain commit message like `pipeline: process N contacts, YYYY-MM-DD`.
 ## Weekly Tier 2 review procedure
 
 This now only covers `state/tier2_queue.jsonl` rows still stuck at
-MANUAL_REVIEW/DO_NOT_USE (Tier 2/INCLUDE rows no longer wait here, see
-above). Once a week, read the queue in full, present it as a single digest
-to Raka (not per contact prompts): counts by reason
-(`DO_NOT_USE` / `MANUAL_REVIEW` / `LOW website confidence`), and the full
-list of contacts — most will have no drafted message, since the facts
-weren't solid enough to write one without fabricating. Wait for a
-single go/no go. On approval, import the approved subset the same way as
-Tier 1 (step 7 above), append every row (approved and rejected) to
-`state/tier2_history.jsonl` with a `decision` field, and truncate
-`state/tier2_queue.jsonl` to empty. Commit and push.
+MANUAL_REVIEW/DO_NOT_USE after applying "Always try to find a way" above
+(Tier 2/INCLUDE rows no longer wait here, see above) — this should be a
+short list. Once a week, regenerate `state/tier2_queue.md` and point Raka
+at it directly (not per contact prompts, not a JSON dump): counts by
+reason, and for each contact why it's genuinely stuck and what's already
+been tried. Wait for a single go/no go. On approval, import the approved
+subset the same way as Tier 1 (step 7 above), append every row (approved
+and rejected) to `state/tier2_history.jsonl` with a `decision` field, and
+truncate both `state/tier2_queue.jsonl` and `state/tier2_queue.md` to
+empty. Commit and push.
 
 ## Standing spot check
 
@@ -138,6 +149,43 @@ Weekly, independent of the Tier 2 review: pull 5 to 10 `TIER_1` rows from
 `state/enriched_leads.jsonl` that were actually imported and confirm in
 lemlist they actually sent, surface them to Raka for a quick skim. This is
 informational only, never blocks anything.
+
+## Always try to find a way (learned 2026-08-11)
+
+`NO_WEBSITE` is a good outcome, not a failure to find something. A
+confirmed absence of a website is exactly the defensible gap Stage 3
+wants — it's as usable as PLACEHOLDER/BASIC for a Tier 2/INCLUDE draft,
+often with the cleanest angle of all ("there's nothing to find you with
+yet"). Don't treat "couldn't find a site" as a research dead end that
+routes to Tier 2/REVIEW by default. The mindset is: keep trying to reach a
+confident `INCLUDE` or `EXCLUDE` before accepting `MANUAL_REVIEW`.
+
+When the first pass (per the search budget below) doesn't resolve a
+contact, spend 2-3 more targeted searches before giving up — this
+consistently resolves most of what would otherwise sit in the queue:
+- A company registry search (Companies House for UK, KVK for NL, a
+  Handelsregister/Zefix equivalent elsewhere) — confirms the company is
+  real and sometimes gives an exact founding date.
+- The contact's other social presence (X/Twitter, Instagram, a personal
+  portfolio site) — sometimes surfaces a company site or launch post that
+  a plain web search misses.
+- A direct domain guess and fetch (company-name.com/.co.uk/.nl/.fr) —
+  faster than another round of search when a name is distinctive.
+- If a contact's own claimed self-report conflicts with something else
+  found (an old "preparing to launch" mention vs. a current "already
+  operating" bio, for instance), treat the contact's own *current*
+  profile as the primary source — people update their own bios; a stale
+  cached mention doesn't override that.
+
+Only stop at `MANUAL_REVIEW` for reasons that no amount of searching
+fixes: the underlying fact is genuinely undisclosed by the business
+itself (e.g. "details not yet revealed"), the venture is explicitly
+pre-commercial with no product or customers yet (early-stage R&D, not a
+going concern to pitch a website fix to), or there's a real, irreconcilable
+conflict in what's found. Write the *reason* it's stuck (not just "low
+confidence") into `businessLaunchSource`/`websiteAnalysisSource` so the
+next pass — or Raka reading `tier2_queue.md` — knows whether it's worth
+trying again.
 
 ## Efficiency playbook (learned 2026-08-10/11, read before starting a run)
 
