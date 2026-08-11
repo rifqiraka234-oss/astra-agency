@@ -168,6 +168,16 @@ itself.
   "lastDigestDate", "campaignId" } } }`. `lastRunAt` feeds next run's
   `dateFilter.from` on `get_inbox_conversations`. The `threads` map is how a
   tier carries forward for an unchanged thread without re reading it.
+- `state/silent_accepted_queue.jsonl` — the Silent accepted backlog queue
+  (leadId, name, company, campaignId, acceptedDate, daysSinceAccept), one
+  row per lead still awaiting a genuine opener. Confirmed 2026-08-11: v0.1
+  has no automated second-touch step, so this queue only shrinks when
+  someone actually drafts and sends an opener, it will not resolve itself.
+  A full 513-lead scan is expensive (11 `search_campaign_leads` calls with
+  `include: ["activities"]`); do not repeat it daily. Re scan only when the
+  queue needs refreshing (e.g. weekly, or after a batch of openers has been
+  sent), and in between just note new accepts surfaced incidentally by the
+  regular daily pull.
 - `state/inbox_digest_log.jsonl` — one JSON object per contact per run this
   routine actually reported on (append only): `date`, `contactId`,
   `companyName`, `tier`, `section` (matches the digest's own section names),
