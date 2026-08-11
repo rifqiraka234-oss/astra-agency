@@ -228,6 +228,13 @@ runs, never the standing source.
   once at the end), a genuine blocker, or the final end-of-session tally
   (processed / tier breakdown / queue size / remaining count). The run log
   file is the detailed record — the chat reply doesn't need to duplicate it.
+- **Standing rule (2026-08-11): never reply with prose unless something
+  actually needs Raka's input** (a genuine blocker, a question, a rule
+  change confirmation). Routine batch results go in a compact markdown
+  table only — columns: Name, Company, Research finding, Outcome, Tier,
+  Connection message, First message (blank the last two for EXCLUDE rows).
+  No summary paragraph above or below the table. This is a standing
+  reporting format, not a one-off for a single run.
 
 ## Guardrails (non negotiable, re read before generating any message)
 
