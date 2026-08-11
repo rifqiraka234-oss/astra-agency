@@ -35,6 +35,10 @@ This routine only tiers and suggests. It never sends anything itself.
 - **[`CLAUDE.md`](CLAUDE.md)** — the concrete procedure a Claude Code session
   (interactive or a Cloud Routine firing) follows for either routine, with
   live lemlist IDs and state file formats.
+- **[`docs/astra-master-context.md`](docs/astra-master-context.md)** — who
+  ASTRA is, who it sells to, its four service lines and pricing, and the
+  voice/message rules behind every outreach message either routine drafts.
+  Read this before drafting a message, not just the pipeline mechanics.
 - **State lives in git** because Cloud Routine firings get a fresh, stateless
   container each time; the committed `state/` and `logs/` files are the only
   thing that persists between runs.

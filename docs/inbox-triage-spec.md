@@ -137,10 +137,16 @@ this project:
 - For Hot and Warm tiers, the message must actually respond to what the
   contact said, referencing their specific question or comment, not a
   generic template.
-- For Silent accepted, use the same opener structure as the connection/first
-  message templates in the enrichment pipeline spec's Stage 4, only if that
-  has genuinely not been sent yet, check the thread first rather than
-  assuming.
+- For Silent accepted, use the same opener structure and 65 word ceiling as
+  the first message template in the enrichment pipeline spec's Stage 4, only
+  if that has genuinely not been sent yet, check the thread first rather
+  than assuming. That template requires the same real research per contact
+  (a genuine synthesis, a real structural problem, a named concept) that the
+  enrichment pipeline does, it is not a lighter-weight version, drafting 40+
+  of these is sized as its own batch job, not a same-day digest task. See
+  `docs/astra-master-context.md` section 9 for voice and wording, and
+  section 13 for prospects with an already-established angle or correction,
+  do not re-derive an angle from scratch for someone already in that table.
 - Stalled tier gets a short, low pressure optional nudge suggestion, not a
   hard sell.
 

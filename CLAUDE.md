@@ -12,9 +12,20 @@ derived from them. They share the same message guardrails (no dashes, never
 fabricate) and the same git-committed state-file pattern, since both run as
 stateless Cloud Routine containers.
 
+Before drafting any outreach message in either routine, also read
+**`docs/astra-master-context.md`** — the business identity, ideal client
+profile, service lines (Grow / Optimise / Innovate / Build Squad), pricing
+framework, voice and writing rules, and named-prospect history behind every
+message this repo sends. It is the source of truth for *how* to write a
+message and *which ASTRA service actually fits a given lead*; the two specs
+above are the source of truth for the mechanical pipeline that gets a
+message written and sent. If the master context and a spec ever disagree on
+wording or a number, a live correction from Raka in the current conversation
+outranks both (see the truth hierarchy at the top of that doc).
+
 You are reading this either because a human started an interactive session
 in this repo, or because a Cloud Routine fired a fresh session with no other
-context. Everything you need is below and in the two spec files above.
+context. Everything you need is below and in the three docs above.
 
 ## Enrichment pipeline
 
