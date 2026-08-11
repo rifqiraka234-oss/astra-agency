@@ -51,39 +51,51 @@ session/container unless copied over first.
      stated budget constraint.
    - Netlify site name to use: `astra-that-animation-company-prototype`.
 
-3. **Voortman & Baumhauer** (Rosalie Voortman) — IN PROGRESS, NOT YET REVIEWED.
-   - Important context surfaced during this build's research: Voortman &
-     Baumhauer is a **funeral/memorial photography studio**
-     (uitvaartfotografie, Dutch), not a generic branding/portrait business.
-     Confirmed via web search (rememberme.nl coverage of a 2025 Dutch
-     Funeral Awards win, their own site voortman-baumhauer.nl/about). This
-     matters a lot for tone: nothing celebratory/sales-punchy, register
-     should match the gravity of the subject matter.
+3. **Voortman & Baumhauer / Rosalie Voortman** — DONE, agent-reviewed with
+   high self-QA scores, still needs a human sanity read before sending
+   given the premise correction below.
    - `state/prototypes/voortman-baumhauer/VoortmanBaumhauer_Prototype.html`
-     exists now (711 lines, ~385KB), title tag currently reads "For Your
-     Brand — Rosalie Voortman Photography." No research summary `.md` file
-     has been written yet.
-   - As of this handoff the background agent (`ae43d72f5ebd6a641`, this
-     session) was STILL ACTIVELY EDITING the file (last observed action: a
-     CSS tweak via Edit, no completion message yet). Do not assume it's
-     finished. First attempt (before this one) crashed on a platform
-     session-limit error with zero output; this is the second attempt,
-     prompted to self-QA score early to avoid losing work to another crash.
-   - Whoever picks this up: check current state of that file first (it may
-     have finished, or crashed again mid-edit, since this note was written).
-     Read the whole HTML file plus any research summary before trusting it.
-     Apply the exact same review already done on the other two: valid
-     doctype/viewport, external deps limited to fonts/properly-licensed
-     images, no dead `href="#"`, `prefers-reduced-motion` present, and
-     re-verify the title tag and all copy actually match Rosalie's real
-     business (funeral photography) rather than generic "brand photography"
-     boilerplate, given the mismatched title tag observed above. If it
-     stalled or the content doesn't fit the funeral-photography context,
-     relaunch following `docs/prototype-build-spec.md` Steps 1-9, using the
-     other two research summaries as the quality/rigor bar, and make sure
-     the prompt explicitly states the studio's actual subject matter and
-     register up front.
-   - Netlify site name to use: `astra-voortman-baumhauer-prototype`.
+     (385KB, single self-contained file, images embedded as base64, only
+     external dep is Google Fonts)
+   - `state/prototypes/voortman-baumhauer/VoortmanBaumhauer_Research_Summary.md`
+     (170 lines)
+   - Checked: 0 dead `href="#"`, `prefers-reduced-motion` present, JS
+     syntax-checked with `node --check`.
+   - **Important premise correction found during research, read before
+     sending anything:** the original brief assumed "Voortman & Baumhauer"
+     was one wedding+funeral business with brand work buried inside. Live
+     evidence doesn't support that. There are two separate real sites:
+     `voortman-baumhauer.nl` (joint brand with Malou von Baumhauer) is
+     **100% funeral/memorial photography** (uitvaartfotografie), nothing
+     else on it. The site that actually matches the original outreach
+     critique (mixed Dutch/English, wedding-led, a buried "Brands" chapter)
+     is Rosalie's **own separate site, `rosalievoortman.com`**, which
+     already has a real (if thin) Brands page with three published
+     packages (€450/€695/€995). The agent built the prototype against that
+     real page, not the funeral-photography joint site. This is flagged in
+     the research summary as a hypothesis not yet confirmed by Rosalie
+     herself, and is worth a one-line confirmation before sending: make
+     sure the outreach thread this replies to was actually about
+     `rosalievoortman.com`, not the funeral-photography joint brand, before
+     using this prototype.
+   - Concept: "One shoot, everywhere it needs to work" — pick one of 3
+     illustrative small-business archetypes, then a destination (Website
+     Hero / Instagram Grid / Press Kit / Pitch Deck); same photo drops into
+     all 4 live mockups while a problem/direction/use panel updates
+     alongside. Reuses Rosalie's real chapter names and real pricing
+     verbatim. Bespoke film-contact-sheet design motif (Fraunces + Work
+     Sans + Caveat), distinct from the other two prototypes.
+   - Self-QA came back 8-10/10 across all 10 criteria; only mobile
+     experience scored 8 (CSS/DOM verified statically, never opened in an
+     actual browser/device since none was available to that agent) — do an
+     actual browser open before sending, not just a code read.
+   - One cosmetic loose end: the HTML `<title>` tag still reads "For Your
+     Brand — Rosalie Voortman Photography" (generic), left over from before
+     the premise correction; worth a quick check that no other stray
+     "brand photography" boilerplate slipped through elsewhere in the copy.
+   - Netlify site name to use: `astra-voortman-baumhauer-prototype`
+     (keeping this name since it matches how the lead is filed in lemlist,
+     even though the actual site being pitched is `rosalievoortman.com`).
 
 ## Netlify hosting (blocked in this session, should work in the other one)
 
