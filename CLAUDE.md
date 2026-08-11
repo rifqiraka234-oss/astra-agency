@@ -1,15 +1,24 @@
-# Astra Agency — Enrichment Pipeline: operating playbook
+# Astra Agency — Operating playbook
 
-This repo drives the automated contact enrichment pipeline described in
-`docs/enrichment-pipeline-spec.md` (source of truth — read it in full before
-running anything; this file is the concrete, repo-specific operating
-procedure derived from it).
+This repo drives two related automated routines:
+
+1. The **contact enrichment pipeline**, described in
+   `docs/enrichment-pipeline-spec.md`.
+2. The **daily inbox triage**, described in `docs/inbox-triage-spec.md`.
+
+Both specs are source of truth — read the relevant one in full before running
+anything; this file is the concrete, repo-specific operating procedure
+derived from them. They share the same message guardrails (no dashes, never
+fabricate) and the same git-committed state-file pattern, since both run as
+stateless Cloud Routine containers.
 
 You are reading this either because a human started an interactive session
 in this repo, or because a Cloud Routine fired a fresh session with no other
-context. Everything you need is below and in `docs/enrichment-pipeline-spec.md`.
+context. Everything you need is below and in the two spec files above.
 
-## Live configuration
+## Enrichment pipeline
+
+### Live configuration
 
 - **Source contact list (lemlist):** `New Businesses` — `clt_Zzi8BjZSMvbEH9ihr`
 - **Target campaign (lemlist):** `Small Business Owners v0.2 - Auto Enrichment Pipeline` — `cam_Co5CJXrpPFf5MRAfD`
@@ -25,7 +34,7 @@ context. Everything you need is below and in `docs/enrichment-pipeline-spec.md`.
   automatically the first time they're written via `update_lead_variables`
   or a CSV `columnMapping`).
 
-## State files (this is how a stateless daily container resumes work)
+### State files (this is how a stateless daily container resumes work)
 
 Every Cloud Routine firing gets a fresh container. The only thing that
 persists between firings is what's committed to this git branch. Treat these
@@ -58,7 +67,7 @@ Commit and push all state file changes at the end of every run (or after
 every contact for a long batch, so an interrupted run loses no work). Use a
 plain commit message like `pipeline: process N contacts, YYYY-MM-DD`.
 
-## Daily run procedure
+### Daily run procedure
 
 1. `git pull` the working branch. Read `state/checkpoint.json`.
 2. Pull contacts from `New Businesses` (`clt_Zzi8BjZSMvbEH9ihr`) via
@@ -97,7 +106,7 @@ plain commit message like `pipeline: process N contacts, YYYY-MM-DD`.
    unattended, per the spec's explicit warning about field name mismatches.
 8. Write `logs/runs/YYYY-MM-DD.md` with the run summary. Commit and push.
 
-## Weekly Tier 2 review procedure
+### Weekly Tier 2 review procedure
 
 Once a week, read `state/tier2_queue.jsonl` in full, present it as a single
 digest to Raka (not per contact prompts): counts by reason
@@ -108,14 +117,14 @@ Tier 1 (step 7 above), append every row (approved and rejected) to
 `state/tier2_history.jsonl` with a `decision` field, and truncate
 `state/tier2_queue.jsonl` to empty. Commit and push.
 
-## Standing spot check
+### Standing spot check
 
 Weekly, independent of the Tier 2 review: pull 5 to 10 `TIER_1` rows from
 `state/enriched_leads.jsonl` that were actually imported and confirm in
 lemlist they actually sent, surface them to Raka for a quick skim. This is
 informational only, never blocks anything.
 
-## Guardrails (non negotiable, re read before generating any message)
+### Guardrails (non negotiable, re read before generating any message)
 
 - Never use hyphens, en dashes, or em dashes (`-`, `–`, `—`) anywhere in
   `connectionMessage` or `firstMessage`, or in any field that feeds into
@@ -131,3 +140,74 @@ informational only, never blocks anything.
 - If the `cam_Co5CJXrpPFf5MRAfD` campaign is still in draft status, keep
   importing Tier 1 leads into it as normal, that's expected until Raka
   turns it on.
+
+## Daily inbox triage
+
+Full spec: `docs/inbox-triage-spec.md`. Produces a digest of who Raka needs
+to reply to across all active LinkedIn conversations. Never sends anything
+itself.
+
+### Live configuration
+
+- **Active campaigns to cover:** any campaign with status `running` (check
+  fresh each run via `get_campaigns` with no status filter, campaigns can
+  change status between runs). As of the last check, only
+  `cam_PryZp5LuvQv8NznHh` (`Small Business Owners v0.1 - Outreach Only`) is
+  running; `cam_Co5CJXrpPFf5MRAfD` (v0.2) stays in scope automatically once
+  Raka turns it on, no code change needed since scope is status-driven, not
+  a hardcoded ID list.
+- Do not cover `draft`, `paused`, `ended`, or `archived` campaigns, they have
+  no live LinkedIn activity to triage.
+
+### State files
+
+- `state/inbox_checkpoint.json` — `{ "lastRunAt": "<ISO8601 or null>",
+  "threads": { "<contactId>": { "lastSeenMessageId", "tier",
+  "lastDigestDate", "campaignId" } } }`. `lastRunAt` feeds next run's
+  `dateFilter.from` on `get_inbox_conversations`. The `threads` map is how a
+  tier carries forward for an unchanged thread without re reading it.
+- `state/inbox_digest_log.jsonl` — one JSON object per contact per run this
+  routine actually reported on (append only): `date`, `contactId`,
+  `companyName`, `tier`, `section` (matches the digest's own section names),
+  and the suggested message text if one was drafted. This is the audit trail
+  of every digest ever produced.
+- `logs/inbox/YYYY-MM-DD.md` — the actual digest sent to Raka that day, in
+  the exact output format from the spec. If nothing needed attention, this
+  still gets written with the one-line "nothing today" note, so the run
+  history has no silent gaps.
+
+### Daily run procedure
+
+1. `git pull`. Read `state/inbox_checkpoint.json`. First run ever: treat
+   `lastRunAt` as absent and do one full pull to seed the checkpoint (this
+   is the only run that isn't cheap).
+2. `get_campaigns` (no status filter) to find every `running` campaign id.
+3. `get_inbox_conversations` with `campaignFilter.in` set to those ids and
+   `dateFilter.from` = the checkpoint's `lastRunAt` (omit `dateFilter` on the
+   seed run). Paginate fully within this filtered result set.
+4. For the Silent accepted cross check: call `get_contact_fields_schema`
+   once, then `search_campaign_leads` per running campaign with `fields`
+   including whichever field reflects LinkedIn connection status. Any
+   connected lead whose contact ID is not in step 3's result set is a Silent
+   accepted candidate this run.
+5. For every contact surfaced by step 3 or step 4, run Steps 1 to 5 from the
+   spec (reply status, context via `get_inbox_conversation`, tier, draft,
+   mockup/research flags). For contacts not surfaced by either, carry their
+   `tier` forward from `state/inbox_checkpoint.json` unchanged, no tool calls
+   spent on them.
+6. Update `state/inbox_checkpoint.json`: new `lastRunAt` (this run's start
+   time), and each touched contact's `lastSeenMessageId`/`tier`.
+7. Append every contact actually in today's digest to
+   `state/inbox_digest_log.jsonl`.
+8. Write `logs/inbox/YYYY-MM-DD.md` in the spec's output format and present
+   it as this run's reply to Raka. Commit and push all state/log changes
+   with a plain commit message like `inbox-triage: N contacts flagged,
+   YYYY-MM-DD`.
+
+### Guardrails
+
+Same dash rule and no-fabrication rule as the enrichment pipeline (see
+above), plus: never tier or draft off `aiLeadInterestLevel` alone, it is a
+reading-priority hint, not evidence; never draft a reply for the No action
+tier or include it in the digest; never send anything, this routine only
+produces the digest.
