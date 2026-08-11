@@ -1,16 +1,21 @@
 # Astra Agency — Operating playbook
 
-This repo drives two related automated routines:
+This repo drives three related automated routines:
 
 1. The **contact enrichment pipeline**, described in
    `docs/enrichment-pipeline-spec.md`.
 2. The **daily inbox triage**, described in `docs/inbox-triage-spec.md`.
+3. The **prototype build and meeting booking pipeline**, described in
+   `docs/prototype-build-spec.md` (the research and build quality bar) and
+   the "Prototype build and meeting booking" section of this file below (the
+   handoff, hosting, retry, and meeting/briefing mechanics).
 
-Both specs are source of truth — read the relevant one in full before running
-anything; this file is the concrete, repo-specific operating procedure
-derived from them. They share the same message guardrails (no dashes, never
-fabricate) and the same git-committed state-file pattern, since both run as
-stateless Cloud Routine containers.
+All three specs are source of truth — read the relevant one in full before
+running anything; this file is the concrete, repo-specific operating
+procedure derived from them. They share the same message guardrails (no
+dashes in outreach text, never fabricate) and the same git-committed
+state-file pattern, since all three run as stateless Cloud Routine
+containers.
 
 Before drafting any outreach message in either routine, also read
 **`docs/astra-master-context.md`** — the business identity, ideal client
@@ -234,3 +239,110 @@ above), plus: never tier or draft off `aiLeadInterestLevel` alone, it is a
 reading-priority hint, not evidence; never draft a reply for the No action
 tier or include it in the digest; never send anything, this routine only
 produces the digest.
+
+## Prototype build and meeting booking
+
+Full spec: `docs/prototype-build-spec.md` for the research/build quality bar
+(read it in full before building anything). This section is the mechanics
+around that spec: what triggers a build, how it gets hosted and sent, what
+happens on a yes or a no, and how a booked meeting turns into a brief for
+Raka. The end goal of every reply, prototype or not, is a booked meeting,
+not just a good conversation.
+
+### Live configuration
+
+- **Hosting:** Netlify. Every prototype gets its own site, named
+  `astra-[company-slug]-prototype` (lowercase, spaces to hyphens, strip
+  anything that isn't alphanumeric or a hyphen), never a generic or
+  auto-generated Netlify subdomain. Hyphens in this slug are a URL
+  separator, not outreach prose, they are not covered by the no-dash
+  guardrail. Confirm the actual deployed URL before sending it to anyone.
+- **Meeting booking:** Google Calendar. Once a contact proposes or accepts a
+  time (directly, or via a Calendly-style link they shared), create the
+  event so it is on Raka's actual calendar, don't just reply with words and
+  leave it unscheduled. Invite the contact's email if one is known from
+  lemlist lead data; if only a LinkedIn identity is known, note that in the
+  event description rather than guessing an email.
+- **Meeting brief target:** email to `rifqiraka234@gmail.com` (Gmail), sent
+  the moment a meeting is actually booked, not before. The same brief is
+  also saved into this repo, see state files below, email and repo copy are
+  both required, neither replaces the other.
+
+### State files
+
+- `state/prototypes.jsonl` — one row per prototype built (append only):
+  `date`, `contactId`, `companyName`, `promisedConcept` (what was actually
+  offered in the outreach thread, per the spec's Step 1), `angleNumber`
+  (1 for the first attempt, 2+ for a retry after a decline, never reuse an
+  angle number for a genuinely different angle), `netlifyUrl`,
+  `researchSummaryPath`, `sentAt`, `outcome`
+  (`pending` / `liked` / `declined` / `booked`). Update `outcome` in place
+  as the thread progresses, this is the per-contact prototype history, so a
+  retry after a decline can see exactly what angle already failed and must
+  not repeat it.
+- `state/meetings.jsonl` — one row per booked meeting (append only): `date`,
+  `contactId`, `companyName`, `angleUsed` (prototype angle, or a plain
+  description if no prototype was involved), `meetingDateTime`,
+  `calendarEventId`, `briefEmailSentAt`, `briefFilePath`.
+- `logs/meetings/YYYY-MM-DD-[Company].md` — the actual brief saved in the
+  repo for every booked meeting, same content as the email. Never skip the
+  repo copy even though the email also goes out, the repo copy is what
+  survives if the email bounces or Raka is checking from a session instead
+  of his inbox.
+- Prototype HTML files and research summaries themselves are not committed
+  to this repo, they live on Netlify and can be regenerated from
+  `state/prototypes.jsonl` plus the spec if ever needed. Keep the repo to
+  metadata and the meeting briefs, the same minimal-schema principle as the
+  other two routines.
+
+### Procedure
+
+1. **Trigger.** Either a "Ready for a mockup" entry from that day's inbox
+   triage digest, or a direct request from Raka naming a company.
+2. **Build.** Follow `docs/prototype-build-spec.md` Steps 1 through 9 in
+   full. Check `state/prototypes.jsonl` first for this contact, if an
+   earlier attempt exists, the new angle must be genuinely different, not a
+   reskin of the declined one.
+3. **Host.** Deploy the single HTML file to a new Netlify site named per the
+   convention above. Confirm the live URL actually loads and renders
+   correctly (desktop and mobile) before sending it anywhere, do not send an
+   unverified link.
+4. **Send.** The message that links to the prototype still follows the
+   outreach voice rules in `docs/astra-master-context.md` section 9 and the
+   no-dash guardrail, low friction, references what was actually promised,
+   includes the link. Append a row to `state/prototypes.jsonl` with
+   `outcome: pending`.
+5. **On a positive reply** (they like it, ask questions, want to talk):
+   steer toward booking a time, offering a concrete next step rather than an
+   open-ended "let me know your thoughts." Update `outcome` to `liked`. If
+   they propose or accept a time, book it via Google Calendar immediately,
+   don't leave a confirmed time unscheduled, then go to step 7.
+6. **On a decline or no real engagement:** update `outcome` to `declined`,
+   go back to Step 1 of the prototype spec and find a genuinely different
+   angle for the same company, or a different ASTRA service line entirely
+   (Grow / Optimise / Innovate / Build Squad, see
+   `docs/astra-master-context.md` section 4) if the original angle was
+   simply the wrong fit. Do not retry the identical concept hoping for a
+   different result. If two distinct angles have both failed, this becomes
+   a judgment call for Raka rather than a third automatic attempt, flag it
+   in the next inbox triage digest instead of building again unprompted.
+7. **On any booked meeting** (prototype-driven or not, a Hot/Warm reply that
+   turns into a call counts too): create the Calendar event if not already
+   done, then immediately:
+   - Compose a short brief: who they are (name, company, one line on the
+     business), the angle used (the prototype concept, or the conversation
+     thread that led here), what was actually sent to them (the outreach
+     message and/or prototype link), and the meeting date/time.
+   - Send that brief by email to `rifqiraka234@gmail.com`.
+   - Save the identical brief to `logs/meetings/YYYY-MM-DD-[Company].md`.
+   - Append the row to `state/meetings.jsonl`.
+   - Commit and push the state/log changes with a plain commit message like
+     `prototype-pipeline: meeting booked with [Company], YYYY-MM-DD`.
+
+### Guardrails
+
+Everything in `docs/prototype-build-spec.md`'s own Guardrails section, plus:
+never send a Netlify link that hasn't been opened and visually checked;
+never reuse a declined angle on a retry; never invent a meeting time or mark
+one as booked without an actual Calendar event backing it; never skip the
+repo copy of a meeting brief even when the email send succeeds.

@@ -152,10 +152,11 @@ this project:
 
 ## Step 5 — Surface mockup ready leads separately
 Any contact whose reply is a genuine yes to seeing a concept (send it over,
-sure, show me, that sounds good) is a handoff to whatever prototype building
-workflow is in use, not something this routine drafts a reply for on its
-own. This is the single most valuable signal this triage produces, it should
-never get buried inside a generic flagged note.
+sure, show me, that sounds good) is a handoff to the prototype build
+pipeline (`docs/prototype-build-spec.md` and the "Prototype build and
+meeting booking" section of `CLAUDE.md`), not something this routine drafts
+a reply for on its own. This is the single most valuable signal this triage
+produces, it should never get buried inside a generic flagged note.
 
 List these clearly in their own output section, separate from the four
 message tiers, with enough of the original ask captured that the downstream
