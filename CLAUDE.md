@@ -25,9 +25,10 @@ context. Everything you need is below and in the two spec files above.
   - Its sequence already uses `{{connectionMessage}}` (LinkedIn invite step),
     `{{firstMessage}}` (message step, +1 day after acceptance), and native
     `{{firstName}}` (the +3 day "have you seen this?" bump, no code involvement).
-  - This campaign is currently in **draft** status. Do not change its status.
-    Turning it to `running` is Raka's call, not the pipeline's — importing
-    leads into a draft campaign queues them without sending anything.
+  - As of 2026-08-11 this campaign is **running** (Raka turned it on; it was
+    draft when this playbook was first written). The pipeline does not
+    change its status either way, that stays Raka's call, but leads imported
+    into it now send on schedule rather than only queuing.
 - **Custom lead fields written by this pipeline:** `connectionMessage`,
   `firstMessage`, `howLongAgoBusinessWasCreated`, `websiteAnalyses` (the last
   two already exist as custom fields on the team; the first two are created
@@ -137,9 +138,10 @@ informational only, never blocks anything.
 - This pipeline drafts and stages messages. It does not flip the campaign to
   running and does not otherwise cause a send by itself; a human decides
   when the campaign actually sends.
-- If the `cam_Co5CJXrpPFf5MRAfD` campaign is still in draft status, keep
-  importing Tier 1 leads into it as normal, that's expected until Raka
-  turns it on.
+- `cam_Co5CJXrpPFf5MRAfD` is now running (see Live configuration above), so
+  Tier 1 imports into it send on schedule. Re confirm its status at the
+  start of every run rather than trusting this note, since Raka can change
+  it at any time.
 
 ## Daily inbox triage
 
@@ -151,11 +153,11 @@ itself.
 
 - **Active campaigns to cover:** any campaign with status `running` (check
   fresh each run via `get_campaigns` with no status filter, campaigns can
-  change status between runs). As of the last check, only
-  `cam_PryZp5LuvQv8NznHh` (`Small Business Owners v0.1 - Outreach Only`) is
-  running; `cam_Co5CJXrpPFf5MRAfD` (v0.2) stays in scope automatically once
-  Raka turns it on, no code change needed since scope is status-driven, not
-  a hardcoded ID list.
+  change status between runs). As of 2026-08-11, both
+  `cam_PryZp5LuvQv8NznHh` (`Small Business Owners v0.1 - Outreach Only`) and
+  `cam_Co5CJXrpPFf5MRAfD` (`Small Business Owners v0.2 - Auto Enrichment
+  Pipeline`) are running. Scope is status-driven, not a hardcoded ID list, so
+  no code change is needed as campaigns turn on or off going forward.
 - Do not cover `draft`, `paused`, `ended`, or `archived` campaigns, they have
   no live LinkedIn activity to triage.
 
