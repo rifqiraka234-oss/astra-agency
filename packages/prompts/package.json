@@ -1,5 +1,5 @@
 {
-  "name": "@astra/core",
+  "name": "@astra/prompts",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -9,17 +9,11 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
-    },
-    "./testing": {
-      "types": "./dist/testing/factories.d.ts",
-      "default": "./dist/testing/factories.js"
     }
   },
+  "files": ["dist", "prompts"],
   "scripts": {
     "build": "tsc -b",
     "clean": "rm -rf dist *.tsbuildinfo"
-  },
-  "dependencies": {
-    "zod": "^3.24.1"
   }
 }

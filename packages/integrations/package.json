@@ -1,5 +1,5 @@
 {
-  "name": "@astra/core",
+  "name": "@astra/integrations",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -9,10 +9,6 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
-    },
-    "./testing": {
-      "types": "./dist/testing/factories.d.ts",
-      "default": "./dist/testing/factories.js"
     }
   },
   "scripts": {
@@ -20,6 +16,8 @@
     "clean": "rm -rf dist *.tsbuildinfo"
   },
   "dependencies": {
-    "zod": "^3.24.1"
+    "@astra/core": "*",
+    "zod": "^3.24.1",
+    "zod-to-json-schema": "^3.24.1"
   }
 }
