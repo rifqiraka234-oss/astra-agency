@@ -79,15 +79,30 @@ plain commit message like `pipeline: process N contacts, YYYY-MM-DD`.
    - Tier 1 (`campaignEligibility = INCLUDE` AND `businessLaunchStatus =
      QUALIFIED` with HIGH or MEDIUM `businessLaunchConfidence` AND
      `websiteAnalysisConfidence = HIGH`) → collect for import this run.
-   - Everything else that isn't EXCLUDE (`businessLaunchStatus = DO_NOT_USE`,
-     `campaignEligibility = MANUAL_REVIEW`, or LOW website confidence) →
-     append to `state/tier2_queue.jsonl`.
+   - Tier 2 / INCLUDE (`campaignEligibility = INCLUDE` but short of the Tier 1
+     confidence bar — e.g. MEDIUM website/launch confidence) → as of
+     2026-08-11, Raka approved skipping the weekly wait for this subset only:
+     these have real, non-fabricated `connectionMessage`/`firstMessage`
+     already drafted (Stage 4 only ever runs for INCLUDE), so collect them
+     for import this run alongside Tier 1, same verification and same
+     import call. Still record `tier: TIER_2` in `enriched_leads.jsonl` for
+     the audit trail, but do not leave them sitting in `tier2_queue.jsonl`
+     waiting on a digest.
+   - Tier 2 / REVIEW (`businessLaunchStatus = DO_NOT_USE`, `campaignEligibility
+     = MANUAL_REVIEW`, or LOW website confidence, i.e. anything not
+     confirmed as `INCLUDE`) → append to `state/tier2_queue.jsonl` as before.
+     These never get a drafted message and never get auto-imported — the
+     underlying facts are exactly what's unverified, so writing a
+     congratulations message here would violate the no-fabrication
+     guardrail below. They only leave the queue by being re-researched to a
+     confident `INCLUDE`/`EXCLUDE`, or via the weekly digest.
 6. Add the contact ID to `checkpoint.json`'s `lastProcessedContactIds` and
    update `lastRunAt`/`totalProcessed` as you go (so a crash mid batch loses
    at most the in flight contact, not the whole run).
-7. At the end of the run, for every Tier 1 contact collected in step 5:
-   verify `connectionMessage` and `firstMessage` are non empty and contain no
-   hyphen/en dash/em dash, then import into `cam_Co5CJXrpPFf5MRAfD` via
+7. At the end of the run, for every Tier 1 and Tier 2/INCLUDE contact
+   collected in step 5: verify `connectionMessage` and `firstMessage` are
+   non empty and contain no hyphen/en dash/em dash, then import into
+   `cam_Co5CJXrpPFf5MRAfD` via
    `import_leads_to_campaign` (CSV upload, `columnMapping` mapping the
    `connectionMessage` and `firstMessage` CSV headers to those exact custom
    variable names — do not rename them). On the very first batch of Tier 1
@@ -99,10 +114,13 @@ plain commit message like `pipeline: process N contacts, YYYY-MM-DD`.
 
 ## Weekly Tier 2 review procedure
 
-Once a week, read `state/tier2_queue.jsonl` in full, present it as a single
-digest to Raka (not per contact prompts): counts by reason
+This now only covers `state/tier2_queue.jsonl` rows still stuck at
+MANUAL_REVIEW/DO_NOT_USE (Tier 2/INCLUDE rows no longer wait here, see
+above). Once a week, read the queue in full, present it as a single digest
+to Raka (not per contact prompts): counts by reason
 (`DO_NOT_USE` / `MANUAL_REVIEW` / `LOW website confidence`), and the full
-list of contacts with their generated messages where applicable. Wait for a
+list of contacts — most will have no drafted message, since the facts
+weren't solid enough to write one without fabricating. Wait for a
 single go/no go. On approval, import the approved subset the same way as
 Tier 1 (step 7 above), append every row (approved and rejected) to
 `state/tier2_history.jsonl` with a `decision` field, and truncate
