@@ -1,14 +1,15 @@
 {
-  "lastRunAt": "2026-08-11T10:23:04Z",
+  "lastRunAt": "2026-08-11T19:14:00Z",
   "threads": {
     "ctc_piBZeydFpN4KiBeky": {
       "name": "Antanas Juodiskis",
       "tier": "HOT",
-      "lastSeenMessageId": "act_CECELmhwkSiaonMvL",
+      "lastSeenMessageId": "act_hYcQG88SLe85QobZM",
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
       "messageSent": true,
-      "messageSentAt": "2026-08-11T12:50:00Z"
+      "messageSentAt": "2026-08-11T19:14:00Z",
+      "note": "asked what is your offer, replied honestly with agency description tied to the investor homepage concept"
     },
     "ctc_YLmRL36CPuodKLwNX": {
       "name": "Timur Teregulov",
@@ -184,12 +185,13 @@
     },
     "ctc_Roay3mSCp4ztAot4y": {
       "name": "Basile Marin",
-      "tier": "WARM",
-      "lastSeenMessageId": "act_ua48HtHgM7hziYK5p",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": "act_ghZJhTyH62FKHdWE3",
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
       "messageSent": true,
-      "messageSentAt": "2026-08-11T12:50:00Z"
+      "messageSentAt": "2026-08-11T12:50:00Z",
+      "note": "thumbs up acknowledgment only, thread closed pleasantly, no ask remaining"
     },
     "ctc_JYWKs8LSRDxAreesA": {
       "name": "Rosalie Voortman",
@@ -200,12 +202,13 @@
     },
     "ctc_WsnoLFkpGct27mLbz": {
       "name": "Kenfack Leopold",
-      "tier": "WARM",
-      "lastSeenMessageId": "act_2ovpurrHuNHaxFRrz",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": "act_JDpxq5ZhFoP2Nrxxt",
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
       "messageSent": true,
-      "messageSentAt": "2026-08-11T12:50:00Z"
+      "messageSentAt": "2026-08-11T12:50:00Z",
+      "note": "soft final decline, wished us well, thread closed"
     },
     "ctc_EqjEgTxYCoWXCaixK": {
       "name": "Aart Bos",
@@ -248,7 +251,7 @@
       "note": "not interested"
     },
     "ctc_AdnACMeCPhQCdfbPr": {
-      "name": "Ferdinand Witt-D\u00f6rring",
+      "name": "Ferdinand Witt-Dörring",
       "tier": "NO_ACTION",
       "lastSeenMessageId": null,
       "lastDigestDate": null,
@@ -318,11 +321,11 @@
     },
     "ctc_vmZnwqvQLzr8GgW5M": {
       "name": "Stefan Janssen",
-      "tier": "STALLED",
-      "lastSeenMessageId": null,
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": "act_hy7WzrzRYNMhamaRz",
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "gone quiet 21 days since last message, nudge sent",
+      "note": "explicit decline, they do this in house and never outsource it",
       "messageSent": true,
       "messageSentAt": "2026-08-11T13:10:00Z"
     },
