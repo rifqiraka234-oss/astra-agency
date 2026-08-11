@@ -257,6 +257,32 @@ runs, never the standing source.
   No summary paragraph above or below the table. This is a standing
   reporting format, not a one-off for a single run.
 
+## Message style (read before drafting any connectionMessage/firstMessage)
+
+The messages must read like a real person wrote them, not an AI. Concretely:
+
+- Open the first sentence of `firstMessage` as a flat observation, not a
+  compound "doing X by Y, treating Z like W" construction. Say what you saw,
+  plainly, then the one detail worth noting. Bad (tongue twisty, AI sounding):
+  "Building Studio Piero as a sibling duo around brand strategy and art
+  direction, treating identity like something that's cultivated not just
+  designed, is a nice angle." Good (plain, direct): "Saw Studio Piero,
+  treating identity like something that's cultivated not just designed is a
+  nice angle."
+- The message should center their problem, not our observation about them.
+  Name the actual gap (no website, broken site, no way to find them) as
+  something that's costing them real opportunity right now, specific to what
+  they do, not a generic "you're missing a website" line. The ask at the end
+  should feel like a genuine, low pressure offer to fix a real problem they
+  have, not a sales pitch.
+- Avoid AI tells: no "however," as a pivot word, no listy triple adjectives,
+  no overly polished parallel structure, no em dash cadence rebuilt with
+  commas. Write like a founder messaging another founder, short sentences,
+  a little casual.
+- Read every drafted message back before finalizing and ask: would a real
+  small business owner write this to a stranger on LinkedIn? If it sounds
+  like copy, rewrite it.
+
 ## Guardrails (non negotiable, re read before generating any message)
 
 - Never use hyphens, en dashes, or em dashes (`-`, `–`, `—`) anywhere in
