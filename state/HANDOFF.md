@@ -51,19 +51,38 @@ session/container unless copied over first.
      stated budget constraint.
    - Netlify site name to use: `astra-that-animation-company-prototype`.
 
-3. **Voortman & Baumhauer** (Rosalie Voortman) — NOT DONE.
-   - `state/prototypes/voortman-baumhauer/` exists but is empty.
-   - First attempt crashed on a platform session-limit error mid-build with
-     zero output. Second attempt was relaunched as background agent
-     `ae43d72f5ebd6a641` in this session, prompted to do self-QA scoring
-     EARLY (not as the last step) to avoid losing the real work to another
-     possible session-limit crash. As of this handoff it had not yet
-     reported completion.
-   - Whoever picks this up: check whether that background agent produced
-     anything before assuming zero progress (previous crashes still left
-     complete files behind twice out of three times). If still empty,
-     relaunch it fresh following `docs/prototype-build-spec.md` Steps 1-9,
-     using the other two research summaries above as the quality/rigor bar.
+3. **Voortman & Baumhauer** (Rosalie Voortman) — IN PROGRESS, NOT YET REVIEWED.
+   - Important context surfaced during this build's research: Voortman &
+     Baumhauer is a **funeral/memorial photography studio**
+     (uitvaartfotografie, Dutch), not a generic branding/portrait business.
+     Confirmed via web search (rememberme.nl coverage of a 2025 Dutch
+     Funeral Awards win, their own site voortman-baumhauer.nl/about). This
+     matters a lot for tone: nothing celebratory/sales-punchy, register
+     should match the gravity of the subject matter.
+   - `state/prototypes/voortman-baumhauer/VoortmanBaumhauer_Prototype.html`
+     exists now (711 lines, ~385KB), title tag currently reads "For Your
+     Brand — Rosalie Voortman Photography." No research summary `.md` file
+     has been written yet.
+   - As of this handoff the background agent (`ae43d72f5ebd6a641`, this
+     session) was STILL ACTIVELY EDITING the file (last observed action: a
+     CSS tweak via Edit, no completion message yet). Do not assume it's
+     finished. First attempt (before this one) crashed on a platform
+     session-limit error with zero output; this is the second attempt,
+     prompted to self-QA score early to avoid losing work to another crash.
+   - Whoever picks this up: check current state of that file first (it may
+     have finished, or crashed again mid-edit, since this note was written).
+     Read the whole HTML file plus any research summary before trusting it.
+     Apply the exact same review already done on the other two: valid
+     doctype/viewport, external deps limited to fonts/properly-licensed
+     images, no dead `href="#"`, `prefers-reduced-motion` present, and
+     re-verify the title tag and all copy actually match Rosalie's real
+     business (funeral photography) rather than generic "brand photography"
+     boilerplate, given the mismatched title tag observed above. If it
+     stalled or the content doesn't fit the funeral-photography context,
+     relaunch following `docs/prototype-build-spec.md` Steps 1-9, using the
+     other two research summaries as the quality/rigor bar, and make sure
+     the prompt explicitly states the studio's actual subject matter and
+     register up front.
    - Netlify site name to use: `astra-voortman-baumhauer-prototype`.
 
 ## Netlify hosting (blocked in this session, should work in the other one)
