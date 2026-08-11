@@ -1,50 +1,389 @@
 {
   "lastRunAt": "2026-08-11T10:23:04Z",
   "threads": {
-    "ctc_piBZeydFpN4KiBeky": { "name": "Antanas Juodiskis", "tier": "HOT", "lastSeenMessageId": "act_CECELmhwkSiaonMvL", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_YLmRL36CPuodKLwNX": { "name": "Timur Teregulov", "tier": "WARM", "lastSeenMessageId": "act_reR67mKaAn8QPNYo6", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_x6MbKQXwaYSrJvepd": { "name": "Terry Bordeleau", "tier": "NO_ACTION", "lastSeenMessageId": "act_GfNHGkjCdYJyG79iJ", "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "deferred to fall by contact" },
-    "ctc_ymgMEZCY4G2ni8FfY": { "name": "Andy Olson", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact, mockup already promised, Raka's turn will come after they reply" },
-    "ctc_8gvdTcTEsfk2MHbcF": { "name": "Erisan Olasheni", "tier": "WARM", "lastSeenMessageId": "act_kaQGHMMPFYoihGd8K", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_66tyJWcefKYyuN7iP": { "name": "Horst Siffrin", "tier": "WARM", "lastSeenMessageId": "act_jHPQX66jGhMdjNSzf", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_i3AxTPi65YoLmnM2v": { "name": "Michael Poon", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_2gxYE6mZetRXvn33H": { "name": "Iman Javadi", "tier": "NO_ACTION", "lastSeenMessageId": "act_fAhDAohGpFJbxN5Nk", "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "explicit polite decline" },
-    "ctc_5k88Rfk6EtdqArcgW": { "name": "Sholi Loewenthal", "tier": "HOT", "lastSeenMessageId": "act_eEmpR7objeK3y3f4c", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_d9cmps8bTXsvaRxjw": { "name": "Vasanta S.", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_Px9CGphf6heWCy7To": { "name": "Peter Hurd-Watler", "tier": "WARM", "lastSeenMessageId": "act_dTDZCyxjdiwkYsLnG", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_3F8ptpRnaWSQapFhH": { "name": "Saeid Khalafvand", "tier": "WARM", "lastSeenMessageId": "act_dB8J2hBq4ZFbX62MT", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_9ksSyBed6pYFvcHaN": { "name": "Lisa Bouamra", "tier": "READY_FOR_MOCKUP", "lastSeenMessageId": "act_gQzYwQL8R6faypqqL", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_xTFQ2QiYLWoZ9nrhM": { "name": "Arindam Sengupta", "tier": "WARM", "lastSeenMessageId": "act_myDFt3H9BAYGLXRNx", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_df3ZKhrBxMbzT87Q9": { "name": "Happy Tidjani", "tier": "HOT", "lastSeenMessageId": "act_juz7KZ2gn2MqBFsRp", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_JtZ4SfgRGC5jQmARa": { "name": "Joanna Huang", "tier": "WARM", "lastSeenMessageId": "act_LGcaJcx47DrmfmH4D", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_imcceXRFDb7GDh46P": { "name": "Gerard Ouattara", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_2kkM6yFpTdYoG2YhW": { "name": "Aashir Qureshi", "tier": "WARM", "lastSeenMessageId": "act_Fq35oEuSuAZzZoPcC", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_rXjjRxEfNNkCQFcEy": { "name": "Amina Abukar", "tier": "WARM", "lastSeenMessageId": "act_8FAxNC4hDF8xmhx8B", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_EtNB7gamNJSdWbGKq": { "name": "Natacha Waldmann", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_AsYBpzfea9FcNJSDc": { "name": "Tim Spittle", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_Roay3mSCp4ztAot4y": { "name": "Basile Marin", "tier": "WARM", "lastSeenMessageId": "act_ua48HtHgM7hziYK5p", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_JYWKs8LSRDxAreesA": { "name": "Rosalie Voortman", "tier": "READY_FOR_MOCKUP", "lastSeenMessageId": "act_ENKGXhGrMB7BX69Jw", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_WsnoLFkpGct27mLbz": { "name": "Kenfack Leopold", "tier": "WARM", "lastSeenMessageId": "act_2ovpurrHuNHaxFRrz", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_EqjEgTxYCoWXCaixK": { "name": "Aart Bos", "tier": "STALLED", "lastSeenMessageId": "act_Ndj3BTrvHgLG2pNbG", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_tnGL6B5XZdtWc6JP4": { "name": "Amir Matallaoui", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_yctJfvDtTFQvMzRK4": { "name": "Lynn Chadwick", "tier": "READY_FOR_MOCKUP", "lastSeenMessageId": "act_iieYvFERTxunhiTGn", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_MkwR6p5i9rJ2Jbj5x": { "name": "Wouter Vermeulen", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "not interested" },
-    "ctc_wj6KLBDRJk5iR7Wqt": { "name": "Ben Maicd", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "not interested" },
-    "ctc_AdnACMeCPhQCdfbPr": { "name": "Ferdinand Witt-Dörring", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "not interested" },
-    "ctc_hJaPmPiMoi4Hfm6G7": { "name": "Arbaaz Shaikh", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "has own team, declined for now" },
-    "ctc_qiJ2ccpxRci3ajkLG": { "name": "Michele Legoratto", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_vkYcfxaem8Wpb43Ti": { "name": "Mike Timmers", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_7QufSv5sHv8RWkDQL": { "name": "Isabela Tatu", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_GFk4ANtaqEetSd5dW": { "name": "Daniel Shodamola", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_mtAHtNJCe4eghc4fv": { "name": "Dr. Ragueneau", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_GHYSBgrwRuS8LPc7K": { "name": "Griet Vanhemel", "tier": "WARM", "lastSeenMessageId": "act_gScfs5EijtMMgLNby", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_vmZnwqvQLzr8GgW5M": { "name": "Stefan Janssen", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_CLtuaZ8AQp3aYpfx5": { "name": "Jack Coulthard", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_3HtSsCH34mMAJXgce": { "name": "Johannes Quandt", "tier": "HOT", "lastSeenMessageId": "act_wMrfkiff3n7FggDSh", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_NhEiQEPhE82cjHubv": { "name": "Joel Fuente", "tier": "HOT", "lastSeenMessageId": "act_B6nJrZ2dSJBB2Kdxp", "lastDigestDate": "2026-08-11", "campaignId": "cam_PryZp5LuvQv8NznHh" },
-    "ctc_Ss5TwBb8WJ7TLh4T6": { "name": "Adam Amara", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_gYojjp3yXSMEoyiQs": { "name": "David Jonker", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_NLT572WpHSbpp9NFA": { "name": "Dennis Bollien", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" },
-    "ctc_Sfs4z7sXcofYGjL6B": { "name": "Paul Hanson", "tier": "NO_ACTION", "lastSeenMessageId": null, "lastDigestDate": null, "campaignId": "cam_PryZp5LuvQv8NznHh", "note": "waiting on contact" }
+    "ctc_piBZeydFpN4KiBeky": {
+      "name": "Antanas Juodiskis",
+      "tier": "HOT",
+      "lastSeenMessageId": "act_CECELmhwkSiaonMvL",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_YLmRL36CPuodKLwNX": {
+      "name": "Timur Teregulov",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_reR67mKaAn8QPNYo6",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_x6MbKQXwaYSrJvepd": {
+      "name": "Terry Bordeleau",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": "act_GfNHGkjCdYJyG79iJ",
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "deferred to fall by contact"
+    },
+    "ctc_ymgMEZCY4G2ni8FfY": {
+      "name": "Andy Olson",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact, mockup already promised, Raka's turn will come after they reply"
+    },
+    "ctc_8gvdTcTEsfk2MHbcF": {
+      "name": "Erisan Olasheni",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_kaQGHMMPFYoihGd8K",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_66tyJWcefKYyuN7iP": {
+      "name": "Horst Siffrin",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_jHPQX66jGhMdjNSzf",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_i3AxTPi65YoLmnM2v": {
+      "name": "Michael Poon",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_2gxYE6mZetRXvn33H": {
+      "name": "Iman Javadi",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": "act_fAhDAohGpFJbxN5Nk",
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "explicit polite decline"
+    },
+    "ctc_5k88Rfk6EtdqArcgW": {
+      "name": "Sholi Loewenthal",
+      "tier": "HOT",
+      "lastSeenMessageId": "act_eEmpR7objeK3y3f4c",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_d9cmps8bTXsvaRxjw": {
+      "name": "Vasanta S.",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_Px9CGphf6heWCy7To": {
+      "name": "Peter Hurd-Watler",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_dTDZCyxjdiwkYsLnG",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_3F8ptpRnaWSQapFhH": {
+      "name": "Saeid Khalafvand",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_dB8J2hBq4ZFbX62MT",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_9ksSyBed6pYFvcHaN": {
+      "name": "Lisa Bouamra",
+      "tier": "READY_FOR_MOCKUP",
+      "lastSeenMessageId": "act_gQzYwQL8R6faypqqL",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh"
+    },
+    "ctc_xTFQ2QiYLWoZ9nrhM": {
+      "name": "Arindam Sengupta",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_myDFt3H9BAYGLXRNx",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_df3ZKhrBxMbzT87Q9": {
+      "name": "Happy Tidjani",
+      "tier": "HOT",
+      "lastSeenMessageId": "act_juz7KZ2gn2MqBFsRp",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_JtZ4SfgRGC5jQmARa": {
+      "name": "Joanna Huang",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_LGcaJcx47DrmfmH4D",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_imcceXRFDb7GDh46P": {
+      "name": "Gerard Ouattara",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_2kkM6yFpTdYoG2YhW": {
+      "name": "Aashir Qureshi",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_Fq35oEuSuAZzZoPcC",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_rXjjRxEfNNkCQFcEy": {
+      "name": "Amina Abukar",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_8FAxNC4hDF8xmhx8B",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_EtNB7gamNJSdWbGKq": {
+      "name": "Natacha Waldmann",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_AsYBpzfea9FcNJSDc": {
+      "name": "Tim Spittle",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_Roay3mSCp4ztAot4y": {
+      "name": "Basile Marin",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_ua48HtHgM7hziYK5p",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_JYWKs8LSRDxAreesA": {
+      "name": "Rosalie Voortman",
+      "tier": "READY_FOR_MOCKUP",
+      "lastSeenMessageId": "act_ENKGXhGrMB7BX69Jw",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh"
+    },
+    "ctc_WsnoLFkpGct27mLbz": {
+      "name": "Kenfack Leopold",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_2ovpurrHuNHaxFRrz",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_EqjEgTxYCoWXCaixK": {
+      "name": "Aart Bos",
+      "tier": "STALLED",
+      "lastSeenMessageId": "act_Ndj3BTrvHgLG2pNbG",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_tnGL6B5XZdtWc6JP4": {
+      "name": "Amir Matallaoui",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_yctJfvDtTFQvMzRK4": {
+      "name": "Lynn Chadwick",
+      "tier": "READY_FOR_MOCKUP",
+      "lastSeenMessageId": "act_iieYvFERTxunhiTGn",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh"
+    },
+    "ctc_MkwR6p5i9rJ2Jbj5x": {
+      "name": "Wouter Vermeulen",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "not interested"
+    },
+    "ctc_wj6KLBDRJk5iR7Wqt": {
+      "name": "Ben Maicd",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "not interested"
+    },
+    "ctc_AdnACMeCPhQCdfbPr": {
+      "name": "Ferdinand Witt-D\u00f6rring",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "not interested"
+    },
+    "ctc_hJaPmPiMoi4Hfm6G7": {
+      "name": "Arbaaz Shaikh",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "has own team, declined for now"
+    },
+    "ctc_qiJ2ccpxRci3ajkLG": {
+      "name": "Michele Legoratto",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_vkYcfxaem8Wpb43Ti": {
+      "name": "Mike Timmers",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_7QufSv5sHv8RWkDQL": {
+      "name": "Isabela Tatu",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_GFk4ANtaqEetSd5dW": {
+      "name": "Daniel Shodamola",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_mtAHtNJCe4eghc4fv": {
+      "name": "Dr. Ragueneau",
+      "tier": "STALLED",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "booked a Calendly call for 2026-08-07, call date has passed with no follow-up message either way, needs a check-in nudge, not drafted/sent yet"
+    },
+    "ctc_GHYSBgrwRuS8LPc7K": {
+      "name": "Griet Vanhemel",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_gScfs5EijtMMgLNby",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_vmZnwqvQLzr8GgW5M": {
+      "name": "Stefan Janssen",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_CLtuaZ8AQp3aYpfx5": {
+      "name": "Jack Coulthard",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_3HtSsCH34mMAJXgce": {
+      "name": "Johannes Quandt",
+      "tier": "HOT",
+      "lastSeenMessageId": "act_wMrfkiff3n7FggDSh",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_NhEiQEPhE82cjHubv": {
+      "name": "Joel Fuente",
+      "tier": "HOT",
+      "lastSeenMessageId": "act_B6nJrZ2dSJBB2Kdxp",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_Ss5TwBb8WJ7TLh4T6": {
+      "name": "Adam Amara",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_gYojjp3yXSMEoyiQs": {
+      "name": "David Jonker",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_NLT572WpHSbpp9NFA": {
+      "name": "Dennis Bollien",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_Sfs4z7sXcofYGjL6B": {
+      "name": "Paul Hanson",
+      "tier": "NO_ACTION",
+      "lastSeenMessageId": null,
+      "lastDigestDate": null,
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "waiting on contact"
+    },
+    "ctc_KrAFP3esh4PjKjomW": {
+      "name": "Maria Machado",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_LNSBhfJpwApEuaApE",
+      "lastDigestDate": "2026-08-11",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "messageSent": true,
+      "messageSentAt": "2026-08-11T12:50:00Z"
+    }
   }
 }
