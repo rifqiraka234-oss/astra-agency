@@ -28,6 +28,7 @@ import {
   type NetlifyClient,
   type ResearchAdapter,
 } from '@astra/integrations';
+import { refreshTokenLoader } from '@astra/db';
 import { readFileSync } from 'node:fs';
 import { createLogger, type Logger } from './logger.js';
 
@@ -108,14 +109,14 @@ function buildCalendarProvider(
   switch (config.CALENDAR_PROVIDER) {
     case 'google':
       // The refresh token lives encrypted in integration_connections and is
-      // injected by the calendar job, which is why this constructor takes an
-      // empty token: an unconnected provider must fail its queries, and a
-      // failed query becomes a handoff rather than an empty busy list.
+      // read on every token refresh, so reconnecting takes effect without a
+      // restart. An unconnected provider fails its queries, and a failed
+      // query becomes a handoff rather than an empty busy list.
       return new GoogleCalendarProvider(
         {
           clientId: config.GOOGLE_CLIENT_ID,
           clientSecret: config.GOOGLE_CLIENT_SECRET,
-          refreshToken: '',
+          loadRefreshToken: refreshTokenLoader('GOOGLE_CALENDAR', config.CALENDAR_ACCOUNT_EMAIL),
         },
         guard,
       );
@@ -125,7 +126,7 @@ function buildCalendarProvider(
           clientId: config.MICROSOFT_CLIENT_ID,
           clientSecret: config.MICROSOFT_CLIENT_SECRET,
           tenantId: config.MICROSOFT_TENANT_ID,
-          refreshToken: '',
+          loadRefreshToken: refreshTokenLoader('MICROSOFT_CALENDAR', config.CALENDAR_ACCOUNT_EMAIL),
         },
         guard,
       );

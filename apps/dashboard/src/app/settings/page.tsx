@@ -1,5 +1,6 @@
 import { config, csrfToken, requireSession } from '@/lib/auth';
-import { excludeAction, setRolloutModeAction } from '@/lib/actions';
+import { disconnectCalendarAction, excludeAction, setRolloutModeAction } from '@/lib/actions';
+import { listConnections } from '@astra/db';
 import { countShadowDecisions, loadExclusions, loadRolloutState } from '@/lib/queries';
 
 export const dynamic = 'force-dynamic';
@@ -12,15 +13,31 @@ export const dynamic = 'force-dynamic';
  * be flipped from a web page is a safety flag that can be flipped by anyone
  * who gets a session.
  */
-export default async function SettingsPage() {
+export default async function SettingsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ calendar?: string }>;
+}) {
   await requireSession();
   const settings = config();
-  const [rollout, exclusions, decisionCount, csrf] = await Promise.all([
+  const [rollout, exclusions, decisionCount, connections, csrf, params] = await Promise.all([
     loadRolloutState(),
     loadExclusions(),
     countShadowDecisions(),
+    listConnections(),
     csrfToken(),
+    searchParams,
   ]);
+
+  const calendarProviderKey =
+    settings.CALENDAR_PROVIDER === 'google'
+      ? 'GOOGLE_CALENDAR'
+      : settings.CALENDAR_PROVIDER === 'microsoft'
+        ? 'MICROSOFT_CALENDAR'
+        : null;
+  const calendarConnection = connections.find(
+    (connection) => connection.provider === calendarProviderKey,
+  );
 
   const checklist = [
     { label: 'Local fixture tests pass', done: true },
@@ -122,6 +139,26 @@ export default async function SettingsPage() {
 
       <section className="panel">
         <h2>Calendar</h2>
+
+        {params.calendar === 'connected' ? (
+          <p className="muted">Calendar connected.</p>
+        ) : null}
+        {params.calendar === 'bad-state' ? (
+          <p className="error">
+            The consent callback failed its signature check and was rejected. Start the connection
+            again from this page.
+          </p>
+        ) : null}
+        {params.calendar === 'exchange-failed' ? (
+          <p className="error">
+            The provider did not return a usable refresh token. Revoke the existing consent for this
+            app and connect again.
+          </p>
+        ) : null}
+        {params.calendar?.startsWith('denied') ? (
+          <p className="error">Consent was declined.</p>
+        ) : null}
+
         <div className="row">
           <span className="grow">Provider</span>
           <span className="tag">{settings.CALENDAR_PROVIDER}</span>
@@ -130,6 +167,49 @@ export default async function SettingsPage() {
           <span className="grow">Account</span>
           <span className="mono">{settings.CALENDAR_ACCOUNT_EMAIL || 'not configured'}</span>
         </div>
+        <div className="row">
+          <span className="grow">Connection</span>
+          <span
+            className={calendarConnection?.status === 'CONNECTED' ? 'tag tag-pass' : 'tag tag-fail'}
+          >
+            {calendarConnection?.status ?? 'DISCONNECTED'}
+          </span>
+          {calendarConnection?.lastVerifiedAt ? (
+            <span className="muted mono">
+              verified {calendarConnection.lastVerifiedAt.toISOString().slice(0, 16).replace('T', ' ')}
+            </span>
+          ) : null}
+        </div>
+        {calendarConnection?.lastError ? (
+          <p className="error">{calendarConnection.lastError}</p>
+        ) : null}
+        <p className="muted">
+          While the calendar is disconnected, slot proposals hand off to you instead of guessing.
+          An empty busy list would look like total availability.
+        </p>
+        <div className="actions">
+          {calendarProviderKey ? (
+            <a href="/api/calendar/connect">
+              <button type="button" className="primary">
+                {calendarConnection?.status === 'CONNECTED' ? 'Reconnect' : 'Connect'} calendar
+              </button>
+            </a>
+          ) : (
+            <span className="muted">Set CALENDAR_PROVIDER to google or microsoft first.</span>
+          )}
+        </div>
+        {calendarConnection?.status === 'CONNECTED' && calendarProviderKey ? (
+          <form action={disconnectCalendarAction} style={{ marginTop: 8 }}>
+            <input type="hidden" name="csrf" value={csrf} />
+            <input type="hidden" name="provider" value={calendarProviderKey} />
+            <input type="hidden" name="account" value={settings.CALENDAR_ACCOUNT_EMAIL} />
+            <div className="actions">
+              <button className="danger" type="submit">
+                Disconnect
+              </button>
+            </div>
+          </form>
+        ) : null}
         <div className="row">
           <span className="grow">Working hours ({settings.OPERATOR_TIMEZONE})</span>
           <span className="tag">

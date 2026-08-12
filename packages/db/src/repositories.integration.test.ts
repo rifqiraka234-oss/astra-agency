@@ -14,6 +14,13 @@ import {
   upsertContact,
 } from './repositories.js';
 import { encryptSecret, decryptSecret, loadEncryptionKey } from './crypto.js';
+import { applyRetention } from './retention.js';
+import {
+  disconnectIntegration,
+  loadIntegrationCredentials,
+  refreshTokenLoader,
+  saveIntegrationCredentials,
+} from './integrations.js';
 
 /**
  * Integration tests against a real Postgres. They exist to prove the
@@ -48,7 +55,8 @@ beforeEach(async () => {
   await getPool().query(
     `TRUNCATE approvals, outbound_intents, slot_reservations, calendar_events,
        notifications, processing_jobs, webhook_events, messages, conversations,
-       leads, contacts, decisions, audit_events, operators RESTART IDENTITY CASCADE`,
+       leads, contacts, decisions, audit_events, operators, integration_connections
+     RESTART IDENTITY CASCADE`,
   );
 });
 
@@ -376,5 +384,247 @@ describe('credential encryption', () => {
     expect(() => loadEncryptionKey(Buffer.alloc(16, 1).toString('base64'))).toThrow(
       /at least 32 bytes/,
     );
+  });
+});
+
+describe('integration credentials', () => {
+  it('stores a refresh token encrypted and reads it back', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
+
+    await saveIntegrationCredentials(getPool(), {
+      provider: 'GOOGLE_CALENDAR',
+      accountIdentifier: 'raka@astra.agency',
+      credentials: { refreshToken: '1//0-a-real-looking-refresh-token' },
+      scopes: ['https://www.googleapis.com/auth/calendar.events'],
+    });
+
+    // The plaintext must not be recoverable from the column itself.
+    const raw = await getPool().query<{ encrypted_credentials: string }>(
+      `SELECT encrypted_credentials FROM integration_connections WHERE provider = 'GOOGLE_CALENDAR'`,
+    );
+    expect(raw.rows[0]?.encrypted_credentials).not.toContain('1//0-a-real-looking-refresh-token');
+
+    const loaded = await loadIntegrationCredentials(
+      getPool(),
+      'GOOGLE_CALENDAR',
+      'raka@astra.agency',
+    );
+    expect(loaded?.refreshToken).toBe('1//0-a-real-looking-refresh-token');
+  });
+
+  it('returns null for a provider that was never connected', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
+    expect(
+      await loadIntegrationCredentials(getPool(), 'MICROSOFT_CALENDAR', 'nobody@example.test'),
+    ).toBeNull();
+  });
+
+  it('wipes the ciphertext on disconnect, not just a flag', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
+
+    await saveIntegrationCredentials(getPool(), {
+      provider: 'GOOGLE_CALENDAR',
+      accountIdentifier: 'raka@astra.agency',
+      credentials: { refreshToken: 'token-to-be-wiped' },
+      scopes: [],
+    });
+    await disconnectIntegration(getPool(), 'GOOGLE_CALENDAR', 'raka@astra.agency');
+
+    const raw = await getPool().query<{ encrypted_credentials: string | null; status: string }>(
+      `SELECT encrypted_credentials, status FROM integration_connections WHERE provider = 'GOOGLE_CALENDAR'`,
+    );
+    expect(raw.rows[0]?.encrypted_credentials).toBeNull();
+    expect(raw.rows[0]?.status).toBe('DISCONNECTED');
+    expect(
+      await loadIntegrationCredentials(getPool(), 'GOOGLE_CALENDAR', 'raka@astra.agency'),
+    ).toBeNull();
+  });
+
+  it('resolves the token through a loader so a reconnect needs no restart', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
+
+    const load = refreshTokenLoader('GOOGLE_CALENDAR', 'raka@astra.agency');
+    expect(await load()).toBeNull();
+
+    await saveIntegrationCredentials(getPool(), {
+      provider: 'GOOGLE_CALENDAR',
+      accountIdentifier: 'raka@astra.agency',
+      credentials: { refreshToken: 'connected-later' },
+      scopes: [],
+    });
+
+    // Same loader instance, no restart, now returns the new token.
+    expect(await load()).toBe('connected-later');
+  });
+
+  it('reports an error state when the key can no longer decrypt what is stored', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
+
+    await saveIntegrationCredentials(getPool(), {
+      provider: 'GOOGLE_CALENDAR',
+      accountIdentifier: 'raka@astra.agency',
+      credentials: { refreshToken: 'valid-token' },
+      scopes: [],
+    });
+
+    const original = process.env['ENCRYPTION_KEY'];
+    process.env['ENCRYPTION_KEY'] = Buffer.alloc(32, 42).toString('base64');
+    try {
+      // A rotated key must surface as an explicit error rather than as a
+      // confusing auth failure much later.
+      expect(
+        await loadIntegrationCredentials(getPool(), 'GOOGLE_CALENDAR', 'raka@astra.agency'),
+      ).toBeNull();
+      const row = await getPool().query<{ status: string; last_error: string }>(
+        `SELECT status, last_error FROM integration_connections WHERE provider = 'GOOGLE_CALENDAR'`,
+      );
+      expect(row.rows[0]?.status).toBe('ERROR');
+      expect(row.rows[0]?.last_error).toMatch(/could not be decrypted/);
+    } finally {
+      process.env['ENCRYPTION_KEY'] = original;
+    }
+  });
+});
+
+describe('retention', () => {
+  const seedConversation = async (contactId: string) => {
+    const contact = await upsertContact(getPool(), { lemlistContactId: contactId });
+    const conversation = await getOrCreateConversation(getPool(), contact.id, 'cam_1');
+    await getPool().query(
+      `INSERT INTO messages
+         (conversation_id, external_activity_id, occurred_at, channel, direction, kind,
+          body_text, body_html_sanitized, subject)
+       VALUES ($1, $2, now(), 'linkedin', 'INBOUND', 'INBOUND_REPLY',
+               'personal content here', '<p>personal content here</p>', 'a subject')`,
+      [conversation.id, `act_${contactId}`],
+    );
+    return { contactRow: contact, conversation };
+  };
+
+  it('redacts message bodies for a suppressed contact but keeps the decision record', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
+    const { contactRow, conversation } = await seedConversation('con_retention_suppressed');
+
+    await getPool().query(
+      `UPDATE contacts SET is_suppressed = true, suppressed_at = now() - interval '60 days' WHERE id = $1`,
+      [contactRow.id],
+    );
+    await getPool().query(
+      `INSERT INTO decisions (conversation_id, controller_action, policy_version, correlation_id)
+       VALUES ($1, 'HANDOFF', '2026-08-11.1', 'cor_1')`,
+      [conversation.id],
+    );
+
+    const report = await applyRetention(getPool(), {
+      rawWebhookDays: 90,
+      conversationContentDays: 365,
+      suppressedContentDays: 30,
+    });
+    expect(report.suppressedBodiesRedacted).toBeGreaterThan(0);
+
+    const message = await getPool().query<{
+      body_text: string;
+      body_html_sanitized: string | null;
+      external_activity_id: string;
+      direction: string;
+    }>(
+      `SELECT body_text, body_html_sanitized, external_activity_id, direction
+       FROM messages WHERE conversation_id = $1`,
+      [conversation.id],
+    );
+    expect(message.rows[0]?.body_text).toBe('');
+    expect(message.rows[0]?.body_html_sanitized).toBeNull();
+    // The audit-relevant metadata survives.
+    expect(message.rows[0]?.external_activity_id).toBe('act_con_retention_suppressed');
+    expect(message.rows[0]?.direction).toBe('INBOUND');
+
+    const decisions = await getPool().query('SELECT count(*)::int AS n FROM decisions');
+    expect(decisions.rows[0]?.n).toBe(1);
+  });
+
+  it('leaves a recently active conversation alone', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
+    const { conversation } = await seedConversation('con_retention_active');
+
+    await applyRetention(getPool(), {
+      rawWebhookDays: 90,
+      conversationContentDays: 365,
+      suppressedContentDays: 30,
+    });
+
+    const message = await getPool().query<{ body_text: string }>(
+      'SELECT body_text FROM messages WHERE conversation_id = $1',
+      [conversation.id],
+    );
+    expect(message.rows[0]?.body_text).toBe('personal content here');
+  });
+
+  it('redacts the raw webhook payload but keeps the sanitized projection', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
+
+    await insertWebhookEvent(getPool(), {
+      idempotencyKey: 'act_old',
+      eventType: 'linkedinReplied',
+      teamId: 'tea_1',
+      campaignId: 'cam_1',
+      leadId: 'lea_1',
+      contactId: 'ctc_1',
+      isThirdPartyReply: false,
+      rawPayload: { _id: 'act_old', message: 'personal content' },
+      sanitizedPayload: { type: 'linkedinReplied' },
+    });
+    await getPool().query(
+      `UPDATE webhook_events SET received_at = now() - interval '120 days'`,
+    );
+
+    const report = await applyRetention(getPool(), {
+      rawWebhookDays: 90,
+      conversationContentDays: 365,
+      suppressedContentDays: 30,
+    });
+    expect(report.rawPayloadsRedacted).toBe(1);
+
+    const row = await getPool().query<{ raw_payload: unknown; sanitized_payload: unknown }>(
+      'SELECT raw_payload, sanitized_payload FROM webhook_events',
+    );
+    expect(JSON.stringify(row.rows[0]?.raw_payload)).not.toContain('personal content');
+    expect(JSON.stringify(row.rows[0]?.sanitized_payload)).toContain('linkedinReplied');
+  });
+
+  it('reports what it would do without changing anything in dry run', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
+    const { contactRow, conversation } = await seedConversation('con_retention_dry');
+    await getPool().query(
+      `UPDATE contacts SET is_suppressed = true, suppressed_at = now() - interval '60 days' WHERE id = $1`,
+      [contactRow.id],
+    );
+
+    const report = await applyRetention(
+      getPool(),
+      { rawWebhookDays: 90, conversationContentDays: 365, suppressedContentDays: 30 },
+      { dryRun: true },
+    );
+    expect(report.dryRun).toBe(true);
+    expect(report.suppressedBodiesRedacted).toBeGreaterThan(0);
+
+    const message = await getPool().query<{ body_text: string }>(
+      'SELECT body_text FROM messages WHERE conversation_id = $1',
+      [conversation.id],
+    );
+    expect(message.rows[0]?.body_text).toBe('personal content here');
+  });
+
+  it('is idempotent: a second pass finds nothing left to redact', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
+    const { contactRow } = await seedConversation('con_retention_twice');
+    await getPool().query(
+      `UPDATE contacts SET is_suppressed = true, suppressed_at = now() - interval '60 days' WHERE id = $1`,
+      [contactRow.id],
+    );
+
+    const policy = { rawWebhookDays: 90, conversationContentDays: 365, suppressedContentDays: 30 };
+    await applyRetention(getPool(), policy);
+    const second = await applyRetention(getPool(), policy);
+    expect(second.suppressedBodiesRedacted).toBe(0);
   });
 });

@@ -114,9 +114,16 @@ impersonation. A prototype that fails any of these is not deployed.
 
 Only the fields needed to decide are stored. Raw payloads are access
 controlled and separate from the sanitized projection used for display.
-Suppression is immediate and invalidates pending approvals. Retention fields
-exist on every table; the retention *job* is deferred (see
-[status](./status.md)).
+Suppression is immediate and invalidates pending approvals. A daily sweep
+blanks raw payloads, aged conversation content and suppressed contacts'
+messages on separate configurable schedules, keeping the decision record and
+the content hashes so the audit trail survives the redaction.
+
+Calendar refresh tokens are encrypted with AES-256-GCM using a key held
+outside the database, read on demand rather than cached at startup, and wiped
+on disconnect. The OAuth `state` is HMAC-signed, so a callback URL the
+operator is tricked into following cannot attach a different calendar to the
+account.
 
 ## Known limitations
 

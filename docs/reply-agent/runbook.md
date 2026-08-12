@@ -112,9 +112,24 @@ If free/busy queries start failing you will get a `CALENDAR_DISCONNECTED`
 alert, and slot proposals will hand off rather than guess. Nothing will be
 offered or booked from stale data.
 
-1. **Settings** shows the provider and account.
-2. Re-run the OAuth consent for that account.
-3. Confirm with a probe: the settings page reports connection status.
+1. **Settings → Calendar** shows the provider, the account and the live
+   connection status.
+2. Click **Reconnect calendar**. You are sent to the provider's consent
+   screen and back; the refresh token is encrypted before it is stored and is
+   never shown or logged.
+3. The status row turns green. No restart is needed: the worker reads the
+   token on every refresh.
+
+If the callback reports a signature failure, the link you followed did not
+originate from this dashboard. Start again from Settings rather than reusing
+the URL.
+
+If it reports that no refresh token was issued, revoke the app's existing
+consent with the provider and connect again. Without a refresh token the
+connection would work for an hour and then stop, so it is refused outright.
+
+**Disconnect** wipes the stored token rather than only flipping a flag, and
+takes effect on the very next query.
 
 An unconfigured calendar (`CALENDAR_PROVIDER=none`) fails every query on
 purpose. An empty busy list would look like total availability and offer the
@@ -130,6 +145,22 @@ re-derives everything from live state anyway.
 If an outbound intent is stuck in `UNKNOWN`, a send timed out and we do not
 know whether it arrived. **Check the Lemlist inbox before doing anything.**
 The system deliberately will not guess.
+
+## Retention
+
+Personal content ages out automatically; the record of what was decided does
+not. Message bodies and raw webhook payloads are blanked in place, leaving the
+activity id, timestamps, direction and hashes intact, so a gap is visibly a
+redaction rather than a missing record.
+
+| Setting | Default | What ages out |
+| --- | --- | --- |
+| `RETENTION_RAW_WEBHOOK_DAYS` | 90 | raw webhook payloads; the sanitized projection stays |
+| `RETENTION_CONVERSATION_CONTENT_DAYS` | 365 | message bodies on conversations with no activity since |
+| `RETENTION_SUPPRESSED_CONTENT_DAYS` | 30 | message bodies for suppressed contacts, counted from suppression |
+
+The sweep runs once a day inside the worker and writes a `RETENTION_APPLIED`
+audit entry with the counts whenever it changes anything.
 
 ## Exclusions and suppression
 

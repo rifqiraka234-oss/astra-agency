@@ -12,6 +12,7 @@ export * from './anthropic/fake.js';
 export * from './calendar/provider.js';
 export * from './calendar/google.js';
 export * from './calendar/microsoft.js';
+export * from './calendar/oauth.js';
 export * from './calendar/fake.js';
 
 export * from './netlify/client.js';

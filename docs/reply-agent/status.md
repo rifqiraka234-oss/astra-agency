@@ -1,7 +1,7 @@
 # Implementation status
 
 As of 2026-08-12. Verified with `npm run lint`, `npm run typecheck`,
-`npm test` (265 passing) and `npm run build`, plus a live smoke test of the
+`npm test` (285 passing) and `npm run build`, plus a live smoke test of the
 worker against Postgres.
 
 ## Complete
@@ -25,6 +25,8 @@ worker against Postgres.
 | Observability | structured logs with central redaction, Prometheus metrics, health/readiness, backoff, circuit breaker, dead letters, graceful shutdown |
 | Dashboard | queue, conversation detail with predicate log, approvals, prototype preview, contact controls, settings, rollout checklist, errors, audit export |
 | Dashboard security | scrypt password, signed HttpOnly sessions, allowlist re-checked per request, CSRF + Origin, login throttle, CSP, path-confined screenshot endpoint |
+| Calendar connection | delegated OAuth for both providers with a signed `state`, refresh tokens encrypted at rest, resolved on every refresh so a reconnect needs no restart, connect/reconnect/disconnect from Settings |
+| Retention | raw webhook payloads, conversation content and suppressed-contact content age out on separate configurable schedules; decisions, predicates and hashes are kept |
 | Prompts | seven versioned prompts with shared untrusted-data and voice rules |
 | Documentation | README, policy, API notes with verification dates, diagrams, threat model, runbook, versioning guide, fixtures |
 
@@ -34,8 +36,6 @@ worker against Postgres.
 | --- | --- |
 | Concept brief store | `hasStoredConceptBrief` is always false, so any message claiming completed work ("we sketched…") is downgraded to a draft rather than sent. Safe default; the store is the next thing to build if that message should ever auto-send. |
 | Separate drafting model call | Analysis and drafting share one call. The prompt for a separate drafting pass exists and is versioned; splitting it is a refactor, not new safety surface. |
-| Calendar OAuth connect flow | Providers, scopes and token refresh are implemented and tested against fixtures. The dashboard shows connection status but does not yet run the consent redirect; tokens are pasted into `integration_connections` encrypted. |
-| Retention job | Retention columns exist on every table. The sweeper that acts on them is not written. |
 | Playwright browser in CI | Visual QA fails closed when Playwright is absent, so a prototype cannot deploy unverified. The worker image installs Chromium. |
 | pg-boss | The durable queue is implemented directly on Postgres with `FOR UPDATE SKIP LOCKED` and a partial unique index. Adding pg-boss would replace working code with a dependency. |
 | Dashboard E2E tests | Auth, session, CSRF and password logic are unit tested in `packages/core/src/auth/session.test.ts`. Browser-driven tests of the pages are not written. |
@@ -51,7 +51,7 @@ false.
 | Live Lemlist verification | `LEMLIST_API_KEY`, a real `EXPECTED_LEMLIST_TEAM_ID`, and one webhook registered against a deployed URL |
 | Live Anthropic calls | `ANTHROPIC_API_KEY` |
 | Live Netlify deploys | `NETLIFY_ACCESS_TOKEN`, `NETLIFY_TEAM_SLUG` |
-| Live calendar | one of Microsoft or Google configured, plus the consent flow run once |
+| Live calendar | one of Microsoft or Google configured, then click Connect in Settings once |
 | Notification email | `RESEND_API_KEY` and a verified sender, or leave `EMAIL_PROVIDER=console` |
 
 ## Safety limitations worth stating plainly

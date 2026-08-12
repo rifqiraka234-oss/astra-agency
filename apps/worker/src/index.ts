@@ -1,10 +1,12 @@
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import {
+  applyRetention,
   claimDueJobs,
   closePool,
   expireStaleReservations,
   finishJob,
   getPool,
+  recordAudit,
   recordDeadLetter,
 } from '@astra/db';
 import { buildContext, type AppContext } from './context.js';
@@ -131,6 +133,7 @@ function startJobLoop(context: AppContext): NodeJS.Timeout {
       // Housekeeping first: an expired hold must not keep a slot off the
       // market forever.
       await expireStaleReservations(pool, new Date());
+      await maybeApplyRetention(context);
 
       const jobs = await claimDueJobs(pool, new Date(), 5);
       for (const job of jobs) {
@@ -223,6 +226,33 @@ function startJobLoop(context: AppContext): NodeJS.Timeout {
 
   void tick();
   return setInterval(() => void tick(), 5_000);
+}
+
+/** Runs at most once a day; the timestamp lives in memory, so a restart at
+ * worst runs it once more than needed, which is harmless. */
+let lastRetentionRun = 0;
+const RETENTION_INTERVAL_MS = 24 * 60 * 60 * 1000;
+
+async function maybeApplyRetention(context: AppContext): Promise<void> {
+  if (Date.now() - lastRetentionRun < RETENTION_INTERVAL_MS) return;
+  lastRetentionRun = Date.now();
+
+  const report = await applyRetention(getPool(), {
+    rawWebhookDays: context.config.RETENTION_RAW_WEBHOOK_DAYS,
+    conversationContentDays: context.config.RETENTION_CONVERSATION_CONTENT_DAYS,
+    suppressedContentDays: context.config.RETENTION_SUPPRESSED_CONTENT_DAYS,
+  });
+
+  const touched =
+    report.rawPayloadsRedacted + report.messageBodiesRedacted + report.suppressedBodiesRedacted;
+  if (touched === 0) return;
+
+  context.logger.info('retention applied', { ...report });
+  await recordAudit(getPool(), {
+    actor: 'system:retention',
+    action: 'RETENTION_APPLIED',
+    payload: { ...report },
+  });
 }
 
 function json(response: ServerResponse, status: number, body: unknown): void {

@@ -36,7 +36,19 @@ export const GOOGLE_CALENDAR_SCOPES = [
 export interface GoogleCredentials {
   readonly clientId: string;
   readonly clientSecret: string;
-  readonly refreshToken: string;
+  /**
+   * Resolved on every refresh rather than captured at construction, so
+   * reconnecting the calendar takes effect immediately instead of after a
+   * redeploy, and a disconnect starts failing queries straight away.
+   */
+  readonly loadRefreshToken: () => Promise<string | null>;
+}
+
+export class CalendarNotConnectedError extends Error {
+  constructor(provider: string) {
+    super(`${provider} calendar is not connected: no refresh token is stored.`);
+    this.name = 'CalendarNotConnectedError';
+  }
 }
 
 interface TokenResponse {
@@ -71,10 +83,13 @@ export class GoogleCalendarProvider implements CalendarProvider {
     if (this.accessToken && this.accessToken.expiresAt > Date.now() + 60_000) {
       return this.accessToken.value;
     }
+    const refreshToken = await this.credentials.loadRefreshToken();
+    if (!refreshToken) throw new CalendarNotConnectedError('Google');
+
     const body = new URLSearchParams({
       client_id: this.credentials.clientId,
       client_secret: this.credentials.clientSecret,
-      refresh_token: this.credentials.refreshToken,
+      refresh_token: refreshToken,
       grant_type: 'refresh_token',
     });
     // The OAuth token endpoint is the one form-encoded call in this adapter,

@@ -149,6 +149,12 @@ export const envSchema = z.object({
   MAX_MEANINGFUL_TURNS_BEFORE_HANDOFF: intFromEnv(8, 1, 100),
   APPROVAL_EXPIRY_HOURS: intFromEnv(72, 1, 720),
 
+  // Retention. Decisions, predicates and hashes are kept indefinitely; the
+  // prospect's personal content ages out on these schedules.
+  RETENTION_RAW_WEBHOOK_DAYS: intFromEnv(90, 1, 3650),
+  RETENTION_CONVERSATION_CONTENT_DAYS: intFromEnv(365, 1, 3650),
+  RETENTION_SUPPRESSED_CONTENT_DAYS: intFromEnv(30, 1, 3650),
+
   SESSION_SECRET: base64Key(32),
   SESSION_MAX_AGE_HOURS: intFromEnv(12, 1, 168),
 

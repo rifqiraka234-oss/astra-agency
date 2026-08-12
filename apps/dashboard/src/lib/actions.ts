@@ -10,11 +10,13 @@ import {
   addExclusion,
   createApproval,
   decideApproval,
+  disconnectIntegration,
   getApproval,
   getPool,
   recordAudit,
   recordOwnershipChange,
   suppressContact,
+  type IntegrationProvider,
 } from '@astra/db';
 import { assertCsrf, requireSession } from './auth';
 
@@ -349,6 +351,31 @@ export async function retryDeadLetterAction(formData: FormData): Promise<void> {
     payload: { deadLetterId },
   });
   revalidatePath('/errors');
+}
+
+export async function disconnectCalendarAction(formData: FormData): Promise<void> {
+  const session = await requireSession();
+  await assertCsrf(formData);
+
+  const provider = String(formData.get('provider') ?? '') as IntegrationProvider;
+  const account = String(formData.get('account') ?? '');
+  if (provider !== 'GOOGLE_CALENDAR' && provider !== 'MICROSOFT_CALENDAR') {
+    throw new Error('unknown calendar provider');
+  }
+
+  // Disconnecting wipes the stored ciphertext rather than only flipping a
+  // flag, and takes effect on the very next free/busy query because the
+  // worker reads the token on demand. Slot proposals then hand off instead of
+  // guessing at availability.
+  await disconnectIntegration(getPool(), provider, account);
+
+  await recordAudit(getPool(), {
+    actor: `operator:${session.email}`,
+    action: 'CALENDAR_DISCONNECTED',
+    payload: { provider, account },
+  });
+
+  revalidatePath('/settings');
 }
 
 export type { ApprovalStatus };

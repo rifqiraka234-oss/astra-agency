@@ -1,6 +1,7 @@
 import type { TimeInterval } from '@astra/core';
 import { requestForm, requestJson, DEFAULT_RETRY, NO_RETRY } from '../http.js';
 import { type ExternalWriteGuard } from '../guard.js';
+import { CalendarNotConnectedError } from './google.js';
 import {
   mergeIntervals,
   type CalendarProvider,
@@ -36,7 +37,8 @@ export interface MicrosoftCredentials {
   readonly clientId: string;
   readonly clientSecret: string;
   readonly tenantId: string;
-  readonly refreshToken: string;
+  /** Resolved on every refresh; see the note in the Google provider. */
+  readonly loadRefreshToken: () => Promise<string | null>;
 }
 
 interface TokenResponse {
@@ -78,6 +80,9 @@ export class MicrosoftCalendarProvider implements CalendarProvider {
     if (this.accessToken && this.accessToken.expiresAt > Date.now() + 60_000) {
       return this.accessToken.value;
     }
+    const refreshToken = await this.credentials.loadRefreshToken();
+    if (!refreshToken) throw new CalendarNotConnectedError('Microsoft');
+
     const response = await requestForm<TokenResponse>(
       `https://login.microsoftonline.com/${this.credentials.tenantId}/oauth2/v2.0/token`,
       {
@@ -85,7 +90,7 @@ export class MicrosoftCalendarProvider implements CalendarProvider {
         form: new URLSearchParams({
           client_id: this.credentials.clientId,
           client_secret: this.credentials.clientSecret,
-          refresh_token: this.credentials.refreshToken,
+          refresh_token: refreshToken,
           grant_type: 'refresh_token',
           scope: MICROSOFT_CALENDAR_SCOPES.join(' '),
         }),

@@ -185,3 +185,14 @@ with `conferenceDataVersion=1` when a Meet link is wanted. Scopes requested:
 
 Neither provider's event creation is ever retried automatically. A retry after
 an ambiguous timeout is how a prospect gets two invitations.
+
+### Consent
+
+Google needs both `access_type=offline` and `prompt=consent` to issue a
+refresh token; Microsoft needs `offline_access` in the scope list. A consent
+that returns no refresh token is treated as a *failed* connection rather than
+a successful one, because it would otherwise work for an hour and then stop.
+
+The `state` parameter is HMAC-signed with `SESSION_SECRET` and carries the
+expected account email and a timestamp, with a ten-minute window. Both the
+signature and the account are checked before the code is exchanged.
