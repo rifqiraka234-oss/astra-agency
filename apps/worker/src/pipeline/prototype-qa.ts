@@ -1,3 +1,4 @@
+import type { BrowserType, ConsoleMessage } from 'playwright';
 import type { PrototypeFile } from '@astra/integrations';
 
 /**
@@ -229,7 +230,7 @@ export async function runVisualQa(
   html: string,
   artifactDir: string,
 ): Promise<VisualQaResult> {
-  let chromium: typeof import('playwright').chromium;
+  let chromium: BrowserType;
   try {
     ({ chromium } = await import('playwright'));
   } catch {
@@ -257,7 +258,7 @@ export async function runVisualQa(
   try {
     const consoleErrors: string[] = [];
     const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-    page.on('console', (message) => {
+    page.on('console', (message: ConsoleMessage) => {
       if (message.type() === 'error') consoleErrors.push(message.text());
     });
 
@@ -283,7 +284,7 @@ export async function runVisualQa(
     for (const width of [360, 390]) {
       await page.setViewportSize({ width, height: 800 });
       const overflow = await page.evaluate(
-        (viewportWidth) => document.documentElement.scrollWidth > viewportWidth + 1,
+        (viewportWidth: number) => document.documentElement.scrollWidth > viewportWidth + 1,
         width,
       );
       if (overflow) {

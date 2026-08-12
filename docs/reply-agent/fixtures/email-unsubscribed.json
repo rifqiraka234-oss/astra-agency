@@ -1,0 +1,11 @@
+{
+  "_id": "act_fixture_unsubscribe",
+  "type": "emailsUnsubscribed",
+  "secret": "test-webhook-secret",
+  "teamId": "tea_test_team",
+  "campaignId": "cam_fixture_demo",
+  "leadId": "lea_fixture_1",
+  "leadEmail": "sam@fixture.example",
+  "contactId": "ctc_fixture_1",
+  "createdAt": "2026-08-10T14:00:00.000Z"
+}

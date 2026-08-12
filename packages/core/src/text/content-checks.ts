@@ -138,8 +138,12 @@ const PRICING_PATTERNS: readonly RegExp[] = [
 const URL_PATTERN = /\bhttps?:\/\/[^\s<>"')\]]+/gi;
 const BARE_DOMAIN_PATTERN = /\b(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+(?:com|net|org|io|co|nl|dev|app|ai|agency|site|netlify\.app)\b/gi;
 
+/**
+ * Emoji detection. Variation selectors are matched separately from the base
+ * characters so a combined sequence is not silently treated as two emoji.
+ */
 const EMOJI_PATTERN =
-  /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{1F000}-\u{1F0FF}\u{2190}-\u{21FF}\u{2B00}-\u{2BFF}]/gu;
+  /\p{Extended_Pictographic}/gu;
 
 // --- individual checks ------------------------------------------------------
 

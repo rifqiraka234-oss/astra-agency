@@ -1,6 +1,6 @@
 import type { TimeInterval } from '@astra/core';
 import { requestForm, requestJson, DEFAULT_RETRY, NO_RETRY } from '../http.js';
-import { ExternalWriteGuard } from '../guard.js';
+import { type ExternalWriteGuard } from '../guard.js';
 import {
   mergeIntervals,
   type CalendarProvider,

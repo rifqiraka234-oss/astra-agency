@@ -1,0 +1,10 @@
+{
+  "_id": "act_fixture_third_party",
+  "type": "emailsReplied",
+  "secret": "test-webhook-secret",
+  "teamId": "tea_test_team",
+  "isThirdPartyReply": true,
+  "subject": "Re: quick idea for Fixture Coffee",
+  "message": "<p>Sam is on leave until the 20th. I am covering. What is this about?</p>",
+  "createdAt": "2026-08-10T13:00:00.000Z"
+}

@@ -1,0 +1,20 @@
+{
+  "_id": "act_fixture_invite_accepted",
+  "type": "linkedinInviteAccepted",
+  "secret": "test-webhook-secret",
+  "teamId": "tea_test_team",
+  "campaignId": "cam_fixture_demo",
+  "campaignName": "FIXTURE demo campaign",
+  "leadId": "lea_fixture_1",
+  "leadEmail": "sam@fixture.example",
+  "leadFirstName": "Sam",
+  "leadLastName": "Fixture",
+  "leadCompanyName": "Fixture Coffee",
+  "contactId": "ctc_fixture_1",
+  "sequenceId": "seq_fixture_1",
+  "stepId": "stp_fixture_invite",
+  "sequenceStep": 0,
+  "sendUserId": "usr_fixture_send",
+  "sendUserEmail": "raka@astra.agency",
+  "createdAt": "2026-08-10T09:00:00.000Z"
+}

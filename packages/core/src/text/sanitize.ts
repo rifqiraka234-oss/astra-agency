@@ -240,6 +240,7 @@ export function isSafeUrl(value: string): boolean {
   const trimmed = value.trim();
   // Strip control characters that are used to smuggle "java\nscript:" past
   // naive scheme checks.
+  // eslint-disable-next-line no-control-regex -- stripping control characters is the point
   const normalized = trimmed.replace(/[\u0000-\u0020\u00a0\u200b-\u200f\ufeff]/g, '').toLowerCase();
   return /^(https?:\/\/|mailto:)/.test(normalized);
 }

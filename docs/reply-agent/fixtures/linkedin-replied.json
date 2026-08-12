@@ -1,0 +1,13 @@
+{
+  "_id": "act_fixture_linkedin_reply",
+  "type": "linkedinReplied",
+  "secret": "test-webhook-secret",
+  "teamId": "tea_test_team",
+  "campaignId": "cam_fixture_demo",
+  "leadId": "lea_fixture_1",
+  "leadEmail": "sam@fixture.example",
+  "leadFirstName": "Sam",
+  "contactId": "ctc_fixture_1",
+  "message": "Thanks for the note. Yes, send the sketch over.",
+  "createdAt": "2026-08-10T12:00:00.000Z"
+}
