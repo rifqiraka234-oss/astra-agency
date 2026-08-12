@@ -58,6 +58,62 @@ Commit and push all state file changes at the end of every run (or after
 every contact for a long batch, so an interrupted run loses no work). Use a
 plain commit message like `pipeline: process N contacts, YYYY-MM-DD`.
 
+## Pre-flight capability check (run before every run, before step 1)
+
+Learned the hard way on the 2026-08-12 pilot: do not pull any contact or
+company data until these two checks pass. See
+`docs/session-notes/2026-08-12-pilot-run-retrospective.md` for the full
+incident writeup.
+
+1. **WebFetch egress check.** Call `WebFetch` once against any known-good
+   URL. If it returns `EGRESS_BLOCKED` (or otherwise fails) for a domain
+   that has no reason to be blocked, this environment's network policy does
+   not permit the outbound access Stage 2 requires. **Stop immediately.** Do
+   not pull contacts, do not build company maps, do not fall back to
+   research from `WebSearch` snippets alone — that violates the "never
+   fabricate a website observation" guardrail and the spec's explicit
+   "load real pages, not just search snippets" rule for Stage 2. Report the
+   exact error payload to Raka and wait for the environment to be fixed.
+2. **lemlist company-data check.** Call `search_companies` once and confirm
+   what fields actually come back (see note below — as of 2026-08-12 it is
+   only `id`/`name`/`domain`/`crmSyncStatus`, never description/founded
+   date/industry/location). If this has changed, update the note below and
+   the cost assumptions in the spec's "Input pre-filter" section
+   accordingly.
+
+Only proceed to step 1 once both checks pass.
+
+### Known gap: lemlist company data is sparser than the spec assumes
+
+Verified on 2026-08-12: `search_companies` (and every other lemlist tool
+available to this pipeline, including the raw `call_api` fallback) only
+ever returns `id`, `name`, `domain`, and `crmSyncStatus` for a company —
+never `companyDescription`, `companyFoundedOn`, `companyIndustry`, or
+`companyLocation`, and `domain` itself is frequently empty. There is no
+`GET /companies/{companyId}` endpoint in the lemlist API, and
+`search_companies` has no `id` filter — the only way to resolve a specific
+`companyId` to a name/domain is to paginate the full company list and match
+locally (cap `limit` at 200 per call; `limit=500` reliably exceeds the tool
+output token limit and gets redirected to a scratch file instead of
+returned inline).
+
+Practical consequence: the spec's "Input pre-filter" cost-saver (treating
+`companyFoundedOn`/`companyDescription` as pre-populated hints that reduce
+how much fresh research Stage 1/2 need) **does not apply in this
+environment**. Budget for full-from-scratch research on every contact,
+including finding the company website via search when lemlist's `domain`
+field is blank, unless a future check of this section confirms lemlist has
+started returning richer company data.
+
+### If Stage 2 is unavailable pipeline-wide
+
+If the WebFetch check in step 1 above fails, do not process any contacts
+through the pipeline and do not bulk-route them to `tier2_queue.jsonl` as
+`MANUAL_REVIEW` — that would misrepresent "the site was never checked" as
+"the site was checked and came back uncertain." Halt the run, leave state
+files untouched, and write a short note under `logs/runs/YYYY-MM-DD.md`
+recording that the run did not proceed and why.
+
 ## Daily run procedure
 
 1. `git pull` the working branch. Read `state/checkpoint.json`.
