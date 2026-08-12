@@ -19,6 +19,17 @@
 > substance of the old spec (evidence classification, red-teaming, the
 > factual integrity rules) is preserved and folded into the new structure
 > rather than replaced.
+>
+> **Update (2026-08-12, later):** after actually rebuilding three prototypes
+> under this spec (Rosalie Voortman, Point Audit, That Animation Company),
+> the work itself exposed gaps the rewrite had not anticipated: type that is
+> chosen but never rendered, a medium the builder cannot play, an
+> interactive-panel bug shipped twice, deliverables stranded by an ignore
+> rule, and a send step the spec was silent on. Those lessons are folded in
+> as F2b (font-load gate), F2c (medium-I-cannot-render protocol), F4
+> (interactive integrity and no-JS render), Stage H (the send), and the
+> Portability and Payload-budget rules under Deliverables. The full
+> reasoning is in `docs/prototype-pipeline-retrospective-2026-08-12.md`.
 
 ## Purpose
 This is triggered by a "Ready for a mockup" handoff from the daily inbox
@@ -309,7 +320,7 @@ before proceeding.
 
 ### C5 — The no-swap test
 Before delivery, look at the prototype with the logo and company name
-removed (mentally, or with an actual cropped screenshot) and answer:
+removed and answer:
 
 1. Can a reviewer identify the industry from the design alone?
 2. Would the actual client recognise their own character in it?
@@ -320,6 +331,12 @@ If the answer to question 3 is yes, the work fails this stage. This is the
 single sharpest test in this spec: it is exactly what exposed that Point
 Audit, That Animation Company, and Voortman & Baumhauer were recognisably
 the same underlying design applied three times.
+
+**Do this as a produced artifact, not a thought experiment.** Actually
+generate the logo-removed, cropped hero screenshots of this prototype and
+of the last few, and lay them side by side. Self-grading the test from
+memory is how three near-identical pages each passed it individually. A
+real side-by-side makes the shared recipe impossible to miss.
 
 ### C6 — Category is context, not a prison
 Researching same-category references is mandatory (Stage A3). Copying them
@@ -542,6 +559,45 @@ prototype:
   cosmetic nitpick.
 - No console errors on load.
 - No CTA that points to a dead, placeholder, or unsafe destination.
+- **Verify any live-site fact that drives a gate, live.** If a design
+  decision or a hard-failure gate depends on something observed on a real
+  site (a mixed-content bug, a missing form, "their site already shows X"),
+  re-confirm it against the live site yourself before relying on it. Sites
+  change, and a second-hand or stale observation can drive a wrong build or
+  a wrong critique. This rule exists because the Alan mixed-content rule
+  above was first written from a report, not a fresh check.
+
+### F2b — Font-load gate (chosen type must actually be seen)
+Stage C2 makes typography an evidence-based decision, so the finished page
+must actually be rendered with that type, not just specified in CSS.
+
+- Render once with the real webfonts loaded, and once in the fallback stack
+  (fonts blocked or not yet arrived). Neither state may break the layout:
+  no wrapping nav, no clipped headline, no overflow that only appears in one
+  state. A wider fallback font wrapping a sticky header into the page is a
+  real bug this catches.
+- Define a fallback stack whose metrics are close to the chosen webfont, so
+  the fallback render is a near miss, not a different layout.
+- **If the build environment cannot load the webfonts at all, typography is
+  UNVERIFIED, not passed.** Say so explicitly in the research summary and
+  require a real-browser check of the type before the prototype is trusted.
+  Do not describe a fallback-font screenshot as if it showed the real
+  design.
+
+### F2c — The "medium I cannot render" protocol
+Some builds depend on an asset the build environment physically cannot play
+or decode (a video codec the sandbox lacks, audio, a third-party embed).
+When that happens:
+
+- Do the structural check you can: valid container/format, metadata loads,
+  correct `<video>`/`<audio>`/embed markup, a real poster present, no dead
+  source.
+- **Flag the asset as playback-unverified in the research summary, and make
+  a real-browser playback confirmation a BLOCKING pre-send gate**, not a
+  footnote. For a category whose proof *is* that medium (an animation studio
+  whose proof is motion), shipping it unseen is a hard failure until a human
+  or a capable browser has confirmed it plays. Never let the core proof of
+  the page go out having never been rendered by anyone.
 
 ### F3 — Multi-viewport visual QA
 Before delivery, render and inspect the page at approximately these three
@@ -563,6 +619,27 @@ At each width, check at minimum:
 
 Approved production assets should be localised and optimised to modern
 formats where feasible rather than left as large hotlinked originals.
+
+### F4 — Interactive integrity and no-JS render
+Most signature devices are tab sets, steppers or switchers that show one
+panel at a time. They fail in small, repeatable ways. Check every one:
+
+- **`[hidden]` must actually hide.** A class rule like `.panel{display:grid}`
+  has higher specificity than the `[hidden]` user-agent style and silently
+  cancels it, so panels never switch even though the tab highlights. Give
+  the hide rule enough specificity (e.g. `html.js .panel[hidden]{display:
+  none}`) and verify in render that switching a tab actually changes the
+  panel, not just the selected state. This exact bug was shipped twice in
+  one session before a re-render caught it; treat it as a standing check.
+- **Gate the hiding behind a JS flag** (a `js` class set by script on load)
+  so that with JavaScript disabled all panels render stacked and the
+  content survives, per F1's "no meaning lost without JavaScript" rule.
+- **Take one screenshot with JavaScript disabled** for any JS-driven device
+  and confirm the meaning is still there.
+- **Confirm images inside initially-hidden panels decode when revealed.** A
+  hidden panel's images report zero natural dimensions until shown; that is
+  expected, but click through every panel and confirm zero genuinely broken
+  images once each is open.
 
 ---
 
@@ -610,6 +687,10 @@ Any one of the following blocks delivery regardless of the weighted score:
 - A software client's prototype shows invented dashboard chrome in place
   of, rather than alongside and secondary to, the client's real verified
   workflow.
+- The core proof of the page is a medium the builder could never render or
+  play (F2c) and it is sent without a real-browser playback confirmation.
+- Typography was never rendered with the real webfonts and is being treated
+  as verified anyway (F2b).
 
 If strategic accuracy, brand authenticity, or technical reliability falls
 short at any point in this process, revise before delivering. Do not ship
@@ -636,6 +717,57 @@ Every delivered prototype must be accompanied by a short rationale
 - verified facts versus illustrative or placeholder content, restated
   plainly for a fast sanity check.
 
+---
+
+## Stage H — The send (the prototype is not the goal, a booked meeting is)
+
+The old spec ended at "the prototype is done." In practice the prototype
+then has to be hosted and sent, and that hand-off is where avoidable
+mistakes happen. These are pre-send gates, all of them cheap.
+
+### H1 — Promised-concept fidelity gate
+Before sending, open the actual outreach thread and quote, verbatim, the
+concept that was promised to this lead. Confirm the prototype delivers that
+specific thing, not a near neighbour. (Point Audit was promised "a
+multi-property walkthrough from group dashboard to resolved issue"; the
+stepper had to deliver exactly that.) If the built concept drifted from
+what was promised, fix the mismatch or change the message, do not paper over
+it.
+
+### H2 — Link re-verification at send time
+Immediately before sending, fetch the live URL and confirm it returns 200,
+that its `<title>` matches, and that its byte size matches the file you
+built. This proves the correct, current build is deployed at that URL, and
+catches a stale deploy, a wrong slug, or a half-uploaded file before a real
+prospect clicks it. Never send a link you have not just re-checked. And
+never send the core-proof medium without the F2c playback confirmation.
+
+### H3 — Send-note tone, keyed to the lead
+The message that carries the link follows the outreach voice rules in
+`docs/astra-master-context.md` section 9 and the no-dash guardrail on the
+message text (hyphens in the URL slug are exempt). Beyond that, calibrate
+the tone from the lead's own last reply and sentiment:
+
+- **Not shopping / low interest** (a polite "you can send it, but we are not
+  looking"): no call ask, no urgency, frame it as "we already had this
+  sketched, thought it might be useful." Leave the door open softly.
+- **A concrete objection** (budget, "we are a start up, no resources for an
+  overhaul"): answer that exact objection in the note ("this is a concept to
+  react to, not a bill"), do not ignore it.
+- **Active interest / already offered to talk**: steer straight to the
+  meeting, propose a concrete next step and time, since the goal of every
+  send is a booked meeting, not a good conversation.
+
+Always reference the concept actually promised, and if there has been a real
+gap since the last message, acknowledge it plainly rather than pretending
+there was none.
+
+### H4 — Record the send
+Append the row to `state/prototypes.jsonl` with `outcome: "pending"` and log
+it, per `CLAUDE.md`. On a reply, drive toward the booked meeting (positive)
+or a genuinely different angle (decline), never a repeat of a declined
+concept.
+
 ## Deliverables
 
 - The prototype itself, a single HTML file, named `[Company]_Prototype.html`.
@@ -650,6 +782,27 @@ Every delivered prototype must be accompanied by a short rationale
   hosting, that one click of actually hosting and sharing the link stays a
   manual step unless Raka has explicitly asked for the hosting step to run
   unattended too (see `CLAUDE.md`).
+
+### Portability (do not let a finished deliverable get stranded)
+The moment a prototype passes QA it must be made portable, committed to the
+working branch even though `state/prototypes/` is normally gitignored as a
+working-artifact directory (force-add the finished HTML and its research
+summary). Sessions and containers are ephemeral, and hosting often happens
+from a different session than the build. An ignore rule that keeps working
+scratch out of git must never be the reason a finished, sendable prototype
+only exists on one dying container. Once it is hosted and sent, it may be
+removed from git again to keep the repo lean, since it then lives on Netlify.
+
+### Payload budget
+Prefer real assets, kept light. Target a total page weight under about 2MB.
+Over roughly 5MB, justify it in writing in the research summary. For heavy
+media (video especially), prefer a small multi-file bundle
+(`index.html` plus an `assets/` folder) deployed as a Netlify site, since
+Netlify serves folders happily, rather than base64-embedding megabytes into
+a single file. Reserve single-file base64 embedding for when a genuinely
+self-contained single file is the actual deliverable, and do not choose it
+because it happens to be convenient to hand around, that is a
+delivery-channel reason masquerading as a product decision.
 
 ## Guardrails
 
