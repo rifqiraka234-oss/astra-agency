@@ -48,21 +48,26 @@ beforeEach(async () => {
   await getPool().query(
     `TRUNCATE approvals, outbound_intents, slot_reservations, calendar_events,
        notifications, processing_jobs, webhook_events, messages, conversations,
-       leads, contacts, decisions, audit_events RESTART IDENTITY CASCADE`,
+       leads, contacts, decisions, audit_events, operators RESTART IDENTITY CASCADE`,
   );
 });
 
-const guard = () => {
+/**
+ * Report an unreachable database as a *skip*, never as a pass. These tests
+ * exist to prove the database enforces the constraints; a vacuous pass would
+ * claim that proof without having made it.
+ */
+const requireDatabase = (ctx: { skip: (note?: string) => void }): boolean => {
   if (!available) {
-    // eslint-disable-next-line no-console
-    console.warn('skipping: no DATABASE_URL reachable');
+    ctx.skip('no database reachable at DATABASE_URL');
+    return false;
   }
-  return available;
+  return true;
 };
 
 describe('webhook idempotency', () => {
-  it('collapses a duplicate delivery into one row', async () => {
-    if (!guard()) return;
+  it('collapses a duplicate delivery into one row', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     const payload = {
       idempotencyKey: 'act_duplicate',
       eventType: 'linkedinReplied',
@@ -87,8 +92,8 @@ describe('webhook idempotency', () => {
 });
 
 describe('debounce scheduling', () => {
-  it('extends the existing job rather than creating a second one', async () => {
-    if (!guard()) return;
+  it('extends the existing job rather than creating a second one', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     const contact = await upsertContact(getPool(), { lemlistContactId: 'con_debounce' });
 
     const early = new Date('2026-08-11T10:00:00Z');
@@ -112,8 +117,8 @@ describe('debounce scheduling', () => {
     expect(rows.rows[0]?.n).toBe(1);
   });
 
-  it('never moves the deadline backwards', async () => {
-    if (!guard()) return;
+  it('never moves the deadline backwards', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     const contact = await upsertContact(getPool(), { lemlistContactId: 'con_backwards' });
     await scheduleProcessing(getPool(), {
       contactId: contact.id,
@@ -130,8 +135,8 @@ describe('debounce scheduling', () => {
 });
 
 describe('per-contact locking', () => {
-  it('lets only one worker hold a contact at a time', async () => {
-    if (!guard()) return;
+  it('lets only one worker hold a contact at a time', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     let innerAcquired: boolean | null = null;
 
     const outer = await withContactLock('con_locked', async () => {
@@ -144,8 +149,8 @@ describe('per-contact locking', () => {
     expect(innerAcquired).toBe(false);
   });
 
-  it('releases the lock so a later worker can proceed', async () => {
-    if (!guard()) return;
+  it('releases the lock so a later worker can proceed', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     await withContactLock('con_sequential', async () => 'first');
     const second = await withContactLock('con_sequential', async () => 'second');
     expect(second.acquired).toBe(true);
@@ -153,8 +158,8 @@ describe('per-contact locking', () => {
 });
 
 describe('outbound idempotency', () => {
-  it('refuses to create a second intent for the same idempotency key', async () => {
-    if (!guard()) return;
+  it('refuses to create a second intent for the same idempotency key', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     const contact = await upsertContact(getPool(), { lemlistContactId: 'con_outbound' });
     const conversation = await getOrCreateConversation(getPool(), contact.id, 'cam_1');
 
@@ -178,8 +183,8 @@ describe('outbound idempotency', () => {
 });
 
 describe('slot reservations', () => {
-  it('rejects an overlapping live reservation', async () => {
-    if (!guard()) return;
+  it('rejects an overlapping live reservation', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     const contactA = await upsertContact(getPool(), { lemlistContactId: 'con_slot_a' });
     const contactB = await upsertContact(getPool(), { lemlistContactId: 'con_slot_b' });
     const conversationA = await getOrCreateConversation(getPool(), contactA.id, 'cam_1');
@@ -208,8 +213,8 @@ describe('slot reservations', () => {
     expect('conflict' in second && second.conflict).toBe(true);
   });
 
-  it('allows a non-overlapping reservation', async () => {
-    if (!guard()) return;
+  it('allows a non-overlapping reservation', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     const contact = await upsertContact(getPool(), { lemlistContactId: 'con_slot_c' });
     const conversation = await getOrCreateConversation(getPool(), contact.id, 'cam_1');
     const expiresAt = new Date('2026-08-13T12:00:00Z');
@@ -248,8 +253,8 @@ describe('approvals', () => {
     ...overrides,
   });
 
-  it('supersedes the previous open approval when a revision is requested', async () => {
-    if (!guard()) return;
+  it('supersedes the previous open approval when a revision is requested', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     const contact = await upsertContact(getPool(), { lemlistContactId: 'con_approval' });
     const conversation = await getOrCreateConversation(getPool(), contact.id, 'cam_1');
 
@@ -268,8 +273,8 @@ describe('approvals', () => {
     expect(rows.rows[0]?.status).toBe('SUPERSEDED');
   });
 
-  it('makes approving twice a no-op rather than a second authorization', async () => {
-    if (!guard()) return;
+  it('makes approving twice a no-op rather than a second authorization', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     const contact = await upsertContact(getPool(), { lemlistContactId: 'con_approval_2' });
     const conversation = await getOrCreateConversation(getPool(), contact.id, 'cam_1');
     const operator = await getPool().query<{ id: string }>(
@@ -293,8 +298,8 @@ describe('approvals', () => {
     expect(second).toBeNull();
   });
 
-  it('marks every open approval stale when a new message arrives', async () => {
-    if (!guard()) return;
+  it('marks every open approval stale when a new message arrives', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     const contact = await upsertContact(getPool(), { lemlistContactId: 'con_approval_3' });
     const conversation = await getOrCreateConversation(getPool(), contact.id, 'cam_1');
     await createApproval(getPool(), approvalInput(conversation.id));
@@ -309,8 +314,8 @@ describe('approvals', () => {
 });
 
 describe('notification cooldown', () => {
-  it('suppresses a repeat notification inside the cooldown window', async () => {
-    if (!guard()) return;
+  it('suppresses a repeat notification inside the cooldown window', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     const input = {
       conversationId: null,
       kind: 'HUMAN_HANDOFF',
@@ -330,8 +335,8 @@ describe('notification cooldown', () => {
 });
 
 describe('transactions', () => {
-  it('rolls back every write when the callback throws', async () => {
-    if (!guard()) return;
+  it('rolls back every write when the callback throws', async (ctx) => {
+    if (!requireDatabase(ctx)) return;
     await expect(
       withTransaction(async (client) => {
         await client.query(
