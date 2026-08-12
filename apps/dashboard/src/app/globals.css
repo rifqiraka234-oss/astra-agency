@@ -1,0 +1,246 @@
+:root {
+  --ink: #16181d;
+  --muted: #5f6672;
+  --line: #e2e5ea;
+  --bg: #fbfbfc;
+  --panel: #ffffff;
+  --ok: #1a7f4b;
+  --warn: #9a6700;
+  --bad: #b4232c;
+  --accent: #2a4d8f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* --- chrome --------------------------------------------------------------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 20px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar nav {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+}
+
+.topbar .operator {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.banner {
+  padding: 9px 20px;
+  font-size: 14px;
+}
+
+.banner-safe {
+  background: #eef7f1;
+  color: var(--ok);
+  border-bottom: 1px solid #cfe7d9;
+}
+
+.banner-live {
+  background: #fdf0f0;
+  color: var(--bad);
+  border-bottom: 1px solid #f2cfd1;
+}
+
+.banner-quiet {
+  background: #fbf5e8;
+  color: var(--warn);
+  border-bottom: 1px solid #eeddbd;
+}
+
+/* --- layout --------------------------------------------------------------- */
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.grow {
+  flex: 1;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.mono {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12.5px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-size: 11.5px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.tag-pass {
+  color: var(--ok);
+  border-color: #cfe7d9;
+  background: #f3faf6;
+}
+
+.tag-fail {
+  color: var(--bad);
+  border-color: #f2cfd1;
+  background: #fdf4f4;
+}
+
+/* --- conversation --------------------------------------------------------- */
+
+.message {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.message.inbound {
+  background: #f5f7fb;
+}
+
+.message.uncertain {
+  border-color: #f2cfd1;
+}
+
+.message pre {
+  margin: 6px 0 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font: inherit;
+}
+
+textarea {
+  width: 100%;
+  min-height: 130px;
+  padding: 10px;
+  font: inherit;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  resize: vertical;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+select {
+  padding: 8px 10px;
+  font: inherit;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+button {
+  padding: 8px 14px;
+  font: inherit;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+button.danger {
+  color: var(--bad);
+  border-color: #f2cfd1;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.screenshots {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.screenshots figure {
+  margin: 0;
+}
+
+.screenshots img {
+  max-width: 420px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.login {
+  max-width: 380px;
+  margin: 80px auto;
+}
+
+.error {
+  color: var(--bad);
+  font-size: 14px;
+}
