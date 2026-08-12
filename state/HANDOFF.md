@@ -1,144 +1,69 @@
-# Handoff note — prototype build & hosting pipeline
+# Handoff note — prototype rebuilds & hosting
 
-Written 2026-08-11 because Netlify is enabled in a different session than this
-one; picking up there needs this exact state. Delete this file once hosting
-is done and the leads are sent (it's a handoff scratch note, not permanent
-documentation).
+Updated 2026-08-12. All three prototypes have been **rebuilt from scratch on
+real client assets** after a design audit found the first versions were
+strategically fine but visually generic and interchangeable, and failed the
+new spec's hard gates (`docs/prototype-build-spec.md`, rewritten same day).
 
-## Where things stand
+Delete this file once all three are hosted and sent.
 
-All doc/spec/state work is committed and pushed to
-`claude/workflow-docs-update-cxm8ih` (HEAD `6bb4816`). Nothing local is
-uncommitted. The inbox recheck (Silent Accepted queue, v0.2 auto-message
-check, 4 resolved threads) is done and pushed. Three prototype builds were
-kicked off for the "Ready for a mockup" leads surfaced by that recheck.
+## Status: all three rebuilt, QA'd, sent to Raka. Not yet hosted.
 
-## Prototype build status (3 total)
+Nothing was ever sent to any lead (state/prototypes.jsonl is still empty),
+so there is no "old link" to replace. Hosting will produce fresh URLs.
 
-Prototype HTML/research files are gitignored on purpose
-(`state/prototypes/` — see `.gitignore` and CLAUDE.md's own note that these
-are working artifacts, not repo content). That means **they exist only on
-this container's disk right now** and will NOT be visible in a fresh
-session/container unless copied over first.
+Prototype folders live under `state/prototypes/` (gitignored by design, so
+they are on THIS container's disk only, not in git). Each was also sent to
+Raka directly via the chat, so he has the HTML files in hand.
 
-1. **Point Audit** (Lisa Bouamra) — DONE, reviewed, sound.
-   - `state/prototypes/point-audit/Point_Audit_Prototype.html` (39369 bytes,
-     816 lines)
-   - `state/prototypes/point-audit/Point_Audit_Research_Summary.md`
-   - Checked: valid DOCTYPE, viewport meta, external deps limited to Google
-     Fonts + 3 Pexels image URLs, zero dead `href="#"`, has
-     `prefers-reduced-motion`.
-   - Concept: "Group Command Center" interactive multi-property dashboard,
-     fictional 9-property demo ("Riva & Aubert Hotels"), clearly labelled
-     illustrative in 3 places.
-   - Important: Lisa said she's not currently shopping for this. The send
-     note must stay low-key, no pressure, no call ask, per the research
-     summary's explicit instruction.
-   - Netlify site name to use: `astra-point-audit-prototype`.
+### 1. Rosalie Voortman — `state/prototypes/rosalie-voortman/`
+- `RosalieVoortman_Prototype.html` (~1.6MB) + `RosalieVoortman_Research_Summary.md`
+- Rebuilt entirely on HER OWN real photography (Aimee the Label FW26, Aimee
+  at Modefabriek, interiors, on-location), pulled from rosalievoortman.com.
+  Zero stock. Dark gallery, Familjen Grotesk, "Chapters" tab sequencer.
+- Self-score 92/100. Netlify name: `astra-rosalie-voortman-prototype`.
+- Note: built against rosalievoortman.com (her wedding/brand site), NOT the
+  funeral-photography joint brand voortman-baumhauer.nl. Confirm the thread
+  was about her own brand work before sending.
 
-2. **That Animation Company** (Lynn Chadwick / Steve Cooke) — DONE, reviewed,
-   sound.
-   - `state/prototypes/that-animation-company/ThatAnimationCompany_Prototype.html`
-     (31150 bytes, 863 lines)
-   - `state/prototypes/that-animation-company/ThatAnimationCompany_Research_Summary.md`
-   - Checked: valid lowercase doctype, external deps limited to Google Fonts
-     only (no images, deliberate), one `href="#"` traced and confirmed
-     non-dead (JS sets a real mailto: href on page load via `render()` at
-     line 859).
-   - Concept: standalone "Production Partner" page, 2D/3D proof side by
-     side, 3-step scope tool replacing the blank-email contact page. Scoped
-     to fit their existing GoDaddy site, not a redesign, respects Lynn's
-     stated budget constraint.
-   - Netlify site name to use: `astra-that-animation-company-prototype`.
+### 2. Point Audit — `state/prototypes/point-audit-v2/`
+- `PointAudit_Prototype.html` (~490KB) + `PointAudit_Research_Summary.md`
+- Rebuilt on THEIR real product screens (mobile audit, report, action plan,
+  performance). No stock hotels, no invented "Riva Aubert" data. Clinical
+  blue, Schibsted Grotesk, "Follow one finding" stepper.
+- Self-score 91/100. Netlify name: `astra-point-audit-prototype`.
+- Low-pressure send for Lisa (she said she's not shopping). English page on a
+  French product = deliberate; flag to her.
 
-3. **Voortman & Baumhauer / Rosalie Voortman** — DONE, agent-reviewed with
-   high self-QA scores, still needs a human sanity read before sending
-   given the premise correction below.
-   - `state/prototypes/voortman-baumhauer/VoortmanBaumhauer_Prototype.html`
-     (385KB, single self-contained file, images embedded as base64, only
-     external dep is Google Fonts)
-   - `state/prototypes/voortman-baumhauer/VoortmanBaumhauer_Research_Summary.md`
-     (170 lines)
-   - Checked: 0 dead `href="#"`, `prefers-reduced-motion` present, JS
-     syntax-checked with `node --check`.
-   - **Important premise correction found during research, read before
-     sending anything:** the original brief assumed "Voortman & Baumhauer"
-     was one wedding+funeral business with brand work buried inside. Live
-     evidence doesn't support that. There are two separate real sites:
-     `voortman-baumhauer.nl` (joint brand with Malou von Baumhauer) is
-     **100% funeral/memorial photography** (uitvaartfotografie), nothing
-     else on it. The site that actually matches the original outreach
-     critique (mixed Dutch/English, wedding-led, a buried "Brands" chapter)
-     is Rosalie's **own separate site, `rosalievoortman.com`**, which
-     already has a real (if thin) Brands page with three published
-     packages (€450/€695/€995). The agent built the prototype against that
-     real page, not the funeral-photography joint site. This is flagged in
-     the research summary as a hypothesis not yet confirmed by Rosalie
-     herself, and is worth a one-line confirmation before sending: make
-     sure the outreach thread this replies to was actually about
-     `rosalievoortman.com`, not the funeral-photography joint brand, before
-     using this prototype.
-   - Concept: "One shoot, everywhere it needs to work" — pick one of 3
-     illustrative small-business archetypes, then a destination (Website
-     Hero / Instagram Grid / Press Kit / Pitch Deck); same photo drops into
-     all 4 live mockups while a problem/direction/use panel updates
-     alongside. Reuses Rosalie's real chapter names and real pricing
-     verbatim. Bespoke film-contact-sheet design motif (Fraunces + Work
-     Sans + Caveat), distinct from the other two prototypes.
-   - Self-QA came back 8-10/10 across all 10 criteria; only mobile
-     experience scored 8 (CSS/DOM verified statically, never opened in an
-     actual browser/device since none was available to that agent) — do an
-     actual browser open before sending, not just a code read.
-   - One cosmetic loose end: the HTML `<title>` tag still reads "For Your
-     Brand — Rosalie Voortman Photography" (generic), left over from before
-     the premise correction; worth a quick check that no other stray
-     "brand photography" boilerplate slipped through elsewhere in the copy.
-   - Netlify site name to use: `astra-voortman-baumhauer-prototype`
-     (keeping this name since it matches how the lead is filed in lemlist,
-     even though the actual site being pitched is `rosalievoortman.com`).
+### 3. that Animation Company — `state/prototypes/that-animation-v2/`
+- `ThatAnimationCompany_Prototype.html` (~7MB, real video embedded) +
+  `ThatAnimationCompany_Research_Summary.md`
+- Rebuilt to LEAD WITH MOTION: their real 2D reel + real 3D turntable,
+  embedded and playing. Old build had zero video. Their real fonts (Libre
+  Baskerville), real red, honest credit ownership (Avery & Masa credited as
+  a collaboration, not solo).
+- Self-score 90/100, ONE caveat: video playback could not be visually
+  confirmed in-session (sandbox Chromium can't decode h264). **Open it in a
+  real browser and confirm both reels play before sending.**
+- Netlify name: `astra-that-animation-company-prototype`.
 
-## Netlify hosting (blocked in this session, should work in the other one)
-
-- Naming convention: `astra-[company-slug]-prototype`, lowercase, spaces to
-  hyphens, strip anything not alphanumeric/hyphen. Never a generic
-  auto-generated subdomain.
-- Deploy each single HTML file as its own new Netlify site under that name.
-- **Visually confirm each deployed URL loads correctly, desktop and mobile,
-  before sending it anywhere.** Do not send an unverified link.
+## Hosting (still the one blocker)
+Netlify connector is authenticated at org level but `enabledInChat:false`
+for the working chat, so it can't be driven from here. Options:
+1. Enable Netlify for the chat (UI toggle), then deploy each folder.
+2. Host from the other session where Netlify is already enabled (would need
+   the files copied across — they're gitignored, so not automatic).
+3. Raka drags each sent HTML onto Netlify Drop manually (no tool needed).
+Whichever path: deploy under the `astra-[slug]-prototype` names above,
+`noindex` is already set on each page, and confirm each live URL loads on
+desktop and mobile before sending.
 
 ## After hosting: sending
+Per lead, low-friction message, no-dash guardrail on the message text (not
+the URL). Then append a row to `state/prototypes.jsonl` per lead
+(date, contactId, companyName, promisedConcept, angleNumber, netlifyUrl,
+researchSummaryPath, sentAt, outcome:"pending") and commit.
 
-Send each prototype link to its lead via lemlist `send_message` (channel
-linkedin, sendUserId `usr_27bdxG7jzTn2rucGB`), voice per
-`docs/astra-master-context.md` section 9, no-dash guardrail applies to the
-message text (not the Netlify URL slug, hyphens there are structural).
-
-- **Lisa Bouamra (Point Audit):** low-pressure, "we already had this
-  sketched, thought it might be useful," no urgency, no call ask.
-- **Lynn Chadwick (That Animation Company):** brief, respects her stated
-  budget constraint, frames it as a small add-on not a redesign.
-- **Rosalie Voortman:** tailor once her prototype/research summary exists;
-  her prior consent was a thin "OK" so keep it low friction.
-
-After each send, append a row to `state/prototypes.jsonl`:
-`date, contactId, companyName, promisedConcept, angleNumber, netlifyUrl,
-researchSummaryPath, sentAt, outcome: "pending"`. Commit and push.
-
-## Also still pending, separate from the prototype pipeline
-
-- Dr. Ragueneau: a Stalled check-in nudge was drafted in the inbox recheck
-  (Calendly call booked for 2026-08-07, date passed, no follow-up either
-  way) but explicitly held back per an earlier instruction ("send them all,
-  except the gilrisk one" was ambiguous on this one) — do not send without
-  fresh explicit approval.
-
-## Files to check first in the new session
-
-1. This file.
-2. `CLAUDE.md` "Prototype build and meeting booking" section — full
-   mechanics (hosting/retry/meeting-booking/briefing).
-3. `docs/prototype-build-spec.md` — the actual research/build quality bar.
-4. `state/prototypes/` on disk (only present on a container that inherits
-   this one's filesystem — otherwise copy the two completed HTML+summary
-   pairs above across manually before doing anything else, since they took
-   real research work to produce).
+## Still pending, separate
+- Dr. Ragueneau: a Stalled check-in nudge was drafted but held back pending
+  explicit approval. Do not send without it.
