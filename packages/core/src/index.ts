@@ -28,3 +28,20 @@ export * from './policy/engine.js';
 export * from './policy/presend.js';
 
 export * from './approvals/binding.js';
+
+export * from './run/envelope.js';
+export * from './run/capabilities.js';
+
+export * from './enrichment/pagination.js';
+export * from './enrichment/website.js';
+export * from './enrichment/profile.js';
+export * from './enrichment/tiers.js';
+export * from './enrichment/messages.js';
+export * from './enrichment/import-intent.js';
+
+export * from './prototype/deliverable.js';
+export * from './prototype/qa-gates.js';
+
+export * from './learning/lessons.js';
+export * from './learning/retrospective.js';
+export * from './learning/evals.js';

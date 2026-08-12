@@ -93,8 +93,40 @@ const TRANSITIONS: Readonly<Record<ConversationState, readonly ConversationState
     'SUPPRESSED',
     'RETRYABLE_ERROR',
   ],
-  PROTOTYPE_QUEUED: ['PROTOTYPE_BUILDING', 'HUMAN_REVIEW_REQUIRED', 'SUPPRESSED', 'RETRYABLE_ERROR'],
+  PROTOTYPE_QUEUED: [
+    'PROTOTYPE_RESEARCHING',
+    'HUMAN_REVIEW_REQUIRED',
+    'SUPPRESSED',
+    'RETRYABLE_ERROR',
+  ],
+  // Research owns the identity premise gate. An unresolved premise goes to a
+  // human rather than proceeding into design on a guess.
+  PROTOTYPE_RESEARCHING: [
+    'PROTOTYPE_STRATEGIZING',
+    'HUMAN_REVIEW_REQUIRED',
+    'SUPPRESSED',
+    'RETRYABLE_ERROR',
+    'DEAD_LETTER',
+  ],
+  // Strategy owns the mandatory pre-design artifact gate.
+  PROTOTYPE_STRATEGIZING: [
+    'PROTOTYPE_BUILDING',
+    'HUMAN_REVIEW_REQUIRED',
+    'SUPPRESSED',
+    'RETRYABLE_ERROR',
+    'DEAD_LETTER',
+  ],
   PROTOTYPE_BUILDING: [
+    'PROTOTYPE_DEPLOYING',
+    'PROTOTYPE_QA_FAILED',
+    'HUMAN_REVIEW_REQUIRED',
+    'SUPPRESSED',
+    'RETRYABLE_ERROR',
+    'DEAD_LETTER',
+  ],
+  // Deployment can still fail QA: the logged-out verification runs against the
+  // deployed site, so a prototype that passed locally can fail here.
+  PROTOTYPE_DEPLOYING: [
     'AWAITING_PROTOTYPE_APPROVAL',
     'PROTOTYPE_QA_FAILED',
     'HUMAN_REVIEW_REQUIRED',

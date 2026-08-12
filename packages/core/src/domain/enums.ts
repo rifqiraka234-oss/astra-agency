@@ -37,7 +37,14 @@ export const CONVERSATION_STATES = [
   'DRAFT_CREATED',
   'AWAITING_MESSAGE_APPROVAL',
   'PROTOTYPE_QUEUED',
+  // The Prototype Studio's pre-design stages are distinct states rather than
+  // sub-steps of "building", because each one has its own hard gate: research
+  // must resolve the identity premise, strategy must produce the mandatory
+  // artifacts, and deployment must verify anonymously.
+  'PROTOTYPE_RESEARCHING',
+  'PROTOTYPE_STRATEGIZING',
   'PROTOTYPE_BUILDING',
+  'PROTOTYPE_DEPLOYING',
   'PROTOTYPE_QA_FAILED',
   'AWAITING_PROTOTYPE_APPROVAL',
   'CALENDAR_OPTIONS_PROPOSED',
