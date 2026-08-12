@@ -256,7 +256,13 @@ not just a good conversation.
   anything that isn't alphanumeric or a hyphen), never a generic or
   auto-generated Netlify subdomain. Hyphens in this slug are a URL
   separator, not outreach prose, they are not covered by the no-dash
-  guardrail. Confirm the actual deployed URL before sending it to anyone.
+  guardrail. A genuinely different retry angle deploys to a distinct name
+  such as `astra-[company-slug]-prototype-angle2`, so the pending original
+  site is never clobbered by a retry. Confirm the actual deployed URL loads
+  for a logged out stranger before sending it to anyone (see the Host step
+  and Guardrails below, this team's new sites are private by default and
+  will 401 every prospect until that is fixed). The full reasoning behind
+  these hosting rules is in `docs/prototype-hosting-lessons.md`.
 - **Meeting booking:** Google Calendar. Once a contact proposes or accepts a
   time (directly, or via a Calendly-style link they shared), create the
   event so it is on Raka's actual calendar, don't just reply with words and
@@ -304,14 +310,48 @@ not just a good conversation.
    earlier attempt exists, the new angle must be genuinely different, not a
    reskin of the declined one.
 3. **Host.** Deploy the single HTML file to a new Netlify site named per the
-   convention above. Confirm the live URL actually loads and renders
-   correctly (desktop and mobile) before sending it anywhere, do not send an
-   unverified link.
+   convention above. Follow these steps in order, they are learned from the
+   2026-08-12 deploy run (`docs/prototype-hosting-lessons.md`):
+   1. **Find the file.** The HTML may have been built by a different session
+      and committed to a sibling `claude/*` branch, not this branch or the
+      default branch. Before concluding a built file is missing, run
+      `git fetch origin` and search every branch, e.g.
+      `git log --all --diff-filter=A -- '*Prototype*.html'`, then
+      `git checkout origin/<branch> -- <path>` to pull it in.
+   2. **Check for an existing site.** Run `get-projects` and look for a site
+      already named `astra-[slug]-prototype`. If one exists, redeploy to it
+      rather than creating a duplicate.
+   3. **Deploy from an isolated directory.** Copy the prototype HTML to a
+      clean empty directory as `index.html` and deploy only that directory
+      (a `netlify.toml` with `publish` pointing at it). Never deploy from the
+      repo root: the repo carries lead data in `state/*.jsonl` and `logs/`
+      that should not be uploaded to the hosting build system. If a deploy
+      tool returns a long signed command or token, run it without retyping it
+      by hand, manual transcription corrupts the signature and 401s. Netlify
+      MCP calls can 502 transiently, retry with backoff before treating it as
+      a real failure.
+   4. **Make it publicly reachable.** New sites on this team inherit
+      `requireSSOTeamLogin` and return HTTP 401 to anyone outside the team,
+      including every prospect. After creating the site, disable SSO team
+      login and password protection via `update-visitor-access-controls`
+      (this toggle applies per site even when set to `all-projects`, so
+      confirm each site individually). Consider adding a `noindex` robots
+      meta tag or password protection so the named prospect's mockup is
+      reachable by link but not crawlable, since the subdomain itself names
+      the prospect.
+   5. **Verify as a logged out stranger.** Curl the `https://` URL (not the
+      `http://` default) with no Netlify session and assert HTTP 200, then
+      confirm the page title/content actually rendered on desktop and mobile.
+      "It loads for me" is not the test, the operator is logged into Netlify
+      and would see 200 even when a prospect gets 401. Do not send an
+      unverified link.
 4. **Send.** The message that links to the prototype still follows the
    outreach voice rules in `docs/astra-master-context.md` section 9 and the
    no-dash guardrail, low friction, references what was actually promised,
    includes the link. Append a row to `state/prototypes.jsonl` with
-   `outcome: pending`.
+   `outcome: pending` (the session that runs the deploy owns this row,
+   including which branch it is committed to when the HTML was built on a
+   different branch), then commit and push.
 5. **On a positive reply** (they like it, ask questions, want to talk):
    steer toward booking a time, offering a concrete next step rather than an
    open-ended "let me know your thoughts." Update `outcome` to `liked`. If
@@ -342,7 +382,14 @@ not just a good conversation.
 ### Guardrails
 
 Everything in `docs/prototype-build-spec.md`'s own Guardrails section, plus:
-never send a Netlify link that hasn't been opened and visually checked;
-never reuse a declined angle on a retry; never invent a meeting time or mark
-one as booked without an actual Calendar event backing it; never skip the
-repo copy of a meeting brief even when the email send succeeds.
+never send a Netlify link until it has been verified with an unauthenticated
+`https` request returning HTTP 200 (not just "opened while logged in", this
+team's sites are private by default and 401 every prospect until SSO team
+login is disabled); never deploy a prototype from the repo root, only from an
+isolated single file directory, so lead data in `state/` and `logs/` is never
+uploaded to the hosting build system; never tell Raka a built prototype file
+is unavailable before checking every branch with `git fetch origin`; never
+reuse a declined angle on a retry, and give a retry angle its own site name so
+the pending original is not clobbered; never invent a meeting time or mark one
+as booked without an actual Calendar event backing it; never skip the repo
+copy of a meeting brief even when the email send succeeds.
