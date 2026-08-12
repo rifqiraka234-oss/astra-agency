@@ -27,7 +27,8 @@
     "dev:worker": "npm run dev --workspace @astra/worker",
     "dev:dashboard": "npm run dev --workspace @astra/dashboard",
     "check": "npm run lint && npm run typecheck && npm run test",
-    "dashboard:hash-password": "tsx apps/dashboard/src/scripts/hash-password.ts"
+    "dashboard:hash-password": "tsx apps/dashboard/src/scripts/hash-password.ts",
+    "db:demo": "tsx apps/worker/src/scripts/demo-seed.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",

@@ -17,4 +17,5 @@ if (password.length < 12) {
 }
 
 console.log('\nAdd this line to .env:\n');
+// Colon-delimited so dotenv-expand does not mangle it; no quoting needed.
 console.log(`OPERATOR_PASSWORD_HASH=${hashPassword(password)}`);

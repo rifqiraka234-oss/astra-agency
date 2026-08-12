@@ -44,11 +44,11 @@ function decodeSession(token: string, allowedEmail: string, now = Date.now()): S
 }
 
 function hashPassword(password: string, salt = randomBytes(16)): string {
-  return `scrypt$${salt.toString('hex')}$${scryptSync(password.normalize('NFKC'), salt, 64).toString('hex')}`;
+  return `scrypt:${salt.toString('hex')}:${scryptSync(password.normalize('NFKC'), salt, 64).toString('hex')}`;
 }
 
 function verifyPassword(password: string, stored: string): boolean {
-  const parts = stored.split('$');
+  const parts = stored.split(':');
   if (parts.length !== 3 || parts[0] !== 'scrypt') return false;
   try {
     const salt = Buffer.from(parts[1] ?? '', 'hex');
@@ -125,9 +125,9 @@ describe('operator password', () => {
   });
 
   it('rejects a malformed stored hash rather than accepting every password', () => {
-    // 'scrypt$notHex$alsoNotHex' is the dangerous one: both fields decode to
+    // 'scrypt:notHex:alsoNotHex' is the dangerous one: both fields decode to
     // empty buffers, and comparing two empty buffers succeeds.
-    for (const stored of ['', 'plaintext', 'scrypt$notHex$alsoNotHex', 'bcrypt$a$b', 'scrypt$$', 'scrypt$aabb$ccdd']) {
+    for (const stored of ['', 'plaintext', 'scrypt:notHex:alsoNotHex', 'bcrypt:a:b', 'scrypt::', 'scrypt:aabb:ccdd']) {
       expect(() => verifyPassword('anything', stored)).not.toThrow();
       expect(verifyPassword('anything', stored)).toBe(false);
     }

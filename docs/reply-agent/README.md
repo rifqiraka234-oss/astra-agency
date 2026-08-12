@@ -58,6 +58,19 @@ fixtures, and starts the worker on :3001 and the dashboard on :3000. Every
 live-action flag is false and the kill switch is on, so a fresh checkout
 cannot reach a real prospect.
 
+### Seeing it with realistic content
+
+`npm run db:demo` runs the *real* pipeline against in-memory integrations and
+leaves four conversations in the database: one drafted for approval, one
+pricing question handed off, one referencing a call the system cannot see,
+and one simple acknowledgement. Nothing there can reach a prospect, and every
+predicate log the dashboard shows was genuinely produced by the controller.
+
+```bash
+npm run db:demo
+# then open http://localhost:3000/queue
+```
+
 ### Exercising it without credentials
 
 `RUNTIME_MODE=TEST` wires the in-memory twin of every integration. You can

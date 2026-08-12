@@ -2,6 +2,16 @@
 
 For Raka. Everything here assumes you are signed in at the dashboard.
 
+## Signing in
+
+`ADMIN_EMAIL` plus the password whose hash is in `OPERATOR_PASSWORD_HASH`.
+Generate the hash with `npm run dashboard:hash-password`; it reads the
+password from stdin so it never reaches your shell history.
+
+The hash is colon-delimited (`scrypt:salt:hash`). Do not convert it to the
+`$`-delimited form some tools use: Next.js expands `$name` inside .env values,
+which would mangle it and lock you out with no useful error.
+
 ## Kill switch
 
 **When anything looks wrong, do this first and diagnose afterwards.**
