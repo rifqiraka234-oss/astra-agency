@@ -27,5 +27,6 @@
     "ctc_2qids6yFoikvs2Jex"
   ],
   "lastRunAt": "2026-08-09T20:30:00Z",
-  "totalProcessed": 25
+  "totalProcessed": 25,
+  "firstTier1BatchConfirmed": true
 }
