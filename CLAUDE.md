@@ -32,6 +32,36 @@ You are reading this either because a human started an interactive session
 in this repo, or because a Cloud Routine fired a fresh session with no other
 context. Everything you need is below and in the three docs above.
 
+### Session capability preflight (read before promising any outcome)
+
+These routines depend on external connectors (lemlist, Netlify, Google
+Calendar, Gmail, Google Drive) whose tools are loaded over MCP. Two failure
+modes have already bitten this repo, so treat both as standing rules:
+
+- **A connector can report "enabled" while its tools are still connecting
+  into a fresh session.** An empty tool-search result is NOT proof that a
+  capability is permanently unavailable. If a connector shows as connected but
+  its tools are not yet callable, wait and retry before concluding anything.
+  Never tell Raka a capability is structurally impossible on the basis of a
+  single failed lookup, and never invent a mechanism ("the tools are frozen at
+  boot") to explain a transient gap. Verify, retry, then report.
+- **Each session runs in its own isolated, ephemeral container.** Nothing on
+  local disk survives between sessions except what is committed to git. A bare
+  filesystem path from another session does not resolve here. Any artifact
+  that must cross a session boundary has to live in git or in a connector-
+  backed store (Google Drive), never on container disk. A handoff note that
+  points at a local path like `state/prototypes/...` is invalid by
+  construction.
+
+### Branch discipline when resuming mid-task
+
+Several `claude/*` branches can carry overlapping pipeline state. When you
+resume a task, do not blindly trust the branch named in your brief if a more
+advanced branch exists: `git fetch`, find the branch that actually holds the
+latest committed state, reconcile onto your working branch (a clean
+fast-forward is ideal), and only then proceed. Flag to Raka when you have
+consolidated branches so the scope change is not silent.
+
 ## Enrichment pipeline
 
 ### Live configuration
@@ -257,6 +287,23 @@ not just a good conversation.
   auto-generated Netlify subdomain. Hyphens in this slug are a URL
   separator, not outreach prose, they are not covered by the no-dash
   guardrail. Confirm the actual deployed URL before sending it to anyone.
+  Deploy with the Netlify MCP `create-new-project` (using the exact site name
+  above) then `deploy-site`; record the returned `siteId` so a later session
+  can redeploy the same site rather than orphaning it (the deploy tool refuses
+  to assume a new site).
+- **Build and host in the SAME session — never split them.** The prototype
+  HTML files live under `state/prototypes/` which is gitignored, and every
+  session's container is ephemeral, so a build handed to a later session is
+  unrecoverable from git. Host in the session that builds. If for any reason
+  hosting cannot finish in the build session, the artifact MUST be parked in
+  durable storage before that session ends (next point) — otherwise the build
+  is lost.
+- **Durable artifact store (the build→host bridge):** Google Drive. On build,
+  upload the prototype HTML and its research summary to a fixed Drive folder
+  and record `driveFileId`/`driveUrl` in `state/prototypes.jsonl`. This is the
+  only supported way to move a build across a session boundary; any later
+  session pulls the exact bytes from Drive rather than hoping local disk
+  survived (it will not).
 - **Meeting booking:** Google Calendar. Once a contact proposes or accepts a
   time (directly, or via a Calendly-style link they shared), create the
   event so it is on Raka's actual calendar, don't just reply with words and
@@ -274,8 +321,12 @@ not just a good conversation.
   `date`, `contactId`, `companyName`, `promisedConcept` (what was actually
   offered in the outreach thread, per the spec's Step 1), `angleNumber`
   (1 for the first attempt, 2+ for a retry after a decline, never reuse an
-  angle number for a genuinely different angle), `netlifyUrl`,
-  `researchSummaryPath`, `sentAt`, `outcome`
+  angle number for a genuinely different angle), `netlifyUrl`, `netlifySiteId`
+  (the Netlify site id, so the same site can be redeployed later),
+  `driveFileId`/`driveUrl` (the durable Drive copy of the HTML, per the
+  build→host bridge above), `researchSummaryPath`, `playbackVerified`
+  (boolean, only meaningful for prototypes with embedded video, see the Host
+  step), `sentAt`, `outcome`
   (`pending` / `liked` / `declined` / `booked`). Update `outcome` in place
   as the thread progresses, this is the per-contact prototype history, so a
   retry after a decline can see exactly what angle already failed and must
@@ -289,11 +340,15 @@ not just a good conversation.
   repo copy even though the email also goes out, the repo copy is what
   survives if the email bounces or Raka is checking from a session instead
   of his inbox.
-- Prototype HTML files and research summaries themselves are not committed
-  to this repo, they live on Netlify and can be regenerated from
-  `state/prototypes.jsonl` plus the spec if ever needed. Keep the repo to
-  metadata and the meeting briefs, the same minimal-schema principle as the
-  other two routines.
+- Prototype HTML files and research summaries themselves are not committed to
+  this repo. Do NOT assume they can be "regenerated from `state/prototypes.jsonl`
+  plus the spec" — that only holds if the row exists AND the source assets are
+  still re-fetchable, which is false for asset-heavy builds (scraped
+  photography, embedded video) and false whenever nothing has been logged yet.
+  The canonical copies are the hosted Netlify deploy and the Drive upload
+  recorded on the row; treat those two as the source of truth, never local
+  container disk. Keep the repo itself to metadata and the meeting briefs, the
+  same minimal-schema principle as the other two routines.
 
 ### Procedure
 
@@ -303,10 +358,17 @@ not just a good conversation.
    full. Check `state/prototypes.jsonl` first for this contact, if an
    earlier attempt exists, the new angle must be genuinely different, not a
    reskin of the declined one.
-3. **Host.** Deploy the single HTML file to a new Netlify site named per the
-   convention above. Confirm the live URL actually loads and renders
-   correctly (desktop and mobile) before sending it anywhere, do not send an
-   unverified link.
+3. **Host (in this same session).** First upload the HTML and research
+   summary to the durable Drive folder and capture `driveFileId`/`driveUrl`.
+   Then deploy the single HTML file to a new Netlify site named per the
+   convention above (`create-new-project` then `deploy-site`), capturing the
+   `siteId`. Confirm the live URL actually loads and renders correctly
+   (desktop and mobile) before sending it anywhere, do not send an unverified
+   link. For a prototype with embedded video, the sandbox browser cannot
+   decode h264, so playback CANNOT be confirmed in-session: either open the
+   live URL in a real browser and confirm both reels play, or explicitly hand
+   that check to Raka, and set `playbackVerified` on the row accordingly.
+   Never send a video prototype whose playback is still unverified.
 4. **Send.** The message that links to the prototype still follows the
    outreach voice rules in `docs/astra-master-context.md` section 9 and the
    no-dash guardrail, low friction, references what was actually promised,
@@ -343,6 +405,14 @@ not just a good conversation.
 
 Everything in `docs/prototype-build-spec.md`'s own Guardrails section, plus:
 never send a Netlify link that hasn't been opened and visually checked;
-never reuse a declined angle on a retry; never invent a meeting time or mark
-one as booked without an actual Calendar event backing it; never skip the
-repo copy of a meeting brief even when the email send succeeds.
+never send a video prototype whose `playbackVerified` is not true; never
+reuse a declined angle on a retry; never invent a meeting time or mark one as
+booked without an actual Calendar event backing it; never skip the repo copy
+of a meeting brief even when the email send succeeds; never split build and
+host across sessions without first parking the artifact in Drive; and never
+report a connector capability as permanently unavailable off a single failed
+tool lookup (retry, since the tools may still be connecting).
+
+For the full account of why these rules exist — the session that produced
+them, what went wrong, and what was learned — see
+`docs/netlify-hosting-session-retro-2026-08-12.md`.
