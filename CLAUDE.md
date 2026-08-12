@@ -86,7 +86,13 @@ plain commit message like `pipeline: process N contacts, YYYY-MM-DD`.
 1. `git pull` the working branch. Read `state/checkpoint.json`.
 2. Pull contacts from `New Businesses` (`clt_Zzi8BjZSMvbEH9ihr`) via
    `search_contacts` (paginate with `limit`/`offset`), skip any contact ID
-   already in the checkpoint's `lastProcessedContactIds`.
+   already in the checkpoint's `lastProcessedContactIds`. **Known bug
+   (2026-08-12): offsets on this list overlap unpredictably** — a page at
+   a later offset can return many IDs already seen at an earlier offset,
+   not a clean next slice. Never trust "fetched N contacts at this offset"
+   to mean N new contacts. Always dedupe every fetched ID against
+   `checkpoint.json` by ID before counting a batch as N new contacts, and
+   expect to over fetch pages to fill a batch.
 3. For each new contact, pull its full lemlist record via
    `call_api GET /contacts/{id}` (load the `api-reference` skill first,
    once per session) — **not** a company lookup, see the Efficiency
@@ -134,11 +140,19 @@ plain commit message like `pipeline: process N contacts, YYYY-MM-DD`.
    at most the in flight contact, not the whole run).
 7. At the end of the run, for every Tier 1 and Tier 2/INCLUDE contact
    collected in step 5: verify `connectionMessage` and `firstMessage` are
-   non empty and contain no hyphen/en dash/em dash, then import into
-   `cam_Co5CJXrpPFf5MRAfD` via
+   non empty, contain no hyphen/en dash/em dash, and are within the 65 word
+   cap on `firstMessage` — run an actual word count check (a short script,
+   not an eyeball estimate) before finalizing every batch, this is a
+   required step, not an optional nicety. **Write the row to
+   `enriched_leads.jsonl` with `importedToCampaign: "pending"` first**,
+   commit, then import into `cam_Co5CJXrpPFf5MRAfD` via
    `import_leads_to_campaign` (CSV upload, `columnMapping` mapping the
    `connectionMessage` and `firstMessage` CSV headers to those exact custom
-   variable names — do not rename them). On the very first batch of Tier 1
+   variable names — do not rename them). After a successful import, flip
+   `importedToCampaign` to `true` and commit again. This ordering means a
+   crash between writing state and calling the import API leaves a row
+   correctly marked `pending` rather than leaving a lead live in lemlist
+   with no local record of it at all. On the very first batch of Tier 1
    imports ever run, stop after importing and ask Raka to confirm the
    `{{connectionMessage}}`/`{{firstMessage}}` fields rendered correctly on a
    couple of test leads in lemlist before trusting future runs to import
@@ -256,6 +270,13 @@ runs, never the standing source.
   Connection message, First message (blank the last two for EXCLUDE rows).
   No summary paragraph above or below the table. This is a standing
   reporting format, not a one-off for a single run.
+- **Carve out (2026-08-12): the table only rule applies to routine batch
+  results, not to every reply.** A genuine blocker, a question, a rule
+  change confirmation, a status check Raka asks for, or a reflective/meta
+  conversation (retrospectives, "what would you improve", planning) should
+  get an actual prose answer — forcing those into a table is following the
+  letter of the rule against its point, which is saving tokens on
+  repetitive per contact output, not suppressing all conversation.
 
 ## Message style (read before drafting any connectionMessage/firstMessage)
 
@@ -282,6 +303,33 @@ The messages must read like a real person wrote them, not an AI. Concretely:
 - Read every drafted message back before finalizing and ask: would a real
   small business owner write this to a stranger on LinkedIn? If it sounds
   like copy, rewrite it.
+
+More before/after pairs, same pattern (flat observation, then the one
+detail, then their problem, then a low pressure ask):
+- Bad: "Offering a fully mobile, high end steam cleaning service that
+  removes up to 99 percent of bacteria for cars, both on site and at
+  home, is a genuinely differentiated pitch in a crowded detailing
+  market." Good: "Saw La Maison du Detailing, the mobile steam cleaning
+  angle removing up to 99 percent of bacteria is a clear pitch. Only
+  problem is there's no website or social page, so people searching for
+  you locally have nothing to click. Want me to send over a simple site
+  we sketched for you?"
+- Bad: "Turning absenteeism into a lever for measurable business
+  continuity, rather than treating it as a purely administrative cost
+  center, is a genuinely sharp reframe of the problem." Good: "Saw
+  TRIXEA, turning absenteeism into a real lever for business continuity
+  is a sharp angle. There's no public website yet though, so HR leaders
+  looking you up come up empty. Happy to send over a landing page we
+  put together explaining the approach, if useful."
+
+**Retroactive flag (2026-08-12):** messages drafted before this section
+existed (notably TRIXEA/Julien Guillot, Studio Piero/Romane Van Troost,
+and La Maison du Detailing/Alexandre Gaymard, imported 2026-08-11) predate
+this style fix and likely read as AI written. The campaign is still in
+draft status and nothing has sent yet, so there's no rush, but these three
+should get reworded to match this section before Raka turns the campaign
+on. Check other early imports (Paulo Fino, Simon Selkirk, the 10 row
+resolved batch, Bas Emaus/JiTiBa) too — same era, same risk.
 
 ## Guardrails (non negotiable, re read before generating any message)
 
