@@ -31,7 +31,7 @@ that formula rather than replacing it.
 | Campaign Intake and Enrichment | §7 | **Built and tested end to end** | `packages/core/src/enrichment/`, `apps/worker/src/enrichment/` |
 | Conversation Agent | §8–15 | **Built and tested end to end** (predates this work) | `packages/core/src/{policy,conversation,ownership,state,calendar}/`, `apps/worker/src/pipeline/` |
 | Prototype Studio | §16–24 | **Partially built.** Deliverable modes, the pre-design artifact gate, the coverage ledger and every named QA regression gate exist and are tested. The research, strategy and art-direction stages that produce those artifacts are not implemented. | `packages/core/src/prototype/`, `apps/worker/src/pipeline/prototype*.ts` |
-| Learning and Improvement | §25 | **Kernel built and tested; no UI.** Lesson schema, lifecycle, authority classes, promotion guards, retrospectives and candidate comparison all exist with tests. The Improvement Center UI (§25.9) is not built. | `packages/core/src/learning/`, `packages/db/src/learning-repositories.ts` |
+| Learning and Improvement | §25 | **Kernel and read-only UI built.** Lesson schema, lifecycle, authority classes, promotion guards, retrospectives and candidate comparison exist with tests, and `/improvement` shows candidates, repeated signatures and rejected lessons. The approve/reject actions themselves are not wired. | `packages/core/src/learning/`, `packages/db/src/learning-repositories.ts`, `apps/dashboard/src/app/improvement/` |
 
 ## Shared foundation (§6)
 
@@ -127,8 +127,10 @@ Stated plainly, because the specification forbids claiming completeness:
 1. **Prototype research, strategy and art-direction stages** (§17–22). The gates
    that would judge their output exist and are tested; the stages that produce
    the artifacts do not.
-2. **Improvement Center UI** (§25.9). The lesson lifecycle and promotion guards
-   are enforced in code, but there is no screen to review candidates on.
+2. **Improvement Center actions** (§25.9). The review screen exists and is
+   read-only. Approve for staging, Approve for production, Need more evidence,
+   Reject and Roll back are not wired to the promotion guard yet, so promotion
+   is currently only reachable from code.
 3. **Operator product shell and setup wizard** (§5). The dashboard has login,
    queue, conversation detail, settings and audit export. There is no first-admin
    claim flow or guided setup.
@@ -136,9 +138,7 @@ Stated plainly, because the specification forbids claiming completeness:
    (§4, §31). Not provisioned. No Railway project exists.
 5. **Eval registry population** (§25.7). The comparison machinery is built and
    tested; no suites have been populated with real redacted cases.
-6. **Tier 2 dashboard view.** The queue is database-backed with generated JSONL
-   and Markdown exports, but no page renders it.
-7. **Legacy Netlify site reconciliation** and migration of the historical
+6. **Legacy Netlify site reconciliation** and migration of the historical
    `tier2_queue.jsonl` rows into the new queue table.
 
 ## Verification
@@ -148,5 +148,7 @@ Stated plainly, because the specification forbids claiming completeness:
 | `npx eslint .` | Clean |
 | `npm run typecheck` | Clean |
 | Full test suite | 463 passing, 30 files |
+| Dashboard build | Clean; 14 routes |
+| `/enrichment` and `/improvement` | Driven with Playwright against seeded data; both render real rows |
 | Integration tests against live Postgres | 32 of those 463; they **skip**, never pass vacuously, without a database |
 | Migrations from empty | Both apply; re-running is a no-op |

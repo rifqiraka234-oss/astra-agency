@@ -22,7 +22,7 @@ Status vocabulary:
 | Ambiguous "continue" request was correctly clarified | DONE | `canResumeRun` in `packages/core/src/run/envelope.ts` identifies the active checkpoint; only `RUNNING`/`INTERRUPTED` runs resume. Test: `envelope.test.ts` "never resumes a run that already completed". |
 | First live batch size was confirmed | DONE | `batchSize` is a caller parameter and `allowLiveImport` is profile-scoped, defaulting false. Test: `tiers.test.ts` "defaults live import to closed". |
 | Offset pagination overlapped | DONE | `packages/core/src/enrichment/pagination.ts`. Tests: `pagination.test.ts` (8 cases) and `enrichment.integration.test.ts` "processes each contact once when pages overlap". |
-| Company hint fields could not be reached and optimization was silently skipped | DONE | `provider_capabilities.missing_fields`, populated by `probeCapabilities` in `apps/worker/src/enrichment/run.ts`. Test: "records the Lemlist company-field gap instead of rediscovering it". |
+| Company hint fields could not be reached and optimization was silently skipped | DONE | `provider_capabilities.missing_fields`, populated by `probeCapabilities` in `apps/worker/src/enrichment/run.ts`, and shown on `/enrichment` so the gap stays visible. Test: "records the Lemlist company-field gap instead of rediscovering it". |
 | Five agents each rediscovered blocked WebFetch | DONE | `preflightBeforeFanOut` in `packages/core/src/run/capabilities.ts`, enforced before any per-contact work. Test: "halts before fanning out when the shared research adapter is blocked". |
 | Raw curl worked while WebFetch remained blocked | DONE | Capabilities key on exact `operation`, not provider. `mayClaimCapabilityFixed` refuses a claim proved through a different path. Test: `capabilities.test.ts` "refuses a fix claim proved through a different path". |
 | A second fan-out followed a false "fixed" claim | DONE | Same function; a claim with no verification is also refused. Test: "refuses a fix claim with no verification at all". |
@@ -46,7 +46,7 @@ Status vocabulary:
 | Tier 2 confident includes import immediately | DONE | `tier2MayImportImmediately`, gated on the profile flag. Test: `tiers.test.ts` "lets a confident TIER_2 INCLUDE import when the profile allows it". |
 | Always try 2–3 targeted searches | PARTIAL | `ResearchLimits` on the profile carries `maxTargetedSearchesPerContact` and `reservedFinalAttempts`, and `attempts_made` is persisted. The orchestrator currently makes one identity attempt; the escalation ladder to two or three targeted searches is **not built**. |
 | `NO_WEBSITE` is positive evidence | DONE | `classifyWebsite` returns HIGH confidence with a usable observation. Test: `tiers.test.ts` "treats a missing site as positive evidence". |
-| Human-readable Tier 2 mirror | PARTIAL | `tier2QueueToMarkdown` and `tier2QueueToJsonl` generate both views from one table. Test: "produces the JSONL and Markdown views from one source of truth". No dashboard page renders it yet. |
+| Human-readable Tier 2 mirror | DONE | `tier2QueueToMarkdown` and `tier2QueueToJsonl` generate both views from one table, and `/enrichment` renders the queue with its counts. Test: "produces the JSONL and Markdown views from one source of truth"; page verified visually against seeded data. |
 | Source list already filtered to 2026 | DONE | `UpstreamFilterEvidence` on `NEW_BUSINESSES_PROFILE`, with recorded provenance. Test: `tiers.test.ts` "carries recorded provenance for the 2026 upstream prefilter" and "gives no launch hypothesis to a profile with no recorded upstream filter". |
 | Thirteen prior exclusions were re-researched after rule discovery | PARTIAL | Profiles are versioned and `tier_decisions` stores `policy_version`, so affected rows are identifiable by query. A scoped replay command is **not built**. |
 | Imported custom fields verified as real text | DONE | `verifyRenderedFields` + `recordFieldVerification`. Test: "records the post-import field verification". |
@@ -57,7 +57,7 @@ Status vocabulary:
 | Classifier blocked import twice | DONE | `describePolicyBlock` returns `maySubstituteOperation: false`. Tests: `import-intent.test.ts` "surfaces the block and never offers a substitute operation" and the integration test of the same behavior. |
 | Import happened before persistence | DONE | `createImportIntent` is the only source of the id the provider call requires. Test: "writes the intent before the provider is ever called" and "records a rejected intent and calls nobody when the gate is closed". |
 | Word counts were ad hoc | DONE | `countWords` (Unicode-aware) via `validateEnrichmentMessages`, stored on every version row. |
-| Old imported drafts predate style fix | DONE | `enrichment_message_versions` stores `policy_version` and `prompt_version` per version, so affected live drafts are a query. No UI surfaces it yet. |
+| Old imported drafts predate style fix | PARTIAL | `enrichment_message_versions` stores `policy_version` and `prompt_version` per version, so affected live drafts are a query. No UI filters by version yet. |
 
 ## 34.3 `prototype-pipeline-retrospective-2026-08-12.md`
 

@@ -244,3 +244,40 @@ button:disabled {
   color: var(--bad);
   font-size: 14px;
 }
+
+/* Tables carry the enrichment and improvement views. Wide content scrolls
+   inside its own container rather than pushing the page sideways. */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding: 8px 10px 8px 0;
+  white-space: nowrap;
+}
+
+table td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 10px 8px 0;
+  vertical-align: top;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Message columns hold real sentences and need room to wrap. */
+table td:nth-child(n + 5) {
+  min-width: 220px;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}

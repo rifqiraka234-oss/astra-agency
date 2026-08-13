@@ -31,6 +31,8 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
               <strong>Astra reply agent</strong>
               <nav>
                 <Link href="/queue">Queue</Link>
+                <Link href="/enrichment">Enrichment</Link>
+                <Link href="/improvement">Improvement</Link>
                 <Link href="/errors">Errors</Link>
                 <Link href="/settings">Settings</Link>
                 <Link href="/audit">Audit</Link>
