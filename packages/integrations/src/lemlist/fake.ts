@@ -1,12 +1,16 @@
 import type {
   CreateDraftInput,
+  ImportLeadsInput,
+  ImportLeadsResult,
   LemlistActivity,
   LemlistCampaign,
   LemlistClient,
   LemlistLead,
+  LemlistContact,
   LemlistSequence,
   LemlistTask,
   RegisterWebhookInput,
+  SearchContactsInput,
   SendEmailReplyInput,
   SendLinkedInMessageInput,
 } from './types.js';
@@ -31,6 +35,17 @@ export interface FakeLemlistState {
   pauseSilentlyFails: boolean;
   /** When set, `isLeadPaused` returns null, simulating an unverifiable state. */
   pauseUnverifiable: boolean;
+  /** Contacts by list id, used to model the real pagination behavior. */
+  contactLists: Map<string, LemlistContact[]>;
+  /**
+   * When set, every page returned overlaps the previous one by this many rows,
+   * reproducing the observed offset instability rather than assuming pages are
+   * disjoint.
+   */
+  pageOverlap: number;
+  /** When set, `importLeadsToCampaign` returns a policy refusal. */
+  importPolicyBlocked: string | null;
+  importedLeads: { campaignId: string; rows: unknown[]; idempotencyKey: string }[];
 }
 
 export interface RecordedCall {
@@ -53,6 +68,10 @@ export class FakeLemlistClient implements LemlistClient {
       pausedLeads: initial.pausedLeads ?? new Set(),
       pauseSilentlyFails: initial.pauseSilentlyFails ?? false,
       pauseUnverifiable: initial.pauseUnverifiable ?? false,
+      contactLists: initial.contactLists ?? new Map(),
+      pageOverlap: initial.pageOverlap ?? 0,
+      importPolicyBlocked: initial.importPolicyBlocked ?? null,
+      importedLeads: initial.importedLeads ?? [],
     };
   }
 
@@ -138,5 +157,40 @@ export class FakeLemlistClient implements LemlistClient {
 
   async addUnsubscribe(email: string): Promise<void> {
     this.record('addUnsubscribe', { email });
+  }
+
+  /**
+   * Models the behavior that actually bit us: consecutive pages overlap, so a
+   * consumer that trusts offset arithmetic double-processes rows and a
+   * consumer that stops on an all-duplicates page truncates the list.
+   */
+  async searchContacts(input: SearchContactsInput): Promise<readonly LemlistContact[]> {
+    this.record('searchContacts', input);
+    const all = this.state.contactLists.get(input.listId) ?? [];
+    const start = Math.max(0, input.offset - this.state.pageOverlap);
+    return all.slice(start, start + input.limit);
+  }
+
+  async importLeadsToCampaign(input: ImportLeadsInput): Promise<ImportLeadsResult> {
+    this.record('importLeadsToCampaign', {
+      campaignId: input.campaignId,
+      rowCount: input.rows.length,
+      columnMapping: input.columnMapping,
+      idempotencyKey: input.idempotencyKey,
+    });
+
+    if (this.state.importPolicyBlocked !== null) {
+      return { imported: 0, leadIds: [], policyBlocked: this.state.importPolicyBlocked };
+    }
+
+    this.state.importedLeads.push({
+      campaignId: input.campaignId,
+      rows: [...input.rows],
+      idempotencyKey: input.idempotencyKey,
+    });
+    return {
+      imported: input.rows.length,
+      leadIds: input.rows.map((_, index) => `lea_fake_${String(this.calls.length)}_${String(index)}`),
+    };
   }
 }

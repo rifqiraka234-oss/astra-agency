@@ -16,6 +16,7 @@ export type ExternalWrite =
   | 'LEMLIST_DRAFT'
   | 'LEMLIST_PAUSE_LEAD'
   | 'LEMLIST_WEBHOOK_REGISTER'
+  | 'LEMLIST_CAMPAIGN_IMPORT'
   | 'CALENDAR_WRITE'
   | 'NETLIFY_DEPLOY'
   | 'EMAIL_NOTIFICATION';
@@ -93,6 +94,18 @@ export class ExternalWriteGuard {
               allowed: false,
               reasonCode: REASON_CODES.MODE_DISALLOWS_SEND,
               detail: `Runtime mode ${mode} does not permit writes.`,
+            };
+
+      case 'LEMLIST_CAMPAIGN_IMPORT':
+        // An import does not send: the destination campaign may be in draft,
+        // in which case leads queue and nothing reaches a prospect. It is
+        // still a write into a live account, so it has its own flag.
+        return config.canImportToCampaign
+          ? { allowed: true, reasonCode: null, detail: 'Campaign import is enabled.' }
+          : {
+              allowed: false,
+              reasonCode: REASON_CODES.LIVE_SEND_FLAG_OFF,
+              detail: 'ALLOW_LIVE_CAMPAIGN_IMPORT is false.',
             };
 
       case 'LEMLIST_WEBHOOK_REGISTER':

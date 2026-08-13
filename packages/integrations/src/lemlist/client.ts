@@ -3,14 +3,18 @@ import { NO_RETRY, requestJson, type RetryPolicy } from '../http.js';
 import { ExternalWriteGuard } from '../guard.js';
 import type {
   CreateDraftInput,
+  ImportLeadsInput,
+  ImportLeadsResult,
   LemlistActivity,
   LemlistCampaign,
   LemlistClient,
   LemlistInboxPage,
+  LemlistContact,
   LemlistLead,
   LemlistSequence,
   LemlistTask,
   RegisterWebhookInput,
+  SearchContactsInput,
   SendEmailReplyInput,
   SendLinkedInMessageInput,
 } from './types.js';
@@ -231,6 +235,49 @@ export class LiveLemlistClient implements LemlistClient {
     });
   }
 
+  async searchContacts(input: SearchContactsInput): Promise<readonly LemlistContact[]> {
+    const rows = await this.request<readonly LemlistContact[] | { contacts?: readonly LemlistContact[] }>(
+      '/database/contacts',
+      { query: { listId: input.listId, limit: input.limit, offset: input.offset } },
+    );
+    // The endpoint has returned both a bare array and an envelope depending on
+    // account shape. Accept either rather than throwing on a working response.
+    if (Array.isArray(rows)) return rows;
+    return (rows as { contacts?: readonly LemlistContact[] }).contacts ?? [];
+  }
+
+  async importLeadsToCampaign(input: ImportLeadsInput): Promise<ImportLeadsResult> {
+    this.guard.assertAllowed('LEMLIST_CAMPAIGN_IMPORT');
+    try {
+      const response = await this.request<{ imported?: number; leadIds?: readonly string[] }>(
+        `/campaigns/${encodeURIComponent(input.campaignId)}/leads/import`,
+        {
+          method: 'POST',
+          // An import is not idempotent server side, so a blind retry would
+          // duplicate leads. A timeout is reconciled by querying, never retried.
+          retry: NO_RETRY,
+          body: {
+            leads: input.rows,
+            columnMapping: input.columnMapping,
+            idempotencyKey: input.idempotencyKey,
+          },
+        },
+      );
+      return {
+        imported: response.imported ?? input.rows.length,
+        leadIds: response.leadIds ?? [],
+      };
+    } catch (error) {
+      const blocked = policyBlockMessage(error);
+      if (blocked !== null) {
+        // Surfaced, never routed around: substituting another operation to get
+        // the same effect would be circumventing the provider's safeguard.
+        return { imported: 0, leadIds: [], policyBlocked: blocked };
+      }
+      throw error;
+    }
+  }
+
   async addUnsubscribe(email: string): Promise<void> {
     // Suppression is always permitted: refusing to record an unsubscribe
     // because a flag is off would be the wrong failure direction.
@@ -239,6 +286,18 @@ export class LiveLemlistClient implements LemlistClient {
       retry: NO_RETRY,
     });
   }
+}
+
+/**
+ * A 403 carrying a policy or classifier message is a refusal, not a transport
+ * failure, and the two need different handling.
+ */
+function policyBlockMessage(error: unknown): string | null {
+  if (typeof error !== 'object' || error === null) return null;
+  const status = 'status' in error ? (error as { status: unknown }).status : undefined;
+  if (status !== 403 && status !== 422) return null;
+  const message = 'message' in error ? String((error as { message: unknown }).message) : '';
+  return /polic|classif|blocked|not permitted/i.test(message) ? message : null;
 }
 
 function notFoundToNull(error: unknown): null {

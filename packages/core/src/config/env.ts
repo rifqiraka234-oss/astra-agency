@@ -98,6 +98,12 @@ export const envSchema = z.object({
   ALLOW_LIVE_CALENDAR_WRITE: boolFromEnv(false),
   ALLOW_LIVE_NETLIFY_DEPLOY: boolFromEnv(false),
   ALLOW_LIVE_WEBHOOK_REGISTRATION: boolFromEnv(false),
+  /**
+   * Importing enrichment leads into a campaign. Separate from the send flag:
+   * importing into a draft campaign queues leads without sending anything, so
+   * it is a different risk with a different gate.
+   */
+  ALLOW_LIVE_CAMPAIGN_IMPORT: boolFromEnv(false),
 
   ADMIN_EMAIL: z.string().email(),
   ENABLED_CAMPAIGN_IDS: csvList,
@@ -178,6 +184,7 @@ export interface AppConfig extends Env {
   readonly canWriteCalendar: boolean;
   readonly canDeployPrototype: boolean;
   readonly canRegisterWebhooks: boolean;
+  readonly canImportToCampaign: boolean;
 }
 
 /** Modes in which any outbound external write is conceivable at all. */
@@ -205,6 +212,7 @@ export function buildConfig(env: Env): AppConfig {
     canWriteCalendar: canWriteExternally && env.ALLOW_LIVE_CALENDAR_WRITE,
     canDeployPrototype: canWriteExternally && env.ALLOW_LIVE_NETLIFY_DEPLOY,
     canRegisterWebhooks: !killSwitch && env.ALLOW_LIVE_WEBHOOK_REGISTRATION,
+    canImportToCampaign: canWriteExternally && env.ALLOW_LIVE_CAMPAIGN_IMPORT,
   };
 }
 

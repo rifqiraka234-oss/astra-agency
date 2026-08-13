@@ -167,6 +167,63 @@ export interface LemlistClient {
   sendEmailReply(input: SendEmailReplyInput): Promise<{ ok: boolean; activityId?: string }>;
   registerWebhook(input: RegisterWebhookInput): Promise<{ _id: string }>;
   addUnsubscribe(email: string): Promise<void>;
+  /**
+   * One page of a contact list. The caller owns paging, because offset windows
+   * on this endpoint have been observed overlapping and reordering: only the
+   * returned stable IDs are trustworthy, never the offset arithmetic.
+   */
+  searchContacts(input: SearchContactsInput): Promise<readonly LemlistContact[]>;
+  /**
+   * Import leads into a campaign. `columnMapping` maps CSV headers to Lemlist
+   * custom variable names and is passed through verbatim; renaming a mapped
+   * variable silently breaks `{{connectionMessage}}` rendering.
+   */
+  importLeadsToCampaign(input: ImportLeadsInput): Promise<ImportLeadsResult>;
+}
+
+export interface SearchContactsInput {
+  readonly listId: string;
+  readonly limit: number;
+  readonly offset: number;
+}
+
+export interface LemlistContact {
+  readonly _id: string;
+  readonly companyId?: string;
+  readonly firstName?: string;
+  readonly lastName?: string;
+  readonly email?: string;
+  readonly linkedinUrl?: string;
+  readonly companyName?: string;
+  readonly companyDomain?: string;
+  /** Free-text hints: summary, tagline, jobDescription. Often the only source. */
+  readonly hints?: Readonly<Record<string, string>>;
+}
+
+export interface ImportLeadsRow {
+  readonly email?: string;
+  readonly linkedinUrl?: string;
+  readonly firstName?: string;
+  readonly lastName?: string;
+  readonly companyName?: string;
+  readonly variables: Readonly<Record<string, string>>;
+}
+
+export interface ImportLeadsInput {
+  readonly campaignId: string;
+  readonly rows: readonly ImportLeadsRow[];
+  readonly columnMapping: Readonly<Record<string, string>>;
+  readonly idempotencyKey: string;
+}
+
+export interface ImportLeadsResult {
+  readonly imported: number;
+  readonly leadIds: readonly string[];
+  /**
+   * Set when a platform safety classifier refused the call. The caller must
+   * surface it rather than substituting a different operation.
+   */
+  readonly policyBlocked?: string;
 }
 
 /** Convert a Lemlist activity into the channel-agnostic shape the core normalizer expects. */
