@@ -101,6 +101,7 @@ never either alone.
 | --- | --- | --- |
 | `GLOBAL_KILL_SWITCH` | `true` | every external write, immediately |
 | `ALLOW_LIVE_LEMLIST_SEND` | `false` | sending a message |
+| `ALLOW_LIVE_CAMPAIGN_IMPORT` | `false` | importing enrichment leads into a campaign |
 | `ALLOW_LIVE_CALENDAR_WRITE` | `false` | creating a calendar event |
 | `ALLOW_LIVE_NETLIFY_DEPLOY` | `false` | deploying a prototype |
 | `ALLOW_LIVE_WEBHOOK_REGISTRATION` | `false` | registering webhooks |
@@ -169,3 +170,5 @@ and restart, or use the kill switch procedure in the
 - [`runbook.md`](./runbook.md) — approvals, handoffs, errors, kill switch
 - [`versioning.md`](./versioning.md) — prompt and policy versioning
 - [`status.md`](./status.md) — implementation status, deferred and blocked items
+- [`../unified/reality-report.md`](../unified/reality-report.md) — what is built against the unified specification, and what is not
+- [`../unified/traceability.md`](../unified/traceability.md) — every historical lesson, with its implementation and test
