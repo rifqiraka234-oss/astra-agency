@@ -129,7 +129,23 @@ this project:
   review. Still record the tier in the checkpoint so tomorrow's run can carry
   it forward without re reading the thread.
 
-## Step 4 — Draft the suggested message (Hot, Warm, and Silent accepted tiers only)
+## Step 4 — Draft the suggested message (always, for any tier where a reply is warranted)
+Always include a suggested reply for any contact where one is actually
+warranted, this is not optional and not limited to a shortlist of tiers.
+Concretely: Hot, Warm, Stalled, and Silent accepted all get one. The only
+exception is No Action, where by definition nothing needs a reply (already
+declined, already closed, or genuinely still their turn). If it is ever
+unclear whether a tier should get a suggested reply, default to drafting
+one rather than skipping it silently, since a skipped suggestion reads to
+Raka as "nothing to do here," not "not drafted yet."
+
+This applies beyond the daily digest output format below too: any view
+built over this inbox data (a one-off dashboard, an ad hoc summary, a
+follow-up check) must carry a suggested reply alongside any thread flagged
+as needing Raka's attention, not just a record of what the contact said.
+Showing what they said without also showing or suggesting what to say back
+is half the job.
+
 - No hyphens, en dashes, or em dashes anywhere, paragraphs separated by clear
   spacing, sound like Raka, not like an automated report. Same guardrail as
   every other message this pipeline produces (see

@@ -165,3 +165,65 @@ and sent with per-lead calibrated messages. Recorded in
 `state/prototypes.jsonl` as `pending`. The one open verification item is
 confirming both That Animation Company reels play in a real browser before
 relying on that send.
+
+---
+
+## 6. Addendum — inbox signal log dashboard (2026-08-15)
+
+Later the same working session, a separate ask: read every LinkedIn inbox
+thread across both running campaigns (replied, silent accepted, sent with no
+reply) and make it visible in one place. This produced a published Artifact
+(`state/inbox_signal_log.html`, gitignored per the same working-artifact
+policy as the prototype HTML, published at a stable Artifact URL rather than
+committed to the repo) rather than a chat wall of raw data. Two real mistakes
+surfaced here too, both caught by Raka, not by self-review, which is itself
+the finding worth recording.
+
+### What was done
+- Pulled all 46 replied conversations (complete) and paginated through the
+  457-total sent-no-reply list (377 unique captured after dedup, disclosed
+  honestly in the page footer rather than claimed as complete).
+- Built a dashboard, not a table dump: a "needs your attention" callout strip
+  for genuinely new items (a fresh reply, a fresh decline), sortable and
+  searchable tables, both themes designed properly, real @font-face fonts
+  inlined as base64 rather than a system-font fallback.
+
+### Mistake 9: the reply itself was invisible
+The "Replied threads" table had a column literally labeled "Our last
+message" that rendered only a timestamp, never the message text, even though
+the full text was already sitting in the row's own data. Raka's own sent
+reply to Antanas Juodiskis ("Hey Antanas, fair question...") was fully
+recorded by lemlist and fully present in the dashboard's underlying data,
+and still did not appear anywhere on the page. Raka caught this by comparing
+the dashboard against his own phone screenshot of the real thread, not
+because a self-review pass caught it. A UI that displays what the other
+person said but not what you said back is not a triage tool, it is half a
+transcript. Fixed by rendering both sides' full text side by side, labeled
+Them / Us.
+
+### Improvement: last touch, not just two timestamps
+Once both sides' timestamps were visible, Raka asked for the obvious next
+step: a direct answer to "did they reply last, or did we." Added a computed
+`lastTouchAt`/`lastTouchWho` field (compare the two timestamps, whichever is
+later wins) rendered as a pill (Them last / Us last) and made it the default
+sort column. This is the actual signal a triage view exists to show; two
+separate raw timestamps forced the reader to do that comparison by hand for
+every row.
+
+### Standing rule this produced: always suggest a reply
+Raka's instruction after these fixes: "always give suggestion to reply."
+Folded into `docs/inbox-triage-spec.md` Step 4, broadening it from
+"Hot, Warm, and Silent accepted tiers only" to any thread where a reply is
+actually warranted, i.e. every tier except No Action (already resolved,
+nothing to reply to). Applied immediately to the one live case at hand,
+Lynn Chadwick, rather than only recorded as a future policy: a suggested
+reply was added directly to her card in the dashboard.
+
+### Recommendation for future dashboard-style artifacts, generalized beyond this one
+When a page's whole purpose is showing a two-sided exchange (a conversation,
+a negotiation, an approval chain), render both sides' content by default,
+never just one side's content plus the other side's timestamp. If the data
+naturally computes a "whose turn is it" signal, compute and surface it
+directly rather than leaving the reader to diff two dates. Neither of these
+should require the person the tool is built for to catch the gap from a
+phone screenshot.
