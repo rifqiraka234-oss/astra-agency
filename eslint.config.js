@@ -37,6 +37,14 @@ export default tseslint.config(
     },
   },
   {
+    // The setup and dev scripts are plain Node ESM with no build step, so they
+    // run before anything is compiled. They need Node's globals declared.
+    files: ['scripts/**/*.mjs', 'eslint.config.js'],
+    languageOptions: {
+      globals: { process: 'readonly', console: 'readonly', setTimeout: 'readonly' },
+    },
+  },
+  {
     // Generated prototype output is not part of the linted source tree.
     files: ['packages/integrations/fixtures/**/*'],
     rules: { '@typescript-eslint/no-explicit-any': 'off' },

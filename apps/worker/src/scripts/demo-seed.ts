@@ -1,3 +1,4 @@
+import { loadEnvFile } from '@astra/core';
 import { testDecision } from '@astra/core/testing';
 import { buildConfig, envSchema } from '@astra/core';
 import { closePool, getOrCreateConversation, getPool, migrate, upsertContact } from '@astra/db';
@@ -13,6 +14,10 @@ import {
 import { buildContext } from '../context.js';
 import { processConversation } from '../pipeline/process-conversation.js';
 import { createLogger } from '../logger.js';
+
+// The worker is a plain Node process: unlike Next.js it does not read .env
+// on its own, so config validation would fail on a fresh shell without this.
+loadEnvFile();
 
 /**
  * Populates a local database by running the *real* pipeline against in-memory

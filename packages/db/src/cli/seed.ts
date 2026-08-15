@@ -1,4 +1,8 @@
+import { loadEnvFile } from '@astra/core';
 import { closePool, getPool } from '../client.js';
+
+// .env must be loaded before the pool reads DATABASE_URL.
+loadEnvFile();
 
 /**
  * Local development fixtures.

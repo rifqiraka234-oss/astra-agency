@@ -1,3 +1,4 @@
+import { loadEnvFile } from '@astra/core';
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import {
   applyRetention,
@@ -13,6 +14,10 @@ import { buildContext, type AppContext } from './context.js';
 import { handleLemlistWebhook } from './routes/webhook.js';
 import { processConversation } from './pipeline/process-conversation.js';
 import { METRIC_NAMES, increment, renderPrometheus } from './metrics.js';
+
+// The worker is a plain Node process: unlike Next.js it does not read .env
+// on its own, so config validation would fail on a fresh shell without this.
+loadEnvFile();
 
 /**
  * The worker process.

@@ -1,6 +1,7 @@
 export * from './domain/enums.js';
 export * from './domain/reason-codes.js';
 
+export * from './config/dotenv.js';
 export * from './config/env.js';
 export * from './config/scheduling.js';
 

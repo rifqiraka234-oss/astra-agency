@@ -23,12 +23,13 @@
     "test:watch": "vitest",
     "db:migrate": "tsx packages/db/src/cli/migrate.ts",
     "db:seed": "tsx packages/db/src/cli/seed.ts",
-    "dev": "./scripts/dev.sh",
+    "dev": "node scripts/dev.mjs",
     "dev:worker": "npm run dev --workspace @astra/worker",
     "dev:dashboard": "npm run dev --workspace @astra/dashboard",
     "check": "npm run lint && npm run typecheck && npm run test",
-    "dashboard:hash-password": "tsx apps/dashboard/src/scripts/hash-password.ts",
-    "db:demo": "tsx apps/worker/src/scripts/demo-seed.ts"
+    "dashboard:hash-password": "node scripts/hash-password.mjs",
+    "db:demo": "tsx apps/worker/src/scripts/demo-seed.ts",
+    "setup": "node scripts/setup.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",

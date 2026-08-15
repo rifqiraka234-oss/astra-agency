@@ -37,26 +37,28 @@ See [`diagrams.md`](./diagrams.md) for the data flow and state machine.
 
 ## Local setup
 
-Requirements: Node 22+, Docker (for Postgres), and nothing else.
+Requirements: **Node 22+** and **Docker Desktop**. Nothing else — no `openssl`,
+no bash. Works the same on Windows, macOS and Linux.
 
 ```bash
-cp .env.example .env
-
-# Two secrets are required before anything runs.
-echo "ENCRYPTION_KEY=$(openssl rand -base64 32)" >> .env
-echo "SESSION_SECRET=$(openssl rand -base64 32)" >> .env
-
-# The dashboard password. Read from stdin, never from argv.
-npm run dashboard:hash-password        # paste the OPERATOR_PASSWORD_HASH line into .env
+git clone https://github.com/rifqiraka234-oss/astra-agency.git
+cd astra-agency
+git checkout claude/astra-lemlist-agent-ou8vyo
 
 npm install
-npm run dev                            # Postgres, migrations, seed, worker, dashboard
+npm run setup     # asks for an email and a password, writes .env
+npm run dev       # Postgres, migrations, seed, worker, dashboard
 ```
 
-`npm run dev` brings up Postgres, applies migrations, seeds obviously-fake
-fixtures, and starts the worker on :3001 and the dashboard on :3000. Every
-live-action flag is false and the kill switch is on, so a fresh checkout
-cannot reach a real prospect.
+Then open <http://localhost:3000> and sign in with what you gave `npm run setup`.
+
+`npm run setup` generates the encryption and session keys itself and hashes the
+password into `.env`. It is safe to re-run: a value that is already set is
+never overwritten, so it fills only what is missing.
+
+`npm run dev` checks Docker is actually running before it starts, and says what
+to do if it is not. Every live-action flag is false and the kill switch is on,
+so a fresh checkout cannot reach a real prospect.
 
 ### Seeing it with realistic content
 
@@ -83,6 +85,14 @@ curl -X POST http://localhost:3001/webhooks/lemlist \
 ```
 
 Then open <http://localhost:3000/queue>.
+
+### Changing the password later
+
+```bash
+npm run dashboard:hash-password   # prints a new OPERATOR_PASSWORD_HASH line
+```
+
+Replace that line in `.env` and restart.
 
 ## Runtime modes and safety flags
 
@@ -118,6 +128,7 @@ that gates them are in [`policy.md`](./policy.md).
 
 | Command | What it does |
 | --- | --- |
+| `npm run setup` | write `.env`, generate keys, set the dashboard password |
 | `npm run dev` | full local stack |
 | `npm run db:migrate` | apply migrations |
 | `npm run db:seed` | seed local fixtures |

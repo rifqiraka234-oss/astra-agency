@@ -131,9 +131,11 @@ Stated plainly, because the specification forbids claiming completeness:
    read-only. Approve for staging, Approve for production, Need more evidence,
    Reject and Roll back are not wired to the promotion guard yet, so promotion
    is currently only reachable from code.
-3. **Operator product shell and setup wizard** (§5). The dashboard has login,
-   queue, conversation detail, settings and audit export. There is no first-admin
-   claim flow or guided setup.
+3. **In-app setup wizard and first-admin claim** (§5). There is now a guided
+   *command line* setup (`npm run setup`) that generates keys and the operator
+   password into `.env`, covered by `scripts/setup.test.ts`. The in-app wizard
+   and a first-admin claim flow are still not built; the dashboard has login,
+   queue, conversation detail, settings and audit export.
 4. **Railway deployment, private bucket, staging/production release flow**
    (§4, §31). Not provisioned. No Railway project exists.
 5. **Eval registry population** (§25.7). The comparison machinery is built and
@@ -147,8 +149,9 @@ Stated plainly, because the specification forbids claiming completeness:
 | --- | --- |
 | `npx eslint .` | Clean |
 | `npm run typecheck` | Clean |
-| Full test suite | 463 passing, 30 files |
+| Full test suite | 481 passing, 32 files |
 | Dashboard build | Clean; 14 routes |
+| `npm run setup` | Executed end to end by `scripts/setup.test.ts`; the generated `.env` authenticates against the dashboard's own `verifyPassword` |
 | `/enrichment` and `/improvement` | Driven with Playwright against seeded data; both render real rows |
 | Integration tests against live Postgres | 32 of those 463; they **skip**, never pass vacuously, without a database |
 | Migrations from empty | Both apply; re-running is a no-op |
