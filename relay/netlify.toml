@@ -1,0 +1,9 @@
+# Relay between Lemlist webhooks and the reply agent's Routine fire endpoint.
+# There is no site to build: this deploy is one function and nothing else.
+
+[build]
+  publish = "public"
+  command = ""
+
+[functions]
+  node_bundler = "esbuild"

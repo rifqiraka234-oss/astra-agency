@@ -45,6 +45,20 @@ export default tseslint.config(
     },
   },
   {
+    // The relay runs on Netlify's web-standard function runtime, so it has
+    // fetch, Request and Response as globals alongside Node's.
+    files: ['relay/**/*.mjs'],
+    languageOptions: {
+      globals: {
+        process: 'readonly',
+        console: 'readonly',
+        fetch: 'readonly',
+        Response: 'readonly',
+        Request: 'readonly',
+      },
+    },
+  },
+  {
     // Generated prototype output is not part of the linted source tree.
     files: ['packages/integrations/fixtures/**/*'],
     rules: { '@typescript-eslint/no-explicit-any': 'off' },

@@ -15,3 +15,6 @@ apps/dashboard/.next/
 artifacts/prototypes/
 artifacts/screenshots/
 tmp/
+
+# Relay function dependencies
+relay/node_modules/
