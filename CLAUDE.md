@@ -131,3 +131,14 @@ informational only, never blocks anything.
 - If the `cam_Co5CJXrpPFf5MRAfD` campaign is still in draft status, keep
   importing Tier 1 leads into it as normal, that's expected until Raka
   turns it on.
+
+# Reply agent (separate concern, scheduled)
+
+If this session was started by a scheduled Routine for **replying to inbound
+Lemlist messages** rather than for enrichment, stop reading this file and
+read `docs/reply-agent/scheduled-agent-playbook.md` instead. It is a
+different pipeline with its own state under `state/reply-agent/`, its own
+guardrails, and its own deterministic checks in `scripts/reply-agent/`. Do
+not mix the two: never use the enrichment pipeline's Tier logic to decide
+whether to send a reply, and never use the reply agent's low-risk allowlist
+to decide whether to import an enrichment lead.

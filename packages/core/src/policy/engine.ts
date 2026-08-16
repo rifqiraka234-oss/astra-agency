@@ -676,4 +676,4 @@ function finish(
   };
 }
 
-export { LOW_RISK_CASE_SPECS };
+export { LOW_RISK_CASE_SPECS, INTENT_TO_CASE };
