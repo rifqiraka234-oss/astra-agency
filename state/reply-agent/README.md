@@ -20,9 +20,13 @@ pipeline already uses.
   or rejects it in chat — never auto-expires.
 - `handoffs.jsonl` — conversations flagged `HUMAN_OWNED`: identity conflicts,
   hostile replies, anything referencing something the agent cannot see
-  (a call, an attachment), or a channel the agent cannot send on (see the
-  playbook's channel-availability note). Append-only; a handoff is only
-  cleared by Raka saying so.
+  (a call, an attachment), or anything that would need email (LinkedIn is the
+  only prospect-facing channel). Append-only; a handoff is only cleared by
+  Raka saying so.
+- `meetings_notified.jsonl` — one line per meeting the agent emailed Raka
+  about: `contactId`, `contactName`, `companyName`, `scheduledFor`,
+  `notifiedAt`. Checked before sending so the same meeting never triggers a
+  second email on a later run.
 - `runs/YYYY-MM-DD-HHmm.md` — human-readable summary written at the end of
   every run: conversations checked, auto-sent count, queued count, handoffs,
   any blockers. This is what the push notification links back to.
