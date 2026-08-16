@@ -31,6 +31,11 @@ This file is read on every firing. It is kept short on purpose.
    answer is always queue or hand off, never auto-send.
 8. **Never change campaign status, register webhooks, or alter team
    settings.** Raka's calls only.
+9. **Prove you can record before you send anything.** A send is irreversible;
+   a lost state file means the next run cannot tell it already replied and may
+   message the same person twice. So step 0 of every run is a push-access
+   preflight (below). If it fails, the run **queues everything and sends
+   nothing**. Never take an external action you cannot write down.
 
 ## Account (re-verify each run, do not trust these blindly)
 
@@ -47,6 +52,13 @@ This file is read on every firing. It is kept short on purpose.
 
 ## The run
 
+0. **Push-access preflight.** Scheduled sessions do not automatically get
+   write credentials for this repo. Call `add_repo` with
+   `owner: "rifqiraka234-oss"`, `repo: "astra-agency"`, `access: "push"`.
+   Then confirm with `git push --dry-run origin HEAD`. If either fails,
+   **switch the whole run to queue-only: draft and queue, send nothing, email
+   nothing**, write the run summary locally, and notify Raka that push access
+   is broken. A run that cannot record must not act.
 1. Read `state/reply-agent/checkpoint.json`, `queue.jsonl`, `handoffs.jsonl`.
 2. `get_inbox_conversations` (default list, then `listId: "unRead"`). Skip
    archived campaigns.
@@ -78,7 +90,11 @@ This file is read on every firing. It is kept short on purpose.
 6. Update `checkpoint.json` for that contact **immediately**, not batched.
 7. Write `state/reply-agent/runs/<YYYY-MM-DD-HHmm>.md`: counts, cases used,
    handoffs and why, blockers.
-8. Commit and push (`reply-agent: run YYYY-MM-DD HH:mm, N processed`).
+8. Commit and push (`reply-agent: run YYYY-MM-DD HH:mm, N processed`). If the
+   push fails despite the preflight, say so loudly in the notification and
+   include the contact ids and activity ids of everything sent, so the state
+   can be rebuilt from the message rather than from a container that may
+   already be gone.
 9. Push-notify Raka only if something needs him: queued items, handoffs, or a
    blocker. **A run that found nothing new sends no notification and writes no
    run file.**
