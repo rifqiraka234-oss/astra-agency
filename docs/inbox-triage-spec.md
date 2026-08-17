@@ -146,6 +146,15 @@ as needing Raka's attention, not just a record of what the contact said.
 Showing what they said without also showing or suggesting what to say back
 is half the job.
 
+- **Name exemption (confirmed by Raka 2026-08-15):** hyphens that are part of a
+  real proper noun are exempt from the dash rule. A company's registered name
+  (Ad-Wise, Edouard Koehn) or a person's real surname (Witt-Dörring,
+  Hurd-Watler) is written correctly, hyphen included. Never misspell someone's
+  name to satisfy the guardrail. The rule still applies in full to ordinary
+  prose, where a dash must be rewritten around rather than substituted.
+- **Write plainly (confirmed by Raka 2026-08-15):** use short, everyday words a
+  busy founder reads once and understands. Prefer the simple word over the
+  impressive one. No jargon, no consultant register.
 - No hyphens, en dashes, or em dashes anywhere, paragraphs separated by clear
   spacing, sound like Raka, not like an automated report. Same guardrail as
   every other message this pipeline produces (see
