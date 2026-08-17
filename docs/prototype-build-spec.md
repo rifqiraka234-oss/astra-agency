@@ -30,6 +30,30 @@
 > (interactive integrity and no-JS render), Stage H (the send), and the
 > Portability and Payload-budget rules under Deliverables. The full
 > reasoning is in `docs/prototype-pipeline-retrospective-2026-08-12.md`.
+>
+> **Round 2 update (2026-08-17):** a second audit of the three *deployed*
+> prototypes found the art-direction problem largely fixed and a new one
+> exposed underneath it: all three were **strong concept slices presented as
+> if they were finished websites**. They proved one idea well, then stopped
+> before the visitor had the evidence, human reassurance, operational detail,
+> and conversion support needed to act. The failure is no longer generic art
+> direction, it is **story and product compression**: one narrative mistaken
+> for the whole business story, one workflow mistaken for the operating
+> model, names mistaken for human presence, a CTA label mistaken for a
+> conversion journey, and unbuilt areas disappearing silently instead of
+> being tracked. The governing rule this round adds:
+>
+> > **A prototype may simplify a business, but it may not make the business
+> > look simpler than it is.**
+>
+> This round adds Stage 0 (deliverable mode and Site Completeness Contract),
+> A4/A5 (business-system model, Role × Journey × Evidence matrix), D5 to D7
+> (imagery storyboard, image scoring, crop gates), E4 to E8 (Human Trust
+> Plan, Proof Ladder, workflow coverage, case-study anatomy, designed
+> ending), F5 to F9 (conversion journey, interaction states, media playback
+> contract, asset-delivery rule, responsive art direction), and G4 (Coverage
+> Ledger). The rubric is replaced with a 100-point version at a **90/100**
+> threshold. Every Round 1 rule below remains in force.
 
 ## Purpose
 This is triggered by a "Ready for a mockup" handoff from the daily inbox
@@ -44,6 +68,49 @@ The prototype itself must read as **the proposed client website**, not as
 an agency's annotated critique of the old one. See Step 7 and the Stage 5
 delivery rules below for exactly where critique and rationale belong
 instead.
+
+---
+
+## Stage 0 — Declare the job before researching or designing it
+
+This stage exists because a prototype that is honestly scoped as a slice and
+a prototype that silently *is* a slice look identical at delivery. Declaring
+the mode first makes the difference reviewable.
+
+### 0.1 — Declare the deliverable mode
+Every build is assigned exactly one mode, written down before research
+starts:
+
+1. **Concept slice** — proves one governing idea. Must be visibly labelled
+   internally as incomplete.
+2. **Conversion landing page** — completes one buyer decision and its full
+   CTA journey.
+3. **Full prototype** — demonstrates the complete site architecture, the
+   principal routes, and the critical workflows.
+4. **Production candidate** — content, states, assets, integrations,
+   accessibility, and technical QA are all delivery ready.
+
+**If Raka asks for a website, a prototype, or a mockup without explicitly
+asking for a concept slice, the mode is `full prototype`.** Concept slice is
+never the silent default.
+
+The final response may not call a concept slice "the website," "finished,"
+or "complete."
+
+### 0.2 — Write the Site Completeness Contract
+Before any wireframe, build a table of every expected page, route, section,
+critical interaction, and conversion path. Mark each one:
+
+- required and built;
+- required and demonstrated inside another page;
+- summarized because full implementation is unnecessary;
+- intentionally deferred, with the reason;
+- blocked by a missing fact or asset;
+- not applicable.
+
+No critical area may disappear silently. **The same table ships again at
+delivery with its final status** (see G4), which is what makes this a
+contract rather than a plan.
 
 ---
 
@@ -160,6 +227,37 @@ copy, or signature interactive device, even a competitor's. Copying a
 competitor is prohibited even though researching them is mandatory.
 
 ---
+
+### A4 — Model the business before modelling the page
+Do not start information architecture from a list of features. Start from
+flows and decisions, then decide where features belong. Research the
+business as a system and write down:
+
+- the actors and buyer roles;
+- the primary jobs to be done;
+- the value-creation workflow (how the business makes the thing worth
+  paying for);
+- the delivery workflow (how it actually reaches the customer);
+- inputs, decisions, handoffs, and outputs at each stage;
+- the evidence created at each stage (this is what the page can later show);
+- anxieties, objections, and failure risks;
+- the conversion step and what happens after it.
+
+A page built from a feature list describes a product. A page built from this
+model describes a business, which is what the buyer is actually evaluating.
+
+### A5 — Role × Journey × Evidence matrix
+For every material role, record: what they arrive needing, what they need to
+understand, what they need to see, what they need to believe, what could
+stop them, their next action, and the real proof that resolves the decision.
+
+| Role | Arrives needing | Must see | Must believe | Blocker | Next action | Proof that resolves it |
+|---|---|---|---|---|---|---|
+
+**For B2B software with multiple operational roles, showing only the
+executive or only the end user is a hard failure.** A tool bought by a
+director, configured by an administrator, and used daily by someone on the
+floor has three buyers, and the page has to answer all three.
 
 ## Stage B — Evidence classification and red team (was Steps 3 and 4)
 
@@ -458,6 +556,52 @@ mechanically.
 
 ---
 
+### D5 — Imagery storyboard and shot list
+The D1 asset plan lists what exists. This sequences it into a story. For
+each visual beat, declare which role it plays:
+
+- establishing the world;
+- human connection;
+- work or product proof;
+- process artifact;
+- tactile or detail moment;
+- transformation or outcome;
+- social proof;
+- conversion reassurance.
+
+The minimum useful sequence for most full prototypes is: establish the
+world, show the real work or product, introduce the relevant human, reveal
+how value is made, show detail and texture, show the result in use, close
+with credible proof and an action. This is a storytelling checklist, not a
+fixed page order.
+
+### D6 — Score every important image before using it
+Score each major image or video from 0 to 5 on: authenticity/provenance,
+relevance to the claim it sits next to, brand fit, narrative role, technical
+quality, and coherence with the sequence.
+
+**Minimum 24/30, with no score below 4 on authenticity/provenance or
+relevance.**
+
+An attractive image that does not prove, humanize, explain, or deliberately
+create atmosphere may not occupy a major section. "It looked good there" is
+not a narrative role.
+
+### D7 — Image quality and crop gates
+- Prefer source pixels at roughly 2× the intended CSS dimensions for
+  prominent raster imagery.
+- Do not upscale beyond 1.25× without explicit review.
+- **Never force a landscape production frame into a portrait crop** without
+  checking every important subject and composition. Art-direct
+  `object-position` per image when using `cover`.
+- Review faces, hands, text, UI, and focal points at every breakpoint.
+- Reject AI artifacts, heavy compression, colour banding, muddy shadows, and
+  inconsistent grading.
+- A screenshot of UI must stay legible at its displayed size. If it cannot,
+  use a focused crop or an annotated zoom instead of shrinking it.
+- Production candidates use responsive `srcset`/`sizes`, modern formats, and
+  explicit dimensions.
+
 ## Stage E — Narrative and copy
 
 ### E1 — Narrative storyboard before section design (was implicit, now explicit)
@@ -522,6 +666,87 @@ Let the design and copy of the prototype itself embody the answer to the
 critique; save the explicit critique language for Raka.
 
 ---
+
+### E4 — Human Trust Plan (people are a designed layer, not a bio block)
+Before choosing final sections, ask:
+
+- Is the founder's expertise central to the promise?
+- Is the service personal or relationship led?
+- Will the buyer work directly with the named people?
+- Does delivery depend on a small creative or specialist team?
+- Is operational credibility being claimed through lived experience
+  ("built by operators," "20 years in the industry")?
+
+**If any answer is yes**, the prototype must normally include a real
+approved portrait, the name and actual role, concise relevant credibility,
+one human sentence in that person's natural voice, and visual context of the
+person at work where available.
+
+If no approved image exists, raise an explicit asset request or use an
+honestly labelled placeholder. Replacing the person with an icon, an
+abstract shape, or a text-only bio and calling the section done is a hard
+failure. A section that promises "who you'd work with" and then withholds
+the people is worse than not having the section.
+
+### E5 — The Proof Ladder
+Rank the evidence available, strongest first:
+
+1. verified customer outcome or attributed testimonial;
+2. real product or work in use;
+3. complete case study;
+4. real interface or process artifact;
+5. named human expertise;
+6. specific, sourced factual claim;
+7. explanation;
+8. decorative metaphor.
+
+**The top half of a full prototype must contain evidence from levels 1 to 5
+wherever it genuinely exists.** Do not build a whole page out of levels 6 to
+8. And **no more than two consecutive story beats may pass without
+introducing new meaningful evidence** — that is the specific rhythm failure
+that makes a page feel like well-written wireframes.
+
+### E6 — End-to-end workflow coverage gate
+Every full prototype must demonstrate **at least one complete primary
+workflow from input to measurable output**, and must summarize every other
+critical workflow found in research (A4).
+
+- For software or product businesses, the primary workflow includes setup
+  and configuration, execution, exception handling, ownership, closure, and
+  reporting where relevant.
+- For service or creative businesses, it includes discovery, scoping,
+  preparation, delivery, review and selection, handover, and post-delivery
+  use where relevant.
+
+The workflow may be simplified. **No stage may be invented.** Showing one
+happy path and silently omitting setup, exceptions, ownership, or closure is
+a hard failure unless the omission is disclosed in the Coverage Ledger.
+
+Where the business is a continuous loop rather than a line, the diagram must
+close the loop. A quality-management product whose story ends at "issue
+resolved" has described issue tracking, not quality management.
+
+### E7 — Case-study depth where the work is the product
+Creative, consulting, software, and implementation businesses may not rely
+on shallow project cards alone. **At least one flagship case study** must
+carry: context and verified starting problem, goal and audience, the
+approach or mechanism, meaningful process evidence, final output evidence,
+contributor and role clarity, a verified result or a carefully qualified
+qualitative outcome, a client or user voice where available, and the next
+relevant action.
+
+Category specifics: animation needs final motion, styleframes or process,
+and credits. Photography needs a coherent image series and its use context.
+Software needs a real workflow and a case outcome.
+
+### E8 — Design the ending, not only the hero
+The last 20% of the page must deliberately close the story, resolving:
+trust, fit, practical questions, risk, what happens next, how quickly the
+visitor will hear back, and a secondary route for someone who is not ready
+to convert.
+
+Do not end immediately after a feature grid, price cards, or two
+biographies. The hero earns attention; the ending earns the reply.
 
 ## Stage F — Technical build and QA
 
@@ -643,6 +868,74 @@ panel at a time. They fail in small, repeatable ways. Check every one:
 
 ---
 
+### F5 — Complete the conversion journey
+A CTA is not finished because it is styled as a button. For every primary
+CTA, define: destination, information requested, validation and error state,
+privacy or consent need, success state, confirmation or response
+expectation, fallback contact route, and tracking requirement if applicable.
+
+**If the destination is an email address, label it as email or contact.** Do
+not visually promise "Book a walkthrough" or "Book a demo" when no booking
+or structured request flow exists behind it. That mismatch is a hard
+failure, and it was shipped on two of the three audited prototypes.
+
+In a prototype, forms may be simulated, but the required fields and the
+success and error states must still be designed and clearly labelled as
+prototype behavior.
+
+### F6 — State-complete interaction design
+Every interactive component needs: default, hover where relevant, keyboard
+focus, selected/active, disabled where relevant, loading, success,
+error/fallback, and reduced-motion behavior.
+
+- Tabs must expose `aria-selected` (or a correct equivalent). Toggle buttons
+  must expose `aria-pressed` where appropriate.
+- **Active state may never exist only as colour.**
+- Every tab, carousel, media switcher, form, and CTA must actually be
+  clicked and tested in every state before delivery. Not reasoned about,
+  clicked.
+
+### F7 — Media playback contract
+For every video or animation:
+
+- verify the **actual media plays**, not just that a poster renders;
+- verify **every alternate tab or state**, not only the one that loads first
+  (an audited prototype shipped with two of three reels never opened);
+- include intentional controls, a poster, and a fallback still;
+- provide captions or a transcript where speech or meaning requires it;
+- respect reduced motion, and ensure the page still communicates without
+  autoplay.
+
+An animation studio's page fails if its motion cannot be played reliably.
+This gate stacks with F2c: if the builder cannot decode the medium, the
+real-browser playback confirmation is blocking, not advisory.
+
+### F8 — Do not embed every asset in one HTML file by default
+Self-contained HTML is for a constrained handoff that explicitly requires
+it. It is not the default production method.
+
+Normally: use organized local asset files, compress and resize per use,
+lazy-load below-fold media, avoid duplicate video sources, provide posters,
+record provenance, keep the HTML readable, and test page weight and startup
+behavior.
+
+Cautionary example from the round 2 audit: the That Animation Company page
+carried roughly **7.37 million characters** of base64 image, poster, and
+video data in HTML attributes (Rosalie ~1.62M, Point Audit ~0.48M). Some of
+that was chosen because it made file delivery convenient, which is a
+delivery-channel reason wearing a product decision's clothes. Keep those
+separate.
+
+### F9 — Responsive art direction, not just responsive layout
+Breakpoints must not merely stack the same rectangles. At each width,
+decide: which image leads, which crop changes, what is compressed or
+expanded, how motion is treated, whether a grid becomes a sequence, whether
+text width and pacing still feel intentional, and whether people, product,
+and proof still appear early enough.
+
+Capture and compare screenshots at every required width and state the
+material art-direction changes in the delivery rationale.
+
 ## Stage G — Delivery, scoring, and hard failure gates
 
 ### G1 — Weighted design review (replaces the old unweighted Step 9 checklist)
@@ -650,17 +943,26 @@ Score every prototype honestly before calling it done:
 
 | Dimension | Weight | The hard question it answers |
 |---|---|---|
-| Brand specificity | 25 | Could this only be this client? |
-| Art direction and originality | 20 | Is there one coherent governing idea expressed across the whole page, not just the hero? |
-| Imagery and real proof | 20 | Are the assets real, relevant, high quality, and correctly sequenced? |
-| Story and pacing | 15 | Does each beat change what the buyer feels or understands? |
-| Copy and voice | 10 | Does it sound like the company, not like a redesign consultant or an AI? |
-| UX and interaction | 5 | Does the interaction prove the offer or deepen the experience, not just exist because interactivity was expected? |
-| Technical craft | 5 | Are assets, responsiveness, accessibility, and performance actually sound? |
+| Brand specificity | 15 | Could this only belong to this client? |
+| Narrative and emotional pacing | 15 | Does the story deliberately change what the visitor feels and understands? |
+| Imagery and art direction | 15 | Is every major visual authentic, high quality, coherent, and purposeful? |
+| Workflow and business completeness | 15 | Does the experience represent the real value-creation loop and the critical journeys? |
+| Real proof and human trust | 15 | Are the work, product, people, clients, and outcomes tangible enough to trust? |
+| Buyer fit and objection coverage | 10 | Does each priority role get the evidence it needs to decide? |
+| Conversion completeness | 5 | Does the next step actually work, from CTA through confirmation? |
+| Interaction and accessibility | 5 | Do all states work semantically, visually, and by keyboard? |
+| Technical reliability and performance | 5 | Do all assets, media, routes, and responsive states work efficiently? |
 
-**Minimum score to deliver: 88 out of 100, with zero hard failures below.**
-A prototype that scores 88 or above on the weighted rubric but trips any
-hard failure still does not ship.
+**Minimum score to deliver: 90 out of 100, with zero hard failures below.**
+A prototype that scores 90 or above but trips any hard failure still does
+not ship.
+
+This replaces the Round 1 rubric (which weighted brand specificity at 25 and
+capped at 88). The reweighting is deliberate: under the old rubric a page
+could score well on brand specificity, art direction, and imagery alone,
+which is exactly how three concept slices passed while workflow
+completeness, human trust, and conversion went unscored. Those three are now
+worth 35 points together.
 
 ### G2 — Hard failure gates
 Any one of the following blocks delivery regardless of the weighted score:
@@ -692,6 +994,39 @@ Any one of the following blocks delivery regardless of the weighted score:
 - Typography was never rendered with the real webfonts and is being treated
   as verified anyway (F2b).
 
+Added in Round 2 (2026-08-17). These sit alongside every gate above, none of
+which is retired:
+
+- A full prototype that is actually an unlabeled concept slice (Stage 0.1).
+- A founder or team credibility claim with no real person visible, when
+  imagery is available or obtainable (E4).
+- A personal or creative service that never introduces the person delivering
+  it (E4).
+- A software site that demonstrates one happy path while omitting setup,
+  exceptions, ownership, closure, or reporting **without disclosing it** in
+  the Coverage Ledger (E6).
+- A screen labelled "real" that renders blank or fails to decode (F2). The
+  label makes it worse: the page makes a proof claim exactly where the proof
+  asset fails.
+- An image or video tab whose alternate states were never opened and
+  verified (F7).
+- A video service promoted without playable video proof (F7).
+- Project cards with no complete case study, where the work is the main
+  product (E7).
+- A CTA that promises booking or a demo but only opens an unlabeled email
+  link (F5).
+- A large landscape work sample cropped into a composition that hides the
+  important part of the work (D7).
+- An important interaction state communicated only by colour (F6).
+- Major tabs or toggles lacking correct selected-state semantics (F6).
+- A production candidate using massive base64 media blobs with no explicit
+  necessity (F8).
+- No Site Completeness Contract (0.2).
+- No Role × Journey × Evidence matrix for a multi-role product (A5).
+- No Coverage Ledger at delivery (G4).
+- Calling the work complete while critical pages, proof, assets, or
+  workflows remain silently absent.
+
 If strategic accuracy, brand authenticity, or technical reliability falls
 short at any point in this process, revise before delivering. Do not ship
 a first draft that fails on any of those three specifically, even if the
@@ -718,6 +1053,28 @@ Every delivered prototype must be accompanied by a short rationale
   plainly for a fast sanity check.
 
 ---
+
+### G4 — Prototype Coverage Ledger (ships with every delivery)
+The Site Completeness Contract from 0.2 comes back here with final status,
+plus a ledger listing:
+
+- researched facts used;
+- unverified facts deliberately excluded;
+- assets used, with provenance;
+- missing asset requests;
+- complete workflows shown;
+- partial workflows summarized;
+- pages and routes built;
+- routes intentionally deferred;
+- interactions actually tested;
+- accessibility checks performed;
+- unresolved risks;
+- the exact next steps to reach production ready.
+
+**No "finished" claim is allowed while a critical ledger item is
+unresolved.** The ledger is what converts "I think it's done" into something
+Raka can check, and it is what stops an unbuilt area from vanishing quietly
+between the plan and the delivery.
 
 ## Stage H — The send (the prototype is not the goal, a booked meeting is)
 
