@@ -212,3 +212,93 @@ A portrait plus one nameable customer would move this to roughly 93. Under
 the spec a sub-90 score means it does not ship as a finished production
 candidate; it is sound to send as a concept for reaction, which is exactly
 what the thread promised. Raka's call.
+
+---
+
+## v3 addendum — photography added (2026-08-17)
+
+Raka's note: "No usage of pictures? Come on. Make smart use of it, it needs to
+feel more human and alive." Correct, and the fix changes the page materially.
+
+### Where the images came from, including the dead ends
+
+| Source | Result |
+|---|---|
+| Unsplash search | **Blocked.** Search page is JS only; the internal API returns "Authorization required". |
+| Pexels API | **Blocked.** Returns "Missing API key". |
+| Wikimedia Commons | Reachable, but the results were unusable: a 1990s military desk, a Motorola phone box, a mannequin wearing a headset, CRT era broadcast control rooms. |
+| Openverse, default (mostly Flickr) | Mixed. Mostly dated conference photos. |
+| **Openverse filtered to Rawpixel** | **Used.** Modern, clean, CC0. This is the one that worked. |
+
+**10 photographs**, all **CC0**, gathered from a pool of 111 candidates
+(roughly 11x oversupply, addition 34). Every candidate was rendered as a
+contact sheet and looked at before selection; watermarked and cartoon results
+were rejected on sight.
+
+### How they are used
+
+Per addition 35 the images carry distinct roles rather than repeating one:
+
+| Placement | Image | Role |
+|---|---|---|
+| Full bleed band after the hero | Warehouse floor in operation | Establishing the world |
+| Customer self-service panel | A request arriving on a phone | The human input the worker takes over |
+| IT helpdesk panel | A person at a monitor | The queue being replaced |
+| Sales assistant panel | Someone working late at a laptop | Where a lead sits overnight |
+| Range section, three up | Packing bench, forklift, staged boxes | The physical reality behind "order tracking" |
+| Handover, cream band | Hands at a laptop | Tactile detail |
+| The path | People at monitors in a workspace | Who the demo gets shown to |
+| Clock in | A laptop open on a desk | Conversion reassurance |
+
+### Honesty rules applied
+
+These are **stock photographs used as context, never as proof**. Round 1's
+hard failure is "unrelated stock used as brand proof", so:
+
+- every photograph is captioned in place, and three say **"Stock, not a
+  customer"** explicitly;
+- none is presented as Greentic, a Greentic customer, or Greentic software;
+- a photography credits block in the footer states the licence and source for
+  all ten;
+- the founder portrait remains a **labelled placeholder**, because no
+  photograph of Maarten is available and substituting a stock face for a real
+  named person would be a fabrication.
+
+### Technical
+
+- Each image exported at roughly 2x its intended CSS width per addition 23,
+  then verified: **0 upscaled, 0 broken, 0 missing alt text**.
+- One caught and fixed in QA: the hero band was showing a 1024px source at
+  1440px (1.4x upscale, over the 1.25x limit). Swapped to a 1300px native
+  source and re-exported.
+- Also caught: the worker panels had a large void in the right column while
+  the left ran long. The flow diagrams were moved into the right column to
+  balance them, per addition 45.
+- Payload **1.29MB**, against the 2MB target. Base64 embedding is used because
+  this deliverable is explicitly a single portable file for Netlify and the
+  Artifact CSP, which is F8's stated constrained handoff exception.
+
+### Revised figures
+
+| Metric | v2 | v3 |
+|---|---:|---:|
+| Photographs | 0 | **10** |
+| SVG information figures | 15 | 15 |
+| Total figures | 15 | **25** |
+| Words | 2943 | 3234 |
+| Page height | 10207px | **12926px** |
+
+### Revised score
+
+Imagery and art direction moves from 12/15 to **14/15**: the page now has real
+human presence and genuine pacing contrast, and the only thing still missing
+in that dimension is Greentic's own product screenshots, which do not exist
+publicly.
+
+Real proof and human trust stays at **11/15**, unchanged. Stock photography is
+context, not proof. It does not substitute for a customer case study or a
+portrait of the founder, and it was not scored as though it did.
+
+**Total: 91/100.** This is the first version to clear the 90 threshold. The
+two client-supplied assets (a portrait of Maarten, one nameable customer)
+would still take it to roughly 95.
