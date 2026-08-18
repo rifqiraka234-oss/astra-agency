@@ -558,6 +558,43 @@ record in the research summary:
   any client tied to a specific real community.
 - Never use real company or retailer logos, that is licensed IP. Use styled
   wordmark placeholders or generic representations instead.
+- **A named person's photograph must actually be that person, and this is
+  verified mechanically, never by eye.** Raka, 2026-08-18: *"I just dont want
+  to put someone's picture and the picture is actually not them. The picture
+  and the person mentioned should be the same, as a rule."* A wrong face beside
+  a real name is both instantly visible to the client and unfair to the person
+  pictured, and it is undetectable by looking, because a plausible face beside
+  a plausible name looks correct to anyone who has not met them.
+
+  Two specific ways it goes wrong, both silent:
+  1. **Off-by-one adjacency.** Scraping a team page as a flat token stream and
+     taking "the name that follows this image" shifts the entire grid by one
+     the moment any card carries an extra element. Pair by **containment**
+     instead: the name and the image must sit inside the *same* card element,
+     and that card must contain exactly one image and exactly one person's
+     name. Containment cannot shift.
+  2. **Right research, wrong wiring.** The pairing is established correctly and
+     then the wrong asset key is wired into the template. Only a **byte
+     comparison** between the image embedded in the built page and the image
+     the client actually publishes for that person catches this.
+
+  Run `tools/verify_portraits.py` against the built file before delivery. It
+  performs both checks and exits non-zero on any mismatch:
+
+  ```
+  python3 tools/verify_portraits.py \
+      --page state/prototypes/<company>/index.html \
+      --source <scraped about/team page> --assets <downloaded image dir>
+  ```
+
+  It reports **UNPAIRED** where it cannot tie a face on the page back to the
+  client's own source. **Unpaired is a failure, not a pass.** An unverifiable
+  portrait is removed or replaced with a designed treatment; it is never
+  shipped on the assumption that it is probably right. (The tool strips
+  zero-width and formatting characters from both sides first, because Framer,
+  Webflow and Squarespace all emit them inside names, where they are invisible
+  to a reader and silently break a literal match.)
+
 - **Provenance and depiction are two separate checks, and passing the first
   does not pass the second.** An image taken from the client's own site is
   legitimately *theirs*, which is exactly what makes it feel safe to use. It
@@ -1411,6 +1448,9 @@ since the reasoning is easy to lose once it is just a table:
 - A full prototype with no working form and no real routes (I7, I8).
 - A named individual with no face and no logged asset request (I10).
 - A page whose entire ending is one heading and one button (I11).
+- A named individual shown with a portrait whose pairing was not verified by
+  `tools/verify_portraits.py` (containment on the client's own source plus a
+  byte match in the built file), or shown despite an UNPAIRED result.
 - A photograph captioned or alt-texted as depicting the client's premises,
   staff, customers, or product in use, where the client's own use of that
   image makes no such claim (D3, depiction check).

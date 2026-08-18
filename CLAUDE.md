@@ -428,6 +428,14 @@ not just a good conversation.
 ### Guardrails
 
 Everything in `docs/prototype-build-spec.md`'s own Guardrails section, plus:
+never show a real person's photograph next to a name without verifying they
+are the same person, mechanically, via `tools/verify_portraits.py` (pairing by
+card containment on the client's own page, plus a byte match against what is
+embedded in the built file); an unverifiable portrait is removed or replaced
+with a designed treatment, never shipped on the assumption it is probably
+right; never caption or alt-text a photograph as depicting the client's
+premises, staff, customers, or product in use unless the client themselves
+makes that claim about that image;
 never send a Netlify link that hasn't been opened and visually checked;
 never reuse a declined angle on a retry; never invent a meeting time or mark
 one as booked without an actual Calendar event backing it; never skip the
