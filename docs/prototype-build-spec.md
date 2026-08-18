@@ -1125,6 +1125,235 @@ it, per `CLAUDE.md`. On a reply, drive toward the booked meeting (positive)
 or a genuinely different angle (decline), never a repeat of a declined
 concept.
 
+## Stage I — Density, craft, and production-readiness (Round 3, folded in 2026-08-18)
+
+> **Integration note:** additions 33 to 47 below were developed and verified
+> in `docs/prototype-framework-addendum-round-3.md` against the three
+> deployed prototypes and Astra's own hand built sites. That document has
+> the full measurement, the reasoning, and the worked examples; this section
+> is the operational summary folded into the canonical spec so a build does
+> not depend on a separate file to be complete. If the two ever disagree,
+> re-read the addendum, it is the source of truth for *why*, this section is
+> the source of truth for *what to do*.
+
+### The finding this stage exists to fix
+Stage A through H (Round 1) fixed generic art direction. Stage 0 through G's
+Round 2 additions fixed incomplete business stories. Neither fixed
+**thinness**: Claude's default expression of "premium" is whitespace,
+desaturation, one grotesk, and few assets, which is the vocabulary of
+minimalist SaaS, not of the art, craft, and service industries Astra
+actually serves. Measured against Astra's own hand built sites, prototypes
+built under Round 1 and 2 alone carried 45% fewer sections, 75% fewer h3
+subsections, and zero forms. **Restraint is a choice that strengthens what
+remains after removing something. Emptiness is the absence of material.**
+A prototype must earn minimalism with density, not substitute one for the
+other.
+
+### I1 — Density floor by category (addition 33)
+Before delivery, count the page's own images/figures, words, and h3
+subsections and compare against the floor for its category. A shortfall is
+allowed only with a written reason in the Coverage Ledger (G4).
+
+| Category | Min. images/figures | Min. words | Min. h3 |
+|---|---:|---:|---:|
+| Photography, illustration, design portfolio | 35 | 500 | 8 |
+| Animation, film, motion | 12 stills + 4 motion | 600 | 10 |
+| Printing, manufacturing, physical product | 25 | 900 | 12 |
+| B2B software, operations | 15 | 1200 | 18 |
+| Coaching, consulting, personal service | 8 | 900 | 12 |
+| Marketplace, comparison | 20 | 1200 | 20 |
+
+These are floors derived from real category leaders (Carianne Older 79
+images, MOO 46, Lumiform 40, SafetyCulture 37), deliberately set below them.
+For a B2B software client with no real product screens or photography to
+draw on, authored SVG information figures (flow diagrams, run logs, state
+diagrams) count toward the figure floor, disclosed as authored rather than
+captured in the Coverage Ledger.
+
+### I2 — Asset oversupply (addition 34)
+Gather roughly 5x the assets the page will actually use before designing,
+then edit down. Record what was gathered, what was placed, and why each
+rejected asset lost. If the density floor in I1 cannot be reached from
+available assets, that is an asset request to the client before build, not
+a constraint to quietly design around.
+
+### I3 — Image role quota (addition 35)
+No single image role may exceed 50% of major imagery. Across the page, hit
+at least five of: establishing the world, human at work, the work/product
+itself, process artifact, tactile macro detail, the result in use, scale
+reference, social proof, conversion reassurance.
+
+### I4 — Designed brand mark (addition 36)
+A prototype proposing a brand experience needs an actual identity
+treatment, not the company name set in a webfont: a wordmark with real
+drawing or spacing decisions, a monogram, a symbol, or an explicit and
+justified typographic lockup. Where a real client logo exists, use it
+faithfully. The mark should ideally connect to the governing concept
+(Stage C1) rather than being generic.
+
+### I5 — Nomenclature test (addition 37)
+Apply the governing concept to the page's own furniture, not just the hero.
+At least four of these should carry the concept's vocabulary: section
+names, step/stage names, nav labels, the CTA verb, status/state labels,
+card treatment, iconography, borders, the empty state. If the concept only
+survives in the headline and an accent colour, it fails C1 as decoration.
+
+### I6 — No flat sections (addition 38)
+Every major section needs internal structure beyond heading, paragraph, and
+a row of equal cards: named sub-parts, a real table, a comparison with
+criteria, an ordered process with distinct named steps, a spec list, a Q&A
+set. Target roughly the human baseline from I1's h3 floor, not four
+sections total for the whole page.
+
+### I7 — Real information architecture (addition 39)
+A full prototype (Stage 0.1) needs genuine site structure: at least 6 real
+nav destinations, at least 2 routes built as separate views (not just
+anchors on one scroll), every other route logged in the Site Completeness
+Contract (0.2) with its status, and a real footer with grouped link
+columns. One scrolling page with anchor links is a landing page, not a full
+prototype, and calling it one trips the Stage 0.1 hard failure.
+
+### I8 — Conversion apparatus (addition 40)
+Every full prototype ships a real, designed form: actual fields, required
+vs optional, a validation error state, a success state, a privacy line,
+labelled as prototype behaviour where genuinely simulated. A `mailto:` link
+is never styled as a booking system. Zero working forms across a delivery
+batch is itself a signal this stage was skipped.
+
+### I9 — Colour and contrast budget (addition 41)
+State the intended chroma before build and justify desaturation in writing
+if chosen, referencing the client's existing assets. Desaturation must
+never be the unstated default. When a client's own identity is itself an AI
+default (a dark-plus-one-accent SaaS palette with no real brand history
+behind it), that is grounds to widen the palette deliberately rather than
+inherit the default, provided the widening is justified and logged.
+
+### I10 — Human presence quota (addition 42)
+If people deliver the service, faces appear: one approved portrait, or an
+honestly labelled placeholder plus a logged asset request, never a
+dashed empty frame announcing an absence (see I14). Text-only bios under a
+heading that promises "who you'd work with" is a hard failure carried
+forward from Round 2's addition 20.
+
+### I11 — The ending is a stack (addition 43)
+The final 20% needs at least four distinct closing moves: a restated
+promise, practical next-step mechanics, risk/objection resolution, a
+response-time expectation, a secondary route for the not-yet-ready, and a
+real grouped footer. A heading and one button is stopping, not closing.
+
+### I12 — Bench render (addition 44)
+Before delivery, compare the page's own structural counts (sections, h2,
+h3, words, figures, forms, routes) against two category leaders, counted
+from served HTML. Where a leader's site cannot be rendered honestly in this
+environment (client-side heavy, animation-gated), say so and use numeric
+counts rather than fabricate a visual comparison. Answer in writing: which
+looks thinnest, which has the most material, and would a stranger guess
+this one was template-generated.
+
+### I13 — Restraint vs emptiness check (addition 45)
+For every large area of empty space, name what it is framing. Whitespace
+around a commanding image is composition. Whitespace around a small image
+and a short paragraph is a page that ran out of material. If more than two
+major sections cannot name what their empty space is doing, the page is
+empty, not restrained, and needs material, not a layout tweak.
+
+### I14 — The prototype IS the production environment (addition 47, Raka 2026-08-17)
+
+Raka, after finding a caption reading "Stock, not a customer" printed under
+a photo on a delivered prototype: **"Can you please NEVER use captions like
+this on prototype environment. Treat prototype environment as PRODUCTION
+FINAL environment."**
+
+This is Stage E3 (separate the proposed experience from Astra's critique)
+violated in a form the original wording didn't anticipate. E3 banned
+critique of the *old* site. It did not explicitly ban build-process
+scaffolding, so a page shipped carrying figure numbers, `ILLUSTRATIVE`
+badges, provenance captions on photos, a dashed "PORTRAIT TO BE SUPPLIED"
+box, "SLOT OPEN," sentences describing prototype behaviour ("nothing is
+submitted," "in the real build this would..."), and an agency byline in the
+footer. Each one was individually defensible as honesty. Together they
+turned a client website into an annotated internal document.
+
+**The rule: nothing on the rendered page may reveal that it is a
+prototype, unfinished, or made by an agency.** A visitor must be able to
+read it as the live site. Specifically banned from the delivered page:
+
+- figure numbering ("Fig 1.") or any academic caption register;
+- badges/chips reading ILLUSTRATIVE, SAMPLE, DEMO, PLACEHOLDER;
+- captions disclosing an asset's provenance ("stock," "not a customer,"
+  a licence name);
+- dashed placeholder frames, "to be supplied," "coming soon," "slot open";
+- sentences describing prototype behaviour instead of just behaving
+  correctly ("nothing is submitted," "in the real build this would...");
+- an agency byline, "concept prototype," or delivery notes in the footer;
+- credits blocks, licence blocks, asset manifests.
+
+**Where the disclosure goes instead**, since B2's factual-integrity rule
+still binds and is not weakened by this addition:
+
+1. At most one discreet, production-normal footnote in the footer, in the
+   register real software companies use for exactly this ("Product visuals
+   and examples on this site show sample data.") — this is how Lumiform,
+   SafetyCulture, and hotelkit all handle the same problem.
+2. Everything else — provenance, licences, asset requests, the score, open
+   gaps — moves into the internal rationale document (G3/G4), which is for
+   Raka and the next builder, never for the client.
+
+**A missing asset is a design problem, not a caption.** When a photo does
+not exist, do not ship an empty frame announcing its absence. Design a
+treatment that reads as deliberate (a typographic monogram in the brand's
+own style is one worked example). Log the asset request in the rationale
+document, not on the page.
+
+**Pre-delivery check:** extract the full rendered text (all views/panels/
+FAQ items forced open) and grep it for
+`illustrative|prototype|stock|placeholder|sample|concept|to be
+supplied|fig [0-9]|astra|not a customer`. Every hit must be either genuine
+client copy or the single approved footnote.
+
+### I15 — Revised rubric (100 points, ship at 90)
+This replaces the Round 2 rubric in G1. Brand specificity dropped from 25
+to 15; workflow completeness, real proof, and human trust — previously
+unscored as their own dimensions — now carry 15 each, because a page that
+scored well on brand specificity and imagery alone is exactly how three
+concept slices passed Round 1/2 review while being materially thin.
+
+| Dimension | Weight |
+|---|---:|
+| Brand specificity | 15 |
+| Narrative and emotional pacing | 15 |
+| Imagery and art direction | 15 |
+| Workflow and business completeness | 15 |
+| Real proof and human trust | 15 |
+| Buyer fit and objection coverage | 10 |
+| Conversion completeness | 5 |
+| Interaction and accessibility | 5 |
+| Technical reliability and performance | 5 |
+
+**Minimum to ship: 90/100, zero hard failures.** (This supersedes G1's
+88/100 threshold.)
+
+### I16 — New hard failures (merge into G2, none of G2's originals retired)
+- Density floor (I1) missed for the category with no written reason.
+- A portfolio/gallery presenting fewer pieces than exist or could be
+  requested.
+- The same asset reused three or more times on one page, or duplicate
+  embedded media payloads.
+- A brand/identity concept with no designed mark (I4).
+- A governing concept naming fewer than four page elements (I5).
+- Fewer than three sections containing named sub-parts (I6).
+- A full prototype with no working form and no real routes (I7, I8).
+- A named individual with no face and no logged asset request (I10).
+- A page whose entire ending is one heading and one button (I11).
+- Any build-process scaffolding visible on the rendered page: figure
+  numbers, ILLUSTRATIVE/SAMPLE chips, provenance captions, placeholder
+  frames, prototype-behaviour sentences, agency bylines, credit blocks
+  (I14). This is a hard failure even if every other gate passes.
+- Any render-based conclusion drawn without forcing lazy images eager,
+  scrolling the full page, and waiting for fonts before judging (F2b/F2c's
+  companion rule, restated: a sandbox rendering artifact is not a live
+  defect until decoded/re-rendered and confirmed).
+
 ## Deliverables
 
 - The prototype itself, a single HTML file, named `[Company]_Prototype.html`.

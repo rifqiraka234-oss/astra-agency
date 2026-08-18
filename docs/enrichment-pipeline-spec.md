@@ -51,6 +51,25 @@ For each contact, run through these stages. Checkpoint after every contact (writ
 - Capture one specific, verified observation of what's actually wrong (not generic — e.g. "template Latin copy still visible on the About page", not "could look more professional"). Store as `verifiedWebsiteObservation`.
 - Output fields: `websiteAnalyses` (the classification), `websiteOpportunity` (HIGH/MEDIUM/LOW/NONE), `websiteAnalysisConfidence`, `websiteAnalysisSource`.
 
+### Stage 2a — Visual assessment (confirmed by Raka, 2026-08-18: screenshot the site, don't just read it)
+
+Reading a site's HTML/text answers whether the *content* is there. It cannot answer whether the site *looks* dated, generic, and amateur, which is often the real reason a business owner is a good prospect and is exactly the signal this stage exists to catch. **Take an actual screenshot (desktop width, full page or at minimum the fold) and look at it before finalizing the classification.** A site can read as content complete in Stage 2 and still be visually a decade out of date, this stage is what tells the two apart.
+
+Raka's own framing: this should look for sites where "the colours and fonts and pictures and shapes are simple, there's no art in it, no dynamic aspect of it, it looks like something from the 2000s." His shorthand for the failure mode: **"it looks like PowerPoint on a website."**
+
+Judge the screenshot against this checklist. Each yes pushes toward BASIC/DECENT with a real, visually specific `verifiedWebsiteObservation`, not a vague "needs a refresh":
+
+- **Palette** — one brand colour plus white/grey and nothing else, no depth, no secondary or accent tones, flat and uniform across every section. Compare against a real single-accent palette used deliberately (Hermod's navy/red/cream, Alan's chocolate/cream/orange) — the dated version has no *reason* behind the colour, it is just "the logo colour, everywhere."
+- **Typography** — a single generic system/default sans (Arial, generic web-safe sans) used identically for headings and body, no pairing, no personality, no scale variation beyond bold and bigger. Real type choices commit to something; dated sites default to whatever the builder tool shipped with.
+- **Imagery** — generic stock photography (handshake, office building, aerial road/infrastructure shots, generic "team smiling at camera" stock), or real photos that are amateur snapshots with no art direction (flat lighting, no composition, no consistent treatment across the page). Either way: pictures that could belong to any company in the category, not this one specifically.
+- **Shapes and layout** — a rigid grid of equal boxed cards with hard drop shadows and small corner radii, icon-in-a-circle or icon-in-a-hexagon repeated identically down the page, symmetric centered layout throughout, no full bleed moments, no asymmetry, no layered or overlapping elements. This is the literal "slide layout" feel: title, then a row of boxes, then another row of boxes.
+- **No dynamic aspect** — zero motion, zero hover states beyond a colour swap, no scroll based reveal, no interaction of any kind beyond clicking a nav link or a button. The page behaves exactly the same on every visit, nothing about it feels alive.
+- **The gut check** — if it were exported from a corporate PowerPoint template and each slide became a section, would this page look meaningfully different? If the honest answer is no, that is a BASIC/DECENT classification with a strong redesign opportunity, and the specific visual failure (not "looks old" but which of the five signals above) goes into `verifiedWebsiteObservation`.
+
+This is a positive signal for the pipeline, not a criticism to soften: a site matching several of these is exactly Astra's ideal client profile, a real business with real content that has never had real art direction applied to it. Score it plainly and specifically, the same way Stage 2's text-based rule already requires for functional issues.
+
+Add `visualAssessment` (one to three of the checklist signals actually observed, named specifically) alongside the existing Stage 2 output fields, and let it inform `websiteOpportunity` the same way the functional read already does.
+
 ### Stage 3 — Eligibility decision
 Combine Stage 1 + Stage 2 into `campaignEligibility`:
 - **INCLUDE**: launch verified AND site is NO_WEBSITE/PLACEHOLDER/BASIC (a defensible gap exists).
@@ -85,7 +104,7 @@ This is an expanded version of the original 50 word template, raised to 65 words
 - For voice, preferred/avoided wording, and the "our agency" framing, `docs/astra-master-context.md` section 9 is authoritative and goes deeper than this spec, read it before drafting if this is a new session. That doc's general outreach-message length guidance is 90-150 words, this 65-word ceiling is a tighter, confirmed override for this specific first-message template (2026-08-12), the tighter number wins here per the truth hierarchy, not the general guidance.
 
 ### Stage 5 — Write results
-Append only the fields this pipeline actually generates back to the working file/state, do not carry the original 75 column row through: `firstName`, `companyName`, `businessLaunchStatus`, `businessStartDate`, `businessLaunchConfidence`, `businessLaunchSource`, `howLongAgoBusinessWasCreated`, `websiteAnalyses`, `websiteOpportunity`, `websiteAnalysisConfidence`, `websiteAnalysisSource`, `verifiedWebsiteObservation`, `campaignEligibility`, `exclusionReason`, `connectionMessage`, `firstMessage`, `researchDate`. Keep this write back schema stable and minimal so progress files and lemlist import payloads stay cheap at hundreds of rows, same schema as the reference `Enriched Leads` sheet, minus the noise columns.
+Append only the fields this pipeline actually generates back to the working file/state, do not carry the original 75 column row through: `firstName`, `companyName`, `businessLaunchStatus`, `businessStartDate`, `businessLaunchConfidence`, `businessLaunchSource`, `howLongAgoBusinessWasCreated`, `websiteAnalyses`, `websiteOpportunity`, `websiteAnalysisConfidence`, `websiteAnalysisSource`, `verifiedWebsiteObservation`, `visualAssessment`, `campaignEligibility`, `exclusionReason`, `connectionMessage`, `firstMessage`, `researchDate`. Keep this write back schema stable and minimal so progress files and lemlist import payloads stay cheap at hundreds of rows, same schema as the reference `Enriched Leads` sheet, minus the noise columns.
 
 ## Batch orchestration
 This pipeline should be built and deployed as a Claude Code **Routine** (the cloud hosted, scheduled agent feature), not a one off script you run by hand each time. A Routine runs unattended on a schedule without needing your computer on, which is the actual mechanism that makes this "I don't need to do anything." Do not use the lightweight CLI `/schedule` or `/loop` session scoped tasks for this, those are meant for short lived polling and auto expire after 7 days, which would silently stop this pipeline without warning.
@@ -120,6 +139,7 @@ The third step, the "have you seen this" bump at +3 days, uses lemlist's native 
 - Weekly, surface 5 to 10 messages that were actually sent from Tier 1 (not drafts, actual sent output) for a quick skim. This catches drift in roast quality or tone over time before it compounds across hundreds of contacts. No approval required to proceed — informational only.
 
 ## Guardrails
+- Stage 2 requires an actual screenshot, not just a text/HTML read. A page can pass the functional read (real content, working nav) and still be a visually dated PowerPoint style site per Stage 2a, and that visual read is only possible by looking at a render, never by inspecting markup alone.
 - Never use hyphens, en dashes, or em dashes (-, –, —) anywhere in generated messages. This applies globally, not just inside the two templates.
 - Never fabricate a launch date, a website observation, or a company purpose — every claim in a generated message must trace back to something actually found in Stage 1 or 2.
 - Re-verify before reuse: a batch run more than a couple of weeks old should not be trusted for outreach without re-checking launch status and site state, since both can change.

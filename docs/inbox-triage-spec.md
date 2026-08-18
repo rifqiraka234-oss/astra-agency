@@ -173,7 +173,14 @@ is half the job.
   section 13 for prospects with an already-established angle or correction,
   do not re-derive an angle from scratch for someone already in that table.
 - Stalled tier gets a short, low pressure optional nudge suggestion, not a
-  hard sell.
+  hard sell. **Confirmed by Raka, 2026-08-18: a nudge must reference the
+  specific concept, page, or gap from the original thread** (pull it from
+  the actual last outbound message, not from memory), the same way a fresh
+  first message would. A generic "checking in" or "have you seen this?"
+  with no reference to what was actually pitched is not an acceptable
+  nudge, it reads as automated precisely because it says nothing a person
+  reading the thread wouldn't already know. Read the full thread before
+  drafting a nudge, don't assume the preview text is enough context.
 
 ## Step 5 — Surface mockup ready leads separately
 Any contact whose reply is a genuine yes to seeing a concept (send it over,
