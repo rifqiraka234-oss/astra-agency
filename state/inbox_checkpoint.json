@@ -1,5 +1,5 @@
 {
-  "lastRunAt": "2026-08-11T19:14:00Z",
+  "lastRunAt": "2026-08-18T09:44:00Z",
   "threads": {
     "ctc_piBZeydFpN4KiBeky": {
       "name": "Antanas Juodiskis",
@@ -251,7 +251,7 @@
       "note": "not interested"
     },
     "ctc_AdnACMeCPhQCdfbPr": {
-      "name": "Ferdinand Witt-Dörring",
+      "name": "Ferdinand Witt-D\u00f6rring",
       "tier": "NO_ACTION",
       "lastSeenMessageId": null,
       "lastDigestDate": null,
@@ -260,11 +260,11 @@
     },
     "ctc_hJaPmPiMoi4Hfm6G7": {
       "name": "Arbaaz Shaikh",
-      "tier": "NO_ACTION",
+      "tier": "No Action",
       "lastSeenMessageId": null,
-      "lastDigestDate": null,
+      "lastDigestDate": "2026-08-18",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "has own team, declined for now"
+      "note": "resolved, said thanks"
     },
     "ctc_qiJ2ccpxRci3ajkLG": {
       "name": "Michele Legoratto",
@@ -405,6 +405,86 @@
       "campaignId": "cam_PryZp5LuvQv8NznHh",
       "messageSent": true,
       "messageSentAt": "2026-08-11T12:50:00Z"
+    },
+    "ctc_3zernevCcEEPy2pDL": {
+      "name": "David Limousin",
+      "tier": "No Action",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-18",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "declined outright, closed gracefully"
+    },
+    "ctc_b5SM2pR7aSdRRzM69": {
+      "name": "Maarten Ectors",
+      "tier": "Hot",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-18",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "prototype sent, awaiting call decision"
+    },
+    "ctc_w4QnKtxBPTJ47Y2mu": {
+      "name": "Fabien Burguiere",
+      "tier": "Stalled",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-18",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "bumped 18 Aug"
+    },
+    "ctc_4imqWJFLh33A3Qrw7": {
+      "name": "Aaron Khan",
+      "tier": "Stalled",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-18",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "bumped 18 Aug"
+    },
+    "ctc_HBDGvLq5kEwF8GEa9": {
+      "name": "Thomas Foeken",
+      "tier": "Stalled",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-18",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "bumped 18 Aug"
+    },
+    "ctc_6vZuyoNEdQuzugkAj": {
+      "name": "Sinclair Simons",
+      "tier": "Stalled",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-18",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "bumped 18 Aug"
+    },
+    "ctc_Dr4JnQbD9oK23WYEf": {
+      "name": "Olivier Trancart",
+      "tier": "Stalled",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-18",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "bumped 18 Aug"
+    },
+    "ctc_HeWiGtEWDobsd7azx": {
+      "name": "Noa-Ruth Passchier",
+      "tier": "Stalled",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-18",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "bumped 18 Aug"
+    },
+    "ctc_YhyuAwqYsq9TQTmEQ": {
+      "name": "Lucas Scherdel",
+      "tier": "Stalled",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-18",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "bumped 18 Aug"
+    },
+    "ctc_u65DEeDroGY2TpXrZ": {
+      "name": "Hugo Villanueva",
+      "tier": "Stalled",
+      "lastSeenMessageId": null,
+      "lastDigestDate": "2026-08-18",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "bumped 18 Aug"
     }
   }
 }
