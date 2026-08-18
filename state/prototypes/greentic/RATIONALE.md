@@ -302,3 +302,107 @@ portrait of the founder, and it was not scored as though it did.
 **Total: 91/100.** This is the first version to clear the 90 threshold. The
 two client-supplied assets (a portrait of Maarten, one nameable customer)
 would still take it to roughly 95.
+
+---
+
+## v4 — every trace of the build process removed from the page (2026-08-17)
+
+Raka, on seeing "Stock, not a customer" printed under a photograph:
+
+> "Can you please NEVER use captions like this on prototype environment. Treat
+> prototype environment as PRODUCTION FINAL environment."
+
+He is right, and this was my own spec being broken. Round 1's rule E3 says the
+prototype must read as the proposed client website. I had read E3 as banning
+*critique of the old site*, and so let build-process scaffolding through on the
+grounds that each piece was honest. Collectively they turned a client website
+into an annotated internal document.
+
+### What was on the page, and is now gone
+
+| Removed | Count |
+|---|---|
+| Amber `ILLUSTRATIVE` / `ILLUSTRATIVE VOLUMES` / `ILLUSTRATIVE SHAPE` chips | 8 |
+| "Fig 1." to "Fig 16." academic figure captions | 16 |
+| Photo captions disclosing provenance ("Stock, not a customer", "Illustrative") | 9 |
+| "Illustrative photography &middot; CC0" on the hero band | 1 |
+| Dashed "PORTRAIT / TO BE SUPPLIED BY GREENTIC" frame | 1 |
+| "SLOT OPEN" on the partner page | 1 |
+| "Prototype form: nothing is submitted or stored" | 1 |
+| "In the real build this would... Nothing was sent from this prototype" | 1 |
+| "this concept does not invent any" in the pricing answer | 1 |
+| "not stated" repeated in the roster table | 5 |
+| Full photography credits and licence block | 1 |
+| Footer "Concept prototype prepared by Astra Agency &middot; Unlisted and not indexed" | 1 |
+
+### What replaced them
+
+- **Figure captions** are now production copy that adds meaning rather than
+  labelling a specimen: "Approval stays with a person, by design", "A run that
+  refuses itself, and names the rule that stopped it", "Every connection is
+  secured with OAuth".
+- **Photo captions** keep the evocative half and drop the disclosure: "A request
+  arriving on a phone", "Where a lead sits overnight".
+- **The founder portrait** is no longer an empty frame announcing an absence.
+  It is a typographic **ME** monogram card in the brand's own style, which reads
+  as a deliberate identity choice. The asset request for a real portrait is
+  logged here, not printed on the client's page.
+- **The partner slot** became a real "Become a partner" card pointing at the
+  partner programme, instead of an admission that a logo is missing.
+- **The form** now behaves like production: a real success state that promises a
+  confirmation email and three times to choose from.
+- **The roster's "not stated"** became "on request", which is what a real site
+  would say.
+- **The footer** is now a production footer: company registration, registered
+  office, and one discreet line, *"Product visuals and run examples on this site
+  show sample data."*
+
+### Factual integrity is still satisfied
+
+B2 requires that illustrative data cannot be mistaken for a verified claim. The
+requirement was redirected, not dropped:
+
+1. One production-normal footnote in the footer, the register real software
+   companies use for exactly this. Lumiform, SafetyCulture and hotelkit all
+   handle sample data this way.
+2. Everything else, provenance, licences, asset requests, scores and open gaps,
+   lives in this document. This file is for Raka and the next builder. It is not
+   for the client.
+
+Nothing invented was added back. No customer, metric, testimonial or logo
+appears anywhere on the page.
+
+### Verification
+
+The full rendered text was extracted with all views, panels and FAQ items forced
+open, then grepped for `illustrative|prototype|stock|placeholder|sample|concept|
+to be supplied|fig [0-9]|astra|not a customer`. Three hits remained, all
+legitimate: Greentic's own partner copy ("realistic examples"), the single
+approved footnote, and one warehouse caption reading "Stock moving" which was
+changed to "Pallets on the move" to remove the ambiguity next to a photograph.
+
+One consistency error was also caught and fixed: the FAQ said "one of the five"
+while the roster lists eight workers. It now reads "not on the roster".
+
+Full QA re-run and clean: 3 viewports, no overflow, real fonts loaded, 3 routes,
+3 tabs, 9 stepper actions, 5 FAQ disclosures, 3 form paths, no-JS showing all 3
+views and all 3 panels, 10 images with 0 broken, 0 upscaled, 0 missing alt text,
+zero console errors. 1.28MB.
+
+### Framework change
+
+This is now **addition 47** in `docs/prototype-framework-addendum-round-3.md`:
+*The prototype IS the production environment.* It carries the banned list, the
+rule that a missing asset is a design problem rather than a caption, and a
+pre-delivery grep of the rendered text so this cannot recur silently.
+
+**Score unchanged at 91/100.** Removing the scaffolding did not change what the
+page proves; it changed whether it reads as a real website. The two open items
+are still a portrait of Maarten and one nameable customer.
+
+### One deployment note for Raka
+
+The page still carries `<meta name="robots" content="noindex, nofollow">`. That
+is invisible to a viewer and it stops an unlisted concept competing with
+Greentic's real site in search. If you would rather it be fully production
+identical, say so and I will remove it.

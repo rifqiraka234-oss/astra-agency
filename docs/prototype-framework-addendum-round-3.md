@@ -272,6 +272,59 @@ Then separate three different things, and never report one as another:
 
 This audit produced a false "5 of 11 images broken, gallery blank" reading that would have been reported as a live defect if the payloads had not been decoded directly. All 22 were valid.
 
+
+### 47. The prototype IS the production environment
+
+**Raka, 2026-08-17, on finding "Stock, not a customer" printed under a photo:**
+"Can you please NEVER use captions like this on prototype environment. Treat
+prototype environment as PRODUCTION FINAL environment."
+
+This is Round 1's rule E3 (separate the proposed experience from Astra's
+critique) being violated in a form the earlier wording did not anticipate. E3
+banned *critique of the old site*. It did not explicitly ban **build-process
+scaffolding**, and so a page shipped carrying figure numbers, amber
+ILLUSTRATIVE chips, "Stock, not a customer" captions, a dashed "PORTRAIT TO BE
+SUPPLIED" box, "SLOT OPEN", "Prototype form: nothing is submitted", and an
+Astra byline in the footer. Each one was individually defensible as honesty.
+Together they turned a client website into an annotated internal document.
+
+**The rule: nothing on the page may reveal that it is a prototype, unfinished,
+or made by an agency.** A visitor must be able to read it as the live site.
+
+Specifically banned from the rendered page:
+
+- figure numbering ("Fig 1.", "Fig 12.") and any academic caption register;
+- badges or chips reading ILLUSTRATIVE, SAMPLE, DEMO, PLACEHOLDER;
+- captions disclosing an asset's provenance ("stock", "not a customer", "CC0");
+- dashed placeholder frames, "to be supplied", "coming soon", "slot open";
+- any sentence describing prototype behaviour ("nothing is submitted", "in the
+  real build this would...", "this concept does not invent...");
+- an agency byline, "concept prototype", or delivery notes in the footer;
+- credits, licence blocks, and asset manifests.
+
+**Where the disclosure goes instead.** Factual integrity (B2) still binds, so
+the requirement is redirected, not dropped:
+
+1. **One discreet production-normal footnote**, in the footer, in the register
+   real software companies use: *"Product visuals and run examples on this site
+   show sample data."* One line. That is how Lumiform, SafetyCulture and
+   hotelkit handle exactly this problem.
+2. **Everything else moves into the internal rationale document**, which is
+   where provenance, licences, asset requests, scores and open gaps belong.
+   That file is for Raka and the next builder. It is not for the client.
+
+**Missing assets are a design problem, not a caption.** When a portrait does
+not exist, do not ship an empty frame announcing its absence. Design a
+treatment that looks deliberate. On the Greentic build the fix was a typographic
+**ME** monogram card in the brand's own style, which reads as an identity
+choice rather than a hole. The asset request still gets logged, in the
+rationale, where it belongs.
+
+**Check before every delivery:** extract the page's full rendered text and
+grep it for `illustrative|prototype|stock|placeholder|sample|concept|to be
+supplied|fig [0-9]|astra`. Every hit must be either genuine client copy or the
+single approved footnote.
+
 ---
 
 ## 6. Additional hard failures
@@ -290,6 +343,10 @@ Add to the Round 1 and Round 2 lists:
 - A page whose entire ending is one heading and one button.
 - A production frame cropped so the subject is lost (the 1920×1080 to 579×720 crop is still live on the animation prototype).
 - Any render based conclusion drawn without the addition 46 procedure.
+- Any build-process scaffolding visible on the rendered page: figure numbers,
+  ILLUSTRATIVE or SAMPLE chips, provenance captions, placeholder frames,
+  "to be supplied", prototype-behaviour sentences, agency bylines, or credit
+  blocks (addition 47).
 
 ---
 
