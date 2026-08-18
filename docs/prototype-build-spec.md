@@ -894,13 +894,22 @@ panel at a time. They fail in small, repeatable ways. Check every one:
   cancels it, so panels never switch even though the tab highlights. Give
   the hide rule enough specificity (e.g. `html.js .panel[hidden]{display:
   none}`) and verify in render that switching a tab actually changes the
-  panel, not just the selected state. This exact bug was shipped twice in
-  one session before a re-render caught it; treat it as a standing check.
+  panel, not just the selected state. **This exact bug has now shipped
+  three separate times across three separate builds** (Rosalie, Point
+  Audit, and again on Greentic's rebuild), each time despite the rule
+  above already being written down. A rule that gets read and still
+  misses is not doing its job as a written note; it needs an automated
+  assertion, not a manual glance. Every build must include a scripted
+  no-JS check (a Playwright context with `javaScriptEnabled: false`,
+  asserting every panel/view that should be readable without JavaScript
+  actually reports non-zero rendered height) before the build is called
+  QA'd, not just "take a screenshot and eyeball it."
 - **Gate the hiding behind a JS flag** (a `js` class set by script on load)
   so that with JavaScript disabled all panels render stacked and the
   content survives, per F1's "no meaning lost without JavaScript" rule.
-- **Take one screenshot with JavaScript disabled** for any JS-driven device
-  and confirm the meaning is still there.
+- **Run the scripted no-JS check described above**, and additionally take
+  one screenshot with JavaScript disabled for a human-readable record that
+  the meaning is still there.
 - **Confirm images inside initially-hidden panels decode when revealed.** A
   hidden panel's images report zero natural dimensions until shown; that is
   expected, but click through every panel and confirm zero genuinely broken
