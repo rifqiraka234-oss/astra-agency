@@ -198,6 +198,25 @@ itself.
     verified, and for a blocked row, exactly why it is blocked, so no
     future session re-probes the same dead end. Write it in full sentences,
     it is the only thing preventing repeated wasted work.
+  - **Resolving a `needsLookup: true` row (name only, no id).** Do not
+    paginate `search_campaign_leads` hunting for the name, that is roughly
+    six 100-lead pages of context per campaign and the newest page is all
+    recent imports rather than the accepted backlog. Instead call
+    `get_inbox_conversations` with `listId: "sentOnly"` and
+    `search: "<full name>"`. One small response returns `contactId` and
+    `contactLinkedinUrl`, and `lastRepliedAt: null` alongside a
+    `lastSentMessagePreview` that is still the connection note is direct
+    proof the row really is Silent accepted rather than Stalled. `contactId`
+    is also what `send_message` needs, so `leadId` is never required. Write
+    back `contactId`, `linkedinUrl`, `inviteNoteSentAt`,
+    `verifiedSilentAccepted: true`, and clear `needsLookup`.
+  - Company name is usually absent on these rows. Recover it by web
+    searching the person's name plus an ownership word in their own
+    language (`oprichter` / `eigenaar` / `zaakvoerder` / `Gründer` /
+    `founder`). If that returns nothing conclusive, or returns several
+    unrelated people with the same name, the row is `NO_STRONG_ANGLE` with
+    the ambiguity written into `research`. Never guess which business is
+    theirs.
   Confirmed 2026-08-11: v0.1
   has no automated second-touch step, so this queue only shrinks when
   someone actually drafts and sends an opener, it will not resolve itself.
