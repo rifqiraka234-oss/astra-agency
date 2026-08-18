@@ -263,3 +263,88 @@ copy were finalised.
 - File: `state/prototypes/toffe-traktaties/index.html`
 - No pricing or booking mechanics needed: this links directly into the
   client's own real, working WooCommerce shop and contact page.
+
+---
+
+## Art direction pass (2026-08-18, Raka: "be more artsy... it's a food/candy business, needs to feel like it")
+
+The first build was structurally correct and visually wrong. It was a tidy
+card grid with navy text on white, which is the vocabulary of B2B software,
+not of a business that sells confetti-covered treats to seven year olds. Fair
+criticism, and worth recording as a pattern: **hitting every content gate can
+still produce a page whose visual register contradicts the product.**
+
+### Where the new art direction comes from (all client-owned, nothing invented)
+
+1. **The round personalised sticker is now the governing shape.** It is their
+   single real differentiator, physically present on every product they sell.
+   It now drives: the hero image (a circular die-cut with a dashed cutting
+   ring, which is the print-production language Hein actually works in as a
+   graphic designer), every section eyebrow (round sticker badges), the
+   buttons (pill shape with a hard offset shadow, like a sticker sitting on
+   the page), and the founders monogram.
+
+2. **The confetti palette was sampled from their own photography, not
+   invented.** Every product photo they publish is styled with scattered
+   confetti on a warm wood surface. I quantised all 25 downloaded product
+   photos, filtered out the wood/table hue band, and took the dominant vivid
+   colours: sky blue `#7FBFFF` / `#00BFFF`, raspberry `#BF2F53`, magenta
+   `#BF008F`, gold `#BFA75F`, teal `#1F7F7F`, blue `#2F53BF`. Their existing
+   brand cyan `#12AEE0` sits almost exactly on the dominant photo colour,
+   which is what makes this a **widening of their real palette rather than a
+   replacement of it** (I9: widening is allowed when justified and logged).
+
+3. **Confetti fields are authored SVG in those sampled colours**
+   (`confetti.py`), scattered behind the hero, the personalisation panel, the
+   review block and the closing band. This is their own product styling
+   brought into the page, not decorative noise.
+
+4. **Warm paper `#FFF8F0` replaces clinical white**, pulled from the wood
+   surface their products are always shot on.
+
+5. **Type got much louder.** Quicksand (their real display font) at up to
+   104px, with hand-drawn-feeling colour highlight swipes behind key words.
+
+6. **The gallery is scattered, not gridded.** Each treat sits at a small
+   individual rotation with a white photo border, so it reads as treats laid
+   out on a table. Rotation is removed under `prefers-reduced-motion`.
+
+7. **A category ticker** runs their real category names in a marquee, which is
+   shop-window energy and also surfaces the breadth of the range.
+
+8. **A scalloped edge** between hero and ticker, echoing the top of a treat bag.
+
+### Bug found and fixed during this pass
+
+Every gallery image was rendering as a tall crop rather than a square. Cause:
+the `height="560"` HTML attribute becomes a presentational hint that **beats
+CSS `aspect-ratio`** unless `height:auto` is also set. The images were being
+squeezed into 248px-wide columns at 560px tall and cropped by `object-fit`.
+Fixed with a global `img{height:auto}`.
+
+**This was invisible to the existing QA suite**, because the images were not
+broken and not upscaled, just silently mis-cropped. A new assertion was added
+to `qa.cjs` that compares each image's natural aspect ratio against its
+rendered box ratio and fails above 12% divergence, so this class of bug cannot
+regress silently again. Page height dropped from 10,493px to 8,563px once
+fixed, which is the measure of how much was being wasted.
+
+### Revised score
+
+| Dimension | Weight | Was | Now |
+|---|---:|---:|---:|
+| Brand specificity | 15 | 14 | **15** |
+| Narrative and emotional pacing | 15 | 13 | **14** |
+| Imagery and art direction | 15 | 14 | **15** |
+| Workflow/business completeness | 15 | 13 | 13 |
+| Real proof and human trust | 15 | 13 | 13 |
+| Buyer fit and objection coverage | 10 | 9 | 9 |
+| Conversion completeness | 5 | 5 | 5 |
+| Interaction and accessibility | 5 | 5 | 5 |
+| Technical reliability | 5 | 5 | 5 |
+| **Total** | **100** | **91** | **94** |
+
+Accessibility held through the change: contrast checked on every new colour
+pairing, all rotation and marquee motion disabled under
+`prefers-reduced-motion`, focus ring strengthened to a 3px magenta outline,
+and confetti layers are `pointer-events:none` and `aria-hidden`.

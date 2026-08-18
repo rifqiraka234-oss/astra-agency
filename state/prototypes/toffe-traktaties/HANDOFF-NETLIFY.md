@@ -21,13 +21,13 @@ confirm it is tracked before assuming it is missing.
 
 **Verify you have the right file before deploying:**
 
-- byte size: `1955863`
-- sha256: `1a2219e00bfdb1ba10474a6b5814e3ea781e19ec6af4de690861e05435ed6c9a`
+- byte size: `2019810`
+- sha256: `00ec37851904f77a1635eca599fb6cf30357985de13dd3f70becdba21d5c37bd`
 - `<title>`: `Toffe Traktaties — Originele kant-en-klare traktaties, zelf ontworpen`
 
 ```bash
-stat -c%s state/prototypes/toffe-traktaties/index.html   # expect 1955863
-sha256sum state/prototypes/toffe-traktaties/index.html   # expect 1a2219e00b...
+stat -c%s state/prototypes/toffe-traktaties/index.html   # expect 2019810
+sha256sum state/prototypes/toffe-traktaties/index.html   # expect 00ec378519...
 ```
 
 If either value differs, stop and say so rather than deploying.
@@ -43,7 +43,7 @@ Deploy as `index.html` at the site root.
 **After deploying, confirm the deploy is real:**
 
 1. `curl -sI https://astra-toffetraktaties-prototype.netlify.app` returns `200`.
-2. `curl -s https://astra-toffetraktaties-prototype.netlify.app | wc -c` matches `1955863`.
+2. `curl -s https://astra-toffetraktaties-prototype.netlify.app | wc -c` matches `2019810`.
 3. `curl -s https://astra-toffetraktaties-prototype.netlify.app | sha256sum` matches the hash above.
 4. The `<title>` on the live URL matches exactly.
 5. Open it and confirm: the hero product photo loads, the assortment gallery
