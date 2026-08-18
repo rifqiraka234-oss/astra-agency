@@ -374,8 +374,8 @@ and a natural reason to talk. Raka's call.
 ## Delivered artifact
 
 - File: `state/prototypes/connectome/index.html`
-- Bytes: **1233017**
-- sha256: **4e987716c04a2158c010a1d12f8a30bffba9da647354ce643f1b5c20dfe66a9b**
+- Bytes: **1053520**
+- sha256: **63b2aed75f4055a40780069388c86d0c271095b574a391555d6feb94a4f3d7ea**
 - `<title>`: `Connectome — Brain measurement studio, Soho London`
 - QA screenshots: `state/prototypes/connectome/qa/`
 
@@ -393,3 +393,71 @@ who want to ask something first, the partner route for organisations), a
 getting-here note, and a closing booking band. Studio view grew from 2061px
 to 3008px and the baseline view from 1811px to 3368px across the two
 material passes.
+
+---
+
+## Correction made after review — invented premises and personnel (2026-08-18)
+
+Raka asked a one line question: "Are the pictures of the person real?" That
+question found a real defect that every automated gate had passed.
+
+**What was wrong.** Two photographs on connectome.health were treated as
+documentary evidence of Connectome's own premises and staff. They are not.
+Checking where they actually sit on the client's own homepage settles it:
+
+- the interior shot sits inside the **"Clinics and Preventive Health
+  Programmes"** card;
+- the athlete sits inside the **"Performance Environments"** card.
+
+Both are **segment illustrations carrying no alt text and no caption** on
+Connectome's own site. Almost certainly licensed stock. Connectome makes no
+claim about either, and the interior does not obviously resemble a small
+central London studio.
+
+The build had nonetheless captioned the interior **"Inside the Connectome
+studio: a clinician and a client seated together reviewing a reading,"** set
+it directly beneath the headline **"The studio is open,"** and given it the
+alt text **"A Connectome clinician sitting with a client in the studio."**
+That is an invented depiction of a real company's premises and personnel,
+built out of a mood image. It trips B2 (never imply product capabilities or
+company facts as real) and sits close to the G2 gate on stock used as client
+proof. It would also have been the single easiest thing in the whole
+prototype for Lucas to catch, on a page whose entire argument is epistemic
+honesty.
+
+**What changed.**
+
+1. The Soho studio view no longer opens with a photograph pretending to be
+   the studio. It opens with a designed brand panel: the Connectome orb at
+   scale, the line "One room, one chair, one person with you," and four facts
+   that are actually supportable (Soho central London, 20 to 30 minutes,
+   seated and awake, clinical operations team). Per I14, a missing asset is a
+   design problem, not a caption, and this is that treatment.
+2. The interior photograph now appears once, on the visit view, with the
+   neutral alt text "Two people seated together, reviewing a reading on a
+   tablet." No claim about who they are or where they are. That is the same
+   contextual role the client themselves give it.
+3. The athlete alt text dropped its provenance phrasing and is now purely
+   descriptive.
+4. The eyebrow "In the studio" became "When you arrive," so no surrounding
+   copy reinstates the premises claim by implication.
+
+Verified after the fix: zero occurrences of `Inside the Connectome studio` or
+`A Connectome clinician` in the built file, and every remaining `alt`
+attribute audited by hand.
+
+**What was NOT wrong.** The four portraits on the science view are genuinely
+real people, correctly attributed. They come from Connectome's own About page
+and the name to image adjacency was parsed from that page's markup rather
+than guessed. Rufus Mitchell-Heggs was additionally confirmed independently
+via Imperial College London, which names him as a Connectome co-founder who
+did his PhD under Professor Simon Schultz, who appears on the same page as
+Scientific Advisor. Their real quotes are correctly attributed to them.
+
+**The generalisable lesson, which is the part worth keeping.** Inheriting an
+asset from the client's own site makes it *theirs*, and that is what makes it
+feel safe. It does not make it *evidence of what the page says it depicts*.
+Provenance and depiction are two separate checks, and only the first was run.
+The test that would have caught it: for every photograph, find where the
+client themselves places it and what they themselves claim about it, and
+never make a stronger claim than they do.

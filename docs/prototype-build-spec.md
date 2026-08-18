@@ -558,6 +558,25 @@ record in the research summary:
   any client tied to a specific real community.
 - Never use real company or retailer logos, that is licensed IP. Use styled
   wordmark placeholders or generic representations instead.
+- **Provenance and depiction are two separate checks, and passing the first
+  does not pass the second.** An image taken from the client's own site is
+  legitimately *theirs*, which is exactly what makes it feel safe to use. It
+  is not thereby evidence of whatever the prototype places it next to. Before
+  captioning any photograph, find **where the client themselves puts it and
+  what they themselves say about it**, and never make a stronger claim than
+  they do. A photo used by the client as an unlabelled mood image for a market
+  segment may not be relabelled as their premises, their staff, their
+  customers, or their product in use. (Connectome, 2026-08-18: a stock-looking
+  interior sitting inside the client's own "Clinics and Preventive Health
+  Programmes" card, with no caption or alt text on their site, was captioned
+  "Inside the Connectome studio: a clinician and a client" and placed under
+  "The studio is open." Invented premises and invented personnel, from an
+  asset that was genuinely theirs. Every automated gate passed it.) The
+  pre-delivery check: **read every `alt` attribute and every caption on the
+  built page and ask what each one asserts, and whether the source supports
+  that specific assertion.** Where it does not, either neutralise the wording
+  to what is actually observable in the frame, or design a treatment instead
+  of using the photo at all.
 - Never fabricate a testimonial and present it as real. If a testimonial
   strengthens the page, it must either be a real, correctly attributed
   public quote (confirmed against the live source, as with Irene Weibel's
@@ -1392,6 +1411,9 @@ since the reasoning is easy to lose once it is just a table:
 - A full prototype with no working form and no real routes (I7, I8).
 - A named individual with no face and no logged asset request (I10).
 - A page whose entire ending is one heading and one button (I11).
+- A photograph captioned or alt-texted as depicting the client's premises,
+  staff, customers, or product in use, where the client's own use of that
+  image makes no such claim (D3, depiction check).
 - Any build-process scaffolding visible on the rendered page: figure
   numbers, ILLUSTRATIVE/SAMPLE chips, provenance captions, placeholder
   frames, prototype-behaviour sentences, agency bylines, credit blocks

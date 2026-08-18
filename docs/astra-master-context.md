@@ -332,6 +332,22 @@ written into the relevant spec.
    first occurrence. A rule that is read and still missed needs an
    automated assertion, not a written reminder. Now a mandatory scripted
    no-JS check (spec F4).
+9. **Inheriting a client's photo is not evidence of what it depicts
+   (Connectome, 2026-08-18, caught by Raka before send).** Two images were
+   taken from connectome.health and used as documentary proof of the client's
+   own premises and staff: the interior was captioned "Inside the Connectome
+   studio: a clinician and a client" and placed under the headline "The studio
+   is open." On Connectome's own homepage those two images are **segment
+   illustrations** inside the "Clinics and Preventive Health Programmes" and
+   "Performance Environments" cards, carrying **no caption and no alt text**.
+   The client makes no such claim; the prototype invented one. Every automated
+   gate passed it, because provenance was checked and **depiction was not**.
+   The rule, now in the build spec at D3: **for every photograph, find where
+   the client themselves places it and what they themselves claim about it,
+   and never make a stronger claim than they do.** Where the honest answer is
+   "we do not have a photo of that," design a treatment (the fix here was a
+   brand panel carrying only supportable facts), never a caption and never an
+   invented depiction.
 
 ## 11. Prototype operating system (condensed)
 
