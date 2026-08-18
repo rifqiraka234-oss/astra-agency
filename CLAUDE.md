@@ -184,9 +184,21 @@ itself.
   "lastDigestDate", "campaignId" } } }`. `lastRunAt` feeds next run's
   `dateFilter.from` on `get_inbox_conversations`. The `threads` map is how a
   tier carries forward for an unchanged thread without re reading it.
-- `state/silent_accepted_queue.jsonl` — the Silent accepted backlog queue
-  (leadId, name, company, campaignId, acceptedDate, daysSinceAccept), one
-  row per lead still awaiting a genuine opener. Confirmed 2026-08-11: v0.1
+- `state/silent_accepted_queue.jsonl` — the Silent accepted backlog queue,
+  one row per lead still awaiting a genuine opener. Current schema (as
+  actually written, 2026-08-18): `name`, `companyName`, `leadId`,
+  `campaignId`, `acceptedDate`, `lastActivityAt`, `source`, `needsLookup`,
+  `openerDrafted`, `openerText`, `openerSentAt`, `research`, `status`.
+  - `status` is the working state of each row and is the field to filter
+    on: `UNRESEARCHED` (default), `SENT`, `NO_STRONG_ANGLE` (a real
+    business with no honest angle, see Guardrails), `BLOCKED_NEEDS_INFO`
+    (dead domain, wrong-company domain, or content unreadable), or
+    `DO_NOT_CONTACT` (company shut down or otherwise off-limits).
+  - `research` is the evidence trail: what was actually fetched and
+    verified, and for a blocked row, exactly why it is blocked, so no
+    future session re-probes the same dead end. Write it in full sentences,
+    it is the only thing preventing repeated wasted work.
+  Confirmed 2026-08-11: v0.1
   has no automated second-touch step, so this queue only shrinks when
   someone actually drafts and sends an opener, it will not resolve itself.
   A full 513-lead scan is expensive (11 `search_campaign_leads` calls with

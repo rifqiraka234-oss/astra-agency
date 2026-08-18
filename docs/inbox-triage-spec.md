@@ -146,6 +146,24 @@ as needing Raka's attention, not just a record of what the contact said.
 Showing what they said without also showing or suggesting what to say back
 is half the job.
 
+**Render both sides of the exchange, never one side plus a timestamp
+(learned the hard way, 2026-08-15).** A dashboard built over this data had
+a column literally labelled "Our last message" that rendered only a time,
+never the text, even though the full text was already present in the row's
+own data. Raka's own reply to a prospect was completely invisible in a view
+whose entire purpose was reviewing that conversation, and he caught it by
+comparing against a phone screenshot rather than any self-review catching
+it. For any view of a two-sided exchange:
+
+- render **both** sides' actual text by default, labelled clearly (Them /
+  Us), not one side's content plus the other side's metadata;
+- compute and surface the **"whose turn is it"** signal directly (compare
+  the two timestamps, later one wins) rather than making the reader diff
+  two dates for every row — this is the single signal a triage view exists
+  to provide, and it should generally be the default sort;
+- treat "the data was technically present in the page" as no defence: if
+  it is not rendered, it does not exist for the person reading it.
+
 - **Name exemption (confirmed by Raka 2026-08-15):** hyphens that are part of a
   real proper noun are exempt from the dash rule. A company's registered name
   (Ad-Wise, Edouard Koehn) or a person's real surname (Witt-Dörring,

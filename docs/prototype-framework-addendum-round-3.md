@@ -4,7 +4,22 @@
 
 **Audit date:** 17 August 2026
 **Auditor:** Claude, auditing its own deployed output against Astra's hand built work and against category leaders
-**Status:** Additive. Every rule from Round 1 (Brand Evidence Pack, anti AI blacklist, no swap test, provenance, factual integrity) and Round 2 (deliverable mode, Site Completeness Contract, Role × Journey × Evidence, Proof Ladder, workflow coverage, Coverage Ledger, 90/100 rubric) stays in force. This round adds additions **33 through 46**.
+**Status:** Additive. Every rule from Round 1 (Brand Evidence Pack, anti AI blacklist, no swap test, provenance, factual integrity) and Round 2 (deliverable mode, Site Completeness Contract, Role × Journey × Evidence, Proof Ladder, workflow coverage, Coverage Ledger, 90/100 rubric) stays in force. This round adds additions **33 through 47**.
+
+> ## ✅ INTEGRATED — 2026-08-18. Do not re-integrate.
+>
+> Additions 33 to 47, the revised 100-point rubric, and every new hard
+> failure from this document are now folded into the canonical spec at
+> **`docs/prototype-build-spec.md` as Stage I (I1 to I16)**, plus the
+> photo-sourcing chain in D2, the sandbox networking constraints in F1,
+> and the strengthened automated no-JS assertion in F4.
+>
+> **A build should follow `docs/prototype-build-spec.md`, not this file.**
+> This document is retained as the reasoning, the measurements, and the
+> worked reference examples behind those rules — read it when you want to
+> know *why* a rule exists or need the underlying data. Section 8 below
+> (the "prompt for Claude to apply this round") is **historical and already
+> executed**; do not run it again.
 
 ---
 
