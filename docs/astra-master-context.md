@@ -279,6 +279,60 @@ another person. No response doesn't prove the message was wrong. One
 positive reply doesn't validate a whole pattern. Founder corrections require
 a research-process review, not just a copy fix.
 
+### Recorded process failures (do not repeat these)
+
+These are actual mistakes made on real prospects, kept here because each one
+was invisible until it was caught, and each has a corresponding rule now
+written into the relevant spec.
+
+1. **The empty-shell trap → a factually wrong claim was sent.** A
+   client-side rendered site returns HTTP 200 with a nearly text-free HTML
+   shell, which reads exactly like a genuinely thin site. Greentic.ai was
+   described in a *sent* message as a site that "stops at that one line"
+   when it is in fact a full marketing site. The rule is now in
+   `docs/enrichment-pipeline-spec.md` Stage 2: detect the shell, read the
+   JS bundle, and only call a site thin once that is genuinely verified.
+   **A negative claim ("they have no X") is the highest-risk claim type and
+   needs a positive check of the actual routes, not a homepage inference.**
+2. **A near-miss on the same class of error.** A draft told Infinity
+   Biosciences their site "asks investors for a deck without naming a
+   single person behind the work." Their `/about` carried a strong named
+   team including the CEO and a named investor GP. Caught only because the
+   page was opened before sending. Re-verify every claim immediately
+   before drafting, never carry one forward from an earlier research pass.
+3. **The wrong-domain trap, hit three separate times.** A plausible guessed
+   domain, or one from a search result, resolves to a real but different
+   company sharing the name: `prevent.de` → an unrelated `ias-gruppe.de`;
+   `thesalesacademy.nl` → "Salespiration" by a different founder;
+   `mapler.com` → a luxury hospitality brand, not Mapler AIx Inc. Confirm
+   the fetched page actually names the right company, founder or product
+   before using anything from it.
+4. **Pitching a company that had already shut down.** Lums.ai served only
+   "Lums.ai has closed." Check the site is a going concern before writing.
+5. **Manufacturing a problem for a strong business.** Several accepted
+   leads (D&Z Domotica, NOMW Health, dotega, Snorly) have real named
+   testimonials, real client logos and no honest gap. Mark them
+   `NO_STRONG_ANGLE` rather than stretching an invented friction into a
+   pitch — a forced angle on a strong business reads as wrong or
+   insulting, and books nothing.
+6. **A dropped ball that cost 23 days.** Raka told Amir Matallaoui "I'd
+   still love to send the concept over" and it was never sent. Anything
+   promised in a thread is an open commitment; the inbox triage exists
+   partly to catch these.
+7. **Build-process scaffolding shipped on a client-facing prototype.**
+   Captions reading "Stock, not a customer," `ILLUSTRATIVE` badges, figure
+   numbers, and a dashed "PORTRAIT TO BE SUPPLIED" box all reached a
+   delivered page. Each was individually defensible as honesty; together
+   they turned a client website into an annotated internal document. Rule
+   now in `docs/prototype-build-spec.md` I14: **treat the prototype as the
+   production-final environment.**
+8. **The same interactive bug shipped three times.** A CSS `display` rule
+   overriding `[hidden]` broke panel switching on Rosalie, then Point
+   Audit, then Greentic — despite the fix being written down after the
+   first occurrence. A rule that is read and still missed needs an
+   automated assertion, not a written reminder. Now a mandatory scripted
+   no-JS check (spec F4).
+
 ## 11. Prototype operating system (condensed)
 
 Do not jump to a polished visual after a positive reply — verify business,
@@ -301,6 +355,42 @@ One complete customer journey beats many shallow pages. Score first drafts
 distinction, copy quality, believability, mobile experience, interaction
 quality, commercial relevance, technical reliability — revise below 9/10 on
 accuracy, authenticity or reliability.
+
+**Superseded scoring note (2026-08-18):** the 1-10 scale above is the
+historical version. The operative rubric is now the 100-point one in
+`docs/prototype-build-spec.md` I15, shipping at **90/100 with zero hard
+failures**. Where the two differ, the build spec wins.
+
+**Three corrections that the condensed guidance above does not yet carry**,
+each from a full audit round and each written up properly in the build spec.
+Read them before building anything:
+
+1. **Density, not just taste (spec Stage I).** "One complete journey beats
+   many shallow pages" is still true, but it was being used to justify
+   pages that were simply *thin*. Measured against Astra's own hand-built
+   sites, prototypes were carrying 45% fewer sections, 75% fewer
+   subsections, and zero working forms. There are now hard density floors
+   per category. **Restraint removes something to strengthen what remains;
+   emptiness is just missing material.** Minimalism has to be earned with
+   volume behind it, not substituted for it.
+2. **"Premium" is not absence (spec Stage I opening).** The default
+   expression of quality — whitespace, desaturation, one grotesk, few
+   assets — is the vocabulary of minimalist SaaS, not of the art, craft,
+   trade and service businesses Astra actually sells to. Real reference
+   sites in those categories are dense, saturated and characterful. A
+   photographer's site carries ~79 images; a thin prototype gave one 11.
+3. **The prototype is the production environment (spec I14).** Nothing on
+   a delivered page may reveal it is a prototype: no `ILLUSTRATIVE` badges,
+   no figure numbers, no provenance captions on photos, no "to be supplied"
+   placeholder frames, no agency byline. A missing asset is a design
+   problem to solve, not a caption to write. All disclosure moves to the
+   internal rationale document, with at most one discreet production-normal
+   footnote on the page itself.
+
+Also note the visual-assessment counterpart on the research side: judging a
+prospect's site now requires an actual **screenshot**, not just an HTML
+read, because "looks like a PowerPoint from the 2000s" is invisible in
+markup (`docs/enrichment-pipeline-spec.md` Stage 2a).
 
 Standard deliverables: clickable prototype, desktop/mobile/deep-journey
 previews, one-pager PDF, evidence register, research summary, complete ZIP.
@@ -360,6 +450,12 @@ scratch — several of these already appear in the inbox triage digest:
 | Rosalie Voortman — Voortman & Baumhauer | Wedding + brand photography | Site was wedding-led while she's moving into brand work — make brand photography a first-class route, not hidden. |
 | Lisa Bouamra — Point Audit | Hospitality audit/QA software | Multi-property walkthrough concept, group dashboard to resolved issue. |
 | Dr. Alan Ragueneau — GlisRisk | Non-financial risk quantification for Fortune 500 capital allocation | GlisRisk Connect Call was scheduled 7 August 2026, 12:30-13:00 CET. (Not the same person as Alan Sabin, the coaching prospect.) |
+| Maarten Ectors — Greentic AI Ltd | Open-source "digital workers": deterministic, auditable AI workflows connected to real business systems | Asked for the prototype and received it (`astra-greentic-prototype.netlify.app`, 18 Aug). **The original opener's premise was wrong** — it claimed his site "stops at one line"; it is a full marketing site (see Learning ledger #1), so never repeat that framing. The angle that genuinely holds: the site says "Any Industry" and never names a buyer, a customer or a case study, and Maarten himself is invisible on it despite being a former **Chief Innovation Officer at Legal & General Group**, which is the strongest trust asset the company has. Two open asset requests if the conversation continues: a portrait of him, and one nameable customer. Deliberately not raised in the send message on Raka's instruction. |
+| Aart Bos — TomatoWorld | Independent greenhouse-horticulture fieldlab: visitor experience, innovation fieldlab, partner ecosystem | Concept delivered July 2026: homepage separating the three competing audiences, plus a lighter guided-tour flow (the booking form currently mixes qualification and billing questions). Aart is warm but not the decision-maker — he forwarded to a new marcom colleague starting September and then **referred Joyce directly**. Do not re-pitch him; he has already done the internal selling. |
+| Joyce van Dalen-Zwinkels — TomatoWorld | Operationeel manager: Operations, Events, Partnerships | Referred by Aart (12 Aug) who said she "was impressed" by the concept, contact `joyce@tomatoworld.nl`. She has not replied to two messages. The angle that is genuinely *hers* rather than marketing's: the guided-tour booking form mixes qualification with billing, which lands on operations, not on marcom. Ask small (fifteen minutes), and leave a September door open — that is when the new marcom colleague starts. |
+| Antanas Juodiskis — Gravity Fellow | (see row above) | Additional 2026-08 note: he asked "What is your offer?" directly. Answered with an honest agency description tied to the investor-homepage concept rather than a generic capabilities pitch. |
+| Lynn Chadwick — That Animation Company | (see row above) | Confirmed 2026-08-12: they had "just" committed budget elsewhere. Handled with a no-pressure reply; relationship preserved. Do not re-pitch on price. |
+| Not-interested, closed gracefully (2026-07/08) | — | David Limousin (la Jeanette), Adam Amara, Stefan Janssen, Wouter Vermeulen, Ben Maicd, Ferdinand Witt-Dörring, Kenfack Leopold, Iman Javadi, Arbaaz Shaikh, Natacha Waldmann. All declined directly and all received a short, gracious close with an open door. **Standing instruction from Raka: even a "no" gets a reply — never let a thread just die out.** |
 
 ## 14. Alan Sabin — outcome lesson (not a prospect currently in the pipeline)
 
