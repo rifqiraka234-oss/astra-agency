@@ -515,6 +515,32 @@ record in the research summary:
   asset dependencies at all (see Stage E's technical requirements); when
   that constraint applies, still keep total payload reasonable and
   optimise images before encoding them.
+- **When no client asset exists and licensed stock is genuinely the right
+  call** (context/atmosphere imagery, per D1, never presented as the
+  client's own work): verified working source order in this build
+  environment, most reliable first —
+  1. **Openverse filtered to `source=rawpixel`**
+     (`api.openverse.org/v1/images/?q=...&source=rawpixel&license=cc0,pdm,by`)
+     — modern, clean, CC0, no key required. This is the source that
+     actually produced usable results.
+  2. **Wikimedia Commons** (`commons.wikimedia.org/w/api.php?action=query&
+     generator=search&gsrsearch=filetype:bitmap ...`) — reachable, no key,
+     but results skew dated (2000s-era stock, low resolution) and need
+     heavy curation.
+  3. **Openverse's default search** (unrestricted `source`) — mostly
+     Flickr, mixed quality, heavy curation needed.
+  - **Unsplash and Pexels are typically unreachable in this environment**:
+     Unsplash's search is JS only and its internal API returns
+     "Authorization required"; Pexels' API returns "Missing API key" with
+     no key available. Do not spend calls retrying these unless the
+     environment is confirmed to have changed.
+  - **Always build a contact sheet and look at every candidate before
+    selecting**, per addition 34's oversupply rule. Watermarks, cartoon/
+    clip-art results, and off-topic matches show up even in CC0 pools and
+    are only caught by looking, never by trusting the query match.
+  - Re-encode each selected image near its actual display size (roughly
+    2x per addition 23/D7), not at the source resolution, to keep payload
+    reasonable.
 
 ### D3 — Real photography licensing and identity rules (carried forward)
 - Use genuinely real, correctly licensed photography (free license sources
@@ -754,6 +780,20 @@ biographies. The hero earns attention; the ending earns the reply.
 - Single self contained HTML file, all CSS and JS inline, no external
   dependencies that could fail (fonts loaded via a reliable CDN are fine,
   fragile or obscure external assets are not).
+- **Environmental note, confirmed repeatedly in this build environment:**
+  Chromium cannot navigate to any external host through this container's
+  proxy (`ERR_CONNECTION_RESET` on every attempted external URL), so a
+  competitor's or client's live site cannot be screenshotted directly with
+  Playwright. `curl` through the same proxy works fine for fetching HTML,
+  CSS, JS bundles, and images. The working pattern: `curl` the target page
+  and its referenced assets, rewrite the asset URLs to local relative
+  paths, then point Playwright at the local `file://` mirror to render and
+  screenshot it. This also means fonts must be fetched via `curl` and
+  embedded as base64 `@font-face` data URIs (Google Fonts is reachable this
+  way) rather than linked, both because the Artifact CSP blocks font CDNs
+  and because a live page render in this sandbox cannot reach any CDN
+  either. Re-verify this constraint at the start of a session rather than
+  assuming it, the proxy configuration can change.
 - Must work cleanly on both desktop and mobile, no accidental horizontal
   overflow, no broken layouts at narrow widths.
 - Every interaction must actually work, no empty `#` links, no dead

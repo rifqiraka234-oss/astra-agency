@@ -194,6 +194,43 @@ itself.
   queue needs refreshing (e.g. weekly, or after a batch of openers has been
   sent), and in between just note new accepts surfaced incidentally by the
   regular daily pull.
+  - **Working batch size (confirmed by Raka, 2026-08-17):** research and
+    send in batches of roughly 10 per session, real per-contact site
+    research every time, no shortcuts. "Accurate and strong" beats volume;
+    a smaller batch of verified sends is the standing instruction, not an
+    exception.
+  - **Wrong-domain trap, hit repeatedly, always verify by content:** a
+    plausible guessed domain, or even a domain reported by a search result
+    or a directory listing, regularly resolves to a real but *different*
+    company that happens to share the name (confirmed cases: `prevent.de`
+    redirects to an unrelated `ias-gruppe.de`; `thesalesacademy.nl` is
+    "Salespiration" by a different founder; `mapler.com` serves an
+    unrelated luxury hospitality brand, not Mapler AIx Inc). Never draft an
+    opener from a domain guess or a search snippet alone, fetch it and
+    confirm the actual page content names the right company/founder/
+    product before using anything from it. If the fetched content doesn't
+    match, or multiple unrelated companies share the name, mark
+    `BLOCKED_NEEDS_INFO` with the reason and move on rather than guessing.
+  - **Don't manufacture a problem for a genuinely strong site.** Not every
+    accepted lead has a defensible angle. When research turns up a company
+    with real named testimonials, real client logos, and no obvious gap
+    (confirmed cases: D&Z Domotica, NOMW Health, dotega, Snorly), mark
+    `NO_STRONG_ANGLE` rather than stretching a minor or invented friction
+    into a pitch. A forced angle on a strong business reads as either
+    wrong or insulting, neither books a meeting.
+  - **"No reply at all" is a separate bucket from Silent accepted, don't
+    conflate them.** Silent accepted means the connection was accepted and
+    zero real message was ever sent. A contact who *did* receive a real,
+    researched first message and simply never replied is the Stalled tier
+    (see the inbox triage spec's Step 3), not Silent accepted, even though
+    both show up in lemlist's `sentOnly` inbox list alongside everyone
+    whose connection invite hasn't even been accepted yet. Before drafting
+    anything from the `sentOnly` list, pull the full thread per contact
+    and only nudge the ones where a real, personalised pitch (not just the
+    generic connect note) was actually sent, ideally 2 to 4 weeks ago with
+    zero response since. A nudge for this bucket must reference the
+    specific concept or gap from that original message, per the inbox
+    triage spec's Step 4 stalled-nudge rule, never a generic "checking in."
 - `state/inbox_digest_log.jsonl` — one JSON object per contact per run this
   routine actually reported on (append only): `date`, `contactId`,
   `companyName`, `tier`, `section` (matches the digest's own section names),
@@ -256,7 +293,25 @@ not just a good conversation.
   anything that isn't alphanumeric or a hyphen), never a generic or
   auto-generated Netlify subdomain. Hyphens in this slug are a URL
   separator, not outreach prose, they are not covered by the no-dash
-  guardrail. Confirm the actual deployed URL before sending it to anyone.
+  guardrail. Confirm the actual deployed URL before sending it to anyone,
+  concretely: fetch the live URL and check its byte size and a content
+  hash (`sha256sum`) against the exact file that was deployed, and confirm
+  the `<title>` matches, don't just eyeball that "a page loaded."
+  - **The Netlify connector is not always available in this session type**
+    (`enabledInChat: false`, no CLI, no token in the container, confirmed
+    repeatedly). When that's the case, do not fabricate a placeholder URL
+    or silently skip hosting: finish and QA the HTML, commit it into the
+    repo (`state/prototypes/[company]/`, force-added past the working
+    artifact `.gitignore` rule, see State files below), and hand off to a
+    Netlify-enabled session with a self-contained prompt containing: the
+    exact repo, branch, and file path; the file's byte size and content
+    hash so the other session can verify it has the right file; the exact
+    site name to create (`astra-[slug]-prototype`); explicit instructions
+    not to edit the HTML; and a note that `state/prototypes/` is
+    `.gitignore`d but these specific files are force-tracked, so a fresh
+    clone will still contain them despite the ignore rule. Never send the
+    live link to the lead yourself from a handoff session, that stays with
+    whoever is actually driving outreach.
 - **Meeting booking:** Google Calendar. Once a contact proposes or accepts a
   time (directly, or via a Calendly-style link they shared), create the
   event so it is on Raka's actual calendar, don't just reply with words and
