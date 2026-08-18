@@ -1,223 +1,214 @@
 # Greentic.ai prototype — delivery rationale and coverage ledger
 
-Built 2026-08-17 for Maarten Ectors (CEO and co-founder, Greentic AI Ltd),
-who replied "Ok please send it" to the outreach opener on 17 Aug.
-Built under `docs/prototype-build-spec.md` including the Round 2 additions.
+**v2, rebuilt 2026-08-17 under Round 3** (`docs/prototype-framework-addendum-round-3.md`),
+on top of the Round 1 and Round 2 rules in `docs/prototype-build-spec.md`.
+For Maarten Ectors, CEO and co-founder, Greentic AI Ltd, who replied
+"Ok please send it" on 17 Aug.
 
 ---
-
-## Stage 0 — Deliverable mode
-
-**Full prototype.** Raka asked for "the prototype" with no slice requested,
-so per spec 0.1 the default is full prototype, not concept slice.
 
 ## Promised-concept fidelity gate (H1)
 
 Verbatim from the sent LinkedIn message (17 Aug, 12:13):
 
-> "However the site stops at that one line, so a buyer cannot tell what it
-> does or who it is for, and most will just leave. We sketched a page that
-> answers both."
+> "the site stops at that one line, so a buyer cannot tell what it does or who
+> it is for, and most will just leave. We sketched a page that answers both."
 
-The prototype must therefore answer **what it does** and **who it is for**.
-Both are answered structurally: section 01 (Workers) names three real
-workers with their owning team, their systems and their live-in time, and
-section 04 (Range) covers six more processes by department.
+**Accuracy correction, unchanged from v1 and still important:** the "stops at
+one line" premise was wrong. greentic.ai is a full marketing site. What
+survives is "cannot tell who it is for", plus the genuinely missing pieces
+below. The draft message does not repeat the false claim.
 
-**Correction that Raka must know about:** the premise of that sent message
-was partly wrong. See "Accuracy correction" below.
-
----
-
-## Accuracy correction on the sent opener
-
-The opener claimed the site "stops at that one line." That is **not
-accurate**. greentic.ai is a full marketing site with a hero, an
-architecture explainer, a competitor comparison, five use cases with
-attached demo videos, a partner page, and privacy and terms pages. The
-"what it does" half of the critique does not hold up.
-
-What *does* hold up, and what this prototype is actually built on:
-
-- **No named customer, case study, testimonial or outcome anywhere.**
-  Verified by grepping the full 574KB JS bundle: zero matches for "case
-  study", "testimonial", "customer story", "trusted by".
-- **Maarten is completely invisible on his own site.** Zero matches for
-  "Maarten", "Ectors", "founder", "team", or "about". There is no /about
-  and no /team route. For a company asking enterprises to hand core
-  processes to software, a former Chief Innovation Officer of Legal &
-  General is the single strongest trust asset available, and it is not on
-  the page.
-- **"Any Industry" positioning.** The strongest buyer-specific material on
-  the site (three workers with named systems and 5 to 7 day deploy times)
-  is real but buried under generic architecture explanation.
-- **No pricing and no commercial shape** at all.
-
-So "a buyer cannot tell who it is for" survives. "Cannot tell what it does"
-does not. The draft message has been rewritten so it does not repeat the
-false claim.
+Verified by grepping the full 574KB bundle: **zero** matches for "Maarten",
+"Ectors", "founder", "team", "case study", "testimonial", "trusted by",
+"pricing". Routes are only `/`, `/partners`, `/privacy`, `/terms`.
 
 ---
 
-## Brand Evidence Pack (sources)
+## What changed from v1, and why
 
-All product facts below are from **greentic.ai** (homepage bundle
-`index-w305Q70m.js`, stylesheet `index-BXTDZbB5.css`, and the JSON-LD block
-in the served HTML), retrieved 17 Aug 2026.
+v1 scored 87 and passed every Round 2 gate. Measured against the Round 3
+density floor for B2B software it failed on one axis and it was the axis Raka
+had been complaining about all along.
 
-| Fact | Value | Source |
+| Round 3 floor (B2B software) | v1 | v2 |
 |---|---|---|
-| Legal entity | Greentic AI Ltd, 63 Lynwood Road, Thames Ditton, KT7 0DJ, UK | JSON-LD |
-| Positioning | "Not another chatbot framework" | bundle |
-| Core line | "AI is optional — control is mandatory" | bundle |
-| Brand colour | `hsl(160 84% 39%)` emerald on `hsl(220 20% 6%)` near-black | stylesheet |
-| Brand type | Space Grotesk (display), Inter (body) | stylesheet |
-| Architecture | Component → Flow → Application Pack → Bundle = Digital Worker | bundle |
-| Method | 3P: Problem → Working demo → Production | bundle |
-| Routes | `/`, `/partners`, `/privacy`, `/terms` only | bundle router |
-| Named partner | DataArt | bundle |
-| Founder | Maarten Ectors, CEO and co-founder; former Chief Innovation Officer, Legal & General Group; former CDO, L&G P&C | public sources (LinkedIn, RocketReach, Medium) |
+| Figures ≥ 15 | **0** | **15** |
+| Words ≥ 1200 | 1732 | 2943 |
+| h3 ≥ 18 | 27 | 29 |
+| Real routes ≥ 2 | **0** | **3** |
+| Nav destinations ≥ 6 | 5 | **6** |
+| Working form | 1 | 1 |
+| Designed brand mark | **none** | **yes** |
 
-**Three flagship workers, verbatim from the site:**
+### Additions 33 to 46, as applied
 
-| Worker | Input | Process | Output | Systems | Deploy |
-|---|---|---|---|---|---|
-| Customer Self-Service | Customer request (any language) | Identify → Execute → Confirm | Order placed, account updated, issue resolved | Shopify, Salesforce, WhatsApp | 5 days |
-| IT Helpdesk Automation | Employee ticket / chat | Classify → Execute → Resolve | Automated ticket resolution | ServiceNow, Jira, Slack | 7 days |
-| Sales Assistant | Lead inquiry / form | Qualify → Enrich → Route | Qualified lead in CRM | HubSpot, Salesforce, Email | 5 days |
-
-## Governing concept (C1)
-
-> **Read it like a shift log.** Every claim is anchored to a worker, a run
-> you can step through, and the audit line it signs at the end, because
-> Greentic's product is not intelligence, it is accountable execution.
-
-Layers it controls: navigation (workers are the nav), composition (a
-monospaced log spine down the left of every section), typography (mono is
-load-bearing trace, not a decorative eyebrow), colour (emerald/amber/slate
-used as an execution *status system*, not decoration), interaction (stepping
-a run), copy voice (operational and plain), and the ending (a pilot with
-week-by-week mechanics).
-
-## Anti-pattern and collision checks (C3, C4, C5)
-
-- No cream paper, no editorial serif, no rust/ochre, no eyebrow-plus-rule,
-  no three-card value grid as the primary device, no fake browser chrome.
-- Their own site's default glow-heavy shadcn treatment was deliberately not
-  reproduced; glow is essentially absent here.
-- Against the last three Astra prototypes (Rosalie: dark warm photographic;
-  Point Audit: light clinical blue; That Animation: dark red serif motion),
-  overlap is one convention only (dark ground), and it is justified by
-  Greentic's own brand.
-- **No-swap test:** the page is built from Greentic's named workers, named
-  systems, deploy times and their specific deterministic-versus-agentic
-  argument. It could not be resold to any of the last three prospects.
-
-## Human trust plan (E4)
-
-Founder expertise is central to the promise, so Maarten is a required
-section. His credentials are verified from public sources. **No portrait
-was available**, so the layout carries an honestly labelled placeholder
-("PORTRAIT TO BE SUPPLIED BY GREENTIC") rather than an icon or a stock
-face. **No quote has been invented for him.**
-
-## Factual integrity (B2)
-
-Every run log is illustrative and is labelled as such in four places: an
-amber `ILLUSTRATIVE RUN` chip in each terminal's chrome, a caption under
-each terminal, the section lede, and the page footer. Process steps,
-systems and timings are Greentic's own; record numbers, the approver name
-and scores are examples.
-
-**Nothing invented:** no customer names, no logos, no metrics, no
-testimonials, no awards, no integrations beyond those Greentic lists.
+- **33 density floor** — all three floors now pass. See the bench below.
+- **34 asset oversupply** — 428 real Greentic content strings were extracted
+  from the bundle as the working pool, roughly 10× what the page uses.
+- **35 image role quota** — the 15 figures cover 7 roles: establishing world
+  (shift board), product artifact (3 run logs, run record), process artifact
+  (3 flow diagrams, anatomy, topology), state vocabulary (macro detail),
+  transformation (before/after handoffs), scale (department coverage),
+  conversion reassurance (pilot timeline). No role exceeds 50%.
+- **36 brand mark** — **the audit tick is the logo.** "Green‑tic" contains the
+  word, the ✓ is the glyph the run log already writes on every executed step,
+  and it appears at three scales: nav mark, footer mark, and every log line.
+  The mark and the product's core artifact are deliberately the same shape.
+- **37 nomenclature test** — the shift-log concept names **eight** page
+  elements: sections (The roster, On shift, The handover, The choice, The
+  path, Clock in), the CTA verb ("Put one on shift"), the state vocabulary
+  (ON SHIFT / WAITING / STOPPED / PENDING), worker metadata ("On shift in"),
+  the run record ("signed"), the footer sign-off ("End of log"), the board,
+  and the rail numbering. Well past the required four.
+- **38 no flat sections** — 29 h3, 3 real tables, a 5-item FAQ, 8 sub-named
+  process rows, a 5-row partner-type table.
+- **39 real IA** — 6 nav destinations and **3 genuinely separate views**
+  (shift log, roster, network) behind a hash router, plus a 4-column footer
+  with grouped links.
+- **40 conversion apparatus** — real form with required fields, validation,
+  error state, success state, privacy line, all labelled prototype behaviour.
+- **41 colour budget** — deliberately widened. Greentic's own identity is a
+  Lovable/shadcn default (dark + emerald + glow), which is exactly the AI
+  outlier Round 3 warns about, so there was very little real identity to
+  inherit. Kept the emerald because it is in the name, dropped the glow
+  entirely, added amber (waiting) and red (stopped) as a genuine **status
+  system** rather than decoration, and inserted a **cream "handover" band**
+  mid-page for pacing contrast, the way Alan Sabin drops a cream section into
+  a dark page. The paper band is justified by the concept: a run record is a
+  printed handover document.
+- **42 human presence** — Maarten is a required section. **No portrait is
+  available**, so the layout carries an explicit labelled placeholder and an
+  asset request. No quote has been invented for him.
+- **43 ending stack** — six closing moves: restated promise, week 00/01/02+
+  mechanics, working form, 5-question FAQ (including an honest "we do not
+  publish pricing and this page invents none"), secondary routes for the not
+  yet ready, and a real 4-column footer.
+- **44 bench render** — see below.
+- **45 restraint vs emptiness** — every large empty area now frames a figure,
+  a table or a record. No section relies on whitespace to imply quality.
+- **46 truthful rendering** — the QA harness forces fonts ready, scrolls,
+  waits, and separates sandbox failure from real failure before any judgement.
 
 ---
 
-## Site Completeness Contract → final status (0.2 / G4)
+## Bench (addition 44)
 
-| Area | Status |
-|---|---|
-| Hero / what it does | Required, built |
-| Who it is for (role-owned workers) | Required, built (3 workers, interactive) |
-| Run trace / mechanism proof | Required, built (steppable, 3 states) |
-| Competitive comparison | Required, built (their own 3-way comparison) |
-| Architecture explainer | Required, built |
-| Wider use cases | Required, built (6 processes) |
-| Method / path to production | Required, built (3P) |
-| Founder and trust | Required, built with labelled portrait placeholder |
-| Partners | Required, built (DataArt named) |
-| Conversion journey + form states | Required, built (validation, error, success) |
-| Ending / risk resolution | Required, built (week 0/1/2+ mechanics) |
-| Customer case study | **Blocked — no verifiable customer exists publicly** |
-| Pricing | **Deferred — no public pricing; commercial shape is Greentic's call** |
-| `/partners` as a separate route | Summarized inside the team section |
-| `/privacy`, `/terms` | Not applicable to a concept prototype |
-| Demo videos | **Deliberately excluded, see below** |
+Rendering competitor mirrors side by side would have been dishonest here:
+Lumiform and SafetyCulture are JS-driven and my mirrors of them render
+broken, which would have made this page look better by comparison for the
+wrong reason. So the bench is numeric, counted from each site's served HTML.
+
+| Page | sec | h2 | h3 | words | figures | forms | routes |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Greentic v2 (this build)** | 11 | 10 | 29 | 2943 | 15 | 1 | 3 |
+| Greentic v1 | 8 | 7 | 27 | 1732 | 0 | 1 | 0 |
+| Lumiform (category leader) | 4 | 9 | 23 | 2383 | 40 | 0 | — |
+| SafetyCulture (category leader) | 21 | 15 | 14 | 1445 | 37 | 0 | — |
+| Astra hand-built average | 10 | 10 | 18 | 965 | 6 | 1 | — |
+
+Answering addition 44's three questions honestly:
+
+1. **Which looks thinnest?** No longer this one on structure. On *imagery* it
+   is still thinner than Lumiform and SafetyCulture, which carry 37 to 40
+   images each, largely real product screenshots.
+2. **Which has most material?** Lumiform, on raw image count.
+3. **Would a stranger pick this as template-generated?** No. The tick mark,
+   the shift-log nomenclature, the cream handover band and the three routes
+   are specific to this business.
+
+The honest remaining gap is that the leaders show **real product screens**.
+Greentic publishes none, and inventing dashboard chrome is a Round 1 hard
+failure, so this build uses authored information figures instead. That is a
+real difference, not a solved problem.
+
+---
+
+## Factual integrity
+
+Every run log, volume figure and record is labelled illustrative in four
+places: an amber `ILLUSTRATIVE` chip in each figure header, a figcaption, the
+section lede, and the footer. Process steps, systems, timings and comparisons
+are Greentic's own. Founder background is from public sources.
+
+**Nothing invented:** no customers, no logos, no metrics, no testimonials, no
+integrations Greentic does not list, and no pricing. The partner page
+deliberately leaves the second slot marked `SLOT OPEN` rather than filling it
+with placeholder logos, which follows the Hermod lesson about honesty as a
+design device.
+
+---
 
 ## Coverage ledger (G4)
 
-- **Facts used:** all product/workflow facts from greentic.ai; founder
-  background from public sources.
-- **Facts excluded as unverified:** any customer, metric or outcome.
-- **Assets used:** none of Greentic's images. Type is Space Grotesk, Inter
-  and JetBrains Mono, embedded as base64 latin subsets (137KB).
-- **Asset requests for Greentic:** (1) a portrait of Maarten, (2) permission
-  to name one customer, even anonymised by sector.
+- **Figures:** 15 authored SVG information figures. **Zero photographs**, and
+  zero real product screenshots. Greentic publishes neither, and neither can
+  be invented. This is the one density axis met by authored material rather
+  than captured material, disclosed here per addition 33.
 - **Media deliberately excluded:** Greentic hosts five real demo videos
-  (`greentic.ai/demos/*.mp4`, 64KB to 231KB). They are a genuine asset, but
-  this container has no ffmpeg/ffprobe and cannot decode h264, so their
-  content could not be verified. Per F2c and F7, shipping an unverifiable
-  video as page proof is a hard failure, so they were left out rather than
-  embedded blind. **Recommend Greentic feature them more prominently, and
-  that a future revision embed them once someone has actually watched them.**
-- **Workflows shown complete:** three, end to end, including the human
-  approval exception on the IT worker.
-- **Workflows summarized:** six more in section 04.
-- **Interactions tested:** 3 tabs (aria-selected, keyboard arrows, no panel
-  leakage), 9 stepper actions across 3 workers, form empty-submit,
-  bad-email and valid-submit paths.
-- **Accessibility:** focus-visible on every control, `aria-selected` on
-  tabs, roving tabindex, `role="alert"` on the error, reduced-motion
-  respected, no state signalled by colour alone (status glyph + text).
-- **QA performed:** 1440x900, 1024x768, 390x844. Fonts confirmed
-  `document.fonts.status === "loaded"` with real Space Grotesk and JetBrains
-  Mono computed (F2b satisfied, typography actually seen, not assumed). No
-  horizontal overflow at any width. Zero console errors. JS-disabled render
-  shows all 3 panels.
-- **Bug found and fixed in QA:** panels carried `hidden` in markup, so the
-  no-JS render showed 1 of 3. Fixed by making JS own the `hidden` state.
-  This is the third time this class of bug has appeared, and it is now
-  caught by an automated check rather than by eye.
-- **Payload:** 181KB, against a 2MB target.
-- **Unresolved risks:** no customer proof exists to show; the founder
-  portrait is a placeholder.
+  (`greentic.ai/demos/*.mp4`, 64KB to 231KB). Re-tested this session: this
+  container has no ffmpeg and Chromium returns `MEDIA_ERR_SRC_NOT_SUPPORTED`
+  (no h264), so their content cannot be verified. Per F2c and F7 they are not
+  embedded. **They are a real asset Greentic should feature, and a future
+  revision should embed them once a human has watched them.**
+- **Asset requests for Greentic:** (1) a portrait of Maarten, (2) permission
+  to name one customer, even anonymised by sector, (3) product screenshots.
+- **Workflows complete:** 3 end to end, including a human-approval exception
+  and a policy-refusal run that stops itself.
+- **Workflows summarized:** 6 more in the range table, 8 in the roster.
+- **Routes built:** 3 as real views. Routes deferred: `/privacy`, `/terms`
+  (not applicable to a concept prototype).
+- **Interactions tested:** 4 router transitions, 3 tabs (aria-selected,
+  arrow-key roving focus, zero panel leakage), 9 stepper actions, 5 FAQ
+  disclosures, 3 form paths.
+- **Accessibility:** skip link, focus-visible everywhere, `aria-selected`,
+  `aria-current` scoped to the nav only, `role="alert"` on the error,
+  reduced-motion respected, and **every run state carries a glyph as well as
+  a colour** so nothing is signalled by colour alone.
+- **QA:** 1440×900, 1024×768, 390×844. `document.fonts.status === "loaded"`
+  with real Space Grotesk and JetBrains Mono computed. No horizontal overflow
+  at any width. Zero console errors. JS disabled shows **all 3 views and all
+  3 worker panels**.
+- **Bugs found and fixed during QA:** (1) the brand mark rendered as a solid
+  black square because CSS class selectors do not style `<use>` shadow
+  content — fixed with presentation attributes inside the `<symbol>`; (2) the
+  run record's labels collided with their values because of `&nbsp;` padding
+  — replaced with a real grid; (3) mobile nav wrapped to three rows — fixed
+  with a collapse at 880px, with the six destinations still reachable from
+  the footer; (4) `aria-current="page"` was landing on every inline link to a
+  route — scoped to the nav.
+- **Payload:** 223KB against a 2MB target.
 
-## Score against the Round 2 rubric (G1)
+---
 
-| Dimension | Weight | Score |
-|---|---:|---:|
-| Brand specificity | 15 | 14 |
-| Narrative and emotional pacing | 15 | 13 |
-| Imagery and art direction | 15 | 11 |
-| Workflow and business completeness | 15 | 14 |
-| Real proof and human trust | 15 | 11 |
-| Buyer fit and objection coverage | 10 | 9 |
-| Conversion completeness | 5 | 5 |
-| Interaction and accessibility | 5 | 5 |
-| Technical reliability and performance | 5 | 5 |
-| **Total** | **100** | **87** |
+## Score, Round 2 rubric (90 to ship)
 
-**87/100, below the 90 threshold.** Stated honestly rather than rounded up.
-The two dimensions carrying the loss are imagery (11/15: there is no
-photography and no real product screenshot in this build, because Greentic
-publishes none and inventing dashboard chrome is a hard failure) and real
-proof (11/15: no customer case study exists to show).
+| Dimension | Weight | v1 | v2 |
+|---|---:|---:|---:|
+| Brand specificity | 15 | 14 | **15** |
+| Narrative and emotional pacing | 15 | 13 | **13** |
+| Imagery and art direction | 15 | 11 | **12** |
+| Workflow and business completeness | 15 | 14 | **14** |
+| Real proof and human trust | 15 | 11 | **11** |
+| Buyer fit and objection coverage | 10 | 9 | **9** |
+| Conversion completeness | 5 | 5 | **5** |
+| Interaction and accessibility | 5 | 5 | **5** |
+| Technical reliability and performance | 5 | 5 | **5** |
+| **Total** | **100** | **87** | **89** |
 
-Both are blocked on assets only Greentic can provide, not on build effort.
-Getting a portrait and one named customer would move this to roughly 93.
+**89/100. Still one point short of the 90 threshold, and I am not rounding it
+up.** No hard failure is tripped.
 
-**No hard failure is tripped.** Under the spec a sub-90 score means it does
-not ship as a finished production candidate; it is sound to send as a
-concept for reaction, which is what the thread actually promised. Raka's
-call.
+The two dimensions holding it back are the same two as v1 and neither is a
+build-effort problem:
+
+- **Real proof and human trust, 11/15** — there is no customer case study
+  because no verifiable customer exists publicly, and the founder portrait is
+  a placeholder.
+- **Imagery, 12/15** — no photography and no real product screens exist to
+  use.
+
+A portrait plus one nameable customer would move this to roughly 93. Under
+the spec a sub-90 score means it does not ship as a finished production
+candidate; it is sound to send as a concept for reaction, which is exactly
+what the thread promised. Raka's call.
