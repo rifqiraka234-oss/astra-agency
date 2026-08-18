@@ -558,6 +558,24 @@ record in the research summary:
   any client tied to a specific real community.
 - Never use real company or retailer logos, that is licensed IP. Use styled
   wordmark placeholders or generic representations instead.
+- **"No such asset exists" is a negative claim and needs the same rigour as
+  any other negative claim.** The client's own website is where *brand* assets
+  live. **Press coverage is where product, process and people photography
+  usually lives**, because that is exactly what journalists request and what
+  companies prepare for a launch or a funding announcement. Searching only the
+  client's site and concluding "they have no photo of the product in use" is
+  the imagery version of the empty-shell trap. (Connectome, 2026-08-18: the
+  build asserted that no photograph of the scanner, the headset on a person,
+  or a real report screen existed anywhere public, and carried the scan moment
+  with drawn diagrams on that basis. Imperial College London's article on the
+  partnership carried all three, including a person mid-scan wearing the
+  headset under the company's own wall logo, and a full screenshot of the real
+  platform. The prototype was rebuilt around them and rose five points.)
+  Before concluding an asset does not exist, search: the client's own site,
+  their press and news coverage, their investors' and partners' announcements,
+  any university or accelerator they are tied to, and their social posts.
+  Record it as "not found in <sources searched>", never as "does not exist".
+
 - **A named person's photograph must actually be that person, and this is
   verified mechanically, never by eye.** Raka, 2026-08-18: *"I just dont want
   to put someone's picture and the picture is actually not them. The picture

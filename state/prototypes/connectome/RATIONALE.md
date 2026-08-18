@@ -374,8 +374,8 @@ and a natural reason to talk. Raka's call.
 ## Delivered artifact
 
 - File: `state/prototypes/connectome/index.html`
-- Bytes: **1053520**
-- sha256: **63b2aed75f4055a40780069388c86d0c271095b574a391555d6feb94a4f3d7ea**
+- Bytes: **1349960**
+- sha256: **8ddaf921ce70876357f39cc7a43dddae01d9ae0c185456e2fe1b102afea8f720**
 - `<title>`: `Connectome — Brain measurement studio, Soho London`
 - QA screenshots: `state/prototypes/connectome/qa/`
 
@@ -461,3 +461,94 @@ Provenance and depiction are two separate checks, and only the first was run.
 The test that would have caught it: for every photograph, find where the
 client themselves places it and what they themselves claim about it, and
 never make a stronger claim than they do.
+
+---
+
+## Identity verification of every named person (2026-08-18)
+
+Raka: *"Just to be sure these all are the real people on the name, right? And
+linked to connectome with the right positions?"*
+
+Two separate questions, answered separately, because passing the first does
+not answer the second.
+
+**1. Does the page faithfully reproduce the client's own pairing?**
+Yes, proven mechanically by `tools/verify_portraits.py`: each name's card on
+connectome.health/about contains exactly one image and no other person's
+name (containment, immune to the off-by-one shift that flat adjacency
+scraping causes), and the bytes embedded beside each name in the built file
+hash-match the client's published photo of that person. 4 of 4 PASS.
+
+**2. Is the client's own page itself correct and current?**
+That needs independent sources, so each person was checked against one.
+
+| Person | Role shown on our page | Independent confirmation |
+|---|---|---|
+| Rufus Mitchell-Heggs, PhD | Co-Founder & Chief Scientific Officer | **Strong.** Imperial College London names him a Connectome co-founder, PhD in Bioengineering under Prof. Simon Schultz. **Face independently confirmed**: Imperial's article carries a photo captioned "Connectome cofounders" showing the same man as our portrait. |
+| Prof. Simon Schultz, PhD | Scientific Advisor | **Strong.** Professor of Neurotechnology and Director of the Centre for Neurotechnology at Imperial; independently described as Scientific Advisor at Connectome Health. |
+| Dr. Onayomi Rosenior-Patten, MD | Health Data Scientist & Medical Researcher | **Good.** Real MD, University of Oxford Division of Medical Sciences and King's College Hospital NHS Foundation Trust, published researcher; independently associated with Connectome, working on longitudinal data and new markers. |
+| Anita Snowdon-Farrell, PhD | Clinical Operations | **Client source only.** No independent source found beyond Connectome's own About page. Her name and role are reproduced exactly as the client publishes them, and nothing is asserted about her beyond that. |
+
+The Snowdon-Farrell line is the honest limit of what was verified. It is not a
+reason to pull her portrait, since the page claims nothing about her that
+Connectome does not claim itself, but it is worth knowing that the only
+source is the client.
+
+## Correction: real scanner and report photography DOES exist
+
+An earlier section of this document stated that no photograph of the scanner,
+the headset on a person, or a real report screen existed anywhere publicly,
+and used that to justify carrying the scan moment with drawn diagrams. **That
+was wrong, and the error was in the research method, not the conclusion
+drawn from it:** only connectome.health's own asset library was searched.
+Press coverage was never searched for imagery.
+
+Imperial College London's article on the partnership carries three real
+photographs, all now used:
+
+| Asset | What it actually shows | Where it now sits |
+|---|---|---|
+| `2020-07-13-Connectome-test.jpg` | A person seated at a screen **wearing the Connectome headset mid-scan**, under the Connectome wall logo | Leads the visit view. Replaces the ambiguous stock interior entirely. |
+| `2026-07-13-Connectome-dashboard-and-helmet.jpg` | **The real Connectome platform** open on a desktop beside the headset: cognitive performance vs baseline and peers, performance trends, longitudinal insights, connected wearable, logged events | Leads the report view |
+| `2026-07-13-Connectome-founders.jpg` | The two cofounders | Not placed. Used only to confirm Mitchell-Heggs' face. |
+
+**Provenance, stated precisely:** these are Imperial College London news
+images depicting the client's own product and people, near certainly supplied
+by Connectome for that article. They are localised and embedded, not
+hotlinked, per D2. For a private, unlisted, `noindex` concept sent to the
+client's own founder this is appropriate. **Confirm with Lucas before any
+public use of the page.** Note the headset carries visible third-party
+hardware branding; it is left as-is because altering a photograph of real
+equipment to hide it would be the dishonest option.
+
+**What this changes.** The prototype now leads with the actual experience and
+the actual product rather than diagrams standing in for them, which is what
+D2 asks for whenever real material exists. The interior photo is no longer
+load-bearing: it sits on the studio view illustrating the results
+conversation, captioned about the conversation rather than the premises.
+
+## Revised G1 score
+
+| Dimension | Weight | Was | Now | Why it moved |
+|---|---:|---:|---:|---|
+| Brand specificity | 15 | 14 | 14 | unchanged |
+| Narrative and emotional pacing | 15 | 13 | 13 | two three-card rows still repeat a rhythm |
+| Imagery and art direction | 15 | 13 | **15** | leads with real scan photography and real product UI |
+| Workflow and business completeness | 15 | 13 | **14** | the report is now shown, not only described |
+| Real proof and human trust | 15 | 13 | **15** | Proof Ladder level 2 (real product in use) now present; every named human independently checked |
+| Buyer fit and objection coverage | 10 | 9 | 9 | unchanged |
+| Conversion completeness | 5 | 4 | 4 | still no pricing, still blocked |
+| Interaction and accessibility | 5 | 5 | 5 | unchanged |
+| Technical reliability | 5 | 5 | 5 | 1.29 MB, all gates green |
+| **Total** | **100** | **89** | **94** | **clears the 90 ship bar, zero hard failures** |
+
+The remaining open item is pricing, which only Lucas can supply.
+
+## Lesson recorded
+
+**"No such asset exists" is a negative claim and needs the same rigour as any
+other.** It was asserted after searching one source. The client's own site is
+where brand assets live; **press coverage is where product and process
+photography usually lives**, because that is what journalists ask for and what
+companies prepare for launch. Search both before concluding an asset does not
+exist, and treat "we could not find it" as a search result, not a fact.

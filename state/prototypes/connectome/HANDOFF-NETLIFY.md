@@ -23,13 +23,13 @@ is tracked before assuming it is missing.
 
 **Verify you have the right file before deploying:**
 
-- byte size: `1053520`
-- sha256: `63b2aed75f4055a40780069388c86d0c271095b574a391555d6feb94a4f3d7ea`
+- byte size: `1349960`
+- sha256: `8ddaf921ce70876357f39cc7a43dddae01d9ae0c185456e2fe1b102afea8f720`
 - `<title>`: `Connectome — Brain measurement studio, Soho London`
 
 ```bash
-stat -c%s state/prototypes/connectome/index.html   # expect 1053520
-sha256sum state/prototypes/connectome/index.html   # expect 63b2aed75f...
+stat -c%s state/prototypes/connectome/index.html   # expect 1349960
+sha256sum state/prototypes/connectome/index.html   # expect 8ddaf921ce...
 ```
 
 If either value differs, stop and say so rather than deploying. A mismatch
@@ -49,7 +49,7 @@ loaded:**
 
 1. `curl -sI https://astra-connectome-prototype.netlify.app` returns `200`.
 2. `curl -s https://astra-connectome-prototype.netlify.app | wc -c` matches
-   `1053520`.
+   `1349960`.
 3. `curl -s https://astra-connectome-prototype.netlify.app | sha256sum`
    matches the hash above.
 4. The `<title>` on the live URL matches exactly.

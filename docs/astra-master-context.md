@@ -348,6 +348,20 @@ written into the relevant spec.
    "we do not have a photo of that," design a treatment (the fix here was a
    brand panel carrying only supportable facts), never a caption and never an
    invented depiction.
+10. **"No such asset exists" asserted after searching one source
+   (Connectome, 2026-08-18).** The build concluded that no photograph of the
+   scanner, the headset on a person, or a real report screen existed anywhere
+   public, and justified carrying the whole scan moment with drawn diagrams on
+   that basis. Only connectome.health had been searched. Imperial College
+   London's article on the partnership carried all three, including a person
+   mid scan wearing the headset under the Connectome wall logo, and a full
+   screenshot of the real platform. Rebuilding around them took the prototype
+   from 89 to 94. **The client's own site holds brand assets; press coverage
+   holds product, process and people photography**, because that is what
+   journalists ask for. Rule now in the build spec at D3: search the client
+   site, their press coverage, investor and partner announcements, any
+   university or accelerator tie, and their socials, and record the result as
+   "not found in <sources searched>", never as "does not exist".
 
 ## 11. Prototype operating system (condensed)
 
