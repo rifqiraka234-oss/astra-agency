@@ -6,6 +6,28 @@ wrong, and what those mistakes recommend changing in
 `docs/prototype-build-spec.md`. The spec changes derived from this document
 have been folded into that spec; this file is the reasoning behind them.
 
+> **Where this sits in the sequence (added 2026-08-18).** This retrospective
+> covers the **first** feedback round only. Two further rounds followed and
+> both are also already integrated into `docs/prototype-build-spec.md`:
+>
+> - **Round 2** — story and product completeness: prototypes were strong
+>   concept slices presented as finished websites. Added deliverable mode,
+>   the Site Completeness Contract, Role × Journey × Evidence, the Proof
+>   Ladder, workflow coverage, the designed ending, and the Coverage
+>   Ledger. Lives in the spec as Stage 0, A4/A5, D5–D7, E4–E8, F5–F9, G4.
+> - **Round 3** — craft density and art direction: prototypes were
+>   materially *thin*, and "premium" was being rendered as absence. Added
+>   per-category density floors, asset oversupply, the designed brand mark,
+>   the nomenclature test, real IA and working forms, and the rule that
+>   **the prototype is the production environment**. Lives in the spec as
+>   Stage I (I1–I16); the full measurements and reference analysis are in
+>   `docs/prototype-framework-addendum-round-3.md`.
+>
+> Read this file for the origin of the Round 1 gates (font-load, the
+> medium-I-cannot-render protocol, interactive integrity, portability,
+> payload budget, the send stage). For anything about completeness or
+> density, go to the build spec and the Round 3 addendum instead.
+
 ---
 
 ## 1. What was done, in order

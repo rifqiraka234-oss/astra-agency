@@ -1360,27 +1360,25 @@ FAQ items forced open) and grep it for
 supplied|fig [0-9]|astra|not a customer`. Every hit must be either genuine
 client copy or the single approved footnote.
 
-### I15 — Revised rubric (100 points, ship at 90)
-This replaces the Round 2 rubric in G1. Brand specificity dropped from 25
-to 15; workflow completeness, real proof, and human trust — previously
-unscored as their own dimensions — now carry 15 each, because a page that
-scored well on brand specificity and imagery alone is exactly how three
-concept slices passed Round 1/2 review while being materially thin.
+### I15 — Scoring: use G1, and why its weights are what they are
+**There is exactly one rubric, and it lives in G1 above.** Score against
+that table: 100 points, **ship at 90 with zero hard failures**. Do not
+maintain a second copy of the weights here — a duplicated rubric drifts out
+of sync with the original the moment either is edited, which is precisely
+the failure this note exists to prevent.
 
-| Dimension | Weight |
-|---|---:|
-| Brand specificity | 15 |
-| Narrative and emotional pacing | 15 |
-| Imagery and art direction | 15 |
-| Workflow and business completeness | 15 |
-| Real proof and human trust | 15 |
-| Buyer fit and objection coverage | 10 |
-| Conversion completeness | 5 |
-| Interaction and accessibility | 5 |
-| Technical reliability and performance | 5 |
+Two things worth remembering about *why* G1's weights are what they are,
+since the reasoning is easy to lose once it is just a table:
 
-**Minimum to ship: 90/100, zero hard failures.** (This supersedes G1's
-88/100 threshold.)
+- Brand specificity was reduced from 25 to 15, and workflow completeness,
+  real proof, and human trust now carry 15 each. Under the old weighting a
+  page could score well on brand specificity, art direction and imagery
+  alone — which is exactly how three materially thin concept slices passed
+  review. Those three previously-unscored dimensions are now worth 35
+  points together.
+- A score at or above 90 that trips any hard failure in G2 or I16 still
+  does not ship. The score and the gates are independent checks, not a
+  single blended judgement.
 
 ### I16 — New hard failures (merge into G2, none of G2's originals retired)
 - Density floor (I1) missed for the category with no written reason.
