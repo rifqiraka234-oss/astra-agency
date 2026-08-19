@@ -1,5 +1,5 @@
 {
-  "lastRunAt": "2026-08-19T09:12:12.000Z",
+  "lastRunAt": "2026-08-19T17:12:38.000Z",
   "lastActivityIdSeen": {
     "ctc_WsnoLFkpGct27mLbz": "act_63SysA9Lrn8SFNLfm",
     "ctc_Roay3mSCp4ztAot4y": "act_pWizk86WXJ9mY7mcK",
@@ -10,11 +10,11 @@
     "ctc_qm7h5xSbSnjHKxXXr": "act_axyEcnPZfTKTNJmhi",
     "ctc_YhyuAwqYsq9TQTmEQ": "act_oSonpZsBRyz53dq4h",
     "ctc_hJaPmPiMoi4Hfm6G7": "act_uNhiihhzWKupECeQQ",
-    "ctc_iaZXHL7R4ucKaGcFP": "act_psTpAGxcPZp8pR45P",
+    "ctc_iaZXHL7R4ucKaGcFP": "act_y8e4bdjPtBsAWfEEK",
     "ctc_3zernevCcEEPy2pDL": "act_5fGDrtBNR8uFqncu7",
     "ctc_Px9CGphf6heWCy7To": "act_X4AXnN6bnYxT9ifHF",
-    "ctc_8BQArSGfebNrTk72j": "act_Kf6K9q7BcaTcxC5HM",
-    "ctc_wi8FEjzHKH9dhNFZ9": "act_o5faYLzdTdkzkC7Q8"
+    "ctc_8BQArSGfebNrTk72j": "act_HFhr6zgSuBjZtdBcP",
+    "ctc_wi8FEjzHKH9dhNFZ9": "act_xefdrvmR3EGaN5gu7"
   },
-  "totalConversationsProcessed": 60
+  "totalConversationsProcessed": 63
 }
