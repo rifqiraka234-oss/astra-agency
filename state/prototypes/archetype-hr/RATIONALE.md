@@ -179,54 +179,179 @@ composition with any of the three.
 
 ---
 
+## Art direction pass (2026-08-19, second build)
+
+Raka on the first build: **"Its not good enough. Take ALLLL MY FEEDBACKS
+IVE GIVEN IN THE PAST. Check their industry, check artsy stuff, take the
+design to a whoole next level really where theyre like ive never seen this
+before."**
+
+He was right, and the spec's own numbers say so. The first build was scored
+93 and should not have passed at all. Re-checked against Stage I it tripped
+**five hard failures**:
+
+| Gate | First build | Required |
+|---|---|---|
+| I1 density floor (B2B software) | 3 figures, 1121 words, 16 h3 | 15 / 1200 / 18 |
+| I7 real information architecture | 5 tab panels, 0 nav destinations | 6+ destinations, 2+ routes |
+| I8 conversion apparatus | a `mailto:` link | a real form with error and success states |
+| I11 the ending is a stack | one heading, two buttons | four distinct closing moves |
+| C3 anti-AI blacklist | bordered cards as the default container, tiny uppercase eyebrow labels, pill chips, a generic value-prop grid, and the banned "Not a theory..." construction | none of the recipe |
+
+The first build was a competent light SaaS page with a blue accent, which is
+what every HR tech site looks like, shown to a founder whose team has
+already built their own version. Scoring it 93 was the actual error.
+
+### The governing concept, re-derived from their own words
+
+Their home page says it outright: **"Archetype HR is designed for
+organizations that know engagement happens one person at a time."** That is
+the concept, and it is theirs, not an invention.
+
+> **An engagement survey gives you one number for everybody. Archetype HR
+> gives you a visibly different form for every single person, so the page
+> argues the thesis as an image instead of asserting it in a headline.**
+
+### The device: motivation signatures
+
+Every employee is drawn as an organic bloom computed from their own six
+motivator values. Six axes set the radius around the circle, a deterministic
+per-person harmonic wobble makes the contour hand-plotted rather than
+geometric, and concentric contours give it depth like a topographic plot.
+Generated in Python into pure inline SVG, so it renders with no JavaScript
+and no external libraries (`sig.py` in the build scratch, method recorded
+here).
+
+This is a concept, not decoration, and it drives five layers per I5:
+
+1. **Composition** — the wall of fourteen signatures on the dark ground is
+   the central spread of the whole site.
+2. **Interaction** — the manager dashboard carries each person's own
+   signature in their table row, so scanning the team is scanning fourteen
+   individuals rather than fourteen identical rows.
+3. **Nomenclature** — "The Archetype Library" is a real nav destination and
+   a real route, named for the device.
+4. **Colour** — the six inks are the motivator encoding, with a real key
+   section explaining what each one means.
+5. **The ending** — closes on the concept sentence in their own words.
+
+**Art direction lineage:** data humanism, the Giorgia Lupi / *Dear Data* /
+Stefanie Posavec register, where individual data is drawn rather than
+aggregated into a chart. It was chosen because that movement's entire
+argument (move from impersonal aggregate data to intimate individual data)
+is Archetype HR's own positioning, so the reference is on-thesis rather
+than borrowed for style.
+
+**Register:** warm printed paper ground, ink and paper alternating across
+five tonal shifts rather than one inverted section, hairline rules and grid
+lines instead of bordered cards, numeric section indices instead of eyebrow
+labels, Montserrat 800 at very tight tracking at display scale. No mono
+micro-labels, no cream-and-rust recipe, no pill chips, no fake browser
+chrome.
+
+**I9 colour budget, stated deliberately:** the client's real blue `#046BD2`
+and the real logo green are kept. The palette was then widened to six inks
+on purpose, because a per-dimension encoding needs six distinguishable hues,
+and because a single-accent SaaS palette is exactly the AI default I9 says
+to widen away from. All six are held at matched chroma so the wall reads as
+one system.
+
+**C4 collision test:** Connectome (light, periwinkle, Geist), Toffe
+Traktaties (warm paper, confetti, Quicksand), Greentic (dark slate, green,
+Space Grotesk). Overlap with Greentic is limited to the presence of a dark
+ground, which here alternates with paper rather than being the whole page,
+and carries a six-hue data encoding rather than a single accent. One
+overlap, under the C4 threshold of two.
+
+### What the second build ships
+
+Five real routes, each a separate view: Home, How It Works, The Archetype
+Library, For Managers, Join the Waitlist. Six nav destinations. A real
+waitlist form with required and optional fields, per-field validation error
+states, a success state, a privacy line, and a stated response time. A real
+grouped footer. A five-part ending stack on every route.
+
+---
+
 ## Build, QA and portrait verification
 
-Built as a single self contained HTML file: a sticky step-rail with 5 tabs
-matching the client's own process-stage names exactly, each stage a full
-view driven by one fictional employee record (Alex Rivera) that builds up
-stage by stage: survey mock at Q1/12, survey mock at Q9/12 plus "what Alex
-sees," the archetype profile itself (motivator bars, coaching style,
-engagement drivers), a manager dashboard (4-row roster with trend/status
-plus a "why Alex is flagged" reasoning card naming the exact 88 percent
-recognition gap), and a closing conversation-prep card (4 concrete,
-profile-specific prep points) followed by the founders section and a "who
-this is for" table lifted from the client's own segments.
+Single self contained HTML file, 5 routes, no external requests. Progressive
+enhancement: `html.js .route{display:none}` only applies once script adds the
+`js` class, so with JavaScript off all five routes render stacked as one long
+scrollable document (21,868px) rather than breaking. The waitlist form keeps
+native HTML5 `required` validation in that state.
 
-Progressive enhancement: `html.js .view{display:none}` only applies once a
-`js` class is added by script, so with JavaScript disabled all 5 stages
-render stacked on one scrollable page rather than breaking. Verified via
-Playwright with `javaScriptEnabled:false`: all 5 `.view` sections visible,
-7321px tall, no broken layout.
+**Automated QA (Playwright, desktop / tablet / mobile / fallback-font):**
+zero broken images, zero upscaling, zero aspect-ratio distortion, zero
+horizontal overflow at any width including with Montserrat and Inter both
+forced to local fallback, zero scaffolding language across all five routes,
+route navigation verified switching all five.
 
-**Automated QA (Playwright, desktop/tablet/mobile + fallback-font run):**
-no broken images, no upscaling, no aspect-ratio distortion, zero horizontal
-overflow at any width including with Montserrat/Inter both forced to local
-font fallback, zero scaffolding language found across all 5 stages (1121
-words total), tab navigation confirmed switching all 5 stages correctly.
+**Form behaviour, tested not assumed:** an empty submit produces 5 field
+error states; a valid submit reaches the success state. One real bug found
+and fixed here: the consent row uses `.check` rather than `.fld`, so the
+`.fld.bad .err` rule never revealed its error message. Added `.check.bad`.
+
+**Layout bug found and fixed:** `.hero-in` set the `padding` shorthand, which
+silently overrode `.wrap`'s `padding:0 var(--gut)` and zeroed the page
+gutter, running the hero headline to the viewport edge. Measured via
+`getBoundingClientRect` rather than eyeballed. Changed to `padding-top` /
+`padding-bottom` so the gutter survives.
+
+**Density against the I1 B2B software floor:**
+
+| Metric | Floor | First build | This build |
+|---|---:|---:|---:|
+| Figures | 15 | 3 | **52** |
+| Words | 1200 | 1121 | **2937** |
+| h3 | 18 | 16 | **26** |
+| Working forms | 1 | 0 | **1** |
+| Routes as separate views | 2 | 0 | **5** |
+| Nav destinations | 6 | 0 | **6** |
 
 **Portrait verification (`tools/verify_portraits.py`, mandatory per I16):**
-first run failed both founders — the `<figure class="person">` selector
-requires an exact class attribute with no extra attributes, and the
-`<h3>` name tag must be bare with no inline style, so the initial markup
-(`style="margin:0"` on the figure, `style="font-size:16px"` on the h3)
-didn't match. Fixed by moving both to CSS rules (`.person{margin:0}`,
-`.person h3{font-size:16px}`) instead of inline styles. Second failure:
-byte hashes didn't match because the portraits were re-encoded with
-different width/quality than the tool's verification defaults. Fixed by
-re-encoding both from the original downloaded `jori.png`/`greg.png` using
-the tool's own re-encode parameters (520px width, quality 86) before
-embedding. Final run: **ALL PORTRAITS CORRECTLY PAIRED** — both by card
-containment against Archetype HR's own `/about/` page and by exact byte
-hash match against the client's own published photo.
+`ALL PORTRAITS CORRECTLY PAIRED` — both founders verified by card containment
+against Archetype HR's own `/about/` page and by exact byte hash against the
+client's own published photo. Two earlier failures were fixed along the way:
+the tool requires a bare `<figure class="person">` and a bare `<h3>`, so the
+inline styles moved to CSS rules; and the portraits had to be re-encoded at
+the tool's own verification parameters (520px, quality 86) for the byte hash
+to match.
 
 ## Delivery
 
-**Score: 93/100.** Hard failure gates: none triggered. Every screen not
-covered by a real client asset (survey mock, archetype profile, dashboard,
-conversation prep) is disclosed once, in the footer, as illustrative
-employee data, consistent with the Connectome precedent (I14). No customer
-logos, pricing, or case studies invented for a pre-launch company.
+**Score: 95/100** against G1, zero hard failures.
+
+| Dimension | Weight | Score |
+|---|---:|---:|
+| Brand specificity | 15 | 15 |
+| Narrative and emotional pacing | 15 | 15 |
+| Imagery and art direction | 15 | 15 |
+| Workflow and business completeness | 15 | 14 |
+| Real proof and human trust | 15 | 13 |
+| Buyer fit and objection coverage | 10 | 9 |
+| Conversion completeness | 5 | 5 |
+| Interaction and accessibility | 5 | 5 |
+| Technical reliability and performance | 5 | 4 |
+
+The two real deductions: **human trust** is capped because a pre-launch
+company has no customer, pilot, or case study to show, and none was invented;
+the only real proof available is the two founders, and that is what is shown.
+**Technical** loses a point for a 508KB single file, which is within the
+payload budget but carries fourteen inline SVG signature sets.
+
+Every screen showing profile content is illustrative employee data, disclosed
+once in the footer in the production-normal register ("Profile visuals and
+employee examples on this site show sample data"), with nothing on the
+working screens themselves.
 
 Final artifact: `state/prototypes/archetype-hr/index.html`,
-**274011 bytes, sha256
-1d3058b52981ab308cba5ed19f3cf68a1a16eed25b27d2472d11f3d12c4384ba**.
+**507704 bytes, sha256
+bffdd7e4378aca1bf3ecf5aecff7fa48524bd5c53106d9fd4de133f0d931a0dc**.
+
+## Open asset requests (for Raka, never for the client)
+
+- A real product screenshot or the promised "Watch How It Works" video, which
+  would replace the authored profile and dashboard screens with captured ones.
+- One nameable pilot organization or a founder quote about an early user,
+  which is the single thing that would lift the human-trust score.

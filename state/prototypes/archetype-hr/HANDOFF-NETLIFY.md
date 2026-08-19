@@ -21,13 +21,13 @@ it is tracked before assuming it is missing.
 
 **Verify you have the right file before deploying:**
 
-- byte size: `274011`
-- sha256: `1d3058b52981ab308cba5ed19f3cf68a1a16eed25b27d2472d11f3d12c4384ba`
-- `<title>`: `Archetype HR — See the walkthrough`
+- byte size: `507704`
+- sha256: `bffdd7e4378aca1bf3ecf5aecff7fa48524bd5c53106d9fd4de133f0d931a0dc`
+- `<title>`: `Archetype HR — Engagement happens one person at a time`
 
 ```bash
-stat -c%s state/prototypes/archetype-hr/index.html   # expect 274011
-sha256sum state/prototypes/archetype-hr/index.html   # expect 1d3058b529...
+stat -c%s state/prototypes/archetype-hr/index.html   # expect 507704
+sha256sum state/prototypes/archetype-hr/index.html   # expect bffdd7e437...
 ```
 
 If either value differs, stop and say so rather than deploying.
@@ -43,14 +43,17 @@ Deploy as `index.html` at the site root.
 **After deploying, confirm the deploy is real:**
 
 1. `curl -sI https://astra-archetypehr-prototype.netlify.app` returns `200`.
-2. `curl -s https://astra-archetypehr-prototype.netlify.app | wc -c` matches `274011`.
+2. `curl -s https://astra-archetypehr-prototype.netlify.app | wc -c` matches `507704`.
 3. `curl -s https://astra-archetypehr-prototype.netlify.app | sha256sum` matches the hash above.
 4. The `<title>` on the live URL matches exactly.
-5. Open it and confirm: the step-rail navigation switches between all 5
-   stages (Survey Design, Employee Participation, Analysis & Reporting,
-   Manager Review, Better Conversations), the archetype profile bars render,
-   the manager dashboard table renders with status pills, and both founder
-   photos (Jori Chykerda, Greg Hussey) load correctly in the closing stage.
+5. Open it and confirm: the top nav switches between all 5 routes (Home,
+   How It Works, The Archetype Library, For Managers, Join the Waitlist);
+   the wall of 14 motivation signatures renders on the dark section of the
+   home page; the archetype library gallery renders all 14 forms; the
+   manager dashboard shows a small signature in every table row; the
+   waitlist form shows red error states on an empty submit and reaches the
+   success panel on a valid one; and both founder photos (Jori Chykerda,
+   Greg Hussey) load in the About section of the home route.
 
 **Then report back the live URL plus those check results. Do not send the
 link to Jori yourself** — outreach for this one stays with Raka.
@@ -63,11 +66,14 @@ Jori Chykerda (Co-Founder & CEO, Archetype HR) replied to the original
 prototype offer with "we have already prototyped this. What exactly did
 your team put together?" — Raka's explicit direction was to build something
 "MIND BLOWING" in response, since Jori's own team apparently already built
-something internally. This build is a full interactive walkthrough of
-Archetype HR's own real 5-stage process, centered on one fictional employee
-record end to end, including a real archetype profile screen and manager
-dashboard screen that do not exist anywhere on Archetype HR's live site
-today. Both founder photos are mechanically verified against the client's
+something internally. This is the second build. The first was a competent light SaaS page and
+Raka rejected it as not good enough; re-checked against the spec it tripped
+five hard failures, so it was rebuilt from the art direction up. This
+version is a 5-route site built on a generated "motivation signature"
+system, where every employee is drawn as an organic bloom computed from
+their own profile values, so the wall of 14 distinct forms argues the
+client's own thesis ("engagement happens one person at a time") as an image
+rather than a headline. Both founder photos are mechanically verified against the client's
 own `/about/` page via `tools/verify_portraits.py` (PASS on both). The page
 carries `noindex, nofollow` since it is an unlisted concept for one
 recipient. Full reasoning and the Brand Evidence Pack are in `RATIONALE.md`
