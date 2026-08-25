@@ -89,12 +89,13 @@
     },
     "ctc_Px9CGphf6heWCy7To": {
       "name": "Peter Hurd-Watler",
-      "tier": "WARM",
+      "tier": "NO_ACTION",
       "lastSeenMessageId": "act_dTDZCyxjdiwkYsLnG",
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
       "messageSent": true,
-      "messageSentAt": "2026-08-11T12:50:00Z"
+      "messageSentAt": "2026-08-11T12:50:00Z",
+      "note": "Replied 2026-08-19 confirming an October virtual meet. Raka has it in his calendar. No action needed until October, do not nudge before then."
     },
     "ctc_3F8ptpRnaWSQapFhH": {
       "name": "Saeid Khalafvand",
@@ -304,11 +305,11 @@
     },
     "ctc_mtAHtNJCe4eghc4fv": {
       "name": "Dr. Ragueneau",
-      "tier": "STALLED",
+      "tier": "NO_ACTION",
       "lastSeenMessageId": null,
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
-      "note": "booked a Calendly call for 2026-08-07, call date has passed with no follow-up message either way, needs a check-in nudge, not drafted/sent yet"
+      "note": "CLOSED by Raka 2026-08-19: no further action ever needed. Calendly call was booked for 2026-08-07; handled offline. Do not surface, nudge, or re-open."
     },
     "ctc_GHYSBgrwRuS8LPc7K": {
       "name": "Griet Vanhemel",
@@ -350,12 +351,13 @@
     },
     "ctc_NhEiQEPhE82cjHubv": {
       "name": "Joel Fuente",
-      "tier": "HOT",
+      "tier": "NO_ACTION",
       "lastSeenMessageId": "act_B6nJrZ2dSJBB2Kdxp",
       "lastDigestDate": "2026-08-11",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
       "messageSent": true,
-      "messageSentAt": "2026-08-11T12:50:00Z"
+      "messageSentAt": "2026-08-11T12:50:00Z",
+      "note": "CLOSED by Raka 2026-08-19: no further action ever needed. Call scheduling was handled offline. Do not surface, nudge, or re-open."
     },
     "ctc_Ss5TwBb8WJ7TLh4T6": {
       "name": "Adam Amara",
