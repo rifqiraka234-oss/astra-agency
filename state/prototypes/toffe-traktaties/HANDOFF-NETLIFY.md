@@ -21,13 +21,13 @@ confirm it is tracked before assuming it is missing.
 
 **Verify you have the right file before deploying:**
 
-- byte size: `2019810`
-- sha256: `00ec37851904f77a1635eca599fb6cf30357985de13dd3f70becdba21d5c37bd`
-- `<title>`: `Toffe Traktaties — Originele kant-en-klare traktaties, zelf ontworpen`
+- byte size: `2492541`
+- sha256: `a0247e5111d5f9d24ca74e2d57ead00e1b681acb584a3d3196c80de90da10c7d`
+- `<title>`: `Toffe Traktaties — Kant-en-klare traktaties met naam en leeftijd`
 
 ```bash
-stat -c%s state/prototypes/toffe-traktaties/index.html   # expect 2019810
-sha256sum state/prototypes/toffe-traktaties/index.html   # expect 00ec378519...
+stat -c%s state/prototypes/toffe-traktaties/index.html   # expect 2492541
+sha256sum state/prototypes/toffe-traktaties/index.html   # expect a0247e5111...
 ```
 
 If either value differs, stop and say so rather than deploying.
@@ -43,17 +43,22 @@ Deploy as `index.html` at the site root.
 **After deploying, confirm the deploy is real:**
 
 1. `curl -sI https://astra-toffetraktaties-prototype.netlify.app` returns `200`.
-2. `curl -s https://astra-toffetraktaties-prototype.netlify.app | wc -c` matches `2019810`.
+2. `curl -s https://astra-toffetraktaties-prototype.netlify.app | wc -c` matches `2492541`.
 3. `curl -s https://astra-toffetraktaties-prototype.netlify.app | sha256sum` matches the hash above.
 4. The `<title>` on the live URL matches exactly.
-5. Open it and confirm: the hero product photo loads, the assortment gallery
-   (18 photos) all load, the personalisation photo loads, and every button
-   (Bekijk het assortiment, Iets speciaals nodig, FAQ links, footer links)
-   points to a real toffetraktaties.nl URL, not a dead link.
+5. Open it and confirm: real products with prices show in the first screen
+   (four in the hero, then a grid of 25), the date-and-occasion check tool
+   returns a verdict, the class-size calculator updates the total and the
+   free-shipping bar, all 25 product photos load, and every button points to
+   a real toffetraktaties.nl URL (product, category, shop, cart), not a dead
+   link.
 
-**Then report back the live URL plus those check results. Do not send the
-link to Hein yourself** — outreach for this one stays with Raka. The message
-is already drafted and waiting.
+**This is a redeploy of the same site.** It replaces the previous version at
+`astra-toffetraktaties-prototype.netlify.app` in place, so Hein's existing
+link shows the revised page. Same site name, new content.
+
+**Then report back the live URL plus those check results. Do not send
+anything to Hein yourself** — outreach for this one stays with Raka.
 
 ---8<--- PROMPT ENDS ---8<---
 

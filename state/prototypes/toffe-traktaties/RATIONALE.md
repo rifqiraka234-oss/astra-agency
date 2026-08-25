@@ -348,3 +348,91 @@ Accessibility held through the change: contrast checked on every new colour
 pairing, all rotation and marquee motion disabled under
 `prefers-reduced-motion`, focus ring strengthened to a 3px magenta outline,
 and confetti layers are `pointer-events:none` and `aria-hidden`.
+
+---
+
+## Build 2 — webshop redesign on Hein's own feedback (2026-08-19)
+
+Hein replied to the sent link (2026-08-19, translated): *"You've found
+something really valuable in our positioning. But I don't want it as a
+replacement for our webshop, more as reinforcement. In general the prototype
+feels like you approach the site as a marketing website rather than a webshop.
+I think the user need has to be the products first, rather than a brand story
+first ;). In the end that's not what our visitors come there for, definitely
+not on the homepage."*
+
+He was not just expressing a preference, he was measurably right. Rendering
+build 1 and counting:
+
+| | Build 1 (rejected) | Live site | Build 2 |
+|---|---|---|---|
+| First product on the page | never (mood board, 0 buyable products) | 24% down | **1% (4 cards in first screen)** |
+| First price shown | none | present | **8% down** |
+| Design story starts at | 1% (the whole opening) | 60% | **73% (demoted to reason-to-choose)** |
+| Links into the real shop | 0 | many | **51** |
+
+Build 1's second section headline was literally *"Eerst een idee. Dan pas een
+bestelling."* (First an idea, then an order), which is exactly the philosophy
+he rejected.
+
+### The synthesis, not a capitulation
+
+A bare product grid is what made him look like every other traktatie shop,
+which was the original valid insight. So the answer is neither story-first nor
+a naked grid: **put the design story ON the products, and open with the two
+questions a customer actually arrives with (when do you need it, what is the
+occasion).** The "zelf ontworpen label" and "naam & leeftijd" hooks now ride
+as badges on every product card rather than as a preamble.
+
+### What changed structurally
+
+- **Products-first hero.** Four real products with prices sit beside a
+  date-and-occasion finder, on screen immediately, desktop and mobile.
+- **A finder, not a brand essay.** The opening tool serves product intent: a
+  treat-date check that runs Hein's own dispatch rules (3 werkdagen, ships a
+  week before the traktatiedatum, spoed goes to WhatsApp) and returns one of
+  four honest verdicts. This is product-finding furniture, so it satisfies
+  "products first" while still being distinctive.
+- **Occasion navigation**, the real mental model (people shop by gelegenheid,
+  not by product), mapped to his 8 real categories with live counts.
+- **A 25-product grid** with real names, real prices (EUR 1,30 to 3,50), real
+  stock (2 items shown sold out, surfaced early instead of at checkout), all
+  linking to the real product pages.
+- **A class-size calculator** that hits his real EUR 70 free-shipping
+  threshold, the single most useful number for a parent buying for a class of
+  ~28. Verified: 28 x 1,75 = EUR 49,00, bar at 70%, "nog EUR 21,00"; 45 units
+  crosses to "gratis verzending".
+- **A delivery-certainty section**, because "op tijd" is the real anxiety for
+  a birthday, built from his own shipping page verbatim.
+- **The design story demoted** to a "waarom deze traktaties er anders uitzien"
+  reason-to-choose block at 73%, keeping the round personalised-sticker motif
+  and the founders (Hein and Lindsay), which is exactly the *versterking* he
+  asked for.
+
+Art direction (confetti palette sampled from his product photography, round
+sticker as the governing shape, DM Sans + Quicksand) carried over unchanged.
+He never said it looked bad, he criticised structure, so the information
+architecture was rebuilt and the craft kept.
+
+### QA
+
+All automated gates pass at desktop/tablet/mobile and under forced font
+fallback: 28 images, zero broken, zero aspect distortion, zero horizontal
+overflow, no console errors, no scaffolding language, no en/em dashes in body
+copy. Both interactive tools verified (all four date verdicts fire, calculator
+math and free-shipping logic correct). Page renders fully with JavaScript
+disabled (the finder and calculator are progressive enhancements over a
+complete static shop).
+
+### Delivery
+
+Redeploys in place to the same site, `astra-toffetraktaties-prototype`, so
+Hein's existing link shows the revised page.
+
+Final artifact: `state/prototypes/toffe-traktaties/index.html`,
+**2,492,541 bytes, sha256
+a0247e5111d5f9d24ca74e2d57ead00e1b681acb584a3d3196c80de90da10c7d**.
+Score revised to **95/100** (workflow completeness and buyer-fit each +1: a
+real product grid with prices, stock, occasion routing, a shipping-date tool
+and a class calculator close the two gaps the marketing-page version left
+open).
