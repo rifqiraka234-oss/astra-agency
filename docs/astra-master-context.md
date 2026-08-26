@@ -232,6 +232,26 @@ specific and verified, never a generic filler. If it doesn't fit in 65
 words with every clause earning its place, trim the cost-of-inaction clause
 first, the opener and the "sketched" clause carry the most weight.
 
+**Open like a human who actually looked (Raka, 2026-08-19).** The first line
+is a real person reacting to their work, not a formal set-up: *"I saw
+[company] does [specific real thing], really cool"* / *"that's interesting"*
+/ *"nice"* / *"vet werk"*. Lead with the genuine, specific observation and a
+plain casual reaction, then the "wat me opviel / one thing I noticed"
+problem, then the offer. Read every draft aloud: if a sentence sounds like a
+brochure or a chatbot ("verzorgt de vastgoedmedia", "runs programmes at the
+intersection of"), rewrite it the way you'd actually message another owner.
+Use "we sketched / we put together" (the agency, but human and first-person),
+not the stiff "our agency sketched a homepage that opens with…".
+
+**Match the lead's existing language (Raka, 2026-08-19).** Before drafting,
+look at what language was actually sent to this specific lead and what
+language the thread is in, and stay consistent — do not switch English to
+Dutch or back mid-conversation. The connection note in the v0.1 campaign went
+out in English to everyone, so a lead whose thread is still English stays
+English unless we already switched them to their own language earlier in the
+thread. When in doubt, match the language of the most recent real message in
+that thread.
+
 **The opener always names a website problem and offers a prototype
 (Raka, 2026-08-19, live instruction, outranks older nuance).** Every
 post-acceptance first message follows the template above: name a specific,
