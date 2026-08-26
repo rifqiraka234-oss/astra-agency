@@ -436,3 +436,80 @@ Score revised to **95/100** (workflow completeness and buyer-fit each +1: a
 real product grid with prices, stock, occasion routing, a shipping-date tool
 and a class calculator close the two gaps the marketing-page version left
 open).
+
+---
+
+## Build 3 — art direction taken further (2026-08-19)
+
+Raka, after seeing build 2: *"it still looks cheap... his website looks cheap.
+We want the art side to be a wild factor, not just a redesign of what they had.
+Take it further. Look at other shops online."* Build 2 fixed the structure
+(products first) but inherited the client's visual register, which reads
+homemade.
+
+### Reference studied
+
+Tony's Chocolonely (Dutch, same market, the benchmark for bold-but-premium
+confectionery). The load-bearing lesson, confirmed by fetching the live site:
+**premium reads as confident restraint, not more decoration.** Cream-dominant
+ground, four or five rich colours, one bold characterful display face,
+generous whitespace, and colour used strategically *behind* products rather
+than saturating the layout. Our build 1 and 2 cheapness came from the
+opposite: scattered CSS confetti sprinkles, a saturated process-cyan button,
+and amateur photos sitting raw on plain white cards.
+
+### The moves
+
+1. **Colour-blocked product tiles (the single biggest lever).** Every product
+   photo now sits inset, with generous padding, on a solid candy-colour field.
+   The busy wood-and-confetti backgrounds are contained inside a clean colour
+   frame, so 25 inconsistent amateur photos become one bold, rhythmic,
+   *designed* grid. This is the technique premium candy brands use to make
+   humble product shots look intentional.
+2. **A category colour system.** Each occasion owns a candy colour (verjaardag
+   raspberry, juf-en-meester mint, afscheid sky, geboorte sun, kinderfeestjes
+   grape, sanrio coral). The occasion tiles are bold colour blocks; the grid
+   rotates the same disciplined six so no two neighbours match. Colour now
+   *means* something (I5 nomenclature), it is not scatter.
+3. **Characterful display type.** Replaced Quicksand (generic rounded) with
+   **Fraunces** at its soft, slightly wonky optical settings, a soft-serif
+   with real personality that reads playful and premium at once, paired with
+   DM Sans for body. A raspberry italic Fraunces accent ("de naam") gives the
+   hero a designed, editorial signature.
+4. **Restrained rich palette.** Cream paper dominant, navy ink, candy tones
+   only as fields, and a single warm raspberry for CTAs. The neon cyan is
+   gone. Buttons are navy or raspberry, never process-bright.
+5. **Removed the cheap tells.** No scattered confetti sprinkles, no bright-cyan
+   buttons, no thin-bordered white cards. Added one restrained scallop motif
+   (echoing their round personalised sticker) and a clean drawn "100% zelf
+   getekend" badge on the hero product.
+6. **Kept everything build 2 earned.** Products-first is untouched: first
+   product at 1 percent, 24 prices on the page, 50 links into the real shop,
+   the treat-date checker, the class-size/free-shipping calculator, delivery
+   certainty, and the design story still demoted to 74 percent.
+
+### QA
+
+All gates pass at desktop, tablet, mobile, and under forced font fallback: 28
+images, zero broken, zero aspect distortion, zero horizontal overflow, no
+console errors, no scaffolding language, no en/em dashes in body copy. Both
+interactive tools verified (four date verdicts fire; calculator math and the
+free-shipping bar correct, euro rendering fixed after an escape-sequence bug).
+Renders fully with JavaScript disabled.
+
+### Delivery
+
+Redeploys in place to `astra-toffetraktaties-prototype`.
+Final artifact: `state/prototypes/toffe-traktaties/index.html`,
+**2,878,489 bytes, sha256
+beff5b7ada656d6d9a9fd6ba810340aeab68d042fe590cf7da995ebec1343ec1**.
+Score **96/100** (art direction and brand specificity now max; the remaining
+gap is real founder photography, still an open asset request).
+
+### Note on the reference-screenshot request
+
+Raka asked to look at other shops and take screenshots. This build session's
+Chromium cannot reach external hosts (curl-only egress), so live competitor
+pages cannot be screenshotted here; the reference was studied via its served
+HTML and design write-ups instead, and the direction is grounded in that plus
+the confectionery-design canon (Tony's Chocolonely, Sugarfina, Papabubble).

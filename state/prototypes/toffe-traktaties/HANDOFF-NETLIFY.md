@@ -21,13 +21,13 @@ confirm it is tracked before assuming it is missing.
 
 **Verify you have the right file before deploying:**
 
-- byte size: `2492541`
-- sha256: `a0247e5111d5f9d24ca74e2d57ead00e1b681acb584a3d3196c80de90da10c7d`
+- byte size: `2878489`
+- sha256: `beff5b7ada656d6d9a9fd6ba810340aeab68d042fe590cf7da995ebec1343ec1`
 - `<title>`: `Toffe Traktaties — Kant-en-klare traktaties met naam en leeftijd`
 
 ```bash
-stat -c%s state/prototypes/toffe-traktaties/index.html   # expect 2492541
-sha256sum state/prototypes/toffe-traktaties/index.html   # expect a0247e5111...
+stat -c%s state/prototypes/toffe-traktaties/index.html   # expect 2878489
+sha256sum state/prototypes/toffe-traktaties/index.html   # expect beff5b7ada...
 ```
 
 If either value differs, stop and say so rather than deploying.
@@ -43,7 +43,7 @@ Deploy as `index.html` at the site root.
 **After deploying, confirm the deploy is real:**
 
 1. `curl -sI https://astra-toffetraktaties-prototype.netlify.app` returns `200`.
-2. `curl -s https://astra-toffetraktaties-prototype.netlify.app | wc -c` matches `2492541`.
+2. `curl -s https://astra-toffetraktaties-prototype.netlify.app | wc -c` matches `2878489`.
 3. `curl -s https://astra-toffetraktaties-prototype.netlify.app | sha256sum` matches the hash above.
 4. The `<title>` on the live URL matches exactly.
 5. Open it and confirm: real products with prices show in the first screen
