@@ -232,18 +232,39 @@ specific and verified, never a generic filler. If it doesn't fit in 65
 words with every clause earning its place, trim the cost-of-inaction clause
 first, the opener and the "sketched" clause carry the most weight.
 
-**Preferred wording:** "I had a look at…", "from what I understand…", "one
-thing that stood out…", "however…", "this may make it harder for…", "a
-clearer homepage direction", "a concept showing what we mean", "our agency
-sketched…", "Want me to send it?", "Shall I send the sketch?", "Want the
-one-pager?", "send a mock homepage" (when that's the actual artifact).
+**The opener always names a website problem and offers a prototype
+(Raka, 2026-08-19, live instruction, outranks older nuance).** Every
+post-acceptance first message follows the template above: name a specific,
+real problem with *their website* and offer to send a prototype/mock
+homepage. Do not soften a warm lead into a no-pitch relationship opener,
+and do not decide a site is "too strong to critique" and skip the offer —
+every site has a real, specific weak point, so find the honest one and lead
+with it. The one hard limit is the no-fabrication rule: the problem must be
+something actually verified on their live site (fetch it and confirm before
+sending), never invented to fit the template. "Strong site" means look
+harder for the real gap (missing proof, service-menu instead of outcome,
+mission-first with no concrete offer, no pricing, buried credibility), not
+send a weaker message.
 
-**Avoid:** "I took a proper look", "I did a deep dive", empty praise ("I was
-blown away", "amazing business"), "website journey", "game-changing",
-"revolutionise", "unlock your potential", "seamless ecosystem", "move the
-needle", "how your website should look", generic AI slogans, overconfident
-claims about the founder's priorities, jumping straight to a sales call when
-sending the concept is the easier next step.
+**Preferred wording:** "I had a look at…", "from what I understand…",
+"however…", "this may make it harder for…", "a clearer homepage direction",
+"a concept showing what we mean", "our agency sketched…", "Want me to send
+it?", "Shall I send the sketch?", "Want the one-pager?", "send a mock
+homepage" (when that's the actual artifact).
+
+**Avoid (cheesy or AI-flavoured phrasing, Raka 2026-08-19):** "I took a
+proper look", "I did a deep dive", empty praise ("I was blown away",
+"amazing business"), and the AI-tell adjectives and phrases specifically:
+"stood out" / "really stood out", "spectacular", "genuinely distinctive" /
+"distinctive", "truly", "seamlessly", "not the easiest thing to make
+tangible", "at the intersection of", "in today's world", "elevate", "level
+up", "supercharge", "website journey", "game-changing", "revolutionise",
+"unlock your potential", "seamless ecosystem", "move the needle", "how your
+website should look", generic AI slogans, overconfident claims about the
+founder's priorities, jumping straight to a sales call when sending the
+concept is the easier next step. A human business owner would not write
+these; read every draft aloud and cut anything that sounds like a template
+or a chatbot.
 
 **Business outcome / cost of inaction:** the message should answer "so
 what?" — comprehension, trust, conversion, enquiry quality, booking

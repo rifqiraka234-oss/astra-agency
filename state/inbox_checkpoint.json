@@ -559,6 +559,22 @@
       "lastDigestDate": "2026-08-18",
       "campaignId": "cam_PryZp5LuvQv8NznHh",
       "note": "bumped 18 Aug"
+    },
+    "ctc_oevcdGGWqTNzAY2br": {
+      "name": "Tijs Overeijnder",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_ZnWcbtGSFKnEnhQJS",
+      "lastDigestDate": "2026-08-19",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "FlyVision, silent-accepted (Yesss 6/6). Opener sent 2026-08-19 naming missing social proof, offered mock homepage. Awaiting reply; if yes, build prototype."
+    },
+    "ctc_X7hCEQ94f9iz5B9y8": {
+      "name": "Alexandria Cameron",
+      "tier": "WARM",
+      "lastSeenMessageId": "act_EGtRSy9emNRzgLt4H",
+      "lastDigestDate": "2026-08-19",
+      "campaignId": "cam_PryZp5LuvQv8NznHh",
+      "note": "East to West, silent-accepted (3/6). Opener sent 2026-08-19 naming mission-first homepage with no concrete offer, offered mock homepage. Awaiting reply; if yes, build prototype."
     }
   }
 }
