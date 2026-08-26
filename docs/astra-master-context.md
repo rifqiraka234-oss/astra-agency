@@ -206,6 +206,14 @@ sound like a solo freelancer. Every word must add value. Show useful
 thinking before asking for time. A slightly "roasty" critique is fine when
 accurate and empathetic — never insult the founder or the existing site.
 
+**Punctuation guardrails (hard, same weight as the no-dash rule; Raka
+2026-08-19):** never use a colon (`:`) anywhere in an outreach message, and
+never use hyphens, en dashes, or em dashes. Both read as machine-written.
+Rewrite around them: instead of "One thing I noticed: X", write "One thing I
+noticed, X" or split into two sentences. A colon inside a URL the message
+links to is fine (it is part of the link, not prose); the ban is on colons
+in the message text itself.
+
 **Preferred rhythm:** thank them for connecting when appropriate → state
 what ASTRA understands about the business → one or two specific observations
 → introduce a concrete ASTRA direction → connect it to a realistic outcome →
