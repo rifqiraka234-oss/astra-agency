@@ -280,6 +280,39 @@ send a weaker message.
 it?", "Shall I send the sketch?", "Want the one-pager?", "send a mock
 homepage" (when that's the actual artifact).
 
+### Follow-up psychology, honest FOMO and loss aversion (Raka, 2026-08-19)
+
+Nudges convert better when they use real persuasion pressure, not fake
+urgency. Kahneman and Tversky showed a loss is felt about twice as hard as
+the equivalent gain, and Cialdini's scarcity principle raises perceived
+value only when the scarcity is believable. Use these three honest levers,
+and only these:
+
+- **Loss aversion / cost of inaction, in the present tense.** Frame what
+  they are losing *right now* by leaving it, not what they might gain.
+  "Every week it stays like this, the funders who would have got it are
+  piecing the model together themselves" beats "this would help funders."
+  Make the loss concrete and ongoing (visitors bouncing, enquiries walking
+  out, months of funding slipping), and true to what was actually verified.
+- **The endowment effect.** The prototype already exists and was built for
+  them. Say so, plainly, "it is already built and sitting there", "it is
+  yours to keep either way". People weigh losing something that is already
+  theirs more heavily than acquiring something new, so a decline should feel
+  like walking away from an asset, not passing on an offer.
+- **Honest scarcity of our attention.** The one true deadline we own is our
+  own capacity and follow-up. "I am about to move on to the next builds this
+  week", "this is the last time I will bring it up", "before I close this
+  out". This is real (we do stop chasing), so it is fair to say. It also
+  creates a Zeigarnik open loop, a small unfinished-decision itch, which a
+  frictionless "yes or no is fine either way" then closes.
+
+**Never fabricate scarcity.** No invented deadlines, no "only a couple of
+spots left", no "a competitor in your space just signed with us", no fake
+"other people are viewing this". These are lies, they break the
+no-fabrication rule, and a sharp founder spots them instantly, which costs
+more trust than the nudge was ever worth. Real loss, real ownership, real
+limits on our time. Nothing invented.
+
 **Avoid (cheesy or AI-flavoured phrasing, Raka 2026-08-19):** "I took a
 proper look", "I did a deep dive", empty praise ("I was blown away",
 "amazing business"), and the AI-tell adjectives and phrases specifically:
