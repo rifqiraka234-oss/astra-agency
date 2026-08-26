@@ -1,22 +1,25 @@
 {
-  "lastRunAt": "2026-08-26T09:15:00.000Z",
+  "lastRunAt": "2026-08-26T17:15:00.000Z",
   "lastActivityIdSeen": {
     "ctc_WsnoLFkpGct27mLbz": "act_63SysA9Lrn8SFNLfm",
     "ctc_Roay3mSCp4ztAot4y": "act_pWizk86WXJ9mY7mcK",
     "ctc_EtNB7gamNJSdWbGKq": "act_iLo7haAfmHToE9E6A",
-    "ctc_b5SM2pR7aSdRRzM69": "act_rir7xmroi93ij4Xsp",
-    "ctc_piBZeydFpN4KiBeky": "act_fzWhJnbHEsQ6XPFoq",
+    "ctc_b5SM2pR7aSdRRzM69": "act_esSJxDG64xSYCzqgD",
+    "ctc_piBZeydFpN4KiBeky": "act_g6dF8jhbEJzLFnZ3g",
     "ctc_ZsXsvh3xwxo6xt79K": "act_mq6tawwiReMEzXaPT",
     "ctc_qm7h5xSbSnjHKxXXr": "act_axyEcnPZfTKTNJmhi",
-    "ctc_YhyuAwqYsq9TQTmEQ": "act_rvWFje3B8yzHbTWPE",
+    "ctc_YhyuAwqYsq9TQTmEQ": "act_FKvsk8NDM6R6trt7t",
     "ctc_hJaPmPiMoi4Hfm6G7": "act_uNhiihhzWKupECeQQ",
     "ctc_iaZXHL7R4ucKaGcFP": "act_G2ApBHgk42ycMYPiD",
     "ctc_3zernevCcEEPy2pDL": "act_5fGDrtBNR8uFqncu7",
     "ctc_Px9CGphf6heWCy7To": "act_zhrB6fBXAna2du5Qy",
     "ctc_8BQArSGfebNrTk72j": "act_HFhr6zgSuBjZtdBcP",
-    "ctc_wi8FEjzHKH9dhNFZ9": "act_xefdrvmR3EGaN5gu7",
+    "ctc_wi8FEjzHKH9dhNFZ9": "act_SHMxc8ucApKKoTDvp",
     "ctc_oevcdGGWqTNzAY2br": "act_Lj2jwoyFiKQoPpkRv",
-    "ctc_X7hCEQ94f9iz5B9y8": "act_xvRRyXK8wXDRnHfrM"
+    "ctc_X7hCEQ94f9iz5B9y8": "act_xvRRyXK8wXDRnHfrM",
+    "ctc_QiQSe5GFnbAPXgLEE": "act_iWrMP5Ynsd5BH2GiP",
+    "ctc_mf9cNTPBT92Ybqg9r": "act_KMYZPE3bzEmPaKSrc",
+    "ctc_qiJ2ccpxRci3ajkLG": "act_39NAp9rTZMZwR534t"
   },
-  "totalConversationsProcessed": 71
+  "totalConversationsProcessed": 78
 }
