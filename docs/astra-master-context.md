@@ -317,7 +317,8 @@ limits on our time. Nothing invented.
 proper look", "I did a deep dive", empty praise ("I was blown away",
 "amazing business"), and the AI-tell adjectives and phrases specifically:
 "stood out" / "really stood out", "spectacular", "genuinely distinctive" /
-"distinctive", "truly", "seamlessly", "not the easiest thing to make
+"distinctive", "strong" / "genuinely strong" / "a strong idea" / "reads
+sharp" (as empty praise), "truly", "seamlessly", "not the easiest thing to make
 tangible", "at the intersection of", "in today's world", "elevate", "level
 up", "supercharge", "website journey", "game-changing", "revolutionise",
 "unlock your potential", "seamless ecosystem", "move the needle", "how your
@@ -326,6 +327,36 @@ founder's priorities, jumping straight to a sales call when sending the
 concept is the easier next step. A human business owner would not write
 these; read every draft aloud and cut anything that sounds like a template
 or a chatbot.
+
+**Pain agitation, done honestly (the neuroscience, Raka 2026-08-26).** The
+amygdala processes a potential loss faster and roughly twice as hard as the
+equivalent gain, but only when the loss is concrete, present tense and
+specific. Abstract benefit ("this would help you get more clients") does not
+fire it; a vivid, ongoing, named loss does. So the core of every opener is
+one real problem, named plainly, then briefly *agitated* so they feel the
+cost of it continuing, then relieved by the concept. This is the
+Problem, Agitate, Solve shape, kept short and true.
+
+- **Name the problem as an on-site observation, not a verdict.** Open the
+  critique with "One thing I saw on the website is [X]" or "Wat me opviel op
+  de site is [X]". It reads as a person who actually looked, not a pitch. It
+  is also lower ego threat, so the defence goes down and the point lands.
+- **Agitate the real cost, in the present tense, then stop.** One sentence
+  that makes the loss concrete and continuous: who is bouncing, what they
+  assume, what walks out the door *right now* because of that gap, and that
+  the owner never sees it happen. "Right now someone comparing you to another
+  agency hits that section, sees no proof, and quietly closes the tab, and
+  you never find out they were there." Do not pile on, one vivid loss beats
+  three vague ones, and over-agitating a small problem reads as manipulative.
+- **Let them draw the conclusion (self-persuasion).** A light rhetorical
+  turn ("so the visitors who were almost there never say anything, they just
+  leave") makes the reader finish the thought themselves, which persuades far
+  harder than us asserting it. Use once, not as a gimmick.
+- **Every pain claim must be something actually verified on their live
+  site.** Agitation amplifies a real problem; it never invents one. If the
+  site is genuinely good with no honest gap, there is no pain to agitate,
+  mark it NO_STRONG_ANGLE and move on rather than manufacturing hurt. Forced
+  pain on a good business is both a lie and an insult.
 
 **Business outcome / cost of inaction:** the message should answer "so
 what?" — comprehension, trust, conversion, enquiry quality, booking
