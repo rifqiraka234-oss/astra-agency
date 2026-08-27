@@ -1,5 +1,5 @@
 {
-  "lastRunAt": "2026-08-26T17:15:00.000Z",
+  "lastRunAt": "2026-08-27T17:00:00.000Z",
   "lastActivityIdSeen": {
     "ctc_WsnoLFkpGct27mLbz": "act_63SysA9Lrn8SFNLfm",
     "ctc_Roay3mSCp4ztAot4y": "act_pWizk86WXJ9mY7mcK",
@@ -18,8 +18,19 @@
     "ctc_oevcdGGWqTNzAY2br": "act_Lj2jwoyFiKQoPpkRv",
     "ctc_X7hCEQ94f9iz5B9y8": "act_xvRRyXK8wXDRnHfrM",
     "ctc_QiQSe5GFnbAPXgLEE": "act_iWrMP5Ynsd5BH2GiP",
-    "ctc_mf9cNTPBT92Ybqg9r": "act_KMYZPE3bzEmPaKSrc",
-    "ctc_qiJ2ccpxRci3ajkLG": "act_39NAp9rTZMZwR534t"
+    "ctc_mf9cNTPBT92Ybqg9r": "act_JPkLchKFHvhtr5apw",
+    "ctc_qiJ2ccpxRci3ajkLG": "act_39NAp9rTZMZwR534t",
+    "ctc_o8A44WWfu5mvyKmyf": "act_jH38N5kfnQTnnSpvD",
+    "ctc_9Hpad8cD3gAX4KA3Z": "act_KWnDyP9Gao57Xunhr",
+    "ctc_h2z4NX4fAYvBpNPsh": "act_4m7RsDtp7LddazEje",
+    "ctc_8gvdTcTEsfk2MHbcF": "act_EWeDKW5seFpEDPArJ",
+    "ctc_KrAFP3esh4PjKjomW": "act_jymncmvfW5WWS8KBR",
+    "ctc_i3AxTPi65YoLmnM2v": "act_CtYehk7AYCugZFQeQ",
+    "ctc_xTFQ2QiYLWoZ9nrhM": "act_L39rPFCqAr5ZrWnSa",
+    "ctc_df3ZKhrBxMbzT87Q9": "act_iaoJThfJM2vgRyA24",
+    "ctc_JtZ4SfgRGC5jQmARa": "act_cmSXQv6vPGsdNDyu5",
+    "ctc_rXjjRxEfNNkCQFcEy": "act_EYFtvdBxanYf4my3B",
+    "ctc_GHYSBgrwRuS8LPc7K": "act_FC6cgJDsr46JRyFK2"
   },
-  "totalConversationsProcessed": 78
+  "totalConversationsProcessed": 79
 }
