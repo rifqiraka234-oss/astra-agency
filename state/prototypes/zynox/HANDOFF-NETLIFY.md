@@ -18,13 +18,13 @@ so a fresh clone of that branch contains it. If it seems missing, run
 
 **Verify you have the right file before deploying:**
 
-- byte size: `1412285`
-- sha256: `e893db5e35a03c9c5732ec8403564a462731f5e30b0091c69f0861fb932ae8a8`
+- byte size: `1423385`
+- sha256: `6c915ba41cca5603116fdf4814de18871d4fcb474d5adb9fa51be603634eedfc`
 - `<title>`: `Zynox — CNC draai- en freesmachines, tot op de micron`
 
 ```bash
-stat -c%s state/prototypes/zynox/index.html   # expect 1412285
-sha256sum state/prototypes/zynox/index.html   # expect e893db5e35...
+stat -c%s state/prototypes/zynox/index.html   # expect 1423385
+sha256sum state/prototypes/zynox/index.html   # expect 6c915ba41c...
 ```
 
 If either value differs, stop and say so rather than deploying.
@@ -40,14 +40,15 @@ Deploy as `index.html` at the site root.
 **After deploying, confirm the deploy is real:**
 
 1. `curl -sI https://astra-zynox-prototype.netlify.app` returns `200`.
-2. `curl -s https://astra-zynox-prototype.netlify.app | wc -c` matches `1412285`.
+2. `curl -s https://astra-zynox-prototype.netlify.app | wc -c` matches `1423385`.
 3. `curl -s https://astra-zynox-prototype.netlify.app | sha256sum` matches the hash.
 4. The `<title>` on the live URL matches exactly.
-5. Open it and confirm: the dark machine-hall hero loads, the catalog shows
-   18 machines with real specs and "Prijs op aanvraag" (no €0,00), the
+5. Open it and confirm: the hero shows the live animated toolpath cutting a
+   part with the machine-controller HUD (X/Y/Z/FEED/RPM) ticking, the catalog
+   shows 18 machines with real specs and "Prijs op aanvraag" (no €0,00), the
    category filter works, clicking "Bekijk machine" opens a machine-detail
-   view with a full spec table, and the offerte form validates and shows a
-   success state.
+   view with a full spec table, the tolerance rotary dial indexes, and the
+   offerte form validates and shows a success state.
 
 **Then report back the live URL plus those check results.** Outreach to Cas
 Maasakkers (the lead) stays with Raka / the session driving his thread.

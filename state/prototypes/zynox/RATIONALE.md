@@ -164,3 +164,28 @@ Deploy to Netlify site `astra-zynox-prototype`, verify 200 + byte size + hash
 + title live, then a Dutch send-note to Cas (active-interest tone: he already
 said "ik ben benieuwd") that references the €0,00 fix implicitly and steers
 toward a short call. No dashes/colon in the outreach text.
+
+## Motion elevation (2026-08-27, "100 people made this" pass, Raka directive)
+Raka challenged this build to the same WOW/motion bar as HotGreen. Added,
+authentic to CNC (not a copy of HotGreen's thermal concept):
+- **Live machining hero** — a canvas toolpath simulator: a real part program
+  (rounded-rect profile + centre pocket + four holes) is cut in real time,
+  with rapid vs cutting moves, a glowing red cut trail, flying chips, and a
+  tool crosshair, over a darkened real-machining photo + coordinate grid.
+- **Machine-controller HUD** — a live DRO panel (X/Y/Z + FEED + RPM) that
+  tracks the tool position in mm; the nav DRO ticks with it.
+- **Scroll = Z depth** — a fixed depth spine (Z 0 to 120, "DIEPTE") whose
+  marker plunges as you scroll, and the nav Z reads depth once past the hero.
+- **Rotary indexing dial** — in the Tolerances section, an SVG rotary table
+  that indexes in discrete steps, matching the Z-H500's arc-second story.
+- **Count-ups** (35+, 96, 2650 N·m), **subtle card tilt** on the catalog
+  plates, magnetic button lift.
+All guarded: `prefers-reduced-motion` renders a static full toolpath outline
+and disables tilt/dial/counters-animation; no-JS keeps every section and all
+18 machines readable; canvas is DPR-capped and paused off-screen / when the
+tab is hidden. Re-QA after the pass: overflow-X 0 at all three widths, 0
+broken images, 0 console errors (incl. reduced-motion), filter/detail/form
+intact, no-JS full render. New score ~93 (art direction and interaction both
+up a notch; human-trust unchanged).
+File updated: bytes 1423385, sha256
+6c915ba41cca5603116fdf4814de18871d4fcb474d5adb9fa51be603634eedfc.

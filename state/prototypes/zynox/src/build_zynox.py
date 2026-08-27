@@ -215,8 +215,42 @@ p{margin:0}
 .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--line)}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.05) contrast(1.05)}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,32,.55) 0%,rgba(7,11,32,.35) 40%,rgba(7,11,32,.94) 100%),linear-gradient(90deg,rgba(7,11,32,.7),transparent 55%)}
-.grid-ov{position:absolute;inset:0;z-index:1;background-image:linear-gradient(var(--tick) 1px,transparent 1px),linear-gradient(90deg,var(--tick) 1px,transparent 1px);background-size:64px 64px;opacity:.10;mask-image:radial-gradient(120% 90% at 20% 90%,#000 30%,transparent 78%)}
+.hero-bg img{filter:saturate(.7) contrast(1.03) brightness(.55)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,32,.72) 0%,rgba(7,11,32,.6) 40%,rgba(7,11,32,.96) 100%),linear-gradient(90deg,rgba(7,11,32,.86),rgba(7,11,32,.35) 62%)}
+#mach{position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none}
+.grid-ov{position:absolute;inset:0;z-index:1;background-image:linear-gradient(var(--tick) 1px,transparent 1px),linear-gradient(90deg,var(--tick) 1px,transparent 1px);background-size:64px 64px;opacity:.12;mask-image:radial-gradient(130% 100% at 30% 60%,#000 34%,transparent 82%)}
+/* machine controller HUD */
+.hud{position:absolute;right:var(--gutter);top:104px;z-index:3;font-family:var(--mono);border:1px solid var(--line);background:rgba(6,10,26,.72);backdrop-filter:blur(6px);padding:14px 16px;min-width:186px;box-shadow:0 20px 60px -30px rgba(0,0,0,.9)}
+.hud-top{font-size:9.5px;letter-spacing:.24em;color:var(--red2);margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.hud-top::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 8px var(--red);animation:blink 1.4s steps(1) infinite}
+@keyframes blink{50%{opacity:.25}}
+.hud-row{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:3px 0}
+.hud-row span{font-size:12px;color:var(--mut)}
+.hud-row b{font-size:16px;font-weight:600;color:#eaf0ff;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.hud-row.sm b{font-size:12.5px;color:#9fe6b4}
+.hud-sep{height:1px;background:var(--line);margin:9px 0}
+@media(max-width:820px){.hud{display:none}}
+/* depth spine (scroll = Z) */
+.spine{position:fixed;right:12px;top:0;bottom:0;width:30px;z-index:35;pointer-events:none}
+.spine .tr{position:absolute;top:16vh;bottom:16vh;left:50%;transform:translateX(-50%);width:2px;background:repeating-linear-gradient(180deg,var(--tick) 0 1px,transparent 1px 10px)}
+.spine .mk{position:absolute;left:50%;transform:translate(-50%,-50%);width:11px;height:11px;border:2px solid var(--red);border-radius:50%;background:var(--ink);top:16vh;box-shadow:0 0 12px var(--red)}
+.spine .lb{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;color:var(--mut)}
+.spine .lb.t{top:calc(16vh - 18px)}.spine .lb.b{bottom:calc(16vh - 18px)}
+.spine .zv{position:absolute;left:calc(50% + 12px);transform:translateY(-50%);white-space:nowrap;font-family:var(--mono);font-size:9px;color:var(--red2);top:16vh}
+@media(max-width:1180px){.spine{display:none}}
+/* magnetic button lift */
+.btn-lg{transition:transform .18s ease,background .16s,border-color .16s,box-shadow .18s}
+.btn-red.btn-lg:hover{transform:translateY(-2px);box-shadow:0 14px 34px -14px rgba(227,29,37,.6)}
+/* card hover motion */
+.mc{transition:transform .22s cubic-bezier(.2,.7,.2,1),border-color .18s,box-shadow .18s}
+.mc:hover{transform:translateY(-5px)}
+.mc:hover .mc-img{transform:scale(1.04)}
+.mc-img{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.mc:hover .mc-tick{opacity:1}
+.mc-tick{opacity:.55;transition:opacity .2s}
+/* rotary indexing dial (tolerance) */
+.dial{width:100%;max-width:220px;margin:0 auto 6px;display:block}
+.dial .idx{transform-origin:110px 110px}
 .hero-in{position:relative;z-index:2;padding-block:44px 54px;width:100%}
 .hero-tag{display:flex;align-items:center;gap:14px;margin-bottom:26px}
 .hero-tag .ln{height:1px;width:52px;background:var(--red)}
@@ -449,6 +483,7 @@ HTML = f'''<!doctype html>
 </head>
 <body>
 <script>document.documentElement.className='js';</script>
+<div class="spine" aria-hidden="true"><div class="tr"></div><span class="lb t">Z 0</span><span class="mk" id="spineMk"></span><span class="zv" id="spineZ">Z 0.0</span><span class="lb b">DIEPTE</span></div>
 
 <!-- NAV -->
 <header class="nav" id="nav">
@@ -474,8 +509,18 @@ HTML = f'''<!doctype html>
 <!-- HERO -->
 <section class="hero" aria-label="Introductie">
  <div class="hero-bg"><img src="{HERO_MACRO}" alt="Close-up van een draaibewerking op een Zynox machine"></div>
+ <canvas id="mach" aria-hidden="true"></canvas>
  <div class="grid-ov"></div>
  <span class="datum"><span class="cross"></span> DATUM&nbsp;X0&nbsp;Y0&nbsp;Z0</span>
+ <div class="hud" id="hud" aria-hidden="true">
+   <div class="hud-top">TOOLPATH&nbsp;/&nbsp;LIVE</div>
+   <div class="hud-row"><span>X</span><b id="hx">000.000</b></div>
+   <div class="hud-row"><span>Y</span><b id="hy">000.000</b></div>
+   <div class="hud-row"><span>Z</span><b id="hz">000.000</b></div>
+   <div class="hud-sep"></div>
+   <div class="hud-row sm"><span>FEED</span><b id="hf">RAPID</b></div>
+   <div class="hud-row sm"><span>RPM</span><b>4000</b></div>
+ </div>
  <div class="wrap hero-in">
    <div class="hero-tag"><span class="ln"></span><span class="coord">00&nbsp;/&nbsp;NULPUNT</span></div>
    <h1>Tot op de <em>micron</em>. Elke keer.</h1>
@@ -485,10 +530,10 @@ HTML = f'''<!doctype html>
      <a class="btn btn-ghost btn-lg" href="#offerte">Offerte aanvragen</a>
    </div>
    <div class="hero-dro">
-     <div class="cell"><div class="v">35<small>+</small></div><div class="l">Jaar expertise</div></div>
+     <div class="cell"><div class="v"><span data-count="35" data-dec="0">35</span><small>+</small></div><div class="l">Jaar expertise</div></div>
      <div class="cell"><div class="v">0.001<small>&deg;</small></div><div class="l">Min. increment</div></div>
      <div class="cell"><div class="v">&plusmn;4<small>&Prime;</small></div><div class="l">Herhaalbaarheid</div></div>
-     <div class="cell"><div class="v">96</div><div class="l">Configuraties</div></div>
+     <div class="cell"><div class="v" data-count="96" data-dec="0">96</div><div class="l">Configuraties</div></div>
      <div class="cell"><div class="v">CE</div><div class="l">Conform</div></div>
    </div>
  </div>
@@ -559,11 +604,22 @@ HTML = f'''<!doctype html>
    </div>
    <div class="tol-fig rv">
      <div class="coord" style="color:var(--mut)">TYPEPLAATJE&nbsp;/&nbsp;Z-H500</div>
+     <svg class="dial" id="dial" viewBox="0 0 220 220" role="img" aria-label="Rondtafel die indexeert tot op de boogseconde">
+       <circle cx="110" cy="110" r="86" fill="none" stroke="#22305f" stroke-width="1.5"/>
+       <circle cx="110" cy="110" r="72" fill="rgba(227,29,37,.04)" stroke="#2a3a6e" stroke-width="1"/>
+       <g id="dialTicks" stroke="#3a4a80"></g>
+       <g class="idx" id="dialIdx">
+         <line x1="110" y1="110" x2="110" y2="30" stroke="#e31d25" stroke-width="2.5"/>
+         <circle cx="110" cy="30" r="4" fill="#e31d25"/>
+       </g>
+       <circle cx="110" cy="110" r="9" fill="#0a1230" stroke="#e31d25" stroke-width="2"/>
+       <text x="110" y="150" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" letter-spacing="1.5" fill="#8b93ad">INDEX &plusmn;15&Prime;</text>
+     </svg>
      <div class="tol-read">
        <div class="c"><div class="v">0.001<em>&deg;</em></div><div class="l">Min. increment</div></div>
        <div class="c"><div class="v"><em>&plusmn;</em>15<em>&Prime;</em></div><div class="l">Indexeernauwkeurigheid</div></div>
        <div class="c"><div class="v"><em>&plusmn;</em>4<em>&Prime;</em></div><div class="l">Herhaalbaarheid</div></div>
-       <div class="c"><div class="v">2650<em> N&middot;m</em></div><div class="l">Klemkoppel</div></div>
+       <div class="c"><div class="v"><span data-count="2650" data-dec="0">2650</span><em> N&middot;m</em></div><div class="l">Klemkoppel</div></div>
      </div>
      <p style="font-family:var(--mono);font-size:11px;color:var(--mut);margin-top:14px;letter-spacing:.06em">Tafel &Oslash;500 mm &middot; belasting 600 kg &middot; reductie 1/90 &middot; 22,2 rpm</p>
    </div>
@@ -744,6 +800,80 @@ window.ZX={PJSON};
    d.getElementById('qok').scrollIntoView({{behavior:'smooth',block:'center'}});
  }});
  f.querySelectorAll('input').forEach(function(el){{el.addEventListener('input',function(){{el.closest('.field').classList.remove('err')}})}});
+
+ // ===== motion layer =====
+ var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+ var heroOn=true;
+ var navDro=d.querySelectorAll('.nav-readout .dro b');
+ // counters
+ function cUp(el){{if(el._c)return;el._c=1;var t=parseFloat(el.dataset.count),dec=parseInt(el.dataset.dec||'0');
+   if(RM){{el.textContent=t.toFixed(dec);return}}var s=null;
+   function st(ts){{if(!s)s=ts;var p=Math.min((ts-s)/1200,1);el.textContent=((1-Math.pow(1-p,3))*t).toFixed(dec);if(p<1)requestAnimationFrame(st)}}requestAnimationFrame(st);}}
+ var cio=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting){{cUp(e.target);cio.unobserve(e.target)}}}})}},{{threshold:.4}});
+ d.querySelectorAll('[data-count]').forEach(function(el){{cio.observe(el)}});
+ // depth spine + nav Z
+ var mk=d.getElementById('spineMk'),zv=d.getElementById('spineZ');
+ function onScroll(){{var h=d.documentElement.scrollHeight-innerHeight;var p=h>0?Math.min(scrollY/h,1):0;
+   if(mk)mk.style.top='calc(16vh + '+(p*68)+'vh)';var z=(p*120).toFixed(1);
+   if(zv)zv.textContent='Z '+z;if(!heroOn&&navDro&&navDro[2])navDro[2].textContent='-'+z;}}
+ addEventListener('scroll',onScroll,{{passive:true}});onScroll();
+ // rotary dial
+ var ticks=d.getElementById('dialTicks'),idx=d.getElementById('dialIdx'),dialEl=d.getElementById('dial');
+ if(ticks){{var tk='';for(var a=0;a<360;a+=15){{var r=a*Math.PI/180,x1=110+80*Math.sin(r),y1=110-80*Math.cos(r),x2=110+86*Math.sin(r),y2=110-86*Math.cos(r);tk+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'"/>';}}ticks.innerHTML=tk;}}
+ if(idx&&dialEl&&!RM){{var da=0,dtar=0,dt=0;dialEl._run=false;
+   new IntersectionObserver(function(es){{es.forEach(function(e){{dialEl._run=e.isIntersecting;}})}},{{threshold:.2}}).observe(dialEl);
+   (function dstep(){{if(dialEl._run){{dt++;if(dt%38===0)dtar+=45;da+=(dtar-da)*0.09;idx.setAttribute('transform','rotate('+da.toFixed(2)+' 110 110)');}}requestAnimationFrame(dstep);}})();}}
+ // card tilt
+ if(!RM)d.querySelectorAll('.mc').forEach(function(c){{
+   c.addEventListener('mousemove',function(ev){{var r=c.getBoundingClientRect(),px=(ev.clientX-r.left)/r.width-0.5,py=(ev.clientY-r.top)/r.height-0.5;c.style.transform='translateY(-5px) perspective(900px) rotateX('+(-py*2.6).toFixed(2)+'deg) rotateY('+(px*2.6).toFixed(2)+'deg)';}});
+   c.addEventListener('mouseleave',function(){{c.style.transform='';}});}});
+ // ===== hero machining canvas =====
+ var cv=d.getElementById('mach');
+ if(cv&&cv.getContext){{
+   var cx=cv.getContext('2d'),W=0,H=0,DPR=Math.min(devicePixelRatio||1,2),path=[],cum=[],total=0,chips=[],raf=0,run=false,head=0;
+   var hx=d.getElementById('hx'),hy=d.getElementById('hy'),hz=d.getElementById('hz'),hf=d.getElementById('hf');
+   function build(){{
+     W=cv.clientWidth;H=cv.clientHeight;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0);
+     var cxp=W*0.63,cyp=H*0.46,S=Math.min(W,H)*0.24;cv._cxp=cxp;cv._cyp=cyp;cv._S=S;
+     path=[];
+     function M(x,y){{path.push({{x:x,y:y,cut:false}});}}
+     function L(x,y){{path.push({{x:x,y:y,cut:true}});}}
+     function circle(cc,dd,r,cut){{var n=48;for(var i=0;i<=n;i++){{var a=i/n*6.283,x=cc+r*Math.cos(a),y=dd+r*Math.sin(a);path.push({{x:x,y:y,cut:i!==0&&cut}});}}}}
+     var w=S*1.5,h=S*1.1,rr=S*0.22,x0=cxp-w/2,y0=cyp-h/2;
+     M(x0+rr,y0);L(x0+w-rr,y0);L(x0+w,y0+rr);L(x0+w,y0+h-rr);L(x0+w-rr,y0+h);L(x0+rr,y0+h);L(x0,y0+h-rr);L(x0,y0+rr);L(x0+rr,y0);
+     M(cxp+S*0.42,cyp);circle(cxp,cyp,S*0.42,true);
+     var q=[[-1,-1],[1,-1],[1,1],[-1,1]];
+     for(var k=0;k<4;k++){{var px=cxp+q[k][0]*w*0.32,py=cyp+q[k][1]*h*0.30;M(px+S*0.1,py);circle(px,py,S*0.1,true);}}
+     cum=[0];total=0;for(var i=1;i<path.length;i++){{total+=Math.hypot(path[i].x-path[i-1].x,path[i].y-path[i-1].y);cum.push(total);}}
+   }}
+   function posAt(dist){{if(dist<=0)return {{x:path[0].x,y:path[0].y,i:1}};if(dist>=total)return {{x:path[path.length-1].x,y:path[path.length-1].y,i:path.length-1}};
+     var lo=1;for(;lo<cum.length;lo++){{if(cum[lo]>=dist)break;}}var a=path[lo-1],b=path[lo],sd=cum[lo]-cum[lo-1],t=sd>0?(dist-cum[lo-1])/sd:0;return {{x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t,i:lo}};}}
+   function draw(){{
+     cx.clearRect(0,0,W,H);
+     cx.lineWidth=1;cx.strokeStyle='rgba(120,140,210,.14)';cx.beginPath();
+     for(var i=1;i<path.length;i++){{if(path[i].cut){{cx.moveTo(path[i-1].x,path[i-1].y);cx.lineTo(path[i].x,path[i].y);}}}}cx.stroke();
+     head+=total/640;if(head>total+90){{head=0;chips=[];}}
+     cx.lineCap='round';
+     for(var i=1;i<path.length;i++){{if(cum[i]<=head&&path[i].cut){{var lit=1-Math.min((head-cum[i])/(total*0.5),1);cx.strokeStyle='rgba(227,29,37,'+(0.22+lit*0.55)+')';cx.lineWidth=1.5+lit*1.7;cx.beginPath();cx.moveTo(path[i-1].x,path[i-1].y);cx.lineTo(path[i].x,path[i].y);cx.stroke();}}}}
+     var p=posAt(Math.min(head,total)),cut=path[p.i]&&path[p.i].cut;
+     if(cut&&!RM){{for(var c=0;c<2;c++)chips.push({{x:p.x,y:p.y,vx:(Math.random()-0.5)*2.4,vy:-Math.random()*2.2-0.4,life:1}});}}
+     for(var c=chips.length-1;c>=0;c--){{var ch=chips[c];ch.x+=ch.vx;ch.y+=ch.vy;ch.vy+=0.12;ch.life-=0.03;if(ch.life<=0){{chips.splice(c,1);continue;}}cx.fillStyle='rgba(255,'+Math.round(120+ch.life*110)+',90,'+ch.life+')';cx.fillRect(ch.x,ch.y,1.8,1.8);}}
+     cx.strokeStyle=cut?'#ff5a60':'#8fa2d8';cx.lineWidth=1.2;cx.beginPath();cx.arc(p.x,p.y,cut?5:4,0,6.283);cx.stroke();
+     cx.beginPath();cx.moveTo(p.x-9,p.y);cx.lineTo(p.x+9,p.y);cx.moveTo(p.x,p.y-9);cx.lineTo(p.x,p.y+9);cx.strokeStyle=cut?'rgba(255,90,96,.55)':'rgba(143,162,216,.45)';cx.stroke();
+     if(hx){{var mmx=(p.x-cv._cxp)/cv._S*100+150,mmy=(cv._cyp-p.y)/cv._S*100+100;
+       hx.textContent=mmx.toFixed(3);hy.textContent=mmy.toFixed(3);hz.textContent=cut?'-5.000':'0.000';if(hf)hf.textContent=cut?'1.8 m/min':'RAPID';
+       if(heroOn&&navDro&&navDro[0]){{navDro[0].textContent=mmx.toFixed(3);navDro[1].textContent=mmy.toFixed(3);navDro[2].textContent=cut?'-5.000':'0.000';}}}}
+     raf=requestAnimationFrame(draw);
+   }}
+   function start(){{if(run||RM)return;run=true;draw();}}
+   function stop(){{run=false;cancelAnimationFrame(raf);}}
+   build();
+   if(RM){{cx.clearRect(0,0,W,H);cx.strokeStyle='rgba(227,29,37,.5)';cx.lineWidth=1.6;cx.beginPath();for(var i=1;i<path.length;i++){{if(path[i].cut){{cx.moveTo(path[i-1].x,path[i-1].y);cx.lineTo(path[i].x,path[i].y);}}}}cx.stroke();}}else start();
+   addEventListener('resize',function(){{build();}});
+   var heroEl=d.querySelector('.hero');
+   new IntersectionObserver(function(es){{es.forEach(function(e){{heroOn=e.isIntersecting;e.isIntersecting?start():stop();}})}},{{threshold:.03}}).observe(heroEl);
+   d.addEventListener('visibilitychange',function(){{d.hidden?stop():(heroOn&&start());}});
+ }}
 }})();
 </script>
 </body>
