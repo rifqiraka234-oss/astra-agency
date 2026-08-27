@@ -358,6 +358,56 @@ Problem, Agitate, Solve shape, kept short and true.
   mark it NO_STRONG_ANGLE and move on rather than manufacturing hurt. Forced
   pain on a good business is both a lie and an insult.
 
+### Getting a reply, reopening a stalled thread (the reply psychology, Raka 2026-08-27)
+A message that gets no reply usually broke the mechanics of how people
+decide to respond, not the writing. Our own dead follow-ups prove it: every
+stalled thread here ended on a generic *"would love to hear more about what
+you are building"* — no gift, no specifics, and a question that costs the
+other person real effort to answer, so they don't. Reopen a quiet thread
+with these honest levers, ideally most of them in one short message:
+
+- **Reciprocity, give before you ask.** Lead with one specific, real thing
+  they get for free: an actual observation about their site, a bug you
+  spotted (a dead button, a blank stat), a genuine reflection of their
+  situation. A free useful heads-up ("two of your buttons go nowhere right
+  now") is a gift, and a gift creates a pull to respond. Opening with a
+  request and no gift is the exact move that killed our follow-ups.
+- **Label the situation, tactical empathy (Voss).** Name where they are or
+  what they feel in a short "sounds like / I know that…" line, never
+  accusatory and never a blaming "you". When someone feels understood they
+  open up (the "that's right" moment). "Raising while you are heads down
+  building is brutal" lands; "let me know if you need help" doesn't.
+- **Mirror their own words back, consistency (Cialdini).** If they told us
+  their goal, their plan, or a challenge, quote it back ("you said you wanted
+  more brand clients", "your funding question stuck with me"). People act
+  consistently with what they have already said out loud.
+- **Answer what they actually said first.** If their last message asked us
+  something (Happy asked about seed funding), address that honestly before
+  any angle of our own, even if the honest answer is "not my area". Ignoring
+  their question to pivot to our pitch reads as not listening, and kills it.
+- **One open loop.** Reference one concrete thing that already exists and
+  that they can only see by replying (a sketch, a specific fix, a version we
+  built). The unfinished, unseen thing nags (Zeigarnik). It must be real,
+  never a bluff.
+- **One easy ask, near-zero friction.** End on a single question answerable
+  in one word or a yes/no ("want me to send it?", "worth a look?"), or one
+  calibrated "what/how" question that hands them control and pulls
+  information ("what does your site do when a warm investor lands on it?").
+  Never stack two questions, and never end on effortful homework like
+  "tell me all about your business".
+- **Preserve their autonomy, the "but you are free" effect.** A light,
+  genuine "no pressure, totally your call, either way is fine" measurably
+  lifts response rate, because it removes the feeling of being pushed. Say it
+  and mean it. Never needy, never chasing.
+- **Match their energy, length and language.** A one-line cool reply gets a
+  short answer back, not a paragraph. Mirror their register.
+
+These stack with the FOMO and pain-agitation levers above; the difference is
+purpose. Those make them feel the cost of the problem; these make replying
+feel easy, understood and worth it. A reopen that gives something real, names
+their reality, and asks one effortless question is the shape that gets an
+answer.
+
 **Business outcome / cost of inaction:** the message should answer "so
 what?" — comprehension, trust, conversion, enquiry quality, booking
 completion, demo requests, partner qualification, fewer support questions,
