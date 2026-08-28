@@ -322,7 +322,9 @@ sharp" (as empty praise), "truly", "seamlessly", "not the easiest thing to make
 tangible", "at the intersection of", "in today's world", "elevate", "level
 up", "supercharge", "website journey", "game-changing", "revolutionise",
 "unlock your potential", "seamless ecosystem", "move the needle", "how your
-website should look", generic AI slogans, overconfident claims about the
+website should look", filler openers that flag a machine wrote them ("quick
+reason", "here is why", "quick thought", "one thing", "here is the thing",
+"the reason I say this"), generic AI slogans, overconfident claims about the
 founder's priorities, jumping straight to a sales call when sending the
 concept is the easier next step. A human business owner would not write
 these; read every draft aloud and cut anything that sounds like a template
