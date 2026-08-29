@@ -330,6 +330,37 @@ concept is the easier next step. A human business owner would not write
 these; read every draft aloud and cut anything that sounds like a template
 or a chatbot.
 
+**Sounding human is structural, not just word choice (Raka 2026-08-29).**
+The word blacklist above is necessary but not sufficient. A message with
+zero banned words still screams AI if its *shape* is machine-shaped. What
+actually gives it away, and the fix for each:
+- **Template sameness across a batch.** If five openers all run
+  praise then "one thing I noticed" then a consequence sentence then "we
+  sketched a version" then "want me to send it over", the pattern itself is
+  the tell, even though each is individually fine. Give every message a
+  different shape: some open with the observation, some with a question,
+  some skip the praise entirely, some lead with the offer. Never ship a
+  batch that shares one skeleton.
+- **Uniform sentence rhythm.** AI writes sentence after sentence of the
+  same 15 to 20 word length. Humans mix a long winding thought with a
+  three word punch. Vary it hard. Use fragments ("Want a look?" "Quick
+  one.").
+- **Contractions.** Real people type "you're, don't, it's, can't, I'd,
+  won't, there's". Their absence reads formal and generated. Use them.
+- **The consequence essay.** AI over-explains the mechanism ("so the
+  buyers furthest down the funnel are the ones who bounce, without you
+  realising"). A human states the problem and trusts the reader to feel
+  it. Cut the explanation to a clause or drop it.
+- **Rule of three / tricolons** ("faster, clearer, stronger";
+  "Lloyd's, FCA, decades in marine"). Break the triad or make it messy and
+  casual ("Lloyd's, FCA, the lot").
+- **"Not X, just Y" and "not just A but B."** Overused by models. Avoid.
+- **Bow-wrapped closers.** The neat aphorism that ties it up ("that
+  defensibility and a simple next step are everything") is a model habit.
+  End flat and plain, or on the ask.
+The test: would a busy founder actually thumb this into LinkedIn on their
+phone, or does it read like it was composed. If composed, rough it up.
+
 **Pain agitation, done honestly (the neuroscience, Raka 2026-08-26).** The
 amygdala processes a potential loss faster and roughly twice as hard as the
 equivalent gain, but only when the loss is concrete, present tense and
