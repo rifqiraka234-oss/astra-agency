@@ -9,8 +9,8 @@ Do NOT edit the HTML.
 - Site name: astra-diisco-prototype  (-> https://astra-diisco-prototype.netlify.app)
 
 Verify before deploying / before anyone sends the link:
-- Bytes: 255128
-- sha256: bcb452095f43b0a2ca705eeeda523cb384f313998597f5fdd34110e6ce6464a4
+- Bytes: 261531
+- sha256: c09bafccf0e9ff52988f35cc209d96672b8beca982c6b13bb0eb1f9cec53175c
 - <title>: Diisco for Venues, post a shift and watch it fill
 
 state/prototypes/ is .gitignore'd but this file is force-tracked, so a fresh

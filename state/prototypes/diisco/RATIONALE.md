@@ -7,9 +7,7 @@ Diisco is strong, but the venue side (the paying side) has no clear signup or a
 look at how posting a shift works. This sample builds that venue side.
 
 ## Governing concept
-"Post a shift. Watch it fill." A live, clickable **venue console**: a manager
-posts a shift on the left and ranked, rated workers apply in real time on the
-right, then get confirmed in one tap. It demonstrates the exact venue experience
+"Friday, 18:00. Watch the room fill." A dark, cinematic **venue ops console** in Diisco's own disco/nightlife register: a manager drops a shift, a radar scans the ranked pool, then rated staff stream in one by one with glowing rings while a fill ring and live count climb, and one tap stamps the booking. It demonstrates the exact venue experience
 that is missing, and because we are pitching "we build tools," the tool itself
 is the proof.
 
@@ -47,6 +45,6 @@ is the proof.
 - Self-contained single file: 6 woff2 faces + logo + media logos embedded.
 
 **Artifact:** state/prototypes/diisco/index.html
-**Bytes:** 255128
-**sha256:** bcb452095f43b0a2ca705eeeda523cb384f313998597f5fdd34110e6ce6464a4
+**Bytes:** 261531
+**sha256:** c09bafccf0e9ff52988f35cc209d96672b8beca982c6b13bb0eb1f9cec53175c
 **Netlify site (to create):** astra-diisco-prototype
