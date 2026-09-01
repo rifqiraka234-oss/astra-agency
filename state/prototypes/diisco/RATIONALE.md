@@ -7,9 +7,22 @@ Diisco is strong, but the venue side (the paying side) has no clear signup or a
 look at how posting a shift works. This sample builds that venue side.
 
 ## Governing concept
-"Friday, 18:00. Watch the room fill." A dark, cinematic **venue ops console** in Diisco's own disco/nightlife register: a manager drops a shift, a radar scans the ranked pool, then rated staff stream in one by one with glowing rings while a fill ring and live count climb, and one tap stamps the booking. It demonstrates the exact venue experience
-that is missing, and because we are pitching "we build tools," the tool itself
-is the proof.
+A complete **venue staffing app**, not one floating screen. It answers the venue's
+real job to be done: "I am short staffed for an upcoming service, fill the gap fast
+with someone rated who will show up, and let me see my rota is covered." Three
+screens behind a persistent nav (Tonight, Post a shift, My team):
+- **Tonight** dashboard: the venue (The Copper Still, Shoreditch), a stat row
+  (shifts this week / filled / open), highlighted open gaps, and the week's rota
+  grouped by day, filled shifts showing the assigned worker.
+- **Fill a shift**: tapping a gap opens the match console in context, prefilled
+  with that gap. Post it, a radar scans the ranked pool, rated staff stream in
+  with glowing rings, and one tap confirms.
+- The loop **closes**: on confirm the gap disappears from "needs filling", the
+  stat counts update, the rota row flips to filled with the worker's avatar and a
+  mint highlight, and a toast confirms. The job is visibly done.
+- **My team**: the venue's rated regulars, rebookable in a tap.
+Dark cinematic Diisco register throughout (near-black plum, neon purple/mint/blue
+glow, real logo and fonts), mobile gets a native-style bottom tab bar.
 
 ## What is real
 - **Brand:** Diisco's own logo (SVG), colours (deep purple #31125D, bright
@@ -45,6 +58,6 @@ is the proof.
 - Self-contained single file: 6 woff2 faces + logo + media logos embedded.
 
 **Artifact:** state/prototypes/diisco/index.html
-**Bytes:** 261531
-**sha256:** c09bafccf0e9ff52988f35cc209d96672b8beca982c6b13bb0eb1f9cec53175c
+**Bytes:** 229847
+**sha256:** 108e53615afb827041669c204df7251241e2656be67093b59a100369abf5dc20
 **Netlify site (to create):** astra-diisco-prototype

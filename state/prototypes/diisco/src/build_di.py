@@ -2,407 +2,437 @@
 import base64, pathlib, re
 A = pathlib.Path("/home/user/astra-agency/state/prototypes/diisco/assets")
 OUT = pathlib.Path("/home/user/astra-agency/state/prototypes/diisco/index.html")
-
 def b64(p): return base64.b64encode(pathlib.Path(p).read_bytes()).decode()
 def font(f): return "data:font/woff2;base64," + b64(A/"fonts"/f)
-def png(n): return "data:image/png;base64," + b64(A/n)
-
 def svg_inline(name, cls):
-    s = pathlib.Path(A/name).read_text()
-    s = s[s.index("<svg"):]
-    for c in set(re.findall(r'\.(cls-\d+)', s)):
-        s = s.replace(c, f"{cls}-{c}")
-    s = re.sub(r'<svg ', f'<svg class="{cls}" ', s, count=1)
-    return s
+    s = pathlib.Path(A/name).read_text(); s = s[s.index("<svg"):]
+    for c in set(re.findall(r'\.(cls-\d+)', s)): s = s.replace(c, f"{cls}-{c}")
+    return re.sub(r'<svg ', f'<svg class="{cls}" ', s, count=1)
 
-FONTS = "".join(f"""@font-face{{font-family:'{fam}';font-style:normal;font-weight:{w};font-display:swap;src:url({font(f)}) format('woff2')}}"""
-  for fam,w,f in [
-    ("Schibsted Grotesk",600,"sg600.woff2"),("Schibsted Grotesk",700,"sg700.woff2"),("Schibsted Grotesk",800,"sg800.woff2"),
-    ("Kumbh Sans",400,"ks400.woff2"),("Kumbh Sans",600,"ks600.woff2"),("Kumbh Sans",700,"ks700.woff2"),
-  ])
-
+FONTS = "".join(f"@font-face{{font-family:'{fam}';font-style:normal;font-weight:{w};font-display:swap;src:url({font(f)}) format('woff2')}}"
+  for fam,w,f in [("Schibsted Grotesk",600,"sg600.woff2"),("Schibsted Grotesk",700,"sg700.woff2"),("Schibsted Grotesk",800,"sg800.woff2"),
+                  ("Kumbh Sans",400,"ks400.woff2"),("Kumbh Sans",600,"ks600.woff2"),("Kumbh Sans",700,"ks700.woff2")])
 LOGO = svg_inline("logo_light.svg","dl")
-LOGO_F = svg_inline("logo_light.svg","dlf")
-MEDIA1 = png("media_leadstoday.png"); MEDIA2 = png("media_businessdesk.png")
 
-WORKERS = [
-  ("AR","Amara R.","Chef de partie",4.9,132,"1.2 mi","£16 p/h",98,"#A414D9"),
-  ("TN","Tomas N.","Bartender",4.8,87,"0.6 mi","£13 p/h",95,"#3B82F6"),
-  ("PJ","Priya J.","Waiting staff",4.9,164,"2.1 mi","£12 p/h",99,"#3CC89E"),
-  ("LO","Leon O.","Event staff",4.7,54,"3.0 mi","£12 p/h",90,"#F97316"),
-  ("MC","Mei C.","Sous chef",5.0,71,"1.8 mi","£18 p/h",97,"#7B3FE4"),
-  ("DK","Danny K.","Bar back",4.6,39,"0.9 mi","£11 p/h",88,"#EC4899"),
+# ---- data (all demo / sample) ----
+# workers pool: id, ini, name, role, rating, shifts, dist, rate, score, colour
+WK = [
+ ("w_amara","AR","Amara Reyes","Chef de partie",4.9,132,"1.2 mi","£16 p/h",98,"#A414D9"),
+ ("w_priya","PJ","Priya Joshi","Waiting staff",4.9,164,"2.1 mi","£12 p/h",99,"#3CC89E"),
+ ("w_mei","MC","Mei Chen","Sous chef",5.0,71,"1.8 mi","£18 p/h",97,"#7B3FE4"),
+ ("w_tomas","TN","Tomas Novak","Bartender",4.8,87,"0.6 mi","£13 p/h",95,"#3B82F6"),
+ ("w_leon","LO","Leon Osei","Event staff",4.7,54,"3.0 mi","£12 p/h",90,"#F97316"),
+ ("w_danny","DK","Danny Kaur","Bar back",4.6,39,"0.9 mi","£11 p/h",88,"#EC4899"),
 ]
-def wcard(w, i):
-    ini,name,role,rating,shifts,dist,rate,score,col = w
-    stars="★"*int(round(rating))
-    return f"""<li class="ap" data-i="{i}" style="--d:{i*230}ms;--col:{col}">
-      <div class="ap-av"><span>{ini}</span></div>
-      <div class="ap-main">
-        <div class="ap-top"><span class="ap-name">{name}</span><span class="ap-score">{score}</span></div>
-        <div class="ap-role">{role}</div>
-        <div class="ap-meta"><span class="ap-stars">{stars}</span> <b>{rating}</b> <span class="d">&middot;</span> {shifts} shifts <span class="d">&middot;</span> {dist} <span class="d">&middot;</span> {rate}</div>
-      </div>
-      <button class="ap-btn" data-name="{name.split()[0]}">Confirm</button>
-    </li>"""
-CARDS="".join(wcard(w,i) for i,w in enumerate(sorted(WORKERS,key=lambda x:-x[7])))
-
-TESTI=[
- ("The Marlowe Inn","Boutique Hotel, Edinburgh","We used to struggle with last minute staff shortages. Now we post a shift and have qualified, rated workers applying within hours. The ranking system makes hiring decisions easy.","#A414D9"),
- ("Salt &amp; Thyme","Restaurant, Bristol","The flat fee per shift makes budgeting so simple. No hidden costs, no surprises. We have built a list of favourite workers who we rehire regularly.","#3B82F6"),
- ("Marco B.","Chef, Birmingham","As a freelance chef, Diisco has been a game changer. I can see venue ratings before accepting shifts, so I know I am going somewhere professional.","#3CC89E"),
+import json
+WK_JSON = json.dumps([{"id":i,"ini":ini,"name":n,"role":r,"rating":rt,"shifts":sh,"dist":d,"rate":ra,"score":sc,"col":c} for i,ini,n,r,rt,sh,d,ra,sc,c in WK])
+# rota shifts: id, day label, date, role, time, hours, rate, status, workerId
+SHIFTS = [
+ ("s1","Tonight","Thu 3 Sep","Bartender","18:00","6","£14 p/h","filled","w_tomas"),
+ ("s2","Tomorrow","Fri 4 Sep","Chef de partie","17:00","6","£15 p/h","open",None),
+ ("s3","Tomorrow","Fri 4 Sep","Waiting staff","18:00","5","£12 p/h","filled","w_priya"),
+ ("s4","Saturday","Sat 5 Sep","Sous chef","15:00","8","£18 p/h","filled","w_mei"),
+ ("s5","Saturday","Sat 5 Sep","Event staff","16:00","6","£13 p/h","open",None),
 ]
-def tcard(t):
-    who,where,q,col=t
-    return f"""<figure class="tc"><div class="tc-q">&ldquo;</div><blockquote>{q}</blockquote><figcaption><span class="tc-dot" style="background:{col};box-shadow:0 0 10px {col}"></span><b>{who}</b><span class="tc-w">{where}</span></figcaption></figure>"""
-TESTIS="".join(tcard(t) for t in TESTI)
+SHIFTS_JSON = json.dumps([{"id":i,"day":dy,"date":dt,"role":r,"time":tm,"hours":h,"rate":ra,"status":st,"worker":w} for i,dy,dt,r,tm,h,ra,st,w in SHIFTS])
 
-HTML=f"""<title>Diisco for Venues, post a shift and watch the room fill</title>
-<meta name="description" content="A live sample venue console for Diisco. Post a shift and watch ranked, rated hospitality staff apply in real time, then confirm in one tap.">
+NAV = [("tonight","Tonight",'<path d="M4 13h6V4H4v9Zm0 7h6v-5H4v5Zm8 0h8v-9h-8v9Zm0-16v5h8V4h-8Z" fill="currentColor"/>'),
+       ("post","Post a shift",'<path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>'),
+       ("team","My team",'<circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 19c0-3 2.6-4.6 5.5-4.6s5.5 1.6 5.5 4.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 6.2A3 3 0 0 1 16 12M17.5 19c0-2.2-.9-3.8-2.4-4.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>')]
+def navitem(v,label,icon,active):
+    return f'<button class="navitem{" active" if active else ""}" data-nav="{v}" type="button"><svg viewBox="0 0 24 24" width="22" height="22" fill="none">{icon}</svg><span>{label}</span></button>'
+NAVDESK="".join(navitem(v,l,i,v=="tonight") for v,l,i in NAV)
+NAVMOB="".join(navitem(v,l,i,v=="tonight") for v,l,i in NAV)
+
+HTML=f"""<title>Diisco for Venues, your staffing in one place</title>
+<meta name="description" content="A sample Diisco venue app. See your rota, fill an open shift by matching ranked rated staff in real time, and manage your team.">
 <style>
 {FONTS}
 *{{margin:0;padding:0;box-sizing:border-box}}
 :root{{
- --void:#100617;--void2:#180A2B;--panel:#1E0F3A;--panel2:#26134A;--raise:#2C1856;
- --line:#3A2363;--line2:#4A2E7A;--ink:#F5EFFF;--dim:#B7A6DA;--dim2:#8B7AB0;
+ --void:#0E0518;--void2:#160A28;--panel:#1C0E36;--panel2:#241246;--raise:#2B1656;
+ --line:#33205C;--line2:#442B76;--ink:#F5EFFF;--dim:#B7A6DA;--dim2:#8A79AE;
  --purple:#A414D9;--purple2:#7B3FE4;--blue:#3B82F6;--mint:#3CC89E;--mint2:#6BF0C0;
- --gold:#F4B400;--pink:#EC4899;--orange:#F97316;
+ --gold:#F4B400;--pink:#EC4899;--orange:#F97316;--amber:#F5A623;
  --sans:'Kumbh Sans',system-ui,sans-serif;--disp:'Schibsted Grotesk','Kumbh Sans',system-ui,sans-serif;
 }}
 html{{-webkit-text-size-adjust:100%}}
-body{{font-family:var(--sans);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;
- background:
-  radial-gradient(900px 500px at 82% -6%,rgba(164,20,217,.30),transparent 60%),
-  radial-gradient(760px 480px at 8% 8%,rgba(59,130,246,.20),transparent 60%),
-  radial-gradient(900px 700px at 60% 108%,rgba(60,200,158,.16),transparent 60%),
-  var(--void);
- background-attachment:fixed;overflow-x:hidden}}
-h1,h2,h3,.disp{{font-family:var(--disp);font-weight:800;line-height:1.04;letter-spacing:-.02em}}
-.wrap{{max-width:1140px;margin:0 auto;padding:0 22px}}
-.reveal{{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}}
-.reveal.in{{opacity:1;transform:none}}
-html:not(.js) .reveal{{opacity:1;transform:none}}
-.mono{{font-variant-numeric:tabular-nums;font-family:var(--disp);letter-spacing:.02em}}
+body{{font-family:var(--sans);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;
+ background:radial-gradient(900px 500px at 88% -8%,rgba(164,20,217,.22),transparent 60%),radial-gradient(700px 420px at -6% 4%,rgba(59,130,246,.16),transparent 60%),var(--void);min-height:100vh}}
+h1,h2,h3,.disp{{font-family:var(--disp);font-weight:800;line-height:1.06;letter-spacing:-.02em}}
+.mono{{font-family:var(--disp);font-variant-numeric:tabular-nums;letter-spacing:.02em}}
+button{{font-family:inherit}}
 
-/* bar */
-.bar{{position:sticky;top:0;z-index:50;background:rgba(16,6,23,.72);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}}
-.bar-in{{display:flex;align-items:center;gap:14px;height:68px}}
-.dl{{height:26px;width:auto;display:block}}
-.bar-tag{{margin-left:auto;display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--mint2);background:rgba(60,200,158,.10);border:1px solid rgba(60,200,158,.34);padding:6px 12px;border-radius:999px}}
+/* ---------- app shell ---------- */
+.app{{display:grid;grid-template-columns:248px 1fr;min-height:100vh;max-width:1280px;margin:0 auto}}
+.side{{border-right:1px solid var(--line);padding:22px 16px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh}}
+.side .brand{{display:flex;align-items:center;gap:8px;padding:6px 8px 20px}}
+.side .brand .dl{{height:24px;width:auto}}
+.nav{{display:flex;flex-direction:column;gap:4px}}
+.navitem{{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:none;border:none;color:var(--dim);font-size:15px;font-weight:600;padding:11px 12px;border-radius:12px;cursor:pointer;transition:background .15s,color .15s}}
+.navitem svg{{flex:0 0 auto;color:var(--dim2)}}
+.navitem:hover{{background:rgba(255,255,255,.04);color:var(--ink)}}
+.navitem.active{{background:linear-gradient(100deg,rgba(164,20,217,.22),rgba(123,63,228,.12));color:#fff;box-shadow:inset 0 0 0 1px rgba(164,20,217,.4)}}
+.navitem.active svg{{color:var(--mint2)}}
+.side .venue{{margin-top:auto;display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}}
+.side .venue .vlogo{{width:38px;height:38px;border-radius:11px;background:linear-gradient(140deg,var(--purple),var(--blue));display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800;color:#fff;font-size:15px;flex:0 0 auto}}
+.side .venue b{{font-family:var(--disp);font-size:14px;display:block}}
+.side .venue span{{font-size:12px;color:var(--dim2)}}
+.side .sample{{margin-top:12px;text-align:center;font-size:11px;color:var(--dim2);line-height:1.4}}
+
+.main{{min-width:0;display:flex;flex-direction:column}}
+.topbar{{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:14px;padding:16px 26px;background:rgba(14,5,24,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}}
+.topbar .tt{{font-family:var(--disp);font-weight:800;font-size:17px}}
+.topbar .td{{font-size:12.5px;color:var(--dim2)}}
+.topbar .astra{{margin-left:auto;display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--mint2);background:rgba(60,200,158,.10);border:1px solid rgba(60,200,158,.32);padding:6px 12px;border-radius:999px}}
 .pulse{{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(60,200,158,.6);animation:pz 2s infinite}}
-@keyframes pz{{0%{{box-shadow:0 0 0 0 rgba(60,200,158,.55)}}70%{{box-shadow:0 0 0 8px rgba(60,200,158,0)}}100%{{box-shadow:0 0 0 0 rgba(60,200,158,0)}}}}
+@keyframes pz{{0%{{box-shadow:0 0 0 0 rgba(60,200,158,.5)}}70%{{box-shadow:0 0 0 8px rgba(60,200,158,0)}}100%{{box-shadow:0 0 0 0 rgba(60,200,158,0)}}}}
+.content{{padding:26px;max-width:960px;width:100%}}
+.view[hidden]{{display:none!important}}
+.view{{animation:vin .4s cubic-bezier(.2,.7,.2,1)}}
+@keyframes vin{{from{{opacity:0;transform:translateY(10px)}}to{{opacity:1;transform:none}}}}
 
-/* hero */
-.hero{{padding:58px 0 14px;position:relative}}
-.kick{{display:inline-flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;font-size:13px;color:var(--mint2);text-transform:uppercase;letter-spacing:.16em;margin-bottom:18px}}
-.kick i{{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px var(--mint)}}
-.hero h1{{font-size:clamp(38px,7vw,72px);max-width:14ch}}
-.hero h1 .g{{background:linear-gradient(96deg,var(--mint2),var(--purple) 55%,var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 60px rgba(164,20,217,.25)}}
-.hero .sub{{font-size:clamp(16px,2.1vw,20px);color:var(--dim);max-width:54ch;margin-top:20px}}
-.hero .note{{margin-top:16px;font-size:13.5px;color:var(--dim2);display:flex;align-items:center;gap:9px}}
-.hero .note b{{color:var(--ink)}}
+/* ---------- tonight / dashboard ---------- */
+.hi{{font-size:clamp(24px,3.4vw,32px);margin-bottom:4px}}
+.hi-sub{{color:var(--dim);margin-bottom:22px}}
+.stats{{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}}
+.stat{{background:linear-gradient(180deg,var(--panel),var(--void2));border:1px solid var(--line);border-radius:16px;padding:16px 18px}}
+.stat .n{{font-family:var(--disp);font-weight:800;font-size:28px;line-height:1}}
+.stat .l{{font-size:12.5px;color:var(--dim2);margin-top:6px}}
+.stat.warn .n{{color:var(--amber)}}
+.sec-h{{display:flex;align-items:center;gap:10px;margin:8px 0 12px}}
+.sec-h h2{{font-size:17px}} .sec-h .badge{{font-size:11px;font-weight:700;color:var(--void);background:var(--amber);border-radius:999px;padding:3px 9px}}
 
-/* console */
-.console{{margin:30px 0 6px;background:linear-gradient(180deg,var(--panel),var(--void2));border:1px solid var(--line2);border-radius:26px;
- box-shadow:0 40px 90px -40px rgba(0,0,0,.8),0 0 0 1px rgba(164,20,217,.08),0 0 80px -30px rgba(164,20,217,.4);overflow:hidden;position:relative}}
-.console:before{{content:"";position:absolute;inset:0;border-radius:26px;padding:1px;background:linear-gradient(120deg,rgba(164,20,217,.5),transparent 40%,transparent 60%,rgba(60,200,158,.4));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.6}}
-.con-head{{display:flex;align-items:center;gap:12px;padding:15px 22px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}}
+.gap{{background:linear-gradient(120deg,rgba(245,166,35,.14),rgba(164,20,217,.10));border:1px solid rgba(245,166,35,.45);border-radius:18px;padding:18px 20px;display:flex;align-items:center;gap:16px;margin-bottom:14px;box-shadow:0 0 40px -18px rgba(245,166,35,.5)}}
+.gap .gi{{width:46px;height:46px;flex:0 0 auto;border-radius:13px;background:rgba(245,166,35,.16);border:1px solid rgba(245,166,35,.5);display:flex;align-items:center;justify-content:center}}
+.gap .gm{{flex:1;min-width:0}}
+.gap .gm b{{font-family:var(--disp);font-size:16px}}
+.gap .gm p{{font-size:13px;color:var(--dim);margin-top:2px}}
+.gap .fill-btn{{flex:0 0 auto}}
+.btn{{font-family:var(--disp);font-weight:800;font-size:14.5px;color:#fff;border:none;border-radius:12px;padding:12px 20px;cursor:pointer;background:linear-gradient(100deg,var(--purple),var(--purple2));box-shadow:0 12px 26px -12px rgba(164,20,217,.8);transition:transform .12s,filter .2s}}
+.btn:hover{{transform:translateY(-1px);filter:brightness(1.08)}} .btn:active{{transform:none}}
+.btn.ghost{{background:rgba(255,255,255,.05);border:1px solid var(--line2);box-shadow:none;color:var(--ink)}}
+.btn.sm{{padding:9px 15px;font-size:13px;border-radius:11px}}
+
+.rota{{display:flex;flex-direction:column;gap:10px}}
+.rday{{font-family:var(--disp);font-weight:700;font-size:12px;color:var(--dim2);text-transform:uppercase;letter-spacing:.1em;margin:10px 0 2px}}
+.shift{{display:flex;align-items:center;gap:14px;background:linear-gradient(180deg,var(--panel),var(--void2));border:1px solid var(--line);border-radius:15px;padding:13px 15px;transition:box-shadow .3s,border-color .3s}}
+.shift .stime{{font-family:var(--disp);font-weight:800;font-size:15px;width:52px;flex:0 0 auto}}
+.shift .srole{{flex:1;min-width:0}}
+.shift .srole b{{font-family:var(--disp);font-weight:700;font-size:15px;display:block}}
+.shift .srole span{{font-size:12.5px;color:var(--dim2)}}
+.shift .sstat{{flex:0 0 auto;display:flex;align-items:center;gap:9px}}
+.who{{display:flex;align-items:center;gap:9px}}
+.who .av{{width:34px;height:34px;border-radius:10px;position:relative;display:flex;align-items:center;justify-content:center}}
+.who .av span{{position:absolute;inset:2px;border-radius:8px;background:var(--panel2);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800;font-size:12px}}
+.who .wn{{font-size:13px;font-weight:600}} .who .wn small{{display:block;color:var(--mint2);font-size:11px;font-weight:700}}
+.tag-open{{font-size:12px;font-weight:700;color:var(--amber);background:rgba(245,166,35,.12);border:1px solid rgba(245,166,35,.4);border-radius:999px;padding:5px 11px}}
+.shift.justfilled{{border-color:var(--mint);box-shadow:0 0 34px -12px rgba(60,200,158,.7)}}
+.proof{{margin-top:24px;font-size:12.5px;color:var(--dim2);display:flex;align-items:center;gap:8px;flex-wrap:wrap}}
+.proof b{{color:var(--dim)}}
+
+/* ---------- post / console ---------- */
+.console{{background:linear-gradient(180deg,var(--panel),var(--void2));border:1px solid var(--line2);border-radius:22px;overflow:hidden;box-shadow:0 0 70px -34px rgba(164,20,217,.5)}}
+.con-head{{display:flex;align-items:center;gap:10px;padding:14px 20px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}}
 .con-head .lg{{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px var(--mint)}}
-.con-head b{{font-family:var(--disp);font-weight:700;font-size:15px}}
-.con-head .clock{{margin-left:auto;font-family:var(--disp);font-size:13px;color:var(--dim);letter-spacing:.06em}}
-.con-head .demo{{font-size:11px;font-weight:700;color:var(--dim2);border:1px solid var(--line2);padding:4px 9px;border-radius:999px;letter-spacing:.12em}}
-.con-body{{display:grid;grid-template-columns:.92fr 1.08fr}}
-@media(max-width:840px){{.con-body{{grid-template-columns:1fr}}}}
-
-/* left: ticket */
-.ticket{{padding:26px 24px;border-right:1px solid var(--line);position:relative}}
-@media(max-width:840px){{.ticket{{border-right:none;border-bottom:1px solid var(--line)}}}}
-.ticket h2{{font-size:21px;margin-bottom:3px}}
-.ticket .lede{{font-size:13.5px;color:var(--dim2);margin-bottom:20px}}
-.fld{{margin-bottom:14px}}
-.fld label{{display:block;font-family:var(--disp);font-size:11px;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}}
-.fld input,.fld select{{width:100%;font-family:var(--disp);font-weight:600;font-size:15px;color:var(--ink);background:rgba(255,255,255,.04);border:1px solid var(--line2);border-radius:12px;padding:12px 13px;transition:border-color .16s,box-shadow .16s}}
-.fld select{{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none'><path d='m6 9 6 6 6-6' stroke='%23B7A6DA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-repeat:no-repeat;background-position:right 13px center}}
-.fld input:focus,.fld select:focus{{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px rgba(164,20,217,.22),0 0 22px -6px rgba(164,20,217,.6)}}
-.row2{{display:grid;grid-template-columns:1fr 1fr;gap:12px}}
-.post-btn{{width:100%;margin-top:8px;font-family:var(--disp);font-weight:800;font-size:16px;color:#fff;border:none;border-radius:13px;padding:15px;cursor:pointer;
- background:linear-gradient(100deg,var(--purple),var(--purple2));box-shadow:0 14px 30px -12px rgba(164,20,217,.8),0 0 0 1px rgba(255,255,255,.06) inset;transition:transform .12s,filter .2s}}
+.con-head b{{font-family:var(--disp);font-size:14.5px}} .con-head .for{{font-size:12.5px;color:var(--dim2)}}
+.con-head .clk{{margin-left:auto;font-size:12.5px;color:var(--dim);letter-spacing:.05em}}
+.con-body{{display:grid;grid-template-columns:.9fr 1.1fr}}
+@media(max-width:820px){{.con-body{{grid-template-columns:1fr}}}}
+.ticket{{padding:22px 20px;border-right:1px solid var(--line)}}
+@media(max-width:820px){{.ticket{{border-right:none;border-bottom:1px solid var(--line)}}}}
+.ticket h3{{font-size:18px;margin-bottom:14px}}
+.fld{{margin-bottom:13px}}
+.fld label{{display:block;font-family:var(--disp);font-size:10.5px;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}}
+.fld input,.fld select{{width:100%;font-family:var(--disp);font-weight:600;font-size:15px;color:var(--ink);background:rgba(255,255,255,.04);border:1px solid var(--line2);border-radius:11px;padding:11px 12px}}
+.fld select{{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none'><path d='m6 9 6 6 6-6' stroke='%23B7A6DA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-repeat:no-repeat;background-position:right 12px center}}
+.fld input:focus,.fld select:focus{{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px rgba(164,20,217,.2)}}
+.row2{{display:grid;grid-template-columns:1fr 1fr;gap:11px}}
+.post-btn{{width:100%;margin-top:6px;font-family:var(--disp);font-weight:800;font-size:15.5px;color:#fff;border:none;border-radius:12px;padding:14px 10px;cursor:pointer;background:linear-gradient(100deg,var(--purple),var(--purple2));box-shadow:0 12px 26px -12px rgba(164,20,217,.8);transition:transform .12s,filter .2s}}
 .post-btn:hover{{transform:translateY(-1px);filter:brightness(1.08)}}
-.post-btn:active{{transform:translateY(0)}}
 .post-btn.live{{background:linear-gradient(100deg,#1d5f4a,#155e46);box-shadow:none}}
-.post-fee{{margin-top:15px;font-size:12.5px;color:var(--dim2);display:flex;gap:9px;align-items:flex-start;line-height:1.5}}
-.post-fee svg{{flex:0 0 auto;margin-top:1px}}
-
-/* right: feed */
-.feed{{padding:20px 22px 24px;position:relative;background:
- radial-gradient(360px 220px at 80% 0%,rgba(164,20,217,.10),transparent 70%)}}
-.feed-head{{display:flex;align-items:center;gap:14px;margin-bottom:16px}}
-/* fill ring */
-.ring{{position:relative;width:52px;height:52px;flex:0 0 auto}}
-.ring svg{{transform:rotate(-90deg)}}
-.ring .bg{{stroke:var(--line2)}}
-.ring .fg{{stroke:var(--mint);stroke-linecap:round;stroke-dasharray:138;stroke-dashoffset:138;transition:stroke-dashoffset .9s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 0 5px rgba(60,200,158,.8))}}
-.ring .rt{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800;font-size:14px}}
-.feed-head .fh-t{{font-family:var(--disp);font-weight:800;font-size:16px;line-height:1.15}}
-.feed-head .fh-s{{font-size:12.5px;color:var(--dim2)}}
-.feed-head .cnt{{margin-left:auto;font-family:var(--disp);font-weight:800;font-size:12px;color:var(--void);background:var(--mint2);border-radius:999px;padding:4px 11px}}
-
-/* scanning / empty */
-.scan{{min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;padding:20px}}
-.radar{{position:relative;width:120px;height:120px;border-radius:50%;border:1px solid var(--line2);
- background:radial-gradient(circle,rgba(164,20,217,.10),transparent 70%)}}
+.post-fee{{margin-top:13px;font-size:12px;color:var(--dim2);display:flex;gap:8px;align-items:flex-start;line-height:1.5}}
+.feed{{padding:18px 18px 20px;background:radial-gradient(340px 200px at 82% 0%,rgba(164,20,217,.09),transparent 70%)}}
+.feed-head{{display:flex;align-items:center;gap:13px;margin-bottom:14px}}
+.ring{{position:relative;width:48px;height:48px;flex:0 0 auto}} .ring svg{{transform:rotate(-90deg)}}
+.ring .bg{{stroke:var(--line2)}} .ring .fg{{stroke:var(--mint);stroke-linecap:round;stroke-dasharray:126;stroke-dashoffset:126;transition:stroke-dashoffset .9s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 0 5px rgba(60,200,158,.8))}}
+.ring .rt{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800;font-size:13px}}
+.feed-head .fh-t{{font-family:var(--disp);font-weight:800;font-size:15px}} .feed-head .fh-s{{font-size:12px;color:var(--dim2)}}
+.feed-head .cnt{{margin-left:auto;font-family:var(--disp);font-weight:800;font-size:12px;color:var(--void);background:var(--mint2);border-radius:999px;padding:4px 10px}}
+.scan{{min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:15px;padding:16px}}
+.radar{{position:relative;width:110px;height:110px;border-radius:50%;border:1px solid var(--line2);background:radial-gradient(circle,rgba(164,20,217,.10),transparent 70%)}}
 .radar:before,.radar:after{{content:"";position:absolute;inset:0;border-radius:50%;border:1px solid var(--line)}}
-.radar:before{{inset:22px}} .radar:after{{inset:44px}}
+.radar:before{{inset:20px}} .radar:after{{inset:40px}}
 .radar .sweep{{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(60,200,158,.55),transparent 32%);opacity:0}}
-.radar .core{{position:absolute;top:50%;left:50%;width:12px;height:12px;margin:-6px;border-radius:50%;background:var(--mint);box-shadow:0 0 16px var(--mint)}}
+.radar .core{{position:absolute;top:50%;left:50%;width:11px;height:11px;margin:-5.5px;border-radius:50%;background:var(--mint);box-shadow:0 0 16px var(--mint)}}
 .scanning .radar .sweep{{opacity:1;animation:spin 1.05s linear infinite}}
 @keyframes spin{{to{{transform:rotate(360deg)}}}}
-.scan .st{{font-family:var(--disp);font-weight:700;font-size:15px}}
-.scan .ss{{font-size:13px;color:var(--dim2);max-width:26ch}}
-.blip{{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--mint2);box-shadow:0 0 10px var(--mint2);opacity:0}}
-.scanning .blip{{animation:blip 1.05s ease-out infinite}}
-.blip.b1{{top:26%;left:64%;animation-delay:.15s}} .blip.b2{{top:60%;left:30%;animation-delay:.5s}} .blip.b3{{top:70%;left:70%;animation-delay:.8s}}
-@keyframes blip{{0%{{opacity:0;transform:scale(.4)}}40%{{opacity:1}}100%{{opacity:0;transform:scale(1.6)}}}}
-
-/* applicant list */
-.aplist{{list-style:none;display:flex;flex-direction:column;gap:11px}}
-.ap{{display:flex;align-items:center;gap:13px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:12px 13px;
- opacity:0;transform:translateY(14px) scale(.97);animation:pop .55s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d);position:relative}}
+.scan .st{{font-family:var(--disp);font-weight:700;font-size:15px}} .scan .ss{{font-size:12.5px;color:var(--dim2);max-width:26ch}}
+.aplist{{list-style:none;display:flex;flex-direction:column;gap:10px}}
+.ap{{display:flex;align-items:center;gap:12px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:15px;padding:11px 12px;opacity:0;transform:translateY(12px) scale(.97);animation:pop .55s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d)}}
 @keyframes pop{{to{{opacity:1;transform:none}}}}
 html:not(.js) .ap{{opacity:1;transform:none;animation:none}}
-.ap-av{{flex:0 0 auto;width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;position:relative;
- background:conic-gradient(from 140deg,var(--col),transparent 70%);box-shadow:0 0 18px -4px var(--col)}}
-.ap-av span{{position:absolute;inset:2px;border-radius:12px;background:var(--panel2);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800;font-size:16px;color:var(--ink)}}
+.ap-av,.who .av{{background:conic-gradient(from 140deg,var(--col),transparent 70%);box-shadow:0 0 16px -4px var(--col)}}
+.ap-av{{flex:0 0 auto;width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;position:relative}}
+.ap-av span{{position:absolute;inset:2px;border-radius:11px;background:var(--panel2);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800;font-size:15px}}
 .ap-main{{flex:1;min-width:0}}
-.ap-top{{display:flex;align-items:center;gap:9px}}
-.ap-name{{font-family:var(--disp);font-weight:700;font-size:15.5px}}
-.ap-score{{font-family:var(--disp);font-weight:800;font-size:11px;color:var(--mint2);background:rgba(60,200,158,.12);border:1px solid rgba(60,200,158,.3);border-radius:999px;padding:2px 8px}}
-.ap-role{{font-size:13px;color:var(--dim);font-weight:600;margin-top:1px}}
-.ap-meta{{font-size:12px;color:var(--dim2);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-.ap-stars{{color:var(--gold);letter-spacing:-1px}}
-.ap-meta .d{{opacity:.5}}
-.ap-btn{{flex:0 0 auto;font-family:var(--disp);font-weight:700;font-size:13.5px;color:#fff;background:rgba(164,20,217,.16);border:1px solid var(--purple);border-radius:11px;padding:10px 16px;cursor:pointer;transition:background .18s,transform .12s,box-shadow .2s}}
-.ap-btn:hover{{background:var(--purple);box-shadow:0 0 18px -4px var(--purple);transform:translateY(-1px)}}
-.ap.booked{{border-color:var(--mint);box-shadow:0 0 26px -8px rgba(60,200,158,.7)}}
-.ap.booked .ap-av{{background:conic-gradient(from 140deg,var(--mint),transparent 70%);box-shadow:0 0 20px -3px var(--mint)}}
-.ap.booked .ap-btn{{background:var(--mint);border-color:var(--mint);color:#08160f;pointer-events:none}}
-.ap.dim{{opacity:.4;filter:saturate(.55)}}
+.ap-top{{display:flex;align-items:center;gap:8px}} .ap-name{{font-family:var(--disp);font-weight:700;font-size:15px}}
+.ap-score{{font-family:var(--disp);font-weight:800;font-size:10.5px;color:var(--mint2);background:rgba(60,200,158,.12);border:1px solid rgba(60,200,158,.3);border-radius:999px;padding:2px 7px}}
+.ap-role{{font-size:12.5px;color:var(--dim);font-weight:600}}
+.ap-meta{{font-size:11.5px;color:var(--dim2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.ap-stars{{color:var(--gold);letter-spacing:-1px}} .ap-meta .d{{opacity:.5}}
+.ap-btn{{flex:0 0 auto;font-family:var(--disp);font-weight:700;font-size:13px;color:#fff;background:rgba(164,20,217,.16);border:1px solid var(--purple);border-radius:10px;padding:9px 15px;cursor:pointer;transition:background .18s,transform .12s}}
+.ap-btn:hover{{background:var(--purple);transform:translateY(-1px)}}
 
-.booked-bar{{margin-top:16px;border:1px solid var(--mint);background:linear-gradient(100deg,rgba(60,200,158,.14),rgba(60,200,158,.05));border-radius:15px;padding:14px 16px;display:none;gap:13px;align-items:center;box-shadow:0 0 30px -12px rgba(60,200,158,.6)}}
-.booked-bar.on{{display:flex;animation:pop .5s cubic-bezier(.2,.8,.2,1)}}
-.bb-ic{{flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:var(--mint);display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px -4px var(--mint)}}
-.booked-bar b{{font-family:var(--disp);font-size:15px}}
-.bb-sub{{font-size:12.5px;color:var(--dim);margin-top:2px}}
+/* ---------- team ---------- */
+.team{{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}}
+@media(max-width:680px){{.team{{grid-template-columns:1fr}}}}
+.tm{{display:flex;align-items:center;gap:14px;background:linear-gradient(180deg,var(--panel),var(--void2));border:1px solid var(--line);border-radius:16px;padding:16px}}
+.tm .tav{{width:52px;height:52px;flex:0 0 auto;border-radius:15px;position:relative;display:flex;align-items:center;justify-content:center}}
+.tm .tav span{{position:absolute;inset:2px;border-radius:13px;background:var(--panel2);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800;font-size:17px}}
+.tm .tinfo{{flex:1;min-width:0}}
+.tm .tinfo b{{font-family:var(--disp);font-size:15.5px}} .tm .tinfo .tr{{font-size:12.5px;color:var(--dim);font-weight:600}}
+.tm .tinfo .tmeta{{font-size:11.5px;color:var(--dim2);margin-top:3px}}
+.tm .tinfo .tmeta .st{{color:var(--gold)}}
 
-/* sections */
-.sec{{padding:56px 0 6px}}
-.sec h2{{font-size:clamp(26px,3.7vw,38px);text-align:center;max-width:20ch;margin:0 auto}}
-.sec .s-sub{{text-align:center;color:var(--dim2);max-width:50ch;margin:10px auto 30px}}
-.vals{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}}
-@media(max-width:780px){{.vals{{grid-template-columns:1fr}}}}
-.val{{background:linear-gradient(180deg,var(--panel),var(--void2));border:1px solid var(--line);border-radius:18px;padding:24px}}
-.val .v-ic{{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:15px;border:1px solid var(--line2)}}
-.val h3{{font-size:17.5px;margin-bottom:7px}}
-.val p{{font-size:14px;color:var(--dim)}}
+/* toast */
+.toast{{position:fixed;left:50%;bottom:26px;transform:translate(-50%,140%);z-index:60;display:flex;align-items:center;gap:12px;background:linear-gradient(100deg,rgba(60,200,158,.16),rgba(20,40,32,.9));border:1px solid var(--mint);border-radius:14px;padding:13px 18px;box-shadow:0 20px 50px -20px rgba(0,0,0,.7),0 0 40px -14px rgba(60,200,158,.7);max-width:calc(100vw - 36px);transition:transform .5s cubic-bezier(.2,.8,.2,1)}}
+.toast.on{{transform:translate(-50%,0)}}
+.toast .ti{{width:34px;height:34px;flex:0 0 auto;border-radius:10px;background:var(--mint);display:flex;align-items:center;justify-content:center}}
+.toast b{{font-family:var(--disp);font-size:14px}} .toast .ts{{font-size:12px;color:var(--dim)}}
 
-.tgrid{{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}}
-@media(max-width:840px){{.tgrid{{grid-template-columns:1fr}}}}
-.tc{{background:linear-gradient(180deg,var(--panel),var(--void2));border:1px solid var(--line);border-radius:18px;padding:22px;position:relative}}
-.tc-q{{font-family:var(--disp);font-size:52px;line-height:.6;color:var(--purple);opacity:.5;height:26px}}
-.tc blockquote{{font-size:15px;line-height:1.62;color:var(--ink)}}
-.tc figcaption{{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:13px;flex-wrap:wrap}}
-.tc-dot{{width:9px;height:9px;border-radius:50%}}
-.tc-w{{color:var(--dim2)}}
+/* mobile nav */
+.mobnav{{display:none}}
+.appfoot{{border-top:1px solid var(--line);padding:22px 26px 30px;color:var(--dim2);font-size:12px;text-align:center}}
+.appfoot .dlf{{height:18px;opacity:.85;margin-bottom:10px}}
+.appfoot p{{max-width:60ch;margin:0 auto}}
 
-.media{{padding:38px 0 8px;text-align:center}}
-.media span{{font-family:var(--disp);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dim2)}}
-.media-row{{display:inline-flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:16px;background:rgba(255,255,255,.92);border-radius:14px;padding:14px 24px}}
-.media-row img{{height:26px;width:auto}}
-
-.cta{{margin:48px 0;border-radius:26px;padding:48px 30px;text-align:center;position:relative;overflow:hidden;border:1px solid var(--line2);
- background:radial-gradient(600px 300px at 20% -20%,rgba(164,20,217,.5),transparent 60%),radial-gradient(600px 400px at 100% 120%,rgba(60,200,158,.34),transparent 60%),var(--panel)}}
-.cta h2{{font-size:clamp(26px,3.8vw,40px);position:relative}}
-.cta p{{position:relative;max-width:46ch;margin:14px auto 0;color:var(--dim)}}
-.cta a{{position:relative;display:inline-block;margin-top:24px;font-family:var(--disp);font-weight:800;font-size:16px;color:var(--void);background:linear-gradient(100deg,var(--mint2),#fff);padding:15px 28px;border-radius:13px;text-decoration:none;box-shadow:0 0 40px -10px rgba(107,240,192,.7)}}
-
-.foot{{padding:30px 0 50px;color:var(--dim2);font-size:13px;text-align:center;border-top:1px solid var(--line)}}
-.dl-foot{{height:20px;opacity:.9;margin-bottom:14px}}
-.foot .fnote{{max-width:62ch;margin:0 auto 8px;color:var(--dim2)}}
-
-/* mobile */
-@media(max-width:560px){{
- .ticket{{padding:22px 18px}} .feed{{padding:18px 16px 22px}}
- .con-head{{flex-wrap:wrap;row-gap:4px}} .con-head .clock{{margin-left:auto}}
- .post-btn{{font-size:15px;padding:14px 10px}}
- .ap{{flex-wrap:wrap;column-gap:12px;row-gap:0}}
- .ap-av{{order:1}} .ap-main{{order:2;flex:1 1 calc(100% - 60px)}}
- .ap-btn{{order:3;flex:1 1 100%;margin-top:11px;padding:11px}}
- .feed-head{{flex-wrap:wrap}} .feed-head .cnt{{order:3}}
+@media(max-width:860px){{
+ .app{{grid-template-columns:1fr}}
+ .side{{display:none}}
+ .content{{padding:20px 16px 96px}}
+ .topbar{{padding:14px 18px}}
+ .mobnav{{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(14,5,24,.92);backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom))}}
+ .mobnav .navitem{{flex:1;flex-direction:column;gap:4px;font-size:11px;padding:8px 4px;justify-content:center;text-align:center;border-radius:12px}}
+ .mobnav .navitem span{{font-size:11px}}
+ .stats{{grid-template-columns:repeat(3,1fr);gap:9px}} .stat{{padding:13px 12px}} .stat .n{{font-size:22px}} .stat .l{{font-size:11px}}
+ .gap{{flex-wrap:wrap}} .gap .fill-btn{{flex:1 1 100%}} .gap .fill-btn .btn{{width:100%}}
+ .ap{{flex-wrap:wrap}} .ap-av{{order:1}} .ap-main{{order:2;flex:1 1 calc(100% - 58px)}} .ap-btn{{order:3;flex:1 1 100%;margin-top:10px;padding:11px}}
+ .shift{{flex-wrap:wrap;row-gap:8px}} .shift .srole{{flex:1 1 calc(100% - 66px)}} .shift .sstat{{flex:1 1 100%;justify-content:flex-end}}
 }}
-/* no-JS + reduced motion */
-html:not(.js) .scan{{display:none}}
-html:not(.js) #apList{{display:flex!important}}
-@media (prefers-reduced-motion: reduce){{
- .reveal{{transition:none}} .ap{{animation:none;opacity:1;transform:none}}
- .radar .sweep,.blip,.pulse{{animation:none!important}} .ring .fg{{transition:none}}
- .post-btn:hover,.ap-btn:hover{{transform:none}}
-}}
+html:not(.js) .scan{{display:none}} html:not(.js) #apList{{display:flex!important}}
+html:not(.js) [data-view]:not(#v-tonight){{display:none!important}}
+@media (prefers-reduced-motion: reduce){{.view,.ap{{animation:none}}.radar .sweep,.pulse{{animation:none!important}}.ring .fg{{transition:none}}}}
 [hidden]{{display:none!important}}
 </style>
 
-<div class="bar"><div class="wrap bar-in">
-  {LOGO}
-  <span class="bar-tag"><span class="pulse"></span>Live sample by ASTRA</span>
-</div></div>
+<div class="app">
+  <aside class="side">
+    <div class="brand">{LOGO}</div>
+    <nav class="nav">{NAVDESK}</nav>
+    <div class="venue"><span class="vlogo">CS</span><div><b>The Copper Still</b><span>Shoreditch, London</span></div></div>
+    <p class="sample">Sample venue app by ASTRA. Demo data.</p>
+  </aside>
 
-<header class="hero" id="top"><div class="wrap">
-  <span class="kick reveal"><i></i>Friday, 18:04 &middot; service in two hours</span>
-  <h1 class="reveal">Post a shift.<br><span class="g">Watch the room fill.</span></h1>
-  <p class="sub reveal">Your worker app already sings. This is the side that pays given the same energy, one screen where a manager drops a shift and ranked, rated staff light up in real time. Post one below and watch it happen.</p>
-  <p class="note reveal"><b>Live demo.</b> Hit post and the floor fills, exactly as a venue would see it.</p>
-
-  <section class="console reveal" aria-label="Diisco venue console demo">
-    <div class="con-head"><span class="lg"></span><b>Diisco venue console</b><span class="clock mono" id="clock">18:04</span><span class="demo">DEMO</span></div>
-    <div class="con-body">
-      <form class="ticket" id="shiftForm" novalidate>
-        <h2>Drop a shift</h2>
-        <p class="lede">Role, date, pay rate. Two taps and it is live to your ranked pool.</p>
-        <div class="fld"><label for="role">Role</label>
-          <select id="role" name="role"><option>Chef de partie</option><option>Sous chef</option><option>Bartender</option><option>Waiting staff</option><option>Event staff</option><option>Bar back</option></select></div>
-        <div class="row2">
-          <div class="fld"><label for="date">Date</label><input id="date" value="Fri 4 Sep" autocomplete="off"></div>
-          <div class="fld"><label for="hours">Hours</label><input id="hours" value="6" inputmode="numeric" autocomplete="off"></div>
-        </div>
-        <div class="row2">
-          <div class="fld"><label for="time">Start</label><input id="time" value="17:00" autocomplete="off"></div>
-          <div class="fld"><label for="rate">Pay rate</label><input id="rate" value="£15 p/h" autocomplete="off"></div>
-        </div>
-        <button class="post-btn" id="postBtn" type="submit">Post shift to your pool</button>
-        <p class="post-fee"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z" stroke="#8B7AB0" stroke-width="1.6" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" stroke="#8B7AB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>One simple flat fee per shift instead of an hourly agency markup. You only pay when a worker checks in.</span></p>
-      </form>
-
-      <div class="feed">
-        <div class="feed-head">
-          <div class="ring" aria-hidden="true"><svg width="52" height="52" viewBox="0 0 52 52"><circle class="bg" cx="26" cy="26" r="22" fill="none" stroke-width="4"/><circle class="fg" id="ringFg" cx="26" cy="26" r="22" fill="none" stroke-width="4"/></svg><span class="rt mono" id="ringTxt">0/1</span></div>
-          <div><div class="fh-t">Filling your shift</div><div class="fh-s" id="feedSub">Ranked by score. Sample data.</div></div>
-          <span class="cnt" id="apCount" hidden>0</span>
-        </div>
-
-        <div class="scan" id="scan">
-          <div class="radar"><span class="sweep"></span><span class="core"></span><span class="blip b1"></span><span class="blip b2"></span><span class="blip b3"></span></div>
-          <div class="st" id="scanT">Ready when you are</div>
-          <div class="ss" id="scanS">Drop a shift and watch qualified, rated staff apply within seconds.</div>
-        </div>
-
-        <ul class="aplist" id="apList" hidden>{CARDS}</ul>
-
-        <div class="booked-bar" id="bookedBar" role="status" aria-live="polite">
-          <span class="bb-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7" stroke="#08160f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div><b id="bbName">Shift filled</b><div class="bb-sub" id="bbSub"></div></div>
-        </div>
-      </div>
+  <div class="main">
+    <div class="topbar">
+      <div><div class="tt" id="topTitle">Tonight</div><div class="td" id="topDate">Thursday 3 September</div></div>
+      <span class="astra"><span class="pulse"></span>Live sample by ASTRA</span>
     </div>
-  </section>
-</div></header>
 
-<section class="sec"><div class="wrap">
-  <h2 class="reveal">Everything the paying side actually needs</h2>
-  <p class="s-sub reveal">Straight from how Diisco already works, pulled forward so a venue feels it in the first ten seconds.</p>
-  <div class="vals">
-    <div class="val reveal"><div class="v-ic" style="background:rgba(164,20,217,.12)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M7 8h7a3 3 0 0 1 0 6H8" stroke="#C77DF0" stroke-width="1.7" stroke-linecap="round"/></svg></div><h3>One flat fee per shift</h3><p>No hourly rates, no long contracts, no hidden agency markup. Staffing costs you can actually budget.</p></div>
-    <div class="val reveal"><div class="v-ic" style="background:rgba(59,130,246,.14)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m12 3 2.5 5 5.5.8-4 3.9 1 5.5L12 21l-5-2.9 1-5.5-4-3.9 5.5-.8L12 3Z" stroke="#7FB0FF" stroke-width="1.5" stroke-linejoin="round"/></svg></div><h3>Ranked worker access</h3><p>Browse staff by performance score and read past ratings before you book. Hire with confidence every time.</p></div>
-    <div class="val reveal"><div class="v-ic" style="background:rgba(60,200,158,.14)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" stroke="#6BF0C0" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h3>Build your venue rep</h3><p>Earn ratings from trusted workers, become a go to venue, and pull higher ranked staff over time.</p></div>
+    <div class="content">
+      <!-- TONIGHT -->
+      <section class="view" data-view id="v-tonight">
+        <h1 class="hi">Evening, Copper Still 👋</h1>
+        <p class="hi-sub">Here is your week. One shift still needs a body on it.</p>
+        <div class="stats">
+          <div class="stat"><div class="n" id="stTotal">5</div><div class="l">Shifts this week</div></div>
+          <div class="stat"><div class="n mono" id="stFilled" style="color:var(--mint2)">3</div><div class="l">Filled</div></div>
+          <div class="stat warn"><div class="n mono" id="stOpen">2</div><div class="l">Still open</div></div>
+        </div>
+        <div class="sec-h"><h2>Needs filling</h2><span class="badge" id="gapBadge">2 open</span></div>
+        <div id="gapZone"></div>
+        <div class="sec-h" style="margin-top:22px"><h2>Your rota</h2></div>
+        <div class="rota" id="rota"></div>
+        <div class="proof"><b>Trusted by venues like</b> The Marlowe Inn (Edinburgh) and Salt &amp; Thyme (Bristol) &middot; as seen in Leeds Today and The Business Desk</div>
+      </section>
+
+      <!-- POST -->
+      <section class="view" data-view id="v-post" hidden>
+        <h1 class="hi">Fill a shift</h1>
+        <p class="hi-sub" id="postSub">Drop a shift and watch your ranked pool light up in real time.</p>
+        <div class="console">
+          <div class="con-head"><span class="lg"></span><b>Matching</b><span class="for" id="conFor"></span><span class="clk mono">18:04</span></div>
+          <div class="con-body">
+            <form class="ticket" id="shiftForm" novalidate>
+              <h3>Shift details</h3>
+              <div class="fld"><label for="role">Role</label><select id="role"><option>Chef de partie</option><option>Sous chef</option><option>Bartender</option><option>Waiting staff</option><option>Event staff</option><option>Bar back</option></select></div>
+              <div class="row2"><div class="fld"><label for="date">Date</label><input id="date" value="Fri 4 Sep" autocomplete="off"></div><div class="fld"><label for="hours">Hours</label><input id="hours" value="6" inputmode="numeric" autocomplete="off"></div></div>
+              <div class="row2"><div class="fld"><label for="time">Start</label><input id="time" value="17:00" autocomplete="off"></div><div class="fld"><label for="rate">Pay rate</label><input id="rate" value="£15 p/h" autocomplete="off"></div></div>
+              <button class="post-btn" id="postBtn" type="submit">Post to your pool</button>
+              <p class="post-fee"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z" stroke="#8A79AE" stroke-width="1.6" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" stroke="#8A79AE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>One flat fee per shift instead of an hourly agency markup. You only pay when a worker checks in.</span></p>
+            </form>
+            <div class="feed">
+              <div class="feed-head">
+                <div class="ring" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48"><circle class="bg" cx="24" cy="24" r="20" fill="none" stroke-width="4"/><circle class="fg" id="ringFg" cx="24" cy="24" r="20" fill="none" stroke-width="4"/></svg><span class="rt mono" id="ringTxt">0/1</span></div>
+                <div><div class="fh-t">Filling your shift</div><div class="fh-s" id="feedSub">Ranked by score. Sample data.</div></div>
+                <span class="cnt" id="apCount" hidden>0</span>
+              </div>
+              <div class="scan" id="scan"><div class="radar"><span class="sweep"></span><span class="core"></span></div><div class="st" id="scanT">Ready when you are</div><div class="ss" id="scanS">Post the shift and watch qualified, rated staff apply within seconds.</div></div>
+              <ul class="aplist" id="apList" hidden></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section class="view" data-view id="v-team" hidden>
+        <h1 class="hi">My team</h1>
+        <p class="hi-sub">Rated staff you have worked with and can rebook in a tap.</p>
+        <div class="team" id="teamGrid"></div>
+      </section>
+    </div>
+
+    <footer class="appfoot">
+      {svg_inline("logo_light.svg","dlf").replace('class="dlf"','class="dlf"',1)}
+      <p>Sample venue app built by ASTRA to show the Diisco venue experience. The venue, rota, workers and shift data are demonstration data, not a live Diisco product. Venue names in the trust line are from Diisco's own site. No affiliation or endorsement implied. Built for Alex at Diisco.</p>
+    </footer>
   </div>
-</div></section>
 
-<section class="sec"><div class="wrap">
-  <h2 class="reveal">Venues and staff already saying it</h2>
-  <div class="tgrid reveal" style="margin-top:28px">{TESTIS}</div>
-</div></section>
+  <nav class="mobnav">{NAVMOB}</nav>
+</div>
 
-<section class="media"><div class="wrap">
-  <span>As seen on</span>
-  <div class="media-row"><img src="{MEDIA1}" alt="Leeds Today"><img src="{MEDIA2}" alt="The Business Desk"></div>
-</div></section>
-
-<section class="wrap"><div class="cta reveal">
-  <h2>The venue side, live and clickable</h2>
-  <p>Same energy as your worker app, built for the manager who actually pays. Happy to walk you through how it could sit on top of what you have already.</p>
-  <a href="#top">Run the console again</a>
-</div></section>
-
-<footer class="foot"><div class="wrap">
-  {LOGO_F.replace('class="dlf"','class="dlf dl-foot"',1)}
-  <p class="fnote">Sample venue console built by ASTRA to show the Diisco venue experience. Applicant profiles and the shift shown are demonstration data, not a live Diisco product. Venue and staff quotes are from Diisco's own site.</p>
-  <p>No affiliation or endorsement implied. Built for Alex at Diisco.</p>
-</div></footer>
-
-<script>
-document.documentElement.classList.add('js');
-(function(){{
-  var io=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting){{e.target.classList.add('in');io.unobserve(e.target);}}}});}},{{threshold:.12}});
-  document.querySelectorAll('.reveal').forEach(function(el){{io.observe(el);}});
-  setTimeout(function(){{document.querySelectorAll('.reveal:not(.in)').forEach(function(el){{el.classList.add('in');}});}},2000);
-
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var form=document.getElementById('shiftForm'),list=document.getElementById('apList'),scan=document.getElementById('scan'),
-      feedSub=document.getElementById('feedSub'),postBtn=document.getElementById('postBtn'),cnt=document.getElementById('apCount'),
-      bar=document.getElementById('bookedBar'),bbName=document.getElementById('bbName'),bbSub=document.getElementById('bbSub'),
-      scanT=document.getElementById('scanT'),scanS=document.getElementById('scanS'),
-      ringFg=document.getElementById('ringFg'),ringTxt=document.getElementById('ringTxt');
-  var feed=list.parentNode, cards=[].slice.call(list.querySelectorAll('.ap')), posted=false, busy=false;
-
-  function setRing(v){{ ringFg.style.strokeDashoffset=(138-138*v).toFixed(1); }}
-  function reset(){{
-    posted=false; bar.classList.remove('on'); list.hidden=true; cnt.hidden=true; cnt.textContent='0';
-    scan.style.display=''; scan.classList.remove('scanning'); scanT.textContent='Ready when you are';
-    scanS.textContent='Drop a shift and watch qualified, rated staff apply within seconds.';
-    feedSub.textContent='Ranked by score. Sample data.'; setRing(0); ringTxt.textContent='0/1';
-    postBtn.textContent='Post shift to your pool'; postBtn.classList.remove('live');
-    cards.forEach(function(c){{c.classList.remove('booked','dim');var b=c.querySelector('.ap-btn');if(b)b.textContent='Confirm';}});
-  }}
-  function fill(){{
-    var role=document.getElementById('role').value,date=document.getElementById('date').value,time=document.getElementById('time').value;
-    scan.style.display='none'; list.hidden=false; cnt.hidden=false;
-    feedSub.textContent=role+' &middot; '+date+' at '+time+' &middot; sample data';
-    feedSub.innerHTML=role+' &middot; '+date+' at '+time+' &middot; sample data';
-    var n=0, step=reduce?0:230;
-    cards.forEach(function(c,i){{
-      c.style.animation='none'; void c.offsetWidth; c.style.animation='';
-      setTimeout(function(){{n++;cnt.textContent=n;}}, i*step+ (reduce?0:200));
-    }});
-    postBtn.textContent='Shift is live, post again to reset'; postBtn.classList.add('live'); busy=false;
-  }}
-  form.addEventListener('submit',function(ev){{
-    ev.preventDefault();
-    if(busy) return;
-    if(posted){{ reset(); return; }}
-    posted=true; busy=true; bar.classList.remove('on');
-    postBtn.textContent='Posting…';
-    scan.style.display=''; scanT.textContent='Scanning your ranked pool';
-    scanS.textContent='Matching staff by score, rating and distance…';
-    if(reduce){{ fill(); return; }}
-    scan.classList.add('scanning');
-    setTimeout(function(){{ scan.classList.remove('scanning'); fill(); }}, 1050);
-  }});
-  list.addEventListener('click',function(ev){{
-    var btn=ev.target.closest('.ap-btn'); if(!btn) return;
-    var card=btn.closest('.ap'); if(card.classList.contains('booked')) return;
-    cards.forEach(function(c){{ if(c!==card) c.classList.add('dim'); }});
-    card.classList.add('booked'); btn.textContent='Booked';
-    setRing(1); ringTxt.textContent='1/1';
-    var name=btn.getAttribute('data-name'),role=document.getElementById('role').value,date=document.getElementById('date').value,
-        hours=document.getElementById('hours').value,time=document.getElementById('time').value,prate=document.getElementById('rate').value;
-    bbName.textContent=name+' locked in for your '+role.toLowerCase()+' shift';
-    bbSub.textContent=date+' at '+time+', '+hours+' hrs at '+prate+'. One flat Diisco fee, secure payment released when they check in.';
-    bar.classList.add('on');
-    bar.scrollIntoView({{behavior:'smooth',block:'nearest'}});
-  }});
-  // ambient clock drift for life
-  var mins=244;
-  setInterval(function(){{ mins=(mins+1)%1440; var h=(''+Math.floor(mins/60)).padStart(2,'0'),m=(''+(mins%60)).padStart(2,'0'); document.getElementById('clock').textContent=h+':'+m; }}, 8000);
-}})();
-</script>
+<div class="toast" id="toast" role="status" aria-live="polite"><span class="ti"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7" stroke="#08160f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b id="toastT">Shift filled</b><div class="ts" id="toastS"></div></div></div>
 """
-OUT.write_text(HTML)
-print("WROTE", OUT, len(HTML.encode()), "bytes")
+
+SCRIPT = r'''<script>
+document.documentElement.classList.add('js');
+(function(){
+  var WK=__WKJSON__, SHIFTS=__SHJSON__;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var byId=function(id){return document.getElementById(id);};
+  function wk(id){return WK.filter(function(w){return w.id===id;})[0];}
+  function stars(r){return '★'.repeat(Math.round(r));}
+  var TITLES={tonight:['Tonight','Thursday 3 September'],post:['Fill a shift','Matching staff to your gap'],team:['My team','6 rated regulars']};
+
+  /* ---- nav ---- */
+  function go(view){
+    document.querySelectorAll('[data-view]').forEach(function(v){v.hidden=(v.id!=='v-'+view);});
+    document.querySelectorAll('.navitem').forEach(function(n){n.classList.toggle('active',n.getAttribute('data-nav')===view);});
+    byId('topTitle').textContent=TITLES[view][0]; byId('topDate').textContent=TITLES[view][1];
+    document.querySelector('.content').scrollTo?0:0; window.scrollTo(0,0);
+  }
+  document.querySelectorAll('.navitem').forEach(function(n){n.addEventListener('click',function(){ if(n.getAttribute('data-nav')==='post'){prime(firstOpen());} go(n.getAttribute('data-nav')); });});
+
+  /* ---- dashboard render ---- */
+  function firstOpen(){return SHIFTS.filter(function(s){return s.status==='open';})[0];}
+  function renderStats(){
+    byId('stTotal').textContent=SHIFTS.length;
+    var f=SHIFTS.filter(function(s){return s.status==='filled';}).length;
+    byId('stFilled').textContent=f; byId('stOpen').textContent=SHIFTS.length-f;
+    var open=SHIFTS.length-f; byId('gapBadge').textContent=open+' open';
+  }
+  function gapCard(s){
+    return '<div class="gap" data-shift="'+s.id+'"><span class="gi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 8v5l3 2" stroke="#F5A623" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#F5A623" stroke-width="1.6"/></svg></span>'
+      +'<div class="gm"><b>'+s.role+' still needed</b><p>'+s.day+' &middot; '+s.date+' &middot; '+s.time+' &middot; '+s.hours+' hrs &middot; '+s.rate+'</p></div>'
+      +'<div class="fill-btn"><button class="btn fill" data-shift="'+s.id+'" type="button">Fill this shift</button></div></div>';
+  }
+  function shiftRow(s){
+    var right;
+    if(s.status==='filled'){var w=wk(s.worker);
+      right='<div class="who"><div class="av" style="--col:'+w.col+'"><span>'+w.ini+'</span></div><div class="wn">'+w.name.split(' ')[0]+' '+w.name.split(' ')[1][0]+'.<small>'+stars(w.rating)+' '+w.rating+'</small></div></div>';
+    } else { right='<span class="tag-open">Open</span><button class="btn sm fill" data-shift="'+s.id+'" type="button">Fill</button>'; }
+    return '<div class="shift" id="row-'+s.id+'"><div class="stime mono">'+s.time+'</div><div class="srole"><b>'+s.role+'</b><span>'+s.date+' &middot; '+s.hours+' hrs &middot; '+s.rate+'</span></div><div class="sstat">'+right+'</div></div>';
+  }
+  function renderDash(){
+    renderStats();
+    var opens=SHIFTS.filter(function(s){return s.status==='open';});
+    byId('gapZone').innerHTML = opens.length? opens.map(gapCard).join('') :
+      '<div class="gap" style="border-color:var(--line2);box-shadow:none;background:rgba(255,255,255,.02)"><span class="gi" style="background:rgba(60,200,158,.12);border-color:rgba(60,200,158,.4)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7" stroke="#6BF0C0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="gm"><b>Every shift is covered</b><p>Nice. Your whole week is staffed.</p></div></div>';
+    document.querySelector('.sec-h .badge').style.display=opens.length?'':'none';
+    // rota grouped by day
+    var days=[], seen={}; SHIFTS.forEach(function(s){if(!seen[s.date]){seen[s.date]=1;days.push(s.date);}});
+    byId('rota').innerHTML=days.map(function(d){
+      var lab=SHIFTS.filter(function(s){return s.date===d;})[0].day;
+      return '<div class="rday">'+lab+' &middot; '+d+'</div>'+SHIFTS.filter(function(s){return s.date===d;}).map(shiftRow).join('');
+    }).join('');
+    bindFill();
+  }
+  function bindFill(){
+    document.querySelectorAll('.fill').forEach(function(b){
+      b.addEventListener('click',function(){ var s=SHIFTS.filter(function(x){return x.id===b.getAttribute('data-shift');})[0]; prime(s); go('post'); });
+    });
+  }
+
+  /* ---- team ---- */
+  byId('teamGrid').innerHTML=WK.map(function(w){
+    return '<div class="tm"><div class="tav" style="--col:'+w.col+'"><span>'+w.ini+'</span></div><div class="tinfo"><b>'+w.name+'</b><div class="tr">'+w.role+'</div><div class="tmeta"><span class="st">'+stars(w.rating)+'</span> '+w.rating+' &middot; '+w.shifts+' shifts &middot; '+w.dist+'</div></div><button class="btn sm ghost rebook" data-role="'+w.role+'" type="button">Rebook</button></div>';
+  }).join('');
+  byId('teamGrid').addEventListener('click',function(e){var b=e.target.closest('.rebook'); if(!b)return; var s=firstOpen()||SHIFTS[0]; prime(s); if(b.getAttribute('data-role')) byId('role').value=b.getAttribute('data-role'); go('post');});
+
+  /* ---- post / console ---- */
+  var target=null, posted=false, busy=false;
+  var form=byId('shiftForm'),list=byId('apList'),scan=byId('scan'),feedSub=byId('feedSub'),postBtn=byId('postBtn'),
+      cnt=byId('apCount'),ringFg=byId('ringFg'),ringTxt=byId('ringTxt'),scanT=byId('scanT'),scanS=byId('scanS'),conFor=byId('conFor'),postSub=byId('postSub');
+  function setRing(v){ringFg.style.strokeDashoffset=(126-126*v).toFixed(1);}
+  function prime(s){
+    target=s||firstOpen()||SHIFTS[0];
+    byId('role').value=target.role; byId('date').value=target.date; byId('time').value=target.time; byId('hours').value=target.hours; byId('rate').value=target.rate;
+    conFor.textContent='· '+target.role+', '+target.date;
+    postSub.textContent='Filling your '+target.role.toLowerCase()+' gap on '+target.date+'. Post it and watch the pool light up.';
+    resetFeed();
+  }
+  function resetFeed(){
+    posted=false;busy=false; list.hidden=true; list.innerHTML=''; cnt.hidden=true; cnt.textContent='0';
+    scan.style.display=''; scan.classList.remove('scanning'); scanT.textContent='Ready when you are';
+    scanS.textContent='Post the shift and watch qualified, rated staff apply within seconds.';
+    feedSub.textContent='Ranked by score. Sample data.'; setRing(0); ringTxt.textContent='0/1';
+    postBtn.textContent='Post to your pool'; postBtn.classList.remove('live');
+  }
+  function cardHTML(w,i){
+    return '<li class="ap" style="--d:'+(i*220)+'ms;--col:'+w.col+'"><div class="ap-av"><span>'+w.ini+'</span></div>'
+     +'<div class="ap-main"><div class="ap-top"><span class="ap-name">'+w.name.split(' ')[0]+' '+w.name.split(' ')[1][0]+'.</span><span class="ap-score">'+w.score+'</span></div>'
+     +'<div class="ap-role">'+w.role+'</div><div class="ap-meta"><span class="ap-stars">'+stars(w.rating)+'</span> <b>'+w.rating+'</b> <span class="d">&middot;</span> '+w.shifts+' shifts <span class="d">&middot;</span> '+w.dist+' <span class="d">&middot;</span> '+w.rate+'</div></div>'
+     +'<button class="ap-btn" data-w="'+w.id+'" type="button">Confirm</button></li>';
+  }
+  function fill(){
+    var ranked=WK.slice().sort(function(a,b){return b.score-a.score;});
+    list.innerHTML=ranked.map(cardHTML).join(''); scan.style.display='none'; list.hidden=false; cnt.hidden=false;
+    feedSub.textContent=target.role+' · '+target.date+' at '+target.time+' · sample data';
+    var n=0, step=reduce?0:220;
+    ranked.forEach(function(w,i){ setTimeout(function(){n++;cnt.textContent=n;}, i*step+(reduce?0:180)); });
+    postBtn.textContent='Shift is live, tap a name to confirm'; postBtn.classList.add('live'); busy=false;
+  }
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault(); if(busy)return; if(posted){resetFeed();return;}
+    posted=true;busy=true; postBtn.textContent='Posting…';
+    scan.style.display=''; scanT.textContent='Scanning your ranked pool'; scanS.textContent='Matching staff by score, rating and distance…';
+    if(reduce){fill();return;}
+    scan.classList.add('scanning'); setTimeout(function(){scan.classList.remove('scanning');fill();},1050);
+  });
+  list.addEventListener('click',function(ev){
+    var b=ev.target.closest('.ap-btn'); if(!b)return; var w=wk(b.getAttribute('data-w'));
+    // mark target shift filled
+    target.status='filled'; target.worker=w.id;
+    setRing(1); ringTxt.textContent='1/1';
+    // toast
+    byId('toastT').textContent=w.name.split(' ')[0]+' locked in';
+    byId('toastS').textContent=target.role+', '+target.date+' at '+target.time+'. Secure pay on check in.';
+    var t=byId('toast'); t.classList.add('on'); setTimeout(function(){t.classList.remove('on');},4200);
+    renderDash();
+    setTimeout(function(){
+      go('tonight');
+      var row=byId('row-'+target.id); if(row){row.classList.add('justfilled'); row.scrollIntoView({behavior:'smooth',block:'center'}); setTimeout(function(){row.classList.remove('justfilled');},2600);}
+    }, 620);
+  });
+
+  /* init */
+  renderDash(); prime(firstOpen());
+  // clock drift
+  var mins=1084; setInterval(function(){mins=(mins+1)%1440;var h=(''+Math.floor(mins/60)).padStart(2,'0'),m=(''+(mins%60)).padStart(2,'0');document.querySelectorAll('.clk').forEach(function(c){c.textContent=h+':'+m;});},9000);
+})();
+</script>
+'''
+SCRIPT = SCRIPT.replace('__WKJSON__', WK_JSON).replace('__SHJSON__', SHIFTS_JSON)
+OUT.write_text(HTML + '\n' + SCRIPT)
+print("WROTE", OUT, len((HTML+SCRIPT).encode()), "bytes")
