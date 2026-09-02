@@ -26,6 +26,17 @@ drafting anything external. It bans the validation tics, honesty theatre,
 give AI writing away, and it sits alongside the existing no-dash and
 no-fabrication rules.
 
+Before choosing what to pitch a given lead, read
+**`docs/astra-commercial-angle-master.md`** — the canonical commercial
+reasoning playbook. It is the layer between prospect research and the message,
+and it governs angle selection for outreach openers, reply drafting, and
+prototype decisions. Diagnose the business bottleneck first, generate two to
+five candidate angles, score and red-team them, and pick the strongest, or
+return `NO_STRONG_ANGLE` when the evidence does not justify one. Do not start
+from a service and hunt for a reason to sell it, and never manufacture pain.
+The angle library (G/O/I/B patterns), the evidence to problem to angle chain,
+and the no-strong-angle rule live there.
+
 Before drafting any outreach message in either routine, also read
 **`docs/astra-master-context.md`** — the business identity, ideal client
 profile, service lines (Grow / Optimise / Innovate / Build Squad), pricing

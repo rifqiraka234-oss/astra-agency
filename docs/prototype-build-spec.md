@@ -1671,3 +1671,5 @@ weight as an invented stat. Website copy names the real product doing the real
 thing in the client's own register, never generic SaaS uplift. Run the reread
 pass at the bottom of that file over the built page and the send message before
 either ships.
+
+The angle a prototype is built to prove comes from `docs/astra-commercial-angle-master.md` (the winning angle and its prototype decision, `YES_FULL` / `YES_KEY_JOURNEY_ONLY` / `ONLY_AFTER_INTEREST` / `NO`). Build only when the angle scored strong and a prototype materially increases the prospect's understanding; a visually exciting prototype never makes a weak lead strong.

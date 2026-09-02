@@ -266,6 +266,11 @@ template.
   and sends manually or via a separate explicit send step.
 - Never tier or draft a reply off `aiLeadInterestLevel` alone; it is a
   prioritization hint for where to spend reading effort, not evidence.
+- Before deciding what angle to pitch any lead (opener, nudge, or reply that
+  proposes value), run the diagnosis in `docs/astra-commercial-angle-master.md`:
+  find the business bottleneck, generate 2 to 5 candidate angles, score and
+  red-team them, pick the strongest or return `NO_STRONG_ANGLE`. The message is
+  the compressed output of that reasoning, never a service hunting for a reason.
 - Every drafted reply and nudge follows `docs/writing-standard-anti-ai.md`.
   This routine is the one that writes the most replies, so it is the most
   exposed to AI tells: no "you're absolutely right" / "good catch," no

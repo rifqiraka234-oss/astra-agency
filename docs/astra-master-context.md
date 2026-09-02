@@ -732,7 +732,11 @@ they could improve before asking for a meeting.* Research deeply. Challenge
 conclusions. Be selective. Give value first. Show rather than claim. Learn
 from every result.
 
-## 18. Writing standard (anti-AI)
+## 18. Commercial angle selection
+
+Which ASTRA problem to raise with a given lead is decided by **`docs/astra-commercial-angle-master.md`**, the canonical angle-reasoning playbook. Sections 4 (this doc) name the service lines; that file decides which one actually fits by diagnosing the bottleneck, scoring candidate angles, and returning `NO_STRONG_ANGLE` when nothing meaningful is evidenced. Read it before choosing an angle; read this doc for who ASTRA is and how to word it.
+
+## 19. Writing standard (anti-AI)
 
 The voice rules in section 9 say what to write. **`docs/writing-standard-anti-ai.md`**
 governs how it reads so it never sounds machine-generated. Read it before

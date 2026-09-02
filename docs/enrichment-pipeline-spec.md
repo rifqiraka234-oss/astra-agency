@@ -147,6 +147,7 @@ The third step, the "have you seen this" bump at +3 days, uses lemlist's native 
 ## Guardrails
 - Stage 2 requires an actual screenshot, not just a text/HTML read. A page can pass the functional read (real content, working nav) and still be a visually dated PowerPoint style site per Stage 2a, and that visual read is only possible by looking at a render, never by inspecting markup alone.
 - Never use hyphens, en dashes, or em dashes (-, –, —) anywhere in generated messages. This applies globally, not just inside the two templates.
+- Angle selection for `connectionMessage`/`firstMessage` follows `docs/astra-commercial-angle-master.md`: diagnose the bottleneck, weigh candidate angles, and return `NO_STRONG_ANGLE` rather than force a cosmetic pitch.
 - Every generated message follows `docs/writing-standard-anti-ai.md` (write like a competent person, not an AI): no validation tics, no honesty/pushback theatre, no "not X but Y", no forced triads, no corporate fog, no throat-clearing openers. The `connectionMessage` and `firstMessage` are the most exposed text this repo produces, so they get the reread pass at the bottom of that file before import.
 - Never fabricate a launch date, a website observation, or a company purpose — every claim in a generated message must trace back to something actually found in Stage 1 or 2.
 - Re-verify before reuse: a batch run more than a couple of weeks old should not be trusted for outreach without re-checking launch status and site state, since both can change.
