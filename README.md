@@ -59,6 +59,9 @@ booked meeting. This routine is where that goal actually gets automated.
   ASTRA is, who it sells to, its four service lines and pricing, and the
   voice/message rules behind every outreach message any routine drafts.
   Read this before drafting a message, not just the pipeline mechanics.
+- **[`docs/writing-standard-anti-ai.md`](docs/writing-standard-anti-ai.md)** —
+  how every message, reply, prototype line and brief should read so it never
+  sounds machine-generated. Read it before drafting anything external.
 - **State lives in git** because Cloud Routine firings get a fresh, stateless
   container each time; the committed `state/` and `logs/` files are the only
   thing that persists between runs.
