@@ -2685,3 +2685,58 @@ It is:
 **"What is getting in the way of an important outcome, and can Astra credibly change it?"**
 
 That is the commercial reasoning standard every Astra AI agent should follow.
+
+---
+
+# 31. CTA CONVENTION AND SALES-CHANNEL REALITY CHECK (added 2026-09-02, Raka)
+
+## 31.1 Prototype-send CTA for any website / prototype angle
+
+When the selected angle is a website or a buildable web journey (Grow angles,
+booking/subscription/partner/investor flows, a homepage rebuild, a proof
+section), close by offering to **build and send the prototype**, not with a
+vague "want me to?". This is the CTA that has actually converted (Erisan,
+Klarity, Diisco, Zenara): value first, one concrete yes.
+
+Use a form like:
+
+> I can put together a quick version and send it over, want to see it?
+
+or
+
+> Happy to build a quick version of [the specific journey] and send it over.
+> Want me to?
+
+Keep it specific to the journey named in the message (the subscribe flow, the
+partner pathway, the proof section), never "a new website". A non-buildable
+angle (Build Squad / capacity, a validation conversation) does not get this
+CTA. There the close is a low-friction chat or a validation question, because
+there is nothing to prototype yet.
+
+## 31.2 Is the website even how they sell? (stage + channel gate)
+
+Before committing to a website/prototype angle, ask two questions the site
+alone will not answer:
+
+1. **What stage is the company at, and does the angle fit that stage?**
+   (Section 21.) A brand-new two-person agency usually has no delivery
+   backlog yet, so a Build Squad "you are overflowing" pitch is premature,
+   soften it to "when a client wants the build". A pre-revenue indie brand may
+   love the idea but cannot fund it. Match the angle to the stage, or lower
+   confidence.
+
+2. **Is the website actually the channel where this company wins customers?**
+   For deep-tech, enterprise B2B, and relationship/BD-led businesses, the
+   homepage is often not the sales or diligence channel at all (anti-pattern
+   8). A placeholder site there is real but may not be the bottleneck, so a
+   proof-section prototype can miss the thing that actually moves their
+   revenue. When the buyer's real pipeline is pilots, referrals, board
+   networks or direct BD, either find the angle that fits that channel or
+   return `VALIDATE_FIRST` / `NO_STRONG_ANGLE` rather than defaulting to "make
+   the website better".
+
+The honest confidence in an opener is not "is there a gap on the site" but
+"if we fixed this, would it move a number the founder cares about, at the
+stage they are actually at, through the channel they actually sell in". If the
+answer is weak, say so and lower the send, do not ship a confident pitch on a
+gap that does not matter to how they win.
