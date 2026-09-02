@@ -734,7 +734,7 @@ from every result.
 
 ## 18. Commercial angle selection
 
-Which ASTRA problem to raise with a given lead is decided by **`docs/astra-commercial-angle-master.md`**, the canonical angle-reasoning playbook. Sections 4 (this doc) name the service lines; that file decides which one actually fits by diagnosing the bottleneck, scoring candidate angles, and returning `NO_STRONG_ANGLE` when nothing meaningful is evidenced. Read it before choosing an angle; read this doc for who ASTRA is and how to word it.
+How to research a lead deeply enough to diagnose it is governed by **`docs/astra-prospect-research-master.md`** (Layer 2, research). Which problem to then raise is decided by  **`docs/astra-commercial-angle-master.md`**, the canonical angle-reasoning playbook. Sections 4 (this doc) name the service lines; that file decides which one actually fits by diagnosing the bottleneck, scoring candidate angles, and returning `NO_STRONG_ANGLE` when nothing meaningful is evidenced. Read it before choosing an angle; read this doc for who ASTRA is and how to word it.
 
 ## 19. Writing standard (anti-AI)
 

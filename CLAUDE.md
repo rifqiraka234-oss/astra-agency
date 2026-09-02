@@ -26,6 +26,18 @@ drafting anything external. It bans the validation tics, honesty theatre,
 give AI writing away, and it sits alongside the existing no-dash and
 no-fabrication rules.
 
+The order is always **research first, diagnose second, sell third.** Before
+diagnosing any lead, research it to the standard in
+**`docs/astra-prospect-research-master.md`** — the canonical prospect-research
+manual. It defines the source tiers (A primary through G search snippets), the
+five-plus evidence lenses (site, company LinkedIn, founder activity, news/
+change events, jobs, customer voice, records, tech, competitors), the
+verified-fact vs company-claim vs observed-UX vs inference vs hypothesis
+classification, the growth-evidence stack, the contradiction search, and the
+confidence outcomes (`HIGH_CONFIDENCE_ANGLE` down to `NO_STRONG_ANGLE`). Do not
+choose a final angle until its Minimum Research Stop Conditions are answered,
+and never infer a problem from a single weak signal.
+
 Before choosing what to pitch a given lead, read
 **`docs/astra-commercial-angle-master.md`** — the canonical commercial
 reasoning playbook. It is the layer between prospect research and the message,

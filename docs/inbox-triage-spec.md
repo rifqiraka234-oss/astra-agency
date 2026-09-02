@@ -266,6 +266,10 @@ template.
   and sends manually or via a separate explicit send step.
 - Never tier or draft a reply off `aiLeadInterestLevel` alone; it is a
   prioritization hint for where to spend reading effort, not evidence.
+- Before diagnosing any lead, research it to the standard in
+  `docs/astra-prospect-research-master.md` (source tiers, five-plus evidence
+  lenses, verified-fact vs claim vs inference classification, growth stack,
+  contradiction search). Research first, diagnose second, sell third.
 - Before deciding what angle to pitch any lead (opener, nudge, or reply that
   proposes value), run the diagnosis in `docs/astra-commercial-angle-master.md`:
   find the business bottleneck, generate 2 to 5 candidate angles, score and

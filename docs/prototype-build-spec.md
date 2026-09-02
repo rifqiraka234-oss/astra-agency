@@ -1675,3 +1675,5 @@ either ships.
 The angle a prototype is built to prove comes from `docs/astra-commercial-angle-master.md` (the winning angle and its prototype decision, `YES_FULL` / `YES_KEY_JOURNEY_ONLY` / `ONLY_AFTER_INTEREST` / `NO`). Build only when the angle scored strong and a prototype materially increases the prospect's understanding; a visually exciting prototype never makes a weak lead strong.
 
 The outreach CTA for a prototype angle follows the prototype-send convention in `docs/astra-commercial-angle-master.md` section 31: offer to build and send the specific journey ("I can put together a quick version and send it over, want to see it?"), never a vague "want me to?" or "a new website".
+
+The research behind a prototype's angle follows `docs/astra-prospect-research-master.md` (Layer 2): verify identity, business model, stage and the winning problem across multiple evidence lenses before building, and never build off a single weak signal.
