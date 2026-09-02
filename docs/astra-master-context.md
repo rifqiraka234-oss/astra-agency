@@ -731,3 +731,15 @@ understand something important about our business, and they showed what
 they could improve before asking for a meeting.* Research deeply. Challenge
 conclusions. Be selective. Give value first. Show rather than claim. Learn
 from every result.
+
+## 18. Writing standard (anti-AI)
+
+The voice rules in section 9 say what to write. **`docs/writing-standard-anti-ai.md`**
+governs how it reads so it never sounds machine-generated. Read it before
+drafting any message, reply, prototype line, or brief. The non-negotiables:
+no em dashes; no "you're absolutely right" / "good catch" / "great question"
+validation; no "honestly" or "to be honest" theatre; no "it's not X, it's Y"
+structures; no forced groups of three; no corporate fog (drive value,
+seamless, robust, leverage, unlock, elevate); no throat-clearing openers ("I
+came across your profile," "I'd love to hop on a quick call"); no generic
+uplift endings. Say the specific thing about their actual business and stop.

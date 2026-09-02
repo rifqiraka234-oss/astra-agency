@@ -1659,3 +1659,15 @@ Stage J exists to push past.
   without being either real-and-cited or clearly labelled illustrative.
 - **Invented number where a real one exists.** Fabricating a stat to hit an
   emotional beat when real, citable research was one search away.
+
+## Writing standard (anti-AI) applies to all copy and outreach
+
+Every line of copy on a prototype, and every outreach message that links to
+one, follows `docs/writing-standard-anti-ai.md`. Prototype copy is the place
+AI marketing voice creeps in hardest, so the bans on "Welcome to," "Discover,"
+"Unlock," "Transform," "Empower," "Seamlessly," "everything you need,"
+"powerful yet simple," and "built to scale" are hard failures here, same
+weight as an invented stat. Website copy names the real product doing the real
+thing in the client's own register, never generic SaaS uplift. Run the reread
+pass at the bottom of that file over the built page and the send message before
+either ships.

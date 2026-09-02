@@ -266,6 +266,14 @@ template.
   and sends manually or via a separate explicit send step.
 - Never tier or draft a reply off `aiLeadInterestLevel` alone; it is a
   prioritization hint for where to spend reading effort, not evidence.
+- Every drafted reply and nudge follows `docs/writing-standard-anti-ai.md`.
+  This routine is the one that writes the most replies, so it is the most
+  exposed to AI tells: no "you're absolutely right" / "good catch," no
+  "honestly," no "just following up" or "circle back," no "not X but Y," no
+  em dashes, no manufactured empathy. A nudge references the specific thing
+  already flagged for that lead in plain words, then stops. Run the reread
+  pass at the bottom of that file on every draft before it goes in the digest
+  or gets sent.
 
 ## Deployment
 Run as a Claude Code Cloud Routine, once daily, same reasoning as the

@@ -17,6 +17,15 @@ dashes in outreach text, never fabricate) and the same git-committed
 state-file pattern, since all three run as stateless Cloud Routine
 containers.
 
+Every word any of these routines sends or ships (LinkedIn messages, email,
+prototype copy, meeting briefs, and the digests handed back to Raka) must
+also follow **`docs/writing-standard-anti-ai.md`** — the standard for writing
+like a competent person instead of like an AI assistant. Read it before
+drafting anything external. It bans the validation tics, honesty theatre,
+"not X but Y" structures, forced triads, corporate fog, and em dashes that
+give AI writing away, and it sits alongside the existing no-dash and
+no-fabrication rules.
+
 Before drafting any outreach message in either routine, also read
 **`docs/astra-master-context.md`** — the business identity, ideal client
 profile, service lines (Grow / Optimise / Innovate / Build Squad), pricing
