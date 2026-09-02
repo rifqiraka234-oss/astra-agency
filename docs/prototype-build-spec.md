@@ -1541,3 +1541,121 @@ delivery-channel reason masquerading as a product decision.
 - Label every placeholder and every piece of illustrative demo data
   clearly, both on the page itself and in the research summary, nothing
   fake should be able to accidentally ship as if it were real (B2).
+
+## Stage J — Behavioural design, emotion, and research grounding (Round 4, added 2026-09-02, Raka)
+
+### The finding this stage exists to fix
+Three prototypes in this round (Diisco, then Revios twice) were each rejected at a
+level that looked "done" by Stages A to I. They passed density, craft, real
+content and QA, and still came back as "level one" against a "level fifteen
+hundred" expectation. The gap was never polish. It was that the page looked good
+but did not **do anything to the visitor's brain**, did not feel like a complete
+believable thing, and leaned on the builder's intuition instead of what the web
+already knows. Stage J is the bar that closes that gap. A prototype is not finished
+when it is pretty and correct. It is finished when it hooks, completes a real job,
+and every persuasive move is grounded in real research and real facts.
+
+### J1 — Complete the job, not a fragment (Diisco lesson)
+A prototype must be a complete, believable *thing*, not one floating screen. Name
+the visitor's job to be done in one sentence, then make sure the page or app closes
+the whole loop of it, visibly. Diisco's first build was a single "post a shift"
+console with no context; it only worked once it became an app with a dashboard, a
+visible gap, the fill flow in context, and the gap closing on the rota afterwards.
+If a reviewer would ask "wait, what is this / how do I use it / where am I", it is
+not done. Hard failure if the deliverable is a mechanic with no surrounding world.
+
+### J2 — Capture the brand's actual soul, never a safe template (Diisco lesson)
+The design must carry the brand's real personality, not a competent generic skin.
+Diisco is literally named after *disco*; the first two builds were tasteful lavender
+SaaS with zero nightlife energy and were correctly rejected. Before building, name
+the brand's soul in a word or two (disco/nightlife energy; trust/relief; heritage)
+and make the art direction commit to it. A build that would look at home on any
+other company in the vertical has failed C3/C4 in spirit even if it passes them on
+the letter. "Professional and clean" is the floor, not the target.
+
+### J3 — Design for the brain, not just the eye (behavioural architecture)
+Every major section must be doing a job on the visitor's cognition, chosen on
+purpose, not decoration. The working toolkit, used deliberately:
+- **Narrative transportation / emotional arc** — a page that tells a story the
+  brain cannot stop following converts far better than a feature list. Give it a
+  spine: hook, tension/problem, turn/relief, proof, movement, the ask.
+- **Faces and motion first** — the fusiform face area fires before conscious
+  thought; a real human face and movement in the hero is the strongest attention
+  magnet there is.
+- **Loss aversion / regret** — name the pain in present tense and concrete terms
+  (the amygdala responds to the vivid, not the abstract).
+- **Social proof, bandwagon, belonging** — real people, real usernames, real
+  trending content, "where the market is already going."
+- **Curiosity gap / Zeigarnik** — open loops that pull the scroll.
+- **Cognitive fluency and the halo effect** — one crisp message, effortless to
+  process, beautifully executed, so the brain reads it as true.
+- **Anchoring and contrast** — set the worthless thing against the valuable one
+  (the fake-review wall against the real review).
+- **Peak-end rule** — engineer the emotional peak and the final beat; that is what
+  people remember and act on.
+- **Emotional colour journey** — moving light to dark to light across the scroll
+  is itself a device; use the whole palette to shift mood, not just to look nice.
+Hard failure if the page is a static stack of pretty blocks with no deliberate
+cognitive job per section.
+
+### J4 — Ground it in real research, the web is smarter than you (Raka 2026-09-02)
+Before building a persuasion-led page, actually search the web for (a) current
+(dated, this-year) landing/UX/interaction best practice and award patterns, and
+(b) real, citable statistics for the client's specific domain. Intuition is the
+starting point, not the source. The Revios rebuild only reached the bar once it was
+built on searched-out 2026 conversion research and real trust data, not on a
+self-generated guess about what might persuade.
+
+### J5 — Persuade with true things; honesty is the conversion strategy (B2 extended)
+The most persuasive material available is almost always real. Use **real cited
+statistics** (attributed on the page, e.g. "BrightLocal 2026", "Edelman 2026")
+rather than inventing numbers; real reviewers, real trending content, the client's
+real reward mechanics. Research finding that justifies this, not just the guardrail:
+a large share of people abandon brands they perceive as manipulative, so honesty
+outconverts manipulation. Show the unflattering truth on purpose where it builds
+trust (Revios shows a real *negative* review as proof the platform does not lie).
+Every illustrative element (a demo "fake review", an example counter) stays clearly
+labelled. Emotion, yes; fabricated facts, never. This tightens B2: the answer to
+"we need a persuasive number here" is "find the real one", not "invent one".
+
+### J6 — The motion and interaction craft layer (2026)
+At this bar, static hero sections read as dated. Expected, when they serve the
+story and never fight it: kinetic/'.reveal'-on-scroll typography, count-ups on real
+stats, scroll-triggered state changes (e.g. a wall of fakes getting stamped), a
+subtle cursor-following glow and magnetic CTAs on desktop, a playing waveform with
+captions, an animated progress ring. Motion is a scalpel, not a confetti cannon;
+every animation must earn its place by advancing comprehension or emotion.
+
+### J7 — Technical discipline that this layer demands (folds into F)
+The richer the build, the stricter the F-stage QA. Confirmed lessons:
+- Keep the page's JavaScript in a **separate raw string**, not inside the Python
+  f-string that builds the HTML/CSS; embedding JS with its own braces inside an
+  f-string is a reliable way to produce brace-escaping syntax errors. Inject data
+  into the script via placeholder replacement.
+- Any content a script renders (a grid, cards) must be **pre-rendered in the HTML**
+  too, so it survives with JavaScript off; the script then enhances rather than
+  creates. A JS-only feed that is empty under no-JS is an F-stage failure.
+- Gate every animation behind `prefers-reduced-motion` and behind the `html.js`
+  class; restrict cursor-glow and magnetic effects to `hover:hover and
+  pointer:fine`. Re-verify zero horizontal overflow across at least six widths
+  (1280, 1024, 768, 414, 390, 360), zero console errors, all assets decoding
+  (images inside hidden panels decode only when shown, which is not a failure).
+
+### J8 — The iteration contract
+The expectation at this bar is multiple honest rebuilds, not one defended pass. When
+a build is challenged, do a cold self-critique against Stage J first (does it hook,
+complete the job, carry the brand's soul, rest on real research) rather than
+defending the prior version. "It looks good and it works" is precisely the state
+Stage J exists to push past.
+
+### J9 — New hard failures (merge into G2)
+- **No cognitive job.** A section that exists only to look nice, with no deliberate
+  behavioural purpose, on a page whose goal is persuasion.
+- **Soulless template.** A brand with an obvious personality rendered as a generic,
+  swappable skin (Diisco built without its disco/nightlife energy).
+- **Fragment, not a thing.** A single mechanic shipped with no surrounding product
+  world, so the visitor cannot tell what it is or how to use it.
+- **Ungrounded persuasion.** Statistics, "most trusted", or trend claims presented
+  without being either real-and-cited or clearly labelled illustrative.
+- **Invented number where a real one exists.** Fabricating a stat to hit an
+  emotional beat when real, citable research was one search away.
