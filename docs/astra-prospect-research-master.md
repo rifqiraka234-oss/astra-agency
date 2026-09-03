@@ -483,10 +483,42 @@ Recommended lenses:
 8. Technology / product footprint.
 9. Competitors / category baseline.
 10. Traffic / search data when relevant.
+11. **The person themselves, what they are personally into (added 2026-09-03, Raka).**
 
 Not every company will have evidence in every lens.
 
 High confidence comes from **triangulation**, not from hitting a fixed number of websites.
+
+## Lens 11 — the person, not just the company (the personal-interest hook)
+
+Research the human, not only the business. What does this specific decision-maker
+personally care about, champion, build, or keep posting about? Their LinkedIn
+activity and "about", a Substack or blog, talks and podcasts, the research or
+side projects they put their own name on, what they rail against, even a hobby.
+A genuine personal tell-tale is often a **stronger and warmer hook than any site
+critique**, and it frequently reveals an angle the company-only view misses,
+because it points at what they would actually be excited to build.
+
+Worked examples:
+- **Bo Poldervaart (Curalis):** personally into automation and AI, so an
+  automation/AI angle lands warm rather than cold.
+- **Rory Natkiel (Box Count, 2026-09-03):** obsessive about evidence and
+  measurement (hand-coded a 92-case-study effectiveness index, weekly Substack,
+  chairs the Sponsorship Effectiveness Forum). His site is fine, so a website
+  critique would be eye-roll; the real angle is turning his effectiveness
+  framework, which currently lives in a PDF, into an actual interactive tool.
+  The passion, not the site, is the opening.
+
+How to use it: once you find the tell-tale, either open on it directly (genuine,
+specific, gift-first) or let it select the angle (their passion points at the
+ASTRA service they would say yes to, often Innovate/Optimise/Build over a Grow
+website pitch). Hard limits still apply: the interest must be actually verified
+on their own activity, never guessed from the company or from a same-name
+person (the wrong-person trap is worse for individuals than for domains), and a
+strong personal site plus a strong personal brand can still be `NO_STRONG_ANGLE`
+if the honest hook does not lead anywhere ASTRA can build. If the person's
+activity is not fetchable and no tell-tale is verifiable, say so and do not
+manufacture one.
 
 ---
 
