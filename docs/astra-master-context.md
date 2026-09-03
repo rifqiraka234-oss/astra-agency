@@ -260,6 +260,18 @@ English unless we already switched them to their own language earlier in the
 thread. When in doubt, match the language of the most recent real message in
 that thread.
 
+**First move is the visual-era roast (Raka, 2026-09-03).** Before any deeper
+angle research, open the live site as a screenshot and judge its era. If it
+visibly reads like a 2010s / early-template build (dated stock hero, tiny
+logo, gradient buttons, Bootstrap-era cards, cramped mobile, clip-art icons),
+that is a for-sure website / Grow angle on its own, go straight to the
+prototype offer and do not hunt for a cleverer angle. Frame the cost (trust
+and conversion lost the moment a buyer lands), never the taste, and still
+confirm it is their live main domain and not a deliberate choice (Learning
+ledger #11). Only when the site already looks current and well built do you
+research further for the real bottleneck per
+`docs/astra-commercial-angle-master.md`, or return `NO_STRONG_ANGLE`.
+
 **The opener always names a website problem and offers a prototype
 (Raka, 2026-08-19, live instruction, outranks older nuance).** Every
 post-acceptance first message follows the template above: name a specific,

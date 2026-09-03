@@ -296,6 +296,21 @@ template.
   confirming it is not an intentional coming-soon / waitlist landing and is
   actually their main domain. A deliberate pre-launch capture page is not a
   broken one.
+- **First pass on any lead is the visual-era roast (Raka 2026-09-03).**
+  Before any deeper research, open the live site and look at it as a screenshot,
+  not as markup. If it visibly reads like a 2010s / early-template site (dated
+  stock hero, tiny centered logo, gradient buttons, Bootstrap-era card rows,
+  cramped mobile, clip-art icons, no real type system), that is a locked-in
+  website / Grow angle on its own, stop angle-hunting and go straight to the
+  prototype offer. A dated site is a strong angle because it costs the business
+  trust and conversion the moment a buyer lands, not merely because it looks
+  old, so frame the cost, never the taste. Two hard checks still apply before
+  using it (Son / Learning ledger #11): confirm it is actually their live main
+  domain, not a launch teaser or placeholder, and that the look is not a
+  deliberate choice serving another goal. If the site instead looks current and
+  well built, there is no cheap website angle, so do the full research below and
+  find the real bottleneck (Optimise / Innovate / Build Squad, missing proof,
+  no pricing, buried credibility, a broken journey) or return `NO_STRONG_ANGLE`.
 - Before diagnosing any lead, research it to the standard in
   `docs/astra-prospect-research-master.md` (source tiers, five-plus evidence
   lenses, verified-fact vs claim vs inference classification, growth stack,
