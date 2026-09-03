@@ -2735,6 +2735,36 @@ alone will not answer:
    return `VALIDATE_FIRST` / `NO_STRONG_ANGLE` rather than defaulting to "make
    the website better".
 
+## 31.2a The credibility exception to anti-pattern 8 (added 2026-09-03)
+
+Anti-pattern 8 kills the **conversion** pitch ("your site should convert more
+visitors") for deep-tech and enterprise, because the site is not where they
+close. It does **not** kill the **credibility** pitch. Even when deals come
+through BD, pilots and board networks, the website is still the diligence
+surface an investor or a strategic partner checks the moment they get serious,
+and a thin, abstract or dated site there actively undersells a company that is
+further along than it looks. That is a real, honest angle, and it is a
+different angle from conversion:
+
+- **Conversion angle (weak here):** "buyers land on your site and bounce, you
+  are losing enquiries." A deep-tech founder who sells through partnerships
+  rolls their eyes, because that is not how they get customers.
+- **Credibility angle (valid here):** "a partner or investor doing diligence
+  lands on your site and sees a research concept, not a company already being
+  trusted with money, because your real proof is nowhere on it." This respects
+  how they actually sell and still names a real cost.
+
+PolyML is the worked case (2026-09-03): funded by a strategic industrial
+investor, but the homepage is an abstract definition over two stock photos with
+zero proof (no investor, no named client, no case study, no team, no demo). Held
+first as `NO_STRONG_ANGLE` on a blanket anti-pattern-8 read; the credibility
+reframe was the genuine angle and it fit the CEO's own governance/board lens.
+This is ASTRA's existing Gravity-Fellow investor-website pattern. So before
+returning `NO_STRONG_ANGLE` on a funded deep-tech lead, ask the second question:
+not "will fixing the site win them customers" (often no), but "when their next
+investor or strategic partner checks them out, does the site back up where they
+actually are" (often no, and that is the angle).
+
 The honest confidence in an opener is not "is there a gap on the site" but
 "if we fixed this, would it move a number the founder cares about, at the
 stage they are actually at, through the channel they actually sell in". If the

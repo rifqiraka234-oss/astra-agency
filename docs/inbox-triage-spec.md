@@ -311,6 +311,28 @@ template.
   well built, there is no cheap website angle, so do the full research below and
   find the real bottleneck (Optimise / Innovate / Build Squad, missing proof,
   no pricing, buried credibility, a broken journey) or return `NO_STRONG_ANGLE`.
+- **How to actually see a site when a plain fetch fails (2026-09-03).**
+  WebFetch returns an empty shell for JS-rendered sites and 403 for bot walls,
+  and the agent proxy resets live Chromium tunnels to most hosts, so "the fetch
+  failed" is never proof the site is thin or absent. The working method: `curl`
+  through `$HTTPS_PROXY` (with `--cacert /root/.ccr/ca-bundle.crt`) to pull the
+  HTML plus its CSS and images into a local folder, rewrite the URLs to the
+  local copies, then open that folder in headless Chromium
+  (`/opt/pw-browsers/chromium-1194/chrome-linux/chrome`, via the global
+  Playwright) and screenshot it offline. Read the theme, generator, fonts and
+  copyright year straight from the curled HTML to judge the era cheaply, and
+  screenshot only what looks dated or thin. If even `curl` is walled
+  (Cloudflare "Just a moment", repeated 403), it is genuinely UNKNOWN: ask Raka
+  to open it and screenshot it rather than guessing. This method turned four
+  leads previously parked as strong-site/blocked (D&Z, PolyML, Vimi Vino,
+  Raven) into real sends. Note the proxy port changes on reconnect, so read it
+  from `$HTTPS_PROXY` each run, never hardcode it.
+- **Check the queue before researching or sending (2026-09-03).** Grep
+  `state/silent_accepted_queue.jsonl` and `state/enriched_leads.jsonl` for the
+  lead first; respect or explicitly override the prior verdict (latest row per
+  `leadId` wins), never research blind and silently contradict it. Full rule and
+  the failure that prompted it are in `CLAUDE.md` (Silent accepted) and Learning
+  ledger #12.
 - Before diagnosing any lead, research it to the standard in
   `docs/astra-prospect-research-master.md` (source tiers, five-plus evidence
   lenses, verified-fact vs claim vs inference classification, growth stack,

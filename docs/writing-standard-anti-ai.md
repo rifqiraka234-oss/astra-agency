@@ -28,6 +28,13 @@ Do not announce that you are about to be honest.
 **Pushback theatre.** "I want to push back," "let me gently push back," "I'd
 challenge that framing," "let me reframe." If something is wrong, say why.
 
+**Announcing the message instead of sending it.** Do not frame what the
+message is or is not before delivering it: "quick heads up rather than a
+pitch," "not here to sell you anything," "no sales pitch, I promise," "just a
+quick thought," "hear me out." Announcing that it is not a pitch is itself the
+tell, and it reads as exactly the pitch it disclaims. Open on the actual
+observation. (Caught live on a real Vimi Vino draft, 2026-09-03.)
+
 **Claude metaphor vocabulary.** load-bearing, heavy lifting, smoking gun, blast
 radius, footgun, belt and suspenders, has teeth, the crux, the spine, the seam,
 the shape of, the scope of, throughline, north star, unlock, move the needle,

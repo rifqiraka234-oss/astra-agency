@@ -589,6 +589,44 @@ written into the relevant spec.
    a truncated preview), and re-open the actual page to confirm it is not a
    deliberate waitlist/coming-soon landing and is actually their main domain
    before repeating or defending any website critique.**
+12. **Researched blind and contradicted a prior verdict, then sent
+   (2026-09-03).** A batch of recent accepts was researched from scratch
+   without first reading `state/silent_accepted_queue.jsonl`, where earlier
+   sessions had already logged verdicts on the same people. Two leads
+   (Chris/ExpoCall, Fleur/DCCI) were sent openers that a prior row had marked
+   `NO_STRONG_ANGLE`/skip (ExpoCall specifically: pitching website conversion
+   to a conversion-automation founder is eye-roll risk), and OKOJU was
+   re-derived wrongly as a "consultant" when a prior row had correctly
+   identified it as a DTC cookware brand with a real early-access page. Rule
+   now in `CLAUDE.md` (Silent accepted): **grep the queue and enriched_leads
+   for a lead before researching or sending, and respect or explicitly
+   override the prior verdict, never silently contradict it. The latest row
+   per `leadId` is authoritative; supersede with a labelled note and dedup.**
+13. **Blanket anti-pattern-8 hold missed a real credibility angle
+   (PolyML, 2026-09-03, corrected on Raka's push).** PolyML was held
+   `NO_STRONG_ANGLE` because "the website is not how deep-tech sells"
+   (anti-pattern 8). That kills the conversion pitch, not the credibility one:
+   a faithful render showed an abstract homepage over two stock photos with
+   zero proof, for a company that had taken strategic industrial investment,
+   so a partner or investor doing diligence lands on a research concept. The
+   credibility reframe was a genuine send. Rule now in
+   `docs/astra-commercial-angle-master.md` 31.2a: **anti-pattern 8 kills the
+   conversion angle, not the investor/partner credibility angle; before
+   holding a funded deep-tech lead, ask whether the site backs up where they
+   actually are when their next investor checks it.**
+14. **Held-pile verdicts (strong-site and blocked alike) were made without
+   seeing the site (2026-09-03).** D&Z Domotica, Vimi Vino and Raven were
+   parked as `NO_STRONG_ANGLE` or `BLOCKED` on a content read or a failed
+   fetch. Actually looking (screenshot via a curl-mirror rendered offline in
+   Chromium, or a human screenshot where a Cloudflare wall beat every tool)
+   turned all of them into real sends: D&Z ran a ~2013 theme under strong
+   content, Vimi Vino was a logo-only page behind an expired cert (no real
+   site at all), Raven buried its award-winning work under pricing copy. Rules
+   now in `CLAUDE.md` (Silent accepted): **a fetch failure is UNKNOWN and
+   retryable via the render pipeline or a human eyeball, never "no angle"; a
+   live domain can still be "no real website" (expired cert / logo splash /
+   under-construction) which is a build opportunity; and roast the visual era
+   before writing any site off.**
 
 ## 11. Prototype operating system (condensed)
 

@@ -277,10 +277,57 @@ itself.
   - **Don't manufacture a problem for a genuinely strong site.** Not every
     accepted lead has a defensible angle. When research turns up a company
     with real named testimonials, real client logos, and no obvious gap
-    (confirmed cases: D&Z Domotica, NOMW Health, dotega, Snorly), mark
-    `NO_STRONG_ANGLE` rather than stretching a minor or invented friction
+    (confirmed cases: NOMW Health, dotega, Snorly, Handsome Frank, Omnilabs),
+    mark `NO_STRONG_ANGLE` rather than stretching a minor or invented friction
     into a pitch. A forced angle on a strong business reads as either
     wrong or insulting, neither books a meeting.
+  - **But "strong on content" is not "strong site", so see it before you
+    hold it (2026-09-03).** A content-only read (named clients, real
+    testimonials) misses two real angles a screenshot catches: a site strong
+    on substance but shipped on a decade-old theme (D&Z Domotica ran a ~2013
+    ThemeForest theme with old Twitter/Google-Buzz icons, so the wrapper
+    undersold 30 years of premium work), and a site whose homepage buries the
+    work under copy (Raven Photography opened with two pricing paragraphs
+    above the award-winning photos). Both were previously parked as
+    `NO_STRONG_ANGLE`/blocked and both were real sends once actually looked at.
+    Roast the visual era first (see the inbox triage spec's visual-era rule):
+    curl the HTML to read the theme/generator/fonts, and screenshot anything
+    that might be dated or thin before writing it off.
+  - **Check the queue before researching or sending any lead (2026-09-03).**
+    Before working a lead, grep `state/silent_accepted_queue.jsonl` (and
+    `state/enriched_leads.jsonl`) for its name, company and `leadId`. If a
+    prior session already reached a verdict, respect it or override it
+    explicitly with new evidence, never research blind and silently contradict
+    it. This session sent two leads (Chris/ExpoCall, Fleur/DCCI) that an
+    earlier row had already marked `NO_STRONG_ANGLE`/skip, and re-derived
+    OKOJU wrongly (called a DTC cookware brand a "consultant"), purely because
+    the queue was not read first.
+  - **Queue hygiene: the latest row per `leadId` is authoritative.** The file
+    is append only. When you re-work a lead, append a row whose `research`
+    note begins `SUPERSEDES prior <status>` with the reason, so the change is
+    legible to the next session, and periodically dedup so stale contradictory
+    rows do not mislead. The current verdict for any lead is its most recent
+    row, not its first.
+  - **A fetch failure is UNKNOWN and retryable, never "no angle."** A
+    403 / 503 / JS-only shell / stuck redirect / Cloudflare wall means our
+    fetcher could not read the page, not that the site is thin or absent.
+    Retry with the render pipeline (curl-mirror the HTML and assets, then
+    screenshot the local copy offline in Chromium, because the agent proxy
+    resets live Chromium tunnels to most hosts). If every tool is walled
+    (Cloudflare "Just a moment"), ask Raka to open it and screenshot it.
+    D&Z, PolyML, Vimi Vino and Raven were all unblocked exactly this way.
+  - **A live domain can still be "no real website" = a full build
+    opportunity.** An expired SSL certificate (browsers show a full security
+    block), a logo-only splash, or an "under construction" placeholder means
+    visitors effectively see nothing. That is a build pitch, not a blocker.
+    (Vimi Vino: just the logo on a dark square, plus an expired cert.)
+  - **Anti-pattern 8 has a credibility exception.** For deep-tech and
+    enterprise, the website is not the closing channel (deals come through BD
+    and partnerships), but it IS the diligence and credibility surface an
+    investor or strategic partner checks. A thin, abstract or dated site there
+    is a real angle, framed as credibility, never as conversion. (PolyML took
+    strategic industrial investment yet its homepage is abstract with stock
+    photos and zero proof, so a partner doing diligence sees a research concept.)
   - **"No reply at all" is a separate bucket from Silent accepted, don't
     conflate them.** Silent accepted means the connection was accepted and
     zero real message was ever sent. A contact who *did* receive a real,
