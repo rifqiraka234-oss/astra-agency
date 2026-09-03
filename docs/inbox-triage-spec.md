@@ -94,15 +94,37 @@ from the Silent accepted cross check):
   declined, or the conversation reached a natural close).
 
 ## Step 2 — Understand context (only for threads needing a decision)
-Read the full thread, not just the latest message, for any contact where it
-is currently Raka's turn to respond. Also pull whatever was actually pitched
-or sent previously in that thread (the original observation, any concept or
-mockup link already sent) so a suggested reply responds to what was really
-said, not a generic guess. Do not fabricate context that is not in the
-thread; if the history is ambiguous, flag it as needing Raka's own judgment
-rather than guessing. Use `aiLeadInterestLevel`/`aiLeadInterest` (when
-present) to prioritize which threads to read first, never as a substitute for
-reading them.
+**The moment a contact replies, pull that contact's entire thread via
+`get_inbox_conversation` before drafting anything (hard rule, Raka
+2026-09-03).** Read every message they have sent and everything Astra sent
+them, not just the latest preview. Inbox list previews are truncated and a
+reply read off a preview alone has already burned a thread (see the Son
+Descolonges failure, master context Learning ledger #11). One extra
+`get_inbox_conversation` call per replying contact is always cheaper than a
+wrong reply.
+
+Also pull whatever was actually pitched or sent previously in that thread
+(the original observation, any concept or mockup link already sent) so a
+suggested reply responds to what was really said, not a generic guess. Do not
+fabricate context that is not in the thread; if the history is ambiguous, flag
+it as needing Raka's own judgment rather than guessing. Use
+`aiLeadInterestLevel`/`aiLeadInterest` (when present) to prioritize which
+threads to read first, never as a substitute for reading them.
+
+**Re-verify the site or claim before repeating any critique (Raka
+2026-09-03).** Reading the thread is necessary but not sufficient. When a
+reply corrects a claim we made about their website, or when a reply is itself
+a fresh critique of a site, re-open the actual page and confirm two things
+before answering: **is this page intentionally serving another goal** (a
+coming-soon / waitlist / email-capture landing whose one job is to collect
+signups before launch is not a broken page), and **is it even their main
+domain** (a launch teaser or placeholder is not the company's real site). The
+Son failure was both at once: a deliberate pre-launch capture page critiqued
+as "an empty page," on a domain that was not their real website. A confident
+negative verdict about a choice the founder made on purpose reads as us not
+looking properly, and it burns the thread. This is the same red-team question
+from master context section 7 ("Is the site intentionally serving another
+goal?") applied at reply time, not just at first-opener time.
 
 ## Step 3 — Tier
 Use this tiering, matched to the manual triage pattern already proven in
@@ -266,6 +288,14 @@ template.
   and sends manually or via a separate explicit send step.
 - Never tier or draft a reply off `aiLeadInterestLevel` alone; it is a
   prioritization hint for where to spend reading effort, not evidence.
+- Never draft a reply off an inbox list preview. The instant a contact
+  replies, pull their whole thread with `get_inbox_conversation` first (Step
+  2). A reply read off a truncated preview has already burned a thread once
+  (Son Descolonges, Learning ledger #11).
+- Never repeat or defend a website critique without re-opening the page and
+  confirming it is not an intentional coming-soon / waitlist landing and is
+  actually their main domain. A deliberate pre-launch capture page is not a
+  broken one.
 - Before diagnosing any lead, research it to the standard in
   `docs/astra-prospect-research-master.md` (source tiers, five-plus evidence
   lenses, verified-fact vs claim vs inference classification, growth stack,

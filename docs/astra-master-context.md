@@ -558,6 +558,25 @@ written into the relevant spec.
    site, their press coverage, investor and partner announcements, any
    university or accelerator tie, and their socials, and record the result as
    "not found in <sources searched>", never as "does not exist".
+11. **A deliberate pre-launch page critiqued as a broken one (Son
+   Descolonges / TwinzClub, 2026-09-02, caught by the founder, not us).** The
+   opener told Son his site "is the logo and the Private Equity Immobilier
+   line, nothing an investor can read or do... someone serious finds an empty
+   page and leaves." He replied "You don't read well. You have to put your
+   E-mail to receive the news when the club will open. We have already a
+   website." Two errors in one message: (a) twinz-club.fr is an intentional
+   coming-soon / email-capture landing whose single job is to collect signups
+   before the club opens, and it was diagnosed as a broken empty page; (b) it
+   is not their real website, which exists elsewhere, so a launch teaser was
+   critiqued as if it were the company. Both are the section 7 red-team
+   question "Is the site intentionally serving another goal?" going unasked,
+   this time at reply/opener time. A confident negative verdict about a choice
+   the founder made on purpose reads as not looking properly and burns the
+   thread. Rules now in `docs/inbox-triage-spec.md` Step 2 and Guardrails:
+   **on any reply, pull the contact's whole thread before drafting (never off
+   a truncated preview), and re-open the actual page to confirm it is not a
+   deliberate waitlist/coming-soon landing and is actually their main domain
+   before repeating or defending any website critique.**
 
 ## 11. Prototype operating system (condensed)
 
