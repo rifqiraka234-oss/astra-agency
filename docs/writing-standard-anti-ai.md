@@ -127,7 +127,14 @@ fact. Do not recap what the reader just read.
 
 **No throat-clearing.** No "Sure!", "Great question," "Happy to help," "Let's
 dive in," "In today's fast-paced world," "I wanted to reach out." Start with the
-useful part.
+useful part. Also banned (Raka 2026-09-04): "quick bit about me," "quick about
+me," "here's a bit about me," and any "quick [X]" filler label announcing what
+comes next. Just say the thing.
+
+**No fake-personal reaction phrases.** "stuck in my head," "stuck with me," "it
+stuck with me," "caught my eye," "I couldn't stop thinking about," "been on my
+mind." They fake a human reaction and read as generated (Raka 2026-09-04). State
+the actual observation about their business instead.
 
 **Email phrases to avoid** unless they genuinely match the person: "I hope this
 finds you well," "just following up," "I wanted to touch base," "circle back,"
