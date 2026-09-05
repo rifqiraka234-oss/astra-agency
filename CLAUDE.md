@@ -532,3 +532,16 @@ never send a Netlify link that hasn't been opened and visually checked;
 never reuse a declined angle on a retry; never invent a meeting time or mark
 one as booked without an actual Calendar event backing it; never skip the
 repo copy of a meeting brief even when the email send succeeds.
+
+**Before building anything, clear the pre-build gate (Stage K of the prototype
+spec, the decline post-mortem, 2026-09-05).** The prototypes that failed did
+not fail on build quality, they failed upstream. All four must hold before a
+line of HTML: (1) interest is real, not a reflexive "sure send it" (most cold
+sends are ignored, not rejected, so earn a genuine reply first and honour the
+`ONLY_AFTER_INTEREST` decision); (2) the problem is one the owner would name
+unprompted, not a gap we invented (Diisco, Jori); (3) the build matches what
+the lead is actually trying to do, not just the friction we noticed (Zynox
+wanted a webshop, we built a catalog); (4) we can hit the craft and art
+direction bar (Zynox liked the clarity, rejected the look; Toffe took three
+rebuilds). If any gate fails, use a lighter touch or return `NO_STRONG_ANGLE`,
+do not build.

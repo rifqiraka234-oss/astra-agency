@@ -1660,6 +1660,67 @@ Stage J exists to push past.
 - **Invented number where a real one exists.** Fabricating a stat to hit an
   emotional beat when real, citable research was one search away.
 
+## Stage K — Why prototypes get declined or ignored (the decline post-mortem, added 2026-09-05, Raka)
+
+Reviewed all prototypes built to date: roughly one liked, two hard declines,
+and a large majority that got no reply at all. The lesson is NOT "build
+better", the builds scored 93 to 96 and passed QA. It is four separate
+failures, and every one is upstream of the build. Re read this before starting
+any build.
+
+### K1 — Silence is the real outcome, and "sure send it" is not a buying signal
+Most prototypes are not rejected, they are ignored. A polite yes to "want me to
+send it?" costs the lead nothing and predicts nothing; the ones who actually
+converted (Erisan/Revios) asked questions and engaged *before* a link existed.
+So a full WOW build spent to earn a first real conversation is the wrong order.
+This is exactly what the `ONLY_AFTER_INTEREST` prototype decision in
+`docs/astra-commercial-angle-master.md` section 31 already says, and it was not
+being honoured. Default to earning a genuine reply first (a sharp question, a
+specific observation, a smaller step) and build the full thing once the lead
+has shown real, effortful interest, not a reflexive "sure".
+
+### K2 — Wrong diagnosis: they do not feel the problem, or already solved it
+Diisco declined with "no added value offered to our existing platform"; Jori
+(Archetype HR) said "looks like a website, not the software portion, not what
+we built". In both we pitched a fix for a gap the owner does not agree exists
+or considers already handled. Hard gate, the diagnosis pressure test: **would
+this owner, unprompted, name this as one of their top problems?** If you cannot
+point to evidence that they already feel it (their own words, a visible broken
+flow, a market reality they have acknowledged), it is a manufactured problem,
+do not build. A beautiful build on a problem the owner does not have reads as
+"no value", every time.
+
+### K3 — Wrong job-to-be-done: build what they want, not what we noticed
+Zynox: we built a catalog and quote page; his actual goal was launching a
+webshop, and a developer already built his Shopify. We never asked what he was
+trying to do before building. Before any build, confirm the lead's own
+objective for their site or product, not just the friction we spotted. If our
+angle and their intent point in different directions, the build is dead on
+arrival however good it looks. Ask, or infer from strong evidence, the JTBD
+first.
+
+### K4 — Craft and taste still decide it, even when the diagnosis is right
+Zynox: the clarity landed ("dit is wel duidelijker") but he rejected the look
+("vind dit rest niet mooi"). Toffe Traktaties took three rebuilds because Raka
+kept calling it cheap, and only the third (real art direction) was liked. A
+correct diagnosis on an off-looking or generic build still loses. Stage C and
+Stage J are not optional polish, they are load bearing for whether the thing
+converts.
+
+### K5 — The pre-build gate (all four must pass before a single line of HTML)
+1. **Interest is real, not reflexive** (K1): the lead engaged with effort, or
+   the angle scored strong enough to justify a build before interest per the
+   commercial-angle decision. A bare "sure send it" alone is not enough for a
+   full build.
+2. **The problem is theirs** (K2): evidence they already feel it, not a gap we
+   invented.
+3. **The job matches** (K3): our angle points at what they are actually trying
+   to do.
+4. **We can hit the craft bar** (K4): Stage C concept and Stage J behavioural
+   layer are achievable for this brand, not a template reskin.
+If any gate fails, the honest move is a lighter touch (a question, an
+observation, a call) or `NO_STRONG_ANGLE`, not a build.
+
 ## Writing standard (anti-AI) applies to all copy and outreach
 
 Every line of copy on a prototype, and every outreach message that links to
