@@ -136,6 +136,19 @@ stuck with me," "caught my eye," "I couldn't stop thinking about," "been on my
 mind." They fake a human reaction and read as generated (Raka 2026-09-04). State
 the actual observation about their business instead.
 
+**No reverent heritage or milestone flattery (Raka 2026-09-05).** Do not open by
+admiring that the prospect exists, in marketing voice: "Buddha Kalari carrying
+Kalaripayattu and marma therapy since 1924 is a rare thing," "a legacy like
+yours is special," "what you have built is remarkable," "the tradition really
+comes through." No real person messages another owner like that, it reads as an
+AI buttering them up before the ask. If a fact is genuinely interesting (a 1924
+founding, a big number), react to it the way a person actually would in a chat
+("100 years is pretty cool", "wild that you ship to 40 countries") and go
+straight to the point. The test: would you type this sentence to another
+business owner in a LinkedIn DM, or does it sound like a brand writing a
+testimonial *about* them? Write the first one. Sound like one owner messaging
+another, casual and direct, not marketing copy.
+
 **Email phrases to avoid** unless they genuinely match the person: "I hope this
 finds you well," "just following up," "I wanted to touch base," "circle back,"
 "at your earliest convenience," "please don't hesitate," "look forward to
