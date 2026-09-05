@@ -26,6 +26,19 @@ drafting anything external. It bans the validation tics, honesty theatre,
 give AI writing away, and it sits alongside the existing no-dash and
 no-fabrication rules.
 
+**Draft before send, always, no exceptions (non negotiable).** In any
+interactive session where Raka is in the loop, every outward message (LinkedIn
+opener, reply, nudge, prototype send, email) is drafted and shown to Raka
+first, and only sent after he explicitly says to send. A send is outward and
+irreversible, so it needs his word every single time. Treat editing
+instructions as edits, not authorisation: "make it English", "less cheesy",
+"drop that phrase", "shorter" all mean redraft and show again, they do NOT
+mean send. Batch approvals do not roll forward either, a "send these" covers
+that batch only, not the next one. When in doubt, show the draft and wait. Do
+not let momentum, a small edit, or an obvious next step talk you into sending
+without an explicit go. (Logged 2026-09-05 after sending a batch off the
+instruction "all in English", which was a language edit, not a send.)
+
 The order is always **research first, diagnose second, sell third.** Before
 diagnosing any lead, research it to the standard in
 **`docs/astra-prospect-research-master.md`** — the canonical prospect-research

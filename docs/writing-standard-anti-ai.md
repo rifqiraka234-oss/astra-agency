@@ -178,6 +178,15 @@ products, outcomes. "Customers drop off after the address screen," not "there is
 friction in the mid-funnel conversion experience." Specific writing stops
 reading as machine-generated on its own.
 
+## Draft before send (process rule, non negotiable)
+
+In an interactive session, nothing external goes out until Raka has seen the
+exact draft and explicitly said to send it. Language and style edits ("make it
+English", "less cheesy", "cut that phrase") mean redraft and show again, never
+send. A prior "send these" covers only that batch. Show the draft and wait for
+the word. (Added 2026-09-05 after a batch was sent off "all in English", a
+language edit that was wrongly read as a send.)
+
 ## Before anything external goes out
 
 Reread it once. Cut: em dashes; "not X but Y"; forced triads; honesty/pushback
