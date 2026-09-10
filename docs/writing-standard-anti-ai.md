@@ -203,8 +203,16 @@ something, or be kind to themselves.
 ## Punctuation and formatting
 
 No em dash character. Rewrite with a period, comma, parentheses, or a new
-sentence. Do not mechanically swap every dash for the same mark. Semicolons
-sparingly. Avoid the "Here's the problem:" / "The result:" colon habit. No
+sentence. Do not mechanically swap every dash for the same mark.
+
+**No colon character, ever (Raka 2026-09-10, hard ban).** The `:` is banned in
+anything we send or ship, exactly like the em dash. Not to introduce a list,
+not for "the result:" or "one thing stood out:" emphasis, not after a label,
+nowhere. Rewrite as two sentences, or with a comma. If you catch a colon on the
+reread, it is a rewrite, not a send. (Time separators like 9.30 are written with
+a full stop anyway, so this never blocks a real time.)
+
+Semicolons sparingly. No
 mechanical boldface, no heading every two paragraphs, no auto TL;DR, no tables
 where prose is easier, no "key takeaway" labels on ordinary advice.
 
