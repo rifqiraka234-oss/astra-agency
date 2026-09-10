@@ -163,6 +163,30 @@ work together." Use a concrete observation about their actual site or business.
 "Transform," "Empower," "Seamlessly," "Effortlessly," "everything you need,"
 "powerful yet simple," "built to scale," "X made easy."
 
+## Reply in context, always (Raka 2026-09-10)
+
+Before drafting any reply, read the thread first: their last message, and what
+we sent before it. The reply continues that specific conversation, it does not
+restart it or launch into a pitch or an analysis dump. Answer what they actually
+said, the way you would text a friendly acquaintance who just messaged you back:
+short, warm, a real reaction, one light question or a small offer, then stop.
+
+- If their last line was just "thanks", match that energy. Something warm and
+  human, one friendly question about how the business is going. Do not answer a
+  two word thanks with five paragraphs or a numbered list of ideas.
+- If they asked a direct question ("give me some ideas"), answer it, but
+  conversationally: one concrete idea and an offer to show more, not a formal
+  pitch dropped into a chat box.
+- If they have not replied yet and we are following up, continue from our own
+  last message naturally. Do not act as if a new conversation is starting.
+- Never open a reply with a mini business audit they did not ask for. Earn that
+  with a real back and forth first.
+
+The test: read it out loud as if you were texting a friend who runs a business.
+If it sounds like a consultant sliding into their DMs with a proposal, rewrite
+it lighter. (Logged after a batch of replies that ignored the prior messages and
+jumped straight into pitching.)
+
 ## Tone rules
 
 No default sycophancy. Do not praise the question, the idea, or the reader's
