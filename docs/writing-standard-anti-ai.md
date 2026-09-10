@@ -8,6 +8,12 @@ rules in `docs/astra-master-context.md` section 9. Where this file and a spec
 disagree on wording, a live correction from Raka outranks both; otherwise follow
 this.
 
+**Read `docs/NO-AI-SLOP.md` alongside this file, it is mandatory.** That doc is
+the concrete banned-words, banned-phrases, banned-structures, and grep-check
+companion to this one. Where the two overlap, follow the stricter. This file
+adds two hard bans NO-AI-SLOP does not go as far on, and they win everywhere: no
+dash character of any kind, and no colon character at all (see Punctuation).
+
 The point is not "sound casual" or "sound human." The point is to write like a
 competent person who knew exactly what they wanted to say: direct, specific,
 proportionate, and short when short works. Content first. Do not swap one

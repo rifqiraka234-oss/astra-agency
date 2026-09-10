@@ -26,6 +26,21 @@ drafting anything external. It bans the validation tics, honesty theatre,
 give AI writing away, and it sits alongside the existing no-dash and
 no-fabrication rules.
 
+**Mandatory, no exceptions: `docs/NO-AI-SLOP.md`.** Every generated word
+(outreach openers, replies, nudges, email, prototype and website copy, deck
+copy, proposals, UI microcopy, and the digests handed back to Raka) must pass
+the NO-AI-SLOP standard before it is shown or sent: the banned words, the
+banned phrases, the banned sentence structures, the Claude-specific structural
+tells (distributed hedging, the three-part default, metered sentence length,
+paired adjectives, uncontracted verbs), the formatting bans, and the section 7
+self-check. Run the section 8 grep over any HTML we ship. Core test: if a
+sentence would read the same on 10,000 other companies' sites, cut it and write
+the specific version. Where NO-AI-SLOP and Raka's live corrections differ,
+Raka's stricter rule wins, so the total ban on the colon character and on every
+dash (from `writing-standard-anti-ai.md`) overrides NO-AI-SLOP's "colons only
+for lists." Read `docs/NO-AI-SLOP.md` in full alongside
+`docs/writing-standard-anti-ai.md` before drafting anything external.
+
 **Draft before send, always, no exceptions (non negotiable).** In any
 interactive session where Raka is in the loop, every outward message (LinkedIn
 opener, reply, nudge, prototype send, email) is drafted and shown to Raka
