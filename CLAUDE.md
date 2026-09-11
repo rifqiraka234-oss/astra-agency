@@ -66,6 +66,35 @@ confidence outcomes (`HIGH_CONFIDENCE_ANGLE` down to `NO_STRONG_ANGLE`). Do not
 choose a final angle until its Minimum Research Stop Conditions are answered,
 and never infer a problem from a single weak signal.
 
+**What actually works on first touch (learned 2026-09-11 from real replies, not
+theory).** The first message is the single biggest lever in the funnel, and the
+reply data is blunt about it:
+
+- The generic connect note ("saw your business and thought it was cool, I'm a
+  business owner too, would love to connect and share ideas") reliably produces
+  generic replies and a cold restart. One batch of six leads (Ramar/RentyFind,
+  Jacqueline/Leadership Through Data, Fleur/DCCI, Karim, Sarim/Flochitect,
+  Kyson/Acquitas) all came back with near-identical low-signal lines ("Thanks
+  Raka", "nice to meet you, what business are you in?", "always great to connect
+  with inspiring people"). It opens the door and hands us nothing to work with,
+  every one forces us to restart the conversation from zero.
+- Every thread that actually progressed turned on one specific, true observation
+  about that lead's own business. Georgia/HotGreen replied "yes please" and told
+  us they were mid redesign after we pointed out the CCEP trial and the raise
+  were nowhere on their site. Ank/Tomatoworld booked a call after real
+  engagement plus a tailored analysis. Antanas/Gravity Fellow replied "what is
+  your offer" to a concrete investor homepage concept.
+- Cold prototype sends before genuine interest mostly die (11 of 14 went silent,
+  see Stage K). Rapport-only chit-chat dies the other way (polite warmth, then
+  silence).
+
+The rule, seen from the reply side: the first touch carries one specific
+observation about their business that could only be written for them, enough to
+earn a real reply. Never open with rapport filler, never open with a prototype.
+Diagnose first, lead with the diagnosis, and hold the prototype or deck until
+they have shown genuine interest (the ONLY_AFTER_INTEREST rule). Track what came
+back, not just what was sent, so this stays evidence and not memory.
+
 Before choosing what to pitch a given lead, read
 **`docs/astra-commercial-angle-master.md`** — the canonical commercial
 reasoning playbook. It is the layer between prospect research and the message,
