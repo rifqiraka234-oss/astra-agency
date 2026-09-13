@@ -147,6 +147,34 @@ build websites and the tools that sit on them", before the thing we would do
 for them. Then name the artefact concretely, a working version of a specific
 screen or a short deck, never a vague "something".
 
+**Working the Silent accepted backlog (Raka, 2026-09-13).** As of this date
+`sentOnly` holds roughly 691 contacts and the queue has 135 worked rows, so
+the great majority accepted the connection, received only the generic connect
+note, and never heard anything worth replying to. That is the largest untapped
+pool in the business and it only shrinks when someone drafts a real opener.
+Work it in batches of about ten, each with real per contact research, and aim
+the same way as any reply, at a yes to a prototype or a deck. Because these
+people never replied, the opener carries the whole load, so it needs the
+specific observation, the plain line about what Astra builds, the cost of
+doing nothing, and the offer, in that order. Open by acknowledging the gap
+plainly ("we connected a while back but I never sent you anything useful")
+rather than pretending the thread is warm.
+
+Getting lead data cheaply: `search_campaign_leads` with `campaignId` and a
+`limit` returns a lean row per lead (name, company, job title, LinkedIn URL) at
+roughly eighty tokens each, so a hundred at a time is affordable and is the
+right way to pick a batch. The heavy full record with `companyDescription` and
+`summary` comes back only when querying a single lead by `id`, so use that for
+the ten you actually chose. Note that the connect note is not always written as
+an activity, so `get_inbox_conversation` can return an empty list for a real
+Silent accepted contact; that is not evidence of anything.
+
+Retry the `BLOCKED_NEEDS_INFO` rows periodically, because some unblock on their
+own. Spa Holistique Ayurveda sat blocked on a stuck redirect and now resolves,
+though only at the locale path `/fr` since the root serves a client side
+redirect. Most of the rest stay blocked for a better reason, genuine identity
+ambiguity, and those stay untouched under the never guess rule.
+
 Before choosing what to pitch a given lead, read
 **`docs/astra-commercial-angle-master.md`** — the canonical commercial
 reasoning playbook. It is the layer between prospect research and the message,
