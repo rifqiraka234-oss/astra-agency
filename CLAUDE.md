@@ -120,6 +120,33 @@ put together a quick version and send it over, want to see it?"), never a vague
 "want me to?". Track in `state/prototypes.jsonl` what was offered, what came
 back, and whether a deck or a prototype was the thing that moved it.
 
+**Make them feel the cost of doing nothing (Raka, 2026-09-13).** An
+observation on its own is trivia. The lead has to finish the message knowing
+what staying exactly as they are will keep costing them, in their own business,
+this month. Name the bill they are already paying without noticing. Studio Was
+Here either turns down work that grows past design or hands it to a freelancer
+it cannot control, and it is still their name on it when it slips. CLUUE has to
+convince a Mittelstand manager he has a problem he cannot see before it can
+sell him anything, which is the hardest sale there is, while the demographic
+clock runs on his prospects. VDM Energy loses the homeowners who leave without
+asking and spends real time quoting the ones who were only curious. NEWLENSE
+makes a good reel, the click lands on a website that undoes it, and at the
+monthly review it looks like the content underperformed rather than the site.
+
+Two hard limits on this. The cost must trace to something actually verified in
+research, never invented, and the no manufactured pain rule in
+`docs/astra-commercial-angle-master.md` still outranks it, so a business with
+no real gap gets `NO_STRONG_ANGLE` rather than a scary sentence. And it stays
+plain and unbothered, never doom, never urgency theatre. State the bill, say
+what we would build, offer to send it.
+
+**Say what Astra actually sells, in plain words, in the message.** A lead who
+has only had a connect note has no idea what we do, so a suggestion from us
+reads as a stranger giving unsolicited advice. One short line, "I run Astra, we
+build websites and the tools that sit on them", before the thing we would do
+for them. Then name the artefact concretely, a working version of a specific
+screen or a short deck, never a vague "something".
+
 Before choosing what to pitch a given lead, read
 **`docs/astra-commercial-angle-master.md`** — the canonical commercial
 reasoning playbook. It is the layer between prospect research and the message,
