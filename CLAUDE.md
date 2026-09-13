@@ -95,6 +95,31 @@ Diagnose first, lead with the diagnosis, and hold the prototype or deck until
 they have shown genuine interest (the ONLY_AFTER_INTEREST rule). Track what came
 back, not just what was sent, so this stays evidence and not memory.
 
+**Every reply has one job, earn a yes to sending something (Raka, 2026-09-13).**
+A reply that produces a pleasant exchange and no artefact has failed. The aim
+of any thread is to reach the point where the lead says "yes, send it over",
+and the thing we send is either a prototype or a **research deck** of what we
+found and what we would do about it. The deck is now a first class option
+alongside the prototype, not a fallback, because the evidence says so. The
+Tomatoworld deck produced a booked meeting, the HotGreen deck produced a warm
+handover to the person actually running the redesign, and the Acquitas deck
+went out on the back of an explicit "Go for it". A deck also suits leads where
+a prototype would be wrong, which is most builders, consultants and technical
+founders, and it is far cheaper to produce than a full build.
+
+This does **not** licence cold sending. The Stage K data is unchanged, 11 of 14
+unrequested prototype sends were ignored, so the `ONLY_AFTER_INTEREST` rule and
+the Stage K pre build gate still hold. The change is about intent, every reply
+should be steering toward the offer rather than drifting. In practice that
+means each reply carries a concrete observation about their business plus the
+ASTRA service line that actually fits (Grow / Optimise / Innovate / Build
+Squad, and note that builders, consultants and technical founders usually want
+Build Squad rather than a redesign), and closes by offering to put something
+together. Use the prototype send convention, offer the specific journey ("I can
+put together a quick version and send it over, want to see it?"), never a vague
+"want me to?". Track in `state/prototypes.jsonl` what was offered, what came
+back, and whether a deck or a prototype was the thing that moved it.
+
 Before choosing what to pitch a given lead, read
 **`docs/astra-commercial-angle-master.md`** — the canonical commercial
 reasoning playbook. It is the layer between prospect research and the message,
