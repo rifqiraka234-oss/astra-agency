@@ -174,9 +174,16 @@ Work it in batches of about ten, each with real per contact research, and aim
 the same way as any reply, at a yes to a prototype or a deck. Because these
 people never replied, the opener carries the whole load, so it needs the
 specific observation, the plain line about what Astra builds, the cost of
-doing nothing, and the offer, in that order. Open by acknowledging the gap
-plainly ("we connected a while back but I never sent you anything useful")
-rather than pretending the thread is warm.
+doing nothing, and the offer, in that order.
+
+**Never open with the gap ritual (Raka, 2026-09-13).** An earlier version of
+this section told openers to start by acknowledging that we connected a while
+back and never sent anything useful. That is deleted. Raka's words, "who would
+say that, no human does that." Nobody announces their own neglect before
+speaking. Open on the observation about their business, straight in, and vary
+the first line lead to lead so a batch does not read as a template. The fact
+that the thread is cold needs no narration, the specificity of the observation
+carries it.
 
 Getting lead data cheaply: `search_campaign_leads` with `campaignId` and a
 `limit` returns a lean row per lead (name, company, job title, LinkedIn URL) at
@@ -397,7 +404,9 @@ itself.
   `campaignId`, `acceptedDate`, `lastActivityAt`, `source`, `needsLookup`,
   `openerDrafted`, `openerText`, `openerSentAt`, `research`, `status`.
   - `status` is the working state of each row and is the field to filter
-    on: `UNRESEARCHED` (default), `SENT`, `NO_STRONG_ANGLE` (a real
+    on: `UNRESEARCHED` (default), `DRAFTED` (researched, opener written and
+    shown to Raka, not yet approved, so never treat it as contacted),
+    `SENT`, `NO_STRONG_ANGLE` (a real
     business with no honest angle, see Guardrails), `BLOCKED_NEEDS_INFO`
     (dead domain, wrong-company domain, or content unreadable), or
     `DO_NOT_CONTACT` (company shut down or otherwise off-limits).
