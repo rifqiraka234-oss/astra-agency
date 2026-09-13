@@ -147,6 +147,24 @@ build websites and the tools that sit on them", before the thing we would do
 for them. Then name the artefact concretely, a working version of a specific
 screen or a short deck, never a vague "something".
 
+**Write every outward message in English, always (Raka, 2026-09-13).** This
+replaces the earlier rule about matching the language of the previous message
+in the thread. Dutch, German and French openers are no longer written, even
+where the lead is Dutch and the last message we sent them was Dutch, and even
+where their own site is in another language. Read their site in whatever
+language it is in and quote a phrase from it where that is the evidence, but
+write the message itself in English. (Logged after a batch was drafted in
+Dutch purely because the leads were Dutch.)
+
+**The ICP is not a country (Raka, 2026-09-13).** Section 3 of
+`docs/astra-master-context.md` has never named a geography, and the pipeline
+covers the UK, Germany, France, Belgium, the Netherlands, Canada and further
+out. Do not preferentially pick Dutch leads when choosing a batch, and do not
+treat "based near Raka" as a quality signal. Pick on fit to an ASTRA
+proposition, commercial potential, visible urgency and access to the owner,
+exactly as section 3 already says. A batch that comes out all one nationality
+is a sign the selection was lazy rather than that the pipeline is Dutch.
+
 **Working the Silent accepted backlog (Raka, 2026-09-13).** As of this date
 `sentOnly` holds roughly 691 contacts and the queue has 135 worked rows, so
 the great majority accepted the connection, received only the generic connect
