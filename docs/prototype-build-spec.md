@@ -1738,3 +1738,220 @@ The angle a prototype is built to prove comes from `docs/astra-commercial-angle-
 The outreach CTA for a prototype angle follows the prototype-send convention in `docs/astra-commercial-angle-master.md` section 31: offer to build and send the specific journey ("I can put together a quick version and send it over, want to see it?"), never a vague "want me to?" or "a new website".
 
 The research behind a prototype's angle follows `docs/astra-prospect-research-master.md` (Layer 2): verify identity, business model, stage and the winning problem across multiple evidence lenses before building, and never build off a single weak signal.
+
+---
+
+## Stage L — The WOW bar and the craft standard (added 2026-09-13, from the Acquitas / Kyson Charles build)
+
+This stage exists because Kyson Charles at Acquitas Partners is the first
+prospect who said "Go for it" to a full build, and Raka drove that build
+through roughly eight rounds of correction. Every correction is written down
+here. The test he set is the one that matters going forward.
+
+**The bar, in his words.** "Is this build exactly going to make him like super
+wow holy shit i needa hire these fuckers, and also basically follows the
+narrative we analysed and told him? Basically the best design you could ever
+do?" Both halves are the test. A beautiful page that does not continue the
+argument we already made to that person in the thread fails, and so does a
+faithful page that looks ordinary.
+
+### L1 — Show that we understand the business, never say it
+
+The single hardest correction of the build, and the one most likely to be got
+wrong again. Raka's words, after a round where the page had explanatory copy
+about the client's process on it:
+
+> "NOOO as in we shouldnt explicitly in text show how we understand their
+> business. The website should be a A+++ grade final production level that he
+> will use and publish, but how we made it shows we understand the business."
+
+So the page never contains a sentence like "we understand your sales process"
+or "we know how deals like yours work." The understanding is proved by the
+artefact itself. On Acquitas that meant the section order mirrored a real
+sell-side process, the deal-structure chart used locked box against completion
+accounts because that is the actual negotiation, the value levers were the ones
+a trade buyer genuinely prices, and the FAQ answered what a nervous first-time
+seller actually asks. A reader who knows the industry recognises that nobody
+outside it could have built the page. Nobody had to be told.
+
+Corollary: the prototype is the client's own site, written in their voice for
+their customers. It is not a pitch to the client, and it never talks about
+Astra. Astra's critique belongs in the separate deck (see E3 and L7).
+
+### L2 — Real pictures and a real graphic in essentially every section
+
+> "Add more real pictures and graphs like i think every section."
+
+A section that is type on a colour is a section that looks AI made. The
+Acquitas site ended with photography, a chart, a diagram, a timeline or a
+stat block in every single section. Build an asset plan per section during
+Stage D and treat an empty section as a defect, not a style choice.
+
+Charts must be real and sourced. The Acquitas build carried TIC transaction
+multiples, five value levers, a deal-structure breakdown and the BADR rate
+change, each footnoted to a public source. An invented number in a chart is
+the same hard failure as an invented testimonial.
+
+### L3 — Study real references before designing, never design from memory
+
+> "Look at all the pages apple.com has for their products (do deep research
+> screenshots and all)."
+> "qua looks and creativity and artsy, its still not giving a WOW factor.
+> Research online for big brands' examples."
+
+Before art direction, actually go and look at the current work of brands
+operating at the level being asked for. Fetch the pages, screenshot them,
+and name what they are doing structurally. From the Apple product-page study
+the patterns that transferred were: around fifteen sections rather than the
+usual six or seven, a deliberate alternating light and dark rhythm, exactly
+one dominant visual idea per section, comparative numbers with footnote
+citations, detail crops sitting alongside wide establishing shots, and masked
+staggered type reveals on entry.
+
+"Apple Inc level" is Raka's shorthand for this bar. It does not mean copying
+Apple's aesthetic onto an unrelated business. It means the same density of
+considered decisions per screen.
+
+### L4 — The hero carries the build, and one pass is not enough
+
+> "I want another round on the hero. Come on dont slack. Apple Inc level
+> designs!! Take your time man."
+
+The hero was rebuilt three times. What finally worked was an owned generative
+canvas rather than a stock image behind a headline, plus a masked staggered
+reveal on the headline lines. Two things had to be fixed by looking, not by
+reasoning: the generative focal point initially landed on the headline's full
+stop, and the composition was cluttered at phone width. Both were only visible
+in a screenshot. Budget more than one round on the hero and check it at 1400px
+and at 420px every time.
+
+### L5 — Production ready means launchable next week, by them
+
+> "can you ensure that say we will launch it like next week. That this is a
+> production ready form."
+
+The deliverable is the finished site the client publishes, not a demo of one.
+That means real content throughout, working forms, correct metadata, mobile
+verified, and an explicit list of what must change before launch handed over
+with it. On Acquitas that list was two items, the fee wording in the FAQ
+(which was an assumption rather than the client's own words) and the noindex
+meta tag that has to come off. Never let an assumption ship silently as if the
+client had said it.
+
+### L6 — Portraits, and the one time the guardrail was waived
+
+The standing guardrail still holds: never place a real person's photograph
+next to a name without mechanical verification. For this build Raka overrode it
+explicitly, in writing, for one specific image ("i force you to use this
+picture of him"). That is the only thing that lifts the guardrail, an explicit
+instruction naming the image. Never infer permission from context, from the
+photo being on their LinkedIn, or from it obviously being them.
+
+### L7 — The companion deck is a separate artefact with a separate job
+
+The site is the client's. The deck is Astra's argument, built after the site
+and linked to it. Structure that worked on Acquitas: what we looked at, what
+we found split into what is strong and where it breaks, the problem in one
+line, why the timing helps them, the opportunities as a numbered set of moves,
+how the moves fit together, one move actually built and working, what the rest
+looks like built, why us, next step.
+
+Two things gave it force. A working interactive tool inside the deck, which
+proves the claim instead of describing it. And a genuine thesis that ran
+against the obvious read: Acquitas did not have a website problem, it had a
+problem finding sellers early, and the website was simply where the fix had to
+live. A deck that only says "your site could be nicer" is not worth building.
+
+Mockups of screens that do not exist must be labelled as sketches, adjacent to
+the thing that is genuinely running, so nothing is mistaken for shipped.
+
+### L8 — Plain language, audited phrase by phrase
+
+> "make the lingo more easier to understand. With rhe words phrases and
+> sentences and the flow of paragraphs."
+> "I see still like AI stuff like 'the problem, stated plainly' like who tf
+> would say stated plainly. One by one every phrase."
+
+Passing the NO-AI-SLOP word and phrase bans is not enough. Read every line
+aloud and ask whether a person would say it in a meeting. Things that passed
+every automated check and still had to go:
+
+- "The problem, stated plainly" — nobody announces that they are about to be plain
+- "The front door, working, right here" — became "Have a play with it"
+- "Built, not described" — the not-X-but-Y tic
+- "Evidence over opinion" — slogan, became "We show our working"
+- "Earn the right to stay in touch" — LinkedIn-guru register
+- "The shape of the firm" — abstract, became "The basics"
+- "What it looks like built" — not English word order
+- "switch it visible to Google" — not a thing anyone says
+- "Grows" as a row label — a verb doing a noun's job, became "You get"
+
+**Contractions are the biggest single tell.** The Acquitas deck initially had
+almost none. "That is exactly what a nervous seller wants to hear." "It has
+gone up twice since." "A new firm cannot." Nobody speaks like that. Count them
+before shipping; near zero contractions in conversational copy means it reads
+as machine written no matter how clean the vocabulary is.
+
+### L9 — Verify by loading it cold, never by forcing state
+
+**This is the one that actually shipped broken.** The Acquitas deck went live
+as a blank page. An apostrophe inside a single-quoted JavaScript string
+(`fix='This one's close to ready...'`) threw a SyntaxError, the whole script
+died, the class that triggers the reveal animation was never added, and all 61
+elements stayed at `opacity: 0`. Only the background photographs rendered.
+Raka found it on his phone.
+
+It got through because the pre-deploy screenshot script force-added the reveal
+class so sections could be photographed without scrolling to each one. That
+override painted over the exact failure.
+
+The verification that is now required before any deploy:
+
+1. Load the page cold with nothing forced or overridden.
+2. Listen for `pageerror` and console errors and fail on any.
+3. Count elements that actually revealed themselves, and compare against the
+   total, rather than assuming the animation ran.
+4. Parse every `<script>` block of the **downloaded live HTML**, not the local
+   file, and confirm each one parses.
+5. Exercise the interactive parts and read back changed values.
+6. Screenshot at desktop and phone width.
+
+Any copy edit that inserts an apostrophe is a JavaScript risk. Grep for
+apostrophes inside single-quoted string literals after every copy pass.
+
+### L10 — Working notes on the build pipeline
+
+- Netlify's `deploy-site` command uploads the **current working directory**,
+  so always deploy from a clean folder holding only `index.html` and
+  `netlify.toml`, never from the repo.
+- Verify a deploy by fetching the live URL and diffing against the exact
+  deployed file. Netlify appends its own HUD script, which is a known and
+  expected 184-byte difference. Anything else is a real difference.
+- `<meta charset="utf-8">` is essential in the wrapper or every pound sign,
+  euro sign and arrow becomes mojibake.
+- Live URLs get `ERR_CONNECTION_RESET` through the agent proxy, so curl the
+  page down and render the local copy offline in Chromium.
+- Fonts fail to load in the offline sandbox. That is a rendering artefact of
+  the check, not a defect in the page.
+- The reveal selector gotcha: `.in .x` needs `.in` on an **ancestor**. When
+  the element itself carries the reveal class, the selector must be `.x.in`.
+  This silently rendered a chart empty once.
+- Keep base64 image payloads out of the conversation by injecting them with a
+  Python token-replacement step, and define each image once as a CSS custom
+  property so it is embedded a single time.
+
+### L11 — New hard failures (merge into G2)
+
+- The page says, in words, that we understand their business.
+- Any section carries no photograph, chart, diagram or other visual.
+- A chart shows a number with no public source behind it.
+- Art direction was written from memory with no reference pages fetched.
+- The hero shipped after a single pass, or was never seen at phone width.
+- An assumption shipped as if it were the client's own words, with no
+  handover note flagging it.
+- A portrait was used without either mechanical verification or an explicit
+  written override naming that image.
+- Deck mockups of unbuilt screens are not labelled as sketches.
+- Copy shipped with near-zero contractions.
+- The page was verified with reveal state forced, rather than loaded cold.
+- Scripts were parse-checked on the local file but not on the live download.

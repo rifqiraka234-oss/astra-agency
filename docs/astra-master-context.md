@@ -66,6 +66,107 @@ product.
   directed under clear Netherlands direction. ASTRA owns project clarity,
   communication, quality control and the commercial relationship.
 
+## 2A. Raka's own profile (the credibility we can actually spend)
+
+Source: Raka's LinkedIn, pasted by him 2026-09-13. This is the factual record
+behind every "I have done this myself" line in outreach. Use it to earn the
+right to an opinion. Never stretch it, and never claim Astra did something
+that Raka did somewhere else.
+
+**Identity.** Raka Mulya, full name Rifqi Rakamulya. He/Him. Based in the
+Randstad, Netherlands. `linkedin.com/in/raka-mulya-b92885196`. 500+
+connections, around 1,550 followers. Indonesian, moved to the Netherlands in
+2018. English native or bilingual, Dutch limited working, plus Indonesian.
+
+**Current headline.** "Just a curious guy with many skills | Manager Sales &
+Revenue Operations | Ex HEINEKEN Global | Founder of a Stroopwafel business |
+2017 Asian Karting Champion"
+
+**Roles, most recent first.**
+
+- **Sales & Channel Operations Manager, efficy** (2026 to present). CRM
+  vendor.
+- **Advisor, Astra Agency** (Jan 2026 to present, Amsterdam Area). His own
+  framing on LinkedIn is modest, "helping my sister and my friend with
+  starting their digital agency."
+- **Global GTM & Campaign Manager, Betty Blocks** (Aug 2024 to Feb 2026).
+  ICP segmentation, account selection, messaging and multi-channel outreach;
+  automation-driven revenue workflows covering enrichment, scoring, routing
+  and follow-up loops; playbooks and cadences across SDR, AE, Marketing and
+  RevOps; pipeline generation through structured experimentation.
+- **CEO and CMO, Eten Maar** (Aug 2020 to Dec 2024, South Jakarta). Founded
+  and scaled a stroopwafel brand from zero with five relatives. Owned
+  acquisition, partnerships, content, conversion, pricing, inventory and unit
+  economics. Expanded to Bali, where he lived for seven months.
+- **Global E-Business Data & Insights Lead, The HEINEKEN Company** (Feb 2023
+  to Feb 2024, Amsterdam). Standardised KPIs, dashboards and decision
+  cadences; enabled **23 markets** with self-serve insights; data governance
+  across regions.
+- **Freelance social media and branding consultant** (Dec 2020 to Feb 2023,
+  Bali). Notable clients Gudang Garam Tbk (Indonesian tobacco) and Maxime
+  Indonesia (appliances).
+- **Project Manager, Pandan Social** (Mar to Nov 2022, Kuala Lumpur).
+  Influencer campaigns end to end.
+- **Race kart driver, Stratos Motorsports** (2015 to 2022). **2017 Asian
+  Karting Champion, Senior category.** Racing is what opened the door to
+  studying in Europe; the career stalled on funding during COVID.
+- Junior consumer analyst and market researcher roles in Jakarta, 2020 to 2021.
+
+**Education.** MSc Digital Business & Innovation, Vrije Universiteit
+Amsterdam (2022 to 2023). BSc International Business Administration,
+E-Marketing, Rotterdam School of Management, Erasmus (2018 to 2021).
+
+**Top skills as listed.** B2B, Digital Strategy, Digital Transformation, IT
+Transformation. Tools on the profile: HubSpot, Replit, Gamma, IntelliJ.
+
+**Outside work, and it is genuinely useful material.** Hard techno DJing
+(999999999, I Hate Models, SNTS). Marathon running, Leiden and Amsterdam.
+Yoga and meditation. The racing discipline shows up in how he talks about
+preparation and repetition.
+
+### How to use this in outreach
+
+Match the credential to the lead, and use one, not a list.
+
+- **Owner-operator or founder lead** (most of the ICP). Eten Maar. He built a
+  food brand from zero with family, ran the P&L, did the pricing and the
+  inventory. He is not an agency guy talking at a founder, he has had the
+  same week they are having.
+- **Corporate, enterprise or anyone who cares about scale.** Heineken, 23
+  markets, global e-business analytics. This buys credibility fast with
+  operations and data people.
+- **RevOps, GTM, sales leadership, SaaS.** Betty Blocks and efficy. Pipeline
+  systems, enrichment, scoring, routing, playbooks. This is the closest match
+  to what Astra actually sells under Grow and Optimise.
+- **Energy, industrial, engineering, German-speaking and other operations-led
+  businesses.** Lead with Heineken and the process and data work, not the
+  agency. These buyers respect an operator far more than a creative.
+  Relevant to **Niklas / Nikolas Wagner at Wagner Energy Solutions**, where
+  the standing draft should carry the operations credential rather than a
+  design pitch.
+- **When rapport genuinely helps and only then.** Karting champion, techno,
+  marathons. Never as an opener, and never as a substitute for a specific
+  observation about their business.
+
+### His own writing voice, observed from his posts
+
+Useful because outreach has to sound like him. His posts run personal anecdote
+into a business lesson, first person throughout, warm and self-deprecating,
+plain words, short paragraphs, often a question at the end. Recurring themes:
+the habit of winning over wanting to win, showing up at one percent a day
+rather than waiting to feel ready, revenue teams should be like pasta
+(reliable, simple, makes you feel good), AI agents doing real work while he is
+at the gym, respect for ordinary founders just trying to make a living,
+documenting processes to kill tribal knowledge, and a health-makes-money
+argument. His single best performing post by a wide margin was an observation
+about Albert Heijn's floor-cleaning robots and labour shortage, at 74,611
+impressions, which is worth remembering: a specific, real observation about
+somebody else's business massively outperformed his motivational posts.
+
+Two differences between his personal posting and our outreach. He uses emoji
+freely in his own posts; outreach does not. He uses colons in posts; outreach
+never does, per his own total ban.
+
 ## 3. Market position and ideal clients
 
 **Primary target types:** founder-led SMEs; small/mid-market orgs with real

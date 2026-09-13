@@ -106,6 +106,26 @@ from a service and hunt for a reason to sell it, and never manufacture pain.
 The angle library (G/O/I/B patterns), the evidence to problem to angle chain,
 and the no-strong-angle rule live there.
 
+**Before building any prototype, deck or site, read Stage L of
+`docs/prototype-build-spec.md`** (the WOW bar and craft standard, written
+2026-09-13 from the Acquitas build Raka drove through eight rounds). The test
+is his: would this make the client think "holy shit I need to hire these
+fuckers", AND does it continue the narrative we already told that person. The
+rules that get broken most often are these. Never say in words that we
+understand their business, prove it through how the thing is made. Every
+section carries a real photograph or a real sourced graphic. Study actual
+reference pages before art direction instead of designing from memory. The
+hero needs more than one pass and must be seen at phone width. Production
+ready means they can publish it next week, with any assumption flagged rather
+than shipped silently. Audit copy phrase by phrase for things nobody would
+say, and count the contractions. And verify by loading the page cold with
+error capture, never by forcing reveal state, which is how a completely blank
+deck once shipped to a client.
+
+Raka's own background, and which credential to spend on which kind of lead,
+is in **`docs/astra-master-context.md` section 2A**. Read it before writing a
+message that needs to earn the right to an opinion.
+
 Before drafting any outreach message in either routine, also read
 **`docs/astra-master-context.md`** — the business identity, ideal client
 profile, service lines (Grow / Optimise / Innovate / Build Squad), pricing
