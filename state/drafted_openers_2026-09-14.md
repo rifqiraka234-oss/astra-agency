@@ -208,3 +208,47 @@ However, Disney, Sanofi and the WHO sit on the homepage as logos with no story a
 I run Astra agency and we'd build the case study side out, and after a year at Heineken running data across 23 markets I know what a sceptical enterprise buyer actually asks.
 
 Shall I put that together and send it?
+B4-1 SAMER AL-WAEALY / Brightnerds [Heineken]
+Hi Samer, saw Brightnerds and the Static Entertainment story, one planning tool replacing the scattered stuff, is a proper piece of work!
+
+However, the Customer Stories page it sits on still says see how our customers use Scion to power research and insight, and the testimonial under it credits Scion's AI systems, signed Joseph Rao, CEO of Continuum AI. That's the template, still live. This means the one page a buyer opens to check you reads as copy pasted, which quietly undoes the real work sitting underneath it.
+
+I run Astra agency and we'd rebuild that page around your actual clients, and after a year running global data at Heineken I know what that buyer is checking for.
+
+Shall I put a version together and send it?
+
+B4-2 ANDY TIDD / Juntos Solutions [Heineken]
+Hi Andy, saw Juntos Solutions and Working with you until you are ready to lead is a smart way to sell senior help!
+
+However, IBM, Citi and Vodafone appear on the site as places your people used to work, and not one actual engagement is described anywhere. This means a CIO about to hand over a data centre migration has your pedigree but no evidence you've run one, and at that size nobody buys on pedigree alone.
+
+I run Astra agency and we'd build the engagement side out, and after a year at Heineken standardising data across 23 markets I've sat on the buying side of exactly that decision.
+
+Shall I put a version together?
+
+B4-3 KATRIN KEMPE / duwerk [Betty Blocks]
+Hi Katrin, saw duwerk and betting the agency on visibility inside AI search, this early, is a sharp call!
+
+However, you list the exact KPIs you track, Visibility Score, Mentions, Citations, Visibility Share and Sentiment, and not one of them appears against any of the six logos on your site. This means a brand has to take measurement on faith from the agency whose entire product is measurement, which is the hardest version of that sale.
+
+I run Astra agency and we'd build the results side out, and I spent two years building the reporting that made a software company's numbers believable.
+
+Shall I put a version together and send it?
+
+B4-4 JOSE BARBOSA / z3leads [Betty Blocks]
+Hi Jose, saw z3leads and putting 12 million in revenue and 2,467 qualified leads on the homepage, with the prices right next to it, is braver than most agencies manage!
+
+However, none of that lands on a client. XRproj, Necto Systems, Telco Web and the rest are titles with no number attached to any of them. This means someone weighing up $2,500 a month sees your total and still can't tell what a company their own size actually got.
+
+I run Astra agency and we'd build the case studies out properly, and I spent two years building pipeline systems where the per client number was the whole argument.
+
+Shall I put one together and send it?
+
+B4-5 LARS VAGEVUUR / WebMar [Build Squad]
+Hi Lars, saw WebMar and nine real cases with live links and actual Google reviews under them is more proof than most agencies bother with!
+
+However, you're covering webdesign, webshops, Google Ads, social and hosting, and the one role you're hiring is a part time SEO specialist. This means when a client needs a custom backend or a real integration, it either gets turned away or it gets squeezed into a week nobody has.
+
+I run Astra agency and we do white label backend and full stack build for agencies in exactly that spot, so the client stays yours and the hard part lands with us.
+
+Shall I send you a short one pager on how it works?
