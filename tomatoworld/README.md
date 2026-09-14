@@ -51,6 +51,7 @@ actively selling internally.
 | `proposal/01-client-proposal.md` | **Client-facing.** For Art, Joyce and Ank. Discovery Sprint + three phases |
 | `proposal/02-requirements-estimating-pack.md` | **Internal only.** Requirements, systems, architecture options, dev-day bands, risks |
 | `proposal/03-modular-menu.md` | À la carte modules from €600, starter bundles, redesign broken into spec-level pieces |
+| `proposal/04-build-spec-per-module.md` | **Internal only.** Per-module build spec for Josh — deliverables, done-criteria, stack, effort |
 
 ## Open actions
 
