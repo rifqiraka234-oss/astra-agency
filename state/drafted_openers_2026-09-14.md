@@ -252,3 +252,27 @@ However, you're covering webdesign, webshops, Google Ads, social and hosting, an
 I run Astra agency and we do white label backend and full stack build for agencies in exactly that spot, so the client stays yours and the hard part lands with us.
 
 Shall I send you a short one pager on how it works?
+B5-1 PATRICK KILLEEN / Head and Heart CIC [Eten Maar] COLD
+Hi Patrick, saw Head and Heart and starting a CIC on the back of a career in information systems is a proper use of that experience!
+
+However, I went looking for it and couldn't find a website anywhere, four months on from incorporating in May. This means a commissioner or a funder who hears your name has nothing to look at, and in that world the check happens quietly before anyone ever contacts you.
+
+I run Astra agency and we'd build you the first proper one, what you do and who it's for, and I started my own company from zero so I know exactly what month four looks like.
+
+Shall I put a version together so you can see it?
+
+B5-2 MIA KOVAC / CENTAM [Heineken] REPLY VARIANT
+Hi Mia, likewise, good to connect, and sorry for the slow reply. I saw CENTAM and printing silicon carbide for semicon and space is a genuinely hard thing to do well!
+
+However, your Selected Work section promises a snapshot of recent engagements and there's nothing under it, and there isn't a single material number on the site, no density, no tolerance, no surface finish. This means the engineer qualifying a new supplier can't shortlist you without emailing first, and most of them just don't.
+
+I run Astra agency and we'd build the projects and spec side out, and I spent a year at Heineken on process and data so I've been on the side that has to qualify a supplier.
+
+Shall I put a version together and send it?
+
+B5-3 BASTIAN THOMAS / InstandPro-Akademie [none] CONVERSATIONAL REPLY, answers his question, no pitch
+Hi Bastian, sorry for the slow reply. No, we sit smaller than that, mostly founder led businesses where the owner is still the one making the call. 100 to 400 is a good target for what you're doing though, big enough to have the problem and small enough that you can still reach the person who owns it.
+
+One thing on Sales Navigator, the saved search alerts are more useful than the search itself. Set one for job changes in maintenance and operations roles at your target size, because someone new in the seat is the moment they'll actually take a meeting.
+
+How's the first client hunt going?
