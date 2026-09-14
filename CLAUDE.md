@@ -228,6 +228,13 @@ last message was a two word thanks, match that energy first and do not dump an
 audit on them. The template is for a reply that is ready to carry an offer,
 not for every message in a thread.
 
+**Both versions are the standard everywhere (Raka, 2026-09-14).** These two
+templates are now the shape for every first real message we send, whether the
+lead has replied to us or not, and **the reply agent uses them too**. The daily
+inbox triage drafts replies in this shape, the Silent accepted backlog work
+uses it, and any batch of openers uses it. There is no separate house style
+for replies any more.
+
 **The nudge template (Raka, 2026-09-14). A third shape, for following up on
 our own unanswered message, and the only place an emoji is allowed.**
 
@@ -268,12 +275,7 @@ been weak because selling through retailers is standard for haute horlogerie,
 and that the DOCRA lead could not even be tied to a confirmed domain. Two of
 nine were dropped and one became a short note congratulating them on the fix,
 which is a better message than the nudge would have been. Re-verify, then
-write. And when they have fixed it, say so and offer the next thing instead. These two
-templates are now the shape for every first real message we send, whether the
-lead has replied to us or not, and **the reply agent uses them too**. The daily
-inbox triage drafts replies in this shape, the Silent accepted backlog work
-uses it, and any batch of openers uses it. There is no separate house style
-for replies any more.
+write. And when they have fixed it, say so and offer the next thing instead.
 
 **Go beyond the website angle (Raka, 2026-09-14).** The "However" block does
 not have to be a website problem. Earlier guidance in
