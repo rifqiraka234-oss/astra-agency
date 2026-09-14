@@ -176,6 +176,36 @@ people never replied, the opener carries the whole load, so it needs the
 specific observation, the plain line about what Astra builds, the cost of
 doing nothing, and the offer, in that order.
 
+**The opener template (Raka, 2026-09-14). This is the current shape and it
+outranks the 65 word template in `docs/astra-master-context.md` section 9.**
+
+```
+Hi [name], saw [company] and I find it [positive thing]!
+
+However, [explain the problem in 1 sentence]. This means [cost of doing nothing].
+
+I run Astra agency [what we can do for them specifically] after [my experience].
+
+Shall I [what we are going to send them]?
+```
+
+Four blocks, roughly 100 to 120 words, exactly one exclamation mark and it
+lives on the first line. What changed versus every earlier version, and the
+reason he gave it, is the third block. **Every opener now spends one of Raka's
+own credentials**, matched to the lead using the rules in
+`docs/astra-master-context.md` section 2A, because a stranger's opinion about
+your website is worth nothing until they have earned the right to it. Heineken
+and the 23 markets for enterprise, industrial, engineering and operations led
+buyers. Eten Maar for owner operators, founders and consumer brands, he built a
+food brand from zero with his family and ran the pricing and the P&L. Betty
+Blocks or efficy for B2B software, GTM, routing and audience problems. One
+credential, never a list, and never stretched into something he did not do.
+
+The opening line is a real, specific, casual reaction to something true about
+their business, never reverent flattery and never a generic compliment. The
+"However" sentence is one sentence. "This means" carries the cost of doing
+nothing in the present tense. The close names the artefact concretely.
+
 **Never open with the gap ritual (Raka, 2026-09-13).** An earlier version of
 this section told openers to start by acknowledging that we connected a while
 back and never sent anything useful. That is deleted. Raka's words, "who would
