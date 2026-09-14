@@ -48,6 +48,8 @@ actively selling internally.
 | `analysis/04-service-menu-modules.md` | ~40 modules across six tracks, packaged into three sellable bundles |
 | `analysis/05-engagement-models.md` | Twelve ways to sell it, incl. the Digivoucher subsidy route and partner sponsorship |
 | `analysis/06-asymmetric-plays.md` | Plays Panorama cannot copy — becoming a partner, delegations, hackathon, online tour as revenue |
+| `proposal/01-client-proposal.md` | **Client-facing.** For Art, Joyce and Ank. Discovery Sprint + three phases |
+| `proposal/02-requirements-estimating-pack.md` | **Internal only.** Requirements, systems, architecture options, dev-day bands, risks |
 
 ## Open actions
 
