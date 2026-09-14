@@ -350,6 +350,154 @@ gatekeeper to collaborator, and it gives the new hire the visible win she wants.
 ## R7 — Full visual redesign 🔴
 **We do not build this.** Recommend Panorama, in writing, and say so to the client.
 
+
+---
+
+# BRANDING TRACK
+
+**Note for the team:** these are craft deliverables, not engineering. Effort is
+*working days*, and the constraint is design and writing capacity, not dev capacity.
+Check who on our side actually delivers these before committing dates.
+
+## B1 — Brand & messaging audit · €900–1,400 · **3 days**
+**Make:** an assessment document.
+1. Inventory of every touchpoint: website, socials, tour presentation, printed material, partner-facing assets, signage
+2. Message consistency analysis — where they contradict themselves
+3. Visual consistency analysis — logo use, colour, type in the wild
+4. Tone analysis NL vs EN (Ank has already flagged the EN as previously poor)
+5. Prioritised findings, worst first
+**Done when:** every finding is evidenced with a screenshot or example. No opinions without proof.
+
+## B2 — Positioning & messaging framework · €1,500–2,500 · **4–6 days** 🟠
+**Make:** audience definitions (visitor, school, trade delegation, partner, press) ·
+positioning statement · core message + three proof points · value proposition per
+audience · tone of voice with do/don't examples · NL and EN.
+**Done when:** Ank, Art and a guide independently describe Tomato World the same way.
+**Check first:** Panorama sell positioning. Offer jointly or confirm it is unclaimed.
+
+## B3 — Story toolkit · €1,200–2,000 · **3–5 days** ⭐
+**Make:** the organisation's story in reusable forms.
+1. One-line version · 30-second version · 2-minute version · full narrative
+2. Audience variants: school, trade delegation, investor, press, international
+3. Key facts and figures sheet, sourced — **no unverifiable claims**
+4. Guide crib sheet, printable
+5. NL and EN
+**Done when:** a new volunteer guide can deliver a coherent story from it on day one.
+**Input needed:** interviews with Ank and two other guides. She is the source here.
+
+## B4 — Tour presentation redesign · €1,200–2,000 · **3–5 days** ⭐⭐
+**Make:** the presentation the tour is actually delivered from.
+1. Current deck audited — content, order, what guides skip
+2. Restructured narrative flow (uses B3 if bought)
+3. Designed slides, on brand
+4. **Audience variants** — school, corporate, international
+5. **Placeholder slots for live field-lab data**, so it does not go stale
+6. NL and EN
+7. Editable master + guide notes, so they maintain it without us
+**Done when:** a guide runs a full tour from it unaided and prefers it to the old one.
+**Input needed:** the existing deck, and to observe or take an actual tour.
+**Internal:** this is the oldest unmet request in the organisation and it touches
+nothing Panorama built. If we sell one branding module, sell this.
+
+## B5 — Brand guidelines · €1,500–2,500 · **4–6 days** 🟠
+**Make:** logo use and clear space · colour palette with values · typography · imagery
+direction · tone summary · templates list · do/don't examples · PDF + editable source.
+**Check first:** Panorama deliver brand guides as standard. **Ask whether one exists.
+If it does, extend theirs — do not produce a competing document.**
+
+## B6 — Visual identity refresh · €2,500–4,500 · **8–12 days** 🔴🟠
+**Do not propose unless** Panorama did not create the current identity, or are not
+retained. Otherwise recommend them. If it does proceed: discovery, concepts, refinement,
+asset production, handover.
+
+## B7 — Partner brand kit · €900–1,500 · **2–3 days**
+**Make:** logo pack and lockups for partners · usage rules and permissions · boilerplate
+copy NL/EN describing Tomato World · a template for partners announcing their
+partnership · reciprocal rules for how TW presents partners.
+**Done when:** a partner can announce the partnership without emailing anyone for assets.
+
+---
+
+# SOCIAL MEDIA TRACK
+
+## S1 — Social audit & benchmark · €700–1,200 · **2–3 days**
+**Make:** channel inventory with follower and engagement baselines · what performs ·
+what is dormant · posting cadence reality vs intent · benchmark against 3–5 comparable
+centres · prioritised findings.
+**Done when:** we can state their current baseline numerically.
+
+## S2 — Social strategy & channel plan · €1,500–2,500 · **4–6 days** 🟠
+**Make:** channel-by-channel purpose and audience · objectives with measurable targets ·
+cadence · resourcing reality check against who actually has time · measurement plan.
+**Check first:** squarely Panorama's Online Marketing Studio.
+
+## S3 — Content pillars & calendar · €900–1,500 · **3–4 days**
+**Make:** 4–6 recurring content pillars · annual rhythm mapped to their real calendar
+(seasons, crop rotation, hackathons, school terms) · a calendar template the office can
+maintain · 20 worked post ideas.
+**Done when:** someone non-specialist can fill next month unaided.
+
+## S4 — Content engine on visit data · €1,500–2,500 · **4–6 days** ⭐
+**Make:** the pipeline turning what we build into content.
+1. Content types from booking/visit data: visitor origin milestones, partner spotlights, season markers, field-lab results, group stories
+2. Automated draft generation where sensible (Claude API), **always human-approved before publishing**
+3. Approval queue
+4. Privacy rules — **no group or individual identifiable without consent**
+**Done when:** a completed visit can produce a publishable draft with one click.
+**Depends on:** M10 booking data, and ideally M19 and S9.
+**Internal:** Panorama cannot build this. It needs the booking system underneath. This
+is the socially defensible module even if they hold the retainer.
+
+## S5 — Template kit · €900–1,500 · **3–4 days**
+**Make:** 10–15 Canva or Figma templates covering their recurring post types, on brand,
+NL/EN, sized per channel, with a short how-to. **Templates must be editable by a
+non-designer — that is the entire point.**
+**Depends on:** B5 or existing brand guidelines.
+
+## S6 — Enablement & training · €900–1,500 · **2–3 days** ⭐
+**Make:** two working sessions with the new marketing colleague · a written playbook
+(what to post, when, how to approve, how to measure) · handover of pillars, calendar
+and templates · one follow-up session after a month.
+**Done when:** she runs a full month without us.
+**Internal:** cheapest way to turn the person most likely to see us as a rival into
+our advocate.
+
+## S7 — Managed social · €750–1,500/month 🟠
+**Make:** monthly content production and scheduling, community management, monthly
+report. **Most direct collision with Panorama's retainer. Offer last, only once scope
+is confirmed clear.** Define the exit — they should be able to take it in-house.
+
+## S8 — LinkedIn programme · €1,000–1,800 · **3–4 days**
+**Make:** profile optimisation for Art and key staff · content approach for a closed,
+relationship-led industry · 10 drafted posts · cadence and engagement guidance.
+**Done when:** Art posts something himself and it lands.
+
+## S9 — Visitor story capture · €1,200–2,000 · **3–5 days**
+**Make:** end-of-visit capture flow for quote, photo and permission · **explicit
+consent capture, GDPR-compliant, especially for school groups** · storage and tagging ·
+feeds S4 · office review queue.
+**Done when:** a month of visits yields usable stories with consent on record.
+**Depends on:** M19 or M11.
+**Risk:** children's images. Consent handling here is not optional and must be
+explicit, not implied.
+
+---
+
+# Brand & social sequencing
+
+If they buy this track at all, order matters:
+
+1. **B4** — tour presentation. Oldest request, zero Panorama overlap, immediate visible win
+2. **B1** — audit, to size everything else honestly
+3. **B3** — story toolkit, which feeds B4, S3 and every page
+4. **S1 + S3** — audit and pillars
+5. **B5 or extend Panorama's** — guidelines
+6. **S5 + S6** — templates and training, handing it to the new hire
+7. **S4** — once M10 exists and there is data to draw on
+8. **S7** — only if genuinely unclaimed
+
+**B4 first, always.** It is the one thing a named person has already asked for.
+
 ---
 
 # TIER 3 — outline only, spec properly when live
@@ -400,3 +548,6 @@ starting small?", and the answer is no.
 | 8 | Google Workspace or Microsoft? | M5 |
 | 9 | Guide count and languages | M6, M20 |
 | 10 | Who owns the booking inbox, and who covers holidays? | M5 |
+| 11 | **Is Panorama retained for branding and/or social?** | Whole B and S tracks |
+| 12 | Does a brand guide already exist? | B5 |
+| 13 | Who actually delivers design and copy on our side? | All B and S effort dates |

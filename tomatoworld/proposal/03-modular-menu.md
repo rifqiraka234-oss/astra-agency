@@ -238,6 +238,128 @@ gets the visible win she wants, and nobody is being routed around.*
 **The cheapest genuinely useful starting point is "Stop the bleeding" at €2,400** —
 or M9 alone at €700 if they want to spend almost nothing and still move.
 
+
+---
+
+## BRANDING TRACK 🟠
+*Included by decision. Panorama sell brand work — where an item touches identity they
+already created, offer it jointly or stand down. Items marked 🟢 are genuinely clear.*
+
+### B1 — Brand & messaging audit 🟢
+**€900 – €1,400 · 3 days**
+How Tomato World currently presents itself across the site, socials, printed material
+and the tour itself. Where the message contradicts itself, where it is strong.
+*Pure assessment. Nothing Panorama would object to, and it sizes everything below.*
+
+### B2 — Positioning & messaging framework 🟠
+**€1,500 – €2,500 · 4–6 days**
+Who they are, for whom, the core message, the proof points, tone of voice. NL/EN.
+*Panorama's Communicatie Studio sells positioning. Offer jointly or check first.*
+
+### B3 — Story toolkit 🟢 ⭐
+**€1,200 – €2,000 · 3–5 days**
+The story Ank keeps talking about, written properly: a one-line version, a 30-second
+version, a full version, and variants per audience (school, trade delegation,
+investor, press). Used by every guide, in every deck, on every page.
+> `[ANK]` *"if you cannot tell your story, what good is your story?"*
+*This is her whole reason for being involved. Strong emotional sell.*
+
+### B4 — Tour presentation redesign 🟢 ⭐⭐
+**€1,200 – €2,000 · 3–5 days**
+**The single best branding entry point available.**
+> `[ANK]` *"I told them, listen, we need to do the PowerPoint different. It needs to
+> be a little bit more upgraded professionally. And they're open to it."*
+She asked for this **before** the website, two years ago, and nobody has done it. It
+is branding work, it is not the website, and Panorama almost certainly never touched
+it. Audience variants, live data slots, NL/EN.
+*If we sell one branding module, sell this one.*
+
+### B5 — Brand guidelines / mini brand book 🟠
+**€1,500 – €2,500 · 4–6 days**
+Logo use, colour, type, imagery, tone, templates. *Check whether Panorama already
+produced one — they deliver brand guides as standard. If so, extend theirs, don't
+replace it.*
+
+### B6 — Visual identity refresh 🔴🟠
+**€2,500 – €4,500 · 8–12 days**
+*Only if Panorama did not create the current identity, or are not retained. Ask before
+proposing. Otherwise recommend them.*
+
+### B7 — Partner brand kit 🟢
+**€900 – €1,500 · 2–3 days**
+How partners represent Tomato World in their own materials, and how TW represents
+partners. Logos, lockups, boilerplate, permissions.
+*Genuinely unserved, and it supports the partner revenue line.*
+
+---
+
+## SOCIAL MEDIA TRACK 🟠
+*Panorama's Online Marketing Studio covers social. Verify retained scope first — see
+`analysis/03`. Where the new in-house hire owns it, sell enablement, not delivery.*
+
+### S1 — Social audit & benchmark 🟢
+**€700 – €1,200 · 2–3 days**
+Current channels, what works, what is dormant, how comparable centres perform.
+*Assessment. Safe, cheap, sizes the rest.*
+
+### S2 — Social strategy & channel plan 🟠
+**€1,500 – €2,500 · 4–6 days**
+Which channels, for which audience, to what end. *Directly Panorama's offering.*
+
+### S3 — Content pillars & calendar 🟢
+**€900 – €1,500 · 3–4 days**
+Recurring themes, posting rhythm, a calendar the office can actually maintain.
+
+### S4 — Content engine on visit data 🟢 ⭐
+**€1,500 – €2,500 · 4–6 days**
+Content generated from what we build: post-visit stories, partner spotlights, visitor
+origin maps, season milestones, field-lab results.
+**Ours by origin, not by territory — Panorama cannot produce this, because it needs
+the booking data underneath.** Defensible even if they hold the social retainer.
+
+### S5 — Template kit 🟢
+**€900 – €1,500 · 3–4 days**
+Canva or Figma templates so the new marketing hire produces on-brand posts without a
+designer each time.
+
+### S6 — Enablement & training 🟢 ⭐
+**€900 – €1,500 · 2–3 days**
+Train the new marketing colleague to run all of the above.
+> `[ANK]` *"she loves to take this also as something that she could really put her
+> hands on. And of course, score with it."*
+*Converts the one person who might see us as a rival into our strongest advocate.*
+
+### S7 — Managed social 🟠
+**€750 – €1,500 / month**
+We run it. *The most direct collision with Panorama's retainer model. Offer last, and
+only once scope is confirmed clear.*
+
+### S8 — LinkedIn programme 🟢
+**€1,000 – €1,800 · 3–4 days**
+Art and the partner network are on LinkedIn; the industry is closed and relationship
+led. Post structure, cadence, content for Art personally.
+> `[ANK]` *"It's a very close industry... everybody knows each other."*
+
+### S9 — Visitor story capture 🟢
+**€1,200 – €2,000 · 3–5 days**
+Systematic capture of testimonials, photos and quotes at the end of a visit, feeding
+S4. *Hooks into M19 post-visit takeaway.*
+
+---
+
+## Brand & social bundles
+
+| Bundle | Contains | List | Offer |
+|---|---|---|---|
+| **"Tell the story properly"** ⭐ | B1 + B3 + B4 | ~€4,400 | **€3,600** |
+| **"Social starter"** | S1 + S3 + S5 | ~€3,300 | **€2,700** |
+| **"Arm your new hire"** ⭐ | B4 + S5 + S6 | ~€4,000 | **€3,300** |
+| **"Brand foundation"** | B1 + B2 + B5 | ~€5,400 | **€4,400** |
+
+**Best opening move on this track: B4 alone at €1,200–2,000.** Ank asked for it
+personally, it is the oldest unmet request in the organisation, and it does not touch
+Panorama's website or identity work at all.
+
 ---
 
 ## Support retainer 🟢

@@ -184,20 +184,40 @@ tour can stand alone.
 
 ---
 
-## Things we are deliberately not proposing
+## Telling the story better
 
-We want to be explicit, because it matters to how we work with Panorama Studios.
+Ank raised something in our conversation that predates the website question:
 
-**We are not offering branding, corporate identity, social media, SEO, search
-advertising or marketing campaigns.** Those are Panorama's expertise and they do
-them well. We build operational systems. Where our work needs a visual design, we
-would expect Panorama to provide it.
+> *"I told them, listen, we need to do the PowerPoint different. It needs to be a
+> little bit more upgraded professionally. And they're open to it."*
 
-The one boundary worth stating plainly: emails your *system* sends — booking
-confirmations, reminders, follow-ups — are part of what we build. Newsletters and
-marketing campaigns are Panorama's.
+The guided tour **is** the product. It is currently delivered off a presentation that
+has been waiting for attention longer than the website has. We would like to fix that.
 
----
+Alongside our systems work, Astra also does brand and communication work — messaging,
+storytelling, presentation design, social content and templates. A few things here we
+think would genuinely help:
+
+| | What | Indicative |
+|---|---|---|
+| **The tour presentation** | Rebuilt properly, with variants for schools, trade delegations and international visitors | €1,200 – €2,000 |
+| **The story toolkit** | Your story written once, in a one-line, short and full version, so every guide and every page tells it the same way | €1,200 – €2,000 |
+| **Partner brand kit** | How partners represent you in their materials, and how you represent them | €900 – €1,500 |
+| **Social content from real visits** | Posts generated from what actually happens — visitor origins, partner spotlights, season milestones | €1,500 – €2,500 |
+| **Templates and training** | So your new marketing colleague can run all of it herself, on brand, without needing us | €1,800 – €3,000 |
+
+**One important note.** Panorama Studios offer branding, design and online marketing,
+and they do it well. **If they already handle any of the above for you, tell us and we
+will happily stand down on it** — we would rather you got it from the people who built
+your identity than have you manage two suppliers doing similar work. We are offering
+it because it may be unclaimed, not to take it from anyone.
+
+Where we would not step in at all is a full visual redesign of your identity or your
+website. That is Panorama's work and they should keep it.
+
+Likewise, emails your *system* sends — booking confirmations, reminders, follow-ups —
+are part of what we build. Newsletters and advertising campaigns sit naturally with
+Panorama.
 
 ## What we need from you
 
@@ -209,6 +229,8 @@ To turn any of the above into firm prices rather than ranges:
 4. Is space rental also coordinated by hand? How often is it booked?
 5. What systems exist already — any CRM, shared calendar, accounting package?
 6. Who covers the booking inbox when that person is away?
+7. Who looks after your branding and social media day to day — Panorama, someone
+   in-house, or nobody at the moment?
 
 Ank can likely answer several of these quickly. The rest we would establish during
 the Discovery Sprint.
