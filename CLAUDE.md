@@ -265,6 +265,54 @@ replied. Rules specific to it:
 - Close with the artefact named concretely plus an honest out, "yes or no is
   fine either way", which section 9 already endorses.
 
+**Read every message back four times before it goes anywhere (Raka, 2026-09-14).
+The two questions are his. Does this make sense? Does this sound weird?** This
+is a hard gate on all three templates, not a polish step, and it comes after
+the research is done and before the draft is shown or sent. Four separate
+passes, because each one catches a different failure:
+
+1. **Read it aloud, as one message.** Every sentence must parse on its own. If
+   a clause dangles, or you have to reread to find the verb, it is broken.
+2. **Read block three against block four.** The credential has to be the reason
+   we can do the specific thing we are offering. If they have nothing to do
+   with each other, the sentence is a non sequitur even when it is grammatical.
+3. **Read block four alone and ask what arrives.** If a stranger could not draw
+   the thing we are about to send, it is not named concretely enough.
+4. **Read the whole batch in a column, blocks three and four side by side.** A
+   batch that repeats the same closing line is a template, and Raka's rule
+   against openers reading as a template applies to the last line as hard as
+   the first.
+
+The failures that produced this rule, all from the 2026-09-14 batches, and all
+of them sent before anyone read them back:
+
+- **Remarx.** "we build websites and the tools on them, so the one thing you
+  say you don't do, after a year at Heineken where I sat on the side that had
+  to justify picking a supplier." Three fragments stapled together. It does not
+  parse. Pass 1 catches this instantly.
+- **Navis Bio.** "we'd build the way in." Names nothing at all. Pass 3.
+- **SURGEOR.** "we'd turn Siblu into a written engagement." Siblu is a client,
+  not a thing you convert. It sounds wrong because it is wrong. Pass 1.
+- **Motzu Labs.** "the page that lives after the show" is vague, and the
+  credential spent was routing and follow up, which has nothing to do with
+  building a post event page. Pass 2 and pass 3.
+- **LIVSHO.** "after two years on the acquisition side of a B2B platform" is
+  mush. It names no company and no thing he actually did, which is the whole
+  point of spending a credential. Pass 2.
+- **Bamboo Invest** got "rebuild the entry", **MicroMovements** got "build the
+  business side its own proof", **Fervonic** got "the evidence layer under the
+  claim". All three are abstractions where a page should be named. Pass 3.
+- **Eleven of twelve** closed with the identical "Shall I put a version
+  together and send it?" Pass 4.
+- **Thrive and L'Office** were both offered a proof page and both spent the
+  Eten Maar pricing and P&L credential, which is the credential for a pricing
+  problem. Pass 2.
+
+If a pass fails, rewrite and run all four again. A message that is factually
+perfect and reads badly still loses the lead, because the reply is a judgement
+about whether we are any good at this, and the message is the only sample of
+our work they have seen.
+
 **Never nudge without re-verifying the original claim first (Raka, 2026-09-14).**
 A nudge repeats a month old observation, so it is the single easiest place to
 say something that has stopped being true. On 2026-09-14, re-checking nine
