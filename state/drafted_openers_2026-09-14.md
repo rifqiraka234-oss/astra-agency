@@ -292,3 +292,26 @@ No worries at all Robert, that's fair enough. EMerge is a genuinely good bit of 
 
 R3 JAMES THORNTON / JigiWeb  [declined, building portfolio slowly, will keep us posted]
 Makes sense James, staying inside your remit is how you keep the work good. Sounds like you've got it where you want it. I'll leave it with you, and if a job ever lands that's bigger than you want to take on alone, you know where I am.
+
+## Stalled nudges drafted 2026-09-14, after re-verifying every claim
+
+N1 MARK PRESTON / Hypergility  ctc_3eQBuQWxxCoZrFNxB
+Hey Mark, coming back to this once. The billion in exit value and the hundreds of businesses are still on the site with nothing named against them, and the only quote on the page is Jeff Bezos. You've got Sussex Innovation and SITA sitting there as logos, so the proof exists, it just isn't written down anywhere a founder can read it. I'd build the proof section properly if you want it, your numbers tied to the work that produced them. Yes or no is fine either way.
+
+N2 MARJORIE PIGAUX / Olo Suite  ctc_bE79WdHCo5BmCzWp8
+Hey Marjorie, one more on this. The only testimonial on the site is still yours, the 8 hours a week one, and it's a good line but it's the founder saying it. Someone deciding on 139 euros a seat after a 15 day trial wants to hear that from one of the professions already in beta. I'd put the proof section together from those users if you want it. Happy either way, I just didn't want to leave it hanging.
+
+N3 CLARA CHAMPION / Dafolle  ctc_ahKmJxZKMJz9ue3NP
+Hey Clara, back on this once more. Your site says un prix mensuel fixe sans mauvaise surprise, which is a good promise, and then never says what the price is. So the one thing that sentence exists to reassure people about is the thing they have to book a call to find out. Swile, Doctolib and 1320 deliverables are already doing the hard work. I'd build the pricing block if you want it, just say the word.
+
+N4 DR ASHISH RAJPUT / Infinity Biosciences  ctc_7ta5sCZ7yXwrAy3ZP
+Hi Ashish, one more note on this. The advisors are still nowhere on the homepage. Someone landing cold reads the science and forms a view before they ever learn who's behind it, and with a name like de Magalhães attached that's the wrong order. I'd build the homepage that leads with the science and the people together, if that's useful. Otherwise I'll leave it there.
+
+N5 MALCOLM AMONOO / 7th Studios  ctc_dNnyGwo6ybh9niKbR
+Hey Malcolm, checking back once. The site still says be the first to know when we launch, same as a month ago. Meanwhile anyone in Aberdeen looking for a studio this week finds a signup box and books somewhere else. The launch page we talked about is really just the room, the kit and the rate. I'd build it if you want, and you can point the domain at it whenever you're ready. Just say.
+
+N6 MARK-PAUL BURGERSDIJK / De Rhijenhof  ctc_pBFM654gSKnMpiHiT
+Hey Mark-Paul, one more on this. Prices and lessons still sit behind the meetandplay link rather than on your own site, so a casual player who fancies trying squash or pickleball has to leave and make an account before they learn anything. With 14 gravel courts and 12 indoor, that's a lot of demand going through one extra door. I'd build the page that answers it on your side, if you want it. Happy either way.
+
+N7 AMIR GHORBANINIA / Ad-Wise  ctc_y3gpN63BLefNtaCpR   [NOT a nudge, they fixed it]
+Hey Amir, I went back for a look and you've rebuilt the whole thing. The 0X placeholders are gone and MedLock with zero warning letters is doing exactly the job that section needed to do. Proof of work not a logo wall is a good line as well. Nothing to pitch here, it just seemed worth saying it reads far better than it did a month ago. If you ever want an extra pair of hands on the build side, we do white label work for agencies.
