@@ -38,7 +38,30 @@ that pays Tomato World's partner fees. **Panorama and Tomato World share a custo
 base.** That is why the site was built free or cheap, and it is why Ank said she
 will not risk the friendship.
 
-## Verdict: where we must NOT go
+## ⚠️ Read this before trusting the table below
+
+The red/amber flags are inferred from **what Panorama advertise on their own site** —
+not from what Tomato World actually buys from them. Those are different things.
+
+Astra do branding and social media. It is in our Grow pillar and Raka presented it in
+the intro call. Nothing here says we cannot. It says **do not open with it at this
+client while the incumbent's retained scope is unknown.**
+
+**One question resolves the whole thing**, and Ank can answer it in a sentence:
+
+> *"Who looks after your branding and social media day to day — Panorama, someone
+> in-house, or nobody?"*
+
+- **Panorama are retained for it** → the table below stands. Stay out.
+- **Nobody is doing it** → there is no conflict to protect. It is open, and we should
+  offer it. Still tell Panorama before we do.
+- **It is going to the new marketing hire** → do not compete with an internal hire
+  either. Sell her **enablement** instead: a brand playbook, a content system, social
+  templates, training. Same revenue, and it makes her our ally rather than a rival.
+
+Until that question is answered, treat the flags below as a default, not a verdict.
+
+## Verdict: where we must NOT go (assuming Panorama are retained)
 
 | Service | Status | Why |
 |---|---|---|
@@ -51,10 +74,15 @@ will not risk the friendship.
 | Information architecture / UX restructure | 🟠 **Amber** | Defensible as a research-led service, but must be offered *with* them. |
 | Copywriting and content production | 🔴 **Red** | They have a content studio. |
 
-**Raka's instinct to widen into social, branding and email marketing goes straight
-into their strongest studios.** Widening the menu is right; widening it in *that*
-direction would make us a direct competitor in the exact sector they dominate, and
-would likely end the deal via Ank.
+**If Panorama are retained for these, widening into social, branding and email goes
+straight into their strongest studios** — making us a direct competitor in the sector
+they dominate, and likely ending the deal through Ank.
+
+**If they are not retained, that risk largely disappears.** Verify before deciding.
+There is also a third category worth claiming either way: **content that originates
+from our own systems** — post-visit stories, partner spotlights, visitor-data-driven
+posts. That comes out of what we build, so it is ours by origin rather than by
+territory, and it is defensible even if Panorama hold the social retainer.
 
 ## Where the white space actually is
 
