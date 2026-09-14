@@ -276,3 +276,19 @@ Hi Bastian, sorry for the slow reply. No, we sit smaller than that, mostly found
 One thing on Sales Navigator, the saved search alerts are more useful than the search itself. Set one for job changes in maintenance and operations roles at your target size, because someone new in the seat is the moment they'll actually take a meeting.
 
 How's the first client hunt going?
+
+## Replies received and answered, 2026-09-14
+
+Three replies inside 30 minutes of the morning batch, all declines, all answered
+the same day. None disputed the finding, which matters. Sebastien confirmed the
+holding page diagnosis was exactly right and said his webmaster already has the
+replacement built.
+
+R1 SEBASTIEN ALOTTO / MYSA Energy  [declined, new site already built with his webmaster]
+Hi Sébastien, that's good to hear, and it sounds like you're already on it. Makes sense the landing page is temporary if the real one is built and waiting to go live. Good luck with the launch, and if you ever want a second pair of eyes once it's up, just say. All the best with MYSA.
+
+R2 ROBERT FENNIS / Emerge Numerics  [declined, "still a work in progress"]
+No worries at all Robert, that's fair enough. EMerge is a genuinely good bit of work either way, I'll keep an eye on where it goes. Shout if you ever want a hand on the consulting side of it.
+
+R3 JAMES THORNTON / JigiWeb  [declined, building portfolio slowly, will keep us posted]
+Makes sense James, staying inside your remit is how you keep the work good. Sounds like you've got it where you want it. I'll leave it with you, and if a job ever lands that's bigger than you want to take on alone, you know where I am.
