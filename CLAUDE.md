@@ -228,7 +228,47 @@ last message was a two word thanks, match that energy first and do not dump an
 audit on them. The template is for a reply that is ready to carry an offer,
 not for every message in a thread.
 
-**Both versions are the standard everywhere (Raka, 2026-09-14).** These two
+**The nudge template (Raka, 2026-09-14). A third shape, for following up on
+our own unanswered message, and the only place an emoji is allowed.**
+
+```
+[name], did you see this? 👀
+
+[the cost of doing nothing, expanded, until they can actually feel it]
+
+[the artefact, offered in one line, with a frictionless out]
+```
+
+This is NOT the opener template and must not be confused with it. It is for the
+Stalled tier only, someone who received a real researched message and never
+replied. Rules specific to it:
+
+- **The eyes emoji is deliberate and is an explicit override** of the no emoji
+  ban in `docs/NO-AI-SLOP.md` and `docs/writing-standard-anti-ai.md`, for this
+  first line only. Raka's live instruction outranks both. Nothing else in the
+  message carries an emoji. The v0.1 campaign's own automated bump step already
+  used this exact line, so it is consistent with what these contacts have seen.
+- **The no colon and no dash bans are NOT relaxed.** Only the emoji ban is.
+- The middle block is the whole point. Do not restate the observation and stop,
+  spend the words on what staying exactly as they are keeps costing, in their
+  business, in the present tense, traced to something verified. Name who is
+  being lost, at what moment, and why the loss is invisible to them.
+- One exclamation mark is the opener template's rule, not this one. Nudges
+  carry none.
+- Close with the artefact named concretely plus an honest out, "yes or no is
+  fine either way", which section 9 already endorses.
+
+**Never nudge without re-verifying the original claim first (Raka, 2026-09-14).**
+A nudge repeats a month old observation, so it is the single easiest place to
+say something that has stopped being true. On 2026-09-14, re-checking nine
+stalled leads before drafting found that **Ad-Wise had rebuilt their entire
+site and fixed the exact problem we flagged**, that half of the Infinity
+Biosciences claim was no longer true, that the Edouard Koehn angle had always
+been weak because selling through retailers is standard for haute horlogerie,
+and that the DOCRA lead could not even be tied to a confirmed domain. Two of
+nine were dropped and one became a short note congratulating them on the fix,
+which is a better message than the nudge would have been. Re-verify, then
+write. And when they have fixed it, say so and offer the next thing instead. These two
 templates are now the shape for every first real message we send, whether the
 lead has replied to us or not, and **the reply agent uses them too**. The daily
 inbox triage drafts replies in this shape, the Silent accepted backlog work
