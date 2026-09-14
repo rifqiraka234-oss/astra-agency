@@ -44,6 +44,9 @@ actively selling internally.
 | `meetings/2026-09-14-ank-intro-call-raw.md` | Verbatim ASR transcript + known mis-transcriptions |
 | `analysis/01-us-vs-them.md` | Line-by-line split of what they said vs what we said, with commitments and strategy |
 | `analysis/02-website-tech-stack.md` | Technical teardown of tomatoworld.nl and what it means commercially |
+| `analysis/03-panorama-studios-competitive-map.md` | What Panorama actually sell, the red/amber/green overlap table, and the white space |
+| `analysis/04-service-menu-modules.md` | ~40 modules across six tracks, packaged into three sellable bundles |
+| `analysis/05-engagement-models.md` | Twelve ways to sell it, incl. the Digivoucher subsidy route and partner sponsorship |
 
 ## Open actions
 
@@ -73,3 +76,7 @@ actively selling internally.
 4. **Write for Art and Joyce**, not for Ank. She is the messenger, not the buyer.
 5. **No partner self-signup funnel.** She explicitly ruled it out — that industry
    sells face to face. A partner *sales-support* page is in scope.
+6. **Never pitch branding, social, SEO/SEA or campaign email.** All Panorama core
+   offerings. Transactional and lifecycle email is ours; campaign email is theirs.
+7. **Positioning:** Panorama own the brand and the front door. Astra build the
+   machine behind it.
