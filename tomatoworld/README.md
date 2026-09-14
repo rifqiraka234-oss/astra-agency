@@ -50,6 +50,7 @@ actively selling internally.
 | `analysis/06-asymmetric-plays.md` | Plays Panorama cannot copy — becoming a partner, delegations, hackathon, online tour as revenue |
 | `proposal/01-client-proposal.md` | **Client-facing.** For Art, Joyce and Ank. Discovery Sprint + three phases |
 | `proposal/02-requirements-estimating-pack.md` | **Internal only.** Requirements, systems, architecture options, dev-day bands, risks |
+| `proposal/03-modular-menu.md` | À la carte modules from €600, starter bundles, redesign broken into spec-level pieces |
 
 ## Open actions
 
