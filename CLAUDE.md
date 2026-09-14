@@ -206,6 +206,28 @@ their business, never reverent flattery and never a generic compliment. The
 "However" sentence is one sentence. "This means" carries the cost of doing
 nothing in the present tense. The close names the artefact concretely.
 
+**The reply variant (Raka, 2026-09-14).** When the lead has written to us
+first, only the first block changes. Answer their message, then go straight
+into the same structure.
+
+```
+Hi [name], [answer what they actually said]. I saw [company] and [positive thing]!
+
+However, [explain the problem in 1 sentence]. This means [cost of doing nothing].
+
+I run Astra agency [what we can do for them specifically] after [my experience].
+
+Shall I [what we are going to send them]?
+```
+
+Blocks two, three and four are unchanged, credential included. The only
+difference is that the opener earns its place by responding to them rather
+than by arriving cold. This does not override the reply rules in
+`docs/writing-standard-anti-ai.md` ("Reply in context, always"), so if their
+last message was a two word thanks, match that energy first and do not dump an
+audit on them. The template is for a reply that is ready to carry an offer,
+not for every message in a thread.
+
 **Never open with the gap ritual (Raka, 2026-09-13).** An earlier version of
 this section told openers to start by acknowledging that we connected a while
 back and never sent anything useful. That is deleted. Raka's words, "who would

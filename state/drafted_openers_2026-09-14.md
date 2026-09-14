@@ -1,20 +1,15 @@
-# Drafted openers, accepted never messaged batch, 2026-09-14
+# Drafted openers, accepted never messaged batch
 
-23 openers, all written to Raka's template (2026-09-14).
+Written to Raka's four part template (2026-09-14). Credential matched per lead
+using master context section 2A.
 
-```
-Hi [name], saw [company] and I find it [positive thing]!
+**22 openers. All verified by a falsification pass on 2026-09-14**, in which
+every claim was checked against the specific page that could disprove it rather
+than against a homepage summary. Seven openers were factually wrong and were
+rewritten, and one lead was pulled entirely. The corrections are recorded per
+lead in `state/silent_accepted_queue.jsonl`.
 
-However, [problem in one sentence]. This means [cost of doing nothing].
-
-I run Astra agency [what we'd do for them specifically] after [my experience].
-
-Shall I [what we send them]?
-```
-
-Credential matched per lead using master context section 2A. Heineken for enterprise, industrial and operations led. Eten Maar for owner operators and consumer brands. Betty Blocks or efficy for B2B software, GTM and routing problems. Astra's own build capacity for the one Build Squad approach.
-
-Status is DRAFTED, nothing has been sent. Research trail for every lead is in state/silent_accepted_queue.jsonl.
+Status is DRAFTED. Nothing has been sent.
 
 1 IREM UNLU DEMIR / DemirX Partners [Heineken]
 Hi Irem, saw DemirX and starting your own advisory after a career at Shell and Koç Group is a great move!
@@ -28,9 +23,9 @@ Shall I send you a version?
 2 ROBERT FENNIS / Emerge Numerics [Betty Blocks]
 Hi Robert, saw Emerge Numerics and giving away a Python FEM solver for free, then landing on The Amp Hour with it, is a brilliant way to build an audience!
 
-However, the EMerge software site never mentions Emerge Numerics or that you take on design work. This means every RF engineer who downloads your solver, hits a hard problem and would happily pay you to solve it just closes the tab instead.
+However, the only bridge from the software site to the consultancy is one line on your services page saying you started a company, with no mention of the antenna or microwave work. This means an RF engineer who has just hit a hard problem inside EMerge has no idea the person who wrote it will solve it for money.
 
-I run Astra agency and we'd wire the software site through to the consulting side, and after two years building routing and follow up systems at Betty Blocks I know exactly where that leaks.
+I run Astra agency and we'd build that bridge properly, and after two years building routing and follow up systems at Betty Blocks I know how much sits in that one gap.
 
 Shall I mock it up and send it over?
 
@@ -62,20 +57,20 @@ I run Astra agency and we'd build you a proof section and a migration story, and
 Shall I send you a version?
 
 6 SEYDOUBA FISSA SYLLA / waaly [Eten Maar]
-Hi Seydouba, saw waaly and running confidential search out of Lyon is a proper craft business!
+Hi Seydouba, saw waaly and running confidential search out of Lyon with Bernard is a proper craft business!
 
-However, the site never says who would actually be running the search. No name, no placement you've made. This means a company about to hand over a confidential mandate has no idea whose judgement they're buying, so they call the firm that told them.
+However, there isn't a single placement, client or number anywhere on the site. This means a company weighing up who gets their mandate has your faces and your titles but no evidence you've filled anything, so they go with the firm that showed them a track record.
 
-I run Astra agency and we'd put you and the placements on it, and I built a company from zero with five people so I know hiring is the decision you least want to get wrong.
+I run Astra agency and we'd build the proof side out, and I built a company from zero with five people so I know hiring is the decision you least want to get wrong.
 
 Shall I put a version together and send it?
 
 7 JOJANNEKE VAN 'T LAND / WiseHuman [Eten Maar]
-Hi Jojanneke, saw WiseHuman and Ik vul geen vacatures is a genuinely strong line to open with!
+Hi Jojanneke, saw WiseHuman and over twenty years in recruitment before going out on your own is a real reason for someone to pick you!
 
-However, the site then never tells anyone who Ik is. No name, no face. This means an employer reading it can't tell who they'd actually be working with, which is the whole point when your pitch is that you place people personally rather than filling slots.
+However, that line sits on your About page while the homepage opens with Mensen die passen, Banen die blijven, Resultaat dat telt, which any agency could have written. This means the thing that actually separates you is one click behind the thing that doesn't, and most visitors never take that click.
 
-I run Astra agency and we'd put you properly into it, and I ran my own company for four years so I've been the person deciding which recruiter to trust.
+I run Astra agency and we'd put the twenty years on the first screen, and I ran my own company for four years so I've been the person deciding which recruiter to trust.
 
 Shall I show you what that would look like?
 
@@ -98,11 +93,11 @@ I run Astra agency and we'd build the subscription flow, and I built a food bran
 Shall I put a version together?
 
 10 NICO WUSSK / Nicura [Betty Blocks]
-Hi Nico, saw Nicura and bringing cold plasma and proper wound diagnostics to the Lausitz is genuinely needed work!
+Hi Nico, saw Nicura and being the one bringing cold plasma to the Lausitz, with a contact form that already asks whether someone is a doctor, is well set up!
 
-However, the site speaks to GP practices and care homes as much as to patients, and the only way either can reach you is a mobile number and WhatsApp. This means a practice manager setting up a referral route for chronic wound patients simply won't, so the referrals that would come in volume quietly don't.
+However, there is nothing anywhere on the site about what it costs or who pays, not one mention of Kasse or Selbstzahler. This means the first question every patient's family and every care provider asks goes unanswered, so they ring the practice they already know instead of you.
 
-I run Astra agency and we'd build the referrer side properly, and I spent two years building routing and follow up systems so I know what makes a referral actually arrive.
+I run Astra agency and we'd answer that properly on the site, and I spent two years building the follow up systems that turn an enquiry into a booking.
 
 Shall I put that together and show you?
 
@@ -125,29 +120,29 @@ I run Astra agency and we'd rebuild that section around real clients, and I work
 Shall I put that together for you?
 
 13 ROBERT VAN GLABBEEK / Cryptofocus.nl [Betty Blocks]
-Hi Robert, saw Cryptofocus and keeping a daily crypto desk running with news, koersen and video is a serious operation!
+Hi Robert, saw Cryptofocus and keeping a daily desk running with news, koersen and video is a serious operation!
 
-However, there's no email capture anywhere on the site, I went through the page source. This means every reader you earn from Google or socials you rent once and hand straight back, while the Bybit affiliate money depends on them returning by themselves.
+However, your newsletter signup only exists on the contact page. I opened one of your articles and there is no capture on it at all. This means every reader who arrives from Google or socials, reads and leaves is gone for good, while the Bybit affiliate money depends on them coming back by themselves.
 
-I run Astra agency and we'd build the list and the capture into the site, and I spent two years building audience and follow up systems at a software company so I know what that's worth monthly.
+I run Astra agency and we'd put capture where people actually land, and I spent two years building audience and follow up systems at a software company so I know what that's worth monthly.
 
 Shall I show you what it would look like?
 
 14 DR RAMEDANI / Rejuvalize [Eten Maar]
-Hi Dr Ramedani, saw Rejuvalize and running Pforzheim and Bern with that treatment range is a lot to have built!
+Hi Dr Ramedani, saw Rejuvalize and putting prices like ab 120 Euro per Zone straight onto the treatment pages, when most clinics hide them, is the right call!
 
-However, there's no price on any treatment, no before and after, and no named doctor doing the injecting. This means someone comparing you with a clinic that showed all of that books there instead, and you never hear it happened.
+However, nowhere on the site is the doctor actually holding the needle named. It says treatments are carried out by independent licensed physicians and leaves it there. This means someone choosing where to have their face injected can see the price but not the person, and the person is the bit they actually care about.
 
-I run Astra agency and we'd rebuild the treatment pages, and I ran pricing in my own consumer business so I know what showing a number does to enquiries.
+I run Astra agency and we'd build the practitioner side out, and I ran pricing and trust in my own consumer business so I know which of the two moves the booking.
 
 Shall I build one page first and send it?
 
 15 RUSSELL UPTON / audopia [Betty Blocks]
-Hi Russell, saw audopia and making coaching audio first, so people can do it on a walk, is a smart format!
+Hi Russell, saw audopia and making coaching audio first, so someone can do it on a walk instead of on a screen, is a smart format!
 
-However, the for employers page has nothing an HR director could take to a budget holder. No price, no employer using it, no result from anyone who finished a course. This means consumer downloads keep ticking along while the corporate contracts, which are the real money, stall before the first meeting.
+However, your employer pitch offers a 90 day pilot with engagement tracking and then shows no engagement number from any pilot you've run, and no employer by name. This means an HR director who likes it has to walk into a budget conversation and vouch for you personally, and most of them won't.
 
-I run Astra agency and we'd build the employer side into something that closes, and I spent two years building B2B playbooks at a software company.
+I run Astra agency and we'd build the proof side of the employer page, and I spent two years building B2B playbooks at a software company.
 
 Shall I put a version together?
 
@@ -172,20 +167,11 @@ Shall I send you a short one pager on how that works?
 18 CHRISTELLE DUPUY / PalindromeX [Heineken]
 Hi Christelle, saw PalindromeX and Every Project Is Alive is a strong way to frame it, the Aberdeen work especially!
 
-However, there's no contact route on the homepage and no team page I could find. This means a procurement lead who reads that line and wants to know who's behind it has nowhere to go, and for enterprise software the site is the diligence check rather than the closing channel.
+However, there isn't a single person named anywhere on the site, no team page, no founder, nothing. This means a procurement lead doing diligence before that 20 minute demo has no idea who is behind the platform they'd be handing project data to, and for enterprise software that check happens before the call rather than on it.
 
-I run Astra agency and we'd build the credibility side out, and after a year at Heineken standardising data across 23 markets I know what that buyer checks before a first call.
+I run Astra agency and we'd build the credibility side out, and after a year at Heineken standardising data across 23 markets I know what that buyer checks first.
 
 Shall I sketch it and send it over?
-
-19 YOLANDA HEEREN / YOOS! Design [Eten Maar]
-Hi Yolanda, saw YOOS and the Aalsmeer job at 900 square metres is a properly impressive piece of work!
-
-However, the portfolio only has two projects on it. This means a director deciding who redoes their floor is looking for evidence you've done it before at that size, and right now the one job that proves it is sitting next to almost nothing.
-
-I run Astra agency and we'd build the portfolio out so the work does the selling, and I built my own brand where the product had to sell itself on a photo.
-
-Shall I put a version together for you?
 
 20 GIJS VAN DEN HOMBERGH / Noventes [Eten Maar]
 Hi Gijs, saw Noventes and taking founders through innovation and subsidy work is genuinely useful for them!
