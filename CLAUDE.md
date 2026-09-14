@@ -228,6 +228,61 @@ last message was a two word thanks, match that energy first and do not dump an
 audit on them. The template is for a reply that is ready to carry an offer,
 not for every message in a thread.
 
+**Both versions are the standard everywhere (Raka, 2026-09-14).** These two
+templates are now the shape for every first real message we send, whether the
+lead has replied to us or not, and **the reply agent uses them too**. The daily
+inbox triage drafts replies in this shape, the Silent accepted backlog work
+uses it, and any batch of openers uses it. There is no separate house style
+for replies any more.
+
+**Go beyond the website angle (Raka, 2026-09-14).** The "However" block does
+not have to be a website problem. Earlier guidance in
+`docs/astra-master-context.md` section 9 says the opener always names a
+website problem and offers a prototype. That is now too narrow and this
+supersedes it. Diagnose the actual business bottleneck per
+`docs/astra-commercial-angle-master.md` and pitch whichever ASTRA line fits,
+Grow, Optimise, Innovate or Build Squad. A missing internal workflow, an
+operations gap, a routing or follow up problem, a proof or credibility gap, a
+pricing or payer question left unanswered, or spare build capacity for another
+agency are all valid "However" blocks. Worked examples from the 2026-09-14
+batch, Nicura got a payer question rather than a design critique, Cryptofocus
+got audience capture, JigiWeb got a Build Squad partnership rather than any
+criticism of his site, and Emerge Numerics got a routing gap between two
+properties they already own. What does not change is that the problem must be
+specific, verified, and one the owner would recognise unprompted.
+
+**The research bar is close to 100 percent certain (Raka, 2026-09-14), and it
+is checked by trying to disprove your own claim.** A homepage read is not a
+site read. Before any opener goes out, open the specific page that would make
+the claim false, not the page that made you believe it. On 2026-09-14 a
+falsification pass over 23 finished openers found **eight were factually
+wrong** and one lead had to be dropped, all of them from claims taken off a
+homepage summary. The failures worth memorising:
+
+- Claimed a software site never linked the consultancy. Its `/services` page
+  linked it in plain text. Only `/about` had been checked.
+- Claimed "no name, no face" twice. Both companies named their founders with
+  photographs on an About or A propos page.
+- Claimed the only contact route was a phone number. There was a contact form,
+  with a referrer type selector on it.
+- Claimed no email capture anywhere. The newsletter sat on the contact page.
+- Claimed no prices and no before and after photos on a clinic site. Both were
+  on the individual treatment pages, just not the homepage.
+- Claimed a portfolio had two projects. It had three, each with a gallery, plus
+  a named testimonial. That lead was dropped rather than rewritten.
+
+The checklist. Fetch every nav item and list the real URLs rather than guessing
+paths. Open the page that could disprove the claim. Grep the raw HTML for the
+thing you say is missing, using the words the site would actually use, in its
+own language. On an absence claim, check at least two pages plus the page type
+the user actually lands on, since an article page and a contact page differ. If
+the claim survives all of that, write it. If it does not, rewrite the angle
+honestly or return `NO_STRONG_ANGLE`, and never keep a broken claim because
+the message reads well. Several corrected openers came out **stronger**,
+because crediting what the lead already did right proves we actually looked.
+
+**Never open with the gap ritual (Raka, 2026-09-13).**
+
 **Never open with the gap ritual (Raka, 2026-09-13).** An earlier version of
 this section told openers to start by acknowledging that we connected a while
 back and never sent anything useful. That is deleted. Raka's words, "who would
@@ -622,6 +677,16 @@ above), plus: never tier or draft off `aiLeadInterestLevel` alone, it is a
 reading-priority hint, not evidence; never draft a reply for the No action
 tier or include it in the digest; never send anything, this routine only
 produces the digest.
+
+**Every reply this routine drafts uses the opener template above (Raka,
+2026-09-14), in its reply variant** ("Hi [name], [answer what they actually
+said]. I saw [company] and [positive thing]!" then However, then This means,
+then the Astra line with a matched credential, then the Shall I). The same
+falsification standard applies before a drafted reply names any problem, so
+open the page that would disprove the claim rather than the one that suggested
+it. The one exception stays the "Reply in context, always" rule in
+`docs/writing-standard-anti-ai.md`, a two word thanks gets a warm two line
+answer, not a template.
 
 ## Prototype build and meeting booking
 
