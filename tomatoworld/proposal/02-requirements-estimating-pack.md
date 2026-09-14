@@ -236,6 +236,57 @@ signage and live-data modules lose most of their value. **Ask in Discovery.**
 
 ---
 
+## 7b. Brand & social track
+
+**Added by decision — see `analysis/03` for the competitive caveat.** This work was
+originally excluded because Panorama's Communicatie, Design and Online Marketing
+Studios cover it. The decision is to include it anyway. That is a commercial call,
+not a technical one, but it changes this pack in three ways:
+
+1. **Effort here is craft days, not developer days.** The constraint is design and
+   copywriting capacity, not Josh's. **Do not schedule these against dev availability.**
+   Confirm who actually delivers before committing dates.
+2. **Almost nothing in this track is estimable by the usual method.** There is no data
+   model, no integration surface, no concurrency. Estimates are experience-based and
+   scope creep is the dominant risk — a brand guide can absorb infinite revision.
+   **Fix round counts contractually: two rounds of revision, then change control.**
+3. **One module is genuinely technical:** S4, the content engine, which depends on M10
+   booking data and uses the Claude API. Estimate that one like a normal build.
+
+| # | Module | Client range | Craft days | Notes |
+|---|---|---|---|---|
+| **B1** | Brand & messaging audit | €900 – €1,400 | 3 | Assessment only |
+| **B2** | Positioning framework | €1,500 – €2,500 | 4–6 | 🟠 Panorama's Communicatie Studio |
+| **B3** | Story toolkit | €1,200 – €2,000 | 3–5 | Needs guide interviews |
+| **B4** | Tour presentation redesign | €1,200 – €2,000 | 3–5 | ⭐ Lead with this |
+| **B5** | Brand guidelines | €1,500 – €2,500 | 4–6 | 🟠 Check if one exists first |
+| **B6** | Visual identity refresh | €2,500 – €4,500 | 8–12 | 🔴 Do not propose blind |
+| **B7** | Partner brand kit | €900 – €1,500 | 2–3 | Unserved |
+| **S1** | Social audit | €700 – €1,200 | 2–3 | Assessment only |
+| **S2** | Social strategy | €1,500 – €2,500 | 4–6 | 🟠 Panorama core |
+| **S3** | Content pillars & calendar | €900 – €1,500 | 3–4 | |
+| **S4** | Content engine on visit data | €1,500 – €2,500 | 4–6 **dev** | ⭐ Depends on M10 |
+| **S5** | Template kit | €900 – €1,500 | 3–4 | Depends on B5 |
+| **S6** | Enablement & training | €900 – €1,500 | 2–3 | ⭐ Political value |
+| **S7** | Managed social | €750 – €1,500/mo | ongoing | 🟠 Retainer collision |
+| **S8** | LinkedIn programme | €1,000 – €1,800 | 3–4 | |
+| **S9** | Visitor story capture | €1,200 – €2,000 | 3–5 | **GDPR: children's images** |
+
+**Additional systems needed for this track**
+
+| Need | Candidates | Notes |
+|---|---|---|
+| Template production | **Figma** or **Canva** | Canva if the new hire must edit unaided — that is the point of S5 |
+| Presentation | Google Slides, PowerPoint, or Pitch | Match whatever the guides already use. Do not impose a new tool on volunteers |
+| Social scheduling | Buffer, Later, Metricool | Only if S7 proceeds |
+| Content drafting | Claude API | S4 only, always human-approved before publish |
+| Consent records | Reuse the M4 / M9 stack | S9 must store consent, not just content |
+
+**Hard dependency:** S4 needs M10. Do not sell S4 into an organisation with no booking
+system — there is no data for it to run on.
+
+---
+
 ## 8. Rolled-up estimating summary
 
 | Item | Client range | Dev-days | Confidence |
@@ -247,6 +298,13 @@ signage and live-data modules lose most of their value. **Ask in Discovery.**
 | Phase 2 — Partner value | €10k – €18k | 30–50 | Low-Medium |
 | Phase 2 pilot (manual data) | €2k – €3k | 4 | Medium |
 | Phase 3 — Reach & experience | €15k – €30k | 45–80 | Low |
+| Brand track (B1–B7) | €9k – €16k | 27–40 **craft** | Low-Medium |
+| Social track (S1–S9) | €9k – €16k | 25–37 (S4 is dev) | Low-Medium |
+| Managed social retainer | €750 – €1,500/mo | ongoing | Medium |
+
+**Brand and social day-counts are craft capacity, not developer capacity.** They do
+not compete with the build schedule, but they do compete with whoever writes and
+designs — confirm that resource exists before quoting either track.
 
 **Only Discovery should ever be quoted firmly right now.** Everything else is a
 budgeting band and must be labelled as such to the client.
@@ -265,6 +323,11 @@ budgeting band and must be labelled as such to the client.
 | Volume too low to justify custom build | **Medium-High** | D3 baseline. If tours are ~10/month, push Option C hard and shrink Phase 1. |
 | Ank leaves or steps back — she is a volunteer | **High** | Build a relationship with Art and the new marketing hire directly |
 | GDPR exposure via school children's data | Medium | EU hosting, DPA, retention policy from day one |
+| **Brand/social collides with Panorama's retained scope** | **High** | Ask Ank Q11 before proposing either track. Client doc already offers to stand down — use that line rather than discovering the conflict late |
+| **Brand/social competes with the new in-house marketing hire** | Medium-High | Sell S6 enablement rather than S7 delivery. Make her the owner, not the bypassed party |
+| **Scope creep on brand deliverables** | **High** | Fix revision rounds contractually. Two rounds then change control. A brand guide with open revisions is unbounded |
+| **We lack craft capacity to deliver B and S** | **High** | Confirm who designs and who writes **before** anything is offered. Do not sell capacity we have not identified |
+| S4 sold without M10 existing | Medium | Hard dependency. Refuse to sell S4 standalone |
 
 ---
 
@@ -280,3 +343,8 @@ budgeting band and must be labelled as such to the client.
 8. Partner count and annual fee?
 9. Does Panorama grant repo/staging access — and do we even want it?
 10. Is there any field-lab data API?
+11. **Is Panorama retained for branding and/or social media, or is it unclaimed?** — blocks the whole B and S track
+12. Does a brand guide already exist, and who produced it? — blocks B5, B6
+13. What does the new marketing hire's remit actually cover? — decides S6 vs S7
+14. Who on our side delivers design and copy, and what is their availability? — blocks every B and S date
+15. What tools do guides already present from? — blocks B4
