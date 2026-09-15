@@ -1,5 +1,5 @@
 # Tomato World × Astra Agency
-## Proposal for discussion — Art, Joyce and Ank
+## Proposal for discussion — Aart, Joyce and Ank
 
 *Prepared following our conversation with Ank, 14 September 2026.*
 *This is a discussion document, not a quotation. Indicative investment bands are
@@ -142,7 +142,7 @@ conversation. **It could be demonstrated with numbers.**
 - A dedicated flow for partners bringing their own customer groups
 - Clear separation of your **Partners, Friends and Ambassadors** tiers, which the
   site currently presents almost identically
-- A page that warms a prospective partner *before* Art's conversation — not a
+- A page that warms a prospective partner *before* Aart's conversation — not a
   self-signup form, which Ank rightly said is not how this industry works
 
 **What changes:** renewal conversations start from evidence. A partner deciding

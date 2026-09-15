@@ -87,7 +87,7 @@ Buy a tour/activity booking product, configure, embed.
 
 | # | Deliverable | Days |
 |---|---|---|
-| D1 | Stakeholder sessions — Ank, admin/booking owner, Art, new marketing hire | 1.5 |
+| D1 | Stakeholder sessions — Ank, admin/booking owner, Aart, new marketing hire | 1.5 |
 | D2 | **Panorama technical session** — architecture boundary, access, deployment | 0.5 |
 | D3 | Current-state process map + measured baseline (tours/month, hours/week, cancellation rate) | 1.5 |
 | D4 | **Buy-vs-build spike** — evaluate Recras + 1 alternative against the 30% hard requirements | 2 |
@@ -95,7 +95,7 @@ Buy a tour/activity booking product, configure, embed.
 | D6 | Costed phase plan with firm pricing | 1 |
 | D7 | Written technical approach + integration agreement | 0.5 |
 
-**D4 and D5 are the value.** D5 is what Ank shows Art — she literally tried to click
+**D4 and D5 are the value.** D5 is what Ank shows Aart — she literally tried to click
 our mockup in the meeting. D4 is what makes our Phase 1 number real.
 
 **Free pre-work (0.5 day, do before any contract):** expired tour banner, cookie
@@ -211,7 +211,7 @@ Taste&Taste, Online) · `TimeSlot` · `Booking` · `BookingLine` · `Group` ·
 ### Dependency note
 FR-9 needs Phase 1 data. **Offer a manual-data pilot** — generate one report from
 their existing records (~4 days) to prove the concept before Phase 1 is funded. This
-breaks the hard dependency and is the strongest possible Art-facing demo.
+breaks the hard dependency and is the strongest possible Aart-facing demo.
 
 ### Effort drivers
 ↑ Placement-level view tracking (needs on-site instrumentation — may be infeasible; qualify it early) · ↑ PDF design fidelity · ↓ Web-only report, no PDF
@@ -321,7 +321,7 @@ budgeting band and must be labelled as such to the client.
 | Off-the-shelf fails the guide-language requirement | Medium | D4 spike decides before we quote |
 | Field-lab data not accessible | Medium | Qualify in Discovery; Phase 3 modules are independently droppable |
 | Volume too low to justify custom build | **Medium-High** | D3 baseline. If tours are ~10/month, push Option C hard and shrink Phase 1. |
-| Ank leaves or steps back — she is a volunteer | **High** | Build a relationship with Art and the new marketing hire directly |
+| Ank leaves or steps back — she is a volunteer | **High** | Build a relationship with Aart and the new marketing hire directly |
 | GDPR exposure via school children's data | Medium | EU hosting, DPA, retention policy from day one |
 | **Brand/social collides with Panorama's retained scope** | **High** | Ask Ank Q11 before proposing either track. Client doc already offers to stand down — use that line rather than discovering the conflict late |
 | **Brand/social competes with the new in-house marketing hire** | Medium-High | Sell S6 enablement rather than S7 delivery. Make her the owner, not the bypassed party |

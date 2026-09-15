@@ -150,16 +150,16 @@ under ten seconds.
 build is not the value, the structure is.
 
 ## M7 — Partner value one-pager · €900–1,400 · **2–3 days** 🟠
-**Build:** one page warming a partner prospect before Art's meeting. **Not** a signup form.
+**Build:** one page warming a partner prospect before Aart's meeting. **Not** a signup form.
 
 **Deliverables**
 1. Content structure and copy: what a partner gets, tiers, visitor reach, who else is in
 2. Real numbers where available, clearly sourced
 3. Wireframe + content, handed to Panorama for visual treatment
-4. Single CTA: "talk to Art" — a contact, not a form
-5. Print/PDF version Art can hand over in person
+4. Single CTA: "talk to Aart" — a contact, not a form
+5. Print/PDF version Aart can hand over in person
 
-**Done when:** Art uses it in a meeting.
+**Done when:** Aart uses it in a meeting.
 **Depends on:** visitor numbers (M9 or manual), **Panorama for visual design.**
 
 ## M8 — Cookie consent implementation · €500–800 · **1–2 days**
@@ -263,7 +263,7 @@ accounting export.
 4. Data-gathering method documented so they can repeat it
 5. Honest gap list: what could not be evidenced and what M22 would fix
 
-**Done when:** Art can hand it to a partner at a renewal conversation.
+**Done when:** Aart can hand it to a partner at a renewal conversation.
 **Stack:** whatever is fastest — spreadsheet to PDF is fine. **The deliverable is the
 artefact, not the pipeline.** Do not over-build this.
 **Depends on:** them providing records. **Confirm the data exists before quoting.**
@@ -341,7 +341,7 @@ partner value page (M7) in context.
 
 ## R6 — Ideation & prototyping workshop · €1,500–2,500 · **3–4 days** ⭐
 **Deliverables:** half-day facilitated session — Ank, the new marketing colleague,
-**Panorama**, ideally Art · prepared stimulus · **clickable prototype built afterwards** ·
+**Panorama**, ideally Aart · prepared stimulus · **clickable prototype built afterwards** ·
 written agreed direction · prioritised backlog.
 **Done when:** everyone in the room agrees what happens next, in writing.
 **Internal note:** run this early. It is the cheapest way to convert Panorama from
@@ -372,7 +372,7 @@ Check who on our side actually delivers these before committing dates.
 **Make:** audience definitions (visitor, school, trade delegation, partner, press) ·
 positioning statement · core message + three proof points · value proposition per
 audience · tone of voice with do/don't examples · NL and EN.
-**Done when:** Ank, Art and a guide independently describe Tomato World the same way.
+**Done when:** Ank, Aart and a guide independently describe Tomato World the same way.
 **Check first:** Panorama sell positioning. Offer jointly or confirm it is unclaimed.
 
 ## B3 — Story toolkit · €1,200–2,000 · **3–5 days** ⭐
@@ -468,9 +468,9 @@ report. **Most direct collision with Panorama's retainer. Offer last, only once 
 is confirmed clear.** Define the exit — they should be able to take it in-house.
 
 ## S8 — LinkedIn programme · €1,000–1,800 · **3–4 days**
-**Make:** profile optimisation for Art and key staff · content approach for a closed,
+**Make:** profile optimisation for Aart and key staff · content approach for a closed,
 relationship-led industry · 10 drafted posts · cadence and engagement guidance.
-**Done when:** Art posts something himself and it lands.
+**Done when:** Aart posts something himself and it lands.
 
 ## S9 — Visitor story capture · €1,200–2,000 · **3–5 days**
 **Make:** end-of-visit capture flow for quote, photo and permission · **explicit
@@ -521,7 +521,7 @@ Cheapest coherent path that never wastes work:
 2. **M2 + M3** — structured intake, and the dataset starts accumulating
 3. **M1** — stop the stale-notice defect permanently
 4. **M6** — guide roster, cheap, and M20 needs it later
-5. **M16** — the income-side proof for Art
+5. **M16** — the income-side proof for Aart
 6. **M10 + M11** — the booking core, once volume justifies it
 7. **M12 + M13** — self-service and backfill
 8. **M14, M20, M15** — dashboard, language matching, payments

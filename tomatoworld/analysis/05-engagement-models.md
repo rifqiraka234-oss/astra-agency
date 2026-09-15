@@ -34,7 +34,7 @@ decision-ready plan. Panorama or their own people build it.
 
 She *tried to click our mockup*. That is the single strongest buying signal in the
 transcript and we should answer it literally. A working prototype she can click,
-and show to Art, does more internal selling than any document — and she is the one
+and show to Aart, does more internal selling than any document — and she is the one
 who has to do the internal selling.
 
 - **Panorama risk:** none — it's a demo, not a deployment.
@@ -117,7 +117,7 @@ screens** as a marketing spend, branded as their contribution.
 - Tomato World pays nothing. The partner gets exactly the visibility they already buy.
 - `[ANK]` "we are depending on our partners that are paying a fee every year."
 - Creative, on-model, and completely sidesteps the foundation's empty budget.
-- **Art owns partner relationships — this is a pitch to Art, in his language.**
+- **Aart owns partner relationships — this is a pitch to Aart, in his language.**
 
 ## 10. Revenue share 🟠
 **We sell:** a cut of bookings or space rentals the system enables, instead of a fee.

@@ -16,7 +16,7 @@ reshuffle, not a rewrite — the spine holds up well.
   answer to Ank's complaint: *"Am I a visitor? Am I a partner? You know, I got lost."*
   **Keep this as the headline. Do not touch it.**
 - **Experience it / Test it / Build it together.** Clean, goal-based, memorable.
-  Ank will repeat these three words to Art. **Keep verbatim.**
+  Ank will repeat these three words to Aart. **Keep verbatim.**
 - The numbered 01–04 structure and the visual language. Recognisable, and she has
   already seen it. Changing the format would cost us continuity.
 - The honest closing caveat about validating before production. That line is part of
@@ -31,7 +31,7 @@ reshuffle, not a rewrite — the spine holds up well.
 | **It is a website concept. The real pain is operational.** | Ank, asked directly where the biggest impact is: *"streamlining and optimise the workflow. Definitely."* Booking, not design. | Re-weight toward the system behind the site |
 | **It reads as a redesign proposal** | Panorama built the site, are friends of the organisation, and Ank will not risk that relationship | Reframe explicitly as additive. Say it in writing |
 | **No money in it at all** | *"it all boils down to money... what's it gonna cost? Is it worth it?"* | Add modular costs and a small first step |
-| **Nothing for Art** | Art owns partners. The deck offers him nothing about income | Add the partner value section |
+| **Nothing for Aart** | Aart owns partners. The deck offers him nothing about income | Add the partner value section |
 | **Assumes one bookable thing** | Site shows three: tours, space rental, specialist booking | Correct it, and show we noticed |
 
 ---
@@ -39,7 +39,7 @@ reshuffle, not a rewrite — the spine holds up well.
 # Proposed v2 structure
 
 **Format:** stay a one-pager, or extend to two pages maximum. Ank said she will print
-it and take it to Art. **It must survive being printed in black and white.**
+it and take it to Aart. **It must survive being printed in black and white.**
 
 ---
 
@@ -62,7 +62,7 @@ assumptions.*
 ### 01 — What we heard *(replaces "What we did")*
 
 This is the most important change in the document. **Lead with their words, not our
-work.** It proves we listened, and it gives Ank the summary she needs for Art.
+work.** It proves we listened, and it gives Ank the summary she needs for Aart.
 
 > - Coordinating tours is the sharpest daily cost. A request becomes an email
 >   conversation that one person holds together, and every cancellation restarts it.
@@ -72,7 +72,7 @@ work.** It proves we listened, and it gives Ank the summary she needs for Art.
 >   than demonstrated.
 > - Panorama Studios built the site and are trusted partners of the organisation.
 >   Nothing here changes that.
-> - Every step needs a number against it before Art and Joyce can decide.
+> - Every step needs a number against it before Aart and Joyce can decide.
 
 ---
 
@@ -116,7 +116,7 @@ Keep all three existing outcomes. Add, and give it visual weight:
 >   reported back to each partner annually, so a renewal conversation starts from
 >   evidence rather than recollection.
 
-*This is the only line in the document aimed at Art. Make it stand out.*
+*This is the only line in the document aimed at Aart. Make it stand out.*
 
 ---
 
@@ -207,9 +207,9 @@ Keep the closing caveat unchanged.
 ## Open question for Raka
 
 The July version was addressed to nobody in particular. **This version has two
-readers with different needs:** Ank, who needs to be able to explain it, and Art, who
+readers with different needs:** Ank, who needs to be able to explain it, and Aart, who
 needs to see a number and a return.
 
-Worth considering a **second, single page written for Art alone** — partner value,
+Worth considering a **second, single page written for Aart alone** — partner value,
 cost, return, nothing else. Ank told us she would book a meeting with him. Give her
 something made for that meeting.

@@ -45,7 +45,7 @@ horticulture export. Tomato World exists to host exactly these delegations.
 **Play:** Astra brokers Indonesian and Southeast Asian delegations, trade missions and
 corporate groups into Tomato World.
 
-- We generate **revenue**, not cost. That changes the entire conversation with Art, who owns partner relationships.
+- We generate **revenue**, not cost. That changes the entire conversation with Aart, who owns partner relationships.
 - **Panorama physically cannot do this.** No Dutch agency can. It is Raka's personal, non-replicable asset.
 - It earns us the partnership in play #1 without paying cash.
 - It gives us a commercial reason to build the multilingual and international booking flows we want to build anyway.
@@ -125,7 +125,7 @@ Astra is young and needs Dutch proof. Tomato World has no money but has enormous
 sector visibility and a building full of decision-makers every week.
 
 **Play:** build Package 1 at or near cost in exchange for a named case study, a logo
-placement, a quote from Art, and the right to demo on site.
+placement, a quote from Aart, and the right to demo on site.
 
 `[ANK]` already values what we gave away: *"I really am impressed with all the work you
 already put in up front... the hours spent."* This is the same move, priced and formalised.
@@ -135,11 +135,11 @@ already put in up front... the hours spent."* This is the same move, priced and 
 ## How these change the pitch
 
 The conventional route — quote a booking system, wait for a 2027 budget — has one
-failure mode we cannot control: **Art says no money, and four months of Ank's
+failure mode we cannot control: **Aart says no money, and four months of Ank's
 enthusiasm decays.**
 
 Plays 1, 2, 3 and 8 have a different shape: **they don't need Tomato World's budget
-at all.** They need Art to say yes to a relationship rather than an invoice, which is
+at all.** They need Aart to say yes to a relationship rather than an invoice, which is
 a much easier yes and one Ank is far better equipped to carry internally.
 
 **Recommended reframe for the next conversation:**

@@ -35,7 +35,7 @@ visitor from curiosity to a confirmed booking is where the effort is being lost.
   out for themselves where to go.
 - Partners pay every year to be seen, and the value they receive is real but is
   currently described rather than demonstrated.
-- Nothing moves without Art and Joyce, and nothing moves without a number attached to
+- Nothing moves without Aart and Joyce, and nothing moves without a number attached to
   it. We took both points seriously.
 
 If any of that is wrong, please correct me. I would rather be corrected now than
@@ -70,13 +70,13 @@ replace anybody.
 **What we will send next**
 
 As promised, a written outline with indicative costs, broken into separate pieces
-rather than one large number, so you and Art can see what each part involves and what
+rather than one large number, so you and Aart can see what each part involves and what
 it is likely to return. We are deliberately building it so that a first step can be
 small.
 
 We are also looking into whether the Westland Digivoucher scheme could cover part of
 a first phase. It is written for companies rather than foundations, so we are checking
-whether a stichting qualifies before either of us mentions it to Art. I will tell you
+whether a stichting qualifies before either of us mentions it to Aart. I will tell you
 either way.
 
 One more thing, because you raised it before the website and I do not think anyone has
@@ -87,13 +87,13 @@ touch the website at all.
 
 **A few questions, whenever convenient**
 
-No rush, and Art may be better placed to answer some of these.
+No rush, and Aart may be better placed to answer some of these.
 
 1. Roughly how many tours run in a normal month?
 2. Roughly how many hours a week does coordinating them take?
 3. How many partners are there at the moment?
 
-These are the numbers that turn our estimates from a guess into something Art can
+These are the numbers that turn our estimates from a guess into something Aart can
 actually judge.
 
 **Suggested next step**
@@ -121,7 +121,7 @@ Astra Agency
   professional. Do not add adjectives, and do not let anyone "improve" it with
   marketing language.
 - **This email is written to be forwarded.** She told us she would write up the
-  conversation for Art. The "what we understood" section is deliberately structured so
+  conversation for Aart. The "what we understood" section is deliberately structured so
   she can paste it straight into her own note.
 - **The banner paragraph is the delicate one.** It is mild criticism of something
   under her care. It is hedged on purpose. Do not sharpen it.

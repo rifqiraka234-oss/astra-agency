@@ -25,7 +25,7 @@ An experience centre and field lab for Dutch greenhouse horticulture.
 | Name | Role | Notes |
 |---|---|---|
 | **Ank** | Volunteer tour guide, retired comms professional | Our champion. No budget authority. Has backoffice access. Promised an honest yes or no. |
-| **Art** | Staff, partner relationships | **Decision maker.** Back from Tanzania as of 2026-09-14. |
+| **Aart** | Staff, partner relationships | **Decision maker.** Back from Tanzania as of 2026-09-14. |
 | **Joyce** | Staff | Decision maker. Back from vacation. |
 | New marketing/comms hire | Junior, newly employed | Wants to own this project. Unmet. |
 | Panorama Studios | Incumbent web builder | Friends of the org. Built the site free or cheap. **Friendship veto risk.** |
@@ -48,7 +48,7 @@ actively selling internally.
 | `analysis/04-service-menu-modules.md` | ~40 modules across six tracks, packaged into three sellable bundles |
 | `analysis/05-engagement-models.md` | Twelve ways to sell it, incl. the Digivoucher subsidy route and partner sponsorship |
 | `analysis/06-asymmetric-plays.md` | Plays Panorama cannot copy — becoming a partner, delegations, hackathon, online tour as revenue |
-| `proposal/01-client-proposal.md` | **Client-facing.** For Art, Joyce and Ank. Discovery Sprint + three phases |
+| `proposal/01-client-proposal.md` | **Client-facing.** For Aart, Joyce and Ank. Discovery Sprint + three phases |
 | `proposal/02-requirements-estimating-pack.md` | **Internal only.** Requirements, systems, architecture options, dev-day bands, risks |
 | `proposal/03-modular-menu.md` | À la carte modules from €600, starter bundles, redesign broken into spec-level pieces |
 | `proposal/04-build-spec-per-module.md` | **Internal only.** Per-module build spec for Josh — deliverables, done-criteria, stack, effort |
@@ -57,15 +57,15 @@ actively selling internally.
 
 ### Ours
 - [ ] Ballpark figure, **modularized** — per chunk: hours, price, expected return
-- [ ] One-page business case addressed to **Art and Joyce** (Ank will print it)
+- [ ] One-page business case addressed to **Aart and Joyce** (Ank will print it)
 - [ ] Send the tech-stack finding to Ank **before her Panorama meeting next week**
 - [ ] Get booking volume per month — ROI is unquantified without it
 - [ ] Re-weight the deck: lead with the 1000-product import and the gym app; shrink web3
 - [ ] Offer Panorama a defined role in writing before they can feel threatened
 
 ### Theirs (per Ank, in the call)
-- [ ] Ank writes up the conversation and meets Art
-- [ ] Ank shares and prints our deck for Art and Joyce
+- [ ] Ank writes up the conversation and meets Aart
+- [ ] Ank shares and prints our deck for Aart and Joyce
 - [ ] Ank meets Panorama Studios next week — framework, and their willingness to cooperate
 - [ ] Ank finds out the 2026 / 2027 budget situation
 - [ ] Ank reports back on whether there is a step 2
@@ -78,7 +78,7 @@ actively selling internally.
    will not ruin that friendship for us.
 3. **Do not lead with AI.** Ank made a pointed remark about young people and lazy
    minds, and praised us specifically for manual effort and hours spent.
-4. **Write for Art and Joyce**, not for Ank. She is the messenger, not the buyer.
+4. **Write for Aart and Joyce**, not for Ank. She is the messenger, not the buyer.
 5. **No partner self-signup funnel.** She explicitly ruled it out — that industry
    sells face to face. A partner *sales-support* page is in scope.
 6. **Never pitch branding, social, SEO/SEA or campaign email.** All Panorama core

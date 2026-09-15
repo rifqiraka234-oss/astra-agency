@@ -72,7 +72,7 @@ noticed.
 | **C1** | **Partner portal** | Partners self-serve their logo, materials, profile — instead of emailing files | `[ANK]` partners pay annually to showcase logo and material |
 | **C2** | **Partner ROI report** ⭐ | Automated: *"this year 4,200 visitors from 38 countries saw your installation; you hosted 11 of your own customer groups"* | `[ANK]` "you get this whole marketing thing. **What's in it for me?**" — this is the renewal weapon, and it only exists if Track A captures the data |
 | **C3** | **Partner-hosted group flow** | Partners bringing their own customers get their own booking path and allocation | `[ANK]` "they can bring their customers" |
-| **C4** | **Partner sales-support page** | Warms the lead *before* Art's in-person meeting. Explicitly **not** a self-signup funnel | `[ANK]` "it gives them a good head start before their discussion" — she ruled out self-signup |
+| **C4** | **Partner sales-support page** | Warms the lead *before* Aart's in-person meeting. Explicitly **not** a self-signup funnel | `[ANK]` "it gives them a good head start before their discussion" — she ruled out self-signup |
 | **C5** | **Tier differentiation** | Partners vs Friends vs Ambassadors — different entitlements, different pages | `[SITE]` three tiers exist, undifferentiated |
 
 **C2 is the highest-leverage idea in this document.** Tomato World's entire income
@@ -157,7 +157,7 @@ This is the wedge. Price it to fit a leftover 2026 budget if one exists.
 
 ### Package 2 — "Prove the partner value" 🟢
 **B5 + C1 + C2 + C3.** Requires Package 1's data to exist.
-Pitch: defends every annual partner fee. This is the one that gets Art's attention,
+Pitch: defends every annual partner fee. This is the one that gets Aart's attention,
 because it is the only module that touches revenue rather than cost.
 
 ### Package 3 — "The visit itself" 🟢🟠
@@ -177,7 +177,7 @@ they all consume booking data. That is a genuinely strong position: Package 1 is
 cheap and standalone, and it is also the foundation that makes Packages 2 and 3
 possible. Nobody can sell Package 2 without having built Package 1.
 
-Say this to Art plainly. It reframes the first module from "a booking form" into
+Say this to Aart plainly. It reframes the first module from "a booking form" into
 "the data layer everything else runs on."
 
 ---

@@ -15,7 +15,7 @@ genuinely ambiguous are marked **[uncertain]** rather than guessed.
 | Person | Role | In this deal |
 |---|---|---|
 | **Ank** | Retired comms professional. Volunteer tour guide, small stipend, part-time. Explicitly **not** a staff employee. | Our champion. Not the buyer. |
-| **Art** | Staff. Was in Tanzania, back as of the call. Runs partner relationships B2B. | **Decision maker.** Ank reports up to him. |
+| **Aart** | Staff. Was in Tanzania, back as of the call. Runs partner relationships B2B. | **Decision maker.** Ank reports up to him. |
 | **Joyce** | Staff. Just back from vacation. | Decision maker / co-signer. |
 | **New marketing & comms hire** | Young, some experience, newly employed. | Wants to own this. Ally or rival. |
 | **"The girl" doing bookings** | Admin. Handles booking and cancellations manually. | The person whose pain we solve. |
@@ -79,13 +79,13 @@ Asked directly where the biggest impact is:
 She picked our own gym example up and used it back at us. **Lead with booking.**
 
 ### 2.6 She explicitly de-scoped partner acquisition
-> "the partner thing is really something that goes from business to business, personal contact, what Art is doing. It's a very close industry... Everybody knows each other. So it's not like a partner goes to the website. Oh, wow, today is Monday. Let's become a partner at Tomato World. That's not the way that would work."
+> "the partner thing is really something that goes from business to business, personal contact, what Aart is doing. It's a very close industry... Everybody knows each other. So it's not like a partner goes to the website. Oh, wow, today is Monday. Let's become a partner at Tomato World. That's not the way that would work."
 
 But then immediately re-scoped it narrower:
 > "Although we need to be able to find what could be in there for them. How appealing is it for them? So it gives them **a good head start before their discussion**."
 
 So: no partner self-signup funnel. Yes to a **partner sales-support page** that
-warms the lead before Art's in-person conversation. Do not pitch partner lead-gen.
+warms the lead before Aart's in-person conversation. Do not pitch partner lead-gen.
 
 ### 2.7 The Panorama Studios landmine
 > "they did this for us for like at low cost or for free, I don't know."
@@ -170,7 +170,7 @@ Correct answer, correctly non-territorial. This defused Panorama. Hold this line
 ### 3.6 Commitments WE made
 1. Ballpark figure.
 2. **Modularized** pricing — per chunk: time, money, and expected return.
-3. A business case aimed at **Art and Joyce**, not at Ank.
+3. A business case aimed at **Aart and Joyce**, not at Ank.
 4. ROI expressed in metrics: conversion rate, hours saved.
 5. Timeline: **weeks, not months**, conditional on a tight feedback loop and staging-first.
 
@@ -184,15 +184,15 @@ Correct answer, correctly non-territorial. This defused Panorama. Hold this line
 
 | | THEM | US |
 |---|---|---|
-| **Urgency** | Ank: high (2 years of nagging). Art/Joyce: unknown, likely low. | High |
-| **Authority** | Sits with Art and Joyce, who were not in the room | Both founders in the room |
+| **Urgency** | Ank: high (2 years of nagging). Aart/Joyce: unknown, likely low. | High |
+| **Authority** | Sits with Aart and Joyce, who were not in the room | Both founders in the room |
 | **Budget** | Unconfirmed. 2026 likely gone. | We must price for a 2027 start |
 | **Framing** | "A website problem" | "A funnel problem" — and she adopted our frame |
 | **Technical knowledge** | Zero. "I am not a builder." | Full — we already know the stack |
 | **Risk taken so far** | None | Unpaid deck, unpaid analysis. She noticed and respected it |
 
 **The gap to exploit:** she adopted our funnel framing inside one call. She will
-re-present it internally. Whatever we write next is what Art and Joyce will hear,
+re-present it internally. Whatever we write next is what Aart and Joyce will hear,
 in Ank's voice. Write it for them.
 
 **The gap to fear:** we have a champion with no budget authority, an incumbent
@@ -221,7 +221,7 @@ decays over four months.
 2. **Lead the proposal with booking**, not redesign. It is the one thing she chose
    herself, it has a hours-saved number attached, and it does not touch Panorama's
    design work — which neutralizes the friendship risk.
-3. **Write the business case to Art and Joyce.** One page. Money in, hours out.
+3. **Write the business case to Aart and Joyce.** One page. Money in, hours out.
    Ank will print it — she said so.
 4. **Modularize as promised.** Module A (booking) priced to fit a leftover 2026
    budget if one exists; B and C for 2027.

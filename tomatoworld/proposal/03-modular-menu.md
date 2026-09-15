@@ -87,7 +87,7 @@ Who guides, which languages they speak, when they are available. Simple and shar
 
 ### M7 — Partner value one-pager 🟠
 **€900 – €1,400 · 2–3 days**
-One page that warms a prospective partner before Art's conversation. Not a signup
+One page that warms a prospective partner before Aart's conversation. Not a signup
 form. *We write structure and content logic; Panorama own the visual.*
 
 ### M8 — Cookie consent implementation 🟢
@@ -142,7 +142,7 @@ aligned to the cancellation policy. *Requires M10.*
 **€2,000 – €3,000 · 4–6 days**
 We build one real partner report from whatever records exist today — no booking
 system required. *Proves the Phase 2 idea for a fraction of the cost, and it is the
-single best thing to put in front of Art, because it is about income.*
+single best thing to put in front of Aart, because it is about income.*
 
 ### M17 — Partner portal, minimal 🟢
 **€3,000 – €4,000 · 10–14 days**
@@ -336,8 +336,8 @@ only once scope is confirmed clear.*
 
 ### S8 — LinkedIn programme 🟢
 **€1,000 – €1,800 · 3–4 days**
-Art and the partner network are on LinkedIn; the industry is closed and relationship
-led. Post structure, cadence, content for Art personally.
+Aart and the partner network are on LinkedIn; the industry is closed and relationship
+led. Post structure, cadence, content for Aart personally.
 > `[ANK]` *"It's a very close industry... everybody knows each other."*
 
 ### S9 — Visitor story capture 🟢
@@ -377,7 +377,7 @@ while budgets are decided. Offer this alongside any module over €2,000.*
 |---|---|---|
 | "We have almost no budget" | M9 alone | €700 |
 | "We have a little, fix the worst" | Stop the bleeding | €2,400 |
-| "Art wants to see income, not cost" | M16 + M7 | €3,300 |
+| "Aart wants to see income, not cost" | M16 + M7 | €3,300 |
 | "We want to see it work properly" | First real bookings | €6,500 |
 | "We want to sort the website out" | Think it through (with Panorama) | €5,500 |
 
