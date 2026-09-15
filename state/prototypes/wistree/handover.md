@@ -101,9 +101,31 @@ Anhang. The seven site findings, free.
 3. **noindex is set** (`<meta name="robots" content="noindex,nofollow">`). That stays
    while this is a private deck.
 
-## Still outstanding
-Karim was asked "anything you'd want it to steer clear of?" and has not answered. This
-deck has not been sent and must not be sent without Raka's explicit go.
+## Sent
+**Delivered to Karim on 2026-09-15**, LinkedIn, on Raka's explicit go. The URL was
+re-verified 200 with its title, five images and four mockups intact immediately
+before sending. Message, 64 words, in Raka's own skeleton.
+
+> Karim, I spent the whole day building this.
+>
+> You said the scale comes first, so that's what I built. Six questions in German
+> off your own methodology, no signup, a score at the end.
+>
+> Try it yourself.
+> https://astra-wistree-deck.netlify.app
+>
+> There's a bit more in there too, how I'd build the comparison behind it and what
+> else we could build with you.
+>
+> What do you think?
+
+Two deliberate omissions from the message, both Raka's call. The placeholder
+comparison curve and the invented scoring weights are not mentioned, because both
+are stated plainly inside the deck, in the tool and again in the closing section.
+And Karim's unanswered question about what to steer clear of is not raised, since
+"What do you think?" opens the same door without drawing attention to his silence.
+
+`outcome` stays `pending` in `state/prototypes.jsonl` until he replies.
 
 ## Verified at build time, 2026-09-15
 Four homepage links to /die-cluue-methodik/ (404), /die-wistree-methodik/ (200),
