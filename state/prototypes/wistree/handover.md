@@ -1,15 +1,21 @@
 # WisTree deck — handover and open items
 Live URL: https://astra-wistree-deck.netlify.app
 
-**WARNING, 2026-09-15. The live URL is NOT the current deck.** The imagery pass
-(v5) could not be deployed. Netlify rejected two deploy attempts with
-`Skipped due to account credit usage exceeded` (deploy ids 6aa96a47494ba99baaeee4ee
-and 6aa96a77000db62461acc87e, both state `error`, `skipped: true`). This is a
-billing limit on the Netlify account, not a fault in the build. The live site
-still serves v4 text-only, and `/img/hero.jpg` returns 404 there. Redeploy this
-folder once the account has credit, then re-verify the five images load and
-re-check the byte diff.
-Imagery pass 2026-09-15 (v5, current in repo, NOT deployed).
+**v5 is live as of 2026-09-15**, deploy id `6aa98882b6d6f750c2e46506`. Three
+earlier attempts that afternoon were refused with `Skipped due to account credit
+usage exceeded` (deploy ids 6aa96a47494ba99baaeee4ee, 6aa96a77000db62461acc87e,
+6aa96b9cf7d18c7454c94f2e). That cleared on its own and the fourth attempt went
+through. If a future deploy is refused the same way, it is a Netlify billing
+limit rather than anything wrong with the build, so retry later before debugging.
+
+Live verification, done rather than assumed. Page 200. All five images 200 with
+the exact byte counts of the files deployed. Live HTML differs from the deployed
+file by 184 bytes, all of it Netlify's injected HUD markup, zero other
+differences. Cold load of the downloaded live page with its real images, 0
+pageerrors, 48 of 48 reveals fired naturally, quiz exercised end to end, no
+horizontal overflow at 420px. The only console 404 is the Netlify HUD script,
+which cannot resolve when the page is served locally.
+Imagery pass 2026-09-15 (v5, current and live).
 sha256 7ffca5b7633c7a95a7fa11dd7a73db1de66de7b35c9b2ce469effe376de87aa9
 (51,327 bytes), plus `img/` with five files, 775 KB total.
 v4 (last version actually live) was
