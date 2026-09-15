@@ -471,6 +471,160 @@ Raka's own background, and which credential to spend on which kind of lead,
 is in **`docs/astra-master-context.md` section 2A**. Read it before writing a
 message that needs to earn the right to an opinion.
 
+## Running a session on your own (written 2026-09-15 so nobody has to be told again)
+
+Raka's standing goal is that a session needs no corrections and no extra guidance.
+This is the operating loop. Follow it top to bottom when a session starts with no
+specific instruction, and use the same order when he names a single task.
+
+### Start of every session, before anything else
+
+1. `git pull` the working branch.
+2. Read `state/inbox_checkpoint.json`, and grep `state/silent_accepted_queue.jsonl`
+   and `state/prototypes.jsonl` for anything with an open outcome.
+3. Read the last two files in `logs/inbox/` so you know what the previous session
+   already said and already promised.
+4. Never re derive a verdict a previous session recorded. Respect it, or override it
+   explicitly in writing with new evidence, per the queue hygiene rule.
+
+### The order of work when nothing is specified
+
+The pipeline is always short of one thing, a real message to someone who never got
+one. Work in this priority order.
+
+1. **Anything owed.** A promised artefact not yet built, a booked meeting with no
+   brief, an `outcome: pending` older than a week.
+2. **Replies waiting on us.** Threads where `isYourTurn` is true and the last
+   message is theirs and carries real content. A two word thanks is not that.
+3. **Stalled nudges.** Real researched message sent, two to four weeks, no reply.
+   Re verify the original claim first, always.
+4. **The Silent accepted backlog.** Batches of about ten, real research each.
+5. **Enrichment pipeline** if new contacts have landed.
+
+### The three hard gates, in order, on any outward work
+
+**Gate 1, research.** `docs/astra-prospect-research-master.md` standard, then the
+falsification pass. Open the page that would disprove the claim, not the page that
+suggested it. Absence claims need at least two pages plus the page type the visitor
+actually lands on. If it does not survive, rewrite the angle honestly or return
+`NO_STRONG_ANGLE`.
+
+**Gate 2, angle.** `docs/astra-commercial-angle-master.md`. Diagnose the bottleneck,
+generate two to five candidates, red team them, pick one. Never start from a service
+and hunt for a reason. Never manufacture pain.
+
+**Gate 3, the four pass read back.** Below. It is a gate, not a polish step.
+
+### What you may do without asking
+
+Research, drafting, building, deploying to Netlify, writing state and logs,
+committing and pushing. All of it. Raka does not want to be asked whether to
+research something or whether to build the thing he already asked for.
+
+### What always needs his explicit word
+
+**Sending.** Every outward message, every time. Editing instructions are edits, not
+authorisation. "Make it English", "less cheesy", "shorter", "keep it short" all mean
+redraft and show again. A batch approval covers that batch only. This has been broken
+once already, on 2026-09-05, off the instruction "all in English".
+
+Also his call, not yours: flipping a campaign to running, deleting anything, and
+quoting a price outside the public €5k to €50k band.
+
+### How to report back
+
+Lead with what changed and what is now true, not with what you did. Numbers where
+they exist. Flag the one thing he would want to overrule **before** he finds it, and
+say plainly when something failed rather than burying it. When an output is a file
+or a page he should look at, send it or link it rather than describing it.
+
+## The build toolchain (verified 2026-09-15, use these exact paths)
+
+A fresh container has all of this. Do not go rediscovering it, and do not install
+what is already here.
+
+### Rendering and QA
+
+- **Chromium** `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`
+- **Playwright** `require('/opt/node22/lib/node_modules/playwright')`, launch with
+  `args:['--no-sandbox']`
+- **The agent proxy resets live Chromium tunnels to most hosts.** So never point the
+  browser at a live site. Serve locally instead,
+  `(cd <folder> && python3 -m http.server 8788 &)`. To QA something already
+  deployed, `curl` the live HTML and every asset into a folder and serve that copy.
+- **`tools/deck-qa/qa.js`** is the harness, committed so you do not rewrite it.
+  `BASE=http://127.0.0.1:8788 node tools/deck-qa/qa.js`. It reports page errors,
+  console errors, any response at 400 or above, how many reveals fired naturally,
+  broken images, exercises an embedded quiz if `#opts` exists, and finds the element
+  causing any 420px overflow while ignoring anything inside an `overflow-x:auto`
+  scroller. Writes `qa-mobile.png`.
+- **`tools/deck-qa/shots.js`** screenshots every section plus the full page, so you
+  can actually look at what you built before Raka does.
+- **Verify by cold load with error capture, never by forcing reveal state.** Forcing
+  `.in` is how a completely blank deck once shipped to a client.
+
+### Images
+
+- **Photographs.** Unsplash is reachable. Find candidates with WebFetch on
+  `https://unsplash.com/s/photos/<query>`, which returns real photo ids with alt
+  text. Download with
+  `https://images.unsplash.com/photo-<id>?w=1800&q=72&fm=jpg&fit=crop`. Curl the
+  search page directly and you get nothing, the ids only come back through WebFetch.
+- **Cropping and compression.** Pillow is installed. Crop to the aspect ratio you
+  need with an anchor rather than resizing and squashing, then save JPEG at quality
+  72 to 82, `optimize=True, progressive=True`. Keep a whole deck's imagery under
+  about 1 MB.
+- **Extracting real screenshots from a PDF.** PyMuPDF is installed as `pymupdf`.
+  `page.get_images(full=True)` then `pymupdf.Pixmap(doc, xref)` pulls the embedded
+  originals at full resolution, which is how the Unilever, GPay and MWX screenshots
+  came out of the Astra deck. `page.get_text()` for the text layer and
+  `page.get_pixmap(dpi=110)` to render a page when you need to see the layout.
+  `pdftoppm` is **not** installed, so the Read tool cannot render a PDF directly.
+- Note `pip install pypdf` fails in this container on a broken `cryptography`
+  binding. `pymupdf` installs fine and does more anyway.
+
+### Deploying
+
+- Call the Netlify MCP deploy operation to get a fresh `npx` command with a
+  `--proxy-path` token, then run it from a clean folder containing only what should
+  ship. **The token expires**, so a `401 Unauthorized` means fetch a new command, not
+  that anything is wrong.
+- The folder needs `netlify.toml` with `[build]` and `publish = "."`.
+- Then verify, every time, per the hosting rules below.
+
+### Deck HTML, the architecture that works
+
+One self contained HTML file, inline `<style>` and one inline `<script>`, plus an
+`img/` folder when there is photography. No external CSS or JS.
+
+- **Tokens on `:root`.** Ink, paper, one accent pulled from the client's own logo
+  with Pillow, muted greys, a sans and a mono stack.
+- **Sections alternate** dark, light, light2, so the eye gets a rhythm. A dark
+  section holding a table puts the table in a white rounded box.
+- **Reveals.** `.rv{opacity:0;transform:translateY(20px)}` plus `.rv.in`, driven by
+  one `IntersectionObserver` over `.rv,h1,h2`. Hero lines use an `.ln>span`
+  translate with staggered delays.
+- **Tables must be wrapped** in `.tw{overflow-x:auto}` with `.tw table{min-width:520px}`,
+  otherwise they blow out the mobile viewport.
+- **Diagrams are inline SVG** with a `viewBox`, `role="img"` and a real `aria-label`.
+  Give any SVG wider than the column a `min-width` and put it in a `.tw`.
+- **Everything collapses to one column** under `@media(max-width:860px)`.
+
+The gotchas that cost time on the WisTree build, all real:
+
+- **Inserting a style block by replacing a common selector duplicates it** if that
+  selector appears twice. `.shot` ended up defined twice and the second copy won.
+  Anchor style insertions on something unique, and grep for duplicates after.
+- **SVG text with a start anchor near the right edge clips.** Use
+  `text-anchor="end"` and position from the right.
+- **Images at different aspect ratios misalign the headings under them.** Fix a
+  height and use `object-fit:contain` with a background, rather than letting each
+  card size itself.
+- **A background photograph plus a generative canvas fights itself.** Drop the canvas
+  to about 0.2 opacity and push it to the edge, or lose one of them.
+- **A band label placed at the same y as its boxes gets overlapped.** Lay diagram
+  bands out with the label above the band, and check it rendered.
+
 ## Building a deck, everything Raka corrected across the WisTree build (2026-09-14 and 15)
 
 One deck was rebuilt five times in two days. Every version failed on something he
@@ -648,6 +802,73 @@ Raka's edit note on the first Karim draft. What got cut, and why it is general.
 | "if I have wandered somewhere you would rather I had not" | Twee. Became "if I've gone somewhere you'd rather I hadn't". |
 | "since that is the part nobody else has" | Trailing explainer. Became "which is the bit nobody else is doing". |
 | Every uncontracted verb | "that is", "I do not", "I am not going to". |
+
+## The ship it checklist
+
+Run this before showing Raka any artefact, and again before any link goes to a lead.
+Every line is here because it failed at least once.
+
+**Copy**
+- [ ] Zero em dashes, en dashes and hyphens in prose. URLs and slugs exempt.
+- [ ] Zero colons. The total ban outranks NO-AI-SLOP's "colons only for lists".
+- [ ] Contractions present and plural. Zero contractions is the clearest machine tell.
+- [ ] No banned words or phrases from `docs/NO-AI-SLOP.md`, section 8 grep run.
+- [ ] No honesty theatre, no fragment pivots, no trailing "so" or "which is" explainers.
+- [ ] Every heading claims something rather than labelling something.
+- [ ] Nothing narrates the artefact inside the artefact.
+- [ ] English, unless it is a working artefact a non English speaker will use, and
+      then an English explanation sits beside it.
+
+**Truth**
+- [ ] Every factual claim traces to something actually fetched, with the page named.
+- [ ] The falsification pass ran, against the page that could disprove it.
+- [ ] Nothing invented is presented as real. Placeholder data is labelled inside the
+      artefact and flagged in the handover.
+- [ ] No client work claimed that was not delivered, and the delivery partner
+      disclosure travels with Unilever, GPay and MWX.
+- [ ] No person named with a role their own site contradicts.
+- [ ] No photograph captioned as the client's premises, staff, customers or product.
+
+**Build**
+- [ ] Cold load, nothing forced. Zero page errors.
+- [ ] Every reveal fired naturally. A count well short of the total means broken.
+- [ ] Every image 200 and decoded, on a multi file deploy the assets too.
+- [ ] No horizontal overflow at 420px outside a deliberate scroller.
+- [ ] Every section screenshotted and actually looked at.
+- [ ] Interactive parts exercised end to end, not assumed.
+
+**Live**
+- [ ] Live URL fetched, 200, `<title>` still theirs.
+- [ ] Live HTML diffed against the deployed file. Only the Netlify HUD should differ.
+- [ ] Every asset path fetched and byte matched.
+
+**Record**
+- [ ] `state/prototypes.jsonl` row written or updated.
+- [ ] Handover written, including anything that must not ship as is.
+- [ ] Committed and pushed. `state/prototypes/` is gitignored, so force add.
+
+## Pulling data cheaply, the patterns that actually work
+
+- **Picking a batch.** `search_campaign_leads` with `campaignId` and a `limit`
+  returns a lean row at roughly eighty tokens. A hundred at a time is affordable.
+  The heavy record with `companyDescription` comes back only per single lead by id,
+  so spend that on the ten you chose.
+- **Resolving a name with no id.** Do not paginate `search_campaign_leads`. Call
+  `get_inbox_conversations` with `listId: "sentOnly"` and `search: "<full name>"`.
+  One small response gives `contactId` and the LinkedIn URL, and `lastRepliedAt: null`
+  beside a `lastSentMessagePreview` that is still the connect note proves the row is
+  genuinely Silent accepted.
+- **`contactId` is what `send_message` needs**, never `leadId`.
+- **The list endpoint cannot tell you what a thread contains.** It exposes only
+  `lastSentMessagePreview`. Any claim about history, and every follow up count, needs
+  `get_inbox_conversation` per contact. See the inbox guardrail above for the audit
+  this broke.
+- **An empty `get_inbox_conversation` is not evidence.** The connect note is not
+  always written as an activity.
+- **`aiLeadInterestLevel` is a reading priority hint, never evidence.** It is the AI's
+  read of one reply, and it is absent on any message that was not scored.
+- **Fetch failures are UNKNOWN and retryable**, never "no angle". Retry with the
+  render pipeline, mirror the HTML and assets and screenshot the local copy offline.
 
 ## Astra Agency, the company itself (from the official deck, given by Raka 2026-09-15)
 
