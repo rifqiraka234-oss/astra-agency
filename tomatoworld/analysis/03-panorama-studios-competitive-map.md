@@ -34,14 +34,14 @@ literacy campaign). They have sector landing pages for `/agf` and `/tuinbouwtech
 and a `/digivoucher-westland` page for regional subsidy work.
 
 Several of those names — KUBO, Van der Hoeven, Lans — are the same tier of company
-that pays Tomato World's partner fees. **Panorama and Tomato World share a customer
+that pays Tomatoworld's partner fees. **Panorama and Tomatoworld share a customer
 base.** That is why the site was built free or cheap, and it is why Ank said she
 will not risk the friendship.
 
 ## ⚠️ Read this before trusting the table below
 
 The red/amber flags are inferred from **what Panorama advertise on their own site** —
-not from what Tomato World actually buys from them. Those are different things.
+not from what Tomatoworld actually buys from them. Those are different things.
 
 Astra do branding and social media. It is in our Grow pillar and Raka presented it in
 the intro call. Nothing here says we cannot. It says **do not open with it at this
@@ -104,7 +104,7 @@ complement, not the overlap.**
 
 > **Panorama owns the brand and the front door. Astra builds the machine behind it.**
 
-They make Tomato World look and sound right. We make Tomato World *run* — bookings,
+They make Tomatoworld look and sound right. We make Tomatoworld *run* — bookings,
 capacity, partner value, the back office. Marketing agency and operations partner.
 Different budget line, different buyer, no competitive collision.
 

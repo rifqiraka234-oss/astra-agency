@@ -1,4 +1,4 @@
-# Tomato World — client account
+# Tomatoworld — client account
 
 > **Scope note for automated sessions:** this folder is a **client account
 > workspace**, not part of the enrichment pipeline described in the root
@@ -7,14 +7,14 @@
 
 ## Who they are
 
-Stichting Tomato World — a **foundation**, not a commercial company, in Westland, NL.
+Stichting Tomatoworld — a **foundation**, not a commercial company, in Westland, NL.
 An experience centre and field lab for Dutch greenhouse horticulture.
 
 - **Revenue model:** annual fees from partner companies who showcase their logo and
   material on site and bring their own customers through on tours. They do not sell
   produce. "We don't sell tomatoes. It's a foundation that tells the story."
 - **Their moat:** biosecurity. Real commercial greenhouses cannot accept visitors
-  because of virus risk. Tomato World can, because it doesn't live off crop sales.
+  because of virus risk. Tomatoworld can, because it doesn't live off crop sales.
 - **Second pillar:** a field lab where high-tech companies, startups and students
   test greenhouse tech (5G, IoT, AI, robotics).
 - **Website:** tomatoworld.nl — 373 pages, bilingual NL/EN, Umbraco 13, built by

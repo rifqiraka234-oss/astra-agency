@@ -57,19 +57,19 @@ TW plug it into the Umbraco site. We never touch their template.
 - `[ANK]` is meeting them next week — this is the model to *offer* her to take in.
 
 ## 5. White-label / subcontract to Panorama 🟢
-**We sell:** to Panorama, not to Tomato World. We become their engineering arm.
+**We sell:** to Panorama, not to Tomatoworld. We become their engineering arm.
 
 - **Upside:** they have ~138 portfolio clients across Westland horticulture — KUBO,
   Lans, Van der Hoeven, Nature's Pride. If we become the team they call for anything
-  transactional, Tomato World is one job and the *channel* is the real prize.
+  transactional, Tomatoworld is one job and the *channel* is the real prize.
 - **Downside:** lower rate, no direct client relationship, no brand.
-- **Strategically this may be worth more than the Tomato World deal itself.**
+- **Strategically this may be worth more than the Tomatoworld deal itself.**
 
 ## 6. Productize and resell 🟢
-**We sell:** build the booking/visitor system once for Tomato World, then license it
+**We sell:** build the booking/visitor system once for Tomatoworld, then license it
 to other visitor centres, experience venues and field labs.
 
-- Tomato World becomes reference customer and gets a discount — or free build in
+- Tomatoworld becomes reference customer and gets a discount — or free build in
   exchange for the reference and their name.
 - `[SITE]` Their peers exist: World Horti Center, other Westland demo centres, and
   Panorama's own client base needs the same thing.
@@ -97,7 +97,7 @@ because four months of waiting is our biggest decay risk.
 
 **Two important caveats, both unverified:**
 1. The scheme is written for **"bedrijven gevestigd in de gemeente Westland"** —
-   *companies* in Westland. Tomato World is a **stichting** (foundation). Whether a
+   *companies* in Westland. Tomatoworld is a **stichting** (foundation). Whether a
    foundation qualifies **must be checked before we ever mention it to Ank.**
    Promising subsidy money that doesn't materialise would cost us her trust.
 2. **Panorama actively market this voucher themselves** — they have a dedicated
@@ -108,13 +108,13 @@ because four months of waiting is our biggest decay risk.
 **Action:** verify eligibility for a stichting before the Panorama conversation.
 
 ## 9. Partner-sponsored build 🟢
-**We sell:** to a Tomato World *partner*, not to Tomato World.
+**We sell:** to a Tomatoworld *partner*, not to Tomatoworld.
 
 Their partners already pay annual fees for visibility. One of them — a KUBO, a
 Koppert, a Royal Brinkman — could **sponsor the partner portal or the on-site
 screens** as a marketing spend, branded as their contribution.
 
-- Tomato World pays nothing. The partner gets exactly the visibility they already buy.
+- Tomatoworld pays nothing. The partner gets exactly the visibility they already buy.
 - `[ANK]` "we are depending on our partners that are paying a fee every year."
 - Creative, on-model, and completely sidesteps the foundation's empty budget.
 - **Aart owns partner relationships — this is a pitch to Aart, in his language.**

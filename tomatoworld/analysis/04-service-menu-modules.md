@@ -1,6 +1,6 @@
-# Tomato World — full service menu, broken into modules
+# Tomatoworld — full service menu, broken into modules
 
-**Purpose:** everything Astra could credibly do for Tomato World, chunked small
+**Purpose:** everything Astra could credibly do for Tomatoworld, chunked small
 enough to price, sequence and sell one at a time. This is the internal long list —
 not the client deck. We pick from it.
 
@@ -75,7 +75,7 @@ noticed.
 | **C4** | **Partner sales-support page** | Warms the lead *before* Aart's in-person meeting. Explicitly **not** a self-signup funnel | `[ANK]` "it gives them a good head start before their discussion" — she ruled out self-signup |
 | **C5** | **Tier differentiation** | Partners vs Friends vs Ambassadors — different entitlements, different pages | `[SITE]` three tiers exist, undifferentiated |
 
-**C2 is the highest-leverage idea in this document.** Tomato World's entire income
+**C2 is the highest-leverage idea in this document.** Tomatoworld's entire income
 is renewals from partners asking "what's in it for me?" — and today the answer is
 anecdotal. Turning it into an annual data report defends every partner fee they
 have. It is also impossible for Panorama to build, because it requires the booking
@@ -86,7 +86,7 @@ system underneath it.
 ## TRACK D — AI workflows 🟢
 *Zero AI anywhere in Panorama's 138 pages. Total white space.*
 *Caveat: `[ANK]` made a pointed remark about young people and lazy minds — **lead with the outcome, never with the technology**.*
-*Softener: `[SITE]` Tomato World already runs a project called "AI in greenhouse horticulture." AI is on-brand for them, just not when it sounds like a shortcut.*
+*Softener: `[SITE]` Tomatoworld already runs a project called "AI in greenhouse horticulture." AI is on-brand for them, just not when it sounds like a shortcut.*
 
 | # | Module | What it is | Why |
 |---|---|---|---|

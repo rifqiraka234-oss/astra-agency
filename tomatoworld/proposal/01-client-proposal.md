@@ -1,4 +1,4 @@
-# Tomato World × Astra Agency
+# Tomatoworld × Astra Agency
 ## Proposal for discussion — Aart, Joyce and Ank
 
 *Prepared following our conversation with Ank, 14 September 2026.*
@@ -11,7 +11,7 @@ given so you can judge fit against budget before we invest in detailed estimates
 
 Ank described a clear picture, and our own review of the site confirmed it:
 
-- Tomato World's **story and brand are strong**. That is not the problem.
+- Tomatoworld's **story and brand are strong**. That is not the problem.
 - The problem is **operational**: tours are requested by form and coordinated by
   hand, one person absorbs that work, and every cancellation creates a chain of
   emails.
@@ -244,7 +244,7 @@ A short session with Ank, the new marketing and communications colleague, and
 agree the technical boundary with Panorama directly, and confirm whether the
 Discovery Sprint is worth doing.
 
-We would also welcome the chance to visit Tomato World and take the tour properly.
+We would also welcome the chance to visit Tomatoworld and take the tour properly.
 
 ---
 

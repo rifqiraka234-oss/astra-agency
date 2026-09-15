@@ -23,7 +23,7 @@ a proper education, so I am grateful you gave us the time.
 
 What stayed with me most was something you said almost in passing: that if you cannot
 tell your story, what good is your story. That is a fair description of the gap we
-saw too. The greenhouse expertise at Tomato World is not in question. Getting a
+saw too. The greenhouse expertise at Tomatoworld is not in question. Getting a
 visitor from curiosity to a confirmed booking is where the effort is being lost.
 
 **What we understood from you**

@@ -372,7 +372,7 @@ Check who on our side actually delivers these before committing dates.
 **Make:** audience definitions (visitor, school, trade delegation, partner, press) ·
 positioning statement · core message + three proof points · value proposition per
 audience · tone of voice with do/don't examples · NL and EN.
-**Done when:** Ank, Aart and a guide independently describe Tomato World the same way.
+**Done when:** Ank, Aart and a guide independently describe Tomatoworld the same way.
 **Check first:** Panorama sell positioning. Offer jointly or confirm it is unclaimed.
 
 ## B3 — Story toolkit · €1,200–2,000 · **3–5 days** ⭐
@@ -412,7 +412,7 @@ asset production, handover.
 
 ## B7 — Partner brand kit · €900–1,500 · **2–3 days**
 **Make:** logo pack and lockups for partners · usage rules and permissions · boilerplate
-copy NL/EN describing Tomato World · a template for partners announcing their
+copy NL/EN describing Tomatoworld · a template for partners announcing their
 partnership · reciprocal rules for how TW presents partners.
 **Done when:** a partner can announce the partnership without emailing anyone for assets.
 

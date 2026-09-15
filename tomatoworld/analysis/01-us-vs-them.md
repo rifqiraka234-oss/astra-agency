@@ -10,7 +10,7 @@ genuinely ambiguous are marked **[uncertain]** rather than guessed.
 
 ## 1. The table
 
-### THEM — Tomato World
+### THEM — Tomatoworld
 
 | Person | Role | In this deal |
 |---|---|---|
@@ -79,7 +79,7 @@ Asked directly where the biggest impact is:
 She picked our own gym example up and used it back at us. **Lead with booking.**
 
 ### 2.6 She explicitly de-scoped partner acquisition
-> "the partner thing is really something that goes from business to business, personal contact, what Aart is doing. It's a very close industry... Everybody knows each other. So it's not like a partner goes to the website. Oh, wow, today is Monday. Let's become a partner at Tomato World. That's not the way that would work."
+> "the partner thing is really something that goes from business to business, personal contact, what Aart is doing. It's a very close industry... Everybody knows each other. So it's not like a partner goes to the website. Oh, wow, today is Monday. Let's become a partner at Tomatoworld. That's not the way that would work."
 
 But then immediately re-scoped it narrower:
 > "Although we need to be able to find what could be in there for them. How appealing is it for them? So it gives them **a good head start before their discussion**."
@@ -140,7 +140,7 @@ Ank engaged with **Optimize** and nothing else. Pillar framing is fine as contex
 but the sale is Optimize.
 
 ### 3.3 The funnel reframe (Raka) — this is what won the meeting
-> "not just the website itself, but how do we look at it in terms of the whole process, in the funnel... top of the funnel where Tomato World gets found, then when the prospects get interested, and of course the conversion part, which is **the booking part**... and what happens afterwards during the visit and also how do we retain them."
+> "not just the website itself, but how do we look at it in terms of the whole process, in the funnel... top of the funnel where Tomatoworld gets found, then when the prospects get interested, and of course the conversion part, which is **the booking part**... and what happens afterwards during the visit and also how do we retain them."
 
 This is why she was enthusiastic. It reframed "new website" (a cost) into "the
 system that gets you visitors" (an investment). Keep this spine in the proposal.

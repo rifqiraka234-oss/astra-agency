@@ -90,7 +90,7 @@ the point — you cannot improve M2 if nobody knows what M2 currently is.
 
 **If you stop here you keep the prototype, the baseline and the plan.**
 
-> **Arithmetic:** at ~€350 a tour, the sprint costs **12 to 17 tours.** Against a
+> **Arithmetic:** at ~€350 a tour, the sprint costs **12 to 18 tours.** Against a
 > booking process handling thousands of visitors a year, that is a rounding error to
 > find out whether the rest is worth doing.
 
@@ -137,7 +137,7 @@ still arrive by email, but complete.
 without a five-day email exchange across time zones.
 **Metrics:** **M1** (the big one) · **M2** · **M3** (days → minutes) · **M4** · **M5**.
 
-> **Arithmetic:** costs **19 to 27 tours.** Spread over a year that is roughly **two
+> **Arithmetic:** costs **19 to 28 tours.** Spread over a year that is roughly **two
 > extra tours a month** — or the equivalent in hours returned to the team.
 
 ---
@@ -312,9 +312,9 @@ anything over €2,000.
 | Phase | Elapsed | Cost | Primary metrics | Pays for itself at |
 |---|---|---|---|---|
 | **0** Free fixes | 1 week | **€0** | M2, M4 | — |
-| **1** Discovery | 2 weeks | **€4,000 – €6,000** | Makes all metrics measurable | 12–17 tours |
+| **1** Discovery | 2 weeks | **€4,000 – €6,000** | Makes all metrics measurable | 12–18 tours |
 | **2** Front door | 2–3 weeks | **€2,400 – €3,300** | M1, M2, M3 | 7–10 tours |
-| **3** Booking system | 5–8 weeks | **€6,500 – €9,500** | M1, M2, M3, M4, M5 | 19–27 tours |
+| **3** Booking system | 5–8 weeks | **€6,500 – €9,500** | M1, M2, M3, M4, M5 | 19–28 tours |
 | **4** Cancellations | 2–3 weeks | **€2,700 – €4,500** | M6, M5, M1 | 8–13 tours |
 | **5** Payments | 2–3 weeks | **€2,800 – €4,200** | M1, booking value | 8–12 tours |
 | **6** Partner value | 4–6 weeks | **€4,500 – €7,000** | M7 | ~1 retained partner |

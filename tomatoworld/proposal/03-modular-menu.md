@@ -247,7 +247,7 @@ already created, offer it jointly or stand down. Items marked 🟢 are genuinely
 
 ### B1 — Brand & messaging audit 🟢
 **€900 – €1,400 · 3 days**
-How Tomato World currently presents itself across the site, socials, printed material
+How Tomatoworld currently presents itself across the site, socials, printed material
 and the tour itself. Where the message contradicts itself, where it is strong.
 *Pure assessment. Nothing Panorama would object to, and it sizes everything below.*
 
@@ -287,7 +287,7 @@ proposing. Otherwise recommend them.*
 
 ### B7 — Partner brand kit 🟢
 **€900 – €1,500 · 2–3 days**
-How partners represent Tomato World in their own materials, and how TW represents
+How partners represent Tomatoworld in their own materials, and how TW represents
 partners. Logos, lockups, boilerplate, permissions.
 *Genuinely unserved, and it supports the partner revenue line.*
 
