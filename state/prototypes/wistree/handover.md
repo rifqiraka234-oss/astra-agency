@@ -1,7 +1,8 @@
 # WisTree deck — handover and open items
 Live: https://astra-wistree-deck.netlify.app
-Simplified and de-narrated 2026-09-15 (v4, current). sha256 of deployed file
-90b93842b412fd6cb69e248ef49d3d4d4b22330604ccd350ed2e68d48c11c78a (37,125 bytes).
+Simplified and de-narrated 2026-09-15 (v4, current, two register passes).
+sha256 of deployed file
+095ac106d824a6c5f012f91fcc2f49d175e5a84bd03a2a75e09ac839f8e92cc0 (36,870 bytes).
 v3 was 03f3969b44416b570676ccb420b2adc5fa83d70778eba4128f8eb6336aef8d08 (44,606 bytes).
 v2 was 6cf41043f20768cede67eea974d53ce2ac98d8ec9c75ef5aae820d4356e99bd9 (34,455 bytes).
 v1 was 8d16ca3d6ad53cbe8d313b7869701617b2278aab9622ce28f0dcde4515158a9c (37,749 bytes).
@@ -100,7 +101,7 @@ fired naturally, 8 sections. Quiz exercised end to end, max path returns 100 / K
 the benchmark marker drawn. Single inline script block parses on the live file. No
 horizontal overflow at 420px, tables scroll inside their own containers. Every section
 screenshotted at 1400px and the hero at 420px.
-Visible copy: 0 em dashes, 0 en dashes, 0 colons, 20 contractions, 1,486 words, no
+Visible copy: 0 em dashes, 0 en dashes, 0 colons, 18 contractions, 1,444 words, no
 banned terms from the NO-AI-SLOP list.
 Live file diff against the deployed file is 720 bytes of Netlify HUD markup only.
 
@@ -127,11 +128,31 @@ again:
 | "plus a working version you can try on this page" | "and the first half already works" |
 | "You also said the detailed WKI analysis is step two. So this follows your order." | "The detailed WKI analysis is step two. This is step one." |
 
+**Raka had to give this note twice, so one pass was not enough.** The second
+pass caught what the first left standing:
+
+| Wrote | Should have written |
+|---|---|
+| "Karim, you said you're building a scale that gives a first indication of knowledge fragility and compares a company against others its size." | "Karim, the scale you described has two halves." |
+| "Two jobs, and they're not the same job." | "Two jobs in one sentence. The second is the one worth owning." |
+| "The part that tells him whether that number is normal or not." | "Whether that number is normal." |
+| "Built from your own six methodology steps, in the language of the person answering." | "Built from your own six methodology steps." |
+| "The check is one file with no server." | Deleted. Implementation trivia. |
+| "which is usually what actually blocks a pilot" | "which is what usually blocks a pilot" |
+| "Getting 23 places to count the same thing the same way is the same problem as a benchmark group." | "Getting 23 markets to count one thing the same way is exactly the benchmark problem." |
+| "so selling something a buyer hasn't decided he needs yet is first hand rather than theoretical" | "Selling something a buyer hasn't decided he needs yet is not theory here." |
+
 The pattern behind all of them. Explaining the furniture, restating the brief
-back, apologising in advance, and narrating our own process. A heading that
-labels a list is weaker than a heading that asserts something. A sentence that
-tells the reader what is about to happen should be deleted, because the next
-sentence is about to happen anyway.
+back, apologising in advance, narrating our own process, and defining a term
+straight after using it. A heading that labels a list is weaker than a heading
+that asserts something. A sentence that tells the reader what is about to happen
+should be deleted, because the next sentence is about to happen anyway. And a
+clause that begins "so" or "which is" at the end of a sentence is usually the
+writer explaining what he just said, which is the tell to grep for.
+
+**The self check before any deck ships.** Read every heading alone. If a heading
+names a thing rather than claims a thing, rewrite it. Then read every sentence
+and delete any clause that would still be obvious with it gone.
 
 ## Astra facts used in section 6, and their source
 All from the official deck Raka supplied 2026-09-15 and now transcribed into
