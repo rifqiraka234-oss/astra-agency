@@ -6,22 +6,41 @@ pages) plus sentOnly filtered to real researched messages back to 1 September.
 Below 1 September sentOnly is the generic connect note backlog, already mapped in
 state/accepted_never_messaged.md, and the 17 August real sends were nudged on 14 Sep.
 
-## A. They said yes and then went quiet. Work these first.
-Every one of these explicitly asked for the thing. The asset exists. Nobody followed up.
+## A. CORRECTED 2026-09-15 after Raka checked the Maarten thread.
+My first pass claimed these eleven said yes and never got the thing. That was WRONG.
+The inbox list endpoint only exposes the LAST sent message, so a delivery followed by a
+later nudge is invisible at that level. I pulled all eleven full threads. Nine were
+delivered, most nudged two or three times since. prototypes.jsonl also already recorded
+Greentic as sent on 18 Aug and I failed to cross-check it.
 
-| Who | What they said | Said it | We last sent | Silent |
-|---|---|---|---|---|
-| Maarten Ectors, Greentic | "Ok please send it" | 17 Aug | 26 Aug | 20 days |
-| Andy Olson | "Feel free to send what you have" | 04 Aug | 26 Aug | 20 days |
-| Jack Coulthard | "definitely keen to see what you've come up with" | 18 Jul | 26 Aug | 20 days |
-| Isabela Tatu | "do send it over" | 20 Jul | 26 Aug | 20 days |
-| Michele Legoratto | "Yes let me see" | 21 Jul | 26 Aug | 20 days |
-| Antanas Juodiskis, Gravity Fellow | "What is your offer?" | 11 Aug | 26 Aug | 20 days |
-| Joanna Huang, Brightly | "happy to see what we are up to" | 28 Jul | 02 Sep | 13 days |
-| Tijs Overeijnder, FlyVision | "Yesss" | 21 Aug | 02 Sep | 13 days |
-| Barbora Juhaszova | "send it over why not" | 29 Aug | 05 Sep | 10 days |
-| Suania Fiol, Zenara | "Yes would be interested" | 31 Aug | 05 Sep | 10 days |
-| Lisa Bouamra | "You can send it over" | 30 Jul | 16 Aug | 30 days |
+| Who | Artefact sent | Nudges since | Replies |
+|---|---|---|---|
+| Maarten Ectors, Greentic | 18 Aug, astra-greentic-prototype | 1 (26 Aug) | none |
+| Andy Olson | 09 Aug, indigeniousfishersv2 | 2 (16, 26 Aug) | none |
+| Jack Coulthard | 21 Jul, Drive folder | 3 (11, 16, 26 Aug) | none |
+| Isabela Tatu | 04 Aug, visual concept | 2 (16, 26 Aug) | none |
+| Michele Legoratto, AIKE | 07 Aug, aikeprototype | 2 (16, 26 Aug) | none |
+| Antanas Juodiskis | early Aug, Drive folder | 2 (16, 26 Aug) | none |
+| Barbora Juhaszova, Di Lieto | 31 Aug, astra-dilieto-prototype | 1 (05 Sep) | none |
+| Suania Fiol, Zenara | 31 Aug, astra-zenara-prototype | 1 (05 Sep) | none |
+| Lisa Bouamra, Point Audit | 12 Aug, astra-point-audit-prototype | 1 (16 Aug) | none |
+
+**This is the Stage K pattern, not a follow-up failure.** Nine delivered off a soft yes,
+nine silences, several after three chases. A fourth nudge to Jack is the wrong move.
+
+### The two exceptions
+- **Tijs Overeijnder, FlyVision. GENUINELY NEVER SENT.** On 26 Aug we pitched it and
+  asked "Zal ik hem sturen?", on 02 Sep we said "de opzet staat klaar, zin om er even
+  naar te kijken?" Announced as ready twice, never linked, and not in prototypes.jsonl.
+  His "Yesss" on 21 Aug predates the offer so it was a yes to something else. This is
+  the only real open loop in the group.
+- **Joanna Huang. NOTHING OWED.** Her 28 Jul line was a generic connect-note reply, not
+  a request. We asked twice (27 Aug, 02 Sep) whether to build it and she never answered.
+
+### Prototype record is incomplete
+Not in prototypes.jsonl: indigeniousfishersv2.netlify.app (Andy Olson),
+aikeprototype.netlify.app (Michele Legoratto), the Drive folders sent to Jack Coulthard
+and Antanas Juodiskis, and the three decks (Tomatoworld, HotGreen, Acquitas).
 
 ## B. Promised a specific thing and let the date slide
 | Who | The promise | We last sent | Silent |
