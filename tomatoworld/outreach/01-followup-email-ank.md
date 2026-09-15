@@ -74,7 +74,7 @@ rather than one large number, so you and Aart can see what each part involves an
 it is likely to return. We are deliberately building it so that a first step can be
 small.
 
-We are also looking into whether the Westland Digivoucher scheme could cover part of
+We are also looking into whether the Westlandse Digivoucher scheme could cover part of
 a first phase. It is written for companies rather than foundations, so we are checking
 whether a stichting qualifies before either of us mentions it to Aart. I will tell you
 either way.
