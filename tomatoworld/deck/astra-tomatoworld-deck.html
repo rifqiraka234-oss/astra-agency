@@ -725,7 +725,14 @@ em{font-style:italic}
 .ph-n{font-family:var(--mono);font-size:.7rem;color:var(--green-deep);letter-spacing:.14em;display:block;margin-bottom:5px}
 .ph-t{font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
 .ph-v{color:var(--muted-d);font-size:.9rem;display:block;margin-top:6px;max-width:38ch}
-.ph-m{font-size:.94rem;font-weight:600;color:var(--green-deep);max-width:26ch;display:block}
+.ph-m{display:block;max-width:30ch}
+.kpi{list-style:none;margin:0;padding:0}
+.kpi li{font-size:.88rem;line-height:1.35;padding:3px 0 3px 20px;position:relative;color:var(--text)}
+.kpi li::before{position:absolute;left:0;top:3px;font-family:var(--mono);font-size:.8rem;font-weight:700}
+.kpi li.up::before{content:"\2191";color:var(--green-deep)}
+.kpi li.dn::before{content:"\2193";color:var(--green-deep)}
+.kpi li.flat::before{content:"\2022";color:var(--muted)}
+.kpi li em{font-style:normal;color:var(--muted-d);font-size:.82rem}
 .ph-c{font-weight:700;white-space:nowrap}
 .ph-free{color:var(--green-deep)}
 .ph-wrapper{overflow-x:auto}
@@ -749,66 +756,66 @@ em{font-style:italic}
 
     <div class="ph-wrapper">
     <table class="ph-tbl">
-      <thead><tr><th>Step</th><th>What gets better</th><th>Time</th><th>Cost</th></tr></thead>
+      <thead><tr><th>Step</th><th>What it should move</th><th>Time</th><th>Cost</th></tr></thead>
       <tbody>
         <tr>
           <td><span class="ph-n">STEP 0</span><span class="ph-t">Website quick fixes</span>
             <span class="ph-v">Your tours page still says you're closed until 1 September. We take it down, close a cookie gap, fix a Google setting. Sent via Panorama.</span></td>
-          <td><span class="ph-m">Nobody reads that you're closed when you're open.</span></td>
+          <td><span class="ph-m"><ul class="kpi"><li class="up">Enquiries from the tours page</li><li class="up">Google visibility</li><li class="dn">Legal risk <em>cookie consent</em></li></ul></span></td>
           <td>1 week</td><td class="ph-c ph-free">Free</td>
         </tr>
         <tr class="ph-go">
           <td><span class="ph-n">STEP 1</span><span class="ph-t">Discovery &amp; clickable prototype</span>
             <span class="ph-v">We sit with Joyce, count how booking really works, and build a booking screen you can click. Then firm prices, and an agreement with Panorama.</span></td>
-          <td><span class="ph-m">You learn your own numbers. Nobody has ever counted them.</span></td>
+          <td><span class="ph-m"><ul class="kpi"><li class="flat">Measures every KPI below <em>none exist today</em></li><li class="up">Cost certainty <em>firm prices, not ranges</em></li></ul></span></td>
           <td>2 weeks</td><td class="ph-c">&euro;4,000<br>&ndash; &euro;6,000</td>
         </tr>
         <tr>
           <td><span class="ph-n">STEP 2</span><span class="ph-t">Automated enquiry form</span>
             <span class="ph-v">One form that asks everything first time. The visitor gets an instant reply in their language. Enquiries still arrive by email, so nothing new to learn.</span></td>
-          <td><span class="ph-m">Far fewer emails just to agree the basics.</span></td>
+          <td><span class="ph-m"><ul class="kpi"><li class="dn">Emails per enquiry</li><li class="dn">Time to first reply</li><li class="up">Enquiries that become bookings</li></ul></span></td>
           <td>2&ndash;3 weeks</td><td class="ph-c">&euro;2,400<br>&ndash; &euro;3,300</td>
         </tr>
         <tr>
           <td><span class="ph-n">STEP 3</span><span class="ph-t">Online booking system</span>
             <span class="ph-v">Visitors see free dates and book one, like a hotel. It knows your capacity, and only shows dates when a guide speaks their language.</span></td>
-          <td><span class="ph-m">Hours a week back. Tokyo can book without emailing.</span></td>
+          <td><span class="ph-m"><ul class="kpi"><li class="dn">Admin hours per week</li><li class="dn">Time to confirm a booking <em>days &rarr; minutes</em></li><li class="up">Bookings per month</li><li class="dn">Double-bookings and errors</li></ul></span></td>
           <td>5&ndash;8 weeks</td><td class="ph-c">&euro;6,500<br>&ndash; &euro;9,500</td>
         </tr>
         <tr>
           <td><span class="ph-n">STEP 4</span><span class="ph-t">Self-service rebooking &amp; waitlist</span>
             <span class="ph-v">Visitors move or cancel their own booking. The free slot goes automatically to the next group waiting.</span></td>
-          <td><span class="ph-m">A cancelled morning gets filled. Today it's just lost.</span></td>
+          <td><span class="ph-m"><ul class="kpi"><li class="up">Cancelled slots refilled <em>~0% today</em></li><li class="up">Tour slots actually used</li><li class="dn">Admin hours on cancellations</li></ul></span></td>
           <td>2&ndash;3 weeks</td><td class="ph-c">&euro;2,700<br>&ndash; &euro;4,500</td>
         </tr>
         <tr>
           <td><span class="ph-n">STEP 5</span><span class="ph-t">Online payments &amp; invoicing</span>
             <span class="ph-v">Visitors pay by iDEAL or card when they book. Schools still get an invoice. Extras get sold during booking, not remembered afterwards.</span></td>
-          <td><span class="ph-m">Money arrives with the booking. No chasing.</span></td>
+          <td><span class="ph-m"><ul class="kpi"><li class="up">Average booking value <em>add-ons sold</em></li><li class="dn">Days to get paid</li><li class="dn">Invoices to chase</li></ul></span></td>
           <td>2&ndash;3 weeks</td><td class="ph-c">&euro;2,800<br>&ndash; &euro;4,200</td>
         </tr>
         <tr>
           <td><span class="ph-n">STEP 6</span><span class="ph-t">Partner portal &amp; yearly reports</span>
             <span class="ph-v">Once a year each partner gets a short report: visitors past their stand, which countries, how many of their own customers came.</span></td>
-          <td><span class="ph-m">More partners renew. This is your biggest income.</span></td>
+          <td><span class="ph-m"><ul class="kpi"><li class="up">Partner renewal rate</li><li class="up">Groups partners bring per year</li><li class="dn">Hours spent writing partner updates</li></ul></span></td>
           <td>4&ndash;6 weeks</td><td class="ph-c">&euro;4,500<br>&ndash; &euro;7,000</td>
         </tr>
         <tr>
           <td><span class="ph-n">STEP 7</span><span class="ph-t">Paid virtual tour &amp; live data</span>
             <span class="ph-v">A paid online tour, several languages, no limit on numbers. Your live crop data made visible.</span></td>
-          <td><span class="ph-m">Income during crop rotation. Today that's zero.</span></td>
+          <td><span class="ph-m"><ul class="kpi"><li class="up">Revenue in the closed season <em>&euro;0 today</em></li><li class="up">People reached beyond building capacity</li><li class="up">International enquiries</li></ul></span></td>
           <td>5&ndash;8 weeks</td><td class="ph-c">&euro;5,500<br>&ndash; &euro;9,000</td>
         </tr>
         <tr>
           <td><span class="ph-n">ALONGSIDE</span><span class="ph-t">Branding, story &amp; social media</span>
             <span class="ph-v">Tour presentation design, branding and story consultation, social media templates, training and content. Priced separately on the next page.</span></td>
-          <td><span class="ph-m">The tour matches the greenhouse behind it.</span></td>
+          <td><span class="ph-m"><ul class="kpi"><li class="up">Posts published per month</li><li class="up">Social reach and followers</li><li class="up">Enquiries coming from social</li><li class="up">Visitor feedback on the tour</li></ul></span></td>
           <td>3 days&ndash;<br>6 weeks</td><td class="ph-c">from<br>&euro;700</td>
         </tr>
         <tr>
           <td><span class="ph-n">ONGOING</span><span class="ph-t">Support &amp; maintenance</span>
             <span class="ph-v">Hosting, keeping an eye on it, small changes. Three months of free adjustments after anything goes live.</span></td>
-          <td><span class="ph-m">It keeps working. You have someone to call.</span></td>
+          <td><span class="ph-m"><ul class="kpi"><li class="up">Uptime</li><li class="dn">Time to fix something <em>reply within 4 hrs</em></li></ul></span></td>
           <td>ongoing</td><td class="ph-c">&euro;250&ndash;500<br>/ month</td>
         </tr>
       </tbody>
@@ -880,14 +887,14 @@ em{font-style:italic}
       <div><b>1 partner</b><span>who renews when they might not have covers the partner reporting. With thirty-plus partners, Aart will know if that's a fair bet.</span></div>
     </div>
 
-    <p class="nt-sub" style="margin-top:52px">Six things we'd watch</p>
+    <p class="nt-sub" style="margin-top:52px">The KPIs we'd report on</p>
     <div class="mtr">
-      <div><b>Hours spent arranging tours</b><span>counted each week</span></div>
-      <div><b>Enquiries that become visits</b><span>out of every ten</span></div>
-      <div><b>How long someone waits</b><span>days now, minutes later</span></div>
-      <div><b>Tour slots left empty</b><span>including cancelled ones</span></div>
-      <div><b>Partners who renew</b><span>and who bring customers</span></div>
-      <div><b>Income during crop rotation</b><span>nothing today</span></div>
+      <div><b>Admin hours per week</b><span>spent arranging tours</span></div>
+      <div><b>Enquiry to booking rate</b><span>how many of ten enquiries arrive</span></div>
+      <div><b>Time to confirm a booking</b><span>days now, minutes later</span></div>
+      <div><b>Slot occupancy</b><span>and cancelled slots refilled</span></div>
+      <div><b>Partner renewal rate</b><span>and groups they bring</span></div>
+      <div><b>Revenue in closed season</b><span>&euro;0 today</span></div>
     </div>
 
     <p class="nt-note" style="color:var(--grey)">No targets next to them, on purpose. Nobody has measured these, so any number we wrote would be made up. Step 1 measures them. Then we agree what good looks like.</p>
