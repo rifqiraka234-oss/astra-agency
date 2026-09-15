@@ -43,6 +43,7 @@ p{margin:0 0 18px;color:#C9D2D0}
 .tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:5px;border:1px solid var(--line-d);color:var(--muted-d);background:#fff}
 .tag.bad{color:#B4231B;border-color:#F0C4C0;background:#FDF3F2}
 .tag.ok{color:#1C6B4A;border-color:#BFE0CE;background:#F1F9F4}
+.tag.k{color:#FE830E;border-color:rgba(254,131,14,.45);background:rgba(254,131,14,.10)}
 .tag.sketch{color:#8A5A00;border-color:#EBD59B;background:#FBF4E2}
 .num{font-family:var(--mono);font-size:clamp(40px,6vw,64px);letter-spacing:-.04em;color:var(--orange);line-height:1;font-weight:500}
 .light .num,.light2 .num{color:var(--orange-d)}
@@ -278,7 +279,7 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
 <section class="sec">
   <div class="w">
     <p class="kicker rv">5 · Where else we could help</p>
-    <h2 class="rv" style="max-width:860px">You already have engineers. These are the four jobs we would take off their plate first.</h2>
+    <h2 class="rv" style="max-width:860px">You already have engineers. These are the four things we would build alongside them.</h2>
     <div class="grid2" style="margin-top:36px">
       <div class="card rv"><svg class="mock" viewBox="0 0 560 300" role="img" aria-label="Mockup of a capture review queue turning a recorded interview into draft knowledge elements">
   <rect width="560" height="300" rx="10" fill="#0F1614"/>
@@ -286,7 +287,7 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
   <rect x="0" y="0" width="560" height="34" rx="10" fill="#070C0B"/><rect x="0" y="24" width="560" height="10" fill="#070C0B"/>
   <circle cx="18" cy="17" r="3.5" fill="#FE830E"/>
   <text x="32" y="21" font-family="SFMono-Regular,Menlo,monospace" font-size="9.5" fill="#8A9794" letter-spacing="1.2">REVIEW QUEUE</text>
-  <text x="504" y="21" font-family="SFMono-Regular,Menlo,monospace" font-size="9.5" fill="#FE830E">12 to review</text>
+  <text x="542" y="21" text-anchor="end" font-family="SFMono-Regular,Menlo,monospace" font-size="9.5" fill="#FE830E">12 to review</text>
 
   <text x="18" y="54" font-family="SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#5F6B68" letter-spacing="1.1">SOURCE</text>
   <rect x="18" y="62" width="196" height="216" rx="7" fill="rgba(255,255,255,.035)" stroke="rgba(255,255,255,.07)"/>
@@ -322,7 +323,9 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
   </g>
   <text x="258" y="278" font-family="SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#5F6B68">9 drafted from this interview, 3 already confirmed</text>
 </svg>
-        <h3 style="color:#fff;margin-top:18px">Capture, the expensive step</h3><p class="dim">Turning what one experienced person knows into a structured knowledge element is where the hours go. Interview recordings, calls, shift notes and old procedures into draft elements, with a human review queue on the end. The reviewer corrects instead of writing, which is a much faster job.</p></div>
+        <p style="margin:18px 0 0"><span class="tag k">Internal web app</span></p>
+        <h3 style="color:#fff;margin-top:14px">A review app for your team</h3>
+        <p class="dim">Your AI drafts the knowledge elements from interview recordings, call transcripts and the procedures nobody has updated since 2019. Your consultant opens this and approves or fixes each one. Approving is much faster than writing, so one person gets through a plant in days instead of weeks.</p></div>
       <div class="card rv"><svg class="mock" viewBox="0 0 560 300" role="img" aria-label="Mockup of an answer carrying the knowledge element, process step and person it came from">
   <rect width="560" height="300" rx="10" fill="#0F1614"/>
   <rect x="1" y="1" width="558" height="298" rx="10" fill="none" stroke="rgba(255,255,255,.09)"/>
@@ -358,7 +361,9 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
   <g fill="#2E3735"><rect x="464" y="140" width="66" height="4" rx="2"/><rect x="464" y="152" width="54" height="4" rx="2"/><rect x="464" y="164" width="66" height="4" rx="2"/><rect x="464" y="176" width="40" height="4" rx="2"/></g>
   <rect x="460" y="136" width="2.5" height="48" rx="1.25" fill="#FE830E"/>
 </svg>
-        <h3 style="color:#fff;margin-top:18px">Answers that show where they came from</h3><p class="dim">Every answer carries the element it came from, the process step it belongs to and the person it was captured from. That&rsquo;s what turns a plausible answer into one a plant manager will actually run the line on.</p></div>
+        <p style="margin:18px 0 0"><span class="tag k">Customer facing</span></p>
+        <h3 style="color:#fff;margin-top:14px">The assistant your customers actually use</h3>
+        <p class="dim">The same chat, with one difference. Every answer shows the element it came from, the process step it belongs to and when it was captured. A plant manager will act on an answer he can trace back. He won&rsquo;t act on one he can&rsquo;t.</p></div>
       <div class="card rv"><svg class="mock" viewBox="0 0 560 300" role="img" aria-label="Mockup of a process knowledge map with criticality shown per step">
   <rect width="560" height="300" rx="10" fill="#0F1614"/>
   <rect x="1" y="1" width="558" height="298" rx="10" fill="none" stroke="rgba(255,255,255,.09)"/>
@@ -393,7 +398,9 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
   <circle cx="358" cy="268" r="5" fill="rgba(255,255,255,.2)"/>
   <text x="372" y="272" font-family="Inter,sans-serif" font-size="10" fill="#8A9794">Covered</text>
 </svg>
-        <h3 style="color:#fff;margin-top:18px">A knowledge map that draws itself</h3><p class="dim">Cluster captured elements onto the process map instead of drawing it by hand, and let the criticality scoring run continuously. The WKI stops being a number recalculated for a report and becomes one that moves on its own.</p></div>
+        <p style="margin:18px 0 0"><span class="tag k">Dashboard</span></p>
+        <h3 style="color:#fff;margin-top:14px">A dashboard the customer logs into</h3>
+        <p class="dim">His process map, his WKI per step, and what moved since last month. It draws itself from the captured elements instead of someone rebuilding it for a report. This is also what makes the renewal easy, because he watches the number come down.</p></div>
       <div class="card rv"><svg class="mock" viewBox="0 0 560 300" role="img" aria-label="Mockup of an alert fired when a knowledge element depends on one person who is close to retirement">
   <rect width="560" height="300" rx="10" fill="#0F1614"/>
   <rect x="1" y="1" width="558" height="298" rx="10" fill="none" stroke="rgba(255,255,255,.09)"/>
@@ -427,9 +434,11 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
     <text x="18" y="268">or entry into the retirement window.</text>
   </g>
 </svg>
-        <h3 style="color:#fff;margin-top:18px">Alerts when knowledge is about to walk</h3><p class="dim">Watch for elements that only ever trace back to one person, then fire when that person changes role, cuts hours or enters their retirement window. It tells a customer something he never asked about and couldn&rsquo;t have known.</p></div>
+        <p style="margin:18px 0 0"><span class="tag k">Email and in app</span></p>
+        <h3 style="color:#fff;margin-top:14px">Alerts when knowledge is about to walk</h3>
+        <p class="dim">One email. Step 02 now rests on one person, he retires in 14 months, no handover is booked. It tells him something he never asked about, which is the moment software stops being a subscription and starts being worth paying for.</p></div>
     </div>
-    <p class="rv" style="margin-top:30px;max-width:800px">Then the unglamorous half, which is what usually blocks a pilot. Onboarding that doesn&rsquo;t eat a founder&rsquo;s week, routing from a completed check to the right conversation, internal dashboards, the customer portal, and the websites and apps around all of it.</p>
+    <p class="rv" style="margin-top:30px;max-width:800px">Then the ordinary things around it. A customer portal. An onboarding flow so a pilot doesn&rsquo;t eat your week. A CRM hookup so a finished check lands with the right person and nobody reads a spreadsheet to decide who to call. Internal dashboards for pilot progress. And the website itself.</p>
   </div>
 </section>
 
