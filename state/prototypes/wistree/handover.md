@@ -1,7 +1,18 @@
 # WisTree deck — handover and open items
-Live: https://astra-wistree-deck.netlify.app
-Simplified and de-narrated 2026-09-15 (v4, current, two register passes).
-sha256 of deployed file
+Live URL: https://astra-wistree-deck.netlify.app
+
+**WARNING, 2026-09-15. The live URL is NOT the current deck.** The imagery pass
+(v5) could not be deployed. Netlify rejected two deploy attempts with
+`Skipped due to account credit usage exceeded` (deploy ids 6aa96a47494ba99baaeee4ee
+and 6aa96a77000db62461acc87e, both state `error`, `skipped: true`). This is a
+billing limit on the Netlify account, not a fault in the build. The live site
+still serves v4 text-only, and `/img/hero.jpg` returns 404 there. Redeploy this
+folder once the account has credit, then re-verify the five images load and
+re-check the byte diff.
+Imagery pass 2026-09-15 (v5, current in repo, NOT deployed).
+sha256 7ffca5b7633c7a95a7fa11dd7a73db1de66de7b35c9b2ce469effe376de87aa9
+(51,327 bytes), plus `img/` with five files, 775 KB total.
+v4 (last version actually live) was
 095ac106d824a6c5f012f91fcc2f49d175e5a84bd03a2a75e09ac839f8e92cc0 (36,870 bytes).
 v3 was 03f3969b44416b570676ccb420b2adc5fa83d70778eba4128f8eb6336aef8d08 (44,606 bytes).
 v2 was 6cf41043f20768cede67eea974d53ce2ac98d8ec9c75ef5aae820d4356e99bd9 (34,455 bytes).
@@ -153,6 +164,32 @@ writer explaining what he just said, which is the tell to grep for.
 **The self check before any deck ships.** Read every heading alone. If a heading
 names a thing rather than claims a thing, rewrite it. Then read every sentence
 and delete any clause that would still be obvious with it gone.
+
+## Imagery, v5
+
+**Photographs, both Unsplash, both licence free and neither presented as WisTree's.**
+`img/hero.jpg`, engineers conferring over a laptop on an automotive development
+floor, sits behind the hero under a dark gradient with the tree canvas dropped to
+0.22 opacity so it reads as a watermark rather than scribble over the people.
+`img/machinist.jpg`, an experienced machinist at a lathe, runs full bleed between
+sections 1 and 2, captioned "The person the whole process quietly depends on.
+Photograph, Unsplash." **The caption deliberately does not claim this is a WisTree
+customer, site or employee**, per the portrait guardrail in CLAUDE.md.
+
+**Three real product screenshots**, extracted from the official Astra deck PDF
+(page 5) with PyMuPDF and re-encoded. `img/w-unilever.jpg`, `img/w-gpay.jpg`,
+`img/w-mwx.jpg`. These are the genuine article and sit under the "also by our
+development partner" heading, which stays.
+
+**Four UI mockups**, inline SVG, no external assets. A capture review queue turning
+a transcript into draft elements, an assistant answer carrying its source chips, a
+process knowledge map with criticality per step, and an early warning card firing on
+a step whose knowledge rests on one person near retirement. All in English, unlike
+the questionnaire, because they are concept sketches rather than shipping UI.
+
+Image QA, run in Chromium against the built page. Zero responses at 400 or above,
+all five files decoded with non zero natural dimensions, no horizontal overflow at
+420px, and every image carries real alt text.
 
 ## Astra facts used in section 6, and their source
 All from the official deck Raka supplied 2026-09-15 and now transcribed into

@@ -50,8 +50,7 @@ p{margin:0 0 18px;color:#C9D2D0}
 .hero .w{max-width:1080px}
 .hero-copy{max-width:640px}
 .scrim{position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,var(--ink) 0%,var(--ink) 34%,rgba(12,18,17,.90) 52%,rgba(12,18,17,.55) 72%,rgba(12,18,17,.35) 100%)}
-@media(max-width:860px){.scrim{background:linear-gradient(180deg,var(--ink) 0%,rgba(12,18,17,.93) 46%,rgba(12,18,17,.62) 100%)}}
-#canvasWrap{position:absolute;inset:0;z-index:0;opacity:.85}
+#canvasWrap{position:absolute;inset:0;z-index:0;opacity:.22}
 #tree{width:100%;height:100%;display:block}
 .hero .w{position:relative;z-index:1}
 .rv{opacity:0;transform:translateY(20px);transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1)}
@@ -68,12 +67,24 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
 .light .quote,.light2 .quote{color:#232C2B}
 .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .tw table{min-width:520px}
-@media(max-width:860px){.grid2,.grid3{grid-template-columns:1fr}.sec{padding:66px 20px}.hero{padding:96px 20px 64px}}
+.mock{width:100%;height:auto;display:block;border-radius:10px}
+.shot{width:100%;height:188px;object-fit:contain;display:block;border-radius:9px;border:1px solid var(--line-d);background:#fff;padding:9px}
+.figure{margin:0}
+.figure figcaption{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.02em;margin-top:10px;line-height:1.5}
+.light .figure figcaption,.light2 .figure figcaption{color:var(--muted-d)}
+.band{position:relative;height:clamp(280px,38vw,440px);overflow:hidden}
+.band img{width:100%;height:100%;object-fit:cover;display:block}
+.band .cap{position:absolute;left:0;right:0;bottom:0;padding:18px 32px;background:linear-gradient(to top,rgba(12,18,17,.88),rgba(12,18,17,0));font-family:var(--mono);font-size:10.5px;color:#9FACA9}
+#heroPhoto{position:absolute;inset:0;z-index:0}
+#heroPhoto img{width:100%;height:100%;object-fit:cover;display:block}
+#heroPhoto::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,18,17,.96) 0%,rgba(12,18,17,.88) 42%,rgba(12,18,17,.55) 72%,rgba(12,18,17,.62) 100%)}
+@media(max-width:860px){.band{height:240px}.band .cap{padding:14px 20px}.grid2,.grid3{grid-template-columns:1fr}.sec{padding:66px 20px}.hero{padding:96px 20px 64px}}
 </style>
 </head>
 <body>
 
 <section class="hero" id="hero">
+  <div id="heroPhoto"><img src="img/hero.jpg" alt="Engineers conferring over a laptop on an automotive development floor"></div>
   <div id="canvasWrap"><canvas id="tree"></canvas></div>
   <div class="w">
     <p class="kicker rv">Astra × WisTree &nbsp;·&nbsp; 15 September 2026</p>
@@ -95,6 +106,11 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
     <p class="rv" style="margin-top:28px">The detailed WKI analysis is step two. This is step one.</p>
   </div>
 </section>
+
+<figure class="band figure rv" style="margin:0">
+  <img src="img/machinist.jpg" alt="An experienced machinist working at a lathe in a small workshop">
+  <figcaption class="cap">The person the whole process quietly depends on. Photograph, Unsplash.</figcaption>
+</figure>
 
 <section class="sec ink2">
   <div class="w">
@@ -264,10 +280,154 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
     <p class="kicker rv">5 · Where else we could help</p>
     <h2 class="rv" style="max-width:860px">You already have engineers. These are the four jobs we would take off their plate first.</h2>
     <div class="grid2" style="margin-top:36px">
-      <div class="card rv"><p class="num" style="font-size:26px">01</p><h3 style="color:#fff;margin-top:12px">Capture, the expensive step</h3><p class="dim">Turning what one experienced person knows into a structured knowledge element is where the hours go. Interview recordings, calls, shift notes and old procedures into draft elements, with a human review queue on the end. The reviewer corrects instead of writing, which is a much faster job.</p></div>
-      <div class="card rv"><p class="num" style="font-size:26px">02</p><h3 style="color:#fff;margin-top:12px">Answers that show where they came from</h3><p class="dim">Every answer carries the element it came from, the process step it belongs to and the person it was captured from. That&rsquo;s what turns a plausible answer into one a plant manager will actually run the line on.</p></div>
-      <div class="card rv"><p class="num" style="font-size:26px">03</p><h3 style="color:#fff;margin-top:12px">A knowledge map that draws itself</h3><p class="dim">Cluster captured elements onto the process map instead of drawing it by hand, and let the criticality scoring run continuously. The WKI stops being a number recalculated for a report and becomes one that moves on its own.</p></div>
-      <div class="card rv"><p class="num" style="font-size:26px">04</p><h3 style="color:#fff;margin-top:12px">Alerts when knowledge is about to walk</h3><p class="dim">Watch for elements that only ever trace back to one person, then fire when that person changes role, cuts hours or enters their retirement window. It tells a customer something he never asked about and couldn&rsquo;t have known.</p></div>
+      <div class="card rv"><svg class="mock" viewBox="0 0 560 300" role="img" aria-label="Mockup of a capture review queue turning a recorded interview into draft knowledge elements">
+  <rect width="560" height="300" rx="10" fill="#0F1614"/>
+  <rect x="1" y="1" width="558" height="298" rx="10" fill="none" stroke="rgba(255,255,255,.09)"/>
+  <rect x="0" y="0" width="560" height="34" rx="10" fill="#070C0B"/><rect x="0" y="24" width="560" height="10" fill="#070C0B"/>
+  <circle cx="18" cy="17" r="3.5" fill="#FE830E"/>
+  <text x="32" y="21" font-family="SFMono-Regular,Menlo,monospace" font-size="9.5" fill="#8A9794" letter-spacing="1.2">REVIEW QUEUE</text>
+  <text x="504" y="21" font-family="SFMono-Regular,Menlo,monospace" font-size="9.5" fill="#FE830E">12 to review</text>
+
+  <text x="18" y="54" font-family="SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#5F6B68" letter-spacing="1.1">SOURCE</text>
+  <rect x="18" y="62" width="196" height="216" rx="7" fill="rgba(255,255,255,.035)" stroke="rgba(255,255,255,.07)"/>
+  <g fill="#3C4644"><rect x="30" y="76" width="140" height="5" rx="2.5"/><rect x="30" y="90" width="168" height="5" rx="2.5"/><rect x="30" y="104" width="120" height="5" rx="2.5"/></g>
+  <rect x="30" y="122" width="172" height="5" rx="2.5" fill="#6C7A77"/>
+  <rect x="30" y="136" width="150" height="5" rx="2.5" fill="#6C7A77"/>
+  <rect x="26" y="118" width="3" height="27" rx="1.5" fill="#FE830E"/>
+  <g fill="#3C4644"><rect x="30" y="158" width="160" height="5" rx="2.5"/><rect x="30" y="172" width="134" height="5" rx="2.5"/><rect x="30" y="186" width="168" height="5" rx="2.5"/><rect x="30" y="200" width="110" height="5" rx="2.5"/></g>
+  <g font-family="SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#5F6B68"><text x="30" y="242">Interview, plant 2</text><text x="30" y="256">41 min, transcribed</text></g>
+
+  <path d="M224 170 L246 170" stroke="#FE830E" stroke-width="1.5" fill="none"/>
+  <path d="M241 165 L247 170 L241 175" stroke="#FE830E" stroke-width="1.5" fill="none"/>
+
+  <text x="258" y="54" font-family="SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#5F6B68" letter-spacing="1.1">DRAFTED, AWAITING REVIEW</text>
+  <g>
+    <rect x="258" y="62" width="284" height="64" rx="7" fill="rgba(254,131,14,.08)" stroke="#FE830E"/>
+    <rect x="270" y="76" width="118" height="6" rx="3" fill="#FE830E"/>
+    <rect x="270" y="92" width="240" height="5" rx="2.5" fill="#8A9794"/>
+    <rect x="270" y="105" width="196" height="5" rx="2.5" fill="#8A9794"/>
+    <rect x="470" y="70" width="60" height="18" rx="9" fill="#FE830E"/>
+    <text x="500" y="82.5" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#0C1211">Review</text>
+  </g>
+  <g opacity=".62">
+    <rect x="258" y="136" width="284" height="60" rx="7" fill="rgba(255,255,255,.035)" stroke="rgba(255,255,255,.07)"/>
+    <rect x="270" y="150" width="96" height="6" rx="3" fill="#6C7A77"/>
+    <rect x="270" y="166" width="224" height="5" rx="2.5" fill="#3C4644"/>
+    <rect x="270" y="179" width="168" height="5" rx="2.5" fill="#3C4644"/>
+  </g>
+  <g opacity=".34">
+    <rect x="258" y="206" width="284" height="52" rx="7" fill="rgba(255,255,255,.035)" stroke="rgba(255,255,255,.07)"/>
+    <rect x="270" y="220" width="110" height="6" rx="3" fill="#6C7A77"/>
+    <rect x="270" y="236" width="206" height="5" rx="2.5" fill="#3C4644"/>
+  </g>
+  <text x="258" y="278" font-family="SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#5F6B68">9 drafted from this interview, 3 already confirmed</text>
+</svg>
+        <h3 style="color:#fff;margin-top:18px">Capture, the expensive step</h3><p class="dim">Turning what one experienced person knows into a structured knowledge element is where the hours go. Interview recordings, calls, shift notes and old procedures into draft elements, with a human review queue on the end. The reviewer corrects instead of writing, which is a much faster job.</p></div>
+      <div class="card rv"><svg class="mock" viewBox="0 0 560 300" role="img" aria-label="Mockup of an answer carrying the knowledge element, process step and person it came from">
+  <rect width="560" height="300" rx="10" fill="#0F1614"/>
+  <rect x="1" y="1" width="558" height="298" rx="10" fill="none" stroke="rgba(255,255,255,.09)"/>
+  <rect x="0" y="0" width="560" height="34" rx="10" fill="#070C0B"/><rect x="0" y="24" width="560" height="10" fill="#070C0B"/>
+  <circle cx="18" cy="17" r="3.5" fill="#FE830E"/>
+  <text x="32" y="21" font-family="SFMono-Regular,Menlo,monospace" font-size="9.5" fill="#8A9794" letter-spacing="1.2">KNOWLEDGE ASSISTANT</text>
+
+  <rect x="212" y="52" width="330" height="34" rx="8" fill="rgba(255,255,255,.06)"/>
+  <rect x="228" y="65" width="272" height="6" rx="3" fill="#8A9794"/>
+
+  <rect x="18" y="102" width="420" height="120" rx="8" fill="rgba(255,255,255,.035)" stroke="rgba(255,255,255,.08)"/>
+  <rect x="32" y="118" width="300" height="6" rx="3" fill="#C9D2D0"/>
+  <rect x="32" y="134" width="380" height="6" rx="3" fill="#C9D2D0"/>
+  <rect x="32" y="150" width="344" height="6" rx="3" fill="#C9D2D0"/>
+  <rect x="32" y="166" width="218" height="6" rx="3" fill="#C9D2D0"/>
+  <line x1="32" y1="184" x2="424" y2="184" stroke="rgba(255,255,255,.09)"/>
+  <text x="32" y="200" font-family="SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#5F6B68" letter-spacing="1.1">WHERE THIS CAME FROM</text>
+  <g>
+    <rect x="32" y="206" width="112" height="19" rx="9.5" fill="rgba(254,131,14,.14)" stroke="#FE830E"/>
+    <text x="88" y="219" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#FE830E">Element KE-0412</text>
+    <rect x="152" y="206" width="126" height="19" rx="9.5" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)"/>
+    <text x="215" y="219" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#C9D2D0">Step 4, changeover</text>
+    <rect x="286" y="206" width="138" height="19" rx="9.5" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)"/>
+    <circle cx="300" cy="215.5" r="5" fill="#3C4644"/>
+    <text x="316" y="219" font-family="Inter,sans-serif" font-size="9" fill="#C9D2D0">captured 03.2026</text>
+  </g>
+  <g font-family="SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#5F6B68">
+    <text x="18" y="252">Without the source it is an opinion.</text>
+    <text x="18" y="268">With it, it is an instruction.</text>
+  </g>
+  <rect x="452" y="102" width="90" height="120" rx="8" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.07)"/>
+  <text x="497" y="127" text-anchor="middle" font-family="SFMono-Regular,Menlo,monospace" font-size="8" fill="#5F6B68">SOURCE</text>
+  <g fill="#2E3735"><rect x="464" y="140" width="66" height="4" rx="2"/><rect x="464" y="152" width="54" height="4" rx="2"/><rect x="464" y="164" width="66" height="4" rx="2"/><rect x="464" y="176" width="40" height="4" rx="2"/></g>
+  <rect x="460" y="136" width="2.5" height="48" rx="1.25" fill="#FE830E"/>
+</svg>
+        <h3 style="color:#fff;margin-top:18px">Answers that show where they came from</h3><p class="dim">Every answer carries the element it came from, the process step it belongs to and the person it was captured from. That&rsquo;s what turns a plausible answer into one a plant manager will actually run the line on.</p></div>
+      <div class="card rv"><svg class="mock" viewBox="0 0 560 300" role="img" aria-label="Mockup of a process knowledge map with criticality shown per step">
+  <rect width="560" height="300" rx="10" fill="#0F1614"/>
+  <rect x="1" y="1" width="558" height="298" rx="10" fill="none" stroke="rgba(255,255,255,.09)"/>
+  <rect x="0" y="0" width="560" height="34" rx="10" fill="#070C0B"/><rect x="0" y="24" width="560" height="10" fill="#070C0B"/>
+  <circle cx="18" cy="17" r="3.5" fill="#FE830E"/>
+  <text x="32" y="21" font-family="SFMono-Regular,Menlo,monospace" font-size="9.5" fill="#8A9794" letter-spacing="1.2">KNOWLEDGE MAP</text>
+  <text x="470" y="21" font-family="SFMono-Regular,Menlo,monospace" font-size="9.5" fill="#5F6B68">WKI 68</text>
+
+  <g stroke="rgba(255,255,255,.14)" stroke-width="1.4" fill="none">
+    <path d="M78 150 L172 150"/><path d="M226 150 L318 118"/><path d="M226 150 L318 190"/><path d="M372 118 L462 150"/><path d="M372 190 L462 150"/>
+  </g>
+  <g>
+    <circle cx="52" cy="150" r="26" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.16)"/>
+    <text x="52" y="154" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#C9D2D0">01</text>
+    <circle cx="199" cy="150" r="30" fill="rgba(254,131,14,.16)" stroke="#FE830E" stroke-width="2"/>
+    <text x="199" y="154" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#FE830E">02</text>
+    <circle cx="345" cy="118" r="24" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.16)"/>
+    <text x="345" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#C9D2D0">03</text>
+    <circle cx="345" cy="190" r="28" fill="rgba(254,131,14,.10)" stroke="rgba(254,131,14,.55)" stroke-width="1.6"/>
+    <text x="345" y="194" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#FE830E">04</text>
+    <circle cx="488" cy="150" r="26" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.16)"/>
+    <text x="488" y="154" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#C9D2D0">05</text>
+  </g>
+  <g font-family="Inter,sans-serif" font-size="9" fill="#5F6B68" text-anchor="middle">
+    <text x="52" y="194">Order</text><text x="199" y="200">Changeover</text><text x="345" y="90">Inspection</text><text x="345" y="236">Fault</text><text x="488" y="194">Dispatch</text>
+  </g>
+  <rect x="18" y="252" width="524" height="32" rx="7" fill="rgba(255,255,255,.035)"/>
+  <circle cx="36" cy="268" r="5" fill="#FE830E"/>
+  <text x="50" y="272" font-family="Inter,sans-serif" font-size="10" fill="#C9D2D0">Critical, rests on one person</text>
+  <circle cx="262" cy="268" r="5" fill="rgba(254,131,14,.45)"/>
+  <text x="276" y="272" font-family="Inter,sans-serif" font-size="10" fill="#8A9794">Elevated</text>
+  <circle cx="358" cy="268" r="5" fill="rgba(255,255,255,.2)"/>
+  <text x="372" y="272" font-family="Inter,sans-serif" font-size="10" fill="#8A9794">Covered</text>
+</svg>
+        <h3 style="color:#fff;margin-top:18px">A knowledge map that draws itself</h3><p class="dim">Cluster captured elements onto the process map instead of drawing it by hand, and let the criticality scoring run continuously. The WKI stops being a number recalculated for a report and becomes one that moves on its own.</p></div>
+      <div class="card rv"><svg class="mock" viewBox="0 0 560 300" role="img" aria-label="Mockup of an alert fired when a knowledge element depends on one person who is close to retirement">
+  <rect width="560" height="300" rx="10" fill="#0F1614"/>
+  <rect x="1" y="1" width="558" height="298" rx="10" fill="none" stroke="rgba(255,255,255,.09)"/>
+  <rect x="0" y="0" width="560" height="34" rx="10" fill="#070C0B"/><rect x="0" y="24" width="560" height="10" fill="#070C0B"/>
+  <circle cx="18" cy="17" r="3.5" fill="#FE830E"/>
+  <text x="32" y="21" font-family="SFMono-Regular,Menlo,monospace" font-size="9.5" fill="#8A9794" letter-spacing="1.2">EARLY WARNING</text>
+
+  <rect x="18" y="52" width="524" height="104" rx="9" fill="rgba(254,131,14,.09)" stroke="#FE830E"/>
+  <rect x="18" y="52" width="3.5" height="104" fill="#FE830E"/>
+  <text x="40" y="80" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#FE830E">Step 02, changeover</text>
+  <text x="40" y="104" font-family="Inter,sans-serif" font-size="12" fill="#DDE3E2">7 of 9 knowledge elements trace back to one person.</text>
+  <text x="40" y="126" font-family="Inter,sans-serif" font-size="12" fill="#DDE3E2">Retirement in 14 months. No handover scheduled.</text>
+  <rect x="404" y="62" width="126" height="22" rx="11" fill="#FE830E"/>
+  <text x="467" y="77" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#0C1211">Start handover</text>
+
+  <g font-family="SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#5F6B68" letter-spacing="1.1"><text x="18" y="182">COVERAGE BY PROCESS STEP</text></g>
+  <g>
+    <rect x="18" y="192" width="100" height="30" rx="6" fill="rgba(255,255,255,.05)"/><rect x="18" y="192" width="88" height="30" rx="6" fill="rgba(255,255,255,.14)"/>
+    <text x="28" y="212" font-family="Inter,sans-serif" font-size="10" fill="#C9D2D0">01</text>
+    <rect x="128" y="192" width="100" height="30" rx="6" fill="rgba(255,255,255,.05)"/><rect x="128" y="192" width="22" height="30" rx="6" fill="#FE830E"/>
+    <text x="138" y="212" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#0C1211">02</text>
+    <rect x="238" y="192" width="100" height="30" rx="6" fill="rgba(255,255,255,.05)"/><rect x="238" y="192" width="74" height="30" rx="6" fill="rgba(255,255,255,.14)"/>
+    <text x="248" y="212" font-family="Inter,sans-serif" font-size="10" fill="#C9D2D0">03</text>
+    <rect x="348" y="192" width="100" height="30" rx="6" fill="rgba(255,255,255,.05)"/><rect x="348" y="192" width="46" height="30" rx="6" fill="rgba(254,131,14,.5)"/>
+    <text x="358" y="212" font-family="Inter,sans-serif" font-size="10" fill="#EDEFEE">04</text>
+    <rect x="458" y="192" width="84" height="30" rx="6" fill="rgba(255,255,255,.05)"/><rect x="458" y="192" width="72" height="30" rx="6" fill="rgba(255,255,255,.14)"/>
+    <text x="468" y="212" font-family="Inter,sans-serif" font-size="10" fill="#C9D2D0">05</text>
+  </g>
+  <g font-family="SFMono-Regular,Menlo,monospace" font-size="8.5" fill="#5F6B68">
+    <text x="18" y="252">Fires on a role change, a cut in hours,</text>
+    <text x="18" y="268">or entry into the retirement window.</text>
+  </g>
+</svg>
+        <h3 style="color:#fff;margin-top:18px">Alerts when knowledge is about to walk</h3><p class="dim">Watch for elements that only ever trace back to one person, then fire when that person changes role, cuts hours or enters their retirement window. It tells a customer something he never asked about and couldn&rsquo;t have known.</p></div>
     </div>
     <p class="rv" style="margin-top:30px;max-width:800px">Then the unglamorous half, which is what usually blocks a pilot. Onboarding that doesn&rsquo;t eat a founder&rsquo;s week, routing from a completed check to the right conversation, internal dashboards, the customer portal, and the websites and apps around all of it.</p>
   </div>
@@ -292,9 +452,12 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
 
     <h3 class="rv" style="margin-top:44px;font-size:15px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted-d)">Selected work, also by our development partner</h3>
     <div class="grid3" style="margin-top:20px">
-      <div class="card rv"><h3>Unilever 1001 Ramadhan Inspiration</h3><p class="dim" style="font-size:15px;margin:0">A content and promotion platform handling 48 Unilever brands across web and mobile.</p></div>
-      <div class="card rv"><h3>GPay</h3><p class="dim" style="font-size:15px;margin:0">A payments app covering balance, top up, transfers, bills and a promotions and cashback engine.</p></div>
-      <div class="card rv"><h3>MWX AI Market</h3><p class="dim" style="font-size:15px;margin:0">An AI guided marketplace on interoperable blockchain protocols, aimed at smaller businesses.</p></div>
+      <div class="card rv"><img class="shot" style="margin-bottom:16px" src="img/w-unilever.jpg" alt="The Unilever 1001 Ramadhan Inspiration content and promotion platform" loading="lazy">
+        <h3>Unilever 1001 Ramadhan Inspiration</h3><p class="dim" style="font-size:15px;margin:0">A content and promotion platform handling 48 Unilever brands across web and mobile.</p></div>
+      <div class="card rv"><img class="shot" style="margin-bottom:16px" src="img/w-gpay.jpg" alt="Two screens from the GPay app, the wallet home and a payment confirmation" loading="lazy">
+        <h3>GPay</h3><p class="dim" style="font-size:15px;margin:0">A payments app covering balance, top up, transfers, bills and a promotions and cashback engine.</p></div>
+      <div class="card rv"><img class="shot" style="margin-bottom:16px" src="img/w-mwx.jpg" alt="The MWX AI Market marketplace home with AI guided search and product cards" loading="lazy">
+        <h3>MWX AI Market</h3><p class="dim" style="font-size:15px;margin:0">An AI guided marketplace on interoperable blockchain protocols, aimed at smaller businesses.</p></div>
     </div>
 
     <div class="card rv" style="margin-top:34px">
@@ -360,7 +523,7 @@ code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);paddi
     function build(){
       nodes=[];
       var wide = W>860;
-      var baseX = wide ? W*0.76 : W*0.5;
+      var baseX = wide ? W*0.9 : W*0.5;
       var baseY = H*1.02;
       var len = wide ? Math.min(H*0.27,190) : Math.min(H*0.20,120);
       branch(baseX,baseY,-Math.PI/2,len,7,3);
