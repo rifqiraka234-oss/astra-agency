@@ -1,7 +1,8 @@
 # WisTree deck — handover and open items
 Live: https://astra-wistree-deck.netlify.app
-Restructured again 2026-09-15 (v3, on Raka's call). sha256 of deployed file
-03f3969b44416b570676ccb420b2adc5fa83d70778eba4128f8eb6336aef8d08 (44,606 bytes).
+Simplified 2026-09-15 (v4, current). sha256 of deployed file
+2c5b33ccca7459d4e9efcfdb635796b8fb4d0a25d2f98508436c3cb33834495a (37,481 bytes).
+v3 was 03f3969b44416b570676ccb420b2adc5fa83d70778eba4128f8eb6336aef8d08 (44,606 bytes).
 v2 was 6cf41043f20768cede67eea974d53ce2ac98d8ec9c75ef5aae820d4356e99bd9 (34,455 bytes).
 v1 was 8d16ca3d6ad53cbe8d313b7869701617b2278aab9622ce28f0dcde4515158a9c (37,749 bytes).
 
@@ -12,12 +13,38 @@ of site audit Karim never asked for and only reached his actual question in sect
 **v2** cut the audit to an appendix and answered only his question, the scale. Correct
 but narrow. It informed and did not sell.
 
-**v3, current, Raka's call.** Full deck arc. Analysed, problem, prototype,
+**v3, Raka's call.** Full deck arc. Analysed, problem, prototype,
 infrastructure, what else we can build, who we are, book a call. The site findings stay
 in the appendix. The new material is the architecture of the benchmark service and a
 section on the AI work we would pick up alongside their own engineers.
 
-## Structure, v3
+**v4, current.** Same arc, much leaner. Raka's note was that v3 read wordy and
+was hard to follow, that it should be English unless German is genuinely needed,
+and that the site error list had no place in it. So the appendix is gone
+entirely, the diagram and all prose are English, and the word count dropped from
+2,472 to 1,567. The German that remains is only the questionnaire itself, which
+is what a German plant manager actually answers, and section 3 now carries an
+English explanation of all six questions and the four score bands beside it so a
+non German speaker can follow the whole thing. Section 6 was rewritten from the
+official Astra deck, so it now carries the real company, the Amwisesa delivery
+structure, the three named deliveries and Raka himself.
+
+## Structure, v4
+Hero, then:
+1. What you asked for. His quote, the two jobs.
+2. What we found. The free competitor, and why the comparison is the half to build.
+3. Try it. The German questionnaire, with the English gloss beside it.
+4. What sits behind it. The architecture diagram, English labels.
+5. Where else we could help. Four AI and workflow builds, framed as capacity.
+6. Who we are. Astra, the delivery structure, the three deliveries, and Raka.
+7. Next step. Are these the right six questions, plus the booking link.
+
+No appendix. The site findings (404s, typo, conflicting titles, freemail, empty
+Download page) are cut from the deck. They stay recorded in research.md and can
+still be handed over separately if Raka wants, but they are not part of this
+artefact.
+
+## Structure, v3, superseded
 Hero, then:
 1. What we looked at. His quote, the two jobs in it, the research surface.
 2. What we found. WiMa·Check gives the indication away free, the comparison is the
@@ -67,12 +94,32 @@ live at 200, both partner logos present, job titles conflicting across two pages
 three freemail addresses on Kontakt, and zero citation markers on the homepage.
 Destatis figure taken from the primary press release, not a secondary summary.
 
-## QA record, v3
-Cold load, nothing forced: 0 pageerrors, 0 console errors, 61 of 61 reveal elements
-fired naturally, 9 sections. Quiz exercised end to end, max path returns 100 / Kritisch with
+## QA record, v4
+Cold load, nothing forced: 0 pageerrors, 0 console errors, 48 of 48 reveal elements
+fired naturally, 8 sections. Quiz exercised end to end, max path returns 100 / Kritisch with
 the benchmark marker drawn. Single inline script block parses on the live file. No
 horizontal overflow at 420px, tables scroll inside their own containers. Every section
 screenshotted at 1400px and the hero at 420px.
-Visible copy: 0 em dashes, 0 en dashes, 0 colons, 36 contractions, 2,472 words, no
+Visible copy: 0 em dashes, 0 en dashes, 0 colons, 22 contractions, 1,567 words, no
 banned terms from the NO-AI-SLOP list.
 Live file diff against the deployed file is 720 bytes of Netlify HUD markup only.
+
+## Astra facts used in section 6, and their source
+All from the official deck Raka supplied 2026-09-15 and now transcribed into
+CLAUDE.md. Boutique digital and innovation agency in the Netherlands. Grow,
+Optimise, Innovate. Delivery partner Amwisesa in Indonesia, 10+ years, web and
+mobile, warehouse/franchise/retail/F&B systems, clinic/spa/fleet/leisure
+platforms. The deck's own line "Dutch project management and strategy, with
+proven international development capacity". Three named deliveries, Unilever
+1001 Ramadhan Inspiration across 48 brands, the GPay app, MWX AI Market. The
+domain astraagency.nl.
+
+**The disclosure is mandatory.** The deck heads that page "Selected Work (also
+by our delivery partner)", so section 6 uses "Selected work, also by our
+development partner". Do not reword that into "our clients". These are Amwisesa
+deliveries as much as Astra ones.
+
+**Joshua van Zeelt is deliberately absent.** He is the named contact on the
+official deck, but this artefact goes out inside Raka's own LinkedIn thread, so
+putting another person's phone and email in it would confuse the thread. The
+domain is named, the individual is not.
