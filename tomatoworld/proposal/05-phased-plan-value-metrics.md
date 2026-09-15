@@ -233,18 +233,68 @@ or the growing season.
 
 ---
 
-# ALONGSIDE — Story and materials
+# TRACK B — Brand, story and social
 
-**Modular, any time, independent of the software.**
+**Runs alongside the software phases, not after them.** Independent, modular, and
+none of it depends on the booking system existing.
 
-| Work | Time | Cost | Value | Metric |
-|---|---|---|---|---|
-| **Tour presentation, rebuilt** with audience variants and live-data slots | 3–5 days | €1,200 – €2,000 | The tour is the product, and it runs off a deck Ank flagged two years ago | Visitor satisfaction, guide confidence |
-| Story toolkit — one line, short, full, per audience | 3–5 days | €1,200 – €2,000 | Every guide and every page tells it the same way | Consistency |
-| Content pillars, templates and training for the new marketing colleague | 6–8 days | €2,700 – €4,000 | She runs it herself, on brand, without a designer each time | Posting consistency, reach |
-| Partner brand kit | 2–3 days | €900 – €1,500 | Partners announce the partnership without emailing for assets | Partner-driven reach |
+**One standing condition:** Panorama Studios offer branding and online marketing.
+**Where they already handle any of this for Tomatoworld, we stand down on it** — we
+would rather they kept it than have two suppliers doing similar work. We are offering
+it because it may be unclaimed, not to take it from anyone. **Ank can settle this in
+one sentence:** *who looks after your branding and social day to day — Panorama,
+someone in-house, or nobody?*
 
-*Where Panorama already handle any of this, we stand down on it.*
+## The story side
+
+| # | Work | Value | Metric | Time | Cost |
+|---|---|---|---|---|---|
+| **B1** | **Tour presentation, rebuilt** — audience versions for schools, delegations and partners, live-data slots, NL/EN, editable master | The tour is the product. It runs off a deck Ank asked about before the website ever came up, and nobody has picked it up | Visitor feedback, guide confidence | 3–5 days | **€1,200 – €2,000** |
+| **B2** | **Story toolkit** — one line, thirty seconds, two minutes, full, with variants per audience and a printable guide crib sheet | *"If you cannot tell your story, what good is your story?"* Every guide and every page tells it the same way | Message consistency across guides | 3–5 days | **€1,200 – €2,000** |
+| **B3** | Brand and messaging audit across site, socials, print, tour and partner materials | Finds where the message contradicts itself before anyone spends on fixing it | Baseline for everything below | 3 days | **€900 – €1,400** |
+| **B4** | Partner brand kit — logos, lockups, usage rules, boilerplate NL/EN, announcement template | A partner can announce the partnership without emailing anyone for assets | Partner-driven reach | 2–3 days | **€900 – €1,500** |
+| **B5** | Brand guidelines | Consistency across everything. **Check first whether Panorama already produced one — if so we extend theirs rather than compete with it** | Consistency | 4–6 days | **€1,500 – €2,500** |
+
+## The social side
+
+| # | Work | Value | Metric | Time | Cost |
+|---|---|---|---|---|---|
+| **S1** | **Social audit and benchmark** — current channels, what works, what is dormant, versus comparable centres | Nobody knows the current numbers. This is the social equivalent of Phase 1 | **Establishes the baseline** | 2–3 days | **€700 – €1,200** |
+| **S2** | Content pillars and a calendar mapped to their real year — seasons, crop rotation, hackathons, school terms | Someone non-specialist can fill next month unaided | Posting consistency | 3–4 days | **€900 – €1,500** |
+| **S3** | **Templates** — 10–15 Canva or Figma templates, on brand, per channel, editable by a non-designer | The new marketing colleague produces on-brand posts without a designer every time | Posts produced per month | 3–4 days | **€900 – €1,500** |
+| **S4** | **Training and playbook** for the new marketing colleague, plus a follow-up session after a month | She runs it herself. *"She loves to take this as something she could really put her hands on, and score with it"* | She runs a full month unaided | 2–3 days | **€900 – €1,500** |
+| **S5** | **Content engine on real visit data** ⭐ — posts generated from what actually happens: visitor origin milestones, partner spotlights, season markers, field-lab results. Drafted automatically, always human-approved | **Panorama cannot build this.** It needs the booking data underneath. Ours by origin rather than by territory | Posts published per month, reach | 4–6 days | **€1,500 – €2,500** |
+| **S6** | Visitor story capture at the end of a visit — quote, photo, **explicit consent on record** | Turns every visit into material. **GDPR: school groups mean children's images, so consent is explicit, never implied** | Usable stories per month | 3–5 days | **€1,200 – €2,000** |
+| **S7** | LinkedIn programme for Aart and key staff — profile, approach, ten drafted posts | *"It's a very close industry, everybody knows each other."* That industry is on LinkedIn | Partner-side engagement | 3–4 days | **€1,000 – €1,800** |
+| **S8** | **Managed social** — we run it monthly | Only where it is genuinely unclaimed. **Most direct overlap with Panorama's retainer, so offer last** | Consistency, reach | ongoing | **€750 – €1,500 / mo** |
+
+## Bundles
+
+| Bundle | Contains | List | **Offer** |
+|---|---|---|---|
+| **Tell the story properly** ⭐ | B3 + B2 + B1 | ~€4,400 | **€3,600** |
+| **Arm your new colleague** ⭐ | B1 + S3 + S4 | ~€4,000 | **€3,300** |
+| **Social starter** | S1 + S2 + S3 | ~€3,300 | **€2,700** |
+| **Brand foundation** | B3 + B5 + B4 | ~€4,400 | **€3,600** |
+
+## Where to start on this track
+
+**B1, the tour presentation, at €1,200 – €2,000.** It is the oldest unmet request in
+the organisation, it was raised by our own champion, the tour is what people actually
+travel for, and **it touches nothing Panorama built.** If we sell one thing from this
+track, it is this.
+
+## Honest note on metrics here
+
+**S1 exists because we have no social baseline either.** Followers, reach and posting
+frequency are all unmeasured today. As with Phase 1, we would rather measure first
+than quote a target we invented. The metrics above are the ones we would track from
+the day each piece lands.
+
+**A caution worth stating internally:** effort on this track is design and copy
+capacity, not developer capacity — it does not compete with the build schedule, but it
+does compete with whoever writes and designs. And brand work scopes creep badly, so
+revision rounds are fixed at two, then change control.
 
 ---
 
@@ -269,7 +319,7 @@ anything over €2,000.
 | **5** Payments | 2–3 weeks | **€2,800 – €4,200** | M1, booking value | 8–12 tours |
 | **6** Partner value | 4–6 weeks | **€4,500 – €7,000** | M7 | ~1 retained partner |
 | **7** Virtual & live data | 5–8 weeks | **€5,500 – €9,000** | M8, M4 | new revenue line |
-| **Story track** | modular | **€900 – €4,000 each** | — | — |
+| **Track B** Brand, story & social | modular | **€700 – €2,500 each** | Consistency, reach, posts per month | — |
 | **Care** | ongoing | **€250 – €500 / mo** | — | — |
 
 **Full programme, Phases 0–7: roughly €28,400 – €43,500 across 6 to 9 months.**
