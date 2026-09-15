@@ -36,22 +36,36 @@ makes the case for Discovery without us having to argue for it.
 
 ---
 
-# The metrics we would move
+# The six things we would watch
 
-Eight numbers. Each phase names which ones it moves. Nothing is claimed twice.
+Written the way we would say them out loud to Joyce or Aart. **No percentages, no
+jargon.** If one of these does not improve, the step that promised it did not work.
 
-| # | Metric | Why it matters | Baseline |
+| # | In plain words | Why it matters | Where it stands today |
 |---|---|---|---|
-| **M1** | Staff hours per week on booking coordination | The cost that never appears on an invoice | TBM |
-| **M2** | Requests that become confirmed bookings (%) | Every lost request is a paid tour that did not happen | TBM |
-| **M3** | Time from request to confirmation | Delegations abroad book whoever answers first | TBM |
-| **M4** | Confirmed tours per month | The revenue line | TBM |
-| **M5** | Slot fill rate (%) | Fixed capacity, volunteer guides. Empty slots never come back | TBM |
-| **M6** | Cancelled slots refilled (%) | Today, almost certainly 0 | ~0 |
-| **M7** | Partner renewal rate (%) | The biggest income line, currently defended by goodwill | TBM |
-| **M8** | Revenue during crop-rotation closure | Currently zero by definition | €0 |
+| **1** | **The hours spent arranging tours each week** | It is the biggest cost nobody invoices for. One person absorbs it | Nobody has counted |
+| **2** | **Out of every ten enquiries, how many end up in the building** | Every enquiry that drifts away was a paid visit that did not happen | Nobody has counted |
+| **3** | **How long somebody waits for an answer** | A delegation abroad books whoever replies first | Days, we think |
+| **4** | **Tour slots that go unused**, including cancelled ones nobody replaced | You have a fixed number of mornings and volunteer guides. An empty one never comes back | Cancelled slots: almost never refilled |
+| **5** | **How many partners renew**, and how many bring their own customers | The biggest income line, currently defended by goodwill alone | Nobody has counted |
+| **6** | **Income during crop rotation** | The building closes and visitor income stops entirely | €0 |
 
----
+**Only two of these have a known value today, and both are bad news:** cancelled
+slots are essentially never refilled, and closure-period income is zero.
+
+**The other four are genuinely unmeasured.** We have deliberately not invented
+targets for them. A number we made up would be worthless to Aart and he would be
+right to distrust it. **Measuring them is the first deliverable of the discovery
+step** — which is the honest argument for buying that step first.
+
+## A note on how to talk about this
+
+Ank is a communications professional, Joyce runs the day to day and Aart watches the
+money. **None of them think in conversion rates or fill rates**, and using that
+language makes us sound like the expensive agencies she told us she wants to avoid.
+
+Say *"how many enquiries actually turn into a visit"*, not *"conversion rate"*.
+Say *"a cancelled morning gets filled by somebody else"*, not *"backfill utilisation"*.
 
 # PHASE 0 — Three fixes, free
 
