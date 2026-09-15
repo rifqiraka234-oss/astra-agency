@@ -471,6 +471,184 @@ Raka's own background, and which credential to spend on which kind of lead,
 is in **`docs/astra-master-context.md` section 2A**. Read it before writing a
 message that needs to earn the right to an opinion.
 
+## Building a deck, everything Raka corrected across the WisTree build (2026-09-14 and 15)
+
+One deck was rebuilt five times in two days. Every version failed on something he
+had to point out, and one note he had to give **twice**. This section is that
+whole audit so the next deck starts at v5 rather than v1.
+
+### The alignment gate, before a single line of HTML
+
+**Re read the actual thread and check the artefact answers two separate things.
+What we promised to send, and what they asked for.** Those are not the same, and
+v1 failed on both. Raka's question was "what did we say we want to send to karim
+and what did karim say, does it align fully with what you created for the deck?"
+The honest answer was no. We had promised a short deck on the scale he was
+building. We built twelve sections, a third of which was an uninvited website
+audit, and his actual question only appeared in section 7.
+
+Run this before building, not after. Quote their own words back into the research
+file, then check each planned section against them. A section that serves neither
+the promise nor their question does not go in.
+
+### The arc, which is Raka's and is now the default shape
+
+Analysed, problem, prototype, infrastructure, what else we can build, who we are,
+book a call. His words. A deck that only informs has failed. v2 was accurate,
+narrow and sold nothing, which is its own kind of miss.
+
+1. **What we looked at.** Their own words quoted back, and the research surface.
+2. **What we found.** The problem, with the competitor or market evidence.
+3. **The prototype.** The working thing, on the page, that they can use.
+4. **What sits behind it.** The infrastructure, so they can see it is real work.
+5. **Where else we could help.** The seeds, named concretely (see below).
+6. **Who we are.** Astra, the delivery structure, real delivered work, and Raka.
+7. **Next step.** One ask, and a booking link.
+
+### Say what the thing actually is
+
+**"Is it a dashboard, is it an app, is it a CRM or what?"** Raka, on finding
+section 5 full of headings like "Capture, the expensive step". That names nothing.
+A buyer cannot picture it, cannot price it, and cannot forward it to anyone.
+
+Every offer carries a type and a plain name. Internal web app. Customer facing.
+Dashboard. Email and in app. Customer portal. Onboarding flow. CRM hookup. The
+worked fix, all four rewritten in one pass.
+
+| Abstraction | What it should say |
+|---|---|
+| Capture, the expensive step | **Internal web app.** A review app for your team |
+| Answers that show where they came from | **Customer facing.** The assistant your customers actually use |
+| A knowledge map that draws itself | **Dashboard.** A dashboard the customer logs into |
+| Alerts when knowledge is about to walk | **Email and in app.** Alerts when knowledge is about to walk |
+
+The closing line names objects too, not categories. "A customer portal. An
+onboarding flow. A CRM hookup so a finished check lands with the right person."
+
+### Use images, and show what it would look like
+
+**"Use images man!!! And also like the what else we can do make also how it looks
+like!"** Stage L already said every section carries a real photograph or a real
+sourced graphic. It was ignored for four versions. Three kinds of image, all of
+which earned their place:
+
+- **Real photography**, licence free, never captioned as the client's premises,
+  staff or customers. The portrait guardrail in the Guardrails section still binds.
+- **Real screenshots of real delivered work.** The Unilever, GPay and MWX images
+  were extracted from `ASTRA_AGENCY_Deck_Short.pdf` with PyMuPDF. They turned a
+  section of text boxes into actual proof. The "also by our delivery partner"
+  disclosure travels with them, always.
+- **UI mockups of the things we are offering to build.** Inline SVG, in the deck's
+  palette, showing the actual screen. A review queue with a transcript on one side
+  and drafted items on the other. An answer card with its source chips. A process
+  map with criticality per node. An alert that names the step, the person count and
+  the retirement window. Describing a dashboard is worth far less than drawing it.
+
+### Language, and the note he had to give twice
+
+**"Your language is too literate. Would you present that to someone on a deck? No.
+Check your language again as if you're presenting it to an executive, because
+most of them are."** The first pass at this was too gentle and he repeated the
+note verbatim. Both passes are recorded here because the second caught what the
+first left standing.
+
+**Never narrate the artefact inside the artefact.** Do not tell the reader what
+language something is in, that a list is below, that a section is coming, or how
+we reached a decision. State the substance and stop.
+
+| Wrote | Should have written |
+|---|---|
+| "The questions themselves are in German, because that is who answers them. Everything they ask about is below in English." | "Built from your own six methodology steps." |
+| "What the six questions ask", over restated questions | "What it measures", over six named dimensions |
+| "What the score says back" | "Where a score lands" |
+| "Three calls we made" | "Three constraints" |
+| "Not advice on what to build. Just the four things we would pick up first..." | Deleted. The heading already carried it. |
+| "And who actually wrote this" | "Raka Mulya" |
+| "Karim, you said you're building a scale that gives a first indication of knowledge fragility and compares a company against others its size." | "Karim, the scale you described has two halves." |
+| "Two jobs, and they're not the same job." | "Two jobs in one sentence. The second is the one worth owning." |
+| "The check is one file with no server." | Deleted. Implementation trivia. |
+| "so selling something a buyer hasn't decided he needs yet is first hand rather than theoretical" | "Selling something a buyer hasn't decided he needs yet is not theory here." |
+
+Three tells to grep for. **A heading that names a thing is weaker than one that
+claims a thing.** **A sentence that tells the reader what is about to happen should
+be deleted, because the next sentence is about to happen anyway.** And **a trailing
+clause starting "so" or "which is" is usually the writer explaining what he just
+said.**
+
+The self check. Read every heading alone and rewrite any that labels instead of
+asserts. Then read every sentence and delete any clause that would still be
+obvious with it gone.
+
+### English, always, and no error lists
+
+**"Use English unless it's really needed in German, like the questionnaire. I
+don't speak German btw."** The deck is English throughout, including every diagram
+label. The only exception is a working artefact a non English speaker will
+actually use, and when that happens **an English explanation sits beside it** so
+Raka can read the whole thing. Concept mockups are English, because they are
+sketches rather than shipping UI.
+
+**"You don't need to show what's error like the 404s and all."** Broken links,
+typos, conflicting job titles and freemail addresses do not go in a client deck.
+They are research, they stay in `research.md`, and they can be handed over
+separately as a favour. Putting them in front of the buyer reads as a telling off.
+
+### Simpler, and shorter
+
+**"It feels so wordy and just haaard to follow, it needs to flow well."** and
+**"Language man, you don't need to over complicate things."** v3 was 2,472 words.
+The version that shipped was about 1,600. One point per section, one idea per
+paragraph, and the diagram carries what a paragraph would otherwise argue.
+
+## The artefact delivery message (Raka, 2026-09-15). A fifth shape, for sending the thing.
+
+Not an opener, not a reply, not a nudge, not a closer. This is the message that
+carries a finished prototype or deck into a warm thread. Raka wrote the skeleton
+himself and it is deliberately tiny.
+
+```
+[name], I spent the whole day building this.
+
+[what they asked for, in one sentence, and the fact that it works]
+
+Try it yourself.
+[the URL, on its own line]
+
+[one line on what else is in there]
+
+What do you think?
+```
+
+Around 60 to 80 words. The one that shipped to Karim was 64.
+
+- **The opening line is allowed to be a bit dramatic**, and it must be true. He
+  did spend the day on it. Never claim effort that was not spent.
+- **No exclamation marks, no emoji.** The opener template's one exclamation rule
+  is for cold openers. This lands in a warm thread and the first line carries it.
+- **The dash and colon bans are not relaxed.** The URL is exempt as a URL.
+- **Verify the artefact is live immediately before sending.** Fetch it, confirm
+  200, confirm the title is still theirs, confirm any images actually load. Same
+  rule as the closing nudge.
+- **Contractions, plural.** The first draft of the Karim message had zero, which
+  is the single clearest machine tell. The shipped version had three in 64 words.
+- **No honesty theatre.** "Two things I am not going to pretend about" was cut for
+  announcing its own virtue. If a caveat matters, either say it plainly or let the
+  artefact say it, and tell Raka which you chose.
+- **Close on a real question**, not an ask for a meeting. "What do you think?"
+  outperforms "shall we book a call?" here, because the artefact is the ask.
+
+### Not cheesy, not AI sounding
+
+Raka's edit note on the first Karim draft. What got cut, and why it is general.
+
+| Cut | Why |
+|---|---|
+| "Which is the actual ask." | A fragment used as a pivot. Pure tic. |
+| "Two things I am not going to pretend about." | Honesty theatre. |
+| "if I have wandered somewhere you would rather I had not" | Twee. Became "if I've gone somewhere you'd rather I hadn't". |
+| "since that is the part nobody else has" | Trailing explainer. Became "which is the bit nobody else is doing". |
+| Every uncontracted verb | "that is", "I do not", "I am not going to". |
+
 ## Astra Agency, the company itself (from the official deck, given by Raka 2026-09-15)
 
 Source: `ASTRA_AGENCY_Deck_Short.pdf`, 7 pages, the deck Astra actually sends
@@ -970,6 +1148,21 @@ reading-priority hint, not evidence; never draft a reply for the No action
 tier or include it in the digest; never send anything, this routine only
 produces the digest.
 
+**Never audit a thread from the conversation list alone (2026-09-15).** Raka sent
+a screenshot and asked "can you check if you're correct?" and the answer was no.
+An audit had claimed eleven people said yes to an artefact and never received it.
+Nine of the eleven had been delivered, several nudged two or three times. The
+cause is a real limitation, **`get_inbox_conversations` only exposes
+`lastSentMessagePreview`**, so a delivery followed later by a nudge is invisible
+and the thread looks like it stopped at the nudge. Worse, `state/prototypes.jsonl`
+already recorded the correct send date and had been read an hour earlier.
+
+So any claim about what a thread contains needs `get_inbox_conversation` per
+contact, and any claim about what was sent needs cross checking against the state
+files we already keep. Follow up counts in particular cannot be derived from the
+list endpoint at all. When Raka asks whether an output is correct, treat it as a
+real question and go and check rather than defending the first answer.
+
 **Every reply this routine drafts uses the opener template above (Raka,
 2026-09-14), in its reply variant** ("Hi [name], [answer what they actually
 said]. I saw [company] and [positive thing]!" then However, then This means,
@@ -1000,6 +1193,20 @@ not just a good conversation.
   concretely: fetch the live URL and check its byte size and a content
   hash (`sha256sum`) against the exact file that was deployed, and confirm
   the `<title>` matches, don't just eyeball that "a page loaded."
+  - **A deck with images is a multi file deploy, so verify the images too.**
+    Fetch every asset path and confirm a 200 and the expected byte count, not
+    just the HTML. A page that loads with five broken images is worse than no
+    page. Then cold load the downloaded copy in Chromium with response capture
+    and confirm every `<img>` decoded with a non zero natural width.
+  - **A refused deploy may be billing, not the build.** On 2026-09-15 three
+    consecutive deploys came back `Skipped due to account credit usage exceeded`
+    with `state: error` and `skipped: true` (ids 6aa96a47494ba99baaeee4ee,
+    6aa96a77000db62461acc87e, 6aa96b9cf7d18c7454c94f2e). Nothing was wrong with
+    the HTML. It cleared on its own and the fourth attempt went straight through.
+    So read the error before touching the build, and retry later rather than
+    rewriting something that was never broken. There is no token in the
+    container, only the site id, so a direct build free upload is not available
+    as a workaround.
   - **The Netlify connector is not always available in this session type**
     (`enabledInChat: false`, no CLI, no token in the container, confirmed
     repeatedly). When that's the case, do not fabricate a placeholder URL
