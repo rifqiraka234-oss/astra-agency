@@ -265,6 +265,49 @@ replied. Rules specific to it:
 - Close with the artefact named concretely plus an honest out, "yes or no is
   fine either way", which section 9 already endorses.
 
+**The closing nudge template (Raka, 2026-09-15). A fourth shape, the last message
+a thread ever gets, and the only place urgency framing is allowed.**
+
+```
+[name], you're about to miss [the easiest win] [company] will get all year.
+
+[the artefact, built, live and theirs, described in their own specifics]
+[the URL, on its own line]
+
+[the loss, compounding, in their business, in the present tense]
+
+If the timing isn't right I completely understand. But you're missing out on
+[the specific impact].
+```
+
+**Who it is for, and nobody else.** A lead who asked for the artefact, received it,
+and went quiet through at least one chase. Someone who never replied gets the nudge
+template. Someone cold gets the opener. Someone who declined gets nothing.
+
+- **It is genuinely last.** After this the thread is closed in
+  `state/inbox_digest_log.jsonl` and never messaged again. Sending a further chase
+  after promising this was the last one is the thing Michele Legoratto and Antanas
+  Juodiskis were both told in writing, so it would be a broken promise on the record.
+- **It deliberately runs hotter than `docs/writing-standard-anti-ai.md`,** which bans
+  urgency framing and hype. Raka's live call on 2026-09-15 overrides that doc **for
+  this shape only**. It is not licence for the house voice to drift, and the opener,
+  reply and nudge templates keep the old restraint.
+- **No emoji** (unlike the nudge) and **no exclamation marks**. The hook carries it.
+- **The colon and dash bans are NOT relaxed.** The artefact URL is exempt as a URL,
+  same as the Netlify slug rule.
+- **Verify the artefact is still live before naming it.** Fetch the URL, confirm 200
+  and that the `<title>` is still theirs. Pointing a closing message at a dead link is
+  the worst possible last impression.
+- **The middle block must compound.** Not "you are losing visitors" but the specific
+  repeat loss. Di Lieto loses a standing weekly order rather than one tray, and their
+  own Bake Off win is what delivers the chef to the page that fails them. Zenara buys
+  the same customer back every month because matcha runs out monthly and there is no
+  subscribe option.
+- **End on the impact, never an ask.** The close names what they forfeit and stops.
+  No "let me know", no "shall I". A closing message that begs is not a close.
+- The four pass read back below still applies, and pass 4 matters most here because
+  the hook line is the easiest thing in the whole playbook to write twice.
+
 **Read every message back four times before it goes anywhere (Raka, 2026-09-14).
 The two questions are his. Does this make sense? Does this sound weird?** This
 is a hard gate on all three templates, not a polish step, and it comes after
