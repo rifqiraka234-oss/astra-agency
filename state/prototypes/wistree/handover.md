@@ -1,7 +1,7 @@
 # WisTree deck — handover and open items
 Live: https://astra-wistree-deck.netlify.app
-Simplified 2026-09-15 (v4, current). sha256 of deployed file
-2c5b33ccca7459d4e9efcfdb635796b8fb4d0a25d2f98508436c3cb33834495a (37,481 bytes).
+Simplified and de-narrated 2026-09-15 (v4, current). sha256 of deployed file
+90b93842b412fd6cb69e248ef49d3d4d4b22330604ccd350ed2e68d48c11c78a (37,125 bytes).
 v3 was 03f3969b44416b570676ccb420b2adc5fa83d70778eba4128f8eb6336aef8d08 (44,606 bytes).
 v2 was 6cf41043f20768cede67eea974d53ce2ac98d8ec9c75ef5aae820d4356e99bd9 (34,455 bytes).
 v1 was 8d16ca3d6ad53cbe8d313b7869701617b2278aab9622ce28f0dcde4515158a9c (37,749 bytes).
@@ -100,9 +100,38 @@ fired naturally, 8 sections. Quiz exercised end to end, max path returns 100 / K
 the benchmark marker drawn. Single inline script block parses on the live file. No
 horizontal overflow at 420px, tables scroll inside their own containers. Every section
 screenshotted at 1400px and the hero at 420px.
-Visible copy: 0 em dashes, 0 en dashes, 0 colons, 22 contractions, 1,567 words, no
+Visible copy: 0 em dashes, 0 en dashes, 0 colons, 20 contractions, 1,486 words, no
 banned terms from the NO-AI-SLOP list.
 Live file diff against the deployed file is 720 bytes of Netlify HUD markup only.
+
+## Register rule for this deck, and for every deck after it (Raka, 2026-09-15)
+
+**Never narrate the artefact inside the artefact.** The reader is an executive.
+He does not need to be told what language something is in, that a list is below,
+that a section is coming, or how we arrived at a decision. State the substance
+and stop. Raka's words, "would you present that to someone on a deck? No."
+
+The specific failures in the first cut of v4, all fixed, all worth recognising
+again:
+
+| Wrote | Should have written |
+|---|---|
+| "The questions themselves are in German, because that is who answers them. Everything they ask about is below in English." | "Built from your own six methodology steps, in the language of the person answering." |
+| "What the six questions ask" over a list of restated questions | "What it measures", over six named dimensions (single points of failure, documentation drift, undocumented exceptions, retirement exposure, handover in practice, access at the decision) |
+| "What the score says back" | "Where a score lands" |
+| "Three calls we made" | "Three constraints" |
+| "Not advice on what to build. Just the four things we would pick up first if we were working alongside you." | Deleted. The heading already carried it. |
+| "A sketch of the shape, not an implementation plan. Stack and hosting follow whatever you already run." | "Stack and hosting follow whatever you already run." |
+| "And who actually wrote this" | "Raka Mulya" |
+| "If talking is easier than marking up a document, a call works just as well." | "Or we talk it through." |
+| "plus a working version you can try on this page" | "and the first half already works" |
+| "You also said the detailed WKI analysis is step two. So this follows your order." | "The detailed WKI analysis is step two. This is step one." |
+
+The pattern behind all of them. Explaining the furniture, restating the brief
+back, apologising in advance, and narrating our own process. A heading that
+labels a list is weaker than a heading that asserts something. A sentence that
+tells the reader what is about to happen should be deleted, because the next
+sentence is about to happen anyway.
 
 ## Astra facts used in section 6, and their source
 All from the official deck Raka supplied 2026-09-15 and now transcribed into
