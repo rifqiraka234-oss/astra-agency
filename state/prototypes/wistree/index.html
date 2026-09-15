@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230C1211%27/%3E%3Cpath d=%27M16 25V12M16 12l-5-5M16 12l5-5%27 stroke=%27%23FE830E%27 stroke-width=%272.4%27 fill=%27none%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<title>WisTree × Astra · der WKI Schnellcheck</title>
+<style>
+:root{
+  --ink:#0C1211; --ink2:#141D1B; --paper:#F6F4F0; --paper2:#ECE8E1;
+  --orange:#FE830E; --orange-d:#D96A00;
+  --muted:#8A9794; --muted-d:#5F6B68; --line:rgba(255,255,255,.10); --line-d:rgba(12,18,17,.12);
+  --sans:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:"SFMono-Regular",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:#EDEFEE;font-family:var(--sans);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.sec{padding:96px 32px;position:relative}
+.sec.light{background:var(--paper);color:var(--ink)}
+.sec.light2{background:var(--paper2);color:var(--ink)}
+.sec.ink2{background:var(--ink2)}
+.w{max-width:1080px;margin:0 auto}
+.w-n{max-width:760px;margin:0 auto}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin:0 0 20px}
+.light .kicker,.light2 .kicker{color:var(--orange-d)}
+h1{font-size:clamp(38px,6.4vw,74px);line-height:1.02;letter-spacing:-.033em;margin:0 0 26px;font-weight:650}
+h2{font-size:clamp(28px,4.1vw,46px);line-height:1.08;letter-spacing:-.026em;margin:0 0 22px;font-weight:650}
+h3{font-size:19px;line-height:1.3;letter-spacing:-.012em;margin:0 0 10px;font-weight:620}
+p{margin:0 0 18px;color:#C9D2D0}
+.light p,.light2 p{color:#3A4543}
+.lead{font-size:clamp(18px,2.1vw,21px);line-height:1.56;color:#DDE3E2}
+.light .lead,.light2 .lead{color:#2B3533}
+.dim{color:var(--muted)}.light .dim,.light2 .dim{color:var(--muted-d)}
+.src{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.02em;margin-top:14px;line-height:1.5}
+.light .src,.light2 .src{color:var(--muted-d)}
+.rule{height:1px;background:var(--line);margin:0}
+.light .rule,.light2 .rule{background:var(--line-d)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid var(--line);border-radius:14px;padding:26px;background:rgba(255,255,255,.025)}
+.light .card,.light2 .card{border-color:var(--line-d);background:#fff}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:5px;border:1px solid var(--line-d);color:var(--muted-d);background:#fff}
+.tag.bad{color:#B4231B;border-color:#F0C4C0;background:#FDF3F2}
+.tag.ok{color:#1C6B4A;border-color:#BFE0CE;background:#F1F9F4}
+.tag.sketch{color:#8A5A00;border-color:#EBD59B;background:#FBF4E2}
+.num{font-family:var(--mono);font-size:clamp(40px,6vw,64px);letter-spacing:-.04em;color:var(--orange);line-height:1;font-weight:500}
+.light .num,.light2 .num{color:var(--orange-d)}
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;padding:104px 32px 72px;position:relative;overflow:hidden}
+.hero .w{max-width:1080px}
+.hero-copy{max-width:640px}
+.scrim{position:absolute;inset:0;z-index:0;background:linear-gradient(100deg,var(--ink) 0%,var(--ink) 34%,rgba(12,18,17,.90) 52%,rgba(12,18,17,.55) 72%,rgba(12,18,17,.35) 100%)}
+@media(max-width:860px){.scrim{background:linear-gradient(180deg,var(--ink) 0%,rgba(12,18,17,.93) 46%,rgba(12,18,17,.62) 100%)}}
+#canvasWrap{position:absolute;inset:0;z-index:0;opacity:.85}
+#tree{width:100%;height:100%;display:block}
+.hero .w{position:relative;z-index:1}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+.ln{display:block;overflow:hidden}
+.ln>span{display:block;transform:translateY(105%);transition:transform .9s cubic-bezier(.16,.9,.24,1)}
+.in .ln>span{transform:none}
+.ln:nth-child(2)>span{transition-delay:.09s}.ln:nth-child(3)>span{transition-delay:.18s}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:13px 12px;border-bottom:1px solid var(--line-d);vertical-align:top}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-d);font-weight:500}
+code{font-family:var(--mono);font-size:13px;background:rgba(254,131,14,.1);padding:2px 6px;border-radius:4px;color:var(--orange-d)}
+.quote{border-left:2px solid var(--orange);padding-left:22px;font-size:19px;line-height:1.5;color:#E4E9E8}
+.light .quote,.light2 .quote{color:#232C2B}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tw table{min-width:520px}
+@media(max-width:860px){.grid2,.grid3{grid-template-columns:1fr}.sec{padding:66px 20px}.hero{padding:96px 20px 64px}}
+</style>
+</head>
+<body>
+
+<section class="hero" id="hero">
+  <div id="canvasWrap"><canvas id="tree"></canvas></div>
+  <div class="scrim"></div>
+  <div class="w">
+    <div class="hero-copy">
+    <p class="kicker rv">Astra × WisTree &nbsp;·&nbsp; 15 September 2026</p>
+    <h1><span class="ln"><span>Der Schnellcheck</span></span><span class="ln"><span>gehört vor das</span></span><span class="ln"><span>Verkaufsgespräch.</span></span></h1>
+    <p class="lead rv" style="max-width:620px">Karim, you said you’re building a scale that gives a first indication of knowledge fragility and compares a company against others its size. This is how we would put that in front of a Mittelstand manager, and a working version you can use today.</p>
+    </div>
+  </div>
+</section>
+<div class="rule"></div>
+<section class="sec light">
+  <div class="w">
+    <p class="kicker rv">1 · What we looked at</p>
+    <h2 class="rv" style="max-width:720px">Everything on wistree.de, on 15 September.</h2>
+    <div class="grid3" style="margin-top:38px">
+      <div class="card rv"><h3>Every page</h3><p class="dim">Home, Die WisTree-Methodik, Über Uns, Kontakt, Download, Impressum. Each one fetched, not skimmed.</p></div>
+      <div class="card rv"><h3>Every link and route</h3><p class="dim">Each internal link followed and its status code recorded. Both methodology URLs tested separately.</p></div>
+      <div class="card rv"><h3>The market around you</h3><p class="dim">Destatis on the workforce, and the free self-assessments a German manager can already run today.</p></div>
+    </div>
+    <p class="src rv">Fetched 2026-09-15. cluue.de redirects to wistree.de. Your LinkedIn company page is still linkedin.com/company/cluue.</p>
+  </div>
+</section>
+
+<section class="sec light2">
+  <div class="w">
+    <p class="kicker rv">2 · What is strong</p>
+    <h2 class="rv" style="max-width:780px">The hard part is already done, and most startups at your stage don’t have it.</h2>
+    <div class="grid2" style="margin-top:38px">
+      <div class="card rv">
+        <span class="tag ok">Real</span>
+        <h3 style="margin-top:14px">Two named partners, with logos</h3>
+        <p class="dim">Assenheimer + Mulfinger and HTW Berlin sit on your homepage as actual links, not a grey wall of anonymous shapes. An automotive dealer group and a university is exactly the industry plus research mix your origin story claims.</p>
+      </div>
+      <div class="card rv">
+        <span class="tag ok">Real</span>
+        <h3 style="margin-top:14px">A methodology with six defined steps</h3>
+        <p class="dim">Kritische Wissensstellen erkennen through to Wissensrisiken bewerten. It reads like something built from working inside real processes, not assembled from a whiteboard.</p>
+      </div>
+      <div class="card rv">
+        <span class="tag ok">Real</span>
+        <h3 style="margin-top:14px">A concept nobody else names</h3>
+        <p class="dim">The Wissenskritikalitätsindex is yours. Competitors sell maturity levels. You sell a number attached to a specific place in a specific process.</p>
+      </div>
+      <div class="card rv">
+        <span class="tag ok">Real</span>
+        <h3 style="margin-top:14px">The AI framing lands</h3>
+        <p class="dim">Ohne implizites Wissen scheitert KI is the sharpest line on the site. Every Mittelstand board is being asked about AI this year, and that sentence puts you inside a budget that already exists.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="w">
+    <p class="kicker rv">3 · Where it breaks</p>
+    <h2 class="rv" style="max-width:820px">The rebrand is still half-landed, and it breaks the three buttons under your own methodology.</h2>
+    <p class="lead rv" style="max-width:700px">These are not opinions about design. Each one is a fetch, with a status code.</p>
+    <div style="margin-top:36px;background:#fff;border-radius:14px;padding:8px 26px 18px;color:var(--ink)" class="rv">
+      <div class="tw"><table>
+        <tr><th style="width:38%">What</th><th style="width:20%">Status</th><th>Detail</th></tr>
+        <tr><td><strong>Three "mehr dazu" buttons</strong><br><span class="dim" style="font-size:13px">under the three methodology steps on the homepage</span></td><td><span class="tag bad">404</span></td><td class="dim">All three point at <code>/die-cluue-methodik/</code>. The page returns "Diese Seite konnte nicht gefunden werden." A reader who wants to go deeper hits a dead end at the exact moment they lean in.</td></tr>
+        <tr><td><strong>Footer, the only Produkt link</strong></td><td><span class="tag bad">404</span></td><td class="dim">Same old URL. The top nav link goes to <code>/die-wistree-methodik/</code> and works fine, so the nav is right and the four links people actually click are wrong.</td></tr>
+        <tr><td><strong>Download</strong><br><span class="dim" style="font-size:13px">main navigation</span></td><td><span class="tag bad">Empty</span></td><td class="dim">The page loads and has no content at all. It sits in the top nav next to Über Uns.</td></tr>
+        <tr><td><strong>Job titles</strong></td><td><span class="tag bad">Conflict</span></td><td class="dim">All three people on both pages carry different titles. You’re Head of Strategy &amp; Sales on Über Uns and Head of Strategy &amp; Economics on Kontakt. David is Head of Finance and also Head of Product &amp; Engineering. Elias is Head of Customer Experience and also Head of User Experience &amp; Data.</td></tr>
+        <tr><td><strong>Contact addresses</strong></td><td><span class="tag bad">Freemail</span></td><td class="dim">Kontakt lists info.narowski@gmail.com, d-marian@web.de and elias-kroll@outlook.com, while info@wistree.de exists and works. For a company asking a Werksleiter to hand over how his plant really runs, the inbox matters.</td></tr>
+        <tr><td><strong>Wissenskritikalitätsindex</strong></td><td><span class="tag bad">Typo</span></td><td class="dim">Written <code>Wissenskritiaklitätsindex</code> on the homepage, in the block that introduces it. Your most important word, in the one place it gets defined.</td></tr>
+        <tr><td><strong>The 80% headline</strong></td><td><span class="tag bad">No source</span></td><td class="dim">"80% des Unternehmenswissen steckt in den Köpfen der Mitarbeitenden" carries no citation. The page has no Quelle, no study, no footnote anywhere. The buyer you want is an engineer.</td></tr>
+      </table></div>
+    </div>
+    <p class="src rv">Every row fetched and confirmed 2026-09-15. Status codes from direct request, not inference.</p>
+  </div>
+</section>
+<section class="sec ink2">
+  <div class="w-n">
+    <p class="kicker rv">4 · The problem, in one line</p>
+    <h2 class="rv">Your funnel starts with a sales call. The people you sell to won’t book one until somebody has already told them they have a problem.</h2>
+    <p class="lead rv">Every route on wistree.de ends at the same place, a fifteen minute Calendly. That works for the manager who already knows his knowledge is walking out the door. He’s rare. The rest don’t book, because booking means admitting a problem they can’t see yet.</p>
+    <p class="rv">This is the thing you agreed with in your reply. Every pilot conversation starts by convincing a Mittelstand manager that he has a problem he can’t see. That job is currently being done by you, live, one call at a time.</p>
+    <div class="grid2 rv" style="margin-top:34px">
+      <div class="card"><h3 style="color:#fff">On the site today</h3>
+        <p class="dim" style="margin:0">Forms on wistree.de: <strong style="color:var(--orange)">0</strong><br>Email capture fields: <strong style="color:var(--orange)">0</strong><br>Ways to self-assess: <strong style="color:var(--orange)">0</strong><br>Calls to action: <strong style="color:var(--orange)">Demo vereinbaren</strong></p></div>
+      <div class="card"><h3 style="color:#fff">What that asks of him</h3>
+        <p class="dim" style="margin:0">Give a stranger fifteen minutes, on camera, to be told that his plant depends on three people near retirement. Before he has any evidence that it does.</p></div>
+    </div>
+    <p class="src rv">Grepped wistree.de 2026-09-15. &lt;form&gt; 0, type="email" 0. Sole CTA target calendly.com/wistree-info/15min, verified live.</p>
+  </div>
+</section>
+
+<section class="sec light">
+  <div class="w">
+    <p class="kicker rv">5 · Why now</p>
+    <h2 class="rv" style="max-width:820px">The number that makes your case is public, current, and not on your website.</h2>
+    <div class="grid2" style="margin-top:34px;align-items:center">
+      <div class="rv">
+        <p class="num">13,3 Mio.</p>
+        <p style="margin-top:8px"><strong>Erwerbspersonen reach 67 by 2040.</strong> That’s 30.0 percent of the people who were in the German workforce last year. Destatis published it on 23 June this year, from the 2025 Mikrozensus.</p>
+        <p>Your homepage leads with 80 percent of company knowledge sitting in employees' heads, and cites nothing. This number is federal, dated, and quotable. It belongs on the page, with the link under it.</p>
+        <p class="src">Statistisches Bundesamt, Pressemitteilung Nr. N039, 23.06.2026, Erstergebnisse Mikrozensus 2025.</p>
+      </div>
+      <div class="rv">
+        <svg viewBox="0 0 420 300" style="width:100%;height:auto" role="img" aria-label="Share of the German workforce reaching retirement age by 2040">
+          <rect x="0" y="0" width="420" height="300" fill="#fff"/>
+          <g font-family="SFMono-Regular,Menlo,monospace" font-size="11" fill="#5F6B68">
+            <text x="0" y="16">Erwerbspersonen, Deutschland</text>
+          </g>
+          <g>
+            <rect x="0" y="34" width="420" height="52" fill="#E3DED5"/>
+            <rect x="0" y="34" width="126" height="52" fill="#FE830E"/>
+            <text x="12" y="65" font-family="Inter,sans-serif" font-size="15" fill="#fff" font-weight="600">30,0 %</text>
+            <text x="142" y="65" font-family="Inter,sans-serif" font-size="13" fill="#3A4543">erreichen bis 2040 die Regelaltersgrenze</text>
+          </g>
+          <g font-family="Inter,sans-serif" font-size="12" fill="#3A4543">
+            <text x="0" y="122" font-weight="600">Was das heißt</text>
+          </g>
+          <g font-family="SFMono-Regular,Menlo,monospace" font-size="11.5" fill="#5F6B68">
+            <text x="0" y="146">13,3 Mio. Menschen</text>
+            <text x="0" y="168">≈ 887.000 pro Jahr</text>
+            <text x="0" y="190">≈ 3.400 pro Arbeitstag</text>
+          </g>
+          <line x1="0" y1="206" x2="420" y2="206" stroke="#E3DED5"/>
+          <g font-family="Inter,sans-serif" font-size="12" fill="#3A4543">
+            <text x="0" y="230">Jede dieser Personen nimmt implizites</text>
+            <text x="0" y="248">Prozesswissen mit, das nirgends dokumentiert ist.</text>
+          </g>
+          <g font-family="SFMono-Regular,Menlo,monospace" font-size="10" fill="#8A9794">
+            <text x="0" y="278">Quelle: Destatis, PM N039, 23.06.2026 (Mikrozensus 2025).</text>
+            <text x="0" y="292">Jahres- und Tageswerte aus 13,3 Mio. / 15 Jahren gerechnet.</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec light2">
+  <div class="w">
+    <p class="kicker rv">6 · What you’re up against</p>
+    <h2 class="rv" style="max-width:840px">Somebody already gives away the first indication. For free, in five minutes, with no signup.</h2>
+    <p class="lead rv" style="max-width:720px">The WiMa·Check from MDO-Beratung in Kassel scores knowledge management maturity from one to five, hands back prioritised recommendations and a PDF, and asks for nothing in return.</p>
+    <div style="margin-top:34px;background:#fff;border-radius:14px;padding:8px 26px 18px" class="rv">
+      <div class="tw"><table>
+        <tr><th style="width:34%"></th><th style="width:33%">WiMa·Check, live today</th><th style="width:33%">WisTree, today</th></tr>
+        <tr><td><strong>Time to a first number</strong></td><td>About 5 minutes</td><td class="dim">A 15 minute call, once scheduled</td></tr>
+        <tr><td><strong>Signup</strong></td><td>None</td><td class="dim">Calendly, with a name and an email</td></tr>
+        <tr><td><strong>Output</strong></td><td>Score 1 to 5, recommendations, PDF</td><td class="dim">A conversation</td></tr>
+        <tr><td><strong>Tied to real processes</strong></td><td class="dim">No, a maturity model</td><td><strong style="color:var(--orange-d)">Yes, this is the WKI</strong></td></tr>
+        <tr><td><strong>Benchmark against peers</strong></td><td class="dim">No</td><td><strong style="color:var(--orange-d)">Nobody does this</strong></td></tr>
+      </table></div>
+    </div>
+    <p class="lead rv" style="max-width:760px;margin-top:30px">So the indication on its own is already commoditised. The benchmark is not. A score is an opinion a manager can argue with. <strong>Where he sits against firms his own size is a fact about him</strong>, and that’s the half that makes him pick up the phone.</p>
+    <p class="src rv">wima-check.mdo-beratung.de, fetched 2026-09-15. 12 questions, TOM model, free PDF, keine Anmeldung nötig. Operated by MDO-Beratung, Thomas Thiel, INQA-Coach, Kassel.</p>
+  </div>
+</section>
+<section class="sec">
+  <div class="w">
+    <p class="kicker rv">7 · The move</p>
+    <h2 class="rv" style="max-width:860px">Put the Schnellcheck in front of the Calendly. Not as a feature you ship later, as the first thing on the site.</h2>
+    <div class="grid3" style="margin-top:38px">
+      <div class="card rv"><p class="num" style="font-size:30px">01</p><h3 style="color:#fff;margin-top:12px">Six questions, ninety seconds</h3><p class="dim">No signup. He answers about his own processes and gets a WKI band immediately. Your framework does the work, not a salesperson.</p></div>
+      <div class="card rv"><p class="num" style="font-size:30px">02</p><h3 style="color:#fff;margin-top:12px">Then the benchmark</h3><p class="dim">Where he sits against firms his size in his industry. This is the part no competitor has, and the part he can’t dismiss.</p></div>
+      <div class="card rv"><p class="num" style="font-size:30px">03</p><h3 style="color:#fff;margin-top:12px">The call becomes the next step</h3><p class="dim">He books because he already saw the number, not to find out whether there’s one. Same Calendly, completely different conversation.</p></div>
+    </div>
+    <p class="lead rv" style="margin-top:34px;max-width:780px">It also gives you the thing you don’t have yet. Every completed check is a data point, and the benchmark gets more defensible with each one. The tool that acquires customers is the same tool that builds the dataset nobody else can copy.</p>
+  </div>
+</section>
+
+<section class="sec light" id="tool">
+  <div class="w">
+    <p class="kicker rv">8 · Built, and working</p>
+    <h2 class="rv" style="max-width:760px">Have a go. This runs right here.</h2>
+    <p class="lead rv" style="max-width:700px">Six questions in German, written from your own methodology. It’s deliberately short, because this is the first indication, not the WKI analysis.</p>
+
+    <div class="card rv" style="margin-top:34px;padding:0;overflow:hidden">
+      <div style="background:var(--ink);padding:18px 26px;display:flex;align-items:center;gap:12px">
+        <span style="width:9px;height:9px;border-radius:50%;background:var(--orange);display:inline-block"></span>
+        <span style="font-family:var(--mono);font-size:12px;letter-spacing:.09em;color:#EDEFEE">WKI SCHNELLCHECK</span>
+        <span style="font-family:var(--mono);font-size:11px;color:var(--muted);margin-left:auto" id="qcount">Frage 1 von 6</span>
+      </div>
+
+      <div style="padding:30px 26px 34px" id="quiz">
+        <div id="qbox">
+          <p style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted-d);margin:0 0 10px" id="qdim">PROZESSABHÄNGIGKEIT</p>
+          <h3 style="font-size:22px;line-height:1.3;margin:0 0 22px" id="qtext">Frage</h3>
+          <div id="opts"></div>
+        </div>
+
+        <div id="result" style="display:none">
+          <div class="grid2" style="gap:30px;align-items:start">
+            <div>
+              <p style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted-d);margin:0 0 6px">IHR WKI-SCHNELLWERT</p>
+              <p class="num" id="score" style="margin:0">0</p>
+              <p id="band" style="font-size:19px;font-weight:620;margin:6px 0 10px">&nbsp;</p>
+              <p id="verdict" class="dim" style="font-size:15px">&nbsp;</p>
+            </div>
+            <div>
+              <p style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted-d);margin:0 0 12px">IM VERGLEICH</p>
+              <svg id="bench" viewBox="0 0 380 150" style="width:100%;height:auto"></svg>
+              <p style="font-family:var(--mono);font-size:10.5px;color:var(--muted-d);line-height:1.5;margin:10px 0 0">Vergleichskurve: Platzhalter. Mit Ihren Pilotdaten zu ersetzen. Siehe Übergabe.</p>
+            </div>
+          </div>
+          <div style="margin-top:26px;padding-top:22px;border-top:1px solid var(--line-d);display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+            <a href="https://calendly.com/wistree-info/15min" style="background:var(--orange);color:#fff;text-decoration:none;font-weight:600;padding:13px 22px;border-radius:8px;font-size:15px">Ergebnis besprechen, 15 Minuten</a>
+            <button id="again" style="background:none;border:1px solid var(--line-d);color:var(--muted-d);padding:13px 20px;border-radius:8px;font-size:14px;cursor:pointer;font-family:inherit">Nochmal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="src rv">Questions written from the six steps on /die-wistree-methodik. Scoring is ours and open to your correction. The comparison curve is a placeholder shape, not real data, and is labelled as such inside the tool.</p>
+  </div>
+</section>
+<section class="sec light2">
+  <div class="w">
+    <p class="kicker rv">9 · What the rest looks like</p>
+    <h2 class="rv" style="max-width:800px">Three screens that follow the check. Sketches, not built.</h2>
+    <div class="grid3" style="margin-top:36px">
+      <div class="card rv">
+        <span class="tag sketch">Sketch, not built</span>
+        <svg viewBox="0 0 300 180" style="width:100%;height:auto;margin:16px 0 4px">
+          <rect width="300" height="180" fill="#F6F4F0" rx="8"/>
+          <rect x="16" y="16" width="120" height="8" rx="4" fill="#CFCABF"/>
+          <rect x="16" y="40" width="268" height="58" rx="6" fill="#fff" stroke="#E3DED5"/>
+          <rect x="28" y="54" width="70" height="7" rx="3.5" fill="#E3DED5"/>
+          <rect x="28" y="70" width="150" height="14" rx="3" fill="#FE830E" opacity=".85"/>
+          <rect x="16" y="108" width="268" height="56" rx="6" fill="#fff" stroke="#E3DED5"/>
+          <rect x="28" y="122" width="90" height="7" rx="3.5" fill="#E3DED5"/>
+          <rect x="28" y="138" width="110" height="12" rx="3" fill="#CFCABF"/>
+        </svg>
+        <h3>Der PDF-Bericht</h3>
+        <p class="dim" style="font-size:15px">The score, the benchmark and the three weakest process areas, in a file he can forward to his Geschäftsführung. That forward is your best lead source.</p>
+      </div>
+      <div class="card rv">
+        <span class="tag sketch">Sketch, not built</span>
+        <svg viewBox="0 0 300 180" style="width:100%;height:auto;margin:16px 0 4px">
+          <rect width="300" height="180" fill="#F6F4F0" rx="8"/>
+          <circle cx="150" cy="92" r="58" fill="none" stroke="#E3DED5" stroke-width="12"/>
+          <path d="M150 34 a58 58 0 0 1 50 87" fill="none" stroke="#FE830E" stroke-width="12" stroke-linecap="round"/>
+          <circle cx="150" cy="92" r="30" fill="#fff"/>
+          <rect x="120" y="150" width="60" height="7" rx="3.5" fill="#CFCABF"/>
+        </svg>
+        <h3>Die Branchenansicht</h3>
+        <p class="dim" style="font-size:15px">Aggregated results by industry and company size, published quarterly. It makes WisTree the place the number comes from, which is a position, not a feature.</p>
+      </div>
+      <div class="card rv">
+        <span class="tag sketch">Sketch, not built</span>
+        <svg viewBox="0 0 300 180" style="width:100%;height:auto;margin:16px 0 4px">
+          <rect width="300" height="180" fill="#F6F4F0" rx="8"/>
+          <rect x="16" y="20" width="268" height="30" rx="6" fill="#fff" stroke="#E3DED5"/>
+          <rect x="28" y="31" width="80" height="8" rx="4" fill="#CFCABF"/>
+          <g>
+            <rect x="16" y="62" width="82" height="86" rx="6" fill="#fff" stroke="#E3DED5"/>
+            <rect x="109" y="62" width="82" height="86" rx="6" fill="#fff" stroke="#E3DED5"/>
+            <rect x="202" y="62" width="82" height="86" rx="6" fill="#FE830E" opacity=".9"/>
+          </g>
+        </svg>
+        <h3>Vom Schnellwert zum WKI</h3>
+        <p class="dim" style="font-size:15px">The bridge into the real product. Six questions become the process map, and the Schnellwert becomes the actual Wissenskritikalitätsindex. Your step two, entered from step one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="w-n">
+    <p class="kicker rv">10 · Why us</p>
+    <h2 class="rv">We build the websites and the tools that sit on them.</h2>
+    <p class="lead rv">Raka spent a year at Heineken standardising data and decision cadences across 23 markets, and eighteen months at Betty Blocks building how a B2B software product reaches and qualifies the right buyer. The Schnellcheck is that job exactly, a qualifying instrument that does the convincing before anyone speaks.</p>
+    <p class="rv">Everything in this deck was fetched rather than assumed. The 404s, the title conflicts, the missing source, the competitor who already gives the indication away. If we got something wrong, it’s checkable in one click, and we’d rather you check.</p>
+  </div>
+</section>
+
+<section class="sec light">
+  <div class="w-n">
+    <p class="kicker rv">11 · Next step</p>
+    <h2 class="rv">Two things, in order.</h2>
+    <p class="lead rv"><strong>This week, free.</strong> Fix the four dead links, the Download page and the WKI spelling. It’s an hour of work and we’ll send you exactly what to change, whether or not anything else happens.</p>
+    <p class="lead rv"><strong>Then the Schnellcheck.</strong> Tell us whether the six questions are the right six. You know the framework, we don’t. Once they’re yours, we build it into wistree.de properly, with the PDF and the benchmark wired to your pilot data.</p>
+    <div class="card rv" style="margin-top:30px">
+      <h3>Before any of it goes live</h3>
+      <p class="dim" style="margin:0">The comparison curve in the tool above is a placeholder shape. It’s not real data and must not ship as if it were. The benchmark needs a real distribution from your pilots, and until there’s one the honest version shows the score without the comparison.</p>
+    </div>
+    <p class="rv" style="margin-top:28px"><a href="https://calendly.com/wistree-info/15min" style="color:var(--orange-d);font-weight:600">Or just send back the six questions with your corrections.</a></p>
+  </div>
+</section>
+
+<footer style="padding:42px 32px;background:var(--ink);border-top:1px solid var(--line)">
+  <div class="w" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;align-items:center">
+    <span style="font-family:var(--mono);font-size:11.5px;color:var(--muted)">Astra Agency für WisTree · 15.09.2026 · Nicht öffentlich</span>
+    <span style="font-family:var(--mono);font-size:11.5px;color:var(--muted)">Alle Angaben am 15.09.2026 geprüft</span>
+  </div>
+</footer>
+<script>
+(function(){
+  "use strict";
+  /* ---------- reveals ---------- */
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  },{threshold:.12,rootMargin:"0px 0px -8% 0px"});
+  document.querySelectorAll(".rv,h1,h2").forEach(function(el){ io.observe(el); });
+
+  /* ---------- hero canvas: a growing knowledge tree ---------- */
+  var cv = document.getElementById("tree");
+  if(cv){
+    var ctx = cv.getContext("2d"), W=0, H=0, dpr=Math.min(window.devicePixelRatio||1,2);
+    function size(){
+      var w=cv.parentNode.clientWidth, h=cv.parentNode.clientHeight;
+      W=w; H=h; cv.width=w*dpr; cv.height=h*dpr; cv.style.width=w+"px"; cv.style.height=h+"px";
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+    }
+    size(); window.addEventListener("resize",function(){ size(); draw(1); });
+    var nodes=[];
+    function branch(x,y,ang,len,depth,seed){
+      if(depth<=0||len<5) return;
+      var x2=x+Math.cos(ang)*len, y2=y+Math.sin(ang)*len;
+      nodes.push({x1:x,y1:y,x2:x2,y2:y2,d:depth,t:(7-depth)/7});
+      var spread=0.42+((seed%7)/26);
+      branch(x2,y2,ang-spread,len*0.74,depth-1,seed*2+1);
+      branch(x2,y2,ang+spread,len*0.71,depth-1,seed*2+3);
+    }
+    function build(){
+      nodes=[];
+      var wide = W>860;
+      var baseX = wide ? W*0.76 : W*0.5;
+      var baseY = H*1.02;
+      var len = wide ? Math.min(H*0.27,190) : Math.min(H*0.20,120);
+      branch(baseX,baseY,-Math.PI/2,len,7,3);
+    }
+    var prog=0;
+    function draw(p){
+      ctx.clearRect(0,0,W,H);
+      var g=ctx.createLinearGradient(0,0,0,H);
+      g.addColorStop(0,"rgba(12,18,17,0)"); g.addColorStop(1,"rgba(254,131,14,0.05)");
+      ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+      nodes.forEach(function(n){
+        if(n.t>p) return;
+        var a=Math.min(1,(p-n.t)*5);
+        ctx.strokeStyle="rgba(254,131,14,"+(0.12+0.50*(n.d/7))*a+")";
+        ctx.lineWidth=Math.max(0.6,n.d*0.95);
+        ctx.lineCap="round";
+        ctx.beginPath(); ctx.moveTo(n.x1,n.y1); ctx.lineTo(n.x2,n.y2); ctx.stroke();
+        if(n.d<=2){
+          ctx.fillStyle="rgba(254,131,14,"+(0.30*a)+")";
+          ctx.beginPath(); ctx.arc(n.x2,n.y2,1.5,0,6.284); ctx.fill();
+        }
+      });
+    }
+    build();
+    var start=null;
+    function tick(ts){
+      if(!start) start=ts;
+      prog=Math.min(1,(ts-start)/2600);
+      draw(prog);
+      if(prog<1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    setTimeout(function(){ document.getElementById("hero").classList.add("in"); },80);
+  }
+
+  /* ---------- WKI Schnellcheck ---------- */
+  var Q = [
+    { dim:"KOPFMONOPOLE",
+      q:"Ihre erfahrenste Person in einem Kernprozess fällt ab morgen aus. Wie lange läuft der Prozess normal weiter?",
+      a:[["Unbegrenzt, mehrere Kollegen können das vollständig übernehmen",0],
+         ["Einige Wochen, dann wird es spürbar",1],
+         ["Wenige Tage, danach häufen sich Rückfragen",2],
+         ["Sofort kritisch, wir müssten improvisieren",3]] },
+    { dim:"SOLL GEGEN IST",
+      q:"Wie stark weichen Ihre dokumentierten Prozesse von der täglichen Praxis ab?",
+      a:[["Kaum, die Dokumentation wird laufend gepflegt",0],
+         ["Etwas, bei Standardfällen stimmt sie",1],
+         ["Deutlich, erfahrene Leute arbeiten anders als beschrieben",2],
+         ["Die Dokumentation beschreibt kaum den echten Ablauf",3]] },
+    { dim:"SONDERFÄLLE",
+      q:"Ausnahmen, Störungen und Sonderfälle. Wo steht, wie damit umzugehen ist?",
+      a:[["Dokumentiert und auffindbar",0],
+         ["Teilweise dokumentiert",1],
+         ["In verstreuten Notizen und Mails",2],
+         ["Ausschließlich in den Köpfen einzelner Personen",3]] },
+    { dim:"ALTERSSTRUKTUR",
+      q:"Wie viele Ihrer wichtigsten Prozessträger gehen in den nächsten fünf Jahren in Rente?",
+      a:[["Keine",0],["Einzelne",1],["Mehrere in verschiedenen Bereichen",2],["Ein größerer Teil, teils gleichzeitig",3]] },
+    { dim:"WISSENSTRANSFER",
+      q:"Jemand mit Schlüsselwissen kündigt. Was passiert heute konkret?",
+      a:[["Strukturierte Übergabe nach festem Verfahren",0],
+         ["Eine Einarbeitung, sofern Zeit bleibt",1],
+         ["Ein paar Gespräche und eine Liste",2],
+         ["Im Zweifel nichts, die Restzeit ist zu knapp",3]] },
+    { dim:"IM MOMENT DER ENTSCHEIDUNG",
+      q:"Eine Entscheidung steht an. Findet die Person die nötige Information rechtzeitig?",
+      a:[["Ja, direkt im Prozess",0],
+         ["Meistens, mit etwas Suchen",1],
+         ["Oft erst nach Rückfrage bei Kollegen",2],
+         ["In der Regel nur über die eine Person, die es weiß",3]] }
+  ];
+  var idx=0, total=0;
+  var qtext=document.getElementById("qtext"), qdim=document.getElementById("qdim"),
+      opts=document.getElementById("opts"), qcount=document.getElementById("qcount"),
+      qbox=document.getElementById("qbox"), res=document.getElementById("result");
+
+  function render(){
+    if(!qtext) return;
+    var item=Q[idx];
+    qdim.textContent=item.dim;
+    qtext.textContent=item.q;
+    qcount.textContent="Frage "+(idx+1)+" von "+Q.length;
+    opts.innerHTML="";
+    item.a.forEach(function(pair){
+      var b=document.createElement("button");
+      b.type="button";
+      b.textContent=pair[0];
+      b.style.cssText="display:block;width:100%;text-align:left;margin:0 0 9px;padding:14px 16px;border:1px solid rgba(12,18,17,.14);background:#fff;border-radius:9px;cursor:pointer;font-family:inherit;font-size:15.5px;line-height:1.4;color:#232C2B;transition:border-color .15s,background .15s";
+      b.addEventListener("mouseenter",function(){ b.style.borderColor="#FE830E"; b.style.background="#FFF8F0"; });
+      b.addEventListener("mouseleave",function(){ b.style.borderColor="rgba(12,18,17,.14)"; b.style.background="#fff"; });
+      b.addEventListener("click",function(){ total+=pair[1]; idx++; if(idx<Q.length){ render(); } else { finish(); } });
+      opts.appendChild(b);
+    });
+  }
+
+  function finish(){
+    var pct=Math.round((total/(Q.length*3))*100);
+    qbox.style.display="none"; res.style.display="block";
+    qcount.textContent="Ergebnis";
+    document.getElementById("score").textContent=pct;
+    var band, verdict;
+    if(pct<30){ band="Stabil"; verdict="Ihre Prozesse tragen sich auch ohne einzelne Personen. Der WKI würde hier vor allem bestätigen, was funktioniert."; }
+    else if(pct<55){ band="Beobachten"; verdict="Einzelne Stellen hängen an Erfahrung. Noch beherrschbar, aber die Altersstruktur entscheidet, wie lange."; }
+    else if(pct<75){ band="Erhöht"; verdict="Mehrere Kernprozesse laufen über implizites Wissen. Ein Austritt wäre spürbar, ein zweiter teuer."; }
+    else { band="Kritisch"; verdict="Ihre Prozesse funktionieren, weil einzelne Menschen sie täglich zusammenhalten. Das ist kein Dokumentationsproblem mehr."; }
+    document.getElementById("band").textContent=band;
+    document.getElementById("verdict").textContent=verdict;
+    drawBench(pct);
+  }
+
+  function drawBench(pct){
+    var s=document.getElementById("bench");
+    var W=380,H=150,pad=8;
+    var pts=[], i;
+    for(i=0;i<=60;i++){
+      var x=i/60, v=Math.exp(-Math.pow((x-0.54)/0.22,2)/2);
+      pts.push([pad+x*(W-pad*2), H-30-v*84]);
+    }
+    var d="M"+pts.map(function(p){ return p[0].toFixed(1)+","+p[1].toFixed(1); }).join(" L");
+    var mx=pad+(pct/100)*(W-pad*2);
+    var html="";
+    html+='<rect width="380" height="150" fill="#fff"/>';
+    html+='<path d="'+d+' L'+(W-pad)+','+(H-30)+' L'+pad+','+(H-30)+' Z" fill="#F1EEE8"/>';
+    html+='<path d="'+d+'" fill="none" stroke="#CFCABF" stroke-width="1.5"/>';
+    html+='<line x1="'+mx.toFixed(1)+'" y1="18" x2="'+mx.toFixed(1)+'" y2="'+(H-30)+'" stroke="#FE830E" stroke-width="2"/>';
+    html+='<circle cx="'+mx.toFixed(1)+'" cy="18" r="4" fill="#FE830E"/>';
+    html+='<text x="'+Math.min(W-96,Math.max(4,mx-24)).toFixed(1)+'" y="12" font-family="SFMono-Regular,Menlo,monospace" font-size="10" fill="#D96A00">Ihr Wert</text>';
+    html+='<line x1="'+pad+'" y1="'+(H-30)+'" x2="'+(W-pad)+'" y2="'+(H-30)+'" stroke="#E3DED5"/>';
+    html+='<text x="'+pad+'" y="'+(H-14)+'" font-family="SFMono-Regular,Menlo,monospace" font-size="10" fill="#8A9794">stabil</text>';
+    html+='<text x="'+(W-pad)+'" y="'+(H-14)+'" text-anchor="end" font-family="SFMono-Regular,Menlo,monospace" font-size="10" fill="#8A9794">kritisch</text>';
+    html+='<text x="'+(W/2)+'" y="'+(H-14)+'" text-anchor="middle" font-family="SFMono-Regular,Menlo,monospace" font-size="10" fill="#8A9794">Platzhalterverteilung</text>';
+    s.innerHTML=html;
+  }
+
+  var again=document.getElementById("again");
+  if(again){ again.addEventListener("click",function(){ idx=0; total=0; qbox.style.display="block"; res.style.display="none"; render(); }); }
+  render();
+})();
+</script>
+</body>
+</html>
