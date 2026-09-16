@@ -263,6 +263,68 @@ you have to reread a sentence to find the verb, or a clause could be lifted out
 without anyone noticing, it is broken. A useful grep before any batch goes out,
 count the commas in block three. Three or more in one sentence means rewrite.
 
+**The roast register (Raka, 2026-09-16). A tone override, not a sixth template.**
+His words on the EduOs draft, "AND just roast it." When a site is genuinely,
+provably dated, the polite version undersells the problem and the owner does not
+feel it. So the "However" block is allowed to be funny and blunt, and it stays
+inside the same four blocks.
+
+What the licence covers and what it does not.
+
+- **Allowed.** Naming the specific ugly thing out loud, "a stock photo of a man in
+  a polo pointing at nothing". Saying a year as a verdict, "looks like 2008 and I
+  mean that literally". Letting a verified detail do the joke.
+- **Not allowed.** Insulting the person, their team or their product. The roast is
+  always aimed at the page, never at the software behind it, and block one still
+  opens by crediting something real they built. A roast with no compliment in front
+  of it is just rudeness and it loses the lead.
+- **Every jab must be a verified fact.** A funny line about something you did not
+  actually check is the worst of both worlds. If it is in the message it is in the
+  research note with the file name or the page it came from.
+- **The dash, colon and no fabrication rules are NOT relaxed.** Only the politeness
+  is.
+- **It runs longer.** The EduOs draft is 179 words against the 145 ceiling, because
+  the evidence is the joke and the evidence takes words. That is accepted for this
+  register only.
+
+**How to prove a site is dated, rather than asserting it (Raka, 2026-09-16, "research
+how this LOOKS LIKE").** Taste is not evidence and Raka will not accept it. Go to the
+raw HTML and bring back artefacts.
+
+The 2000s tells, all greppable.
+- **`.fw.png` in an image filename.** The Adobe Fireworks export convention. Adobe
+  discontinued Fireworks in 2013, so the asset pipeline is at least that old. EduOs
+  had three of six homepage images carrying it, and WordPress rewrites the dot, so
+  grep for `.fw_` too.
+- **A bought multipurpose ThemeForest theme** in `/wp-content/themes/`, Enfold,
+  Avada, BeTheme, The7. Check the CSS `?ver=` before calling the install old, Enfold
+  8.1 is current, so the honest claim is "a bought template rather than a designed
+  site", not "a 2013 theme".
+- **A bundled icon font** like entypo-fontello, and **no Google Fonts at all**,
+  which means the theme defaults were never replaced.
+- **Bevel, emboss and drop shadow on buttons and headings**, the single clearest
+  giveaway that nothing has been touched in a decade.
+- **The stock photography idiom.** A person in business dress smiling at the camera,
+  someone pointing upward at nothing, code projected onto a face.
+- **A demo screenshot with no data in it.** EduOs shipped one reading 0 percent,
+  0 percent, 0 percent, which tells a buyer nobody uses the product.
+
+What a 2026 SaaS site looks like, so the contrast is concrete rather than vague.
+Dark hero with one electric accent. Oversized assertive headline type, often with a
+gradient on the words. The product itself in the hero as a large floating dashboard,
+live rather than static, which is the Linear, Attio and Cursor pattern. Feature pills
+under the headline. One primary CTA next to a quiet secondary. Bento grids for
+features, a logo wall for proof. Stripe and Vercel are the gradient benchmark.
+Eduflex's own EduNova page is a textbook example and was used as the comparison.
+
+**The impacts to reach for, because "it looks old" is not a cost.** Pick the one
+that bites for that buyer. Procurement, where a committee uses the site as the first
+cut and a dated page loses before any demo. Price anchoring, where an old looking
+site makes the buyer expect an old price. Hiring, which matters most right after a
+rewrite when they need developers. And the contradiction, where the site actively
+disproves the claim on it, which is the sharpest of the four. EduOs promises
+toekomstbestendig software on a page that looks eighteen years old.
+
 **The reply variant (Raka, 2026-09-14).** When the lead has written to us
 first, only the first block changes. Answer their message, then go straight
 into the same structure.
