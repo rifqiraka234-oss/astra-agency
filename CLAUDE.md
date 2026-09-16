@@ -953,6 +953,26 @@ Every line is here because it failed at least once.
   Meanwhile the v0.1 invite step sent twenty connect notes that same morning, the
   last at 07:54. Nothing was delivered and roughly a full session of research went
   into people who cannot receive a message yet.
+- **The acceptance signal, and it is in the list endpoint all along (2026-09-16).**
+  **`lastActivityAt` strictly later than `lastSentAt` means the contact accepted.**
+  The later activity is the acceptance being written to the thread. Combine it with
+  a `lastSentMessagePreview` that is still the generic connect note and a
+  `lastRepliedAt` of null, and you have a genuine Silent accepted lead, accepted but
+  never given a real message. When the two timestamps are **equal**, the invitation
+  is still pending and a send will be refused.
+  Corroborated three ways on the day it was found. Raka's own LinkedIn inbox
+  screenshot showed Martijn Hak, Sergey Shalunov and Jelle de Vries as live threads
+  and all three carry the later-activity pattern. Every contact who demonstrably
+  received a real researched message, Daniel Forster, Nives Rombini, Martijn Mol,
+  Mark-Paul Burgersdijk and Dr Ashish Rajput, carries it too. And all twelve
+  contacts whose sends were refused had the two timestamps exactly equal.
+- **`get_inbox_conversation` cannot do this job.** Martijn Hak is accepted and his
+  thread still returns zero activities, identical to a pending invite. The thread
+  endpoint is for reading what was said, never for deciding acceptance.
+- **A row with `lastSentAt: null` and recent activity is a third state**, roughly 30
+  of them in the 9 to 16 September window. Nothing was ever sent to these people at
+  all, not even the connect note, yet something happened on the thread. Treat as
+  UNKNOWN until one is probed with a send. Do not assume it means accepted.
 - **So test one contact before researching a batch.** When a batch is drawn from
   `sentOnly`, attempt a send to a single contact in it first. If it refuses, the
   whole batch is pending invitations and the research should wait. The 2026-09-16
