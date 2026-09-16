@@ -859,12 +859,25 @@ Every line is here because it failed at least once.
   beside a `lastSentMessagePreview` that is still the connect note proves the row is
   genuinely Silent accepted.
 - **`contactId` is what `send_message` needs**, never `leadId`.
-- **The list endpoint cannot tell you what a thread contains.** It exposes only
-  `lastSentMessagePreview`. Any claim about history, and every follow up count, needs
-  `get_inbox_conversation` per contact. See the inbox guardrail above for the audit
-  this broke.
-- **An empty `get_inbox_conversation` is not evidence.** The connect note is not
-  always written as an activity.
+- **The list endpoint cannot tell you what a thread contains, and its preview can be
+  flatly wrong.** It exposes only `lastSentMessagePreview`, and on 2026-09-16 that
+  preview showed the generic **connect note** for Carolien Leeraar, Andy Tidd and
+  Patrick Killeen while each thread actually held a full researched opener sent
+  afterwards. Triaging from the list alone would have re messaged all three as
+  though they had never been contacted, which is the one outreach mistake with no
+  recovery. Any claim about history, and every follow up count, needs
+  `get_inbox_conversation` per contact.
+- **There is no LinkedIn connection status field.** `get_contact_fields_schema`
+  returns none, standard or custom, so acceptance is not stored on the contact and
+  **`sentOnly` mixes accepted contacts with invitations nobody has accepted yet**.
+  The newest rows there are almost always the invite step firing, not new accepts.
+  Checked 2026-09-16, Özgül Atay and Chris Berry both sat at the top of the list
+  with a connect note preview and **zero activities** in the thread. Ordering
+  `search_campaign_leads` newest first does not help either, that returns fresh
+  imports with empty activities.
+- **An empty `get_inbox_conversation` is genuinely ambiguous.** The connect note is
+  not always written as an activity, so empty means unknown, never "pending" and
+  never "nothing was sent". Say unknown rather than guessing.
 - **`aiLeadInterestLevel` is a reading priority hint, never evidence.** It is the AI's
   read of one reply, and it is absent on any message that was not scored.
 - **Fetch failures are UNKNOWN and retryable**, never "no angle". Retry with the
@@ -1284,6 +1297,15 @@ itself.
     earlier row had already marked `NO_STRONG_ANGLE`/skip, and re-derived
     OKOJU wrongly (called a DTC cookware brand a "consultant"), purely because
     the queue was not read first.
+  - **The queue's `status` goes stale, so trust threads over the file (2026-09-16).**
+    A check found 37 rows marked `DRAFTED` with `openerText: null`, yet Andy Tidd and
+    Patrick Killeen both had real openers in their threads from 14 Sep, and Marjorie
+    Pigaux, Mark Preston, Mark-Paul Burgersdijk, Malcolm Amonoo, Clara Champion and
+    Dr Ashish Rajput had all been nudged. The 14 Sep batches were sent without writing
+    the status back. So **write the status back in the same commit as the send**, and
+    before drawing any batch from the queue, reconcile the rows you intend to work
+    against their actual threads. Also **key on `contactId`, not name**, because the
+    queue stores "Andy Tidd" while lemlist returns "Andy Tidd Fbcs".
   - **Queue hygiene: the latest row per `leadId` is authoritative.** The file
     is append only. When you re-work a lead, append a row whose `research`
     note begins `SUPERSEDES prior <status>` with the reason, so the change is
