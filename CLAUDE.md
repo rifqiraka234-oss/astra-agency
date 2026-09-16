@@ -960,7 +960,12 @@ Every line is here because it failed at least once.
   `lastRepliedAt` of null, and you have a genuine Silent accepted lead, accepted but
   never given a real message. When the two timestamps are **equal**, the invitation
   is still pending and a send will be refused.
-  Corroborated three ways on the day it was found. Raka's own LinkedIn inbox
+  **PROVEN by a send on the same day.** Sergey Shalunov was picked purely on this
+  signal, lastActivityAt 15 Sep 23:31 against lastSentAt 8 Sep 06:51, and the
+  message went through first time with `success: true`. Fourteen attempts on
+  contacts whose timestamps were equal had already been refused. One rule, two
+  opposite outcomes, both predicted.
+  Corroborated three further ways on the day it was found. Raka's own LinkedIn inbox
   screenshot showed Martijn Hak, Sergey Shalunov and Jelle de Vries as live threads
   and all three carry the later-activity pattern. Every contact who demonstrably
   received a real researched message, Daniel Forster, Nives Rombini, Martijn Mol,
