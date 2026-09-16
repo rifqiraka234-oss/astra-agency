@@ -78,3 +78,55 @@ outreach mistake with no recovery.
 Pull the thread for all 37 `DRAFTED` rows plus the 31 `BLOCKED_NEEDS_INFO` rows,
 write back the true status with a `SUPERSEDES prior <status>` note per the queue
 hygiene rule, key on `contactId` rather than name, and only then pick a batch.
+
+---
+
+# Update, same day. Scope set to v0.1, partial reconciliation done
+
+## Campaign scope, confirmed against lemlist
+
+`get_campaigns` with no status filter returns **`cam_PryZp5LuvQv8NznHh` (v0.1
+Outreach Only) as the only `running` campaign**. `cam_Co5CJXrpPFf5MRAfD` (v0.2
+Auto Enrichment Pipeline) is **paused**. That reverses the 2026-08-11 note in
+CLAUDE.md which had both running, and it matches Raka's instruction that
+everything now goes out on v0.1. Both places in the playbook are corrected.
+
+## 18 of the 37 DRAFTED rows reconciled to SENT
+
+Evidence held to two standards, both sound.
+
+**Thread pulled directly.** Andy Tidd (Juntos Solutions opener, 14 Sep) and
+Patrick Killeen (Head and Heart CIC opener, 14 Sep).
+
+**Preview showed a real message.** Marjorie Pigaux, Mark Preston, Mark-Paul
+Burgersdijk, Malcolm Amonoo, Clara Champion and Dr Ashish Rajput all show nudges.
+Jose Barbosa, Katrin Kempe and Lars Vagevuur all show openers. Amir Ghorbaninia
+shows the note congratulating the Ad-Wise rebuild. This direction is reliable. A
+preview showing a real message proves one exists. The unreliability runs the other
+way, a preview showing the connect note can hide a later opener.
+
+**Already replied**, so unambiguously worked. Luke Dear, Robert Fennis, James
+Thornton, Sébastien Alotto, Bastian Thomas, Mia Kovač.
+
+Each got an appended row with `SUPERSEDES prior DRAFTED` and the specific evidence.
+
+## 19 still unverified, and why they are not cheap to check
+
+Christelle Dupuy, Daniel Forster, Dr Ramedani, Gijs van den Hombergh, Irem Unlu
+Demir, Jojanneke van 't Land, Lars Tibben, Lea Janoray, Leen van 't Veen, Luis
+Perona, Manon Picot, Mark Langens, Muhammad Ahmed Sarfraz, Nico Wusk, Robert van
+Glabbeek, Russell Upton, Samer Al-Waealy, Seydouba Fissa Sylla, Ziad Al-Nuss.
+
+**Only 7 of the 37 DRAFTED rows carry a `contactId` and none carry a `leadId`.**
+The rest hold a name only, so each needs a `get_inbox_conversations` search to
+resolve the id and then a thread pull. Roughly 38 calls for these 19.
+
+Paginating `search_campaign_leads` with activities is not the shortcut it looks
+like. Offsets 0 and 120 on v0.1 both return leads added 2026-09-14 with
+`activities: ""`, so the campaign's first several hundred rows are fresh imports
+and the worked leads sit much deeper.
+
+## Not sent anything
+
+No batch drawn. Nineteen rows in the queue still claim DRAFTED without proof, and
+a batch drawn across them risks messaging someone a second time.

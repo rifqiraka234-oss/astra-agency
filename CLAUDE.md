@@ -1179,10 +1179,11 @@ informational only, never blocks anything.
 - This pipeline drafts and stages messages. It does not flip the campaign to
   running and does not otherwise cause a send by itself; a human decides
   when the campaign actually sends.
-- `cam_Co5CJXrpPFf5MRAfD` is now running (see Live configuration above), so
-  Tier 1 imports into it send on schedule. Re confirm its status at the
-  start of every run rather than trusting this note, since Raka can change
-  it at any time.
+- **`cam_Co5CJXrpPFf5MRAfD` is paused as of 2026-09-16 and Raka has said all
+  outreach goes out on v0.1.** Do not import Tier 1 into it while that holds.
+  Stage the rows, say so in the run log, and leave the decision with him. Re
+  confirm campaign status at the start of every run rather than trusting this
+  note, since Raka can change it at any time.
 
 ## Daily inbox triage
 
@@ -1194,11 +1195,14 @@ itself.
 
 - **Active campaigns to cover:** any campaign with status `running` (check
   fresh each run via `get_campaigns` with no status filter, campaigns can
-  change status between runs). As of 2026-08-11, both
-  `cam_PryZp5LuvQv8NznHh` (`Small Business Owners v0.1 - Outreach Only`) and
-  `cam_Co5CJXrpPFf5MRAfD` (`Small Business Owners v0.2 - Auto Enrichment
-  Pipeline`) are running. Scope is status-driven, not a hardcoded ID list, so
-  no code change is needed as campaigns turn on or off going forward.
+  change status between runs). Scope is status-driven, not a hardcoded ID list,
+  so no code change is needed as campaigns turn on or off going forward.
+- **As of 2026-09-16, `cam_PryZp5LuvQv8NznHh` (`v0.1 Outreach Only`) is the ONLY
+  running campaign, and Raka's instruction is that all outreach now goes out on
+  v0.1.** `cam_Co5CJXrpPFf5MRAfD` (`v0.2 Auto Enrichment Pipeline`) is **paused**,
+  which reverses the 2026-08-11 note that had both running. So work v0.1 leads,
+  pick batches from v0.1, and do not import into or resume v0.2. Restarting a
+  campaign is Raka's call, never yours.
 - Do not cover `draft`, `paused`, `ended`, or `archived` campaigns, they have
   no live LinkedIn activity to triage.
 
