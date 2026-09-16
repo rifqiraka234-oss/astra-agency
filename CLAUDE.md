@@ -935,6 +935,31 @@ Every line is here because it failed at least once.
 - **An empty `get_inbox_conversation` is genuinely ambiguous.** The connect note is
   not always written as an activity, so empty means unknown, never "pending" and
   never "nothing was sent". Say unknown rather than guessing.
+- **Acceptance IS decidable after all, and the test is `send_message` (2026-09-16).**
+  This supersedes the "acceptance cannot be verified" conclusion logged earlier the
+  same day. A LinkedIn direct message needs an accepted connection, an invitation
+  does not. So a `send_message` on channel linkedin that comes back
+  `HTTP 400 {"error":"Failed to send linkedin message [can-not-send-message]"}`
+  means that contact has not accepted, **provided you first rule out a dead sender
+  and a quota block**. Rule both out like this, and do it before drawing any
+  conclusion:
+  1. `get_user_channels` must show `linkedin.connected: true`.
+  2. `get_inbox_conversations` on `sentOnly` with `dateFilter` set to today must show
+     the campaign's invite step still firing. If invitations are going out, the
+     account is not quota blocked or restricted.
+  If both hold and the send still refuses, the contact is a pending invitation.
+- **The cost of learning this the hard way, 2026-09-16.** Fourteen send attempts
+  across three rounds, covering twelve fully researched openers, every one refused.
+  Meanwhile the v0.1 invite step sent twenty connect notes that same morning, the
+  last at 07:54. Nothing was delivered and roughly a full session of research went
+  into people who cannot receive a message yet.
+- **So test one contact before researching a batch.** When a batch is drawn from
+  `sentOnly`, attempt a send to a single contact in it first. If it refuses, the
+  whole batch is pending invitations and the research should wait. The 2026-09-16
+  batch of 38 was pulled from the newest end of `sentOnly`, dated 5 to 9 September,
+  which is exactly where the invite step has been firing, so it was the worst
+  possible slice to pick. **Draw batches from the oldest end of the accepted pool,
+  not the newest end of `sentOnly`.**
 - **`aiLeadInterestLevel` is a reading priority hint, never evidence.** It is the AI's
   read of one reply, and it is absent on any message that was not scored.
 - **Fetch failures are UNKNOWN and retryable**, never "no angle". Retry with the
