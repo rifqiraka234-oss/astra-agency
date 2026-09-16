@@ -180,7 +180,7 @@ doing nothing, and the offer, in that order.
 outranks the 65 word template in `docs/astra-master-context.md` section 9.**
 
 ```
-Hi [name], saw [company] and I find it [positive thing]!
+Hi [name], saw [post] and [compliment it]!
 
 However, [explain the problem in 1 sentence]. This means [cost of doing nothing].
 
@@ -189,7 +189,7 @@ I run Astra agency [what we can do for them specifically] after [my experience].
 Shall I [what we are going to send them]?
 ```
 
-Four blocks, roughly 100 to 120 words, exactly one exclamation mark and it
+Four blocks, roughly 100 to 145 words, exactly one exclamation mark and it
 lives on the first line. What changed versus every earlier version, and the
 reason he gave it, is the third block. **Every opener now spends one of Raka's
 own credentials**, matched to the lead using the rules in
@@ -201,10 +201,67 @@ food brand from zero with his family and ran the pricing and the P&L. Betty
 Blocks or efficy for B2B software, GTM, routing and audience problems. One
 credential, never a list, and never stretched into something he did not do.
 
-The opening line is a real, specific, casual reaction to something true about
-their business, never reverent flattery and never a generic compliment. The
-"However" sentence is one sentence. "This means" carries the cost of doing
-nothing in the present tense. The close names the artefact concretely.
+**Block one always opens on something they published (Raka, 2026-09-16). The
+shape is fixed, "Hi [name], saw [post] and [compliment it]".** Not "saw your
+company", not "saw your website". A post, an article, a column, a project write
+up, something they chose to put out. The reason is that "saw your company" is
+what a stranger with a list says, and "saw the piece you wrote about X" is what
+a person who actually read it says. It also forces the research to go past the
+homepage, which is where the weak openers always came from.
+
+Order of preference when hunting for one. Their own LinkedIn post, their own
+site's blog or news or insights, a trade press column or interview they wrote,
+then a named project write up on their own site. Never invent a post and never
+characterise one you have not actually read.
+
+**The practical limit, and say so rather than fudging it. LinkedIn returns
+HTTP 999 to our fetcher, so we cannot read a LinkedIn post directly.** A post
+only becomes usable when it surfaces in a web search with enough of its content
+quoted, or when they published somewhere fetchable. On the 2026-09-16 batch of
+ten this worked for six, Lee Matthews and Lisanne de Jong Vanhommerig on their
+own sites, Robert Kenward in Conference News, Ian Probert and Marc Lugand Sacy
+on their own sites, Shaun Ascough through a search summary of his posts. For
+the other four the nearest published thing was used, a project page or a client
+roll, and the batch note said which was which. Falling back is allowed. Quietly
+pretending a project page is a post is not.
+
+The compliment must be a real, specific, casual reaction, never reverent
+flattery and never a generic compliment. The "However" sentence is one
+sentence. "This means" carries the cost of doing nothing in the present tense.
+The close names the artefact concretely.
+
+**Block three is two or three short sentences, never one long chain (Raka,
+2026-09-16).** He flagged this line as the thing that gives us away.
+
+> I run Astra agency, we build websites and the tools that sit on them, with
+> senior developers sitting behind the Dutch side, after a year and a half at
+> Betty Blocks watching studios hit this exact wall.
+
+His words, the language is "still AI and not flowy and weird like doesn't make
+sense, only AI would create it." Four failures in one sentence and all four
+recur across every batch that has ever been written this way.
+
+1. **Four clauses spliced with commas.** It never stops for breath, so there is
+   nowhere for the reader to land. Break it. "I run Astra agency. We build
+   websites and the tools that go on them."
+2. **A word doing two jobs one line apart.** "tools that **sit** on them" then
+   "developers **sitting** behind". Read it aloud and it clangs. The fix is
+   "tools that go on them".
+3. **Internal jargon shipped outward.** "senior developers sitting behind the
+   Dutch side" means nothing to someone who has never heard of our structure.
+   Say the plain version, "with a senior dev team behind us", and only explain
+   the two sided setup if they ask.
+4. **The "after X watching Y" tail.** "after a year and a half at Betty Blocks
+   watching studios hit this exact wall" is a participle stapled to a
+   prepositional phrase. It is grammatical and it is not English anyone speaks.
+   Make the credential its own sentence with a subject and a verb. "I did a
+   year and a half at Betty Blocks, and a lot of the studios I met there had
+   one developer and a service list built for three."
+
+The test is pass 1 of the four pass read back, read it aloud as one message. If
+you have to reread a sentence to find the verb, or a clause could be lifted out
+without anyone noticing, it is broken. A useful grep before any batch goes out,
+count the commas in block three. Three or more in one sentence means rewrite.
 
 **The reply variant (Raka, 2026-09-14).** When the lead has written to us
 first, only the first block changes. Answer their message, then go straight
