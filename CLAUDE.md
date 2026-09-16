@@ -226,7 +226,35 @@ roll, and the batch note said which was which. Falling back is allowed. Quietly
 pretending a project page is a post is not.
 
 The compliment must be a real, specific, casual reaction, never reverent
-flattery and never a generic compliment. The "However" sentence is one
+flattery and never a generic compliment.
+
+**And never an interpretation of why their choice was clever (Raka, 2026-09-16).**
+His words on the DBL draft, "cringe bro, gonna vomit, never do this". The line was
+
+> saw the DBL project you titled alsof de bebouwing zo ontstaan is, and naming a
+> project after the thing you were actually trying to pull off is a proper
+> architect's move!
+
+Two separate failures and both recur.
+
+1. **It told a professional what is proper in their own field.** "A proper
+   architect's move" from a stranger who builds websites. Never rate their craft,
+   never use "a proper X move", "a real X's instinct", "that is how a X thinks", or
+   any phrasing that positions us as qualified to judge their discipline.
+2. **It performed a clever reading instead of reacting.** It took a project title
+   and explained back to its author what was smart about it. Nobody talks like that.
+   A real person says what they saw, not what it reveals.
+
+The test. **React, do not interpret.** Name a concrete thing you actually looked at
+and stop. The fix that shipped was "saw the DBL project list, a supermarket with 32
+flats and a parking garage in the same building, then a white house sitting in its
+own reflection. Quite a range!" Two real projects, one plain reaction, no verdict on
+his talent.
+
+Phrases to grep out of block one before anything is shown. "a proper X move", "that
+is a real X's", "naming it after", "which tells you", "and that says a lot about",
+"which is exactly what a X does". Any clause explaining the significance of their own
+choice back to them is cringe and it goes. The "However" sentence is one
 sentence. "This means" carries the cost of doing nothing in the present tense.
 The close names the artefact concretely.
 
