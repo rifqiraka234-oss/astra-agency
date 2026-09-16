@@ -130,3 +130,71 @@ and the worked leads sit much deeper.
 
 No batch drawn. Nineteen rows in the queue still claim DRAFTED without proof, and
 a batch drawn across them risks messaging someone a second time.
+
+---
+
+# Update 2. The pull Raka asked for, and the one thing that stayed undecidable
+
+## Method
+
+`get_inbox_conversations` on `sentOnly` with `dateFilter` 20 Aug to 11 Sep, newest
+first. **475 conversations in that window, 10 pages.** The date filter is the
+useful lever here, it skips the top of the list where the invite step is currently
+firing and lands straight in the period where the connect note is the last thing
+anyone sent.
+
+The discriminator that finally worked is **`lastSentAt`, not the preview**. On
+Carolien Leeraar the preview showed the connect note while `lastSentAt` carried the
+14 Sep opener timestamp. So `lastSentAt` tracks the true last message even when the
+preview is stale. A row whose `lastSentAt` matches its own invite timestamp, rather
+than one of the clustered batch send times, has genuinely had nothing but the note.
+
+## Page 1 of 10, broken down
+
+| | Count |
+|---|---|
+| Rows in page | 50 |
+| Already carry a real opener | 6 (Sascha Brockhoff, Etienne Richet, Philipp Zeunert, Bharat Suchith, Louise Kean-Wood, Ayub Shoaib) |
+| Already in the queue under another status | 6 |
+| **Connect note only, never in the queue** | **38** |
+
+All 38 appended to `state/silent_accepted_queue.jsonl` as `UNRESEARCHED`, keyed on
+`contactId` rather than name, with `inviteNoteSentAt` recorded. Newest first, 8 Sep
+back to 5 Sep.
+
+## Acceptance still cannot be verified, and this is now settled
+
+Every available route was tried and all of them fail.
+
+- `get_contact_fields_schema` returns **no connection status field**, standard or
+  custom, so acceptance is not stored on the contact.
+- There is **no accept activity type**. Marjolein Van Keep-Groenewegen, invite 8 Sep,
+  returns **zero activities**, exactly like Özgül Atay whose invite went out today.
+  An eleven day gap produces an identical signature.
+- `search_campaign_leads` with `include: ["activities"]` returns `activities: ""` at
+  offsets 0 and 120 on v0.1, because the campaign's first several hundred rows are
+  14 Sep imports.
+- `sentOnly` mixes accepted contacts and pending invitations with nothing to
+  separate them.
+
+What an empty thread **does** prove is that nothing beyond the connect note was ever
+sent, which is the half that matters for not messaging anyone twice.
+
+The 118 rows in the queue carrying an `acceptedDate` came from an earlier full scan
+and cannot be reproduced through the current API surface.
+
+## The practical consequence, worth Raka deciding on
+
+A contact who never accepted cannot receive a LinkedIn message, so a send to one
+simply does not land. The cost of working an unaccepted lead is the research, not a
+misfire. Two options.
+
+1. **Work the 38 newest first anyway.** Research ten, draft ten, accept that some
+   share are pending invites and will not deliver.
+2. **Age the list first.** Invites that get accepted usually do so within days, so
+   filtering to invites older than about two weeks raises the hit rate. That means
+   sweeping pages 4 to 10 of this window instead of page 1.
+
+## Nothing sent, nothing drafted
+
+38 rows staged as `UNRESEARCHED`. No research done yet, so no openers exist.
