@@ -317,6 +317,62 @@ under the headline. One primary CTA next to a quiet secondary. Bento grids for
 features, a logo wall for proof. Stripe and Vercel are the gradient benchmark.
 Eduflex's own EduNova page is a textbook example and was used as the comparison.
 
+**Walk the flow, do not just look at the homepage (Raka, 2026-09-16). "I think you
+should also open each website and analyse the flow thats important also."** A
+homepage read finds how a site looks. Only a flow walk finds where it actually
+loses the customer, and that is the better angle almost every time because the
+owner can feel it.
+
+The walk, in order, on every lead from now on.
+
+1. **List the real nav** from the HTML and fetch every top level item. Never guess a
+   path, that is how a guessed `/over-ons/` turned into an imaginary 404 on EduOs.
+2. **Follow the journey a buyer actually takes.** Land, understand what they do,
+   look for proof, decide, then try to make contact. Fetch a page at each step.
+3. **At every step ask what the next click is.** If a page has no obvious next move,
+   the flow is broken there.
+4. **Count the forms and the fields per page**, `<form>`, `<input>`, `<textarea>`,
+   `<select>`, plus the form plugin's own markers such as `gform`. Note `mailto:`
+   and `tel:` links separately, they are not a form.
+5. **Open the page named Contact last and check it does the job its name promises.**
+
+What this found on DBL, which no amount of homepage staring would have.
+**The page called Contact contains zero forms and zero fields.** 507 characters of
+text, an address, a phone number and a `mailto:` link. Meanwhile the homepage and
+every service page carry a full Gravity Form, 152 `gform` markers and 20 fields. So
+the one page built for the moment a client decides is the only page with no way to
+start. Anyone who scrolls all 56 projects, decides yes, and clicks Contact gets
+thrown into their mail client, which on most machines means Outlook opening or
+nothing happening at all.
+
+The flow failures worth looking for specifically.
+- **A contact page with no form**, or a form that lives everywhere except there.
+- **A `mailto:` link doing the job of a form.** It fails silently for anyone without
+  a desktop mail client configured, and it captures nothing.
+- **A portfolio that is a flat archive** rather than a route. DBL has 56 real
+  projects and no filter by type, budget or location on the archive page.
+- **A dead end page**, no next click, most often About or a single service page.
+- **A CTA that changes wording** on every page, so the buyer never learns the move.
+- **Proof stranded away from the decision**, testimonials on a page nobody reaches
+  at the moment they are deciding.
+
+**Fonts, shapes and colouring, the three Raka names.** Pull them from the CSS rather
+than eyeballing. Grep `font-family` for the real stacks, count `#rrggbb` occurrences
+to find how many colours actually do work, and check the Font Awesome version in the
+CDN URL. DBL runs Font Awesome 5.5.0, a 2018 release, font stacks including one
+reading Arial, Baskerville, monospace, and a single flat blue `#0a5791` used 40 times
+against a teal `#18a19a` used 10. One colour doing everything is the palette
+equivalent of a bought template. Then look at the shapes in a screenshot, because
+some things never reach the CSS. DBL's building photos carry soft feathered edges
+fading into white, which is a Photoshop and PowerPoint idiom nobody has shipped since
+about 2010, and the hero drops white text straight onto a busy roof photo with no
+scrim behind it.
+
+**Credit the substance before roasting the wrapper.** DBL has 56 real projects, BNA
+membership and project titles like "alsof de bebouwing zo ontstaan is". A roast that
+ignores genuinely good work reads as a stranger who did not look. Say the work is
+better than the frame around it, because on these leads it usually is.
+
 **The impacts to reach for, because "it looks old" is not a cost.** Pick the one
 that bites for that buyer. Procurement, where a committee uses the site as the first
 cut and a dated page loses before any demo. Price anchoring, where an old looking
