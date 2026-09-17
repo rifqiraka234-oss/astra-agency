@@ -140,6 +140,62 @@ no real gap gets `NO_STRONG_ANGLE` rather than a scary sentence. And it stays
 plain and unbothered, never doom, never urgency theatre. State the bill, say
 what we would build, offer to send it.
 
+**Go for the grander thing, because nobody buys an agency to fix a small one
+(Raka, 2026-09-17).** His words, "we just didn't analyse the website their
+business problems deep enough. Aint nobody gonna buy something for just simple
+logo changes. It needs to be a proper DEEP ROAST AND ANALYSES OF THE GRANDER
+THINGS, the bigger impacts, the bigger overall pictures."
+
+The message that produced this went to Binanti Cuzner at Liquid Insights and
+said the thing to change was the logos and quotes carrying no numbers or names.
+She replied "Yes sure ok but I'm really not looking to buy a new website
+though", and she was right to. We offered a tweak, so she priced us as a tweak
+and declined. A page defect is a snagging item. Snagging items are free advice,
+and free advice is what she took.
+
+**The failure is defect spotting where diagnosis belongs.** The flow walk and the
+dated site forensics are very good at producing defects, and the temptation is to
+report the best looking one. A defect is where you START. It is evidence of
+something structural, and the structural thing is what gets bought.
+
+**The so what ladder. Take the defect and ask "so what" until you hit money,
+risk, or the position they hold in their market.** Three rungs, minimum. If you
+cannot get off the ground floor, the observation is not worth sending and the
+lead is closer to `NO_STRONG_ANGLE` than you think.
+
+Worked on the message that failed.
+
+| Rung | Liquid Insights |
+|---|---|
+| The defect | Client logos and quotes with no names and no numbers |
+| So what | They sell insights, so evidence IS the product they charge for |
+| So what | A buyer judging an insights firm judges its rigour by the evidence it shows about itself |
+| **So what** | **Their own site argues against the thing they sell. Every prospect doing diligence meets an insights company that cannot evidence its own results, next to competitors publishing numbers.** |
+
+The bottom rung is the message. The top rung is the footnote. We sent the top rung.
+
+**Two tests before any "However" block ships.**
+
+1. **The tweak test.** Could their existing web person do this in an afternoon?
+   If yes, you have not found the angle, you have found a task. Nobody hires an
+   agency for a task, and offering one makes us look like we are fishing.
+2. **The scale test.** Does the consequence show up in revenue, in cost, in a
+   deal they lose, in who they can hire, or in how the market ranks them against
+   a named competitor? If the worst case is "the page looks a bit unfinished",
+   go back and climb.
+
+**One grand thing beats five small ones.** A list of defects reads as a snagging
+report and invites them to fix the cheapest item and thank you. Name the single
+structural problem, use one or two defects as the proof it is real, and leave the
+rest in the research note. The evidence you cut is not wasted, it is what makes
+the deck credible later.
+
+**This does not license invention.** The no manufactured pain rule still outranks
+everything here. Climbing the ladder means tracing a verified defect to its real
+consequence, never inflating a small true thing into a big false one. If the
+honest bottom rung is small, the lead is small, and `NO_STRONG_ANGLE` is the
+right answer.
+
 **Say what Astra actually sells, in plain words, in the message.** A lead who
 has only had a connect note has no idea what we do, so a suggestion from us
 reads as a stranger giving unsolicited advice. One short line, "I run Astra, we
