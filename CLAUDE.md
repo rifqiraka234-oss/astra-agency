@@ -228,6 +228,36 @@ pretending a project page is a post is not.
 The compliment must be a real, specific, casual reaction, never reverent
 flattery and never a generic compliment.
 
+**One observation, one compliment, and nothing else (Raka, 2026-09-17). His
+words, "the rule is just one simple compliment. Thats all".** Block one names a
+single concrete thing you actually looked at and reacts to it once. It is not a
+tour of everything you found.
+
+The draft that produced the rule listed four things before the compliment even
+arrived.
+
+> Hi Balaram, saw the travel clinic form on the Camrose site, it asks for your
+> departure date, where you're going, the return date and how many of the family
+> are coming. The example in the box is Machu Picchu!
+
+Every item in that list is true and verified, which is exactly why it is
+tempting. It still fails, because a person who noticed something says the one
+thing that caught them, and a person working from a research file recites the
+file. The fix kept the single best detail and dropped the rest.
+
+> Hi Balaram, saw the travel clinic form on the Camrose site, and the example in
+> the Places of Travel box is Machu Picchu. Nice touch!
+
+The test before anything is shown. Count the nouns in block one. One thing seen,
+one reaction to it. If block one contains a comma separated list, a second
+example, or an "and also", cut back to the strongest single detail. The evidence
+you cut is not wasted, it belongs in the research note, and the "However" block
+is where the rest of the work shows.
+
+The compliment itself is three or four words at the end. "Nice touch!",
+"That's thorough!", "Quite a range!". Never a clause, never a verdict on their
+craft, never an explanation of why the thing is good.
+
 **And never an interpretation of why their choice was clever (Raka, 2026-09-16).**
 His words on the DBL draft, "cringe bro, gonna vomit, never do this". The line was
 
