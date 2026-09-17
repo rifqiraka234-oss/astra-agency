@@ -601,6 +601,47 @@ nine were dropped and one became a short note congratulating them on the fix,
 which is a better message than the nudge would have been. Re-verify, then
 write. And when they have fixed it, say so and offer the next thing instead.
 
+**Write the domain and the claim into the queue row at send time, or the nudge
+cannot be written at all (2026-09-17).** Pushing the nudge sweep back into the
+26 August cohort produced ten candidates and exactly **one** sendable nudge, and
+none of the six failures were about the leads. They were about what we did not
+write down.
+
+- **Four had no recoverable domain.** The rows said `openerText: "see inbox
+  thread 2026-08-26"` and the research note said "full research trail in the
+  earlier rows", which turned out to be nothing. Guessing cost real tokens and
+  produced wrong companies twice. `suntail.com` and `precisioncomponents.ca` are
+  both 114 byte parked pages. **`cocoon.nl` is "Cocoon Security Validation", a
+  physical penetration testing firm, not Twan Bierens' Cocoon Subsidiesoftware**,
+  which is the wrong-domain trap firing on a nudge rather than an opener.
+- **One had already replied and the queue did not know.** Craig Walton answered
+  on 26 August with "I resigned from the chambers some time ago thanks" and was
+  answered gracefully the next day. His row still read `SENT` with no reply
+  recorded. A nudge about a chamber he had left would have been humiliating.
+- **One was our own error.** See the Thrive Physio row. The 26 August opener said
+  "there are no actual prices anywhere" and the site has a Pricing page in the top
+  nav listing $200 and $175. A nudge repeating it hands the lead a reason to
+  dismiss us, so it was withheld.
+
+So, two hard rules.
+
+1. **Every `SENT` row carries `domain`, `openerText` in full, and `claims`, a list
+   of the specific factual assertions the message made, each one written so a
+   later session can re-test it without rereading the site.** "see inbox thread"
+   is not a research note. A claim that cannot be re-tested cannot be nudged, and
+   an unnudgeable lead is a lead we paid to research and then abandoned.
+2. **Check the thread with `get_inbox_conversation` before every single nudge, per
+   contact, never from the queue and never from the list endpoint.** The queue's
+   status goes stale and `lastSentMessagePreview` hides replies and follow ups.
+   Craig is the proof.
+
+The success case from the same sweep shows what it is worth when the record is
+good. Padelwerk's claim was time stamped and specific, the July banner still ran
+on the homepage seven weeks after it expired, and the re-check turned up a
+6 September news post proving the site is actively maintained and only that banner
+was left up. A sharper nudge than the original opener, and only possible because
+the claim was concrete enough to re-test.
+
 **Go beyond the website angle (Raka, 2026-09-14).** The "However" block does
 not have to be a website problem. Earlier guidance in
 `docs/astra-master-context.md` section 9 says the opener always names a
