@@ -325,6 +325,82 @@ published, and the arithmetic is shown so they can correct it rather than dismis
    honest and both land. `NO_STRONG_ANGLE` still applies, and so does silence on the
    maths.
 
+**The monetary figure Raka wants, and the only honest way to build one
+(2026-09-18).** His instruction, "monetary value that they're losing because of the
+problem they have, highly educated calculation with near 100 percent accuracy".
+
+**Say this plainly to yourself first. Near 100 percent is reachable on the INPUTS and
+never on a TOTAL.** A total loss figure needs their traffic and their conversion rate.
+We cannot see either, and a number resting on a guessed conversion rate is fabrication
+in a suit. So we do not produce totals. We produce a **floor** built from inputs that
+are each independently verifiable, and we show the arithmetic so the owner corrects it
+rather than dismisses it. A floor the owner cannot argue with beats a headline he can.
+
+### The public registers, which is the part we have been ignoring
+
+Every lead in a European company has a statutory filing somewhere. This is the closest
+thing to a 100 percent accurate input that exists and it costs one fetch.
+
+- **UK, Companies House.** `find-and-update.company-information.service.gov.uk`.
+  Search the name, then the company number gives filing history, accounts type,
+  incorporation date, SIC codes and officers.
+- **Netherlands, KVK.** **Germany, Bundesanzeiger** and `unternehmensregister.de`.
+  **Belgium, KBO/BCE** and the Nationale Bank filings. **France, Infogreffe** and
+  `annuaire-entreprises.data.gouv.fr`, which publishes filed accounts for many SARLs.
+
+**What the accounts TYPE alone tells you, and it is a legal definition rather than an
+estimate.** A UK company filing **micro entity** accounts is by statute under 632,000
+GBP turnover, under 316,000 GBP balance sheet and 10 or fewer employees. That is a hard
+ceiling on the business, obtained without reading a single figure. **Small** company
+accounts put it under 15m GBP turnover and under 50 employees. Use the band to sanity
+check every other number you write, because a floor that implies more revenue than the
+band allows is wrong and will be spotted.
+
+**Worked, on a real lead.** RISK AVERSE SURVEYORS LTD, company number 11848113,
+incorporated 26 February 2019, registered in Rochdale which matches Katie's site. Seven
+consecutive **micro entity** filings, most recent to 28 February 2026. SIC codes 41100,
+68310, 71122 and 71129. So, near 100 percent certain, this is a business trading over
+seven years, under 632,000 GBP, with ten people at most. **And micro entity accounts do
+NOT disclose turnover**, which is the honest ceiling on this source. You get bounds and
+a trend, never revenue.
+
+### The three inputs, and what each is worth
+
+1. **Their unit price. Near 100 percent when they publish it.** Off their own site or a
+   marketplace listing they control. Yolanda publishes 502 to 965 euro workspaces on
+   yoosoffice.nl. The spa lists a 140 dollar consultation on Fresha. This is the single
+   most valuable input and it is usually sitting there.
+2. **Their scale. Near 100 percent from the register.** Accounts type, years trading,
+   officer count, number of sites, employees on their own team page.
+3. **The frequency. Never ours to guess, so make it a floor they choose.** Do not model
+   a conversion rate. Write "even at one a month" and let the owner supply the real
+   number in his reply. That sentence is doing two jobs, it caps our exposure to being
+   wrong and it is the most reliable reply bait in the whole message.
+
+### The formula, and the fallback when their fee is hidden
+
+**Floor = their published unit price, times a frequency stated as a minimum, over a
+year, sanity checked against the register band.** Write the sum in the message.
+
+**When they do not publish a price, switch to a RATIO and you can still be near 100
+percent accurate.** Katie is the case. Her survey fee is nowhere on the site, so any
+absolute figure would be invented. But her guide sells at 9.98 GBP and her real product
+is a chartered building survey, and **any** survey fee exceeds 9.98 multiplied by any
+plausible number of guides she sells in a year. So "one guide buyer who becomes one
+survey is worth more than every guide you will sell this year" is a monetary claim, it
+is unarguable, and it needed no invented input at all. Reach for the ratio whenever the
+fee is hidden.
+
+### The two things that void the whole exercise
+
+**Never model a conversion rate, a traffic figure or a margin.** If the sentence needs
+one, the number does not ship.
+
+**Never quantify a credibility, positioning or brand architecture problem.** Nina
+Jameson is the case, the angle is strong and no honest figure exists behind it, because
+nobody can price a missing link between two domains. Name the moment the deal is lost
+and stop.
+
 **Where the numbers actually come from, in order of how much they are worth.**
 
 - **Their own published price.** The strongest input we ever get, because it is
