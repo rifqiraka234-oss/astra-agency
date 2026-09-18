@@ -296,6 +296,65 @@ consequence, never inflating a small true thing into a big false one. If the
 honest bottom rung is small, the lead is small, and `NO_STRONG_ANGLE` is the
 right answer.
 
+**Put a number on it, built only from THEIR figures (Raka, 2026-09-18).** A cost
+the owner can feel is good. A cost the owner can count is better. So where a real
+number exists, the "This means" block carries one.
+
+**Why this is dangerous and how the danger is removed.** The owner knows their own
+numbers better than we ever will. Invent one and every true thing in the message dies
+with it, because a wrong figure is the most checkable lie we can tell. The no
+fabrication rule is not relaxed here, it is the whole design constraint. So the
+number is never estimated by us. It is assembled from figures the lead already
+published, and the arithmetic is shown so they can correct it rather than dismiss it.
+
+**The four rules, all hard.**
+
+1. **Every input is theirs or publicly sourced.** Their own price list, their own
+   review count, their own opening hours, their own capacity, their own published
+   client count. A platform's own published commission. A named industry benchmark
+   with the source named. Never a conversion rate, a traffic figure or a margin we
+   guessed, because we cannot see any of those.
+2. **Show the sum.** Write it so they can check it in their head. "At your 140 dollar
+   consultation, that is X." A visible calculation invites a correction, and a
+   correction is a reply. A bare total invites an eye roll.
+3. **Anchor deliberately low and say that you have.** A floor beats a headline.
+   "Even at one a month" survives being wrong. "You are losing 40,000 a year" does
+   not, and it only has to be wrong once.
+4. **No number is better than a soft number.** If the inputs are not there, drop to a
+   unit instead of a total. "One booking" and "a standing weekly order" are both
+   honest and both land. `NO_STRONG_ANGLE` still applies, and so does silence on the
+   maths.
+
+**Where the numbers actually come from, in order of how much they are worth.**
+
+- **Their own published price.** The strongest input we ever get, because it is
+  theirs and it is not arguable. Katie at Risk Averse sells The Ultimate Property
+  Guide at an introductory 9.98 GBP through Etsy, and her real product is a RICS
+  chartered building survey. The number worth writing is not the Etsy fee, it is the
+  ratio. One guide buyer who becomes one survey is worth more than every guide she
+  will sell this year, and the guide buyer is by definition mid purchase on a house.
+- **A marketplace listing they control.** Spa Holistique lists an Ayurvedic
+  consultation at 140 Canadian dollars and Abhyanga from 115 on Fresha, with 794
+  reviews. Those are their prices and their volume proxy. Look up the platform's own
+  published commission rather than assuming one, then the leak is arithmetic instead
+  of opinion.
+- **Capacity they state.** Seats, rooms, courts, slots, delivery days, team size.
+  A booking business publishes its own ceiling.
+- **A named third party benchmark**, cited in the research note with the source, and
+  used only to convert their number into an outcome, never to invent the number.
+
+**What quantification must never touch.** Do not put a figure on a credibility,
+positioning or brand architecture problem. Nina Jameson at Gehirngerecht is the case,
+the angle is real and there is no honest number behind it, because nobody can say what
+a missing link between two domains costs. A fabricated figure there would have wrecked
+a good message. When the angle is credibility, name the moment the deal is lost and
+stop.
+
+**The self check before it ships.** Point at every number in the message and say where
+it came from. If the answer for any of them is "a reasonable assumption", delete it and
+go back to the unit. And write the source of each figure into the `claims` list on the
+queue row, because a number is the single hardest claim to re verify at nudge time.
+
 **Say what Astra actually sells, in plain words, in the message.** A lead who
 has only had a connect note has no idea what we do, so a suggestion from us
 reads as a stranger giving unsolicited advice. One short line, "I run Astra, we
