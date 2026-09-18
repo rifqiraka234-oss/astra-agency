@@ -426,6 +426,26 @@ and stop.
   A booking business publishes its own ceiling.
 - **A named third party benchmark**, cited in the research note with the source, and
   used only to convert their number into an outcome, never to invent the number.
+- **A published market rate applied to an asset value they publish themselves.** The
+  strongest pattern found on the 2026-09-18 refresh, because both halves are checked
+  and neither is ours. VIP International Homes prices its own Beaulieu River house at
+  12 million on its own homepage, and UK sole agency commission starts around one
+  percent and falls as the value climbs, so one lost instruction is about 120,000 and
+  every input is sourced. Pascoe is the same shape from the other direction, the
+  careers page carries no salary so the salary comes from the published range and the
+  agency fee percentage comes from the published band, both taken at the bottom, which
+  gives about 7,000 a seat. Take the LOW end of every published range, always. The
+  number's job is to be unarguable, not to be big.
+
+**The honest hit rate, so nobody forces one (2026-09-18).** Twelve live drafts were
+re examined for a money figure and **three** could carry one. Theo Hogendoorn is the
+instructive failure. He publishes a real minimum, batches of 2.5 to 5 tonnes, and
+Netherlands barley malt sits at 187.50 euros a tonne, so the arithmetic runs fine and
+produces about 470 euros an enquiry. That number is true and it makes the business
+look small, which is worse than no number at all. The rest were partnership or
+credibility angles, where the rule above already says no figure exists. So expect
+roughly one message in four to carry a number, and treat a batch where most of them
+do as a sign that figures are being invented rather than found.
 
 **What quantification must never touch.** Do not put a figure on a credibility,
 positioning or brand architecture problem. Nina Jameson at Gehirngerecht is the case,
