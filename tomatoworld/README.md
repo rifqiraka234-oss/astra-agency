@@ -54,6 +54,7 @@ actively selling internally.
 | `proposal/04-build-spec-per-module.md` | **Internal only.** Per-module build spec for Josh and Amwisesa — deliverables, done-criteria, stack, effort |
 | `proposal/05-phased-plan-value-metrics.md` | Phases 0-7 with work, value, metric moved, time, cost, and payback in tours |
 | `deck/astra-tomatoworld-deck.html` | **The live deck** — https://claude.ai/artifact/1PsvMdxqCG9MXMB3AbAu9j |
+| `build/01-rfp-amwisesa.md` | **Technical RFP to Amwisesa** for effort and cost estimates on the seven build modules |
 
 ## Open actions
 
