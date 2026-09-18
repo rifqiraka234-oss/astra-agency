@@ -97,6 +97,14 @@ their week actually looks like.
   writing to the owner about the thing they own, never about their employer.
   Hau-Quoc Phan is the live example, he is a project manager at Hydro-Quebec and a
   co-owner of a Montreal spa, and only the spa is the subject.
+- **Pull the statutory filing. One fetch, and it is the most accurate input you will
+  get all day.** UK Companies House, NL KVK, DE Bundesanzeiger, BE KBO, FR Infogreffe
+  and annuaire-entreprises.data.gouv.fr. Take the incorporation date, the accounts type
+  and the officers. The accounts type alone is a legal size band, so a UK micro entity
+  filing means under 632,000 GBP turnover and ten people or fewer, stated as fact
+  rather than guessed. Write the company number into the research note. This bounds
+  every number you later put in the message and it is how the money figure stops being
+  an opinion. See the monetary floor method below.
 - **Read what they have actually published.** Their own posts are the cheapest
   route to a problem they have already admitted to in public. Quote it if you find
   it. LinkedIn returns HTTP 999 to our fetcher, so a post is only usable when a
