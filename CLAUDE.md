@@ -1358,6 +1358,29 @@ Every line is here because it failed at least once.
   which is exactly where the invite step has been firing, so it was the worst
   possible slice to pick. **Draw batches from the oldest end of the accepted pool,
   not the newest end of `sentOnly`.**
+- **Pick batches from the LEAD list, not the inbox list, and go in that direction only
+  (2026-09-18).** `search_campaign_leads` returns `firstName`, `lastName`,
+  **`companyName`**, **`jobTitle`** and `linkedinUrl` for every lead at roughly eighty
+  tokens a row. That is step 1 of the research order handed to you for free, and it is
+  the thing the inbox list can never give you. `get_inbox_conversations` returns
+  `contactId`, name and LinkedIn URL and **no company and no title at all**.
+- **So never go inbox first and try to look the company up afterwards.** On 2026-09-18
+  three accepted contacts (Severin Kloos, Harisson Reale, Peter Borup) were found via
+  the acceptance signal and then could not be identified. LinkedIn returns HTTP 999 so
+  the profile is unreadable, name searches returned only unrelated people, and the only
+  join key back to the lead record is the LinkedIn URL. Finding three specific slugs
+  meant paginating 500 plus leads at roughly 15k tokens a page. Two pages were spent
+  and none of the three appeared, because they sit deeper in the list.
+- **The correct direction. Pull leads by add date, read `companyName` and `jobTitle`,
+  pick the ones that actually fit an ASTRA proposition, and only then check acceptance**
+  for that shortlist using the `lastActivityAt` later than `lastSentAt` signal. You spend
+  the expensive acceptance check on ten leads you already want rather than on a hundred
+  you have not qualified.
+- **And go to the OLDER end.** `search_campaign_leads` returns newest first, and the
+  newest rows are the bulk imports whose invites are still firing, so their timestamps
+  are equal and every send is refused. Use `addedBefore` to skip the recent imports
+  entirely. On 2026-09-18 the 14 and 17 September imports filled the first three pages
+  and every one of them was a pending invitation.
 - **`aiLeadInterestLevel` is a reading priority hint, never evidence.** It is the AI's
   read of one reply, and it is absent on any message that was not scored.
 - **Fetch failures are UNKNOWN and retryable**, never "no angle". Retry with the
