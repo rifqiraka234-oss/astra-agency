@@ -66,6 +66,106 @@ confidence outcomes (`HIGH_CONFIDENCE_ANGLE` down to `NO_STRONG_ANGLE`). Do not
 choose a final angle until its Minimum Research Stop Conditions are answered,
 and never infer a problem from a single weak signal.
 
+## The research order of operations (Raka, 2026-09-17). Run it in this order, every lead.
+
+His words, "it's good, but I want you to be better, the way you research it, I
+think that's a big problem still." The failure is not the template, it is that
+research has been starting at the company's HTML and working outwards. It starts
+with the human being who has to read the message.
+
+Cross checked against how B2B prospecting is actually taught, which lines up with
+this order. Practitioners map the buying committee to **each role's own success
+metrics** before writing, treat individual research as a role brief of goals,
+fears and metrics rather than generic company pain, and assemble a **signal stack**
+across firmographic changes, technographic changes, behavioural intent and
+strategic triggers instead of leaning on one indicator.
+
+### Step 1, the person, before anything else
+
+Never open a company's website first. Work out who is going to read this and what
+their week actually looks like.
+
+- **What is their exact title at this company**, off their LinkedIn and confirmed
+  against the company's own site, since those disagree often.
+- **What does a person in that seat get measured on.** Write it down in one line.
+  An Operations Director is judged on delivery and capacity. A founder is judged
+  on revenue and runway. A marketing lead is judged on pipeline. A practice owner
+  is judged on the appointment book. The message has to land on that number.
+- **Separate the business they OWN from the job they HOLD.** This is Raka's
+  explicit instruction and it is the one that gets missed. Plenty of our targets
+  run a company on the side while employed full time somewhere else. We are
+  writing to the owner about the thing they own, never about their employer.
+  Hau-Quoc Phan is the live example, he is a project manager at Hydro-Quebec and a
+  co-owner of a Montreal spa, and only the spa is the subject.
+- **Read what they have actually published.** Their own posts are the cheapest
+  route to a problem they have already admitted to in public. Quote it if you find
+  it. LinkedIn returns HTTP 999 to our fetcher, so a post is only usable when a
+  search surfaces enough of it, and the fallback rules already written below apply.
+
+### Step 2, the website, and LOOK at it before you grep it
+
+**Raka's priority is the website angle first**, so exhaust it before going wider.
+And the hard lesson from the bluedesk miss on 2026-09-17, **render the site and
+look at the screenshot before forming any opinion.** An HTML grep produced a
+confident angle about an empty vacancies page. One screenshot showed a modern,
+well art directed site with real client photography, a live cases carousel, ten
+news items and their own AI calling agent running on the page. The angle
+evaporated. Greps find strings, they do not find design.
+
+The order inside this step.
+
+1. **Render the homepage.** Try live Chromium FIRST, the proxy does not block every
+   host and bluedesk worked first time. Mirror only if live fails, and if you do
+   mirror, give each asset a unique local name, because query string assets such as
+   Dynamicweb's `GetImage.ashx?width=...&image=...` collapse onto one file and
+   render garbage that will mislead you.
+2. **Screenshot desktop and phone width, then scroll the whole page** in steps and
+   look at every screenshot. Dismiss the cookie wall by clicking it, never by
+   deleting it from the DOM, which strips their CSS and gives you a fake page.
+3. **Judge the looks honestly.** Does it read as current or as 2008. The greppable
+   proof is in the dated site section below, and the shapes, fonts and colour work
+   is there too.
+4. **Walk the flow** per the flow walk section below, every nav item fetched, forms
+   counted per page, Contact opened last.
+
+### Step 3, the impact, tied to the person from step 1
+
+A website problem is not an angle until it lands on that specific person's number.
+The same broken contact form means different things to different readers. To a
+founder chasing revenue it is lost deals. To an operations director it is work
+arriving in a format the team cannot process. To a marketing lead it is spend that
+produces nothing measurable.
+
+Ask what the site's state does to the thing they are visibly trying to do. Are they
+hiring, expanding, opening locations, raising, launching a service line, entering a
+new country. Those are the same trigger events practitioners prospect on, and they
+tell you which consequence to name.
+
+### Step 4, only if the website is genuinely fine, widen out
+
+bluedesk is the case for this. Strong site, no honest website angle, so the correct
+move is either a company level problem or `NO_STRONG_ANGLE`, never a manufactured
+snag. Widen in this order and stop as soon as something real and verifiable appears.
+
+1. **Company specific.** Their vacancies, which tell you what they cannot do today.
+   Their own news and posts. External coverage, funding, acquisitions, leadership
+   changes, a new market.
+2. **Sub industry or sector specific.** A pressure that provably hits businesses of
+   their exact type, not a vague market observation.
+3. **Region or country specific.** Regulation, a deadline, a local market shift that
+   actually applies to them.
+
+Then connect it back to step 1. A sector problem that does not touch this person's
+own number is trivia, and trivia is what gets ignored.
+
+### The stop conditions
+
+Do not write until all four are answered. Who reads this and what are they measured
+on. What did the rendered site actually look like and where does its flow break.
+What does that cost this person specifically. What is the one artefact that fixes it.
+If step 2 and step 4 both come back empty, the answer is `NO_STRONG_ANGLE`, and that
+is a real outcome rather than a failure.
+
 **What actually works on first touch (learned 2026-09-11 from real replies, not
 theory).** The first message is the single biggest lever in the funnel, and the
 reply data is blunt about it:
