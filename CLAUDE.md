@@ -1188,9 +1188,46 @@ what is already here.
   meets a full page browser interstitial. That is the "live domain but no real website"
   build opportunity, arrived at from what looked like a tooling failure.
 
-  **Still confirm in Raka's browser before asserting it in a message.** A TLS claim
-  read through a proxy is the exact thing that nearly shipped false the same day, and
-  the cost of being wrong about a security warning is the whole message.
+  **Confirm it properly before asserting it, and the cheapest confirmation is the site
+  itself.** Plain http returning 200 lets you read every page, walk the flow and pull
+  the prices, so a blocked lead usually is not blocked at all, it is a normal research
+  job over http plus one verified fault. That is how both of these went from dead rows
+  to drafts in one pass.
+
+### The four signals that are always worth a pitch (Raka, 2026-09-19)
+
+His list, and it is a standing rule rather than a one off. When research turns up any
+of these, the lead is pitchable and the row is never closed as blocked.
+
+1. **A GDPR or privacy problem.**
+2. **A certificate problem**, which the visitor experiences as a security warning.
+3. **WordPress**, especially a bought theme, a plugin shop bolted on, or a stack held
+   together with plugins.
+4. **A site that looks like 1990 or 2000.** The greppable proof is in the dated site
+   section above.
+
+**And write it so a normal person feels it, never as an IT report.** His words, "make
+it non toooo technical you know." The owner does not care what a certificate is, he
+cares that people are turning around at his door. So name what the visitor SEES and
+what it costs, and keep every piece of jargon out of the message.
+
+| Do not write | Write |
+|---|---|
+| an invalid TLS certificate, a name mismatch on the SSL | a browser throws a full page warning before your site loads |
+| the origin serves a self signed cert | your address doesn't open |
+| HTTP 200 on port 80 but the 443 listener is misconfigured | the plain address works, the secure one does not |
+| a WordPress instance running Easy Digital Downloads | your shop |
+| the DNS A record points at a parked host | there is nothing there yet |
+
+**The tweak test still applies and it bites hardest here.** "Renew your certificate" is
+an afternoon of work, so it is a task and nobody buys an agency for a task. Use the
+fault as the PROOF and sell the thing behind it. Marcel's certificate is the proof, the
+job is the booking and checkout side of a shop holding ten products. William's holding
+page is the proof, the job is that the brand he goes to market under has no site at all.
+
+**Say what you saw, not what you diagnosed.** A first person report is true whatever
+the cause turns out to be, it reads like a human rather than a scanner, and if we have
+somehow got it wrong the lead corrects us and that is still a reply.
 - Serve locally when a render genuinely will not work,
   `(cd <folder> && python3 -m http.server 8788 &)`. To QA something already
   deployed, `curl` the live HTML and every asset into a folder and serve that copy.
