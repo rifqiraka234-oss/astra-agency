@@ -1163,10 +1163,34 @@ what is already here.
   `BLOCKED_NEEDS_INFO`. Before writing any claim about a certificate, a security
   warning or a dead site, check whether a known good host goes through the same path
   in the same minute.
-- **A host that 502s with "upstream request failed" is the proxy, not the lead**, and a
-  Sucuri "Robot Challenge Screen" that becomes a hard 403 is our IP being blocked.
-  Both are UNKNOWN and both get the specific unblock written into the row, which is
-  normally Raka opening the page himself.
+- **A Sucuri "Robot Challenge Screen" that becomes a hard 403 is our address being
+  blocked**, not a broken site. Nothing on our side fixes it, so the row records that
+  and the unblock is a different session or Raka's own browser.
+- **A 502 "upstream request failed" is not the end of the diagnosis, and the cause is
+  sometimes the angle (2026-09-19).** The egress refuses to relay an origin whose
+  certificate does not validate, and it reports that as a flat 502, which reads like
+  our problem. Run this and it tells you whose problem it actually is.
+
+  ```
+  getent hosts <domain>                                  # DNS resolving at all
+  curl -sSv --cacert /root/.ccr/ca-bundle.crt https://<domain>/ -o /dev/null
+  curl -sS -o /dev/null -w "%{http_code}\n" http://<domain>/   # plain http
+  ```
+
+  Read the verbose output for two lines. `CONNECT tunnel established, response 200`
+  means the proxy did its job and everything after it is the origin. Then the
+  `subject:` line is the certificate the origin actually served.
+
+  Both live cases came out of this. **agilearch.nl serves a self signed certificate**,
+  and **milticocoaching.com serves a certificate whose subject is CN=wordpress.com**,
+  which does not cover the domain. Both return **200 on plain http**, so the sites are
+  up and only the secure side is broken, which means a real visitor on an https link
+  meets a full page browser interstitial. That is the "live domain but no real website"
+  build opportunity, arrived at from what looked like a tooling failure.
+
+  **Still confirm in Raka's browser before asserting it in a message.** A TLS claim
+  read through a proxy is the exact thing that nearly shipped false the same day, and
+  the cost of being wrong about a security warning is the whole message.
 - Serve locally when a render genuinely will not work,
   `(cd <folder> && python3 -m http.server 8788 &)`. To QA something already
   deployed, `curl` the live HTML and every asset into a folder and serve that copy.
