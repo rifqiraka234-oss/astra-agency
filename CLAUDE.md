@@ -1141,8 +1141,33 @@ what is already here.
 - **Chromium** `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`
 - **Playwright** `require('/opt/node22/lib/node_modules/playwright')`, launch with
   `args:['--no-sandbox']`
-- **The agent proxy resets live Chromium tunnels to most hosts.** So never point the
-  browser at a live site. Serve locally instead,
+- **Live Chromium DOES work on most hosts, once you stop mistaking the proxy's own CA
+  for the site's certificate (2026-09-19).** Every live render failed with
+  `net::ERR_CERT_AUTHORITY_INVALID`, and curl failed with "self signed certificate"
+  and "no alternative certificate subject name matches", which reads exactly like
+  four broken sites. It was one broken renderer. All outbound HTTPS is re terminated
+  at the egress proxy, so every tool has to trust `/root/.ccr/ca-bundle.crt`. curl
+  takes `--cacert`. Chromium ignores the system and NSS stores, so pin the proxy CA
+  by key instead of turning verification off, which is never allowed.
+
+  ```
+  openssl x509 -in /root/.ccr/agent-proxy-ca.crt -pubkey -noout \
+    | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+  # then launch with args:['--no-sandbox','--ignore-certificate-errors-spki-list=<that hash>']
+  ```
+
+  **This matters beyond tooling. A TLS error seen through the proxy is never evidence
+  about the lead's site.** Two leads in that batch looked like they had certificate
+  faults, which would have been a strong angle and a completely false one. After the
+  fix they returned a plain 502 from the proxy and the honest verdict was
+  `BLOCKED_NEEDS_INFO`. Before writing any claim about a certificate, a security
+  warning or a dead site, check whether a known good host goes through the same path
+  in the same minute.
+- **A host that 502s with "upstream request failed" is the proxy, not the lead**, and a
+  Sucuri "Robot Challenge Screen" that becomes a hard 403 is our IP being blocked.
+  Both are UNKNOWN and both get the specific unblock written into the row, which is
+  normally Raka opening the page himself.
+- Serve locally when a render genuinely will not work,
   `(cd <folder> && python3 -m http.server 8788 &)`. To QA something already
   deployed, `curl` the live HTML and every asset into a folder and serve that copy.
 - **`tools/deck-qa/qa.js`** is the harness, committed so you do not rewrite it.
