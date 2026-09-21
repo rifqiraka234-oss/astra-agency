@@ -9,6 +9,13 @@
 > an API call or a fetch can settle a question, it settles it, and the number of calls
 > is never a reason to skip one. My own notes, state files and memory are a candidate
 > list, never proof.
+>
+> **The three Raka named, because these are the ones that have cost us leads.** Pull the
+> lemlist thread with `get_inbox_conversation` per contact, before research, before
+> drafting and again before sending. Read the lemlist contact record rather than
+> rebuilding the person from a name. Fetch, render and actually look at the website
+> rather than working off a search snippet. Full procedure and the exact calls are in
+> **The three places laziness actually happens** below.
 
 This repo drives three related automated routines:
 
@@ -205,6 +212,89 @@ never a reason offered back to him.
 in an answer to Raka. Internal scratch work, exploratory reads and first pass shortlisting
 can be cheap, because a wrong shortlist costs a shortlist. The moment an output is going
 outward or being reported as true, every rung of the evidence ladder gets climbed.
+
+### The three places laziness actually happens, named by Raka (2026-09-21)
+
+His words, "especially really don't be fucking lazy to check messages in lemlist or
+check contact details in lemlist or do web searches of the website." He named three
+because these are the three that have actually cost us leads. Each one below has the
+exact call that settles it, so there is never a judgement about whether it is worth it.
+
+#### 1. The messages. Pull the thread, per contact, every single time
+
+**The call is `get_inbox_conversation(contactId)`. One contact per call. There is no
+bulk version of this that works.**
+
+Run it **before researching a lead**, **before drafting**, and **again immediately
+before sending**. Three times, because the thread changes underneath you. A reply can
+land between drafting and sending, and sending a cold opener on top of a reply is the
+one outreach mistake with no recovery.
+
+What is NOT allowed to stand in for it, all three proven wrong in production.
+
+- **`lastSentMessagePreview` off `get_inbox_conversations`.** It showed the generic
+  connect note for Carolien Leeraar, Andy Tidd and Patrick Killeen while all three
+  threads held full researched openers. On 2026-09-21 it showed the connect note for
+  Daniel Turner at the exact second a real opener went out.
+- **A bulk `GET /api/activities?type=linkedinSent` pull.** It under reports. 298 records
+  covering 12 July to 17 September and the 2 August messages to Naila, Olivier, Jean and
+  Marlon were simply not in it, though their threads carry them.
+- **`state/silent_accepted_queue.jsonl` or `state/accepted_pool_v01.jsonl`.** The pool
+  says who accepted. It does not say who we have spoken to. That gap pitched eleven
+  people twice in one morning.
+
+**An empty thread is not proof of nothing, it is proof of nothing recorded.** The connect
+note is not always written as an activity. Empty means Silent accepted is plausible, and
+it means unknown, and it is only trustworthy as a negative once a positive control has
+been pulled in the same session, a thread with a known send that comes back full.
+
+#### 2. The contact details. Read the record, never reconstruct the person
+
+**The calls are `search_campaign_leads` for `firstName`, `lastName`, `companyName`,
+`jobTitle`, `linkedinUrl` and `companyDomain`, and the acceptance export for the same
+fields on accepted leads. Read them. Do not rebuild a person from a name and a guess.**
+
+- **`jobTitle` decides whether the company is even the subject.** Owner, founder,
+  eigenaar, Geschäftsführer, dirigeant and zaakvoerder mean we write about the business.
+  A manager at somebody else's group is a different message entirely. And the business
+  they OWN is not the job they HOLD, which is the rule that gets missed most.
+- **`contactId` is what `send_message` needs**, never `leadId`. Check which one you are
+  holding before every send.
+- **When lemlist and the company's own statutory page disagree, the statutory page
+  wins.** lemlist had Jochen under NF1 SmartTech and the domain is red-rabbit.de. The
+  Impressum settled it. Never paper over a disagreement, go and resolve it.
+- **Never guess which business is theirs**, and never pick the plausible one out of a
+  search result. Several unrelated people share a name. If it cannot be tied to the
+  person with evidence, the row is `BLOCKED_NEEDS_INFO` and it stays untouched.
+
+#### 3. The website. Fetch it, render it, and LOOK at it
+
+**Run `node tools/site-audit.js <url> <slug>` and then open both screenshots.** A search
+snippet is not a website and a grep is not a look.
+
+- **Never guess a domain.** A plausible domain regularly resolves to a real but different
+  company with the same name. `prevent.de` redirects to an unrelated group,
+  `thesalesacademy.nl` is a different founder's company, `mapler.com` is a luxury
+  hospitality brand. Fetch it and confirm the page names the right company before a word
+  of it is used.
+- **Never guess a nav path.** Pull the real nav from the HTML. A guessed `/over-ons/`
+  became an imaginary 404 on EduOs.
+- **Never guess a social handle.** Take every social URL out of their own HTML or out of
+  a search result. Ciaccia Levi is `ciaccialeviparistorino`, nothing like the guess, and
+  the guessed URL returned a page about somebody else.
+- **Never characterise a page, a video or a post you did not actually open.** Not the
+  search summary of it. The thing.
+- **Never write an absence claim off one page.** "There's no X" is the single likeliest
+  sentence in any message to be false. Merkaardig's "missing" quiz is a working JS quiz.
+  CoLean's site does embed a video. L'MANE's four policy pages all return 200.
+- **Never call a site down, empty or broken from our side's failure.** One curl returning
+  `000` is not evidence, nextfood.ai is live and modern. A TLS error through the egress
+  proxy is never evidence about their certificate. Always load a control host through the
+  same path in the same minute.
+
+**And the web search rule underneath all three.** A search is how you FIND something to
+open. It is never the thing itself. Anything taken from a snippet, a summary or a cached
+description gets opened at its source before it can appear in a message.
 
 ### Before anything leaves, the five questions
 
@@ -2140,6 +2230,12 @@ Every line is here because it failed at least once.
 - [ ] Nothing rests on my own notes, my own state files or my own memory.
 - [ ] Every number recounted on the page it came from, every href opened rather than
       its label read.
+- [ ] `get_inbox_conversation` pulled for this contact in this session, and again
+      immediately before the send. Never a preview, never a bulk activities pull.
+- [ ] The lemlist contact record actually read, `jobTitle` checked to confirm the
+      business is theirs, `contactId` in hand rather than `leadId`.
+- [ ] The website fetched, rendered and both screenshots opened. No domain, nav path
+      or social handle guessed. Nothing quoted from a search snippet unopened.
 - [ ] Nothing invented is presented as real. Placeholder data is labelled inside the
       artefact and flagged in the handover.
 - [ ] No client work claimed that was not delivered, and the delivery partner
