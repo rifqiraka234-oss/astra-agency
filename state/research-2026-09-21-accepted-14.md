@@ -10,6 +10,19 @@
 been sent. Angles below are candidates that still have to clear gate 2 and the four pass
 read back before anything is shown.
 
+**Say what these people have actually had, precisely.** Not "never had a word from us".
+They accepted an invitation, and on v0.1 the invitation carries the generic connect note,
+"saw your business and thought it was cool". So each of them has had **exactly that one
+line and nothing else**. Their threads return zero activities because the connect note is
+not always written as an activity, which is the documented ambiguity, not proof of
+silence.
+
+**Which screenshots were actually opened, because the difference matters.** Opened and
+judged: Burton, Automation & Services, Centre de Thérapie Laser, Markoni, Aurevia,
+BIM & Neutral. **Not opened at the time of the first write up**: Dariuz, Trickle,
+Quadrise, Barron, AutoDevPro. Every claim resting on an unopened screenshot is marked
+open below rather than stated as fact.
+
 **Method.** `tools/site-audit.js` on every reachable domain, both screenshots opened,
 plus statutory filings where they exist, plus a falsification pass on the two identities
 that looked wrong. Two of the fourteen turned out to have the wrong domain on the lemlist
@@ -287,18 +300,37 @@ schools**, including St George's in Edinburgh. Public sector procurement is the 
 
 **Person.** Fondateur. BIM training and consultancy.
 
-**Site.** WordPress 6.9.7 with Elementor. One form with five inputs. Social presence
-across Instagram, Facebook, X and TikTok, which is unusually broad for this kind of
-business and worth opening properly with `social-audit.js`.
+**Site, looked at.** Clean, modern, minimal, with real building photography. Nothing dated
+about it. WordPress 6.9.7 with Elementor, and it runs **WooCommerce**, with a Boutique and
+a Mon compte in the nav, so it sells courses online.
 
-**The finding.** **No privacy policy link anywhere on the site**, while seven cookies are
-set before any interaction and fonts load from Google. No cookie banner.
+**CORRECTED 2026-09-21, my first pass was wrong about the social and understated the rest.**
+An earlier version of this entry said he has a social presence across four platforms. He
+does not. The raw HTML was then read line by line.
 
-**Candidate angle.** GDPR, and the missing policy is the sharpest version of it because
-it is binary and he can check it himself in ten seconds.
+**The findings, and they are worse than the first pass said.**
 
-**Open.** The social audit has not been run. With four platforms linked, the distribution
-versus credibility question from angle 2b is live and could be the better angle.
+1. **The four social links go to the bare platform homepages.** Literally
+   `https://facebook.com`, `https://instagram.com`, `https://twitter.com` and
+   `https://tiktok.com`, with no account path on any of them. They are the theme's
+   unconfigured placeholders, so clicking any of them leaves his site and lands on a
+   login page. **This is the opposite of a social presence.**
+2. **A build leftover is live on the production site.** The footer links
+   `https://lightgrey-cobra-973726.hostingersite.com`, which is a Hostinger temporary
+   staging domain.
+3. **There is no privacy policy, no mentions légales and no CGV anywhere in the HTML.**
+   Grepped the full 106,942 bytes for confidentialité, privacy, mentions légales, CGV,
+   CGU, politique, RGPD and cookie. The only hit is a JavaScript filename. Meanwhile
+   seven cookies are set before any interaction and fonts load from Google.
+
+**Candidate angle, and it is now much stronger than GDPR alone.** This is a **shop**
+selling training in the EU with no terms of sale, no legal notice and no privacy policy,
+while its own footer points at a staging domain and four dead social buttons. The thing
+to sell is not a privacy policy, that is a task. It is that the site was never finished
+and nobody has owned it since launch.
+
+**Open.** Confirm the WooCommerce checkout actually completes, and get the course prices
+off the Boutique, since a published price is the strongest possible input for a figure.
 
 ---
 
