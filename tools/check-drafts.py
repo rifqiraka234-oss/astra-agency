@@ -41,7 +41,10 @@ def blocks_of(path):
     return re.findall(r"```\n(.*?)\n```", open(path, encoding="utf-8").read(), re.S)
 
 
-def check(path):
+def check(path, replies=False):
+    """replies=True relaxes the shape rules only. A reply to a two word thanks is not a
+    four block opener and must not be forced into one, per the reply in context rule.
+    Every truth and voice rule still applies, and so does the batch repetition check."""
     msgs = blocks_of(path)
     if not msgs:
         print(f"FAIL  no fenced message blocks found in {path}")
@@ -57,10 +60,15 @@ def check(path):
         words = len(m.split())
 
         # 100 to 145 words is the template. 150 is the roast register ceiling.
-        if not 95 <= words <= 150:
+        if replies:
+            pass
+        elif not 95 <= words <= 150:
             bad(i, f"{words} words, outside 95 to 150")
         # Exactly one exclamation mark and it lives on the first line.
-        if m.count("!") != 1:
+        if replies:
+            if m.count("!") > 1:
+                bad(i, f"{m.count('!')} exclamation marks in a reply, at most 1")
+        elif m.count("!") != 1:
             bad(i, f"{m.count('!')} exclamation marks, must be exactly 1")
         elif "!" not in m.split("\n\n")[0]:
             bad(i, "the exclamation mark is not in block one")
@@ -76,8 +84,8 @@ def check(path):
         # Zero contractions is the single clearest machine tell.
         if len(re.findall(r"\w'(s|t|re|ve|ll|d|m)\b", m)) < 1:
             bad(i, "no contractions at all")
-        # Four blocks, per the opener template.
-        if len(m.split("\n\n")) != 4:
+        # Four blocks, per the opener template. Replies have their own shape.
+        if not replies and len(m.split("\n\n")) != 4:
             bad(i, f"{len(m.split(chr(10)+chr(10)))} blocks, the template is 4")
         # Block three must not be one long comma chain. Raka, 2026-09-16.
         b3 = m.split("\n\n")[2] if len(m.split("\n\n")) > 2 else ""
@@ -127,7 +135,9 @@ def check(path):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    rep = "--replies" in sys.argv
+    if not args:
         print(__doc__)
         sys.exit(2)
-    sys.exit(max(check(p) for p in sys.argv[1:]))
+    sys.exit(max(check(p, rep) for p in args))
