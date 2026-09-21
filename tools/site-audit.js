@@ -171,6 +171,19 @@ function classify(url, base) {
       imprintLink: imprint ? imprint.href : null,
       textLength: bodyText.length,
       text: bodyText.replace(/\n{2,}/g, '\n').slice(0, 4000),
+      // A page can be full of content our reader cannot see, because the
+      // content is built by an inline script, or sits behind a gate such as a
+      // language chooser or a start button. Solvio's Problem-Solv(io)er looked
+      // empty on 2026-09-21, body 717px and 55 characters of text, and behind
+      // one Deutsch button sat a ten question assessment. These fields exist so
+      // that can never read as empty again.
+      mainHtmlLength: (document.querySelector('.entry-content, main, #content, article') || document.body).innerHTML.length,
+      inlineScriptsInMain: document.querySelectorAll('.entry-content script, main script, #content script, article script, .entry-content style, main style').length,
+      gateCandidates: Array.from(document.querySelectorAll('button, a[role="button"], [class*="btn"]'))
+        .map((e) => (e.innerText || e.value || '').trim())
+        .filter((t) => t && t.length < 40 &&
+          /deutsch|english|français|nederlands|espa|italiano|start|starten|begin|enter|continue|weiter|verder|commencer|choose|w[aä]hle|select|language|taal|sprache|langue/i.test(t))
+        .slice(0, 12),
     };
   }, Object.fromEntries(Object.entries(SOCIAL).map(([k, v]) => [k, { source: v.source, flags: v.flags }])));
 
@@ -215,8 +228,23 @@ function classify(url, base) {
     await phone.screenshot({ path: path.join(outDir, `${tag}-phone.png`), fullPage: false });
   } catch {}
 
+  // The thin page check. Never call a page empty because the text came back
+  // short, only because a screenshot showed it empty.
+  const ratio = dom.mainHtmlLength ? dom.textLength / dom.mainHtmlLength : 1;
+  const hidden = {
+    textLength: dom.textLength,
+    mainHtmlLength: dom.mainHtmlLength,
+    textToHtmlRatio: +ratio.toFixed(4),
+    inlineScriptsInMain: dom.inlineScriptsInMain,
+    gateCandidates: dom.gateCandidates,
+    // Any one of these is enough to forbid an emptiness claim.
+    contentProbablyHidden: (dom.textLength < 400 && dom.mainHtmlLength > 4000) ||
+      ratio < 0.01 || dom.inlineScriptsInMain > 0 || dom.gateCandidates.length > 0,
+  };
+
   const out = {
     target, tag, status, navError, fetchedAt: new Date().toISOString(),
+    hidden,
     page: dom,
     stack,
     era: { datedTells, boughtTheme: stack.boughtTheme },
@@ -253,6 +281,14 @@ function classify(url, base) {
   console.log(`privacy      ${dom.privacyLink || 'NO LINK FOUND'}`);
   console.log(`social       ${Object.keys(dom.social).length ? Object.entries(dom.social).map(([k, v]) => k).join(', ') : 'NONE LINKED'}`);
   console.log(`errors       ${pageErrors.length} page errors, ${failed.length} failed requests`);
+  if (hidden.contentProbablyHidden) {
+    console.log('');
+    console.log('!!  CONTENT MAY BE HIDDEN FROM THIS READER. DO NOT CALL THIS PAGE EMPTY OR THIN.');
+    console.log(`!!  ${hidden.textLength} chars of text against ${hidden.mainHtmlLength} chars of markup in the main area (ratio ${hidden.textToHtmlRatio}).`);
+    if (hidden.inlineScriptsInMain) console.log(`!!  ${hidden.inlineScriptsInMain} inline script or style blocks sit inside the content area, so the page builds itself.`);
+    if (hidden.gateCandidates.length) console.log(`!!  A gate is in the way. Click it and look again. Buttons found: ${hidden.gateCandidates.join(' | ')}`);
+    console.log('!!  Open the screenshot. An emptiness claim needs a picture of an empty page, nothing less.');
+  }
   console.log(`wrote        ${path.join(outDir, tag + '.json')} plus two screenshots. LOOK AT THEM.\n`);
 
   await browser.close();

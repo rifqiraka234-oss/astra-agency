@@ -1526,6 +1526,50 @@ or return `NO_STRONG_ANGLE`. Sending a weaker true message is always allowed. Se
 strong false one is never allowed, because the lead can check it in ten seconds, and the
 one thing every message has to prove is that we are careful.
 
+### NEVER say a page or a site is empty, missing or not loading. It usually is loading (Raka, 2026-09-21)
+
+**This cost a live lead and it is the single most expensive mistake in this repo.** Niklas
+Hanf at Solvio replied to a researched message with "The Solv(io)er isn't empty 😅". He was
+right. We had told a founder that the page he built himself was blank, and then offered to
+build it for him.
+
+**What was actually there.** `solvio-workshop.de/problem-solvioer/` opens on a language
+chooser, two buttons, Deutsch and English. Click one and a full ten question
+Selbsteinschätzung appears, "Wie löst du Probleme?", four to five minutes, built as a
+self contained bilingual assessment posting to Formspree. **52,912 characters of markup.**
+
+**Why every tool we had said empty.** The whole widget is an inline `<style>` plus
+`<script>` inside the WordPress content, and it renders its own UI. So the served HTML
+carried 244 characters of readable text, the raw fetch stripped the scripts, and the
+Chromium render measured a body 717px tall. Three separate signals all said "nothing here"
+and all three were measuring the wrong thing. **We measured height and text length instead
+of looking at the screenshot and clicking the one obvious button.**
+
+**The rule, and there are no exceptions to it.**
+
+1. **An emptiness claim requires a screenshot that shows an empty page.** Not a short text
+   extraction, not a small body height, not a low byte count, not a failed fetch. A
+   picture. If you have not looked at the picture, you do not have the claim.
+2. **A single failed or odd request is never evidence.** Retry it, then run the DNS and
+   plain http checks, then render it. `nextfood.ai` returned `000` once and is a live,
+   modern site. theaterstudiokrip.nl was genuinely broken and that took three
+   confirmations plus a control host in the same minute before it was written down.
+3. **`site-audit.js` now refuses to let this pass quietly.** It compares readable text
+   against the markup in the main content area, counts inline scripts and styles inside
+   that area, and looks for gate buttons such as Deutsch, English, Start, Weiter, Enter,
+   Choose your language. If any of those fire it prints **CONTENT MAY BE HIDDEN FROM THIS
+   READER, DO NOT CALL THIS PAGE EMPTY OR THIN** and names the gate. That warning is a
+   hard stop, not a hint.
+4. **Click the gate.** A language chooser, a start button, an age gate, a cookie wall, a
+   "view the site" splash. Click it, wait, screenshot again, and only then form a view.
+5. **Prefer the softer true sentence anyway.** "I couldn't get past the language chooser"
+   is true whatever is behind it and it invites a correction rather than a rebuttal.
+   "Your page is empty" is checkable in one click and makes us look careless when it is
+   wrong, which is exactly the opposite of what the message is for.
+6. **The worst version of this is offering to build what they already built.** Before any
+   offer, ask whether the thing being offered might already exist behind something you did
+   not click.
+
 ### The corners that get cut, and the check that catches each one (Raka, 2026-09-21)
 
 His instruction, "make sure you do it thoroughly and don't skip corners, and take time to
