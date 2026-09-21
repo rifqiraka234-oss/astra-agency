@@ -135,7 +135,7 @@ function classify(url, base) {
     const lower = bodyText.toLowerCase();
     const bannerWords = ['cookie', 'cookies', 'consent', 'privacy', 'zustimmung', 'akzeptieren', 'toestemming', 'accepteren', 'accepter', 'consentement'];
     const acceptWords = ['accept all', 'allow all', 'alle akzeptieren', 'alles accepteren', 'tout accepter', 'accept', 'akzeptieren', 'accepteren', 'accepter'];
-    const rejectWords = ['reject all', 'decline', 'reject', 'ablehnen', 'weigeren', 'refuser', 'alleen noodzakelijk', 'only necessary', 'nur notwendige', 'necessary only'];
+    const rejectWords = ['reject all', 'decline', 'reject', 'deny', 'ablehnen', 'weigeren', 'weiger', 'refuser', 'refuse', 'rifiuta', 'rechazar', 'alleen noodzakelijk', 'only necessary', 'nur notwendige', 'necessary only', 'essential only', 'manage preferences', 'instellingen'];
     const clickables = Array.from(document.querySelectorAll('button,a[role="button"],input[type="button"],input[type="submit"],[class*="btn"],[class*="button"]'));
     const labelled = clickables.map((el) => ({
       text: (el.innerText || el.value || '').trim().toLowerCase().slice(0, 60),
@@ -143,7 +143,11 @@ function classify(url, base) {
     })).filter((x) => x.text);
     const accept = labelled.filter((x) => acceptWords.some((w) => x.text.includes(w))).sort((a, b) => b.area - a.area)[0] || null;
     const reject = labelled.filter((x) => rejectWords.some((w) => x.text.includes(w))).sort((a, b) => b.area - a.area)[0] || null;
-    const privacyLink = anchors.find((a) => /privacy|privacybeleid|datenschutz|confidentialit|cookiebeleid|cookie-?policy|cookie-?richtlinie/i.test(a.href + ' ' + a.textContent));
+    // Widened after a false negative on a Shopify store whose footer said
+    // "Returns Policy" and "Shipping & Delivery" and whose policy pages live
+    // under /policies/. The old pattern missed all of it and the audit printed
+    // NO LINK FOUND on a site that had four live policies.
+    const privacyLink = anchors.find((a) => /privacy|privacybeleid|datenschutz|confidentialit|cookiebeleid|cookie-?policy|cookie-?richtlinie|\/policies\/|gegevensbescherming|informativa|politica-de-privacidad|gizlilik/i.test(a.href + ' ' + a.textContent));
     const imprint = anchors.find((a) => /impressum|imprint|mentions-?legales|kvk|colofon/i.test(a.href + ' ' + a.textContent));
     return {
       title: document.title,
