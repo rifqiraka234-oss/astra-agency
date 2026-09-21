@@ -66,6 +66,98 @@ confidence outcomes (`HIGH_CONFIDENCE_ANGLE` down to `NO_STRONG_ANGLE`). Do not
 choose a final angle until its Minimum Research Stop Conditions are answered,
 and never infer a problem from a single weak signal.
 
+## TRIPLE CHECK EVERYTHING. The rule above every other rule (Raka, 2026-09-21, his capitals)
+
+His words, "can you PLEAASE NEVER EVER MAKE ANY MISTAKES. UPDATE YOUR MD TO TRIPLE
+CHECK EVERY SINGLE THING." This section outranks everything below it. Read it at the
+start of every session and run it before every send, every audit and every answer.
+
+**The one pattern behind every single error of 2026-09-21, and there were nine.** Not
+one of them was carelessness in the moment. Every one was **trusting my own earlier
+output instead of going back to the thing it came from.** A research note from an hour
+ago, a regex result, a queue file I wrote myself, a tool's summary, a memory of a page.
+Each felt like a fact and none of them was one.
+
+| What was trusted | What it actually was | What it cost |
+|---|---|---|
+| A body height and a text length | Three tools all measuring the wrong thing | Told Niklas Hanf his own 10 question assessment was an empty page |
+| `state/silent_accepted_queue.jsonl` | A file that does not cover July and August | 11 people pitched twice in one morning |
+| My own regex for policy links | A pattern that did not match `/policies/` | Nearly told L'MANE they had no privacy pages when all four load |
+| A company's listed name | Marketing, not an address list | "Three addresses" when Ciaccia Levi run two |
+| A memory of a homepage | A memory | "The site embeds none of the 52 videos" when CoLean embeds one |
+| A nav item's label | Not its href | Nearly told Red Rabbit a working button was broken |
+| One failed curl | One failed curl | Nearly called the live, modern nextfood.ai dead |
+| One `type=linkedinSent` bulk pull | An endpoint that under reports | A false all clear on the duplicate audit |
+| `len(msg) > 200` as a filter | Dropped every record with an omitted body | A second false all clear on the same audit |
+
+### The three checks, and they are three different ACTIONS, not three readings
+
+Reading the same draft three times is not triple checking, it is one check repeated.
+Each pass has to attack the claim from a different direction or it adds nothing.
+
+**Check 1, the source.** Open the thing again. The actual URL, the actual page, the
+actual thread, the actual file. Not the note about it, not the audit summary, not what
+you remember. Every sentence in the draft gets a named source you reopened on this pass.
+If you cannot name it, the sentence is a memory and it is deleted.
+
+**Check 2, the opposite.** Go and try to prove the claim FALSE. This is the one that
+gets skipped, and it is the only one that has ever caught anything. Open the page that
+would disprove it, in the site's own language, using the words that site would use. Open
+the href, not the label. Recount the number on the page it came from. Click the gate you
+did not click. Search their own HTML for the thing you say is missing.
+
+**Check 3, the independent source.** Confirm it a second way that does not share a
+failure mode with the first. A screenshot against a grep. A thread pull against a state
+file. A control host against a fetch failure. An Impressum against what lemlist has.
+**If both checks come from the same tool, that is one check, not two.**
+
+### The ranking of evidence, and never skip a rung upwards
+
+1. **The live page or thread, opened now.** Screenshot for anything visual, anything
+   about emptiness, anything about how a site looks.
+2. **The statutory record.** Companies House, KVK, Bundesanzeiger, the Impressum.
+   It beats lemlist, the site's own marketing and every search snippet.
+3. **A raw tool response, read in full.** Not its summary.
+4. **My own state files and notes.** These are a CANDIDATE list and a research trail.
+   They are never proof of what happened. `accepted_pool_v01.jsonl` says who accepted,
+   it does not say who we have spoken to.
+5. **My own memory of any of the above.** Not evidence. Ever.
+
+### The self reported source trap, which is the most expensive one
+
+**Never audit my own work using my own record of it.** The duplicate send audit was run
+against the queue file I wrote, so it repeated the queue file's blind spot and came back
+clean twice. It only resolved when the count was rebuilt from lemlist's own listing and
+reconciled thread by thread, and the arithmetic was made to close, 41 plus 6 minus 13
+equals 34.
+
+So when Raka asks "are you sure", the answer is never a restatement. It is a fresh pull
+from the system of record, a positive control proving the method detects what it claims
+to detect, and an arithmetic reconciliation that closes. **Say what you checked, not
+that you checked.**
+
+### The positive control, and it is not optional on any negative finding
+
+A negative result is worthless until the method has been shown to produce a positive
+one. Thirteen empty threads meant nothing until two threads with known sends were pulled
+and came back full. An empty page proves nothing until a known good page renders through
+the same path in the same minute. A "no privacy policy" proves nothing until the regex is
+shown to match a site that has one.
+
+**Every absence claim ships with its control, or it does not ship.**
+
+### Before anything leaves, the five questions
+
+1. Did I open every source again on this pass, or am I working from notes?
+2. Did I try to prove each claim wrong, and what specifically did I open to do it?
+3. Is any claim resting on one tool, one fetch or one regex?
+4. Does the arithmetic close, and does a control prove the method works?
+5. Which sentence here am I least able to defend, and why is it still in.
+
+**A shorter true message always beats a longer one with a soft claim in it. Delete, do
+not soften.** And when the check turns up something I got wrong, say it plainly and
+first, because Raka finding it himself is the only outcome worse than the error.
+
 ## The research order of operations (Raka, 2026-09-17). Run it in this order, every lead.
 
 His words, "it's good, but I want you to be better, the way you research it, I
@@ -1112,7 +1204,12 @@ one. Work in this priority order.
 4. **The Silent accepted backlog.** Batches of about ten, real research each.
 5. **Enrichment pipeline** if new contacts have landed.
 
-### The three hard gates, in order, on any outward work
+### The four hard gates, in order, on any outward work
+
+**Gate 0, the triple check.** The section at the top of this file. Three different
+actions, source then opposite then independent confirmation, plus a positive control on
+every absence claim. It runs on every gate below and on every answer given back to Raka,
+not only on messages.
 
 **Gate 1, research.** `docs/astra-prospect-research-master.md` standard, then the
 falsification pass. Open the page that would disprove the claim, not the page that
@@ -1976,6 +2073,13 @@ Every line is here because it failed at least once.
 **Truth**
 - [ ] Every factual claim traces to something actually fetched, with the page named.
 - [ ] The falsification pass ran, against the page that could disprove it.
+- [ ] The triple check ran. Source reopened, opposite attempted, confirmed a second
+      way that does not share a failure mode with the first.
+- [ ] Every absence claim carries a positive control proving the method detects the
+      thing when it is there.
+- [ ] Nothing rests on my own notes, my own state files or my own memory.
+- [ ] Every number recounted on the page it came from, every href opened rather than
+      its label read.
 - [ ] Nothing invented is presented as real. Placeholder data is labelled inside the
       artefact and flagged in the handover.
 - [ ] No client work claimed that was not delivered, and the delivery partner
