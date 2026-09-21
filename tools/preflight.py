@@ -44,7 +44,13 @@ print("""  It outranks every other doc except a live instruction from Raka.
 
     Three checks, three different ACTIONS. Reopen the source. Try to prove it
       FALSE. Confirm a second way that cannot fail the same way.
-      Every absence claim ships with a positive control.""")
+      Every absence claim ships with a positive control.
+
+    LOAD THE WHOLE CHAT before any next message to anyone. All of it, both
+      directions, from the first message. get_inbox_conversation is capped at
+      TEN PER PAGE, newest first, and limit above 10 is refused, so page until
+      nextPage is null. A thread over ten messages hides its own beginning,
+      and the beginning is where the promises live.""")
 
 head("2. GIT")
 print(f"  branch   {sh('git rev-parse --abbrev-ref HEAD')}")

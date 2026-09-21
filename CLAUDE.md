@@ -247,10 +247,30 @@ check contact details in lemlist or do web searches of the website." He named th
 because these are the three that have actually cost us leads. Each one below has the
 exact call that settles it, so there is never a judgement about whether it is worth it.
 
-#### 1. The messages. Pull the thread, per contact, every single time
+#### 1. The messages. Pull the WHOLE thread, per contact, every single time
+
+**MANDATORY, and it is the whole chat, not the last message (Raka, 2026-09-21).** Before
+a nudge, a reply, a follow up, a delivery or any next message to anyone, load every
+message in that thread in both directions, from the first one. His words, "MANDATORY to
+load the whole chat of the person, all messages, ours sent and what they sent, so we have
+fulllll context."
 
 **The call is `get_inbox_conversation(contactId)`. One contact per call. There is no
 bulk version of this that works.**
+
+**And it pages, which is the trap. Verified 2026-09-21.** It returns **newest first**,
+**ten per page**, and **`limit` is hard capped at 10**, a request for 50 is refused. So a
+thread longer than ten messages **hides its own beginning on page 1**. Page with `page`
+until `pagination.nextPage` is null and reconcile against `pagination.totalItems`.
+
+**Niklas Hanf's thread is at exactly 10 right now**, so the next message in it pushes the
+connect note and the opening exchange off page 1. That is not hypothetical, it is one
+message away.
+
+**The beginning of a thread is where the promises live**, which is why the last message is
+never enough. Michele Legoratto and Antanas Juodiskis were both told in writing that a
+message was the last one. Jack Coulthard was told "one more nudge and then I will leave it
+be" and was nudged again ten days later. None of that is visible from the newest message.
 
 Run it **before researching a lead**, **before drafting**, and **again immediately
 before sending**. Three times, because the thread changes underneath you. A reply can

@@ -60,10 +60,34 @@ empty." Anything you did not open, fetch, count or click on this pass.
 edits, not authorisation. "Make it English", "shorter", "less cheesy" all mean redraft and
 show again. A batch approval covers that batch only and never rolls forward.
 
+**LOAD THE WHOLE CHAT BEFORE ANY MESSAGE. MANDATORY, no exceptions (Raka, 2026-09-21).**
+Before a nudge, a reply, a follow up, a delivery or any next message to anyone, load
+**every message in that thread, in both directions, ours and theirs, from the very first
+one.** Not the last message. Not the preview. Not what a state file says. Not what a
+summary of an earlier session says. The whole conversation.
+
+**The mechanics, verified today, and there is a trap in them.**
+`get_inbox_conversation` returns **newest first**, **ten per page**, and `limit` is hard
+capped at 10, so a `limit` of 50 is refused. **Any thread longer than ten messages
+therefore hides its own beginning on page 1.** Page through with `page` until
+`pagination.nextPage` is null, and check `pagination.totalItems` against what you actually
+read.
+
+**This is about to bite.** Niklas Hanf's thread sits at exactly 10 activities right now.
+The next message in it pushes it to 11, and from that moment page 1 no longer contains the
+connect note or the start of the conversation.
+
+**Why it is mandatory rather than advisable.** The beginning of a thread holds what was
+promised, what was already offered and declined, and what we swore we would not do again.
+Michele Legoratto and Antanas Juodiskis were both told in writing that a message was the
+last one. Jack Coulthard was told "one more nudge and then I will leave it be" and then
+nudged again ten days later. Every one of those is invisible from the last message alone.
+
 **Before any send, in order.**
-1. `get_inbox_conversation(contactId)` immediately before sending. Not the preview, not a
-   bulk activities pull, not a state file. If a real message exists, this is a Stalled lead
-   and it does NOT get a cold opener.
+1. **Load the whole thread, paged to exhaustion**, immediately before sending. Not the
+   preview, not a bulk activities pull, not a state file. If a real message exists, this is
+   a Stalled lead and it does NOT get a cold opener. If a closing nudge was sent, or we
+   promised to stop, **the thread is finished and gets nothing.**
 2. Copy the text out of the drafts file verbatim. Never compose at send time.
 3. Send with `contactId`, channel `linkedin`, `sendUserId: usr_27bdxG7jzTn2rucGB`.
 4. Re-pull the thread to confirm it landed.
@@ -165,6 +189,9 @@ The four that cost us leads.
   `linkedinInviteAccepted` activity.** Never a timestamp heuristic.
 - **`lastSentMessagePreview` lies.** It has shown the connect note at the exact second a
   real opener went out. Only `get_inbox_conversation` per contact is reliable.
+- **`get_inbox_conversation` is capped at 10 per page, newest first.** `limit` above 10 is
+  refused. **Page until `nextPage` is null**, or a thread over ten messages will hide its
+  own beginning, which is exactly where the promises live. See section 1.
 - **The activities endpoint is reliable for acceptances and NOT for sends.** It silently
   omits real messages.
 - **Names are abbreviated** to an initial. Key on `contactId` or `linkedinUrl`, never a name.
