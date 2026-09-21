@@ -178,8 +178,16 @@ function classify(url, base) {
     themes: [...new Set((html.match(/\/wp-content\/themes\/([^/'"?]+)/gi) || []).map((m) => m.split('/').pop()))].slice(0, 5),
     boughtTheme: (html.match(BOUGHT_THEMES) || [])[1] || null,
     plugins: [...new Set((html.match(/\/wp-content\/plugins\/([^/'"?]+)/gi) || []).map((m) => m.split('/').pop()))].slice(0, 12),
-    builder: ['elementor', 'wpbakery', 'divi', 'beaver builder', 'bricks', 'oxygen', 'visual composer']
-      .filter((b) => new RegExp(b.replace(' ', '[- ]?'), 'i').test(html)),
+    // Anchor on paths and handles, never bare words. "divi" matches "individual",
+    // "bricks" matches "bricks and mortar", and both produced false positives.
+    builder: [
+      ['elementor', /\/plugins\/elementor|elementor-frontend/i],
+      ['wpbakery', /js_composer|wpbakery/i],
+      ['divi', /\/themes\/[Dd]ivi\/|et_pb_|et-core/],
+      ['beaver builder', /\/plugins\/bb-plugin|fl-builder/i],
+      ['bricks', /\/themes\/bricks\/|brxe-/i],
+      ['oxygen', /\/plugins\/oxygen|ct_section/i],
+    ].filter(([, re]) => re.test(html)).map(([n]) => n),
     saasBuilder: ['wix', 'squarespace', 'shopify', 'webflow', 'framer', 'jimdo', 'mywebsite now', 'ionos', 'weebly', 'godaddy']
       .filter((b) => new RegExp(b.replace(' ', '[- ]?'), 'i').test(html)),
     fontFamilies: [...new Set((html.match(/font-family:\s*([^;}"']+)/gi) || []).map((m) => m.replace(/font-family:\s*/i, '').trim()))].slice(0, 8),
