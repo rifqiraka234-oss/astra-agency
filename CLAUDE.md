@@ -1497,6 +1497,35 @@ www works, an expired certificate, a holding page on a live domain. Diagnose it 
 three command procedure above, and **always rule out our own proxy first**, because a TLS
 error seen through the egress is never evidence about the lead's site.
 
+### The hard gate. NEVER ANY FALSE CLAIM (Raka, 2026-09-21, his capitals)
+
+This outranks everything else in this file. A message is not ready because it reads well,
+it is ready when **every single sentence in it has been checked against the page it came
+from, on the pass immediately before it is shown.** Not remembered from research an hour
+earlier. Re opened.
+
+The procedure, and it is mechanical so it cannot be skipped by feeling confident.
+
+1. Take the finished draft and go through it **sentence by sentence**, not claim by claim,
+   because the false bits hide in subordinate clauses and in numbers used as adjectives.
+2. For each one, name the file or URL it came from and open it again. If you cannot name
+   where it came from, it is not a fact, it is a memory, and it comes out.
+3. **Every number gets recounted.** Three addresses turned out to be two. Fifty two videos
+   was right only because the channel page was reopened.
+4. **Every link claim gets the href opened.** Not the label, the href.
+5. **Every absence claim gets the page that would disprove it opened**, in the site's own
+   language, using the words that site would actually use.
+6. Anything that survives goes in the `claims` list on the queue row, written so a later
+   session can re test it. Anything that does not survive is **deleted, not softened.**
+
+**A hedge is not a fix.** "It looks like there may be no..." is still a false claim wearing
+a hat, and it reads worse. Cut the sentence and send a shorter message.
+
+**If removing the false claim kills the angle, the angle is dead.** Go back to the evidence
+or return `NO_STRONG_ANGLE`. Sending a weaker true message is always allowed. Sending a
+strong false one is never allowed, because the lead can check it in ten seconds, and the
+one thing every message has to prove is that we are careful.
+
 ### The corners that get cut, and the check that catches each one (Raka, 2026-09-21)
 
 His instruction, "make sure you do it thoroughly and don't skip corners, and take time to
