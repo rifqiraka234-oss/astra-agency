@@ -1583,7 +1583,46 @@ Every line is here because it failed at least once.
   Meanwhile the v0.1 invite step sent twenty connect notes that same morning, the
   last at 07:54. Nothing was delivered and roughly a full session of research went
   into people who cannot receive a message yet.
-- **The acceptance signal, and it is in the list endpoint all along (2026-09-16).**
+- **STOP. Acceptance is a recorded event on the campaign, so read it instead of
+  inferring it (Raka, 2026-09-21). This supersedes every timestamp heuristic below,
+  and the heuristics stay only as history.** His words, "you always gotta check the
+  Campaign, in this case the campaign v0.1 and the list of the accepted requests."
+  He is right, and everything below this bullet was me reading tea leaves in the
+  inbox while lemlist was storing the answer as a first class activity called
+  **`linkedinInviteAccepted`**.
+
+  **The number that settles it.** `get_campaigns_stats` on v0.1 reports
+  `channelMetrics.linkedinInvitationAccepted: 320` against `messageMetrics.sent: 167`.
+  So 320 people accepted and 167 ever got a real message. I had just told Raka the
+  accepted pool was "nearly exhausted". It was never close to exhausted.
+
+  **The three calls that produce the working list, and they are cheap.**
+  1. `get_campaigns_stats` for the headline acceptance count.
+  2. `GET /api/v2/campaigns/<id>/export/leads?state=linkedinInviteAccepted&format=json`
+     through `call_api`, which returns every lead whose sequence is parked at
+     acceptance, with `companyName`, `companyDomain`, `jobTitle` and `linkedinUrl`.
+  3. `GET /api/activities?version=v2&type=linkedinInviteAccepted&campaignId=<id>&limit=100`
+     paged, which carries the **`contactId`** the export omits, plus the acceptance
+     timestamp. Join the two on `leadId`.
+
+  `call_api` needs `load_skill(skillName="api-reference")` once per session first.
+  **Both responses are far too big for the context window and that is fine**, the
+  harness writes any oversized tool result to a file under `tool-results/` and hands
+  you the path, so parse them in bash and never page them through the conversation.
+
+  **Read `state` correctly or the count will mislead you.** A lead's `state` tracks
+  the campaign sequence only, so a message we sent by hand from the inbox does NOT
+  advance it. On 2026-09-21 the 225 leads parked at `linkedinInviteAccepted` broke
+  down as 106 already worked and marked SENT in our own queue, 28 already carrying a
+  verdict, and **85 never touched at all**. Those 85 are the real backlog and they
+  are written to `state/accepted_pool_v01.jsonl` with contact id, domain and job
+  title, which is step 1 of the research order handed over for free.
+
+  **And this explains the refusals.** v0.1 runs a `linkedinWithdrawInvitation` step,
+  so an invitation nobody accepts gets pulled back. Every contact refused with
+  `can-not-send-message` simply is not in this list. Check the list first and no
+  research is ever spent on someone who cannot receive it.
+- **The acceptance signal, the old inbox heuristic, kept as history (2026-09-16).**
   **`lastActivityAt` strictly later than `lastSentAt` means the contact accepted.**
   The later activity is the acceptance being written to the thread. Combine it with
   a `lastSentMessagePreview` that is still the generic connect note and a
