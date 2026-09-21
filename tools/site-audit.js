@@ -71,6 +71,77 @@ const DATED_TELLS = [
 
 const BOUGHT_THEMES = /\/(?:wp-content\/themes|themes)\/(enfold|avada|betheme|the7|x|flatsome|jupiter|salient|bridge|impreza|divi|astra|oceanwp|generatepress|kadence|highendwp|semplice\d*)/i;
 
+// The detector, defined ONCE so the self test below exercises exactly the same
+// code that audits a real page. A control that runs different code proves nothing.
+const DETECT = (socialSrc) => {
+    const socialRe = Object.fromEntries(Object.entries(socialSrc).map(([k, v]) => [k, new RegExp(v.source, v.flags)]));
+    const anchors = Array.from(document.querySelectorAll('a[href]'));
+    const social = {};
+    for (const [k, re] of Object.entries(socialRe)) {
+      const hit = anchors.find((a) => re.test(a.href));
+      if (hit) social[k] = hit.href;
+    }
+    const bodyText = (document.body && document.body.innerText) || '';
+    const lower = bodyText.toLowerCase();
+    const bannerWords = ['cookie', 'cookies', 'consent', 'privacy', 'zustimmung', 'akzeptieren', 'toestemming', 'accepteren', 'accepter', 'consentement'];
+    // Widened 2026-09-21 after a FALSE NEGATIVE on centretherapielaser.com, whose
+    // banner offers OK and Non. Neither word was in either list, so the audit
+    // printed NONE FOUND on a page that plainly has a banner in the screenshot.
+    // A missing banner is an absence claim and absence claims are what get us
+    // caught, so these lists are deliberately generous now.
+    const acceptWords = ['accept all', 'allow all', 'alle akzeptieren', 'alles accepteren', 'tout accepter', 'accept', 'akzeptieren', 'accepteren', 'accepter', 'ok', 'okay', "j'accepte", "d'accord", 'got it', 'i agree', 'agree', 'understood', 'verstanden', 'einverstanden', 'akkoord', 'continue', 'allow', 'zustimmen', 'aceptar', 'accetta'];
+    const rejectWords = ['reject all', 'decline', 'reject', 'deny', 'ablehnen', 'weigeren', 'weiger', 'refuser', 'refuse', 'rifiuta', 'rechazar', 'alleen noodzakelijk', 'only necessary', 'nur notwendige', 'necessary only', 'essential only', 'manage preferences', 'instellingen', 'non', 'nein', 'nee', 'no thanks', 'refuser', 'rechazar', 'configurar', 'parametrer', 'customise', 'customize'];
+    const clickables = Array.from(document.querySelectorAll('button,a[role="button"],input[type="button"],input[type="submit"],[class*="btn"],[class*="button"]'));
+    const labelled = clickables.map((el) => ({
+      text: (el.innerText || el.value || '').trim().toLowerCase().slice(0, 60),
+      area: (el.getBoundingClientRect().width * el.getBoundingClientRect().height) | 0,
+    })).filter((x) => x.text);
+    const accept = labelled.filter((x) => acceptWords.some((w) => x.text.includes(w))).sort((a, b) => b.area - a.area)[0] || null;
+    const reject = labelled.filter((x) => rejectWords.some((w) => x.text.includes(w))).sort((a, b) => b.area - a.area)[0] || null;
+    // Widened after a false negative on a Shopify store whose footer said
+    // "Returns Policy" and "Shipping & Delivery" and whose policy pages live
+    // under /policies/. The old pattern missed all of it and the audit printed
+    // NO LINK FOUND on a site that had four live policies.
+    const privacyLink = anchors.find((a) => /privacy|privacybeleid|datenschutz|confidentialit|cookiebeleid|cookie-?policy|cookie-?richtlinie|\/policies\/|gegevensbescherming|informativa|politica-de-privacidad|gizlilik/i.test(a.href + ' ' + a.textContent));
+    const imprint = anchors.find((a) => /impressum|imprint|mentions-?legales|kvk|colofon/i.test(a.href + ' ' + a.textContent));
+    return {
+      title: document.title,
+      lang: (document.documentElement && document.documentElement.lang) || null,
+      generator: (document.querySelector('meta[name="generator"]') || {}).content || null,
+      description: (document.querySelector('meta[name="description"]') || {}).content || null,
+      forms: document.querySelectorAll('form').length,
+      inputs: document.querySelectorAll('input,textarea,select').length,
+      mailto: document.querySelectorAll('a[href^="mailto:"]').length,
+      tel: document.querySelectorAll('a[href^="tel:"]').length,
+      images: document.querySelectorAll('img').length,
+      svgs: document.querySelectorAll('svg').length,
+      videos: document.querySelectorAll('video,iframe[src*="youtube"],iframe[src*="vimeo"]').length,
+      h1: Array.from(document.querySelectorAll('h1')).map((h) => h.innerText.trim()).slice(0, 3),
+      nav: Array.from(document.querySelectorAll('nav a, header a')).slice(0, 40)
+        .map((a) => (a.textContent.trim().replace(/\s+/g, ' ') + ' => ' + a.getAttribute('href'))),
+      social,
+      bannerPresent: bannerWords.some((w) => lower.includes(w)) && !!(accept || reject),
+      acceptButton: accept, rejectButton: reject,
+      privacyLink: privacyLink ? privacyLink.href : null,
+      imprintLink: imprint ? imprint.href : null,
+      textLength: bodyText.length,
+      text: bodyText.replace(/\n{2,}/g, '\n').slice(0, 4000),
+      // A page can be full of content our reader cannot see, because the
+      // content is built by an inline script, or sits behind a gate such as a
+      // language chooser or a start button. Solvio's Problem-Solv(io)er looked
+      // empty on 2026-09-21, body 717px and 55 characters of text, and behind
+      // one Deutsch button sat a ten question assessment. These fields exist so
+      // that can never read as empty again.
+      mainHtmlLength: (document.querySelector('.entry-content, main, #content, article') || document.body).innerHTML.length,
+      inlineScriptsInMain: document.querySelectorAll('.entry-content script, main script, #content script, article script, .entry-content style, main style').length,
+      gateCandidates: Array.from(document.querySelectorAll('button, a[role="button"], [class*="btn"]'))
+        .map((e) => (e.innerText || e.value || '').trim())
+        .filter((t) => t && t.length < 40 &&
+          /deutsch|english|français|nederlands|espa|italiano|start|starten|begin|enter|continue|weiter|verder|commencer|choose|w[aä]hle|select|language|taal|sprache|langue/i.test(t))
+        .slice(0, 12),
+    };
+};
+
 function classify(url, base) {
   try {
     const u = new URL(url, base);
@@ -163,69 +234,35 @@ function classify(url, base) {
   const googleFonts = thirdPartyRequests.some((h) => /fonts\.(googleapis|gstatic)\.com/.test(h));
 
   const html = await page.content();
-  const dom = await page.evaluate((socialSrc) => {
-    const socialRe = Object.fromEntries(Object.entries(socialSrc).map(([k, v]) => [k, new RegExp(v.source, v.flags)]));
-    const anchors = Array.from(document.querySelectorAll('a[href]'));
-    const social = {};
-    for (const [k, re] of Object.entries(socialRe)) {
-      const hit = anchors.find((a) => re.test(a.href));
-      if (hit) social[k] = hit.href;
-    }
-    const bodyText = (document.body && document.body.innerText) || '';
-    const lower = bodyText.toLowerCase();
-    const bannerWords = ['cookie', 'cookies', 'consent', 'privacy', 'zustimmung', 'akzeptieren', 'toestemming', 'accepteren', 'accepter', 'consentement'];
-    const acceptWords = ['accept all', 'allow all', 'alle akzeptieren', 'alles accepteren', 'tout accepter', 'accept', 'akzeptieren', 'accepteren', 'accepter'];
-    const rejectWords = ['reject all', 'decline', 'reject', 'deny', 'ablehnen', 'weigeren', 'weiger', 'refuser', 'refuse', 'rifiuta', 'rechazar', 'alleen noodzakelijk', 'only necessary', 'nur notwendige', 'necessary only', 'essential only', 'manage preferences', 'instellingen'];
-    const clickables = Array.from(document.querySelectorAll('button,a[role="button"],input[type="button"],input[type="submit"],[class*="btn"],[class*="button"]'));
-    const labelled = clickables.map((el) => ({
-      text: (el.innerText || el.value || '').trim().toLowerCase().slice(0, 60),
-      area: (el.getBoundingClientRect().width * el.getBoundingClientRect().height) | 0,
-    })).filter((x) => x.text);
-    const accept = labelled.filter((x) => acceptWords.some((w) => x.text.includes(w))).sort((a, b) => b.area - a.area)[0] || null;
-    const reject = labelled.filter((x) => rejectWords.some((w) => x.text.includes(w))).sort((a, b) => b.area - a.area)[0] || null;
-    // Widened after a false negative on a Shopify store whose footer said
-    // "Returns Policy" and "Shipping & Delivery" and whose policy pages live
-    // under /policies/. The old pattern missed all of it and the audit printed
-    // NO LINK FOUND on a site that had four live policies.
-    const privacyLink = anchors.find((a) => /privacy|privacybeleid|datenschutz|confidentialit|cookiebeleid|cookie-?policy|cookie-?richtlinie|\/policies\/|gegevensbescherming|informativa|politica-de-privacidad|gizlilik/i.test(a.href + ' ' + a.textContent));
-    const imprint = anchors.find((a) => /impressum|imprint|mentions-?legales|kvk|colofon/i.test(a.href + ' ' + a.textContent));
-    return {
-      title: document.title,
-      lang: document.documentElement.lang || null,
-      generator: (document.querySelector('meta[name="generator"]') || {}).content || null,
-      description: (document.querySelector('meta[name="description"]') || {}).content || null,
-      forms: document.querySelectorAll('form').length,
-      inputs: document.querySelectorAll('input,textarea,select').length,
-      mailto: document.querySelectorAll('a[href^="mailto:"]').length,
-      tel: document.querySelectorAll('a[href^="tel:"]').length,
-      images: document.querySelectorAll('img').length,
-      svgs: document.querySelectorAll('svg').length,
-      videos: document.querySelectorAll('video,iframe[src*="youtube"],iframe[src*="vimeo"]').length,
-      h1: Array.from(document.querySelectorAll('h1')).map((h) => h.innerText.trim()).slice(0, 3),
-      nav: Array.from(document.querySelectorAll('nav a, header a')).slice(0, 40)
-        .map((a) => (a.textContent.trim().replace(/\s+/g, ' ') + ' => ' + a.getAttribute('href'))),
-      social,
-      bannerPresent: bannerWords.some((w) => lower.includes(w)) && !!(accept || reject),
-      acceptButton: accept, rejectButton: reject,
-      privacyLink: privacyLink ? privacyLink.href : null,
-      imprintLink: imprint ? imprint.href : null,
-      textLength: bodyText.length,
-      text: bodyText.replace(/\n{2,}/g, '\n').slice(0, 4000),
-      // A page can be full of content our reader cannot see, because the
-      // content is built by an inline script, or sits behind a gate such as a
-      // language chooser or a start button. Solvio's Problem-Solv(io)er looked
-      // empty on 2026-09-21, body 717px and 55 characters of text, and behind
-      // one Deutsch button sat a ten question assessment. These fields exist so
-      // that can never read as empty again.
-      mainHtmlLength: (document.querySelector('.entry-content, main, #content, article') || document.body).innerHTML.length,
-      inlineScriptsInMain: document.querySelectorAll('.entry-content script, main script, #content script, article script, .entry-content style, main style').length,
-      gateCandidates: Array.from(document.querySelectorAll('button, a[role="button"], [class*="btn"]'))
-        .map((e) => (e.innerText || e.value || '').trim())
-        .filter((t) => t && t.length < 40 &&
-          /deutsch|english|français|nederlands|espa|italiano|start|starten|begin|enter|continue|weiter|verder|commencer|choose|w[aä]hle|select|language|taal|sprache|langue/i.test(t))
-        .slice(0, 12),
-    };
-  }, Object.fromEntries(Object.entries(SOCIAL).map(([k, v]) => [k, { source: v.source, flags: v.flags }])));
+  const SOCIAL_ARG = Object.fromEntries(Object.entries(SOCIAL).map(([k, v]) => [k, { source: v.source, flags: v.flags }]));
+
+  // POSITIVE CONTROL, runs on every audit, never optional. A synthetic page that
+  // definitely has a cookie banner, an accept, a reject and a privacy link. If the
+  // detector cannot find them HERE, it is broken, and every absence finding from
+  // this run is void rather than reported as a fact. This exists because the audit
+  // printed NONE FOUND on a banner that is plainly visible in the screenshot.
+  const FIXTURE = 'data:text/html,' + encodeURIComponent(`<!doctype html><html lang="fr"><body>
+    <p>Nous utilisons des cookies pour ameliorer votre experience.</p>
+    <button>OK</button><button>Non</button>
+    <a href="/politique-confidentialite/">Politique de confidentialite</a>
+    <a href="/mentions-legales/">Mentions legales</a>
+    <a href="https://www.linkedin.com/company/x">LinkedIn</a>
+  </body></html>`);
+  const ctl = await browser.newContext();
+  const ctlPage = await ctl.newPage();
+  await ctlPage.goto(FIXTURE);
+  const control = await ctlPage.evaluate(DETECT, SOCIAL_ARG);
+  await ctl.close();
+  const controlOk = {
+    banner: control.bannerPresent === true,
+    reject: !!control.rejectButton,
+    privacy: !!control.privacyLink,
+    imprint: !!control.imprintLink,
+    social: Object.keys(control.social || {}).length > 0,
+  };
+  const controlFailures = Object.entries(controlOk).filter(([, v]) => !v).map(([k]) => k);
+
+  const dom = await page.evaluate(DETECT, SOCIAL_ARG);
 
   // ---- stack and era forensics, from the served HTML ----
   const stack = {
@@ -315,12 +352,28 @@ function classify(url, base) {
   console.log(`stack        ${stack.generator || (stack.saasBuilder.join(',') || 'unknown')}${stack.wpVersion ? ' | WP ' + stack.wpVersion : ''}${stack.boughtTheme ? ' | bought theme ' + stack.boughtTheme : ''}${stack.builder.length ? ' | ' + stack.builder.join(',') : ''}`);
   console.log(`era tells    ${datedTells.length ? datedTells.map((d) => d.tell).join(', ') : 'none greppable, judge from the screenshots'}`);
   console.log(`flow         forms ${dom.forms} inputs ${dom.inputs} mailto ${dom.mailto} tel ${dom.tel} | img ${dom.images} svg ${dom.svgs} video ${dom.videos}`);
-  console.log(`gdpr banner  ${dom.bannerPresent ? 'yes' : 'NONE FOUND'}${cmp.length ? ' via ' + cmp.join(',') : ''} | reject ${dom.rejectButton ? 'present' : 'NOT FOUND'}`);
+  const voided = controlFailures.length > 0;
+  const guard = (absent, what) => {
+    if (!absent) return '';
+    if (voided) return ` [VOID, the detector failed its own control on ${controlFailures.join(',')}]`;
+    return ' [absence, confirmed against a working control]';
+  };
+  console.log(`gdpr banner  ${dom.bannerPresent ? 'yes' : 'NONE FOUND'}${cmp.length ? ' via ' + cmp.join(',') : ''}${guard(!dom.bannerPresent, 'banner')} | reject ${dom.rejectButton ? 'present' : 'NOT FOUND'}`);
   console.log(`gdpr pre     ${preConsentCookies.length} cookies, ${preConsentCookies.filter((c) => c.party === 'third').length} third party, before any click`);
   console.log(`trackers pre ${trackersBeforeConsent.length ? trackersBeforeConsent.join(', ') : 'none'}`);
   console.log(`googlefonts  ${googleFonts ? 'REMOTE, loaded from Google' : 'not remote'}`);
-  console.log(`privacy      ${dom.privacyLink || 'NO LINK FOUND'}`);
-  console.log(`social       ${Object.keys(dom.social).length ? Object.entries(dom.social).map(([k, v]) => k).join(', ') : 'NONE LINKED'}`);
+  console.log(`privacy      ${dom.privacyLink || 'NO LINK FOUND' + guard(true, 'privacy')}`);
+  const socialEntries = Object.entries(dom.social || {});
+  const placeholder = socialEntries.filter(([, href]) => {
+    try { const u = new URL(href); return u.pathname.replace(/\/+$/, '') === '' || u.pathname === '/'; } catch { return false; }
+  });
+  console.log(`social       ${socialEntries.length ? socialEntries.map(([k, v]) => k + ' -> ' + v).join('\n             ') : 'NONE LINKED'}`);
+  if (placeholder.length) {
+    console.log('');
+    console.log(`!!  ${placeholder.length} SOCIAL LINK(S) GO TO A BARE PLATFORM HOMEPAGE, not an account.`);
+    console.log(`!!  ${placeholder.map(([k]) => k).join(', ')}. These are unconfigured theme placeholders.`);
+    console.log('!!  Do NOT report this as a social presence. It is the opposite of one.');
+  }
   console.log(`errors       ${pageErrors.length} page errors, ${failed.length} failed requests`);
   if (hidden.contentProbablyHidden) {
     console.log('');
@@ -344,6 +397,14 @@ function classify(url, base) {
     }[reach.verdict];
     console.log(`!!  ${say}`);
     console.log('!!  Do NOT write that their site is down, empty or broken off this run alone.');
+  }
+  console.log('');
+  if (voided) {
+    console.log(`!!  DETECTOR SELF TEST FAILED on ${controlFailures.join(', ')}.`);
+    console.log('!!  Every absence finding above is VOID. Do not write any of them down.');
+  } else {
+    console.log('control      detector found a banner, a reject, a privacy link, an imprint and a');
+    console.log('             social account on a synthetic page, so an absence above is real.');
   }
   console.log(`wrote        ${path.join(outDir, tag + '.json')} plus two screenshots. LOOK AT THEM.\n`);
 
