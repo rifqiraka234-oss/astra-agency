@@ -18,11 +18,13 @@
 
 const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const fs = require('fs');
+const { execSync } = require('child_process');
 const path = require('path');
 
 // The egress proxy re terminates TLS, so Chromium has to trust its CA. Pin by
 // key rather than disabling verification. See CLAUDE.md, the build toolchain.
 const PROXY_CA_SPKI = 'KnP1OnzHv/y42eRQmbGwoYTHcSJF448m6CU5mdngwKk=';
+const CA_BUNDLE = '/root/.ccr/ca-bundle.crt';
 
 const SOCIAL = {
   linkedin: /linkedin\.com\/(company|in)\//i,
@@ -101,15 +103,53 @@ function classify(url, base) {
   page.on('requestfailed', (r) => failed.push(r.url()));
   page.on('pageerror', (e) => pageErrors.push(String(e).slice(0, 160)));
 
-  let status = null, navError = null;
-  try {
-    const resp = await page.goto(target, { waitUntil: 'networkidle', timeout: 60000 });
-    status = resp && resp.status();
-  } catch (e) {
-    navError = String(e).split('\n')[0];
-    try { await page.waitForTimeout(4000); } catch {}
+  // ---------------------------------------------------------------
+  // Reachability. This exists because "our reader could not see it" was
+  // repeatedly written down as "their site is broken", which cost a live lead.
+  // Nothing downstream may describe the site until this produces a verdict.
+  // ---------------------------------------------------------------
+  let status = null, navError = null, attempts = [];
+  for (const wait of ['networkidle', 'domcontentloaded', 'load']) {
+    try {
+      const resp = await page.goto(target, { waitUntil: wait, timeout: 60000 });
+      status = resp && resp.status();
+      attempts.push(`${wait}:${status}`);
+      if (status && status < 400) { navError = null; break; }
+      navError = `HTTP ${status}`;
+    } catch (e) {
+      navError = String(e).split('\n')[0];
+      attempts.push(`${wait}:${navError.slice(0, 60)}`);
+    }
+    await page.waitForTimeout(2000);
   }
   await page.waitForTimeout(3000);
+
+  // Scroll the whole page. Lazily mounted sections do not exist until you do.
+  try {
+    for (let i = 0; i < 6; i++) { await page.mouse.wheel(0, 900); await page.waitForTimeout(500); }
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.waitForTimeout(1200);
+  } catch {}
+
+  // If the page is still unreadable, find out whose fault it is before saying
+  // anything. A known good host through the same egress in the same minute is
+  // the control. If the control works and they do not, it is them. If neither
+  // works, it is us, and the row is BLOCKED, never "broken".
+  let reach = { verdict: 'READ', attempts, controlOk: null, plainHttp: null, dns: null };
+  const looksUnread = !status || status >= 400 || navError;
+  if (looksUnread) {
+    const host = (() => { try { return new URL(target).host; } catch { return target; } })();
+    const sh = (cmd) => { try { return execSync(cmd, { timeout: 30000 }).toString().trim(); } catch (e) { return null; } };
+    reach.dns = sh(`getent hosts ${host} | head -1`) || 'NO DNS RECORD';
+    reach.plainHttp = sh(`curl -sS -o /dev/null -w '%{http_code}' --max-time 20 http://${host}/`) || 'no answer';
+    reach.controlOk = sh(`curl -sS -o /dev/null -w '%{http_code}' --cacert ${CA_BUNDLE} --max-time 20 https://example.com/`) || 'no answer';
+    const controlWorked = reach.controlOk && /^[23]/.test(reach.controlOk);
+    if (!controlWorked) reach.verdict = 'BLOCKED_OUR_SIDE';
+    else if (reach.dns === 'NO DNS RECORD') reach.verdict = 'NO_DNS';
+    else if (/robot|challenge|captcha|just a moment|cloudflare/i.test(await page.content().catch(() => ''))) reach.verdict = 'BLOCKED_BY_THEIR_WALL';
+    else if (reach.plainHttp && /^[23]/.test(reach.plainHttp)) reach.verdict = 'HTTPS_BROKEN_HTTP_FINE';
+    else reach.verdict = 'UNREADABLE_CAUSE_UNKNOWN';
+  }
 
   // ---- GDPR, measured before any interaction ----
   const preConsentCookies = (await ctx.cookies()).map((c) => ({
@@ -244,6 +284,7 @@ function classify(url, base) {
 
   const out = {
     target, tag, status, navError, fetchedAt: new Date().toISOString(),
+    reach,
     hidden,
     page: dom,
     stack,
@@ -288,6 +329,21 @@ function classify(url, base) {
     if (hidden.inlineScriptsInMain) console.log(`!!  ${hidden.inlineScriptsInMain} inline script or style blocks sit inside the content area, so the page builds itself.`);
     if (hidden.gateCandidates.length) console.log(`!!  A gate is in the way. Click it and look again. Buttons found: ${hidden.gateCandidates.join(' | ')}`);
     console.log('!!  Open the screenshot. An emptiness claim needs a picture of an empty page, nothing less.');
+  }
+  if (reach.verdict !== 'READ') {
+    console.log('');
+    console.log(`!!  THE PAGE WAS NOT READ. VERDICT ${reach.verdict}`);
+    console.log(`!!  attempts ${reach.attempts.join(' | ')}`);
+    console.log(`!!  dns ${reach.dns} | plain http ${reach.plainHttp} | control host example.com ${reach.controlOk}`);
+    const say = {
+      BLOCKED_OUR_SIDE: 'Our egress is down or blocked. This says NOTHING about their site. Retry later. Row is BLOCKED_NEEDS_INFO.',
+      BLOCKED_BY_THEIR_WALL: 'A bot wall is challenging our address. Their site is fine for real people. Row is BLOCKED_NEEDS_INFO.',
+      NO_DNS: 'The domain does not resolve from here. Re check from another path before writing anything.',
+      HTTPS_BROKEN_HTTP_FINE: 'Plain http works and https does not, so a visitor on a secure link meets a browser warning. THIS one is a real finding, and read every page over http before writing it.',
+      UNREADABLE_CAUSE_UNKNOWN: 'Cause unknown. UNKNOWN is not broken. Row is BLOCKED_NEEDS_INFO until a human looks.',
+    }[reach.verdict];
+    console.log(`!!  ${say}`);
+    console.log('!!  Do NOT write that their site is down, empty or broken off this run alone.');
   }
   console.log(`wrote        ${path.join(outDir, tag + '.json')} plus two screenshots. LOOK AT THEM.\n`);
 
