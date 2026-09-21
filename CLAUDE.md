@@ -1,5 +1,15 @@
 # Astra Agency — Operating playbook
 
+> **ALWAYS 3x CHECK EVERYTHING (Raka, 2026-09-21, said three times).** This is the
+> first rule and it outranks every other line in this file. Before anything is sent,
+> shipped, or reported back to Raka as true, run the three checks in **TRIPLE CHECK
+> EVERYTHING** below. They are three different actions, never three readings. Reopen
+> the source. Actively try to prove the claim false. Confirm it a second way that does
+> not share a failure mode with the first. **Being lazy is prohibited**, so if a tool,
+> an API call or a fetch can settle a question, it settles it, and the number of calls
+> is never a reason to skip one. My own notes, state files and memory are a candidate
+> list, never proof.
+
 This repo drives three related automated routines:
 
 1. The **contact enrichment pipeline**, described in
