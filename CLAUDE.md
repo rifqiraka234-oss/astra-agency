@@ -1321,8 +1321,26 @@ have a social media presence, because social media is really important these day
   This is the cheapest tier of website there is and it is a real signal about how much
   thought went in. neuLEAN and Rivière Consult both ran MyWebsite NOW.
 
-**2b, the social presence, and this is the new half.** The audit lists every social link
-the site carries. Then go and open them.
+**2b, the social presence, and this is the new half.** `site-audit.js` lists every social
+link the site carries. **Then actually go and open them**, with
+`node tools/social-audit.js <tag>`, which takes those links and reads each account.
+Listing the links is not the audit. Opening them is.
+
+**What is reachable from this container, tested 2026-09-21. Do not rediscover it.**
+
+| Platform | State | What comes back |
+|---|---|---|
+| **LinkedIn company page** | **readable in Chromium** | Follower count and tagline. **This corrects the belief held in this repo since August that LinkedIn is always 999.** The 999 is what curl and WebFetch get. A headless Chromium load of a `/company/` page renders the signed out view. |
+| LinkedIn personal `/in/` | still 999 | Nothing. Posts still need a web search that quotes them back. |
+| **YouTube** | fully readable | Subscribers, video count, and per video title, view count and age. The richest source we have. Load the `/videos` tab. |
+| **X** | readable over curl | Followers, following and the joined date, straight out of the meta description. |
+| **Facebook** | readable in Chromium | Followers, following, the About text and the most recent post date, behind the login prompt. |
+| TikTok | half | The profile resolves, so **a dead handle is detectable**, but a live profile's posts are walled. |
+| Instagram | walled | 200 with a login page over curl, HTTP 429 in Chromium. |
+
+**The hard rule that falls out of that. An account we could not read is UNKNOWN and never
+goes into a message as though it were empty.** Instagram is the one this will bite on.
+What we CAN prove is enough on its own, and each of these is a finding by itself.
 
 What to record, per platform they actually use.
 
@@ -1336,6 +1354,16 @@ What to record, per platform they actually use.
 | **Who posts** | The company page is dead and the founder's personal profile carries everything, which is extremely common and is a real structural point |
 | **Does it point anywhere** | A bio with no link, or a link to a page that no longer exists |
 | **Does the site show it** | An active Instagram that the website never embeds or links |
+| **A dead handle** | A link in their own footer to an account that no longer resolves. Frizverm links a TikTok that returns "couldn't find this account" |
+| **A zero** | Zero followers on a platform they chose to put in their footer. Frizverm's Facebook is 0 and 0, their X is 0 followers and 1 following, joined March 2026 |
+| **Effort going nowhere** | The opposite shape and the more useful one. CoLean has 52 YouTube videos, 17 subscribers and single digit views per video, alongside 430 LinkedIn followers. The work is real and the distribution is in the wrong place. **And falsify before you write it**, the first draft of that observation said their site embeds none of the videos, which is false, colean.fr carries one youtube-nocookie embed. The true version is that one of the 52 is surfaced |
+| **The bio against the website** | Frizverm's Facebook calls them a product led innovation hub working on data privacy and social connectivity. Their website sells facilities management and industrial maintenance. Two different companies, same name |
+
+**The two shapes worth naming, because they need opposite messages.** A business with
+empty accounts has a credibility problem and the message is about what a buyer finds.
+A business with real output and no audience has a distribution problem and the message
+is about work that nobody is seeing, which is a far warmer thing to receive. Check which
+one you have before writing, because getting it backwards is insulting.
 
 **The two numbers worth citing, and cite the source in the research note.** Sage
 Marketing's 2026 State of B2B Social Media reports that **68 percent of B2B buyers review
