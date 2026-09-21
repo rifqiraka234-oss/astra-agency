@@ -1497,6 +1497,52 @@ www works, an expired certificate, a holding page on a live domain. Diagnose it 
 three command procedure above, and **always rule out our own proxy first**, because a TLS
 error seen through the egress is never evidence about the lead's site.
 
+### The corners that get cut, and the check that catches each one (Raka, 2026-09-21)
+
+His instruction, "make sure you do it thoroughly and don't skip corners, and take time to
+analyse it, redraft if needed." Every line below is a corner that was actually cut in the
+batch of five drafted that afternoon, and every one was caught by going back over the work
+rather than by being careful the first time. **Run this list against a finished draft
+before it is shown, not while researching.**
+
+1. **Running the site audit and not the social one.** Listing the social links is not the
+   social pass. `site-audit.js` finds the links, `social-audit.js` opens them, and until
+   the second one has run the social angle does not exist. Two of the five drafts had the
+   wrong angle entirely until the accounts were actually opened.
+2. **Guessing a handle.** `instagram.com/<companyname>` is the same mistake as guessing a
+   nav path. Ciaccia Levi's real handle is `ciaccialeviparistorino`, which is nothing like
+   the guess, and the guess returned a page that meant nothing. **Take every social URL
+   out of their own HTML**, or out of a search result, never out of your head.
+3. **Counting something that was never counted.** The Ciaccia draft said "three addresses"
+   because their listed name says Paris and Milan and a third city had appeared. Reading
+   the actual contacts page showed **two**, Paris and Torino, with Milan appearing only as
+   a fair location. Any number in a message gets recounted on the page it came from.
+4. **Believing your own summary of a link.** The Red Rabbit draft was going to say the
+   button labelled nextfood.ai does not go to nextfood.ai. The nav item does not, the hero
+   button does, and the draft would have been half false. **Open the href.**
+5. **Calling something dead on one failed request.** `nextfood.ai` returned `000` on the
+   first curl and it is a live, modern site. One timeout is never evidence. Re test, then
+   run the DNS and plain http checks, then look.
+6. **Skipping the screenshot because the grep was convincing.** red-rabbit.de reads as a
+   confident dark navy and red design with real art direction. Any "looks dated" line would
+   have been nonsense and one screenshot said so.
+7. **Characterising something you did not read.** A draft said a CoLean video was a proper
+   walkthrough rather than a teaser. Nothing was watched. React only to what is actually on
+   the screen, which there was a numbered series, E2 through E9.
+8. **Writing an absence claim from one page.** "There's no X" is the most likely sentence
+   in the whole message to be wrong. Merkaardig's missing quiz was a working JS quiz.
+   CoLean's site does embed one video. Check the page that would disprove it.
+9. **Letting a walled account read as empty.** Instagram returns 429 and TikTok walls live
+   profiles. Unknown is unknown and it stays out of the message.
+10. **Not re verifying an identity when the record disagrees.** lemlist had Jochen under NF1
+    SmartTech and the domain is red-rabbit.de. The Impressum settled it. Where lemlist and
+    the domain disagree, the statutory page wins.
+
+**And the rule underneath all ten.** When a finding gets better the longer you look at it,
+keep looking. Red Rabbit went from "five cookies" to two empty proof sections on two
+different properties, which is a far stronger message, and it only appeared on the third
+pass. A first draft is a hypothesis.
+
 ### How to choose between them, because you will usually find more than one
 
 **One grand thing beats five small ones.** Pick the angle that lands hardest on the
