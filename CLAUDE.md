@@ -860,6 +860,14 @@ template. Someone cold gets the opener. Someone who declined gets nothing.
 - The four pass read back below still applies, and pass 4 matters most here because
   the hook line is the easiest thing in the whole playbook to write twice.
 
+**Send the recorded text, never a retyped one (2026-09-21).** On the send all batch
+block one of the Ineke Geenen opener was retyped in Dutch at send time, "saw de regel
+op je visie pagina dat mondverzorging", while the draft saved in the queue was correct
+and in English. It broke the English always rule and it would have shipped had the
+contact been connected. Only the refusal caught it. **Copy `openerText` out of the
+queue row verbatim into the send. Never compose from memory while sending**, because
+the four pass read back happens at drafting time and a retype skips all four.
+
 **Read every message back four times before it goes anywhere (Raka, 2026-09-14).
 The two questions are his. Does this make sense? Does this sound weird?** This
 is a hard gate on all three templates, not a polish step, and it comes after
@@ -1598,8 +1606,24 @@ Every line is here because it failed at least once.
   endpoint is for reading what was said, never for deciding acceptance.
 - **A row with `lastSentAt: null` and recent activity is a third state**, roughly 30
   of them in the 9 to 16 September window. Nothing was ever sent to these people at
-  all, not even the connect note, yet something happened on the thread. Treat as
-  UNKNOWN until one is probed with a send. Do not assume it means accepted.
+  all, not even the connect note, yet something happened on the thread.
+  **RESOLVED 2026-09-21, and the answer is that they are not connected.** Eight of
+  them were probed with real sends and every one was refused. Two came back with a
+  different and much plainer error, `HTTP 400 {"error":"Failed to send message. Lead
+  is not connected."}`, which is lemlist saying outright that no connection exists.
+  So the third state is NOT a pool of quiet accepts, it is leads the campaign has not
+  even invited yet, and the activity on the thread is something other than an
+  acceptance.
+- **The two refusal messages mean slightly different things and both mean do not
+  research.** `can-not-send-message` is an invitation sent and not accepted.
+  `Lead is not connected` is no connection at all. Neither is worth research time.
+- **The cost of learning this, and it is the same lesson as 2026-09-16.** The
+  2026-09-20 overnight batch put full research into eleven leads. Three sent. The
+  other eight were the third state and every one refused, so roughly two thirds of a
+  night went into people who cannot receive a message. **Before researching ANY batch,
+  probe one contact from it with a send.** The rule was already written after the last
+  time and it was not followed, because the third state looked like a new opportunity
+  rather than the same trap wearing a different label.
 - **So test one contact before researching a batch.** When a batch is drawn from
   `sentOnly`, attempt a send to a single contact in it first. If it refuses, the
   whole batch is pending invitations and the research should wait. The 2026-09-16
