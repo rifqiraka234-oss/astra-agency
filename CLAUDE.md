@@ -1246,6 +1246,250 @@ page is the proof, the job is that the brand he goes to market under has no site
 **Say what you saw, not what you diagnosed.** A first person report is true whatever
 the cause turns out to be, it reads like a human rather than a scanner, and if we have
 somehow got it wrong the lead corrects us and that is still a reply.
+
+## The five angles, and the order to test them in (Raka, 2026-09-21)
+
+This replaces the four signal list above as the working procedure. The four signals stay
+true, this is how you actually go and find them, in order, on every lead. **Run
+`tools/site-audit.js` first**, which does all five passes in one load and writes a JSON
+plus a desktop and a phone screenshot.
+
+```
+node tools/site-audit.js https://theirdomain.com theirslug
+```
+
+It reports the stack, the dated tells, the flow counts, the GDPR state measured before
+any click, the social links and the page health. **It reports observations, never
+verdicts.** The verdict is yours and it comes after you have opened the screenshots.
+
+### Angle 1. It LOOKS old, and looking is the test
+
+Raka's instruction is explicit and it is about the eye before the grep. "It shouldn't
+just be unwritten on text, like that it is from WordPress. It should first look like
+that it's outdated, doesn't have a lot of things, doesn't have a lot of flow."
+
+So the order is **open the screenshot, form a view, then go and find the proof.** Never
+the other way round. The bluedesk miss on 2026-09-17 came from a confident grep and one
+screenshot killed it.
+
+What you are judging in the screenshot, and write down which of these you actually saw.
+
+- **Density and emptiness.** A hero with three lines of text and nothing else, a page
+  that ends after two screens, a services list with no pictures. "Doesn't have a lot of
+  things" is Raka's phrase and it is a real read. Count the sections.
+- **The era of the shapes.** Bevel, emboss, gradients on buttons, drop shadows under
+  headings, rounded corners on everything, feathered photo edges fading to white. Those
+  are 2008 to 2012 idioms and nobody has shipped them since.
+- **Type.** System fonts untouched, Arial or Verdana doing the headlines, centred
+  paragraphs, all caps navigation, tiny body text.
+- **Stock photography idiom.** A person in business dress smiling at the camera. Someone
+  pointing upward at nothing. A handshake. Code projected onto a face.
+- **Phone width.** Open the phone screenshot too. A site that was never made responsive
+  is the single most visible age marker to an owner, because he looks at his own site on
+  his phone.
+- **Flow, or the absence of it.** No obvious next click. A CTA that changes wording on
+  every page. A page that dead ends.
+
+Then the greppable proof, which `site-audit.js` collects automatically under `era`.
+Fireworks `.fw.png` exports, Flash, jQuery 1.x, tables used for layout, Font Awesome 4
+or older, Bootstrap 3 or older, a bundled entypo or fontello icon font, an XHTML or
+HTML4 doctype. **Every jab in the message has to be one of these, named.** Taste is not
+evidence and Raka will not accept it.
+
+**What 2026 looks like**, so the contrast in the message is concrete. Dark hero with one
+electric accent. Oversized assertive headline type. The product itself in the hero as a
+large live panel, the Linear and Attio and Cursor pattern. Feature pills under the
+headline. One primary CTA beside a quiet secondary. Bento grids. A logo wall.
+
+### Angle 2. The stack is old, and then, the same day, look at their social
+
+Raka put these together deliberately. "After testing if the website is old, test if they
+have a social media presence, because social media is really important these days."
+
+**2a, the stack.** `site-audit.js` reports it. What matters commercially, in order.
+
+- **A WordPress version well behind current.** State the year it shipped, not the version
+  number, because a number means nothing to an owner. WP 5.5 shipped in 2020. Intexso was
+  still on it on 2026-09-21.
+- **A bought multipurpose theme** in `/wp-content/themes/`. Enfold, Avada, BeTheme, The7,
+  Divi, Astra, Flatsome, HighendWP. **Check the CSS `?ver=` before calling the install
+  old.** A current Divi is not a 2013 theme. The honest claim is "a bought template
+  rather than a designed site", which is a positioning point, not an insult.
+- **A page builder holding it together**, WPBakery, Elementor, Divi, plus a long plugin
+  list. A plugin stack is a maintenance and a security story.
+- **A drag and drop SaaS builder**, IONOS MyWebsite NOW, Wix, Jimdo, GoDaddy, Weebly.
+  This is the cheapest tier of website there is and it is a real signal about how much
+  thought went in. neuLEAN and Rivière Consult both ran MyWebsite NOW.
+
+**2b, the social presence, and this is the new half.** The audit lists every social link
+the site carries. Then go and open them.
+
+What to record, per platform they actually use.
+
+| Check | What you are looking for |
+|---|---|
+| **Does the site link out at all** | No link anywhere is itself the finding |
+| **Last post date** | 90 days with nothing is the industry definition of dormant |
+| **Cadence** | Three posts in a week then five months of silence is worse than nothing |
+| **Handle consistency** | Same name across platforms, or three different ones |
+| **Visual consistency** | Same logo, same colours, same crop as the website, or a different brand entirely |
+| **Who posts** | The company page is dead and the founder's personal profile carries everything, which is extremely common and is a real structural point |
+| **Does it point anywhere** | A bio with no link, or a link to a page that no longer exists |
+| **Does the site show it** | An active Instagram that the website never embeds or links |
+
+**The two numbers worth citing, and cite the source in the research note.** Sage
+Marketing's 2026 State of B2B Social Media reports that **68 percent of B2B buyers review
+a vendor's LinkedIn before agreeing to a first sales meeting** and **54 percent have
+eliminated a vendor from consideration because of an inactive or low quality social
+presence.** These are a named third party benchmark, which the quantification rules
+permit, used to convert their situation into a consequence. They are never used to invent
+a number about the lead's own business.
+
+**The honest caveat, and say it plainly rather than quietly ignoring it. Astra's live
+site does not sell social media (checked astraagency.nl on 2026-09-21).** The three
+services there are Grow, "websites and funnels that generate leads", Optimise, "internal
+tools that save time", and Innovate, "a dedicated team for continuous development".
+Branding and social media strategy appear inside Grow in `ASTRA_AGENCY_Deck_Short.pdf`
+but nowhere on the live site, and **the site carries no social links of its own.** So:
+
+- **Use the social finding as diagnosis, not as the offer.** It is superb evidence that
+  a brand is inconsistent or invisible, and inconsistency is a Grow problem we do sell.
+- **Do not offer to run their social.** We have no published social service, no case and
+  no price for it, and offering one we cannot deliver breaks the no fabrication rule as
+  surely as a made up figure would.
+- **The offer that is honest** is the thing the social finding proves they need. One
+  brand system that holds across the site and the feeds. A page the social actually
+  points at. A site that shows the feed it already has. That is Grow and it is on the
+  price list.
+- **Flag it to Raka** if he wants social media to become a real line, because the site
+  and the deck currently disagree and the site is the public one.
+
+### Angle 3. GDPR, which is the most checkable angle we have
+
+This is new and it is the strongest of the five on European leads, because it is binary,
+it is verifiable in one page load, and the owner can check it himself in thirty seconds.
+
+**What the law actually turns on.** Consent must come BEFORE anything non essential
+loads. The violation regulators fine most often is scripts and cookies firing on page
+load, before the visitor has touched the banner, usually through third party embeds such
+as video, maps, chat and fonts that were never routed through the consent tool. The
+ceiling is 20 million euro or 4 percent of global turnover, and in 2025 France's CNIL
+alone issued 486.8 million euro in fines with 21 organisations sanctioned specifically
+over cookies and trackers. SMEs are not the ones getting the headline fines, but the
+exposure is real and the complaint driven route is cheap for anyone to use.
+
+**How we measure it, and it is exactly what `site-audit.js` does.** Fresh browser
+context, no stored consent, load the page, **touch nothing**, then record what already
+happened. Never click accept, because that destroys the evidence.
+
+The findings it reports, strongest first.
+
+1. **Trackers fired before any click.** Google Tag Manager, Google Analytics, Meta Pixel,
+   Hotjar, Clarity, LinkedIn Insight, TikTok, an embedded YouTube or Google Map. This is
+   the finding. Wellstep on 2026-09-21 fired googletagmanager and google-analytics on
+   load with three cookies already set and no reject option anywhere.
+2. **Google Fonts loaded from Google's servers.** The Landgericht München I judgment of
+   20 January 2022, case 3 O 17493/20, awarded a visitor 100 euro in damages because the
+   site sent their IP address to Google by embedding fonts remotely, and the court
+   rejected the legitimate interest argument on the basis that the fonts can be self
+   hosted for nothing. It is still the basis of warning letters in 2026. **This makes any
+   German lead loading remote Google Fonts a live, citable exposure.** Zeunert Consulting
+   does exactly this.
+3. **No reject option, or a reject that is harder to find than accept.** A prominent
+   Accept All next to a refusal buried behind clicks or set in small print is itself
+   grounds for a fine. The audit compares the rendered area of the two buttons.
+4. **No banner at all** while trackers load.
+5. **No privacy policy link**, or one that points at `#` and goes nowhere, which is what
+   Wellstep's does.
+6. **A privacy policy that does not name the processors actually in use**, the host, the
+   mail tool, the CRM, the review widget. Read it against the third party host list the
+   audit prints.
+
+**Then translate it, because the owner does not care what a cookie is.** This is where
+most of the damage would be done, so the table is not optional.
+
+| Do not write | Write |
+|---|---|
+| your site sets non essential cookies prior to consent | your site starts tracking people before it asks them |
+| Google Tag Manager fires on DOMContentLoaded | Google is watching your visitors from the first second, before anyone agrees to it |
+| remote Google Fonts leaks the client IP to Google LLC | your fonts are pulled from Google on every visit, which sends them every visitor's address |
+| the CMP lacks a symmetrical reject control | there's a big Accept button and no way to say no |
+| Art. 6(1)(a) has not been satisfied | nobody actually agreed to any of this |
+| a €20m or 4% administrative fine | one complaint from one visitor is all this takes |
+
+**Three hard limits on this angle, and they matter more here than anywhere else.**
+
+1. **Never state a legal conclusion.** Write what loaded and when. "Three trackers ran
+   before I touched the banner" is an observation and it is true. "You are in breach of
+   the GDPR" is a legal opinion we are not qualified to give and it reads as a threat.
+2. **Never write like a scanner and never imply we ran a compliance audit on them
+   uninvited.** One sentence about what happened when the page opened. That is all.
+3. **The tweak test bites hardest here.** Installing a consent banner is an afternoon.
+   The fault is the PROOF, the job is behind it. A site whose tracking was never set up
+   properly is usually a site nobody has owned since launch, and that is the thing worth
+   selling.
+
+**And it is regional.** This is an EU, UK and EEA angle. It is not an angle for a
+Canadian or US lead unless they are visibly selling into Europe, and saying so makes us
+look like we did not check where they are.
+
+### Angle 4. The site falls short of the business target
+
+Raka's fourth. "If the website has shortcomings in order for them to reach their business
+targets, for example to convert or something else."
+
+This is the angle that needs step 1 of the research order to have been done properly,
+because a shortcoming is only a shortcoming against a target, and the target comes from
+the person. Work out what this specific business is visibly trying to do, then ask what
+the site does to that.
+
+| What they're visibly trying to do | What to go and test |
+|---|---|
+| Get enquiries | Is there a form on the page where the decision happens, or only on Contact. Field count. Steps. Does a `mailto:` do a form's job |
+| Sell online | Cart, checkout steps, guest checkout, delivery and returns stated, payment methods shown |
+| Take bookings | Is there a real booking system or a phone number and office hours |
+| Take donations | Amount and payment on one screen, or a set of instructions |
+| Launch or crowdfund | Can a backer see the thing. Is the list actually being captured |
+| Sell a considered B2B service | Is there one case with a number on it. Can the reader forward anything |
+| Hire | Does the careers page exist and does it carry a salary and an apply route |
+| Open a new market or country | Does the other language version actually exist and work end to end |
+| Sell software | Is the price on the page called Price |
+
+**The defect is the start, never the message.** Run the so what ladder, three rungs
+minimum, until it hits money, risk or their position against a named competitor. And run
+the two tests. Could their existing web person fix it in an afternoon, in which case it
+is a task and nobody buys an agency for a task. Does the consequence show up in revenue,
+cost, a lost deal, who they can hire, or how the market ranks them.
+
+### Angle 5. Certificates and the address not opening
+
+Unchanged from 2026-09-19 and still on the list. A certificate that does not cover the
+domain, a self signed certificate, a bare domain that throws a browser warning while the
+www works, an expired certificate, a holding page on a live domain. Diagnose it with the
+three command procedure above, and **always rule out our own proxy first**, because a TLS
+error seen through the egress is never evidence about the lead's site.
+
+### How to choose between them, because you will usually find more than one
+
+**One grand thing beats five small ones.** Pick the angle that lands hardest on the
+number the person in step 1 is measured on, use one defect as proof, and leave the rest
+in the research note where it makes the deck credible later.
+
+Rough order of force when several are true.
+
+1. **Angle 4**, a shortcoming against what they are visibly trying to do this quarter.
+   It is the one the owner already half knows and it is the easiest yes.
+2. **Angle 3**, GDPR, on an EU lead. Specific, checkable, and slightly uncomfortable in
+   a useful way.
+3. **Angle 1**, it looks old, when it genuinely does and the roast register is earned.
+4. **Angle 2**, stack and social, which is usually the best supporting evidence rather
+   than the headline, with one exception, a brand that is invisible or inconsistent
+   across its own channels is a Grow problem in its own right.
+5. **Angle 5**, certificates, which is nearly always proof rather than the sale.
+
+And if none of them is honestly there, the answer is `NO_STRONG_ANGLE`. Five angles is
+five more chances to manufacture pain, and the no manufactured pain rule outranks every
+line of this section.
 - Serve locally when a render genuinely will not work,
   `(cd <folder> && python3 -m http.server 8788 &)`. To QA something already
   deployed, `curl` the live HTML and every asset into a folder and serve that copy.
