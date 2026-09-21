@@ -16,6 +16,13 @@
 > rebuilding the person from a name. Fetch, render and actually look at the website
 > rather than working off a search snippet. Full procedure and the exact calls are in
 > **The three places laziness actually happens** below.
+>
+> **No abbreviated version of any procedure in this file exists.** The judgement about
+> when a shortcut is safe gets made with exactly the degraded context that causes the
+> error, so the procedure runs in full every time, especially the parts that feel
+> redundant. Nothing crosses a context compaction without being reopened, because a
+> summary carries conclusions with their evidence stripped off and they feel identical
+> to verified facts.
 
 This repo drives three related automated routines:
 
@@ -139,6 +146,10 @@ file. A control host against a fetch failure. An Impressum against what lemlist 
    They are never proof of what happened. `accepted_pool_v01.jsonl` says who accepted,
    it does not say who we have spoken to.
 5. **My own memory of any of the above.** Not evidence. Ever.
+6. **A conversation summary written after a context compaction.** The least reliable
+   thing in this repo, because it is a lossy compression of rung 5. It carries
+   conclusions with their evidence stripped off, and they feel exactly like verified
+   facts. Everything in it is a lead to re check. See the context loss section below.
 
 ### The self reported source trap, which is the most expensive one
 
@@ -295,6 +306,55 @@ snippet is not a website and a grep is not a look.
 **And the web search rule underneath all three.** A search is how you FIND something to
 open. It is never the thing itself. Anything taken from a snippet, a summary or a cached
 description gets opened at its source before it can appear in a message.
+
+### Why this keeps happening. Context loss, and the full approach rule (Raka, 2026-09-21)
+
+His words, "I really prohibit you to do anything that skips the corner, always go full
+approach. Because you lost context and you miss out on things." This is the mechanism
+underneath every rule above, and it is worth stating plainly because it explains why
+being careful is not enough on its own.
+
+**A long session runs out of context and gets summarised. The summary is written by me,
+from my own earlier output, and it is lossy by design.** Detail goes first, and the
+detail is exactly where the evidence lives. What survives is the conclusion, stripped of
+what it rested on. So after a compaction I am holding a confident sounding claim with no
+source attached, and it feels identical to a fact I verified ten minutes ago. That is the
+whole failure. Not carelessness, not haste. A conclusion that outlived its evidence.
+
+**So a summary is the LEAST reliable source in this repo, below my own notes.** Add it to
+the bottom of the evidence ladder. Anything arriving through a summary is a lead to
+re check, never a finding to act on.
+
+**The rule. Nothing crosses a context boundary without being reopened.** After any
+compaction, before acting on anything the summary asserts:
+
+- **A verdict on a lead** gets its thread pulled and its page refetched. Not reread from
+  the summary.
+- **A draft** gets copied out of the file it was saved in, byte for byte, never retyped
+  from memory. The Ineke Geenen opener was retyped in Dutch at send time while the saved
+  draft was correct and in English, and only a refusal caught it. Retyping skips all four
+  read back passes.
+- **A count, a list or an audit result** gets rebuilt from the system of record. The
+  eleven duplicates were only settled by rebuilding the day's sends from lemlist's own
+  listing until the arithmetic closed, 41 plus 6 minus 13 equals 34.
+- **A "we already checked that"** is the single most dangerous sentence after a
+  compaction. If the check is not in a file, it did not happen.
+
+**The structural fix, and it is the one that actually works. Write it down at the moment
+it is verified, not later.** Context will be lost, that is not preventable. What is
+preventable is losing the evidence with it. So the state files are not bookkeeping, they
+are the only memory that survives. At the moment a claim is verified, the URL, the page,
+the number and the date go into the `claims` list on the queue row and into the research
+note, written so a later session can re test it without rereading the site. "See inbox
+thread" is not a research note, and it is why four leads could not be nudged at all.
+
+**And the full approach rule, which is what he actually asked for.** There is no
+abbreviated version of a procedure in this file. Not because a short version would
+always be wrong, but because the judgement about when a short version is safe is made
+with exactly the degraded context that causes the error. So the procedure runs in full
+every time, including the parts that feel redundant, and especially the ones that feel
+redundant because I think I already know the answer. Thinking I already know the answer
+IS the symptom.
 
 ### Before anything leaves, the five questions
 
