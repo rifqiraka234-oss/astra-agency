@@ -1497,6 +1497,27 @@ www works, an expired certificate, a holding page on a live domain. Diagnose it 
 three command procedure above, and **always rule out our own proxy first**, because a TLS
 error seen through the egress is never evidence about the lead's site.
 
+### Before any of the rest, three sentences you are never allowed to write (Raka, 2026-09-21)
+
+1. **"Your website isn't working."** Not unless `tools/site-audit.js` returned a
+   reachability verdict AND a control host loaded through the same egress in the same
+   minute AND you looked at the screenshot. Almost every time we have thought a site was
+   down, **it was our end**. A tab that did not load, a proxy hiccup, a bot wall aimed at
+   our address, a page that builds itself in JavaScript, a gate we did not click. Their
+   site was fine for everyone else the whole time.
+2. **"Your page is empty."** Only with a screenshot of an empty page in front of you. See
+   the Solvio section below, which cost a live lead.
+3. **Anything you assumed.** If you did not open it, fetch it, count it or click it in
+   this session, it is not a fact and it does not go in the message. The three worst
+   assumptions of 2026-09-21 were all shaped like this. That the Ciaccia gallery ran three
+   cities because its name listed two and a third had appeared. That L'MANE had no policy
+   pages because a regex did not match their footer wording. That AutoDevPro was
+   permanently blocked because it was blocked once.
+
+**And when it really is our side, say so in the message.** A sentence that owns our own
+tooling costs nothing and is always true. "I couldn't get it to load" is honest whatever
+the cause. "Your site is down" is a claim about them that we usually cannot support.
+
 ### The hard gate. NEVER ANY FALSE CLAIM (Raka, 2026-09-21, his capitals)
 
 This outranks everything else in this file. A message is not ready because it reads well,
