@@ -1,5 +1,21 @@
 # Astra Agency — Operating playbook
 
+> **START HERE, and do these two things before anything else.**
+>
+> 1. **`python3 tools/preflight.py`.** It prints what is actually open right now, read
+>    from disk rather than from memory, and the three rules that get broken most.
+> 2. **Read `docs/RULES.md` in full.** It is one page, it is the only doc that has to be
+>    read in full every session, and **it outranks every other document here including
+>    this one.** Where a number or a ban in this file disagrees with it, RULES.md wins.
+>
+> This file is the operating procedure and the corrections history behind those rules.
+> It is reference. Open the section you need, do not read it end to end.
+>
+> **The two tools that enforce rather than remind.** `node tools/site-audit.js <url>
+> <tag>` runs a positive control on itself and voids its own absence findings when the
+> detector fails. `python3 tools/check-drafts.py <file>` exits non zero, so it cannot be
+> run and quietly ignored.
+
 > **ALWAYS 3x CHECK EVERYTHING (Raka, 2026-09-21, said three times).** This is the
 > first rule and it outranks every other line in this file. Before anything is sent,
 > shipped, or reported back to Raka as true, run the three checks in **TRIPLE CHECK

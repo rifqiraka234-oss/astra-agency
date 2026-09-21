@@ -105,7 +105,13 @@ Hey [name], congrats on launching [company] [x] months ago, exciting times! I'm 
 ```
 - `[x] months ago` is replaced by whatever Stage 1's fallback ladder produced: a precise phrase ("6 months ago") when the month is known, or the word "recently" when the business is confirmed new but the exact month isn't (i.e. `[x] months ago` becomes just `recently`, so the line reads "congrats on launching [company] recently, exciting times!"). Never fabricate a specific month that wasn't actually found.
 
-**First message (STRICT 65-word maximum, enforce as a hard ceiling, count and trim before output):**
+**SUPERSEDED 2026-09-21. The opener is 100 to 145 words, per `docs/RULES.md`.** The 65
+word ceiling below was correct for the August template and is kept for the record, but
+three documents carried three different numbers and two each claimed to outrank the other.
+`docs/RULES.md` is now the single source and it says 100 to 145. Read the rest of this
+section for the structure, not for the length.
+
+**First message (historical 65-word ceiling, no longer the operative number):**
 ```
 Hey [name], thanks for connecting. I had a look at [company], and [specific genuine synthesis of what they do, framed as a real strength, not a generic paraphrase].
 

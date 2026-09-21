@@ -576,7 +576,7 @@ clearer competitor, stalled partner evaluation, recurring manual
 coordination, version mistakes, unqualified enquiries, capacity limits. Keep
 it plausible and concise.
 
-**Length (general messages, not the 65-word template above):** ~90-150
+**Length. SUPERSEDED, see `docs/RULES.md`, the opener is 100 to 145 words.** Historical guidance below was ~90-150
 words, shorter when one strong insight is enough. Don't cram every research
 finding in — pick the one or two most accurate, commercially important,
 curiosity-creating and visually demonstrable.
