@@ -816,6 +816,16 @@ replied. Rules specific to it:
   carry none.
 - Close with the artefact named concretely plus an honest out, "yes or no is
   fine either way", which section 9 already endorses.
+- **Never paste the URL again (Raka, 2026-09-21). His words, "never resend the
+  link its annoying."** A nudge goes to someone who already has the link, so
+  sending it a second time reads as a bot retrying rather than a person
+  following up, and it makes the message look like the delivery it is not.
+  Name the artefact and say it is still live, "both links are still live and
+  still yours", "the version that splits the three is still up where I sent
+  it". They can scroll. This binds every follow up to someone who has already
+  been sent something, not just the nudge template, and the one place a URL
+  still belongs is the first delivery and the closing nudge, where the artefact
+  block and its URL line are the whole point.
 
 **The closing nudge template (Raka, 2026-09-15). A fourth shape, the last message
 a thread ever gets, and the only place urgency framing is allowed.**

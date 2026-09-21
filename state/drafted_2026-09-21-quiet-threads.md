@@ -19,6 +19,9 @@ the client's own title still on it.
 
 ## The six drafts. NOT SENT
 
+Revised 2026-09-21 on two live instructions from Raka. No nudge resends the URL,
+because the recipient already has it. And Joel Fuente is closed rather than chased.
+
 ### 1. Kyson Charles, Acquitas Partners. NUDGE. ctc_CDeGfHHs3eCrYJR32. 8 days
 
 ```
@@ -26,9 +29,7 @@ Kyson, did you see this? 👀
 
 You told me Acquitas launched recently and has no track record yet, which is exactly why the next few months matter more than any that follow. A founder choosing who sells their company is making the biggest financial decision of their life, and right now your page gives them the lane and nothing to check you on. Nobody emails to say they went elsewhere. They just go, and the firm with two anonymised deals and a founder photo takes the call that was nearly yours.
 
-Both links are still live and yours either way. The valuation tool inside the deck is the bit I'd most want your read on, because it's the thing that gets a seller to raise their hand before they're ready to talk to anyone.
-https://astra-acquitas-prototype.netlify.app
-https://astra-acquitas-deck.netlify.app
+Both links are still live and still yours. The valuation tool inside the deck is the bit I'd most want your read on, because it's the thing that gets a seller to raise their hand before they're ready to talk to anyone.
 
 Yes or no is fine either way.
 ```
@@ -40,8 +41,7 @@ Julien, did you see this? 👀
 
 I looked at safenai.io again today and the homepage still sells Klarity on observability and governance across the whole lifecycle. That's accurate and it's also where a buyer who isn't deeply technical stops reading. They can't tell whether they need Contract, Build or Operate, there's no price anywhere on the site, so it goes in the look at later pile and that pile never gets opened. Every one of those was a qualified buyer, and you never find out they were there.
 
-The version that splits the three in plain language is still live.
-https://astra-klarity-prototype.netlify.app
+The version that splits the three in plain language is still up where I sent it.
 
 Tell me where it misses, or tell me it isn't the moment. Either is useful.
 ```
@@ -51,8 +51,7 @@ Tell me where it misses, or tell me it isn't the moment. Either is useful.
 ```
 Erisan, we lost each other on timing. You said to send you a time and the Friday I offered has long gone.
 
-Let's make it simple. Tell me a day that works next week and I'll send the invite, or send me your booking link and I'll grab a slot myself. The page is still live in the meantime.
-https://astra-revios-prototype.netlify.app
+Let's make it simple. Tell me a day that works next week and I'll send the invite, or send me your booking link and I'll grab a slot myself. The page is still up where I left it.
 ```
 
 ### 4. Joyce, Tomatoworld. BOOKING. ctc_8BQArSGfebNrTk72j. 20 days
@@ -63,27 +62,26 @@ Joyce, September is nearly gone and I don't want this one sliding into next year
 Still very keen on that coffee over Tomatoworld, and your new marcom colleague would be very welcome too. Name any morning in the next two weeks and I'll send the invite. If it's easier I'll come to you.
 ```
 
-### 5. Joel Fuente, VibeSell. BOOKING. ctc_NhEiQEPhE82cjHubv. 41 days
+### 5. Joel Fuente, VibeSell. CLOSE, not a chase. ctc_NhEiQEPhE82cjHubv. 41 days
 
 ```
-Joel, this one is on me. You sent your calendar link back in July, I said I'd grab a slot, and then I never did. Apologies for the silence.
+Joel, I'm going to close this one out rather than leave it sitting open. The call never got booked and enough time has passed that starting now would be odd.
 
-Still up for that call if you are. I'll book something from your link this week, unless you'd rather pick the time yourself.
+All the best with VibeSell.
 ```
 
 ### 6. Lynn Chadwick, That Animation Company. EMAIL not LinkedIn. 36 days
 
 ```
-Subject: That Animation Company, the concept page and that chat
+Subject: That Animation Company, and that chat
 
 Hi Lynn,
 
 You gave me this address back in August and I never used it, which was daft of me.
 
-The concept is still live and still costs nothing to look at.
-https://astra-that-animation-company-prototype.netlify.app
+The concept I sent over on LinkedIn is still live and still costs nothing to look at, so it's there whenever you want it.
 
-There's no budget conversation attached to it. You were clear about where you are between series and I took that at face value. I'd still like the twenty minutes though, mostly to hear how the next 3D job is shaping up, so that when it does land I'm useful rather than late.
+There's no budget conversation attached. You were clear about where you are between series and I took that at face value. I'd still like the twenty minutes though, mostly to hear how the next 3D job is shaping up, so that when it does land I'm useful rather than late.
 
 Any morning that suits you works for me.
 
@@ -247,3 +245,15 @@ September, which is by definition final.
 
 **Georgia, HotGreen.** Not a LinkedIn nudge. The work moved to her colleague Sanya by
 email with Georgia copied, so any follow up belongs on that email thread.
+
+## Revisions, 2026-09-21
+
+**No nudge carries the URL any more.** Raka's words, "never resend the link its
+annoying." Removed from the Kyson, Julien, Erisan and Lynn drafts, each of which now
+names the artefact and says it is still live instead. Written into the nudge template
+section of CLAUDE.md as a standing rule, because it binds every follow up to someone
+who already received something.
+
+**Joel Fuente is closed, not chased.** Raka's call. The apology draft is deleted and
+replaced with a two line close. Kept clean and neutral rather than curt, because
+Raka's name is on it and a rude last message travels further than a polite one.
