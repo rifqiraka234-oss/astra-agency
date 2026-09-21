@@ -259,6 +259,12 @@ note is not always written as an activity. Empty means Silent accepted is plausi
 it means unknown, and it is only trustworthy as a negative once a positive control has
 been pulled in the same session, a thread with a known send that comes back full.
 
+**Before hunting for a field, read `docs/lemlist-field-index.md` (built 2026-09-21).** It
+maps every lemlist endpoint and field to the question it answers, with the enums, the
+counts and the traps, all pulled from live responses. Section 1 is a reverse lookup,
+your question on the left and the exact call on the right. It exists so nobody spends
+another session working out which field holds acceptance.
+
 #### 2. The contact details. Read the record, never reconstruct the person
 
 **The calls are `search_campaign_leads` for `firstName`, `lastName`, `companyName`,
