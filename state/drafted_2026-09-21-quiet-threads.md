@@ -19,10 +19,13 @@ the client's own title still on it.
 
 ## The six drafts. NOT SENT
 
-Revised 2026-09-21 on two live instructions from Raka. No nudge resends the URL,
-because the recipient already has it. And Joel Fuente is closed rather than chased.
+Revised twice on 2026-09-21. No nudge resends the URL. And Joel Fuente, Joyce at
+Tomatoworld and Lynn Chadwick are all closed out rather than chased, on Raka's
+instruction, so only three threads are still being worked.
 
-### 1. Kyson Charles, Acquitas Partners. NUDGE. ctc_CDeGfHHs3eCrYJR32. 8 days
+### Still live
+
+**1. Kyson Charles, Acquitas Partners. NUDGE. ctc_CDeGfHHs3eCrYJR32. 8 days**
 
 ```
 Kyson, did you see this? 👀
@@ -34,7 +37,7 @@ Both links are still live and still yours. The valuation tool inside the deck is
 Yes or no is fine either way.
 ```
 
-### 2. Julien Chiaroni, Safenai. NUDGE. ctc_HuQTYiyC54xwhswbM. 16 days
+**2. Julien Chiaroni, Safenai. NUDGE. ctc_HuQTYiyC54xwhswbM. 16 days**
 
 ```
 Julien, did you see this? 👀
@@ -46,7 +49,7 @@ The version that splits the three in plain language is still up where I sent it.
 Tell me where it misses, or tell me it isn't the moment. Either is useful.
 ```
 
-### 3. Erisan Olasheni, Revios. BOOKING. ctc_8gvdTcTEsfk2MHbcF. 18 days
+**3. Erisan Olasheni, Revios. BOOKING, he already said yes. ctc_8gvdTcTEsfk2MHbcF. 18 days**
 
 ```
 Erisan, we lost each other on timing. You said to send you a time and the Friday I offered has long gone.
@@ -54,15 +57,9 @@ Erisan, we lost each other on timing. You said to send you a time and the Friday
 Let's make it simple. Tell me a day that works next week and I'll send the invite, or send me your booking link and I'll grab a slot myself. The page is still up where I left it.
 ```
 
-### 4. Joyce, Tomatoworld. BOOKING. ctc_8BQArSGfebNrTk72j. 20 days
+### Closed out
 
-```
-Joyce, September is nearly gone and I don't want this one sliding into next year.
-
-Still very keen on that coffee over Tomatoworld, and your new marcom colleague would be very welcome too. Name any morning in the next two weeks and I'll send the invite. If it's easier I'll come to you.
-```
-
-### 5. Joel Fuente, VibeSell. CLOSE, not a chase. ctc_NhEiQEPhE82cjHubv. 41 days
+**4. Joel Fuente, VibeSell. CLOSE. ctc_NhEiQEPhE82cjHubv. 41 days**
 
 ```
 Joel, I'm going to close this one out rather than leave it sitting open. The call never got booked and enough time has passed that starting now would be odd.
@@ -70,22 +67,20 @@ Joel, I'm going to close this one out rather than leave it sitting open. The cal
 All the best with VibeSell.
 ```
 
-### 6. Lynn Chadwick, That Animation Company. EMAIL not LinkedIn. 36 days
+**5. Joyce, Tomatoworld. CLOSE. ctc_8BQArSGfebNrTk72j. 20 days**
 
 ```
-Subject: That Animation Company, and that chat
+Joyce, I'll stop chasing the coffee. September got away from both of us and I'd rather leave it there than keep turning up in your messages.
 
-Hi Lynn,
+Tomatoworld was genuinely interesting to dig into, and Aart was kind to put us in touch. If the guided tour booking ever climbs your list, I'm easy to find.
+```
 
-You gave me this address back in August and I never used it, which was daft of me.
+**6. Lynn Chadwick, That Animation Company. CLOSE, on LinkedIn. ctc_yctJfvDtTFQvMzRK4. 36 days**
 
-The concept I sent over on LinkedIn is still live and still costs nothing to look at, so it's there whenever you want it.
+```
+Lynn, I'm going to stop asking for the twenty minutes. You were straight with me about where you are between series, and chasing a call around that isn't fair on you.
 
-There's no budget conversation attached. You were clear about where you are between series and I took that at face value. I'd still like the twenty minutes though, mostly to hear how the next 3D job is shaping up, so that when it does land I'm useful rather than late.
-
-Any morning that suits you works for me.
-
-Raka
+The concept is still live and it's yours whenever you want it, no strings and nothing to pay. Thanks for the email address as well, I never used it and that one's on me. Good luck landing the next series.
 ```
 
 ## Full classification, all 105
@@ -257,3 +252,24 @@ who already received something.
 **Joel Fuente is closed, not chased.** Raka's call. The apology draft is deleted and
 replaced with a two line close. Kept clean and neutral rather than curt, because
 Raka's name is on it and a rude last message travels further than a polite one.
+
+## Revision 3, 2026-09-21. Joyce and Lynn closed as well
+
+Raka's instruction, "always close joyce and joel and lynn". All three are now
+closing messages rather than chases, so the live set is down to Kyson, Julien and
+Erisan.
+
+**Joyce, Tomatoworld.** Was a booking follow up. She said in August that September
+would work, we offered times on 1 September and heard nothing for 20 days. The close
+keeps Aart warm on purpose, since he made the introduction and Tomatoworld already
+produced one booked meeting for us.
+
+**Lynn Chadwick.** Was an email asking for twenty minutes. Now a close, and sent on
+LinkedIn where the thread actually lives rather than opening her email for the first
+time just to end the conversation. It still acknowledges that she gave us the address
+and we never used it.
+
+**Joel Fuente.** Unchanged from revision 2.
+
+None of the three carries an ask, a link or a next step, which is what makes them
+closes rather than soft chases.
