@@ -1497,6 +1497,51 @@ www works, an expired certificate, a holding page on a live domain. Diagnose it 
 three command procedure above, and **always rule out our own proxy first**, because a TLS
 error seen through the egress is never evidence about the lead's site.
 
+### Read the thread before you research, not just before you nudge (2026-09-21)
+
+**The rule used to say check `get_inbox_conversation` before every nudge. That is too
+late. It is now before every message of any kind, including a first opener, and it happens
+BEFORE the research, not after the draft.**
+
+**What went wrong.** `state/accepted_pool_v01.jsonl` is built by taking everyone whose
+campaign state is `linkedinInviteAccepted` and subtracting everyone who has a row in
+`state/silent_accepted_queue.jsonl`. That subtraction is only as good as the queue, and the
+queue does not cover the messages sent in July and August before it was being written
+properly. So a lead who was pitched on 2 August and never replied looks untouched.
+
+On 2026-09-21 that sent a cold first opener to **Naila Kouidri and Olivier Oomen**, both of
+whom had received a real researched pitch on 2 August, and **Floris Otterman**, pitched on
+5 September. Three more, **Jean Madaule, Marlon Aird and Yagiz Abik**, were drafted as cold
+openers and only caught because an unrelated transport error forced a thread check before
+the send. Every one of those people had an outstanding offer sitting unanswered, and we
+wrote to them as though we had never spoken.
+
+**Why a bulk check does not save you.** The obvious fix is to pull every
+`linkedinSent` activity for the campaign and subtract those contacts. **It does not work
+and it produced a false all clear.** `GET /api/activities?type=linkedinSent` returned 298
+records covering 12 July to 17 September, and the 2 August messages to Naila, Olivier, Jean
+and Marlon were **not in it**, even though their threads show those messages carrying that
+same campaign id. The endpoint under reports. Use `emailTemplateName` to tell a connect note
+(`linkedinInvite`) from a real message if you use it at all, but never treat its silence as
+proof of anything.
+
+**So, the procedure, and there is no cheaper version.**
+
+1. **Before researching a lead, call `get_inbox_conversation` on its `contactId`.** One call.
+2. Read every activity. The connect note is the one that starts "saw your business and
+   thought it was cool". Anything longer than that is a real message and changes everything.
+3. **If a real message exists, the lead is Stalled, not Silent accepted.** It gets a nudge
+   that references the original concept, or a new angle that acknowledges the last one. It
+   does NOT get a cold opener, because arriving as a stranger to someone you pitched seven
+   weeks ago is the one outreach mistake with no recovery.
+4. If the only activity is the connect note, or the thread is empty, proceed as Silent
+   accepted.
+5. **Write the thread check into the queue row**, as `threadCheckedAt` and
+   `priorRealMessages`, so the next session does not pay for it again.
+
+**And treat the pool file as a candidate list, never as a clean list.** It says who accepted.
+It does not say who we have already spoken to.
+
 ### Before any of the rest, three sentences you are never allowed to write (Raka, 2026-09-21)
 
 1. **"Your website isn't working."** Not unless `tools/site-audit.js` returned a
