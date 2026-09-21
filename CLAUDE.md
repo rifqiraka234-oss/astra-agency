@@ -1596,27 +1596,68 @@ Every line is here because it failed at least once.
   So 320 people accepted and 167 ever got a real message. I had just told Raka the
   accepted pool was "nearly exhausted". It was never close to exhausted.
 
-  **The three calls that produce the working list, and they are cheap.**
-  1. `get_campaigns_stats` for the headline acceptance count.
-  2. `GET /api/v2/campaigns/<id>/export/leads?state=linkedinInviteAccepted&format=json`
-     through `call_api`, which returns every lead whose sequence is parked at
-     acceptance, with `companyName`, `companyDomain`, `jobTitle` and `linkedinUrl`.
-  3. `GET /api/activities?version=v2&type=linkedinInviteAccepted&campaignId=<id>&limit=100`
-     paged, which carries the **`contactId`** the export omits, plus the acceptance
-     timestamp. Join the two on `leadId`.
+### Pulling the invitation accepted list. Standing procedure, every campaign, no exceptions (Raka, 2026-09-21)
+
+  **This runs before any batch is chosen, on whichever campaign is running, and it
+  is never skipped because a previous session already did it.** Accepts arrive
+  daily, so the list is stale within a day. The campaign id below is a variable,
+  never v0.1 specifically. Find the running campaigns with `get_campaigns` and run
+  this for each one.
+
+  **Step 0, the headline, and it doubles as the sanity check against the UI.**
+  `get_campaigns_stats` returns `channelMetrics.linkedinInvitationAccepted`. It is
+  the same number the lemlist UI shows under Performance, Positive signal stats,
+  **Invitation accepted**. Raka's screenshot on 2026-09-21 read 313 at 35.5 percent
+  for the 9 July to 19 September window while the API returned 320 for all time,
+  which is the date filter and not a discrepancy. If our number and his differ by
+  more than that, stop and work out why before using the list.
+
+  **Step 1, the leads parked at acceptance.**
+  `GET /api/v2/campaigns/<campaignId>/export/leads?state=linkedinInviteAccepted&format=json`
+  through `call_api`. Carries `_id` (the leadId), `firstName`, `lastName`,
+  `linkedinUrl`, `jobTitle`, `companyName`, `companyDomain` and `companyLinkedinUrl`.
+
+  **Step 2, the acceptance events, for the contact id and the timestamp.**
+  `GET /api/activities?version=v2&type=linkedinInviteAccepted&campaignId=<campaignId>&limit=100&offset=<n>`
+  paged until it comes back short. Carries `contactId`, `leadId` and `createdAt`,
+  which is the moment they accepted. **Join to step 1 on `leadId`.**
 
   `call_api` needs `load_skill(skillName="api-reference")` once per session first.
   **Both responses are far too big for the context window and that is fine**, the
   harness writes any oversized tool result to a file under `tool-results/` and hands
   you the path, so parse them in bash and never page them through the conversation.
+  `tools/accepted_pool.py` does the join and the write, so do not rewrite it.
+
+  **The five fields Raka wants out of it, and they are the minimum.** Extract every
+  one for every accepted contact, and carry `contactId` alongside because that is
+  what `send_message` needs.
+
+  | Field | Where it comes from |
+  |---|---|
+  | **Their name** | `firstName` plus `lastName` on the export |
+  | **Their LinkedIn URL** | `linkedinUrl` on the export, the join key to everything else |
+  | **The company they own or run** | `companyName`, read against `jobTitle` |
+  | **That company's website** | `companyDomain`, falling back to `companyWebsiteUrl` |
+  | **When they accepted** | `createdAt` on the acceptance activity, date and time |
+
+  **`jobTitle` is what decides whether the company is actually theirs**, so read it
+  rather than assuming. Owner, founder, eigenaar, Geschäftsführer, dirigeant and
+  zaakvoerder mean the business is the subject. A CEO of somebody else's group, or a
+  manager, is a different message. And the step 1 rule about separating the business
+  they OWN from the job they HOLD still applies, because `companyName` is whatever
+  LinkedIn had, not necessarily the thing they run on the side.
+
+  **Then subtract what we have already done.** Key on `contactId` against
+  `state/silent_accepted_queue.jsonl`, latest row per contact. What is left with no
+  row at all is the real backlog and it is what gets researched.
 
   **Read `state` correctly or the count will mislead you.** A lead's `state` tracks
   the campaign sequence only, so a message we sent by hand from the inbox does NOT
   advance it. On 2026-09-21 the 225 leads parked at `linkedinInviteAccepted` broke
   down as 106 already worked and marked SENT in our own queue, 28 already carrying a
   verdict, and **85 never touched at all**. Those 85 are the real backlog and they
-  are written to `state/accepted_pool_v01.jsonl` with contact id, domain and job
-  title, which is step 1 of the research order handed over for free.
+  are written to `state/accepted_pool_v01.jsonl` with all five fields plus the
+  contact id, which is step 1 of the research order handed over for free.
 
   **And this explains the refusals.** v0.1 runs a `linkedinWithdrawInvitation` step,
   so an invitation nobody accepts gets pulled back. Every contact refused with
