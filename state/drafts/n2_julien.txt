@@ -1,0 +1,8 @@
+Julien, did you see this? 👀
+
+I looked at safenai.io again today and the homepage still sells Klarity on observability and governance across the whole lifecycle. That's accurate and it's also where a buyer who isn't deeply technical stops reading. They can't tell whether they need Contract, Build or Operate, there's no price anywhere on the site, so it goes in the look at later pile and that pile never gets opened. Every one of those was a qualified buyer, and you never find out they were there.
+
+The version that splits the three in plain language is still live.
+https://astra-klarity-prototype.netlify.app
+
+Tell me where it misses, or tell me it isn't the moment. Either is useful.
