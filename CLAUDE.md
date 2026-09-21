@@ -146,6 +146,56 @@ shown to match a site that has one.
 
 **Every absence claim ships with its control, or it does not ship.**
 
+### Zero mistake policy. Make the call, never infer (Raka, 2026-09-21)
+
+His words, "every single thing you do, we do a 0 mistake policy. So I prohibit you to be
+lazy and just do API calls or web searches to lemlist or whatever to make sure you're
+100 percent accurate."
+
+**So being lazy is prohibited, in writing, and here is what lazy actually looks like,
+because it never looks like laziness at the time. It looks like being efficient.** Every
+example below was a deliberate decision to save a call, and every one cost more than the
+call would have.
+
+| The shortcut taken | What it should have been | The damage |
+|---|---|---|
+| Inferred acceptance from `lastActivityAt` against `lastSentAt` | `get_campaigns_stats` and the `linkedinInviteAccepted` export, which store it as a fact | Told Raka the pool was "nearly exhausted" when 320 had accepted and 167 had been messaged. 85 leads sat untouched |
+| One bulk `type=linkedinSent` pull to check 34 threads | 34 `get_inbox_conversation` calls | The endpoint under reports. A false all clear, twice, on eleven double pitches |
+| Read `lastSentMessagePreview` off the list endpoint | Pull the thread | The preview shows the connect note at the exact second a real opener went out |
+| Guessed `instagram.com/<companyname>` | Read the URL out of their own HTML | Audited an account that was not theirs. Ciaccia Levi is `ciaccialeviparistorino` |
+| Guessed a nav path | Fetch the real nav from the HTML | An imaginary 404 on EduOs |
+| A regex over the footer | Open the four policy URLs | Nearly told L'MANE they had no privacy pages when all four return 200 |
+| Trusted one curl | Retry, then DNS, then plain http, then render | Nearly called the live, modern nextfood.ai dead |
+| Grepped instead of looking | Screenshot | The bluedesk angle evaporated. The Solvio "empty page" reached a lead |
+
+**The standing rule. If a tool can answer it, the tool answers it.** Never reason from a
+pattern, a timestamp, a preview, a filename, a memory or a plausible guess when a call
+would settle it. An inference that turns out right is still a process failure, because it
+was right by luck and the same method will be wrong next time.
+
+**And the cost argument is dead. Make the call.** The calls I have skipped to save context
+have each cost far more than they would have. Thirteen thread pulls is a rounding error
+next to one message that should not have been sent. Raka has said this twice now, so token
+economy is never a reason to skip a verification, and "that would be a lot of calls" is
+never a reason offered back to him.
+
+**Three things this specifically requires, every time.**
+
+1. **Per item, not in bulk, whenever the bulk endpoint can omit.** lemlist's activities
+   endpoint under reports and its list endpoint's preview lies. Per contact pulls are the
+   only reliable read of a thread, so 34 calls it is.
+2. **A live fetch of anything a claim rests on, in the session it ships in.** Not the
+   research note from an hour earlier. If the message says it, the page was opened on the
+   pass immediately before showing it.
+3. **Say the count.** When reporting back, name how many calls were made and what they
+   covered, so the check is auditable rather than asserted. "Pulled all 34 threads, plus
+   two positive controls" is a fact Raka can test. "Verified" is not.
+
+**The one thing laziness is allowed to touch.** Nothing that reaches a lead, and nothing
+in an answer to Raka. Internal scratch work, exploratory reads and first pass shortlisting
+can be cheap, because a wrong shortlist costs a shortlist. The moment an output is going
+outward or being reported as true, every rung of the evidence ladder gets climbed.
+
 ### Before anything leaves, the five questions
 
 1. Did I open every source again on this pass, or am I working from notes?

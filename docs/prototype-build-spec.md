@@ -1,5 +1,19 @@
 # Astra Agency — Company Research and Prototype Build Spec
 
+> **Zero mistake policy. Read `CLAUDE.md` "TRIPLE CHECK EVERYTHING" before acting on
+> this file (Raka, 2026-09-21).** Every claim gets three different checks, not three
+> readings. Reopen the source, actively try to prove the claim false, then confirm it a
+> second way that does not share a failure mode with the first. Every absence claim ships
+> with a positive control showing the method finds the thing when it is there. My own
+> notes, state files and memory are a candidate list, never proof.
+>
+> **Being lazy is prohibited.** If a tool, an API call or a fetch can settle a question,
+> it settles it. Never reason from a timestamp, a preview, a filename, a pattern or a
+> plausible guess to save a call. An inference that turns out right is still a process
+> failure. For this file that means the build is verified by a cold load with error capture and
+> by looking at every screenshot, never by forcing reveal state, and the live URL plus
+> every asset is fetched and byte matched before a link is sent.
+
 > Canonical source of truth for how Astra prototypes are researched,
 > art directed, written, built, and quality gated. `CLAUDE.md` at the repo
 > root adds the concrete handoff mechanics (how this gets triggered, hosted,

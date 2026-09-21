@@ -1,5 +1,19 @@
 # ASTRA COMMERCIAL ANGLE MASTER
 
+> **Zero mistake policy. Read `CLAUDE.md` "TRIPLE CHECK EVERYTHING" before acting on
+> this file (Raka, 2026-09-21).** Every claim gets three different checks, not three
+> readings. Reopen the source, actively try to prove the claim false, then confirm it a
+> second way that does not share a failure mode with the first. Every absence claim ships
+> with a positive control showing the method finds the thing when it is there. My own
+> notes, state files and memory are a candidate list, never proof.
+>
+> **Being lazy is prohibited.** If a tool, an API call or a fetch can settle a question,
+> it settles it. Never reason from a timestamp, a preview, a filename, a pattern or a
+> plausible guess to save a call. An inference that turns out right is still a process
+> failure. For this file that means every candidate angle is red teamed against a page opened
+> in this session, and an angle that survives only on memory is dropped rather than
+> softened.
+
 **Canonical commercial reasoning playbook for Astra Agency**  
 **Purpose:** Help AI agents diagnose a company, identify the most commercially meaningful problem Astra can credibly solve, select the strongest angle, and translate that angle into a compelling sales direction without force-fitting services or inventing pain.
 

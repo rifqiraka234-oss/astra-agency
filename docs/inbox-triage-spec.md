@@ -1,5 +1,19 @@
 # Astra Agency — Daily Inbox Triage (Claude Code Routine)
 
+> **Zero mistake policy. Read `CLAUDE.md` "TRIPLE CHECK EVERYTHING" before acting on
+> this file (Raka, 2026-09-21).** Every claim gets three different checks, not three
+> readings. Reopen the source, actively try to prove the claim false, then confirm it a
+> second way that does not share a failure mode with the first. Every absence claim ships
+> with a positive control showing the method finds the thing when it is there. My own
+> notes, state files and memory are a candidate list, never proof.
+>
+> **Being lazy is prohibited.** If a tool, an API call or a fetch can settle a question,
+> it settles it. Never reason from a timestamp, a preview, a filename, a pattern or a
+> plausible guess to save a call. An inference that turns out right is still a process
+> failure. For this file that means every claim about what a thread contains comes from
+> get_inbox_conversation per contact. The list endpoint's lastSentMessagePreview has
+> been wrong in production and is never evidence.
+
 > Source of truth for this workflow, adapted from Raka's original
 > `Claude_Code_Daily_Inbox_Triage_Spec.md` and rewritten against the concrete
 > lemlist MCP tools available in this environment, plus the checkpoint/state

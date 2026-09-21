@@ -1,5 +1,18 @@
 # NO-AI-SLOP.md
 
+> **Zero mistake policy. Read `CLAUDE.md` "TRIPLE CHECK EVERYTHING" before acting on
+> this file (Raka, 2026-09-21).** Every claim gets three different checks, not three
+> readings. Reopen the source, actively try to prove the claim false, then confirm it a
+> second way that does not share a failure mode with the first. Every absence claim ships
+> with a positive control showing the method finds the thing when it is there. My own
+> notes, state files and memory are a candidate list, never proof.
+>
+> **Being lazy is prohibited.** If a tool, an API call or a fetch can settle a question,
+> it settles it. Never reason from a timestamp, a preview, a filename, a pattern or a
+> plausible guess to save a call. An inference that turns out right is still a process
+> failure. For this file that means the section 8 grep is actually run over the shipped text,
+> never eyeballed, and the banned list is reread rather than recalled.
+
 Style rules for all generated copy: websites, landing pages, cold email, LinkedIn messages, chat replies, proposals, UI microcopy.
 
 **How to install:** paste into `CLAUDE.md` at your project root, or save as `.claude/rules/no-ai-slop.md` and reference it from `CLAUDE.md` with `See @.claude/rules/no-ai-slop.md`. For one-off use, paste the "Compressed prompt block" at the bottom into any prompt.

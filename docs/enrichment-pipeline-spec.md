@@ -1,5 +1,19 @@
 # Astra Agency — Automated Enrichment Pipeline (Claude Code build spec)
 
+> **Zero mistake policy. Read `CLAUDE.md` "TRIPLE CHECK EVERYTHING" before acting on
+> this file (Raka, 2026-09-21).** Every claim gets three different checks, not three
+> readings. Reopen the source, actively try to prove the claim false, then confirm it a
+> second way that does not share a failure mode with the first. Every absence claim ships
+> with a positive control showing the method finds the thing when it is there. My own
+> notes, state files and memory are a candidate list, never proof.
+>
+> **Being lazy is prohibited.** If a tool, an API call or a fetch can settle a question,
+> it settles it. Never reason from a timestamp, a preview, a filename, a pattern or a
+> plausible guess to save a call. An inference that turns out right is still a process
+> failure. For this file that means launch status, site state and campaign status are refetched
+> every run, and no row is carried forward on the strength of an earlier run's
+> verdict.
+
 > Source of truth. This is the spec as provided by Raka. `CLAUDE.md` at the repo
 > root is the operating playbook derived from it — if the two ever disagree,
 > this file wins and `CLAUDE.md` should be corrected to match.
