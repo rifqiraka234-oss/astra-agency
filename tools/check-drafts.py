@@ -18,7 +18,7 @@ Two markers turn the gate off for a file, and both belong at the top.
 
 Tag every draft with its shape in the heading above its fenced block, one of OPENER,
 REPLY, NUDGE, CLOSER, BOOKING, DELIVERY or CORRECTION. Untagged is treated as OPENER, and
-the four block, one exclamation, 95 to 150 word rules are the OPENER'S ALONE. The
+the four block, one exclamation, 88 to 150 word rules are the OPENER'S ALONE. The
 --replies flag relaxes the whole file the same way and is the blunt version of tagging.
 
 Every rule below exists because a real batch broke it. The comment says which.
