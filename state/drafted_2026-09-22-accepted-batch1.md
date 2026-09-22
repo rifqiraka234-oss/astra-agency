@@ -8,7 +8,17 @@ threads for more than a hundred other contacts in the same session.
 
 ---
 
-## 1. Tim Balogun, CEO, HF Mencap. OPENER. DRAFTED, never sent.
+## 1. Tim Balogun, CEO, HF Mencap. SENT 2026-09-22 at 06:15:25Z.
+
+> **CORRECTION, 2026-09-22.** A later edit to this file headed this section "DRAFTED, never
+> sent". **That is wrong and it was dangerous, because the next session to read it could
+> have sent Tim a second opener.** Checked against the system of record rather than the
+> file. `get_inbox_conversation(ctc_R3SL6BjDXSjfXM5dz)` returns two activities, the connect
+> note of 2026-09-21T17:46:54Z and **`act_bPySKHrQ2JpEL8knw`, a 735 character
+> `linkedinSent` at 2026-09-22T06:15:25.702Z** carrying the version WITH the £288,000. The
+> queue agrees, Tim's latest row is `SENT` with that timestamp. **The version in the code
+> block below is a later rewrite that was never sent to anyone.** What Tim actually received
+> is in his queue row and in his thread.
 
 **The £288,000 was cut on 2026-09-22.** It was true and it was their own published
 figure, but it was doing nothing except setting a scene, which is precisely what Raka
