@@ -29,6 +29,29 @@ I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. 
 Shall I build the private events page so planners can see the room they're booking, and send it over?
 ```
 
+### The no website variant, block two only (Raka, 2026-09-22)
+
+When the lead genuinely has no website, block two is replaced with his exact words, one
+sentence.
+
+```
+I couldn't find your website, and that [impact to their most current goal].
+```
+
+Everything else in the template stays as it is. It runs shorter, so its word floor is 70 rather than 88. **It is only used when "no website" has been
+earned**, which after Relatiq means all of these, written into the queue row's `claims`.
+
+1. **A plain web search for the company's site**, run FIRST, returning nothing live that is
+   theirs. A search index entry that cannot be opened at source does not count as a site.
+2. **lemlist's `companyDomain` fetched**, and it does not load, with a control host loading
+   through the same path in the same minute.
+3. **Every plausible other TLD checked and confirmed to be a different company or empty.**
+   For Relatiq, `.io` was a data product, `.co` a LinkedIn CRM, `.app` a texting app.
+4. **Their own LinkedIn company page or other profiles checked for a website link**, where it
+   can be read.
+
+If any of those turns up a site that is theirs, it is the normal template with that site.
+
 ---
 
 ## 1. The eleven inputs, where each comes from, and what goes wrong
@@ -43,7 +66,7 @@ slot has no source, the message does not get written.**
 | 3 | `[surface]` | `site` or `social media`, whichever is theirs and readable | A web search for the site FIRST, then their own HTML for social handles | lemlist `companyDomain` is wrong often. `carrefour.fr`, `trickle.works`, and `relatiq.nl`, which has no website on it |
 | 4 | `[the critical flaw]` | One or two overarching things critically poor about the whole surface | Every published page, rendered and looked at, see section 3 | An absence claim with no positive control. Dariuz's "broken images" were our proxy |
 | 5 | `[stakeholder]` | The specific party the business depends on | The site's own words, who it sells to and how | A generic "visitors". tuftuf's was event planners, from its own guest range field |
-| 6 | `[impact]` | What that stakeholder does instead | Inference, the only one allowed, and it must be testable by the owner | A made up number. The money rule forbids modelling any rate or revenue |
+| 6 | `[impact]` | What that stakeholder does instead, landing on the lead's **most current goal** | Their current goal, found by research per section 3 step 8, dated, newest evidence first. The impact itself is inference, the only one allowed, and the owner must be able to test it | A timeless, generic cost. And a made up number, the money rule forbids modelling any rate or revenue |
 | 7 | `[xyz]` | What we build, relevant to this lead | The offer in block four | Mismatch with block four |
 | 8 | brand line | **Fixed.** "Unilever, AXA, Pertamina" | Raka's template, recorded in `docs/astra-company-profile.md` | Never reworded, never trimmed, never extended |
 | 9 | `[proof]` | ONE personal credential of Raka's that makes the offer believable | `docs/astra-master-context.md` section 2A, matched per section 4 below | Decoration. The credential has to be the reason we can do the thing |
@@ -64,8 +87,11 @@ slot has no source, the message does not get written.**
 - **Sentence one is `However, your [surface] is [the critical flaw].`** One or two flaws,
   never three. The flaw must be **overarching**, true of the whole surface, never one page's
   nit. And **critically poor**, it touches money or trust, not taste.
-- **Sentence two is `This causes [stakeholder] to [impact].`** One stakeholder. The impact
-  lands on that stakeholder's most valuable goal, which is also the business's revenue line.
+- **Sentence two is `This causes [stakeholder] to [impact].`** The stakeholder is whoever is
+  actually hurt, their customer, the owner themselves, the business, or any other party they
+  depend on. **The impact lands on the most valuable goal or pain they have RIGHT NOW (Raka,
+  2026-09-22).** Not a timeless cost that would be true of any business, the thing they are
+  working on this month. Find it, section 3 step 8, then aim the impact at it.
 - **No extra clauses.** No "while it sells", no "so your team loses". That was the draft Raka
   rejected.
 - **The flaw survives four tests before it is written.**
@@ -122,11 +148,27 @@ all pages" gets done. Nothing in it is optional.
    401 or a 429, say nothing about social at all and use `site` as the surface.
 7. **Find the revenue line in their own words.** Their form fields, their pricing, their
    CTAs. tuftuf's guest range and "For example €15,000" budget are what made the stake visible.
-8. **Pick the flaw that sits on that revenue line**, then run it through the four tests in
-   section 2.
-9. **Confirm it a second, independent way.** tuftuf's zero photos was an HTML sweep, the
-   screenshots, and the CMS media library, three mechanisms that cannot fail together.
-10. **Write every verified fact into the queue row's `claims` at the moment it is verified.**
+8. **Find their MOST CURRENT goal, and date it (Raka, 2026-09-22).** What are they trying
+   to do right now. Look, newest evidence first, and write down the date of each.
+   - **Their own recent posts and announcements**, the founder's LinkedIn activity, company
+     page posts, a news or blog section. A launch, an opening, a new location, a new product.
+   - **Hiring.** A careers page, a "we're hiring" bar, job posts. tuftuf's "Work at Tuftuf?
+     Apply in 2 min" says they are still staffing up after opening.
+   - **Press.** Openings, funding rounds, awards, grants, acquisitions. tuftuf opened 14
+     February, HF Mencap had just landed Lottery funding, Mercian Labels had been sold.
+   - **What the site itself is pushing.** The main CTA is usually the current goal, private
+     events on tuftuf, demo bookings on a SaaS site.
+   - **Their stated goals.** Mission, "we're expanding to", targets they publish.
+   - **If nothing explicit exists, analyse it** from their stage and their site, a business
+     that opened seven months ago is filling the room and building a name, and say in the
+     research note that it is inferred.
+   The impact in block two is then aimed at THAT goal.
+9. **Pick the flaw that sits on that goal and that revenue line**, then run it through the
+   four tests in section 2.
+10. **Confirm it a second, independent way.** tuftuf's zero photos was an HTML sweep, the
+    screenshots, and the CMS media library, three mechanisms that cannot fail together.
+11. **Write every verified fact into the queue row's `claims` at the moment it is verified**,
+    including the current goal, its source and its date.
 
 ---
 
@@ -154,7 +196,7 @@ the experience AND why it bears on this lead, in the same sentence.
 | No readable surface, a Cloudflare wall or a void render | `BLOCKED_NEEDS_INFO`, Raka opens it |
 | Genuinely strong surface, no flaw passes the four tests | `NO_STRONG_ANGLE`. Never force a flaw |
 | Only a tweak level flaw exists | `NO_STRONG_ANGLE`, note the tweak as a later favour |
-| No website at all | **Open question for Raka.** `your [surface] is` has nothing to point at. The Relatiq message used "I went looking for the website and couldn't find it", which does not fit this shape |
+| No website at all, earned per the four checks above | **The no website variant.** Block two becomes "I couldn't find your website, and that [impact to their most current goal]." Everything else unchanged |
 
 ---
 

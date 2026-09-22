@@ -185,7 +185,10 @@ short version.
 
 - **Block two is exactly two sentences.** One or two flaws, overarching across every page,
   critically poor, and it must pass the positive control, render trust, the tweak test and
-  the red team. Then one stakeholder and what they do instead.
+  the red team. Then `This causes [stakeholder] to [impact]`, and **the impact is aimed at
+  their MOST CURRENT goal**, found and dated by research, never a timeless generic cost.
+- **No website at all, and only once that is earned by search**, block two becomes one
+  sentence, "I couldn't find your website, and that [impact to their most current goal]." 
 - **The brand line is fixed text.** "Unilever, AXA, Pertamina", never reworded or trimmed.
 - **One proof, and it carries the argument.** The experience AND why it bears, in one line.
 - **Block two's stakeholder is block four's stakeholder**, and block four's thing fixes

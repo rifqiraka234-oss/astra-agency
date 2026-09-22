@@ -118,6 +118,10 @@ def check(path, replies=False):
         relaxed = replies or shapes[i] in RELAXED
         if relaxed:
             pass
+        elif (m.split("\n\n")[1:2] or [""])[0].strip().startswith("I couldn't find your website"):
+            # The no website variant drops a sentence from block two, so its floor is lower.
+            if not 70 <= words <= 150:
+                bad(i, f"{words} words, no website variant, outside 70 to 150")
         elif not 88 <= words <= 150:
             bad(i, f"{words} words, outside 88 to 150")
         # MONEY. Raka scrapped the general numbers rule on 2026-09-22, after we told the
@@ -165,16 +169,26 @@ def check(path, replies=False):
             B = [" ".join(b.split()) for b in m.split("\n\n")]
             if not re.fullmatch(r"Hi [^,]+, saw .+, looks interesting!", B[0]):
                 bad(i, "block one must be exactly 'Hi [name], saw [company], looks interesting!'")
-            if not B[1].startswith("However, your "):
-                bad(i, "block two must open 'However, your [site or social media] is ...'")
             s2 = re.split(r"(?<=[.!?]) (?=[A-Z])", B[1])
-            if len(s2) != 2:
+            # The no website variant, Raka 2026-09-22. One sentence in his exact words.
+            nosite = B[1].startswith("I couldn't find your website, and that ")
+            if nosite:
+                if len(s2) != 1:
+                    bad(i, f"no website variant, block two must be ONE sentence, found {len(s2)}")
+                elif len(B[1].split()) > 30:
+                    bad(i, f"no website variant is {len(B[1].split())} words, cap 30")
+            elif not B[1].startswith("However, your "):
+                bad(i, "block two must open 'However, your [site or social media] is ...', "
+                       "or for no website 'I couldn't find your website, and that ...'")
+            if nosite:
+                pass
+            elif len(s2) != 2:
                 bad(i, f"block two must be exactly two sentences, found {len(s2)}")
             elif not s2[1].startswith("This causes "):
                 bad(i, "block two's second sentence must open 'This causes [stakeholder] to'")
             # No clauses bolted on. Raka rejected "... while it sells private events ..."
             # and "... so your events team loses ...", 27 and 36 words. His run 14 to 19.
-            for k, sent in enumerate(s2[:2]):
+            for k, sent in enumerate([] if nosite else s2[:2]):
                 if len(sent.split()) > 25:
                     bad(i, f"block two sentence {k+1} is {len(sent.split())} words, cap 25, "
                            "a clause has been added to the template")
@@ -219,7 +233,7 @@ def check(path, replies=False):
     # before comparing. Only what was filled into the brackets can trip pass 4.
     FIXED = ("looks interesting", "however, your", "this causes", "i run astra agency.",
              "we build", "for brands like unilever, axa, pertamina.", "shall i build the",
-             "and send it over?")
+             "and send it over?", "i couldn't find your website, and that")
     c = Counter()
     for m in msgs:
         low = m.lower()
