@@ -1,0 +1,9 @@
+Sergey, glad the site's back. Last week it was throwing a 500 and a PHP error about a missing MySQL extension, and it loads fine now, so you got there before I was any use.
+
+Had a proper look this time. The eight pricing brackets and the savings calculator are doing real work, there's nothing I'd touch on that.
+
+What caught me is the landlord research you're running, the five minute survey for self managed and portfolio landlords. SotoCat today is priced per unit for agencies, and a landlord is a different buyer with a different job. If that research says go, you're building a second product next to the first one, and that's where founders run out of hours rather than ideas.
+
+That's the bit we do. Astra's a small Dutch agency with a senior dev team behind us, so you stay on the product and we build.
+
+What's the research telling you so far?
