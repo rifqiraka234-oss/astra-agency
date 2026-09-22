@@ -7,25 +7,25 @@ promise to stop, so both are open.
 ## 1. Kate Phipps-Wiltshire, Hounds for Heroes. ctc_kaH4qdP7fYDv5YBwy
 
 ```
-Kate, a new build is good news, and it's the one moment this is worth raising.
+Kate, a new build is good news, so this is the moment to raise it.
 
-I read your 2025/26 accounts. Donations and legacies were £601,725 of £670,978 total income, and you spent £255,378 raising funds to bring it in, on a year that closed £76,600 down. That spend has one job, getting somebody as far as the donate page.
+I read your 2025/26 accounts. Donations are £601,725 of your £670,978 income, and you spent £255,378 raising funds on a year that closed £76,600 down. That spend's whole job is getting somebody as far as the donate page.
 
-That page still tells them, if your preferred choice is credit or debit card please scroll down to beneath the PayPal icon. Most rebuilds replace the site and leave the giving flow untouched, because it sits in a separate system nobody wants to open.
+That page still tells them, if your preferred choice is credit or debit card please scroll down to beneath the PayPal icon. Most rebuilds leave the giving flow untouched, because it's in a separate system.
 
-So the question is whether yours covers the donation itself or only everything around it. If it's the second, I'll build the single screen version to drop in, amount and card together, and it's yours whether or not we work together. Who's doing the build?
+So does yours cover the donation itself, or only everything around it? If it's the second I'll build the one screen version, amount and card together, yours either way.
 ```
 
 ## 2. Sergey Shalunov, SotoCat. ctc_Puf9L7o8nDTyDNn2Q
 
 ```
-Sergey, glad the site's back. Last week it threw a 500 and a PHP error about a missing MySQL extension, and it loads fine now, so you'd already sorted it.
+Sergey, glad the site's back. It threw a 500 and a PHP error last week and loads fine now, so you'd already sorted it.
 
 Went through it properly this time. The eight pricing brackets and the savings calculator are doing real work, there's nothing I'd touch.
 
-What caught me is the landlord research in your footer. Your bottom bracket is 1 to 99 units at £2.50, which is priced for an agency with a portfolio. A self managed landlord with four flats is a ten pound a month customer who has to onboard themselves, never speaks to your sales side, and needs the whole thing to explain itself. That's a different product with a different front door, not a smaller version of this one.
+What caught me is the landlord research in your footer. Your bottom bracket is 1 to 99 units at £2.50, priced for an agency. A landlord with four flats is a ten pound a month customer who onboards themselves and never speaks to sales. That's a different product with a different front door.
 
-If the research says go, you're building a second thing beside the first, and that's the bit we do. Astra's a small Dutch agency with a senior dev team behind us. What's the research telling you?
+If that research says go, the second build is the bit we do. What's it telling you so far?
 ```
 
 ## Claims, every one re-opened on this pass, 2026-09-22
@@ -63,8 +63,8 @@ which RULES.md line 1 explicitly permits.**
 | Gate says | Verdict |
 |---|---|
 | 5 blocks, the template is 4 | **Real failure, fixed.** Both merged to four. |
+| Word count | **Now inside the gate.** 116 and 118 on Raka's 120 ceiling, so no override needed. |
 | 0 exclamation marks, must be exactly 1 | **Overridden. "no cheesy".** The forced exclamation was the cheesy thing. |
-| draft 2 is 166 words, outside 95 to 150 | **Overridden. "170 words".** |
 
 **The exclamation rule is arguably a bug in the tool rather than a rule these two break.**
 It enforces the cold opener shape, where block one is "saw [post] and [compliment it]!".
