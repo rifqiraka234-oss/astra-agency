@@ -1,7 +1,14 @@
 # Replies waiting on us, 2026-09-21
 
-**Not sent.** The send all earlier covered the batch of eight openers. A batch approval
-covers that batch only.
+**Status, updated 2026-09-22 after Raka's call.**
+
+- **Kate Phipps-Wiltshire, SENT** at 05:25:11Z on 2026-09-22, confirmed in thread,
+  343 characters byte identical to the block below.
+- **Michael Barthel, HELD.** Approved, not sent. The draft says "a fortnight ago" about
+  something he wrote on 15 September, which is one week. Waiting on Raka for the wording.
+- **Sholi Loewenthal, CLOSED** on Raka's instruction. The partnership reply in
+  `whats-next-2026-09-21.md` is not sent and must not be.
+- **Binanti Cuzner** finished. **Fleur Rossdale** still Raka's call.
 
 Four threads showed `isYourTurn` true. Two need a reply, one is finished, one is a
 judgement call for Raka.
