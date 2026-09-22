@@ -9,19 +9,23 @@
 
 Hi Ank,
 
-Thanks for waiting. Nothing has been touched on your side, exactly as you asked. Here's the proposal, in Dutch, so you can pass it straight to Aart and Joyce.
+Thanks for your patience. We haven't started anything on your side, like you asked.
 
-We'd start with the booking, because that's where it hurts most. €5,500, around five weeks, sitting next to your website rather than inside it. Panorama stay the builders. On your own 2024 numbers, 119 groups, it should come back as roughly €9,500 a year.
+Proposal is attached. It's in Dutch, so Aart and Joyce can read it straight away.
 
-One small thing: we couldn't put an honest price on it without knowing what we'd be building, so we built it first. There's a working version you can click through. It took us a day, and we'd love to show you.
+Our advice is to begin with the booking. That's the part eating the most time at the moment. €5,500, about five weeks. Your website stays as it is and Panorama stays in charge of it.
 
-Alongside that we'd recommend social media, €595 a month plus €1,250 to set it up. Eight posts a month, Dutch and English. We write them, you approve them.
+With 119 groups last year, we think it earns back around €9,500 a year. So it pays for itself in year one.
 
-We've also listed a few other things we noticed, without prices: email marketing, the partner leads update, being found in other languages. And one that's a little urgent. Google's tracking starts before a visitor can refuse it, and your privacy statement is from 2018. We left that out of the offer on purpose, but you should know about it.
+We also built a working version before sending this. Couldn't quote you a fixed price otherwise. Your tours, your prices, and you can click the whole way through. Took us a day. We'll bring it if we meet.
 
-Would you be open to a quick call to go through it together?
+The other thing we'd suggest is social media. €595 a month, €1,250 to set up. Eight posts a month in Dutch and English. We make them. You say yes or no.
 
-Warm regards,
+Everything else we found is at the back with no prices on it: email, the partner leads update, being found in other languages. One is more pressing than the rest. Your site starts Google's tracking before anyone can refuse it, and the privacy text dates from 2018. We kept it out of the offer because that felt like selling you a problem we'd just found. You should know about it though.
+
+Can we do a call to walk through it?
+
+Best,
 
 Raka, Luna and Josh
 Astra Agency
@@ -29,10 +33,24 @@ Astra Agency
 
 ---
 
-## Notes
+## Anti-slop checklist (reuse this)
 
-- Opens by confirming nothing was built. She asked twice; it costs one line.
-- The prototype stays, cut to three sentences. Still the best thing you have.
-- "We left that out of the offer on purpose" is the line that stops the GDPR flag reading as a sales trick. Keep it.
-- €5,500 against €9,500 stays in the email, not just the PDF.
+Run `tomatoworld/outreach/slopcheck.py` on any draft. It flags:
+
+| Tell | Why it reads as machine-written |
+|---|---|
+| "rather than" / "instead of" | Balanced contrast. AI reaches for it constantly. |
+| "One small thing", "Alongside that", "That said" | Signposting. People just say the thing. |
+| "we'd love to", "happy to", "reach out" | Borrowed warmth. Means nothing. |
+| "Would you be open to" | Corporate cushioning. Ask the question. |
+| Writerly flourishes | "Where it hurts most" is a phrase nobody says out loud. |
+| "a little urgent", "a bit tricky" | Cute hedging. Either it's urgent or it isn't. |
+| "We write them, you approve them" | Too symmetrical. Break the rhythm. |
+| "exactly as you asked" | Servile. "Like you asked" is what a person types. |
+| Even paragraph lengths | Real emails lurch: two words, then forty. |
+
+**What replaced them here:** dropped subjects ("Couldn't quote you a fixed price
+otherwise." / "Took us a day."), a blunt question at the end, and paragraphs that
+swing from 9 words to 77.
+
 - Fill in [phone] and [email].
