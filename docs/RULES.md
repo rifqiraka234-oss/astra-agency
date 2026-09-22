@@ -235,7 +235,13 @@ small true thing into a big false one.
 not an angle. Use the defect as proof and sell the structural thing behind it.
 
 **Money figures.** Only from their own published numbers, with the sum shown, anchored
-deliberately low. Never model a conversion rate, a traffic figure or a margin. Never put a
+deliberately low. **Never build one on a top line without opening the note behind it.**
+A line in a financial statement is a label over a breakdown, and the breakdown is the
+source. Hounds for Heroes, 2026-09-22, we called £255,378 of "raising funds" money spent
+driving people to a donate page. Note 7 says 88 percent of it is staff and support costs
+and the advertising line is £14,142. Note 3 says £258,203 of the income we called
+donations is legacies. The arithmetic closed perfectly, which is exactly what made the
+wrong reading feel verified. Never model a conversion rate, a traffic figure or a margin. Never put a
 figure on a credibility or positioning problem. Expect about one message in four to carry
 one, and treat a batch where most do as a sign they are being invented.
 
