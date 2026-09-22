@@ -1,4 +1,9 @@
-# Replies waiting on us, 2026-09-21
+<!-- GATE ARCHIVED. Superseded. This is revision 1. Raka reversed the FOMO closers
+     ("just close it gracefully") and capped the open thread replies at 200 words, so
+     what actually went out is `drafted_2026-09-21-replies-and-closers.md`. Kept for the
+     audit of who was waiting on us. Not re gated. -->
+
+# Replies waiting on us, 2026-09-21. SUPERSEDED by revision 2.
 
 **Status, updated 2026-09-22 after Raka's call.**
 

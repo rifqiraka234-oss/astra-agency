@@ -1,4 +1,8 @@
-# Kate Phipps-Wiltshire, the correction. 2026-09-22. NOT SENT.
+<!-- GATE ARCHIVED. Sent 2026-09-22 as act_37hhX3v5un8um62Ku. Confirmed by a per
+     contact thread pull the same day, 8 activities, exactly one copy, after a proxy
+     error mid send made a double send plausible. Not re gated. -->
+
+# Kate Phipps-Wiltshire, the correction. 2026-09-22. SENT, act_37hhX3v5un8um62Ku.
 
 ## What she said
 

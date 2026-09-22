@@ -1,11 +1,17 @@
-# Drafts, 2026-09-21 revision 2. NOT SENT.
+<!-- GATE ARCHIVED. All four sent on Raka's "send all", 2026-09-21. Confirmed
+     2026-09-22 by four per contact thread pulls, one copy each.
+     Michael Barthel act_f5KnYX6ybBf7tMD4i, Niklas Hanf act_GbnJBcPfEN5Ti66MC,
+     Floris Otterman act_rLDdxC5xwSpaTtWRH, Alex Temprell act_oWHcjfRYgAdXxrCrZ.
+     Michael declined an hour later. Not re gated. -->
+
+# Drafts, 2026-09-21 revision 2. ALL FOUR SENT.
 
 Raka cancelled the FOMO closers, close the declines gracefully instead, and capped
 the two open thread replies at 200 words.
 
 ## Replies, open threads
 
-### Michael Barthel, No Leadershit. ctc_6Ptry8JFBTntqfYd3. 168 words
+### Michael Barthel, No Leadershit. REPLY. ctc_6Ptry8JFBTntqfYd3. 168 words
 
 ```
 Hi Michael, we wound it down at the end of 2024, four and a bit years of it. And your Germany point is fair, being against something travels and being for something gets you a like.
@@ -19,7 +25,7 @@ That's the tool we talked about. Choose your Pain as ten minutes someone clicks 
 Shall I build it and send it over?
 ```
 
-### Niklas Hanf, Solvio. ctc_Hi8GaR2cuEE6SA6xy. 142 words
+### Niklas Hanf, Solvio. CORRECTION. ctc_Hi8GaR2cuEE6SA6xy. 142 words
 
 ```
 Niklas, ours is Astra, we build websites and the tools that go on them. And I read your line on the Impulssession page, schlank im Rahmen, intensiv in der Sache. Good one!
@@ -33,13 +39,13 @@ Want me to build that page as a check people run on themselves, and send you the
 
 ## Graceful closes, the only two declines we left hanging
 
-### Floris Otterman, The Protein Express. ctc_8sEGGrwa7PDTfbuXg. 59 words
+### Floris Otterman, The Protein Express. CLOSE. ctc_8sEGGrwa7PDTfbuXg. 59 words
 
 ```
 Fair enough Floris. And you caught me out, I wrote that off your homepage and never opened your team page, which names everyone with direct contact details. My mistake. If the conversations are where the trust actually gets built then the site isn't your problem, and you'd know that better than I would. Good luck with the scale up.
 ```
 
-### Alex Temprell, Diisco. ctc_SZnfaHSkw5p2CbqWs. 62 words
+### Alex Temprell, Diisco. CLOSE. ctc_SZnfaHSkw5p2CbqWs. 62 words
 
 ```
 Understood Alex, and I'd rather have a straight answer than silence. Looks like you've put the venues view up on the site since we spoke, which was the bit I was poking at, so you were already on it. Good luck with the launch. If you ever want an extra pair of hands on the build side, you know where I am.

@@ -1,3 +1,7 @@
+<!-- GATE ARCHIVED. Sent 2026-09-14. This is the pre fence plain text format, which the
+     gate cannot read, so it failed every sweep as "no fenced message blocks found" rather
+     than on anything real. It is history, not a batch. Verified 2026-09-22 by a per contact thread pull, Martijn act_oC6s9gXR4smWvfbuM plus its follow up act_hdgwNQb5ZuHCyoKSQ. -->
+
 B8-1 MARTIJN MOL / Remarx  ctc_5rvRJdXGDJWccKEAm  [Heineken]
 Hi Martijn, saw Remarx and a calculator that gives me a monthly figure before I speak to anyone, plus a sample report, is more honesty than the whole sector manages!
 

@@ -1,4 +1,9 @@
-# Drafts, 2026-09-22. Sergey and Michael. NOT SENT.
+<!-- GATE ARCHIVED. Superseded, never sent. The Sergey draft here was replaced by the
+     shorter one in `drafted_2026-09-22-kate-sergey.md`, which is what actually went out
+     as act_GSTQy3GG85o3RzKdE. The Michael draft was dropped on Raka's instruction, "if
+     he says no lets just stop it". Kept for the reasoning, not re gated. -->
+
+# Drafts, 2026-09-22. Sergey and Michael. SUPERSEDED, NEVER SENT.
 
 ## Kate, the answer to the question asked
 

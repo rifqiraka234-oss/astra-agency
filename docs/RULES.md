@@ -190,6 +190,13 @@ per `docs/astra-master-context.md` section 2A, never a list of them.
 
 **Block four.** Name the artefact so a stranger could draw it.
 
+**Tag every draft with its shape, in the heading above the fenced block.** One of
+OPENER, REPLY, NUDGE, CLOSER, BOOKING, DELIVERY or CORRECTION. The tool reads the tag and
+applies that shape's rules. **An untagged draft is treated as an OPENER**, which is how
+35 perfectly good replies got reported as gate failures on 2026-09-22 and several were
+mangled into four block openers to satisfy rules that never applied to them. A reply is
+not an opener. A correction may quote the accounts it is retracting.
+
 **Run `python3 tools/check-drafts.py <file>` before showing any batch.** It exits non zero
 on failure. It covers every mechanical rule above plus pass 4 across the batch. Passes 1,
 2 and 3 stay human, read it aloud, check the credential is the reason we can do the offer,

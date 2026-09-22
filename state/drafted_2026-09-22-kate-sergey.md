@@ -1,4 +1,16 @@
-# Drafts, 2026-09-22. Kate and Sergey. NOT SENT.
+<!-- GATE ARCHIVED. Both drafts in this file were sent on Raka's go, 2026-09-22.
+     Confirmed against lemlist on 2026-09-22 by a per contact thread pull, not from notes.
+     Kate, act_xAyonfzmDkCAEWr2H, thread now 8 activities, exactly one copy.
+     Sergey, act_GSTQy3GG85o3RzKdE, thread now 4 activities, exactly one copy.
+     Not re gated, because the gate is a pre send check and these are history. -->
+
+# Drafts, 2026-09-22. Kate and Sergey. SENT.
+
+**The Kate draft in this file was wrong and was retracted the same day.** She replied
+"We are all good However your reading of our accounts isn't!!!" and she was right. The
+£255,378 is mostly staff and support costs with £14,142 of advertising inside it, and
+£258,203 of the income is legacies rather than donations. The apology is in
+`drafted_2026-09-22-kate-correction.md`. Do not reuse anything financial from below.
 
 Both threads loaded in full before drafting, paged to exhaustion. Kate 5 activities,
 nextPage null. Sergey 3 activities, nextPage null. No closing nudge in either and no

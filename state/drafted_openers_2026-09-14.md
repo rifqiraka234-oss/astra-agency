@@ -1,3 +1,7 @@
+<!-- GATE ARCHIVED. Sent 2026-09-14. This is the pre fence plain text format, which the
+     gate cannot read, so it failed every sweep as "no fenced message blocks found" rather
+     than on anything real. It is history, not a batch. Verified 2026-09-22 by per contact thread pulls on three of its entries, Irem Unlu Demir act_azzz36fQGzbxqHJuT, Daniel Forster act_kC4hTJx23FF7rwMZA and the Mark Preston nudge act_SDvTQsLCgRNMdqKTM, each byte identical to the text below. -->
+
 # Drafted openers, accepted never messaged batch
 
 Written to Raka's four part template (2026-09-14). Credential matched per lead
@@ -9,7 +13,7 @@ than against a homepage summary. Seven openers were factually wrong and were
 rewritten, and one lead was pulled entirely. The corrections are recorded per
 lead in `state/silent_accepted_queue.jsonl`.
 
-Status is DRAFTED. Nothing has been sent.
+**That line used to read "Status is DRAFTED. Nothing has been sent." and it was wrong.** These went out on 2026-09-14 and nobody corrected the file. Three were re confirmed against lemlist on 2026-09-22, see the archive note at the top.
 
 1 IREM UNLU DEMIR / DemirX Partners [Heineken]
 Hi Irem, saw DemirX and starting your own advisory after a career at Shell and Koç Group is a great move!

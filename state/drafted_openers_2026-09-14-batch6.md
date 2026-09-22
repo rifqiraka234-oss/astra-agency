@@ -1,3 +1,7 @@
+<!-- GATE ARCHIVED. Sent 2026-09-14. This is the pre fence plain text format, which the
+     gate cannot read, so it failed every sweep as "no fenced message blocks found" rather
+     than on anything real. It is history, not a batch. Verified 2026-09-22 by per contact thread pulls, James Stewart act_xBP7jEcBBwF8wP2uu and Louise Hewitson act_9L4a9k93oXMtLTxAi, both byte identical to the text below. -->
+
 B6-1 JAMES STEWART / Bamboo Invest  ctc_EQEgHwLdmREfD2g6J  [Betty Blocks]
 Hi James, saw Bamboo Invest and going from Vanguard and Dimensional to building the MPS yourself is a proper move!
 

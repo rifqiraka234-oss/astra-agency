@@ -1,4 +1,9 @@
-# Batch 2 of the v0.1 accepted backlog. 2026-09-22.
+<!-- NO DRAFTS. Every lead in this batch reached a verdict and none produced a message.
+     Peter Borup no, Mandy Kerley no, David Marian DO_NOT_CONTACT, Daan Erisman
+     NO_STRONG_ANGLE. William Mayvis is the one worth having and is blocked on Raka
+     opening relatiq.nl on his phone, per RULES.md section 0. Nothing to gate. -->
+
+# Batch 2 of the v0.1 accepted backlog. 2026-09-22. Verdicts only, no drafts.
 
 **Nothing sent and nothing drafted.** Two blocks were resolved into clean verdicts, one
 lead is one tap of Raka's phone away from a strong message, and two were already correctly

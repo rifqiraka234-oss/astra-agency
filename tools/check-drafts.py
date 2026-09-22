@@ -12,6 +12,15 @@ credential fits the offer, or whether block one reacts rather than interprets. T
 passes 1, 2 and 3 of the read back and they stay human. This tool only guarantees that a
 batch never fails on something a script could have caught, which is what kept happening.
 
+Two markers turn the gate off for a file, and both belong at the top.
+  <!-- GATE ARCHIVED -->  already sent, or superseded and never sent. History, not a batch.
+  <!-- NO DRAFTS -->      research that reached a verdict on every lead, nothing to send.
+
+Tag every draft with its shape in the heading above its fenced block, one of OPENER,
+REPLY, NUDGE, CLOSER, BOOKING, DELIVERY or CORRECTION. Untagged is treated as OPENER, and
+the four block, one exclamation, 95 to 150 word rules are the OPENER'S ALONE. The
+--replies flag relaxes the whole file the same way and is the blunt version of tagging.
+
 Every rule below exists because a real batch broke it. The comment says which.
 """
 
@@ -37,18 +46,63 @@ BANNED_STRUCTURES = [
 ]
 
 
+SHAPES = ("OPENER", "REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY",
+          "CORRECTION")
+# Shapes whose length, block count and exclamation rules are NOT the cold opener's.
+# The opener template is four blocks with exactly one exclamation. Nothing else is.
+RELAXED = {"REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY", "CORRECTION"}
+# A correction retracts a claim, so it has to be able to quote the thing it is retracting.
+EXEMPT_MONEY = {"CORRECTION"}
+
+
 def blocks_of(path):
-    return re.findall(r"```\n(.*?)\n```", open(path, encoding="utf-8").read(), re.S)
+    """Return (message, shape) per fenced block. The shape is read from the nearest
+    heading or bold line above the block, because a reply forced into opener rules is
+    how good drafts got mangled all through 2026-09-22. Untagged means OPENER and the
+    caller is told how to tag it."""
+    src = open(path, encoding="utf-8").read()
+    if "GATE ARCHIVED" in src or "NO DRAFTS" in src:
+        return []
+    out = []
+    for m in re.finditer(r"```\n(.*?)\n```", src, re.S):
+        head = src[:m.start()].rstrip().split("\n")
+        shape = None
+        for line in reversed(head[-12:]):
+            if not line.strip():
+                continue
+            hit = [sh for sh in SHAPES if re.search(rf"\b{sh}\b", line)]
+            if hit:
+                shape = hit[0]
+                break
+            if line.lstrip().startswith("#") or line.strip().startswith("**"):
+                break
+        out.append((m.group(1), shape))
+    return out
 
 
 def check(path, replies=False):
     """replies=True relaxes the shape rules only. A reply to a two word thanks is not a
     four block opener and must not be forced into one, per the reply in context rule.
     Every truth and voice rule still applies, and so does the batch repetition check."""
-    msgs = blocks_of(path)
-    if not msgs:
+    pairs = blocks_of(path)
+    if not pairs:
+        src = open(path, encoding="utf-8").read() if __import__("os").path.exists(path) else ""
+        if "GATE ARCHIVED" in src:
+            print(f"{path}  ARCHIVED, already sent or superseded, not re gated")
+            return 0
+        # A research file that reached a verdict on every lead has nothing to send, and
+        # failing it every sweep is how a real failure gets lost in the noise.
+        if "NO DRAFTS" in src:
+            print(f"{path}  NO DRAFTS, verdicts only, nothing to gate")
+            return 0
         print(f"FAIL  no fenced message blocks found in {path}")
+        print("      If this file is verdicts only with nothing to send, put a")
+        print("      <!-- NO DRAFTS --> marker at the top. If it is already sent, use")
+        print("      <!-- GATE ARCHIVED -->. Do not leave it failing every sweep.")
         return 1
+    msgs = [m for m, _ in pairs]
+    shapes = [sh for _, sh in pairs]
+    untagged = [i + 1 for i, sh in enumerate(shapes) if sh is None]
     fails = []
 
     def bad(i, why):
@@ -60,7 +114,8 @@ def check(path, replies=False):
         words = len(m.split())
 
         # 100 to 145 words is the template. 150 is the roast register ceiling.
-        if replies:
+        relaxed = replies or shapes[i] in RELAXED
+        if relaxed:
             pass
         elif not 95 <= words <= 150:
             bad(i, f"{words} words, outside 95 to 150")
@@ -69,7 +124,7 @@ def check(path, replies=False):
         # is allowed ONLY when it quantifies what the lead is forgoing, losing or being
         # hurt by. Never as context, never as scene setting, and never off filed accounts.
         money = re.findall(r"[\u00a3\u20ac$]\s?[\d,]+(?:\.\d+)?", m)
-        if money:
+        if money and shapes[i] not in EXEMPT_MONEY:
             src = open(path, encoding="utf-8").read()
             if "LOSS FIGURE" not in src:
                 bad(i, f"money figure {money} with no LOSS FIGURE block in the file. "
@@ -81,7 +136,7 @@ def check(path, replies=False):
                        "a line in a financial statement is a label over a breakdown")
 
         # Exactly one exclamation mark and it lives on the first line.
-        if replies:
+        if relaxed:
             if m.count("!") > 1:
                 bad(i, f"{m.count('!')} exclamation marks in a reply, at most 1")
         elif m.count("!") != 1:
@@ -101,7 +156,7 @@ def check(path, replies=False):
         if len(re.findall(r"\w'(s|t|re|ve|ll|d|m)\b", m)) < 1:
             bad(i, "no contractions at all")
         # Four blocks, per the opener template. Replies have their own shape.
-        if not replies and len(m.split("\n\n")) != 4:
+        if not relaxed and len(m.split("\n\n")) != 4:
             bad(i, f"{len(m.split(chr(10)+chr(10)))} blocks, the template is 4")
         # Block three must not be one long comma chain. Raka, 2026-09-16.
         b3 = m.split("\n\n")[2] if len(m.split("\n\n")) > 2 else ""
@@ -142,6 +197,12 @@ def check(path, replies=False):
     if fails:
         print(f"FAIL  {len(fails)} problem(s)")
         print("\n".join(fails))
+        if untagged:
+            print(f"\n  NOTE  draft(s) {untagged} carry no shape tag, so OPENER rules were")
+            print("        applied. If any of them is a reply, nudge, closer, booking,")
+            print("        delivery or correction, put that word in the heading above the")
+            print("        block and the right rules get used. A reply is NOT a four block")
+            print("        opener and must never be mangled into one.")
         print("\nFix and run again. Then still do passes 1, 2 and 3 by reading them aloud.")
         return 1
     print("PASS  every mechanical gate clear.")

@@ -8,7 +8,11 @@ threads for more than a hundred other contacts in the same session.
 
 ---
 
-## 1. Tim Balogun, CEO, HF Mencap. DRAFTED.
+## 1. Tim Balogun, CEO, HF Mencap. OPENER. DRAFTED, never sent.
+
+**The £288,000 was cut on 2026-09-22.** It was true and it was their own published
+figure, but it was doing nothing except setting a scene, which is precisely what Raka
+scrapped the numbers rule to stop. The funding is still the hook, without the number.
 
 **Why he is the right subject.** lemlist has `companyName` HF Mencap but `jobTitle`
 "Founder - London Makers", which are different names, so this was checked rather than
@@ -51,7 +55,7 @@ because it fails the tweak test**, a banner is an afternoon's work for whoever m
 the site, so it is a task not an angle. It is worth raising later as a favour.
 
 ```
-Hi Tim, saw London Makers secured £288,000 from the National Lottery. Brilliant!
+Hi Tim, saw London Makers landed its National Lottery funding back in December. Brilliant!
 
 However, the London Makers page carries four images and every one of them is a logo, so none of the work is on it. This means a partner or a buyer who hears about the programme and looks it up finds a description of it rather than the makers, and the makers are what you're funded to put in front of people.
 

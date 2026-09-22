@@ -1,3 +1,7 @@
+<!-- GATE ARCHIVED. Sent 2026-09-14. This is the pre fence plain text format, which the
+     gate cannot read, so it failed every sweep as "no fenced message blocks found" rather
+     than on anything real. It is history, not a batch. Verified 2026-09-22 by a per contact thread pull, Tracey Sanger act_nP6eoY3wvo3EAXyt7 plus its follow up act_5RiwLZbPY6aazPry2. -->
+
 B7-1 TRACEY STEWART / Motzu Labs  ctc_PSY4YT5G55xrtTRZ2  [Betty Blocks]
 Hi Tracey, saw Motzu Labs and building the catalog layer around MAP and rebates, for camera dealers specifically, is a properly chosen niche!
 
