@@ -19,7 +19,7 @@ The figure is €5,500, over roughly five weeks. Your website itself remains unt
 
 What it does is straightforward. A visitor sees which dates are free and what the visit will cost, then books and pays in one sitting. Your team sees everything in a single list, rather than scattered through an inbox.
 
-You received 119 groups last year. On that basis we believe the booking is worth some €9,500 a year to you: partly the hours your team no longer loses to correspondence, partly the extras, the specialist and the lunch, which guests will at last see at the moment they are choosing. It repays itself within the first year.
+If we have read your 2024 figures correctly, you received 119 groups last year. On that basis we believe the booking is worth some €9,500 a year to you: partly the hours your team no longer loses to correspondence, partly the extras, the specialist and the lunch, which guests will at last see at the moment they are choosing. It repays itself within the first year.
 
 I should mention that we built a working version before sending this, as we were reluctant to quote a figure we might later have to revise. You may click through the whole of it. Your tours, your prices, in your own colours. It took us a day, and we shall bring it along if we meet.
 

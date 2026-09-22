@@ -19,7 +19,7 @@ We think you should start with the booking. That's the part costing your team th
 
 What it does: people see which dates are free and what the visit costs, then book and pay in one go. Your team sees everything in one list, not in an inbox.
 
-You had 119 groups last year. We think this is worth about €9,500 a year to you. Partly hours your team stops losing to email, partly the extras people will finally see and add, like the specialist or the lunch. So it pays for itself in the first year.
+If we've read your 2024 figures right, you had 119 groups last year. On that basis we think this is worth about €9,500 a year to you. Partly hours your team stops losing to email, partly the extras people will finally see and add, like the specialist or the lunch. So it pays for itself in the first year.
 
 We built a working version before sending you this, because we didn't want to quote a price we'd have to change later. You can click right through it. Your tours, your prices, in your colours. Took us a day. We'll bring it if we meet.
 
