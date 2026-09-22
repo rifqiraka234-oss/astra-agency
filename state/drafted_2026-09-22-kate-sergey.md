@@ -7,23 +7,23 @@ promise to stop, so both are open.
 ## 1. Kate Phipps-Wiltshire, Hounds for Heroes. ctc_kaH4qdP7fYDv5YBwy
 
 ```
-Kate, a new build is good news!
+Kate, a new build is good news, and it's the one moment this is worth raising.
 
-I read your 2025/26 accounts. Donations and legacies were £601,725 of £670,978 total income, and you spent £255,378 raising funds last year. That money's whole job is getting somebody as far as the donate page, and that page still tells them, if your preferred choice is credit or debit card please scroll down to beneath the PayPal icon.
+I read your 2025/26 accounts. Donations and legacies were £601,725 of £670,978 total income, and you spent £255,378 raising funds to bring it in, on a year that closed £76,600 down. That spend has one job, getting somebody as far as the donate page.
 
-Most rebuilds replace the site and leave the giving flow where it was, because it's a separate system nobody wants to touch. So the question worth asking is whether yours covers the donation itself or only everything around it.
+That page still tells them, if your preferred choice is credit or debit card please scroll down to beneath the PayPal icon. Most rebuilds replace the site and leave the giving flow untouched, because it sits in a separate system nobody wants to open.
 
-If it's the second, I'll build the single screen version to drop in, amount and card together, yours free either way. Who's doing the build?
+So the question is whether yours covers the donation itself or only everything around it. If it's the second, I'll build the single screen version to drop in, amount and card together, and it's yours whether or not we work together. Who's doing the build?
 ```
 
 ## 2. Sergey Shalunov, SotoCat. ctc_Puf9L7o8nDTyDNn2Q
 
 ```
-Sergey, glad the site's back!
+Sergey, glad the site's back. Last week it threw a 500 and a PHP error about a missing MySQL extension, and it loads fine now, so you'd already sorted it.
 
-Last week it threw a 500 and a PHP error about a missing MySQL extension, and it loads fine now, so you got there before I was any use. Went through it properly this time, and the eight pricing brackets and the savings calculator are doing real work.
+Went through it properly this time. The eight pricing brackets and the savings calculator are doing real work, there's nothing I'd touch.
 
-What caught me is the landlord research in your footer. Your bottom bracket is 1 to 99 units at £2.50, which is built for an agency. A self managed landlord with four flats is a ten pound a month customer who has to onboard themselves. That's a different product with a different front door, not a smaller version of this one.
+What caught me is the landlord research in your footer. Your bottom bracket is 1 to 99 units at £2.50, which is priced for an agency with a portfolio. A self managed landlord with four flats is a ten pound a month customer who has to onboard themselves, never speaks to your sales side, and needs the whole thing to explain itself. That's a different product with a different front door, not a smaller version of this one.
 
 If the research says go, you're building a second thing beside the first, and that's the bit we do. Astra's a small Dutch agency with a senior dev team behind us. What's the research telling you?
 ```
@@ -54,30 +54,45 @@ managed landlords, portfolio landlords and landlord organisations". The ten poun
 is four units at their own published £2.50, arithmetic only, no conversion rate and no
 traffic estimate anywhere.
 
+## The gate, and the two deliberate overrides
+
+`python3 tools/check-drafts.py` **exits 1 on three items. One was a real failure and it
+was fixed. The other two are Raka's live instruction of 2026-09-22 overriding the tool,
+which RULES.md line 1 explicitly permits.**
+
+| Gate says | Verdict |
+|---|---|
+| 5 blocks, the template is 4 | **Real failure, fixed.** Both merged to four. |
+| 0 exclamation marks, must be exactly 1 | **Overridden. "no cheesy".** The forced exclamation was the cheesy thing. |
+| draft 2 is 166 words, outside 95 to 150 | **Overridden. "170 words".** |
+
+**The exclamation rule is arguably a bug in the tool rather than a rule these two break.**
+It enforces the cold opener shape, where block one is "saw [post] and [compliment it]!".
+These are replies inside warm threads, and the reply variant, the nudge, the closing nudge
+and the artefact delivery shapes all carry different exclamation rules. Forcing a bright
+"!" into a message about a charity that closed the year £76,600 down reads exactly as
+badly as it sounds. **Raka's call whether the tool should learn the five shapes.** It has
+not been changed here, because quietly loosening a gate so my own drafts pass it is the
+wrong instinct.
+
 ## The four pass read back, done by hand after the gate
 
-**Pass 1, read aloud.** Both parse. Kate's quote of her own donate page runs inline
-without quote marks because the colon ban forbids introducing it properly, and "that page
-still tells them," carries it well enough.
+**Pass 1, read aloud.** Both parse. Kate's quote of her own page runs inline without
+quote marks because the colon ban forbids introducing it properly, and "that page still
+tells them," carries it.
 
-**Pass 2, the credential is the reason we can do the offer.** Sergey passes, the Dutch
-agency with a dev team behind it is exactly why we could build a second product, and Betty
-Blocks is not reused because it was already spent on him on 16 September. **Kate spends no
-credential at all**, because Eten Maar and the pricing line were already spent in the
-21 September opener and repeating it in a reply would bloat a message that is already
-carrying three numbers.
+**Pass 2, the credential is the reason we can do the offer.** Sergey passes, a Dutch
+agency with a dev team behind it is exactly why we could build a second product, and
+Betty Blocks is not reused because it was spent on him on 16 September. **Kate spends no
+credential**, because Eten Maar and the pricing line were already spent in the
+21 September opener and repeating it would crowd out a message already carrying four
+numbers.
 
-**Pass 3, block four names a thing you could draw. Kate passes, Sergey does not, and that
+**Pass 3, block four names a thing you could draw. Kate passes, Sergey does not, and it
 is deliberate.** Kate gets "the single screen version to drop in, amount and card
-together", which is drawable. Sergey's close is a question rather than an artefact,
-because he replied with two words and pushing a build onto "Thanks Raka" is how a warm
-thread dies. The artefact conversation is one answer away, not now. **Flagged rather than
-hidden, and easy to change if Raka would rather it carried an offer.**
+together". Sergey closes on a question because he replied with two words, and pushing a
+build onto "Thanks Raka" is how a warm thread dies. Flagged, not hidden.
 
 **Pass 4, the batch in a column.** Closes are "Who's doing the build?" and "What's the
-research telling you?", different questions doing different jobs. Openers are "a new build
-is good news" and "glad the site's back". No repetition.
-
-**`python3 tools/check-drafts.py` exits 0.** It failed seven ways first, on word count,
-zero exclamation marks, five blocks instead of four, and "a proper look" tripping the
-cringe grep. All four fixed rather than overridden.
+research telling you?". Openers are "a new build is good news" and "glad the site's back".
+No repetition.
