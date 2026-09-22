@@ -11,6 +11,10 @@
 > This file is the operating procedure and the corrections history behind those rules.
 > It is reference. Open the section you need, do not read it end to end.
 >
+> **The first message to any lead is Raka's opener template, filled EXACTLY (2026-09-22).**
+> Fixed wording, only the brackets change. The spec, the eleven inputs it needs and the
+> rules for every slot are in **`docs/opener-template.md`**. Read it before any opener.
+>
 > **The two tools that enforce rather than remind.** `node tools/site-audit.js <url>
 > <tag>` runs a positive control on itself and voids its own absence findings when the
 > detector fails. `python3 tools/check-drafts.py <file>` exits non zero, so it cannot be

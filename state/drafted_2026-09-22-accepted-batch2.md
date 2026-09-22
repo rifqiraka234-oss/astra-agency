@@ -1,3 +1,5 @@
+<!-- NO DRAFTS. Verdicts only. Marker restored 2026-09-22 after I overwrote it by mistake when adding the superseded note below. -->
+
 <!-- SUPERSEDED IN TWO PLACES, 2026-09-22.
      William Mayvis is NOT blocked any more. He was SENT at 10:53:19Z, see
      drafted_2026-09-22-batch2-retry.md and his queue row.

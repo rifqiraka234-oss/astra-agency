@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED. William Mayvis SENT 2026-09-22 10:53:19Z in the old shape. History. -->
+
 # Batch 2, second attempt. 2026-09-22. NOT SENT.
 
 > **REVIVED 2026-09-22, and reframed by Raka.** The angle was killed earlier today because a

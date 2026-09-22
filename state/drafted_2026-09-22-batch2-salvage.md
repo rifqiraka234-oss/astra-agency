@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED. Superseded, never sent in this form. Daan Erisman was SENT 2026-09-22 19:15:48Z from drafted_2026-09-22-template-test-tuftuf.md in Raka's template. -->
+
 # Batch 2, third pass. Salvage. 2026-09-22. NOT SENT.
 
 William Mayvis was sent at 10:53:19Z. This is the other four, looked at again because Raka

@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED. All eight SENT 2026-09-21 16:15, confirmed against queue rows 2026-09-22. Old opener shape, history. -->
+
 # Drafts, 2026-09-21, eight of the fourteen accepted
 
 **Not sent. Nothing goes without Raka's explicit word.**

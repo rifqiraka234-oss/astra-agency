@@ -58,6 +58,10 @@ print("""  It outranks every other doc except a live instruction from Raka.
       visual, asset and emptiness finding is void AND THE SCREENSHOTS ARE
       UNUSABLE for that site. A blocked page is never a weak page.
 
+    THE OPENER TEMPLATE IS FIXED WORDING. Raka's, 2026-09-22. Only the brackets
+      change. Full spec, the eleven inputs and every rule, in docs/opener-template.md.
+      Read it before drafting any first message. check-drafts.py enforces the wording.
+
     PRESUMPTION. A lemlist field is a claim, not a fact. Before fetching
       anything, read the tagline against companyName, separate the business
       they OWN from the job they HOLD, confirm the domain is actually theirs,

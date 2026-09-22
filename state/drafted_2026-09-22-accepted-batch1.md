@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED. Tim Balogun SENT 2026-09-22 06:15:25Z. The rewritten block in this file was never sent. History. -->
+
 # Batch 1 of the v0.1 accepted backlog, newest first. 2026-09-22.
 
 **Nothing sent.** One message drafted, four leads killed or blocked with evidence.

@@ -164,39 +164,37 @@ Quoting outside the public 5,000 to 50,000 euro band.
 and two of them each claimed precedence. **90 to 145 is the number.** The floor came down from 100 on 2026-09-22, because the plain block one removes about fourteen words from every opener and the substance now sits in blocks two to four. The roast register
 may run to about 180 because the evidence is the joke.
 
-**The four blocks.**
+**The opener template. THE first message, Raka's, adopted 2026-09-22. Filled EXACTLY.**
+Only the brackets change. Everything outside them is fixed wording. He rejected a version
+that added a clause to block two and reworded the brand line.
 
 ```
-Hi [name], saw [the company or the thing], looks interesting!
+Hi [name], saw [company], looks interesting!
 
-However, [the problem in one sentence]. This means [the cost of doing nothing].
+However, your [surface] is [the critical flaw]. This causes [stakeholder] to [impact].
 
-I run Astra agency [what we would do for them] after [one matched credential].
+I run Astra agency. We build [xyz] for brands like Unilever, AXA, Pertamina. I [proof].
 
-Shall I [the artefact, named concretely]?
+Shall I build the [thing] so [stakeholder achieves goal], and send it over?
 ```
 
-**Block one is the plain shape and nothing more (Raka, 2026-09-22).** "Hi [name], saw
-[thing], looks interesting!" Do not describe what they do back to them, do not name the
-detail you found, do not explain why their choice was clever. **The detail belongs in block
-two, where it is doing work.** A specific observation in block one is the commonest way
-these messages get long and pleased with themselves, and it also tempts a claim sourced from
-a scrape rather than from the page.
+**Full spec in `docs/opener-template.md`, read it before drafting any opener.** It lists
+the eleven inputs, the source for each, the rules block by block, the research that fills
+the flaw, how to match the proof, and what to do when the template cannot be filled. The
+short version.
+
+- **Block two is exactly two sentences.** One or two flaws, overarching across every page,
+  critically poor, and it must pass the positive control, render trust, the tweak test and
+  the red team. Then one stakeholder and what they do instead.
+- **The brand line is fixed text.** "Unilever, AXA, Pertamina", never reworded or trimmed.
+- **One proof, and it carries the argument.** The experience AND why it bears, in one line.
+- **Block two's stakeholder is block four's stakeholder**, and block four's thing fixes
+  block two's flaw.
 
 **Hard bans in outreach prose.** No colon character anywhere. No em dash, en dash or
 hyphen, with one exemption, a hyphen inside a real proper noun such as Mercedes-Benz or
 Witt-Dörring. Exactly one exclamation mark and it lives in block one. Contractions must be
 present. English always, whatever language the lead or their site is in.
-
-**Block one.** **SUPERSEDED 2026-09-22, see the plain shape above.** It used to be one thing
-seen plus a three or four word compliment. It is now just the name and "looks interesting".
-The old bans still hold and are easier to keep, never a list, never a second example, never
-an interpretation of why their choice was clever, never rate their craft.
-
-**Block three.** Two or three short sentences. Never a comma chain. One credential, matched
-per `docs/astra-master-context.md` section 2A, never a list of them.
-
-**Block four.** Name the artefact so a stranger could draw it.
 
 **Tag every draft with its shape, in the heading above the fenced block.** One of
 OPENER, REPLY, NUDGE, CLOSER, BOOKING, DELIVERY or CORRECTION. The tool reads the tag and

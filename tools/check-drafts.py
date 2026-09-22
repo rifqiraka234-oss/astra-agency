@@ -119,7 +119,7 @@ def check(path, replies=False):
         if relaxed:
             pass
         elif not 88 <= words <= 150:
-            bad(i, f"{words} words, outside 95 to 150")
+            bad(i, f"{words} words, outside 88 to 150")
         # MONEY. Raka scrapped the general numbers rule on 2026-09-22, after we told the
         # CEO of Hounds for Heroes what her own accounts meant and got it wrong. A figure
         # is allowed ONLY when it quantifies what the lead is forgoing, losing or being
@@ -159,6 +159,35 @@ def check(path, replies=False):
         # Four blocks, per the opener template. Replies have their own shape.
         if not relaxed and len(m.split("\n\n")) != 4:
             bad(i, f"{len(m.split(chr(10)+chr(10)))} blocks, the template is 4")
+        # THE OPENER TEMPLATE, fixed wording. Raka, 2026-09-22, "follow the fucking
+        # template i gave you". Only the brackets change. See docs/opener-template.md.
+        if not relaxed and len(m.split("\n\n")) == 4:
+            B = [" ".join(b.split()) for b in m.split("\n\n")]
+            if not re.fullmatch(r"Hi [^,]+, saw .+, looks interesting!", B[0]):
+                bad(i, "block one must be exactly 'Hi [name], saw [company], looks interesting!'")
+            if not B[1].startswith("However, your "):
+                bad(i, "block two must open 'However, your [site or social media] is ...'")
+            s2 = re.split(r"(?<=[.!?]) (?=[A-Z])", B[1])
+            if len(s2) != 2:
+                bad(i, f"block two must be exactly two sentences, found {len(s2)}")
+            elif not s2[1].startswith("This causes "):
+                bad(i, "block two's second sentence must open 'This causes [stakeholder] to'")
+            # No clauses bolted on. Raka rejected "... while it sells private events ..."
+            # and "... so your events team loses ...", 27 and 36 words. His run 14 to 19.
+            for k, sent in enumerate(s2[:2]):
+                if len(sent.split()) > 25:
+                    bad(i, f"block two sentence {k+1} is {len(sent.split())} words, cap 25, "
+                           "a clause has been added to the template")
+            if not B[2].startswith("I run Astra agency. We build "):
+                bad(i, "block three must open 'I run Astra agency. We build [xyz]'")
+            if "for brands like Unilever, AXA, Pertamina." not in B[2]:
+                bad(i, "block three must carry the fixed line 'for brands like Unilever, AXA, Pertamina.'")
+            if not re.search(r"Pertamina\. I \S", B[2]):
+                bad(i, "block three's third sentence must be the proof, opening 'I ...'")
+            if not (B[3].startswith("Shall I build the ") and " so " in B[3]
+                    and B[3].endswith("and send it over?")):
+                bad(i, "block four must be 'Shall I build the [thing] so [goal], and send it over?'")
+
         # Block three must not be one long comma chain. Raka, 2026-09-16.
         b3 = m.split("\n\n")[2] if len(m.split("\n\n")) > 2 else ""
         for s in re.split(r"(?<=[.!?]) ", b3):
@@ -173,7 +202,8 @@ def check(path, replies=False):
 
         lines = [l for l in m.strip().split("\n") if l.strip()]
         closings.append(" ".join(lines[-1].split()))
-        cm = re.search(r"go on them\.\s*(.*?)(?:\n\n|$)", m, re.S)
+        cm = (re.search(r"Pertamina\.\s*(.*?)(?:\n\n|$)", m, re.S)
+              or re.search(r"go on them\.\s*(.*?)(?:\n\n|$)", m, re.S))
         credentials.append(" ".join(cm.group(1).split()) if cm else f"<none {i+1}>")
 
     # Pass 4. A batch that repeats itself is a template, and it reads as one.
@@ -185,11 +215,22 @@ def check(path, replies=False):
     skip = ("run astra agency", "astra agency we", "agency we build", "we build websites",
             "build websites and", "websites and the", "and the tools", "the tools that",
             "tools that go", "that go on", "go on them", "on them i", "and send it over")
+    # The template's fixed wording repeats in every opener by design, so it is stripped
+    # before comparing. Only what was filled into the brackets can trip pass 4.
+    FIXED = ("looks interesting", "however, your", "this causes", "i run astra agency.",
+             "we build", "for brands like unilever, axa, pertamina.", "shall i build the",
+             "and send it over?")
     c = Counter()
     for m in msgs:
-        w = re.sub(r"[^a-z ]", " ", m.lower()).split()
+        low = m.lower()
+        for f in FIXED:
+            low = low.replace(f, " | ")
+        w = re.sub(r"[^a-z| ]", " ", low).split()
         for j in range(len(w) - 5):
-            c[" ".join(w[j:j + 6])] += 1
+            gram = w[j:j + 6]
+            if "|" in gram:
+                continue
+            c[" ".join(gram)] += 1
     for phrase, n in c.items():
         if n > 1 and not any(s in phrase for s in skip):
             fails.append(f"  batch: 6 word phrase repeated {n}x, '{phrase}'")
