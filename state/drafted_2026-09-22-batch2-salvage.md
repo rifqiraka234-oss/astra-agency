@@ -57,14 +57,39 @@ before any click with no banner. Positive control, the same href method finds
 whoever maintains the site. It is worth raising later as a favour, especially since the
 consent tick currently points at nothing.
 
+
+### Raka's edit, 2026-09-22. The pain was not felt and the value was too small.
+
+**Why the first draft was weak, and both faults were mine.**
+
+- **The pain was hypothetical.** "Somebody booking a room they've never seen" invites the
+  obvious answer, they can look at the Instagram. And nobody loses a night's sleep over a
+  mild hesitation.
+- **The value was a brochure.** "A page that shows the room" is a design deliverable. It
+  names no money and it prices itself low.
+
+**What was already in hand and went unused.** Their homepage says **Friday and Saturday**,
+and the form sells private hire to **two hundred guests at a fifteen thousand euro example
+budget**. Put those two next to each other and the stake is obvious without modelling
+anything, which the money rule forbids.
+
+**The sharper pain is that the loss is invisible.** An event planner shortlisting Amsterdam
+venues for a hundred and fifty people does not hesitate and does not enquire. They move on.
+Tuftuf never enters the comparison and Daan never hears that it happened. A loss you cannot
+see is worse than one you can.
+
+**The credential now carries the argument instead of decorating it.** Eten Maar had
+inventory that went off. A venue has nights that do. Same problem, and it is why we can
+speak to it.
+
 ```
 Hi Daan, saw tuftuf, looks interesting!
 
-However, there isn't a single photo anywhere on the site. This means somebody filling in the private event form, where the budget box gives fifteen thousand euros as the example, is booking a room they've never seen, and for forty to two hundred guests that's a lot to take on trust.
+However, your site says Friday and Saturday, and the only other thing on it is a private event form for up to two hundred guests with fifteen thousand euros as the example budget. There isn't one photo of the room anywhere. This means a planner comparing Amsterdam venues has nothing to look at, so tuftuf drops off the list before anyone calls and you never find out it happened.
 
-I run Astra agency. We build websites and the tools that go on them. I built a food brand from zero with my family and ran the pricing, so I know what it costs when people can't picture what they're buying.
+I run Astra agency. We build websites and the tools that go on them. I built a food brand from zero with my family and ran the inventory, so I know what unsold stock costs. It's the same problem with an empty room.
 
-Shall I build tuftuf a private events page that shows the room and what a night there looks like, and send it over?
+Shall I build the venue page, the room at two hundred with your three formats on it, and send it over?
 ```
 
 ---
