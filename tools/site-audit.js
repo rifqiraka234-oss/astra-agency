@@ -170,8 +170,10 @@ function classify(url, base) {
   const requests = [];
   const pageErrors = [];
   const failed = [];
+  const badResponses = [];
   page.on('request', (r) => requests.push({ url: r.url(), type: r.resourceType() }));
   page.on('requestfailed', (r) => failed.push(r.url()));
+  page.on('response', (r) => { if (r.status() >= 400) badResponses.push({ url: r.url(), status: r.status() }); });
   page.on('pageerror', (e) => pageErrors.push(String(e).slice(0, 160)));
 
   // ---------------------------------------------------------------
@@ -319,6 +321,54 @@ function classify(url, base) {
       ratio < 0.01 || dom.inlineScriptsInMain > 0 || dom.gateCandidates.length > 0,
   };
 
+  // ---------------------------------------------------------------
+  // RENDER TRUST. Added 2026-09-22 after Chromium reported HTTP 415 on six of
+  // nine images on dariuz.nl and a message saying "six of nine images on your
+  // homepage are broken" was one step from being sent. Direct curl returned
+  // 200 image/png for the same files. The failure was ours, not theirs.
+  //
+  // So every asset this reader could not load is re-fetched through a second,
+  // independent path before it is allowed to count as the site's problem. If
+  // the second path succeeds, the asset is OURS and every asset finding in
+  // this run is VOID. Absence and breakage claims are the ones that reach a
+  // lead and cannot be taken back, so the default is always to blame our own
+  // reader first.
+  // ---------------------------------------------------------------
+  const brokenImages = await page.evaluate(() => Array.from(document.images)
+    .filter((i) => i.naturalWidth === 0 && (i.currentSrc || i.src))
+    .map((i) => i.currentSrc || i.src));
+  // Only the site's OWN assets count. A failed Google Analytics beacon or a
+  // YouTube video stream is not the site being broken, and letting those fire
+  // the guard made it shout on every healthy run, which is how a guard gets
+  // ignored. Same host, ignoring www, and real assets only.
+  const ownHost = (() => { try { return new URL(target).hostname.replace(/^www\./, ''); } catch { return ''; } })();
+  const sameSite = (u) => { try { return new URL(u).hostname.replace(/^www\./, '') === ownHost; } catch { return false; } };
+  const isAsset = (u) => /\.(jpe?g|png|gif|webp|avif|svg|css|js|woff2?|ttf|mp4|webm|pdf)(\?|#|$)/i.test(u);
+  const suspectAssets = [...new Set([...brokenImages, ...badResponses.map((b) => b.url), ...failed])]
+    .filter((u) => /^https?:/i.test(u) && sameSite(u) && isAsset(u)).slice(0, 12);
+
+  const CURL = 'curl -s -o /dev/null -L --max-time 20 -w "%{http_code} %{content_type}"';
+  const probe = (u, extra = '') => {
+    try {
+      return execSync(`${CURL} ${extra} ${JSON.stringify(u)}`, { encoding: 'utf8', timeout: 25000 }).trim();
+    } catch { return 'ERR'; }
+  };
+  const assetChecks = suspectAssets.map((u) => {
+    const plain = probe(u);
+    const chromeish = probe(u, `-H ${JSON.stringify('Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8')}`);
+    const okPlain = /^2\d\d/.test(plain) && !/text\/html/.test(plain);
+    const okChrome = /^2\d\d/.test(chromeish) && !/text\/html/.test(chromeish);
+    return { url: u, viaCurl: plain, viaCurlChromeAccept: chromeish, servesFineElsewhere: okPlain || okChrome };
+  });
+  const oursNotTheirs = assetChecks.filter((a) => a.servesFineElsewhere);
+  const renderTrust = {
+    suspectAssets: assetChecks,
+    assetsOurFault: oursNotTheirs.length,
+    assetsTheirFault: assetChecks.length - oursNotTheirs.length,
+    // One asset proven fine elsewhere is enough to distrust the whole render.
+    assetFindingsTrustworthy: assetChecks.length === 0 || oursNotTheirs.length === 0,
+  };
+
   const out = {
     target, tag, status, navError, fetchedAt: new Date().toISOString(),
     reach,
@@ -342,6 +392,7 @@ function classify(url, base) {
       allThirdPartyHosts: thirdPartyRequests,
     },
     social: dom.social,
+    render: renderTrust,
     health: { pageErrors, failedRequests: failed.slice(0, 15) },
     shots: { desktop: desktopShot, phone: path.join(outDir, `${tag}-phone.png`) },
   };
@@ -375,6 +426,26 @@ function classify(url, base) {
     console.log('!!  Do NOT report this as a social presence. It is the opposite of one.');
   }
   console.log(`errors       ${pageErrors.length} page errors, ${failed.length} failed requests`);
+  if (renderTrust.suspectAssets.length) {
+    console.log('');
+    if (!renderTrust.assetFindingsTrustworthy) {
+      console.log(`!!  RENDER NOT TRUSTED. ${renderTrust.assetsOurFault} of ${renderTrust.suspectAssets.length} assets this`);
+      console.log('!!  reader could not load ARE SERVED FINE over a direct fetch, so the failure is');
+      console.log('!!  OURS, not theirs. Every asset, image, layout and breakage finding in this run');
+      console.log('!!  is VOID. You may NOT say anything is broken, missing or not loading, and the');
+      console.log('!!  screenshots are unreliable for this site because they are missing real assets.');
+      renderTrust.suspectAssets.filter((a) => a.servesFineElsewhere).slice(0, 5)
+        .forEach((a) => {
+          const ok = /^2\d\d/.test(a.viaCurl) && !/text\/html/.test(a.viaCurl) ? a.viaCurl : a.viaCurlChromeAccept;
+          console.log(`!!    ours  ${ok.padEnd(22)} ${a.url.slice(0, 90)}`);
+        });
+    } else {
+      console.log(`!!  ${renderTrust.suspectAssets.length} asset(s) failed here AND failed a direct re-fetch, so this one is theirs.`);
+      console.log('!!  Still open the screenshot before writing it down.');
+      renderTrust.suspectAssets.slice(0, 5)
+        .forEach((a) => console.log(`!!    theirs ${a.viaCurl.padEnd(22)} ${a.url.slice(0, 90)}`));
+    }
+  }
   if (hidden.contentProbablyHidden) {
     console.log('');
     console.log('!!  CONTENT MAY BE HIDDEN FROM THIS READER. DO NOT CALL THIS PAGE EMPTY OR THIN.');

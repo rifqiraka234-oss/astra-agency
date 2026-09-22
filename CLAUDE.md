@@ -319,6 +319,20 @@ fields on accepted leads. Read them. Do not rebuild a person from a name and a g
 - **Never guess which business is theirs**, and never pick the plausible one out of a
   search result. Several unrelated people share a name. If it cannot be tied to the
   person with evidence, the row is `BLOCKED_NEEDS_INFO` and it stays untouched.
+- **Reconcile the record against itself BEFORE fetching a single page (Raka, 2026-09-22).**
+  Two of the first five leads in the accepted backlog carried wrong company data, and both
+  would have produced an embarrassing message. **Adrian Steele**, `companyName` Mercian
+  Labels and `jobTitle` Director, had sold the company and resigned per Companies House,
+  and his own tagline said "Former Owner". **Romain Coquio**, `companyDomain` `carrefour.fr`,
+  a multinational he does not own, with a tagline naming a different employer. Both were
+  visible in the lemlist record before any research happened. So the first action on every
+  lead is four reads, not a fetch. Tagline against `companyName`, since when they disagree
+  the tagline has been right both times and "former", "ex" and "previously" are stop signs.
+  The business they OWN against the job they HOLD, which is how Tim Balogun's "Founder -
+  London Makers" against `companyName` HF Mencap resolved into London Makers being a
+  programme inside HF Mencap with him as CEO. The domain actually being theirs rather than a
+  corporate or franchise page they cannot change. And for any owner or founder claim, the
+  statutory record, which outranks lemlist every time.
 
 #### 3. The website. Fetch it, render it, and LOOK at it
 
@@ -344,6 +358,18 @@ snippet is not a website and a grep is not a look.
   `000` is not evidence, nextfood.ai is live and modern. A TLS error through the egress
   proxy is never evidence about their certificate. Always load a control host through the
   same path in the same minute.
+- **The unloaded screen, and it is now mechanically enforced (Raka, 2026-09-22).** On
+  `dariuz.nl` Chromium reported HTTP 415 on six of nine images and a message saying six of
+  nine were broken was one step from going out. Direct curl returned `200 image/png` for
+  the same files, and the same URL returns an image, a 415 or an HTML page depending only
+  on the `Accept` header we send. On `dialogue.earth` we got 403 twice while Raka's own
+  screenshots show a full modern newsroom with a live story grid.
+  **`tools/site-audit.js` now re-fetches every failed same origin asset through a second
+  independent path and prints `RENDER NOT TRUSTED` when the failure is ours.** When it
+  fires, every visual, asset, layout, breakage and emptiness finding in that run is void
+  **and the screenshots are unusable for that site**, because they are missing real assets.
+  The screenshot is not the fallback, it is the thing that is wrong. The row is
+  `BLOCKED_NEEDS_INFO` and Raka opens it. A blocked page is never a weak page.
 
 **And the web search rule underneath all three.** A search is how you FIND something to
 open. It is never the thing itself. Anything taken from a snippet, a summary or a cached

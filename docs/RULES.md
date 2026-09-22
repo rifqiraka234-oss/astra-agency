@@ -52,6 +52,63 @@ and if the check is not in a file it did not happen.
 **Three sentences you may never write.** "Your website isn't working." "Your page is
 empty." Anything you did not open, fetch, count or click on this pass.
 
+### 0A. The unloaded screen (Raka, 2026-09-22)
+
+**Our reader failing to load something is never evidence about their site.** This has now
+nearly shipped twice. Chromium reported HTTP 415 on six of nine images on `dariuz.nl` and
+a message saying six of nine images were broken was one step from being sent. Direct curl
+returned `200 image/png` for the same files. The same URL returns an image, a 415 or an
+HTML page depending only on the `Accept` header we send. Separately, `dialogue.earth`
+returned 403 on every attempt, and Raka's own screenshots show a full, modern, 20 year old
+newsroom with a live story grid.
+
+**`node tools/site-audit.js` now re-fetches every failed same origin asset through a
+second independent path and prints `RENDER NOT TRUSTED` when the failure turns out to be
+ours.** When that fires, **every visual, asset, layout, breakage and emptiness finding in
+that run is void, and the screenshots are unusable for that site** because they are missing
+real assets. Do not reason around it. Do not "just check the screenshot", the screenshot is
+the thing that is wrong.
+
+**The three states, and only one of them lets you write a sentence.**
+
+| State | What you may say |
+|---|---|
+| Rendered, guard quiet, screenshot opened | Describe what you saw |
+| `RENDER NOT TRUSTED`, or a bot wall, or a 403 | **Nothing, in either direction.** Row is `BLOCKED_NEEDS_INFO` and Raka opens it |
+| Asset failed here **and** failed the independent re-fetch | It is theirs, and still open the screenshot before writing it |
+
+**A blocked page is not a weak page.** A wall, a challenge, a timeout or a void render says
+we could not look. It never says the site is thin, dated, broken or empty.
+
+### 0B. Presumption (Raka, 2026-09-22)
+
+**A field in lemlist is a claim, not a fact, and it is often stale.** Two of the five leads
+in the first batch had wrong company data and both would have produced an embarrassing
+message.
+
+- **Adrian Steele.** `companyName` Mercian Labels, `jobTitle` Director. He had **sold the
+  company and resigned**, per Companies House. His own tagline said "Former Owner".
+- **Romain Coquio.** `companyDomain` `carrefour.fr`, a multinational he does not own, while
+  his tagline named a different employer.
+
+**So before any research, reconcile the record against itself.** It costs one read and it
+catches this class of error before a single page is fetched.
+
+1. **Read the tagline against `companyName`.** They disagreed on both failures above, and
+   in both cases the tagline was right. "Former", "ex", "previously" and a different
+   employer name are all stop signs.
+2. **Separate the business they OWN from the job they HOLD.** `jobTitle` naming a different
+   company than `companyName` means stop and resolve it. Tim Balogun's said "Founder -
+   London Makers" against `companyName` HF Mencap, and the answer was that London Makers is
+   a programme inside HF Mencap and he is its CEO.
+3. **Confirm the domain is actually theirs.** A corporate or franchise domain is not the
+   lead's website and cannot be rebuilt by them.
+4. **For any owner or founder claim, check the statutory record** before building an angle
+   on it. Companies House, KVK, societe.com, the Impressum. It outranks lemlist every time.
+
+**If the record cannot be reconciled with evidence, the row is `BLOCKED_NEEDS_INFO` and
+stays untouched.** Never pick the plausible reading.
+
 ---
 
 ## 1. Sending
@@ -151,7 +208,12 @@ the business they OWN from the job they HOLD. Pull the statutory filing. Then th
 rendered and LOOKED at before any grep. Then the impact on that person's number. Then
 widen only if the site is genuinely fine.
 
-**Run `node tools/site-audit.js <url> <tag>` and open BOTH screenshots.** The five angles
+**Reconcile the lemlist record against itself before fetching anything.** Section 0B. The
+tagline against `companyName`, the business owned against the job held, and the domain
+actually being theirs.
+
+**Run `node tools/site-audit.js <url> <tag>` and open BOTH screenshots.** If it prints
+`RENDER NOT TRUSTED`, stop, the run is void and so are the screenshots. See section 0A. The five angles
 are dated looks, stack and social, GDPR, a shortcoming against their target, and
 certificates. Order of force is usually 4, 3, 1, 2, 5.
 

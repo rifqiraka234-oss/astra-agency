@@ -50,7 +50,19 @@ print("""  It outranks every other doc except a live instruction from Raka.
       directions, from the first message. get_inbox_conversation is capped at
       TEN PER PAGE, newest first, and limit above 10 is refused, so page until
       nextPage is null. A thread over ten messages hides its own beginning,
-      and the beginning is where the promises live.""")
+      and the beginning is where the promises live.
+
+    THE UNLOADED SCREEN. Our reader failing is never evidence about their site.
+      site-audit.js re-fetches every failed same origin asset a second way and
+      prints RENDER NOT TRUSTED when the failure is OURS. When it fires, every
+      visual, asset and emptiness finding is void AND THE SCREENSHOTS ARE
+      UNUSABLE for that site. A blocked page is never a weak page.
+
+    PRESUMPTION. A lemlist field is a claim, not a fact. Before fetching
+      anything, read the tagline against companyName, separate the business
+      they OWN from the job they HOLD, confirm the domain is actually theirs,
+      and check the statutory record on any owner claim. Two of the first five
+      accepted leads were stale this way, one had sold his company.""")
 
 head("2. GIT")
 print(f"  branch   {sh('git rev-parse --abbrev-ref HEAD')}")
