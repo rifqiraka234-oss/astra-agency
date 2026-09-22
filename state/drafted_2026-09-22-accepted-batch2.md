@@ -1,7 +1,10 @@
-<!-- NO DRAFTS. Every lead in this batch reached a verdict and none produced a message.
-     Peter Borup no, Mandy Kerley no, David Marian DO_NOT_CONTACT, Daan Erisman
-     NO_STRONG_ANGLE. William Mayvis is the one worth having and is blocked on Raka
-     opening relatiq.nl on his phone, per RULES.md section 0. Nothing to gate. -->
+<!-- SUPERSEDED IN TWO PLACES, 2026-09-22.
+     William Mayvis is NOT blocked any more. He was SENT at 10:53:19Z, see
+     drafted_2026-09-22-batch2-retry.md and his queue row.
+     Daan Erisman is NOT no angle any more. Overruled with evidence in
+     drafted_2026-09-22-batch2-salvage.md, tuftuf.nl carries zero images while selling
+     private events with a fifteen thousand euro example budget.
+     Peter Borup, Mandy Kerley and David Marian stand as written below. -->
 
 # Batch 2 of the v0.1 accepted backlog. 2026-09-22. Verdicts only, no drafts.
 
