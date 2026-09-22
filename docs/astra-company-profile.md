@@ -89,6 +89,12 @@ are **not** client work and must never be described as such. Unilever, GPay
 and MWX are the genuine article and can be named, with the delivery partner
 disclosure attached.
 
+
+**Raka's opener template, 2026-09-22.** Block three reads "We build [xyz] for brands like
+Unilever, AXA, Pertamina." as fixed text, confirmed by Raka directly. Use that line as he
+wrote it. AXA and Pertamina are not in the deck transcribed above, so this template is the
+record for them.
+
 ### Is ASTRA AGENCY for you, the qualification page
 
 **Good fit if:**

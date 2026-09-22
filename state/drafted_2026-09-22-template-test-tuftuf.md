@@ -62,16 +62,16 @@ name, and MWX is a web3 marketplace, which is the wrong signal to a nightlife bu
 
 ---
 
-## The draft. OPENER.
+## The draft. OPENER. Raka's template filled exactly, 2026-09-22.
 
 ```
 Hi Daan, saw tuftuf, looks interesting!
 
-However, your site is two pages and neither carries a single photo of the room, while it sells private events from forty guests to two hundred plus. This causes event planners shortlisting Amsterdam venues to pass over tuftuf without ever enquiring, so your events team loses bookings at your own fifteen thousand euro example and doesn't even hear about them.
+However, your site is two pages with not a single photo of the room. This causes event planners booking for forty to two hundred guests to pick a venue they can actually see.
 
-I run Astra agency. With our development partner we've built websites and apps for brands like Unilever. I built a food brand from zero with my family and ran the inventory, so I know what an unsold night costs.
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I built a food brand from zero with my family and ran the inventory, so I know what an unsold night costs.
 
-Shall I build the private events page so planners can see the room at two hundred and book it, and send it over?
+Shall I build the private events page so planners can see the room they're booking, and send it over?
 ```
 
 ### Every claim, and where it was verified this pass
