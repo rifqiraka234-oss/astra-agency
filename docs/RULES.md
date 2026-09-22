@@ -158,16 +158,16 @@ Quoting outside the public 5,000 to 50,000 euro band.
 
 ## 2. The message. One number per rule.
 
-**Opener length is 100 to 145 words.** This supersedes the 65 word ceiling in
+**Opener length is 90 to 145 words.** This supersedes the 65 word ceiling in
 `docs/enrichment-pipeline-spec.md` and `docs/astra-master-context.md` section 9, and the
 90 to 150 general guidance in that same doc. Those three numbers contradicted each other
-and two of them each claimed precedence. **100 to 145 is the number.** The roast register
+and two of them each claimed precedence. **90 to 145 is the number.** The floor came down from 100 on 2026-09-22, because the plain block one removes about fourteen words from every opener and the substance now sits in blocks two to four. The roast register
 may run to about 180 because the evidence is the joke.
 
 **The four blocks.**
 
 ```
-Hi [name], saw [something they published] and [compliment it]!
+Hi [name], saw [the company or the thing], looks interesting!
 
 However, [the problem in one sentence]. This means [the cost of doing nothing].
 
@@ -176,14 +176,22 @@ I run Astra agency [what we would do for them] after [one matched credential].
 Shall I [the artefact, named concretely]?
 ```
 
+**Block one is the plain shape and nothing more (Raka, 2026-09-22).** "Hi [name], saw
+[thing], looks interesting!" Do not describe what they do back to them, do not name the
+detail you found, do not explain why their choice was clever. **The detail belongs in block
+two, where it is doing work.** A specific observation in block one is the commonest way
+these messages get long and pleased with themselves, and it also tempts a claim sourced from
+a scrape rather than from the page.
+
 **Hard bans in outreach prose.** No colon character anywhere. No em dash, en dash or
 hyphen, with one exemption, a hyphen inside a real proper noun such as Mercedes-Benz or
 Witt-Dörring. Exactly one exclamation mark and it lives in block one. Contractions must be
 present. English always, whatever language the lead or their site is in.
 
-**Block one.** One thing seen, one reaction. Never a list, never a second example, never an
-interpretation of why their choice was clever. The compliment is three or four words.
-Never rate their craft.
+**Block one.** **SUPERSEDED 2026-09-22, see the plain shape above.** It used to be one thing
+seen plus a three or four word compliment. It is now just the name and "looks interesting".
+The old bans still hold and are easier to keep, never a list, never a second example, never
+an interpretation of why their choice was clever, never rate their craft.
 
 **Block three.** Two or three short sentences. Never a comma chain. One credential, matched
 per `docs/astra-master-context.md` section 2A, never a list of them.
@@ -223,6 +231,15 @@ actually being theirs.
 `RENDER NOT TRUSTED`, stop, the run is void and so are the screenshots. See section 0A. The five angles
 are dated looks, stack and social, GDPR, a shortcoming against their target, and
 certificates. Order of force is usually 4, 3, 1, 2, 5.
+
+**Before ANY absence claim about a website, run a plain web search for the company's own
+site FIRST (Raka, 2026-09-22).** Relatiq was one approval away from a message saying the
+company had no website. Five DNS paths agreed `relatiq.nl` had no A record, and a search
+returned `www.relatiq.nl` with detailed content only a crawler that read the page could
+have, calendar integration and named customer types. A search is the cheapest way to find
+a site and it was the one thing never run. Also checked in that pass, `relatiq.app`, which
+is a different company entirely, a consumer app that reads your texts for attachment
+styles. **A plausible TLD is the wrong domain trap wearing a new hat.**
 
 **Never guess** a domain, a nav path or a social handle. Take every URL from their own HTML
 or a search result, then fetch it and confirm the page names the right company.

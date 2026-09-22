@@ -113,11 +113,12 @@ def check(path, replies=False):
         flat = " ".join(m.split())
         words = len(m.split())
 
-        # 100 to 145 words is the template. 150 is the roast register ceiling.
+        # 90 to 145 words is the template, floor lowered 2026-09-22 when block one
+        # became the plain shape. 150 is the roast register ceiling.
         relaxed = replies or shapes[i] in RELAXED
         if relaxed:
             pass
-        elif not 95 <= words <= 150:
+        elif not 88 <= words <= 150:
             bad(i, f"{words} words, outside 95 to 150")
         # MONEY. Raka scrapped the general numbers rule on 2026-09-22, after we told the
         # CEO of Hounds for Heroes what her own accounts meant and got it wrong. A figure

@@ -1,4 +1,24 @@
-# Batch 2, second attempt. 2026-09-22. NOT SENT.
+# Batch 2, second attempt. 2026-09-22. NOT SENT, AND THE RELATIQ ANGLE IS DEAD.
+
+> **KILLED 2026-09-22 by Raka.** He pointed at relatiq.app and told me to run a web search.
+> **relatiq.app turned out to be a different company**, "RelatIQ, Decode Your Relationship
+> Dynamics", a 9.99 dollar a month consumer app that reads your texts for attachment styles,
+> on a GoDaddy IP. That is the wrong domain trap, not William's business.
+>
+> **But the web search killed the angle anyway.** Every search returns
+> `https://www.relatiq.nl/` with *detailed* content, calendar integration, lead
+> qualification, "trusted by accounting offices and service providers in the Netherlands".
+> That level of detail only comes from a crawler that actually read the page.
+>
+> **So five DNS paths said no A record and the index says the page has been read.** I cannot
+> reconcile those from here, and I was one approval away from telling a founder he has no
+> website. The draft below must not be sent. Row goes back to `BLOCKED_NEEDS_INFO` and the
+> only thing that settles it is Raka opening `relatiq.nl`.
+>
+> **The lesson, and it is mine.** I checked relatiq.com, relatiq.ai, www and the apex, and
+> I swept the DNS five ways, but I never ran a plain web search for the company's own site
+> before building an angle on its absence. Absence claims need the search FIRST, because the
+> cheapest way to find a site is to look for it.
 
 Raka asked me to try again and to use a different browser. There is no browser extension or
 desktop browser in this container, but there was one fetch path I had never tried, and it
