@@ -1,24 +1,27 @@
-# Batch 2, second attempt. 2026-09-22. NOT SENT, AND THE RELATIQ ANGLE IS DEAD.
+# Batch 2, second attempt. 2026-09-22. NOT SENT.
 
-> **KILLED 2026-09-22 by Raka.** He pointed at relatiq.app and told me to run a web search.
-> **relatiq.app turned out to be a different company**, "RelatIQ, Decode Your Relationship
-> Dynamics", a 9.99 dollar a month consumer app that reads your texts for attachment styles,
-> on a GoDaddy IP. That is the wrong domain trap, not William's business.
+> **REVIVED 2026-09-22, and reframed by Raka.** The angle was killed earlier today because a
+> search index still returns `https://www.relatiq.nl/` with detailed content, which meant I
+> could not assert the company has no website. **Raka then said he cannot find it either,
+> and to say exactly that.** So the message no longer claims anything about his
+> infrastructure. It reports what happened when somebody went looking, which is both honest
+> and the thing a customer actually experiences.
 >
-> **But the web search killed the angle anyway.** Every search returns
-> `https://www.relatiq.nl/` with *detailed* content, calendar integration, lead
-> qualification, "trusted by accounting offices and service providers in the Netherlands".
-> That level of detail only comes from a crawler that actually read the page.
+> **The search was then run properly, which is what should have happened first.** Every live
+> Relatiq domain belongs to **a different company**. `relatiq.io` is a data product,
+> `relatiq.co` is a LinkedIn CRM, `relatiq.app` is a consumer app that reads your texts for
+> attachment styles, `relatiq.com` is an empty 114 byte placeholder. `relatiq.nl`, the domain
+> lemlist holds for him, has no A record. So "I could not find it" is an earned claim rather
+> than a hedge.
 >
-> **So five DNS paths said no A record and the index says the page has been read.** I cannot
-> reconcile those from here, and I was one approval away from telling a founder he has no
-> website. The draft below must not be sent. Row goes back to `BLOCKED_NEEDS_INFO` and the
-> only thing that settles it is Raka opening `relatiq.nl`.
+> **The lesson stands and it is mine.** I swept DNS five ways and tried four fetch paths
+> before ever running a plain web search for the company's own site. Written into RULES.md
+> section 3.
 >
-> **The lesson, and it is mine.** I checked relatiq.com, relatiq.ai, www and the apex, and
-> I swept the DNS five ways, but I never ran a plain web search for the company's own site
-> before building an angle on its absence. Absence claims need the search FIRST, because the
-> cheapest way to find a site is to look for it.
+> **And the root cause is one layer lower.** `relatiq.nl` came from lemlist's `companyDomain`
+> field, which has already been wrong twice today, `carrefour.fr` for Romain Coquio and
+> `trickle.works` for Mandy Kerley. I reconciled the company against itself per section 0B
+> and never asked whether the DOMAIN was current.
 
 Raka asked me to try again and to use a different browser. There is no browser extension or
 desktop browser in this container, but there was one fetch path I had never tried, and it
@@ -26,7 +29,7 @@ settled the question.
 
 ---
 
-## William Mayvis, Relatiq. DRAFTED.
+## William Mayvis, Relatiq. DRAFTED, reframed as what we could not find.
 
 ### The finding, now on five independent paths with positive controls
 
@@ -62,10 +65,9 @@ method failed its own control. A search index routinely keeps entries after a do
 resolving, and by our own evidence ladder a snippet never outranks a live check. It does
 tell us the proposition, and it agrees with lemlist's description of the company.
 
-**Why this is not the banned sentence.** The ban exists because we kept calling sites broken
-off our own failed fetch. This is the opposite case. There is no server to fail to reach,
-the zone itself says so, and it says so through five networks. The message states the record,
-not a characterisation, so Raka or William can check it in two seconds.
+**Why the message no longer rests on any of this.** All of the above is why I BELIEVE there
+is no site, but belief is not the standard. The message now says only what a person did and
+found, so the worst case is he replies with a URL and we look like someone who went looking.
 
 ### The person
 
@@ -80,9 +82,9 @@ consultancy. So Relatiq is the current venture and the one without a site.
 ```
 Hi William, saw Relatiq, looks interesting!
 
-However, there's no site on relatiq.nl yet. The domain works and your email runs on it, so the site looks like the last thing on the list. This means anyone who hears about Relatiq and goes to look finds nothing, and right now that's everyone who hasn't met you.
+However, I went looking for the website and couldn't find it. relatiq.nl didn't load for me, and the other Relatiq domains turn out to be other companies. This means anyone who hears about Relatiq and goes looking ends up where I did, and for software nobody has tried yet, the site is the whole first impression.
 
-I run Astra agency. We build websites and the tools that go on them. I spent a year and a half at Betty Blocks on go to market, so I've seen how Dutch MKB buyers make up their minds.
+I run Astra agency. We build websites and the tools that go on them. I spent a year and a half at Betty Blocks on go to market for Dutch software, so I know what MKB buyers want to see before they book anything.
 
 Shall I build Relatiq a first page that shows the assistant answering a real customer question, and send it over?
 ```
