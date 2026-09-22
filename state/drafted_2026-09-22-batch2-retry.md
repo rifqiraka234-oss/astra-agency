@@ -60,7 +60,7 @@ consultancy. So Relatiq is the current venture and the one without a site.
 ```
 Hi William, saw Relatiq, looks interesting!
 
-However, relatiq.nl has mail records pointing at Microsoft 365 and no A record at all, so there's nothing for a browser to load. This means your email runs fine while anyone who hears about Relatiq and types the domain in lands on nothing, which is a hard spot to sell an AI product from.
+However, there's no site on relatiq.nl yet. The domain works and your email runs on it, so the site looks like the last thing on the list. This means anyone who hears about Relatiq and goes to look finds nothing, and right now that's everyone who hasn't met you.
 
 I run Astra agency. We build websites and the tools that go on them. I spent a year and a half at Betty Blocks on go to market, so I've seen how Dutch MKB buyers make up their minds.
 
