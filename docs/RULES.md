@@ -234,16 +234,31 @@ small true thing into a big false one.
 **The tweak test.** If their existing web person could fix it in an afternoon, it is a task,
 not an angle. Use the defect as proof and sell the structural thing behind it.
 
-**Money figures.** Only from their own published numbers, with the sum shown, anchored
-deliberately low. **Never build one on a top line without opening the note behind it.**
-A line in a financial statement is a label over a breakdown, and the breakdown is the
-source. Hounds for Heroes, 2026-09-22, we called £255,378 of "raising funds" money spent
-driving people to a donate page. Note 7 says 88 percent of it is staff and support costs
-and the advertising line is £14,142. Note 3 says £258,203 of the income we called
-donations is legacies. The arithmetic closed perfectly, which is exactly what made the
-wrong reading feel verified. Never model a conversion rate, a traffic figure or a margin. Never put a
-figure on a credibility or positioning problem. Expect about one message in four to carry
-one, and treat a batch where most do as a sign they are being invented.
+**Money figures. The general numbers rule is SCRAPPED (Raka, 2026-09-22).** Do not put a
+figure in a message to make it feel researched, to set a scene or to show we did the work.
+
+**The only number allowed is one that quantifies what they are forgoing, losing or being
+hurt by.** His words, "only numbers rule IF WE WANT TO CALCULATE HOW MUCH OF [METRIC] ARE
+THEY FORGONING/LOSING/HURTING". Everything else comes out.
+
+This is tighter than what it replaces and it would have stopped the error that caused it.
+The Hounds for Heroes message carried £255,378 of fundraising spend and a £76,600 deficit.
+Neither was a loss we were quantifying, both were context, so both now fail on sight.
+
+- **Never from filed accounts, a balance sheet or a statement of financial activities.**
+  A line in a financial statement is a label over a breakdown and the breakdown is the
+  source. We read "raising funds" as money spent driving people to a donate page. Note 7
+  said 88 percent of it was staff and support costs and the advertising line was £14,142.
+  We read "donations and legacies" as donate page income. Note 3 said £258,203 of it was
+  legacies. The arithmetic closed perfectly, which is exactly what made it feel checked.
+- **Inputs stay theirs and published**, a price list, a rate card, their own headline.
+  Show the sum. Anchor deliberately low. Never model a conversion rate, a traffic figure
+  or a margin.
+- **Never quantify a credibility, positioning or brand problem.** No honest figure exists
+  behind one.
+- **`tools/check-drafts.py` enforces this.** Any currency figure fails the batch unless
+  the drafts file carries a `LOSS FIGURE` block naming the metric being lost and the
+  source of every input, and it hard fails any figure sitting next to accounts language.
 
 ---
 

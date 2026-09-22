@@ -64,6 +64,22 @@ def check(path, replies=False):
             pass
         elif not 95 <= words <= 150:
             bad(i, f"{words} words, outside 95 to 150")
+        # MONEY. Raka scrapped the general numbers rule on 2026-09-22, after we told the
+        # CEO of Hounds for Heroes what her own accounts meant and got it wrong. A figure
+        # is allowed ONLY when it quantifies what the lead is forgoing, losing or being
+        # hurt by. Never as context, never as scene setting, and never off filed accounts.
+        money = re.findall(r"[\u00a3\u20ac$]\s?[\d,]+(?:\.\d+)?", m)
+        if money:
+            src = open(path, encoding="utf-8").read()
+            if "LOSS FIGURE" not in src:
+                bad(i, f"money figure {money} with no LOSS FIGURE block in the file. "
+                       "A number may only quantify what they are LOSING. Declare the "
+                       "metric and the source of every input, or delete the figure")
+            if re.search(r"\b(note \d|the accounts|filed accounts|balance sheet|"
+                         r"statement of financial activities)\b", m, re.I):
+                bad(i, "money figure read off accounts. Banned since Hounds for Heroes, "
+                       "a line in a financial statement is a label over a breakdown")
+
         # Exactly one exclamation mark and it lives on the first line.
         if replies:
             if m.count("!") > 1:

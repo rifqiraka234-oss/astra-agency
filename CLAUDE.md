@@ -130,6 +130,7 @@ Each felt like a fact and none of them was one.
 | One `type=linkedinSent` bulk pull | An endpoint that under reports | A false all clear on the duplicate audit |
 | `len(msg) > 200` as a filter | Dropped every record with an omitted body | A second false all clear on the same audit |
 | A top line in a set of accounts | A label over a breakdown I never opened | Told a charity CEO her own accounts, wrong, and she corrected us |
+| `check-drafts.py` without reading its own docstring | A tool with a `--replies` flag I never passed | Overrode shape gates by hand all session when a flag already existed |
 
 ### The three checks, and they are three different ACTIONS, not three readings
 
