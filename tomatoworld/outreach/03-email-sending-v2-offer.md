@@ -11,17 +11,23 @@ Hi Ank,
 
 Thanks for your patience. We haven't started anything on your side, like you asked.
 
-Proposal is attached. It's in Dutch, so Aart and Joyce can read it straight away.
+The proposal is attached. It's in Dutch, so Aart and Joyce can read it straight away.
 
-Our advice is to begin with the booking. That's the part eating the most time at the moment. €5,500, about five weeks. Your website stays as it is and Panorama stays in charge of it.
+We think you should start with the booking. That's the part costing your team the most time right now.
 
-With 119 groups last year, we think it earns back around €9,500 a year. So it pays for itself in year one.
+€5,500, about five weeks. Your website doesn't change, and Panorama stays in charge of it. The booking sits next to it.
 
-We also built a working version before sending this. Couldn't quote you a fixed price otherwise. Your tours, your prices, and you can click the whole way through. Took us a day. We'll bring it if we meet.
+What it does: people see which dates are free and what the visit costs, then book and pay in one go. Your team sees everything in one list, not in an inbox.
 
-The other thing we'd suggest is social media. €595 a month, €1,250 to set up. Eight posts a month in Dutch and English. We make them. You say yes or no.
+You had 119 groups last year. We think this is worth about €9,500 a year to you. Partly hours your team stops losing to email, partly the extras people will finally see and add, like the specialist or the lunch. So it pays for itself in the first year.
 
-Everything else we found is at the back with no prices on it: email, the partner leads update, being found in other languages. One is more pressing than the rest. Your site starts Google's tracking before anyone can refuse it, and the privacy text dates from 2018. We kept it out of the offer because that felt like selling you a problem we'd just found. You should know about it though.
+We built a working version before sending you this, because we didn't want to quote a price we'd have to change later. You can click right through it. Your tours, your prices, in your colours. Took us a day. We'll bring it if we meet.
+
+The second thing we'd suggest is social media. €595 a month, plus €1,250 once to set it up. Eight posts a month in Dutch and English. We make them. You say yes or no.
+
+Everything else sits at the back of the proposal with no prices, just so you can see what's possible. Email to people who've already visited. A weekly list of leads for your partners. Being found by people who search in Japanese or German.
+
+One of those is more urgent than the others. Your website starts Google's tracking before a visitor can refuse it, and your privacy text is from 2018. We left it out of the offer, because finding a problem and then selling you the fix felt wrong. You should know it's there though.
 
 Can we do a call to walk through it?
 
@@ -33,24 +39,12 @@ Astra Agency
 
 ---
 
-## Anti-slop checklist (reuse this)
+## What changed for clarity
 
-Run `tomatoworld/outreach/slopcheck.py` on any draft. It flags:
-
-| Tell | Why it reads as machine-written |
-|---|---|
-| "rather than" / "instead of" | Balanced contrast. AI reaches for it constantly. |
-| "One small thing", "Alongside that", "That said" | Signposting. People just say the thing. |
-| "we'd love to", "happy to", "reach out" | Borrowed warmth. Means nothing. |
-| "Would you be open to" | Corporate cushioning. Ask the question. |
-| Writerly flourishes | "Where it hurts most" is a phrase nobody says out loud. |
-| "a little urgent", "a bit tricky" | Cute hedging. Either it's urgent or it isn't. |
-| "We write them, you approve them" | Too symmetrical. Break the rhythm. |
-| "exactly as you asked" | Servile. "Like you asked" is what a person types. |
-| Even paragraph lengths | Real emails lurch: two words, then forty. |
-
-**What replaced them here:** dropped subjects ("Couldn't quote you a fixed price
-otherwise." / "Took us a day."), a blunt question at the end, and paragraphs that
-swing from 9 words to 77.
-
+- **"What it does:"** added. The old version priced the booking before explaining it. She has to picture the thing before a number means anything.
+- **The €9,500 is now explained.** "Earns back" told her nothing. Now it's hours lost to email, plus extras people finally see.
+- **The prototype has a reason attached.** "Couldn't quote otherwise" was a logic jump. Now: we didn't want to give you a price we'd have to change later.
+- **Jargon unpacked.** "Partner leads update" is now "a weekly list of leads for your partners". "Other languages" is now "Japanese or German".
+- **Long paragraphs split.** The privacy point is its own paragraph instead of being buried at the end of a list.
+- Run `python3 slopcheck.py` on any edit before sending.
 - Fill in [phone] and [email].
