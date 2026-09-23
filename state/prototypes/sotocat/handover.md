@@ -5,7 +5,7 @@ Two artefacts, both live and verified.
 | | URL | Netlify site id | Deploy id |
 |---|---|---|---|
 | Website prototype | https://astra-sotocat-prototype.netlify.app | aae9b53e-9667-4099-84a8-fce834168dcc | 6ab39016e4c6abd1fc590595 |
-| Analysis deck | https://astra-sotocat-deck.netlify.app | d84ecf40-3f06-4170-b93f-4d59f64d0928 | 6ab39034757b32d1da93cd04 |
+| Analysis deck | https://astra-sotocat-deck.netlify.app | d84ecf40-3f06-4170-b93f-4d59f64d0928 | 6ab39aac20155b2aa1e17e83 (section 10 rebuilt 2026-09-23) |
 
 Both projects were created with team SSO on by default, which would have locked Sergey
 out. It was switched off on both, matching astra-wistree-deck.
@@ -82,10 +82,16 @@ so what is here is what shipped.
 ## The deck
 
 Eleven sections in Raka's arc. The evidence screenshots were taken on 2026-09-23. The
-landlord version sketches in section 09 are labelled as sketches. Unilever, GPay and MWX
-carry "Delivered by our development partner, Amwisesa." Joshua van Zeelt and
-josh@astraagency.nl are named as the contact, because Raka said he is preparing the
-documents with Josh. Overrule that if Raka should be the contact.
+landlord version sketches in section 09 are labelled as sketches. Section 10 was rebuilt on
+2026-09-23 from the partner's credentials PDF (`docs/partner/amwisesa-credentials.md`). Nine
+projects, Unilever Bango and 1001 Ramadhan, Pertamina, World Bank, Bank Danamon, CIMB Niaga,
+Singtel, Informa and GPay, plus 16 brand names and 6 agencies, all carrying "Delivered by our
+development partner, Amwisesa, often through the brand's own agency." MWX was dropped to make
+room. The only award quoted is the 2015 Smarties for Bango, checked on MMA's own winners page
+and Liputan6. Raka is the contact, at rifqiraka234@gmail.com, on his instruction "email me".
+Joshua van Zeelt's line comes from `docs/astra-master-context.md` section 2, because nothing
+public about him could be tied to him (the top search hit is a different Joshua Van Zeelt, an
+engineer in Michigan).
 
 ## The tool change made during this job
 

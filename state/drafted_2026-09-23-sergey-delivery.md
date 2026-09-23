@@ -17,7 +17,7 @@ It's the SotoCat site I said I'd make, with a tenant's leak moving through it fr
 Try it yourself.
 https://astra-sotocat-prototype.netlify.app
 
-The second link has the projects you asked for, Unilever, GPay and MWX, built with our development partner, plus what we found on sotocat.com today.
+The second link has the projects you asked for, work for Unilever, Pertamina and the World Bank built with our development partner, plus what we found on sotocat.com today.
 https://astra-sotocat-deck.netlify.app
 
 What do you think?
@@ -27,13 +27,14 @@ Notes for Raka.
 
 - The first line is only true if it goes out today. If it waits, change it to "I built this for you."
 - The forms show their confirmation screens but aren't wired to SotoCat's systems yet, so the message says he can run the sign up, not that it signs him up.
-- The delivery partner disclosure travels with Unilever, GPay and MWX, as the company profile requires.
+- The delivery partner disclosure travels with every partner project in the deck, as the company profile requires.
 - Two URLs, not one, because he asked for projects and the projects live in the deck.
-- The deck names Joshua van Zeelt and josh@astraagency.nl as the contact, because you said
-  you're going with Josh on the documents. The message itself carries no contact details.
+- Updated 2026-09-23 after your partner PDF. The deck now names you as the contact, with
+  rifqiraka234@gmail.com and an "Email me" button, and Joshua van Zeelt beside you. Josh's
+  josh@astraagency.nl is no longer in the deck.
 
 Claims in it, each re-testable.
 
 - https://astra-sotocat-prototype.netlify.app returns 200 with title "SotoCat, AI repairs and maintenance for letting agents".
 - The homepage demo plays six stages, Captured to Resolved, for an example leak under a boiler.
-- https://astra-sotocat-deck.netlify.app returns 200 with title "SotoCat, what we found and what we built. Astra", and section 10 shows Unilever 1001 Ramadhan Inspiration, GPay and MWX AI Market with "Delivered by our development partner, Amwisesa."
+- https://astra-sotocat-deck.netlify.app returns 200 with title "SotoCat, what we found and what we built. Astra", and section 10 shows nine partner projects including Unilever (Bango, 1001 Ramadhan), Pertamina and the World Bank, with "Delivered by our development partner, Amwisesa, often through the brand's own agency."

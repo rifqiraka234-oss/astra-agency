@@ -83,6 +83,8 @@ development partner" or "from our delivery partner's portfolio".
 | **GPay App** | "Building a mobile application system to drive customers to purchase with promotions." Screenshots show a wallet, balance, top up, transfer, cash out, bill payment and a cashback and points checkout. |
 | **MWX AI Market** | "Developing web3 with interoperable blockchain protocols that can be used for SMEs." Screenshot shows an AI guided marketplace with priced product cards. |
 
+**The partner's full credentials deck is now in the repo (2026-09-23),** `docs/partner/amwisesa-credentials-2025.pdf`, analysed in `docs/partner/amwisesa-credentials.md`. It adds Pertamina, the World Bank, Bank Danamon, CIMB Niaga, Singtel, Informa and a verified 2015 Smarties Best in Show for Unilever's Bango app. Read its caveats before quoting it.
+
 This is the first real proof of delivery in the repo. Until now the only
 buildable evidence we had was prospect prototypes we sent unrequested, which
 are **not** client work and must never be described as such. Unilever, GPay
