@@ -94,10 +94,18 @@ slot has no source, the message does not get written.**
   working on this month. Find it, section 3 step 8, then aim the impact at it.
 - **No extra clauses.** No "while it sells", no "so your team loses". That was the draft Raka
   rejected.
+- **What Raka calls a dated site, in his words (2026-09-23), pointing at nl.inxpress.com.**
+  "Squary, things are in islands, it doesn't flow, a lot of gaps." So look for boxy cards and
+  panels that sit as separate blocks, sections that don't lead into each other, and big empty
+  gaps between them. That's a design flaw he recognises on sight, and it counts even when the copy
+  and the facts are fine. Judge it from the screenshots, never from the HTML.
+- **A franchise's corporate page isn't the franchisee's to change.** nl.inxpress.com is InXpress
+  head office, so Ferry de Haas can't fix it. Pitch the surface the lead actually owns.
 - **The flaw survives four tests before it is written.**
   1. **Positive control** on any absence. "Not a single photo" shipped because the same sweep
      found 23 images on hfmencap.org.
-  2. **Render trust.** `site-audit.js` must not print `RENDER NOT TRUSTED`.
+  2. **Render trust.** `site-audit.js` must not print `RENDER NOT TRUSTED`. If it does, run
+     `tools/render-via-curl.js` and only use a visual finding when that reports 0 curl errors.
   3. **The tweak test.** If their web person fixes it in an afternoon, it is a task and it
      cannot be the flaw. tuftuf's missing privacy policy and HF Mencap's missing cookie
      banner were both true and both held back for this reason.
@@ -148,20 +156,10 @@ all pages" gets done. Nothing in it is optional.
    401 or a 429, say nothing about social at all and use `site` as the surface.
 7. **Find the revenue line in their own words.** Their form fields, their pricing, their
    CTAs. tuftuf's guest range and "For example €15,000" budget are what made the stake visible.
-8. **Find their MOST CURRENT goal, and date it (Raka, 2026-09-22).** What are they trying
-   to do right now. Look, newest evidence first, and write down the date of each.
-   - **Their own recent posts and announcements**, the founder's LinkedIn activity, company
-     page posts, a news or blog section. A launch, an opening, a new location, a new product.
-   - **Hiring.** A careers page, a "we're hiring" bar, job posts. tuftuf's "Work at Tuftuf?
-     Apply in 2 min" says they are still staffing up after opening.
-   - **Press.** Openings, funding rounds, awards, grants, acquisitions. tuftuf opened 14
-     February, HF Mencap had just landed Lottery funding, Mercian Labels had been sold.
-   - **What the site itself is pushing.** The main CTA is usually the current goal, private
-     events on tuftuf, demo bookings on a SaaS site.
-   - **Their stated goals.** Mission, "we're expanding to", targets they publish.
-   - **If nothing explicit exists, analyse it** from their stage and their site, a business
-     that opened seven months ago is filling the room and building a name, and say in the
-     research note that it is inferred.
+8. **Find their MOST CURRENT goal and pain by linking clues, then date it (Raka,
+   2026-09-22).** Full method in **section 3A below**. It is not optional and it is not a
+   single search. Every one of the eight clue sources gets opened and read through, the
+   clues get written down with dates, and the goal is INFERRED from how they fit together.
    The impact in block two is then aimed at THAT goal.
 9. **Pick the flaw that sits on that goal and that revenue line**, then run it through the
    four tests in section 2.
@@ -169,6 +167,224 @@ all pages" gets done. Nothing in it is optional.
     screenshots, and the CMS media library, three mechanisms that cannot fail together.
 11. **Write every verified fact into the queue row's `claims` at the moment it is verified**,
     including the current goal, its source and its date.
+
+---
+
+## 3A. Clues to inference. How the current goal and pain are found (Raka, 2026-09-22)
+
+His words, "these are just clues... that can be put together and you can infer something
+out of it", "don't just skip around, you read through it and understand it and analyse
+it", "linking it together, multifaceted".
+
+**The principle.** No single source tells you what someone is trying to do this month.
+Several sources each leave a clue, and the goal is what makes all of them make sense at
+once. **A clue is evidence for the inference. It is never the content of the message.**
+
+### The eight clue sources. All eight are opened, every lead, no skipping
+
+| # | Source | How to get it | What to read for |
+|---|---|---|---|
+| 0 | **The lead's own lemlist `jobDescription` and `summary`** | The lead record, or the `linkedinInviteAccepted` activity, which carries it | Their mandate in their own words. The strongest single clue in batch 3, see 3B |
+| 1 | **Their website, all of it** | Section 3 steps 3 to 5. Plus any news, blog, press, "updates" or newsletter archive, and the newsletter signup itself | Expansion plans, new locations, new products, what the main CTA pushes, what changed recently and what looks abandoned |
+| 2 | **Their newsletter** | An archive page on the site, a Mailchimp or Substack archive linked from their HTML, a web search for `"<company>" newsletter` | What they tell existing customers they are doing next. This is usually the most honest statement of plans a small business publishes |
+| 3 | **The company LinkedIn page, recent posts** | `companyLinkedinUrl` from lemlist, opened. If walled, a web search for `site:linkedin.com/posts "<company>"` and open each result | Launches, hires, wins, events, partnerships. The dates matter as much as the words |
+| 4 | **The owners' own pages** | The lead's `linkedinUrl` and their summary in lemlist, their posts via search, any personal site, podcast, talk or interview | What they are up against. Their complaints, their asks, what they celebrate, what they keep coming back to |
+| 5 | **Job openings** | Their careers page, the LinkedIn jobs tab, a web search for `"<company>" vacature` / `Stellenangebot` / `hiring` / `job`, Indeed, Werkzoeken, their own "we're hiring" bar | **Read the whole job description**, the requirements and the responsibilities, not the title. The requirements say what the business lacks |
+| 6 | **A web and news search of the company name** | Plain web search, then a news search, in the site's own language | Funding, awards, grants, openings, closures, acquisitions, press features, local news |
+| 7 | **A web and news search of the owner's name** | Name plus company, then name plus an ownership word in their language | Other ventures, interviews, talks, a recent move, the thing they're known for |
+
+**Every source gets a written outcome in the research note**, including the empty ones.
+"LinkedIn posts, walled, 401, nothing read" is an outcome. A source that was not opened
+is written as not opened, and then it gets opened.
+
+### How clues become an inference. Read, understand, then link
+
+1. **Read each source through fully.** A job ad's title is not the clue, its requirements
+   are. A post's headline is not the clue, what it announces and when is. Skimming is the
+   failure Raka named.
+2. **Write each clue down on its own line, with its source URL and its date.** No
+   interpretation yet. `2026-08-14, company page post, signed distribution partnership
+   with X` is a clue.
+3. **Ask of each clue, "what does this mean for them".** One step of meaning, no more.
+4. **Link them.** Look for two or more independent clues pointing the same way. That is
+   the inference. Write it as one sentence naming the clues it rests on.
+5. **Try to break it.** Is there a clue pointing the other way? A hiring spree and a
+   closure notice in the same month is not expansion. Write the contradiction down.
+6. **Grade it.** Two or more independent clues agreeing is `SUPPORTED`. One clue alone is
+   `WEAK` and cannot carry the impact, fall back to the stage based analysis and say so.
+   Contradicted is `UNRESOLVED`, and the impact stays generic to their revenue line.
+
+### Raka's worked inferences, and the shape they all share
+
+| Clues | What they mean | Inference |
+|---|---|---|
+| Hiring a social media manager | Someone is being paid to make them more visible | They're expanding and want to be found |
+| A marketer role whose requirements include web design | The site is on the new hire's list of jobs | They know the website needs changing, and they are trying to solve it with a hire |
+| Hiring salespeople, plus recent partnership announcements | More channels and more people to work them | They're expanding quickly, so anything that slows a new lead down costs them more now |
+
+More in the same shape, so the method generalises.
+
+| Clues | Inference |
+|---|---|
+| A new location announced, plus a site that still lists one address | The site hasn't caught up with the business |
+| A newsletter promising a new product, plus no product page | The launch will land on a site that can't sell it |
+| The founder posting about wanting bigger clients, plus a portfolio of small ones | They're trying to move upmarket and the proof points the other way |
+| Funding or a grant, plus hiring | A growth push with a deadline on it |
+| Every recent post about one service line | That line is where they want the next money from |
+
+### What the inference is allowed to do in the message
+
+- **It drives the `[impact]` slot and the `[thing]` in block four. That is all.**
+- **The clue itself never appears.** Not "I saw your job opening for a marketer", not "I
+  saw you're hiring", not "congrats on the partnership". Raka, "Don't use it as like, oh,
+  if I saw your job opening for this". Quoting a clue reads as surveillance and swaps a
+  diagnosis for a recital. The message states the consequence, the owner recognises it
+  because it is true.
+- **Block one stays word for word.** The inference never leaks into the compliment.
+- **The owner must be able to test the impact** against their own experience. If only our
+  research could confirm it, it is too clever and it gets rewritten plainer.
+
+### The written record, in the queue row and the research note
+
+```
+clues
+  <date> <source url> <what it says, no interpretation>
+  ...
+sources with nothing       <which of the eight, and why, eg walled 401>
+inference                  <one sentence>, rests on clues <n> and <m>
+contradictions             <none, or what points the other way>
+grade                      SUPPORTED | WEAK | UNRESOLVED
+impact aimed at            <the goal, in plain words>
+```
+
+**No inference, no impact.** If the grade is `WEAK` or `UNRESOLVED` and the stage based
+analysis gives nothing better than a timeless cost, the lead is not ready.
+
+---
+
+## 3B. What the first run taught (batch 3, 2026-09-23, one sent out of five)
+
+The method was run on five leads. Grzegorz Sobieszuk at PharmaSupport was sent, three were
+genuinely no angle, one was not a lead. The worked example is in
+`state/drafted_2026-09-23-batch3-new-accepts.md`. What it taught, in the order it comes up.
+
+### Picking the batch
+
+- **Take new leads from the acceptance count, never from an old "untouched" list.** Batch 2's
+  file named five leads as untouched and all five already had queue rows. The reliable source is
+  the difference. `get_campaigns_stats` gives `linkedinInvitationAccepted` now. The last audit
+  gives the count then. `GET /api/activities?version=v2&type=linkedinInviteAccepted&campaignId=
+  <id>&minDate=<audit date>` lists who accepted in between. **The arithmetic has to close**, 322
+  plus 5 equals 327, before anyone is researched.
+- **The activities record carries the whole lemlist lead**, `jobTitle`, `tagline`, `summary`,
+  `jobDescription` and company fields. Read it there first, it saves a lookup per lead.
+
+### Rule someone out on the record, before any fetch
+
+Two of five went on the record alone, and both are cheap to spot.
+- **A student or an employee is not a lead.** Oluchi Okafor's `summary` says Year 12 student.
+- **An agency is a competitor.** Hula Hoop's `companyDescription` says brand strategy agency,
+  80+ staff. Confirm with one fetch of their homepage title, then stop.
+
+### The eighth clue source, and it was the strongest
+
+**The lead's own lemlist `jobDescription` and `summary`.** People write their mandate there in
+their own words. Grzegorz's said "growth journey to becoming a leading service provider ...
+across Europe ... creating new service offerings, leading business development". That is a
+stated goal, which is better than any inferred one. **Read it first, then look for independent
+clues that agree.** It counts as one clue, never two, however many goals it names.
+
+**The other sources that paid off.**
+- **The company register via North Data**, for dates. It dated the takeover to 9 Dec 2025 and
+  showed he holds his stake through his own holding company, which also settled ownership.
+- **Third party employer profiles**, StudySmarter Talents, Indeed, Magnet.me. An employer profile
+  on a graduate platform is a hiring clue that doesn't depend on LinkedIn at all.
+- **WebFetch on a public company LinkedIn page** returned recent posts with relative ages. Treat
+  the ages as approximate and say so.
+
+### Check the site where the goal lives, not the whole site
+
+Once the goal is inferred, the question is **whether the site serves that goal**, not whether it
+has faults. QWIC's goal is dealer led growth in Germany. So the checks were qwic.de, the new
+models on it (Elan 36 mentions, Signal 13), and the dealer locator. All three held up, so the
+answer was no angle, although the site had a real GDPR fault. **A true fault that doesn't sit on
+their current goal is not the flaw.** The flaw that was sent, no careers content, sits exactly
+on PharmaSupport's goal of hiring scientists.
+
+### An absence claim over a whole site, done properly
+
+"Not a single line, on any page" was earned with four layers. Use the same four next time.
+1. **Crawl every linked page**, DE and EN, not the nav alone. 107 fetched.
+2. **Read every keyword hit in context.** German "stellen" is a verb far more often than a noun,
+   and every hit on PharmaSupport was the verb. A count of hits is not a finding.
+3. **Probe the likely unlinked paths**, `/karriere`, `/jobs`, `/stellenangebote`, `/career`,
+   `/en/careers` and so on, with a path that exists as the control. All 404, `/team` 200.
+4. **Search the index**, `site:domain` plus the terms, for pages the crawl can't reach.
+
+**And pick a control that is KNOWN to have the thing.** The first control grep ran on qwic.nl
+and found nothing, because QWIC's homepage doesn't link its careers page. A control that fails
+proves nothing either way. hfmencap.org, whose homepage says "Work for us", was the valid one.
+
+### Tool traps hit this run
+
+- **A Playwright script written by hand must set `ignoreHTTPSErrors: true`.** Without it every
+  page shows "Your connection is not private", which is the proxy's CA, never their certificate.
+  site-audit already handles this. Ad hoc scripts don't.
+- **Clear the temp file before every fetch in a loop.** A domain sweep reused the last page's
+  title for two domains that returned 000. This is the second time. `rm -f` first, every loop.
+- **A search tool you drove wrong is not a broken search.** Pressing Enter in QWIC's Mapbox
+  search listed nothing, most likely because it wants a suggestion clicked. Never write "broken"
+  about an interactive part you haven't driven the way a visitor would.
+
+### Retrying blocked leads (batch 4, 2026-09-23), what changed the answers
+
+Five blocked leads were retried. Every block turned out to rest on something other than the lead.
+- **Re read the lemlist record before trusting an old block.** Paul Prescott was blocked on
+  `raiseyourgame.co.uk`, a domain that isn't on his record, which gives `raise-your-game.com`.
+  Emily Levy's `alquimialawyers.com` is dead but her firm moved to `alquimialegal.mx`. Debby Alles'
+  name collision was settled by her own `companyDescription`. Use `search_campaign_leads` with
+  the `id`, it returns the full record including every `experience` line.
+- **A 503 can be the page itself.** The WordPress Under Construction Page plugin serves 503 on
+  purpose. Aksonz was "503 on every fetch" for weeks and the page behind it is a placeholder.
+- **When our proxy can't read a site, use a reader on another network.** `r.jina.ai/<url>` returns
+  the text, and with the header `X-Return-Format: screenshot` a screenshot URL. Control it with a
+  known site through the same reader. It is a separate path from curl, Chromium and WebFetch.
+- **Counters in raw HTML start at zero.** "0 Prizes Won, £0 Money Raised" was a count up
+  animation, 750 and £80,000 once rendered and scrolled. Never quote a number from HTML that a
+  script animates.
+- **A phone screenshot needs a phone user agent.** Wix and other builders pick the layout by user
+  agent, so a 390px desktop browser got the desktop layout with text clipped off the edge. site-audit
+  now shoots the phone view with a real iPhone profile.
+- **Look for the other language before claiming there isn't one.** Wix Multilingual flags in the
+  HTML meant `/en` existed, which killed "your site is Spanish only" before it was written.
+- **Companies House name matches need the company, not the name.** The first "Neeraj Sharma"
+  appointments page was a different man in Teesside. Search the company, then open its officers.
+
+### Batch 5 (2026-09-23), three more traps and one new check
+
+- **On WordPress, always list the posts and the users.** `wp-json/wp/v2/posts?per_page=100`
+  with `X-WP-Total`, and `wp-json/wp/v2/users`. On ferrydehaas.nl this found 130 casino and
+  betting posts by a second account, all in nine days, none linked from the homepage. The design
+  looked fine. A render never shows this, and it's the most serious thing a site can have.
+- **A video that won't play in our Chromium may play everywhere else.** The Chromium here has no
+  H.264 codec, so "Media error, Format(s) not supported" on an mp4 that serves 200 video/mp4 is
+  ours. Never report a video as broken off our render.
+- **"LinkedIn invitation withdrawn" on an accepted lead is the campaign step, not the connection.**
+  Read the lead's activity history, `GET /api/activities?version=v2&leadId=<id>`. An accept followed
+  by `linkedinWithdrawInvitationDone` is still a connection.
+- **A title is not ownership, even at a startup.** Shail Niazi's company was right all along, but
+  he's its Chief Culture Officer and a government page names the CEO and co founder. Check who
+  founded it before writing to a C level title.
+
+### The pre send sequence that worked, keep it exactly
+
+1. `get_inbox_conversation`, still empty.
+2. Re-verify the claim live in the same minute, with its control, and the Impressum.
+3. **Extract the text from the drafts file with a regex**, never retype it.
+4. `send_message` with `contactId`, `linkedin`, `usr_27bdxG7jzTn2rucGB`.
+5. Re-pull, confirm the body matches, record the activity id.
+6. Queue row `SENT` with `openerText`, `openerSentAt` and `sentActivityId`, a `GATE ARCHIVED`
+   marker on the drafts file, one commit.
 
 ---
 

@@ -16,7 +16,7 @@
  * we measure. It never clicks accept.
  */
 
-const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const { chromium, devices } = require('/opt/node22/lib/node_modules/playwright');
 const fs = require('fs');
 const { execSync } = require('child_process');
 const path = require('path');
@@ -299,9 +299,14 @@ function classify(url, base) {
   // ---- screenshots, desktop and phone, because a grep does not find design ----
   const desktopShot = path.join(outDir, `${tag}-desktop.png`);
   await page.screenshot({ path: desktopShot, fullPage: false });
-  const phone = await ctx.newPage();
+  // A REAL phone, user agent and all. A 390px viewport with a desktop user agent
+  // gets the desktop layout on Wix and other builders that switch by user agent,
+  // and on alquimialegal.mx (2026-09-23) that showed the hero text clipped off the
+  // right edge when an actual iPhone renders it perfectly. That false finding was
+  // one step from a message. So the phone shot runs in its own mobile context.
+  const phoneCtx = await browser.newContext({ ...devices['iPhone 13'], locale: 'en-GB' });
+  const phone = await phoneCtx.newPage();
   try {
-    await phone.setViewportSize({ width: 390, height: 844 });
     await phone.goto(target, { waitUntil: 'domcontentloaded', timeout: 45000 });
     await phone.waitForTimeout(2500);
     await phone.screenshot({ path: path.join(outDir, `${tag}-phone.png`), fullPage: false });
@@ -434,6 +439,8 @@ function classify(url, base) {
       console.log('!!  OURS, not theirs. Every asset, image, layout and breakage finding in this run');
       console.log('!!  is VOID. You may NOT say anything is broken, missing or not loading, and the');
       console.log('!!  screenshots are unreliable for this site because they are missing real assets.');
+      console.log(`!!  NEXT STEP, the second render path. node tools/render-via-curl.js ${target} ${tag}`);
+      console.log('!!  If that serves every request with 0 curl errors, read its parts instead.');
       renderTrust.suspectAssets.filter((a) => a.servesFineElsewhere).slice(0, 5)
         .forEach((a) => {
           const ok = /^2\d\d/.test(a.viaCurl) && !/text\/html/.test(a.viaCurl) ? a.viaCurl : a.viaCurlChromeAccept;

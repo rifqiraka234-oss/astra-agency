@@ -14,6 +14,9 @@
 > **The first message to any lead is Raka's opener template, filled EXACTLY (2026-09-22).**
 > Fixed wording, only the brackets change. The spec, the eleven inputs it needs and the
 > rules for every slot are in **`docs/opener-template.md`**. Read it before any opener.
+> Section 3A is how the current goal is inferred from linked clues, and **section 3B is what
+> the first run of it taught (2026-09-23)**, where new leads come from, the eighth clue
+> source, checking the site where the goal lives, and how a whole site absence is earned.
 >
 > **The two tools that enforce rather than remind.** `node tools/site-audit.js <url>
 > <tag>` runs a positive control on itself and voids its own absence findings when the
@@ -374,7 +377,9 @@ snippet is not a website and a grep is not a look.
   independent path and prints `RENDER NOT TRUSTED` when the failure is ours.** When it
   fires, every visual, asset, layout, breakage and emptiness finding in that run is void
   **and the screenshots are unusable for that site**, because they are missing real assets.
-  The screenshot is not the fallback, it is the thing that is wrong. The row is
+  The screenshot is not the fallback, it is the thing that is wrong. **The fallback is
+  `node tools/render-via-curl.js <url> <slug>` (2026-09-23)**, which serves every request to
+  their own host through curl. 0 curl errors means its parts can be read. Otherwise the row is
   `BLOCKED_NEEDS_INFO` and Raka opens it. A blocked page is never a weak page.
 
 **And the web search rule underneath all three.** A search is how you FIND something to
