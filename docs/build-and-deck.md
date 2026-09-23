@@ -230,3 +230,124 @@ separately as a favour. Putting them in front of the buyer reads as a telling of
 **"Language man, you don't need to over complicate things."** v3 was 2,472 words.
 The version that shipped was about 1,600. One point per section, one idea per
 paragraph, and the diagram carries what a paragraph would otherwise argue.
+
+## Site plus analysis deck for a warm lead who asked to see our work (SotoCat, 2026-09-23)
+
+Rebuilt from the session transcript, not from memory or a compaction summary. Sergey
+Shalunov (SotoCat, `ctc_Puf9L7o8nDTyDNn2Q`) replied "Please show me your projects." Raka
+briefed the job at 07.11, it was built, checked and live by 08.48, reworked with the
+partner credentials between 09.15 and 09.41, and the delivery went out at 09.52 on his word.
+Live: https://astra-sotocat-prototype.netlify.app and https://astra-sotocat-deck.netlify.app.
+Source, handover and research are in `state/prototypes/sotocat/`.
+
+### The brief, as Raka gave it. Use it as the checklist for the next one
+
+**The deck.** Raka and Josh "prepare the documents" and show the prototype. It has to cover:
+- the company and its current website, "what it's missing", "analyze really in screenshot"
+- "what the company's also aiming at", their goals
+- what we're going to do, and "how that website that we're gonna create for them is gonna help them"
+- (added 09.15) big brand examples of the partner's work "to create credibility, make it big",
+  and what Raka and Josh do, also for credibility
+
+**The website.**
+- "do not cut corners, take your time to research, take your time to build it"
+- "twenty twenty six standard" design, modern. Look at big SaaS companies and Apple for reference
+- "pictures is really important, put pictures", "put graphs as well, if needed"
+- "the whole overall flow is thought in UX UI, it's clear, it's understandable, it's easy to follow"
+- "it has all the features, it blows their mind" on design, functionality, colours, fonts, shapes
+- "make sure the website is actually a reflection of their business, don't hallucinate"
+- "as if they were to be having this live tomorrow", "final production level", "annotations are not needed"
+
+**The working rules.**
+- "Make zero mistakes. Do not make false assumptions."
+- "recheck it again two times to make sure all of the instructions are being followed, at least two times, but more is better"
+- "just do it", come back only when done or with a really urgent question
+
+### The order of work that got it done in one pass
+
+1. Pull the whole thread and the lemlist record. Grep the queue and `prototypes.jsonl` for the lead.
+2. Map every page of their site. Screenshot each one at desktop and phone width, twice:
+   once as a visitor sees it and once underneath any overlay. Label which is which.
+3. Research to the prospect master standard. Companies House for every company named on the
+   site, their blog for their own goals, their code for anything you'll rebuild (the savings
+   calculator formula came from their JS, not from guessing at outputs), and primary sources
+   for any law or date (GOV.UK, not search summaries).
+4. Read Stage C and the last three builds' fonts and colours before choosing art direction.
+   Screenshot five reference sites. Write the art direction into `research.md` before any HTML.
+5. Assets first. Their logo from their own SVG, their font, photography with ids recorded,
+   everything compressed, and each page loading only its own images.
+6. A small build script with shared header and footer, so nine pages can't drift apart.
+   Commit it and check it reproduces the shipped HTML byte for byte.
+7. Build the homepage alone, render it, look at it, fix it. Only then write the other pages.
+8. A claims pass on every page against their own copy (see the table below), then the
+   portrait gate, then every interactive part exercised, then the copy audit.
+9. The deck last, so its screenshots of our build are the final build.
+10. Deck QA harness on a cold load, both widths, then the copy audit again.
+11. Deploy, switch SSO off, verify live (below), then draft, gate, handover, state rows, log, push.
+12. Nothing is sent until Raka says send. Re pull the thread right before, copy the text out
+    of the draft file, send, pull again and byte compare.
+
+### Every hiccup, what it cost, and the rule it leaves
+
+| What happened | The rule now |
+|---|---|
+| **Research and evidence** | |
+| Their landlord survey overlay blurred every screenshot, so the first shots were useless | Read the overlay's own script and hide it with its own function, only for the "underneath" shots. Always keep the as a visitor sees it shots too, because the overlay was the biggest finding |
+| Two screenshots failed with "upstream request failed" | Proxy, not their site. Retry before recording anything |
+| Search summaries disagreed on a Renters' Rights Act date | Dates and law come from GOV.UK itself |
+| Unsplash download links sit behind a bot check | Take the direct image URLs from the search page, record each photo id in `research.md` |
+| Rendering their logo from a local file was blocked | Serve it over a local http server and render that |
+| **The build (site)** | |
+| An f string broke on the container's Python version | Test the build script on one page before writing nine |
+| The first homepage copy invented product detail. A tenancy type, "language models" where they say natural language processing, "access notes", "arrives in the next release", SotoCat "watching the arrival" and telling tenants the plumber is late, a report sent to landlords, a property history, contractor matching "by distance" | **Every capability on a prospect's site must be in their own words somewhere.** Run a claims pass against their pages before the first render. Features they call future get "coming in a future release", which is their own phrasing |
+| Chart bar heights were rounded by eye (83 against 83.3) | Compute chart geometry from the data |
+| Inline `grid-template-columns` styles never collapsed on a phone. Grids overflowed on long words | No inline grid styles, use a class with a phone breakpoint. Always `minmax(0,1fr)`, never `1fr` |
+| A desktop only hero grid rule broke the phone layout | Scope desktop overrides inside `@media (min-width:...)` |
+| Nested `<svg>` inside the diagram took the wrong width | Use `<g transform>` inside one svg |
+| "1,000 and over" wrapped badly on a phone chart | Short axis labels, "1,000+" |
+| Calculator showed "1 units" and a stray minus sign | Pluralise and format every computed string, then test the edges |
+| The portrait tool stopped at the surname in the page's meta tags | Run it on the page body. Never loosen the containment test itself |
+| Fragment headings survived to the copy audit, twice on the site and again in the deck | Headings are full claims. Run the audit before the first render as well as after |
+| Gas safety advice was ours, not the gas networks' | Safety advice follows the official wording |
+| **The deck** | |
+| Stats were wrong on first write. "13 pages" was 15, "8 posts read in full" was 4 of 8, and Fixflo's "working demo" was really a "Get quote" button | Recount every number on the page it came from. Open the competitor's first screen before describing it |
+| The QA harness said 30 of 75 reveals and lazy images unloaded | CSS `scroll-behavior:smooth` fools the harness. No smooth scroll on anything we QA |
+| A missing favicon gave a console 404 | Inline a data URI favicon on every deck |
+| A caption had doubled punctuation | Read every caption aloud |
+| **Deploy and live** | |
+| New Netlify projects default to team SSO, so Sergey would have hit a login | Switch SSO off on every lead facing project, as on astra-wistree-deck |
+| Live HTML never hash matches, because Netlify rewrites links to pretty URLs | Hash compare the assets. For HTML compare the visible text |
+| A live screenshot showed the deck hero half empty | A progressive JPEG caught mid load. Check the file before "fixing" anything |
+| The QA harness can't load the live URL (proxy certificate) | Curl the live HTML and assets into a folder, serve it, QA that. Or pin the proxy CA by key, see the toolchain section |
+| **Draft and state** | |
+| `check-drafts.py` rejected the URLs for their colon and hyphens | Now fixed in the tool, URLs are stripped first, and a prose colon still fails as a control |
+| "yourself" twice in a row in the draft | Read the draft aloud |
+| A `sed` edit broke on its own delimiter and stopped the chain before the state rows were written | Edit files with Python and asserted replacements, never sed on text with slashes |
+| A chain with `;` committed a draft the checker had failed | Chain the checker with `&&` so a fail stops the commit |
+| **Strategy** | |
+| Our 22 Sep message said "there's nothing I'd touch" about a site whose survey layer was already blocking every click. It was written from the HTML without rendering | Render and look before praising a site, same as before criticising one. The delivery message owned it in one line, which Raka approved |
+| The deck named Josh as the contact | Raka is the contact on his leads unless he says otherwise |
+
+### What Raka changed after seeing it, now standing rules for any deck like this
+
+- **Partner credibility comes from `docs/partner/amwisesa-credentials.md`.** Big brands first,
+  Unilever, Pertamina, World Bank. Only the 2015 Smarties award is verified, quote nothing else.
+- **One team framing.** "Astra and Amwisesa work as one team", credited "Built by Amwisesa,
+  Astra's development partner". He asked for "partnering together to create these things".
+  Astra started in Jan 2026 and the projects go back to 2015, so that wording would be
+  checkable and false. Tell him when an ask like this can't be done as worded, and do the
+  honest version.
+- **No country in client copy.** No Indonesia, Jakarta, Bali or Southeast Asia.
+- **Bios sound senior.** Titles and scale, no degrees for Raka. Josh from his own LinkedIn.
+  The approved wording is in the live deck and in `docs/astra-company-profile.md`. Check
+  every timeline word against the dates ("before any of that" was false, the stroopwafel
+  brand overlapped Heineken).
+- **LinkedIn links under names, not email.** The closing button is "Email me", for Raka.
+- **The delivery message says what the site does.** Name the features, and check each one
+  in the build first. Count pages without the 404.
+
+### One tension to settle before the next deck
+
+The WisTree rule above says errors and 404s don't go in a client deck. This deck showed four
+failures on sotocat.com with screenshots, because Raka asked for "what it's missing" in
+screenshots, and it went to Sergey. Ask Raka which rule wins when the lead will see the deck.

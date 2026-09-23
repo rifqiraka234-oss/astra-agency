@@ -311,8 +311,9 @@ The four that cost us leads.
 Read Stage L of `docs/prototype-build-spec.md` before any build. Verify by cold load with
 error capture, never by forcing reveal state. Every image fetched and byte matched. Every
 section screenshotted and actually looked at. Never caption a photograph as the client's
-premises, staff or customers. The delivery partner disclosure travels with Unilever, GPay
-and MWX, always.
+premises, staff or customers. The partner disclosure travels with every partner project,
+worded "Built by Amwisesa, Astra's development partner" (Raka, 2026-09-23). Before a site
+plus deck job for a lead, read the SotoCat section at the end of `docs/build-and-deck.md`.
 
 ---
 

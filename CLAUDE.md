@@ -520,7 +520,7 @@ or a page he should look at, send it or link it rather than describing it.
 
 ## The build toolchain and everything corrected across the WisTree deck
 
-**Moved to `docs/build-and-deck.md`** so this file stays readable. Exact paths, rendering, QA, images, deploying, deck architecture, and the full audit of corrections Raka made across five deck rebuilds. Open it before building anything.
+**Moved to `docs/build-and-deck.md`** so this file stays readable. Exact paths, rendering, QA, images, deploying, deck architecture, and the full audit of corrections Raka made across five deck rebuilds. Open it before building anything. Its last section is the SotoCat run (2026-09-23), the brief Raka gives for a site plus analysis deck, the order of work, and every hiccup with the rule it left.
 
 ## The artefact delivery message (Raka, 2026-09-15). A fifth shape, for sending the thing.
 
@@ -617,9 +617,13 @@ Every line is here because it failed at least once.
 - [ ] No horizontal overflow at 420px outside a deliberate scroller.
 - [ ] Every section screenshotted and actually looked at.
 - [ ] Interactive parts exercised end to end, not assumed.
+- [ ] No inline grid styles, every grid `minmax(0,1fr)`, no `scroll-behavior:smooth`
+      (it fools the QA harness), a favicon present. (SotoCat, 2026-09-23)
+- [ ] Every product capability on a prospect's site appears in their own copy.
 
 **Live**
 - [ ] Live URL fetched, 200, `<title>` still theirs.
+- [ ] Netlify team SSO switched off, or the lead meets a login page.
 - [ ] Live HTML diffed against the deployed file. Only the Netlify HUD should differ.
 - [ ] Every asset path fetched and byte matched.
 
