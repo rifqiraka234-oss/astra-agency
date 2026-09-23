@@ -88,8 +88,8 @@ no RENDER NOT TRUSTED.
    with it. The company was incorporated 9 Dec 2025 and its own LinkedIn says pre-launch.
    A buyer doing diligence can see both. Not put in front of Chris as an accusation, it is
    written as a claim a brand cannot check.
-4. **Terms disagree across the three properties.** Minimum order, "no minimum" on 10 .com
-   pages, "Minimum order 10 garments" on design.customkit.com and /prices, lowest brief
+4. **Terms disagree across the three properties.** Minimum order, "no minimum" on 23 .com pages counted case insensitively (10 in lower case),
+   "Minimum order 10 garments" on design.customkit.com and /prices, lowest brief
    option "50–100 units" on /start-a-project. Lead time, "4–6 weeks" on 17 .com pages, "as
    little as 4 weeks" on 2, "2-3 Weeks" on the designer, "3-4 weeks" on 4 .uk pages. Samples,
    "5–7 days" on 16 pages, "within two weeks" on 10. Names and numbers, "all included in the
