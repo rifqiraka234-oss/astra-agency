@@ -22,3 +22,13 @@ coming months. Feel free to send over you sketches so we can take a look."
 
 - **Send the delivery message** in `state/drafted_2026-09-23-chris-delivery.md` once Raka
   says send, with or without the optional correction line. Re pull the thread first.
+
+## v2, same day. Full redesign on Raka's note
+
+Raka said the v1 still felt like Lovable, because it took colours and fonts from sites that are
+themselves AI generated, and asked for a full redesign with .com and .uk combined. Rebuilt with
+a new identity and one site that has a Teams door and a Brands door. Deck section 06 and the
+goal table follow it. Redeployed to the same two URLs and verified live. Draft v2 is in the same
+file, still waiting on Raka, with two optional lines (the price correction, and owning the
+change from "two sites makes sense").
+

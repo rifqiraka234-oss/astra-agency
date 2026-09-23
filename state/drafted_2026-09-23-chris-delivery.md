@@ -23,6 +23,12 @@ What do you think?
 
 Notes for Raka.
 
+- **Our 31 Aug message said "splitting teams and brands across two sites makes sense", and
+  the redesign merges them.** You asked for the merge, so it stays, but Chris may notice. If
+  you want it owned, add before the question, "Last time I said two sites made sense. Once we
+  built it, one site with a door for each worked better, so that's what's in there." Thread
+  re pulled 2026-09-23 after the redeploy, 3 activities, unchanged.
+
 - **An optional correction line, your call.** Our 31 Aug message said a brand "can't actually
   see a finished kit, a price or any proof". The price part was too strong, the .com shows
   £495 and £995 on its brand design page and five other pages carry a "Design Service £495"
