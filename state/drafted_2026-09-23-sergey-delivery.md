@@ -1,4 +1,4 @@
-# Draft, 2026-09-23 (v3, Raka asked for the site features to be named). Sergey Shalunov, SotoCat. NOT SENT. Waiting on Raka's word.
+# Draft, 2026-09-23 (v3, Raka asked for the site features to be named). Sergey Shalunov, SotoCat. SENT 2026-09-23 09.52 UTC via lemlist, act_CBkWNFq3HuTHMhxLA.
 
 Replaces the v1 draft in this file (it's in git history). Raka's angle, 23 Sep, "he said show
 me the things we've done, but I'll be honest, we got cheeky and excited for your project, so
