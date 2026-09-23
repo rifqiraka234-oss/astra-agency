@@ -224,6 +224,14 @@ typos, conflicting job titles and freemail addresses do not go in a client deck.
 They are research, they stay in `research.md`, and they can be handed over
 separately as a favour. Putting them in front of the buyer reads as a telling off.
 
+**What he meant by "error pages", clarified by Raka on 2026-09-23.** The ban is on
+screenshots of pages that **failed to load**. A blank render, a browser error screen, a
+proxy 403 or a timeout is our failure, not a finding, and it never goes in a deck. A
+**verified problem on their live site that a visitor really hits** is different, and it can
+go in when Raka asks for "what's missing" (SotoCat, where the survey layer blocking every
+click and the dead sign up buttons were the whole case). It still has to pass the triple
+check, and small housekeeping stays in `research.md` as above.
+
 ### Simpler, and shorter
 
 **"It feels so wordy and just haaard to follow, it needs to flow well."** and
@@ -346,8 +354,10 @@ Source, handover and research are in `state/prototypes/sotocat/`.
 - **The delivery message says what the site does.** Name the features, and check each one
   in the build first. Count pages without the 404.
 
-### One tension to settle before the next deck
+### Settled, error pages (Raka, 2026-09-23)
 
-The WisTree rule above says errors and 404s don't go in a client deck. This deck showed four
-failures on sotocat.com with screenshots, because Raka asked for "what it's missing" in
-screenshots, and it went to Sergey. Ask Raka which rule wins when the lead will see the deck.
+The WisTree "no 404s" line meant screenshots of a site that **couldn't load**, never real
+problems a visitor hits. So the SotoCat deck was right to show the survey layer, the dead sign
+up buttons, the wrong company in the terms and the unanswerable cookie banner, all proven
+three ways. A page we failed to render never goes in, which is also what `site-audit.js`
+enforces when it prints `RENDER NOT TRUSTED`.
