@@ -128,6 +128,32 @@ for, and it belongs in the Stage K pre-build gate reasoning.
 
 Closing question on the page: "Interested in exploring a project together?"
 
+### Joshua van Zeelt's own profile (his LinkedIn, pasted by Raka 2026-09-23)
+
+- Headline "Building websites, software & apps that actually work for your business | Founder
+  Astra Agency & JML Agency". Netherlands, 500+ connections, 1,980 followers.
+- **Oprichter (founder), Astra Agency**, Jan 2026 to present, Amsterdam. **Oprichter, JML
+  Agency B.V.**, Jul 2025 to present. Professional freelancer, JML Ventures, 2024 to 2025.
+- **Project coordinator, Asito**, part time, Jun 2018 to Jun 2025, on site at Schiphol. Led
+  a team of four and "helped develop 'Asset App' to speed up processes, increase productivity
+  and forecast predictive maintenance".
+- Management assistant, JOLE Beheer, Dec 2020 to Dec 2024.
+- **MSc Strategic Entrepreneurship, RSM Erasmus** (2022 to 2023). **BSc Bedrijfskunde, RSM**
+  (2019 to 2022). His About says he studied **Artificial Intelligence at VU Amsterdam** (the
+  education section shows 5 entries, only 2 were visible in the paste).
+- Services he lists. Websites and webshops, custom software and platforms, iOS and Android
+  apps, portals, dashboards, AI consulting, automation (Power Automate), Power BI.
+- Search trap. The top web result for "Joshua van Zeelt" is a different person, a municipal
+  engineer in Michigan. His URL is linkedin.com/in/joshua-van-zeelt/, nothing else.
+
+**How Raka wants the two of them described in decks (2026-09-23).** Big and senior, not
+student sounding. No degrees for Raka. Raka is "Go to market architect and entrepreneur",
+Heineken global across 23 markets, global go to market at Betty Blocks (low code), now sales
+and channel operations at efficy (European CRM), founder of a stroopwafel brand he scaled.
+He also said the brand scaled to "like 10 different markets". Our record shows Jakarta and
+Bali only, so that number is held until he confirms it. Josh is "Founder of Astra Agency and
+JML Agency". The live SotoCat deck section 10 carries the approved wording.
+
 ### The named contact, which is NOT Raka
 
 - **Joshua van Zeelt, ASTRA AGENCY**
