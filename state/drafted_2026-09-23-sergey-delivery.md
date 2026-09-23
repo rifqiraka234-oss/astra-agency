@@ -1,4 +1,4 @@
-# Draft, 2026-09-23 (v2). Sergey Shalunov, SotoCat. NOT SENT. Waiting on Raka's word.
+# Draft, 2026-09-23 (v3, Raka asked for the site features to be named). Sergey Shalunov, SotoCat. NOT SENT. Waiting on Raka's word.
 
 Replaces the v1 draft in this file (it's in git history). Raka's angle, 23 Sep, "he said show
 me the things we've done, but I'll be honest, we got cheeky and excited for your project, so
@@ -12,10 +12,10 @@ null, totalItems 6. Newest is his "Please show me your projects." 22 Sep 21.52. 
 ```
 Sergey, here are the projects, and I'll be honest, we got a bit cheeky.
 
-We got excited about SotoCat, so the deck has our work for Unilever, Pertamina and the World Bank, and then how we'd picture your site.
+The deck below has our work, and also how we'd picture your site.
 https://astra-sotocat-deck.netlify.app
 
-Then we built it. It's nine pages and you can click through all of them, including a tenant's leak going from the first message to the sign off.
+Then we built the site on its own. A tenant's leak runs from the first message to the sign off, there's a savings calculator you can put your own numbers into, pricing that works out your monthly fee from your unit count, and a free trial sign up that goes all the way through. You can play around with it yourself.
 https://astra-sotocat-prototype.netlify.app
 
 One correction too. I told you there was nothing I'd touch on the site, then I went through it properly and found a few things. They're in the deck.
@@ -38,6 +38,11 @@ Notes for Raka.
 - No exclamation marks, it lands in a warm thread.
 
 Claims in it, each re-testable.
+
+- The four features, checked in the build 2026-09-23. index.html demo "Every request moves
+  through six stages" ending Resolved. index.html "Put your own numbers in" calculator.
+  pricing.html "Your monthly fee" calculator by units, all eight brackets tested at QA.
+  start.html three step trial (Your agency, How you work today, About you).
 
 - https://astra-sotocat-deck.netlify.app returns 200, title "SotoCat, what we found and what
   we built. Astra", checked 2026-09-23. Section 10 names Unilever, Pertamina and the World Bank.
