@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED. Muhammad Akbar SENT 2026-09-23 12:12:08Z act_9fsfztYxWhAsN4nPa, Neeraj Sharma SENT 12:12:10Z act_M5LxgpmxduFyp2ePz, texts as below. -->
+
 # Batch 4, the blocked and errored leads from batches 1 to 3, retried. 2026-09-23. NOT SENT.
 
 **Which leads, and why these.** Of the 30 unsent leads across the earlier batches, 13 were closed
