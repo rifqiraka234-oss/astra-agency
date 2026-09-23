@@ -74,6 +74,9 @@ print("""  It outranks every other doc except a live instruction from Raka.
       get_campaigns_stats now, minus the last audit, then linkedinInviteAccepted
       activities since that date. The arithmetic closes before anyone is researched.
 
+    REPORT IN PLAIN WORDS. Each lead starts with the angle in one or two everyday
+      sentences. No jargon to Raka. If he can't follow it, neither will the lead.
+
     RENDER NOT TRUSTED has a next step. node tools/render-via-curl.js <url> <tag>.
       0 curl errors means read every part it writes. Anything else means blocked.
 

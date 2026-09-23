@@ -328,6 +328,28 @@ and MWX, always.
 
 ---
 
+## 5A. Reporting to Raka. Plain words first (Raka, 2026-09-23)
+
+His words, "whats the angle with ferry again? i dont get it. can you in general make things
+more easier to understand". The Ferry write up was accurate and he still couldn't follow it,
+because the point was buried under REST endpoints, author ids and render paths.
+
+**Every lead in a report starts with the angle in one or two everyday sentences**, the way you'd
+say it out loud to a friend. What the business is, what's wrong, why the owner would care.
+"Ferry runs an express shipping business. Someone's been secretly adding casino articles to his
+website, 130 so far. A customer who Googles him could find gambling pages with his name on them."
+
+- **No jargon in the report.** Not render, REST API, 503, positive control, contactId, WP user
+  id, curl, proxy. Say "our browser couldn't load it" or "I checked it a second way". The evidence
+  still gets done in full and written into the drafts file, where it belongs.
+- **Say what you did in one line, not the method.** "Checked three ways" beats a paragraph on
+  which tools.
+- **If the angle is weak or odd, say so plainly and first**, before the draft.
+- **The same test applies to the message itself.** If Raka can't understand it, the lead won't.
+  Plain words in the brackets, no clever phrasing.
+
+---
+
 ## 6. Where everything else lives
 
 | Need | File |

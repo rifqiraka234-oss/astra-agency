@@ -79,14 +79,18 @@ Red team, above, the message states only what's verifiable.
 
 ### Ferry, OPENER
 
+**In plain words.** Ferry runs an express shipping business. Someone's been secretly adding casino
+articles to his website, 130 so far. A customer who Googles him could find gambling pages with his
+name on them. Simpler rewording after Raka couldn't follow the first version.
+
 ```
 Hi Ferry, saw InXpress Haarlemmermeer, looks interesting!
 
-However, your site is carrying 130 casino and betting articles under your name, all posted since 14 September. This causes the MKB exporters checking you out before handing over a shipment to land on betting pages with your name on them.
+However, your site has 130 casino articles hidden on it, all added since 14 September. This causes customers who Google you to risk finding gambling pages with your name on them.
 
 I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I built a food brand from zero with my family and ran acquisition, so I know how much rides on what people find when they look you up.
 
-Shall I build the new ferrydehaas.nl so exporters only find the shipping work you're known for, and send it over?
+Shall I build the new ferrydehaas.nl so customers only find the shipping work you're known for, and send it over?
 ```
 
 **Flags for Raka.**
