@@ -1,40 +1,48 @@
-# Draft, 2026-09-23. Sergey Shalunov, SotoCat. NOT SENT. Waiting on Raka's word.
+# Draft, 2026-09-23 (v2). Sergey Shalunov, SotoCat. NOT SENT. Waiting on Raka's word.
 
-Answers his 22 Sep 21.52 "Please show me your projects." and delivers what the 16 Sep
-opener offered, "my version of the SotoCat homepage, with a tenant request actually
-moving through it". Whole thread loaded before drafting, 6 activities, nextPage null.
+Replaces the v1 draft in this file (it's in git history). Raka's angle, 23 Sep, "he said show
+me the things we've done, but I'll be honest, we got cheeky and excited for your project, so
+the deck also shows how we envision the website, and he can play around with the site".
 
-Both links were fetched live on 2026-09-23, 200, titles still theirs, every asset byte
-matched, and every interactive part exercised on the live site with zero errors.
+Whole thread pulled right before drafting, `get_inbox_conversation`, 6 activities, nextPage
+null, totalItems 6. Newest is his "Please show me your projects." 22 Sep 21.52. Nothing since.
 
 ## Sergey Shalunov, SotoCat. DELIVERY. ctc_Puf9L7o8nDTyDNn2Q
 
 ```
-Sergey, I spent the morning building this.
+Sergey, here are the projects, and I'll be honest, we got a bit cheeky.
 
-It's the SotoCat site I said I'd make, with a tenant's leak moving through it from the first message to the sign off. Every page works, and the free trial sign up runs all the way through.
+We got excited about SotoCat, so the deck has our work for Unilever, Pertamina and the World Bank, and then how we'd picture your site.
+https://astra-sotocat-deck.netlify.app
 
-Try it yourself.
+Then we built it. It's nine pages and you can click through all of them, including a tenant's leak going from the first message to the sign off.
 https://astra-sotocat-prototype.netlify.app
 
-The second link has the projects you asked for, work for Unilever, Pertamina and the World Bank built with our development partner, plus what we found on sotocat.com today.
-https://astra-sotocat-deck.netlify.app
+One correction too. I told you there was nothing I'd touch on the site, then I went through it properly and found a few things. They're in the deck.
 
 What do you think?
 ```
 
 Notes for Raka.
 
-- The first line is only true if it goes out today. If it waits, change it to "I built this for you."
-- The forms show their confirmation screens but aren't wired to SotoCat's systems yet, so the message says he can run the sign up, not that it signs him up.
-- The delivery partner disclosure travels with every partner project in the deck, as the company profile requires.
-- Two URLs, not one, because he asked for projects and the projects live in the deck.
-- Updated 2026-09-23 after your partner PDF. The deck now names you as the contact, with
-  rifqiraka234@gmail.com and an "Email me" button, and Joshua van Zeelt beside you. Josh's
-  josh@astraagency.nl is no longer in the deck.
+- **The correction paragraph is optional but I'd keep it.** Our 22 Sep message said "there's
+  nothing I'd touch", and the deck he's about to open lists four things wrong with the site.
+  Saying it first reads as honest. Leaving it out lets him spot the contradiction himself.
+- "Our work" is the one team framing now in the deck, where the projects carry "Built by
+  Amwisesa, Astra's development partner". If you want the message itself safer, make it
+  "the work our team has done for Unilever, Pertamina and the World Bank".
+- Nine pages is counted from the build (home, pricing, landlords, contractors, about, FAQ,
+  contact, sign in, start trial), not counting the 404.
+- The forms show confirmation screens but aren't wired to anything, so it says "click
+  through", not "sign up".
+- No exclamation marks, it lands in a warm thread.
 
 Claims in it, each re-testable.
 
-- https://astra-sotocat-prototype.netlify.app returns 200 with title "SotoCat, AI repairs and maintenance for letting agents".
-- The homepage demo plays six stages, Captured to Resolved, for an example leak under a boiler.
-- https://astra-sotocat-deck.netlify.app returns 200 with title "SotoCat, what we found and what we built. Astra", and section 10 shows nine partner projects including Unilever (Bango, 1001 Ramadhan), Pertamina and the World Bank, with "Delivered by our development partner, Amwisesa, often through the brand's own agency."
+- https://astra-sotocat-deck.netlify.app returns 200, title "SotoCat, what we found and what
+  we built. Astra", checked 2026-09-23. Section 10 names Unilever, Pertamina and the World Bank.
+- https://astra-sotocat-prototype.netlify.app returns 200, title "SotoCat, AI repairs and
+  maintenance for letting agents", checked 2026-09-23. The homepage demo shows a tenant's
+  leak photo moving through six stages to Resolved.
+- "I told you there was nothing I'd touch", our 22 Sep 06.50 message, act_GSTQy3GG85o3RzKdE,
+  "The pricing page and the savings calculator are doing real work, there's nothing I'd touch."
