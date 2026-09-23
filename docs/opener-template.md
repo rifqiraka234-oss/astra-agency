@@ -97,7 +97,8 @@ slot has no source, the message does not get written.**
 - **The flaw survives four tests before it is written.**
   1. **Positive control** on any absence. "Not a single photo" shipped because the same sweep
      found 23 images on hfmencap.org.
-  2. **Render trust.** `site-audit.js` must not print `RENDER NOT TRUSTED`.
+  2. **Render trust.** `site-audit.js` must not print `RENDER NOT TRUSTED`. If it does, run
+     `tools/render-via-curl.js` and only use a visual finding when that reports 0 curl errors.
   3. **The tweak test.** If their web person fixes it in an afternoon, it is a task and it
      cannot be the flaw. tuftuf's missing privacy policy and HF Mencap's missing cookie
      banner were both true and both held back for this reason.
@@ -150,7 +151,7 @@ all pages" gets done. Nothing in it is optional.
    CTAs. tuftuf's guest range and "For example €15,000" budget are what made the stake visible.
 8. **Find their MOST CURRENT goal and pain by linking clues, then date it (Raka,
    2026-09-22).** Full method in **section 3A below**. It is not optional and it is not a
-   single search. Every one of the seven clue sources gets opened and read through, the
+   single search. Every one of the eight clue sources gets opened and read through, the
    clues get written down with dates, and the goal is INFERRED from how they fit together.
    The impact in block two is then aimed at THAT goal.
 9. **Pick the flaw that sits on that goal and that revenue line**, then run it through the
@@ -172,10 +173,11 @@ it", "linking it together, multifaceted".
 Several sources each leave a clue, and the goal is what makes all of them make sense at
 once. **A clue is evidence for the inference. It is never the content of the message.**
 
-### The seven clue sources. All seven are opened, every lead, no skipping
+### The eight clue sources. All eight are opened, every lead, no skipping
 
 | # | Source | How to get it | What to read for |
 |---|---|---|---|
+| 0 | **The lead's own lemlist `jobDescription` and `summary`** | The lead record, or the `linkedinInviteAccepted` activity, which carries it | Their mandate in their own words. The strongest single clue in batch 3, see 3B |
 | 1 | **Their website, all of it** | Section 3 steps 3 to 5. Plus any news, blog, press, "updates" or newsletter archive, and the newsletter signup itself | Expansion plans, new locations, new products, what the main CTA pushes, what changed recently and what looks abandoned |
 | 2 | **Their newsletter** | An archive page on the site, a Mailchimp or Substack archive linked from their HTML, a web search for `"<company>" newsletter` | What they tell existing customers they are doing next. This is usually the most honest statement of plans a small business publishes |
 | 3 | **The company LinkedIn page, recent posts** | `companyLinkedinUrl` from lemlist, opened. If walled, a web search for `site:linkedin.com/posts "<company>"` and open each result | Launches, hires, wins, events, partnerships. The dates matter as much as the words |
@@ -241,7 +243,7 @@ More in the same shape, so the method generalises.
 clues
   <date> <source url> <what it says, no interpretation>
   ...
-sources with nothing       <which of the seven, and why, eg walled 401>
+sources with nothing       <which of the eight, and why, eg walled 401>
 inference                  <one sentence>, rests on clues <n> and <m>
 contradictions             <none, or what points the other way>
 grade                      SUPPORTED | WEAK | UNRESOLVED
@@ -250,6 +252,92 @@ impact aimed at            <the goal, in plain words>
 
 **No inference, no impact.** If the grade is `WEAK` or `UNRESOLVED` and the stage based
 analysis gives nothing better than a timeless cost, the lead is not ready.
+
+---
+
+## 3B. What the first run taught (batch 3, 2026-09-23, one sent out of five)
+
+The method was run on five leads. Grzegorz Sobieszuk at PharmaSupport was sent, three were
+genuinely no angle, one was not a lead. The worked example is in
+`state/drafted_2026-09-23-batch3-new-accepts.md`. What it taught, in the order it comes up.
+
+### Picking the batch
+
+- **Take new leads from the acceptance count, never from an old "untouched" list.** Batch 2's
+  file named five leads as untouched and all five already had queue rows. The reliable source is
+  the difference. `get_campaigns_stats` gives `linkedinInvitationAccepted` now. The last audit
+  gives the count then. `GET /api/activities?version=v2&type=linkedinInviteAccepted&campaignId=
+  <id>&minDate=<audit date>` lists who accepted in between. **The arithmetic has to close**, 322
+  plus 5 equals 327, before anyone is researched.
+- **The activities record carries the whole lemlist lead**, `jobTitle`, `tagline`, `summary`,
+  `jobDescription` and company fields. Read it there first, it saves a lookup per lead.
+
+### Rule someone out on the record, before any fetch
+
+Two of five went on the record alone, and both are cheap to spot.
+- **A student or an employee is not a lead.** Oluchi Okafor's `summary` says Year 12 student.
+- **An agency is a competitor.** Hula Hoop's `companyDescription` says brand strategy agency,
+  80+ staff. Confirm with one fetch of their homepage title, then stop.
+
+### The eighth clue source, and it was the strongest
+
+**The lead's own lemlist `jobDescription` and `summary`.** People write their mandate there in
+their own words. Grzegorz's said "growth journey to becoming a leading service provider ...
+across Europe ... creating new service offerings, leading business development". That is a
+stated goal, which is better than any inferred one. **Read it first, then look for independent
+clues that agree.** It counts as one clue, never two, however many goals it names.
+
+**The other sources that paid off.**
+- **The company register via North Data**, for dates. It dated the takeover to 9 Dec 2025 and
+  showed he holds his stake through his own holding company, which also settled ownership.
+- **Third party employer profiles**, StudySmarter Talents, Indeed, Magnet.me. An employer profile
+  on a graduate platform is a hiring clue that doesn't depend on LinkedIn at all.
+- **WebFetch on a public company LinkedIn page** returned recent posts with relative ages. Treat
+  the ages as approximate and say so.
+
+### Check the site where the goal lives, not the whole site
+
+Once the goal is inferred, the question is **whether the site serves that goal**, not whether it
+has faults. QWIC's goal is dealer led growth in Germany. So the checks were qwic.de, the new
+models on it (Elan 36 mentions, Signal 13), and the dealer locator. All three held up, so the
+answer was no angle, although the site had a real GDPR fault. **A true fault that doesn't sit on
+their current goal is not the flaw.** The flaw that was sent, no careers content, sits exactly
+on PharmaSupport's goal of hiring scientists.
+
+### An absence claim over a whole site, done properly
+
+"Not a single line, on any page" was earned with four layers. Use the same four next time.
+1. **Crawl every linked page**, DE and EN, not the nav alone. 107 fetched.
+2. **Read every keyword hit in context.** German "stellen" is a verb far more often than a noun,
+   and every hit on PharmaSupport was the verb. A count of hits is not a finding.
+3. **Probe the likely unlinked paths**, `/karriere`, `/jobs`, `/stellenangebote`, `/career`,
+   `/en/careers` and so on, with a path that exists as the control. All 404, `/team` 200.
+4. **Search the index**, `site:domain` plus the terms, for pages the crawl can't reach.
+
+**And pick a control that is KNOWN to have the thing.** The first control grep ran on qwic.nl
+and found nothing, because QWIC's homepage doesn't link its careers page. A control that fails
+proves nothing either way. hfmencap.org, whose homepage says "Work for us", was the valid one.
+
+### Tool traps hit this run
+
+- **A Playwright script written by hand must set `ignoreHTTPSErrors: true`.** Without it every
+  page shows "Your connection is not private", which is the proxy's CA, never their certificate.
+  site-audit already handles this. Ad hoc scripts don't.
+- **Clear the temp file before every fetch in a loop.** A domain sweep reused the last page's
+  title for two domains that returned 000. This is the second time. `rm -f` first, every loop.
+- **A search tool you drove wrong is not a broken search.** Pressing Enter in QWIC's Mapbox
+  search listed nothing, most likely because it wants a suggestion clicked. Never write "broken"
+  about an interactive part you haven't driven the way a visitor would.
+
+### The pre send sequence that worked, keep it exactly
+
+1. `get_inbox_conversation`, still empty.
+2. Re-verify the claim live in the same minute, with its control, and the Impressum.
+3. **Extract the text from the drafts file with a regex**, never retype it.
+4. `send_message` with `contactId`, `linkedin`, `usr_27bdxG7jzTn2rucGB`.
+5. Re-pull, confirm the body matches, record the activity id.
+6. Queue row `SENT` with `openerText`, `openerSentAt` and `sentActivityId`, a `GATE ARCHIVED`
+   marker on the drafts file, one commit.
 
 ---
 

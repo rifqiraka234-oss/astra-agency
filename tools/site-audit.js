@@ -434,6 +434,8 @@ function classify(url, base) {
       console.log('!!  OURS, not theirs. Every asset, image, layout and breakage finding in this run');
       console.log('!!  is VOID. You may NOT say anything is broken, missing or not loading, and the');
       console.log('!!  screenshots are unreliable for this site because they are missing real assets.');
+      console.log(`!!  NEXT STEP, the second render path. node tools/render-via-curl.js ${target} ${tag}`);
+      console.log('!!  If that serves every request with 0 curl errors, read its parts instead.');
       renderTrust.suspectAssets.filter((a) => a.servesFineElsewhere).slice(0, 5)
         .forEach((a) => {
           const ok = /^2\d\d/.test(a.viaCurl) && !/text\/html/.test(a.viaCurl) ? a.viaCurl : a.viaCurlChromeAccept;

@@ -69,12 +69,18 @@ that run is void, and the screenshots are unusable for that site** because they 
 real assets. Do not reason around it. Do not "just check the screenshot", the screenshot is
 the thing that is wrong.
 
+**The second render path exists, so use it before blocking (2026-09-23).** On wlfm.de,
+Chromium alone failed 16 requests with `ERR_TOO_MANY_RETRIES`, a proxy fault. Rendering with
+every wlfm.de request served by curl gave 63 served, 0 errors and a page that could be read.
+Undecoded images in that render can be lazy loading or hidden slides, never a finding alone.
+
 **The three states, and only one of them lets you write a sentence.**
 
 | State | What you may say |
 |---|---|
 | Rendered, guard quiet, screenshot opened | Describe what you saw |
-| `RENDER NOT TRUSTED`, or a bot wall, or a 403 | **Nothing, in either direction.** Row is `BLOCKED_NEEDS_INFO` and Raka opens it |
+| `RENDER NOT TRUSTED` | **Nothing yet.** Run `node tools/render-via-curl.js <url> <tag>`, the second render path, which serves every request to their own host through curl. If it reports **0 curl errors**, read every part it writes and describe what you saw. If not, `BLOCKED_NEEDS_INFO` and Raka opens it |
+| A bot wall or a 403 | **Nothing, in either direction.** Row is `BLOCKED_NEEDS_INFO` and Raka opens it |
 | Asset failed here **and** failed the independent re-fetch | It is theirs, and still open the screenshot before writing it |
 
 **A blocked page is not a weak page.** A wall, a challenge, a timeout or a void render says
@@ -188,7 +194,7 @@ short version.
   the red team. Then `This causes [stakeholder] to [impact]`, and **the impact is aimed at
   their MOST CURRENT goal**, found and dated by research, never a timeless generic cost.
 - **The current goal is INFERRED from linked clues, never read off one source (Raka,
-  2026-09-22).** Open all seven clue sources in `docs/opener-template.md` section 3A, the
+  2026-09-22).** Open all eight clue sources, starting with the lead's own lemlist `jobDescription` and `summary`, in `docs/opener-template.md` section 3A, the
   whole site and newsletter, company LinkedIn posts, the owner's own pages, job openings
   read in full, and a web and news search of the company and the owner. Write each clue
   with its URL and date, link two or more that agree, try to break it, grade it. **The
