@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED. Grzegorz Sobieszuk SENT 2026-09-23 10:20:39Z, act_6gTvNPEXLCMhK6whN, text as below. -->
+
 # Batch 3, the five who accepted after the 22 Sep audit. 2026-09-23. NOT SENT.
 
 **First run of the clues to inference method**, `docs/opener-template.md` section 3A.
