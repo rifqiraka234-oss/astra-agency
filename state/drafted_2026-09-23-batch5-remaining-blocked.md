@@ -96,7 +96,7 @@ Shall I build the new ferrydehaas.nl so customers only find the shipping work yo
 **Flags for Raka.**
 - **This is really a security alert.** You may prefer to tip him off plainly and for free, which
   would earn more trust than a pitch. Your call.
-- "land on betting pages" is the impact inference. It's true that the pages are public and
+- "risk finding gambling pages" is the impact inference. It's true that the pages are public and
   indexable. It's not proven that anyone has landed on one.
 - The site's in Dutch and he's Dutch. The template is English, as with every other send.
 
