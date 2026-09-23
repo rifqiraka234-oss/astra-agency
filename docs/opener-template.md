@@ -329,6 +329,30 @@ proves nothing either way. hfmencap.org, whose homepage says "Work for us", was 
   search listed nothing, most likely because it wants a suggestion clicked. Never write "broken"
   about an interactive part you haven't driven the way a visitor would.
 
+### Retrying blocked leads (batch 4, 2026-09-23), what changed the answers
+
+Five blocked leads were retried. Every block turned out to rest on something other than the lead.
+- **Re read the lemlist record before trusting an old block.** Paul Prescott was blocked on
+  `raiseyourgame.co.uk`, a domain that isn't on his record, which gives `raise-your-game.com`.
+  Emily Levy's `alquimialawyers.com` is dead but her firm moved to `alquimialegal.mx`. Debby Alles'
+  name collision was settled by her own `companyDescription`. Use `search_campaign_leads` with
+  the `id`, it returns the full record including every `experience` line.
+- **A 503 can be the page itself.** The WordPress Under Construction Page plugin serves 503 on
+  purpose. Aksonz was "503 on every fetch" for weeks and the page behind it is a placeholder.
+- **When our proxy can't read a site, use a reader on another network.** `r.jina.ai/<url>` returns
+  the text, and with the header `X-Return-Format: screenshot` a screenshot URL. Control it with a
+  known site through the same reader. It is a separate path from curl, Chromium and WebFetch.
+- **Counters in raw HTML start at zero.** "0 Prizes Won, £0 Money Raised" was a count up
+  animation, 750 and £80,000 once rendered and scrolled. Never quote a number from HTML that a
+  script animates.
+- **A phone screenshot needs a phone user agent.** Wix and other builders pick the layout by user
+  agent, so a 390px desktop browser got the desktop layout with text clipped off the edge. site-audit
+  now shoots the phone view with a real iPhone profile.
+- **Look for the other language before claiming there isn't one.** Wix Multilingual flags in the
+  HTML meant `/en` existed, which killed "your site is Spanish only" before it was written.
+- **Companies House name matches need the company, not the name.** The first "Neeraj Sharma"
+  appointments page was a different man in Teesside. Search the company, then open its officers.
+
 ### The pre send sequence that worked, keep it exactly
 
 1. `get_inbox_conversation`, still empty.
