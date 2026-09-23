@@ -15,7 +15,7 @@ Sergey, here are the projects, and I'll be honest, we got a bit cheeky.
 The deck below has our work, and also how we'd picture your site.
 https://astra-sotocat-deck.netlify.app
 
-Then we built the site on its own. A tenant's leak runs from the first message to the sign off, there's a savings calculator you can put your own numbers into, pricing that works out your monthly fee from your unit count, and a free trial sign up that goes all the way through. You can play around with it yourself.
+Then we built the site on its own. A tenant's leak runs from the first message to the sign off. There's a savings calculator you can put your own numbers into and pricing that works out your monthly fee from your unit count. The free trial sign up goes all the way through too. You can play around with it yourself.
 https://astra-sotocat-prototype.netlify.app
 
 One correction too. I told you there was nothing I'd touch on the site, then I went through it properly and found a few things. They're in the deck.
