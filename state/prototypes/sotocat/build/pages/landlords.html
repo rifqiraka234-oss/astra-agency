@@ -1,0 +1,82 @@
+<!--meta
+title=For landlords, SotoCat
+desc=If an agency manages your property, follow every repair on SotoCat and approve quotes from your phone. If you manage it yourself, SotoCat is building a version for you.
+nav=landlords
+-->
+<section class="phero img-hero">
+  <img class="bg" src="img/street.jpg" width="1600" height="1000" alt="" fetchpriority="high">
+  <div class="wrap">
+    <p class="kick">For landlords</p>
+    <h1 class="h1" style="max-width:900px">Keep track of your properties without chasing anyone.</h1>
+    <p class="lede" style="color:#d4d4da">Whether a letting agent looks after your homes or you run them yourself, there's a way in for you.</p>
+    <div class="hero-cta"><a class="btn btn-white" href="#agency">My agent manages it</a><a class="btn btn-ghost-d" href="#survey">I manage it myself</a></div>
+  </div>
+</section>
+
+<section class="sec" id="agency" aria-labelledby="t-agency">
+  <div class="wrap split">
+    <div>
+      <p class="kick rv">If an agency manages your property</p>
+      <h2 class="h2 rv" id="t-agency">See every repair as it happens.</h2>
+      <p class="lede rv">Ask your letting agent to join SotoCat and invite you. You'll follow each request from the tenant's first message to the sign off, and approve quotes from your phone.</p>
+      <div class="pill-row rv" style="margin-top:26px">
+        <span class="soft-pill" style="background:var(--mist);border-color:transparent;color:var(--text)"><i></i>Progress in real time</span>
+        <span class="soft-pill" style="background:var(--mist);border-color:transparent;color:var(--text)"><i></i>Quotes to approve</span>
+        <span class="soft-pill" style="background:var(--mist);border-color:transparent;color:var(--text)"><i></i>Tenant sign off on every fix</span>
+        <span class="soft-pill" style="background:var(--mist);border-color:transparent;color:var(--text)"><i></i>Every job in one place</span>
+      </div>
+    </div>
+    <div class="vis pad rv d1" style="background:radial-gradient(90% 80% at 80% 0%,rgba(10,132,255,.25),transparent 60%),#15161a">
+      <div class="vis-ui">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px"><b style="font-size:16px">41 Arlington Road</b><span style="font-size:12.5px;color:#8b8b92">3 flats</span></div>
+        <div class="qlist">
+          <div class="q"><span class="ini" style="background:#0a84ff;font-size:10px">F3</span><div><div class="nm">Leaking pipe under the boiler</div><div class="sm">Reported 13.02, fixed 16.41</div></div><span class="chip c-done">Resolved</span></div>
+          <div class="q"><span class="ini" style="background:#7438c2;font-size:10px">F1</span><div><div class="nm">Extractor fan not working</div><div class="sm">Quote from Northside Electrical</div></div><span class="chip c-quote">Approve</span></div>
+          <div class="q"><span class="ini" style="background:#9a5a00;font-size:10px">F2</span><div><div class="nm">Sticking front door lock</div><div class="sm">Visit booked for Thursday, 10.00</div></div><span class="chip c-sched">Scheduled</span></div>
+        </div>
+        <p style="font-size:12px;color:#8b8b92;margin-top:12px">Example property</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="survey" aria-labelledby="t-survey">
+  <div class="wrap split">
+    <div class="photo rv" style="aspect-ratio:4/3">
+      <img src="img/keys.jpg" width="1200" height="900" alt="A hand holding a set of house keys in a doorway" loading="lazy">
+    </div>
+    <div>
+      <p class="kick rv">If you manage your own</p>
+      <h2 class="h2 rv" id="t-survey">We're building a version for you. <span class="dim">Tell us what it should do.</span></h2>
+      <p class="lede rv">SotoCat is running independent research with self managed landlords, portfolio landlords and landlord organisations. It covers tenancy admin, compliance, legal support and day to day rental issues.</p>
+      <div class="pill-row rv">
+        <span class="soft-pill"><i></i>Tenancy admin</span><span class="soft-pill"><i></i>Compliance</span><span class="soft-pill"><i></i>Legal support</span><span class="soft-pill"><i></i>Day to day issues</span>
+      </div>
+      <p class="rv" style="margin-top:22px;color:var(--sub-d)">It takes five or six minutes. It isn't a sales form, and it's only for people who own, manage or work directly with rental properties or landlord communities.</p>
+      <div class="hero-cta rv"><a class="btn btn-white" href="https://sotocat.com/">Start the survey {{ARROW}}</a><a class="btn btn-ghost-d" href="#early">Just keep me posted</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec mist" id="early" aria-labelledby="t-early">
+  <div class="wrap" style="max-width:860px">
+    <p class="kick">Early access</p>
+    <h2 class="h2" id="t-early" style="font-size:clamp(34px,4.4vw,56px)">Be first to try the landlord version.</h2>
+    <p class="lede">Leave your details and we'll tell you when it opens. We won't send you anything else.</p>
+    <div class="card" style="margin-top:36px">
+      <form class="form" data-simple="early-ok" novalidate>
+        <div class="row2">
+          <div class="f"><label for="e-name">Your name</label><input id="e-name" name="name" autocomplete="name" required><p class="err">Add your name.</p></div>
+          <div class="f"><label for="e-email">Email</label><input id="e-email" name="email" type="email" autocomplete="email" required><p class="err">Add an email address.</p></div>
+        </div>
+        <div class="row2">
+          <div class="f"><label for="e-units">Homes you let</label><select id="e-units" name="units" required><option value="">Choose one</option><option>1</option><option>2 to 4</option><option>5 to 10</option><option>11 or more</option></select><p class="err">Choose how many homes you let.</p></div>
+          <div class="f"><label for="e-how">How you manage them today</label><select id="e-how" name="how" required><option value="">Choose one</option><option>All myself</option><option>An agent finds tenants, I do the rest</option><option>A mix across properties</option><option>An agent does it all</option></select><p class="err">Choose one.</p></div>
+        </div>
+        <p class="fine">By sending this you agree to SotoCat's <a href="https://sotocat.com/privacy-policy/">privacy policy</a>.</p>
+        <div><button class="btn btn-blue" type="submit">Keep me posted {{ARROW}}</button></div>
+      </form>
+      <div class="ok-box" id="early-ok" role="status"><b>You're on the list.</b>We'll email <span data-echo="email"></span> when the landlord version opens.</div>
+    </div>
+  </div>
+</section>

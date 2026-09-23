@@ -148,13 +148,16 @@ def check(path, replies=False):
             bad(i, f"{m.count('!')} exclamation marks, must be exactly 1")
         elif "!" not in m.split("\n\n")[0]:
             bad(i, "the exclamation mark is not in block one")
+        # A URL is exempt from the colon and dash bans (CLAUDE.md, the delivery and closing
+        # shapes), so strip links before checking the prose around them.
+        prose = re.sub(r"https?://\S+|\b[\w-]+(?:\.[\w-]+)*\.(?:app|com|nl|io|ai|co\.uk|org|net)(?:/\S*)?", "", m)
         # Total ban on the colon character. Raka's rule outranks NO-AI-SLOP.
-        if ":" in m:
+        if ":" in prose:
             bad(i, "contains a colon")
         # Dashes, with the proper-noun exemption (Mercedes-Benz, Witt-Dörring).
-        for d in re.findall(r"[—–]", m):
+        for d in re.findall(r"[—–]", prose):
             bad(i, "contains an em or en dash")
-        for h in re.findall(r"\w+-\w+", m):
+        for h in re.findall(r"\w+-\w+", prose):
             if not h[0].isupper():
                 bad(i, f"hyphen in prose, '{h}', rewrite around it")
         # Zero contractions is the single clearest machine tell.

@@ -1,0 +1,58 @@
+<!--meta
+title=Request a call, SotoCat
+desc=Pick a time and SotoCat will call you back, including at the weekend. Or email support@sotocat.com.
+nav=
+-->
+<section class="phero">
+  <div class="wrap">
+    <p class="kick">Contact</p>
+    <h1 class="h1" style="font-size:clamp(40px,5.4vw,72px)">Pick a time. <span style="color:#6f6f76">We'll ring you.</span></h1>
+    <p class="lede" style="color:var(--sub-d)">Tell us when suits, weekends included. For anything quicker, email <a class="lnk" href="mailto:support@sotocat.com" style="color:#4ea8ff">support@sotocat.com</a> or call <a class="lnk" href="tel:+442033999323" style="color:#4ea8ff">+44 20 3399 9323</a>.</p>
+  </div>
+</section>
+
+<section class="sec mist" style="padding-top:clamp(48px,6vw,80px)">
+  <div class="wrap">
+    <div class="grid2 grid-form">
+      <div class="card">
+        <form class="form" data-simple="call-ok" novalidate>
+          <div class="row2">
+            <div class="f"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required><p class="err">Add your name.</p></div>
+            <div class="f"><label for="c-org">Agency or company</label><input id="c-org" name="company" autocomplete="organization"></div>
+          </div>
+          <div class="row2">
+            <div class="f"><label for="c-tel">Phone</label><input id="c-tel" name="phone" type="tel" autocomplete="tel" required><p class="err">Add a number we can call.</p></div>
+            <div class="f"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required><p class="err">Add an email address.</p></div>
+          </div>
+          <div class="f"><label for="c-day">Which day</label><select id="c-day" name="day" required><option value="">Choose a day</option><option>Any weekday</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select><p class="err">Choose a day.</p></div>
+          <div class="f"><span style="display:block;font-weight:600;font-size:14.5px;margin-bottom:7px">Preferred time</span>
+            <div class="slots" role="radiogroup" aria-label="Preferred time">
+              <label><input type="radio" name="slot" value="10-11" checked><span>10.00 to 11.00</span></label>
+              <label><input type="radio" name="slot" value="11-12"><span>11.00 to 12.00</span></label>
+              <label><input type="radio" name="slot" value="12-13"><span>12.00 to 13.00</span></label>
+              <label><input type="radio" name="slot" value="13-14"><span>13.00 to 14.00</span></label>
+              <label><input type="radio" name="slot" value="14-15"><span>14.00 to 15.00</span></label>
+              <label><input type="radio" name="slot" value="16-17"><span>16.00 to 17.00</span></label>
+            </div>
+          </div>
+          <div class="f"><label for="c-msg">Anything we should know <span style="color:var(--sub);font-weight:500">(optional)</span></label><textarea id="c-msg" name="message" placeholder="How many units you manage, the CRM you use, what you'd like to see"></textarea></div>
+          <p class="fine">By sending this you agree to SotoCat's <a href="https://sotocat.com/privacy-policy/">privacy policy</a> and <a href="https://sotocat.com/terms-of-use/">terms of use</a>.</p>
+          <div><button class="btn btn-blue" type="submit">Request my call {{ARROW}}</button></div>
+        </form>
+        <div class="ok-box" id="call-ok" role="status"><b>Thanks, we'll call you.</b>We'll ring at the time you picked, and send a note to <span data-echo="email"></span> if anything changes.</div>
+      </div>
+      <aside>
+        <div class="photo" style="aspect-ratio:3/2"><img src="img/desk.jpg" width="1200" height="800" alt="A woman on a call at her desk with a laptop open" loading="lazy"></div>
+        <div class="card" style="margin-top:18px">
+          <h2 style="font-size:22px;letter-spacing:-.02em">Prefer to see it on screen?</h2>
+          <p style="color:var(--sub);margin-top:8px">Book a demo straight into Sergey's calendar and we'll walk you through a live request.</p>
+          <a class="btn btn-blue" href="{{CAL}}" target="_blank" rel="noopener" style="margin-top:18px">Book a demo {{ARROW}}</a>
+        </div>
+        <div class="card" style="margin-top:18px">
+          <h2 style="font-size:22px;letter-spacing:-.02em">Already a customer?</h2>
+          <p style="color:var(--sub);margin-top:8px">Email <a class="lnk" href="mailto:support@sotocat.com">support@sotocat.com</a> and we'll pick it up.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

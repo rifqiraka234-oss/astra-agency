@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SotoCat, what we found and what we built. Astra</title>
+<meta name="description" content="What a visitor meets on sotocat.com today, what SotoCat is aiming at, and the website Astra built to carry both products.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="SotoCat, what we found and what we built">
+<meta property="og:description" content="What a visitor meets on sotocat.com today, what SotoCat is aiming at, and the website Astra built to carry both products.">
+<meta property="og:image" content="https://astra-sotocat-deck.netlify.app/img/new-hero-d.jpg">
+<meta name="theme-color" content="#0e0f12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Crect width=%2716%27 height=%2716%27 rx=%274%27 fill=%27%230e0f12%27/%3E%3Cpath d=%27M8 2c.4 3.1 2.9 5.6 6 6-3.1.4-5.6 2.9-6 6-.4-3.1-2.9-5.6-6-6 3.1-.4 5.6-2.9 6-6z%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+<style>
+:root{--ink:#0e0f12;--ink2:#16171b;--ink3:#1e2025;--paper:#f7f7f5;--paper2:#eeeeea;--white:#fff;--text:#16171b;--sub:#64656b;--sub-d:#a4a5ab;--line:#e2e2de;--line-d:rgba(255,255,255,.1);--blue:#0a84ff;--blue2:#4ea8ff;--cyan:#20bbdd;--amber:#ffbf40;--red:#ff6b5e;--green:#30d158;
+--sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;--r:22px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--ink)}
+body{margin:0;font-family:var(--sans);font-size:18px;line-height:1.55;color:var(--text);background:var(--paper);-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;letter-spacing:-.03em;line-height:1.06;font-weight:700}
+p{margin:0}
+.w{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
+.num{font-variant-numeric:tabular-nums}
+.top{position:sticky;top:0;z-index:20;background:rgba(14,15,18,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#fff;border-bottom:1px solid var(--line-d)}
+.top .w{display:flex;align-items:center;gap:16px;height:58px}
+.astra{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em;font-size:13px}
+.astra svg{width:16px;height:16px}
+.top .for{color:var(--sub-d);font-size:14px;letter-spacing:0;font-weight:500}
+.top a.go{margin-left:auto;text-decoration:none;font-size:14.5px;font-weight:600;background:var(--blue);color:#fff;padding:9px 16px;border-radius:999px;white-space:nowrap}
+.prog{position:absolute;left:0;bottom:-1px;height:2px;background:var(--blue);width:0}
+@media (max-width:620px){.top .for{display:none}}
+section{padding:clamp(80px,10vw,136px) 0;position:relative}
+.dk{background:var(--ink);color:#fff}
+.dk2{background:var(--ink2);color:#fff}
+.lt{background:var(--paper)}
+.wh{background:#fff}
+.kick{font-size:15px;font-weight:600;color:var(--blue);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.dk .kick,.dk2 .kick{color:var(--blue2)}
+.kick .n{opacity:.6;font-variant-numeric:tabular-nums}
+.h1{font-size:clamp(42px,6.4vw,84px);letter-spacing:-.04em;line-height:1}
+.h2{font-size:clamp(32px,4.6vw,58px)}
+.dim{color:#8a8b91}
+.lt .dim,.wh .dim{color:#9a9ba0}
+.lede{font-size:clamp(18px,1.7vw,22px);line-height:1.5;color:var(--sub);max-width:720px;margin-top:22px}
+.dk .lede,.dk2 .lede{color:var(--sub-d)}
+.shot{border-radius:var(--r);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.28),0 0 0 1px rgba(0,0,0,.06);background:#111}
+.dk .shot,.dk2 .shot{box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08)}
+.shot img{width:100%}
+.cap{font-size:14px;color:var(--sub);margin-top:12px}
+.dk .cap,.dk2 .cap{color:var(--sub-d)}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:16px;padding:14px 22px;border-radius:999px;white-space:nowrap}
+.b-blue{background:var(--blue);color:#fff}
+.b-white{background:#fff;color:var(--ink)}
+.b-ghost{border:1px solid rgba(255,255,255,.22);color:#fff}
+.b-ghostl{border:1px solid #cfcfca;color:var(--text);background:#fff}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.g2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.g2,.g3{grid-template-columns:minmax(0,1fr)}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.card{background:#fff;border-radius:var(--r);padding:clamp(20px,2.6vw,30px);border:1px solid var(--line)}
+.dk .card,.dk2 .card{background:var(--ink3);border-color:var(--line-d)}
+.card h3{font-size:22px;letter-spacing:-.02em;line-height:1.2}
+.card p{margin-top:10px;color:var(--sub);font-size:16.5px}
+.dk .card p,.dk2 .card p{color:var(--sub-d)}
+.card .shot{margin-top:18px;border-radius:14px}
+.stat b{display:block;font-size:clamp(40px,4.4vw,60px);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:10px;color:var(--sub);font-size:15.5px;line-height:1.4}
+.quote{margin-top:56px;padding:30px 34px;border-radius:var(--r);background:var(--ink);color:#fff;display:flex;gap:26px;align-items:center}
+.quote q{font-size:clamp(24px,3vw,38px);font-weight:600;letter-spacing:-.025em;line-height:1.15;quotes:"\201C" "\201D"}
+.quote small{display:block;margin-top:10px;color:var(--sub-d);font-size:15px}
+.quote .mk{width:54px;flex:none;opacity:.9}
+@media (max-width:620px){.quote{flex-direction:column;align-items:flex-start}}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:48px}
+.phone{border-radius:34px;overflow:hidden;box-shadow:0 0 0 6px #25262c,0 30px 80px rgba(0,0,0,.55);background:#000}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:26px;align-items:end}
+@media (max-width:760px){.pair{grid-template-columns:minmax(0,1fr)}.pair .phone{max-width:260px;margin:0 auto}}
+.proofs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px}
+@media (max-width:900px){.proofs{grid-template-columns:minmax(0,1fr)}}
+.proofs .card h3{font-size:19px}
+.tag{display:inline-block;font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:999px;background:rgba(255,107,94,.14);color:var(--red);margin-bottom:12px}
+.tag.ok{background:rgba(48,209,88,.14);color:#26a849}
+.lt .tag.ok,.wh .tag.ok{color:#16804a;background:#e2f6e9}
+.find{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:center;padding:34px 0;border-top:1px solid var(--line)}
+.find:first-of-type{border-top:0}
+.find h3{font-size:clamp(22px,2.3vw,28px);letter-spacing:-.02em;line-height:1.2}
+.find p{margin-top:12px;color:var(--sub);font-size:17px}
+@media (max-width:860px){.find{grid-template-columns:minmax(0,1fr)}}
+.log{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.7;background:#0a0b0d;border:1px solid var(--line-d);border-radius:14px;padding:16px 18px;color:#d8d9de;margin-top:18px;overflow-x:auto}
+.log .r{color:var(--red)}.log .g{color:#8bd0ff}.log .d{color:#7b7c83}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;min-width:640px}
+.tbl th,.tbl td{text-align:left;vertical-align:top;padding:16px 18px;border-bottom:1px solid var(--line);font-size:16px}
+.tbl th{font-size:13.5px;color:var(--sub);font-weight:600}
+.tbl td:first-child{font-weight:700;width:26%}
+.tbl td:nth-child(2){color:var(--sub);width:34%}
+.tbl tr:last-child td{border-bottom:0}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.diagram{margin-top:48px;border-radius:var(--r);background:var(--ink3);border:1px solid var(--line-d);padding:clamp(16px,3vw,34px)}
+.diagram svg{min-width:760px;width:100%}
+.money{margin-top:40px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;padding:26px 30px;border-radius:var(--r);background:linear-gradient(135deg,rgba(10,132,255,.2),rgba(32,187,221,.08));border:1px solid rgba(10,132,255,.35)}
+.money b{font-size:clamp(40px,5vw,64px);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.money p{color:#d6d7dc;font-size:17px}
+@media (max-width:700px){.money{grid-template-columns:minmax(0,1fr)}}
+.built{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:48px}
+@media (max-width:900px){.built{grid-template-columns:minmax(0,1fr)}}
+.built .card{padding:0;overflow:hidden}
+.built .card .im{aspect-ratio:16/10;overflow:hidden;background:#0b0b0c}
+.built .card .im img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.built .card .tx{padding:20px 22px 24px}
+.built .card h3{font-size:19px}
+.checks{list-style:none;margin:0;padding:0;counter-reset:c;display:grid;gap:12px}
+.checks li{counter-increment:c;display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start;padding:14px 16px;border-radius:14px;background:var(--ink3);border:1px solid var(--line-d);color:#e4e5ea;font-size:16px}
+.checks li::before{content:counter(c);width:30px;height:30px;border-radius:9px;background:rgba(10,132,255,.2);color:var(--blue2);display:grid;place-items:center;font-weight:700;font-size:14px}
+.sketch{position:relative}
+.sketch .lbl{position:absolute;top:14px;right:14px;font-size:12px;font-weight:700;color:#8a5a00;background:#fff3d6;border:1px dashed #d9a441;padding:4px 9px;border-radius:999px}
+.sk-ui{background:#fff;border-radius:16px;border:1px solid var(--line);padding:16px;font-size:14px;margin-top:18px}
+.sk-row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;border:1px solid #ececea;margin-top:8px}
+.sk-row small{display:block;color:var(--sub);font-size:12.5px}
+.pill{font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px;white-space:nowrap}
+.p-a{background:#fff1d6;color:#9a5a00}.p-g{background:#e2f6e9;color:#16804a}.p-b{background:#e6f1ff;color:#0a64c9}.p-r{background:#fde7e5;color:#b3261e}
+.work .card{padding:0;overflow:hidden}
+.work .card .im{aspect-ratio:4/3;overflow:hidden;background:#fff}
+.work .card .im img{width:100%;height:100%;object-fit:cover}
+.work .card .tx{padding:20px 22px 24px}
+.disc{margin-top:18px;font-size:14px;color:var(--sub-d)}
+.people{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;margin-top:40px}
+@media (max-width:760px){.people{grid-template-columns:minmax(0,1fr)}}
+.person b{display:block;font-size:20px;color:#fff}
+.person span{display:block;color:var(--sub-d);font-size:15.5px;margin-top:6px}
+.person a{color:var(--blue2)}
+.end{text-align:center}
+.end .lede{margin-left:auto;margin-right:auto}
+.end .row{justify-content:center}
+.foot{background:var(--ink);color:var(--sub-d);font-size:14px;padding:30px 0}
+.foot .w{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+</style>
+<script>document.documentElement.className+=" js";</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="w">
+    <span class="astra"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c.5 4.2 3.8 7.5 8 8-4.2.5-7.5 3.8-8 8-.5-4.2-3.8-7.5-8-8 4.2-.5 7.5-3.8 8-8z" fill="#fff"/></svg>ASTRA AGENCY</span>
+    <span class="for">for SotoCat</span>
+    <a class="go" href="https://astra-sotocat-prototype.netlify.app/">Open the new site</a>
+  </div>
+  <span class="prog" id="prog"></span>
+</header>
+
+<section class="dk" style="padding-top:clamp(64px,8vw,110px)">
+  <div class="w">
+    <p class="kick rv">For Sergey Shalunov, SotoCat</p>
+    <h1 class="h1 rv">SotoCat is turning into two products. <span class="dim">Its website has room for one.</span></h1>
+    <p class="lede rv">What a visitor meets on sotocat.com today, what SotoCat is aiming at, and the site we built to carry both. September 2026.</p>
+    <div class="row rv"><a class="btn b-blue" href="https://astra-sotocat-prototype.netlify.app/">Open the new site</a><a class="btn b-ghost" href="#today">See what we found</a></div>
+    <div class="shot rv" style="margin-top:56px"><img src="img/new-hero-d.jpg" width="1440" height="900" alt="The new SotoCat homepage, with a tenant's leak moving through a live chat and job ticket"></div>
+    <p class="cap rv">The new homepage. A tenant's leak plays through from the first message to the sign off.</p>
+  </div>
+</section>
+
+<section class="lt">
+  <div class="w">
+    <p class="kick rv"><span class="n">01</span>What we looked at</p>
+    <h2 class="h2 rv">We went through the whole site, <span class="dim">as a visitor and underneath.</span></h2>
+    <div class="g4" style="margin-top:48px">
+      <div class="stat rv"><b>15</b><span>pages and links on sotocat.com, opened one by one</span></div>
+      <div class="stat rv"><b>4</b><span>of your 8 blog posts read in full, the ones about where SotoCat is going</span></div>
+      <div class="stat rv"><b>2</b><span>company records at Companies House, SotoCat and PropCat</span></div>
+      <div class="stat rv"><b>3</b><span>rivals a letting agent will compare you with</span></div>
+    </div>
+    <div class="quote rv">
+      <svg class="mk" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c.5 4.2 3.8 7.5 8 8-4.2.5-7.5 3.8-8 8-.5-4.2-3.8-7.5-8-8 4.2-.5 7.5-3.8 8-8z" fill="#20bbdd"/></svg>
+      <div><q>The best interface is no interface.</q><small>Sergey Shalunov, writing on the SotoCat blog on 12 May 2026. We built the new site around that line.</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="dk" id="today">
+  <div class="w">
+    <p class="kick rv"><span class="n">02</span>sotocat.com today</p>
+    <h2 class="h2 rv">Every visitor meets the landlord survey first. <span class="dim">Nothing underneath it can be clicked.</span></h2>
+    <div class="pair rv" style="margin-top:48px">
+      <div><div class="shot"><img src="img/old-visitor-d.jpg" width="1400" height="875" alt="The sotocat.com homepage blurred behind the landlord research card"></div><p class="cap">The homepage at desktop width, as it loads for a new visitor.</p></div>
+      <div><div class="phone"><img src="img/old-visitor-m.jpg" width="390" height="844" alt="The sotocat.com homepage on a phone, covered by the landlord research card"></div><p class="cap">And on a phone.</p></div>
+    </div>
+    <div class="proofs">
+      <div class="card rv"><span class="tag">Every page but the blog</span><h3>Book a demo, Request a call and the menu sit under the survey layer.</h3><p>We clicked them in a real browser. Each click lands on the layer and nothing happens.</p></div>
+      <div class="card rv"><span class="tag">Create account, Sign in</span><h3>Both open a page that says it's still being finalised.</h3><div class="shot"><img src="img/old-dev.jpg" width="1200" height="533" alt="The sotocat.com page titled Page Under Development" loading="lazy"></div></div>
+      <div class="card rv"><span class="tag">Try 90 days for &pound;0</span><h3>The free trial button opens a page that isn't there.</h3><div class="shot"><img src="img/old-404.jpg" width="1200" height="533" alt="The sotocat.com page not found screen" loading="lazy"></div></div>
+    </div>
+    <p class="lede rv" style="margin-top:40px">The landlord research is the right thing to be running. At the moment it's costing you the agencies at the same time.</p>
+  </div>
+</section>
+
+<section class="wh">
+  <div class="w">
+    <p class="kick rv"><span class="n">03</span>Underneath the blur</p>
+    <h2 class="h2 rv">The product story's strong. <span class="dim">The page doesn't lead with it.</span></h2>
+    <p class="lede rv">Your seven step workflow, the public per unit prices and the savings calculator are the best things on the site. Here's what gets in their way.</p>
+    <div style="margin-top:40px">
+      <div class="find rv"><div><h3>The first thing on the page is a paragraph.</h3><p>There's no line that tells an agency what SotoCat does in five seconds. The first heading on the page is the trial offer.</p></div><div class="shot"><img src="img/old-under-hero.jpg" width="1400" height="1225" alt="The sotocat.com hero underneath the survey layer" loading="lazy"></div></div>
+      <div class="find rv"><div><h3>The top numbers have no source.</h3><p>70% faster resolution, 50% lower agency cost and 95% tenant satisfaction, on a company incorporated in March. An agency doing its homework will ask where they came from.</p></div><div class="shot"><img src="img/old-stats.jpg" width="1200" height="142" alt="The four headline numbers on sotocat.com" loading="lazy"></div></div>
+      <div class="find rv"><div><h3>The buyer shares the stage with three people who don't pay.</h3><p>Agencies, contractors, landlords and tenants get four equal cards. The only one with a price list doesn't stand out.</p></div><div class="shot"><img src="img/old-audiences.jpg" width="1200" height="550" alt="Four equal cards for agencies, contractors, landlords and tenants" loading="lazy"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dk2">
+  <div class="w">
+    <p class="kick rv"><span class="n">04</span>What a careful agency checks</p>
+    <h2 class="h2 rv">Agencies will hand SotoCat their tenants' data. <span class="dim">Two things make that a harder yes.</span></h2>
+    <div class="g2" style="margin-top:48px">
+      <div class="card rv">
+        <span class="tag">Terms of use</span>
+        <h3>The terms name PropCat Limited's company number.</h3>
+        <p>They say the site belongs to the company registered at 86 to 90 Paul Street, number 15785231. That's PropCat Limited, which the register shows with an active proposal to strike off. SotoCat Limited's own number, 17067432, isn't on any page, and UK company rules ask for it on the website.</p>
+        <div class="shot"><img src="img/old-terms.jpg" width="1280" height="297" alt="The sotocat.com terms of use naming company registration number 15785231" loading="lazy"></div>
+        <div class="shot"><img src="img/propcat-ch.jpg" width="900" height="670" alt="Companies House showing PropCat Limited, 15785231, with an active proposal to strike off" loading="lazy"></div>
+      </div>
+      <div class="card rv">
+        <span class="tag">Cookies</span>
+        <h3>Nobody can answer the cookie banner.</h3>
+        <p>The survey layer covers Reject all, Accept all and Customise at every screen size we tried. The consent record says analytics is off, and Google Analytics and Contentsquare send a page view anyway. The FAQ says SotoCat complies with GDPR.</p>
+        <div class="log" role="img" aria-label="Captured from a fresh visit with no clicks. The consent cookie records analytics as no, and three tracking requests are sent.">
+          <span class="d">fresh visit, a click on Reject all</span><br>
+          cookieyes consent &nbsp;<span class="g">consent no, analytics no, action blank</span><br>
+          <span class="r">POST</span> google-analytics.com/g/collect &nbsp;<span class="d">G-D09EWFM29D</span><br>
+          <span class="r">POST</span> google-analytics.com/g/collect &nbsp;<span class="d">G-72202PN3LZ</span><br>
+          <span class="r">POST</span> c.ba.contentsquare.net/pageview
+        </div>
+      </div>
+    </div>
+    <p class="lede rv" style="margin-top:36px">Each one's an afternoon to fix. The new site already has both right.</p>
+  </div>
+</section>
+
+<section class="lt">
+  <div class="w">
+    <p class="kick rv"><span class="n">05</span>What SotoCat is aiming at</p>
+    <h2 class="h2 rv">These are your goals, <span class="dim">in your own words.</span></h2>
+    <div class="card rv tw" style="margin-top:44px;padding:6px 6px 2px">
+      <table class="tbl">
+        <thead><tr><th scope="col">Goal</th><th scope="col">Where you said it</th><th scope="col">What the site has to do</th></tr></thead>
+        <tbody>
+          <tr><td>Agencies on a paid plan after 90 days free</td><td>The pricing page, and your Stripe post on 1 May</td><td>Let an agency start in one click and see its price before it signs up</td></tr>
+          <tr><td>A contractor marketplace</td><td>Step 3 of your workflow</td><td>Give contractors their own way in, with a sign up that works</td></tr>
+          <tr><td>Reapit integration</td><td>"Full integration with CRM Reapit is coming soon"</td><td>Make it clear an agency can start today, with or without a CRM</td></tr>
+          <tr><td>A version for self managed landlords</td><td>The landlord research, and "our version for independent landlords is coming soon"</td><td>Give the research a home that doesn't block the agency product</td></tr>
+          <tr><td>Visible time savings</td><td>Your post on 27 April</td><td>Show the sums behind the savings, with every assumption on screen</td></tr>
+          <tr><td>No dashboard as the destination</td><td>Your post on 12 May</td><td>Show the work moving by itself, rather than a screen to supervise</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="dk">
+  <div class="w">
+    <p class="kick rv"><span class="n">06</span>The one problem</p>
+    <h2 class="h2 rv">SotoCat is becoming two products. <span class="dim">The site can only show one at a time.</span></h2>
+    <p class="lede rv">Today it switches between them with a blur. When the survey's up, the agency product is out of reach. The new site gives each one its own front door.</p>
+    <div class="diagram rv tw">
+      <svg viewBox="0 0 1000 360" role="img" aria-label="Today, one front door switches between the agency product and the landlord research. In the new site, agencies and landlords each have their own way in and neither blocks the other.">
+        <g font-family="-apple-system,Segoe UI,Arial,sans-serif">
+          <text x="30" y="34" fill="#a4a5ab" font-size="15" font-weight="600">Today</text>
+          <rect x="30" y="56" width="170" height="70" rx="16" fill="#26282e" stroke="#3a3c44"/><text x="115" y="97" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">Every visitor</text>
+          <path d="M200 91 H258" stroke="#4a4c55" stroke-width="2"/>
+          <rect x="258" y="56" width="170" height="70" rx="16" fill="#3a1e1c" stroke="#ff6b5e" stroke-opacity=".7"/><text x="343" y="88" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Survey layer</text><text x="343" y="108" text-anchor="middle" fill="#ffb3ab" font-size="12.5">blocks every click</text>
+          <path d="M428 91 C470 91 470 60 512 60" stroke="#4a4c55" stroke-width="2" fill="none"/>
+          <path d="M428 91 C470 91 470 150 512 150" stroke="#ff6b5e" stroke-width="2" fill="none" stroke-dasharray="5 6"/>
+          <rect x="512" y="34" width="200" height="52" rx="14" fill="#1b2b1f" stroke="#30d158" stroke-opacity=".55"/><text x="612" y="66" text-anchor="middle" fill="#fff" font-size="14.5" font-weight="700">Landlord survey</text>
+          <rect x="512" y="124" width="200" height="52" rx="14" fill="#26282e" stroke="#3a3c44" stroke-dasharray="5 5"/><text x="612" y="150" text-anchor="middle" fill="#8a8b91" font-size="14.5" font-weight="700">Agency product</text><text x="612" y="168" text-anchor="middle" fill="#ff8a7f" font-size="12">out of reach</text>
+          <path d="M40 206 H960" stroke="#2c2e35"/>
+          <text x="30" y="244" fill="#a4a5ab" font-size="15" font-weight="600">The new site</text>
+          <rect x="30" y="266" width="170" height="70" rx="16" fill="#26282e" stroke="#3a3c44"/><text x="115" y="307" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">Every visitor</text>
+          <path d="M200 301 C240 301 240 276 280 276" stroke="#0a84ff" stroke-width="2" fill="none"/>
+          <path d="M200 301 C240 301 240 326 280 326" stroke="#20bbdd" stroke-width="2" fill="none"/>
+          <rect x="280" y="254" width="220" height="44" rx="12" fill="#10233a" stroke="#0a84ff"/><text x="390" y="282" text-anchor="middle" fill="#fff" font-size="14.5" font-weight="700">Letting agents</text>
+          <rect x="280" y="306" width="220" height="44" rx="12" fill="#0f2a30" stroke="#20bbdd"/><text x="390" y="334" text-anchor="middle" fill="#fff" font-size="14.5" font-weight="700">Landlords</text>
+          <path d="M500 276 H560" stroke="#0a84ff" stroke-width="2"/><path d="M500 328 H560" stroke="#20bbdd" stroke-width="2"/>
+          <rect x="560" y="254" width="400" height="44" rx="12" fill="#16171b" stroke="#2c2e35"/><text x="578" y="282" fill="#e4e5ea" font-size="14">Live demo, pricing, 90 day trial, demo and call bookings</text>
+          <rect x="560" y="306" width="400" height="44" rx="12" fill="#16171b" stroke="#2c2e35"/><text x="578" y="334" fill="#e4e5ea" font-size="14">The research survey and an early access list</text>
+        </g>
+      </svg>
+    </div>
+    <div class="money rv">
+      <b>&pound;297.60</b>
+      <p>That's what each agency that can't get in is worth every month once its trial ends, using your own worked example of 124 units at &pound;2.40.</p>
+    </div>
+    <p class="lede rv" style="margin-top:32px">Fixflo puts Get quote in its first screen, Lanten puts Try for free and Latch puts Start free trial. Latch also gives UK landlords free trackers for gas safety, deposit protection and the Renters' Rights Act, so that's the bar the landlord version has to clear.</p>
+  </div>
+</section>
+
+<section class="wh">
+  <div class="w">
+    <p class="kick rv"><span class="n">07</span>What we built</p>
+    <h2 class="h2 rv">We built the site SotoCat could publish next week.</h2>
+    <p class="lede rv">It has ten pages in your brand, with your prices and your own words. It's live, and every part of it works.</p>
+    <div class="pair rv" style="margin-top:44px">
+      <div class="shot"><img src="img/new-hero-d.jpg" width="1440" height="900" alt="The new SotoCat homepage on desktop" loading="lazy"></div>
+      <div class="phone"><img src="img/new-m-demo.jpg" width="780" height="1688" alt="The new SotoCat homepage on a phone, with the example request playing" loading="lazy"></div>
+    </div>
+    <div class="row rv"><a class="btn b-blue" href="https://astra-sotocat-prototype.netlify.app/">Open the new site</a></div>
+    <div class="built">
+      <div class="card rv"><div class="im"><img src="img/new-chapters.jpg" width="1400" height="875" alt="The six stages section with its sticky rail" loading="lazy"></div><div class="tx"><h3>Your six words carry the page.</h3><p>The page follows Captured, Understood, Routed, Priced, Tracked and Resolved. A rail keeps pace as you scroll, and the two steps still coming are tagged as coming.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-calc.jpg" width="1400" height="1119" alt="The savings calculator showing its sums" loading="lazy"></div><div class="tx"><h3>The calculator shows its working.</h3><p>Your 50% becomes a setting the agency can change, and every sum is printed underneath.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-start.jpg" width="1400" height="875" alt="The three step free trial sign up" loading="lazy"></div><div class="tx"><h3>The trial takes three steps.</h3><p>The monthly price appears as the agency types its units, straight from your brackets.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-landlords.jpg" width="1400" height="875" alt="The landlords page" loading="lazy"></div><div class="tx"><h3>Landlords get their own door.</h3><p>The research and an early access list live on their own page, and nobody else gets blocked.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-pricing.jpg" width="1400" height="875" alt="The pricing page with its live fee calculator" loading="lazy"></div><div class="tx"><h3>Pricing works out any fee.</h3><p>Type a number of units and see the month, the year and the bracket it falls in.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/sotocat-ch.jpg" width="900" height="670" alt="The Companies House record for SotoCat Limited" loading="lazy" style="object-position:left top"></div><div class="tx"><h3>Trust is built in.</h3><p>SotoCat Limited's number and office in every footer, no tracking cookies, and a founder portrait checked against your own team page.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="dk2">
+  <div class="w g2" style="align-items:start">
+    <div>
+      <p class="kick rv"><span class="n">08</span>What sits behind it</p>
+      <h2 class="h2 rv">It's ready to go live. <span class="dim">Six things need connecting first.</span></h2>
+      <p class="lede rv">It's a fast static site. Your DM Sans font is served from the site itself and there are no third party scripts. Every image is compressed, every link lands, and there's a proper page for anything that doesn't exist.</p>
+    </div>
+    <ol class="checks rv">
+      <li>Point the trial, sign in, contractor and landlord forms at your portal, Stripe and CRM.</li>
+      <li>Add the App Store and Google Play links once the app's out.</li>
+      <li>Put your survey plugin behind the landlord survey button.</li>
+      <li>Correct the terms of use to SotoCat Limited, 17067432.</li>
+      <li>Confirm four details we carried over from your FAQ, such as the compliance cross check.</li>
+      <li>Take off the tag that keeps it out of Google while it's a preview.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="lt">
+  <div class="w">
+    <p class="kick rv"><span class="n">09</span>What comes next</p>
+    <h2 class="h2 rv">When the research says go, <span class="dim">the landlord version is the next build.</span></h2>
+    <p class="lede rv">That's a second product, and Astra's build squad can take it on next to your team while you stay on the product.</p>
+    <div class="g3" style="margin-top:44px">
+      <div class="card sketch rv"><span class="lbl">Sketch</span><h3>Customer facing</h3><p>The landlord app home.</p>
+        <div class="sk-ui"><b>My properties</b>
+          <div class="sk-row"><div>14 Elm Row, Flat 2<small>Boiler not heating, quote in</small></div><span class="pill p-a">Approve</span></div>
+          <div class="sk-row"><div>Gas safety certificate<small>Due in 21 days</small></div><span class="pill p-r">Book</span></div>
+          <div class="sk-row"><div>Deposit protected<small>Certificate on file</small></div><span class="pill p-g">Done</span></div>
+        </div></div>
+      <div class="card sketch rv"><span class="lbl">Sketch</span><h3>Internal web app</h3><p>Contractor checks for the marketplace.</p>
+        <div class="sk-ui"><b>New contractors</b>
+          <div class="sk-row"><div>Okafor Plumbing<small>Gas Safe number checked</small></div><span class="pill p-g">Approved</span></div>
+          <div class="sk-row"><div>Bramwell Heating<small>Insurance document missing</small></div><span class="pill p-a">Chase</span></div>
+          <div class="sk-row"><div>Northside Electrical<small>References in review</small></div><span class="pill p-b">Review</span></div>
+        </div></div>
+      <div class="card sketch rv"><span class="lbl">Sketch</span><h3>Integration</h3><p>Reapit in both directions.</p>
+        <div class="sk-ui"><b>Reapit sync</b>
+          <div class="sk-row"><div>Tenancies and properties<small>Pulled in every hour</small></div><span class="pill p-g">In</span></div>
+          <div class="sk-row"><div>Repair status and costs<small>Written back to the property record</small></div><span class="pill p-b">Out</span></div>
+          <div class="sk-row"><div>Landlord approvals<small>Logged against the tenancy</small></div><span class="pill p-b">Out</span></div>
+        </div></div>
+    </div>
+    <p class="cap rv" style="margin-top:18px">Sketches of screens that don't exist yet. Names and dates are made up.</p>
+  </div>
+</section>
+
+<section class="dk">
+  <div class="w">
+    <p class="kick rv"><span class="n">10</span>Our projects</p>
+    <h2 class="h2 rv">This is Astra, <span class="dim">and the work behind us.</span></h2>
+    <p class="lede rv">Astra is Dutch strategy and project management in front of Amwisesa, a senior development team in Indonesia with more than ten years of building web and mobile apps and management systems. You get one point of contact in the Netherlands and a team that ships.</p>
+    <div class="g3 work" style="margin-top:44px">
+      <div class="card rv"><div class="im"><img src="img/w-unilever.jpg" alt="The Unilever 1001 Ramadhan Inspiration content and promotion platform" loading="lazy"></div><div class="tx"><h3>Unilever 1001 Ramadhan Inspiration</h3><p>A content and promotion platform handling 48 Unilever brands across web and mobile.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/w-gpay.jpg" alt="Two screens from the GPay app, the wallet home and a payment confirmation" loading="lazy"></div><div class="tx"><h3>GPay</h3><p>A payments app with balance, top up, transfers, bills and a cashback and points engine.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/w-mwx.jpg" alt="The MWX AI Market marketplace home with AI guided search and product cards" loading="lazy"></div><div class="tx"><h3>MWX AI Market</h3><p>An AI guided marketplace on interoperable blockchain protocols, built for smaller businesses.</p></div></div>
+    </div>
+    <p class="disc rv">Delivered by our development partner, Amwisesa.</p>
+    <div class="people">
+      <div class="card person rv"><b>Raka Mulya</b><span>Managed global go to market campaigns at Betty Blocks, led ebusiness data and insights at Heineken across 23 markets, and built a food brand from nothing with his family.</span></div>
+      <div class="card person rv"><b>Joshua van Zeelt</b><span>Your contact at Astra. <a href="mailto:josh@astraagency.nl">josh@astraagency.nl</a></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="wh end">
+  <div class="w">
+    <p class="kick rv" style="justify-content:center"><span class="n">11</span>Next step</p>
+    <h2 class="h2 rv">Give us thirty minutes to walk you through it.</h2>
+    <p class="lede rv">We'll run a real request through the new site, hear what you'd change, and then send you a clear scope, price and timeline.</p>
+    <div class="row rv"><a class="btn b-blue" href="https://astra-sotocat-prototype.netlify.app/">Open the new site</a><a class="btn b-ghostl" href="mailto:josh@astraagency.nl?subject=SotoCat%20walkthrough">Email Josh</a></div>
+  </div>
+</section>
+
+<footer class="foot"><div class="w"><span>Astra Agency, prepared for SotoCat, September 2026</span><span>Screenshots of sotocat.com taken 23 September 2026</span></div></footer>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px',threshold:0.05});
+  els.forEach(function(e){io.observe(e);});
+  var p=document.getElementById('prog');
+  function upd(){var h=document.documentElement;var t=h.scrollHeight-h.clientHeight;p.style.width=(t>0?(h.scrollTop/t*100):0)+'%';}
+  window.addEventListener('scroll',upd,{passive:true});upd();
+})();
+</script>
+</body>
+</html>
