@@ -43,6 +43,11 @@ BANNED_STRUCTURES = [
     (r"\bin today'?s\b", "in today's ... world"),
     (r"\bleverage\b|\butilize\b|\bsynerg", "corporate fog"),
     (r"\bdelve\b|\btapestry\b|\bnavigat(e|ing) the\b", "AI tell word"),
+    # Clues drive the inference, they never appear in the message. opener-template.md 3A.
+    (r"\byou'?re (currently )?hiring\b|\bjob (opening|post|ad|listing)s?\b|\bvacanc|"
+     r"\bvacature|\bstellenangebot|\bcongrat", "quoted clue, state the consequence instead"),
+    (r"\bi (saw|noticed|read|see) (that )?(you|your) (posted|post|newsletter|announce|"
+     r"recently|just)", "quoted clue, state the consequence instead"),
 ]
 
 

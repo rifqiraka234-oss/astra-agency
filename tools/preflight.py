@@ -62,6 +62,12 @@ print("""  It outranks every other doc except a live instruction from Raka.
       change. Full spec, the eleven inputs and every rule, in docs/opener-template.md.
       Read it before drafting any first message. check-drafts.py enforces the wording.
 
+    CLUES TO INFERENCE. The [impact] aims at their CURRENT goal, and that goal is
+      inferred from linked clues across SEVEN sources, all opened, every lead. Site
+      and newsletter, company LinkedIn posts, the owner's pages, job openings READ IN
+      FULL, news on the company, news on the owner. Two agreeing clues or it is WEAK.
+      The clue never appears in the message. Section 3A of docs/opener-template.md.
+
     PRESUMPTION. A lemlist field is a claim, not a fact. Before fetching
       anything, read the tagline against companyName, separate the business
       they OWN from the job they HOLD, confirm the domain is actually theirs,

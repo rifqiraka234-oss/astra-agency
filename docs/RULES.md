@@ -187,6 +187,12 @@ short version.
   critically poor, and it must pass the positive control, render trust, the tweak test and
   the red team. Then `This causes [stakeholder] to [impact]`, and **the impact is aimed at
   their MOST CURRENT goal**, found and dated by research, never a timeless generic cost.
+- **The current goal is INFERRED from linked clues, never read off one source (Raka,
+  2026-09-22).** Open all seven clue sources in `docs/opener-template.md` section 3A, the
+  whole site and newsletter, company LinkedIn posts, the owner's own pages, job openings
+  read in full, and a web and news search of the company and the owner. Write each clue
+  with its URL and date, link two or more that agree, try to break it, grade it. **The
+  clue never appears in the message.** No "I saw you're hiring", only the consequence.
 - **No website at all, and only once that is earned by search**, block two becomes one
   sentence, "I couldn't find your website, and that [impact to their most current goal]." 
 - **The brand line is fixed text.** "Unilever, AXA, Pertamina", never reworded or trimmed.
