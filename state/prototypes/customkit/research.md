@@ -230,3 +230,28 @@ more" from its homepage, the three step how it works and the free design mockup 
 homepage, and the training and travel bundle (7 items, £189 per player, £217 separately, save
 £28, VAT not stated) from customkit.uk/bundles, read 2026-09-23.
 
+
+## v3, people and motion, 2026-09-23
+
+Raka asked for the Nike and adidas feel, people, pictures and video rather than an
+ecommerce page. Read first.
+
+- Nike "You Can't Stop Us", Musicbed case study, https://www.musicbed.com/articles/at-musicbed/case-study-musicbed-custom-work-nike-you-cant-stop-us/
+- Nike data and emotion, https://www.launchmetrics.com/resources/blog/nike-data-analysis
+- Nike "Dream Crazy" and athlete led storytelling, https://www.markhub24.com/post/nike-s-dream-crazy-campaign-and-athlete-led-storytelling
+- adidas "You Got This" 2024, behind the scenes, https://www.adidas-group.com/en/magazine/behind-the-scenes/bringing-you-got-this-to-life-in-2024
+- Marketing Dive on the same, https://www.marketingdive.com/news/adidas-pressure-athletes-you-got-this/707216/
+- Aphra on the same, https://www.weareaphra.co.uk/insights/insight-adidas-you-got-this-turning-pressure-into-possibility
+
+Footage licence, https://www.licenseorg.com/guide/video/mixkit and https://mixkit.co/llm-info/.
+Each clip's own item page `copyrightNotice` read `"Free"` at download.
+
+Claims in the new copy, re-rendered live 2026-09-23 (curl gets only a 2 KB shell on these
+sites, every count came back 0, so the pages were rendered in Chromium and the counts redone).
+
+- "grassroots", "schools", "crests, sponsors, names and numbers", customkit.com/manufacturer-for-clubs-and-teams and customkit.uk home.
+- "Sampling takes 5–7 working days", customkit.com/white-label-manufacturing and /custom-football-kits.
+- "Minimum order 10 garments", design.customkit.com/prices.
+- Football, rugby, cricket, basketball, netball, golf on customkit.com and .uk, padel on customkit.uk.
+- "production ready", customkit.com home and /i-designed-this-in-chatgpt.
+- "Sunday league" appears on none of their pages, so the hero says "grassroots side", their word.

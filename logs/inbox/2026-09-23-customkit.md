@@ -32,3 +32,13 @@ goal table follow it. Redeployed to the same two URLs and verified live. Draft v
 file, still waiting on Raka, with two optional lines (the price correction, and owning the
 change from "two sites makes sense").
 
+
+## v3, same day. People and motion on Raka's Nike and adidas note
+
+Raka said v2 still read as an ecommerce site and pointed at how Nike and adidas use people,
+pictures and video. Added a video reel hero, a four chapter scroll story with footage per
+chapter, footage heroes on teams and white label, and people duotones behind every closing
+section. Seven Mixkit clips on the free licence, logo checked, never captioned as CustomKit
+customers. Deck section 06 has a new card for it and fresh hero shots. Redeployed to the same
+two URLs and verified live. Thread re pulled after the deploy, unchanged. Draft unchanged apart
+from one optional line, still waiting on Raka.

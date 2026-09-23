@@ -401,3 +401,30 @@ else. Say so in the handover, as the "Choices Chris should confirm" list did.
 | The QA harness could only load index.html | `tools/deck-qa/qa.js` now takes `PAGE=other.html`. Run it on every page of a multi page site |
 | A resize rule keyed on the name "new-m" shrank new-make.jpg | Key image sizes on an explicit list, never a filename prefix |
 | A screenshot caught an animated canvas mid fade | Capture artefact screenshots with `reducedMotion: 'reduce'` so motion is at rest |
+
+## When the owner says "it feels like an ecommerce site", put people in it (CustomKit v3, 2026-09-23)
+
+Raka's words, "If you look at adidas or nike, its all about the feel ... They use pictures and
+images and videos to showcase people." A redesign with good type and colour still read as a
+shop, because every picture was a product. What fixed it, and the rules it left.
+
+- **Read how the reference brands do it before building.** Nike and adidas lead with people in
+  motion, full bleed, with a few words over the top, and tell a short story in chapters. Copy
+  that structure, not their slogans.
+- **Footage licence is read from the item page, never assumed.** On Mixkit the visible page does
+  not say which licence applies. The page JSON's `copyrightNotice` does, `"Free"` is commercial
+  use, `"Mixkit Restricted License"` is personal only and is excluded. Pexels, Pixabay and
+  Unsplash were bot walled from the container.
+- **Logo check every clip frame by frame.** Sports stock is full of adidas stripes, molten balls
+  and branded banners. Contact sheets of frames caught fourteen rejects.
+- **Stock people are never captioned as the client's customers.** Decorative, `aria-hidden`, no
+  caption, and the handover says their own shoots replace it.
+- **Ship WebM before MP4.** The QA Chromium can't decode H.264, so a WebM source listed first is
+  the only way to prove playback in QA. Poster frames for reduced motion and slow networks.
+- **Play only in view, give a pause button, never autoplay under reduced motion.**
+- **A blurry clip at full bleed is a no.** The hands clip was fine small and soft full screen,
+  so the chapter used another shot.
+- **A relative `url()` inside a CSS custom property set inline is not safe.** It can resolve
+  against the stylesheet rather than the page. Put the image in a class in the CSS file.
+- **curl on a Lovable style site returns a 2 KB shell.** Every claim count came back 0, which is
+  the failed detector, not an absence. Render in Chromium before counting anything.

@@ -1,13 +1,17 @@
 <!--{"title":"CustomKit, kit for teams and ranges for brands","desc":"Clubs design team kit online and order from 10 garments. Brands get design, samples in 5 to 7 working days and a finished run in 4 to 6 weeks under their own label.","nav":""}-->
-<section class="hero">
-  <div class="wrap hero-top">
+<section class="vhero" aria-labelledby="t-hero">
+  <video data-auto muted loop playsinline preload="auto" poster="media/reel.jpg" aria-hidden="true"><source src="media/reel.webm" type="video/webm"><source src="media/reel.mp4" type="video/mp4"></video>
+  <div class="wrap">
     <p class="lab rv">Teamwear and private label sportswear, UK</p>
-    <h1 class="hx rv d1" style="margin-top:22px"><span>Kit for your team.</span> <span class="cob">A range for your brand.</span></h1>
-    <div class="hero-meta">
-      <p class="lede rv d2">Clubs and schools design kit online and order from 10 garments. Brands get design, physical samples in 5 to 7 working days and a finished run in 4 to 6 weeks, all under their own label.</p>
-      <p class="rv d3" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">{{STARS}}<span><b>Every review since April 2026 is five stars.</b> <a class="lnk" href="reviews.html">Read all nine</a></span></p>
-    </div>
+    <h1 class="hx rv d1" id="t-hero">Kit worth <span>turning up in.</span></h1>
+    <p class="lede rv d2">For the grassroots side, the school team and the brand dropping its first range. Designed with you, sampled in 5 to 7 working days and made under your name.</p>
+    <div class="row rv d2"><a class="btn b-lime" href="teams.html">Kit out your team {{ARROW}}</a><a class="btn inv-line" href="#brands">Build your brand</a></div>
+    <p class="meta rv d3">{{STARS}}<span><b>Every review since April 2026 is five stars.</b> <a class="lnk" href="reviews.html">Read all nine</a></span></p>
   </div>
+  <button class="vctl" type="button" aria-label="Pause the video"></button>
+</section>
+
+<section class="hero" aria-label="Choose your side">
   <div class="doors">
     <a class="door teams" href="teams.html">
       <div class="door-art" aria-hidden="true"><canvas data-cycle="hoops:navy:white,voltz:red:black,ripple:claret:sky,vortex:green:yellow,classic07:royal:white,paint:orange:black" width="760" height="1050"></canvas></div>
@@ -27,6 +31,26 @@
         <span class="go">Brand services {{ARROW}}</span>
       </div>
     </a>
+  </div>
+</section>
+
+<section class="story" aria-labelledby="t-story">
+  <div class="wrap story-head">
+    <span class="lab rv">How a kit comes to life</span>
+    <h2 class="h2 rv" id="t-story">It starts as an idea. It ends on a pitch.</h2>
+  </div>
+  <div class="story-stage" aria-hidden="true">
+    <video data-auto muted loop playsinline preload="metadata" poster="media/needle.jpg" class="on"><source src="media/needle.webm" type="video/webm"><source src="media/needle.mp4" type="video/mp4"></video>
+    <video data-auto muted loop playsinline preload="metadata" poster="media/stack.jpg"><source src="media/stack.webm" type="video/webm"><source src="media/stack.mp4" type="video/mp4"></video>
+    <video data-auto muted loop playsinline preload="metadata" poster="media/walk.jpg"><source src="media/walk.webm" type="video/webm"><source src="media/walk.mp4" type="video/mp4"></video>
+    <video data-auto muted loop playsinline preload="metadata" poster="media/golf.jpg"><source src="media/golf.webm" type="video/webm"><source src="media/golf.mp4" type="video/mp4"></video>
+    <div class="story-count"><i class="on"></i><i></i><i></i><i></i></div>
+  </div>
+  <div class="story-beats wrap">
+    <article class="beat"><div class="card-x"><span class="n">01 / 04</span><h3>Your idea, stitched.</h3><p>A sketch, a reference or finished artwork. Our studio turns it into production ready files, and you choose the fabric, the colours and the finish.</p></div></article>
+    <article class="beat"><div class="card-x"><span class="n">02 / 04</span><h3>Signed off before anyone plays in it.</h3><p>Physical samples arrive in 5 to 7 working days, and nothing goes into production until you're happy with the one in your hands.</p></div></article>
+    <article class="beat"><div class="card-x"><span class="n">03 / 04</span><h3>Worn by the people who turn up.</h3><p>Grassroots teams, schools and clubs order from 10 garments, with crests, sponsors, names and numbers exactly where they want them.</p></div></article>
+    <article class="beat"><div class="card-x"><span class="n">04 / 04</span><h3>For every game you'd put a name on.</h3><p>Football, rugby, cricket, basketball, netball, golf and padel, in performance fabrics chosen for the sport it's worn for.</p></div></article>
   </div>
 </section>
 
@@ -192,8 +216,7 @@
   </div>
 </section>
 
-<section class="final" aria-labelledby="t-final">
-  <div class="final-stripe" aria-hidden="true"></div>
+<section class="final photo" aria-labelledby="t-final">
   <div class="wrap" style="position:relative">
     <h2 class="hx rv" id="t-final">Tell us what you want made.</h2>
     <p class="lede rv">Send a brief and the production team reviews it within 24 hours, then sends a proposal with pricing and lead times within 48.</p>

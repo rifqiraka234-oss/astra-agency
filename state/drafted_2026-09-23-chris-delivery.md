@@ -35,6 +35,11 @@ Notes for Raka.
   strip. The deck doesn't repeat that claim, so nothing he opens contradicts us. If you want
   it owned, add before the question, "One correction. I said last time a brand can't see a
   price on the .com, and the brand design page does show one. The proof part stands."
+- **Optional line for v3, your call.** The site now opens on footage of teams playing. If you
+  want Chris told, add after "goes all the way through", "It opens on footage of teams playing,
+  licensed stock for now, ready for your own shoots." That keeps him from thinking the players
+  are ours or his. Thread re pulled 2026-09-23 after the v3 deploy, 3 activities, nextPage
+  null, unchanged.
 - "Sketches" is his word, which is why the first line picks it up.
 - The forms show confirmation screens but send nothing, so it says "goes all the way
   through", same as the SotoCat wording you approved.

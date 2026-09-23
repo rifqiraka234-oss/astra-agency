@@ -107,6 +107,24 @@
     show();if(RM)return;
     setInterval(function(){cv.classList.remove('on');setTimeout(function(){i++;show()},260)},2600)});
 
+  /* video. plays only when on screen and only without reduced motion */
+  var vids=$$('video[data-auto]');
+  function vcheck(){vids.forEach(function(v){if(v.dataset.paused==='1')return;var r=v.getBoundingClientRect(),vis=r.bottom>0&&r.top<innerHeight;
+    if(vis&&!RM&&!v.closest('.story-stage')){if(v.paused)v.play().catch(function(){})}else if(!v.closest('.story-stage')&&!v.paused)v.pause()})}
+  if(vids.length){addEventListener('scroll',function(){requestAnimationFrame(vcheck)},{passive:true});addEventListener('load',vcheck);vcheck()}
+  var vc=$('.vctl');
+  if(vc){var hv=$('.vhero video');function setc(){var pz=hv.paused;vc.setAttribute('aria-label',pz?'Play the video':'Pause the video');vc.innerHTML=pz?'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>':'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" fill="currentColor"/></svg>'}
+    vc.addEventListener('click',function(){if(hv.paused){hv.dataset.paused='';hv.play().catch(function(){})}else{hv.dataset.paused='1';hv.pause()}setc()});
+    hv.addEventListener('play',setc);hv.addEventListener('pause',setc);setc()}
+
+  /* the story. the beat nearest the middle of the screen picks the film */
+  $$('.story').forEach(function(st){var vs=$$('.story-stage video',st),bs=$$('.beat',st),dots=$$('.story-count i',st),cur=-1;
+    function pick(){var mid=innerHeight/2,best=0,bd=1e9;bs.forEach(function(b,i){var r=b.getBoundingClientRect(),d=Math.abs(r.top+r.height/2-mid);if(d<bd){bd=d;best=i}});
+      var sr=st.getBoundingClientRect(),inside=sr.top<innerHeight&&sr.bottom>0;
+      if(best!==cur){cur=best;vs.forEach(function(v,i){v.classList.toggle('on',i===best)});dots.forEach(function(d,i){d.classList.toggle('on',i===best)})}
+      vs.forEach(function(v,i){if(i===cur&&inside&&!RM){if(v.paused)v.play().catch(function(){})}else if(!v.paused)v.pause()})}
+    addEventListener('scroll',function(){requestAnimationFrame(pick)},{passive:true});addEventListener('resize',pick);pick()});
+
   /* multi step forms */
   var EM=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   function check(pane){var ok=true;
