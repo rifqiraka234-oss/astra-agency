@@ -92,7 +92,7 @@ no RENDER NOT TRUSTED.
    "Minimum order 10 garments" on design.customkit.com and /prices, lowest brief
    option "50–100 units" on /start-a-project. Lead time, "4–6 weeks" on 17 .com pages, "as
    little as 4 weeks" on 2, "2-3 Weeks" on the designer, "3-4 weeks" on 4 .uk pages. Samples,
-   "5–7 days" on 16 pages, "within two weeks" on 10. Names and numbers, "all included in the
+   "5–7 days" on 16 pages, "within two weeks" on 14 (recounted 2026-09-23 on pass 2; the earlier 10 was wrong). Dropped from the deck, since 5 to 7 working days sits inside two weeks and is not a real conflict. Names and numbers, "all included in the
    price" on the designer home and "available as add-ons" on /prices.
 5. **Four enquiry forms** on the .com (/start-a-project, /enquire, /build-a-brand,
    /brand-design-service), replies promised "within 24 hours" on six pages and a proposal
@@ -207,3 +207,13 @@ design.customkit.com "Minimum order 10 garments". The prototype states the per g
 figures in its FAQ instead of one blanket number. /limited-edition-drops also lists
 "RECENT PRODUCTION RUNS" Dusk Rose hoodie, Pine quarter zip, Sandstone oversized tee, the
 only named runs on the .com, with no client or brand named.
+
+## Pass 2 recheck, 2026-09-23
+
+- "3–5 weeks" lead time found on four more .com pages (i-designed-this-in-chatgpt, turn-design-into-product, manufacturer-for-clubs-and-teams, who-can-make-my-design). Added to the deck terms row.
+- The £495 service appears on six .com pages (brand-design-service plus a "Design Service — £495" strip on five others) and not on the homepage. The deck line "one page among 51" was wrong and now reads "isn't on your homepage". Control, £495 detected on those six pages by the same grep.
+- "Within two weeks" (samples) recounted at 14 pages, and the row was dropped as not a real conflict.
+- "As little as 4 weeks" is on Why us and football-kit-builder, both named now.
+- "UK kit maker" description of My Club Group had no source and was removed from the site.
+- Four forms confirmed live in Chromium (start-a-project 11 inputs, enquire 6, build-a-brand 6, brand-design-service 7), controls why-us and terms show 0.
+- Trustpilot re-rendered, 54 reviews, 4.2, nine since April 2026 all five stars, company text "purchased in January 2026 from Sportsmax".

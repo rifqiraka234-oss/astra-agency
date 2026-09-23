@@ -1,12 +1,12 @@
 // Cold-load QA for a built deck or prototype. Nothing is forced.
-// Usage:  BASE=http://127.0.0.1:8788 node tools/deck-qa/qa.js
+// Usage:  BASE=http://127.0.0.1:8788 [PAGE=other.html] node tools/deck-qa/qa.js
 // Serve the folder first:  (cd <folder> && python3 -m http.server 8788 &)
 // Against a deployed site, curl the live HTML plus its assets into a local
 // folder and serve that, because the agent proxy resets live Chromium tunnels.
 const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const BASE = process.env.BASE || 'http://127.0.0.1:8788';
-const URL = BASE + '/index.html';
+const URL = BASE + '/' + (process.env.PAGE || 'index.html');  // PAGE=make.html for multi page sites
 
 (async () => {
   const b = await chromium.launch({ executablePath: CHROME, args: ['--no-sandbox'] });
