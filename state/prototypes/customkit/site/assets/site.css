@@ -467,7 +467,7 @@ a.rowi:hover .arw{background:var(--ink);color:var(--lime)}
 .stag.feat .lab{color:var(--lime)}
 @media (min-width:760px){.revs.r2{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .stag .amt small{display:block;margin:12px 0 0 2px}
-.crop-tl img{transform:scale(1.75);transform-origin:0 0}
+.crop-tl img{transform:scale(1.75);transform-origin:0 62%}
 .blk.plan img{width:100%;filter:none;transform:none}
 a:hover .blk.plan img,.blk.plan:hover img{transform:none}
 .dd.shut .dd-menu{display:none}

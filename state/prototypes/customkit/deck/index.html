@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>CustomKit, what we found and what we built. Astra</title>
-<meta name="description" content="What a brand buyer meets on customkit.com today, where CustomKit is heading, and the brand site Astra built around the proof CustomKit already has.">
+<meta name="description" content="What a brand buyer meets on customkit.com today, where CustomKit is heading, and the site Astra rebuilt around the proof CustomKit already has.">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="CustomKit, what we found and what we built">
-<meta property="og:description" content="What a brand buyer meets on customkit.com today, where CustomKit is heading, and the brand site Astra built around the proof CustomKit already has.">
+<meta property="og:description" content="What a brand buyer meets on customkit.com today, where CustomKit is heading, and the site Astra rebuilt around the proof CustomKit already has.">
 <meta property="og:image" content="https://astra-customkit-deck.netlify.app/img/new-hero.jpg">
 <meta name="theme-color" content="#0b0c0e">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Crect width=%2716%27 height=%2716%27 rx=%274%27 fill=%27%230b0c0e%27/%3E%3Cpath d=%27M8 2c.4 3.1 2.9 5.6 6 6-3.1.4-5.6 2.9-6 6-.4-3.1-2.9-5.6-6-6 3.1-.4 5.6-2.9 6-6z%27 fill=%27%23b49a64%27/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Crect width=%2716%27 height=%2716%27 rx=%274%27 fill=%27%230b0c0e%27/%3E%3Cpath d=%27M8 2c.4 3.1 2.9 5.6 6 6-3.1.4-5.6 2.9-6 6-.4-3.1-2.9-5.6-6-6 3.1-.4 5.6-2.9 6-6z%27 fill=%27%23dcf74a%27/%3E%3C/svg%3E">
 <style>
-:root{--ink:#0e0f12;--ink2:#16171b;--ink3:#1e2025;--paper:#f7f7f5;--paper2:#eeeeea;--white:#fff;--text:#16171b;--sub:#64656b;--sub-d:#a4a5ab;--line:#e2e2de;--line-d:rgba(255,255,255,.1);--blue:#b49a64;--blue2:#d6c291;--cyan:#20bbdd;--amber:#ffbf40;--red:#ff6b5e;--green:#30d158;
+:root{--ink:#0e0f12;--ink2:#16171b;--ink3:#1e2025;--paper:#f7f7f5;--paper2:#eeeeea;--white:#fff;--text:#16171b;--sub:#64656b;--sub-d:#a4a5ab;--line:#e2e2de;--line-d:rgba(255,255,255,.1);--blue:#dcf74a;--blue2:#dcf74a;--cyan:#20bbdd;--amber:#ffbf40;--red:#ff6b5e;--green:#30d158;
 --sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;--r:22px}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;background:var(--ink)}
@@ -37,7 +37,7 @@ section{padding:clamp(80px,10vw,136px) 0;position:relative}
 .dk2{background:var(--ink2);color:#fff}
 .lt{background:var(--paper)}
 .wh{background:#fff}
-.kick{font-size:15px;font-weight:600;color:#8a7446;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.kick{font-size:15px;font-weight:600;color:#2b3bff;margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .dk .kick,.dk2 .kick{color:var(--blue2)}
 .kick .n{opacity:.6;font-variant-numeric:tabular-nums}
 .h1{font-size:clamp(42px,6.4vw,84px);letter-spacing:-.04em;line-height:1}
@@ -100,7 +100,7 @@ section{padding:clamp(80px,10vw,136px) 0;position:relative}
 .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .diagram{margin-top:48px;border-radius:var(--r);background:var(--ink3);border:1px solid var(--line-d);padding:clamp(16px,3vw,34px)}
 .diagram svg{min-width:760px;width:100%}
-.money{margin-top:40px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;padding:26px 30px;border-radius:var(--r);background:linear-gradient(135deg,rgba(180,154,100,.2),rgba(32,187,221,.08));border:1px solid rgba(180,154,100,.35)}
+.money{margin-top:40px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;padding:26px 30px;border-radius:var(--r);background:linear-gradient(135deg,rgba(220,247,74,.18),rgba(32,187,221,.08));border:1px solid rgba(180,154,100,.35)}
 .money b{font-size:clamp(40px,5vw,64px);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
 .money p{color:#d6d7dc;font-size:17px}
 @media (max-width:700px){.money{grid-template-columns:minmax(0,1fr)}}
@@ -113,7 +113,7 @@ section{padding:clamp(80px,10vw,136px) 0;position:relative}
 .built .card h3{font-size:19px}
 .checks{list-style:none;margin:0;padding:0;counter-reset:c;display:grid;gap:12px}
 .checks li{counter-increment:c;display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start;padding:14px 16px;border-radius:14px;background:var(--ink3);border:1px solid var(--line-d);color:#e4e5ea;font-size:16px}
-.checks li::before{content:counter(c);width:30px;height:30px;border-radius:9px;background:rgba(180,154,100,.2);color:var(--blue2);display:grid;place-items:center;font-weight:700;font-size:14px}
+.checks li::before{content:counter(c);width:30px;height:30px;border-radius:9px;background:rgba(220,247,74,.18);color:var(--blue2);display:grid;place-items:center;font-weight:700;font-size:14px}
 .sketch{position:relative}
 .sketch .lbl{position:absolute;top:14px;right:14px;font-size:12px;font-weight:700;color:#8a5a00;background:#fff3d6;border:1px dashed #d9a441;padding:4px 9px;border-radius:999px}
 .sk-ui{background:#fff;border-radius:16px;border:1px solid var(--line);padding:16px;font-size:14px;margin-top:18px}
@@ -175,10 +175,10 @@ section{padding:clamp(80px,10vw,136px) 0;position:relative}
   <div class="w cover">
     <div>
       <h1 class="h1 rv">CustomKit already has the proof. <span class="dim">The website doesn&#8217;t show it yet.</span></h1>
-      <p class="lede rv">We went through customkit.com, customkit.uk and your kit designer page by page, read what you&#8217;ve said about where CustomKit is heading, and built the brand site we&#8217;d put in front of a buyer tomorrow.</p>
+      <p class="lede rv">We went through customkit.com, customkit.uk and your kit designer page by page, read what you&#8217;ve said about where CustomKit is heading, and rebuilt the site, teams and brands together, the way we&#8217;d put it in front of a buyer tomorrow.</p>
       <div class="row rv"><a class="btn b-blue" href="https://astra-customkit-prototype.netlify.app/">Open the new site</a><a class="btn b-ghost" href="#found">See what we found</a></div>
     </div>
-    <div class="shot rv"><img src="img/new-hero.jpg" alt="The homepage of the new CustomKit brand site with a live spec sheet" width="1400" height="875"></div>
+    <div class="shot rv"><img src="img/new-hero.jpg" alt="The new CustomKit homepage" width="1400" height="875"></div>
   </div>
 </section>
 
@@ -193,7 +193,7 @@ section{padding:clamp(80px,10vw,136px) 0;position:relative}
       <div class="stat rv"><b>2</b><span>rival manufacturers a brand is likely to compare you with</span></div>
     </div>
     <div class="quote rv">
-      <svg class="mk" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c.5 4.2 3.8 7.5 8 8-4.2.5-7.5 3.8-8 8-.5-4.2-3.8-7.5-8-8 4.2-.5 7.5-3.8 8-8z" fill="#b49a64"/></svg>
+      <svg class="mk" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c.5 4.2 3.8 7.5 8 8-4.2.5-7.5 3.8-8 8-.5-4.2-3.8-7.5-8-8 4.2-.5 7.5-3.8 8-8z" fill="#dcf74a"/></svg>
       <div><q>Activation work underway with global brands. Ongoing conversations with major partners.</q><small>From CustomKit&#8217;s own LinkedIn page. We built the new site for the buyers behind those conversations.</small></div>
     </div>
   </div>
@@ -267,19 +267,22 @@ section{padding:clamp(80px,10vw,136px) 0;position:relative}
 <section class="dk">
   <div class="w">
     <p class="kick rv"><span class="n">06</span>What we built</p>
-    <h2 class="h2 rv">We built the brand site <span class="dim">around the proof you already have.</span></h2>
-    <p class="lede rv">Ten pages in your own colours and fonts. Every number on it traces back to your own pages, your Trustpilot reviews or Companies House, and every part works, from the colour studio to the brief form.</p>
+    <h2 class="h2 rv">We rebuilt the site <span class="dim">around the proof you already have.</span></h2>
+    <p class="lede rv">Ten pages, redesigned from scratch, with teams and brands on one site. Every number on it traces back to your own pages, your Trustpilot reviews or Companies House, and every part works, from the kit room to the brief form.</p>
     <div class="pair" style="margin-top:48px">
-      <div class="shot rv"><img src="img/new-hero.jpg" alt="The new homepage on desktop with the live spec sheet" width="1400" height="875" loading="lazy"></div>
+      <div class="shot rv"><img src="img/new-hero.jpg" alt="The new homepage on desktop, with teams and brands side by side" width="1400" height="875" loading="lazy"></div>
       <div class="phone rv"><img src="img/new-m.jpg" alt="The new homepage on a phone" width="700" height="1515" loading="lazy"></div>
     </div>
     <div class="built">
-      <div class="card rv"><div class="im"><img src="img/new-reviews.jpg" alt="All nine reviews on the new reviews page" width="1400" height="1197" loading="lazy"></div><div class="tx"><h3>Your reviews, up front</h3><p>All nine, word for word, set out as signed off delivery notes and linked to Trustpilot, with a line explaining that older reviews belong to the previous owner.</p></div></div>
-      <div class="card rv"><div class="im"><img src="img/new-m-studio.jpg" alt="The live spec sheet on a phone" width="700" height="1515" loading="lazy" style="object-position:50% 20%"></div><div class="tx"><h3>A spec sheet in the first screen</h3><p>Six of your own kit designer renders, recoloured live. The design and colours a buyer picks carry straight into their brief.</p></div></div>
-      <div class="card rv"><div class="im"><img src="img/new-chart.jpg" alt="The production schedule chart" width="1400" height="1081" loading="lazy"></div><div class="tx"><h3>One schedule, one set of numbers</h3><p>A production chart built from the lead times most of your pages already use, 24 hours, 48 hours, 5 to 7 days and 4 to 6 weeks.</p></div></div>
-      <div class="card rv"><div class="im"><img src="img/new-price.jpg" alt="The brand design service pricing" width="1400" height="821" loading="lazy"></div><div class="tx"><h3>Prices a founder can act on</h3><p>The &#163;495 and &#163;995 brand design service goes on the homepage, which doesn&#8217;t mention it today, with its own booking form.</p></div></div>
-      <div class="card rv"><div class="im"><img src="img/new-founder.jpg" alt="The founder section with Chris's photo and track record" width="1400" height="1051" loading="lazy"></div><div class="tx"><h3>You, front and centre</h3><p>adidas, TaylorMade, My Club Group and the pitch, with your own photo, checked against your founder page.</p></div></div>
-      <div class="card rv"><div class="im"><img src="img/new-make.jpg" alt="The product categories on the new homepage" width="1400" height="1522" loading="lazy"></div><div class="tx"><h3>Golf and padel beside football</h3><p>Each gets its own section on the brand site next to football, with golf&#8217;s 15 unit minimum stated where a buyer reads it.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-doors.jpg" alt="The two front doors on the new homepage, one for teams and one for brands" width="1400" height="624" loading="lazy"></div><div class="tx"><h3>Teams and brands, one front door</h3><p>Clubs and brands land on the same site and pick their side. Teams get the kit designer and club prices, brands get white label, drops and design.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-kitroom.jpg" alt="The kit room, recolouring a CustomKit shirt live" width="1400" height="777" loading="lazy"></div><div class="tx"><h3>A kit room buyers can play with</h3><p>Six of your own kit designer renders, recoloured live. The design and colours a buyer picks carry straight into their brief.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-chart.jpg" alt="The split flap schedule on the new homepage" width="1400" height="712" loading="lazy"></div><div class="tx"><h3>One schedule, one set of numbers</h3><p>A split flap scoreboard built from the lead times most of your pages already use, 24 hours, 48 hours, 5 to 7 days and 4 to 6 weeks.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-reviews.jpg" alt="All nine reviews on the new reviews page" width="1400" height="1228" loading="lazy"></div><div class="tx"><h3>Your reviews, up front</h3><p>All nine, word for word and linked to Trustpilot, with a line explaining that older reviews belong to the previous owner.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-price.jpg" alt="The brand design service pricing as swing tags" width="1400" height="670" loading="lazy"></div><div class="tx"><h3>Prices a founder can act on</h3><p>The &#163;495 and &#163;995 brand design service goes on the homepage, which doesn&#8217;t mention it today, with its own booking form.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-founder.jpg" alt="The founder section with Chris's photo and track record" width="1400" height="1091" loading="lazy"></div><div class="tx"><h3>You, front and centre</h3><p>adidas, TaylorMade, My Club Group and the pitch, with your own photo, checked against your founder page.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-teams.jpg" alt="The club price list on the new teams page" width="1400" height="901" loading="lazy"></div><div class="tx"><h3>Club prices in the open</h3><p>The kit designer&#8217;s price list on its own page, before VAT with the 10 garment minimum, next to the &#163;189 training bundle.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-make.jpg" alt="The product rail on the new homepage" width="1400" height="952" loading="lazy"></div><div class="tx"><h3>Golf and padel beside football</h3><p>Each gets its own section next to football, with golf&#8217;s 15 unit minimum stated where a buyer reads it.</p></div></div>
+      <div class="card rv"><div class="im"><img src="img/new-m-studio.jpg" alt="The kit room on a phone" width="700" height="1515" loading="lazy" style="object-position:50% 20%"></div><div class="tx"><h3>Just as good on a phone</h3><p>Every page was checked at phone width, including the kit room, the price tables and the brief form.</p></div></div>
     </div>
   </div>
 </section>
@@ -297,7 +300,7 @@ section{padding:clamp(80px,10vw,136px) 0;position:relative}
           <tr><td data-l="What CustomKit needs">Look established from day one</td><td data-l="What stands in the way today">&#8220;500+ brands&#8221; a buyer can&#8217;t check</td><td data-l="What the new site does">Only claims that trace to a source, with the company number in the footer</td></tr>
           <tr><td data-l="What CustomKit needs">Make ordering feel safe</td><td data-l="What stands in the way today">Minimums and lead times change from page to page</td><td data-l="What the new site does">One schedule and a stated minimum for each type of garment</td></tr>
           <tr><td data-l="What CustomKit needs">Win founders starting a brand</td><td data-l="What stands in the way today">The &#163;495 service isn&#8217;t on your homepage</td><td data-l="What the new site does">On the homepage with prices and a booking form</td></tr>
-          <tr><td data-l="What CustomKit needs">Keep clubs on customkit.uk</td><td data-l="What stands in the way today">A pop up on the first page anyone lands on</td><td data-l="What the new site does">A slim bar and a clubs page with your real kit prices</td></tr>
+          <tr><td data-l="What CustomKit needs">Serve teams and brands without losing either</td><td data-l="What stands in the way today">Two sites, and a pop up on the first page anyone lands on</td><td data-l="What the new site does">One site with a front door for each, and club prices on their own page</td></tr>
         </tbody>
       </table>
     </div>

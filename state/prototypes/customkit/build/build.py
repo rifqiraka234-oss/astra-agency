@@ -12,7 +12,7 @@ BASE = 'https://astra-customkit-prototype.netlify.app/'
 
 NAV = [('teams.html', 'Teams', 'teams'), ('BRANDS', 'Brands', 'brands'), ('make.html', 'What we make', 'make'),
        ('process.html', 'How it works', 'process'), ('reviews.html', 'Reviews', 'reviews'), ('founder.html', 'Founder', 'founder')]
-BRANDS = [('white-label.html', 'White label', 'Your label on everything we make', 'white'),
+BRANDS = [('white-label.html', 'White label', 'Your label on every garment', 'white'),
           ('brand-design.html', 'Brand design', 'A range designed with you, from £495', 'brand'),
           ('launch.html', 'Drops and webstores', 'Sell it, and we make and ship it', 'launch')]
 SPORTS = ['Football', 'Rugby', 'Cricket', 'Basketball', 'Netball', 'Athletics', 'Golf', 'Padel', 'Hockey', 'Volleyball',
@@ -44,7 +44,7 @@ def studio(design='vortex', c1='navy', c2='white'):
     <div class="kr-row"><span class="lab">02 Main colour</span><div class="sw">{s1}</div></div>
     <div class="kr-row"><span class="lab">03 Second colour</span><div class="sw">{s2}</div></div>
     <div class="spec"><div><b>Print</b>Fully sublimated, unlimited colours</div><div><b>Fabric</b>From 200+ performance fabrics</div><div><b>Branding</b>Crest, sponsors, names and numbers</div><div><b>Label</b>Yours, on every label and tag</div></div>
-    <div class="kr-foot"><p>Six of our designs, 13 colours</p><a class="btn b-cob" data-brief href="start.html?design={design}&amp;c1={c1}&amp;c2={c2}">Brief us on this kit {ARROW}</a></div>
+    <div class="kr-foot"><p>Six designs and 13 colours to try here</p><a class="btn b-cob" data-brief href="start.html?design={design}&amp;c1={c1}&amp;c2={c2}">Brief us on this kit {ARROW}</a></div>
   </div>
 </div>'''
 

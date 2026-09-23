@@ -217,3 +217,16 @@ only named runs on the .com, with no client or brand named.
 - "UK kit maker" description of My Club Group had no source and was removed from the site.
 - Four forms confirmed live in Chromium (start-a-project 11 inputs, enquire 6, build-a-brand 6, brand-design-service 7), controls why-us and terms show 0.
 - Trustpilot re-rendered, 54 reviews, 4.2, nine since April 2026 all five stars, company text "purchased in January 2026 from Sportsmax".
+
+## v2 redesign, 2026-09-23
+
+Raka asked for a full redesign away from the AI generated look, with .com and .uk combined. Art
+direction, sources and every change are in handover.md. Image changes against the table above:
+golf1 (VISA logo on the polo) and padel (FORZA PADEL printed on the ball) are removed from the
+build, the padel slot is a court plan drawn in SVG (img/court-ink.svg, img/court-lime.svg), and
+swatch is cropped in CSS so the Acne Studios book is out of frame. New claims on the teams page
+come from customkit.uk, the sports list and "Other sports, hockey, volleyball, handball and
+more" from its homepage, the three step how it works and the free design mockup from its
+homepage, and the training and travel bundle (7 items, £189 per player, £217 separately, save
+£28, VAT not stated) from customkit.uk/bundles, read 2026-09-23.
+
