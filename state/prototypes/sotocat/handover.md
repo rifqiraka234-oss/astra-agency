@@ -5,7 +5,7 @@ Two artefacts, both live and verified.
 | | URL | Netlify site id | Deploy id |
 |---|---|---|---|
 | Website prototype | https://astra-sotocat-prototype.netlify.app | aae9b53e-9667-4099-84a8-fce834168dcc | 6ab39016e4c6abd1fc590595 |
-| Analysis deck | https://astra-sotocat-deck.netlify.app | d84ecf40-3f06-4170-b93f-4d59f64d0928 | 6ab39cedd52989def176cb26 (section 10 rebuilt, bios rewritten 2026-09-23) |
+| Analysis deck | https://astra-sotocat-deck.netlify.app | d84ecf40-3f06-4170-b93f-4d59f64d0928 | 6ab39e1d0ccca7f664df7e3e (section 10 rebuilt, bios and partner framing 2026-09-23) |
 
 Both projects were created with team SSO on by default, which would have locked Sergey
 out. It was switched off on both, matching astra-wistree-deck.

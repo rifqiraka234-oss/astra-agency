@@ -128,6 +128,20 @@ for, and it belongs in the Stage K pre-build gate reasoning.
 
 Closing question on the page: "Interested in exploring a project together?"
 
+### How Raka wants the partner framed in decks (2026-09-23)
+
+- **One team.** "Astra and Amwisesa work as one team", Astra on strategy and project
+  management, Amwisesa building. Disclosure line "Built by Amwisesa, Astra's development
+  partner". Raka asked for "Astra and Amwisesa have been partnering together to create these
+  things". Not used as worded, because Astra started in Jan 2026 and the named projects go
+  back to 2015, so a lead could catch it. The one team framing is the honest version of it.
+- **Do not name the country.** No "Indonesia", "Jakarta", "Bali" or "Southeast Asia" in
+  client facing copy, Raka's call, to avoid a negative connotation. The award is written
+  "2015 MMA Smarties". This is about emphasis only. If a lead asks where the team is, answer
+  truthfully.
+- **LinkedIn under names, not email.** Raka linkedin.com/in/raka-mulya-b92885196, Josh
+  linkedin.com/in/joshua-van-zeelt/.
+
 ### Joshua van Zeelt's own profile (his LinkedIn, pasted by Raka 2026-09-23)
 
 - Headline "Building websites, software & apps that actually work for your business | Founder
