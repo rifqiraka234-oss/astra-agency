@@ -353,6 +353,22 @@ Five blocked leads were retried. Every block turned out to rest on something oth
 - **Companies House name matches need the company, not the name.** The first "Neeraj Sharma"
   appointments page was a different man in Teesside. Search the company, then open its officers.
 
+### Batch 5 (2026-09-23), three more traps and one new check
+
+- **On WordPress, always list the posts and the users.** `wp-json/wp/v2/posts?per_page=100`
+  with `X-WP-Total`, and `wp-json/wp/v2/users`. On ferrydehaas.nl this found 130 casino and
+  betting posts by a second account, all in nine days, none linked from the homepage. The design
+  looked fine. A render never shows this, and it's the most serious thing a site can have.
+- **A video that won't play in our Chromium may play everywhere else.** The Chromium here has no
+  H.264 codec, so "Media error, Format(s) not supported" on an mp4 that serves 200 video/mp4 is
+  ours. Never report a video as broken off our render.
+- **"LinkedIn invitation withdrawn" on an accepted lead is the campaign step, not the connection.**
+  Read the lead's activity history, `GET /api/activities?version=v2&leadId=<id>`. An accept followed
+  by `linkedinWithdrawInvitationDone` is still a connection.
+- **A title is not ownership, even at a startup.** Shail Niazi's company was right all along, but
+  he's its Chief Culture Officer and a government page names the CEO and co founder. Check who
+  founded it before writing to a C level title.
+
 ### The pre send sequence that worked, keep it exactly
 
 1. `get_inbox_conversation`, still empty.
