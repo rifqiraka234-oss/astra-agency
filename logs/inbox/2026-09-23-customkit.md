@@ -20,8 +20,7 @@ coming months. Feel free to send over you sketches so we can take a look."
 
 ## Owed
 
-- **Send the delivery message** in `state/drafted_2026-09-23-chris-delivery.md` once Raka
-  says send, with or without the optional correction line. Re pull the thread first.
+- ~~Send the delivery message~~ sent 2026-09-23 18.05 UTC, see the end of this file.
 
 ## v2, same day. Full redesign on Raka's note
 
@@ -42,3 +41,11 @@ section. Seven Mixkit clips on the free licence, logo checked, never captioned a
 customers. Deck section 06 has a new card for it and fresh hero shots. Redeployed to the same
 two URLs and verified live. Thread re pulled after the deploy, unchanged. Draft unchanged apart
 from one optional line, still waiting on Raka.
+
+## Sent, 2026-09-23 18.05 UTC
+
+Delivery v4 sent on Raka's word ("Just say CIMB bank, and then send"). It names the Lovable
+build, points to the deck's side by side of his contradicting minimums and lead times, links
+the redesign and asks for 30 minutes next week. Thread pulled right before (3 activities) and
+after (4, act_uHTeDtzFdTcJNz5gM, 1033 characters, same as the file). Nothing owed now except
+answering his reply, and booking the call if he says yes.

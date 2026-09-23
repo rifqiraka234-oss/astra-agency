@@ -1,4 +1,5 @@
-# Draft v4, 2026-09-23. Chris Flood, CustomKit. NOT SENT, waiting on Raka.
+<!-- GATE ARCHIVED -->
+# Draft v4, 2026-09-23. Chris Flood, CustomKit. SENT 2026-09-23 18.05 UTC on Raka's word, act_uHTeDtzFdTcJNz5gM. "CIMB Niaga" changed to "CIMB bank" at his request before sending.
 
 v4 follows Raka's note "we know u built stuff from AI, but we're gonna do much better than AI
 to redesign your website and get you more cash. We need to win against AI thats our selling
@@ -17,7 +18,7 @@ https://astra-customkit-deck.netlify.app
 So we redesigned it the way an AI builder won't. We read all 75 pages across both sites and set one schedule and one minimum per product for you to confirm. Your real reviews and kit renders sit up front, and it opens on footage of teams playing, licensed stock until you shoot your own. It's built to turn more brand enquiries into paid orders.
 https://astra-customkit-prototype.netlify.app
 
-After launch you'd have people behind it too, to wire the brief form into your inbox, take payment for design bookings and set up club stores. Our development partner has built shops and payment apps for CIMB Niaga and GPay.
+After launch you'd have people behind it too, to wire the brief form into your inbox, take payment for design bookings and set up club stores. Our development partner has built shops and payment apps for CIMB bank and GPay.
 
 You said the site's changing over the coming months. Could we do 30 minutes next week and go through it together?
 ```
@@ -60,6 +61,6 @@ Claims in v4, each re-testable.
 - "footage of teams playing, licensed stock", Mixkit Free licence, handover v3.
 - "club stores", customkit.com/clubs-and-teams, live 2026-09-23.
 - "take payment for design bookings", the booking copy promises card payment, handover item 1.
-- "Our development partner has built shops and payment apps for CIMB Niaga and GPay",
+- "Our development partner has built shops and payment apps for CIMB bank and GPay" (Raka's wording 2026-09-23, CIMB Niaga is a bank),
   docs/partner/amwisesa-credentials.md rows 104 and 105.
 - "You said the site's changing over the coming months", his reply 23 Sep.
