@@ -15,7 +15,7 @@ withdrawn, so both are still connected. The label is the campaign step, not the 
 
 | Who | Verdict |
 |---|---|
-| Ferry de Haas, InXpress Haarlemmermeer | **DRAFTED**, his site is carrying 130 casino and betting articles |
+| Ferry de Haas, InXpress Haarlemmermeer | **DRAFTED**, his InXpress page is gone, the link lands on an under construction page |
 | Shail Niazi, Clean Valley CIC | NO_STRONG_ANGLE, not the owner, the CEO and co founder is Nicholas LaValle |
 | Fernando Gomes, DS Private Matosinhos | BLOCKED_NEEDS_INFO stands, nothing ties him to the branch |
 | Connor Bosco, Elevate Marketing | NO_STRONG_ANGLE, a marketing studio, a competitor |
@@ -79,26 +79,41 @@ Red team, above, the message states only what's verifiable.
 
 ### Ferry, OPENER
 
-**In plain words.** Ferry runs an express shipping business. Someone's been secretly adding casino
-articles to his website, 130 so far. A customer who Googles him could find gambling pages with his
-name on them. Simpler rewording after Raka couldn't follow the first version.
+Rewritten on Raka's steer, the InXpress angle, 2026-09-23.
+
+**In plain words.** Ferry's own page on the InXpress website has disappeared. Anyone who searches
+"InXpress Haarlemmermeer" and clicks lands on a head office page saying the site is under
+construction, with no mention of him. From there the only way in is a head office quote form, and
+head office decides which franchise gets the customer. He's a logistics man, not a web man, so he
+probably doesn't know he's losing these.
+
+**Verified.** nl.inxpress.com/locations/haarlemmermeer/ redirects to nl.inxpress.com/regios/, the
+title "Locaties | InXpress Nederland". That page has zero mentions of Haarlemmermeer, Hoofddorp,
+Schiphol or Ferry, and lists no franchises at all. It carries "Onze website is momenteel in
+aanbouw ... Bent u op zoek naar een specifieke franchise? Neem dan indien mogelijk rechtstreeks
+contact op met de betreffende franchise ... De contactgegevens vindt u op hun visitekaartje". Its
+form says "Wij bekijken uw gegevens en brengen u in contact met een toegewijde logistieke expert
+die het meest geschikt is". A web search still lists that old URL as "InXpress Haarlemmermeer".
+Screenshot matches Raka's. His own ferrydehaas.nl page for InXpress,
+/nl/inxpress-haarlemmermeer--innovatief-platform, is a 404 too.
+
+**The casino posts** on ferrydehaas.nl are left out of the message, per Raka.
 
 ```
 Hi Ferry, saw InXpress Haarlemmermeer, looks interesting!
 
-However, your site has 130 casino articles hidden on it, all added since 14 September. This causes customers who Google you to risk finding gambling pages with your name on them.
+However, your page on the InXpress site is gone, and the link now opens a page saying the site is under construction. This causes businesses searching for you to hit a dead end and fill in a head office form that decides who gets them.
 
-I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I built a food brand from zero with my family and ran acquisition, so I know how much rides on what people find when they look you up.
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I built a food brand from zero with my family and ran acquisition, so I've seen what a lost enquiry costs a small business.
 
-Shall I build the new ferrydehaas.nl so customers only find the shipping work you're known for, and send it over?
+Shall I build the InXpress Haarlemmermeer page so businesses searching for you reach you directly, and send it over?
 ```
 
 **Flags for Raka.**
-- **This is really a security alert.** You may prefer to tip him off plainly and for free, which
-  would earn more trust than a pitch. Your call.
-- "risk finding gambling pages" is the impact inference. It's true that the pages are public and
-  indexable. It's not proven that anyone has landed on one.
-- The site's in Dutch and he's Dutch. The template is English, as with every other send.
+- A franchisee running his own InXpress Haarlemmermeer page may need head office's OK on the
+  brand. He had one before, on ferrydehaas.nl, now a 404.
+- Head office says the rebuild takes "de komende maanden", so the gap may close on its own. It's
+  costing him now.
 
 ---
 
