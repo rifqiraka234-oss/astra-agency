@@ -380,6 +380,29 @@ Five blocked leads were retried. Every block turned out to rest on something oth
   he's its Chief Culture Officer and a government page names the CEO and co founder. Check who
   founded it before writing to a C level title.
 
+### Research past the website, the business side (Raka, 2026-09-24)
+
+His words, "find evidence pain points in his business that allows him to not reach certain goals
+... internal apps for improvements ... efficiency, regulations". First run on Ferry de Haas.
+Astra builds apps and tools as well as websites, so look for these too, every lead.
+
+1. **What does the business actually do all day?** For a franchisee, read the franchisor's own
+   description of the franchisee's job. InXpress franchisees sell and look after accounts, head
+   office does billing. That says where his hours go.
+2. **Their own tools, not just their homepage.** List every page, and click every button, booking
+   links, sign up forms, portals. On ferrydehaas.nl the Book Consultation button on every page was
+   dead, and four sign up pages he built in 2023 showed raw plugin code. Check whether anything
+   links to a broken page before calling it a live loss. Unlinked means clue, not cost.
+3. **The rules changing under their industry this year.** Search the trade association first
+   (evofenedex for Dutch logistics), then the regulator. Date it. For Ferry, the EU dropped the
+   €150 duty free limit on 1 July 2026, and more customs data is due from November.
+4. **Costs moving against them or their customers.** Surcharges, prices, fees. Only use a number
+   from the right source. DHL eCommerce's surcharge isn't DHL Express's.
+5. **Tie it to their own words.** Ferry's LinkedIn leads with shipments stuck at customs, so a
+   customs rule change lands on the exact problem he sells himself on.
+6. **Grade each angle and recommend one.** A verified, visible problem beats a bigger inferred
+   one. The bigger one goes into what we'd build, not into the flaw sentence.
+
 ### The pre send sequence that worked, keep it exactly
 
 1. `get_inbox_conversation`, still empty.

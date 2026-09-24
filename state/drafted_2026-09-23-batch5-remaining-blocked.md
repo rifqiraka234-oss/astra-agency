@@ -117,6 +117,64 @@ Shall I build the InXpress Haarlemmermeer page so local businesses can find you 
   need head office's OK on the brand.
 - "your site" means the InXpress site. He may read it as ferrydehaas.nl, which is also his.
 
+## Ferry, the business side. Raka's test of researching past the website, 2026-09-24
+
+**In plain words.** Ferry is a one man InXpress franchise. He sells DHL, UPS and FedEx shipping
+to small businesses near Schiphol and sorts out their problems, especially shipments stuck at
+customs. Three things are pressing on that business right now.
+
+### Angle 1. His booking and sign up tools don't work. STRONGEST, verified.
+- **The "Book Consultation" button** in the header of every page on ferrydehaas.nl links to
+  `https://afspraak.ferrydehaas.nl`. That address fails two ways, our curl gets nothing and
+  r.jina.ai on another network gets `ERR_SSL_UNRECOGNIZED_NAME_ALERT`, the server doesn't know
+  the name. Control, the main site loads through the same reader. Plain http redirects to
+  calendly.com/ferrydehaas/afspraak, but the button uses https and browsers don't fall back.
+- **His LinkedIn now books through TidyCal**, tidycal.com/solutions1/10-minute-meeting, so he
+  moved tools and the site button was never updated.
+- **In 2023 he built his own customer sign up and e-signing**, /registratie/, /registratie-formulier/,
+  /registration-form/, /e-signature-document/. All four now show raw plugin code,
+  `[contact-form-7 ...]` and `[wp_e_signature]`, rendered and screenshotted. Nothing links to
+  them, last touched Oct 2023, so this is a clue, not a live loss. It shows he wanted a digital
+  sign up and it never stuck.
+- His terms say every customer opens an account with him. InXpress head office handles invoicing
+  and collections, so his job is sales and looking after accounts, and his time is the limit.
+  His homepage promises "Dedicated, 7 dagen per week", as a sole trader.
+
+### Angle 2. New EU customs rules. SUPPORTED on the rules, unconfirmed for his customers.
+- evofenedex, 29 Jun 2026. From 1 July 2026 the €150 duty free limit on small shipments into the
+  EU is gone, a €3 duty per goods category applies, businesses need the right declaration type
+  (H1, H6 or H7) with HS and TARIC codes and country of origin, and from November product ID
+  numbers become mandatory, with an EU handling fee expected then too.
+- His own LinkedIn pitch leads with "je internationale spoedzending loopt vast bij douane".
+- **Inference.** More shipments will get stuck over missing codes, which is his problem to fix.
+  A tool that collects the customs details before a shipment is booked would save him time.
+  **Unconfirmed** how many of his customers import small shipments.
+
+### Angle 3. Rising fuel surcharges. WEAK.
+DHL eCommerce's diesel indexed surcharge went 23.5% in August, 28% in September, 30.25% in
+October 2026, from dhlecommerce.nl. That's DHL's parcel arm, not DHL Express which he resells, and
+DHL Express's own figure couldn't be found. Background only, customers seeing bigger invoices is
+when they question their shipping deal, which is his pitch.
+
+### Recommended, angle 1 with angle 2 folded into the build
+
+### Ferry business side, OPENER
+
+```
+Hi Ferry, saw InXpress Haarlemmermeer, looks interesting!
+
+However, your site's Book Consultation button opens a page that won't load, on every page of the site. This causes businesses ready to talk to you about their shipping to hit an error and give up.
+
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I built automated follow up and routing flows at Betty Blocks, so I know where new customers drop off.
+
+Shall I build the booking and sign up flow so a new customer can book you, register and hand over their customs details in one go, and send it over?
+```
+
+**Flags.** "your site" is ferrydehaas.nl, which Raka doubted is his. The evidence says it is,
+admin user "Ferry", his logistics testimonials, his terms under "Ferry de Haas h.o.d.n. InXpress
+Haarlemmermeer". "Give up" is the impact inference. The customs details in block four are the
+EU rules angle, without quoting it.
+
 ---
 
 ## Shail Niazi, Clean Valley CIC. NO_STRONG_ANGLE, and a note for Raka.
