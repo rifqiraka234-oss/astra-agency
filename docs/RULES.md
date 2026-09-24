@@ -164,7 +164,7 @@ Quoting outside the public 5,000 to 50,000 euro band.
 
 ## 2. The message. One number per rule.
 
-**Opener length is 110 to 185 words since 2026-09-24**, when Raka added block three. Before that it was 90 to 145, and the rest of this paragraph is that history. **Opener length was 90 to 145 words.** This supersedes the 65 word ceiling in
+**Opener length is 95 to 170 words since 2026-09-24**, when Raka added block three and shortened block five. Before that it was 90 to 145, and the rest of this paragraph is that history. **Opener length was 90 to 145 words.** This supersedes the 65 word ceiling in
 `docs/enrichment-pipeline-spec.md` and `docs/astra-master-context.md` section 9, and the
 90 to 150 general guidance in that same doc. Those three numbers contradicted each other
 and two of them each claimed precedence. **90 to 145 is the number.** The floor came down from 100 on 2026-09-22, because the plain block one removes about fourteen words from every opener and the substance now sits in blocks two to four. The roast register
@@ -183,8 +183,11 @@ Especially, when you are [current goal, actions, company direction], the [proble
 
 I run Astra agency. We build [xyz] for brands like Unilever, AXA, Pertamina. I [proof].
 
-Shall I build the [thing] so [stakeholder achieves goal], and send it over?
+Shall I send you over what the [thing] looks like?
 ```
+
+**Block five shortened by Raka, 2026-09-24**, "the cta should be shorter". It names the thing and
+nothing else. The goal lives in block three, so it isn't repeated.
 
 **Block three added by Raka, 2026-09-24.** One sentence. Where the company is heading now,
 then the SAME block two problem getting bigger as they go there. Five blocks, always.
@@ -208,8 +211,7 @@ short version.
   sentence, "I couldn't find your website, and that [impact to their most current goal]." 
 - **The brand line is fixed text.** "Unilever, AXA, Pertamina", never reworded or trimmed.
 - **One proof, and it carries the argument.** The experience AND why it bears, in one line.
-- **Block two's stakeholder is block five's stakeholder**, and block five's thing fixes
-  block two's flaw.
+- **Block five's thing fixes block two's flaw** and serves block three's goal.
 
 **Hard bans in outreach prose.** No colon character anywhere. No em dash, en dash or
 hyphen, with one exemption, a hyphen inside a real proper noun such as Mercedes-Benz or

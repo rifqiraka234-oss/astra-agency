@@ -63,6 +63,7 @@ print("""  It outranks every other doc except a live instruction from Raka.
       Read it before drafting any first message. check-drafts.py enforces the wording.
       FIVE BLOCKS since 2026-09-24. Block three is 'Especially, when you are [current goal],
       the [same problem growing bigger]'.
+      Block five is short, 'Shall I send you over what the [thing] looks like?'
 
     CLUES TO INFERENCE. The [impact] aims at their CURRENT goal, and that goal is
       inferred from linked clues across EIGHT sources, all opened, every lead. Their

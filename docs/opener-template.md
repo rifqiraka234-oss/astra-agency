@@ -16,8 +16,17 @@ Especially, when you are [current goal, actions, company direction], the [proble
 
 I run Astra agency. We build [xyz] for brands like Unilever, AXA, Pertamina. I [proof].
 
-Shall I build the [thing] so [stakeholder achieves goal], and send it over?
+Shall I send you over what the [thing] looks like?
 ```
+
+**The shorter CTA, Raka 2026-09-24.** "I think the cta should be shorter maybe like 'shall i
+send you over how it looks like?'" The old block five, "Shall I build the [thing] so
+[stakeholder achieves goal], and send it over?", ran 20 to 25 words and repeated the goal that
+block three now carries. The new one is one short question. Two choices made filling it in,
+both flagged to Raka: "what it looks like" rather than "how it looks like", which is the
+grammatical form, and "the [thing]" kept in, because no other block names what we'd build and a
+bare "it" would point at nothing. The first opener sent with it was after Wessel van Noort, who
+got the old CTA.
 
 **Block three was added by Raka on 2026-09-24**, writing it straight into the Wessel van Noort
 draft. "Especially, when you are [current goal, actions, company direction], the [make the
@@ -80,8 +89,8 @@ slot has no source, the message does not get written.**
 | 7b | `[problem growing bigger]` | How the block two cost grows as they pursue that goal | Inference from the goal and the flaw together | A new, second problem. It's the SAME problem getting bigger, not another one |
 | 8 | brand line | **Fixed.** "Unilever, AXA, Pertamina" | Raka's template, recorded in `docs/astra-company-profile.md` | Never reworded, never trimmed, never extended |
 | 9 | `[proof]` | ONE personal credential of Raka's that makes the offer believable | `docs/astra-master-context.md` section 2A, matched per section 4 below | Decoration. The credential has to be the reason we can do the thing |
-| 10 | `[thing]` | A concrete artefact a stranger could draw | Derived from the flaw in block two | A brochure. "A page that shows the room" priced itself low |
-| 11 | `[stakeholder achieves goal]` | The SAME stakeholder as block two, now getting what the flaw was blocking | Mirrors block two | A different stakeholder from block two, which breaks the logic |
+| 10 | `[thing]` | A concrete artefact a stranger could draw, named in the CTA | Derived from the flaw in block two and the goal in block three | A brochure. "A page that shows the room" priced itself low |
+| 11 | `[stakeholder achieves goal]` | **Retired from the CTA on 2026-09-24.** The goal now lives in block three | Block three | Putting it back into the CTA makes it long again |
 
 ---
 
@@ -146,21 +155,24 @@ slot has no source, the message does not get written.**
   inventory, so I know what an unsold night costs" works because a venue's unsold nights are
   inventory. "I had a food brand" alone would be decoration.
 
-### Block five, one sentence
+### Block five, one short question (Raka, 2026-09-24)
 
-- `Shall I build the [thing] so [stakeholder achieves goal], and send it over?`
-- `[thing]` names an artefact a stranger could sketch.
-- The stakeholder is the one from block two, and the goal is the one the flaw was blocking.
+- `Shall I send you over what the [thing] looks like?` Word for word outside the bracket.
+- `[thing]` names an artefact a stranger could sketch, "the quoting and planning tool", "the
+  English PULSE site". Not "a solution", not "some ideas".
+- 16 words at most. The goal is not repeated here, block three carries it.
+- **History.** Until 2026-09-24 this block was `Shall I build the [thing] so [stakeholder
+  achieves goal], and send it over?`. Lasse Wessel and Wessel van Noort got that version.
 
 ### Across the whole message
 
 - **Three consistency checks, and they are the ones a script cannot do.** The stakeholder
-  in block two is the stakeholder in block five. The thing in block five fixes the flaw in
-  block two. The `[xyz]` in block four covers the thing in block five. Block three's goal is
-  the direction the thing in block five serves.
+  The thing in block five fixes the flaw in block two. The `[xyz]` in block four covers the
+  thing in block five, a tool means "websites and apps". Block three's goal is the direction
+  the thing in block five serves.
 - **The hard bans from RULES.md still hold.** No colon anywhere, no dash of any kind outside
   a proper noun, contractions present, English, five blocks.
-- **Length falls out of the shape**, roughly 115 to 140 words. The gate's range is 110 to 185.
+- **Length falls out of the shape**, roughly 100 to 130 words. The gate's range is 95 to 170.
 
 ---
 

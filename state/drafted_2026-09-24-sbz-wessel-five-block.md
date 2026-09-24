@@ -1,3 +1,4 @@
+<!-- GATE ARCHIVED. Wessel van Noort SENT 2026-09-24 15:02:01Z act_SQKxNN8272wzm9CM3, text as below. -->
 # SBZ, Wessel van Noort, the live draft. 2026-09-24. NOT SENT.
 
 Research, the six LinkedIn routes, the pain table and every withdrawn claim are in
