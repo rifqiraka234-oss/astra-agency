@@ -146,7 +146,37 @@ Michele Legoratto and Antanas Juodiskis were both told in writing that a message
 last one. Jack Coulthard was told "one more nudge and then I will leave it be" and then
 nudged again ten days later. Every one of those is invisible from the last message alone.
 
+**Two more mandatory checks before any send (Raka, 2026-09-24).**
+
+**A. We have never messaged this person before, checked four ways, not one.** His words, "before
+sending the message mandatory to check that we haven't messaged to them before". One empty thread
+isn't enough, because the same person can sit under a second contact, in another campaign, or in
+an email thread.
+1. `get_inbox_conversation` on the `contactId`, paged to exhaustion. Only the connect note may be
+   there for an opener.
+2. `get_inbox_conversations` with `search: "<full name>"` and again with the company name, no
+   campaign filter, to catch a duplicate contact. Pull the thread of every hit.
+3. `search_campaign_leads` with the `leadId` and `include: ["campaigns"]`, to see every campaign
+   they're in, and pull the thread under any other contact it shows.
+4. grep every state file, `silent_accepted_queue.jsonl`, `prototypes.jsonl`,
+   `inbox_digest_log.jsonl`, `drafted_*.md`, `logs/`, for the name, the company, the
+   `contactId`, the `leadId` and the LinkedIn slug. A SENT row anywhere stops the send until
+   it's explained.
+A positive control in the same minute, a thread known to be full coming back full.
+
+**B. Every source the message rests on is reopened and still true.** His words, "mandatory to
+check the sources again used in the message to be true, the inference may not be 100% true but
+as long as the sources are true." Split the message into its FACTS and its INFERENCE.
+- **Facts** are anything the lead could check, what their site says or doesn't say, a product
+  name, a language, a post, a number, a date. Each one is reopened at its source in the minutes
+  before sending and has to hold exactly as written. One fact that fails stops the send.
+- **Inference** is the "This causes" and "Especially" reasoning, what we think it costs them. It
+  can't be proven and doesn't need to be. It does need to follow from facts that are true.
+- The gate's `claims` field lists every fact with its source URL, and the send record says
+  when each was reopened. Lasse's PULSE claim failed exactly here and wasn't sent.
+
 **Before any send, in order.**
+0. **Checks A and B above.** Both, every time, written into the send record.
 1. **Load the whole thread, paged to exhaustion**, immediately before sending. Not the
    preview, not a bulk activities pull, not a state file. If a real message exists, this is
    a Stalled lead and it does NOT get a cold opener. If a closing nudge was sent, or we
@@ -501,6 +531,7 @@ sources:
 (10 or more, 6 or more domains)
 pains: <n> judged, <list>
 chosen: <the pain>, <costliest | hottest | biggest>, <why>
+claims: every FACT in the message, one per line, fact then source URL. Inference is not listed
 recheck: every claim reopened <time>, thesis confidence <HIGH | MEDIUM>
 ```
 

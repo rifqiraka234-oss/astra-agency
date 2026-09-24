@@ -96,6 +96,12 @@ print("""  It outranks every other doc except a live instruction from Raka.
       thesis rechecked, confidence HIGH or MEDIUM, LOW never shown. A ```gate block above
       every OPENER.
 
+    BEFORE ANY SEND, TWO MORE, RULES.md section 1, A and B.
+      A. Never messaged before, four ways. The thread, a name and company search for a
+         duplicate contact, every campaign they're in, and a grep of every state file.
+      B. Every FACT in the message reopened at its source and still exactly true. The
+         inference may be wrong, the facts it stands on may not.
+
     REPORT IN PLAIN WORDS. Each lead starts with the angle in one or two everyday
       sentences. No jargon to Raka. If he can't follow it, neither will the lead.
 

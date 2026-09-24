@@ -117,7 +117,7 @@ def blocks_of(path):
 # THE RESEARCH GATE. Raka, 2026-09-24, every item "mandatory". RULES.md section 4B.
 GATE_KEYS = ["lead", "site pass 1", "site pass 2", "deep analysis", "owner linkedin",
              "contact linkedin", "google news", "regional news", "industry news", "sources",
-             "pains", "chosen", "recheck"]
+             "pains", "chosen", "claims", "recheck"]
 
 
 def gate_problems(g):
@@ -154,6 +154,11 @@ def gate_problems(g):
         probs.append("pains must say how many were judged, at least 3")
     if not re.search(r"\b(costliest|hottest|biggest)\b", kv.get("chosen", ""), re.I):
         probs.append("chosen must say why it wins, costliest, hottest or biggest")
+    # Raka 2026-09-24, "the inference may not be 100% true but as long as the sources are
+    # true". Every fact in the message is listed with the URL it rests on.
+    cl = [l for l in kv.get("claims", "").split("\n") if l.strip()]
+    if not cl or not all(re.search(r"https?://", l) for l in cl):
+        probs.append("claims must list every fact in the message, each line with its source URL")
     if not re.search(r"confidence\s+(HIGH|MEDIUM)\b", kv.get("recheck", "")):
         probs.append("recheck must end in 'confidence HIGH' or 'confidence MEDIUM'. LOW does not send")
     return probs
