@@ -89,6 +89,13 @@ print("""  It outranks every other doc except a live instruction from Raka.
       THE OWNER'S LINKEDIN IS YOURS TO READ. Six routes, all written down, before Raka is
       ever asked. Never hand research back to him. Rule 12.
 
+    THE RESEARCH GATE, SEVEN MANDATORY ITEMS, RULES.md 4B. check-drafts FAILS without it.
+      Whole site read TWICE plus a deep analysis. Owner AND contact LinkedIn. Google News on
+      the company, python3 tools/news.py. Regional AND industry news. 10+ sources over 6+
+      domains. Every pain judged, the costliest, hottest or biggest chosen. Sources and
+      thesis rechecked, confidence HIGH or MEDIUM, LOW never shown. A ```gate block above
+      every OPENER.
+
     REPORT IN PLAIN WORDS. Each lead starts with the angle in one or two everyday
       sentences. No jargon to Raka. If he can't follow it, neither will the lead.
 

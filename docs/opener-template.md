@@ -71,6 +71,10 @@ If any of those turns up a site that is theirs, it is the normal template with t
 
 ---
 
+**Before any slot is filled, the research gate (RULES.md 4B).** Seven mandatory items, recorded
+in a ```gate block above the draft, enforced by check-drafts.py. The first one written, for SBZ,
+is in `state/drafted_2026-09-24-sbz-wessel-five-block.md`.
+
 ## 1. The eleven inputs, where each comes from, and what goes wrong
 
 You cannot fill a slot you have not researched. Every slot below names its source. **If a

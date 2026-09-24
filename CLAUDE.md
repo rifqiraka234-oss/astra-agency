@@ -22,6 +22,12 @@
 > Four levels, him, his company, his region, his industry, and past the website too, since Astra
 > builds apps and tools as well. Every pain in one table, judged. **`docs/RULES.md` section 4A.**
 >
+> **Every opener carries a research gate (Raka, 2026-09-24), `docs/RULES.md` section 4B.** The
+> whole site read twice plus a deep analysis, the owner's and the contact's LinkedIn, Google News
+> on the company (`python3 tools/news.py`), regional and industry news, 10+ sources, every pain
+> judged and the costliest chosen, and a final recheck with a confidence. check-drafts.py fails
+> any OPENER without a complete ```gate block above it.
+>
 > **The two tools that enforce rather than remind.** `node tools/site-audit.js <url>
 > <tag>` runs a positive control on itself and voids its own absence findings when the
 > detector fails. `python3 tools/check-drafts.py <file>` exits non zero, so it cannot be

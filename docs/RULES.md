@@ -446,6 +446,67 @@ right now, and we lead with it.**
   them, don't lead with them.
 - **Every claim in a draft still gets reopened live in the minute before sending.**
 
+## 4B. The research gate. Seven things, every lead, all mandatory (Raka, 2026-09-24)
+
+His list, word for word in substance, "mandatory it always searched the website fully all
+mandatory 2x and deep analyses, ensure that to check the owner's and the person we're talking
+to's linkedin profile, mandatory to check the google news of the company, mandatory to check
+regional and industry news of the company, mandatory to have 10+ sources, mandatory to judge and
+analyse all the problems and then choose the most costly, the most hot, the most big, mandatory
+to check the sources again and the thesis we're sending for accuracy and confidence."
+
+**It is enforced, not remembered.** Every OPENER in a drafts file needs a ```gate block directly
+above it. `tools/check-drafts.py` fails the draft when the gate is missing or thin, and it exits
+non zero. There is no draft without a gate and no gate without the work.
+
+1. **The whole website, twice, then a deep analysis.** Pass 1 crawls every page (sitemaps, the
+   WordPress API and its `types`, or a link crawl) and reads all of them. Pass 2 reads the whole
+   site AGAIN with fresh eyes and screenshots every page type, desktop and a real phone. Pass 2's
+   page count can't be lower than pass 1's. Then the deep analysis, what the site does for each
+   visitor as a whole, what's missing across all pages, how the business actually runs as its
+   own pages describe it (quotes, delivery, terms, privacy policy, job ads).
+2. **Two LinkedIn profiles, the owner AND the person we're messaging.** Often the same person,
+   and then the gate says so, after checking the statutory record and the headline agree. When
+   they differ (a director who isn't the owner, a son running a father's firm), both are read.
+   Six routes each, RULES 4A rule 12, every result written down.
+3. **Google News on the company**, and on the person. `python3 tools/news.py`, in the lead's own
+   language, with its control query. An empty result only counts when the control came back full.
+4. **Regional news and industry news.** The same tool runs both, their industry in their region,
+   and their industry nationally. Plus the trade association and the trade press by name.
+5. **Ten sources or more, across six domains or more.** Listed with URLs in the gate. Their own
+   site counts once per page actually used, and a walled source is listed as walled, not as read.
+6. **Judge every problem, then pick the most costly, the most hot, the most big.** The pain
+   table from rule 9 with every pain found, at least three. The gate names how many were judged
+   and why the winner wins, costliest, hottest (most urgent right now) or biggest.
+7. **Recheck the sources and the thesis before it's shown, and again before it's sent.** Every
+   claim reopened at its source, and the thesis, the one sentence we're betting on, tested for
+   accuracy. The gate ends in a confidence. HIGH or MEDIUM can be shown. **LOW is not shown**,
+   it goes back to research or becomes NO_STRONG_ANGLE. The Lasse PULSE claim was caught false at
+   exactly this step, a 700 character read had called a bilingual PDF German only.
+
+**The gate, copy this.**
+
+```gate
+lead: <name, company, contactId>
+site pass 1: <N> pages, <how crawled>, every page read
+site pass 2: <N> pages, second full read, screenshots of <page types>, desktop and phone
+deep analysis: <the site as a whole and how the business runs, from its own pages>
+owner linkedin: <six routes and what each returned>
+contact linkedin: <same person as owner, how confirmed> | <six routes>
+google news: tools/news.py <lang>, <queries and counts>, control <n>
+regional news: tools/news.py <query>, <what came back>
+industry news: tools/news.py <query>, <what came back>, plus <association or trade press>
+sources:
+1. https://...
+(10 or more, 6 or more domains)
+pains: <n> judged, <list>
+chosen: <the pain>, <costliest | hottest | biggest>, <why>
+recheck: every claim reopened <time>, thesis confidence <HIGH | MEDIUM>
+```
+
+**Report the gate to Raka in one line per lead**, pages read twice, profiles read, news checked,
+source count, confidence. Say which item was walled and what was tried.
+
 ## 5A. Reporting to Raka. Plain words first (Raka, 2026-09-23)
 
 His words, "whats the angle with ferry again? i dont get it. can you in general make things

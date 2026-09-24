@@ -60,17 +60,45 @@ RELAXED = {"REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY", "CORRECTI
 EXEMPT_MONEY = {"CORRECTION"}
 
 
+def fences(src):
+    """Line based fence parser. Yields (info, body, start_offset). A bare ``` fence is a
+    message. A ```gate fence is a research gate. A regex over ``` pairs mistook the closing
+    fence of one block for the opening of the next, so fences are walked line by line."""
+    lines = src.split("\n")
+    pos, i = 0, 0
+    offs = []
+    for ln in lines:
+        offs.append(pos)
+        pos += len(ln) + 1
+    while i < len(lines):
+        m = re.match(r"^```(\w*)\s*$", lines[i])
+        if m:
+            info, j = m.group(1), i + 1
+            while j < len(lines) and lines[j].strip() != "```":
+                j += 1
+            yield info, "\n".join(lines[i + 1:j]), offs[i]
+            i = j + 1
+        else:
+            i += 1
+
+
 def blocks_of(path):
-    """Return (message, shape) per fenced block. The shape is read from the nearest
+    """Return (message, shape, gate) per message block. The shape is read from the nearest
     heading or bold line above the block, because a reply forced into opener rules is
     how good drafts got mangled all through 2026-09-22. Untagged means OPENER and the
-    caller is told how to tag it."""
+    caller is told how to tag it. The gate is the nearest ```gate block above the message
+    and after the previous message, or None."""
     src = open(path, encoding="utf-8").read()
     if "GATE ARCHIVED" in src or "NO DRAFTS" in src:
         return []
-    out = []
-    for m in re.finditer(r"```\n(.*?)\n```", src, re.S):
-        head = src[:m.start()].rstrip().split("\n")
+    out, gate = [], None
+    for info, body, start in fences(src):
+        if info == "gate":
+            gate = body
+            continue
+        if info:
+            continue
+        head = src[:start].rstrip().split("\n")
         shape = None
         for line in reversed(head[-12:]):
             if not line.strip():
@@ -81,8 +109,54 @@ def blocks_of(path):
                 break
             if line.lstrip().startswith("#") or line.strip().startswith("**"):
                 break
-        out.append((m.group(1), shape))
+        out.append((body, shape, gate))
+        gate = None
     return out
+
+
+# THE RESEARCH GATE. Raka, 2026-09-24, every item "mandatory". RULES.md section 4B.
+GATE_KEYS = ["lead", "site pass 1", "site pass 2", "deep analysis", "owner linkedin",
+             "contact linkedin", "google news", "regional news", "industry news", "sources",
+             "pains", "chosen", "recheck"]
+
+
+def gate_problems(g):
+    """What is missing or too thin in one research gate. Empty list means it passes."""
+    if g is None:
+        return ["no research gate. Every OPENER needs a ```gate block above it, "
+                "RULES.md 4B lists the fields"]
+    probs, kv, cur = [], {}, None
+    for ln in g.split("\n"):
+        m = re.match(r"^([a-z][a-z0-9 ]+):\s*(.*)$", ln.strip(), re.I)
+        if m and m.group(1).lower() in GATE_KEYS:
+            cur = m.group(1).lower()
+            kv[cur] = m.group(2).strip()
+        elif cur:
+            kv[cur] = (kv[cur] + "\n" + ln.strip()).strip()
+    for k in GATE_KEYS:
+        if not kv.get(k):
+            probs.append(f"gate field '{k}' missing or empty")
+    n1 = re.search(r"\d+", kv.get("site pass 1", ""))
+    n2 = re.search(r"\d+", kv.get("site pass 2", ""))
+    if n1 and n2 and int(n2.group()) < int(n1.group()):
+        probs.append(f"site pass 2 read {n2.group()} pages, pass 1 read {n1.group()}. "
+                     "The second pass is the whole site again")
+    urls = set(re.findall(r"https?://[^\s)>,]+", kv.get("sources", "")))
+    domains = {re.sub(r"^www\.", "", u.split("/")[2].lower()) for u in urls}
+    if len(urls) < 10:
+        probs.append(f"{len(urls)} source URLs, the minimum is 10")
+    if len(domains) < 6:
+        probs.append(f"sources span {len(domains)} domains, the minimum is 6")
+    if "google" not in kv.get("google news", "").lower() and "news.py" not in kv.get("google news", ""):
+        probs.append("google news field must say the Google News search that was run")
+    pn = re.search(r"\d+", kv.get("pains", ""))
+    if not pn or int(pn.group()) < 3:
+        probs.append("pains must say how many were judged, at least 3")
+    if not re.search(r"\b(costliest|hottest|biggest)\b", kv.get("chosen", ""), re.I):
+        probs.append("chosen must say why it wins, costliest, hottest or biggest")
+    if not re.search(r"confidence\s+(HIGH|MEDIUM)\b", kv.get("recheck", "")):
+        probs.append("recheck must end in 'confidence HIGH' or 'confidence MEDIUM'. LOW does not send")
+    return probs
 
 
 def check(path, replies=False):
@@ -105,8 +179,9 @@ def check(path, replies=False):
         print("      <!-- NO DRAFTS --> marker at the top. If it is already sent, use")
         print("      <!-- GATE ARCHIVED -->. Do not leave it failing every sweep.")
         return 1
-    msgs = [m for m, _ in pairs]
-    shapes = [sh for _, sh in pairs]
+    msgs = [m for m, _, _ in pairs]
+    shapes = [sh for _, sh, _ in pairs]
+    gates = [g for _, _, g in pairs]
     untagged = [i + 1 for i, sh in enumerate(shapes) if sh is None]
     fails = []
 
@@ -121,6 +196,9 @@ def check(path, replies=False):
         # 90 to 145 words is the template, floor lowered 2026-09-22 when block one
         # became the plain shape. 150 is the roast register ceiling.
         relaxed = replies or shapes[i] in RELAXED
+        if not relaxed:
+            for gp in gate_problems(gates[i]):
+                bad(i, f"RESEARCH GATE, {gp}")
         if relaxed:
             pass
         elif (m.split("\n\n")[1:2] or [""])[0].strip().startswith("I couldn't find your website"):
