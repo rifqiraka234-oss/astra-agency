@@ -402,6 +402,13 @@ Astra builds apps and tools as well as websites, so look for these too, every le
    customs rule change lands on the exact problem he sells himself on.
 6. **Grade each angle and recommend one.** A verified, visible problem beats a bigger inferred
    one. The bigger one goes into what we'd build, not into the flaw sentence.
+7. **Then ask the question that decides it, is this the BIGGEST pain he has (Raka, 2026-09-24)?**
+   His words, "people pay for people solve for problems that are big and painful". A broken
+   button is real and small. Look at four levels, him, his company, his region, his industry,
+   and put every pain in one table, size for him, how current, how well proven, can we build for
+   it. Lead with the biggest one that's proven. For Ferry that was customs, every parcel to the US
+   charged duties since Aug 2025 and new EU rules since Jul 2026, landing on a one man business,
+   not his website. Also check his own franchisor or supplier isn't already solving it.
 
 ### The pre send sequence that worked, keep it exactly
 

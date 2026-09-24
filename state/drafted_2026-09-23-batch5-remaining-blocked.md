@@ -175,6 +175,69 @@ admin user "Ferry", his logistics testimonials, his terms under "Ferry de Haas h
 Haarlemmermeer". "Give up" is the impact inference. The customs details in block four are the
 EU rules angle, without quoting it.
 
+## Ferry, the biggest pain. Raka's challenge, re researched and compared, 2026-09-24
+
+Raka asked whether a broken booking button is really his biggest problem. It isn't. Everything
+gathered, at four levels, judged on how big, how current, how well proven, and whether we can fix it.
+
+**Him.** Sole trader since 24 Feb 2014, **1 employee, himself** (Drimble, KVK 60047992, trade
+names InXpress Haarlemmermeer and FDH Business Solutions). Promises "7 dagen per week". His pitch
+leads with shipments stuck at customs.
+**His company.** InXpress franchisees sell and look after accounts, head office does billing.
+Customs advice is the "local shipping experts" per InXpress's own site, so it's him. WebShipX makes
+labels and documentation. No duty estimator found in it, not proven absent.
+**His franchise.** Growing, not failing. Entrepreneur 2026 fastest growing international
+franchise, targeting 1,000 locations, TEG partnership 100,000 specialist deliveries (Business Wire,
+8 Jan 2026). Not a pain.
+**His industry and region.**
+- **US.** Since 29 Aug 2025 every shipment into the US, any value, goes through customs with
+  duties, and HS codes and values "must be 100% accurate to avoid delays or penalties" (DHL's own
+  page, read via r.jina.ai). Since 24 Jul 2026 a minimum 10% US import duty on nearly everything,
+  KVK updated 11 Aug 2026, "Nederlandse ondernemers kunnen klanten in Amerika verliezen".
+- **EU.** From 1 Jul 2026 the €150 duty free limit is gone, €3 per goods category, H1, H6 or H7
+  declarations with HS and TARIC codes, product ID numbers and a handling fee from November
+  (evofenedex, 29 Jun 2026).
+- **Region.** His headline covers the Duin- en Bollenstreek. The US is the bulb sector's biggest
+  market, over a billion bulbs a year (Anthos, via search). Context only, bulk bulbs mostly move as
+  freight, not express.
+- **Fuel.** DHL eCommerce surcharge 23.5%, 28%, 30.25%, Aug to Oct 2026. Not DHL Express. Weak.
+- **Schiphol.** 1,000 to 3,000 of 4,000 cargo flights expected to go. Express integrators mostly
+  run their own hubs, indirect for him. Weak.
+- **Competition.** Sendcloud and similar sell discounted DHL and UPS rates self serve. Real, but no
+  evidence it's hurting him. Weak.
+- **The NL €2 handling fee** from 1 Feb 2026 applies to parcels to consumers, not his B2B. Dropped.
+
+| Pain | Size for him | Current | Proven | We can build for it |
+|---|---|---|---|---|
+| Customs and duties on every parcel, US and EU | **Big**, hits his volumes and his hours | Yes, Aug 2025, Jul 2026, Nov 2026 | **Strong**, DHL, KVK, evofenedex | Yes, a customs check and duty preview tool |
+| One man, capped by his own hours | Big | Always | Strong, 1 employee | Yes, same tool saves his time |
+| Self serve platforms undercutting him | Medium | Yes | Weak for him | A savings comparison, weak |
+| Fuel surcharges rising | Medium | Yes | Weak, wrong DHL arm | Weak |
+| Schiphol cargo cuts | Low | Yes | Indirect | No |
+| Broken booking button | Small | Yes | Strong | Yes, but small money |
+| InXpress site boxy, no local page | Small to medium | Yes | Strong | Only his own page |
+
+**Verdict.** The biggest pain is customs. Every parcel his customers send to the US now pays
+duties and needs exact codes, small shipments into the EU need them too since July, and more is
+due in November. That hits him twice, customers ship less to the US, and the ones who do get
+stuck, and he's the one person who fixes it. The website points are real but small.
+
+### Ferry customs, OPENER
+
+```
+Hi Ferry, saw InXpress Haarlemmermeer, looks interesting!
+
+However, your customers' parcels to the US now all get charged duties at customs, and their small shipments into the EU need exact codes too. This causes you to lose hours untangling stuck shipments and surprise duties instead of winning new accounts.
+
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I built automated data enrichment and routing at Betty Blocks, so I've seen how much time manual data entry eats.
+
+Shall I build the customs check tool so your customers get their codes right and see the duties before they ship, and send it over?
+```
+
+**Flags.** How many of his customers ship to the US is unconfirmed. Whether WebShipX already
+estimates duties is unconfirmed. "lose hours" is the impact inference, from his one person
+business and his own customs pitch.
+
 ---
 
 ## Shail Niazi, Clean Valley CIC. NO_STRONG_ANGLE, and a note for Raka.
