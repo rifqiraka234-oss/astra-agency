@@ -1,3 +1,4 @@
+<!-- Lasse Wessel SENT 2026-09-24 14:39:17Z act_wCPnkZTSDjH6Dm78m, corrected text. SBZ still open. -->
 # Batch 6, four new accepts plus Lasse Wessel re run on the business side. 2026-09-24. NOT SENT. Re judged on cost the same day, see the section at the end.
 
 **Where the leads came from.** `get_campaigns_stats` `linkedinInvitationAccepted` went from 328 to
@@ -290,3 +291,30 @@ back empty and was rerun with a browser user agent).
 
 Still true and rechecked live, `<html lang="de">`, 0 hreflang, `/it` 404, and /neuheiten/pulse/,
 the page explaining the modules, 12 V and 24 V, Zigbee, Matter and DALI, is German only.
+
+---
+
+## SBZ, the draft on the proven angle (24 Sep)
+
+Raka asked what we draft to SBZ while the hiring can't be dated. This is the angle that's fully
+proven. Every one of the 32 pages is `lang="nl"`, no English. Zero hits across all 32 for
+defensie, defence, militair, aircraft, vliegtuig, luchtvaart, Leipzig, Enza or Zuid-Afrika, with
+Schiphol as the control (3 pages). Their company LinkedIn shows a 736 m2 defence production room
+with a phase 2 planned and a noise cabin at Deutsche Aircraft, both within the last three months.
+**Withdrawn before drafting**, "no overseas work", because /projecten says they work in the
+Netherlands, Belgium and Germany and a Swedish laser cabin is shown.
+
+### Wessel, OPENER, proven angle (NOT SENT)
+
+```
+Hi Wessel, saw SBZ, looks interesting!
+
+However, your site is only in Dutch and shows none of your defence or aircraft work. This causes defence and aerospace buyers checking you out to give their next production room to a builder who looks like they've done one.
+
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I ran e business insights for Heineken across 23 markets, so I know what an industrial buyer checks before they call.
+
+Shall I build the SBZ site in English and Dutch around your defence and aerospace work so those buyers see it first, and send it over?
+```
+
+**Weakest point.** That defence buyers are checking the site is inference. A defence contractor
+may also forbid publishing their project, though SBZ posted it on LinkedIn themselves.
