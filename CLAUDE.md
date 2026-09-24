@@ -18,6 +18,10 @@
 > the first run of it taught (2026-09-23)**, where new leads come from, the eighth clue
 > source, checking the site where the goal lives, and how a whole site absence is earned.
 >
+> **The angle is the lead's BIGGEST proven pain, not the first flaw found (Raka, 2026-09-24).**
+> Four levels, him, his company, his region, his industry, and past the website too, since Astra
+> builds apps and tools as well. Every pain in one table, judged. **`docs/RULES.md` section 4A.**
+>
 > **The two tools that enforce rather than remind.** `node tools/site-audit.js <url>
 > <tag>` runs a positive control on itself and voids its own absence findings when the
 > detector fails. `python3 tools/check-drafts.py <file>` exits non zero, so it cannot be

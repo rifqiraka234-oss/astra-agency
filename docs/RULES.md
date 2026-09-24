@@ -329,6 +329,53 @@ plus deck job for a lead, read the SotoCat section at the end of `docs/build-and
 
 ---
 
+## 4A. Finding the angle. The biggest pain, not the first flaw (Raka, 2026-09-22 to 24)
+
+Everything Raka said while working Ferry de Haas and the batches before him, in one place. The
+detailed method is in `docs/opener-template.md` sections 3A and 3B. These are the rules.
+
+**The principle, in his words.** "People pay for people who solve problems that are big and
+painful." A broken button is real and small. **The angle is the biggest proven pain the owner has
+right now, and we lead with it.**
+
+1. **Look at four levels, every lead.** Him, his company, his region, his industry. Pain can sit in
+   any of them. Ferry's biggest pain wasn't on any website, it was customs, every parcel to the US
+   charged duties since Aug 2025 and new EU rules since Jul 2026, landing on a one man business.
+2. **Research past the website.** Efficiency, regulations, costs, capacity, competition, hiring.
+   **Astra builds apps and internal tools too**, not only websites, so a pain we fix with a tool is
+   as good as one we fix with a page.
+3. **Clues, then inference, never the clue in the message.** Read every source through fully, the
+   whole site and newsletter, company LinkedIn posts, the owner's own pages, job ads in full, news
+   on the company and on the owner, and the lead's own lemlist `jobDescription` and `summary`.
+   Link them. A social media manager hire means expanding. A marketer who needs web design skills
+   means the website needs changing. Sales hires plus partnerships means growing fast. **Say the
+   consequence, never "I saw your job ad".**
+4. **Put every pain in one table and judge it.** How big for him, how current, how well proven,
+   can we build for it. The winner is the biggest one that's proven, not the easiest to spot.
+5. **Frame the cost for who he is.** An incumbent, not technical owner, a logistics man, won't
+   notice leads leaking through a web form. Say what it costs him in his own terms, hours, lost
+   customers, stuck shipments.
+6. **Use more sources when it matters, and check the numbers at source.** The trade association
+   (evofenedex for Dutch logistics), the regulator or chamber (KVK), the supplier itself (DHL's own
+   page), the statutory record. When two searches disagree on a number, open the source. A US
+   tariff came back as 15% in one snippet and 10% in another, KVK settled it at 10%.
+7. **Check nobody already solves it for him.** His franchisor, his supplier, his platform. Before
+   pitching a customs tool to an InXpress franchisee, check what WebShipX already does.
+8. **For a franchisee, the brand's site is his website.** It's what his customers see. Roast it
+   like his own, every page. The offer is the thing he can own, like his local page or a tool.
+
+**Guardrails he added along the way.**
+- **Don't overstate.** InXpress rebuilt its site and the old location links landed on a general
+  page. "Your page is gone" overstated it and Raka caught it. Describe what a customer sees now.
+- **Don't call a new site old.** InXpress's site was rebuilt in August 2026. It looks dated, it
+  isn't old. Check the date before using the word.
+- **What he calls a dated site.** "Squary, things in islands, it doesn't flow, a lot of gaps." Judge
+  it from screenshots of every page, desktop and a real phone.
+- **Odd findings aren't automatically the angle.** 130 casino spam posts on Ferry's own site were
+  true and bizarre. Raka's call was to leave them out and roast the business. Record them, flag
+  them, don't lead with them.
+- **Every claim in a draft still gets reopened live in the minute before sending.**
+
 ## 5A. Reporting to Raka. Plain words first (Raka, 2026-09-23)
 
 His words, "whats the angle with ferry again? i dont get it. can you in general make things

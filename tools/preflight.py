@@ -74,6 +74,10 @@ print("""  It outranks every other doc except a live instruction from Raka.
       get_campaigns_stats now, minus the last audit, then linkedinInviteAccepted
       activities since that date. The arithmetic closes before anyone is researched.
 
+    THE BIGGEST PAIN WINS. Four levels, him, his company, his region, his industry.
+      Past the website too, costs, rules, capacity, and we build apps as well as sites.
+      Every pain in one table, pick the biggest PROVEN one. RULES.md section 4A.
+
     REPORT IN PLAIN WORDS. Each lead starts with the angle in one or two everyday
       sentences. No jargon to Raka. If he can't follow it, neither will the lead.
 
