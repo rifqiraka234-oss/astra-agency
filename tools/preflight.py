@@ -79,6 +79,8 @@ print("""  It outranks every other doc except a live instruction from Raka.
       Every pain in one table, pick the biggest PROVEN one. RULES.md section 4A.
       AND THE COSTLIEST. Add what it costs him a year and the pay test, would he pay
       5k to 50k to fix it. A tiny fix is never the angle, only a symptom of a costly pain.
+      EVERY PAGE, EIGHT PLUS SOURCES. Crawl the whole site and say the count, judge it as a
+      whole, and name at least eight outside sources. RULES.md 4A rule 10.
 
     REPORT IN PLAIN WORDS. Each lead starts with the angle in one or two everyday
       sentences. No jargon to Raka. If he can't follow it, neither will the lead.

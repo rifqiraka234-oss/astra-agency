@@ -67,16 +67,16 @@ site doesn't serve anyone abroad. That sits exactly on the goal the four clues p
 - **Tweak test.** Passes. An English site for the new range isn't an upload.
 - **Red team.** Foreign sales may run through agents with their own material. Not ruled out.
 
-### Lasse, OPENER (re judged on cost, 24 Sep)
+### Lasse, OPENER (after the full re research, 24 Sep)
 
 ```
 Hi Lasse, saw Wessel Licht, looks interesting!
 
-However, your site is only in German, and the English catalogue is from 2023 with no PULSE, MIRA or (F)Lighttop in it. This causes the orders German furniture makers are cutting to stay lost, since makers abroad can't read about what you're launching.
+However, your site and every PULSE instruction sheet are only in German. This causes furniture makers abroad to pass on PULSE, and those are the orders you need while German makers cut back.
 
-I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I ran e business insights for Heineken across 23 markets, so I know what a buyer in another country needs to see before they'll call.
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I ran global go to market for Betty Blocks' software, so I've seen what a technical buyer abroad needs before they'll call.
 
-Shall I build the English site for your new range so furniture makers abroad can find PULSE and MIRA and ask for samples, and send it over?
+Shall I build the English PULSE site with a system builder so makers abroad can pick their parts and ask for a quote, and send it over?
 ```
 
 **Flags for Raka.** The Heineken line is the one I'd defend least, it's multi market work, not
@@ -207,3 +207,73 @@ line didn't bear on hiring.
   whose new range they can actually read about." An inconvenience, not a cost.
 - Wessel block two impact was "This causes the people you need to sign with an installer that
   actually shows them the job." Proof line was Eten Maar content, didn't bear on hiring.
+
+---
+
+## Full re research, every page and more sources (Raka, 2026-09-24)
+
+His words, "Did you try to use a lot of sources?? Did you try to like read all pages of the
+website and analyse the whole thing as a whole instead of just one fix?? If not do it again."
+The honest answer was no, so both were redone.
+
+### Lasse Wessel, the whole picture
+
+**Every page read.** wlfm.de sitemaps plus the WordPress API, 8 pages, 5 product groups and **95
+product pages, 108 URLs, all 200**. Screenshots looked at for a product group, a product, contact
+and jobs (curl render, 0 errors). Modern dark teal site from Sep 2025, consistent, clean.
+
+**What the site does for a buyer, as a whole.**
+- German only everywhere. `lang="de"`, no hreflang, `/en` 404.
+- **PULSE, the flagship.** 11 PULSE parts, each with its own instruction PDF, created Nov 2025,
+  **all in German** (two opened, "Gebrauchsanweisung", "Anwendung").
+- Datasheets. **First count was wrong and is withdrawn.** "84 of 95 without a datasheet" ignored
+  the catalogue. By article number, 62 products are in the May 2023 English catalogue, the 11
+  PULSE parts have PDFs, and about 16 have neither, including Wessel Beam and several spots.
+- No enquiry, sample or quote option on any product page. One general contact form.
+- No customers, references or projects anywhere (keyword count 0).
+- Product copy says they're made "in unseren jährlich zertifizierten Partnerfertigungsstätten in
+  FO als auch in Kleinserien in Deutschland".
+
+**Sources, 11.** VDM via moebelfertigung.com (1 Sep 2026). North Data (MD history). IVDW, their
+outside sales agency, which ran seven posts on them (leadership change 11 Aug 2025, SICAM 2025 and
+2026, MIKO March 2026, joined the Connectivity Standards Alliance in June 2026 for Matter smart
+lighting, SICAM 2026 motto "slim, smart, customized"). insolvenzkarte.de (230+ furniture
+insolvencies in 2024, about 20% more forecast for 2025, 75% of German kitchens made in OWL, RWK
+Küchen in Löhne insolvent a second time). WiWo (industry sales down 3.4% in 2025 after 7.8% in
+2024). Creditreform and dasoertliche via search (5 to 9 staff, founded 1972 as family business).
+Company LinkedIn (4 employees, no posts). Competitors hera-online.de and ls-light.com (both
+multilingual). The English catalogue PDF. Two PULSE PDFs. His own site, all of it.
+
+| Pain | Level | Cost to him a year | Proven | Pay test | Verdict |
+|---|---|---|---|---|---|
+| His customers shrinking and failing. Sales down 7.8% then 3.4%, 230+ insolvencies in 2024, OWL is his doorstep | Industry, region | Lost volume every year plus bad debt when a customer goes under. On a firm of 5 to 9 people and about a €2m balance sheet, this is the business | **Yes** | Only through new customers | **Costliest** |
+| His bet to replace it, smart connected lighting (PULSE, Matter, DALI, CSA member) sold at an Italian fair, can't be understood by anyone who doesn't read German | Company | The foreign orders that are meant to replace the German ones | **Yes**, site and PDFs opened | **Yes**, an English PULSE site with a system builder and quote requests, a real build | **The angle** |
+| A tiny team and an outside agent answering every spec question by phone and email | Company | Hours of 4 to 9 people | Team size yes, workload inferred | Folded into the builder | Part of the angle |
+| Cheap imports (VDM names them) while his own production is partly in "FO" | Industry | Price pressure | Industry level | No | Park |
+
+### Wessel van Noort, the whole picture
+
+**Every page read.** Crawled every link on sbzbv.nl, **32 pages, all 200**: home, over ons, 9
+product pages, 14 project pages, 2 vacancies, contact, terms. Homepage and phone screenshots looked
+at. A Webflow template, copyright 2022, republished 5 Jun 2026, Dutch only. Every product page has a
+short callback form (name, email, phone). "Ons werk" on product pages shows photos (the "No items
+found." is Webflow's hidden empty state, checked on all 9). Nothing on the site mentions defence,
+aerospace, Germany projects, export or any work after about 2022. Homepage body is two sentences.
+
+**Sources, 9.** Company LinkedIn (seven projects in five months, Halsteren, a 736 m2 defence room
+with phase 2, Deutsche Aircraft Leipzig, Katwijk food plant, Enza Zaden South Africa, Hornet laser
+cabin). UWV spanningsindicator Q1 2026. EIB (utility new build shrinking 2026, 75,000 more workers
+needed 2026 to 2029). Company record (1997 BV, 21 staff) and a data site estimate of about $3m
+revenue for 2025 (not confirmed). Provincie Zuid-Holland and Stedin (grid congestion since Dec
+2024, to 2032 to 2035). Indeed, werkzoeken and nationale vacaturebank, all behind Cloudflare, so
+**the vacancies can't be dated**. Facebook, behind a login. Competitor hansvandermeijs.nl.
+
+| Pain | Level | Cost to him a year | Proven | Pay test | Verdict |
+|---|---|---|---|---|---|
+| Crews. A busy order book across four countries in the tightest market for fitters there is | Company, industry | Estimate, on about €3m and 20 people, each missing fitter is roughly a crew's share of a year's work | Busy yes, shortage yes, **his hiring now unproven** | Yes, if it brings fitters | Costliest if the hiring is current |
+| The site sells 2022 and the Netherlands while he's winning defence, aerospace and export work | Company | High value buyers who check him find snack factories and a fish shop | Yes | Yes, a proper project and sector site | Second, and the safer claim |
+| Grid congestion in Zuid-Holland | Region | His clients' new builds delayed | Yes for the region | No, he builds inside existing halls | Doesn't hit him |
+
+**Verdict.** Blocked on one fact. If he's hiring now, crews is the angle and the draft above stands.
+Raka can settle it in his own browser by searching SBZ on Indeed. If he isn't, the angle becomes
+the site selling 2022 work while he wins defence and export jobs.

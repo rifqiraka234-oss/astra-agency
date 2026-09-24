@@ -379,6 +379,23 @@ right now, and we lead with it.**
    - **If the only proven pain is small, the verdict is NO_STRONG_ANGLE**, however true it is.
    - **Report the table to Raka with the cost column filled**, and say which pain is costliest
      and whether it's proven, before any draft.
+10. **Every page, many sources, judged as a whole (Raka, 2026-09-24).** His words, "Did you try
+   to use a lot of sources?? Did you try to like read all pages of the website and analyse the
+   whole thing as a whole instead of just one fix??" The first batch 6 pass read four pages of each
+   site and five sources. That's not research, it's spotting.
+   - **Crawl every page, and say the count.** Sitemaps, the WordPress API (`wp-json/wp/v2/types`
+     shows custom types like `product`), or a link crawl for Webflow and the rest. wlfm.de was 108
+     URLs including 95 products, sbzbv.nl was 32. Screenshot each page TYPE and look at it.
+   - **Then judge the site as a whole.** What can each visitor do on it, a buyer abroad, a
+     specifier, an applicant? What's missing across all pages, not on one.
+   - **At least eight outside sources**, named in the drafts file. Statutory register and its
+     history (North Data), the industry association, trade press, the company's LinkedIn, the
+     owner's own pages, news on the company, their sales agent or distributors, competitors'
+     sites, job boards, reviews. A walled source is written down as walled, never as empty.
+   - **Break every count before using it.** "84 of 95 products have no datasheet" was wrong, the
+     2023 catalogue covers 62 of them by article number. Cross check a number against every other
+     place the same information could live.
+   - **Report the counts to Raka** in one line, pages read and sources used.
 
 **Guardrails he added along the way.**
 - **Don't overstate.** InXpress rebuilt its site and the old location links landed on a general
