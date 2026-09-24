@@ -448,6 +448,12 @@ Astra builds apps and tools as well as websites, so look for these too, every le
   approved that message, and only the pre send re check caught it. Search the full text for the
   other language's words ("Instruction", "Application") before any language claim.
 - **An approved message that turns out false is not sent, and the fix needs his word again.**
+- **The goal was growth, and I pitched a web page (Raka, 2026-09-24).** SBZ is moving into
+  defence, aerospace and export with 21 people, every job custom. The bigger question was whether
+  the inside can carry it, quoting, planning, work prep, crews. Wessel's own headline says
+  planning and work prep are his job. RULES.md 4A rule 11.
+- **The owner's LinkedIn is mine to read, six routes, never handed to Raka.** The profile gives
+  999, the search result title gave his real job. RULES.md 4A rule 12.
 - **An incumbent agency on the site is the "someone already solves it" rule.** A privacy or
   credit link to an active agency (avermann.eu on Schumacher) means they have a builder already.
 

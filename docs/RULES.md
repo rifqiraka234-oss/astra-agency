@@ -396,6 +396,36 @@ right now, and we lead with it.**
      2023 catalogue covers 62 of them by article number. Cross check a number against every other
      place the same information could live.
    - **Report the counts to Raka** in one line, pages read and sources used.
+11. **When the goal is growth, ask whether the INSIDE can carry it (Raka, 2026-09-24).** His words,
+   "shouldn't scaling up their internal processes be a bigger priority? why didn't you think of
+   it". On SBZ I found the goal, moving into defence, aerospace and export, and then pitched the
+   website. I anchored on what I could see from outside, and the template's "your [surface] is"
+   pulled me to a public page. Every time the goal is growth, run these before choosing an angle.
+   - **Can they deliver more of it?** Quoting, design, work prep, planning, production, crews,
+     compliance paperwork, invoicing. Where does each job queue?
+   - **Who is the bottleneck?** Read the owner's own role title. Wessel's LinkedIn headline is
+     "Werkvoorbereiding, planning, projectleiding/coördinatie", on top of owner, sales and the
+     job ads. When sales, planning and hiring all run through one person, that person is the
+     ceiling on growth, and an internal tool is the bigger sale.
+   - **What changes with bigger clients?** Defence and aerospace bring bigger drawings, stricter
+     documentation, security rules and longer projects. That's process load, not a web page.
+   - **Internal tools are a first class angle**, quoting tools, planning boards, portals. Astra
+     builds them. The flaw sentence names the process fact that's publicly true (every job custom,
+     designed, quoted and planned from scratch) and the impact names the cost.
+12. **The owner's own LinkedIn and posts are read by me, every lead, never handed to Raka (Raka,
+   2026-09-24).** His words, "what did I tell you as well on looking on the owners linkedin posts?
+   why do you keep on cutting corners?" I asked him to open Wessel's profile without trying a
+   single route. LinkedIn returns 999 to WebFetch and curl, so that's the start, not the end.
+   Try every route and write each result into the drafts file.
+   1. WebFetch and curl on `/in/<slug>` and `/in/<slug>/recent-activity/all/`. Expect 999.
+   2. A web search on `"<full name>" <company>`. The result TITLE is the profile headline, and
+      it's a real clue (tier G, label it). Wessel's gave his actual job.
+   3. A web search on `linkedin.com/posts <slug>` and `site:linkedin.com/posts "<company>"`.
+   4. People data sites (rocketreach org chart, the company's team list) for role titles.
+   5. The company page's posts through WebFetch, which does work.
+   6. Instagram, Facebook, a personal site, podcasts, news quotes.
+   Only when all six are written down as tried may Raka be asked, and then as "these six failed,
+   can you open X", never as a substitute for doing it.
 
 **Guardrails he added along the way.**
 - **Don't overstate.** InXpress rebuilt its site and the old location links landed on a general

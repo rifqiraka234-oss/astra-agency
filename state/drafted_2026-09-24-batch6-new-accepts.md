@@ -318,3 +318,65 @@ Shall I build the SBZ site in English and Dutch around your defence and aerospac
 
 **Weakest point.** That defence buyers are checking the site is inference. A defence contractor
 may also forbid publishing their project, though SBZ posted it on LinkedIn themselves.
+
+---
+
+## SBZ, the inside. Can they carry the growth? (Raka, 2026-09-24)
+
+Raka's challenge, "shouldn't scaling up their internal processes be a bigger priority?" He's right.
+I found the goal (bigger specialist work, defence, aerospace, export) and pitched a web page.
+
+### The owner's LinkedIn, the six routes, all logged
+
+1. WebFetch `/in/wesselvannoort`, **HTTP 999**. curl on `/in/wesselvannoort/`,
+   `nl.linkedin.com/in/wesselvannoort` and `/recent-activity/all/`, **999** each.
+2. Web search `"Wessel van Noort" SBZ`. **The result title is his headline, "Wessel van Noort -
+   Werkvoorbereiding, planning, projectleiding/coördinatie - SBZ b.v."** Tier G, a search title,
+   the page itself can't be opened.
+3. `linkedin.com/posts wesselvannoort` and `site:linkedin.com/posts "SBZ" sandwichpanelen`, no
+   post of his returned.
+4. rocketreach org chart, Wessel "Verkoop, projectleiding en management", Gerard "Eigenaar en
+   directeur", Steve Langeveld "Projectleider", Stéphane Bilat "Engineer", Ineke de Ruiter
+   "Administratief financieel medewerkster". Old people data, a candidate list only.
+5. Company page posts via WebFetch, seven projects in five months, already logged above.
+6. Instagram `@wesselvnoort`, **429**, not confirmed as him. Korfbal club TOP sponsor article on
+   kvtop.nl, **404**. No news quoting him found.
+
+**Ownership is unresolved.** lemlist says "Eigenaar en algemeen directeur", rocketreach says Gerard
+is owner. drimble and creditsafe hide the bestuurder behind a paywall. Likely a handover like
+Lasse's, not confirmed.
+
+### What their own pages say about how work flows
+
+- "Al onze projecten zijn maatwerk. Ontworpen door ons eigen kantoor, voorbereid in onze eigen
+  fabriek en gemonteerd door onze eigen monteurs. In Nederland, België en Duitsland, maar ook
+  vliegen wij met onze klanten mee de wereld over." (/projecten)
+- Quotes are "vrijblijvend", valid 14 days, "gebaseerd op de door de afnemer verstrekte gegevens,
+  ontwerpen, tekeningen ... en ... gedane opmetingen" (algemene voorwaarden, art. 3).
+- The privacy policy collects "Kopie ID bewijs, VCA, heftruck of hoogwerker certificaat ...
+  Werkvergunning" from workers of third parties, so they already bring in outside crews.
+- Projects run from 2 days to several months (monteur ad).
+
+### The pain table, redone with the inside
+
+| Pain | Level | Cost to him a year | Proven | Pay test | Verdict |
+|---|---|---|---|---|---|
+| **Every job is designed, quoted, prepared and planned from scratch, and sales, work prep, planning, project running and hiring sit with one person**, while jobs get bigger (defence phase 2) and further away (Leipzig, South Africa) | Company | The ceiling on how much work a 21 person firm can take. Each slow quote is a job lost, each planning clash abroad is a crew standing still (estimates) | Custom flow and quote rules **proven** on their own pages. Wessel's role from his headline (search title) and rocketreach, two agreeing clues. Overload itself **inferred** | **Yes**, a quoting and planning tool is a €15k to €50k build | **Costliest and biggest** |
+| Crews, the national shortage | Industry | Work pushed back | Shortage proven, his hiring now unproven | Folded into the above, better planning gets more from the crews he has | Part of it |
+| Site Dutch only, none of the defence or aircraft work | Company | Credibility with new buyers | Proven | Smaller | Symptom, not the pain |
+
+### Wessel, OPENER, the inside angle (NOT SENT)
+
+```
+Hi Wessel, saw SBZ, looks interesting!
+
+However, your whole process is custom, every job designed, quoted and planned from scratch, while the jobs keep getting bigger and further from home. This causes you to spend your weeks on drawings, quotes and crew schedules instead of winning the next defence or aircraft project.
+
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I ran go to market at Betty Blocks, a platform companies use to build their own internal apps, so I've seen where teams like yours lose the hours.
+
+Shall I build the quoting and planning tool so a cell's price, parts list and crew schedule come out of one form, and send it over?
+```
+
+**Weakest points.** That the quoting and planning land on Wessel rests on his headline and old
+people data, not on his own words. That it's overloading him is inference. Building a demo needs
+guesses about their pricing, so a first build would be a mock with made up numbers, labelled.

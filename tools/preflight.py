@@ -81,6 +81,10 @@ print("""  It outranks every other doc except a live instruction from Raka.
       5k to 50k to fix it. A tiny fix is never the angle, only a symptom of a costly pain.
       EVERY PAGE, EIGHT PLUS SOURCES. Crawl the whole site and say the count, judge it as a
       whole, and name at least eight outside sources. RULES.md 4A rule 10.
+      GROWTH GOAL? ASK IF THE INSIDE CAN CARRY IT. Quoting, planning, prep, crews,
+      compliance, and who the bottleneck is. Internal tools are an angle. Rule 11.
+      THE OWNER'S LINKEDIN IS YOURS TO READ. Six routes, all written down, before Raka is
+      ever asked. Never hand research back to him. Rule 12.
 
     REPORT IN PLAIN WORDS. Each lead starts with the angle in one or two everyday
       sentences. No jargon to Raka. If he can't follow it, neither will the lead.
