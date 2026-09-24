@@ -443,6 +443,11 @@ Astra builds apps and tools as well as websites, so look for these too, every le
   path. `tools/render-via-curl.js` is the second path now.
 - **A job ad is still a clue in the flaw sentence.** check-drafts flagged "vacancies" in block
   two. Describe what the site does to the people he's hiring, as with PharmaSupport.
+- **Read the WHOLE document before saying what language it's in.** The PULSE PDFs open in
+  German and switch to English halfway. A 700 character read called them German only, Raka
+  approved that message, and only the pre send re check caught it. Search the full text for the
+  other language's words ("Instruction", "Application") before any language claim.
+- **An approved message that turns out false is not sent, and the fix needs his word again.**
 - **An incumbent agency on the site is the "someone already solves it" rule.** A privacy or
   credit link to an active agency (avermann.eu on Schumacher) means they have a builder already.
 

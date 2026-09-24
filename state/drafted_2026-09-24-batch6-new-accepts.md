@@ -67,12 +67,12 @@ site doesn't serve anyone abroad. That sits exactly on the goal the four clues p
 - **Tweak test.** Passes. An English site for the new range isn't an upload.
 - **Red team.** Foreign sales may run through agents with their own material. Not ruled out.
 
-### Lasse, OPENER (after the full re research, 24 Sep)
+### Lasse, OPENER (corrected at the pre send check, 24 Sep, NOT SENT, needs Raka's word again)
 
 ```
 Hi Lasse, saw Wessel Licht, looks interesting!
 
-However, your site and every PULSE instruction sheet are only in German. This causes furniture makers abroad to pass on PULSE, and those are the orders you need while German makers cut back.
+However, your site is only in German, including the PULSE page that explains how the system fits together. This causes furniture makers abroad to pass on PULSE, and those are the orders you need while German makers cut back.
 
 I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I ran global go to market for Betty Blocks' software, so I've seen what a technical buyer abroad needs before they'll call.
 
@@ -277,3 +277,16 @@ revenue for 2025 (not confirmed). Provincie Zuid-Holland and Stedin (grid conges
 **Verdict.** Blocked on one fact. If he's hiring now, crews is the angle and the draft above stands.
 Raka can settle it in his own browser by searching SBZ on Indeed. If he isn't, the angle becomes
 the site selling 2022 work while he wins defence and export jobs.
+
+### Pre send check, 24 Sep. The approved text was false, not sent.
+
+Raka said "Send lasse". The live re check before sending found **all 11 PULSE PDFs are bilingual,
+German then English** ("Instruction Manual", "Application", "Important safety instructions").
+The research pass had only read the first 700 characters of two of them, which are the German
+half. So "every PULSE instruction sheet is only in German" was false and was not sent. Also on the
+re check, `/en` and `/en/` now return a 1,271 byte 500 error rather than 404, not an English site,
+and the hera-online.de control returned de, en, es and it on the second try (the first try came
+back empty and was rerun with a browser user agent).
+
+Still true and rechecked live, `<html lang="de">`, 0 hreflang, `/it` 404, and /neuheiten/pulse/,
+the page explaining the modules, 12 V and 24 V, Zigbee, Matter and DALI, is German only.
