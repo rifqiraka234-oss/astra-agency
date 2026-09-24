@@ -495,6 +495,29 @@ Astra builds apps and tools as well as websites, so look for these too, every le
 - **An incumbent agency on the site is the "someone already solves it" rule.** A privacy or
   credit link to an active agency (avermann.eu on Schumacher) means they have a builder already.
 
+### Batch 7 (2026-09-24), the first run under the research gate
+
+- **`tools/crawl.py` does pass 1 and pass 2.** Sitemaps first, then links, text of every page
+  into crawl.json. Real Olive was 353 pages plus a 237 page trade subdomain. **A subdomain that's
+  theirs is part of the site**, crawl it too.
+- **A crawl that stops at the cap isn't always a big site.** Check the URL kinds and the duplicate
+  texts first. Ethics & Boards was genuinely 600+ pages of press and weekly data. The Real Olive
+  trade site's "1,071 queued" was filters and repeats, 237 real pages.
+- **A 403 to curl and Chromium isn't the end.** Diggecard walls both, WebFetch reads it, it runs on
+  another network. Write the wall down and use the path that works.
+- **Registers by country, all open.** Companies House officers, PSC and filing history in HTML.
+  Norway, `data.brreg.no/enhetsregisteret/api/enheter?navn=` and `/enheter/<orgnr>/roller`.
+  France, `recherche-entreprises.api.gouv.fr/search?q=`, through WebFetch when curl's tunnel drops.
+- **A CEO title isn't ownership, twice more.** Andrew Johnson is daglig leder for a board, David
+  Risser is DG under a Président. Both were closed on that plus the rest.
+- **The costliest pain can be real and still not ours.** Real Olive's is a funded rival on the
+  same supermarket shelf. That's fought in buyer meetings. When everything we could build is a
+  tweak, the verdict is NO_STRONG_ANGLE and the tweaks are noted as favours.
+- **`[wpsl]` and other raw shortcodes.** A WordPress plugin that's switched off leaves its
+  shortcode as visible text. Grep crawl text for `\[[a-z_]+\]` and screenshot any hit.
+- **Stale promo banners.** A dated promotion still live months later ("23RD – 31ST MARCH" in
+  September) is a symptom that nobody tends that site. A symptom, not the angle.
+
 ### The pre send sequence that worked, keep it exactly
 
 1. `get_inbox_conversation`, still empty.
