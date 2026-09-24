@@ -1,3 +1,4 @@
+<!-- GATE ARCHIVED 2026-09-24. Lasse SENT. The live SBZ draft moved to state/drafted_2026-09-24-sbz-wessel-five-block.md. Older drafts below are four block history. -->
 <!-- Lasse Wessel SENT 2026-09-24 14:39:17Z act_wCPnkZTSDjH6Dm78m, corrected text. SBZ still open. -->
 # Batch 6, four new accepts plus Lasse Wessel re run on the business side. 2026-09-24. NOT SENT. Re judged on cost the same day, see the section at the end.
 
@@ -380,3 +381,26 @@ Shall I build the quoting and planning tool so a cell's price, parts list and cr
 **Weakest points.** That the quoting and planning land on Wessel rests on his headline and old
 people data, not on his own words. That it's overloading him is inference. Building a demo needs
 guesses about their pricing, so a first build would be a mock with made up numbers, labelled.
+
+---
+
+## SBZ, five block version with Raka's block three (24 Sep, NOT SENT)
+
+Raka wrote the new block into the draft, "Especially, when you are [current goal, actions,
+company direction], the [make the problem feel more bigger on longing]." Filled from the goal
+evidence above (defence room with phase 2, Deutsche Aircraft Leipzig, Enza Zaden South Africa,
+all on SBZ's company LinkedIn).
+
+### Wessel, OPENER, five blocks
+
+```
+Hi Wessel, saw SBZ, looks interesting!
+
+However, your whole process is custom, every job designed, quoted and planned from scratch, while the jobs keep getting bigger and further from home. This causes you to spend your weeks on drawings, quotes and crew schedules instead of winning the next defence or aircraft project.
+
+Especially, when you are taking on defence, aircraft and overseas work, the hours behind every quote and crew plan grow with each bigger job you win.
+
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I ran go to market at Betty Blocks, a platform companies use to build their own internal apps, so I've seen where teams like yours lose the hours.
+
+Shall I build the quoting and planning tool so a cell's price, parts list and crew schedule come out of one form, and send it over?
+```

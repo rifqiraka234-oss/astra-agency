@@ -61,6 +61,8 @@ print("""  It outranks every other doc except a live instruction from Raka.
     THE OPENER TEMPLATE IS FIXED WORDING. Raka's, 2026-09-22. Only the brackets
       change. Full spec, the eleven inputs and every rule, in docs/opener-template.md.
       Read it before drafting any first message. check-drafts.py enforces the wording.
+      FIVE BLOCKS since 2026-09-24. Block three is 'Especially, when you are [current goal],
+      the [same problem growing bigger]'.
 
     CLUES TO INFERENCE. The [impact] aims at their CURRENT goal, and that goal is
       inferred from linked clues across EIGHT sources, all opened, every lead. Their

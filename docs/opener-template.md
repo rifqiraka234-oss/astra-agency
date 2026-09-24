@@ -12,12 +12,20 @@ Hi [name], saw [company], looks interesting!
 
 However, your [surface] is [the critical flaw]. This causes [stakeholder] to [impact].
 
+Especially, when you are [current goal, actions, company direction], the [problem growing bigger in the long run].
+
 I run Astra agency. We build [xyz] for brands like Unilever, AXA, Pertamina. I [proof].
 
 Shall I build the [thing] so [stakeholder achieves goal], and send it over?
 ```
 
-The reference filled example, as sent.
+**Block three was added by Raka on 2026-09-24**, writing it straight into the Wessel van Noort
+draft. "Especially, when you are [current goal, actions, company direction], the [make the
+problem feel more bigger on longing]." It ties the flaw to where the company is heading and shows
+the cost growing over time. Every opener from then on is five blocks, and check-drafts.py enforces
+it. The four block example below is kept as the history of how block two is written.
+
+The reference filled example, as sent (four blocks, before 2026-09-24).
 
 ```
 Hi Daan, saw tuftuf, looks interesting!
@@ -67,7 +75,9 @@ slot has no source, the message does not get written.**
 | 4 | `[the critical flaw]` | One or two overarching things critically poor about the whole surface | Every published page, rendered and looked at, see section 3 | An absence claim with no positive control. Dariuz's "broken images" were our proxy |
 | 5 | `[stakeholder]` | The specific party the business depends on | The site's own words, who it sells to and how | A generic "visitors". tuftuf's was event planners, from its own guest range field |
 | 6 | `[impact]` | What that stakeholder does instead, landing on the lead's **most current goal** | Their current goal, found by research per section 3 step 8, dated, newest evidence first. The impact itself is inference, the only one allowed, and the owner must be able to test it | A timeless, generic cost. And a made up number, the money rule forbids modelling any rate or revenue |
-| 7 | `[xyz]` | What we build, relevant to this lead | The offer in block four | Mismatch with block four |
+| 7 | `[xyz]` | What we build, relevant to this lead | The offer in block five | Mismatch with block five |
+| 7a | `[current goal, actions, company direction]` | Where the company is heading NOW, stated as what they're doing | The goal research, section 3A, at least two agreeing clues, newest first | Quoting the clue ("your LinkedIn post"). State the direction, never where you saw it |
+| 7b | `[problem growing bigger]` | How the block two cost grows as they pursue that goal | Inference from the goal and the flaw together | A new, second problem. It's the SAME problem getting bigger, not another one |
 | 8 | brand line | **Fixed.** "Unilever, AXA, Pertamina" | Raka's template, recorded in `docs/astra-company-profile.md` | Never reworded, never trimmed, never extended |
 | 9 | `[proof]` | ONE personal credential of Raka's that makes the offer believable | `docs/astra-master-context.md` section 2A, matched per section 4 below | Decoration. The credential has to be the reason we can do the thing |
 | 10 | `[thing]` | A concrete artefact a stranger could draw | Derived from the flaw in block two | A brochure. "A page that shows the room" priced itself low |
@@ -116,7 +126,18 @@ slot has no source, the message does not get written.**
   4. **The red team.** Is it deliberate? tuftuf's one screen club front is deliberate and was
      never the flaw. The private events buyer being shown no room is not a style choice.
 
-### Block three, three sentences, the middle one fixed
+### Block three, one sentence, `Especially, when you are [goal], the [problem growing].` (Raka, 2026-09-24)
+
+- **Word for word outside the brackets**, including the comma after "Especially".
+- **`[current goal, actions, company direction]`** is where they're heading right now, in their
+  terms. For SBZ, "taking on defence, aircraft and overseas work". Evidenced by at least two
+  agreeing clues, never named as a source.
+- **`[problem growing bigger]`** is the block two problem getting bigger as they chase that goal.
+  Same problem, not a new one. For SBZ, "the hours behind every quote and crew plan grow with each
+  bigger job you win".
+- One sentence, 35 words at most.
+
+### Block four, three sentences, the middle one fixed
 
 - `I run Astra agency.` Fixed.
 - `We build [xyz] for brands like Unilever, AXA, Pertamina.` Only `[xyz]` changes. Plain
@@ -125,7 +146,7 @@ slot has no source, the message does not get written.**
   inventory, so I know what an unsold night costs" works because a venue's unsold nights are
   inventory. "I had a food brand" alone would be decoration.
 
-### Block four, one sentence
+### Block five, one sentence
 
 - `Shall I build the [thing] so [stakeholder achieves goal], and send it over?`
 - `[thing]` names an artefact a stranger could sketch.
@@ -134,11 +155,12 @@ slot has no source, the message does not get written.**
 ### Across the whole message
 
 - **Three consistency checks, and they are the ones a script cannot do.** The stakeholder
-  in block two is the stakeholder in block four. The thing in block four fixes the flaw in
-  block two. The `[xyz]` in block three covers the thing in block four.
+  in block two is the stakeholder in block five. The thing in block five fixes the flaw in
+  block two. The `[xyz]` in block four covers the thing in block five. Block three's goal is
+  the direction the thing in block five serves.
 - **The hard bans from RULES.md still hold.** No colon anywhere, no dash of any kind outside
-  a proper noun, contractions present, English, four blocks.
-- **Length falls out of the shape**, roughly 90 to 110 words. The gate's range is 88 to 150.
+  a proper noun, contractions present, English, five blocks.
+- **Length falls out of the shape**, roughly 115 to 140 words. The gate's range is 110 to 185.
 
 ---
 

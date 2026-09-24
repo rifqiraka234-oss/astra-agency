@@ -164,7 +164,7 @@ Quoting outside the public 5,000 to 50,000 euro band.
 
 ## 2. The message. One number per rule.
 
-**Opener length is 90 to 145 words.** This supersedes the 65 word ceiling in
+**Opener length is 110 to 185 words since 2026-09-24**, when Raka added block three. Before that it was 90 to 145, and the rest of this paragraph is that history. **Opener length was 90 to 145 words.** This supersedes the 65 word ceiling in
 `docs/enrichment-pipeline-spec.md` and `docs/astra-master-context.md` section 9, and the
 90 to 150 general guidance in that same doc. Those three numbers contradicted each other
 and two of them each claimed precedence. **90 to 145 is the number.** The floor came down from 100 on 2026-09-22, because the plain block one removes about fourteen words from every opener and the substance now sits in blocks two to four. The roast register
@@ -179,10 +179,15 @@ Hi [name], saw [company], looks interesting!
 
 However, your [surface] is [the critical flaw]. This causes [stakeholder] to [impact].
 
+Especially, when you are [current goal, actions, company direction], the [problem growing bigger in the long run].
+
 I run Astra agency. We build [xyz] for brands like Unilever, AXA, Pertamina. I [proof].
 
 Shall I build the [thing] so [stakeholder achieves goal], and send it over?
 ```
+
+**Block three added by Raka, 2026-09-24.** One sentence. Where the company is heading now,
+then the SAME block two problem getting bigger as they go there. Five blocks, always.
 
 **Full spec in `docs/opener-template.md`, read it before drafting any opener.** It lists
 the eleven inputs, the source for each, the rules block by block, the research that fills
@@ -203,7 +208,7 @@ short version.
   sentence, "I couldn't find your website, and that [impact to their most current goal]." 
 - **The brand line is fixed text.** "Unilever, AXA, Pertamina", never reworded or trimmed.
 - **One proof, and it carries the argument.** The experience AND why it bears, in one line.
-- **Block two's stakeholder is block four's stakeholder**, and block four's thing fixes
+- **Block two's stakeholder is block five's stakeholder**, and block five's thing fixes
   block two's flaw.
 
 **Hard bans in outreach prose.** No colon character anywhere. No em dash, en dash or
@@ -221,7 +226,7 @@ not an opener. A correction may quote the accounts it is retracting.
 **Run `python3 tools/check-drafts.py <file>` before showing any batch.** It exits non zero
 on failure. It covers every mechanical rule above plus pass 4 across the batch. Passes 1,
 2 and 3 stay human, read it aloud, check the credential is the reason we can do the offer,
-check block four names a thing.
+check block five names a thing.
 
 **The five other shapes**, each with its own rules, all in `CLAUDE.md`. Reply variant.
 Nudge, the only place an emoji is allowed. Closing nudge, the only place urgency is

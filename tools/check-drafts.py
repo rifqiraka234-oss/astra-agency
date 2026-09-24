@@ -18,7 +18,7 @@ Two markers turn the gate off for a file, and both belong at the top.
 
 Tag every draft with its shape in the heading above its fenced block, one of OPENER,
 REPLY, NUDGE, CLOSER, BOOKING, DELIVERY or CORRECTION. Untagged is treated as OPENER, and
-the four block, one exclamation, 88 to 150 word rules are the OPENER'S ALONE. The
+the five block, one exclamation, 110 to 185 word rules are the OPENER'S ALONE. The
 --replies flag relaxes the whole file the same way and is the blunt version of tagging.
 
 Every rule below exists because a real batch broke it. The comment says which.
@@ -54,7 +54,7 @@ BANNED_STRUCTURES = [
 SHAPES = ("OPENER", "REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY",
           "CORRECTION")
 # Shapes whose length, block count and exclamation rules are NOT the cold opener's.
-# The opener template is four blocks with exactly one exclamation. Nothing else is.
+# The opener template is five blocks (since 2026-09-24) with exactly one exclamation. Nothing else is.
 RELAXED = {"REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY", "CORRECTION"}
 # A correction retracts a claim, so it has to be able to quote the thing it is retracting.
 EXEMPT_MONEY = {"CORRECTION"}
@@ -127,8 +127,9 @@ def check(path, replies=False):
             # The no website variant drops a sentence from block two, so its floor is lower.
             if not 70 <= words <= 150:
                 bad(i, f"{words} words, no website variant, outside 70 to 150")
-        elif not 88 <= words <= 150:
-            bad(i, f"{words} words, outside 88 to 150")
+        elif not 110 <= words <= 185:
+            # Raised 2026-09-24 when Raka added the "Especially, when you are" block.
+            bad(i, f"{words} words, outside 110 to 185")
         # MONEY. Raka scrapped the general numbers rule on 2026-09-22, after we told the
         # CEO of Hounds for Heroes what her own accounts meant and got it wrong. A figure
         # is allowed ONLY when it quantifies what the lead is forgoing, losing or being
@@ -168,13 +169,27 @@ def check(path, replies=False):
         # Zero contractions is the single clearest machine tell.
         if len(re.findall(r"\w'(s|t|re|ve|ll|d|m)\b", m)) < 1:
             bad(i, "no contractions at all")
-        # Four blocks, per the opener template. Replies have their own shape.
-        if not relaxed and len(m.split("\n\n")) != 4:
-            bad(i, f"{len(m.split(chr(10)+chr(10)))} blocks, the template is 4")
+        # Five blocks, per the opener template. Replies have their own shape.
+        # Raka added block three on 2026-09-24, "Especially, when you are [current goal,
+        # actions, company direction], the [the problem growing bigger in the long run]".
+        raw = m.split("\n\n")
+        if not relaxed and len(raw) != 5:
+            bad(i, f"{len(raw)} blocks, the template is 5, with block three "
+                   "'Especially, when you are [current goal], the [problem growing]'")
         # THE OPENER TEMPLATE, fixed wording. Raka, 2026-09-22, "follow the fucking
         # template i gave you". Only the brackets change. See docs/opener-template.md.
-        if not relaxed and len(m.split("\n\n")) == 4:
-            B = [" ".join(b.split()) for b in m.split("\n\n")]
+        if not relaxed and len(raw) == 5:
+            B = [" ".join(b.split()) for b in raw]
+            esp = B.pop(2)
+            if not esp.startswith("Especially, when you are "):
+                bad(i, "block three must open 'Especially, when you are [current goal, "
+                       "actions, company direction], the [problem growing bigger]'")
+            elif ", the " not in esp[len("Especially, when you are "):]:
+                bad(i, "block three must carry ', the [problem growing bigger]' after the goal")
+            if len(re.split(r"(?<=[.!?]) (?=[A-Z])", esp)) != 1:
+                bad(i, "block three must be ONE sentence")
+            if len(esp.split()) > 35:
+                bad(i, f"block three is {len(esp.split())} words, cap 35")
             if not re.fullmatch(r"Hi [^,]+, saw .+, looks interesting!", B[0]):
                 bad(i, "block one must be exactly 'Hi [name], saw [company], looks interesting!'")
             s2 = re.split(r"(?<=[.!?]) (?=[A-Z])", B[1])
@@ -211,7 +226,8 @@ def check(path, replies=False):
                 bad(i, "block four must be 'Shall I build the [thing] so [goal], and send it over?'")
 
         # Block three must not be one long comma chain. Raka, 2026-09-16.
-        b3 = m.split("\n\n")[2] if len(m.split("\n\n")) > 2 else ""
+        _r = m.split("\n\n")
+        b3 = (_r[3] if len(_r) == 5 else _r[2] if len(_r) > 2 else "")
         for s in re.split(r"(?<=[.!?]) ", b3):
             if s.count(",") >= 3:
                 bad(i, f"block three has a sentence with {s.count(',')} commas, rewrite")
@@ -271,7 +287,7 @@ def check(path, replies=False):
         return 1
     print("PASS  every mechanical gate clear.")
     print("Passes 1, 2 and 3 are still yours. Read each aloud, check the credential is")
-    print("the reason we can do the offer, and check block four names a thing you could draw.")
+    print("the reason we can do the offer, and check block five names a thing you could draw.")
     return 0
 
 
