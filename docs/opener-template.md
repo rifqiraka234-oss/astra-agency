@@ -518,6 +518,18 @@ Astra builds apps and tools as well as websites, so look for these too, every le
 - **Stale promo banners.** A dated promotion still live months later ("23RD – 31ST MARCH" in
   September) is a symptom that nobody tends that site. A symptom, not the angle.
 
+### Batch 8 (2026-09-24), building a batch when the pool runs dry
+
+- **Rebuild the pool from lemlist every time.** Four `linkedinInviteAccepted` pages, joined to the
+  queue. The sum has to equal `linkedinInvitationAccepted`, 336 on 24 Sep. A glob that picked up
+  two of the four files gave 136 and nearly produced a wrong list.
+- **`THREAD_VERIFIED_CLEAN` means already sent.** It records that a 21 Sep send was correct.
+- **"Not in queue" means unknown, not untouched.** The queue doesn't cover July and August.
+- **A connect note can be missing from a thread.** Pierre-Lou's thread shows only his reply.
+- **A friendly question gets a warm answer, not the template.** Answer it truthfully, ask one back.
+- **When the pool is used up, say so.** Ten were asked for, two were real. Weak drafts to fill a
+  number is exactly the tiny fix rule broken.
+
 ### The pre send sequence that worked, keep it exactly
 
 1. `get_inbox_conversation`, still empty.
