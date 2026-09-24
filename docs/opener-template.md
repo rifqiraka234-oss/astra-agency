@@ -99,8 +99,12 @@ slot has no source, the message does not get written.**
   panels that sit as separate blocks, sections that don't lead into each other, and big empty
   gaps between them. That's a design flaw he recognises on sight, and it counts even when the copy
   and the facts are fine. Judge it from the screenshots, never from the HTML.
-- **A franchise's corporate page isn't the franchisee's to change.** nl.inxpress.com is InXpress
-  head office, so Ferry de Haas can't fix it. Pitch the surface the lead actually owns.
+- **For a franchisee, the brand's site IS his website (Raka, 2026-09-24).** It's what his
+  customers see when they look him up, so roast it like his own, every page. He can't rebuild
+  head office's site, so the offer is the thing he can own, his local page.
+- **A rebuild is not a breakage.** When InXpress rebuilt its site the old location links started
+  landing on a general page. "Your page is gone" overstated that, Raka caught it. Describe what a
+  customer sees now, not what disappeared.
 - **The flaw survives four tests before it is written.**
   1. **Positive control** on any absence. "Not a single photo" shipped because the same sweep
      found 23 images on hfmencap.org.

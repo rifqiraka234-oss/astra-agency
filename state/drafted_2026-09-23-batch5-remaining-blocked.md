@@ -15,7 +15,7 @@ withdrawn, so both are still connected. The label is the campaign step, not the 
 
 | Who | Verdict |
 |---|---|
-| Ferry de Haas, InXpress Haarlemmermeer | **DRAFTED**, his InXpress page is gone, the link lands on an under construction page |
+| Ferry de Haas, InXpress Haarlemmermeer | **DRAFTED**, the InXpress site is boxy and never mentions him, leads go to a head office form |
 | Shail Niazi, Clean Valley CIC | NO_STRONG_ANGLE, not the owner, the CEO and co founder is Nicholas LaValle |
 | Fernando Gomes, DS Private Matosinhos | BLOCKED_NEEDS_INFO stands, nothing ties him to the branch |
 | Connor Bosco, Elevate Marketing | NO_STRONG_ANGLE, a marketing studio, a competitor |
@@ -79,41 +79,43 @@ Red team, above, the message states only what's verifiable.
 
 ### Ferry, OPENER
 
-Rewritten on Raka's steer, the InXpress angle, 2026-09-23.
+Third version, 2026-09-24, on Raka's steer. The InXpress site is his website, roast all of it. The
+earlier "your page is gone" version is withdrawn, Raka pointed out it overstated things, the
+location pages went because InXpress rebuilt the whole site, not because anything broke.
 
-**In plain words.** Ferry's own page on the InXpress website has disappeared. Anyone who searches
-"InXpress Haarlemmermeer" and clicks lands on a head office page saying the site is under
-construction, with no mention of him. From there the only way in is a head office quote form, and
-head office decides which franchise gets the customer. He's a logistics man, not a web man, so he
-probably doesn't know he's losing these.
+**In plain words.** Ferry's customers find him through nl.inxpress.com. It's a stack of separate
+boxes and stock photos, and nothing on it mentions Haarlemmermeer or Ferry. A local business that
+wants a shipping partner ends up filling in an 18 question head office form, and head office
+decides who gets them. He's a logistics man, not a web man, so he won't see those enquiries go.
 
-**Verified.** nl.inxpress.com/locations/haarlemmermeer/ redirects to nl.inxpress.com/regios/, the
-title "Locaties | InXpress Nederland". That page has zero mentions of Haarlemmermeer, Hoofddorp,
-Schiphol or Ferry, and lists no franchises at all. It carries "Onze website is momenteel in
-aanbouw ... Bent u op zoek naar een specifieke franchise? Neem dan indien mogelijk rechtstreeks
-contact op met de betreffende franchise ... De contactgegevens vindt u op hun visitekaartje". Its
-form says "Wij bekijken uw gegevens en brengen u in contact met een toegewijde logistieke expert
-die het meest geschikt is". A web search still lists that old URL as "InXpress Haarlemmermeer".
-Screenshot matches Raka's. His own ferrydehaas.nl page for InXpress,
-/nl/inxpress-haarlemmermeer--innovatief-platform, is a 404 too.
-
-**The casino posts** on ferrydehaas.nl are left out of the message, per Raka.
+**Verified, 2026-09-24.**
+- **All 9 pages** from the sitemap, screenshotted full length on desktop and iPhone and looked at.
+  Every one was rebuilt 17 and 18 August 2026, careers 4 September. So it's new, and still boxy,
+  Raka's read, "squary, things in islands, doesn't flow, gaps". Cream and white cards, 12 carrier
+  logos each in its own box, stock warehouse photos.
+- **Zero mentions** of Haarlemmermeer, Hoofddorp, Schiphol, Ferry or de Haas on any of the 9.
+  Positive control, the same search finds head office's Eindhoven address on every page.
+- **The team sitemap is empty.** No franchise pages exist on the new site.
+- **The quote form**, /verzendofferte/, has 18 visible questions, 13 required, rendered and counted.
+- **Not used.** The form's phone field showed a US flag for us. It picks the country by the
+  visitor's location and our server isn't Dutch, Raka's own screenshot shows the Dutch flag. The
+  address field reads "zonder suite, unit of appartementnummer", a US form translated word for word,
+  true but a detail. A few images didn't finish decoding in our render, likely lazy loading.
 
 ```
 Hi Ferry, saw InXpress Haarlemmermeer, looks interesting!
 
-However, your page on the InXpress site is gone, and the link now opens a page saying the site is under construction. This causes businesses searching for you to hit a dead end and fill in a head office form that decides who gets them.
+However, your site is a stack of separate boxes and stock photos, with nothing on it about Haarlemmermeer or you. This causes local businesses looking for a shipping partner to fill in an 18 question head office form instead of calling you.
 
 I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I built a food brand from zero with my family and ran acquisition, so I've seen what a lost enquiry costs a small business.
 
-Shall I build the InXpress Haarlemmermeer page so businesses searching for you reach you directly, and send it over?
+Shall I build the InXpress Haarlemmermeer page so local businesses can find you and call you directly, and send it over?
 ```
 
 **Flags for Raka.**
-- A franchisee running his own InXpress Haarlemmermeer page may need head office's OK on the
-  brand. He had one before, on ferrydehaas.nl, now a 404.
-- Head office says the rebuild takes "de komende maanden", so the gap may close on its own. It's
-  costing him now.
+- He can't change nl.inxpress.com, head office owns it. The offer is his own local page, which may
+  need head office's OK on the brand.
+- "your site" means the InXpress site. He may read it as ferrydehaas.nl, which is also his.
 
 ---
 
