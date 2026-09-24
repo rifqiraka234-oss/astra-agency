@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED. Ferry de Haas SENT 2026-09-24 10:56:21Z act_RtoqXFxsFfDwSW4iR, the customs version. The other Ferry drafts in this file were never sent. -->
+
 # Batch 5, the last four blocked leads plus today's one new acceptance. 2026-09-23. NOT SENT.
 
 **The count.** `get_campaigns_stats` on v0.1 reads **328 accepted, one more than this morning's
