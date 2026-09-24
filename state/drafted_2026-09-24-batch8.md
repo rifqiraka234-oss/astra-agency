@@ -47,15 +47,31 @@ via ferrata, packs, seminars, stag and hen parties and gift vouchers, French onl
 about 5%. No costly pain found to lead with, and he asked a friendly question. CLAUDE.md, reply
 in context, a warm answer, not the template.
 
+**Recheck 2026-09-24, late pass.**
+- Check A, all four ways. Name search "Pierre-Lou" 0, "Pichon" 1 contact. search_campaign_leads,
+  v0.1 only. Full activity history for `lea_9WJdgHA5kaYSrjwQw` shows the connect note
+  (linkedinInviteDone 12:18:57Z), his reply 19:24:48Z, a campaign automation pause 21:04:41Z
+  and linkedinInviteAccepted 21:04:44Z. Nothing else was ever sent. Grep of state and logs
+  for his name, company, contactId and leadId finds only this batch's rows. Control, the
+  same grep for Wessel finds his sent file.
+- Check B. "The winter was a good one" reopened at two sources.
+  aquitaineonline.com 12836, 5 Mar 2026, "son meilleur bilan depuis dix ans", 94% in the week
+  of 14 Feb, 473,308 skier visits to 1 March. lepetitjournal.net 6 Mar 2026, the same 80%, 94%
+  and 473,308, "+1,3 point" on last winter. Eten Maar facts from `docs/astra-master-context.md`,
+  CEO and CMO Aug 2020 to Dec 2024, from zero with five relatives.
+- **Two fixes.** "in Jakarta and Bali" removed, since `docs/astra-company-profile.md` bans
+  naming the country or its cities in client facing copy. "under one roof" removed, the park,
+  the shop and the Office des Sports are separate businesses in his group.
+
 **Raka to confirm before sending.** Is Eten Maar still trading? The draft says it in the past
 tense, per his LinkedIn (CEO and CMO, Aug 2020 to Dec 2024).
 
 ### Pierre-Lou, REPLY
 
 ```
-Hi Pierre-Lou, thanks for asking! Eten Maar was a wild ride, four years growing a stroopwafel brand with five relatives in Jakarta and Bali. These days I'm building websites and apps at Astra.
+Hi Pierre-Lou, thanks for asking! Eten Maar was a wild ride, four years growing a stroopwafel brand from zero with five relatives. These days I'm building websites and apps at Astra.
 
-I had a look at what you've built in Saint-Lary, the park, the Sport 2000 shop and the Office des Sports under one roof, and it sounds like the winter was a good one. How's the summer season been for you?
+I had a look at what you've built in Saint-Lary, the park, the Sport 2000 shop and the Office des Sports, and it sounds like the winter was a good one. How's the summer season been for you?
 ```
 
 ---
@@ -71,9 +87,9 @@ in the menu and one article in the whole site links to it.
 ```gate
 lead: Jon Cockley, Handsome Frank Illustration Agency, ctc_nHPaYSqrv7u32oPTY, lea_7LWmuwtq2CQNDBfu5
 site pass 1: 217 pages, tools/crawl.py from sitemaps (211) and links, every page read
-site pass 2: 217 pages, second full crawl, screenshots of the homepage and an artist page (Sarah Maycock), desktop and phone
+site pass 2: 217 pages, second full crawl, screenshots of the homepage and an artist page (Sarah Maycock), desktop and phone, then a live recheck of six page types (home, artist, about, contact, two insights) and the hamburger menu opened in Chromium and screenshotted
 deep analysis: Modern agency site, menu Home, Illustrators, Animation, About, Read, Watch, Listen, Contact. 50 artist pages, 162 insight articles. Raw HTML of all 217 pages grepped for handsomeprovisions, 1 hit, the article meet-our-handsome-women, control instagram.com found on 12 pages. Handsome Provisions is Shopify, 196 prints from £40 to £400, newest added 2026-09-23, 26 by Sarah Maycock whose artist page doesn't link them. Office art for Wonderhood Studios and VCCP described in one insights article.
-owner linkedin: /in/hfjon curl 301 to login. Search title "Jon Cockley - Handsome Frank Limited". Company post "Introducing Handsome Provisions" read via WebFetch, 5 months old. His 2024 Creative Boom piece on AI and creativity via news. Illustration Department podcast and creativepool profile via search. Company page 200 on curl.
+owner linkedin: /in/hfjon curl 301 to login, personal posts not readable, routes logged. Search title "Jon Cockley - Handsome Frank Limited". Company page 200 on curl, the eight newest posts read (16 Sep back to 20 Jul), all artist commissions and a podcast, none mentions the shop since the April launch post "Introducing Handsome Provisions", read via WebFetch. Illustration Department podcast page with Jon opened, 200. Instagram handsome_frank taken from their HTML, 429 to us.
 contact linkedin: same person as owner, Companies House PSC 25 to 50% of Handsome Frank Limited 07416755, director since 22 Oct 2010
 google news: tools/news.py en, "Handsome Frank" 23 results (shop launch 2026-04-08, contract tips 2026-06-25, It's Archie AI talent agency 2026-01-09), "Jon Cockley" 3, control Tesco 102
 regional news: tools/news.py (UK OR London) illustration AI, 75 results, Creative Boom 2026-09-21 on handmade art mattering
@@ -87,16 +103,19 @@ sources:
 6. https://www.linkedin.com/posts/handsome-frank-illustration-agency_introducinghandsome-provisions-activity-7444679287221194752-l4tq
 7. https://80.lv/articles/a-third-of-translators-a-quarter-of-illustrators-have-lost-their-jobs-to-ai
 8. https://www.handsomefrank.com/insights/read/handsome-frank-co-curates-art-exhibitions
-9. https://www.creativereview.co.uk/ (It's Archie, AI talent agency, 2026-01-09, news title only)
-10. https://illustrationdept.com/podcast/joncockley (search result, not opened)
-11. https://www.creativeboom.com/news/the-state-of-the-creative-industry-2026-what-our-survey-tells-us-about-money-burnout-and-ai/ (search result, not opened)
+9. https://www.linkedin.com/company/handsome-frank-illustration-agency (200, eight posts read)
+10. https://illustrationdept.com/podcast/joncockley (200, opened)
+11. https://www.creativeboom.com/news/the-state-of-the-creative-industry-2026-what-our-survey-tells-us-about-money-burnout-and-ai/ (200, opened)
+12. https://find-and-update.company-information.service.gov.uk/company/07416755/officers (Jon active director since 22 Oct 2010)
+13. https://handsomeprovisions.com/ (200, names Handsome Frank as its owner)
+14. https://www.creativereview.co.uk/ (It's Archie, AI talent agency, 2026-01-09, news title only, context, not in the message)
 pains: 4 judged, AI cutting commissions, new incomes not connected to agency traffic, AI talent agencies as new rivals, fee negotiation pressure
 chosen: new incomes not connected to the agency traffic, the fixable route against the costliest pain, commissions lost to AI, biggest and hottest
 claims:
 the shop isn't in the handsomefrank.com menu and one article links to it, https://www.handsomefrank.com/insights/read/meet-our-handsome-women
 office art for Wonderhood and VCCP, https://www.handsomefrank.com/insights/read/handsome-frank-co-curates-art-exhibitions
 AI has cost a quarter of illustrators work, https://80.lv/articles/a-third-of-translators-a-quarter-of-illustrators-have-lost-their-jobs-to-ai
-recheck: every claim reopened 2026-09-24, thesis confidence MEDIUM
+recheck: every claim reopened 2026-09-24 late pass. Menu, three ways, raw homepage HTML 0 "provisions" with control instagram.com 1, the rendered link list at 1366 and 390 wide has Home Illustrators Animation About Read Watch Listen Contact and no shop while the Instagram link is found, and the opened hamburger screenshotted. One article links the shop, meet-our-handsome-women, the co-curates article names it without a link. Wonderhood and VCCP both in the co-curates article, dated 2026-05-21. 26% of illustrators "have already lost jobs", 80.lv reopened. 196 prints, newest 2026-09-23. Thesis confidence MEDIUM
 ```
 
 **Pain table.**
@@ -108,7 +127,20 @@ recheck: every claim reopened 2026-09-24, thesis confidence MEDIUM
 | AI talent agencies (It's Archie, Jan 2026) | Industry | Pitch competition | News title only | No | Context |
 | Fee pressure | Industry | Margin | Weak | No | Park |
 
-**Weakest points.** That agencies "never see" the prints is inference. The AOI's newer 32%
+**Check A, late pass.** Name search "Jon Cockley" sentOnly 1 contact, "Cockley" myConversations 0,
+"Handsome Frank" 1, the same contact. search_campaign_leads, v0.1 only, status done. Thread
+re-pulled, connect note only. The 2026-09-21 audit also lists `ctc_nHPaYSqrv7u32oPTY` under
+"Connect note only, nothing real ever sent". Grep of state and logs for name, company, both ids
+and the hfjon slug finds only backlog lists and the old verdict, no send. Control, Wessel found.
+
+**This overrides an earlier verdict, and Raka should know.** The queue and `CLAUDE.md` both hold
+Handsome Frank up as a strong site with no honest angle (NO_STRONG_ANGLE, website only method).
+This draft overrides it with the costliest pain method. The site is still strong. The angle is
+the new incomes being cut off from it, not the site being weak.
+
+**Weakest points.** That agencies "never see" the prints is inference. Pay test is the soft
+spot, a menu link alone is a tiny fix, so the offer has to be the prints and office art
+section wired into all 50 artist pages, not the link. The AOI's newer 32%
 figure couldn't be opened at source, so the message uses the Society of Authors 2024 figure.
 
 ### Jon, OPENER

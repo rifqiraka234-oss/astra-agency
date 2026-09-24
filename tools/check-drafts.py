@@ -244,6 +244,10 @@ def check(path, replies=False):
         # Total ban on the colon character. Raka's rule outranks NO-AI-SLOP.
         if ":" in prose:
             bad(i, "contains a colon")
+        # Raka, 2026-09-23, docs/astra-company-profile.md. Never name the country in client
+        # facing copy. Caught by hand on the Pierre-Lou reply, 2026-09-24, so now a gate.
+        for place in re.findall(r"\b(Indonesia\w*|Jakarta|Bali|Southeast Asia\w*)\b", prose, re.I):
+            bad(i, f"names '{place}', no country or city of the team in client copy")
         # Dashes, with the proper-noun exemption (Mercedes-Benz, Witt-Dörring).
         for d in re.findall(r"[—–]", prose):
             bad(i, "contains an em or en dash")
