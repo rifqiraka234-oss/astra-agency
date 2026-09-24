@@ -350,7 +350,8 @@ Five blocked leads were retried. Every block turned out to rest on something oth
   the `id`, it returns the full record including every `experience` line.
 - **A 503 can be the page itself.** The WordPress Under Construction Page plugin serves 503 on
   purpose. Aksonz was "503 on every fetch" for weeks and the page behind it is a placeholder.
-- **When our proxy can't read a site, use a reader on another network.** `r.jina.ai/<url>` returns
+- **When our proxy can't read a site, use a reader on another network.** (As of 2026-09-24
+  r.jina.ai refuses our IP, see batch 6 below, so use `tools/render-via-curl.js` first.) `r.jina.ai/<url>` returns
   the text, and with the header `X-Return-Format: screenshot` a screenshot URL. Control it with a
   known site through the same reader. It is a separate path from curl, Chromium and WebFetch.
 - **Counters in raw HTML start at zero.** "0 Prizes Won, £0 Money Raised" was a count up
@@ -409,6 +410,34 @@ Astra builds apps and tools as well as websites, so look for these too, every le
    it. Lead with the biggest one that's proven. For Ferry that was customs, every parcel to the US
    charged duties since Aug 2025 and new EU rules since Jul 2026, landing on a one man business,
    not his website. Also check his own franchisor or supplier isn't already solving it.
+
+### Batch 6 (2026-09-24), what the business side run taught
+
+- **Take the domain from the record every single time, even for a quick screenshot.** I shot
+  `sbz.nl` from memory for SBZ B.V. and it's a pension fund. The record says `sbzbv.nl`. Read
+  `companyDomain`, then pull the nav from that site's own HTML before opening any inner page.
+- **Webflow's "No items found." is usually invisible.** It sits in `w-dyn-hide w-dyn-empty`,
+  the hidden empty state of a CMS list. Check the class before calling a section empty.
+- **Webflow scroll reveals render blank in our screenshots.** Parts of a full page render came
+  back white. That's the reveal animation never firing, never an empty page. Read the HTML text.
+- **A language claim needs a control that renders hreflang server side.** Wix adds it by script,
+  so alquimialegal.mx returned nothing and failed as a control. A direct competitor that serves
+  it, hera-online.de, worked, and doubles as the comparison.
+- **Search a PDF, don't assume it.** An English catalogue existed, which nearly killed "German
+  only". Opened with PyMuPDF, dated 1 May 2023, and it has none of the 2026/27 products. Strip
+  spaces before searching, catalogue titles are letter spaced, and control with a word from its
+  own contents page. pypdf is broken in this container, PyMuPDF works.
+- **Where the industry is shrinking, look for where the lead is going instead.** German furniture
+  makers are down, domestic worst. Lasse's fair in Italy, his English catalogue and his languages
+  all point abroad, so the angle is the site failing the buyers he's chasing, not the downturn.
+- **`curl --compressed`**, always. Without it some sites return gzip bytes that look like a broken
+  page (Collier Pickard).
+- **r.jina.ai now refuses our IP**, 401 with "bad IP reputation". Don't plan on it as the second
+  path. `tools/render-via-curl.js` is the second path now.
+- **A job ad is still a clue in the flaw sentence.** check-drafts flagged "vacancies" in block
+  two. Describe what the site does to the people he's hiring, as with PharmaSupport.
+- **An incumbent agency on the site is the "someone already solves it" rule.** A privacy or
+  credit link to an active agency (avermann.eu on Schumacher) means they have a builder already.
 
 ### The pre send sequence that worked, keep it exactly
 
