@@ -77,6 +77,8 @@ print("""  It outranks every other doc except a live instruction from Raka.
     THE BIGGEST PAIN WINS. Four levels, him, his company, his region, his industry.
       Past the website too, costs, rules, capacity, and we build apps as well as sites.
       Every pain in one table, pick the biggest PROVEN one. RULES.md section 4A.
+      AND THE COSTLIEST. Add what it costs him a year and the pay test, would he pay
+      5k to 50k to fix it. A tiny fix is never the angle, only a symptom of a costly pain.
 
     REPORT IN PLAIN WORDS. Each lead starts with the angle in one or two everyday
       sentences. No jargon to Raka. If he can't follow it, neither will the lead.

@@ -363,6 +363,22 @@ right now, and we lead with it.**
    pitching a customs tool to an InXpress franchisee, check what WebShipX already does.
 8. **For a franchisee, the brand's site is his website.** It's what his customers see. Roast it
    like his own, every page. The offer is the thing he can own, like his local page or a tool.
+9. **Biggest AND costliest, because that's what he'll pay to fix (Raka, 2026-09-24).** His words,
+   "We always wanna angle out with the biggest and costliest pain points because that means
+   they'd pay for us. If it's just a tiny fix then they're not gonna buy it." Same rule for website
+   work and for apps and tools. The pain table gets two more columns, every lead.
+   - **What it costs him in a year, in his terms.** Orders lost, a crew short, hours burnt, a
+     market shrinking under him. Use his size from the register (staff, balance sheet) and the
+     industry's own numbers. Internal estimates are labelled as estimates and never go in the
+     message as a figure.
+   - **The pay test.** Would he pay €5k to €50k to make it go away? A true flaw that's a tiny fix
+     (a missing menu link, an old PDF, a cookie banner) fails even when it sits on his goal. A
+     tiny flaw is only usable as the visible symptom of a costly pain, never as the pain itself.
+   - **The impact sentence names the cost, not the inconvenience.** "Makers abroad can't read it"
+     is an inconvenience. "The orders German makers are cutting stay lost" is a cost.
+   - **If the only proven pain is small, the verdict is NO_STRONG_ANGLE**, however true it is.
+   - **Report the table to Raka with the cost column filled**, and say which pain is costliest
+     and whether it's proven, before any draft.
 
 **Guardrails he added along the way.**
 - **Don't overstate.** InXpress rebuilt its site and the old location links landed on a general

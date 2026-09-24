@@ -410,6 +410,13 @@ Astra builds apps and tools as well as websites, so look for these too, every le
    it. Lead with the biggest one that's proven. For Ferry that was customs, every parcel to the US
    charged duties since Aug 2025 and new EU rules since Jul 2026, landing on a one man business,
    not his website. Also check his own franchisor or supplier isn't already solving it.
+8. **Then the cost, and whether he'd pay (Raka, 2026-09-24).** "If it's just a tiny fix then
+   they're not gonna buy it." For each pain, what it costs him a year and whether he'd pay €5k to
+   €50k to fix it. Batch 6 is the worked example. The first drafts led with an old English PDF and
+   a hidden jobs link, both true, both tiny. Re judged on cost, Lasse's pain is his home market
+   shrinking under him (German furniture makers down, 40% on short time), and the German only site
+   is just the symptom. SBZ's is crews, a busy order book across four countries in the tightest
+   market for fitters there is. RULES.md 4A rule 9.
 
 ### Batch 6 (2026-09-24), what the business side run taught
 
