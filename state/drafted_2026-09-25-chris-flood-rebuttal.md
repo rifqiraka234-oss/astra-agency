@@ -1,4 +1,8 @@
-# Chris Flood, CustomKit. The decline, and the rebuttal. 2026-09-25. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Chris Flood, CustomKit. The decline, and the rebuttal. 2026-09-25. SENT.
+
+Sent 2026-09-25 at 06 06 12Z, activity `act_nJuKgbQaPzA23zBfM`. Thread went from 6 to 7
+activities, exactly one copy.
 
 Thread pulled in full just now, `ctc_27mqQ2pvCXMP3kgJs`, 5 activities, `nextPage` null.
 His decline came in at 07 46 local and is not in lemlist's activity list yet, so the text
@@ -6,12 +10,14 @@ below is transcribed from Raka's screenshot rather than from the API.
 
 His words. "Hi Raka, I did open it and I appreciate you sending it but our strategy is
 heading in a different direction. I like what you put together but it's more like Swaz or
-[one word hidden behind the camera cutout, ends in zed] than what we are looking to
+Spized than what we are looking to
 achieve moving forward. Appreciate your efforts to put this together but it not of
 interest I'm afraid. Thanks"
 
-**One word in that sentence is unreadable in the screenshot**, the second brand he compares
-us to. I am not guessing at it and the draft does not lean on it.
+**The word hidden by the camera cutout in the screenshot was Spized**, resolved from the
+lemlist activity once it landed, `act_aNviNcnwmyMdbQ2kv`. Swaz and Spized are both custom
+teamwear brands, so his design objection is that our build reads like a rival kit shop.
+That is real feedback and worth keeping if he answers.
 
 What is solid. He opened both links. He liked the work itself. The objection is direction,
 not craft. And he has never told us the direction, on 23 Sep he said only that the site
