@@ -331,7 +331,7 @@ labelled that way.
 
 | When | What | Status |
 |---|---|---|
-| Oct 2025 | £1.2M pre seed led by Empirical Ventures, CCEP Ventures strategic, plus First Imagine!, Conduit EIS Impact Fund, Almanac Ventures, Deep Science Ventures. Press calls it CCEP "to trial" the unit | Verified, press and Companies House |
+| Oct 2025 | £1.2M pre seed led by Empirical Ventures, CCEP Ventures strategic, plus First Imagine!, Conduit EIS Impact Fund and Almanac Ventures. Deep Science Ventures, which had a director on the board until 15 October 2025, and the Net Zero Technology Centre also sit in the site's logo row. Press calls it CCEP "to trial" the unit | Verified, press and Companies House |
 | 26 Nov 2025 | Georgia on the Dangerous Women Podcast | Verified episode notes |
 | 13 Jan 2026 | Georgia interviewed by ATMOsphere / NaturalRefrigerants.com on the hydrocarbon heat pump | Listing verified, article walled |
 | 21 to 22 Jan 2026 | Georgia and Ben Vellacott present at the High Temperature Heat Pump Symposium, Copenhagen | Company claim, event verified |
