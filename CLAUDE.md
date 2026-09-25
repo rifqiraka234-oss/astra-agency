@@ -28,6 +28,10 @@
 > judged and the costliest chosen, and a final recheck with a confidence. check-drafts.py fails
 > any OPENER without a complete ```gate block above it.
 >
+> **ONE THREAD, every message (Raka, 2026-09-25), `docs/RULES.md` section 1A.** Block two's problem,
+> block three's cost and block five's offer are the same problem. The gate carries `thread` and
+> `lead read`, check-drafts.py fails a draft whose offer never touches what block two named.
+>
 > **The two tools that enforce rather than remind.** `node tools/site-audit.js <url>
 > <tag>` runs a positive control on itself and voids its own absence findings when the
 > detector fails. `python3 tools/check-drafts.py <file>` exits non zero, so it cannot be

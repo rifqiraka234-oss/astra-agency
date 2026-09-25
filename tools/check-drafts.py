@@ -137,7 +137,11 @@ GATE_KEYS = ["lead", "site pass 1", "site pass 2", "deep analysis", "owner linke
              "pains", "chosen", "claims", "recheck",
              # THE ANGLE SWEEP. Raka, 2026-09-25, "did we test on all of them? This is
              # mandatory". Every lead is tested on all four families, not only the website.
-             "sweep website", "sweep gdpr", "sweep apps", "sweep social", "sweep squad"]
+             "sweep website", "sweep gdpr", "sweep apps", "sweep social", "sweep squad",
+             # THE ONE THREAD GATE. Raka, 2026-09-25, on Dan Kavanagh, "how does the website,
+             # then suddenly go to the build squad?" Block two named a site flaw, block five
+             # offered developers. Problem, cost and offer have to be one thing.
+             "thread", "lead read"]
 SWEEP_FAMILIES = ["website", "gdpr", "apps", "social", "squad"]
 SWEEP_KEYS = ["lead"] + SWEEP_FAMILIES + ["verdict"]
 VERDICTS = ["OPENER", "NO_STRONG_ANGLE", "BLOCKED_NEEDS_INFO", "DO_NOT_CONTACT", "ALREADY_MESSAGED"]
@@ -236,6 +240,51 @@ def gate_problems(g):
     return probs
 
 
+def thread_problems(g, msg):
+    """The one thread gate. The gate carries
+        thread: problem <what block two names> | cost <how block three grows it> |
+                offer <what block five delivers> | link <word>, <word>
+        lead read: the message read as the lead, block two then block five, in one sentence
+    Every link word has to appear in block two AND in the offer, the proof sentence of block
+    four or block five, matched on its first five letters. If the offer never touches the
+    thing block two names, no honest link word exists and the draft fails."""
+    if g is None:
+        return []
+    kv, cur = {}, None
+    for ln in g.split("\n"):
+        m = re.match(r"^([a-z][a-z0-9 ]+):\s*(.*)$", ln.strip(), re.I)
+        if m and m.group(1).lower() in GATE_KEYS:
+            cur = m.group(1).lower()
+            kv[cur] = m.group(2).strip()
+        elif cur:
+            kv[cur] = (kv[cur] + " " + ln.strip()).strip()
+    t = kv.get("thread", "")
+    probs = []
+    parts = {}
+    for seg in t.split("|"):
+        seg = seg.strip()
+        m = re.match(r"^(problem|cost|offer|link)\s+(.*)$", seg, re.I)
+        if m:
+            parts[m.group(1).lower()] = m.group(2).strip()
+    for k in ("problem", "cost", "offer", "link"):
+        if len(parts.get(k, "").split()) < (1 if k == "link" else 3):
+            probs.append(f"THREAD, '{k}' missing or thin. thread: problem ... | cost ... | offer ... | link word")
+    if len(kv.get("lead read", "").split()) < 15:
+        probs.append("THREAD, 'lead read' missing, read it as the lead in one sentence of 15+ words")
+    B = [b.strip() for b in msg.split("\n\n")]
+    if len(B) >= 5 and parts.get("link"):
+        block2 = B[1].lower()
+        proof = B[3].split("Pertamina.")[-1].lower() + " " + B[4].lower()
+        for w in [x.strip().lower() for x in parts["link"].split(",") if x.strip()]:
+            stem = w[:5]
+            if stem not in block2:
+                probs.append(f"THREAD, link word '{w}' is not in block two")
+            if stem not in proof:
+                probs.append(f"THREAD, link word '{w}' is not in the offer, block four's proof or block five. "
+                             "The offer has to fix the thing block two names")
+    return probs
+
+
 def check(path, replies=False):
     """replies=True relaxes the shape rules only. A reply to a two word thanks is not a
     four block opener and must not be forced into one, per the reply in context rule.
@@ -285,6 +334,8 @@ def check(path, replies=False):
         if not relaxed:
             for gp in gate_problems(gates[i]):
                 bad(i, f"RESEARCH GATE, {gp}")
+            for tp in thread_problems(gates[i], m):
+                bad(i, tp)
         if relaxed:
             pass
         elif (m.split("\n\n")[1:2] or [""])[0].strip().startswith("I couldn't find your website"):
@@ -431,7 +482,9 @@ def check(path, replies=False):
              "we build", "for brands like unilever, axa, pertamina.", "shall i build the",
              "and send it over?", "i couldn't find your website, and that",
              # The five block wording, 2026-09-24. Missed until batch 10 had three openers.
-             "especially, when you are", "shall i send you over what the", "looks like?")
+             "especially, when you are", "shall i send you over what the", "looks like?",
+             # Raka's Build Squad offer, his words, 2026-09-25. Kept verbatim, never reworded.
+             "in half the time at half the price")
     c = Counter()
     for m in msgs:
         low = m.lower()

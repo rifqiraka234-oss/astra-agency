@@ -192,6 +192,56 @@ Quoting outside the public 5,000 to 50,000 euro band.
 
 ---
 
+## 1A. ONE THREAD. The whole message is one problem, start to finish (Raka, 2026-09-25)
+
+His words, "i dont understand the angle, how does the website, then suddenly go to the build
+squad?" and then "can WE MAKE SURE WE DONT WANT TO MAKE THIS MISTAKE EVER AGAIN? like recheck if
+the whole message makes sense you know in terms of angle".
+
+**What went wrong.** Dan Kavanagh's draft named a website flaw in block two (placeholder phone and
+email in his phone menu) and offered a build squad in block five. The bridge between them, "no
+time to finish his own site means he's short of developers", existed only in my head. Every
+sentence was true and the message still made no sense, because the offer didn't fix the thing it
+had just pointed at.
+
+**The rule.** Block two names ONE problem. Block three says how THAT problem grows with their
+goal. Blocks four and five offer the thing that fixes THAT problem. Nothing else goes in.
+- Offering a website or a section, block two names a site fact.
+- Offering Build Squad, block two names a capacity fact, one builder, open engineering seats, a
+  new software company, a build time on their FAQ.
+- Offering an app or tool, block two names the process fact.
+- A true flaw from a different family is left out, however good it is. It goes in the sweep.
+
+**It's a gate, `check-drafts.py` enforces it.** Every OPENER's research gate carries
+```
+thread: problem <what block two names> | cost <how block three grows it> | offer <what block five delivers> | link <word>, <word>
+lead read: <the message read as the lead, block two then block five, one sentence>
+```
+Each link word has to appear in block two AND in the offer (block four's proof sentence or block
+five). If the offer never touches what block two names, no honest link word exists and the draft
+fails. Tested both ways on 2026-09-25, the old Dan draft fails on "placeholder", the rewrite passes
+on "Labs, build".
+
+**And the read, which no script can do.** Before showing Raka any draft, read block two, skip to
+block five, and ask out loud "does this offer fix the thing it just named?". Then read the whole
+message as the lead, knowing nothing we know. If a step needs our research to make sense, it's
+missing from the message.
+
+## 1B. The mistakes of 2026-09-25, each with the gate it got
+
+| Mistake | Cost | Gate now |
+|---|---|---|
+| Dan's draft pointed at the website and offered a build squad | Raka couldn't follow the angle, a lead wouldn't either | Section 1A, `thread` and `lead read` in the gate, checker fails a link word missing from the offer |
+| I reworded Raka's offer, "half the price" became "half what hiring would cost" and "twice the speed" | A claim about us that he never made | Raka's own words stay verbatim, "in half the time at half the price". The checker's fixed list lets it repeat across a batch, so there's no reason to reword it |
+| GDPR claims written off a US egress | Burton Clinic and Aurevia were very likely told something false on 2026-09-21 | site-audit.js prints the egress and GEO VOID, RULES 4A rule 13 |
+| Pierre-Lou's reply named Jakarta and Bali | Broke the company profile's no-country rule | checker fails the names |
+| The checker's fixed list still had yesterday's CTA | Every batch with two openers would fail on the template itself, and the fix I reached for was rewording Raka's claim | fixed list carries the five block wording |
+| I typed a guessed contactId for a positive control | A control that proves nothing | controls come from a file or an earlier pull, never typed |
+| "I run Astra agency ... I run a squad" in Luis's draft | Read like a template | caught on the read aloud, the proof sentence starts with a different verb |
+| The queue said "no angle" for ten people who'd already had a real pitch | Almost reopened them as cold leads | every thread pulled before reopening, RULES section 1 check A |
+| An old note called OLLY'S Real Olive's own product | A competitor's launch read as theirs | reopened at source, retailtimes and ollys-snacks.com |
+| `pgrep -f` wait loops that matched themselves | Time lost, three background tasks killed | check the output files instead |
+
 ## 2. The message. One number per rule.
 
 **Opener length is 95 to 170 words since 2026-09-24**, when Raka added block three and shortened block five. Before that it was 90 to 145, and the rest of this paragraph is that history. **Opener length was 90 to 145 words.** This supersedes the 65 word ceiling in

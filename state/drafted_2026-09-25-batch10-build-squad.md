@@ -65,6 +65,8 @@ more than 100 clients, https://www.ignitionsearch.co.uk/our-work
 moving into AI and software, https://find-and-update.company-information.service.gov.uk/company/17453559
 the AI seminar, https://www.linkedin.com/company/ignition-search-ltd
 senior developers, docs/astra-company-profile.md from the deck, https://www.ignitionsearch.co.uk/ for their side
+thread: problem Ignition Search Labs set up for software while the site sells SEO, ads and UX | cost the months spent hiring a build team, Labs earns nothing | offer senior developers who build for Labs | link Labs, build
+lead read: Dan reads that his new Labs company needs people who build it, that hiring costs months, and then gets offered developers who build for Labs, one thread
 recheck: every fact reopened 2026-09-25, placeholders three ways (raw HTML, live phone render with the menu open, curl render), register pages read today. Half the time at half the price is Raka's claim. Thesis confidence MEDIUM
 ```
 
@@ -77,7 +79,7 @@ However, your site is selling SEO, ads and UX, while Ignition Search Labs has ju
 
 Especially, when you are taking Ignition into AI and software, the months spent hiring a build team are months Labs isn't selling anything.
 
-I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I lead a team of senior developers who'd build for Labs in half the time and for half what hiring would cost, so your people stay on clients.
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I lead a team of senior developers who'd build for Labs in half the time at half the price, so your people stay on clients.
 
 Shall I send you over what the build squad looks like?
 ```
@@ -126,6 +128,8 @@ Ingo is the only web developer on the team page, https://www.significa.de/de/age
 the new management team since January, https://www.linkedin.com/company/significa-gmbh
 SEO and GEO work, https://www.significa.de/de/leistungen/
 senior developers, docs/astra-company-profile.md from the deck, https://www.significa.de/ for their side
+thread: problem one web developer on the team for all web design and programming | cost the queue behind him grows with each client | offer a squad of senior web developers who deliver the sites | link web, developer
+lead read: Luis reads that Ingo is the only web developer, that the website queue grows with each client, and then gets offered more web developers to deliver the sites, one thread
 recheck: all reopened 2026-09-25 from both crawls and the Impressum. The team page is what their site shows, freelancers they may use aren't visible. Half the time at half the price is Raka's claim. Thesis confidence MEDIUM
 ```
 
@@ -138,7 +142,7 @@ However, your site is offering web design and programming next to branding, prin
 
 Especially, when you are growing the agency with the new management team since January, and SEO and GEO work that ends in site changes, the queue grows with each client you win.
 
-I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I head a squad of senior web developers who can deliver your sites twice as fast for half the price, so your team's free to focus on new clients.
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I head a squad of senior web developers who can deliver your sites in half the time at half the price, so your team's free to focus on new clients.
 
 Shall I send you over what the web squad looks like?
 ```
@@ -187,6 +191,8 @@ the Phocuswright Europe pitch win, https://www.linkedin.com/company/lobbyai
 hotels, restaurants and events, https://www.lobbyai.io/
 fresh funding, https://joinlobby.com/about
 senior developers, docs/astra-company-profile.md from the deck, https://joinlobby.com/about for their side
+thread: problem two founding engineer seats open | cost the roadmap waits while the seats stay empty | offer senior engineers who ship next to her team while she hires | link engineer
+lead read: Romy reads that her two engineer seats are still open, that the empty months cost growth, and then gets offered engineers who ship while she hires, one thread
 recheck: careers roles confirmed two ways, the pitch win and funding from their own page and post. Half the time at half the price is Raka's claim, and a funded startup may prefer hires with equity, flagged. Thesis confidence MEDIUM
 ```
 
@@ -199,7 +205,7 @@ However, your site is still hiring a Founding Senior Engineer and a Founding AI 
 
 Especially, when you are fresh off winning the Europe category at Phocuswright and signing hotels, restaurants and events on new funding, the months those seats stay empty are growth you've already raised for.
 
-I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I lead a squad of senior engineers who'd ship next to your team at half the cost and twice the speed of hiring, so you can keep selling to hotels.
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I lead a squad of senior engineers who'd ship next to your team in half the time at half the price while you hire, so you can keep selling to hotels.
 
 Shall I send you over what the engineering squad looks like?
 ```
