@@ -1,3 +1,4 @@
+<!-- GATE ARCHIVED -->
 # Batch 8. SENT 2026-09-25 on Raka's "send all". Jon act_jGrNXs2fEjBzo8pJE 05:37:24Z, Pierre-Lou act_N4T7YzyXSNvR3xph7 05:37:31Z. Redrafted 2026-09-25 on Raka's "redo it", threads re-pulled that morning, both unchanged, control Wessel full.
 
 **The honest headline. The accepted pool is used up.** Raka asked for ten. All 336 acceptances

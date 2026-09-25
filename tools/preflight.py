@@ -96,6 +96,11 @@ print("""  It outranks every other doc except a live instruction from Raka.
       thesis rechecked, confidence HIGH or MEDIUM, LOW never shown. A ```gate block above
       every OPENER.
 
+    THE ANGLE SWEEP, FOUR FAMILIES, EVERY LEAD. RULES.md 4A rule 13, Raka 2026-09-25.
+      Website holding back growth. GDPR. Apps and internal tools. Social media. Each tested
+      with evidence before any verdict. A strong site is one family, not NO_STRONG_ANGLE.
+      check-drafts fails a ```sweep or gate without all four.
+
     BEFORE ANY SEND, TWO MORE, RULES.md section 1, A and B.
       A. Never messaged before, four ways. The thread, a name and company search for a
          duplicate contact, every campaign they're in, and a grep of every state file.

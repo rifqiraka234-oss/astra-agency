@@ -464,6 +464,27 @@ right now, and we lead with it.**
    Only when all six are written down as tried may Raka be asked, and then as "these six failed,
    can you open X", never as a substitute for doing it.
 
+13. **The angle sweep. All four families, every lead, before any verdict (Raka, 2026-09-25).**
+   His words, "We have website is shit angle for growth, we have gdpr angle, we have the building
+   apps for efficiency and growth angle, we also have social media, did we test on all of them?
+   This is mandatory." 38 leads sat at NO_STRONG_ANGLE, most judged on the website alone. A
+   strong site is one family out of four, not a verdict.
+   - **Website holding back growth.** Dated look, a buyer who can't do what they came for, the
+     goal's page missing or weak, a shop or booking path buried. Rendered and looked at.
+   - **GDPR and privacy.** Trackers firing before consent (site-audit.js lists them), no or
+     broken privacy policy, forms without consent, a missing Impressum in DE and AT. EU and UK
+     leads. It's a fine, a legal risk and a trust problem, so it passes the pay test when real.
+   - **Apps and internal tools for efficiency and growth.** Quoting, booking, planning, portals,
+     manual paperwork, one person as the bottleneck, hiring for admin. Rule 11.
+   - **Social media.** Every account taken from their own HTML, opened, last post dated, the
+     platform their buyers use, a dead or missing channel where the goal needs one.
+   - **Each family gets a line with its evidence and a verdict**, in a ```sweep block for a lead
+     with no opener, and as `sweep website/gdpr/apps/social` in the gate for one with.
+     `check-drafts.py` fails a file dated 2026-09-25 or later without it, or with a family line
+     under 12 words or with no source. Absence claims still need their positive control.
+   - **Then the pain table picks the costliest across all four.** NO_STRONG_ANGLE is only
+     allowed when all four were tested and none passes the pay test.
+
 **Guardrails he added along the way.**
 - **Don't overstate.** InXpress rebuilt its site and the old location links landed on a general
   page. "Your page is gone" overstated it and Raka caught it. Describe what a customer sees now.

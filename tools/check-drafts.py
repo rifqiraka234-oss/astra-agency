@@ -117,7 +117,61 @@ def blocks_of(path):
 # THE RESEARCH GATE. Raka, 2026-09-24, every item "mandatory". RULES.md section 4B.
 GATE_KEYS = ["lead", "site pass 1", "site pass 2", "deep analysis", "owner linkedin",
              "contact linkedin", "google news", "regional news", "industry news", "sources",
-             "pains", "chosen", "claims", "recheck"]
+             "pains", "chosen", "claims", "recheck",
+             # THE ANGLE SWEEP. Raka, 2026-09-25, "did we test on all of them? This is
+             # mandatory". Every lead is tested on all four families, not only the website.
+             "sweep website", "sweep gdpr", "sweep apps", "sweep social"]
+SWEEP_FAMILIES = ["website", "gdpr", "apps", "social"]
+SWEEP_KEYS = ["lead"] + SWEEP_FAMILIES + ["verdict"]
+VERDICTS = ["OPENER", "NO_STRONG_ANGLE", "BLOCKED_NEEDS_INFO", "DO_NOT_CONTACT", "ALREADY_MESSAGED"]
+
+
+def family_thin(text):
+    """A family line that says nothing. Twelve words and a source, a URL, a register or a
+    control, or it was not tested, it was waved at."""
+    return len(text.split()) < 12 or not re.search(
+        r"https?://|control|register|screenshot|crawl|HTML|news\.py|thread", text, re.I)
+
+
+def sweep_problems(body):
+    """One ```sweep block, the four family verdict for a lead that gets no opener."""
+    probs, kv, cur = [], {}, None
+    for ln in body.split("\n"):
+        m = re.match(r"^([a-z][a-z ]+):\s*(.*)$", ln.strip(), re.I)
+        if m and m.group(1).lower() in SWEEP_KEYS:
+            cur = m.group(1).lower()
+            kv[cur] = m.group(2).strip()
+        elif cur:
+            kv[cur] = (kv[cur] + " " + ln.strip()).strip()
+    name = kv.get("lead", "?")[:40]
+    for k in SWEEP_KEYS:
+        if not kv.get(k):
+            probs.append(f"sweep '{name}', field '{k}' missing")
+    for f in SWEEP_FAMILIES:
+        if kv.get(f) and family_thin(kv[f]):
+            probs.append(f"sweep '{name}', {f} is too thin, 12+ words and its evidence")
+    if kv.get("verdict") and not any(kv["verdict"].startswith(v) for v in VERDICTS):
+        probs.append(f"sweep '{name}', verdict must start with one of {VERDICTS}")
+    return probs
+
+
+def sweep_file_problems(src, path):
+    """From 2026-09-25 on, every lead section headed NO_STRONG_ANGLE or BLOCKED carries a
+    ```sweep block before the next section. Older files predate the rule."""
+    m = re.search(r"(\d{4}-\d{2}-\d{2})", path.rsplit("/", 1)[-1])
+    probs = []
+    for info, body, _ in fences(src):
+        if info == "sweep":
+            probs += sweep_problems(body)
+    if not m or m.group(1) < "2026-09-25":
+        return probs
+    secs = re.split(r"\n(?=## )", src)
+    for sec in secs:
+        head = sec.split("\n", 1)[0]
+        if head.startswith("## ") and re.search(r"NO_STRONG_ANGLE|BLOCKED", head) \
+                and "```sweep" not in sec:
+            probs.append(f"'{head[3:60]}' has no ```sweep block, all four families tested")
+    return probs
 
 
 def gate_problems(g):
@@ -169,6 +223,14 @@ def check(path, replies=False):
     four block opener and must not be forced into one, per the reply in context rule.
     Every truth and voice rule still applies, and so does the batch repetition check."""
     pairs = blocks_of(path)
+    _src = open(path, encoding="utf-8").read() if __import__("os").path.exists(path) else ""
+    if "GATE ARCHIVED" not in _src:
+        sp = sweep_file_problems(_src, path)
+        if sp:
+            print(f"{path}\nFAIL  {len(sp)} angle sweep problem(s)")
+            for x in sp:
+                print("  " + x)
+            return 1
     if not pairs:
         src = open(path, encoding="utf-8").read() if __import__("os").path.exists(path) else ""
         if "GATE ARCHIVED" in src:
