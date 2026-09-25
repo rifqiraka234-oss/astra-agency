@@ -429,7 +429,9 @@ def check(path, replies=False):
     # before comparing. Only what was filled into the brackets can trip pass 4.
     FIXED = ("looks interesting", "however, your", "this causes", "i run astra agency.",
              "we build", "for brands like unilever, axa, pertamina.", "shall i build the",
-             "and send it over?", "i couldn't find your website, and that")
+             "and send it over?", "i couldn't find your website, and that",
+             # The five block wording, 2026-09-24. Missed until batch 10 had three openers.
+             "especially, when you are", "shall i send you over what the", "looks like?")
     c = Counter()
     for m in msgs:
         low = m.lower()

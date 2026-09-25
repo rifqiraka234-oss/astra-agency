@@ -530,6 +530,33 @@ Astra builds apps and tools as well as websites, so look for these too, every le
 - **When the pool is used up, say so.** Ten were asked for, two were real. Weak drafts to fill a
   number is exactly the tiny fix rule broken.
 
+### Batches 9 and 10 (2026-09-25), the redo, the geo trap and Build Squad
+
+- **The queue lies about "no angle" too.** 10 of 44 NO_STRONG_ANGLE or BLOCKED rows already had a
+  real pitch in their thread from July or August. Pull every thread before reopening anything.
+- **An empty thread is checked a second way**, the lead's full activity history,
+  `GET /api/activities?version=v2&leadId=...`. Sent messages show as `linkedinSent`, the connect
+  note as `linkedinInviteDone`. Five leads checked that way on batch 10.
+- **The geo trap.** Our egress is Ohio. A consent tool shows a US visitor nothing, so trackers
+  before consent are only real when the page carries no consent code at all. site-audit.js says
+  GEO VOID. Burton Clinic and Aurevia were told the wrong thing on 2026-09-21.
+- **Build Squad evidence, where it lives.** The register (Ignition Search Labs Ltd, SIC 62012,
+  registered 11 days earlier, owned by the agency), the careers page (Lobby hiring two founding
+  engineers), the team page (significa, one Web-Entwickler among ten, the FAQ for build times at
+  Harold's). A competitor with in-house developers and no hiring (Collier Pickard, Hula Hoop) is
+  not a Build Squad lead. Capacity has to be shown, not assumed.
+- **Statutory pages settle stale titles.** Luis Raab's summary said Junior Account Manager, the
+  Impressum names him Geschäftsführer and a company post dates it to 1 January 2026.
+- **Vary the offer line per lead.** Three openers with the same Build Squad sentence fail the
+  batch repetition gate, and they'd read as a template to anyone who compares. The fixed list in
+  check-drafts.py now carries the five block wording, it still had the old CTA until batch 10.
+- **Look at the phone menu.** Ignition's placeholder phone and email only showed with the menu
+  open at phone width. Raw HTML, a live render with the menu open and the curl render all agreed.
+  `PHONE=1 node tools/render-via-curl.js` now renders at 390 and prints the page width, and a
+  control site measured 390 against 390.
+- **`pgrep -f` matches its own wait loop.** An `until [ -z "$(pgrep -f crawl.py)" ]` never ends,
+  because the loop's command line contains the pattern. Check the output files instead.
+
 ### The pre send sequence that worked, keep it exactly
 
 1. `get_inbox_conversation`, still empty.

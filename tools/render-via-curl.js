@@ -34,7 +34,7 @@ fs.mkdirSync(outDir, { recursive: true });
 (async () => {
   const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' }).catch(() => chromium.launch());
   // The proxy terminates TLS with its own CA. That is never evidence about their certificate.
-  const ctx = await b.newContext({ ignoreHTTPSErrors: true, viewport: { width: 1440, height: 1000 } });
+  const ctx = await b.newContext({ ignoreHTTPSErrors: true, viewport: process.env.PHONE ? { width: 390, height: 844 } : { width: 1440, height: 1000 } });
   let served = 0, errs = 0, n = 0;
   const bad = [];
   await ctx.route(u => sameSite.test(u.toString()), async route => {
@@ -54,6 +54,7 @@ fs.mkdirSync(outDir, { recursive: true });
   for (let y = 0; y < 20000; y += 700) { await p.evaluate(v => window.scrollTo(0, v), y); await p.waitForTimeout(350); }
   await p.waitForTimeout(3000);
   const imgs = await p.$$eval('img', a => a.map(i => i.naturalWidth));
+  const widths = await p.evaluate(() => [document.documentElement.scrollWidth, document.documentElement.clientWidth]);
   await p.evaluate(() => window.scrollTo(0, 0));
   const full = path.join(outDir, `${tag}-curlrender.png`);
   await p.screenshot({ path: full, fullPage: true });
@@ -62,6 +63,7 @@ fs.mkdirSync(outDir, { recursive: true });
 
   console.log(`== ${url}`);
   console.log(`served by curl ${served}   curl errors ${errs}   images ${imgs.length}   undecoded ${imgs.filter(w => w === 0).length}`);
+  console.log(`page width ${widths[0]} against viewport ${widths[1]}${widths[0] > widths[1] + 2 ? ', HORIZONTAL OVERFLOW' : ''}`);
   if (bad.length) console.log('non 200 from their own server, these ARE theirs\n  ' + bad.join('\n  '));
   try {
     const parts = execFileSync('python3', ['-c', `
