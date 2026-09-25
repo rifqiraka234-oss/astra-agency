@@ -72,3 +72,12 @@ I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pe
 
 Shall I send you over what the build squad looks like?
 ```
+
+## Recheck B, 2026-09-25 afternoon, every fact reopened live
+
+- Eight to twelve weeks, FAQ, "Reken op acht tot twaalf weken tussen het eerste gesprek en de livegang".
+- Roxanne designs and builds, over ons, "Wij zijn Harold, Lisette en Roxanne ... Roxanne ontwerpt en bouwt de websites".
+- Eleven kinds of horeca, 11 unique /branches/ links on the homepage and on /bekijk-alle-branches.
+- Coaching at Grenzeloos Gastvrij, grenzeloos-gastvrij.com crawled, 150 pages, the voorwaarden list "advies, begeleiding, coaching", and his lemlist summary says "intensieve coachingstrajecten".
+- Lisette co owns it, Impressum, Engelen Advies VOF, directie Harold and Lisette Engelen, KVK 91236037.
+- Not provable by us, our own offer. Half the time at half the price is Raka's claim. Senior developers is the deck's description of Amwisesa.

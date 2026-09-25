@@ -220,3 +220,10 @@ apps: the lemlist description lists home delivery, Mondial Relay and a butcher. 
 social: a LinkedIn company page exists per lemlist, no Facebook page for the store surfaced in search. His own tagline is @Tilkal traceability, a second job
 verdict: NO_STRONG_ANGLE
 ```
+
+## Recheck B for Marjan, 2026-09-25 afternoon, every fact reopened
+
+- Veilingen text repeats the buy and sell paragraph. /onze-diensten refetched, the two paragraphs compared in code, identical.
+- Lopende veilingen goes nowhere. Markup is a bare button with no href, no onclick, no data link. Clicked in Chromium, URL unchanged, no dialog, no scroll, the only request was the CleanTalk anti spam beacon. Controls Bekijk ons aanbod and Verkoop uw materiaal both navigate.
+- Industrial Auctions auctioned Esro's machines in Nuenen online. faillissementsdossier.nl veiling 142267 reopened, and the auctioneer's own page industrial-auctions.com auction 2289 read, "Online auction machinery and inventory due to bankruptcy Esro Vlees B.V. in Nuenen (NL)", end date 24 September 2026, every category closed with bids.
+- Betty Blocks is a platform companies use to build their own apps. bettyblocks.com title "The AI Application Generation Platform", "Generate apps with prompts and own the code". Raka's title there was Global GTM and Campaign Manager, so "ran go to market" is the softest words in the message, the same wording already sent to Wessel.
