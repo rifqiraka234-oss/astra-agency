@@ -545,3 +545,11 @@ get_user_channels
 get_inbox_conversations(listId=..., dateFilter=..., limit=50)
 get_inbox_conversation(contactId=...)
 ```
+
+## Per lead activity history misses inbox sends (2026-09-25)
+
+`GET /api/activities?version=v2&leadId=...` for Chris Burton (lea_BW4i5WDfgGc5nM5PL) and
+Stephanie De Decker (lea_fjLaPtXKKyu6Az7pc) returns the connect note, the acceptance and the
+profile visit, and NOT the 21 Sep opener that `get_inbox_conversation` shows in both threads
+(act_L7iWyYajF4yNgjMte, act_xW69t23ffP3o8w3CY, both `campaignId: null`). A message sent from
+the inbox is not attached to the lead. So this endpoint can confirm a send, it can't rule one out.

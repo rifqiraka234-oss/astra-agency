@@ -537,6 +537,12 @@ Astra builds apps and tools as well as websites, so look for these too, every le
 - **An empty thread is checked a second way**, the lead's full activity history,
   `GET /api/activities?version=v2&leadId=...`. Sent messages show as `linkedinSent`, the connect
   note as `linkedinInviteDone`. Five leads checked that way on batch 10.
+  **But it misses our own manual sends (proven 2026-09-25).** Chris Burton's and Stephanie De
+  Decker's threads both hold the 21 Sep opener, `linkedinSent` with `campaignId: null`. Their
+  per lead activity history shows the connect note and nothing after it. A message sent from the
+  inbox isn't tied to the lead, so it never lands in `leadId` activities. That check can only
+  confirm, it can never clear. The thread is the record, and for an empty thread the second way
+  is a name search with `get_inbox_conversations` plus the state files, never activities alone.
 - **The geo trap.** Our egress is Ohio. A consent tool shows a US visitor nothing, so trackers
   before consent are only real when the page carries no consent code at all. site-audit.js says
   GEO VOID. Burton Clinic and Aurevia were told the wrong thing on 2026-09-21.
