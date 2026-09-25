@@ -20,6 +20,12 @@ Tag every draft with its shape in the heading above its fenced block, one of OPE
 REPLY, NUDGE, CLOSER, BOOKING, DELIVERY or CORRECTION. Untagged is treated as OPENER, and
 the five block, one exclamation, 95 to 170 word rules are the OPENER'S ALONE. The
 --replies flag relaxes the whole file the same way and is the blunt version of tagging.
+The tag has to sit within twelve lines above the fence and nothing starting with # or **
+may sit between the two, so the safest place is the line directly above it.
+
+Add LANG NL (or any two letter code) on that same tag line when the thread is in that
+language and stays in it. It turns off the English contraction tell and nothing else, so
+the dash, colon, banned word and truth rules all still run.
 
 Every rule below exists because a real batch broke it. The comment says which.
 """
@@ -83,7 +89,7 @@ def fences(src):
 
 
 def blocks_of(path):
-    """Return (message, shape, gate) per message block. The shape is read from the nearest
+    """Return (message, shape, gate, lang) per message block. The shape is read from the nearest
     heading or bold line above the block, because a reply forced into opener rules is
     how good drafts got mangled all through 2026-09-22. Untagged means OPENER and the
     caller is told how to tag it. The gate is the nearest ```gate block above the message
@@ -100,6 +106,17 @@ def blocks_of(path):
             continue
         head = src[:start].rstrip().split("\n")
         shape = None
+        # LANG NL on the tag line means the thread is Dutch and stays Dutch, so the
+        # English contraction tell does not apply. Everything else still does.
+        lang = "EN"
+        window = [l for l in head[-12:] if l.strip()]
+        for line in reversed(window):
+            m = re.search(r"\bLANG ([A-Z]{2})\b", line)
+            if m:
+                lang = m.group(1)
+                break
+            if line.lstrip().startswith("#"):
+                break
         for line in reversed(head[-12:]):
             if not line.strip():
                 continue
@@ -109,7 +126,7 @@ def blocks_of(path):
                 break
             if line.lstrip().startswith("#") or line.strip().startswith("**"):
                 break
-        out.append((body, shape, gate))
+        out.append((body, shape, gate, lang))
         gate = None
     return out
 
@@ -246,9 +263,10 @@ def check(path, replies=False):
         print("      <!-- NO DRAFTS --> marker at the top. If it is already sent, use")
         print("      <!-- GATE ARCHIVED -->. Do not leave it failing every sweep.")
         return 1
-    msgs = [m for m, _, _ in pairs]
-    shapes = [sh for _, sh, _ in pairs]
-    gates = [g for _, _, g in pairs]
+    msgs = [m for m, _, _, _ in pairs]
+    shapes = [sh for _, sh, _, _ in pairs]
+    gates = [g for _, _, g, _ in pairs]
+    langs = [lg for _, _, _, lg in pairs]
     untagged = [i + 1 for i, sh in enumerate(shapes) if sh is None]
     fails = []
 
@@ -316,8 +334,9 @@ def check(path, replies=False):
         for h in re.findall(r"\w+-\w+", prose):
             if not h[0].isupper():
                 bad(i, f"hyphen in prose, '{h}', rewrite around it")
-        # Zero contractions is the single clearest machine tell.
-        if len(re.findall(r"\w'(s|t|re|ve|ll|d|m)\b", m)) < 1:
+        # Zero contractions is the single clearest machine tell. English only, since the
+        # tell is an English one and a Dutch thread stays Dutch.
+        if langs[i] == "EN" and len(re.findall(r"\w'(s|t|re|ve|ll|d|m)\b", m)) < 1:
             bad(i, "no contractions at all")
         # Five blocks, per the opener template. Replies have their own shape.
         # Raka added block three on 2026-09-24, "Especially, when you are [current goal,

@@ -1,4 +1,11 @@
-# Template test, Raka's new setup, on tuftuf. 2026-09-22. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Template test, Raka's new setup, on tuftuf. 2026-09-22. SENT, superseded.
+
+The header said NOT SENT and that was wrong. Daan Erisman was sent a later, reworked
+version of this on 2026-09-22 at 19:15:48Z, recorded as SENT in
+`state/silent_accepted_queue.jsonl`. The draft below is the earlier test wording, kept
+as the record of how the template was worked out. Archived so it stops failing the
+sweep, since a stale failure is how a real one gets missed.
 
 Raka's template, tested on Daan Erisman. Everything below was re-verified this pass.
 
