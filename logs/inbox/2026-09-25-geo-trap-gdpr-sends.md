@@ -34,3 +34,12 @@ three has replied, per the queue. Nothing has been sent to them today.
 New angle for Burton and Aurevia, CORRECTION drafts in `state/drafted_2026-09-25-geo-recheck.md`.
 Both paid for Google Ads this year and their plugin means Google never counts a UK or Belgian
 visitor, per Google's own Site Kit documentation. Nothing sent.
+
+## The who's left sweep, same day
+
+All 337 v0.1 acceptances pulled from lemlist. 98 had no queue row and every one of those threads
+was pulled. 96 already carry a real message. Anna Oblakova (YTEC, accepted today) is a Product
+Owner, not an owner. Shilpi Arora spoke last. The inbox list since 10 Sep had isYourTurn on 9
+conversations. Owed replies are Norbert Pardo (our call on 23 Sep was cancelled, he offered to
+rebook), Shilpi and Yero, drafted in `state/drafted_2026-09-25-owed-replies.md`, not sent.
+The 24 Sep log filed Norbert as a two word thanks. It wasn't.
