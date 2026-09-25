@@ -1,4 +1,4 @@
-# Batch 8, for Raka to send 2026-09-25. NOT SENT.
+# Batch 8, for Raka to send 2026-09-25. NOT SENT. Redrafted 2026-09-25 on Raka's "redo it", threads re-pulled that morning, both unchanged, control Wessel full.
 
 **The honest headline. The accepted pool is used up.** Raka asked for ten. All 336 acceptances
 were pulled from lemlist (four activity pages, 100 + 100 + 100 + 36, matching
@@ -69,9 +69,9 @@ tense, per his LinkedIn (CEO and CMO, Aug 2020 to Dec 2024).
 ### Pierre-Lou, REPLY
 
 ```
-Hi Pierre-Lou, thanks for asking! Eten Maar was a wild ride, four years growing a stroopwafel brand from zero with five relatives. These days I'm building websites and apps at Astra.
+Hi Pierre-Lou, thanks for asking! The stroopwafel business was a wild ride, four years building Eten Maar from zero with five relatives. These days I'm building websites and apps at Astra.
 
-I had a look at what you've built in Saint-Lary, the park, the Sport 2000 shop and the Office des Sports, and it sounds like the winter was a good one. How's the summer season been for you?
+I had a look at what you've built in Saint-Lary, the adventure park, the Sport 2000 shop and the Office des Sports. Sounds like the winter was a strong one, how's the summer season been?
 ```
 
 ---
@@ -148,11 +148,11 @@ figure couldn't be opened at source, so the message uses the Society of Authors 
 ```
 Hi Jon, saw Handsome Frank, looks interesting!
 
-However, your site is missing Handsome Provisions from its menu, and only one article anywhere on it links to the shop. This causes the agencies and brands browsing your artists to never see the prints, or the office art you curated for Wonderhood and VCCP.
+However, your site is missing Handsome Provisions from its menu, and only one article on it links to the shop. This causes the agencies and brands browsing your artists for commissions to leave without seeing the prints, or the office art you've curated this year.
 
-Especially, when you are building prints and office art while AI has already cost a quarter of illustrators work, the agency visits that miss them are income you've already paid to attract.
+Especially, when you are building new income while AI has already cost a quarter of illustrators work, the agency visits that never see the prints are the buyers you most need.
 
-I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I built a food brand from zero with my family and owned its conversion, so I know what a shop nobody can find costs.
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I built a food brand from zero with my family and owned how it sold online, so I've seen sales follow wherever the shop shows up.
 
 Shall I send you over what the prints and office art section looks like?
 ```
