@@ -68,6 +68,8 @@ site sets no cookies" would be false. The message only talks about Analytics and
 page also carries a paragraph of template filler text ("Pityful a rethoric question..."), a tweak,
 not the angle.
 
+<!-- GATE ARCHIVED, SENT 2026-09-25T09:58:57Z as act_vJmMR6xsPCZPWhGuP on Raka's explicit word, verified verbatim, one copy. -->
+
 ### Chris, CORRECTION
 
 ```
@@ -105,6 +107,8 @@ cookie banner that isn't there.
   first shown 2026-05-04 and 2026-05-11, last shown 2026-08-22 and 2026-08-26.
 - Local pages https://aureviasyndic.be/syndicus-geel/ and https://aureviasyndic.be/syndicus-westerlo/ ,
   a quote form at https://aureviasyndic.be/offerte/ . KBO 1000.295.078, started 26 Sep 2023.
+
+<!-- GATE ARCHIVED, SENT 2026-09-25T09:59:01Z as act_jvS9GWGyvXvCiucQi on Raka's explicit word, verified verbatim, one copy. -->
 
 ### Stephanie, CORRECTION
 
@@ -204,6 +208,8 @@ thread: problem the cookie banner only switched on for Austria | cost every paid
 lead read: Simon reads that his cookie banner only runs in Austria, that every ad click from Germany lands on that and a competitor can now act on it, and then gets offered the banner set up for Germany, one thread
 recheck: banner setting read two ways, the store's own API and the Stockholm visit, and the control shop behaves the opposite way with the opposite setting. A German visitor was not loaded directly, Sweden is outside his banner list exactly like Germany, so it's inferred from his own setting, flagged. Pay test is the weak point, a banner and tracking setup is a small job, flagged to Raka. Thesis confidence MEDIUM
 ```
+
+<!-- GATE ARCHIVED, SENT 2026-09-25T09:59:03Z as act_2tNSSwYjkixcsf5qY on Raka's explicit word, verified verbatim, one copy. -->
 
 ### Simon, OPENER
 
