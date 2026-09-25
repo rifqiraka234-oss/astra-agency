@@ -52,14 +52,15 @@ sources:
 10. https://news.google.com/rss/search?q=%22Ignition+Search%22 (tools/news.py)
 11. https://www.significa.de/ (control for the phone width test, 390 against 390)
 pains: 4 judged. Software company just registered with no build team shown. Own site carrying template placeholders on phones. Page wider than the phone. AI pressure on SEO and ads work.
-chosen: moving into software without builders, the biggest, it's the new line of business, and the placeholders are the visible symptom
+chosen: moving into software without builders, the biggest, it's the new line of business. Raka 2026-09-25, the first draft led with the phone placeholders and jumped to the squad, two angles in one message. The placeholders are dropped from the message
 sweep website: the phone menu shows 555-555-5555 and mymail@mailservice.com and the social icons go to bare platform homepages, per the Chromium render with the menu open and the raw HTML at https://www.ignitionsearch.co.uk/. The symptom, not the pitch
 sweep gdpr: Cookiebot and Termly are in the HTML, so site-audit.js prints GEO VOID from our US egress, the 34 cookies it saw only describe a US visitor. Not used
 sweep apps: they sell marketing, the new Labs company per the register at https://find-and-update.company-information.service.gov.uk/company/17453559 is SIC 62012 software development. Covered by squad
 sweep social: company page https://www.linkedin.com/company/ignition-search-ltd posts weekly in September, the site footer icons link to bare homepages. Minor
 sweep squad: Ignition Search Labs Ltd incorporated 11 September 2026, SIC 62012, director Daniel Joseph Kavanagh, owned 75% or more by Ignition Search Limited, per Companies House. No developers or jobs shown on 35 pages. The angle
 claims:
-the phone menu shows a placeholder number and mymail@mailservice.com under Get in touch, https://www.ignitionsearch.co.uk/
+selling SEO, ads and UX, https://www.ignitionsearch.co.uk/services
+Ignition Search Labs set up for software development, https://find-and-update.company-information.service.gov.uk/company/17453559
 more than 100 clients, https://www.ignitionsearch.co.uk/our-work
 moving into AI and software, https://find-and-update.company-information.service.gov.uk/company/17453559
 the AI seminar, https://www.linkedin.com/company/ignition-search-ltd
@@ -72,11 +73,11 @@ recheck: every fact reopened 2026-09-25, placeholders three ways (raw HTML, live
 ```
 Hi Dan, saw Ignition Search, looks interesting!
 
-However, your site is showing phone visitors a template's placeholder number and mymail@mailservice.com under Get in touch in the menu. This causes a brand checking you out before a strategy call to find placeholders where your contact details should be.
+However, your site is selling SEO, ads and UX, while Ignition Search Labs has just been set up for software development. This causes the new side to need people who build before it can earn, next to the work for more than 100 clients.
 
-Especially, when you are taking Ignition into AI and software next to more than 100 clients, the hours your team spends on its own builds come straight out of client work.
+Especially, when you are taking Ignition into AI and software, the months spent hiring a build team are months Labs isn't selling anything.
 
-I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I lead a team of senior developers who'd take those builds off you in half the time and for half what hiring would cost, so your people stay on clients.
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I lead a team of senior developers who'd build for Labs in half the time and for half what hiring would cost, so your people stay on clients.
 
 Shall I send you over what the build squad looks like?
 ```

@@ -557,6 +557,15 @@ Astra builds apps and tools as well as websites, so look for these too, every le
 - **`pgrep -f` matches its own wait loop.** An `until [ -z "$(pgrep -f crawl.py)" ]` never ends,
   because the loop's command line contains the pattern. Check the output files instead.
 
+- **One thread, start to finish (Raka, 2026-09-25, on Dan Kavanagh).** His words, "i dont
+  understand the angle, how does the website, then suddenly go to the build squad?" Block two named
+  a website flaw (placeholder contact details) and block five offered a build squad. The link, "no
+  time to finish their own site means no developers", lived only in my head. The flaw in block two,
+  the growing cost in block three and the offer in block five must be the same problem. If the
+  offer is Build Squad, block two names the capacity fact. If the only visible flaw is on the site,
+  the offer is about the site. Read the draft as the lead would, block two then block five, and ask
+  whether the offer fixes the thing just named.
+
 ### The pre send sequence that worked, keep it exactly
 
 1. `get_inbox_conversation`, still empty.
