@@ -1,4 +1,7 @@
-# Wessel van Noort, SBZ B.V. His no, and two ways to answer it. 2026-09-25. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Wessel van Noort, SBZ B.V. His no, and two ways to answer it. 2026-09-25. A SENT.
+
+Raka picked A. Sent 2026-09-25 at 13 42 38Z, activity `act_KgCBidCTwpSH4xvxv`. Thread went from 2 to 3 activities, exactly one copy. B was not sent and is kept as the record of the alternative.
 
 Thread pulled just now, `ctc_KBnbsnifCG6cRWg3n`, 2 activities, `nextPage` null. Same lag as
 Chris this morning, his reply is not in lemlist's activity list yet, so his words below are
