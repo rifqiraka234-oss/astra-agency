@@ -43,8 +43,14 @@ So Georgia has to be a reader of the proposal, not only Sanya.
 
 **Sanya Chhugani.** Engagement Manager, joined at the end of August 2026, so about a month in at the
 call. LinkedIn headline "Engagement Manager, Strategy, Product & Innovation, MEng", profile
-`uk.linkedin.com/in/sanya-c-015088167`. Engineering degree, a technical role at an engineering firm,
-then product management running a product line end to end at large corporates. First startup job.
+`uk.linkedin.com/in/sanya-c-015088167`. Her own account on the call is an engineering degree, a technical role at an engineering firm, then
+product management running a product line end to end with global teams, at what she called "big
+corporations". Public sources fill it in. MEng Materials Science and Engineering at Loughborough, then
+the James Walker graduate scheme (a UK sealing engineering group), first in the Materials Engineering
+team in Cockermouth, then Graduate Product Manager. Whether a later large employer sits between James
+Walker and HotGreen is not public, so ask rather than assume. HotGreen announced her on LinkedIn on
+1 September 2026 as "supporting the commercial and sales pipeline, alongside operational projects as
+the business scales". First startup job.
 Her remit is "customers, investors, grant writers, agencies such as yourself", cross functional, a
 self described generalist. On the website she has some SEO knowledge from personal interest and
 social media internships and says plainly "none of us are particularly experienced with website
@@ -55,8 +61,9 @@ seen to deliver in her first months.
 **Andrew Anderson.** CTO and co founder, director since incorporation.
 
 **Dr Johnathan Vincent Matlock.** Director since 15 October 2025, the same week the pre seed
-closed, correspondence address 85 Great Portland Street. Probably an investor board seat, not yet
-confirmed. See the news research file.
+closed, correspondence address 85 Great Portland Street. He is the
+co founder and GP of Empirical Ventures, which led the pre seed, so this is the lead investor's board
+seat. Dominic Falcão, who resigned the same day, was the Deep Science Ventures director.
 
 **Dominic Lee Falcao.** Director from 7 November 2024, resigned 15 October 2025.
 
@@ -93,8 +100,11 @@ significant control on 12 June 2026. The implied valuations (about £4.7M post m
 about £8.3M post money in June 2026) are my arithmetic on issued shares only, ignoring any option
 pool, so treat them as inference and never quote them.
 
-Whether the June round was announced publicly is in the news research file. Until it is, **it is a
-public record but not a public story**, and the proposal should not lead with it.
+**The June round was announced, but not its size.** HotGreen's LinkedIn post of 18 June 2026 calls it
+an acceleration round and welcomes Ponderosa Ventures, New York, part of the Galvanize platform, as "an
+exciting transatlantic milestone". A search snippet of Georgia's own post calls it "oversubscribed". The
+same post mentions an Innovate UK Investor Partnerships grant. The £708k figure exists only in the
+filing, so the proposal can mention the round and Ponderosa, and should not quote the amount.
 
 ## 4. What Sanya said, pain by pain
 
@@ -217,16 +227,25 @@ is labelled illustrative.
 
 ## 7. Things we got wrong or must not repeat
 
-1. **The CCEP trial is not running yet.** Our prototype says "A trial underway with CCEP", the deck
-   says CCEP "is trialling the pump at one of its sites", and the deck's homepage sketch says "CCEP
-   trialling now". Sanya's own account is an accelerator programme with the first deployment in a
-   Coca-Cola plant aimed at Q1 to Q2 2027. Anything we send next says what she said, and nothing more
-   until the news research shows otherwise.
-2. **The team is six, not three.** The deck says "A three-person team runs like a ten-person one".
-3. **Funding is about £1.9M, not £1.2M.** Everything we have sent quotes only the October 2025 round.
-4. **Georgia is not the one to write to about the build.** She delegated it. Sanya runs it, Georgia
+1. **The CCEP trial is not running yet, and the first unit is a 50 kW demonstrator.** Our prototype
+   says "A trial underway with CCEP", the deck says CCEP "is trialling the pump at one of its sites",
+   and the deck's homepage sketch says "CCEP trialling now". The primary source is Innovate UK project
+   10192195, which funds HotGreen to "develop a 50-kWth innovative industrial heat pump system" and
+   "over 12 months ... install and test their technology at the site of ... Coca-Cola Europacific
+   Partners", May 2026 to May 2027. Sanya puts the installation at Q1 to Q2 2027. So the honest wording
+   is a funded demonstration at a CCEP site, going in during 2027. Their own product modules are
+   0.5 MW, ten times that size, so never let copy imply a production unit.
+2. **The "accelerator" is not CCEP's.** Sanya said "an accelerator programme with Coca-Cola Europacific
+   Partners". What exists publicly is two things. The **100+ Accelerator, Cohort 7**, run by AB InBev
+   with The Coca-Cola Company, Colgate-Palmolive, Danone, Mondelēz and Unilever as partners, kicked off
+   in Leuven in March 2026 and announced 27 May 2026. And the Innovate UK project above, whose category
+   is literally "Investment Accelerator", with CCEP as the host site and a prior investor. Which one she
+   meant, or both, is a question for her. Never write "CCEP accelerator" in anything we send.
+3. **The team is six, not three.** The deck says "A three-person team runs like a ten-person one".
+4. **Funding is about £1.9M, not £1.2M.** Everything we have sent quotes only the October 2025 round.
+5. **Georgia is not the one to write to about the build.** She delegated it. Sanya runs it, Georgia
    signs it off.
-5. **The quick wins may already be done by the time the proposal lands.** Sanya plans to fix SEO and
+6. **The quick wins may already be done by the time the proposal lands.** Sanya plans to fix SEO and
    add a news page herself within two weeks of Georgia getting back. Selling her those two items as a
    paid bucket is selling her something she has said she will do for free.
 
@@ -299,3 +318,71 @@ a typical facility, 1,500 tCO2 a year avoided per MW, 4x more efficient than a t
 calculator. Its "In production now" sector heading could be read as units in production, and its
 rationale wrongly says HotGreen had no photography, when real headshots have been on their site since
 at least October 2025. The calculator Sanya liked is in the deck, `astra-hotgreen.netlify.app`.
+
+## 10. What they publish and what is published about them
+
+Full report with every URL and a label on every claim, `research/linkedin-news.md`. The main
+limitation is that **Georgia's personal LinkedIn is walled** to every tool we have (5,055 followers,
+125 posts, 2 articles on the sidebar). Only two of her 2024 posts and her comment welcoming Sanya
+could be read in full. Everything of hers from June to September 2026 is search snippet only and is
+labelled that way.
+
+### The timeline since the site's story was last written
+
+| When | What | Status |
+|---|---|---|
+| Oct 2025 | £1.2M pre seed led by Empirical Ventures, CCEP Ventures strategic, plus First Imagine!, Conduit EIS Impact Fund, Almanac Ventures, Deep Science Ventures. Press calls it CCEP "to trial" the unit | Verified, press and Companies House |
+| 26 Nov 2025 | Georgia on the Dangerous Women Podcast | Verified episode notes |
+| 13 Jan 2026 | Georgia interviewed by ATMOsphere / NaturalRefrigerants.com on the hydrocarbon heat pump | Listing verified, article walled |
+| 21 to 22 Jan 2026 | Georgia and Ben Vellacott present at the High Temperature Heat Pump Symposium, Copenhagen | Company claim, event verified |
+| 2 Mar 2026 | Job ad, Applications and Systems Integration Engineer, Datchet. Names OEMs "Copeland/GEA", prefers German | Verified, ad now closed |
+| Mar 2026 | 100+ Accelerator Cohort 7 kick off, AB InBev HQ Leuven | Verified |
+| 9 Mar 2026 | Georgia on HackGroup's list of women behind Europe's industrial renaissance | Verified |
+| May 2026 | Innovate UK project 10192195 starts, 50 kWth unit at a CCEP site, £399,076 grant, Georgia project manager, to May 2027 | **Verified on Gateway to Research** |
+| 22 May 2026 | Sera Evcimen announced as VP Technical Operations | Verified |
+| 27 May 2026 | Selected for 100+ Accelerator Cohort 7, "joining 44 innovative startups from over 40 countries" | Verified, company post |
+| 3 Jun 2026 | Post on hybrid operation with existing boilers | Verified |
+| 12 to 18 Jun 2026 | Acceleration round closes (Companies House 12 Jun), announced 18 Jun, Ponderosa Ventures joins, plus an Innovate UK Investor Partnerships grant | Verified |
+| 18 Jun to 1 Sep 2026 | Company page silent for ten weeks | Verified |
+| 1 Sep 2026 | Sanya announced. Georgia comments "So excited to have you on the team". CCEP Ventures' Sashidar Rajendra and the 100+ Accelerator's Adam Spunberg also comment | Verified |
+| 18 to 23 Sep 2026 | Georgia at New York Climate Week, "the first time taking HotGreen across the Atlantic", asking for introductions to food and beverage operators "with process heat below 200°C", investors and corporates | Snippet only, year inferred |
+
+**The company page.** 1,642 followers, 11 posts in 11 months, three of them inside two hours on
+27 May. Both corporate sponsors' people read it.
+
+### Georgia in her own words (verified podcast notes, 26 Nov 2025)
+> "Finding the sexy in the unsexy and the power of crafting a powerful narrative (especially in manufacturing)"
+> "Being a Founder is being everything: CEO, CRO, CMO, PA and Delivery Person"
+
+She has said publicly that narrative matters in manufacturing and that she has been doing the CMO job
+herself. Earlier, to Deep Science Ventures, she described the team as a jazz band with "only a
+saxophone and a piano at the moment". Her background per their site is senior manager at Oliver Wyman
+and Partnerships and Growth lead at Hexxcell.
+
+### Their own channels tell different numbers (all verified in the cited source)
+
+| Topic | What each channel says |
+|---|---|
+| Boiler | Site, "a direct replacement of a traditional boiler". LinkedIn June 2026, works "in hybrid with existing boiler systems" rather than "replacing it outright" |
+| Savings | Site, "€250k/year" per typical facility and "reduce your energy bill by 30%". LinkedIn About, 40% and "$250,000 savings per MW annually". Tech.eu, about €0.5m a year |
+| CO2 | Site, 1,500 t a year per MW. Tech.eu, about 3,000 t a year per facility |
+| Temperature lift | Site, "a full 110˚C temperature lift". LinkedIn Feb 2026, "-15˚C to 120˚C" |
+| Share of emissions | Site 19%, podcast 20%, Empirical and Innovate UK "over 20%", job ad 10% for their band |
+| Target band | Job ad "below 250°C", Climate Week "below 200°C" |
+| Currency | € on the site, $ on LinkedIn, £ in funding copy |
+
+This matters for any calculator or copy we build. The numbers have to come from one agreed source,
+which is their business case model, not from the site.
+
+### Corrections to our own earlier notes
+- HotGreen **did not win** the NZTC £50k Climate Impact Prize. Remedium did. HotGreen graduated from the
+  TechX programme in May 2025, listed at TRL 4.
+- PitchBook's "$2.85M raised" is a search summary only, unverified. Companies House gives £1.9M in
+  equity, and the grant is on top.
+- Anders Nyander's site bio says AIRA. A search snippet shows him at Swegon now. Unconfirmed.
+
+### What could not be read
+Georgia's and Sanya's LinkedIn profiles, Georgia's 2026 posts in full, the CCEP site (Cloudflare, read
+via a WebWire copy), The Grocer, the January 2026 NaturalRefrigerants interview, PitchBook, the HTHP
+programme, and the 100+ cohort list, which is not published. Which corporate HotGreen is paired with in
+100+ is not public.
