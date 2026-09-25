@@ -84,3 +84,43 @@ wording. They're partner claims per `docs/partner/amwisesa-credentials.md`, not 
 - Anything about UK economics at average energy prices. Internal only, see `../opportunities.md` section 3.
 - Competitor names. The competitor watch is described without them.
 - Time saved in hours. No baseline exists, so the proposal promises to measure it instead.
+
+## Web page, rechecked 25 September 2026 (afternoon)
+
+Built as https://astra-hotgreen-proposal.netlify.app (fix list at /fixes). Every source above was
+reopened live again before the build, because the rows above were written before a context
+compaction. What each recheck found, and every claim that is new or reworded on the web page.
+
+| Claim on the page | Source reopened | Check 2, tried to break it | Check 3, a second way |
+|---|---|---|---|
+| CCEP's 2025 annual report names HotGreen as one of three startups | SEC EDGAR 20-F, fetched with a declared user agent after a 403 | Document's own title is "Annual Report and Form 20-F 2025", so "annual report" is its own name | Empirical release lists CCEP as a participant in the round |
+| Grant is a twelve month project that ends in May 2027 (reworded from "June 2026 to May 2027") | GtR page shows "Funded Period May 26 to May 27", text says "Over 12 months" | API fund record 1780268400000 to 1811718000000 is 31 May 2026 23.00 UTC to 30 May 2027 23.00 UTC, so 1 Jun to 31 May in the UK. The page and the API disagree on the start month, so the page now names only the end | Two endpoints, HTML and API |
+| "Some of our key funders and partners are" then logos | home.html by curl, and rendered in Chromium | Names of all seven backers count zero in the text, positive control "industrial" 12 and "Pasteurisation" 1 | Rendered DOM lists 7 logo images with no alt, logos opened one by one and read (CCEP, Empirical, Deep Science Ventures, First Imagine!, Conduit EIS Impact Fund, Almanac Ventures, Net Zero Technology Centre) |
+| Raise, grant and demonstrator not mentioned on any page | All pages in the sitemap (three, /, /contact, /solutions) | Whole word search for trial, pilot, grant, demonstration, demonstrator, raise, raised, funding, investment, all zero | Sitemap lists exactly three pages, so "any page" covers the site |
+| 30% on Solutions, 40% on LinkedIn, up to 50% at Empirical | Solutions page text, LinkedIn company page rendered, Empirical release | First count used word boundaries and returned 0 for "30%", a failed detector. Redone without them, 3 hits | LinkedIn render positive control, "HotGreen" 38 times |
+| €250k per typical facility on Solutions, $250,000 per MW on LinkedIn (new) | Solutions page "€250k /year saved in energy bills versus using a traditional boiler for a typical facility", LinkedIn "equivalent to $250,000 savings per MW annually" | Checked the bases differ (typical facility against per MW) and the currencies differ | Both read from rendered text, not snippets |
+| Phone Solutions page opens with "Introducing the HotStack 300" (new, fix list 09) | Rendered at 390 px | Desktop render reads "Introducing the HotStack", spec image names HotStack 120 and 220 | Phone screenshot opened and read |
+| Product pages piece says "each HotStack model" (reworded from naming 120 and 220) | Same renders | The site names three models across breakpoints, so the piece no longer names any | |
+| Spec table is one image, availability line reads "Currently taking 2026 orders for 2027 delivery" | Solutions rendered, table cropped and read | "HotStack 120", "2 bar", "25 bar", "0.5MW" all zero in the text | Screenshot crop on the page is from this render |
+| EU heat auction "expected to open in early December 2026" (reworded from "opens") | Commission news 24 Sep 2026, "expected to open to bidders in early December 2026" | Wording matched to "expected" | IF26 terms PDF, 15 pages |
+| COP of at least 1.5 gets a 25% bonus when bids are ranked | IF26 PDF, "bid bonus of 25% (i.e. reduction of the bid price for the purpose of ranking only)" and "heat pump(s) with Coefficient of Performance (COP) of at least 1.5" | Ranking only, the page says "when bids are ranked" | Commission news says the auction rewards efficient heat pumps |
+| 68 food and drink sites run by 50 companies | UK ETS Compliance Report 2026 xlsx, NACE 10 and 11, OPEN | 78 including closed, 10 closed | Second method by NACE description found 56, and all 12 code only rows are food activities the keyword list missed (dairies, tea and coffee, fish, condiments). Control, NACE 24 steel 27 open |
+| UK company staff can be emailed with a privacy notice and an opt out | PECR reg 22(1) "individual subscribers" | ICO B2B page, sole traders and some partnerships count as individuals | ICO B2B page, "give a valid address for business to opt out", "you must tell them" under UK GDPR |
+| Germany needs consent before the first email | UWG section 7(2) no. 2 text | Phone rule differs (presumed consent for businesses), email does not | |
+| Privacy notice, now "article 13 requires privacy information at the point you collect them" | legislation.gov.uk article 13(1) "at the time when personal data are obtained" | | |
+| Since 19 June 2026 the notice has to tell people they can complain to you (reworded, more precise) | Article 13(2)(ca) as amended, "the right to make a complaint to the controller under section 164A" | DPA 2018 s164A(2), controller must facilitate complaints "such as providing a complaint form" | ICO DUAA page, updated 19 June 2026, all data protection provisions in force |
+| Company details HotGreen Ltd, 16035994, 167 to 169 Great Portland Street, 5th Floor, London W1W 5PF | Companies House overview | Registered office is the current one | Sanya's own email signature of 25 Sep carries the same number and address |
+| No privacy page | Sitemap has three pages, /privacy and /privacy-policy 404 | Control, the three sitemap pages return 200 | "privacy" and "cookie" zero on all three pages |
+| 62 images, none with alt text | Raw HTML, 42 + 14 + 6 img tags, no alt attribute at all | Every tag counted | Rendered DOM, every visible image alt empty |
+| Message textarea named "lastname", First name not required | Raw HTML of all three pages | Both forms per page | Rendered form |
+| Sera's LinkedIn icon opens Ben's profile | Rendered homepage, each visible /in/ link climbed to the card holding exactly one name | Positive control, the other six cards resolve to their own person | Six personal LinkedIn URLs for seven people in the raw HTML |
+| Homepage video 19.4 MB | HEAD 19,361,712 bytes | Content type video/mp4 | Last modified 9 Sep 2025 |
+| Titles all "HotGreen Solutions", including the 404 | /news rendered, 404 status, same title | | |
+| Sanya spotted titles, alt text and image only text herself (fix list 03) | Transcript line 124 | | |
+| Transcript facts (seed Q3 2027, first unit H1 2027, inbound, quote, quick fixes, calculator, Scope and ETS, monthly email) | Transcript lines 106, 114, 138, 174, 184, 188, 200, 214, 240, 244 | Each read in context | Recap email of 24 Sep (Gmail thread 1a0d2d5971a63502), no newer message in the thread |
+| Astra and Amwisesa copy, captions and bios | Live SotoCat deck, fetched and every sentence matched | Pertamina sentence reworded, same facts | docs/partner/amwisesa-credentials.md and docs/astra-company-profile.md |
+
+**Changed from proposal-v1.md on the page.** "Your news page, filled" became "Press kit and coverage pack",
+because Sanya said she'd build the news page herself. "Monthly progress, in public" is now placed in
+October and November (v1 left it out of the timing table). The grant wording, the auction wording and
+the product page wording are as in the table above. One new sentence on €250k against $250,000.

@@ -3,6 +3,12 @@ INTERNAL HEADER, NOT PART OF THE CLIENT TEXT.
 Draft v1, 25 September 2026. Not sent. Prices and delivery times are left for Raka and Josh to set.
 For Sanya Chhugani and Georgia Ware. Every fact below is listed with its source and the checks run on it
 in evidence-ledger.md in this folder. The free fix list is a separate file, fix-list-v1.md.
+SUPERSEDED FOR SENDING by the web page, https://astra-hotgreen-proposal.netlify.app
+(source web/build.py). The page carries the same five groups with these changes, all rechecked
+live on 25 September 2026 and listed at the end of evidence-ledger.md. "Your news page, filled"
+became "Press kit and coverage pack". Monthly progress is placed in October and November. The
+grant now reads as a twelve month project ending May 2027. The auction is "expected to open".
+Product pages no longer name HotStack models. One new line on EUR 250k against USD 250,000.
 -->
 
 # HotGreen and Astra
