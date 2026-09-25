@@ -11,8 +11,6 @@ Companion files in this folder.
 - `research/market-context.md`, competitor websites, the regulation picture, and calculator inputs.
 - `research/*.png`, screenshots of their live site.
 
-<!-- EXTERNAL SECTIONS ARE ADDED BELOW SECTION 8 -->
-
 ## 1. Where the deal stands today
 
 | When | What happened | Source |
@@ -386,3 +384,122 @@ Georgia's and Sanya's LinkedIn profiles, Georgia's 2026 posts in full, the CCEP 
 via a WebWire copy), The Grocer, the January 2026 NaturalRefrigerants interview, PitchBook, the HTHP
 programme, and the 100+ cohort list, which is not published. Which corporate HotGreen is paired with in
 100+ is not public.
+
+## 11. The market around them, competitors and regulation
+
+Full report with 136 URLs, `research/market-context.md`. The surprising claims below were checked
+against the primary source in this session, and are marked where they were not.
+
+### CCEP names HotGreen in its own annual report
+CCEP's 2025 Annual Report and Form 20-F, filed with the SEC, says. "In 2025, we invested €1.7 million
+in three start-ups ... Hot Green – pioneering heat pump technology supporting decarbonising our energy
+inefficient boilers on our sites". **Checked verbatim in the filing on SEC EDGAR.** The same filing
+says CCEP applies "an internal shadow carbon price of €100/tCO2e" to Scope 1 and 2 capex, and targets
+Net Zero across Scopes 1, 2 and 3 by 2040. HotGreen's site shows CCEP as an unlabelled logo and none
+of this.
+
+### What a "credible equipment provider" looks like on a website
+Across 14 competitor sites, established and startup, the pattern is consistent.
+1. The headline says what they make and for whom, often with scale or heritage ("for more than 125
+   years", "The UK's largest independent").
+2. Named customers with numbers next to the name.
+3. Dull institutional pages, ISO certificates, terms of sale, modern slavery statements. The dullness
+   is the signal.
+4. Engineering depth usable without talking to sales, datasheets per model, sizing tools.
+5. Service footprint, maintenance, spares, callout.
+6. Separate doors in the top nav for Investors, Media, Careers, Partners.
+7. A dated newsroom that is actually updated.
+8. Financing offered as a product (heat as a service, energy as a service).
+9. **Mission lines do appear, but only on top of the proof.** Without the proof, the mission line is
+   all a visitor sees, and that reads as startup. This is exactly Sanya's point, from the outside.
+
+**Startups that look big while staying different.** Skyven is the closest model, an economics headline
+with hard numbers, a named assessment tool, named product line, two deployment models, a named customer
+quote, European offices. Heaten looks big through a structured references table (customer, MWth, °C,
+quarter, model) and datasheets as a standing call to action. Rondo and Antora borrow scale from
+corporate investor logos and tier one press. SPH shows the end state, "SPH is now Part of Copeland".
+
+### The competition got bigger this year
+- Johnson Controls launched the Sabroe HitemHP heat pump, up to 122°C, on 15 September 2026.
+- Copeland agreed to acquire SPH Sustainable Process Heat in October 2025, with Spirax keeping a
+  minority and selling it. Copeland is the OEM HotGreen's own job ad named.
+- Heaten lists a 1.2 MWth unit for Dornoch Distillery (UK) in Q4 2026.
+- Futraheat has a steam heat pump running at Hepworth Brewery (UK).
+- AtmosZero took a strategic investment from Mitsubishi Heavy Industries in March 2026.
+
+### Nobody has an open savings calculator, and there is a reason
+None of the 14 offers an instant, public, transparent savings calculator for industrial steam. GEA's
+"eCalculator" asks for name, email and company before it calculates. Skyven, AtmosZero and Qpinch run
+gated forms with an engineer replying. Qpinch comes closest, with a dated commodity price panel and
+cost per tonne of steam.
+
+**The reason matters for us, and it is the most important finding in this file.** At official UK
+average prices the savings case does not close on energy alone.
+- DESNZ non domestic prices, Q1 2026, including the Climate Change Levy, published 30 June 2026.
+  Medium users pay **24.999p per kWh for electricity and 4.549p for gas**, a ratio of 5.5. Large users
+  23.925p against 4.456p, 5.4. **Checked in the DESNZ spreadsheet.** Next update 29 September 2026.
+- A heat pump at COP 2.8 only beats an 85.7% efficient gas boiler on running cost when electricity
+  costs less than about 3.3 times gas (2.8 divided by 0.857). My own arithmetic.
+- EU industrial ratios for H2 2025 run 1.9 to 3.3 (Ireland 4.3), per Eurostat. The report's
+  derivation, not rechecked by me.
+- So a calculator fed with UK averages would show a UK site **paying more**. The case rests on the
+  site's own contract prices, carbon cost where it applies, an internal carbon price like CCEP's €100/t,
+  the higher CoP from a warm source (their own spec says 4.5 from 50°C), and where the plant is.
+- Their site's own numbers do not agree with each other either. "4x more energy efficient than a
+  traditional boiler" implies a CoP of about 3.4 against an 85.7% boiler, not 2.8.
+
+This does not mean the product does not work. It means **the calculator Sanya wants has to be built on
+their business case model and their assumptions, with the assumptions shown**, and it cannot be a
+generic tool with public UK averages plugged in. It also suggests why the job ad preferred German
+speakers and why the site quotes euros. That last part is inference.
+
+### Regulation, what actually applies to their customers (September 2026)
+- **UK ETS** covers combustion sites above 20 MW thermal input only, so most mid size food plants are
+  outside it. Official 2026 price £49.41/t, market about £59.77 on 24 September (broker source).
+- **UK and EU ETS linking** was agreed in principle in May 2025 and is not concluded. Contexte
+  reported the July summit that was to seal it was postponed after Keir Starmer resigned (not opened by
+  me). Andy Burnham is now Prime Minister and says the summit is "expected to take place at some point
+  later this year" (Euronews, 22 September 2026, checked).
+- **EU ETS2** puts a carbon price on gas for smaller EU industry from 2028. A wider EU ETS review is only
+  a proposal, 17 July 2026.
+- **CBAM** is live in the EU since January 2026 and starts in the UK in January 2027. For food and drink
+  the effect is indirect, cans and fertiliser.
+- **Reporting.** UK Sustainability Reporting Standards are voluntary, FCA rules are still a proposal.
+  CSRD thresholds are now 1,000 employees and €450m turnover after the Omnibus changes.
+- **UK levies and grants.** The Climate Change Levy is now equal for gas and electricity. The new
+  electricity levy relief (BICS) excludes most food and drink, only sugar, starch and oils and fats
+  qualify. The Industrial Energy Transformation Fund is closed and no successor grant was found.
+  Climate Change Agreements run to 2033.
+- **Wholesale gas.** Dutch TTF up "more than 130% since the start of the year" with the Strait of
+  Hormuz "effectively closed" (Euronews, 20 August 2026, **checked**). The official price series only
+  runs to Q1 2026, so it does not show this yet. It helps the heat pump case, and it is moving weekly.
+- **The pressure that actually binds is buyers.** CCEP's 2040 Net Zero across Scopes 1 to 3, its 47%
+  Scope 1 and 2 cut by 2030, and its €100/t shadow price. The large food and drink groups push Scope 3
+  targets down onto their suppliers.
+
+Sanya's instinct that the rules are "changing day on day" is right. It also means regulation content on
+their site goes stale fast unless it is dated and kept up to date, which is an argument for a small
+maintained explainer rather than a big static page.
+
+**Calculator inputs, if one is built.** DESNZ quarterly non domestic prices, Eurostat industrial
+prices, UK government 2026 conversion factors (natural gas 0.18231 kgCO2e per kWh gross, UK grid
+0.13096), boiler efficiency 85.7% (US DOE) or about 83% gross for the best new UK boilers (Energy
+Technology List), EU carbon reference €75.28/t for Q2 2026 (European Commission CBAM price). Table
+with every source in the research file.
+
+## 12. What we still do not know, and who can answer it
+
+| Question | Why it matters | Who |
+|---|---|---|
+| What is the budget, and would it come from the June round or wait for seed in Q3 2027? | "We might say not right now, but potentially after the deployment" | Georgia |
+| Has the site actually cost them anything, investor feedback, lost enquiries? | Decides how big the proposal can honestly be | Georgia |
+| Which accelerator did she mean, 100+, the Innovate UK Investment Accelerator, or both? | We must name it correctly | Sanya |
+| What can be said publicly about CCEP, the demonstrator, and Ponderosa? | The site's biggest missing proof, and accelerator agreements often restrict naming | Georgia |
+| Can we see the business case model, or its inputs? | The calculator has to run on their numbers, see section 11 | Sanya, Georgia |
+| Who built the Framer site, and who has access? | Sanya needs Georgia's permission to edit it | Sanya |
+| Did she already do the SEO fixes and news page? | Changes what the first bucket is | Sanya |
+| The brand guidelines file | "We follow those for now", open to change | Sanya |
+| Is there analytics or Search Console on the site? | Without it nobody can measure any change | Sanya |
+| What do the monthly investor emails look like? | Candidate for an investor updates page or a data room | Georgia |
+| What did Sanya's two LinkedIn messages of 14 September say? | Only Raka can see them | Raka |
+| Does email to raka@ and josh@astraagency.nl work now? | The 10 September copies bounced | Raka, Josh |
