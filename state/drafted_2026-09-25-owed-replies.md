@@ -55,6 +55,8 @@ Her own message, 22 Sep, "Then the site, the content and the search that carry i
 
 **The first sentence is Raka's view, not a fact from a source.** Change it if it isn't how he sees it.
 
+<!-- SUPERSEDED by the lighter version below, never sent. -->
+
 ### Shilpi, REPLY
 
 ```
@@ -83,4 +85,20 @@ booking and payment aren't wired yet. /memberships returns 404 today.
 
 ```
 Nice one Yero, I just had a look and the fixed court calculator shows the whole term price now, that's exactly it. If you want a hand when you wire up the availability and payment behind it, you know where I am.
+```
+
+---
+
+## Shilpi Arora, the lighter version Raka chose. REPLY.
+
+Raka, 2026-09-25, "send the lighter! love it". Replaces the five block draft above, which is not sent.
+
+<!-- GATE ARCHIVED, SENT 2026-09-25T11:07:50Z as act_sYEgoEHZJi6MLGjeR on Raka's explicit word, verbatim, one copy. -->
+
+### Shilpi light, REPLY
+
+```
+Honestly the sentence, most people we meet have the tool pictured and no idea yet how to say what it's for, so your end is the harder one.
+
+Which is partly why I'm curious about your setup. Your services page has the site build in there too, design and development, and you're doing all of it yourself. Do you enjoy the build side, or is it the part you'd hand off if you could? We've got a squad of developers who build for other studios in half the time at half the price, so the founder can stay on the strategy and the clients.
 ```
