@@ -1,117 +1,25 @@
 #!/usr/bin/env python3
-"""Builds the HotGreen proposal page and its fix list page into ./out.
+"""Builds the HotGreen proposal page (v2, families A to F with a sketch for every piece)
+and its fix list page into ./out.
 
 Every fact on these pages is listed with its source in ../evidence-ledger.md.
-Run from anywhere, python3 build.py. It copies ./assets into ./out and writes
-out/index.html and out/fixes.html.
+python3 build.py copies ./assets into ./out and writes out/index.html and out/fixes.html.
 """
 import html, os, shutil
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+A = os.path.join(HERE, 'assets')
 OUT = os.path.join(HERE, 'out')
 MAIL = 'rifqiraka234@gmail.com'
-
-GROUPS = [
-    ('g1', 'Investors can check HotGreen in one visit'),
-    ('g2', 'HotGreen looks like the equipment supplier it is'),
-    ('g3', 'Every customer sees their own business case'),
-    ('g4', 'Every enquiry gets the right answer'),
-    ('g5', 'The weekly reading and drafting come off your desk'),
-]
-
-PERIODS = [
-    ('p1', 'October and November 2026', 'Before the auction opens and the demonstrator goes in'),
-    ('p2', 'December 2026 to February 2027', 'The EU heat auction is expected to open in early December'),
-    ('p3', 'March to June 2027', 'The demonstrator is planned for the first half of 2027. The Innovate UK project runs to 31 May 2027'),
-    ('p4', 'July to September 2027', 'The seed round, planned for around the third quarter'),
-]
-WHEN = {'p1': 'Oct to Nov 2026', 'p2': 'Dec 2026 to Feb 2027', 'p3': 'Mar to Jun 2027', 'p4': 'Jul to Sep 2027'}
-
-# id, group, name, type, what you get, what changes, periods (first is where the card sits)
-PIECES = [
-    ('numbers', 'g1', 'One set of numbers', 'Shared fact sheet',
-     'Every public figure agreed once with your engineers, with its assumption and date written beside it. The site, the deck, LinkedIn and the calculator all use it.',
-     'Three savings claims become one agreed set, each with its basis.', ['p1']),
-    ('homeproof', 'g1', 'Proof on your homepage', 'New homepage section',
-     'Backers named in words, a dated timeline of where HotGreen stands, and the demonstrator described as it is today.',
-     'An evaluator finds the technology, the traction and the company without leaving the page.', ['p1']),
-    ('investor', 'g1', 'A quiet investor page', 'Web page and request form',
-     'Who backs you, what stage you’re at, and a form that goes straight to Georgia. The deck goes out on request through a tracked link.',
-     'Investors get their own route instead of the form everyone shares, and Georgia sees who opened the deck.', ['p1']),
-    ('press', 'g1', 'Press kit and coverage pack', 'Press kit and content',
-     'Every article about HotGreen so far, collected with its date and a short summary for the news page you’re building, plus a press kit with approved facts, logos and photos.',
-     'Your news page launches full, and journalists get facts you’ve approved.', ['p1']),
-    ('monthly', 'g1', 'Monthly progress, in public', 'Routine and web page',
-     'Georgia’s monthly investor email split into a private part and a short public post.',
-     'A dated post every month from now to the seed round, taken from an email she already writes.', ['p1']),
-    ('evidence', 'g1', 'The demonstrator evidence plan', 'Plan, then a results page',
-     'Before the install, a list of what each approver needs to see, from engineering to finance. After it, a results page, with live data if CCEP agrees.',
-     'Everyone who signs off a purchase or an investment gets the evidence they asked for.', ['p2', 'p4']),
-    ('dataroom', 'g1', 'A seed data room', 'Document room with tracked access',
-     'Folders, an index and access tracking, ready for your lawyers and accountants to fill.',
-     'Diligence runs from one link, and you see which investor read what.', ['p4']),
-
-    ('positioning', 'g2', 'Positioning and message', 'Workshop and message guide',
-     'One clear line on what HotGreen makes and who it’s for, the proof ranked behind it, and the mission on top. Built from your published brand guidelines.',
-     'Every page, deck and post tells the same story.', ['p2']),
-    ('lookfeel', 'g2', 'A look and feel update', 'Website design in Framer',
-     'New layouts for the pages you choose, built inside your Framer site.',
-     'The site matches the positioning, and you still edit it yourselves.', ['p2']),
-    ('product', 'g2', 'Product pages and datasheets', 'Web pages and PDF datasheets',
-     'A page for each HotStack model with the specs as real text, a datasheet for each, and a page per application, pasteurisation, brewing, distillation, drying and sterilisation.',
-     'A plant engineer can read, search and download the specs, which today sit inside one image.', ['p2']),
-    ('working', 'g2', 'Working with HotGreen', 'Web page for procurement',
-     'Company details, the warranty and service approach, spares, the certification route and how an install runs.',
-     'Finance, legal and procurement find their answers before they need a call.', ['p2']),
-
-    ('calculator', 'g3', 'Savings calculator', 'Customer tool on your site',
-     'A smaller version of your business case model. Country, steam demand, hours and the customer’s own energy prices go in. Cost, carbon and payback come out, with every assumption shown. Default prices come from official statistics and update when those do.',
-     'A prospect sees their own numbers, and you get an enquiry with steam data attached.', ['p2']),
-    ('funding', 'g3', 'Funding finder', 'Built into the calculator',
-     'The grants and tax relief a customer can claim in their country, each with the date it was last checked.',
-     'The first question after payback gets answered on the spot.', ['p2']),
-    ('auction', 'g3', 'EU heat auction guide', 'One page guide and a technical sheet',
-     'The EU’s €1bn heat auction is expected to open in early December 2026, and heat pumps with a COP of at least 1.5 get a 25% bonus when bids are ranked. The guide shows an EU prospect, or their energy partner, how to bid with HotStack.',
-     'Your EU prospects hear about it from you before the auction opens.', ['p1']),
-
-    ('routes', 'g4', 'Enquiry routes', 'Website forms',
-     'Separate routes for investors, site assessments, customers, partners and press, each asking its own questions, with an instant reply.',
-     'Each enquiry reaches the right person with the right details.', ['p2']),
-    ('assessment', 'g4', 'Site assessment and business case tool', 'Internal web app',
-     'An enquiry’s steam demand, temperatures, hours and metering data go in, your sizing and business case model run on it, and a first draft comes out for your engineer to check.',
-     'Your engineer checks a draft instead of building one. We measure the hours per assessment before and after.', ['p3']),
-    ('tracker', 'g4', 'Pipeline tracker', 'CRM set up around sites',
-     'Each site tracked by boiler age, planned shutdowns and budget dates.',
-     'Every site in the pipeline has its next date.', ['p3']),
-    ('targets', 'g4', 'Target list', 'Researched list',
-     'Built from public registers. The UK emissions trading register alone lists 68 food and drink sites run by 50 companies. Screened with your engineers for temperature and fuel.',
-     'A ready list for the day outbound starts.', ['p4']),
-    ('outbound', 'g4', 'Outbound, run by us', 'Service',
-     'Campaigns written and run by us inside each country’s rules. In the UK, company staff can be emailed with a privacy notice and a clear opt out. Germany needs consent before the first email.',
-     'Meetings with screened sites, once there’s data from the demonstrator.', ['p4']),
-
-    ('digest', 'g5', 'Regulation and funding digest', 'Weekly email and web page',
-     'The official UK and EU sources checked every week and summarised in one email, plus a dated regulation page on your site.',
-     'Scope 1 to 3, ETS and funding changes reach you without anyone going looking. We measure the hours it saves against two normal weeks.', ['p3']),
-    ('watch', 'g5', 'Competitor, patent and grant watch', 'Monthly email',
-     'New products, patents and grants from the companies you compete with.',
-     'A competitor’s launch reaches you the month it happens.', ['p3']),
-    ('content', 'g5', 'Content helper', 'Drafting tool',
-     'News items, LinkedIn drafts and search articles written from the agreed numbers and the digest. You approve every piece before it goes into your Framer site.',
-     'Regular posts without starting from a blank page.', ['p3']),
-    ('update', 'g5', 'Investor update helper', 'Drafting tool',
-     'Georgia’s monthly email drafted from a short form, with the public version made at the same time.',
-     'Her monthly update starts from a draft.', ['p3']),
-]
-SIDE = ('linkedin', 'g2', 'On the side, a LinkedIn plan', 'Monthly posting plan',
-        'A monthly posting plan for the company page and for Georgia’s profile, with drafts written from each milestone. You post them yourselves.',
-        'The company page carries every milestone as it happens.', ['p1'])
-CHIP_LABEL = {('evidence', 'p4'): 'Demonstrator results page', ('evidence', 'p2'): 'Demonstrator evidence plan',
-              ('linkedin', 'p1'): 'LinkedIn plan'}
-
-assert len(PIECES) == 23, len(PIECES)
-
 E = html.escape
+
+
+def read(p):
+    with open(os.path.join(A, p), encoding='utf-8') as f:
+        return f.read()
+
+
+LOGO = read('hg-logo.svgfrag').strip()
 
 MARK = ('<svg class="astra-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 L45 45 H3 Z" '
         'stroke="url(#ag)" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 18 L34 39 H14 Z" fill="url(#ag2)"/>'
@@ -122,344 +30,337 @@ FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox
            "height='48' rx='10' fill='%230a1016'/%3E%3Cpath d='M24 7 L42 42 H6 Z' fill='none' stroke='%23ff7a45' "
            "stroke-width='3' stroke-linejoin='round'/%3E%3Cpath d='M24 20 L32 37 H16 Z' fill='%238fd14f'/%3E%3C/svg%3E")
 
-CSS = r"""
-@font-face{font-family:'Plex Mono';src:url(fonts/plex-mono-500.woff2) format('woff2');font-weight:500;font-style:normal;font-display:swap}
-:root{
-  --ink:#0a1016;--ink2:#0e1a20;--panel:#101f26;
-  --paper:#f4f2ea;--paper2:#eae7db;
-  --green:#8fd14f;--green-d:#3f7f22;--ember:#ff7a45;--ember-d:#c2461a;--gold:#cbab6e;--steam:#cfe4e2;
-  --muted:#8ba0a6;--muted-d:#566a70;
-  --line:rgba(255,255,255,.10);--line-d:rgba(10,16,22,.14);
-  --g1:#ff7a45;--g2:#d9b877;--g3:#8fd14f;--g4:#6fd0e0;--g5:#b8a4ff;
-  --mono:'Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
-}
-*{box-sizing:border-box}
-[hidden]{display:none!important}
-body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4{font-weight:650;letter-spacing:-.02em;line-height:1.08;margin:0}
-p{margin:0}
-a{color:inherit}
-img{max-width:100%;display:block}
-::selection{background:var(--ember);color:#fff}
-.mono{font-family:var(--mono);font-weight:500}
-.kick{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--green);font-weight:500}
-#prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:99;background:linear-gradient(90deg,var(--ember),var(--gold),var(--green))}
-.slide{position:relative;padding:112px 7vw;overflow:hidden}
-.slide.dark{background:radial-gradient(120% 90% at 85% -10%,rgba(255,122,69,.10),transparent 55%),radial-gradient(120% 100% at 5% 110%,rgba(143,209,79,.09),transparent 55%),var(--ink)}
-.slide.deep{background:var(--ink2)}
-.slide.paper{background:var(--paper);color:#111a1f}
-.slide.paper .kick{color:var(--green-d)}
-.wrap{max-width:1120px;margin:0 auto;position:relative;z-index:2}
-.rv{opacity:1}
-.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
-.js .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+BACKERS = ['Coca-Cola Europacific Partners', 'Empirical Ventures', 'Deep Science Ventures', 'First Imagine!',
+           'Conduit EIS Impact Fund', 'Almanac Ventures', 'Net Zero Technology Centre']
+TIMELINE = [('Oct 2025', '£1.2m round led by Empirical Ventures'),
+            ('2025', 'Named in CCEP’s annual report as one of three startups it invested in'),
+            ('2026', 'Innovate UK grant for a 50 kW demonstration at a CCEP site'),
+            ('2027', 'First unit at the CCEP site, planned for the first half of the year')]
+SPEC = [('Source', 'Air', 'Waste heat stream'),
+        ('Outlet temperature', 'Up to 120°C', 'Up to 220°C'),
+        ('Max steam pressure', '2 bar', '25 bar'),
+        ('COP, 10°C to 120°C', '2.8', '2.8'),
+        ('COP, 50°C to 120°C', '4.5', '4.5'),
+        ('Thermal output', '0.5 MW, stackable up to 10 MW', '0.5 MW, stackable up to 10 MW'),
+        ('Availability', '2026 orders for 2027 delivery', '2027 orders for 2028 delivery')]
+APPS = ['Pasteurisation', 'Brewing', 'Distillation', 'Drying', 'Sterilisation']
+# UK ETS Compliance Report 2026, open installation accounts with NACE 10 or 11, counted 25 Sep 2026
+ETS = [('Oils and fats', 'Manufacture of oils and fats', 10),
+       ('Dairies', 'Operation of dairies and cheese making', 8),
+       ('Spirits', 'Distilling, rectifying and blending of spirits', 8),
+       ('Potatoes', 'Processing and preserving of potatoes', 6),
+       ('Beer', 'Manufacture of beer', 5),
+       ('Sugar', 'Manufacture of sugar', 5),
+       ('Malt', 'Manufacture of malt', 5),
+       ('Grain milling', 'Manufacture of grain mill products', 4),
+       ('Other types', 'Eleven other food and drink types, one to three sites each', 17)]
+assert sum(n for _, _, n in ETS) == 68
 
-/* cover */
-#cover{min-height:100vh;display:flex;align-items:center;padding:96px 7vw;background:#070c11}
-.cover-photo{position:absolute;inset:0;z-index:0;background:#070c11 url(img/cover.jpg) center/cover no-repeat}
-.cover-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(110deg,rgba(6,10,15,.92) 0%,rgba(6,10,15,.72) 42%,rgba(6,10,15,.38) 72%,rgba(6,10,15,.6) 100%),linear-gradient(180deg,rgba(6,10,15,.45),rgba(6,10,15,.1) 45%,rgba(6,10,15,.94))}
-.brandrow{display:flex;align-items:center;gap:14px;margin-bottom:56px}
-.astra-mark{width:34px;height:34px;flex:0 0 auto}
-.brandrow .nm{font-family:var(--mono);letter-spacing:.3em;text-transform:uppercase;font-size:13px;color:var(--steam)}
-.cover-k{margin-bottom:22px}
-.cover-h{font-size:clamp(44px,8vw,100px);letter-spacing:-.035em;line-height:.96;max-width:12ch}
-.hot{background:linear-gradient(92deg,#ffd0a0,var(--ember));-webkit-background-clip:text;background-clip:text;color:transparent}
-.grn{background:linear-gradient(92deg,var(--green),#d6f2a6);-webkit-background-clip:text;background-clip:text;color:transparent}
-.cover-sub{max-width:620px;margin-top:28px;font-size:clamp(18px,2.2vw,22px);color:#c6d6d6;line-height:1.5}
-.cover-meta{display:flex;gap:14px 36px;flex-wrap:wrap;margin-top:52px;font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--muted)}
-.cover-meta b{color:var(--steam);font-weight:500}
-.toc{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:26px;font-family:var(--mono);font-size:12px}
-.toc a{color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:6px 12px}
-.toc a:hover{color:var(--paper);border-color:rgba(143,209,79,.5)}
+GROUPS = [
+    ('A', 'gA', 'We fix it', 'Fixes to your current website, free.'),
+    ('B', 'g1', 'Investor proof', 'A website update for investors.'),
+    ('C', 'g2', 'Increase your credibility', 'Branding and a website redesign.'),
+    ('D', 'g3', 'Let prospects and investors see the proof', 'A business case web app on your site.'),
+    ('E', 'g4', 'Optimise your inbound and outbound flow', 'Website forms, a CRM and outreach.'),
+    ('F', 'g5', 'AI helpers', 'AI tools that do the weekly reading and drafting.'),
+]
+GCLS = {g: c for g, c, _, _ in GROUPS}
 
-/* generic */
-.eyebrow{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px}
-.eyebrow .note{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.slide.paper .eyebrow .note{color:var(--muted-d)}
-.lead{font-size:clamp(30px,4.2vw,48px);letter-spacing:-.025em;line-height:1.06;max-width:18ch}
-.lead .hl{color:var(--ember)}
-.lead .hg{color:var(--green)}
-.slide.paper .lead .hg{color:var(--green-d)}
-.slide.paper .lead .hl{color:var(--ember-d)}
-.say{font-size:clamp(18px,2vw,21px);color:#c3d2d4;max-width:62ch;line-height:1.55;margin-top:22px}
-.slide.paper .say{color:#33484d}
-.small{font-size:14px;color:var(--muted)}
-
-/* told */
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:48px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--line)}
-.stat{background:var(--ink2);padding:26px 22px}
-.stat b{display:block;font-size:clamp(28px,3.2vw,40px);letter-spacing:-.03em;line-height:1;color:var(--gold);font-weight:650}
-.stat span{display:block;margin-top:12px;font-size:14.5px;color:#b9c9cb;line-height:1.45}
-.q{margin:44px 0 0;padding:4px 0 4px 24px;border-left:2px solid var(--ember);max-width:760px}
-.q p{font-size:clamp(22px,2.6vw,30px);line-height:1.3;letter-spacing:-.015em;color:#eef3ee}
-.q cite{display:block;margin-top:12px;font-style:normal;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
-
-/* proof */
-.stand{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:48px}
-.card{border:1px solid var(--line);border-radius:18px;padding:28px 26px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.005))}
-.card.real{border-color:rgba(143,209,79,.35);background:linear-gradient(180deg,rgba(143,209,79,.08),rgba(143,209,79,.01))}
-.card.site{border-color:rgba(255,122,69,.32);background:linear-gradient(180deg,rgba(255,122,69,.07),rgba(255,122,69,.01))}
-.card h3{font-size:13px;font-family:var(--mono);font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
-.card.real h3{color:var(--green)}
-.card.site h3{color:var(--ember)}
-.li{display:flex;gap:13px;padding:12px 0;border-top:1px solid var(--line);font-size:15.5px;color:#d3dedf;line-height:1.5}
-.li:first-of-type{border-top:0}
-.li .mk{flex:0 0 auto;font-family:var(--mono);font-size:12px;padding-top:3px}
-.card.real .mk{color:var(--green)}
-.card.site .mk{color:var(--ember)}
-.shots{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:22px;margin-top:22px;align-items:start}
-.shot{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
-.shot img{width:100%;height:auto}
-.shot figcaption{background:var(--ink2);color:var(--muted);font-family:var(--mono);font-size:12px;padding:10px 14px;line-height:1.5}
-.three{margin-top:56px}
-.three h3{font-size:clamp(22px,2.6vw,28px);letter-spacing:-.02em;max-width:26ch}
-.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
-.num{border:1px solid var(--line);border-radius:16px;padding:22px}
-.num b{display:block;font-size:clamp(34px,4vw,48px);line-height:1;letter-spacing:-.03em;color:var(--ember);font-weight:650}
-.num .src{display:block;margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.num .quo{display:block;margin-top:6px;font-size:15px;color:#d3dedf}
-.three .say{margin-top:20px}
-.std{margin-top:48px;padding:26px 28px;border-radius:18px;background:rgba(143,209,79,.07);border:1px solid rgba(143,209,79,.28);max-width:860px}
-.std p{font-size:18px;color:#dce8e0;line-height:1.55}
-.std b{color:var(--green);font-weight:600}
-
-/* menu */
-.grp{margin-top:64px}
-.grp:first-of-type{margin-top:48px}
-.gh{display:flex;align-items:center;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:18px}
-.gno{flex:0 0 auto;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-family:var(--mono);font-size:15px;color:#0a1016;font-weight:500}
-.gh h3{font-size:clamp(22px,2.6vw,30px);letter-spacing:-.02em}
-.gh .cnt{display:block;margin-top:4px;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
-.g1 .gno,.dot.g1{background:var(--g1)}.g2 .gno,.dot.g2{background:var(--g2)}.g3 .gno,.dot.g3{background:var(--g3)}.g4 .gno,.dot.g4{background:var(--g4)}.g5 .gno,.dot.g5{background:var(--g5)}
-.pieces{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.piece{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.008));transition:border-color .25s,background .25s}
-.piece::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:3px;border-radius:0 3px 3px 0;background:var(--c)}
-.piece.g1{--c:var(--g1)}.piece.g2{--c:var(--g2)}.piece.g3{--c:var(--g3)}.piece.g4{--c:var(--g4)}.piece.g5{--c:var(--g5)}
-.ph{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em}
-.ph .type{color:var(--c);text-transform:uppercase}
-.ph .when{color:var(--muted)}
-.piece h4{font-size:20px;margin-top:10px;letter-spacing:-.015em}
-.piece .get{margin-top:10px;font-size:15px;color:#c3d2d4;line-height:1.5}
-.piece .chg{flex:1 0 auto;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:15px;color:#eef3ee;line-height:1.5}
-.piece .chg .lbl{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.pick{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:8px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.22);background:transparent;color:var(--paper);font:500 12.5px var(--mono);cursor:pointer}
-.pick:hover{border-color:var(--c)}
-.pick .ico{width:14px;height:14px;border-radius:50%;border:1.5px solid currentColor;display:inline-grid;place-items:center;font-size:10px;line-height:1}
-.pick .ico::before{content:"+"}
-.piece.on .pick .ico::before{content:"\2713"}
-.pick .on-t{display:none}
-.piece.on{border-color:var(--c);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.015))}
-.piece.on .pick{background:var(--c);border-color:var(--c);color:#0a1016}
-.piece.on .pick .on-t{display:inline}.piece.on .pick .off-t{display:none}
-.piece.side{margin-top:16px;border-style:dashed}
-.gsum{margin-top:0}
-
-/* order */
-.legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:14px;color:#c3d2d4}
-.legend span{display:inline-flex;align-items:center;gap:8px}
-.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:0 0 auto}
-.tl{margin-top:36px;border:1px solid var(--line);border-radius:20px;padding:22px;background:rgba(255,255,255,.02)}
-.months,.ms-row,.phases{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:6px}
-.months{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-bottom:10px;border-bottom:1px solid var(--line)}
-.months span{position:relative;padding-top:18px}
-.months span.y::before{position:absolute;top:0;left:0;color:var(--steam);letter-spacing:.06em}
-.months span.y26::before{content:"2026"}.months span.y27::before{content:"2027"}
-.ms-row{margin-top:8px}
-.ms{border-radius:10px;padding:8px 12px;font-size:13.5px;line-height:1.35;color:#eef3ee;background:rgba(203,171,110,.14);border:1px solid rgba(203,171,110,.4)}
-.ms .md{display:block;font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.04em;margin-bottom:2px}
-.ms.pt{background:transparent;border:0;border-radius:0}
-.ms.from{border-left:3px solid var(--gold)}
-.ms.to{border-right:3px solid var(--gold);text-align:right}
-.c-dec{grid-column:3 / span 3}.c4-9{grid-column:4 / span 6}.c-may{grid-column:6 / span 3}.c10-12{grid-column:10 / span 3}
-.phases{margin-top:18px;row-gap:12px}
-.phase{border-radius:14px;padding:16px 14px;background:var(--ink2);border:1px solid var(--line)}
-.p1{grid-column:1 / span 2}.p2{grid-column:3 / span 3}.p3{grid-column:6 / span 4}.p4{grid-column:10 / span 3}
-.phase h4{font-size:15px;letter-spacing:-.01em}
-.phase .at{margin-top:6px;font-size:13px;color:var(--muted);line-height:1.4}
-.chips{display:flex;flex-direction:column;gap:7px;margin-top:14px}
-.chip{display:flex;align-items:center;gap:9px;text-align:left;width:100%;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.02);color:#dce6e6;font:13px/1.3 var(--sans);cursor:pointer}
-.chip:hover{border-color:rgba(255,255,255,.3)}
-.chip.on{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.55);color:#fff;font-weight:600}
-.chip.on .dot{box-shadow:0 0 0 3px rgba(255,255,255,.18)}
-
-/* start */
-.mocks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:48px}
-.mock{margin:0}
-.frame{border-radius:14px;overflow:hidden;border:1px solid #c9ccc2;background:#fff;box-shadow:0 18px 40px -24px rgba(10,16,22,.45)}
-.fbar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#eceadf;border-bottom:1px solid #d9d7cb;font-family:var(--mono);font-size:11px;color:#6b7a7e}
-.fbar i{width:8px;height:8px;border-radius:50%;background:#cfccbf;display:inline-block}
-.fbar span{margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fbody{padding:16px;color:#16252a;font-size:13px;line-height:1.45;min-height:300px}
-.fbody .fk{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#3f7f22}
-.fbody h5{font-size:16px;margin:4px 0 10px;letter-spacing:-.01em}
-.names{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.names span{border:1px solid #d7ddd3;border-radius:99px;padding:3px 9px;font-size:11.5px;background:#f6f8f2}
-.tline{border-left:2px solid #8fd14f;margin-left:4px;padding-left:12px}
-.tline div{padding:5px 0}
-.tline b{font-family:var(--mono);font-size:11px;color:#3f7f22;font-weight:500;display:block}
-.fld{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin:10px 0 12px}
-.fld label{font-size:11px;color:#566a70;display:block}
-.fld .in{margin-top:3px;height:28px;border:1px solid #cfd6cf;border-radius:7px;background:#fbfcfa}
-.outs{border-top:1px solid #e1e5dd;padding-top:10px}
-.out{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 0;font-size:12.5px}
-.sk{height:10px;width:44%;border-radius:6px;background:linear-gradient(90deg,#e2e8dc,#cfe4c1,#e2e8dc)}
-.fnote{margin-top:10px;font-size:11px;color:#566a70;border-top:1px dashed #d7ddd3;padding-top:8px}
-.rowq{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-top:1px solid #e6e9e2;font-size:12.5px}
-.rowq:first-of-type{border-top:0}
-.tag{font-family:var(--mono);font-size:10.5px;padding:3px 7px;border-radius:99px;white-space:nowrap}
-.tag.ok{background:#e3f2d6;color:#2f6a17}.tag.wait{background:#f6ead3;color:#7a5413}.tag.new{background:#e0eef3;color:#1f5f6f}
-.mock figcaption{margin-top:12px}
-.mock figcaption b{display:block;font-size:16px;color:#0d1a1f}
-.mock figcaption span{display:block;margin-top:4px;font-size:14px;color:#566a70}
-
-/* need */
-.needs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px}
-.need{border:1px solid var(--line);border-radius:16px;padding:20px 18px;background:rgba(255,255,255,.02)}
-.need .n{font-family:var(--mono);font-size:12px;color:var(--green)}
-.need p{margin-top:10px;font-size:15.5px;color:#dce6e6;line-height:1.45}
-.fixcta{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:40px;padding:26px 28px;border-radius:18px;border:1px solid rgba(255,122,69,.35);background:linear-gradient(120deg,rgba(255,122,69,.10),rgba(203,171,110,.05))}
-.fixcta h3{font-size:22px}
-.fixcta p{margin-top:6px;color:#c3d2d4;font-size:15.5px;max-width:56ch}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:99px;background:linear-gradient(90deg,var(--ember),var(--green));color:#0a1016;font-weight:650;font-size:15px;text-decoration:none;border:0;cursor:pointer}
-.btn.ghost{background:transparent;color:var(--paper);border:1px solid rgba(255,255,255,.3)}
-
-/* team */
-.work{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
-.wk{border-radius:16px;overflow:hidden;background:#fff;border:1px solid #dcd9cd}
-.wk .im{aspect-ratio:4/3;overflow:hidden;background:#e9e6da}
-.wk img{width:100%;height:100%;object-fit:cover;object-position:top}
-.wk .tx{padding:14px 16px 18px}
-.wk h3{font-size:15.5px;letter-spacing:-.01em}
-.wk p{margin-top:6px;font-size:13.5px;color:#465a60;line-height:1.45}
-.disc{margin-top:18px;font-size:13.5px;color:#566a70}
-.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:40px}
-.person{border-radius:16px;background:#fff;border:1px solid #dcd9cd;padding:22px 22px 20px}
-.person h3{font-size:20px}
-.person .role{display:block;margin-top:4px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--green-d)}
-.person p{margin-top:12px;font-size:15px;color:#33484d;line-height:1.55}
-.person a{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:12.5px;color:#0d1a1f;text-decoration:underline;text-underline-offset:3px}
-
-/* next */
-#next{background:#070c11}
-.band{position:absolute;inset:0;z-index:0;background:#070c11 url(img/band.jpg) right center/cover no-repeat;opacity:.55}
-.band-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(7,12,17,.97) 0%,rgba(7,12,17,.9) 45%,rgba(7,12,17,.55) 100%)}
-.short{margin-top:40px;max-width:640px;border:1px solid var(--line);border-radius:20px;padding:26px;background:rgba(10,16,22,.75)}
-.short h3{font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:500}
-.short ol{margin:14px 0 0;padding-left:22px;color:#eef3ee;font-size:16px;line-height:1.7}
-.short .empty{margin-top:12px;color:var(--muted);font-size:15px}
-.short .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-footer{padding:48px 7vw 64px;text-align:center;border-top:1px solid var(--line);background:var(--ink)}
-footer .astra-mark{margin:0 auto 12px}
-footer p{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.8}
-
-#tray{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:90;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:99px;background:rgba(10,16,22,.92);border:1px solid rgba(143,209,79,.5);color:var(--paper);font:500 13px var(--mono);white-space:nowrap;text-decoration:none;box-shadow:0 12px 30px -10px rgba(0,0,0,.6);max-width:calc(100vw - 32px)}
-#tray[hidden]{display:none}
-#tray b{display:inline-grid;place-items:center;min-width:24px;height:24px;border-radius:99px;background:var(--green);color:#0a1016;font-weight:500}
-
-/* fixes page */
-.fx{display:grid;gap:14px;margin-top:36px}
-.fxi{display:grid;grid-template-columns:48px minmax(0,1fr);gap:14px;border:1px solid var(--line);border-radius:16px;padding:22px;background:rgba(255,255,255,.02)}
-.fxi .n{font-family:var(--mono);font-size:13px;color:var(--gold);padding-top:3px}
-.fxi.legal{border-color:rgba(255,122,69,.4);background:rgba(255,122,69,.05)}
-.fxi.legal .n{color:var(--ember)}
-.fxi h3{font-size:19px;letter-spacing:-.01em}
-.fxi p{margin-top:8px;font-size:15.5px;color:#c9d6d7;line-height:1.55}
-.fxh{margin-top:56px;font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.back{display:inline-block;margin-bottom:40px;font-family:var(--mono);font-size:12.5px;color:var(--muted);text-decoration:none}
-.back:hover{color:var(--paper)}
-
-@media (max-width:1000px){
-  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .mocks{grid-template-columns:minmax(0,1fr)}
-  .mocks .mock{max-width:520px}
-  .work{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .needs{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .months{display:none}
-  .ms-row,.phases{grid-template-columns:minmax(0,1fr)}
-  .c-dec,.c4-9,.c-may,.c10-12,.p1,.p2,.p3,.p4{grid-column:auto}
-}
-@media (max-width:760px){
-  .slide{padding:76px 16px}
-  #cover{padding:72px 16px}
-  .brandrow{margin-bottom:40px}
-  .stand,.shots,.nums,.pieces,.people{grid-template-columns:minmax(0,1fr)}
-  .stats{grid-template-columns:minmax(0,1fr)}
-  .work,.needs{grid-template-columns:minmax(0,1fr)}
-  .tl{padding:14px}
-  .fixcta{padding:22px}
-  footer{padding:40px 16px 90px}
-  .fxi{grid-template-columns:minmax(0,1fr);gap:4px}
-}
-"""
-
-JS = r"""
-(function(){
-  var d=document, root=d.documentElement;
-  root.classList.add('js');
-  var KEY='hotgreen-shortlist', picks={};
-  try{ picks=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ picks={}; }
-  var names={}, order=[];
-  [].forEach.call(d.querySelectorAll('.piece[data-id]'),function(el){ var id=el.getAttribute('data-id'); names[id]=el.getAttribute('data-name'); order.push(id); });
-  Object.keys(picks).forEach(function(k){ if(!names[k]) delete picks[k]; });
-  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(picks)); }catch(e){} }
-  var list=d.getElementById('shortlist'), empty=d.getElementById('short-empty'), mail=d.getElementById('mail'),
-      tray=d.getElementById('tray'), trayN=d.getElementById('tray-n'), trayT=d.getElementById('tray-t'), clr=d.getElementById('clear');
-  function render(){
-    var ids=order.filter(function(id){return picks[id];});
-    [].forEach.call(d.querySelectorAll('[data-pick]'),function(b){
-      var on=!!picks[b.getAttribute('data-pick')];
-      b.setAttribute('aria-pressed',on?'true':'false');
-      var host=b.closest('.piece')||b; host.classList.toggle('on',on);
-    });
-    list.innerHTML='';
-    ids.forEach(function(id){ var li=d.createElement('li'); li.textContent=names[id]; list.appendChild(li); });
-    empty.hidden=ids.length>0; clr.hidden=ids.length===0;
-    var body='Hi Raka,\n\n'+(ids.length?'These are the pieces we’d like to talk about.\n\n'+ids.map(function(id,i){return (i+1)+'. '+names[id];}).join('\n')+'\n':'')+'\n';
-    mail.href='mailto:'+mail.getAttribute('data-to')+'?subject='+encodeURIComponent('HotGreen proposal')+'&body='+encodeURIComponent(body);
-    tray.hidden=ids.length===0;
-    trayN.textContent=ids.length;
-    trayT.textContent=ids.length===1?'piece on your shortlist':'pieces on your shortlist';
-  }
-  d.addEventListener('click',function(e){
-    var b=e.target.closest('[data-pick]'); if(b){ var id=b.getAttribute('data-pick'); if(picks[id]) delete picks[id]; else picks[id]=1; save(); render(); return; }
-    if(e.target.closest('#clear')){ picks={}; save(); render(); }
-  });
-  render();
-  var els=[].slice.call(d.querySelectorAll('.rv')), prog=d.getElementById('prog'), ticking=false;
-  function check(){
-    ticking=false;
-    var h=window.innerHeight||root.clientHeight;
-    els=els.filter(function(el){ var r=el.getBoundingClientRect(); if(r.top<h*0.94&&r.bottom>0){ el.classList.add('in'); return false; } return true; });
-    var t=root.scrollHeight-root.clientHeight; prog.style.width=(t>0?(root.scrollTop||d.body.scrollTop)/t*100:0)+'%';
-  }
-  function req(){ if(!ticking){ ticking=true; requestAnimationFrame(check); } }
-  window.addEventListener('scroll',req,{passive:true}); window.addEventListener('resize',req); window.addEventListener('load',req);
-  check();
-})();
-"""
+PERIODS = [
+    ('p1', 'October and November 2026', 'Before the demonstrator goes in'),
+    ('p2', 'December 2026 to February 2027', 'The EU heat auction is expected to open in early December'),
+    ('p3', 'March to June 2027', 'The demonstrator goes in, planned for the first half of 2027. The Innovate UK project runs to 31 May 2027'),
+    ('p4', 'July to September 2027', 'The seed round'),
+]
+WHEN = {'p1': 'Oct to Nov 2026', 'p2': 'Dec 2026 to Feb 2027', 'p3': 'Mar to Jun 2027', 'p4': 'Jul to Sep 2027'}
 
 
-def page(title, desc, body, script=True):
-    return ('<!doctype html>\n<html lang="en-GB">\n<head>\n<meta charset="utf-8">\n'
-            '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
-            f'<title>{E(title)}</title>\n<meta name="description" content="{E(desc)}">\n'
-            '<meta name="robots" content="noindex,nofollow">\n'
-            f'<link rel="icon" href="{FAVICON}">\n'
-            '<link rel="preload" href="fonts/plex-mono-500.woff2" as="font" type="font/woff2" crossorigin>\n'
-            f'<style>{CSS}</style>\n</head>\n<body>\n<div id="prog"></div>\n{body}\n'
-            + (f'<script>{JS}</script>\n' if script else '') + '</body>\n</html>\n')
+# ---------- the small sketches, one per piece ----------
+
+def lines(*w):
+    return ''.join(f'<i class="ln {x}"></i>' for x in w)
 
 
-def piece_card(p, side=False):
-    pid, g, name, typ, get, chg, pers = p
-    short = 'LinkedIn plan' if pid == 'linkedin' else name
+def tag(t='Example', real=False):
+    return f'<span class="tg{" real" if real else ""}">{E(t)}</span>'
+
+
+def mv_fixes():
+    items = [('Company details in the footer', True), ('Privacy notice for the contact form', True),
+             ('A title for each page', False), ('Alt text on 62 images', False), ('Spec table as text', False)]
+    rows = ''.join(f'<div class="chk">{E(t)}{"<em>legal</em>" if l else ""}</div>' for t, l in items)
+    return f'<div class="mv">{tag("Your site", True)}<p class="mvh">Twelve fixes</p>{rows}<p class="more">and seven more</p></div>'
+
+
+def mv_numbers():
+    fr = ''.join(f'<div class="fr"><span>{E(x)}</span>{lines("")}</div>' for x in ['Figure', 'Compared with', 'Checked by', 'Date'])
+    return (f'<div class="mv">{tag()}<p class="mvh">Three numbers today</p><div class="nums3"><s>30%</s><s>40%</s><s>up to 50%</s></div>'
+            f'<div class="down">↓</div><div class="fact"><b>Energy cost saving, one agreed figure</b>{fr}</div></div>')
+
+
+def mv_homeproof():
+    names = ''.join(f'<span class="chipx">{E(n)}</span>' for n in BACKERS[:4]) + '<span class="chipx">and three more</span>'
+    tl = ''.join(f'<div><b>{E(a)}</b>{E(b)}</div>' for a, b in TIMELINE[:3])
+    return (f'<div class="mv site">{tag()}<p class="mk">Funders and partners</p><div class="mvnames">{names}</div>'
+            f'<div class="stl">{tl}</div><div class="fade"></div></div>')
+
+
+def mv_investor():
+    f = ''.join(f'<div class="inpx"><label>{E(x)}</label><div class="v"></div></div>' for x in ['Name', 'Fund', 'Email'])
+    return (f'<div class="mv">{tag()}<p class="mk">hotgreensolutions.com/investors</p><p class="mvh">For investors</p>'
+            '<p>Backed by Empirical Ventures, Coca-Cola Europacific Partners and others. Next round, seed, planned for 2027.</p>'
+            f'<div class="row2">{f}<div class="inpx"><label>&nbsp;</label><span class="btnx">Request the deck</span></div></div>'
+            '<p class="more">Goes straight to Georgia</p></div>')
+
+
+def mv_press():
+    items = [('Empirical Ventures, 20 Oct 2025', 'Hot Green raises £1.2m …'),
+             ('Tech.eu, 20 Oct 2025', 'HotGreen Solutions raises £1.2M …'),
+             ('Vestbee, 21 Oct 2025', 'British HotGreen Solutions raises £1.2M …')]
+    rows = ''.join(f'<div class="pr"><span>{E(a)}</span><b>{E(b)}</b></div>' for a, b in items)
+    return (f'<div class="mv">{tag("Real articles", True)}<p class="mvh">In the press</p>{rows}'
+            '<div class="mvchips"><span class="chipx">Logos</span><span class="chipx">Photos</span><span class="chipx">Fact sheet</span></div></div>')
+
+
+def mv_monthly():
+    post = lambda m: f'<div class="fact post"><b>{E(m)}</b>{lines("m", "s")}</div>'
+    return (f'<div class="mv">{tag()}<p class="mk">hotgreensolutions.com/updates</p><p class="mvh">Monthly updates</p>'
+            f'{post("November 2026")}{post("October 2026")}<div class="fade"></div></div>')
+
+
+def mv_evidence():
+    chk = ''.join(f'<div class="chk">{E(x)}</div>' for x in ['Engineering', 'Finance', 'Procurement', 'Investors'])
+    svg = ('<svg viewBox="0 0 120 70" width="100%" height="84" aria-hidden="true"><path d="M4 64 H116 M4 64 V4" stroke="#cfd6cf" stroke-width="1"/>'
+           '<path d="M6 50 C30 44, 50 30, 70 32 S100 20, 114 16" fill="none" stroke="#9fb3b8" stroke-width="2" stroke-dasharray="4 3"/></svg>')
+    return (f'<div class="mv">{tag()}<div class="row2"><div><p class="mk">Before the install</p><p class="more sm">What each approver needs</p>{chk}</div>'
+            f'<div><p class="mk">After it</p><p class="more sm">Results page</p>{svg}<p class="more">Live data, if CCEP agrees</p></div></div></div>')
+
+
+def mv_dataroom():
+    rows = ''.join(f'<div class="fold"><span>{E(x)}</span><i class="who"></i></div>' for x in
+                   ['01 Company', '02 Financials', '03 Technology and IP', '04 Demonstrator', '05 Commercial', '06 Team'])
+    return (f'<div class="mv">{tag()}<p class="mvh">Seed data room</p><div class="fold head"><span>Folder</span><span>Who opened it</span></div>{rows}</div>')
+
+
+def mv_positioning():
+    return (f'<div class="mv">{tag()}<div class="house"><div class="roof">One clear line on what HotGreen makes and who it’s for</div>'
+            '<div class="pill3"><div>Backed by CCEP and Empirical Ventures</div><div>Demonstration at a CCEP site, funded by Innovate UK</div><div>Replaces a traditional boiler, same pipework</div></div>'
+            '<div class="base">Your mission, saving manufacturers money while cutting carbon</div></div></div>')
+
+
+def mv_lookfeel():
+    return (f'<div class="mv">{tag()}<p class="mvh">Your pages, new layouts</p><div class="ba">'
+            '<figure><img src="img/site-before.jpg" alt="A section of the HotGreen homepage as it is today" loading="lazy"><figcaption>Today</figcaption></figure>'
+            f'<figure><div class="newl"><span class="slogo small">{LOGO}</span><i class="gl"></i>{lines("m", "s")}</div><figcaption>New layout, in your Framer</figcaption></figure>'
+            '</div></div>')
+
+
+def mv_product():
+    rows = ''.join(f'<div class="sr">{E(t)}</div>' for t in ['Waste heat stream', 'Up to 220°C', 'Up to 25 bar', 'COP 2.8, 10°C to 120°C', '0.5 MW modules'])
+    return (f'<div class="mv mint">{tag("Your specs", True)}<div class="sheet"><div><b class="sht">HotStack 220</b><span class="pdf">PDF</span>'
+            f'<p class="more sm">Datasheet</p>{rows}</div><img src="img/hotstack.webp" alt="" loading="lazy"></div></div>')
+
+
+def mv_working():
+    steps = [('1', 'Site survey'), ('2', 'Sizing and business case'), ('3', 'Install, as quick as 3 to 5 days with the air source module'), ('4', 'Service')]
+    s = ''.join(f'<div><b>{a}</b>{E(b)}</div>' for a, b in steps)
+    return (f'<div class="mv">{tag()}<p class="mvh">Working with HotGreen</p><div class="steps">{s}</div>'
+            '<span class="chipx">Warranty</span><span class="chipx">Spares</span><span class="chipx">Certification</span><span class="chipx">Contacts</span></div>')
+
+
+def mv_linkedin():
+    cal = ''.join(f'<i class="{"p" if i in (2, 9, 16, 23) else ""}"></i>' for i in range(28))
+    return (f'<div class="mv">{tag("Example draft")}<div class="li-post"><div class="li-top"><span class="li-av">{LOGO}</span>'
+            '<div><b class="lin">HotGreen Solutions</b><span>Draft for next week</span></div></div>'
+            '<p>The EU’s €1bn heat auction is expected to open in early December. Heat pumps with a COP of at least 1.5 get a 25% bonus when bids are ranked. Here’s what that means for food and drink plants.</p></div>'
+            f'<div class="cal">{cal}</div><p class="more">One post a week, drafted from your milestones</p></div>')
+
+
+def mv_calculator():
+    ins = ''.join(f'<div class="inpx"><label>{E(a)}</label><div class="v val">{E(b)}</div></div>'
+                  for a, b in [('Country', 'Netherlands'), ('Steam demand', '1 MW'), ('Hours a year', '6,000'), ('Your gas price', 'enter yours')])
+    return (f'<div class="mv">{tag("Sketch")}<p class="mvh">Your site, your prices</p><div class="row2"><div>{ins}</div>'
+            '<div><div class="tile"><span>Energy cost a year</span><b>from your model</b></div><div class="tile gap"><span>Carbon cost a year</span><b>from your model</b></div>'
+            '<div class="tile gap"><span>Payback</span><b>from your model</b></div></div></div></div>')
+
+
+def mv_funding():
+    return (f'<div class="mv">{tag("Real schemes", True)}<p class="mk">Example, a site in the Netherlands</p><p class="mvh">Funding you can apply for</p>'
+            '<div class="pr"><b>SDE++</b><span>Open 27 Oct to 26 Nov 2026, €8bn. Industrial heat pumps from 500 kWth with a COP of 2.3 or more</span></div>'
+            '<div class="pr"><b>EU heat auction</b><span>Expected to open in early December 2026</span></div>'
+            '<p class="more">Last checked 25 September 2026</p></div>')
+
+
+def mv_auction():
+    facts = ['€1bn budget', 'Expected to open in early December 2026', '25% ranking bonus for heat pumps with a COP of at least 1.5', 'Subsidy paid for up to five years']
+    rows = ''.join(f'<div class="chk">{E(x)}</div>' for x in facts)
+    return f'<div class="mv">{tag("Real rules", True)}<p class="mk">One page guide</p><p class="mvh">The EU heat auction, for food and drink plants</p>{rows}</div>'
+
+
+def mv_routes():
+    tabs = ''.join(f'<span class="{"on" if t == "Site assessment" else ""}">{E(t)}</span>' for t in ['Investor', 'Site assessment', 'Customer', 'Partner', 'Press'])
+    f = ''.join(f'<div class="inpx"><label>{E(x)}</label><div class="v"></div></div>' for x in ['Steam demand', 'Steam temperature', 'Hours a year', 'Current fuel'])
+    return f'<div class="mv">{tag()}<div class="tabs">{tabs}</div><div class="row2">{f}</div><div class="mvbtn"><span class="btnx">Send to engineering</span></div></div>'
+
+
+def mv_assessment():
+    rows = [('Brewery', 'Draft ready', 'ok'), ('Dairy', 'Waiting for metering data', 'wait'), ('Distillery', 'Engineer checking', 'new'), ('Food plant', 'Draft ready', 'ok')]
+    r = ''.join(f'<div class="rowq"><span>{E(t)}</span><span class="tag {k}">{E(s)}</span></div>' for t, s, k in rows)
+    return f'<div class="mv">{tag("Example rows")}<p class="mk">Internal web app</p><p class="mvh">This week’s enquiries</p>{r}</div>'
+
+
+def mv_tracker():
+    cols = [('Enquiry', 2), ('Assessment', 2), ('Proposal', 1), ('Budget approved', 1)]
+    cd = '<div class="cd"><b>Site</b><i class="ln m"></i><span>Boiler age</span><i class="ln s"></i><span>Shutdown</span><i class="ln s"></i></div>'
+    c = ''.join(f'<div class="col"><span>{E(n)}</span>{cd * k}</div>' for n, k in cols)
+    return f'<div class="mv">{tag()}<p class="mvh">Pipeline, by site</p><div class="kan">{c}</div></div>'
+
+
+def mv_targets():
+    top = max(n for _, _, n in ETS)
+    bars = ''.join(
+        f'<div class="bar{" oth" if s == "Other types" else ""}" tabindex="0"><span class="t">{E(s)}</span><span class="tr"><span class="f" style="width:{n / top * 100:.1f}%"></span></span>'
+        f'<span class="n">{n}</span><span class="tip">{E(full)}, {n} {"site" if n == 1 else "sites"}</span></div>' for s, full, n in ETS)
+    table = '<table class="sr-only"><caption>UK food and drink sites in the emissions trading register, by type</caption>' + ''.join(
+        f'<tr><th>{E(full)}</th><td>{n}</td></tr>' for _, full, n in ETS) + '</table>'
+    return (f'<div class="mv tall">{tag("Real data", True)}<p class="mvh">68 UK food and drink sites, by type</p>'
+            f'<div class="bars">{bars}</div>{table}<p class="src">UK ETS compliance report 2026, open accounts</p></div>')
+
+
+def mv_outbound():
+    seq = [('Step 1', 'Email with the demonstrator results'), ('Step 2', 'LinkedIn note from Georgia'), ('Step 3', 'Follow up with a site assessment offer')]
+    s = ''.join(f'<div><b>{E(a)}</b><span>{E(b)}</span></div>' for a, b in seq)
+    return f'<div class="mv">{tag()}<p class="mvh">A campaign, once there’s data</p><div class="seq">{s}</div><p class="more">Written and sent by us, within each country’s rules</p></div>'
+
+
+def mv_digest():
+    return (f'<div class="mv">{tag("Real 2026 items", True)}<p class="mk">Weekly email</p><p class="mvh">Regulation and funding</p>'
+            '<div class="pr"><span>European Commission, 24 Sep 2026</span><b>Rules published for the €1bn industrial heat auction</b></div>'
+            '<div class="pr"><span>RVO, Netherlands</span><b>SDE++ opens 27 October with €8bn</b></div><div class="fade"></div></div>')
+
+
+def mv_watch():
+    sec = lambda h: f'<p class="mk sp">{E(h)}</p>{lines("m", "s")}'
+    return f'<div class="mv">{tag()}<p class="mvh">Competitor watch, monthly</p>{sec("New products")}{sec("Patents")}{sec("Grants")}</div>'
+
+
+def mv_content():
+    return (f'<div class="mv">{tag("Example draft")}<p class="mk">Waiting for your approval</p><div class="li-post gap"><p class="flush">'
+            'Dutch plants can apply for SDE++ from 27 October. Industrial heat pumps from 500 kWth qualify if their COP is at least 2.3.</p></div>'
+            '<div class="appr"><span class="btnx">Approve</span><span class="btnx o">Edit</span></div></div>')
+
+
+def mv_update():
+    f = ''.join(f'<div class="inpx"><label>{E(x)}</label><div class="v"></div></div>' for x in ['Milestones this month', 'Numbers', 'What you need from investors'])
+    return f'<div class="mv form3">{tag()}<p class="mvh">Monthly update, short form</p>{f}<div class="mvbtn"><span class="btnx">Draft it for Georgia</span></div></div>'
+
+
+# ---------- the big sketches, one per group ----------
+
+def hv_B():
+    names = ''.join(f'<span class="chipx">{E(n)}</span>' for n in BACKERS)
+    tl = ''.join(f'<div><b>{E(a)}</b>{E(b)}</div>' for a, b in TIMELINE)
+    return (f'<figure class="hv rv"><div class="fbar dark"><i></i><i></i><i></i><span>hotgreensolutions.com</span>{tag("Sketch")}</div>'
+            f'<div class="sbody"><nav class="snav" aria-hidden="true"><span class="slogo">{LOGO}</span><span>Product</span><span>Applications</span><span>Working with us</span><span>News</span><span class="sp"></span><span class="btnx o">For investors</span></nav>'
+            '<div class="shero"><div><p class="mk">Industrial heat pumps</p><h4>Steam from electricity, for food and drink plants</h4>'
+            '<p>HotGreen makes industrial heat pumps that replace a traditional boiler and use your existing pipework, so there’s no need to redesign your process.</p>'
+            '<div class="sbtns"><span class="btnx">Request a site assessment</span><span class="btnx o">See the specs</span></div></div>'
+            '<img src="img/hotstack.webp" alt="HotGreen’s HotStack heat pump" width="720" height="551"></div>'
+            f'<div class="sproof"><div><p class="mk">Funders and partners</p><div class="gap">{names}</div></div><div><p class="mk">Where HotGreen stands</p><div class="stl gap">{tl}</div></div></div>'
+            '</div></figure>')
+
+
+def hv_C():
+    rows = ''.join(f'<tr><td>{E(a)}</td><td>{E(b)}</td><td>{E(c)}</td></tr>' for a, b, c in SPEC)
+    apps = ''.join(f'<span class="chipx">{E(a)}</span>' for a in APPS)
+    return (f'<figure class="hv rv"><div class="fbar"><i></i><i></i><i></i><span>hotgreensolutions.com/hotstack</span>{tag("Your real specs", True)}</div>'
+            '<div class="pbody"><div><p class="crumb">Products</p><h4>HotStack</h4>'
+            '<p>Low carbon steam for industry, from air or from a waste heat stream.</p>'
+            '<img class="pimg" src="img/hotstack.webp" alt="HotGreen’s HotStack heat pump" width="720" height="551">'
+            f'<div class="apps">{apps}</div></div>'
+            f'<div><table class="spec"><thead><tr><th></th><th>HotStack 120</th><th>HotStack 220</th></tr></thead><tbody>{rows}</tbody></table>'
+            '<div class="sbtns"><span class="btnx">Download the datasheet</span><span class="btnx o">Request a site assessment</span></div></div></div></figure>')
+
+
+def hv_D():
+    ins = ''.join(f'<div class="inp"><label>{E(a)}</label><div class="v{" phv" if ph else ""}">{E(b)}</div></div>' for a, b, ph in
+                  [('Country', 'Netherlands', False), ('Steam demand', '1 MW', False), ('Hours a year', '6,000', False),
+                   ('Steam temperature', '120°C', False), ('Your gas price', 'Enter yours, or use the official average', True),
+                   ('Your electricity price', 'Enter yours, or use the official average', True)])
+    tiles = ''.join(f'<div class="tile"><span>{E(t)}</span><b>From your model</b></div>' for t in ['Energy cost a year', 'Carbon cost a year', 'Payback'])
+    return (f'<figure class="hv rv"><div class="fbar"><i></i><i></i><i></i><span>hotgreensolutions.com/savings</span>{tag("Sketch")}</div>'
+            f'<div class="abody"><div class="apane"><p class="mk">Your site</p>{ins}</div>'
+            f'<div class="apane2"><p class="mk">Your result</p><div class="tiles">{tiles}</div>'
+            '<div class="chartph">A before and after chart of cost and carbon, drawn from your business case model</div>'
+            '<div class="fundrow"><b>Funding you can apply for in the Netherlands</b><div class="dates"><span>SDE++, 27 Oct to 26 Nov 2026</span><span>EU heat auction, expected early December 2026</span></div></div>'
+            '<p class="note">Every assumption is shown. Default prices come from official statistics, with the date they were last updated.</p></div></div></figure>')
+
+
+def hv_E():
+    n = lambda c, t, hot=False: f'<div class="node{" key" if hot else ""}"><b>{E(c) if c else "&nbsp;"}</b>{E(t)}</div>'
+    ar = '<span class="arr" aria-hidden="true">→</span>'
+    inbound = ar.join([n('', 'Your website'), n('E1', 'Enquiry forms'), n('E2', 'Site assessment tool', True), n('E3', 'Pipeline tracker', True), n('', 'Proposal')])
+    outbound = ar.join([n('E4', 'Target list'), n('E5', 'Campaigns'), n('E3', 'Pipeline tracker', True)])
+    return (f'<figure class="hv rv"><div class="fbar"><i></i><i></i><i></i><span>how an enquiry moves</span>{tag("Diagram")}</div>'
+            f'<div class="flow"><p class="lname">Inbound, today</p><div class="lane">{inbound}</div>'
+            f'<p class="lname second">Outbound, once there’s data from the demonstrator</p><div class="lane">{outbound}</div>'
+            '<p class="note">Every site sits in one tracker, whether it found you or you found it.</p></div></figure>')
+
+
+def hv_F():
+    items = [('European Commission, 24 Sep 2026', 'Rules published for the €1bn industrial heat auction',
+              'Heat pumps with a COP of at least 1.5 get a 25% bonus when bids are ranked. Expected to open to bidders in early December.'),
+             ('RVO, Netherlands', 'SDE++ opens 27 October with €8bn',
+              'Includes an industrial heat pump category from 500 kWth with a COP of at least 2.3.')]
+    it = ''.join(f'<div class="item"><b>{E(h)}</b><span class="src">{E(s)}</span><p>{E(p)}</p></div>' for s, h, p in items)
+    return (f'<figure class="hv rv"><div class="fbar"><i></i><i></i><i></i><span>inbox</span>{tag("Example issue, real 2026 items")}</div>'
+            f'<div class="mail"><p class="from">HotGreen weekly, to Sanya and Georgia</p><h5>Regulation and funding, this week</h5>{it}'
+            '<div class="item"><b>Coming up</b><div class="dates"><span>27 Oct, SDE++ opens</span><span>26 Nov, SDE++ closes</span><span>Early Dec, EU heat auction expected to open</span></div></div></div></figure>')
+
+
+HERO = {'B': hv_B, 'C': hv_C, 'D': hv_D, 'E': hv_E, 'F': hv_F}
+
+# id, group, code, name, text, periods, sketch
+PIECES = [
+    ('fixes', 'A', 'A', 'The fix list', 'Twelve fixes to your current site, two of them legal. We’ll give you the list, or make the changes for you.', ['p1'], mv_fixes),
+    ('numbers', 'B', 'B1', 'One set of numbers', 'We agree every public figure with your engineers once, and note where each one comes from. After that the site, the deck and LinkedIn all say the same thing.', ['p1'], mv_numbers),
+    ('homeproof', 'B', 'B2', 'Homepage proof section', 'Your backers named, a dated timeline, and the demonstrator described as it is today.', ['p1'], mv_homeproof),
+    ('investor', 'B', 'B3', 'Investor page', 'Who backs you, what stage you’re at, and a form that goes straight to Georgia. The deck goes out through a tracked link, so she can see who opened it.', ['p1'], mv_investor),
+    ('press', 'B', 'B4', 'Press kit', 'Every article about HotGreen so far, ready for your news page, plus approved facts, logos and photos.', ['p1'], mv_press),
+    ('monthly', 'B', 'B5', 'Monthly update page', 'A short public version of Georgia’s monthly investor email.', ['p1'], mv_monthly),
+    ('evidence', 'B', 'B6', 'Demonstrator results page', 'Before the install, a list of what each buyer and investor needs to see. After it, a page with the results.', ['p2', 'p4'], mv_evidence),
+    ('dataroom', 'B', 'B7', 'Data room', 'Folders and an index for the seed round, and you can see which investor read what.', ['p4'], mv_dataroom),
+    ('positioning', 'C', 'C1', 'Positioning and message', 'A workshop and a short guide, built on your brand guidelines. It gives you one clear line on what HotGreen makes and who it’s for.', ['p2'], mv_positioning),
+    ('lookfeel', 'C', 'C2', 'New look in Framer', 'New layouts for the pages you choose. You can still edit everything yourselves.', ['p2'], mv_lookfeel),
+    ('product', 'C', 'C3', 'Product pages and datasheets', 'A page and a PDF datasheet for each HotStack model with the specs as text, plus a page for each application.', ['p2'], mv_product),
+    ('working', 'C', 'C4', 'Working with HotGreen page', 'Warranty, service, spares, certification and how an install works, for your buyers’ procurement teams.', ['p2'], mv_working),
+    ('linkedin', 'C', 'C5', 'On the side, a LinkedIn plan', 'A monthly posting plan with drafts for the company page and Georgia’s profile. You post them yourselves.', ['p1'], mv_linkedin),
+    ('calculator', 'D', 'D1', 'Savings calculator', 'A smaller version of your business case model. A customer enters their country, steam demand, hours and energy prices, then sees cost, carbon and payback, with every assumption shown.', ['p2'], mv_calculator),
+    ('funding', 'D', 'D2', 'Funding finder', 'Shows the grants and tax relief a customer can claim in their country, with the date each one was last checked.', ['p2'], mv_funding),
+    ('auction', 'D', 'D3', 'EU heat auction guide', 'The EU’s €1bn heat auction is expected to open in early December 2026, and heat pumps with a COP of at least 1.5 get a 25% bonus in the ranking. A one page guide shows EU prospects how to bid with a HotStack.', ['p1'], mv_auction),
+    ('routes', 'E', 'E1', 'Enquiry forms', 'Separate forms for investors, site assessments, customers, partners and press, so each enquiry reaches the right person.', ['p2'], mv_routes),
+    ('assessment', 'E', 'E2', 'Site assessment tool', 'An internal web app. An enquiry’s steam data goes in, your sizing and business case model runs, and your engineer checks a first draft instead of starting from scratch. We’d measure the hours it saves.', ['p3'], mv_assessment),
+    ('tracker', 'E', 'E3', 'Pipeline tracker', 'A CRM set up around sites, tracking boiler age, planned shutdowns and budget dates.', ['p3'], mv_tracker),
+    ('targets', 'E', 'E4', 'Target list', 'Built from public registers. The UK emissions trading register alone lists 68 food and drink sites run by 50 companies.', ['p4'], mv_targets),
+    ('outbound', 'E', 'E5', 'Outbound', 'Once there’s data from the demonstrator, we write and run the campaigns within each country’s rules.', ['p4'], mv_outbound),
+    ('digest', 'F', 'F1', 'Regulation and funding digest', 'A weekly email on changes to Scope 1 to 3, the ETS and funding, taken from official sources.', ['p3'], mv_digest),
+    ('watch', 'F', 'F2', 'Competitor watch', 'A monthly email on competitors’ new products, patents and grants.', ['p3'], mv_watch),
+    ('content', 'F', 'F3', 'Content helper', 'Drafts news items, LinkedIn posts and articles from your agreed numbers. You approve each one.', ['p3'], mv_content),
+    ('update', 'F', 'F4', 'Investor update helper', 'Drafts Georgia’s monthly investor email from a short form.', ['p3'], mv_update),
+]
+CHIP_LABEL = {('evidence', 'p2'): 'Demonstrator plan', ('evidence', 'p4'): 'Results page', ('linkedin', 'p1'): 'LinkedIn plan'}
+SHORT = {'linkedin': 'LinkedIn plan'}
+assert len(PIECES) == 25
+
+
+def piece_card(p):
+    pid, g, code, name, text, pers, mv = p
     when = WHEN[pers[0]] + (' then ' + WHEN[pers[1]] if len(pers) > 1 else '')
-    return (f'<article class="piece {g}{" side" if side else ""} rv" data-id="{pid}" data-name="{E(short)}">'
-            f'<div class="ph"><span class="type">{E(typ)}</span><span class="when">{E(when)}</span></div>'
-            f'<h4>{E(name)}</h4><p class="get">{E(get)}</p>'
-            f'<p class="chg"><span class="lbl">What changes</span>{E(chg)}</p>'
+    solo = ' solo' if g == 'A' else ''
+    label = f'{code} {SHORT.get(pid, name)}'
+    return (f'<article class="piece {GCLS[g]}{solo} rv" data-id="{pid}" data-name="{E(label)}">{mv()}'
+            f'<h4><span class="code">{E(code)}</span>{E(name)}</h4><p class="get">{E(text)}</p>'
+            f'<div class="ph"><span class="when">{E(when)}</span></div>'
             f'<button class="pick" type="button" data-pick="{pid}" aria-pressed="false">'
             '<span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span>'
             '<span class="on-t">On your shortlist</span></button></article>')
@@ -467,73 +368,41 @@ def piece_card(p, side=False):
 
 def menu():
     out = []
-    for i, (g, title) in enumerate(GROUPS, 1):
-        items = [p for p in PIECES if p[1] == g]
-        out.append(f'<div class="grp {g}"><div class="gh rv"><span class="gno">{i}</span><div><h3>{E(title)}</h3>'
-                   f'<span class="cnt">{len(items)} pieces</span></div></div><div class="pieces">'
-                   + ''.join(piece_card(p) for p in items) + '</div>')
-        if g == 'g2':
-            out.append(piece_card(SIDE, side=True))
-        out.append('</div>')
+    for letter, cls, name, what in GROUPS:
+        items = [p for p in PIECES if p[1] == letter]
+        extra = ''
+        if letter == 'A':
+            extra = ('<div class="piece gA aside rv"><p class="get">The full list is on its own page, with what to change and where.</p>'
+                     '<a class="btn ghost" href="fixes.html">See the twelve fixes →</a></div>')
+        out.append(f'<div class="grp {cls}" id="group-{letter}"><div class="gh rv"><span class="gno">{letter}</span><div><h3>{E(name)}</h3>'
+                   f'<span class="what">{E(what)}</span></div></div>'
+                   + (HERO[letter]() if letter in HERO else '')
+                   + '<div class="pieces">' + ''.join(piece_card(p) for p in items) + extra + '</div></div>')
     return ''.join(out)
 
 
 def chips(per):
     out = []
-    for p in PIECES + [SIDE]:
-        if per in p[6]:
-            label = CHIP_LABEL.get((p[0], per), p[2])
+    for p in PIECES:
+        if per in p[5]:
+            label = CHIP_LABEL.get((p[0], per), p[3])
             out.append(f'<button class="chip" type="button" data-pick="{p[0]}" aria-pressed="false">'
-                       f'<span class="dot {p[1]}" aria-hidden="true"></span>{E(label)}</button>')
+                       f'<span class="dot {GCLS[p[1]]}" aria-hidden="true"></span><b class="ccode">{E(p[2])}</b>{E(label)}</button>')
     return ''.join(out)
 
 
 def order():
     months = ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
     mh = ''.join(f'<span class="{"y y26" if m == "Oct" else "y y27" if m == "Jan" else ""}">{m}</span>' for m in months)
-    ms = [
-        ('c-dec pt from', 'Early December 2026', 'EU heat auction expected to open'),
-        ('c4-9', 'First half of 2027', 'First unit into the CCEP site, planned'),
-        ('c-may pt to', '31 May 2027', 'Innovate UK project ends'),
-        ('c10-12', 'Around Q3 2027', 'Seed round, planned'),
-    ]
+    ms = [('c-dec pt from', 'Early December 2026', 'EU heat auction expected to open'),
+          ('c4-9', 'First half of 2027', 'First unit into the CCEP site, planned'),
+          ('c-may pt to', '31 May 2027', 'Innovate UK project ends'),
+          ('c10-12', 'Around Q3 2027', 'Seed round, planned')]
     rows = ''.join(f'<div class="ms-row"><div class="ms {c}"><span class="md">{E(d)}</span>{E(t)}</div></div>' for c, d, t in ms)
-    phases = ''.join(f'<div class="phase {pid}"><h4>{E(t)}</h4><p class="at">{E(at)}</p><div class="chips">{chips(pid)}</div></div>'
-                     for pid, t, at in PERIODS)
-    legend = ''.join(f'<span><i class="dot {g}"></i>{E(t)}</span>' for g, t in GROUPS)
+    phases = ''.join(f'<div class="phase {pid}"><h4>{E(t)}</h4><p class="at">{E(at)}</p><div class="chips">{chips(pid)}</div></div>' for pid, t, at in PERIODS)
+    legend = ''.join(f'<span><i class="dot {c}"></i>{l}. {E(n)}</span>' for l, c, n, _ in GROUPS)
     return (f'<div class="legend rv">{legend}</div>'
             f'<div class="tl rv"><div class="months" aria-hidden="true">{mh}</div>{rows}<div class="phases">{phases}</div></div>')
-
-
-def mocks():
-    names = ['Coca-Cola Europacific Partners', 'Empirical Ventures', 'Deep Science Ventures', 'First Imagine!',
-             'Conduit EIS Impact Fund', 'Almanac Ventures', 'Net Zero Technology Centre']
-    a = ('<figure class="mock rv"><div class="frame"><div class="fbar"><i></i><i></i><i></i><span>hotgreensolutions.com</span></div>'
-         '<div class="fbody"><span class="fk">Funders and partners</span><div class="names">'
-         + ''.join(f'<span>{E(n)}</span>' for n in names) +
-         '</div><span class="fk">Where HotGreen stands</span><div class="tline">'
-         '<div><b>Oct 2025</b>£1.2m round led by Empirical Ventures</div>'
-         '<div><b>2025</b>One of three startups Coca-Cola Europacific Partners invested in that year</div>'
-         '<div><b>2026</b>Innovate UK grant for a 50&nbsp;kW demonstration at a CCEP site</div>'
-         '<div><b>2027</b>First unit at the CCEP site, planned for the first half of the year</div>'
-         '</div></div></div><figcaption><b>Proof on your homepage</b><span>Backers in words, and a dated line of where HotGreen stands.</span></figcaption></figure>')
-    fields = ['Country', 'Steam demand, MW', 'Hours a year', 'Steam temperature', 'Your gas price', 'Your electricity price']
-    b = ('<figure class="mock rv"><div class="frame"><div class="fbar"><i></i><i></i><i></i><span>hotgreensolutions.com/savings</span></div>'
-         '<div class="fbody"><span class="fk">Savings calculator</span><h5>Your site, your prices</h5><div class="fld">'
-         + ''.join(f'<div><label>{E(f)}</label><div class="in"></div></div>' for f in fields) +
-         '</div><div class="outs">'
-         + ''.join(f'<div class="out"><span>{E(o)}</span><span class="sk"></span></div>'
-                   for o in ['Energy cost a year, before and after', 'Carbon cost a year, before and after', 'Payback', 'Grants you can claim'])
-         + '</div><p class="fnote">Every assumption shown. Default prices from official statistics, with the date they were last updated.</p>'
-         '</div></div><figcaption><b>Savings calculator</b><span>Your customer’s own prices go in. Your model does the sums.</span></figcaption></figure>')
-    rows = [('Enquiry from a brewery', 'Draft ready', 'ok'), ('Enquiry from a dairy', 'Waiting for metering data', 'wait'),
-            ('Enquiry from a distillery', 'Engineer checking', 'new'), ('Enquiry from a food plant', 'Draft ready', 'ok')]
-    c = ('<figure class="mock rv"><div class="frame"><div class="fbar"><i></i><i></i><i></i><span>internal · site assessments</span></div>'
-         '<div class="fbody"><span class="fk">Site assessments · example rows</span><h5>This week’s enquiries</h5>'
-         + ''.join(f'<div class="rowq"><span>{E(t)}</span><span class="tag {k}">{E(s)}</span></div>' for t, s, k in rows) +
-         '<p class="fnote">Steam demand, temperatures, hours and metering data in. Your sizing and business case model run. A first draft out for your engineer.</p>'
-         '</div></div><figcaption><b>Site assessment tool</b><span>Enquiries arrive with steam data, and your engineer checks a draft.</span></figcaption></figure>')
-    return f'<div class="mocks">{a}{b}{c}</div>'
 
 
 WORK = [
@@ -548,25 +417,39 @@ WORK = [
 ]
 
 
+def page(title, desc, body, script=True):
+    css = read('base.css') + read('mock.css')
+    return ('<!doctype html>\n<html lang="en-GB">\n<head>\n<meta charset="utf-8">\n'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
+            f'<title>{E(title)}</title>\n<meta name="description" content="{E(desc)}">\n'
+            '<meta name="robots" content="noindex,nofollow">\n'
+            f'<link rel="icon" href="{FAVICON}">\n'
+            '<link rel="preload" href="fonts/plex-mono-500.woff2" as="font" type="font/woff2" crossorigin>\n'
+            f'<style>{css}</style>\n</head>\n<body>\n<div id="prog"></div>\n{body}\n'
+            + (f'<script>{read("app.js")}</script>\n' if script else '') + '</body>\n</html>\n')
+
+
 def index():
-    stats = [('Q3 2027', 'The seed round, planned for around the third quarter'),
-             ('H1 2027', 'The first unit goes into a Coca-Cola Europacific Partners site'),
-             ('Inbound', 'Customers come through industry contacts and accelerators'),
-             ('Later', 'Outbound, once there’s real world data from the first deployment')]
-    real = ['Coca-Cola Europacific Partners names HotGreen in its 2025 annual report as one of three startups it invested in that year.',
-            'UK Research and Innovation lists your Innovate UK grant for a 50\u00a0kW thermal demonstration at a CCEP site, a twelve month project that ends in May 2027.',
-            'Empirical Ventures, Tech.eu and Vestbee all cover the £1.2m raise.']
-    site = ['The homepage says “Some of our key funders and partners are” and then shows logos, with no names in the text.',
-            'The raise, the grant and the demonstrator aren’t mentioned on any page.',
-            'The HotStack specs sit inside one image on the Solutions page.']
+    stats = [('Q3 2027', 'Seed round, planned'),
+             ('H1 2027', 'First unit goes into a Coca-Cola Europacific Partners site'),
+             ('Inbound', 'Customers find you through industry contacts and accelerators'),
+             ('Later', 'Outbound, once there’s real world data')]
+    elsewhere = ['CCEP’s 2025 annual report names HotGreen as one of three startups it invested in that year.',
+                 'UK Research and Innovation lists your Innovate UK grant for a 50 kW demonstration at a CCEP site. It’s a twelve month project ending in May 2027.',
+                 'Empirical Ventures, Tech.eu and Vestbee all wrote about the £1.2m raise.']
+    onsite = ['The homepage shows your backers as logos, with no names in the text.',
+              'The raise, the grant and the demonstrator aren’t mentioned on any page.',
+              'The product specs sit inside one image.']
     nums = [('30%', 'Your Solutions page', '“Reduce your energy bill by 30%”'),
             ('40%', 'Your LinkedIn page', '“reduce energy costs by 40% compared to competitors”'),
             ('Up to 50%', 'Empirical’s announcement', '“up to 50% energy savings”')]
     needs = ['Your business case model, or the inputs behind it',
              'Thirty minutes with an engineer to agree the numbers',
-             'Framer access and your brand guidelines',
-             'What you’re able to say in public about CCEP, the demonstrator and your investors']
+             'Access to Framer and your brand guidelines',
+             'What you can say in public about CCEP, the demonstrator and your investors']
     li = lambda xs: ''.join(f'<div class="li"><span class="mk">0{i}</span><span>{E(x)}</span></div>' for i, x in enumerate(xs, 1))
+    start = [('B1', 'One set of numbers'), ('B2', 'Homepage proof section'), ('B3', 'Investor page'), ('D1', 'Savings calculator')]
+    path = '<span class="ar" aria-hidden="true">→</span>'.join(f'<span class="step"><b>{a}</b>{E(b)}</span>' for a, b in start)
     body = f'''
 <section id="cover" class="slide">
   <div class="cover-photo" aria-hidden="true"></div><div class="cover-veil" aria-hidden="true"></div>
@@ -574,81 +457,80 @@ def index():
     <div class="brandrow">{MARK}<span class="nm">Astra Agency</span></div>
     <p class="kick cover-k">Proposal for HotGreen</p>
     <h1 class="cover-h">Your proof is <span class="hot">stronger</span> than your <span class="grn">website</span>.</h1>
-    <p class="cover-sub">Here’s what we’d build, in five groups you can pick from, and the order that fits your next twelve months.</p>
+    <p class="cover-sub">Here’s what we’d build, split into six groups from A to F. Pick the ones you want. The timeline shows when each one fits.</p>
     <div class="cover-meta"><span>Prepared for <b>Sanya Chhugani</b> and <b>Georgia Ware</b></span><span><b>HotGreen Solutions</b></span><span>September 2026</span></div>
-    <nav class="toc" aria-label="Sections"><a href="#told">What you told us</a><a href="#proof">Your proof</a><a href="#menu">The menu</a><a href="#order">The order</a><a href="#start">Where to start</a><a href="#team">Who builds it</a><a href="#next">Next step</a></nav>
+    <nav class="toc" aria-label="Sections"><a href="#told">What you told us</a><a href="#proof">What we found</a><a href="#menu">The menu</a><a href="#order">The timeline</a><a href="#start">Where we’d start</a><a href="#team">Who we are</a><a href="#next">Next step</a></nav>
   </div>
 </section>
 
 <section id="told" class="slide dark">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">01 / What you told us</span><span class="note">on the call, 24 September</span></div>
+    <div class="eyebrow rv"><span class="kick">1 / What you told us</span><span class="note">on the call, 24 September</span></div>
     <h2 class="lead rv">Investors first, and customers are already <span class="hg">coming in</span>.</h2>
     <div class="stats rv">{''.join(f'<div class="stat"><b>{E(a)}</b><span>{E(b)}</span></div>' for a, b in stats)}</div>
-    <blockquote class="q rv"><p>“a very credible and reliable equipment provider rather than a startup”</p><cite>How you want HotGreen to read, without losing what makes it different</cite></blockquote>
-    <p class="say rv">You’d like to handle the quick fixes in house, SEO and a news page. Later on you’d like a smaller version of the business case model you share with customers on the site, and something on the Scope 1, 2 and 3 and ETS rules that keep changing.</p>
+    <blockquote class="q rv"><p>“a very credible and reliable equipment provider rather than a startup”</p><cite>How you want HotGreen to come across, without losing what makes it different</cite></blockquote>
+    <p class="say rv">You’ll handle the quick fixes yourselves, SEO and a news page. Later you’d like a small version of your business case model on the site, and something on Scope 1, 2 and 3 and the ETS rules.</p>
   </div>
 </section>
 
 <section id="proof" class="slide deep">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">02 / Your proof</span></div>
-    <h2 class="lead rv">Your proof already exists. It lives on <span class="hl">other people’s sites</span>.</h2>
+    <div class="eyebrow rv"><span class="kick">2 / What we found</span></div>
+    <h2 class="lead rv">Your proof is on other people’s websites, <span class="hl">not yours</span>.</h2>
     <div class="stand">
-      <div class="card real rv"><h3>On other people’s sites</h3>{li(real)}</div>
-      <div class="card site rv"><h3>On hotgreensolutions.com</h3>{li(site)}</div>
+      <div class="card real rv"><h3>Elsewhere online</h3>{li(elsewhere)}</div>
+      <div class="card site rv"><h3>On your website</h3>{li(onsite)}</div>
     </div>
     <div class="shots">
       <figure class="shot rv"><img src="img/site-logos.jpg" width="1200" height="300" alt="The partners row on the HotGreen homepage, showing logos under the line Some of our key funders and partners are" loading="lazy"><figcaption>Your homepage, 25 September 2026. Seven logos in a carousel, no names in the text.</figcaption></figure>
       <figure class="shot rv"><img src="img/site-spec.jpg" width="1000" height="490" alt="The HotStack 120 and HotStack 220 spec table on the HotGreen Solutions page" loading="lazy"><figcaption>Your Solutions page. The spec table is one image.</figcaption></figure>
     </div>
     <div class="three">
-      <h3 class="rv">The savings figure changes with where you read it.</h3>
+      <h3 class="rv">The savings number changes with where you read it.</h3>
       <div class="nums">{''.join(f'<div class="num rv"><b>{E(a)}</b><span class="src">{E(b)}</span><span class="quo">{E(c)}</span></div>' for a, b, c in nums)}</div>
-      <p class="say rv">They measure different things, and a reader sees three numbers. The yearly saving is €250k for a typical facility on the Solutions page and $250,000 per MW on LinkedIn.</p>
+      <p class="say rv">They measure different things, but a reader just sees three numbers.</p>
     </div>
-    <div class="std rv"><p>The 100+ Accelerator’s own guidance says a website “should clearly present your technology, traction, and company information to help evaluators assess your solution”. <b>That’s the standard we’d build to.</b></p></div>
+    <div class="std rv"><p>The 100+ Accelerator says a website “should clearly present your technology, traction, and company information to help evaluators assess your solution”. <b>That’s what we’d build to.</b></p></div>
   </div>
 </section>
 
 <section id="menu" class="slide dark">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">03 / The menu</span><span class="note">five groups, 23 pieces, and a LinkedIn plan on the side</span></div>
-    <h2 class="lead rv">Five groups to choose from, <span class="hg">in any order</span>.</h2>
-    <p class="say rv">Pick one piece or several, and add them to your shortlist as you go.</p>
+    <div class="eyebrow rv"><span class="kick">3 / The menu</span><span class="note">six groups, A to F</span></div>
+    <h2 class="lead rv">Six groups. <span class="hg">Pick any of them</span>.</h2>
+    <p class="say rv">Each group shows what we’d build and roughly what it would look like. The screens are sketches, filled in with your real facts where we have them.</p>
     {menu()}
   </div>
 </section>
 
 <section id="order" class="slide deep">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">04 / The order</span></div>
-    <h2 class="lead rv">The order that fits your <span class="hg">next twelve months</span>.</h2>
+    <div class="eyebrow rv"><span class="kick">4 / The timeline</span></div>
+    <h2 class="lead rv">When each part fits.</h2>
     {order()}
   </div>
 </section>
 
 <section id="start" class="slide paper">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">05 / Where to start</span><span class="note">sketches, not final screens</span></div>
-    <h2 class="lead rv">Start with the <span class="hg">numbers</span>.</h2>
-    <p class="say rv">One set of numbers, proof on your homepage and the quiet investor page come first. The savings calculator follows straight after, because it runs on the same numbers. Each one serves investors and customers at the same time, and each one rests on your own model rather than a template.</p>
-    {mocks()}
+    <div class="eyebrow rv"><span class="kick">5 / Where we’d start</span></div>
+    <h2 class="lead rv">Start with <span class="hg">B and D</span>.</h2>
+    <p class="say rv">Start with one set of numbers, the homepage proof section and the investor page. The savings calculator comes next, because it runs on the same numbers. Together they help with investors and customers at the same time.</p>
+    <div class="path rv">{path}</div>
   </div>
 </section>
 
 <section id="need" class="slide dark">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">06 / From you</span></div>
+    <div class="eyebrow rv"><span class="kick">6 / What we need from you</span></div>
     <h2 class="lead rv">Four things we’d need from you.</h2>
     <div class="needs">{''.join(f'<div class="need rv"><span class="n">0{i}</span><p>{E(t)}</p></div>' for i, t in enumerate(needs, 1))}</div>
-    <div class="fixcta rv"><div><h3>A free fix list for the current site</h3><p>Twelve fixes, most of them quick edits in Framer. Two are legal requirements for a UK company website.</p></div><a class="btn ghost" href="fixes.html">Open the fix list →</a></div>
   </div>
 </section>
 
 <section id="team" class="slide paper">
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">07 / Who builds it</span></div>
+    <div class="eyebrow rv"><span class="kick">7 / Who we are</span></div>
     <h2 class="lead rv">Astra and Amwisesa build it as <span class="hg">one team</span>.</h2>
     <p class="say rv">The team behind Astra has shipped for Unilever, Pertamina and the World Bank. Astra and Amwisesa work as one team. Astra runs the strategy and the project from the Netherlands, and Amwisesa, our development partner, builds. Their developers have spent more than ten years making apps, websites and management systems for brands like Unilever, Nestlé and IKEA.</p>
     <p class="say rv">For Pertamina they rebuilt 470 drilling engineering formulas as a phone calculator that works offline, for engineers on offshore rigs. It’s the same kind of work as turning your business case model into a tool.</p>
@@ -664,19 +546,19 @@ def index():
 <section id="next" class="slide">
   <div class="band" aria-hidden="true"></div><div class="band-veil" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">08 / Next step</span><span class="note">thirty minutes</span></div>
-    <h2 class="lead rv">Pick your pieces on a <span class="hg">thirty minute call</span>.</h2>
-    <p class="say rv">Tell us which pieces you want, and we’ll come back with a price and a date for each.</p>
-    <div class="short rv"><h3>Your shortlist</h3><ol id="shortlist"></ol><p id="short-empty" class="empty">Nothing on it yet. Add pieces from the menu.</p>
+    <div class="eyebrow rv"><span class="kick">8 / Next step</span></div>
+    <h2 class="lead rv">Pick your groups on a <span class="hg">thirty minute call</span>.</h2>
+    <p class="say rv">Tell us which parts you want, and we’ll send a price and a date for each.</p>
+    <div class="short rv"><h3>Your shortlist</h3><ol id="shortlist"></ol><p id="short-empty" class="empty">Nothing on it yet. Add parts from the menu.</p>
       <div class="acts"><a id="mail" class="btn" data-to="{MAIL}" href="mailto:{MAIL}?subject=HotGreen%20proposal">Email me</a><button id="clear" class="btn ghost" type="button" hidden>Clear the shortlist</button></div></div>
   </div>
 </section>
 
-<footer>{MARK}<p>Astra Agency, prepared for HotGreen Solutions, September 2026<br>Screenshots of hotgreensolutions.com taken 25 September 2026</p></footer>
-<a id="tray" href="#next" hidden><b id="tray-n">0</b><span id="tray-t">pieces on your shortlist</span></a>
+<footer>{MARK}<p>Astra Agency, prepared for HotGreen Solutions, September 2026<br>Screenshots of hotgreensolutions.com taken 25 September 2026. The product image and logo are HotGreen’s own.</p></footer>
+<a id="tray" href="#next" hidden><b id="tray-n">0</b><span id="tray-t">parts on your shortlist</span></a>
 '''
     return page('HotGreen x Astra, the proposal',
-                'What Astra would build for HotGreen, in five groups, with the order that fits the next twelve months.', body)
+                'What Astra would build for HotGreen, in six groups from A to F, with a sketch of each and the timeline to the seed round.', body)
 
 
 FIXES_LEGAL = [
@@ -716,11 +598,11 @@ def fixes():
     body = f'''
 <section class="slide dark">
   <div class="wrap">
-    <a class="back" href="./">← Back to the proposal</a>
+    <a class="back" href="./#group-A">← Back to the proposal</a>
     <div class="brandrow">{MARK}<span class="nm">Astra Agency</span></div>
-    <div class="eyebrow"><span class="kick">Free, for Sanya</span><span class="note">checked on the live site, 25 September 2026</span></div>
+    <div class="eyebrow"><span class="kick">A. We fix it</span><span class="note">checked on the live site, 25 September 2026</span></div>
     <h1 class="lead">Twelve fixes for hotgreensolutions.com, two of them legal.</h1>
-    <p class="say">Yours to make in Framer whenever it suits.</p>
+    <p class="say">Free. Make them yourselves in Framer, or we’ll make them for you.</p>
     <p class="fxh">Two that are legal requirements</p>
     <div class="fx">{items(FIXES_LEGAL, 1, 'legal')}</div>
     <p class="fxh">The rest, in the order we’d do them</p>
@@ -736,12 +618,11 @@ def main():
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
     os.makedirs(OUT)
-    shutil.copytree(os.path.join(HERE, 'assets', 'img'), os.path.join(OUT, 'img'))
-    shutil.copytree(os.path.join(HERE, 'assets', 'fonts'), os.path.join(OUT, 'fonts'))
-    with open(os.path.join(OUT, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(index())
-    with open(os.path.join(OUT, 'fixes.html'), 'w', encoding='utf-8') as f:
-        f.write(fixes())
+    shutil.copytree(os.path.join(A, 'img'), os.path.join(OUT, 'img'))
+    shutil.copytree(os.path.join(A, 'fonts'), os.path.join(OUT, 'fonts'))
+    for name, fn in (('index.html', index), ('fixes.html', fixes)):
+        with open(os.path.join(OUT, name), 'w', encoding='utf-8') as f:
+            f.write(fn())
     with open(os.path.join(OUT, 'netlify.toml'), 'w') as f:
         f.write('[build]\n  publish = "."\n')
     print('built', sorted(os.listdir(OUT)))

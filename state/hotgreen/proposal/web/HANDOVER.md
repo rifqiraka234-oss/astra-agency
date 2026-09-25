@@ -1,5 +1,9 @@
 # HotGreen proposal page. Handover
 
+**Version 2 (25 Sep evening).** Families A to F, Raka's names for C, D and E, simpler words, a big sketch per
+group and a small one per piece. Every sketch says Sketch, Example or Real data on it. See the last section
+of `../evidence-ledger.md` for the new facts. The v1 build is kept as `build_v1.py.bak`.
+
 **Not sent.** Nothing goes to Sanya or Georgia without Raka's word.
 
 | | |

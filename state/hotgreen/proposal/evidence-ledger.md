@@ -124,3 +124,25 @@ compaction. What each recheck found, and every claim that is new or reworded on 
 because Sanya said she'd build the news page herself. "Monthly progress, in public" is now placed in
 October and November (v1 left it out of the timing table). The grant wording, the auction wording and
 the product page wording are as in the table above. One new sentence on €250k against $250,000.
+
+## Version 2 of the page, families A to F with a sketch per piece (25 September 2026, evening)
+
+Raka's changes. C is "Increase your credibility", D is "Let prospects and investors see the proof", E is
+"Optimise your inbound and outbound flow", section 4 is "The timeline", simpler language, and a picture of
+every group and every piece. New facts that appear only in the sketches, each reopened today.
+
+| Fact in a sketch | Source reopened | Check 2 | Check 3 |
+|---|---|---|---|
+| SDE++ opens 27 Oct and closes 26 Nov 2026, budget €8bn | rvo.nl/subsidies-financiering/sde/aanvragen, "Startdatum dinsdag 27 oktober 2026", "Einddatum donderdag 26 november 2026", "Totaal budget € 8.000.000.000" | RVO news of 6 Jul 2026 says the round moved a month later, to 27 Oct to 26 Nov | Same dates in the news item, a different page |
+| SDE++ industrial heat pump category, at least 500 kWth, COP at least 2.3, halogen free refrigerant, heat used on the same site | rvo.nl CO2 arme warmte page, "Industriële warmtepomp", "minimaal 500 kWth", "COP van minimaal 2,3" | The 2.5 figure on the same page is for other categories (aquathermie, air to water), not this one | Research file 4 recorded the same thresholds on 22 Sep |
+| Press dates and headline openings, Empirical 20 Oct 2025 "Hot Green raises £1.2m", Tech.eu 20 Oct 2025 "HotGreen Solutions raises £1.2M", Vestbee 21 Oct 2025 "British HotGreen Solutions raises £1.2M" | The three pages fetched today | Headlines shown only up to the first hyphenated word, with an ellipsis, never reworded | Empirical's own text dates the announcement 16 October, the post is dated 20 Oct, the sketch uses the post date |
+| Heat auction subsidy paid for up to five years | Commission news, "fixed premium subsidy ... for up to five years" | IF26 terms, "grant duration will end 5 years after the Entry into Operation" | Two documents |
+| 68 UK sites by type, oils and fats 10, dairies 8, spirits 8, potatoes 6, beer 5, sugar 5, malt 5, grain milling 4, eleven other types 17 | UK ETS Compliance Report 2026 xlsx, open accounts, NACE 10 and 11 | Counted twice, by the parsed records and by a raw row pass, identical per code | Sum closes at 68. Bar widths measured in the render, 10.2 px per site on every bar |
+| HotStack spec values in the product page sketch | The spec image on the Solutions page, cropped and read today | Values copied cell by cell, "0.5MW stackable up to 10MW" written as "0.5 MW, stackable up to 10 MW" | Earlier site audit read the same table |
+| "Install as quick as 3 to 5 days with the air source module" | Solutions page text, "Using our airsource module, we can install your heat pump in as quick as 3-5 days" | The air source qualifier is kept | |
+| Mission line and "replace a traditional boiler, existing pipework, no need to redesign" | Homepage and Solutions page text | Paraphrased only where the sketch is labelled a sketch | |
+| Product image and logo | framerusercontent.com files used on their own site | Credited in the footer as HotGreen's own | |
+
+Sketch content that is invented to show a layout is labelled on the sketch itself as Example, Example rows,
+Example draft or Sketch. Nothing invented shows a number about HotGreen's savings, every result box says
+"from your model".
