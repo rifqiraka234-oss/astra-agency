@@ -1,7 +1,7 @@
 # HotGreen, the opportunities map. 25 September 2026
 
 For Raka and Josh. Internal. It is built on the call with Sanya, our own debrief, the dossier, and six
-research reports (roughly 330 source rows, filed in `research/opportunities/`). Every claim that
+research reports (roughly 365 source rows, filed in `research/opportunities/`). Every claim that
 decides a recommendation was reopened at its source in this session and an attempt was made to prove
 it wrong. The list of what I checked myself is at the bottom. Anything that rests on my own
 arithmetic says so.
@@ -336,7 +336,7 @@ the open.
   - Heat pumps with a COP of at least 1.5 get a 25% bid bonus for ranking.
   - The ceiling is €400 a tonne in the low and medium baskets, pay as bid.
   - Projects must be in the EEA, with "no limitation on the origin or type" of consortium members, so
-    HotGreen can join.
+    HotGreen can join a consortium. UK plants can't bid.
   - It can't be stacked with national grants.
 - **The number.** €400 times the auction's 0.224 t per MWh equals €89.60 per MWh of heat at most. For a
   3 MWth site running 6,000 hours that's a ceiling of about €1.6m a year for five years. Winning bids
@@ -376,14 +376,25 @@ France and Germany. It's strategy and content, not a big build. Share it with Ge
 - **When.** Module 3.
 
 **E3. A target account list from public registers.**
-- **What we build.** The UK ETS compliance report, which I recounted myself, lists 68 open food and
-  drink installations and 50 companies. 66 reported 2,255,418 tCO2e for 2025. They include AB InBev,
-  Heineken, Diageo, Nestlé, Arla, Müller, McCain, Walkers and Weetabix. Add SBTi committed food and
-  drink groups (the dashboard downloads weekly, updated Thursdays), then screen for temperature and fuel
-  with their engineers.
+- **What we build.** Three open datasets, then a screen for temperature and fuel with their engineers.
+  - **UK large sites.** The UK ETS compliance report, which I recounted myself, lists 68 open food and
+    drink installations and 50 companies. 66 reported 2,255,418 tCO2e for 2025, median 18,858 t. They
+    include AB InBev, Heineken, Diageo, Nestlé, Arla, Müller, McCain, Walkers and Weetabix.
+  - **UK mid size plants below the ETS threshold.** The Climate Change Agreements data (Environment
+    Agency, Open Government Licence, updated 18 September 2026) lists them by operator name only, no site
+    address. That's 641 "Food and Drink" target units plus dairy, brewing, spirits and others, per the
+    AI and data report.
+  - **EU sites.** The EEA industrial emissions data flags 2,219 food and beverage sites for 2024, 105
+    with a large combustion plant, per the same report.
+- **A licence trap to avoid.** SBTi's target data may only be stored "for research, your personal use,
+  or other non-commercial use" or used in editorial content, per its terms, which I read. So we use it
+  to read a company before a meeting, never to build or feed a sales list, unless SBTi agrees in
+  writing. National Gas price data and ICE and EEX prices carry similar limits. ONS, DESNZ and Eurostat
+  don't.
 - **Why.** These signals are ones lemlist and Clay don't sell, which answers Josh's worry that
   recommending our own tools makes our outreach feel less special.
-- **When.** Q1 2027, ahead of outbound.
+- **When.** Q1 2027, ahead of outbound. One target list, not a weekly agent, since outbound starts after
+  deployment.
 
 **E4. Outbound, when they start, done lawfully.**
 - **The rules.**
@@ -431,8 +442,18 @@ is a liability. The data feeds below were tested live today.
 - **Inputs.** It drafts news items, LinkedIn posts and search content from the facts register (B1) and
   the watches (F1, F2).
 - **Approval and publishing.** Sanya approves, then it publishes into their existing Framer CMS through
-  Framer's Server API. The API is in beta, and Framer's page says it can "update and publish your Framer
-  projects with a simple script from any server". That means no rebuild of their site.
+  Framer's Server API. Framer's page says it can "update and publish your Framer projects with a simple
+  script from any server", so there's no rebuild of their site.
+- **Caveats on the API.** It's in beta, free for now with future pricing "TBD", and its changelog shows
+  breaking changes as recently as 8 September.
+- **LinkedIn posts stay manual.** LinkedIn's Posts API can't create drafts and company page access is
+  vetted, so the agent hands Sanya a ready draft and she posts it.
+- **A named human editor, always.** Since 2 August 2026, EU AI Act article 50(4) requires AI generated
+  text published to inform the public on matters of public interest to be labelled, unless it "has
+  undergone a process of human review or editorial control" with a person holding editorial
+  responsibility. Whether it reaches their regulation pages is a lawyer's question, and the answer in
+  practice is the same either way. A 2024 study found commercial legal AI tools made things up 17% to
+  33% of the time, which is the other reason.
 - **It covers several debrief ideas.** The SEO content agent, the content management tool, the market
   reading agent and the LinkedIn link.
 - **When.** Module 3.
@@ -441,10 +462,11 @@ is a liability. The data feeds below were tested live today.
 produces the public version for B5. Module 3.
 
 **F5. Prospect signal alerts.**
-- **Signals.** New SBTi commitments, ETS register changes, capex and sustainability news at target
-  groups.
+- **Signals.** ETS and CCA register changes, and capex and sustainability news at target groups. SBTi
+  stays out of the automated feed because of its terms (see E3).
 - **Output.** Alerts land in the CRM from E2.
-- **When.** Q1 2027.
+- **When.** Q1 2027, and only if outbound goes ahead. The AI and data report rates this lower than F1
+  and F2.
 
 **What AI can't do here, said plainly for the proposal.**
 - Decide which claims are true.
@@ -523,10 +545,8 @@ itself a regulated activity. Treat that last point as a question for a lawyer, n
 | `4-customer-funding-events.md` | 62 (75 page by page) |
 | `5-platform-compliance-search.md` | 69 |
 | `6-buyer-credibility.md` | 37 |
+| `3-ai-agents-data.md` | 79 (a register of 35 data sources, 24 answered live) |
 | `0-savings-worked-example.md` | my own arithmetic |
-
-A sixth report on AI agents and data feeds is still being written. Everything in family F that depends
-on a data feed was tested live by me instead.
 
 **Reopened at source by me in this session, with an attempt to disprove each.**
 - CCEP's 20-F wording on "Hot Green" and its €100 shadow carbon price.
@@ -552,11 +572,13 @@ on a data feed was tested live by me instead.
 - Framer's agents post, pricing and Server API.
 - The live contact form HTML.
 - GOV.UK search API and the DESNZ feed.
-- The SBTi dashboard.
+- The SBTi dashboard and its terms of use.
+- The Climate Change Agreements dataset and its licence.
 
 **Corrections the checks produced.**
 - The grant runs 1 June 2026 to 31 May 2027, not "May to May".
-- The UK ETS median is 18,858 t, not 19,120.
+- The UK ETS median is 18,858 t, not 19,120. Two agents took the upper of the two middle values.
+- SBTi data can't feed a sales list. My first draft of this map said it could.
 - "Pilot purgatory 70%" isn't a hardware figure.
 - Google no longer says "avoid text in images", so the spec table argument rests on accessibility and
   what AI tools can read.
