@@ -245,3 +245,57 @@ is labelled illustrative.
   `u647cqgnqrlhtda53ohc6mgh4c` and the Meet link was `meet.google.com/ndc-wygb-xrw`.
 - The 25 September sweep noted "Raka has taken HotGreen and Tomatoworld offline, both now closed in the
   workflow". This file reopens HotGreen for the proposal only. Nothing is sent from here.
+
+## 9. The live site, and whether Sanya was right about it
+
+Audited 25 September 2026, every page rendered at desktop and phone width and looked at, plus Wayback
+history. Full report `research/site-audit.md`, screenshots beside it.
+
+**What it is.** Framer, three real pages (Home, Solutions, Contact), last published 13 August 2026.
+Apex and `hotgreen.co.uk` both redirect to `www.hotgreensolutions.com`. The footer says "HotGreen™
+Solutions is the trading name of HotGreen Ltd".
+
+**How it looks.** Current, not dated. Dark green and mint with a bright green accent, rounded cards,
+Space Grotesk style type, gentle motion, a hero video of beer bottles on a line. It passes as a modern
+startup site. The problem is not the look, it is what the site says and who it is built for. It reads
+as a pre seed brochure.
+
+| Sanya's claim | Verdict | The evidence |
+|---|---|---|
+| All pages share one title | **True** | "HotGreen Solutions" on Home, Solutions, Contact and even the 404. Meta description and social share cards identical everywhere too |
+| No alt text on any image | **True** | 42 of 42 empty on Home, 14 of 14 on Solutions, 6 of 6 on Contact. Logo, seven backer logos, seven headshots, the spec table |
+| Things are images instead of text | **Partly** | Most copy is live text (about 586 words on Home). But the two things that matter most are pictures. The whole HotStack 120 versus 220 spec table is one PNG, and all seven backers, CCEP and Empirical included, appear only as unlabelled logos |
+| Not showing up in search | **Partly, leaning her way** | Their own homepage ranked 6th to 9th on brand searches, behind Dealroom, Tech.eu, PitchBook, Vestbee, CCEP and The Grocer, and not at all for "industrial high temperature heat pump". US search tool, so indicative only |
+| Not updated in a year | **Partly** | Team and logo rows were patched (backer logos by Nov 2025, Ben by Feb 2026, Sera by May 2026). The story was not. Hero, mission and applications text are word for word the 7 Oct 2025 version. Nothing in text mentions the £1.2M round, CCEP as investor or accelerator, the 2027 deployment, or the seed raise |
+| Everyone goes down one path | **True** | Every button, "Join our Waitlist" included, lands on the same four field form. No investor route, deck, case study, download, email address or phone number |
+| No press or news page | **True** | Four routes in the build, `/news` and `/press` return 404. At least ten press and profile pages exist elsewhere and none are linked |
+| Mission focused, not an equipment provider | **True** | The second headline is literally "HotGreen is on a mission to save manufacturers money while cutting carbon". The visible text never uses customer, investor, patent, CCEP, certification, warranty or datasheet. The main product action is a waitlist |
+
+**What she did not mention, all verified.**
+- **Sera Evcimen's LinkedIn icon opens Ben Vellacott's profile.**
+- **The contact form's Message box shares a field name with Last name**, so what reaches their inbox is
+  unknown. Worth asking Sanya to look at a recent submission. "First name" is marked required and is
+  not enforced.
+- **No privacy notice anywhere**, while the form collects names and emails. That is one of the four
+  always pitchable signals in CLAUDE.md, but here it is a one line fix and belongs in the quick wins,
+  not in the pitch.
+- **Three product names on one page**, HotStack, HotStack 300, HotStack 120 and 220. Desktop and phone
+  text have drifted apart.
+- **The spec table says "Currently taking 2026 orders for 2027 delivery"**, which goes stale in three
+  months. HotStack 220 says "2027 orders for 2028 delivery".
+- Typo "Our current focus in on", and "Pasteurisation" next to "Sterilization" sharing one icon.
+- **The hero video is 19.4 MB**, plays on phones, and carries an unheard audio track. Headshots are
+  about 0.85 MB each. No structured data, sitemap with three undated pages.
+
+**The published product facts, so the calculator and copy use their numbers.** From the Solutions
+page and its spec image. HotStack 120 takes air, up to 120°C, 2 bar max steam pressure. HotStack 220
+takes a waste heat stream, up to 220°C, 25 bar. CoP 2.8 from 10°C to 120°C, 4.5 from 50°C to 120°C,
+both models. 0.5 MW modules stackable to 10 MW. IsoStack compressor, single stage 110°C lift, 10 to 100%
+turndown. "Drop in replacement", existing pipework, "install your heat pump in as quick as 3-5 days".
+Headline estimates, all asterisked as projections, €250k a year saved against a traditional boiler for
+a typical facility, 1,500 tCO2 a year avoided per MW, 4x more efficient than a traditional boiler.
+
+**Our own artefacts.** `astra-hotgreen-prototype.netlify.app` is live and unchanged. It has no
+calculator. Its "In production now" sector heading could be read as units in production, and its
+rationale wrongly says HotGreen had no photography, when real headshots have been on their site since
+at least October 2025. The calculator Sanya liked is in the deck, `astra-hotgreen.netlify.app`.
