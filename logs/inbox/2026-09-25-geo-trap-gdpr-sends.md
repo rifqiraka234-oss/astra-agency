@@ -21,3 +21,16 @@ RULES.md 4A rule 13 carries the rule.
 
 **Raka's call.** Whether to send Chris, Stephanie and Visakh a short correction. None of the
 three has replied, per the queue. Nothing has been sent to them today.
+
+## Redone the same day from inside the EU (tools/eu-view.py, Webbkoll, Stockholm)
+
+| Lead | From Stockholm | Verdict |
+|---|---|---|
+| Burton Clinic | Blocked by Cloudflare. Same Site Kit build as Aurevia, denied by default for GB, no consent tool | **Wrong.** The "banner today" line above was site-audit's own bug, `ok` inside "Book now". There is no banner |
+| Aurevia | 0 cookies, cookieless Analytics and AdSense pings | **Wrong** |
+| AutoDevPro | `_ga` set before a click, Google's consent tool loads | **Half right.** Analytics before permission holds, "no notice showing" can't be confirmed |
+| Markoni | 15 cookies, no consent code | **Stands** |
+
+New angle for Burton and Aurevia, CORRECTION drafts in `state/drafted_2026-09-25-geo-recheck.md`.
+Both paid for Google Ads this year and their plugin means Google never counts a UK or Belgian
+visitor, per Google's own Site Kit documentation. Nothing sent.

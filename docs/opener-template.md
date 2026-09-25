@@ -540,6 +540,13 @@ Astra builds apps and tools as well as websites, so look for these too, every le
 - **The geo trap.** Our egress is Ohio. A consent tool shows a US visitor nothing, so trackers
   before consent are only real when the page carries no consent code at all. site-audit.js says
   GEO VOID. Burton Clinic and Aurevia were told the wrong thing on 2026-09-21.
+- **The geo recheck, same day.** `tools/eu-view.py` gives the EU view from Stockholm with no help
+  from Raka. Of the four 21 Sep GDPR sends, Markoni holds, AutoDevPro is half right, Burton and
+  Aurevia were wrong. Their Site Kit blocks Google entirely for UK and EU visitors because no consent
+  tool is installed, so the true angle is that the Google Ads they paid for can't see who booked.
+  The correction and the new angle are one thread, so they go in one CORRECTION message. Snorly's
+  Shopify banner is set for Austria only, which made it a real GDPR opener. The ad dates came from
+  the Google Ads Transparency Center, `--ads` in the same tool.
 - **Build Squad evidence, where it lives.** The register (Ignition Search Labs Ltd, SIC 62012,
   registered 11 days earlier, owned by the agency), the careers page (Lobby hiring two founding
   engineers), the team page (significa, one Web-Entwickler among ten, the FAQ for build times at

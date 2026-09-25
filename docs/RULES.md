@@ -234,6 +234,8 @@ missing from the message.
 | Dan's draft pointed at the website and offered a build squad | Raka couldn't follow the angle, a lead wouldn't either | Section 1A, `thread` and `lead read` in the gate, checker fails a link word missing from the offer |
 | I reworded Raka's offer, "half the price" became "half what hiring would cost" and "twice the speed" | A claim about us that he never made | Raka's own words stay verbatim, "in half the time at half the price". The checker's fixed list lets it repeat across a batch, so there's no reason to reword it |
 | GDPR claims written off a US egress | Burton Clinic and Aurevia were very likely told something false on 2026-09-21 | site-audit.js prints the egress and GEO VOID, RULES 4A rule 13 |
+| site-audit.js printed "banner yes" on Burton Clinic | The accept word `ok` matched inside "Book now", a banner that doesn't exist | whole word matching, rerun prints NONE FOUND against its control |
+| "Raka opens it from the Netherlands" as the only EU check | Research handed back to Raka, the thing rule 12 bans | `tools/eu-view.py`, Webbkoll from Stockholm, controls Markoni and allbirds.eu |
 | Pierre-Lou's reply named Jakarta and Bali | Broke the company profile's no-country rule | checker fails the names |
 | The checker's fixed list still had yesterday's CTA | Every batch with two openers would fail on the template itself, and the fix I reached for was rewording Raka's claim | fixed list carries the five block wording |
 | I typed a guessed contactId for a positive control | A control that proves nothing | controls come from a file or an earlier pull, never typed |
@@ -531,7 +533,21 @@ right now, and we lead with it.**
      NO consent code at all. site-audit.js now prints the egress country and `GEO VOID` when it
      finds consent code. Burton Clinic and Aurevia Syndic were both told on 2026-09-21 that
      trackers ran before consent, and both sites set consent mode to denied for GB and the EEA.
-     A GEO VOID site's GDPR finding needs Raka to open it from the Netherlands, incognito.
+     **A GEO VOID site now gets the EU view, never Raka's browser (2026-09-25).**
+     `python3 tools/eu-view.py <url>` loads it from Stockholm through Webbkoll and lists every
+     cookie and third party request before a click. Add `--shopify` on a Shopify store, it reads
+     the banner's own country list (`regionVisibility`), because Sweden only stands in for the
+     lead's country when both sit on the same side of that list. Add `--ads <domain>` for the
+     Google Ads Transparency Center, advertiser, ads, first and last date shown. It's a scanner,
+     it can't say whether a banner is VISIBLE, and a Cloudflare challenge is BLOCKED, not clean.
+     **Two patterns the redo found, name them right.** Google Site Kit consent mode with the EEA
+     and GB defaulted to denied and NO consent tool installed means EU and UK visitors are never
+     tracked at all. That's not "trackers before consent", it's the opposite. Google Analytics
+     leaves them out of reports and Google Ads can't tie a click to a sale, which is a measurement
+     angle when the lead pays for ads (Burton Clinic, Aurevia). A Shopify banner set to a country
+     list that leaves out the lead's own market (Snorly, Austria only) means that market gets
+     every pixel with no banner, which IS the GDPR angle, and Germany now has competitor
+     Abmahnungen for GDPR breaches since BGH 27 March 2025.
    - **Apps and internal tools for efficiency and growth.** Quoting, booking, planning, portals,
      manual paperwork, one person as the bottleneck, hiring for admin. Rule 11.
    - **Social media.** Every account taken from their own HTML, opened, last post dated, the

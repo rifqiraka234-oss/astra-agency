@@ -96,8 +96,11 @@ const DETECT = (socialSrc) => {
       text: (el.innerText || el.value || '').trim().toLowerCase().slice(0, 60),
       area: (el.getBoundingClientRect().width * el.getBoundingClientRect().height) | 0,
     })).filter((x) => x.text);
-    const accept = labelled.filter((x) => acceptWords.some((w) => x.text.includes(w))).sort((a, b) => b.area - a.area)[0] || null;
-    const reject = labelled.filter((x) => rejectWords.some((w) => x.text.includes(w))).sort((a, b) => b.area - a.area)[0] || null;
+    // Whole words only, 2026-09-25. 'ok' matched inside 'book now' on burtonclinic.co.uk
+    // and the audit printed a banner that does not exist. 'non' would match 'none' too.
+    const hasWord = (t, w) => new RegExp('(^|[^a-z\u00e0-\u00ff])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '($|[^a-z\u00e0-\u00ff])').test(t);
+    const accept = labelled.filter((x) => acceptWords.some((w) => hasWord(x.text, w))).sort((a, b) => b.area - a.area)[0] || null;
+    const reject = labelled.filter((x) => rejectWords.some((w) => hasWord(x.text, w))).sort((a, b) => b.area - a.area)[0] || null;
     // Widened after a false negative on a Shopify store whose footer said
     // "Returns Policy" and "Shipping & Delivery" and whose policy pages live
     // under /policies/. The old pattern missed all of it and the audit printed
@@ -433,7 +436,15 @@ function classify(url, base) {
     console.log(`!!  GEO VOID. Consent code on the page (${[...new Set(consentCode)].join(',')}${regionDefault ? ', consent mode region defaults' : ''}).`);
     console.log('!!  It can show an EU visitor a banner and block trackers that a US visitor never sees.');
     console.log('!!  The banner, reject, pre consent cookie and tracker lines are VOID for EU visitors.');
-    console.log('!!  Never write a GDPR claim off this run. Raka opens it from the Netherlands, incognito.');
+    console.log('!!  Never write a GDPR claim off this run. NEXT STEP, the EU view from Stockholm,');
+    console.log(`!!    python3 tools/eu-view.py ${target}${/customerPrivacy|privacy-banner/i.test(consentCode.join(' ')) ? ' --shopify' : ''}`);
+    const cmpOnly = [...new Set(consentCode)].filter((c) => !/gtag\(['"]consent/.test(c));
+    if (regionDefault && !cmpOnly.length) {
+      console.log('!!  Consent mode defaults to DENIED for the EEA and UK and there is NO consent tool to');
+      console.log('!!  change it. EU and UK visitors are never tracked at all, so Google Analytics and Ads');
+      console.log('!!  cannot count them. That is a measurement finding, NOT trackers before consent.');
+      console.log('!!  Site Kit says so itself, sitekit.withgoogle.com/documentation/using-site-kit/consent-mode/');
+    }
   } else if (!EU.test(egress)) {
     console.log('    no consent code of any kind in the HTML, so no geo rule can exist. Tracker lines hold,');
     console.log('    confirm with the list of hosts the page contacted before writing it.');

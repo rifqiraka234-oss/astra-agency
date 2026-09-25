@@ -102,6 +102,10 @@ print("""  It outranks every other doc except a live instruction from Raka.
       with evidence before any verdict. A strong site is one family, not NO_STRONG_ANGLE.
       check-drafts fails a ```sweep or gate without all four.
 
+    GEO. We exit in Ohio, so consent tools hide their banner from us. GEO VOID from site-audit
+      means python3 tools/eu-view.py <url> [--shopify] [--ads domain], Stockholm, before any
+      GDPR word is written. Denied by default with no consent tool is a MEASUREMENT angle.
+
     ONE THREAD. RULES.md 1A, Raka 2026-09-25. Block two names ONE problem, block three grows
       THAT problem, blocks four and five fix THAT problem. A true flaw from another family stays
       out. The gate carries thread and lead read, check-drafts fails a link word missing from
