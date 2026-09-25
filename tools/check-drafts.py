@@ -147,7 +147,8 @@ def family_thin(text):
     """A family line that says nothing. Twelve words and a source, a URL, a register or a
     control, or it was not tested, it was waved at."""
     return len(text.split()) < 12 or not re.search(
-        r"https?://|control|register|screenshot|crawl|HTML|news\.py|thread", text, re.I)
+        r"https?://|control|register|screenshot|crawl|HTML|news\.py|thread|site-audit|lemlist",
+        text, re.I)
 
 
 def sweep_problems(body):
