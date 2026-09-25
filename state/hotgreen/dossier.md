@@ -230,7 +230,7 @@ is labelled illustrative.
    and the deck's homepage sketch says "CCEP trialling now". The primary source is Innovate UK project
    10192195, which funds HotGreen to "develop a 50-kWth innovative industrial heat pump system" and
    "over 12 months ... install and test their technology at the site of ... Coca-Cola Europacific
-   Partners", May 2026 to May 2027. Sanya puts the installation at Q1 to Q2 2027. So the honest wording
+   Partners", 1 June 2026 to 31 May 2027 (GtR fund record). Sanya puts the installation at Q1 to Q2 2027. So the honest wording
    is a funded demonstration at a CCEP site, going in during 2027. Their own product modules are
    0.5 MW, ten times that size, so never let copy imply a production unit.
 2. **The "accelerator" is not CCEP's.** Sanya said "an accelerator programme with Coca-Cola Europacific
@@ -336,7 +336,7 @@ labelled that way.
 | 2 Mar 2026 | Job ad, Applications and Systems Integration Engineer, Datchet. Names OEMs "Copeland/GEA", prefers German | Verified, ad now closed |
 | Mar 2026 | 100+ Accelerator Cohort 7 kick off, AB InBev HQ Leuven | Verified |
 | 9 Mar 2026 | Georgia on HackGroup's list of women behind Europe's industrial renaissance | Verified |
-| May 2026 | Innovate UK project 10192195 starts, 50 kWth unit at a CCEP site, £399,076 grant, Georgia project manager, to May 2027 | **Verified on Gateway to Research** |
+| 1 Jun 2026 | Innovate UK project 10192195 starts, 50 kWth unit at a CCEP site, £399,076 grant, Georgia project manager, to May 2027 | **Verified on Gateway to Research** |
 | 22 May 2026 | Sera Evcimen announced as VP Technical Operations | Verified |
 | 27 May 2026 | Selected for 100+ Accelerator Cohort 7, "joining 44 innovative startups from over 40 countries" | Verified, company post |
 | 3 Jun 2026 | Post on hybrid operation with existing boilers | Verified |
