@@ -137,8 +137,8 @@ GATE_KEYS = ["lead", "site pass 1", "site pass 2", "deep analysis", "owner linke
              "pains", "chosen", "claims", "recheck",
              # THE ANGLE SWEEP. Raka, 2026-09-25, "did we test on all of them? This is
              # mandatory". Every lead is tested on all four families, not only the website.
-             "sweep website", "sweep gdpr", "sweep apps", "sweep social"]
-SWEEP_FAMILIES = ["website", "gdpr", "apps", "social"]
+             "sweep website", "sweep gdpr", "sweep apps", "sweep social", "sweep squad"]
+SWEEP_FAMILIES = ["website", "gdpr", "apps", "social", "squad"]
 SWEEP_KEYS = ["lead"] + SWEEP_FAMILIES + ["verdict"]
 VERDICTS = ["OPENER", "NO_STRONG_ANGLE", "BLOCKED_NEEDS_INFO", "DO_NOT_CONTACT", "ALREADY_MESSAGED"]
 

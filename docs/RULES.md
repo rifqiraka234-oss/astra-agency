@@ -486,8 +486,20 @@ right now, and we lead with it.**
      manual paperwork, one person as the bottleneck, hiring for admin. Rule 11.
    - **Social media.** Every account taken from their own HTML, opened, last post dated, the
      platform their buyers use, a dead or missing channel where the goal needs one.
+   - **Build Squad, the fifth family (Raka, 2026-09-25, on Harold Engelen).** His words, "for
+     harold, fuck it lets do the build squad. Our angle is, with our build squad you can do it in
+     half the time and half the price, and we have a shit load of people so you/them can just focus
+     on getting more clients." **A competitor is no longer a dead end, it's a Build Squad lead.**
+     Agencies, studios, consultancies that build, funded startups and product teams all get it.
+     Evidence is capacity, how many people actually build (their own team page), how long a
+     delivery takes (their FAQ), how much they sell (branches, services, cases, hiring), and
+     whether they already outsource or invite partners. Harold's site said one builder, 8 to 12
+     weeks, 11 branches and a partners page asking for builders, and that became the message.
+     "Half the time at half the price" is Raka's offer, flag it every time, a lead can hold us to it.
+     The only leads still out on "who" are ones where nothing is ours to sell, a listed plc, a firm
+     acquired into a group, a closed business, or a person who doesn't run the business.
    - **Each family gets a line with its evidence and a verdict**, in a ```sweep block for a lead
-     with no opener, and as `sweep website/gdpr/apps/social` in the gate for one with.
+     with no opener, and as `sweep website/gdpr/apps/social/squad` in the gate for one with.
      `check-drafts.py` fails a file dated 2026-09-25 or later without it, or with a family line
      under 12 words or with no source. Absence claims still need their positive control.
    - **Then the pain table picks the costliest across all four.** NO_STRONG_ANGLE is only

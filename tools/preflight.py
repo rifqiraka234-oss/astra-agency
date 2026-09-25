@@ -96,8 +96,9 @@ print("""  It outranks every other doc except a live instruction from Raka.
       thesis rechecked, confidence HIGH or MEDIUM, LOW never shown. A ```gate block above
       every OPENER.
 
-    THE ANGLE SWEEP, FOUR FAMILIES, EVERY LEAD. RULES.md 4A rule 13, Raka 2026-09-25.
-      Website holding back growth. GDPR. Apps and internal tools. Social media. Each tested
+    THE ANGLE SWEEP, FIVE FAMILIES, EVERY LEAD. RULES.md 4A rule 13, Raka 2026-09-25.
+      Website holding back growth. GDPR. Apps and internal tools. Social media. BUILD SQUAD,
+      a competitor or agency is a Build Squad lead, not a dead end. Each tested
       with evidence before any verdict. A strong site is one family, not NO_STRONG_ANGLE.
       check-drafts fails a ```sweep or gate without all four.
 

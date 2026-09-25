@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Marjan Verhoeven SENT 2026-09-25 07:45:22Z act_Htk6fQzHHZ3sZSwrJ, text as below. -->
 # Batch 9, the redo of every "no angle" lead with all four families. 2026-09-25. NOT SENT.
 
 Raka, 2026-09-25, "do a batch of redo the ones before? Like really we cant do an angle on any of
