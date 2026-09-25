@@ -1,14 +1,4 @@
-<!doctype html>
-<html lang="en-GB">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HotGreen x Astra, the fix list</title>
-<meta name="description" content="Twelve fixes for hotgreensolutions.com, checked on 25 September 2026.">
-<meta name="robots" content="noindex,nofollow">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%230a1016'/%3E%3Cpath d='M24 7 L42 42 H6 Z' fill='none' stroke='%23ff7a45' stroke-width='3' stroke-linejoin='round'/%3E%3Cpath d='M24 20 L32 37 H16 Z' fill='%238fd14f'/%3E%3C/svg%3E">
-<link rel="preload" href="fonts/plex-mono-500.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Plex Mono';src:url(fonts/plex-mono-500.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Plex Mono';src:url(fonts/plex-mono-500.woff2) format('woff2');font-weight:500;font-display:swap}
 :root{
   --ink:#0b1310;--ink2:#101b17;--panel:#15231d;--paper:#f5f3ec;--white:#fff;
   --text:#eef3ee;--soft:#b8c6be;--muted:#8a9a92;--dark-text:#13201a;--dark-soft:#4c5e55;
@@ -250,24 +240,3 @@ footer p{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1
   .fxi{grid-template-columns:minmax(0,1fr);gap:4px}
   footer{padding:36px 16px 50px}
 }
-</style>
-</head>
-<body>
-
-<header class="bar"><a class="brand" href="./"><svg class="astra-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 L45 45 H3 Z" stroke="url(#ag)" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 18 L34 39 H14 Z" fill="url(#ag2)"/><defs><linearGradient id="ag" x1="3" y1="3" x2="45" y2="45"><stop stop-color="#ff7a45"/><stop offset="1" stop-color="#8fd14f"/></linearGradient><linearGradient id="ag2" x1="14" y1="18" x2="34" y2="39"><stop stop-color="#8fd14f"/><stop offset="1" stop-color="#cbab6e"/></linearGradient></defs></svg><span>Astra Agency</span></a></header>
-<section class="fixpage sec dark">
-  <div class="wrap">
-    <a class="back" href="./#s3">← Back to the proposal</a>
-    <div class="label"><span class="num" style="background:var(--gA)">A</span><span>We fix it</span></div>
-    <h1 class="h2">Twelve fixes for your website, two of them legal.</h1>
-    <p class="intro">Free. Make them yourselves in Framer, or we’ll make them for you. Checked on the live site on 25 September 2026.</p>
-    <p class="fxh">Two that are legal requirements</p>
-    <div class="fx"><div class="fxi legal"><span class="n">01</span><div><h3>Your footer needs your company details</h3><p>A UK company has to show its registered name, company number, where it’s registered and its registered office on its website, under regulation 25 of the Company, Limited Liability Partnership and Business (Names and Trading Disclosures) Regulations 2015. The footer says “HotGreen™ Solutions is the trading name of HotGreen Ltd” and stops there. From Companies House, the line to add is HotGreen Ltd, registered in England and Wales, company number 16035994, registered office 167 to 169 Great Portland Street, 5th Floor, London W1W 5PF.</p></div></div><div class="fxi legal"><span class="n">02</span><div><h3>Your contact form needs a privacy notice</h3><p>The form collects names and email addresses, so article 13 of the UK GDPR requires privacy information at the point you collect them, usually a privacy notice linked from the form. Since 19 June 2026 that notice also has to tell people they can complain to you about how their data is used, and you need an easy way for them to do it, such as a complaint form. The site has no privacy page today. The same page is the place to say the site uses Framer’s own analytics.</p></div></div></div>
-    <p class="fxh">The rest, in the order we’d do them</p>
-    <div class="fx"><div class="fxi "><span class="n">03</span><div><h3>Each page needs its own title</h3><p>You spotted this one and the next two on the call. Home, Solutions and Contact all use the title “HotGreen Solutions”, and so does the page not found screen.</p></div></div><div class="fxi "><span class="n">04</span><div><h3>The images need alt text</h3><p>None of the 62 images across the three pages has any, including the seven partner logos and the seven team photos.</p></div></div><div class="fxi "><span class="n">05</span><div><h3>The spec table works better as text</h3><p>The HotStack 120 and 220 comparison on the Solutions page is one image, so its numbers aren’t on the page as text and an engineer can’t search or copy them. A Framer table or a simple text grid will do.</p></div></div><div class="fxi "><span class="n">06</span><div><h3>Your backers appear only as logos</h3><p>The homepage says “Some of our key funders and partners are” and then shows seven logos, with no names in the text.</p></div></div><div class="fxi "><span class="n">07</span><div><h3>The contact form’s Message field shares a name with Last name</h3><p>Both are called “lastname”, so the two can arrive mixed up wherever submissions are sent on. Worth checking a recent submission. “First name” is also marked with an asterisk but isn’t required.</p></div></div><div class="fxi "><span class="n">08</span><div><h3>Sera’s LinkedIn icon opens Ben’s profile</h3><p>The LinkedIn icon on Sera Evcimen’s card links to Ben Vellacott’s profile.</p></div></div><div class="fxi "><span class="n">09</span><div><h3>The product name changes on a phone</h3><p>On a phone the Solutions page opens with “Introducing the HotStack 300”. On a laptop it says “Introducing the HotStack”, and the spec table names HotStack 120 and HotStack 220.</p></div></div><div class="fxi "><span class="n">10</span><div><h3>The availability line needs a new date before January</h3><p>The spec table says “Currently taking 2026 orders for 2027 delivery”.</p></div></div><div class="fxi "><span class="n">11</span><div><h3>The homepage video is heavy for a phone</h3><p>It’s a 19.4 MB file, which is a lot on mobile data. A shorter or compressed version, or a still image on phones, keeps the look.</p></div></div><div class="fxi "><span class="n">12</span><div><h3>Your fonts can live in Framer</h3><p>The site loads its fonts from Google. Uploading them as custom fonts in Framer means a visitor’s browser never has to contact Google.</p></div></div></div>
-  </div>
-</section>
-<footer><svg class="astra-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 L45 45 H3 Z" stroke="url(#ag)" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 18 L34 39 H14 Z" fill="url(#ag2)"/><defs><linearGradient id="ag" x1="3" y1="3" x2="45" y2="45"><stop stop-color="#ff7a45"/><stop offset="1" stop-color="#8fd14f"/></linearGradient><linearGradient id="ag2" x1="14" y1="18" x2="34" y2="39"><stop stop-color="#8fd14f"/><stop offset="1" stop-color="#cbab6e"/></linearGradient></defs></svg><p>Astra Agency, prepared for HotGreen Solutions, September 2026</p></footer>
-
-</body>
-</html>

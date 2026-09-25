@@ -50,3 +50,44 @@ of `../evidence-ledger.md` for the new facts. The v1 build is kept as `build_v1.
 - The two photos are the ones from the August HotGreen deck, industrial scenes, not HotGreen's.
 - The partner section reuses the approved SotoCat wording, four of its project images, and the
   disclosure line.
+
+## Version 3, the decluttered rebuild (25 September 2026, evening)
+
+Raka's brief, "easier to understand ... declutter it ... use real pictures ... improve the quality really
+really really ... do a three times check". The research and the plan are in `DESIGN-v3.md`.
+
+**Live.** https://astra-hotgreen-proposal.netlify.app, deploy `6ab6a373620347764a081d82`, same site id.
+Nothing has been sent to HotGreen.
+
+**What changed.**
+- Seven numbered steps with a slim bar at the top that shows where you are. One idea per step. 797 words
+  on the main path, down from about 3,400 in version 2.
+- The six parts are six tiles. "See it" opens one panel per part with a large example screen for every
+  item, so 25 example screens in all. Picking is per part (A to F), not per item.
+- Every example screen is a finished looking HTML mock (`mocks.py`, rendered by `render_all.sh`) built
+  on HotGreen's own logo, product image, specs, published numbers, backers and the UK ETS register data.
+  Anything invented is labelled once on the screen, and results that need their model are blurred.
+- Three real Unsplash photos of brewing and fermentation, licence checked three ways, credits in
+  `DESIGN-v3.md`.
+
+**Rebuild.** Serve this folder on 8793 (`python3 -m http.server 8793`), then `./render_all.sh` and
+`python3 build.py`. The fix list screenshot `assets/img/ex/fixes.webp` comes from `shot_fixes.js` against
+`out/` served on 8794, and `render_all.sh` leaves it alone.
+
+**Caught in the three pass check and fixed before deploy.**
+- A demonstrator screen said "50 kW HotStack". The grant says a 50 kWth heat pump and HotStack modules
+  are 0.5 MW, so it now says "demonstration heat pump".
+- "Three different savings numbers" sat under "On your website", but only 30% is on the site. It's now a
+  separate line naming where each figure appears.
+- The enquiry form screen promised "reply the same day". Nothing from HotGreen says that, so it's gone.
+- The fact sheet screen marked 1,500 t CO2 per MW and 4x as "Basis to add". The Solutions page footnote
+  calls them estimates, so they're now labelled "Estimate".
+
+**Checks run on this version.** Copy audit on every visible word including panel captions, alt text and
+the 25 screens, zero colons, dashes or hyphens (Coca-Cola aside), the only uncontracted phrases are
+clause final ("Where you are"). Interaction test 62 of 62 on desktop and phone, locally and live. QA
+harness clean on the live download. 32 of 32 live assets byte matched, HTML identical apart from
+Netlify's rewrite of the fix list link. SSO off.
+
+**Still open before it's sent.** Prices (the recap promised "investment for each piece"), and part A
+says we'll make the fixes for free. Both are Raka's and Josh's call.

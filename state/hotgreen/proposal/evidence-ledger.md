@@ -146,3 +146,20 @@ every group and every piece. New facts that appear only in the sketches, each re
 Sketch content that is invented to show a layout is labelled on the sketch itself as Example, Example rows,
 Example draft or Sketch. Nothing invented shows a number about HotGreen's savings, every result box says
 "from your model".
+
+## Version 3 of the page, the decluttered rebuild, checked 25 September 2026 (evening)
+
+Raka asked for a simpler layout, real photos, better examples and a three times check. Every fact that is new
+in version 3, or was reworded, is below. Everything else on the page is unchanged from version 2 and its rows
+above still hold.
+
+| Fact or change | Check 1, the source reopened | Check 2, the opposite | Check 3, a second way |
+|---|---|---|---|
+| Fact sheet screen, "1,500 t a year per MW" and "4x a traditional boiler", both "on Solutions page" | www.hotgreensolutions.com/solutions by curl today (the bare domain 308s to www), text reads "1,500 TCO₂/year avoided per MW of installation. 4x more energy efficient than a traditional boiler." | The same block carries "*Numbers provided are estimates based on projected product performance and operational data from a typical facility." So the status was changed from "Basis to add" to "Estimate", their own word | Rendered in Chromium, control host example.com 200 in the same minute, screenshot shows the three cards €250k, 1,500 and 4x with the footnote under them |
+| Demonstrator screen said "50 kW HotStack". Changed to "A 50 kW demonstration heat pump" | GtR grant 10192195 says "50-kWth" heat pump at a CCEP site | HotStack modules are 0.5 MW on the spec image, so a 50 kW unit being called a HotStack is not supported | Two sources disagree with the old wording, so it was removed |
+| "three different savings numbers" sat under "On your website", but only 30% is on their site | Solutions page, "Reduce your energy bill by 30%" | 40% is on LinkedIn and "up to 50%" in Empirical's announcement, not on the site | Moved to its own line under the two columns, naming where each figure appears |
+| Site assessment form screen promised "reply the same day" | No HotGreen source says this | Nothing to disprove, it was our invention | Removed, the line now reads "Goes straight to engineering, with the steam data attached." |
+| Timeline headings shortened, "The EU heat auction, expected to open in early December", "The demonstrator, planned for the first half of 2027" | Rows 16, 46 and 105 above | "31 May" dropped from the heading to declutter, not because it was wrong (row 40) | Same wording as step 1 on the page |
+| Demonstrator screen milestone, "Installed, planned for the first half of 2027" | Row 16 above, transcript "quarter one quarter 2 of 2027" | The chart next to it is blurred and says "Filled from the unit's own data, if CCEP agrees to share it", no number shown | The screen is marked Sketch |
+| Photos, three Unsplash photos of brewing and fermentation | DESIGN-v3.md lists the page URL and file id of each | Checked for brands and faces at full size, one rejected for a brewery logo | Free licence shown three ways, the search filter, no Unsplash+ badge, the images.unsplash.com/photo host |
+| Main path under 1,000 words | Counted in the browser with the closed panels removed, 797 words | | |

@@ -4,681 +4,422 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>HotGreen x Astra, the proposal</title>
-<meta name="description" content="What Astra would build for HotGreen, in six groups from A to F, with a sketch of each and the timeline to the seed round.">
+<meta name="description" content="Six things Astra would build for HotGreen, what each looks like, and when each one fits.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%230a1016'/%3E%3Cpath d='M24 7 L42 42 H6 Z' fill='none' stroke='%23ff7a45' stroke-width='3' stroke-linejoin='round'/%3E%3Cpath d='M24 20 L32 37 H16 Z' fill='%238fd14f'/%3E%3C/svg%3E">
 <link rel="preload" href="fonts/plex-mono-500.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Plex Mono';src:url(fonts/plex-mono-500.woff2) format('woff2');font-weight:500;font-style:normal;font-display:swap}
+<style>@font-face{font-family:'Plex Mono';src:url(fonts/plex-mono-500.woff2) format('woff2');font-weight:500;font-display:swap}
 :root{
-  --ink:#0a1016;--ink2:#0e1a20;--panel:#101f26;
-  --paper:#f4f2ea;--paper2:#eae7db;
-  --green:#8fd14f;--green-d:#3f7f22;--ember:#ff7a45;--ember-d:#c2461a;--gold:#cbab6e;--steam:#cfe4e2;
-  --muted:#8ba0a6;--muted-d:#566a70;
-  --line:rgba(255,255,255,.10);--line-d:rgba(10,16,22,.14);
-  --g1:#ff7a45;--g2:#d9b877;--g3:#8fd14f;--g4:#6fd0e0;--g5:#b8a4ff;
+  --ink:#0b1310;--ink2:#101b17;--panel:#15231d;--paper:#f5f3ec;--white:#fff;
+  --text:#eef3ee;--soft:#b8c6be;--muted:#8a9a92;--dark-text:#13201a;--dark-soft:#4c5e55;
+  --green:#8fd14f;--green-d:#3f7f22;--ember:#ff7a45;--gold:#d9b877;
+  --line:rgba(255,255,255,.12);--line-d:rgba(19,32,26,.12);
+  --gA:#9fb3b8;--gB:#ff7a45;--gC:#d9b877;--gD:#8fd14f;--gE:#6fd0e0;--gF:#b8a4ff;
   --mono:'Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,h4{font-weight:650;letter-spacing:-.02em;line-height:1.08;margin:0}
-p{margin:0}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--sans);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3{font-weight:700;letter-spacing:-.025em;line-height:1.06}
 a{color:inherit}
 img{max-width:100%;display:block}
-::selection{background:var(--ember);color:#fff}
-.mono{font-family:var(--mono);font-weight:500}
-.kick{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--green);font-weight:500}
-#prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:99;background:linear-gradient(90deg,var(--ember),var(--gold),var(--green))}
-.slide{position:relative;padding:112px 7vw;overflow:hidden}
-.slide.dark{background:radial-gradient(120% 90% at 85% -10%,rgba(255,122,69,.10),transparent 55%),radial-gradient(120% 100% at 5% 110%,rgba(143,209,79,.09),transparent 55%),var(--ink)}
-.slide.deep{background:var(--ink2)}
-.slide.paper{background:var(--paper);color:#111a1f}
-.slide.paper .kick{color:var(--green-d)}
-.wrap{max-width:1120px;margin:0 auto;position:relative;z-index:2}
-.rv{opacity:1}
-.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
-.js .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:1080px;margin:0 auto;position:relative;z-index:2}
+
+/* top bar with the seven steps */
+.bar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:18px;padding:12px 24px;background:rgba(11,19,16,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--soft);text-decoration:none;white-space:nowrap}
+.astra-mark{width:24px;height:24px;flex:0 0 auto}
+.steps{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.steps::-webkit-scrollbar{display:none}
+.steps a{display:flex;align-items:center;gap:7px;padding:6px 10px;border-radius:99px;text-decoration:none;font-size:13.5px;color:var(--muted);white-space:nowrap}
+.steps a b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);font-size:11px;font-weight:600;color:var(--soft)}
+.steps a.on{color:var(--text);background:rgba(255,255,255,.07)}
+.steps a.on b{background:var(--green);border-color:var(--green);color:#0b1310}
+
+/* sections */
+.sec{position:relative;padding:130px 32px 110px;overflow:hidden}
+.sec.dark{background:var(--ink)}
+.sec.deep{background:var(--ink2)}
+.sec.paper{background:var(--paper);color:var(--dark-text)}
+.label{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.num{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--green);color:#0b1310;font-weight:700;font-size:17px;flex:0 0 auto}
+.paper .num{background:#13201a;color:#fff}
+.label .num{font-family:var(--sans);letter-spacing:0;text-transform:none;font-size:17px;color:#0b1310}
+.paper .label .num{color:#fff}
+.label span{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
+.paper .label span{color:var(--dark-soft)}
+.h2{font-size:clamp(34px,4.6vw,56px);max-width:16ch}
+.intro{margin-top:18px;font-size:clamp(18px,1.8vw,21px);color:var(--soft);max-width:44ch}
+.paper .intro{color:var(--dark-soft)}
+.next{display:inline-flex;align-items:center;gap:10px;margin-top:56px;font-size:16px;font-weight:600;color:var(--green);text-decoration:none}
+.paper .next{color:var(--green-d)}
+.next:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:99px;border:0;background:var(--green);color:#0b1310;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.btn.sm{padding:10px 16px;font-size:14.5px}
+.btn:focus-visible,.steps a:focus-visible,.tile button:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
 /* cover */
-#cover{min-height:100vh;display:flex;align-items:center;padding:96px 7vw;background:#070c11}
-.cover-photo{position:absolute;inset:0;z-index:0;background:#070c11 url(img/cover.jpg) center/cover no-repeat}
-.cover-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(110deg,rgba(6,10,15,.92) 0%,rgba(6,10,15,.72) 42%,rgba(6,10,15,.38) 72%,rgba(6,10,15,.6) 100%),linear-gradient(180deg,rgba(6,10,15,.45),rgba(6,10,15,.1) 45%,rgba(6,10,15,.94))}
-.brandrow{display:flex;align-items:center;gap:14px;margin-bottom:56px}
-.astra-mark{width:34px;height:34px;flex:0 0 auto}
-.brandrow .nm{font-family:var(--mono);letter-spacing:.3em;text-transform:uppercase;font-size:13px;color:var(--steam)}
-.cover-k{margin-bottom:22px}
-.cover-h{font-size:clamp(44px,8vw,100px);letter-spacing:-.035em;line-height:.96;max-width:12ch}
-.hot{background:linear-gradient(92deg,#ffd0a0,var(--ember));-webkit-background-clip:text;background-clip:text;color:transparent}
-.grn{background:linear-gradient(92deg,var(--green),#d6f2a6);-webkit-background-clip:text;background-clip:text;color:transparent}
-.cover-sub{max-width:620px;margin-top:28px;font-size:clamp(18px,2.2vw,22px);color:#c6d6d6;line-height:1.5}
-.cover-meta{display:flex;gap:14px 36px;flex-wrap:wrap;margin-top:52px;font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--muted)}
-.cover-meta b{color:var(--steam);font-weight:500}
-.toc{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:26px;font-family:var(--mono);font-size:12px}
-.toc a{color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:6px 12px}
-.toc a:hover{color:var(--paper);border-color:rgba(143,209,79,.5)}
+#top{min-height:100vh;display:flex;align-items:flex-end;padding:120px 32px 90px;background:#070b09}
+.photo{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center}
+.photo.kettle{background-image:url(img/photo-kettle.jpg);background-position:60% 50%}
+.veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(7,11,9,.35) 0%,rgba(7,11,9,.2) 35%,rgba(7,11,9,.92) 100%),linear-gradient(90deg,rgba(7,11,9,.75),rgba(7,11,9,0) 70%)}
+.kick{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
+.cover-h{font-size:clamp(46px,7.6vw,96px);letter-spacing:-.035em;line-height:.98;margin-top:18px;max-width:12ch}
+.cover-h em{font-style:normal;color:var(--green)}
+.cover-sub{margin-top:22px;font-size:clamp(19px,2vw,23px);color:#d6e1da;max-width:34ch}
+.cover-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:34px}
+.cover-row > span{font-size:15px;color:var(--soft)}
 
-/* generic */
-.eyebrow{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px}
-.eyebrow .note{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.slide.paper .eyebrow .note{color:var(--muted-d)}
-.lead{font-size:clamp(30px,4.2vw,48px);letter-spacing:-.025em;line-height:1.06;max-width:18ch}
-.lead .hl{color:var(--ember)}
-.lead .hg{color:var(--green)}
-.slide.paper .lead .hg{color:var(--green-d)}
-.slide.paper .lead .hl{color:var(--ember-d)}
-.say{font-size:clamp(18px,2vw,21px);color:#c3d2d4;max-width:62ch;line-height:1.55;margin-top:22px}
-.slide.paper .say{color:#33484d}
-.small{font-size:14px;color:var(--muted)}
+/* 1 where you are */
+.split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:60px;align-items:center}
+.figure-photo{border-radius:20px;overflow:hidden;aspect-ratio:5/6;background:#222}
+.figure-photo img{width:100%;height:100%;object-fit:cover}
+.facts{margin-top:40px;display:grid;gap:14px}
+.fact{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;align-items:start;padding:18px 20px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.fact b{font-family:var(--mono);font-size:14px;color:var(--gold);padding-top:3px}
+.fact p{font-size:19px;line-height:1.4}
+.fact p small{display:block;font-size:14px;color:var(--muted);margin-top:4px}
 
-/* told */
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:48px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--line)}
-.stat{background:var(--ink2);padding:26px 22px}
-.stat b{display:block;font-size:clamp(28px,3.2vw,40px);letter-spacing:-.03em;line-height:1;color:var(--gold);font-weight:650}
-.stat span{display:block;margin-top:12px;font-size:14.5px;color:#b9c9cb;line-height:1.45}
-.q{margin:44px 0 0;padding:4px 0 4px 24px;border-left:2px solid var(--ember);max-width:760px}
-.q p{font-size:clamp(22px,2.6vw,30px);line-height:1.3;letter-spacing:-.015em;color:#eef3ee}
-.q cite{display:block;margin-top:12px;font-style:normal;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+/* 2 what we found */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:48px}
+.col{border-radius:20px;padding:30px 30px 18px;background:#fff;border:1px solid var(--line-d)}
+.col h3{font-size:22px;display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.col h3 i{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;font-style:normal;font-size:16px;color:#fff}
+.col.yes h3 i{background:#2f8f4e}
+.col.no h3 i{background:#c2461a}
+.col li{list-style:none;padding:16px 0;border-top:1px solid var(--line-d);font-size:18px;line-height:1.45}
+.col ul{margin:0;padding:0}
+.also{margin-top:26px;font-size:19px;line-height:1.5;color:var(--dark-soft);max-width:52ch}
+.also b{color:#c2461a}
 
-/* proof */
-.stand{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:48px}
-.card{border:1px solid var(--line);border-radius:18px;padding:28px 26px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.005))}
-.card.real{border-color:rgba(143,209,79,.35);background:linear-gradient(180deg,rgba(143,209,79,.08),rgba(143,209,79,.01))}
-.card.site{border-color:rgba(255,122,69,.32);background:linear-gradient(180deg,rgba(255,122,69,.07),rgba(255,122,69,.01))}
-.card h3{font-size:13px;font-family:var(--mono);font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
-.card.real h3{color:var(--green)}
-.card.site h3{color:var(--ember)}
-.li{display:flex;gap:13px;padding:12px 0;border-top:1px solid var(--line);font-size:15.5px;color:#d3dedf;line-height:1.5}
-.li:first-of-type{border-top:0}
-.li .mk{flex:0 0 auto;font-family:var(--mono);font-size:12px;padding-top:3px}
-.card.real .mk{color:var(--green)}
-.card.site .mk{color:var(--ember)}
-.shots{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:22px;margin-top:22px;align-items:start}
-.shot{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
-.shot img{width:100%;height:auto}
-.shot figcaption{background:var(--ink2);color:var(--muted);font-family:var(--mono);font-size:12px;padding:10px 14px;line-height:1.5}
-.three{margin-top:56px}
-.three h3{font-size:clamp(22px,2.6vw,28px);letter-spacing:-.02em;max-width:26ch}
-.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
-.num{border:1px solid var(--line);border-radius:16px;padding:22px}
-.num b{display:block;font-size:clamp(34px,4vw,48px);line-height:1;letter-spacing:-.03em;color:var(--ember);font-weight:650}
-.num .src{display:block;margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.num .quo{display:block;margin-top:6px;font-size:15px;color:#d3dedf}
-.three .say{margin-top:20px}
-.std{margin-top:48px;padding:26px 28px;border-radius:18px;background:rgba(143,209,79,.07);border:1px solid rgba(143,209,79,.28);max-width:860px}
-.std p{font-size:18px;color:#dce8e0;line-height:1.55}
-.std b{color:var(--green);font-weight:600}
+/* 3 what we'd build */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:48px}
+.tile{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:var(--panel);border:1px solid var(--line);transition:border-color .2s,transform .2s}
+.tile:hover{border-color:rgba(255,255,255,.3)}
+.tile.on{border-color:var(--c);box-shadow:0 0 0 1px var(--c)}
+.tile .shot{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0e1713;border:0;padding:0;display:block;width:100%}
+.tile .shot img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .5s}
+.tile:hover .shot img{transform:scale(1.03)}
+.tile .body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.tile .top{display:flex;align-items:center;gap:12px}
+.letter{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--c);color:#0b1310;font-weight:800;font-size:19px;flex:0 0 auto}
+.tile h3{font-size:21px;line-height:1.2}
+.tile .what{margin-top:10px;color:var(--soft);font-size:16px;flex:1}
+.tile .acts{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.add{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:99px;border:1.5px solid var(--line);background:transparent;font-size:14.5px;font-weight:600;color:var(--text)}
+.add .tick{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1.5px solid currentColor;font-size:11px;line-height:1}
+.add .tick::before{content:"+"}
+.add.on{background:var(--c);border-color:var(--c);color:#0b1310}
+.add.on .tick::before{content:"\2713"}
+.add .t-on{display:none}.add.on .t-on{display:inline}.add.on .t-off{display:none}
+.gA{--c:var(--gA)}.gB{--c:var(--gB)}.gC{--c:var(--gC)}.gD{--c:var(--gD)}.gE{--c:var(--gE)}.gF{--c:var(--gF)}
 
-/* menu */
-.grp{margin-top:64px}
-.grp:first-of-type{margin-top:48px}
-.gh{display:flex;align-items:center;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:18px}
-.gno{flex:0 0 auto;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-family:var(--mono);font-size:15px;color:#0a1016;font-weight:500}
-.gh h3{font-size:clamp(22px,2.6vw,30px);letter-spacing:-.02em}
-.gh .cnt{display:block;margin-top:4px;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
-.g1 .gno,.dot.g1{background:var(--g1)}.g2 .gno,.dot.g2{background:var(--g2)}.g3 .gno,.dot.g3{background:var(--g3)}.g4 .gno,.dot.g4{background:var(--g4)}.g5 .gno,.dot.g5{background:var(--g5)}
-.pieces{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.piece{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.008));transition:border-color .25s,background .25s}
-.piece::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:3px;border-radius:0 3px 3px 0;background:var(--c)}
-.piece.g1{--c:var(--g1)}.piece.g2{--c:var(--g2)}.piece.g3{--c:var(--g3)}.piece.g4{--c:var(--g4)}.piece.g5{--c:var(--g5)}
-.ph{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em}
-.ph .type{color:var(--c);text-transform:uppercase}
-.ph .when{color:var(--muted)}
-.piece h4{font-size:20px;margin-top:10px;letter-spacing:-.015em}
-.piece .get{margin-top:10px;font-size:15px;color:#c3d2d4;line-height:1.5}
-.piece .chg{flex:1 0 auto;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:15px;color:#eef3ee;line-height:1.5}
-.piece .chg .lbl{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.pick{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:8px 14px;border-radius:99px;border:1px solid rgba(255,255,255,.22);background:transparent;color:var(--paper);font:500 12.5px var(--mono);cursor:pointer}
-.pick:hover{border-color:var(--c)}
-.pick .ico{width:14px;height:14px;border-radius:50%;border:1.5px solid currentColor;display:inline-grid;place-items:center;font-size:10px;line-height:1}
-.pick .ico::before{content:"+"}
-.piece.on .pick .ico::before{content:"\2713"}
-.pick .on-t{display:none}
-.piece.on{border-color:var(--c);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.015))}
-.piece.on .pick{background:var(--c);border-color:var(--c);color:#0a1016}
-.piece.on .pick .on-t{display:inline}.piece.on .pick .off-t{display:none}
-.piece.side{margin-top:16px;border-style:dashed}
-.gsum{margin-top:0}
+/* the panel for one part */
+dialog{padding:0;border:0;border-radius:22px;background:#f7f8f5;color:var(--dark-text);width:min(1180px,calc(100vw - 32px));max-height:calc(100vh - 40px);overflow:hidden}
+dialog::backdrop{background:rgba(5,9,7,.78);backdrop-filter:blur(3px)}
+.dlg{display:flex;flex-direction:column;max-height:calc(100vh - 40px)}
+.dhead{display:flex;align-items:center;gap:16px;padding:20px 24px;border-bottom:1px solid var(--line-d);background:#fff}
+.dhead h3{font-size:24px}
+.dhead p{font-size:15px;color:var(--dark-soft)}
+.dhead .x{margin-left:auto;width:42px;height:42px;border-radius:50%;border:1px solid var(--line-d);background:#fff;font-size:22px;line-height:1}
+.dbody{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:0;overflow:auto;flex:1}
+.viewer{padding:22px 24px;background:#e9ece7;display:flex;flex-direction:column;gap:12px;min-height:0}
+.frame{border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 20px 40px -24px rgba(0,0,0,.45);border:1px solid #d4d9d2}
+.frame .chrome{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#f1f2ef;border-bottom:1px solid #dcdfd9}
+.frame .chrome i{width:9px;height:9px;border-radius:50%;background:#cfd3cc}
+.frame img{width:100%;height:auto}
+.cap{font-size:15px;color:var(--dark-soft)}
+.cap b{color:var(--dark-text)}
+.full{font-size:14.5px;font-weight:600;color:var(--dark-text);text-underline-offset:4px}
+.items{padding:12px 14px 18px;overflow:auto}
+.item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;width:100%;text-align:left;padding:14px 12px;border-radius:14px;border:1px solid transparent;background:transparent}
+.item:hover{background:#fff;border-color:var(--line-d)}
+.item.on{background:#fff;border-color:#13201a;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.item .code{font-family:var(--mono);font-size:13px;font-weight:600;color:#13201a;background:#e6eae4;border-radius:8px;height:30px;display:grid;place-items:center}
+.item.on .code{background:#13201a;color:#fff}
+.item .ih{display:block;font-size:17px;font-weight:700;line-height:1.3}
+.item .ip{display:block;font-size:15px;color:var(--dark-soft);margin-top:3px;line-height:1.45}
+.item .when{display:block;margin-top:6px;font-family:var(--mono);font-size:12px;color:#6c7d74}
+.dfoot{display:flex;align-items:center;gap:12px;padding:16px 24px;border-top:1px solid var(--line-d);background:#fff;flex-wrap:wrap}
+.dfoot .add{border-color:#13201a;color:#13201a}
+.dfoot .add.on{background:#13201a;border-color:#13201a;color:#fff}
+.dfoot .sp{flex:1}
+.dfoot .btn.ghost{color:#13201a}
 
-/* order */
-.legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:14px;color:#c3d2d4}
-.legend span{display:inline-flex;align-items:center;gap:8px}
-.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:0 0 auto}
-.tl{margin-top:36px;border:1px solid var(--line);border-radius:20px;padding:22px;background:rgba(255,255,255,.02)}
-.months,.ms-row,.phases{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:6px}
-.months{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-bottom:10px;border-bottom:1px solid var(--line)}
-.months span{position:relative;padding-top:18px}
-.months span.y::before{position:absolute;top:0;left:0;color:var(--steam);letter-spacing:.06em}
-.months span.y26::before{content:"2026"}.months span.y27::before{content:"2027"}
-.ms-row{margin-top:8px}
-.ms{border-radius:10px;padding:8px 12px;font-size:13.5px;line-height:1.35;color:#eef3ee;background:rgba(203,171,110,.14);border:1px solid rgba(203,171,110,.4)}
-.ms .md{display:block;font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.04em;margin-bottom:2px}
-.ms.pt{background:transparent;border:0;border-radius:0}
-.ms.from{border-left:3px solid var(--gold)}
-.ms.to{border-right:3px solid var(--gold);text-align:right}
-.c-dec{grid-column:3 / span 3}.c4-9{grid-column:4 / span 6}.c-may{grid-column:6 / span 3}.c10-12{grid-column:10 / span 3}
-.phases{margin-top:18px;row-gap:12px}
-.phase{border-radius:14px;padding:16px 14px;background:var(--ink2);border:1px solid var(--line)}
-.p1{grid-column:1 / span 2}.p2{grid-column:3 / span 3}.p3{grid-column:6 / span 4}.p4{grid-column:10 / span 3}
-.phase h4{font-size:15px;letter-spacing:-.01em}
-.phase .at{margin-top:6px;font-size:13px;color:var(--muted);line-height:1.4}
-.chips{display:flex;flex-direction:column;gap:7px;margin-top:14px}
-.chip{display:flex;align-items:center;gap:9px;text-align:left;width:100%;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.02);color:#dce6e6;font:13px/1.3 var(--sans);cursor:pointer}
-.chip:hover{border-color:rgba(255,255,255,.3)}
-.chip.on{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.55);color:#fff;font-weight:600}
-.chip.on .dot{box-shadow:0 0 0 3px rgba(255,255,255,.18)}
+/* 4 when */
+.when4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:48px}
+.period{border-radius:18px;background:#fff;border:1px solid var(--line-d);padding:22px 20px;display:flex;flex-direction:column}
+.period .dates{font-family:var(--mono);font-size:13px;color:var(--dark-soft);letter-spacing:.04em}
+.period h3{font-size:19px;margin:8px 0 16px;line-height:1.3;min-height:3.9em}
+.gchip{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:10px 12px;border-radius:12px;border:1px solid var(--line-d);background:#f7f8f5;margin-bottom:8px;font-size:15px;color:var(--dark-text)}
+.gchip:hover{border-color:#13201a}
+.gchip .letter{width:30px;height:30px;border-radius:9px;font-size:15px}
+.gchip small{display:block;font-size:13px;color:var(--dark-soft)}
+.gchip.on{border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c)}
 
-/* start */
-.mocks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:48px}
-.mock{margin:0}
-.frame{border-radius:14px;overflow:hidden;border:1px solid #c9ccc2;background:#fff;box-shadow:0 18px 40px -24px rgba(10,16,22,.45)}
-.fbar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#eceadf;border-bottom:1px solid #d9d7cb;font-family:var(--mono);font-size:11px;color:#6b7a7e}
-.fbar i{width:8px;height:8px;border-radius:50%;background:#cfccbf;display:inline-block}
-.fbar span{margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fbody{padding:16px;color:#16252a;font-size:13px;line-height:1.45;min-height:300px}
-.fbody .fk{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#3f7f22}
-.fbody h5{font-size:16px;margin:4px 0 10px;letter-spacing:-.01em}
-.names{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.names span{border:1px solid #d7ddd3;border-radius:99px;padding:3px 9px;font-size:11.5px;background:#f6f8f2}
-.tline{border-left:2px solid #8fd14f;margin-left:4px;padding-left:12px}
-.tline div{padding:5px 0}
-.tline b{font-family:var(--mono);font-size:11px;color:#3f7f22;font-weight:500;display:block}
-.fld{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin:10px 0 12px}
-.fld label{font-size:11px;color:#566a70;display:block}
-.fld .in{margin-top:3px;height:28px;border:1px solid #cfd6cf;border-radius:7px;background:#fbfcfa}
-.outs{border-top:1px solid #e1e5dd;padding-top:10px}
-.out{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 0;font-size:12.5px}
-.sk{height:10px;width:44%;border-radius:6px;background:linear-gradient(90deg,#e2e8dc,#cfe4c1,#e2e8dc)}
-.fnote{margin-top:10px;font-size:11px;color:#566a70;border-top:1px dashed #d7ddd3;padding-top:8px}
-.rowq{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-top:1px solid #e6e9e2;font-size:12.5px}
-.rowq:first-of-type{border-top:0}
-.tag{font-family:var(--mono);font-size:10.5px;padding:3px 7px;border-radius:99px;white-space:nowrap}
-.tag.ok{background:#e3f2d6;color:#2f6a17}.tag.wait{background:#f6ead3;color:#7a5413}.tag.new{background:#e0eef3;color:#1f5f6f}
-.mock figcaption{margin-top:12px}
-.mock figcaption b{display:block;font-size:16px;color:#0d1a1f}
-.mock figcaption span{display:block;margin-top:4px;font-size:14px;color:#566a70}
+/* 5 start */
+.startcard{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:34px;margin-top:48px}
+.stepsx{display:grid;gap:14px}
+.stepx{display:grid;grid-template-columns:52px minmax(0,1fr);gap:16px;align-items:center;padding:20px 22px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.stepx b{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:14px;color:#0b1310;font-size:20px;font-weight:800}
+.stepx p{font-size:19px;line-height:1.35}
+.stepx small{display:block;font-size:14px;color:var(--muted);margin-top:3px}
+.needbox{border-radius:18px;background:rgba(255,255,255,.03);border:1px dashed var(--line);padding:24px}
+.needbox h3{font-size:19px;margin-bottom:12px}
+.needbox li{list-style:none;padding:10px 0;border-top:1px solid var(--line);font-size:16px;color:var(--soft)}
+.needbox ul{margin:0;padding:0}
 
-/* need */
-.needs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px}
-.need{border:1px solid var(--line);border-radius:16px;padding:20px 18px;background:rgba(255,255,255,.02)}
-.need .n{font-family:var(--mono);font-size:12px;color:var(--green)}
-.need p{margin-top:10px;font-size:15.5px;color:#dce6e6;line-height:1.45}
-.fixcta{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:40px;padding:26px 28px;border-radius:18px;border:1px solid rgba(255,122,69,.35);background:linear-gradient(120deg,rgba(255,122,69,.10),rgba(203,171,110,.05))}
-.fixcta h3{font-size:22px}
-.fixcta p{margin-top:6px;color:#c3d2d4;font-size:15.5px;max-width:56ch}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:99px;background:linear-gradient(90deg,var(--ember),var(--green));color:#0a1016;font-weight:650;font-size:15px;text-decoration:none;border:0;cursor:pointer}
-.btn.ghost{background:transparent;color:var(--paper);border:1px solid rgba(255,255,255,.3)}
-
-/* team */
-.work{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
-.wk{border-radius:16px;overflow:hidden;background:#fff;border:1px solid #dcd9cd}
+/* 6 who we are */
+.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:44px}
+.wk{border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--line-d)}
 .wk .im{aspect-ratio:4/3;overflow:hidden;background:#e9e6da}
 .wk img{width:100%;height:100%;object-fit:cover;object-position:top}
-.wk .tx{padding:14px 16px 18px}
-.wk h3{font-size:15.5px;letter-spacing:-.01em}
-.wk p{margin-top:6px;font-size:13.5px;color:#465a60;line-height:1.45}
-.disc{margin-top:18px;font-size:13.5px;color:#566a70}
-.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:40px}
-.person{border-radius:16px;background:#fff;border:1px solid #dcd9cd;padding:22px 22px 20px}
-.person h3{font-size:20px}
-.person .role{display:block;margin-top:4px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--green-d)}
-.person p{margin-top:12px;font-size:15px;color:#33484d;line-height:1.55}
-.person a{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:12.5px;color:#0d1a1f;text-decoration:underline;text-underline-offset:3px}
+.wk .tx{padding:18px 20px 22px}
+.wk h3{font-size:18px;line-height:1.25}
+.wk p{margin-top:8px;font-size:15px;color:var(--dark-soft);line-height:1.5}
+.disc{margin-top:18px;font-size:14px;color:var(--dark-soft)}
+.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:40px}
+.person{border-radius:18px;background:#fff;border:1px solid var(--line-d);padding:26px}
+.person h3{font-size:22px}
+.person .role{display:block;margin-top:6px;font-family:var(--mono);font-size:13px;color:var(--green-d)}
+.person p{margin-top:12px;font-size:16px;color:#33483f;line-height:1.55}
+.person a{display:inline-block;margin-top:12px;font-weight:600;font-size:15px;color:var(--dark-text);text-underline-offset:4px}
 
-/* next */
-#next{background:#070c11}
-.band{position:absolute;inset:0;z-index:0;background:#070c11 url(img/band.jpg) right center/cover no-repeat;opacity:.55}
-.band-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(7,12,17,.97) 0%,rgba(7,12,17,.9) 45%,rgba(7,12,17,.55) 100%)}
-.short{margin-top:40px;max-width:640px;border:1px solid var(--line);border-radius:20px;padding:26px;background:rgba(10,16,22,.75)}
-.short h3{font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:500}
-.short ol{margin:14px 0 0;padding-left:22px;color:#eef3ee;font-size:16px;line-height:1.7}
-.short .empty{margin-top:12px;color:var(--muted);font-size:15px}
-.short .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-footer{padding:48px 7vw 64px;text-align:center;border-top:1px solid var(--line);background:var(--ink)}
-footer .astra-mark{margin:0 auto 12px}
-footer p{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.8}
+/* 7 next */
+#s7{padding-bottom:140px}
+.photo.tanks{background-image:url(img/photo-tanks.jpg)}
+.veil2{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,11,9,.96) 0%,rgba(7,11,9,.88) 50%,rgba(7,11,9,.6) 100%)}
+.pick{margin-top:40px;max-width:620px;border-radius:22px;padding:28px;background:rgba(11,19,16,.8);border:1px solid var(--line)}
+.pick h3{font-size:20px}
+.picked{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 4px;min-height:44px}
+.picked .pc{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:99px;background:rgba(255,255,255,.07);font-size:15px}
+.picked .pc .letter{width:28px;height:28px;border-radius:8px;font-size:14px}
+.empty{color:var(--muted);font-size:16px}
+.pick .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+footer{padding:44px 32px 60px;text-align:center;border-top:1px solid var(--line);background:var(--ink)}
+footer .astra-mark{margin:0 auto 12px;width:30px;height:30px}
+footer p{font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.9}
 
-#tray{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:90;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:99px;background:rgba(10,16,22,.92);border:1px solid rgba(143,209,79,.5);color:var(--paper);font:500 13px var(--mono);white-space:nowrap;text-decoration:none;box-shadow:0 12px 30px -10px rgba(0,0,0,.6);max-width:calc(100vw - 32px)}
-#tray[hidden]{display:none}
-#tray b{display:inline-grid;place-items:center;min-width:24px;height:24px;border-radius:99px;background:var(--green);color:#0a1016;font-weight:500}
-
-/* fixes page */
-.fx{display:grid;gap:14px;margin-top:36px}
-.fxi{display:grid;grid-template-columns:48px minmax(0,1fr);gap:14px;border:1px solid var(--line);border-radius:16px;padding:22px;background:rgba(255,255,255,.02)}
-.fxi .n{font-family:var(--mono);font-size:13px;color:var(--gold);padding-top:3px}
-.fxi.legal{border-color:rgba(255,122,69,.4);background:rgba(255,122,69,.05)}
+/* fix list page */
+.fixpage{padding:120px 32px 90px}
+.back{display:inline-block;margin-bottom:36px;font-size:15px;color:var(--soft);text-decoration:none}
+.back:hover{color:var(--text)}
+.fxh{margin-top:54px;font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.fx{display:grid;gap:14px;margin-top:20px}
+.fxi{display:grid;grid-template-columns:48px minmax(0,1fr);gap:14px;border:1px solid var(--line);border-radius:16px;padding:22px;background:rgba(255,255,255,.03)}
+.fxi .n{font-family:var(--mono);font-size:14px;color:var(--gold);padding-top:3px}
+.fxi.legal{border-color:rgba(255,122,69,.45);background:rgba(255,122,69,.06)}
 .fxi.legal .n{color:var(--ember)}
-.fxi h3{font-size:19px;letter-spacing:-.01em}
-.fxi p{margin-top:8px;font-size:15.5px;color:#c9d6d7;line-height:1.55}
-.fxh{margin-top:56px;font-family:var(--mono);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.back{display:inline-block;margin-bottom:40px;font-family:var(--mono);font-size:12.5px;color:var(--muted);text-decoration:none}
-.back:hover{color:var(--paper)}
+.fxi h3{font-size:20px;letter-spacing:-.01em}
+.fxi p{margin-top:8px;font-size:16px;color:#c9d6cf;line-height:1.55}
 
-@media (max-width:1000px){
-  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .mocks{grid-template-columns:minmax(0,1fr)}
-  .mocks .mock{max-width:520px}
-  .work{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .needs{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .months{display:none}
-  .ms-row,.phases{grid-template-columns:minmax(0,1fr)}
-  .c-dec,.c4-9,.c-may,.c10-12,.p1,.p2,.p3,.p4{grid-column:auto}
+/* reveal, gentle */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.tile .shot img{transition:none}}
+
+@media (max-width:980px){
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .when4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dbody{grid-template-columns:minmax(0,1fr)}
+  .startcard{grid-template-columns:minmax(0,1fr)}
+  .steps a span{display:none}
 }
-@media (max-width:760px){
-  .slide{padding:76px 16px}
-  #cover{padding:72px 16px}
-  .brandrow{margin-bottom:40px}
-  .stand,.shots,.nums,.pieces,.people{grid-template-columns:minmax(0,1fr)}
-  .stats{grid-template-columns:minmax(0,1fr)}
-  .work,.needs{grid-template-columns:minmax(0,1fr)}
-  .tl{padding:14px}
-  .fixcta{padding:22px}
-  footer{padding:40px 16px 90px}
+@media (max-width:720px){
+  body{font-size:17px}
+  .sec{padding:100px 16px 80px}
+  #top{padding:100px 16px 64px}
+  .bar{padding:10px 12px;gap:10px}
+  .bar .brand span{display:none}
+  .steps a{padding:5px 6px}
+  .split,.two,.tiles,.when4,.work,.people{grid-template-columns:minmax(0,1fr)}
+  .split .figure-photo{aspect-ratio:4/3}
+  .period h3{min-height:0}
+  dialog{width:100vw;max-width:100vw;height:100%;max-height:100%;border-radius:0}
+  .dlg{max-height:100%;height:100%}
+  .viewer,.items{padding:14px}
+  .dhead{padding:14px 16px}
+  .dhead h3{font-size:20px}
+  .dfoot{padding:12px 16px}
+  .fixpage{padding:100px 16px 70px}
   .fxi{grid-template-columns:minmax(0,1fr);gap:4px}
+  footer{padding:36px 16px 50px}
 }
-/* v2, the A to F menu with a sketch for every group and every piece */
-:root{--gA:#9fb3b8;--hg-dark:#001d11;--hg-deep:#004026;--hg-mint:#ecf4ed;--hg-green:#39cb67}
-.gA .gno,.dot.gA{background:var(--gA)}
-.piece.gA{--c:var(--gA)}
-.g1 .gno,.dot.g1{background:var(--g1)}
-.grp{margin-top:88px}
-.gh{align-items:flex-start;border-bottom:0;margin-bottom:22px;padding-bottom:0}
-.gno{width:52px;height:52px;border-radius:14px;font-size:24px;font-family:var(--sans);font-weight:700}
-.gh h3{font-size:clamp(24px,3vw,34px)}
-.gh .what{display:block;margin-top:6px;font-size:17px;color:#c3d2d4;letter-spacing:0}
-.pieces{grid-template-columns:repeat(3,minmax(0,1fr))}
-.piece{padding:14px 14px 16px}
-.piece::before{display:none}
-.piece{border-top:3px solid var(--c)}
-.piece h4{font-size:18px;margin-top:14px}
-.piece .code{font-family:var(--mono);font-size:12px;color:var(--c);margin-right:8px}
-.piece .get{flex:1 0 auto;font-size:15px}
-.piece .ph{margin-top:12px}
-.piece.solo{grid-column:1 / span 2}
-
-/* hero sketch for a whole group */
-.hv{margin:0 0 20px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#fff;color:#16252a;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
-.fbar{position:relative}
-.fbar .tg,.mv .tg{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;background:#fff3e0;color:#8a4b12;border:1px solid #f0d2a8}
-.mv .tg{top:8px;transform:none;z-index:3}
-.tg.real{background:#e3f2d6;color:#2f6a17;border-color:#bfe0a4}
-.fbar.dark{background:#00140c;border-bottom-color:#0a2e1f;color:#8fb59d}
-.fbar.dark i{background:#0f3a26}
-
-/* mini sketch per piece */
-.mv{position:relative;height:218px;overflow:hidden;border-radius:12px;background:#fbfcf9;color:#16252a;border:1px solid #dfe5da;padding:14px;font-size:12px;line-height:1.4}
-.mv.tall{height:auto;min-height:218px}
-.mv.site{background:var(--hg-dark);color:var(--hg-mint);border-color:#0a2e1f}
-.mv.mint{background:var(--hg-mint)}
-.ln{display:block;height:7px;border-radius:4px;background:#dfe5da;margin:6px 0}
-.ln.s{width:55%}.ln.m{width:75%}
-.site .ln{background:#0f3a26}
-.mvh{font-weight:700;font-size:13px;margin:0 0 8px;padding-right:70px}
-.mk{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#3f7f22}
-.site .mk{color:var(--hg-green)}
-.btnx{display:inline-block;padding:5px 10px;border-radius:99px;background:var(--hg-green);color:#00140c;font-weight:700;font-size:11px}
-.btnx.o{background:transparent;border:1px solid currentColor;color:inherit}
-.chipx{display:inline-block;border:1px solid #d7ddd3;border-radius:99px;padding:2px 8px;font-size:10.5px;background:#fff;margin:0 4px 5px 0}
-.site .chipx{background:#00261a;border-color:#0f5a36;color:var(--hg-mint)}
-.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
-.fade{position:absolute;left:0;right:0;bottom:0;height:34px;background:linear-gradient(180deg,rgba(251,252,249,0),#fbfcf9)}
-.site .fade{background:linear-gradient(180deg,rgba(0,29,17,0),var(--hg-dark))}
-
-/* their site, full sketch */
-.sbody{background:var(--hg-dark);color:var(--hg-mint);padding:18px 26px 26px}
-.snav{display:flex;align-items:center;gap:22px;font-size:13px;color:#b9d3c1;padding:6px 0 18px;border-bottom:1px solid #0a2e1f}
-.slogo{width:96px;color:var(--hg-mint);display:inline-flex}
-.slogo svg{width:100%;height:auto}
-.snav .sp{flex:1}
-.shero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px;align-items:center;padding:26px 0 18px}
-.shero h4{font-size:clamp(24px,3vw,36px);line-height:1.08;letter-spacing:-.02em;margin:8px 0 12px;color:#fff}
-.shero p{color:#b9d3c1;font-size:15px;max-width:44ch}
-.shero img{width:100%;height:auto}
-.sbtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-.sbtns .btnx{font-size:13px;padding:9px 16px}
-.sproof{border-top:1px solid #0a2e1f;padding-top:16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px}
-.stl{border-left:2px solid var(--hg-green);padding-left:14px}
-.stl div{padding:4px 0;font-size:13.5px;color:var(--hg-mint)}
-.stl b{display:block;font-family:var(--mono);font-size:11px;color:var(--hg-green);font-weight:500}
-
-/* product page sketch */
-.pbody{background:var(--hg-mint);color:#062015;padding:22px 26px 26px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:26px;align-items:start}
-.pbody h4{font-size:30px;letter-spacing:-.02em;color:var(--hg-dark)}
-.pbody .crumb{font-size:12px;color:#4b6b58}
-.pbody p{font-size:14.5px;color:#23412f;margin-top:8px}
-.spec{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px;background:#fff;border-radius:10px;overflow:hidden}
-.spec th,.spec td{text-align:left;padding:7px 10px;border-bottom:1px solid #d4e6d8}
-.spec th{background:#d9eddf;font-weight:700;color:var(--hg-dark)}
-.spec td:first-child{color:#4b6b58}
-.apps{margin-top:12px}
-
-/* app sketch */
-.abody{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:0;min-height:360px}
-.apane{padding:20px 22px;border-right:1px solid #e6e9e2;background:#f7f9f5}
-.apane2{padding:20px 22px}
-.inp{margin-top:10px}
-.inp label{display:block;font-size:12px;color:#566a70}
-.inp .v{margin-top:3px;min-height:34px;border:1px solid #cfd6cf;border-radius:8px;background:#fff;padding:7px 10px;font-size:13.5px;color:#16252a}
-.inp .v.phv{color:#98a6a0}
-.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}
-.tile{border:1px solid #e1e5dd;border-radius:10px;padding:10px}
-.tile span{display:block;font-size:11.5px;color:#566a70}
-.tile b{display:block;margin-top:8px;font-size:12px;font-weight:500;color:#98a6a0}
-.chartph{margin-top:14px;height:130px;border:1.5px dashed #cfd6cf;border-radius:10px;display:grid;place-items:center;color:#98a6a0;font-size:12.5px;text-align:center;padding:10px}
-.fundrow{margin-top:14px;border-top:1px solid #e6e9e2;padding-top:10px;font-size:13px}
-
-/* flow diagram */
-.flow{background:#fbfcf9;padding:22px 24px 26px}
-.flow .lane{display:flex;align-items:stretch;gap:10px;flex-wrap:nowrap}
-.flow .lane+.lane{margin-top:16px}
-.flow .lname{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#566a70;margin:0 0 8px}
-.node{flex:1 1 0;min-width:0;border:1px solid #cfe0d4;border-radius:12px;background:#fff;padding:10px 12px;font-size:13px}
-.node b{display:block;font-family:var(--mono);font-size:11px;color:#3f7f22;font-weight:500}
-.node.hot{border-color:#6fd0e0;background:#eef9fb}
-.arr{flex:0 0 auto;align-self:center;color:#8ba0a6;font-size:18px}
-.note{margin-top:14px;font-size:12.5px;color:#566a70}
-
-/* email sketch */
-.mail{background:#fff;padding:20px 24px 24px}
-.mail .from{font-size:12.5px;color:#566a70}
-.mail h5{font-size:19px;margin:6px 0 14px;letter-spacing:-.01em}
-.item{border-top:1px solid #e6e9e2;padding:12px 0}
-.item b{display:block;font-size:14.5px}
-.item .src{display:block;font-family:var(--mono);font-size:11px;color:#3f7f22;margin-top:3px}
-.item p{font-size:13.5px;color:#33484d;margin-top:4px}
-.dates{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.dates span{border:1px solid #d7ddd3;border-radius:8px;padding:5px 9px;font-size:12px;background:#f7f9f5}
-
-/* bits used inside minis */
-.chk{display:flex;gap:8px;align-items:flex-start;padding:5px 0;border-bottom:1px solid #eef1ea;font-size:12px}
-.chk::before{content:"";flex:0 0 12px;height:12px;border:1.5px solid #9fb3b8;border-radius:3px;margin-top:1px}
-.chk em{margin-left:auto;font-style:normal;font-family:var(--mono);font-size:10px;color:#c2461a}
-.more{margin-top:6px;font-size:11.5px;color:#566a70}
-.nums3{display:flex;gap:8px;justify-content:center;margin-top:20px}
-.nums3 s{font-size:20px;font-weight:700;color:#c2461a;text-decoration-thickness:2px}
-.down{text-align:center;color:#8ba0a6;margin:4px 0}
-.fact{border:1px solid #cfe0d4;border-radius:10px;background:#fff;padding:9px 11px}
-.fact .fr{display:grid;grid-template-columns:78px minmax(0,1fr);gap:8px;align-items:center;font-size:11px;color:#566a70}
-.fact .fr .ln{margin:4px 0}
-.pr{border-top:1px solid #eef1ea;padding:6px 0}
-.pr:first-of-type{border-top:0}
-.pr span{display:block;font-family:var(--mono);font-size:10px;color:#566a70}
-.pr b{font-size:12.5px}
-.fold{display:flex;justify-content:space-between;align-items:center;padding:4px 0;border-bottom:1px solid #eef1ea;font-size:12px}
-.fold .who{width:44px;height:7px;border-radius:4px;background:#dfe5da}
-.house{text-align:center}
-.roof{background:var(--hg-dark);color:var(--hg-mint);border-radius:10px 10px 4px 4px;padding:8px;font-size:11.5px;font-weight:700}
-.pill3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:6px 0}
-.pill3 div{background:#e4f1e7;border-radius:6px;padding:7px 5px;font-size:10.5px;min-height:62px}
-.base{background:#d9eddf;border-radius:4px;padding:6px;font-size:10.5px}
-.ba{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin-top:4px}
-.ba figure{margin:0}
-.ba img{width:100%;height:118px;object-fit:cover;object-position:top;border-radius:6px;border:1px solid #dfe5da}
-.ba .newl{height:118px;border-radius:6px;background:var(--hg-dark);padding:10px;color:var(--hg-mint)}
-.ba .newl .ln{background:#0f3a26}
-.ba .newl .gl{display:block;height:9px;width:60%;border-radius:4px;background:var(--hg-green);margin:10px 0}
-.ba figcaption{font-family:var(--mono);font-size:10px;color:#566a70;margin-top:4px}
-.sheet{display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:10px;background:#fff;border:1px solid #dfe5da;border-radius:6px;padding:10px;height:170px;box-shadow:0 8px 18px -12px rgba(0,0,0,.4)}
-.sheet img{width:92px;height:auto;align-self:start}
-.sheet .sr{font-size:11px;padding:3px 0;border-bottom:1px solid #eef1ea}
-.pdf{display:inline-block;font-family:var(--mono);font-size:10px;background:#c2461a;color:#fff;border-radius:4px;padding:1px 5px;margin-left:6px}
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:8px 0}
-.steps div{background:#e4f1e7;border-radius:6px;padding:6px 5px;font-size:10.5px;min-height:56px}
-.steps b{display:block;font-family:var(--mono);font-size:10px;color:#3f7f22}
-.li-post{background:#fff;border:1px solid #dfe5da;border-radius:10px;padding:10px}
-.li-top{display:flex;gap:8px;align-items:center}
-.li-av{width:28px;height:28px;border-radius:6px;background:var(--hg-dark);display:grid;place-items:center;color:var(--hg-mint);padding:4px}
-.li-av svg{width:100%;height:auto}
-.li-top span{display:block;font-size:10.5px;color:#566a70}
-.li-post p{margin-top:8px;font-size:11.5px}
-.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-top:8px}
-.cal i{height:12px;border-radius:3px;background:#eef1ea}
-.cal i.p{background:#0a66c2}
-.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
-.tabs span{font-size:10.5px;padding:3px 7px;border-radius:6px;background:#eef1ea}
-.tabs span.on{background:var(--hg-dark);color:var(--hg-mint)}
-.inpx{margin-top:6px}
-.inpx label{font-size:10.5px;color:#566a70}
-.inpx .v{height:22px;border:1px solid #cfd6cf;border-radius:6px;background:#fff;margin-top:2px}
-.kan{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
-.kan .col{background:#eef1ea;border-radius:6px;padding:5px;min-height:150px}
-.kan .col>span{display:block;font-family:var(--mono);font-size:9.5px;color:#566a70;margin-bottom:4px}
-.kan .cd{background:#fff;border-radius:5px;padding:5px;margin-bottom:5px;font-size:10px;box-shadow:0 1px 2px rgba(0,0,0,.08)}
-.kan .cd .ln{height:5px;margin:3px 0}
-.seq{display:grid;gap:6px;margin-top:4px}
-.seq div{display:grid;grid-template-columns:54px minmax(0,1fr);gap:8px;align-items:start;background:#fff;border:1px solid #dfe5da;border-radius:8px;padding:7px 8px;font-size:11px}
-.seq b{font-family:var(--mono);font-size:10px;color:#3f7f22;font-weight:500}
-.appr{display:flex;gap:6px;margin-top:8px}
-.form3 .inpx .v{height:26px}
-.arrow-r{text-align:center;color:#8ba0a6;margin:4px 0}
-
-/* the chart */
-.bars{margin-top:4px}
-.bar{display:grid;grid-template-columns:96px minmax(0,1fr) 22px;gap:6px;align-items:center;font-size:11px;padding:1.5px 0;position:relative;outline:none}
-.bar .t{color:#33484d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bar .tr{height:11px;background:transparent}
-.bar .f{display:block;height:11px;background:#2f8f4e;border-radius:0 4px 4px 0}
-.bar .n{color:#16252a;font-weight:600;text-align:right}
-.bar .tip{display:none;position:absolute;left:100px;top:-26px;z-index:5;background:#0a1016;color:#eef3ee;font-size:11px;padding:4px 8px;border-radius:6px;white-space:nowrap}
-.bar:hover .tip,.bar:focus .tip{display:block}
-.bar:hover .f,.bar:focus .f{background:#236e3b}
-.src{font-family:var(--mono);font-size:10px;color:#566a70;margin-top:6px}
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-
-/* start path */
-.path{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:34px}
-.path .step{border:1px solid #cfd6cf;background:#fff;border-radius:12px;padding:12px 16px;font-size:15px;color:#0d1a1f}
-.path .step b{font-family:var(--mono);font-size:12px;color:var(--green-d);margin-right:8px}
-.path .ar{color:#8ba0a6;font-size:20px}
-
-@media (max-width:1000px){
-  .pieces{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .shero,.pbody,.abody,.sproof{grid-template-columns:minmax(0,1fr)}
-  .apane{border-right:0;border-bottom:1px solid #e6e9e2}
-  .flow .lane{flex-direction:column}
-  .flow .arr{transform:rotate(90deg)}
-}
-@media (max-width:760px){
-  .pieces{grid-template-columns:minmax(0,1fr)}
-  .piece.solo{grid-column:auto}
-  .snav span:not(.slogo):not(.sp):not(.btnx){display:none}
-  .sbody,.pbody{padding:16px}
-  .tiles{grid-template-columns:minmax(0,1fr)}
-  .spec{font-size:12px}
-  .spec th,.spec td{padding:6px 7px}
-}
-
-/* small helpers used by the sketches */
-.mvnames{margin:6px 0 8px}
-.mvchips{margin-top:8px}
-.fact.post{margin-bottom:8px}
-.more.sm{margin:4px 0}
-.fold.head{font-family:var(--mono);font-size:10px;color:#566a70}
-.slogo.small{width:56px}
-.sht{font-size:12px}
-.lin{font-size:11.5px}
-.inpx .v.val{padding:3px 6px;font-size:11px;height:auto;min-height:22px}
-.tile.gap{margin-top:6px}
-.mvbtn{margin-top:8px}
-.mk.sp{margin-top:6px}
-.li-post.gap{margin-top:6px}
-.flush{margin:0}
-.gap{margin-top:8px}
-.pimg{width:100%;height:auto;margin-top:10px}
-.lname.second{margin-top:22px}
-.piece.aside{justify-content:center;border-top-style:dashed}
-.piece.aside .btn{align-self:flex-start;margin-top:14px}
-.ccode{font-family:var(--mono);font-weight:500;font-size:11px;min-width:22px;color:#9fb3b8}
-.mv .tile{padding:7px}
-.mv .tile b{margin-top:4px}
-
-/* fixes after the first look */
-.sbody .chipx{background:#00261a;border-color:#0f5a36;color:var(--hg-mint)}
-.sbody .mk{color:var(--hg-green)}
-.node.key{border-color:#6fd0e0;background:#eef9fb}
-.mv{height:248px;padding-top:34px}
-.mv .tg{top:8px;right:10px}
-.mv.tall{height:auto;min-height:248px}
-.steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-.steps div{min-height:0}
-.li-post p{font-size:11px;margin-top:6px}
-.cal{gap:2px;margin-top:6px}
-.cal i{height:7px}
-.form3 .inpx .v{height:22px}
-.bar.oth .f{background:#9fb3b8}
-.bar.oth .t{color:#566a70}
-
-.fbar span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 190px)}
 </style>
 </head>
 <body>
-<div id="prog"></div>
 
-<section id="cover" class="slide">
-  <div class="cover-photo" aria-hidden="true"></div><div class="cover-veil" aria-hidden="true"></div>
+<header class="bar"><a class="brand" href="#top"><svg class="astra-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 L45 45 H3 Z" stroke="url(#ag)" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 18 L34 39 H14 Z" fill="url(#ag2)"/><defs><linearGradient id="ag" x1="3" y1="3" x2="45" y2="45"><stop stop-color="#ff7a45"/><stop offset="1" stop-color="#8fd14f"/></linearGradient><linearGradient id="ag2" x1="14" y1="18" x2="34" y2="39"><stop stop-color="#8fd14f"/><stop offset="1" stop-color="#cbab6e"/></linearGradient></defs></svg><span>Astra Agency</span></a><nav class="steps" aria-label="Steps"><a href="#s1"><b>1</b><span>Where you are</span></a><a href="#s2"><b>2</b><span>What we found</span></a><a href="#s3"><b>3</b><span>What we’d build</span></a><a href="#s4"><b>4</b><span>When</span></a><a href="#s5"><b>5</b><span>Where to start</span></a><a href="#s6"><b>6</b><span>Who we are</span></a><a href="#s7"><b>7</b><span>Next step</span></a></nav></header>
+
+<section id="top" class="sec">
+  <div class="photo kettle" aria-hidden="true"></div><div class="veil" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="brandrow"><svg class="astra-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 L45 45 H3 Z" stroke="url(#ag)" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 18 L34 39 H14 Z" fill="url(#ag2)"/><defs><linearGradient id="ag" x1="3" y1="3" x2="45" y2="45"><stop stop-color="#ff7a45"/><stop offset="1" stop-color="#8fd14f"/></linearGradient><linearGradient id="ag2" x1="14" y1="18" x2="34" y2="39"><stop stop-color="#8fd14f"/><stop offset="1" stop-color="#cbab6e"/></linearGradient></defs></svg><span class="nm">Astra Agency</span></div>
-    <p class="kick cover-k">Proposal for HotGreen</p>
-    <h1 class="cover-h">Your proof is <span class="hot">stronger</span> than your <span class="grn">website</span>.</h1>
-    <p class="cover-sub">Here’s what we’d build, split into six groups from A to F. Pick the ones you want. The timeline shows when each one fits.</p>
-    <div class="cover-meta"><span>Prepared for <b>Sanya Chhugani</b> and <b>Georgia Ware</b></span><span><b>HotGreen Solutions</b></span><span>September 2026</span></div>
-    <nav class="toc" aria-label="Sections"><a href="#told">What you told us</a><a href="#proof">What we found</a><a href="#menu">The menu</a><a href="#order">The timeline</a><a href="#start">Where we’d start</a><a href="#team">Who we are</a><a href="#next">Next step</a></nav>
+    <p class="kick">Proposal for HotGreen · September 2026</p>
+    <h1 class="cover-h">Your proof is stronger than your <em>website</em>.</h1>
+    <p class="cover-sub">Six things we can build for you, and when each one fits.</p>
+    <div class="cover-row"><a class="btn" href="#s1">Start <span aria-hidden="true">↓</span></a><span>Prepared for Sanya Chhugani and Georgia Ware</span></div>
   </div>
 </section>
 
-<section id="told" class="slide dark">
+<section id="s1" class="sec dark" data-step>
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">1 / What you told us</span><span class="note">on the call, 24 September</span></div>
-    <h2 class="lead rv">Investors first, and customers are already <span class="hg">coming in</span>.</h2>
-    <div class="stats rv"><div class="stat"><b>Q3 2027</b><span>Seed round, planned</span></div><div class="stat"><b>H1 2027</b><span>First unit goes into a Coca-Cola Europacific Partners site</span></div><div class="stat"><b>Inbound</b><span>Customers find you through industry contacts and accelerators</span></div><div class="stat"><b>Later</b><span>Outbound, once there’s real world data</span></div></div>
-    <blockquote class="q rv"><p>“a very credible and reliable equipment provider rather than a startup”</p><cite>How you want HotGreen to come across, without losing what makes it different</cite></blockquote>
-    <p class="say rv">You’ll handle the quick fixes yourselves, SEO and a news page. Later you’d like a small version of your business case model on the site, and something on Scope 1, 2 and 3 and the ETS rules.</p>
-  </div>
-</section>
-
-<section id="proof" class="slide deep">
-  <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">2 / What we found</span></div>
-    <h2 class="lead rv">Your proof is on other people’s websites, <span class="hl">not yours</span>.</h2>
-    <div class="stand">
-      <div class="card real rv"><h3>Elsewhere online</h3><div class="li"><span class="mk">01</span><span>CCEP’s 2025 annual report names HotGreen as one of three startups it invested in that year.</span></div><div class="li"><span class="mk">02</span><span>UK Research and Innovation lists your Innovate UK grant for a 50 kW demonstration at a CCEP site. It’s a twelve month project ending in May 2027.</span></div><div class="li"><span class="mk">03</span><span>Empirical Ventures, Tech.eu and Vestbee all wrote about the £1.2m raise.</span></div></div>
-      <div class="card site rv"><h3>On your website</h3><div class="li"><span class="mk">01</span><span>The homepage shows your backers as logos, with no names in the text.</span></div><div class="li"><span class="mk">02</span><span>The raise, the grant and the demonstrator aren’t mentioned on any page.</span></div><div class="li"><span class="mk">03</span><span>The product specs sit inside one image.</span></div></div>
+    <div class="split">
+      <div>
+        <div class="label rv"><span class="num">1</span><span>Where you are</span></div>
+        <h2 class="h2 rv">Investors first. Customers are already coming in.</h2>
+        <div class="facts"><div class="fact rv"><b>01</b><p>Seed round, planned for around Q3 2027</p></div><div class="fact rv"><b>02</b><p>First unit goes into a Coca-Cola Europacific Partners site in the first half of 2027</p></div><div class="fact rv"><b>03</b><p>“a very credible and reliable equipment provider rather than a startup”<small>How you want HotGreen to come across, from our call on 24 September</small></p></div></div>
+      </div>
+      <div class="figure-photo rv"><img src="img/photo-fermenters.jpg" alt="" loading="lazy"></div>
     </div>
-    <div class="shots">
-      <figure class="shot rv"><img src="img/site-logos.jpg" width="1200" height="300" alt="The partners row on the HotGreen homepage, showing logos under the line Some of our key funders and partners are" loading="lazy"><figcaption>Your homepage, 25 September 2026. Seven logos in a carousel, no names in the text.</figcaption></figure>
-      <figure class="shot rv"><img src="img/site-spec.jpg" width="1000" height="490" alt="The HotStack 120 and HotStack 220 spec table on the HotGreen Solutions page" loading="lazy"><figcaption>Your Solutions page. The spec table is one image.</figcaption></figure>
+    <a class="next rv" href="#s2">Next, what we found <span aria-hidden="true">↓</span></a>
+  </div>
+</section>
+
+<section id="s2" class="sec paper" data-step>
+  <div class="wrap">
+    <div class="label rv"><span class="num">2</span><span>What we found</span></div>
+    <h2 class="h2 rv">Your best proof isn’t on your website.</h2>
+    <div class="two">
+      <div class="col yes rv"><h3><i aria-hidden="true">✓</i>Elsewhere online</h3><ul><li>CCEP’s 2025 annual report names HotGreen as one of its three startup investments</li><li>Innovate UK funds a 50 kW demonstration at a CCEP site</li><li>Empirical Ventures, Tech.eu and Vestbee covered the £1.2m raise</li></ul></div>
+      <div class="col no rv"><h3><i aria-hidden="true">✕</i>On your website</h3><ul><li>Backers shown as logos only, with no names</li><li>No mention of the raise, the grant or the demonstrator</li><li>The specs sit inside one image</li></ul></div>
     </div>
-    <div class="three">
-      <h3 class="rv">The savings number changes with where you read it.</h3>
-      <div class="nums"><div class="num rv"><b>30%</b><span class="src">Your Solutions page</span><span class="quo">“Reduce your energy bill by 30%”</span></div><div class="num rv"><b>40%</b><span class="src">Your LinkedIn page</span><span class="quo">“reduce energy costs by 40% compared to competitors”</span></div><div class="num rv"><b>Up to 50%</b><span class="src">Empirical’s announcement</span><span class="quo">“up to 50% energy savings”</span></div></div>
-      <p class="say rv">They measure different things, but a reader just sees three numbers.</p>
+    <p class="also rv">The savings figure also changes with where you read it. It’s <b>30%</b> on your Solutions page, <b>40%</b> “compared to competitors” on LinkedIn, and <b>up to 50%</b> in Empirical’s announcement.</p>
+    <a class="next rv" href="#s3">Next, what we’d build <span aria-hidden="true">↓</span></a>
+  </div>
+</section>
+
+<section id="s3" class="sec deep" data-step>
+  <div class="wrap">
+    <div class="label rv"><span class="num">3</span><span>What we’d build</span></div>
+    <h2 class="h2 rv">Six parts. Pick the ones you want.</h2>
+    <p class="intro rv">Open any part to see what it looks like, then add it to your list.</p>
+    <div class="tiles"><article class="tile gA rv" data-g="A" data-name="We fix it"><button class="shot" type="button" data-open="A" aria-label="See We fix it"><img src="img/ex/fixes.webp" alt="" loading="lazy"></button><div class="body"><div class="top"><span class="letter">A</span><h3>We fix it</h3></div><p class="what">Fixes to your current website, free.</p><div class="acts"><button class="btn sm" type="button" data-open="A">See it</button><button class="add" type="button" data-pick="A" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add</span><span class="t-on">Added</span></button></div></div></article><article class="tile gB rv" data-g="B" data-name="Investor proof"><button class="shot" type="button" data-open="B" aria-label="See Investor proof"><img src="img/ex/homeproof.webp" alt="" loading="lazy"></button><div class="body"><div class="top"><span class="letter">B</span><h3>Investor proof</h3></div><p class="what">A website update for investors.</p><div class="acts"><button class="btn sm" type="button" data-open="B">See it</button><button class="add" type="button" data-pick="B" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add</span><span class="t-on">Added</span></button></div></div></article><article class="tile gC rv" data-g="C" data-name="Increase your credibility"><button class="shot" type="button" data-open="C" aria-label="See Increase your credibility"><img src="img/ex/product.webp" alt="" loading="lazy"></button><div class="body"><div class="top"><span class="letter">C</span><h3>Increase your credibility</h3></div><p class="what">Branding and a website redesign.</p><div class="acts"><button class="btn sm" type="button" data-open="C">See it</button><button class="add" type="button" data-pick="C" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add</span><span class="t-on">Added</span></button></div></div></article><article class="tile gD rv" data-g="D" data-name="Let prospects and investors see the proof"><button class="shot" type="button" data-open="D" aria-label="See Let prospects and investors see the proof"><img src="img/ex/calculator.webp" alt="" loading="lazy"></button><div class="body"><div class="top"><span class="letter">D</span><h3>Let prospects and investors see the proof</h3></div><p class="what">A business case web app on your site.</p><div class="acts"><button class="btn sm" type="button" data-open="D">See it</button><button class="add" type="button" data-pick="D" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add</span><span class="t-on">Added</span></button></div></div></article><article class="tile gE rv" data-g="E" data-name="Optimise your inbound and outbound flow"><button class="shot" type="button" data-open="E" aria-label="See Optimise your inbound and outbound flow"><img src="img/ex/assessment.webp" alt="" loading="lazy"></button><div class="body"><div class="top"><span class="letter">E</span><h3>Optimise your inbound and outbound flow</h3></div><p class="what">Website forms, a CRM and outreach.</p><div class="acts"><button class="btn sm" type="button" data-open="E">See it</button><button class="add" type="button" data-pick="E" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add</span><span class="t-on">Added</span></button></div></div></article><article class="tile gF rv" data-g="F" data-name="AI helpers"><button class="shot" type="button" data-open="F" aria-label="See AI helpers"><img src="img/ex/digest.webp" alt="" loading="lazy"></button><div class="body"><div class="top"><span class="letter">F</span><h3>AI helpers</h3></div><p class="what">AI tools that do the weekly reading and drafting.</p><div class="acts"><button class="btn sm" type="button" data-open="F">See it</button><button class="add" type="button" data-pick="F" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add</span><span class="t-on">Added</span></button></div></div></article></div>
+    <a class="next rv" href="#s4">Next, when each part fits <span aria-hidden="true">↓</span></a>
+  </div>
+</section>
+
+<section id="s4" class="sec paper" data-step>
+  <div class="wrap">
+    <div class="label rv"><span class="num">4</span><span>When</span></div>
+    <h2 class="h2 rv">When each part fits.</h2>
+    <div class="when4"><div class="period rv"><span class="dates">Oct to Nov 2026</span><h3>Before the demonstrator goes in</h3><button class="gchip gA" type="button" data-open="A"><span class="letter">A</span><span>Fixes<small>The fix list</small></span></button><button class="gchip gB" type="button" data-open="B"><span class="letter">B</span><span>Investor proof<small>B1 to B5</small></span></button><button class="gchip gC" type="button" data-open="C"><span class="letter">C</span><span>Credibility<small>C5, LinkedIn plan</small></span></button><button class="gchip gD" type="button" data-open="D"><span class="letter">D</span><span>Proof for prospects<small>D3, heat auction guide</small></span></button></div><div class="period rv"><span class="dates">Dec 2026 to Feb 2027</span><h3>The EU heat auction, expected to open in early December</h3><button class="gchip gB" type="button" data-open="B"><span class="letter">B</span><span>Investor proof<small>B6, demonstrator plan</small></span></button><button class="gchip gC" type="button" data-open="C"><span class="letter">C</span><span>Credibility<small>C1 to C4</small></span></button><button class="gchip gD" type="button" data-open="D"><span class="letter">D</span><span>Proof for prospects<small>D1 and D2</small></span></button><button class="gchip gE" type="button" data-open="E"><span class="letter">E</span><span>Inbound and outbound<small>E1, enquiry forms</small></span></button></div><div class="period rv"><span class="dates">Mar to Jun 2027</span><h3>The demonstrator, planned for the first half of 2027</h3><button class="gchip gE" type="button" data-open="E"><span class="letter">E</span><span>Inbound and outbound<small>E2 and E3</small></span></button><button class="gchip gF" type="button" data-open="F"><span class="letter">F</span><span>AI helpers<small>F1 to F4</small></span></button></div><div class="period rv"><span class="dates">Jul to Sep 2027</span><h3>The seed round, planned for around Q3</h3><button class="gchip gB" type="button" data-open="B"><span class="letter">B</span><span>Investor proof<small>B6 results, B7 data room</small></span></button><button class="gchip gE" type="button" data-open="E"><span class="letter">E</span><span>Inbound and outbound<small>E4 and E5</small></span></button></div></div>
+    <a class="next rv" href="#s5">Next, where we’d start <span aria-hidden="true">↓</span></a>
+  </div>
+</section>
+
+<section id="s5" class="sec dark" data-step>
+  <div class="wrap">
+    <div class="label rv"><span class="num">5</span><span>Where to start</span></div>
+    <h2 class="h2 rv">Start with B and D.</h2>
+    <p class="intro rv">They help with investors and customers at the same time, and they run on the same numbers.</p>
+    <div class="startcard">
+      <div class="stepsx"><div class="stepx gB rv"><b style="background:var(--c)">1</b><p>Agree one set of numbers with your engineers<small>B1</small></p></div><div class="stepx gB rv"><b style="background:var(--c)">2</b><p>Put the proof on your homepage and add an investor page<small>B2 and B3</small></p></div><div class="stepx gD rv"><b style="background:var(--c)">3</b><p>Build the savings calculator on the same numbers<small>D1</small></p></div></div>
+      <div class="needbox rv"><h3>What we’d need from you</h3><ul><li>Your business case model, or the inputs behind it</li><li>Thirty minutes with an engineer to agree the numbers</li><li>Access to Framer and your brand guidelines</li><li>What you can say in public about CCEP, the demonstrator and your investors</li></ul></div>
     </div>
-    <div class="std rv"><p>The 100+ Accelerator says a website “should clearly present your technology, traction, and company information to help evaluators assess your solution”. <b>That’s what we’d build to.</b></p></div>
+    <a class="next rv" href="#s6">Next, who we are <span aria-hidden="true">↓</span></a>
   </div>
 </section>
 
-<section id="menu" class="slide dark">
+<section id="s6" class="sec paper" data-step>
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">3 / The menu</span><span class="note">six groups, A to F</span></div>
-    <h2 class="lead rv">Six groups. <span class="hg">Pick any of them</span>.</h2>
-    <p class="say rv">Each group shows what we’d build and roughly what it would look like. The screens are sketches, filled in with your real facts where we have them.</p>
-    <div class="grp gA" id="group-A"><div class="gh rv"><span class="gno">A</span><div><h3>We fix it</h3><span class="what">Fixes to your current website, free.</span></div></div><div class="pieces"><article class="piece gA solo rv" data-id="fixes" data-name="A The fix list"><div class="mv"><span class="tg real">Your site</span><p class="mvh">Twelve fixes</p><div class="chk">Company details in the footer<em>legal</em></div><div class="chk">Privacy notice for the contact form<em>legal</em></div><div class="chk">A title for each page</div><div class="chk">Alt text on 62 images</div><div class="chk">Spec table as text</div><p class="more">and seven more</p></div><h4><span class="code">A</span>The fix list</h4><p class="get">Twelve fixes to your current site, two of them legal. We’ll give you the list, or make the changes for you.</p><div class="ph"><span class="when">Oct to Nov 2026</span></div><button class="pick" type="button" data-pick="fixes" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><div class="piece gA aside rv"><p class="get">The full list is on its own page, with what to change and where.</p><a class="btn ghost" href="fixes.html">See the twelve fixes →</a></div></div></div><div class="grp g1" id="group-B"><div class="gh rv"><span class="gno">B</span><div><h3>Investor proof</h3><span class="what">A website update for investors.</span></div></div><figure class="hv rv"><div class="fbar dark"><i></i><i></i><i></i><span>hotgreensolutions.com</span><span class="tg">Sketch</span></div><div class="sbody"><nav class="snav" aria-hidden="true"><span class="slogo"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130.76"><path d="M141.94 50.66v35.19h-8.35V71.34h-17.3v14.51h-8.39V50.66h8.39v13.79h17.3V50.66zm6.9 22.21c0-8.04 5.72-13.41 14.3-13.41s14.16 5.37 14.16 13.41-5.72 13.46-14.16 13.46-14.3-5.37-14.3-13.46m20.07 0c0-3.9-2.34-6.52-5.82-6.52s-5.86 2.62-5.86 6.52 2.34 6.52 5.86 6.52 5.82-2.62 5.82-6.52m30.51 5.7v6.47c-2.05.9-4.53 1.29-6.77 1.29-5.05 0-8.49-3.47-8.49-8.66V50.66h8.1v9.26h6.77v6.61h-6.77v9.41c0 2.04 1.24 3.42 3 3.42 1.38 0 2.76-.23 4.15-.81v.02Zm42.74-10.32c0 10.75-6.91 18.07-17.78 18.07s-18.64-7.23-18.64-18.07 7.34-18.07 18.64-18.07c5.24 0 9.67 1.42 12.87 4l-5.49 5.23c-1.52-1.52-3.96-2.33-7.29-2.33-6.05 0-10.11 4.47-10.11 11.18s4.01 11.18 10.06 11.18c4.96 0 8.25-2.81 8.96-7.13h-7.96v-6.89h16.64c.05.95.1 1.9.1 2.85Zm24.58-8.79-.52 7.42c-4.96 0-8.44 2.29-8.44 5.66v13.31h-8.1V59.94h7.82l.14 3.14c2.05-2.29 5.24-3.62 9.1-3.62m30.92 16.26h-17.83c.48 2.66 1.9 4.28 5.01 4.28 2.19 0 4.01-.9 5.24-2.38l6.29 3.04c-2.24 3.38-6.39 5.66-11.44 5.66-8.2 0-13.68-5.23-13.68-13.18s5.29-13.7 13.3-13.7 13.3 5.18 13.3 13.03c0 1.1-.1 2.33-.19 3.23Zm-17.77-5.42h9.48c-.52-2.95-2.09-4.52-4.82-4.52s-4.15 1.62-4.67 4.52Zm50.73 5.42h-17.83c.48 2.66 1.9 4.28 5.01 4.28 2.19 0 4.01-.9 5.24-2.38l6.29 3.04c-2.24 3.38-6.39 5.66-11.44 5.66-8.2 0-13.68-5.23-13.68-13.18s5.29-13.7 13.3-13.7 13.3 5.18 13.3 13.03c0 1.1-.09 2.33-.19 3.23Zm-17.78-5.42h9.48c-.52-2.95-2.09-4.52-4.82-4.52s-4.15 1.62-4.67 4.52Zm51.97-.72v16.26h-8.1V70.81c0-2.71-1.96-4.47-4.91-4.47s-4.96 1.76-4.96 4.47v15.03h-8.1V59.93h7.82l.09 2.9c2.05-2.29 4.96-3.38 8.01-3.38 6.1 0 10.15 4.04 10.15 10.13m-287.26-4.4h8.39V35.2l-8.39 1.44v28.55Zm-8.39 24.29 8.39-1.44V65.17h-8.39v24.29Zm0-24.29V38.07l-8.38 1.44v25.67zm-16.77 0v27.17l8.39-1.44V65.18zm0-24.24L44 42.38v22.79h8.39zm-8.4 24.24H35.6v30.04l8.39-1.44V65.17Z" /></svg></span><span>Product</span><span>Applications</span><span>Working with us</span><span>News</span><span class="sp"></span><span class="btnx o">For investors</span></nav><div class="shero"><div><p class="mk">Industrial heat pumps</p><h4>Steam from electricity, for food and drink plants</h4><p>HotGreen makes industrial heat pumps that replace a traditional boiler and use your existing pipework, so there’s no need to redesign your process.</p><div class="sbtns"><span class="btnx">Request a site assessment</span><span class="btnx o">See the specs</span></div></div><img src="img/hotstack.webp" alt="HotGreen’s HotStack heat pump" width="720" height="551"></div><div class="sproof"><div><p class="mk">Funders and partners</p><div class="gap"><span class="chipx">Coca-Cola Europacific Partners</span><span class="chipx">Empirical Ventures</span><span class="chipx">Deep Science Ventures</span><span class="chipx">First Imagine!</span><span class="chipx">Conduit EIS Impact Fund</span><span class="chipx">Almanac Ventures</span><span class="chipx">Net Zero Technology Centre</span></div></div><div><p class="mk">Where HotGreen stands</p><div class="stl gap"><div><b>Oct 2025</b>£1.2m round led by Empirical Ventures</div><div><b>2025</b>Named in CCEP’s annual report as one of three startups it invested in</div><div><b>2026</b>Innovate UK grant for a 50 kW demonstration at a CCEP site</div><div><b>2027</b>First unit at the CCEP site, planned for the first half of the year</div></div></div></div></div></figure><div class="pieces"><article class="piece g1 rv" data-id="numbers" data-name="B1 One set of numbers"><div class="mv"><span class="tg">Example</span><p class="mvh">Three numbers today</p><div class="nums3"><s>30%</s><s>40%</s><s>up to 50%</s></div><div class="down">↓</div><div class="fact"><b>Energy cost saving, one agreed figure</b><div class="fr"><span>Figure</span><i class="ln "></i></div><div class="fr"><span>Compared with</span><i class="ln "></i></div><div class="fr"><span>Checked by</span><i class="ln "></i></div><div class="fr"><span>Date</span><i class="ln "></i></div></div></div><h4><span class="code">B1</span>One set of numbers</h4><p class="get">We agree every public figure with your engineers once, and note where each one comes from. After that the site, the deck and LinkedIn all say the same thing.</p><div class="ph"><span class="when">Oct to Nov 2026</span></div><button class="pick" type="button" data-pick="numbers" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g1 rv" data-id="homeproof" data-name="B2 Homepage proof section"><div class="mv site"><span class="tg">Example</span><p class="mk">Funders and partners</p><div class="mvnames"><span class="chipx">Coca-Cola Europacific Partners</span><span class="chipx">Empirical Ventures</span><span class="chipx">Deep Science Ventures</span><span class="chipx">First Imagine!</span><span class="chipx">and three more</span></div><div class="stl"><div><b>Oct 2025</b>£1.2m round led by Empirical Ventures</div><div><b>2025</b>Named in CCEP’s annual report as one of three startups it invested in</div><div><b>2026</b>Innovate UK grant for a 50 kW demonstration at a CCEP site</div></div><div class="fade"></div></div><h4><span class="code">B2</span>Homepage proof section</h4><p class="get">Your backers named, a dated timeline, and the demonstrator described as it is today.</p><div class="ph"><span class="when">Oct to Nov 2026</span></div><button class="pick" type="button" data-pick="homeproof" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g1 rv" data-id="investor" data-name="B3 Investor page"><div class="mv"><span class="tg">Example</span><p class="mk">hotgreensolutions.com/investors</p><p class="mvh">For investors</p><p>Backed by Empirical Ventures, Coca-Cola Europacific Partners and others. Next round, seed, planned for 2027.</p><div class="row2"><div class="inpx"><label>Name</label><div class="v"></div></div><div class="inpx"><label>Fund</label><div class="v"></div></div><div class="inpx"><label>Email</label><div class="v"></div></div><div class="inpx"><label>&nbsp;</label><span class="btnx">Request the deck</span></div></div><p class="more">Goes straight to Georgia</p></div><h4><span class="code">B3</span>Investor page</h4><p class="get">Who backs you, what stage you’re at, and a form that goes straight to Georgia. The deck goes out through a tracked link, so she can see who opened it.</p><div class="ph"><span class="when">Oct to Nov 2026</span></div><button class="pick" type="button" data-pick="investor" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g1 rv" data-id="press" data-name="B4 Press kit"><div class="mv"><span class="tg real">Real articles</span><p class="mvh">In the press</p><div class="pr"><span>Empirical Ventures, 20 Oct 2025</span><b>Hot Green raises £1.2m …</b></div><div class="pr"><span>Tech.eu, 20 Oct 2025</span><b>HotGreen Solutions raises £1.2M …</b></div><div class="pr"><span>Vestbee, 21 Oct 2025</span><b>British HotGreen Solutions raises £1.2M …</b></div><div class="mvchips"><span class="chipx">Logos</span><span class="chipx">Photos</span><span class="chipx">Fact sheet</span></div></div><h4><span class="code">B4</span>Press kit</h4><p class="get">Every article about HotGreen so far, ready for your news page, plus approved facts, logos and photos.</p><div class="ph"><span class="when">Oct to Nov 2026</span></div><button class="pick" type="button" data-pick="press" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g1 rv" data-id="monthly" data-name="B5 Monthly update page"><div class="mv"><span class="tg">Example</span><p class="mk">hotgreensolutions.com/updates</p><p class="mvh">Monthly updates</p><div class="fact post"><b>November 2026</b><i class="ln m"></i><i class="ln s"></i></div><div class="fact post"><b>October 2026</b><i class="ln m"></i><i class="ln s"></i></div><div class="fade"></div></div><h4><span class="code">B5</span>Monthly update page</h4><p class="get">A short public version of Georgia’s monthly investor email.</p><div class="ph"><span class="when">Oct to Nov 2026</span></div><button class="pick" type="button" data-pick="monthly" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g1 rv" data-id="evidence" data-name="B6 Demonstrator results page"><div class="mv"><span class="tg">Example</span><div class="row2"><div><p class="mk">Before the install</p><p class="more sm">What each approver needs</p><div class="chk">Engineering</div><div class="chk">Finance</div><div class="chk">Procurement</div><div class="chk">Investors</div></div><div><p class="mk">After it</p><p class="more sm">Results page</p><svg viewBox="0 0 120 70" width="100%" height="84" aria-hidden="true"><path d="M4 64 H116 M4 64 V4" stroke="#cfd6cf" stroke-width="1"/><path d="M6 50 C30 44, 50 30, 70 32 S100 20, 114 16" fill="none" stroke="#9fb3b8" stroke-width="2" stroke-dasharray="4 3"/></svg><p class="more">Live data, if CCEP agrees</p></div></div></div><h4><span class="code">B6</span>Demonstrator results page</h4><p class="get">Before the install, a list of what each buyer and investor needs to see. After it, a page with the results.</p><div class="ph"><span class="when">Dec 2026 to Feb 2027 then Jul to Sep 2027</span></div><button class="pick" type="button" data-pick="evidence" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g1 rv" data-id="dataroom" data-name="B7 Data room"><div class="mv"><span class="tg">Example</span><p class="mvh">Seed data room</p><div class="fold head"><span>Folder</span><span>Who opened it</span></div><div class="fold"><span>01 Company</span><i class="who"></i></div><div class="fold"><span>02 Financials</span><i class="who"></i></div><div class="fold"><span>03 Technology and IP</span><i class="who"></i></div><div class="fold"><span>04 Demonstrator</span><i class="who"></i></div><div class="fold"><span>05 Commercial</span><i class="who"></i></div><div class="fold"><span>06 Team</span><i class="who"></i></div></div><h4><span class="code">B7</span>Data room</h4><p class="get">Folders and an index for the seed round, and you can see which investor read what.</p><div class="ph"><span class="when">Jul to Sep 2027</span></div><button class="pick" type="button" data-pick="dataroom" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article></div></div><div class="grp g2" id="group-C"><div class="gh rv"><span class="gno">C</span><div><h3>Increase your credibility</h3><span class="what">Branding and a website redesign.</span></div></div><figure class="hv rv"><div class="fbar"><i></i><i></i><i></i><span>hotgreensolutions.com/hotstack</span><span class="tg real">Your real specs</span></div><div class="pbody"><div><p class="crumb">Products</p><h4>HotStack</h4><p>Low carbon steam for industry, from air or from a waste heat stream.</p><img class="pimg" src="img/hotstack.webp" alt="HotGreen’s HotStack heat pump" width="720" height="551"><div class="apps"><span class="chipx">Pasteurisation</span><span class="chipx">Brewing</span><span class="chipx">Distillation</span><span class="chipx">Drying</span><span class="chipx">Sterilisation</span></div></div><div><table class="spec"><thead><tr><th></th><th>HotStack 120</th><th>HotStack 220</th></tr></thead><tbody><tr><td>Source</td><td>Air</td><td>Waste heat stream</td></tr><tr><td>Outlet temperature</td><td>Up to 120°C</td><td>Up to 220°C</td></tr><tr><td>Max steam pressure</td><td>2 bar</td><td>25 bar</td></tr><tr><td>COP, 10°C to 120°C</td><td>2.8</td><td>2.8</td></tr><tr><td>COP, 50°C to 120°C</td><td>4.5</td><td>4.5</td></tr><tr><td>Thermal output</td><td>0.5 MW, stackable up to 10 MW</td><td>0.5 MW, stackable up to 10 MW</td></tr><tr><td>Availability</td><td>2026 orders for 2027 delivery</td><td>2027 orders for 2028 delivery</td></tr></tbody></table><div class="sbtns"><span class="btnx">Download the datasheet</span><span class="btnx o">Request a site assessment</span></div></div></div></figure><div class="pieces"><article class="piece g2 rv" data-id="positioning" data-name="C1 Positioning and message"><div class="mv"><span class="tg">Example</span><div class="house"><div class="roof">One clear line on what HotGreen makes and who it’s for</div><div class="pill3"><div>Backed by CCEP and Empirical Ventures</div><div>Demonstration at a CCEP site, funded by Innovate UK</div><div>Replaces a traditional boiler, same pipework</div></div><div class="base">Your mission, saving manufacturers money while cutting carbon</div></div></div><h4><span class="code">C1</span>Positioning and message</h4><p class="get">A workshop and a short guide, built on your brand guidelines. It gives you one clear line on what HotGreen makes and who it’s for.</p><div class="ph"><span class="when">Dec 2026 to Feb 2027</span></div><button class="pick" type="button" data-pick="positioning" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g2 rv" data-id="lookfeel" data-name="C2 New look in Framer"><div class="mv"><span class="tg">Example</span><p class="mvh">Your pages, new layouts</p><div class="ba"><figure><img src="img/site-before.jpg" alt="A section of the HotGreen homepage as it is today" loading="lazy"><figcaption>Today</figcaption></figure><figure><div class="newl"><span class="slogo small"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130.76"><path d="M141.94 50.66v35.19h-8.35V71.34h-17.3v14.51h-8.39V50.66h8.39v13.79h17.3V50.66zm6.9 22.21c0-8.04 5.72-13.41 14.3-13.41s14.16 5.37 14.16 13.41-5.72 13.46-14.16 13.46-14.3-5.37-14.3-13.46m20.07 0c0-3.9-2.34-6.52-5.82-6.52s-5.86 2.62-5.86 6.52 2.34 6.52 5.86 6.52 5.82-2.62 5.82-6.52m30.51 5.7v6.47c-2.05.9-4.53 1.29-6.77 1.29-5.05 0-8.49-3.47-8.49-8.66V50.66h8.1v9.26h6.77v6.61h-6.77v9.41c0 2.04 1.24 3.42 3 3.42 1.38 0 2.76-.23 4.15-.81v.02Zm42.74-10.32c0 10.75-6.91 18.07-17.78 18.07s-18.64-7.23-18.64-18.07 7.34-18.07 18.64-18.07c5.24 0 9.67 1.42 12.87 4l-5.49 5.23c-1.52-1.52-3.96-2.33-7.29-2.33-6.05 0-10.11 4.47-10.11 11.18s4.01 11.18 10.06 11.18c4.96 0 8.25-2.81 8.96-7.13h-7.96v-6.89h16.64c.05.95.1 1.9.1 2.85Zm24.58-8.79-.52 7.42c-4.96 0-8.44 2.29-8.44 5.66v13.31h-8.1V59.94h7.82l.14 3.14c2.05-2.29 5.24-3.62 9.1-3.62m30.92 16.26h-17.83c.48 2.66 1.9 4.28 5.01 4.28 2.19 0 4.01-.9 5.24-2.38l6.29 3.04c-2.24 3.38-6.39 5.66-11.44 5.66-8.2 0-13.68-5.23-13.68-13.18s5.29-13.7 13.3-13.7 13.3 5.18 13.3 13.03c0 1.1-.1 2.33-.19 3.23Zm-17.77-5.42h9.48c-.52-2.95-2.09-4.52-4.82-4.52s-4.15 1.62-4.67 4.52Zm50.73 5.42h-17.83c.48 2.66 1.9 4.28 5.01 4.28 2.19 0 4.01-.9 5.24-2.38l6.29 3.04c-2.24 3.38-6.39 5.66-11.44 5.66-8.2 0-13.68-5.23-13.68-13.18s5.29-13.7 13.3-13.7 13.3 5.18 13.3 13.03c0 1.1-.09 2.33-.19 3.23Zm-17.78-5.42h9.48c-.52-2.95-2.09-4.52-4.82-4.52s-4.15 1.62-4.67 4.52Zm51.97-.72v16.26h-8.1V70.81c0-2.71-1.96-4.47-4.91-4.47s-4.96 1.76-4.96 4.47v15.03h-8.1V59.93h7.82l.09 2.9c2.05-2.29 4.96-3.38 8.01-3.38 6.1 0 10.15 4.04 10.15 10.13m-287.26-4.4h8.39V35.2l-8.39 1.44v28.55Zm-8.39 24.29 8.39-1.44V65.17h-8.39v24.29Zm0-24.29V38.07l-8.38 1.44v25.67zm-16.77 0v27.17l8.39-1.44V65.18zm0-24.24L44 42.38v22.79h8.39zm-8.4 24.24H35.6v30.04l8.39-1.44V65.17Z" /></svg></span><i class="gl"></i><i class="ln m"></i><i class="ln s"></i></div><figcaption>New layout, in your Framer</figcaption></figure></div></div><h4><span class="code">C2</span>New look in Framer</h4><p class="get">New layouts for the pages you choose. You can still edit everything yourselves.</p><div class="ph"><span class="when">Dec 2026 to Feb 2027</span></div><button class="pick" type="button" data-pick="lookfeel" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g2 rv" data-id="product" data-name="C3 Product pages and datasheets"><div class="mv mint"><span class="tg real">Your specs</span><div class="sheet"><div><b class="sht">HotStack 220</b><span class="pdf">PDF</span><p class="more sm">Datasheet</p><div class="sr">Waste heat stream</div><div class="sr">Up to 220°C</div><div class="sr">Up to 25 bar</div><div class="sr">COP 2.8, 10°C to 120°C</div><div class="sr">0.5 MW modules</div></div><img src="img/hotstack.webp" alt="" loading="lazy"></div></div><h4><span class="code">C3</span>Product pages and datasheets</h4><p class="get">A page and a PDF datasheet for each HotStack model with the specs as text, plus a page for each application.</p><div class="ph"><span class="when">Dec 2026 to Feb 2027</span></div><button class="pick" type="button" data-pick="product" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g2 rv" data-id="working" data-name="C4 Working with HotGreen page"><div class="mv"><span class="tg">Example</span><p class="mvh">Working with HotGreen</p><div class="steps"><div><b>1</b>Site survey</div><div><b>2</b>Sizing and business case</div><div><b>3</b>Install, as quick as 3 to 5 days with the air source module</div><div><b>4</b>Service</div></div><span class="chipx">Warranty</span><span class="chipx">Spares</span><span class="chipx">Certification</span><span class="chipx">Contacts</span></div><h4><span class="code">C4</span>Working with HotGreen page</h4><p class="get">Warranty, service, spares, certification and how an install works, for your buyers’ procurement teams.</p><div class="ph"><span class="when">Dec 2026 to Feb 2027</span></div><button class="pick" type="button" data-pick="working" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g2 rv" data-id="linkedin" data-name="C5 LinkedIn plan"><div class="mv"><span class="tg">Example draft</span><div class="li-post"><div class="li-top"><span class="li-av"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130.76"><path d="M141.94 50.66v35.19h-8.35V71.34h-17.3v14.51h-8.39V50.66h8.39v13.79h17.3V50.66zm6.9 22.21c0-8.04 5.72-13.41 14.3-13.41s14.16 5.37 14.16 13.41-5.72 13.46-14.16 13.46-14.3-5.37-14.3-13.46m20.07 0c0-3.9-2.34-6.52-5.82-6.52s-5.86 2.62-5.86 6.52 2.34 6.52 5.86 6.52 5.82-2.62 5.82-6.52m30.51 5.7v6.47c-2.05.9-4.53 1.29-6.77 1.29-5.05 0-8.49-3.47-8.49-8.66V50.66h8.1v9.26h6.77v6.61h-6.77v9.41c0 2.04 1.24 3.42 3 3.42 1.38 0 2.76-.23 4.15-.81v.02Zm42.74-10.32c0 10.75-6.91 18.07-17.78 18.07s-18.64-7.23-18.64-18.07 7.34-18.07 18.64-18.07c5.24 0 9.67 1.42 12.87 4l-5.49 5.23c-1.52-1.52-3.96-2.33-7.29-2.33-6.05 0-10.11 4.47-10.11 11.18s4.01 11.18 10.06 11.18c4.96 0 8.25-2.81 8.96-7.13h-7.96v-6.89h16.64c.05.95.1 1.9.1 2.85Zm24.58-8.79-.52 7.42c-4.96 0-8.44 2.29-8.44 5.66v13.31h-8.1V59.94h7.82l.14 3.14c2.05-2.29 5.24-3.62 9.1-3.62m30.92 16.26h-17.83c.48 2.66 1.9 4.28 5.01 4.28 2.19 0 4.01-.9 5.24-2.38l6.29 3.04c-2.24 3.38-6.39 5.66-11.44 5.66-8.2 0-13.68-5.23-13.68-13.18s5.29-13.7 13.3-13.7 13.3 5.18 13.3 13.03c0 1.1-.1 2.33-.19 3.23Zm-17.77-5.42h9.48c-.52-2.95-2.09-4.52-4.82-4.52s-4.15 1.62-4.67 4.52Zm50.73 5.42h-17.83c.48 2.66 1.9 4.28 5.01 4.28 2.19 0 4.01-.9 5.24-2.38l6.29 3.04c-2.24 3.38-6.39 5.66-11.44 5.66-8.2 0-13.68-5.23-13.68-13.18s5.29-13.7 13.3-13.7 13.3 5.18 13.3 13.03c0 1.1-.09 2.33-.19 3.23Zm-17.78-5.42h9.48c-.52-2.95-2.09-4.52-4.82-4.52s-4.15 1.62-4.67 4.52Zm51.97-.72v16.26h-8.1V70.81c0-2.71-1.96-4.47-4.91-4.47s-4.96 1.76-4.96 4.47v15.03h-8.1V59.93h7.82l.09 2.9c2.05-2.29 4.96-3.38 8.01-3.38 6.1 0 10.15 4.04 10.15 10.13m-287.26-4.4h8.39V35.2l-8.39 1.44v28.55Zm-8.39 24.29 8.39-1.44V65.17h-8.39v24.29Zm0-24.29V38.07l-8.38 1.44v25.67zm-16.77 0v27.17l8.39-1.44V65.18zm0-24.24L44 42.38v22.79h8.39zm-8.4 24.24H35.6v30.04l8.39-1.44V65.17Z" /></svg></span><div><b class="lin">HotGreen Solutions</b><span>Draft for next week</span></div></div><p>The EU’s €1bn heat auction is expected to open in early December. Heat pumps with a COP of at least 1.5 get a 25% bonus when bids are ranked. Here’s what that means for food and drink plants.</p></div><div class="cal"><i class=""></i><i class=""></i><i class="p"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="p"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="p"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="p"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div><p class="more">One post a week, drafted from your milestones</p></div><h4><span class="code">C5</span>On the side, a LinkedIn plan</h4><p class="get">A monthly posting plan with drafts for the company page and Georgia’s profile. You post them yourselves.</p><div class="ph"><span class="when">Oct to Nov 2026</span></div><button class="pick" type="button" data-pick="linkedin" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article></div></div><div class="grp g3" id="group-D"><div class="gh rv"><span class="gno">D</span><div><h3>Let prospects and investors see the proof</h3><span class="what">A business case web app on your site.</span></div></div><figure class="hv rv"><div class="fbar"><i></i><i></i><i></i><span>hotgreensolutions.com/savings</span><span class="tg">Sketch</span></div><div class="abody"><div class="apane"><p class="mk">Your site</p><div class="inp"><label>Country</label><div class="v">Netherlands</div></div><div class="inp"><label>Steam demand</label><div class="v">1 MW</div></div><div class="inp"><label>Hours a year</label><div class="v">6,000</div></div><div class="inp"><label>Steam temperature</label><div class="v">120°C</div></div><div class="inp"><label>Your gas price</label><div class="v phv">Enter yours, or use the official average</div></div><div class="inp"><label>Your electricity price</label><div class="v phv">Enter yours, or use the official average</div></div></div><div class="apane2"><p class="mk">Your result</p><div class="tiles"><div class="tile"><span>Energy cost a year</span><b>From your model</b></div><div class="tile"><span>Carbon cost a year</span><b>From your model</b></div><div class="tile"><span>Payback</span><b>From your model</b></div></div><div class="chartph">A before and after chart of cost and carbon, drawn from your business case model</div><div class="fundrow"><b>Funding you can apply for in the Netherlands</b><div class="dates"><span>SDE++, 27 Oct to 26 Nov 2026</span><span>EU heat auction, expected early December 2026</span></div></div><p class="note">Every assumption is shown. Default prices come from official statistics, with the date they were last updated.</p></div></div></figure><div class="pieces"><article class="piece g3 rv" data-id="calculator" data-name="D1 Savings calculator"><div class="mv"><span class="tg">Sketch</span><p class="mvh">Your site, your prices</p><div class="row2"><div><div class="inpx"><label>Country</label><div class="v val">Netherlands</div></div><div class="inpx"><label>Steam demand</label><div class="v val">1 MW</div></div><div class="inpx"><label>Hours a year</label><div class="v val">6,000</div></div><div class="inpx"><label>Your gas price</label><div class="v val">enter yours</div></div></div><div><div class="tile"><span>Energy cost a year</span><b>from your model</b></div><div class="tile gap"><span>Carbon cost a year</span><b>from your model</b></div><div class="tile gap"><span>Payback</span><b>from your model</b></div></div></div></div><h4><span class="code">D1</span>Savings calculator</h4><p class="get">A smaller version of your business case model. A customer enters their country, steam demand, hours and energy prices, then sees cost, carbon and payback, with every assumption shown.</p><div class="ph"><span class="when">Dec 2026 to Feb 2027</span></div><button class="pick" type="button" data-pick="calculator" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g3 rv" data-id="funding" data-name="D2 Funding finder"><div class="mv"><span class="tg real">Real schemes</span><p class="mk">Example, a site in the Netherlands</p><p class="mvh">Funding you can apply for</p><div class="pr"><b>SDE++</b><span>Open 27 Oct to 26 Nov 2026, €8bn. Industrial heat pumps from 500 kWth with a COP of 2.3 or more</span></div><div class="pr"><b>EU heat auction</b><span>Expected to open in early December 2026</span></div><p class="more">Last checked 25 September 2026</p></div><h4><span class="code">D2</span>Funding finder</h4><p class="get">Shows the grants and tax relief a customer can claim in their country, with the date each one was last checked.</p><div class="ph"><span class="when">Dec 2026 to Feb 2027</span></div><button class="pick" type="button" data-pick="funding" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g3 rv" data-id="auction" data-name="D3 EU heat auction guide"><div class="mv"><span class="tg real">Real rules</span><p class="mk">One page guide</p><p class="mvh">The EU heat auction, for food and drink plants</p><div class="chk">€1bn budget</div><div class="chk">Expected to open in early December 2026</div><div class="chk">25% ranking bonus for heat pumps with a COP of at least 1.5</div><div class="chk">Subsidy paid for up to five years</div></div><h4><span class="code">D3</span>EU heat auction guide</h4><p class="get">The EU’s €1bn heat auction is expected to open in early December 2026, and heat pumps with a COP of at least 1.5 get a 25% bonus in the ranking. A one page guide shows EU prospects how to bid with a HotStack.</p><div class="ph"><span class="when">Oct to Nov 2026</span></div><button class="pick" type="button" data-pick="auction" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article></div></div><div class="grp g4" id="group-E"><div class="gh rv"><span class="gno">E</span><div><h3>Optimise your inbound and outbound flow</h3><span class="what">Website forms, a CRM and outreach.</span></div></div><figure class="hv rv"><div class="fbar"><i></i><i></i><i></i><span>how an enquiry moves</span><span class="tg">Diagram</span></div><div class="flow"><p class="lname">Inbound, today</p><div class="lane"><div class="node"><b>&nbsp;</b>Your website</div><span class="arr" aria-hidden="true">→</span><div class="node"><b>E1</b>Enquiry forms</div><span class="arr" aria-hidden="true">→</span><div class="node key"><b>E2</b>Site assessment tool</div><span class="arr" aria-hidden="true">→</span><div class="node key"><b>E3</b>Pipeline tracker</div><span class="arr" aria-hidden="true">→</span><div class="node"><b>&nbsp;</b>Proposal</div></div><p class="lname second">Outbound, once there’s data from the demonstrator</p><div class="lane"><div class="node"><b>E4</b>Target list</div><span class="arr" aria-hidden="true">→</span><div class="node"><b>E5</b>Campaigns</div><span class="arr" aria-hidden="true">→</span><div class="node key"><b>E3</b>Pipeline tracker</div></div><p class="note">Every site sits in one tracker, whether it found you or you found it.</p></div></figure><div class="pieces"><article class="piece g4 rv" data-id="routes" data-name="E1 Enquiry forms"><div class="mv"><span class="tg">Example</span><div class="tabs"><span class="">Investor</span><span class="on">Site assessment</span><span class="">Customer</span><span class="">Partner</span><span class="">Press</span></div><div class="row2"><div class="inpx"><label>Steam demand</label><div class="v"></div></div><div class="inpx"><label>Steam temperature</label><div class="v"></div></div><div class="inpx"><label>Hours a year</label><div class="v"></div></div><div class="inpx"><label>Current fuel</label><div class="v"></div></div></div><div class="mvbtn"><span class="btnx">Send to engineering</span></div></div><h4><span class="code">E1</span>Enquiry forms</h4><p class="get">Separate forms for investors, site assessments, customers, partners and press, so each enquiry reaches the right person.</p><div class="ph"><span class="when">Dec 2026 to Feb 2027</span></div><button class="pick" type="button" data-pick="routes" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g4 rv" data-id="assessment" data-name="E2 Site assessment tool"><div class="mv"><span class="tg">Example rows</span><p class="mk">Internal web app</p><p class="mvh">This week’s enquiries</p><div class="rowq"><span>Brewery</span><span class="tag ok">Draft ready</span></div><div class="rowq"><span>Dairy</span><span class="tag wait">Waiting for metering data</span></div><div class="rowq"><span>Distillery</span><span class="tag new">Engineer checking</span></div><div class="rowq"><span>Food plant</span><span class="tag ok">Draft ready</span></div></div><h4><span class="code">E2</span>Site assessment tool</h4><p class="get">An internal web app. An enquiry’s steam data goes in, your sizing and business case model runs, and your engineer checks a first draft instead of starting from scratch. We’d measure the hours it saves.</p><div class="ph"><span class="when">Mar to Jun 2027</span></div><button class="pick" type="button" data-pick="assessment" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g4 rv" data-id="tracker" data-name="E3 Pipeline tracker"><div class="mv"><span class="tg">Example</span><p class="mvh">Pipeline, by site</p><div class="kan"><div class="col"><span>Enquiry</span><div class="cd"><b>Site</b><i class="ln m"></i><span>Boiler age</span><i class="ln s"></i><span>Shutdown</span><i class="ln s"></i></div><div class="cd"><b>Site</b><i class="ln m"></i><span>Boiler age</span><i class="ln s"></i><span>Shutdown</span><i class="ln s"></i></div></div><div class="col"><span>Assessment</span><div class="cd"><b>Site</b><i class="ln m"></i><span>Boiler age</span><i class="ln s"></i><span>Shutdown</span><i class="ln s"></i></div><div class="cd"><b>Site</b><i class="ln m"></i><span>Boiler age</span><i class="ln s"></i><span>Shutdown</span><i class="ln s"></i></div></div><div class="col"><span>Proposal</span><div class="cd"><b>Site</b><i class="ln m"></i><span>Boiler age</span><i class="ln s"></i><span>Shutdown</span><i class="ln s"></i></div></div><div class="col"><span>Budget approved</span><div class="cd"><b>Site</b><i class="ln m"></i><span>Boiler age</span><i class="ln s"></i><span>Shutdown</span><i class="ln s"></i></div></div></div></div><h4><span class="code">E3</span>Pipeline tracker</h4><p class="get">A CRM set up around sites, tracking boiler age, planned shutdowns and budget dates.</p><div class="ph"><span class="when">Mar to Jun 2027</span></div><button class="pick" type="button" data-pick="tracker" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g4 rv" data-id="targets" data-name="E4 Target list"><div class="mv tall"><span class="tg real">Real data</span><p class="mvh">68 UK food and drink sites, by type</p><div class="bars"><div class="bar" tabindex="0"><span class="t">Oils and fats</span><span class="tr"><span class="f" style="width:58.8%"></span></span><span class="n">10</span><span class="tip">Manufacture of oils and fats, 10 sites</span></div><div class="bar" tabindex="0"><span class="t">Dairies</span><span class="tr"><span class="f" style="width:47.1%"></span></span><span class="n">8</span><span class="tip">Operation of dairies and cheese making, 8 sites</span></div><div class="bar" tabindex="0"><span class="t">Spirits</span><span class="tr"><span class="f" style="width:47.1%"></span></span><span class="n">8</span><span class="tip">Distilling, rectifying and blending of spirits, 8 sites</span></div><div class="bar" tabindex="0"><span class="t">Potatoes</span><span class="tr"><span class="f" style="width:35.3%"></span></span><span class="n">6</span><span class="tip">Processing and preserving of potatoes, 6 sites</span></div><div class="bar" tabindex="0"><span class="t">Beer</span><span class="tr"><span class="f" style="width:29.4%"></span></span><span class="n">5</span><span class="tip">Manufacture of beer, 5 sites</span></div><div class="bar" tabindex="0"><span class="t">Sugar</span><span class="tr"><span class="f" style="width:29.4%"></span></span><span class="n">5</span><span class="tip">Manufacture of sugar, 5 sites</span></div><div class="bar" tabindex="0"><span class="t">Malt</span><span class="tr"><span class="f" style="width:29.4%"></span></span><span class="n">5</span><span class="tip">Manufacture of malt, 5 sites</span></div><div class="bar" tabindex="0"><span class="t">Grain milling</span><span class="tr"><span class="f" style="width:23.5%"></span></span><span class="n">4</span><span class="tip">Manufacture of grain mill products, 4 sites</span></div><div class="bar oth" tabindex="0"><span class="t">Other types</span><span class="tr"><span class="f" style="width:100.0%"></span></span><span class="n">17</span><span class="tip">Eleven other food and drink types, one to three sites each, 17 sites</span></div></div><table class="sr-only"><caption>UK food and drink sites in the emissions trading register, by type</caption><tr><th>Manufacture of oils and fats</th><td>10</td></tr><tr><th>Operation of dairies and cheese making</th><td>8</td></tr><tr><th>Distilling, rectifying and blending of spirits</th><td>8</td></tr><tr><th>Processing and preserving of potatoes</th><td>6</td></tr><tr><th>Manufacture of beer</th><td>5</td></tr><tr><th>Manufacture of sugar</th><td>5</td></tr><tr><th>Manufacture of malt</th><td>5</td></tr><tr><th>Manufacture of grain mill products</th><td>4</td></tr><tr><th>Eleven other food and drink types, one to three sites each</th><td>17</td></tr></table><p class="src">UK ETS compliance report 2026, open accounts</p></div><h4><span class="code">E4</span>Target list</h4><p class="get">Built from public registers. The UK emissions trading register alone lists 68 food and drink sites run by 50 companies.</p><div class="ph"><span class="when">Jul to Sep 2027</span></div><button class="pick" type="button" data-pick="targets" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g4 rv" data-id="outbound" data-name="E5 Outbound"><div class="mv"><span class="tg">Example</span><p class="mvh">A campaign, once there’s data</p><div class="seq"><div><b>Step 1</b><span>Email with the demonstrator results</span></div><div><b>Step 2</b><span>LinkedIn note from Georgia</span></div><div><b>Step 3</b><span>Follow up with a site assessment offer</span></div></div><p class="more">Written and sent by us, within each country’s rules</p></div><h4><span class="code">E5</span>Outbound</h4><p class="get">Once there’s data from the demonstrator, we write and run the campaigns within each country’s rules.</p><div class="ph"><span class="when">Jul to Sep 2027</span></div><button class="pick" type="button" data-pick="outbound" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article></div></div><div class="grp g5" id="group-F"><div class="gh rv"><span class="gno">F</span><div><h3>AI helpers</h3><span class="what">AI tools that do the weekly reading and drafting.</span></div></div><figure class="hv rv"><div class="fbar"><i></i><i></i><i></i><span>inbox</span><span class="tg">Example issue, real 2026 items</span></div><div class="mail"><p class="from">HotGreen weekly, to Sanya and Georgia</p><h5>Regulation and funding, this week</h5><div class="item"><b>Rules published for the €1bn industrial heat auction</b><span class="src">European Commission, 24 Sep 2026</span><p>Heat pumps with a COP of at least 1.5 get a 25% bonus when bids are ranked. Expected to open to bidders in early December.</p></div><div class="item"><b>SDE++ opens 27 October with €8bn</b><span class="src">RVO, Netherlands</span><p>Includes an industrial heat pump category from 500 kWth with a COP of at least 2.3.</p></div><div class="item"><b>Coming up</b><div class="dates"><span>27 Oct, SDE++ opens</span><span>26 Nov, SDE++ closes</span><span>Early Dec, EU heat auction expected to open</span></div></div></div></figure><div class="pieces"><article class="piece g5 rv" data-id="digest" data-name="F1 Regulation and funding digest"><div class="mv"><span class="tg real">Real 2026 items</span><p class="mk">Weekly email</p><p class="mvh">Regulation and funding</p><div class="pr"><span>European Commission, 24 Sep 2026</span><b>Rules published for the €1bn industrial heat auction</b></div><div class="pr"><span>RVO, Netherlands</span><b>SDE++ opens 27 October with €8bn</b></div><div class="fade"></div></div><h4><span class="code">F1</span>Regulation and funding digest</h4><p class="get">A weekly email on changes to Scope 1 to 3, the ETS and funding, taken from official sources.</p><div class="ph"><span class="when">Mar to Jun 2027</span></div><button class="pick" type="button" data-pick="digest" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g5 rv" data-id="watch" data-name="F2 Competitor watch"><div class="mv"><span class="tg">Example</span><p class="mvh">Competitor watch, monthly</p><p class="mk sp">New products</p><i class="ln m"></i><i class="ln s"></i><p class="mk sp">Patents</p><i class="ln m"></i><i class="ln s"></i><p class="mk sp">Grants</p><i class="ln m"></i><i class="ln s"></i></div><h4><span class="code">F2</span>Competitor watch</h4><p class="get">A monthly email on competitors’ new products, patents and grants.</p><div class="ph"><span class="when">Mar to Jun 2027</span></div><button class="pick" type="button" data-pick="watch" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g5 rv" data-id="content" data-name="F3 Content helper"><div class="mv"><span class="tg">Example draft</span><p class="mk">Waiting for your approval</p><div class="li-post gap"><p class="flush">Dutch plants can apply for SDE++ from 27 October. Industrial heat pumps from 500 kWth qualify if their COP is at least 2.3.</p></div><div class="appr"><span class="btnx">Approve</span><span class="btnx o">Edit</span></div></div><h4><span class="code">F3</span>Content helper</h4><p class="get">Drafts news items, LinkedIn posts and articles from your agreed numbers. You approve each one.</p><div class="ph"><span class="when">Mar to Jun 2027</span></div><button class="pick" type="button" data-pick="content" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article><article class="piece g5 rv" data-id="update" data-name="F4 Investor update helper"><div class="mv form3"><span class="tg">Example</span><p class="mvh">Monthly update, short form</p><div class="inpx"><label>Milestones this month</label><div class="v"></div></div><div class="inpx"><label>Numbers</label><div class="v"></div></div><div class="inpx"><label>What you need from investors</label><div class="v"></div></div><div class="mvbtn"><span class="btnx">Draft it for Georgia</span></div></div><h4><span class="code">F4</span>Investor update helper</h4><p class="get">Drafts Georgia’s monthly investor email from a short form.</p><div class="ph"><span class="when">Mar to Jun 2027</span></div><button class="pick" type="button" data-pick="update" aria-pressed="false"><span class="ico" aria-hidden="true"></span><span class="off-t">Add to shortlist</span><span class="on-t">On your shortlist</span></button></article></div></div>
-  </div>
-</section>
-
-<section id="order" class="slide deep">
-  <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">4 / The timeline</span></div>
-    <h2 class="lead rv">When each part fits.</h2>
-    <div class="legend rv"><span><i class="dot gA"></i>A. We fix it</span><span><i class="dot g1"></i>B. Investor proof</span><span><i class="dot g2"></i>C. Increase your credibility</span><span><i class="dot g3"></i>D. Let prospects and investors see the proof</span><span><i class="dot g4"></i>E. Optimise your inbound and outbound flow</span><span><i class="dot g5"></i>F. AI helpers</span></div><div class="tl rv"><div class="months" aria-hidden="true"><span class="y y26">Oct</span><span class="">Nov</span><span class="">Dec</span><span class="y y27">Jan</span><span class="">Feb</span><span class="">Mar</span><span class="">Apr</span><span class="">May</span><span class="">Jun</span><span class="">Jul</span><span class="">Aug</span><span class="">Sep</span></div><div class="ms-row"><div class="ms c-dec pt from"><span class="md">Early December 2026</span>EU heat auction expected to open</div></div><div class="ms-row"><div class="ms c4-9"><span class="md">First half of 2027</span>First unit into the CCEP site, planned</div></div><div class="ms-row"><div class="ms c-may pt to"><span class="md">31 May 2027</span>Innovate UK project ends</div></div><div class="ms-row"><div class="ms c10-12"><span class="md">Around Q3 2027</span>Seed round, planned</div></div><div class="phases"><div class="phase p1"><h4>October and November 2026</h4><p class="at">Before the demonstrator goes in</p><div class="chips"><button class="chip" type="button" data-pick="fixes" aria-pressed="false"><span class="dot gA" aria-hidden="true"></span><b class="ccode">A</b>The fix list</button><button class="chip" type="button" data-pick="numbers" aria-pressed="false"><span class="dot g1" aria-hidden="true"></span><b class="ccode">B1</b>One set of numbers</button><button class="chip" type="button" data-pick="homeproof" aria-pressed="false"><span class="dot g1" aria-hidden="true"></span><b class="ccode">B2</b>Homepage proof section</button><button class="chip" type="button" data-pick="investor" aria-pressed="false"><span class="dot g1" aria-hidden="true"></span><b class="ccode">B3</b>Investor page</button><button class="chip" type="button" data-pick="press" aria-pressed="false"><span class="dot g1" aria-hidden="true"></span><b class="ccode">B4</b>Press kit</button><button class="chip" type="button" data-pick="monthly" aria-pressed="false"><span class="dot g1" aria-hidden="true"></span><b class="ccode">B5</b>Monthly update page</button><button class="chip" type="button" data-pick="linkedin" aria-pressed="false"><span class="dot g2" aria-hidden="true"></span><b class="ccode">C5</b>LinkedIn plan</button><button class="chip" type="button" data-pick="auction" aria-pressed="false"><span class="dot g3" aria-hidden="true"></span><b class="ccode">D3</b>EU heat auction guide</button></div></div><div class="phase p2"><h4>December 2026 to February 2027</h4><p class="at">The EU heat auction is expected to open in early December</p><div class="chips"><button class="chip" type="button" data-pick="evidence" aria-pressed="false"><span class="dot g1" aria-hidden="true"></span><b class="ccode">B6</b>Demonstrator plan</button><button class="chip" type="button" data-pick="positioning" aria-pressed="false"><span class="dot g2" aria-hidden="true"></span><b class="ccode">C1</b>Positioning and message</button><button class="chip" type="button" data-pick="lookfeel" aria-pressed="false"><span class="dot g2" aria-hidden="true"></span><b class="ccode">C2</b>New look in Framer</button><button class="chip" type="button" data-pick="product" aria-pressed="false"><span class="dot g2" aria-hidden="true"></span><b class="ccode">C3</b>Product pages and datasheets</button><button class="chip" type="button" data-pick="working" aria-pressed="false"><span class="dot g2" aria-hidden="true"></span><b class="ccode">C4</b>Working with HotGreen page</button><button class="chip" type="button" data-pick="calculator" aria-pressed="false"><span class="dot g3" aria-hidden="true"></span><b class="ccode">D1</b>Savings calculator</button><button class="chip" type="button" data-pick="funding" aria-pressed="false"><span class="dot g3" aria-hidden="true"></span><b class="ccode">D2</b>Funding finder</button><button class="chip" type="button" data-pick="routes" aria-pressed="false"><span class="dot g4" aria-hidden="true"></span><b class="ccode">E1</b>Enquiry forms</button></div></div><div class="phase p3"><h4>March to June 2027</h4><p class="at">The demonstrator goes in, planned for the first half of 2027. The Innovate UK project runs to 31 May 2027</p><div class="chips"><button class="chip" type="button" data-pick="assessment" aria-pressed="false"><span class="dot g4" aria-hidden="true"></span><b class="ccode">E2</b>Site assessment tool</button><button class="chip" type="button" data-pick="tracker" aria-pressed="false"><span class="dot g4" aria-hidden="true"></span><b class="ccode">E3</b>Pipeline tracker</button><button class="chip" type="button" data-pick="digest" aria-pressed="false"><span class="dot g5" aria-hidden="true"></span><b class="ccode">F1</b>Regulation and funding digest</button><button class="chip" type="button" data-pick="watch" aria-pressed="false"><span class="dot g5" aria-hidden="true"></span><b class="ccode">F2</b>Competitor watch</button><button class="chip" type="button" data-pick="content" aria-pressed="false"><span class="dot g5" aria-hidden="true"></span><b class="ccode">F3</b>Content helper</button><button class="chip" type="button" data-pick="update" aria-pressed="false"><span class="dot g5" aria-hidden="true"></span><b class="ccode">F4</b>Investor update helper</button></div></div><div class="phase p4"><h4>July to September 2027</h4><p class="at">The seed round</p><div class="chips"><button class="chip" type="button" data-pick="evidence" aria-pressed="false"><span class="dot g1" aria-hidden="true"></span><b class="ccode">B6</b>Results page</button><button class="chip" type="button" data-pick="dataroom" aria-pressed="false"><span class="dot g1" aria-hidden="true"></span><b class="ccode">B7</b>Data room</button><button class="chip" type="button" data-pick="targets" aria-pressed="false"><span class="dot g4" aria-hidden="true"></span><b class="ccode">E4</b>Target list</button><button class="chip" type="button" data-pick="outbound" aria-pressed="false"><span class="dot g4" aria-hidden="true"></span><b class="ccode">E5</b>Outbound</button></div></div></div></div>
-  </div>
-</section>
-
-<section id="start" class="slide paper">
-  <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">5 / Where we’d start</span></div>
-    <h2 class="lead rv">Start with <span class="hg">B and D</span>.</h2>
-    <p class="say rv">Start with one set of numbers, the homepage proof section and the investor page. The savings calculator comes next, because it runs on the same numbers. Together they help with investors and customers at the same time.</p>
-    <div class="path rv"><span class="step"><b>B1</b>One set of numbers</span><span class="ar" aria-hidden="true">→</span><span class="step"><b>B2</b>Homepage proof section</span><span class="ar" aria-hidden="true">→</span><span class="step"><b>B3</b>Investor page</span><span class="ar" aria-hidden="true">→</span><span class="step"><b>D1</b>Savings calculator</span></div>
-  </div>
-</section>
-
-<section id="need" class="slide dark">
-  <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">6 / What we need from you</span></div>
-    <h2 class="lead rv">Four things we’d need from you.</h2>
-    <div class="needs"><div class="need rv"><span class="n">01</span><p>Your business case model, or the inputs behind it</p></div><div class="need rv"><span class="n">02</span><p>Thirty minutes with an engineer to agree the numbers</p></div><div class="need rv"><span class="n">03</span><p>Access to Framer and your brand guidelines</p></div><div class="need rv"><span class="n">04</span><p>What you can say in public about CCEP, the demonstrator and your investors</p></div></div>
-  </div>
-</section>
-
-<section id="team" class="slide paper">
-  <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">7 / Who we are</span></div>
-    <h2 class="lead rv">Astra and Amwisesa build it as <span class="hg">one team</span>.</h2>
-    <p class="say rv">The team behind Astra has shipped for Unilever, Pertamina and the World Bank. Astra and Amwisesa work as one team. Astra runs the strategy and the project from the Netherlands, and Amwisesa, our development partner, builds. Their developers have spent more than ten years making apps, websites and management systems for brands like Unilever, Nestlé and IKEA.</p>
-    <p class="say rv">For Pertamina they rebuilt 470 drilling engineering formulas as a phone calculator that works offline, for engineers on offshore rigs. It’s the same kind of work as turning your business case model into a tool.</p>
-    <div class="work"><div class="wk rv"><div class="im"><img src="img/w-pertamina.jpg" alt="Two screens from the Pertamina drilling calculator app" loading="lazy"></div><div class="tx"><h3>Pertamina, drilling engineering app</h3><p>470 drilling engineering formulas rebuilt as a phone calculator that works offline, for engineers on offshore rigs.</p></div></div><div class="wk rv"><div class="im"><img src="img/w-worldbank.jpg" alt="The eHDW dashboard with village counts and service scores" loading="lazy"></div><div class="tx"><h3>World Bank, stunting monitoring</h3><p>An app and dashboard for the World Bank and a national ministry that collects child health data across a whole country, online or offline.</p></div></div><div class="wk rv"><div class="im"><img src="img/w-unilever.jpg" alt="The Unilever 1001 Ramadhan Inspiration content and promotion platform" loading="lazy"></div><div class="tx"><h3>Unilever, 1001 Ramadhan Inspiration</h3><p>A content and promotion platform on web and mobile that handles 48 Unilever brands, each with its own requests.</p></div></div><div class="wk rv"><div class="im"><img src="img/w-bango.jpg" alt="The Bango app on three phones, with a map of nearby street food stalls" loading="lazy"></div><div class="tx"><h3>Unilever, Bango app</h3><p>A street food finder for Unilever’s Bango brand on iPhone, Android and BlackBerry. It won Gold for Mobile App and Best in Show at the 2015 MMA Smarties.</p></div></div></div>
+    <div class="label rv"><span class="num">6</span><span>Who we are</span></div>
+    <h2 class="h2 rv">Astra and Amwisesa build it as one team.</h2>
+    <p class="intro rv">The team behind Astra has shipped for Unilever, Pertamina and the World Bank. Astra runs the strategy and the project from the Netherlands, and Amwisesa, our development partner, builds.</p>
+    <div class="work"><div class="wk rv"><div class="im"><img src="img/w-pertamina.jpg" alt="Two screens from the Pertamina drilling calculator app" loading="lazy"></div><div class="tx"><h3>Pertamina, drilling engineering app</h3><p>470 drilling engineering formulas rebuilt as a phone calculator that works offline, for engineers on offshore rigs.</p></div></div><div class="wk rv"><div class="im"><img src="img/w-worldbank.jpg" alt="The eHDW dashboard with village counts and service scores" loading="lazy"></div><div class="tx"><h3>World Bank, stunting monitoring</h3><p>An app and dashboard for the World Bank and a national ministry that collects child health data across a whole country, online or offline.</p></div></div><div class="wk rv"><div class="im"><img src="img/w-bango.jpg" alt="The Bango app on three phones, with a map of nearby street food stalls" loading="lazy"></div><div class="tx"><h3>Unilever, Bango app</h3><p>A street food finder for Unilever’s Bango brand on iPhone, Android and BlackBerry. It won Gold for Mobile App and Best in Show at the 2015 MMA Smarties.</p></div></div></div>
     <p class="disc rv">Built by Amwisesa, Astra’s development partner, often through the brand’s own agency. Screens are from Amwisesa’s credentials.</p>
     <div class="people">
       <div class="person rv"><h3>Raka Mulya</h3><span class="role">Go to market architect and entrepreneur</span><p>Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it. Your contact at Astra.</p><a href="https://www.linkedin.com/in/raka-mulya-b92885196/" rel="noopener" target="_blank">LinkedIn</a></div>
       <div class="person rv"><h3>Joshua van Zeelt</h3><span class="role">Founder of Astra Agency and JML Agency</span><p>Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.</p><a href="https://www.linkedin.com/in/joshua-van-zeelt/" rel="noopener" target="_blank">LinkedIn</a></div>
     </div>
+    <a class="next rv" href="#s7">Next, pick your parts <span aria-hidden="true">↓</span></a>
   </div>
 </section>
 
-<section id="next" class="slide">
-  <div class="band" aria-hidden="true"></div><div class="band-veil" aria-hidden="true"></div>
+<section id="s7" class="sec" data-step>
+  <div class="photo tanks" aria-hidden="true"></div><div class="veil2" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="eyebrow rv"><span class="kick">8 / Next step</span></div>
-    <h2 class="lead rv">Pick your groups on a <span class="hg">thirty minute call</span>.</h2>
-    <p class="say rv">Tell us which parts you want, and we’ll send a price and a date for each.</p>
-    <div class="short rv"><h3>Your shortlist</h3><ol id="shortlist"></ol><p id="short-empty" class="empty">Nothing on it yet. Add parts from the menu.</p>
-      <div class="acts"><a id="mail" class="btn" data-to="rifqiraka234@gmail.com" href="mailto:rifqiraka234@gmail.com?subject=HotGreen%20proposal">Email me</a><button id="clear" class="btn ghost" type="button" hidden>Clear the shortlist</button></div></div>
+    <div class="label rv"><span class="num">7</span><span>Next step</span></div>
+    <h2 class="h2 rv">Pick your parts on a thirty minute call.</h2>
+    <p class="intro rv">Tell us which parts you want, and we’ll send a price and a date for each.</p>
+    <div class="pick rv"><h3>Your list</h3><div id="picked" class="picked"></div><p id="empty" class="empty">Nothing on it yet. Press Add on any part above.</p>
+      <div class="acts"><a id="mail" class="btn" data-to="rifqiraka234@gmail.com" href="mailto:rifqiraka234@gmail.com?subject=HotGreen%20proposal">Email me</a><button id="clear" class="btn ghost" type="button" hidden>Clear the list</button></div></div>
   </div>
 </section>
 
-<footer><svg class="astra-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 L45 45 H3 Z" stroke="url(#ag)" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 18 L34 39 H14 Z" fill="url(#ag2)"/><defs><linearGradient id="ag" x1="3" y1="3" x2="45" y2="45"><stop stop-color="#ff7a45"/><stop offset="1" stop-color="#8fd14f"/></linearGradient><linearGradient id="ag2" x1="14" y1="18" x2="34" y2="39"><stop stop-color="#8fd14f"/><stop offset="1" stop-color="#cbab6e"/></linearGradient></defs></svg><p>Astra Agency, prepared for HotGreen Solutions, September 2026<br>Screenshots of hotgreensolutions.com taken 25 September 2026. The product image and logo are HotGreen’s own.</p></footer>
-<a id="tray" href="#next" hidden><b id="tray-n">0</b><span id="tray-t">parts on your shortlist</span></a>
+<footer><svg class="astra-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 L45 45 H3 Z" stroke="url(#ag)" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 18 L34 39 H14 Z" fill="url(#ag2)"/><defs><linearGradient id="ag" x1="3" y1="3" x2="45" y2="45"><stop stop-color="#ff7a45"/><stop offset="1" stop-color="#8fd14f"/></linearGradient><linearGradient id="ag2" x1="14" y1="18" x2="34" y2="39"><stop stop-color="#8fd14f"/><stop offset="1" stop-color="#cbab6e"/></linearGradient></defs></svg><p>Astra Agency, prepared for HotGreen Solutions, September 2026<br>The product image and logo are HotGreen’s own. Photos from Unsplash.</p></footer>
+<dialog id="dlg-A" class="gA" aria-labelledby="dt-A"><div class="dlg"><div class="dhead"><span class="letter">A</span><div><h3 id="dt-A">We fix it</h3><p>Fixes to your current website, free.</p></div><button class="x" type="button" data-close aria-label="Close">×</button></div><div class="dbody"><div class="viewer"><div class="frame"><div class="chrome"><i></i><i></i><i></i></div><img src="img/ex/fixes.webp" alt="" loading="lazy"></div><p class="cap"></p><a class="full" href="img/ex/fixes.webp" target="_blank" rel="noopener">Open full size</a></div><div class="items"><button class="item" type="button" aria-pressed="false" data-src="img/ex/fixes.webp" data-alt="The fix list, example screen" data-title="The fix list" data-kind="Your live site, checked 25 September 2026"><span class="code">A</span><span><span class="ih">The fix list</span><span class="ip">Twelve fixes to your current site, two of them legal. We give you the list, or make the changes for you.</span><span class="when">Oct to Nov 2026</span></span></button></div></div><div class="dfoot"><button class="add" type="button" data-pick="A" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add A to my list</span><span class="t-on">A is on my list</span></button><a class="btn sm" href="fixes.html">Open the full fix list</a><span class="sp"></span><button class="btn sm ghost" type="button" data-close>Close</button></div></div></dialog><dialog id="dlg-B" class="gB" aria-labelledby="dt-B"><div class="dlg"><div class="dhead"><span class="letter">B</span><div><h3 id="dt-B">Investor proof</h3><p>A website update for investors.</p></div><button class="x" type="button" data-close aria-label="Close">×</button></div><div class="dbody"><div class="viewer"><div class="frame"><div class="chrome"><i></i><i></i><i></i></div><img src="img/ex/homeproof.webp" alt="" loading="lazy"></div><p class="cap"></p><a class="full" href="img/ex/homeproof.webp" target="_blank" rel="noopener">Open full size</a></div><div class="items"><button class="item" type="button" aria-pressed="false" data-src="img/ex/numbers.webp" data-alt="One set of numbers, example screen" data-title="B1 One set of numbers" data-kind="Real data, the numbers you publish today"><span class="code">B1</span><span><span class="ih">One set of numbers</span><span class="ip">Every public figure agreed once with your engineers, with its basis written down.</span><span class="when">Oct to Nov 2026</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/homeproof.webp" data-alt="Homepage proof, example screen" data-title="B2 Homepage proof" data-kind="Sketch, filled with your real facts"><span class="code">B2</span><span><span class="ih">Homepage proof</span><span class="ip">Your backers named, a dated timeline, and the demonstrator as it is today.</span><span class="when">Oct to Nov 2026</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/investor.webp" data-alt="Investor page, example screen" data-title="B3 Investor page" data-kind="Sketch, filled with your real facts"><span class="code">B3</span><span><span class="ih">Investor page</span><span class="ip">Who backs you, your stage, and a form that goes straight to Georgia.</span><span class="when">Oct to Nov 2026</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/press.webp" data-alt="Press kit, example screen" data-title="B4 Press kit" data-kind="Sketch, with the real articles"><span class="code">B4</span><span><span class="ih">Press kit</span><span class="ip">Every article about HotGreen so far, plus approved facts, logos and photos.</span><span class="when">Oct to Nov 2026</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/monthly.webp" data-alt="Monthly update page, example screen" data-title="B5 Monthly update page" data-kind="Example layout"><span class="code">B5</span><span><span class="ih">Monthly update page</span><span class="ip">A short public version of Georgia’s monthly investor email.</span><span class="when">Oct to Nov 2026</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/evidence.webp" data-alt="Demonstrator results page, example screen" data-title="B6 Demonstrator results page" data-kind="Sketch"><span class="code">B6</span><span><span class="ih">Demonstrator results page</span><span class="ip">What each approver needs to see, then the results once the unit runs.</span><span class="when">Dec 2026 to Feb 2027, then Jul to Sep 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/dataroom.webp" data-alt="Data room, example screen" data-title="B7 Data room" data-kind="Example data"><span class="code">B7</span><span><span class="ih">Data room</span><span class="ip">Folders for the seed round, and you see which investor read what.</span><span class="when">Jul to Sep 2027</span></span></button></div></div><div class="dfoot"><button class="add" type="button" data-pick="B" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add B to my list</span><span class="t-on">B is on my list</span></button><span class="sp"></span><button class="btn sm ghost" type="button" data-close>Close</button></div></div></dialog><dialog id="dlg-C" class="gC" aria-labelledby="dt-C"><div class="dlg"><div class="dhead"><span class="letter">C</span><div><h3 id="dt-C">Increase your credibility</h3><p>Branding and a website redesign.</p></div><button class="x" type="button" data-close aria-label="Close">×</button></div><div class="dbody"><div class="viewer"><div class="frame"><div class="chrome"><i></i><i></i><i></i></div><img src="img/ex/product.webp" alt="" loading="lazy"></div><p class="cap"></p><a class="full" href="img/ex/product.webp" target="_blank" rel="noopener">Open full size</a></div><div class="items"><button class="item" type="button" aria-pressed="false" data-src="img/ex/positioning.webp" data-alt="Positioning and message, example screen" data-title="C1 Positioning and message" data-kind="Example"><span class="code">C1</span><span><span class="ih">Positioning and message</span><span class="ip">A workshop and a short guide. One clear line on what HotGreen makes and who it’s for.</span><span class="when">Dec 2026 to Feb 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/lookfeel.webp" data-alt="New look in Framer, example screen" data-title="C2 New look in Framer" data-kind="Sketch, next to your homepage today"><span class="code">C2</span><span><span class="ih">New look in Framer</span><span class="ip">New layouts for the pages you choose. You still edit them yourselves.</span><span class="when">Dec 2026 to Feb 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/product.webp" data-alt="Product pages and datasheets, example screen" data-title="C3 Product pages and datasheets" data-kind="Sketch, with your real specs"><span class="code">C3</span><span><span class="ih">Product pages and datasheets</span><span class="ip">A page and a PDF datasheet for each HotStack model, with the specs as text.</span><span class="when">Dec 2026 to Feb 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/working.webp" data-alt="Working with HotGreen, example screen" data-title="C4 Working with HotGreen" data-kind="Sketch"><span class="code">C4</span><span><span class="ih">Working with HotGreen</span><span class="ip">Warranty, service, spares and how an install works, for procurement teams.</span><span class="when">Dec 2026 to Feb 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/linkedin.webp" data-alt="LinkedIn plan, on the side, example screen" data-title="C5 LinkedIn plan, on the side" data-kind="Example draft"><span class="code">C5</span><span><span class="ih">LinkedIn plan, on the side</span><span class="ip">A monthly posting plan with drafts. You post them yourselves.</span><span class="when">Oct to Nov 2026</span></span></button></div></div><div class="dfoot"><button class="add" type="button" data-pick="C" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add C to my list</span><span class="t-on">C is on my list</span></button><span class="sp"></span><button class="btn sm ghost" type="button" data-close>Close</button></div></div></dialog><dialog id="dlg-D" class="gD" aria-labelledby="dt-D"><div class="dlg"><div class="dhead"><span class="letter">D</span><div><h3 id="dt-D">Let prospects and investors see the proof</h3><p>A business case web app on your site.</p></div><button class="x" type="button" data-close aria-label="Close">×</button></div><div class="dbody"><div class="viewer"><div class="frame"><div class="chrome"><i></i><i></i><i></i></div><img src="img/ex/calculator.webp" alt="" loading="lazy"></div><p class="cap"></p><a class="full" href="img/ex/calculator.webp" target="_blank" rel="noopener">Open full size</a></div><div class="items"><button class="item" type="button" aria-pressed="false" data-src="img/ex/calculator.webp" data-alt="Savings calculator, example screen" data-title="D1 Savings calculator" data-kind="Sketch. The figures would come from your model"><span class="code">D1</span><span><span class="ih">Savings calculator</span><span class="ip">A smaller version of your business case model. A customer enters their site and prices, and sees cost, carbon and payback.</span><span class="when">Dec 2026 to Feb 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/funding.webp" data-alt="Funding finder, example screen" data-title="D2 Funding finder" data-kind="Sketch, with real schemes"><span class="code">D2</span><span><span class="ih">Funding finder</span><span class="ip">The grants a customer can claim in their country, with the date each one was checked.</span><span class="when">Dec 2026 to Feb 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/auction.webp" data-alt="EU heat auction guide, example screen" data-title="D3 EU heat auction guide" data-kind="Sketch, with the real rules"><span class="code">D3</span><span><span class="ih">EU heat auction guide</span><span class="ip">A one page guide for EU prospects. The €1bn auction is expected to open in early December.</span><span class="when">Oct to Nov 2026</span></span></button></div></div><div class="dfoot"><button class="add" type="button" data-pick="D" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add D to my list</span><span class="t-on">D is on my list</span></button><span class="sp"></span><button class="btn sm ghost" type="button" data-close>Close</button></div></div></dialog><dialog id="dlg-E" class="gE" aria-labelledby="dt-E"><div class="dlg"><div class="dhead"><span class="letter">E</span><div><h3 id="dt-E">Optimise your inbound and outbound flow</h3><p>Website forms, a CRM and outreach.</p></div><button class="x" type="button" data-close aria-label="Close">×</button></div><div class="dbody"><div class="viewer"><div class="frame"><div class="chrome"><i></i><i></i><i></i></div><img src="img/ex/assessment.webp" alt="" loading="lazy"></div><p class="cap"></p><a class="full" href="img/ex/assessment.webp" target="_blank" rel="noopener">Open full size</a></div><div class="items"><button class="item" type="button" aria-pressed="false" data-src="img/ex/routes.webp" data-alt="Enquiry forms, example screen" data-title="E1 Enquiry forms" data-kind="Sketch"><span class="code">E1</span><span><span class="ih">Enquiry forms</span><span class="ip">Separate forms for investors, site assessments, customers, partners and press.</span><span class="when">Dec 2026 to Feb 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/assessment.webp" data-alt="Site assessment tool, example screen" data-title="E2 Site assessment tool" data-kind="Example data"><span class="code">E2</span><span><span class="ih">Site assessment tool</span><span class="ip">Enquiries arrive with steam data. Your model drafts, your engineer checks. We’d measure the hours it saves.</span><span class="when">Mar to Jun 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/tracker.webp" data-alt="Pipeline tracker, example screen" data-title="E3 Pipeline tracker" data-kind="Example data"><span class="code">E3</span><span><span class="ih">Pipeline tracker</span><span class="ip">A CRM built around sites, with boiler age, shutdowns and budget dates.</span><span class="when">Mar to Jun 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/targets.webp" data-alt="Target list, example screen" data-title="E4 Target list" data-kind="Real data"><span class="code">E4</span><span><span class="ih">Target list</span><span class="ip">The UK emissions trading register alone lists 68 food and drink sites run by 50 companies.</span><span class="when">Jul to Sep 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/outbound.webp" data-alt="Outbound, example screen" data-title="E5 Outbound" data-kind="Example"><span class="code">E5</span><span><span class="ih">Outbound</span><span class="ip">Once there’s data from the demonstrator, we write and run the campaigns.</span><span class="when">Jul to Sep 2027</span></span></button></div></div><div class="dfoot"><button class="add" type="button" data-pick="E" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add E to my list</span><span class="t-on">E is on my list</span></button><span class="sp"></span><button class="btn sm ghost" type="button" data-close>Close</button></div></div></dialog><dialog id="dlg-F" class="gF" aria-labelledby="dt-F"><div class="dlg"><div class="dhead"><span class="letter">F</span><div><h3 id="dt-F">AI helpers</h3><p>AI tools that do the weekly reading and drafting.</p></div><button class="x" type="button" data-close aria-label="Close">×</button></div><div class="dbody"><div class="viewer"><div class="frame"><div class="chrome"><i></i><i></i><i></i></div><img src="img/ex/digest.webp" alt="" loading="lazy"></div><p class="cap"></p><a class="full" href="img/ex/digest.webp" target="_blank" rel="noopener">Open full size</a></div><div class="items"><button class="item" type="button" aria-pressed="false" data-src="img/ex/digest.webp" data-alt="Regulation and funding digest, example screen" data-title="F1 Regulation and funding digest" data-kind="Example issue, with real 2026 items"><span class="code">F1</span><span><span class="ih">Regulation and funding digest</span><span class="ip">A weekly email on Scope 1 to 3, ETS and funding changes.</span><span class="when">Mar to Jun 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/watch.webp" data-alt="Competitor watch, example screen" data-title="F2 Competitor watch" data-kind="Example"><span class="code">F2</span><span><span class="ih">Competitor watch</span><span class="ip">A monthly email on competitors’ products, patents and grants.</span><span class="when">Mar to Jun 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/content.webp" data-alt="Content helper, example screen" data-title="F3 Content helper" data-kind="Example drafts"><span class="code">F3</span><span><span class="ih">Content helper</span><span class="ip">Drafts posts and articles from your agreed numbers. You approve each one.</span><span class="when">Mar to Jun 2027</span></span></button><button class="item" type="button" aria-pressed="false" data-src="img/ex/update.webp" data-alt="Investor update helper, example screen" data-title="F4 Investor update helper" data-kind="Example"><span class="code">F4</span><span><span class="ih">Investor update helper</span><span class="ip">Drafts Georgia’s monthly investor email from a short form.</span><span class="when">Mar to Jun 2027</span></span></button></div></div><div class="dfoot"><button class="add" type="button" data-pick="F" aria-pressed="false"><span class="tick" aria-hidden="true"></span><span class="t-off">Add F to my list</span><span class="t-on">F is on my list</span></button><span class="sp"></span><button class="btn sm ghost" type="button" data-close>Close</button></div></div></dialog>
 
 <script>(function(){
   var d=document, root=d.documentElement;
   root.classList.add('js');
-  var KEY='hotgreen-shortlist', picks={};
+
+  // the six parts you can pick
+  var KEY='hotgreen-parts', picks={};
   try{ picks=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ picks={}; }
   var names={}, order=[];
-  [].forEach.call(d.querySelectorAll('.piece[data-id]'),function(el){ var id=el.getAttribute('data-id'); names[id]=el.getAttribute('data-name'); order.push(id); });
+  [].forEach.call(d.querySelectorAll('.tile[data-g]'),function(t){ var g=t.getAttribute('data-g'); names[g]=t.getAttribute('data-name'); order.push(g); });
   Object.keys(picks).forEach(function(k){ if(!names[k]) delete picks[k]; });
   function save(){ try{ localStorage.setItem(KEY,JSON.stringify(picks)); }catch(e){} }
-  var list=d.getElementById('shortlist'), empty=d.getElementById('short-empty'), mail=d.getElementById('mail'),
-      tray=d.getElementById('tray'), trayN=d.getElementById('tray-n'), trayT=d.getElementById('tray-t'), clr=d.getElementById('clear');
+  var box=d.getElementById('picked'), empty=d.getElementById('empty'), mail=d.getElementById('mail'), clr=d.getElementById('clear');
   function render(){
-    var ids=order.filter(function(id){return picks[id];});
+    var ids=order.filter(function(g){return picks[g];});
     [].forEach.call(d.querySelectorAll('[data-pick]'),function(b){
-      var on=!!picks[b.getAttribute('data-pick')];
-      b.setAttribute('aria-pressed',on?'true':'false');
-      var host=b.closest('.piece')||b; host.classList.toggle('on',on);
+      var on=!!picks[b.getAttribute('data-pick')]; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false');
     });
-    list.innerHTML='';
-    ids.forEach(function(id){ var li=d.createElement('li'); li.textContent=names[id]; list.appendChild(li); });
-    empty.hidden=ids.length>0; clr.hidden=ids.length===0;
-    var body='Hi Raka,\n\n'+(ids.length?'These are the parts we’d like to talk about.\n\n'+ids.map(function(id,i){return (i+1)+'. '+names[id];}).join('\n')+'\n':'')+'\n';
+    [].forEach.call(d.querySelectorAll('.tile[data-g],.gchip[data-open]'),function(t){
+      var g=t.getAttribute('data-g')||t.getAttribute('data-open'); t.classList.toggle('on',!!picks[g]);
+    });
+    box.innerHTML='';
+    ids.forEach(function(g){
+      var s=d.createElement('span'); s.className='pc g'+g;
+      var l=d.createElement('span'); l.className='letter'; l.textContent=g; s.appendChild(l);
+      s.appendChild(d.createTextNode(names[g])); box.appendChild(s);
+    });
+    empty.hidden=ids.length>0; clr.hidden=ids.length===0; box.hidden=ids.length===0;
+    var body='Hi Raka,\n\n'+(ids.length?'These are the parts we’d like to talk about.\n\n'+ids.map(function(g){return g+'. '+names[g];}).join('\n')+'\n':'')+'\n';
     mail.href='mailto:'+mail.getAttribute('data-to')+'?subject='+encodeURIComponent('HotGreen proposal')+'&body='+encodeURIComponent(body);
-    tray.hidden=ids.length===0;
-    trayN.textContent=ids.length;
-    trayT.textContent=ids.length===1?'part on your shortlist':'parts on your shortlist';
   }
+
+  // the panel for each part
+  function show(dlg,btn){
+    var img=dlg.querySelector('.viewer img'), cap=dlg.querySelector('.viewer .cap');
+    [].forEach.call(dlg.querySelectorAll('.item'),function(i){ i.classList.toggle('on',i===btn); i.setAttribute('aria-pressed',i===btn?'true':'false'); });
+    img.src=btn.getAttribute('data-src'); img.alt=btn.getAttribute('data-alt'); var fl=dlg.querySelector('.full'); if(fl) fl.href=btn.getAttribute('data-src');
+    cap.innerHTML=''; var b=d.createElement('b'); b.textContent=btn.getAttribute('data-title'); cap.appendChild(b);
+    cap.appendChild(d.createTextNode('. '+btn.getAttribute('data-kind')));
+  }
+  function open(g){
+    var dlg=d.getElementById('dlg-'+g); if(!dlg) return;
+    var first=dlg.querySelector('.item'); if(first) show(dlg,first);
+    if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+  }
+
   d.addEventListener('click',function(e){
-    var b=e.target.closest('[data-pick]'); if(b){ var id=b.getAttribute('data-pick'); if(picks[id]) delete picks[id]; else picks[id]=1; save(); render(); return; }
-    if(e.target.closest('#clear')){ picks={}; save(); render(); }
+    var t=e.target;
+    var o=t.closest('[data-open]'); if(o){ e.preventDefault(); open(o.getAttribute('data-open')); return; }
+    var p=t.closest('[data-pick]'); if(p){ var g=p.getAttribute('data-pick'); if(picks[g]) delete picks[g]; else picks[g]=1; save(); render(); return; }
+    var it=t.closest('.item'); if(it){ show(it.closest('dialog'),it); return; }
+    if(t.closest('[data-close]')){ t.closest('dialog').close(); return; }
+    if(t.tagName==='DIALOG'){ t.close(); return; }
+    if(t.closest('#clear')){ picks={}; save(); render(); }
   });
   render();
-  var els=[].slice.call(d.querySelectorAll('.rv')), prog=d.getElementById('prog'), ticking=false;
+
+  // which step you are on, and a gentle reveal
+  var secs=[].slice.call(d.querySelectorAll('section[data-step]')), links={};
+  [].forEach.call(d.querySelectorAll('.steps a'),function(a){ links[a.getAttribute('href').slice(1)]=a; });
+  var els=[].slice.call(d.querySelectorAll('.rv')), ticking=false;
   function check(){
     ticking=false;
-    var h=window.innerHeight||root.clientHeight;
+    var h=window.innerHeight||root.clientHeight, cur=null;
+    secs.forEach(function(s){ var r=s.getBoundingClientRect(); if(r.top<h*0.45) cur=s.id; });
+    Object.keys(links).forEach(function(k){ links[k].classList.toggle('on',k===cur); });
     els=els.filter(function(el){ var r=el.getBoundingClientRect(); if(r.top<h*0.94&&r.bottom>0){ el.classList.add('in'); return false; } return true; });
-    var t=root.scrollHeight-root.clientHeight; prog.style.width=(t>0?(root.scrollTop||d.body.scrollTop)/t*100:0)+'%';
   }
   function req(){ if(!ticking){ ticking=true; requestAnimationFrame(check); } }
   window.addEventListener('scroll',req,{passive:true}); window.addEventListener('resize',req); window.addEventListener('load',req);
