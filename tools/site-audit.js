@@ -417,6 +417,27 @@ function classify(url, base) {
   console.log(`gdpr banner  ${dom.bannerPresent ? 'yes' : 'NONE FOUND'}${cmp.length ? ' via ' + cmp.join(',') : ''}${guard(!dom.bannerPresent, 'banner')} | reject ${dom.rejectButton ? 'present' : 'NOT FOUND'}`);
   console.log(`gdpr pre     ${preConsentCookies.length} cookies, ${preConsentCookies.filter((c) => c.party === 'third').length} third party, before any click`);
   console.log(`trackers pre ${trackersBeforeConsent.length ? trackersBeforeConsent.join(', ') : 'none'}`);
+  // THE GEO TRAP (2026-09-25). This container exits in Columbus, Ohio. GDPR doesn't
+  // cover a US visitor, so Cookiebot, Usercentrics, Shopify's banner and Google consent
+  // mode region defaults all show nothing and track freely for US. Burton Clinic and
+  // Aurevia were both told trackers ran before consent, while their consent mode set
+  // everything to denied for GB and the EEA. The banner and pre consent lines above only
+  // describe what a US visitor gets, unless the page carries no consent code at all.
+  let egress = '??';
+  try { egress = (execSync('curl -s -m 15 https://www.cloudflare.com/cdn-cgi/trace', { encoding: 'utf8' }).match(/loc=(\w+)/) || [])[1] || '??'; } catch (e) { /* unknown stays unknown */ }
+  const EU = /^(AT|BE|BG|CH|CY|CZ|DE|DK|EE|ES|FI|FR|GB|GR|HR|HU|IE|IS|IT|LI|LT|LU|LV|MT|NL|NO|PL|PT|RO|SE|SI|SK)$/;
+  const consentCode = (html.match(/cookiebot|cookieyes|cky-consent|complianz|cmplz|iubenda|onetrust|optanon|usercentrics|borlabs|termly|cookie-law-info|klaro|didomi|axeptio|quantcast|consentmanager|cookiefirst|tarteaucitron|customerPrivacy|privacy-banner|gtag\(['"]consent|cookieconsent|cookie-script|moove_gdpr|real-cookie-banner|osano|trustarc|fundingchoices|googlefc/gi) || []).map((s) => s.toLowerCase());
+  const regionDefault = /gtag\(['"]consent['"],\s*['"]default['"][^;]*"region"/.test(html);
+  console.log(`egress       ${egress}${EU.test(egress) ? '' : ', NOT an EU or UK visitor'}`);
+  if (!EU.test(egress) && (consentCode.length || regionDefault)) {
+    console.log(`!!  GEO VOID. Consent code on the page (${[...new Set(consentCode)].join(',')}${regionDefault ? ', consent mode region defaults' : ''}).`);
+    console.log('!!  It can show an EU visitor a banner and block trackers that a US visitor never sees.');
+    console.log('!!  The banner, reject, pre consent cookie and tracker lines are VOID for EU visitors.');
+    console.log('!!  Never write a GDPR claim off this run. Raka opens it from the Netherlands, incognito.');
+  } else if (!EU.test(egress)) {
+    console.log('    no consent code of any kind in the HTML, so no geo rule can exist. Tracker lines hold,');
+    console.log('    confirm with the list of hosts the page contacted before writing it.');
+  }
   console.log(`googlefonts  ${googleFonts ? 'REMOTE, loaded from Google' : 'not remote'}`);
   console.log(`privacy      ${dom.privacyLink || 'NO LINK FOUND' + guard(true, 'privacy')}`);
   const socialEntries = Object.entries(dom.social || {});

@@ -474,6 +474,14 @@ right now, and we lead with it.**
    - **GDPR and privacy.** Trackers firing before consent (site-audit.js lists them), no or
      broken privacy policy, forms without consent, a missing Impressum in DE and AT. EU and UK
      leads. It's a fine, a legal risk and a trust problem, so it passes the pay test when real.
+     **THE GEO TRAP (found 2026-09-25).** This container exits in Columbus, Ohio. GDPR doesn't
+     cover a US visitor, so Cookiebot, Usercentrics, Complianz, Shopify's banner and Google
+     consent mode region defaults show a US visitor no banner and let trackers run. From here
+     "trackers before consent, no banner" is only true for an EU visitor when the page carries
+     NO consent code at all. site-audit.js now prints the egress country and `GEO VOID` when it
+     finds consent code. Burton Clinic and Aurevia Syndic were both told on 2026-09-21 that
+     trackers ran before consent, and both sites set consent mode to denied for GB and the EEA.
+     A GEO VOID site's GDPR finding needs Raka to open it from the Netherlands, incognito.
    - **Apps and internal tools for efficiency and growth.** Quoting, booking, planning, portals,
      manual paperwork, one person as the bottleneck, hiring for admin. Rule 11.
    - **Social media.** Every account taken from their own HTML, opened, last post dated, the
