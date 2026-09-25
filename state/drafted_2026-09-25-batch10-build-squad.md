@@ -23,11 +23,14 @@ code, so their tracker lines are GEO VOID and nothing here rests on them.
 
 ## Dan Kavanagh, Ignition Search. OPENER.
 
+<!-- GATE ARCHIVED, SENT 2026-09-25T09:02:09Z as act_JW2T5keJ8LvQhJfdA on Raka's explicit word. Thread verified verbatim after send. -->
+
 **In plain words.** Dan owns a Sheffield SEO and ads agency with over 100 clients. On 11 September
 he registered a new company, Ignition Search Labs, for software development, and this week he
-hosted a Chamber of Commerce seminar on AI in marketing. His own site still shows phone visitors
-a template's placeholder phone number and email in the menu. He's moving into building software
-with a team that hasn't finished its own site. Our build squad builds for him.
+hosted a Chamber of Commerce seminar on AI in marketing. Labs needs people who build before it
+can earn, and hiring them takes months. Our build squad builds for Labs so his team stays on
+clients. (The first draft also led on a placeholder phone number in his mobile menu. Raka rejected
+that as a second angle glued on, RULES.md 1A, and it was cut. The sent text is below.)
 
 ```gate
 lead: Dan Kavanagh, Ignition Search Limited 06778306, ctc_MvF898tMbDmzHBXhB, lea_JsbGzZLECp2Xxhzwd
@@ -87,6 +90,8 @@ Shall I send you over what the build squad looks like?
 ---
 
 ## Luis Raab, significa. OPENER.
+
+<!-- GATE ARCHIVED, SENT 2026-09-25T09:02:11Z as act_5owXr4bqNgyWESzCH on Raka's explicit word. Thread verified verbatim after send. -->
 
 **In plain words.** significa is a ten person full service agency in Aschaffenburg selling branding,
 campaigns, print, video, SEO and web design. Luis joined the management team in January. Their team
@@ -150,6 +155,8 @@ Shall I send you over what the web squad looks like?
 ---
 
 ## Romy Abbrederis, Lobby. OPENER.
+
+<!-- GATE ARCHIVED, SENT 2026-09-25T09:02:14Z as act_Jw72WRScS8ajKvjc3 on Raka's explicit word. Thread verified verbatim after send. -->
 
 **In plain words.** Lobby is a Zurich startup whose AI handles group bookings, events and quotes
 for hotels. Three co-founders, $2.2M raised from Founderful, the Europe category of Phocuswright's
