@@ -480,6 +480,34 @@ That's where our time goes, and it's the answer to Josh's Framer point.
 
 ---
 
+## 5G. The five angle families from RULES 4A rule 13, each tested
+
+Checked 25 September 2026, after the map above was written. The map covered three families and had
+not tested social media or Build Squad.
+
+| Family | Evidence | Verdict |
+|---|---|---|
+| Website holding back growth | Site audit plus Sanya's own list. One path for everyone, proof missing, numbers disagree, a year behind | **Real and costly, because investors are their top goal.** Families A to C above |
+| GDPR and privacy | No privacy notice, no company number or registered office (legal duties), Google Fonts loaded from Google. The site sets no cookies before a click and carries no consent tool, so the US egress trap doesn't apply | **Real but small.** It fails the pay test alone, so it goes in the free fix list |
+| Apps and internal tools | Their March 2026 job ad describes pre sales done by hand by one early hire. "Build/validate steam profiles, thermal loads, duty cycles", "Size and select heat pumps", "Structure feasibility analyses", "Gather and structure customer data (profiles, metering, historical loads)". Sanya said they share "an existing business case model" with customers and their inbound pipeline is "chock a block" | **The biggest candidate we had underplayed.** Every prospect needs a custom engineering assessment and business case, done by hand. See D5 below |
+| Social media | Their site links to one platform only, LinkedIn (checked with a control that finds Instagram, X, YouTube and LinkedIn on framer.com). Company page 1,642 followers, newest post 3 weeks old (Sanya's introduction), then nothing newer than about 3 months, roughly 11 posts in a year. Georgia's own profile is bigger, 5,055 followers | **Real, small on its own.** It becomes part of the content helper (F3), drafts for the company page and for Georgia |
+| Build Squad | No software, controls or data role on their team list. The word "software" isn't on their homepage and isn't in the job ad | **No evidence yet.** One question for Georgia or Andrew, who builds the monitoring and data side of the demonstrator |
+
+**D5. The site assessment and business case tool (new, Optimise).**
+- **The pain in their words.** Their job ad lists the manual steps above, all by one "individual
+  contributor". Sanya's "existing business case model that we share with our customers" is the end of
+  that chain.
+- **What we build.** An internal tool that takes a prospect's intake (steam demand, temperature, hours,
+  fuel, metering files), runs their sizing and business case model, and produces a first draft proposal
+  for the engineer to check. The public calculator (D1) is its front door.
+- **Why it's bigger than the calculator.** Their inbound pipeline is already full and the demonstrator
+  will add more in 2027. When every enquiry needs days of engineering to answer, the engineer is the
+  ceiling on sales (RULES 4A rule 11). We don't know how long one assessment takes today, so that's the
+  first question to ask, and no figure goes in anything we send.
+- **AI or not.** The data plumbing and the draft are software and some AI. The engineering sign off
+  stays human. DIY, no.
+- **When.** Scoped in Module 2 with D1, built for the demonstrator period, Q1 to Q2 2027.
+
 ## 6. Where to start. The recommended order
 
 | Phase | When | What | Why this order | Indicative size, internal, confirm before quoting |
@@ -504,6 +532,31 @@ itself a regulated activity. Treat that last point as a question for a lawyer, n
 - A channel. The 100+ Cohort 7 has 44 startups (from HotGreen's own May post), and Empirical, Deep
   Science Ventures and NZTC portfolios all hold companies with this exact problem. It also matches the
   debrief's "companies that just raised" lead type.
+
+## 6A. The proposal I'd actually send her
+
+The map above is the inventory. It's not the proposal. Sanya asked for "a proposal, like a menu", and
+24 items reads as a snagging list to a six person startup that has already said "we might say not
+right now". So the proposal should be three buckets, each with a price, a timeline and the one thing it
+changes for them.
+
+1. **Start here. The numbers people can trust (fixed price, about four weeks).** One agreed set of
+   figures, the savings calculator Sanya liked, built on their own model with the assumptions shown,
+   and a proof strip on the site (backers named in words, a dated "where we are", the demonstrator
+   described honestly, a quiet investor contact). It serves investors and customers at once, she asked
+   for it by name, and she can't do it herself. The free fix list goes in the same email.
+2. **Next. Look like the equipment supplier you are (with Luna).** Positioning, the premium look and
+   feel, product pages and the procurement page. This is the debrief's "feels premium, feels legit".
+3. **Then. The sales engine.** The site assessment and business case tool (D5), the enquiry routes,
+   the pipeline tracker and the weekly digest. Priced as a build plus a monthly retainer.
+
+**The one real disagreement to settle before writing it.** Our debrief said the most urgent thing is
+the look and feel. Sanya called look and feel "a longer term project", and Framer's AI makes a visual
+refresh the easiest thing for her to try herself. Leading with the numbers and the calculator puts our
+first price on the thing she asked for and can't copy. Raka's call.
+
+**Two things I wouldn't do.** Build the urgency on the Demo Day until Sanya confirms the date. And send
+it to Sanya alone, since Georgia holds the budget and was cc'd on everything so far.
 
 ## 7. What not to propose
 
