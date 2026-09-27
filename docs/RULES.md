@@ -244,6 +244,14 @@ missing from the message.
 | An old note called OLLY'S Real Olive's own product | A competitor's launch read as theirs | reopened at source, retailtimes and ollys-snacks.com |
 | `pgrep -f` wait loops that matched themselves | Time lost, three background tasks killed | check the output files instead |
 
+## 1C. The mistakes of 2026-09-27, each with the gate it got
+
+| Mistake | Cost | Gate now |
+|---|---|---|
+| site-audit.js printed banner NONE FOUND on halloween.fr, its buttons were plain divs | An absence claim the screenshot contradicted | leaf accept or reject words under a cookie or consent parent now count, tested both ways |
+| Six lines carried from the 25 Sep sweeps were paraphrased from memory, and wrong | Prevent's missing social accounts written as "nothing missing" | carry a line forward by copying it from the file, then reread the file before commit |
+| A cookie count from one tool treated as the count | kinspot.nl is 24 in Chromium and 7 in Webbkoll for the same trackers | quote tracker hosts and cookie names, a count only from the same tool |
+
 ## 2. The message. One number per rule.
 
 **Opener length is 95 to 170 words since 2026-09-24**, when Raka added block three and shortened block five. Before that it was 90 to 145, and the rest of this paragraph is that history. **Opener length was 90 to 145 words.** This supersedes the 65 word ceiling in

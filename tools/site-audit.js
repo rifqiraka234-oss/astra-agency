@@ -91,7 +91,30 @@ const DETECT = (socialSrc) => {
     // caught, so these lists are deliberately generous now.
     const acceptWords = ['accept all', 'allow all', 'alle akzeptieren', 'alles accepteren', 'tout accepter', 'accept', 'akzeptieren', 'accepteren', 'accepter', 'ok', 'okay', "j'accepte", "d'accord", 'got it', 'i agree', 'agree', 'understood', 'verstanden', 'einverstanden', 'akkoord', 'continue', 'allow', 'zustimmen', 'aceptar', 'accetta'];
     const rejectWords = ['reject all', 'decline', 'reject', 'deny', 'ablehnen', 'weigeren', 'weiger', 'refuser', 'refuse', 'rifiuta', 'rechazar', 'alleen noodzakelijk', 'only necessary', 'nur notwendige', 'necessary only', 'essential only', 'manage preferences', 'instellingen', 'non', 'nein', 'nee', 'no thanks', 'refuser', 'rechazar', 'configurar', 'parametrer', 'customise', 'customize'];
-    const clickables = Array.from(document.querySelectorAll('button,a[role="button"],input[type="button"],input[type="submit"],[class*="btn"],[class*="button"]'));
+    // Widened 2026-09-27 after a FALSE NEGATIVE on halloween.fr, a Nuxt site whose banner
+    // buttons "Accepter" and "Refuser" are plain spans with a click handler. None matched
+    // the selector, the audit printed NONE FOUND and the screenshot showed the banner. So
+    // any short leaf element the page styles as clickable counts too.
+    const clickables = Array.from(new Set([
+      ...document.querySelectorAll('button,a[role="button"],[role="button"],input[type="button"],input[type="submit"],[class*="btn"],[class*="button"],[onclick]'),
+      ...Array.from(document.querySelectorAll('span,div,p,li,a')).filter((el) => el.children.length === 0
+        && (el.innerText || '').trim().length > 0 && (el.innerText || '').trim().length < 30
+        && getComputedStyle(el).cursor === 'pointer'),
+      // halloween.fr's buttons were plain divs with cursor auto, the click handler sits on a
+      // parent. So a leaf whose whole text is an accept or reject word counts when a parent
+      // within five levels talks about cookies or consent, which keeps a stray "OK" out.
+      ...Array.from(document.querySelectorAll('span,div,p,li,a,label')).filter((el) => {
+        const t = (el.innerText || '').trim().toLowerCase();
+        if (el.children.length !== 0 || !t || t.length > 30) return false;
+        if (![...acceptWords, ...rejectWords].includes(t)) return false;
+        let up = el.parentElement;
+        for (let i = 0; i < 5 && up; i++, up = up.parentElement) {
+          const pt = (up.innerText || '').toLowerCase();
+          if (pt.length < 1500 && bannerWords.some((w) => pt.includes(w))) return true;
+        }
+        return false;
+      }),
+    ]));
     const labelled = clickables.map((el) => ({
       text: (el.innerText || el.value || '').trim().toLowerCase().slice(0, 60),
       area: (el.getBoundingClientRect().width * el.getBoundingClientRect().height) | 0,

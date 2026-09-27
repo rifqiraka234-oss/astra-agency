@@ -579,6 +579,36 @@ Astra builds apps and tools as well as websites, so look for these too, every le
   the offer is about the site. Read the draft as the lead would, block two then block five, and ask
   whether the offer fixes the thing just named.
 
+### Batch 11 (2026-09-27), the refresh of every accepted lead never messaged
+
+Three openers out of 35 (LMtv, Qualigraf, ScrubMarine), in `state/drafted_2026-09-27-refresh.md`.
+What it taught.
+- **The tool's banner "NONE FOUND" was wrong on a Nuxt site.** halloween.fr's buttons were plain
+  divs with the click handler on a parent. site-audit.js now counts a leaf whose whole text is an
+  accept or reject word when a parent mentions cookies or consent. Tested both ways, halloween.fr
+  now yes, lmtv.fr and bunkzgolf.com still none, qualigraf.com now finds Complianz's "Deny all".
+  Still open the screenshot before any banner claim, the screenshot caught it.
+- **A page can show a visitor content and tell Google "not found".** halloween.fr's nine city
+  staffing pages render in Chromium and answer HTTP 404, because the static host only knows the
+  prerendered routes. Check the status code, not only the render, for any page meant to rank.
+- **A domain can change under you mid research.** mapler.com rendered a new Mapler AIx page with
+  its stylesheet missing, then served the host's "under construction" page to six fetches minutes
+  later. Write both states down, judge nothing, recheck in a week.
+- **An expired domain can carry the lead's old name.** vialmtv.tv, LMtv's old Vià name, now sells
+  paid TV help under "Via LMTV" with a SIREN that fails the Luhn checksum. A French SIREN (and a
+  SIRET's first nine digits) can be checked for fabrication in one line, keep it.
+- **Cookie counts depend on the tool.** Chromium from Ohio counted 24 cookies on kinspot.nl,
+  Webbkoll from Stockholm 7, because Webbkoll leaves third party cookies out of its count. The
+  trackers matched. Quote hosts and names, never a count, unless it's the same tool both times.
+- **The contradiction search found the goal half gone.** Steven Garratt's July post pointed at
+  the reorganisation shadow authorities. On 7 Sep the government withdrew or paused most of it,
+  only Surrey goes ahead. Block three was written to the goal that's still true.
+- **The register corrects old verdicts.** Norway's register shows Andrew Johnson is daglig leder of
+  Diggecard AS itself, which undoes the 25 Sep line that he was only the UK CEO.
+- **I paraphrased six 25 Sep findings from memory and got them wrong** (Prevent's missing social
+  accounts, Hula Hoop's size, Elevate's unfinished Wix site among them). Caught by rereading the
+  file. Any line carried forward from an older file is copied from it, never recalled.
+
 ### The pre send sequence that worked, keep it exactly
 
 1. `get_inbox_conversation`, still empty.

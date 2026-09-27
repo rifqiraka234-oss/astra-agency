@@ -288,3 +288,348 @@ Shall I send you over what the ScrubCloud squad looks like?
 ```
 
 ---
+# The 26 NO_STRONG_ANGLE and 2 BLOCKED, re run today
+
+What changed since 25 Sep. The EU view (tools/eu-view.py, Stockholm) now exists, so every site whose
+privacy check was voided by our US connection got it. The build squad family was added on 25 Sep
+after batch 9, so the seven batch 9 leads got it today. Twelve older verdicts had never had a five
+family sweep and got one. Where a family line below carries a date of 25 Sep it was reopened in that
+file (state/drafted_2026-09-25-batch9-redo.md or -batch10-build-squad.md) and nothing today changes it.
+
+## Andrew Johnson, Diggecard. NO_STRONG_ANGLE for now, one check short of a privacy opener.
+
+```sweep
+lead: Andrew Charles Johnson, Daglig leder of DIGGECARD AS 914046688 (Bergen) per the Norwegian register data.brreg.no roller, board chaired by Susanne Brønnum-Hyttel, ctc_CmqhrPXcHCyuCjmPw. So he does run the group, which corrects the 25 Sep line that he was only the UK CEO
+website: diggecard.com walls our browser (site-audit.js BLOCKED_BY_THEIR_WALL, control example.com 200), WebFetch reads it, B2B gift card platform with River Island, TK Maxx, Arsenal and 500+ retail partners named. No visual claim possible
+gdpr: tools/eu-view.py from Stockholm lists 14 cookies before a click, Hotjar, Google Analytics, Facebook _fbp and HubSpot, with HubSpot's banner script loaded, https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fdiggecard.com . One tool only, our own browser can't load the page to confirm it, so it can't be written yet
+apps: a gift card platform is their product per the WebFetch read of https://diggecard.com/platform-solutions/ , nothing internal we can see to fix
+social: Facebook, LinkedIn, Twitter and YouTube linked in the footer of https://diggecard.com/ per the WebFetch read, a B2B seller whose buyers are on LinkedIn, no gap
+squad: no careers link on the site per WebFetch, tech team in Bergen per the register, no vacancies found, no capacity gap shown
+verdict: NO_STRONG_ANGLE. If Raka opens diggecard.com from the Netherlands in a private window and the cookies land before any click, it becomes a privacy opener. Five routes tried, eu-view, site-audit, curl, WebFetch, 2gdpr.com (discontinued)
+```
+
+## Karin Andersson, The Real Olive Company. NO_STRONG_ANGLE, a real privacy gap that's small in the UK.
+
+```sweep
+lead: Karin Andersson, Joint CEO and co founder, The Real Olive Company, ctc_XknfFnBmAo83YYeqh
+website: 380 pages crawled on 25 Sep, the Where to buy page printed the raw [wpsl] shortcode instead of the store finder, a tweak, per state/drafted_2026-09-25-batch9-redo.md
+gdpr: real. No consent tool of any kind in the HTML today, Site Kit fires gtag config GT-NCT7NG8 and AW-980075238 for every visitor, site-audit.js counts 12 cookies before a click, and the Transparency Center shows 6 Google ads, three last shown 26 or 27 Sep, https://adstransparency.google.com/?domain=therealolivecompany.co.uk . The legal page says "Where applicable this website uses a cookie control system", https://therealolivecompany.co.uk/legal-stuff/ . Stockholm view blocked by Cloudflare, the HTML read and the browser run agree
+apps: the trade meze offer runs on a samples and prices form, D2C on WooCommerce, per the 25 Sep crawl of https://therealolivecompany.co.uk/meze/ , no ordering bottleneck shown
+social: instagram realoliveco linked from their HTML per site-audit.js, 429 to us so recency unread
+squad: a food brand, no software or developer roles on the 380 page crawl, not a Build Squad fit
+verdict: NO_STRONG_ANGLE. The costliest pain is OLLY'S on the same chilled shelf, not ours. The privacy gap is true and live while their ads run, but in the UK it's a cheap fix with little legal bite, so it's a free tip, or a Snorly style opener if Raka wants it
+```
+
+## Paul Prescott, Raise Your Game. NO_STRONG_ANGLE.
+
+```sweep
+lead: Paul Prescott, CEO and co founder, Raise Your Game Limited, ctc_HQWRGkBGkYT69xsb9
+website: 400 pages crawled on 25 Sep, 377 prize pages, modern, partner wall of Spurs, City in the Community and more, per state/drafted_2026-09-25-batch9-redo.md. Growing, tools/news.py shows the RFL Community Trust partnership (2025-07-04) and Macclesfield FC draws (2026-05-29)
+gdpr: tools/eu-view.py from Stockholm, two Google Analytics cookies before a click and nothing else, https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.raise-your-game.com . Real, small
+apps: they are the platform, draws set up by the club and paid through Stripe per https://www.raise-your-game.com/ , nothing to sell against
+social: no social account linked on any of 400 pages per the 25 Sep crawl, the clubs' own channels carry every draw
+squad: no careers page and no developer roles found in the crawl or tools/news.py, a 1 to 10 person team per lemlist, no capacity gap shown
+verdict: NO_STRONG_ANGLE
+```
+
+## Niklas Mocker, dotega. NO_STRONG_ANGLE.
+
+```sweep
+lead: Niklas Mocker, CEO and co founder, dotega, ctc_Wg9Bv7Z7vMqpNQx78
+website: 103 pages crawled on 25 Sep, full funnel with city pages, prices, FAQ and an app login, per state/drafted_2026-09-25-batch9-redo.md. Strong
+gdpr: tools/eu-view.py from Stockholm, 0 cookies, only Usercentrics and the GTM loader, https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fdotega.de . Clean, the 25 Sep GEO VOID is settled
+apps: they build their own WEG platform with a login at app.dotega.de per the 25 Sep crawl, not a buyer for tools
+social: linkedin, instagram dotega.de and facebook linked from their HTML per site-audit.js on 25 Sep, active
+squad: the only open role is a WEG expert for customer support per https://www.dotega.de/karriere , no developer seat open, no capacity gap shown
+verdict: NO_STRONG_ANGLE
+```
+
+## Severin Kloos, Dariuz. NO_STRONG_ANGLE.
+
+```sweep
+lead: Severin Kloos, Algemeen directeur, Dariuz BV Eindhoven, ctc_CJGZpaRQxRpP7Qb8e
+website: 89 pages crawled on 25 Sep, a bought theme with content for gemeenten and SW bedrijven, decent, per state/drafted_2026-09-25-batch9-redo.md
+gdpr: Complianz banner with reject and 0 trackers before a click per site-audit.js on 25 Sep, no third party trackers so the geo question doesn't arise. Clean
+apps: they sell their own methodology and HRM software to municipalities per the lemlist description, not a buyer for tools
+social: linkedin, a youtube video and twitter.com/dariuznl linked from their HTML per site-audit.js, B2G buyers don't buy there
+squad: vacancies are a Sales Manager Sociaal Domein (9 Jul 2026) and a junior IT servicedesk role (Oct 2025) per https://www.dariuz.nl/category/vacatures/ , no developer seat, no capacity gap shown
+verdict: NO_STRONG_ANGLE
+```
+
+## Emily R., Alquimia Legal. NO_STRONG_ANGLE.
+
+```sweep
+lead: Emily Levy R., Co-Owner, Alquimia Legal (Mexico), ctc_rMYGbmu7Piu5Pmwei
+website: the live firm is https://alquimialegal.mx , Wix, with an English version, rendered by site-audit.js on 25 Sep, and the lemlist record's alquimialawyers.com has no DNS
+gdpr: no consent code, no trackers before a click, first party cookies only per site-audit.js on 25 Sep, and a Mexican firm outside the GDPR's reach for its own visitors
+apps: a correspondent IP practice for international clients per her lemlist summary, no process evidence on https://alquimialegal.mx
+social: linkedin, instagram alquimialegalmx, facebook and WhatsApp linked from the HTML per site-audit.js
+squad: a law firm, not a builder, no software work in the crawl or the lemlist record
+verdict: NO_STRONG_ANGLE
+```
+
+## Romain Coquio, Carrefour Contact Mesnil-Roc'h. NO_STRONG_ANGLE.
+
+```sweep
+lead: Romain Coquio, gérant of SARL EMAROM (SIREN 504393612) with Anne Coquio, a Carrefour Contact franchise, ctc_FhCDinsZ4DN9M3fdC, per recherche-entreprises.api.gouv.fr on 25 Sep
+website: no site of his own, lemlist companyDomain is carrefour.fr and the store sits on directory pages he can't change, per state/drafted_2026-09-25-batch9-redo.md
+gdpr: nothing of his to test, the only web pages are Carrefour's own network pages per the lemlist record
+apps: home delivery, Mondial Relay and a butcher per the lemlist description, a village superette's volume fails the 5k to 50k test
+social: a LinkedIn company page per lemlist, no store Facebook page found by search on 25 Sep
+squad: a franchised supermarket, not a builder, no software work anywhere in the lemlist record
+verdict: NO_STRONG_ANGLE
+```
+
+## Matthias Ufer, Schumacher Verfahrenstechnik. NO_STRONG_ANGLE.
+
+```sweep
+lead: Matthias Ufer, Geschäftsführender Gesellschafter, Schumacher Verfahrenstechnik GmbH, ctc_3L5hXyZ8hWrh8tAGC
+website: 71 pages crawled on 25 Sep, modern Framer build with a DIN 2303 defence welding page and quotes in 24 hours, run by an agency (avermann.eu), per state/drafted_2026-09-25-batch9-redo.md
+gdpr: consent banner with reject, 0 cookies and 0 trackers before a click per site-audit.js on 25 Sep, zero trackers even from the US. Clean
+apps: the Materialabverkauf copy and paste flow is a stock clearance sideline, small, per the 25 Sep crawl
+social: no social linked from the HTML per site-audit.js with its control on 25 Sep
+squad: an engineering firm, not a software builder. The defence growth signal we were watching for isn't there, tools/news.py de gives 1 result for the company (2011) and 0 for defence suppliers in their region, control Volkswagen 99
+verdict: NO_STRONG_ANGLE
+```
+
+## Steven Uitentuis, QWIC. NO_STRONG_ANGLE.
+
+```sweep
+lead: Steven Uitentuis, CEO, QWIC, ctc_uiZnjF5t5mX8ZDJtc
+website: https://www.qwic.nl and qwic.de rebuilt with the new Elan and Signal and a working dealer locator, screenshots from site-audit.js on 25 Sep
+gdpr: settled on 25 Sep with tools/eu-view.py from Stockholm, Cookiebot holds the trackers back, control allbirds.eu behaving the same way. Clean
+apps: dealer.qwic.nl is their own dealer portal per the 25 Sep crawl of https://www.qwic.nl , nothing to sell there
+social: instagram qwic_ebikes, facebook qwicnl and linkedin linked from their HTML per site-audit.js
+squad: a bike brand, no developer vacancies found in the 25 Sep crawl, the dealer portal already exists
+verdict: NO_STRONG_ANGLE
+```
+
+## Cédric Morel, Hula Hoop. NO_STRONG_ANGLE.
+
+```sweep
+lead: Cédric Morel, CEO, SARL Agence Hula Hoop (RCS Lyon 529 547 432), ctc_wsqBdgSdjP6P6Yxvw
+website: 300 pages crawled capped on 25 Sep (267 at 200), a modern multi office agency site with projects, expertise and jobs, per the crawl of https://www.hula-hoop.co/
+gdpr: no consent code and 0 cookies and 0 trackers before a click per site-audit.js on 25 Sep, no trackers so no geo question
+apps: a 70+ talent agency, no internal process gap shown on 267 pages of https://www.hula-hoop.co/ in the 25 Sep crawl
+social: LinkedIn, Instagram, Facebook Montreal and TikTok all linked from their HTML per site-audit.js on 25 Sep, active
+squad: an integrated tech team with a Fullstack Developer on the team page and no developer role open per https://www.hula-hoop.co/jobs/ on 25 Sep
+verdict: NO_STRONG_ANGLE
+```
+
+## Connor Bosco, Elevate Marketing. NO_STRONG_ANGLE.
+
+```sweep
+lead: Connor Bosco, co owner, Elevate Marketing, also Advertising Manager at CARTESIAN per his lemlist tagline, ctc_83MwQqhh6XPF8RzQJ
+website: 3 pages, a Wix site whose title is still Home | My Site per site-audit.js on 25 Sep at https://www.elevatemarketingstudio.com , a small unfinished site for a side business
+gdpr: no consent code and no trackers per site-audit.js on 25 Sep, a privacy page exists in the crawl
+apps: a two person side studio, no process to fix in the 25 Sep crawl
+social: Instagram and Facebook linked from their HTML per site-audit.js on 25 Sep, the channels are in place
+squad: two people next to full time jobs per the lemlist tagline, no budget in the 5k to 50k band shown
+verdict: NO_STRONG_ANGLE
+```
+
+## Ollie Bartlett, Collier Pickard. NO_STRONG_ANGLE, with a privacy note.
+
+```sweep
+lead: Ollie Bartlett, owner via P and B Business Solutions Ltd since 28 Aug 2025 per Companies House, Collier Pickard Limited 04961587, ctc_y3mjzEXbiLzEHSAMB
+website: 300 pages crawled capped on 25 Sep, a CRM consultancy with Maximizer, Creatio, Infor, Pipedrive and Teamwork pages, strong, per the crawl of https://www.collierpickard.co.uk/
+gdpr: tools/eu-view.py from Stockholm today, CookieYes loads but Snowplow cookies (_sp_id, _sp_ses) are set before a click and a B2B visitor identification host (secure.imaginativeenterprising-intelligent.com) is called, https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.collierpickard.co.uk . One tool, true for the UK, small
+apps: they build CRM for others, nothing internal visible per the 25 Sep crawl of https://www.collierpickard.co.uk/
+social: no social linked from the HTML per site-audit.js on 25 Sep, a LinkedIn company page exists per lemlist, minor
+squad: the largest team of certified Creatio analysts and developers in the UK per the 25 Sep crawl, they already have developers
+verdict: NO_STRONG_ANGLE, a competitor with its own developers
+```
+
+## Yasin Tipiler, UGC.NL. NO_STRONG_ANGLE, with a privacy note.
+
+```sweep
+lead: Yasin Tipiler, co founder and CEO of UGC.NL per his lemlist summary and tagline (record's company The Sales Academy), ctc_rHvwocWb8FubKWECm
+website: 231 pages crawled on 25 Sep, a Next.js creator platform, per state/drafted_2026-09-25-batch10-build-squad.md
+gdpr: tools/eu-view.py from Stockholm today, Cookiebot loads but Hotjar session cookies (_hjSession, _hjSessionUser) and trytagging cookies are set before a click, https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fugc.nl . A second check failed, the loader isn't in the page's own bundles, it comes in through tag management. One tool only, not written
+apps: they are the platform, brands and creators matched in their own app per the 25 Sep crawl of https://ugc.nl
+social: LinkedIn, Instagram and YouTube linked from their HTML per site-audit.js on 25 Sep, nothing there ours to sell
+squad: no careers or developer roles on 231 pages per the 25 Sep crawl
+verdict: NO_STRONG_ANGLE. If Raka checks ugc.nl from the Netherlands and Hotjar records before consent, it's a Dutch AP risk and a privacy opener
+```
+
+## Orion D., Omnilabs Research. NO_STRONG_ANGLE.
+
+```sweep
+lead: Orion D., co founder and CEO, Omnilabs Research, ctc_JiMGgwH639YbSSZfE
+website: a one page Webflow site with mission, technology, team and a book a call form per the 25 Sep crawl of https://omnilabs-research.com , early research stage
+gdpr: the privacy link is "#" per site-audit.js on 25 Sep, real but small before launch
+apps: pre revenue and still recruiting trial participants per the 25 Sep crawl of https://omnilabs-research.com , no process to fix yet
+social: Instagram and his own LinkedIn profile linked from their HTML per site-audit.js on 25 Sep, fine for a research stage company
+squad: pre revenue with no budget signal in the 5k to 50k band per the 25 Sep crawl
+verdict: NO_STRONG_ANGLE
+```
+
+## Hendrik Rolshausen, Prevent. NO_STRONG_ANGLE.
+
+```sweep
+lead: Hendrik Rolshausen, co founder and CEO, Prevent (prevent-app.com), ctc_JeAs47xZuy9Pxpgp2
+website: 116 pages crawled on 25 Sep, booking flow, packages, lab partners and a blog per the crawl of https://www.prevent-app.com , strong
+gdpr: consent banner with reject and 0 trackers before a click per site-audit.js on 25 Sep, a health data product doing it right
+apps: they are the app, wearable integrations are "in Entwicklung" per the 25 Sep crawl, their own team building
+social: no social accounts linked from their HTML per site-audit.js on 25 Sep, a gap for a young B2C health brand but secondary, and small
+squad: "Aktuell sind keine offenen Stellen ausgeschrieben" on their careers page per the 25 Sep crawl, no capacity gap
+verdict: NO_STRONG_ANGLE
+```
+
+## Jean-Christophe Conticello, Wemanity. NO_STRONG_ANGLE, on who.
+
+```sweep
+lead: Jean-Christophe Conticello, Wemanity, acquired by Reply S.p.A. (announced Nov 2022), now Wemanity Reply, ctc_iWGMxjeTYkzegg78v, per the queue row with the site's own Careers and privacy links pointing to reply.com
+website: the site's careers and privacy links go to https://www.reply.com , a listed group's property, not his to buy for
+gdpr: the privacy link points to https://www.reply.com/en/privacy-policy , the group's policy, nothing of his own to test
+apps: a consultancy inside a listed group, so buying runs through Reply, per the careers link to https://www.reply.com/en/about/careers
+social: group channels run by Reply, per the links on the Wemanity site to https://www.reply.com , nothing he could buy
+squad: a firm acquired into a listed group that has its own developers, per https://www.reply.com , nothing ours to sell
+verdict: NO_STRONG_ANGLE, a firm acquired into a group
+```
+
+## Mushtaq Taher, RentX Rewards. NO_STRONG_ANGLE.
+
+```sweep
+lead: Mushtaq Taher, Founder and CEO, RentX Rewards, ctc_a5ZNoyKHLFEhjudiu
+website: rentxrewards.com serves a Bengali site at /bn for renters in Bangladesh, title "রেন্টএক্স", site-audit.js RENDER NOT TRUSTED so no visual claim
+gdpr: 0 cookies and 0 trackers before a click per site-audit.js, and a Bangladeshi consumer app outside the GDPR's reach
+apps: they are the app, rent paid for points, per https://rentxrewards.com/bn and the lemlist record
+social: linkedin, instagram, facebook and youtube all linked from their HTML per site-audit.js, active
+squad: an app startup, but a Bangladesh rent app is outside the 5k to 50k euro band on anything we can see, no funding in the lemlist record and no developer roles on https://rentxrewards.com/bn
+verdict: NO_STRONG_ANGLE
+```
+
+## Mike Kokken, Stichting wysiwyg. NO_STRONG_ANGLE, on fit.
+
+```sweep
+lead: Mike Kokken, Co Owner and Curator, Stichting wysiwyg (wysiwygcinema.net), a Dutch arts foundation run by curators, ctc_o3ForTXDfkfyfM8zg
+website: a small curators' cinema site, rendered today by site-audit.js, instagram linked, nothing broken found
+gdpr: 0 cookies and 0 trackers before a click per site-audit.js, no privacy link found against its control, small and not a sale
+apps: a volunteer run screening programme per the lemlist record, no process a tool would fix
+social: instagram wysiwygcinema linked from their HTML per site-audit.js, the channel their audience uses
+squad: a stichting with no budget in the 5k to 50k band per its lemlist record and https://wysiwygcinema.net , not a builder
+verdict: NO_STRONG_ANGLE
+```
+
+## Shail Niazi, Clean Valley CIC. NO_STRONG_ANGLE, on who.
+
+```sweep
+lead: Shail Niazi, Chief Culture Officer, Clean Valley CIC, ctc_dMw3WnJAbBkWEXinv. CIPO names Nicholas H. LaValle as CEO and co founder per the 23 Sep queue row
+website: cleanvalleycic.com fails over HTTPS today, site-audit.js HTTPS_BROKEN_HTTP_FINE, control example.com 200, not our place to say more while he isn't the buyer
+gdpr: not tested, the page wasn't read over HTTPS per site-audit.js, and he doesn't run the business
+apps: nothing to assess from a page we couldn't read, per site-audit.js today
+social: nothing can be said about accounts on a page we couldn't read over HTTPS, per site-audit.js today with its control
+squad: not the buyer, the CEO is LaValle per the queue row and the register he cited
+verdict: NO_STRONG_ANGLE, not the person who runs it
+```
+
+## Mandy Kerley, Aptiq Works. NO_STRONG_ANGLE, on who.
+
+```sweep
+lead: Mandy Kerley, Co-Founder and Fractional COO, Aptiq Works Limited, the statutory record gives Paul Reid outright control per the queue row, ctc_ZGv33qKajKqMjkqH9
+website: trickle.works is strong with named public sector clients per the queue row, rendered today by site-audit.js
+gdpr: a consent banner with reject and Google consent mode in the HTML, site-audit.js GEO VOID, not judged because she isn't the buyer
+apps: Trickle is their product per https://trickle.works , nothing internal to sell against
+social: no social account linked from the HTML of https://trickle.works per site-audit.js today with its control
+squad: a fractional COO doesn't buy developers for a company Paul Reid controls, per the register note in the queue row
+verdict: NO_STRONG_ANGLE, not the owner
+```
+
+## Peter Borup, Quadrise plc. NO_STRONG_ANGLE, on who.
+
+```sweep
+lead: Peter Borup, Chief Executive Officer, Quadrise plc, an AIM listed company, ctc_PfumJJpZ3WaLpBduY
+website: quadrise.com rendered today by site-audit.js, a listed company's investor facing site run by IR and comms
+gdpr: a moove_gdpr banner, site-audit.js GEO VOID, not taken further for a listed plc
+apps: fuel technology, nothing internal we'd build per the site-audit.js read of https://www.quadrise.com
+social: linkedin, youtube and x linked from their HTML per site-audit.js, all corporate
+squad: a listed plc, the rule 13 exclusion, nothing ours to sell per https://www.quadrise.com and the lemlist record
+verdict: NO_STRONG_ANGLE, a listed plc
+```
+
+## Debby Alles, Sportcafé de Kogge. NO_STRONG_ANGLE.
+
+```sweep
+lead: Debby Alles, Mede-eigenaar per her own record, Sportcafé de Kogge, the VZV club canteen at Rijdersstraat 112 per her lemlist companyDescription, ctc_kQqT7THXoonLA9z7M
+website: no website on the lemlist record, the canteen lives on Facebook, and a club canteen's customers are already there
+gdpr: nothing to test, there's no domain on the lemlist record and no site found for the canteen
+apps: a sports club canteen, no process worth 5k to 50k per the lemlist description
+social: Facebook only per the lemlist record and the 23 Sep search, which is where club members already are
+squad: a club canteen, not a builder, and nothing in the lemlist record points to software
+verdict: NO_STRONG_ANGLE
+```
+
+## Marek Pruszewicz, Dialogue Earth. NO_STRONG_ANGLE.
+
+```sweep
+lead: Marek Pruszewicz, Chief Executive Officer, Dialogue Earth, a donor funded non profit newsroom, ctc_RwGCRQoJiAPgqtJeh
+website: dialogue.earth answers our browser with a Cloudflare challenge today (site-audit.js BLOCKED_BY_THEIR_WALL), Raka's own screenshots on file show a full, modern newsroom
+gdpr: not readable from here, the Cloudflare wall per site-audit.js, never evidence either way
+apps: a donor funded newsroom with no conversion goal we could improve, per the lemlist record
+social: not readable behind the wall per site-audit.js, the queue row notes active publishing
+squad: in house editorial and product per the lemlist record, no developer roles found, the site behind a Cloudflare wall per site-audit.js
+verdict: NO_STRONG_ANGLE
+```
+
+## David Risser, Ethics & Boards. NO_STRONG_ANGLE.
+
+```sweep
+lead: David Risser, Directeur Général, Ethics & Boards (Paris), Président Floriane de Lanversin per the 24 Sep queue row, ctc_satcBNYw3AiFrhofe. He runs it, he doesn't own it
+website: https://www.ethicsandboards.com rendered today by site-audit.js, a new Astro site in English and French with Gov360 Data, advisory and solutions, strong
+gdpr: 0 cookies and only Google Fonts before a click per site-audit.js, no consent code needed with no trackers. Clean
+apps: they sell data products themselves, 450+ KPIs across 7,000+ listed companies per the homepage crawl, nothing internal visible
+social: LinkedIn linked from their HTML per site-audit.js, a weekly data point newsletter, active
+squad: the careers page asks for research and data people, not developers, per https://www.ethicsandboards.com/careers/ , no capacity gap shown
+verdict: NO_STRONG_ANGLE
+```
+
+## Fabrice Beauchêne, Glyx Therapeutics. NO_STRONG_ANGLE.
+
+```sweep
+lead: Fabrice Beauchêne, CEO and co founder, Glyx Therapeutics, a clinical stage tau biotech, ctc_nFBoAwdTou6kXWRLN
+website: glyxtherapeutics.com, site-audit.js RENDER NOT TRUSTED on 4 of 4 assets, so no visual claim, WordPress with Elementor
+gdpr: no consent code in the HTML and Google Analytics before a click per site-audit.js, so it holds for French visitors. Real, and a small fix for a biotech whose site isn't a sales channel
+apps: clinical development of a tau drug, nothing we build, per the lemlist description and https://glyxtherapeutics.com
+social: LinkedIn linked from their HTML per site-audit.js, the channel investors and partners use
+squad: a drug developer, no software roles in the lemlist record or on the site
+verdict: NO_STRONG_ANGLE
+```
+
+## Aditya Taneja, Mapler AIx. BLOCKED_NEEDS_INFO, the site is being built right now.
+
+```sweep
+lead: Aditya Taneja, Founder and CEO, Mapler AIx Inc. (Canada, registered 12 Dec 2024, active, per canadacompanyregistry.com), ctc_5HHoJvby9douo33PE
+website: mapler.com changed this evening. site-audit.js rendered a Mapler AIx contact page (Toronto address, "Flights, Vacation Homes, Hotels") with its stylesheet and eight files at 404, then minutes later curl six times and tools/crawl.py got the One.com "under construction" page again. Mid build, nothing stable to judge
+gdpr: no consent code and only Google Fonts and Maps before a click per site-audit.js on the one render, not a finding on a page that won't hold still
+apps: he's a full stack and ML engineer per his lemlist record, building a travel booking product himself, too early to see a process
+social: none linked on the one render per site-audit.js, and the lemlist record shows only his LinkedIn
+squad: a one founder build of an OTA is a Build Squad shape, but there's no stable site, team page or funding to evidence it yet, per the register and tools/news.py
+verdict: BLOCKED_NEEDS_INFO. Recheck mapler.com in a week, if the travel site is live it may be a build squad lead
+```
+
+## Fernando Gomes, DS Private Matosinhos. BLOCKED_NEEDS_INFO.
+
+```sweep
+lead: Fernando Gomes, lemlist jobTitle Co-Owner of DS PRIVATE MATOSINHOS, ctc_TFuBoDoAp5Tntr8vC. His own record's summary and experience lines say compliance and test engineer, Roche contractor, located in Lima
+website: https://www.dsprivate.com is the DS Private network's site in Portuguese, rendered today by site-audit.js, a franchise brand site, not his branch's to change
+gdpr: Google Analytics before a click with no banner per site-audit.js, but it's the network's site, not his
+apps: nothing ties him to running the Matosinhos branch beyond one lemlist field, the rest of the record points elsewhere
+social: instagram and facebook dsprivate.realestate linked from the network's HTML per site-audit.js, the network's accounts, not his
+squad: a real estate network, not a builder, and the ownership isn't reconciled against the lemlist record
+verdict: BLOCKED_NEEDS_INFO, the record can't be reconciled with evidence
+```
+
+## Anna Oblakova, YTEC. NO_STRONG_ANGLE, on who.
+
+```sweep
+lead: Anna Oblakova, Product Owner, YTEC (Groningen software agency, 11 to 50 staff) per her lemlist record, accepted 25 Sep, connect note only in her thread per state/drafted_2026-09-25-owed-replies.md
+website: YTEC's own site belongs to its directors, not to her, per the lemlist record
+gdpr: not tested for a message, she doesn't run the business per the lemlist record
+apps: they build software for clients per the lemlist description, nothing internal of theirs to sell against
+social: YTEC's company channels belong to the directors, not to her, per the lemlist record
+squad: a software agency is a Build Squad shape, but a product owner doesn't buy developers, the directors do, per the lemlist record
+verdict: NO_STRONG_ANGLE, not the owner. If Raka wants YTEC as a Build Squad lead, the director is the person to connect with
+```
+
+---
