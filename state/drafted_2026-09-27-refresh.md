@@ -222,3 +222,69 @@ verdict: NO_STRONG_ANGLE, on who
 ```
 
 ---
+## Rohith Devanathan, ScrubMarine. OPENER, build squad.
+
+**In plain words.** ScrubMarine builds underwater robots that inspect and clean ship hulls, and a
+web platform, ScrubCloud, where ship operators log in to see the reports and 3D hull models. Rohith
+co founded it, owns a big share, and raised about £740k last December to grow the engineering team.
+It's a team of about seven building three robots and the platform at once, and every hire they've
+advertised so far was for robots, marine operations or marketing, not software. So the platform the
+customers actually use competes with the robots for the same few engineers. We'd build ScrubCloud
+next to them. The last verdict on him killed a website angle, the build squad was never tested.
+
+```gate
+lead: Rohith Devanathan, Co-Founder and CEO, ScrubMarine Limited 15312999 (Whitehaven, engineering in Edinburgh), director since 2 Oct 2024 and a 25 to 50 percent PSC per Companies House, ctc_Wn6WBQz6D6pzv6bQq. lemlist companyName says Veeran Advisory, his tagline says CEO @ ScrubMarine, the register settles it
+site pass 1: 10 URLs, tools/crawl.py, 7 pages at 200 (home, about, careers, contact, inspection, cleaning, reporting) and privacy, terms and cookies at 404, every page read
+site pass 2: 10 URLs, second full crawl, same result, plus the site-audit.js desktop and phone screenshots opened. cloud.scrubmarine.com/login answers 200
+deep analysis: a SvelteKit site, modern and clear, three services on one platform. The about page names four things being built, "the Fish, the Turtle, and the Whale, a suite of autonomous robots ... alongside ScrubCloud, our fleet intelligence and client reporting platform", and a roadmap with ScrubCloud launched in 2026 and "Additional tools added to ScrubCloud" plus Whale development in 2027. The reporting page sells 3D point cloud hull models, defect mapping, predictive maintenance, PDF reports for class societies and insurers, a fleet dashboard and a client portal with role based access. The careers page says "We're a small, ambitious team ... Open roles posted soon." The footer's Privacy Policy, Terms of Use and Cookie Policy links all return 404 while the demo form says "By submitting, you agree to our privacy policy"
+owner linkedin: the owners are Rohith and Clyne Albertelli (engineering director), both 25 to 50 percent PSCs. Rohith's profile /in/rohith-devanathan-b31456224 and /in/rohithdevanathan found by web search, title "Rohith Devanathan - Founder & CEO @ ScrubMarine", two posts found by search ("Exciting times for ScrubMarine", "Huge news for ScrubMarine"), curl on LinkedIn profiles returns 999 as on every lead today
+contact linkedin: same person as the owner, confirmed by the register and his tagline. Company page https://www.linkedin.com/company/scrubmarine read via WebFetch, 1,069 followers, 7 employees, posts 9 months ago (the pre seed round, "accelerate engineering, grow our team"), 8 months ago (hiring a Marine Ops Lead, a Robotics Engineer and a Marketing and Content Associate), 5 months ago (Colin Greene as NED, "first commercial deployments this summer") and a progress teaser
+google news: tools/news.py en, ScrubMarine 11 results, "Rohith Devanathan" 10, control Tesco 104. The pre seed round covered by The Scotsman, The Times, Insider Media, Business Matters, UK Tech News and EU-Startups on 19 to 23 Dec 2025, the Whitehaven unit (TheBusinessDesk 2025-06-05), NPIF II pieces naming him (Insider Media May 2026)
+regional news: tools/news.py Scotland hull cleaning robot, 1 result, the Business Matters funding piece
+industry news: tools/news.py "hull cleaning" robot in-water 2026, 13 results, Neptune Robotics investing US$12m in a Singapore factory (2026-04-20), Carnival Pride piloting a hull cleaning robot (2026-08-03), a new hull cleaning standard (Bellona 2026-03-16). The category is heating up and competitors are well funded
+sources:
+1. https://scrubmarine.com/
+2. https://scrubmarine.com/about
+3. https://scrubmarine.com/careers
+4. https://scrubmarine.com/products/reporting
+5. https://scrubmarine.com/contact
+6. https://cloud.scrubmarine.com/login
+7. https://find-and-update.company-information.service.gov.uk/company/15312999/officers
+8. https://find-and-update.company-information.service.gov.uk/company/15312999/persons-with-significant-control
+9. https://www.linkedin.com/company/scrubmarine
+10. https://www.uktechnews.info/2025/12/23/scrubmarine-secures-740k-pre-seed-investment-led-by-pxn-ventures/
+11. https://www.scotsman.com/business/edinburgh-founded-robotics-start-up-raises-1-million-to-help-solve-100-billion-challenge-5449091 (title and summary via search)
+12. https://www.insidermedia.com/news/national/start-up-raises-funding-for-robotics-system-which-is-tackling-problem-of-marine-growth-from-molluscs-crustaceans-and-slime-on-ship-hulls (title via search)
+13. https://news.google.com/rss/search?q=ScrubMarine (tools/news.py)
+pains: 5 judged. (1) Engineering capacity, about seven people building three robots and ScrubCloud, the round raised to grow engineering, every advertised hire robotics, ops or marketing, the costliest, it sets how fast pilots turn into fleets and how long the pre seed lasts. (2) A heating category with funded competitors (Neptune Robotics, Nautica), real, not ours. (3) Privacy, terms and cookie pages 404 behind a form that asks for agreement to the privacy policy, a UK GDPR gap, a small fix, a favour. (4) Four CTA wordings landing on one contact page, a tweak (the September note). (5) Social, LinkedIn, Instagram and TikTok linked and active, no gap
+chosen: engineering capacity for ScrubCloud, the costliest, because the client platform and the robots draw on the same few engineers while the money raised is meant to reach pilots
+sweep website: modern SvelteKit site, clear offer, working demo form, screenshots per site-audit.js. The 404 legal pages are a favour, not the pitch, https://scrubmarine.com/privacy
+sweep gdpr: site-audit.js 0 cookies and only Google Fonts before a click, no consent code in the HTML, but the privacy, terms and cookie links 404 behind a form that collects name, email and company. A UK GDPR gap, small, https://scrubmarine.com/contact
+sweep apps: ScrubCloud is their own client portal and reporting platform with a live login at https://cloud.scrubmarine.com/login , nothing internal of theirs a tool would fix
+sweep social: LinkedIn, Instagram scrubmarineuk and TikTok linked from their HTML per site-audit.js, the company page posts every few months, no gap for a robotics startup
+sweep squad: the angle. A small team per https://scrubmarine.com/careers building three robots and ScrubCloud per https://scrubmarine.com/about , money raised to grow engineering per UK Tech News, hires advertised for robotics, ops and marketing only per the LinkedIn company page
+claims:
+a small team building the Fish, the Turtle, the Whale and ScrubCloud, https://scrubmarine.com/about lists all four and https://scrubmarine.com/careers says "We're a small, ambitious team", reopened 2026-09-27
+ScrubCloud is what ship operators log into, https://scrubmarine.com/products/reporting (client portal, fleet dashboard) and https://cloud.scrubmarine.com/login
+moving from first deployments to fleets, https://scrubmarine.com/about roadmap 2026 first deployments, 2027 fleet expanded, and the LinkedIn post on first commercial deployments this summer, https://www.linkedin.com/company/scrubmarine
+Raka's offer, a squad of senior developers in half the time at half the price, his own words, docs/RULES.md 4A rule 13, https://www.linkedin.com/in/raka-mulya-b92885196
+thread: problem a small team building three robots and ScrubCloud at once | cost ScrubCloud waits behind the robots and the work grows with every hull surveyed | offer a squad that builds ScrubCloud next to their team | link scrubcloud, robots
+lead read: Rohith reads that his small team is building three robots and ScrubCloud at once so the platform waits behind the robots, that this grows with every hull, and then gets offered a squad to build ScrubCloud so his engineers stay on the robots, one thread
+recheck: every fact reopened 2026-09-27, the about, careers and reporting pages crawled twice, the register pulled for ownership, the company page read for team size and hires. The inference that ScrubCloud waits behind the robots is ours, no source says it, and they may already have a contractor on it. The offer is Raka's verbatim claim, flag it, a funded founder can hold us to it. Thesis confidence MEDIUM
+```
+
+### Rohith, OPENER
+
+```
+Hi Rohith, saw ScrubMarine, looks interesting!
+
+However, your site shows a small team building the Fish, the Turtle, the Whale and ScrubCloud at the same time. This causes ScrubCloud, the part your ship operators actually log into, to wait behind the robots for the same few engineers.
+
+Especially, when you are taking ScrubMarine from first deployments to whole fleets, the ScrubCloud work grows with every hull you survey.
+
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I lead a squad of senior developers who'd build ScrubCloud next to your team in half the time at half the price, so your engineers stay on the robots.
+
+Shall I send you over what the ScrubCloud squad looks like?
+```
+
+---
