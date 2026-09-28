@@ -49,7 +49,9 @@ function curlMeta(url) {
   } catch (e) { return { error: String(e).split('\n')[0] }; }
 }
 
-const NUM = /([\d.,]+\s*[KMkm]?)\s*(followers?|subscribers?|abonn[ée]s?|volgers)/i;
+// Thousands can be split by a space, a no-break space or a narrow no-break space, as French
+// LinkedIn does ("16 967 abonnés"). The old pattern read that as 967 (2026-09-28, Halloween).
+const NUM = /(\d{1,3}(?:[ \u00a0\u202f]\d{3})+|[\d.,]+\s*[KMkm]?)\s*(followers?|subscribers?|abonn[ée]s?|volgers)/i;
 const FOLLOWING = /([\d.,]+\s*[KMkm]?)\s*(following|abonnements)/i;
 const JOINED = /Joined\s+([A-Z][a-z]{2}\s+\d{4})/;
 const AGE = /(\d+)\s+(second|minute|hour|day|week|month|year)s?\s+ago/i;

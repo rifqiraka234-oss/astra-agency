@@ -648,6 +648,9 @@ accounts across the remaining leads. Raw output in logs/inbox/2026-09-28-social-
 
 - Instagram, every one of them, rate limited 429. UNKNOWN, never empty.
 - Facebook pages load behind the login prompt, most without a readable last post date. UNKNOWN recency.
+- CORRECTION 2026-09-28 afternoon. Three LinkedIn counts below were wrong, social-audit.js read the
+  French thousands space as a break. Halloween is 16,967, Hula Hoop 21,489, Ethics & Boards 3,731,
+  reread after the fix. No verdict rested on them. Tool fixed, see RULES.md 1C.
 - Read with numbers. Halloween LinkedIn 967, Dariuz LinkedIn 899, Ethics & Boards 730, dotega 536,
   Hula Hoop LinkedIn 489 and TikTok 781, Bunkz YouTube 547 with 239 videos and TikTok 3,743, UGC.NL
   Facebook 120 and YouTube 4, Elevate Facebook 126, RentX YouTube 2 with 18 videos, Quadrise YouTube

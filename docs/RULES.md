@@ -251,6 +251,8 @@ missing from the message.
 | site-audit.js printed banner NONE FOUND on halloween.fr, its buttons were plain divs | An absence claim the screenshot contradicted | leaf accept or reject words under a cookie or consent parent now count, tested both ways |
 | Six lines carried from the 25 Sep sweeps were paraphrased from memory, and wrong | Prevent's missing social accounts written as "nothing missing" | carry a line forward by copying it from the file, then reread the file before commit |
 | A cookie count from one tool treated as the count | kinspot.nl is 24 in Chromium and 7 in Webbkoll for the same trackers | quote tracker hosts and cookie names, a count only from the same tool |
+| social-audit.js read French LinkedIn "16 967 abonnés" as 967 (2026-09-28) | Halloween, Hula Hoop and Ethics & Boards logged at a tenth or less of their followers | the follower pattern takes space, no-break and narrow no-break thousands, tested on six strings. Read the bio line next to any count under 1,000 |
+| A 27 Sep favour said Halloween's 404 city pages "can't show up in search" (2026-09-28) | A claim one search disproved, the Paris, Cannes, Nice and Toulouse pages are listed | a status code is not an index. Search for the page's own title before saying search can't find it |
 
 ## 2. The message. One number per rule.
 
