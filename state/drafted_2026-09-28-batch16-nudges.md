@@ -1,4 +1,4 @@
-# Batch 16, 2026-09-28. Nudges for everyone pitched 11 Aug to 16 Sep with no reply. NOT SENT.
+# Batch 16, 2026-09-28. Nudges for everyone pitched 11 Aug to 16 Sep with no reply. 39 SENT 11:48 to 11:54Z on Raka's word, 3 held (Lars Tibben, Dan Lowe, Laurent Gourier).
 
 Raka's words, "pull all full threads and draft message each", and "do we also have anyone that we sent a
 prototype on friday or earlier and we havent nudged them?"
@@ -167,8 +167,9 @@ Could you get Siblu's OK to write it up?
 
 ## Lars Tibben, Studio Live Productions. NUDGE. ctc_8HL4vo9cA55Yugaav. 14 days
 
-Pitched 14 Sep. Rechecked, no showreel, video or past stream on the homepage (0 matches for reel, video,
-mp4, YouTube or Vimeo). The June press release is linked.
+Pitched 14 Sep. **NOT SENT 2026-09-28, and the 14 Sep opener was probably wrong.** The raw HTML embeds three
+videos from video.allardstudios.nl, Last-Modified 3 and 4 June 2026. Our Chromium can't play H.264, so the
+render showed none. The opener told him there was no footage. Held, a correction is Raka's call.
 
 ### Lars, NUDGE
 
@@ -263,7 +264,7 @@ material up to 100x faster." with no material or test behind it.
 ```
 Lydie, back on the 100x claim.
 
-The new Fervonic site still says up to 100x faster with no material, thickness or test next to it. The process engineer who'd champion you internally gets asked 100x against what, and has nothing to show.
+The Fervonic site still says up to 100x faster with no material, thickness or test next to it. The process engineer who'd champion you internally gets asked 100x against what, and has nothing to show.
 
 Do you have one test result you could publish?
 ```
@@ -306,7 +307,7 @@ quotes from Sanne Edel and Martin Rutten, both marked "uit eerder werk van onze 
 ### Martijn, CLOSE
 
 ```
-Martijn, saw the Wat klanten zeggen section went up. That's the gap I was pointing at, good to see it filled.
+Martijn, saw the Wat klanten zeggen section on the homepage. That's the gap I was pointing at, good to see it filled.
 
 Once there's a Remarx client of your own to put there, that one will carry even more.
 ```
@@ -421,7 +422,7 @@ launching publicly at this year's PRO Fall Convention" and "PRO Fall Convention 
 ### Tracey, NUDGE
 
 ```
-Tracey, the convention's two weeks behind you and the homepage is still inviting dealers to come and see you there.
+Tracey, the convention was nearly two weeks ago and the homepage is still inviting dealers to come and see you there.
 
 The dealers you met on the floor are opening the tab now and landing on an event that's over.
 
@@ -453,9 +454,9 @@ Fireworks exports. The 0% screenshot sits inside an image and wasn't rechecked, 
 ```
 Jelle, back on eduosweb.com.
 
-It's still running the old Fireworks images, the man pointing at nothing among them, while the Eduflex site next door looks current. A school comparing the two picks the modern looking one before the demo.
+It's still running the old Fireworks images, the man pointing at nothing among them, while the EduNova site next door looks current. A school comparing the two picks the modern looking one before the demo.
 
-Worth me sending the rebuilt homepage so you can compare?
+Want me to rebuild the homepage so you can compare the two?
 ```
 
 ## Martijn Hak, DBL Lunteren. NUDGE. ctc_iL43m4QAgbFop26d4. 12 days
@@ -467,7 +468,7 @@ Pitched 16 Sep. Rechecked, /contact/ is still an address and "Email versturen" a
 ```
 Martijn, back on the contact page.
 
-It's still just an address and an email link, while the form lives back on the homepage. Someone who's just scrolled all 56 projects and clicks Contact gets sent to their mail app.
+It's still just an address and an email link, while the form lives back on the homepage. Someone who's just scrolled through your projects and clicks Contact gets sent to their mail app.
 
 Shall I send over the homepage and one project page rebuilt?
 ```
@@ -519,7 +520,10 @@ Worth a short call?
 ## Dan Lowe, DJi Studio. NUDGE. ctc_XAGgwnXjEjeS7royq. 15 days
 
 Pitched 13 Sep. Rechecked, /portfolio still labels the six demos "Sonic Profile 1" to "6", while
-SmileCraft, All Paws, Luxury Motors and Claire's still show in the page's file names.
+SmileCraft, All Paws, Luxury Motors and Claire's still show in the page's file names. **NOT SENT 2026-09-28.**
+At send time the portfolio showed those names as visible text and says "Sonic Profiles are based on
+fictional companies and intended for demonstration purposes", so the 13 Sep opener's premise, real clients
+hidden behind numbers, was wrong. Held, a correction is Raka's call.
 
 ### Dan, NUDGE
 
@@ -581,17 +585,18 @@ IAB Investments on § 7g EStG is on the site, no calculator.
 ### Nikolas, NUDGE
 
 ```
-Nikolas, back on the § 7g calculator.
+Nikolas, back on the § 7g calculator idea from the 13th.
 
-Someone looking at IAB Investments still has to email you to find out what it does to their tax bill. A quick calculator would answer that and hand you their details.
+When someone wants to know what an IAB investment does to their tax bill, can they work it out on the site, or does that still happen by email? If it's email, a quick calculator would answer it and hand you their details.
 
 Shall I build a rough version so you've got something to react to?
 ```
 
 ## Laurent Gourier, Orsia. NUDGE. ctc_54viZ4CmynX3hSM8P. 26 days
 
-Pitched 2 Sep, a section showing the interface generating a Sepro program. Rechecked, still "Essayez
-gratuitement" and "Demander une démo" with no video on the homepage.
+Pitched 2 Sep, a section showing the interface generating a Sepro program. **NOT SENT 2026-09-28.** The
+homepage already shows a screenshot (Capture-decran-2026-02-10-a-21.35.20.png) of the assistant starting a
+"programme de déchargement presse" in chat, so the claim below is contestable. Held.
 
 ### Laurent, NUDGE
 
@@ -625,9 +630,9 @@ gradually grow", with no program, date or example.
 ### Vikram, NUDGE
 
 ```
-Vikram, saw the Programs page is up.
+Vikram, I had a look at the Programs page.
 
-It still says the programs are being designed, so there's nothing for someone keen to join to sign up for yet. Even one first program with a date would give them a next step.
+It says the programs are being designed, so there's nothing for someone keen to join to sign up for yet. Even one first program with a date would give them a next step.
 
 Is the first one far off?
 ```
@@ -656,7 +661,7 @@ ruim twintig jaar in recruitment en leiderschap".
 ### Jojanneke, CLOSE
 
 ```
-Jojanneke, saw the twenty years are on the homepage now. That's exactly the change I had in mind, it reads much stronger.
+Jojanneke, saw the twenty years on your homepage. That's exactly what I had in mind, it reads much stronger.
 
 Good luck with WiseHuman.
 ```

@@ -255,6 +255,8 @@ missing from the message.
 | A 27 Sep favour said Halloween's 404 city pages "can't show up in search" (2026-09-28) | A claim one search disproved, the Paris, Cannes, Nice and Toulouse pages are listed | a status code is not an index. Search for the page's own title before saying search can't find it |
 | Katie Goodier was pitched on 16 Sep about Risk Averse Surveyors, another Katie's firm (found 2026-09-28) | A stranger told her business had a problem, the business wasn't hers. Risk Averse's sole officer is Katie Constable-Mayne, ours runs Therapeutic Fit | the lemlist companyDomain is the starting point, and the company pitched needs the person named on its own site or its statutory record before a word is written |
 | The 24 Sep sweep listed eleven pitched contacts as rapport only (found 2026-09-28) | Nudges nearly written as openers, and eleven people untracked in the queue | a thread's status comes from the pulled thread, never from a list preview, and every pitched contact gets a queue row with its domain |
+| Our Chromium can't play H.264, and the 14 Sep opener told Studio Live Productions there was no footage on the site (found 2026-09-28) | Three videos from June sit in the raw HTML, the opener was very likely false | any claim about video, reel or footage checks the raw HTML for mp4, webm, video and iframe tags, never the render alone |
+| The 13 Sep DJi Studio opener read demo file names as hidden real clients (found 2026-09-28) | The portfolio says the Sonic Profiles are fictional companies | a name on a demo is not a client until the site or the client says so |
 
 ## 2. The message. One number per rule.
 
