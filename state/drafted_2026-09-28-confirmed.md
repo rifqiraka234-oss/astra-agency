@@ -19,6 +19,7 @@ with a cookie policy that says browsing counts as agreeing. A buyer's procuremen
 checking Diggecard sees a supplier whose site hasn't kept up. We'd rebuild the site, consent done
 properly.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Andrew Charles Johnson, Group CEO of Diggecard (daglig leder of DIGGECARD AS 914046688 per data.brreg.no, Group CEO per the company's own 23 Oct 2025 post), ctc_CmqhrPXcHCyuCjmPw
 site pass 1: 49 pages, every URL on https://diggecard.com/sitemap/ read live through WebFetch (curl, Chromium and tools/fetch-walled.py all get 403 or 502), plus the April 2026 archive copy of the home page read raw
@@ -87,6 +88,7 @@ opened German, English and UK sites. Raka's phone shows their cookie banner offe
 has to sit on the same screen as accepting, and it sent more than 200 warnings in 2025 with automated
 checks. Every paid visitor lands on that banner. We'd set it up properly across all four sites.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Yasin Tipiler, co founder and CEO of UGC.NL B.V. (Keizersgracht 520H Amsterdam, the data controller named in https://ugc.nl/privacy-policy ), ctc_rHvwocWb8FubKWECm. lemlist companyName still says The Sales Academy, his tagline and summary say co founder and CEO of UGC.NL, which the LinkedIn title and rocketreach agree with
 site pass 1: 400 URLs, tools/crawl.py from the sitemaps, 333 at 200, across ugc.nl (120), de.ugc.nl (93), en.ugc.nl (93) and ugc.co.uk (93), capped with creator pages still queued
