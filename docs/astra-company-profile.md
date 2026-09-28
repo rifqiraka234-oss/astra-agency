@@ -208,6 +208,13 @@ Flagged, not resolved. A live correction from Raka outranks both.
    Build Squad at €10,000/mo). The detailed table is still internal and still
    "confirm before quoting". €5k to €50k is the only number that is already
    public, so it is the only one safe to state without checking.
+
+   **Superseded at the bottom end, 2026-09-28.** Raka said "our builds start at
+   500 euros, we wanna make it cheap first", so the quotable floor is now €500
+   and the band to state is €500 to €50k. The deck PDF is unchanged and still
+   prints €5k, which is why this note exists rather than an edit to the
+   transcription above. The qualification line further up, "ready to invest
+   roughly €5k to €50k", is the deck's wording and no longer the gate.
 4. **Named delivered work.** The master context had no client list. This deck
    supplies one. Use it, with the delivery-partner disclosure.
 
