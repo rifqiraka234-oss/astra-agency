@@ -534,7 +534,11 @@ redraft and show again. A batch approval covers that batch only. This has been b
 once already, on 2026-09-05, off the instruction "all in English".
 
 Also his call, not yours: flipping a campaign to running, deleting anything, and
-quoting a price outside the public €5k to €50k band.
+quoting a price outside the public band.
+
+**The floor moved to €500 on 2026-09-28**, Raka's words, "our builds start at 500 euros.
+we wanna make it cheap first". The quotable band is €500 to €50k. The deck still says €5k
+to €50k and his live instruction wins. See `docs/RULES.md` section 1.
 
 ### How to report back
 

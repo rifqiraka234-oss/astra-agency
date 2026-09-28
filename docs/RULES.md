@@ -188,7 +188,12 @@ as long as the sources are true." Split the message into its FACTS and its INFER
    and a `claims` list each written so a later session can re-test it.
 
 **Also Raka's call, never yours.** Flipping a campaign to running. Deleting anything.
-Quoting outside the public 5,000 to 50,000 euro band.
+Quoting outside the public band.
+
+**THE FLOOR IS NOW 500 EUROS (Raka, 2026-09-28).** His words, "our builds start at 500
+euros. we wanna make it cheap first". So the quotable band is **500 euros to 50,000 euros**,
+not 5,000 to 50,000, and a lead who says money is tight is no longer a lead we price out.
+The deck still prints 5,000 to 50,000, and Raka's live instruction outranks the deck.
 
 ---
 

@@ -17,18 +17,20 @@ Thread 5 activities, `nextPage` null. Opener went 28 Sep 09 15, she answered at 
 and a half hours. **"Yes, keen to know costings please as i am not earning very much right
 now."** That is a yes and a price question and a budget warning in one sentence.
 
-Raka's call sits inside this one. The public band starts at five thousand, and she has said
-in writing that money is tight, so the honest move is to name the floor now rather than
-after a build. The draft also gives her the free version of the fix, because the two things
-the opener named, a homepage titled Navigation Bar and an empty Pricing page, genuinely are
-an afternoon of her own time.
+**Redrafted on Raka's new floor, 2026-09-28.** He set the starting price at five hundred
+euros, "we wanna make it cheap first", which turns this from a message that prices her out
+into a message that keeps her. The earlier draft named five thousand and would have ended
+the conversation. Recorded in `docs/RULES.md` section 1, `CLAUDE.md` and the company
+profile, since all three carried the old five thousand floor.
 
 REPLY.
 
 ```
-Straight answer Ciara. Our builds start at around five thousand euros and go up from there depending on what's involved, so if money's tight right now I'd rather say that before either of us spends time on it.
+We start at five hundred euros Ciara, so it's likely a lot less than you're bracing for.
 
-What did you have in mind? If it's well under that I'll say so, and point you at the cheap way to fix the two things I mentioned, which is an afternoon of your own time rather than a project.
+What I described sits near the bottom of that, the homepage title sorted and a Pricing page that actually says something. It climbs from there only if you want the whole site rebuilt.
+
+Shall I put it together and send it over, then you can decide once you've seen the thing rather than the description?
 ```
 
 ## 2. Steven Garratt, Qualigraf. ctc_sPysigrTQgntPu9c6
