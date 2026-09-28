@@ -1,0 +1,75 @@
+<!--{"title":"Book a walkthrough","desc":"Book a walkthrough of Qualigraf built around your own committee cycle, or call Stuart Benson on 07741 080343.","nav":"contact"}-->
+<section class="phero" aria-labelledby="h1" style="padding-bottom:24px">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a> / Contact</div>
+    <div class="kick">{{CURL:coral}}Book a walkthrough</div>
+    <h1 id="h1">Let's look at your committee cycle together.</h1>
+    <p class="lede">Tell us about your council and what's coming up. We'll come back to you quickly and well prepared.</p>
+  </div>
+</section>
+
+<section class="sec-s" aria-label="Contact form and details">
+  <div class="wrap">
+    <div class="split wide-l top">
+      <div class="form rv" id="form">
+        <form data-form data-netlify="true" netlify-honeypot="bot-field" name="walkthrough" method="POST" action="/" novalidate>
+          <input type="hidden" name="form-name" value="walkthrough">
+          <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="fgrid">
+            <div class="field"><label for="c-name">Full name</label><input id="c-name" name="name" autocomplete="name" required><p class="err">Please add your name.</p></div>
+            <div class="field"><label for="c-role">Job title</label><input id="c-role" name="role" autocomplete="organization-title" required><p class="err">Please add your job title.</p></div>
+            <div class="field"><label for="c-org">Council or organisation</label><input id="c-org" name="organisation" autocomplete="organization" required><p class="err">Please add your council.</p></div>
+            <div class="field"><label for="c-email">Work email</label><input id="c-email" name="email" type="email" autocomplete="email" required><p class="err">Please add a valid email address.</p></div>
+            <div class="field"><label for="c-phone">Phone <span class="opt">(optional)</span></label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="c-sys">Committee system you use now <span class="opt">(optional)</span></label><input id="c-sys" name="current_system"></div>
+            <fieldset class="field full"><legend>What would you like to talk about? <span class="opt" style="font-weight:400;color:var(--muted)">(optional)</span></legend>
+              <div class="checks">
+                <label class="check"><input type="checkbox" name="topic" value="walkthrough"><span>A walkthrough of the platform</span></label>
+                <label class="check"><input type="checkbox" name="topic" value="ai-minutes"><span>AI Minutes and the free trial</span></label>
+                <label class="check"><input type="checkbox" name="topic" value="new-council"><span>A new council or shadow authority</span></label>
+                <label class="check"><input type="checkbox" name="topic" value="moving"><span>Moving from our current system</span></label>
+                <label class="check"><input type="checkbox" name="topic" value="members"><span>Paperless meetings for Members</span></label>
+                <label class="check"><input type="checkbox" name="topic" value="pricing"><span>Pricing</span></label>
+              </div>
+            </fieldset>
+            <div class="field full"><label for="c-msg">Anything we should know? <span class="opt">(optional)</span></label><textarea id="c-msg" name="message" placeholder="Your committees, a date you're working to, a problem you want solved"></textarea></div>
+            <div class="field full"><label class="check"><input type="checkbox" name="consent" value="yes" required><span>I agree to the processing of my details as described in the <a href="https://qualigraf.com/uk/your-rights-and-privacy-uk/">privacy policy</a>.</span></label><p class="err">Please tick to agree so we can contact you.</p></div>
+          </div>
+          <div class="actions"><button class="btn btn-c" type="submit">Request a walkthrough {{AR}}</button><span class="small">Takes about two minutes.</span></div>
+          <p class="formerr" role="alert">That didn't send. Please try again, call <a href="tel:+447741080343">07741 080343</a> or email <a href="mailto:stuart@qualigraf.com">stuart@qualigraf.com</a>.</p>
+          <p class="note">We use your details only to reply to you. See our <a href="https://qualigraf.com/uk/your-rights-and-privacy-uk/">privacy policy</a>.</p>
+        </form>
+        <div class="ok" role="status">{{I:ok}}<h3>Thanks, your request is with us.</h3><p>We'll be in touch quickly. If it's urgent, call Stuart on <a href="tel:+447741080343">07741 080343</a>.</p></div>
+      </div>
+      <aside class="rv d1">
+        <div class="card">
+          <div class="person">
+            <img src="assets/img/stuart.png" width="408" height="408" alt="Illustrated portrait of Stuart Benson">
+            <div><h3>Stuart Benson</h3><span class="t">Director of Sales and Customer Success</span><p class="mb0">Happy to talk it through on the phone first.</p></div>
+          </div>
+          <ul class="tick mt2">
+            <li>{{I:phone}}<span><b><a href="tel:+447741080343">07741 080343</a></b>Call Stuart</span></li>
+            <li>{{I:mail}}<span><b><a href="mailto:stuart@qualigraf.com">stuart@qualigraf.com</a></b>Straight to Stuart</span></li>
+            <li>{{I:cal}}<span><b><a href="{{BOOK}}" rel="noopener" target="_blank">Pick a time in Stuart's diary</a></b>Book a call directly</span></li>
+          </ul>
+        </div>
+        <div class="card mt2">
+          <h3>Qualigraf UK</h3>
+          <p class="mb0">53 Chapel Street, Mow Cop<br>Stoke-on-Trent ST7 4NS<br><a href="mailto:info@qualigraf.com">info@qualigraf.com</a></p>
+        </div>
+        <img class="mt2" src="assets/img/il-home_people.svg" width="420" height="420" alt="" aria-hidden="true" style="max-width:280px">
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="next-h">
+  <div class="wrap">
+    <div class="head rv"><h2 id="next-h">What happens next.</h2></div>
+    <ol class="steps s3">
+      <li class="rv"><h3>We read what you sent</h3><p>Your committees, your current system and the date you're working to.</p></li>
+      <li class="rv d1"><h3>We get back to you</h3><p>Quickly, and with answers to what you asked.</p></li>
+      <li class="rv d2"><h3>We walk you through it</h3><p>On your own committee cycle, with the people who'll use it every week.</p></li>
+    </ol>
+  </div>
+</section>

@@ -428,3 +428,33 @@ shop, because every picture was a product. What fixed it, and the rules it left.
   against the stylesheet rather than the page. Put the image in a class in the CSS file.
 - **curl on a Lovable style site returns a 2 KB shell.** Every claim count came back 0, which is
   the failed detector, not an absence. Render in Chromium before counting anything.
+
+## When Raka says "it looks so simple", go to product launch level (Qualigraf, 2026-09-28)
+
+Built for Steven Garratt, Qualigraf UK, live at https://astra-qualigraf-prototype.netlify.app.
+Source, research and handover in `state/prototypes/qualigraf/`. v1 was cream, split sections and
+framed screenshots, clean and correct, and Raka's verdict was "Bro… can we not like do a full
+redesign of the page?? Like the page looks so simple". v1 is kept in `build/v1pages/`.
+
+**What v2 did, and it's the default for a B2B software site from now on.**
+- Screenshot five launch pages first (apple.com product page, vercel.com, linear.app/features,
+  framer.com, notion.com/product) and write down the shared moves before any CSS.
+- A dark canvas with the client's own colours as light (radial glows), and one light chapter for rhythm.
+- The product as the hero object, a big window that starts tilted and flattens on scroll, with live
+  UI cards floating around it.
+- A sticky scroll story for the workflow, the screen swaps as the text moves, with a progress rail.
+- A bento grid of live UI fragments (typing transcript, bars filling, search typing then results,
+  a CSS phone, a looping film with a LIVE chip). Every fragment maps to a real feature and the
+  footnote says examples show sample data.
+- Huge statement type revealed word by word, full bleed photography with parallax, a marquee.
+
+**Hiccups and the rule each leaves.**
+
+| What happened | The rule now |
+|---|---|
+| The mobile menu opened as a 58px strip | `backdrop-filter` on the header makes it the containing block for `position:fixed` children. Keep the mobile nav outside the header |
+| Their product PNGs already carry a device bezel, inside my window frame it was double framed | Crop to the inner screen by scanning for the screen colour, and check the crop didn't eat the app's own sidebar |
+| The navy logo vanished on the dark header | Swap to the light logo whenever the header goes dark |
+| Inner page SVG charts had dark text written for a light page | After a theme change, grep every SVG for dark fills and recolour |
+| `tools/verify_portraits.py` expects base64 portraits in one file | Run its containment function against the client's page and byte match the files by hash. Never loosen the tool |
+| Lighthouse flags the statement's dimmed words | A transient scroll state, full contrast once revealed and under reduced motion. Say so in the handover |
