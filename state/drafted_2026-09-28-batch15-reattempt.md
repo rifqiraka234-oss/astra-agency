@@ -1,4 +1,4 @@
-# Batch 15, 2026-09-28. The re-attempt on 27 weak or blocked leads. NOT SENT.
+# Batch 15, 2026-09-28. The re-attempt on 27 weak or blocked leads. SENT 2026-09-28 10:38Z, Connor, Nick, Cédric, Paul.
 
 Raka's words, "Is there anyone we researched but either weak angle or blocked website or smth? I wanna
 re attempt on those. And literally try to find ANY angle you know. Use ALLL resources."
@@ -33,6 +33,7 @@ with client logos underneath (MLB Players, NFLPA, Ruth's Chris, Wyndham, Embassy
 tab and Google's listing both still carry Wix's default title, "Home | My Site". A local owner who
 looks them up before a call meets a marketing studio that hasn't launched its own site. We'd build it.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Connor Bosco, Co-Owner of Elevate Marketing per his lemlist record (jobTitle Co-Owner, companyDomain elevatemarketingstudio.com), tagline "Co-Owner at Elevate Marketing, Advertising Manager at CARTESIAN", ctc_83MwQqhh6XPF8RzQJ. Thread pulled today, 1 item, our 21 Jul connect note, nothing since. Positive control, Nick Vlaeyen's thread pulled in the same minute came back with 2 messages
 site pass 1: tools/crawl.py on https://www.elevatemarketingstudio.com/ today, 3 pages, the homepage twice and a privacy policy, all titled "... | My Site", homepage 42 words
@@ -98,6 +99,7 @@ Development. Plein Cinéma Leuven, four open air films at the Eventweide from 27
 €13.95 a ticket and run by 3hoog, Wingmen and Brightspace, doesn't appear anywhere. An HR manager
 choosing who runs the staff party sees almost none of what they've done. We'd build the events page.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Nick Vlaeyen, Mede-oprichter of WINGMEN per his lemlist record, one of three partners named on https://wingmen.events/ ("Nick focust op personeel en partnerships"), ctc_SumZAfq5GtFt9xjEF. His tagline also names paper and board recycling. Thread pulled today, 2 messages, his "Hi Raka, nice to meet you" of 3 Sep and our question about Smurfit the same day, unanswered
 site pass 1: tools/crawl.py on https://wingmen.events/ today, 14 URLs, homepage, contact, Prime Development, algemene voorwaarden, cookiebeleid, hello-world, category and author archives, two 403s on wp-admin paths. /wp-json/wp/v2/evenementen lists exactly one event, prime, 2026-04-27
@@ -165,6 +167,7 @@ are downloaded twice, once from their own server and once from their Amazon CDN,
 file. On a throttled 4G phone the main image takes 27 seconds to appear. A brand director opening their
 link between meetings waits half a minute to see the work. We'd rebuild the homepage to load fast.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Cédric Morel, CEO of Groupe Hula Hoop per his lemlist record (jobTitle CEO, tagline "CEO Groupe Hula Hoop"), founder per OURS de la com 2024-03-20, ctc_wsqBdgSdjP6P6Yxvw. A same name architect at UNANIME Architectes in Lyon is a different person and is not used. Thread pulled today, 0 items. Positive control, Connor Bosco's thread pulled the same minute came back with the 21 Jul connect note
 site pass 1: tools/crawl.py on https://www.hula-hoop.fr/ today, 30 pages read, 433 URLs in the sitemaps, all 200
@@ -232,6 +235,7 @@ on those sites, mostly on phones. Six draw sites weighed today on an iPhone prof
 the main image on those draw pages still paints in 1.6 to 2.5 seconds on 4G. So the message is about
 data and weight, not speed. MEDIUM LOW, Raka's call.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Paul Prescott, CEO and Co Founder of Raise Your Game Limited per his lemlist record, ctc_HQWRGkBGkYT69xsb9. Thread pulled today, 1 item, our 27 Jul connect note, nothing since
 site pass 1: tools/crawl.py on https://www.raise-your-game.com/ today, 30 pages read, all 200, 131 links still queued. /alldraws.php lists 16 club draw domains
