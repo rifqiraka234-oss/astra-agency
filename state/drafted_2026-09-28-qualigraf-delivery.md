@@ -22,6 +22,11 @@ What do you think?
 
 Notes for Raka.
 
+- **This replaces "draft 2" for Steven in `state/drafted_2026-09-28-replies-waiting.md`.** Another
+  session held that one because it promised to build the UK page this week. The page now exists,
+  so that draft should never go. Thread re pulled 2026-09-28 after the build, still 3 items,
+  nothing sent after his "Sure!".
+
 - **It's the promise from the opener, delivered.** The opener said the UK site "leads with the
   legislative process" and shows only Dutch and French logos. The build speaks Democratic Services
   (agenda packs, five clear days, key decisions, shadow authorities, Members) and puts the UK team,
