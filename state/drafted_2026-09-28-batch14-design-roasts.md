@@ -22,6 +22,7 @@ Their actual proof sits in a Dutch blog post from May. Alfred reads Q88 vessel d
 and turns hours of manual entry per ship into minutes. A terminal or plant manager checking a brand new
 AI supplier needs that proof first. We'd put Alfred on the homepage.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 (Jacqueline held) -->
 ```gate
 lead: Peter van Gulick, co founder of Cleverise B.V. with Pieter Klaren, named "businesspartner Peter van Gulick" in the KOBR article listed on https://cleverise.nl/news/ , ctc_ExuGxPLfni8pCkz4h. He asked "What business do you have?" on 4 Sep and our answer ended on a question he never answered
 site pass 1: 14 URLs by tools/crawl.py on 28 Sep, homepage, our way of working, our story, news, three posts, contact, cookie policy
@@ -86,6 +87,7 @@ them. It's eight cards reading Automotive three times, Infra & GWW twice, Bouw t
 once, none of them clickable, and Infra & GWW and Industrie have no page at all. An owner of a transport
 firm or a restaurant scrolling for their trade finds nothing. We'd rebuild that section.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 (Jacqueline held) -->
 ```gate
 lead: Stefan van der Heijden, Mede-eigenaar of ASK Wear per his lemlist record and "Eigenaar - Account Manager" under his photo on https://askwear.nl/ , with Anouk Krekels "Eigenaar - Back office", ctc_sCoFYXP34MiTGkvGq. He asked "what kind of business do you have?" on 4 Sep and our answer ended on a question he never answered
 site pass 1: 28 URLs by tools/crawl.py on 28 Sep, all 200, homepage, over ons, contact, eight branche pages, five brand pages
@@ -154,6 +156,7 @@ plasticine figures and a hand placing five gold stars. It also loads 19.5 MB of 
 uploaded at 2400 pixels wide and shown at 595. People buying a personal programme at that price are
 buying her, and the page shows her once. We'd rebuild the homepage around her.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 (Jacqueline held) -->
 ```gate
 lead: Jacqueline Stockwell, CEO and founder of Leadership Through Data per her lemlist summary "I'm Jacqueline Stockwell, the CEO and founder of Leadership Through Data" and the caption "Jacqueline Stockwell, CEO & Founder" on https://www.leadershipthroughdata.com/ , ctc_hYkMQaD4Qw5QrHACN. UK office Sible Hedingham, company no. 11087569 in the footer
 site pass 1: 29 URLs of https://jakispeaks.com crawled by tools/crawl.py on 28 Sep, and the https://www.leadershipthroughdata.com/ homepage rendered in desktop Chromium after waiting out its connection check and reloading, with every image's natural size and bytes

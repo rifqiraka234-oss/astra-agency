@@ -24,6 +24,7 @@ the contact page the phone number dials a US 555 number and the email opens a me
 email@example.com. Six service pages are blank. A new installer's first customers land there. We'd
 finish the site.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Georgia May Storey, director of PYROSECURE GROUP LIMITED (Companies House 17084490, incorporated 11 Mar 2026, co director Michael John Ovenden), https://find-and-update.company-information.service.gov.uk/company/17084490/officers , ctc_4uSRtEPLmq73GHBvq. Her lemlist record still says Project Co-Ordinator at EVCP Installations, and in the thread on 31 Aug she wrote "EVCP isn't my business ... I do have my own small business called PyroSecure Group, but it's only just starting up"
 site pass 1: 23 URLs by tools/crawl.py from the WordPress sitemap, 11 at 200, the 12 at 404 are ${findUrl} template artefacts of the IONOS builder script, not links a visitor meets
@@ -89,6 +90,7 @@ PPE, workwear, tooling and engineering, with fees from 10 percent. Her site name
 is empty. The people she sells to are hiring directors and C suite, who judge a search firm on polish.
 We'd finish the site.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Ciara Neal, Founder and CEO of Hire Quality Talent per her lemlist record and tagline "Founder & Executive Headhunter", ctc_RpqPcqXbBRf2Zz57L. No Companies House match for the trading name by search, so it may trade as a sole trader, and the message doesn't name a company form
 site pass 1: 19 URLs by tools/crawl.py, 9 at 200, the 10 at 404 are ${findUrl} artefacts of the IONOS builder script
@@ -156,6 +158,7 @@ written. The News page, where that progress lives, opens with a block of raw sit
 top. For deep tech the site is the diligence surface for investors, partners and grant reviewers.
 Small fix, so flagged.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Saeid Khalafvand, co founder and CEO of FlowVolta (Rotterdam), ctc_3F8ptpRnaWSQapFhH, named "Founder & CEO" on https://flowvolta.com/ next to Stefano de Cillis "Founder & CPO"
 site pass 1: 31 URLs by tools/crawl.py from the Squarespace sitemap, 21 at 200, the 10 at 404 are old sitemap entries (home-old, about-us-old, careers-old, internship1 to 3, contactv1, technology)
