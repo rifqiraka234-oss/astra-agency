@@ -45,7 +45,11 @@ source in `build/` is untouched, and a copy of the v3 output sits outside the re
 
 ### QA done on v4
 
-- 70 runs, 10 pages at 360, 420, 768, 1024, 1280, 1440 and 1920 wide, after the contrast fixes. SWEEP_RESULT
+- 70 runs, 10 pages at 360, 420, 768, 1024, 1280, 1440 and 1920 wide, after the contrast fixes.
+  All 70 had 0 page errors, 0 failed requests, 0 horizontal page overflow and 0 undecoded images.
+  The 14 runs on index and new councils flagged only elements wider than the screen that sit
+  inside clipping containers on purpose (the Surrey map SVG, the scrolling sources table), checked
+  by walking each to its clipping parent.
 - Live, deploy 6abaab61565aa92c51580665, all 116 assets byte matched, 9 pages 200 with their titles and a parsed DOM identical to the build once Netlify's pretty URLs and form attributes are normalised, every rewritten link 200, every cross page anchor present, unknown path 404 page, cold load in Chromium on 3 pages with 0 errors, 0 failed requests, 0 undecoded images.
 - Interaction tests, films play and pause and stay paused, Surrey scene through all four stages
   (296 paths, 53 meetings, 12 rows), paper calculator on three input sets, strip translate, quiz,
