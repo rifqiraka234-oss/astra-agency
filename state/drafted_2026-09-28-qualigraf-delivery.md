@@ -5,20 +5,22 @@ null, totalItems 3. Connect note 27 Sep, our opener `act_EXghGY3B9dh2Ldbfp` 28 S
 I send you over what the UK site for Democratic Services teams looks like?"), his reply
 `act_TibvRriQtpgkvNESe` 28 Sep 11.40, "Sure!". Pull it again immediately before sending.
 
-Rewritten 2026-09-28 16.10 UTC for v3. The earlier version promised "a scroll through the eight
-stations", and v3 took that section off the homepage, so that line would now be false.
+Rewritten 2026-09-28 18.10 UTC for v4, which replaced the whole design and the homepage story. The
+v3 version promised "Surrey's twelve councils becoming two" as chapter 07 and "a paper calculator",
+and both moved, so it would now point at the wrong things. Thread re pulled 2026-09-28 17.5x UTC,
+still 3 activities, nextPage null, his "Sure!" is still the last message.
 
 ## Steven Garratt, Qualigraf. DELIVERY. ctc_sPysigrTQgntPu9c6
 
 ```
 Steven, I spent the afternoon building this.
 
-It's the UK site for Democratic Services teams, nine pages in council language, and it all works.
+It's the UK site for Democratic Services teams, nine pages, and everything on it works.
 
 Try it yourself.
 https://astra-qualigraf-prototype.netlify.app
 
-The homepage follows one decision from the forward plan to the archive, through the five clear days rule, a meeting night webcast and Surrey's twelve councils becoming two. There's a paper calculator for your own council's numbers and a clear days quiz with the bank holidays built in.
+It opens on Surrey, where the two new councils publish their shadow meetings across twelve council websites today, then follows one decision from the forward plan to the archive. There's a clear days quiz with the bank holidays built in.
 
 What do you think?
 ```
@@ -34,28 +36,29 @@ Notes for Raka.
   (agenda packs, five clear days, key decisions, shadow authorities, Members) and puts the UK team,
   the UK reorganisation and UK law up front. The European councils are still there, labelled as
   Europe.
-- **"The afternoon" is true, "the whole day" wouldn't be.** Built between about 14.00 and 16.10
-  UTC, redesigned twice on your notes.
+- **"The afternoon" is true, "the whole day" wouldn't be.** Built between about 14.00 and 18.30
+  UTC, redesigned three times on your notes. "The afternoon and evening" would also be true if you
+  prefer it.
 - Nine pages counted from the build, home, platform, AI Minutes, new councils, who it's for,
   security, about, resources, contact. The 404 isn't counted.
 - The forms submit to Netlify Forms on our project, so a test from Steven lands with us, not with
   him. That's why the message doesn't mention them.
-- No exclamation marks, it lands in a warm thread. Contractions, 2 ("It's", "There's"). 80 words.
+- No exclamation marks, it lands in a warm thread.
 
-Claims in it, each re-testable.
+Claims in it, each re-testable (v4).
 
-- Nine pages, https://astra-qualigraf-prototype.netlify.app plus /platform, /ai-minutes,
-  /new-councils, /roles, /security, /about, /resources, /contact, all 200 on the live check at
-  2026-09-28 16.0x UTC, deploy 6aba906c5bb37ec76206371d, parsed DOM identical to the build apart
-  from Netlify's pretty URL and form rewrites.
-- "follows one decision from the forward plan to the archive", homepage section "The life of one
-  decision" and chapters 01 Ninety days out to 06 Six years on.
-- "the five clear days rule", chapter 03, the Joicey strip and the calculator.
-- "a meeting night webcast", chapter 04, the LIVE panel with speakers, agenda and vote.
-- "Surrey's twelve councils becoming two", chapter 07, the twelve named councils animating into East
-  and West Surrey, split read on the Surrey LGR Hub and Mole Valley DC pages 2026-09-28.
-- "a paper calculator for your own council's numbers", the Wrapped section, tested
-  with four sets of inputs.
-- "a clear days quiz with the bank holidays built in", chapter 03 and /resources#quiz, three
+- Nine pages, the home page plus /platform, /ai-minutes, /new-councils, /roles, /security, /about,
+  /resources, /contact. The 404 isn't counted. Live check and deploy id in `handover.md` and the
+  `state/prototypes.jsonl` row.
+- "everything on it works", every interactive part exercised end to end in the v4 interaction run,
+  listed in `handover.md` "QA done on v4".
+- "It opens on Surrey", homepage item 02 "Right now in Surrey" directly after the hero.
+- "the two new councils publish their shadow meetings across twelve council websites today", the
+  Surrey LGR Hub's East Surrey and West Surrey committees and meetings pages, read 2026-09-28,
+  twelve distinct systems linked, parsed into `site/assets/v4/shadow_meetings.json`.
+- "follows one decision from the forward plan to the archive", homepage item 04 "The life of one
+  decision, Forward plan to archive", the eight panel strip, then items 05 to 08.
+- "a clear days quiz with the bank holidays built in", homepage casefile quiz and /resources, three
   answers checked by hand and through the site's own calculator (7 Oct 2026, 23 Dec 2026,
   22 Mar 2027).
+- 70 words, contractions 2 ("It's", "There's"), no exclamation marks.

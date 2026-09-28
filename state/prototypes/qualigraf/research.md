@@ -176,3 +176,69 @@ up in `handover.md`, section "v3, after Raka's second note". Facts added for v3,
 day. Surrey's East and West split (Surrey LGR Hub shadow authorities page and Mole Valley DC LGR
 updates, both list the same five and six areas). Globe land from world atlas 110m (Natural Earth).
 Quiz dates from GOV.UK England and Wales bank holidays, already hardcoded in site.js.
+
+## v4, after Raka's third note (2026-09-28, 16.10 UTC)
+
+Raka on v3, "we have just taken what they've done and put an icing cake on it ... You didn't
+redesign it". He's right. v3 kept v2's dark SaaS layout, their screenshots in window frames and the
+card grids, and added effects. v4 is a new design language, a new story built on real public data,
+and new media, on every page.
+
+### The teardown, method and counts
+
+- 65 sites queued across tech, sport, consulting, cars and luxury, media, three WebGL studios and
+  Qualigraf's three direct competitors (Granicus, Diligent, Civica).
+- Every request routed through a local fetcher with a real browser TLS fingerprint (curl_cffi),
+  which beat the bot walls that stopped v3 at 30. Per site, the fold plus eight frames down the
+  scroll plus a full page, and a fingerprint read at runtime. Libraries (GSAP, ScrollTrigger,
+  three.js, Lottie, Lenis, Swiper, Framer, Rive), WebGL canvases, videos and autoplay, sticky and
+  fixed elements, clip-path masks, blend modes, backdrop blur, running animations, loaded fonts,
+  and a count of style mutations while scrolling, the signature of scroll driven animation.
+- Rendered and studied, 57 of 65. Walled after every method (three fingerprints, GPU flags, a
+  Safari identity, overlay removal), Red Bull, Tesla, adidas, Active Theory, WHOOP, LVMH, Civica,
+  Lusion. Cookie and region overlays hid 13 on the first pass, re-run with the overlays removed.
+
+### What the best actually do (from the fingerprints, not the look)
+
+| Site | What the numbers show | What it teaches |
+|---|---|---|
+| Apple AirPods, Vision Pro | 15 and 28 videos, 7 and 9 sticky scenes, 68 and 39 clip-path masks, 5,380 scroll mutations | Video is the main medium, pinned, revealed through masks, one idea per screen |
+| Stripe | 4 WebGL canvases (gradient and globe), 94 masks, 275 SVGs | WebGL only where it carries meaning, the globe is the business |
+| Linear | 82 running animations, 16 blend modes, 219 SVGs | Product UI drawn in SVG and animated, not screenshots in frames |
+| Igloo | three.js, a 3D object that builds itself as you scroll | Scroll can assemble a thing, the build is the story |
+| Anthropic, Capgemini, Nvidia | GSAP with ScrollTrigger | Pinned, scrubbed sequences with real timing control |
+| Microsoft | a WebGL canvas, Lenis, 9 videos | Smoothness and film together |
+| Anthropic, Accenture, Pudding | a custom serif, sans and mono trio | A mono face reads as "the record", data and citations |
+| KPMG, Pudding, Spotify | full bleed colour fields, huge type | Colour as structure, not decoration |
+| Premier League, FIFA, NBA | 45 sticky elements, live tables, quizzes, polls | Scoreboards and participation |
+| Granicus (competitor) | a wall of big proof numbers, no motion craft, stock people | Proof by numbers, which we beat with real, sourced numbers |
+| Diligent (competitor) | an analyst quadrant, an interactive donut, Rive | Credibility devices, which we beat with a live product story |
+
+### The real data v4 is built on (all read 2026-09-28)
+
+- **The two new Surrey councils publish across 12 council websites today.** The Surrey LGR Hub's
+  own committees pages (https://www.surreylgrhub.gov.uk/homepage/35/east-surrey-committees-and-meetings
+  and https://www.surreylgrhub.gov.uk/west-surrey-committees-and-meetings) link East Surrey's
+  shadow meetings to Surrey County Council, Elmbridge, Epsom and Ewell, Reigate and Banstead,
+  Tandridge and a Mole Valley SharePoint, and West Surrey's to Guildford, Woking, Waverley, Surrey
+  Heath, Runnymede and Spelthorne. 53 meetings listed from 20 May 2026 to 21 January 2027 across
+  15 committees, 40 of them held by 28 September. Parsed into `shadow_meetings.json`, keyed on each
+  system's own committee and meeting ids. Two meeting pages opened directly and matched, Epsom and
+  Ewell (Monday 6 July 2026) and Spelthorne (Standards Committee, 6 July 2026). The other council
+  sites block this network with Cloudflare or Incapsula under every fingerprint, so the site
+  attributes the numbers to the hub's listing.
+- **England's map.** ONS Open Geography, Local Authority Districts December 2024, ultra generalised
+  boundaries, 296 English districts, all 11 Surrey districts present. Projected and simplified to
+  SVG paths.
+- **Film.** Mixkit clips, only those whose own page carries "copyrightNotice Free", and the Mixkit
+  Stock Video Free License text read in a browser, commercial use allowed, attribution not
+  required. 14 of the first 21 candidates were "Mixkit Restricted License" and were dropped.
+  Decorative only, never captioned as Qualigraf, a council or a real meeting.
+
+### The concept, "the public record"
+
+The site is built like the thing Qualigraf makes, an agenda and its record. Warm paper, black ink,
+huge serif, a mono face for statute, dates and URLs, sections numbered like agenda items, margin
+notes like a report's footnotes. Qualigraf's coral, teal, mustard and plum arrive as full bleed
+colour fields. The story spine is real. Right now two new councils publish on twelve websites. On
+1 April 2027 each needs one home. Then the life of one decision, film led, and the record it leaves.

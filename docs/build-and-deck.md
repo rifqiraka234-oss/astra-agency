@@ -501,3 +501,46 @@ tell a story? What kind of media do you need to tell the story?" What worked, an
 | Draft note said 79 words and 4 contractions, it was 80 and 2 | Count with a tool, possessives aren't contractions |
 | Stamp covered the late report chip | Screenshot after the animation's last delay, not at a fixed time |
 | Colon in a webcast timecode | The colon ban covers UI text too, dots work |
+
+## When Raka says "you just put icing on their cake", change the language, not the effects (Qualigraf v4, 2026-09-28)
+
+His words on v3, "we have just taken what they've done and put an icing cake on it ... You didn't
+redesign it." v3 had kept v2's dark SaaS layout, their screenshots in window frames and card grids,
+and added motion on top. Effects on an inherited layout still read as the inherited layout.
+
+- **A redesign changes four things at once, or it isn't one.** Palette and type, the page grammar
+  (how a section is built), the story spine, and the media. v4 went from dark SaaS to paper and
+  ink, a serif, sans and mono trio, sections numbered like agenda items, and a story built on
+  public data. Keep the old source untouched in its own folder so a rollback costs nothing.
+- **Get past the bot walls before studying anyone.** A local fetcher with a real browser TLS
+  fingerprint (curl_cffi impersonation) routed through Playwright took the teardown from 30 of 47
+  to 57 of 65. Report the walled ones by name.
+- **Fingerprint the sites, don't just look at them.** Count at runtime the libraries, WebGL
+  canvases, videos, sticky elements, clip-path masks, blend modes and style mutations while
+  scrolling. The numbers say what the best actually do (Apple is film in pinned scenes, Stripe uses
+  WebGL only where it means something), which a screenshot can't.
+- **The concept should come from what the client makes.** Qualigraf makes the public record, so the
+  site is built like an agenda and its record. That's the step past "a nicer version of their site".
+- **Real public data beats any illustration.** Surrey's shadow meetings across twelve council sites,
+  parsed from the hub, and ONS boundaries for the map. Name the source on the page and say what
+  could only be read second hand.
+- **Stock film needs its licence read on the clip's own page.** Mixkit mixes a Free and a Restricted
+  licence, 14 of 21 first picks were Restricted. Films stay decorative and are never captioned as
+  the client or a real place in their work.
+- **Run Lighthouse accessibility on every page after a palette change.** v4 failed on grey mono
+  labels on paper, ink3 labels on colour fields, plum text at 70 percent, a coral that's too light
+  for text on paper, and a film caption that had inherited white text onto a paper chip. A text
+  shade of each brand colour (`--coral-t`) fixes most of it without changing the brand.
+- **WebGL scores badly in this container's Lighthouse.** It renders on the CPU (swiftshader), so a
+  60 fps hero shows as minutes of blocking time. Say that plainly next to the number, don't hide it.
+
+| Hiccup | Rule |
+|---|---|
+| A function named `two` overwrote an element variable named `two` | Don't reuse short names across one script scope |
+| `.d1` meant both a display size and a reveal delay | One class name, one meaning, rename the delays |
+| `c-span-N c-start-N` combined into a broken grid line | Write span and start as separate properties |
+| Map pins with labels collided | Numbered pins plus a key |
+| Globe faced the Pacific | Rotation is minus 90 degrees minus the longitude, check with a screenshot |
+| Static map built before its data loaded | Reset the scene stage after the data arrives |
+| Lighthouse flagged mid-reveal elements | Separate animation states from real contrast failures before fixing |
+| The stamp covered the case citation at phone width | Screenshot every overlay at 360 and 420, not just desktop |

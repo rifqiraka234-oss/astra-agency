@@ -1,0 +1,324 @@
+{
+ "East Surrey": [
+  {
+   "system": "Surrey County Council",
+   "committee": "East Surrey Shadow Authority",
+   "date": "2026-05-20",
+   "url": "https://mycouncil.surreycc.gov.uk/ieListDocuments.aspx?CId=977&MId=10130&Ver=4"
+  },
+  {
+   "system": "Tandridge",
+   "committee": "Shadow Authority Employment Committee",
+   "date": "2026-05-27",
+   "url": "https://tandridge.moderngov.co.uk/ieListDocuments.aspx?CId=304&MId=1651&Ver=4"
+  },
+  {
+   "system": "Elmbridge",
+   "committee": "Shadow Executive",
+   "date": "2026-06-08",
+   "url": "https://mygov.elmbridge.gov.uk/ieListDocuments.aspx?CId=430&MId=5140&Ver=4"
+  },
+  {
+   "system": "Epsom and Ewell",
+   "committee": "Shadow Authority Audit and Governance Committee",
+   "date": "2026-07-06",
+   "url": "https://democracy.epsom-ewell.gov.uk/ieListDocuments.aspx?CId=316&MId=2073&Ver=4"
+  },
+  {
+   "system": "Mole Valley",
+   "committee": "Shadow Authority Standards Committee",
+   "date": "2026-07-07",
+   "url": "sharepoint"
+  },
+  {
+   "system": "Reigate and Banstead",
+   "committee": "Shadow Authority Overview and Scrutiny Committee",
+   "date": "2026-07-08",
+   "url": "https://reigate-banstead.moderngov.co.uk/ieListDocuments.aspx?CId=465&MId=2641&Ver=4"
+  },
+  {
+   "system": "Mole Valley",
+   "committee": "Shadow Authority Constitution Committee",
+   "date": "2026-07-13",
+   "url": "sharepoint"
+  },
+  {
+   "system": "Tandridge",
+   "committee": "Shadow Authority Employment Committee",
+   "date": "2026-07-15",
+   "url": "https://tandridge.moderngov.co.uk/ieListDocuments.aspx?CId=304&MId=1652&Ver=4"
+  },
+  {
+   "system": "Elmbridge",
+   "committee": "Shadow Executive",
+   "date": "2026-07-20",
+   "url": "https://mygov.elmbridge.gov.uk/ieListDocuments.aspx?CId=430&MId=5141&Ver=4"
+  },
+  {
+   "system": "Surrey County Council",
+   "committee": "East Surrey Shadow Authority",
+   "date": "2026-07-29",
+   "url": "https://mycouncil.surreycc.gov.uk/ieListDocuments.aspx?CId=977&MId=10149&Ver=4"
+  },
+  {
+   "system": "Tandridge",
+   "committee": "Shadow Authority Employment Committee",
+   "date": "2026-08-20",
+   "url": "https://tandridge.moderngov.co.uk/ieListDocuments.aspx?CId=304&MId=1683&Ver=4"
+  },
+  {
+   "system": "Epsom and Ewell",
+   "committee": "Shadow Authority Audit and Governance Committee",
+   "date": "2026-09-02",
+   "url": "https://democracy.epsom-ewell.gov.uk/ieListDocuments.aspx?CId=316&MId=2074&Ver=4"
+  },
+  {
+   "system": "Mole Valley",
+   "committee": "Shadow Authority Constitution Committee",
+   "date": "2026-09-07",
+   "url": "sharepoint"
+  },
+  {
+   "system": "Reigate and Banstead",
+   "committee": "Shadow Authority Overview and Scrutiny Committee",
+   "date": "2026-09-09",
+   "url": "https://reigate-banstead.moderngov.co.uk/ieListDocuments.aspx?CId=465&MId=2642&Ver=4"
+  },
+  {
+   "system": "Mole Valley",
+   "committee": "Shadow Authority Standards Committee",
+   "date": "2026-09-10",
+   "url": "sharepoint"
+  },
+  {
+   "system": "Elmbridge",
+   "committee": "Shadow Executive",
+   "date": "2026-09-14",
+   "url": "https://mygov.elmbridge.gov.uk/ieListDocuments.aspx?CId=430&MId=5142&Ver=4"
+  },
+  {
+   "system": "Tandridge",
+   "committee": "Shadow Authority Employment Committee",
+   "date": "2026-09-17",
+   "url": "https://tandridge.moderngov.co.uk/ieListDocuments.aspx?CId=304&MId=1653&Ver=4"
+  },
+  {
+   "system": "Surrey County Council",
+   "committee": "East Surrey Shadow Authority",
+   "date": "2026-09-24",
+   "url": "https://mycouncil.surreycc.gov.uk/ieListDocuments.aspx?CId=977&MId=10150&Ver=4"
+  },
+  {
+   "system": "Elmbridge",
+   "committee": "Shadow Executive",
+   "date": "2026-10-13",
+   "url": "https://mygov.elmbridge.gov.uk/ieListDocuments.aspx?CId=430&MId=5143&Ver=4"
+  },
+  {
+   "system": "Epsom and Ewell",
+   "committee": "Shadow Authority Audit and Governance Committee",
+   "date": "2026-11-02",
+   "url": "https://democracy.epsom-ewell.gov.uk/ieListDocuments.aspx?CId=316&MId=2075&Ver=4"
+  },
+  {
+   "system": "Reigate and Banstead",
+   "committee": "Shadow Authority Overview and Scrutiny Committee",
+   "date": "2026-11-04",
+   "url": "https://reigate-banstead.moderngov.co.uk/ieListDocuments.aspx?CId=465&MId=2650&Ver=4"
+  },
+  {
+   "system": "Tandridge",
+   "committee": "Shadow Authority Employment Committee",
+   "date": "2026-11-10",
+   "url": "https://tandridge.moderngov.co.uk/ieListDocuments.aspx?CId=304&MId=1654&Ver=4"
+  },
+  {
+   "system": "Surrey County Council",
+   "committee": "East Surrey Shadow Authority",
+   "date": "2026-11-18",
+   "url": "https://mycouncil.surreycc.gov.uk/ieListDocuments.aspx?CId=977&MId=10151&Ver=4"
+  }
+ ],
+ "West Surrey": [
+  {
+   "system": "Guildford",
+   "committee": "West Surrey Shadow Authority",
+   "date": "2026-05-21",
+   "url": "https://democracy.guildford.gov.uk/ieListDocuments.aspx?CId=1407&MId=3605&Ver=4"
+  },
+  {
+   "system": "Guildford",
+   "committee": "Audit and Governance Committee",
+   "date": "2026-05-21",
+   "url": "https://democracy.guildford.gov.uk/ieListDocuments.aspx?CId=1404&MId=3598&Ver=4"
+  },
+  {
+   "system": "Guildford",
+   "committee": "Shadow Authority Overview and Scrutiny Committee",
+   "date": "2026-05-21",
+   "url": "https://democracy.guildford.gov.uk/ieListDocuments.aspx?CId=1406&MId=3602&Ver=4"
+  },
+  {
+   "system": "Guildford",
+   "committee": "Standards Committee",
+   "date": "2026-05-21",
+   "url": "https://democracy.guildford.gov.uk/ieListDocuments.aspx?CId=1403&MId=3603&Ver=4"
+  },
+  {
+   "system": "Surrey Heath",
+   "committee": "Shadow Authority Employment Committee",
+   "date": "2026-05-28",
+   "url": "https://surreyheath.moderngov.co.uk/ieListDocuments.aspx?CId=444&MId=4778&Ver=4"
+  },
+  {
+   "system": "Woking",
+   "committee": "Shadow Authority Executive",
+   "date": "2026-06-09",
+   "url": "https://moderngov.woking.gov.uk/ieListDocuments.aspx?CId=459&MId=2810&Ver=4"
+  },
+  {
+   "system": "Spelthorne",
+   "committee": "Standards Committee",
+   "date": "2026-07-06",
+   "url": "https://democracy.spelthorne.gov.uk/ieListDocuments.aspx?CId=342&MId=5256&Ver=4"
+  },
+  {
+   "system": "Waverley",
+   "committee": "Audit and Governance Committee",
+   "date": "2026-07-07",
+   "url": "https://modgov.waverley.gov.uk/ieListDocuments.aspx?CId=480&MId=5512&Ver=4"
+  },
+  {
+   "system": "Runnymede",
+   "committee": "Shadow Authority Overview and Scrutiny Committee",
+   "date": "2026-07-09",
+   "url": "https://democracy.runnymede.gov.uk/ieListDocuments.aspx?CId=257&MId=1430&Ver=4"
+  },
+  {
+   "system": "Surrey Heath",
+   "committee": "Shadow Authority Employment Committee",
+   "date": "2026-07-16",
+   "url": "https://surreyheath.moderngov.co.uk/ieListDocuments.aspx?CId=444&MId=4782&Ver=4"
+  },
+  {
+   "system": "Woking",
+   "committee": "Shadow Authority Executive",
+   "date": "2026-07-21",
+   "url": "https://moderngov.woking.gov.uk/ieListDocuments.aspx?CId=459&MId=2811&Ver=4"
+  },
+  {
+   "system": "Guildford",
+   "committee": "West Surrey Shadow Authority",
+   "date": "2026-07-30",
+   "url": "https://democracy.guildford.gov.uk/ieListDocuments.aspx?CId=1407&MId=3613&Ver=4"
+  },
+  {
+   "system": "Surrey Heath",
+   "committee": "Shadow Authority Employment Committee",
+   "date": "2026-08-11",
+   "url": "https://surreyheath.moderngov.co.uk/ieListDocuments.aspx?CId=444&MId=4798&Ver=4"
+  },
+  {
+   "system": "Spelthorne",
+   "committee": "Standards Committee",
+   "date": "2026-09-02",
+   "url": "https://democracy.spelthorne.gov.uk/ieListDocuments.aspx?CId=342&MId=5257&Ver=4"
+  },
+  {
+   "system": "Waverley",
+   "committee": "Audit and Governance Committee",
+   "date": "2026-09-03",
+   "url": "https://modgov.waverley.gov.uk/ieListDocuments.aspx?CId=480&MId=5513&Ver=4"
+  },
+  {
+   "system": "Surrey Heath",
+   "committee": "Shadow Authority Employment Committee",
+   "date": "2026-09-10",
+   "url": "https://surreyheath.moderngov.co.uk/ieListDocuments.aspx?CId=444&MId=4802&Ver=4"
+  },
+  {
+   "system": "Runnymede",
+   "committee": "Shadow Authority Overview and Scrutiny Committee",
+   "date": "2026-09-10",
+   "url": "https://democracy.runnymede.gov.uk/ieListDocuments.aspx?CId=257&MId=1431&Ver=4"
+  },
+  {
+   "system": "Guildford",
+   "committee": "West Surrey Shadow Authority",
+   "date": "2026-09-10",
+   "url": "https://democracy.guildford.gov.uk/ieListDocuments.aspx?CId=1407&MId=3664&Ver=4"
+  },
+  {
+   "system": "Woking",
+   "committee": "Shadow Authority Executive",
+   "date": "2026-09-15",
+   "url": "https://moderngov.woking.gov.uk/ieListDocuments.aspx?CId=459&MId=2812&Ver=4"
+  },
+  {
+   "system": "Spelthorne",
+   "committee": "Shadow Constitution Sub Committee",
+   "date": "2026-09-17",
+   "url": "https://democracy.spelthorne.gov.uk/ieListDocuments.aspx?CId=344&MId=5297&Ver=4"
+  },
+  {
+   "system": "Surrey Heath",
+   "committee": "Shadow Authority Employment Committee",
+   "date": "2026-09-18",
+   "url": "https://surreyheath.moderngov.co.uk/ieListDocuments.aspx?CId=444&MId=4783&Ver=4"
+  },
+  {
+   "system": "Guildford",
+   "committee": "West Surrey Shadow Authority",
+   "date": "2026-09-23",
+   "url": "https://democracy.guildford.gov.uk/ieListDocuments.aspx?CId=1407&MId=3614&Ver=4"
+  },
+  {
+   "system": "Woking",
+   "committee": "Shadow Authority Executive",
+   "date": "2026-10-01",
+   "url": "https://woking.moderngov.co.uk/ieListDocuments.aspx?CId=459&MId=2873&Ver=4"
+  },
+  {
+   "system": "Woking",
+   "committee": "Shadow Authority Executive",
+   "date": "2026-10-12",
+   "url": "https://moderngov.woking.gov.uk/ieListDocuments.aspx?CId=459&MId=2813&Ver=4"
+  },
+  {
+   "system": "Spelthorne",
+   "committee": "Standards Committee",
+   "date": "2026-10-22",
+   "url": "https://democracy.spelthorne.gov.uk/ieListDocuments.aspx?CId=342&MId=5315&Ver=4"
+  },
+  {
+   "system": "Spelthorne",
+   "committee": "Standards Committee",
+   "date": "2026-11-02",
+   "url": "https://democracy.spelthorne.gov.uk/ieListDocuments.aspx?CId=342&MId=5258&Ver=4"
+  },
+  {
+   "system": "Waverley",
+   "committee": "Audit and Governance Committee",
+   "date": "2026-11-03",
+   "url": "https://modgov.waverley.gov.uk/ieListDocuments.aspx?CId=480&MId=5514&Ver=4"
+  },
+  {
+   "system": "Runnymede",
+   "committee": "Shadow Authority Overview and Scrutiny Committee",
+   "date": "2026-11-05",
+   "url": "https://democracy.runnymede.gov.uk/ieListDocuments.aspx?CId=257&MId=1432&Ver=4"
+  },
+  {
+   "system": "Guildford",
+   "committee": "West Surrey Shadow Authority",
+   "date": "2026-11-19",
+   "url": "https://democracy.guildford.gov.uk/ieListDocuments.aspx?CId=1407&MId=3615&Ver=4"
+  },
+  {
+   "system": "Runnymede",
+   "committee": "Shadow Authority Overview and Scrutiny Committee",
+   "date": "2027-01-21",
+   "url": "https://democracy.runnymede.gov.uk/ieListDocuments.aspx?CId=257&MId=1436&Ver=4"
+  }
+ ]
+}

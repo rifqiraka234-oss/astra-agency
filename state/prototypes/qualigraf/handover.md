@@ -1,9 +1,67 @@
 # Qualigraf UK site, handover (2026-09-28)
 
 Live: https://astra-qualigraf-prototype.netlify.app (Netlify site `astra-qualigraf-prototype`,
-id 1ce634b7-82ce-4ecb-993a-a4a26e6eb0d3, deploy 6aba906c5bb37ec76206371d (v3), team SSO off, forms on).
-Source: `state/prototypes/qualigraf/build/` (pages, build.py, close.html). Output: `site/`.
+id 1ce634b7-82ce-4ecb-993a-a4a26e6eb0d3, deploy 6abaab61565aa92c51580665 (v4), team SSO off, forms on).
+Source: `state/prototypes/qualigraf/build4/` (pages, build.py, close.html), v3 source kept in `build/`. Output: `site/`.
 Research, evidence pack and art direction: `research.md` in this folder.
+
+## v4, "the public record" (after Raka's third note, 2026-09-28)
+
+Raka on v3, "we've just taken what they've done and put an icing cake on it. You didn't redesign
+it." He was right, v3 was v2's dark SaaS layout with effects added. v4 replaces the design language,
+the story and the media on all ten pages. Source is `build4/` (pages, build.py, close.html), the v3
+source in `build/` is untouched, and a copy of the v3 output sits outside the repo.
+
+- **Teardown first.** 65 sites queued (tech, sport, consulting, cars and luxury, media, WebGL
+  studios, and Granicus, Diligent and Civica). 57 rendered and fingerprinted at runtime, 8 walled
+  after every method (Red Bull, Tesla, adidas, Active Theory, WHOOP, LVMH, Civica, Lusion). Method,
+  counts and what each site teaches are in `research.md`, "v4".
+- **Design language.** Warm paper and black ink, Source Serif 4, Source Sans 3 and Source Code Pro,
+  every section numbered like an agenda item with a mono reference note, Qualigraf's coral, teal,
+  mustard and plum as full bleed colour fields. A navy UK logo made from their light logo.
+- **Story spine, on real data.** Surrey's two new councils publish their shadow meetings across
+  twelve council websites today (53 meetings, 15 committees, read from the Surrey LGR Hub). A pinned
+  map of England (ONS boundaries, 296 districts) zooms to Surrey, pins the twelve systems and folds
+  them into two. Then the life of one decision, film led, to the record it leaves.
+- **Media.** A three.js hero where 620 agenda pages fly in, stack, press into a pack and become a
+  tablet showing their own meeting screen. A three.js dot globe of the four country teams. Eleven
+  films (Mixkit Free Licence only, decorative, never captioned as Qualigraf or a council). A horizontal
+  pinned strip of eight panels, a stamped casefile, a live vote scoreboard, an AI Minutes pipeline,
+  an archive search, the paper calculator, the clear days quiz and calculator, a day one checklist
+  and a vesting day countdown.
+
+### v4 items Steven should confirm (in addition to the list below)
+
+1. **The Surrey framing.** "Two councils, twelve websites" is the hub's own listing on 28 Sep 2026.
+   Only two meeting pages could be opened directly from here (Epsom and Ewell, Spelthorne), the rest
+   wall this network, so the site credits the hub. It's a sensitive live example for a sales site,
+   and Steven may prefer it unnamed or softened.
+2. **The films are stock and decorative.** Big Ben, a night city, a typewriter, a library and others.
+   None claims to show a UK council.
+3. **The product screens are still their Canadian demo council ("Clearwater Ridge")** inside the
+   tablet and the strip. The footer's sample data line covers them.
+4. **Sample UI on the homepage**, the scoreboard (31, 12, 3), the AI Minutes pipeline, the archive's
+   1,584 sample documents and the casefile, all labelled sample on screen.
+
+### QA done on v4
+
+- 70 runs, 10 pages at 360, 420, 768, 1024, 1280, 1440 and 1920 wide, after the contrast fixes. SWEEP_RESULT
+- Live, deploy 6abaab61565aa92c51580665, all 116 assets byte matched, 9 pages 200 with their titles and a parsed DOM identical to the build once Netlify's pretty URLs and form attributes are normalised, every rewritten link 200, every cross page anchor present, unknown path 404 page, cold load in Chromium on 3 pages with 0 errors, 0 failed requests, 0 undecoded images.
+- Interaction tests, films play and pause and stay paused, Surrey scene through all four stages
+  (296 paths, 53 meetings, 12 rows), paper calculator on three input sets, strip translate, quiz,
+  stamp, scoreboard, pipeline, archive search and an XSS probe, globe drag, menu and Escape, every
+  form's empty, bad email, failure and success states, clear days calculator on four dates, checklist,
+  countdown, the static Surrey map.
+- No JS and reduced motion, content complete, the map and table pre-rendered at build.
+- Copy, 0 dashes in prose, 0 colons, 0 banned words, 0 exclamation marks, contractions throughout.
+  The one "not X but Y" is Rens's own quote, verbatim.
+- Lighthouse, accessibility 100 on nine pages after contrast fixes (grey labels darkened, a text
+  coral for coral on paper, ink labels on colour fields, plum text at full strength, a film caption
+  that had gone white on paper). Index is 97, the remaining flags are the AI Minutes pipeline's
+  steps that sit dimmed until they light up in turn. Best practices and SEO 100 everywhere.
+  Performance, 79 on new councils and 44 on the homepage in this container, where WebGL runs on the
+  CPU (swiftshader) under Lighthouse's throttling. On a machine with a GPU the hero is cheap, but
+  it's the page's weakest number and worth knowing.
 
 ## What changed after Raka's note
 
