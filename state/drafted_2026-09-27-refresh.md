@@ -639,3 +639,20 @@ verdict: NO_STRONG_ANGLE, not the owner. If Raka wants YTEC as a Build Squad lea
 ```
 
 ---
+
+## Social media, opened for real, 2026-09-28
+
+Raka asked whether social was checked for the rest. It wasn't properly. On 27 Sep most social lines
+only listed which accounts their HTML links to. On 28 Sep tools/social-audit.js opened all 46 linked
+accounts across the remaining leads. Raw output in logs/inbox/2026-09-28-social-audit-raw.txt.
+
+- Instagram, every one of them, rate limited 429. UNKNOWN, never empty.
+- Facebook pages load behind the login prompt, most without a readable last post date. UNKNOWN recency.
+- Read with numbers. Halloween LinkedIn 967, Dariuz LinkedIn 899, Ethics & Boards 730, dotega 536,
+  Hula Hoop LinkedIn 489 and TikTok 781, Bunkz YouTube 547 with 239 videos and TikTok 3,743, UGC.NL
+  Facebook 120 and YouTube 4, Elevate Facebook 126, RentX YouTube 2 with 18 videos, Quadrise YouTube
+  48 with 4 videos, ScrubMarine TikTok 52.
+- One real finding. The TikTok link on ugc.nl, https://www.tiktok.com/@ugc.nl, answers "Couldn't find
+  this account", while the same tool read Bunkz's and Hula Hoop's TikTok in the same run. For a creator
+  video platform that's a credibility slip, but removing a link is a tweak, not a sale.
+- Verdict. No social angle passes the pay test for any of the remaining leads. The verdicts stand.
