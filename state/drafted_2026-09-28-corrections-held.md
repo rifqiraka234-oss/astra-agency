@@ -1,4 +1,4 @@
-# Two corrections, 2026-09-28. NOT SENT, Raka's call.
+# Two corrections, 2026-09-28. SENT 12:20Z on Raka's word (Lars act_EjP5hytHHXx3qRdSS, Dan act_fKgZKdEekW8K5iWMY).
 
 Both came out of the live recheck before the batch 16 nudges. Their nudges were pulled.
 
