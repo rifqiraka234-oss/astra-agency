@@ -1,6 +1,6 @@
 # Nudge to Ank — 6 days after the proposal
 
-**Subject:** Just a quick one
+**Subject:** Just checking it reached you
 
 ---
 
@@ -8,25 +8,31 @@
 
 Hi Ank,
 
-Just a short one. Tried you by phone a couple of times too, but I imagine things are busy over there.
+I tried you on the phone once or twice, then thought I'd better stop before I became a nuisance.
 
-Did the proposal reach you alright? No rush on any decision at all. I'd mainly like to know it arrived, and whether anything in it stood out to you, good or bad.
+Nothing urgent at all. I only wanted to make sure the proposal actually reached you. Email being email, you never quite know.
 
-And if it's simply a matter of waiting for Aart and Joyce, that's completely fine. Say the word and I'll sit tight.
+If you've had a chance to look at it, I'd be curious what you made of it. And if you haven't, or you're still waiting on Aart and Joyce, please don't feel you owe me a reply. These things take the time they take.
 
-Hope you're well.
+It was a really enjoyable conversation either way, and I'm glad we had it.
 
-Best,
+All the best,
 
 Raka
 
 ---
 
-## Notes
+## Why this one is warmer
 
-- **Signed by Raka alone**, not the three of you. A nudge is personal; a committee chasing her would feel heavier.
-- **"Say the word and I'll sit tight"** is the whole point of the email. It hands her a reply she can send in four seconds without having any news, which is the most likely reason she hasn't written.
-- **The phone calls are mentioned once, lightly**, and immediately excused. Left unsaid they look like nothing; laboured they look like pressure.
-- **No mention of the price, the deadline, or the proposal contents.** Adding those turns a nudge into a second pitch.
-- **Six days is not long here.** She's a volunteer, it's a small team, Aart and Joyce decide, and she told us she was meeting Panorama first. Perfectly likely nothing has happened yet and she has nothing to report.
-- If this gets no reply either, leave it a week and try Aart directly. Don't send a third to Ank.
+The previous draft was efficient. Efficient is not the same as warm, and she'll feel the difference.
+
+- **"before I became a nuisance"** — self-deprecating, and it takes the awkwardness out of the missed calls by naming it first.
+- **"Email being email, you never quite know"** — a small real aside. People say things like this; machines don't bother.
+- **"please don't feel you owe me a reply"** — the kindest thing in the email. She's a volunteer. The likeliest reason for silence is having no news and feeling she owes you one.
+- **"These things take the time they take"** — patient, slightly resigned, no pressure. Also true.
+- **"I'm glad we had it"** — warmth with nothing attached to it. No ask, no hook.
+- **Signed Raka alone.** Three names chasing one volunteer feels like a committee.
+
+Still nothing about price, timing or contents. A nudge that re-pitches isn't a nudge.
+
+**If this also goes quiet:** leave it a week, then try Aart directly. Don't send Ank a third.
