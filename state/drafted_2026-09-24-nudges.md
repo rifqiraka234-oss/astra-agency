@@ -160,3 +160,12 @@ The 141 leads who got a real opener and **never replied at all** have not been r
 thread by thread today. The 14 September batch inside it, roughly 40 people, is 10 days
 old and enters the 2 to 4 week window at the end of this month. That is the next batch,
 and it is openers going stale rather than nudges coming due.
+
+## CORRECTION, 2026-09-28
+
+The "Rapport only, no real pitch was ever made" list above is wrong for at least eleven names.
+Their threads were pulled one by one on 28 Sep and each holds a real pitch with no reply since.
+Leon Marzoll, Dan Lowe, Keivan Said, Oscar Van Der Maas, Tim De Groot and Nikolas Wagner were
+pitched on 13 Sep. Laurent Gourier and Jennifer K. on 2 Sep. Vikram Athalye on 31 Aug. Mahmut
+Özdemir on 30 Aug. Johannes Quandt on 11 Aug. They're stalled nudge candidates, not openers.
+Queue rows added with the activity ids.
