@@ -21,7 +21,7 @@ decides when it goes to Sanya and Georgia. Don't send it to HotGreen yourself.
 
 | File | What it is |
 |---|---|
-| `items.json` | All 45 items, 4 set menus, 3 monthly options and 5 milestones, with client copy, days, prices, dates and concept links. Load it straight into the page, don't retype it |
+| `items.json` | All 46 items, 4 set menus, 3 monthly options and 5 milestones, with client copy, days, prices, dates and concept links. Load it straight into the page, don't retype it |
 | `items.py` | Generates `items.json` and checks every piece of copy against our writing rules. Change a price or a date here, then run `python3 items.py` |
 | `gantt-preview.png` and `gantt-preview.html` | What the timeline should look like. Section 6 is the spec |
 | `gantt.mmd` | The same timeline as Mermaid, for a quick look |
@@ -131,7 +131,7 @@ Six family blocks, A to F, from `items.json` `families`. Inside each, one card p
 - when `links` is empty, your "Idea" tag and "We can sketch this for you" instead of a concept button
 
 Keep cards compact. Show `what`, the facts row and the buttons by default, and put "What you get" and
-"What changes" behind one "Details" toggle. That's the same two levels Raka's page used, and it keeps 45
+"What changes" behind one "Details" toggle. That's the same two levels Raka's page used, and it keeps 46
 cards readable. The `note_for_josh` field is for you only, never on the page. Once you've built the two
 new pages in section 7, point the B5 and C4 links at them in `items.py` and run it again.
 
@@ -211,6 +211,7 @@ The families and their item lists are generated below, so they match `items.json
 | F4 | Investor update helper | 2 | €1,000 | 8 to 19 Mar 2027 | À la carte | [Example screen](https://astra-hotgreen-proposal.netlify.app/img/ex/update.webp) | Astra |
 | F5 | Technical question assistant | 5 | €2,250 | Any time | À la carte | Idea | Josh |
 | F6 | Grant writing assistant | 4 | €1,750 | Any time | À la carte | Idea | Josh |
+| F7 | Prospect signal alerts | 4 | €1,750 | 19 to 30 Jul 2027 | À la carte | Idea | Astra |
 
 
 ### 2.6 Set menus
@@ -278,7 +279,7 @@ The Gantt chart, per section 6.
 
 ### 2.8 Prices at a glance
 
-One plain table of all 45 items, grouped by family, columns Code, Item, Days, Price, When. Generate it
+One plain table of all 46 items, grouped by family, columns Code, Item, Days, Price, When. Generate it
 from `items.json`. Under it
 
 ```copy
@@ -364,7 +365,7 @@ Concept work by Astra Agency for HotGreen Solutions. Confidential. Forms on the 
 
 Every item is priced at its days of work times €450, rounded to the nearest €250, excluding VAT. €450 sits
 between our internal day rates for development and for strategy and design. Set menus are the sum of
-their items, no discount. The four set menus together come to €45,000, all 45 items to €78,750. If Raka
+their items, no discount. The four set menus together come to €45,000, all 46 items to €80,500. If Raka
 changes a price or a day count, change it in `items.py`, run it, and the JSON and the checks update
 together. Don't edit prices by hand in the page.
 
@@ -868,6 +869,17 @@ Each application starts from your best previous answers.
 ```
 Note for you, not for the page. Idea, no concept yet.
 
+**F7 Prospect signal alerts**. 4 days, €1,750, Jul 2027, à la carte.
+```copy
+Prospect signal alerts
+A weekly alert when a target plant shows a buying signal.
+What you get
+Changes in the emissions trading registers, and capex or sustainability news at your target companies, checked every week and added to your CRM.
+What changes
+You hear about a plant planning a change while there’s still time to talk.
+```
+Note for you, not for the page. From the opportunities map, F5. Only worth it once outbound starts. No concept yet, show the Idea tag. Needs the Care option to keep running.
+
 
 ## 5. Fixes to your existing concept pages
 
@@ -901,7 +913,7 @@ published it, so **never show the June amount**.
 
 | Where | Change |
 |---|---|
-| `/site` milestones | Add "May 2026, 100+ Accelerator, selected for Cohort 7" and "Jun 2026, Acceleration round, Ponderosa Ventures joins, extending the pre seed round" and "2026, Innovate UK grant, to install and test a 50 kW heat pump at a CCEP site" |
+| `/site` milestones | Add "Mar 2026, 100+ Accelerator, joined Cohort 7" and "Jun 2026, Acceleration round, Ponderosa Ventures joins, extending the pre seed round" and "2026, Innovate UK grant, to install and test a 50 kW heat pump at a CCEP site" |
 | `/site/investors` £1.2M stat | "Pre seed round, October 2025, led by Empirical Ventures, extended in June 2026 when Ponderosa Ventures joined" |
 | `/site/news` company facts | Funding, "£1.2M pre seed, October 2025, extended June 2026" |
 | `/collateral/one-pager` Traction | Add "Extended in June 2026, when Ponderosa Ventures joined." and "An Innovate UK grant funds the CCEP demonstrator." |
@@ -915,7 +927,9 @@ Danone, Mondelēz and Unilever. CCEP isn't a sponsor. Never write "CCEP accelera
 **F3. "Patent-pending" can't be shown yet.** It's on `/site/investors` (Our solution and Defensibility),
 `/collateral/one-pager`, the `/site/news` boilerplate and seed deck slide 5. It's not on HotGreen's site
 or in the Empirical release, and we found no published application. Remove the words. Use what their
-Solutions page does say, "single stage compression for a full 110 °C lift" and "10 to 100% turndown". The
+Solutions page does say, "Single stage compression for a full 110˚C temperature lift lowers capex costs"
+and "10-to-100% turndown capacity", written without hyphens, for example "single stage compression for a
+full 110 °C temperature lift" and "10 to 100% turndown". The
 Defensibility line becomes "IsoStack compressor, with IP strategy led by Charles Clark, an IAM300 IP
 strategist, formerly at Atlas Copco and Centrica."
 
@@ -1066,6 +1080,7 @@ gantt
     E2 Site assessment tool :done, e2, 2027-03-29, 2027-05-07
     F3 Content helper :done, f3, 2027-04-05, 2027-04-23
     B10 Pilot and fleet dashboard :done, b10, 2027-07-05, 2027-08-13
+    F7 Prospect signal alerts :done, f7, 2027-07-19, 2027-07-30
     section Your milestones
     SDE++ round, Netherlands :crit, ms0, 2026-10-27, 2026-11-26
     EU heat auction opens, early December :crit, ms1, 2026-12-01, 2026-12-11
@@ -1123,7 +1138,7 @@ potential, opportunity, simply, actually, really.
 ## 9. Done means
 
 - [ ] Sections 2.1 to 2.11 are on the menu page in that order, with the `copy` blocks word for word.
-- [ ] 45 item cards, loaded from `items.json`. Set menu totals read €10,000, €11,750, €13,250 and €10,000.
+- [ ] 46 item cards, loaded from `items.json`. Set menu totals read €10,000, €11,750, €13,250 and €10,000.
 - [ ] Every "Open the concept" link opens (after login) or shows our example screen.
 - [ ] The Gantt chart matches section 6 and `gantt-preview.png`, tooltips work, no page sideways scroll at 390 px.
 - [ ] F1 to F11 done. The text of every page contains none of "End 2026", "end of 2026", "atent", "IETF",
@@ -1156,26 +1171,26 @@ Every fact the client copy uses. "Checked" is the last date the source was opene
 | Innovate UK grant 10192195, £399,076, "develop a 50-kWth innovative industrial heat pump system", "install and test their technology at the site of ... Coca-Cola Europacific Partners (CCEP)", project ends 31 May 2027 | https://gtr.ukri.org/projects?ref=10192195 | 28 Sep 2026 |
 | £1.2m pre seed round, led by Empirical Ventures, with CCEP, First Imagine! Ventures, The Conduit Impact Fund and Almanac Ventures, announced 16 October 2025 | https://www.empiricalventures.vc/news/hot-green-raise-preseed-to-build-ultra-efficient-industrial-heat-pumps | 28 Sep 2026 |
 | Georgia's quote, "Despite rising energy bills and its substantial carbon footprint, industrial heat has seen little innovation. It's the elephant in the climate-tech room." | Same Empirical page | 28 Sep 2026 |
-| Tech.eu covered the raise 20 Oct 2025, Vestbee 21 Oct 2025 | https://tech.eu/2025/10/20/hotgreen-solutions-raises-ps12m-for-ultra-efficient-heat-pumps/ and https://www.vestbee.com/insights/articles/hot-green-solutions-raises-1-2-m | 25 Sep 2026 |
+| Tech.eu covered the raise 20 Oct 2025, Vestbee 21 Oct 2025 | https://tech.eu/2025/10/20/hotgreen-solutions-raises-ps12m-for-ultra-efficient-heat-pumps/ and https://www.vestbee.com/insights/articles/hot-green-solutions-raises-1-2-m | 28 Sep 2026 |
 | Acceleration round, Ponderosa Ventures joins, "closed an acceleration round, expanding our pre-seed funding" | HotGreen LinkedIn post, 18 Jun 2026, https://www.linkedin.com/posts/hotgreensolutions_industrialdecarbonisation-cleantech-heatpumps-activity-7473328698776256512-TARH | 28 Sep 2026 |
 | Share allotment 12 June 2026 (the amount stays private) | Companies House filing history, company 16035994 | 28 Sep 2026 |
-| Selected for Cohort 7 of the 100+ Accelerator | HotGreen LinkedIn post, 27 May 2026, https://www.linkedin.com/posts/hotgreensolutions_100accelerator-cohort7-industrialheatpumps-activity-7465403197470273536-1Yb4 | 28 Sep 2026 |
+| Selected for Cohort 7 of the 100+ Accelerator. The cohort kicked off in March 2026 at AB InBev in Leuven, and was announced publicly on 27 May 2026 | HotGreen LinkedIn post, 27 May 2026, https://www.linkedin.com/posts/hotgreensolutions_100accelerator-cohort7-industrialheatpumps-activity-7465403197470273536-1Yb4 and https://www.100accelerator.com/news/wrap-up-kick-off-cohort-7 | 28 Sep 2026 |
 | 100+ is co-sponsored by AB InBev, The Coca-Cola Company, Colgate-Palmolive, Danone, Mondelēz and Unilever | https://www.100accelerator.com/ | 28 Sep 2026 |
 | Homepage names none of its backers in text (Empirical, CCEP, Coca, Europacific, Ponderosa, Innovate all count zero, while "Pasteurisation" and "mission" are found) | https://www.hotgreensolutions.com/ | 28 Sep 2026 |
-| 30% on Solutions, 40% "compared to competitors" on LinkedIn, "up to 50%" at Empirical | Solutions page, HotGreen LinkedIn company page, Empirical page | Solutions 28 Sep, LinkedIn 25 Sep, Empirical 28 Sep 2026 |
-| €250k a year for a typical facility on Solutions, $250,000 per MW on LinkedIn, and the footnote "Numbers provided are estimates based on projected product performance and operational data from a typical facility." | Solutions page, LinkedIn company page | 28 Sep and 25 Sep 2026 |
+| 30% on Solutions, 40% "compared to competitors" on LinkedIn, "up to 50%" at Empirical | Solutions page, HotGreen LinkedIn company page https://www.linkedin.com/company/hotgreensolutions ("reduce energy costs by 40% compared to competitors, equivalent to $250,000 savings per MW annually"), Empirical page | 28 Sep 2026 |
+| €250k a year for a typical facility on Solutions, $250,000 per MW on LinkedIn, and the footnote "Numbers provided are estimates based on projected product performance and operational data from a typical facility." | Solutions page, LinkedIn company page | 28 Sep 2026 |
 | The HotStack 120 and 220 spec table is an image, "HotStack 120" doesn't appear in the page text | Solutions page | 28 Sep 2026 |
 | Spec values, COP 2.8 from air (10 to 120 °C), 4.5 from 50 °C waste heat, 2 bar and 25 bar, 0.5 MW stackable to 10 MW, "Currently taking 2026 orders for 2027 delivery", HotStack 220 2027 orders for 2028 delivery | The spec image on the Solutions page, read cell by cell | 25 Sep 2026 |
 | About 19% of global emissions, heat pumps first deployed 150 years ago | HotGreen homepage | 28 Sep 2026 |
 | Seed round around Q3 2027, first deployment in a Coca-Cola plant "around quarter two, quarter one quarter 2 of 2027", "a very credible and reliable equipment provider rather than a startup" | Call with Sanya, 24 Sep 2026, transcript | 28 Sep 2026 |
 | SDE++ 2026 round opens 27 Oct 2026 09.00 and closes 26 Nov 2026 17.00, budget €8bn | https://www.rvo.nl/subsidies-financiering/sde/aanvragen | 28 Sep 2026 |
-| SDE++ industrial heat pump category, at least 500 kWth, COP at least 2.3, halogen free refrigerant, heat used on the same site | RVO, CO2 arme warmte page | 25 Sep 2026 |
+| SDE++ industrial heat pump category, at least 500 kWth, COP at least 2.3, halogen free refrigerant, heat used on the same site, greenhouses don't count as industry | https://www.rvo.nl/subsidies-financiering/sde/aanvragen/co2-arme-warmte | 28 Sep 2026 |
 | EU heat auction, €1bn from EU ETS revenues, "expected to open to bidders in early December 2026", fixed premium per tonne of CO2 for up to five years | https://climate.ec.europa.eu/news-other-reads/news/commission-publishes-terms-and-conditions-eur1-billion-industrial-heat-decarbonisation-auction-2026-09-24_en | 28 Sep 2026 |
-| Heat pumps with a COP of at least 1.5 get a 25% bid bonus "for the purpose of ranking only". The 100 to 400 °C basket needs at least 3 MWth, the 80 to 100 °C basket at least 5 MWth and heat pumps only. Projects must be in the EEA, consortium members can come from anywhere. No stacking with other public capex or opex support | IF26 Terms and Conditions v1.0, https://climate.ec.europa.eu/document/download/00753a0b-1de3-4e9c-aa47-799d811bede9_en?filename=if26_heat_auction_tc_en.pdf | 25 Sep 2026 |
+| Heat pumps with a COP of at least 1.5 get a 25% bid bonus "for the purpose of ranking only". The 100 to 400 °C basket needs at least 3 MWth. The 80 to 100 °C basket needs at least 5 MWth and is open only to heat pumps with a COP above 1.5, direct renewables and nuclear heat. Projects must be in the EEA, consortium members can come from anywhere. No stacking with other public capex or opex support | IF26 Terms and Conditions v1.0, https://climate.ec.europa.eu/document/download/00753a0b-1de3-4e9c-aa47-799d811bede9_en?filename=if26_heat_auction_tc_en.pdf | 28 Sep 2026 |
 | UK IETF closed July 2025, "No successor fund is planned" | https://www.gov.uk/government/collections/industrial-energy-transformation-fund | 28 Sep 2026 |
 | UK full expensing, companies only, new and unused plant bought from 1 April 2023, not cars | https://www.gov.uk/capital-allowances/full-expensing | 28 Sep 2026 |
 | UK 40% first year allowance, new and unused main rate plant bought on or after 1 January 2026, not cars, not limited to companies | https://www.gov.uk/capital-allowances/40-first-year-allowance | 28 Sep 2026 |
-| UK emissions trading register, 68 open food and drink sites (NACE 10 and 11) run by 50 companies. Oils and fats 10, dairies 8, spirits 8, potatoes 6, beer 5, sugar 5, malt 5, grain milling 4, eleven other types 17 | UK ETS Compliance Report 2026, counted twice by two methods, sums to 68 | 25 Sep 2026 |
+| UK emissions trading register, 68 open food and drink sites (NACE 10 and 11) run by 50 companies. Oils and fats 10, dairies 8, spirits 8, potatoes 6, beer 5, sugar 5, malt 5, grain milling 4, eleven other types 17 | UK ETS Compliance Report 2026, open operator accounts with NACE 10 or 11, counted again from the register file on 28 Sep 2026, same result, and the same method finds 27 steel sites as a control | 28 Sep 2026 |
 | Default energy prices for the calculator | Section 5, F9, raw Eurostat responses in this folder, DESNZ table 3.4.2 | 28 Sep 2026 |
 | Company number 16035994, registered office 167 to 169 Great Portland Street, 5th Floor, London W1W 5PF | Companies House | 25 Sep 2026 |
 

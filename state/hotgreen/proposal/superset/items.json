@@ -1237,6 +1237,26 @@
    "windows": [],
    "links": [],
    "note_for_josh": "Idea, no concept yet."
+  },
+  {
+   "code": "F7",
+   "family": "F",
+   "name": "Prospect signal alerts",
+   "what": "A weekly alert when a target plant shows a buying signal.",
+   "get": "Changes in the emissions trading registers, and capex or sustainability news at your target companies, checked every week and added to your CRM.",
+   "changes": "You hear about a plant planning a change while there’s still time to talk.",
+   "origin": "Astra",
+   "days": 4,
+   "price_eur": 1750,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-07-19",
+     "end": "2027-07-30"
+    }
+   ],
+   "links": [],
+   "note_for_josh": "From the opportunities map, F5. Only worth it once outbound starts. No concept yet, show the Idea tag. Needs the Care option to keep running."
   }
  ]
 }

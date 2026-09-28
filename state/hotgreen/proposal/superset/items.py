@@ -314,6 +314,11 @@ ITEMS = [
      'Applications drafted from your approved text blocks. You stay the author.',
      'Each application starts from your best previous answers.',
      'Josh', 4, None, [], [], 'Idea, no concept yet.'),
+    ('F7', 'Prospect signal alerts', 'A weekly alert when a target plant shows a buying signal.',
+     'Changes in the emissions trading registers, and capex or sustainability news at your target companies, checked every week and added to your CRM.',
+     'You hear about a plant planning a change while there’s still time to talk.',
+     'Astra', 4, None, [('2027-07-19', '2027-07-30')], [],
+     'From the opportunities map, F5. Only worth it once outbound starts. No concept yet, show the Idea tag. Needs the Care option to keep running.'),
 ]
 
 # name, start, end (None for a point), certainty note, source
@@ -344,7 +349,7 @@ def build():
                           windows=[dict(start=a, end=b) for a, b in wins], links=[dict(label=l, url=u) for l, u in links],
                           note_for_josh=note))
     codes = [i['code'] for i in items]
-    assert len(codes) == len(set(codes)) == 45
+    assert len(codes) == len(set(codes)) == 46
     menus = []
     for sid, name, who, when, line, rec in SET_MENUS:
         its = sorted([i for i in items if i['set_menu'] == sid], key=lambda i: (i['windows'][0]['start'], i['code']))

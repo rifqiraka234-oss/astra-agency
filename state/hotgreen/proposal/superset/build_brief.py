@@ -125,6 +125,10 @@ assert n - 1 == 12
 FIXES = '\n'.join(fx)
 
 tpl = open(os.path.join(HERE, 'brief_template.md')).read()
+for k, v in dict(N_ITEMS=str(len(items)), TOTAL_MENUS='€{:,}'.format(sum(m['price_eur'] for m in menus)),
+                 TOTAL_ALL='€{:,}'.format(sum(i['price_eur'] for i in items))).items():
+    assert '{{' + k + '}}' in tpl, k
+    tpl = tpl.replace('{{' + k + '}}', v)
 for k, v in dict(ITEMS_TABLE=ITEMS_TABLE, MENUS_TABLE=MENUS_TABLE, MONTHLY_TABLE=MONTHLY_TABLE,
                  ITEM_COPY=ITEM_COPY, MERMAID=MERMAID, FIXES=FIXES).items():
     assert tpl.count('{{' + k + '}}') == 1, k
