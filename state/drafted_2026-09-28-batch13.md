@@ -292,6 +292,8 @@ Worth a call this week?
 
 ## Held for Raka's phone in the Netherlands, the UGC.NL route
 
+**SUPERSEDED the same evening.** Raka's NL screenshots show a refuse button on the first layer for Cleverise, ASK Wear and Leadership Through Data, so the consent route is dead for all three. All three were rejudged on design and drafted in `state/drafted_2026-09-28-batch14-design-roasts.md`.
+
 ```sweep
 lead: Peter Van Gulick, co founder of Cleverise (Leiden), AI applications for the process industry, ctc_ExuGxPLfni8pCkz4h. He asked "What business do you have?" on 4 Sep and our answer ended on a question he never answered
 website: 14 URLs crawled by tools/crawl.py, a modern WordPress site with news posts on Alfred for terminals and Q88 document processing, https://cleverise.nl/news/ , strong on substance
