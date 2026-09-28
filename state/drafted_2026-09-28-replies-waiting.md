@@ -1,4 +1,12 @@
-# What came back since the 25th, and the five that need an answer. 2026-09-28. NOT SENT.
+<!-- GATE ARCHIVED -->
+# What came back since the 25th. 2026-09-28. FOUR SENT, STEVEN HELD.
+
+Raka approved Ciara, Tim, Jelle and Alisia and they went out at 13 49 to 13 50Z, activities
+`act_4LrEqTTjrRtBokWvX`, `act_GZqAcqXaBkNMedegB`, `act_WGuPuFnFqMe6qK8vC` and
+`act_8c5ewSvxWpjbKXokb`. Every thread re pulled before and after, each grew by exactly one.
+
+**Steven Garratt is held on Raka's word, not sent.** Draft 2 below stays unsent. It commits
+to building the Qualigraf UK page this week, so it needs the build decision first.
 
 Method. `get_inbox_conversations` with a date filter of 25 to 28 Sep returned 33 threads.
 Every thread below was then pulled per contact with `get_inbox_conversation` and paged to
