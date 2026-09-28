@@ -197,6 +197,27 @@ The deck still prints 5,000 to 50,000, and Raka's live instruction outranks the 
 
 ---
 
+## 1B. QUOTE THEIR VERB, never a stronger one (Sylvia Randazzo, 2026-09-28)
+
+L'Office des Artistes say **"Faciliter l'accès à un réseau de professionnels (galeries,
+collectionneurs, institutions)"**, facilitate access. We wrote **"the site promises access to
+galleries, collectors and institutions"** and built the criticism on that. She replied that the
+site promises no such thing, that we did not know what we were talking about, and asked never to
+be contacted again.
+
+The substance was right. Every fact checked out live, the sentence is on /qui-sommes-nous, the
+900 euros is on /services-loa, and nothing and nobody is named on any of the four public pages.
+**We lost the lead on one verb.**
+
+So, before any message that criticises a claim the lead makes:
+
+- **Paste their sentence into the draft first, in their language, then write around it.** If the
+  criticism only works once the verb is upgraded, there is no criticism.
+- Offer, facilitate, help with and support are not promise, guarantee or deliver. Aim at what
+  they wrote, never at the strongest reading of it.
+- A criticism the lead ignored once does not get sent again fourteen days later in the same
+  words. Silence is an answer. Nudge on something new or close the row.
+
 ## 1A. ONE THREAD. The whole message is one problem, start to finish (Raka, 2026-09-25)
 
 His words, "i dont understand the angle, how does the website, then suddenly go to the build
