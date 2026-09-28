@@ -26,6 +26,12 @@ collateral (seed deck 16 slides, sales deck 12 slides, one-pager, LinkedIn carou
 
 ## What is wrong or unsupported
 
+0. **UK IETF offered as a funding route** in the sales deck (slide 10), the ROI report, the subsidy guides
+   and LinkedIn post c7. gov.uk, last updated 25 June 2026, "IETF closed, July 2025 ... No successor fund
+   is planned." Reopened 28 Sep 2026. The live UK routes are capital allowances, full expensing for
+   companies (new plant bought from 1 April 2023) and the 40% first year allowance (new main rate plant
+   bought from 1 January 2026), both reopened on gov.uk 28 Sep 2026.
+
 1. **Pilot date "End 2026".** On the home milestones, investor stats, news facts, one-pager, seed deck
    (slides 9, 11, 12), sales deck (slide 9) and a social image. Sanya on 24 Sep, transcript line 106,
    "aiming to deploy around quarter two, quarter one quarter 2 of 2027". The Innovate UK project runs to
@@ -37,8 +43,13 @@ collateral (seed deck 16 slides, sales deck 12 slides, one-pager, LinkedIn carou
 3. **"Patent-pending" IsoStack.** On the investors page, one-pager, press boilerplate and seed deck
    slide 5. Not on HotGreen's site, not in the Empirical release. research/opportunities/6 and 1 list it
    as unverified. Ask HotGreen before it's used.
-4. **The Innovate UK grant and the CCEP 100+ Accelerator appear nowhere.** Both are among their
-   strongest public proof points (GtR project 10192195, Sanya on the call).
+4. **The Innovate UK grant and the 100+ Accelerator appear nowhere.** Both are among their strongest
+   public proof points. The grant is GtR project 10192195, £399,076, a 50 kWth heat pump installed and
+   tested at a CCEP site. HotGreen was selected for Cohort 7 of the 100+ Accelerator (company post
+   27 May 2026), which is AB InBev's programme co-sponsored with The Coca-Cola Company, Colgate-Palmolive,
+   Danone, Mondelēz and Unilever (100accelerator.com, 28 Sep 2026). CCEP is not a sponsor, so never
+   write "CCEP accelerator". CORRECTED 28 Sep 2026, the first version of this row said "CCEP 100+
+   Accelerator", which was wrong.
 5. **Internal inconsistencies.** Emissions share 19% on home and one-pager, "19 to 20%" on investors.
    Boiler efficiency 90% on home, 85% in the calculator and sales deck.
 6. **Placeholders we can already fill.** Company number 16035994 and registered office 167 to 169 Great

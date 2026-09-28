@@ -1,0 +1,1242 @@
+{
+ "generated": "2026-09-28",
+ "assumed_start": "2026-10-12",
+ "day_rate_eur": 450,
+ "price_rule": "effort days x EUR 450, rounded to the nearest EUR 250, excluding VAT",
+ "families": [
+  {
+   "letter": "A",
+   "name": "We fix it",
+   "line": "Fixes to your current website."
+  },
+  {
+   "letter": "B",
+   "name": "Investor proof",
+   "line": "A website update for investors."
+  },
+  {
+   "letter": "C",
+   "name": "Increase your credibility",
+   "line": "Branding and a website redesign."
+  },
+  {
+   "letter": "D",
+   "name": "Let prospects and investors see the proof",
+   "line": "Business case tools on your website."
+  },
+  {
+   "letter": "E",
+   "name": "Optimise your inbound and outbound flow",
+   "line": "Website forms, a CRM and outreach."
+  },
+  {
+   "letter": "F",
+   "name": "AI helpers",
+   "line": "AI tools that do the weekly reading and drafting."
+  }
+ ],
+ "set_menus": [
+  {
+   "id": "SM1",
+   "name": "Investor ready",
+   "for_whom": "For the raise",
+   "when": "Oct to Nov 2026, four weeks",
+   "line": "Make the proof investors look for easy to find, with one set of numbers behind it.",
+   "recommended": true,
+   "items": [
+    "A3",
+    "B1",
+    "B2",
+    "B3",
+    "B6",
+    "B4",
+    "B5"
+   ],
+   "days": 22,
+   "price_eur": 10000,
+   "start": "2026-10-12",
+   "end": "2026-11-06"
+  },
+  {
+   "id": "SM2",
+   "name": "Look the part",
+   "for_whom": "For buyers and investors",
+   "when": "Nov 2026 to Feb 2027",
+   "line": "Look like the equipment supplier you are, on the site and in every document.",
+   "recommended": false,
+   "items": [
+    "C1",
+    "C5",
+    "C2",
+    "C3",
+    "C4"
+   ],
+   "days": 26,
+   "price_eur": 11750,
+   "start": "2026-11-16",
+   "end": "2027-02-12"
+  },
+  {
+   "id": "SM3",
+   "name": "Pipeline",
+   "for_whom": "For plant leads",
+   "when": "Dec 2026 to Mar 2027",
+   "line": "Turn interest from plants into enquiries you can count and follow up.",
+   "recommended": false,
+   "items": [
+    "C8",
+    "D1",
+    "E1",
+    "D6",
+    "E3",
+    "C7"
+   ],
+   "days": 30,
+   "price_eur": 13250,
+   "start": "2026-12-07",
+   "end": "2027-03-05"
+  },
+  {
+   "id": "SM4",
+   "name": "Pilot and seed",
+   "for_whom": "For the demonstrator and the seed round",
+   "when": "Jan to Sep 2027",
+   "line": "Collect the demonstrator evidence, tell the story when it’s in, and get ready for the seed round.",
+   "recommended": false,
+   "items": [
+    "B8",
+    "B7",
+    "B9",
+    "E4",
+    "C9",
+    "E5"
+   ],
+   "days": 23,
+   "price_eur": 10000,
+   "start": "2027-01-11",
+   "end": "2027-07-30"
+  }
+ ],
+ "monthly": [
+  {
+   "name": "Care",
+   "eur_per_month": 650,
+   "what": "Keeps the calculator, the funding finder and the AI helpers running and up to date, plus small changes to the site."
+  },
+  {
+   "name": "Content",
+   "eur_per_month": 650,
+   "what": "The monthly thirty minute interview turned into a month of LinkedIn posts (C8)."
+  },
+  {
+   "name": "Outbound",
+   "eur_per_month": 1300,
+   "what": "Campaigns to screened sites, written and run by us (E5)."
+  }
+ ],
+ "milestones": [
+  {
+   "name": "SDE++ round, Netherlands",
+   "start": "2026-10-27",
+   "end": "2026-11-26",
+   "certainty": "fixed",
+   "source": "RVO, rvo.nl SDE++ aanvragen"
+  },
+  {
+   "name": "EU heat auction opens, early December",
+   "start": "2026-12-01",
+   "end": "2026-12-11",
+   "certainty": "expected",
+   "source": "European Commission news, 24 Sep 2026"
+  },
+  {
+   "name": "Demonstrator goes in, first half of 2027",
+   "start": "2027-01-04",
+   "end": "2027-06-30",
+   "certainty": "window",
+   "source": "Sanya, call of 24 Sep 2026"
+  },
+  {
+   "name": "Innovate UK project ends",
+   "start": "2027-05-31",
+   "end": null,
+   "certainty": "fixed",
+   "source": "UKRI GtR 10192195"
+  },
+  {
+   "name": "Seed round, around Q3 2027",
+   "start": "2027-07-01",
+   "end": "2027-09-30",
+   "certainty": "window",
+   "source": "Sanya, call of 24 Sep 2026"
+  }
+ ],
+ "items": [
+  {
+   "code": "A1",
+   "family": "A",
+   "name": "The fix list",
+   "what": "Twelve fixes to your current site, two of them legal.",
+   "get": "The list, checked on your live site on 25 September 2026, with what to change and where.",
+   "changes": "You can make the quick fixes yourselves this week.",
+   "origin": "Astra",
+   "days": 0,
+   "price_eur": 0,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2026-10-05",
+     "end": "2026-10-09"
+    }
+   ],
+   "links": [
+    {
+     "label": "The fix list",
+     "url": "https://astra-hotgreen-proposal.netlify.app/fixes"
+    }
+   ],
+   "note_for_josh": "Free. Port the twelve items from Appendix C. Recheck each one on the live site the day the page ships, Sanya planned to fix titles and SEO herself."
+  },
+  {
+   "code": "A2",
+   "family": "A",
+   "name": "We make the fixes",
+   "what": "We make the twelve fixes in your Framer site.",
+   "get": "Titles, alt text, headings, the spec table as real text, structured data for search, and analytics set up.",
+   "changes": "Search engines and screen readers can read every page, and nobody at HotGreen spends an afternoon on it.",
+   "origin": "Both",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2026-10-12",
+     "end": "2026-10-16"
+    }
+   ],
+   "links": [
+    {
+     "label": "Spec table as text",
+     "url": "https://hotgreen.astraagency.nl/site/solutions"
+    }
+   ],
+   "note_for_josh": "Your Foundation fixes, minus the legal pages, which are now A3. Optional, Sanya said she would try the quick fixes herself."
+  },
+  {
+   "code": "A3",
+   "family": "A",
+   "name": "Legal pages and company details",
+   "what": "The pages a UK company website needs.",
+   "get": "A privacy notice linked from every form, a cookie policy and banner, website terms, an accessibility statement, and your company details in the footer. Drafts for your lawyer to approve.",
+   "changes": "The two legal gaps on the fix list are closed.",
+   "origin": "Both",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": "SM1",
+   "windows": [
+    {
+     "start": "2026-10-12",
+     "end": "2026-10-23"
+    }
+   ],
+   "links": [
+    {
+     "label": "Privacy policy",
+     "url": "https://hotgreen.astraagency.nl/site/privacy"
+    },
+    {
+     "label": "Cookie policy",
+     "url": "https://hotgreen.astraagency.nl/site/cookies"
+    }
+   ],
+   "note_for_josh": "Your Legal drafts. Fill the company number and registered office from Appendix B."
+  },
+  {
+   "code": "B1",
+   "family": "B",
+   "name": "One set of numbers",
+   "what": "A shared fact sheet.",
+   "get": "Every public figure agreed once with your engineers, with its basis and date written beside it. The site, the decks, LinkedIn and the calculator all use it.",
+   "changes": "Three savings figures become one, with its basis.",
+   "origin": "Both",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": "SM1",
+   "windows": [
+    {
+     "start": "2026-10-12",
+     "end": "2026-10-16"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/numbers.webp"
+    }
+   ],
+   "note_for_josh": "Your Numbers sheet. It has no concept page yet, link our screen or build one."
+  },
+  {
+   "code": "B2",
+   "family": "B",
+   "name": "Homepage proof",
+   "what": "A new homepage story.",
+   "get": "Your backers named in words, a dated timeline from founding to first deliveries, and how the HotStack works in one diagram.",
+   "changes": "An investor finds the technology, the traction and the company without leaving the page.",
+   "origin": "Both",
+   "days": 4,
+   "price_eur": 1750,
+   "set_menu": "SM1",
+   "windows": [
+    {
+     "start": "2026-10-19",
+     "end": "2026-10-30"
+    }
+   ],
+   "links": [
+    {
+     "label": "Home",
+     "url": "https://hotgreen.astraagency.nl/site"
+    }
+   ],
+   "note_for_josh": "Your Website upgrade, homepage part. Apply the milestone fixes in section 5."
+  },
+  {
+   "code": "B3",
+   "family": "B",
+   "name": "Investor page",
+   "what": "A page just for investors, with a request form.",
+   "get": "Who backs you, your stage, the investment case, and a form that goes straight to Georgia. The deck goes out on request.",
+   "changes": "Investors get their own route instead of the form everyone shares.",
+   "origin": "Both",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": "SM1",
+   "windows": [
+    {
+     "start": "2026-10-19",
+     "end": "2026-10-30"
+    }
+   ],
+   "links": [
+    {
+     "label": "Investors",
+     "url": "https://hotgreen.astraagency.nl/site/investors"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "B4",
+   "family": "B",
+   "name": "News and press",
+   "what": "A news page and a press kit.",
+   "get": "Every article about HotGreen so far, approved company facts, logos and photos, and a press contact.",
+   "changes": "The coverage that already exists lives on your own site.",
+   "origin": "Both",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": "SM1",
+   "windows": [
+    {
+     "start": "2026-10-26",
+     "end": "2026-11-06"
+    }
+   ],
+   "links": [
+    {
+     "label": "News",
+     "url": "https://hotgreen.astraagency.nl/site/news"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "B5",
+   "family": "B",
+   "name": "Monthly update page",
+   "what": "A public version of Georgia’s monthly investor email.",
+   "get": "A page and a short template. Each month the private email gets a short public post.",
+   "changes": "A dated post every month from now to the seed round, taken from an email she already writes.",
+   "origin": "Astra",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": "SM1",
+   "windows": [
+    {
+     "start": "2026-11-02",
+     "end": "2026-11-06"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/monthly.webp"
+    }
+   ],
+   "note_for_josh": "New to your site. Build a concept page at /site/updates in the same style as News."
+  },
+  {
+   "code": "B6",
+   "family": "B",
+   "name": "Seed deck and one pager",
+   "what": "Your investor deck in your brand.",
+   "get": "A seed deck with an editable master, a one page investor summary and a short update deck.",
+   "changes": "Every investor document tells the same story with the same numbers.",
+   "origin": "Josh",
+   "days": 6,
+   "price_eur": 2750,
+   "set_menu": "SM1",
+   "windows": [
+    {
+     "start": "2026-10-19",
+     "end": "2026-11-06"
+    }
+   ],
+   "links": [
+    {
+     "label": "Seed deck",
+     "url": "https://hotgreen.astraagency.nl/collateral/deck"
+    },
+    {
+     "label": "One pager",
+     "url": "https://hotgreen.astraagency.nl/collateral/one-pager"
+    }
+   ],
+   "note_for_josh": "Your Deck design."
+  },
+  {
+   "code": "B7",
+   "family": "B",
+   "name": "Data room and investor tracker",
+   "what": "A seed data room with tracked access.",
+   "get": "Folders and an index ready for your lawyers and accountants to fill, a simple investor tracker and an update template.",
+   "changes": "Diligence runs from one link, and you see which investor read what.",
+   "origin": "Both",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": "SM4",
+   "windows": [
+    {
+     "start": "2027-06-07",
+     "end": "2027-06-18"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/dataroom.webp"
+    }
+   ],
+   "note_for_josh": "Our Data room plus your Investor ops."
+  },
+  {
+   "code": "B8",
+   "family": "B",
+   "name": "Demonstrator evidence plan",
+   "what": "What each approver needs to see from the demonstrator.",
+   "get": "Before the install, a one page list per approver, from engineering to finance, of the data to collect.",
+   "changes": "The demonstrator collects the evidence investors and buyers will ask for.",
+   "origin": "Astra",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": "SM4",
+   "windows": [
+    {
+     "start": "2027-01-11",
+     "end": "2027-01-22"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/evidence.webp"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "B9",
+   "family": "B",
+   "name": "Demonstrator results page",
+   "what": "The results page, once the unit runs.",
+   "get": "A page with the results each approver asked for, with live data if CCEP agrees.",
+   "changes": "Anyone signing off an order or an investment sees the evidence in one place.",
+   "origin": "Astra",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": "SM4",
+   "windows": [
+    {
+     "start": "2027-06-07",
+     "end": "2027-07-02"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/evidence.webp"
+    }
+   ],
+   "note_for_josh": "Starts when the first data arrives. The bar is a planning estimate."
+  },
+  {
+   "code": "B10",
+   "family": "B",
+   "name": "Pilot and fleet dashboard",
+   "what": "A live dashboard for installed units.",
+   "get": "COP, uptime and CO₂ avoided per site, a private view for the data room and a public highlights view.",
+   "changes": "Every installed HotStack keeps proving itself.",
+   "origin": "Josh",
+   "days": 10,
+   "price_eur": 4500,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-07-05",
+     "end": "2027-08-13"
+    }
+   ],
+   "links": [
+    {
+     "label": "Dashboard",
+     "url": "https://hotgreen.astraagency.nl/tools/dashboard"
+    }
+   ],
+   "note_for_josh": "Shown with simulated data, keep saying so."
+  },
+  {
+   "code": "C1",
+   "family": "C",
+   "name": "Positioning and message",
+   "what": "A workshop and a short message guide.",
+   "get": "One clear line on what HotGreen makes and who it’s for, the proof ranked behind it, and the mission on top. Built from your brand guidelines.",
+   "changes": "Every page, deck and post tells the same story.",
+   "origin": "Astra",
+   "days": 5,
+   "price_eur": 2250,
+   "set_menu": "SM2",
+   "windows": [
+    {
+     "start": "2026-11-16",
+     "end": "2026-11-27"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/positioning.webp"
+    }
+   ],
+   "note_for_josh": "Run with Luna, per the debrief. Do not name Luna in client copy unless Raka says so."
+  },
+  {
+   "code": "C2",
+   "family": "C",
+   "name": "New look in Framer",
+   "what": "A redesign of the pages you choose.",
+   "get": "New layouts built inside your Framer site, from the concept pages you’ve seen here. You keep editing them yourselves.",
+   "changes": "The site looks like the equipment supplier you are.",
+   "origin": "Both",
+   "days": 10,
+   "price_eur": 4500,
+   "set_menu": "SM2",
+   "windows": [
+    {
+     "start": "2027-01-04",
+     "end": "2027-01-29"
+    }
+   ],
+   "links": [
+    {
+     "label": "The concept site",
+     "url": "https://hotgreen.astraagency.nl/site"
+    }
+   ],
+   "note_for_josh": "Your whole concept site is the example for this item."
+  },
+  {
+   "code": "C3",
+   "family": "C",
+   "name": "Product pages and datasheets",
+   "what": "A page and a datasheet for each HotStack model.",
+   "get": "HotStack 120 and 220 pages with the specs as real text, a PDF datasheet each, and a page per application, pasteurisation, brewing, distillation, drying and sterilisation.",
+   "changes": "A plant engineer can read, search and download the specs, which today sit inside one image.",
+   "origin": "Both",
+   "days": 6,
+   "price_eur": 2750,
+   "set_menu": "SM2",
+   "windows": [
+    {
+     "start": "2027-01-18",
+     "end": "2027-02-05"
+    }
+   ],
+   "links": [
+    {
+     "label": "Solutions",
+     "url": "https://hotgreen.astraagency.nl/site/solutions"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "C4",
+   "family": "C",
+   "name": "Working with HotGreen",
+   "what": "A page for procurement teams.",
+   "get": "Company details, the warranty and service approach, spares, the certification route and how an install runs.",
+   "changes": "Finance, legal and procurement find their answers before they need a call.",
+   "origin": "Astra",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": "SM2",
+   "windows": [
+    {
+     "start": "2027-02-01",
+     "end": "2027-02-12"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/working.webp"
+    }
+   ],
+   "note_for_josh": "New to your site. Build a concept page at /site/working-with-us."
+  },
+  {
+   "code": "C5",
+   "family": "C",
+   "name": "Product visuals",
+   "what": "Two diagrams you can use everywhere.",
+   "get": "How the HotStack works, and a boiler against HotStack comparison, as web graphics and slides.",
+   "changes": "The idea lands in seconds, on the site and in every deck.",
+   "origin": "Josh",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": "SM2",
+   "windows": [
+    {
+     "start": "2026-11-30",
+     "end": "2026-12-11"
+    }
+   ],
+   "links": [
+    {
+     "label": "How it works",
+     "url": "https://hotgreen.astraagency.nl/site"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "C6",
+   "family": "C",
+   "name": "Careers page",
+   "what": "A page for the people you’re hiring.",
+   "get": "Open roles, how you work and what you offer, with an application form.",
+   "changes": "Engineers see a company worth joining.",
+   "origin": "Josh",
+   "days": 1,
+   "price_eur": 500,
+   "set_menu": null,
+   "windows": [],
+   "links": [
+    {
+     "label": "Careers",
+     "url": "https://hotgreen.astraagency.nl/site/careers"
+    }
+   ],
+   "note_for_josh": "Their workshop is in Datchet, per their job ad. Mark any location as a placeholder."
+  },
+  {
+   "code": "C7",
+   "family": "C",
+   "name": "Sales deck and technical brief",
+   "what": "Documents for plant buyers.",
+   "get": "A customer sales deck, a technical brief for engineers and a one page summary for the finance director, as templates with first drafts written with you.",
+   "changes": "Every buyer gets the right document for their role.",
+   "origin": "Josh",
+   "days": 6,
+   "price_eur": 2750,
+   "set_menu": "SM3",
+   "windows": [
+    {
+     "start": "2027-02-15",
+     "end": "2027-03-05"
+    }
+   ],
+   "links": [
+    {
+     "label": "Sales deck",
+     "url": "https://hotgreen.astraagency.nl/collateral/sales-deck"
+    }
+   ],
+   "note_for_josh": "Your Customer sales deck plus Technical brief and CFO summary. Remove the IETF slide content, section 5."
+  },
+  {
+   "code": "C8",
+   "family": "C",
+   "name": "LinkedIn content engine",
+   "what": "A monthly posting plan and templates.",
+   "get": "Post and carousel templates in your brand, the first month of posts, and a monthly thirty minute interview we turn into posts. You post them yourselves.",
+   "changes": "The company page and Georgia’s profile carry every milestone as it happens.",
+   "origin": "Both",
+   "days": 4,
+   "price_eur": 1750,
+   "set_menu": "SM3",
+   "windows": [
+    {
+     "start": "2026-12-07",
+     "end": "2026-12-18"
+    }
+   ],
+   "links": [
+    {
+     "label": "Carousels",
+     "url": "https://hotgreen.astraagency.nl/collateral/carousels"
+    },
+    {
+     "label": "Posts",
+     "url": "https://hotgreen.astraagency.nl/collateral/posts"
+    }
+   ],
+   "note_for_josh": "Setup price only. The monthly interview is the Content option, EUR 650 a month."
+  },
+  {
+   "code": "C9",
+   "family": "C",
+   "name": "Pilot story",
+   "what": "The demonstrator story, told when the results are in.",
+   "get": "A case study page, a press release, a LinkedIn campaign and media outreach, subject to CCEP’s approval. A short video is optional and priced separately.",
+   "changes": "The results reach investors and buyers in the months before the seed round.",
+   "origin": "Josh",
+   "days": 8,
+   "price_eur": 3500,
+   "set_menu": "SM4",
+   "windows": [
+    {
+     "start": "2027-07-05",
+     "end": "2027-07-30"
+    }
+   ],
+   "links": [
+    {
+     "label": "Social images",
+     "url": "https://hotgreen.astraagency.nl/collateral/social"
+    }
+   ],
+   "note_for_josh": "Your Case study and press release plus Pilot video and LinkedIn campaign. Video filming is not in the price."
+  },
+  {
+   "code": "D1",
+   "family": "D",
+   "name": "Savings and CO₂ calculator",
+   "what": "A smaller version of your business case model, on your site.",
+   "get": "Steam demand, hours, country and the customer’s own energy prices go in. Cost, carbon and payback come out, with every assumption shown. Default prices come from official statistics for each country.",
+   "changes": "A prospect sees their own numbers, and you get an enquiry with steam data attached.",
+   "origin": "Both",
+   "days": 8,
+   "price_eur": 3500,
+   "set_menu": "SM3",
+   "windows": [
+    {
+     "start": "2026-12-07",
+     "end": "2027-01-29"
+    }
+   ],
+   "links": [
+    {
+     "label": "Calculator",
+     "url": "https://hotgreen.astraagency.nl/tools/calculator"
+    }
+   ],
+   "note_for_josh": "Add the country switch, section 5. Runs on their model once they share it."
+  },
+  {
+   "code": "D2",
+   "family": "D",
+   "name": "Steam demand estimator",
+   "what": "Start from the gas bill.",
+   "get": "A plant enters its yearly gas use and gets its steam demand in MW and the number of HotStack modules.",
+   "changes": "Plants that don’t know their steam demand can still get a number.",
+   "origin": "Josh",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-02-15",
+     "end": "2027-03-12"
+    }
+   ],
+   "links": [
+    {
+     "label": "Estimator",
+     "url": "https://hotgreen.astraagency.nl/tools/estimator"
+    }
+   ],
+   "note_for_josh": "Pairs with D1."
+  },
+  {
+   "code": "D3",
+   "family": "D",
+   "name": "Fit check",
+   "what": "Seven questions and a clear answer.",
+   "get": "A scored result with the main reasons and a next step. Every answer can go to your CRM.",
+   "changes": "Your engineers spend their time on sites that fit.",
+   "origin": "Josh",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-02-15",
+     "end": "2027-03-12"
+    }
+   ],
+   "links": [
+    {
+     "label": "Fit check",
+     "url": "https://hotgreen.astraagency.nl/tools/fit-check"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "D4",
+   "family": "D",
+   "name": "HotStack configurator",
+   "what": "Size an installation in a minute.",
+   "get": "Modules stack from 0.5 MW to 10 MW on screen, with the grid connection each size needs.",
+   "changes": "A buyer sees what their installation looks like before the first call.",
+   "origin": "Josh",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-02-15",
+     "end": "2027-03-12"
+    }
+   ],
+   "links": [
+    {
+     "label": "Configurator",
+     "url": "https://hotgreen.astraagency.nl/tools/configurator"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "D5",
+   "family": "D",
+   "name": "Savings report",
+   "what": "A branded report for each plant.",
+   "get": "A PDF made from the calculator inputs, for your engineers to check and send.",
+   "changes": "Every serious enquiry leaves with a document for its board.",
+   "origin": "Josh",
+   "days": 4,
+   "price_eur": 1750,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-02-15",
+     "end": "2027-03-12"
+    }
+   ],
+   "links": [
+    {
+     "label": "Report",
+     "url": "https://hotgreen.astraagency.nl/tools/report"
+    }
+   ],
+   "note_for_josh": "Your ROI report generator. Replace the IETF row, section 5."
+  },
+  {
+   "code": "D6",
+   "family": "D",
+   "name": "Funding finder",
+   "what": "The support a customer can claim, by country.",
+   "get": "Country, company size and project size go in. The matching schemes come out, each with the date it was last checked.",
+   "changes": "The first question after payback gets answered on the spot.",
+   "origin": "Both",
+   "days": 5,
+   "price_eur": 2250,
+   "set_menu": "SM3",
+   "windows": [
+    {
+     "start": "2027-01-18",
+     "end": "2027-02-12"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/funding.webp"
+    }
+   ],
+   "note_for_josh": "Our Funding finder plus your Subsidy finder idea. Seed it with Appendix A."
+  },
+  {
+   "code": "D7",
+   "family": "D",
+   "name": "EU heat auction guide",
+   "what": "A one page guide to the €1bn EU heat auction.",
+   "get": "What the auction pays, who can bid, and how a food or drink plant bids with a HotStack, plus a technical sheet with your COP and capacity.",
+   "changes": "Your EU prospects hear about it from you before it opens in early December.",
+   "origin": "Astra",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2026-10-19",
+     "end": "2026-10-30"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/auction.webp"
+    }
+   ],
+   "note_for_josh": "Time critical, it has to exist before the auction opens. Facts in Appendix A."
+  },
+  {
+   "code": "D8",
+   "family": "D",
+   "name": "Country funding guides",
+   "what": "A guide for each market you sell in.",
+   "get": "Web pages and PDFs for the Netherlands and the UK first, more on request, each with the date it was checked.",
+   "changes": "Prospects build the business case with support already in it.",
+   "origin": "Both",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": null,
+   "windows": [],
+   "links": [],
+   "note_for_josh": "Your Subsidy guides. UK is capital allowances, not IETF. Facts in Appendix A."
+  },
+  {
+   "code": "D9",
+   "family": "D",
+   "name": "Technology comparison",
+   "what": "An honest comparison of the options for steam.",
+   "get": "Gas boiler, electric boiler, electrode boiler with storage and HotStack, side by side.",
+   "changes": "Buyers see where the HotStack wins and why.",
+   "origin": "Josh",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": null,
+   "windows": [],
+   "links": [],
+   "note_for_josh": "Idea, no concept yet."
+  },
+  {
+   "code": "D10",
+   "family": "D",
+   "name": "Carbon cost scenarios",
+   "what": "What steam from gas could cost over ten years.",
+   "get": "The cost of steam from gas under different carbon prices, year by year.",
+   "changes": "Finance teams see the risk of staying on gas.",
+   "origin": "Josh",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": null,
+   "windows": [],
+   "links": [],
+   "note_for_josh": "Idea, no concept yet."
+  },
+  {
+   "code": "E1",
+   "family": "E",
+   "name": "Enquiry routes and pilot programme page",
+   "what": "The right form for every visitor.",
+   "get": "Separate routes for plants, investors, partners, careers and press, and a pilot programme page with a qualification form.",
+   "changes": "Each enquiry reaches the right person with the right details, and the waitlist becomes a number.",
+   "origin": "Both",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": "SM3",
+   "windows": [
+    {
+     "start": "2026-12-07",
+     "end": "2026-12-18"
+    }
+   ],
+   "links": [
+    {
+     "label": "Contact",
+     "url": "https://hotgreen.astraagency.nl/site/contact"
+    },
+    {
+     "label": "Pilot programme",
+     "url": "https://hotgreen.astraagency.nl/site/pilot"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "E2",
+   "family": "E",
+   "name": "Site assessment tool",
+   "what": "An internal tool for your engineers.",
+   "get": "An enquiry’s steam demand, temperatures, hours and metering data go in, your sizing and business case model runs on it, and a first draft comes out for an engineer to check.",
+   "changes": "Your engineer checks a draft instead of building one. We measure the hours it saves.",
+   "origin": "Astra",
+   "days": 10,
+   "price_eur": 4500,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-03-29",
+     "end": "2027-05-07"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/assessment.webp"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "E3",
+   "family": "E",
+   "name": "CRM setup",
+   "what": "A CRM set up around sites.",
+   "get": "HubSpot or the CRM you prefer, with each site tracked by boiler age, planned shutdowns and budget dates, lead routing and a short follow up sequence.",
+   "changes": "Every site in the pipeline has its next date.",
+   "origin": "Both",
+   "days": 4,
+   "price_eur": 1750,
+   "set_menu": "SM3",
+   "windows": [
+    {
+     "start": "2027-02-01",
+     "end": "2027-02-12"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/tracker.webp"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "E4",
+   "family": "E",
+   "name": "Target list",
+   "what": "A researched list of plants to approach.",
+   "get": "Built from public registers. The UK emissions trading register alone lists 68 food and drink sites run by 50 companies. Screened with your engineers for temperature and fuel.",
+   "changes": "A ready list for the day outbound starts.",
+   "origin": "Astra",
+   "days": 4,
+   "price_eur": 1750,
+   "set_menu": "SM4",
+   "windows": [
+    {
+     "start": "2027-06-21",
+     "end": "2027-07-02"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/targets.webp"
+    }
+   ],
+   "note_for_josh": "The 68 by type is in Appendix A."
+  },
+  {
+   "code": "E5",
+   "family": "E",
+   "name": "Outbound, run by us",
+   "what": "Campaigns written and run by us.",
+   "get": "Messages to screened sites, inside each country’s rules, once there’s data from the demonstrator.",
+   "changes": "Meetings with plants that fit.",
+   "origin": "Astra",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": "SM4",
+   "windows": [
+    {
+     "start": "2027-07-05",
+     "end": "2027-07-16"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/outbound.webp"
+    }
+   ],
+   "note_for_josh": "Setup price only. Running it is the Outbound option, EUR 1,300 a month."
+  },
+  {
+   "code": "E6",
+   "family": "E",
+   "name": "Search plan",
+   "what": "How plants and investors find you.",
+   "get": "Keyword research, a site structure for applications and funding guides, and a six month content plan your team can run.",
+   "changes": "Engineers searching for electric steam find HotGreen.",
+   "origin": "Josh",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": null,
+   "windows": [],
+   "links": [],
+   "note_for_josh": "Your SEO and AI search plan idea."
+  },
+  {
+   "code": "E7",
+   "family": "E",
+   "name": "Dutch and German versions",
+   "what": "Your key pages in Dutch and German.",
+   "get": "Key pages, the calculator and the national funding guides, when you start selling in the Netherlands and Germany.",
+   "changes": "Plants read about the HotStack in their own language.",
+   "origin": "Josh",
+   "days": 6,
+   "price_eur": 2750,
+   "set_menu": null,
+   "windows": [],
+   "links": [],
+   "note_for_josh": "Later. Idea, no concept yet."
+  },
+  {
+   "code": "F1",
+   "family": "F",
+   "name": "Regulation and funding digest",
+   "what": "A weekly email.",
+   "get": "Official UK and EU sources checked every week and summarised in one email, plus a dated regulation page on your site.",
+   "changes": "Scope 1 to 3, ETS and funding changes reach you without anyone going looking.",
+   "origin": "Astra",
+   "days": 4,
+   "price_eur": 1750,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-03-01",
+     "end": "2027-03-26"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/digest.webp"
+    }
+   ],
+   "note_for_josh": "Needs the Care option to keep running."
+  },
+  {
+   "code": "F2",
+   "family": "F",
+   "name": "Competitor watch",
+   "what": "A monthly email.",
+   "get": "New products, patents and grants from the companies you compete with.",
+   "changes": "A competitor’s launch reaches you the month it happens.",
+   "origin": "Astra",
+   "days": 3,
+   "price_eur": 1250,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-03-22",
+     "end": "2027-04-02"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/watch.webp"
+    }
+   ],
+   "note_for_josh": "Needs the Care option to keep running."
+  },
+  {
+   "code": "F3",
+   "family": "F",
+   "name": "Content helper",
+   "what": "A drafting tool for posts and articles.",
+   "get": "News items, LinkedIn posts and search articles drafted from your agreed numbers and the digest. You approve every piece.",
+   "changes": "Regular posts without starting from a blank page.",
+   "origin": "Both",
+   "days": 4,
+   "price_eur": 1750,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-04-05",
+     "end": "2027-04-23"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/content.webp"
+    }
+   ],
+   "note_for_josh": "Our Content helper plus your Founder content service idea."
+  },
+  {
+   "code": "F4",
+   "family": "F",
+   "name": "Investor update helper",
+   "what": "Georgia’s monthly email, drafted from a short form.",
+   "get": "A draft of the investor email and its public version, made at the same time.",
+   "changes": "Her monthly update starts from a draft.",
+   "origin": "Astra",
+   "days": 2,
+   "price_eur": 1000,
+   "set_menu": null,
+   "windows": [
+    {
+     "start": "2027-03-08",
+     "end": "2027-03-19"
+    }
+   ],
+   "links": [
+    {
+     "label": "Example screen",
+     "url": "https://astra-hotgreen-proposal.netlify.app/img/ex/update.webp"
+    }
+   ],
+   "note_for_josh": ""
+  },
+  {
+   "code": "F5",
+   "family": "F",
+   "name": "Technical question assistant",
+   "what": "Answers for engineers and investors.",
+   "get": "An assistant that answers only from your approved documents and hands over to a person when it can’t.",
+   "changes": "Common technical questions get answered at any time of day.",
+   "origin": "Josh",
+   "days": 5,
+   "price_eur": 2250,
+   "set_menu": null,
+   "windows": [],
+   "links": [],
+   "note_for_josh": "Your Technical Q&A assistant idea."
+  },
+  {
+   "code": "F6",
+   "family": "F",
+   "name": "Grant writing assistant",
+   "what": "Drafts for grant applications.",
+   "get": "Applications drafted from your approved text blocks. You stay the author.",
+   "changes": "Each application starts from your best previous answers.",
+   "origin": "Josh",
+   "days": 4,
+   "price_eur": 1750,
+   "set_menu": null,
+   "windows": [],
+   "links": [],
+   "note_for_josh": "Idea, no concept yet."
+  }
+ ]
+}
