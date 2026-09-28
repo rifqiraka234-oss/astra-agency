@@ -20,7 +20,7 @@ It's the UK site for Democratic Services teams, nine pages, and everything on it
 Try it yourself.
 https://astra-qualigraf-prototype.netlify.app
 
-It opens on Surrey, where the two new councils publish their shadow meetings across twelve council websites today, then follows one decision from the forward plan to the archive. There's a clear days quiz with the bank holidays built in.
+The homepage goes straight to Surrey, where the two new councils publish their shadow meetings across twelve council websites today, then follows one decision from the forward plan to the archive. There's a clear days quiz with the bank holidays built in.
 
 What do you think?
 ```
@@ -52,7 +52,7 @@ Claims in it, each re-testable (v4).
   `state/prototypes.jsonl` row.
 - "everything on it works", every interactive part exercised end to end in the v4 interaction run,
   listed in `handover.md` "QA done on v4".
-- "It opens on Surrey", homepage item 02 "Right now in Surrey" directly after the hero.
+- "The homepage goes straight to Surrey", item 02 "Right now in Surrey" is the first section after the hero, and the hero's second button links to it. Was "It opens on Surrey", changed because the hero comes first.
 - "the two new councils publish their shadow meetings across twelve council websites today", the
   Surrey LGR Hub's East Surrey and West Surrey committees and meetings pages, read 2026-09-28,
   twelve distinct systems linked, parsed into `site/assets/v4/shadow_meetings.json`.
@@ -61,4 +61,4 @@ Claims in it, each re-testable (v4).
 - "a clear days quiz with the bank holidays built in", homepage casefile quiz and /resources, three
   answers checked by hand and through the site's own calculator (7 Oct 2026, 23 Dec 2026,
   22 Mar 2027).
-- 70 words, contractions 2 ("It's", "There's"), no exclamation marks.
+- 72 words, contractions 2 ("It's", "There's"), no exclamation marks.
