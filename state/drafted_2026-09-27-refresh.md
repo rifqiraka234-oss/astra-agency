@@ -68,6 +68,8 @@ lead read: Julien reads that his site sends every show to YouTube and his newsle
 recheck: the two facts in block two reopened 2026-09-27, the form driven in a real browser and by curl with the same result, controls the Chromium run posting and landing on /# as expected and a GET and POST compare. Their goal quoted from his own interview. The weak point is money, a rescued channel may not have €5k spare, flagged. Thesis confidence MEDIUM
 ```
 
+<!-- GATE ARCHIVED, SENT 2026-09-28T05:34:31Z as act_EvyCeWK5wyCvJxipu on Raka's explicit word, verbatim, one copy. -->
+
 ### Julien, OPENER
 
 ```
@@ -164,6 +166,8 @@ thread: problem the UK site speaks "legislative process" with only Dutch and Fre
 lead read: Steven reads that his UK site talks about the legislative process and shows only Dutch and French clients, that every council he pitches will notice, and then gets offered a UK site written for Democratic Services, one thread
 recheck: headline, logos and word counts reopened 2026-09-27 in two Chromium passes and a screenshot, control the same text scan finds Maastricht, Apeldoorn and Leiden where they are named. The inference that UK buyers read "legislative" as foreign is ours, and Steven will judge it, he ran the system they use. Risk, he oversaw the June 2026 edit himself. Thesis confidence MEDIUM
 ```
+
+<!-- GATE ARCHIVED, SENT 2026-09-28T05:34:40Z as act_EXghGY3B9dh2Ldbfp on Raka's explicit word, verbatim, one copy. -->
 
 ### Steven, OPENER
 
@@ -272,6 +276,8 @@ thread: problem a small team building three robots and ScrubCloud at once | cost
 lead read: Rohith reads that his small team is building three robots and ScrubCloud at once so the platform waits behind the robots, that this grows with every hull, and then gets offered a squad to build ScrubCloud so his engineers stay on the robots, one thread
 recheck: every fact reopened 2026-09-27, the about, careers and reporting pages crawled twice, the register pulled for ownership, the company page read for team size and hires. The inference that ScrubCloud waits behind the robots is ours, no source says it, and they may already have a contractor on it. The offer is Raka's verbatim claim, flag it, a funded founder can hold us to it. Thesis confidence MEDIUM
 ```
+
+<!-- GATE ARCHIVED, SENT 2026-09-28T05:34:47Z as act_rC9CXEcfGx9DAkBBQ on Raka's explicit word, verbatim, one copy. -->
 
 ### Rohith, OPENER
 
