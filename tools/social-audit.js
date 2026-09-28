@@ -98,6 +98,54 @@ function ageToDays(m) {
       results.push(r); continue;
     }
 
+    // Instagram's profile page is walled (429 in Chromium, login over curl), but the
+    // public /embed/ page is not. Found 2026-09-28 on halloween_agency, it carries
+    // followers_count, posts_count and taken_at_timestamp for the latest posts.
+    if (/instagram\.com/.test(host)) {
+      const handle = (new URL(url).pathname.split('/').filter(Boolean)[0] || '').trim();
+      try {
+        const html = execFileSync('curl', ['-sS', '--cacert', CA_BUNDLE, '-L', '--max-time', '30',
+          // The short agent string matters. A full Windows Chrome string gets a 635 KB page
+          // with no counts, this one gets the 333 KB page that carries them (2026-09-28).
+          '-A', 'Mozilla/5.0 Chrome/128',
+          `https://www.instagram.com/${handle}/embed/`], { maxBuffer: 30e6 }).toString();
+        const f = html.match(/followers_count\\?":(\d+)/), p = html.match(/posts_count\\?":(\d+)/);
+        const ts = [...html.matchAll(/taken_at_timestamp\\?":(\d+)/g)].map((m) => +m[1]);
+        if (f) {
+          r.reachable = true; r.followers = f[1]; r.posts = p ? p[1] : null;
+          if (ts.length) {
+            const last = Math.max(...ts);
+            r.lastPostAgeDays = Math.round((Date.now() / 1000 - last) / 86400);
+            r.lastPostLabel = new Date(last * 1000).toISOString().slice(0, 10);
+          }
+          r.note = 'read through the public /embed/ page';
+        } else if (/EmbedIsBroken/.test(html)) {
+          // A made-up handle and a private account both get this page. Say both.
+          r.reachable = false; r.note = 'embed broken, same page a made-up handle gets, missing or private';
+        } else if (/Sorry, this page isn.t available|isn.t available/i.test(html)) {
+          r.dead = true; r.note = 'the handle linked from their site does not resolve';
+        } else { r.reachable = false; r.note = 'embed gave no counts, UNKNOWN not empty'; }
+      } catch (e) { r.reachable = false; r.note = 'embed fetch failed, UNKNOWN not empty'; }
+      results.push(r); continue;
+    }
+
+    // Facebook pages are behind the login wall for posts on every route tried 2026-09-28
+    // (www, m., mbasic., WebFetch). The Page Plugin still gives the follower count.
+    if (/facebook\.com/.test(host)) {
+      try {
+        const html = execFileSync('curl', ['-sS', '--cacert', CA_BUNDLE, '-L', '--max-time', '30',
+          '-A', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/128.0 Safari/537.36',
+          `https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(url)}&tabs=timeline&width=500&height=800`],
+          { maxBuffer: 20e6 }).toString();
+        const f = html.replace(/<[^>]+>/g, ' ').match(/([\d.,]+[KkM]?)\s+followers/);
+        if (f) { r.reachable = true; r.followers = f[1]; }
+      } catch (e) { /* fall through to the Chromium read below */ }
+      if (r.followers) {
+        r.note = 'follower count from the Page Plugin, post dates are behind the login, UNKNOWN recency';
+        results.push(r); continue;
+      }
+    }
+
     const page = await ctx.newPage();
     let status = null;
     try {

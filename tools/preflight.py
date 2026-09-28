@@ -96,6 +96,10 @@ print("""  It outranks every other doc except a live instruction from Raka.
       thesis rechecked, confidence HIGH or MEDIUM, LOW never shown. A ```gate block above
       every OPENER.
 
+    ALL FIVE ANGLES CHECKED FOR REAL, Raka 2026-09-28. Social = node tools/social-audit.js on
+      every account, never just the list of links. Walled page = python3 tools/fetch-walled.py
+      before BLOCKED. Instagram reads through /embed/ now.
+
     THE ANGLE SWEEP, FIVE FAMILIES, EVERY LEAD. RULES.md 4A rule 13, Raka 2026-09-25.
       Website holding back growth. GDPR. Apps and internal tools. Social media. BUILD SQUAD,
       a competitor or agency is a Build Squad lead, not a dead end. Each tested

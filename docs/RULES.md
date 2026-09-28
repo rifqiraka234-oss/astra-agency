@@ -80,7 +80,7 @@ Undecoded images in that render can be lazy loading or hidden slides, never a fi
 |---|---|
 | Rendered, guard quiet, screenshot opened | Describe what you saw |
 | `RENDER NOT TRUSTED` | **Nothing yet.** Run `node tools/render-via-curl.js <url> <tag>`, the second render path, which serves every request to their own host through curl. If it reports **0 curl errors**, read every part it writes and describe what you saw. If not, `BLOCKED_NEEDS_INFO` and Raka opens it |
-| A bot wall or a 403 | **Nothing, in either direction.** Row is `BLOCKED_NEEDS_INFO` and Raka opens it |
+| A bot wall or a 403 | **Nothing yet.** Run `python3 tools/fetch-walled.py <url>` first, it presents a real browser's TLS fingerprint and got through Cloudflare on dialogue.earth and the check on qualigraf.com (2026-09-28). crawl.py now falls back to it on its own. Only when that fails too, `BLOCKED_NEEDS_INFO` and Raka opens it |
 | Asset failed here **and** failed the independent re-fetch | It is theirs, and still open the screenshot before writing it |
 
 **A blocked page is not a weak page.** A wall, a challenge, a timeout or a void render says
@@ -560,6 +560,13 @@ right now, and we lead with it.**
      manual paperwork, one person as the bottleneck, hiring for admin. Rule 11.
    - **Social media.** Every account taken from their own HTML, opened, last post dated, the
      platform their buyers use, a dead or missing channel where the goal needs one.
+     **Opened means `node tools/social-audit.js <tag>`, every lead, no exceptions (Raka,
+     2026-09-28, "make sure you always check all angles").** Listing the links a site carries is
+     not checking them, and on 27 Sep that's all I did. The tool now reads Instagram through the
+     public /embed/ page (followers, posts, last post date), Facebook's follower count through the
+     Page Plugin, YouTube and X directly. Facebook post dates stay behind the login on every route
+     tried. check-drafts.py fails a sweep or gate from 2026-09-28 on whose social line doesn't
+     show social-audit.js was run.
    - **Build Squad, the fifth family (Raka, 2026-09-25, on Harold Engelen).** His words, "for
      harold, fuck it lets do the build squad. Our angle is, with our build squad you can do it in
      half the time and half the price, and we have a shit load of people so you/them can just focus

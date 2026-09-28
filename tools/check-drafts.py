@@ -155,8 +155,13 @@ def family_thin(text):
         text, re.I)
 
 
-def sweep_problems(body):
-    """One ```sweep block, the four family verdict for a lead that gets no opener."""
+SOCIAL_OPENED = re.compile(r"social-audit|no social (account )?linked|links to no social|nothing to test|no domain", re.I)
+
+
+def sweep_problems(body, social_rule=False):
+    """One ```sweep block, the four family verdict for a lead that gets no opener.
+    social_rule, Raka 2026-09-28, "make sure you always check all angles". From that date the
+    social line has to show the accounts were OPENED with tools/social-audit.js, not listed."""
     probs, kv, cur = [], {}, None
     for ln in body.split("\n"):
         m = re.match(r"^([a-z][a-z ]+):\s*(.*)$", ln.strip(), re.I)
@@ -172,6 +177,9 @@ def sweep_problems(body):
     for f in SWEEP_FAMILIES:
         if kv.get(f) and family_thin(kv[f]):
             probs.append(f"sweep '{name}', {f} is too thin, 12+ words and its evidence")
+    if social_rule and kv.get("social") and not SOCIAL_OPENED.search(kv["social"]):
+        probs.append(f"sweep '{name}', social must say the accounts were opened with tools/social-audit.js, "
+                     "listing links is not checking them (Raka 2026-09-28)")
     if kv.get("verdict") and not any(kv["verdict"].startswith(v) for v in VERDICTS):
         probs.append(f"sweep '{name}', verdict must start with one of {VERDICTS}")
     return probs
@@ -182,9 +190,10 @@ def sweep_file_problems(src, path):
     ```sweep block before the next section. Older files predate the rule."""
     m = re.search(r"(\d{4}-\d{2}-\d{2})", path.rsplit("/", 1)[-1])
     probs = []
+    social_rule = bool(m and m.group(1) >= "2026-09-28")
     for info, body, _ in fences(src):
         if info == "sweep":
-            probs += sweep_problems(body)
+            probs += sweep_problems(body, social_rule)
     if not m or m.group(1) < "2026-09-25":
         return probs
     secs = re.split(r"\n(?=## )", src)
@@ -334,6 +343,12 @@ def check(path, replies=False):
         if not relaxed:
             for gp in gate_problems(gates[i]):
                 bad(i, f"RESEARCH GATE, {gp}")
+            # Raka 2026-09-28, every angle checked for real. The social line in an OPENER's gate
+            # has to show the accounts were opened with tools/social-audit.js.
+            dm = re.search(r"(\d{4}-\d{2}-\d{2})", path.rsplit("/", 1)[-1])
+            sl = re.search(r"^sweep social:(.*)$", gates[i] or "", re.M)
+            if dm and dm.group(1) >= "2026-09-28" and sl and not SOCIAL_OPENED.search(sl.group(1)):
+                bad(i, "RESEARCH GATE, sweep social must say the accounts were opened with tools/social-audit.js")
             for tp in thread_problems(gates[i], m):
                 bad(i, tp)
         if relaxed:

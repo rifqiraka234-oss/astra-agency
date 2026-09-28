@@ -656,3 +656,14 @@ accounts across the remaining leads. Raw output in logs/inbox/2026-09-28-social-
   this account", while the same tool read Bunkz's and Hula Hoop's TikTok in the same run. For a creator
   video platform that's a credibility slip, but removing a link is a tweak, not a sale.
 - Verdict. No social angle passes the pay test for any of the remaining leads. The verdicts stand.
+
+## Social media, second pass with the new routes, 2026-09-28
+
+tools/social-audit.js now reads Instagram through /embed/ and Facebook follower counts through the
+Page Plugin. All 46 accounts reopened, raw output in logs/inbox/2026-09-28-social-audit-v2.txt.
+Instagram read for 16 of 17 accounts, with a last post date. Active in the last two weeks: Real
+Olive, Alquimia, QWIC, Hula Hoop, RentX, DS Private, wysiwyg, dotega. Older: Halloween 55 days,
+Bunkz 50, ScrubMarine 33. Dormant past 90 days: Elevate Marketing (128 days, 86 followers) and
+Omnilabs (122 days, 58 followers), both already out on budget. UGC.NL's Instagram gives the same
+broken embed as a made-up handle, so missing or private, and its TikTok link is dead. LinkedIn
+company pages still come back unreadable for 7 of them in Chromium. No verdict changes.

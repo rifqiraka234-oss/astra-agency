@@ -32,6 +32,12 @@
 > block three's cost and block five's offer are the same problem. The gate carries `thread` and
 > `lead read`, check-drafts.py fails a draft whose offer never touches what block two named.
 >
+> **ALL FIVE ANGLES, EVERY LEAD, CHECKED FOR REAL (Raka, 2026-09-28, "make sure you always
+> check all angles").** Website, GDPR (EU view), apps and tools, social media, Build Squad. Social
+> means the accounts OPENED with `node tools/social-audit.js`, not the links listed. A walled page
+> gets `python3 tools/fetch-walled.py` before it's ever called blocked. check-drafts.py enforces
+> the social part.
+>
 > **The two tools that enforce rather than remind.** `node tools/site-audit.js <url>
 > <tag>` runs a positive control on itself and voids its own absence findings when the
 > detector fails. `python3 tools/check-drafts.py <file>` exits non zero, so it cannot be

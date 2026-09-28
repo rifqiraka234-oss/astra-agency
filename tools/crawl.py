@@ -35,6 +35,18 @@ def get(url):
                         "-w", "\n%{http_code}", url], capture_output=True, text=True,
                        errors="replace")
     body, _, code = r.stdout.rpartition("\n")
+    # A bot wall (Cloudflare "Just a moment", "One moment" checks, a 403 or 503) gets a second
+    # try with a real browser's TLS fingerprint, tools/fetch-walled.py (2026-09-28). It got
+    # through on dialogue.earth and qualigraf.com where curl and Chromium both failed.
+    if code in ("403", "503", "000") or re.search(r"Just a moment|One moment|Checking your browser", body[:5000]):
+        try:
+            sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+            fw = __import__("fetch-walled")
+            got = fw.fetch(url)
+            if got and str(got[1]).isdigit() and int(got[1]) < 400:
+                return str(got[1]), got[2]
+        except Exception:
+            pass
     return code, body
 
 
