@@ -168,3 +168,11 @@ cream again for people and the close.
 ## Claims ledger (every factual claim on the site and its source)
 
 Filled in during the claims pass, see handover.md.
+
+## v3, the story and media plan (2026-09-28)
+
+Built as planned. The story, the chapter by chapter media and the reference patterns are written
+up in `handover.md`, section "v3, after Raka's second note". Facts added for v3, each read on the
+day. Surrey's East and West split (Surrey LGR Hub shadow authorities page and Mole Valley DC LGR
+updates, both list the same five and six areas). Globe land from world atlas 110m (Natural Earth).
+Quiz dates from GOV.UK England and Wales bank holidays, already hardcoded in site.js.

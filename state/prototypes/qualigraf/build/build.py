@@ -119,6 +119,9 @@ FAV = "data:image/svg+xml," + "%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox
 
 def page(meta, body):
     t = meta['title']; desc = meta['desc']; nav = meta.get('nav', '')
+    ex = meta.get('extra', [])
+    xcss = ''.join(f'\n<link rel="stylesheet" href="assets/{x}.css">' for x in ex)
+    xjs = ''.join(f'\n<script src="assets/{x}.js" defer></script>' for x in ex)
     full = t if t.startswith('Qualigraf') else f'{t} | Qualigraf UK'
     return f'''<!doctype html>
 <html lang="en-GB">
@@ -134,7 +137,7 @@ def page(meta, body):
 <link rel="icon" href="{FAV}">
 <link rel="preload" href="assets/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css">{xcss}
 <script>document.documentElement.className+=' js';</script>
 </head>
 <body>
@@ -143,7 +146,7 @@ def page(meta, body):
 {body}
 </main>
 {FOOTER}
-<script src="assets/site.js" defer></script>
+<script src="assets/site.js" defer></script>{xjs}
 </body>
 </html>
 '''
@@ -151,7 +154,7 @@ def page(meta, body):
 CLOSE = open(os.path.join(HERE, 'close.html')).read() if os.path.exists(os.path.join(HERE, 'close.html')) else ''
 
 def fill(body):
-    body = body.replace('{{TRACK}}', TRACK).replace('{{CLOSE}}', CLOSE).replace('{{AR}}', AR).replace('{{BOOK}}', BOOK)
+    body = body.replace('{{CURLPATH}}', CURL).replace('{{TRACK}}', TRACK).replace('{{CLOSE}}', CLOSE).replace('{{AR}}', AR).replace('{{BOOK}}', BOOK)
     body = re.sub(r'\{\{I:(\w+)\}\}', lambda m: ICONS[m.group(1)], body)
     body = re.sub(r'\{\{CURL:(\w+)\}\}', lambda m: curl(m.group(1)), body)
     left = re.findall(r'\{\{[^}]*\}\}', body)

@@ -458,3 +458,46 @@ redesign of the page?? Like the page looks so simple". v1 is kept in `build/v1pa
 | Inner page SVG charts had dark text written for a light page | After a theme change, grep every SVG for dark fills and recolour |
 | `tools/verify_portraits.py` expects base64 portraits in one file | Run its containment function against the client's page and byte match the files by hash. Never loosen the tool |
 | Lighthouse flags the statement's dimmed words | A transient scroll state, full contrast once revealed and under reduced motion. Say so in the handover |
+
+## When Raka says "go beyond the top 50", build a story, not a nicer page (Qualigraf v3, 2026-09-28)
+
+His words on v2, "take like the top 50 companies in the world ... Check their website ... Does it
+tell a story? What kind of media do you need to tell the story?" What worked, and the rules it left.
+
+- **Screenshot the references in one scripted run, and say how many actually rendered.** 47 were
+  queued, 30 rendered, 17 were bot walled and stayed walled on a retry. Report the 30, never "top
+  50 studied". Script and metrics (video, canvas, svg, sticky, words) are in the session scratch,
+  and the pattern list is in the Qualigraf handover.
+- **Pick one protagonist and move it through time.** "One sample decision, from the forward plan to
+  six years later" gave eight chapters, each with its own medium. A chapter bar makes the length
+  feel like a story rather than a scroll. Make it hide when idle, because a fixed pill over content
+  annoys.
+- **Every chapter gets a different kind of media.** Canvas particles, a dial, an animated diagram
+  with a before and after toggle, a dated strip with a stamp, a photo with a live HUD, a pipeline, a
+  searchable wall, a named map animation, a globe, plus the client's own film loops. Two chapters in
+  a row with the same medium reads as a template.
+- **Their logo is a shape. Use it.** Sampling their curl path into a particle target made the hero
+  theirs and nobody else's.
+- **Let the visitor put their own numbers in (Spotify Wrapped).** Only user inputs and plain
+  arithmetic, with the defaults labelled as sample figures, so nothing in it is a claim.
+- **A quiz beats a paragraph (Premier League, NBA).** Work the answers by hand, then run them
+  through the site's own code. Both have to agree before it ships. Without JS, show the answers.
+- **Drop a comparison rather than ship it on one source.** The Elizabeth Tower height was only
+  reachable on Wikipedia, so the stack got a ruler and a person instead.
+- **A copy line inside an animation is still a claim.** The quiz score said Qualigraf counts clear
+  days. Nothing verified that, so it went.
+- **Old absolute positioning survives a markup move.** The phone kept `position:absolute` from the
+  first CSS after it moved into the copy column and sat on the vote panel. Reset position and
+  transform when a component changes home.
+- **Netlify rewrites HTML.** Pretty URLs turn `platform.html` into `/platform` and form processing
+  strips `data-netlify`. Byte matching fails on every page for those reasons alone, so compare the
+  parsed DOM with links normalised, then fetch every rewritten link.
+- **A video can log as aborted in a fast QA scroll.** The browser cancels the download when the film
+  leaves view. Confirm with a direct fetch and a rerun before calling it broken.
+
+| Hiccup | Rule |
+|---|---|
+| Delivery draft still promised "a scroll through the eight stations" after v3 removed it | Reread the delivery draft against the live site after every rebuild |
+| Draft note said 79 words and 4 contractions, it was 80 and 2 | Count with a tool, possessives aren't contractions |
+| Stamp covered the late report chip | Screenshot after the animation's last delay, not at a fixed time |
+| Colon in a webcast timecode | The colon ban covers UI text too, dots work |
