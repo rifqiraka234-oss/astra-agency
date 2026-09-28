@@ -24,6 +24,7 @@ now tells Google it's the homepage, the articles have no address of their own, a
 search engines still list now open on an English "404 Oops! Page not found". This lands in the year
 their own segment, makers of technical plastic parts, lost about half a billion euros in sales.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Claudia Dünow, Geschäftsführerin of GaMa Kunststofftechnik GmbH (HRB 5805 Stendal), one of three managing directors with Gabriele Meudt-Walter and Martina Walter per the Impressum at https://gama-kunststofftechnik.de/impressum , appointed 25 Aug 2025 per North Data, an inhabergeführtes family firm in its second generation, ctc_kPpKRKfLL9LsHFywM
 site pass 1: 9 routes rendered in Chromium (/, /karriere, /blog, /gama-blog, /impressum, /impressum-269171, /datenschutz, /agb, and a made up path as control), routes taken from the app's own route table in /assets/index-BZ90XV_b.js because it's a single page app with no sitemap and tools/crawl.py reads one page. Text, title, description and canonical read on each
@@ -94,6 +95,7 @@ postcode finder on its site. Real Olive's own Where to buy page shows the words 
 stockist finder should be, and 33 product pages send shoppers there with "find your nearest stockist
 here". They're paying for Google ads right now. We'd put the finder back.
 
+<!-- GATE ARCHIVED, SENT 2026-09-28 -->
 ```gate
 lead: Karin Andersson, Joint CEO and co founder of The Real Olive Company (1998), co owner 25 to 50 percent per her PSC entry on Companies House per the 23 Sep queue row, ctc_XknfFnBmAo83YYeqh
 site pass 1: 353 pages, tools/crawl.py from the sitemaps (613 URLs listed, attachments skipped), 348 at 200, 2026-09-28
