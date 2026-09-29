@@ -1,5 +1,5 @@
 {
- "lastRunAt": "2026-09-17T05:33:45.366040+00:00",
+ "lastRunAt": "2026-09-29T06:10:00+00:00",
  "threads": {
   "ctc_piBZeydFpN4KiBeky": {
    "name": "Antanas Juodiskis",
@@ -244,7 +244,7 @@
    "note": "not interested"
   },
   "ctc_AdnACMeCPhQCdfbPr": {
-   "name": "Ferdinand Witt-D\u00f6rring",
+   "name": "Ferdinand Witt-Dörring",
    "tier": "NO_ACTION",
    "lastSeenMessageId": null,
    "lastDigestDate": null,
@@ -621,6 +621,21 @@
   "ctc_8BQArSGfebNrTk72j": {
    "tier": "HOT",
    "lastDigestDate": "2026-09-17",
+   "campaignId": "cam_PryZp5LuvQv8NznHh"
+  },
+  "ctc_RpqPcqXbBRf2Zz57L": {
+   "tier": "Hot",
+   "lastDigestDate": "2026-09-29",
+   "campaignId": "cam_PryZp5LuvQv8NznHh"
+  },
+  "ctc_3L5hXyZ8hWrh8tAGC": {
+   "tier": "No action",
+   "lastDigestDate": "2026-09-29",
+   "campaignId": "cam_PryZp5LuvQv8NznHh"
+  },
+  "ctc_sPysigrTQgntPu9c6": {
+   "tier": "Warm, delivered, waiting",
+   "lastDigestDate": "2026-09-29",
    "campaignId": "cam_PryZp5LuvQv8NznHh"
   }
  }
