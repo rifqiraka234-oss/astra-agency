@@ -1,4 +1,5 @@
-# Draft, 2026-09-28. Steven Garratt, Qualigraf. NOT SENT, waiting on Raka's word.
+<!-- GATE ARCHIVED -->
+# Draft, 2026-09-28. Steven Garratt, Qualigraf. SENT 2026-09-29 05.47 UTC, act_h37nkDaqxedJxZEfn, on Raka's word.
 
 Whole thread pulled 2026-09-28 before the build, `get_inbox_conversation`, 3 activities, nextPage
 null, totalItems 3. Connect note 27 Sep, our opener `act_EXghGY3B9dh2Ldbfp` 28 Sep 05.34 ("Shall
@@ -13,7 +14,7 @@ still 3 activities, nextPage null, his "Sure!" is still the last message.
 ## Steven Garratt, Qualigraf. DELIVERY. ctc_sPysigrTQgntPu9c6
 
 ```
-Steven, I spent the afternoon building this.
+Steven, I spent the whole day yesterday building this.
 
 It's the UK site for Democratic Services teams, nine pages, and everything on it works.
 
@@ -36,7 +37,7 @@ Notes for Raka.
   (agenda packs, five clear days, key decisions, shadow authorities, Members) and puts the UK team,
   the UK reorganisation and UK law up front. The European councils are still there, labelled as
   Europe.
-- **"The afternoon" is true, "the whole day" wouldn't be.** Built between about 14.00 and 18.30
+- **Opening line changed on Raka's instruction 2026-09-29, "Say i spent the whole day yesterday building it". Send approved by Raka in the same message.** Earlier note, kept for the record. Built between about 14.00 and 18.30
   UTC, redesigned three times on your notes. "The afternoon and evening" would also be true if you
   prefer it.
 - Nine pages counted from the build, home, platform, AI Minutes, new councils, who it's for,
@@ -61,4 +62,4 @@ Claims in it, each re-testable (v4).
 - "a clear days quiz with the bank holidays built in", homepage casefile quiz and /resources, three
   answers checked by hand and through the site's own calculator (7 Oct 2026, 23 Dec 2026,
   22 Mar 2027).
-- 72 words, contractions 2 ("It's", "There's"), no exclamation marks.
+- 74 words, contractions 2 ("It's", "There's"), no exclamation marks.
