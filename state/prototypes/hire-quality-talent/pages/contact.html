@@ -1,0 +1,43 @@
+<!--{"title":"Contact","desc":"Talk to Hire Quality Talent about a role, a search or a confidential career move. Email contact@hirequalitytalent.co.uk or call 07876 734 751.","nav":"contact"}-->
+<section class="ph">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">Home</a> &middot; Contact</p>
+    <p class="eyebrow">Contact</p>
+    <h1 class="d1">Got a role that's proving <em>hard to fill?</em></h1>
+    <p class="lead">Tell us what you're trying to achieve and we'll tell you honestly how we can help. Looking for your next move instead? Every conversation is confidential.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap grid2">
+    <div class="rv">
+      <form class="form" name="hqt-contact" method="POST" data-netlify="true" netlify-honeypot="company-url" data-form novalidate>
+        <input type="hidden" name="form-name" value="hqt-contact">
+        <p hidden><label>Leave this empty <input name="company-url"></label></p>
+        <div class="two">
+          <div class="f"><label for="c-name">Name</label><input id="c-name" name="name" autocomplete="name" required><p class="err">Please add your name.</p></div>
+          <div class="f"><label for="c-company">Company</label><input id="c-company" name="company" autocomplete="organization"></div>
+        </div>
+        <div class="two">
+          <div class="f"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required><p class="err">Please add an email we can reply to.</p></div>
+          <div class="f"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="f"><label for="c-type">I'm getting in touch about</label>
+          <select id="c-type" name="about"><option value="recruitment">A hire, recruitment and headhunting</option><option value="executive">An executive search</option><option value="fractional">Fractional talent acquisition or HR support</option><option value="candidate">My own next move, as a candidate</option><option value="other">Something else</option></select></div>
+        <div class="f"><label for="c-msg">Tell us about the role</label><textarea id="c-msg" name="message" rows="6" required></textarea><p class="err">A line or two about the role helps us reply properly.</p></div>
+        <p class="formerr" style="display:none;color:#9B1C1C">That didn't send. Please email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> instead.</p>
+        <div><button class="btn gold" type="submit">Send {{AR}}</button></div>
+      </form>
+      <div class="sent" role="status"><h2 class="d3">Thank you.</h2><p style="margin-top:10px">We'll get back to you as soon as possible.</p></div>
+    </div>
+    <div class="rv">
+      <div class="direct">
+        <a href="mailto:{{EMAIL}}"><span>Email</span>{{EMAIL}}</a>
+        <a href="tel:{{TELH}}"><span>Call</span>{{TEL}}</a>
+        <a href="https://www.linkedin.com/company/hire-quality-talent" rel="noopener" target="_blank"><span>LinkedIn</span>Hire Quality Talent</a>
+      </div>
+      <p style="margin-top:30px;color:var(--ink3)">Recruitment fees from 10%, UK and international, with no win, no fee options.</p>
+    </div>
+  </div>
+</section>
+<script>(function(){var s=new URLSearchParams(location.search).get('service'),e=document.getElementById('c-type');if(s&&e&&e.querySelector('option[value="'+s+'"]'))e.value=s})();</script>
