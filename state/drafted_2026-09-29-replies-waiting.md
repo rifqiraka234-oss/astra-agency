@@ -1,4 +1,6 @@
-# Replies waiting on us, 2026-09-29. NOT SENT, waiting on Raka's word.
+# Replies waiting on us, 2026-09-29.
+
+Outcome, Raka 2026-09-29. Cédric and Yero SENT 11.09 UTC (act_7zeK7jCu6Mx2h9aMY, act_GbGGJFxMMXrsmvmLu). Ciara, build the prototype instead of sending the holding reply. Norbert, close, not ICP, the rebook reply is dead.
 
 Method. All 131 conversations listed (3 pages of `get_inbox_conversations`). 18 end with their
 message. Every one of the 18 threads pulled in full with `get_inbox_conversation`, paged to
@@ -70,4 +72,15 @@ minutes, Monday) returned a Gesamtpreis of 1.444,95 euros over 26 dates. The pag
 
 ```
 Nice one Yero, I just ran the fixed court calculator and it shows the whole term price now, that's exactly it. If you want a hand when you wire up the availability and payment behind it, you know where I am.
+```
+
+## Norbert, the graceful close, only if Raka wants one sent. NOT SENT.
+
+He was left with a cancelled call and an offer to rebook. Silence after cancelling on him is the
+worst version, so if anything goes, it's this.
+
+### Norbert close, CLOSER
+
+```
+Hi Norbert, sorry again about Wednesday. Having looked properly at what Monad Edge does, I don't think I'm the right fit for it, so I won't take up another slot on your calendar. Good luck with it, and thanks for being so gracious about the cancellation.
 ```
