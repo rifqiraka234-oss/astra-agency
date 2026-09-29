@@ -449,6 +449,24 @@ The four that cost us leads.
 
 ## 5. Building
 
+**EVERY PROTOTYPE STARTS AT THE QUALIGRAF BAR (Raka, 2026-09-29).** His words on Ciara's first
+build, "it looks like something she can do herself…come on what did i tell you before to start and
+keep doing when we created the prototype for qualigraf?" A clean reskin of the lead's own copy is
+not a prototype. Before any page is built, every time, no exceptions:
+1. **Tear down the best first.** Render and fingerprint at least 50 sites, the lead's own
+   competitors and the category leaders plus the best storytelling sites, and write down what they
+   do. The pipeline and 83 fingerprints so far are in the Qualigraf and Hire Quality Talent research.
+2. **Tell a story, not a brochure.** One spine, built on real public data from the lead's market,
+   each number cited on the page with its source and date.
+3. **Every kind of media the story needs.** A signature interactive scene tied to the lead's own
+   brand (their logo, their product), charts from the data, licence checked film, scroll scenes,
+   tools a visitor can put their own numbers into.
+4. **A new design language, not their layout with effects on.** Their colours and marks, our
+   grammar.
+5. **Then the full QA, deploy and live verification** in `docs/build-and-deck.md`.
+The only thing that shrinks is the number of pages, never the bar.
+
+
 Read Stage L of `docs/prototype-build-spec.md` before any build. Verify by cold load with
 error capture, never by forcing reveal state. Every image fetched and byte matched. Every
 section screenshotted and actually looked at. Never caption a photograph as the client's

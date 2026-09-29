@@ -544,3 +544,33 @@ and added motion on top. Effects on an inherited layout still read as the inheri
 | Static map built before its data loaded | Reset the scene stage after the data arrives |
 | Lighthouse flagged mid-reveal elements | Separate animation states from real contrast failures before fixing |
 | The stamp covered the case citation at phone width | Screenshot every overlay at 360 and 420, not just desktop |
+
+## When Raka says "she could do this herself", the Qualigraf bar applies to every prototype (Hire Quality Talent, 2026-09-29)
+
+v1 for Ciara Neal was her own copy on a clean navy and gold template, six pages, correct and tested,
+and Raka's verdict was that she could have done it herself. The Qualigraf rules had been written as
+if they were Qualigraf's. They're now RULES.md section 5, for every build.
+
+What v2 did in about an hour on top of v1.
+- **Teardown**, 30 recruitment, executive search and consulting sites through the curl_cffi
+  pipeline, 26 rendered (Bain, Robert Walters, McKinsey and the FT walled), on top of Qualigraf's 57.
+  The executive search leaders are editorial and restrained, the recruiting software sites float
+  candidate cards, Korn Ferry leads with film.
+- **The signature scene came from her logo.** Her mark is a magnifying glass, so the homepage opens
+  on a canvas field of the market for one role with a gold lens that magnifies it and finds the
+  strong fits who aren't applying, with example candidate cards labelled as illustration.
+- **The story on real data.** ONS VACS02 (manufacturing vacancies 95k to 48k since 2022), KPMG and REC
+  (candidate supply rising, engineering one of two sectors with rising permanent vacancies), Make UK
+  (36% of manufacturing vacancies hard to fill for skills, against 24%). Each cited on the page.
+- **A pinned funnel**, 1,200 to 240 to 60 to 18 to 4 to 1, on her own six stage process, labelled as
+  an example.
+- **Films**, Mixkit Free licence only, 8 of the first 20 industrial candidates were Restricted.
+- **Tools on their own inputs**, a fee comparison where the visitor sets the salary and what they pay now.
+
+| Hiccup | Rule |
+|---|---|
+| The phone card sat on the headline | Place the scene's overlay by viewport, a side by side layout on phones |
+| The funnel's first stage was all gold, before anything was selected | Colour means selected, the whole market starts neutral |
+| The chart's period labels read "Mar-May" | Data labels are copy too, "Mar to May" |
+| No JavaScript left a tall empty pinned section | Every pinned scene gets an html:not(.js) static fallback |
+| The industries film tiles linked to the page they sat on | Tiles that link elsewhere on one page are plain blocks on the target page |

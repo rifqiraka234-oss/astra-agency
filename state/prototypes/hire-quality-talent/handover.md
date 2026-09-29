@@ -1,8 +1,22 @@
 # Hire Quality Talent site, handover (2026-09-29)
 
 Live https://astra-hire-quality-talent-prototype.netlify.app , Netlify site `astra-hire-quality-talent-prototype`
-(8d294110-c536-49e5-a197-884ef4b4d803), deploy 6abba420d30c15a0b2f3e072, team SSO off, forms on.
+(8d294110-c536-49e5-a197-884ef4b4d803), deploy 6abbb0eb62618868afa0e52d (v2), team SSO off, forms on.
 Source `pages/` plus `build.py`, output `site/`. Rebuild with `python3 build.py`.
+
+## v2, after Raka's note (2026-09-29)
+Raka on v1, "it looks like something she can do herself". v2 is to the Qualigraf bar.
+- Teardown, 30 recruitment, search and consulting sites, 26 rendered, plus Qualigraf's 57.
+- Homepage story, 01 the lens field (canvas, her magnifying glass, example candidate cards labelled
+  as illustration), 02 ONS manufacturing vacancies chart, 03 Make UK hard to fill bars, 04 a pinned
+  funnel 1,200 to 1 on her six stages (labelled an example), 05 sector films, 06 both sides of the
+  table, 07 fee comparison on the visitor's own numbers, 08 PRECISE as a set of letters to click.
+- Inner pages gained the films (industries), the two sides split (about) and the comparison (pricing).
+- Data, ONS VACS02 released 15 Sep 2026, KPMG and REC Report on Jobs 7 Sep 2026, Make UK blog, each
+  cited on the page. Films, 8 Mixkit clips, each page's copyrightNotice read as "Free".
+- QA, 12 local and 12 live runs clean, interactions tested (comparison at four settings, funnel through
+  six stages, films play, pause and stay paused, PRECISE, chart labels), reduced motion and no JS fall
+  back to static steps, copy 0 colons, 0 dashes, 0 exclamation marks. 39 assets byte matched live.
 
 ## Why it exists
 Ciara Neal said yes on 28 Sep to us putting the site together, after our opener named a homepage

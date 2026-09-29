@@ -54,15 +54,17 @@ def page(meta, body):
 <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/story.css">
 <script>document.documentElement.className+=' js';</script>
 </head>
-<body>
+<body class="p-{meta.get('nav','x')}">
 {header(meta.get('nav',''))}
 <main id="main">
 {body}
 </main>
 {FOOTER}
 <script src="assets/site.js" defer></script>
+<script src="assets/story.js" defer></script>
 </body>
 </html>
 '''
