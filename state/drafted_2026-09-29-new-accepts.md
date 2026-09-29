@@ -57,12 +57,12 @@ sweep social: opened with tools/social-audit.js, LinkedIn https://www.linkedin.c
 sweep squad: no developer roles on https://www.intemax.co.uk/meet-the-team , a farm supplier that buys its web platform, not a squad fit
 claims:
 your site shows no price on any product, https://www.intemax.co.uk/sitemap.xml all 3,436 pages fetched 2026-09-29, 0 of 3,434 live pages with a pound price, 2,928 with "Login for prices", control https://www.daltonsupplies.com/collections/biosecurity 25 prices found by the same method
-a new farmer waits for your team to verify his account before he sees one, https://www.intemax.co.uk/register "One of our team will be in touch shortly once your account has been verified", screenshot 2026-09-29, and "Login for prices" on https://www.intemax.co.uk/dairy-equipment/calf-rearing
+a new farmer waits for your team to verify the account before seeing one, https://www.intemax.co.uk/register "One of our team will be in touch shortly once your account has been verified", screenshot 2026-09-29, and "Login for prices" on https://www.intemax.co.uk/dairy-equipment/calf-rearing
 taking Intemax beyond poultry into pig and dairy farms, https://www.intemax.co.uk/about-us "we looked to provide the same support across other intensive farm types, such as pig and dairy. That's when we rebranded from Interhatch to Intemax", and https://www.linkedin.com/posts/intemax_interhatch-has-a-new-name-after-25-years-activity-7311352881637478400-zp81
 led global ecommerce insights at Heineken and got 23 markets serving themselves, https://www.linkedin.com/in/raka-mulya-b92885196 , "Global E-Business Data & Insights Lead, The HEINEKEN Company ... enabled 23 markets with self-serve insights" per docs/astra-master-context.md section 2A
 thread: problem no price on the site and a new farmer waits for the team to verify his account | cost a pig or dairy farmer comparing suppliers orders where he can see a price, and every one the expansion chases is new | offer the new customer account sign up that gets him to his prices | link account
 lead read: Jim reads that his site shows no price and a new farmer waits for his account to be verified, that the pig and dairy farmers he's chasing are all new, and gets offered the new customer account sign up, one thread
-recheck: register sentence reopened and screenshotted 2026-09-29, the zero price count rebuilt from all 3,436 pages the same day with a working control, the about page sentence quoted. Thesis confidence MEDIUM, because B2B account pricing is often deliberate, so the message offers a faster way to the prices rather than calling hidden prices a mistake
+recheck: 2026-09-29 13.3x UTC second pass, /resources/catalogues lists no catalogue and no PDF, the brochure is order only, a web search for Intemax prices returns only its own login gated product pages, no marketplace listing. Register sentence reopened and screenshotted 2026-09-29, the zero price count rebuilt from all 3,436 pages the same day with a working control, the about page sentence quoted. Thesis confidence MEDIUM, because B2B account pricing is often deliberate, so the message offers a faster way to the prices rather than calling hidden prices a mistake
 ```
 
 ### Jim, OPENER
@@ -70,7 +70,7 @@ recheck: register sentence reopened and screenshotted 2026-09-29, the zero price
 ```
 Hi Jim, saw Intemax, looks interesting!
 
-However, your site shows no price on any product, and a new farmer waits for your team to verify his account before he sees one. This causes a dairy or pig farmer comparing suppliers to order from whoever shows him a price first.
+However, your site shows no price on any product, and a new farmer waits for your team to verify the account before seeing one. This causes a dairy or pig farmer comparing suppliers to order from whoever shows them a price first.
 
 Especially, when you are taking Intemax beyond poultry into pig and dairy farms, the wait hits every farmer you're chasing, because none of them has an account yet.
 
