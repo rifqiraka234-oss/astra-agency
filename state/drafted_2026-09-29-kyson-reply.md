@@ -21,15 +21,17 @@ sellers diagnosis was right, and offered half an hour. He answered neither, and 
 ends on "Thanks", which is how a conversation closes rather than opens. So the next message has
 to put a time in front of him or this goes quiet again.
 
-Timing checked against the container clock. Today is Tuesday 29 September, so the two days
-named below are Wednesday the 30th and Thursday the 1st.
+**Softened on Raka's steer, 2026-09-29.** The first draft named two days and pushed the
+argument at him. He has just paid us a compliment and gone quiet on everything else, so the
+warmer version asks kindly and lets him pick the time. Kept the finding sellers question,
+because it is the reason for the meeting rather than a challenge to him.
 
 REPLY.
 
 ```
-That's good to hear Kyson, thanks for going through it properly.
+That's really good to hear Kyson, thanks for taking the time to go through it.
 
-The valuation tool is the bit I'd push on, and it only earns its keep if sellers actually land on it. That's the finding sellers argument rather than the website one, and it's the half of this I'd still like your read on.
+Would you be up for half an hour to walk through it together? I'd like to hear what you make of the finding sellers side, since that's the part the valuation tool was built to prove.
 
-Does Wednesday or Thursday work for half an hour?
+Happy to work around whatever suits you this week or next.
 ```
