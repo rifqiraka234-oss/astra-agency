@@ -1,4 +1,8 @@
-# Kyson Charles, Acquitas Partners. He liked it. 2026-09-29. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Kyson Charles, Acquitas Partners. He liked it, meeting asked for. 2026-09-29. SENT.
+
+Sent 2026-09-29 at 15 01 32Z, activity `act_XcEZ2rAGMqCQ9RB5S`. Thread pulled before and
+after, 9 activities to 10, exactly one copy.
 
 Thread pulled just now, `ctc_CDeGfHHs3eCrYJR32`, 9 activities, `nextPage` null. He replied
 today at 14 26, four days after the nudge and sixteen after the build landed.
