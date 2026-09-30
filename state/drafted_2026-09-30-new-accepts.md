@@ -1,4 +1,5 @@
-# 2026-09-30 new accepts, full research. Two openers, three no angle. NOTHING SENT.
+<!-- GATE ARCHIVED -->
+# 2026-09-30 new accepts, full research. Two openers SENT 07:11Z on Raka's "Send both!", three no angle.
 
 Raka's words, "do the connected invitation accepted run again theres new ones. Full research. ALL
 ANGLES ALL RESOURCES STRICTLY NO SHORTCUTS. And also including research oliver".
