@@ -1,4 +1,9 @@
-# Pierre-Lou Pichon, Saint-Lary. He answered, warmly, with a real signal. 2026-09-29. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Pierre-Lou Pichon, Saint-Lary. He answered warmly, we answered back. 2026-09-29. SENT.
+
+Sent 2026-09-30 at 05 49 52Z, activity `act_iDcLnFWYvz4MqsMgL`. His reply had synced into
+lemlist by then and matched the screenshot verbatim, so the transcription was sound. Thread
+pulled before and after, 4 activities to 5, exactly one copy.
 
 Thread pulled at roughly 15 00Z today and the activities API cross checked for every LinkedIn
 reply since midnight. Neither had his message, because **he sent it at 19 40 local, after both
