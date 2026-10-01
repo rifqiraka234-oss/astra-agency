@@ -29,7 +29,7 @@ So every nudge below is on something the July message did not say.
 | Outcome | Who |
 |---|---|
 | NUDGE, on something new | Richard Pheifer, Mark O'Sullivan, Maryn Gerrits, Volker Hollmichel |
-| CLOSE, they fixed what we raised | Rakia Jaziri (Wealthy Technology rebuilt its homepage), Etienne Lefebvre (Arvest now splits Analytics and Market) |
+| CLOSE, today's site covers what July raised (changed or not, unknown) | Rakia Jaziri (Wealthy Technology), Etienne Lefebvre (Arvest splits Analytics and Market) |
 | CLOSE, nothing new worth their time | Salim Saleem, Umer Adnan, Nikita-Tarass H. |
 | BLOCKED, Raka to open | Febin Rahman (interfirstgroup.com unreadable from here), Dori Adams (shutterb.co robot challenge on every route) |
 
@@ -73,7 +73,7 @@ sweep gdpr: tools/eu-view.py on https://pheiferwelding.nl walled by Cloudflare f
 sweep apps: the July certificate and hours app was offered and ignored, RULES 1B, not resent, nothing new found that a welding subcontractor of this size would name
 sweep social: tools/social-audit.js opened https://www.instagram.com/pheiferwelding/ 273 followers, 36 posts, latest 2026-08-24, and https://www.facebook.com/Pheiferwelding/ 324 followers, both alive, no angle
 sweep squad: a welding firm with 1 registered employee per KvK, no build team, not a squad fit
-thread: problem the site still has the Jimdo template's title and sample Impressum, and the bare domain opens nothing | cost a contractor checking Pheifer before a job finds a site that looks half finished | offer fix those three things, a small job | link site, finished
+thread: problem the site still has the Jimdo template's title and sample Impressum, and the bare domain opens nothing | cost a contractor checking Pheifer before a job finds a site that looks half finished | offer fix those three things, a small job, after parking the July app | link site, finished
 lead read: Richard reads that Google lists his site as Tech and IT Services, that his Impressum is Jimdo's sample and the plain domain doesn't open, that a contractor checking him sees a half finished site, and gets offered a small fix for exactly those three, one thread
 claims:
 Google shows your site as "Tech and IT Services", https://www.pheiferwelding.nl/ <title> "Tech and IT Services | Pheiferwelding" fetched 2026-10-01 twice (safari and chrome fingerprints), and Google web search result title for the same URL
@@ -86,7 +86,7 @@ recheck: 2026-10-01 14:5xZ, title, Impressum text and both DNS lookups re-run, a
 ### Richard, NUDGE
 
 ```
-Richard, one more from me, on something else.
+Richard, I'll leave the welder app for now, something else caught my eye.
 
 Google shows your site as "Tech and IT Services", because the page title is still the one from the Jimdo template. Your Impressum page still has Jimdo's sample text explaining what an impressum is, and typing pheiferwelding.nl without the www doesn't open anything.
 
@@ -189,8 +189,8 @@ sweep gdpr: tools/eu-view.py on https://www.eclect.com from Stockholm read, Comp
 sweep apps: /services/ sells Cockpit Light, Gaston (an AI assistant) and a full dashboard, built or bought, nothing shows they're missing, the booking platform is the one item marked coming soon
 sweep social: tools/social-audit.js opened https://www.instagram.com/eclect 142 followers, 0 posts, LinkedIn https://www.linkedin.com/company/eclectplaces UNKNOWN (certificate error), small next to the platform
 sweep squad: team of 20 on /about/ with no developer, 7 vacancies on /careers/ with no developer, and a platform listed as coming soon on the tier they sell for €799 a month, a squad fit
-thread: problem the booking platform in the Connect tier is still marked coming soon and no one on the team or in the vacancies builds software | cost it's part of what member hotels pay for in the Connect tier | offer our build squad gets it live in half the time at half the price | link platform
-lead read: Maryn reads that the booking platform in ECLECT Connect is still coming soon and nobody on the team page is a developer, and gets offered our build squad to get that platform live in half the time at half the price, one thread
+thread: problem the booking platform in the Connect tier is still marked coming soon and no one on the team or in the vacancies builds software | cost it's part of what member hotels pay for in the Connect tier | offer a team of our developers gets that platform live in half the time at half the price | link platform
+lead read: Maryn reads that the booking platform in ECLECT Connect is still coming soon and nobody on the team page is a developer, and gets offered a team of our developers to get that platform live in half the time at half the price, one thread
 claims:
 sells ECLECT Connect with a listing on your boutique booking platform, https://www.eclect.com/services/ "een vermelding op ons boutique bookingsplatform (coming soon)", Connect priced at 799 euros a month on the same page (not in the message)
 still marked coming soon, https://www.eclect.com/services/ "Vermelding boekingsplatform boutique hotels – coming soon", https://www.eclect.com/en/services/ "Listing on boutique hotel booking platform – coming soon", both fetched 2026-10-01
@@ -205,7 +205,7 @@ Maryn, a different thought from the internal tools one in July.
 
 The memberships page sells ECLECT Connect with a listing on your boutique booking platform, and that platform is still marked coming soon. None of the 20 people on your team page is a developer, so I couldn't see who's building it.
 
-If it sits with you under strategic projects, our build squad can get that platform live in half the time at half the price.
+If it sits with you under strategic projects, a team of our developers can get that platform live in half the time at half the price.
 
 Who's building it at the moment?
 ```
@@ -214,8 +214,9 @@ Who's building it at the moment?
 
 ## Volker Hollmichel, Wandel. NUDGE. ctc_tndKY7x5nEmEPdDCg. 79 days since the opener
 
-July opener (14 Jul) was a tighter homepage around Sophia. The site has been rebuilt since ("Fachkräftegewinnung neu
-gedacht", a Sophia section with stats), so that's not resent. This is about consent, which July didn't mention.
+July opener (14 Jul) was a tighter homepage around Sophia, ignored, so it's not resent (RULES 1B). Whether the site changed
+since July is NOT known, no July snapshot was reachable and the German hero still reads "Die neue Infrastruktur für
+modernes Recruiting". This is about consent, which July didn't mention.
 
 ```gate
 lead: Volker Hollmichel, lemlist jobTitle "Co-Founder & CEO" of Wandel.com, tagline "Founder & CEO at wandel.com", ctc_tndKY7x5nEmEPdDCg, lea_EydNGykEfPx7oibJ7 (the July opener sits in the thread with no campaignId, the connect note under cam_PryZp5LuvQv8NznHh). German AI recruiting for skilled trades, Sophia the AI recruiter, funded by the BMFTR and the EU per the homepage
@@ -239,9 +240,9 @@ sources:
 9. https://www.deutsche-startups.de/ (2025-01-07, 5 neue Startups, Wandel)
 10. https://www.facebook.com/people/Wandelcom/61565893912576/ (tools/social-audit.js, UNKNOWN)
 11. https://www.linkedin.com/company/wandel-talent-mobility-platform/ (tools/social-audit.js, UNKNOWN)
-pains: 5 judged. (1) Analytics, Hotjar, Mixpanel and ad pixels run for an EU visitor before the Usercentrics banner is answered, costliest because Wandel handles candidate data and sells to large German employers whose data protection people check exactly this, and German consent rules (TTDSG section 25) draw Abmahnungen. (2) The homepage message, July's angle, rebuilt since, not resent. (3) The meta description is still the Next.js default, real, small, kept for later. (4) AI recruiting compliance rules in the news, too broad to pin on them. (5) Social, both accounts UNKNOWN from here, nothing claimed
+pains: 5 judged. (1) Analytics, Hotjar, Mixpanel and ad pixels run for an EU visitor before the Usercentrics banner is answered, costliest because Wandel handles candidate data and sells to large German employers whose data protection people check exactly this, and German consent rules (TTDSG section 25) draw Abmahnungen. (2) The homepage message, July's angle, ignored once, not resent, whether it changed since July is unknown. (3) The meta description is still the Next.js default, real, small, kept for later. (4) AI recruiting compliance rules in the news, too broad to pin on them. (5) Social, both accounts UNKNOWN from here, nothing claimed
 chosen: (1), new, verified from the EU with a control, and a contained fix
-sweep website: 6 crawl pages and 7 rendered pages of https://www.wandel.com read, rebuilt since July, the only site flaw left is the default meta description, small
+sweep website: 6 crawl pages and 7 rendered pages of https://www.wandel.com read, the July homepage point is not resent, the other site flaw found is the default meta description, small
 sweep gdpr: tools/eu-view.py from Stockholm, https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.wandel.com%2F , _ga, _gcl_au, _hjSession, mp_ cookies and doubleclick, LinkedIn, Leadinfo, Hotjar and Mixpanel requests before a click, control allbirds.eu essential only, the chosen angle
 sweep apps: Wandel is itself a software company with its own product team, no app gap to sell
 sweep social: tools/social-audit.js on https://www.facebook.com/people/Wandelcom/61565893912576/ and https://www.linkedin.com/company/wandel-talent-mobility-platform/ both UNKNOWN (certificate error), nothing claimed
@@ -275,22 +276,22 @@ Want me to send over exactly which tags fire and where to block them?
 
 ```sweep
 lead: Rakia Jaziri, CEO and co-founder of Wealthy Technology (SIREN 985133008, president Rakia), ctc_W3kjdZFnbzXH85zTM, lea_yPxfNNgiJEGrbqvei. July opener 16 Jul, homepage journeys for pharma, CRO and MedTech, expert review
-website: https://wealthy-technology.com rebuilt since July, rendered and screenshot looked at 2026-10-01, the hero now reads "From clinical data to approved dossier", a numbered Ingest, Draft flow, "human sign-off" and "under human oversight", which is what July asked for. 8 pages in the rendered crawl
+website: https://wealthy-technology.com rendered and screenshot looked at 2026-10-01, no July snapshot was reachable so whether it changed is unknown, the hero today reads "From clinical data to approved dossier", a numbered Ingest, Draft flow, "human sign-off" and "under human oversight", which covers most of what July raised. 8 pages in the rendered crawl
 gdpr: tools/eu-view.py on https://wealthy-technology.com from Stockholm read in the saved EU view file, no finding strong enough to lead a nudge, nothing chosen
 apps: https://wealthy-technology.com sells its own agentic AI platform for regulatory documents, an AI product company building in house, no app gap to sell
 social: no social account linked in the homepage HTML (curl of https://wealthy-technology.com, 0 social URLs) or the 8 page rendered crawl, nothing to test
 squad: a 1 to 10 person deep tech startup per lemlist, BFM 2026-01-30 coverage via tools/news.py, nothing on https://wealthy-technology.com shows a build capacity gap
-verdict: NO_STRONG_ANGLE, CLOSE. They did the thing we suggested. No message
+verdict: NO_STRONG_ANGLE, CLOSE. July's point is ignored once and today's site largely covers it, nothing new found. No message
 ```
 
 ```sweep
 lead: Etienne Lefebvre, co-founder and CEO of Arvest (arvestwine.com), ctc_nYnQgsLWCc384BqPm, lea_Mh7A5KiXkX7nGK7bj. July opener 14 Jul, separate Analytics and Market
-website: https://arvestwine.com rendered crawl, 21 pages at 200 read, nav now ANALYTICS and MARKET as separate items and the homepage splits "ARVEST ANALYTICS Rechercher un vin" from "ARVEST MARKET Acheter / vendre un vin", /pricing explains both side by side. July's point is fixed. Market lists 173 offers
+website: https://arvestwine.com rendered crawl, 21 pages at 200 read, nav now ANALYTICS and MARKET as separate items and the homepage splits "ARVEST ANALYTICS Rechercher un vin" from "ARVEST MARKET Acheter / vendre un vin", /pricing explains both side by side. Today's site covers July's point, whether it changed since July is unknown, no snapshot reachable. Market lists 173 offers
 gdpr: tools/eu-view.py on https://arvestwine.com from Stockholm read, cookie choice shown ("Refuser", "Tout accepter"), nothing chosen
 apps: https://arvestwine.com/pricing sells Arvest Analytics from €150 and a B2B order book with API and ERP import, a data and trading platform built in house, no app gap
 social: no social account linked in the homepage HTML (curl of https://arvestwine.com, 0 social URLs) or the 21 page rendered crawl, nothing to test
 squad: a product team announcing five partnerships on https://arvestwine.com/blog between May and June 2026 (Dartess, London City Bond, FERT, WineSitting, Lockwine), nothing shows a capacity gap
-verdict: NO_STRONG_ANGLE, CLOSE. They did the thing we suggested. No message
+verdict: NO_STRONG_ANGLE, CLOSE. July's point is ignored once and today's site covers it, nothing new found. No message
 ```
 
 ```sweep
@@ -342,3 +343,21 @@ social: tools/social-audit.js not run, the links can't be read out of a walled p
 squad: UNKNOWN until https://shutterb.co is read, a gig platform with its own product could need builders but nothing here shows it
 verdict: BLOCKED_NEEDS_INFO. Raka, could you open https://shutterb.co and screenshot the homepage and pricing? Then I can judge whether there's anything new
 ```
+
+---
+
+## Alignment pass against the July threads, 2026-10-01 (Raka, "make sure all these messages are aligned with what i sent to them previously")
+
+All four threads pulled again, unchanged, 3 messages each, no reply, sync recent at 16:42Z. Each nudge read against
+the connect note, the July opener and the 21 Jul bump, word for word.
+
+| Lead | July said | Nudge before | Change |
+|---|---|---|---|
+| Richard | "We made a small app ... Want me to send it over?", then "have you seen this?" | Jumped to his website with no word on the app, read like a different sender | Opens "I'll leave the welder app for now, something else caught my eye" |
+| Mark | Site "feels like a consumer chocolate shop", sketched a business gifting page so companies "request a quote faster" | "a different one from the gifting page in July", quote frame kept | None, aligned |
+| Maryn | "I don't think this would be relevant, the brand and website already look strong", "we also build simple internal portals and tools" | Kept off the website, as July promised. Said "our build squad", a term he's never heard from us | "a team of our developers", Raka's "in half the time at half the price" kept verbatim |
+| Volker | Sophia "actively finds, speaks with and prequalifies", a tighter homepage around Sophia | "a different point from the homepage one in July", Sophia kept as the subject | None, aligned |
+
+Correction to my own report. I said Wandel, Wealthy Technology and Arvest were rebuilt since July. No July snapshot was
+reachable (Wayback 429, WebFetch refused) and the queue holds no July research note, so that was never verified.
+Wandel's German hero still says "Die neue Infrastruktur für modernes Recruiting". The wording above now says unknown.
