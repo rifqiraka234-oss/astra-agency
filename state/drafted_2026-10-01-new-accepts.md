@@ -75,3 +75,17 @@ I run Astra agency. We build websites and booking tools for brands like Unilever
 
 Shall I send you over what the fee breakdown sheet looks like?
 ```
+
+---
+
+## Willem Straat, KeyPro and Hooft & Petiet (ReShare Living Group). NO_STRONG_ANGLE. ctc_XDgqhRAfzxcTmGKhZ
+
+```sweep
+lead: Willem Straat, founder (2011) and co-owner of KeyPro, Keypro B.V. director Keypro Holding B.V. (52688844) per the Staatscourant via https://www.oozo.nl/bedrijven/groningen/zuidoost/eemspoort/2722856/keypro-b-v , lemlist companyName Hooft & Petiet and jobDescription "Mede-eigenaar van Hooft & Petiet ... onderdeel van de ReShare Living Group", ctc_XDgqhRAfzxcTmGKhZ, lea_EKPeqAQrDvy7jMRTb. Grehamer Invest a strategic shareholder since 17 Mar 2025 (https://www.emerce.nl/wire/keypro-verwelkomt-grehamer-invest-strategische-partner), ReShare Living Group B.V. set up 11 Sep 2025 with Hooft & Petiet, 45 staff and revenue heading for €8M (RTV Noord 22 Nov 2025), goal "het grootste circulaire meubelverhuurplatform van Europa"
+website: https://www.keypro.nl all 1,402 sitemap pages fetched (1,394 at 200, 8 sitemap entries at 404, all shop items or a service page), NL, EN and DE, 1,088 shop pages, a configurator, Mijn KeyPro accounts, a service request form. https://hooftenpetiet.nl all 68 pages read twice, a long but clear quote form, rendered and looked at. https://reshareliving.com one page, "Deze site is in ontwikkeling", promises "één uniforme werkwijze". The two brands keep separate request routes, KeyPro's configurator and Hooft & Petiet's 20 field form, nothing shows that costs them a client
+gdpr: from Stockholm per tools/eu-view.py, https://www.keypro.nl/ loads HubSpot, LinkedIn Insight, Bing, Google Ads and Leadinfo and sets hubspotutk and _gcl_au before a click, https://hooftenpetiet.nl/ loads Google Analytics, HubSpot and Google Ads before a click, both carry the HubSpot banner. Real, a consent setting, fails the tweak test like Brovanture
+apps: KeyPro already runs a webshop, configurator (https://www.keypro.nl/configurator/), Mijn KeyPro accounts and service requests. Bas Anneveldt told the Groninger Ondernemers Courant (https://www.groningerondernemerscourant.nl/nieuws/keypro-biedt-alternatief-voor-fast-furniture-verrek-je-kunt-ook-meubels-huren) some items never come back and pieces see up to 40 clients, nothing shows a tracking gap they'd name, so no app pitch
+social: opened with tools/social-audit.js, Instagram keypro_furnishing 1,133 followers latest 2026-09-30, hooftenpetiet 167 followers latest 2025-06-25 (dormant 463 days), Facebook 8 and 197, LinkedIn KeyPro 1,822 followers and 27 employees via tools/fetch-walled.py. The dormant Hooft & Petiet account is small next to KeyPro's active one
+squad: vacancies on https://www.keypro.nl/werken-bij-keypro/ and https://hooftenpetiet.nl/vacatures/ are delivery and fitting staff and two internships, no development roles, an investor backed group with its own web suppliers ("webrealisatie CONTENT voor elkaar" on Hooft & Petiet), no squad signal
+verdict: NO_STRONG_ANGLE, a digitally mature, investor backed group, the findings are a consent setting, a dormant second Instagram and eight stale sitemap entries. Google News via tools/news.py, KeyPro 11 results (DVHN 2026-09-28, Wonen360 2026-07-02 15 year anniversary, RTV Noord 2025-11-22), "Willem Straat" 10, "Hooft & Petiet" 2. Revisit if ReShare launches its platform
+```
