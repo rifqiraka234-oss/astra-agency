@@ -1,4 +1,8 @@
-# Two replies overnight, both pushing back with something real. 2026-09-30. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Two replies, both answered. 2026-09-30, sent 2026-10-01.
+
+Raka approved both. Nikolas sent 05 14 28Z, `act_nb6nXEeEsAcMMvWE3`, thread 9 to 10. Jim sent
+05 14 44Z, `act_97PtaDzTCAmT4haxQ`, thread 3 to 4. Both pulled before and after, one copy each.
 
 Method. `GET /api/activities?version=v2&type=linkedinReplied&minDate=2026-09-29T18 00Z` returned
 three replies from two people. The inbox list over the same window returned the same two threads
