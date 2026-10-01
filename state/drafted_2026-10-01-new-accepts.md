@@ -49,8 +49,8 @@ sweep gdpr: from Stockholm per tools/eu-view.py https://webbkoll.5july.net/en/re
 sweep apps: the DfE guidance https://get-help-buying-for-schools.education.gov.uk/guidance-supply-staff-mandate asks outside agencies for a per candidate breakdown of pay, on costs and supplier fee, a small tool that produces it for every booking is the chosen angle
 sweep social: tools/social-audit.js on https://www.linkedin.com/company/enrich-education-recruitment/ UNKNOWN (our proxy), read through tools/fetch-walled.py instead, 1 employee, the only social link on the site. No angle
 sweep squad: a one person agency per the company page, no build team, not a squad fit
-thread: problem Enrich isn't on the framework academy trusts must now use, so a trust booking him needs a per candidate breakdown | cost every trust booking needs pay, on costs and fee broken out, and more schools are going into trusts | offer the per booking fee breakdown sheet | link breakdown
-lead read: Nick reads that he's not on the framework trusts must now buy through, that each trust booking then needs a fee breakdown per candidate, that this grows as schools join trusts, and gets offered a breakdown sheet, one thread
+thread: problem Enrich isn't on the framework academy trusts must now use, so a trust booking him needs a per candidate breakdown | cost every trust booking needs pay, on costs and fee broken out, and more schools are going into trusts | offer a small web tool that builds the per booking fee breakdown | link breakdown
+lead read: Nick reads that he's not on the framework trusts must now buy through, that each trust booking then needs a fee breakdown per candidate, that this grows as schools join trusts, and gets offered a small web tool that builds those breakdowns, one thread
 claims:
 your agency isn't on the government's supply framework, https://www.gca.gov.uk/agreements/RM6376:1/lot-suppliers/csv downloaded 2026-10-01, 208 suppliers, 0 hits for Enrich, controls Axis Recruitment, Engage Education and Tradewind found in the same file
 since September academy trusts must book supply through it, https://get-help-buying-for-schools.education.gov.uk/guidance-supply-staff-mandate "From September 2026, single and multi-academy trusts are mandated to procure supply staff through the Government Commercial Agency (GCA) 'Supply Teachers and Education Recruitment' framework agreement"
@@ -71,9 +71,9 @@ However, your agency isn't on the government's supply framework, and since Septe
 
 Especially, when you are supporting more London schools, the breakdowns pile up, since your February post covers the plan for every school to join a trust.
 
-I run Astra agency. We build websites and booking tools for brands like Unilever, AXA, Pertamina. I standardised the KPI reporting for 23 markets at Heineken, so each one read the same numbers without asking.
+I run Astra agency. We build websites and web tools for brands like Unilever, AXA, Pertamina. I standardised the KPI reporting for 23 markets at Heineken, so each one read the same numbers without asking.
 
-Shall I send you over what the fee breakdown sheet looks like?
+Shall I send you over what the small web tool for those breakdowns looks like?
 ```
 
 ---
