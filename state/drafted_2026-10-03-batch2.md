@@ -69,28 +69,14 @@ CEO per lemlist. 2 Aug pitch, an owner hub for backers and buyers. The pitch mad
 the nudge makes none either and stays conditional. ecoute.audio answers 202 with a 169 byte wall to
 our fetcher (example.com control 200 in the same minute), so nothing is said about the site.
 
-NUDGE.
-```
-👀 Josh, where do backers check on their pair?
-
-If backers can't see their own order status, every production update turns into a wave of where's mine emails, and each one is a conversation in your inbox instead of an answer they found themselves. The relationship ends up living with Kickstarter and email rather than with écoute.
-
-An owner hub for order status, updates, setup and support fixes that. Happy to put a version together if it's useful, and no worries if not.
-```
+SENT 2026-10-03 act_MTRrt5LRpn2Qbasht. Do not send again.
 
 ## Cameron Syme, See Saw. ctc_k3p23YQzo9t7pbK3F
 
 Co-owner per lemlist. 2 Aug pitch, a client portal for approvals and final assets. The "two person
 studio" line in the pitch isn't reopened today, so it's left out.
 
-NUDGE.
-```
-👀 Cameron, where do approvals live at See Saw?
-
-With film, OOH and matchday graphics all moving at once, every new club or campaign adds versions, feedback rounds and final files to chase. If that sits in email threads and shared links, the admin grows with every win and caps how many accounts you can take on.
-
-A simple client portal for approvals and final assets takes that off your plate. Happy to put one together if it helps, and if you've already got it sorted, fair enough.
-```
+SENT 2026-10-03 act_w2hDmaP7vjLohQs3S. Do not send again.
 
 ## Amna Abdulla, L'MANE. ctc_tEAMfkRou5jGBv8YT
 
@@ -103,14 +89,7 @@ them pointing at /pages/contact as a positive control. And /policies/shipping-po
 the L'MANE that CLAUDE.md warns about, where a regex nearly called four live policy pages missing.
 This claim is about the links, not the pages, and says the pages exist.
 
-NUDGE.
-```
-👀 Amna, two links in your Client Services menu go nowhere
-
-Shipping & Delivery and Returns Policy both point at #, so a click does nothing, while the two policy pages themselves are already live. At L'MANE's prices a first time buyer wants to know what a return costs before paying, and a link that does nothing is where some of them stop.
-
-Want me to send you the two addresses to drop in? It's a five minute fix.
-```
+SENT 2026-10-03 act_B6hHDySS8edFrjQwp. Do not send again.
 
 ## Cold, close. One follow up already, and a nudge would break a rule
 
