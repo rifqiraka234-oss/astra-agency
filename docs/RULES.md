@@ -219,10 +219,14 @@ So, before any message that criticises a claim the lead makes:
   words. Silence is an answer. Nudge on something new or close the row.
 
 **Meetings mean close, not nudge (Raka, 2026-10-03).** His words, "people we have said or have done
-meetings with close". Anyone we've had a call with, or who agreed to one, gets a graceful close
-when they go quiet, never another nudge. Bo, Erisan, Terry and Peter were the first four. And when
-he says "close never contact again" it means no closing message either, and the contact gets a
-DO_NOT_CONTACT row, which `tools/check-drafts.py` now enforces on every draft.
+meetings with close". Anyone we've had a call with, or who agreed to one, is closed when they go quiet, never nudged.
+Bo, Erisan, Terry and Peter were the first four.
+
+**"Close" means NEVER SEND ANYTHING ANYMORE (Raka, 2026-10-03, his capitals).** Not a goodbye
+message, not a graceful sign off, nothing. A close is a DO_NOT_CONTACT row in the queue and no
+message at all, which `tools/check-drafts.py` enforces on every draft. Twenty six drafted closing
+messages were withdrawn the day he said it. So two follow ups without a reply means the row is
+closed silently, and the same for a meeting that went quiet.
 
 ## 1A. ONE THREAD. The whole message is one problem, start to finish (Raka, 2026-09-25)
 

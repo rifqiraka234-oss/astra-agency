@@ -23,15 +23,7 @@ saying so plainly is worth more here than a third question. A third push is the 
 The draft concedes fully and closes. **No question, no offer.** The sign off says nothing about
 pig and dairy, because that came from another session's research and has not been reopened.
 
-CLOSER.
-
-```
-That's a better answer than my question deserved Jim, and it's fair.
-
-Credit accounts and no ecommerce is a deliberate choice rather than a gap, and selling on price to people who leave on price is a bad trade. I'll stop poking at it.
-
-Good luck with the rest of the year.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## 2. Vladislav Maslov, HPiVS. Not an owner, and that is on our filter.
 

@@ -10,10 +10,7 @@ today after the 14 50 and 15 02 UTC syncs, `nextPage` null, nothing new from any
 Raka, 3 Oct, "people we have said or have done meetings with close". He said "That would be
 wonderful to chat in the fall" on 5 Aug, and our 25 Sep fall check in went unanswered.
 
-CLOSER.
-```
-Terry, I came back in the fall like I said I would, and I'll leave it there now. Good luck with the portal work, and if you ever want a hand building it, you know where I am.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 ## Sergey Shalunov, SotoCat. ctc_Puf9L7o8nDTyDNn2Q
 
 He asked to see projects on 22 Sep, got the deck and the built site on 23 Sep. No URL resent.
@@ -45,19 +42,13 @@ Does next week work, or has the timing moved?
 He said "Sure. Give me your time." on 2 Sep. We offered times on 2 Sep and again on 25 Sep and
 none was ever booked.
 
-CLOSER.
-```
-Erisan, I've offered times twice and we never managed to land one, so I'll stop chasing the call. Thanks for being open to it back in September. Good luck with Revios.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 ## Bo Poldervaart, Curalis. ctc_9wKKt5K6ShKMfmW69. CLOSE, Raka's word
 
 Raka, 3 Oct, "Bo poldervart also close". The call ran on 16 Sep (state/meetings.jsonl), then two
 bare links the same afternoon and our 25 Sep nudge, unanswered.
 
-CLOSER.
-```
-Bo, thanks again for the call in September. I've followed up a couple of times since and it hasn't landed, so I'll leave it there rather than keep turning up in your messages. Good luck with Curalis.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## Peter Hurd-Watler, Impact Applications. ctc_Px9CGphf6heWCy7To. CLOSE, Raka's meeting rule
 
@@ -67,10 +58,7 @@ until then", and on 25 Aug we said October works and that we'd carry the reminde
 state/drafted_2026-09-24-nudges.md. **The one I'd most expect you to overrule**, since he asked
 for October himself.
 
-CLOSER.
-```
-Peter, we'd pencilled in October for a chat, but rather than chase it into a busy recruiting season I'll hand the timing back to you. If it's still useful later, just say and I'll fit around you. Good luck with the hiring.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 ## Cold, first nudge. Pitched once, never replied
 
 ## Josh Fairbairn, écoute audio. ctc_pNPsWdEMRCb4ccQev
@@ -133,70 +121,40 @@ rendered today. None of them ever replied to anything, so these are deliberately
 
 ## Axel Fleury, Edouard Koehn. ctc_bQXb7vJQNyQ4psRCc
 
-CLOSER.
-```
-Axel, I wrote in August about the Edouard Koehn collection page and never heard back, so I'll take that as a no. Good luck with the next pieces.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## Mezabine Hatim, Maven Intel. ctc_Na96y74W5uT3GkSam
 
-CLOSER.
-```
-Mezabine, I flagged the case studies section on Maven Intel back in August, and the site's moved on a lot since, so that note's out of date. Good luck with Aiva and the new models.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## Florian Legris, DermaScan. ctc_spjv9MYphb6rvWRws
 
-CLOSER.
-```
-Florian, I've raised the DermaScan centre pages twice without an answer, so I'll stop there. Good luck with the new centres.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## Joost Zwan, CrossFit Alkmaar. ctc_pzSLzmNiDjKmDimX4
 
-CLOSER.
-```
-Joost, two messages about the Kickstart page and no answer is a clear enough reply, so I won't send a third. Good luck with the box.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## Hidde Hermans, Favorinus. ctc_pq23X9G5KY9NwkDCn
 
-CLOSER.
-```
-Hidde, I asked twice whether a deal sourcing page for Favorinus would help and heard nothing, so I'll leave it with you. Good luck with the portfolio.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## Jason, Stableport. ctc_SEeEgPK3irExCxBpc
 
-CLOSER.
-```
-Jason, the corridor checker idea has had two outings without a reply, so I'll let it go. All the best with Stableport.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## Jenny Smith, knowledge weave. ctc_xH6d56jWSsfPazmhS
 
-CLOSER.
-```
-Jenny, I wrote twice over the summer about giving the foresight lab its own front door and didn't get a reply, so I'm signing off on it. Good luck with knowledge weave.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## Anver Jalaldeen, ASSNTURE. ctc_qW8ZiYbxdWtmz7iAH
 
-CLOSER.
-```
-Anver, I'll drop the ASSNTURE journey idea since two notes went unanswered. Wishing you well with it.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## Olivier Trancart, ENNODEV. ctc_Dr4JnQbD9oK23WYEf
 
-CLOSER.
-```
-Olivier, two notes about the ENNODEV eligibility flow without a reply tells me it isn't a priority, so I'll step away. All the best with ENNODEV.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
 
 ## Aaron Khan, Candoo. ctc_4imqWJFLh33A3Qrw7
 
-CLOSER.
-```
-Aaron, I've written twice about the two versions of the Candoo site and haven't heard back, so I'm stepping back. Good luck with Candoo.
-```
+WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No message, DO_NOT_CONTACT.
