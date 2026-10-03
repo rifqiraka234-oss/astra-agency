@@ -1,3 +1,4 @@
+<!-- GATE ARCHIVED -->
 > Josh, Cameron and Amna SENT 2026-10-03 15:25Z on Raka's 'send all'. Sergey and Karim are NOT sent, due from 9 Oct, and their drafts below stay live.
 
 # Batch 2, 3 Oct. Two warm second nudges, four meeting closes, three cold nudges, ten cold closes. NOT SENT.
@@ -17,27 +18,13 @@ WITHDRAWN 2026-10-03. Raka, "close as in NEVER SEND ANYTHING ANYMORE". No messag
 
 He asked to see projects on 22 Sep, got the deck and the built site on 23 Sep. No URL resent.
 
-NUDGE.
-```
-👀 Sergey, did the SotoCat build land?
-
-You asked to see our projects, so you got the deck and a working site with a tenant's leak running through it. The part I'd still value your eye on is the pricing page, where the monthly fee works itself out from the unit count.
-
-Worth twenty minutes to walk through it together?
-```
+SENT 2026-10-03 act_AYBe8Fm88uJWbht8w. Do not send again.
 
 ## Karim Narowski, WisTree. ctc_w3ejEE5BjsbCTnYyA
 
 His 17 Sep words, "I already had a quick look at it, though, and it looks really promising."
 
-NUDGE.
-```
-👀 Karim, how did the fairs go?
-
-You said the scale looked promising on a first look. With the busy weeks hopefully behind you, twenty minutes would be enough for you to tell me where I've bent the six questions out of shape.
-
-Does next week work, or has the timing moved?
-```
+SENT 2026-10-03 act_Zri664uFeuW4iTced. Do not send again.
 
 ## Erisan Olasheni, Revios. ctc_8gvdTcTEsfk2MHbcF. CLOSE, Raka's meeting rule
 

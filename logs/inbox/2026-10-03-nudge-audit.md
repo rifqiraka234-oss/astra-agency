@@ -404,3 +404,5 @@ Chouchoute typos and Shopify popup text, ECLECT coming soon in NL and EN with 20
 no developer, Wandel from Stockholm via eu-view.py still setting GA, Hotjar and Mixpanel cookies
 and calling LinkedIn and Google ad pixels, Dussmann and Fiege on its homepage.
 Still open, Sergey and Karim from 9 Oct, Lucas Raka's call. 26 closes withdrawn, never sent.
+
+Sergey (act_AYBe8Fm88uJWbht8w) and Karim (act_Zri664uFeuW4iTced) sent 15:33Z on Raka's 'Yeah send', one copy each. Lucas DO_NOT_CONTACT on Raka's word.
