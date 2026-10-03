@@ -35,8 +35,9 @@ Raka's words, "Do it again and do the research. Full research. NO SHORCUTS! FOLL
   10 Dec 2025 and the business was sold the same day to Dennison Property Services Ltd, owned by Angela Dennison
   (founder Jan Forster's daughter) and Melissa (registered as Melissa Guinsberg, the site signs her Melissa Carman,
   Owner). The opener doesn't mention any of it. Raka may prefer a softer first message to someone rebuilding.
-- **Ryan's opener is about his second company, not the one on his lemlist record.** He and his father bought into
-  Flexo Trade Print Ltd (incorporated 3 Nov 2025, both 25 to 50% owners). Block one names Qualiflex as the template
+- **Ryan's opener is about his second company, not the one on his lemlist record.** He and his father are the
+  directors and 25 to 50% owners of Flexo Trade Print Ltd, incorporated 3 Nov 2025. An older Flexo Trade Print in a
+  Print Business fire story is not proven to be linked, so no message says they bought anything. Block one names Qualiflex as the template
   says, block two names Flexo Trade Print. Both are his per Companies House.
 - **Noah's 16 Sep row was the wrong man.** It matched his LinkedIn slug to a French graphic designer and ruled him out
   under the old €5k floor. The lemlist record, the Impressum and the register all say he runs Systemhaus-Hertling UG.
