@@ -1,4 +1,7 @@
-# Seven for Raka to decide. 2026-10-03. NOT SENT.
+<!-- GATE ARCHIVED -->
+> All seven SENT 2026-10-03 19:20Z on Raka's "send doesnt hurt".
+
+# Seven for Raka to decide. 2026-10-03.
 
 Raka, "Put them all here and let me decide". Every thread below was pulled in full at 17 15 UTC,
 nextPage null, and no one has replied. Every lemlist record was read, all seven are owners or
@@ -14,13 +17,7 @@ API shows campaign_type per_month, activated 2026-03-30, recurring on. It was li
 before we wrote.
 
 CORRECTION.
-```
-Hi Alexandre, a quick correction to what I sent you in August.
-
-I wrote that La Minute Arabe had no real membership, only one off donations. That's wrong. Your Tipeee's been set up for monthly support since March, and I missed it.
-
-Sorry about that.
-```
+SENT 2026-10-03 act_sqgLSZrtQdPFCSw6o. Do not send again.
 
 ### Léa Janoray, Le Goût des Confidences. ctc_7t4sjmWpsECwFc4Z9
 
@@ -33,13 +30,7 @@ and the homepage has a "Recevez nos nouvelles de saison" signup.
 messages into one small company on the same day looks careless, so I'd send this Monday or later.
 
 CORRECTION.
-```
-Hi Léa, I owe you a correction.
-
-I told you twice that the site had no subscription and no mailing list. It's got both, the one year subscription in paper and digital, and the seasonal newsletter signup, and they were up before my first message.
-
-My mistake, I didn't look carefully enough.
-```
+SENT 2026-10-03 act_nFfSHDR7dwzYyF29u. Do not send again.
 
 ### Cecilia Drevon-Barbecot, RealityCheq. ctc_uYAHmsknNRHP7gRbZ
 
@@ -49,13 +40,7 @@ code, but the same box sits on working Squarespace sites (bycrawford.com six tim
 once), so it's standard markup and proves nothing. Her list may well be fine.
 
 CORRECTION.
-```
-Hi Cecilia, a correction on my last message.
-
-I said your waiting list wasn't storing signups, based on a Squarespace warning in the page code. I've since found the same hidden warning on Squarespace sites whose forms work fine, so it doesn't prove anything, and I shouldn't have said it.
-
-If you want to be sure, one test signup will tell you. Sorry for the false alarm.
-```
+SENT 2026-10-03 act_C5tY34XKEKcjx5mr6. Do not send again.
 
 ### Maharshi Trivedi, Thrive Physio and Performance. ctc_q7gk5zRxrBkwfrdfA
 
@@ -65,13 +50,7 @@ and "Follow-ups $175 (1 hour)", and Pricing is in the top menu. jobTitle "Co-Own
 Physiotherapist".
 
 CORRECTION.
-```
-Hi Maharshi, I need to correct my August message to you.
-
-I said there were no prices anywhere on your site. Your Pricing page has them, $200 for the initial evaluation and $175 for follow ups, and it's right there in the menu.
-
-Sorry, I should've clicked through properly.
-```
+SENT 2026-10-03 act_C48eT6oPG4uEEaJTn. Do not send again.
 
 ### Yohan Maronnier, ISTEF. ctc_ojbk7CE5wCwwhPrJo
 
@@ -81,13 +60,7 @@ go to https://istef.fr/candidature/, a normal web form (Gravity Forms). Only one
 points at https://completel.istef.fr/fmi/webd/FMW_CandidatureEnLigne, refetched now.
 
 CORRECTION.
-```
-Hi Yohan, I got something wrong in my last two messages.
-
-I said that applying to ISTEF runs through FileMaker. The Candidater buttons on your homepage go to a normal web form, and only the Candidater à une formation link in the menu still opens the FileMaker page. So it's one link, not the whole application.
-
-If that link isn't meant to be there any more, it's a quick swap. Sorry for overstating it.
-```
+SENT 2026-10-03 act_H5TAzw9RADkSY7NwD. Do not send again.
 
 ## Two nudges held from today's run
 
@@ -97,13 +70,7 @@ One message from us, 3 Sep, about the desert canyon hero. Held only because his 
 a nudge today (#129). My suggestion, send this on 6 Oct or later so it doesn't land the same day.
 
 NUDGE.
-```
-👀 Roy, Noventes still opens on a canyon
-
-A founder choosing who writes their subsidy application wants proof you've done it before, and the whole first screen is desert. The ones comparing two or three bureaus tend to go with the one that shows funded projects.
-
-Would a homepage that leads with your track record be worth a look? I'd put it together. No worries if the timing's off.
-```
+SENT 2026-10-03 act_5NCXBXPNfQDEpLxHM. Do not send again.
 
 ### Willem Ruiter, bluedesk. ctc_LX8SwdtGKPPxqzFd2
 
@@ -113,10 +80,4 @@ Strictly that's about recruiters pitching against their vacancies, and the list 
 build squad offer sits close to it. Send, or close him.
 
 NUDGE.
-```
-👀 Willem, one question on the build squad idea
-
-When a big Dynamicweb project lands, does it go to Gert's team as it is, or do you bring people in? If it's the first, every yes to a new client waits on the same hours, and that's where we'd help, developers working under bluedesk's name and Gert's process.
-
-If you're well staffed, just say.
-```
+SENT 2026-10-03 act_C8muisEq8fqasMPqW. Do not send again.
