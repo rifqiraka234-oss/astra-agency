@@ -36,7 +36,7 @@ const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const PROXY_CA_SPKI = 'KnP1OnzHv/y42eRQmbGwoYTHcSJF448m6CU5mdngwKk=';
+const PROXY_CA_SPKI = require('./proxy-ca-spki')();
 const CA_BUNDLE = '/root/.ccr/ca-bundle.crt';
 
 function curlMeta(url) {

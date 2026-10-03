@@ -23,7 +23,7 @@ const path = require('path');
 
 // The egress proxy re terminates TLS, so Chromium has to trust its CA. Pin by
 // key rather than disabling verification. See CLAUDE.md, the build toolchain.
-const PROXY_CA_SPKI = 'KnP1OnzHv/y42eRQmbGwoYTHcSJF448m6CU5mdngwKk=';
+const PROXY_CA_SPKI = require('./proxy-ca-spki')();
 const CA_BUNDLE = '/root/.ccr/ca-bundle.crt';
 
 const SOCIAL = {
