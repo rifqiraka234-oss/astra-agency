@@ -218,6 +218,12 @@ So, before any message that criticises a claim the lead makes:
 - A criticism the lead ignored once does not get sent again fourteen days later in the same
   words. Silence is an answer. Nudge on something new or close the row.
 
+**Meetings mean close, not nudge (Raka, 2026-10-03).** His words, "people we have said or have done
+meetings with close". Anyone we've had a call with, or who agreed to one, gets a graceful close
+when they go quiet, never another nudge. Bo, Erisan, Terry and Peter were the first four. And when
+he says "close never contact again" it means no closing message either, and the contact gets a
+DO_NOT_CONTACT row, which `tools/check-drafts.py` now enforces on every draft.
+
 ## 1A. ONE THREAD. The whole message is one problem, start to finish (Raka, 2026-09-25)
 
 His words, "i dont understand the angle, how does the website, then suddenly go to the build
