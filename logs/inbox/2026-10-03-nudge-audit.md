@@ -406,3 +406,27 @@ and calling LinkedIn and Google ad pixels, Dussmann and Fiege on its homepage.
 Still open, Sergey and Karim from 9 Oct, Lucas Raka's call. 26 closes withdrawn, never sent.
 
 Sergey (act_AYBe8Fm88uJWbht8w) and Karim (act_Zri664uFeuW4iTced) sent 15:33Z on Raka's 'Yeah send', one copy each. Lucas DO_NOT_CONTACT on Raka's word.
+
+## Send run, review list 1 to 149, 16 14 to 17 11 UTC
+
+Raka's word: "Send all just follow the protocol of sending the message just make sure the message we send now makes sense with their full thread and all so we dont look like an idiot".
+
+Result: 149 of 149 sent, and each one was checked after sending. Nothing was skipped.
+
+- **Before each send.** I pulled the thread (`get_inbox_conversation`, limit 1). Every total matched the count at drafting, and our message was always the newest. Nobody had replied since drafting.
+- **Fit with the thread.** I read each draft against the thread's newest message.
+- **Follow-up counts.** Any thread with 4 or more messages had its count reread from the drafting evidence. Mark Preston, Stefan Van Der Heijden and Peter Van Gulick were also re-pulled in full. Stefan and Peter had asked "what business do you have" on 4 Sep, and both were answered the same day.
+- **Queue status.** Before every batch I ran a git pull and checked the latest queue status for each contact. No contact on the list was DO_NOT_CONTACT, NOT_A_LEAD, NO_STRONG_ANGLE, or already nudged today. A parallel session pushed 8 NO_STRONG_ANGLE rows during the run, and none of them overlapped this list.
+- **After each send.** I pulled the thread again. The total had gone up by exactly one, and the newest message was our exact text, so there is one copy per thread.
+- **Reconciliation.** 149 sends, 149 unique contacts, 149 unique activity ids, and no gaps in the numbering.
+- **Records.**
+  - Each sent draft's text was replaced by `SENT 2026-10-03 act_...`.
+  - A queue row with status NUDGED and the activity id was appended per contact.
+  - Each batch of ten was committed separately.
+
+Held, not sent:
+
+- **#150 Roy Hoven, Noventes.** His colleague Gijs got #129 today.
+- **#151 Willem Ruiter, bluedesk.** The careers page turns away sales approaches.
+
+Everyone on this list is now at their last allowed nudge or one short of it. The next touch on any of these threads is a close, or nothing.
