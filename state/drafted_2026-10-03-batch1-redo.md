@@ -1,4 +1,4 @@
-# Batch 1 of the closed owners, re-researched 2026-10-03. 2 openers drafted, 6 closed. NOTHING SENT.
+# Batch 1 of the closed owners, re-researched 2026-10-03. 2 openers SENT 15:54 UTC (Mandy, Timur), 6 closed.
 
 Raka's words, "Yes. And again please test ALL angles? I told you about the 5 angles. What are those?"
 The five, website, GDPR from an EU visitor's view, apps and internal tools, social media opened with
