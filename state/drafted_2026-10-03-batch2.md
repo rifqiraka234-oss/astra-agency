@@ -1,0 +1,202 @@
+# Batch 2, 3 Oct. Five warm second nudges, three cold nudges, ten cold closes. NOT SENT.
+
+Raka, "Are there any more you needa draft? Draft em." Every thread below pulled per contact
+today after the 14 50 and 15 02 UTC syncs, `nextPage` null, nothing new from any of them.
+
+## Warm, second nudge, the last before a close. Nudged 25 Sep, so I'd send from 9 Oct
+
+## Terry Bordeleau, MRF FieldTech. ctc_x6MbKQXwaYSrJvepd
+
+His 3 Aug words, "we would be moving into portals by the fall of this year".
+
+NUDGE.
+```
+👀 Terry, are portals still on for this year?
+
+Back in August you said you'd be moving into portals by the fall if the milestones held. If they did, I'd like to be in that conversation early. If they slipped, just say and I'll stay out of the way.
+
+Where did it land?
+```
+
+## Sergey Shalunov, SotoCat. ctc_Puf9L7o8nDTyDNn2Q
+
+He asked to see projects on 22 Sep, got the deck and the built site on 23 Sep. No URL resent.
+
+NUDGE.
+```
+👀 Sergey, did the SotoCat build land?
+
+You asked to see our projects, so you got the deck and a working site with a tenant's leak running through it. The part I'd still value your eye on is the pricing page, where the monthly fee works itself out from the unit count.
+
+Worth twenty minutes to walk through it together?
+```
+
+## Karim Narowski, WisTree. ctc_w3ejEE5BjsbCTnYyA
+
+His 17 Sep words, "I already had a quick look at it, though, and it looks really promising."
+
+NUDGE.
+```
+👀 Karim, how did the fairs go?
+
+You said the scale looked promising on a first look. With the busy weeks hopefully behind you, twenty minutes would be enough for you to tell me where I've bent the six questions out of shape.
+
+Does next week work, or has the timing moved?
+```
+
+## Erisan Olasheni, Revios. ctc_8gvdTcTEsfk2MHbcF
+
+His 2 Sep words, "Sure. Give me your time." Our 25 Sep message already owned the missed dates, so this
+one doesn't apologise again, it hands him the choice.
+
+NUDGE.
+```
+👀 Erisan, still keen to walk you through Revios
+
+The homepage we built is the page a first time visitor or an ad click lands on before they ever open the app. You said give me your time, so this round you pick the day and I'll fit around your timezone.
+
+Which day next week works for you?
+```
+
+## Bo Poldervaart, Curalis. ctc_9wKKt5K6ShKMfmW69
+
+The AI Act line is ours, from 28 Aug and 25 Sep, so it's framed as our thought, not his.
+
+NUDGE.
+```
+👀 Bo, an idea for Curalis
+
+The AI Act timing is still the bit I keep coming back to, with every care organisation hitting it at the same moment. If Curalis wants something to put in front of them, a short explainer page or a readiness check, that's the kind of thing we can build quickly.
+
+Would that help, or is something else more pressing right now?
+```
+
+## Cold, first nudge. Pitched once, never replied
+
+## Josh Fairbairn, écoute audio. ctc_pNPsWdEMRCb4ccQev
+
+CEO per lemlist. 2 Aug pitch, an owner hub for backers and buyers. The pitch made no site claim, so
+the nudge makes none either and stays conditional. ecoute.audio answers 202 with a 169 byte wall to
+our fetcher (example.com control 200 in the same minute), so nothing is said about the site.
+
+NUDGE.
+```
+👀 Josh, where do backers check on their pair?
+
+If backers can't see their own order status, every production update turns into a wave of where's mine emails, and each one is a conversation in your inbox instead of an answer they found themselves. The relationship ends up living with Kickstarter and email rather than with écoute.
+
+An owner hub for order status, updates, setup and support fixes that. Happy to put a version together if it's useful, and no worries if not.
+```
+
+## Cameron Syme, See Saw. ctc_k3p23YQzo9t7pbK3F
+
+Co-owner per lemlist. 2 Aug pitch, a client portal for approvals and final assets. The "two person
+studio" line in the pitch isn't reopened today, so it's left out.
+
+NUDGE.
+```
+👀 Cameron, where do approvals live at See Saw?
+
+With film, OOH and matchday graphics all moving at once, every new club or campaign adds versions, feedback rounds and final files to chase. If that sits in email threads and shared links, the admin grows with every win and caps how many accounts you can take on.
+
+A simple client portal for approvals and final assets takes that off your plate. Happy to put one together if it helps, and if you've already got it sorted, fair enough.
+```
+
+## Amna Abdulla, L'MANE. ctc_tEAMfkRou5jGBv8YT
+
+Co-Owner per lemlist. 18 Aug pitch said the returns and shipping pages weren't linked from the
+homepage. **Rechecked three ways today, and it's sharper than we said.** The raw homepage HTML has
+"Shipping & Delivery" and "Returns Policy" under CLIENT SERVICES, both `href="#"`. A rendered
+Chromium read of /collections/all shows the same two links pointing at `#`, with Contact Us beside
+them pointing at /pages/contact as a positive control. And /policies/shipping-policy and
+/policies/refund-policy both return 200, so the pages exist and nothing links to them. This is
+the L'MANE that CLAUDE.md warns about, where a regex nearly called four live policy pages missing.
+This claim is about the links, not the pages, and says the pages exist.
+
+NUDGE.
+```
+👀 Amna, two links in your Client Services menu go nowhere
+
+Shipping & Delivery and Returns Policy both point at #, so a click does nothing, while the two policy pages themselves are already live. At L'MANE's prices a first time buyer wants to know what a return costs before paying, and a link that does nothing is where some of them stop.
+
+Want me to send you the two addresses to drop in? It's a five minute fix.
+```
+
+## Cold, close. One follow up already, and a nudge would break a rule
+
+Florian, Joost and Hidde had their claim repeated once on 18 Aug, and RULES 1B says an ignored
+criticism isn't sent a third time, nudge on something new or close. Jason, Jenny, Anver and Olivier
+and Aaron were told "one more nudge", "one more try" or "one more check in". Axel's angle was
+dropped on 14 Sep because Edouard Koehn sells through retailers. Mezabine's angle is dead, the
+template notes we pointed at are gone and mavenintel.com now leads with its products and models,
+rendered today. None of them ever replied to anything, so these are deliberately short.
+
+## Axel Fleury, Edouard Koehn. ctc_bQXb7vJQNyQ4psRCc
+
+CLOSER.
+```
+Axel, I wrote in August about the Edouard Koehn collection page and never heard back, so I'll take that as a no. Good luck with the next pieces.
+```
+
+## Mezabine Hatim, Maven Intel. ctc_Na96y74W5uT3GkSam
+
+CLOSER.
+```
+Mezabine, I flagged the case studies section on Maven Intel back in August, and the site's moved on a lot since, so that note's out of date. Good luck with Aiva and the new models.
+```
+
+## Florian Legris, DermaScan. ctc_spjv9MYphb6rvWRws
+
+CLOSER.
+```
+Florian, I've raised the DermaScan centre pages twice without an answer, so I'll stop there. Good luck with the new centres.
+```
+
+## Joost Zwan, CrossFit Alkmaar. ctc_pzSLzmNiDjKmDimX4
+
+CLOSER.
+```
+Joost, two messages about the Kickstart page and no answer is a clear enough reply, so I won't send a third. Good luck with the box.
+```
+
+## Hidde Hermans, Favorinus. ctc_pq23X9G5KY9NwkDCn
+
+CLOSER.
+```
+Hidde, I asked twice whether a deal sourcing page for Favorinus would help and heard nothing, so I'll leave it with you. Good luck with the portfolio.
+```
+
+## Jason, Stableport. ctc_SEeEgPK3irExCxBpc
+
+CLOSER.
+```
+Jason, the corridor checker idea has had two outings without a reply, so I'll let it go. All the best with Stableport.
+```
+
+## Jenny Smith, knowledge weave. ctc_xH6d56jWSsfPazmhS
+
+CLOSER.
+```
+Jenny, I wrote twice over the summer about giving the foresight lab its own front door and didn't get a reply, so I'm signing off on it. Good luck with knowledge weave.
+```
+
+## Anver Jalaldeen, ASSNTURE. ctc_qW8ZiYbxdWtmz7iAH
+
+CLOSER.
+```
+Anver, I'll drop the ASSNTURE journey idea since two notes went unanswered. Wishing you well with it.
+```
+
+## Olivier Trancart, ENNODEV. ctc_Dr4JnQbD9oK23WYEf
+
+CLOSER.
+```
+Olivier, two notes about the ENNODEV eligibility flow without a reply tells me it isn't a priority, so I'll step away. All the best with ENNODEV.
+```
+
+## Aaron Khan, Candoo. ctc_4imqWJFLh33A3Qrw7
+
+CLOSER.
+```
+Aaron, I've written twice about the two versions of the Candoo site and haven't heard back, so I'm stepping back. Good luck with Candoo.
+```
