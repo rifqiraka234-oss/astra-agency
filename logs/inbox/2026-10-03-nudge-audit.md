@@ -371,6 +371,11 @@ sign off, then scanned again in Dutch, French and German after Danny's Dutch clo
 
 ## Still waiting on Raka from earlier days
 
-Jim close and Vladislav reply (1 Oct), Steven held, Cedric reply, Sholi close, Alan correction,
-Tijs build decision, Peter Hurd-Watler owed in October, Joel Fuente booking check, Lynn Chadwick,
-and the four July nudges in `state/drafted_2026-10-01-july-stalled.md`.
+Jim close and Vladislav reply (1 Oct), Alan correction, Tijs build decision, Peter Hurd-Watler
+owed in October, Joel and Lynn closes (Raka said "always close" on 21 Sep, never sent), Sholi
+(closed with no further contact on 22 Sep, yet a close message was drafted on 25 Sep), and the four
+July nudges in `state/drafted_2026-10-01-july-stalled.md`.
+
+**Corrected the same day.** This line first said Steven and Cedric were waiting too. They weren't.
+Steven got his UK site on 29 Sep (act_h37nkDaqxedJxZEfn) and Cedric's reply went the same day
+(act_7zeK7jCu6Mx2h9aMY). Both came from a summary, not the threads.
