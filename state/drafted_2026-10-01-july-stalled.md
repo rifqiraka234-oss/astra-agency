@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> Richard, Mark, Maryn and Volker SENT 2026-10-03 15:25Z on Raka's 'send all', every claim rechecked live first.
+
 # July stalled leads, full re-research, 2026-10-01. 4 nudges drafted, 5 closed, 2 blocked. NOTHING SENT.
 
 Raka's words, "Send! And do the other full researches, all angle please". These are the eleven people who got a

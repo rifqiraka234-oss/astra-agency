@@ -393,3 +393,14 @@ the queue and fails the batch if the latest row is DO_NOT_CONTACT, CLOSED_PROMIS
 CLOSED_NO_FURTHER_CONTACT, CLOSED_FINAL_MESSAGE, CLOSED_DO_NOT_CONTACT or CLOSED. Positive control,
 it failed Hein in today's nudge file, all four in the 25 Sep file and Joel and Lynn in the 21 Sep
 file. Negative control, the eleven closes still pass.
+
+## Sent, 2026-10-03 15:24 to 15:25Z, on Raka's "send all"
+
+Fourteen messages. Niklas, Sebastian, Sammy, Alexander, Shrey, Alice, Josh, Cameron, Amna, Richard,
+Mark, Maryn, Volker, Vladislav. Each thread pulled immediately before (nothing new) and after (one
+copy, ours newest). The July four rechecked live first, Pheifer title and Impressum via
+fetch-walled.py and the bare domain empty at Google and Cloudflare DNS with www as control,
+Chouchoute typos and Shopify popup text, ECLECT coming soon in NL and EN with 20 team members and
+no developer, Wandel from Stockholm via eu-view.py still setting GA, Hotjar and Mixpanel cookies
+and calling LinkedIn and Google ad pixels, Dussmann and Fiege on its homepage.
+Still open, Sergey and Karim from 9 Oct, Lucas Raka's call. 26 closes withdrawn, never sent.

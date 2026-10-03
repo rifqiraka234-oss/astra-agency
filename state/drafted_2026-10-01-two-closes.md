@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> Vladislav SENT 2026-10-03 15:25:38Z. Jim withdrawn, DO_NOT_CONTACT.
+
 # Jim closes himself, and another non owner slips the filter. 2026-10-01. NOT SENT.
 
 Method. `GET /api/activities?version=v2&type=linkedinReplied&minDate=2026-09-30T16 00Z` returned

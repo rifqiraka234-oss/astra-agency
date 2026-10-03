@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> Niklas, Sebastian, Sammy, Alexander, Shrey and Alice SENT 2026-10-03 15:24 to 15:25Z on Raka's 'send all'. Lucas is still Raka's call and NOT sent.
+
 # Warm nudges, people who replied before and went quiet. 2026-10-03. NOT SENT.
 
 Raka's rule, 3 Oct. Nudge when we're at none or one follow up since they last spoke, close at two,

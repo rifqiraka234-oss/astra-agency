@@ -1,3 +1,5 @@
+> Josh, Cameron and Amna SENT 2026-10-03 15:25Z on Raka's 'send all'. Sergey and Karim are NOT sent, due from 9 Oct, and their drafts below stay live.
+
 # Batch 2, 3 Oct. Two warm second nudges, four meeting closes, three cold nudges, ten cold closes. NOT SENT.
 
 Raka, "Are there any more you needa draft? Draft em." Every thread below pulled per contact
