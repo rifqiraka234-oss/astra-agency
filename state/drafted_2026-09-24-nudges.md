@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> ARCHIVED 2026-10-03. Kyson, Terry and Julien were sent on 25 Sep. Peter's October check in is replaced by a close in state/drafted_2026-10-03-batch2.md on Raka's meeting rule. Nothing here is to be sent.
+
 # Nudges, 2026-09-24. Both inboxes swept. NOT SENT.
 
 ## Scope, and how the two inboxes were covered

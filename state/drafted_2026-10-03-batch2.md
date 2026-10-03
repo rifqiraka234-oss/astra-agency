@@ -1,23 +1,19 @@
-# Batch 2, 3 Oct. Five warm second nudges, three cold nudges, ten cold closes. NOT SENT.
+# Batch 2, 3 Oct. Two warm second nudges, four meeting closes, three cold nudges, ten cold closes. NOT SENT.
 
 Raka, "Are there any more you needa draft? Draft em." Every thread below pulled per contact
 today after the 14 50 and 15 02 UTC syncs, `nextPage` null, nothing new from any of them.
 
-## Warm, second nudge, the last before a close. Nudged 25 Sep, so I'd send from 9 Oct
+## Warm. Sergey and Karim get a second nudge from 9 Oct. Terry, Erisan, Bo and Peter are closes on Raka's meeting rule
 
-## Terry Bordeleau, MRF FieldTech. ctc_x6MbKQXwaYSrJvepd
+## Terry Bordeleau, MRF FieldTech. ctc_x6MbKQXwaYSrJvepd. CLOSE, Raka's meeting rule
 
-His 3 Aug words, "we would be moving into portals by the fall of this year".
+Raka, 3 Oct, "people we have said or have done meetings with close". He said "That would be
+wonderful to chat in the fall" on 5 Aug, and our 25 Sep fall check in went unanswered.
 
-NUDGE.
+CLOSER.
 ```
-👀 Terry, are portals still on for this year?
-
-Back in August you said you'd be moving into portals by the fall if the milestones held. If they did, I'd like to be in that conversation early. If they slipped, just say and I'll stay out of the way.
-
-Where did it land?
+Terry, I came back in the fall like I said I would, and I'll leave it there now. Good luck with the portal work, and if you ever want a hand building it, you know where I am.
 ```
-
 ## Sergey Shalunov, SotoCat. ctc_Puf9L7o8nDTyDNn2Q
 
 He asked to see projects on 22 Sep, got the deck and the built site on 23 Sep. No URL resent.
@@ -44,33 +40,37 @@ You said the scale looked promising on a first look. With the busy weeks hopeful
 Does next week work, or has the timing moved?
 ```
 
-## Erisan Olasheni, Revios. ctc_8gvdTcTEsfk2MHbcF
+## Erisan Olasheni, Revios. ctc_8gvdTcTEsfk2MHbcF. CLOSE, Raka's meeting rule
 
-His 2 Sep words, "Sure. Give me your time." Our 25 Sep message already owned the missed dates, so this
-one doesn't apologise again, it hands him the choice.
+He said "Sure. Give me your time." on 2 Sep. We offered times on 2 Sep and again on 25 Sep and
+none was ever booked.
 
-NUDGE.
+CLOSER.
 ```
-👀 Erisan, still keen to walk you through Revios
-
-The homepage we built is the page a first time visitor or an ad click lands on before they ever open the app. You said give me your time, so this round you pick the day and I'll fit around your timezone.
-
-Which day next week works for you?
+Erisan, I've offered times twice and we never managed to land one, so I'll stop chasing the call. Thanks for being open to it back in September. Good luck with Revios.
 ```
+## Bo Poldervaart, Curalis. ctc_9wKKt5K6ShKMfmW69. CLOSE, Raka's word
 
-## Bo Poldervaart, Curalis. ctc_9wKKt5K6ShKMfmW69
+Raka, 3 Oct, "Bo poldervart also close". The call ran on 16 Sep (state/meetings.jsonl), then two
+bare links the same afternoon and our 25 Sep nudge, unanswered.
 
-The AI Act line is ours, from 28 Aug and 25 Sep, so it's framed as our thought, not his.
-
-NUDGE.
+CLOSER.
 ```
-👀 Bo, an idea for Curalis
-
-The AI Act timing is still the bit I keep coming back to, with every care organisation hitting it at the same moment. If Curalis wants something to put in front of them, a short explainer page or a readiness check, that's the kind of thing we can build quickly.
-
-Would that help, or is something else more pressing right now?
+Bo, thanks again for the call in September. I've followed up a couple of times since and it hasn't landed, so I'll leave it there rather than keep turning up in your messages. Good luck with Curalis.
 ```
 
+## Peter Hurd-Watler, Impact Applications. ctc_Px9CGphf6heWCy7To. CLOSE, Raka's meeting rule
+
+He wrote on 18 Aug "Happy to meet with you virtually in October, we're really busy recruiting
+until then", and on 25 Aug we said October works and that we'd carry the reminder. Under Raka's
+3 Oct rule an agreed meeting means close, so this replaces the October check in from
+state/drafted_2026-09-24-nudges.md. **The one I'd most expect you to overrule**, since he asked
+for October himself.
+
+CLOSER.
+```
+Peter, we'd pencilled in October for a chat, but rather than chase it into a busy recruiting season I'll hand the timing back to you. If it's still useful later, just say and I'll fit around you. Good luck with the hiring.
+```
 ## Cold, first nudge. Pitched once, never replied
 
 ## Josh Fairbairn, écoute audio. ctc_pNPsWdEMRCb4ccQev
