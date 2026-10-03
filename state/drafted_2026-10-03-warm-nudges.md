@@ -133,9 +133,4 @@ offered a smaller first phase. Nothing since. Reopening a decline after we signa
 yours to decide, not mine. If yes, this is the draft. It names the floor and nothing else about
 price.
 
-NUDGE.
-```
-Lucas, one thing has changed since you said we weren't a match on price. Our builds now start at 500 euros, so a first phase like the Connectome homepage with the baseline interaction would sit well below the range I gave you in August.
-
-If that changes the picture, I'll scope just that part. If not, there's no need to reply.
-```
+WITHDRAWN 2026-10-03. Raka, "Lucas fucking never sent". DO_NOT_CONTACT.
