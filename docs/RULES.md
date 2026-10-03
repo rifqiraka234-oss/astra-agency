@@ -222,6 +222,12 @@ So, before any message that criticises a claim the lead makes:
 meetings with close". Anyone we've had a call with, or who agreed to one, is closed when they go quiet, never nudged.
 Bo, Erisan, Terry and Peter were the first four.
 
+**Three days of silence is urgent (Raka, 2026-10-03).** His words, "we consider >3 days always
+urgent. We needa nudge them somehow if >3 days." Once our last message is more than three days
+old with no reply, the next nudge is due now, not at a week. The other rules still decide WHAT
+happens. Two follow ups since they last spoke, a meeting held or agreed, a written promise that a
+message was the last, or a DO_NOT_CONTACT row all mean a silent close instead of a nudge.
+
 **"Close" means NEVER SEND ANYTHING ANYMORE (Raka, 2026-10-03, his capitals).** Not a goodbye
 message, not a graceful sign off, nothing. A close is a DO_NOT_CONTACT row in the queue and no
 message at all, which `tools/check-drafts.py` enforces on every draft. Twenty six drafted closing
