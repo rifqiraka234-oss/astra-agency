@@ -379,3 +379,17 @@ July nudges in `state/drafted_2026-10-01-july-stalled.md`.
 **Corrected the same day.** This line first said Steven and Cedric were waiting too. They weren't.
 Steven got his UK site on 29 Sep (act_h37nkDaqxedJxZEfn) and Cedric's reply went the same day
 (act_7zeK7jCu6Mx2h9aMY). Both came from a summary, not the threads.
+
+## Never contact again. Raka, 2026-10-03, after reviewing the draft list
+
+His words, "close never contact again", for Hein Bilterijst, Alan Ragueneau, Tijs Overeijnder,
+Joel Fuente, Lynn Chadwick and Sholi Loewenthal. Read as no closing message either, since a
+close is a contact. Each has a DO_NOT_CONTACT queue row. Hein's nudge is withdrawn from
+`state/drafted_2026-10-03-warm-nudges.md` and his prototype row carries `doNotContact`. The 21 Sep,
+24 Sep and 25 Sep draft files that held the others' drafts are archived.
+
+**Made mechanical, not just noted.** `tools/check-drafts.py` now looks up every draft's contact in
+the queue and fails the batch if the latest row is DO_NOT_CONTACT, CLOSED_PROMISED_LAST,
+CLOSED_NO_FURTHER_CONTACT, CLOSED_FINAL_MESSAGE, CLOSED_DO_NOT_CONTACT or CLOSED. Positive control,
+it failed Hein in today's nudge file, all four in the 25 Sep file and Joel and Lynn in the 21 Sep
+file. Negative control, the eleven closes still pass.

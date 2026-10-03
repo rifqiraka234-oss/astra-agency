@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> ARCHIVED 2026-10-03. Everything here was sent, superseded or closed. Joel and Lynn are DO_NOT_CONTACT on Raka's word, 2026-10-03. Nothing in this file is to be sent.
+
 # The 105 threads that went quiet mid conversation. 2026-09-21
 
 Raka asked to draft all of them. I pulled and read every thread in full first, and

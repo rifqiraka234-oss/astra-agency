@@ -13,7 +13,7 @@ they themselves said in the thread, quoted with their own verb.
 
 | Verdict | Who | Why |
 |---|---|---|
-| Nudge now, drafted below | Niklas, Sebastian, Sammy, Hein, Alexander, Shrey, Alice | Under two follow ups, last message ours and 8 to 36 days old |
+| Nudge now, drafted below | Niklas, Sebastian, Sammy, Alexander, Shrey, Alice. Hein withdrawn on Raka's word, never contact again | Under two follow ups, last message ours and 8 to 36 days old |
 | Hold to 9 Oct | Terry, Sergey, Karim, Erisan, Bo | All nudged on 25 Sep, eight days ago. The next one is their last before a close, so it's worth two weeks of space rather than one |
 | Close instead, in the closes file | Maarten, Amir | Maarten was told "I will not keep chasing it forever". Amir took the angle apart himself and there's no hoopooh build to offer |
 | Already closed or promised last | Rosalie, Jori, Danny | Rosalie got "last gentle nudge on this" on 26 Aug. Jori got "before I park it" after two soft nos. **Danny was closed in Dutch on 13 Sep, "Ik laat het hierbij, geen gezeur meer van mij", which my English only close search missed** |
@@ -73,20 +73,11 @@ You said you were still developing how you present your work and portfolio onlin
 Happy to put a quick version together with your tours up front. If you've already got it covered, no worries at all.
 ```
 
-## 4. Hein Bilterijst, Toffe Traktaties. ctc_iaZXHL7R4ucKaGcFP. 31 days, one follow up already
+## 4. Hein Bilterijst, Toffe Traktaties. WITHDRAWN, never contact again
 
-Unchanged from `state/drafted_2026-09-25-older-sweep.md`, rechecked against today's pull of 9
-activities. His 19 Aug feedback, our rebuild to his spec on 26 Aug, one nudge on 2 Sep. **This is his
-last nudge under the rule, the next message is a close.** Dutch, because the whole thread is.
-
-NUDGE. LANG NL.
-```
-👀 Hein, ik heb hem omgebouwd zoals jij zei en nooit gehoord wat je ervan vond
-
-Je gaf me terecht mee dat bezoekers voor de producten komen en niet voor het merkverhaal. Dat heb ik gedaan, producten en prijzen bovenaan, zoeken op gelegenheid, plus de bezorgcheck en de rekenhulp voor een hele klas.
-
-Landde dat beter, of zit er nog iets scheef?
-```
+Raka, 3 Oct, "Hein Bilterijst close never contact again". The Dutch nudge that sat here is deleted
+and no closing message goes either. Queue row DO_NOT_CONTACT, and check-drafts.py now fails any
+draft addressed to him.
 
 ## 5. Alexander Resner, Layer2 Marketing. ctc_iiGkmAQeJCTg7TF3h. 33 days, no follow up yet
 

@@ -23,6 +23,10 @@ the five block, one exclamation, 95 to 170 word rules are the OPENER'S ALONE. Th
 The tag has to sit within twelve lines above the fence and nothing starting with # or **
 may sit between the two, so the safest place is the line directly above it.
 
+Every draft's contact is looked up in state/silent_accepted_queue.jsonl, and a draft to
+anyone whose latest row is DO_NOT_CONTACT, CLOSED_PROMISED_LAST or another never again
+status fails the batch. The contactId is read from the ## or ### heading above the block.
+
 Add LANG NL (or any two letter code) on that same tag line when the thread is in that
 language and stays in it. It turns off the English contraction tell and nothing else, so
 the dash, colon, banned word and truth rules all still run.
@@ -129,6 +133,56 @@ def blocks_of(path):
         out.append((body, shape, gate, lang))
         gate = None
     return out
+
+
+# Never contact again. Raka, 2026-10-03, six names in one message, "close never contact
+# again". A row in the queue is only a note, and notes get lost across a context reset,
+# so any draft addressed to a contact whose LATEST queue row carries one of these statuses
+# fails the batch. A reply from them later is lifted by appending a newer row, never by
+# deleting the old one.
+NEVER_AGAIN = {"DO_NOT_CONTACT", "CLOSED_DO_NOT_CONTACT", "CLOSED_NO_FURTHER_CONTACT",
+               "CLOSED_PROMISED_LAST", "CLOSED_FINAL_MESSAGE", "CLOSED"}
+
+
+def addressees_of(path):
+    """The contactId each message block is addressed to, in the same order as blocks_of.
+    Read from the nearest ## or ### heading above the block, which is where every draft
+    file names its contact. None when the section names nobody."""
+    src = open(path, encoding="utf-8").read()
+    if "GATE ARCHIVED" in src or "NO DRAFTS" in src:
+        return []
+    out = []
+    for info, body, start in fences(src):
+        if info:
+            continue
+        cid = None
+        for line in reversed(src[:start].split("\n")):
+            ids = re.findall(r"ctc_[A-Za-z0-9]{17}", line)
+            if ids and cid is None:
+                cid = ids[0]
+            if re.match(r"^#{2,3} ", line):
+                break
+        out.append(cid)
+    return out
+
+
+def never_again_statuses():
+    """Latest queue status per contactId. The queue is append only, last row wins."""
+    import json
+    import os
+    q = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "state",
+                     "silent_accepted_queue.jsonl")
+    latest = {}
+    if not os.path.exists(q):
+        return latest
+    for line in open(q, encoding="utf-8"):
+        try:
+            row = json.loads(line)
+        except ValueError:
+            continue
+        if row.get("contactId"):
+            latest[row["contactId"]] = (row.get("status"), row.get("name"))
+    return latest
 
 
 # THE RESEARCH GATE. Raka, 2026-09-24, every item "mandatory". RULES.md section 4B.
@@ -331,6 +385,13 @@ def check(path, replies=False):
 
     def bad(i, why):
         fails.append(f"  draft {i+1}: {why}")
+
+    latest = never_again_statuses()
+    for i, cid in enumerate(addressees_of(path)):
+        status, who = latest.get(cid, (None, None))
+        if status in NEVER_AGAIN:
+            bad(i, f"NEVER CONTACT AGAIN, {who or cid} is {status} in the queue. "
+                   "Do not send. Only a newer queue row, after they write to us, lifts this")
 
     closings, credentials = [], []
     for i, m in enumerate(msgs):

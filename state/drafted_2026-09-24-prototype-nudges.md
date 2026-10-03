@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> ARCHIVED 2026-10-03. Superseded by drafted_2026-09-25-prototype-nudges-SEND.md, which was sent. Lynn is DO_NOT_CONTACT on Raka's word, 2026-10-03. Nothing in this file is to be sent.
+
 # Prototypes sent, no reply. All 18 audited. 2026-09-24. NOT SENT.
 
 Every prototype ever built, from `state/prototypes.jsonl`, 21 rows over 18 distinct

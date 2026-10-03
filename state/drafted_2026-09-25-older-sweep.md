@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> ARCHIVED 2026-10-03. Sholi, Alan, Hein and Tijs are all DO_NOT_CONTACT on Raka's word, 2026-10-03, 'close never contact again'. Nothing in this file is to be sent.
+
 # The older backlog, checked. 2026-09-25. NOT SENT.
 
 Ten older threads pulled in full and paged to exhaustion today. Four are worth acting on,
