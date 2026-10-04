@@ -11,7 +11,42 @@ The machine readable filter JSON for every segment, byte for byte what the loade
 
 Country set "EU/UK" = Netherlands, Belgium, Germany, France, United Kingdom, Ireland, Austria, Switzerland, Luxembourg.
 
-## The owner block (used on every segment from W1b on)
+## Final state, loaded and audited 2026-10-04 (all DRAFT, 0 launched, 0 sent)
+
+| Campaign | id | Leads in lemlist |
+|---|---|---|
+| W1a new B2C owners | cam_hq7Dd3EyRZh7SshZq | 2,073 |
+| W1b new B2C on a DIY builder | cam_7gnHSf6GvvGy8gH3n | 386 |
+| W1c established B2C on a DIY builder, growing | cam_xFYYBzvfSHk83epvw | 398 |
+| W2 new B2B service firms NL BE DE UK | cam_mRqYLaLuZfrTXeBqR | 4,127 |
+| W3 growing 11-50 ops heavy firms, apps and tools | cam_Knj6kXngF2PbWfm5Z | 738 |
+| W4 growing 11-50 agencies and tech firms, Build Squad | cam_TfLEo8mTNS46NoSEc | 2,413 |
+| W5 1-50 clinics, law and accounting, GDPR | cam_ncBrkhdhyrSTek7mh | 4,333 |
+| Total | | 14,468 |
+
+**Raka's rule (2026-10-04): only CEO, owner, founder or co-founder**, because the connect note says "I'm a business
+owner too". Enforced on every lead by `tools/owner_title_rule.py` (`is_strict` on the title at the company of the
+segment's size, `tagline_ok` against retired, deceased, "Late Co-Founder", "met pensioen", "pensionada" etc.,
+50 self tests). Managing Director, Directeur, Geschäftsführer, Gérant, Zaakvoerder, Partner and plain
+"Entrepreneur" are NOT accepted on their own. Owner words in other languages that are accepted include Eigenaar,
+Oprichter, Gründer, Inhaber, Besitzer(in), Gesellschafter, Fondateur/Fondatrice, Propriétaire, Associé gérant,
+Chef d'entreprise, Zakenbezitter, Founding Director.
+
+How it was checked, three different ways.
+1. Per load, every add call's added + skipped + failed equalled what was sent, then each campaign was read back.
+2. lemlist's own campaign stats totals matched the loaders' sums for every campaign.
+3. An independent read only audit pulled every lead from all seven campaigns plus v0.1 and v0.2 and found:
+   0 leads failing the owner rule, 0 duplicate LinkedIn URLs within or across W1a..W5, 0 shared with v0.1/v0.2.
+   It flagged first names: 17 titles in the firstName slot ("Med", "Drs", "Ir", "Ing", "Oec", "Rer", "Vhb",
+   "DrFarid") were corrected to the real first name, and 9 company profiles (Apex Accountancy, Courage Horizon,
+   Miracourt, Mentraal, Jenton Group, Boom Living, Direct Ô Foncier, Gala's Kitchen, Fritz Agricole) were removed.
+
+W1a was cleaned to the same rule: 39 non owners removed, 112 builder site owners moved to W1b (Raka's call),
+58 wrong job or company fields corrected. Also removed or never loaded: two "Late Co-Founder" profiles, retired
+owners (Kees van der Westen, Fred Overkleeft, Jonathan Craig, Steve Pipe, Rob Mulder), ex founder Jeremy Benson,
+and two "Business Owner" product roles (Claudia Berrevoets-Keizer, Laura Steinmetz).
+
+## The owner block (search side; the strict rule above is then applied to every row)
 - Seniority: Ownership / Firm Leadership
 - Person's own country: the segment's country set (drops owners living in the US, India, Morocco etc.)
 - LinkedIn connections: 251-500, 500+

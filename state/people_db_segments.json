@@ -105,27 +105,30 @@
     "in": [
      "Founder",
      "Co-Founder",
+     "Cofounder",
      "Owner",
      "Co-Owner",
+     "CEO",
+     "Chief Executive Officer",
      "Eigenaar",
      "Mede-eigenaar",
+     "Bedrijfseigenaar",
      "Oprichter",
+     "Mede-oprichter",
      "Gründer",
-     "Geschäftsführer",
      "Inhaber",
+     "Unternehmensinhaber",
      "Fondateur",
-     "Gérant",
-     "Zaakvoerder",
-     "Managing Director",
-     "CEO",
-     "Directeur",
-     "Président",
      "Fondatrice",
-     "Unternehmensinhaber"
+     "Co-fondateur",
+     "Propriétaire",
+     "PDG"
     ],
     "out": []
    }
-  ]
+  ],
+  "expectedPeople": null,
+  "note": "strict owner titles, 2026-10-04"
  },
  "W1c": {
   "campaignId": "cam_xFYYBzvfSHk83epvw",
@@ -244,27 +247,30 @@
     "in": [
      "Founder",
      "Co-Founder",
+     "Cofounder",
      "Owner",
      "Co-Owner",
+     "CEO",
+     "Chief Executive Officer",
      "Eigenaar",
      "Mede-eigenaar",
+     "Bedrijfseigenaar",
      "Oprichter",
+     "Mede-oprichter",
      "Gründer",
-     "Geschäftsführer",
      "Inhaber",
+     "Unternehmensinhaber",
      "Fondateur",
-     "Gérant",
-     "Zaakvoerder",
-     "Managing Director",
-     "CEO",
-     "Directeur",
-     "Président",
      "Fondatrice",
-     "Unternehmensinhaber"
+     "Co-fondateur",
+     "Propriétaire",
+     "PDG"
     ],
     "out": []
    }
-  ]
+  ],
+  "expectedPeople": null,
+  "note": "strict owner titles, 2026-10-04"
  },
  "W2": {
   "campaignId": "cam_mRqYLaLuZfrTXeBqR",
@@ -367,7 +373,7 @@
   "campaignId": "cam_Knj6kXngF2PbWfm5Z",
   "twoStep": false,
   "sizes": "11-50",
-  "expectedPeople": 827,
+  "expectedPeople": null,
   "peopleFilters": [
    {
     "filterId": "seniority",
@@ -467,25 +473,29 @@
     "in": [
      "Founder",
      "Co-Founder",
+     "Cofounder",
      "Owner",
      "Co-Owner",
+     "CEO",
+     "Chief Executive Officer",
      "Eigenaar",
      "Mede-eigenaar",
+     "Bedrijfseigenaar",
      "Oprichter",
+     "Mede-oprichter",
      "Gründer",
-     "Geschäftsführer",
      "Inhaber",
+     "Unternehmensinhaber",
      "Fondateur",
-     "Gérant",
-     "Zaakvoerder",
-     "Managing Director",
-     "CEO",
-     "Directeur",
-     "Président"
+     "Fondatrice",
+     "Co-fondateur",
+     "Propriétaire",
+     "PDG"
     ],
     "out": []
    }
-  ]
+  ],
+  "note": "strict owner titles, 2026-10-04"
  },
  "W4": {
   "campaignId": "cam_TfLEo8mTNS46NoSEc",
