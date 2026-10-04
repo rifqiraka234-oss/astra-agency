@@ -1,0 +1,707 @@
+{
+ "W1b": {
+  "campaignId": "cam_7gnHSf6GvvGy8gH3n",
+  "twoStep": true,
+  "sizes": "1-10",
+  "expectedCompanies": 1146,
+  "companyFilters": [
+   {
+    "filterId": "currentCompanyHeadcount",
+    "in": [
+     "1-10"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyCountry",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "France",
+     "United Kingdom",
+     "Ireland",
+     "Austria",
+     "Switzerland",
+     "Luxembourg"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyFounded",
+    "in": [
+     "2024|2026"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanySubIndustry",
+    "in": [
+     "Hospitality",
+     "Food and Beverage Services",
+     "Events Services",
+     "Online and Mail Order Retail",
+     "Retail Apparel and Fashion",
+     "Personal and Laundry Services",
+     "Food and Beverage Manufacturing"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyTechnologies",
+    "in": [
+     "Wix",
+     "Squarespace",
+     "Jimdo",
+     "Webnode",
+     "Strikingly",
+     "Weebly",
+     "GoDaddy Website Builder"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyMarket",
+    "in": [
+     "B2C",
+     "B2B/B2C"
+    ],
+    "out": []
+   }
+  ],
+  "peopleFilters": [
+   {
+    "filterId": "seniority",
+    "in": [
+     "Ownership / Firm Leadership"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "country",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "France",
+     "United Kingdom",
+     "Ireland",
+     "Austria",
+     "Switzerland",
+     "Luxembourg"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "numberOfConnections",
+    "in": [
+     "251-500",
+     "500+"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentTitle",
+    "in": [
+     "Founder",
+     "Co-Founder",
+     "Owner",
+     "Co-Owner",
+     "Eigenaar",
+     "Mede-eigenaar",
+     "Oprichter",
+     "Gründer",
+     "Geschäftsführer",
+     "Inhaber",
+     "Fondateur",
+     "Gérant",
+     "Zaakvoerder",
+     "Managing Director",
+     "CEO",
+     "Directeur",
+     "Président",
+     "Fondatrice",
+     "Unternehmensinhaber"
+    ],
+    "out": []
+   }
+  ]
+ },
+ "W1c": {
+  "campaignId": "cam_xFYYBzvfSHk83epvw",
+  "twoStep": true,
+  "sizes": "1-10,11-50",
+  "expectedCompanies": 1428,
+  "companyFilters": [
+   {
+    "filterId": "currentCompanyHeadcount",
+    "in": [
+     "1-10",
+     "11-50"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyCountry",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "France",
+     "United Kingdom",
+     "Ireland",
+     "Austria",
+     "Switzerland",
+     "Luxembourg"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyFounded",
+    "in": [
+     "2005|2021"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanySubIndustry",
+    "in": [
+     "Hospitality",
+     "Food and Beverage Services",
+     "Events Services",
+     "Online and Mail Order Retail",
+     "Retail Apparel and Fashion",
+     "Personal and Laundry Services",
+     "Food and Beverage Manufacturing",
+     "Recreational Facilities",
+     "Retail Furniture and Home Furnishings",
+     "Retail Luxury Goods and Jewelry"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyTechnologies",
+    "in": [
+     "Wix",
+     "Squarespace",
+     "Jimdo",
+     "Webnode",
+     "Strikingly",
+     "Weebly",
+     "GoDaddy Website Builder"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanySizeGrowth",
+    "in": [
+     "5|200"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyMarket",
+    "in": [
+     "B2C",
+     "B2B/B2C"
+    ],
+    "out": []
+   }
+  ],
+  "peopleFilters": [
+   {
+    "filterId": "seniority",
+    "in": [
+     "Ownership / Firm Leadership"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "country",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "France",
+     "United Kingdom",
+     "Ireland",
+     "Austria",
+     "Switzerland",
+     "Luxembourg"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "numberOfConnections",
+    "in": [
+     "251-500",
+     "500+"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentTitle",
+    "in": [
+     "Founder",
+     "Co-Founder",
+     "Owner",
+     "Co-Owner",
+     "Eigenaar",
+     "Mede-eigenaar",
+     "Oprichter",
+     "Gründer",
+     "Geschäftsführer",
+     "Inhaber",
+     "Fondateur",
+     "Gérant",
+     "Zaakvoerder",
+     "Managing Director",
+     "CEO",
+     "Directeur",
+     "Président",
+     "Fondatrice",
+     "Unternehmensinhaber"
+    ],
+    "out": []
+   }
+  ]
+ },
+ "W2": {
+  "campaignId": "cam_mRqYLaLuZfrTXeBqR",
+  "twoStep": false,
+  "sizes": "1-10",
+  "expectedPeople": 4237,
+  "peopleFilters": [
+   {
+    "filterId": "seniority",
+    "in": [
+     "Ownership / Firm Leadership"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyHeadcount",
+    "in": [
+     "1-10"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyCountry",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "United Kingdom"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "country",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "United Kingdom"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanySubIndustry",
+    "in": [
+     "Business Consulting and Services",
+     "Professional Training and Coaching",
+     "Design Services",
+     "Architecture and Planning",
+     "Engineering Services",
+     "Legal Services",
+     "Accounting"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyFounded",
+    "in": [
+     "2024|2026"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyType",
+    "in": [
+     "Privately Held"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "numberOfConnections",
+    "in": [
+     "251-500",
+     "500+"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentTitle",
+    "in": [
+     "Founder",
+     "Co-Founder",
+     "Owner",
+     "Co-Owner",
+     "Eigenaar",
+     "Mede-eigenaar",
+     "Oprichter",
+     "Gründer",
+     "Geschäftsführer",
+     "Inhaber",
+     "Zaakvoerder",
+     "Managing Director",
+     "CEO",
+     "Directeur"
+    ],
+    "out": []
+   }
+  ]
+ },
+ "W3": {
+  "campaignId": "cam_Knj6kXngF2PbWfm5Z",
+  "twoStep": false,
+  "sizes": "11-50",
+  "expectedPeople": 827,
+  "peopleFilters": [
+   {
+    "filterId": "seniority",
+    "in": [
+     "Ownership / Firm Leadership"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyHeadcount",
+    "in": [
+     "11-50"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyCountry",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "France",
+     "United Kingdom",
+     "Ireland",
+     "Austria",
+     "Switzerland",
+     "Luxembourg"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "country",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "France",
+     "United Kingdom",
+     "Ireland",
+     "Austria",
+     "Switzerland",
+     "Luxembourg"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanySubIndustry",
+    "in": [
+     "Machinery Manufacturing",
+     "Fabricated Metal Products",
+     "Printing Services",
+     "Plastics and Rubber Product Manufacturing",
+     "Furniture and Home Furnishings Manufacturing",
+     "Events Services",
+     "Real Estate",
+     "Medical Practices",
+     "Freight and Package Transportation",
+     "Warehousing and Storage",
+     "Truck Transportation",
+     "Specialty Trade Contractors",
+     "Repair and Maintenance",
+     "Facilities Services"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyFounded",
+    "in": [
+     "1950|2022"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyType",
+    "in": [
+     "Privately Held"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "numberOfConnections",
+    "in": [
+     "251-500",
+     "500+"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanySizeGrowth",
+    "in": [
+     "5|200"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentTitle",
+    "in": [
+     "Founder",
+     "Co-Founder",
+     "Owner",
+     "Co-Owner",
+     "Eigenaar",
+     "Mede-eigenaar",
+     "Oprichter",
+     "Gründer",
+     "Geschäftsführer",
+     "Inhaber",
+     "Fondateur",
+     "Gérant",
+     "Zaakvoerder",
+     "Managing Director",
+     "CEO",
+     "Directeur",
+     "Président"
+    ],
+    "out": []
+   }
+  ]
+ },
+ "W4": {
+  "campaignId": "cam_TfLEo8mTNS46NoSEc",
+  "twoStep": false,
+  "sizes": "11-50",
+  "expectedPeople": 2497,
+  "peopleFilters": [
+   {
+    "filterId": "seniority",
+    "in": [
+     "Ownership / Firm Leadership"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyHeadcount",
+    "in": [
+     "11-50"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyCountry",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "France",
+     "United Kingdom",
+     "Ireland",
+     "Austria",
+     "Switzerland",
+     "Luxembourg"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "country",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "France",
+     "United Kingdom",
+     "Ireland",
+     "Austria",
+     "Switzerland",
+     "Luxembourg"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanySubIndustry",
+    "in": [
+     "Advertising Services",
+     "Design Services",
+     "IT Services and IT Consulting",
+     "Technology, Information and Internet"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyFounded",
+    "in": [
+     "2010|2024"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyType",
+    "in": [
+     "Privately Held"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "numberOfConnections",
+    "in": [
+     "251-500",
+     "500+"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanySizeGrowth",
+    "in": [
+     "5|200"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentTitle",
+    "in": [
+     "Founder",
+     "Co-Founder",
+     "Owner",
+     "Co-Owner",
+     "Eigenaar",
+     "Mede-eigenaar",
+     "Oprichter",
+     "Gründer",
+     "Geschäftsführer",
+     "Inhaber",
+     "Fondateur",
+     "Gérant",
+     "Zaakvoerder",
+     "Managing Director",
+     "CEO",
+     "Directeur",
+     "Président"
+    ],
+    "out": []
+   }
+  ]
+ },
+ "W5": {
+  "campaignId": "cam_ncBrkhdhyrSTek7mh",
+  "twoStep": false,
+  "sizes": "1-10,11-50",
+  "expectedPeople": 4879,
+  "peopleFilters": [
+   {
+    "filterId": "seniority",
+    "in": [
+     "Ownership / Firm Leadership"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyHeadcount",
+    "in": [
+     "1-10",
+     "11-50"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyCountry",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "France",
+     "United Kingdom",
+     "Ireland",
+     "Austria",
+     "Switzerland",
+     "Luxembourg"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "country",
+    "in": [
+     "Netherlands",
+     "Belgium",
+     "Germany",
+     "France",
+     "United Kingdom",
+     "Ireland",
+     "Austria",
+     "Switzerland",
+     "Luxembourg"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanySubIndustry",
+    "in": [
+     "Medical Practices",
+     "Legal Services",
+     "Accounting",
+     "Veterinary Services"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentCompanyType",
+    "in": [
+     "Privately Held"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "numberOfConnections",
+    "in": [
+     "251-500",
+     "500+"
+    ],
+    "out": []
+   },
+   {
+    "filterId": "currentTitle",
+    "in": [
+     "Founder",
+     "Co-Founder",
+     "Owner",
+     "Co-Owner",
+     "Eigenaar",
+     "Mede-eigenaar",
+     "Oprichter",
+     "Gründer",
+     "Geschäftsführer",
+     "Inhaber",
+     "Fondateur",
+     "Gérant",
+     "Zaakvoerder",
+     "Managing Director",
+     "CEO",
+     "Directeur",
+     "Président",
+     "Praxisinhaber",
+     "Praktijkhouder"
+    ],
+    "out": []
+   }
+  ]
+ }
+}
