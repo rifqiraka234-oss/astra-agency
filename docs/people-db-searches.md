@@ -8,7 +8,7 @@ Country set "EU/UK" = Netherlands, Belgium, Germany, France, United Kingdom, Ire
 
 ## Angle 1, Website
 
-### W1 Website, new B2C owners EU/UK, 3,451 people
+### W1 v2 Website, new B2C owners EU/UK, active on LinkedIn, 2,633 people (current, use this one)
 - Seniority: Ownership / Firm Leadership
 - Company headcount: 1-10
 - Company country: the EU/UK set
@@ -16,7 +16,26 @@ Country set "EU/UK" = Netherlands, Belgium, Germany, France, United Kingdom, Ire
 - Company sub-industry: Hospitality, Food and Beverage Services, Events Services, Online and Mail Order Retail,
   Retail Apparel and Fashion, Personal and Laundry Services, Food and Beverage Manufacturing
 - Company market: B2C, B2B/B2C
+- LinkedIn connections: 251-500, 500+ (people who actually use LinkedIn, the v1 sample had one with 21)
 Why: new consumer businesses where the site is the shop window, owner reachable, the size that replies (30%).
+Sample of 25 on 2026-10-04: about 15 on target (bakery, restaurant group, coffee roaster, ceramics café, funeral
+start up, festival brand), 5 list Instagram or Linktree as their website (no real site, our no website opener),
+about 6 off target (traffic control, wholesale, legal documents). v1 without the connections filter was 3,451.
+
+### W1b Website, new B2C companies on a DIY site builder, 1,837 companies (company search)
+In the People Database switch to Companies, then
+- Company headcount: 1-10
+- Company country: the EU/UK set
+- Company founded: 2024 to 2026
+- Company sub-industry: same seven as W1 v2
+- Technologies: Wix, Squarespace, Jimdo, Webnode, Strikingly, Weebly, GoDaddy Website Builder
+Then open the leads for those companies with Seniority Ownership / Firm Leadership. The Technologies filter only
+works in company search, so it can't be added to W1 v2 directly. A DIY builder means the owner built it.
+
+### W1c Website, established B2C on a DIY builder, 15,502 companies (company search, narrow by country first)
+Same as W1b but headcount 1-10 and 11-50, founded 2005 to 2021, and add Recreational Facilities, Retail Furniture
+and Home Furnishings, Retail Luxury Goods and Jewelry. The D&Z pattern, a real business on a dated wrapper.
+Too broad as it stands, run it one country at a time (Belgium and Germany first, best reply rates).
 
 ### W2 Website, new B2B service owners NL BE DE UK, 5,799 people
 - Seniority: Ownership / Firm Leadership
