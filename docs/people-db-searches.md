@@ -8,7 +8,7 @@ Country set "EU/UK" = Netherlands, Belgium, Germany, France, United Kingdom, Ire
 
 ## Angle 1, Website
 
-### W1 v2 Website, new B2C owners EU/UK, active on LinkedIn, 2,633 people (current, use this one)
+### W1a Website, new B2C owners EU/UK, active on LinkedIn, 2,633 people (lemlist table "Astra W1 v2 Website, new B2C owners EU/UK, active on LinkedIn"; the older "Astra W1 Website" table, 3,451, is superseded)
 - Seniority: Ownership / Firm Leadership
 - Company headcount: 1-10
 - Company country: the EU/UK set
@@ -27,7 +27,7 @@ In the People Database switch to Companies, then
 - Company headcount: 1-10
 - Company country: the EU/UK set
 - Company founded: 2024 to 2026
-- Company sub-industry: same seven as W1 v2
+- Company sub-industry: same seven as W1a
 - Technologies: Wix, Squarespace, Jimdo, Webnode, Strikingly, Weebly, GoDaddy Website Builder
 Then open the leads for those companies with Seniority Ownership / Firm Leadership. The Technologies filter only
 works in company search, so it can't be added to W1 v2 directly. A DIY builder means the owner built it.
