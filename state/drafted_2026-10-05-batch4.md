@@ -4,7 +4,7 @@ Seven accepts that had no message (see state/accepts_2026-10-05.md). Each one we
 (RESEARCHER_BRIEF), a judge (JUDGE_BRIEF) and, where an opener survived, a red team (REDTEAM_BRIEF). Evidence,
 judgements and the red team file are in /tmp/claude-0/agents/b4_*/ for this session.
 
-Result, one opener (Emmanuel Rivière, MEDIUM, fixed after the red team), six closed.
+Result, one opener (Emmanuel Rivière, MEDIUM, fixed after the red team), SENT 2026-10-05 10:35 UTC act_kfzvyHasM3kwQi89s, six closed.
 Raka decides. Nothing is sent without his word, and the thread is re-pulled immediately before any send.
 
 ## Emmanuel Rivière, La Warroom
