@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Call Answering for Hotels | ExpoCall.ai</title>
+<meta name="description" content="ExpoCall answers every call to your hotel, day and night. Late arrivals, room enquiries, dogs and restaurant tables, handled and logged for the morning.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d47a1'/%3E%3Cpath d='M9 16c3-6 11-6 14 0-3 6-11 6-14 0z' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%2300C2A8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0d47a1;
+  --blue-deep:#0d1b3e;
+  --teal:#0095a8;
+  --teal-t:#007a8a;
+  --mint:#00C2A8;
+  --ink:#0a1628;
+  --ink-soft:#3d4a5c;
+  --paper:#f5f8fa;
+  --line:#e1e8ed;
+  --amber:#ff7a30;
+  --white:#ffffff;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.55;}
+h1,h2,h3{font-family:'DM Sans',system-ui,sans-serif;font-weight:700;letter-spacing:-0.01em;margin:0;}
+a{color:inherit;}
+img,svg{display:block;max-width:100%;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+.mono{font-family:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;}
+:focus-visible{outline:3px solid var(--mint);outline-offset:3px;border-radius:6px;}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:20;}
+.skip:focus{left:12px;}
+
+/* SITE HEADER (mirrors the Wix frame) */
+.site-head{border-bottom:1px solid var(--line);background:#fff;position:relative;z-index:5;}
+.site-head .bar{max-width:1440px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.site-head .logo img{width:130px;height:auto;}
+.site-nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;}
+.site-nav a{font-size:13px;font-weight:600;color:#3a4256;text-decoration:none;border:1px solid #d5dbe6;border-radius:999px;padding:5px 13px;background:#fff;}
+.site-nav a:hover{border-color:var(--blue);color:var(--blue);}
+.site-nav a[aria-current="page"]{color:var(--ink);border-color:var(--ink);}
+.head-call{font-size:13px;font-weight:600;text-decoration:none;color:var(--blue);border:1px solid #d5dbe6;border-radius:999px;padding:7px 14px;white-space:nowrap;background:#eef1f8;}
+
+/* PAGE TITLE (the Wix H1) */
+.page-title{padding:48px 0 0;}
+.page-title h1{font-size:45px;line-height:1.08;max-width:22ch;margin:0 auto;text-align:center;}
+
+/* HERO */
+.hero{padding:44px 0 56px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 60% 70% at 75% 40%,rgba(13,71,161,0.05) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 10% 90%,rgba(0,149,168,0.04) 0%,transparent 60%);}
+.hero::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(13,71,161,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(13,71,161,0.03) 1px,transparent 1px);
+  background-size:48px 48px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);}
+.hero .wrap{position:relative;z-index:1;}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr);gap:56px;align-items:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;font-weight:500;color:var(--blue);letter-spacing:1.6px;text-transform:uppercase;margin-bottom:22px;background:rgba(13,71,161,0.08);padding:5px 12px 5px 10px;border-radius:20px;border:1px solid rgba(13,71,161,0.15);}
+.eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--mint);animation:pulse-dot 1.6s ease-in-out infinite;}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.7);}}
+.lede{font-size:18px;color:var(--ink-soft);margin:0;max-width:52ch;}
+.ctas{display:flex;gap:14px;margin-top:30px;align-items:center;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;font-family:inherit;line-height:1.2;}
+.btn-primary{background:var(--blue);color:#fff;border:1px solid var(--blue);}
+.btn-primary:hover{background:#0b3c8a;}
+.btn-secondary{color:var(--ink);border:1px solid var(--line);background:#fff;}
+.btn-secondary:hover{border-color:var(--blue);}
+.hero-note{font-size:13px;color:var(--ink-soft);margin:14px 0 0;}
+
+.ringcard{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:32px;text-align:center;}
+.ring{position:relative;width:190px;height:190px;margin:0 auto 18px;}
+.ring svg{transform:rotate(-90deg);}
+.ring-track{fill:none;stroke:#e6edf1;stroke-width:10;}
+.ring-fill{fill:none;stroke:var(--amber);stroke-width:10;stroke-linecap:round;stroke-dasharray:502;stroke-dashoffset:120;}
+html.js .ring-fill{stroke-dashoffset:502;}
+html.js .ring.go .ring-fill{animation:fillring 2.4s ease-out forwards;}
+@keyframes fillring{to{stroke-dashoffset:120;}}
+.ring-mid{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.ring-mid .num{font-size:40px;font-weight:700;line-height:1;}
+.ring-mid .unit{font-size:12px;color:var(--ink-soft);margin-top:6px;letter-spacing:.06em;}
+.ringcard .stat-label{font-size:14px;color:var(--ink-soft);margin:6px auto 0;max-width:30ch;}
+.ringcard .stat-sub{font-size:12px;color:var(--ink-soft);margin-top:10px;}
+
+/* SCENE */
+.scene{background:var(--paper);padding:52px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.scene .wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:flex-start;}
+.icon-tile{width:56px;height:56px;border-radius:14px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--ink);}
+.icon-tile svg{width:26px;height:26px;}
+.scene h2{font-size:15px;color:var(--teal-t);font-weight:600;margin-bottom:8px;letter-spacing:0;}
+.scene p{font-size:17px;max-width:70ch;margin:0;}
+
+/* SECTION HEAD */
+.section-head{max-width:62ch;margin-bottom:36px;}
+.kicker{font-size:13px;font-weight:600;color:var(--teal-t);text-transform:uppercase;letter-spacing:.06em;}
+.section-head h2{font-size:30px;margin-top:8px;line-height:1.2;}
+.section-head p{font-size:16px;color:var(--ink-soft);margin:12px 0 0;}
+
+/* THE CALLS */
+.calls{padding:72px 0 64px;}
+.call-grid{display:flex;flex-direction:column;gap:18px;}
+.call-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.pbody{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:start;border-top:1px solid var(--line);margin-top:12px;}
+.lg{border-left:1px solid var(--line);background:#fbfcfd;align-self:stretch;position:relative;}
+.lg .log{position:sticky;top:16px;}
+.call-tab{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;width:100%;}
+.call-tab:hover{border-color:#b9c6d6;}
+.call-tab:focus-visible{outline:3px solid var(--mint);outline-offset:2px;}
+.call-tab .ti{width:40px;height:40px;border-radius:10px;background:rgba(13,71,161,.08);color:var(--blue);display:flex;align-items:center;justify-content:center;}
+.call-tab .ti svg{width:20px;height:20px;}
+.call-tab .tt{font-size:15px;font-weight:700;display:block;}
+.call-tab .tm{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;color:var(--ink-soft);letter-spacing:.04em;display:block;margin-top:2px;}
+.call-tab[aria-selected="true"]{border-color:var(--blue);box-shadow:inset 0 -3px 0 var(--blue);background:#f7f9fd;}
+.call-tab[aria-selected="true"] .ti{background:var(--blue);color:#fff;}
+.call-tab .tm b{font-weight:500;color:var(--blue);}
+.call-tab.done .tm b{color:var(--teal-t);}
+.tabs-note{font-size:13px;color:var(--ink-soft);margin:6px 2px 0;}
+
+.call-card{border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 18px 50px -24px rgba(13,27,62,.28);overflow:hidden;}
+html.js .call-panel[hidden]{display:none;}
+.call-panel + .call-panel{border-top:1px solid var(--line);}
+.cc-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line);background:var(--paper);flex-wrap:wrap;}
+.cc-head .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--ink-soft);text-transform:uppercase;}
+.chips{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.chip{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:3px 10px;border:1px solid var(--line);color:var(--ink-soft);background:#fff;}
+.chip.ex{color:#8a3d0c;border-color:rgba(255,122,48,.45);background:rgba(255,122,48,.08);}
+.cc-caller{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:16px 20px 12px;flex-wrap:wrap;}
+.cc-caller .who{font-size:18px;font-weight:700;}
+.cc-caller .num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);margin-top:2px;}
+.cc-caller .hotel{font-size:13px;color:var(--ink-soft);text-align:right;}
+.intent{margin:0 20px;padding:8px 12px;border-radius:10px;background:rgba(13,71,161,.06);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--blue);text-transform:uppercase;}
+.intent b{font-weight:500;}
+.wave{display:flex;gap:3px;align-items:center;height:18px;margin:12px 20px 0;}
+.wave span{display:block;width:3px;border-radius:2px;background:#c9d4e2;height:30%;}
+html.js .call-panel.talking .wave span{animation:wv 1s ease-in-out infinite;background:var(--teal);}
+@keyframes wv{0%,100%{height:25%;}50%{height:100%;}}
+.turns{list-style:none;margin:0;padding:16px 20px 8px;display:flex;flex-direction:column;gap:10px;}
+.turn{max-width:86%;display:flex;flex-direction:column;}
+.turn .sp{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px;}
+.turn p{margin:0;font-size:15px;line-height:1.5;padding:10px 14px;border-radius:14px;}
+.turn.ai{align-self:flex-start;}
+.turn.ai p{background:var(--blue);color:#fff;border-top-left-radius:4px;}
+.turn.guest{align-self:flex-end;align-items:flex-end;}
+.turn.guest p{background:var(--paper);border:1px solid var(--line);border-top-right-radius:4px;}
+html.js .turn{visibility:hidden;opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease;}
+html.js .turn.shown{visibility:visible;opacity:1;transform:none;}
+.typing{align-self:flex-start;display:none;gap:4px;padding:12px 14px;border-radius:14px;background:rgba(13,71,161,.08);margin:0 20px 6px;width:max-content;}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--blue);display:block;animation:tp 1s infinite ease-in-out;}
+.typing i:nth-child(2){animation-delay:.15s;}.typing i:nth-child(3){animation-delay:.3s;}
+@keyframes tp{0%,100%{opacity:.25;}50%{opacity:1;}}
+html.js .call-panel.typing-on .typing{display:flex;}
+
+.log{margin:12px 20px 20px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;}
+html.js .log{visibility:hidden;opacity:0;transition:opacity .45s ease;}
+html.js .log.shown{visibility:visible;opacity:1;}
+.lg-wait{display:none;margin:12px 20px 0;padding:14px 16px;border:1px dashed #c9d4e2;border-radius:14px;font-size:13.5px;color:var(--ink-soft);}
+html.js .call-panel.talking .lg-wait{display:block;}
+html.js .call-panel.talking .log{position:absolute;}
+.log-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 16px;background:var(--ink);color:#fff;flex-wrap:wrap;}
+.log-head .t{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;}
+.log-head .d{font-family:'JetBrains Mono',monospace;font-size:11px;color:#b9c4d0;}
+.codes{display:grid;grid-template-columns:minmax(0,1fr);border-bottom:1px solid var(--line);}
+.code{padding:10px 16px;}
+.code + .code{border-top:1px solid var(--line);}
+.code .k{font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.06em;font-weight:600;}
+.code .v{font-size:14px;font-weight:700;margin-top:3px;}
+.log-sum{padding:12px 16px;font-size:14px;color:var(--ink);margin:0;}
+.log-acts{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 14px;list-style:none;margin:0;}
+.log-acts li{font-size:12.5px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--paper);display:inline-flex;gap:6px;align-items:center;}
+.log-acts li svg{width:14px;height:14px;color:var(--teal-t);}
+.log-note{margin:0;padding:10px 16px;font-size:12.5px;color:var(--ink-soft);background:var(--paper);border-top:1px solid var(--line);}
+.cc-ctrl{display:none;gap:10px;padding:0 20px 20px;flex-wrap:wrap;}
+html.js .cc-ctrl{display:flex;}
+.ctrl{all:unset;box-sizing:border-box;cursor:pointer;font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:10px;border:1px solid var(--line);background:#fff;display:inline-flex;gap:8px;align-items:center;}
+.ctrl:hover{border-color:var(--blue);color:var(--blue);}
+.ctrl:focus-visible{outline:3px solid var(--mint);outline-offset:2px;}
+.ctrl[disabled]{opacity:.45;cursor:default;}
+.ctrl svg{width:14px;height:14px;}
+
+/* HOW IT WORKS */
+.steps{padding:64px 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.step-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
+.step{border:1px solid var(--line);border-radius:16px;padding:26px;background:#fff;}
+.step .n{font-size:13px;font-weight:700;color:var(--blue);background:rgba(13,71,161,.08);width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.step h3{font-size:17px;margin-bottom:8px;}
+.step p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+
+/* FEATURES */
+.features{background:var(--paper);padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.feat-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
+.feat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;}
+.feat .ico{width:36px;height:36px;color:var(--blue);margin-bottom:16px;}
+.feat h3{font-size:16px;margin-bottom:8px;}
+.feat p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+
+/* MEWS */
+.mews{padding:64px 0;}
+.mews-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;}
+.mews-title{font-size:30px;margin-top:8px;line-height:1.2;}
+.mews p{font-size:16px;color:var(--ink-soft);margin:14px 0 0;}
+.flow{margin:0;border:1px solid var(--line);border-radius:20px;background:var(--paper);padding:24px;}
+.flow svg{width:100%;height:auto;}
+.flow .flow-m{display:none;max-width:340px;margin:0 auto;}
+@media (max-width:560px){.flow .flow-d{display:none;}.flow .flow-m{display:block;}}
+.flow .cap{font-size:12.5px;color:var(--ink-soft);margin:10px 0 0;text-align:center;}
+.flow .cap a{color:var(--blue);font-weight:600;}
+.plan{margin-top:26px;border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;}
+.plan .pn{font-size:15px;font-weight:700;}
+.plan .pd{font-size:14px;color:var(--ink-soft);margin-top:4px;}
+.plan .pp{font-size:22px;font-weight:700;text-align:right;}
+.plan .pp small{display:block;font-size:12px;font-weight:500;color:var(--ink-soft);}
+.plan a{color:var(--blue);font-weight:600;}
+
+.related{padding:8px 0 0;}
+.related p{font-size:14.5px;color:var(--ink-soft);margin:0;}
+.related a{color:var(--blue);font-weight:600;}
+
+/* COMPLIANCE STRIP */
+.strip{padding:40px 0;}
+.strip .box{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;background:var(--ink);color:#fff;border-radius:18px;padding:30px 36px;}
+.strip h3{font-size:19px;color:#fff;}
+.strip p{font-size:14px;color:#b9c4d0;margin:6px 0 0;max-width:52ch;}
+.badges{display:flex;gap:10px;flex-wrap:wrap;list-style:none;margin:0;padding:0;}
+.badges li{font-size:12.5px;font-weight:600;border:1px solid #33455c;border-radius:999px;padding:7px 14px;color:#dbe6ee;}
+
+/* CTA */
+.cta{padding:64px 0 72px;text-align:center;}
+.cta h2{font-size:32px;max-width:24ch;margin:0 auto;line-height:1.2;}
+.cta p{font-size:16px;color:var(--ink-soft);margin:14px auto 0;max-width:56ch;}
+.cta .ctas{justify-content:center;margin-top:28px;}
+
+/* FOOTER */
+.site-foot{background:var(--blue-deep);color:#dbe3f0;padding:40px 0 28px;margin:0 24px 24px;border-radius:6px;}
+.foot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;font-size:13px;}
+.foot-grid h4{margin:0 0 8px;font-size:12.5px;color:#fff;text-decoration:underline;text-transform:uppercase;letter-spacing:.02em;}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;}
+.foot-grid a{text-decoration:none;}
+.foot-grid a:hover{text-decoration:underline;}
+.foot-grid .t{color:#3fd0bf;}
+.footnote{font-size:12px;color:#9fb0c8;margin:28px 0 0;padding-top:16px;border-top:1px solid #24345a;}
+
+@media (prefers-reduced-motion: reduce){
+  .eyebrow .dot,.wave span,.typing i{animation:none !important;}
+  html.js .ring.go .ring-fill{animation:none;stroke-dashoffset:120;}
+  html.js .turn,html.js .log{transition:none;}
+}
+@media (max-width:1000px){
+  .call-tab{grid-template-columns:minmax(0,1fr);}
+  .call-tab .ti{display:none;}
+  .site-nav{display:none;}
+  .feat-row{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:860px){
+  .page-title h1{font-size:32px;}
+  .hero-grid,.mews-grid{grid-template-columns:minmax(0,1fr);gap:32px;}
+  .step-row{grid-template-columns:minmax(0,1fr);}
+  .scene .wrap{grid-template-columns:minmax(0,1fr);gap:16px;}
+  .call-tabs{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .call-tab{grid-template-columns:minmax(0,1fr);padding:12px;}
+  .call-tab .ti{display:none;}
+  .pbody{grid-template-columns:minmax(0,1fr);}
+  .lg{border-left:0;border-top:1px solid var(--line);}
+  .lg .log{position:static;}
+  .section-head h2{font-size:26px;}
+  .cta h2{font-size:26px;}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px;}
+  .site-head .bar{padding:12px 16px;}
+  .site-head .logo img{width:112px;}
+  .feat-row{grid-template-columns:minmax(0,1fr);}
+  .codes{grid-template-columns:minmax(0,1fr);}
+  .code + .code{border-left:0;border-top:1px solid var(--line);}
+  .turn{max-width:94%;}
+  .cc-caller .hotel{text-align:left;}
+  .strip .box{padding:24px 20px;}
+  .plan{grid-template-columns:minmax(0,1fr);}
+  .plan .pp{text-align:left;}
+  .site-foot{margin:0 12px 12px;}
+  .foot-grid{grid-template-columns:minmax(0,1fr);}
+  .ringcard{padding:24px 18px;}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site-head">
+  <div class="bar">
+    <a class="logo" href="https://www.expocall.ai/" aria-label="ExpoCall home"><img src="data:image/png;base64,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" width="130" height="38" alt="ExpoCall"></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="https://www.expocall.ai/">Home</a>
+      <a href="https://www.expocall.ai/inbound" aria-current="page">AI Answering</a>
+      <a href="https://www.expocall.ai/how-expocall-makes-outbound-calling-work">AI Calling</a>
+      <a href="https://www.expocall.ai/chat-agent">AI Chat</a>
+      <a href="https://www.expocall.ai/pricing-plans/list">Pricing</a>
+      <a href="https://www.expocall.ai/faq">FAQ</a>
+      <a href="https://www.expocall.ai/about-us">Company</a>
+    </nav>
+    <a class="head-call" href="tel:+448001126486">0800 11 26 486</a>
+  </div>
+</header>
+
+<main id="main">
+<div class="page-title">
+  <div class="wrap"><h1>A guest ringing at 11pm wants a room tonight, not a voicemail.</h1></div>
+</div>
+
+<section class="hero" aria-label="Introduction">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot" aria-hidden="true"></span>The front desk that never closes</div>
+      <p class="lede">Small hotels run on a handful of people, and the phone rings while they're checking someone in or asleep upstairs. ExpoCall answers every call, day and night. It books the restaurant table, texts the link to book a room direct, tells the night porter about the late arrival and answers the question about the dog.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#calls">Listen in on a guest call</a>
+        <a class="btn btn-secondary" href="tel:+448001126486">Call 0800 11 26 486</a>
+      </div>
+      <p class="hero-note">24/7/365 inbound, so the call after the bar closes still gets answered properly.</p>
+    </div>
+    <div class="ringcard">
+      <div class="ring" id="ring">
+        <svg width="190" height="190" viewBox="0 0 190 190" aria-hidden="true" focusable="false">
+          <circle class="ring-track" cx="95" cy="95" r="80"/>
+          <circle class="ring-fill" cx="95" cy="95" r="80"/>
+        </svg>
+        <div class="ring-mid"><div class="num">42</div><div class="unit">LANGUAGES</div></div>
+      </div>
+      <p class="stat-label">the agent can answer in, so the family ringing from Lyon gets their answer in French</p>
+      <p class="stat-sub">From the Growth plan upwards.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene" aria-labelledby="scene-h">
+  <div class="wrap">
+    <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></div>
+    <div>
+      <h2 id="scene-h">The scene</h2>
+      <p>It's ten past eleven on a Friday. The bar's shut, the night porter's doing his rounds and the phone at reception has rung out three times this hour. One caller's train is stuck outside Reading and she wants to know if anyone will be up to let her in. Another wants two nights next weekend and will book with whoever picks up. By morning the first has tried the number twice more, and the second has booked somewhere else online.</p>
+    </div>
+  </div>
+</section>
+
+<section class="calls" id="calls" aria-labelledby="calls-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Listen in</div>
+      <h2 id="calls-h">Four calls a hotel gets on a Friday, answered by Alex</h2>
+      <p>Pick a call and watch it play out. Each one ends with the note your team finds in the morning.</p>
+    </div>
+
+    <div class="call-grid">
+      <div class="tabs-col">
+        <div class="call-tabs" role="tablist" aria-label="Example calls">
+          <button class="call-tab" role="tab" id="tab-late" aria-controls="call-late" aria-selected="true">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span>
+            <span><span class="tt">Late arrival</span><span class="tm">23.12 · booked guest <b class="ts"></b></span></span>
+          </button>
+          <button class="call-tab" role="tab" id="tab-rooms" aria-controls="call-rooms" aria-selected="false" tabindex="-1">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M3 21v-3M21 21v-3M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg></span>
+            <span><span class="tt">Rooms next weekend</span><span class="tm">21.47 · room enquiry <b class="ts"></b></span></span>
+          </button>
+          <button class="call-tab" role="tab" id="tab-dog" aria-controls="call-dog" aria-selected="false" tabindex="-1">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="9" r="2"/><circle cx="9.5" cy="5" r="2"/><circle cx="14.5" cy="5" r="2"/><circle cx="19" cy="9" r="2"/><path d="M12 11c-3 0-6 4-6 7a3 3 0 0 0 3 3c1.2 0 2-.6 3-.6s1.8.6 3 .6a3 3 0 0 0 3-3c0-3-3-7-6-7z"/></svg></span>
+            <span><span class="tt">Bringing the dog</span><span class="tm">19.05 · dogs <b class="ts"></b></span></span>
+          </button>
+          <button class="call-tab" role="tab" id="tab-table" aria-controls="call-table" aria-selected="false" tabindex="-1">
+            <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 3v8M5 3v4a2 2 0 0 0 4 0V3M7 11v10M17 3c-2 2-2 6 0 8v10"/></svg></span>
+            <span><span class="tt">Table for Saturday</span><span class="tm">16.20 · restaurant <b class="ts"></b></span></span>
+          </button>
+        </div>
+        <p class="tabs-note">Written example calls for Quillmarsh House, a fictional hotel.</p>
+      </div>
+
+      <div class="call-card">
+
+        <article class="call-panel" id="call-late" data-dur="86" role="tabpanel" aria-labelledby="tab-late" data-intent="Late arrival">
+          <div class="cc-head"><span class="lbl">Active inbound call</span><span class="chips"><span class="chip ex">Example call</span></span></div>
+          <div class="cc-caller"><div><div class="who">Hannah</div><div class="num">+44 7700 900 xxx · <span class="clock">00.00.00</span></div></div><div class="hotel">Quillmarsh House<br>Friday, 23.12</div></div>
+          <div class="intent">Intent detected · <b class="iv">Late arrival</b></div>
+          <div class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="pbody"><div class="tx"><ol class="turns">
+            <li class="turn ai"><span class="sp">Alex</span><p>Good evening, Quillmarsh House, this is Alex. How can I help?</p></li>
+            <li class="turn guest"><span class="sp">Hannah</span><p>Hi, I'm booked in tonight under Hannah Price. My train's stuck outside Reading and I won't get there till after half twelve. Will anyone still be up?</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>Thanks for letting us know, Hannah. The front door locks at eleven, but the night porter's on until seven. Ring the bell marked night porter by the main door and he'll let you in with your key.</p></li>
+            <li class="turn guest"><span class="sp">Hannah</span><p>Brilliant. Can I still park round the back that late?</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>You can, the car park's open all night. I'm letting the night porter know you'll be about half twelve, and I'll text you the door details now so you've got them on the train.</p></li>
+            <li class="turn guest"><span class="sp">Hannah</span><p>Perfect, thank you.</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>Safe travels, Hannah. See you tonight.</p></li>
+          </ol>
+          <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="cc-ctrl"><button class="ctrl replay" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>Play again</button><button class="ctrl skip-end" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4l10 8-10 8zM19 5v14"/></svg>Skip to the log</button></div></div><div class="lg"><p class="lg-wait">Alex writes the log as soon as the call ends.</p><section class="log" aria-label="Call log">
+            <div class="log-head"><span class="t">Call logged</span><span class="d">Duration 1m 26s</span></div>
+            <div class="codes">
+              <div class="code"><div class="k">Why they rang</div><div class="v">Arriving late tonight</div></div>
+              <div class="code"><div class="k">What Alex did</div><div class="v">Explained the night bell and texted the door details</div></div>
+              <div class="code"><div class="k">What happens next</div><div class="v">Night porter expects her about half twelve</div></div>
+            </div>
+            <p class="log-sum">Hannah Price arriving about 00.30, train delayed. Night porter told by email. Door and parking details texted to the guest.</p>
+            <ul class="log-acts">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H8l-4 4z"/></svg>Text to guest</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email to night porter</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5zM9 9h6M9 13h6"/></svg>Transcript saved</li>
+            </ul>
+          </section>
+          </div></div>
+        </article>
+
+        <article class="call-panel" id="call-rooms" data-dur="68" role="tabpanel" aria-labelledby="tab-rooms" data-intent="Room enquiry">
+          <div class="cc-head"><span class="lbl">Active inbound call</span><span class="chips"><span class="chip ex">Example call</span></span></div>
+          <div class="cc-caller"><div><div class="who">Tom</div><div class="num">+44 7700 900 xxx · <span class="clock">00.00.00</span></div></div><div class="hotel">Quillmarsh House<br>Friday, 21.47</div></div>
+          <div class="intent">Intent detected · <b class="iv">Room enquiry</b></div>
+          <div class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="pbody"><div class="tx"><ol class="turns">
+            <li class="turn ai"><span class="sp">Alex</span><p>Good evening, Quillmarsh House, this is Alex. How can I help?</p></li>
+            <li class="turn guest"><span class="sp">Tom</span><p>Hi, have you got a double free next Friday and Saturday? Just the two of us.</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>Let me look. Yes, there's a double overlooking the garden free both nights, or a bigger room at the front if you'd like more space.</p></li>
+            <li class="turn guest"><span class="sp">Tom</span><p>The garden one sounds good. Is breakfast included?</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>It is, from half seven to ten in the dining room. Shall I text you the link to book the garden room direct with us?</p></li>
+            <li class="turn guest"><span class="sp">Tom</span><p>Yes please, this number's fine.</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>It's on its way. If you'd rather book with a person, the team's on reception from eight tomorrow morning.</p></li>
+          </ol>
+          <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="cc-ctrl"><button class="ctrl replay" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>Play again</button><button class="ctrl skip-end" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4l10 8-10 8zM19 5v14"/></svg>Skip to the log</button></div></div><div class="lg"><p class="lg-wait">Alex writes the log as soon as the call ends.</p><section class="log" aria-label="Call log">
+            <div class="log-head"><span class="t">Call logged</span><span class="d">Duration 1m 08s</span></div>
+            <div class="codes">
+              <div class="code"><div class="k">Why they rang</div><div class="v">Wants a double next Friday and Saturday</div></div>
+              <div class="code"><div class="k">What Alex did</div><div class="v">Texted the link to book the garden room direct</div></div>
+              <div class="code"><div class="k">What happens next</div><div class="v">The team has his number if the booking doesn't come through</div></div>
+            </div>
+            <p class="log-sum">Double for two adults, Friday and Saturday next week. Chose the garden room. Booking link texted, caller's number saved for the team.</p>
+            <ul class="log-acts">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H8l-4 4z"/></svg>Booking link texted</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Lead saved</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5zM9 9h6M9 13h6"/></svg>Transcript saved</li>
+            </ul>
+            <p class="log-note">Live room availability comes from Mews, which ExpoCall is rolling out to hotels shortly.</p>
+          </section>
+          </div></div>
+        </article>
+
+        <article class="call-panel" id="call-dog" data-dur="58" role="tabpanel" aria-labelledby="tab-dog" data-intent="Bringing a dog">
+          <div class="cc-head"><span class="lbl">Active inbound call</span><span class="chips"><span class="chip ex">Example call</span></span></div>
+          <div class="cc-caller"><div><div class="who">Ellie</div><div class="num">+44 7700 900 xxx · <span class="clock">00.00.00</span></div></div><div class="hotel">Quillmarsh House<br>Friday, 19.05</div></div>
+          <div class="intent">Intent detected · <b class="iv">Bringing a dog</b></div>
+          <div class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="pbody"><div class="tx"><ol class="turns">
+            <li class="turn ai"><span class="sp">Alex</span><p>Good evening, Quillmarsh House, this is Alex. How can I help?</p></li>
+            <li class="turn guest"><span class="sp">Ellie</span><p>Hello, we're thinking of coming in November with our spaniel. Do you take dogs?</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>We do. Two of our ground floor rooms are dog friendly, and both open straight onto the garden. Dogs are welcome in the bar and the lounge, though not in the dining room.</p></li>
+            <li class="turn guest"><span class="sp">Ellie</span><p>Is there somewhere to walk him?</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>There's a footpath from the bottom of the garden down to the river, about twenty minutes there and back. We keep towels and a water bowl at reception for muddy paws.</p></li>
+            <li class="turn guest"><span class="sp">Ellie</span><p>Lovely. I'll talk to my husband and ring back.</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>Of course. Ask for one of the garden rooms when you book and we'll have his bowl ready.</p></li>
+          </ol>
+          <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="cc-ctrl"><button class="ctrl replay" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>Play again</button><button class="ctrl skip-end" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4l10 8-10 8zM19 5v14"/></svg>Skip to the log</button></div></div><div class="lg"><p class="lg-wait">Alex writes the log as soon as the call ends.</p><section class="log" aria-label="Call log">
+            <div class="log-head"><span class="t">Call logged</span><span class="d">Duration 0m 58s</span></div>
+            <div class="codes">
+              <div class="code"><div class="k">Why they rang</div><div class="v">Asking if dogs can stay</div></div>
+              <div class="code"><div class="k">What Alex did</div><div class="v">Answered every question on the call</div></div>
+              <div class="code"><div class="k">What happens next</div><div class="v">She'll ring back after talking to her husband</div></div>
+            </div>
+            <p class="log-sum">Asked about dogs for a November stay with a spaniel. Told about the two garden rooms, the bar and lounge rule, the river walk and the towels at reception. Planning to ring back.</p>
+            <ul class="log-acts">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Answered by Alex</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14v16H5zM9 9h6M9 13h6"/></svg>Transcript saved</li>
+            </ul>
+          </section>
+          </div></div>
+        </article>
+
+        <article class="call-panel" id="call-table" data-dur="62" role="tabpanel" aria-labelledby="tab-table" data-intent="Table booking">
+          <div class="cc-head"><span class="lbl">Active inbound call</span><span class="chips"><span class="chip ex">Example call</span></span></div>
+          <div class="cc-caller"><div><div class="who">Mark</div><div class="num">+44 7700 900 xxx · <span class="clock">00.00.00</span></div></div><div class="hotel">Quillmarsh House<br>Friday, 16.20</div></div>
+          <div class="intent">Intent detected · <b class="iv">Table booking</b></div>
+          <div class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="pbody"><div class="tx"><ol class="turns">
+            <li class="turn ai"><span class="sp">Alex</span><p>Good afternoon, Quillmarsh House, this is Alex. How can I help?</p></li>
+            <li class="turn guest"><span class="sp">Mark</span><p>Hi, can I book a table for four tomorrow night, around half seven?</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>Let me look. Half seven's full, but I can do a table for four at quarter to eight, or seven o'clock if earlier suits.</p></li>
+            <li class="turn guest"><span class="sp">Mark</span><p>Quarter to eight's fine.</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>Lovely. Can I take a name, and does anyone have an allergy the kitchen should know about?</p></li>
+            <li class="turn guest"><span class="sp">Mark</span><p>Mark Ellis. My daughter can't have nuts.</p></li>
+            <li class="turn ai"><span class="sp">Alex</span><p>Thanks, Mark. That's four at quarter to eight tomorrow, with a nut allergy noted for the kitchen. I'll text the confirmation to this number now.</p></li>
+          </ol>
+          <div class="typing" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="cc-ctrl"><button class="ctrl replay" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>Play again</button><button class="ctrl skip-end" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4l10 8-10 8zM19 5v14"/></svg>Skip to the log</button></div></div><div class="lg"><p class="lg-wait">Alex writes the log as soon as the call ends.</p><section class="log" aria-label="Call log">
+            <div class="log-head"><span class="t">Call logged</span><span class="d">Duration 1m 02s</span></div>
+            <div class="codes">
+              <div class="code"><div class="k">Why they rang</div><div class="v">Table for four tomorrow night</div></div>
+              <div class="code"><div class="k">What Alex did</div><div class="v">Booked it and texted the confirmation</div></div>
+              <div class="code"><div class="k">What happens next</div><div class="v">The kitchen sees the nut allergy on the booking</div></div>
+            </div>
+            <p class="log-sum">Table for four, Saturday 19.45, Mark Ellis. Nut allergy flagged for the kitchen. Booked into the restaurant diary and confirmed by text.</p>
+            <ul class="log-acts">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Booked in Google Calendar</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H8l-4 4z"/></svg>Confirmation texted</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Allergy flagged</li>
+            </ul>
+          </section>
+          </div></div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">How it works</div>
+      <h2 id="how-h">What happens when the hotel phone rings</h2>
+    </div>
+    <div class="step-row">
+      <div class="step"><div class="n">1</div><h3>Alex answers in your hotel's name</h3><p>Your rooms, door times, dog rules and restaurant hours go into its knowledge base at setup, so a guest gets the same answer at 3am as at 3pm.</p></div>
+      <div class="step"><div class="n">2</div><h3>It handles the call or hands it on</h3><p>Alex books tables and answers questions on the call. A complaint or a wedding enquiry goes straight to the person on duty, and so does anything Alex can't settle.</p></div>
+      <div class="step"><div class="n">3</div><h3>The morning shift starts with the log</h3><p>Every call has a summary and a transcript waiting by email, and tables are already in the restaurant diary.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="features" id="features" aria-labelledby="feat-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Built for hotels</div>
+      <h2 id="feat-h">Made for a front desk run by a handful of people</h2>
+    </div>
+    <div class="feat-row">
+      <div class="feat"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg></div><h3>Answers in 42 languages</h3><p>A guest ringing from Lyon or Düsseldorf hears French or German. From the Growth plan upwards.</p></div>
+      <div class="feat"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></div><h3>Books tables into your diary</h3><p>Native sync with Google Calendar, Cal.com and Calendly, so the restaurant diary's right before the evening shift starts.</p></div>
+      <div class="feat"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div><h3>Texts the link to book direct</h3><p>Booking links and confirmations go out by text or email while the guest's still on the phone, so the booking comes straight to you.</p></div>
+      <div class="feat"><div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 11l3 3 3-3M19 14V5"/></svg></div><h3>Passes on what needs a person</h3><p>Complaints and wedding enquiries go to the duty manager with a summary of the call, and so does anything Alex can't settle.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="mews" aria-labelledby="mews-h">
+  <div class="wrap mews-grid">
+    <div>
+      <div class="kicker">Mews</div>
+      <h2 id="mews-h" class="mews-title">Certified with Mews, with hotel rollout starting shortly</h2>
+      <p>ExpoCall has completed technical certification with Mews, the hotel property management system. Once your property's connected, Alex looks up live availability and the caller's booking while they're still on the phone.</p>
+      <p>Until then it's already answering, filling the restaurant diary, sending booking links and passing reservations to your team.</p>
+      <div class="plan">
+        <div><div class="pn">Professional plan</div><div class="pd">The plan ExpoCall built for hospitality. 600 inbound calls a month, four calls at once, CRM and PMS integration such as Mews, call transcripts and texts to the guest. <a href="https://www.expocall.ai/pricing-plans/list">See all plans</a></div></div>
+        <div class="pp">£449<small>a month</small></div>
+      </div>
+    </div>
+    <figure class="flow">
+      <svg class="flow-d" viewBox="0 0 460 300" role="img" aria-labelledby="flow-t">
+        <title id="flow-t">A guest call reaches Alex, which connects to Mews, launching shortly, and to your calendar, text and email, which are live.</title>
+        <g font-family="DM Sans, Arial, sans-serif">
+          <rect x="16" y="120" width="112" height="60" rx="14" fill="#fff" stroke="#e1e8ed"/>
+          <text x="72" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="#0a1628">Guest call</text>
+          <text x="72" y="164" text-anchor="middle" font-size="11" fill="#3d4a5c">any hour</text>
+          <path d="M128 150H176" stroke="#0d47a1" stroke-width="2"/>
+          <path d="M170 144l8 6-8 6" fill="none" stroke="#0d47a1" stroke-width="2"/>
+          <rect x="180" y="110" width="100" height="80" rx="16" fill="#0d47a1"/>
+          <text x="230" y="146" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Alex</text>
+          <text x="230" y="166" text-anchor="middle" font-size="11" fill="#cfdcf2">front desk agent</text>
+          <path d="M280 150C310 150 310 46 338 46" fill="none" stroke="#9fb3cf" stroke-width="2" stroke-dasharray="5 5"/>
+          <path d="M280 150C310 150 310 118 338 118" fill="none" stroke="#0095a8" stroke-width="2"/>
+          <path d="M280 150C310 150 310 186 338 186" fill="none" stroke="#0095a8" stroke-width="2"/>
+          <path d="M280 150C310 150 310 254 338 254" fill="none" stroke="#0095a8" stroke-width="2"/>
+          <rect x="338" y="22" width="108" height="48" rx="12" fill="#fff" stroke="#9fb3cf" stroke-dasharray="5 4"/>
+          <text x="392" y="43" text-anchor="middle" font-size="13" font-weight="700" fill="#0a1628">Mews PMS</text>
+          <text x="392" y="60" text-anchor="middle" font-size="10.5" fill="#8a3d0c">launching shortly</text>
+          <rect x="338" y="94" width="108" height="48" rx="12" fill="#fff" stroke="#e1e8ed"/>
+          <text x="392" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#0a1628">Calendar</text>
+          <text x="392" y="132" text-anchor="middle" font-size="10.5" fill="#007a8a">live</text>
+          <rect x="338" y="162" width="108" height="48" rx="12" fill="#fff" stroke="#e1e8ed"/>
+          <text x="392" y="183" text-anchor="middle" font-size="13" font-weight="700" fill="#0a1628">Text to guest</text>
+          <text x="392" y="200" text-anchor="middle" font-size="10.5" fill="#007a8a">live</text>
+          <rect x="338" y="230" width="108" height="48" rx="12" fill="#fff" stroke="#e1e8ed"/>
+          <text x="392" y="251" text-anchor="middle" font-size="13" font-weight="700" fill="#0a1628">Email to team</text>
+          <text x="392" y="268" text-anchor="middle" font-size="10.5" fill="#007a8a">live</text>
+        </g>
+      </svg>
+      <svg class="flow-m" viewBox="0 0 320 330" role="img" aria-labelledby="flow-tm">
+        <title id="flow-tm">A guest call reaches Alex, which connects to Mews, launching shortly, and to your calendar, text and email, which are live.</title>
+        <g font-family="DM Sans, Arial, sans-serif">
+          <rect x="100" y="8" width="120" height="52" rx="14" fill="#fff" stroke="#e1e8ed"/>
+          <text x="160" y="31" text-anchor="middle" font-size="15" font-weight="700" fill="#0a1628">Guest call</text>
+          <text x="160" y="49" text-anchor="middle" font-size="12" fill="#3d4a5c">any hour</text>
+          <path d="M160 60V88" stroke="#0d47a1" stroke-width="2"/><path d="M154 82l6 8 6-8" fill="none" stroke="#0d47a1" stroke-width="2"/>
+          <rect x="90" y="92" width="140" height="64" rx="16" fill="#0d47a1"/>
+          <text x="160" y="121" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Alex</text>
+          <text x="160" y="141" text-anchor="middle" font-size="12" fill="#cfdcf2">front desk agent</text>
+          <path d="M160 156V176M82 176H238M82 176V196M238 176V196" fill="none" stroke="#0095a8" stroke-width="2"/>
+          <path d="M160 176V258" fill="none" stroke="#0095a8" stroke-width="2"/>
+          <rect x="12" y="196" width="140" height="52" rx="12" fill="#fff" stroke="#9fb3cf" stroke-dasharray="5 4"/>
+          <text x="82" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#0a1628">Mews PMS</text>
+          <text x="82" y="236" text-anchor="middle" font-size="12" fill="#8a3d0c">launching shortly</text>
+          <rect x="168" y="196" width="140" height="52" rx="12" fill="#fff" stroke="#e1e8ed"/>
+          <text x="238" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#0a1628">Calendar</text>
+          <text x="238" y="236" text-anchor="middle" font-size="12" fill="#007a8a">live</text>
+          <path d="M82 258H238M82 258V270M238 258V270" fill="none" stroke="#0095a8" stroke-width="2"/>
+          <rect x="12" y="270" width="140" height="52" rx="12" fill="#fff" stroke="#e1e8ed"/>
+          <text x="82" y="292" text-anchor="middle" font-size="14" font-weight="700" fill="#0a1628">Text to guest</text>
+          <text x="82" y="310" text-anchor="middle" font-size="12" fill="#007a8a">live</text>
+          <rect x="168" y="270" width="140" height="52" rx="12" fill="#fff" stroke="#e1e8ed"/>
+          <text x="238" y="292" text-anchor="middle" font-size="14" font-weight="700" fill="#0a1628">Email to team</text>
+          <text x="238" y="310" text-anchor="middle" font-size="12" fill="#007a8a">live</text>
+        </g>
+      </svg>
+      <figcaption class="cap">Status as listed on our <a href="https://www.expocall.ai/integrations">integrations page</a>.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="related" aria-label="More questions">
+  <div class="wrap"><p>Have more questions? Read our <a href="https://www.expocall.ai/faq">AI Receptionist FAQs</a> or see <a href="https://www.expocall.ai/integrations">every integration</a>.</p></div>
+</section>
+
+<section class="strip" id="compliance" aria-labelledby="strip-h">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <h3 id="strip-h">Your AI Receptionist answers around the clock, every day of the year.</h3>
+        <p>Outbound stays within TPS/CTPS and PECR rules and runs Monday to Friday, 9am to 6pm. Inbound answers around the clock, every day of the year.</p>
+      </div>
+      <ul class="badges"><li>TPS / CTPS compliant</li><li>PECR compliant</li><li>UK GDPR</li><li>24/7/365 inbound</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="cta" aria-labelledby="cta-h">
+  <div class="wrap">
+    <h2 id="cta-h">Be the hotel that picks up after the bar's shut</h2>
+    <p>Hear Alex for yourself. Add your name, number and email and Alex rings you straight away, or book a walkthrough with the team.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="https://app.expocall.ai/demo">Test the Voice Agent</a>
+      <a class="btn btn-secondary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2djf0TuqQSHWztX5xTQmr-T_68dNq-SCTKsZfLCxNoXvgYI1drS0FlA8XPj-XlcZ7vVSRaQntk" rel="noopener">Book a System Walkthrough</a>
+      <a class="btn btn-secondary" href="tel:+448001126486">Call 0800 11 26 486</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Company</h4><ul><li>ExpoCall Ltd</li><li>167 to 169 Great Portland Street, London, W1W 5PF. England</li><li>Company Number 17143632</li><li>© 2026 Expocall Ltd</li></ul></div>
+      <div><h4>Contact us</h4><ul><li><a href="mailto:hello@expocall.ai">hello@expocall.ai</a></li><li><a href="tel:+448001126486">+44 (0)800 11 26 486</a></li><li><a href="https://www.expocall.ai/support">Support form</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="https://www.expocall.ai/inbound">AI Receptionist</a></li><li><a href="https://www.expocall.ai/integrations">Integrations</a></li><li><a href="https://www.expocall.ai/pricing-plans/list">Pricing</a></li><li><a href="https://app.expocall.ai/demo">Book a Demo</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="https://www.expocall.ai/tps-and-ctps-compliance-statement">TPS/CTPS Compliance Statement</a></li><li><a href="https://www.expocall.ai/privacy-policy">Privacy Policy</a></li><li><a href="https://www.expocall.ai/cookie-policy">Cookie Policy</a></li><li><a href="https://www.expocall.ai/terms-and-conditions">Terms and Conditions</a></li></ul></div>
+    </div>
+    <p class="footnote">The calls on this page are written examples for Quillmarsh House, a fictional hotel. They aren't recordings of real guests or a real property.</p>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ring = document.getElementById('ring');
+  if (ring) { ring.classList.add('go'); }
+
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.call-tab'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.call-panel'));
+  panels.forEach(function(p, i){ p.hidden = i !== 0; });
+  var timers = [];
+  var clockTimer = null;
+  var started = false;
+
+  function clearAll(){
+    timers.forEach(function(t){ clearTimeout(t); });
+    timers = [];
+    if (clockTimer) { clearInterval(clockTimer); clockTimer = null; }
+  }
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function fmt(sec){ return '00.' + pad(Math.floor(sec / 60)) + '.' + pad(sec % 60); }
+  function setLive(panel, live){
+    panel.classList.toggle('talking', live);
+    if (!live) { panel.classList.remove('typing-on'); }
+  }
+  function reset(panel){
+    panel.querySelectorAll('.turn').forEach(function(t){ t.classList.remove('shown'); });
+    panel.querySelector('.log').classList.remove('shown');
+    panel.querySelector('.clock').textContent = '00.00.00';
+    panel.querySelector('.iv').textContent = 'listening';
+    panel.classList.remove('typing-on');
+  }
+  function finish(panel){
+    clearAll();
+    panel.querySelectorAll('.turn').forEach(function(t){ t.classList.add('shown'); });
+    panel.querySelector('.log').classList.add('shown');
+    panel.querySelector('.iv').textContent = panel.getAttribute('data-intent');
+    panel.querySelector('.clock').textContent = fmt(+panel.getAttribute('data-dur'));
+    setLive(panel, false);
+    var tab = document.getElementById(panel.getAttribute('aria-labelledby'));
+    if (tab) { tab.classList.add('done'); tab.querySelector('.ts').textContent = '· logged'; }
+    panel.querySelector('.skip-end').disabled = true;
+  }
+  function play(panel){
+    clearAll();
+    reset(panel);
+    var tab = document.getElementById(panel.getAttribute('aria-labelledby'));
+    if (tab) { tab.classList.remove('done'); tab.querySelector('.ts').textContent = '· playing'; }
+    panel.querySelector('.skip-end').disabled = false;
+    if (reduce) { finish(panel); return; }
+    setLive(panel, true);
+    var turns = panel.querySelectorAll('.turn');
+    var t = 500;
+    turns.forEach(function(turn, idx){
+      var isAi = turn.classList.contains('ai');
+      var len = turn.querySelector('p').textContent.length;
+      if (isAi) {
+        timers.push(setTimeout(function(){ panel.classList.add('typing-on'); }, t));
+        t += 550;
+      }
+      timers.push(setTimeout(function(){
+        panel.classList.remove('typing-on');
+        turn.classList.add('shown');
+        if (idx === 1) { panel.querySelector('.iv').textContent = panel.getAttribute('data-intent'); }
+      }, t));
+      t += Math.max(900, len * 20);
+    });
+    var dur = +panel.getAttribute('data-dur');
+    var clock = panel.querySelector('.clock');
+    var begun = Date.now();
+    clockTimer = setInterval(function(){
+      var sec = Math.min(dur, Math.floor((Date.now() - begun) / t * dur));
+      clock.textContent = fmt(sec);
+    }, 250);
+    timers.push(setTimeout(function(){ finish(panel); }, t + 300));
+  }
+  function select(tab, focus){
+    tabs.forEach(function(x){
+      var on = x === tab;
+      x.setAttribute('aria-selected', on ? 'true' : 'false');
+      x.tabIndex = on ? 0 : -1;
+    });
+    panels.forEach(function(p){ p.hidden = p.id !== tab.getAttribute('aria-controls'); });
+    if (focus) { tab.focus(); }
+    play(document.getElementById(tab.getAttribute('aria-controls')));
+  }
+  tabs.forEach(function(tab, i){
+    tab.addEventListener('click', function(){ started = true; select(tab, false); });
+    tab.addEventListener('keydown', function(e){
+      var k = e.key, n = null;
+      if (k === 'ArrowDown' || k === 'ArrowRight') { n = tabs[(i + 1) % tabs.length]; }
+      if (k === 'ArrowUp' || k === 'ArrowLeft') { n = tabs[(i - 1 + tabs.length) % tabs.length]; }
+      if (k === 'Home') { n = tabs[0]; }
+      if (k === 'End') { n = tabs[tabs.length - 1]; }
+      if (n) { e.preventDefault(); started = true; select(n, true); }
+    });
+  });
+  panels.forEach(function(p){
+    p.querySelector('.replay').addEventListener('click', function(){ started = true; play(p); });
+    p.querySelector('.skip-end').addEventListener('click', function(){ started = true; finish(p); });
+  });
+
+  var section = document.getElementById('calls');
+  function check(){
+    if (started) { return; }
+    var r = section.getBoundingClientRect();
+    if (r.top < window.innerHeight * 0.7 && r.bottom > 0) {
+      started = true;
+      window.removeEventListener('scroll', onScroll);
+      play(panels[0]);
+    }
+  }
+  var pending = false;
+  function onScroll(){
+    if (pending) { return; }
+    pending = true;
+    setTimeout(function(){ pending = false; check(); }, 120);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  check();
+})();
+</script>
+</body>
+</html>
