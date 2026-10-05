@@ -34,7 +34,7 @@ setting the API can't change, Raka sets it to 18 in lemlist Settings.
 cam_PryZp5LuvQv8NznHh paused. W1b launched (386 leads) and W1c launched (398), auto review off. Test campaigns
 built from 50 random clean leads each (owner rule passed, located in the nine countries, no fixed or flagged
 names), moved out of W4 and W5 so nobody is in two: W4 TEST 50 cam_iDMXXfaWWg8RkgHpi and W5 TEST 50
-cam_BRBXAzzDKMfC4fSCS, both draft, same sequence and 07:00 to 21:00 schedule. W4 now 2,363, W5 4,283.
+cam_BRBXAzzDKMfC4fSCS, both LAUNCHED 2026-10-05 (50 each, auto review off), same sequence and 07:00 to 21:00 schedule. W4 now 2,363, W5 4,283.
 Waves after this: W1a and W3 when W1b/W1c run low, then W2.
 
 **Raka's rule (2026-10-04): only CEO, owner, founder or co-founder**, because the connect note says "I'm a business
