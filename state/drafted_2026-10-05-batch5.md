@@ -35,12 +35,16 @@ How it was checked (2026-10-05, about 16:10 UTC):
 
 ### Jean Claude Adabunu, ctc_9KQJNwc4mq3WnGufS
 
+SENT 2026-10-05T17:52:02Z act_ehzEcyvhNpgHftrok. Do not send again.
+
 CLOSE
 ```
 No problem Jean Claude, I'll leave it there. Good luck with the BIM courses, and if the shop side comes back up later you know where I am.
 ```
 
 ### Jennifer K., ctc_iz4NuH89hLfSS9795
+
+SENT 2026-10-05T17:52:06Z act_QZoNAmjYttp55D9e7. Do not send again.
 
 CLOSE
 ```
@@ -49,12 +53,16 @@ Thanks Jennifer, good to hear the list and the guides are already planned, so I'
 
 ### Laura Bscher, ctc_czpdBfKjdtsHLrYtb
 
+SENT 2026-10-05T17:52:04Z act_fN3Kp46vwDmHdxrDF. Do not send again.
+
 CLOSE
 ```
 Makes sense Laura, NDAs come with that kind of client and it's good it hasn't held you back. Thanks for explaining, and good luck with REVVY.
 ```
 
 ### Chris Ryalls, ExpoCall, ctc_k2GNq2p5WKD64TYvx
+
+HELD 2026-10-05 by Raka, "lets make a proper ass webpage. wait". Do not send this delivery, a stronger page is being built.
 
 Live at https://astra-expocall-prototype.netlify.app (Netlify site 72290da2-d499-4669-bb52-78aba84d9d39, deploy
 6ac3d17684628e24ce12315f). Checked 2026-10-05 about 16:35 UTC: live HTML 200, 89,639 bytes, sha256
@@ -91,6 +99,8 @@ What do you think?
 
 ### Bert Christiaens, Views, ctc_PypkM4r3QPKkeENR3
 
+SENT 2026-10-05T17:52:00Z act_TMNEu4sXe3Y7tg3hv. Do not send again.
+
 Judge verdict NO_STRONG_ANGLE for any pitch (8 pains judged, none passed, full table in the judge file), so this is a
 warm reply to "Recently was in Jakarta!" only. Raka's Eten Maar years, Aug 2020 to Dec 2024 in South Jakarta, founded
 with five relatives, are in docs/astra-master-context.md section 2A. The country and city are not named, per
@@ -107,6 +117,8 @@ What took you out there, work or travel? I'd love to hear what you made of it.
 ```
 
 ### Michaël Abramczuk, Archipel, ctc_QZawcREsaQM3pMpPz
+
+SENT 2026-10-05T17:51:59Z act_rzHKwx7vdusWpaSRh. Do not send again.
 
 Researcher, judge (OPENER, MEDIUM), red team (FIX), fixes applied by the driver. Every fact holds byte for byte: the
 references page and all 17 case pages return the homepage file to 8 user agents across 3 hosts, no bot rule, no JSON or
