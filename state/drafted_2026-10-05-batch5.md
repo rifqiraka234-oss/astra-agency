@@ -153,8 +153,8 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://www.archipelmarketing.com
 sweep apps: four audit simulators, a diagnostic and a client dashboard built in house on Lovable and Supabase, https://www.archipelmarketing.com/diagnostic-geo , they're builders, nothing to sell
 sweep social: tools/social-audit.js and tools/fetch-walled.py on the handle in their own HTML, https://www.linkedin.com/company/archipel-marketing 404 while /company/archipelmarketing returns 200 with an outdated freelance collective About, a one line fix, not chosen
 sweep squad: 9 on https://www.archipelmarketing.com/qui-sommes-nous , 5 consultants for 50 to 100 claimed clients, but his summary says nombre limité de clients, no hiring or backlog fact, not proven
-thread: problem the references page and all 17 case studies reach ClaudeBot and PerplexityBot as a copy of the homepage shell | cost the case behind Mirakl reaching number one on ChatGPT is a page Claude and Perplexity can't read | offer the sales converting Archipel site Claude can read, proof pages included | link read, claude
-lead read: Michaël reads that his references page and 17 case studies reach ClaudeBot and PerplexityBot as a copy of his homepage, so the case write ups behind his results are missing from what they read on his site, that this matters most because his references sell on Mirakl reaching number one on ChatGPT in three months, and gets offered a sales converting Archipel site Claude can read, one thread
+thread: problem the references page and all 17 case studies reach ClaudeBot and PerplexityBot as a copy of the homepage shell | cost the case behind Mirakl reaching number one on ChatGPT is a page Claude and Perplexity can't read | offer the sales converting Archipel site, proof pages crawlers can read included | link site
+lead read: Michaël reads that his references page and 17 case studies reach ClaudeBot and PerplexityBot as a copy of his homepage, so the case write ups behind his results are missing from what they read on his site, that this matters most because his references sell on Mirakl reaching number one on ChatGPT in three months, and gets offered the sales converting Archipel site, one thread
 claims:
 your references page and all 17 case studies reach GPTBot, ClaudeBot and PerplexityBot as an exact copy of your homepage shell, https://www.archipelmarketing.com/archipel-nos-references and the 17 /archipel-* slugs fetched with GPTBot/1.1, ClaudeBot and PerplexityBot UAs, every response sha256 3b399e3b17, identical to https://www.archipelmarketing.com/ , rechecked 16:50 UTC
 17 case studies, https://www.archipelmarketing.com/archipel-nos-references rendered in Chromium shows 17 "Voir l'étude de cas" links, rechecked 16:52 UTC
@@ -175,5 +175,5 @@ Especially, when you are selling on Mirakl reaching number one on ChatGPT in thr
 
 I run Astra agency. We build websites and product pages for brands like Unilever, AXA, Pertamina. I managed global go to market and messaging for Betty Blocks, a B2B software platform that's the same kind of company as most of your clients.
 
-Shall I send you over what the sales converting Archipel site Claude can read looks like?
+Shall I send you over what the sales converting Archipel site looks like?
 ```
