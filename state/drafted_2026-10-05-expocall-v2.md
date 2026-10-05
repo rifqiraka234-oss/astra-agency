@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Sent 2026-10-05 20:01 UTC on Raka's word. Chris act_WGvAes6RxhoCCCvcH, Shirah act_uos9hzS8oftjfNuc4, Michael act_kgbD7q9BMyeC3sqiQ. Do not send again. -->
 # ExpoCall hotel page v2, delivery to Chris Ryalls (2026-10-05)
 
 Live at https://astra-expocall-prototype.netlify.app, deploy 6ac3f357a1dcdc21a566c9dc. All 28 files byte matched
