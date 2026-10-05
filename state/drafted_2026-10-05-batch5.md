@@ -105,3 +105,75 @@ No way, I spent a good few years building a stroopwafel brand there with my fami
 
 What took you out there, work or travel? I'd love to hear what you made of it.
 ```
+
+### Michaël Abramczuk, Archipel, ctc_QZawcREsaQM3pMpPz
+
+Researcher, judge (OPENER, MEDIUM), red team (FIX), fixes applied by the driver. Every fact holds byte for byte: the
+references page and all 17 case pages return the homepage file to 8 user agents across 3 hosts, no bot rule, no JSON or
+noscript copy. Red team fixes taken: GPTBot dropped (a 30 Sep 2026 dev.to log report says it started rendering JS on
+25 Sep), "everything" became "what", block three made singular on Mirakl with no prediction about what an assistant
+answers, credential swapped to the B2B SaaS match (Betty Blocks, Aug 2024 to Feb 2026). Known counter, his llms-full.txt
+says clients like Mirakl, Keyrus or Hyperline appear in ChatGPT, one line claims do reach crawlers, only the write ups
+don't, which is why block two says write ups. Risk, his team already prerenders the blog and could extend it themselves.
+Favours if he replies, the 404 LinkedIn handle in his only social button and sameAs, "ARCHEL MARKETING" on both legal
+pages, the "Description de la référence" placeholder card. Full files in /tmp/claude-0/agents/b5_michael_a/.
+
+```gate
+lead: Michaël Abramczuk, Directeur Général and co founder of ARCHIPEL MARKETING SAS (SIREN 984715995, created 2024-02-12, active, NAF 70.22Z), Edouard Brault Président, both in office since 20/02/2024 per https://recherche-entreprises.api.gouv.fr/search?q=archipel%20marketing and https://www.pappers.fr/entreprise/archipel-marketing-984715995 , beneficial owners restricted. ctc_QZawcREsaQM3pMpPz, lea_AjfjkeBJnAvRH6tLC in cam_Csq9BikBWz7dNqSs4, jobTitle Co-fondateur, tagline and companyName agree, no former or ex. companyDomain archipel-ai.com 307s to https://www.archipelmarketing.com/ , and Mentions légales give SIRET 984 715 995 00028. Thread re pulled 16:41 UTC, 0 activities, sentOnly shows only the 5 Oct connect note, lastRepliedAt null, Archipel search 0, control Timur's thread 4 items in the same minute
+site pass 1: 94 URLs by tools/crawl.py (84 from sitemap.xml plus links), all 200, all French, 62 blog posts and 32 other pages, read by the researcher
+site pass 2: 94 URLs, second crawl, 93 returned 200 and 1 returned 000 then 200 on retry. Judge rerun today: all 25 non blog sitemap URLs plus 3 llms.txt links and 17 case slugs fetched as Googlebot and GPTBot, and Chromium renders of the homepage, references, Hyperline, Mirakl and pricing with 187 requests served by curl and 0 errors, desktop screenshots, the researcher's desktop 1440 and phone 390 screenshots of the homepage opened
+deep analysis: A modern Lovable React SPA on Vercel and Supabase that sells GEO, AI visibility for brands in ChatGPT, Perplexity and Claude, plus paid and SEO, at monthly retainers with a dedicated consultant. The commercial site (homepage, services, team, references page with 17 case studies, pricing) exists only after JavaScript runs. Every non blog URL serves AI and plain crawlers 0 characters of body text, and the references page, 17 cases and pricing serve the homepage file byte for byte. Only the 62 blog posts are prerendered, many of them self ranked top 10 lists with Archipel first. Their own proof page sells on cards like N°1 sur ChatGPT dans son industrie en 3 mois, and none of it reaches GPTBot, ClaudeBot or PerplexityBot
+owner linkedin: route 1 curl https://www.linkedin.com/in/michael-abramczuk-aio-geo-expert 999, fetch-walled redirect stub. Route 2 web search, title AIO GEO expert, an older SEA SMA specialist post. Route 3 posts walled. Route 4 company page https://www.linkedin.com/company/archipelmarketing read, 187 followers, old freelance collective About. Route 5 his own words on the site, the audit chatbot voiced as Michaël. Route 6 the lemlist record, Co-fondateur, matches DG on the register. Brault, the Président, was covered through the register and the team page only
+contact linkedin: same person as the owner side we message, DG on the register and Co-fondateur in the lemlist headline agree, same six routes
+google news: tools/news.py fr, "Archipel Marketing" 1 result (Planète Grandes Écoles 2026-09-25, ranked 6th), "Michaël Abramczuk" 0, control Carrefour 100
+regional news: tools/news.py Paris agence GEO 26 results, the 2026-10-05 SEO and GEO Summit and the 2026-10-02 CNEWS partner top 10 of Paris GEO agencies with 0 Archipel mentions against 7 for Eskimoz
+industry news: tools/news.py "agence GEO" 79 results, Performics on ChatGPT ads and GEO, plus the Vercel and MERJ study on AI crawler JavaScript rendering, and third party rankings, Archipel 3rd on keyweo and seo-monkey, absent from magicgeo, convertix, classementagencesgeo and agences-geo
+sources:
+1. https://www.archipelmarketing.com/archipel-nos-references
+2. https://www.archipelmarketing.com/archipel-hyperline
+3. https://www.archipelmarketing.com/archipel-mirakl
+4. https://www.archipelmarketing.com/blog/top-10-agences-geo-france
+5. https://www.archipelmarketing.com/llms.txt
+6. https://www.archipelmarketing.com/sitemap.xml
+7. https://www.archipelmarketing.com/robots.txt
+8. https://recherche-entreprises.api.gouv.fr/search?q=archipel%20marketing
+9. https://www.pappers.fr/entreprise/archipel-marketing-984715995
+10. https://vercel.com/blog/the-rise-of-the-ai-crawler
+11. https://www.linkedin.com/company/archipelmarketing
+12. https://www.linkedin.com/company/archipel-marketing (404)
+13. https://www.planetegrandesecoles.com/top-10-des-meilleures-agences-geo-a-paris
+14. https://www.cnews.fr/le-corner-partenaires/2026-10-02/top-10-des-meilleures-agences-geo-paris-1927931
+15. https://www.keyweo.com/fr/geo/faq/meilleures-agences-geo/
+16. https://www.magicgeo.fr/meilleures-agences-geo/
+17. https://www.linkedin.com/in/michael-abramczuk-aio-geo-expert (999, walled)
+pains: 7 judged. W1 references and 17 case studies served to AI crawlers as the homepage shell, chosen. W2 client count, address, rating and price inconsistencies, copy edits. W3 placeholder card, ARCHEL typo, dead llms.txt links, polish. G1 trackers before consent from Stockholm with Axeptio loading last, a config fix and EU banner visibility unknown. A1 they build their own tools on Lovable. S1 dead LinkedIn handle in the only social button and in sameAs, a one line fix. B1 capacity against 50 to 100 clients, inference only, and they cap intake on purpose
+chosen: W1, the costliest and biggest, because AI visibility is the thing Archipel sells and the proof behind it, 17 case studies and the references page, is missing from what GPTBot, ClaudeBot and PerplexityBot read on its own site, and fixing it means prerendering about 30 routes across several templates
+sweep website: https://www.archipelmarketing.com/archipel-nos-references and all 17 case pages hash identical to the homepage for GPTBot, ClaudeBot, PerplexityBot and curl with 0 body characters, blog control 28,592, chosen
+sweep gdpr: tools/eu-view.py from Stockholm on https://www.archipelmarketing.com shows _ga, _gcl_au and HubSpot cookies before a click, OpenAI pixel and GTM in the head with Axeptio last in the body, a config fix, not chosen
+sweep apps: four audit simulators, a diagnostic and a client dashboard built in house on Lovable and Supabase, https://www.archipelmarketing.com/diagnostic-geo , they're builders, nothing to sell
+sweep social: tools/social-audit.js and tools/fetch-walled.py on the handle in their own HTML, https://www.linkedin.com/company/archipel-marketing 404 while /company/archipelmarketing returns 200 with an outdated freelance collective About, a one line fix, not chosen
+sweep squad: 9 on https://www.archipelmarketing.com/qui-sommes-nous , 5 consultants for 50 to 100 claimed clients, but his summary says nombre limité de clients, no hiring or backlog fact, not proven
+thread: problem the references page and all 17 case studies reach ClaudeBot and PerplexityBot as a copy of the homepage shell | cost the case behind Mirakl reaching number one on ChatGPT is a page Claude and Perplexity can't read | offer the crawlable case studies page | link case, studies
+lead read: Michaël reads that his references page and 17 case studies reach ClaudeBot and PerplexityBot as a copy of his homepage, so the case write ups behind his results are missing from what they read on his site, that this matters most because his references sell on Mirakl reaching number one on ChatGPT in three months, and gets offered case studies those crawlers can read, one thread
+claims:
+your references page and all 17 case studies reach GPTBot, ClaudeBot and PerplexityBot as an exact copy of your homepage shell, https://www.archipelmarketing.com/archipel-nos-references and the 17 /archipel-* slugs fetched with GPTBot/1.1, ClaudeBot and PerplexityBot UAs, every response sha256 3b399e3b17, identical to https://www.archipelmarketing.com/ , rechecked 16:50 UTC
+17 case studies, https://www.archipelmarketing.com/archipel-nos-references rendered in Chromium shows 17 "Voir l'étude de cas" links, rechecked 16:52 UTC
+the case write ups are missing from everything those crawlers read on your site, the shell's only text is the generic noscript blurb naming no client, https://www.archipelmarketing.com/llms.txt names no client and lists three anonymous cases, https://www.archipelmarketing.com/sitemap.xml lists none of the 17 case pages, rechecked 16:48 UTC
+Mirakl reaching number one on ChatGPT in three months, https://www.archipelmarketing.com/archipel-nos-references Mirakl card text "N°1 sur ChatGPT dans son industrie en 3 mois", rendered 16:52 UTC, the only card with 3 months per the red team
+Betty Blocks credential, docs/astra-master-context.md section 2A, Global GTM and Campaign Manager, Betty Blocks, Aug 2024 to Feb 2026, https://www.bettyblocks.com
+ClaudeBot and PerplexityBot don't run JavaScript, https://vercel.com/blog/the-rise-of-the-ai-crawler (published 2024-12-17, so dated) plus 2026 sources found by the red team; GPTBot dropped from the message because a dev.to report of 2026-09-30 says GPTBot began rendering JS on 2026-09-25
+recheck: 2026-10-05 16:41 to 17:00 UTC, thread re pulled, all 17 case slugs and the references page re hashed as GPTBot, Chromium render with 0 curl errors confirmed the content is client side, the blog control full. Thesis confidence MEDIUM, what the crawlers receive is proven byte for byte, but whether he'd pay us rather than extend his own blog prerender is the open question
+```
+
+OPENER
+```
+Hi Michaël, saw Archipel, looks interesting!
+
+However, your references page and all 17 case studies reach ClaudeBot and PerplexityBot as an exact copy of your homepage shell. This causes the write ups behind your client results to be missing from what those crawlers read on your site.
+
+Especially, when you are selling on Mirakl reaching number one on ChatGPT in three months, the case that shows how you did it is a page Claude and Perplexity can't read.
+
+I run Astra agency. We build websites and product pages for brands like Unilever, AXA, Pertamina. I managed global go to market and messaging for Betty Blocks, a B2B software platform that's the same kind of company as most of your clients.
+
+Shall I send you over what the crawlable case studies page looks like?
+```
