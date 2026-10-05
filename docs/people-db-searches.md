@@ -24,6 +24,12 @@ Country set "EU/UK" = Netherlands, Belgium, Germany, France, United Kingdom, Ire
 | W5 1-50 clinics, law and accounting, GDPR | cam_ncBrkhdhyrSTek7mh | 4,333 |
 | Total | | 14,468 |
 
+**Schedule (Raka, 2026-10-05).** All seven: every day, 07:00 to 21:00 Europe/Amsterdam, 30 minutes between
+actions (each campaign has its own schedule id, v0.1's skd_TCWAhkDXveyyi3oTR was not touched). Plan is about
+18 invites a day, 126 a week, split roughly 60% website (W1b, W1c first, then W1a, W2), 25% W3, 15% W4/W5 as
+50 lead tests. v0.1 stops when these start. The LinkedIn daily invite limit (25 on 2026-10-05) is an account
+setting the API can't change, Raka sets it to 18 in lemlist Settings.
+
 **Raka's rule (2026-10-04): only CEO, owner, founder or co-founder**, because the connect note says "I'm a business
 owner too". Enforced on every lead by `tools/owner_title_rule.py` (`is_strict` on the title at the company of the
 segment's size, `tagline_ok` against retired, deceased, "Late Co-Founder", "met pensioen", "pensionada" etc.,
