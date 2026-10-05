@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Sent 2026-10-05 17:52 UTC except Chris Ryalls, held for a stronger page. His new delivery goes in a new file. The three closes are now CLOSED_PROMISED_LAST, so the checker correctly refuses them as drafts. -->
 # Batch 5, 2026-10-05 afternoon. New accepts and replies waiting on us
 
 How it was checked (2026-10-05, about 16:10 UTC):
