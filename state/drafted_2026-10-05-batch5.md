@@ -116,7 +116,7 @@ answers, credential swapped to the B2B SaaS match (Betty Blocks, Aug 2024 to Feb
 says clients like Mirakl, Keyrus or Hyperline appear in ChatGPT, one line claims do reach crawlers, only the write ups
 don't, which is why block two says write ups. Risk, his team already prerenders the blog and could extend it themselves.
 Favours if he replies, the 404 LinkedIn handle in his only social button and sameAs, "ARCHEL MARKETING" on both legal
-pages, the "Description de la référence" placeholder card. Full files in /tmp/claude-0/agents/b5_michael_a/.
+pages, the "Description de la référence" placeholder card. Full files in /tmp/claude-0/agents/b5_michael_a/. Block five rewritten 2026-10-05 on Raka's rule that the CTA names the bigger outcome, not the tiny fix.
 
 ```gate
 lead: Michaël Abramczuk, Directeur Général and co founder of ARCHIPEL MARKETING SAS (SIREN 984715995, created 2024-02-12, active, NAF 70.22Z), Edouard Brault Président, both in office since 20/02/2024 per https://recherche-entreprises.api.gouv.fr/search?q=archipel%20marketing and https://www.pappers.fr/entreprise/archipel-marketing-984715995 , beneficial owners restricted. ctc_QZawcREsaQM3pMpPz, lea_AjfjkeBJnAvRH6tLC in cam_Csq9BikBWz7dNqSs4, jobTitle Co-fondateur, tagline and companyName agree, no former or ex. companyDomain archipel-ai.com 307s to https://www.archipelmarketing.com/ , and Mentions légales give SIRET 984 715 995 00028. Thread re pulled 16:41 UTC, 0 activities, sentOnly shows only the 5 Oct connect note, lastRepliedAt null, Archipel search 0, control Timur's thread 4 items in the same minute
@@ -153,8 +153,8 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://www.archipelmarketing.com
 sweep apps: four audit simulators, a diagnostic and a client dashboard built in house on Lovable and Supabase, https://www.archipelmarketing.com/diagnostic-geo , they're builders, nothing to sell
 sweep social: tools/social-audit.js and tools/fetch-walled.py on the handle in their own HTML, https://www.linkedin.com/company/archipel-marketing 404 while /company/archipelmarketing returns 200 with an outdated freelance collective About, a one line fix, not chosen
 sweep squad: 9 on https://www.archipelmarketing.com/qui-sommes-nous , 5 consultants for 50 to 100 claimed clients, but his summary says nombre limité de clients, no hiring or backlog fact, not proven
-thread: problem the references page and all 17 case studies reach ClaudeBot and PerplexityBot as a copy of the homepage shell | cost the case behind Mirakl reaching number one on ChatGPT is a page Claude and Perplexity can't read | offer the crawlable case studies page | link case, studies
-lead read: Michaël reads that his references page and 17 case studies reach ClaudeBot and PerplexityBot as a copy of his homepage, so the case write ups behind his results are missing from what they read on his site, that this matters most because his references sell on Mirakl reaching number one on ChatGPT in three months, and gets offered case studies those crawlers can read, one thread
+thread: problem the references page and all 17 case studies reach ClaudeBot and PerplexityBot as a copy of the homepage shell | cost the case behind Mirakl reaching number one on ChatGPT is a page Claude and Perplexity can't read | offer the sales converting Archipel site Claude can read, proof pages included | link read, claude
+lead read: Michaël reads that his references page and 17 case studies reach ClaudeBot and PerplexityBot as a copy of his homepage, so the case write ups behind his results are missing from what they read on his site, that this matters most because his references sell on Mirakl reaching number one on ChatGPT in three months, and gets offered a sales converting Archipel site Claude can read, one thread
 claims:
 your references page and all 17 case studies reach GPTBot, ClaudeBot and PerplexityBot as an exact copy of your homepage shell, https://www.archipelmarketing.com/archipel-nos-references and the 17 /archipel-* slugs fetched with GPTBot/1.1, ClaudeBot and PerplexityBot UAs, every response sha256 3b399e3b17, identical to https://www.archipelmarketing.com/ , rechecked 16:50 UTC
 17 case studies, https://www.archipelmarketing.com/archipel-nos-references rendered in Chromium shows 17 "Voir l'étude de cas" links, rechecked 16:52 UTC
@@ -175,5 +175,5 @@ Especially, when you are selling on Mirakl reaching number one on ChatGPT in thr
 
 I run Astra agency. We build websites and product pages for brands like Unilever, AXA, Pertamina. I managed global go to market and messaging for Betty Blocks, a B2B software platform that's the same kind of company as most of your clients.
 
-Shall I send you over what the crawlable case studies page looks like?
+Shall I send you over what the sales converting Archipel site Claude can read looks like?
 ```

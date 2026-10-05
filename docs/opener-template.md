@@ -165,6 +165,15 @@ slot has no source, the message does not get written.**
 - `[thing]` names an artefact a stranger could sketch, "the quoting and planning tool", "the
   English PULSE site". Not "a solution", not "some ideas".
 - 16 words at most. The goal is not repeated here, block three carries it.
+- **`[thing]` is the bigger outcome, never the tiny fix (Raka, 2026-10-05).** His words, "the cta
+  should be like 'shall i send you over what [a modern or professional or sales converting or any
+  of the goal] looks like' instead of just like the tiny fix because now it seems like its just a
+  tiny fix". So the thing is the whole better version that fixes block two's flaw AND serves block
+  three's goal, described by what it achieves, "the sales converting Archipel site", "a modern
+  booking site for La Warroom", "a professional English site for PULSE". Not the patch, "the
+  crawlable case studies page", "the fixed contact form". A tiny fix tells the owner his team can
+  do it in an afternoon, which kills the pay test in the lead's own head. The thread link words
+  still have to appear in it or in block four's proof, so name the outcome around the same subject.
 - **History.** Until 2026-09-24 this block was `Shall I build the [thing] so [stakeholder
   achieves goal], and send it over?`. Lasse Wessel and Wessel van Noort got that version.
 

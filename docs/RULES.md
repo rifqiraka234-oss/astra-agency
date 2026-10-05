@@ -327,6 +327,12 @@ Shall I send you over what the [thing] looks like?
 **Block five shortened by Raka, 2026-09-24**, "the cta should be shorter". It names the thing and
 nothing else. The goal lives in block three, so it isn't repeated.
 
+**The thing is the bigger outcome, never the tiny fix (Raka, 2026-10-05).** "Shall I send you over
+what [a modern, professional, sales converting ... version] looks like", the whole better version
+that fixes block two and serves block three, named by what it achieves. "The crawlable case studies
+page" made the offer read as an afternoon's patch his own team could do. Full rule in
+`docs/opener-template.md` block five.
+
 **Block three added by Raka, 2026-09-24.** One sentence. Where the company is heading now,
 then the SAME block two problem getting bigger as they go there. Five blocks, always.
 
