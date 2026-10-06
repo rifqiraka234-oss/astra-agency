@@ -470,3 +470,130 @@ I run Astra agency. We build AI tools for brands like Unilever, AXA, Pertamina. 
 
 Shall I send you over what the AI search matching buyers to homes looks like?
 ```
+
+### Naomi Yard, SEM-Care, ctc_9Ty6sALcgs2LTTuxs
+
+Co-owner ("Mede-eigenaar" in lemlist; about page "Wij, Naomi en Suzanne ... SEM-Care is geboren"; KvK 85983918 confirms
+the company, not the people). Thread holds only the 22 Jul connect note. Red team FIX applied: the impact line now fits
+her financiering page (the client chooses the provider with the gemeente), the credential no longer treats care clients
+as leads, the offer says same day. Care for vulnerable clients, keep it respectful. No privacy statement link on the site,
+a favour for later. Most likely pushback: two working days is normal in her sector.
+
+```gate
+lead: Naomi Yard, co-owner of SEM-Care, Alkmaar (KvK 85983918 per https://www.sem-care.nl/ footer and North Data https://www.northdata.com/SEM-Care,+Alkmaar , Edisonweg 7, purpose "Outpatient guidance ... for home-dwelling clients with physical, cognitive or psychosocial limitations"), ctc_9Ty6sALcgs2LTTuxs, lea_XAYXjCzPBGxJYnCnA. lemlist jobTitle "Mede-eigenaar", experience1 "Mede-eigenaar @SEM Care", 15+ years wijkverpleging at Evean before it. https://www.sem-care.nl/over-sem-care/ "Wij, Naomi en Suzanne ... SEM-Care is geboren". Thread pulled 2026-10-06, 1 item, our 22 Jul connect note, sentOnly search on her name returns the same contactId with lastRepliedAt null, Martijn Dijk's two item thread is the control
+site pass 1: 18 URLs by tools/crawl.py on https://sem-care.nl , 16 from the sitemap, all 200, every page read, home, begeleiding aan huis, financiering, praktische informatie, over, contact, vacatures, the vacancy, two news posts, terms, disclaimer, author and category archives
+site pass 2: 18 URLs, second full crawl matching pass 1. tools/site-audit.js printed RENDER NOT TRUSTED (two CSS files ours), so tools/render-via-curl.js was run, 64 requests served, 0 curl errors, both parts looked at, a clean Elementor site with the footer note about the phone visible. Desktop render only, the phone view from site-audit.js is void with the run
+deep analysis: A small HKZ certified Wmo provider of ambulant begeleiding for adults, contracted in several municipalities, also WLZ. The client journey on its own pages is one channel, every "Maak een afspraak" and "Neem contact op" goes to /contact/, three fields (Voor en achternaam, E-mailadres, Bericht) and "Binnen 2 werkdagen nemen wij contact met u op". The footer on every page says "De telefoondienst is niet altijd bemand. We doen ons best om elk telefoontje te beantwoorden van maandag t/m vrijdag tijdens kantooruren". Referrers get their own section on /financiering/ ("Voor verwijzers"), and the vacancy describes begeleiders out at clients with a work phone and iPad in "een compact team". Intake rules are written out on /praktische-informatie/ (toelatingscriteria, exclusions), so the first screening questions are known and repeatable. A phone hack notice was updated 23 Jun 2026. No privacy policy link was found (site-audit.js, control passed), a tweak
+owner linkedin: route 1 curl https://www.linkedin.com/in/naomi-yard-425522138 999. Route 2 web search "Naomi Yard" SEM-Care, the only profile hit is /in/naomiy in Oosterhout, a different person, not used. Route 3 web search for SEM-Care founders, no post. Route 4 company page https://www.linkedin.com/company/sem-care via tools/social-audit.js, 41 followers, "Samen elkaar motiveren", 5 employees. Route 5 her own words, the lemlist summary "Naast mijn activiteiten als Wijkverpleegkundige ... geef ik zo nu en dan ook gastlessen". Route 6 the about page in the company's own words. The co-owner Suzanne has no surname on the site, not searchable
+contact linkedin: same person as the owner, the lemlist jobTitle, the about page and the KvK record agree, same six routes
+google news: tools/news.py nl, "SEM-Care Alkmaar" 0, "Naomi Yard" 0, control Heineken 100
+regional news: tools/news.py (Alkmaar OR Noord-Holland) (ambulante begeleiding Wmo) 5 results, Noordhollands Dagblad 2024-03-31 on Simetri stopping home care in Zaanstreek-Waterland over payment problems, nothing on SEM-Care
+industry news: tools/news.py ambulante begeleiding Wmo 18 results, Dirkzwager Wmo jurisprudence Jan 2026, VARnws on Utrecht choosing Viantis for Wmo support Oct 2025, plus https://www.alkmaar.nl/direct-regelen/zorg-en-ondersteuning/begeleiding/ (residents apply via mijnzorg.alkmaar.nl or 14 072, then choose a provider)
+sources:
+1. https://www.sem-care.nl/contact/
+2. https://www.sem-care.nl/financiering/
+3. https://www.sem-care.nl/begeleiding-aan-huis/
+4. https://www.sem-care.nl/over-sem-care/
+5. https://www.sem-care.nl/praktische-informatie/
+6. https://www.sem-care.nl/vacature-ambulant-begeleider/
+7. https://www.sem-care.nl/wp-json/wp/v2/pages (modified dates, home and services 2026-06-23)
+8. https://www.northdata.com/SEM-Care,+Alkmaar (tools/fetch-walled.py)
+9. https://www.linkedin.com/company/sem-care (tools/social-audit.js)
+10. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.sem-care.nl (tools/eu-view.py)
+11. https://www.alkmaar.nl/direct-regelen/zorg-en-ondersteuning/begeleiding/
+12. https://news.google.com/rss (tools/news.py, company, person, region, industry)
+13. https://example.com (control 200)
+pains: 5 judged. (1) Apps, intake runs through a three field form answered within two working days and a phone line that isn't always staffed, while the team is out at clients, so referrers and families with a Wmo indication in hand reach SEM-Care slowly. Costliest, each lost referral is a client paid for every month by the municipality. (2) Website, clean and current after the June 2026 rewrite, nothing structural. (3) GDPR, no privacy link found on a care provider's site (site-audit.js with control), 1 first party cookie and api.ipify.org before a click from Stockholm, a tweak. (4) Social, no account linked from the site, LinkedIn company page 41 followers. (5) Squad, a care provider, builds nothing
+chosen: (1), costliest, it sits on how new clients arrive, and the screening rules on /praktische-informatie/ show the first questions are repeatable
+sweep website: 18 pages crawled twice, rendered through render-via-curl.js with 0 curl errors, https://www.sem-care.nl/ is clean and current after the 23 Jun 2026 rewrite, not chosen
+sweep gdpr: tools/eu-view.py from Stockholm on https://www.sem-care.nl , 1 first party cookie ipify_ip_dfwp and api.ipify.org before a click, no consent code, site-audit.js finds no privacy link with its control passing, a tweak, not chosen
+sweep apps: https://www.sem-care.nl/contact/ three fields and "Binnen 2 werkdagen", footer "De telefoondienst is niet altijd bemand", https://www.sem-care.nl/vacature-ambulant-begeleider/ team out at clients, chosen
+sweep social: tools/social-audit.js on https://www.linkedin.com/company/sem-care , 41 followers, 5 employees, the site links no social account per site-audit.js with its control, not chosen
+sweep squad: a home support provider per https://www.sem-care.nl/begeleiding-aan-huis/ , it builds no software, nothing to supplement
+thread: problem the Maak een afspraak button leads to a three field form with a reply within two working days and the phone isn't always staffed | cost a family or referrer looking for home support tries another provider before anyone calls back, adding up as a compact team serves several municipalities | offer the same day AI intake for every referrer | link referrer
+lead read: Naomi reads that her appointment button gives a two working day form and the phone isn't always staffed, so a family or referrer may try another provider first, adding up across municipalities, and gets offered the same day AI intake for every referrer, one thread
+claims:
+your "Maak een afspraak" button leads to a three field form, https://www.sem-care.nl/begeleiding-aan-huis/ , /financiering/ and /over-sem-care/ anchor "Maak een afspraak" href https://www.sem-care.nl/contact/ , the form has form_fields naam, email, message, rechecked 06:4x UTC
+a reply within two working days, https://www.sem-care.nl/contact/ "Binnen 2 werkdagen nemen wij contact met u op"
+the phone isn't always staffed, https://www.sem-care.nl/ footer on every page "De telefoondienst is niet altijd bemand", seen in the render-via-curl screenshot
+a client with a Wmo indication and referrers, https://www.sem-care.nl/financiering/ "Wmo-indicatie" and "Voor verwijzers"
+serving clients in several municipalities, https://www.sem-care.nl/financiering/ "gecontracteerd voor het leveren van individuele begeleiding in meerdere gemeenten"
+a compact team out on the road, https://www.sem-care.nl/vacature-ambulant-begeleider/ "Je gaat op pad naar cliënten" and "een compact team"
+recheck: 2026-10-06 06:50 UTC, contact, financiering and the footer refetched, every quoted line found, control example.com 200. Thesis confidence MEDIUM, the slow single channel is proven on her pages, that referrals go elsewhere is inference she can test against her own intake
+```
+
+OPENER
+```
+Hi Naomi, saw SEM-Care, looks interesting!
+
+However, your "Maak een afspraak" button leads to a three field form with a reply within two working days, and the phone isn't always staffed. This causes a family or referrer looking for home support for someone with a Wmo indication to try another provider before anyone's called them back.
+
+Especially, when you are serving clients in several municipalities with a compact team out on the road, the new requests waiting until someone's back at a desk add up every week.
+
+I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I set up the routing and follow up for new leads at Betty Blocks, where a quick first answer mattered most to whoever was waiting on it.
+
+Shall I send you over what the same day AI intake for every referrer looks like?
+```
+
+### Emily Levy, Alquimia Legal, ctc_rMYGbmu7Piu5Pmwei
+
+Co-owner: lemlist jobTitle "Co-Owner", site "Socia y COO desde 2019", a 2021 press column names her and Alejandro
+Alcántara as "fundadores". Her main job now is Juriste Jr. at BARAT CORPORATE in Lyon. Live site alquimialegal.mx
+(lemlist's alquimialawyers.com doesn't resolve). Thread holds only the 27 Jul connect note. Red team FIX applied: block
+three now uses their own verb, "leads the firm's international presence", not "taking the firm international"
+(the L'Office des Artistes lesson). A WhatsApp Business greeting or Wix auto reply can't be seen from outside, so "answer
+by hand" is her most likely pushback.
+
+```gate
+lead: Emily Levy (lemlist "Emily R.", fullName "Emily Levy R."), partner and COO of Alquimia Legal, Guadalajara, ctc_rMYGbmu7Piu5Pmwei, lea_X6Zr5my9ytX6xNZMQ. https://www.alquimialegal.mx/ "Emily Levy Socia & Subdirectora. Socia y COO de Alquimia Legal desde 2019 ... lidera la proyección internacional de la firma desde Francia. Ofrece soluciones legales estratégicas en español, inglés y francés". lemlist jobTitle "Co-Owner", experience "Company Owner @Alquimia Legal", location Lyon. Founder and director is Alejandro Alcántara Gómez per the same page and https://www.enlazadot.com/columna/alquimia-legal-en-donde-si-protegen-tu-empresa/ (23 Feb 2021, "Alejandro Alcántara (Director)", "Dulce Emily Levi (Subdirector)"). No Mexican public register reachable for a law firm, the site and the 2021 column agree. Thread pulled 2026-10-06, 1 item, our 27 Jul connect note, sentOnly search "Emily R." returns the same contactId with lastRepliedAt null
+site pass 1: 3 URLs by tools/crawl.py on https://www.alquimialegal.mx (a Wix one pager, the root twice and the privacy notice), plus https://www.alquimialegal.mx/en fetched and read in full, every page read
+site pass 2: 3 URLs, second crawl matching pass 1, /en fetched again, the page rendered in Chromium and both "Cotizar" and "Agendar Asesoría" clicked, each scrolls to the same form section (scrollY 0 to 4476, no new tab), screenshot alq_cotizar.png looked at. Desktop only, the 3 Oct sweep has the phone render
+deep analysis: A small IP, corporate, tax and labour firm, two people named, founder Alejandro in Guadalajara and Emily in France. Clients arrive through social media (a testimonial says "encontrarme con la asesoría de Alquimia por medio de las redes sociales", Instagram 1,274 posts, Facebook 4,370 followers) and buy registrations, every testimonial is a trademark ("registro de mi marca"). There's no price anywhere on the Spanish or English page (regex for currency, MXN, precio and price found nothing, control string matched). Every action ends in one place, the "Trabajemos juntos" form with seven required fields (Nombre, Teléfono, Email, Nombre de la compañía, Ciudad, País, Mensaje) or wa.me/523312561258. No chat, booking or quoting tool in the HTML (manychat, tidio, calendly, hubspot, zapier all 0, wa.me 2 as the control, /book-online 404). So each quote request is read and answered by a person, in up to three languages, across a Lyon to Guadalajara time gap
+owner linkedin: route 1 Alejandro has no URL in lemlist, web search "Alejandro Alcántara" "Alquimia Legal" returns only same name strangers (a congressman, a banker) and the 2021 Enlazadot column, which is read. Route 2 the site's team section. Route 3 company page https://www.linkedin.com/company/alquimia-legal/ via social-audit.js, 26 followers, 1 employee, "El intelecto lo materializa todo". Routes 4 to 6 Instagram, Facebook and the column, the firm's own voice is on Instagram
+contact linkedin: route 1 curl https://www.linkedin.com/in/emlevyr 999. Route 2 web search "Emily Levy" Alquimia Legal, only other Emily Levys. Route 3 the lemlist summary, "Since 2016 ... international intellectual property correspondent ... Since 2022, I have been based in Lyon". Route 4 the site bio. Route 5 the 2021 column. Route 6 the lemlist experience list, Juriste Jr. at BARAT CORPORATE as a second job
+google news: tools/news.py es, "Alquimia Legal" 2 results, both unrelated (IMPSA Argentina 2026, Panama 2004), "Emily Levy Alquimia" 0, control Telefonica 102
+regional news: tools/news.py (Guadalajara OR Jalisco) (registro de marca IMPI) 46 results, debate.com.mx 2026-08-02 "IMPI reporta crecimiento histórico en el registro de marcas y patentes; dominan solicitudes extranjeras", the Pato Merlín and "¿Y si sí?" filing rushes in Jun and Jul 2026, demand for registrations is up and foreign filers lead
+industry news: tools/news.py registro de marca IMPI 100 results, IMPI enforcement in León 2026-10-06, headlines only past the regional item, the trade body is IMPI itself
+sources:
+1. https://www.alquimialegal.mx/
+2. https://www.alquimialegal.mx/en
+3. https://www.alquimialegal.mx/politica-de-privacidad
+4. http://wa.me/523312561258 (href on both pages)
+5. https://www.instagram.com/alquimialegalmx/ (tools/social-audit.js)
+6. https://www.facebook.com/alquimialegal (tools/social-audit.js)
+7. https://www.linkedin.com/company/alquimia-legal/ (tools/social-audit.js)
+8. https://www.enlazadot.com/columna/alquimia-legal-en-donde-si-protegen-tu-empresa/
+9. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.alquimialegal.mx (tools/eu-view.py)
+10. https://news.google.com/rss (tools/news.py, debate.com.mx IMPI record filings headline)
+11. https://www.linkedin.com/in/emlevyr (999)
+12. https://example.com (control 200)
+pains: 5 judged. (1) Apps, every quote and consultation request goes through one seven field form or WhatsApp with no price shown, so each one is answered by hand by a two person firm whose co-owner is in France with a second job. Costliest, quotes are where a trademark client is won or lost and social media keeps feeding requests. (2) Website, a polished Wix page in Spanish and English, /fr 404 while she offers French, a tweak. (3) GDPR, 6 first party Wix cookies, no tracker, a Mexican firm, nothing. (4) Social, Instagram active daily (latest 2026-10-06), Facebook 4,370, LinkedIn 26, working. (5) Squad, a law firm, builds nothing
+chosen: (1), costliest, it's the step every testimonial passed through, and it grows with every language and time zone she adds
+sweep website: https://www.alquimialegal.mx and /en crawled twice and rendered, polished, /fr returns 404, not chosen
+sweep gdpr: tools/eu-view.py from Stockholm on https://www.alquimialegal.mx , 6 first party Wix cookies, Wix and Sentry hosts only, a Mexican firm, nothing to say
+sweep apps: https://www.alquimialegal.mx/ "Cotizar" and "Agendar Asesoría" both scroll to the seven field form, no price on the page, wa.me link, no quoting or chat tool in the HTML, chosen
+sweep social: tools/social-audit.js on https://www.instagram.com/alquimialegalmx/ 524 followers, 1,274 posts, latest 2026-10-06, Facebook 4,370, LinkedIn 26, active, not chosen
+sweep squad: a two partner law firm per https://www.alquimialegal.mx/ , it builds no software, nothing to supplement
+thread: problem the Cotizar and Agendar Asesoría buttons both drop people at one seven field form or WhatsApp with no price | cost every brand owner wanting a quote waits for someone to answer by hand, piling up across three languages and two time zones as she leads the international presence | offer the AI quote desk answering in three languages | link quote
+lead read: Emily reads that both buttons drop people at one form or WhatsApp with no price, so quotes wait for a person, piling up across three languages and time zones as she leads the firm's international presence, and gets offered the AI quote desk answering in three languages, one thread
+claims:
+your Cotizar and Agendar Asesoría buttons both drop people at one seven field form or WhatsApp, https://www.alquimialegal.mx/ clicked in Chromium 2026-10-06, both scroll to "Trabajemos juntos" with Nombre, Teléfono, Email, Nombre de la compañía, Ciudad, País, Mensaje, all marked *, and "Contactar WhatsApp" wa.me/523312561258
+no price shown, https://www.alquimialegal.mx/ and /en text, currency and price regex 0 hits, control string 3 hits
+taking the firm international from France, https://www.alquimialegal.mx/ "lidera la proyección internacional de la firma desde Francia"
+Spanish, English and French, https://www.alquimialegal.mx/ "Ofrece soluciones legales estratégicas en español, inglés y francés"
+two time zones, lemlist location Lyon and the firm's address in Guadalajara per https://www.alquimialegal.mx/politica-de-privacidad
+recheck: 2026-10-06 06:50 UTC, the page refetched and both buttons clicked again in the same run, every quoted line found, control example.com 200. Thesis confidence MEDIUM, the hand answered single channel is proven, that quotes go cold is inference she can test against her WhatsApp
+```
+
+OPENER
+```
+Hi Emily, saw Alquimia Legal, looks interesting!
+
+However, your Cotizar and Agendar Asesoría buttons both drop people at one seven field form or WhatsApp, with no price shown. This causes every brand owner who wants a quote to wait for someone at the firm to answer by hand.
+
+Especially, when you are leading the firm's international presence from France in Spanish, English and French, the quotes that haven't had a reply pile up across three languages and two time zones.
+
+I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I ran scoring and follow up on new leads for Betty Blocks, and an unanswered one there went cold fast.
+
+Shall I send you over what the AI quote desk answering in three languages looks like?
+```
