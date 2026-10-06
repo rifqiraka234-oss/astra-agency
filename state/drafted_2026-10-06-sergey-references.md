@@ -32,9 +32,7 @@ the queue row goes to CLOSED and nothing else goes to Sergey.
 
 ## Sergey Shalunov, SotoCat. ctc_Puf9L7o8nDTyDNn2Q
 
-CLOSER
+CLOSER, Raka's exact words ("just say this")
 ```
-Fair ask, Sergey. Our client agreements don't let us share live links or put clients in touch, so the deck is everything we can show.
-
-Good luck with SotoCat.
+Our client agreements don't let us share live links or put clients in touch, so the deck is everything we can show.
 ```
