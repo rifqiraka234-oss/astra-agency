@@ -20,19 +20,7 @@ Each claim in the message matches the live page. It shows a 20 room fictional ho
 evening, the example calls are labelled "voiced with text to speech", Alex's own voice is "at the end of the page", the
 morning inbox is there, and visitors can enter their own figures to put a price on the after hours calls.
 
-DELIVERY.
-```
-Chris, here's the hotel page you asked about.
-
-It follows one night at a 20 room hotel, from a table booked at six to the morning inbox, and you can press play on every call and hear how it goes. There's a calculator for a hotel's own after hours calls too.
-
-Try it yourself.
-https://astra-expocall-prototype.netlify.app
-
-The hotel's made up and those calls are text to speech voices, Alex's real voice is at the end. Swap Alex in on them and it's ready to sit next to your other trade pages.
-
-What do you think?
-```
+SENT 2026-10-05 20:01 UTC by the other session, act_WGvAes6RxhoCCCvcH, confirmed in the thread on 6 Oct. Do not send again.
 
 ## Sergey Shalunov, SotoCat. ctc_Puf9L7o8nDTyDNn2Q. Replied today 18 31 UTC
 
@@ -51,13 +39,13 @@ says plainly whose work it is (Amwisesa, per `docs/astra-company-profile.md`). F
   checked independently, so they're stated as what was built.
 - No country is named, per Raka's 23 Sep rule.
 
-REPLY.
+REPLY, SHORT VERSION (6 Oct, Raka asked for something shorter).
 ```
-Fair point Sergey, a deck on its own doesn't prove much any more, and that's partly why we built your site instead of describing it.
+Fair, Sergey. You asked for client work and I sent you a pitch.
 
-The client work comes from Amwisesa, our development partner, who build what we sell. The one you can check without my word is the Bango street food app they built for Unilever through Unilever's agency, which won Best in Show at the 2015 MMA Smarties, and the award's listed on MMA's own winners page. They also turned 470 drilling formulas into an offline calculator for Pertamina's offshore crews, and built a child health monitoring app and dashboard for the World Bank.
+Our builds are done by Amwisesa, our development partner. The one you can check yourself is the Bango street food app they built for Unilever through Unilever's agency, which won Best in Show at the 2015 MMA Smarties and is listed on MMA's winners page. They've also built an offline drilling calculator for Pertamina with 470 engineering formulas, and a child health monitoring app for the World Bank.
 
-Which of those is closest to what you'd want to know? Happy to go into how it was built.
+Happy to walk you through any of them.
 ```
 
 ## Steven Garratt, Qualigraf. ctc_sPysigrTQgntPu9c6. Due from 7 Oct, last nudge
