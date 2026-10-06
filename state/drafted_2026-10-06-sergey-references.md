@@ -1,4 +1,5 @@
-# Sergey Shalunov, SotoCat, references ask. 2026-10-06. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Sergey Shalunov, SotoCat, references ask. 2026-10-06. SENT.
 
 Whole first page pulled 18:11 UTC sync, 13 items. His two newest, both 6 Oct.
 - 15:13 UTC, act_uQHQXGaE3XunWfF4F, "Thanks Raka"
@@ -32,7 +33,4 @@ the queue row goes to CLOSED and nothing else goes to Sergey.
 
 ## Sergey Shalunov, SotoCat. ctc_Puf9L7o8nDTyDNn2Q
 
-CLOSER, Raka's exact words ("just say this")
-```
-Our client agreements don't let us share live links or put clients in touch, so the deck is everything we can show.
-```
+SENT 2026-10-06 18:34 UTC, act_5bdABfypNy9WbSGEW, in Raka's exact words on "and send". Sergey CLOSED. Do not send again.
