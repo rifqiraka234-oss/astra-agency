@@ -39,11 +39,12 @@ says plainly whose work it is (Amwisesa, per `docs/astra-company-profile.md`). F
   checked independently, so they're stated as what was built.
 - No country is named, per Raka's 23 Sep rule.
 
-REPLY, SHORT VERSION (6 Oct, Raka asked for something shorter).
+REPLY, POINT HIM TO THE DECK (6 Oct, Raka, "we can say that the stuff we had done is in the deck, we sent it to him he just didnt read through it"). Deck live 6 Oct, 200, section "10 Our projects" present with Bango, Pertamina, World Bank, Singtel and the Amwisesa line. No anchor exists for section 10, so the section is named instead.
 ```
-Fair, Sergey. You asked for client work and I sent you a pitch.
+Hi Sergey, the client projects are in the deck I sent on 23 Sep, in section 10, Our projects.
+https://astra-sotocat-deck.netlify.app
 
-Our builds are done by Amwisesa, our development partner. The one you can check yourself is the Bango street food app they built for Unilever through Unilever's agency, which won Best in Show at the 2015 MMA Smarties and is listed on MMA's winners page. They've also built an offline drilling calculator for Pertamina with 470 engineering formulas, and a child health monitoring app for the World Bank.
+It's work our development partner Amwisesa has shipped for Unilever, Pertamina, the World Bank and Singtel, among others. The Bango app they built for Unilever won Best in Show at the 2015 MMA Smarties.
 
 Happy to walk you through any of them.
 ```
