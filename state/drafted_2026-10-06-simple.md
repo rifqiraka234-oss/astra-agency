@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- All 10 sent 2026-10-06 11:59 to 12:00 UTC on Raka's "send all". Do not send again. -->
 <!-- Simpler redraft, 2026-10-06, Raka: "everything sounds a bit too technical, make it much more simple, just go like AI workflow". Supersedes the texts in drafted_2026-10-06-ai-default.md and drafted_2026-10-06-julien.md. Facts unchanged, all from the red teamed versions. Nothing sent. -->
 # Simpler redraft for Raka, 2026-10-06
 
