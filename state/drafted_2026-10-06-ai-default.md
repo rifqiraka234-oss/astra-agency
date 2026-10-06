@@ -141,3 +141,65 @@ I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pe
 
 Shall I send you over what the partner site that wins supplier meetings looks like?
 ```
+
+### Steven Prins, Bulgarian Wine Hub, ctc_3S6EA258AheDuBKi5
+
+Follow up to our 26 Aug opener (thread: connect note 26 Jul, opener 26 Aug, no reply, no last message promise). Red team
+FIX applied: the trade buyers line now rests on what the site shows (one paragraph, a form, consumer only terms per their
+terms of service "particuliere klanten"), not on reply speed (his contact page promises same business day). KBO 0778759649,
+AYLYAK BV, Steven De Prins sole director, wine wholesale codes added 12 May 2026; Shopify b2bEnabled false, no wholesale
+app, 0 trade hits across 135 pages in EN, NL and FR with a working control. He has a day job, left out.
+
+```gate
+lead: Steven De Prins (lemlist "Steven Prins"), Co-Owner of Bulgarian Wine Hub, ctc_3S6EA258AheDuBKi5, lea_2pJ8C4iNEskyKzLcb. The shop is operated by AYLYAK BV per https://www.bulgarianwinehub.be/policies/legal-notice ("owned and operated by Aylyak Rosstal 3 3140 Keerbergen", VAT BE0778759649, effective 27/04/2026). KBO https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=0778759649 gives AYLYAK, active since 17 Dec 2021, Director De Prins Steven, and adds 46.341 wholesale of wine and spirits, 46.349 wholesale of beverages, 47.251 retail sale of wine and 73.110 advertising since 12 May 2026. An owner. Thread pulled 2026-10-06 06:20 UTC, 2 items, connect note 26 Jul and our opener 26 Aug, no reply. sentOnly search "Steven Prins" returns only this contact, teamConversations searches on "Steven De Prins" and "Bulgarian Wine Hub" return 0, state grep finds the 26 Aug digest row and the 30 Sep audit row only
+site pass 1: 80 URLs by tools/crawl.py on https://www.bulgarianwinehub.be/ (capped, Shopify variant links queued), 51 distinct page URLs in EN, NL and FR, all fetched with curl and grepped, homepage, 6 collections, 59 products via products.json, about-us, our-partners, our-wine-regions, b2b, winetasting, contact, policies
+site pass 2: 51 URLs, second full fetch of every page into bwhp/ and grepped for trade wording, the B2B page rendered with tools/site-audit.js (RENDER NOT TRUSTED, 4 of 4 failed assets fine by direct fetch, so void) and again with tools/render-via-curl.js, screenshot /tmp/claude-0/nsa01_bwh_b2b_curl-curlrender.png opened, heading, one paragraph and a five field form, desktop, phone screenshot void with the first run
+deep analysis: A rebuilt Shopify shop, trilingual, 59 Bulgarian wines from six named wineries with long tasting notes, gift cards, boxes, a tasting service where "Every wine tasting is discussed personally", a contact page that aims "to respond to all inquiries on the same business day", and a B2B page. The B2B page's meta description says "We offer direct import and distribution for restaurants, bars and wine shops", the page title is "Bulgarian Wine B2B | Import & Distribution for Businesses", and the body is "Are you interested in a partnership or would you like more information about our wines? Get in touch with us" plus name, business email, company, Chamber of Commerce number and a message box. No trade price, minimum, delivery term, range sheet or ordering route exists anywhere on the 51 pages in any of the three languages. The company added wine wholesale to its activities in May 2026, so trade buyers are where it's heading, and the page they land on asks them to write in first
+owner linkedin: route 1 curl https://www.linkedin.com/in/stevendeprins 999. Route 2 web search "Steven De Prins" "Bulgarian Wine Hub", the rocketreach result title ties him to Bulgarian Wine Hub in Keerbergen (tier G). Route 3 company page https://www.linkedin.com/company/bulgarian-wine-hub 999. Route 4 the lemlist experience list, Pre-Sales Manager at Simac ICT Belgium, Founder & Owner at Aylyak Consulting, Co-Owner at Bulgarian Wine Hub. Route 5 KBO, director of AYLYAK. Route 6 Instagram from the site's HTML, read with social-audit.js, a shop account with no personal posts. A "Wine Generator" Facebook page in Sofia carries the brand name in its URL and can't be tied to him, left out
+contact linkedin: same person as the owner, the lemlist record, the KBO director and the legal notice address all agree on Steven De Prins in Keerbergen, same six routes
+google news: tools/news.py nl, "Bulgarian Wine Hub" 0 results, "Steven De Prins" 2 results (2024 Grimbergen local politics and a 2021 brocante, not him or not provably him, unused), control Heineken 100
+regional news: tools/news.py (Belgium OR Belgie) (Bulgaarse wijn) 6 results, Bulgarian cigarettes and the Songfestival, nothing on Bulgarian wine in Belgium
+industry news: tools/news.py Bulgaarse wijn 0 relevant, plus the six partner wineries on https://www.bulgarianwinehub.be/pages/our-partners as the supply side
+sources:
+1. https://www.bulgarianwinehub.be/pages/b2b
+2. https://www.bulgarianwinehub.be/policies/legal-notice
+3. https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=0778759649
+4. https://www.bulgarianwinehub.be/products.json?limit=250
+5. https://www.bulgarianwinehub.be/pages/winetasting
+6. https://www.bulgarianwinehub.be/pages/contact
+7. https://www.bulgarianwinehub.be/pages/our-partners
+8. https://www.bulgarianwinehub.be/pages/about-us
+9. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.bulgarianwinehub.be (tools/eu-view.py)
+10. https://www.instagram.com/bulgarianwinehub (tools/social-audit.js)
+11. https://rocketreach.co/steven-de-prins-email_67879976 (search result title only)
+12. https://www.linkedin.com/in/stevendeprins (999, walled)
+13. https://news.google.com (tools/news.py, three queries)
+14. https://web.archive.org/cdx/search/cdx?url=bulgarianwinehub.be (timed out twice, walled)
+pains: 5 judged. (1) B2B, they offer import and distribution to restaurants, bars and wine shops and added wholesale in May 2026, yet a trade buyer gets one paragraph and a form with no prices, terms or range, so every trade lead waits on the owner to write back, costliest because trade accounts reorder by the case and it's where the company is heading. (2) Tastings, "Every wine tasting is discussed personally", a manual proposal per request, real but volume unknown and smaller. (3) Reviews, none on product pages, an afternoon's app install, fails the pay test. (4) Social, Instagram 124 followers, 10 posts, latest 2026-09-27, alive and early, not the pain. (5) GDPR, the Shopify banner is set to BE only and they deliver in Belgium only, so the market they sell in gets the banner, clean
+chosen: (1), costliest, the trade channel is the bigger revenue line and the newest direction on the register, and the page meant to open it makes every buyer ask first
+sweep website: https://www.bulgarianwinehub.be/pages/b2b rendered via tools/render-via-curl.js, one paragraph and a form, 0 of 51 pages carry trade prices, horeca, wholesale, groothandel, tarif or minimum wording, control "tasting" found on 46 pages through the same grep, chosen
+sweep gdpr: tools/eu-view.py --shopify from Stockholm, 10 first party cookies including _ga and _gcl_au, banner regionVisibility ["BE"], the legal notice says they deliver within Belgium only, so Belgian visitors get the banner, not chosen
+sweep apps: the tasting flow on https://www.bulgarianwinehub.be/pages/winetasting is handled personally per request, an AI proposal workflow is possible, folded into the trade site offer only as a later step, not the lead pain
+sweep social: tools/social-audit.js on https://www.instagram.com/bulgarianwinehub from the site's HTML, 124 followers, 10 posts, latest 2026-09-27, alive, not chosen
+sweep squad: a two owner shop run beside a full time job per the lemlist record, it doesn't build software, nothing for a squad, not chosen
+thread: problem they offer import and distribution to restaurants, bars and wine shops but the B2B page is one paragraph and a form with only consumer terms on the site | cost every trade buyer has to email before knowing what ordering looks like | offer the trade site for restaurant, bar and shop buyers | link trade, restaurant
+lead read: Steven reads that the August point is fixed, that trade buyers find one paragraph, a form and consumer only terms so they must email first, and gets offered the trade site for his restaurant, bar and shop buyers, one thread
+claims:
+your new tasting notes, https://www.bulgarianwinehub.be/products.json?limit=250 every wine 72 to 231 words, rechecked 06:45 UTC
+you offer import and distribution to restaurants, bars and wine shops, https://www.bulgarianwinehub.be/pages/b2b meta description "We offer direct import and distribution for restaurants, bars and wine shops. Based in Belgium.", rechecked 06:42 UTC
+your B2B page gives them one paragraph and a form, https://www.bulgarianwinehub.be/pages/b2b main content and the render-via-curl screenshot, rechecked 06:42 UTC
+no trade prices or terms, the 51 page grep across https://www.bulgarianwinehub.be/ EN, NL and FR, 0 hits on 16 trade terms, control "tasting" 46 pages, rechecked 06:45 UTC
+I built Eten Maar, a food brand, from zero and owned its partnerships and pricing, https://www.linkedin.com/in/raka-mulya-b92885196 as transcribed in docs/astra-master-context.md section 2A
+recheck: 2026-10-06 06:45 UTC, the B2B page, products.json and the grep rerun, every claim held, the thread pulled at 06:20 with no new activity. Thesis confidence MEDIUM, the page and the register are proven, that trade buyers drop off before writing in is inference he can test against his own inbox
+```
+
+NUDGE
+```
+Hi Steven, I wrote in August about the wine descriptions, and your new tasting notes fix that.
+
+You offer import and distribution to restaurants, bars and wine shops, but your B2B page is one paragraph and a form, and the only terms on the site are written for private customers, so every trade buyer has to email you before they've seen what ordering from you looks like.
+
+I built Eten Maar, a food brand, from zero and owned its partnerships and pricing.
+
+Shall I send you over what the trade site for your restaurant, bar and shop buyers looks like?
+```
