@@ -17,13 +17,11 @@ objections in a line each, and turns "November" into a concrete question about w
 FOR RAKA TO CONFIRM BEFORE SENDING. The WordPress line commits us to building it as a WordPress theme his team can
 edit. That's standard, and Amwisesa builds on PHP, but it's a delivery promise, so it's your call.
 
-REPLY.
+REPLY, SHORTER (Raka, "Make it shorter! And ask can i send you a meeting invite already").
 ```
-Thanks Steven, that's really useful, and good to hear the papers in chaos and the decision flow landed.
+Thanks Steven, really useful. Fair point on Surrey, we'd lead with something that holds.
 
-Fair point on Surrey. If the mergers are on hold, that story's out of date, so we'd lead with something that holds.
+Four countries would be one site with pages per market, not four builds, and it can sit on WordPress so your team keeps editing it.
 
-On the other two. Four countries doesn't mean four builds. It's one site with a set of pages per country, so the design and the decision story get built once and each market gets its own wording and clients. And it'd sit on WordPress like your current site, so your team keeps editing pages the way they do now.
-
-November works. Which week suits you best?
+November works. Can I send you a meeting invite already?
 ```
