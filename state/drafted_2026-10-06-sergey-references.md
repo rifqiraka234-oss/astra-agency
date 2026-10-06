@@ -1,4 +1,5 @@
-# Sergey Shalunov, SotoCat, references ask. 2026-10-06. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Sergey Shalunov, SotoCat, references ask. 2026-10-06. SENT.
 
 Whole first page pulled 18:11 UTC sync, 13 items. His two newest, both 6 Oct.
 - 15:13 UTC, act_uQHQXGaE3XunWfF4F, "Thanks Raka"
@@ -24,13 +25,12 @@ A. Ask Amwisesa tonight for two or three live sites that are still their build a
 B. Leave it. He's got his own AI building sites and decks, and has asked for proof twice. He may be testing more than
    buying.
 
+## Raka's call, 6 Oct
+
+"honestly we legally cant share anything other than the deck so i mean i'd just say this to sergey and leave it because
+he's being difficult". So option A is off. One reply saying the deck is all we can share, then close him. After it sends,
+the queue row goes to CLOSED and nothing else goes to Sergey.
+
 ## Sergey Shalunov, SotoCat. ctc_Puf9L7o8nDTyDNn2Q
 
-HOLDING REPLY, only if you pick A and Amwisesa can deliver.
-
-REPLY
-```
-Fair ask, Sergey. Those are our development partner Amwisesa's builds, and a few clients have rebuilt their sites since, so I'd rather send you links I've checked are still theirs.
-
-I'll get you two or three live ones and someone you can speak to, and come back to you this week.
-```
+SENT 2026-10-06 18:34 UTC, act_5bdABfypNy9WbSGEW, in Raka's exact words on "and send". Sergey CLOSED. Do not send again.
