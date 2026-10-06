@@ -1,4 +1,5 @@
-# Kyson Charles, Acquitas, invite and confirmation. 2026-10-06. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Kyson Charles, Acquitas, invite and confirmation. 2026-10-06. SENT.
 
 Thread pulled 10:26 UTC sync, 15 items. His two newest, 09:58 UTC.
 - act_7Q6v99orWfpNPueBS, "Info@acquitaspartners.com"
@@ -14,7 +15,4 @@ Calendar invite, sent first, then the message.
 
 ## Kyson Charles, Acquitas. ctc_CDeGfHHs3eCrYJR32
 
-BOOKING
-```
-Perfect, the invite's on its way to info@acquitaspartners.com. Speak tomorrow at 8, Kyson.
-```
+SENT 2026-10-06 11:19 UTC, act_Bqnn83xbshovCqgdL, after the invite (event ttnlhaidoggrjp859a8ghieqm8, Meet https://meet.google.com/jau-tkiz-fya), on Raka's "send!". Do not send again.
