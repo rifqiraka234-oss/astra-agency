@@ -42,15 +42,13 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://www.get-baked.store , 1 f
 sweep apps: café and catering requests by free text on https://www.get-baked.store/forcafes and https://www.get-baked.store/contact-me-business , an ordering workflow fits but no café count or order volume is visible anywhere, not chosen
 sweep social: tools/social-audit.js on the accounts in their HTML (b8 run) plus the Instagram embed https://www.instagram.com/getbaked.berlin/embed/ 95 followers, 33 posts, newest six dated 2026-09-22 x3 and 2026-04-16 to 18 x3, control mubiscookies.official embed showed a 2026-10-04 post in the same session. TikTok https://www.tiktok.com/@getbaked.berlin 1 follower, videoCount 0, control @tiktok 1510. Facebook 18 followers. Benchmark of 7 Berlin cookie brands in state/accepts_2026-10-06/b9_baked.md, CHOSEN
 sweep squad: a one woman bakery per https://www.get-baked.store/aboutme , no developers, no product team, nothing to supplement, not applicable
-thread: problem Instagram had no posts mid April to late September and the seasonal flavours in the shop aren't on it | cost the one place people find a pickup only bakery stays quiet while new flavours sell | offer the Baked Instagram that fills the pickup orders | link Instagram
-lead read: Frank reads that their Instagram went quiet from April to September and the Pumpkin Spice and Chai in their shop aren't on it, that for a pickup only bakery bringing out seasonal flavours the feed is where Berlin chooses, and gets offered the Baked Instagram that fills the pickup orders, one thread
+thread: problem Instagram had no posts mid April to late September and nothing since shows the seasonal flavours in the shop | cost the people who'd order miss each seasonal flavour before it's gone | offer the Baked Instagram that fills the pickup orders | link Instagram
+lead read: Frank reads that their Instagram went quiet from April to September and nothing posted since shows the Pumpkin Spice and Chai in their shop, that with flavours that come and go each quiet month is a flavour people never see, and gets offered the Baked Instagram that fills the pickup orders, one thread
 claims:
 your Instagram had no posts from mid April to late September, https://www.instagram.com/getbaked.berlin/embed/ newest posts 2026-09-22 18:57 and three more that day, then 2026-04-18 18:49, 04-17, 04-16, control mubiscookies.official embed same session showed 2026-10-04, b9_baked 2026-10-06 ~20:50 UTC
-the Pumpkin Spice and Chai cookies in your shop aren't on it, https://www.get-baked.store/store seasonal Tea and Spice category with Pumpkin Spice and Chai, and the six newest Instagram posts are Peanut Inferno and April cookie shots, b9_baked evidence line 77
-a pickup only bakery, https://www.get-baked.store/store "Order by 15:00 on the previous day. Pick-up Tuesday through Friday evenings, and around midday on Saturdays.", no café or shop of their own
-you are bringing out new flavours every season, https://www.get-baked.store/store seasonal Tea and Spice category and "More flavours coming soon.", plus Peanut Inferno for Berlin Chili Fest per https://www.instagram.com/getbaked.berlin/embed/ 2026-09-22
-Eten Maar credential, https://www.linkedin.com/in/raka-mulya-b92885196 and docs/astra-master-context.md section 2A, CEO and CMO of Eten Maar 2020 to 2024, founded a stroopwafel brand from zero, owned acquisition, content and conversion
-social media and branding in block four, https://www.linkedin.com/in/raka-mulya-b92885196 freelance social media and branding consultant 2020 to 2023, and docs/astra-company-profile.md line 65 "branding and social media strategy"
+nothing since has shown your Pumpkin Spice and Chai cookies, https://www.get-baked.store/store Tea & Spice category lists Pumpkin Spice, Chai & Pecan and Chai, Orange & Dark Chocolate (raw HTML refetch 2026-10-06 21:22 UTC), and the only posts after 18 Apr are the three of 2026-09-22, single images (GraphImage, is_video false) of peanuts, the Peanut Inferno jar and a chili, captions all Peanut Inferno, embed refetch 21:22 UTC. Scoped to since, because 27 older posts (back to about Oct 2025) are unreadable and could hold an autumn 2025 Pumpkin Spice post
+flavours that come and go with the seasons, their own words on https://www.get-baked.store/goods "My flavours come and go, like seasons", https://www.get-baked.store/forcafes "everyday staples and seasonal specials", https://www.get-baked.store/store/p/pumpkin-spice "Pumpkin spice season is officially here"
+Eten Maar credential, https://www.linkedin.com/in/raka-mulya-b92885196 and docs/astra-master-context.md section 2A, CEO and CMO of Eten Maar 2020 to 2024, "Founded and scaled a stroopwafel brand from zero with five relatives", owned content, so "with my family" and "ran its content". Block four [xyz] is websites and apps, backed by docs/partner/amwisesa-credentials.md (Unilever web and app platform, Pertamina mobile calculator, AXA on the client list); social media and branding was dropped because none of the named clients' delivered work is social, Raka's social and branding record is his own freelance work (Gudang Garam, Maxime)
 recheck: to run immediately before any send, thread re pull, Instagram embed refetch for any post after 2026-09-22, store refetch for Pumpkin Spice and Chai. Confidence MEDIUM, the gap is dated at source for the newest six posts, the cost can't be sized because order volume is unknown, confidence MEDIUM
 ```
 
@@ -58,11 +56,11 @@ OPENER
 ```
 Hi Frank, saw Baked, looks interesting!
 
-However, your Instagram had no posts from mid April to late September, and the Pumpkin Spice and Chai cookies in your shop aren't on it. This causes the one place people find a pickup only bakery to stay quiet while new flavours are on sale.
+However, your Instagram had no posts from mid April to late September, and nothing since has shown your Pumpkin Spice and Chai cookies. This causes the people who'd order from you to miss your new flavours while they're on sale.
 
-Especially, when you are bringing out new flavours every season, the feed is where Berlin decides which cookies to pick up.
+Especially, when you are selling flavours that come and go with the seasons, the quiet months turn into flavours people never see before they're gone.
 
-I run Astra agency. We build social media and branding for brands like Unilever, AXA, Pertamina. I built a stroopwafel brand from zero and ran all its content, so I know what a small food brand has to post to sell.
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I built a stroopwafel brand from zero with my family and ran its content, so I know what a small food brand has to post to sell.
 
 Shall I send you over what the Baked Instagram that fills your pickup orders looks like?
 ```
