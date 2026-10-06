@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Sent by Raka from Gmail 2026-10-06 19:03 UTC. Do not send again. -->
 <!-- Email reply to Joyce van Dalen's decline, Gmail thread 1a0c952b46ef4aee, to marcom@tomatoworld.nl, reply in thread. Not sent, waiting on Raka. -->
 # Tomatoworld, closing reply, 2026-10-06
 
