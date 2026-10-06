@@ -1,4 +1,5 @@
-# Steven Garratt, Qualigraf, move the 4 Nov call. 2026-10-06. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Steven Garratt, Qualigraf, move the 4 Nov call. 2026-10-06. SENT.
 
 His words, 11:06 UTC, act_qz2NnKMt6RiTTx9zA, "Could you move it to 11am or later that day?". Thread pulled 11:11 UTC sync,
 12 items, his message newest. He's in the UK, so 11am his time is 12.00 Amsterdam.
@@ -13,7 +14,4 @@ Calendar change, done first, then the message.
 
 ## Steven Garratt, Qualigraf. ctc_sPysigrTQgntPu9c6
 
-BOOKING
-```
-No problem Steven, I've moved it to 11am UK time on Wednesday 4 November. The updated invite should be with you now.
-```
+SENT 2026-10-06 11:30 UTC, act_PQahnTWj3fNmEC2iu, after the calendar move to 12.00 Amsterdam, on Raka's go. Do not send again.

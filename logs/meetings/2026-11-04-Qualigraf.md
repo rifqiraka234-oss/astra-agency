@@ -1,6 +1,6 @@
 # Meeting brief, Qualigraf, Steven Garratt
 
-**When.** Wednesday 4 November 2026, 09.00 to 09.30 Amsterdam, 08.00 to 08.30 UK.
+**When.** Wednesday 4 November 2026, 12.00 to 12.30 Amsterdam, 11.00 to 11.30 UK. Moved on 6 Oct at his request, it was first set for 09.00 Amsterdam.
 **Where.** Google Meet, https://meet.google.com/phi-oddn-uek
 **Calendar.** Event gnd0obt1afdi1srfpvnqkqbta0, invite sent to steven@qualigraf.com on 6 Oct at 09.50 UTC. He hasn't accepted yet.
 
@@ -25,6 +25,7 @@ to seeing what a UK site for Democratic Services teams would look like.
 - 6 Oct 08.54 UTC. A reply accepting his Surrey point, saying four countries means one site with pages per market,
   not four builds, and that it can sit on WordPress. It asked if we could send a November invite.
 - 6 Oct 09.50 UTC. The invite, and a LinkedIn line confirming it.
+- 6 Oct 11.06 UTC he asked for 11am or later. Moved to 11am UK at 11.30 UTC and confirmed on LinkedIn.
 
 ## What he said on 6 Oct, the things to come back to on the call
 
