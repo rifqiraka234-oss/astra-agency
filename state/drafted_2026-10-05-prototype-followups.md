@@ -50,12 +50,13 @@ This would be the second follow up, so it's the last one. After it, close. The s
 which drew on the live build. No new claim about Qualigraf's own site.
 
 LAST NUDGE.
+LAST NUDGE, REVISED 6 Oct. The first draft pushed the Surrey page a third time (the delivery and the 3 Oct nudge both did), which RULES 1B rules out. This one asks what didn't fit instead.
 ```
-👀 Steven, one last thought on the UK site
+👀 Steven, last one from me on the UK site
 
-If the UK push is still on, the Surrey page is the one I'd put in front of a Democratic Services officer first. Two new councils with their shadow meetings spread across twelve council websites is the problem they're living with.
+If it missed the mark, I'd really value a line on what didn't fit, since you know those councils far better than I do.
 
-No worries if the timing's wrong, and thanks for taking a look.
+And if it's just the timing, no worries at all.
 ```
 
 ## Ciara Neal, Hire Quality Talent. ctc_RpqPcqXbBRf2Zz57L. Due from 7 Oct, last nudge
