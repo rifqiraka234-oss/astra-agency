@@ -1,48 +1,28 @@
-<!-- Personal AI workflow pass (angle C) plus Bartek's new accept, 2026-10-06. Red teamed. Nothing sent. Each thread gets re pulled immediately before any send. -->
-# Personal AI pass and new accept, for Raka, 2026-10-06
+# Bartek Ogonowski, LEVRA, judged and drafted 2026-10-06
 
-### Ken Sanghera, Suntail Drink Co, ctc_LcYiWjzfjJFgssnBf
+Simple style per Raka 2026-10-06 ("just go like AI workflow"). Nothing sent.
 
-Red team FIX applied (Solvex has a founder above him, so only his own title is used, and the August site note isn't pointed back at). Evidence in state/ai_default_2026-10-06/personal2.md and redteam_personal.md.
+## Pain table
 
-NUDGE
-```
-Hi Ken, I wrote to you in August. Here's a different thought.
+| # | Family | Fact and URL | What it costs him | Pay | Tweak | Would he name it | Verdict |
+|---|---|---|---|---|---|---|---|
+| 1 | Apps (A, back office) | Pricing is "tailored to your organisation's needs. Contact us for a customised quote" (https://www.levra.me/faqs), co created modules per client (https://www.levra.me/our-solution), seven people on https://www.levra.me/about-us , target of 7,625 users and a first government contract (https://www.legalfutures.co.uk/latest-news/female-legal-innovators-land-75000-each) | Every new deal waits on a quote and proposal built per client, which caps how many deals seven people close on the way to the revenue target | yes, default for A | yes, a workflow not a page | yes, founders who sell enterprise talk about proposal load | CHOSEN, costliest |
+| 2 | Apps (A) | First government contract wanted, same Legal Futures article | Public bids are document heavy for a small team | yes | yes | yes | folded into 1 as block three, it is the same quote and bid load getting bigger |
+| 3 | Website (B) | Site says "soft skills training for Gen Z" (homepage meta) and "for young people" (FAQ), 0 pages for public sector buyers per researcher grep with a Google control | A government buyer finds a site written for corporate L&D | partly | NO, in house Webflow published 29 Sep 2026, one page is an afternoon | unlikely, and young people is what government buys | loses, tweak test, and the government goal rests on one source |
+| 4 | Website | Proof scattered, Milbank and others with no case study, news list leads with May 2025 | Weaker diligence read | no | no | no | favour |
+| 5 | Website | Case study logo links to /old-home 404, two quote forms with different tiers | Small | no | no | no | proof only |
+| 6 | GDPR | GA cookies set before consent for a Stockholm visitor, no Reject on first layer (tools/eu-view.py) | Trust risk with buyers who run vendor checks | no alone | no, script order is an afternoon | no | proof at most, never the pitch |
+| 7 | Social | LinkedIn 3,611 followers, weekly posts | none | no | n/a | no | no pain |
+| 8 | Build Squad | CTO and Head of Product in house, no vacancies, no partner page | none shown | no | n/a | no | not chosen |
+| 9 | Personal (C) | 2023 interview "Time is your most valuable resource" | Founder time on talks and follow ups | maybe | yes | maybe | loses, evidence is three years old and personal angle is weaker than a live company process |
 
-You're CEO at Suntail and Managing Director at Solvex Group at the same time, while Suntail grows into Alberta. That's two big jobs in the same week.
+Why 1 wins. It is the only pain that is both on his own site today (custom quote for every organisation, bespoke modules) and growing with the goal he's published (7,625 users, first government contract). B fails the tweak test because his team ships the Webflow site themselves. GDPR and the 404s are afternoon fixes. AI is pitched only as a back office workflow, never as training, since LEVRA sells AI simulations.
 
-Shall I send you over what the AI workflow that gives you a few hours back every week looks like?
-```
+## Falsification
 
-### James Stewart, Bamboo Invest, ctc_EQEgHwLdmREfD2g6J
-
-Red team FIX applied ("an evening with the founders" is plural, so only the follow ups are said to land with him).
-
-NUDGE
-```
-James, a different thought from my note in September.
-
-It's the two of you, and Tim's running the portfolios. So the follow ups after the founding member conversations and the Roots event land with you.
-
-Shall I send you over what the AI workflow that takes those follow ups off your week looks like?
-```
-
-### Simon Wilmes, Snorly, ctc_eb8ySnZEpFiroQaXH
-
-Red team SHIP. Roles are his own LinkedIn About words, Geschäftsführer of Snorly GmbH and SiWi UG per the registers.
-
-NUDGE
-```
-Simon, I wrote to you in September. Here's something else.
-
-You're building Snorly and your other companies, and still taking on the odd energy or digital project. That's a lot running through one person's week.
-
-Shall I send you over what an AI workflow that frees up your week looks like?
-```
+Opened to disprove pain 1, 2026-10-06 about 14:15 UTC. https://www.levra.me/faqs still says "Contact us for a customised quote", so there is no self serve price list. https://www.levra.me/our-solution lists four tiers with no prices and offers co created modules. https://www.levra.me/contact is an 8 field form with no calendar or quote tool. No CRM, proposal or bid tool is named on any of the 33 crawled pages (researcher crawl, twice). What could still break it, they sell AI and have a CTO, so they may already draft proposals with AI internally. That can't be seen from outside, which is why confidence is MEDIUM, and the message names the quote load, never that they lack a tool.
 
 ### Bartek Ogonowski, LEVRA, ctc_3fSkB4dv38ScfzXkH
-
-New accept 6 Oct, thread holds only our connect note. Red team FIX applied (team size and "by hand" claims removed, credential line matched to the approved one).
 
 ```gate
 lead: Bartek Ogonowski, Co-Founder and CEO of LEVRA (LEVRA LIMITED 14378761, active, incorporated 27 Sep 2022), ctc_3fSkB4dv38ScfzXkH, leadId lea_SoDNEmLZ3cyjSE7Hw. Companies House PSC reopened 2026-10-06 via tools/fetch-walled.py, Mr Bartek Ogonowski active, more than 25% but not more than 50% of shares and votes plus the right to appoint directors, Emily Clare Gill the same. https://www.levra.me/about-us names him Co-Founder and CEO. Thread re-pulled 2026-10-06 about 14:12 UTC, 0 activities, nextPage null, sentOnly search for his name returns only our 2026-10-06 05:17 connect note, lastRepliedAt null, myConversations search LEVRA 0, positive control ctc_JYWKs8LSRDxAreesA returned 10 items in the same minute. No state file row for the name, contactId or leadId
