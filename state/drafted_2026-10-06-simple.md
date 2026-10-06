@@ -127,7 +127,7 @@ However, your partner page doesn't name a single partner, and the meeting button
 
 Especially, when you are launching the white label offer this month, the more buyers you reach, the more of them look for proof and don't find it.
 
-I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I worked on go to market at Betty Blocks, a software company, where buyers always asked who else used it first.
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I worked on go to market at Betty Blocks, a software company, so I've seen buyers ask who else uses it before they'll book a call.
 
 Shall I send you over what the partner page that books meetings looks like?
 ```
@@ -475,7 +475,7 @@ However, your appointment form promises a reply within two working days, and the
 
 Especially, when you are working across several municipalities with a small team on the road, the requests waiting for a reply add up every week.
 
-I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I set up the follow up for new enquiries at Betty Blocks, where a quick first answer made all the difference.
+I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I set up the follow up for new enquiries at Betty Blocks, where a quick first answer mattered most.
 
 Shall I send you over what the AI reply workflow for every request looks like?
 ```
