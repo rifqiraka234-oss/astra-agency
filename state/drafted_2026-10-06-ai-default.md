@@ -398,3 +398,75 @@ I run Astra agency. We build AI workflows and apps for brands like Unilever, AXA
 
 Shall I send you over what the AI contract intake feeding Yparéo looks like?
 ```
+
+### David Brauman, Brauman & K, ctc_n3rxAxdmtuJpgW8NH
+
+Président of BRAUMAN & K SAS (SIREN 984613059). Red team FIX applied. 20 search runs (5 cities, homepage box and
+/proprietes, desktop and iPhone): the box matches any listing text, "Lyon" picks up Paris suburbs via "Paris gare de Lyon",
+"Nantes" picks up Fréjus via "environnantes" and Cannes via "attenantes"; every city lets other regions in; no city
+filter, map or sort; city pages are text only with no listings. M6: Puremédias 26 Sep 2026 names him in the season 7
+casting, filming now, airing 2027 per castprod.com, so the message says "once the season airs". Cut as false: "never
+reach your advisers" (WhatsApp and adviser links on every page). Pushback risk: "a five minute fix for my Webflow guy",
+answered by the offer being matching on place and budget, not a one setting patch. Never mention his old LinkedIn post
+about hiring and maternity leave. The GDPR leak (Facebook, HubSpot, Klaviyo before consent) is a favour for later.
+
+```gate
+lead: David Brauman, Président of BRAUMAN & K SAS, SIREN 984613059, created 08/02/2024, NAF 68.31Z, 5 rue des Acacias 75017 Paris, active, per https://recherche-entreprises.api.gouv.fr/search?q=brauman and https://www.pappers.fr/entreprise/brauman-k-984613059 , ctc_n3rxAxdmtuJpgW8NH, lead lea_8cfhQRvnNcMv7c7Hb in cam_Csq9BikBWz7dNqSs4. lemlist jobTitle "PDG", tagline "Référence de l'immobilier neuf | Coach QVEMA - M6", companyDomain braumanandk.com, tagline and company agree, no former. Thread re pulled by the judge 2026-10-06 06:31 UTC, 0 activities, nextPage null, sentOnly search shows only the 5 Oct connect note, lastRepliedAt null, myConversations search "Brauman" 0, control ctc_f4gwBMMyfBQjgz9CG came back with 2 activities. grep of state and logs for brauman, the contactId and the leadId, 0 hits
+site pass 1: 150 pages by tools/crawl.py --max 150 on https://www.braumanandk.com , all 200, about 106 of the 108 content pages plus 42 of 4,615 listings, sitemap 4,723 URLs, every crawled page read
+site pass 2: 150 pages, second full crawl equal to pass 1, tools/site-audit.js with desktop and phone screenshots opened, no RENDER NOT TRUSTED, /proprietes, a listing, contact, careers, the English page and an agent page rendered and screenshotted, and the judge rendered /proprietes again and searched Lyon, Nantes and Bordeaux at desktop width plus Lyon from the homepage on a phone
+deep analysis: A modern Webflow portal that sells new build homes from a promoter feed, "68212 appartements" in "3521 programmes", every listing ends in a callback form, "On vous rappelle dès qu'on raccroche", run by about 50 independent advisers. The whole funnel depends on the buyer finding a programme in the place he wants, and the search is a plain text match over the feed, so Lyon returns a Paris suburb first because its blurb mentions gare de Lyon, and Nantes returns Fréjus and Cannes on page one. The feed is uncurated around it, empty lot tables, a 1984 delivery date, placeholders. Socials are strong, a separate Next.js app (ByeBail) exists, the legal page carries another of his companies' SIREN, and HubSpot, Facebook and Klaviyo fire before consent
+owner linkedin: route 1 curl https://www.linkedin.com/in/david-brauman-61384319 999. Route 2 fetch-walled 999. Route 3 tools/social-audit.js UNKNOWN behind the login. Route 4 web search, Puremédias and Capital quote his profile. Route 5 posts search, a two year old hiring post found, sensitive, never used. Route 6 the lemlist record, PDG and the QVEMA tagline
+contact linkedin: same person as the owner, the register names him Président and lemlist says PDG of the same company, same six routes as above
+google news: tools/news.py --lang fr, "Brauman & K" 11 results, "David Brauman" 10, control Carrefour 98, Puremédias and Capital on 26 Sep 2026 name him a new juror of Qui veut être mon associé season 7
+regional news: tools/news.py Paris immobilier neuf courtier, 0 results with the control full, a real zero
+industry news: tools/news.py immobilier neuf, 100 results, 2 Oct Presse Agence prices falling, 4 Oct BFM the Jeanbrun scheme at 200 sales a month against 4,000 hoped, 28 Sep Immo Matin SeLoger neuf launching Top Position for programmes, a soft market where every buyer counts
+sources:
+1. https://www.braumanandk.com/
+2. https://www.braumanandk.com/proprietes?lieu=Lyon
+3. https://www.braumanandk.com/listings/seinographic
+4. https://www.braumanandk.com/listings/1-rue-du-general-leclerc
+5. https://www.braumanandk.com/mentions-legales
+6. https://www.braumanandk.com/politique-des-cookies
+7. https://www.braumanandk.com/recrutement
+8. https://recherche-entreprises.api.gouv.fr/search?q=brauman
+9. https://www.pappers.fr/entreprise/brauman-k-984613059
+10. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.braumanandk.com (tools/eu-view.py, re run by the judge)
+11. https://www.ozap.com/actu/depart-danthony-bourbon-arrivee-de-quatre-nouveaux-investisseurs-m6-devoile-le-nouveau-jury-de-qui-veut-etre-mon-associe/657164
+12. https://fr.finance.yahoo.com/actualites/jean-philippe-cartier-ang%C3%A9lique-g%C3%A9rard-104226992.html
+13. https://www.mysweetimmo.com/2025/12/04/immobilier-faire-de-la-france-une-nation-de-proprietaires-david-brauman-brauman-k/
+14. https://www.byebail.fr/
+15. https://calendly.com/backoffice-braumanandk/30min
+16. https://www.instagram.com/david_brauman_
+17. https://www.tiktok.com/@braumanandk
+18. https://www.opinionsystem.fr/fr-fr/certificate/22841
+19. https://www.remigravelle.fr/
+pains: 7 judged. (1) search answers the wrong city over a raw feed, at the moment M6 sends a national audience, chosen. (2) GDPR, Facebook, HubSpot and Klaviyo before consent, a policy still "en cours d'implémentation", true, a day's fix for the incumbent, held as proof. (3) the uncurated feed, empty lot tables and a 1984 delivery date, folded into 1. (4) another company's SIREN on the legal page, a text edit. (5) recruitment by WhatsApp, weak. (6) social, strong, none. (7) Build Squad, no capacity fact
+chosen: (1), hottest and costliest, every sale starts with a buyer finding a programme in his city and asking for a callback, the search sends Lyon and Nantes buyers elsewhere, and the national TV audience from his new jury seat lands on that box now
+sweep website: https://www.braumanandk.com/proprietes?lieu=Lyon first card Seinographic in Villeneuve Saint Georges, Nantes gives Fréjus and Cannes on page one, Bordeaux clean, plus empty lot tables on https://www.braumanandk.com/listings/1-rue-du-general-leclerc , chosen with the AI search offer
+sweep gdpr: tools/eu-view.py from Stockholm on https://www.braumanandk.com , _fbp, __hstc, hubspotutk, __hssrc, __hssc and __kla_id before a click, policy names none and says consent is "en cours d'implémentation", control byebail.fr 0 cookies, true, held back as a later favour
+sweep apps: no AI search, assistant or matcher anywhere in 150 crawled pages of https://www.braumanandk.com , matching runs on a text filter and a callback, "On vous rappelle dès qu'on raccroche", the AI search offer is the default A angle, chosen
+sweep social: tools/social-audit.js on the URLs in their own HTML, https://www.instagram.com/david_brauman_ 36,168 followers latest post 2026-10-02, TikTok @braumanandk 25.5K, YouTube @Braumandavid 198 videos, LinkedIn UNKNOWN behind login, strong, no angle
+sweep squad: the site is a Webflow build by one no code consultant per https://www.remigravelle.fr/ and a separate Next.js app runs at https://www.byebail.fr/ , no team page, no delivery times, no capacity fact to build a squad message on
+thread: problem the site's search is a plain word match, Lyon brings up a home near Paris first, Nantes shows Fréjus and Cannes | cost buyers wade through homes far away before asking an adviser, and TV viewers will land in the same search box | offer the AI search matching buyers to homes | link search
+lead read: David reads that his search matches words, not places, so buyers in Lyon and Nantes wade through distant homes, that M6 viewers will land in the same box once the season airs, and gets offered the AI search matching buyers to homes, one thread
+claims:
+your site's search answers Lyon with a home near Paris first, https://www.braumanandk.com/proprietes?lieu=Lyon first card "Seinographic Val-de-Marne 35 avenue de Choisy 94190 Villeneuve-Saint-Georges", desktop and phone, rechecked 06:40 UTC, its own page https://www.braumanandk.com/listings/seinographic mentions "Paris gare de Lyon"
+puts Fréjus and Cannes on the first page for Nantes, https://www.braumanandk.com/proprietes typed Nantes, card 2 "LES ALLEES ESTEREL Var 2, rue de la Vernède 83600 Fréjus", card 19 "VILLA SAINT HONORAT Alpes-Maritimes 57 avenue maréchal Gallieni 06400 Cannes", of 24 on page one
+buyers ask an adviser to call, https://www.braumanandk.com/listings/1-rue-du-general-leclerc "Intéressé par ce programme ? On vous rappelle dès qu'on raccroche." and https://www.braumanandk.com/ "Parler à un conseiller"
+joining the Qui veut être mon associé jury, https://www.ozap.com/actu/depart-danthony-bourbon-arrivee-de-quatre-nouveaux-investisseurs-m6-devoile-le-nouveau-jury-de-qui-veut-etre-mon-associe/657164 "Deux entrepreneurs autodidactes complètent ce casting : David Brauman et Jean-Philippe Cartier", 26 Sep 2026
+Raka built scoring and routing workflows at Betty Blocks, https://www.linkedin.com/in/raka-mulya-b92885196 Global GTM & Campaign Manager, "automation-driven revenue workflows covering enrichment, scoring, routing and follow-up loops"
+recheck: 2026-10-06 06:40 UTC, the judge re pulled the thread, re ran the search for Lyon, Nantes and Bordeaux on desktop and Lyon on a phone from the homepage, reopened the Seinographic and Leclerc listings, the cookie policy and the ozap article, re ran tools/eu-view.py, control example.com 200. Thesis confidence MEDIUM, the wrong city results are proven three times, that they cost callbacks is inference he can test against his own search and form numbers, and his Webflow consultant could patch the ranking partly, which is why the offer is the matching and booking behind it
+```
+
+OPENER
+```
+Hi David, saw Brauman & K, looks interesting!
+
+However, your site's search is a plain word match, so Lyon brings up a home near Paris first and Nantes shows Fréjus and Cannes. This causes buyers looking in their own city to wade through homes hundreds of kilometres away before they've asked an adviser to call.
+
+Especially, when you are joining the Qui veut être mon associé jury on M6, the viewers who look you up once the season airs will land in that same search box.
+
+I run Astra agency. We build AI tools for brands like Unilever, AXA, Pertamina. I ran lead scoring and routing for Betty Blocks, which taught me what a lead sent to the right salesperson is worth.
+
+Shall I send you over what the AI search matching buyers to homes looks like?
+```
