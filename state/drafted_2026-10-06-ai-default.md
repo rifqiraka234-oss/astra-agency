@@ -272,3 +272,129 @@ I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. 
 
 Shall I send you over what the privacy safe Melba website looks like?
 ```
+
+### Mykyta Kharchenko, IOTENTIC, ctc_2gRN4DKWsstCjknF6
+
+Follow up to our September message (one message, no reply). One of three managing directors per the Impressum. Red team
+FIX applied: English headlines exist, so the claim is now "past the English headlines"; no English subdomain, /en/ path,
+hreflang or PDF on iotentic.com. Likely pushback, "our customers are German Mittelstand". A website pitch to someone we
+first approached as a peer.
+
+```gate
+lead: Mykyta Kharchenko, IOTENTIC GmbH (HRB 803500, Herrenberg), ctc_2gRN4DKWsstCjknF6, lea_3h2c3xzR4wwXRoeTC
+site pass 1: 15 pages (31 URLs, 16 were ${findUrl} template 404s from the builder's script), sitemap plus link crawl with tools/crawl.py, every page read
+site pass 2: 15 pages, second full crawl, same count, site-audit.js desktop and phone screenshots of the homepage
+deep analysis: IONOS MyWebsite NOW site. Home, Leistungen, Partner (7 partners incl. FORCAM ENISCO, Cybus, Pusch-Data, VDW umati, Battery Advisors, RESYCON), Founders (three MDs with Cellforce, Zeltwanger, groninger backgrounds), News (three items Apr to Jul 2026), Karriere (Automation Engineer, Werkstudent), Kontakt (one form). Page titles are English, body text is German on all 15 (crawl lang de on all 15). No reference projects or client cases of their own anywhere. English comes only from a consent gated Google Translate widget with no English URLs
+owner linkedin: route 1 lemlist record read. Route 2 web search "Mykyta Kharchenko" IOTENTIC, northdata and registercheck listings, GF since 2026-01-19. Route 3 company page https://www.linkedin.com/company/iotentic-gmbh with social-audit.js, 198 followers, "From automation to innovation". Route 4 /in/ profile 999. Route 5 no social linked from the HTML (site-audit.js NONE LINKED against control). Route 6 zoominfo result for the same name at EPAM, not tied to him, not used
+contact linkedin: same person, an owner manager and the person messaged, Impressum and lemlist agree
+google news: tools/news.py de, "IOTENTIC" 0, "Mykyta Kharchenko" 0, control Volkswagen 102
+regional news: tools/news.py (Herrenberg OR Böblingen) (MES Integration Batterie Gigafactory) 0
+industry news: tools/news.py MES Integration Batterie Gigafactory 0, plus their own /news/ page, FORCAM ENISCO adding IOTENTIC to its AI in manufacturing partner network (2026-07-14) and MOVEMORE Kompetenzverbund (2026-05-04)
+sources:
+1. https://www.iotentic.com/
+2. https://www.iotentic.com/founders/
+3. https://www.iotentic.com/karriere/
+4. https://www.iotentic.com/partner/
+5. https://www.iotentic.com/news/
+6. https://www.iotentic.com/leistungen/
+7. https://www.iotentic.com/impressum/
+8. https://www.northdata.de/IOTENTIC%20GmbH,%20Herrenberg/Amtsgericht%20Stuttgart%20HRB%20803500 (search result)
+9. https://www.registercheck.de/companies/iotentic-gmbh (search result)
+10. https://www.linkedin.com/company/iotentic-gmbh
+11. https://news.google.com (tools/news.py, four queries plus control)
+12. https://www.linkedin.com/in/mykyta-kharchenko-75997423b (walled, 999)
+pains: 4 judged. (1) a firm that calls itself worldwide reaches foreign buyers only through a consent gated machine translation, biggest given where they say they're going. (2) no reference projects of their own, real and costly for a new integrator, but the fix is content they have to supply, folded into (1) as the site rebuild. (3) A, efficiency, fails, they sell automation and AI themselves. (4) GDPR, IONOS banner with reject, 0 trackers before a click, clean
+chosen: (1), biggest, it's the site that every foreign buyer reads, and the gap is provable in their own HTML
+sweep website: 15 pages crawled twice, German body text everywhere, English only via Google Translate after consent, the B angle
+sweep gdpr: site-audit.js banner yes, reject present, 0 cookies, 0 third party before a click, no consent code so no geo rule, clean
+sweep apps: they sell automation, data visualisation and AI supported decisions, A fails by the brief's own rule
+sweep social: social-audit.js on https://www.linkedin.com/company/iotentic-gmbh 198 followers, no other account linked, no angle
+sweep squad: an engineering integrator hiring automation engineers we don't supply, the 3 Oct row ruled it out and nothing new changes that
+thread: problem past the English headlines every page is German and the only English version is a machine translation after consent | cost foreign manufacturers judge a worldwide firm on that version | offer the English site that wins international manufacturers | link English, international
+lead read: Mykyta reads that his own pages call IOTENTIC worldwide while every page is German and English is only a Google translation after consent, and gets offered the English site that wins international manufacturers, one thread
+claims:
+the founders page calls IOTENTIC a company working worldwide, https://www.iotentic.com/founders/ "weltweit tätiges Unternehmen für industrielle Digitalisierung", fetched 2026-10-06
+the careers page reaches as far as gigafactories, https://www.iotentic.com/karriere/ "bis hin zu Traceability und Gigafactories", fetched 2026-10-06
+past the English headlines every page is written in German, https://www.iotentic.com/ and all 15 sitemap pages lang de, English headlines such as "From automation to innovation" noted by the red team, read 2026-10-06
+English only appears as a Google machine translation after a visitor accepts it, https://www.iotentic.com/ TranslatorSettings languages en and de with translate.google.com element.js, and "Wir benötigen Ihre Zustimmung zum Laden der Übersetzungen", fetched 2026-10-06
+recheck: 2026-10-06, founders, karriere and homepage refetched with curl after the crawl, all three strings present. Confidence MEDIUM, facts HIGH, that foreign buyers are lost on it is inference
+```
+
+NUDGE
+```
+Mykyta, in September I suggested we might overlap on the software layer. Here's a different thought.
+
+Your founders page calls IOTENTIC a company working worldwide, and your careers page reaches as far as gigafactories, but past the English headlines every page is written in German. The only English version is a Google machine translation that loads after a visitor accepts it.
+
+Shall I send you over what the English site for international manufacturers looks like?
+```
+
+### Stéphane Bouils, SKOOL n'JOB, ctc_xvsocGv6PaJCDrgxs
+
+Greeting Stéphane (lemlist swapped first and last name). Red team FIX applied, confidence LOW to MEDIUM: all six contract
+PDFs are four pages "à remettre ou à adresser par email" to a campus inbox, no online employer route on the public site,
+homepage promise "On s'occupe de toute la partie administrative GRATUITEMENT". Risk: they use Yparéo Neo, whose contract
+module sends the CERFA to the OPCO without retyping and can send employers a fill in link, so block five now offers an
+intake that feeds Yparéo rather than a rival tool, and "before an apprentice can start" is cut (apprentices can start
+before registration). Likely reply, "we use Yparéo, nobody retypes". Never mention Constructys, Qualiopi, attendance or
+break rates. Raka's call whether a LOW to MEDIUM shot is worth it.
+
+```gate
+lead: Stéphane Bouils, gérant and co founder of SKOOL N'JOB SARL (SIREN 951327766, Perpignan, created 2023-05-01) with co gérant Valentin Delahaut, also gérant of CFA MERCURE, CFA PARVATI and CFA STUDIO AVENIR PRO per recherche-entreprises.api.gouv.fr, mentions légales "Propriétaire : Valentin DELAHAUT & Stéphane Bouils", ctc_xvsocGv6PaJCDrgxs. lemlist jobTitle "Co-fondateur", tagline "Co-fondateur SKOOL n' JOB - Directeur Associé", first and last name swapped in lemlist, register gives first name Stéphane. Thread pulled 2026-10-06 06:45 UTC, 0 activities, sentOnly shows only the 5 Oct connect note, positive control ctc_QZawcREsaQM3pMpPz full with 2 items in the same minute, one campaign only
+site pass 1: 150 pages, link crawl plus sitemap-1.xml, all 104 content URLs read
+site pass 2: 300 pages, second full crawl including the 104 sitemap URLs again plus attachment pages, tools/site-audit.js desktop and phone screenshots opened, RENDER trusted, homepage, info pratiques, partners, contact, campus, taux de réussite with 4 tabs clicked, Grimp form rendered
+deep analysis: A modern Elementor site on WordPress.com built by the agency Bleu d'octobre, aimed at young applicants, every page pushes "Je candidate" into a Grimp form with a 72 hour reply. The other side of every apprenticeship, the employer, gets nothing. The partners page is a title and an address against "Partenaires 928" on the homepage, no page speaks to a company that wants to hire, and the contract starts as a downloadable four page PDF per campus (none for Château Thierry), filled in and emailed to a campus contract inbox, asking SIRET, IDCC, URSSAF, two tutors with diplomas and five attachments. The homepage promises "On s'occupe de toute la partie administrative GRATUITEMENT", and info pratiques promises integration within 15 days of signature, so every contract's paperwork lands on their own staff
+owner linkedin: route 1 curl /in/bouils-stéphane-9a866b135 999. Route 2 tools/social-audit.js on the profile, login wall UNKNOWN. Route 3 web search result title "BOUILS Stéphane - SKOOL n' job", snippet only. Route 4 a 2023 post URL found, not opened. Route 5 company page https://www.linkedin.com/company/skoolnjob read, 2,784 followers. Route 6 his own words in press reposts, 25 years at the Chambre des métiers, "Nous proposons un mode alternatif d'établissement de formation en alternance"
+contact linkedin: same person as the owner, register gérant, lemlist tagline and mentions légales agree | same six routes
+google news: tools/news.py fr, "Skool n'Job" 22 results, "Stéphane Bouils" 10, control Carrefour 98
+regional news: tools/news.py ((Perpignan OR Occitanie)) (CFA apprentissage) 0 results with control full, plus ici.fr 05/10/2026 on Occitanie apprenticeship funding cuts, PresseLib 19/01/2026 Pau campus seeking partner companies, L'Indépendant 28/08/2025 Carcassonne opening with 70 partner companies
+industry news: tools/news.py CFA apprentissage 100 results, AEF 01/10/2026 PLF 2027 single national platform for alternance contracts, read as a risk to a filing tool, not to employer intake
+sources:
+1. https://skoolnjob.com/
+2. https://skoolnjob.com/info-pratiques/
+3. https://skoolnjob.com/wp-content/uploads/2025/09/GABARIT-DDE-CONTRAT-1.pdf
+4. https://skoolnjob.com/wp-content/uploads/2025/12/CONTRAT-TOULOUSE.pdf
+5. https://skoolnjob.com/nos-partenaires/
+6. https://skoolnjob.com/campus-chateau-thierry/
+7. https://skoolnjob.com/mentions-legales/
+8. https://skoolnjob.grimp.io/forms/b9f57454-5478-4276-b301-4f8515aa6a37
+9. https://www.grimp.io/
+10. https://recherche-entreprises.api.gouv.fr/search?q=951327766
+11. https://www.pappers.fr/entreprise/skool-n-job-951327766
+12. https://presselib.com/article/skool-n-job-apprentissage-formation-entreprise-commerce-pau-bearn
+13. https://www.lindependant.fr/2025/08/28/70-entreprises-partenaires-et-60-apprentis-a-laube-de-la-rentree-un-nouveau-cfa-debarque-a-carcassonne-12896625.php
+14. https://www.francebleu.fr/infos/education/a-perpignan-le-centre-de-formation-skool-n-job-obtient-devant-la-justice-la-reprise-du-financement-de-ses-apprentis-9796912
+15. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fskoolnjob.com%2F (tools/eu-view.py)
+16. https://www.instagram.com/skoolnjob_perpignan/ (tools/social-audit.js)
+17. https://www.linkedin.com/company/skoolnjob/
+18. https://news.google.com/rss (tools/news.py, company, person, region, industry)
+pains: 9 judged. (A1) contract intake by emailed PDF under a free admin promise, chosen. (W1) no employer path, empty partners page, kept as the visible symptom. (W3) Perpignan first title and a stale form dropdown, agency tweak. (W2) footer SKOOL N'COOK link opens a logo file, favour. (G1) GA and Google Ads cookies set from Stockholm with Clickio loaded, banner unseen, not chosen. (A3, A4) break rates and the attendance dispute, banned topics. (A5) hidden beta chatbot, clue only. (S1) social active, one Perpignan Instagram, minor. (Q1) no squad fit
+chosen: A1, the costliest, every one of roughly a thousand contracts a year starts as a hand filled PDF in a campus inbox that their own staff process for free, and the load rises with each campus and partner company they're signing now
+sweep website: https://skoolnjob.com/nos-partenaires/ is a title and an address against 928 partners claimed on the homepage, no employer page on 300 crawled pages with the employeur control at 23 pages, modern look and an agency in place, folded into the apps angle
+sweep gdpr: tools/eu-view.py from Stockholm on https://skoolnjob.com/ sets _ga, _ga_QH7LL8EVFJ and _gcl_au before a click with clickiocmp.com loaded, the EU banner itself was never seen, so not chosen
+sweep apps: https://skoolnjob.com/info-pratiques/ contract requests are per campus PDFs to fill in and email, https://skoolnjob.com/wp-content/uploads/2025/09/GABARIT-DDE-CONTRAT-1.pdf has 0 fillable fields, Grimp and Yparéo links are candidate and staff logins only, chosen
+sweep social: tools/social-audit.js on accounts from their HTML, https://www.instagram.com/skoolnjob_perpignan/ 3,737 followers last post 2026-10-02, Facebook 2,557, LinkedIn 2,784, active, not chosen
+sweep squad: a CFA, not a software or agency business, and https://skoolnjob.com/ credits Bleu d'octobre in the footer for the site, no capacity fact to sell against
+thread: problem the contract request is a four page PDF employers email back to the campus | cost the team copies SIRET and tutor details out of an inbox and chases missing documents before the contract goes to the OPCO, growing with every campus and partner | offer the AI contract intake feeding Yparéo | link contract
+lead read: Stéphane reads that employers send a four page PDF by email, so his team copies details out and chases documents before the OPCO, growing with each campus and partner while the paperwork is free, and gets offered the AI contract intake feeding Yparéo, one thread
+claims:
+your contract request is a four page PDF that employers fill in and email back to the campus, https://skoolnjob.com/info-pratiques/ "Téléchargez votre demande de contrat" per campus, https://skoolnjob.com/wp-content/uploads/2025/09/GABARIT-DDE-CONTRAT-1.pdf 4 pages "Document à compléter et à remettre ou à adresser par email au contact en pied de page", footer contrat@skoolnjob.com, rechecked 06:45 UTC
+every SIRET, tutor and attachment, https://skoolnjob.com/wp-content/uploads/2025/12/CONTRAT-TOULOUSE.pdf and the Perpignan PDF ask SIRET, IDCC, the maître d'apprentissage and "Carte d'identité / Carte Vitale / Copie de diplôme / CV", rechecked 06:45 UTC
+opening new campuses, https://skoolnjob.com/home/contact/ six campuses, https://skoolnjob.com/campus-chateau-thierry/ live, https://presselib.com/article/skool-n-job-apprentissage-formation-entreprise-commerce-pau-bearn Pau 19/01/2026 seeking partners
+handling all the paperwork for free, https://skoolnjob.com/ "On s'occupe de toute la partie administrative GRATUITEMENT", rechecked 06:45 UTC
+every partner company you sign, https://skoolnjob.com/ counter "Partenaires" data-to-value 928, https://presselib.com/article/skool-n-job-apprentissage-formation-entreprise-commerce-pau-bearn "souhaite également étendre son réseau de partenaires"
+recheck: 2026-10-06 06:45 UTC, homepage, info pratiques, partners, Château Thierry and contact refetched 200, both PDFs downloaded and the quoted lines found, counters mapped to their labels in the raw HTML, control example.com 200. Thesis confidence MEDIUM, the PDF and email route and the free admin promise are proven on their own pages, that staff retype it by hand is inference he can test against his own contract team
+```
+
+OPENER
+```
+Hi Stéphane, saw SKOOL n'JOB, looks interesting!
+
+However, your contract request is a four page PDF that employers fill in and email back to the campus. This causes your team to copy SIRET and tutor details out of an inbox and chase missing documents before the contract goes to the OPCO.
+
+Especially, when you are opening new campuses and handling all the paperwork for free, the pile of contract emails grows with every partner company you sign.
+
+I run Astra agency. We build AI workflows and apps for brands like Unilever, AXA, Pertamina. I set up the automated lead routing and follow up workflows at Betty Blocks, so I've seen how many hours go back to a team once incoming forms land in the right place on their own.
+
+Shall I send you over what the AI contract intake feeding Yparéo looks like?
+```
