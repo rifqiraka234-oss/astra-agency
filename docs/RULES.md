@@ -518,6 +518,15 @@ and came back empty, with the evidence written down.
   service line, new company, hiring, a site that doesn't serve where they're going.
 Only owners, founders, co-founders and CEOs. Truth rules, the triple check, the judge and the red
 team all still apply. The block five rule (name the bigger outcome) applies.
+- **C, an AI workflow for the owner personally (Raka, 2026-10-06).** "In the end of the day it might
+  not be for the company but also for them personally." When A and B fail, the subject can be the
+  owner's own week: the founder who does sales, ops and posting alone, runs two businesses or one
+  next to a day job, answers every enquiry, writes every proposal. Visible in their own material,
+  never invented, never personal life. Skip owners who sell AI or automation themselves. Brief in
+  docs/personal-ai-workflow-brief.md.
+- **Write it simple (Raka, 2026-10-06).** "Everything sounds a bit too technical, make it much more
+  simple, just go like AI workflow." Plain words, no tool names, no mechanics, the offer is "the AI
+  workflow for ...". See state/drafted_2026-10-06-simple.md for the approved register.
 
 Everything Raka said while working Ferry de Haas and the batches before him, in one place. The
 detailed method is in `docs/opener-template.md` sections 3A and 3B. These are the rules.
