@@ -203,3 +203,72 @@ I built Eten Maar, a food brand, from zero and owned its partnerships and pricin
 
 Shall I send you over what the trade site for your restaurant, bar and shop buyers looks like?
 ```
+
+### Vincent Bucaille, Melba, ctc_xtQnzSvvms6TEoAxS
+
+v1 (no web checkout) KILLED: pay.melba.app is a Stripe Checkout since 2023. v2 on Raka's standing privacy rule, red team
+FIX applied. Verified from Stockholm on melba.app, www and en: _ga, _ga_SZZR4LNBQX, amp_0250eb set and Google Analytics,
+Amplitude, DoubleClick called before any click; no consent tool, no consent mode, no banner in French locale renders
+(control: axeptio.eu banner shows). Every policy page FR and EN has zero cookie or traceur hits. Policy still names Teasy
+and 56 rue de Maubeuge, though BODACC shows the name change to MELBA on 2023-07-05. Capital increases on BODACC 30 Jan,
+24 Mar, 26 May 2026 (small nominal steps, so "bringing in new capital" not "raising"). Never about the app's content, no
+legal claims (his policy cites legitimate interest for analytics). Side finding for Raka only: the policy sends data
+requests to contact@melba.ai, which has no mail record.
+
+```gate
+lead: Vincent Bucaille, Co-Founder of Melba SAS (SIREN 904449568), ctc_xtQnzSvvms6TEoAxS, lemlist jobTitle "Co-Founder", tagline "Co-founder at Melba", domain melba.app. https://recherche-entreprises.api.gouv.fr/search?q=904449568 gives Président BUCAILLE & ASSOCIES CONSULTING, gérant Vincent Bucaille, DG Lucie Broto. https://www.melba.app/faq "Melba est née de la rencontre entre Lucie et Vincent". Thread re pulled 2026-10-06 06:31 UTC, 0 activities, sentOnly one row with the 5 Oct connect note, company search 0 rows, control ctc_MPwYm8GzGQtTBp3yM full in the same minute
+site pass 1: 35 URLs by tools/crawl.py from https://www.melba.app and its sitemap, 31 at 200 and 4 at 404, every page read
+site pass 2: 35 URLs, second full read, plus 8 key pages and en.melba.app refetched by the judge at 06:35 and 06:47 UTC, screenshots of home, faq and press, desktop and phone, site-audit.js render trusted
+deep analysis: A 2022 Webflow download page in FR with a Weglot EN copy that sends visitors to the stores, while Stripe Checkout on pay.melba.app and Convertri funnels run apart from it. Google Analytics and Amplitude start on load with no consent code anywhere. The privacy policy predates the 2023 rename, still says Teasy and Maubeuge, and says nothing about cookies or analytics. Teasy template pages from 2022, a dead Magazine link and dead teasy.onelink.me links complete the picture of a site nobody has owned since launch, on a brand whose whole promise is a private space for couples
+owner linkedin: route 1 curl /in/vbucaille and /recent-activity/all/ 429. Route 2 web search "Vincent Bucaille Melba LinkedIn", Crunchbase and avizio titles, one other Vincent Bucaille ignored. Route 3 his post https://fr.linkedin.com/posts/vbucaille_melba-la-voix-qui-vous-guide-sur-la-voie-activity-7037345384523812864-b3gZ . Route 4 rocketreach snippet only. Route 5 company page https://fr.linkedin.com/company/melba-fr , 1,263 followers. Route 6 the FAQ founder line
+contact linkedin: same person as owner, confirmed by the lemlist record, the statutory Président holding and the FAQ founder line | six routes as above
+google news: tools/news.py fr, "Melba" 100 mostly unrelated, "Vincent Bucaille" 10 with Challenges 2025-03-27 and La Dépêche 2024-12-06, control Carrefour 98
+regional news: tools/news.py Paris and Bordeaux startup query 0, france3-regions 2025-02-14 opened, about 500,000 users and the US at 30% of subscriptions
+industry news: tools/news.py sextech and couple app 80 generic, plus Stratégies 2024-09-06 on the Libre Mullenlowe launch campaign and sextechforgood.org on Station F FemTech
+sources:
+1. https://www.melba.app/
+2. https://en.melba.app/
+3. https://www.melba.app/politique-de-confidentialite
+4. https://www.melba.app/faq
+5. https://www.melba.app/conditions-generales-vente
+6. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fmelba.app
+7. https://recherche-entreprises.api.gouv.fr/search?q=904449568
+8. https://www.pappers.fr/entreprise/melba-904449568
+9. https://bodacc-datadila.opendatasoft.com/
+10. https://apps.apple.com/fr/app/id1617445144
+11. https://play.google.com/store/apps/details?id=io.melba.app&hl=en&gl=fr
+12. https://www.axeptio.eu/fr
+13. https://www.didomi.io/
+14. https://www.sextechforgood.org/post/melba-le-nouveau-gps-des-couples
+15. https://fr.linkedin.com/company/melba-fr
+pains: 6 judged, (1) store only billing, killed by pay.melba.app, (2) Google Analytics and Amplitude before consent with a policy silent on cookies and still naming Teasy, (3) dead Magazine link, Teasy template pages and dead onelink links, (4) AI workflow for therapist codes and support, (5) dormant Instagram, (6) Build Squad capacity
+chosen: (2), the hottest, a privacy fault on a brand that sells a private space for couples hits trust at the moment of download and sits in front of every investor diligence while capital keeps coming in, and Raka's standing rule makes a GDPR fault pitchable as proof of the bigger thing, the privacy safe site
+sweep website: https://www.melba.app/ sends visitors to the stores while pay.melba.app and the Convertri funnels sit apart, Teasy template pages and a dead Magazine link remain, folded into the privacy thread
+sweep gdpr: tools/eu-view.py from Stockholm on https://melba.app , _ga, _ga_SZZR4LNBQX and amp_0250eb before a click, no consent tool against axeptio and didomi controls, policy silent on cookies and naming Teasy, chosen
+sweep apps: https://www.melba.app/therapeutes codes handed out by email and https://www.melba.app/contact replies within 24h by hand, an AI workflow fits but no volume is proven, not chosen
+sweep social: tools/social-audit.js on the links in their HTML, https://www.instagram.com/melba.app/ 19,736 followers last post 2025-09-04, Facebook dates behind the login, not chosen
+sweep squad: https://join.com/companies/melba no open positions, team 2 to 10, releases all minor bug fixes, a capacity shortfall isn't proven from outside, not chosen
+thread: problem the website starts Google Analytics and Amplitude before visitors agree and the privacy policy still names Teasy | cost the gap between what the site does and what the policy says gets checked in investor diligence as capital keeps coming in | offer the privacy safe Melba website | link website, privacy
+lead read: Vincent reads that his site starts Google Analytics and Amplitude before visitors agree while his policy still names Teasy and never mentions cookies, that this is the kind of gap investor due diligence picks up as new capital comes in, and gets offered the privacy safe Melba website, one thread
+claims:
+Heineken credential, docs/astra-master-context.md section 2A, Global E-Business Data and Insights Lead, enabled 23 markets with self serve insights, data governance across regions, https://www.theheinekencompany.com
+Teasy name change, BODACC 2023-07-05 name changed to MELBA, policy still names Teasy and 56 rue de Maubeuge, https://www.bodacc.fr
+your website starts Google Analytics and Amplitude before visitors agree to anything, https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fmelba.app cookies _ga, _ga_SZZR4LNBQX, amp_0250eb set with nothing clicked, and https://www.melba.app/ HTML gtag('config', 'G-SZZR4LNBQX') and amplitude.getInstance().init with no consent tool, rechecked 06:47 UTC
+your privacy policy never mentions cookies, https://www.melba.app/politique-de-confidentialite 0 hits for cookie, traceur, Google Analytics and Amplitude, rechecked 06:47 UTC
+your privacy policy still names Teasy, https://www.melba.app/politique-de-confidentialite "Teasy est le nom commercial de la société par actions simplifiée du même nom" and "Par courrier : Teasy 56 rue de Maubeuge 75009 Paris", rechecked 06:47 UTC
+raising capital this year, https://bodacc-datadila.opendatasoft.com/ registre 904449568, capital increases published 2026-01-30, 2026-03-24 and 2026-05-26 rechecked by the judge 06:49 UTC through the BODACC API, no amounts used
+recheck: 2026-10-06 06:47 UTC, eu-view.py rerun on https://melba.app , home HTML on www and en grepped with the axeptio and didomi controls, privacy policy refetched (200) and both Teasy lines quoted from the fresh copy. Thesis confidence MEDIUM, the faults are on their own pages and that it costs trust and diligence is inference
+```
+
+OPENER
+```
+Hi Vincent, saw Melba, looks interesting!
+
+However, your website starts Google Analytics and Amplitude before visitors agree to anything, and your privacy policy still names Teasy and never mentions cookies. This causes people deciding whether to trust Melba with their data to be tracked before they've agreed.
+
+Especially, when you are bringing in new capital this year, the gap between what your site does and what your policy says is the kind of thing investor due diligence picks up.
+
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I was Heineken's global e business data and insights lead, where we gave 23 markets self serve insights with data governance across regions, so I know how to keep the numbers you need while only tracking people who've agreed.
+
+Shall I send you over what the privacy safe Melba website looks like?
+```
