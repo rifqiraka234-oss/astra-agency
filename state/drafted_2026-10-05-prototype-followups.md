@@ -51,13 +51,7 @@ which drew on the live build. No new claim about Qualigraf's own site.
 
 LAST NUDGE.
 LAST NUDGE, REVISED 6 Oct. The first draft pushed the Surrey page a third time (the delivery and the 3 Oct nudge both did), which RULES 1B rules out. This one asks what didn't fit instead.
-```
-👀 Steven, last one from me on the UK site
-
-If it missed the mark, I'd really value a line on what didn't fit, since you know those councils far better than I do.
-
-And if it's just the timing, no worries at all.
-```
+SENT 2026-10-06 06:23 UTC, act_H7svreFekkRF9aAyN, on Raka's "send just now". Do not send again.
 
 ## Ciara Neal, Hire Quality Talent. ctc_RpqPcqXbBRf2Zz57L. Due from 7 Oct, last nudge
 
@@ -67,13 +61,7 @@ follow up and the last one. The site is live as of 19 41 UTC. We already told he
 fix "sits near the bottom" of the five hundred euro start, so the nudge builds on that and quotes no new number.
 
 LAST NUDGE.
-```
-👀 Ciara, one last thought on the site
-
-Since money's tight right now, it doesn't all have to go live at once. The homepage and the Pricing page on their own fix what a hiring director sees first, and that's the small end of what I mentioned.
-
-Want me to send over exactly what that first step would cost?
-```
+SENT 2026-10-06 06:23 UTC, act_QbSxikm3EjRkDo9Wf, on Raka's "send just now". Do not send again.
 
 ## Closed, nothing sent
 
