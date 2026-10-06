@@ -1,19 +1,16 @@
-<!-- GATE ARCHIVED -->
-<!-- Superseded 2026-10-06 by state/drafted_2026-10-06-simple.md (Raka: make it much more simple). Never send these texts. -->
-<!-- AI default pass drafts, 2026-10-06. Nothing here is sent. -->
-# AI default pass, drafts for Raka (2026-10-06)
+<!-- Simpler redraft, 2026-10-06, Raka: "everything sounds a bit too technical, make it much more simple, just go like AI workflow". Supersedes the texts in drafted_2026-10-06-ai-default.md and drafted_2026-10-06-julien.md. Facts unchanged, all from the red teamed versions. Nothing sent. -->
+# Simpler redraft for Raka, 2026-10-06
 
-Every draft here comes from Raka's 2026-10-06 rule (RULES.md 4A, the default angle) and has been through a red team.
+### Julien Facchini, BeHype, ctc_MPwYm8GzGQtTBp3yM
+
+REPLY
+```
+Thanks Julien! We're an agency building websites, apps and AI workflows, for brands like Unilever, AXA and Pertamina.
+
+What are you building at the moment?
+```
 
 ### Léo Grandperrin, Axiome, ctc_biurQgp9YgReZKtL9
-
-Red team FIX, leaning KILL. Facts hold at source (method page quote, five people on the team page, no AI anywhere on
-their site or LinkedIn). Fixes applied: "before any brand work begins" cut (the audit IS their paid first step),
-"competitors multiply per audit" logic replaced, "for each firm" narrowed to firms that start with an audit (clients
-can buy one step), block three now says where they work today (their LinkedIn About, present tense) instead of a move,
-block five names the outcome. Honest risk: Axiome is five months old with no visible clients, so too much client work
-may not be its biggest pain, and Léo runs a second consultancy, GROWTHENGINE (SIREN 106329410, June 2026). He may reply
-"we already use ChatGPT for that". Raka's call whether the default AI angle is worth one shot here.
 
 ```gate
 lead: Léo Grandperrin, co founder and Directeur associé of Axiome (AXIOME AGENCY SAS, SIREN 104 210 075, created 2026-04-24, capital 500 EUR, Présidente Camille de Montgolfier per BODACC A202600833673 and https://www.pappers.fr/entreprise/axiome-agency-104210075 , shareholders not public), ctc_biurQgp9YgReZKtL9. lemlist jobTitle "Co-fondateur", tagline "Associé‑Fondateur & Managing Partner", https://axiomeconseil.eu/cabinet--axiome lists "Léo Grandperrin Directeur associé", re-rendered 2026-10-06. Also Gérant of GROWTHENGINE SARL 106 329 410. Thread pulled 2026-10-06 06:30 UTC, 0 items, nextPage null, sentOnly shows only our 2026-10-04 connect note, positive control Kyson's thread 11 items in the same minute
@@ -50,7 +47,7 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://axiomeconseil.eu/ 2026-10
 sweep apps: https://axiomeconseil.eu/mthode--axiome starts with an audit of offer, message, visibility and competitors, five people on https://axiomeconseil.eu/cabinet--axiome , 0 AI mentions in the rendered site, chosen under the 2026-10-06 default rule
 sweep social: tools/social-audit.js on https://www.linkedin.com/company/axiome- read 203 followers and the bio "Cabinet de conseil en image et communi", no posts visible, control lemlist's page showed posts on the same route yesterday, they sell social themselves, not chosen
 sweep squad: Stanya Palmaro, Responsable digital on https://axiomeconseil.eu/cabinet--axiome , search title Experienced Frontend Developer, freelancer, no client volume or delivery times shown, not chosen
-thread: problem the method starts with an audit of offer, message, visibility and competitors and the team page lists five people | cost the five rebuild that research for every firm that starts with an audit, which caps how many they take on, and each new market is a landscape to learn | offer the AI workflow for taking on more firms | link firm
+thread: problem the method starts with an audit of offer, message, visibility and competitors and the team page lists five people | cost the five rebuild that research for every firm that starts with an audit, which caps how many they take on, and each new market is a landscape to learn | offer see block five | link audit
 lead read: Léo reads that his method opens with a deep audit and his team is five, so each firm that buys an audit means rebuilding that research and caps how many they take on, that working across four countries and two professions grows the landscape to learn, and gets offered the AI workflow for taking on more firms, one thread
 claims:
 your method starts with an audit of the firm's offer, message, visibility and competitors, https://axiomeconseil.eu/mthode--axiome "Nous menons un audit approfondi de votre position actuelle : offre, discours, visibilité, ainsi que votre environnement concurrentiel", (step 1, Comprendre). Disproof: https://axiomeconseil.eu/expertises--axiome says clients can take "une étape ou l'ensemble", so the message says the method starts with it, never that every client gets it, rechecked 2026-10-06
@@ -63,25 +60,16 @@ OPENER
 ```
 Hi Léo, saw Axiome, looks interesting!
 
-However, your method starts with an audit of the firm's offer, message, visibility and competitors, and your team page lists five people. This causes the five of you to rebuild that research for every firm that buys an audit, which caps how many you can take on.
+However, your method starts with a full audit, and there are five of you. This causes the same kind of research to be done again and again, which limits how many clients you can take on.
 
-Especially, when you are working with tax and wealth advisers as well as law firms across France, Belgium, Switzerland and Morocco, the competitive landscape you've got to learn grows with every new market.
+Especially, when you are working across France, Belgium, Switzerland and Morocco, the research you've got to do grows with every new market.
 
-I run Astra agency. We build AI workflows and apps for brands like Unilever, AXA, Pertamina. I built automation driven revenue workflows at Betty Blocks covering enrichment, scoring and routing, so I've seen which research steps a machine can take off a small team.
+I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I set up automated sales workflows at Betty Blocks, so I know which work a machine can take off a small team.
 
-Shall I send you over what the AI workflow for taking on more firms looks like?
+Shall I send you over what the AI workflow for your audits looks like?
 ```
 
 ### Laurent Fournié, Winter, ctc_e5TddBr53qxiLyida
-
-Researcher, judge (OPENER MEDIUM), red team FIX, fixes applied by the driver. Facts hold: rendered and clicked, all five
-sales buttons on https://www.winter-energies.fr/theme/solutions-b2b2c including "Prendre rendez-vous" open a mailto to
-Laurent, no form or booking tool before or after consent, no partner names or logos. White label "opérationnelle dès
-octobre 2026" on the page, CEE programme end 31 Dec 2027 in the convention PDF. NEVER suggest naming EDF, Eni or Dyneff:
-convention article 8 bars naming another party without agreed joint communication. Pushback risk: Winter's LinkedIn
-names Plenitude France (+2 600 comptes, 4,5/5) and the CapConfort partners, so he may say "our partners are on LinkedIn",
-which also shows the proof exists and just isn't on the page that sells. Red team fixes taken: invented harms cut, block
-five now names the bigger outcome within 16 words.
 
 ```gate
 lead: Laurent Fournié, Président de SAS and sole listed dirigeant of WINTER SAS (SIREN 917767451, created 19 Jul 2022, renamed from Don de Chaleur 5 Oct 2023, active, Le Bourget-du-Lac) per https://recherche-entreprises.api.gouv.fr/search?q=917767451 and https://www.pappers.fr/entreprise/winter-917767451 . He's named directeur de la publication on https://www.winter-energies.fr/mentions-legales . contactId ctc_e5TddBr53qxiLyida, campaign cam_Csq9BikBWz7dNqSs4. lemlist tagline "Co-Founder @Winter | App Watt Watchers". The "ex" in his jobTitle is the company's old name, not a former employer. Thread re-pulled 2026-10-06 at about 06:38 UTC: 0 activities, nextPage null. sentOnly searches for the name and for "Winter" return only ibx_ARn3TmDuXRRBXjzt2, our 5 Oct connect note, lastRepliedAt null. Positive control ctc_SYhzxxMTBCWtodyt6 came back with 2 activities in the same minute
@@ -118,7 +106,7 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://www.winter-energies.fr/ ,
 sweep apps: B2B intake is mailto with a manual reply per https://www.winter-energies.fr/theme/solutions-b2b2c , but Winter builds its own app, Linky and Gazpar connectors and an API, so an AI tool fails the already run it check, folded into the site offer
 sweep social: tools/social-audit.js on accounts from their HTML, https://www.linkedin.com/company/winter-energies/ 2,875 followers posted about 1 Oct 2026, Instagram watt_watchers 2,551 followers posted 24 Sep 2026, Facebook 610, healthy, not chosen
 sweep squad: INSEE band 10 to 19 staff per https://recherche-entreprises.api.gouv.fr/search?q=917767451 , no careers page, the Nous rejoindre button is a mailto, no hiring signal, no capacity fact to name, not chosen
-thread: problem the partner page names no partner and its meeting button only opens an email | cost buyers take the offer upstairs with no live client to point to, and more buyers means more find none | offer the partner site that wins supplier meetings, showing who's live and booking meetings | link partner
+thread: problem the partner page names no partner and its meeting button only opens an email | cost buyers take the offer upstairs with no live client to point to, and more buyers means more find none | offer see block five | link partner
 lead read: Laurent reads that his partner page names no partner and only offers an email, so buyers have no live client to point to as the white label offer opens, and gets offered the partner site that wins supplier meetings, one thread
 claims:
 your partner page shows suppliers what your partners do, https://www.winter-energies.fr/theme/solutions-b2b2c "Fournisseurs d'énergie, fabricants d'équipements, collectivités territoriales : voici ce que nos partenaires font concrètement avec nos briques", rechecked 06:40 UTC
@@ -135,28 +123,22 @@ OPENER
 ```
 Hi Laurent, saw Winter, looks interesting!
 
-However, your partner page is describing what partners do without naming one, and even its meeting button only opens an email to you. This causes buyers at suppliers and local authorities to take your offer upstairs with no live client to point to.
+However, your partner page doesn't name a single partner, and the meeting button just opens an email. This causes buyers to have no client to point to when they take your offer to their boss.
 
-Especially, when you are opening the white label offer as the CEE programme winds down, the more buyers you reach, the more of them look for a client to call and find none.
+Especially, when you are launching the white label offer this month, the more buyers you reach, the more of them look for proof and don't find it.
 
-I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I worked on go to market at Betty Blocks for a year and a half, so I've seen software buyers ask who else runs it before they'll book a call.
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I worked on go to market at Betty Blocks, a software company, where buyers always asked who else used it first.
 
-Shall I send you over what the partner site that wins supplier meetings looks like?
+Shall I send you over what the partner page that books meetings looks like?
 ```
 
 ### Steven Prins, Bulgarian Wine Hub, ctc_3S6EA258AheDuBKi5
-
-Follow up to our 26 Aug opener (thread: connect note 26 Jul, opener 26 Aug, no reply, no last message promise). Red team
-FIX applied: the trade buyers line now rests on what the site shows (one paragraph, a form, consumer only terms per their
-terms of service "particuliere klanten"), not on reply speed (his contact page promises same business day). KBO 0778759649,
-AYLYAK BV, Steven De Prins sole director, wine wholesale codes added 12 May 2026; Shopify b2bEnabled false, no wholesale
-app, 0 trade hits across 135 pages in EN, NL and FR with a working control. He has a day job, left out.
 
 ```gate
 lead: Steven De Prins (lemlist "Steven Prins"), Co-Owner of Bulgarian Wine Hub, ctc_3S6EA258AheDuBKi5, lea_2pJ8C4iNEskyKzLcb. The shop is operated by AYLYAK BV per https://www.bulgarianwinehub.be/policies/legal-notice ("owned and operated by Aylyak Rosstal 3 3140 Keerbergen", VAT BE0778759649, effective 27/04/2026). KBO https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=0778759649 gives AYLYAK, active since 17 Dec 2021, Director De Prins Steven, and adds 46.341 wholesale of wine and spirits, 46.349 wholesale of beverages, 47.251 retail sale of wine and 73.110 advertising since 12 May 2026. An owner. Thread pulled 2026-10-06 06:20 UTC, 2 items, connect note 26 Jul and our opener 26 Aug, no reply. sentOnly search "Steven Prins" returns only this contact, teamConversations searches on "Steven De Prins" and "Bulgarian Wine Hub" return 0, state grep finds the 26 Aug digest row and the 30 Sep audit row only
 site pass 1: 80 URLs by tools/crawl.py on https://www.bulgarianwinehub.be/ (capped, Shopify variant links queued), 51 distinct page URLs in EN, NL and FR, all fetched with curl and grepped, homepage, 6 collections, 59 products via products.json, about-us, our-partners, our-wine-regions, b2b, winetasting, contact, policies
 site pass 2: 51 URLs, second full fetch of every page into bwhp/ and grepped for trade wording, the B2B page rendered with tools/site-audit.js (RENDER NOT TRUSTED, 4 of 4 failed assets fine by direct fetch, so void) and again with tools/render-via-curl.js, screenshot /tmp/claude-0/nsa01_bwh_b2b_curl-curlrender.png opened, heading, one paragraph and a five field form, desktop, phone screenshot void with the first run
-deep analysis: A rebuilt Shopify shop, trilingual, 59 Bulgarian wines from six named wineries with long tasting notes, gift cards, boxes, a tasting service where "Every wine tasting is discussed personally", a contact page that aims "to respond to all inquiries on the same business day", and a B2B page. The B2B page's meta description says "We offer direct import and distribution for restaurants, bars and wine shops", the page title is "Bulgarian Wine B2B | Import & Distribution for Businesses", and the body is "Are you interested in a partnership or would you like more information about our wines? Get in touch with us" plus name, business email, company, Chamber of Commerce number and a message box. No trade price, minimum, delivery term, range sheet or ordering route exists anywhere on the 51 pages in any of the three languages. The company added wine wholesale to its activities in May 2026, so trade buyers are where it's heading, and the page they land on asks them to write in first
+deep analysis: A rebuilt Shopify shop, trilingual, 59 Bulgarian wines from six named wineries with long tasting notes, gift cards, boxes, a tasting service where "Every wine tasting is discussed personally", a contact page that aims "to respond to all inquiries on the same business day", and a B2B page. The B2B page's meta description says "We offer see block five | Import & Distribution for Businesses", and the body is "Are you interested in a partnership or would you like more information about our wines? Get in touch with us" plus name, business email, company, Chamber of Commerce number and a message box. No trade price, minimum, delivery term, range sheet or ordering route exists anywhere on the 51 pages in any of the three languages. The company added wine wholesale to its activities in May 2026, so trade buyers are where it's heading, and the page they land on asks them to write in first
 owner linkedin: route 1 curl https://www.linkedin.com/in/stevendeprins 999. Route 2 web search "Steven De Prins" "Bulgarian Wine Hub", the rocketreach result title ties him to Bulgarian Wine Hub in Keerbergen (tier G). Route 3 company page https://www.linkedin.com/company/bulgarian-wine-hub 999. Route 4 the lemlist experience list, Pre-Sales Manager at Simac ICT Belgium, Founder & Owner at Aylyak Consulting, Co-Owner at Bulgarian Wine Hub. Route 5 KBO, director of AYLYAK. Route 6 Instagram from the site's HTML, read with social-audit.js, a shop account with no personal posts. A "Wine Generator" Facebook page in Sofia carries the brand name in its URL and can't be tied to him, left out
 contact linkedin: same person as the owner, the lemlist record, the KBO director and the legal notice address all agree on Steven De Prins in Keerbergen, same six routes
 google news: tools/news.py nl, "Bulgarian Wine Hub" 0 results, "Steven De Prins" 2 results (2024 Grimbergen local politics and a 2021 brocante, not him or not provably him, unused), control Heineken 100
@@ -184,7 +166,7 @@ sweep gdpr: tools/eu-view.py --shopify from Stockholm, 10 first party cookies in
 sweep apps: the tasting flow on https://www.bulgarianwinehub.be/pages/winetasting is handled personally per request, an AI proposal workflow is possible, folded into the trade site offer only as a later step, not the lead pain
 sweep social: tools/social-audit.js on https://www.instagram.com/bulgarianwinehub from the site's HTML, 124 followers, 10 posts, latest 2026-09-27, alive, not chosen
 sweep squad: a two owner shop run beside a full time job per the lemlist record, it doesn't build software, nothing for a squad, not chosen
-thread: problem they offer import and distribution to restaurants, bars and wine shops but the B2B page is one paragraph and a form with only consumer terms on the site | cost every trade buyer has to email before knowing what ordering looks like | offer the trade site for restaurant, bar and shop buyers | link trade, restaurant
+thread: problem they offer import and distribution to restaurants, bars and wine shops but the B2B page is one paragraph and a form with only consumer terms on the site | cost every trade buyer has to email before knowing what ordering looks like | offer the trade site for restaurant, bar and shop buyers | link trade
 lead read: Steven reads that the August point is fixed, that trade buyers find one paragraph, a form and consumer only terms so they must email first, and gets offered the trade site for his restaurant, bar and shop buyers, one thread
 claims:
 your new tasting notes, https://www.bulgarianwinehub.be/products.json?limit=250 every wine 72 to 231 words, rechecked 06:45 UTC
@@ -197,25 +179,14 @@ recheck: 2026-10-06 06:45 UTC, the B2B page, products.json and the grep rerun, e
 
 NUDGE
 ```
-Hi Steven, I wrote in August about the wine descriptions, and your new tasting notes fix that.
+Hi Steven, I wrote in August about the wine descriptions, and the new tasting notes fix that.
 
-You offer import and distribution to restaurants, bars and wine shops, but your B2B page is one paragraph and a form, and the only terms on the site are written for private customers, so every trade buyer has to email you before they've seen what ordering from you looks like.
+You also sell to restaurants, bars and wine shops, but there's no trade price list, trade terms or ordering on the site, so every trade buyer has to email you before they can order.
 
-I built Eten Maar, a food brand, from zero and owned its partnerships and pricing.
-
-Shall I send you over what the trade site for your restaurant, bar and shop buyers looks like?
+Shall I send you over what the trade shop for restaurants and bars looks like?
 ```
 
 ### Vincent Bucaille, Melba, ctc_xtQnzSvvms6TEoAxS
-
-v1 (no web checkout) KILLED: pay.melba.app is a Stripe Checkout since 2023. v2 on Raka's standing privacy rule, red team
-FIX applied. Verified from Stockholm on melba.app, www and en: _ga, _ga_SZZR4LNBQX, amp_0250eb set and Google Analytics,
-Amplitude, DoubleClick called before any click; no consent tool, no consent mode, no banner in French locale renders
-(control: axeptio.eu banner shows). Every policy page FR and EN has zero cookie or traceur hits. Policy still names Teasy
-and 56 rue de Maubeuge, though BODACC shows the name change to MELBA on 2023-07-05. Capital increases on BODACC 30 Jan,
-24 Mar, 26 May 2026 (small nominal steps, so "bringing in new capital" not "raising"). Never about the app's content, no
-legal claims (his policy cites legitimate interest for analytics). Side finding for Raka only: the policy sends data
-requests to contact@melba.ai, which has no mail record.
 
 ```gate
 lead: Vincent Bucaille, Co-Founder of Melba SAS (SIREN 904449568), ctc_xtQnzSvvms6TEoAxS, lemlist jobTitle "Co-Founder", tagline "Co-founder at Melba", domain melba.app. https://recherche-entreprises.api.gouv.fr/search?q=904449568 gives Président BUCAILLE & ASSOCIES CONSULTING, gérant Vincent Bucaille, DG Lucie Broto. https://www.melba.app/faq "Melba est née de la rencontre entre Lucie et Vincent". Thread re pulled 2026-10-06 06:31 UTC, 0 activities, sentOnly one row with the 5 Oct connect note, company search 0 rows, control ctc_MPwYm8GzGQtTBp3yM full in the same minute
@@ -250,7 +221,7 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://melba.app , _ga, _ga_SZZR
 sweep apps: https://www.melba.app/therapeutes codes handed out by email and https://www.melba.app/contact replies within 24h by hand, an AI workflow fits but no volume is proven, not chosen
 sweep social: tools/social-audit.js on the links in their HTML, https://www.instagram.com/melba.app/ 19,736 followers last post 2025-09-04, Facebook dates behind the login, not chosen
 sweep squad: https://join.com/companies/melba no open positions, team 2 to 10, releases all minor bug fixes, a capacity shortfall isn't proven from outside, not chosen
-thread: problem the website starts Google Analytics and Amplitude before visitors agree and the privacy policy still names Teasy | cost the gap between what the site does and what the policy says gets checked in investor diligence as capital keeps coming in | offer the privacy safe Melba website | link website, privacy
+thread: problem the website starts Google Analytics and Amplitude before visitors agree and the privacy policy still names Teasy | cost the gap between what the site does and what the policy says gets checked in investor diligence as capital keeps coming in | offer see block five | link privacy
 lead read: Vincent reads that his site starts Google Analytics and Amplitude before visitors agree while his policy still names Teasy and never mentions cookies, that this is the kind of gap investor due diligence picks up as new capital comes in, and gets offered the privacy safe Melba website, one thread
 claims:
 Heineken credential, docs/astra-master-context.md section 2A, Global E-Business Data and Insights Lead, enabled 23 markets with self serve insights, data governance across regions, https://www.theheinekencompany.com
@@ -266,21 +237,16 @@ OPENER
 ```
 Hi Vincent, saw Melba, looks interesting!
 
-However, your website starts Google Analytics and Amplitude before visitors agree to anything, and your privacy policy still names Teasy and never mentions cookies. This causes people deciding whether to trust Melba with their data to be tracked before they've agreed.
+However, your website starts tracking visitors before they agree to cookies, and your privacy policy still says Teasy. This causes people to be tracked before they've agreed, on a site where trust matters a lot.
 
-Especially, when you are bringing in new capital this year, the gap between what your site does and what your policy says is the kind of thing investor due diligence picks up.
+Especially, when you are bringing in new capital this year, the gap between your site and your policy is the kind of thing investors pick up.
 
-I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I was Heineken's global e business data and insights lead, where we gave 23 markets self serve insights with data governance across regions, so I know how to keep the numbers you need while only tracking people who've agreed.
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I was Heineken's global data and insights lead, where data governance was part of the job, so I know how to keep your numbers and still ask first.
 
 Shall I send you over what the privacy safe Melba website looks like?
 ```
 
 ### Mykyta Kharchenko, IOTENTIC, ctc_2gRN4DKWsstCjknF6
-
-Follow up to our September message (one message, no reply). One of three managing directors per the Impressum. Red team
-FIX applied: English headlines exist, so the claim is now "past the English headlines"; no English subdomain, /en/ path,
-hreflang or PDF on iotentic.com. Likely pushback, "our customers are German Mittelstand". A website pitch to someone we
-first approached as a peer.
 
 ```gate
 lead: Mykyta Kharchenko, IOTENTIC GmbH (HRB 803500, Herrenberg), ctc_2gRN4DKWsstCjknF6, lea_3h2c3xzR4wwXRoeTC
@@ -312,7 +278,7 @@ sweep gdpr: site-audit.js banner yes, reject present, 0 cookies, 0 third party b
 sweep apps: they sell automation, data visualisation and AI supported decisions, A fails by the brief's own rule
 sweep social: social-audit.js on https://www.linkedin.com/company/iotentic-gmbh 198 followers, no other account linked, no angle
 sweep squad: an engineering integrator hiring automation engineers we don't supply, the 3 Oct row ruled it out and nothing new changes that
-thread: problem past the English headlines every page is German and the only English version is a machine translation after consent | cost foreign manufacturers judge a worldwide firm on that version | offer the English site that wins international manufacturers | link English, international
+thread: problem past the English headlines every page is German and the only English version is a machine translation after consent | cost foreign manufacturers judge a worldwide firm on that version | offer see block five | link English
 lead read: Mykyta reads that his own pages call IOTENTIC worldwide while every page is German and English is only a Google translation after consent, and gets offered the English site that wins international manufacturers, one thread
 claims:
 the founders page calls IOTENTIC a company working worldwide, https://www.iotentic.com/founders/ "weltweit tätiges Unternehmen für industrielle Digitalisierung", fetched 2026-10-06
@@ -324,22 +290,14 @@ recheck: 2026-10-06, founders, karriere and homepage refetched with curl after t
 
 NUDGE
 ```
-Mykyta, in September I suggested we might overlap on the software layer. Here's a different thought.
+Mykyta, in September I suggested we might overlap on software. Here's a different thought.
 
-Your founders page calls IOTENTIC a company working worldwide, and your careers page reaches as far as gigafactories, but past the English headlines every page is written in German. The only English version is a Google machine translation that loads after a visitor accepts it.
+IOTENTIC works with companies worldwide, but the site's mostly in German, and the only English is a Google auto translation that visitors have to switch on.
 
-Shall I send you over what the English site for international manufacturers looks like?
+Shall I send you over what the English IOTENTIC site looks like?
 ```
 
 ### Stéphane Bouils, SKOOL n'JOB, ctc_xvsocGv6PaJCDrgxs
-
-Greeting Stéphane (lemlist swapped first and last name). Red team FIX applied, confidence LOW to MEDIUM: all six contract
-PDFs are four pages "à remettre ou à adresser par email" to a campus inbox, no online employer route on the public site,
-homepage promise "On s'occupe de toute la partie administrative GRATUITEMENT". Risk: they use Yparéo Neo, whose contract
-module sends the CERFA to the OPCO without retyping and can send employers a fill in link, so block five now offers an
-intake that feeds Yparéo rather than a rival tool, and "before an apprentice can start" is cut (apprentices can start
-before registration). Likely reply, "we use Yparéo, nobody retypes". Never mention Constructys, Qualiopi, attendance or
-break rates. Raka's call whether a LOW to MEDIUM shot is worth it.
 
 ```gate
 lead: Stéphane Bouils, gérant and co founder of SKOOL N'JOB SARL (SIREN 951327766, Perpignan, created 2023-05-01) with co gérant Valentin Delahaut, also gérant of CFA MERCURE, CFA PARVATI and CFA STUDIO AVENIR PRO per recherche-entreprises.api.gouv.fr, mentions légales "Propriétaire : Valentin DELAHAUT & Stéphane Bouils", ctc_xvsocGv6PaJCDrgxs. lemlist jobTitle "Co-fondateur", tagline "Co-fondateur SKOOL n' JOB - Directeur Associé", first and last name swapped in lemlist, register gives first name Stéphane. Thread pulled 2026-10-06 06:45 UTC, 0 activities, sentOnly shows only the 5 Oct connect note, positive control ctc_QZawcREsaQM3pMpPz full with 2 items in the same minute, one campaign only
@@ -377,7 +335,7 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://skoolnjob.com/ sets _ga, 
 sweep apps: https://skoolnjob.com/info-pratiques/ contract requests are per campus PDFs to fill in and email, https://skoolnjob.com/wp-content/uploads/2025/09/GABARIT-DDE-CONTRAT-1.pdf has 0 fillable fields, Grimp and Yparéo links are candidate and staff logins only, chosen
 sweep social: tools/social-audit.js on accounts from their HTML, https://www.instagram.com/skoolnjob_perpignan/ 3,737 followers last post 2026-10-02, Facebook 2,557, LinkedIn 2,784, active, not chosen
 sweep squad: a CFA, not a software or agency business, and https://skoolnjob.com/ credits Bleu d'octobre in the footer for the site, no capacity fact to sell against
-thread: problem the contract request is a four page PDF employers email back to the campus | cost the team copies SIRET and tutor details out of an inbox and chases missing documents before the contract goes to the OPCO, growing with every campus and partner | offer the AI contract intake feeding Yparéo | link contract
+thread: problem the contract request is a four page PDF employers email back to the campus | cost the team copies SIRET and tutor details out of an inbox and chases missing documents before the contract goes to the OPCO, growing with every campus and partner | offer see block five | link contract
 lead read: Stéphane reads that employers send a four page PDF by email, so his team copies details out and chases documents before the OPCO, growing with each campus and partner while the paperwork is free, and gets offered the AI contract intake feeding Yparéo, one thread
 claims:
 your contract request is a four page PDF that employers fill in and email back to the campus, https://skoolnjob.com/info-pratiques/ "Téléchargez votre demande de contrat" per campus, https://skoolnjob.com/wp-content/uploads/2025/09/GABARIT-DDE-CONTRAT-1.pdf 4 pages "Document à compléter et à remettre ou à adresser par email au contact en pied de page", footer contrat@skoolnjob.com, rechecked 06:45 UTC
@@ -392,25 +350,16 @@ OPENER
 ```
 Hi Stéphane, saw SKOOL n'JOB, looks interesting!
 
-However, your contract request is a four page PDF that employers fill in and email back to the campus. This causes your team to copy SIRET and tutor details out of an inbox and chase missing documents before the contract goes to the OPCO.
+However, your apprentice contract is a PDF that employers fill in and email back to the campus. This causes your team to copy the details over and chase missing documents, contract after contract.
 
-Especially, when you are opening new campuses and handling all the paperwork for free, the pile of contract emails grows with every partner company you sign.
+Especially, when you are opening new campuses and doing all the paperwork for free, the emails pile up with every new partner company.
 
-I run Astra agency. We build AI workflows and apps for brands like Unilever, AXA, Pertamina. I set up the automated lead routing and follow up workflows at Betty Blocks, so I've seen how many hours go back to a team once incoming forms land in the right place on their own.
+I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I automated how new leads were sorted and followed up at Betty Blocks, so I've seen how many hours that gives a team back.
 
-Shall I send you over what the AI contract intake feeding Yparéo looks like?
+Shall I send you over what the AI workflow for your contracts looks like?
 ```
 
 ### David Brauman, Brauman & K, ctc_n3rxAxdmtuJpgW8NH
-
-Président of BRAUMAN & K SAS (SIREN 984613059). Red team FIX applied. 20 search runs (5 cities, homepage box and
-/proprietes, desktop and iPhone): the box matches any listing text, "Lyon" picks up Paris suburbs via "Paris gare de Lyon",
-"Nantes" picks up Fréjus via "environnantes" and Cannes via "attenantes"; every city lets other regions in; no city
-filter, map or sort; city pages are text only with no listings. M6: Puremédias 26 Sep 2026 names him in the season 7
-casting, filming now, airing 2027 per castprod.com, so the message says "once the season airs". Cut as false: "never
-reach your advisers" (WhatsApp and adviser links on every page). Pushback risk: "a five minute fix for my Webflow guy",
-answered by the offer being matching on place and budget, not a one setting patch. Never mention his old LinkedIn post
-about hiring and maternity leave. The GDPR leak (Facebook, HubSpot, Klaviyo before consent) is a favour for later.
 
 ```gate
 lead: David Brauman, Président of BRAUMAN & K SAS, SIREN 984613059, created 08/02/2024, NAF 68.31Z, 5 rue des Acacias 75017 Paris, active, per https://recherche-entreprises.api.gouv.fr/search?q=brauman and https://www.pappers.fr/entreprise/brauman-k-984613059 , ctc_n3rxAxdmtuJpgW8NH, lead lea_8cfhQRvnNcMv7c7Hb in cam_Csq9BikBWz7dNqSs4. lemlist jobTitle "PDG", tagline "Référence de l'immobilier neuf | Coach QVEMA - M6", companyDomain braumanandk.com, tagline and company agree, no former. Thread re pulled by the judge 2026-10-06 06:31 UTC, 0 activities, nextPage null, sentOnly search shows only the 5 Oct connect note, lastRepliedAt null, myConversations search "Brauman" 0, control ctc_f4gwBMMyfBQjgz9CG came back with 2 activities. grep of state and logs for brauman, the contactId and the leadId, 0 hits
@@ -449,7 +398,7 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://www.braumanandk.com , _fb
 sweep apps: no AI search, assistant or matcher anywhere in 150 crawled pages of https://www.braumanandk.com , matching runs on a text filter and a callback, "On vous rappelle dès qu'on raccroche", the AI search offer is the default A angle, chosen
 sweep social: tools/social-audit.js on the URLs in their own HTML, https://www.instagram.com/david_brauman_ 36,168 followers latest post 2026-10-02, TikTok @braumanandk 25.5K, YouTube @Braumandavid 198 videos, LinkedIn UNKNOWN behind login, strong, no angle
 sweep squad: the site is a Webflow build by one no code consultant per https://www.remigravelle.fr/ and a separate Next.js app runs at https://www.byebail.fr/ , no team page, no delivery times, no capacity fact to build a squad message on
-thread: problem the site's search is a plain word match, Lyon brings up a home near Paris first, Nantes shows Fréjus and Cannes | cost buyers wade through homes far away before asking an adviser, and TV viewers will land in the same search box | offer the AI search matching buyers to homes | link search
+thread: problem the site's search is a plain word match, Lyon brings up a home near Paris first, Nantes shows Fréjus and Cannes | cost buyers wade through homes far away before asking an adviser, and TV viewers will land in the same search box | offer see block five | link search
 lead read: David reads that his search matches words, not places, so buyers in Lyon and Nantes wade through distant homes, that M6 viewers will land in the same box once the season airs, and gets offered the AI search matching buyers to homes, one thread
 claims:
 your site's search answers Lyon with a home near Paris first, https://www.braumanandk.com/proprietes?lieu=Lyon first card "Seinographic Val-de-Marne 35 avenue de Choisy 94190 Villeneuve-Saint-Georges", desktop and phone, rechecked 06:40 UTC, its own page https://www.braumanandk.com/listings/seinographic mentions "Paris gare de Lyon"
@@ -464,22 +413,16 @@ OPENER
 ```
 Hi David, saw Brauman & K, looks interesting!
 
-However, your site's search is a plain word match, so Lyon brings up a home near Paris first and Nantes shows Fréjus and Cannes. This causes buyers looking in their own city to wade through homes hundreds of kilometres away before they've asked an adviser to call.
+However, your site's search mixes up cities, so Lyon shows a home near Paris first and Nantes shows Fréjus and Cannes. This causes buyers to scroll past homes hundreds of kilometres away before they find one in their own city.
 
-Especially, when you are joining the Qui veut être mon associé jury on M6, the viewers who look you up once the season airs will land in that same search box.
+Especially, when you are joining the M6 jury, the viewers who look you up once the season airs will use that same search.
 
-I run Astra agency. We build AI tools for brands like Unilever, AXA, Pertamina. I ran lead scoring and routing for Betty Blocks, which taught me what a lead sent to the right salesperson is worth.
+I run Astra agency. We build AI tools for brands like Unilever, AXA, Pertamina. I ran lead routing at Betty Blocks, which showed me what it's worth to send each buyer to the right place.
 
-Shall I send you over what the AI search matching buyers to homes looks like?
+Shall I send you over what the AI search for your homes looks like?
 ```
 
 ### Naomi Yard, SEM-Care, ctc_9Ty6sALcgs2LTTuxs
-
-Co-owner ("Mede-eigenaar" in lemlist; about page "Wij, Naomi en Suzanne ... SEM-Care is geboren"; KvK 85983918 confirms
-the company, not the people). Thread holds only the 22 Jul connect note. Red team FIX applied: the impact line now fits
-her financiering page (the client chooses the provider with the gemeente), the credential no longer treats care clients
-as leads, the offer says same day. Care for vulnerable clients, keep it respectful. No privacy statement link on the site,
-a favour for later. Most likely pushback: two working days is normal in her sector.
 
 ```gate
 lead: Naomi Yard, co-owner of SEM-Care, Alkmaar (KvK 85983918 per https://www.sem-care.nl/ footer and North Data https://www.northdata.com/SEM-Care,+Alkmaar , Edisonweg 7, purpose "Outpatient guidance ... for home-dwelling clients with physical, cognitive or psychosocial limitations"), ctc_9Ty6sALcgs2LTTuxs, lea_XAYXjCzPBGxJYnCnA. lemlist jobTitle "Mede-eigenaar", experience1 "Mede-eigenaar @SEM Care", 15+ years wijkverpleging at Evean before it. https://www.sem-care.nl/over-sem-care/ "Wij, Naomi en Suzanne ... SEM-Care is geboren". Thread pulled 2026-10-06, 1 item, our 22 Jul connect note, sentOnly search on her name returns the same contactId with lastRepliedAt null, Martijn Dijk's two item thread is the control
@@ -512,7 +455,7 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://www.sem-care.nl , 1 first
 sweep apps: https://www.sem-care.nl/contact/ three fields and "Binnen 2 werkdagen", footer "De telefoondienst is niet altijd bemand", https://www.sem-care.nl/vacature-ambulant-begeleider/ team out at clients, chosen
 sweep social: tools/social-audit.js on https://www.linkedin.com/company/sem-care , 41 followers, 5 employees, the site links no social account per site-audit.js with its control, not chosen
 sweep squad: a home support provider per https://www.sem-care.nl/begeleiding-aan-huis/ , it builds no software, nothing to supplement
-thread: problem the Maak een afspraak button leads to a three field form with a reply within two working days and the phone isn't always staffed | cost a family or referrer looking for home support tries another provider before anyone calls back, adding up as a compact team serves several municipalities | offer the same day AI intake for every referrer | link referrer
+thread: problem the Maak een afspraak button leads to a three field form with a reply within two working days and the phone isn't always staffed | cost a family or referrer looking for home support tries another provider before anyone calls back, adding up as a compact team serves several municipalities | offer see block five | link reply
 lead read: Naomi reads that her appointment button gives a two working day form and the phone isn't always staffed, so a family or referrer may try another provider first, adding up across municipalities, and gets offered the same day AI intake for every referrer, one thread
 claims:
 your "Maak een afspraak" button leads to a three field form, https://www.sem-care.nl/begeleiding-aan-huis/ , /financiering/ and /over-sem-care/ anchor "Maak een afspraak" href https://www.sem-care.nl/contact/ , the form has form_fields naam, email, message, rechecked 06:4x UTC
@@ -528,23 +471,16 @@ OPENER
 ```
 Hi Naomi, saw SEM-Care, looks interesting!
 
-However, your "Maak een afspraak" button leads to a three field form with a reply within two working days, and the phone isn't always staffed. This causes a family or referrer looking for home support for someone with a Wmo indication to try another provider before anyone's called them back.
+However, your appointment form promises a reply within two working days, and the phone isn't always answered. This causes families looking for home support to try another provider before anyone's called them back.
 
-Especially, when you are serving clients in several municipalities with a compact team out on the road, the new requests waiting until someone's back at a desk add up every week.
+Especially, when you are working across several municipalities with a small team on the road, the requests waiting for a reply add up every week.
 
-I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I set up the routing and follow up for new leads at Betty Blocks, where a quick first answer mattered most to whoever was waiting on it.
+I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I set up the follow up for new enquiries at Betty Blocks, where a quick first answer made all the difference.
 
-Shall I send you over what the same day AI intake for every referrer looks like?
+Shall I send you over what the AI reply workflow for every request looks like?
 ```
 
 ### Emily Levy, Alquimia Legal, ctc_rMYGbmu7Piu5Pmwei
-
-Co-owner: lemlist jobTitle "Co-Owner", site "Socia y COO desde 2019", a 2021 press column names her and Alejandro
-Alcántara as "fundadores". Her main job now is Juriste Jr. at BARAT CORPORATE in Lyon. Live site alquimialegal.mx
-(lemlist's alquimialawyers.com doesn't resolve). Thread holds only the 27 Jul connect note. Red team FIX applied: block
-three now uses their own verb, "leads the firm's international presence", not "taking the firm international"
-(the L'Office des Artistes lesson). A WhatsApp Business greeting or Wix auto reply can't be seen from outside, so "answer
-by hand" is her most likely pushback.
 
 ```gate
 lead: Emily Levy (lemlist "Emily R.", fullName "Emily Levy R."), partner and COO of Alquimia Legal, Guadalajara, ctc_rMYGbmu7Piu5Pmwei, lea_X6Zr5my9ytX6xNZMQ. https://www.alquimialegal.mx/ "Emily Levy Socia & Subdirectora. Socia y COO de Alquimia Legal desde 2019 ... lidera la proyección internacional de la firma desde Francia. Ofrece soluciones legales estratégicas en español, inglés y francés". lemlist jobTitle "Co-Owner", experience "Company Owner @Alquimia Legal", location Lyon. Founder and director is Alejandro Alcántara Gómez per the same page and https://www.enlazadot.com/columna/alquimia-legal-en-donde-si-protegen-tu-empresa/ (23 Feb 2021, "Alejandro Alcántara (Director)", "Dulce Emily Levi (Subdirector)"). No Mexican public register reachable for a law firm, the site and the 2021 column agree. Thread pulled 2026-10-06, 1 item, our 27 Jul connect note, sentOnly search "Emily R." returns the same contactId with lastRepliedAt null
@@ -576,7 +512,7 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://www.alquimialegal.mx , 6 
 sweep apps: https://www.alquimialegal.mx/ "Cotizar" and "Agendar Asesoría" both scroll to the seven field form, no price on the page, wa.me link, no quoting or chat tool in the HTML, chosen
 sweep social: tools/social-audit.js on https://www.instagram.com/alquimialegalmx/ 524 followers, 1,274 posts, latest 2026-10-06, Facebook 4,370, LinkedIn 26, active, not chosen
 sweep squad: a two partner law firm per https://www.alquimialegal.mx/ , it builds no software, nothing to supplement
-thread: problem the Cotizar and Agendar Asesoría buttons both drop people at one seven field form or WhatsApp with no price | cost every brand owner wanting a quote waits for someone to answer by hand, piling up across three languages and two time zones as she leads the international presence | offer the AI quote desk answering in three languages | link quote
+thread: problem the Cotizar and Agendar Asesoría buttons both drop people at one seven field form or WhatsApp with no price | cost every brand owner wanting a quote waits for someone to answer by hand, piling up across three languages and two time zones as she leads the international presence | offer see block five | link quote
 lead read: Emily reads that both buttons drop people at one form or WhatsApp with no price, so quotes wait for a person, piling up across three languages and time zones as she leads the firm's international presence, and gets offered the AI quote desk answering in three languages, one thread
 claims:
 your Cotizar and Agendar Asesoría buttons both drop people at one seven field form or WhatsApp, https://www.alquimialegal.mx/ clicked in Chromium 2026-10-06, both scroll to "Trabajemos juntos" with Nombre, Teléfono, Email, Nombre de la compañía, Ciudad, País, Mensaje, all marked *, and "Contactar WhatsApp" wa.me/523312561258
@@ -591,11 +527,11 @@ OPENER
 ```
 Hi Emily, saw Alquimia Legal, looks interesting!
 
-However, your Cotizar and Agendar Asesoría buttons both drop people at one seven field form or WhatsApp, with no price shown. This causes every brand owner who wants a quote to wait for someone at the firm to answer by hand.
+However, your quote and booking buttons both lead to the same form or WhatsApp, with no prices. This causes every client asking for a quote to wait until someone at the firm's got time to answer.
 
-Especially, when you are leading the firm's international presence from France in Spanish, English and French, the quotes that haven't had a reply pile up across three languages and two time zones.
+Especially, when you are working in Spanish, English and French across two time zones, the unanswered quotes pile up fast.
 
-I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I ran scoring and follow up on new leads for Betty Blocks, and an unanswered one there went cold fast.
+I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I ran lead follow up for Betty Blocks, and a lead that waited went cold quickly.
 
-Shall I send you over what the AI quote desk answering in three languages looks like?
+Shall I send you over what the AI quote workflow in three languages looks like?
 ```

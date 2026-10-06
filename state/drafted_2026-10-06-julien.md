@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Superseded 2026-10-06 by state/drafted_2026-10-06-simple.md (Raka: make it much more simple). Never send these texts. -->
 # Julien Facchini, BeHype, reply (2026-10-06)
 
 Thread pulled 2026-10-06 06:29 UTC sync: 1 activity, his reply 2026-10-05 18:56 UTC "Thank you very much ! \nWhat do you
