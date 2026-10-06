@@ -18,10 +18,4 @@ FOR RAKA TO CONFIRM BEFORE SENDING. The WordPress line commits us to building it
 edit. That's standard, and Amwisesa builds on PHP, but it's a delivery promise, so it's your call.
 
 REPLY, SHORTER (Raka, "Make it shorter! And ask can i send you a meeting invite already").
-```
-Thanks Steven, really useful. Fair point on Surrey, we'd lead with something that holds.
-
-Four countries would be one site with pages per market, not four builds, and it can sit on WordPress so your team keeps editing it.
-
-November works. Can I send you a meeting invite already?
-```
+SENT 2026-10-06 08:54 UTC, act_CRF3YxZCTpxGuF8A3. Do not send again.
