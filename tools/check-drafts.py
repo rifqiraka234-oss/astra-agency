@@ -45,6 +45,10 @@ BANNED_PHRASES = [
     "just following up", "circle back", "touch base", "reach out",
     "you're absolutely right", "good catch", "honestly,",
     "i hope this finds you", "i wanted to reach", "quick question",
+    # Fake-personal reaction phrases, writing-standard-anti-ai.md (Raka 2026-09-04). A red team
+    # caught "caught my eye" in a nudge on 2026-10-06 that this gate had passed.
+    "caught my eye", "stuck in my head", "stuck with me", "couldn't stop thinking about",
+    "been on my mind",
 ]
 # Structures that give AI writing away. docs/writing-standard-anti-ai.md.
 BANNED_STRUCTURES = [
