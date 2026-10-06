@@ -500,6 +500,25 @@ plus deck job for a lead, read the SotoCat section at the end of `docs/build-and
 
 ## 4A. Finding the angle. The biggest pain, not the first flaw (Raka, 2026-09-22 to 24)
 
+**THE DEFAULT ANGLE, before any lead is closed NO_STRONG_ANGLE (Raka, 2026-10-06).** His words,
+"we can just always go this angle default because everyone's all about AI angles, like who doesnt
+want to have ai workflows for themselves OR AI apps for their business. Or better website due to
+growth expansion". So a lead is never closed as NO_STRONG_ANGLE until both of these were hunted
+and came back empty, with the evidence written down.
+- **A, an AI workflow or AI app that makes them more efficient.** Find the specific job in THEIR
+  business that eats hours, from their own words: how customers book, order, enrol or request a
+  quote, intake forms and documents, quotes and proposals written by hand, reporting, scheduling,
+  follow up, support questions answered one by one, job ads describing manual work, a team too
+  small for the volume they claim. The message names that job and what it costs them, and offers
+  the AI workflow or app that does it ("the AI intake workflow for ...", "the quoting app for ...").
+  The pay test is treated as met by default for this angle, because owners want it. Still check
+  they don't already run it (an AI product company, an automation agency, a tool they already
+  name on their site), and never invent the job, it must be visible in their own material.
+- **B, a better website because of growth or expansion.** Funding, new market, new language, new
+  service line, new company, hiring, a site that doesn't serve where they're going.
+Only owners, founders, co-founders and CEOs. Truth rules, the triple check, the judge and the red
+team all still apply. The block five rule (name the bigger outcome) applies.
+
 Everything Raka said while working Ferry de Haas and the batches before him, in one place. The
 detailed method is in `docs/opener-template.md` sections 3A and 3B. These are the rules.
 
