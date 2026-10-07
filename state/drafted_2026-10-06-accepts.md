@@ -1,3 +1,4 @@
+<!-- Block four [xyz] set to 'branding, websites and social media management' on Raka's word 2026-10-07. -->
 <!-- New accepts 2026-10-06. Red teamed. Nothing sent. Re pull thread and reopen /impressum, /imprint, /data-privacy, /forcafes before sending. -->
 # New accept opener, 2026-10-06
 
@@ -60,7 +61,7 @@ However, your Instagram had no posts from mid April to late September, and nothi
 
 Especially, when you are selling flavours that come and go with the seasons, the quiet months turn into flavours people never see before they're gone.
 
-I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I built a stroopwafel brand from zero with my family and ran its content, so I know what a small food brand has to post to sell.
+I run Astra agency. We build branding, websites and social media management for brands like Unilever, AXA, Pertamina. I built a stroopwafel brand from zero with my family and ran its content, so I know what a small food brand has to post to sell.
 
 Shall I send you over what the Baked Instagram that fills your pickup orders looks like?
 ```
