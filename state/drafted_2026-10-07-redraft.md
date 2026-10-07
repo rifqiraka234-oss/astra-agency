@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Nicolas and Adad sent 2026-10-07 13:41 UTC on Raka's word, Katie closed unsent. Do not send again. -->
 <!-- Redrafts on Raka's angles 2026-10-07 (Nicolas AI workflow, Adad social to shop sales, Katie website). Red teamed. Nothing sent. Supersedes those three in state/drafted_2026-10-07-four-angle.md -->
 <!-- b12 redraft, 2026-10-07, on the angles Raka chose. Nothing sent, no lemlist writes, no commit. Re pull each thread before sending. -->
 # Redraft on Raka's angles, 2026-10-07
