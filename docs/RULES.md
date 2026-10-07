@@ -538,6 +538,13 @@ team all still apply. The block five rule (name the bigger outcome) applies.
   (state/accepts_2026-10-06/b9_baked.md is the model). Block four then reads "We build branding
   and websites and social media management for brands like Unilever, AXA, Pertamina." A consumer
   lead isn't NO_STRONG_ANGLE until D came back empty too.
+- **All four, every lead, then pick the most expensive (Raka, 2026-10-07).** "Basically for all
+  test: better website for sales or for growth / personal AI assistant workflow / AI apps for
+  company / or SOCIAL MEDIA AND INSTAGRAM. Judge where THE BIGGEST PROBLEM FOR THEM LAYS. The most
+  expensive problem." So B, C, A and D are each tested with live evidence and written into one
+  table (proof, cost, would they name it, would an incumbent take it), and the opener leads with the
+  single most expensive one. The working brief is /tmp/claude-0/agents/FOUR_ANGLE_BRIEF.md, kept in
+  state/four_angle_brief.md.
 
 Everything Raka said while working Ferry de Haas and the batches before him, in one place. The
 detailed method is in `docs/opener-template.md` sections 3A and 3B. These are the rules.
