@@ -3,7 +3,7 @@
 
 ### Jamie Bolding, Restless, ctc_4XQDxYiE3NkeqKPEy
 
-Build Squad, led with the job openings on Raka's word. Partner disclosure applies if he asks who builds.
+Build Squad, growth hook chosen on Raka's 'whichever you think has the best chance'. Job openings kept as the clue behind the inference, not quoted (opener-template 3A). Partner disclosure applies if he asks who builds.
 
 ```gate
 lead: Jamie Bolding, co-founder and executive chairman of Restless (RESTLESS MARKETING SERVICES LIMITED 16879495), ctc_4XQDxYiE3NkeqKPEy, leadId lea_qGRRo8XoP6ito6m2D, campaign cam_Csq9BikBWz7dNqSs4, jobTitle "Co-Founder". Owner per Companies House, he's a director since 28 Nov 2025 and Coda Labs Ltd (12520585) holds 50 to 75% of Restless, while Jamie holds 75% or more of Coda Labs per https://find-and-update.company-information.service.gov.uk/company/12520585/persons-with-significant-control . So he's the majority owner through Coda Labs. Thread 0 activities, nextPage null, control 2 items same minute
@@ -38,10 +38,10 @@ sweep gdpr: site-audit.js lists www.googletagmanager.com, www.google-analytics.c
 sweep apps: they build their own AI platform, Antenna, per https://restless.co/antenna , an AI app pitch would sell them what they make, not chosen
 sweep social: tools/social-audit.js opened https://www.instagram.com/restlessdotco/ (141 followers, 15 posts, latest 2026-08-19) and https://www.linkedin.com/company/restlessco (515 followers, latest 14 days ago), they sell social management, not chosen
 sweep squad: Antenna is the product the agency runs on and the team page at https://restless.co/team shows no one in a build role, CHOSEN, Raka's angle
-thread: problem your three job openings are all client roles and nobody on the team page builds Antenna | cost every new hire leans on Antenna features that ship only when someone has time | offer a squad of senior developers who build Antenna next to the team | link Antenna
-lead read: Jamie reads that we saw his three openings are all client roles while nobody on his team page builds Antenna, so each new hire leans on features that only ship when someone has time, and gets offered a squad of senior developers to build Antenna next to his team, one thread
+thread: problem the whole agency runs on Antenna and every brand signed adds to its roadmap | cost the roadmap likely outgrows the time anyone has to build it | offer a squad of senior developers who build Antenna next to the team | link Antenna
+lead read: Jamie reads that Restless runs on Antenna and each new brand adds to its roadmap, so features likely ship slower than the brands need, and gets offered a squad of senior developers to build Antenna next to his team, one thread
 claims:
-your three job openings are all client roles, https://careers.restless.co/ lists exactly /jobs/7971909-performance-manager, /jobs/7973092-creative-strategist, /jobs/8467727-mid-weight-social-creative, refetched 2026-10-07 by curl, no engineering role
+INFERENCE, the roadmap grows faster than build time, rests on https://careers.restless.co/ three open roles all client side (Performance Manager, Creative Strategist, Social Creative) refetched 2026-10-07, the Performance Manager ad 'road testing features to shape the tools our clients use', and no build role on https://restless.co/team. Not stated as fact, Coda Labs may build it
 your whole agency runs on Antenna, "We work across social, performance, creator and insights, all powered by Antenna" and "Powered by Antenna" on https://restless.co/ , reopened 2026-10-07 ~16:20 UTC
 your team page shows four founders and nobody whose job is building it, https://restless.co/team lists Jamie Vaughan Co-Founder & MD, Nat Poulter Co-Founder & CEO, Devina Seth Co-Founder & CCO, Jamie Bolding Co-Founder & Chairman, nobody else, reopened 2026-10-07 ~16:20 UTC
 strategists and media buyers work with Antenna features, https://careers.restless.co/jobs/7971909-performance-manager "working with the product and road testing features" and https://careers.restless.co/jobs/7973092-creative-strategist "Use Restless' internal AI tools"
@@ -56,9 +56,9 @@ OPENER
 ```
 Hi Jamie, saw Restless, looks interesting!
 
-However, your three job openings are all client roles, and your team page shows nobody whose job is building Antenna. This causes every new strategist and creative you hire to lean on Antenna features that only ship when someone has time to build them.
+However, your whole agency runs on Antenna, and every brand you sign adds to what it has to do next. This causes the Antenna roadmap to likely grow faster than the time anyone has to build it.
 
-Especially, when you are hiring to sign more brands in your first year, the work Antenna has to do grows with every new hire.
+Especially, when you are signing more brands in your first year, the features each new client leans on only ship as fast as the people building them.
 
 I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I lead a squad of senior developers who'd build Antenna next to your team in half the time at half the price, so your founders stay with the brands.
 
