@@ -107,6 +107,44 @@ or "70 to 80% chance" claims about the AI. Say it ranks owners so he calls the l
 - Who David Watson and Dave Warrilow are.
 - Whether he'll put his name on a monthly note.
 
+## The offer as Raka set it, 7 Oct. Supersedes the order above
+
+1. **Website, visual redesign and launch.** A new look rather than his Wix template, his profile and story, the fee
+   explained up front, a privacy page, one deal size range, and the web apps below.
+2. **An AI monthly email in his name.** Drafted by AI, approved by him, sent to the owner list.
+3. **The GTM architecture on Claude and lemlist.** It finds owners from Companies House data, ranks them, writes the
+   first message and runs LinkedIn and email from one place. The same base later carries the tools for running a sale,
+   the buyer list, first drafts of the sale documents and the tracker.
+4. **Consultation.** Setting up and running the outreach with him, read here as the lemlist side. To confirm with Raka.
+
+## Web apps for the site that bring in sellers
+
+Ranked by how directly each one fixes a leak from the table above.
+
+| App | What the owner does | What Kyson gets | Leak it fixes | Size |
+|---|---|---|---|---|
+| What you'd keep | Moves the sliders, sees value, then tax, then the fee, then what lands in his account | A seller who's seen the fee before the first call | The fee talk | Small, it upgrades the tool already built |
+| How a buyer sees your company | Types his company name, the app reads the public Companies House record and AI writes a one page buyer's view | The company number and a full record of a likely seller, before any call | Finding and trust | Medium |
+| Exit plan builder | Says when he'd like to sell and what worries him, gets a dated plan by email | Owners one to five years out, with their timing and worries written down | Finding, the long wait | Medium |
+| Who's buying in your sector | Reads recent deals in his niche and signs up for alerts | A growing list of owners watching the market, and material for the monthly email | Staying remembered | Medium, needs a monthly update |
+| Niche value pages | Searches "what is my fire safety business worth" and lands on a page with the calculator set for that niche | Owners who find him on Google instead of him finding them | Finding | Small per page |
+| Partner page for accountants and solicitors | An adviser refers a client who's thinking of selling | A second route in, people who hear about a sale before anyone else | Finding | Small |
+| Buyer registration | An acquirer says what he's looking for | A buyer list for his buy side work, and something true to tell sellers when buyers ask for firms like theirs | Trust | Small |
+| Ask first, anonymously, and book a call | Asks a question without naming the company, or books a confidential call | Fewer owners put off by having to identify themselves first | Trust | Small |
+
+Notes on each.
+
+- **How a buyer sees your company** is the one nobody in his niche offers as far as we've seen. The Companies House API
+  needs only a registered key and allows 600 requests every five minutes (Companies House developer guidelines). It can
+  read filing history, directors and how long they've been in post, registered loans and who owns the shares. Small
+  companies file limited accounts, so the report has to say what it can and can't see.
+- **Exit plan builder** speaks to the 41% thinking about an exit in five to ten years (Shawbrook), who won't fill in a
+  contact form today but will take a plan.
+- **Who's buying** and the **niche pages** only use sourced deals and numbers, the same rule as the deck.
+- **Partner page.** Whether accountants and solicitors already refer to him is a question for the second call.
+- **All of it needs a site we can build apps on.** Wix limits that, so ask whether he's happy to move off it. Our concept
+  site is already built outside Wix.
+
 ## Sources, each opened on 7 Oct 2026
 
 1. Call transcript, logs/meetings/2026-10-07-Acquitas-call.md
@@ -121,3 +159,4 @@ or "70 to 80% chance" claims about the AI. Say it ranks owners so he calls the l
 10. Companies House officer list API fields, https://developer-specs.company-information.service.gov.uk/companies-house-public-data-api/resources/officerlist?v=latest
 11. Companies House Free Company Data Product, https://download.companieshouse.gov.uk/en_output.html
 12. GOV.UK, Business Asset Disposal Relief, https://www.gov.uk/business-asset-disposal-relief
+13. Companies House developer guidelines, rate limits, https://developer.company-information.service.gov.uk/developer-guidelines
