@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Both sent 2026-10-07 16:14 UTC on Raka's "send them". Do not send again. -->
 <!-- Warm two line replies to connect note replies, 2026-10-07. Modelled on the approved Julien reply in state/drafted_2026-10-06-simple.md. Nothing sent. -->
 # Warm replies, 2026-10-07
 
