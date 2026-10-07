@@ -545,6 +545,21 @@ team all still apply. The block five rule (name the bigger outcome) applies.
   table (proof, cost, would they name it, would an incumbent take it), and the opener leads with the
   single most expensive one. The working brief is /tmp/claude-0/agents/FOUR_ANGLE_BRIEF.md, kept in
   state/four_angle_brief.md.
+- **Clues and inference, not only a smoking gun (Raka, 2026-10-07).** His words, "its not about the
+  ultimate like signal you can find but you can find like these clues here and there. Are the company
+  new, are they growing, whats going on in their industry, what MIGHT be going on in their company
+  right now is probably the most and best thing you should ask, instead of trying to root on ultimate
+  or direct signals." So when nothing direct turns up, the angle can be built from clues: how new the
+  company is, signs of growth, team size, the industry's known day to day pains (a transport firm with
+  five depots lives on quotes, dispatch and paperwork), and the persona (a young firm still winning its
+  first customers wants more sales, so an AI sales workflow fits by default). This replaces "no direct
+  signal, so NO_STRONG_ANGLE".
+  **How it stays true.** Every fact about THEM is still verified (founded date, size, sites, what they
+  sell). The inference is worded as what's typical or likely, never as something we saw: "firms running
+  five depots usually lose hours to...", "at your stage, most of the work is finding the next
+  customers", "I'd guess quotes and dispatch eat a lot of the week". Never "your team spends X" or "your
+  dispatch is manual" unless we saw it. The gate records each inference as an inference, with the clue
+  it rests on. Owner only, the incumbent check and the "they already sell it" check still apply.
 
 Everything Raka said while working Ferry de Haas and the batches before him, in one place. The
 detailed method is in `docs/opener-template.md` sections 3A and 3B. These are the rules.

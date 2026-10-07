@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Noah sent 2026-10-07 12:58 UTC. Nicolas, Adad and Katie superseded by state/drafted_2026-10-07-redraft.md. Emily Levy nudge still pending, not before 2026-10-09 12:00 UTC, kept in state/drafted_2026-10-09-emily.md. -->
 <!-- Four angle pass drafts, 2026-10-07. Red teamed. Nothing sent. Re pull each thread before sending. -->
 # Four angle pass, drafts for Raka, 2026-10-07
 
