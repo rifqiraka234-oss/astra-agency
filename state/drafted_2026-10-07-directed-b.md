@@ -234,3 +234,68 @@ I run Astra agency. We build websites and AI workflows for brands like Unilever,
 
 Shall I send you over what the Utee investor site and AI workflow looks like?
 ```
+
+### Jean-Christophe Conticello, GIANTS, ctc_iWGMxjeTYkzegg78v
+
+```gate
+lead: Jean-Christophe Conticello, founder and administrateur of GIANTS SRL BE 1034.718.202 (constituted 23 Feb 2026, Watermael-Boitsfort) per https://giants.eu/mentions-legales , ctc_iWGMxjeTYkzegg78v, leadId lea_FCoRDWL38K3XbpWeT, campaign cam_PryZp5LuvQv8NznHh only, jobTitle "Founder". CEO Michaël Touffu per https://giants.eu/notre-methode . Thread pulled 2026-10-07 ~17:10 UTC, 1 activity (our 24 Jul connect note), nextPage null, control ctc_ch3vFcKAkjQdMKDCg 2 items same minute, sentOnly "Conticello" one hit with lastRepliedAt null, myConversations 0, no SENT row in any state file
+site pass 1: 70 URLs by tools/crawl.py (29 from sitemaps, all 200, 35 distinct giants.eu pages), every page read, home, notre-methode, bootcamp, portfolio, agenda, media, ressources and its 17 video pages, mentions légales, CGU, CGV, privacy, cookies
+site pass 2: 70 URLs, second full crawl equal, site-audit.js desktop and phone screenshots taken but RENDER NOT TRUSTED (9 of 9 assets ours) and render-via-curl.js timed out twice, so no visual claim is made, desktop screenshot opened only to describe the hero, plus the iclosed application page rendered blank in Chromium (example.com control rendered), UNKNOWN
+deep analysis: An 11 month old firm that launched as a community in Nov 2025 with a public goal of 10,000 companies accompanied by 2050, incorporated in Feb 2026, now a paid monthly accelerator (Yellow, Green, Black Belt per the CGV) plus the Avilo Capital fund. Delivery is people, an audit on eight pillars incl. Outillage, a 12 month roadmap, an Operating Partner per company with three ops points and one strategy meeting a month, and specialists. The use cases list builds GIANTS put in place for members, a central CRM and ERP with conversion tracking (Carbelle), a revenue, margin and EBIT dashboard and a CRM (Dynamicare), a CRM pipeline forecast (Arbalett). Eight events from 14 Sep to 7 Dec bring in founders. More members means more build work landing on a team of about 15
+owner linkedin: route 1 curl https://www.linkedin.com/in/conticello/ 301 and /recent-activity/all/ 999. Route 2 web search "Jean-Christophe Conticello" GIANTS 2026, only New York Giants results. Route 3 search for GIANTS jobs and posts, nothing of theirs. Route 4 https://www.linkedin.com/company/giants-dojo/ via tools/social-audit.js 828 followers and WebFetch, 15 employees, ten posts newest 1 day ago, no jobs. Route 5 his own words, "Pourquoi j'ai créé GIANTS" on https://giants.eu/ and Forbes. Route 6 lemlist record, tagline "J'aide les entrepreneurs à bâtir des systèmes pour changer d'échelle", 37 roles
+contact linkedin: same person as the owner, the register, the team pages and the lemlist title agree, same six routes
+google news: tools/news.py fr 2026-10-07 ~17:30 UTC, "GIANTS Conticello" 0, "Jean-Christophe Conticello" 10 (L'Echo 2025-12-07, Sudinfo 2025-11-30, Forbes 2025-11-21, 21News 2025-11-20, La Lettre 2025-04-03, older Wemanity pieces), control Carrefour 99
+regional news: tools/news.py (Bruxelles OR Belgique) accélérateur PME 0 with the control full, plus BX1 2026-04-07 "Il y a du neuf" opened via tools/fetch-walled.py, programme blurb only
+industry news: tools/news.py accélérateur PME 94, Bpifrance cohorts (Croissance Bretagne 19 PME 2026-09-23, export accelerator 2026-02-18), Les Affaires 2026-10-07 on AI in SMEs, plus Parlons Finance 2025-11-25 opened
+sources:
+1. https://giants.eu/
+2. https://giants.eu/notre-methode
+3. https://giants.eu/bootcamp
+4. https://giants.eu/agenda
+5. https://giants.eu/portfolio
+6. https://giants.eu/media
+7. https://giants.eu/mentions-legales
+8. https://giants.eu/cgv
+9. https://www.forbes.be/fr/giants-lance-a-bruxelles-son-pari-de-devenir-le-plus-grand-club-dentrepreneurs-deurope/
+10. https://www.parlonsfinance.fr/articles/giants-veut-devenir-le-plus-grand-club-dentrepreneurs-europeens
+11. https://www.lecho.be/entreprises/private-equity/jean-christophe-conticello-j-etais-virtuellement-milliardaire-mais-mes-boites-etaient-des-chateaux-de-cartes/10638772.html (paywalled, standfirst read)
+12. https://bx1.be/radio-chronique/il-y-a-du-neuf-jean-christophe-conticello-giants/
+13. https://www.linkedin.com/company/giants-dojo/
+14. https://www.instagram.com/jcconticello/ and https://www.instagram.com/giants_eu/ via tools/social-audit.js
+15. https://www.youtube.com/@Jcconticello
+16. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fgiants.eu (tools/eu-view.py)
+17. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
+18. lemlist record lea_FCoRDWL38K3XbpWeT and thread ctc_iWGMxjeTYkzegg78v
+pains: 6 judged. (1) builds inside member roadmaps, CRM, ERP, tracking, dashboards, landing on a small specialist team as members grow, CHOSEN. (2) Operating Partner meeting prep as an AI workflow, real hours but an in house AI specialist and an anti over automation stance. (3) personal AI for him, Chief of Staff and a content team already. (4) website, a 2026 build, past Sep events under À venir, a tweak. (5) GDPR, PostHog cookie before a click, a setting. (6) social, company Instagram 250 next to his 12,769, by design
+chosen: (1), biggest, it grows with every member they add toward their stated goal, it's build capacity we sell, and it keeps their people on the human work they argue for, which the AI angles don't
+sweep website: tools/crawl.py twice 70 URLs and site-audit.js on https://giants.eu , a modern 2026 Next.js site, render not trusted so no visual claim, only /agenda past events still listed as upcoming, not chosen
+sweep gdpr: tools/eu-view.py from Stockholm on https://giants.eu , one PostHog cookie ph_phc_ before any click, third parties posthog, mux and youtube, a setting, not chosen
+sweep apps: https://giants.eu/notre-methode shows Operating Partner rituals that an AI workflow could prep, but Émeric Fund "Spécialiste AI & Marketing" is in house and the LinkedIn About argues against "l'automatisation à outrance", not chosen
+sweep social: tools/social-audit.js today, https://www.instagram.com/jcconticello/ 12,769 latest 2026-10-07, https://www.instagram.com/giants_eu/ 250 latest 2026-10-06, YouTube 379 subscribers 350 videos, LinkedIn company 828, daily and staffed, not chosen
+sweep squad: https://giants.eu/notre-methode use cases list a central CRM and ERP, conversion tracking and a margin dashboard that GIANTS put in place, the team is about 15 per the LinkedIn page, the goal is 10,000 companies per Forbes, CHOSEN
+thread: problem GIANTS puts in place builds like a central CRM and ERP, conversion tracking and margin dashboards for members | cost that build work likely lands on the few specialists members come for, and grows with each new roadmap | offer a squad of developers who build those CRM rollouts for members in half the time at half the price | link CRM, build
+lead read: Jean-Christophe reads that his own use cases show GIANTS setting up CRMs, ERPs and dashboards for members, so that build work probably sits on the same specialists members pay to advise them, and it grows with every founder he brings in, and gets offered a squad that builds those CRMs and roadmaps for his members, one thread
+claims:
+your use cases show GIANTS putting in place a central CRM and ERP, conversion tracking and margin dashboards for members, https://giants.eu/notre-methode "Ce que GIANTS a mis en place" with "CRM / ERP centralisé et tracking des conversions (Meta CAPI, Google Enhanced Conversions)" (Carbelle) and "dashboard CA / marge / EBIT" and "CRM" (Dynamicare), both crawls 2026-10-07
+the specialists your members come to for advice, https://giants.eu/notre-methode "Les spécialistes métiers interviennent sur le produit, la technologie, le marketing, les opérations, la finance" and the named list of eight
+INFERENCE, the build work likely lands on those few specialists, rests on the use cases saying GIANTS put the builds in place and the team being about 15 per https://www.linkedin.com/company/giants-dojo/ , with no developer, studio or integrator on any of the 35 pages (grep of both crawls, control "CRM" found on /notre-methode). Worded "likely", freelancers may do it
+meeting new founders at an event or bootcamp every few weeks, https://giants.eu/agenda eight dated events 14 Sep, 24 Sep, 12 Oct, 22 Oct, 27 Oct, 16 Nov, 17 Nov, 7 Dec 2026, and https://giants.eu/ "GIANTS organise des événements pour rencontrer des dirigeants"
+INFERENCE, the build work usually grows with each new roadmap, rests on the 12 month roadmap per company and the Outillage pillar on https://giants.eu/notre-methode and the 10,000 company goal on https://www.forbes.be/fr/giants-lance-a-bruxelles-son-pari-de-devenir-le-plus-grand-club-dentrepreneurs-deurope/ , worded "usually"
+it's advice your members pay for, https://giants.eu/cgv paid monthly Accelerator, https://giants.eu/ "Vous accédez à Jean-Christophe Conticello ... à des Operating Partners et à des spécialistes"
+efficy credential, docs/astra-master-context.md section 2A, "Sales & Channel Operations Manager, efficy (2026 to present). CRM vendor.", https://www.linkedin.com/in/raka-mulya-b92885196
+Raka's offer, "in half the time at half the price", his words in docs/RULES.md 4A rule 13, verbatim, a lead can hold us to it, https://www.linkedin.com/in/raka-mulya-b92885196
+recheck: 2026-10-07 ~17:40 UTC, thread re pulled with control, /notre-methode, /agenda, / and /cgv reread from pass 2, Forbes reopened. Disproof tried, searched all 35 pages for développeur, studio, partenaire, intégrateur and a build partner, none, searched for Barefoot&Co as his studio, a search summary says it no longer operates (unverified, not used). Red team caught that the site says GIANTS put the builds in place, so the message no longer says they wait on a hire. Facts hold, who does the build work today is unknown, thesis confidence MEDIUM
+```
+
+OPENER
+```
+Hi Jean-Christophe, saw GIANTS, looks interesting!
+
+However, your use cases show GIANTS putting in place a central CRM and ERP, conversion tracking and margin dashboards for members. This causes that build work to likely land on the same few specialists your members come to for advice.
+
+Especially, when you are meeting new founders at an event or bootcamp every few weeks, the build work usually grows with each new roadmap while it's advice your members pay for.
+
+I run Astra agency. We build websites and apps for brands like Unilever, AXA, Pertamina. I run sales and channel operations at efficy, a CRM vendor, so I've seen how CRM rollouts at growing companies go. Our squad of developers builds them in half the time at half the price.
+
+Shall I send you over what the build squad that delivers your members' roadmaps looks like?
+```
