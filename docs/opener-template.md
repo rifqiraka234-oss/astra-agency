@@ -155,6 +155,11 @@ slot has no source, the message does not get written.**
 - `I run Astra agency.` Fixed.
 - `We build [xyz] for brands like Unilever, AXA, Pertamina.` Only `[xyz]` changes. Plain
   and short, "websites", "websites and apps", "booking tools".
+- **Social media or branding angle (Raka, 2026-10-07).** `[xyz]` may be "branding and websites
+  and social media management" (written with "and" because the checker allows 2 commas per sentence and the client list already uses them). His words, "for social media angle we can always say we
+  build branding websites and social media management etc etc. On the bottom". This is his
+  call on how Astra describes its own offer, so the red team doesn't strip it back to
+  "websites and apps" again.
 - `I [proof].` One credential, and it has to carry the argument. Eten Maar "ran the
   inventory, so I know what an unsold night costs" works because a venue's unsold nights are
   inventory. "I had a food brand" alone would be decoration.

@@ -564,7 +564,9 @@ def check(path, replies=False):
              # The five block wording, 2026-09-24. Missed until batch 10 had three openers.
              "especially, when you are", "shall i send you over what the", "looks like?",
              # Raka's Build Squad offer, his words, 2026-09-25. Kept verbatim, never reworded.
-             "in half the time at half the price")
+             "in half the time at half the price",
+             # The social and branding block four, Raka, 2026-10-07. Fixed on purpose.
+             "branding and websites and social media management")
     c = Counter()
     for m in msgs:
         low = m.lower()
