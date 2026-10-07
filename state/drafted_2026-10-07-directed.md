@@ -302,7 +302,7 @@ However, your site has one customer story, Innov8's, and your Services page stil
 
 Especially, when you are taking XMP from telecoms into construction and renewables, the one telecoms story you have speaks to fewer of the contractors you'll meet.
 
-I run Astra agency. We build websites and AI workflows for brands like Unilever, AXA, Pertamina. I ran the account scoring and outreach workflows at Betty Blocks, a B2B software company, so I know how a young platform fills its demo calendar.
+I run Astra agency. We build websites and AI workflows for brands like Unilever, AXA, Pertamina. I built the lead scoring and follow up loops behind Betty Blocks' B2B sales, so I know how a young platform fills its demo calendar.
 
 Shall I send you over what the site and AI workflow for winning contractors looks like?
 ```
