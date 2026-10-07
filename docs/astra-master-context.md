@@ -205,6 +205,33 @@ prototype would look interesting; the company is a direct competitor to
 ASTRA; the current site is already commercially strong for the company's
 stage with no stronger ASTRA angle available.
 
+**ICP lesson, Tomatoworld (declined 2026-10-06, Raka: "good learnings this").**
+We got further with Tomatoworld than with almost any other lead: a concept in
+July, a call with Ank in September, and a full Dutch proposal on 22 Sep, chased
+on 28 Sep. Joyce van Dalen, one of the two people Ank had named as decision
+makers, declined by email (Gmail thread `1a0c952b46ef4aee`) for two reasons, in
+her words. "As a foundation, we unfortunately do not have the budget
+available", and "we are currently already in discussions with our existing
+website partner ... We will also take the points you raised." Three caution
+flags follow from that, to check on the first call and before any proposal is
+written, not after.
+
+1. **Foundations, charities and other non profits.** Ask about budget, and
+   where it comes from, before scoping anything. A real need and a warm team
+   don't add up to money. This applies to the open questions on Marek and
+   Dialogue Earth too.
+2. **An existing website or tech partner.** Ask who builds and maintains the
+   site now. If someone does, our diagnosis tends to become free input for
+   them. Tomatoworld said outright that they'll take our points to their
+   partner. The same pattern killed the Noël/IES angle (already being rebuilt
+   by Agence Web HDS). So name the incumbent early and pitch only what they
+   can't or won't do.
+3. **The decision maker isn't on the call.** Ank was the contact, while Aart
+   and Joyce decided. Joyce never answered our two August messages, and the
+   first time she wrote to us herself was the decline. So
+   get a decision maker into the call before a proposal goes out, or send a
+   short pre proposal that they read first.
+
 **Lead-quality factors:** relevance to an ASTRA proposition, commercial
 potential, visible urgency, access to a decision-maker, ability/willingness
 to invest, prototype leverage, likelihood of implementation, legal/

@@ -527,6 +527,24 @@ team all still apply. The block five rule (name the bigger outcome) applies.
 - **Write it simple (Raka, 2026-10-06).** "Everything sounds a bit too technical, make it much more
   simple, just go like AI workflow." Plain words, no tool names, no mechanics, the offer is "the AI
   workflow for ...". See state/drafted_2026-10-06-simple.md for the approved register.
+- **D, social media and branding, for any consumer or local business (Raka, 2026-10-06 and 07).**
+  Baked was judged on its website and legal pages, and the opener was about a broken Imprint
+  link. Raka asked "isnt it better for social media branding stuff", and he was right. A pickup
+  only cookie bakery had gone 157 days without an Instagram post, with 95 followers against Berlin
+  peers at 800 to 12,000, a wrong district on its homepage and three different names. So for a
+  shop, bakery, café, venue, salon, brewery, consumer brand or local service, the social and
+  brand lens is researched as deeply as the site: dated post history, every account, the Google
+  profile and its category, and a benchmark of 4 to 8 comparable local businesses opened at source
+  (state/accepts_2026-10-06/b9_baked.md is the model). Block four then reads "We build branding
+  and websites and social media management for brands like Unilever, AXA, Pertamina." A consumer
+  lead isn't NO_STRONG_ANGLE until D came back empty too.
+- **All four, every lead, then pick the most expensive (Raka, 2026-10-07).** "Basically for all
+  test: better website for sales or for growth / personal AI assistant workflow / AI apps for
+  company / or SOCIAL MEDIA AND INSTAGRAM. Judge where THE BIGGEST PROBLEM FOR THEM LAYS. The most
+  expensive problem." So B, C, A and D are each tested with live evidence and written into one
+  table (proof, cost, would they name it, would an incumbent take it), and the opener leads with the
+  single most expensive one. The working brief is /tmp/claude-0/agents/FOUR_ANGLE_BRIEF.md, kept in
+  state/four_angle_brief.md.
 
 Everything Raka said while working Ferry de Haas and the batches before him, in one place. The
 detailed method is in `docs/opener-template.md` sections 3A and 3B. These are the rules.

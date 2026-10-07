@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- All 4 sent 2026-10-06 18:58 UTC on Raka's "send all". Do not send again. -->
 <!-- Personal AI workflow pass (angle C) plus Bartek's new accept, 2026-10-06. Red teamed. Nothing sent. Each thread gets re pulled immediately before any send. -->
 # Personal AI pass and new accept, for Raka, 2026-10-06
 
