@@ -281,12 +281,12 @@ sweep gdpr: tools/eu-view.py from Stockholm, 2 Cloudflare cookies, HubSpot and G
 sweep apps: the AI workflow that builds and scores UK contractors from Companies House SIC codes, hiring and tender signals and drafts follow up, inference from 1 employee per the micro accounts on https://find-and-update.company-information.service.gov.uk/company/16179678/filing-history , CHOSEN with the website
 sweep social: tools/social-audit.js on https://www.linkedin.com/company/xmp-saas-ltd/ UNKNOWN (login wall), no other account in their HTML, not chosen
 sweep squad: one average employee and "a roadmap including AI assistance" on https://xmp.world/services , a real alternative flagged to Raka, not his angle
-thread: problem every demo goes through one contact form while he works four trade shows | cost show contacts likely go cold before anyone follows up | offer the AI sales workflow that finds, scores and follows up contractors and fills the demo calendar | link demo
-lead read: Robin reads that his demos all come through one form while he works four shows, so show contacts likely go cold, and that the contractors worth calling in his new sectors are ones he hasn't met, and gets offered the AI sales workflow that fills his demo calendar, one thread
+thread: problem the site and the four trade shows both wait for contractors to come to XMP | cost the growing contractors most likely to become customers never hear of XMP | offer the AI GTM workflow that finds, scores and reaches the right contractors | link customers
+lead read: Robin reads that his site and his shows both wait for contractors to come to him, so the growing ones most likely to become customers never hear of XMP, especially in the new sectors where he hasn't met them yet, and gets offered the AI GTM workflow that wins XMP customers, one thread
 claims:
 your site books every demo through one contact form, https://xmp.world/ and https://xmp.world/contact demo CTAs, per state/directed_2026-10-07/xmp_B.md
 four trade shows between September and November, https://xmp.world/resources/takeaways-from-connected-britain-2026 (9 to 10 Sep) plus their Solar and Storage Live, UK Construction Week and MATS (to 25 Nov) posts, xmp_B.md line 47
-INFERENCE, show contacts likely go cold, rests on 1 average employee per https://find-and-update.company-information.service.gov.uk/ XMP SaaS Ltd accounts and four shows in three months
+INFERENCE, the growing contractors most likely to become customers never hear of XMP, rests on all inbound channels (site form, trade show stands, 10% partner referrals) and 1 average employee per https://find-and-update.company-information.service.gov.uk/ XMP SaaS Ltd accounts and four shows in three months
 INFERENCE, the contractors worth calling first are mostly ones he hasn't met, rests on https://xmp.world/ hero and the homepage shift to utilities, renewables and construction from a telecoms base
 your site has one customer story, Innov8's, https://xmp.world/resources/tag/case-study lists only "Innov8 Transforms Business Management with XMP", https://xmp.world/case-study/innov8 , the only quotes on https://xmp.world/ and https://xmp.world/about are Adam Eatock of Innov8, three logos on the homepage (Innov8, JET, Total E&M) so the claim is story, not customer
 your Services page still shows a placeholder quote from a Sarah Johnson, https://xmp.world/services rendered 2026-10-07 16:17 UTC, "Sarah Johnson Operations Director, GreenTech Utilities" visible three times beside "Benefit one" to "Benefit four" and "Case Study Example ... Lets look to use a case study around design project management here", listed in https://xmp.world/sitemap.xml , not in the nav
@@ -302,11 +302,11 @@ OPENER
 ```
 Hi Robin, saw XMP, looks interesting!
 
-However, your site books every demo through one contact form, while you work four trade shows between September and November. This causes the contractors you meet at each show to likely go cold before anyone follows up.
+However, your site and your four autumn trade shows both wait for contractors to come to you. This causes the growing contractors most likely to become customers to never hear of XMP.
 
-Especially, when you are taking XMP from telecoms into construction and renewables, the contractors worth calling first are mostly ones you haven't met yet.
+Especially, when you are taking XMP from telecoms into construction and renewables, the contractors worth winning first are mostly ones you haven't met yet.
 
-I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I built the lead scoring and follow up loops behind Betty Blocks' B2B sales, so I know how a young platform fills its demo calendar.
+I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I built the lead scoring and follow up loops behind Betty Blocks' B2B sales, so I know how a young platform finds the buyers worth calling.
 
-Shall I send you over what the AI sales workflow for XMP's demo calendar looks like?
+Shall I send you over what the AI GTM workflow that wins XMP customers looks like?
 ```
