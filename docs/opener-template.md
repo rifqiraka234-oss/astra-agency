@@ -155,8 +155,8 @@ slot has no source, the message does not get written.**
 - `I run Astra agency.` Fixed.
 - `We build [xyz] for brands like Unilever, AXA, Pertamina.` Only `[xyz]` changes. Plain
   and short, "websites", "websites and apps", "booking tools".
-- **Social media or branding angle (Raka, 2026-10-07).** `[xyz]` may be "branding, websites
-  and social media management". His words, "for social media angle we can always say we
+- **Social media or branding angle (Raka, 2026-10-07).** `[xyz]` may be "branding and websites
+  and social media management" (written with "and" because the checker allows 2 commas per sentence and the client list already uses them). His words, "for social media angle we can always say we
   build branding websites and social media management etc etc. On the bottom". This is his
   call on how Astra describes its own offer, so the red team doesn't strip it back to
   "websites and apps" again.
