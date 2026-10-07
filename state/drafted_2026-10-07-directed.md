@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- All five sent 2026-10-07 16:54 UTC on Raka's "send them all". Do not send again. -->
 <!-- Directed angles 2026-10-07. Nothing sent. Re pull each thread and recheck the careers page before sending. -->
 # Directed angle drafts, 2026-10-07
 
@@ -242,7 +244,7 @@ Especially, when you are bringing Court Care to Hamburg's padel clubs on top of 
 
 I run Astra agency. We build websites and AI workflows for brands like Unilever, AXA, Pertamina. I built a food brand from zero and ran its partnerships myself, so I know how a new name gets its first partners to say yes.
 
-Shall I send you over what the AI workflow and site for winning clubs looks like?
+Shall I send you over what the AI workflow to win more club sales looks like?
 ```
 
 ### Robin Conway, XMP, ctc_7hNbkAjk4urRmcjji
