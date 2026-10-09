@@ -20,14 +20,7 @@ tip, then a name, email and comment form. The form posts to formspree.io/f/xykvv
 No booking link on the site (calendly 0, cal.com 0, termin 0). Nothing was submitted, so we don't know what Formspree shows
 after sending and the message doesn't claim it. The Impulssession is his own format, on his site.
 
-NUDGE
-```
-👀 Niklas, I ran the Solv(io)er myself
-
-I got my style, the two charts and a tip, then the form. It goes to the same inbox as your contact form, and there's nothing on the site to book a call, so every finished check waits for an evening when you've got time to reply.
-
-That's the part I'd build, a result that books the Impulssession on its own. Want me to send over a version?
-```
+SENT 2026-10-09 13:21 UTC, act_ToyymQyREcKY3yXDF. Do not send again.
 
 ### Chris Ryalls, ExpoCall, ctc_k2GNq2p5WKD64TYvx
 
@@ -36,14 +29,7 @@ load. ExpoCall's plumber page button "See how a 2am callout gets handled" links 
 still reads "so you can experience exactly what your exhibition leads will hear". His company page carries his own post from
 about three weeks ago, "Back in June we pivoted". URL not resent.
 
-NUDGE
-```
-👀 Chris, did the hotel page land?
-
-One thing I spotted on ExpoCall since. The plumber page's button, See how a 2am callout gets handled, opens a demo that still says it's exactly what your exhibition leads will hear. So a plumber clicking it for his 2am call gets the trade show pitch instead.
-
-The hotel page is still live where I sent it. What did you make of it?
-```
+SENT 2026-10-09 13:21 UTC, act_JWEY7ZtjHCMT7r5NP. Do not send again.
 
 ### Ramona Hendriks, Negentien80, ctc_hfHQfM3u3veSXZgS2
 
