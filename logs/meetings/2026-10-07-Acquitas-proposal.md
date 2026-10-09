@@ -45,3 +45,10 @@ Kyson replied "Your website price is too high" to the £2,500 website. Pages ope
 Verdict. £2,500 for a redesign, a custom calculator, SEO and a secure setup sits at the bottom of the agency range and
 inside the freelancer range before extras. It isn't high for the work. It's high against Kyson's own reference, the
 Wix site he built himself, which is the DIY band at £0 to £500.
+
+## Kyson's second reply, 9 Oct 13.21 UTC
+
+"Not great. I paid £500 for my website. Remember, I can add a personal profile myself and I'm sure if I spend 30 mins
+on Claude I can work out how to add the valuation tool as well." The timing offer didn't land and his anchor is £500.
+He says he paid £500, so our 6 Oct reading of the site as self built may be wrong, whoever made it. Reply drafted in
+state/drafted_2026-10-09-kyson-diy.md, not sent.
