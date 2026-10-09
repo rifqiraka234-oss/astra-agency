@@ -64,23 +64,46 @@ SUPERSEDED by version 4 below, Raka wants it sterner and shorter, with the vibe 
 
 Version 4. Sources, each opened 9 Oct. 404 Media 11 Sep 2025 "a growing profession". Fortune 23 Jul 2025, Replit agent wiped data during a "code and action freeze". Semafor 29 May 2025, 170 of 1,645 Lovable apps let anyone read users' names, emails, financial information. Veracode's own page, "introduced risky security flaws in 45% of tests". ConvertCalculator, "Wix doesn't allow for direct embedding via JavaScript. Instead, Wix uses an iFrame." Qualigraf link 200, not visually rechecked (site-audit RENDER NOT TRUSTED on our side). Flag, Qualigraf is a live prospect, call 4 Nov, concept not yet approved by Steven.
 
+SUPERSEDED by version 5 below, Raka's own structure. Kept as a quote.
+
+> Hi Kyson,
+>
+> The profile, sure, add it yourself.
+>
+> The calculator is a different story. Claude will give you a prototype, and sellers won't trust their numbers to a prototype. Fixing vibe coded sites is now a paid profession. Replit's AI wiped a founder's database during a code freeze. 170 of 1,645 apps built on Lovable left their users' names, emails and financial details open to anyone. Veracode found AI written code introduced security flaws in 45% of its tests. And Wix won't even run a pasted calculator directly.
+>
+> You're asking owners to trust you with their life's work. Your site has to earn that.
+>
+> A £500 build and a £2,500 build aren't the same thing. Here's one of ours.
+> https://astra-qualigraf-prototype.netlify.app/
+>
+> If cash is the issue before your first mandate, it's £500 now and £2,000 when it signs. Otherwise we start with the outreach setup and leave the site.
+>
+> Which is it?
+>
+> Raka
+
+Version 5. Raka's structure and wording, tidied. Same sources as version 4.
+
 REPLY
 
 ```
 Hi Kyson,
 
-The profile, sure, add it yourself.
+Sure, you can vibe code a lot of things these days. However, Claude will give you a prototype, and sellers won't trust their numbers to a prototype.
 
-The calculator is a different story. Claude will give you a prototype, and sellers won't trust their numbers to a prototype. Fixing vibe coded sites is now a paid profession. Replit's AI wiped a founder's database during a code freeze. 170 of 1,645 apps built on Lovable left their users' names, emails and financial details open to anyone. Veracode found AI written code introduced security flaws in 45% of its tests. And Wix won't even run a pasted calculator directly.
+You've probably seen the news. Fixing vibe coded sites is now a paid profession. Replit's AI wiped a founder's database during a code freeze. 170 of 1,645 apps built on Lovable left their users' names, emails and financial details open to anyone. Veracode found AI written code introduced security flaws in 45% of its tests.
 
-You're asking owners to trust you with their life's work. Your site has to earn that.
+That's where we come in.
+
+And on the calculator, Wix won't even run a pasted one directly. You're asking owners to trust you with their life's work. Your site has to earn that.
 
 A £500 build and a £2,500 build aren't the same thing. Here's one of ours.
 https://astra-qualigraf-prototype.netlify.app/
 
 If cash is the issue before your first mandate, it's £500 now and £2,000 when it signs. Otherwise we start with the outreach setup and leave the site.
 
-Which is it?
+What do you reckon?
 
 Raka
 ```
