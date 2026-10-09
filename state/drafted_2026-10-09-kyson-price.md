@@ -1,4 +1,7 @@
-# Kyson Charles, Acquitas. Reply to "Your website price is too high". 2026-10-09. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Kyson Charles, Acquitas. Reply to "Your website price is too high". 2026-10-09. SENT, version 3.
+
+SENT 9 Oct 13.16.06 UTC from rifqiraka234@gmail.com, Gmail message 1a120ce82b315172, reply all in thread 1a11573cab3ea728 to Kyson's 1a120b1eecb77b4b. To info@acquitaspartners.com, cc raka@astraagency.nl, lunaraisyamulya@gmail.com, Joshuavanzeelt@gmail.com, josh@astraagency.nl. Raka's word, "just say its a good challenge so let me be straight.. and then reply on the same thread to him and also the same ccs". Thread pulled right before (4 messages, Kyson's newest) and LinkedIn (19, unchanged). Facts rechecked minutes before, Whito "An agency brochure site costs £3,000 to £5,000", acquitaspartners.com generator "Wix.com Website Builder". Sent text read back from Gmail and matches the draft. Gmail made the subject "Re: Re:". Do not send again.
 
 ## The thread, read in full on 9 Oct
 
@@ -78,7 +81,7 @@ REPLY
 ```
 Hi Kyson,
 
-Fair challenge, so let me be straight about where the number comes from.
+Good challenge, so let me be straight about where the number comes from.
 
 We looked at what UK agencies charge. A standard brochure site typically runs £3,000 to £5,000. That's before SEO or anything custom.
 
