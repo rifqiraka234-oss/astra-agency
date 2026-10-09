@@ -52,3 +52,11 @@ Wix site he built himself, which is the DIY band at £0 to £500.
 on Claude I can work out how to add the valuation tool as well." The timing offer didn't land and his anchor is £500.
 He says he paid £500, so our 6 Oct reading of the site as self built may be wrong, whoever made it. Reply drafted in
 state/drafted_2026-10-09-kyson-diy.md, not sent.
+
+## Our second answer on price, sent 9 Oct 13.56 UTC
+
+Gmail 1a120f3ba5f14855, reply all, same four on copy. Vibe coding risks (404 Media, Fortune on Replit, Semafor on
+Lovable), Luna on the redesign, Wix won't run a pasted calculator directly (ConvertCalculator), the Qualigraf concept as
+a reference build, then £500 now and £2,000 when his first mandate signs, or outreach setup first. No backstop on the
+deferred £2,000. If he takes it, the contract needs the trigger defined (what counts as "signs") and Raka's decision on a
+long stop date. Qualigraf (Steven Garratt, call 4 Nov) has not approved that concept, so the link is now with Kyson.

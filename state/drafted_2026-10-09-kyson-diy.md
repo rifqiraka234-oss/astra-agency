@@ -1,6 +1,7 @@
-# Kyson Charles, Acquitas. Reply to "Not great. I paid £500 for my website". 2026-10-09. DRAFT, not sent.
+<!-- GATE ARCHIVED -->
+# Kyson Charles, Acquitas. Reply to "Not great. I paid £500 for my website". 2026-10-09. SENT, version 5.
 
-Not sent. Needs Raka's explicit word, and his call on the numbers and the backstop flagged below.
+SENT 9 Oct 13.56.46 UTC from rifqiraka234@gmail.com on Raka's "send", Gmail message 1a120f3ba5f14855, reply all in thread 1a11573cab3ea728 to Kyson's 1a120d37e8116a1c. To info@acquitaspartners.com, cc raka@astraagency.nl, lunaraisyamulya@gmail.com, Joshuavanzeelt@gmail.com, josh@astraagency.nl. Thread pulled right before (6 messages, Kyson's newest) and LinkedIn (19, unchanged, synced 13.46 UTC). Body copied byte for byte from the version 5 block below. Qualigraf link 200 at send. Thread after, 7 messages, one copy. Raka sent it with the Qualigraf link and "That's where we come in" after both were flagged. Offer made, £500 now and £2,000 when his first mandate signs, no backstop, or outreach setup first. Do not send again.
 
 ## The thread, read in full on 9 Oct, after his reply
 
