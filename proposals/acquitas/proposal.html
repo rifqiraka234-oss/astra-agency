@@ -124,6 +124,10 @@
     .field { margin-bottom: 0.5mm; }
     .field b { font-weight: 600; color: var(--blue); }
     .draft { font-style: italic; margin-top: 1mm; }
+    .build-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 6mm; margin-top: 2mm; }
+    .build-card { border-top: 1pt solid var(--blue); padding-top: 2mm; }
+    .build-card h3 { margin-top: 0; }
+    .build-card p { margin-bottom: 1mm; }
     hr.divider { border: 0; border-top: 0.75pt solid var(--blue); opacity: 0.35; margin: 2mm 0; }
 
     table { width: 100%; border-collapse: collapse; }
@@ -303,8 +307,24 @@
     <div class="timeline-item"><div class="timeline-step">From week 4</div><div class="small">You run it, we're on hand</div></div>
   </div>
 
-  <hr class="divider">
+</section>
+
+<section class="page">
   <div class="section">
+    <h2>Website builds we can add</h2>
+    <p>Each one is a separate piece of work, quoted before we start.</p>
+    <div class="build-grid">
+      <div class="build-card"><h3>Fee comparison calculator</h3><p>Shows an owner what they keep under each fee, with your contribution beside it. It answers the question that stops sellers.</p><p class="small">Price to be confirmed</p></div>
+      <div class="build-card"><h3>Sale readiness score</h3><p>Eight questions, a score out of 100, and a dated checklist of what to fix first. Owners come back to it.</p><p class="small">Price to be confirmed</p></div>
+      <div class="build-card"><h3>Founder video</h3><p>A short film of you explaining the firm and your background. Sellers trust a face before they trust a website.</p><p class="small">Price to be confirmed</p></div>
+      <div class="build-card"><h3>Private enquiry route</h3><p>A discreet form for starting a private conversation. The owner's calculator results reach you with their details.</p><p class="small">Price to be confirmed</p></div>
+      <div class="build-card"><h3>Visitor alerts</h3><p>A notice when a named owner visits the site, linked to your outreach. This is the visitor tool we'll build next.</p><p class="small">Price to be confirmed</p></div>
+      <div class="build-card"><h3>Monthly market note</h3><p>A short note on what buyers are paying in your sectors, sent to owners who opt in. It keeps your list warm.</p><p class="small">Price to be confirmed</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+
     <h2>Further builds, agreed when you're ready</h2>
     <table class="later">
       <tr><td>Buyer's view check</td><td>A one page view of how a buyer sees the business</td><td>£1,500</td></tr>
@@ -319,6 +339,7 @@
       <tr><td>Inbound and sales outreach</td><td>We manage your inbound and outbound sales outreach for you</td><td>Price to be confirmed</td></tr>
     </table>
   </div>
+
 </section>
 
 </body>

@@ -81,3 +81,10 @@ Files: `proposal.html`, `proposal.pdf` (2 pages), `img/concept-site.png`, `img/v
 ## Revision 10
 
 - Added a "Timeline" heading above the three-step timeline. Page 2 ends at 1106px of 1123px, two pages.
+
+## Revision 11: three pages
+
+- Added six website builds in a two column grid on a new page 3: fee comparison calculator, sale readiness score, founder video, private enquiry route, visitor alerts, monthly market note. Each is "Price to be confirmed".
+- The further builds table moved to page 3 under the new grid to make room.
+- **The document is now three pages, which goes beyond the two pages in the brief.** Page 1 ends at 1054px, page 2 at 814px, page 3 at 692px. To return to two pages, the grid and table would need to shrink or some builds would need to go.
+- Prices for the six new builds are for Raka to set.
