@@ -70,3 +70,10 @@ Files: `proposal.html`, `proposal.pdf` (2 pages), `img/concept-site.png`, `img/v
 
 - Removed the closing paragraph, the "Raka" sign-off and the sources footer, as asked. The page now ends with the further builds table.
 - The sources line is gone, so the CapEQ and lemlist and Claude pricing references no longer have a citation on the page. The lemlist and Claude prices still carry "list prices on 7 October 2026". Put the sources line back if the page needs it.
+
+## Revision 9
+
+- Added a divider line between each section: goals, challenges, website, outreach, strategy session, price summary, timeline, further builds.
+- Removed the "Prices in pounds sterling, excluding VAT" note.
+- Cut filler: "Three elements, together £3,500, each serving..." is now "Three elements, together £3,500". "A focused setup ... remain in control" is now "A simple setup ... stay in control". "Works beautifully" is now "Works". The brand sentence is shorter.
+- Two pages. Page 1 ends at 1054px, page 2 at 1073px of 1123px.
