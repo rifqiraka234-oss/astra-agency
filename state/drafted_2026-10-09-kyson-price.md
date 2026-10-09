@@ -69,7 +69,7 @@ flags any money figure that isn't a loss figure. Kept here on Raka's live instru
 The brand line is the opener template's fixed list. The split is "half now and half when your first mandate signs",
 Raka to confirm.
 
-Ending rewritten on Raka's own words, 9 Oct, "so i'd rather not cut corners on it especially for a business that requires credibility like yours. what i can do is make the timing easier so we can fit your budget. How does that sound?". Competitor line added, from capeq.com opened 7 Oct, "No hidden fees. No surprise invoices." and "Our free Exit Readiness Quiz gives you a personalised score in about five minutes." Recheck both on capeq.com before sending.
+Ending rewritten on Raka's own words, 9 Oct, "so i'd rather not cut corners on it especially for a business that requires credibility like yours. what i can do is make the timing easier so we can fit your budget. How does that sound?". Competitor line added, from capeq.com opened 7 Oct, "No hidden fees. No surprise invoices." and "Our free Exit Readiness Quiz gives you a personalised score in about five minutes." Rechecked 9 Oct. "No hidden fees. No surprise invoices." is on capeq.com under "Transparent at every stage" in the "Three principles, every engagement" section, partway down the page, not the headline, so "leads with" was cut. It's CapEQ's own claim about itself. The quiz is only mentioned in their FAQ text. No link on the homepage, nothing in their sitemap and nothing in a web search, so it's unconfirmed and was cut from the email.
 
 Kyson Charles, Acquitas. ctc_CDeGfHHs3eCrYJR32
 
@@ -84,7 +84,7 @@ We looked at what UK agencies charge. A standard brochure site typically runs £
 
 What you're getting goes well beyond a website. A full redesign of your brand and site, so a seller trusts you before the first call. The value calculator, which is a web app in its own right and brings owners to you with their numbers already in your inbox. SEO, so owners looking for an adviser find you. And all of it on proper infrastructure rather than a template builder, so it's fast and secure. We build for brands like Unilever, AXA, Pertamina. Acquitas gets the same standard.
 
-The advisers you're up against are already there. CapEQ, for one, leads with no hidden fees and a free exit readiness quiz.
+The advisers you're up against already make a point of it. CapEQ's homepage says "No hidden fees. No surprise invoices."
 
 You'll know this one from the other side. Sellers baulk at your fee until they see what a well run sale gets them. A site that wins you one extra mandate pays for itself many times over, and it keeps working for years.
 
