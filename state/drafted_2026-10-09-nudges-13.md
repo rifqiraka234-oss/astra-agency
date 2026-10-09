@@ -1,4 +1,6 @@
-# Thirteen nudges, 2026-10-09. NOT SENT.
+# Thirteen nudges, 2026-10-09. Niklas and Chris SENT, the rest NOT SENT.
+
+Raka 9 Oct, "yeah do it" to the plan. Niklas and Chris sent. Ramona, Melissa, Matthias and Nick get a quick build first and a delivery message instead of these nudges. Ryan and Michael softened. The rest wait for his word.
 
 Raka, "nudge these people ... create drafts". Niklas, Chris and the eleven cold openers from 1 to 5 Oct.
 
@@ -90,9 +92,9 @@ No new fact found.
 
 NUDGE
 ```
-👀 Ryan, Lena K is still calling Flexo Trade Print a SaaS solution
+👀 Ryan, a quick one on the Flexo Trade Print homepage
 
-She's one of six reviews on the homepage, next to an IT director praising the onboarding. The other four are about your plates, and a printer who spots two reviews written for software starts doubting those four too.
+Two of the six review cards are still the theme's own samples, Lena K and an IT director, both talking about software. The other four, about your plates, read well, and they're the ones a printer would doubt if they spotted the two side by side.
 
 Shall I send you the rebuilt version, or is a new site already underway?
 ```
@@ -202,9 +204,9 @@ sbjs_* cookies come from WooCommerce's sourcebuster and order attribution script
 
 NUDGE
 ```
-👀 Michael, I found where MIACC's tracking cookies come from
+👀 Michael, a small fix I spotted on MIACC
 
-They're set by the WooCommerce shop plugin, and the shop has nothing in it. So visitors are tracked before they agree to anything, for a store that doesn't sell, and there's still no privacy page for a student about to send you their dissertation.
+The WooCommerce shop plugin is still switched on with nothing in the shop, and it's what sets most of the tracking cookies before visitors agree to anything. Switching it off clears those, and a short privacy page covers the rest for a student about to send you their dissertation.
 
 Happy to send the privacy safe version over if it's useful.
 ```
