@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Not sent. Raka chose the original long versions instead, sent 2026-10-09. Do not send. -->
 <!-- 70 word versions on Raka's ask 2026-10-09 ('can you make all of them 70 words max'). Block three (Especially) dropped to fit, so check-drafts' 95 word floor and five block rule are knowingly not met. Gates and facts unchanged from state/drafted_2026-10-07-directed-b.md. Nothing sent. -->
 # Directed batch 2, 70 word versions, 2026-10-09
 

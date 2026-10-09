@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- All five sent 2026-10-09 11:45 to 11:46 UTC on Raka's "just send the original". Do not send again. -->
 <!-- Directed angles batch 2, 2026-10-07. Nothing sent. Re pull each thread before sending. leadStatus 'invitation withdrawn' on Niklas, Debby, Orion is a no-op label: the activity log shows linkedinInviteAccepted (25 Jul, 2 Aug, July) before the withdraw step ran. -->
 # Directed angle drafts, batch 2, 2026-10-07
 
