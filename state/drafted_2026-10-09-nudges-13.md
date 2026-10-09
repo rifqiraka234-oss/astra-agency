@@ -106,6 +106,8 @@ that announces Infowitz, so the message doesn't say "nowhere". https://lawarroom
 while avoiding the limitations and high costs of proprietary systems", the French page says the same. Newsletter n°04
 "Infowitz est désormais disponible". No new fact found.
 
+HELD 2026-10-09 15:20 UTC on the send all. The vision page quote couldn't be reopened before sending, our browser couldn't load lawarroom.ai four times (proxy retries and timeouts, the page text only exists after scripts run). Last good read 12:30 UTC today by the checker. Re-check the quote, then send.
+
 NUDGE
 ```
 👀 Emmanuel, one more thought on Infowitz
