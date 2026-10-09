@@ -41,14 +41,7 @@ no calculator anywhere. Still 11 dealers. Nothing on the site changed since 18 M
 opener (the measuring visit step, routing to the nearest showroom) couldn't be reopened today, Wayback unreachable, so this
 nudge doesn't use them.
 
-NUDGE
-```
-👀 Ramona, the curtain calculator link still shows page not found
-
-Your N80 page still tells shoppers they can price their curtains in seven steps on the website. Someone comparing prices at home in the evening follows that, hits the error page, and prices them wherever there's a working tool. None of your eleven dealers ever hears from them.
-
-Shall I send the calculator over, or is a new one already being built?
-```
+SUPERSEDED, never sent. The delivery version went instead on 2026-10-09 14:41 UTC, act_t3mQo2mbB3zNjB2Qg.
 
 ### Nick Richards, Enrich Education, ctc_MDdiddoYGMJGaDFHn
 
@@ -58,14 +51,7 @@ candidate basis" and "candidate/worker daily pay on costs (National Insurance, p
 https://www.enrichedu.co.uk/jobs/ks2-lsa "KS2 LSA Camden, London £105 - £120 Per Day", top of /vacancies, sitemap lastmod
 8 Oct. The school isn't named, so the message says "if".
 
-NUDGE
-```
-👀 Nick, a thought on the Camden KS2 LSA role
-
-The advert gives the day rate. If that school's in a trust, DfE now tells it that agencies must break their charges down per candidate, the pay, the on costs and the fee, so every trust booking comes with that breakdown to write up.
-
-Would a small tool that builds it from a booking be useful?
-```
+SUPERSEDED, never sent. The delivery version went instead on 2026-10-09 14:40 UTC, act_yeGb6j3BHxam5Jm8a.
 
 ### Arnaud Tescari, Maison Goustine, ctc_paKBTrRbhpgYQ2mBd
 
@@ -74,14 +60,7 @@ goes to the quote form. Déliss (13006 Marseille) still has a working "Ajouter a
 Tuesday 6 Oct, https://www.instagram.com/p/DeJib6DjNP-/ "Du petit-déjeuner d'affaires au grand diner de mariage, en passant
 par vos cocktails d'entreprise".
 
-NUDGE
-```
-👀 Arnaud, saw Tuesday's post on business breakfasts and company cocktails
-
-If that post brings a company to the site, the coffrets repas still lead to one button, CONTACT & DEVIS. An office manager booking Thursday's lunch late in the afternoon wants it settled before logging off, and Déliss in Marseille lets them drop a tray in a basket there and then.
-
-Want to see the coffret order page? No worries if it's already planned.
-```
+SENT 2026-10-09 14:41 UTC, act_mRAZNcX2ZZFq23fnJ. Do not send again.
 
 ### Ryan Eastwood, Flexo Trade Print, ctc_S5TaMLkjQfDeiWrcq
 
@@ -90,14 +69,7 @@ Re-checked three ways (HTML, render looked at, cache bypass). https://flexotrade
 made a huge difference", next to four about plates and service. Same text on another site using the theme, so it's stock.
 No new fact found.
 
-NUDGE
-```
-👀 Ryan, a quick one on the Flexo Trade Print homepage
-
-Two of the six review cards are still the theme's own samples, Lena K and an IT director, both talking about software. The other four, about your plates, read well, and they're the ones a printer would doubt if they spotted the two side by side.
-
-Shall I send you the rebuilt version, or is a new site already underway?
-```
+SENT 2026-10-09 14:42 UTC, act_pLvJZFAvr7pyCjnju. Do not send again.
 
 ### Melissa Carman, Jan Forster Estates, ctc_fyP4ArYJKGDxjPL8u
 
@@ -106,14 +78,7 @@ Book a Valuation form. 226 pages crawled, no instant valuation tool or link anyw
 Residential, title "Estate & Letting Agents in Great Park, High Heaton & Gosforth", homepage "Free 60-second valuation!". We
 never ran Brunton's tool, so the message says it offers one, not that it gives a figure.
 
-NUDGE
-```
-👀 Melissa, Brunton's homepage offers a free 60 second valuation
-
-Yours still promises an instant online valuation and then asks for a callback. A Gosforth owner who wants a number tonight tries the 60 second one, and that agent's the first to hear the house might be for sale.
-
-Worth a look at the instant valuation tool, or is the callback working for you?
-```
+SUPERSEDED, never sent. The delivery version went instead on 2026-10-09 14:40 UTC, act_8Ar3jzRxd8g5JEnyW.
 
 ### Matthias Ufer, Schumacher Verfahrenstechnik, ctc_3L5hXyZ8hWrh8tAGC
 
@@ -123,14 +88,7 @@ it (their own sitemap dates). So "German free text box" is no longer true and is
 "Angebote innerhalb von 24 Stunden" is still on /schweissexpertise. Tuesday 6 Oct is this week. /inquiry gets re-checked right
 before sending, they're editing it.
 
-NUDGE
-```
-👀 Matthias, saw the new English inquiry page went live this week
-
-That sorts the language. The pressure, flow and material data still come in as one free text box, an upload or the mixer sheet that goes back by fax or mail, so someone still types each buyer's numbers in before the 24 hour quote can start.
-
-Shall I send over the spec form with those as fields?
-```
+SUPERSEDED, never sent. The delivery version went instead on 2026-10-09 14:41 UTC, act_t2CgNErWNKFLHSL6G.
 
 ### Mandy Kerley, Trickle, ctc_ZGv33qKajKqMjkqH9
 
@@ -139,14 +97,7 @@ onboarding support", and "At £995, the entry Sprint sits within most day-to-day
 procurement process needed to get started". Home page "Champions trained". Her bio now ends "so the rest of the team can focus
 on customer outcomes", so the "two diaries" line from the opener is dropped. Paul Reid's new directorship on 5 Oct isn't used.
 
-NUDGE
-```
-👀 Mandy, a thought on the entry sprint
-
-It's priced under most approval thresholds, so a buyer can start without a lengthy procurement. Every yes still comes with its own customer success lead, setup, onboarding and Champion training though, so the easier the sprint gets to buy, the faster those hours stack up.
-
-Would the sprint setup tool help here, or have you got that side covered?
-```
+SENT 2026-10-09 14:42 UTC, act_CMuEm294cbHDT7raX. Do not send again.
 
 ### Emmanuel Rivière, La Warroom, ctc_bF7KcGsTjT23mo3ye
 
@@ -154,6 +105,8 @@ Re-checked. All 34 pages rendered, none names Infowitz, controls found. But /act
 that announces Infowitz, so the message doesn't say "nowhere". https://lawarroom.ai/vision-en/ "We remain tool agnostic ...
 while avoiding the limitations and high costs of proprietary systems", the French page says the same. Newsletter n°04
 "Infowitz est désormais disponible". No new fact found.
+
+HELD 2026-10-09 15:20 UTC on the send all. The vision page quote couldn't be reopened before sending, our browser couldn't load lawarroom.ai four times (proxy retries and timeouts, the page text only exists after scripts run). Last good read 12:30 UTC today by the checker. Re-check the quote, then send.
 
 NUDGE
 ```
@@ -172,14 +125,7 @@ and never mentions ChatGPT), so it isn't repeated. New, of 63 blog posts fetched
 return the shell, "Top 10 des meilleures agences IA en France en 2026" (30 Sep) and the data agency version (29 Sep). Both
 predate our message, so no "since".
 
-NUDGE
-```
-👀 Michaël, your Top 10 des meilleures agences IA en France post has the same problem
-
-ClaudeBot and PerplexityBot get your homepage shell instead of it, like the references page and the 17 case studies, while 61 of your other posts come through fine. A ranking like that is exactly what an AI answer would quote, and those crawlers can't read it.
-
-Shall I show you the version they can read?
-```
+SENT 2026-10-09 14:42 UTC, act_Gsgz56DPDixP2oH2T. Do not send again.
 
 ### Dr Shirah Z Mansaray, Themis Crown Legal Academy, ctc_SYhzxxMTBCWtodyt6
 
@@ -187,14 +133,7 @@ Re-checked. Still no Academy site, 9 web searches, the firm site's /academy 404,
 "academy" or "masterclass". New, https://www.themiscrown.com/post/jury-trials-scrapped-england-wales-government-u-turn
 "Published 7 October 2026", which was Wednesday.
 
-NUDGE
-```
-👀 Shirah, saw the jury trials piece go up on the Themis Crown site on Wednesday
-
-The site's clearly being kept up, and there's still nothing on it about the Academy. A graduate in Leeds or Cardiff who hears about a masterclass and searches for it finds the firm and no way to sign up.
-
-Would it help to see what the Academy site could look like?
-```
+SENT 2026-10-09 14:42 UTC, act_rBCQYJwWTmMWRAkQ4. Do not send again.
 
 ### Dr Michael Isichei, MIACC, ctc_f4gwBMMyfBQjgz9CG
 
@@ -202,11 +141,4 @@ Re-checked. 11 cookies set before any click, seen from Stockholm and from the US
 /privacy-policy/ 404. "Personal statement formation and review" and "Thesis and dissertation editing" still offered. New, the
 sbjs_* cookies come from WooCommerce's sourcebuster and order attribution scripts, and the store API returns no products.
 
-NUDGE
-```
-👀 Michael, a small fix I spotted on MIACC
-
-The WooCommerce shop plugin is still switched on with nothing in the shop, and it's what sets most of the tracking cookies before visitors agree to anything. Switching it off clears those, and a short privacy page covers the rest for a student about to send you their dissertation.
-
-Happy to send the privacy safe version over if it's useful.
-```
+SENT 2026-10-09 14:42 UTC, act_QJjk49g9DACDg64mn. Do not send again.

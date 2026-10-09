@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>NEGENTIEN80 | Gordijnencalculator</title>
+<meta name="description" content="Reken de prijs van je gordijnen uit in zeven stappen en plan je inmeetafspraak bij de full service dealer het dichtst bij jou.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#020303; --paper:#ffffff; --off:#f8f8f7; --line:#d4d4d4; --line2:#e7e5e0;
+  --grey:#5c5c5c; --grey2:#8a8a8a; --linen:#9a8f72; --linen-l:#ebe7de; --linen-xl:#f3f1ec;
+  --sans:"Space Grotesk",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --gut:16px; --max:1240px;
+}
+@media (min-width:720px){:root{--gut:32px}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--sans);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-weight:400;letter-spacing:-.02em;margin:0}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.kicker{font:500 12px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--grey)}
+.mono{font-family:var(--mono)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* header */
+.top{position:absolute;top:0;left:0;right:0;z-index:5;color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.top .logo img{height:30px;width:auto;filter:invert(1)}
+.top nav{display:flex;gap:22px;align-items:center;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.top .navlink{display:none}
+@media (min-width:720px){.top .navlink{display:inline}}
+.tag{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,.6);padding:7px 9px;border-radius:2px;white-space:nowrap}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;color:#fff;background:#2b2722}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero picture img{object-position:62% 50%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,9,8,.78) 0%,rgba(10,9,8,.5) 45%,rgba(10,9,8,.08) 80%),linear-gradient(0deg,rgba(10,9,8,.7) 0%,rgba(10,9,8,0) 45%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:28px}
+.hero .kicker{color:rgba(255,255,255,.82)}
+.hero h1{font-weight:300;font-size:clamp(40px,7.4vw,96px);line-height:.98;max-width:12ch;margin:14px 0 22px}
+.hero .lead{font-size:clamp(17px,1.6vw,20px);line-height:1.5;max-width:40ch;color:rgba(255,255,255,.9)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:500 14px/1 var(--sans);text-transform:uppercase;letter-spacing:.06em;text-decoration:none;padding:16px 20px;border:1px solid currentColor;border-radius:2px;background:transparent;color:inherit;cursor:pointer}
+.btn.solid{background:#fff;color:var(--ink);border-color:#fff}
+.btn.ink{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn .arr{display:inline-block;width:18px;height:1px;background:currentColor;position:relative}
+.btn .arr::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
+.concept{font:400 12px/1.5 var(--mono);color:rgba(255,255,255,.75);margin-top:18px;max-width:52ch}
+.hcard{display:none}
+@media (min-width:1100px){.hcard{display:block;position:absolute;right:var(--gut);bottom:128px;width:300px;background:#fff;color:var(--ink);padding:20px 20px 18px;z-index:3}
+.hero .hcard .kicker{margin-bottom:12px;color:var(--grey)}
+.hcard .nm{font-size:18px;line-height:1.2}
+.hcard .sp{font:400 12px/1.5 var(--mono);color:var(--grey);margin-top:6px}
+.hcard .am{font-size:40px;line-height:1;letter-spacing:-.02em;margin-top:16px}
+.hcard .bt{font:400 11px/1.4 var(--mono);color:var(--grey);margin-top:6px}
+.hcard a{display:block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line2);font-size:13px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none}
+.hcard a:hover{text-decoration:underline;text-underline-offset:3px}
+}
+.stepindex{list-style:none;margin:40px 0 0;padding:16px 0 0;border-top:1px solid rgba(255,255,255,.35);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px}
+@media (min-width:720px){.stepindex{grid-template-columns:repeat(7,minmax(0,1fr))}}
+.stepindex a{display:block;text-decoration:none;font-size:14px;line-height:1.3}
+.stepindex b{display:block;font:500 11px/1 var(--mono);letter-spacing:.08em;color:rgba(255,255,255,.7);margin-bottom:6px}
+.stepindex a:hover span{text-decoration:underline;text-underline-offset:3px}
+
+/* route */
+.route{padding:96px 0 88px}
+.route h2,.sec-h{font-size:clamp(30px,4.2vw,54px);line-height:1.04;max-width:20ch;margin:14px 0 0}
+.route .intro{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+@media (min-width:960px){.route .intro{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:end}}
+.route .intro p{color:var(--grey);max-width:46ch}
+.path{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:0;position:relative}
+.path li{position:relative;padding:0 0 28px 44px}
+.path li::before{content:"";position:absolute;left:12px;top:26px;bottom:0;width:1px;background:var(--line)}
+.path li:last-child::before{display:none}
+.path .dot{position:absolute;left:0;top:0;width:25px;height:25px;border:1px solid var(--ink);border-radius:50%;background:#fff;display:grid;place-items:center;font:500 11px/1 var(--mono)}
+.path li.here .dot{background:var(--ink);color:#fff}
+.path h3{font-size:22px;line-height:1.1}
+.path .where{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--grey);margin:6px 0 8px}
+.path p{color:var(--grey);font-size:15px;max-width:30ch}
+.path .youare{display:inline-block;margin-top:10px;font:500 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;background:var(--linen-l);padding:6px 8px}
+@media (min-width:960px){
+  .path{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+  .path li{padding:44px 0 0}
+  .path li::before{left:26px;right:-24px;top:12px;bottom:auto;width:auto;height:1px}
+  .path li:last-child::before{display:none}
+}
+
+/* calculator */
+.calc{background:var(--off);padding:88px 0 72px;border-top:1px solid var(--line2)}
+.calc-head{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin-bottom:40px}
+@media (min-width:960px){.calc-head{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:end}}
+.calc-head p{color:var(--grey);max-width:44ch}
+.calc-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media (min-width:980px){.calc-grid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:start}}
+.stage{background:#fff;border:1px solid var(--line2)}
+@media (min-width:980px){.stage{position:sticky;top:20px}}
+.scene{display:block;width:100%;height:auto;background:#f6f4ef}
+.stage-ctrl{display:flex;align-items:center;gap:14px;padding:14px 18px;border-top:1px solid var(--line2)}
+.stage-ctrl label{font:500 11px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--grey);white-space:nowrap}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:22px;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:1px;background:var(--ink)}
+input[type=range]::-moz-range-track{height:1px;background:var(--ink)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#fff;border:1px solid var(--ink);margin-top:-9px}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#fff;border:1px solid var(--ink)}
+.ticket{padding:18px;border-top:1px solid var(--line2);font-family:var(--mono);font-size:13px}
+.ticket-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+details.tk summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline}
+details.tk summary::-webkit-details-marker{display:none}
+details.tk summary b{font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+details.tk summary span{color:var(--grey);font-size:11px}
+details.tk summary .tog{border-bottom:1px solid currentColor}
+details.tk[open] summary{margin-bottom:10px}
+@media (min-width:980px){details.tk summary .tog{display:none}}
+.ticket-h b{font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.ticket-h span{color:var(--grey);font-size:11px}
+.ticket dl{margin:0;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);border-top:1px dashed var(--line)}
+.ticket dt,.ticket dd{margin:0;padding:6px 0;border-bottom:1px dashed var(--line)}
+.ticket dt{color:var(--grey)}
+.ticket dd{text-align:right}
+.total{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:16px 18px;border-top:1px solid var(--ink);flex-wrap:wrap}
+.total .lbl{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--grey)}
+.total .amt{font-size:34px;line-height:1;letter-spacing:-.02em;margin-top:6px}
+.total .btn{padding:13px 16px;font-size:12px}
+
+.steps{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.step{margin:0;padding:24px 20px 26px;border:1px solid var(--line2);background:#fff;min-width:0}
+@media (min-width:720px){.step{padding:30px 30px 32px}}
+.step legend{padding:0;float:left;width:100%}
+.step-h{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.step-n{font:500 12px/1 var(--mono);letter-spacing:.06em;color:var(--grey)}
+.step-t{font-size:26px;line-height:1.1;letter-spacing:-.02em}
+.step-t em{font-style:normal;color:var(--grey2)}
+.step-lead{clear:both;color:var(--grey);font-size:15px;margin:0 0 18px;padding-top:4px}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.opts.three{grid-template-columns:minmax(0,1fr)}
+@media (min-width:560px){.opts.three{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:720px){.opts.four{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.opt{position:relative;display:block;cursor:pointer;min-width:0}
+.opt input{position:absolute;opacity:0;width:1px;height:1px}
+.opt-b{display:flex;flex-direction:column;height:100%;border:1px solid var(--line);padding:12px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.opt:hover .opt-b{border-color:var(--grey2)}
+.opt input:checked + .opt-b{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.opt input:focus-visible + .opt-b{outline:2px solid var(--ink);outline-offset:2px}
+.opt-name{font-size:15px;line-height:1.25;font-weight:500}
+.opt-desc{font-size:13px;line-height:1.4;color:var(--grey);margin-top:4px}
+.opt-price{font:400 12px/1.3 var(--mono);margin-top:auto;padding-top:10px}
+.opt-price small{display:block;color:var(--grey2);font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.opt svg{display:block;width:100%;max-width:180px;height:auto;margin-bottom:10px}
+.opt-lbl{font:500 10px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--grey);margin-bottom:3px}
+.swatch{aspect-ratio:3/4;overflow:hidden;margin:-12px -12px 12px;background:var(--linen-l)}
+.swatch img{width:100%;height:100%;object-fit:cover}
+.note{font-size:13px;color:var(--grey);margin-top:14px;line-height:1.5}
+.hint{display:none;margin-top:14px;font-size:14px;line-height:1.45;padding:10px 12px;background:var(--linen-xl);border-left:2px solid var(--linen)}
+.hint.on{display:block}
+.sizes{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+@media (min-width:560px){.sizes{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.field label{display:block;font-size:14px;margin-bottom:6px}
+.num{display:flex;align-items:stretch;border:1px solid var(--line);background:#fff}
+.num:focus-within{border-color:var(--ink)}
+.num input{flex:1;min-width:0;border:0;padding:12px;font:400 22px/1 var(--mono);background:transparent;color:var(--ink);-moz-appearance:textfield}
+.num input::-webkit-outer-spin-button,.num input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.num input:focus{outline:none}
+.num .u{align-self:center;padding:0 10px;font:400 13px/1 var(--mono);color:var(--grey)}
+.num button{width:44px;display:grid;place-items:center;border:0;border-left:1px solid var(--line);background:#fff;font:400 20px/1 var(--mono);cursor:pointer;color:var(--ink)}
+.num button:hover{background:var(--off)}
+.err{display:none;color:#8a1f11;font-size:13px;margin-top:6px}
+.err.on{display:block}
+.measure{margin:18px 0 0;display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-items:center}
+@media (min-width:560px){.measure{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}}
+.measure svg{width:100%;height:auto;max-width:260px}
+.sub-h{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--grey);margin:22px 0 10px}
+.factor-out{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;margin-bottom:8px}
+.factor-out .big{font:400 40px/1 var(--mono);letter-spacing:-.02em}
+.factor-out p{color:var(--grey);font-size:14px;max-width:34ch}
+.marks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));font:400 11px/1.35 var(--mono);color:var(--grey);margin-top:2px}
+.marks i{font-style:normal}
+@media (max-width:559px){.marks i{display:none}}
+.marks span:nth-child(2){text-align:center;transform:translateX(-14%)}
+.marks span:nth-child(3){text-align:center;transform:translateX(14%)}
+.marks span:last-child{text-align:right}
+.factor-viz{width:100%;height:auto;margin-top:18px}
+.need{font:400 14px/1.4 var(--mono);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+
+/* result */
+.result{padding:88px 0 80px;border-top:1px solid var(--line2)}
+.res-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;margin-top:28px}
+@media (min-width:960px){.res-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px}}
+.res-total .amt{font-weight:300;font-size:clamp(56px,9vw,112px);line-height:.95;letter-spacing:-.04em}
+.res-total .btw{font:400 14px/1.4 var(--mono);color:var(--grey);margin-top:12px}
+.res-total .meters{font-size:16px;margin-top:22px;max-width:34ch}
+.res-total .disclaim{font-size:13px;color:var(--grey);margin-top:16px;max-width:42ch;line-height:1.5}
+.bar{display:flex;height:22px;width:100%;background:var(--line2);overflow:hidden}
+.bar span{height:100%;min-width:2px;border-right:2px solid #fff}
+.bar span:last-child{border-right:0}
+.lines{width:100%;border-collapse:collapse;margin-top:18px;font-size:15px}
+.lines td{padding:11px 0;border-bottom:1px solid var(--line2);vertical-align:top}
+.lines td:last-child{text-align:right;font-family:var(--mono);white-space:nowrap;padding-left:12px}
+.lines .sw{display:inline-block;width:10px;height:10px;margin-right:10px;vertical-align:0}
+.lines small{display:block;color:var(--grey);font-size:12px;font-family:var(--mono);margin-top:2px}
+.lines tr.sum td{border-bottom:0;border-top:1px solid var(--ink);font-weight:500;padding-top:14px}
+
+/* appointment */
+.appt{padding:88px 0 96px;background:var(--off);border-top:1px solid var(--line2)}
+.appt-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:36px;margin-top:32px}
+@media (min-width:980px){.appt-grid{grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:48px}}
+.search{display:flex;gap:0;border:1px solid var(--ink);background:#fff}
+.search input{flex:1;min-width:0;border:0;padding:15px 14px;font:400 17px/1 var(--sans);background:transparent;color:var(--ink)}
+.search input:focus{outline:none}
+.search button{border:0;background:var(--ink);color:#fff;font:500 13px/1 var(--sans);text-transform:uppercase;letter-spacing:.06em;padding:0 18px;cursor:pointer;white-space:nowrap}
+.search-msg{min-height:20px;font-size:14px;color:var(--grey);margin-top:10px}
+.dealer-card{display:none;margin-top:18px;background:#fff;border:1px solid var(--ink);padding:22px}
+.dealer-card.on{display:block}
+.dealer-card .kicker{margin-bottom:10px}
+.dealer-card h3{font-size:30px;line-height:1.05}
+.dealer-card .addr{margin-top:10px;color:var(--grey)}
+.dealer-card .km{font:400 14px/1.3 var(--mono);margin-top:12px}
+.dealer-card a.web{display:inline-block;margin-top:14px;font-size:14px;text-underline-offset:3px}
+.also{margin-top:14px;font-size:14px;color:var(--grey)}
+.also b{color:var(--ink);font-weight:500;white-space:nowrap}
+.mapbox{background:#fff;border:1px solid var(--line2);padding:16px}
+#map{width:100%;height:auto;display:block;max-width:560px;margin:0 auto}
+.key{list-style:none;margin:16px 0 0;padding:0;columns:1;column-gap:24px;font-size:14px}
+@media (min-width:560px){.key{columns:2}}
+.key li{break-inside:avoid;display:flex;gap:10px;align-items:baseline;padding:5px 0;border-bottom:1px solid var(--line2)}
+.key .n{font:500 11px/1 var(--mono);width:22px;height:22px;border-radius:50%;border:1px solid var(--ink);display:inline-grid;place-items:center;flex:none}
+.key li.near .n{background:var(--ink);color:#fff}
+.key .pl{color:var(--grey);font-size:13px;white-space:nowrap}
+.key .d{margin-left:auto;font:400 12px/1 var(--mono);color:var(--grey);white-space:nowrap}
+.map-src{font:400 11px/1.4 var(--mono);color:var(--grey2);margin-top:10px}
+form.req{margin-top:28px;background:#fff;border:1px solid var(--line2);padding:22px}
+form.req[aria-disabled=true]{opacity:.5}
+form.req h3{font-size:22px;margin-bottom:6px}
+form.req .note{margin:0 0 14px}
+.fgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+@media (min-width:560px){.fgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.fgrid .wide{grid-column:1/-1}
+.f label{display:block;font-size:14px;margin-bottom:6px}
+.f input,.f select,.f textarea{width:100%;border:1px solid var(--line);background:#fff;padding:12px;font:400 16px/1.3 var(--sans);color:var(--ink);border-radius:0}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--ink)}
+.f textarea{min-height:84px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45}
+.check input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:var(--ink)}
+.form-err{display:none;color:#8a1f11;font-size:14px;margin-top:12px}
+.form-err.on{display:block}
+.done{display:none;margin-top:28px;background:#fff;border:1px solid var(--ink)}
+.done.on{display:block}
+.done .head{padding:22px;border-bottom:1px solid var(--line2)}
+.done h3{font-size:26px;line-height:1.1}
+.done .head p{color:var(--grey);margin-top:8px}
+.done .ticket{border-top:0}
+
+/* english */
+.en{background:var(--ink);color:#fff;padding:96px 0}
+.en .kicker{color:rgba(255,255,255,.72)}
+.en h2{font-size:clamp(30px,4.2vw,54px);line-height:1.04;max-width:22ch;margin-top:14px}
+.en-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;margin-top:48px}
+@media (min-width:960px){.en-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}}
+.en h3{font-size:22px;margin-bottom:10px}
+.en p,.en li{color:rgba(255,255,255,.82);font-size:16px;line-height:1.6}
+.en p + p{margin-top:12px}
+.en ul{margin:0;padding-left:18px}
+.en li{margin-bottom:6px}
+.en .block + .block{margin-top:36px}
+.en a{color:#fff;text-underline-offset:3px}
+.en a.url{overflow-wrap:anywhere}
+.en li,.en p{overflow-wrap:anywhere}
+.chart{width:100%;height:auto;display:block;margin-top:14px}
+.src{font:400 12px/1.55 var(--mono);color:rgba(255,255,255,.6);margin-top:12px;word-break:break-word}
+.en .src{font:400 12px/1.55 var(--mono);color:rgba(255,255,255,.62);margin-top:12px}
+.en .concept-en{margin-top:48px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25);font:400 13px/1.6 var(--mono);color:rgba(255,255,255,.75)}
+
+/* footer */
+.foot{background:var(--off);padding:56px 0 40px;border-top:1px solid var(--line2);font-size:14px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media (min-width:720px){.foot-grid{grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr)}}
+.foot img{height:26px;width:auto}
+.foot p{color:var(--grey);margin-top:12px;max-width:32ch}
+.foot a{text-decoration:none}
+.foot a:hover{text-decoration:underline}
+.foot .small{font:400 12px/1.6 var(--mono);color:var(--grey);margin-top:36px;padding-top:16px;border-top:1px solid var(--line);max-width:none}
+
+/* phone price bar */
+.pbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px var(--gut);transform:translateY(110%);transition:transform .2s}
+.pbar.on{transform:none}
+.pbar .lbl{font:500 10px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.7)}
+.pbar .amt{font-size:22px;line-height:1.1}
+.pbar .mini{width:64px;height:48px;flex:none;background:#f6f4ef;display:block}
+.pbar .pl{display:flex;align-items:center;gap:12px}
+.pbar a{font:500 12px/1 var(--sans);text-transform:uppercase;letter-spacing:.06em;border:1px solid #fff;padding:11px 12px;text-decoration:none;white-space:nowrap}
+@media (min-width:980px){.pbar{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="NEGENTIEN80"><img src="img/n80-logo.png" alt="N80" width="480" height="211"></a>
+    <nav aria-label="Pagina">
+      <a class="navlink" href="#bereken">Bereken</a>
+      <a class="navlink" href="#afspraak">Dealers</a>
+      <a class="navlink" href="#english">In English</a>
+      <span class="tag">Concept door Astra</span>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <picture>
+    <source media="(max-width:719px)" srcset="img/sfeer-woonkamer-1000.jpg">
+    <img src="img/sfeer-woonkamer-2000.jpg" alt="Woonkamer met kamerhoge gordijnen in een warme bronstint naast een open haard" width="2000" height="1125">
+  </picture>
+  <div class="wrap">
+    <p class="kicker">Gordijnencalculator</p>
+    <h1 id="h1">Reken je gordijnen uit in zeven stappen.</h1>
+    <p class="lead">Kies een stof uit onze collectie, vul je maten in en zie meteen wat je gordijnen kosten, inclusief btw. Je prijsindicatie gaat daarna naar de full service dealer bij jou in de buurt.</p>
+    <div class="btns">
+      <a class="btn solid" href="#stap-1">Begin bij stap 1 <span class="arr" aria-hidden="true"></span></a>
+      <a class="btn" href="#afspraak">Bekijk de 11 dealers</a>
+    </div>
+    <p class="concept">Concept van Astra voor NEGENTIEN80. Alle prijzen op deze pagina zijn voorbeeldprijzen.</p>
+    <aside class="hcard" aria-label="Voorbeeldberekening">
+      <p class="kicker">Voorbeeld, 1 raam</p>
+      <p class="nm" id="hc-nm">&nbsp;</p>
+      <p class="sp" id="hc-sp">&nbsp;</p>
+      <p class="am" id="hc-am">&nbsp;</p>
+      <p class="bt">Incl. btw, inmeten en montage. Voorbeeldprijzen.</p>
+      <a href="#stap-2">Reken je eigen raam uit</a>
+    </aside>
+    <ol class="stepindex" aria-label="De zeven stappen">
+      <li><a href="#stap-1"><b>01</b><span>Stof</span></a></li>
+      <li><a href="#stap-2"><b>02</b><span>Maten</span></a></li>
+      <li><a href="#stap-3"><b>03</b><span>Plooi</span></a></li>
+      <li><a href="#stap-4"><b>04</b><span>Voering</span></a></li>
+      <li><a href="#stap-5"><b>05</b><span>Plooifactor</span></a></li>
+      <li><a href="#stap-6"><b>06</b><span>Rail of roede</span></a></li>
+      <li><a href="#stap-7"><b>07</b><span>Afwerking</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="route" aria-labelledby="route-h">
+  <div class="wrap">
+    <div class="intro">
+      <div>
+        <p class="kicker">Van prijs tot montage</p>
+        <h2 id="route-h">Eerst weet je wat het kost. Daarna wordt er bij je thuis gemeten.</h2>
+      </div>
+      <p>Met je prijsindicatie op zak ga je naar een van onze full service dealers. Na je akkoord meten wij in, maken we je gordijnen en hangen we ze op.</p>
+    </div>
+    <ol class="path">
+      <li class="here"><span class="dot">1</span><h3>Bereken</h3><p class="where">Hier, online</p><p>Stof, maten en afwerking kiezen, en meteen je prijsindicatie zien.</p><span class="youare">Je bent hier</span></li>
+      <li><span class="dot">2</span><h3>Advies</h3><p class="where">Bij de dealer</p><p>De full service dealer neemt je keuzes met je door, met de stalen erbij.</p></li>
+      <li><span class="dot">3</span><h3>Inmeten</h3><p class="where">Bij je thuis</p><p>Na akkoord op je prijsindicatie wordt er ingemeten. Daarna hoor je of de prijs klopt of nog wordt aangepast.</p></li>
+      <li><span class="dot">4</span><h3>Realisatie</h3><p class="where">In het atelier</p><p>De stof wordt besteld en je gordijnen krijgen een plek in de planning van het atelier.</p></li>
+      <li><span class="dot">5</span><h3>Montage</h3><p class="where">Op locatie</p><p>Als alles klaar is, worden je gordijnen netjes bij je thuis opgehangen.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="calc" id="bereken" aria-labelledby="calc-h">
+  <div class="wrap">
+    <div class="calc-head">
+      <div>
+        <p class="kicker">Gordijnencalculator</p>
+        <h2 class="sec-h" id="calc-h">Elke keuze zie je meteen terug, in je raam en in je prijs.</h2>
+      </div>
+      <p>We hebben alvast een voorbeeldraam van 300 bij 260 cm ingevuld. Pas het aan naar jouw maten, de tekening en de prijs lopen mee.</p>
+    </div>
+
+    <div class="calc-grid">
+      <aside class="stage" aria-label="Voorbeeld van je gordijnen">
+        <svg class="scene" id="scene" viewBox="0 0 640 480" role="img" aria-label="Tekening van je raam met de gekozen gordijnen"></svg>
+        <div class="stage-ctrl">
+          <label for="open">Open of dicht</label>
+          <input type="range" id="open" min="0" max="100" value="12" aria-label="Schuif je gordijnen open en dicht">
+        </div>
+        <div class="ticket" aria-live="polite">
+          <details class="tk" id="tkd"><summary><b>Maatbrief</b><span><span id="tk-date"></span> <span class="tog">bekijk</span></span></summary>
+          <dl id="ticket"></dl></details>
+        </div>
+        <div class="total">
+          <div><div class="lbl">Prijsindicatie incl. btw</div><div class="amt" id="total-side">&nbsp;</div></div>
+          <a class="btn ink" href="#prijs">Naar je prijs</a>
+        </div>
+      </aside>
+
+      <form class="steps" id="calcform" onsubmit="return false" novalidate>
+        <noscript><p class="note">Zet JavaScript aan om je prijs te berekenen.</p></noscript>
+
+        <fieldset class="step" id="stap-1">
+          <legend><span class="step-h"><span class="step-n">01</span><span class="step-t">Stof. <em>Kies een collectie.</em></span></span></legend>
+          <p class="step-lead">Je kleur kies je straks samen met de dealer, met de stalen in de hand.</p>
+          <div class="opts four" id="opts-stof"></div>
+          <p class="note">Collectieteksten en foto's komen van negentien80.nl. De prijzen per meter zijn voorbeeldprijzen.</p>
+        </fieldset>
+
+        <fieldset class="step" id="stap-2">
+          <legend><span class="step-h"><span class="step-n">02</span><span class="step-t">Maten. <em>Meet je rail of roede.</em></span></span></legend>
+          <p class="step-lead">Het hoeft niet op de centimeter te kloppen. Bij het inmeten wordt alles nagemeten.</p>
+          <div class="sizes">
+            <div class="field">
+              <label for="breedte">Breedte van je rail of roede</label>
+              <div class="num"><button type="button" data-step="breedte" data-d="-10" aria-label="10 cm smaller"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><line x1="2" y1="7" x2="12" y2="7" stroke="currentColor" stroke-width="1.4"/></svg></button><input id="breedte" type="number" inputmode="numeric" min="40" max="1200" step="1" value="300"><span class="u">cm</span><button type="button" data-step="breedte" data-d="10" aria-label="10 cm breder"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><line x1="2" y1="7" x2="12" y2="7" stroke="currentColor" stroke-width="1.4"/><line x1="7" y1="2" x2="7" y2="12" stroke="currentColor" stroke-width="1.4"/></svg></button></div>
+              <p class="err" id="err-breedte">Vul een breedte in tussen 40 en 1200 cm.</p>
+            </div>
+            <div class="field">
+              <label for="hoogte">Hoogte, van je rail tot de vloer</label>
+              <div class="num"><button type="button" data-step="hoogte" data-d="-5" aria-label="5 cm lager"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><line x1="2" y1="7" x2="12" y2="7" stroke="currentColor" stroke-width="1.4"/></svg></button><input id="hoogte" type="number" inputmode="numeric" min="40" max="400" step="1" value="260"><span class="u">cm</span><button type="button" data-step="hoogte" data-d="5" aria-label="5 cm hoger"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><line x1="2" y1="7" x2="12" y2="7" stroke="currentColor" stroke-width="1.4"/><line x1="7" y1="2" x2="7" y2="12" stroke="currentColor" stroke-width="1.4"/></svg></button></div>
+              <p class="err" id="err-hoogte">Vul een hoogte in tussen 40 en 400 cm.</p>
+            </div>
+          </div>
+          <div class="measure">
+            <svg viewBox="0 0 260 170" aria-hidden="true">
+              <line x1="20" y1="22" x2="240" y2="22" stroke="#020303" stroke-width="3"/>
+              <rect x="50" y="34" width="160" height="118" fill="#eef2f3" stroke="#bdb8ad"/>
+              <line x1="130" y1="34" x2="130" y2="152" stroke="#bdb8ad"/>
+              <line x1="0" y1="152" x2="260" y2="152" stroke="#020303"/>
+              <line x1="20" y1="10" x2="240" y2="10" stroke="#020303" stroke-width=".8"/>
+              <line x1="20" y1="6" x2="20" y2="14" stroke="#020303"/><line x1="240" y1="6" x2="240" y2="14" stroke="#020303"/>
+              <rect x="104" y="3" width="52" height="14" fill="#fff"/>
+              <text x="130" y="13.5" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10">breedte</text>
+              <line x1="250" y1="22" x2="250" y2="152" stroke="#020303" stroke-width=".8"/>
+              <line x1="246" y1="22" x2="254" y2="22" stroke="#020303"/><line x1="246" y1="152" x2="254" y2="152" stroke="#020303"/>
+              <rect x="222" y="80" width="38" height="14" fill="#fff"/>
+              <text x="241" y="90.5" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10">hoogte</text>
+            </svg>
+            <div>
+              <p class="sub-h" style="margin-top:0">Verdeling</p>
+              <div class="opts" id="opts-delen"></div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" id="stap-3">
+          <legend><span class="step-h"><span class="step-n">03</span><span class="step-t">Plooi. <em>Kies hoe je gordijn valt.</em></span></span></legend>
+          <p class="step-lead">De plooi bepaalt de bovenkant van je gordijn en hoe de stof naar beneden valt.</p>
+          <div class="opts four" id="opts-plooi"></div>
+          <p class="hint" id="hint-plooi"></p>
+        </fieldset>
+
+        <fieldset class="step" id="stap-4">
+          <legend><span class="step-h"><span class="step-n">04</span><span class="step-t">Voering. <em>Hoeveel licht mag erdoor?</em></span></span></legend>
+          <p class="step-lead">Voering zit aan de achterkant van je gordijn. Schuif je gordijnen dicht in de tekening om het verschil te zien.</p>
+          <div class="opts three" id="opts-voering"></div>
+        </fieldset>
+
+        <fieldset class="step" id="stap-5">
+          <legend><span class="step-h"><span class="step-n">05</span><span class="step-t">Plooifactor. <em>Hoe vol hangt je gordijn?</em></span></span></legend>
+          <p class="step-lead">De plooifactor is hoeveel stof er in je gordijn gaat per meter rail. Meer stof geeft meer plooien.</p>
+          <div class="factor-out"><span class="big" id="factor-big">2,0&times;</span><p id="factor-txt"></p></div>
+          <label class="vh" for="factor">Plooifactor</label>
+          <input type="range" id="factor" min="15" max="30" step="1" value="20">
+          <div class="marks" aria-hidden="true"><span>1,5 <i>strak</i></span><span>2,0 <i>standaard</i></span><span>2,5 <i>vol</i></span><span>3,0 <i>royaal</i></span></div>
+          <svg class="factor-viz" id="factor-viz" viewBox="0 0 600 70" aria-hidden="true"></svg>
+          <p class="note" style="margin-top:4px">Je gordijn van bovenaf gezien, op 150 cm rail.</p>
+          <p class="need" id="need"></p>
+        </fieldset>
+
+        <fieldset class="step" id="stap-6">
+          <legend><span class="step-h"><span class="step-n">06</span><span class="step-t">Rail of roede. <em>Waar hangt het aan?</em></span></span></legend>
+          <p class="step-lead">We rekenen de rail of roede op de breedte uit stap 2.</p>
+          <div class="opts four" id="opts-rail"></div>
+          <p class="hint" id="hint-rail"></p>
+        </fieldset>
+
+        <fieldset class="step" id="stap-7">
+          <legend><span class="step-h"><span class="step-n">07</span><span class="step-t">Afwerking. <em>De onderkant en de lengte.</em></span></span></legend>
+          <p class="step-lead">Inmeten en montage zitten altijd in je prijsindicatie.</p>
+          <p class="sub-h">Onderkant</p>
+          <div class="opts" id="opts-zoom"></div>
+          <p class="sub-h">Lengte</p>
+          <div class="opts three" id="opts-lengte"></div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="result" id="prijs" aria-labelledby="prijs-h">
+  <div class="wrap">
+    <p class="kicker">Je prijsindicatie</p>
+    <h2 class="sec-h" id="prijs-h">Dit kosten je gordijnen, opgehangen en wel.</h2>
+    <div class="res-grid">
+      <div class="res-total" aria-live="polite">
+        <div class="amt" id="total-big">&nbsp;</div>
+        <p class="btw" id="btw-line"></p>
+        <p class="meters" id="meters-line"></p>
+        <p class="disclaim">Een prijsindicatie op basis van voorbeeldprijzen. Na het inmeten hoor je of je prijs klopt of nog wordt aangepast.</p>
+        <div class="btns"><a class="btn ink" href="#afspraak">Plan je inmeetafspraak <span class="arr" aria-hidden="true"></span></a></div>
+      </div>
+      <div>
+        <div class="bar" id="bar" role="img" aria-label="Opbouw van je prijs"></div>
+        <table class="lines" id="lines"></table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="appt" id="afspraak" aria-labelledby="appt-h">
+  <div class="wrap">
+    <p class="kicker">Plan je inmeetafspraak</p>
+    <h2 class="sec-h" id="appt-h">Je aanvraag gaat naar de full service dealer het dichtst bij jou.</h2>
+    <div class="appt-grid">
+      <div>
+        <form class="search" id="searchform" role="search">
+          <label class="vh" for="q">Je postcode of woonplaats</label>
+          <input id="q" name="q" autocomplete="postal-code" placeholder="Bijvoorbeeld 5481 EH of Uden">
+          <button type="submit">Zoek je dealer</button>
+        </form>
+        <p class="search-msg" id="search-msg" aria-live="polite">We zoeken op je postcode of woonplaats. Je adres hoeven we niet te weten.</p>
+        <div class="dealer-card" id="dealer-card" aria-live="polite"></div>
+
+        <form class="req" id="reqform" novalidate aria-disabled="true">
+          <h3>Je gegevens</h3>
+          <p class="note" id="req-note">Zoek eerst je dealer, dan sturen we je maatbrief daarheen.</p>
+          <div class="fgrid">
+            <div class="f"><label for="naam">Naam</label><input id="naam" autocomplete="name" disabled></div>
+            <div class="f"><label for="mail">Mailadres</label><input id="mail" type="email" autocomplete="email" disabled></div>
+            <div class="f"><label for="tel">Telefoon, mag leeg blijven</label><input id="tel" type="tel" autocomplete="tel" disabled></div>
+            <div class="f"><label for="moment">Wanneer past het je meestal</label><select id="moment" disabled><option>Doordeweeks overdag</option><option>Doordeweeks in de avond</option><option>Op zaterdag</option></select></div>
+            <div class="f wide"><label for="opm">Opmerking voor de dealer</label><textarea id="opm" disabled placeholder="Bijvoorbeeld een schuin raam of een erker"></textarea></div>
+            <div class="wide check"><input type="checkbox" id="ok" disabled><label for="ok" id="ok-label">Mijn prijsindicatie en gegevens mogen naar de dealer.</label></div>
+          </div>
+          <p class="form-err" id="form-err" aria-live="polite"></p>
+          <div class="btns"><button class="btn ink" type="submit" id="send" disabled>Verstuur je aanvraag <span class="arr" aria-hidden="true"></span></button></div>
+        </form>
+        <div class="done" id="done" aria-live="polite"></div>
+      </div>
+
+      <div class="mapbox">
+        <svg id="map" role="img" aria-label="Kaart van Nederland met de 11 full service dealers, met een uitvergroting van Noord-Brabant"></svg>
+        <ul class="key" id="key"></ul>
+        <p class="map-src">Kaart, CBS gebiedsindelingen 2024 via PDOK (CC BY 4.0). Afstand hemelsbreed, vanaf het midden van je postcode of woonplaats.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="en" id="english" lang="en" aria-labelledby="en-h">
+  <div class="wrap">
+    <p class="kicker">In English, for Ramona and Raka</p>
+    <h2 id="en-h">Seven steps to a price, then the nearest of your eleven dealers.</h2>
+    <div class="en-grid">
+      <div>
+        <div class="block">
+          <h3>A shopper goes from fabric to their nearest dealer in one sitting</h3>
+          <p>They pick one of your four curtain collections, enter the width of their rail and the height to the floor, then choose the pleat, the lining, how full it hangs, the rail and the finish. The drawing of their window and the price change with every choice, so they can see a wave next to a double pleat, or what blackout lining does with the light.</p>
+          <p>Then they type a postcode or a town. The tool ranks your 11 full service dealers by straight line distance, shows the nearest one with its address and website, and would send the shopper's maatbrief and contact details there once it's wired up. That follows your own route, advice at the dealer, then measuring once the prijsindicatie is agreed.</p>
+        </div>
+        <div class="block">
+          <h3>Every euro traces back to one price table</h3>
+          <p>Fabric metres are the rail width times the plooifactor, plus 10 cm of side hem per panel, rounded up to the next 10 cm. That's room height fabric up to 290 cm finished length. Above that it switches to 140 cm wide widths (banen), each cut 25 cm longer than the curtain.</p>
+          <p>The price is the fabric metres times the fabric, making, lining and hem prices per metre, plus the rail per metre of rail width, plus one fixed fee for measuring and fitting. Every price is incl. 21% btw, and the btw share is shown as the total times 21/121. Sums run in whole cents, so nothing drifts in the rounding.</p>
+        </div>
+        <div class="block">
+          <h3>Five things change before it goes live</h3>
+          <ul>
+            <li>Every price on the page. Fabric per metre for each collection, making per pleat, lining, rail, hem and the measuring and fitting fee of &euro;95. If your dealer rekentool already holds your prices, the same table can feed this one.</li>
+            <li>The 290 cm room height limit, the 140 cm width for banen, the 10 cm side hem and the 25 cm cut allowance.</li>
+            <li>The pleats, linings, rails and finishes on offer, and the plooifactor range of 1,5 to 3,0.</li>
+            <li>The appointment form doesn't send or store anything yet. It needs wiring to each dealer's inbox, plus your privacy wording.</li>
+            <li>The noindex tag comes off at launch.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="block">
+          <h3>Shoppers are wary of big purchases, so the price comes first</h3>
+          <p>Curtains are a big purchase. Every month since January 2024, more Dutch consumers have told CBS it's an unfavourable time for big purchases than a favourable one. The gap was widest in May 2026, at 45 points, and it was still 35 in September.</p>
+          <p>Someone in that mood wants a number at home before they invite anyone round. Your N80 page describes exactly that in its entry for 2022, a price in seven steps on your own website.</p>
+          <svg class="chart" id="chart" viewBox="0 0 640 300" role="img" aria-label="Bar chart, January 2024 to September 2026, of how many points more Dutch consumers call it a bad time for big purchases than a good time"></svg>
+          <p class="src">Points more people answering "unfavourable" than "favourable" to whether now is a good time for big purchases. CBS StatLine table 83693NED, Consumentenvertrouwen, economisch klimaat en koopbereidheid, gecorrigeerd, series Gunstige tijd voor grote aankopen, January 2024 to September 2026. Table updated 22 September 2026, read 9 October 2026. <a class="url" href="https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83693NED/table">opendata.cbs.nl/statline/#/CBS/nl/dataset/83693NED/table</a></p>
+        </div>
+        <div class="block">
+          <h3>Everything else comes from your own site and public data</h3>
+          <ul>
+            <li>The four collections, their descriptions and fabric photos, from <a class="url" href="https://negentien80.nl/collectie/">negentien80.nl/collectie</a>.</li>
+            <li>The 11 dealers, their addresses and websites, from <a class="url" href="https://negentien80.nl/full-service-dealers/">negentien80.nl/full-service-dealers</a>. Where a detail differs between that page and your N80 Full service page, the tool follows the dealer's own website.</li>
+            <li>The route from price to montage, in your homepage's own order.</li>
+            <li>The 21% btw rate, from the Belastingdienst, <a class="url" href="https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/tarieven_en_vrijstellingen/">belastingdienst.nl, tarieven en vrijstellingen</a> (read 9 October 2026).</li>
+            <li>Postcode and town lookups use PDOK, the government's open address service, with a built in table of CBS postcode areas as a fallback.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="concept-en">A concept built by Astra for NEGENTIEN80, October 2026. The prices are example figures and nothing's wired to a live system yet.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><img src="img/n80-logo.png" alt="N80" width="480" height="211"><p>Uw full service partner in gordijnen en raambekleding.</p></div>
+      <div><p>NEGENTIEN80<br>Molendijk-Zuid 18<br>5482 WZ Schijndel</p></div>
+      <div><p><a href="tel:+31732054003">+31 (0) 73 205 40 03</a><br><a href="mailto:info@negentien80.nl">info@negentien80.nl</a></p></div>
+    </div>
+    <p class="small">Concept van Astra voor NEGENTIEN80, oktober 2026. Prijzen zijn voorbeeldprijzen. Foto's, collectieteksten en dealers komen van negentien80.nl.</p>
+  </div>
+</footer>
+
+<div class="pbar" id="pbar" aria-hidden="true"><div class="pl"><svg class="mini" viewBox="0 0 640 480"><use href="#scene-g"/></svg><div><div class="lbl">Prijsindicatie incl. btw</div><div class="amt" id="total-bar">&nbsp;</div></div></div><a href="#prijs" tabindex="-1">Naar je prijs</a></div>
+
+<script>
+window.N80DATA = {"provinces":[{"code":"PV20","naam":"Groningen","d":"M426.9,19.9L429.3,21L431.2,19.4L433.8,19.5L433.8,20.8L431.8,20L433.7,21.1L431.2,21.3L433.1,22.4L431.9,23L436.3,23.7L434.2,22.6L434.6,19.9L439.8,23.8L438.6,30.4L440.3,32.8L442,42.5L448.3,47.1L454.7,48.6L448.2,47.3L446,45.4L445.2,46.5L454.1,50.1L455.3,48.8L455.3,50.8L459.9,52.1L466.3,50.4L464.4,52.5L464.4,59.7L479.6,65.7L479.8,64.1L480.8,72.4L479.6,74.3L482,75.9L479.1,76.7L476,84.3L476.5,87.7L478.9,89.3L478.5,95.7L480.7,110.6L476.3,123.7L464.8,142L465.4,144.4L462.9,144.3L463.4,142L461.8,141.7L459,137.4L455.9,137.4L459.6,128.8L456,127L446.3,113.4L422.6,88.7L416.6,87.8L409.2,90.8L407.3,85.7L403.5,82.8L402.7,79.3L400.5,80.5L396.4,72.9L392,72.4L390.9,71.2L386.3,72.7L385.7,74.5L381.1,76.7L373.6,94.6L367.3,92.2L363.5,89.1L356.6,88.9L352.9,85L353.1,78.6L355.8,72.3L359.6,68.4L358.1,63.6L362.6,58.3L362.5,54.3L367.4,50.3L365.8,49.5L366.6,43.8L367.3,45L368.1,44.1L363.1,42.2L359.9,43.2L359.8,41.6L362.9,40.2L360,40L360.5,38.2L357.1,38.6L360,37.4L354,36.3L356.1,34.9L353.4,33.1L354,31.3L358.5,34.4L360.4,33.7L354.8,29.8L362.6,29L368.9,33.5L376.5,28.8L401,25.7L416.7,19.6L422.9,18.8L426.9,19.9ZM393.3,1.7L394.2,4.1L396.7,5.4L393.4,4.5L391.1,1.9L390.5,2.8L393.9,5L392.2,5.4L389.4,4.8L391.3,7.3L390.1,9.2L388,3.4L391.2,1.3L393.3,1.7Z"},{"code":"PV21","naam":"Fryslân","d":"M254.4,97.5L257,100.5L254.7,100.8L253.3,97L254.4,97.5ZM228.2,52.8L223.5,55.7L222.3,54.2L224.2,52.1L228.2,52.8ZM220.9,51.8L205.2,59L206.1,62.2L205.1,63.5L198.7,68.8L193.9,69L192.6,71.1L189.6,70.4L190.7,67.6L203.8,57.8L214.1,51.1L217.7,50.5L220.9,51.8ZM353.9,29.1L354.8,29.9L353.2,29.2L350.5,31.9L351.6,42.8L353.3,44.2L353.2,47.9L350.9,48.6L353.5,47.9L353.6,44.3L356,45.2L352.8,42L353.5,40.5L355.5,41.5L355.6,44L356.7,41.1L360.5,45L358.7,41.7L360.3,43.7L362.5,42.4L366.6,43.8L365.8,49.5L367.4,50.3L362.5,54.3L362.6,58.3L358.1,63.6L359.6,68.4L355.8,72.3L353.1,78.6L352.8,84.8L356.6,88.9L365,89.8L370,93.2L368.8,95.8L376.5,98.5L375.8,105.2L383.8,117.6L379.6,125.4L372.2,130.7L368.5,127L362.8,126.5L356.7,133.9L341.3,144.3L337.8,144.5L338.7,146.8L335.2,149L334.4,147.5L330.9,148.7L327.7,143.5L325.9,145.4L322.8,145L322,147.3L316.6,151.8L311.2,150.8L309.2,148.5L305.5,151.3L304.9,148.5L300.5,144.1L297.6,143.2L298,145.3L295.6,144.3L296.4,143.3L295.5,144.4L292.7,142.8L290.8,143.8L287.3,139.9L284.3,141.9L280.4,142.1L279,144.8L276.5,145.5L264.3,141.1L259.5,141.9L252.9,136.7L252,134.8L253,134.5L251.8,134.7L252.8,133.5L258.5,130L257.2,123.4L258.8,122.4L258.3,120L261.7,117.8L259.1,119.7L257.6,114L258.3,102.6L257,105.6L255.9,103.1L254.5,103.1L254.8,101L258.2,101.7L255.2,93.7L250.1,97.5L250.3,99L249.7,97.3L250.4,99.3L249.3,97.3L245.6,98.3L229,112L244.6,98.7L248.3,97.4L248.3,96.2L248.8,97.4L249.5,95.9L249.7,97.2L251.4,96.5L255,93L255.1,90.4L258.5,86.7L259.6,79.1L258.1,76.8L259.6,78.1L259,76.8L262.5,73.2L258.4,76.9L263.7,67.9L273,60.8L280.7,51.9L317.3,34.3L316.4,32.9L323.1,34.3L333.3,31.4L339.8,30.5L341.6,31.4L342.7,30.1L348.4,31.3L353.9,29.1ZM275.2,24.1L275.8,25.9L275.4,24.7L267.1,28.5L267.7,30L266.3,30.7L256.7,31.3L248.5,36.4L238.5,38.8L235.8,39L232.1,42.5L227.2,42L233.3,33.1L269.3,23.2L275.2,24.1ZM298.3,19.7L326.2,19L303.7,25.3L303.4,24.1L298.2,23.4L292.1,27.1L285.6,25.5L284.2,21.3L288.6,18.1L298.3,19.7ZM377.8,10.5L371.7,10.5L372.4,11.5L362.3,16.4L355.6,17.4L356.1,18.4L351.9,18L348.8,20.5L348.1,18.5L345.5,19.4L345.9,15.4L349.8,12.6L376.4,8.5L379.5,9L377.8,10.5Z"},{"code":"PV22","naam":"Drenthe","d":"M392,72.4L396.4,72.9L400.5,80.5L402.7,79.3L403.5,82.8L407.3,85.7L409.2,90.8L416.6,87.8L422.6,88.7L446.3,113.4L456,127L459.6,128.8L455.9,137.4L459,137.4L461.8,141.7L463.4,142L462.9,144.3L465.4,144.4L462.8,149.9L460.9,183.3L459.2,185.5L451.1,182.7L446.5,184.4L441.4,181.7L431.8,182.5L428.3,181.4L422.4,182.9L418,186.6L418.3,182.2L406.6,177.2L399.2,178.9L394.4,182.7L395,189.2L389,187L387,189.2L385.6,188.9L384.5,186.4L378.5,189.5L376,183.4L371.3,180.1L370.9,177.9L367.2,179.5L362.3,178L357.9,174.7L355.2,176.7L353.5,175.7L353.8,177L351.3,176L352.2,174.8L350.6,173.6L346.1,162L352,158.6L356.1,153.3L346,141.2L356.7,133.9L362.8,126.5L368.5,127L372.2,130.7L379.6,125.4L383.8,117.6L375.8,105.2L376.5,98.5L368.8,95.8L370,93.2L373.6,94.6L381.1,76.7L385.7,74.5L386.3,72.7L390.9,71.2L392,72.4Z"},{"code":"PV23","naam":"Overijssel","d":"M311,190.5L310.4,193.4L307.8,192.2L307.1,190.8L311,190.5ZM348.1,144.2L356.1,153.3L352,158.6L346.1,162L350.6,173.6L352.2,174.8L351.3,176L353.8,177L353.5,175.7L355.2,176.7L357.9,174.7L362.3,178L367.2,179.5L370.9,177.9L371.3,180.1L376,183.4L378.5,189.5L384.3,186.3L385.6,188.9L387,189.2L389,187L395,189.2L394.4,182.7L399.2,178.9L406.6,177.2L418.3,182.2L417.4,186.3L420.6,189L419.5,194.3L425.4,199.7L420.5,199.4L419.2,202.3L414.9,201.3L417.9,207.8L416.9,214.7L423.7,219.2L436.2,220.1L436,222L446.9,224.9L449.4,223.3L452.5,218L455.4,226.2L458.3,231.3L461.3,232.1L462.9,237.4L462.9,241.6L457.3,253.6L457.6,257.3L462.1,263.8L461.6,265.1L457.3,266.9L452.2,267L448.1,275.8L442.6,277L439.4,280.8L438.5,285.9L436.3,287.9L419.2,288.3L414.5,286.8L412.7,286L414.1,283.4L413.7,278.9L410.5,277.2L406.5,279.4L403.9,275.5L391.8,276.5L384,267.4L382.4,263.6L378.2,262.8L374.3,263.8L372.9,266.6L370.7,266.9L367.3,265.8L364.4,266.7L357.7,265.7L358,266.7L353.7,265.2L351.3,266.3L351.5,268.5L349.4,266.4L348.8,264.3L350.2,262.6L346.5,261.7L347.3,259.9L343.8,251.8L341.7,251.7L341.1,248.5L339.5,248.4L340.7,241.9L343,240.6L340.9,238.2L346.2,236.1L347.4,232L344.9,230.4L346,225.4L343.9,222.8L343.5,217.9L334.8,210.1L327.1,216.7L325.4,215.2L322.2,217.2L317.5,208.6L314.5,207.8L313.8,201.4L308.5,195.4L311.7,195.5L307.5,195.2L309.2,194.2L308.6,195L311.9,195.2L310.7,193.7L311.8,189.9L319,188.3L322.9,189.2L326.2,187L329.7,187.4L334.1,184.1L327.3,178.7L323.1,177.7L327.1,173.3L321.7,161.8L314.4,155.8L309.1,155.1L306.2,150.7L309.2,148.5L311.2,150.8L316.6,151.8L322,147.3L322.8,145L325.9,145.4L327.7,143.5L330.9,148.7L334.4,147.5L335.2,149L338.7,146.8L337.8,144.5L341.3,144.3L346,141.2L348.1,144.2Z"},{"code":"PV24","naam":"Flevoland","d":"M301.6,193.8L299.4,193.8L298.8,191.5L301.3,191.6L301.6,193.8ZM300.5,144.1L309.1,155.1L314.4,155.8L321.7,161.8L327.1,173.3L323.1,177.7L327.3,178.7L329.4,180.7L326.9,184.3L310.7,189.5L288.8,188.9L287.4,190L289,192.5L301.5,196.1L307.9,196.2L313.9,202.9L312.6,213.3L308.9,220.5L300.3,229.1L297,228.8L287.8,233.9L285.3,235.9L283.8,239.8L277.8,238.5L274.7,242L276.4,248L273.2,257.3L257.9,261.3L245.3,249.6L235.6,245.2L235.2,246.1L231.2,244.9L225.7,247L226.4,245.7L224.5,244L223.7,236.2L262,209.8L262.7,208.4L261.3,206.5L260.8,207.8L261,204.4L262.7,200.6L266,198.1L264.5,193.3L257.6,182.2L251.9,176.5L246.1,174L243.9,175.7L243.2,175.1L245,174L243.9,173.8L253,177.1L259.7,184.6L264.6,193.3L266.1,198.1L262.6,200.9L261,205L262,206.5L264.4,201.7L269.7,201.1L277.2,193.5L288.3,189.1L284.2,181.9L281.2,179.8L281.8,158.8L290,146L296.1,144.4L298.2,145.3L297.6,143.2L300.5,144.1Z"},{"code":"PV25","naam":"Gelderland","d":"M321.6,215.5L322.2,217.2L325.4,215.2L327.1,216.7L334.8,210.1L343.5,217.9L343.9,222.8L346,225.4L344.9,230.4L347.4,232L346.2,236.1L340.9,238.2L343,240.6L340.7,241.9L339.5,248.4L341.1,248.5L341.7,251.7L343.8,251.8L347.3,259.9L346.5,261.7L350.2,262.6L348.7,265.2L351.5,268.5L351.3,266.3L352.7,265.4L370.7,266.9L372.9,266.6L374.3,263.8L378.2,262.8L382.4,263.6L384,267.4L391.8,276.5L403.9,275.5L406.5,279.4L410.5,277.2L413.7,278.9L414.1,283.4L412.7,286L419.2,288.3L424.7,288.2L423.1,295.6L416.6,298L415.8,304L423.7,306.3L430.5,313L432.8,313.3L433,319.2L429.4,320.3L428.2,326.1L419.9,332.8L416.7,328.8L414.2,328.8L400.1,335.6L398.1,335.1L389.3,341.2L386.7,339L384.4,340.1L379.3,337.2L379,339.6L381.5,341.3L380.7,346.5L375.9,345L375.6,342.8L373.7,341.8L368.9,342.2L368,338.4L365.7,337.2L357.7,338.5L353.9,335.5L354.8,333.7L352.2,331.7L345.8,331.7L344,333.5L348.2,334.8L349.1,338.1L351.9,339.8L351.8,343.9L343.6,342.1L339.1,338.9L338.1,341.5L331.6,345.5L326.8,344.6L324.6,347.3L326.2,348.6L324.7,349L328.8,352.5L328.2,355L330.2,355.4L329.2,357.3L330.4,358L324.5,363.6L320.9,361.5L318.3,356.4L315.1,356.9L314.7,360.5L303,361.5L292.8,353.8L290,353.1L287.3,348.4L280.9,346.1L277.1,346.5L274.4,348.7L268.8,345.9L265.6,349.8L262.5,350.1L257.9,347.8L253.9,354L252.5,360.4L244.9,364.7L242.5,364L239.3,365.3L235.9,363.3L224.3,364.5L226.1,361L225.5,357.4L220.4,354.5L217.2,356.1L215.1,352.9L210.6,350.4L208.7,347.8L211.9,348.2L212.5,343.8L208.5,343.1L207.9,339.8L216.3,340.1L215,338L218.6,336.8L219.7,334.3L222.5,334.4L230.7,318.5L234.8,319.9L237.7,316.2L248.3,321L252.3,317.9L256.6,317.9L262.2,314.9L268.3,315.2L283,323.4L285.6,321.5L285.5,317.2L280.5,309.6L281,305.1L277.1,302.2L277.7,296.3L276.2,290.9L273.9,291.5L274.7,293.5L272.8,296.5L268,298.1L265,296L268.3,293.3L269.2,289.8L268.3,288.9L270.9,289.2L269.3,287.1L271.7,284.8L267.7,281.9L268.1,280.4L266.6,279.4L267.5,278.8L262.6,277.8L262.7,270.8L256.9,267.9L258.2,262.6L265.6,260.1L265.7,261L266.4,259.3L266.9,260.6L273.3,259.3L277.4,248.4L283.2,243.5L284,240.6L285.3,241.7L284,239.5L285.6,240.6L285.7,239.1L287.2,239.3L286,238.8L288.8,239L291.9,236.2L294.5,235.8L308.2,224.9L309.5,222.8L308.9,220.5L310.2,218.1L310.1,220.5L311.8,218.6L314.9,208.3L317.5,208.6L321.6,215.5Z"},{"code":"PV26","naam":"Utrecht","d":"M211.3,251.5L211.4,255.6L212.4,254.3L213.9,255.5L215.9,254.1L216.7,255L211.4,257.5L215.7,264.9L213.1,267.1L213.1,271.6L211.2,271.6L213.2,272.4L212.6,275.2L213.7,275.2L214.3,278.8L223.5,275.8L232.3,276.4L241.2,255.7L253.6,258.6L258.2,262.6L256.9,267.9L262.7,270.8L262.6,277.8L267.5,278.8L266.6,279.4L268.1,280.4L267.7,281.9L271.7,284.8L269.3,287.1L270.9,289.2L268.3,288.9L269.2,289.4L268.3,293.3L265,296L268,298.1L272.8,296.5L274.7,293.5L273.9,291.5L276.2,290.9L277.7,296.3L277.1,302.2L281,305.5L281.1,311.4L285.5,317.2L285.6,321.5L283,323.4L268.3,315.2L262.2,314.9L256.6,317.9L252.3,317.9L248.3,321L237.7,316.2L234.8,319.9L230.7,318.5L222.5,334.4L219.7,334.3L218.6,336.8L215.4,337.4L215.9,340.4L211.9,340.3L212,335.7L208.2,337.4L208,331.5L205.4,332.6L205.4,330.5L203.2,328.9L202.2,325.3L201.2,326.2L200,322L193.6,324.4L191.5,318.4L186.3,312L191.1,310.8L189.9,308.4L184.5,309.2L184.9,305.4L193.1,298.3L187.7,298.6L187.2,290.6L183.1,287.5L184.9,286.5L185.3,284.3L188,283.1L193.2,284.2L193.1,280.8L195.4,279.6L189.5,276L185.7,271.6L184.4,271.8L183.4,266.7L187.6,265.9L192.7,261.3L197.7,261.5L200,258.3L199.6,256.1L204.6,256.1L211.3,251.5Z"},{"code":"PV27","naam":"Noord-Holland","d":"M169.6,120L167.9,119.6L167.3,116.8L168.3,114.7L170,114.5L173.1,117L169.6,120ZM215.3,123.9L213.2,127.5L214.6,127.2L222.3,141.1L221.4,157.1L223.8,159L223.8,160.9L227.6,164.3L230.2,164.1L232.3,161L240.3,161.3L241.8,162.5L240.3,162.9L243.3,163.5L244.1,169.2L246.4,170.3L242.9,172.8L243.9,173.8L242.5,175.2L243.3,173.6L238.9,174.9L237.6,180.6L228.2,187.4L224.3,188L223.5,185.5L221.7,185.7L219.5,183.5L217,185L216.8,183.8L216,185.4L214.2,183.7L210.9,186L212.5,198.5L219.1,211.2L215.9,214.9L217,218.2L212.7,218.5L213.6,220.4L215.4,219.8L214.7,224.1L219.5,225L221.5,218.5L225.7,220.1L220.3,222.3L216.9,229.3L215,229.4L210,235.4L210.1,237.3L208.4,236L206.2,237.3L205.4,236.1L205.3,238.5L209.8,241.3L211.1,240.7L210.5,242.5L212.9,243.1L211.8,244.4L212.6,245.3L217,244.6L217.2,245.9L218.1,244L220.1,244.2L225.6,246.8L226.9,250.4L230.9,251L237,249.6L238.6,249.6L238.3,250.9L239.2,248.8L240.1,250.6L244.4,252.7L246.5,251L247.5,251.9L244.9,254L246.2,256.5L241.2,255.7L232.3,276.4L223.5,275.8L214.3,278.8L213.7,275.2L212.6,275.2L213.2,272.4L211.2,271.6L213.1,271.6L213.1,267.1L215.7,264.9L211.4,257.5L216.7,255L215.9,254.1L213.9,255.5L212.4,254.3L211.4,255.6L211.3,251.5L204.6,256.1L199.6,256.1L200,258.3L197.7,261.5L192.7,261.3L187.6,265.9L181.7,266.3L175.8,270.6L174.8,265.5L172.4,265.2L161.8,269.1L154.2,268.1L155.6,258.3L158.1,256L161,249.3L157.5,248.3L155.1,250.1L146.5,246.4L154.9,222.7L153.9,219.8L151.9,220.4L151.2,219.2L154.6,220.6L156.9,219.4L157.9,220.7L157.3,219.5L159.1,220.3L157.4,219.3L160.7,217.4L152.4,218.5L155.2,218.4L158.7,209.3L164,166.3L172.1,139.1L174.2,121.8L175.6,119.5L182.2,118.8L181,119.9L182.6,122.2L181.4,120.1L183.2,121L182.8,119.4L184.2,119.1L183,124.8L185.1,129.8L194.3,134.2L200.7,131.3L204.8,125.9L211.2,125L212.4,123.4L213.7,125.1L229,112L215.3,123.9ZM193.7,80.6L197.4,85.4L196,96.3L189.9,105.2L186.5,106.2L183.7,110.5L181.9,111.7L177.5,110L180.8,112.7L175.5,115.3L173.5,112.5L172.9,107.5L174.7,98.5L189.1,75.3L191.6,75.4L193.7,80.6Z"},{"code":"PV28","naam":"Zuid-Holland","d":"M124.1,362.6L129.7,365.6L125.6,366.7L121.6,365L117.6,362.3L118.1,361.3L124.1,362.6ZM80.5,356.4L81.7,357.1L74.7,358L77.8,354L80.5,356.4ZM153.1,249.2L155.1,250.1L157.5,248.3L161,249.3L158.1,256L155.6,258.3L154.2,268.1L161.8,269.1L172.4,265.2L174.8,265.5L174.8,269.5L176.1,270.6L182.1,266.3L184.3,268.5L184.4,271.8L185.7,271.6L189.5,276L195.4,279.6L193.1,280.8L193.2,284.2L188,283.1L183.1,287.3L187.2,290.6L187.7,298.6L193.1,298.3L187.7,302L183.9,307.5L184.5,309.2L189.9,308.4L191.1,310.8L186.3,312L191.5,318.4L193.6,324.4L200,322L201.2,326.2L202.2,325.3L203.2,328.9L205.4,330.5L205.4,332.6L208,331.5L208.2,337.4L212,335.7L211.9,340.3L207.9,339.8L208.5,343.1L212.5,343.8L211.9,348.2L199.7,346.3L190.8,351.9L183.7,352L179.8,354.2L176.3,360.9L168.8,367.2L165.1,368.2L164.6,367.3L164,368.5L163,366.9L162.9,368L161.8,367.4L151,371.8L135.9,367.6L134.9,370.2L135.4,372.3L134.3,373.2L130.5,373L131.1,374.9L129.7,377.8L119.3,381.1L114.4,379.7L112.9,377.2L109.1,375.4L105.2,375.5L105,372.7L101,370.7L92.1,369.7L90.2,363.2L88.9,363.6L88.2,361.7L89.2,360.5L88.4,356.1L84.9,351.6L79.7,351.3L72.5,353.6L73.1,355L69.9,355.8L68.2,360.4L69.1,359.8L70.1,361.8L66.1,360L69.3,356.4L68.1,350.9L69.9,348.1L87,342L87.6,344.7L90.3,347.3L90,346.1L91.4,346.2L94.2,342.9L89.5,334.7L92.4,328.3L90.8,327.2L85.8,329L83.9,328.4L81.3,319.7L83.5,315.3L86.4,314.2L91,314.8L91.7,313L97.4,315L99.4,313.6L108.9,300.7L109.4,301.6L114.3,296.3L116.9,291.2L118.3,293.1L119.2,292.1L117.3,291.2L128.9,278.9L135,269.9L146.5,246.4L153.1,249.2Z"},{"code":"PV29","naam":"Zeeland","d":"M26.9,430.5L30.8,430.8L30.3,431.7L32.9,431.9L32.2,432.8L38.8,435.9L47.5,437.7L51.9,442.1L56.2,442.4L55.8,443.8L57.5,444.7L57.9,441.9L60,442.1L62.6,443.3L63.3,446.1L63.1,443.4L63.7,444.7L64.7,443.4L69.6,444.7L70.6,442.7L75.8,439.7L80.8,439L81.5,432.1L82.8,430.7L88.6,431.9L92,438.6L97.7,439.7L102.4,444.7L100,439.4L102,439.1L105.3,442.5L105,438.2L107.1,437.3L107.2,439.9L108.7,437L111.2,437.1L114.7,442.4L106.3,453.4L97.3,460L93,463.3L87.7,463L80.8,468.8L78,469.6L77.2,467.9L75.9,470.4L72,472L70.9,470.4L72.3,467.4L68.7,469.8L61.3,469.8L59.9,466.7L60.8,460.8L55.5,457.9L50.6,457.6L43.9,454L41.8,454.4L35.6,450.8L34.6,454.6L32.2,452.8L29.2,455.3L26.4,454.6L27.9,462.8L15.6,463.1L14.4,460L13.2,460.6L9.3,456.6L9.9,454.6L8.2,452.9L9.6,451.5L7.2,449L10.5,445.1L8.6,437.5L9.8,436L26.9,430.5ZM87.8,366.7L86.3,366.7L83.7,360.7L85.6,360.4L87.8,366.7ZM66.6,360.7L64.5,364.2L72.6,363.2L75.3,366.5L82.4,365.3L87.7,374.7L91.3,375.1L97.2,378.6L99.9,376.1L105,375.3L105.9,378.5L107.2,378.6L105.8,379.1L108.4,379.4L105.8,379.9L108.3,379.8L106.3,380.7L108.3,381.3L109.9,385.1L110.5,384.2L115,385.2L111.1,387.3L109.2,391.8L114.9,401.9L112.8,411L119.8,427L118.3,428.7L119.9,436.8L115.7,437L114.3,433L110.5,430.7L104.8,433.1L95.6,430.5L92.2,428L92.1,426L87.4,424.1L87.4,421.1L86.7,423.9L82.9,419.5L77.8,422.3L76.6,421.7L75.1,429.2L73.7,433L70.1,432.5L62.9,434.9L58.6,430L52.4,429.2L50.7,425.7L46,422.6L47.4,420.5L49.7,421.9L49.5,423.7L51.8,423L50.6,421.8L52.2,420.3L49.7,421.4L48.2,420.2L51.2,419.1L51.5,417L50.8,417.9L49.6,416.4L49.5,418.5L44,420.6L45,422.1L37.9,424L36.4,421.7L36.9,424.1L33.8,424.4L16.4,406.7L17,403.5L31,394.1L36.6,393.1L40.5,394.4L46.7,392L47.1,389L45.9,388L47,387.9L45.1,387.6L46.9,387.3L49.3,383.2L49.3,384.5L50.8,383.5L51.9,380.8L46.9,374.5L47.7,368L52.1,364.1L50.3,365.9L57.8,363.3L63,363.9L66.6,360.7Z"},{"code":"PV30","naam":"Noord-Brabant","d":"M274.4,348.7L277.1,346.5L282,346.4L287.3,348.4L290,353.1L298.5,357.6L301.6,361.2L315.5,360.9L317.6,367L325.9,370.2L327,381.5L333.8,387.6L337.2,400.3L335.2,401.5L331.7,398L319.9,401.6L311.5,398.7L315.6,422L322.9,435L315.8,441.4L291.1,449L285.4,457.3L284.6,466.1L277.4,467.5L276.9,458.7L271.9,453L268.1,452L259.8,459.5L251.1,456.8L249.9,459.4L240.9,458.6L237.8,459.7L236.4,458.3L238.2,450.9L233.2,447.5L228.6,449.9L225.1,448.9L224.8,442.6L217.4,433.3L221.5,425.7L218.3,417.7L214.3,417.8L213.4,414.6L210,417.5L209.2,423.1L198.9,433.3L196.7,429.3L194.6,428.7L192.3,430.2L190.2,429.1L182.8,430.2L180.8,429.3L180,425.9L182.4,425.5L188.7,428.3L189.2,427.5L187.5,427.5L186.9,422.3L189.5,420.2L188.5,419.8L189.2,415.9L181,411L178.3,412L177.6,413.9L172.2,418.6L171,421.7L167.7,423.2L168.1,426.7L164.6,427.6L156.4,425.4L151.6,427.4L150.9,422.1L153.2,417.3L151.9,415.5L144.4,416.3L132.9,422L134.8,425L133,427.8L138.9,437L138.8,439.2L133.1,441.1L127.8,440.5L127,436.5L119.9,436.8L118.6,434.7L118.3,428.7L119.8,427L112.8,411L114.9,401.9L109.2,391.8L112.2,386.5L127.3,383L131.2,380.6L132.1,381.6L134,376L135.9,374.4L133.7,375.7L135.4,372.3L135.5,373.6L138.6,371.8L136.5,373.8L139.6,372.5L146.1,375.4L150.5,374.8L150.5,375.9L150.5,374.7L159.7,372.6L164.3,369.5L164,368.5L165.3,369.4L164.9,368.2L168.8,367.2L174.8,362.4L180.8,353.3L190.8,351.9L198.6,346.5L208.7,347.8L215.1,352.9L216.8,355.9L220.4,354.5L225.5,357.4L226.1,361L224.3,364.5L235.9,363.3L239.3,365.3L245.5,364.5L252,360.9L253.9,354L258.5,347.5L263.8,350.1L266.8,349.1L269.5,345.9L274.4,348.7Z"},{"code":"PV31","naam":"Limburg","d":"M323.1,363.6L325.6,362.4L325.8,364.4L330.6,364.3L334.9,366.8L336.9,368.6L334.5,370.3L335.2,377.1L345.8,380.8L342.6,390.8L350.6,398.7L353.1,404.3L357.4,409.3L358.8,418.3L356.5,432.1L359.2,431.9L357.7,434.1L359.1,439.9L354.6,444.1L355.2,445L352,445.5L346.6,457L340.3,463.5L341.9,467.5L339.7,467.9L341.4,477.7L343.6,478L351.6,473.1L353.5,474.7L348.4,477.3L352.9,480.3L351.4,482.3L342.6,485L342,487.1L338.7,488.8L335.8,492.7L332.5,493.8L328.8,497.7L326.1,505.1L323.7,505L320.7,498.6L318.1,501.4L314.9,501.8L316.5,508.4L319.7,511.6L318.7,517L325.8,514.3L327.4,516.1L334.6,515.3L332,520.6L333.4,521.5L333.6,525.1L337.6,526L338,527.6L342.9,527.9L340.6,533.4L342.2,537.5L340.4,542.7L338.2,540.6L333.7,542.7L334.4,549.2L331.8,551.7L329.5,549.9L328.4,551.5L334.8,557.2L333.9,561.1L329.3,561.4L326.3,559.5L319.2,561.7L317.4,558L312.8,561.3L312.3,558.9L307.7,560.8L303.6,555.4L300.3,557.9L299.3,560.6L297,559.1L294.5,560.9L292.3,560.5L294.4,556.1L293.8,549.7L288.9,548L287,542.5L287.7,537.7L292,535.9L294.3,530L297.5,529.9L300.2,522.5L301.7,521.8L300.7,519.9L298.4,521L297,519.5L302.6,512.5L303.9,507.5L301.6,505.3L303.4,499.7L306.9,499.6L306.3,493.7L310.8,492.5L310.3,490.6L307.8,489.8L308,488.3L313.6,483.1L309.8,478.4L308.5,480.3L307.4,479.4L304.1,481.7L304.3,479.3L303.1,479.2L303.9,476.3L300.6,474.3L295.7,475.9L289.4,475.1L288,472L278.1,467.8L284.6,466.1L285.4,457.3L291.1,449L315.8,441.4L322.9,435L315.6,422L311.5,398.7L319.9,401.6L331.7,398L335.2,401.5L337.2,400.3L333.8,387.6L327,381.5L325.9,370.2L317.6,367L316.6,362L314.7,360.5L315.1,356.9L318.3,356.4L323.1,363.6Z"}],"dealers":[{"naam":"Arc Living","adres":"Langstraat 277","postcode":"6691 EE","plaats":"Gendt","web":"https://www.arc-living.nl/","lat":51.87865,"lon":5.94389,"x":324.5,"y":336.3},{"naam":"Contempera","adres":"Overtoom 135-137","postcode":"1054 HG","plaats":"Amsterdam","web":"https://www.contempera.nl/","lat":52.36202,"lon":4.87316,"x":193.1,"y":239.6},{"naam":"Chapter One","adres":"Loopkantstraat 14C","postcode":"5405 NB","plaats":"Uden","web":"https://chapterone.nl/","lat":51.65746,"lon":5.63802,"x":286.9,"y":380.5},{"naam":"De Woonwinkel","adres":"Boschweg 80","postcode":"5481 EH","plaats":"Schijndel","web":"https://woonwinkelschijndel.nl/","lat":51.62587,"lon":5.42257,"x":260.5,"y":386.8},{"naam":"Colijn Interieur","adres":"Verdamstraat 6","postcode":"2313 PN","plaats":"Leiden","web":"https://www.colijninterieur.nl/","lat":52.15472,"lon":4.50944,"x":148.4,"y":281.1},{"naam":"Luxx Living Studio","adres":"Tanneskampke 1","postcode":"5221 BT","plaats":"’s-Hertogenbosch","web":"https://luxxliving.nl/","lat":51.72095,"lon":5.26637,"x":241.3,"y":367.8},{"naam":"Net Iets-Anders","adres":"Busselbundersweg 1","postcode":"5467 LT","plaats":"Veghel","web":"https://www.netiets-anders.nl/","lat":51.62529,"lon":5.55769,"x":277.1,"y":386.9},{"naam":"Studio Uijterwaal","adres":"Marktstraat 5","postcode":"1411 CX","plaats":"Naarden","web":"https://studiouijterwaal.nl/","lat":52.29551,"lon":5.16365,"x":228.7,"y":252.9},{"naam":"Toz Living","adres":"Weijen 24","postcode":"5388 HN","plaats":"Nistelrode","web":"https://tozliving.com/","lat":51.70619,"lon":5.5607,"x":277.4,"y":370.8},{"naam":"Van Eijndhoven Vloeren","adres":"Industrieweg 23","postcode":"5281 RW","plaats":"Boxtel","web":"https://vevloeren.nl/","lat":51.57776,"lon":5.31815,"x":247.7,"y":396.4},{"naam":"Snoeijen Luijten Interieur","adres":"Kapelstraat 63","postcode":"5591 HD","plaats":"Heeze","web":"https://interieurwerkopmaat.nl/","lat":51.38062,"lon":5.57962,"x":279.8,"y":435.9}],"pc4":"101123724906101223744896101323974874101423924857101523784884101623714882101723634893101823684918101923754938102123844919102223884932102323844957102423944954102524004935102623824996102724094968102824055011103123904904103223974911103324094886103424084917103524194894103624084903103724234866104124124843104224024832104323904823104424094813104524154788104623934787104724094756105123814868105223774874105323674868105423624868105523804853105623734855105723674853105823584849105923464846106023524778106123744840106223524838106323814826106423714821106523584825106623404818106723724781106823584807106923564790107123564878107223534890107323534898107423544905107523524859107623434859107723464876107823454895107923404903108123304852108223304875108323304888108623564990108723535003109123564913109223584922109323614929109423634936109523664960109623324913109723454933109823524949110123074942110223154954110323244975110423164980110522904956110623004978110722924983110823074992110923135012111123404993111223294976111323484981111423234926111523304940111723084797111823054764111922824760112124464929112724584905113124975063113225025060113525125053114124585013114524775041115124385000115324315040115424265064115624585111116123744733116523954729117123304776117523424742118123104862118223174838118323114887118422964892118522924850118622844871118722804823118822634852118922604873119122824910121122245176121222185195121321975176121422145169121522145156121622185140121722395156121822705130122122275187122222475181122322275202123122005085124122305090124322425130124422665097125122485216125222445232126122795257126222945285127123035239127222875213127323015256127422995271127522915263127622925251127722965279130923725146131123675178131223765191131323845198131423815213131523705220131624005214131723885234131823855247131923915172132123575182132223465184132323665196132423615214132523675238132623705250132723585256132823745265132923695276133124225263133224125244133323965263133423955277133524055288133624085310133823845282133923925302134123595289134323425303134923385330135123505217135223445213135323375209135423385219135523435229135623405239135723345234135823325280135923385184136123435142136223435162136323565152138123015073138223145048138322905055138423245037139122714974139322725033139422585061139622474990139823305071139923195108140122795172140222725176140322665181140422765162140522785148140622665152141123025169141222935128142122394822142222464826142322344816142422344775142622134815142722334840142822264789143122534736143222824795143322374740143522604702143622734749143722794732143822904783144125004954144225154967144325094972144425224968144525014986144625155003144724854971144824974936145124804918145224654963145424364961145624934886145825234844146125314934146225504923146325884940146425554875147125324985147225395018147325525032147425765002147525914974147625995014147725454986148125025022148224795000148325574845148425604822148525704844148625644803148725474821148825404798148925484766150124384833150224484827150324484840150424374849150524264845150624374820150724384801150824584824150924704831151124524876152124934788152525164783153125004826153425174802153625284787154124624800154424744800154625104850155124514773156125004766156225104759156624634729156724914746160127105277160227235269160626695219160726615185160826425157160926425196161127025246161327005222161427015202161626915176161726805133161927345216162126405062162226385030162326445072162426485058162526555053162726415099162826535095163126054981163326184963163426205012163626064882164126434939164226494952164326624940164526294907164626244876164726474997164826304953165226674975165427055035165527105001165727325015165827465017166127374983166227264997166327224991167127555100167427575077167627405050167827285089167927155062168127045149168226995109168327105138168426945116168526775064168626795054168726845012168826925063168926705068169127055096169227185118169327285146169526625088169626645125169726385124170126724855170226584848170326424834170426944850170526464820170626714866171126534896171326784903171526894950171627044943171827234943171927474960172126784804172226904803172326994795172427104786173127584918173227744889173327364896173427194881173527464855173627464836173827304819174127944810174227804781174427584749174627474792174727384755174927164739175128084750175227814724175327904698175427534696175527724668175628344754175728224804175928494720176128604836176428904819176628224866176727934894176827904852176927694829177128465064177328425083177428594959177527884994177729124982177828934926177929365035178129564779178229564749178329314728178429304751178529394774178629224787178729004746178828894741178929494726179130544780179230484847179330774825179430944874179531364842179630904766179730204752181126314748181226094756181326204753181426224742181526294734181626344720181726494734182126274765182226494787182326384763182426444755182526564752182626574765182726694766182926344775183126754758183226864756183426624786184126134817184226294836184325864853184425844809184625744777184725954780185125974719185226044691185325914699186126614674186226734725186526584636187127104670187327204670190125564640190225404681190625664698191125234728192125634736193126184627193426284667193525954642194124834658194224824648194324884638194424944647194524964663194624924675194724864667194824754680194924904607195124754617196125114671196225174674196325184685196425094663196525024666196624974682196724994698196825244659196925134622197124554624197224544612197324554602197424444583197524664609197624554572198124434676198524464636199124344664199224284668201123824637201223694627201323834625201423734614201523804609201923814639202123924644202224024650202323964633202424074639202524134652202624214659203123924664203223794653203323764663203423564644203523664661203623504652203723564666204123874556204223534534205124084582206124114616206324144674206424134704206523914695207124364623208224214633210123534618210223514632210323414624210423344610210523434603210623524604211123604590211423324562211623674572212123214599213123224688213222954706213323114670213423104643213522974662213623154623214123574690214223344647214323534722214422884600215122644606215222834632215322554650215422424676215522354664215622264644215722294597215822244560215922144573216122564544216222464559216322684565216522544578217122174507217222224535218123034593218222944570219123014541220122254444220222404431220322294468220422944490221122634496221222674489221522284494221622304486222122114417222222034434222321834409222421954411222521974393223121964448223221944452223521704435223621684419224121524415224221534367224321284360224421134341224521214399225121194446225221174426225321394452225421274428226121014393226220914387226321004406226420894397226520914408226620934447226720594356227120724370227220844375227320794360227420744350227520634353228120574342228220524335228320464322228420414313228520384302228620244316228720294327228820334337228920374349229120204277229220174294229520144262231121564488231221614493231321514500231421504514231521644510231621684496231721774510231821824503232121484482232221384498232321314479232421444472233121514450233221604462233321684468233421744482234121814473234221744455234321944478235121484550235221614524235321674537235521654584236122024521236221934540237121924622237421864560237521964590237622074612237722114642238121134505238221284522239121004592239421254594239621424595240121514640240221544674240321454689240421354642240521284662240621314672240721074691240821204647240921064648241120914759241220754764241520834806242121464789243121674825243221724853243521864801244122054765244521324725245122194690246121784720246521994672247121054724248121734648249120674385249220664409249320584403249520564360249620514376249720374362249820334384251120784317251220734305251320794302251420844309251520734321251620684338251720874286251820814294252120634318252220604327252320574320252420534313252520624303252620684308253120564301253220484297253320544287254120454281254220364266254320424263254420404251254520504270254620584274254720624268254820304290255120594237255220544248255320454222255420654219255520654238256120744275256220744282256320724270256420684258256520764259256620814252257120714289257220644294257320654284257420644278258120914270258220934277258320924256258421034279258520954297258621154287258721094292259120944364259220914354259320854344259420934342259520814334259620934319259721084312261120124359261220184364261320124347261420084335261620204378262219824345262319854361262419954356262519924339262619774360262719854372262820024376262919844388263120424408263220514405263520054317263619744325264120164435264220114450264320054438264520034402265120034472265219844452266119814515266219864486266520224534267119944209267219964219267320004202267520064236267619574212267819754256268120314185268420304168268520264223269119934167269220004157269320004181269420074164271120624492271220494502271320544484271520564475271620604446271720754474271820394498271920434471272120574543272220544513272320614521272420654509272520804502272620684488272720724512272820774523272920634534273120814562273520914527274120394667274220444626274320374637275120514587275220364582276120064582277120814671280120144702280220064698280320244690280420324708280520214726280620124724280720094745280820044719280920074679281120464737282119694755282519534700283119824690284119984652285120044791285519774824286119394779286519274807287119514848287219494869290119164564290219274577290319324590290419324608290519414599290619364569290719474583290819584578290919144545291119564625291219644602291319834609291419774622292119084577292219184592292319134605292419244611292519164625292619104609293119004618293519414655294119104695295118664664295218534670295318724645295418714685295718864697295919034774296118834641296419204850296519324871296719304906296819364899296918604711297118714774297318684827297418924814297518884866297719034905298118674593298218764587298318854604298418734619298518634601298618614621298718904581298818584578298918544621299118514550299218504526299318494500299418614502299518294573301119194488301219184476301319244470301419194467301519124468301619064474302119174460302219204448302319134452302419044456302519094443302619134443302719174436302819174424302919074427303119274492303219294478303319274469303419394497303519334481303619384483303719374473303819364465303919304456304119284442304219334433304319424426304419284420304519504448304619614418304719514396305119454477305219524471305319674472305419554490305519604506305619524515305919804587306119274505306219324521306319104523306419124552306519244550306619354550306719454550306819584551306919674552307119104504307219024489307318934501307418954512307518864510307618764523307718974552307818914544307918804546308118944484308218894467308318884484308418754476308518734491308618744469308718924451308818744437308918904422311119164400311219184410311319084410311419054404311519034386311619104394311719134382311819204376311919234394312119324386312219324370312319464364312419504379312519344403313119114337313219124308313319024309313419064357313519184357313619284351313719404344313819274320314119194272314219274254314319134260314419224240314519324232314619404225314719374241315119704150315519454280316118504449316218574474316518704419317118554399317218474402317618664399318119164231319118604368319218524363319318694345319418704372319518844394319618864352319718834278319819424149319919554028320118494330320218594314320318414341320418394323320518254365320618304326320718374384320818444302320918224333321118544265321218264288321418104243321618414226321818604224322118344106322218554125322318504159322418284147322518364172322718224191323119104172323218974157323319184098323418914135323518794080323718844182323818734208324117484188324317364230324417144156324517604140324717504082324817754072324917174087325118024034325218283983325318053904325516944216325616794278325716814327325817054273326118104426326218064400326318244394326418004367326517964331326717794281327118034489327317884467327418224505328117344455328417614362328617674454329117494544329217174568329317524596329517714606329718024572329917854548331118144669331218074690331318104788331418024663331518044721331617724638331717884659331817894679331917944701332817774674332917604698333118204640333218244656333318124632333418164600333518264607333618084608334118464653334218444619334318354631334418324645335118314679335218424689335318284691335418284700335518374703335618344723336118204769336218234786336318284752336418364780336618494767337118264841337218284895337318424826338118564881340120245036340220395035340320304986340420105040340520064965341119724934341219885033341319724977341519864874341720434956342120184860342520384894343120335084343220205088343320125109343420085083343520235073343620335070343720505074343820485092343920385114344120864885344220824878344320924848344421004911344520964918344620844915344720784890344820744866344920804846345121045008345220945008345320815015345420775030345521244995346120624916346420504860346520454794346620564828346720234829347121264897347421224836348120954964351120885116351220915124351320995109351421005122351521045117352120835109352220735115352320725125352420625137352520625119352620655103352720785095352820705082353120905096353220955092353320865086353421025085354120935070354221155058354321095040354420925052354520615048354620455047355121015098355221075104355321095087355421145092355521195075356121135124356221175117356321185098356421235105356521265085356621235124357121085132357220995135357321045148358120905135358220795133358320875144358420865168358520705151360121525044360221395073360321455030360421305054360521375027360621295039360721355018360821245030361121325072361221585086361521555132362121685000362521775070362622014975362821524950363121965009363222225018363322385036363422224996364122134854364221964860364322184854364522214943364622384894364821854897365121464852365221624870365321474870370120865247370220895236370320775228370420845211370521005238370621025226370720985280370820785259370920665238371120845313371221185262372121205191372221285217372321495209373121045170373221055202373421505241373521215237373721305158373821575178373921785174374122205307374222065300374322075280374422015248374921865225375122275381375222425352375422545328375522505280376121895294376221815278376321715258376421835310376521695294376621605273376821505305376921225306377121505598377221255556377321395605377421545678377521755758377621925699378121885621378421605520378521795512379121415479379221395519379421205515381121565388381221635362381321705385381421625397381521665414381621565418381721415389381821335348381921545346382121745427382221815399382321895395382422005380382521965412382622055425382821925350382921875429383121215454383221145381383321315419383421275438383521525435383621595466384123495622384223445633384323375644384423375609384523265599384623605640384723225664384823485647384923565677385122955618385222855694385323025584386122325443386222045534386322155462386421945468387121785460388122435632388222435553388622265700388822405799389123335538389223225541389323355518389423475530389523485516389622965446389723755418389823825576389923625511390120245558390220245574390320095566390420165540390520385551390620275525390720245583391119785575391219685560392119915514392219935490392520895500392720695534393120825420394120375343394519945290394720035350395120665365395320525409395620235432395819945446395920335501396119715307396219815356397120675296397220365278398120615185398420465221398520215242398919925138399120205161399220405143399320405174399420265187399520345170399720045221399819855196399919995144400118865432400218945421400318995411400419125446400518955450400618795407400718705408401119245403401219045377401318835382401418685357401618865353401718945390402119565414402319515360402419715453403119635482403219365476403319445528404119355574404319345630405119115584405319085530405419065487406118485367406218585402406318165343406418285360410119655239410219545248410319405240410419415213410519515203410619595188410719335192411119385300411219485277411519295318411619135330411718955344411919455329412119575152412219455126412419785127412519895120412619405071412819545019413119745097413219935089413319825068414118925103414218905076414319095092414519305118414718815104415118995135415218985148415319055202415518655156415618715178415718705212415818765241416118695072416318795069417118435124417418345173417518225200417618315228418118415246418218445284418418305308418518475315419118795304419418635289419619085259419719085289420118294974420218324942420318354949420418394949420518494961420618444983420718344995420818345019420918504929421118565016421218505014421318245014421418415061422118804976422318734939422519024943423119224983423319484965423519534945424118664998424318925024424519185040424718745045425117774827425418154941425517754916426117585099426417785097426517395086426617365049426717195043426817275010426917525026427117354965427317384892428117805056428317825027428418005011428518094983428617714969428717755000428817884995430116533924430216453906430316633936430516283986430616573996430716484044430816754040431116574102431516923987431617173948431716863941431817293900432116913882432217263858432317193823432517303761432617223794432717003813432816983729433115003614433215133636433315193606433415053589433514893595433614843614433714873633433814973644433914833670434115103692435115383655435215433627435315523597435415803606435615703553435715573492436115323456436315413507436415283564436515203521437114823552437314963527437415103486438114443580438214503588438314573572438414603547438514623575438614703578438714733592438814683605438914623647440114894035441114234213441314334105441414184087441514464076441614514043441714664011442114803960442314693993442415133988443114573903443314303906443414353877443514103884443614083845443713983816443814153799444114343804444314493852444414733862445114653809445314563774445414263751445514593731445614883744445815003799446115043890446214893888446315143882446415143907446515213912447115363766447215053859447415183948447515333891448115033924448214763922448415643811448515693869448615903829449115863764449315703700449415633758450113243478450313753511450413743463450513423443450613683413450713543558450813133551451113903548451313683646451513213622452113373694452213263664452412943398452513413396452712873449452812803503452912543444453113343822453213303845453313273875453513153858453613173848453713243837453813023847453912973872454112863841454213203775454313293920455112563804455312863739455412383843456112864032456212754069456412594043456512514061456612524012456712804103456813344168456913274098457112753925457412353891457512153905457612393956458113183985458313124046458413294044458513423998458613424052458713604044458813884015458913813980461114954286461215004248461315064280461415244313461514864286461614764293461714734266462114934301462215064329462314944337462414784338462514704316463114404332463414284284463514354376464113954337464513724388465115764326465215924315465516104253466115264269466415524264467116244353467516324155468115874226469115334194469315574135469415384098469515664068469615854019469715974094469815794186470115324459470215384474470315394428470415534461470515524489470615304501470715134470470815104431470914884462471115514588471415294609471515304544472114964532472214964572472415284394472514794398472615174365472715384342473115914536473515564515474115974577474415614546475115874480475416054443475615724403475816254526475916404528476116514601476216394620476516734674476616654706477116474651477216414678478117024640478216824603479116634537479316384474479416574415479616644462479716824451481115884776481215764753481315764740481415874744481515984755481615994795481715894819481815804788481915754767482216124733482316304731482416124752482516184774482616104782482716074799483415684802483515694786483615374759483715664758483815604718483915834706484116114692484416484747484516644751484716164815484915994879485115454799485415664837485515154770485615104804485815324820485915504850486115064866487116044653487215774665487315554670487415984621487515714630487615444642487715734613487815674608487915604615488114684672488214904631488414424638488514554571489115154699490116464867490216354866490316144875490416284838490516674852490616624837490716574870490816664867490916544905491116554808492116824802492417294791492617034696492716924749493117004846494116974878494217044875494416934910501115965092501215925110501315695100501415675094501515735112501715565099501815525119502115485090502215415095502515495068502615405060503215505004503515834979503615665007503715595051503815575078504115645079504215725056504315805015504415755033504515894990504615735077504715985003504815975050504915965077505115055049505215285050505315335079505615775139505715885136505915665153506115865188506215625224506315855169506615345186507116165138507416245181507616045232508114975110508415075157508514505129508714685186508915015211509114675250509414145152509513905113509613885178510116254921510216384930510316304951510416214947510516144984510616384974510716164929510916634942511114364924511314514859511414204794512115874929512215864931512415624885512515814960512615374929513114874953513315205000514116875056514216915085514316815091514416785065514517045070514616765041515116685134515216825121515417045134515617205126515717285095515817305115516116885002516516944950517116565046517216515022517516285068517616235017521116875302521216975310521316975328521516885347521616775326522117245250522217035278522316905266522416985260523117105299523217085331523317165321523417245287523517305306523617415340523717285292524117175353524217085362524317235381524417185396524517305347524617005344524717365376524817065403524917445403525116905210525217005209525316945178525417145198525517245161525617355141525717335188525816785411526116485304526216355277526316565263526416765271526616705234526816445205527116505344527216405360527516695376528115715298528215985292528316015342529116095354529216225380529316255357529416135375529616165294529815655370530118075255530217995251530518035136530618115086530718015052530817855131531117975193531318065172531417845241531517805210531617775182531717595151531817515170532117545258532417565222532517565196532718135302532817965310533117735331533317505318533417685296533517865348534117685520534217485547534317455515534417545505534517725491534617825518534717835548534817715540534917625549535117685576535217945614535318175603535418115628535518065644535617865674535717755672535817865637535917725690536117625728536317485714536417355745536618185566536718015541536818015583536918015582537117955649537317685630537417335627537517415686538117175466538217085445538317025474538417185516538617475467538817025562539117395435539217315418539418145505539517975497539617905464539718005423539817765393540116615608540216655619540316675634540416515622540516555652540616665611540816485675540916415718541116925682542115605689542215665717542315785714542415745770542515415729542716065676542816085732543117245873543217405858543317515861543417185854543517095904543717225819543817365781543917485818544116985933544316925862544516205782544616535824544716625890544916515860545116925776545317055731545416765812545516545764546116295544546216225521546316055563546416325575546515845542546616045506546716245558546915905610547116845510547216735511547316585488547616635553548116135414548216285451549115685479549215525446550114205402550214255418550314135417550413945399550514085379550614175383550714215350550814285390550914315406551113955337551214295282551314495328552113495315552413775362552513735294552713495257552814005272552914005242553113565219553414135210554113455162555113495430555213625452555313655494555413465454555513475481555613035442556113585386556313315406557113035323557512805304558113875442558213885468558313885495559113885582559513345535561114375481561214485479561314395496561414285492561514295475561614385459561714475458562114555456562214595464562314615478562414715455562514725475562614745434562714855443562814805473562914905469563114595504563214775497563314925499564114445527564214385516564314265504564414135483564514275517564614145509564714145520565114635426565214365438565314245444565414215459565514125438565614105455565714545390565814405408566114085532566214285550566314165544566414165560566514185579566614265575566714335563567114765545567214645548567314695569567414815548568115235414568215295379568315065402568415065376568515005373568815105315568914985314569115215470569215015469569415145521570114815665570214945665570314795721570414545707570514645679570614625640570714785628570814885608570914845702571113915692571213525704571514255668572113975778572214105762572414285734572513665793573114395611573515145649573715175589573815445570574115435632575114635778575214855809575314455812575414665842575614425754575714155837575813725870575914015894576115105729576315105800576415445812576614365906576813365878580115245960580215225986580315335992580415465971580715316024580815096036580915005984581114906029581215035943581314855894581414785957581515315920581615435870581715576004582115935993582315716029582415796005582515745932582616115997582716165972583116495938583516755933583616315959584115955842584315785860584416055918584516225872584616365863585116416028585316516076585416056065585515676098585615306164586115366077586215486051586315286113586415126088586514936090586614946120587115026154587214796145591113716172591213546166591313696189591413866170591513536197591613876201592113676149592213746143592313616142592413676130592513776130592613566122592713776106592813996116593113456141593213336155593513346124594114206183594314546193594414876194595113066125595312786089595412606049596114616059596214646090596314326038596414596013596614435962597114266122597314566140597514026024597614155986597714025942598113315968598413585992598513645939598613335929598713085965598813196009599113326086599313656046599512966042600112555708600212595652600312735706600412545745600512285748600612215668601112135789601211905777601311885813601411765826601511655791601711635849601911615878602112765596602312525570602412365590602613195632602713065572602812915543602913555625603112955722603412785808603513165806603712235830603911945708604111985973604211946038604311886010604411796023604511716020604911745959605111485899606111216035606311446102606511285945606711655934607112276037607411566022607511676102607711465989608112335942608212365980608312485958608512155932608612725975608812735923608912995907609112555825609212505851609312725873609512305876609612005857609711855887609911975916610111105870610210875901610410605946610510985976610711285850610911125828611111085912611211215908611410695859611610805813611810395863612110395818612210435813612310475823612410435787612510275779612710475775612910025776613109985865613209885886613309875860613409905850613510015847613610165870613710015889614110175840614210005826614310125816615109735864615309735885615509585872616109605806616209785835616309815814616409555830616509635830616609735844616710005796617109735764617409545851617609365839618109445768619109335806619909165778621108505690621208285685621308315665621408455673621508415652621608505655621708565670621808685659621908675683622108505703622208765716622308905699622408515712622508635738622608495739622708385730622808265732622908235708623108835760623509015782623709165762624109025736624309235747624507795716624708075732625108135764625208045767625507725823626107815791626207925811626507955770626708285770626808455778626908225816627108015883627308205863627408015843627607765874627707705855627807835856628107885920628507665908628608115940628708305937628908445923629107666001629407785955629507855981630108655825630508475860630708285846631108635891631208605893632108345892632508605786633309025820633608925856634108665870634208645866634308805891635108176000635308185972636109195876636309025891636509395880636708665928636908375974637109026008637208856022637309096023637409176051641108885962641208995955641309175956641409185979641508985987641608835997641708765983641808686002641908675974642109285952642208426004643109265931643209225911643309125930643609425926643809525910643909675906644109525964644209525995644309425992644409415959644509325994644609385942644709575941645109715993645409785950645609705933646108646068646208546067646308746065646408806074646508526030646608596030646708666026646808776045646908916048647108966064651118475863651218395856651518835851652118395874652218455883652318295887652418355865652518185868653118305849653218235834653318155846653418185819653518055828653617985811653718125791653818175805654118505832654218425840654318365828654418315813654518395803654618325780655118535801656117925928656217665947656418145894656618626029657118135920657218215932657318295934657418355903657518425932657618585914657718465959657818445990657918606007658117925858658217685841658417705880658517565894658617405920658717305901659116985976659517085998659617255951659816685992659917126020660118145710660218065721660317985763660418275738660517985725660618005680661117725796661217695753661317855716661518235690661618345678661718525657662118475439662418165383662618275464662718345525662818535557662918355573663118545609663418255637664118585769664218515766664418625726664518755701665118925584665218795605665318855665665418815636665518735580665718775549665818755515665918725474666119325832666219095849666318645862666519575809666619535755666819475695666919115663667119285718667219285692667319045722667419145750667519145788667619345781667718885778667818805822668118995899668418915869668518865924668618926004668719095959669118775964670119445634670219575641670319665687670419815701670519915698670619755676670719725665670819845654670919765630671120365687671220475659671320365658671420455646671520405632671620275632671720225666671820515691672120075670673120795794673221355779673321015707674121015620674420595583674520425585681119815907681219835877681319925879681419945896681520025908681620295884682119935916682219955924682320045939682419925939682519805968682619825949682719685940682819805924683119565890683219625910683319665922683419555926683519535907683619435894684119725886684219595879684319605863684419485858684519475871684619575842685119325939685219445924686119935839686219805840686519745788686619825762686919745812687119925742687420085786687720785892688120115983688219905969688319885993689120465978690119276079690219366097690319536070690419326059690519186074690919076125691118956034691318986073691418806118691518666127691618666089691718546143692119616026692219436003692319286026692419305985693119605969693219485978694119566122694219336152695120566100695220526079695320396106695520266100695620646112695720696054696120956050696421126095697121066159697420756131697521366128698120106134698220076146698320016128698420266154698619846118698719936073698819916035699120156023699420256066699620196186699720046199699819896194699920066247700119666292700219766316700319636307700419606354700519496301700619706252700719516272700819766263700919836293701119386360702120086348702520006429703119626202703519346236703619256207703719066191703819046251703918806213704118786253704418886269704518866305704619136296704719246261704819346286705119436468705419516419705519616487706119266359706419066402706519176448707118956374707519116326707618886352707718596322707818466383708118706358708318746419708418846456709118656486709518926500710119706732710219686694710319846718710420136703710520036762710619796804710719396772710819266715710919416665711319806765711519546750711919666659712119306613712219266544712319176591712619446623713119906565713219806553713419846621713519816509713620146519713720166593714120446621714220336653715120976625715220866671715620626561715720966722716121486592716521536650720121416198720221566197720321516220720421366210720521466169720621256199720721196233721121716229721321966197721422226214721522066244721622276323721721966291721821626290722120616181722320726238722420526152722520456131722620846195722720436226723121386275723221326234723321026246723420856260724121606413724221566402724421236441724522036382725121026341725520546335725620306292726120666465726320106478727121066513727321086571727421406518727521686525731122135961731222015925731322185916731422185944731522335940731622295964731722365972732122135989732222225984732322315998732422425997732522116028732621946010732721885995732822035987732921975998733122015969733221915982733321835972733421825954733521985954733621945939733921725900734122576011734522575948734622155864734821745830735121255908735221115863736121455965736421566008737121106007738121716033738221756080738321786138738422146117739122406100739222356122739522376049739622726081739722966061739921486122741122536160741222646136741322626157741422746143741522716166741622606187741722556180741822406185741922426147742122426221742222486209742322546208742422636217742522586229742622556249742722466244742822356247742922506222743122956154743322906217743422786277743522876315743722486322743922446148744123426451744223576487744323826483744724156451744823546388745122876404746123046531746222986490746323146495746623326495746723406520746822996588747122366588747222486601747522356513747821926577748121436785748221776705748321736742749122596706749522656670749622036636749722186687751122206901751222146898751322166883751422266893752122346852752222536861752322366897752422646903752522636944753122336922753222346954753322216923753422046951753522096922753621856932754122066902754221886904754322056878754421816876754522126857754621836834754722246824754822046791755122656792755222586822755322546789755422286750755522686762755622796786755722726811755822846833755922966802756123026855756223036875757123136929757223076914757323136939757422976938757522966919757623116896757723256916758122727005758222566985758522336986758622417033758723146994758823557014759123897013759523446867759623606930759723376803760123396684760223736638760323716694760423536628760523506654760623446650760723546694760823826683760923316640761023886643761123766628761423816707761523856718762122996730762223006753762323046773762523236725762623186767762723126656763124096900763424066948763524346986763623886891763724246916763824206871764123706557764223426565764523966553765124066782766124246830766224396883766324446823766424496782766523626750766623776804766723836844766824076836767124266640767224146614767524716693767624536627767824236720767924596725768124656576768324636503768524936568768624806563768724406582768824286538769125206619769225106582769324886626769425076683769525366665769625476615770125946475770225896452770526226500770726136365771125776263771526106271772125106256772225136269773125166435773225366440773425036357773525446457773625086536773725466504773825636382773925826363774126636699774226566797775126966744775326886666775427286747775526886814775626726809776126696902776426926863776526706984776626486994777125686605777225716637777325816604777526196584777626306544777726536561777825896671777926366682778126436596778226576630778326096672778426136635778525976640778625956701778726126709778826336651779125696714779225586676779325686660779425496576779525346550779625886564779725706540779825966595781127836895781227686884781327566858781427886878781528046895782127696912782227906906782327956938782427816927782527626939782627686956782727476889782827346903783128456975783327166874784127676788784227746820784327466813784427156843784527196806784627956804784728106821784828326778784928646735785128086746785228206715785328416726785427966696785527776671785627766752785828786765785928676769786127546730786327466681786427186672787128306854787228426886787328616834787428436808787528856867787628806962787728937017788128047022788427577041788527536975788727076928788927606994789127126995789227316968789426947038789528407022790127316472790227256489790327346505790427246511790527146510790627156486790727046472790827146444790927166428791027506582791127196573791227336566791326976545791427226534791526836500791626836575791727376620791826926617792126626419792426666372792526346469792626616497792726836477792827726499792927026638793127396446793227156388793327776452793427536502793527806436793627516541793727686528793827726599794126966191794227186199794326976218794426866180794626976104794827366162794926876261795126526198795426146160795526496299795726706315795827026328796127336269796327596367796427866330796526986261796626796253797127656235797327766206797427736184797527966273798128626317798328636263798428486337798528786362798628286298799128346389801125116091801225056105801324906134801424846117801524596127801624806098801724946085801925016069802125176097802225216109802325136114802425206141802525106127802624976167802825486184803125326083803225346100803325366109803425436117803525606157804125126065804225186039804325386062804425516031804525596060805124746053805224826054805524596182806125806106806426396079806626696064807123795767807223725821807522975781807623315826807723575728807925085875808124455843808224415870808424085883808524085818809124515986809424816011809524385953809624385917809724765891810123896246810224166291810323966284810524066365810623806322810723666218811123326280811223226328812123386135812423336204813124026170814124436246814424396187814624706367814724916396814824586414815124456361815224516319815324316350815424376306816123496010816223645928816623185944816723456055817122845930817222795955818123896038819124306067819323956112819423776089819623286089819824156124821125395511821225135509821824405431821925155556822125585511822225375490822325245491822425145486822525035495822624935497823125335469823225085468823324895468823924795479824125355454824225815408824325055443824424955425824524795435825125255753825225155708825325385697825425265730825525675639825624485681826125555918826225625904826325695863826425515865826525415897826625355931826725995907826925305886827125665948827425335964827525366010827625095989827725885947827825065929828126126024829125916028829325635996829425776046830127085756830227315740830327125716830426895751830527165793830726435820830826405715830926815663831127245644831227685649831328125712831427715757831527545851831627045890831726565908831926405774832126625615832226715633832326565642832526755970832626816013833127846116833227986136833327816153833427976089833528096077833628146098833728226084833828316071833928156057834127886062834228016028834327656116834427746156834527976172834628076115834728296125835128226222835527356060835627225978836128085960836227525968836327545987837127716018837227395952837327675911837427985838837528265958837627985920837727775964837828106002838128616207838228476182838328416156838428626159838528766185838628946253838728936226838828956167838929166153839128906139839229156200839328726120839428926094839528606082839628586042839728466040839828356013840129956064840329746035840429876008840529965982840630375983840730286034840830216099840930366136841129796119841230026172841329586084841429466060841529616041842129406132842229596181842329776225842429406251842529636276842629436344842729736390842829946356843130026306843230406308843330586340843430516278843530186236843729166247843829166286843928966325844129745909844229555929844329455941844429345952844529365933844629515917844729705890844829695946844929985903845129355968845229245934845329495971845429385996845529396027845629645989845730215958845830065942845930055920846129395898846229095904846329195855846429335870846529605865846629585898846730065843846830155869846929905883847128726002847228746019847428886049847529196080847629116031847729165987847828645973847928535946848128375912848228155872848328285862848428415844848528485877848628755905848728925944848829025970848928065846849130535827849330385788849430675855849530515902849730875903850129805812850229725812850329635762850529885793850629595834850729115830850828855837851130205757851229865763851329405813851429315807851529085793851629025746851729425781852129235754852229145677852329265707852429385703852529655714852629765733852729385731852829545706852929515667853128635685853228565702853428685714853528845721853628705765853728705800853828355795853928615824854130025797854230165789855129435635855229605638855329475601855429295610855629045642856129025590856328935620856428805571856528675608856628545574856728535534857128975550857228645495857328585464857428685450858129285548858229105516858328965495858428835459860130325639860230435653860330435669860430325689860530355674860630215690860730155664860830215648861129685526861229785562861329905517861429925552861530225538861630135546861730185571861830135600862129725595862229785659862329975654862430015716862530085697862630365722862730565718862830545701862930665673863130555655863230625626863330465634863530925697863631165676863731105697864130965660864230825664864430835718864730595735865130095628865830115516870130645524870230695537871129735434871329365415871528835371872128685411872228995410872329195455872429495499873131025583873231225567873331265612873430985620873531045646873630785636873730785602874130725572874230895542874330845519874430845480874530695477874630775452874730835423874831005478874931155434875131065394875230715321875330845397875430565408875530455422875630335414875730225427875830415451875930575468876130065438876230045490876330145468876430225495876530405507876630195203877130525585877230475612877330345605877430405550877529865490880131795549880231965538880431505564880531645519880631535498880731865495880832095542880932135563881132215589881232075599881331995576881431915603881632045622882131425433882231285487882331285526883131495635883231645669883331525680883431415671883531285656884131655634884231675601884331395604884431175637884531105540885132385548885232535556885332255526885432345512885532175493885632125463885731965460886131795447886231615453887131855469887231855446888133765210888233815260888333765265888433825273888533755277889133945280889233765290889333835304889433965310889533935328889634045342889734225443889932554959891132015795891231805770891332015782891432045754891532115768891632075782891732105792891832165794891932255761892132055811892232105805892332155814892432085825892532075844892632175869892732205838893131885782893231925792893331975810893431915807893531875818893631935825893731985825893831965847893931795839894131685807900131005849900331385903900431635871900531465848900631295823900731185817900831155783900930985800901130715784901230985757901330785755901430685742902131165735902231285720902331475705902431445746902531575741902631685744902731695699903131785730903231815708903331935718903432095716903531865647903632155667903732195622903832255718904132375642904332485627904432355685904532385716904732485591905132655777905332825758905432855780905532515800905632445783905732335796906132405884906232525889906332485925906432705876906732665921907132885733907232965653907333295782907433015790907532765573907632975677907732675708907833065710907932805608908132255831908232365839908332215812908431785804908531815834908631765842908731525821908831495799908931365779909132605848910133245996910233335994910333156007910432945993910532905933910633145954910733145910910832705978910932646011911133005879911232895886911332986030911433086055912133426010912233486036912333616069912433466073912533326048913133396104913233276148913333776136913433856094913533666093913633996093913733786049913833606044914133956007914234016069914333936044914433735999914533835965914633576006914733645964914833505973915133695889915233555917915333565935915433455948915533285938915633345966916134465643916234475689916334505757916434565855916634916227917133475875917233465816917333295857917433245877917533255898917633265919917733095874917832995848920131146096920231096120920330936098920430996067920530916060920631126064920731256097921130796076921230836032921330976023921431036003921530915964921631185967921731286028921831366061921931516030922131456096922231336151922331486145923131746161923331606134924130526194924330786273924430556070924530665988924630686113924730926162924830976237924931066205925132005996925432155952925531995895925632295913925732236004925832116053926131776071926231726016926331625964926431385940926531815912926932465973927132616035928131866130928332066190928432206163928532506157928632386099928732376050928832216093928932046116929132856154929232736188929333086192929432946117929533046089929632766089929732666114929832666071929932486050930131366431930231336403930431136464930531156419930631126434930731056403931131256384931231616408931331606427931431586459931531756471932131516501933130746462933330956451933430556498933530386463933630186477933730526431934130266408934230846379934330826332935131606379935431176334935531936387935631816355935932006337936131856336936231846317936331396243936431506301936531576325936631326314936731186270940129886559940230056560940330196588940429846586940529706524940630056539940730196562940830036509940930196610941128616498941228716523941328486510941429226538941529016483941629136444941728156468941828066514941927856552942129846465942229446443942329046387943128536606943228686648943328926593943428346594943528176589943627946605943728086630943828216629943928176658944128526683944228916645944328946705944429316674944529466643944629316603944729546714944829606646944929716686945129866643945229696629945329626615945429486595945529526566945629576579945729766607945830046627945930196643946130046776946229746775946330176731946430386781946530036685946630366665946730436700946830596739946930666675947130936687947230806717947331146717947431006748947531076671947931276665948130776577948230796619948330666648948430526634948530386622948630356565948730286546948830326516948930176527949130606536949230506578949331116613949431096581949531256522949631076514949730926540950130156934950229876978950330006927951130246843951230416849951429926843951530006892952129536930952329776899952429346874952529666860952629596840952729446810952829246840953129266770953329516776953429066757953528966735953628996814953728906781954130177128954530097185955129477128956128827079956329187062956429147035956630567133957129176960957329266924957428966904958129507004958429607045958529857012959130227043960131656749960231526743960331326782960531116774960631456710960731696714960831866679960931866648961131646797961332276659961432206681961531856744961631986716961732166704961832226741961931966772962132146792962232436687962332446718962432506739962532726781962632376806962732496832962832456879962932786846963131066820963231336808963331406830963532026877963631716863964131016870964230986853964430926924964531206881964631156857964830676861964931416869965131446927965430756798965530876769965630816770965730696780965830526801965930636821966130437000966330546956966530967006967131437034967231467061967331297033967431307011967531567035967731587008967831406978967931746954968131996996968232107042968432177108968531777039968631667110968731887165968832207187969131887203969331687183969531117155969631487140969731187080969830787063969930727150971132166569971232226562971332256582971432306573971532336568971632366562971732246552971832176549972131946573972231976588972332096624972432126577972532076570972632126556972732036541972831906550973132346591973232346619973332396621973432426626973532406602973632506600973732486588973832546556974132366552974232296540974332206529974432076495974532216497974632386502974732426537974931916468975131786613975231666588975331766631975531586656975631366628976131316574976531536559976631806533977132956537977333046533977432766528978132996605978432786578978532626601979132736695979232926744979333086738979432996707979532796728979632976668979732746653979832516660980132446405980432646382980532336396981132166415981232166406982132296332982232266368982431666257982531846297982731956417982832046439983132556471983232276454983332706443984132726344984232656335984332666303984432846272984532636259985132756229985233236217985333216258986132066281986232246304986332056243986431806244986531686205986632386258987132396218987232326202987332476207988132956312988232876327988333016392988432866354988533186310988633206424989133026443989232966470989332936490990133306851990233056859990333116829990433526843990533626874990633876867990733746836990833796808990934016835991133386820991233536803991333376784991433536755991533746772991733176796991833066771991933316739992133186691992233476705992333726730992433646702992533756710993133396893993233216894993333406912993433276925993633026967993732936921993932776880994232276938994332096942994432436999994532616942994632717047994732897050994832967028994932907006995133306513995333576508995433526548995533716529995634036516995733786488995933306583996133456461996233276444996333376419996433566419996533646386996633336377996733706454996834056446996934136496997133606340997233426323997333346339997433516270997533746289997633916231997733956400997833906344997934416831998134276676998234316739998334136782998434266806998534046753998633916720998733936762998834176608998933906559999133396638999233486670999333306652999433626648999533676637999633766694999733866676999833836623999933606594","viewBox":[0,0,484.7,564.0],"cbs":[{"p":"2024MM01","v":-39},{"p":"2024MM02","v":-37},{"p":"2024MM03","v":-33},{"p":"2024MM04","v":-33},{"p":"2024MM05","v":-30},{"p":"2024MM06","v":-32},{"p":"2024MM07","v":-32},{"p":"2024MM08","v":-31},{"p":"2024MM09","v":-29},{"p":"2024MM10","v":-28},{"p":"2024MM11","v":-28},{"p":"2024MM12","v":-27},{"p":"2025MM01","v":-28},{"p":"2025MM02","v":-32},{"p":"2025MM03","v":-34},{"p":"2025MM04","v":-34},{"p":"2025MM05","v":-36},{"p":"2025MM06","v":-36},{"p":"2025MM07","v":-34},{"p":"2025MM08","v":-34},{"p":"2025MM09","v":-34},{"p":"2025MM10","v":-30},{"p":"2025MM11","v":-27},{"p":"2025MM12","v":-26},{"p":"2026MM01","v":-28},{"p":"2026MM02","v":-28},{"p":"2026MM03","v":-32},{"p":"2026MM04","v":-43},{"p":"2026MM05","v":-45},{"p":"2026MM06","v":-44},{"p":"2026MM07","v":-40},{"p":"2026MM08","v":-37},{"p":"2026MM09","v":-35}]};
+(function () {
+  "use strict";
+  var D = window.N80DATA;
+  document.documentElement.classList.add("js");
+
+  /* VOORBEELDPRIJZEN, in centen incl. btw. Te vervangen door de prijzen van NEGENTIEN80. */
+  var P = {
+    stof: {
+      n80: { naam: "Gordijncollectie N80", kort: "N80", desc: "De standaard collectie met allemaal hardlopers.", c: 3495, img: "img/stof-n80.jpg", tile: "img/stof-n80-tile.jpg", kleur: "#9a8f72" },
+      basics: { naam: "Gordijncollectie N80 Basics", kort: "N80 Basics", desc: "Net wat meer keuze, in stoffen en in kleuren.", c: 3995, img: "img/stof-basics.jpg", tile: "img/stof-basics-tile.jpg", kleur: "#979080" },
+      redlabel: { naam: "Gordijncollectie N80 Red Label", kort: "N80 Red Label", desc: "Brandvertragende stoffen, voor thuis en voor zakelijk.", c: 4995, img: "img/stof-redlabel.jpg", tile: "img/stof-redlabel-tile.jpg", kleur: "#5c5540" },
+      jab: { naam: "Gordijncollectie JAB x N80", kort: "JAB x N80", desc: "Stoffen van JAB Anstoetz, voor een spannender gordijn.", c: 6995, img: "img/stof-jab.jpg", tile: "img/stof-jab-tile.jpg", kleur: "#7a705b" }
+    },
+    delen: {
+      d2: { naam: "Twee delen", desc: "Schuift naar beide kanten", n: 2 },
+      d1: { naam: "Een deel", desc: "Schuift naar een kant", n: 1 }
+    },
+    plooi: {
+      enkel: { naam: "Enkele plooi", desc: "Rustig en klassiek, telkens één plooi.", c: 1250, per: 24 },
+      dubbel: { naam: "Dubbele plooi", desc: "Twee plooien samen, voller aan de bovenkant.", c: 1500, per: 26 },
+      wave: { naam: "Wave", desc: "Gelijkmatige golven over de hele breedte.", c: 1750, per: 22 },
+      ringen: { naam: "Ringen", desc: "Ringen om een roede, losser en zichtbaar.", c: 1950, per: 26 }
+    },
+    voering: {
+      geen: { naam: "Geen voering", desc: "Licht valt zacht door de stof.", c: 0, op: 0.72 },
+      dim: { naam: "Lichtdempend", desc: "Minder licht en meer privacy.", c: 1495, op: 0.9 },
+      black: { naam: "Verduisterend", desc: "Donker, voor de slaapkamer.", c: 1995, op: 1 }
+    },
+    rail: {
+      plafond: { naam: "Plafondrail", desc: "Strak tegen het plafond.", c: 2995 },
+      wand: { naam: "Wandrail", desc: "Op steunen aan de muur.", c: 3495 },
+      roede: { naam: "Roede", desc: "Zichtbaar, met eindknoppen.", c: 4495 },
+      eigen: { naam: "Eigen rail", desc: "Je hebt al een rail of roede.", c: 0 }
+    },
+    zoom: {
+      lood: { naam: "Loodveter", desc: "Een verzwaard koord in de zoom, zodat de stof recht valt.", c: 0 },
+      zoom: { naam: "Zoom van 10 cm", desc: "Een brede, zichtbare zoom.", c: 350 }
+    },
+    lengte: {
+      boven: { naam: "1 cm boven de vloer", desc: "Vrij van de vloer, zo blijft de stof schoon.", d: -1 },
+      vloer: { naam: "Op de vloer", desc: "Raakt de vloer net.", d: 0 },
+      plooiend: { naam: "Plooiend op de vloer", desc: "5 cm extra, de stof valt op de vloer.", d: 5 }
+    },
+    inmeten: 9500, kamerhoog: 290, baan: 140, baanNuttig: 137, zijzoom: 10, snij: 25
+  };
+
+  var S = { stof: "n80", breedte: 300, hoogte: 260, delen: "d2", plooi: "enkel", voering: "geen", factor: 20, rail: "plafond", zoom: "lood", lengte: "boven", open: 12 };
+
+  var fmtE = new Intl.NumberFormat("nl-NL", { style: "currency", currency: "EUR" });
+  function euro(c) { return fmtE.format(c / 100); }
+  function m1(t) { return (t / 10).toLocaleString("nl-NL", { minimumFractionDigits: 1, maximumFractionDigits: 1 }); }
+  function fx(f) { return (f / 10).toLocaleString("nl-NL", { minimumFractionDigits: 1, maximumFractionDigits: 1 }); }
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  /* the sum, in cents and tenths of a metre */
+  function compute(s) {
+    var n = P.delen[s.delen].n, W = s.breedte, f = s.factor / 10;
+    var Hf = s.hoogte + P.lengte[s.lengte].d;
+    var perDeel = W / n * f + P.zijzoom;
+    var tenths, banen = 0, mode;
+    if (Hf <= P.kamerhoog) { mode = "kamerhoog"; tenths = Math.ceil(n * perDeel / 10 - 1e-9); }
+    else { mode = "banen"; banen = n * Math.ceil(perDeel / P.baanNuttig - 1e-9); tenths = Math.ceil(banen * (Hf + P.snij) / 10 - 1e-9); }
+    var railT = Math.ceil(W / 10 - 1e-9);
+    var L = {
+      stof: Math.round(tenths * P.stof[s.stof].c / 10),
+      maak: Math.round(tenths * P.plooi[s.plooi].c / 10),
+      voering: Math.round(tenths * P.voering[s.voering].c / 10),
+      afwerking: Math.round(tenths * P.zoom[s.zoom].c / 10),
+      rail: Math.round(railT * P.rail[s.rail].c / 10),
+      inmeten: P.inmeten
+    };
+    var total = L.stof + L.maak + L.voering + L.afwerking + L.rail + L.inmeten;
+    return { n: n, f: f, Hf: Hf, tenths: tenths, banen: banen, mode: mode, railT: railT, L: L, total: total, btw: Math.round(total * 21 / 121) };
+  }
+  window.N80compute = function (o) { var s = {}; for (var k in S) s[k] = S[k]; for (var j in o) s[j] = o[j]; return compute(s); };
+
+  /* option cards */
+  var PLOOI_SVG = {
+    enkel: '<svg viewBox="0 0 120 44"><path d="M4 30 H22 q3 -18 6 0 H46 q3 -18 6 0 H70 q3 -18 6 0 H94 q3 -18 6 0 H116" fill="none" stroke="#020303" stroke-width="1.4"/><line x1="4" y1="38" x2="116" y2="38" stroke="#d4d4d4"/></svg>',
+    dubbel: '<svg viewBox="0 0 120 44"><path d="M4 30 H18 q2.5 -18 5 0 q2.5 -18 5 0 H44 q2.5 -18 5 0 q2.5 -18 5 0 H70 q2.5 -18 5 0 q2.5 -18 5 0 H96 q2.5 -18 5 0 q2.5 -18 5 0 H116" fill="none" stroke="#020303" stroke-width="1.4"/><line x1="4" y1="38" x2="116" y2="38" stroke="#d4d4d4"/></svg>',
+    wave: '<svg viewBox="0 0 120 44"><path d="M4 24 C 11 10, 18 10, 25 24 S 39 38, 46 24 S 60 10, 67 24 S 81 38, 88 24 S 102 10, 109 24 L116 30" fill="none" stroke="#020303" stroke-width="1.4"/><line x1="4" y1="38" x2="116" y2="38" stroke="#d4d4d4"/></svg>',
+    ringen: '<svg viewBox="0 0 120 44"><line x1="2" y1="9" x2="118" y2="9" stroke="#020303" stroke-width="2.2" stroke-linecap="round"/><g fill="none" stroke="#020303" stroke-width="1.2"><circle cx="12" cy="11" r="4"/><circle cx="36" cy="11" r="4"/><circle cx="60" cy="11" r="4"/><circle cx="84" cy="11" r="4"/><circle cx="108" cy="11" r="4"/></g><path d="M12 16 C 18 34, 30 34, 36 16 C 42 34, 54 34, 60 16 C 66 34, 78 34, 84 16 C 90 34, 102 34, 108 16" fill="none" stroke="#020303" stroke-width="1.4"/></svg>'
+  };
+  function rays(k) {
+    var out = "";
+    for (var i = 0; i < 4; i++) { var y = 12 + i * 8, o = i < k ? 1 : 0; out += '<line x1="62" y1="' + y + '" x2="112" y2="' + y + '" stroke="#9a8f72" stroke-width="1.4" stroke-dasharray="3 3" opacity="' + o + '"/>'; }
+    return out;
+  }
+  var VOER_SVG = {
+    geen: '<svg viewBox="0 0 120 44"><circle cx="18" cy="22" r="8" fill="none" stroke="#9a8f72" stroke-width="1.4"/><line x1="30" y1="22" x2="52" y2="22" stroke="#9a8f72" stroke-width="1.4"/><rect x="56" y="4" width="3" height="36" fill="#020303" opacity=".35"/>' + rays(4) + '</svg>',
+    dim: '<svg viewBox="0 0 120 44"><circle cx="18" cy="22" r="8" fill="none" stroke="#9a8f72" stroke-width="1.4"/><line x1="30" y1="22" x2="52" y2="22" stroke="#9a8f72" stroke-width="1.4"/><rect x="56" y="4" width="5" height="36" fill="#020303" opacity=".6"/>' + rays(2) + '</svg>',
+    black: '<svg viewBox="0 0 120 44"><circle cx="18" cy="22" r="8" fill="none" stroke="#9a8f72" stroke-width="1.4"/><line x1="30" y1="22" x2="52" y2="22" stroke="#9a8f72" stroke-width="1.4"/><rect x="56" y="4" width="7" height="36" fill="#020303"/>' + rays(0) + '</svg>'
+  };
+  var RAIL_SVG = {
+    plafond: '<svg viewBox="0 0 120 44"><line x1="0" y1="8" x2="120" y2="8" stroke="#020303"/><rect x="14" y="9" width="92" height="5" fill="#020303"/><path d="M18 14 V40 M30 14 V40 M42 14 V40 M54 14 V40" stroke="#bdb8ad"/></svg>',
+    wand: '<svg viewBox="0 0 120 44"><line x1="0" y1="4" x2="120" y2="4" stroke="#d4d4d4"/><path d="M30 8 v6 M90 8 v6" stroke="#020303" stroke-width="2"/><rect x="14" y="14" width="92" height="5" fill="#020303"/><path d="M18 19 V40 M30 19 V40 M42 19 V40 M54 19 V40" stroke="#bdb8ad"/></svg>',
+    roede: '<svg viewBox="0 0 120 44"><line x1="14" y1="14" x2="106" y2="14" stroke="#020303" stroke-width="3.2" stroke-linecap="round"/><circle cx="10" cy="14" r="5" fill="#020303"/><circle cx="110" cy="14" r="5" fill="#020303"/><path d="M22 18 V40 M34 18 V40 M46 18 V40 M58 18 V40" stroke="#bdb8ad"/></svg>',
+    eigen: '<svg viewBox="0 0 120 44"><line x1="14" y1="14" x2="106" y2="14" stroke="#020303" stroke-width="2" stroke-dasharray="4 4"/><path d="M18 18 V40 M30 18 V40 M42 18 V40 M54 18 V40" stroke="#bdb8ad"/></svg>'
+  };
+  var DELEN_SVG = {
+    d2: '<svg viewBox="0 0 120 44"><line x1="6" y1="6" x2="114" y2="6" stroke="#020303" stroke-width="2"/><rect x="8" y="9" width="34" height="32" fill="#9a8f72" opacity=".55"/><rect x="78" y="9" width="34" height="32" fill="#9a8f72" opacity=".55"/><path d="M48 25 h-4 M72 25 h4" stroke="#020303"/></svg>',
+    d1: '<svg viewBox="0 0 120 44"><line x1="6" y1="6" x2="114" y2="6" stroke="#020303" stroke-width="2"/><rect x="8" y="9" width="44" height="32" fill="#9a8f72" opacity=".55"/><path d="M58 25 h-4" stroke="#020303"/></svg>'
+  };
+
+  function optCard(group, key, o, extra) {
+    var top = extra.img ? '<span class="swatch"><img src="' + o.img + '" alt="Stof uit de ' + esc(o.naam) + '" loading="lazy" width="600" height="800"></span>' : (extra.svg || "");
+    var price = extra.price ? '<span class="opt-price">' + extra.price + '<small>Voorbeeldprijs</small></span>' : "";
+    var lbl = extra.lbl ? '<span class="opt-lbl">' + extra.lbl + "</span>" : "";
+    var nm = extra.short ? o.kort : o.naam;
+    return '<label class="opt"><input type="radio" name="' + group + '" value="' + key + '"' + (S[group] === key ? " checked" : "") + '><span class="opt-b">' + top + lbl + '<span class="opt-name">' + esc(nm) + '</span><span class="opt-desc">' + esc(o.desc) + "</span>" + price + "</span></label>";
+  }
+  function fill(id, group, map, fn) {
+    var h = ""; for (var k in map) h += optCard(group, k, map[k], fn(map[k], k)); $(id).innerHTML = h;
+  }
+  fill("opts-stof", "stof", P.stof, function (o) { return { img: true, short: true, lbl: "Gordijncollectie", price: euro(o.c) + " per meter" }; });
+  fill("opts-delen", "delen", P.delen, function (o, k) { return { svg: DELEN_SVG[k] }; });
+  fill("opts-plooi", "plooi", P.plooi, function (o, k) { return { svg: PLOOI_SVG[k], price: "Maakloon " + euro(o.c) + " per meter" }; });
+  fill("opts-voering", "voering", P.voering, function (o, k) { return { svg: VOER_SVG[k], price: o.c ? euro(o.c) + " per meter" : "Geen meerprijs" }; });
+  fill("opts-rail", "rail", P.rail, function (o, k) { return { svg: RAIL_SVG[k], price: o.c ? euro(o.c) + " per meter" : "Geen meerprijs" }; });
+  fill("opts-zoom", "zoom", P.zoom, function (o) { return { price: o.c ? euro(o.c) + " per meter stof" : "Geen meerprijs" }; });
+  fill("opts-lengte", "lengte", P.lengte, function () { return {}; });
+
+  /* ---------- the window scene ---------- */
+  var NS = "http://www.w3.org/2000/svg";
+  function scene(r) {
+    var W = S.breedte, H = S.hoogte, floor = 440;
+    var s = Math.min(430 / W, 340 / H);
+    var rw = W * s, x0 = 300 - rw / 2, x1 = 300 + rw / 2, railY = floor - H * s;
+    var st = P.stof[S.stof], pl = S.plooi, vo = P.voering[S.voering], o = S.open / 100;
+    var g = [];
+    g.push('<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe7ea"/><stop offset=".7" stop-color="#eef0ea"/><stop offset="1" stop-color="#e3e6dc"/></linearGradient>');
+    g.push('<linearGradient id="wallg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f1eee8"/><stop offset=".5" stop-color="#f7f5f0"/><stop offset="1" stop-color="#efece5"/></linearGradient>');
+    g.push('<linearGradient id="vfall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".10"/><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".14"/></linearGradient><filter id="soft" x="0" y="0" width="1" height="1"><feGaussianBlur stdDeviation="0.9"/></filter></defs>');
+    g.push('<rect width="640" height="480" fill="url(#wallg)"/>');
+    var ceil = S.rail === "plafond" ? railY - 4 : Math.min(railY - 26, 36);
+    if (ceil > 2) g.push('<rect x="0" y="0" width="640" height="' + ceil.toFixed(1) + '" fill="#ebe8e1"/><line x1="0" y1="' + ceil.toFixed(1) + '" x2="640" y2="' + ceil.toFixed(1) + '" stroke="#cfcac0"/>');
+    g.push('<rect x="0" y="' + floor + '" width="640" height="40" fill="#e6dfd1"/><line x1="0" y1="' + floor + '" x2="640" y2="' + floor + '" stroke="#bfb6a5"/>');
+    /* window */
+    var wx0 = x0 + rw * 0.07, wx1 = x1 - rw * 0.07, wy0 = railY + H * s * 0.05, wy1 = floor - 2;
+    g.push('<rect x="' + wx0.toFixed(1) + '" y="' + wy0.toFixed(1) + '" width="' + (wx1 - wx0).toFixed(1) + '" height="' + (wy1 - wy0).toFixed(1) + '" fill="url(#sky)" stroke="#cdc8bd" stroke-width="3"/>');
+    var mull = Math.max(1, Math.round((wx1 - wx0) / 110));
+    for (var i = 1; i <= mull; i++) { var mx = wx0 + (wx1 - wx0) * i / (mull + 1); g.push('<line x1="' + mx.toFixed(1) + '" y1="' + wy0.toFixed(1) + '" x2="' + mx.toFixed(1) + '" y2="' + wy1.toFixed(1) + '" stroke="#cdc8bd" stroke-width="2"/>'); }
+    g.push('<line x1="' + wx0.toFixed(1) + '" y1="' + (wy0 + (wy1 - wy0) * 0.62).toFixed(1) + '" x2="' + wx1.toFixed(1) + '" y2="' + (wy0 + (wy1 - wy0) * 0.62).toFixed(1) + '" stroke="#cdc8bd" stroke-width="1.5"/>');
+    /* light on the floor, less when closed with lining */
+    var lightAmt = Math.max(0.05, o + (1 - o) * (1 - vo.op) * 1.6);
+    g.push('<polygon points="' + wx0.toFixed(1) + ',' + floor + ' ' + wx1.toFixed(1) + ',' + floor + ' ' + (wx1 + 40).toFixed(1) + ',480 ' + (wx0 - 40).toFixed(1) + ',480" fill="#fffdf6" opacity="' + (0.55 * lightAmt).toFixed(2) + '"/>');
+    /* room dims when blackout is closed */
+    if (S.voering === "black") g.push('<rect width="640" height="480" fill="#1b1814" opacity="' + ((1 - o) * 0.22).toFixed(2) + '"/>');
+
+    /* curtains */
+    var n = r.n, panelW = rw / n, cover = panelW * (1 - o * (n === 1 ? 0.8 : 0.74));
+    var topY = railY + (S.rail === "roede" ? 3 : 2);
+    if (pl === "ringen") topY = railY + 5;
+    var dLen = P.lengte[S.lengte].d;
+    var botY = floor + dLen * s; if (dLen < 0) botY = Math.min(botY, floor - 2);
+    var k = Math.max(3, Math.min(48, Math.round((W / n) * r.f / P.plooi[pl].per)));
+    for (var p = 0; p < n; p++) {
+      var left = (p === 0) ? x0 : x1 - cover, right = left + cover, per = cover / k;
+      var id = "pn" + p;
+      var amp = pl === "wave" ? 4 : pl === "ringen" ? 3.5 : 2.2;
+      var topPath = "", botPath = "";
+      /* top edge */
+      if (pl === "wave") { topPath = "M" + left.toFixed(1) + "," + topY.toFixed(1); for (var t = 0; t < k; t++) { var a = left + t * per, b = a + per; topPath += " Q" + (a + per / 2).toFixed(1) + "," + (topY + (t % 2 ? amp : -amp)).toFixed(1) + " " + b.toFixed(1) + "," + topY.toFixed(1); } }
+      else if (pl === "ringen") { topPath = "M" + left.toFixed(1) + "," + topY.toFixed(1); for (var t2 = 0; t2 < k; t2++) { var a2 = left + t2 * per, b2 = a2 + per; topPath += " Q" + (a2 + per / 2).toFixed(1) + "," + (topY + 5).toFixed(1) + " " + b2.toFixed(1) + "," + topY.toFixed(1); } }
+      else { topPath = "M" + left.toFixed(1) + "," + topY.toFixed(1) + " L" + right.toFixed(1) + "," + topY.toFixed(1); }
+      /* bottom edge, right to left */
+      var flare = S.lengte === "plooiend" ? 3 : 0, bamp = S.lengte === "plooiend" ? Math.max(amp, 4.5) : amp;
+      botPath = " L" + (right + flare).toFixed(1) + "," + botY.toFixed(1);
+      for (var u = k - 1; u >= 0; u--) { var ra = left + (u + 1) * per, rb = left + u * per; if (u === 0) rb -= flare; if (u === k - 1) ra += flare; botPath += " Q" + ((ra + rb) / 2).toFixed(1) + "," + (botY + (u % 2 ? -bamp : bamp)).toFixed(1) + " " + rb.toFixed(1) + "," + botY.toFixed(1); }
+      var d = topPath + botPath + " Z";
+      g.push('<clipPath id="c' + id + '"><path d="' + d + '"/></clipPath>');
+      var sharp = pl === "wave" || pl === "ringen";
+      var stops = sharp
+        ? '<stop offset="0" stop-color="#000" stop-opacity=".42"/><stop offset=".22" stop-color="#000" stop-opacity=".08"/><stop offset=".42" stop-color="#fff" stop-opacity=".30"/><stop offset=".62" stop-color="#fff" stop-opacity=".06"/><stop offset=".85" stop-color="#000" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity=".42"/>'
+        : '<stop offset="0" stop-color="#000" stop-opacity=".48"/><stop offset=".07" stop-color="#fff" stop-opacity=".30"/><stop offset=".3" stop-color="#fff" stop-opacity=".10"/><stop offset=".7" stop-color="#000" stop-opacity=".06"/><stop offset=".92" stop-color="#000" stop-opacity=".26"/><stop offset="1" stop-color="#000" stop-opacity=".48"/>';
+      g.push('<linearGradient id="f' + id + '" gradientUnits="userSpaceOnUse" x1="' + left.toFixed(2) + '" y1="0" x2="' + (left + per).toFixed(2) + '" y2="0" spreadMethod="repeat">' + stops + "</linearGradient>");
+      var by = Math.max(botY, floor) + 8;
+      g.push('<g clip-path="url(#c' + id + ')" opacity="' + vo.op + '">');
+      g.push('<rect x="' + (left - 6).toFixed(1) + '" y="' + (topY - 8).toFixed(1) + '" width="' + (cover + 12).toFixed(1) + '" height="' + (by - topY + 8).toFixed(1) + '" fill="' + st.kleur + '"/>');
+      g.push('<image href="' + st.tile + '" x="' + (left - 6).toFixed(1) + '" y="' + (topY - 8).toFixed(1) + '" width="' + (cover + 12).toFixed(1) + '" height="' + (by - topY + 8).toFixed(1) + '" preserveAspectRatio="xMidYMid slice" opacity=".55" filter="url(#soft)"/>');
+      g.push('<rect x="' + (left - 6).toFixed(1) + '" y="' + (topY - 8).toFixed(1) + '" width="' + (cover + 12).toFixed(1) + '" height="' + (by - topY + 8).toFixed(1) + '" fill="url(#f' + id + ')"/>');
+      g.push('<rect x="' + (left - 6).toFixed(1) + '" y="' + (topY - 8).toFixed(1) + '" width="' + (cover + 12).toFixed(1) + '" height="' + (by - topY + 8).toFixed(1) + '" fill="url(#vfall)"/>');
+      if (S.zoom === "zoom") { var zh = Math.max(4, 10 * s); g.push('<rect x="' + (left - 6).toFixed(1) + '" y="' + (botY - zh).toFixed(1) + '" width="' + (cover + 12).toFixed(1) + '" height="' + (zh + 12).toFixed(1) + '" fill="#000" opacity=".10"/><line x1="' + left.toFixed(1) + '" y1="' + (botY - zh).toFixed(1) + '" x2="' + right.toFixed(1) + '" y2="' + (botY - zh).toFixed(1) + '" stroke="#000" stroke-opacity=".25" stroke-width=".8" stroke-dasharray="2 2"/>'); }
+      else { g.push('<rect x="' + (left - 6).toFixed(1) + '" y="' + (botY - 2.5).toFixed(1) + '" width="' + (cover + 12).toFixed(1) + '" height="10" fill="#000" opacity=".22"/>'); }
+      g.push("</g>");
+      /* heading marks */
+      var hm = "";
+      if (pl === "enkel" || pl === "dubbel") {
+        for (var q = 0; q <= k; q++) { var hx = left + q * per; if (pl === "enkel") hm += '<line x1="' + hx.toFixed(1) + '" y1="' + topY.toFixed(1) + '" x2="' + hx.toFixed(1) + '" y2="' + (topY + 9).toFixed(1) + '"/>'; else hm += '<line x1="' + (hx - 1.4).toFixed(1) + '" y1="' + topY.toFixed(1) + '" x2="' + (hx - 1.4).toFixed(1) + '" y2="' + (topY + 9).toFixed(1) + '"/><line x1="' + (hx + 1.4).toFixed(1) + '" y1="' + topY.toFixed(1) + '" x2="' + (hx + 1.4).toFixed(1) + '" y2="' + (topY + 9).toFixed(1) + '"/>'; }
+        g.push('<g stroke="#000" stroke-opacity=".35" stroke-width=".9">' + hm + "</g>");
+      }
+      if (pl === "ringen") { for (var q2 = 0; q2 <= k; q2++) { var rx = left + q2 * per; hm += '<circle cx="' + rx.toFixed(1) + '" cy="' + (railY + 1).toFixed(1) + '" r="3.2"/>'; } g.push('<g fill="none" stroke="#2a2724" stroke-width="1.2">' + hm + "</g>"); }
+    }
+    /* rail */
+    if (S.rail === "plafond") g.push('<rect x="' + (x0 - 6).toFixed(1) + '" y="' + (railY - 4).toFixed(1) + '" width="' + (rw + 12).toFixed(1) + '" height="6" fill="#2a2724"/>');
+    if (S.rail === "wand") { g.push('<rect x="' + (x0 - 6).toFixed(1) + '" y="' + (railY - 3).toFixed(1) + '" width="' + (rw + 12).toFixed(1) + '" height="5" fill="#2a2724"/>'); var nb = Math.max(2, Math.round(W / 120) + 1); for (var bq = 0; bq < nb; bq++) { var bx = x0 + 8 + (rw - 16) * bq / (nb - 1); g.push('<rect x="' + (bx - 2).toFixed(1) + '" y="' + (railY - 12).toFixed(1) + '" width="4" height="9" fill="#2a2724"/>'); } }
+    if (S.rail === "roede") g.push('<line x1="' + (x0 - 12).toFixed(1) + '" y1="' + railY.toFixed(1) + '" x2="' + (x1 + 12).toFixed(1) + '" y2="' + railY.toFixed(1) + '" stroke="#2a2724" stroke-width="4" stroke-linecap="round"/><circle cx="' + (x0 - 16).toFixed(1) + '" cy="' + railY.toFixed(1) + '" r="6" fill="#2a2724"/><circle cx="' + (x1 + 16).toFixed(1) + '" cy="' + railY.toFixed(1) + '" r="6" fill="#2a2724"/>');
+    if (S.rail === "eigen") g.push('<line x1="' + (x0 - 6).toFixed(1) + '" y1="' + railY.toFixed(1) + '" x2="' + (x1 + 6).toFixed(1) + '" y2="' + railY.toFixed(1) + '" stroke="#2a2724" stroke-width="2.2" stroke-dasharray="6 5"/>');
+    /* dimensions */
+    var dy = Math.max(14, railY - 22);
+    g.push('<g stroke="#020303" stroke-width=".8"><line x1="' + x0.toFixed(1) + '" y1="' + dy.toFixed(1) + '" x2="' + x1.toFixed(1) + '" y2="' + dy.toFixed(1) + '"/><line x1="' + x0.toFixed(1) + '" y1="' + (dy - 5).toFixed(1) + '" x2="' + x0.toFixed(1) + '" y2="' + (dy + 5).toFixed(1) + '"/><line x1="' + x1.toFixed(1) + '" y1="' + (dy - 5).toFixed(1) + '" x2="' + x1.toFixed(1) + '" y2="' + (dy + 5).toFixed(1) + '"/></g>');
+    var lw = String(W).length * 10 + 44;
+    g.push('<rect x="' + (300 - lw / 2).toFixed(1) + '" y="' + (dy - 11).toFixed(1) + '" width="' + lw + '" height="22" fill="#f7f5f0"/><text x="300" y="' + (dy + 5.5).toFixed(1) + '" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="16" fill="#020303">' + W + ' cm</text>');
+    var vx = Math.min(x1 + 30, 572);
+    g.push('<g stroke="#020303" stroke-width=".8"><line x1="' + vx.toFixed(1) + '" y1="' + railY.toFixed(1) + '" x2="' + vx.toFixed(1) + '" y2="' + floor + '"/><line x1="' + (vx - 5).toFixed(1) + '" y1="' + railY.toFixed(1) + '" x2="' + (vx + 5).toFixed(1) + '" y2="' + railY.toFixed(1) + '"/><line x1="' + (vx - 5).toFixed(1) + '" y1="' + floor + '" x2="' + (vx + 5).toFixed(1) + '" y2="' + floor + '"/></g>');
+    var my = (railY + floor) / 2;
+    g.push('<rect x="' + (vx - 2).toFixed(1) + '" y="' + (my - 11).toFixed(1) + '" width="' + (String(H).length * 10 + 42) + '" height="22" fill="#f7f5f0"/><text x="' + (vx + 6).toFixed(1) + '" y="' + (my + 5.5).toFixed(1) + '" font-family="IBM Plex Mono,monospace" font-size="16" fill="#020303">' + H + ' cm</text>');
+    $("scene").innerHTML = '<g id="scene-g">' + g.join("") + "</g>";
+  }
+
+  /* factor strip, top view of the folds */
+  function factorViz(r) {
+    var k = Math.max(3, Math.min(48, Math.round(150 * r.f / P.plooi[S.plooi].per)));
+    var w = 580, x0 = 10, per = w / k, d = "M" + x0 + ",40";
+    for (var i = 0; i < k; i++) { var a = x0 + i * per; d += " Q" + (a + per / 2).toFixed(1) + "," + (i % 2 ? 62 : 18) + " " + (a + per).toFixed(1) + ",40"; }
+    $("factor-viz").innerHTML = '<line x1="10" y1="8" x2="590" y2="8" stroke="#020303" stroke-width="2"/><path d="' + d + '" fill="none" stroke="#9a8f72" stroke-width="1.8"/>';
+  }
+
+  /* ---------- render ---------- */
+  var last;
+  function render() {
+    var r = compute(S); last = r;
+    scene(r); factorViz(r);
+    var st = P.stof[S.stof];
+    var rows = [
+      ["Stof", st.kort],
+      ["Maten", S.breedte + " × " + S.hoogte + " cm"],
+      ["Verdeling", r.n === 2 ? "2 delen" : "1 deel"],
+      ["Plooi", P.plooi[S.plooi].naam],
+      ["Voering", P.voering[S.voering].naam],
+      ["Plooifactor", fx(S.factor) + "×"],
+      ["Stof nodig", m1(r.tenths) + " m" + (r.mode === "banen" ? ", " + r.banen + (r.banen === 1 ? " baan" : " banen") : "")],
+      ["Rail", P.rail[S.rail].naam],
+      ["Onderkant", P.zoom[S.zoom].naam],
+      ["Lengte", P.lengte[S.lengte].naam]
+    ];
+    $("ticket").innerHTML = rows.map(function (x) { return "<dt>" + x[0] + "</dt><dd>" + esc(x[1]) + "</dd>"; }).join("");
+    var t = euro(r.total);
+    $("total-side").textContent = t; $("total-big").textContent = t; $("total-bar").textContent = t;
+    $("btw-line").textContent = "Inclusief 21% btw, dat is " + euro(r.btw) + ".";
+    $("meters-line").textContent = r.mode === "kamerhoog"
+      ? m1(r.tenths) + " meter kamerhoge stof uit de " + st.naam + ", voor " + (r.n === 2 ? "twee delen" : "een deel") + " met plooifactor " + fx(S.factor) + "."
+      : "Je gordijn wordt " + r.Hf + " cm lang, hoger dan kamerhoge stof. Dan maken we het van " + r.banen + " banen van " + P.baan + " cm breed, samen " + m1(r.tenths) + " meter stof.";
+    $("factor-big").textContent = fx(S.factor) + "×";
+    $("factor-txt").textContent = "Voor elke meter rail gaat er " + fx(S.factor) + " meter stof in je gordijn.";
+    $("need").textContent = "Voor jouw raam heb je " + m1(r.tenths) + " meter stof nodig" + (r.mode === "banen" ? ", in " + r.banen + " banen" : "") + ".";
+    var cols = { stof: "#9a8f72", maak: "#020303", voering: "#5c5c5c", afwerking: "#bdb8ad", rail: "#2a2724", inmeten: "#d9d3c6" };
+    var names = { stof: "Stof", maak: "Maakloon", voering: "Voering", afwerking: "Afwerking", rail: "Rail of roede", inmeten: "Inmeten en montage" };
+    var notes = {
+      stof: m1(r.tenths) + " m × " + euro(st.c),
+      maak: P.plooi[S.plooi].naam + ", " + m1(r.tenths) + " m × " + euro(P.plooi[S.plooi].c),
+      voering: P.voering[S.voering].c ? P.voering[S.voering].naam + ", " + m1(r.tenths) + " m × " + euro(P.voering[S.voering].c) : "Geen voering",
+      afwerking: P.zoom[S.zoom].naam + (P.zoom[S.zoom].c ? ", " + m1(r.tenths) + " m × " + euro(P.zoom[S.zoom].c) : ""),
+      rail: P.rail[S.rail].c ? P.rail[S.rail].naam + ", " + m1(r.railT) + " m × " + euro(P.rail[S.rail].c) : "Eigen rail of roede",
+      inmeten: "Vast voorbeeldbedrag"
+    };
+    var bar = "", tb = "";
+    ["stof", "maak", "voering", "afwerking", "rail", "inmeten"].forEach(function (key) {
+      var v = r.L[key]; if (v > 0) bar += '<span style="width:' + (v / r.total * 100).toFixed(2) + "%;background:" + cols[key] + '" title="' + names[key] + '"></span>';
+      tb += '<tr><td><span class="sw" style="background:' + cols[key] + '"></span>' + names[key] + "<small>" + esc(notes[key]) + "</small></td><td>" + euro(v) + "</td></tr>";
+    });
+    tb += '<tr class="sum"><td>Prijsindicatie, inclusief btw</td><td>' + euro(r.total) + "</td></tr>";
+    $("bar").innerHTML = bar; $("lines").innerHTML = tb;
+    var hp = $("hint-plooi"), hr = $("hint-rail");
+    var bad = S.plooi === "wave" && S.rail === "roede" ? "Een wave gordijn hangt aan een rail. Kies in stap 6 een plafondrail of een wandrail." : S.plooi === "ringen" && (S.rail === "plafond" || S.rail === "wand") ? "Ringen hangen om een roede. Kies in stap 6 een roede." : "";
+    hp.textContent = bad; hp.classList.toggle("on", !!bad); hr.textContent = bad; hr.classList.toggle("on", !!bad);
+  }
+
+  /* inputs */
+  $("calcform").addEventListener("change", function (e) {
+    var el = e.target; if (el.type === "radio") { S[el.name] = el.value; render(); }
+  });
+  function setNum(id, raw) {
+    var el = $(id), min = +el.min, max = +el.max, v = parseInt(raw, 10), ok = !isNaN(v) && v >= min && v <= max;
+    $("err-" + id).classList.toggle("on", !ok);
+    if (ok) { S[id] = v; render(); }
+    return ok;
+  }
+  ["breedte", "hoogte"].forEach(function (id) {
+    $(id).addEventListener("input", function () { setNum(id, this.value); });
+    $(id).addEventListener("blur", function () { if (!setNum(id, this.value)) { this.value = S[id]; $("err-" + id).classList.remove("on"); } });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-step]"), function (b) {
+    b.addEventListener("click", function () {
+      var id = b.getAttribute("data-step"), el = $(id), v = Math.min(+el.max, Math.max(+el.min, S[id] + (+b.getAttribute("data-d"))));
+      el.value = v; setNum(id, v);
+    });
+  });
+  $("factor").addEventListener("input", function () { S.factor = +this.value; render(); });
+  $("open").addEventListener("input", function () { S.open = +this.value; scene(last); });
+
+  /* ---------- dealers ---------- */
+  var dealers = D.dealers.map(function (d, i) { d.nr = i + 1; return d; });
+  function hav(a, b, c, d) { var R = 6371, t = Math.PI / 180, x = Math.sin((c - a) * t / 2), y = Math.sin((d - b) * t / 2); var h = x * x + Math.cos(a * t) * Math.cos(c * t) * y * y; return 2 * R * Math.asin(Math.sqrt(h)); }
+  var LAT0 = 53.56, LON0 = 3.30, K = 200, CL = Math.cos(52.15 * Math.PI / 180);
+  function proj(lat, lon) { return [(lon - LON0) * CL * K, (LAT0 - lat) * K]; }
+  var INSET = [233, 357, 66, 49.5], IB = [8, 30, 150, 112.5], SC = IB[2] / INSET[2];
+  function inInset(x, y) { return x > INSET[0] && x < INSET[0] + INSET[2] && y > INSET[1] && y < INSET[1] + INSET[3]; }
+  function toIB(x, y) { return [IB[0] + (x - INSET[0]) * SC, IB[1] + (y - INSET[1]) * SC]; }
+  var here = null, ranked = null;
+
+  function drawMaps() {
+    var vb = D.viewBox, prov = D.provinces.map(function (p) { return '<path d="' + p.d + '"/>'; }).join("");
+    var nearNr = ranked ? ranked[0].nr : 0;
+    var m = '<defs><clipPath id="ibclip"><rect x="' + IB[0] + '" y="' + IB[1] + '" width="' + IB[2] + '" height="' + IB[3] + '"/></clipPath></defs>';
+    m += '<rect x="0" y="0" width="' + vb[2] + '" height="' + vb[3] + '" fill="#fff"/>';
+    m += '<g fill="#ebe7de" stroke="#fff" stroke-width=".9" stroke-linejoin="round">' + prov + "</g>";
+    /* the zoomed corner */
+    m += '<rect x="' + INSET[0] + '" y="' + INSET[1] + '" width="' + INSET[2] + '" height="' + INSET[3] + '" fill="none" stroke="#020303" stroke-width=".8" stroke-dasharray="3 2"/>';
+    m += '<path d="M' + INSET[0] + ',' + INSET[1] + ' L' + (IB[0] + IB[2]) + ',' + (IB[1] + IB[3]) + '" stroke="#020303" stroke-width=".6" stroke-dasharray="2 3" fill="none"/>';
+    m += '<text x="' + IB[0] + '" y="' + (IB[1] - 9) + '" font-family="IBM Plex Mono,monospace" font-size="9.5" letter-spacing=".6" fill="#5c5c5c">UITVERGROOT, NOORD-BRABANT</text>';
+    m += '<rect x="' + IB[0] + '" y="' + IB[1] + '" width="' + IB[2] + '" height="' + IB[3] + '" fill="#fff"/>';
+    m += '<g clip-path="url(#ibclip)"><g transform="translate(' + IB[0] + ' ' + IB[1] + ') scale(' + SC.toFixed(4) + ') translate(' + (-INSET[0]) + ' ' + (-INSET[1]) + ')"><g fill="#ebe7de" stroke="#fff" stroke-width=".4" stroke-linejoin="round">' + prov + "</g></g></g>";
+    m += '<rect x="' + IB[0] + '" y="' + IB[1] + '" width="' + IB[2] + '" height="' + IB[3] + '" fill="none" stroke="#020303" stroke-width=".9"/>';
+    if (here) {
+      var hp = proj(here.lat, here.lon), np = [ranked[0].x, ranked[0].y];
+      m += '<line x1="' + hp[0].toFixed(1) + '" y1="' + hp[1].toFixed(1) + '" x2="' + np[0] + '" y2="' + np[1] + '" stroke="#020303" stroke-dasharray="3 2" stroke-width="1.1"/>';
+      m += '<circle cx="' + hp[0].toFixed(1) + '" cy="' + hp[1].toFixed(1) + '" r="8" fill="none" stroke="#020303" stroke-width="1.8"/><circle cx="' + hp[0].toFixed(1) + '" cy="' + hp[1].toFixed(1) + '" r="2.4" fill="#020303"/>';
+      if (inInset(hp[0], hp[1])) {
+        var a = toIB(hp[0], hp[1]);
+        if (inInset(np[0], np[1])) { var b2 = toIB(np[0], np[1]); m += '<line x1="' + a[0].toFixed(1) + '" y1="' + a[1].toFixed(1) + '" x2="' + b2[0].toFixed(1) + '" y2="' + b2[1].toFixed(1) + '" stroke="#020303" stroke-dasharray="3 2" stroke-width="1"/>'; }
+        m += '<circle cx="' + a[0].toFixed(1) + '" cy="' + a[1].toFixed(1) + '" r="7" fill="none" stroke="#020303" stroke-width="1.6"/><circle cx="' + a[0].toFixed(1) + '" cy="' + a[1].toFixed(1) + '" r="2.2" fill="#020303"/>';
+      }
+    }
+    dealers.forEach(function (d) {
+      var near = d.nr === nearNr, fillc = near ? "#020303" : "#fff", txt = near ? "#fff" : "#020303";
+      if (inInset(d.x, d.y)) {
+        var q = toIB(d.x, d.y);
+        m += '<circle cx="' + d.x + '" cy="' + d.y + '" r="2.6" fill="' + (near ? "#020303" : "#9a8f72") + '"/>';
+        m += '<g><circle cx="' + q[0].toFixed(1) + '" cy="' + q[1].toFixed(1) + '" r="10" fill="' + fillc + '" stroke="#020303" stroke-width="1.1"/><text x="' + q[0].toFixed(1) + '" y="' + (q[1] + 4).toFixed(1) + '" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="11" fill="' + txt + '">' + d.nr + "</text></g>";
+      } else {
+        m += '<g><circle cx="' + d.x + '" cy="' + d.y + '" r="11" fill="' + fillc + '" stroke="#020303" stroke-width="1.1"/><text x="' + d.x + '" y="' + (d.y + 4.2) + '" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="' + txt + '">' + d.nr + "</text></g>";
+      }
+    });
+    var mp = $("map"); mp.setAttribute("viewBox", "0 0 " + vb[2] + " " + vb[3]); mp.innerHTML = m;
+    var list = ranked || dealers;
+    $("key").innerHTML = list.map(function (d) {
+      return '<li class="' + (d.nr === nearNr ? "near" : "") + '"><span class="n">' + d.nr + "</span><span>" + esc(d.naam) + ' <span class="pl">' + esc(d.plaats) + "</span></span>" + (d.km != null ? '<span class="d">' + kmTxt(d.km) + "</span>" : "") + "</li>";
+    }).join("");
+  }
+  function kmTxt(km) { if (km < 1) return "minder dan 1 km"; return (km < 10 ? km.toLocaleString("nl-NL", { maximumFractionDigits: 1 }) : Math.round(km)) + " km"; }
+
+  function pc4Lookup(pc) {
+    var s = D.pc4, lo = 0, hi = s.length / 12 - 1, key = +pc;
+    while (lo <= hi) { var mid = (lo + hi) >> 1, k = +s.substr(mid * 12, 4); if (k === key) { return { lat: (50000 + +s.substr(mid * 12 + 4, 4)) / 1000, lon: +s.substr(mid * 12 + 8, 4) / 1000 }; } if (k < key) lo = mid + 1; else hi = mid - 1; }
+    return null;
+  }
+  function pdok(q, type) {
+    var url = "https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?rows=1&fl=weergavenaam,centroide_ll,type&fq=type:" + type + "&q=" + encodeURIComponent(q);
+    var ctrl = window.AbortController ? new AbortController() : null, tm = setTimeout(function () { if (ctrl) ctrl.abort(); }, 6000);
+    return fetch(url, ctrl ? { signal: ctrl.signal } : {}).then(function (r) { clearTimeout(tm); if (!r.ok) throw new Error("http"); return r.json(); }).then(function (j) {
+      var d = j.response && j.response.docs && j.response.docs[0]; if (!d) return null;
+      var m = /POINT\(([\d.]+) ([\d.]+)\)/.exec(d.centroide_ll); if (!m) return null;
+      return { lat: +m[2], lon: +m[1], label: d.type === "woonplaats" ? d.weergavenaam.split(",")[0] : d.weergavenaam };
+    });
+  }
+  function locate(q) {
+    var t = q.trim(), pc6 = /^(\d{4})\s?([a-zA-Z]{2})$/.exec(t), pc4 = /^(\d{4})$/.exec(t);
+    if (pc6) {
+      var code = pc6[1] + pc6[2].toUpperCase();
+      return pdok(code, "postcode").then(function (r) { if (r) return r; var f = pc4Lookup(pc6[1]); return f ? { lat: f.lat, lon: f.lon, label: "postcodegebied " + pc6[1] } : null; })
+        .catch(function () { var f = pc4Lookup(pc6[1]); return f ? { lat: f.lat, lon: f.lon, label: "postcodegebied " + pc6[1] } : null; });
+    }
+    if (pc4) { var f = pc4Lookup(pc4[1]); return Promise.resolve(f ? { lat: f.lat, lon: f.lon, label: "postcodegebied " + pc4[1] } : null); }
+    if (t.length < 2) return Promise.resolve(null);
+    var local = function () { var hit = dealers.filter(function (d) { return d.plaats.toLowerCase().replace(/[‘’']/g, "") === t.toLowerCase().replace(/[‘’']/g, ""); })[0]; return hit ? { lat: hit.lat, lon: hit.lon, label: hit.plaats } : null; };
+    return pdok(t, "woonplaats").then(function (r) { return r || local(); }).catch(local);
+  }
+
+  var chosen = null;
+  $("searchform").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = $("q").value, msg = $("search-msg");
+    if (!q.trim()) { msg.textContent = "Vul je postcode of woonplaats in."; return; }
+    msg.textContent = "Even zoeken…";
+    locate(q).then(function (loc) {
+      if (!loc) { msg.textContent = "We vinden " + q.trim() + " niet. Probeer je postcode, bijvoorbeeld 5481 EH of 5481."; return; }
+      here = loc;
+      ranked = dealers.map(function (d) { d.km = hav(loc.lat, loc.lon, d.lat, d.lon); return d; }).slice().sort(function (a, b) { return a.km - b.km; });
+      chosen = ranked[0];
+      msg.textContent = "Gevonden, " + loc.label + ".";
+      var a = ranked[1], b = ranked[2];
+      $("dealer-card").innerHTML = '<p class="kicker">Dichtstbij</p><h3>' + esc(chosen.naam) + '</h3><p class="addr">' + esc(chosen.adres) + "<br>" + esc(chosen.postcode) + " " + esc(chosen.plaats) + '</p><p class="km">' + kmTxt(chosen.km) + ' hemelsbreed</p><a class="web" href="' + esc(chosen.web) + '" target="_blank" rel="noopener">Website van ' + esc(chosen.naam) + '</a><p class="also">Ook in de buurt, <b>' + esc(a.naam) + "</b> in " + esc(a.plaats) + " (" + kmTxt(a.km) + ") en <b>" + esc(b.naam) + "</b> in " + esc(b.plaats) + " (" + kmTxt(b.km) + ").</p>";
+      $("dealer-card").classList.add("on");
+      drawMaps();
+      var f = $("reqform"); f.setAttribute("aria-disabled", "false");
+      Array.prototype.forEach.call(f.querySelectorAll("input,select,textarea,button"), function (el) { el.disabled = false; });
+      $("req-note").textContent = "Je maatbrief en prijsindicatie van " + euro(last.total) + " gaan naar " + chosen.naam + " in " + chosen.plaats + ". Zij nemen contact met je op voor advies en de inmeetafspraak.";
+      $("ok-label").textContent = "Mijn prijsindicatie en gegevens mogen naar " + chosen.naam + ".";
+      $("send").firstChild.textContent = "Verstuur naar " + chosen.naam + " ";
+      $("done").classList.remove("on");
+    });
+  });
+
+  $("reqform").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var err = $("form-err"), naam = $("naam").value.trim(), mail = $("mail").value.trim();
+    var probs = [];
+    if (!chosen) probs.push("Zoek eerst je dealer.");
+    if (!naam) probs.push("Vul je naam in.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)) probs.push("Vul een geldig mailadres in.");
+    if (!$("ok").checked) probs.push("Vink aan dat je gegevens naar de dealer mogen.");
+    if (probs.length) { err.textContent = probs.join(" "); err.classList.add("on"); return; }
+    err.classList.remove("on");
+    var r = last, st = P.stof[S.stof];
+    var rows = [["Voor", chosen.naam + ", " + chosen.plaats], ["Naam", naam], ["Mailadres", mail], ["Telefoon", $("tel").value.trim() || "niet ingevuld"], ["Voorkeur", $("moment").value],
+      ["Stof", st.kort], ["Maten", S.breedte + " × " + S.hoogte + " cm, " + (r.n === 2 ? "2 delen" : "1 deel")], ["Plooi", P.plooi[S.plooi].naam + ", factor " + fx(S.factor) + "×"], ["Voering", P.voering[S.voering].naam],
+      ["Rail", P.rail[S.rail].naam], ["Afwerking", P.zoom[S.zoom].naam + ", " + P.lengte[S.lengte].naam.toLowerCase()], ["Prijsindicatie", euro(r.total) + " incl. btw"]];
+    var opm = $("opm").value.trim(); if (opm) rows.push(["Opmerking", opm]);
+    $("done").innerHTML = '<div class="head"><p class="kicker">Concept, er is niets verstuurd</p><h3>Je aanvraag staat klaar voor ' + esc(chosen.naam) + '.</h3><p>In de echte versie gaat deze maatbrief nu naar de dealer, en die neemt contact met je op. In dit concept wordt niets verstuurd en niets opgeslagen.</p></div><div class="ticket"><div class="ticket-h"><b>Maatbrief</b><span>' + esc($("tk-date").textContent) + "</span></div><dl>" + rows.map(function (x) { return "<dt>" + x[0] + "</dt><dd>" + esc(x[1]) + "</dd>"; }).join("") + "</dl></div>";
+    $("done").classList.add("on");
+    $("done").scrollIntoView({ block: "nearest" });
+  });
+
+  /* ---------- CBS chart, English panel ---------- */
+  function chart() {
+    var data = D.cbs, w = 640, h = 300, L = 38, R = 10, T = 30, B = 46, pw = w - L - R, ph = h - T - B, n = data.length, bw = pw / n;
+    var max = 50, g = "";
+    for (var v = 0; v <= max; v += 10) { var y = T + ph - v / max * ph; g += '<line x1="' + L + '" y1="' + y.toFixed(1) + '" x2="' + (w - R) + '" y2="' + y.toFixed(1) + '" stroke="rgba(255,255,255,' + (v ? .14 : .5) + ')"/><text x="' + (L - 8) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="13" fill="rgba(255,255,255,.6)">' + v + "</text>"; }
+    var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    data.forEach(function (d, i) {
+      var val = -d.v, x = L + i * bw + bw * 0.16, bh = val / max * ph, y = T + ph - bh, hi = d.p === "2026MM05" || d.p === "2026MM09";
+      g += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + (bw * 0.68).toFixed(1) + '" height="' + bh.toFixed(1) + '" fill="' + (hi ? "#fff" : "rgba(255,255,255,.34)") + '"><title>' + MON[+d.p.slice(6) - 1] + " " + d.p.slice(0, 4) + ", " + val + " points</title></rect>";
+      if (hi) g += '<text x="' + (x + bw * 0.34).toFixed(1) + '" y="' + (y - 8).toFixed(1) + '" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="14" fill="#fff">' + val + "</text>";
+      if (d.p.slice(4) === "MM01") g += '<text x="' + (L + i * bw).toFixed(1) + '" y="' + (h - B + 18) + '" font-family="IBM Plex Mono,monospace" font-size="13" fill="rgba(255,255,255,.7)">Jan ' + d.p.slice(0, 4) + '</text><line x1="' + (L + i * bw).toFixed(1) + '" y1="' + (T + ph) + '" x2="' + (L + i * bw).toFixed(1) + '" y2="' + (T + ph + 6) + '" stroke="rgba(255,255,255,.5)"/>';
+    });
+    var lastX = L + (n - 1) * bw;
+    g += '<text x="' + (lastX + bw * 0.84).toFixed(1) + '" y="' + (h - B + 18) + '" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="13" fill="rgba(255,255,255,.7)">Sep 2026</text>';
+    g += '<text x="' + L + '" y="16" font-family="IBM Plex Mono,monospace" font-size="13" fill="rgba(255,255,255,.6)">Points, unfavourable minus favourable</text>';
+    $("chart").innerHTML = g;
+  }
+
+  var now = new Date();
+  $("tk-date").textContent = now.toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
+  if (window.matchMedia && window.matchMedia("(min-width:980px)").matches) $("tkd").open = true;
+  (function () { var r0 = compute(S); $("hc-nm").textContent = P.stof[S.stof].naam; $("hc-sp").textContent = S.breedte + " \u00d7 " + S.hoogte + " cm, " + P.plooi[S.plooi].naam.toLowerCase() + ", 2 delen"; $("hc-am").textContent = euro(r0.total); })();
+  render(); drawMaps(); chart();
+
+  /* phone price bar, shown while the calculator is on screen */
+  var calc = $("bereken"), res = $("prijs"), pbar = $("pbar");
+  function pb() {
+    var a = calc.getBoundingClientRect(), b = res.getBoundingClientRect(), vh = window.innerHeight;
+    pbar.classList.toggle("on", a.top < vh * 0.5 && a.bottom > vh * 0.6 && b.top > vh * 0.9);
+  }
+  window.addEventListener("scroll", pb, { passive: true }); window.addEventListener("resize", pb); pb();
+})();
+</script>
+</body>
+</html>

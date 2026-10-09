@@ -1,0 +1,1022 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instant Valuation | Jan Forster</title>
+<meta name="description" content="An instant price range for your home, built from HM Land Registry sales near you, then an accurate valuation from the Jan Forster Gosforth team.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+@font-face{font-family:"Gloock";src:url(fonts/gloock-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Albert Sans";src:url(fonts/albert-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Albert Sans";src:url(fonts/albert-sans-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Albert Sans";src:url(fonts/albert-sans-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+:root{
+  --paper:#FFFBF7;--tint:#FFF0E8;--white:#fff;
+  --ink:#2E3942;--slate:#465562;--muted:#5B6873;--line:rgba(70,85,98,.18);--line2:rgba(70,85,98,.32);
+  --orange:#EE7328;--orange-t:#B4501A;--teal:#2EA1A1;--teal-t:#1B7171;--sky:#A9B4BD;
+  --accent:var(--orange);--accent-t:var(--orange-t);--accent-soft:#FFE3D2;
+  --serif:"Gloock",Georgia,"Times New Roman",serif;
+  --sans:"Albert Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --pad:20px;--max:1240px;
+}
+body.let{--accent:var(--teal);--accent-t:var(--teal-t);--accent-soft:#D7F0F0}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+.kick{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-t);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;margin:0 0 18px}
+.kick b{font-weight:500;color:var(--ink)}
+.kick::before{content:"";width:22px;height:2px;background:var(--accent)}
+h1,h2,h3{font-weight:400;margin:0;text-wrap:balance}
+h1{font-family:var(--serif);font-size:clamp(38px,9vw,74px);line-height:1.02;letter-spacing:-.01em}
+h2{font-family:var(--serif);font-size:clamp(30px,6.4vw,52px);line-height:1.06;letter-spacing:-.005em;max-width:20ch}
+h3{font-family:var(--sans);font-weight:700;font-size:19px;line-height:1.3}
+p{margin:0 0 14px}
+.lede{font-size:clamp(17px,2.1vw,20px);color:var(--ink);max-width:56ch}
+.small{font-size:14px;color:var(--muted)}
+.src{font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--muted);line-height:1.5}
+.src a{color:var(--muted)}
+/* concept bar + header */
+.concept{background:var(--slate);color:#fff;font-size:13px;text-align:center;padding:7px var(--pad);line-height:1.4}
+.concept b{font-weight:500;color:#FFD2B6}
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,251,247,.94);border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.hbar .logo{height:22px;width:auto}
+.hnav{display:none;gap:26px;font-size:15px;font-weight:500}
+.hnav a{text-decoration:none;color:var(--slate)}
+.hnav a:hover{color:var(--accent-t)}
+.hcall{display:flex;gap:10px;align-items:center}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 22px;font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer;line-height:1.1;transition:background .2s,color .2s,border-color .2s}
+.pill.primary{background:var(--accent);color:#fff}
+.pill.primary:hover{background:var(--slate)}
+.pill.ghost{border-color:var(--slate);color:var(--slate);background:transparent}
+.pill.ghost:hover{background:var(--slate);color:#fff}
+.pill.sm{padding:9px 16px;font-size:14px}
+.hcall .tel{display:none;font-family:var(--mono);font-size:13px;color:var(--slate);text-decoration:none}
+/* hero */
+.hero{background:var(--tint);position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;padding-top:40px;padding-bottom:26px;position:relative;z-index:1}
+.hero .cite{font-size:14px;color:var(--muted);margin:16px 0 22px}
+.hero .cite a{color:var(--accent-t)}
+.hero .lede{margin-bottom:0}
+.talk{margin-top:6px;padding-top:18px;border-top:1px solid var(--line2);max-width:52ch;font-size:15.5px}
+.talk .mono{color:var(--muted);margin:0 0 6px}
+.talk p{margin:0}
+.talk a{color:var(--accent-t);font-weight:700;text-decoration:none;white-space:nowrap}
+/* tool card */
+.tool{background:var(--white);border:1px solid var(--line2);border-radius:6px;box-shadow:0 24px 48px -28px rgba(46,57,66,.45);padding:22px 18px}
+.tool h3{font-family:var(--serif);font-weight:400;font-size:28px;margin-bottom:4px}
+.tool .sub{font-size:14px;color:var(--muted);margin-bottom:16px}
+.seg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line2);border-radius:999px;padding:4px;margin-bottom:18px;background:var(--paper)}
+.seg button{border:0;background:transparent;border-radius:999px;padding:10px 8px;font-weight:700;font-size:15px;cursor:pointer;color:var(--slate)}
+.seg button[aria-pressed=true]{background:var(--accent);color:#fff}
+.field{margin-bottom:16px}
+.field>label,.field>.lab{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.field input[type=text],.field input[type=email],.field input[type=tel],.field textarea,.field select{width:100%;border:1px solid var(--line2);border-radius:4px;padding:12px 13px;background:#fff;font-size:16px}
+.field input:focus,.field textarea:focus,.field select:focus,.opt:focus-visible,.seg button:focus-visible,.pill:focus-visible{outline:3px solid var(--accent-soft);outline-offset:1px;border-color:var(--accent)}
+.types{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.opt{border:1px solid var(--line2);background:#fff;border-radius:4px;padding:9px 8px;cursor:pointer;font-size:14.5px;font-weight:500;color:var(--slate);display:flex;align-items:center;gap:9px;text-align:left;line-height:1.2}
+.opt svg{width:34px;height:26px;flex:none}
+.opt svg .ln{stroke:var(--slate);fill:none;stroke-width:1.6;stroke-linejoin:round}
+.opt[aria-pressed=true]{border-color:var(--accent);background:var(--accent-soft);color:var(--ink)}
+.opt[aria-pressed=true] svg .ln{stroke:var(--accent-t)}
+.row{display:grid;gap:6px}
+.beds{grid-template-columns:repeat(5,minmax(0,1fr))}
+.conds{grid-template-columns:repeat(3,minmax(0,1fr))}
+.beds .opt,.conds .opt{justify-content:center;text-align:center;padding:10px 4px}
+.conds .opt{font-size:13.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips .opt{border-radius:999px;padding:8px 13px;font-size:13.5px}
+.err{color:#A3271A;font-size:14px;margin:6px 0 0;min-height:0}
+.go{width:100%;margin-top:6px;padding:15px 22px;font-size:16px}
+.tool .note{font-size:13px;color:var(--muted);text-align:center;margin:10px 0 0}
+/* hero swarm */
+.swarmwrap{position:relative;z-index:1;padding-top:6px;padding-bottom:30px}
+.swarmhead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;align-items:end;margin-bottom:6px}
+.legend{display:flex;flex-wrap:wrap;gap:6px}
+.legend button{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line2);background:rgba(255,255,255,.6);border-radius:999px;padding:5px 11px;font-size:13px;cursor:pointer;color:var(--slate)}
+.legend button i{width:10px;height:10px;border-radius:50%;display:block}
+.legend button[aria-pressed=false]{opacity:.45}
+#heroSwarm{width:100%;height:auto}
+/* sections */
+section.band{padding:72px 0;border-bottom:1px solid var(--line)}
+section.band.alt{background:var(--white)}
+section.band.dark{background:var(--slate);color:#fff}
+.two{display:grid;grid-template-columns:minmax(0,1fr);gap:34px}
+/* result */
+.result{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.exlabel{display:inline-block;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;background:var(--accent-soft);color:var(--ink);padding:5px 9px;border-radius:3px;margin-bottom:14px}
+.exlabel[hidden]{display:none}
+#result .stalenote{display:none}
+#result.stale .stalenote{display:inline-block}
+#result.stale .range,#result.stale .rdesc,#result.stale #rPos,#result.stale .chart,#result.stale .facts{opacity:.3}
+.range{font-family:var(--serif);font-size:clamp(40px,10vw,64px);line-height:1.04;letter-spacing:-.01em;margin:4px 0 14px;color:var(--ink);max-width:none}
+.range .nw{white-space:nowrap;display:inline-block}
+.range .to{font-family:var(--sans);font-size:.34em;color:var(--muted);vertical-align:.45em;font-weight:500}
+.range .pm{font-family:var(--sans);font-size:.3em;color:var(--muted);font-weight:500}
+.rdesc{font-size:18px;margin-bottom:10px}
+.facts{display:grid;grid-template-columns:minmax(0,1fr);border-top:1px solid var(--line);margin:22px 0}
+.facts div{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.facts dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:0;font-size:15.5px}
+.cant{border-left:3px solid var(--accent);padding:4px 0 4px 14px;margin:20px 0 24px;font-size:16px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.chart{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 14px 12px}
+.chart svg{width:100%;height:auto;overflow:visible}
+.chart .cap{margin:10px 2px 0}
+.ax{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.axl{stroke:var(--line2);stroke-width:1}
+.lbl{font-family:var(--sans);font-size:13px;fill:var(--ink)}
+.lblb{font-family:var(--sans);font-size:13px;font-weight:700;fill:var(--ink)}
+/* why a range */
+.rangebars text{font-family:var(--sans)}
+.quote{margin:30px 0 0;padding:0}
+.quote blockquote{margin:0;font-family:var(--serif);font-size:clamp(22px,3.2vw,30px);line-height:1.22;color:var(--ink)}
+.quote figcaption{margin-top:12px}
+.photo{position:relative;border-radius:6px;overflow:hidden}
+.photo img{width:100%;height:auto}
+/* steps */
+.steps{display:grid;grid-template-columns:minmax(0,1fr);gap:0;counter-reset:s;margin-top:34px;border-top:1px solid var(--line2)}
+.step{padding:22px 0;border-bottom:1px solid var(--line2);display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;align-items:start}
+.step svg{width:64px;height:64px}
+.step svg .ln{stroke:var(--slate);stroke-width:1.6;fill:none;stroke-linejoin:round;stroke-linecap:round}
+.step svg .ac{stroke:var(--accent);stroke-width:2;fill:none;stroke-linejoin:round;stroke-linecap:round}
+.step svg .acf{fill:var(--accent)}
+.step .n{font-family:var(--mono);font-size:12px;color:var(--accent-t);letter-spacing:.06em}
+.step h3{margin:2px 0 6px}
+.step p{margin:0;color:var(--ink);font-size:16px}
+.tiers{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-top:40px}
+.tier{border:1px solid var(--line2);border-radius:6px;padding:20px;background:var(--white)}
+.tier.hi{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.tier h3{font-family:var(--serif);font-weight:400;font-size:26px;margin-bottom:8px}
+.tier ul{margin:12px 0 0;padding:0;list-style:none}
+.tier li{padding:7px 0;border-top:1px solid var(--line);font-size:15.5px}
+.weights{margin-top:40px;border:1px dashed var(--line2);border-radius:6px;padding:20px;background:var(--paper)}
+.weights table{width:100%;border-collapse:collapse;font-size:15px;margin-top:10px}
+.weights td,.weights th{text-align:left;padding:9px 6px;border-top:1px solid var(--line);vertical-align:top}
+.weights th{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+/* market */
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:26px}
+.stat{background:var(--white);padding:16px 14px}
+.stat .v{font-family:var(--serif);font-size:clamp(26px,4.2vw,36px);line-height:1.05;margin:6px 0 4px}
+.stat .c{font-size:14px;color:var(--muted)}
+.stat .c b{color:var(--ink);font-weight:700;display:block}
+/* book */
+.book{display:grid;grid-template-columns:minmax(0,1fr);gap:34px}
+.formcard{background:var(--white);border:1px solid var(--line2);border-radius:6px;padding:22px 18px}
+.formgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:0 14px}
+.radios{display:grid;grid-template-columns:minmax(0,1fr);gap:6px}
+.radios label{display:flex;gap:10px;align-items:center;border:1px solid var(--line2);border-radius:4px;padding:10px 12px;font-size:15px;cursor:pointer;background:#fff}
+.radios input{accent-color:var(--accent);width:18px;height:18px;margin:0}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 16px}
+.consent input{accent-color:var(--accent);width:18px;height:18px;margin:2px 0 0;flex:none}
+.demo{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;background:#FFF4D6;border:1px solid #E9D28A;color:#5A4A12;padding:7px 10px;border-radius:3px;margin-bottom:14px;display:inline-block}
+.done{display:none;border:1px solid var(--accent);background:var(--accent-soft);border-radius:6px;padding:18px;margin-top:6px}
+.done.show{display:block}
+.branches{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:22px}
+.branch{border:1px solid var(--line2);border-radius:6px;padding:16px;background:var(--white);position:relative}
+.branch.on{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.branch .tag{display:none;position:absolute;top:-11px;left:14px;background:var(--accent);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:3px}
+.branch.on .tag{display:block}
+.branch h3{font-size:17px;margin-bottom:4px}
+.branch p{margin:0;font-size:15px;color:var(--ink)}
+.branch a{color:var(--accent-t);font-weight:700;text-decoration:none}
+.why{list-style:none;padding:0;margin:20px 0 0}
+.why li{padding:11px 0 11px 30px;border-top:1px solid var(--line);position:relative;font-size:16px}
+.why li::before{content:"";position:absolute;left:0;top:17px;width:16px;height:10px;background:var(--accent);clip-path:polygon(0 40%,0 100%,18% 100%,18% 60%,82% 25%,82% 100%,100% 100%,100% 0)}
+/* footer */
+footer{background:var(--slate);color:#fff;padding:54px 0 34px;font-size:15px}
+footer .logo{height:22px;width:auto;margin-bottom:26px}
+.fgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:26px}
+footer h4{font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#FFD2B6;margin:0 0 8px}
+footer p{margin:0 0 6px;color:#E9EDF0}
+footer a{color:#fff}
+.credits{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);font-size:13px;color:#D6DCE1}
+.credits p{color:#D6DCE1;margin-bottom:8px}
+.astra{margin-top:16px;font-size:13px;color:#FFD2B6}
+/* reveal (only with JS) */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+noscript p{background:#FFF4D6;padding:10px;border-radius:4px}
+@media (min-width:640px){
+  :root{--pad:28px}
+  .tool{padding:26px 24px}
+  .types{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .types .opt{flex-direction:column;justify-content:center;text-align:center;padding:12px 6px}
+  .facts div{grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:16px}
+  .formgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .formgrid .full{grid-column:1 / -1}
+  .radios{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .branches{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .tiers{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:1000px){
+  :root{--pad:40px}
+  .hnav{display:flex}
+  .hcall .tel{display:inline}
+  .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);grid-template-areas:"copy tool" "talk tool";grid-template-rows:auto 1fr;gap:0 56px;padding-top:64px;padding-bottom:30px;align-items:start}
+  .hero-copy{grid-area:copy}
+  .hero-grid .tool{grid-area:tool}
+  .hero-grid .talk{grid-area:talk}
+  .range{font-size:56px}
+  .hero-copy{padding-top:24px}
+  section.band{padding:104px 0}
+  .result{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+  .two{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
+  .two.wide{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}
+  .steps{grid-template-columns:repeat(4,minmax(0,1fr));border-top:0;gap:28px}
+  .step{grid-template-columns:minmax(0,1fr);border-bottom:0;border-top:2px solid var(--line2);padding-top:22px}
+  .step svg{width:72px;height:72px}
+  .book{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:start}
+  .fgrid{grid-template-columns:minmax(0,1.2fr) repeat(2,minmax(0,1fr))}
+}
+</style>
+</head>
+<body>
+<div class="concept">A concept <b>Astra</b> built for Jan Forster Estates. Anything marked example is a placeholder, and the booking form sends nothing.</div>
+<header class="top">
+  <div class="wrap hbar">
+    <a href="#top" aria-label="Jan Forster, back to top"><img class="logo" src="img/logo.svg" alt="Jan Forster" width="257" height="30"></a>
+    <nav class="hnav" aria-label="Page">
+      <a href="#tool">Instant range</a><a href="#why">Why a range</a><a href="#how">How it works</a><a href="#market">Market</a>
+    </nav>
+    <div class="hcall">
+      <a class="tel" href="tel:+441912362070">0191 236 2070</a>
+      <a class="pill primary sm" href="#book">Book a valuation</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kick rv">Instant valuation <b>Gosforth and the North East</b></p>
+      <h1 id="h1" class="rv">A home is only worth what someone is willing to pay for it.</h1>
+      <p class="cite rv">From our article <a href="https://www.janforsterestates.com/about/news/valuing-your-property-dont-make-mistake">Valuing Your Property</a>, 25 August 2026</p>
+      <p class="lede rv">Here's what people paid for homes like yours, straight from HM Land Registry's records. Tell us a little about your home and you'll see a range built from those sales in seconds. Then one of our team visits and pins the figure down.</p>
+    </div>
+    <form class="tool rv" id="tool" novalidate aria-labelledby="toolh">
+      <h3 id="toolh">Get your instant range</h3>
+      <p class="sub">No email needed to see it.</p>
+      <div class="seg" role="group" aria-label="Sell or let">
+        <button type="button" data-mode="sell" aria-pressed="true">I want to sell</button>
+        <button type="button" data-mode="let" aria-pressed="false">I want to let</button>
+      </div>
+      <div class="field">
+        <label for="pc">Your postcode</label>
+        <input type="text" id="pc" name="pc" autocomplete="postal-code" placeholder="NE3 5TT" value="NE3 5TT" inputmode="text" autocapitalize="characters">
+        <p class="err" id="pcErr" role="alert"></p>
+      </div>
+      <div class="field">
+        <span class="lab" id="typeLab">Property type</span>
+        <div class="types" role="group" aria-labelledby="typeLab">
+          <button type="button" class="opt" data-type="D" aria-pressed="false"><svg viewBox="0 0 34 26" aria-hidden="true"><path class="ln" d="M5 12 17 3l12 9M8 10v13h18V10M14 23v-6h6v6"/></svg>Detached</button>
+          <button type="button" class="opt" data-type="S" aria-pressed="true"><svg viewBox="0 0 34 26" aria-hidden="true"><path class="ln" d="M2 12 10 5l7 6 7-6 8 7M4 11v12h26V11M17 11v12M8 23v-5h4v5M22 23v-5h4v5"/></svg>Semi detached</button>
+          <button type="button" class="opt" data-type="T" aria-pressed="false"><svg viewBox="0 0 34 26" aria-hidden="true"><path class="ln" d="M1 10h32M1 10l3-5h26l3 5M2 10v13h30V10M12 10v13M22 10v13M5 23v-5h3v5M15 23v-5h3v5M25 23v-5h3v5"/></svg>Terraced</button>
+          <button type="button" class="opt" data-type="F" aria-pressed="false"><svg viewBox="0 0 34 26" aria-hidden="true"><path class="ln" d="M8 2h18v21H8zM12 6h4v3h-4zM18 6h4v3h-4zM12 12h4v3h-4zM18 12h4v3h-4zM15 23v-4h4v4"/></svg>Flat</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="lab" id="bedLab">Bedrooms</span>
+        <div class="row beds" role="group" aria-labelledby="bedLab">
+          <button type="button" class="opt" data-bed="1" aria-pressed="false">1</button>
+          <button type="button" class="opt" data-bed="2" aria-pressed="false">2</button>
+          <button type="button" class="opt" data-bed="3" aria-pressed="true">3</button>
+          <button type="button" class="opt" data-bed="4" aria-pressed="false">4</button>
+          <button type="button" class="opt" data-bed="5" aria-pressed="false">5+</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="lab" id="condLab">Condition</span>
+        <div class="row conds" role="group" aria-labelledby="condLab">
+          <button type="button" class="opt" data-cond="-1" aria-pressed="false">Needs updating</button>
+          <button type="button" class="opt" data-cond="0" aria-pressed="true">Good</button>
+          <button type="button" class="opt" data-cond="1" aria-pressed="false">Recently renovated</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="lab" id="exLab">Anything extra</span>
+        <div class="chips" role="group" aria-labelledby="exLab">
+          <button type="button" class="opt" data-extra="drive" aria-pressed="false">Driveway or garage</button>
+          <button type="button" class="opt" data-extra="ext" aria-pressed="false">Extended or loft converted</button>
+          <button type="button" class="opt" data-extra="garden" aria-pressed="false">Large or private garden</button>
+        </div>
+      </div>
+      <button type="submit" class="pill primary go">Show my range</button>
+      <p class="note">Built from public sales records. A guide, not a valuation.</p>
+      <noscript><p>The instant range needs JavaScript. Call our Gosforth team on 0191 236 2070.</p></noscript>
+    </form>
+    <div class="talk rv"><p class="mono">Rather talk it through</p><p>Call our Gosforth sales team on <a href="tel:+441912362070">0191 236 2070</a>, or Property Management on <a href="tel:+441912362680">0191 236 2680</a> for lettings.</p></div>
+  </div>
+  <div class="wrap swarmwrap rv">
+    <div class="swarmhead">
+      <p class="src" id="swarmCap">Each dot is a home that sold in NE3 between August 2025 and July 2026. HM Land Registry Price Paid Data.</p>
+      <div class="legend" id="legend" role="group" aria-label="Show or hide a property type"></div>
+    </div>
+    <svg id="heroSwarm" role="img" aria-label="Dot chart of resale prices in NE3, August 2025 to July 2026"></svg>
+  </div>
+</section>
+
+<section class="band alt" id="result" aria-labelledby="rh">
+  <div class="wrap result">
+    <div>
+      <p class="kick rv">01 <b>Your instant range</b></p>
+      <span class="exlabel stalenote">Check the postcode above. This range is from your last search.</span>
+      <span class="exlabel" id="exlabel">Example for a 3 bedroom semi in NE3 5. Put your own details in above and it updates.</span>
+      <h2 id="rh" class="rv range" aria-live="polite"><span class="nw" id="rLo">£0</span> <span class="nw"><span class="to">to</span> <span id="rHi">£0</span><span class="pm" id="rPm"></span></span></h2>
+      <p class="rdesc" id="rDesc"></p>
+      <p id="rPos"></p>
+      <p class="cant">Your range can't see the décor, the outlook or the kerb appeal. That's what our visit is for.</p>
+      <div class="ctas">
+        <a class="pill primary" href="#book" id="bookCta">Book your accurate valuation</a>
+        <a class="pill ghost" href="tel:+441912362070" id="callCta">Call 0191 236 2070</a>
+      </div>
+    </div>
+    <div>
+      <figure class="chart rv" style="margin:0">
+        <svg id="resChart" role="img" aria-label="Your range against local sales"></svg>
+        <figcaption class="src cap" id="resCap"></figcaption>
+      </figure>
+      <dl class="facts" id="facts"></dl>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="why" aria-labelledby="wh">
+  <div class="wrap two wide">
+    <div>
+      <p class="kick rv">02 <b>Why a range</b></p>
+      <h2 id="wh" class="rv">Eight in ten NE3 semis sold for between £159,000 and £579,000 in the year to July.</h2>
+      <p class="lede rv" style="margin-top:20px">Same postcode district, same kind of house, and £420,000 from one end of that spread to the other. A single figure hides it. A range shows where your home sits, and a visit settles the rest.</p>
+      <figure class="chart rv" style="margin:28px 0 0">
+        <svg id="spreadChart" role="img" aria-label="Spread of resale prices in NE3 by property type"></svg>
+        <figcaption class="src cap" id="spreadCap"></figcaption>
+      </figure>
+    </div>
+    <div>
+      <div class="photo rv"><img src="img/semi.webp" alt="" width="637" height="559" loading="lazy" decoding="async"></div>
+      <figure class="quote rv">
+        <blockquote>“The home across the street may have the same footprint but with more modern décor, a better outlook or greater kerb appeal.”</blockquote>
+        <figcaption class="src">From Valuing Your Property, Jan Forster, 25 August 2026</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="how" aria-labelledby="hh">
+  <div class="wrap">
+    <p class="kick rv">03 <b>How it's worked out</b></p>
+    <h2 id="hh" class="rv">Your range is read off homes that actually sold.</h2>
+    <div class="steps">
+      <div class="step rv">
+        <svg viewBox="0 0 72 72" aria-hidden="true"><rect class="ln" x="16" y="10" width="40" height="52" rx="2"/><path class="ln" d="M24 22h24M24 30h24M24 38h16"/><path class="ac" d="M24 48l5 5 10-10"/></svg>
+        <div><p class="n">STEP 1</p><h3>Every recent resale nearby</h3><p>We take each sale HM Land Registry recorded in your postcode sector in the last year. New builds and sales it flags as non standard are left out.</p></div>
+      </div>
+      <div class="step rv">
+        <svg viewBox="0 0 72 72" aria-hidden="true"><path class="ln" d="M12 58h50M12 58V14"/><path class="ac" d="M16 50l12-8 10 4 10-12 10-6"/><circle class="acf" cx="58" cy="28" r="3.5"/></svg>
+        <div><p class="n">STEP 2</p><h3>Brought up to today</h3><p>Each sale is moved to July 2026 prices with the UK House Price Index for your council area and your type of home.</p></div>
+      </div>
+      <div class="step rv">
+        <svg viewBox="0 0 72 72" aria-hidden="true"><path class="ln" d="M6 60h60"/><g class="ln"><circle cx="11" cy="50" r="3"/><circle cx="18" cy="46" r="3"/><circle cx="18" cy="54" r="3"/><circle cx="55" cy="50" r="3"/><circle cx="62" cy="46" r="3"/></g><path class="ac" d="M25 60V36L47 22V60"/><circle class="acf" cx="31" cy="50" r="3"/><circle class="acf" cx="37" cy="44" r="3"/><circle class="acf" cx="38" cy="53" r="3"/><circle class="acf" cx="42" cy="38" r="3"/></svg>
+        <div><p class="n">STEP 3</p><h3>Your answers pick the slice</h3><p>Bedrooms, condition and extras move your range up or down within those sales. They never add a figure of their own.</p></div>
+      </div>
+      <div class="step rv">
+        <svg viewBox="0 0 72 72" aria-hidden="true"><path class="ln" d="M12 34 36 14l24 20M18 30v28h36V30"/><path class="ac" d="M31 58V44h10v14"/></svg>
+        <div><p class="n">STEP 4</p><h3>Then we visit</h3><p>One of our Gosforth team sees what the records can't, inside and out. It's free, with no obligation.</p></div>
+      </div>
+    </div>
+    <p class="small rv" style="margin-top:22px;max-width:70ch">Fewer than 30 sales of your type in your sector? The range widens to your whole postcode district, then to your council area, and your result says which it used.</p>
+
+    <div class="tiers">
+      <div class="tier rv">
+        <p class="mono" style="color:var(--muted);margin:0 0 6px">In seconds</p>
+        <h3>Instant range</h3>
+        <p>A guide from public records, ready while you're still on the page.</p>
+        <ul><li>Uses your postcode, type, bedrooms, condition and extras</li><li>Never sees inside your home</li><li>Good for knowing where to start</li></ul>
+      </div>
+      <div class="tier hi rv">
+        <p class="mono" style="color:var(--accent-t);margin:0 0 6px">With our team</p>
+        <h3>Valuation visit</h3>
+        <p>A Gosforth valuer walks through your home and the local market with you.</p>
+        <ul><li>Sees the décor, the outlook and the kerb appeal</li><li>Free, with no obligation</li><li>The figure you'd go to market with</li></ul>
+      </div>
+    </div>
+
+    <div class="weights rv">
+      <span class="exlabel" style="margin:0">Example weights for this concept</span>
+      <p style="margin:12px 0 0;max-width:70ch">How far each answer moves your range within local sales. These are starting settings. Our valuers would set the real ones.</p>
+      <table>
+        <thead><tr><th>Answer</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>Bedrooms</td><td>One step per bedroom above or below the usual for your type (flat 2, terraced 3, semi 3, detached 4)</td></tr>
+          <tr><td>Condition</td><td>Needs updating, one step down. Recently renovated, one step up</td></tr>
+          <tr><td>Each extra</td><td>Half a step up</td></tr>
+          <tr><td>One step</td><td>10 percentiles of local sale prices. Your range always spans 30</td></tr>
+          <tr><td>Letting</td><td>Starts between the ONS average rent for your bedrooms and for your type. Condition moves it 5%, each extra 2%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="market" aria-labelledby="mh">
+  <div class="wrap">
+    <p class="kick rv">04 <b>The market right now</b></p>
+    <h2 id="mh" class="rv">North Tyneside prices rose 6.5% in the year to July.</h2>
+    <p class="lede rv" style="margin-top:20px">Newcastle rose 4.1% over the same year. Rents there climbed faster, up 9.3% in the year to August.</p>
+    <figure class="chart rv" style="margin:28px 0 0;background:var(--white)">
+      <svg id="hpiChart" role="img" aria-label="Average house price, Newcastle upon Tyne, North Tyneside and the North East, 2016 to 2026"></svg>
+      <figcaption class="src cap">Average price, all property types, January 2016 to July 2026. UK House Price Index, HM Land Registry, published 16 September 2026.</figcaption>
+    </figure>
+    <div class="stats" id="stats"></div>
+    <p class="src" style="margin-top:10px">Prices from the UK House Price Index, July 2026. Rent from the ONS Price Index of Private Rents, August 2026, published 16 September 2026, which covers new and existing tenancies.</p>
+  </div>
+</section>
+
+<section class="band alt" id="book" aria-labelledby="bh">
+  <div class="wrap book">
+    <div>
+      <p class="kick rv">05 <b>Book your valuation</b></p>
+      <h2 id="bh" class="rv">Book your accurate valuation with our Gosforth team.</h2>
+      <p class="lede rv" style="margin-top:20px">Leave your details and we'll call to arrange a time. Your instant range comes with you, so the valuer starts where you left off.</p>
+      <form class="formcard rv" id="bookForm" novalidate style="margin-top:26px">
+        <span class="demo">Demo form. Nothing you type here is sent.</span>
+        <div class="field">
+          <span class="lab" id="wantLab">I want to</span>
+          <div class="radios" role="radiogroup" aria-labelledby="wantLab">
+            <label><input type="radio" name="want" value="sell" checked> Sell my property</label>
+            <label><input type="radio" name="want" value="let"> Let my property</label>
+            <label><input type="radio" name="want" value="either"> Either sell or let</label>
+          </div>
+        </div>
+        <div class="formgrid">
+          <div class="field"><label for="fn">First name</label><input type="text" id="fn" autocomplete="given-name" required></div>
+          <div class="field"><label for="ln">Last name</label><input type="text" id="ln" autocomplete="family-name" required></div>
+          <div class="field full"><label for="addr">House number and street</label><input type="text" id="addr" autocomplete="address-line1" required></div>
+          <div class="field"><label for="bpc">Postcode</label><input type="text" id="bpc" autocomplete="postal-code" required></div>
+          <div class="field"><label for="ph">Phone</label><input type="tel" id="ph" autocomplete="tel" required></div>
+          <div class="field full"><label for="em">Email</label><input type="email" id="em" autocomplete="email" required></div>
+          <div class="field full"><label for="msg">Message (optional)</label><textarea id="msg" rows="3"></textarea></div>
+        </div>
+        <label class="consent"><input type="checkbox" id="ok" required> <span>I've read and agree to the <a href="https://www.janforsterestates.com/privacy-policy">Privacy Policy</a>.</span></label>
+        <p class="err" id="formErr" role="alert"></p>
+        <button type="submit" class="pill primary go">Request my valuation</button>
+        <div class="done" id="done" role="status"></div>
+      </form>
+    </div>
+    <div>
+      <div class="photo rv"><img src="img/kitchen.jpg" alt="" width="1400" height="796" loading="lazy" decoding="async"></div>
+      <div class="branches">
+        <div class="branch on rv" id="brSales">
+          <span class="tag">Your branch for this</span>
+          <h3>Gosforth</h3>
+          <p>29 Princes Road, Brunton Park<br>Gosforth, NE3 5TT</p>
+          <p style="margin-top:8px"><a href="tel:+441912362070">0191 236 2070</a></p>
+        </div>
+        <div class="branch rv" id="brLet">
+          <span class="tag">Your branch for this</span>
+          <h3>Gosforth (Property Management)</h3>
+          <p>Polwarth House, 55 Polwarth Drive, Brunton Park<br>Gosforth, NE3 5NJ</p>
+          <p style="margin-top:8px"><a href="tel:+441912362680">0191 236 2680</a></p>
+        </div>
+      </div>
+      <p class="small rv" style="margin-top:12px">One branch handles sales, the other everything for landlords and tenants. Your request goes to the right one.</p>
+      <ul class="why rv">
+        <li>We visit your property so we can provide you with an accurate and detailed valuation</li>
+        <li>All our agents have in depth knowledge of the local area</li>
+        <li>We keep up to date with the latest changes in the local market</li>
+        <li>Our valuations are free with no obligation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="logo" src="img/logo-white.svg" alt="Jan Forster" width="257" height="30">
+    <div class="fgrid">
+      <div>
+        <h4>Head office</h4>
+        <p>Polwarth House, 55 Polwarth Drive, Brunton Park, Gosforth, Newcastle upon Tyne, NE3 5NJ</p>
+      </div>
+      <div>
+        <h4>Gosforth</h4>
+        <p>29 Princes Road, Brunton Park, Gosforth, <span style="white-space:nowrap">NE3 5TT</span></p>
+        <p><a href="tel:+441912362070">0191 236 2070</a></p>
+      </div>
+      <div>
+        <h4>Gosforth (Property Management)</h4>
+        <p>Polwarth House, 55 Polwarth Drive, Brunton Park, Gosforth, NE3 5NJ</p>
+        <p><a href="tel:+441912362680">0191 236 2680</a></p>
+      </div>
+    </div>
+    <div class="credits">
+      <p>Contains HM Land Registry data © Crown copyright and database right 2026. This data is licensed under the Open Government Licence v3.0. Sales are resales completed between August 2025 and July 2026, as registered by the 28 September 2026 update. UK House Price Index for July 2026, published 16 September 2026.</p>
+      <p>Rents from the Office for National Statistics, Price Index of Private Rents, August 2026, licensed under the Open Government Licence v3.0.</p>
+      <p class="astra">Concept built by Astra for Jan Forster Estates. The weights that move your range are example settings, and the booking form is a demo that sends nothing.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add("js");
+var DATA = __DATA__;
+var RENTS = __RENTS__;
+</script>
+<script>
+(function () {
+  var TYPES = { D: "Detached", S: "Semi detached", T: "Terraced", F: "Flat" };
+  var COL = { D: "#465562", S: "#EE7328", T: "#2EA1A1", F: "#A9B4BD" };
+  var PLURAL = { D: "detached homes", S: "semi detached homes", T: "terraced homes", F: "flats" };
+  var SING = { D: "detached home", S: "semi detached home", T: "terraced home", F: "flat" };
+  var BEDSTEP = { F: { 1: -1, 2: 0, 3: 1, 4: 1.5, 5: 2 }, T: { 1: -2, 2: -1, 3: 0, 4: 1, 5: 1.5 }, S: { 1: -2, 2: -1, 3: 0, 4: 1, 5: 1.5 }, D: { 1: -2.5, 2: -2, 3: -1, 4: 0, 5: 1 } };
+  var COND = { "-1": "that needs updating", "0": "in good condition", "1": "that's recently renovated" };
+  var NS = "http://www.w3.org/2000/svg";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function gbp(v) { return "£" + Math.round(v).toLocaleString("en-GB"); }
+  function k(v) { return v >= 1000000 ? "£" + (v / 1000000).toFixed(v % 1000000 ? 1 : 0) + "m" : "£" + Math.round(v / 1000) + "k"; }
+  function el(tag, attrs, parent) {
+    var e = document.createElementNS(NS, tag);
+    for (var a in attrs) e.setAttribute(a, attrs[a]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function txt(parent, x, y, s, cls, anchor) {
+    var t = el("text", { x: x, y: y, "class": cls || "ax", "text-anchor": anchor || "start" }, parent);
+    t.textContent = s; return t;
+  }
+  function pct(a, q) {
+    var i = (a.length - 1) * q / 100, lo = Math.floor(i), hi = Math.min(lo + 1, a.length - 1);
+    return a[lo] + (a[hi] - a[lo]) * (i - lo);
+  }
+  function step(v) { return v < 150000 ? 2500 : v < 500000 ? 5000 : v < 1000000 ? 10000 : 25000; }
+  function plural(n, one, many) { return n === 1 ? one : many; }
+
+  /* ---------- state ---------- */
+  var st = { mode: "sell", type: "S", bed: 3, cond: 0, extras: {}, pc: "NE3 5TT", example: true };
+
+  function press(group, attr, val) {
+    $$("[" + attr + "]", group).forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute(attr) === String(val))); });
+  }
+  $$(".seg button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      st.mode = b.getAttribute("data-mode");
+      press($(".seg"), "data-mode", st.mode);
+      document.body.classList.toggle("let", st.mode === "let");
+      $(".beds [data-bed='5']").textContent = st.mode === "let" ? "4+" : "5+";
+    });
+  });
+  $$(".types .opt").forEach(function (b) { b.addEventListener("click", function () { st.type = b.getAttribute("data-type"); press($(".types"), "data-type", st.type); }); });
+  $$(".beds .opt").forEach(function (b) { b.addEventListener("click", function () { st.bed = +b.getAttribute("data-bed"); press($(".beds"), "data-bed", st.bed); }); });
+  $$(".conds .opt").forEach(function (b) { b.addEventListener("click", function () { st.cond = +b.getAttribute("data-cond"); press($(".conds"), "data-cond", st.cond); }); });
+  $$(".chips .opt").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var x = b.getAttribute("data-extra"); st.extras[x] = !st.extras[x];
+      b.setAttribute("aria-pressed", String(!!st.extras[x]));
+    });
+  });
+
+  /* ---------- postcode ---------- */
+  function parsePc(raw) {
+    var s = (raw || "").toUpperCase().replace(/[^A-Z0-9 ]/g, "").trim().replace(/\s+/g, " ");
+    if (!s) return null;
+    var oc, sec = null;
+    if (s.indexOf(" ") > 0) {
+      var p = s.split(" "); oc = p[0];
+      if (/^\d/.test(p[1] || "")) sec = p[1].charAt(0);
+    } else {
+      var m = s.match(/^([A-Z]{1,2}\d[A-Z\d]?)(\d[A-Z]{2})$/);
+      if (m) { oc = m[1]; sec = m[2].charAt(0); } else oc = s;
+    }
+    if (!/^[A-Z]{1,2}\d[A-Z\d]?$/.test(oc)) return null;
+    return { oc: oc, sec: sec, label: sec ? oc + " " + sec : oc };
+  }
+
+  function comps(pc, t) {
+    var g = DATA.d[pc.oc];
+    if (!g) return null;
+    if (pc.sec && g.s[pc.sec] && (g.s[pc.sec][t] || []).length >= 30) {
+      return { arr: g.s[pc.sec][t], scope: pc.oc + " " + pc.sec, level: "sector", la: g.la, n: g.s[pc.sec][t].length };
+    }
+    var all = [];
+    for (var s in g.s) if (g.s[s][t]) all = all.concat(g.s[s][t]);
+    all.sort(function (a, b) { return a - b; });
+    if (all.length >= 15) return { arr: all, scope: pc.oc, level: "district", la: g.la, n: all.length, sectorShort: !!pc.sec };
+    var L = DATA.la[g.la];
+    if (!L || !L.p[t]) return null;
+    return { arr: L.p[t], scope: g.la, level: "la", la: g.la, n: L.n[t], quantiles: true };
+  }
+
+  /* ---------- compute ---------- */
+  function computeSell(pc) {
+    var c = comps(pc, st.type);
+    if (!c) return { err: "We couldn't find recent sales for " + pc.oc + ". Try your full postcode, or call our Gosforth team on 0191 236 2070." };
+    var nExtras = Object.keys(st.extras).filter(function (x) { return st.extras[x]; }).length;
+    var score = BEDSTEP[st.type][st.bed] + st.cond + 0.5 * nExtras;
+    var centre = Math.max(20, Math.min(80, 50 + 10 * score));
+    var lo = centre - 15, hi = centre + 15;
+    var vLo = pct(c.arr, lo) * 500, vHi = pct(c.arr, hi) * 500;
+    var rLo = Math.floor(vLo / step(vLo)) * step(vLo), rHi = Math.ceil(vHi / step(vHi)) * step(vHi);
+    return { c: c, lo: lo, hi: hi, centre: centre, rLo: rLo, rHi: rHi, vLo: vLo, vHi: vHi };
+  }
+  function computeLet(pc) {
+    var g = DATA.d[pc.oc];
+    if (!g) return { err: "We couldn't find " + pc.oc + " in our North East data. Call our Property Management team on 0191 236 2680." };
+    var R = RENTS.la[g.la];
+    if (!R) return { err: "We don't have rent figures for " + g.la + " yet. Call our Property Management team on 0191 236 2680." };
+    var b = R.b[Math.min(st.bed, 4) - 1], t = R.t[st.type];
+    var lo = Math.min(b, t), hi = Math.max(b, t), mid = (lo + hi) / 2;
+    if (hi / lo < 1.12) { lo = mid * 0.94; hi = mid * 1.06; }
+    var nExtras = Object.keys(st.extras).filter(function (x) { return st.extras[x]; }).length;
+    var f = 1 + 0.05 * st.cond + 0.02 * nExtras;
+    lo *= f; hi *= f;
+    return { la: g.la, R: R, b: b, t: t, rLo: Math.floor(lo / 25) * 25, rHi: Math.ceil(hi / 25) * 25 };
+  }
+
+  function posWords(c) {
+    return c <= 30 ? "toward the lower end of" : c < 45 ? "a little below the middle of" : c <= 55 ? "around the middle of" : c < 70 ? "a little above the middle of" : "toward the upper end of";
+  }
+  function bedWord() {
+    if (st.mode === "let" && st.bed >= 4) return "4 or more bedroom";
+    return (st.bed >= 5 ? "5 or more" : st.bed) + " bedroom";
+  }
+  function chg(v) { return (v >= 0 ? "up " : "down ") + Math.abs(v).toFixed(1) + "% on a year"; }
+
+  function fact(dl, dt, dd) {
+    var d = document.createElement("div");
+    var a = document.createElement("dt"); a.textContent = dt;
+    var b = document.createElement("dd"); b.textContent = dd;
+    d.appendChild(a); d.appendChild(b); dl.appendChild(d);
+  }
+
+  function render() {
+    var pc = parsePc($("#pc").value);
+    var err = $("#pcErr");
+    err.textContent = "";
+    var fail = function (m) { err.textContent = m; if (!st.example) $("#result").classList.add("stale"); return false; };
+    if (!pc) return fail("Please enter a postcode, like NE3 5TT.");
+    if (!/^NE\d/.test(pc.oc)) return fail("This tool covers NE postcodes. For anywhere else, call our Gosforth team on 0191 236 2070.");
+    var r = st.mode === "sell" ? computeSell(pc) : computeLet(pc);
+    if (r.err) return fail(r.err);
+    $("#result").classList.remove("stale");
+    st.pc = pc.label;
+    var facts = $("#facts"); facts.innerHTML = "";
+    var desc = "a " + bedWord() + " " + SING[st.type] + " in " + (st.mode === "sell" ? pc.label : r.la) + " " + COND[String(st.cond)];
+    $("#rLo").textContent = gbp(r.rLo); $("#rHi").textContent = gbp(r.rHi);
+    $("#rPm").textContent = st.mode === "let" ? " a month" : "";
+    if (st.mode === "sell") {
+      var c = r.c;
+      $("#rDesc").textContent = "Indicative price range for " + desc + ".";
+      var where = c.level === "sector" ? c.scope : c.level === "district" ? c.scope : c.la;
+      $("#rPos").textContent = "Your answers put it " + posWords(r.centre) + " the " + c.n.toLocaleString("en-GB") + " " + PLURAL[st.type] + " that sold in " + where + " in the year to July 2026.";
+      var used = c.n.toLocaleString("en-GB") + " " + plural(c.n, "resale", "resales") + " of " + PLURAL[st.type] + " in " + where + ", completed August 2025 to July 2026";
+      if (c.level === "district" && c.sectorShort) used += ". Fewer than 30 in " + pc.label + ", so the whole district is used";
+      if (c.level === "la") used += ". Too few in " + pc.oc + ", so the whole council area is used";
+      fact(facts, "Sales used", used);
+      var H = DATA.la[c.la] && DATA.la[c.la].hpi;
+      if (H) fact(facts, "Area average", gbp(H[st.type][0]) + " for a " + SING[st.type] + " in " + c.la + " in July 2026, " + chg(H[st.type][1]));
+      fact(facts, "Where you sit", "Between the " + ord(r.lo) + " and " + ord(r.hi) + " percentile of those sales, after moving each to July 2026 prices");
+      fact(facts, "Source", "HM Land Registry Price Paid Data and UK House Price Index, July 2026");
+      drawResultSell(r);
+      $("#resCap").textContent = c.quantiles
+        ? "The bar shows how prices spread across " + c.n.toLocaleString("en-GB") + " sales in " + c.la + ", moved to July 2026 prices. The marked section is your range."
+        : "Each dot is one of those " + c.n.toLocaleString("en-GB") + " sales, moved to July 2026 prices. The marked section is your range." + (r.outs ? " " + (r.outs === 1 ? "One sale beyond the scale is" : r.outs + " sales beyond the scale are") + " drawn at its edges." : "") + " HM Land Registry Price Paid Data.";
+      $("#bookCta").textContent = "Book your accurate valuation";
+      $("#callCta").textContent = "Call 0191 236 2070"; $("#callCta").href = "tel:+441912362070";
+    } else {
+      $("#rDesc").textContent = "Indicative monthly rent for " + desc + ".";
+      $("#rPos").textContent = "The average rent in " + r.la + " is " + gbp(r.b) + " for a " + bedWord() + " home and " + gbp(r.t) + " for a " + SING[st.type] + ", August 2026.";
+      fact(facts, "Rents locally", "Up " + r.R.chg.toFixed(1) + "% on a year across " + r.la + ", August 2026");
+      fact(facts, "Covers", "New and existing tenancies across the whole council area");
+      fact(facts, "Source", "ONS Price Index of Private Rents, published 16 September 2026");
+      drawResultLet(r);
+      $("#resCap").textContent = "Average monthly rent in " + r.la + ", August 2026, by bedrooms and by type. Your bedrooms and type are highlighted. ONS Price Index of Private Rents.";
+      $("#bookCta").textContent = "Book your rental valuation";
+      $("#callCta").textContent = "Call 0191 236 2680"; $("#callCta").href = "tel:+441912362680";
+    }
+    $("#exlabel").hidden = !st.example;
+    if (st.example) $("#exlabel").textContent = "Example for a 3 bedroom semi in " + pc.label + ". Put your own details in above and it updates.";
+    prefill(r);
+    return true;
+  }
+  function ord(n) { n = Math.round(n); var s = ["th", "st", "nd", "rd"], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
+
+  /* ---------- charts ---------- */
+  function sizeOf(svg, fallbackW) { var w = svg.parentNode.clientWidth - 28; return Math.max(280, w || fallbackW); }
+
+  function swarm(values, x, r, maxH) {
+    // greedy beeswarm, values sorted ascending
+    var placed = [], out = [];
+    for (var i = 0; i < values.length; i++) {
+      var px = x(values[i]), best = null;
+      for (var k2 = 0; k2 < 400; k2++) {
+        var off = (k2 % 2 ? 1 : -1) * Math.ceil(k2 / 2) * (r * 0.9);
+        var ok = true;
+        for (var j = placed.length - 1; j >= 0; j--) {
+          var q = placed[j]; if (px - q.x > 2 * r) break;
+          var dx = px - q.x, dy = off - q.y;
+          if (dx * dx + dy * dy < 4 * r * r * 0.98) { ok = false; break; }
+        }
+        if (ok) { best = off; break; }
+      }
+      if (best === null) best = 0;
+      var p = { x: px, y: best, i: i }; placed.push(p); out.push(p);
+    }
+    return out;
+  }
+
+  function drawHero() {
+    var svg = $("#heroSwarm");
+    var W = Math.max(320, svg.parentNode.clientWidth), small = W < 640;
+    var H = small ? 280 : 350, m = { l: 4, r: 4, t: 10, b: 30 };
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.innerHTML = "";
+    var max = 1000000, blockW = small ? 34 : 64, plotR = W - m.r - blockW - (small ? 10 : 22);
+    var x = function (v) { return m.l + 8 + Math.min(v, max) / max * (plotR - m.l - 8); };
+    var vals = [], over = [];
+    "DSTF".split("").forEach(function (t) { (DATA.ne3raw[t] || []).forEach(function (u) { (u * 500 > max ? over : vals).push({ v: u * 500, t: t }); }); });
+    vals.sort(function (a, b) { return a.v - b.v; }); over.sort(function (a, b) { return a.v - b.v; });
+    var roofL = m.t + (small ? 34 : 50), top = roofL + 8, cy = top + (H - m.b - top) / 2, half = (H - m.b - top) / 2 - 2;
+    var r = small ? 2.6 : 4.2, pts;
+    for (var tries = 0; tries < 8; tries++) {
+      pts = swarm(vals.map(function (o) { return o.v; }), x, r);
+      var ext = pts.reduce(function (a, p) { return Math.max(a, Math.abs(p.y)); }, 0);
+      if (ext + r <= half) break; r *= 0.9;
+    }
+    // their roof line, drawn over the street of sales like the line on their own photography
+    el("path", { d: "M" + m.l + " " + (H - m.b + 2) + "V" + roofL + "L" + (W - m.r) + " " + m.t + "V" + (H - m.b + 2), fill: "none", stroke: "#EE7328", "stroke-width": 1.4, opacity: 0.8 }, svg);
+    for (var g = 0; g <= max; g += 100000) {
+      var gx = x(g);
+      el("line", { x1: gx, x2: gx, y1: top, y2: H - m.b + 4, "class": "axl", "stroke-dasharray": "2 4" }, svg);
+      if ((!small || g % 200000 === 0) && !(small && g === max)) txt(svg, gx, H - 8, k(g), "ax", "middle");
+    }
+    // homes over the scale, packed beside it
+    var cols = Math.max(2, Math.floor(blockW / (2 * r + 1.5))), bx = W - m.r - blockW / 2;
+    var rowsN = Math.ceil(over.length / cols), stepXY = 2 * r + 1.5;
+    over.forEach(function (o, i) {
+      var cI = i % cols, rI = Math.floor(i / cols);
+      pts.push({ x: bx - (cols - 1) * stepXY / 2 + cI * stepXY, y: (rI - (rowsN - 1) / 2) * stepXY, i: vals.length + i });
+    });
+    vals = vals.concat(over);
+    txt(svg, bx, H - 8, "£1m+", "ax", "middle");
+    var gDots = el("g", {}, svg);
+    pts.forEach(function (p, i) {
+      var o = vals[p.i];
+      var c = el("circle", { cx: p.x.toFixed(1), cy: (cy + p.y).toFixed(1), r: r.toFixed(2), fill: COL[o.t], "data-t": o.t, opacity: 0.92 }, gDots);
+      if (!reduce) { c.style.transition = "transform .9s cubic-bezier(.2,.7,.2,1) " + (i * 1.1) + "ms, opacity .3s"; c.style.transform = "translateY(" + (-(cy + p.y) - 20) + "px)"; }
+      var tt = el("title", {}, c); tt.textContent = TYPES[o.t] + ", " + gbp(o.v);
+    });
+    if (!reduce) requestAnimationFrame(function () { requestAnimationFrame(function () { $$("circle", gDots).forEach(function (c) { c.style.transform = "none"; }); }); });
+    $("#swarmCap").textContent = "Each dot is a home that sold in NE3 between August 2025 and July 2026, " + vals.length.toLocaleString("en-GB") + " resales in all, with the " + over.length + " over £1m grouped on the right. HM Land Registry Price Paid Data.";
+  }
+  function legend() {
+    var L = $("#legend"); L.innerHTML = "";
+    "DSTF".split("").forEach(function (t) {
+      var b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-pressed", "true");
+      b.innerHTML = '<i style="background:' + COL[t] + '"></i>' + TYPES[t];
+      b.addEventListener("click", function () {
+        var on = b.getAttribute("aria-pressed") !== "true"; b.setAttribute("aria-pressed", String(on));
+        $$('#heroSwarm circle[data-t="' + t + '"]').forEach(function (c) { c.setAttribute("opacity", on ? 0.92 : 0.08); });
+      });
+      L.appendChild(b);
+    });
+  }
+
+  function drawResultSell(r) {
+    var svg = $("#resChart"), W = sizeOf(svg, 600), small = W < 520, H = small ? 260 : 300;
+    var m = { l: 6, r: 6, t: 70, b: 34 };
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.innerHTML = "";
+    var a = r.c.arr.map(function (u) { return u * 500; });
+    var lo = pct(a, 2), hi = pct(a, 98);
+    var span = hi - lo, s0 = Math.max(0, lo - span * 0.06), s1 = hi + span * 0.06;
+    var x = function (v) { return m.l + (Math.max(s0, Math.min(s1, v)) - s0) / (s1 - s0) * (W - m.l - m.r); };
+    var baseY = H - m.b, cy = m.t + (baseY - m.t) / 2 + 6;
+    var bx0 = x(r.vLo), bx1 = x(r.vHi), yR = 30, yL = 30 + (m.t - 30) * 0.9 + 18;
+    el("path", { d: "M" + bx0 + " " + (baseY + 4) + "V" + yL + "L" + bx1 + " " + yR + "V" + (baseY + 4) + "Z", fill: "var(--accent-soft)" }, svg);
+    el("path", { d: "M" + bx0 + " " + (baseY + 4) + "V" + yL + "L" + bx1 + " " + yR + "V" + (baseY + 4), fill: "none", stroke: "var(--accent)", "stroke-width": 2.5, "stroke-linejoin": "miter" }, svg);
+    var lab = txt(svg, Math.min(W - m.r, Math.max(m.l, bx1)), yR - 10, "Your range", "lblb", bx1 > W * 0.75 ? "end" : bx1 < W * 0.25 ? "start" : "middle");
+    // axis
+    var ticks = niceTicks(s0, s1, small ? 4 : 6);
+    ticks.forEach(function (t) {
+      var tx = x(t); el("line", { x1: tx, x2: tx, y1: m.t - 6, y2: baseY + 4, "class": "axl", "stroke-dasharray": "2 4" }, svg);
+      txt(svg, tx, H - 10, k(t), "ax", "middle");
+    });
+    if (r.c.quantiles) {
+      for (var q = 2; q < 98; q++) {
+        var v0 = pct(a, q), v1 = pct(a, q + 1), inb = q >= r.lo && q < r.hi;
+        el("rect", { x: x(v0), y: cy - 22, width: Math.max(0.6, x(v1) - x(v0)), height: 44, fill: inb ? "var(--accent)" : "#465562", opacity: inb ? 0.9 : 0.12 + 0.5 * (1 - Math.abs(q - 50) / 50) }, svg);
+      }
+      return;
+    }
+    var rr = a.length < 90 ? (small ? 4.4 : 6) : (small ? 3.2 : 4.4), pts;
+    for (var tries = 0; tries < 8; tries++) {
+      pts = swarm(a, x, rr);
+      var ext = pts.reduce(function (acc, p) { return Math.max(acc, Math.abs(p.y)); }, 0);
+      if (ext + rr <= (baseY - m.t) / 2 - 4) break; rr *= 0.86;
+    }
+    pts.forEach(function (p) {
+      var v = a[p.i], inb = v >= r.vLo && v <= r.vHi;
+      var c = el("circle", { cx: p.x.toFixed(1), cy: (cy + p.y).toFixed(1), r: rr.toFixed(2), fill: inb ? "var(--accent)" : "#465562", opacity: inb ? 1 : 0.38 }, svg);
+      var tt = el("title", {}, c); tt.textContent = gbp(v) + " in July 2026 prices";
+    });
+    var outs = a.filter(function (v) { return v < s0 || v > s1; }).length;
+    r.outs = outs;
+  }
+  function niceTicks(a, b, n) {
+    var raw = (b - a) / n, mag = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / mag;
+    var stp = (f < 1.5 ? 1 : f < 3 ? 2 : f < 7 ? 5 : 10) * mag, out = [];
+    for (var v = Math.ceil(a / stp) * stp; v <= b; v += stp) out.push(v);
+    return out;
+  }
+
+  function drawResultLet(r) {
+    var svg = $("#resChart"), W = sizeOf(svg, 600), rows = [];
+    ["1", "2", "3", "4+"].forEach(function (b, i) { rows.push({ l: b + " bed", v: r.R.b[i], on: Math.min(st.bed, 4) - 1 === i }); });
+    rows.push(null);
+    "DSTF".split("").forEach(function (t) { rows.push({ l: TYPES[t], v: r.R.t[t], on: st.type === t }); });
+    var rh = 30, H = 40 + rows.length * rh + 30, labW = W < 420 ? 96 : 120, m = { l: labW, r: 64, t: 34 };
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.innerHTML = "";
+    var max = Math.max.apply(null, r.R.b.concat([r.R.t.D, r.R.t.S, r.R.t.T, r.R.t.F, r.rHi])) * 1.05;
+    var x = function (v) { return m.l + v / max * (W - m.l - m.r); };
+    el("rect", { x: x(r.rLo), y: m.t - 18, width: Math.max(2, x(r.rHi) - x(r.rLo)), height: rows.length * rh + 18, fill: "var(--accent-soft)" }, svg);
+    txt(svg, (x(r.rLo) + x(r.rHi)) / 2, m.t - 22, "Your range", "lblb", "middle");
+    rows.forEach(function (o, i) {
+      if (!o) return;
+      var y = m.t + i * rh;
+      txt(svg, m.l - 10, y + 15, o.l, o.on ? "lblb" : "lbl", "end");
+      el("rect", { x: m.l, y: y + 4, width: Math.max(1, x(o.v) - m.l), height: 16, rx: 2, fill: o.on ? "var(--accent)" : "#465562", opacity: o.on ? 1 : 0.28 }, svg);
+      txt(svg, x(o.v) + 6, y + 16, gbp(o.v), o.on ? "lblb" : "ax", "start");
+    });
+  }
+
+  function drawSpread() {
+    var svg = $("#spreadChart"), W = sizeOf(svg, 700), small = W < 520;
+    var labW = small ? 84 : 110, m = { l: labW, r: 16, t: 26, b: 34 }, rh = 46;
+    var H = m.t + 4 * rh + m.b;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.innerHTML = "";
+    var max = 1300000;
+    var x = function (v) { return m.l + Math.min(v, max) / max * (W - m.l - m.r); };
+    var ticks = small ? [0, 400000, 800000, 1200000] : [0, 200000, 400000, 600000, 800000, 1000000, 1200000];
+    ticks.forEach(function (t) {
+      el("line", { x1: x(t), x2: x(t), y1: m.t - 8, y2: H - m.b + 4, "class": "axl", "stroke-dasharray": "2 4" }, svg);
+      txt(svg, x(t), H - 10, k(t), "ax", "middle");
+    });
+    var counts = [];
+    "SDTF".split("").forEach(function (t, i) {
+      var a = (DATA.ne3raw[t] || []).map(function (u) { return u * 500; });
+      if (!a.length) return;
+      counts.push(PLURAL[t].replace(" homes", "") + " " + a.length);
+      var y = m.t + i * rh + rh / 2, p10 = pct(a, 10), p25 = pct(a, 25), p50 = pct(a, 50), p75 = pct(a, 75), p90 = pct(a, 90);
+      var on = t === "S";
+      txt(svg, m.l - 12, y + 5, TYPES[t], on ? "lblb" : "lbl", "end");
+      el("line", { x1: x(p10), x2: x(p90), y1: y, y2: y, stroke: on ? "#EE7328" : "#465562", "stroke-width": 2, opacity: on ? 1 : 0.6 }, svg);
+      el("rect", { x: x(p25), y: y - 9, width: x(p75) - x(p25), height: 18, rx: 2, fill: on ? "#EE7328" : "#465562", opacity: on ? 0.9 : 0.35 }, svg);
+      el("circle", { cx: x(p50), cy: y, r: 5.5, fill: "#fff", stroke: on ? "#B4501A" : "#2E3942", "stroke-width": 2 }, svg);
+      if (on) {
+        txt(svg, x(p10), y - 14, k(p10), "lblb", "middle");
+        txt(svg, x(p90), y - 14, k(p90), "lblb", "middle");
+      }
+    });
+    $("#spreadCap").textContent = "Resale prices in NE3 by type, completed August 2025 to July 2026, as sold. The thin line covers eight in ten sales, the bar the middle half, the dot the median. Sales counted, " + counts.join(", ") + ". HM Land Registry Price Paid Data.";
+  }
+
+  function drawHpi() {
+    var svg = $("#hpiChart"), W = sizeOf(svg, 900), small = W < 560;
+    var H = small ? 280 : 360, m = { l: 48, r: small ? 12 : 150, t: 18, b: 30 };
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.innerHTML = "";
+    var series = [["Newcastle upon Tyne", "#465562"], ["North Tyneside", "#EE7328"], ["North East", "#A9B4BD"]];
+    var all = DATA.series["Newcastle upon Tyne"], n = all.length;
+    var y0 = 100000, y1 = 225000;
+    var x = function (i) { return m.l + i / (n - 1) * (W - m.l - m.r); };
+    var y = function (v) { return m.t + (1 - (v - y0) / (y1 - y0)) * (H - m.t - m.b); };
+    for (var v = 100000; v <= 220000; v += 40000) {
+      el("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), "class": "axl" }, svg);
+      txt(svg, m.l - 6, y(v) + 4, k(v), "ax", "end");
+    }
+    all.forEach(function (row, i) {
+      if (row[0].slice(5) === "01" && (+row[0].slice(0, 4)) % (small ? 4 : 2) === 0) txt(svg, x(i), H - 8, row[0].slice(0, 4), "ax", "middle");
+    });
+    var labels = [];
+    series.forEach(function (s) {
+      var rows = DATA.series[s[0]]; if (!rows) return;
+      var d = rows.map(function (row, i) { return (i ? "L" : "M") + x(i).toFixed(1) + " " + y(row[1]).toFixed(1); }).join("");
+      var p = el("path", { d: d, fill: "none", stroke: s[1], "stroke-width": s[0] === "North East" ? 2 : 2.6, "stroke-linejoin": "round" }, svg);
+      if (!reduce && p.getTotalLength) { var L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; p.setAttribute("data-draw", "1"); }
+      var last = rows[rows.length - 1];
+      el("circle", { cx: x(rows.length - 1), cy: y(last[1]), r: 4, fill: s[1] }, svg);
+      labels.push({ y: y(last[1]), s: s, v: last[1] });
+    });
+    if (!small) {
+      labels.sort(function (a, b) { return a.y - b.y; });
+      for (var i = 1; i < labels.length; i++) if (labels[i].y - labels[i - 1].y < 30) labels[i].y = labels[i - 1].y + 30;
+      labels.forEach(function (l) {
+        txt(svg, W - m.r + 12, l.y, l.s[0], "lblb");
+        txt(svg, W - m.r + 12, l.y + 15, gbp(l.v), "ax");
+      });
+    } else {
+      var lg = el("g", {}, svg);
+      series.forEach(function (s, i) {
+        el("rect", { x: m.l + 4, y: m.t + i * 18, width: 10, height: 3, fill: s[1] }, lg);
+        txt(lg, m.l + 20, m.t + i * 18 + 5, s[0], "ax");
+      });
+    }
+  }
+  function drawStats() {
+    var S = $("#stats"); S.innerHTML = "";
+    var nc = DATA.la["Newcastle upon Tyne"].hpi, nt = DATA.la["North Tyneside"].hpi, rn = RENTS.la["Newcastle upon Tyne"];
+    [["Newcastle upon Tyne", gbp(nc.avg), chg(nc.chg), "Average price, July 2026"],
+     ["North Tyneside", gbp(nt.avg), chg(nt.chg), "Average price, July 2026"],
+     ["North East", gbp(DATA.ne.avg), chg(DATA.ne.chg), "Average price, July 2026"],
+     ["Newcastle rents", gbp(rn.all), "up " + rn.chg.toFixed(1) + "% on a year", "Average a month, August 2026"]].forEach(function (s) {
+      var d = document.createElement("div"); d.className = "stat";
+      d.innerHTML = '<p class="mono" style="margin:0;color:var(--muted)"></p><p class="v"></p><p class="c"><b></b> <span></span></p>';
+      d.children[0].textContent = s[0]; d.children[1].textContent = s[1];
+      d.querySelector(".c b").textContent = s[2]; d.querySelector(".c span").textContent = s[3];
+      S.appendChild(d);
+    });
+  }
+
+  /* ---------- booking ---------- */
+  function prefill(r) {
+    var rawPc = $("#pc").value.toUpperCase().trim();
+    if (!st.example) $("#bpc").value = /^[A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}$/.test(rawPc) ? rawPc : "";
+    var want = st.mode === "let" ? "let" : "sell";
+    $$('input[name="want"]').forEach(function (i) { i.checked = i.value === want; });
+    route(want);
+    var line = st.mode === "sell"
+      ? "My instant range was " + gbp(r.rLo) + " to " + gbp(r.rHi) + " for a " + bedWord() + " " + SING[st.type] + " " + COND[String(st.cond)] + "."
+      : "My instant range was " + gbp(r.rLo) + " to " + gbp(r.rHi) + " a month for a " + bedWord() + " " + SING[st.type] + " " + COND[String(st.cond)] + ".";
+    if (!st.example) $("#msg").value = line;
+  }
+  function route(want) {
+    $("#brSales").classList.toggle("on", want === "sell" || want === "either");
+    $("#brLet").classList.toggle("on", want === "let" || want === "either");
+  }
+  $$('input[name="want"]').forEach(function (i) { i.addEventListener("change", function () { route(i.value); }); });
+  $("#bookForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var need = ["#fn", "#ln", "#addr", "#bpc", "#ph", "#em"], miss = need.filter(function (s) { return !$(s).value.trim(); });
+    var fe = $("#formErr"); fe.textContent = "";
+    if (miss.length) { fe.textContent = "Please fill in every field above. The message is optional."; $(miss[0]).focus(); return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($("#em").value.trim())) { fe.textContent = "Please check your email address."; $("#em").focus(); return; }
+    if (!$("#ok").checked) { fe.textContent = "Please tick to agree to the Privacy Policy."; return; }
+    var want = ($('input[name="want"]:checked') || {}).value || "sell";
+    var br = want === "let" ? "Gosforth (Property Management) team on 0191 236 2680" : want === "either" ? "Gosforth sales and Property Management teams" : "Gosforth sales team on 0191 236 2070";
+    var d = $("#done");
+    d.innerHTML = "<strong>Demo only, nothing was sent.</strong> <span></span>";
+    d.querySelector("span").textContent = "On the live site this request reaches our " + br + ", with your instant range attached, and we'd call " + $("#fn").value.trim() + " to arrange a time.";
+    d.classList.add("show");
+  });
+
+  /* ---------- run ---------- */
+  $("#tool").addEventListener("submit", function (e) {
+    e.preventDefault();
+    st.example = false;
+    if (render()) {
+      var t = $("#result").getBoundingClientRect().top + window.pageYOffset - 70;
+      window.scrollTo(0, t);
+    }
+  });
+
+  function drawAll() { drawHero(); drawSpread(); drawHpi(); drawStats(); render(); }
+  legend();
+  drawAll();
+  var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { drawHero(); drawSpread(); drawHpi(); render(); }, 200); });
+
+  /* reveal on scroll, from bounding boxes */
+  var rvs = $$(".rv, h1, h2");
+  function check() {
+    var vh = window.innerHeight;
+    rvs.forEach(function (e) {
+      if (e.classList.contains("in")) return;
+      var b = e.getBoundingClientRect();
+      if (b.top < vh * 0.92 && b.bottom > 0) e.classList.add("in");
+    });
+    $$("path[data-draw]").forEach(function (p) {
+      var b = p.getBoundingClientRect();
+      if (b.top < vh * 0.9) { p.style.transition = "stroke-dashoffset 1.8s ease"; p.style.strokeDashoffset = "0"; p.removeAttribute("data-draw"); }
+    });
+  }
+  var ticking = false;
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(function () { ticking = false; check(); }); } }, { passive: true });
+  check(); setTimeout(check, 300);
+})();
+</script>
+</body>
+</html>
