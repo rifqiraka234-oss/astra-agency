@@ -65,3 +65,8 @@ Files: `proposal.html`, `proposal.pdf` (2 pages), `img/concept-site.png`, `img/v
 
 - Removed the opening paragraph under "What's holding the first deals back" (the review of the site, Companies House and the CapEQ figure) to save space. Page 1 now ends at 1036px, so there is room for one line if wanted.
 - The footer still cites CapEQ, but the 155 sales figure is no longer in the body. Put the figure back into a bullet if the source line should match the text.
+
+## Revision 8
+
+- Removed the closing paragraph, the "Raka" sign-off and the sources footer, as asked. The page now ends with the further builds table.
+- The sources line is gone, so the CapEQ and lemlist and Claude pricing references no longer have a citation on the page. The lemlist and Claude prices still carry "list prices on 7 October 2026". Put the sources line back if the page needs it.
