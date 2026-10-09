@@ -27,3 +27,21 @@ Tool prices in the draft were read on 7 Oct from https://www.lemlist.com/pricing
 monthly, $87 yearly) and https://claude.com/pricing (Pro $20 a month billed monthly, $17 yearly).
 
 Promised to Kyson in the unsent summary email, proposal by Friday 9 Oct.
+
+## Is the website price too high? UK market check, 9 Oct 2026
+
+Kyson replied "Your website price is too high" to the £2,500 website. Pages opened 9 Oct.
+- Whito, UK pricing research, updated 25 Sep 2026 on May 2026 data. Most UK small businesses pay £3,000 to £6,000 for
+  a professionally built site. A five page freelancer brochure site is £1,500 to £3,000, an agency brochure site
+  £3,000 to £5,000. Copywriting, photography and SEO typically add 30 to 50% on top.
+  https://whito.co.uk/research/website-design-costs-uk/
+- ProfileTree, updated 1 Oct 2026, prices ex VAT. DIY theme build £0 to £500, freelancer £700 to £4,000, agency
+  custom build £3,500 to £12,000. https://profiletree.com/uk-website-design-costs/
+- IT Jobs Watch, 9 Oct 2026. Median UK web designer contract day rate £330, £210 outside London, but only 2 rates
+  quoted in the latest six months, so weak. https://www.itjobswatch.co.uk/contracts/uk/web%20designer.do
+- No published UK price found for a custom calculator. Our own estimate, two to four days of build at those day rates,
+  roughly £700 to £2,000 on its own. An estimate, not a source.
+
+Verdict. £2,500 for a redesign, a custom calculator, SEO and a secure setup sits at the bottom of the agency range and
+inside the freelancer range before extras. It isn't high for the work. It's high against Kyson's own reference, the
+Wix site he built himself, which is the DIY band at £0 to £500.
