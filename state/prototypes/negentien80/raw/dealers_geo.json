@@ -1,0 +1,156 @@
+[
+ {
+  "name": "Arc Living",
+  "addr": "Langstraat 277",
+  "pc": "6691 EE",
+  "town": "Gendt",
+  "web": "https://www.arc-living.nl/",
+  "pdok": {
+   "woonplaatsnaam": "Gendt",
+   "weergavenaam": "Langstraat 277, 6691EE Gendt",
+   "gemeentenaam": "Lingewaard",
+   "provincienaam": "Gelderland",
+   "centroide_ll": "POINT(5.94388529 51.87865126)"
+  }
+ },
+ {
+  "name": "Contempera",
+  "addr": "Overtoom 135",
+  "pc": "1054 HG",
+  "town": "Amsterdam",
+  "web": "https://www.contempera.nl/",
+  "pdok": {
+   "woonplaatsnaam": "Amsterdam",
+   "weergavenaam": "Overtoom 135-H, 1054HG Amsterdam",
+   "gemeentenaam": "Amsterdam",
+   "provincienaam": "Noord-Holland",
+   "centroide_ll": "POINT(4.87315741 52.36202438)"
+  }
+ },
+ {
+  "name": "Chapter One",
+  "addr": "Loopkantstraat 14C",
+  "pc": "5405 NB",
+  "town": "Uden",
+  "web": "https://chapterone.nl/nl",
+  "pdok": {
+   "woonplaatsnaam": "Uden",
+   "weergavenaam": "Loopkantstraat 14C, 5405NB Uden",
+   "gemeentenaam": "Maashorst",
+   "provincienaam": "Noord-Brabant",
+   "centroide_ll": "POINT(5.6380158 51.65746392)"
+  }
+ },
+ {
+  "name": "De Woonwinkel",
+  "addr": "Boschweg 80",
+  "pc": "5481 EH",
+  "town": "Schijndel",
+  "web": "https://woonwinkelschijndel.nl/",
+  "pdok": {
+   "woonplaatsnaam": "Schijndel",
+   "weergavenaam": "Boschweg 80, 5481EH Schijndel",
+   "gemeentenaam": "Meierijstad",
+   "provincienaam": "Noord-Brabant",
+   "centroide_ll": "POINT(5.42256907 51.6258657)"
+  }
+ },
+ {
+  "name": "Colijn Interieur",
+  "addr": "Verdamstraat 6",
+  "pc": "2313 PN",
+  "town": "Leiden",
+  "web": "https://www.colijninterieur.nl/",
+  "pdok": {
+   "woonplaatsnaam": "Leiden",
+   "weergavenaam": "Verdamstraat 6, 2313PN Leiden",
+   "gemeentenaam": "Leiden",
+   "provincienaam": "Zuid-Holland",
+   "centroide_ll": "POINT(4.50944194 52.1547209)"
+  }
+ },
+ {
+  "name": "Luxx Living Studio",
+  "addr": "Tanneskampke 1",
+  "pc": "5221 BT",
+  "town": "'s-Hertogenbosch",
+  "web": "https://luxxliving.nl/",
+  "pdok": {
+   "woonplaatsnaam": "'s-Hertogenbosch",
+   "weergavenaam": "Tanneskampke 1, 5221BT 's-Hertogenbosch",
+   "gemeentenaam": "'s-Hertogenbosch",
+   "provincienaam": "Noord-Brabant",
+   "centroide_ll": "POINT(5.2663748 51.72095312)"
+  }
+ },
+ {
+  "name": "Net Iets-Anders",
+  "addr": "Busselbundersweg 1",
+  "pc": "5467 LT",
+  "town": "Veghel",
+  "web": "https://www.netiets-anders.nl/",
+  "pdok": {
+   "woonplaatsnaam": "Veghel",
+   "weergavenaam": "Busselbundersweg 1A, 5467LT Veghel",
+   "gemeentenaam": "Meierijstad",
+   "provincienaam": "Noord-Brabant",
+   "centroide_ll": "POINT(5.55769041 51.62528534)"
+  }
+ },
+ {
+  "name": "Studio Uijterwaal",
+  "addr": "Marktstraat 5",
+  "pc": "1411 CX",
+  "town": "Naarden",
+  "web": "https://studiouijterwaal.nl/",
+  "pdok": {
+   "woonplaatsnaam": "Naarden",
+   "weergavenaam": "Marktstraat 5A, 1411CX Naarden",
+   "gemeentenaam": "Gooise Meren",
+   "provincienaam": "Noord-Holland",
+   "centroide_ll": "POINT(5.16365436 52.29550809)"
+  }
+ },
+ {
+  "name": "Toz Living",
+  "addr": "Weijen 24",
+  "pc": "5388 HN",
+  "town": "Nistelrode",
+  "web": "https://www.tozwinkel.nl/",
+  "pdok": {
+   "woonplaatsnaam": "Nistelrode",
+   "weergavenaam": "Weijen 24, 5388HN Nistelrode",
+   "gemeentenaam": "Bernheze",
+   "provincienaam": "Noord-Brabant",
+   "centroide_ll": "POINT(5.56069813 51.70619324)"
+  }
+ },
+ {
+  "name": "Van Eijndhoven Vloeren",
+  "addr": "Industrieweg 23",
+  "pc": "5281 RW",
+  "town": "Boxtel",
+  "web": "https://vevloeren.nl/",
+  "pdok": {
+   "woonplaatsnaam": "Boxtel",
+   "weergavenaam": "Industrieweg 23, 5281RW Boxtel",
+   "gemeentenaam": "Boxtel",
+   "provincienaam": "Noord-Brabant",
+   "centroide_ll": "POINT(5.31815198 51.57775997)"
+  }
+ },
+ {
+  "name": "Snoeijen Luijten Interieur",
+  "addr": "Kapelstraat 65",
+  "pc": "5591 HD",
+  "town": "Heeze",
+  "web": "https://interieurwerkopmaat.nl/",
+  "pdok": {
+   "woonplaatsnaam": "Heeze",
+   "weergavenaam": "Kapelstraat 65, 5591HD Heeze",
+   "gemeentenaam": "Heeze-Leende",
+   "provincienaam": "Noord-Brabant",
+   "centroide_ll": "POINT(5.57950521 51.38058314)"
+  }
+ }
+]

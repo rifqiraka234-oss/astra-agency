@@ -48,3 +48,45 @@ It's set up on a role like your Camden KS2 LSA, with example figures you'd swap 
 
 Would it save you time on the trust bookings?
 ```
+
+### Matthias Ufer, Schumacher Verfahrenstechnik, ctc_3L5hXyZ8hWrh8tAGC
+
+Built and live, https://astra-schumacher-prototype.netlify.app , deploy 6ac8f735215a5327e7a84bce. Lead session check 9 Oct,
+live HTML hash equals the local file, all 7 images decode, cards, form and spec sheet looked at. The mixer fields follow their
+Anfragedokument PDF field by field, and that PDF says "Fax ... oder Mail". Example values and the demo send are labelled.
+Re-check /inquiry right before sending, they're editing it.
+
+DELIVERY
+```
+Matthias, I put together the spec form I offered, so you can see it working.
+
+A buyer picks cooling, a static mixer or a welded part, fills in their data in metric or imperial, and your team gets every request on the same one page spec sheet, with a drawing that redraws from their numbers.
+
+Try it yourself.
+https://astra-schumacher-prototype.netlify.app
+
+The mixer part follows your PDF field by field, so there's no faxed sheet to retype.
+
+Would your engineers quote faster from a sheet like that?
+```
+
+### Ramona Hendriks, Negentien80, ctc_hfHQfM3u3veSXZgS2
+
+Built and live, https://astra-negentien80-prototype.netlify.app , deploy 6ac8f765b353570b875b781e. Lead session check 9 Oct,
+live 200 and hash equals the local file, all 7 images decode, sections looked at. Their four real collections from
+/collectie, every price labelled voorbeeldprijs. Her N80 page promises the price "in een zevental stappen". Three dealer details
+on her own dealers page look out of date, listed in state/prototypes/negentien80/notes.md, worth mentioning only if she replies.
+
+DELIVERY
+```
+Ramona, rather than describe the curtain calculator again, I built it.
+
+Seven steps, like your N80 page promises, with a live drawing of the window and a price incl. btw at the end. Then the shopper books a measuring visit at whichever of your eleven dealers is nearest.
+
+Try it yourself.
+https://astra-negentien80-prototype.netlify.app
+
+The prices are placeholders for your real ones, and there's an English note further down.
+
+What do you make of it?
+```

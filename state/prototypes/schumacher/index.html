@@ -1,0 +1,1471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a quote | Schumacher Verfahrenstechnik</title>
+<meta name="description" content="Spec cooling components, static mixers and certified welded parts in metric or imperial units. Concept page built by Astra for Schumacher Verfahrenstechnik GmbH.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<style>
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(assets/inter-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(assets/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(assets/inter-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:700;font-display:swap;src:url(assets/inter-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(assets/ibm-plex-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(assets/ibm-plex-mono-latin-500-normal.woff2) format("woff2")}
+
+:root{
+  --ink:#0b0d0e;
+  --text:#272b2d;
+  --muted:#4a5557;
+  --line:#cfd6db;
+  --line-2:#e6eaed;
+  --grid:rgba(15,104,178,.07);
+  --paper:#ffffff;
+  --paper-2:#f3f5f7;
+  --blue:#0f68b2;
+  --blue-d:#0a4c83;
+  --blue-l:#8cc2ee;
+  --blue-wash:#e8f1f9;
+  --warn:#8a4b00;
+  --warn-bg:#fff4e2;
+  --err:#b0251c;
+  --err-bg:#fdecea;
+  --ok:#17663b;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --wrap:1240px;
+  --gut:clamp(16px,4vw,40px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:var(--mono)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin:0 0 14px}
+h1,h2,h3{font-family:var(--sans);color:var(--ink);margin:0;letter-spacing:-.01em}
+h1{font-weight:700;text-transform:uppercase;font-size:clamp(2rem,4.6vw,3.9rem);line-height:1.02}
+h2{font-weight:700;text-transform:uppercase;font-size:clamp(1.55rem,3vw,2.6rem);line-height:1.06}
+h3{font-weight:700;font-size:clamp(1.15rem,1.8vw,1.45rem);line-height:1.2}
+p{margin:0 0 1em}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:0;background:var(--blue);color:#fff;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:14px 20px;text-decoration:none;cursor:pointer;line-height:1.2}
+.btn:hover{background:var(--blue-d)}
+.btn.ghost{background:transparent;color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue)}
+.btn.ghost:hover{background:var(--blue-wash)}
+.btn.small{padding:10px 14px;font-size:12.5px}
+.btn svg{flex:none}
+:focus-visible{outline:3px solid #f2a900;outline-offset:2px}
+
+/* concept strip and header */
+.concept{background:var(--ink);color:#d9e3ea;font-family:var(--mono);font-size:12px;line-height:1.45;padding:8px var(--gut);text-align:center}
+.concept b{color:#fff;font-weight:500}
+.bar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line-2)}
+.bar .wrap{display:flex;align-items:center;gap:24px;min-height:68px}
+.bar .logo img{height:40px;width:auto}
+.bar nav{display:flex;gap:22px;margin-left:12px}
+.bar nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:13.5px;text-transform:uppercase;letter-spacing:.02em}
+.bar nav a:hover{color:var(--blue)}
+.bar .right{margin-left:auto;display:flex;align-items:center;gap:18px}
+.bar .tel{font-family:var(--mono);font-size:13.5px;color:var(--ink);text-decoration:none;white-space:nowrap}
+@media (max-width:1020px){.bar nav{display:none}}
+@media (max-width:560px){.bar .tel{display:none}.bar .logo img{height:32px}.bar .btn{padding:11px 14px;font-size:12px}}
+
+/* drafting grid */
+.frame{background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px}
+
+/* hero */
+.hero{border-bottom:1px solid var(--line-2);position:relative}
+.ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:#8a9aa6;padding:10px 0 0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:36px;padding-top:28px;padding-bottom:56px}
+@media (min-width:980px){.hero-grid{grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:56px;align-items:center;padding-top:44px;padding-bottom:80px}}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln span{display:block;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 .ln:nth-child(2) span{animation-delay:.08s}
+.hero h1 .ln:nth-child(3) span{animation-delay:.16s}
+.hero h1 .ln:nth-child(4) span{animation-delay:.24s}
+.hero h1 em{font-style:normal;color:var(--blue)}
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+.lede{font-size:clamp(1.02rem,1.3vw,1.15rem);color:var(--muted);max-width:40em;margin-top:22px}
+.start{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 22px}
+.facts{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.facts li{display:flex;align-items:center;gap:8px}
+.facts li::before{content:"";width:7px;height:7px;background:var(--blue)}
+.sheetcard{background:#fff;border:1px solid var(--line);box-shadow:0 1px 0 var(--line-2),0 30px 60px -40px rgba(11,13,14,.35);margin:0}
+.sheetcard .tabs{display:flex;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px}
+.sheetcard .tabs button{flex:1;background:none;border:0;border-right:1px solid var(--line);padding:11px 8px;cursor:pointer;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.sheetcard .tabs button:last-child{border-right:0}
+.sheetcard .tabs button[aria-selected="true"]{background:var(--blue);color:#fff}
+.sheetcard .draw{padding:6px 10px 0}
+.sheetcard figcaption{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding:10px 14px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:var(--warn-bg);color:var(--warn);padding:3px 7px}
+
+/* drawings */
+svg.dwg{width:100%;height:auto;display:block}
+.dwg .o{fill:none;stroke:var(--blue);stroke-width:2}
+.dwg .o2{fill:#fff;stroke:var(--blue);stroke-width:2}
+.dwg .fillb{fill:var(--blue-wash);stroke:var(--blue);stroke-width:2}
+.dwg .hid{fill:none;stroke:var(--blue);stroke-width:1.3;stroke-dasharray:5 4;opacity:.7}
+.dwg .el{fill:none;stroke:var(--blue-d);stroke-width:2.2}
+.dwg .el2{fill:none;stroke:var(--blue-d);stroke-width:1.4;opacity:.55}
+.dwg .dim{fill:none;stroke:var(--ink);stroke-width:1}
+.dwg .ctr{fill:none;stroke:#7d8b95;stroke-width:1;stroke-dasharray:14 4 3 4}
+.dwg .flow{fill:none;stroke:var(--blue);stroke-width:2.4;stroke-dasharray:7 9;animation:dash 1.1s linear infinite}
+.dwg .flow.ret{stroke:var(--ink)}
+.dwg .ah{fill:var(--blue)}
+.dwg .ah.k{fill:var(--ink)}
+.dwg text{font-family:var(--mono);font-size:13px;fill:var(--text)}
+.dwg .t-b{font-family:var(--sans);font-weight:700;font-size:14px;fill:var(--ink)}
+.dwg .t-s{font-size:12px;fill:var(--muted)}
+.dwg .t-blue{fill:var(--blue)}
+.dwg .t-w{fill:#fff}
+.dwg .box{fill:#fff;stroke:var(--ink);stroke-width:1.2}
+.dwg .lbl{fill:var(--ink)}
+.dwg .stamp{fill:none;stroke:#b0251c;stroke-width:2}
+.dwg .t-red{fill:#b0251c;font-weight:500}
+@keyframes dash{to{stroke-dashoffset:-16}}
+@media (max-width:640px){.dwg text{font-size:16px}.dwg .t-b{font-size:16.5px}.dwg .t-s{font-size:15px}.dwg .tt{font-size:14.5px}}
+
+/* market */
+.dark{background:var(--ink);color:#c9d3da}
+.dark h2,.dark h3{color:#fff}
+.dark .kicker{color:var(--blue-l)}
+.market{padding:80px 0}
+.two{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+@media (min-width:980px){.two{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:72px;align-items:end}}
+.dark p{color:#c9d3da}
+.dark .big{font-size:clamp(1.05rem,1.4vw,1.2rem);color:#e3eaef}
+.chart{margin:0;border:1px solid #2a3236;padding:22px}
+.chart .legend{display:flex;gap:18px;font-family:var(--mono);font-size:12px;color:#aab6bf;margin-bottom:18px;flex-wrap:wrap}
+.chart .legend i{display:inline-block;width:12px;height:12px;margin-right:7px;vertical-align:-1px}
+.k25{background:#5d6a72}
+.k30{background:var(--blue)}
+.crow{margin-bottom:22px}
+.crow h4{margin:0 0 10px;font-family:var(--sans);font-weight:600;font-size:15px;color:#fff}
+.cbar{display:grid;grid-template-columns:minmax(0,1fr) 110px;align-items:center;gap:12px;margin-bottom:7px}
+.cbar .track{height:26px;background:#161b1e;position:relative}
+.cbar .fill{height:100%;transform-origin:left center}
+.cbar .val{font-family:var(--mono);font-size:13px;color:#fff;white-space:nowrap}
+.cbar .yr{position:absolute;left:8px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:11px;color:#fff}
+.w2980{width:59.6%}.w5000{width:100%}.w530{width:10.6%}.w2020{width:40.4%}
+.x4{display:flex;align-items:baseline;gap:14px;border-top:1px solid #2a3236;padding-top:16px;margin-top:6px}
+.x4 b{font-family:var(--sans);font-size:clamp(2rem,4.4vw,3.2rem);line-height:1;color:#fff;font-weight:700;white-space:nowrap}
+.mt{margin-top:20px}
+.x4 span{color:#aab6bf;font-size:14px}
+.src{font-family:var(--mono);font-size:11.5px;line-height:1.5;color:#93a2ac;margin:16px 0 0}
+.src a{color:#b9d7f1}
+.law{margin-top:72px;border-top:1px solid #2a3236;padding-top:48px}
+.lawgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media (min-width:980px){.lawgrid{grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:72px}}
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:0;position:relative}
+@media (min-width:700px){.timeline{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.timeline li{border-left:1px solid #2a3236;padding:0 16px 22px 18px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-5px;top:4px;width:9px;height:9px;background:#5d6a72}
+.timeline li.now::before{background:var(--blue-l)}
+.timeline .d{font-family:var(--mono);font-size:12.5px;color:var(--blue-l);display:block;margin-bottom:6px}
+.timeline .pue{font-family:var(--sans);font-weight:700;font-size:1.6rem;color:#fff;display:block;line-height:1.1}
+.timeline p{font-size:14px;margin:6px 0 0}
+
+/* request */
+.request{padding:84px 0 40px;border-top:1px solid var(--line-2)}
+.head2{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-bottom:36px}
+@media (min-width:980px){.head2{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:end}}
+.head2 p{color:var(--muted);margin:0}
+.lines{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+@media (min-width:760px){.lines{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.line{position:relative;display:grid;grid-template-columns:minmax(0,1fr);border:1px solid var(--line);background:#fff;cursor:pointer;text-align:left;padding:0}
+.line input{position:absolute;opacity:0;pointer-events:none}
+.line .ph{aspect-ratio:16/9;overflow:hidden;background:#fff;border-bottom:1px solid var(--line-2)}
+.line .ph img{width:100%;height:100%;object-fit:cover}
+.line .ph img.contain{object-fit:contain;padding:8px}
+.line .tx{padding:16px 18px 18px}
+.line .h{display:block;font-weight:700;font-size:1.1rem;text-transform:uppercase;color:var(--ink);line-height:1.2}
+.line .p{display:block;font-size:14px;color:var(--muted);margin:8px 0 12px}
+.line .promise{display:block}
+.line .promise{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--blue);text-transform:uppercase}
+@media (max-width:759px){
+  .line{grid-template-columns:104px minmax(0,1fr)}
+  .line .ph{aspect-ratio:auto;height:100%;min-height:104px;border-bottom:0;border-right:1px solid var(--line-2)}
+  .line .tx{padding:12px 14px}
+  .line .h{font-size:1rem;padding-right:70px}
+  .line .p{display:none}
+  .line .promise{margin-top:8px}
+  .line.on::after{top:8px;right:8px;font-size:10px;padding:3px 6px}
+}
+.line:hover{border-color:var(--blue)}
+.line.on{border-color:var(--blue);box-shadow:inset 0 0 0 2px var(--blue)}
+.line.on::after{content:"Selected";position:absolute;top:10px;right:10px;background:var(--blue);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px}
+.line:focus-within{outline:3px solid #f2a900;outline-offset:2px}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin:28px 0 18px;padding:14px 0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.seg{display:inline-flex;border:1.5px solid var(--blue)}
+.seg button{background:#fff;border:0;padding:8px 14px;font-family:var(--mono);font-size:12.5px;cursor:pointer;color:var(--blue)}
+.seg button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.toolbar .lab{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-right:8px}
+.linkbtn{background:none;border:0;padding:0;color:var(--blue);font-weight:600;font-size:14px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.exbanner{background:var(--warn-bg);color:var(--warn);border-left:4px solid #d08a1a;padding:10px 14px;font-size:14px;margin:0 0 18px}
+.work{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media (min-width:1080px){.work{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:start}}
+.panel{border:1px solid var(--line);background:#fff;order:-1}
+@media (min-width:1080px){.panel{order:0;position:sticky;top:84px}}
+.panel .ph{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:10px 14px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.panel .draw{padding:6px 10px}
+.ready{border-top:1px solid var(--line);padding:14px 16px}
+.ready .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-family:var(--mono);font-size:13px}
+.ready .row b{font-family:var(--sans);font-size:15px;color:var(--ink)}
+.meter{height:6px;background:var(--line-2);margin:10px 0 12px}
+.meter i{display:block;height:100%;width:0;background:var(--blue);transition:width .3s}
+.meter.full i{background:var(--ok)}
+.missing{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.missing button{border:1px solid var(--line);background:var(--paper-2);font-size:12.5px;padding:4px 8px;cursor:pointer;color:var(--text)}
+.missing button:hover{border-color:var(--blue);color:var(--blue)}
+.checks{border-top:1px solid var(--line);padding:14px 16px}
+.checks h4{margin:0 0 10px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:500}
+.checks dl{margin:0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;font-size:14px}
+.checks dt{color:var(--muted)}
+.checks dd{margin:0;font-family:var(--mono);color:var(--ink);text-align:right}
+.checks .hint{margin:12px 0 0;font-size:13.5px;color:var(--text);background:var(--blue-wash);padding:10px 12px}
+.checks .hint b{color:var(--blue-d)}
+.panel .go{border-top:1px solid var(--line);padding:14px 16px;display:flex;gap:10px;flex-wrap:wrap}
+
+/* form */
+form fieldset{border:0;border-top:2px solid var(--ink);margin:0 0 30px;padding:16px 0 0;min-width:0}
+form legend{float:left;width:100%;padding:0;margin:0 0 14px;display:flex;align-items:baseline;gap:12px}
+form legend .n{font-family:var(--mono);font-size:12px;color:var(--blue)}
+form legend .t{font-family:var(--sans);font-weight:700;font-size:1.05rem;text-transform:uppercase;color:var(--ink)}
+form legend + *{clear:both}
+.gnote{font-size:13.5px;color:var(--muted);margin:-4px 0 14px;clear:both}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr);gap:16px 20px}
+@media (min-width:640px){.grid2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.fld{min-width:0}
+.fld.wide{grid-column:1/-1}
+.fld>label,.fld .flab{display:block;font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px}
+.req{display:inline-block;width:6px;height:6px;background:var(--blue);margin-left:7px;vertical-align:3px}
+.inrow{display:flex;min-width:0}
+.fld input[type=text],.fld input[type=email],.fld input[type=tel],.fld input[type=date],.fld select,.fld textarea{width:100%;min-width:0;border:1px solid #aab4bb;background:#fff;padding:11px 12px;border-radius:0;font-size:15px}
+.fld textarea{min-height:96px;resize:vertical}
+.inrow input{border-right:0 !important;font-family:var(--mono)}
+.inrow select.unit{width:auto;flex:none;min-width:92px;background:var(--paper-2);font-family:var(--mono);font-size:13.5px;padding:11px 8px}
+.inrow .unitfix{flex:none;display:flex;align-items:center;border:1px solid #aab4bb;background:var(--paper-2);font-family:var(--mono);font-size:13.5px;padding:0 12px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:2px solid var(--blue);outline-offset:-1px}
+.conv{font-family:var(--mono);font-size:12px;color:var(--muted);margin:5px 0 0;min-height:0}
+.msg{font-size:13px;margin:5px 0 0}
+.msg:empty{display:none}
+.fld.err input,.fld.err select,.fld.err textarea{border-color:var(--err);background:var(--err-bg)}
+.fld.err .msg{color:var(--err)}
+.fld.warn .msg{color:var(--warn);background:var(--warn-bg);padding:5px 8px}
+.hintx{font-size:12.5px;color:var(--muted);margin:5px 0 0}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;width:1px;height:1px}
+.opt span{display:inline-block;border:1px solid #aab4bb;background:#fff;padding:9px 12px;font-size:14px;cursor:pointer;line-height:1.25}
+.opt input:checked+span{background:var(--blue);border-color:var(--blue);color:#fff}
+.opt input:focus-visible+span{outline:3px solid #f2a900;outline-offset:2px}
+.opt.chk span::before{content:"";display:inline-block;width:10px;height:10px;border:1.5px solid currentColor;margin-right:8px;vertical-align:0}
+.opt.chk input:checked+span::before{background:#fff;border-color:#fff}
+.fld.err .opt span{border-color:var(--err)}
+.drop{border:1.5px dashed #9aa7b0;background:var(--paper-2);padding:18px;text-align:center;font-size:14px;color:var(--muted);position:relative}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.drop b{color:var(--blue)}
+.files{list-style:none;margin:8px 0 0;padding:0;font-family:var(--mono);font-size:12.5px}
+.fld>label.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:400}
+.consent input{margin-top:4px;width:18px;height:18px;flex:none}
+.mbar{position:sticky;bottom:0;z-index:20;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;margin:0 calc(var(--gut) * -1);font-family:var(--mono);font-size:12.5px}
+.mbar a{color:#fff;font-weight:500}
+@media (min-width:1080px){.mbar{display:none}}
+.noscript{border:1px solid var(--line);padding:18px;background:#fff}
+
+/* sheet */
+.sheetsec{padding:72px 0 90px;background:var(--paper-2);border-top:1px solid var(--line-2)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+.sheet{background:#fff;border:1px solid #9aa7b0;max-width:920px;margin:0 auto;padding:clamp(16px,3vw,36px);box-shadow:0 30px 60px -45px rgba(11,13,14,.45)}
+.tb{display:grid;grid-template-columns:minmax(0,1fr);border:1.5px solid var(--ink)}
+@media (min-width:700px){.tb{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}}
+.tb .c{padding:12px 14px;border-bottom:1px solid var(--ink);min-width:0}
+@media (min-width:700px){.tb .c.l{border-right:1px solid var(--ink)}}
+.tb .logo img{height:40px;width:auto}
+.tb .ttl{font-family:var(--sans);font-weight:700;font-size:1.25rem;text-transform:uppercase;color:var(--ink);margin-top:10px}
+.tb dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;font-size:13px}
+.tb dt{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.tb dd{margin:0;font-family:var(--mono);color:var(--ink);overflow-wrap:anywhere}
+.tb .status{grid-column:1/-1;border-bottom:0;font-family:var(--mono);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.st-ok{color:var(--ok)}
+.st-miss{color:var(--err)}
+.sheet .sdraw{border:1px solid var(--line);margin:18px 0 6px;padding:4px 8px}
+.sheet .sdraw svg{max-width:600px;margin:0 auto}
+.sheet h5{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);margin:22px 0 6px;padding-bottom:6px;border-bottom:1.5px solid var(--ink);font-weight:500}
+.sheet table{width:100%;border-collapse:collapse;font-size:13.5px;table-layout:fixed}
+.sheet th,.sheet td{text-align:left;padding:6px 8px 6px 0;border-bottom:1px solid var(--line-2);vertical-align:top;overflow-wrap:anywhere}
+.sheet th{font-weight:500;color:var(--muted);width:42%}
+.sheet td.v{font-family:var(--mono);color:var(--ink)}
+.sheet td.e{font-family:var(--mono);color:var(--muted);font-size:12px;width:24%}
+.sheet .ng{color:#8a979f;font-style:italic;font-family:var(--sans)}
+.sheet .ms{color:var(--err);font-weight:600;font-family:var(--sans)}
+.sheet .exl{display:block;background:var(--warn-bg);color:var(--warn);font-family:var(--mono);font-size:12px;padding:7px 10px;margin:14px 0 0}
+.sheet .promise{margin-top:26px;border-top:1.5px solid var(--ink);padding-top:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.sheet .promise b{font-family:var(--sans);font-size:1.15rem;color:var(--blue);text-transform:uppercase}
+.sheet .promise span{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.sent{max-width:920px;margin:22px auto 0;background:var(--ink);color:#fff;padding:22px 24px}
+.sent h3{color:#fff;text-transform:uppercase;font-size:1.3rem}
+.sent p{color:#d6dee4;margin:10px 0 0}
+.sent .p24{font-family:var(--sans);font-weight:700;font-size:1.4rem;color:var(--blue-l);text-transform:uppercase;margin-top:14px}
+.sendbad{max-width:920px;margin:16px auto 0;background:var(--err-bg);color:var(--err);padding:12px 16px;font-size:14px}
+
+/* wiehl */
+.wiehl{padding:84px 0;border-top:1px solid var(--line-2)}
+.wgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
+@media (min-width:980px){.wgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}}
+.wiehl figure{margin:0}
+.wiehl figure img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.wiehl figcaption{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1.5px solid var(--ink);margin-top:26px}
+.stats div{padding:16px 14px 16px 0;border-bottom:1px solid var(--line)}
+.stats div:nth-child(odd){border-right:1px solid var(--line)}
+.stats div:nth-child(even){padding-left:14px}
+.stats b{display:block;font-family:var(--sans);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.8rem);color:var(--blue);line-height:1.1}
+.stats span{font-size:13.5px;color:var(--muted)}
+.certs{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;list-style:none;padding:0}
+.certs li{border:1px solid var(--ink);font-family:var(--mono);font-size:12.5px;padding:6px 10px}
+
+/* footer */
+footer{background:#000;color:#b9c4cc;padding:56px 0 40px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media (min-width:860px){.fgrid{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1.3fr)}}
+footer img{height:56px;width:auto;margin-bottom:16px}
+footer a{color:#fff}
+footer h6{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin:0 0 10px;font-weight:500}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin-bottom:6px}
+footer .astra{border-top:1px solid #222;margin-top:36px;padding-top:18px;font-family:var(--mono);font-size:12px;color:#9aa7b0}
+
+@media (prefers-reduced-motion:reduce){
+  .hero h1 .ln span{animation:none}
+  .dwg .flow{animation:none}
+  .meter i{transition:none}
+}
+
+@media print{
+  @page{size:A4;margin:12mm}
+  body{background:#fff}
+  .concept,.bar,.hero,.market,.request,.wiehl,footer,.sheetsec .head2,.sheetsec .actions,.sent,.sendbad,.mbar{display:none !important}
+  .sheetsec{padding:0;background:#fff;border:0}
+  .sheetsec .wrap{padding:0;max-width:none}
+  .sheet{border:0;box-shadow:none;padding:0;max-width:none}
+  .sheet tr,.sheet .sdraw{break-inside:avoid}
+  .sheet table{font-size:10.5px}
+  .sheet th,.sheet td{padding:2.5px 6px 2.5px 0}
+  .sheet td.e{font-size:9.5px}
+  .sheet h5{margin:10px 0 3px;font-size:10px}
+  .sheet .sdraw{margin:8px 0 2px}
+  .sheet .sdraw svg{max-width:400px}
+  .tb .c{padding:7px 10px}
+  .tb dl{font-size:11px}
+  .dwg .flow{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="concept">Concept page built by <b>Astra</b> for Schumacher Verfahrenstechnik GmbH. It's a demo, so nothing you type leaves this page, and example values are marked as examples.</div>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Schumacher Verfahrenstechnik, back to top"><img src="assets/logo.png" alt="Schumacher Verfahrenstechnik GmbH" width="149" height="40"></a>
+    <nav aria-label="Sections">
+      <a href="#request" data-pick="cooling">Cooling</a>
+      <a href="#request" data-pick="mixer">Static mixers</a>
+      <a href="#request" data-pick="weld">Welded parts</a>
+      <a href="#sheet">Spec sheet</a>
+    </nav>
+    <div class="right">
+      <a class="tel" href="tel:+492261546620">+49 2261 546620</a>
+      <a class="btn small" href="#request">Get a quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero frame" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="ticks" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span></div>
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">/ Request a quote &middot; Wiehl, Germany</p>
+        <h1 id="h1"><span class="ln"><span>Every part</span></span><span class="ln"><span>we build starts</span></span><span class="ln"><span>from your</span></span><span class="ln"><span><em>process data</em></span></span></h1>
+        <p class="lede">Cooling components, static mixers and certified welded parts, designed and made in Wiehl. Enter the numbers you have, in metric or imperial. The drawing and the spec sheet fill in while you type, and that sheet is what our engineers quote from.</p>
+        <div class="start">
+          <a class="btn" href="#request" data-pick="cooling">Cooling components</a>
+          <a class="btn ghost" href="#request" data-pick="mixer">Static mixer</a>
+          <a class="btn ghost" href="#request" data-pick="weld">Welded part</a>
+        </div>
+        <ul class="facts">
+          <li>DN 3 to DN 1,600</li>
+          <li>Hydrostatic test up to 650 bar</li>
+          <li>Batches of 1 to 600 units</li>
+          <li>ISO 3834 and DIN 2303</li>
+        </ul>
+      </div>
+      <figure class="sheetcard" id="heroCard">
+        <div class="tabs" role="tablist" aria-label="Example drawings">
+          <button type="button" role="tab" aria-selected="true" data-hero="cooling">Cooling</button>
+          <button type="button" role="tab" aria-selected="false" data-hero="mixer">Mixer</button>
+          <button type="button" role="tab" aria-selected="false" data-hero="weld">Welded</button>
+        </div>
+        <div class="draw" id="heroDraw" role="img" aria-label="Technical drawing that redraws from the values entered in the form"></div>
+        <figcaption><span class="tag">Example values</span><span>Your own numbers redraw this below</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="dark market" aria-labelledby="h2m">
+  <div class="wrap">
+    <div class="two">
+      <div>
+        <p class="kicker">/ AI cooling in Germany</p>
+        <h2 id="h2m">AI data centre capacity in Germany is set to quadruple by 2030</h2>
+        <p class="big mt">Bitkom put AI data centres in Germany at 530 MW of connected load in 2025 and expects 2,020 MW by 2030. Nearly all of that power leaves the servers as heat, and the loops that carry it away run on manifolds, pressure vessels and heat exchangers like ours.</p>
+        <p>Buyers spec in the units their own datasheets use. The form below takes metric or imperial and converts as you type, so nothing gets lost between your datasheet and our quote.</p>
+      </div>
+      <figure class="chart">
+        <div class="legend"><span><i class="k25"></i>2025</span><span><i class="k30"></i>2030 forecast</span></div>
+        <div class="crow">
+          <h4>All data centres in Germany</h4>
+          <div class="cbar"><div class="track"><div class="fill k25 w2980"></div></div><div class="val">2,980 MW</div></div>
+          <div class="cbar"><div class="track"><div class="fill k30 w5000"></div></div><div class="val">over 5,000 MW</div></div>
+        </div>
+        <div class="crow">
+          <h4>AI data centres in Germany</h4>
+          <div class="cbar"><div class="track"><div class="fill k25 w530"></div></div><div class="val">530 MW</div></div>
+          <div class="cbar"><div class="track"><div class="fill k30 w2020"></div></div><div class="val">2,020 MW</div></div>
+        </div>
+        <div class="x4"><b>2,020 MW</b><span>AI data centre capacity Bitkom expects in Germany by 2030, up from 530 MW in 2025</span></div>
+        <figcaption class="src">Source. Bitkom study <i>Rechenzentren in Deutschland, Aktuelle Marktentwicklungen, Update 2025</i>, carried out by Borderstep Institut, press release of 10 November 2025, <a href="https://www.bitkom.org/Presse/Presseinformation/Rechenzentren-Deutschland-KI-treibt-Wachstum" rel="noopener">bitkom.org</a>. Connected load in megawatts. Bars drawn to scale.</figcaption>
+      </figure>
+    </div>
+
+    <div class="law">
+      <div class="lawgrid">
+        <div>
+          <p class="kicker">/ The efficiency law</p>
+          <h3>From July 2026, new German data centres have to reach a PUE of 1.2</h3>
+          <p class="mt">Under the Energy Efficiency Act, a data centre that starts operating from 1 July 2026 has to reach a PUE of 1.2 within two years and reuse at least 10 percent of its energy. Warmer return water is easier to reuse, so the cooling form asks for supply and return temperatures up front.</p>
+        </div>
+        <div>
+          <ol class="timeline">
+            <li class="now"><span class="d">1 Jul 2026</span><span class="pue">1.2</span><p>PUE for new data centres, plus 10 percent reused energy</p></li>
+            <li><span class="d">1 Jul 2027</span><span class="pue">1.5</span><p>PUE for data centres that opened before July 2026. Those opening from this date plan at least 15 percent reuse</p></li>
+            <li><span class="d">1 Jul 2028</span><span class="pue">20%</span><p>Planned reused energy for data centres opening from this date</p></li>
+            <li><span class="d">1 Jul 2030</span><span class="pue">1.3</span><p>PUE for data centres that opened before July 2026</p></li>
+          </ol>
+          <p class="src">Source. Energieeffizienzgesetz (EnEfG) &sect; 11, as published on <a href="https://www.gesetze-im-internet.de/enefg/__11.html" rel="noopener">gesetze-im-internet.de</a>, read 9 October 2026. PUE is power usage effectiveness, annual average.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="request frame" id="request" aria-labelledby="h2r">
+  <div class="wrap">
+    <div class="head2">
+      <div>
+        <p class="kicker">/ 01 Choose a product line</p>
+        <h2 id="h2r">Fill in what you know, and the sheet shows what's still missing</h2>
+      </div>
+      <p>Required fields carry a small blue square. Everything else is optional and makes our first answer more precise. Got a drawing or a datasheet? Attach it at the end.</p>
+    </div>
+
+    <div class="lines" role="radiogroup" aria-label="Product line">
+      <label class="line" data-line="cooling">
+        <input type="radio" name="line" value="cooling">
+        <span class="ph"><img src="assets/manifold.jpg" alt="Stainless steel cooling manifold with a row of coolant ports" width="900" height="900" loading="lazy"></span>
+        <span class="tx"><span class="h">Cooling components</span><span class="p">Manifolds, pressure vessels, custom heat exchangers and liquid cooling systems for AI compute, from quantity one.</span><span class="promise">First technical read back within 24 hours</span></span>
+      </label>
+      <label class="line" data-line="mixer">
+        <input type="radio" name="line" value="mixer">
+        <span class="ph"><img src="assets/static-mixer.jpg" alt="Cutaway of a flanged static mixer showing its mixing elements and side inflow" width="1400" height="501" loading="lazy"></span>
+        <span class="tx"><span class="h">Static mixers</span><span class="p">Helical, Leitstrom, X element and V element mixers, laid out for your flow rate, viscosity and allowed pressure drop.</span><span class="promise">Design and quote within a few days</span></span>
+      </label>
+      <label class="line" data-line="weld">
+        <input type="radio" name="line" value="weld">
+        <span class="ph"><img class="contain" src="assets/welded-bend.jpg" alt="Welded stainless steel pipe bend with clamp ends" width="900" height="900" loading="lazy"></span>
+        <span class="tx"><span class="h">Certified welded parts</span><span class="p">Single parts, prototypes and small series to ISO 3834 and DIN 2303, documented so they hold up in an audit.</span><span class="promise">Quote within 24 hours</span></span>
+      </label>
+    </div>
+
+    <div class="toolbar" id="toolbar">
+      <div><span class="lab">Units</span><span class="seg" role="group" aria-label="Unit system"><button type="button" data-sys="metric" aria-pressed="true">Metric</button><button type="button" data-sys="imperial" aria-pressed="false">Imperial</button></span></div>
+      <button type="button" class="linkbtn" id="loadEx">Load example values</button>
+      <button type="button" class="linkbtn" id="clearAll">Clear this form</button>
+    </div>
+    <p class="exbanner" id="exBanner" hidden>Example values loaded. They're placeholders, so replace them with your own before you send.</p>
+
+    <div class="work">
+      <div>
+        <form id="f" novalidate aria-label="Quote request"></form>
+        <noscript><div class="noscript">This form needs JavaScript. Call us on +49 2261 546620 or email info@schumacher-vt.de and we'll take your data by phone.</div></noscript>
+        <div class="mbar"><span id="mbarTxt">Pick a product line</span><a href="#sheet">Spec sheet</a></div>
+      </div>
+      <aside class="panel" aria-label="Live drawing and checks">
+        <div class="ph"><span id="panelTitle">Live drawing</span><span id="panelTag"></span></div>
+        <div class="draw" id="liveDraw" role="img" aria-label="Technical drawing built from your entries"></div>
+        <div class="ready">
+          <div class="row"><b id="readyTxt">Pick a product line to start</b><span id="readyNum"></span></div>
+          <div class="meter" id="meter"><i></i></div>
+          <ul class="missing" id="missing" aria-label="Required values still missing"></ul>
+        </div>
+        <div class="checks" id="checks" aria-live="polite"></div>
+        <div class="go"><a class="btn small" href="#sheet">See the spec sheet</a><button type="button" class="btn small ghost" data-print>Print</button></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sheetsec" id="sheet" aria-labelledby="h2s">
+  <div class="wrap">
+    <div class="head2">
+      <div>
+        <p class="kicker">/ 02 What our engineers receive</p>
+        <h2 id="h2s">Every request arrives on the same sheet</h2>
+      </div>
+      <p>Process data in SI units, with what you typed alongside, the drawing on top and anything missing flagged in red. Print it or save it as a PDF for your own files, then send it.</p>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn" id="sendBtn">Send request</button>
+      <button type="button" class="btn ghost" data-print>Print or save as PDF</button>
+      <button type="button" class="btn ghost" id="copyBtn">Copy as text</button>
+    </div>
+    <article class="sheet" id="sheetDoc" aria-label="Spec sheet"></article>
+    <div class="sendbad" id="sendBad" hidden></div>
+    <div class="sent" id="sent" hidden tabindex="-1"></div>
+  </div>
+</section>
+
+<section class="wiehl" id="wiehl" aria-labelledby="h2w">
+  <div class="wrap wgrid">
+    <div>
+      <p class="kicker">/ Made in Wiehl since 1996</p>
+      <h2 id="h2w">Design, calculation and production under one roof</h2>
+      <p class="mt">Schumacher grew out of process engineering, where pressure tightness and full traceability have to hold for decades. Every weld is documented and every batch can be traced, so parts go into your plant ready for inspection and audit.</p>
+      <div class="stats">
+        <div><b>DN 3 to 1,600</b><span>Nominal sizes</span></div>
+        <div><b>650 bar</b><span>Hydrostatic test, plus X ray and dye penetrant testing</span></div>
+        <div><b>1 to 600</b><span>Units per small batch, from pilot racks to series</span></div>
+        <div><b>3,000 m&sup2;</b><span>Production floor in Wiehl</span></div>
+      </div>
+      <ul class="certs" aria-label="Certifications">
+        <li>DIN EN ISO 9001, 2015</li>
+        <li>DIN EN ISO 3834</li>
+        <li>DIN 2303</li>
+        <li>AD 2000 Merkblatt HP 0</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="assets/wiehl.jpg" alt="The Schumacher Verfahrenstechnik building in Wiehl" width="1600" height="648" loading="lazy">
+      <figcaption>Albert Einstein Stra&szlig;e 4, 51674 Wiehl, Germany</figcaption>
+    </figure>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <img src="assets/logo-white.png" alt="Schumacher Verfahrenstechnik GmbH" width="187" height="56" loading="lazy">
+        <p>Schumacher Verfahrenstechnik GmbH<br>Albert Einstein Stra&szlig;e 4<br>51674 Wiehl, Germany</p>
+      </div>
+      <div>
+        <h6>Contact</h6>
+        <ul>
+          <li><a href="tel:+492261546620">+49 2261 546620</a></li>
+          <li><a href="mailto:info@schumacher-vt.de">info@schumacher-vt.de</a></li>
+          <li><a href="https://www.schumacher-verfahrenstechnik.de/cooling-systems" rel="noopener">Cooling systems</a></li>
+          <li><a href="https://www.schumacher-verfahrenstechnik.de/privacy-policy" rel="noopener">Privacy policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Sources on this page</h6>
+        <ul>
+          <li>Bitkom press release, 10 November 2025, data centre capacity in Germany</li>
+          <li>Energieeffizienzgesetz &sect; 11, gesetze-im-internet.de, read 9 October 2026</li>
+          <li>Product ranges, sizes, test limits and response times from schumacher-verfahrenstechnik.de</li>
+        </ul>
+      </div>
+    </div>
+    <p class="astra">Concept page built by Astra for Schumacher Verfahrenstechnik GmbH, October 2026. The form is a demo and sends nothing. Example values are marked. Product photos and logo belong to Schumacher Verfahrenstechnik GmbH.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- helpers ---------- */
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[c]; }); }
+  var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function parseNum(raw) {
+    if (raw == null) return NaN;
+    var s = String(raw).trim().replace(/[\s']/g, "").replace(/^[−–]/, "-");
+    if (!s) return NaN;
+    var hasDot = s.indexOf(".") > -1, hasComma = s.indexOf(",") > -1;
+    if (hasDot && hasComma) {
+      if (s.lastIndexOf(",") > s.lastIndexOf(".")) s = s.replace(/\./g, "").replace(",", ".");
+      else s = s.replace(/,/g, "");
+    } else if (hasComma) {
+      var parts = s.split(",");
+      var lead = parts[0].replace("-", "");
+      if (parts.length === 2 && /^\d{3}$/.test(parts[1]) && /^[1-9]\d{0,2}$/.test(lead)) s = parts.join("");
+      else if (parts.length > 2 && parts.slice(1).every(function (p) { return /^\d{3}$/.test(p); })) s = parts.join("");
+      else s = s.replace(",", ".");
+    }
+    if (!/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return NaN;
+    return parseFloat(s);
+  }
+  function fmt(x) {
+    if (x == null || !isFinite(x)) return "";
+    var a = Math.abs(x), s;
+    if (a === 0) return "0";
+    if (a < 1) s = String(Number(a.toPrecision(3)));
+    else s = a.toFixed(a >= 1000 ? 0 : a >= 100 ? 1 : 2);
+    if (s.indexOf("e") > -1) s = a.toFixed(6);
+    if (s.indexOf(".") > -1) s = s.replace(/0+$/, "").replace(/\.$/, "");
+    var p = s.split(".");
+    p[0] = p[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return (x < 0 ? "−" : "") + p.join(".");
+  }
+  function plain(x) {
+    if (!isFinite(x)) return "";
+    var a = Math.abs(x), s = a >= 100000 ? a.toFixed(0) : a.toPrecision(6);
+    if (s.indexOf("e") > -1) s = a.toFixed(6);
+    if (s.indexOf(".") > -1) s = s.replace(/0+$/, "").replace(/\.$/, "");
+    return (x < 0 ? "-" : "") + s;
+  }
+  function fdate(iso) {
+    if (!iso) return "";
+    var d = new Date(iso + "T12:00:00");
+    if (isNaN(d)) return iso;
+    var m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    return d.getDate() + " " + m[d.getMonth()] + " " + d.getFullYear();
+  }
+
+  /* ---------- units ---------- */
+  var UNITS = {
+    pressure: { base: "bar", imp: "psi", list: [["bar", 1], ["psi", 0.0689475729], ["MPa", 10]] },
+    dp: { base: "bar", imp: "psi", list: [["bar", 1], ["mbar", 0.001], ["psi", 0.0689475729]] },
+    flow: { base: "m³/h", imp: "US gpm", list: [["m³/h", 1], ["l/min", 0.06], ["US gpm", 0.227124707]] },
+    temp: { base: "°C", imp: "°F", list: [["°C", 0], ["°F", 0]] },
+    visc: { base: "mPa·s", imp: "cP", list: [["mPa·s", 1], ["cP", 1], ["Pa·s", 1000]] },
+    dens: { base: "kg/m³", imp: "lb/ft³", list: [["kg/m³", 1], ["lb/ft³", 16.0184634], ["g/cm³", 1000]] },
+    len: { base: "mm", imp: "in", list: [["mm", 1], ["in", 25.4]] },
+    power: { base: "kW", imp: "BTU/h", list: [["kW", 1], ["BTU/h", 0.00029307107], ["TR", 3.51685]] },
+    vol: { base: "l", imp: "US gal", list: [["l", 1], ["US gal", 3.785411784], ["m³", 1000]] },
+    mass: { base: "kg", imp: "lb", list: [["kg", 1], ["lb", 0.45359237]] }
+  };
+  function factor(kind, u) { var l = UNITS[kind].list; for (var i = 0; i < l.length; i++) if (l[i][0] === u) return l[i][1]; return 1; }
+  function toBase(kind, u, x) { if (kind === "temp") return u === "°F" ? (x - 32) * 5 / 9 : x; return x * factor(kind, u); }
+  function fromBase(kind, u, b) { if (kind === "temp") return u === "°F" ? b * 9 / 5 + 32 : b; return b / factor(kind, u); }
+  function otherUnit(kind, u) {
+    var k = UNITS[kind];
+    if (kind === "visc") return u === "Pa·s" ? "mPa·s" : (u === "cP" ? "mPa·s" : "cP");
+    return u === k.imp ? k.base : (u === k.base ? k.imp : k.base);
+  }
+
+  /* ---------- schema ---------- */
+  var MATS = ["Stainless 1.4571", "1.4462 Duplex", "Titanium", "Hastelloy", "Inconel", "Incoloy", "St37"];
+  var CONN = ["Flange", "Weld end", "Threaded", "Aseptic union", "Tri-Clamp", "Pharmcom", "Other"];
+
+  function medium(n, role, req) {
+    var p = "m" + n + "_";
+    var g = {
+      id: "m" + n, title: "Medium " + n + ", " + role, show: n === 3 ? function (v) { return !!v.m3on; } : null,
+      note: n === 1 ? "The main flow through the mixer, at inlet A in the drawing." : "Fed in through a side inflow, marked B in the drawing.",
+      fields: [
+        { k: p + "name", l: "Name or short description", t: "text", req: req, wide: true, ph: n === 1 ? "e.g. process water" : "e.g. dosing agent" },
+        { k: p + "grp", l: "Fluid group under the PED", t: "radio", req: req, opts: [["1", "Group 1, dangerous"], ["2", "Group 2, all other fluids"]] },
+        { k: p + "vap", l: "Partial vapour pressure above 0.5 bar at max process temperature", t: "radio", opts: [["yes", "Yes"], ["no", "No"]] },
+        { k: p + "flow", l: "Flow rate", t: "num", u: "flow", req: req, min: 0, minEx: true },
+        { k: p + "temp", l: "Temperature", t: "num", u: "temp", req: req, min: -273.15 },
+        { k: p + "visc", l: "Dynamic viscosity", t: "num", u: "visc", req: req, min: 0, minEx: true, hint: "1 mPa·s is the same as 1 cP. Water at 20 °C is about 1." },
+        { k: p + "dens", l: "Density", t: "num", u: "dens", req: req, min: 0, minEx: true, warnMax: 25000, warnMaxMsg: "That's denser than any process fluid we know of. Check the unit." },
+        { k: p + "conn", l: n === 1 ? "Connection at A" : "Connection at B", t: "select", opts: CONN },
+        { k: p + "fstd", l: "Flange standard", t: "select", opts: ["DIN / EN", "ANSI / ASME", "Other"], show: function (v) { return v[p + "conn"] === "Flange"; } },
+        { k: p + "frat", l: "Pressure rating and face", t: "text", ph: "e.g. PN 16, form B1", show: function (v) { return v[p + "conn"] === "Flange"; } }
+      ]
+    };
+    return g;
+  }
+
+  var LINES = {
+    cooling: {
+      name: "Cooling components", short: "Cooling",
+      promise: "First technical read back within 24 hours.",
+      next: "Our engineers read your data back to you, with any open questions.",
+      groups: [
+        { id: "c1", title: "The component", fields: [
+          { k: "comp", l: "Which component family", t: "radio", req: true, wide: true, opts: [["manifold", "Manifold"], ["vessel", "Pressure vessel"], ["hx", "Custom heat exchanger"], ["system", "Liquid cooling system"]] },
+          { k: "appr", l: "Cooling approach", t: "radio", wide: true, opts: [["d2c", "Direct to chip"], ["l2c", "Liquid to chip"], ["imm", "Immersion"], ["open", "Not decided yet"]] },
+          { k: "stage", l: "Project stage", t: "radio", req: true, wide: true, opts: [["pilot", "Pilot rack"], ["proto", "Prototype"], ["serial", "Serial production"]] },
+          { k: "qty", l: "Quantity", t: "num", int: true, unit: "units", req: true, min: 1, warnMax: 600, warnMaxMsg: "Our small batches run from 1 to 600 units. Tell us more about the volume in the notes." }
+        ] },
+        { id: "c2", title: "Coolant and temperatures", note: "Rack side, the loop the component sits in.", fields: [
+          { k: "fluid", l: "Coolant", t: "select", req: true, opts: ["Water", "Water and propylene glycol", "Water and ethylene glycol", "Dielectric fluid", "Other"] },
+          { k: "gly", l: "Glycol share", t: "num", unit: "% vol", min: 0, max: 100, show: function (v) { return /glycol/.test(v.fluid || ""); } },
+          { k: "fluidx", l: "Fluid name or specification", t: "text", show: function (v) { return v.fluid === "Dielectric fluid" || v.fluid === "Other"; } },
+          { k: "flow", l: "Design flow rate", t: "num", u: "flow", req: true, min: 0, minEx: true },
+          { k: "tsup", l: "Supply temperature", t: "num", u: "temp", req: true, min: -273.15, warnMin: -40, warnMax: 120, warnRangeMsg: "Outside −40 °C to +120 °C we choose material and design case by case." },
+          { k: "tret", l: "Return temperature", t: "num", u: "temp", req: true, min: -273.15, warnMin: -40, warnMax: 120, warnRangeMsg: "Outside −40 °C to +120 °C we choose material and design case by case.",
+            check: function (b, v, B) { if (isFinite(B.tsup) && b <= B.tsup) return "Return is normally warmer than supply on the rack side. Check the two aren't swapped."; } },
+          { k: "load", l: "Heat load", t: "num", u: "power", min: 0 }
+        ] },
+        { id: "c3", title: "Pressure", fields: [
+          { k: "pop", l: "Max operating pressure", t: "num", u: "pressure", req: true, min: -1, warnMax: 650, warnMaxMsg: "Our hydrostatic test goes up to 650 bar. We'll check feasibility with you." },
+          { k: "ptest", l: "Test pressure", t: "num", u: "pressure", min: 0, warnMax: 650, warnMaxMsg: "Our hydrostatic test goes up to 650 bar. We'll check feasibility with you.",
+            check: function (b, v, B) { if (isFinite(B.pop) && b < B.pop) return "Test pressure is normally above the operating pressure."; } },
+          { k: "dp", l: "Allowed pressure drop", t: "num", u: "dp", min: 0 }
+        ] },
+        { id: "c4", title: "Design and build", fields: [
+          { k: "dn", l: "Nominal size", t: "num", unit: "DN", min: 0, minEx: true, warnMin: 3, warnMax: 1600, warnRangeMsg: "We build nominal sizes from DN 3 to DN 1,600.", hint: "Metric nominal size. Working in NPS? Put it in the notes under your details." },
+          { k: "ports", l: "Number of ports or branches", t: "num", int: true, unit: "ports", min: 1, max: 400, show: function (v) { return v.comp === "manifold" || v.comp === "system"; } },
+          { k: "vol", l: "Vessel volume", t: "num", u: "vol", min: 0, minEx: true, show: function (v) { return v.comp === "vessel"; } },
+          { k: "mat", l: "Material", t: "select", req: true, opts: MATS.concat(["Not sure, advise me"]) },
+          { k: "conn", l: "Connections", t: "select", opts: CONN },
+          { k: "code", l: "Design code", t: "radio", wide: true, opts: [["ad", "AD 2000 Merkblatt HP 0"], ["ped", "PED"], ["asme", "ASME"], ["open", "Not sure"]] },
+          { k: "tests", l: "Testing and documentation", t: "checks", wide: true, opts: [["hydro", "Hydrostatic test"], ["xray", "X ray inspection"], ["pt", "Dye penetrant testing"], ["trace", "Full traceability documentation"]] },
+          { k: "envl", l: "Space available, length", t: "num", u: "len", min: 0 },
+          { k: "envw", l: "Space available, width", t: "num", u: "len", min: 0 },
+          { k: "envh", l: "Space available, height", t: "num", u: "len", min: 0 }
+        ] },
+        { id: "c5", title: "Timing", fields: [
+          { k: "need", l: "Needed on site by", t: "date" },
+          { k: "site", l: "Install location", t: "text", ph: "Country or city" }
+        ] }
+      ]
+    },
+    mixer: {
+      name: "Static mixers", short: "Static mixer",
+      promise: "Design and quote within a few days.",
+      next: "A customer advisor calls you back promptly with a cost range and a timeline from a no obligation feasibility check.",
+      groups: [
+        { id: "x1", title: "The mixing task", fields: [
+          { k: "task", l: "What are you mixing", t: "radio", req: true, wide: true, opts: [["ll", "Liquid and liquid"], ["gl", "Gas into liquid"], ["gg", "Gas and gas"]] },
+          { k: "etype", l: "Mixer type", t: "radio", wide: true, opts: [["helical", "Helical (Wendel)"], ["leit", "Leitstrom"], ["x", "X element"], ["v", "V element"], ["open", "Not sure, advise me"]] },
+          { k: "ind", l: "Industry", t: "select", opts: ["Food", "Biodiesel plants", "Pharmaceuticals", "Chemicals", "Adhesives", "Water and wastewater", "Other"] },
+          { k: "hyg", l: "Hygienic or aseptic design needed", t: "radio", opts: [["yes", "Yes"], ["no", "No"]] },
+          { k: "desc", l: "Describe the mixing task", t: "textarea", wide: true, ph: "What goes in, what has to come out, and anything that's gone wrong so far" }
+        ] },
+        { id: "x2", title: "Design data", fields: [
+          { k: "code", l: "Design to", t: "radio", req: true, wide: true, opts: [["ped", "PED (DGRL)"], ["asme", "ASME"], ["sep", "S.E.P."], ["open", "Not sure"]] },
+          { k: "pop", l: "Max operating pressure", t: "num", u: "pressure", req: true, min: -1, warnMax: 650, warnMaxMsg: "Our hydrostatic test goes up to 650 bar. We'll check feasibility with you." },
+          { k: "dp", l: "Allowed pressure drop", t: "num", u: "dp", min: 0 },
+          { k: "lenc", l: "Max installation length C", t: "num", u: "len", min: 0, minEx: true },
+          { k: "dn", l: "Nominal size", t: "num", unit: "DN", min: 0, minEx: true, warnMin: 3, warnMax: 1600, warnRangeMsg: "We build nominal sizes from DN 3 to DN 1,600.", hint: "Metric nominal size. Working in NPS? Put it in the notes under your details." },
+          { k: "mat", l: "Material", t: "select", req: true, opts: MATS.concat(["PTFE", "PVC", "PE", "GRP", "Not sure, advise me"]) },
+          { k: "qty", l: "Quantity", t: "num", int: true, unit: "mixers", req: true, min: 1 }
+        ] },
+        medium(1, "main flow", true),
+        medium(2, "inflow", true),
+        { id: "x3", title: "More media", fields: [
+          { k: "m3on", l: "Add a third medium", t: "check", wide: true }
+        ] },
+        medium(3, "second inflow", true),
+        { id: "x5", title: "Timing", fields: [
+          { k: "need", l: "Needed on site by", t: "date" },
+          { k: "site", l: "Install location", t: "text", ph: "Country or city" }
+        ] }
+      ]
+    },
+    weld: {
+      name: "Certified welded parts", short: "Welded part",
+      promise: "Quote within 24 hours.",
+      next: "A customer advisor calls you back promptly with a cost range and a timeline from a no obligation feasibility check.",
+      groups: [
+        { id: "w1", title: "The job", fields: [
+          { k: "job", l: "What do you need", t: "radio", req: true, wide: true, opts: [["single", "Single part"], ["proto", "Prototype"], ["series", "Small series"]] },
+          { k: "qty", l: "Quantity", t: "num", int: true, unit: "parts", req: true, min: 1 },
+          { k: "sector", l: "Sector", t: "select", opts: ["Defence", "Shipbuilding", "Pressure systems", "Plant engineering", "Other"] },
+          { k: "urgent", l: "A series supplier has dropped out and I need cover", t: "check", wide: true },
+          { k: "need", l: "Needed by", t: "date" }
+        ] },
+        { id: "w2", title: "Standards and process", fields: [
+          { k: "std", l: "Certification you need", t: "checks", req: true, wide: true, opts: [["3834", "ISO 3834"], ["2303", "DIN 2303"], ["ad", "AD 2000 Merkblatt HP 0"], ["ped", "PED"], ["none", "None specified"]] },
+          { k: "proc", l: "Welding process", t: "checks", wide: true, opts: [["tig", "TIG"], ["mag", "MAG"], ["orb", "Orbital"], ["stick", "Stick"], ["robot", "Robotic"], ["any", "Leave it to you"]] },
+          { k: "insp", l: "Inspection and documentation", t: "checks", wide: true, opts: [["vt2", "VT2 visual inspection"], ["hydro", "Hydrostatic test"], ["rt", "X ray film"], ["pt", "Dye penetrant test"], ["docs", "Full documentation"]] }
+        ] },
+        { id: "w3", title: "Part data", fields: [
+          { k: "mat", l: "Base material", t: "select", req: true, opts: MATS.concat(["Aluminium", "Other"]) },
+          { k: "wall", l: "Wall thickness", t: "num", u: "len", min: 0, minEx: true },
+          { k: "dl", l: "Overall length", t: "num", u: "len", min: 0 },
+          { k: "dw", l: "Overall width", t: "num", u: "len", min: 0 },
+          { k: "dh", l: "Overall height", t: "num", u: "len", min: 0 },
+          { k: "mass", l: "Weight", t: "num", u: "mass", min: 0 },
+          { k: "pop", l: "Operating pressure", t: "num", u: "pressure", min: -1 },
+          { k: "ptest", l: "Test pressure", t: "num", u: "pressure", min: 0, warnMax: 650, warnMaxMsg: "Our hydrostatic test goes up to 650 bar. We'll check feasibility with you." }
+        ] }
+      ]
+    }
+  };
+
+  var CONTACT = { id: "you", title: "Your details", shared: true, fields: [
+    { k: "company", l: "Company", t: "text", req: true, ac: "organization" },
+    { k: "pname", l: "Your name", t: "text", ac: "name" },
+    { k: "email", l: "Email", t: "email", req: true, ac: "email" },
+    { k: "phone", l: "Phone", t: "tel", ph: "+49 …", ac: "tel" },
+    { k: "country", l: "Country", t: "text", req: true, ac: "country-name" },
+    { k: "ref", l: "Your reference or tag number", t: "text" },
+    { k: "reply", l: "Best way to reach you", t: "radio", wide: true, opts: [["email", "Email"], ["phone", "Phone"]] },
+    { k: "files", l: "Drawings, datasheets or photos", t: "file", wide: true },
+    { k: "notes", l: "Anything else we should know", t: "textarea", wide: true },
+    { k: "consent", l: "I've read the privacy policy and agree that Schumacher may use these details to answer my request.", t: "consent", req: true, wide: true }
+  ] };
+
+  CONTACT.fields.forEach(function (f) { f.shared = true; });
+
+  var EX = {
+    cooling: { comp: "manifold", appr: "d2c", stage: "pilot", qty: "24", fluid: "Water", flow: "18", tsup: "30", tret: "40", load: "200", pop: "6", ptest: "9", dp: "0.5", dn: "80", ports: "16", mat: "Stainless 1.4571", conn: "Flange", code: "ped", tests: ["hydro", "trace"], envh: "2200", site: "Frankfurt, Germany" },
+    mixer: { task: "ll", etype: "helical", ind: "Water and wastewater", hyg: "no", desc: "Example. Dose a polymer solution into process water ahead of a settling tank.", code: "ped", pop: "10", dp: "0.3", lenc: "1200", dn: "100", mat: "Stainless 1.4571", qty: "2",
+      m1_name: "Process water", m1_grp: "2", m1_vap: "no", m1_flow: "40", m1_temp: "15", m1_visc: "1.1", m1_dens: "999", m1_conn: "Flange", m1_fstd: "DIN / EN", m1_frat: "PN 16",
+      m2_name: "Polymer solution", m2_grp: "2", m2_vap: "no", m2_flow: "0.8", m2_temp: "20", m2_visc: "350", m2_dens: "1005", m2_conn: "Flange", m2_fstd: "DIN / EN", m2_frat: "PN 16" },
+    weld: { job: "series", qty: "12", sector: "Defence", urgent: true, std: ["3834", "2303"], proc: ["tig"], insp: ["vt2", "hydro", "docs"], mat: "Stainless 1.4571", wall: "3", dl: "650", dw: "420", dh: "380", mass: "18", pop: "40", ptest: "60" },
+    shared: { company: "Example GmbH", pname: "Example contact", email: "name@example.com", country: "Germany", ref: "EX 001", reply: "email" }
+  };
+
+  /* ---------- state ---------- */
+  var S = { line: null, sys: "metric", v: { cooling: {}, mixer: {}, weld: {}, shared: {} }, u: { cooling: {}, mixer: {}, weld: {} }, touched: {}, example: { cooling: false, mixer: false, weld: false }, files: [] };
+
+  function allGroups(line) { return LINES[line].groups.concat([CONTACT]); }
+  function fieldsOf(line) { var out = []; allGroups(line).forEach(function (g) { g.fields.forEach(function (f) { out.push({ f: f, g: g }); }); }); return out; }
+  function valsOf(line) { var o = {}, a = S.v[line], b = S.v.shared, k; for (k in a) o[k] = a[k]; for (k in b) o[k] = b[k]; return o; }
+  function store(f) { return f.shared ? S.v.shared : S.v[S.line]; }
+  function unitOf(line, f) { if (!f.u) return f.unit || ""; var u = S.u[line][f.k]; if (!u) u = S.sys === "imperial" ? UNITS[f.u].imp : UNITS[f.u].base; return u; }
+  function baseVals(line) {
+    var B = {}, V = valsOf(line);
+    fieldsOf(line).forEach(function (x) { var f = x.f; if (f.t !== "num") return; var n = parseNum(V[f.k]); if (!isFinite(n)) { B[f.k] = NaN; return; } B[f.k] = f.u ? toBase(f.u, unitOf(line, f), n) : n; });
+    return B;
+  }
+  function visible(line, x, V) { if (x.g.show && !x.g.show(V)) return false; if (x.f.show && !x.f.show(V)) return false; return true; }
+  function filled(f, val) {
+    if (f.t === "checks") return Array.isArray(val) && val.length > 0;
+    if (f.t === "check" || f.t === "consent") return !!val;
+    if (f.t === "file") return S.files.length > 0;
+    return val != null && String(val).trim() !== "";
+  }
+
+  function validate(line, f, V, B) {
+    var val = V[f.k];
+    if (!filled(f, val)) return f.req ? { s: "empty", m: "" } : { s: "none", m: "" };
+    if (f.t === "email") return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(val).trim()) ? { s: "ok" } : { s: "err", m: "That email address doesn't look complete." };
+    if (f.t !== "num") return { s: "ok" };
+    var n = parseNum(val);
+    if (!isFinite(n)) return { s: "err", m: "Enter a number, like 12.5 or 12,5." };
+    if (f.int && Math.round(n) !== n) return { s: "err", m: "Enter a whole number." };
+    var b = f.u ? toBase(f.u, unitOf(line, f), n) : n;
+    if (f.k.indexOf("temp") > -1 || f.k === "tsup" || f.k === "tret") { if (b < -273.15) return { s: "err", m: "That's below absolute zero." }; }
+    if (f.min != null && (f.minEx ? b <= f.min : b < f.min)) return { s: "err", m: f.min === -1 ? "Gauge pressure can't go below minus 1 bar." : (f.minEx ? "Has to be more than zero." : "Has to be " + fmt(f.min) + " or more.") };
+    if (f.max != null && b > f.max) return { s: "err", m: "Has to be " + fmt(f.max) + " or less." };
+    if (f.check) { var c = f.check(b, V, B); if (c) return { s: "warn", m: c }; }
+    if (f.warnMin != null && b < f.warnMin) return { s: "warn", m: f.warnRangeMsg || f.warnMinMsg };
+    if (f.warnMax != null && b > f.warnMax) return { s: "warn", m: f.warnRangeMsg || f.warnMaxMsg };
+    return { s: "ok" };
+  }
+
+  /* ---------- form rendering ---------- */
+  var form = $("#f");
+  function optsHtml(f, val) {
+    return f.opts.map(function (o) {
+      var v = Array.isArray(o) ? o[0] : o, l = Array.isArray(o) ? o[1] : o;
+      var on = f.t === "checks" ? (Array.isArray(val) && val.indexOf(v) > -1) : val === v;
+      var type = f.t === "checks" ? "checkbox" : "radio";
+      return "<label class=\"opt" + (type === "checkbox" ? " chk" : "") + "\"><input type=\"" + type + "\" name=\"" + f.k + "\" value=\"" + esc(v) + "\"" + (on ? " checked" : "") + "><span>" + esc(l) + "</span></label>";
+    }).join("");
+  }
+  function fieldHtml(line, f, V) {
+    var id = "f_" + f.k, val = V[f.k], cls = "fld" + (f.wide || f.t === "textarea" ? " wide" : "");
+    var rq = f.req ? "<span class=\"req\" aria-hidden=\"true\"></span><span class=\"sr\"> (required)</span>" : "";
+    var h = "<div class=\"" + cls + "\" data-k=\"" + f.k + "\">";
+    if (f.t === "radio" || f.t === "checks") {
+      h += "<div class=\"flab\" id=\"l_" + f.k + "\">" + esc(f.l) + rq + "</div><div class=\"opts\" role=\"" + (f.t === "radio" ? "radiogroup" : "group") + "\" aria-labelledby=\"l_" + f.k + "\">" + optsHtml(f, val) + "</div>";
+    } else if (f.t === "check") {
+      h += "<label class=\"opt chk\"><input type=\"checkbox\" id=\"" + id + "\" name=\"" + f.k + "\"" + (val ? " checked" : "") + "><span>" + esc(f.l) + "</span></label>";
+    } else if (f.t === "consent") {
+      h += "<label class=\"consent\"><input type=\"checkbox\" id=\"" + id + "\" name=\"" + f.k + "\"" + (val ? " checked" : "") + "><span>" + esc(f.l) + rq + " <a href=\"https://www.schumacher-verfahrenstechnik.de/privacy-policy\" target=\"_blank\" rel=\"noopener\">Privacy policy</a></span></label>";
+    } else if (f.t === "file") {
+      h += "<div class=\"flab\">" + esc(f.l) + "</div><div class=\"drop\"><input type=\"file\" id=\"" + id + "\" name=\"" + f.k + "\" multiple accept=\".pdf,.step,.stp,.dwg,.dxf,.png,.jpg,.jpeg,.xlsx,.zip\" aria-label=\"" + esc(f.l) + "\"><b>Choose files</b> or drop them here<br><span class=\"hintx\">PDF, STEP, DWG, DXF, images. In this demo files stay on your device.</span></div><ul class=\"files\" id=\"fileList\"></ul>";
+    } else {
+      h += "<label for=\"" + id + "\">" + esc(f.l) + rq + "</label>";
+      if (f.t === "select") {
+        h += "<select id=\"" + id + "\" name=\"" + f.k + "\"><option value=\"\">Choose</option>" + f.opts.map(function (o) { return "<option" + (val === o ? " selected" : "") + ">" + esc(o) + "</option>"; }).join("") + "</select>";
+      } else if (f.t === "textarea") {
+        h += "<textarea id=\"" + id + "\" name=\"" + f.k + "\"" + (f.ph ? " placeholder=\"" + esc(f.ph) + "\"" : "") + ">" + esc(val || "") + "</textarea>";
+      } else if (f.t === "num") {
+        h += "<div class=\"inrow\"><input type=\"text\" inputmode=\"decimal\" autocomplete=\"off\" id=\"" + id + "\" name=\"" + f.k + "\" value=\"" + esc(val || "") + "\" aria-describedby=\"c_" + f.k + " m_" + f.k + "\">";
+        if (f.u) {
+          var cu = unitOf(line, f);
+          h += "<select class=\"unit\" data-unit=\"" + f.k + "\" aria-label=\"Unit for " + esc(f.l) + "\">" + UNITS[f.u].list.map(function (x) { return "<option" + (x[0] === cu ? " selected" : "") + ">" + x[0] + "</option>"; }).join("") + "</select>";
+        } else if (f.unit) { h += "<span class=\"unitfix\">" + esc(f.unit) + "</span>"; }
+        h += "</div><p class=\"conv\" id=\"c_" + f.k + "\"></p>";
+      } else {
+        h += "<input type=\"" + f.t + "\" id=\"" + id + "\" name=\"" + f.k + "\" value=\"" + esc(val || "") + "\"" + (f.ac ? " autocomplete=\"" + f.ac + "\"" : "") + (f.ph ? " placeholder=\"" + esc(f.ph) + "\"" : "") + " aria-describedby=\"m_" + f.k + "\">";
+      }
+    }
+    if (f.hint) h += "<p class=\"hintx\">" + esc(f.hint) + "</p>";
+    h += "<p class=\"msg\" id=\"m_" + f.k + "\"></p></div>";
+    return h;
+  }
+  function renderForm() {
+    var line = S.line; if (!line) { form.innerHTML = ""; return; }
+    var V = valsOf(line), n = 0;
+    form.innerHTML = allGroups(line).map(function (g) {
+      n++;
+      var fs = "<fieldset data-g=\"" + g.id + "\"><legend><span class=\"n\">" + (n < 10 ? "0" + n : n) + "</span><span class=\"t\">" + esc(g.title) + "</span></legend>";
+      if (g.note) fs += "<p class=\"gnote\">" + esc(g.note) + "</p>";
+      fs += "<div class=\"grid2\">" + g.fields.map(function (f) { return fieldHtml(line, f, V); }).join("") + "</div></fieldset>";
+      return fs;
+    }).join("");
+    renderFiles();
+    refresh(true);
+  }
+  function renderFiles() {
+    var ul = $("#fileList"); if (!ul) return;
+    ul.innerHTML = S.files.map(function (f) { return "<li>" + esc(f.name) + " &middot; " + fmt(f.size / 1024) + " KB</li>"; }).join("");
+  }
+
+  /* ---------- refresh ---------- */
+  var raf = 0;
+  function schedule() { if (raf) return; raf = requestAnimationFrame(function () { raf = 0; refresh(false); }); }
+  function refresh(all) {
+    var line = S.line; if (!line) { updatePanelEmpty(); renderSheet(); return; }
+    var V = valsOf(line), B = baseVals(line), req = 0, got = 0, missing = [];
+    allGroups(line).forEach(function (g) {
+      var gfs = form.querySelector("fieldset[data-g=\"" + g.id + "\"]");
+      var gShow = !g.show || g.show(V);
+      if (gfs) gfs.hidden = !gShow;
+      g.fields.forEach(function (f) {
+        var el = form.querySelector(".fld[data-k=\"" + f.k + "\"]");
+        var show = gShow && (!f.show || f.show(V));
+        if (el) el.hidden = !show;
+        if (!show) return;
+        var r = validate(line, f, V, B);
+        if (f.req) { req++; if (r.s === "ok" || r.s === "warn") got++; else missing.push(f); }
+        if (!el) return;
+        var touched = S.touched[f.k] || S.showAll;
+        el.classList.toggle("err", (r.s === "err") || (r.s === "empty" && touched));
+        el.classList.toggle("warn", r.s === "warn");
+        var m = el.querySelector(".msg");
+        if (m) m.textContent = r.s === "err" || r.s === "warn" ? r.m : (r.s === "empty" && touched ? "We need this one to quote." : "");
+        var inp = el.querySelector("input,select,textarea");
+        if (inp && f.t !== "radio" && f.t !== "checks") inp.setAttribute("aria-invalid", r.s === "err" || (r.s === "empty" && touched) ? "true" : "false");
+        if (f.t === "num") {
+          var c = el.querySelector(".conv"), n = parseNum(V[f.k]);
+          if (c) {
+            if (!isFinite(n)) c.textContent = "";
+            else if (!f.u) c.textContent = (String(V[f.k]).trim() !== String(n) ? "Read as " + fmt(n) : "");
+            else {
+              var u = unitOf(line, f), ou = otherUnit(f.u, u), b = toBase(f.u, u, n), t = "= " + fmt(fromBase(f.u, ou, b)) + " " + ou;
+              if (String(V[f.k]).trim() !== plain(n) && String(V[f.k]).trim() !== String(n)) t = "Read as " + fmt(n) + " " + u + ", which is " + fmt(fromBase(f.u, ou, b)) + " " + ou;
+              c.textContent = t;
+            }
+          }
+        }
+      });
+    });
+    S.req = req; S.got = got; S.missing = missing;
+    updatePanel(line, V, B);
+    renderSheet();
+  }
+
+  /* ---------- readbacks ---------- */
+  function readbacks(line, V, B) {
+    var rows = [], hint = "";
+    var area = function (dn) { var d = dn / 1000; return Math.PI * d * d / 4; };
+    if (line === "cooling") {
+      var dT = B.tret - B.tsup;
+      if (isFinite(dT)) rows.push(["Temperature rise across the loop", fmt(dT) + " K"]);
+      if (isFinite(B.flow) && isFinite(dT) && dT > 0 && V.fluid === "Water") {
+        var q = B.flow * 1.163 * dT; rows.push(["Heat carried at this flow and rise", fmt(q) + " kW"]);
+        if (isFinite(B.load) && B.load > 0) rows.push(["Against your heat load", fmt(q / B.load * 100) + " %"]);
+      }
+      if (isFinite(B.flow) && isFinite(B.load) && B.load > 0) rows.push(["Flow per kW", fmt(B.flow / 0.06 / B.load) + " l/min"]);
+      if (isFinite(B.flow) && isFinite(B.dn) && B.dn > 0) rows.push(["Velocity at DN " + fmt(B.dn) + ", taken as bore", fmt(B.flow / 3600 / area(B.dn)) + " m/s"]);
+      if (isFinite(B.ptest) && B.ptest > 650) hint = "<b>Test pressure above 650 bar.</b> That's above our hydrostatic test range, so we'll talk feasibility first.";
+      if (V.fluid === "Water" && isFinite(B.flow) && isFinite(dT) && dT > 0) hint = hint || "<b>Water check.</b> Heat carried is flow in m³/h × 1.163 × temperature rise in K, for water at about 4.19 kJ/kg·K. It's a quick sense check, and our engineers run the real numbers.";
+    }
+    if (line === "mixer") {
+      var media = [1, 2, 3].filter(function (n) { return n < 3 || V.m3on; });
+      var tot = 0, okf = true;
+      media.forEach(function (n) { var q = B["m" + n + "_flow"]; if (isFinite(q)) tot += q; else okf = false; });
+      if (tot > 0) rows.push(["Total flow" + (okf ? "" : " so far"), fmt(tot) + " m³/h"]);
+      if (isFinite(B.m1_flow) && isFinite(B.m2_flow) && B.m2_flow > 0) rows.push(["Medium 2 in the total", "1 part in " + fmt((B.m1_flow + B.m2_flow) / B.m2_flow)]);
+      var vs = media.map(function (n) { return B["m" + n + "_visc"]; }).filter(isFinite);
+      if (vs.length > 1) rows.push(["Viscosity ratio, highest to lowest", fmt(Math.max.apply(null, vs) / Math.min.apply(null, vs)) + " ×"]);
+      var Re = NaN;
+      if (tot > 0 && isFinite(B.dn) && B.dn > 0 && isFinite(B.m1_dens) && isFinite(B.m1_visc) && B.m1_visc > 0) {
+        var v = tot / 3600 / area(B.dn); Re = B.m1_dens * v * (B.dn / 1000) / (B.m1_visc / 1000);
+        rows.push(["Velocity at DN " + fmt(B.dn) + ", taken as bore", fmt(v) + " m/s"]);
+        rows.push(["Reynolds number, main flow", fmt(Math.round(Re)) + (Re < 2300 ? ", laminar" : Re > 4000 ? ", turbulent" : ", transitional")]);
+      }
+      var maxv = vs.length ? Math.max.apply(null, vs) : NaN;
+      if (V.task === "gl") hint = "<b>From our range.</b> The Leitstrom mixer brings gases into liquids while treating the product gently, and the V element mixer gives the finest gas distribution with limited pressure drop.";
+      else if (V.task === "gg") hint = "<b>From our range.</b> The V element mixer is built for gas and gas mixing with limited pressure drop.";
+      else if ((isFinite(Re) && Re < 2300) || maxv > 1000) hint = "<b>From our range.</b> The X element mixer is built for demanding, high viscosity media. Its high shear mixes well even in laminar flow.";
+      else if (V.task === "ll" && isFinite(Re)) hint = "<b>From our range.</b> The helical mixer suits simple mixing tasks with low pressure drop, in water, food and general duties.";
+      if (hint) hint += " It's a pointer, and our engineers make the call.";
+    }
+    if (line === "weld") {
+      if (isFinite(B.pop) && isFinite(B.ptest) && B.pop > 0) rows.push(["Test to operating pressure", fmt(B.ptest / B.pop) + " ×"]);
+      if (isFinite(B.dl) && isFinite(B.dw) && isFinite(B.dh)) rows.push(["Envelope", fmt(B.dl) + " × " + fmt(B.dw) + " × " + fmt(B.dh) + " mm"]);
+      if (isFinite(B.mass) && isFinite(B.qty)) rows.push(["Total weight", fmt(B.mass * B.qty) + " kg"]);
+      var ins = (V.insp || []).length; if (ins) rows.push(["Inspections asked for", String(ins)]);
+      if (V.urgent) hint = "<b>Supplier cover.</b> We close supply gaps when series suppliers drop out. Flagged as urgent on the sheet.";
+      else if (S.files.length === 0) hint = "<b>Got a drawing?</b> A drawing with the weld symbols on it saves a round of questions. Attach it under your details.";
+    }
+    return { rows: rows, hint: hint };
+  }
+
+  /* ---------- drawings ---------- */
+  function T(x, y, s, cls, anchor) { return "<text x=\"" + x + "\" y=\"" + y + "\"" + (cls ? " class=\"" + cls + "\"" : "") + (anchor ? " text-anchor=\"" + anchor + "\"" : "") + ">" + esc(s) + "</text>"; }
+  function arrowR(x, y, k) { return "<path class=\"ah" + (k ? " k" : "") + "\" d=\"M" + x + " " + y + " l-11 -6 v12 z\"/>"; }
+  function arrowL(x, y, k) { return "<path class=\"ah" + (k ? " k" : "") + "\" d=\"M" + x + " " + y + " l11 -6 v12 z\"/>"; }
+  function arrowD(x, y, k) { return "<path class=\"ah" + (k ? " k" : "") + "\" d=\"M" + x + " " + y + " l-6 -11 h12 z\"/>"; }
+  function arrowU(x, y, k) { return "<path class=\"ah" + (k ? " k" : "") + "\" d=\"M" + x + " " + y + " l-6 11 h12 z\"/>"; }
+  function boxL(x, y, s) { return "<rect class=\"box\" x=\"" + (x - 10) + "\" y=\"" + (y - 11) + "\" width=\"20\" height=\"20\"/>" + T(x, y + 4, s, "lbl", "middle"); }
+  function dimH(x1, x2, y, label) {
+    return "<path class=\"dim\" d=\"M" + x1 + " " + (y - 8) + " v16 M" + x2 + " " + (y - 8) + " v16 M" + x1 + " " + y + " H" + x2 + "\"/>" +
+      "<path class=\"ah k\" d=\"M" + x1 + " " + y + " l9 -4 v8 z\"/><path class=\"ah k\" d=\"M" + x2 + " " + y + " l-9 -4 v8 z\"/>" +
+      "<rect x=\"" + ((x1 + x2) / 2 - label.length * 4.8 - 6) + "\" y=\"" + (y - 10) + "\" width=\"" + (label.length * 9.6 + 12) + "\" height=\"20\" fill=\"#fff\"/>" + T((x1 + x2) / 2, y + 4, label, "", "middle");
+  }
+  function dimV(x, y1, y2, label) {
+    return "<path class=\"dim\" d=\"M" + (x - 8) + " " + y1 + " h16 M" + (x - 8) + " " + y2 + " h16 M" + x + " " + y1 + " V" + y2 + "\"/>" +
+      "<path class=\"ah k\" d=\"M" + x + " " + y1 + " l-4 9 h8 z\"/><path class=\"ah k\" d=\"M" + x + " " + y2 + " l-4 -9 h8 z\"/>" +
+      "<g transform=\"translate(" + (x + 14) + " " + ((y1 + y2) / 2) + ") rotate(-90)\">" + T(0, 0, label, "", "middle") + "</g>";
+  }
+  function wrapParts(str, max) {
+    var parts = String(str).split(", "), out = [""];
+    parts.forEach(function (p, i) {
+      var cur = out[out.length - 1], add = (cur ? cur + ", " : "") + p;
+      if (add.length <= max || !cur) out[out.length - 1] = add; else { out[out.length - 1] = cur + ","; out.push(p); }
+    });
+    return out.slice(0, 2);
+  }
+  function titleTag(lines) {
+    var y = 366, s = "<rect class=\"box\" x=\"2\" y=\"" + y + "\" width=\"516\" height=\"62\"/><path class=\"dim\" d=\"M186 " + y + " V" + (y + 62) + " M352 " + y + " V" + (y + 62) + "\"/>";
+    s += T(12, y + 18, "Schumacher", "t-s") + T(12, y + 40, lines[0], "t-b");
+    s += T(196, y + 18, "Data", "t-s");
+    wrapParts(lines[1], 15).forEach(function (l, i) { s += T(196, y + 37 + i * 17, l, "tt"); });
+    s += T(362, y + 18, "Build", "t-s");
+    wrapParts(lines[2], 15).forEach(function (l, i) { s += T(362, y + 37 + i * 17, l, "tt"); });
+    return s;
+  }
+  function u(B, k, kind, unit) { var b = B[k]; if (!isFinite(b)) return null; return fmt(b) + " " + unit; }
+  function dispU(line, V, B, k, kind) {
+    var b = B[k]; if (!isFinite(b)) return null;
+    var f = null; fieldsOf(line).forEach(function (x) { if (x.f.k === k) f = x.f; });
+    var unit = f ? unitOf(line, f) : UNITS[kind].base;
+    return fmt(fromBase(kind, unit, b)) + " " + unit;
+  }
+  function svgWrap(inner, title) { return "<svg class=\"dwg\" viewBox=\"0 0 520 432\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" focusable=\"false\">" + (title ? "<title>" + esc(title) + "</title>" : "") + inner + "</svg>"; }
+
+  function drawMixer(V, B, line, sfx) {
+    var dn = B.dn, r = isFinite(dn) && dn > 0 ? Math.max(16, Math.min(40, 16 + 24 * (Math.log(dn) - Math.log(3)) / (Math.log(1600) - Math.log(3)))) : 28;
+    var cy = 178, x0 = 70, x1 = 452, s = "";
+    var m3 = !!V.m3on;
+    s += "<path class=\"ctr\" d=\"M20 " + cy + " H500\"/>";
+    // flanges
+    s += "<rect class=\"o2\" x=\"" + (x0 - 12) + "\" y=\"" + (cy - r - 14) + "\" width=\"12\" height=\"" + (2 * r + 28) + "\"/>";
+    s += "<rect class=\"o2\" x=\"" + x1 + "\" y=\"" + (cy - r - 14) + "\" width=\"12\" height=\"" + (2 * r + 28) + "\"/>";
+    // pipe
+    s += "<rect class=\"o2\" x=\"" + x0 + "\" y=\"" + (cy - r) + "\" width=\"" + (x1 - x0) + "\" height=\"" + (2 * r) + "\"/>";
+    // nozzles
+    var nz = m3 ? [128, 176] : [140];
+    nz.forEach(function (nx, i) {
+      s += "<rect class=\"o2\" x=\"" + (nx - 7) + "\" y=\"78\" width=\"14\" height=\"" + (cy - r - 78) + "\"/>";
+      s += "<rect class=\"o2\" x=\"" + (nx - 17) + "\" y=\"70\" width=\"34\" height=\"8\"/>";
+      s += "<path class=\"flow\" d=\"M" + nx + " 36 V" + (cy - 4) + "\"/>" + arrowD(nx, 66);
+      s += boxL(nx + (i === 0 && m3 ? -26 : 26), 92, "B");
+    });
+    // elements
+    var ex0 = 214, ex1 = 432, n = 4, w = (ex1 - ex0) / n, et = V.etype || "open", el = "";
+    s += "<clipPath id=\"pc" + sfx + "\"><rect x=\"" + x0 + "\" y=\"" + (cy - r + 2) + "\" width=\"" + (x1 - x0) + "\" height=\"" + (2 * r - 4) + "\"/></clipPath>";
+    for (var i = 0; i < n; i++) {
+      var a = ex0 + i * w, b2 = a + w, t = cy - r + 3, bt = cy + r - 3, flip = i % 2;
+      if (et === "x") {
+        for (var j = -2; j <= 2; j++) { var o = j * w / 4; el += "<path class=\"el\" d=\"M" + (a + o) + " " + t + " L" + (b2 + o) + " " + bt + "\"/><path class=\"el2\" d=\"M" + (a + o) + " " + bt + " L" + (b2 + o) + " " + t + "\"/>"; }
+        el += "<path class=\"dim\" d=\"M" + b2 + " " + t + " V" + bt + "\"/>";
+      } else if (et === "v") {
+        for (var j2 = 0; j2 < 3; j2++) { var vx = a + 8 + j2 * (w - 16) / 2; el += "<path class=\"el\" d=\"M" + (vx - 10) + " " + (t + 4) + " L" + (vx + 8) + " " + cy + " L" + (vx - 10) + " " + (bt - 4) + "\"/>"; }
+      } else if (et === "leit") {
+        el += "<path class=\"el\" d=\"M" + (a + 6) + " " + (flip ? bt : t) + " L" + (b2 - 6) + " " + cy + "\"/><path class=\"el2\" d=\"M" + (a + 6) + " " + cy + " L" + (b2 - 6) + " " + (flip ? t : bt) + "\"/>";
+      } else {
+        var y1 = flip ? bt : t, y2 = flip ? t : bt;
+        el += "<path class=\"" + (et === "open" ? "el2" : "el") + "\" d=\"M" + a + " " + y1 + " C" + (a + w * .55) + " " + y1 + " " + (b2 - w * .55) + " " + y2 + " " + b2 + " " + y2 + "\"/>";
+        el += "<path class=\"el2\" d=\"M" + a + " " + y2 + " C" + (a + w * .55) + " " + y2 + " " + (b2 - w * .55) + " " + y1 + " " + b2 + " " + y1 + "\"/>";
+        el += "<path class=\"dim\" d=\"M" + b2 + " " + t + " V" + bt + "\"/>";
+      }
+    }
+    s += "<g clip-path=\"url(#pc" + sfx + ")\">" + el + "</g>";
+    s += "<path class=\"hid\" d=\"M" + ex0 + " " + (cy - r) + " V" + (cy + r) + " M" + ex1 + " " + (cy - r) + " V" + (cy + r) + "\"/>";
+    if (et === "open") s += "<rect x=\"" + ((ex0 + ex1) / 2 - 64) + "\" y=\"" + (cy - 11) + "\" width=\"128\" height=\"22\" fill=\"#fff\" stroke=\"#0f68b2\" stroke-width=\"1\"/>" + T((ex0 + ex1) / 2, cy + 5, "type to advise", "t-blue", "middle");
+    // flows
+    s += "<path class=\"flow\" d=\"M12 " + cy + " H" + (x0 - 16) + "\"/>" + arrowR(x0 - 14, cy);
+    s += "<path class=\"flow\" d=\"M" + (x1 + 14) + " " + cy + " H508\"/>" + arrowR(514, cy);
+    s += boxL(x0 - 30, cy - r - 34, "A");
+    // labels
+    var m1 = V.m1_name || "Medium 1", m2 = V.m2_name || "Medium 2";
+    s += T(16, cy + r + 34, m1.slice(0, 26), "t-b");
+    s += T(16, cy + r + 52, [dispU(line, V, B, "m1_flow", "flow"), dispU(line, V, B, "m1_temp", "temp")].filter(Boolean).join(", ") || "flow, temperature", "t-s");
+    s += T(16, cy + r + 68, [isFinite(B.m1_visc) ? fmt(B.m1_visc) + " mPa·s" : "", isFinite(B.m1_dens) ? fmt(B.m1_dens) + " kg/m³" : ""].filter(Boolean).join(", "), "t-s");
+    var nx0 = nz[nz.length - 1] + 30;
+    s += T(nx0, 30, m2.slice(0, 26) + (m3 ? " + " + (V.m3_name || "Medium 3").slice(0, 14) : ""), "t-b");
+    s += T(nx0, 48, [dispU(line, V, B, "m2_flow", "flow"), dispU(line, V, B, "m2_temp", "temp")].filter(Boolean).join(", ") || "flow, temperature", "t-s");
+    var tot = 0; [1, 2, 3].forEach(function (k) { if (k < 3 || m3) { var q = B["m" + k + "_flow"]; if (isFinite(q)) tot += q; } });
+    if (tot > 0) s += T(508, cy - r - 24, "Total " + fmt(tot) + " m³/h", "t-blue", "end");
+    // dimension C
+    var dy = Math.min(350, cy + r + 96);
+    s += dimH(x0 - 12, x1 + 12, dy, isFinite(B.lenc) ? "C = " + fmt(B.lenc) + " mm" : "C, max installation length");
+    var typeName = { helical: "Helical (Wendel)", leit: "Leitstrom", x: "X element", v: "V element", open: "Type to advise" }[et] || "Type to advise";
+    s += titleTag(["STATIC MIXER", typeName + (isFinite(B.dn) ? ", DN " + fmt(B.dn) : ""), [isFinite(B.pop) ? fmt(B.pop) + " bar g" : null, V.mat ? V.mat.replace("Stainless ", "") : null].filter(Boolean).join(", ") || "pressure, material"]);
+    return svgWrap(s, "Static mixer drawing");
+  }
+
+  function drawCooling(V, B, line) {
+    var comp = V.comp || "manifold", s = "", sup = dispU(line, V, B, "tsup", "temp"), ret = dispU(line, V, B, "tret", "temp");
+    var fl = dispU(line, V, B, "flow", "flow");
+    if (comp === "manifold" || comp === "system") {
+      var sys = comp === "system", xa = sys ? 210 : 150, xb = 500, ys = 112, yr = 186, n = isFinite(B.ports) && B.ports > 0 ? Math.round(B.ports) : 8, shown = Math.min(n, sys ? 7 : 9);
+      if (sys) {
+        s += "<rect class=\"fillb\" x=\"36\" y=\"94\" width=\"84\" height=\"112\"/>";
+        for (var p = 0; p < 9; p++) s += "<path class=\"dim\" d=\"M" + (44 + p * 8.5) + " 100 V200\"/>";
+        s += T(78, 226, "Heat exch.", "t-s", "middle");
+        s += "<circle class=\"o2\" cx=\"166\" cy=\"" + yr + "\" r=\"18\"/><path class=\"o\" d=\"M157 " + (yr - 10) + " L180 " + yr + " L157 " + (yr + 10) + "\"/>" + T(166, yr + 40, "Pump", "t-s", "middle");
+        s += "<path class=\"o\" d=\"M120 " + ys + " H" + xa + " M120 " + yr + " H148 M184 " + yr + " H" + xa + "\"/>";
+        s += "<path class=\"flow ret\" d=\"M8 126 H34\"/><path class=\"flow ret\" d=\"M34 174 H8\"/>" + T(8, 82, "Facility side", "t-s");
+        s += T(xa, 50, ["Supply" + (sup ? " " + sup : ""), "return" + (ret ? " " + ret : "")].join(", "), "t-b");
+      } else {
+        s += "<path class=\"flow\" d=\"M10 " + ys + " H" + (xa - 14) + "\"/>" + arrowR(xa - 2, ys);
+        s += "<path class=\"flow ret\" d=\"M" + (xa - 2) + " " + yr + " H22\"/>" + arrowL(10, yr, true);
+        s += T(10, ys - 14, "Supply", "t-b") + T(10, ys + 26, sup || "temperature", "t-s");
+        s += T(10, yr - 14, "Return", "t-b") + T(10, yr + 26, ret || "temperature", "t-s");
+      }
+      s += "<rect class=\"o2\" x=\"" + xa + "\" y=\"" + (ys - 9) + "\" width=\"" + (xb - xa) + "\" height=\"18\"/>";
+      s += "<rect class=\"o2\" x=\"" + xa + "\" y=\"" + (yr - 9) + "\" width=\"" + (xb - xa) + "\" height=\"18\"/>";
+      var gap = (xb - xa - 44) / Math.max(1, shown - 1);
+      for (var i = 0; i < shown; i++) {
+        var px = xa + 18 + i * gap;
+        s += "<path class=\"o\" d=\"M" + px + " " + (ys + 9) + " V" + (ys + 24) + " M" + (px + 10) + " " + (yr + 9) + " V" + (yr + 24) + "\"/>";
+        s += "<circle class=\"o2\" cx=\"" + px + "\" cy=\"" + (ys + 28) + "\" r=\"4.5\"/><circle class=\"o2\" cx=\"" + (px + 10) + "\" cy=\"" + (yr + 28) + "\" r=\"4.5\"/>";
+        s += "<path class=\"hid\" d=\"M" + px + " " + (ys + 33) + " V" + (yr - 10) + " M" + px + " " + (yr + 10) + " V268 M" + (px + 10) + " " + (yr + 33) + " V268\"/>";
+        s += "<rect class=\"o2\" x=\"" + (px - 6) + "\" y=\"268\" width=\"22\" height=\"36\"/>";
+      }
+      s += T(xa, 326, "IT racks, " + (n > shown ? shown + " of " + n + " ports drawn" : n + (n === 1 ? " port" : " ports")), "t-s");
+      if (fl) s += T(xb, ys - 20, fl, "t-blue", "end");
+    } else if (comp === "hx") {
+      s += "<rect class=\"fillb\" x=\"190\" y=\"90\" width=\"150\" height=\"190\"/>";
+      for (var q = 0; q < 22; q++) s += "<path class=\"dim\" d=\"M" + (198 + q * 6.4) + " 98 V272\"/>";
+      s += "<rect class=\"o2\" x=\"180\" y=\"82\" width=\"12\" height=\"206\"/><rect class=\"o2\" x=\"338\" y=\"82\" width=\"12\" height=\"206\"/>";
+      s += "<path class=\"flow ret\" d=\"M20 122 H168\"/>" + arrowR(178, 122, true) + "<path class=\"flow ret\" d=\"M168 248 H32\"/>" + arrowL(20, 248, true);
+      s += "<path class=\"flow\" d=\"M500 248 H362\"/>" + arrowL(352, 248) + "<path class=\"flow\" d=\"M362 122 H490\"/>" + arrowR(502, 122);
+      s += T(20, 106, "Facility in", "t-s") + T(20, 272, "Facility out", "t-s");
+      s += T(502, 66, "Coolant out" + (sup ? ", " + sup : ""), "t-b", "end") + T(502, 312, "Coolant in" + (ret ? ", " + ret : ""), "t-b", "end");
+      if (fl) s += T(502, 332, fl, "t-blue", "end");
+    } else {
+      s += "<path class=\"o2\" d=\"M210 116 Q260 70 310 116 V256 Q260 302 210 256 Z\"/>";
+      s += "<path class=\"hid\" d=\"M210 116 Q260 134 310 116 M210 256 Q260 238 310 256\"/>";
+      s += "<rect class=\"o2\" x=\"250\" y=\"66\" width=\"20\" height=\"28\"/><rect class=\"o2\" x=\"240\" y=\"60\" width=\"40\" height=\"8\"/>";
+      s += "<rect class=\"o2\" x=\"250\" y=\"278\" width=\"20\" height=\"24\"/><rect class=\"o2\" x=\"240\" y=\"300\" width=\"40\" height=\"8\"/>";
+      s += "<rect class=\"o2\" x=\"310\" y=\"156\" width=\"30\" height=\"14\"/><rect class=\"o2\" x=\"338\" y=\"148\" width=\"8\" height=\"30\"/>";
+      s += "<path class=\"o\" d=\"M222 274 L206 320 M298 274 L314 320\"/>";
+      s += "<path class=\"flow\" d=\"M260 18 V50\"/>" + arrowD(260, 58) + "<path class=\"flow ret\" d=\"M260 312 V342\"/>" + arrowD(260, 354, true);
+      s += dimV(176, 116, 256, isFinite(B.vol) ? fmt(B.vol) + " l" : "volume");
+      s += T(362, 150, isFinite(B.pop) ? fmt(B.pop) + " bar g" : "pressure", "t-b");
+      s += T(362, 170, isFinite(B.ptest) ? "test " + fmt(B.ptest) + " bar" : "test pressure", "t-s");
+      if (sup || ret) s += T(362, 206, (sup || "") + (sup && ret ? " to " : "") + (ret || ""), "t-s");
+    }
+    var ctx = [{ d2c: "Direct to chip", l2c: "Liquid to chip", imm: "Immersion" }[V.appr], V.fluid ? V.fluid.toLowerCase() + (isFinite(B.gly) && B.gly > 0 && B.gly <= 100 && /glycol/.test(V.fluid) ? " " + fmt(B.gly) + " %" : "") : null].filter(Boolean).join(", ");
+    if (ctx && comp !== "system" && comp !== "hx") s += T(10, 34, ctx.charAt(0).toUpperCase() + ctx.slice(1), "t-s");
+    var nm = { manifold: "MANIFOLD", vessel: "PRESSURE VESSEL", hx: "HEAT EXCHANGER", system: "COOLING SYSTEM" }[comp];
+    var dT = B.tret - B.tsup;
+    s += titleTag([nm, [isFinite(dT) ? "ΔT " + fmt(dT) + " K" : null, isFinite(B.pop) ? fmt(B.pop) + " bar g" : null].filter(Boolean).join(", ") || "temperatures, pressure", (V.mat ? V.mat.replace("Stainless ", "") : "material") + (isFinite(B.dn) ? ", DN " + fmt(B.dn) : "")]);
+    return svgWrap(s, "Cooling component drawing");
+  }
+
+  function drawWeld(V, B, line) {
+    var s = "", wall = isFinite(B.wall) && B.wall > 0 ? Math.max(3, Math.min(10, B.wall * 1.4)) : 5, R = 22;
+    var yb = 236, xL = 46, xB = 262, yT = 82, cyb = yb - 60;
+    s += "<path class=\"ctr\" d=\"M" + (xL - 10) + " " + yb + " H" + xB + " A60 60 0 0 0 " + (xB + 60) + " " + cyb + " V" + (yT - 10) + "\"/>";
+    function edge(off) { var r = 60 + off; return "M" + xL + " " + (yb + off) + " H" + xB + " A" + r + " " + r + " 0 0 0 " + (xB + r) + " " + cyb + " V" + yT; }
+    s += "<path class=\"o\" d=\"" + edge(-R) + "\"/><path class=\"o\" d=\"" + edge(R) + "\"/><path class=\"hid\" d=\"" + edge(-R + wall) + "\"/><path class=\"hid\" d=\"" + edge(R - wall) + "\"/>";
+    s += "<rect class=\"o2\" x=\"" + (xL - 12) + "\" y=\"" + (yb - R - 14) + "\" width=\"12\" height=\"" + (2 * R + 28) + "\"/>";
+    s += "<rect class=\"o2\" x=\"" + (xB + 60 - R - 14) + "\" y=\"" + (yT - 12) + "\" width=\"" + (2 * R + 28) + "\" height=\"12\"/>";
+    s += "<path d=\"M" + (xL + 2) + " " + (yb - R) + " V" + (yb + R) + " M" + xB + " " + (yb - R) + " V" + (yb + R) + " M" + (xB + 60 - R) + " " + cyb + " H" + (xB + 60 + R) + " M" + (xB + 60 - R) + " " + (yT + 2) + " H" + (xB + 60 + R) + "\" stroke=\"#0b0d0e\" stroke-width=\"4\"/>";
+    var proc = (V.proc || []).filter(function (x) { return x !== "any"; }).map(function (x) { return { tig: "TIG", mag: "MAG", orb: "Orbital", stick: "Stick", robot: "Robot" }[x]; });
+    var ry = 150, rx1 = xB - 186, rx2 = xB - 46;
+    s += "<path class=\"dim\" d=\"M" + (xB - 2) + " " + (yb - R - 3) + " L" + rx2 + " " + ry + " H" + rx1 + "\"/><path class=\"ah k\" d=\"M" + (xB - 2) + " " + (yb - R - 3) + " l-10 -6 l3 -3 z\"/>";
+    s += "<path class=\"dim\" d=\"M" + (rx1 + 60) + " " + (ry - 13) + " L" + (rx1 + 69) + " " + ry + " L" + (rx1 + 78) + " " + (ry - 13) + "\" stroke-width=\"1.6\"/>";
+    s += T(rx1, ry - 20, proc.length ? proc.join(", ") : "process", "t-b");
+    var cx2 = xB + 60 + R + 2;
+    s += "<path class=\"dim\" d=\"M" + cx2 + " " + (yT + 4) + " L" + (cx2 + 30) + " " + (yT + 40) + " H470\"/><path class=\"ah k\" d=\"M" + cx2 + " " + (yT + 4) + " l2 11 l6 -6 z\"/>";
+    s += T(470, yT + 32, isFinite(B.wall) ? "s = " + fmt(B.wall) + " mm" : "wall thickness", "", "end");
+    s += dimH(xL - 12, xB + 60 + R + 14, 304, isFinite(B.dl) ? "L = " + fmt(B.dl) + " mm" : "overall length");
+    s += dimV(492, yT - 12, yb + R, isFinite(B.dh) ? "H = " + fmt(B.dh) + " mm" : "overall height");
+    var ins = (V.insp || []).map(function (x) { return { vt2: "VT2", hydro: isFinite(B.ptest) ? "Hydro " + fmt(B.ptest) + " bar" : "Hydro", rt: "RT", pt: "PT", docs: "Docs" }[x]; });
+    var cxp = 12;
+    ins.forEach(function (c) { var w = c.length * 9.4 + 16; s += "<rect class=\"fillb\" x=\"" + cxp + "\" y=\"14\" width=\"" + w + "\" height=\"22\"/>" + T(cxp + 8, 29, c, "t-blue"); cxp += w + 6; });
+    if (!ins.length) s += T(12, 29, "inspection to be agreed", "t-s");
+    if (V.urgent) s += "<g transform=\"rotate(-7 96 74)\"><rect class=\"stamp\" x=\"24\" y=\"58\" width=\"144\" height=\"30\"/>" + T(96, 78, "SUPPLIER COVER", "t-red", "middle") + "</g>";
+    var stds = (V.std || []).map(function (x) { return { "3834": "ISO 3834", "2303": "DIN 2303", ad: "AD 2000", ped: "PED", none: "no code" }[x]; });
+    s += titleTag(["WELDED PART", stds.join(", ") || "certification", (V.mat ? V.mat.replace("Stainless ", "") : "material") + (isFinite(B.qty) ? ", " + fmt(B.qty) + " off" : "")]);
+    return svgWrap(s, "Welded part drawing");
+  }
+
+  function drawing(line, V, B, sfx) { return line === "mixer" ? drawMixer(V, B, line, sfx || "p") : line === "weld" ? drawWeld(V, B, line) : drawCooling(V, B, line); }
+
+  /* ---------- panel ---------- */
+  function updatePanelEmpty() {
+    $("#liveDraw").innerHTML = "<p style=\"padding:28px 14px;color:#4a5557;margin:0\">Pick cooling components, a static mixer or a welded part above, and the drawing builds from your numbers.</p>";
+    $("#readyTxt").textContent = "Pick a product line to start";
+    $("#readyNum").textContent = ""; $("#missing").innerHTML = ""; $("#checks").innerHTML = "";
+    $("#panelTitle").textContent = "Live drawing"; $("#panelTag").innerHTML = "";
+    $("#mbarTxt").textContent = "Pick a product line";
+  }
+  function updatePanel(line, V, B) {
+    $("#liveDraw").innerHTML = drawing(line, V, B, "p");
+    $("#panelTitle").textContent = "Live drawing, " + LINES[line].short.toLowerCase();
+    $("#panelTag").innerHTML = S.example[line] ? "<span class=\"tag\">Example values</span>" : "";
+    var done = S.got === S.req;
+    $("#readyTxt").textContent = done ? "Ready to quote" : (S.req - S.got) + " required " + (S.req - S.got === 1 ? "value" : "values") + " to go";
+    $("#readyNum").textContent = S.got + " of " + S.req;
+    var m = $("#meter"); m.querySelector("i").style.width = (S.req ? S.got / S.req * 100 : 0) + "%"; m.classList.toggle("full", done);
+    $("#missing").innerHTML = S.missing.map(function (f) { return "<li><button type=\"button\" data-focus=\"" + f.k + "\">" + esc(shortLabel(f)) + "</button></li>"; }).join("");
+    $("#mbarTxt").textContent = done ? "Ready to quote" : S.got + " of " + S.req + " required";
+    var rb = readbacks(line, V, B);
+    $("#checks").innerHTML = rb.rows.length || rb.hint ? "<h4>Read back from your numbers</h4>" + (rb.rows.length ? "<dl>" + rb.rows.map(function (r) { return "<dt>" + esc(r[0]) + "</dt><dd>" + esc(r[1]) + "</dd>"; }).join("") + "</dl>" : "") + (rb.hint ? "<p class=\"hint\">" + rb.hint + "</p>" : "") : "<h4>Read back from your numbers</h4><p style=\"margin:0;font-size:14px;color:#4a5557\">Checks appear here as you fill in flow, temperatures and sizes.</p>";
+  }
+  function shortLabel(f) {
+    var g = null; fieldsOf(S.line).forEach(function (x) { if (x.f === f) g = x.g; });
+    var pre = g && /^m\d$/.test(g.id) ? "Medium " + g.id.slice(1) + ", " : "";
+    if (f.t === "consent") return "Privacy consent";
+    var lab = f.l.replace("Name or short description", "name").replace("Fluid group under the PED", "fluid group");
+    return pre ? pre + lab.charAt(0).toLowerCase() + lab.slice(1) : lab;
+  }
+
+  /* ---------- sheet ---------- */
+  function valueText(line, f, V, B) {
+    var val = V[f.k];
+    if (!filled(f, val)) return null;
+    if (f.t === "radio") { var o = f.opts.filter(function (x) { return x[0] === val; })[0]; return o ? o[1] : val; }
+    if (f.t === "checks") return f.opts.filter(function (x) { return val.indexOf(x[0]) > -1; }).map(function (x) { return x[1]; }).join(", ");
+    if (f.t === "check" || f.t === "consent") return "Yes";
+    if (f.t === "date") return fdate(val);
+    if (f.t === "file") return S.files.map(function (x) { return x.name; }).join(", ");
+    if (f.t === "num") {
+      var n = parseNum(val); if (!isFinite(n)) return String(val);
+      if (f.unit === "DN") return "DN " + fmt(n);
+      if (!f.u) return fmt(n) + (f.unit ? " " + f.unit : "");
+      return fmt(B[f.k]) + " " + UNITS[f.u].base + (f.u === "pressure" ? " g" : "");
+    }
+    return String(val);
+  }
+  function asEntered(line, f, V) {
+    if (f.t !== "num" || !f.u) return "";
+    var n = parseNum(V[f.k]); if (!isFinite(n)) return "";
+    var un = unitOf(line, f); if (un === UNITS[f.u].base) return "";
+    return fmt(n) + " " + un;
+  }
+  function refNo(line, V) {
+    var d = new Date(), str = line + (V.company || "") + (V.email || ""), h = 0;
+    for (var i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0;
+    var yy = String(d.getFullYear()).slice(2), mm = ("0" + (d.getMonth() + 1)).slice(-2), dd = ("0" + d.getDate()).slice(-2);
+    return "RFQ " + yy + mm + dd + " " + h.toString(16).toUpperCase().slice(-4).padStart(4, "0");
+  }
+  function renderSheet() {
+    var doc = $("#sheetDoc"), line = S.line;
+    var today = fdate(new Date().toISOString().slice(0, 10));
+    if (!line) {
+      doc.innerHTML = "<div class=\"tb\"><div class=\"c l logo\"><img src=\"assets/logo.png\" alt=\"Schumacher Verfahrenstechnik GmbH\" width=\"149\" height=\"40\"><div class=\"ttl\">Request for quotation</div></div><div class=\"c\"><dl><dt>Date</dt><dd>" + today + "</dd><dt>Line</dt><dd>not chosen yet</dd></dl></div><div class=\"c status\"><span>Pick a product line above and this sheet fills in as you type.</span></div></div>";
+      return;
+    }
+    var V = valsOf(line), B = baseVals(line), L = LINES[line], miss = (S.missing || []).filter(function (f) { return f.t !== "consent"; }).length;
+    var h = "<div class=\"tb\"><div class=\"c l logo\"><img src=\"assets/logo.png\" alt=\"Schumacher Verfahrenstechnik GmbH\" width=\"149\" height=\"40\"><div class=\"ttl\">Request for quotation</div></div>";
+    h += "<div class=\"c\"><dl><dt>Reference</dt><dd>" + refNo(line, V) + " (demo)</dd><dt>Date</dt><dd>" + today + "</dd><dt>Line</dt><dd>" + esc(L.name) + "</dd><dt>Units</dt><dd>SI, your entry alongside</dd><dt>Customer ref</dt><dd>" + (V.ref ? esc(V.ref) : "none") + "</dd></dl></div>";
+    h += "<div class=\"c status\"><span class=\"" + (miss ? "st-miss" : "st-ok") + "\">" + (miss ? miss + " required " + (miss === 1 ? "value" : "values") + " missing" : "Complete, ready to quote") + "</span><span>" + esc(L.short) + "</span></div></div>";
+    if (S.example[line]) h += "<span class=\"exl\">Example values, not a real request</span>";
+    h += "<div class=\"sdraw\">" + drawing(line, V, B, "s") + "</div>";
+    var sec = 0;
+    var groups = [CONTACT].concat(L.groups);
+    groups.forEach(function (g) {
+      if (g.show && !g.show(V)) return;
+      var rows = "";
+      g.fields.forEach(function (f) {
+        if (f.show && !f.show(V)) return;
+        if (f.t === "consent" || f.t === "check" && f.k === "m3on") return;
+        var vt = valueText(line, f, V, B), ae = asEntered(line, f, V);
+        var cell = vt != null ? esc(vt) : (f.req ? "<span class=\"ms\">missing</span>" : "<span class=\"ng\">not given</span>");
+        rows += "<tr><th scope=\"row\">" + esc(f.l) + "</th><td class=\"v\">" + cell + "</td><td class=\"e\">" + esc(ae) + "</td></tr>";
+      });
+      if (!rows) return;
+      sec++;
+      h += "<h5>" + sec + " &nbsp;" + esc(g.title) + "</h5><table><colgroup><col><col><col></colgroup>" + rows + "</table>";
+    });
+    var rb = readbacks(line, V, B);
+    if (rb.rows.length) { sec++; h += "<h5>" + sec + " &nbsp;Read back</h5><table>" + rb.rows.map(function (r) { return "<tr><th scope=\"row\">" + esc(r[0]) + "</th><td class=\"v\">" + esc(r[1]) + "</td><td class=\"e\"></td></tr>"; }).join("") + "</table>"; }
+    h += "<div class=\"promise\"><b>" + esc(L.promise) + "</b><span>Schumacher Verfahrenstechnik GmbH, Wiehl, +49 2261 546620</span></div>";
+    doc.innerHTML = h;
+  }
+  function sheetText() {
+    var line = S.line; if (!line) return "";
+    var V = valsOf(line), B = baseVals(line), L = LINES[line], out = [];
+    out.push("REQUEST FOR QUOTATION, " + L.name.toUpperCase());
+    out.push(refNo(line, V) + " (demo), " + fdate(new Date().toISOString().slice(0, 10)));
+    if (S.example[line]) out.push("Example values, not a real request");
+    [CONTACT].concat(L.groups).forEach(function (g) {
+      if (g.show && !g.show(V)) return;
+      var rows = [];
+      g.fields.forEach(function (f) {
+        if ((f.show && !f.show(V)) || f.t === "consent" || f.k === "m3on") return;
+        var vt = valueText(line, f, V, B), ae = asEntered(line, f, V);
+        rows.push("  " + f.l + " = " + (vt != null ? vt : (f.req ? "MISSING" : "not given")) + (ae ? "  (entered " + ae + ")" : ""));
+      });
+      if (rows.length) { out.push(""); out.push(g.title.toUpperCase()); out = out.concat(rows); }
+    });
+    out.push(""); out.push(L.promise);
+    return out.join("\n");
+  }
+
+  /* ---------- events ---------- */
+  function setLine(line, scroll) {
+    if (!LINES[line]) return;
+    S.line = line; S.showAll = false;
+    $$(".line").forEach(function (el) { var on = el.getAttribute("data-line") === line; el.classList.toggle("on", on); el.querySelector("input").checked = on; });
+    $("#exBanner").hidden = !S.example[line];
+    renderForm();
+    $("#sent").hidden = true; $("#sendBad").hidden = true;
+    if (scroll) { var t = $("#toolbar"); if (t) t.scrollIntoView({ block: "start" }); }
+  }
+  $$(".line input").forEach(function (r) { r.addEventListener("change", function () { setLine(r.value, false); }); });
+  $$("[data-pick]").forEach(function (a) { a.addEventListener("click", function (e) { e.preventDefault(); setLine(a.getAttribute("data-pick"), true); }); });
+
+  form.addEventListener("input", function (e) {
+    var t = e.target, k = t.name; if (!k || !S.line) return;
+    var f = null; fieldsOf(S.line).forEach(function (x) { if (x.f.k === k) f = x.f; });
+    if (!f) return;
+    var st = store(f);
+    if (f.t === "checks") st[k] = $$("input[name=\"" + k + "\"]:checked", form).map(function (x) { return x.value; });
+    else if (f.t === "check" || f.t === "consent") st[k] = t.checked;
+    else if (f.t === "file") { S.files = Array.prototype.slice.call(t.files || []).map(function (x) { return { name: x.name, size: x.size }; }); renderFiles(); }
+    else st[k] = t.value;
+    if (f.t === "radio" || f.t === "checks" || f.t === "select" || f.t === "check" || f.t === "consent" || f.t === "file") S.touched[k] = true;
+    var structural = f.t === "radio" || f.t === "select" || f.t === "check";
+    if (structural) refresh(true); else schedule();
+  });
+  form.addEventListener("change", function (e) {
+    var t = e.target;
+    if (t.matches("select.unit")) {
+      var k = t.getAttribute("data-unit"), f = null; fieldsOf(S.line).forEach(function (x) { if (x.f.k === k) f = x.f; });
+      var st = store(f), n = parseNum(st[k]), old = unitOf(S.line, f);
+      S.u[S.line][k] = t.value;
+      if (isFinite(n)) { st[k] = plain(fromBase(f.u, t.value, toBase(f.u, old, n))); var inp = $("#f_" + k); if (inp) inp.value = st[k]; }
+      refresh(true);
+    } else if (t.type === "file") {
+      S.files = Array.prototype.slice.call(t.files || []).map(function (x) { return { name: x.name, size: x.size }; }); renderFiles(); refresh(true);
+    }
+  });
+  form.addEventListener("focusout", function (e) { var k = e.target.name; if (k && e.target.type !== "radio" && e.target.type !== "checkbox") { S.touched[k] = true; schedule(); } });
+
+  $$("[data-sys]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var sys = b.getAttribute("data-sys"); if (sys === S.sys) return;
+      S.sys = sys;
+      $$("[data-sys]").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      ["cooling", "mixer", "weld"].forEach(function (line) {
+        fieldsOf(line).forEach(function (x) {
+          var f = x.f; if (f.t !== "num" || !f.u) return;
+          var old = S.u[line][f.k] || (sys === "imperial" ? UNITS[f.u].base : UNITS[f.u].imp);
+          var nu = sys === "imperial" ? UNITS[f.u].imp : UNITS[f.u].base;
+          var st = x.g.shared ? S.v.shared : S.v[line], n = parseNum(st[f.k]);
+          if (isFinite(n) && old !== nu) st[f.k] = plain(fromBase(f.u, nu, toBase(f.u, old, n)));
+          S.u[line][f.k] = nu;
+        });
+      });
+      renderForm();
+    });
+  });
+
+  $("#loadEx").addEventListener("click", function () {
+    if (!S.line) setLine("cooling", false);
+    var line = S.line, ex = EX[line], k;
+    S.v[line] = {}; S.u[line] = {};
+    for (k in ex) S.v[line][k] = Array.isArray(ex[k]) ? ex[k].slice() : ex[k];
+    if (S.sys === "imperial") {
+      fieldsOf(line).forEach(function (x) { var f = x.f; if (f.t === "num" && f.u && !x.g.shared) S.u[line][f.k] = UNITS[f.u].base; });
+    }
+    for (k in EX.shared) S.v.shared[k] = EX.shared[k];
+    S.example[line] = true; $("#exBanner").hidden = false;
+    renderForm();
+  });
+  $("#clearAll").addEventListener("click", function () {
+    if (!S.line) return;
+    S.v[S.line] = {}; S.u[S.line] = {}; S.v.shared = {}; S.files = []; S.touched = {}; S.showAll = false; S.example[S.line] = false;
+    $("#exBanner").hidden = true; renderForm();
+  });
+
+  document.addEventListener("click", function (e) {
+    var fb = e.target.closest("[data-focus]");
+    if (fb) {
+      var k = fb.getAttribute("data-focus"), el = form.querySelector(".fld[data-k=\"" + k + "\"]");
+      if (el) { el.scrollIntoView({ block: "center" }); var i = el.querySelector("input,select,textarea"); if (i) i.focus({ preventScroll: true }); }
+    }
+    if (e.target.closest("[data-print]")) { refresh(true); window.print(); }
+  });
+
+  $("#copyBtn").addEventListener("click", function () {
+    var b = this, txt = sheetText();
+    if (!txt) { b.textContent = "Pick a product line first"; setTimeout(function () { b.textContent = "Copy as text"; }, 1800); return; }
+    var done = function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy as text"; }, 1800); };
+    try { navigator.clipboard.writeText(txt).then(done, function () { fallbackCopy(txt); done(); }); } catch (err) { fallbackCopy(txt); done(); }
+  });
+  function fallbackCopy(txt) { var ta = document.createElement("textarea"); ta.value = txt; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch (e) {} document.body.removeChild(ta); }
+
+  $("#sendBtn").addEventListener("click", function () {
+    var bad = $("#sendBad"), sent = $("#sent");
+    if (!S.line) { bad.hidden = false; bad.textContent = "Pick a product line first, then fill in the form above."; sent.hidden = true; return; }
+    S.showAll = true; refresh(true);
+    if (S.got < S.req) {
+      bad.hidden = false; sent.hidden = true;
+      var onlyConsent = S.missing.every(function (f) { return f.t === "consent"; });
+      bad.textContent = onlyConsent ? "Not sent yet. Tick the privacy box under your details first." : "Not sent yet. " + (S.req - S.got) + " required " + (S.req - S.got === 1 ? "value is" : "values are") + " still missing, marked in red above and on the sheet.";
+      return;
+    }
+    bad.hidden = true;
+    var L = LINES[S.line];
+    sent.innerHTML = "<h3>Request ready</h3><p>This is a demo, so nothing was sent and nothing left your browser. On the live page this sheet goes straight to our team in Wiehl with your files attached.</p><p>" + esc(L.next) + "</p><p class=\"p24\">" + esc(L.promise) + "</p><p>Questions in the meantime? Call +49 2261 546620 or email info@schumacher-vt.de.</p>";
+    sent.hidden = false; sent.focus({ preventScroll: true }); sent.scrollIntoView({ block: "center" });
+  });
+
+  /* ---------- hero drawing ---------- */
+  var heroOrder = ["cooling", "mixer", "weld"], heroI = 0, heroTimer = null, heroPaused = false;
+  function heroDraw(line) {
+    var V = {}, k; for (k in EX[line]) V[k] = EX[line][k];
+    var B = {};
+    fieldsOf(line).forEach(function (x) { if (x.f.t === "num") { var n = parseNum(V[x.f.k]); B[x.f.k] = isFinite(n) ? n : NaN; } });
+    var html = drawing(line, V, B, "h");
+    $("#heroDraw").innerHTML = html;
+    $$("[data-hero]").forEach(function (b) { b.setAttribute("aria-selected", b.getAttribute("data-hero") === line ? "true" : "false"); });
+  }
+  $$("[data-hero]").forEach(function (b) { b.addEventListener("click", function () { heroI = heroOrder.indexOf(b.getAttribute("data-hero")); heroDraw(heroOrder[heroI]); heroPaused = true; }); });
+  var hc = $("#heroCard");
+  hc.addEventListener("mouseenter", function () { heroPaused = true; });
+  hc.addEventListener("focusin", function () { heroPaused = true; });
+  heroDraw("cooling");
+  if (!reduced) heroTimer = setInterval(function () { if (heroPaused || document.hidden) return; heroI = (heroI + 1) % 3; heroDraw(heroOrder[heroI]); }, 5200);
+
+  setLine("cooling", false);
+  window.__sv = { S: S, setLine: setLine, parseNum: parseNum, fmt: fmt, toBase: toBase, fromBase: fromBase, readbacks: readbacks, baseVals: baseVals, valsOf: valsOf, sheetText: sheetText };
+})();
+</script>
+</body>
+</html>
