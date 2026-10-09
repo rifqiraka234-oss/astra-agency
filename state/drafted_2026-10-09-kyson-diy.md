@@ -25,6 +25,25 @@ pages, nextPage null on page 2, newest ours (11.36 UTC, "I just sent you the pro
 
 ## Kyson Charles, Acquitas. ctc_CDeGfHHs3eCrYJR32
 
+SUPERSEDED by version 2 below, Raka wants to show him the difference. Kept as a quote for the record.
+
+> Hi Kyson,
+>
+> Fair enough. The profile's easy to add yourself, and Claude will get you a basic calculator.
+>
+> If you build it, check that the numbers an owner types in actually land in your inbox, and get a privacy page up before you collect them. Keep the multiples sourced too, because a seller will hold you to whatever range it shows.
+>
+> In my summary after the call I said I'd price this two ways, and the proposal only did the fixed fee. So here's the other one. £500 now, the same as your current site, and the other £2,000 when your first mandate signs. It works like your own fee, a little upfront and the rest on a result.
+>
+> Or we leave the site for now and start with the outreach setup, since that's what decides how many owners you reach this year.
+>
+> Which would suit you?
+>
+> Best,
+> Raka
+
+Version 2. Adds the concept site he called "actually really good" (LinkedIn, 29 Sep) so he can compare it with his own. Link checked 9 Oct, 200, title "Acquitas Partners".
+
 REPLY
 
 ```
@@ -34,11 +53,12 @@ Fair enough. The profile's easy to add yourself, and Claude will get you a basic
 
 If you build it, check that the numbers an owner types in actually land in your inbox, and get a privacy page up before you collect them. Keep the multiples sourced too, because a seller will hold you to whatever range it shows.
 
+The concept site you said was really good is still up, if you want to put the two side by side.
+https://astra-acquitas-prototype.netlify.app
+
 In my summary after the call I said I'd price this two ways, and the proposal only did the fixed fee. So here's the other one. £500 now, the same as your current site, and the other £2,000 when your first mandate signs. It works like your own fee, a little upfront and the rest on a result.
 
-Or we leave the site for now and start with the outreach setup, since that's what decides how many owners you reach this year.
-
-Which would suit you?
+Or we leave the site for now and start with the outreach setup. Which would suit you?
 
 Best,
 Raka
