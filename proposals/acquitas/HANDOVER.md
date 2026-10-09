@@ -44,3 +44,11 @@ Files: `proposal.html`, `proposal.pdf` (2 pages), `img/concept-site.png`, `img/v
 
 - Nothing was sent to anyone.
 - The Astra logo is the mark only, from astraagency.nl's logo file.
+
+## Revision 5 (LinkedIn Premium, SEO, further builds)
+
+- **LinkedIn Premium is a subscription Kyson holds**, listed beside lemlist and Claude. **Price is a placeholder: "[price to confirm]".** I could not verify a UK list price. Search results gave $29.99 and $39.99 for Premium Career, and the official page did not render prices. Confirm the tier and price, then replace the placeholder before sending. Tier also matters: Premium Career is not Sales Navigator.
+- **Strategy session** now covers signals and how to get the most from LinkedIn Premium.
+- **Search engine optimisation** is a bullet in the website's included list.
+- **Further builds** table: "Website further development" and "CRM build" added, both at £150 an hour, the same hourly rate as the earlier extension and CRM line in the pricing notes. Confirm.
+- Revision 5 pages: still two pages. Page 1 ends at 1108px, page 2 at 1111px of 1123px.
