@@ -1,0 +1,174 @@
+[
+ {
+  "tag": "pb_valuation",
+  "url": "https://www.purplebricks.co.uk/instant-valuation",
+  "status": 404,
+  "final": "https://www.purplebricks.co.uk/instant-valuation",
+  "title": "Page not found",
+  "m": {
+   "inputs": 9,
+   "buttons": 19,
+   "svg": 11,
+   "canvas": 0,
+   "video": 0,
+   "iframes": [
+    "",
+    "https://consentcdn.cookiebot.com/sdk/bc-v4.min.html",
+    "https://apps.euw2.pure.cloud/messenger/thirdparty-plugins.html",
+    "https://apps.euw2.pure.cloud/genesys-bootstrap/hub.html"
+   ],
+   "h1": "404",
+   "text": "Consent Details About Your data. Your choice. We use necessary cookies which will be stored on your device to provide online services. By clicking “Allow All Cookies” you also consent to the storing of other types of cookies on your device and related processing of your personal data to enhance site navigation, analyse site usage, and assist in our marketing efforts. You can manage your consent and learn more about this in 'Cookie Settings' any time. Reject Optional Cookies Cookie Settings Allow All Cookies Instruct Purplebricks FAQs Sell for as little as £999 no upfront fees Selling Buying Le"
+  }
+ },
+ {
+  "tag": "onthemarket",
+  "url": "https://www.onthemarket.com/",
+  "status": 200,
+  "final": "https://www.onthemarket.com/",
+  "title": "OnTheMarket | Property, Houses & Flats for Sale & to Rent",
+  "m": {
+   "inputs": 1,
+   "buttons": 11,
+   "svg": 56,
+   "canvas": 0,
+   "video": 0,
+   "iframes": [],
+   "h1": "Choose your cookies",
+   "text": "Choose your cookies We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze site usage. By clicking \"Accept All Cookies\", you agree to our use of cookies. Accept AllEssential cookies only Strictly Necessary Cookies - always active These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about"
+  }
+ },
+ {
+  "tag": "pattinson",
+  "url": "https://www.pattinson.co.uk/",
+  "status": 403,
+  "final": "https://www.pattinson.co.uk/",
+  "err_d": "Error: page.title: Execution context was destroyed, most likely because of a navigation"
+ },
+ {
+  "tag": "reedsrains",
+  "url": "https://www.reedsrains.co.uk/",
+  "status": 200,
+  "final": "https://www.reedsrains.co.uk/",
+  "title": "Estate Agents & Letting Agents - Reeds Rains",
+  "m": {
+   "inputs": 8,
+   "buttons": 10,
+   "svg": 17,
+   "canvas": 0,
+   "video": 0,
+   "iframes": [],
+   "h1": "Reeds Rains Estate and Letting Agent",
+   "text": "You're in control We use cookies to provide the best experience on our website. To learn more about how we use cookies, please see our Cookie Policy. You can manage your preferences now on this banner, or via your browser at anytime. Manage Accept Skip to content Search site Submit Instant valuation Contact MyReedsRains Property search Sell Buy Landlords Rent Find a branch Book a valuation Thinking of moving? With over 150 years of expertise we're masters in the art of selling and letting. Book a free valuation Book a lettings consultation Or start with an online valuation Rated 4.7 / 5 based "
+  }
+ },
+ {
+  "tag": "bridgfords",
+  "url": "https://www.bridgfords.co.uk/",
+  "status": 403,
+  "final": "https://www.bridgfords.co.uk/",
+  "title": "Just a moment...",
+  "m": {
+   "inputs": 1,
+   "buttons": 0,
+   "svg": 0,
+   "canvas": 0,
+   "video": 0,
+   "iframes": [],
+   "h1": "www.bridgfords.co.uk",
+   "text": "www.bridgfords.co.uk Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a47dc9629b69e76c Performance and Security by Cloudflare Privacy"
+  }
+ },
+ {
+  "tag": "propertydata",
+  "url": "https://propertydata.co.uk/valuation",
+  "status": 200,
+  "final": "https://propertydata.co.uk/valuation",
+  "title": "Valuation - PropertyData",
+  "m": {
+   "inputs": 3,
+   "buttons": 11,
+   "svg": 61,
+   "canvas": 0,
+   "video": 0,
+   "iframes": [],
+   "h1": "Customise your cookie preferences",
+   "text": "We use cookies on our site to enhance your user experience, provide personalised content, and analyse our traffic. Cookie Policy. Accept all Reject non-essential Preferences Research Local Data Comprehensive analytics for any custom local area in the UK Postcode Data Key property investment data by postcode district Yield hotspots Newsroom National Charts Browser extension Council Tax Index Research overview Source ON-MARKET On-market search 75,000 properties available now matching 36 different investor and developer strategies Unmodernised Repossessed Cash buyers only HMO licenced Rent-to-ren"
+  }
+ },
+ {
+  "tag": "nationwide2",
+  "url": "https://www.nationwide.co.uk/house-price-index/house-price-calculator",
+  "status": 404,
+  "final": "https://www.nationwide.co.uk/house-price-index/house-price-calculator",
+  "title": "Page not found | Nationwide",
+  "m": {
+   "inputs": 9,
+   "buttons": 19,
+   "svg": 39,
+   "canvas": 0,
+   "video": 1,
+   "iframes": [
+    ""
+   ],
+   "h1": "Sorry, we can't find the page you want",
+   "text": "Skip to main content of page Personal Business Search Branch Contact Help Log in Internet Banking Log in Log in to the internet bank Information: We’ve got some work coming up. Learn more. Register for the internet bank Log in and registration support Service status Other Nationwide services Log in to Mortgage Manager Aegon Customer Dashboard Home Insurance account L&G MyAccount Current accounts Savings and ISAs Mortgages Loans Credit cards Insurance Supporting you Why Nationwide Home Sorry, we can't find the page you want The most common reasons include: It’s our mistake and the page is curre"
+  }
+ },
+ {
+  "tag": "foxtons2",
+  "url": "https://www.foxtons.co.uk/",
+  "status": 200,
+  "final": "https://www.foxtons.co.uk/",
+  "title": "Foxtons: Estate Agents In London. Properties for Sale, Short & Long lets",
+  "m": {
+   "inputs": 2,
+   "buttons": 22,
+   "svg": 29,
+   "canvas": 0,
+   "video": 0,
+   "iframes": [
+    ""
+   ],
+   "h1": "London's Estate Agent",
+   "text": "Buy Rent Landlords Sell Discover Contact Get a valuation Login London's Estate Agent Get it done with London's number 1 Buy Rent ​ Search Location Map Draw Travel Time School Station Near me Find out your home's sales or rental value Get a free valuation When you need experts Let your property hassle free 96% of the asking price consistently achieved Let your property What's your home worth? More sales agreed in London than any other agent Sell your property Find the right property to rent 332 new listings each week Rent a property Find the right property for sale 356 new properties registered"
+  }
+ },
+ {
+  "tag": "compass",
+  "url": "https://www.compass.com/",
+  "status": 200,
+  "final": "https://www.compass.com/",
+  "title": "Real Estate, Homes for Sale & Apartments for Rent | Compass",
+  "m": {
+   "inputs": 6,
+   "buttons": 34,
+   "svg": 37,
+   "canvas": 0,
+   "video": 0,
+   "iframes": [
+    "https://www.google.com/recaptcha/enterprise/anchor?ar=1&k=6Ld-u_UUAAAAAPU09eEm6L",
+    ""
+   ],
+   "h1": "See It First™ on Compass",
+   "text": "Buy Rent Sell Compass Exclusives New Development Agents Register/Sign In See It First™ on Compass Find more homes. search type Buy Rent Sell Search for Properties or Agents You can enter an address, city, neighborhood, zip, agent or MLS number Compass Exclusives Be the first to browse exclusive listings before they hit the market. 1/148 SEE IT FIRST COMPASS COMING SOON $1,850,000 5 5 Bedrooms beds 4 4 Bathrooms baths 5,052 5,052 Square Feet sqft 0.18 0.18 Acres acres 3742 Abbott Avenue South, Minneapolis, MN 55410 1/104 SEE IT FIRST COMPASS COMING SOON $7,600,000 5 5 Bedrooms beds 7 7 Bathroom"
+  }
+ },
+ {
+  "tag": "homipi",
+  "url": "https://www.homipi.co.uk/",
+  "status": 403,
+  "final": "https://www.homipi.co.uk/",
+  "title": "Just a moment...",
+  "m": {
+   "inputs": 1,
+   "buttons": 0,
+   "svg": 0,
+   "canvas": 0,
+   "video": 0,
+   "iframes": [],
+   "h1": "www.homipi.co.uk",
+   "text": "www.homipi.co.uk Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a47dcb61dfd6d6df Performance and Security by Cloudflare Privacy"
+  }
+ }
+]
