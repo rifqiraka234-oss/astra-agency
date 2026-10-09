@@ -83,7 +83,7 @@ SUPERSEDED by version 5 below, Raka's own structure. Kept as a quote.
 >
 > Raka
 
-Version 5. Raka's structure and wording, tidied. Same sources as version 4.
+Version 5. Raka's structure and wording, tidied. Same sources as version 4. News paragraph rewritten without numbers on Raka's note, Veracode dropped.
 
 REPLY
 
@@ -92,7 +92,7 @@ Hi Kyson,
 
 Sure, you can vibe code a lot of things these days. However, Claude will give you a prototype, and sellers won't trust their numbers to a prototype.
 
-You've probably seen the news. Fixing vibe coded sites is now a paid profession. Replit's AI wiped a founder's database during a code freeze. 170 of 1,645 apps built on Lovable left their users' names, emails and financial details open to anyone. Veracode found AI written code introduced security flaws in 45% of its tests.
+You've probably seen the news. There are developers now who make a living just fixing vibe coded sites. Replit's AI deleted a founder's database in the middle of a code freeze, and apps built on Lovable were caught leaving their users' details open to anyone.
 
 That's where we come in.
 
