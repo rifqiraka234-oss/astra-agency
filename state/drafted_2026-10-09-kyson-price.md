@@ -78,7 +78,7 @@ Hi Kyson,
 
 Fair challenge, so let me be straight about where the number comes from.
 
-We looked at what UK agencies charge. A standard brochure site typically runs £3,000 to £5,000, and that's before SEO or anything custom.
+We looked at what UK agencies charge. A standard brochure site typically runs £3,000 to £5,000. That's before SEO or anything custom.
 
 What you're getting goes well beyond a website. A full redesign of your brand and site, so a seller trusts you before the first call. The value calculator, which is a web app in its own right and brings owners to you with their numbers already in your inbox. SEO, so owners looking for an adviser find you. And all of it on proper infrastructure rather than a template builder, so it's fast and secure. We build for brands like Unilever, AXA, Pertamina. Acquitas gets the same standard.
 
