@@ -25,3 +25,26 @@ It's a range rather than one flattering number, which fits what your August arti
 
 What do you think?
 ```
+
+### Nick Richards, Enrich Education, ctc_MDdiddoYGMJGaDFHn
+
+Built and live, https://astra-enrichedu-prototype.netlify.app , deploy 6ac8f44a1c6d681435b9c200. Lead session check 9 Oct,
+200, title "Charge breakdown | Enrich Education Recruitment", desktop sections looked at, weekly employer NI £78.05 and
+pension £14.90 on the example recomputed by hand from the rates the page cites. The example is "KS2 LSA in Camden, five days a
+week" at £110 a day, inside the £105 to £120 on his live advert https://www.enrichedu.co.uk/jobs/ks2-lsa , and a £30 fee
+labelled "Example, not Enrich's fee". The page also compares the fee with the GCA framework cap for the role. Raka should know
+that, since Enrich isn't on the framework.
+
+DELIVERY
+```
+Nick, I built the breakdown tool from my last message, so you can try it on a real booking.
+
+You put in the pay, the days and your fee, and it works out the holiday pay, National Insurance and pension from this year's gov.uk rates, then gives a one page breakdown per candidate that a trust can file.
+
+Try it yourself.
+https://astra-enrichedu-prototype.netlify.app
+
+It's set up on a role like your Camden KS2 LSA, with example figures you'd swap for your own.
+
+Would it save you time on the trust bookings?
+```
