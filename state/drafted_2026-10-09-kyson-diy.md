@@ -83,7 +83,7 @@ SUPERSEDED by version 5 below, Raka's own structure. Kept as a quote.
 >
 > Raka
 
-Version 5. Raka's structure and wording, tidied. Same sources as version 4. News paragraph rewritten without numbers on Raka's note, Veracode dropped.
+Version 5. Raka's structure and wording, tidied. Same sources as version 4. News paragraph rewritten without numbers on Raka's note, Veracode dropped. Luna line added on Raka's note, proposal.html names 'A branding session with Luna'.
 
 REPLY
 
@@ -94,7 +94,7 @@ Sure, you can vibe code a lot of things these days. However, Claude will give yo
 
 You've probably seen the news. There are developers now who make a living just fixing vibe coded sites. Replit's AI deleted a founder's database in the middle of a code freeze, and apps built on Lovable were caught leaving their users' details open to anyone.
 
-That's where we come in.
+That's where we come in. And a redesign is about how a nervous owner feels when they land on your site, which Claude can't judge. Luna, who's on copy here, handles that side.
 
 And on the calculator, Wix won't even run a pasted one directly. You're asking owners to trust you with their life's work. Your site has to earn that.
 
