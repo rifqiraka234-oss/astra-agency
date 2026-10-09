@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acquitas Partners Proposal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Sora', sans-serif;
+      background-color: #faf8f6;
+      color: #1d1d1e;
+      font-size: 10pt;
+      line-height: 1.5;
+    }
+
+    section.page {
+      width: 210mm;
+      height: 297mm;
+      display: block;
+      page-break-after: always;
+      background: #faf8f6;
+      padding: 15mm 16mm;
+      overflow: hidden;
+    }
+
+    section.page:nth-child(1) {
+      page-break-after: always;
+    }
+
+    .header {
+      background: #0d1b38;
+      color: white;
+      padding: 10mm 16mm;
+      margin: -15mm -16mm 8mm -16mm;
+      text-align: center;
+    }
+
+    .header-small {
+      font-size: 8pt;
+      letter-spacing: 1px;
+      margin-bottom: 6mm;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .header-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 24pt;
+      font-weight: 500;
+      margin-bottom: 4mm;
+      line-height: 1.3;
+    }
+
+    .header-subtitle {
+      font-size: 8pt;
+      color: #ccc;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #0d1b38;
+      margin-top: 6mm;
+      margin-bottom: 3mm;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding-bottom: 2mm;
+      border-bottom: 0.5pt solid #415a8d;
+    }
+
+    .section {
+      margin-bottom: 5mm;
+    }
+
+    .intro-text {
+      font-size: 9.5pt;
+      line-height: 1.6;
+      color: #1d1d1e;
+      margin-bottom: 3mm;
+    }
+
+    ul, ol {
+      margin-left: 5mm;
+      margin-bottom: 3mm;
+    }
+
+    li {
+      font-size: 9.5pt;
+      line-height: 1.5;
+      margin-bottom: 1.5mm;
+      color: #1d1d1e;
+    }
+
+    .goals-box {
+      background: #f0f4f9;
+      border: 1pt solid #ede8e3;
+      padding: 4mm;
+      border-radius: 2px;
+      margin: 3mm 0;
+    }
+
+    .goals-box ol {
+      margin-left: 4mm;
+    }
+
+    .goal-item {
+      font-size: 9.5pt;
+      line-height: 1.5;
+      margin-bottom: 2mm;
+      color: #1d1d1e;
+    }
+
+    .phase-intro {
+      font-size: 9.5pt;
+      color: #1d1d1e;
+      margin-bottom: 2mm;
+      font-style: italic;
+    }
+
+    .item {
+      margin-bottom: 6mm;
+      padding-bottom: 3mm;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2mm;
+    }
+
+    .item-title {
+      font-size: 10pt;
+      font-weight: 600;
+      color: #0d1b38;
+    }
+
+    .item-price {
+      font-size: 10pt;
+      font-weight: 600;
+      color: #415a8d;
+      text-align: right;
+    }
+
+    .item-description {
+      font-size: 9.5pt;
+      line-height: 1.6;
+      margin-bottom: 2mm;
+      color: #1d1d1e;
+    }
+
+    .item-list {
+      font-size: 9pt;
+      line-height: 1.5;
+      margin-left: 4mm;
+      margin-bottom: 2mm;
+      color: #1d1d1e;
+    }
+
+    .item-list li {
+      font-size: 9pt;
+      margin-bottom: 1mm;
+    }
+
+    .how-we-build {
+      font-size: 9pt;
+      line-height: 1.6;
+      background: #f5f2ef;
+      padding: 2mm 3mm;
+      margin-bottom: 2mm;
+      border-left: 2pt solid #415a8d;
+    }
+
+    .concept-image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 3mm 0 2mm 0;
+      border-radius: 1px;
+    }
+
+    .image-caption {
+      font-size: 8pt;
+      color: #7d766f;
+      font-style: italic;
+      margin-bottom: 3mm;
+      line-height: 1.4;
+    }
+
+    .illustration-card {
+      background: #f5f2ef;
+      border: 1pt solid #ede8e3;
+      padding: 3mm;
+      font-size: 8.5pt;
+      line-height: 1.5;
+      margin: 2mm 0;
+      position: relative;
+      border-radius: 1px;
+    }
+
+    .illustration-label {
+      position: absolute;
+      top: 1.5mm;
+      right: 2mm;
+      background: #678bbf;
+      color: white;
+      padding: 0.8mm 1.5mm;
+      font-size: 6.5pt;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 2px;
+      text-transform: uppercase;
+    }
+
+    .illustration-content {
+      color: #1d1d1e;
+    }
+
+    .illustration-field {
+      margin-bottom: 1mm;
+    }
+
+    .illustration-label-text {
+      font-weight: 600;
+      color: #415a8d;
+      font-size: 8pt;
+    }
+
+    .illustration-value {
+      color: #1d1d1e;
+      font-size: 8.5pt;
+    }
+
+    .draft-message {
+      font-size: 8.5pt;
+      color: #1d1d1e;
+      font-style: italic;
+      margin-top: 1.5mm;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 3mm 0;
+      font-size: 9pt;
+    }
+
+    table td {
+      padding: 2mm 2mm;
+      border: none;
+    }
+
+    table td:first-child {
+      text-align: left;
+      color: #1d1d1e;
+    }
+
+    table td:last-child {
+      text-align: right;
+      color: #1d1d1e;
+      font-weight: 600;
+    }
+
+    table tr:last-child td {
+      border-top: 1pt solid #415a8d;
+      font-weight: 600;
+      color: #0d1b38;
+      padding-top: 2mm;
+    }
+
+    .pricing-note {
+      font-size: 8pt;
+      color: #7d766f;
+      margin-top: 2mm;
+      line-height: 1.5;
+    }
+
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 4mm 0;
+      padding: 3mm 0;
+    }
+
+    .timeline-item {
+      flex: 1;
+      text-align: center;
+      font-size: 8.5pt;
+      color: #1d1d1e;
+    }
+
+    .timeline-item:not(:last-child)::after {
+      content: '';
+      display: block;
+      position: relative;
+      top: -8mm;
+      left: 50%;
+      width: 100%;
+      height: 1pt;
+      background: #415a8d;
+    }
+
+    .timeline-step {
+      font-weight: 600;
+      color: #0d1b38;
+      margin-bottom: 1mm;
+    }
+
+    .timeline-desc {
+      font-size: 8pt;
+      color: #7d766f;
+    }
+
+    .options-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5pt;
+      margin: 3mm 0;
+    }
+
+    .options-table td {
+      padding: 1.5mm 2mm;
+      border-bottom: 1pt solid #ede8e3;
+      color: #1d1d1e;
+    }
+
+    .options-table td:first-child {
+      text-align: left;
+    }
+
+    .options-table td:nth-child(2) {
+      text-align: left;
+      color: #7d766f;
+      font-size: 8pt;
+    }
+
+    .options-table td:last-child {
+      text-align: right;
+      font-weight: 500;
+      color: #415a8d;
+    }
+
+    .closing {
+      font-size: 9.5pt;
+      line-height: 1.6;
+      margin-top: 4mm;
+      padding-top: 3mm;
+      border-top: 1pt solid #ede8e3;
+    }
+
+    .signature {
+      font-size: 9.5pt;
+      color: #1d1d1e;
+      margin-top: 2mm;
+      line-height: 1.5;
+    }
+
+    .footer {
+      font-size: 7.5pt;
+      color: #7d766f;
+      margin-top: 4mm;
+      padding-top: 2mm;
+      border-top: 1pt solid #ede8e3;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+<section class="page">
+  <div class="header">
+    <div class="header-small">Astra Agency · Proposal</div>
+    <div class="header-title">A website that wins a seller's trust, and an easier way to reach them</div>
+    <div class="header-subtitle">Prepared for Kyson Charles, Acquitas Partners · 9 October 2026</div>
+  </div>
+
+  <div class="section">
+    <h2>What we looked at</h2>
+    <p class="intro-text">Before our call we read every page of acquitaspartners.com, your Companies House record and the latest deal numbers in your sectors. Buyers are busy. CapEQ counted 155 sales under £100m in testing, inspection, certification and compliance across the UK and Europe in the twelve months to August 2026. Your site describes the right firm, founder focused, discreet and backed by operators. What a seller can't see yet is who you are, how a sale runs with you, and how your fee works.</p>
+  </div>
+
+  <div class="section">
+    <h2>What you told us</h2>
+    <ul>
+      <li>Your focus right now's signing your first mandate, and then an office and a first hire.</li>
+      <li>Sellers who got close and stopped, stopped at the fee, mostly because they didn't know how it works.</li>
+      <li>You find owners by hand on LinkedIn, and the paid databases aren't easy to justify before the first deal.</li>
+      <li>You liked the value calculator, and you want your own profile on the site either way.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Your goals</h2>
+    <div class="goals-box">
+      <ol style="margin: 0;">
+        <li class="goal-item">Sign your first mandate, then build towards two or three deals over the next twelve months.</li>
+        <li class="goal-item">Have sellers understand your fee before the first call, not halfway through it. It shouldn't be a surprise.</li>
+        <li class="goal-item">Reach more owners each week without hiring yet.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Phase one. What we'll build</h2>
+    <p class="phase-intro">Three things, together €3,500. Each one serves one of the goals above.</p>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">Your new website</div>
+        <div class="item-price">€2,500</div>
+      </div>
+      <p class="item-description">A site that shows a seller who's running their sale, and says what Acquitas stands for before they've read a word. The look, the photography and the words are built around your mission, helping owners achieve better exits, with the calm, senior feel of a firm trusted with the biggest sale of someone's life.</p>
+
+      <p style="font-size: 9pt; font-weight: 600; color: #415a8d; margin-bottom: 1.5mm;">What's included</p>
+      <ul class="item-list">
+        <li>Pages for Home, About you, How a sale works, Fees, Sectors, Value calculator, Questions, Contact and Privacy</li>
+        <li>Your story and photo, so sellers know who they'll deal with</li>
+        <li>A plain page on how your fee works, so it never comes as a surprise</li>
+        <li>The value calculator. An owner moves a few sliders and sees a rough value for their business, then the tax on the sale, then your fee, then what they'd keep. Every owner who uses it arrives in your inbox with their answers</li>
+        <li>An easy editor, so you can change text, swap photos and add news yourself, no code needed</li>
+        <li>Works on phones, set up to be found on Google, moved onto your own web address, with your email left exactly as it's</li>
+      </ul>
+
+      <p style="font-size: 9pt; font-weight: 600; color: #415a8d; margin-bottom: 1.5mm;">How we build it</p>
+      <div class="how-we-build">We'll collect your story, a photo you're happy with and how you explain your fee. We build the site on a private preview link, you click through it and send us your changes, and once you're happy it goes live. Then we'll show you how to edit it yourself.</div>
+
+      <img src="img/concept-site.png" class="concept-image" alt="Concept site">
+      <p class="image-caption">The concept you've already seen. The finished site uses your own photo and words.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <img src="img/value-calculator.png" style="width: 50%; max-width: 65mm; height: auto; margin-bottom: 2mm; margin-right: 2mm; float: left;" alt="Value calculator">
+
+  <div class="section">
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">Your outreach assistant</div>
+        <div class="item-price">€625</div>
+      </div>
+      <p class="item-description">A simple setup that lets you reach more owners each week. The research and first drafts are done for you, and you'll stay in control of every message you send.</p>
+
+      <ul class="item-list">
+        <li>One place for LinkedIn and email. Your connection requests, follow ups and replies run from one tool instead of by hand</li>
+        <li>A research helper. Type in a company and it gives you a short brief on the business and its owner, and a first message in your voice. You check it and send it</li>
+        <li>A walkthrough, so you can run it yourself each week</li>
+      </ul>
+
+      <p style="font-size: 9pt; font-weight: 600; color: #415a8d; margin-bottom: 1.5mm;">How we build it</p>
+      <div class="how-we-build">We'll connect your LinkedIn and email, write your first set of messages for owners in your sectors, and set up the research helper with your sectors, your tone and what to look for. Then we'll run it once together.</div>
+
+      <div class="illustration-card">
+        <div class="illustration-label">illustration</div>
+        <div class="illustration-content">
+          <div class="illustration-field"><span class="illustration-label-text">Input</span> <span class="illustration-value">Example Testing Ltd</span></div>
+          <div class="illustration-field"><span class="illustration-label-text">Owner.</span> <span class="illustration-value">Founder, in post 22 years, holds the shares</span></div>
+          <div class="illustration-field"><span class="illustration-label-text">Business.</span> <span class="illustration-value">Calibration lab, 35 staff, accredited, steady repeat customers</span></div>
+          <div class="illustration-field"><span class="illustration-label-text">Why now.</span> <span class="illustration-value">Founder's age and length in post suggest an exit within a few years</span></div>
+          <div class="draft-message">Hi James, I noticed you've built something unusual here...</div>
+        </div>
+      </div>
+      <p class="image-caption">An example of what the research helper gives you. Names and details here are made up.</p>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div class="item-title">A strategy session</div>
+        <div class="item-price">€375</div>
+      </div>
+      <p class="item-description">Two hours with us on how to write to owners. What to say first, how to raise your fee early so it never surprises anyone, what to avoid on LinkedIn, and what's working in outreach right now.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Summary</h2>
+    <table>
+      <tr>
+        <td>Your new website</td>
+        <td style="text-align: right;">€2,500, half to start and half at launch</td>
+      </tr>
+      <tr>
+        <td>Your outreach assistant</td>
+        <td style="text-align: right;">€625</td>
+      </tr>
+      <tr>
+        <td>A strategy session</td>
+        <td style="text-align: right;">€375</td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td style="text-align: right;">€3,500</td>
+      </tr>
+    </table>
+    <p class="pricing-note">Prices in euros, excluding VAT. No monthly fee and no minimum term. Your outreach tools are in your name and billed to you directly, lemlist at $109 a month and Claude at $20 a month, their list prices on 7 October 2026. We'll confirm any hosting cost for the new site before we start.</p>
+  </div>
+
+  <div class="section">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-step">Weeks 1 to 2</div>
+        <div class="timeline-desc">Your website goes live</div>
+      </div>
+      <div style="flex: 0.5; border-top: 1pt solid #415a8d; height: 0; margin: 0 1mm;"></div>
+      <div class="timeline-item">
+        <div class="timeline-step">Week 3</div>
+        <div class="timeline-desc">Outreach assistant set up, and the strategy session</div>
+      </div>
+      <div style="flex: 0.5; border-top: 1pt solid #415a8d; height: 0; margin: 0 1mm;"></div>
+      <div class="timeline-item">
+        <div class="timeline-step">From week 4</div>
+        <div class="timeline-desc">You run it, we're on hand</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>When you're ready</h2>
+    <table class="options-table">
+      <tr>
+        <td>Buyer's view check</td>
+        <td>An owner types in their company name and gets a one page view of how a buyer sees the business. You get their details</td>
+        <td>€1,500</td>
+      </tr>
+      <tr>
+        <td>AI LinkedIn assistant</td>
+        <td>Writes to owners on your list and follows up for you</td>
+        <td>€600, then €75 per meeting booked</td>
+      </tr>
+      <tr>
+        <td>Exit plan builder</td>
+        <td>An owner says when they'd like to sell and gets a dated plan by email</td>
+        <td>€1,500</td>
+      </tr>
+      <tr>
+        <td>Who's buying in your sector</td>
+        <td>Recent deals in your niches, with email alerts owners can sign up for</td>
+        <td>€1,500</td>
+      </tr>
+      <tr>
+        <td>Sector value pages</td>
+        <td>A page for each niche so owners searching Google find you</td>
+        <td>€500 a page</td>
+      </tr>
+      <tr>
+        <td>Anything else</td>
+        <td>Built, set up or fixed, agreed before we start</td>
+        <td>€150 an hour</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="closing">
+    <p>To start, reply to say go and send your story, a photo and how you explain your fee. We'll book our second call for the week after next to walk you through it. If you've got questions, let's chat about them then.</p>
+    <div class="signature">
+      <strong>Raka</strong> · Astra Agency · raka@astraagency.nl · astraagency.nl
+    </div>
+  </div>
+
+  <div class="footer">
+    Sources. CapEQ, UK and European TICC M&A Report 2026. lemlist and Claude pricing pages, 7 October 2026.
+  </div>
+</section>
+
+</body>
+</html>
