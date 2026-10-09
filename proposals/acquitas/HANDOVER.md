@@ -52,3 +52,11 @@ Files: `proposal.html`, `proposal.pdf` (2 pages), `img/concept-site.png`, `img/v
 - **Search engine optimisation** is a bullet in the website's included list.
 - **Further builds** table: "Website further development" and "CRM build" added, both at £150 an hour, the same hourly rate as the earlier extension and CRM line in the pricing notes. Confirm.
 - Revision 5 pages: still two pages. Page 1 ends at 1108px, page 2 at 1111px of 1123px.
+
+## Revision 6 (social media and inbound and sales outreach management)
+
+- Two rows added to "Further builds, agreed when you're ready", both with **"Price to be confirmed"** in place of Raka's TBA and CBA:
+  - **Social media management.** "We run your social media for you."
+  - **Inbound and sales outreach.** "We manage your inbound and outbound sales outreach for you." Raka called this "go to market management". The brief bans "go to market" in visible text, so I used plain English. Confirm.
+- "Website further development" is now "Website development" to keep the table tidy.
+- Two pages. Page 1 ends at 1108px, page 2 at 1121px of 1123px.
