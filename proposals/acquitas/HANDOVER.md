@@ -77,3 +77,7 @@ Files: `proposal.html`, `proposal.pdf` (2 pages), `img/concept-site.png`, `img/v
 - Removed the "Prices in pounds sterling, excluding VAT" note.
 - Cut filler: "Three elements, together £3,500, each serving..." is now "Three elements, together £3,500". "A focused setup ... remain in control" is now "A simple setup ... stay in control". "Works beautifully" is now "Works". The brand sentence is shorter.
 - Two pages. Page 1 ends at 1054px, page 2 at 1073px of 1123px.
+
+## Revision 10
+
+- Added a "Timeline" heading above the three-step timeline. Page 2 ends at 1106px of 1123px, two pages.
