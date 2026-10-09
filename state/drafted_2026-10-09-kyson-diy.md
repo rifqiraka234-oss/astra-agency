@@ -44,23 +44,44 @@ SUPERSEDED by version 2 below, Raka wants to show him the difference. Kept as a 
 
 Version 2. Adds the concept site he called "actually really good" (LinkedIn, 29 Sep) so he can compare it with his own. Link checked 9 Oct, 200, title "Acquitas Partners".
 
+SUPERSEDED by version 4 below, Raka wants it sterner and shorter, with the vibe coding facts and the Qualigraf link. Kept as a quote.
+
+> Hi Kyson,
+>
+> Fair enough. The profile's easy to add yourself, and Claude will get you a basic calculator.
+>
+> If you build it, check that the numbers an owner types in actually land in your inbox, and get a privacy page up before you collect them. Keep the multiples sourced too, because a seller will hold you to whatever range it shows.
+>
+> The concept site you said was really good is still up, if you want to put the two side by side.
+> https://astra-acquitas-prototype.netlify.app
+>
+> In my summary after the call I said I'd price this two ways, and the proposal only did the fixed fee. So here's the other one. £500 now, the same as your current site, and the other £2,000 when your first mandate signs. It works like your own fee, a little upfront and the rest on a result.
+>
+> Or we leave the site for now and start with the outreach setup. Which would suit you?
+>
+> Best,
+> Raka
+
+Version 4. Sources, each opened 9 Oct. 404 Media 11 Sep 2025 "a growing profession". Fortune 23 Jul 2025, Replit agent wiped data during a "code and action freeze". Semafor 29 May 2025, 170 of 1,645 Lovable apps let anyone read users' names, emails, financial information. Veracode's own page, "introduced risky security flaws in 45% of tests". ConvertCalculator, "Wix doesn't allow for direct embedding via JavaScript. Instead, Wix uses an iFrame." Qualigraf link 200, not visually rechecked (site-audit RENDER NOT TRUSTED on our side). Flag, Qualigraf is a live prospect, call 4 Nov, concept not yet approved by Steven.
+
 REPLY
 
 ```
 Hi Kyson,
 
-Fair enough. The profile's easy to add yourself, and Claude will get you a basic calculator.
+The profile, sure, add it yourself.
 
-If you build it, check that the numbers an owner types in actually land in your inbox, and get a privacy page up before you collect them. Keep the multiples sourced too, because a seller will hold you to whatever range it shows.
+The calculator is a different story. Claude will give you a prototype, and sellers won't trust their numbers to a prototype. Fixing vibe coded sites is now a paid profession. Replit's AI wiped a founder's database during a code freeze. 170 of 1,645 apps built on Lovable left their users' names, emails and financial details open to anyone. Veracode found AI written code introduced security flaws in 45% of its tests. And Wix won't even run a pasted calculator directly.
 
-The concept site you said was really good is still up, if you want to put the two side by side.
-https://astra-acquitas-prototype.netlify.app
+You're asking owners to trust you with their life's work. Your site has to earn that.
 
-In my summary after the call I said I'd price this two ways, and the proposal only did the fixed fee. So here's the other one. £500 now, the same as your current site, and the other £2,000 when your first mandate signs. It works like your own fee, a little upfront and the rest on a result.
+A £500 build and a £2,500 build aren't the same thing. Here's one of ours.
+https://astra-qualigraf-prototype.netlify.app/
 
-Or we leave the site for now and start with the outreach setup. Which would suit you?
+If cash is the issue before your first mandate, it's £500 now and £2,000 when it signs. Otherwise we start with the outreach setup and leave the site.
 
-Best,
+Which is it?
+
 Raka
 ```
 
