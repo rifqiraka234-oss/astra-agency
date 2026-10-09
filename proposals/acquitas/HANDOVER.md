@@ -60,3 +60,8 @@ Files: `proposal.html`, `proposal.pdf` (2 pages), `img/concept-site.png`, `img/v
   - **Inbound and sales outreach.** "We manage your inbound and outbound sales outreach for you." Raka called this "go to market management". The brief bans "go to market" in visible text, so I used plain English. Confirm.
 - "Website further development" is now "Website development" to keep the table tidy.
 - Two pages. Page 1 ends at 1108px, page 2 at 1121px of 1123px.
+
+## Revision 7
+
+- Removed the opening paragraph under "What's holding the first deals back" (the review of the site, Companies House and the CapEQ figure) to save space. Page 1 now ends at 1036px, so there is room for one line if wanted.
+- The footer still cites CapEQ, but the 155 sales figure is no longer in the body. Put the figure back into a bullet if the source line should match the text.
