@@ -1,4 +1,7 @@
-# Kyson Charles, Acquitas. Summary email after the call. 2026-10-07. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Kyson Charles, Acquitas. Summary email after the call. 2026-10-07. SENT by Raka from Gmail, 7 Oct 08.21 UTC.
+
+Found in Gmail on 9 Oct, thread 1a11573cab3ea728, subject "Acquitas Partners x Astra Agency, Kyson and Raka first Call". The version sent is the 7 Oct text, before the 8 Oct pricing edit below, so it promised "I'll price it both ways we talked about, a fixed fee or a share of what it brings in". Kyson answered 7 Oct 09.29 UTC, looking forward to the proposal.
 
 Raka, "okay just make a human sounding meeting summary email for kyson". Built from the call transcript in
 logs/meetings/2026-10-07-Acquitas-call.md. Every point in it is something Kyson or Raka said on the call. Paragraph on the proposal updated 8 Oct to Raka's new pricing, simple setup he runs himself and no monthly fee. Left out on
