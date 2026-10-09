@@ -23,22 +23,20 @@ doesn't carry.
 
 ## Kyson Charles, Acquitas. ctc_CDeGfHHs3eCrYJR32
 
-SUPERSEDED by version 2 below, Raka wants to hold the price.
+SUPERSEDED by version 2 below, Raka wants to hold the price. Kept as a quote for the record.
 
-```
-Hi Kyson,
-
-Thanks for being straight with me.
-
-What figure did you have in mind for the website? I'd rather find a version that works for you now than let the price get in the way.
-
-There are two ways we could do it. We start with the essentials, your profile, a page on how your fee works and the value calculator, and add the rest once the first mandate is in. Or we keep the full site and you pay a smaller part now and the rest once your first mandate is signed, which is the share of results option I mentioned after our call.
-
-Happy to talk it through on our next call too.
-
-Best,
-Raka
-```
+> Hi Kyson,
+>
+> Thanks for being straight with me.
+>
+> What figure did you have in mind for the website? I'd rather find a version that works for you now than let the price get in the way.
+>
+> There are two ways we could do it. We start with the essentials, your profile, a page on how your fee works and the value calculator, and add the rest once the first mandate is in. Or we keep the full site and you pay a smaller part now and the rest once your first mandate is signed, which is the share of results option I mentioned after our call.
+>
+> Happy to talk it through on our next call too.
+>
+> Best,
+> Raka
 
 ## Version 2, holds the price. Raka, 9 Oct, "these things aint cheap... we do the redesign and also making a web app and also putting it in a secure location"
 
@@ -51,7 +49,7 @@ Hi Kyson,
 
 Thanks for being straight with me.
 
-I should have spelled out what the £2,500 covers, because it's more than a website. It's three things. A full redesign of your brand and site, so a seller sees who you are and how your fee works before the first call. The value calculator, which is a small piece of software in its own right, built for your sectors, that works out each owner's figures and sends their details straight to your inbox. And the setup on your own web address, secure, with an editor so you can update it yourself.
+I should have spelled out what the website price covers, because it's more than a website. It's three things. First, a full redesign of your brand and site, so a seller sees who you are and how your fee works before the first call. Then the value calculator. It's a small piece of software in its own right, built for your sectors, and it sends each owner's figures and details straight to your inbox. And finally the setup on your own web address, kept secure, with an editor so you can update it yourself.
 
 The calculator is the part that brings sellers to you rather than you chasing them.
 
