@@ -60,3 +60,9 @@ Lovable), Luna on the redesign, Wix won't run a pasted calculator directly (Conv
 a reference build, then £500 now and £2,000 when his first mandate signs, or outreach setup first. No backstop on the
 deferred £2,000. If he takes it, the contract needs the trigger defined (what counts as "signs") and Raka's decision on a
 long stop date. Qualigraf (Steven Garratt, call 4 Nov) has not approved that concept, so the link is now with Kyson.
+
+## Kyson's answer, 9 Oct 14.46 UTC
+
+"Hi Raka, Thanks for the email. At present your cost is too high. If the cost comes down I will reconsider. I appreciate
+your time." A polite no at this price, door open. Our 13.56 email bounced as spam at mail.astraagency.nl for
+raka@astraagency.nl and josh@astraagency.nl, so they haven't seen it. Luna and Joshuavanzeelt@gmail.com had no bounce.
