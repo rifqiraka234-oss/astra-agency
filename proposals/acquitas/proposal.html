@@ -21,8 +21,8 @@
       font-family: 'Sora', sans-serif;
       background-color: #faf8f6;
       color: #1d1d1e;
-      font-size: 10pt;
-      line-height: 1.5;
+      font-size: 9pt;
+      line-height: 1.45;
     }
 
     section.page {
@@ -31,7 +31,7 @@
       display: block;
       page-break-after: always;
       background: #faf8f6;
-      padding: 15mm 16mm;
+      padding: 11mm 16mm;
       overflow: hidden;
     }
 
@@ -42,15 +42,15 @@
     .header {
       background: #0d1b38;
       color: white;
-      padding: 10mm 16mm;
-      margin: -15mm -16mm 8mm -16mm;
+      padding: 7mm 16mm;
+      margin: -11mm -16mm 5mm -16mm;
       text-align: center;
     }
 
     .header-small {
       font-size: 8pt;
       letter-spacing: 1px;
-      margin-bottom: 6mm;
+      margin-bottom: 3mm;
       text-transform: uppercase;
       font-weight: 400;
     }
@@ -58,7 +58,7 @@
     .header-title {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-size: 24pt;
+      font-size: 19pt;
       font-weight: 500;
       margin-bottom: 4mm;
       line-height: 1.3;
@@ -72,26 +72,26 @@
     }
 
     h2 {
-      font-size: 11pt;
+      font-size: 9.5pt;
       font-weight: 600;
       color: #0d1b38;
-      margin-top: 6mm;
-      margin-bottom: 3mm;
+      margin-top: 2.5mm;
+      margin-bottom: 1.5mm;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      padding-bottom: 2mm;
+      padding-bottom: 1mm;
       border-bottom: 0.5pt solid #415a8d;
     }
 
     .section {
-      margin-bottom: 5mm;
+      margin-bottom: 3mm;
     }
 
     .intro-text {
-      font-size: 9.5pt;
-      line-height: 1.6;
+      font-size: 9pt;
+      line-height: 1.5;
       color: #1d1d1e;
-      margin-bottom: 3mm;
+      margin-bottom: 2mm;
     }
 
     ul, ol {
@@ -100,18 +100,18 @@
     }
 
     li {
-      font-size: 9.5pt;
-      line-height: 1.5;
-      margin-bottom: 1.5mm;
+      font-size: 9pt;
+      line-height: 1.4;
+      margin-bottom: 1mm;
       color: #1d1d1e;
     }
 
     .goals-box {
       background: #f0f4f9;
       border: 1pt solid #ede8e3;
-      padding: 4mm;
+      padding: 2.5mm 4mm;
       border-radius: 2px;
-      margin: 3mm 0;
+      margin: 2mm 0;
     }
 
     .goals-box ol {
@@ -133,8 +133,8 @@
     }
 
     .item {
-      margin-bottom: 6mm;
-      padding-bottom: 3mm;
+      margin-bottom: 3mm;
+      padding-bottom: 1mm;
     }
 
     .item-header {
@@ -158,23 +158,26 @@
     }
 
     .item-description {
-      font-size: 9.5pt;
-      line-height: 1.6;
+      font-size: 9pt;
+      line-height: 1.5;
       margin-bottom: 2mm;
       color: #1d1d1e;
     }
 
     .item-list {
-      font-size: 9pt;
-      line-height: 1.5;
+      font-size: 8.5pt;
+      line-height: 1.4;
       margin-left: 4mm;
       margin-bottom: 2mm;
       color: #1d1d1e;
+      columns: 2;
+      column-gap: 6mm;
     }
 
     .item-list li {
       font-size: 9pt;
       margin-bottom: 1mm;
+      break-inside: avoid;
     }
 
     .how-we-build {
@@ -188,8 +191,9 @@
 
     .concept-image {
       width: 100%;
-      max-width: 100%;
-      height: auto;
+      height: 34mm;
+      object-fit: cover;
+      object-position: top;
       margin: 3mm 0 2mm 0;
       border-radius: 1px;
     }
@@ -198,17 +202,17 @@
       font-size: 8pt;
       color: #7d766f;
       font-style: italic;
-      margin-bottom: 3mm;
+      margin-bottom: 1.5mm;
       line-height: 1.4;
     }
 
     .illustration-card {
       background: #f5f2ef;
       border: 1pt solid #ede8e3;
-      padding: 3mm;
-      font-size: 8.5pt;
-      line-height: 1.5;
-      margin: 2mm 0;
+      padding: 1.5mm 3mm;
+      font-size: 8pt;
+      line-height: 1.4;
+      margin: 1.5mm 0;
       position: relative;
       border-radius: 1px;
     }
@@ -261,7 +265,7 @@
     }
 
     table td {
-      padding: 2mm 2mm;
+      padding: 1.2mm 2mm;
       border: none;
     }
 
@@ -284,7 +288,7 @@
     }
 
     .pricing-note {
-      font-size: 8pt;
+      font-size: 7.5pt;
       color: #7d766f;
       margin-top: 2mm;
       line-height: 1.5;
@@ -294,27 +298,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 4mm 0;
-      padding: 3mm 0;
+      margin: 1mm 0;
+      padding: 0;
     }
 
     .timeline-item {
       flex: 1;
       text-align: center;
-      font-size: 8.5pt;
+      font-size: 8pt;
       color: #1d1d1e;
     }
 
-    .timeline-item:not(:last-child)::after {
-      content: '';
-      display: block;
-      position: relative;
-      top: -8mm;
-      left: 50%;
-      width: 100%;
-      height: 1pt;
-      background: #415a8d;
-    }
 
     .timeline-step {
       font-weight: 600;
@@ -335,16 +329,18 @@
     }
 
     .options-table td {
-      padding: 1.5mm 2mm;
+      padding: 0.5mm 2mm;
       border-bottom: 1pt solid #ede8e3;
       color: #1d1d1e;
     }
 
     .options-table td:first-child {
       text-align: left;
+      width: 26%;
     }
 
     .options-table td:nth-child(2) {
+      width: 50%;
       text-align: left;
       color: #7d766f;
       font-size: 8pt;
@@ -357,25 +353,25 @@
     }
 
     .closing {
-      font-size: 9.5pt;
-      line-height: 1.6;
-      margin-top: 4mm;
-      padding-top: 3mm;
+      font-size: 9pt;
+      line-height: 1.5;
+      margin-top: 1mm;
+      padding-top: 1mm;
       border-top: 1pt solid #ede8e3;
     }
 
     .signature {
-      font-size: 9.5pt;
+      font-size: 8.5pt;
       color: #1d1d1e;
-      margin-top: 2mm;
+      margin-top: 1mm;
       line-height: 1.5;
     }
 
     .footer {
       font-size: 7.5pt;
       color: #7d766f;
-      margin-top: 4mm;
-      padding-top: 2mm;
+      margin-top: 1.5mm;
+      padding-top: 1mm;
       border-top: 1pt solid #ede8e3;
       line-height: 1.4;
     }
@@ -392,7 +388,7 @@
 
   <div class="section">
     <h2>What we looked at</h2>
-    <p class="intro-text">Before our call we read every page of acquitaspartners.com, your Companies House record and the latest deal numbers in your sectors. Buyers are busy. CapEQ counted 155 sales under £100m in testing, inspection, certification and compliance across the UK and Europe in the twelve months to August 2026. Your site describes the right firm, founder focused, discreet and backed by operators. What a seller can't see yet is who you are, how a sale runs with you, and how your fee works.</p>
+    <p class="intro-text">Before our call we read every page of acquitaspartners.com, your Companies House record and the latest deal numbers in your sectors. CapEQ counted 155 sales under £100m in testing, inspection, certification and compliance across the UK and Europe in the twelve months to August 2026. Your site describes the right firm, founder focused, discreet and backed by operators. What a seller can't see yet is who you are, how a sale runs with you, and how your fee works.</p>
   </div>
 
   <div class="section">
@@ -437,17 +433,22 @@
         <li>Works on phones, set up to be found on Google, moved onto your own web address, with your email left exactly as it's</li>
       </ul>
 
-      <p style="font-size: 9pt; font-weight: 600; color: #415a8d; margin-bottom: 1.5mm;">How we build it</p>
-      <div class="how-we-build">We'll collect your story, a photo you're happy with and how you explain your fee. We build the site on a private preview link, you click through it and send us your changes, and once you're happy it goes live. Then we'll show you how to edit it yourself.</div>
-
-      <img src="img/concept-site.png" class="concept-image" alt="Concept site">
-      <p class="image-caption">The concept you've already seen. The finished site uses your own photo and words.</p>
+      <div style="display: flex; gap: 4mm; align-items: flex-start;">
+        <div style="flex: 1;">
+          <p style="font-size: 9pt; font-weight: 600; color: #415a8d; margin-bottom: 1.5mm;">How we build it</p>
+          <div class="how-we-build">We'll collect your story, a photo you're happy with and how you explain your fee. We build the site on a private preview link, you click through it and send us your changes, with up to two rounds of changes included. Then it goes live, and we show you how to edit it yourself.</div>
+        </div>
+        <div style="width: 84mm; flex-shrink: 0;">
+          <img src="img/concept-site.png" style="width: 100%; height: 36mm; object-fit: cover; object-position: top; display: block;" alt="Concept site">
+          <p class="image-caption" style="margin-bottom: 0;">The concept you've already seen. The finished site uses your own photo and words.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="page">
-  <img src="img/value-calculator.png" style="width: 50%; max-width: 65mm; height: auto; margin-bottom: 2mm; margin-right: 2mm; float: left;" alt="Value calculator">
+  <img src="img/value-calculator.png" style="width: 62mm; height: auto; margin: 0 5mm 2mm 0; float: left;" alt="Value calculator">
 
   <div class="section">
     <div class="item">
@@ -457,7 +458,7 @@
       </div>
       <p class="item-description">A simple setup that lets you reach more owners each week. The research and first drafts are done for you, and you'll stay in control of every message you send.</p>
 
-      <ul class="item-list">
+      <ul class="item-list" style="columns: 1;">
         <li>One place for LinkedIn and email. Your connection requests, follow ups and replies run from one tool instead of by hand</li>
         <li>A research helper. Type in a company and it gives you a short brief on the business and its owner, and a first message in your voice. You check it and send it</li>
         <li>A walkthrough, so you can run it yourself each week</li>
@@ -489,7 +490,6 @@
   </div>
 
   <div class="section">
-    <h2>Summary</h2>
     <table>
       <tr>
         <td>Your new website</td>
@@ -508,7 +508,7 @@
         <td style="text-align: right;">€3,500</td>
       </tr>
     </table>
-    <p class="pricing-note">Prices in euros, excluding VAT. No monthly fee and no minimum term. Your outreach tools are in your name and billed to you directly, lemlist at $109 a month and Claude at $20 a month, their list prices on 7 October 2026. We'll confirm any hosting cost for the new site before we start.</p>
+    <p class="pricing-note">Prices in euros, excluding VAT. No monthly fee and no minimum term. Your outreach tools are in your name and billed to you directly, lemlist at $109 a month and Claude at $20 a month, their list prices on 7 October 2026.</p>
   </div>
 
   <div class="section">
@@ -535,22 +535,22 @@
     <table class="options-table">
       <tr>
         <td>Buyer's view check</td>
-        <td>An owner types in their company name and gets a one page view of how a buyer sees the business. You get their details</td>
+        <td>A one page buyer's view, and you get their details</td>
         <td>€1,500</td>
       </tr>
       <tr>
         <td>AI LinkedIn assistant</td>
         <td>Writes to owners on your list and follows up for you</td>
-        <td>€600, then €75 per meeting booked</td>
+        <td>€600, then €75 per meeting</td>
       </tr>
       <tr>
         <td>Exit plan builder</td>
-        <td>An owner says when they'd like to sell and gets a dated plan by email</td>
+        <td>An owner says when they'd sell and gets a dated plan by email</td>
         <td>€1,500</td>
       </tr>
       <tr>
         <td>Who's buying in your sector</td>
-        <td>Recent deals in your niches, with email alerts owners can sign up for</td>
+        <td>Recent deals in your niches, with email alerts for owners</td>
         <td>€1,500</td>
       </tr>
       <tr>
