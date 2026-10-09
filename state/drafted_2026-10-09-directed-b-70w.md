@@ -283,7 +283,7 @@ OPENER
 ```
 Hi Jean-Christophe, saw GIANTS, looks interesting!
 
-However, your use cases show GIANTS building members' CRMs and dashboards. This causes build work to likely land on the advisers members pay for.
+However, your use cases show GIANTS building members' CRMs and dashboards. This causes build work to likely land on advisers members pay for.
 
 I run Astra agency. We build apps for brands like Unilever, AXA, Pertamina. I lead developers who'd build them in half the time at half the price.
 
