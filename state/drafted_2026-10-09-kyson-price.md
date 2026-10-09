@@ -42,20 +42,51 @@ SUPERSEDED by version 2 below, Raka wants to hold the price. Kept as a quote for
 
 Kyson Charles, Acquitas. ctc_CDeGfHHs3eCrYJR32
 
+SUPERSEDED by version 3, kept as a quote.
+
+> Hi Kyson,
+>
+> Thanks for being straight with me.
+>
+> I should have spelled out what the website price covers, because it's more than a website. It's three things. First, a full redesign of your brand and site, so a seller sees who you are and how your fee works before the first call. Then the value calculator. It's a small piece of software in its own right, built for your sectors, and it sends each owner's figures and details straight to your inbox. And finally the setup on your own web address, kept secure, with an editor so you can update it yourself.
+>
+> The calculator is the part that brings sellers to you rather than you chasing them.
+>
+> If it's the timing rather than the total, I'm happy to split it, a part now and the rest once your first mandate is signed.
+>
+> What were you comparing it with?
+>
+> Best,
+> Raka
+
+## Version 3, the rebuttal. Raka, 9 Oct, "rebut it like a proper account executive"
+
+Raka's points, all in. UK agency research, our output and experience, a full redesign not just a build, proper
+infrastructure rather than a template builder, the calculator as a web app, SEO, credibility for an M&A firm, big
+brands, an investment that lasts. The market figure is Whito's agency brochure range, £3,000 to £5,000, with SEO and
+extras adding 30 to 50% on top (https://whito.co.uk/research/website-design-costs-uk/, opened 9 Oct). check-drafts
+flags any money figure that isn't a loss figure. Kept here on Raka's live instruction to cite the research.
+The brand line is the opener template's fixed list. The split is "half now and half when your first mandate signs",
+Raka to confirm.
+
+Kyson Charles, Acquitas. ctc_CDeGfHHs3eCrYJR32
+
 REPLY
 
 ```
 Hi Kyson,
 
-Thanks for being straight with me.
+Fair challenge, so let me be straight about where the number comes from.
 
-I should have spelled out what the website price covers, because it's more than a website. It's three things. First, a full redesign of your brand and site, so a seller sees who you are and how your fee works before the first call. Then the value calculator. It's a small piece of software in its own right, built for your sectors, and it sends each owner's figures and details straight to your inbox. And finally the setup on your own web address, kept secure, with an editor so you can update it yourself.
+We looked at what UK agencies charge. A standard brochure site typically runs £3,000 to £5,000, and that's before SEO or anything custom.
 
-The calculator is the part that brings sellers to you rather than you chasing them.
+What you're getting goes well beyond a website. A full redesign of your brand and site, so a seller trusts you before the first call. The value calculator, which is a web app in its own right and brings owners to you with their numbers already in your inbox. SEO, so owners looking for an adviser find you. And all of it on proper infrastructure rather than a template builder, so it's fast and secure. We build for brands like Unilever, AXA, Pertamina. Acquitas gets the same standard.
 
-If it's the timing rather than the total, I'm happy to split it, a part now and the rest once your first mandate is signed.
+You'll know this one from the other side. Sellers baulk at your fee until they see what a well run sale gets them. A site that wins you one extra mandate pays for itself many times over, and it keeps working for years.
 
-What were you comparing it with?
+So I'd rather not cut corners on it. What I can do is make the timing easier, half now and half when your first mandate signs.
+
+Shall we find a time next week to go through it together?
 
 Best,
 Raka
