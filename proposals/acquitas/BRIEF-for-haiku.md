@@ -186,8 +186,8 @@ What's included, as a compact two column list
 
 "How we build it", one short paragraph
 > We collect your story, a photo you're happy with and how you explain your fee. We build the site on a private
-> preview link, you click through it and send us your changes, and once you're happy it goes live. Then we show
-> you how to edit it yourself.
+> preview link, you click through it and send us your changes, with up to two rounds of changes included. Then it
+> goes live, and we show you how to edit it yourself.
 
 Image, `img/concept-site.png`, caption "The concept you've already seen. The finished site uses your own photo
 and words."
@@ -237,7 +237,6 @@ Price table, right aligned figures
 Under it, small text
 > Prices in euros, excluding VAT. No monthly fee and no minimum term. Your outreach tools are in your name and
 > billed to you directly, lemlist at $109 a month and Claude at $20 a month, their list prices on 7 October 2026.
-> We'll confirm any hosting cost for the new site before we start.
 
 Timeline graphic (HTML and CSS). Three steps in a row on a thin line.
 - "Weeks 1 to 2" / "Your website goes live"
@@ -328,7 +327,8 @@ If the push fails on the network, retry up to four times, waiting 2, 4, 8 and 16
 
 - Don't send the proposal or any message to anyone.
 - Don't invent testimonials, past clients, results, lead numbers or guarantees.
-- Don't promise a number of revision rounds, a hosting price or anything not written in this brief.
+- Up to two rounds of changes on the website, never more. Don't mention hosting, a hosting price or which platform
+  the site is built on (Raka, 9 October 2026). Don't promise anything else not written in this brief.
 - Don't name where the development team is based.
 - Don't change prices. They're Raka's, set on 8 October 2026.
 
