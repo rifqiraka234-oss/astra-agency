@@ -62,7 +62,7 @@ However, your wholesale page is one sentence asking retailers to email you, with
 
 Especially, when you are building your network of retail partners for summer 2027, the boutiques that commit their budgets this autumn likely spend them on labels they could judge faster.
 
-I run Astra agency. We build websites and AI workflows for brands like Unilever, AXA, Pertamina. I built a stroopwafel brand from zero with my family and ran its partnerships, so I know what a buyer wants to see before taking on a new brand.
+I run Astra agency. We build websites and AI workflows for brands like Unilever, AXA, Pertamina. I ran partnerships for the stroopwafel brand my family and I built from zero, so I know what a buyer wants to see before taking on a new brand.
 
 Shall I send you over what the wholesale site that wins Billie Swim stockists looks like?
 ```
@@ -190,7 +190,7 @@ However, your customer service page sends shoppers to H&M's contact and returns 
 
 Especially, when you are pushing more than 500 products to your LinkedIn followers, the shoppers you send there likely hit the same H&M pages before they buy.
 
-I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I worked as a freelance branding consultant for over two years, so I know what a new label has to show before strangers trust it with an order.
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I worked as a freelance branding consultant for over two years, so I know what a young label has to show before strangers trust it with an order.
 
 Shall I send you over what the MT.8848 shop that shoppers trust looks like?
 ```

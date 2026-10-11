@@ -129,7 +129,7 @@ However, your LinkedIn page sends visitors to a Stan store that's under construc
 
 Especially, when you are bringing Legal Unmasked back to London in May 2027, the early bird tickets and sponsorships you'd sell over the winter have no page to land on.
 
-I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I built a stroopwafel brand from zero with my family and ran its partnerships and sales, so I know what a new brand's site has to show before anyone pays.
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I founded a stroopwafel business with five relatives and ran its marketing and partnerships, so I know what a new brand's site has to show before anyone pays.
 
 Shall I send you over what the site that sells Legal Unmasked 2027 looks like?
 ```

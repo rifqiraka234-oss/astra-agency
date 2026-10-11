@@ -60,7 +60,7 @@ However, your bookings, vouchers and style reports all start with a form and the
 
 Especially, when you are selling the virtual style report and vouchers as Christmas gifts, the more orders come in, the more of your week goes on admin.
 
-I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I built a stroopwafel brand from zero with my family and ran its pricing and inventory, so I know how fast admin eats an owner's week.
+I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I ran pricing and inventory for the stroopwafel brand I started with my family, so I know how fast admin eats an owner's week.
 
 Shall I send you over what the AI workflow that runs your orders looks like?
 ```
@@ -133,7 +133,7 @@ However, your site's sponsorship pack still prices every board at £XX per month
 
 Especially, when you are building a more sustainable model off the pitch, the boards without a price are likely income that never reaches the club.
 
-I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I built the outreach and follow up workflows for target accounts at Betty Blocks, so I know how a list of local businesses becomes signed sponsors.
+I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I built Betty Blocks' outreach and follow up workflows for target accounts, so I know how a list of local businesses becomes signed sponsors.
 
 Shall I send you over what the Welling sponsorship workflow that sells your boards looks like?
 ```
