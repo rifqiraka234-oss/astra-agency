@@ -10,3 +10,7 @@ state/prototypes/
 # point-in-time views over lemlist data, not part of the tracked state-file
 # schema, and can be regenerated on demand, so they aren't committed here.
 state/inbox_signal_log.html
+
+# Python bytecode written when tools run
+__pycache__/
+*.pyc
