@@ -108,6 +108,8 @@ while avoiding the limitations and high costs of proprietary systems", the Frenc
 
 HELD 2026-10-09 15:20 UTC on the send all. The vision page quote couldn't be reopened before sending, our browser couldn't load lawarroom.ai four times (proxy retries and timeouts, the page text only exists after scripts run). Last good read 12:30 UTC today by the checker. Re-check the quote, then send.
 
+RE-CHECKED 2026-10-11 about 11:15 UTC, clean. https://lawarroom.ai/vision-en/ rendered with every request to their host and to rmcdn served through curl, 253 requests, 0 curl errors, 1,829 characters, and the sentence is there word for word, "We remain tool agnostic, mastering a wide array of technologies for social listening and opinion insight, while avoiding the limitations and high costs of proprietary systems." The French /vision/ the same way, 254 requests, 0 errors, "échappant ainsi à l'obsolescence et au coût d'outils propriétaires", and 0 mentions of Infowitz on it. Sitemap, all 34 lastmod still 2026-09-21, so nothing was edited since. https://infowitz-lwr.live/ still titled "Infowitz CIB Twitter", full access still mailto benoit.thieulin@lawarroom.ai. Thread still opener only, no reply. Needs Raka's word again, the 9 Oct send all was two days ago.
+
 NUDGE
 ```
 👀 Emmanuel, one more thought on Infowitz
