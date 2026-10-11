@@ -115,6 +115,31 @@ catches this class of error before a single page is fetched.
 **If the record cannot be reconciled with evidence, the row is `BLOCKED_NEEDS_INFO` and
 stays untouched.** Never pick the plausible reading.
 
+### 0C. The odd thing may not be theirs (Debby Alles, 2026-10-09)
+
+Our opener told Debby "Google calls de Kogge Bij Veld't". She replied "Bij tveld is niet meer
+gevestigd op dit adres", that business has left the address, and declined. The Maps listing
+had a different name AND a different phone number from hers, two signs it was someone else,
+and we read both as her mistake. Same family as the wrong domain trap, one level down.
+
+1. **"Your X" needs proof X is theirs.** A listing, page or account is theirs only if their own
+   site or HTML links it, or it links back to their site, or it carries their own phone, email or
+   name. Sitting at the same address proves nothing, a previous tenant leaves a listing behind.
+2. **A mismatch has two readings, and theirs-but-wrong is the less likely one.** Different name,
+   different number, different hours means test "this is another business" first, and say
+   nothing until one reading is proven.
+3. **Their goal comes from their own words, never from content they may not write.** finzo's
+   blog posts on Making Tax Digital read as syndicated news while its service pages never name
+   sole traders or landlords, so "you are helping sole traders get ready" was our presumption.
+4. **A deliberate choice is not a gap.** Legal Unmasked's one page sign up is a priority list
+   for early bird tickets, and its 2026 early bird sold out. Calling it "nothing to buy" was
+   wrong. Read what the page says it is for before calling it missing.
+5. **Their words, not our narrowing.** mellem wrote "for families and for the people who support
+   them". Turning that into "the cemeteries" is our guess. Quote their phrase.
+6. **A fact about their life goes in only if they said it.** "Christmas gifts" for a stylist whose
+   site never says Christmas, "grows faster than one person's week" for a lawyer whose site says
+   he retired from NautaDutilh. Cut it, or make it plainly about the season, never about them.
+
 ---
 
 ## 1. Sending
