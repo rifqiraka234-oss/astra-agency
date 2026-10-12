@@ -293,7 +293,7 @@ details[open] .s-tog i{transform:rotate(45deg)}
 .appr .lt line{stroke:var(--ink);stroke-width:1.2}
 .appr .dir{fill:none;stroke:var(--ink);stroke-width:2}
 .appr .rt{fill:none;stroke:none}
-.appr .hl{font:700 14px var(--fs);letter-spacing:.24em;fill:var(--ink)}
+.appr .hld{font:700 14px var(--fs);letter-spacing:.24em;fill:var(--ink)}
 .appr .hs{font:400 12px var(--fm);fill:var(--grey)}
 .appr .north path{fill:var(--ink)}
 .appr .north text{font:600 12px var(--fs);fill:var(--ink)}

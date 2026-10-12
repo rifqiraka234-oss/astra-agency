@@ -189,7 +189,7 @@ def approach():
                      f'<text class="sub" x="0" y="{-42 if up else 52}" text-anchor="middle">{lab}</text></g>')
     hx, hy = FIX[-1][:2]
     hold = (f'<g class="hold" transform="translate({hx} {hy})"><path class="rt" d="M0 0H90A32 32 0 0 1 90 64H0A32 32 0 0 1 0 0Z"/>'
-            f'<text class="hl" x="45" y="38" text-anchor="middle">HOLD</text><text class="hs" x="45" y="88" text-anchor="middle">7 WD · 1 MO</text></g>')
+            f'<text class="hld" x="45" y="38" text-anchor="middle">HOLD</text><text class="hs" x="45" y="88" text-anchor="middle">7 WD · 1 MO</text></g>')
     # one continuous subpath. Chrome restarts a dash pattern at every moveto, which would ink every leg at once
     route = f'M{FIX[0][0]} {FIX[0][1]}' + ''.join(f'L{x} {y}' for x, y, *_ in FIX[1:]) + f'H{hx+90}A32 32 0 0 1 {hx+90} {hy+64}H{hx}A32 32 0 0 1 {hx} {hy}'
     seg = [math.hypot(FIX[i][0] - FIX[i-1][0], FIX[i][1] - FIX[i-1][1]) for i in range(1, len(FIX))]
@@ -363,8 +363,7 @@ def render(name):
     return page(meta, body)
 
 if __name__ == '__main__':
-    os.makedirs(os.path.join(OUT, 'assets', 'data'), exist_ok=True)
-    shutil.copy(os.path.join(B1, 'data', 'clocks.json'), os.path.join(OUT, 'assets', 'data', 'clocks.json'))
+    # the rules data is embedded in each page that needs it, so no separate data file is published
     only = os.environ.get('ONLY'); built = []
     have = set(x for x in os.listdir(os.path.join(V3, 'pages')) if x.endswith('.html'))
     for f in sorted(have):
