@@ -1135,3 +1135,4 @@ a.card2:hover h3{color:var(--mint2)}
   .ax-item q.law{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
   .ax-item[aria-expanded=true] q.law{display:block;-webkit-line-clamp:unset}
 }
+.tbl2 q.say{quotes:"\0022" "\0022"}

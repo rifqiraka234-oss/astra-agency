@@ -11,6 +11,23 @@ One artefact, built for Ulrich Steppler after his yes to the offer in the opener
 
 The project was created with team SSO on. It was switched off and forms were switched on, as on the earlier prototypes.
 
+## v2, the pre-send audit (12 October 2026, night). Not sent
+
+Raka asked whether v2 is good enough to send and to check everything first. Deploy `6acd0af3d88dd9b179901fd8`.
+
+- **Legal quotes.** All 51 distinct quotes on the 13 pages matched word for word against the Official Journal text, plus every quote in `build/data/clocks.json`. Control, the same sentence with one number changed, correctly not found.
+- **Amounts and threshold** reopened in the amended Art. 7(1) and Art. 6(4), EUR 250, 400, 600 and more than three hours late at arrival, the 50% cut on the 600 band only.
+- **People's quotes** (Hansmeier, Steppler, Skift, FAZ, the founders' own page) all found in the justclaims.eu crawl. Product screen text checked against the screens.
+- **Chart figures** match `research/data/FACTS.md` D01 (Steer) and D30, D31 (Destatis).
+- **Dates.** 23 Aug 2023 and 22 Mar 2023 releases, Skift 14 Jun 2019, live 1 Apr 2019, FAZ issue of 11 Dec 2019, PwC partnership 2020, all at source. The PwC whitepaper's year isn't on any page I could reach, so the year was removed from resources and its row from the customers timeline.
+- **Titles.** The imprint names both founders Managing Directors, the About page names Ulrich Steppler CEO.
+- **Portraits.** Byte identical to the client's files, and on justclaims.eu today each sits above its own bio, nothing else in reach.
+- **Links.** 21 outbound links. 20 return 200. EUR-Lex answers every request from here with an Amazon WAF challenge, the 2004 regulation's address did the same, and the saved Official Journal metadata gives the same address, `eli/reg/2026/2202/oj`.
+- **Fixed in the audit.** The Eurowings Discover form is a "feedback form" in their release, not a "claim form" (home and platform). "Customer-friendly" restored inside its quote. The whitepaper year removed. The page title no longer says the product is "ready for the new rules", because the site tags that readiness To confirm.
+- **Not tested.** Real Safari. No WebKit in this container. Raka's iPhone screenshot shows the site rendering in iOS.
+
+Checked after the fixes. Copy audit 0. Page QA local and live, 13 pages at 1440, 1280 and 390, 0 problems. axe 0 on the changed pages at both widths. Interactions local and live, no errors. All 57 deployed files match live. The delivery draft for v2 is `state/drafted_2026-10-12-ulrich-delivery.md`, checker PASS, 77 words, not sent.
+
 ## v2, the phone pass (12 October 2026, night). Not sent
 
 Raka read the home page on his phone and found the hero cramped. On a 390 pixel screen the headline ran to four centred lines edge to edge, a seven line centred paragraph sat under it, the buttons were left aligned under centred text, and the draft banner wrapped into the nav. Before and after, `research/v2-phone-before-after.png`.
