@@ -216,6 +216,11 @@ def family_thin(text):
         text, re.I)
 
 
+# RULES 0E, 2026-10-12. Fixes a freelancer does for 50 euros. Never the angle of an opener.
+SMALL_FIX = re.compile(
+    r"\b(cookies?|cookie banner|consent|gdpr|dsgvo|rgpd|compliant|compliance|opt ?ins?|"
+    r"privacy (policy|notice)|impressum|mentions l[ée]gales|typos?|dropdown|broken link)\b", re.I)
+
 SOCIAL_OPENED = re.compile(r"social-audit|no social (account )?linked|links to no social|nothing to test|no domain", re.I)
 
 
@@ -425,6 +430,21 @@ def check(path, replies=False):
                 bad(i, "RESEARCH GATE, sweep social must say the accounts were opened with tools/social-audit.js")
             for tp in thread_problems(gates[i], m, shapes[i]):
                 bad(i, tp)
+            # Raka 2026-10-12, "scrap these like compliant or gdpr fixes. theyre tiny fixes and
+            # someone can do it like for 50 bucks. we gotta analyse things that are worth 2500
+            # euros at least". RULES.md 0E. From that date every opener names a project worth
+            # 2,500 euros or more in its gate, and no message pitches a compliance fix.
+            if dm and dm.group(1) >= "2026-10-12":
+                wl = re.search(r"^worth:(.*)$", gates[i] or "", re.M)
+                amts = [int(re.sub(r"[.,]", "", a)) for a in
+                        re.findall(r"(?:€|EUR|euros?)\s?(\d[\d.,]*)", wl.group(1) if wl else "", re.I)]
+                if not amts or max(amts) < 2500:
+                    bad(i, "RESEARCH GATE, worth must name the project and a figure of €2,500 or more, "
+                           "e.g. 'worth: €4,000+, ...'. Under that it's a task, not an angle (RULES 0E)")
+                hit = SMALL_FIX.search(flat) or re.search(r"\bAVG\b", flat)
+                if hit:
+                    bad(i, f"pitches a small fix, '{hit.group(0)}'. Compliance, GDPR and one line fixes "
+                           "are never the angle, find the 2,500 euro problem behind it (RULES 0E)")
         sketch = shapes[i] == "SKETCH"
         if relaxed:
             pass

@@ -1,5 +1,5 @@
-<!-- SKETCH test batch, Raka 2026-10-12, "hi, so this looks cool. However, your website is this. I suggest to do this. We make websites for blah blah. Shall I send you a sketch of how it looks like?". Angles directed by Raka, Alex social media, Dan website, Kevin website, Alice website, Andres website or social, Chris website, David website. NOTHING SENT. Re pull each thread with a control and reopen every claim in the minute before any send (RULES 0D point 4). Evidence in /tmp/claude-0/agents/b17/ (crawls, audits, screenshots), research copied into each gate. -->
-# SKETCH drafts, 2026-10-12
+<!-- SKETCH test batch, Raka 2026-10-12, "hi, so this looks cool. However, your website is this. I suggest to do this. We make websites for blah blah. Shall I send you a sketch of how it looks like?". Angles directed by Raka, Alex social media, Dan website, Kevin website, Alice website, Andres website or social, Chris website, David website. REVISED 2026-10-12 ~17:55 UTC per Raka, "scrap these like compliant or gdpr fixes ... we gotta analyse things that are worth 2500 euros at least" (RULES 0E). Kevin is now NO_STRONG_ANGLE, Chris moved to corporate ordering, David to a staff roster app, the other four offers widened to the full project. Live recheck 18:25 UTC, every claim in the six messages refetched and held (Music Social's /book missed over curl and rendered fine in Chromium, our reader, RULES 0A). NOTHING SENT. Re pull each thread with a control and reopen every claim in the minute before any send (RULES 0D point 4). Evidence in /tmp/claude-0/agents/b17/ (crawls, audits, screenshots), research copied into each gate. -->
+# SKETCH drafts, 2026-10-12, six openers and one NO_STRONG_ANGLE
 
 ### Alex Talbot, Music Social, ctc_XDRJdGuNAsHxttMmv
 
@@ -27,13 +27,14 @@ sources:
 11. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
 pains: 5 judged. (1) the company side, team building, office and Christmas parties, has a LinkedIn page with 73 followers and nothing posted in ten months while the consumer side's Instagram posts weekly, CHOSEN, it's the higher ticket revenue line and Christmas season is the peak. (2) /book/wedding renders nav and footer only (33 words), folded out, a page fix. (3) GDPR, no banner and Google Analytics before a click from the EU view, a setting. (4) website, clean and selling tickets, not a gap. (5) Build Squad, not applicable
 chosen: (1), biggest, private bookings to companies are the bigger ticket, the channel those buyers use has gone quiet, and October to December is when office Christmas parties get booked
+worth: €3,000+, three months of LinkedIn run as a sales channel for company bookings, weekly content for office managers and HR, a Christmas party campaign and outreach to London teams
 sweep website: crawl.py twice, 5 URLs, site-audit.js screenshots of https://www.musicsocial.co.uk/ , a working ticket site, the wedding sub page is thin, not chosen
 sweep gdpr: tools/eu-view.py from Stockholm on https://www.musicsocial.co.uk/ , Google Analytics and Tag Manager requests with no banner, a setting, not chosen
 sweep apps: tickets and bookings by Wix and a form per https://www.musicsocial.co.uk/book , nothing bigger than the social gap, not chosen
 sweep social: tools/social-audit.js on the accounts in their HTML, https://www.instagram.com/musicsocialofficial 13716 followers 176 posts latest 2026-10-11, https://www.linkedin.com/company/music-social 73 followers and newest post 10mo, CHOSEN, the B2B channel
 sweep squad: a two person events company per https://www.linkedin.com/company/music-social , builds no software, not applicable
-thread: problem the LinkedIn page that should sell team building and Christmas parties has 73 followers and no post in ten months | cost the office managers who book those likely don't see Music Social as Christmas season starts | offer a weekly LinkedIn presence aimed at office managers with the Christmas offer pinned | link LinkedIn, Christmas
-lead read: Alex reads that the LinkedIn page meant to sell his team building and Christmas parties has 73 followers and hasn't posted in ten months, so office managers likely don't see him as Christmas season comes, and gets offered a weekly LinkedIn presence with the Christmas offer pinned, one thread
+thread: problem the LinkedIn page that should sell team building and Christmas parties has 73 followers and no post in ten months | cost the office managers who book those likely don't see Music Social as Christmas season starts | offer LinkedIn run as the sales channel for company bookings, weekly posts, a Christmas party campaign and outreach to London teams | link LinkedIn, Christmas
+lead read: Alex reads that the LinkedIn page meant to sell his team building and Christmas parties has 73 followers and hasn't posted in ten months, so office managers likely don't see him as Christmas season comes, and gets offered LinkedIn run as the sales channel for his company bookings with a Christmas campaign, one thread
 claims:
 your LinkedIn page has 73 followers, https://www.linkedin.com/company/music-social rendered in Chromium 2026-10-12 ~16:42 UTC "73 followers", and WebFetch of the same URL the same session "73 followers"
 hasn't posted in ten months, https://www.linkedin.com/company/music-social all five visible posts stamped "10mo", newest first, both reads
@@ -51,11 +52,11 @@ Hi Alex, Music Social looks cool!
 
 However, your LinkedIn page has 73 followers and hasn't posted in ten months, while your bookings page sells team building, office parties and Christmas events to companies. So the office managers who book those likely don't see you, with Christmas party season coming.
 
-I'd suggest a weekly LinkedIn post for office managers and HR, built from what you already post on Instagram, with the Christmas offer pinned at the top.
+I'd suggest running LinkedIn as the sales channel for your company bookings, weekly posts for office managers and HR, a Christmas party campaign and outreach to London teams.
 
 At Astra agency we do social media management for brands like Unilever, AXA, Pertamina.
 
-Shall I send you a sketch of a month of Music Social on LinkedIn?
+Shall I send you a sketch of Music Social's LinkedIn sales channel?
 ```
 
 ### Dan D'souza, MUUSH, ctc_ZSXZCGSgniBKAESgP
@@ -86,12 +87,13 @@ sources:
 13. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
 pains: 6 judged. (1) the product works with daily use over weeks, the site's own words, but the homepage sells single packs and a scratch card and never says so, so first buyers likely try a few cans, feel nothing yet and don't reorder, CHOSEN. (2) the elixir is 28 servings but shown only as 26.99 a bottle next to 23 for 12 cans, folded into the offer. (3) the variety pack trial is excluded from free shipping, a pricing choice, not raised. (4) health wording ("supporting neuroplasticity") is a regulatory question, not ours to sell, not raised. (5) social, Instagram 7372 followers latest 2026-10-08, active, not a gap. (6) Build Squad, not applicable
 chosen: (1), costliest, a subscription brand lives on the second order, and the page most new visitors land on never tells them the thing their own FAQ says decides whether it works
+worth: €4,000+, Shopify homepage and first order rebuilt around a 28 day routine, a starter subscription bundle and a Klaviyo flow that carries new buyers to day 28
 sweep website: crawl.py twice, 67 URLs, render-via-curl.js on https://muush.co/ with 0 curl errors, the homepage vs the subscription and elixir pages, CHOSEN
 sweep gdpr: tools/eu-view.py from Stockholm with --shopify on https://muush.co/ , Shopify's banner set for every EU country and GB, 3 essential cookies before a click, nothing to say
 sweep apps: subscriptions, Klaviyo and a scratch card already run per https://muush.co/pages/subscription , the gap is the message, not a tool, folded in
 sweep social: tools/social-audit.js on the accounts in their HTML, https://www.instagram.com/drinkmuush/ 7372 followers 283 posts latest 2026-10-08, Facebook 180, YouTube 63 subscribers 3 videos, Instagram active, not chosen
 sweep squad: a drinks brand per https://muush.co/pages/muush-story , builds no software, not applicable
-thread: problem the homepage never says Lion's Mane works with daily use over weeks though their subscription page does | cost first time buyers likely try a few cans, feel nothing yet and don't come back | offer a homepage built around taking it daily for 28 days, the elixir as the routine, subscription first | link homepage, daily
+thread: problem the homepage never says Lion's Mane works with daily use over weeks though their subscription page does | cost first time buyers likely try a few cans, feel nothing yet and don't come back | offer the homepage and first order rebuilt around 28 days of daily use, a starter subscription and emails to day 28 | link homepage, daily
 lead read: Dan reads that his own subscription page says Lion's Mane builds up with daily use but his homepage never says so, so first time buyers likely try a few cans and don't come back, and gets offered a homepage built around taking it daily for 28 days, one thread
 claims:
 your subscription page says Lion's Mane isn't instant, https://muush.co/pages/subscription "It's not like coffee where you'll feel the effect instantly, but rather it builds gradually over time", both crawl passes
@@ -109,71 +111,25 @@ Hi Dan, MUUSH looks cool!
 
 However, your subscription page says Lion's Mane isn't instant and works best taken daily, but your homepage never says so. So a first time buyer likely tries a few cans, feels nothing yet and doesn't come back.
 
-I'd suggest a homepage built around taking it daily for 28 days, the elixir's already 28 servings, with the subscription as the first step.
+I'd suggest rebuilding the homepage and first order around 28 days of taking it daily, the elixir's already 28 servings, with a starter subscription and emails that carry people to day 28.
 
 At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the 28 day MUUSH homepage?
 ```
 
-### Kevin Hanson, Panoramix IP, ctc_BAsKeiWpJiTEmbqfz
+### Kevin Hanson, Panoramix IP, ctc_BAsKeiWpJiTEmbqfz, NO_STRONG_ANGLE
 
-```gate
-lead: Kevin Hanson, founder, director and 75% or more PSC of PANORAMIX LIMITED 11903869 (incorporated 25 Mar 2019) per https://find-and-update.company-information.service.gov.uk/company/11903869/persons-with-significant-control , also sole director and PSC of PANORAMIX US LIMITED 17428919 (incorporated 31 Aug 2026). lemlist jobTitle "Founder & IP Lawyer - Panoramix Limited (Lincoln)". The site lists him as Managing Director. ctc_BAsKeiWpJiTEmbqfz, leadId lea_JzMNhHBbAnb76ADnm, campaign W5 cam_BRBXAzzDKMfC4fSCS (law and accounting firms, GDPR). Thread pulled 2026-10-12 16:35 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute. NOT in the message, Companies House shows Katherine McCormick resigned as director on 22 Sep 2026 while the homepage team still shows her as "Director & Chartered Trade Mark Attorney", a staffing matter he hasn't spoken about, RULES 0C point 6
-site pass 1: 150 URLs, tools/crawl.py on https://panoramixip.co.uk/ (canonical host, the www host 301s and each page takes about 9 s), stopped at the 150 cap of 302 sitemap URLs, all 150 status 200, 58 service pages, the homepage, policies and knowledge hub posts
-site pass 2: 150 URLs, second full crawl equal to pass 1, same cap, plus the 173 internal links of the raw homepage and the 19 sitemaps listed, render-via-curl.js on the homepage (55 requests by curl, 0 curl errors, all six parts looked at)
-deep analysis: A strong, modern WordPress site by Emrise Digital, built for search and for sale. 70 service pages, 66 sector pages, 10 city pages, case studies, a knowledge hub, online UK and US trade mark filing with a basket, Moneypenny live chat, WhatsApp, a free IP clinic offer and a real team grid. The sales side doesn't need us. What's wrong is consent. With nothing clicked, the EU view from Stockholm sets _ga and _gcl_au and calls ad.doubleclick.net, stats.g.doubleclick.net and snap.licdn.com, the US view sees the same, the HTML holds no consent code of any kind so a UK visitor gets the same, and no cookie banner exists (site-audit.js absence with a working control, and none in the six render parts). The homepage "Get In Touch" form's marketing box ("I agree to receive other communications from Panoramix Limited.") is checked='checked' in the raw HTML. For an SRA regulated firm in a GDPR campaign, that's the angle
-owner linkedin: Route 1 curl https://www.linkedin.com/in/kevinahanson 999. Route 2 news "Kevin Hanson" patent 0. Route 3 posts, walled. Route 4 company page https://uk.linkedin.com/company/panoramixip 618 followers "Global intellectual property protection. One partner. Zero complexity". Route 5 his own words, the homepage quote signed "Kevin Hanson, Managing Director". Route 6 lemlist record
-contact linkedin: same person as the owner, Companies House, the site and lemlist agree
-google news: tools/news.py en 2026-10-12 ~16:40 UTC, "Panoramix IP" OR "Panoramix Limited" 0, "Kevin Hanson" patent 0, control Tesco 100
-regional news: tools/news.py Lincolnshire patent and trade mark attorneys, 14 results, none about them
-industry news: tools/news.py patent attorney OR IP firm, JUVE Patent 2026-10-08 "HGF continues PE-backed expansion in France", National Law Review 2026-09-24 on a USPTO discipline case
-sources:
-1. https://panoramixip.co.uk/
-2. https://panoramixip.co.uk/contact-us/
-3. https://panoramixip.co.uk/privacy-policy/
-4. https://panoramixip.co.uk/cookie-policy/
-5. https://panoramixip.co.uk/meet-the-team/
-6. https://panoramixip.co.uk/services/ip-clinics/
-7. https://panoramixip.co.uk/sitemap_index.xml
-8. https://find-and-update.company-information.service.gov.uk/company/11903869/persons-with-significant-control
-9. https://find-and-update.company-information.service.gov.uk/company/17428919/officers
-10. https://uk.linkedin.com/company/panoramixip
-11. https://www.instagram.com/panoramixip/embed/
-12. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.panoramixip.co.uk%2F (tools/eu-view.py)
-13. https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/cookies-and-similar-technologies/
-14. https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/consent/what-is-valid-consent/
-15. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
-pains: 5 judged. (1) Google Ads and LinkedIn tracking before any consent with no cookie banner, and a pre ticked marketing box on the enquiry form, CHOSEN, it's the one real flaw and it sits in the GDPR campaign he was picked for. (2) homepage team grid shows a director who resigned on 22 Sep 2026, a staffing matter, never raised. (3) website sales side, strong, not a gap (RULES, don't manufacture pain). (4) social, LinkedIn 618 and Instagram active (63 followers, latest 2026-10-08), not chosen. (5) Build Squad, not applicable
-chosen: (1), biggest, the leads that pre ticked box signs up are likely ones he can't lawfully email, and it's his own consent flow on a law firm's site
-sweep website: crawl.py twice and render-via-curl.js on https://panoramixip.co.uk/ , a strong sales site, the consent flow on it is CHOSEN
-sweep gdpr: tools/eu-view.py from Stockholm on https://www.panoramixip.co.uk/ , _ga, _gcl_au, Moneypenny cookies and ad.doubleclick.net, snap.licdn.com requests before a click, no banner (site-audit.js control), checked='checked' on the marketing box in the raw HTML, CHOSEN
-sweep apps: online filing basket, chat and WhatsApp already run per https://panoramixip.co.uk/product/uk-trade-mark-filing/ , not chosen
-sweep social: tools/social-audit.js on the accounts in their HTML, https://uk.linkedin.com/company/panoramixip 618 followers, https://www.instagram.com/panoramixip/ 63 followers latest 2026-10-08, Facebook 13, not chosen
-sweep squad: an IP law firm per https://panoramixip.co.uk/about-us/ , builds no software, not applicable
-thread: problem tracking loads before consent with no banner and the enquiry form's marketing box comes ticked | cost under UK law neither is consent, so the leads that box signs up are likely ones he can't legally email | offer a consent banner that holds the trackers and an unticked opt in, with follow up for those who opt in | link consent, track
-lead read: Kevin reads that his site loads Google Ads and LinkedIn tracking before anyone agrees and his form's marketing box comes ticked, so the leads it signs up are likely ones he can't legally email, and gets offered a consent banner that holds the trackers and an unticked opt in, one thread
-claims:
-your website loads Google Ads and LinkedIn tracking before a visitor agrees to anything, tools/eu-view.py Webbkoll from Stockholm, nothing clicked, https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.panoramixip.co.uk%2F cookies _ga and _gcl_au, requests to ad.doubleclick.net and snap.licdn.com, and site-audit.js from the US the same minute, trackers before any click snap.licdn.com, googleads.g.doubleclick.net, ad.doubleclick.net, with no consent code in https://panoramixip.co.uk/ HTML
-there's no cookie banner, site-audit.js "gdpr banner NONE FOUND [absence, confirmed against a working control]" on https://www.panoramixip.co.uk/ , and none in the six render-via-curl.js parts
-the enquiry form's marketing box comes ticked, https://panoramixip.co.uk/ raw HTML, wpforms-2310-field_8_1 value "I agree to receive other communications from Panoramix Limited." checked='checked', and render-via-curl.js part 4 shows the box ticked
-under UK law that isn't consent, https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/cookies-and-similar-technologies/ "you cannot set non-essential cookies on your website's homepage before the user has consented to them", consent to the UK GDPR standard, and https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/consent/what-is-valid-consent/ "Silence, pre-ticked boxes or inactivity should not therefore constitute consent", both opened 2026-10-12 ~17:10 UTC
-INFERENCE, the leads that box signs up are likely ones you can't legally email, rests on the checked box on https://panoramixip.co.uk/ and the ICO guidance, worded likely, whether they email that list is unknown
-websites credential, docs/astra-company-profile.md line 95, Raka's fixed brand line, https://www.linkedin.com/in/raka-mulya-b92885196
-recheck: 2026-10-12 ~17:00 UTC, raw HTML refetched and the checked attribute found, Webbkoll result and site-audit.js read. 17:35 UTC, both 150 page crawls searched, the marketing box is in the form on 146 of 150 pages, https://panoramixip.co.uk/contact-us/ raw HTML also checked='checked', cookie banner wording appears only inside the policy pages, and their own https://panoramixip.co.uk/cookie-policy/ says "We will ask for your consent to place cookies or other similar technologies on your device", which the site doesn't do (kept for a reply, not in the opener). Disproof tried, looked for a consent manager anywhere in the HTML (CookieYes appears in lemlist's tech list, no trace of it in the live HTML), for a banner in all six render parts (none), and for a geo rule (no consent code, so none can exist). Facts hold, confidence MEDIUM
-```
+<!-- SUPERSEDES the SKETCH drafted earlier on 2026-10-12, which pitched a cookie banner and an unticked opt in. Raka, 2026-10-12, "scrap these like compliant or gdpr fixes. theyre tiny fixes and someone can do it like for 50 bucks". Every finding below is true and small, so the lead waits (RULES 0E point 6). -->
 
-SKETCH
-```
-Hi Kevin, Panoramix IP looks cool!
-
-However, your website loads Google Ads and LinkedIn tracking before a visitor agrees to anything, there's no cookie banner, and the enquiry form's marketing box comes ticked. Under UK law that isn't consent, so the leads that box signs up are likely ones you can't legally email.
-
-I'd suggest a consent banner that holds the trackers until someone says yes, and an unticked opt in on the form, with a follow up for the leads who do opt in.
-
-At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
-
-Shall I send you a sketch of the Panoramix enquiry flow that stays compliant?
+```sweep
+lead: Kevin Hanson, founder, director and 75% or more PSC of PANORAMIX LIMITED 11903869 and of PANORAMIX US LIMITED 17428919 (31 Aug 2026), ctc_BAsKeiWpJiTEmbqfz, campaign W5. Thread pulled 2026-10-12 16:35 UTC, 0 items, control 3 items
+website: crawl.py twice on https://panoramixip.co.uk/ , 150 pages each at the cap of 302 sitemap URLs, render-via-curl.js with 0 curl errors. A strong sales site by Emrise Digital, 70 service pages, 66 sector pages, 10 city pages, online UK and US trade mark filing with a basket, live chat, WhatsApp, case studies. Small true flaws only. The LinkedIn post of 2026-10-08 says "Book a free 45-minute IP clinic" and links https://panoramixip.co.uk/services/free-ip-clinics/ , which says "for a fixed fee of £375 plus VAT", a copy fix. The homepage team still shows a director who resigned on 22 Sep 2026, a staffing matter. Nothing worth 2,500 euros
+gdpr: tools/eu-view.py from Stockholm on https://www.panoramixip.co.uk/ , _ga and _gcl_au set and ad.doubleclick.net and snap.licdn.com called before a click, no banner (site-audit.js control), marketing box checked='checked' on 146 of 150 pages, while https://panoramixip.co.uk/cookie-policy/ says "We will ask for your consent". True, and a 50 euro fix, scrapped per RULES 0E
+apps: online filing basket, Moneypenny chat, WhatsApp and an AI summary after each clinic already run per https://panoramixip.co.uk/services/free-ip-clinics/ , clinics are booked by a form on that page, no tool gap worth 2,500 euros found
+social: tools/social-audit.js on the accounts in their HTML, https://uk.linkedin.com/company/panoramixip 618 followers posting every few days (clinic offer 4d, US filing for Bring Me The Horizon 6d), Instagram 63 followers latest 2026-10-08, Facebook 13, active, no gap
+squad: an IP law firm of 12 per https://uk.linkedin.com/company/panoramixip , builds no software, not applicable
+verdict: NO_STRONG_ANGLE, a strong sales site whose true flaws are all small fixes. Revisit if Panoramix US Limited turns into a US facing push, a site for US companies would be a real project, but today one clue (the new company's name) isn't enough
 ```
 
 ### Alice Poubelle, Baldoria Paris, ctc_PLeDim4Mhp2CtQyiu
@@ -205,12 +161,13 @@ sources:
 14. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
 pains: 5 judged. (1) 26 project pages of photos and one spec line, no brief, idea or result, so a brand's marketing team comparing agencies can't see what Baldoria did for Fendi or Back Market, CHOSEN. (2) French only since the Weglot English was removed, a choice, not raised. (3) no mentions légales page (0 hits, /mentions-legales 404, control /about 200), a legal tidy up, not raised. (4) social, Instagram 2450 followers latest 2026-10-02 and LinkedIn 1127, active, not a gap. (5) Build Squad, not applicable
 chosen: (1), biggest, an agency is hired on proof of what its events did, and the pages that hold the best names in her market say the least
+worth: €3,500+, the Squarespace site rebuilt around 26 case studies written from the brief, the idea and the coverage, with a brief intake on every case
 sweep website: crawl.py twice, 50 URLs, Chromium renders of https://www.baldoriaparis.com/project and https://www.baldoriaparis.com/project/meritxsephora , CHOSEN
 sweep gdpr: tools/eu-view.py from Stockholm on https://www.baldoriaparis.com/ , _ga set before a click and no banner, a setting, not chosen
 sweep apps: briefs come in by a homepage form and email per https://www.baldoriaparis.com/ , folded into the offer as a brief button
 sweep social: tools/social-audit.js on the accounts in their HTML, https://www.instagram.com/baldoria.paris/ 2450 followers 140 posts latest 2026-10-02, https://www.linkedin.com/company/baldoriaparis 1127 followers, active, not chosen
 sweep squad: an events agency per https://www.baldoriaparis.com/about , builds no software, not applicable
-thread: problem each of the 26 project pages is photos and one line, nothing on the brief or the result | cost a marketing team comparing agencies likely can't see why Baldoria's the safer pick | offer each project turned into a short case, brief, idea and coverage, with a brief us button | link brief, project
+thread: problem each of the 26 project pages is photos and one line, nothing on the brief or the result | cost a marketing team comparing agencies likely can't see why Baldoria's the safer pick | offer the site rebuilt around the projects as short cases, brief, idea and coverage, with a brief us button on each | link brief, project
 lead read: Alice reads that her 26 project pages show Fendi and Back Market but only photos and one line, nothing on the brief or what the event got the brand, so a marketing team comparing agencies likely can't see why she's the safer pick, and gets offered each project as a short case with the brief and coverage, one thread
 claims:
 your website shows Fendi and Back Market, https://www.baldoriaparis.com/project rendered in Chromium 2026-10-12 ~16:48 UTC, cards "Fendi" and "Back Market"
@@ -227,7 +184,7 @@ Hi Alice, Baldoria looks cool!
 
 However, your website shows Fendi and Back Market, but each of your 26 project pages is photos and one line, nothing on the brief or the result. So a marketing team comparing agencies likely can't see why you're the safer pick.
 
-I'd suggest turning each project into a short case, the brief, the idea and the coverage it got, with a brief us button on every one.
+I'd suggest rebuilding the site around your projects as short cases, the brief, the idea and the press and posts each one got, with a brief us button on every case.
 
 At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
 
@@ -261,12 +218,13 @@ sources:
 12. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
 pains: 5 judged. (1) a one page trade site while the brand heads for supermarket shelves, so shoppers who look it up find a distribution form, CHOSEN. (2) the "net-zero procurement" and "CSRD-proof" claims carry no figure for a buyer, folded into the trade side of the offer. (3) Instagram 1336 followers, last post 2026-08-19, quiet, runner up. (4) De Stadsgroenteboer's homepage still says "WE STILL HAVE A FEW CSA SHARES AVAILABLE!" in October, but he isn't in its daily team, not raised. (5) Build Squad, not applicable
 chosen: (1), hottest, it lands on the move he's making now, the shelf launch, and every shopper who tries the cup and searches the name meets a page that isn't for them
+worth: €3,000+, a consumer launch site for the retail rollout, product pages, recipes and a store finder, beside a trade page with spec sheets for buyers
 sweep website: crawl.py twice, 4 URLs, site-audit.js and a full page render of https://www.favamole.nl/ , CHOSEN
 sweep gdpr: site-audit.js on https://www.favamole.nl/ , a Squarespace banner, 1 cookie before a click, no third party trackers, nothing to say
 sweep apps: B2B enquiries by a form per https://www.favamole.nl/contact , a trade enquiry and sample flow, folded into the offer
 sweep social: tools/social-audit.js on the accounts in their HTML, https://www.instagram.com/favamole.nl/ 1336 followers 33 posts latest 2026-08-19, his personal LinkedIn UNKNOWN, runner up
 sweep squad: a food brand per https://www.favamole.nl/ , builds no software, not applicable
-thread: problem the one page site ends in a distribution form for trade buyers while Favamole heads for supermarket shelves | cost a shopper who spots a cup and looks it up won't find where to buy it | offer a shopper side to the site with where to buy it, the trade page kept for buyers | link shopper, buy
+thread: problem the one page site ends in a distribution form for trade buyers while Favamole heads for supermarket shelves | cost a shopper who spots a cup and looks it up won't find where to buy it | offer a launch site for shoppers with recipes and where to buy it, the trade side kept for buyers | link shopper, buy
 lead read: Andres reads that his one page site ends in a distribution form for trade buyers while Favamole heads for supermarket shelves, so a shopper who spots a cup and looks it up won't find where to buy it, and gets offered a shopper side with where to buy it, one thread
 claims:
 your website is one page that ends in a distribution form for trade buyers, https://www.favamole.nl/sitemap.xml lists only /home and /contact, and https://www.favamole.nl/ ends "Interested? Get in touch, and we'll provide you with information about Favamole distribution", rendered and screenshotted 2026-10-12 ~17:02 UTC
@@ -282,7 +240,7 @@ Hi Andres, Favamole looks cool!
 
 However, your website is one page that ends in a distribution form for trade buyers, while Favamole is heading for supermarket shelves. So a shopper who spots a cup and looks you up won't find where to buy it.
 
-I'd suggest a shopper side to the site, what Favamole is and where to buy it, with the trade page kept for buyers.
+I'd suggest a launch site for shoppers, what Favamole is, recipes and where to buy it, with the trade side kept for buyers.
 
 At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
 
@@ -291,112 +249,118 @@ Shall I send you a sketch of the Favamole site for shoppers?
 
 ### Chris Hale, The Garnish Collective, ctc_do7oK8f27qGMC89dA
 
+<!-- SUPERSEDES the weddings reviews SKETCH drafted earlier on 2026-10-12. Its offer ended "the enquiry form tidied up", and a weddings page with reviews alone sits near the small fix line (RULES 0E). The corporate ordering angle is the bigger project and the one his own LinkedIn is pushing this month. -->
+
 ```gate
-lead: Christopher Colin Hale, sole director and 75% or more PSC of THE GARNISH COLLECTIVE LTD 16179771, incorporated 13 Jan 2025, Wakefield, per https://find-and-update.company-information.service.gov.uk/company/16179771/persons-with-significant-control . The site calls him "founder and head chef of The Garnish Collective". lemlist jobTitle "Founder". ctc_do7oK8f27qGMC89dA, leadId lea_Xs3sJQ5opBw3mFQqr, campaign W1b cam_7gnHSf6GvvGy8gH3n. Thread pulled 2026-10-12 16:35 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute. NOT in the message, his tagline "Proprietor at Hodroyd Hall" while the venue's Bridebook page names Stephen Aviss as wedding contact and calls it "My family and I are lucky enough to call Hodroyd Hall home", with no caterer named, unresolved, never used (RULES 0C point 1). The corporate page's "Venue partnership at Hodroyd Hall" is the only tie on his own site. NOT in the message, the homepage says "MasterChef finalist" and "former MasterChef UK quarter-finalist" on the same page
+lead: Christopher Colin Hale, sole director and 75% or more PSC of THE GARNISH COLLECTIVE LTD 16179771, incorporated 13 Jan 2025, Wakefield, per https://find-and-update.company-information.service.gov.uk/company/16179771/persons-with-significant-control . The site calls him "founder and head chef of The Garnish Collective". lemlist jobTitle "Founder". ctc_do7oK8f27qGMC89dA, leadId lea_Xs3sJQ5opBw3mFQqr, campaign W1b cam_7gnHSf6GvvGy8gH3n. Thread pulled 2026-10-12 16:35 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute. NOT in the message, his tagline "Proprietor at Hodroyd Hall" while the venue's Bridebook page names Stephen Aviss as wedding contact and calls it "My family and I are lucky enough to call Hodroyd Hall home", unresolved (RULES 0C point 1). NOT in the message, "MasterChef finalist" and "former MasterChef UK quarter-finalist" on the same homepage
 site pass 1: 9 URLs, tools/crawl.py on https://www.garnishcollective.com/ , every page rendered and read in Chromium (Wix)
-site pass 2: 9 URLs, second full crawl equal to pass 1, site-audit.js screenshots, full page renders of the homepage and weddings page looked at, the Bar Hire and Enquire dropdowns listed live
-deep analysis: A good looking Wix site for a Yorkshire luxury caterer, weddings, corporate, celebrations and bar hire, with real event photos and the line "After catering for hundreds of weddings". Across all nine pages there's one testimonial, from Evri's marketing and events manager, on the About page, and not one from a couple. The site links no social account (site-audit.js NONE LINKED with a working control, the raw HTML only carries Wix's own instagram.com/wix from the form footer). The Bar Hire form's Preferred Date dropdown offers "Choice 1, Choice 2, Choice 3, Choice 4", folded into the offer, not the hook
-owner linkedin: Route 1 curl https://www.linkedin.com/in/chris-hale-0a467a26 999. Route 2 news "Chris Hale" chef, Wakefield Express 2022-09-23 "MasterChef quarter finalist Chris Hale", We Are Barnsley 2026-08-19 charity ball. Route 3 posts, walled. Route 4 company page https://www.linkedin.com/company/thegarnishcollective per lemlist, not linked from the site. Route 5 his own words on the site. Route 6 lemlist record
+site pass 2: 9 URLs, second full crawl equal to pass 1, site-audit.js screenshots, full page renders of the homepage and weddings page looked at, the Bar Hire and Enquire dropdowns listed live, the corporate page's raw HTML links read
+deep analysis: A Yorkshire caterer with three lines, weddings ("more than 500 weddings" on LinkedIn, "hundreds of weddings" on the site), corporate (clients Meta, Evri and the BBC on LinkedIn, an Evri testimonial "our 'go to' ... hot and cold buffet options" for over 3 years) and celebrations. Where he's heading, three agreeing clues, his last three LinkedIn posts (3d sliders, 5d pork belly, 1w a paella summer social) all sell corporate catering and end "Planning your next corporate event?", the company tagline leads "Corporate Catering", and the Evri testimonial is a repeat corporate client. SUPPORTED, corporate is the push. The corporate page sells Bags and Boxes ("chef-designed lunch boxes ... Best Suited For Meetings, Workshops, Strategy Days"), Buffets, Edible Displays, a Tailored Event Service and Bar Hire, and all six "Enquire Now" buttons go to https://www.garnishcollective.com/enquire , one form (event type, guests, a "Preferred Date" of Aprl - Jun, July - Sep, Oct - Dec, 2027+) that ends "we will be back in touch within 24 hours". No menu to order from, no online order, no reorder. The weddings reviews gap (one testimonial across nine pages, corporate, no couple's) is the runner up
+owner linkedin: Route 1 curl https://www.linkedin.com/in/chris-hale-0a467a26 999. Route 2 news "Chris Hale" chef, Wakefield Express 2022-09-23 "MasterChef quarter finalist Chris Hale", We Are Barnsley 2026-08-19 charity ball. Route 3 the company page posts, rendered in Chromium, three corporate posts in the last week. Route 4 company page https://www.linkedin.com/company/thegarnishcollective 160 followers, "View all 4 employees". Route 5 his own words on the site. Route 6 lemlist record
 contact linkedin: same person as the owner, Companies House, the site and lemlist agree
 google news: tools/news.py en 2026-10-12 ~16:40 UTC, "Garnish Collective" 0, "Chris Hale" chef 2 results (We Are Barnsley 2026-08-19, Yorkshire Evening Post 2026-07-25), control Tesco 100
 regional news: tools/news.py Yorkshire private chef OR event catering, 20 results, Your Harrogate 2026-06-12, Wakefield Express 2022-09-23 on his food festival
-industry news: tools/news.py private chef OR event catering, Food and Wine 2026-10-11, The Times 2026-10-02
+industry news: tools/news.py private chef OR event catering, Food and Wine 2026-10-11, The Times 2026-10-02, catering sold to companies
 sources:
 1. https://www.garnishcollective.com/
-2. https://www.garnishcollective.com/weddings
-3. https://www.garnishcollective.com/about-1
-4. https://www.garnishcollective.com/barhire
-5. https://www.garnishcollective.com/enquire
-6. https://www.garnishcollective.com/corporate
-7. https://www.garnishcollective.com/celebrations
-8. https://find-and-update.company-information.service.gov.uk/company/16179771/persons-with-significant-control
-9. https://www.linkedin.com/company/thegarnishcollective (social-audit.js, 160 followers, "Chef Chris Hale-MasterChef 2016", not linked from the site)
-10. https://bridebook.com/uk/wedding-venues/hodroyd-hall-south-hiendley-west-yorkshire-cs5gPMvmNY (opened, Stephen Aviss as contact, no caterer named)
-11. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.garnishcollective.com%2F (tools/eu-view.py)
-12. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
-pains: 6 judged. (1) "hundreds of weddings" with not one couple's review on the site and no Instagram linked, CHOSEN. (2) the Bar Hire date dropdown still reads Choice 1 to 4, a quick fix, folded in. (3) "finalist" and "quarter-finalist" on the same homepage, a credibility tidy up, not raised. (4) no privacy notice on a site with forms, a legal tidy up, not raised. (5) no sample menus or prices, a model choice (RULES 0D point 2), not raised. (6) Build Squad, not applicable
-chosen: (1), costliest, weddings are the biggest ticket on the site and couples choose on reviews from other couples, which the site doesn't carry
-sweep website: crawl.py twice, 9 URLs, renders of https://www.garnishcollective.com/weddings and the homepage, one corporate testimonial, CHOSEN
+2. https://www.garnishcollective.com/corporate
+3. https://www.garnishcollective.com/enquire
+4. https://www.garnishcollective.com/about-1
+5. https://www.garnishcollective.com/weddings
+6. https://www.garnishcollective.com/barhire
+7. https://find-and-update.company-information.service.gov.uk/company/16179771/persons-with-significant-control
+8. https://www.linkedin.com/company/thegarnishcollective (rendered, posts 3d, 5d and 1w, 160 followers)
+9. https://bridebook.com/uk/wedding-venues/hodroyd-hall-south-hiendley-west-yorkshire-cs5gPMvmNY (opened, Stephen Aviss as contact, no caterer named)
+10. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.garnishcollective.com%2F (tools/eu-view.py)
+11. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
+pains: 6 judged. (1) corporate catering, the line his LinkedIn is pushing, can only be bought through an enquiry form and a reply within 24 hours, even a lunch box for a meeting, CHOSEN. (2) "hundreds of weddings" with no couple's review on the site and no Instagram linked, runner up, a rebuild sized project too. (3) the Bar Hire date dropdown reads Choice 1 to 4, a 50 euro fix, folded in as nothing. (4) "finalist" and "quarter-finalist" on one page, a copy fix. (5) no privacy notice, a compliance fix, never the angle (RULES 0E). (6) Build Squad, not applicable
+chosen: (1), biggest, it sits on the line he's selling hardest right now, it repeats (Evri has ordered for three years), and every order waits on a form and an email back
+worth: €4,000+, an ordering site for corporate catering, set menus for boxes and buffets, online payment and invoices, saved orders so a regular reorders in one tap
+sweep website: crawl.py twice, 9 URLs, the six "Enquire Now" hrefs on https://www.garnishcollective.com/corporate all point to https://www.garnishcollective.com/enquire , CHOSEN as an ordering site
 sweep gdpr: tools/eu-view.py from Stockholm on https://www.garnishcollective.com/ , 6 first party Wix cookies, no third party tracking, nothing to say
-sweep apps: enquiries by Wix forms per https://www.garnishcollective.com/enquire , folded into the offer
-sweep social: tools/social-audit.js, the site links no social account at all, a search found no Garnish Instagram, and social-audit.js on https://www.linkedin.com/company/thegarnishcollective read 160 followers on a page the site doesn't link, so the message says the site links no Instagram, CHOSEN with the website
+sweep apps: corporate orders and repeat orders by enquiry form per https://www.garnishcollective.com/enquire , folded into the ordering site
+sweep social: tools/social-audit.js, the site links no social account, https://www.linkedin.com/company/thegarnishcollective 160 followers posting corporate food weekly, active, it's the source of the direction, not the gap
 sweep squad: a catering company per https://www.garnishcollective.com/about-1 , builds no software, not applicable
-thread: problem the site says hundreds of weddings but carries no couple's review and links no Instagram | cost couples comparing caterers likely book the one whose reviews they can read | offer a weddings page built on couples' reviews and photos from their days, Instagram linked | link review, Instagram
-lead read: Chris reads that his site says he's catered hundreds of weddings but shows no couple's review and links no Instagram, so couples comparing caterers likely book someone whose reviews they can read, and gets offered a weddings page built on his couples' reviews with Instagram linked, one thread
+thread: problem every corporate option, even a lunch box for a meeting, goes through one enquiry form and a reply within 24 hours | cost an office manager who needs lunch this week likely orders from a caterer they can book in a minute | offer a corporate ordering site with set menus, online payment and one tap reorders | link corporate, order
+lead read: Chris reads that everything on his corporate page, even a lunch box for a meeting, goes through one enquiry form and a reply within 24 hours, so an office manager who needs lunch this week likely orders elsewhere, and gets offered a corporate ordering site with set menus and one tap reorders, one thread
 claims:
-your website says you've catered hundreds of weddings, https://www.garnishcollective.com/weddings "After catering for hundreds of weddings", rendered 2026-10-12 ~16:52 UTC
-there isn't one review from a couple on it, all nine pages rendered and searched, the only testimonial is "Stacey Dockerty, Evri - Marketing & Events Manager" on https://www.garnishcollective.com/about-1 , which the same search finds, so the method works, and no review, testimonial or couple's quote on https://www.garnishcollective.com/weddings or any other page
-it links no Instagram, site-audit.js on https://www.garnishcollective.com/ "social NONE LINKED" with a working control, and the raw HTML of the home, weddings, barhire and enquire pages carries only instagram.com/wix from Wix's form footer
-INFERENCE, couples comparing caterers likely book the one whose reviews they can read, rests on the two absences above on https://www.garnishcollective.com/weddings and https://www.garnishcollective.com/ , worded likely
+your corporate page sells lunch boxes for meetings and buffets for conferences, https://www.garnishcollective.com/corporate "Bags & Boxes Freshly prepared, chef-designed lunch boxes ... Best Suited For : - Meetings - Workshops - Strategy Days" and "Buffets ... Best Suited For : - Conferences - Gala Dinners - Client Entertainment", rendered 2026-10-12 ~16:52 UTC and raw HTML 17:50 UTC
+every option leads to the same enquiry form, https://www.garnishcollective.com/corporate raw HTML, six "Enquire Now" links, all href https://www.garnishcollective.com/enquire , no order, menu or price link on the page (0 hits for order online, order now, per head, £)
+and a reply within 24 hours, https://www.garnishcollective.com/enquire "To make a enquiry, please fill out the form below and we will be back in touch within 24 hours"
+INFERENCE, an office manager who needs lunch for Thursday likely orders from a caterer they can book in a minute, rests on https://www.garnishcollective.com/corporate and https://www.garnishcollective.com/enquire , worded likely
+regulars like Evri, https://www.garnishcollective.com/about-1 "We've worked with The Garnish Collective for over 3 years. They are our 'go to' when it comes to event catering ... Stacey Dockerty, Evri - Marketing & Events Manager"
 websites credential, docs/astra-company-profile.md line 95, Raka's fixed brand line, https://www.linkedin.com/in/raka-mulya-b92885196
-recheck: 2026-10-12 ~16:55 UTC, every page rendered and searched, raw HTML of four pages grepped for social links. Disproof tried, looked for reviews under other words (testimonial, review, Google, 5 star, quotes, none beyond Evri), for a linked Instagram or Facebook (only Wix's own), and for a Garnish Instagram by search (none found, so the message only says the site links none). Facts hold, confidence MEDIUM
+recheck: 2026-10-12 ~17:50 UTC, the corporate page's raw HTML and the enquire page reread, the company page posts rendered. Disproof tried, looked for any menu, order or price route on all nine pages (none), for a linked ordering platform in the HTML (none), and checked whether corporate was an old push (the three posts are 3d, 5d and 1w old). Risk named, if he prices every corporate job by hand on purpose (RULES 0D point 2), set menus would only cover the boxes and buffets, so the message offers set menus, it doesn't call missing prices a gap. Facts hold, confidence MEDIUM
 ```
 
 SKETCH
 ```
 Hi Chris, The Garnish Collective looks cool!
 
-However, your website says you've catered hundreds of weddings, but there isn't one review from a couple on it, and it links no Instagram. So couples comparing caterers likely book the one whose reviews they can read.
+However, your corporate page sells lunch boxes for meetings and buffets for conferences, but every option leads to the same enquiry form and a reply within 24 hours. So an office manager who needs lunch for Thursday likely orders from a caterer they can book in a minute.
 
-I'd suggest a weddings page built on reviews from your couples and photos from their days, with your Instagram linked and the enquiry form tidied up.
+I'd suggest a corporate ordering site, set menus for boxes and buffets, order and pay online, and one tap reorders for regulars like Evri.
 
 At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
 
-Shall I send you a sketch of the new Garnish Collective weddings page?
+Shall I send you a sketch of the Garnish corporate ordering site?
 ```
 
 ### David Weyn, Major Domo, ctc_vm6BXBrFDAir6Rb3F
 
+<!-- SUPERSEDES the homepage reviews SKETCH drafted earlier on 2026-10-12, whose fix was moving six reviews from the About page to the homepage, a ten minute Squarespace edit (RULES 0E). Raka directed website for David. No website problem worth 2,500 euros was found, the one that is sits in how he staffs urgent jobs, so this is an apps angle, flagged to Raka. -->
+
 ```gate
-lead: David Alexandre Albert Weyn, founder and Président of MAJOR DOMO SAS, SIREN 944122472, created 2025-04-29, NAF 82.99Z, Nice, per https://recherche-entreprises.api.gouv.fr/search?q=major%20domo , and the site's legal notice "Propriétaire du site, David Weyn, SAS ... SIRET 944 122 472 00011 ... 944 122 472 RCS Nice". He also presides WEYN COLLECTION SAS 942007451 (Nice, 2025-03-04), not the subject. lemlist jobTitle "Founder". ctc_vm6BXBrFDAir6Rb3F, leadId lea_XXvYSema92aLMxqFL, campaign W1b cam_7gnHSf6GvvGy8gH3n. Thread pulled 2026-10-12 16:35 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute
+lead: David Alexandre Albert Weyn, founder and Président of MAJOR DOMO SAS, SIREN 944122472, created 2025-04-29, NAF 82.99Z, Nice, per https://recherche-entreprises.api.gouv.fr/search?q=major%20domo , and the site's legal notice "Propriétaire du site, David Weyn, SAS ... 944 122 472 RCS Nice". lemlist jobTitle "Founder". The LinkedIn company page lists one employee, David Weyn. ctc_vm6BXBrFDAir6Rb3F, leadId lea_XXvYSema92aLMxqFL, campaign W1b cam_7gnHSf6GvvGy8gH3n. Thread pulled 2026-10-12 16:35 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute
 site pass 1: 60 URLs, tools/crawl.py on https://www.majordomo.vip/ , every page read, English and French versions
 site pass 2: 60 URLs, second full crawl equal to pass 1, site-audit.js desktop and phone screenshots opened, 11 key pages rendered in Chromium and read
-deep analysis: A polished Squarespace site for villa and apartment management from Monaco to Cannes, founded in 2025 by a man with three decades in luxury hospitality and superyachts. The homepage is a long list of services in four blocks with two literary quotes between them, Douglas Adams ("To give real service you must add something which cannot be bought or measured with money") and Kazuo Ishiguro ("Greatness, indeed, is often achieved in the shadows"), and no review. The About page carries "5-Star Reviews & Personal Recommendations", six of them, two Google reviews, a private family, Conran Group Restaurants and two superyacht captains. Pricing is custom by walkthrough, a model, not raised (RULES 0D point 2). The journal's newest post is dated 5/10/25 while the homepage asks visitors to subscribe to it, a follow up
-owner linkedin: Route 1 curl https://www.linkedin.com/in/david-weyn-48b41156 999. Route 2 news "David Weyn" 0. Route 3 posts, walled. Route 4 company page https://www.linkedin.com/company/majordomo-vip 656 followers. Route 5 his own words, the homepage letter signed "David Weyn, Founder" and the About page. Route 6 lemlist record, tagline "Founder, MajorDomo | Luxury Villa Management | French Riviera | Year-Round Property Care"
+deep analysis: Villa and apartment care from Monaco to Cannes, founded 2025 by a man with three decades in luxury hospitality and superyachts. What he sells runs on other people, the site offers "Private chef services, butler services, and housekeeping", "Villa & Yacht Placement, We source, vet, and place experienced professionals including stewards/stewardesses, butlers, chefs, and seasonal support staff", pool, garden and repair work, and the company page lists him as its one employee. How he staffs it, in his own posts, the company page post of about two months ago "Last minute request in Eze, guests seeking chef (able to invoice) for the next 3 days ... PM me with $$ prices for more informations please, urgent 😅", and nine months ago a 30m motor yacht chef job "via LinkedIn message or email". So an urgent guest request turns into a public post and a run of private messages, filled by him by hand. The earlier homepage angle (literary quotes on the homepage, six reviews on the About page) is true and a ten minute fix, dropped
+owner linkedin: Route 1 curl https://www.linkedin.com/in/david-weyn-48b41156 999. Route 2 news "David Weyn" 0. Route 3 the company page posts, rendered in Chromium and read again by WebFetch, the same four posts (2mo chef in Eze, 9mo yacht chef, 9mo winter care, 9mo "The 'Ghost Villa' Trap"). Route 4 company page https://www.linkedin.com/company/majordomo-vip 656 followers, 1 employee. Route 5 his own words, the homepage letter and the Ghost Villa post. Route 6 lemlist record
 contact linkedin: same person as the owner, the register, the legal notice and lemlist agree
 google news: tools/news.py fr 2026-10-12 ~16:40 UTC, "MajorDomo" Nice OR "Major Domo" villa 0, "David Weyn" 0, control Carrefour 100
-regional news: tools/news.py Côte d'Azur conciergerie villa OR gestion locative luxe, 32 results, Presse Agence 2026-08-10 "Une nouvelle conciergerie de luxe à Bandol", MySweetImmo 2026-06-28 on Engel and Völkers entering prestige rentals on the Riviera
+regional news: tools/news.py Côte d'Azur conciergerie villa OR gestion locative luxe, 32 results, Presse Agence 2026-08-10 "Une nouvelle conciergerie de luxe à Bandol", MySweetImmo 2026-06-28 on Engel and Völkers entering prestige rentals on the Riviera, more competition for owners
 industry news: tools/news.py conciergerie villa OR gestion locative luxe, Capital 2026-09-23 on a prestige concierge in the Lot, Le Figaro 2026-07-02
 sources:
 1. https://www.majordomo.vip/
 2. https://www.majordomo.vip/about-us
-3. https://www.majordomo.vip/services/property-management
-4. https://www.majordomo.vip/services/real-estate-partners
-5. https://www.majordomo.vip/contact
+3. https://www.majordomo.vip/services/concierge-services
+4. https://www.majordomo.vip/services/staff-training
+5. https://www.majordomo.vip/services/property-management
 6. https://www.majordomo.vip/legal-notices
-7. https://www.majordomo.vip/journal
-8. https://recherche-entreprises.api.gouv.fr/search?q=major%20domo
-9. https://www.linkedin.com/company/majordomo-vip
-10. https://www.pinterest.com/MajorDomoVIP
-11. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.majordomo.vip%2F (tools/eu-view.py)
-12. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
-pains: 6 judged. (1) the homepage asks owners to trust him with their villa but carries literary quotes and no review, while six recommendations sit on the About page, CHOSEN. (2) the journal and its newsletter stopped at 5/10/25, a follow up. (3) "award winning" on the contact page with no award named anywhere, unverifiable, not raised. (4) "Preperations" misspelt in two headings, a tidy up, not raised. (5) the Instagram link MajorDomoVIP reads like a missing or private account, UNKNOWN, kept out. (6) Build Squad, not applicable
-chosen: (1), biggest, handing over the keys to a second home is a trust decision, and the proof that wins it is a page away from where owners land
-sweep website: crawl.py twice, 60 URLs, site-audit.js and renders of https://www.majordomo.vip/ and https://www.majordomo.vip/about-us , CHOSEN
-sweep gdpr: tools/eu-view.py from Stockholm on https://www.majordomo.vip/ , _fbp and _ga set before a click though a banner with Decline exists, a setting, not chosen
-sweep apps: enquiries by a Squarespace form per https://www.majordomo.vip/contact , a walkthrough booking folded into the offer
+7. https://recherche-entreprises.api.gouv.fr/search?q=major%20domo
+8. https://www.linkedin.com/company/majordomo-vip (rendered and WebFetch, four posts, 1 employee)
+9. https://www.pinterest.com/MajorDomoVIP
+10. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.majordomo.vip%2F (tools/eu-view.py)
+11. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
+pains: 6 judged. (1) urgent staffing for guests and yachts runs on public posts and private messages, filled by the founder by hand, CHOSEN. (2) the homepage carries literary quotes while six reviews sit on the About page, true, a ten minute fix, dropped per RULES 0E. (3) the journal and its newsletter stopped at 5/10/25, a content job, runner up. (4) "award winning" with no award named, a copy question, not raised. (5) the Instagram link reads as missing or private, UNKNOWN, kept out. (6) Build Squad, not applicable
+chosen: (1), costliest, every last minute chef, crew or trade job lands on one man, and in season the requests he can't fill in time are the guests he lets down
+worth: €5,000+, a private roster and dispatch app for vetted chefs, crew and trades, one request out by WhatsApp or SMS to everyone free that day, first yes takes the job, rates and invoices kept with it
+sweep website: crawl.py twice, 60 URLs, renders of https://www.majordomo.vip/ and https://www.majordomo.vip/about-us , a polished site whose true flaws are small (reviews placement, a stale journal), not chosen
+sweep gdpr: tools/eu-view.py from Stockholm on https://www.majordomo.vip/ , _fbp and _ga set before a click though a banner with Decline exists, a small fix, never the angle (RULES 0E)
+sweep apps: chef, crew and trades sourced by public post and messages per https://www.linkedin.com/company/majordomo-vip , CHOSEN as a roster and dispatch app
 sweep social: tools/social-audit.js on the accounts in their HTML, https://www.linkedin.com/company/majordomo-vip 656 followers, Pinterest 3 followers, Instagram MajorDomoVIP UNKNOWN (embed broken), not chosen
 sweep squad: a property care company per https://www.majordomo.vip/about-us , builds no software, not applicable
-thread: problem the homepage quotes Douglas Adams and Kazuo Ishiguro while his reviews sit on the About page | cost an owner deciding who gets their keys likely judges on the homepage and never sees them | offer a homepage that opens with those reviews and his superyacht years, with a walkthrough one tap away | link homepage, review
-lead read: David reads that his homepage quotes Douglas Adams and Kazuo Ishiguro while his five star reviews sit on the About page, so an owner deciding who gets their keys likely never sees them, and gets offered a homepage that opens with those reviews, one thread
+thread: problem a last minute chef request for guests in Eze went out as a public post asking chefs to message their prices | cost every urgent job likely lands on him to fill by hand, one message at a time | offer a private roster app where one request reaches the vetted chefs and crew free that day | link request, chef
+lead read: David reads that his last minute chef request for guests in Eze went out as a public post asking chefs to message their prices, so every urgent job likely lands on him to fill one message at a time, and gets offered a private roster app where one request reaches his vetted chefs free that day, one thread
 claims:
-your homepage quotes Douglas Adams and Kazuo Ishiguro, https://www.majordomo.vip/ rendered 2026-10-12 ~16:55 UTC, "— Douglas Adams" and "— Kazuo Ishiguro, The Remains of the Day", both crawl passes
-while your five star reviews sit on the About page, https://www.majordomo.vip/about-us "Words of Affirmation 5-Star Reviews & Personal Recommendations", six entries including two marked Google Reviews, both passes, and the homepage text has no "review" in either pass
-INFERENCE, an owner deciding who gets their keys likely judges on the homepage and never sees them, rests on https://www.majordomo.vip/ and https://www.majordomo.vip/about-us , worded likely
-your superyacht years, https://www.majordomo.vip/about-us "advancing into the specialised world of super yacht management", and https://www.majordomo.vip/services/real-estate-partners "has spent over 15 years serving high profile families aboard superyachts"
-websites credential, docs/astra-company-profile.md line 95, Raka's fixed brand line, https://www.linkedin.com/in/raka-mulya-b92885196
-recheck: 2026-10-12 ~16:58 UTC, both pages reread in two crawls and a render. Disproof tried, a first draft said the site had no proof at all, the search for review and star found the About page's six recommendations, so the claim was cut down to where they sit. Checked the homepage for any review in both passes (none). Facts hold, confidence MEDIUM
+your last minute request for a chef in Eze went out as a public LinkedIn post, https://www.linkedin.com/company/majordomo-vip post stamped 2mo, "Last minute request in Eze, guests seeking chef (able to invoice) for the next 3 days, starting Tuesday", rendered in Chromium 2026-10-12 ~17:40 UTC and read again by WebFetch the same session
+asking chefs to message you their prices, the same post on https://www.linkedin.com/company/majordomo-vip "PM me with $$ prices for more informations please, urgent 😅"
+INFERENCE, every urgent job likely lands on you to fill by hand, one message at a time, rests on the post above and the one employee listed on https://www.linkedin.com/company/majordomo-vip , worded likely, how he fills other jobs is unknown
+your chefs, crew and trades, https://www.majordomo.vip/services/staff-training "We source, vet, and place experienced professionals including stewards/stewardesses, butlers, chefs, and seasonal support staff" and https://www.majordomo.vip/services/property-management "Pool and Garden Maintenance", "Preventive Maintenance and On-demand Repairs"
+vetted, https://www.majordomo.vip/services/staff-training "We source, vet, and place"
+apps credential, Raka's fixed line "We build [xyz] for brands like Unilever, AXA, Pertamina", docs/astra-company-profile.md line 95, and the Unilever app work at line 82, https://www.linkedin.com/in/raka-mulya-b92885196
+recheck: 2026-10-12 ~17:45 UTC, the company page read two ways and the staffing and property pages reread. Disproof tried, looked for any booking, roster or partner portal on the site (none in 60 pages), checked the post is the company's own (company page, signed by the page), and kept "while you run it alone" out of the message because the page also says 2 to 10 employees. Facts hold, confidence MEDIUM
 ```
 
 SKETCH
 ```
 Hi David, Major Domo looks cool!
 
-However, your homepage quotes Douglas Adams and Kazuo Ishiguro, while your five star reviews sit on the About page. So an owner deciding who gets their keys likely judges on the homepage and never sees them.
+However, your last minute request for a chef in Eze went out as a public LinkedIn post, asking chefs to message you their prices. So every urgent job likely lands on you to fill by hand, one message at a time.
 
-I'd suggest a homepage that opens with those reviews and your superyacht years, with booking a walkthrough one tap away.
+I'd suggest a private roster app for your chefs, crew and trades, where one request reaches the vetted people free that day and the first yes takes the job.
 
-At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
+At Astra agency we build apps and tools for brands like Unilever, AXA, Pertamina.
 
-Shall I send you a sketch of the new Major Domo homepage?
+Shall I send you a sketch of the Major Domo staff roster app?
 ```

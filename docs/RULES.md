@@ -162,6 +162,50 @@ and we read both as her mistake. Same family as the wrong domain trap, one level
    site never says Christmas, "grows faster than one person's week" for a lawyer whose site says
    he retired from NautaDutilh. Cut it, or make it plainly about the season, never about them.
 
+### 0E. Worth 2,500 euros or it isn't an angle (Raka, 2026-10-12)
+
+His words, "scrap these like compliant or gdpr fixes. theyre tiny fixes and someone can do it
+like for 50 bucks. we gotta analyse things that are worth 2500 euros at least ... we gotta talk
+about the graander things."
+
+What caused it, three of the seven SKETCH drafts of 12 Oct. Kevin Hanson (Panoramix IP) was
+offered a cookie banner and an unticked opt in, every word true and sourced to the ICO, and
+worth fifty euros. David Weyn (Major Domo) was told to move his reviews to the homepage, a ten
+minute Squarespace edit. Chris Hale's (The Garnish Collective) offer ended "the enquiry form
+tidied up". True is not enough. Small and true still loses the lead, because it tells them we
+look for typos.
+
+1. **The angle is a problem whose fix is a project worth 2,500 euros or more to them.** Block
+   two names that problem and the offer names that project. A site rebuilt around what they
+   sell next, an app or tool that takes a job off the founder, a channel run for months, a
+   launch site. The quote floor of 500 euros in section 1 is unchanged. This is the floor on
+   what we analyse and pitch, not on what we quote.
+2. **Never the angle, always scrapped.** Compliance and GDPR fixes (cookie banners, consent,
+   opt ins, privacy policies, an Impressum, mentions légales), a typo, a form field or dropdown,
+   a broken link, moving a section, one line of copy, a setting. Any of them can be a proof
+   point inside a bigger angle. None is the angle. GDPR is still checked in the sweep (rule 13
+   of 4A), it just never becomes the pitch on its own, and that includes W5, whose campaign
+   name says GDPR. W5 leads get researched for the bigger angle like everyone else.
+3. **The 50 bucks test, before a word is drafted.** Could a freelancer fix this in an afternoon
+   for 50 euros? If yes, it's a task. Find the structural problem behind it, or the verdict is
+   NO_STRONG_ANGLE. This replaces the softer tweak test in section 3, which let these through.
+4. **Grander means it touches how they make money.** The revenue model (a subscription brand
+   whose homepage never sells the habit), a sales channel (company bookings with no channel to
+   companies, corporate lunches that can only be ordered by enquiry form), a launch (a dip
+   heading for supermarket shelves with a trade only site), the trust decision a buyer makes,
+   or the founder's own hours (a one person firm filling urgent jobs by public post). Ask what
+   they're trying to sell next and what in their setup stops it, at the size of a project.
+5. **The gate carries `worth:`.** The project and its value, written as a figure, e.g.
+   `worth: €4,000+, Shopify homepage and first order rebuilt around a 28 day routine, a starter
+   subscription and a Klaviyo flow to day 28`. tools/check-drafts.py fails any OPENER or SKETCH
+   in a file dated 2026-10-12 or later with no worth line at 2,500 euros or more, and any whose
+   message names a compliance fix. The figure stays in the gate. The money rule still keeps
+   it out of the message.
+6. **When the only true flaw is small, the lead waits.** Kevin Hanson's site is a strong sales
+   machine, and its real flaws (the consent setup, a LinkedIn post promising a free clinic that
+   lands on a page charging 375 pounds) are all small. That's NO_STRONG_ANGLE, recorded with
+   its sweep, and the small flaws stay in the research as proof for later.
+
 ---
 
 ## 1. Sending
@@ -477,7 +521,9 @@ what ladder means tracing a verified defect to its real consequence, never infla
 small true thing into a big false one.
 
 **The tweak test.** If their existing web person could fix it in an afternoon, it is a task,
-not an angle. Use the defect as proof and sell the structural thing behind it.
+not an angle. Use the defect as proof and sell the structural thing behind it. **Tightened
+2026-10-12 into the 50 bucks test, section 0E.** The angle has to be worth 2,500 euros or more
+to them, and compliance or GDPR fixes are never the angle.
 
 **Money figures. The general numbers rule is SCRAPPED (Raka, 2026-09-22).** Do not put a
 figure in a message to make it feel researched, to set a scene or to show we did the work.
@@ -723,7 +769,9 @@ right now, and we lead with it.**
      goal's page missing or weak, a shop or booking path buried. Rendered and looked at.
    - **GDPR and privacy.** Trackers firing before consent (site-audit.js lists them), no or
      broken privacy policy, forms without consent, a missing Impressum in DE and AT. EU and UK
-     leads. It's a fine, a legal risk and a trust problem, so it passes the pay test when real.
+     leads. **Checked every time, never pitched on its own (Raka, 2026-10-12, section 0E).**
+     "theyre tiny fixes and someone can do it like for 50 bucks." A GDPR finding can be a
+     proof point inside a 2,500 euro angle, never the angle.
      **THE GEO TRAP (found 2026-09-25).** This container exits in Columbus, Ohio. GDPR doesn't
      cover a US visitor, so Cookiebot, Usercentrics, Complianz, Shopify's banner and Google
      consent mode region defaults show a US visitor no banner and let trackers run. From here
