@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-10-12 06:19:44 UTC by session 01CwL7 as part of the 75 bumps, act_pS44M5zCnvCEGpAcR, one copy landed. Do not send again.
+
 <!-- Emily Levy bump, per Raka's 2026-10-12 rule (RULES.md, "A nudge is the plain bump"). SUPERSEDES the researched nudge in state/drafted_2026-10-09-emily.md, which is retired unless Raka asks for a researched one. NOT SENT. HANDED TO THE OTHER SESSION (01CwL7) on Raka's word 2026-10-12, this session never sends it. Re pull the thread immediately before sending. -->
 # Emily Levy bump
 
