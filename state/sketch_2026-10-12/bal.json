@@ -1,0 +1,175 @@
+{
+ "target": "https://www.baldoriaparis.com/",
+ "tag": "bal",
+ "status": 200,
+ "navError": null,
+ "fetchedAt": "2026-10-12T16:38:45.166Z",
+ "reach": {
+  "verdict": "READ",
+  "attempts": [
+   "networkidle:200"
+  ],
+  "controlOk": null,
+  "plainHttp": null,
+  "dns": null
+ },
+ "hidden": {
+  "textLength": 799,
+  "mainHtmlLength": 127013,
+  "textToHtmlRatio": 0.0063,
+  "inlineScriptsInMain": 49,
+  "gateCandidates": [],
+  "contentProbablyHidden": true
+ },
+ "page": {
+  "title": "Baldoria Paris ⎸ Agence événementielle",
+  "lang": "fr-FR",
+  "generator": null,
+  "description": "Baldoria est une agence événementielle, spécialisée dans le design et la production d’événements clé en main. À Paris et à l’international, nous imaginons des expériences immersives pour les marques, du concept à la réalisation finale.",
+  "forms": 2,
+  "inputs": 8,
+  "mailto": 0,
+  "tel": 0,
+  "images": 7,
+  "svgs": 5,
+  "videos": 0,
+  "h1": [],
+  "nav": [
+   "Passer au contenu => #page",
+   " => /",
+   "Accueil => /",
+   "À propos => /about",
+   "Services => /services",
+   "Projets => /project",
+   " => /",
+   "Accueil => /",
+   "À propos => /about",
+   "Services => /services",
+   "Projets => /project",
+   "Accueil => /",
+   "À propos => /about",
+   "Services => /services",
+   "Projets => /project",
+   " => https://www.instagram.com/baldoria.paris/",
+   " => https://www.linkedin.com/company/baldoriaparis/?viewAsMember=true"
+  ],
+  "social": {
+   "linkedin": "https://www.linkedin.com/company/baldoriaparis/?viewAsMember=true",
+   "instagram": "https://www.instagram.com/baldoria.paris/"
+  },
+  "bannerPresent": false,
+  "acceptButton": null,
+  "rejectButton": null,
+  "privacyLink": null,
+  "imprintLink": null,
+  "textLength": 799,
+  "text": "Passer au contenu\nAccueil\nÀ propos\nServices\nProjets\nBaldoria est une agence créative, spécialisée dans le design et la production d’événements d’exception. Née à Paris, inspirée par le monde, elle met ses talents au service d’expériences mémorables.\nMerit\nJacques Cartier\nBack Market\nVoir tous les projets\nÉcrivez-nous pour toute demande liée à un projet, un partenariat stratégique, une demande presse ou toute autre information.\nVous pouvez aussi nous contacter à l’adresse : contact@baldoriaparis.com\nNom\nPrénom\n(obligatoire)\nNom de famille\n(obligatoire)\nE-mail\n(obligatoire)\nS’inscrire pour recevoir nos actualités\nMessage\n(obligatoire)\nEnvoyer\nContact\ncontact@baldoriaparis.com\n+33 (0)6 06 68 87 30 \n2 rue Moufle, 75011 Paris\nRecevez nos dernières actualités\n S’inscrire\nSuivez-nous",
+  "mainHtmlLength": 127013,
+  "inlineScriptsInMain": 49,
+  "gateCandidates": []
+ },
+ "stack": {
+  "generator": null,
+  "wordpress": false,
+  "wpVersion": null,
+  "themes": [],
+  "boughtTheme": null,
+  "plugins": [],
+  "builder": [],
+  "saasBuilder": [
+   "squarespace"
+  ],
+  "fontFamilies": [
+   ""
+  ],
+  "hexColours": []
+ },
+ "era": {
+  "datedTells": [],
+  "boughtTheme": null
+ },
+ "gdpr": {
+  "consentPlatform": [],
+  "bannerPresent": false,
+  "acceptButton": null,
+  "rejectButton": null,
+  "rejectMissingOrSmaller": true,
+  "privacyLink": null,
+  "imprintLink": null,
+  "cookiesBeforeAnyClick": [
+   {
+    "name": "crumb",
+    "domain": "www.baldoriaparis.com",
+    "party": "first",
+    "session": true
+   },
+   {
+    "name": "ss_cvr",
+    "domain": "www.baldoriaparis.com",
+    "party": "first",
+    "session": false
+   },
+   {
+    "name": "ss_cvt",
+    "domain": "www.baldoriaparis.com",
+    "party": "first",
+    "session": false
+   },
+   {
+    "name": "_ga",
+    "domain": ".baldoriaparis.com",
+    "party": "first",
+    "session": false
+   },
+   {
+    "name": "_ga_B2XN117Y8N",
+    "domain": ".baldoriaparis.com",
+    "party": "first",
+    "session": false
+   }
+  ],
+  "thirdPartyCookiesBeforeAnyClick": [],
+  "trackersBeforeAnyClick": [
+   "www.googletagmanager.com",
+   "www.google-analytics.com",
+   "www.gstatic.com",
+   "fonts.gstatic.com"
+  ],
+  "googleFontsRemote": true,
+  "allThirdPartyHosts": [
+   "assets.squarespace.com",
+   "definitions.sqspcdn.com",
+   "static1.squarespace.com",
+   "www.googletagmanager.com",
+   "images.squarespace-cdn.com",
+   "file.squarespace-cdn.com",
+   "cdn.weglot.com",
+   "www.google-analytics.com",
+   "www.google.com",
+   "www.gstatic.com",
+   "fonts.gstatic.com",
+   "clanker-events.squarespace.com"
+  ]
+ },
+ "social": {
+  "linkedin": "https://www.linkedin.com/company/baldoriaparis/?viewAsMember=true",
+  "instagram": "https://www.instagram.com/baldoria.paris/"
+ },
+ "render": {
+  "suspectAssets": [],
+  "assetsOurFault": 0,
+  "assetsTheirFault": 0,
+  "assetFindingsTrustworthy": true
+ },
+ "health": {
+  "pageErrors": [],
+  "failedRequests": [
+   "https://www.google-analytics.com/g/collect?v=2&tid=G-B2XN117Y8N&gtm=45je6a80v9247632653za208zd9247632653xf1&_p=1791823108907&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dZjQwMz&are=1&cid=238480266.1791823110&frm=0&ngs=1&pscdl=noapi&rcb=4&sr=1440x1000&uaa=x86&uab=64&uafvl=Chromium%3B141.0.7390.37%7CNot%253FA_Brand%3B8.0.0.0&uam=&uamb=0&uap=Linux&uapv=6.18.44&uaw=0&ul=en-gb&_s=1&tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271~121246026~121246034&sid=1791823109&sct=1&seg=0&dl=https%3A%2F%2Fwww.baldoriaparis.com%2F&dt=Baldoria%20Paris%20%E2%8E%B8%20Agence%20%C3%A9v%C3%A9nementielle&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=1818",
+   "https://www.google-analytics.com/g/collect?v=2&tid=G-B2XN117Y8N&gtm=45je6a80v9247632653za200zd9247632653xf1&_p=1791823108907&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dZjQwMz&_eu=AEAAAAQ&ae=a&are=1&cid=238480266.1791823110&frm=0&ngs=1&pscdl=noapi&rcb=4&sr=1440x1000&uaa=x86&uab=64&uafvl=Chromium%3B141.0.7390.37%7CNot%253FA_Brand%3B8.0.0.0&uam=&uamb=0&uap=Linux&uapv=6.18.44&uaw=0&ul=en-gb&_s=2&tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271~121246026~121246034&sid=1791823109&sct=1&seg=0&dl=https%3A%2F%2Fwww.baldoriaparis.com%2F&dt=Baldoria%20Paris%20%E2%8E%B8%20Agence%20%C3%A9v%C3%A9nementielle&en=scroll&epn.percent_scrolled=90&_et=7113&tfd=13935"
+  ]
+ },
+ "shots": {
+  "desktop": "/tmp/claude-0/agents/b17/audit/bal-desktop.png",
+  "phone": "/tmp/claude-0/agents/b17/audit/bal-phone.png"
+ }
+}

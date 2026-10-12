@@ -1,0 +1,150 @@
+{
+ "target": "https://www.favamole.nl/",
+ "tag": "fav",
+ "status": 200,
+ "navError": null,
+ "fetchedAt": "2026-10-12T16:50:10.370Z",
+ "reach": {
+  "verdict": "READ",
+  "attempts": [
+   "networkidle:200"
+  ],
+  "controlOk": null,
+  "plainHttp": null,
+  "dns": null
+ },
+ "hidden": {
+  "textLength": 1412,
+  "mainHtmlLength": 134846,
+  "textToHtmlRatio": 0.0105,
+  "inlineScriptsInMain": 28,
+  "gateCandidates": [],
+  "contentProbablyHidden": true
+ },
+ "page": {
+  "title": "Favamole",
+  "lang": "en-US",
+  "generator": null,
+  "description": "Sustainably crafted from local, nutrient-rich fava beans, Favamole offers a flavourful alternative to guacamole. Join the movement with Favamole!",
+  "forms": 1,
+  "inputs": 8,
+  "mailto": 1,
+  "tel": 0,
+  "images": 13,
+  "svgs": 17,
+  "videos": 0,
+  "h1": [
+   "Hello Favamole!"
+  ],
+  "nav": [
+   "Skip to Content => #page",
+   "Home => /",
+   "Contact => /contact",
+   " => /",
+   " => https://www.instagram.com/favamole.nl/",
+   " => https://www.linkedin.com/in/andres-jara-2172a675/",
+   "Home => /",
+   "Contact => /contact",
+   " => /",
+   " => https://www.instagram.com/favamole.nl/",
+   " => https://www.linkedin.com/in/andres-jara-2172a675/",
+   "Home => /",
+   "Contact => /contact",
+   " => https://www.instagram.com/favamole.nl/",
+   " => https://www.linkedin.com/in/andres-jara-2172a675/",
+   " => https://www.instagram.com/favamole.nl/",
+   " => https://www.linkedin.com/in/andres-jara-2172a675/"
+  ],
+  "social": {
+   "linkedin": "https://www.linkedin.com/in/andres-jara-2172a675/",
+   "instagram": "https://www.instagram.com/favamole.nl/"
+  },
+  "bannerPresent": true,
+  "acceptButton": {
+   "text": "select “accept all” to agree to our use of cookies and simil",
+   "area": 5500890
+  },
+  "rejectButton": null,
+  "privacyLink": null,
+  "imprintLink": null,
+  "textLength": 1412,
+  "text": "Select “Accept all” to agree to our use of cookies and similar technologies to enhance your browsing experience, security, analytics and customization. Select ”Manage cookies” to make more choices or opt out.\nManage cookies\nAccept all\nSkip to Content\nHome\nContact\nHello Favamole!\nFavamole is a celebration of flavour, farming & the future. \nYou can dip it, spread it, scoop it, swirl it. On toast, in wraps, over bowls or straight from the spoon.\nFavamole is the fava bean dip from Dutch soil, we’re creamy, bold and delicious. We work with Dutch organic regenerative farmers to create a short supply chain and without air miles. Ideal for impact-driven menus, net-zero procurement & category stand-out.\nOur Product is HPP-packed so we guarantee a 30 days shelf life, clean label, allergen-free and CSRD-proof.\nAvailable in 150g Retail cups, 275g & 525g Foodservice units and as 5kg Bag in box\nItem 1 of 6\nName\nFirst Name\n(required)\nLast Name\n(required)\nEmail\n(required)\nSign up for news and updates\nPhone\nMessage\n(required)\nSubmit\nGet in touch, and we’ll provide you with information about Favamole distribution. We’re happy to answer any questions and keep you in the loop.\nInterested?\nFavamole © 2024 | All rights reserved\nNieuwe Hemweg 4E\n1013 BGAmsterdam\nThe Netherlands\nandres@favamole.nl\n+31639874356\nEuropees Landbouwfonds voor Plattelandsontwikkeling: Europa investeert in zijn platteland",
+  "mainHtmlLength": 134846,
+  "inlineScriptsInMain": 28,
+  "gateCandidates": []
+ },
+ "stack": {
+  "generator": null,
+  "wordpress": false,
+  "wpVersion": null,
+  "themes": [],
+  "boughtTheme": null,
+  "plugins": [],
+  "builder": [],
+  "saasBuilder": [
+   "squarespace"
+  ],
+  "fontFamilies": [
+   ""
+  ],
+  "hexColours": []
+ },
+ "era": {
+  "datedTells": [],
+  "boughtTheme": null
+ },
+ "gdpr": {
+  "consentPlatform": [],
+  "bannerPresent": true,
+  "acceptButton": {
+   "text": "select “accept all” to agree to our use of cookies and simil",
+   "area": 5500890
+  },
+  "rejectButton": null,
+  "rejectMissingOrSmaller": true,
+  "privacyLink": null,
+  "imprintLink": null,
+  "cookiesBeforeAnyClick": [
+   {
+    "name": "crumb",
+    "domain": "www.favamole.nl",
+    "party": "first",
+    "session": true
+   }
+  ],
+  "thirdPartyCookiesBeforeAnyClick": [],
+  "trackersBeforeAnyClick": [
+   "www.gstatic.com",
+   "fonts.gstatic.com"
+  ],
+  "googleFontsRemote": true,
+  "allThirdPartyHosts": [
+   "assets.squarespace.com",
+   "definitions.sqspcdn.com",
+   "static1.squarespace.com",
+   "images.squarespace-cdn.com",
+   "file.squarespace-cdn.com",
+   "www.google.com",
+   "www.gstatic.com",
+   "fonts.gstatic.com"
+  ]
+ },
+ "social": {
+  "linkedin": "https://www.linkedin.com/in/andres-jara-2172a675/",
+  "instagram": "https://www.instagram.com/favamole.nl/"
+ },
+ "render": {
+  "suspectAssets": [],
+  "assetsOurFault": 0,
+  "assetsTheirFault": 0,
+  "assetFindingsTrustworthy": true
+ },
+ "health": {
+  "pageErrors": [],
+  "failedRequests": []
+ },
+ "shots": {
+  "desktop": "/tmp/claude-0/agents/b17/audit/fav-desktop.png",
+  "phone": "/tmp/claude-0/agents/b17/audit/fav-phone.png"
+ }
+}

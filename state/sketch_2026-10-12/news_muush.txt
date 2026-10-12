@@ -1,0 +1,87 @@
+CONTROL  'Tesco'  HTTP 200, 100 results
+
+== GOOGLE NEWS, company  q="MUUSH" lion's mane  HTTP 200, 10 results
+  2026-06-19  The best non-alcoholic drinks available in the UK in 2026 - Closer
+      https://news.google.com/rss/articles/CBMihAFBVV95cUxOUTlJbXhvbGNPN1F1Q1lDbVdsb3VROVpjclhYejkwamt4RkEzX3lFcFFqZGl0Mk9rOFpFN1d0eEhGNm05TWtUYURqZ2NXS1Z6MWxyMVNYQ1duYWRXYWdVZS1BM0Z5X0h4b3Z4dUdHYjRzTnI3emdoM1Q3SGp2NmRGaVlHUWU?oc=5
+  2026-02-04  Muush lands Abel & Cole listing - Fruitnet
+      https://news.google.com/rss/articles/CBMimwFBVV95cUxNWk9VOVdJZGJDWjBCa1NVc0RvU0R0RmRDVVIyTTRWb1RrUGg4dkVwcXYzRDh2dzJvTmRMRGF4TmdScmd4Q3IyU2Z3aU4yRWtQMUpRSDI4SXZOVnRUUm5mZ2h1YW5YQUtwSnRFQUxCdmpmakhEbm9KdjVDZXMxbnI5VEx6cGxibzRBVjkyTEc5bTZTSDBheC1lRVdQYw?oc=5
+  2026-01-12  Are functional mushroom drinks the next big health trend? - FoodBev Media
+      https://news.google.com/rss/articles/CBMijgFBVV95cUxQTjI3QmEtOTMzcF9qT0FvQk1faGxkV3RXbHgwbmtiOVpJbVFOcENpUEp4MXVSeWk3SFJUZHIxSXpuYzhxUk96VXZCdTV6YVlDRzc0YlNrMXhPaFVMZkJrdXNaT3dVajFua2JTb2ZLcjk0RHhicVFCOFlmTHhYNzYyYW1IclY2eDFldU8yZHpn?oc=5
+  2025-12-17  20 best non-alcoholic spirits for Dry January - Good Housekeeping
+      https://news.google.com/rss/articles/CBMifkFVX3lxTE8xYzBodFRMTFFVTXBrX1JrbXk2LVVCR19xR2xRMjQ3Yy14OFd6dXY4RDFDTmQ1Um9uWFNYb0ktUTBNVTNYTUVNbjhXM3R3WWJMQjhja2F1WDhsYThjaVQ2YmY2VWt2YjRxVGxuTWlENGo1VXN2Ukd0Q1ZGZy13dw?oc=5
+  2025-12-04  Muush raises £400k to accelerate growth - Fruitnet
+      https://news.google.com/rss/articles/CBMiogFBVV95cUxQTFZtVHZGdDU3UHItbXd3QTl5dUdYakZjeWo0dDVwcm1uTy10OThXSkllbzhiSlJwZ0lvUUR3SllvOUZ4Zm1pQkJWdElNX2JBb3dESWdPdnFIejc5TFJRelREdUhMM0F3MFh0QkpUcDNfMkdsY3hsQ241U3NGblFxTVYwWjN3WXZuS0x6Yllvdl9oQ29GYVJ5a2VfR0V4aXhjVWc?oc=5
+  2025-11-25  Trend Watch: Mushrooms - Speciality Food Magazine
+      https://news.google.com/rss/articles/CBMigwFBVV95cUxQVmoxOFlWdExBb2hhNXlTZWd1cWRIVVRoSzVzS00yX3VHdFM1NTF3dzg4Vlp4cGplaEt1clo5Y0NaVG1aSlRHLVR3MjJaVjQxa2ZBVUh6R0xJZlBiUXdYN3NpOU1wY25oOEgwQVhjRFlTTml5UVduY3c2ZC1pMFhtYk1Lcw?oc=5
+  2025-10-30  Low in sugar, high in flavour – Muush’s secret ingredient is a fun-gus - SeedLegals
+      https://news.google.com/rss/articles/CBMiaEFVX3lxTE82RTFGSWc3ZG5NQk1rZnJMdXJLc0NsbFZoSkt1aUUwcWVJMEhhb1h3U2J4a09jMk9YZmhjeXRLRUloeVFUcXJiN0hGYmNCSzVFcnkwREdGVjV6WjdFSkJYcmpNUHBuM1Jq?oc=5
+  2025-09-23  The best mushroom supplements in 2025, according to a wellness editor - The Independent
+      https://news.google.com/rss/articles/CBMinAFBVV95cUxOTXpwaHY5VXdoSUcwaF8wSUsyWTNQRnkxZHRtckVSWFFZRXZfeEswa2M1dTdjbHhSbDEyWGZuMkZwaEptM1E0UXZBUE1RM0lHMXFlTGlHdWY4RnRwLXR4OHBzQ1FvaUx4UDZXWWN4SHcwem0tMEpsY0pMSDZ4ZC0wUDAwMGs1VTZQOEE5XzN2aDExa2dSV3dvNHhaNEQ?oc=5
+  2025-07-12  From mushrooms to magnesium and Gaba – we test three booze-free drinks for Alcohol Awareness Week - The Sun
+      https://news.google.com/rss/articles/CBMifkFVX3lxTFBMMWN0SV9FQ0VTc2F3VmRLdEF5eEhjb3JCRmVFMHBzQnFkOFpUZlBmcnNmVlhDRGdvRUxnamx6eURvOExxU0NDQ05kNkpyU3hLZ0c1WlhKbEtvN094NEQwdnZYNk1YSUw3RUFNd09na1dsZDQyeVUxczY4VGZEUQ?oc=5
+  2025-04-25  Muush takes functional soft drinks to a new level - Food and Drink Technology
+      https://news.google.com/rss/articles/CBMiogFBVV95cUxQOXNMOUROUE03WnhYQXBnazRIWWFmZ3VlSUtnRTNhM2hXTUJ5TlJkS2xwNThkdmZiYmU3VTI5OXFYbGNfa3hMcE45X2JVd3d1bmdiLTRreGRHekxFYWViak9EQ28xREtURTRNYmtReU12X3RSOEdDa1NVb2tZVm9YSjdOMnplZmpDdlJEcF8wUnNENElvNEZEWk1TR2JkQWU2THc?oc=5
+
+== GOOGLE NEWS, person  q=""Dan D'Souza" MUUSH"  HTTP 200, 5 results
+  2026-02-04  Muush lands Abel & Cole listing - Fruitnet
+      https://news.google.com/rss/articles/CBMimwFBVV95cUxNWk9VOVdJZGJDWjBCa1NVc0RvU0R0RmRDVVIyTTRWb1RrUGg4dkVwcXYzRDh2dzJvTmRMRGF4TmdScmd4Q3IyU2Z3aU4yRWtQMUpRSDI4SXZOVnRUUm5mZ2h1YW5YQUtwSnRFQUxCdmpmakhEbm9KdjVDZXMxbnI5VEx6cGxibzRBVjkyTEc5bTZTSDBheC1lRVdQYw?oc=5
+  2026-01-12  Are functional mushroom drinks the next big health trend? - FoodBev Media
+      https://news.google.com/rss/articles/CBMijgFBVV95cUxQTjI3QmEtOTMzcF9qT0FvQk1faGxkV3RXbHgwbmtiOVpJbVFOcENpUEp4MXVSeWk3SFJUZHIxSXpuYzhxUk96VXZCdTV6YVlDRzc0YlNrMXhPaFVMZkJrdXNaT3dVajFua2JTb2ZLcjk0RHhicVFCOFlmTHhYNzYyYW1IclY2eDFldU8yZHpn?oc=5
+  2025-12-04  Muush raises £400k to accelerate growth - Fruitnet
+      https://news.google.com/rss/articles/CBMiogFBVV95cUxQTFZtVHZGdDU3UHItbXd3QTl5dUdYakZjeWo0dDVwcm1uTy10OThXSkllbzhiSlJwZ0lvUUR3SllvOUZ4Zm1pQkJWdElNX2JBb3dESWdPdnFIejc5TFJRelREdUhMM0F3MFh0QkpUcDNfMkdsY3hsQ241U3NGblFxTVYwWjN3WXZuS0x6Yllvdl9oQ29GYVJ5a2VfR0V4aXhjVWc?oc=5
+  2025-10-30  Low in sugar, high in flavour – Muush’s secret ingredient is a fun-gus - SeedLegals
+      https://news.google.com/rss/articles/CBMiaEFVX3lxTE82RTFGSWc3ZG5NQk1rZnJMdXJLc0NsbFZoSkt1aUUwcWVJMEhhb1h3U2J4a09jMk9YZmhjeXRLRUloeVFUcXJiN0hGYmNCSzVFcnkwREdGVjV6WjdFSkJYcmpNUHBuM1Jq?oc=5
+  2025-04-25  Muush takes functional soft drinks to a new level - Food and Drink Technology
+      https://news.google.com/rss/articles/CBMiogFBVV95cUxQOXNMOUROUE03WnhYQXBnazRIWWFmZ3VlSUtnRTNhM2hXTUJ5TlJkS2xwNThkdmZiYmU3VTI5OXFYbGNfa3hMcE45X2JVd3d1bmdiLTRreGRHekxFYWViak9EQ28xREtURTRNYmtReU12X3RSOEdDa1NVb2tZVm9YSjdOMnplZmpDdlJEcF8wUnNENElvNEZEWk1TR2JkQWU2THc?oc=5
+
+== REGIONAL NEWS, their industry in their region  q=(UK functional drinks) ("lion's mane" drink OR "functional soda")  HTTP 200, 46 results
+  2026-08-18  Nonalcoholic Beer Is Getting a Wellness Makeover - Food & Wine
+      https://news.google.com/rss/articles/CBMif0FVX3lxTFBkOHV4dVVkMm9TYVBhV0lhNnVrRGM5NFdOVDRwa1FJc1BWRXA2WnFPelFwbmRDYjB1OEQ5RlQxZE16SUpsdi10NlBpcGppR0RTS0lUUmVSTU5CNG1DNmFLZG5sTVo2WmtyR2dBSzRFX0dRRTVMMzhtN3JSU01URFU?oc=5
+  2026-07-26  Electrolyte lemonade to probiotic pop: do the new generation of ‘functional drinks’ live up to the hype? - The Guardian
+      https://news.google.com/rss/articles/CBMivAFBVV95cUxQZVY4eHZQYjAwVVZCQUp0ZWtQdjJJZFJVaVhmTVlrVklad3A0Q3dCOEtGb09fS2Vnb1d4cTV1Tzl5cFVWZThIVTE0c0UzSzNTWFVWaTRxeDlJNUpZQS1BYVZxMUg4Yk9mSVJFUXpyQW5NUFc4U0s5Vkd1bnhYcjRKMkxKN01KU2RsWXJsX1VWZTMxM2lrSnFJb0Q0dy11UzlYVUtvS1R5eW1aUnU1TUJpZ2VVQXA1bUQzUGhZUA?oc=5
+  2026-06-11  Tenzing expands functional energy range with White Peach flavour - FoodBev Media
+      https://news.google.com/rss/articles/CBMimAFBVV95cUxOOHFHZzgtemlfSDFjdFp6S0E4VC1veEdUVzc1X2VxVWFaS3RTN19WOXN2ckdlODBnTG1QLUJvc0Z3Sm5aQzZqLUwyaVhCUUxRUm1qMXg0UllScER3SDZuaEN4MXJWejlkZGVUVG5ZRXA2clF3aXYySkd6eDAtRWZDQ3pmTWJfZ1BGUTF0a243cUhlR1V5TFNrWA?oc=5
+  2026-06-09  Why energy brands are innovating with extra benefits - The Grocer
+      https://news.google.com/rss/articles/CBMisgFBVV95cUxNZDhwRjk2YTVQa1BWTUROa0U4T3NRcjV4UWZxREV4Ni1tUHFYcGhuMndkMUY3eHFzcXpFWU0wZVZOWDlGTVVXZ3dkbVZrUG9BOE42dURycGVBRVJfanVoWGVZWURLTlBfT3c5dFJfbks4TFFoNXcxbW52QWJDMzBMXzNMUVlINTk5MkJsaTM1R1FBWlA5VzZRcHBHajhSSDdoYnJTY3JQUjdCcFdJQlROWUVn?oc=5
+  2026-06-08  TENZING expands Natural Energy+ platform with Natural Energy +Focus ‘White Peach’ the next generation of energy drinks - Grocery Trader
+      https://news.google.com/rss/articles/CBMi2wFBVV95cUxObzQzaWJEaXJ5NktvUmJjcVNuc3BLUWdGUlJBLVQ3QUQwTjV1dy1XQzd4MUM0b25aOGFGMFhZXzBzb0JFbGpHUllsbktDdTFZNFBGUHVXVEZmNXR2THRPdVk2NDJWR0h4SjI0bWwxYVhzSHZLZkdXMnBFbW5ZYXdIb3RneXU4LUJrV1NPNS03aG5JMkcyQ2FFc18ybkdXX1RnU0JKS1QxMS1PME1LY25WcEMwYUpTVkpYQ2FObndpSF9yUUZLd21kenVFNkNOS1ZfWko3aDVPVVQza0U?oc=5
+  2026-05-27  Forwards Festival teams up with sober bar to 'create change' - BBC
+      https://news.google.com/rss/articles/CBMiWkFVX3lxTE5tQ1ZlN2RPMGNoTjZ0TzdIbU5PWlZsSURPZU9BYlh4aHdfQnh5OHVmQ3ZUcjI1ZUV5VXBVUW4xa1hVUVUwM05BeUVhWDJ2QmhpOC02bkxCT3liQQ?oc=5
+  2026-04-15  Adaptogen Drink Market - Future Market Insights
+      https://news.google.com/rss/articles/CBMidkFVX3lxTE8welhpU3Z2UGRxM2FjVEJEV1VNM1IxYmxlT1IxcDZrQXloNlhpeGt6dXFXc20wODRHRmNDd1Q2b3B3TFdTWjhxdUt0dTB4MURuZC1pcWNaVlFOWXFFSV9GZ0pPZjB4alBqZGZQTE1uZEZIbHRadWc?oc=5
+  2026-03-21  I tested more than 50 functional drinks to see if any of them actually taste nice - Metro.co.uk
+      https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYnQ4THd2eWRwLTBEcWtvRU8ydng0ZWp6bG1iUWlWYlVHdG9PM3hqRFlWandqQkxSMXg0cFBwQkNFdU1WS3dMR1IyVEd3S3EyWmVzUVo2QlVWZ3FSTlpFV3JVeWoyeG5CUDNBa3YxZU1xSS1zdzlEckdpb0YwNzF3R21PYmdubXZlUXNn0gGQAUFVX3lxTFBkd2FwMU41MlEwUk9UQzRsR3U4SHlTX21GT3JyYUVfX2EyRXJoR19Hbmp4allxNkIySTFkemNCOFZybDA5UjI2a1pUNE5mMGN0cEhvLVM1MlVxYjNrZzdHNm1oekFISlEyR3lSWWZXX3J3TDlOMUc2T09FaFkyTl9rd1hsNWJfRGQzU1RqSEdFVQ?oc=5
+  2026-02-16  Tenzing's Natural Energy + Lion's Mane boosts focus and energy - Stack3d
+      https://news.google.com/rss/articles/CBMickFVX3lxTE5xXzZaNWI1TmNyYTR6SzV0WXhaT1lxdEsyTXZKQmNoMmxVVmpqQk5aR19fQTgzWTVvd3NsN19EZUNKRnBWTXowam1Wd3lRNlNqdFZmYkphNmNjY1MwbEJlbTBFNmw5MjlnY2lhOVAwM0M3Zw?oc=5
+  2026-02-09  Tenzing pushes deeper into functional energy with Lion’s Mane launch in UK - FoodBev Media
+      https://news.google.com/rss/articles/CBMipgFBVV95cUxPbmwxblZUMEVrdzJqbDdXUWFaZHFDWjlKaUhoWVB5LU5kYUlaTjl2eHBkWTJqcFROa1luLW1lOC0teC0wNkE0eDgwZnpJRW9Vck1VRDI5MmlmVTFIUHdtT1N1M3VLMy1LRF9TU3ltVHl2ZjA4M3Fxd2Z4dzl4ZnRVWlM1clpMMi1aaVpYQlBvMlhONlY3Vksyd3FXNHNOU2tKQlVHZWd3?oc=5
+  2026-02-09  TENZING launches the next generation of energy drinks: Natural Energy+ - Grocery Trader
+      https://news.google.com/rss/articles/CBMingFBVV95cUxOMUZDU043WDRTR2F3dy1VSk13SzhJTTJ4OU5mYjJ2WjBsWU5vX013XzFJbldrNzlHc2E5SHhja0ctZEJhemtDdHhsUmMwa1l4U2JZVEJvaGxRR21sSVZHeXRDU2F3THhPanhmZUdCekdGSVB6X2Uyc2VGU2hwby0tcGlaeWt0VHFzbDAwdWE3MFkxVXhiZ3lhNzZlam9sZw?oc=5
+  2026-02-03  Tenzing launches lion's mane energy drink - www.conveniencestore.co.uk
+      https://news.google.com/rss/articles/CBMioAFBVV95cUxQMTFnYU14UHJXZldiYXg0NGFhM3lHQ0VtT3B5ZG5jcUtlRVdrclB2cURxNlVNaDNibTZDakNFeTBFbG5WNjhwNzh0SVNzR2IxYkY3ZzRWcDV2VFdnVWdUbDlXM3VoSmp4dlBCeklSVHE4SEttTUIxUEEwZTd0YXQwUEMzQkxUMDdJUTdyYWhaWEhpV1dDZHBscjJUNUNYV21H?oc=5
+
+== INDUSTRY NEWS  q="lion's mane" drink OR "functional soda"  HTTP 200, 63 results
+  2026-10-08  Spacegoods Review: Rainbow Dust Tested 30 Days - balancejournal.co
+      https://news.google.com/rss/articles/CBMiZEFVX3lxTE9TbVA2SHhzdHlLbDZEVE5MRERfTkZQLWlNR1liS0x6djlBNHZzRmI4dXZ2dlpPUW9vdEJTeUMxVS02YTF1Vi1zYUNERGZrRlVqaWdwQ0FqQjhkZ0ZWN3lBTUJpekk?oc=5
+  2026-09-11  ‘I Laughed, I Cried, I Got the Runs’: The Best Mushroom Coffees for an Alternative Buzz - WIRED
+      https://news.google.com/rss/articles/CBMiYEFVX3lxTE94UzFyMmM1QjB2V0hMOWJqWjBaUmtJTndKa0pGQVQyTkkxVUdIdF8xSEZxM1lJaWNQVnBQOV8yQmpZRGJteUkzZ0FKV3JuM19qRzQ5UVlxdjRJV2xMSFhWcA?oc=5
+  2026-08-13  Does lion's mane and reishi help with sleep? I tried both adaptogens for 30 days and this is what happened to my sleep score - Yahoo Health
+      https://news.google.com/rss/articles/CBMikgFBVV95cUxOQzZnZWJ3RVpGNndab1VZeWZKT0g0dEhiQ3dsUEE1WE1GSV9sdURYUXRuODZRZW93cThoa201Nk92bW9wOGZ3SjhpQ0NXamJGSEh6eS0tUjFKUzc2c0JPMEVNUFZyMmRjLThkMzZlbFN6VTZJZ3JvZlZPMjhKVVRvMkRGZk9PUmFHU0kyVW9SemRxZw?oc=5
+  2026-07-08  We Tried Aldi’s New Organic Energy Drink - Sporked
+      https://news.google.com/rss/articles/CBMid0FVX3lxTE5QN2NPb0FVOTQwWWtpS0FFaF9RYXJjb0R3dUZuaXhodjRYd1VVWXUxS05iX0NRZnZxcnBwVTc0YkxtRkxJclE0NXpPcEt4cUQ2MFA1NGJKVi01NmZ2bkVwNGdoQWRzVGpBTHBuTnlNREpUOTF0V1ZZ?oc=5
+  2026-07-03  10 best mushroom coffees for an alternative morning pick-me-up, tried and tested - Good Housekeeping
+      https://news.google.com/rss/articles/CBMioAFBVV95cUxQZzJTeThHUTVvc2RpTWczRW1nRnRyQ1NiY0UwLW94MnFXdTJMd3JZdU9PSUVld20zSTlsWVZNSGtKbGhNUzJTREZ6QnFZRElKaFM1SW9QX1ppRkR6Z1NMdWFUT2lSZEVHaUVyclNzbGRXS2RVS3VSc1ZacjVrNUkyU1JQS2xQcFdSNnlqMWtWUm05SmNJc3BuN2RBUF9Da0NX?oc=5
+  2026-06-18  Mindfuel Flow's lion's mane powered iced latte productivity drink - Stack3d
+      https://news.google.com/rss/articles/CBMiakFVX3lxTFByakJ2QWkwVDNydWM3cEJwT3JnTVVrSDhmODRtUGhOaW43X0J5UjdONUJkM1ZBZm5EUGFDS3lveGVJWUlMNWotTFN3aVppbUFhVjBlX2lIaGF6Wl9XRXU3Vjk1ZDRQMjc3R2c?oc=5
+  2026-05-27  Magic, science or myth? We asked a mycologist which mushroom supplements are legit - New York Post
+      https://news.google.com/rss/articles/CBMihwFBVV95cUxPM1JQaWI0U1M4eGFuVDlsQldqRHp3VXA5R3RSNTM2MFgtS0VLcm1hclpoWTU1MGttVmhMTVNRX29NdW1udFNZR2hUOVYwamFubzI4SlduZDhHSUNfcXpoN0trWVF5Q1ZIS1h0ZmJjWkZUYjFiVFB4RUtTVkRQWVgyR3k0NTdPUWM?oc=5
+  2026-05-19  I Tried BREZ OG Micro, the Lemony THC Drink That's So Subtle It's Practically Gaslighting You (In a Good Way) - VICE
+      https://news.google.com/rss/articles/CBMiY0FVX3lxTE9OYmE0SC1jcGh2enVoYTF0UXJpT1JYMW5ySm1yeTY5bGtYTDAyNFFuRmx2elV4WFdnVVpSdXVNc0h1UC1sN01pNHk0U0FIZjgxRkNnR0E3ck04WVk5QUc0Q19TOA?oc=5
+  2026-04-21  I Drank 20 Mushroom Coffees To Find The 4 Best Tasting Brews (2026) - Bon Appétit: Recipes, Cooking, Entertaining, Restaurants | Bon Appétit
+      https://news.google.com/rss/articles/CBMiY0FVX3lxTFB5SXNfQVliTWpqejBkSTRfUGNNTHF4bU4zbG41bl8tb1U2NlJtUVN5YVAwYV9JV1FzdVpLTUltN2VNckRFMEwwSEVibUEtTV9oRVBvNUZQWGlVd1B2SmlLS0JCMA?oc=5
+  2026-04-21  Dirtea Review 2026: A Roaster's Honest Verdict - balancejournal.co
+      https://news.google.com/rss/articles/CBMiX0FVX3lxTFBpeXQ1Vm9HTGRtODU1Y3lSY2dHUmlvMHY5blA5VlZpNFY2ZGZhWVptOW41ejBVeFdqNHIybHJ5UUIwb3RXVGNJMVJlNkhXcko4MDRnUjJkNVhYNjVjWGsw?oc=5
+  2026-04-08  Best Lions Mane Coffee UK 2026: 10 Brands Tested - balancejournal.co
+      https://news.google.com/rss/articles/CBMib0FVX3lxTFA1STBrdnA5enVVdXR6SkZISFc5dzBTS1lKb09NN1htM3pQYkhocUViTkcyM2N6b0xkY1VFUWdrS0NUeV84OXVBc0w0QlVDdG5lX3gxa0E0ZXZQRWtZSnpDTDI2TlE1dkp3dThkTFRERQ?oc=5
+  2026-04-05  Benefits of Lion's Mane Mushroom for Your Brain and Mood - Health.com
+      https://news.google.com/rss/articles/CBMia0FVX3lxTE5xV25zb010cmQ0ckxibng0dzhEajFsbWtibXNnMS1rMWRONmtpMWtYTWM1VUR5MnVJdDl4cjdQX2tRbDNpc3FNZHRGWmtKdjZDaVJMcW1MTk5zZmFnNGpMZGpxSzE0cWVYZ2pV?oc=5
