@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+<!-- Sent 12 of 14 on Raka's 'Send now'. 6 on 2026-10-11 17:23 to 17:24 UTC (Darren, Ulrich, Josh, Reno, Fabian, Marjolein), 6 on 2026-10-12 06:11 to 06:12 UTC after an MCP disconnect (Alexandre, Jagdees, Charles, Rachel, Paul, Valeska reply), each verified in its thread. Albert and Jessica moved to state/drafted_2026-10-11-held.md. Do not send again. -->
+<!-- REVISED 2026-10-11 ~16:30 UTC after Debby Alles's false presumption reply, 11 drafts reworded to remove presumptions, see the REVISED notes in each gate. This file is authoritative, the batch files in state/deep_2026-10-11/ are the agents' originals. -->
 <!-- Deep research run on the 15 accepts of 8 to 10 Oct, compiled 2026-10-11 from state/deep_2026-10-11/drafts_A..E.md. NOTHING SENT. Each send needs Raka's explicit word. Re pull each thread with a control and reopen every claim source in the minute before any send. Full research per lead in state/deep_2026-10-11/<firstname_lastname>.md. -->
 # Deep research drafts, 15 accepts, 2026-10-11
 
@@ -40,15 +43,15 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://www.thefinzocompany.com/ 
 sweep apps: https://www.thefinzocompany.com/services/tech/ sells "Business Process Automation" and app stacks, so a finance AI workflow is out, an AI workflow that finds and follows up new clients is not something finzo sells, CHOSEN
 sweep social: tools/social-audit.js opened https://www.instagram.com/finzolimited/ 54 followers, latest post 2026-03-13 with control natwest latest 2026-09-27, https://www.facebook.com/finzoLimited 19, https://www.linkedin.com/company/finzo-limited/ 314 with posts every few days, not chosen
 sweep squad: an accountancy per https://www.thefinzocompany.com/services/ , builds no software for sale, nothing to supplement, not applicable
-thread: problem the site, the weekly articles and LinkedIn all wait for new clients to come to finzo | cost the sole traders and landlords picking an accountant for Making Tax Digital go to whoever contacts them first | offer an AI workflow that finds finzo's next clients and follows up | link clients, finzo
-lead read: Darren reads that everything finzo puts out waits for new clients to arrive, so the small businesses choosing an accountant sign with whoever reached them first, which matters most while sole traders and landlords rush to get ready for Making Tax Digital, and gets offered the AI workflow that finds finzo's next clients, one thread
+thread: problem the site, the weekly articles and LinkedIn all wait for new clients to come to finzo | cost the start ups that suit finzo likely sign with another accountant before they find it, and new companies in its sectors pick one early | offer an AI workflow that finds finzo's next clients and follows up | link clients, finzo
+lead read: Darren reads that everything finzo puts out waits for new clients to arrive, so the start ups that would suit it likely sign elsewhere first, which matters because new companies in its sectors choose an accountant early, and gets offered the AI workflow that finds finzo's next clients, one thread
 claims:
 your site, https://www.thefinzocompany.com/contact-us/ , a Quform contact form on every page, phone and email, no booking or outreach tool in the HTML, refetched 2026-10-11 11:56 UTC
 your weekly articles, https://www.thefinzocompany.com/wp-json/wp/v2/posts?per_page=8&_fields=date posts dated 2026-10-08, 10-01, 09-24, 09-17, 09-10, 09-03, 08-27, 08-20, refetched 2026-10-11 11:56 UTC
 your LinkedIn, https://www.linkedin.com/company/finzo-limited/ posts 2d, 3d, 4d, 1w, 1w, 2w, 3w, 3w, 1mo, 1mo old, blog links through ow.ly, refetched 2026-10-11 11:56 UTC
 INFERENCE, all of these wait for new clients to come to finzo, rests on all three being inbound channels at https://www.thefinzocompany.com/ and https://www.linkedin.com/company/finzo-limited/ , outbound work by Darren in person can't be seen and may exist
-INFERENCE, the businesses that need a cloud accountant sign with whoever reached them first, rests on the two person team (https://www.thefinzocompany.com/about-us/meet-the-team/ ) and the flat headcount in the filed accounts at https://find-and-update.company-information.service.gov.uk/company/13097254/filing-history , worded as likely, no figure used
-helping sole traders and landlords get ready for Making Tax Digital, https://www.thefinzocompany.com/blog/first-making-tax-digital-deadline-looms-400000-people-still-yet-to-register/ (published 2026-07-30, "over 400,000 qualifying landlords and sole traders have still not signed up") and https://www.thefinzocompany.com/blog/hmrc-is-set-to-automatically-sign-up-thousands-of-taxpayers-to-mtd-after-a-slow-uptake/ (2026-08-20), the LinkedIn post 3w old "Do you need to sign up for Self-Assessment tax returns? ... Contact our team" on https://www.linkedin.com/company/finzo-limited/ , and https://www.thefinzocompany.com/services/accountancy-services/ "full compliance with HMRC (including Making Tax Digital MTD)"
+INFERENCE, the start ups that would suit finzo likely sign with another accountant before they find it, rests on all three channels being inbound and the two person team at https://www.thefinzocompany.com/about-us/meet-the-team/ , worded likely. REVISED 2026-10-11 ~16:30 UTC after Debby Alles's false presumption reply, the old 'whoever reached them first' and 'usually the ones somebody contacted' were market claims with no source
+growing finzo with start ups and businesses looking to scale up, https://www.thefinzocompany.com/ "Whether you are a start-up or an already established business looking to scale up", reopened 2026-10-11 16:25 UTC. your sectors, the same page's Sector Specialisms menu, E-commerce, Hospitality, Restaurants, Start-ups, Technology, Manufacturing. INFERENCE, new companies likely pick an accountant in their first months, worded likely. REVISED 2026-10-11 ~16:30 UTC after Debby Alles's false presumption reply, the Making Tax Digital hook is CUT, finzo's service pages never mention sole traders or landlords and mention MTD only for VAT (https://www.thefinzocompany.com/services/accountancy-services/ ), the MTD posts read as syndicated news, so 'helping sole traders and landlords get ready' was our presumption about their focus
 Betty Blocks credential, Global GTM and Campaign Manager Aug 2024 to Feb 2026, "automation-driven revenue workflows covering enrichment, scoring, routing and follow-up loops", docs/astra-master-context.md 2A, https://www.linkedin.com/in/raka-mulya-b92885196
 recheck: 2026-10-11 11:56 UTC, posts API, LinkedIn page and contact page refetched, every quoted fact held. Disproof tried, grepped all 350 crawled pages for calendly, booking, case study and fractional (0, 0, 0, 0, control "Making Tax Digital" 67 hits), checked the Macalvins site for a finzo referral route (none stated). The cost and the "whoever reached them first" are inference he can test against his own pipeline. Ownership and incumbent flags stated above the gate. Facts hold, confidence MEDIUM
 ```
@@ -57,9 +60,9 @@ OPENER
 ```
 Hi Darren, saw finzo, looks interesting!
 
-However, your site, your weekly articles and your LinkedIn all wait for new clients to come to finzo. This causes the small businesses most likely to need a cloud accountant to sign with whoever reached them first.
+However, your site, your weekly articles and your LinkedIn all wait for new clients to come to finzo. This causes the start ups that would suit finzo best to likely sign with another accountant before they ever find you.
 
-Especially, when you are helping sole traders and landlords get ready for Making Tax Digital, the ones who pick an accountant first are usually the ones somebody contacted.
+Especially, when you are growing finzo with start ups and businesses looking to scale up, the new companies in your sectors likely pick an accountant in their first months.
 
 I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I built the lead scoring and follow up workflows for Betty Blocks' sales team, so I know which new businesses are worth a call first.
 
@@ -150,81 +153,6 @@ Red team, Ulrich (sources reopened 2026-10-11 11:56 to 11:58 UTC)
 | legal teams likely check the site | CHS posts link "Learn more" to justclaims.eu | buyers also come via ASD, softened to "likely" | inference |
 | Betty Blocks site credential | 2A | "watched buyers check a vendor's site" is Raka's to confirm | flag for Raka |
 
-### Albert van der Kolk, Van der Kolk Legal, ctc_w4hXk3njKiearzeNu
-
-FLAGS FOR RAKA. Albert is not young, the firm is. He was a NautaDutilh partner from 1993 and retired from there on 1 January 2024, and Van der Kolk Legal (Muscles B.V., KvK 24255393) started around then with Miriam Kreulen, a mediator and trainer. A senior lawyer may push back hard on AI and confidentiality, so the proof is the governance one. The director of Muscles B.V. isn't shown on any free register, ownership rests on the site, the firm name and the BV's single lawyer.
-
-```gate
-lead: Albert van der Kolk, co founder and the lawyer of Van der Kolk Legal, trade name of Muscles B.V., KvK 24255393 (OpenKvK, trade names "Muscles B.V." and "Van Der Kolk Legal", SBI 69101 law firms, Schoenerwal 15 Leiden), ctc_w4hXk3njKiearzeNu, leadId lea_9fHaiTPt3vxohrRhw, campaign cam_BRBXAzzDKMfC4fSCS, lemlist jobTitle "Co-Founder", tagline "Co-Founder (Lawyer) at Van der Kolk Legal". https://www.vanderkolklegal.nl/ "opgericht door Albert van der Kolk en Miriam Kreulen", https://www.vanderkolklegal.nl/assets/files/vdkl-juridische-informatie.pdf "Muscles B.V. h.o.d.n. VAN DER KOLK LEGAL", "E. albert@vanderkolklegal.nl", "De advocaat van Muscles B.V." singular. Thread pulled 2026-10-11 ~11:09 UTC, 0 items, nextPage null, control 2 items same minute, sentOnly shows only our 2026-10-09 05:52 connect note, accepted 19:10
-site pass 1: 22 URLs by tools/crawl.py and direct fetch, 11 pages in Dutch and English (home, wat bieden wij, voor wie, over ons, contact) plus 10 PDFs (terms, legal information, complaints 2026, privacy, waarneming in both languages), every page and PDF read
-site pass 2: 22 URLs, second crawl equal, site-audit.js desktop and phone screenshots of home and wat bieden wij opened, landscape hero "Your trusted partner for employment, pension and privacy issues", no case, publication or client named on any page
-deep analysis: A two person boutique in Leiden about two years old, one advocaat, Albert, who advises and litigates in employment, pension and privacy law, plus Miriam Kreulen for mediation and team coaching. Clients named as types, boards, works councils, universities, care institutions, staffing agencies, directors and medical specialists, billing by the hour, invoiced monthly. Clients came with him, court rulings show him acting for the AFM in a pension case since 2018 (Amsterdam 2018, appeal 2020, Amsterdam 2024, Hague appeal November 2025), for Coach Netherlands in 2024 and for an employer in two 2024 to 2025 dismissal cases. At NautaDutilh his deal teams ran 13 to 26 lawyers (Advocatie 2021 to 2023), now he is the firm's only lawyer. His two fields both have hard deadlines, the Wtp pension transition ends end 2027 with no extension (SRA 2026-07-16) and the flex worker law starts 31 Dec 2026 and 1 Jan 2028 (Stb. 2026, 205)
-owner linkedin: same person as the contact. Route 1 fetch-walled https://www.linkedin.com/in/albert-van-der-kolk 429 and recent-activity 429. Route 2 web search "Albert van der Kolk" linkedin "Van der Kolk Legal", nothing. Route 3 lemlist like-last-post returned "noPostOnLead", he has no post to read. Route 4 company page https://www.linkedin.com/company/van-der-kolk-legal/ 4 followers, 1 employee, Albert. Route 5 his own words on https://www.vanderkolklegal.nl/nl/over-ons/ and the PHR 2019 opinion citing his article with M. Kreulen. Route 6 Advocatie deal teams naming him, 2021 to 2023
-contact linkedin: same person, site, legal information PDF, LinkedIn company page and lemlist agree, the court rulings name "mr. A. van der Kolk" and the 2019 Advocate General opinion cites "A. van der Kolk en M. Kreulen", which ties the rulings to him
-google news: tools/news.py nl, "Van der Kolk Legal" 0, "Albert van der Kolk" 10 (Advocatie NautaDutilh deals 2021 to 2023), control Heineken 100
-regional news: tools/news.py (Leiden advocaten) (arbeidsrecht, AI), 50, Advocatie and Mr. Online moves, BNR 2026-06-03 judges catching AI errors, Tweakers NOvA on AI misuse
-industry news: tools/news.py advocatuur arbeidsrecht AI, 54, Advocatie 2026-07-09 clients do simple legal work with AI, Quote 2026-09-28 Zuidas veterans' AI first firm "half the time", NOvA 2026-05-21 AI now part of daily practice, plus the NOvA Aanbevelingen AI and the Wtp and flex law sources at source
-sources:
-1. https://www.vanderkolklegal.nl/nl/wat-bieden-wij/
-2. https://www.vanderkolklegal.nl/assets/files/vdkl-juridische-informatie.pdf
-3. https://www.openkvk.nl/kvk/24255393
-4. https://www.linkedin.com/company/van-der-kolk-legal/
-5. https://data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:GHDHA:2025:2270
-6. https://data.rechtspraak.nl/uitspraken/content?id=ECLI:NL:PHR:2019:438
-7. https://www.advocatie.nl/deals/nautadutilh-en-hvg-law-adviseren-bij-supermarktfusie-plus-en-coop/
-8. https://www.sra.nl/nieuws/273975/2026/07/pensioentransitie-gaat-laatste-fase-in
-9. https://www.dirkzwager.nl/kennis/artikelen/stappenplan-pensioentransitie-van-analyse-naar-implementatie-vóór-2028
-10. https://www.njb.nl/wetgeving/staatsbladen/meer-zekerheid-flexwerkers/
-11. https://www.advocatenorde.nl/nieuws/verantwoord-werken-met-ai-de-praktijk
-12. https://www.quotenet.nl/zakelijk/zuidas/a73920781/driven-lawyers-ai-advocaten-arvid-van-oorschot-jelle-drok/
-13. https://www.advocatie.nl/nieuws/ai-laat-eenvoudig-juridisch-werk-bij-advocatenkantoren-verdwijnen/
-14. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.vanderkolklegal.nl%2F (tools/eu-view.py)
-15. https://news.google.com/rss (tools/news.py)
-pains: 6 judged. (1) every advice, pleading and works council matter runs through one lawyer who used to work in teams of a dozen, while both his fields face 2027 to 2028 deadlines, CHOSEN. (2) the site names no case, publication or result and the firm has no Google listing, his clients come from his network, small. (3) intake by form and phone, low volume high value clients, small. (4) social, LinkedIn page 4 followers and no posts, low value for this client base. (5) GDPR, 0 cookies from Stockholm, clean. (6) Build Squad, a law firm, not applicable
-chosen: (1), costliest and hottest, a one lawyer firm billing by the hour has his own hours as its ceiling, and the pension transition and the flex law push more drafting onto exactly his practice through 2027
-sweep website: crawl.py twice 22 URLs and site-audit.js screenshots of https://www.vanderkolklegal.nl/ , clean and bilingual, no case, publication or client named, no Google listing (Maps query returns only the address, same method listed finzo and Macalvins), not chosen
-sweep gdpr: tools/eu-view.py from Stockholm on https://www.vanderkolklegal.nl/ , 0 cookies and no third party requests before a click, privacy statement PDF present, clean, not chosen
-sweep apps: https://www.vanderkolklegal.nl/assets/files/vdkl-juridische-informatie.pdf names one advocaat for the BV and https://www.vanderkolklegal.nl/nl/wat-bieden-wij/ says he advises and litigates, an AI drafting workflow for that one lawyer, CHOSEN as the personal workflow
-sweep social: tools/social-audit.js opened https://www.linkedin.com/company/van-der-kolk-legal/ 4 followers, 1 employee, no social account linked from the site HTML, Albert has no LinkedIn post, not chosen
-sweep squad: a two person law firm per https://www.vanderkolklegal.nl/nl/over-ons/ , builds no software, nothing to supplement, not applicable
-thread: problem the firm advises and litigates in three fields and all of it runs through one lawyer | cost the drafting grows with pension fund and employer clients facing the 2028 pension deadline | offer an AI workflow that drafts his first versions | link draft
-lead read: Albert reads that everything his firm does runs through him alone, so every advice and pleading waits until he's drafted it, which grows as pension funds and employers race the 2028 deadline, and gets offered an AI workflow that drafts his first versions, from someone who ran data governance at Heineken, one thread
-claims:
-your firm advises and litigates in employment, pension and privacy law, https://www.vanderkolklegal.nl/nl/wat-bieden-wij/ "adviseren en procederen op het gebied van het Arbeidsrecht, het Pensioenrecht en het Privacyrecht", refetched 2026-10-11 11:56 UTC
-all of it runs through one lawyer, https://www.vanderkolklegal.nl/assets/files/vdkl-juridische-informatie.pdf "De advocaat van Muscles B.V." singular three times, refetched 200 at 11:56 UTC, and https://www.linkedin.com/company/van-der-kolk-legal/ 1 employee, Miriam Kreulen offers coaching and mediation per https://www.vanderkolklegal.nl/en/what-we-offer/
-works council, https://www.vanderkolklegal.nl/nl/wat-bieden-wij/ "het begeleiden van ondernemingsraden"
-pension funds and large employers, https://www.vanderkolklegal.nl/nl/wat-bieden-wij/ "staat hij grote partijen bij, waaronder pensioenfondsen en grote werkgevers"
-the new pension system due by 2028, https://www.sra.nl/nieuws/273975/2026/07/pensioentransitie-gaat-laatste-fase-in "het overgangsregime loopt tot eind 2027" and "zal niet worden verlengd", https://www.dirkzwager.nl/kennis/artikelen/stappenplan-pensioentransitie-van-analyse-naar-implementatie-vóór-2028 "tot 1 januari 2028"
-INFERENCE, every advice and pleading waits until he's drafted it himself, rests on the single advocaat in the legal information PDF and no other lawyer on https://www.vanderkolklegal.nl/nl/over-ons/ , worded as likely, a secretary or contract help can't be ruled out
-INFERENCE, the drafting grows faster than one person's week, rests on the Wtp end date at https://www.sra.nl/nieuws/273975/2026/07/pensioentransitie-gaat-laatste-fase-in and his pension fund and employer clients, worded as likely
-Heineken credential, Global E-Business Data and Insights Lead Feb 2023 to Feb 2024, 23 markets, data governance across regions, docs/astra-master-context.md 2A, https://www.linkedin.com/in/raka-mulya-b92885196
-recheck: 2026-10-11 11:56 UTC, legal information PDF (200) and wat bieden wij refetched, every quoted phrase found. Disproof tried, searched the site, the PDFs and LinkedIn for a second advocaat, associate or paralegal (none), checked Miriam's role (mediator, coach, trainer, not the BV's advocaat), checked whether Albert sells or posts about AI (no posts, nothing on the site). Facts hold, confidence MEDIUM
-```
-
-OPENER
-```
-Hi Albert, saw Van der Kolk Legal, looks interesting!
-
-However, your firm advises and litigates in employment, pension and privacy law, and all of it runs through one lawyer. This causes every advice, pleading and works council letter to likely wait until you've drafted it yourself.
-
-Especially, when you are working for pension funds and large employers with the new pension system due by 2028, the drafting likely grows faster than one person's week.
-
-I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I led Heineken's global e business data across 23 markets, including its data governance, so I know how to keep client files confidential.
-
-Shall I send you over what the AI workflow that drafts your first versions looks like?
-```
-
-Red team, Albert (sources reopened 2026-10-11 11:56 UTC)
-
-| Claim | Reopened | Disproof tried | Result |
-|---|---|---|---|
-| advises and litigates in employment, pension and privacy law | wat bieden wij live | verb is "adviseren en procederen" | holds |
-| all of it runs through one lawyer | legal information PDF (200), LinkedIn 1 employee | searched site, PDFs, LinkedIn for a second advocaat or associate, none, Miriam does mediation and coaching | holds |
-| working for pension funds and large employers | wat bieden wij "staat hij grote partijen bij" | softened from "advising" to match the verb | holds |
-| new pension system due by 2028 | SRA 2026-07-16, Dirkzwager 2026-02-12 | SRA says transition to end 2027, no extension | holds |
-| Heineken governance credential | 2A | "data governance across regions", 23 markets | holds |
-
-<!-- from batch b15_B -->
 ### Josh Edelman, The Wine Flight, ctc_cAdQknSHnsBZMFvrP
 
 ```gate
@@ -262,13 +190,13 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://www.thewineflight.com , 0
 sweep apps: enquiry, quote, bank transfer and guest weight collection by one person per https://www.thewineflight.com/Wine_Flight_Terms_and_Conditions.pdf , real but low volume this early, runner up as an AI sales workflow for concierges, hotels and PAs that the privacy policy names as referral partners, not chosen
 sweep social: tools/social-audit.js on https://www.instagram.com/the.wine.flight/ (embed broken, og meta 57 followers 9 posts at 11:17 UTC) and https://www.linkedin.com/company/the-wine-flight/ (1 employee), against partners Wiston 27,119, Sugrue 14,076, Danbury Ridge 5,902, Thunder 4,189, a real gap, folded into the runner up, not chosen
 sweep squad: a one man tour operator per https://www.linkedin.com/company/the-wine-flight/ , no product team, the site is a finished custom build, not applicable
-thread: problem the site sells private helicopter wine days but says nothing about gifts or company days | cost gift and client day buyers likely buy a partner's voucher instead, and winter is when both get bought | offer the Wine Flight site that sells gifts and company days | link gift, company
-lead read: Josh reads that his site never mentions gifts or company days, so the Christmas and client day buyers go to Gusbourne or Wiston vouchers instead, which matters most now that winter is when next summer's days get bought, and gets offered the Wine Flight site for gifts and companies, one thread
+thread: problem the site sells private helicopter wine days but says nothing about gifts or company days | cost gift and client day buyers likely book something else, and winter is when both get bought | offer the Wine Flight site that sells gifts and company days | link gift, company
+lead read: Josh reads that his site never mentions gifts or company days, so Christmas and client day buyers likely book something else, which matters now that winter is when next summer's days get bought, and gets offered the Wine Flight site for gifts and companies, one thread
 claims:
 your site sells full days by private helicopter to England's finest wineries, https://www.thewineflight.com/ "Private helicopter access to England's finest wineries" and "full-day journeys", rendered 2026-10-11
 says nothing about gifts or company days, gift, voucher, corporate and company counted 0 in https://www.thewineflight.com/assets/index-DKJ253DW.js , in every https://www.api.thewineflight.com/_functions endpoint and in all 16 rendered routes, controls Battersea 14 and Rolls-Royce 4 found by the same methods, 2026-10-11
-Gusbourne and Wiston sell vouchers, https://www.gusbourne.com/visits/gift "Our Gift Experience Vouchers", https://www.wistonestate.com/product/gift-vouchers/ "Wines, Tours & Chalk Gift Vouchers", both partners on https://www.api.thewineflight.com/_functions/partners , fetched 2026-10-11
-INFERENCE, gift and client day buyers likely buy one of those vouchers instead, rests on the 0 count above and the partner voucher pages https://www.gusbourne.com/visits/gift and https://www.gusbourne.com/corporate-services/experiences , worded "likely"
+his partners sell gifts and company days themselves, https://www.gusbourne.com/visits/gift "Our Gift Experience Vouchers", https://www.wistonestate.com/product/gift-vouchers/ , partners per https://www.api.thewineflight.com/_functions/partners reopened 2026-10-11 16:20 UTC, so the demand exists. REVISED 2026-10-11 ~16:30 UTC after Debby Alles's false presumption reply, partners NOT named in the message, a £50 winery voucher isn't a real substitute for a day from £2,600 a head and they're his partners
+INFERENCE, gift and client day buyers likely book something else, rests on the 0 count above and the render of https://www.thewineflight.com/ 2026-10-11 16:18 UTC (curl errors 0) showing only Begin Your Enquiry and "From £2,600 per person", worded likely
 heading into winter with the vines bare, https://bolneywineestate.com/blog/reasons-to-visit-an-english-vineyard-this-summer "almost every vineyard open to the public runs its fullest programme of tours and tastings between June and September" and "the vines are bare" in winter, fetched 2026-10-11
 INFERENCE, the gifts and company days booked now likely fill next summer's flights, rests on the season above and the launch in 2026 per https://find-and-update.company-information.service.gov.uk/company/16953416 , worded "likely"
 Eten Maar credential, docs/astra-master-context.md section 2A, "Owned acquisition, partnerships, content, conversion, pricing", https://www.linkedin.com/in/raka-mulya-b92885196
@@ -279,7 +207,7 @@ OPENER
 ```
 Hi Josh, saw The Wine Flight, looks interesting!
 
-However, your site sells full days by private helicopter to England's finest wineries, but says nothing about gifts or company days. This causes people shopping for a Christmas present or a client day to likely buy a Gusbourne or Wiston voucher instead.
+However, your site sells full days by private helicopter to England's finest wineries, but says nothing about gifts or company days. This causes people shopping for a Christmas present or a client day to likely book something else.
 
 Especially, when you are heading into winter with the vines bare, the gifts and company days people book now are likely what fill next summer's flights.
 
@@ -330,7 +258,7 @@ today there's one Down to Earth, https://franchiseadviseur.nl/franchiseformule/v
 with you in its kitchen, https://www.downtoearthdining.com/nl/werken-bij "Reno Wiertz FOUNDER & EXECUTIVE CHEF", and https://chefsfriends.nl/hoe-down-to-earth-dining-zonder-woke-agenda-aan-de-weg-timmert-met-groenten/ "doe alle administratie en stuur de keuken aan", 17 June 2026
 INFERENCE, each new location likely leans on your own evenings to learn how it runs, rests on one location, Reno as chef and admin, and the co founder's step back on 1 July per https://www.linkedin.com/company/down-to-earth-dining/ , worded "likely"
 opening six days a week, https://www.downtoearthdining.com/nl/home popup "Vanaf oktober zijn wij 6 dagen per week geopend", rendered 2026-10-11
-looking for your first franchisees, https://www.downtoearthdining.com/nl/recenteontwikkelingen "Wij zoeken enthousiaste horecaondernemers" and the franchisor B.V. registered 10 Mar 2026, https://www.northdata.com/Down%20to%20Earth%20Dining%20B%C2%B7V%C2%B7,%20Velp/KVK%2042002612
+looking for franchisees, https://franchiseadviseur.nl/franchiseformule/vegetarisch-restaurant-franchise-down-to-earth/ live 2026-10-11 16:15 UTC "Aantal locaties 1" and "bespreken we mogelijkheden voor locatie, investering en planning", https://www.downtoearthdining.com/nl/recenteontwikkelingen "Wij zoeken enthousiaste horecaondernemers". REVISED 2026-10-11 ~16:30 UTC after Debby Alles's false presumption reply, 'first' dropped, /nl/locaties shows a Coming Soon card so a signed franchisee can't be ruled out. Six days a week reconfirmed in our own curl render of /nl/home 16:12 UTC, "Vanaf oktober zijn wij 6 dagen per week geopend"
 INFERENCE, the know how that still sits with you becomes the limit on how fast it grows, rests on the same facts at https://www.downtoearthdining.com/nl/werken-bij and https://franchiseadviseur.nl/franchiseformule/vegetarisch-restaurant-franchise-down-to-earth/ , worded as what follows
 Heineken credential, docs/astra-master-context.md section 2A, "Standardised KPIs, dashboards and decision cadences; enabled 23 markets with self-serve insights", https://www.linkedin.com/in/raka-mulya-b92885196
 recheck: 2026-10-11 11:25 to 11:50 UTC, recente ontwikkelingen, werken bij, locaties and the popup re rendered, Franchise Adviseur listing and the 404 link reopened with control, LinkedIn company HTML reread for the step back post. Disproof tried, searched every page and the sitemap for a franchise manual, handbook, academy or software (none), probed /nl/franchise and /en/franchise (404, control 200), looked for a second location (Coming Soon only). Franchise Adviseur may write the formula, so the offer is the AI system, not the handbook. Siebe's health is never named. Facts hold, confidence MEDIUM
@@ -342,7 +270,7 @@ Hi Reno, saw Down to Earth Dining, looks interesting!
 
 However, your franchise offers new owners training, systems and quality control, and today there's one Down to Earth, with you in its kitchen. This causes each new location to likely lean on your own evenings to learn how it really runs.
 
-Especially, when you are opening six days a week and looking for your first franchisees, the know how that still sits with you becomes the limit on how fast it grows.
+Especially, when you are opening six days a week and looking for franchisees, the know how that still sits with you likely becomes the limit on how fast it grows.
 
 I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I standardised the dashboards and routines Heineken's 23 markets ran on, so each market could find its own answers without waiting on head office.
 
@@ -383,10 +311,10 @@ sweep gdpr: tools/eu-view.py from Stockholm on https://www.fama.coffee/ , 1 firs
 sweep apps: the three pricing models on https://www.fama.coffee/coffee-matcha-catering-salzburg need date, place and guest count that the form never asks, one person per https://www.linkedin.com/company/famacoffeesalzburg/ , CHOSEN as the AI quote workflow
 sweep social: tools/social-audit.js on https://www.instagram.com/fama.coffee.salzburg/ 2,372 followers 57 posts newest 2026-10-11, TikTok 27 followers, LinkedIn active, benchmark Espressomobil 16,609, not chosen
 sweep squad: a one man coffee bar per https://www.fama.coffee/impressum , builds no software, not applicable
-thread: problem the event form never asks the date, the place or how many guests | cost each request likely needs a round of emails before the base fee and drinks budget can be priced, and those wait while he works events across Austria and Germany | offer the AI quote workflow for fama's events | link event, request
-lead read: Fabian reads that his event form never asks the three things his pricing depends on, so each request turns into emails before he can quote, which piles up while he's serving at events across Austria and Germany, and gets offered the AI quote workflow for his events, one thread
+thread: problem the event form has no field for the date, the place or how many guests | cost each request likely needs a round of emails before the base fee and drinks budget can be priced, and those wait while he works events across Austria and Germany | offer the AI quote workflow for fama's events | link event, request
+lead read: Fabian reads that his event form has no field for the three things his pricing depends on, so each request likely turns into emails before he can quote, which piles up while he's serving at events across Austria and Germany, and gets offered the AI quote workflow for his events, one thread
 claims:
-your event form never asks for the date, the place or how many guests, https://www.fama.coffee/coffee-matcha-catering-salzburg form "Event Anfrage" fields Name, Firmenname, E-Mail, Telefon, Branding gewünscht, Nachricht, message prompt "Kurze Infos zu Event, Anlass, Dauer, gewünschter Getränkeauswahl oder Branding-Ideen", raw form JSON and rendered DOM 2026-10-11, the home and contact forms ask only name, email and message
+your event form has no field for the date, the place or how many guests, https://www.fama.coffee/coffee-matcha-catering-salzburg our own curl render 2026-10-11 16:22 UTC (curl errors 0) fields Vorname, Nachname, Firmenname, E-Mail, Telefon, Branding gewünscht, Nachricht. REVISED 2026-10-11 ~16:30 UTC after Debby Alles's false presumption reply, 'never asks' became 'has no field for', because the message box invites "Kurze Infos zu Event, Anlass, Dauer" and a sender may type the date there
 the base fee and drinks budget, https://www.fama.coffee/coffee-matcha-catering-salzburg "Als Basis dient eine Grundpauschale. Zusätzlich wird anhand der Gästezahl ein Getränkebudget kalkuliert"
 INFERENCE, most requests likely need a round of emails first, rests on the form fields and the guest count driving the budget at https://www.fama.coffee/coffee-matcha-catering-salzburg , worded "likely"
 taking fama to events across Austria and Germany, https://www.fama.coffee/coffee-matcha-catering-salzburg "Für Events österreichweit und darüber hinaus" and https://www.instagram.com/fama.coffee.salzburg/embed/ caption 2026-10-11 "1.500 km für die @_area30_ in Löhne", Großglockner and Kitzbühel posts
@@ -399,7 +327,7 @@ OPENER
 ```
 Hi Fabian, saw fama, looks interesting!
 
-However, your event form never asks for the date, the place or how many guests are coming. This causes most requests to likely need a round of emails before you can work out the base fee and drinks budget.
+However, your event form has no field for the date, the place or how many guests are coming. This causes most requests to likely need a round of emails before you can work out the base fee and drinks budget.
 
 Especially, when you are taking fama to events across Austria and Germany, the emails that wait while you're behind the bar grow with every booking you win.
 
@@ -466,7 +394,7 @@ OPENER
 ```
 Hi Marjolein, saw Billie Swim, looks interesting!
 
-However, your wholesale page is one sentence asking retailers to email you, with no lookbook, line sheet or stockist list to look at. This causes boutique buyers picking next summer's brands to go with the labels they can judge without waiting for a reply.
+However, your wholesale page is one sentence asking retailers to email you, with no lookbook, line sheet or stockist list to look at. This causes boutique buyers picking next summer's brands to likely go with the labels they can judge without waiting for a reply.
 
 Especially, when you are building your network of retail partners for summer 2027, the boutiques that commit their budgets this autumn likely spend them on labels they could judge faster.
 
@@ -514,11 +442,11 @@ sweep apps: the ordering platform exists per https://api.cressonnette.com/api/v1
 sweep social: tools/social-audit.js opened https://www.instagram.com/cressonnette_/ 552 followers latest 2026-08-11, https://www.linkedin.com/company/cressonnette-food 12 followers, benchmarks foodiz.be 2,115 and LinkedIn foodizdelivery 2,055, exki 14,121, pistolet_original 6,231, control glamouruk, runner up
 sweep squad: a lunch shop with a part time crew per the NBB filing and a build partner per https://flyconfig.com/ , builds no software itself, not applicable
 thread: problem the Cressonnette at Work platform is built to grow one company page at a time and the company LinkedIn has 12 followers | cost offices that would order every day never hear of it while teams are only in half the week | offer the AI workflow that finds and signs the offices onto the platform | link office, platform
-lead read: Alexandre reads that his office platform only grows as fast as he signs offices and that almost nobody follows the page selling it, so offices near Cantersteen that would order daily likely never hear of it, and gets offered the AI workflow that fills his platform with offices, one thread
+lead read: Alexandre reads that his office platform only grows as fast as he signs offices and that almost nobody follows the page selling it, so Brussels offices that would order daily likely never hear of it, and gets offered the AI workflow that fills his platform with offices, one thread
 claims:
 your Cressonnette at Work platform is built to grow one company page at a time, https://www.cressonnette.com/accueil "1. Nous créons votre page entreprise ... 2. Vous invitez votre équipe ... 3. Chaque employé crée son compte", and https://www.linkedin.com/company/cressonnette-food "Une plateforme digitale entièrement personnalisée aux couleurs de chaque entreprise", fetched 2026-10-11
 your company's LinkedIn page has 12 followers, https://www.linkedin.com/company/cressonnette-food "12 followers", social-audit.js and fetch-walled 2026-10-11 ~11:30 UTC
-INFERENCE, the offices near Cantersteen that would order every day likely never hear it exists, rests on the 12 followers above, Instagram silent since 2026-08-11 at https://www.instagram.com/cressonnette_/embed/ , and no sales hire or ads seen
+INFERENCE, the Brussels offices that would order every day likely never hear it exists, rests on the 12 followers at https://www.linkedin.com/company/cressonnette-food (its website field is https://www.cressonnette.com/ , so the page is theirs, reopened 2026-10-11 16:06 UTC) and Instagram silent since 2026-08-11. REVISED 2026-10-11 ~16:30 UTC after Debby Alles's false presumption reply, 'near Cantersteen' dropped, the site gives no delivery area
 filling the platform with Brussels offices, https://www.linkedin.com/feed/update/urn:li:activity:7495756076340932610/ "livrés chaque jour aux entreprises ... découvrez notre plateforme dédiée aux entreprises", https://www.cressonnette.com/commande "Cressonnette livre chaque jour des lunchs frais et faits maison directement au bureau"
 many teams work from home half the week, https://www.innoviris.brussels/sites/default/files/2026-06/DSTTBRU%20FR.pdf "environ 2 à 3 jours par semaine ... soit la moitié du temps de travail"
 INFERENCE, the offices you never reach are daily orders you're likely missing, rests on order by 10:00 for noon delivery at https://www.cressonnette.com/accueil and the telework share above
@@ -530,7 +458,7 @@ OPENER
 ```
 Hi Alexandre, saw Cressonnette, looks interesting!
 
-However, your Cressonnette at Work platform is built to grow one company page at a time, and your company's LinkedIn page has 12 followers. This causes the offices near Cantersteen that would order every day to likely never hear it exists.
+However, your Cressonnette at Work platform is built to grow one company page at a time, and your company's LinkedIn page has 12 followers. This causes the Brussels offices that would order every day to likely never hear it exists.
 
 Especially, when you are filling the platform with Brussels offices while many teams work from home half the week, the offices you never reach are daily orders you're likely missing.
 
@@ -578,12 +506,11 @@ sweep apps: https://www.mt8848.info/contact offers "our chatbot 24/7" (Wix AI ch
 sweep social: tools/social-audit.js opened https://www.linkedin.com/company/mt-8848/ 1,160 followers posting this week and https://www.facebook.com/profile.php?id=61571857402213 3 followers, no Instagram linked in the HTML, benchmarks armedangels 415,721, hessnatur 125,074, recolution 31,785, control glamouruk, runner up
 sweep squad: a two founder Wix shop per https://www.mt8848.info/corporatemanagement , no developers, nothing to supplement, not applicable
 thread: problem customer service sends shoppers to H&M's contact and returns pages and the terms name hm.com | cost shoppers checking returns before paying lose trust, and more LinkedIn traffic means more of them hit the same pages | offer the MT.8848 shop that shoppers trust | link shop, trust
-lead read: Jagdees reads that his customer service links go to H&M and his terms still say hm.com, so shoppers who check returns before paying lose trust and leave, which grows with every product he pushes on LinkedIn, and gets offered the MT.8848 shop that shoppers trust, one thread
+lead read: Jagdees reads that his customer service links go to H&M and his terms still say hm.com, so shoppers who check returns before paying likely lose trust and leave, which grows with every LinkedIn post that sends followers to the shop, and gets offered the MT.8848 shop that shoppers trust, one thread
 claims:
 your customer service page sends shoppers to H&M's contact and returns pages, https://www.mt8848.info/customer-service rendered anchors 2026-10-11 ~11:52 UTC "contact us -> https://www2.hm.com/de_de/customer-service/kontakt.html", "here. -> https://www2.hm.com/de_de/customer-service/returns.html", "here . -> https://www2.hm.com/de_de/customer-service/returns.html", both targets opened, H&M DE pages
 your terms still talk about orders on hm.com, https://www.mt8848.info/terms-conditions rendered text "arising from your order on hm.com is limited to the total amount of your order", second hit "copyrights on hm.com remain with MT.8848"
 INFERENCE, shoppers who check how to return an order before paying lose trust and leave, rests on the two facts above and the Wix sample text at https://www.mt8848.info/customer-service/shipping-returns
-more than 500 products, https://www.mt8848.info/store-products-sitemap.xml 574 product URLs, all 606 sitemap pages answered 200 on 2026-10-11
 pushing them to your LinkedIn followers, https://www.linkedin.com/company/mt-8848/ posts linking the Women's Collection, Best sellers and "Accessories category-77 curated pieces" via wix.to, 1,160 followers
 INFERENCE, the shoppers you send there likely hit the same H&M pages before they buy, rests on the LinkedIn links above and the customer service page being linked from the footer of every page per https://www.mt8848.info/customer-service
 freelance social media and branding consultant Dec 2020 to Feb 2023, docs/astra-master-context.md section 2A, https://www.linkedin.com/in/raka-mulya-b92885196
@@ -594,9 +521,9 @@ OPENER
 ```
 Hi Jagdees, saw MT.8848, looks interesting!
 
-However, your customer service page sends shoppers to H&M's contact and returns pages, and your terms still talk about orders on hm.com. This causes shoppers who check how to return an order before paying to lose trust and leave.
+However, your customer service page sends shoppers to H&M's contact and returns pages, and your terms still talk about orders on hm.com. This causes shoppers who check how to return an order before paying to likely lose trust and leave.
 
-Especially, when you are pushing more than 500 products to your LinkedIn followers, the shoppers you send there likely hit the same H&M pages before they buy.
+Especially, when you are sending your LinkedIn followers to the shop, the ones who click through likely hit the same H&M pages before they buy.
 
 I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I worked as a freelance branding consultant for over two years, so I know what a young label has to show before strangers trust it with an order.
 
@@ -677,67 +604,6 @@ I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertami
 Shall I send you over what the AI reporting workflow for every M42 project looks like?
 ```
 
-### Jessica Lazarus, Legal Unmasked, ctc_EegeYzXabJWMGf5FS
-
-```gate
-lead: Jessica Polly Lazarus, founder, sole director and 75% or more PSC of THE UNMASKED COLLECTIVE LIMITED 16711225 (incorporated 11 Sep 2025 as LEADING UNMASKED LTD, renamed 24 Feb 2026, Leamington Spa), which trades as Legal Unmasked, per https://find-and-update.company-information.service.gov.uk/company/16711225/persons-with-significant-control . ctc_EegeYzXabJWMGf5FS, leadId lea_S2yn3dqJ8JFQbPPHz, campaign W5 TEST 50. Thread pulled 2026-10-11 ~11:02 UTC, 0 activities, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 2 items same minute, sentOnly shows only the 2026-10-09 connect note, lastRepliedAt null
-site pass 1: 4 pages, tools/crawl.py on https://www.legalunmasked.co.uk/ (home, landing page, contact, cart), plus https://stan.store/leadingunmasked (the website on her LinkedIn page and in lemlist) and https://www.leadingunmasked.co.uk/ (her email domain), every page read
-site pass 2: 4 pages, second full crawl equal, site-audit.js desktop and phone screenshots of the home opened, Chromium renders of the home, contact form, the Stan store and the email domain
-deep analysis: Legal Unmasked is a one person community and annual conference for neurodivergent people in law. It earns from tickets (Legal Unmasked 2026 ran on 6 May at Woolwich Works via Tickettailor) and, per its SIC codes, plans consultancy, education and membership. Today the Tickettailor page lists no events, the website on her LinkedIn company page is a Stan store that says it's under construction and asks the owner to reactivate it, her email domain leadingunmasked.co.uk shows a GoDaddy free parking page, and her real site, built about August 2026 per its sitemap, is one screen for "Legal Unmasked 2027 ... Coming to London in May 2027" with a priority access form. Nothing on any page shows speakers, an agenda, a 2026 recap, sponsors or anything for firms to book
-owner linkedin: same person as the contact. Route 1 curl https://www.linkedin.com/in/jessica-lazarus-26536433 429 and /recent-activity/all/ 429. Route 2 web search, result title "Jessica Lazarus - Legal Unmasked". Route 3 posts search site:linkedin.com/posts "Legal Unmasked", nothing of hers indexed. Route 4 people data, the DWF profile https://dwfgroup.com/en/people/j/jessica-lazarus now redirects to the people search while current profiles answer 200 (control james-manari), and she is not on the Legal Operations team page. Route 5 company page https://www.linkedin.com/company/leading-unmasked read via social-audit.js, 1,010 followers, 1 employee, newest visible post about 7 months old. Route 6 Tickettailor event page and the Law Gazette (walled, 405 on every route)
-contact linkedin: same person as owner, the register, the LinkedIn company page address and the Tickettailor contact email agree, same six routes
-google news: tools/news.py en 2026-10-11 ~11:40 UTC, "Legal Unmasked" 4 (Law Gazette 2026-05-01 and 2026-05-11, Lexology 2026-06-15, Odgers Interim 2026-02-19), "Jessica Lazarus" 51 none others hers, control Tesco 101
-regional news: tools/news.py (London OR UK) neurodiversity law firms, 17 results, Freshfields' Reena Parmar in Legal Business 2026-05-01, Legal Futures 2026-06-10, BBC 2026-07-25 on ADHD at work
-industry news: tools/news.py neurodivergent lawyers OR neurodiversity in law, 60 results, plus the Legal Neurodiversity Network and Neurodiversity in Law pages, the IBA and Lexxic, and five other UK neurodiversity at work conferences opened at source
-sources:
-1. https://www.legalunmasked.co.uk/
-2. https://www.legalunmasked.co.uk/contact
-3. https://stan.store/leadingunmasked
-4. https://stan.store/jessijeanhome
-5. https://www.leadingunmasked.co.uk/
-6. https://www.linkedin.com/company/leading-unmasked
-7. https://www.tickettailor.com/events/leadingunmasked
-8. https://www.tickettailor.com/events/leadingunmasked/1903238
-9. https://find-and-update.company-information.service.gov.uk/company/16711225
-10. https://find-and-update.company-information.service.gov.uk/company/16711225/persons-with-significant-control
-11. https://dwfgroup.com/en/people/j/jessica-lazarus
-12. https://diversityandinclusioninlaw.com/join-legal-neurodiversity-network/
-13. https://www.ibanet.org/How-the-legal-profession-can-better-support-neurodiversity
-14. https://neurodiversityconference.co.uk/
-15. https://news.google.com/rss (tools/news.py, company, person, region, industry, control)
-pains: 6 judged. (1) every route to Legal Unmasked online ends at a dead store, a parked domain or a one screen sign up, while 2027 tickets and sponsors are the next money, CHOSEN. (2) a one person business next to what was a senior day job, personal AI workflow, but she may now run it full time (DWF profile gone) and the personal health context is off limits. (3) social, LinkedIn page 1,010 followers but newest visible post about 7 months old, she posts mainly on her own profile, unreadable. (4) event operations, registrations and sponsor follow up as an AI workflow, real but small at one event a year. (5) GDPR, the Squarespace site sets 3 first party cookies from Stockholm, clean. (6) Build Squad, builds no software, not applicable
-chosen: (1), costliest and hottest, the 2027 event is the next revenue and it's being sold now, and every person who looks her up lands on nothing they can buy or back
-sweep website: crawl.py twice 4 pages and site-audit.js on https://www.legalunmasked.co.uk/ , plus https://stan.store/leadingunmasked under construction with control https://stan.store/jessijeanhome 200 in the same minute, and https://www.leadingunmasked.co.uk/ GoDaddy parking, CHOSEN
-sweep gdpr: tools/eu-view.py from Stockholm on https://www.legalunmasked.co.uk/ 3 first party cookies, only Squarespace hosts, no trackers, clean, not chosen
-sweep apps: one event a year sold on https://www.tickettailor.com/events/leadingunmasked/1903238 with invoices by email to jessica@leadingunmasked.co.uk , manual but small, not chosen
-sweep social: tools/social-audit.js opened https://www.linkedin.com/company/leading-unmasked 1,010 followers, newest visible post about 7 months old, no Instagram or other account linked from her own HTML, not chosen
-sweep squad: a one person community and event business per https://find-and-update.company-information.service.gov.uk/company/16711225/officers , builds no software, not applicable
-thread: problem the LinkedIn page sends visitors to a Stan store under construction and her own site only asks people to register for 2027 | cost the tickets and sponsorships for May 2027 have no page to land on | offer the site that sells Legal Unmasked 2027 | link site
-lead read: Jessica reads that the link on her LinkedIn page goes to a dead Stan store and her own site is only a 2027 sign up, so firms and sponsors find nothing to buy or back just as she sells next May's event, and gets offered the site that sells Legal Unmasked 2027, one thread
-claims:
-your LinkedIn page sends visitors to a Stan store, https://www.linkedin.com/company/leading-unmasked Website "https://stan.store/leadingunmasked", reopened 2026-10-11 11:52 UTC
-that's under construction, https://stan.store/leadingunmasked 404 "This Stan Store is currently under construction." "Log in to reactivate your account.", raw HTML and Chromium render 11:52 UTC, control https://stan.store/jessijeanhome 200 with content in the same minute
-your own site only asks people to register for 2027, https://www.legalunmasked.co.uk/ "Legal Unmasked 2027", "Register for priority access" and https://www.legalunmasked.co.uk/contact "Register for Priority Access", crawl.py x2 finds 4 pages (home, landing page, contact, cart), tied to her by the butterfly logo that matches https://www.linkedin.com/company/leading-unmasked , reopened 11:52 UTC
-INFERENCE, firms and sponsors who click through find nothing to buy, book or back, rests on the Stan page above, the Tickettailor list https://www.tickettailor.com/events/leadingunmasked "No events currently listed" and no speaker, agenda, sponsor or workshop text on any of the 4 pages (control, the 2026 event page https://www.tickettailor.com/events/leadingunmasked/1903238 carries keynotes and logistics)
-bringing Legal Unmasked back to London in May 2027, https://www.legalunmasked.co.uk/ "We're doing it again!" "Coming to London in May 2027.", reopened 11:52 UTC
-Eten Maar credential, docs/astra-master-context.md section 2A, "Founded and scaled a stroopwafel brand from zero with five relatives. Owned acquisition, partnerships, content, conversion", https://www.linkedin.com/in/raka-mulya-b92885196
-recheck: 2026-10-11 11:52 UTC, LinkedIn company page, Stan store with control, the Legal Unmasked home and contact pages and the Tickettailor list refetched and every quoted line found. Disproof tried, searched for another live site of hers, the email domain leadingunmasked.co.uk is a GoDaddy parking page (Chromium render), no other domain appears in her HTML, the LinkedIn page or the Tickettailor page. The site doesn't name her, so it's tied by the matching butterfly logo and the matching event, flagged for Raka. Her ADHD and her DWF history stay out of the message. Facts hold, confidence MEDIUM
-```
-
-OPENER
-```
-Hi Jessica, saw Legal Unmasked, looks interesting!
-
-However, your LinkedIn page sends visitors to a Stan store that's under construction, and your own site only asks people to register for 2027. This causes the firms and sponsors who click through to find nothing to buy, book or back.
-
-Especially, when you are bringing Legal Unmasked back to London in May 2027, the early bird tickets and sponsorships you'd sell over the winter have no page to land on.
-
-I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I founded a stroopwafel business with five relatives and ran its marketing and partnerships, so I know what a new brand's site has to show before anyone pays.
-
-Shall I send you over what the site that sells Legal Unmasked 2027 looks like?
-```
-
-<!-- from batch b15_E -->
 ### Rachel Blanckensee, Rachel Blanckensee Styling, ctc_G8gRt44CmSG6Rpdnu
 
 ```gate
@@ -777,14 +643,14 @@ sweep apps: https://www.rbstyling.ie/gift-vouchers and https://www.rbstyling.ie/
 sweep social: tools/social-audit.js opened https://www.instagram.com/rachelblanckenseestyling/ 306 followers, 77 posts, newest 2026-10-07, last six all still images, Facebook 62 followers, peers MoStyle 2,286, Maria Macklin 15,746, Jess Colivet 41,701 via embed, not chosen, she posts weekly
 sweep squad: a one woman styling business per https://www.rbstyling.ie/about-me , builds no software, not applicable
 thread: problem bookings, vouchers and style reports all start with a form and then wait on her to send the next step | cost every order waits on her, and the more the virtual report and vouchers sell as gifts the more of her week goes on admin | offer the AI workflow that runs her orders | link order
-lead read: Rachel reads that every booking, voucher and style report on her site stops at a form until she sends the next step, so each order waits on her and gift season piles that admin onto her week, and gets offered the AI workflow that runs her orders, one thread
+lead read: Rachel reads that every booking, voucher and style report on her site stops at a form until she sends the next step, so each order waits on her and every gift sale adds admin to her week, and gets offered the AI workflow that runs her orders, one thread
 claims:
 your bookings start with a form and wait on you, https://www.rbstyling.ie/in-person-style-packages Book Now links to /in-person-style-packages#readytogetstarted, "Just fill out the form below and I'll get back to you as soon as I can", crawled twice 2026-10-11
 your vouchers start with a form and wait on you, https://www.rbstyling.ie/gift-vouchers "Fill in the gift voucher form below", "You'll be taken to a secure Revolut payment link", "Please allow up to 48 hours for your voucher to be prepared and sent"
 your style reports start with a form and wait on you, https://www.rbstyling.ie/personalised-virtual-style-report "Fill in the form below with your details", "you'll receive a link within 24 hours to complete the Personal Style Reflection Questionnaire", "Please allow up to one week to receive your report"
 INFERENCE, every order waits on you and your week likely goes on admin, rests on the three manual steps above and the one person business on https://www.rbstyling.ie/about-me and https://www.linkedin.com/company/rachel-blanckensee-styling (1 employee), worded "likely"
 selling the virtual style report and vouchers as gifts, https://www.rbstyling.ie/personalised-virtual-style-report "Purchase a Personalised Virtual Style Report (For you or as a gift)" and https://www.rbstyling.ie/gift-vouchers "Gift a Personal Styling Experience"
-INFERENCE, Christmas is when gifts sell, common seasonality, no figure used, https://www.rbstyling.ie/gift-vouchers
+REVISED 2026-10-11 ~16:30 UTC after Debby Alles's false presumption reply, 'Christmas' cut, her site never says Christmas, the only hits on home, gift vouchers and style report pages are 'Christmas Island' in a phone country list (2026-10-11 16:09 UTC), the message now says gifts, her own word on https://www.rbstyling.ie/gift-vouchers "Gift a Personal Styling Experience"
 Eten Maar credential, docs/astra-master-context.md section 2A, CEO and CMO of Eten Maar 2020 to 2024, "Founded and scaled a stroopwafel brand from zero with five relatives. Owned ... pricing, inventory and unit economics", https://www.linkedin.com/in/raka-mulya-b92885196
 recheck: 2026-10-11 11:45 to 12:05 UTC, thread re pulled with control, the packages, vouchers and report pages refetched and every quoted line found again. Disproof tried, looked for any self serve booking or checkout for paid services, the only Calendly event is the free 15 minute call (has_active_payment_method false), /cart exists but no product pages in the sitemap, the Squarespace newsletter block banner "needs a storage option" is a hidden editor banner (class newsletter-form-banner--hidden), not a broken form, so it stays out. That admin eats her week is inference she can test against her own diary. Facts hold, confidence MEDIUM
 ```
@@ -795,7 +661,7 @@ Hi Rachel, saw Rachel Blanckensee Styling, looks interesting!
 
 However, your bookings, vouchers and style reports all start with a form and then wait on you to send the next step. This causes every order to wait on you, and your week to likely go on admin instead of styling.
 
-Especially, when you are selling the virtual style report and vouchers as Christmas gifts, the more orders come in, the more of your week goes on admin.
+Especially, when you are selling the virtual style report and vouchers as gifts, the more orders come in, the more of your week goes on admin.
 
 I run Astra agency. We build AI workflows for brands like Unilever, AXA, Pertamina. I ran pricing and inventory for the stroopwafel brand I started with my family, so I know how fast admin eats an owner's week.
 
@@ -851,13 +717,13 @@ sweep apps: sponsorship by email to sales@ on https://wellingunited.com/commerci
 sweep social: tools/social-audit.js opened https://www.instagram.com/wellingunited/ 11,428 followers newest 2026-10-10, YouTube 1.67k and 712 videos, TikTok 1,754, Facebook 452, posting every matchday, not chosen
 sweep squad: a volunteer football club per https://wellingunited.com/club/community/volunteer-with-the-wings/ , builds no software, not applicable
 thread: problem the sponsorship pack prices every board at £XX and names XXX as the contact | cost the boards without a price are likely income the club never sees while it builds a more sustainable model off the pitch | offer the Welling sponsorship workflow that sells the boards | link sponsor, board
-lead read: Paul reads that his own sponsorship pack shows every board at £XX with XXX as the contact, so a local business that opens it has no price and no one to call, which matters as he builds a sustainable model off the pitch, and gets offered the sponsorship workflow that sells his boards, one thread
+lead read: Paul reads that his own sponsorship pack shows every board at £XX with XXX as the contact, so a local business that opens it still doesn't know what a board costs, which matters as he builds a sustainable model off the pitch, and gets offered the sponsorship workflow that sells his boards, one thread
 claims:
 your site's sponsorship pack still prices every board at £XX per month, https://media.touchlinefc.co.uk/wellingunited/2026/06/03125932/WELLING-UNITED_SPONSORSHIP-PACK.pdf 16 of 16 opportunities read "Opportunity price from: £XX per month" (pdftotext count 16), page 6 rendered and looked at 2026-10-11, linked "Please see the full sponsorship brochure here" from https://wellingunited.com/2026/06/sponsorship-packages-2026-27/
 lists XXX as the person to call, same PDF page 22 "please contact XXX on telephone number XXXXXXXXX, or email the office via xxxxx@xxxxxxxx.xxx", rendered and looked at 2026-10-11, https://media.touchlinefc.co.uk/wellingunited/2026/06/03125932/WELLING-UNITED_SPONSORSHIP-PACK.pdf
 local businesses are who you sell to, https://wellingunited.com/commercial/opportunities/ "sponsorship opportunities for local businesses, supporters and commercial partners"
 building a more sustainable model off the pitch, https://wellingunited.com/2025/10/wings-appoint-paul-barnes-as-ceo/ "the club needs to come up with a more sustainable, strategic model that will help the club push forwards off the pitch" and https://wellingunited.com/2025/11/from-the-ceo-i-am-confident-we-can-build-something-successful-for-everyone-connected-to-the-club/ "develop into a more efficient model that helps us create a sustainable future"
-INFERENCE, a board without a price is likely income that never reaches the club, rests on the pack above and the front of shirt sponsor back on the market on https://wellingunited.com/2026/07/club-news-kit-sponsorship-opportunity-2026-27/ , worded "likely"
+INFERENCE, a board without a price is likely income that never reaches the club, rests on the pack and the front of shirt sponsor back on the market on https://wellingunited.com/2026/07/club-news-kit-sponsorship-opportunity-2026-27/ , worded likely. REVISED 2026-10-11 ~16:30 UTC after Debby Alles's false presumption reply, 'no one to call' cut, https://wellingunited.com/commercial/opportunities/ gives sales@wellingunited.com and 020 8301 1196 (reopened 16:14 UTC)
 Betty Blocks credential, docs/astra-master-context.md section 2A, "ICP segmentation, account selection, messaging and multi-channel outreach; automation-driven revenue workflows covering enrichment, scoring, routing and follow-up loops", https://www.linkedin.com/in/raka-mulya-b92885196
 recheck: 2026-10-11 11:45 to 12:05 UTC, thread re pulled with control, the PDF re downloaded and the £XX count and page 22 text found again, the 3 June post still links it, the staff page and both CEO pieces refetched. Disproof tried, searched every crawled page for another sponsorship pack, a price list or a commercial manager, found only sales@ and a mobile on the player sponsorship page and fixed prices for match, matchball and player sponsorship, so the message speaks only of the pack's boards. Whether the club now sends a priced pack by email is unknown. The owner holds the money, a CIC on micro accounts, confidence MEDIUM
 ```
@@ -866,7 +732,7 @@ OPENER
 ```
 Hi Paul, saw Welling United, looks interesting!
 
-However, your site's sponsorship pack still prices every board at £XX per month and lists XXX as the person to call. This causes local businesses who'd sponsor to open it and find no price and no one to call.
+However, your site's sponsorship pack still prices every board at £XX per month and lists XXX as the person to call. This causes local businesses who'd sponsor to open it and still not know what a board costs.
 
 Especially, when you are building a more sustainable model off the pitch, the boards without a price are likely income that never reaches the club.
 
@@ -894,7 +760,7 @@ THREAD IS LIVE, NOT A COLD LEAD. She replied 2026-10-09 12:27 UTC "Hi Raka, Than
 
 REPLY
 ```
-Since you mentioned exchanging thoughts on growing businesses, I'm curious about one thing with mellem. I'd guess the tricky part is getting both sides on board, the families and the cemeteries. Which one's been harder so far?
+Since you mentioned exchanging thoughts on growing businesses, I'm curious about one thing. I saw mellem's post saying it only works if it works for both sides, the families and the people who support them. Which side's been harder to win over so far?
 ```
 
 Red team, Valeska, run 2026-10-11 11:45 to 11:55 UTC
