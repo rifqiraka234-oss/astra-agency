@@ -1,5 +1,8 @@
+<!-- GATE ARCHIVED -->
 <!-- bumps, 2026-10-12 -->
-# Bumps, 2026-10-12.
+# Bumps, 2026-10-12. ALL SENT, history only.
+
+> **14:50 UTC run, the last 11 sent between 14:51 and 14:53 UTC, one at a time**, every thread pulled before and after, every one landed once. Day total 111 bumps landed, 2 failed (Abraham Akrouche, Adad-Nirari Khochaba, can-not-send-message), 20 closed with no bump.
 
 > **12:00 UTC run, 25 more sent between 12:02 and 12:06 UTC, one at a time**, the 10 the rate limit held back, the 4 first bumps to the 9 Oct openers and the 11 Raka approved from the held group. Every thread pulled right before and right after, every one landed once, no 429. Still to go, the 11 last bumps to the people messaged on 9 Oct, at 14:50 UTC.
 
@@ -749,6 +752,7 @@ NUDGE
 ## Last bump, messaged on 9 Oct, due from about 15:21 to 16:42 Amsterdam time today (11)
 
 ### Arnaud Tescari, Maison Goustine. ctc_paKBTrRbhpgYQ2mBd
+SENT 2026-10-12T14:51:42Z, act_hiZ74CeiMN8TJopPo, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 14:41 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -756,6 +760,7 @@ NUDGE
 ```
 
 ### Chris Ryalls, ExpoCall. ctc_k2GNq2p5WKD64TYvx
+SENT 2026-10-12T14:51:50Z, act_2f72HrDNNqrdfm6rc, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 13:21 UTC. Pulled 12 Oct, 6 items, newest ours.
 NUDGE
 ```
@@ -763,6 +768,7 @@ NUDGE
 ```
 
 ### Dr Michael Isichei, MIACC. ctc_f4gwBMMyfBQjgz9CG
+SENT 2026-10-12T14:51:58Z, act_gTirrywFDuekG7w2w, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 14:42 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -770,6 +776,7 @@ NUDGE
 ```
 
 ### Dr Shirah Z Mansaray, Themis Crown Legal Academy. ctc_SYhzxxMTBCWtodyt6
+SENT 2026-10-12T14:52:06Z, act_BmvrnQZfJD9v6gRQN, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 14:42 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -777,6 +784,7 @@ NUDGE
 ```
 
 ### Mandy Kerley, Trickle. ctc_ZGv33qKajKqMjkqH9
+SENT 2026-10-12T14:52:13Z, act_i8aHGXKhXzS5B42HC, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 14:42 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -784,6 +792,7 @@ NUDGE
 ```
 
 ### Matthias Ufer, Schumacher Verfahrenstechnik. ctc_3L5hXyZ8hWrh8tAGC
+SENT 2026-10-12T14:52:22Z, act_jet7RsJyDWdMZqDEL, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 14:41 UTC. Pulled 12 Oct, 4 items, newest ours.
 NUDGE
 ```
@@ -791,6 +800,7 @@ NUDGE
 ```
 
 ### Melissa Carman, Jan Forster Estates. ctc_fyP4ArYJKGDxjPL8u
+SENT 2026-10-12T14:52:29Z, act_4D5Jqn7QQMhTPQEDc, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 14:40 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -798,6 +808,7 @@ NUDGE
 ```
 
 ### Michaël Abramczuk, Archipel. ctc_QZawcREsaQM3pMpPz
+SENT 2026-10-12T14:52:36Z, act_YwmdEGk8RozqXouYY, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 14:42 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -805,6 +816,7 @@ NUDGE
 ```
 
 ### Nick Richards, Enrich Education. ctc_MDdiddoYGMJGaDFHn
+SENT 2026-10-12T14:52:44Z, act_BQ84v2EoLT2GfJhgX, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 14:40 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -812,6 +824,7 @@ NUDGE
 ```
 
 ### Ramona Hendriks, Negentien80. ctc_hfHQfM3u3veSXZgS2
+SENT 2026-10-12T14:52:51Z, act_bSdHsjMGsf8yGbtnp, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 14:41 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -819,6 +832,7 @@ NUDGE
 ```
 
 ### Ryan Eastwood, Flexo Trade Print. ctc_S5TaMLkjQfDeiWrcq
+SENT 2026-10-12T14:52:59Z, act_GeDCMgtJRFYWce9uC, in the 14:50 UTC run. Do not send again.
 Our last 2026-10-09 14:42 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
