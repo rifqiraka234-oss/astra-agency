@@ -282,8 +282,13 @@ def gate_problems(g):
     for k in GATE_KEYS:
         if not kv.get(k):
             probs.append(f"gate field '{k}' missing or empty")
-    n1 = re.search(r"\d+", kv.get("site pass 1", ""))
-    n2 = re.search(r"\d+", kv.get("site pass 2", ""))
+    # The page count opens the line. 2026-10-12, "PIX_PASS1 URLs" passed as a count of 1
+    # because the old pattern took the first digit anywhere in the field.
+    n1 = re.match(r"\s*(\d+)", kv.get("site pass 1", ""))
+    n2 = re.match(r"\s*(\d+)", kv.get("site pass 2", ""))
+    for k, n in (("site pass 1", n1), ("site pass 2", n2)):
+        if kv.get(k) and not n:
+            probs.append(f"{k} must open with the number of pages read, e.g. '33 URLs, tools/crawl.py ...'")
     if n1 and n2 and int(n2.group()) < int(n1.group()):
         probs.append(f"site pass 2 read {n2.group()} pages, pass 1 read {n1.group()}. "
                      "The second pass is the whole site again")
