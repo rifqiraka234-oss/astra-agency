@@ -1,5 +1,8 @@
 <!-- bumps, 2026-10-12 -->
-# Bumps, 2026-10-12. NOT SENT.
+# Bumps, 2026-10-12.
+
+> **SENT 2026-10-12 06:18 to 06:23 UTC on Raka's "Send", 75 of the 87 due now.** Each thread pulled in full right before (total and newest matched the morning pull) and right after (one copy landed), activity ids in the queue rows. Cross checked against the lemlist conversation list, 71 in sentOnly plus 4 in myConversations equals 75, every preview the right bump. **2 FAILED**, Adad-Nirari Khochaba and Abraham Akrouche, LinkedIn said can-not-send-message, nothing landed, most likely no longer connected. **10 NOT YET SENT**, LinkedIn started returning 429 too many requests at about 06:23, nothing landed for any of them, they go out slowly in the 12:00 UTC run with a fresh thread pull each, Charles Burns, Claire Bartley, Jana Münzenberg, Jenna Goodwin, Romy Abbrederis, Simon Wilmes (a 502 on his, pull before any resend), Stuart Barron, Tim Balogun, Twan Bierens, Wilco Drijver. The 15 due later today and the 14 held are untouched.
+
 
 Raka 12 Oct, "all you have to do is just like 👀 have you seen this". The line is v0.2's own automated step, `👀 {{firstName}}, have you seen this?`, with the first name as we greeted them in our own last message.
 
@@ -10,6 +13,7 @@ Raka 12 Oct, "all you have to do is just like 👀 have you seen this". The line
 ## First bump, opener sent 5 to 7 Oct, due now (18)
 
 ### Adad-Nirari Khochaba, Evergoods Life GmbH (Nature Nation). ctc_4a2LnTP8kLSHufaRh
+FAILED, can-not-send-message, thread pulled after, nothing landed.
 Our last 2026-10-07 13:41 UTC. Pulled 12 Oct, 1 items, newest ours.
 NUDGE
 ```
@@ -17,6 +21,7 @@ NUDGE
 ```
 
 ### Bartek Ogonowski, LEVRA. ctc_3fSkB4dv38ScfzXkH
+SENT 2026-10-12T06:19:25Z, act_uy4GzmGgQAFafTL8Z. Do not send again.
 Our last 2026-10-06 18:58 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -24,6 +29,7 @@ NUDGE
 ```
 
 ### David Brauman, company not on record. ctc_n3rxAxdmtuJpgW8NH
+SENT 2026-10-12T06:19:33Z, act_LRRRpLxSi6XPEyqNA. Do not send again.
 Our last 2026-10-06 12:00 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -31,6 +37,7 @@ NUDGE
 ```
 
 ### Emily Levy, Alquimia Legal. ctc_rMYGbmu7Piu5Pmwei
+SENT 2026-10-12T06:19:44Z, act_pS44M5zCnvCEGpAcR. Do not send again.
 Our last 2026-10-06 12:00 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -38,6 +45,7 @@ NUDGE
 ```
 
 ### Emmanuel Rivière, La Warroom. ctc_bF7KcGsTjT23mo3ye
+SENT 2026-10-12T06:19:53Z, act_o6Kos9F7EHJQ9b9Kc. Do not send again.
 Our last 2026-10-05 10:35 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -45,6 +53,7 @@ NUDGE
 ```
 
 ### Frank Hemmert, Baked (Hemmert & Narcy GbR). ctc_CLQ5T3DEaeG2SMG9d
+SENT 2026-10-12T06:19:38Z, act_gYspvvnvMh7vztmbZ. Do not send again.
 Our last 2026-10-07 06:06 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -52,6 +61,7 @@ NUDGE
 ```
 
 ### Jamie Bolding, Restless.co. ctc_4XQDxYiE3NkeqKPEy
+SENT 2026-10-12T06:19:43Z, act_t28aQge5RYE5ENLNK. Do not send again.
 Our last 2026-10-07 16:54 UTC. Pulled 12 Oct, 1 items, newest ours.
 NUDGE
 ```
@@ -59,6 +69,7 @@ NUDGE
 ```
 
 ### Laurent Fournié, company not on record. ctc_e5TddBr53qxiLyida
+SENT 2026-10-12T06:19:55Z, act_oDcLBjKECNBr7x7jv. Do not send again.
 Our last 2026-10-06 12:00 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -66,6 +77,7 @@ NUDGE
 ```
 
 ### Léo Grandperrin, company not on record. ctc_biurQgp9YgReZKtL9
+SENT 2026-10-12T06:20:04Z, act_qqrHNvbddiQWXMtjR. Do not send again.
 Our last 2026-10-06 11:59 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -73,6 +85,7 @@ NUDGE
 ```
 
 ### Naomi Yard, company not on record. ctc_9Ty6sALcgs2LTTuxs
+SENT 2026-10-12T06:19:48Z, act_MdpdqpZWGZaJCD38q. Do not send again.
 Our last 2026-10-06 12:00 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -80,6 +93,7 @@ NUDGE
 ```
 
 ### Nicolas Bergé, BRG CASH (Promocash Narbonne). ctc_mQBx2Mr64rqs7v4Qu
+SENT 2026-10-12T06:19:53Z, act_Km2B34cLRLwt5PzSY. Do not send again.
 Our last 2026-10-07 13:41 UTC. Pulled 12 Oct, 1 items, newest ours.
 NUDGE
 ```
@@ -87,6 +101,7 @@ NUDGE
 ```
 
 ### Noah Hertling, Systemhaus-Hertling UG. ctc_ch3vFcKAkjQdMKDCg
+SENT 2026-10-12T06:20:07Z, act_FDQDFRpfYzfnz6tiQ. Do not send again.
 Our last 2026-10-07 12:58 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -94,6 +109,7 @@ NUDGE
 ```
 
 ### Robin Conway, XMP SaaS Ltd. ctc_7hNbkAjk4urRmcjji
+SENT 2026-10-12T06:20:14Z, act_wYBdQHYLKmyFLfFmX. Do not send again.
 Our last 2026-10-07 16:54 UTC. Pulled 12 Oct, 1 items, newest ours.
 NUDGE
 ```
@@ -101,6 +117,7 @@ NUDGE
 ```
 
 ### Stéphane Bouils, company not on record. ctc_xvsocGv6PaJCDrgxs
+SENT 2026-10-12T06:19:59Z, act_cF8Mo3466M6fJrkP2. Do not send again.
 Our last 2026-10-06 12:00 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -108,6 +125,7 @@ NUDGE
 ```
 
 ### Thomas Hebenstreit, Sartoria Vienna. ctc_3S2rDnBX9W5hd3F8G
+SENT 2026-10-12T06:20:03Z, act_k3fQEBarDr6njC9fP. Do not send again.
 Our last 2026-10-07 16:54 UTC. Pulled 12 Oct, 1 items, newest ours.
 NUDGE
 ```
@@ -115,6 +133,7 @@ NUDGE
 ```
 
 ### Thomas Langlet, Maison Champenoise. ctc_vp6dPpiBHosd9oW78
+SENT 2026-10-12T06:20:19Z, act_nWpZaTcifWWcoYWqu. Do not send again.
 Our last 2026-10-07 16:54 UTC. Pulled 12 Oct, 1 items, newest ours.
 NUDGE
 ```
@@ -122,6 +141,7 @@ NUDGE
 ```
 
 ### Victor Felipe Florenz, Vaporé Autopflege. ctc_CFbKYC6c3yM6MrcAP
+SENT 2026-10-12T06:20:24Z, act_hFaXaGBbYGp4M2Jqa. Do not send again.
 Our last 2026-10-07 16:54 UTC. Pulled 12 Oct, 1 items, newest ours.
 NUDGE
 ```
@@ -129,6 +149,7 @@ NUDGE
 ```
 
 ### Vincent Bucaille, company not on record. ctc_xtQnzSvvms6TEoAxS
+SENT 2026-10-12T06:20:10Z, act_sNBdQEwHSN2qWKpLh. Do not send again.
 Our last 2026-10-06 12:00 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -138,6 +159,7 @@ NUDGE
 ## Last bump, one follow up already since they last spoke, due now (69)
 
 ### Abraham Akrouche, iFathom. ctc_RBjzAkhMRziM9wYj8
+FAILED, can-not-send-message, thread pulled after, nothing landed.
 Our last 2026-10-03 16:17 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -145,6 +167,7 @@ NUDGE
 ```
 
 ### Alessio Monterosso, Ariana Naturals. ctc_pwJnZCGoTQiXhGfvj
+SENT 2026-10-12T06:18:31Z, act_hzzbLZ3rifb37jrob. Do not send again.
 Our last 2026-10-03 16:16 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -152,6 +175,7 @@ NUDGE
 ```
 
 ### Alexandria Cameron, East To West Consulting. ctc_X7hCEQ94f9iz5B9y8
+SENT 2026-10-12T06:20:14Z, act_8WnPTcT6xTpk7iv5i. Do not send again.
 Our last 2026-10-03 16:17 UTC. Pulled 12 Oct, 4 items, newest ours.
 NUDGE
 ```
@@ -159,6 +183,7 @@ NUDGE
 ```
 
 ### Andrew Johnson, Diggecard. ctc_CmqhrPXcHCyuCjmPw
+SENT 2026-10-12T06:20:31Z, act_3GP5pHFF66nf7knGc. Do not send again.
 Our last 2026-10-03 16:25 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -166,6 +191,7 @@ NUDGE
 ```
 
 ### Antoine Levi, Ciaccia Levi. ctc_sNWhXwPeSWYLPFqrJ
+SENT 2026-10-12T06:20:35Z, act_XAb3NkS5doSg4YXr5. Do not send again.
 Our last 2026-10-03 16:22 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -173,6 +199,7 @@ NUDGE
 ```
 
 ### Aykut A., Clear Mind Solutions. ctc_WiZMbK74FKmcAWqNs
+SENT 2026-10-12T06:20:22Z, act_ffoDrQYuLaCBNLYmQ. Do not send again.
 Our last 2026-10-03 16:22 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -180,6 +207,7 @@ NUDGE
 ```
 
 ### Ayub Shoaib, NOMW Health. ctc_zQLRTuTdMXcf29TF8
+SENT 2026-10-12T06:20:25Z, act_bG5xgpYvoFbGtbL7z. Do not send again.
 Our last 2026-10-03 16:19 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -187,6 +215,7 @@ NUDGE
 ```
 
 ### Balaram Gajra, Camrose Value Drugmart & Travel Clinic. ctc_LNNLeREacezwJQ3cp
+SENT 2026-10-12T06:20:43Z, act_WoPTeM4EcuRPvWPRN. Do not send again.
 Our last 2026-10-03 16:20 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -194,6 +223,7 @@ NUDGE
 ```
 
 ### Bastian Thomas, InstandPro. ctc_9iPo5BuBQTJSLBkt5
+SENT 2026-10-12T06:20:48Z, act_BHT5uWPeedDx9gywd. Do not send again.
 Our last 2026-10-03 16:14 UTC. Pulled 12 Oct, 14 items, newest ours.
 NUDGE
 ```
@@ -201,6 +231,7 @@ NUDGE
 ```
 
 ### Bharat Suchith, Buddha Kalari. ctc_5DAXs4jAEQB4C2Wpy
+SENT 2026-10-12T06:20:32Z, act_CiH58u5sQTZABEF3p. Do not send again.
 Our last 2026-10-03 16:19 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -208,6 +239,7 @@ NUDGE
 ```
 
 ### Caroline Rigby, face2faceHR Burton-on-Trent. ctc_XQDooFehywMZe9K3G
+SENT 2026-10-12T06:20:34Z, act_iGPQDFMasddyCbfWE. Do not send again.
 Our last 2026-10-03 16:17 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -229,6 +261,7 @@ NUDGE
 ```
 
 ### Claudia Dünow, GaMa Kunststofftechnik GmbH. ctc_kPpKRKfLL9LsHFywM
+SENT 2026-10-12T06:20:43Z, act_FPiqbwBpaNZcyMxcA. Do not send again.
 Our last 2026-10-03 16:25 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -236,6 +269,7 @@ NUDGE
 ```
 
 ### Connor Bosco, Elevate Marketing. ctc_83MwQqhh6XPF8RzQJ
+SENT 2026-10-12T06:20:45Z, act_f6ZZmArzkqktpaEXs. Do not send again.
 Our last 2026-10-03 16:24 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -243,6 +277,7 @@ NUDGE
 ```
 
 ### Dan Kavanagh, Ignition Search Ltd. ctc_MvF898tMbDmzHBXhB
+SENT 2026-10-12T06:21:11Z, act_BF7AiEGJ4HFAKYest. Do not send again.
 Our last 2026-10-03 16:24 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -250,6 +285,7 @@ NUDGE
 ```
 
 ### Daniel Förster, Thane Alaric. ctc_8tTpay4QwR9iHTmiK
+SENT 2026-10-12T06:21:14Z, act_QWKrz5To3QGBZ4beC. Do not send again.
 Our last 2026-10-03 16:19 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -257,6 +293,7 @@ NUDGE
 ```
 
 ### Dave Verheijen, De Peperbij. ctc_9pQYAGoi9z3z8LvQt
+SENT 2026-10-12T06:20:53Z, act_ZzSKijYi89B3ZetSy. Do not send again.
 Our last 2026-10-03 16:18 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -264,6 +301,7 @@ NUDGE
 ```
 
 ### Farha Mohammad, Rivière Consult. ctc_Snrpa85vhRhNiSzaw
+SENT 2026-10-12T06:23:18Z, act_jQC6EcuxZMfW8hj5s. Do not send again.
 Our last 2026-10-03 16:21 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -271,6 +309,7 @@ NUDGE
 ```
 
 ### Ferry de Haas, InXpress Haarlemmermeer. ctc_inRn6RX8BGQ9w3PiK
+SENT 2026-10-12T06:21:23Z, act_e7hkqbKqWH7Y9gfTy. Do not send again.
 Our last 2026-10-03 16:23 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -278,6 +317,7 @@ NUDGE
 ```
 
 ### Frank Reinders, Merkaardig. ctc_S9Gmwh5eMsJtphcio
+SENT 2026-10-12T06:21:26Z, act_Mny7GLK3u87XtDSM2. Do not send again.
 Our last 2026-10-03 16:17 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -285,6 +325,7 @@ NUDGE
 ```
 
 ### Frank Wallrapp, Twogee Biotech. ctc_WknX8u7geuafsLSMw
+SENT 2026-10-12T06:21:03Z, act_orXju997xHf2Nj52H. Do not send again.
 Our last 2026-10-03 16:21 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -292,6 +333,7 @@ NUDGE
 ```
 
 ### Frederik Decruy, Decruy. ctc_59ajvkH36kmFTthpN
+SENT 2026-10-12T06:21:10Z, act_uEH76vjWfqf6hnWMF. Do not send again.
 Our last 2026-10-03 16:21 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -299,6 +341,7 @@ NUDGE
 ```
 
 ### Grzegorz Sobieszuk, PharmaSupport GmbH. ctc_b3rkFAWDjoeDRrshF
+SENT 2026-10-12T06:21:35Z, act_nuEJ8Q4yDZrKb7R6F. Do not send again.
 Our last 2026-10-03 16:23 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -306,6 +349,7 @@ NUDGE
 ```
 
 ### Guy Casters, BRIGHT-RISE. ctc_H4iEtDP9Yq8SB7WBe
+SENT 2026-10-12T06:21:36Z, act_rYhdHweGYiXjZLLxZ. Do not send again.
 Our last 2026-10-03 16:21 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -313,6 +357,7 @@ NUDGE
 ```
 
 ### Harisson Reale, Automation & Services. ctc_8fz9FBzEvnyoTPnEC
+SENT 2026-10-12T06:21:14Z, act_ribtvsdJJMrwdxDbm. Do not send again.
 Our last 2026-10-03 16:21 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -320,6 +365,7 @@ NUDGE
 ```
 
 ### Harold Engelen, Website voor Horeca (Grenzeloos Gastvrij). ctc_HC5zk2s2kFaw9LxCJ
+SENT 2026-10-12T06:21:20Z, act_un9JKetoDCNrDmBcN. Do not send again.
 Our last 2026-10-03 16:24 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -327,6 +373,7 @@ NUDGE
 ```
 
 ### Henrik Schöpfer, Echory AI. ctc_pkmMjd96KrXMmDS6K
+SENT 2026-10-12T06:21:48Z, act_sHnwgXmk88YgGmXRm. Do not send again.
 Our last 2026-10-03 16:18 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -334,6 +381,7 @@ NUDGE
 ```
 
 ### Hilde Pol, Jos Bles. ctc_L7RyYpwyxfCcuR4WL
+SENT 2026-10-12T06:21:46Z, act_K5fku5FvhZzX8P4vH. Do not send again.
 Our last 2026-10-03 16:14 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -341,6 +389,7 @@ NUDGE
 ```
 
 ### Hélène Gallais, Le Gout des Confidences. ctc_wnze5ZA9e9GozQ2Ls
+SENT 2026-10-12T06:21:24Z, act_Tna2pjGDfdPT7mewA. Do not send again.
 Our last 2026-10-03 16:18 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -348,6 +397,7 @@ NUDGE
 ```
 
 ### James Stewart, Bamboo Invest. ctc_EQEgHwLdmREfD2g6J
+SENT 2026-10-12T06:21:30Z, act_PGZa4HpsJWWQxTe9x. Do not send again.
 Our last 2026-10-06 18:58 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -369,6 +419,7 @@ NUDGE
 ```
 
 ### Jochen Matzer, nextFood.ai and Red Rabbit. ctc_k9fKjr4at8JpdNaGW
+SENT 2026-10-12T06:21:34Z, act_HERsth9mRL2ZxQ226. Do not send again.
 Our last 2026-10-03 16:22 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -376,6 +427,7 @@ NUDGE
 ```
 
 ### John Nabuurs, Precision Construction Components. ctc_WfX2BkgSvtGrF6o6B
+SENT 2026-10-12T06:21:41Z, act_CgZd5TRKiwmnkvEHo. Do not send again.
 Our last 2026-10-03 16:17 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -383,6 +435,7 @@ NUDGE
 ```
 
 ### Jon Cockley, Handsome Frank Illustration Agency. ctc_nHPaYSqrv7u32oPTY
+SENT 2026-10-12T06:22:12Z, act_7inDAygHBDSAr4cxA. Do not send again.
 Our last 2026-10-03 16:24 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -390,6 +443,7 @@ NUDGE
 ```
 
 ### Julien Sénéchal, LMtv Sarthe. ctc_rCGMND9Cgx4sw6FBY
+SENT 2026-10-12T06:22:07Z, act_DxNEobXLeLZPhPKYC. Do not send again.
 Our last 2026-10-03 16:25 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -397,6 +451,7 @@ NUDGE
 ```
 
 ### Karin Andersson, The Real Olive Company. ctc_XknfFnBmAo83YYeqh
+SENT 2026-10-12T06:21:45Z, act_PuCmuMH2roYdKB8k2. Do not send again.
 Our last 2026-10-03 16:24 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -404,6 +459,7 @@ NUDGE
 ```
 
 ### Katrin Kempe, duwerk. ctc_K8PwwxqA3xE42PxbR
+SENT 2026-10-12T06:21:51Z, act_ES2NvkrWs32xENjDg. Do not send again.
 Our last 2026-10-03 16:19 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -411,6 +467,7 @@ NUDGE
 ```
 
 ### Ken Sanghera, Suntail Drink Co. ctc_LcYiWjzfjJFgssnBf
+SENT 2026-10-12T06:22:25Z, act_45B5uY6noyW8CHvmF. Do not send again.
 Our last 2026-10-06 18:58 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -418,6 +475,7 @@ NUDGE
 ```
 
 ### Krijn Roosjen, Kinspot. ctc_vMWXWscT2JGxik3N5
+SENT 2026-10-12T06:22:17Z, act_XK5DzxkfyJrQJSEm5. Do not send again.
 Our last 2026-10-03 16:21 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -425,6 +483,7 @@ NUDGE
 ```
 
 ### Lasse Wessel, Wessel Licht fuer Moebel GmbH. ctc_gTJfNNvz2jLYgAJNd
+SENT 2026-10-12T06:21:55Z, act_DoJpMsXd3yi87foBQ. Do not send again.
 Our last 2026-10-03 16:23 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -432,6 +491,7 @@ NUDGE
 ```
 
 ### Laurent Devriese, Epsiwan. ctc_EYkaQDJ7NC7ifm6Wc
+SENT 2026-10-12T06:22:02Z, act_5otWKX2a6taFLiLTi. Do not send again.
 Our last 2026-10-03 16:19 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -439,6 +499,7 @@ NUDGE
 ```
 
 ### Luis Raab, significa. ctc_PZhtBMpYkmp5jnScq
+SENT 2026-10-12T06:22:37Z, act_eAqfR9yNu8Acejxbd. Do not send again.
 Our last 2026-10-03 16:23 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -446,6 +507,7 @@ NUDGE
 ```
 
 ### Mardi Witzel, Polyalgorithm Machine Learning. ctc_q8DfbH4BYw89sLjnh
+SENT 2026-10-12T06:22:27Z, act_FbTHw3QhuSvFsZWG4. Do not send again.
 Our last 2026-10-03 16:19 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -453,6 +515,7 @@ NUDGE
 ```
 
 ### Mario De Groodt, Intexso Adviesbureau B.V.. ctc_CwJ2yps7NY2ieaF7o
+SENT 2026-10-12T06:22:06Z, act_bCLmHkbToTtJMwxct. Do not send again.
 Our last 2026-10-03 16:22 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -460,6 +523,7 @@ NUDGE
 ```
 
 ### Marjan Verhoeven, Peter Van Der Leegte Veilingen. ctc_G7wn7qLMJebwJn7Qt
+SENT 2026-10-12T06:22:12Z, act_DNPhKHbXDMvfFTWas. Do not send again.
 Our last 2026-10-03 16:24 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -467,6 +531,7 @@ NUDGE
 ```
 
 ### Marko Markovic, Markoni Global Logistics GmbH. ctc_q7ZBCr8RKPTx9JHZJ
+SENT 2026-10-12T06:22:49Z, act_LvfSozrReiEtCBgFo. Do not send again.
 Our last 2026-10-03 16:21 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -474,6 +539,7 @@ NUDGE
 ```
 
 ### Mats Barselaar, De Pilsbar. ctc_a6CziXnHPCMCfn5Ma
+SENT 2026-10-12T06:22:38Z, act_DPesCTCE6ZxmbWX3o. Do not send again.
 Our last 2026-10-03 16:17 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -481,6 +547,7 @@ NUDGE
 ```
 
 ### Murad Kibria, DigiLite. ctc_CSEmgnWEjmfFEqXQd
+SENT 2026-10-12T06:22:16Z, act_DkBeYcxeuJeQmZDKR. Do not send again.
 Our last 2026-10-03 16:17 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -488,6 +555,7 @@ NUDGE
 ```
 
 ### Mykyta Kharchenko, company not on record. ctc_2gRN4DKWsstCjknF6
+SENT 2026-10-12T06:22:23Z, act_sQQAySdANz3dBavyr. Do not send again.
 Our last 2026-10-06 12:00 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -495,6 +563,7 @@ NUDGE
 ```
 
 ### Neeraj Sharma, Nesh Group Limited. ctc_gA84JX5MgS5c8Qfo6
+SENT 2026-10-12T06:23:01Z, act_3TsHJZd5TPMTxPM9x. Do not send again.
 Our last 2026-10-03 16:23 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -502,6 +571,7 @@ NUDGE
 ```
 
 ### Niels Alten, Vimi Vino. ctc_aZswHFKfve2uo8iTr
+SENT 2026-10-12T06:22:48Z, act_FLLjdHgrtbHSoQN76. Do not send again.
 Our last 2026-10-03 16:19 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -509,6 +579,7 @@ NUDGE
 ```
 
 ### Oliver Acton, Frank Taylor & Associates. ctc_su8BQMQwP7cnLdLFp
+SENT 2026-10-12T06:22:26Z, act_MjqaN4i7r8Rvvki8g. Do not send again.
 Our last 2026-10-03 16:14 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -516,6 +587,7 @@ NUDGE
 ```
 
 ### Paul Briant, Centre de Thérapie Laser par Photobiomodulation. ctc_Tih7FPjKfKkfBiNuM
+SENT 2026-10-12T06:22:34Z, act_tFwi3C23B59LkuHQY. Do not send again.
 Our last 2026-10-03 16:21 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -523,6 +595,7 @@ NUDGE
 ```
 
 ### Paul Prescott, Raise Your Game. ctc_HQWRGkBGkYT69xsb9
+SENT 2026-10-12T06:23:13Z, act_GpcwxzjjTiMbjvgsv. Do not send again.
 Our last 2026-10-03 16:24 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -537,6 +610,7 @@ NUDGE
 ```
 
 ### Rory Natkiel, Box Count. ctc_fToFAxkxJynw5nKhk
+SENT 2026-10-12T06:22:37Z, act_oGcnP6vbd2soWwCG2. Do not send again.
 Our last 2026-10-03 16:18 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -544,6 +618,7 @@ NUDGE
 ```
 
 ### Shilpi Arora, Shiora Digital. ctc_JdFvef8N8Kg6sgLpL
+SENT 2026-10-12T06:22:45Z, act_uDCTSMXx29a9kQAXw. Do not send again.
 Our last 2026-10-03 16:14 UTC. Pulled 12 Oct, 6 items, newest ours.
 NUDGE
 ```
@@ -558,6 +633,7 @@ NUDGE
 ```
 
 ### Stephanie Wright, The Growth Studio Marketing. ctc_StZTeBnDJxptFhzf4
+SENT 2026-10-12T06:23:08Z, act_vq7mm4ov5ZJ4KrP3Y. Do not send again.
 Our last 2026-10-03 16:18 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -565,6 +641,7 @@ NUDGE
 ```
 
 ### Steven Prins, company not on record. ctc_3S6EA258AheDuBKi5
+SENT 2026-10-12T06:22:47Z, act_q4sQZPGcGrQrrTEib. Do not send again.
 Our last 2026-10-06 12:00 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -586,6 +663,7 @@ NUDGE
 ```
 
 ### Timur Teregulov, LeBretons Group. ctc_YLmRL36CPuodKLwNX
+SENT 2026-10-12T06:23:18Z, act_ZKujddaewxz4xSnZn. Do not send again.
 Our last 2026-10-03 15:54 UTC. Pulled 12 Oct, 4 items, newest ours.
 NUDGE
 ```
@@ -600,6 +678,7 @@ NUDGE
 ```
 
 ### Vincent Soulier, La Belle Hotellerie. ctc_X3smgNvaZLzrstcgq
+SENT 2026-10-12T06:23:06Z, act_A6w6yBfqFjjPhaqGT. Do not send again.
 Our last 2026-10-03 16:18 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -614,6 +693,7 @@ NUDGE
 ```
 
 ### Yasin Tipiler, UGC.NL. ctc_rHvwocWb8FubKWECm
+SENT 2026-10-12T06:23:29Z, act_apQYK3aST4pKiigvc. Do not send again.
 Our last 2026-10-03 16:25 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
