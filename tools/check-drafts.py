@@ -468,7 +468,10 @@ def check(path, replies=False):
                 bad(i, f"hyphen in prose, '{h}', rewrite around it")
         # Zero contractions is the single clearest machine tell. English only, since the
         # tell is an English one and a Dutch thread stays Dutch.
-        if langs[i] == "EN" and len(re.findall(r"\w'(s|t|re|ve|ll|d|m)\b", m)) < 1:
+        # Raka's plain bump, 2026-10-12, "👀 [name], have you seen this?", is fixed wording with
+        # no contraction in it by design, so the exact line and nothing longer is exempt.
+        is_bump = re.fullmatch(r"👀 [^\W\d_][^\n,]{0,40}, have you seen this\?", m.strip())
+        if langs[i] == "EN" and not is_bump and len(re.findall(r"\w'(s|t|re|ve|ll|d|m)\b", m)) < 1:
             bad(i, "no contractions at all")
         # Five blocks, per the opener template. Replies have their own shape.
         # Raka added block three on 2026-09-24, "Especially, when you are [current goal,

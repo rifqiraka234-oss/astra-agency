@@ -228,6 +228,16 @@ old with no reply, the next nudge is due now, not at a week. The other rules sti
 happens. Two follow ups since they last spoke, a meeting held or agreed, a written promise that a
 message was the last, or a DO_NOT_CONTACT row all mean a silent close instead of a nudge.
 
+**A nudge is the plain bump, not a new researched message (Raka, 2026-10-12).** His words, "you
+didnt have to go like full research all you have to do is just like 👀 have you seen this". So a
+due nudge is exactly `👀 [first name], have you seen this?`, the line v0.2's automated step used,
+with the first name as we greeted them in our own last message. The thread rules don't relax. Pull
+the whole thread before drafting and again before sending, never bump a reply, a decline, a meeting,
+a promise of a last message or two follow ups. And don't bump a thread whose last message is now
+wrong or already fixed (the problem we named was solved, the company was sold or renamed), because
+the bump points them straight back at it. Those close silently. A researched nudge is only for when
+Raka asks for one.
+
 **"Close" means NEVER SEND ANYTHING ANYMORE (Raka, 2026-10-03, his capitals).** Not a goodbye
 message, not a graceful sign off, nothing. A close is a DO_NOT_CONTACT row in the queue and no
 message at all, which `tools/check-drafts.py` enforces on every draft. Twenty six drafted closing
