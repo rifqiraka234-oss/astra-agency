@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Copy audit over the built site. Visible text, alt, aria-label, title and meta description.
-Legal quotes (q.law) and URLs are exempt from the dash and colon bans. Usage: copy_audit.py <site dir>"""
+Legal quotes (q.law), people's own words quoted verbatim (q.say), URLs and numeric codes such as a statistics table number are exempt from the dash and colon bans. Usage: copy_audit.py <site dir>"""
 import sys, re, glob, os
 from html.parser import HTMLParser
 
@@ -14,7 +14,7 @@ class P(HTMLParser):
     def handle_starttag(s, t, a):
         a = dict(a); s.stack.append((t, a))
         if t in ('script', 'style'): s.skip += 1
-        if t == 'q' and 'law' in (a.get('class') or ''): s.law += 1
+        if t == 'q' and re.search(r'\b(law|say)\b', a.get('class') or ''): s.law += 1
         for k in ('alt', 'aria-label', 'title'):
             if a.get(k) and not s.law: s.attrs.append((k, a[k]))
         if t == 'meta' and a.get('name') == 'description': s.attrs.append(('desc', a.get('content', '')))
@@ -23,7 +23,7 @@ class P(HTMLParser):
         if s.stack:
             tt, a = s.stack.pop()
             if tt in ('script', 'style'): s.skip -= 1
-            if tt == 'q' and 'law' in (a.get('class') or ''): s.law -= 1
+            if tt == 'q' and re.search(r'\b(law|say)\b', a.get('class') or ''): s.law -= 1
     def handle_data(s, d):
         if s.skip: return
         if s.law: return
@@ -33,6 +33,7 @@ def clean(t):
     t = t.replace('Claims Handling Solutions', 'Claims Handling Firm').replace('disembark', 'leave')
     t = re.sub(r'\bjourneys?\b', 'trip', t)  # defined term in Art. 2(v) and the client's own wording
     t = re.sub(r'https?://\S+', ' ', t)
+    t = re.sub(r'\b\d+-\d+\b', ' ', t)  # an identifier such as Destatis table 24231-03, not prose
     t = re.sub(r'\b[\w.\-]+\.(eu|de|com|org|net)\b(/\S*)?', ' ', t)
     return t
 

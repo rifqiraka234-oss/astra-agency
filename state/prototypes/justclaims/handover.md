@@ -11,6 +11,33 @@ One artefact, built for Ulrich Steppler after his yes to the offer in the opener
 
 The project was created with team SSO on. It was switched off and forms were switched on, as on the earlier prototypes.
 
+## v3, the redesign (12 October 2026, afternoon). Not sent, not yet chosen
+
+Raka judged v1 dated and v2 "feels like Claude built it". v3 is a full rebuild of all 13 pages in a new design language, flight documents. The analysis of why v2 read as Claude built, and what v3 does about each tell, is in `research/teardown/ai-tells.md`.
+
+| | |
+|---|---|
+| Live URL | https://astra-justclaims-v3.netlify.app |
+| Netlify site id | 2c5b089a-eeb3-4140-bc77-2464a3a10671 |
+| Deploy id | 6accd9ac64d840c90953ca25 |
+| Source | `build/v3/build_v3.py` and `build/v3/pages/`, output in `site-v3/`. It execs the top half of `build/build.py`, so the clocks, the 31 verbatim quotes, the 19 Annex items, the readiness questions and the chart numbers are the same verified data v1 uses |
+| v2, kept for reference | https://astra-justclaims-v2.netlify.app, source in `build/v2/` and `site-v2/`, home page only |
+
+**What it is.** A split flap departures board of the seven deadlines that touch a claim, bilingual German and English as on Frankfurt's boards. All 15 time limits as flight progress strips in a rack, with one log scale so the rack reads as a ruler. One claim drawn as an approach chart with the complaint as a holding pattern. The 96 hours as a punched card. Newspaper charts. The claim screen as an exhibit. The claim clock as a boarding pass. Stock photographs and the clock film printed as real halftone screens with a second yellow ink, by a WebGL shader (`site-v3/assets/ht.js`), the film live and the stills prerendered by the same shader (`build/v3/tools/ht_all.sh`, deterministic, all 12 plates regenerate byte for byte). Barlow, Newsreader for the law only, B612 Mono for codes, all SIL OFL and self hosted.
+
+**Content.** Every word of copy and every legal quote is carried over from v1 as verified, except headings and a few leads written for the new layout and the colophon, each checked against its source. Corrections made while rebuilding. The colophon first said Barlow was "drawn from road and airport signs", and its own README says California highway signs and number plates, so it was fixed. A line saying every article number links to the Official Journal was untrue and was cut. The resources lead said each explainer "ends on what the text leaves open", which the third one doesn't, so it was cut. The approach chart's arrival label read "3 h late", which is not over the threshold, and now reads "over 3 h late". The board shows Art. 15a(2) with a lowercase a.
+
+**How v3 was verified.**
+- Copy audit, 13 pages, 0 issues. The audit now also exempts people's own words quoted verbatim (`q.say`, Ulrich's "win-win" in the 2023 release) and numeric identifiers such as Destatis table 24231-03.
+- axe-core, WCAG 2.1 A and AA plus best practice, 13 pages at 1440 and 420, 26 runs, 0 violations after fixes (the draft line outside a landmark, the day counter link losing its name at 420, a link colour on a yellow button, two low contrast labels).
+- Page QA, 13 pages at 1440 and 420, local and again live. 0 page errors, 0 responses at 400 or above, every image decoded, no sideways overflow, and every split flap checked to land on its own text after its spin (24 on the home page, 28 on the new rules page).
+- No JS and reduced motion, 5 pages each way. No hidden text, no page errors. The board, the route and the strips all read with no script. The claim clock and the readiness map say plainly that they need JavaScript.
+- Interactive parts, local and live. A board row opens its strip, the rack filter marks 7 and dims 8, the boarding pass at 2 h shows no compensation and at 3 h 50 min on the over 3,500 km band shows EUR 600 with the Art. 7(2) note, the claim clock's six dates, the readiness check to the demo form with the answers carried, the form refusing an empty send (4 fields flagged), the product tabs and pins, an Annex item opening to its conditions and five steps, and the timeline's row for today.
+- Live. All 46 assets byte match the build. Netlify's pretty URL processing rewrote the internal links in the 13 HTML files (`new-rules.html` to `/new-rules`) and reformatted attributes, so I compared the visible text and the embedded rules data of every page with the build, and all 13 are identical. Every rewritten internal link returns 200. The live halftone film plays from the WebM. The form is detected with all nine fields. One labelled test submission reached Netlify at 13:05:40 UTC and was filed as spam, most likely for its example.com address, so it shows in no inbox. It can be deleted from the project's spam list.
+- Portraits. The two newspaper portraits are printed from the same files `verify_portraits_live.py` passed on v1 (sha256 identical to the client's own images), and sit above the same names.
+
+**Before v3 could go to Ulrich.** Raka picks v3, v1, or neither. If v3, the delivery draft's link changes, or v3 is deployed onto the v1 URL so the drafted message stands as written. The "must change before live" list below applies to v3 as well. v3 carries 17 To confirm tags against v1's 20, on the same claims. The home page shows one claim screen instead of three, so the threshold tag sits on the platform page only, and the resources page tags the explainers' date once instead of three times.
+
 ## What was promised, and what was built
 
 | The opener said | The site does |

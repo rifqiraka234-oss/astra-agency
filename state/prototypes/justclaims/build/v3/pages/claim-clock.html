@@ -1,0 +1,38 @@
+<!--{"title":"The claim clock, deadlines for a late flight under the new rules","desc":"Enter a delay at arrival and read off the 96 hour notice, the nine month window and the 30 day answer, worked from Regulation (EU) 2026/2202.","nav":"rules","extra":["clock","pages"],
+"sign":["A2","Fristenrechner","The claim clock"],"h1":"The claim clock.","deck":"The duties after a late flight each have a date. Enter the flight and the claim, and the clock writes the dates down.","fig":"clock",
+"acts":[["#clock","Put in a flight"],["new-rules.html","All fifteen time limits"]]}-->
+<section class="blk" id="clock" data-calc aria-labelledby="k-h">
+  <div class="wrap">
+    {{SIGN:01|Rechnung|A late flight, worked through}}
+    <div class="head">
+      <h2 id="k-h">Put in a late flight. Read off the dates.</h2>
+      <p class="lede">For a delay at arrival, worked from Regulation (EU) 2026/2202. The sums run in your browser and nothing is sent anywhere. Cancellations and denied boarding follow Art. 5 and Art. 4, so they aren't covered here.</p>
+    </div>
+    <div class="calc">
+      <form class="calc-in" onsubmit="return false" novalidate>
+        <div class="ps-head" style="margin-bottom:12px"><span class="ps-brand">{{LOGOW}}</span><span class="ps-kind"><span lang="de">Fristenrechner</span> Claim clock</span></div>
+        <fieldset>
+          <legend>The flight</legend>
+          <div class="f"><label for="cc-dep">Date of departure</label><input id="cc-dep" type="date" value="2027-11-15" min="2027-10-23"></div>
+          <div class="f"><label for="cc-arr">Scheduled arrival at the final destination</label><input id="cc-arr" type="datetime-local" value="2027-11-15T16:20"></div>
+          <div class="f"><label for="cc-delay">Delay at arrival <output id="cc-delay-o">3 h 15 min</output></label><input id="cc-delay" type="range" min="0" max="720" step="5" value="195"><span class="ps-ticks mono" aria-hidden="true"><span>0 h</span><span>3 h</span><span>6 h</span><span>9 h</span><span>12 h</span></span><span class="hint">0 to 12 hours, in steps of five minutes</span></div>
+        </fieldset>
+        <fieldset>
+          <legend>Distance <span class="art">Art. 7(1)</span></legend>
+          <div class="radios">
+            <label><input type="radio" name="cc-dist" value="250"><span>1,500 km or less</span></label>
+            <label><input type="radio" name="cc-dist" value="400i"><span>More than 1,500 km, within the Union</span></label>
+            <label><input type="radio" name="cc-dist" value="400" checked><span>Between 1,500 and 3,500 km, other journeys</span></label>
+            <label><input type="radio" name="cc-dist" value="600"><span>More than 3,500 km, other journeys</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>The claim</legend>
+          <div class="f"><label for="cc-file">The passenger files on</label><input id="cc-file" type="date" value="2027-11-27"></div>
+        </fieldset>
+      </form>
+      <div class="calc-out" aria-live="polite" data-out><noscript><p class="co-note">The claim clock works the dates out in your browser, so it needs JavaScript switched on.</p></noscript></div>
+    </div>
+  </div>
+</section>
+{{CTA}}
