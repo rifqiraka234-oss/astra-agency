@@ -1047,3 +1047,91 @@ a.card2:hover h3{color:var(--mint2)}
 @media (max-width:860px){.steps2.s3{grid-template-columns:minmax(0,1fr)}.steps2.s3 li::after{display:none}}
 @media (max-width:600px){.steps2.s4{grid-template-columns:minmax(0,1fr)}}
 .hero-media,.ph2-media{-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
+
+/* =========== the phone pass, 12 Oct 2026. Raka read the home page on his phone and found it cramped =========== */
+.draft .d-s{display:none}
+.hs-pic{display:none;margin:6px 0 0;padding:8px;border-radius:18px;background:#f6f8f7;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 40px 80px -40px rgba(0,0,0,.9)}
+.hs-pic img{width:100%;height:auto;border-radius:10px}
+.hs-pic figcaption{padding:8px 4px 2px;font:500 .72rem/1.4 var(--fb);color:#5a6361}
+@media (max-width:980px){.hs-pic{display:block}}
+@media (max-width:640px){
+  .draft{height:32px;font-size:.72rem}
+  .draft .d-l{display:none}.draft .d-s{display:inline}
+  .nav2{top:42px}
+  .h-l{font-size:2.15rem;line-height:1.04;letter-spacing:-.04em}
+  .ch .h-l{font-size:2rem}
+  .h-m{font-size:1.45rem}
+  .lead{font-size:1.02rem;line-height:1.62}
+  .sx,.sx.ch{padding-block:68px}
+  .sx-h{gap:16px}
+  .cta2{padding-bottom:96px}
+  .ch-body,.duo,.how,.who2,.talk,.stats,.rules-in,.cards.ch-body{margin-top:32px}
+
+  /* the home opening, one left aligned column with room around each part */
+  .hero2.story-hero{padding-top:124px;padding-bottom:36px}
+  .story-hero .hero-in{justify-items:start;text-align:left;gap:18px}
+  .story-hero .h-xl{font-size:2.6rem;line-height:1.02;letter-spacing:-.045em}
+  .story-hero .lead{font-size:1.05rem;line-height:1.62;color:#c9d7d4}
+  .hero-in .row,.ph2-in .row{display:grid;grid-template-columns:minmax(0,1fr);width:100%;gap:10px;margin-top:6px}
+  .hero-in .row .b,.ph2-in .row .b{justify-content:center;height:50px;font-size:.96rem}
+  .flow-cap{text-align:left}
+
+  /* the sample claim reads top to bottom on one line, like a journey */
+  .flow{gap:0;padding:6px;margin-top:28px}
+  .fs{padding:14px 14px 18px 54px;background:none;box-shadow:none;gap:8px}
+  .js .flow.run .fs.on{box-shadow:inset 0 0 0 1px rgba(143,240,210,.4)}
+  .fs-k b{position:absolute;left:14px;top:12px;width:26px;height:26px}
+  .fs-k{min-height:2px}
+  .fs:not(:last-child)::after{display:block;left:26px;right:auto;top:44px;bottom:-12px;width:2px;height:auto;border-radius:2px;background:linear-gradient(180deg,rgba(143,240,210,.6),rgba(143,240,210,.12));box-shadow:none}
+  .fs-amt{font-size:2.4rem}
+
+  /* inner page openings, shorter, and the chapters as one row to swipe */
+  .ph2{min-height:auto;padding-top:124px;padding-bottom:24px}
+  .ph2-in{gap:18px;padding-bottom:28px}
+  .ph2 .h-xl{font-size:2.5rem;line-height:1.02;letter-spacing:-.045em}
+  .ph2 .lead{font-size:1.05rem;line-height:1.62}
+  .toc{overflow-x:auto;flex-wrap:nowrap;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .toc::-webkit-scrollbar{display:none}
+  .toc li{flex:0 0 auto;scroll-snap-align:start}
+  .toc a{display:flex;align-items:center;gap:9px;padding:9px 14px 9px 9px;white-space:nowrap}
+
+  .stat .big{font-size:2.8rem}
+  .bign{font-size:3.6rem}
+  .trio .n{font-size:2.6rem}
+  .pain{padding:18px;grid-template-columns:38px minmax(0,1fr);gap:14px}
+  .pain i{width:38px;height:38px}
+  .hs{padding:30px 0}
+  .hs h3{font-size:1.65rem}
+  .quote2 q.say,.quote2 q.law{font-size:1.2rem}
+  .who-p q{font-size:1.15rem}
+  .card2{padding:20px}
+  .fcard{min-height:300px}
+  .frame-in{padding:26px 20px}
+}
+.hs-n{font:500 .86rem/1 var(--fb);color:var(--mint2)}
+.fs-k{font:500 .78rem/1 var(--fb)}
+.ph2,.hero2{grid-template-columns:minmax(0,1fr)}
+.ph2-toc,.ph2-in{min-width:0}
+.ph2>.wrap,.hero2>.wrap{width:100%}
+@media (min-width:641px){.story-hero .flow{margin-top:clamp(48px,5vw,76px)}.story-hero .hero-in{gap:24px}}
+.rl-more{padding:6px 0 10px;box-shadow:inset 0 1px 0 var(--line)}
+.rl-more summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;margin-top:10px;height:42px;padding:0 18px;border-radius:999px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px var(--line2);font:500 .9rem/1 var(--fb);color:#fff}
+.rl-more summary::-webkit-details-marker{display:none}
+.rl-more summary::after{content:'';width:8px;height:8px;border-right:1.6px solid var(--mint2);border-bottom:1.6px solid var(--mint2);transform:translateY(-2px) rotate(45deg)}
+.rl-more details[open] summary::after{transform:translateY(2px) rotate(225deg)}
+.rl-more ul .rl:first-child{margin-top:8px}
+@media (max-width:640px){
+  .cta-in .row{display:grid;grid-template-columns:minmax(0,1fr);width:100%;gap:10px}
+  .cta-in .row .b{justify-content:center}
+  .tscroll2{overflow:visible;background:none;border:0}
+  .tbl2,.tbl2 tbody,.tbl2 tr,.tbl2 th,.tbl2 td{display:block;min-width:0;width:auto}
+  .tbl2 thead{display:none}
+  .tbl2 tbody{display:grid;gap:10px}
+  .tbl2 tbody tr{padding:16px 18px;border-radius:var(--r2);background:var(--glass);border:1px solid var(--line)}
+  .tbl2 th,.tbl2 td{padding:0;border:0}
+  .tbl2 tbody th{font-size:1.02rem;margin-bottom:4px}
+  .tbl2 td.art{margin-bottom:10px}
+  .tbl2 td+td{margin-top:6px}
+  .ax-item q.law{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .ax-item[aria-expanded=true] q.law{display:block;-webkit-line-clamp:unset}
+}

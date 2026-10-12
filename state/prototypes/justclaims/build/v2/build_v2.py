@@ -34,7 +34,7 @@ def header(cur):
   </div>
 </header>
 <nav class="mnav2" id="mnav" aria-label="Mobile"><a href="index.html">Home</a>{mlinks}<a href="readiness.html">Readiness check</a><a class="b pri" href="{cta}">Request a walkthrough</a></nav>
-<aside class="draft" aria-label="Draft status"><i aria-hidden="true"></i>Draft for CHS Claims Handling Solutions, not live. Anything tagged To confirm needs your check.</aside>'''
+<aside class="draft" aria-label="Draft status"><i aria-hidden="true"></i><span class="d-l">Draft for CHS Claims Handling Solutions, not live. Anything tagged To confirm needs your check.</span><span class="d-s">Draft for CHS, not live. To confirm tags need your check.</span></aside>'''
 
 FOOTER = f'''<footer class="foot">
   <div class="wrap foot-in">
@@ -114,6 +114,12 @@ def chart_v2(svg, gid):
     return svg
 
 import hashlib
+def rulerlist2():
+    """the time limits as a list, for a screen too narrow for the ruler. The ones that touch a claim first, the rest folded"""
+    cs = sorted(CL['clocks'], key=lambda c: c['hours'])
+    def li(c): return f'<li class="rl who-{c["who"]}" data-id="{c["id"]}"><span class="mono dur">{E(c["label"])}</span><span class="rl-b"><b>{E(c["duty"])}</b><span class="mono art">{E(c["art"])}, starts when {E(c["starts"])}</span></span></li>'
+    rest = [c for c in cs if not c.get('claims')]
+    return ''.join(li(c) for c in cs if c.get('claims')) + f'<li class="rl-more"><details><summary>The other {len(rest)} time limits</summary><ul>{"".join(li(c) for c in rest)}</ul></details></li>'
 def ver(rel):
     try: return hashlib.sha1(open(os.path.join(OUT, rel), 'rb').read()).hexdigest()[:10]
     except FileNotFoundError: return '0'
@@ -214,7 +220,7 @@ def render(name):
     rate, courts = G['chart_rate'](), G['chart_courts'](); tr, tc = G['chart_tables']()
     alt = meta.get('cta2')
     rep = {'{{AR}}': AR, '{{TBC}}': TBC, '{{CTA}}': cta(tuple(alt) if alt else None), '{{ANNEX}}': G['annex_html'](), '{{READYQS}}': G['readiness_qs'](), '{{CLOCKROWS}}': G['clockrows'](), '{{DAYS}}': str(DAYS), '{{FORCEDAYS}}': str((FORCE - TODAY).days), '{{OJ}}': OJ,
-           '{{NCLOCKS}}': str(len(CL['clocks'])), '{{HORIZON}}': horizon(), '{{RULERLIST}}': G['rulerlist'](), '{{HOURGRID}}': G['hour_grid'](),
+           '{{NCLOCKS}}': str(len(CL['clocks'])), '{{HORIZON}}': horizon(), '{{RULERLIST}}': rulerlist2(), '{{HOURGRID}}': G['hour_grid'](),
            '{{CHARTRATE}}': chart_v2(rate, 'cr') + tr, '{{CHARTCOURTS}}': chart_v2(courts, 'cc') + tc, '{{READYMAP}}': G['readiness_map'](),
            '{{LOGO}}': LOGO, '{{CAL31}}': '<div class="cal-g" aria-hidden="true">' + ''.join(f'<i class="{"d0" if k == 0 else "d30" if k == 30 else ""}"></i>' for k in range(31)).replace(' class=""', '') + '</div>', '{{G96}}': gauge(48, 48, 40), '{{G30}}': gauge(30, 30, 26), '{{G9}}': gauge(36, 36, 31), '{{GDAYS}}': gauge(40, 40, 34),
            '{{CLOCKSJSON}}': '<script type="application/json" id="clocks-data">' + json.dumps({'clocks': CL['clocks'], 'quotes': CL['quotes'], 'applies': CL['applies'], 'force': CL['entersIntoForce']}, ensure_ascii=False).replace('</', '<\\/') + '</script>'}

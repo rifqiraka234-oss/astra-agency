@@ -11,6 +11,22 @@ One artefact, built for Ulrich Steppler after his yes to the offer in the opener
 
 The project was created with team SSO on. It was switched off and forms were switched on, as on the earlier prototypes.
 
+## v2, the phone pass (12 October 2026, night). Not sent
+
+Raka read the home page on his phone and found the hero cramped. On a 390 pixel screen the headline ran to four centred lines edge to edge, a seven line centred paragraph sat under it, the buttons were left aligned under centred text, and the draft banner wrapped into the nav. Before and after, `research/v2-phone-before-after.png`.
+
+- **Phone openings.** Every page opens on one left aligned column. Headline 2.5 to 2.6rem on two or three lines, the paragraph at 1.05rem, both buttons full width and equal, the draft banner shortened to one line on phones.
+- **The sample claim** reads top to bottom on a connecting line instead of four stacked cards.
+- **How it works** puts each product screen under its own step on phones and tablets, where before all three came after the fourth step.
+- **Inner page chapter lists** become one row to swipe on phones instead of a seven line stack.
+- **The rules table** on the platform page becomes one card per rule on phones, where before two of its four columns sat off screen.
+- **The 15 time limits** list on phones shows the 11 that touch a claim and folds the other 4 behind a button. Annex items show three lines until opened.
+- **The closing next step** has centred, full width buttons on phones.
+- **Rhythm.** Section spacing on phones is 68px top and bottom. Step labels moved from mono to the body font.
+- **Two layout bugs found and fixed on the way.** On desktop the inner page hero text and chapter strip were centred in a narrow box instead of lining up with the nav, because a grid item with auto side margins shrinks to its content. On phones the swipe row stretched the hero grid and pushed the text off to the right.
+
+Checked. Page QA local and live, 13 pages at 1440, 1280 and 390, 0 problems. axe 0 violations at 1440 and 420. Copy audit 0. Interactions local and live, no errors. All 57 deployed files match live. Deploy `6acd00c8d397e9963ae4a274`.
+
 ## v2, every page carried over as a story (12 October 2026, evening). Not sent
 
 Raka asked for the other pages in the v2 look, each telling the story simply, with the action at the end, and pictures, animations and graphs. All 13 pages are now v2. Each inner page opens on a stock picture or film with what the page is about in two lines and its chapters listed underneath, runs through numbered chapters (the same pill at the foot of the screen as the home page), and ends on the same next step as the home page, a walkthrough, with one gentler way in.
