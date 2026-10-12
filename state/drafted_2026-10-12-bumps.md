@@ -809,104 +809,106 @@ NUDGE
 👀 Ryan, have you seen this?
 ```
 
-## Your call before these go (14)
+## Your call before these go (14). Raka 12 Oct, "do it that way", 11 approved for the 12:00 UTC run, 3 closed
 
 Each has had one follow up, so by the count a last bump is allowed. But either a 3 Oct queue note planned a silent close, or our last message said we'd leave it or drop it on a condition. Say which go.
 
 ### Alexander Resner, Layer2 Marketing. ctc_iiGkmAQeJCTg7TF3h
 Why it's held, 3 Oct note said next touch is a silent close. Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Alexander, have you seen this?
 ```
 
 ### Alexandre Aoun, La Minute Arabe. ctc_rBP5uWNEwkGqLPTvH
 Why it's held, got a correction and apology on 3 Oct, note said close or nothing. Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
-```
-👀 Alexandre, have you seen this?
-```
+CLOSED on Raka's word 12 Oct, no message.
 
 ### Alice Martin, Fabrikaa Learning. ctc_KMjZQEr5qdudxGgYP
 Why it's held, 3 Oct note said next touch is a silent close (thread has no promise). Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Alice, have you seen this?
 ```
 
 ### Amna Abdulla, L'MANE. ctc_tEAMfkRou5jGBv8YT
 Why it's held, 3 Oct note said next touch is a silent close. Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Amna, have you seen this?
 ```
 
 ### Benedikt Weber, ecoDMS GmbH. ctc_8FHv4ma3Ly2TCqYfK
 Why it's held, our 3 Oct line offered to drop it if pricing isn't a priority.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Benedikt, have you seen this?
 ```
 
 ### Cameron Syme, See Saw. ctc_k3p23YQzo9t7pbK3F
 Why it's held, 3 Oct note said next touch is a silent close. Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Cameron, have you seen this?
 ```
 
 ### Joshua M Patton, We Are SDM. ctc_PchCw6xqb8YTfA9Cz
 Why it's held, our 3 Oct line offered to drop it if he says no.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Joshua, have you seen this?
 ```
 
 ### Maharshi Trivedi, Thrive Physio and Performance. ctc_q7gk5zRxrBkwfrdfA
 Why it's held, got a correction and apology on 3 Oct, note said close or nothing. Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
-```
-👀 Maharshi, have you seen this?
-```
+CLOSED on Raka's word 12 Oct, no message.
 
 ### Muhammad Akbar, Aksonz General Trading LLC. ctc_9yfzLTQP9ehdYKdY6
 Why it's held, his certificate expired, so visitors get a browser warning before the notice our two messages described. Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
-```
-👀 Muhammad, have you seen this?
-```
+CLOSED on Raka's word 12 Oct, no message.
 
 ### Robert van Glabbeek, Cryptofocus.nl. ctc_gd9G4Nssf6Qqa9pkr
 Why it's held, our 3 Oct line, 'Say if push already covers it and I'll leave it'. Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Robert, have you seen this?
 ```
 
 ### Rohith Devanathan, ScrubMarine. ctc_Wn6WBQz6D6pzv6bQq
 Why it's held, our 3 Oct line, 'Happy to drop it if not'. Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Rohith, have you seen this?
 ```
 
 ### Sebastian Holz, journex. ctc_rsr2RnC2hLdcfh88E
 Why it's held, 3 Oct note said next touch is a silent close (thread has no promise, count is 1). Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Sebastian, have you seen this?
 ```
 
 ### Tyler Butler, Bunkz Golf Ltd. ctc_CwNQoXS434JF4pFX2
 Why it's held, our 3 Oct line, 'Happy to leave it if the shop's the focus'. Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Tyler, have you seen this?
 ```
 
 ### Willem Ruiter, bluedesk. ctc_LX8SwdtGKPPxqzFd2
 Why it's held, 3 Oct note said close or nothing. Thread last pulled 11 Oct, pull again before any send.
-NUDGE HELD
+APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
+NUDGE
 ```
 👀 Willem, have you seen this?
 ```
