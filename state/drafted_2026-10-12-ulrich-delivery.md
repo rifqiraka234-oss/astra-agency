@@ -1,4 +1,5 @@
-# Draft, 2026-10-12 evening. Ulrich Steppler, CHS Claims Handling Solutions. NOT SENT, waiting on Raka's word.
+<!-- GATE ARCHIVED -->
+# Draft, 2026-10-12 evening. Ulrich Steppler, CHS Claims Handling Solutions. SENT 2026-10-12 16:41:56 UTC on Raka's "Send", activity act_9GoLZsfeQEkTjgEJu, byte for byte, confirmed in the re-pulled thread.
 
 Rewritten for v2. The morning version linked the v1 site and is superseded, its text is at the end of this file for the record.
 
