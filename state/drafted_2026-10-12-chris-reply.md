@@ -1,4 +1,7 @@
-# Chris Ryalls reply, 2026-10-12. NOT SENT.
+<!-- GATE ARCHIVED -->
+> SENT 2026-10-12 16:17:40 UTC on Raka's 'Yes', act_iGeoKsoE3S3i7wGAs, one copy landed. Do not send again.
+
+# Chris Ryalls reply, 2026-10-12. SENT.
 
 Thread pulled in full 2026-10-12 about 16:10 UTC, 8 items, nextPage null. His reply 15:09 UTC, in full
 "Hi Raka I've been out the country, so haven;t had the time to look at it properly Chris". It answers today's bump.
