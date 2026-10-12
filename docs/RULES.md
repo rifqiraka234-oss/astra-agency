@@ -131,6 +131,11 @@ stays untouched.** Never pick the plausible reading.
 3. **The plain bump gets answers fast, and the answers are mostly no.** Two replies within 2.5 hours of the
    12 Oct bumps, both a no with a reason. A no is a result. Close silently, per "Close means NEVER SEND
    ANYTHING ANYMORE", and log the reason, because the reason is the lesson.
+4. **A page can change between the research and the send (Darren Gilligan, 12 Oct).** His homepage WhatsApp
+   button pointed to his number with +1 at 08:58 and 09:15 UTC, and to +44 at 09:19, minutes before the
+   send. Only the send time recheck caught it, so the opener built on it would have been false. Reopen the
+   exact claim in the minute before every send, never trust the research pass, and when it has changed,
+   don't send, tell Raka.
 
 ### 0C. The odd thing may not be theirs (Debby Alles, 2026-10-09)
 
