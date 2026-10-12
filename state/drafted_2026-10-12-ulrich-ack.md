@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+Superseded and never sent. The delivery went on its own on 2026-10-12 16:41 UTC, see state/drafted_2026-10-12-ulrich-delivery.md.
+
 # Draft, 2026-10-12. Ulrich Steppler, CHS Claims Handling Solutions. NOT SENT, waiting on Raka's word.
 
 Whole thread pulled 2026-10-12 ~09:20 UTC with `get_inbox_conversation`, 2 activities, nextPage null, totalItems 2.
