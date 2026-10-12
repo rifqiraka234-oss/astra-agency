@@ -545,7 +545,10 @@ def check(path, replies=False):
                 bad(i, f"banned structure, {label}")
 
         lines = [l for l in m.strip().split("\n") if l.strip()]
-        closings.append(" ".join(lines[-1].split()))
+        # The plain bump is one fixed line, so two leads who share a first name share it.
+        # Each lead only ever sees their own, so it isn't a template tell. Raka, 2026-10-12.
+        if not is_bump:
+            closings.append(" ".join(lines[-1].split()))
         cm = (re.search(r"Pertamina\.\s*(.*?)(?:\n\n|$)", m, re.S)
               or re.search(r"go on them\.\s*(.*?)(?:\n\n|$)", m, re.S))
         credentials.append(" ".join(cm.group(1).split()) if cm else f"<none {i+1}>")
