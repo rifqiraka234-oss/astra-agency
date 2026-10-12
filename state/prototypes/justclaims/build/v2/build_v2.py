@@ -16,20 +16,24 @@ SITE_URL = 'https://astra-justclaims-v2.netlify.app'
 NAV = [('new-rules.html', 'The new rules', 'rules'), ('platform.html', 'Platform', 'platform'), ('customers.html', 'Customers', 'customers'),
        ('resources.html', 'Resources', 'resources'), ('about.html', 'About', 'about')]
 
+HOME_NAV = [('#how', 'How it works', 'how'), ('#rules', 'The new rules', 'rules'), ('#customers', 'Customers', 'customers'), ('about.html', 'About', 'about')]
 def header(cur):
-    links = ''.join(f'<a href="{h}"' + (' aria-current="page"' if k == cur else '') + f'>{t}</a>' for h, t, k in NAV)
-    mlinks = ''.join(f'<a href="{h}">{t}</a>' for h, t, k in NAV)
+    nav = HOME_NAV if cur == 'home' else NAV
+    links = ''.join(f'<a href="{h}"' + (' aria-current="page"' if k == cur else '') + f'>{t}</a>' for h, t, k in nav)
+    mlinks = ''.join(f'<a href="{h}">{t}</a>' for h, t, k in nav)
+    cta = '#walkthrough' if cur == 'home' else 'index.html#walkthrough'
+    days = '#rules' if cur == 'home' else 'new-rules.html#timeline'
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="nav2" data-nav>
   <a class="brand" href="index.html" aria-label="justclaims.eu home">{LOGO}</a>
   <nav class="links" aria-label="Main">{links}</nav>
   <div class="nav-r">
-    <a class="days" href="new-rules.html#timeline" title="Days until Regulation (EU) 2026/2202 applies"><i class="pulse" aria-hidden="true"></i><b data-days-n>{DAYS}</b> days to apply</a>
-    <a class="b pri sm" href="request-a-demo.html">Request a walkthrough</a>
+    <a class="days" href="{days}" title="Days until Regulation (EU) 2026/2202 applies"><i class="pulse" aria-hidden="true"></i><b data-days-n>{DAYS}</b> days to apply</a>
+    <a class="b pri sm" href="{cta}">Request a walkthrough</a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
-<nav class="mnav2" id="mnav" aria-label="Mobile"><a href="index.html">Home</a>{mlinks}<a href="claim-clock.html">Claim clock</a><a href="readiness.html">Readiness check</a><a class="b pri" href="request-a-demo.html">Request a walkthrough</a></nav>
+<nav class="mnav2" id="mnav" aria-label="Mobile"><a href="index.html">Home</a>{mlinks}<a href="readiness.html">Readiness check</a><a class="b pri" href="{cta}">Request a walkthrough</a></nav>
 <aside class="draft" aria-label="Draft status"><i aria-hidden="true"></i>Draft for CHS Claims Handling Solutions, not live. Anything tagged To confirm needs your check.</aside>'''
 
 FOOTER = f'''<footer class="foot">
@@ -150,7 +154,7 @@ def render(name):
     rep = {'{{AR}}': AR, '{{TBC}}': TBC, '{{CTA}}': CTA, '{{DAYS}}': str(DAYS), '{{FORCEDAYS}}': str((FORCE - TODAY).days), '{{OJ}}': OJ,
            '{{NCLOCKS}}': str(len(CL['clocks'])), '{{HORIZON}}': horizon(), '{{RULERLIST}}': G['rulerlist'](), '{{HOURGRID}}': G['hour_grid'](),
            '{{CHARTRATE}}': chart_v2(rate, 'cr') + tr, '{{CHARTCOURTS}}': chart_v2(courts, 'cc') + tc, '{{READYMAP}}': G['readiness_map'](),
-           '{{G96}}': gauge(48, 48, 40), '{{G30}}': gauge(30, 30, 26), '{{G9}}': gauge(36, 36, 31), '{{GDAYS}}': gauge(40, 40, 34),
+           '{{LOGO}}': LOGO, '{{G96}}': gauge(48, 48, 40), '{{G30}}': gauge(30, 30, 26), '{{G9}}': gauge(36, 36, 31), '{{GDAYS}}': gauge(40, 40, 34),
            '{{CLOCKSJSON}}': '<script type="application/json" id="clocks-data">' + json.dumps({'clocks': CL['clocks'], 'quotes': CL['quotes'], 'applies': CL['applies'], 'force': CL['entersIntoForce']}, ensure_ascii=False).replace('</', '<\\/') + '</script>'}
     for k, v in rep.items(): body = body.replace(k, v)
     body = re.sub(r'\{\{SDIAL:(\d)\}\}', lambda mm: G['story_dial'](int(mm.group(1))), body)
@@ -160,8 +164,6 @@ def render(name):
     return page(meta, body)
 
 if __name__ == '__main__':
-    os.makedirs(os.path.join(OUT, 'assets', 'data'), exist_ok=True)
-    shutil.copy(os.path.join(B1, 'data', 'clocks.json'), os.path.join(OUT, 'assets', 'data', 'clocks.json'))
     only = os.environ.get('ONLY'); built = []
     for f in sorted(os.listdir(os.path.join(V2, 'pages'))):
         if not f.endswith('.html') or (only and f != only): continue

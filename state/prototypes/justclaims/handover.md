@@ -11,6 +11,29 @@ One artefact, built for Ulrich Steppler after his yes to the offer in the opener
 
 The project was created with team SSO on. It was switched off and forms were switched on, as on the earlier prototypes.
 
+## v2, reworked as one story (12 October 2026, late afternoon). Raka's pick. Not sent
+
+Raka preferred v2's look to v3's, and said nobody landing on it could tell what the business is. He read it as flight insurance himself. justclaims isn't insurance. It's software airlines use to handle the compensation claims passengers file after a delay or cancellation, so the home page now says that in its first sentence and then walks a visitor through six steps.
+
+1. **What it does.** One sentence, then a sample claim moving through intake, checks, amount and payment, built from the sample data on a justclaims screen.
+2. **The problem.** EUR 250, 400 or 600 per passenger, 37.5% of eligible passengers claiming by 2018, 134,496 court cases in Germany in 2024, spreadsheets and claim agencies.
+3. **How it works.** Four steps with the product beside them, the claim form, the automatic checks, the decision and payout, the reports.
+4. **Why now.** The new rules from 23 October 2027, the countdown arc, and the three clocks that matter most.
+5. **Who uses it.** Discover Airlines' quote, Eurowings Discover since 1 August 2023, TUI fly in 2019, the founders.
+6. **Next step.** The walkthrough form on the page, with what happens after it.
+
+A pill at the foot of the screen shows which of the six steps the visitor is on. The nav links to the steps. The 15 time limit ruler, the five dial story, the mini claim clock and the bento grid came off the home page to keep it simple. The inner pages still open on v1.
+
+Every product statement comes from justclaims.eu's own pages (the claim form, the automatic checks for double payments, EU 261 applicability and the amount by route length, automatic payouts, reports for the CFO, up to 90 percent less lead time, 6 to 12 weeks to integrate, German hosting). Three lines were tightened before shipping because they went past that. Strikes and storms became summer peaks, the agencies line now says what agencies do, and "handled thousands of claims" became "represent airlines in passenger claims". To confirm tags sit on the testimonial use, on the new deadlines fitting the deadline field, and on the team getting back to set a time.
+
+| | |
+|---|---|
+| Live URL | https://astra-justclaims-v2.netlify.app |
+| Deploy id | 6acce93b7c50c3a8a115b1b2 |
+| Source | `build/v2/pages/index.html`, `site-v2/assets/home2.js`, story styles at the end of `site-v2/assets/v2.css` |
+
+Checked. axe at 1440 and 420, 0 violations after fixes (heading order in the sample claim, low contrast on dimmed steps). Copy audit 0. Page QA local and live at both widths, no errors, no failed requests, no sideways overflow. All 21 assets byte match live, and the live page text is identical to the build. Live, the sample claim ran all four stages and ticked all four checks, each how it works step showed its own screen and highlights, the step pill showed on step 4, and an empty form send flagged all four required fields. Netlify detects the walkthrough form with its six fields and a honeypot. No test submission was sent this time.
+
 ## v3, the redesign (12 October 2026, afternoon). Not sent, not yet chosen
 
 Raka judged v1 dated and v2 "feels like Claude built it". v3 is a full rebuild of all 13 pages in a new design language, flight documents. The analysis of why v2 read as Claude built, and what v3 does about each tell, is in `research/teardown/ai-tells.md`.
