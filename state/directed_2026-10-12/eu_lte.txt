@@ -1,0 +1,12 @@
+== EU VIEW from Webbkoll, Stockholm, nothing clicked  https://liverpooltourexperiences.co.uk/
+  results  https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fliverpooltourexperiences.co.uk%2F
+  Cookies: 4 (4 first-party; 0 third-party)
+  Third-party requests: 67 requests to 10 unique hosts
+  Final URL: https://liverpooltourexperiences.co.uk/
+    cookie   liverpooltourexperiences.co.uk | dps_site_id
+    cookie   .liverpooltourexperiences.co.uk | _tccl_visitor
+    cookie   .liverpooltourexperiences.co.uk | _tccl_visit
+    cookie   .liverpooltourexperiences.co.uk | _scc_session
+    3rd party hosts  connect.facebook.net, contact.apps-api.instantpage.secureserver.net, csp.secureserver.net, elfsightcdn.com, fonts.gstatic.com, img1.wsimg.com, region1.google-analytics.com, www.google.com, www.googletagmanager.com, www.gstatic.com
+
+No screenshot here. Visible banner or not is still a render question.

@@ -1,0 +1,87 @@
+CONTROL  'Tesco'  HTTP 200, 100 results
+
+== GOOGLE NEWS, company  q="Liverpool Tour Experiences"  HTTP 200, 3 results
+  2026-10-08  Calm Ya Baps is hidden away in Liverpool city centre - Facebook
+      https://news.google.com/rss/articles/CBMiugFBVV95cUxQMWpvRkhrbjBwSklSMF9reTRCOVJsODlzVVI4S0wxclV3UEVtdXhPNHVxbWJ2a0loNkFJdlA0ZnhvaXQ3U3F0OGlCclFmUzgtRFRBY2xubDJSaThsUWV2UEFSMXBHLUhiR0w0MXRKWUZPV3lQaVlLVVBibDhRdjZ6YWJYcGwtRHZFS2hteFZRR2E3U01zVU9weFJueldVZTgwTVplQkc3YlBxVDFHWE5mNXdlMFJoNmJVbXc?oc=5
+  2026-08-15  Inside the Liverpool shop with customers 'from all over the world' - Facebook
+      https://news.google.com/rss/articles/CBMiygFBVV95cUxQbEtOM2FFSGpaRGR2UnpJQ3l3aWFiQzRQcVdoa1hBS0lHOHVOZmpjSzl5SVRZX0FNSmYxVlE4OXBWczNrRENSNDNHNkp6cGtCbVU4Y3BpU2JpSzFyeFBSTFVqZTJpN0xWMGF3emhaM1hLbGRQU29RLTlnSjBjVDBTTlRvRWhrVm9uRTY5YnNxWmtpTGs0UG1XbVo1cExxTHRJUjh3dlpSS3ktS3ZPZ01XMFVMWkVxMkpXSF9KellYdFlaajV3Z3kwbHh3?oc=5
+  2026-06-30  'One of the real highlights was meeting inspiring people like you': Kate's touching message as she makes personal donation to boy in wheelchair she met on Ben Nevis - Daily Mail
+      https://news.google.com/rss/articles/CBMijwJBVV95cUxOQUU2eWdwN0dNVS1PSEo4TXp5QWdoWjJXTkZGZEVXVFB5bEtvM0REZWJoVlh2ZW9Mc29qTzhRVnZlc3pmMTVxd2o1OFRKX0JBZXVfcjF2NktTUk15cDBlZFBfQXpFc09DS2lHRzRxT0VkSTk0RWxQV21NVFFDRFZTRkRMeHRpX1pJTHNhQTlTQi1KeVA4VWYxNzU1OXR0NmpxY0FSS2c3U0xSQ1BUdkZRY3BNeTdnYXhQU1NQNldOcXZWNzZqU2xRQU45eWx3TDkyaVdzMWw2TFl0ZlZrNTd0bXBVZEhWQS12SW1NdzhfR3hfdzBRdEg4eTFNT2xEekp6TGRVSVEzdVo2aVVWRXpV0gGUAkFVX3lxTE50MzBVaWdnUHI5WTE5cmgtaEhKcDV1NkwxTHN4VHJpTUdyS0RFdFFmR2hIT0NMR3ljSHZacDZxRDdMN3JOTzdKQlJjNVZyN2RnVXJhQ0tIMHVRTTJBbjBkQ2U5RnZjQXl1eF9IZlpxRmx1UGZpbENXSGVMZm40Qkl3WEE4Sm0zVUdxd0hEVkdlNUt2QXdQVTdlQlZtOGJTQVpWQVJDMHZnNGJOV3Z3d3hYbTNtNEx1X0JidFRhd2lWcWlScFJTcGJvVDRUWmRhM2tGZ29fbnBEblozRG54bG1QdXVrczFqdGZJVEhrX0dNRENid1g0b25xSUlOQ2ZRSkZ6QlRURVZRaXFJcEJTOUowd1pyYg?oc=5
+
+== GOOGLE NEWS, person  q="Darren Gilligan"  HTTP 200, 38 results
+  2026-07-14  10 things to do and see in Belfast when the sun comes out - Belfast Live
+      https://news.google.com/rss/articles/CBMiggFBVV95cUxQb2paenlzaC04ck04ZFpJal9pNDl4OHJKYVp2WHBEbC1ZcWRlS0c1bEdZdTdWeWZWMzIxMGlhMElXMGJxLURVd2VEeXY5R0lQNDFkMXZhMGlrSzE5d21lWkRibHlqY2ZFTHJhak1WU1RGQnJ1bDFFVGlFZW84R3huZ3FB0gGHAUFVX3lxTE1MYXphaVlONUFzSWU2RF9sOG9laXJaenZRY3Zuam1iU3lmWGt6SU0xWGVZdXBPbGNnMDZDcWRfVExVZXVwVFM3bmRQclZYTml3NTE5VWFOeURlWVJ2cUp3RXF5bzE4ZkpyRGl3U0RWMXZOSHI2clJTd0xlMkN2YkVpNmdfbEc2bw?oc=5
+  2023-12-04  John Gilligan’s fugitive son Darren was working as Amazon delivery driver in Dublin - Sunday World
+      https://news.google.com/rss/articles/CBMizwFBVV95cUxNTXJ1dDJ3QURjUDJmdnRFbUZpMjloZnFUeExTbGx6SWVaVV9UTkV5N1VPYXFXX01yTmMyM1NiZXRQSG1rOHJWWXFkTTBEZFB5QnlKMGwyUWxHaUQxWUtrRE9ETm5SVHRfZWNSX3g0VnpOTWU3MC1Ld0REX2dPTXdEWk9zakc1T1p4c19KRVA4bnlDUnRzUlZaU0ZhdEJXVHNNRXYzZTRIUmoxeWV1X2VNbl84RXpieE9Qc2w4N0c3a2hFYk9tNC1EUjlfMWM4YXc?oc=5
+  2023-12-04  John Gilligan’s son Darren appears before High Court over Spanish extradition request - Sunday World
+      https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZGNHSHBOSVlsMkswMC1zMVZpbWVjNmt6d3NfSVQtYk9VeXlWXzkybHVtSnBXdVk4RWRfUy1HNndZLVZkMW9sNktkaUVFNWdMcmZiSTQ4X3o0ZFNlRU9QZ3dLSGw3SXBFdGV0b2FwTTZYcHJFYU5nSGszcEprNFpzVkRhUFlWVjJLcHR2ZldvbHp0TDhNYUpYVGhlTHNFaGltZFFlUkpaTnFyUHVub2NyOU5VZHFKcmpHT1M1WTBpUHdaZGVHb3NWa1RKS25wRGdu?oc=5
+  2023-09-05  John Gilligan given suspended sentence in Spain - RTE.ie
+      https://news.google.com/rss/articles/CBMiekFVX3lxTE8xTncyWFM0cnJFWlJGYzY0dzFRdm1qTE4wTWcxaHF4MmNONklPNHVZRjlGNUR5VXpMOTRLS3RRRVBjVEgwMWVfUW80YVpkR1EtelhJdXpucFVlSUN4bUR3UUlkdzZYRlptZHRqT0xSWFFTZ3ZPMHZFUDBB?oc=5
+  2023-09-04  John Gilligan, Darren Gilligan & Tony Armstrong appeared at court today in Spain - Irish Independent
+      https://news.google.com/rss/articles/CBMixwFBVV95cUxPQ25uelo4T2VXNWF1SGVQUDYtTzdBMkQ3ZlBDSWxBVmtmQk1qd1NRSWgwbWZkWnVSaHBrbjdnQnlfSGF3X3FlcE9QRHdmRG9fSXNFd0ZfWkRHSVB1ZHotaEd0WnFGRy12MGNfdFgtdE5ITVhkckxGbnlfTHJYQlYydEJMRDlWb3dNYkZDMm9hUnAwQXV5THBiTlhkOFVqVHl6c1dXZUc5aGdJRVBVXzNqOGJPc1Y1emNId096UXBTNEEzMkI5czlV?oc=5
+  2023-09-03  John Gilligan to stand trial in Spain over drugs and weapons charges - BreakingNews.ie
+      https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbU5VVWtPUWwwczFkeVNkY0NJRHE4MnUxaVh3MFdBNnhKQlUzYVZ3WDN2TDlFb1B2MDdrZGRFUW9qNWxhczhkYkdmX05DSHd5SXFhRWVOR1FIaHJ3YmlRWlFJYnB5aGNIaUJHTTk5OGYxZlhONnViVjVUSUdodUg1RUhVX3dfelVCUDVaQkRkSjVlR2tGdkduYU5XWThidE9GNVI2ZThFbWlTZlFlc3Z5TlR3VUExS3RV?oc=5
+  2023-08-04  Extradited son of Irish criminal John Gilligan jailed by Costa Blanca court in Spain - Olive Press News Spain
+      https://news.google.com/rss/articles/CBMi0gFBVV95cUxObC1oUnlDU01NcGU5QmpxX3dYaXg1X2dlVjVWUDRRWWZ0OHRFdUtMbmpZTndzQU8tNkZZZGFRNlIwZjE5ZkZHeFFhNmRXLVdOTjB1TEtXd0ZKSXVyck1oX1l2MHhYRXVIMnZic3d1SURVV1A5T3VUemJzX3F3VWJnc1ROMXNmbFU0NlJoSV95ZWFXc1pheDVDMFpyQUUxdmJKNXdLdGRBVHFTLXJ6YVVMOUVPbHpKM0RJM2owLTdGVHplMm1qaTV3dzk1MnExWjhRNnc?oc=5
+  2023-06-21  Darren Gilligan agrees to surrender himself for trial in Spain on drugs-related charges - The Irish Times
+      https://news.google.com/rss/articles/CBMi2wFBVV95cUxPemZMZjhuVjBfM1I1YXBOSTZ1aWRlLXRmOVhENTlMUDJidjhhVUZTYkxNYmdEUUJoS3hqZTkxZlhRMExsTGxkTzlMRG9tQVVmT1RfRlYyTXUyRDl6dWFEMGhCTHl4UVJZUXZKcC1Nb1pjTlZlRUlDcmxEYkRqQWlSNmFLZU1QSXk4OHJZRC1pa1pQdk53WGQ4WEZNZk15QkVqRWV0QzFrRzN3NDdTRnpfZ0pBLVQ3MkljdUxGeENFcm4tTFc5Rk1XSjlxbXRSTVh5OF82VTZmOXZjSWc?oc=5
+  2023-06-21  John Gilligan's son Darren surrenders to Spanish authorities to face drug trafficking charges - Irish Mirror
+      https://news.google.com/rss/articles/CBMingFBVV95cUxNMXdIWldFeU5KMWROX0xXeU1ONmZzT3QycmtjR1liYnFOcEV4ajhfQ0IwZUxsbkVORjdxWHl0UlNFTVk1LTZuYlRSMFFfcE5CRWRZSkRaMXRDaDFqcklUNGJrcjBDclQ1czRiTjVCWV9GUkpObE91emtiRDJLeExqaUJhMDNhNjhwanZEb1ZsaXV0SWtiTjBJVU9JQVpfZ9IBowFBVV95cUxPSnBZaHRveVBYNWZfRE11U3VsQ3ZPRnBPZUl1OXJuZTF4TGZBR3l0Y0JRVVlVZ0NIMlFEVFhtVGpoRHoxZjAyZ3B5djFjWTR0Zl9wTndJNkZhczhPWjFTMHczY2FJMDBtRUd6OXdkUU96YXB4ejVjb1hjcDZOMXEzc1RycWF1ZVlWbU93TTgwRW00OGFNY2gwaGhxOWJyT0ZwT2xr?oc=5
+  2023-06-21  Fugitive Irish gangster set for July return to face drugs trial on Spain’s Costa Blanca - Olive Press News Spain
+      https://news.google.com/rss/articles/CBMi1AFBVV95cUxQSmdvNjJ1Y2JEWkM1NDBvQ1ZQYnBTVXFiZndndHpvWWZMYUg4RVZiSnRURnlDS2lmZlhsTEZ1WWlHbGlhdWV6NGRJZjJ1YmFPVkJ4cGhHSTFfbnhrR25fSGlMTVY4Tm5RSWdZcTNVNzU5R1RIeUpfYUFIYkNlN3Q4RWxueUNJZVRLbjRWQVdMS0loOE9fcXp1akVaNVpNdUFYcldYNkcycEwtVER3Nm9uTDQwSEFoajBKckViWTJtRGd5MlpvX0VDUFpZWWp4TzM4RWc4dA?oc=5
+  2023-06-21  John Gilligan’s son Darren agrees to fly to Spain to face drug trafficking charges - Sunday World
+      https://news.google.com/rss/articles/CBMizAFBVV95cUxOMVlOUFBKZnRpVk5HLWdiV3A1b2tjcTdrYURWQk5Pc3E1ZDZrM3EyNW5ka3g3bnZBVmhldm9tZUhlWEZnTkdLbGxUU0V4QmUxUW5KOEJ4RmNzUzlkOEZ0d01VbWNsR0lWOEllT0dOTzJXQ21OZ1FWRWZRSHZkUEtud0Y4cWpSWV9TQXJrRFBPMkw5SWRBZGxKd0lJZ0dNY2Y4Z2loSVg0YmtheTZtTW1ERFBxNC1HX0xfT0VBU2dNNk5LVDEzVVRhQ0E0VEg?oc=5
+  2023-05-08  John Gilligan’s son Darren maintains innocence when confronted over Spanish drug charges - Irish Independent
+      https://news.google.com/rss/articles/CBMi4gFBVV95cUxNYTlaRWFFWHRHQnc0Sl90cjRxR2Y2OE96djA5U09uQkU1TTBnQ1B2dkItV2g5TnFQUDAzb2UyanAxX2lDSWNJSlJFbU55RGR1bHpVYUp4anVrLTVCVTFzSkFaTU9MUm9UWTJiSzdSWXE5dmN2em51aU5wZEhFMHBGUUwtRXl0M3R6cTVyd3NYUmRzMFpTQVduSHAxcmc5M0RtdnVZcjR0VGk3bURVV25ZQzdVMzNPWDJQVkFWbEEtamIwRl9XNU1QazlDTjFZd1lsYjZDaG5IaGFsR0dLdVg0MlpB?oc=5
+
+== REGIONAL NEWS, their industry in their region  q=(Liverpool cruise terminal OR Liverpool cruise season) (shore excursions UK cruise passengers)  HTTP 200, 55 results
+  2026-10-01  The cruise offers the perfect combination of luxury and adventure. - Facebook
+      https://news.google.com/rss/articles/CBMiywFBVV95cUxNZzNjbGM4QjBuZ0FJblc0SVpDbUd5ZXFDTUVjazZRUjJrdTcwLUNtY3RiTGxXWU1uZ01mVTNIVzdsVFlOenRWTW5tV3k3LW5yVW14SEpzUlhQZEFWekF5dE1MZ2Ryc0UxQ3FCeDM3a1UyaDJLTEhaWVhhbjhVR1piNjRNckJEZEpWbHRJTU5zOEVWd2s4RHBYd3pBNDd2VW4xVk5CbzV4d21uMmt1alhTVDFHNDA4TEZiejUwR1F5bWRJNkFqaUlGN1N1dw?oc=5
+  2026-09-07  Celebrity Silhouette: Sailing on the… - Cruise Trade News
+      https://news.google.com/rss/articles/CBMitAFBVV95cUxQenpsRVBuYTR5TGdxbm1uVFVrOXdZR2thdlAtbjR6ZHJqSUpNcG5JdGtVQzJqN2stVk9aTGRaVkJVcm9OZDI2NUo3bENRYjY2ZHNJSzlZRmlTMVhPVTY5ejVWN0J3NXZlU0l5ZVh0d2xmQS0zLWpCSXJVNC1kemxiTjAwQy1iTExfclg4dGJMQUpWVEx0cndadDYxWmYwQmR6RHNkSnJ2UW1KbGhBUVk3a19Ndnk?oc=5
+  2026-08-09  Massive cruiser 'Valiant Lady' sails into Liverpool waterfront - Liverpool Echo
+      https://news.google.com/rss/articles/CBMiqgFBVV95cUxPRGtSdmFmcFNRTXpWdDhOcktRb3JGOFo5UkhfR1NSbFFwMTlneXBZbXlMYl8tS056VVlXRTlFcEFrLS1hUGhiUXAyaE9vVS1BeTQwUmhwZnI2Q3RwS3hsZ09fUEJHNDRSejN1NDBrQjYzbEtTeFhodEE0X3NOUFUtLUNKdzI4YXhkTnFuaEkwa2pibTRCcXJMY2dzMnhLY1VKMHZpOWRQbU9kUdIBrwFBVV95cUxOMElBNU81SlFpdlpEOHJKTUFUSDVmX01iSVdZa3MxOVBvRmxDMVF1bUUwSEktaDh4Rkp4dUxxaU9FNk1mUEk5RnlnWjhmWUxuQ2tIQjQ4bHVLVzRwNHNxaUFTQ3BIZG1DRWhrdGpvczNOQ2Z0bFBVUVZ0eXdkVktPVGVzYzQxejJTTVhhTHJia2w3aE9CdHRDWmFWWS1UM0p2Mi03YlU5eHNwc1Rfb0ZJ?oc=5
+  2026-07-27  Cruising Solo with Fred. Olsen Cruise Lines - Cruise Critic
+      https://news.google.com/rss/articles/CBMigAFBVV95cUxPYl9CSHFiWFAzTGRCZmVmSTMtSzNRWC1BYklwSGY0TmduUEVjNHpRUDVlRkplWk5uN0Yxc3pkSk1ETkpKc1daLW5HUXJ4NHpoeGJEel9oUDZuTWlaaDdQUWJZbHh2NkE3NWE4X3FXY1pmSmRHVUZvRklReGFaLUliVA?oc=5
+  2026-06-17  17 of the best Norwegian fjords cruises, chosen by our experts - The Times
+      https://news.google.com/rss/articles/CBMilgFBVV95cUxNdUpqci1LcGx0X1NBOFBhQUdXQU9yVFZueFdlUHMtSkNGb1VKMmdoWERHc0ZDWjRYX3pwek81dUMzOTdlRjZySnRydnVmSjI1UHJUQzAxZW9kb0Z2XzE4TDFpQ1Nfci1jMUZoTlBPT0I3VzNmd0xXTnVHMFN0RFFJS3JHaHJpdkdOT2RYamg3dWsxQ2d3aGc?oc=5
+  2026-06-11  Cunard Building to open its doors for heritage market and tours as Queen Anne cruise ship visits Liverpool - Liverpool Express
+      https://news.google.com/rss/articles/CBMixAFBVV95cUxQSmZnNm42MDFlZkI3ZzVsb19RTExUZDF3Z3RRZTk4YlZhNnB3ZVJUN2gwYzJ0T3pNM1RqeFg5ejVMZjRoNjh5NFJWMG9lRzhRbzY0Q2lwMmI4cnpDem5PWjlXTTR5S1Fmb3l2dEdBQVJsejNpcHYzMUJ3Ty11RUU5LXhhMEtnSnBDYkdMcldDSEozNE5xaVUtYU9vNlBpVTJ6TUxqcDZZZXVCdGY2QXhtQmxCU1JZOGVMUzJTNU0zOFRmaTFE?oc=5
+  2026-05-16  Liverpool norovirus cruise passengers horrified as people throw up on deck - Liverpool Echo
+      https://news.google.com/rss/articles/CBMiqwFBVV95cUxQYUJ2al90eGZ6WHN2WUJhWjVRR3p5aGgtd1dXM25hbUg3WGFfT2wyRE5wclhhbGc1NkJmbGlpc3NiRmpaLXp2RFgyb3JxRnNJN0g3UFViZjRyMWRnV0xXbjdHTDZxTUd3VFB2WXpKR0g2T2RRQnduTHRkY3pJNFEwVEF3bUxyYzFVdV9DT3VBS28tN3Y2VUJ0U1d5UzNpOTZQUEtOUFZ4bkxxOG_SAbABQVVfeXFMTURwaEhRYmExMHN2TlB5SUFuOUZjdE5DYkxvdnB1U1FKd0ZTVllzZ2c4SmNYMGVWTU5USWMzWjM5YUZjM29Zb2xRaGQ5RlpjbThfSGgwUXBKWldTbEthRXEyWE05bnozc3NlTzBjMGJteEJwZl9mZHJZZ0xLRHZyQzFOUmJReHB3VU02cDFpSDU5Tm5jMWhDYnlYenFwelZVTUM3NmFfZkR0Y29hTDUxYUM?oc=5
+  2026-05-15  Ambassador Cruise Line's ship Ambition resumed voyage following Norovirus outbreak - CruiseMapper
+      https://news.google.com/rss/articles/CBMijgFBVV95cUxNSnVXMEV5cG5mY2ROaWJBWVM0MTBKcVRhdmZvXzV2d3NCVkJhbF9YX2hLc2dKTlljTzhEeDhGaHc3dmQyZnY2UWVmXy12cmlMS2Q5bWl4ajhoYld1cGdMNDhzdDl4Z1pXYms0dzgtN2x6NktnemlkdnNTelN5SGhPTEhaQ19ya3FmaC1iX2dn?oc=5
+  2026-05-15  France Confines Over 1,700 Cruise Passengers After Gastroenteritis Outbreak On British Cruise Ship - Marine Insight
+      https://news.google.com/rss/articles/CBMixwFBVV95cUxOLWpRNU01SFlLekUybFJ2WkZNZnBubVJFU1k1WTdiNkZSR29IQkRsX3h3TUZtZnU2blVUcFB3c0VVMkVUUUItRjJSQWpJMDhxdTlOLVd4NC1FYzJ3N1B2VWlOQjhfSEU2dk9FRFprV0dnQk9GMW9Gd3BOY3RHS3ljZ1A2U1dQSjdZOUY5a3lzUlJYZG52VVpLWWUwY3hzazJ5UE1sMUpqV1lyd2xQWi1WMVlKNGVJUkw5R24wYTM4QkxqeGlyNlVR?oc=5
+  2026-05-15  Norovirus Ambition cruise passengers describe horror scenes with victims throwing up everywhere - The Mirror
+      https://news.google.com/rss/articles/CBMilgFBVV95cUxOY0lELXhsLWh1eXdHSHRSeWZkS3NvbTNSQVIxMzlxNEpKQ2JxbVp1a2FiZnhQejdsSmNmcGZZWWRIamc0elpmbE5nZUQ1Zlp4Z05HbGNHUERMSWhfWjFPUVA1Z3hwWFJldGpwUTh6dTREckRhemFDc0FtNFRha2ZwRVNCY2xwbkozSklsNU5qWTZSa0VNcEHSAZsBQVVfeXFMUF80dnhTTTBMM19lZjlwdmhuMFBaR0R1UVJOLUo1QS02bHNrejhwRy1XamZILTZvRTNKOU1MZDdBaWpRSlpyWTJGTWtZeHNfa1RLejl6VnYzZVhQMUtkRWo1SjRXckdQeVZodVlZbzFBaGFpcWpqT0RWTVZzTDVINmIzM2wzcThONHJybWRmYzJTOTBMeXloQWxhZVk?oc=5
+  2026-05-14  Passengers allowed to leave Ambassador ship after norovirus outbreak - Travel Weekly - Home
+      https://news.google.com/rss/articles/CBMiogFBVV95cUxQSFM2aWE0Y0g5OU5aQzdmQnRSME9lUTNvNzc2OUg4VXJ1aHQ5UkJPU1lMZzY5ZkUxSjdTQXJxblJYaUJCX2o5OVNYNnZfVXE5WDFMNGMwYWF4RWpmQnFLZkxYWEt2bm1oTW5tMlItd2lzM0ctMmhyU04tY1ExaWdxOTJXaEtUMk54MzNIYjNGclQ4aHJNcFBMZUxxX3FKeUI0Y2c?oc=5
+  2026-05-14  Nearly 2,000 people quarantined on cruise ship as mystery outbreak strikes after stop in Liverpool - GB News
+      https://news.google.com/rss/articles/CBMiswFBVV95cUxNT3c1aThTbGFSRTE4ZVItZThXZ0U0Tk1HWEl6b0t6TVZfUzNZc3BIeTJMaEM4Y2wyeWIzY3M4RE5NeFA0M1FXWW5jSFBJVXNCQnJCcXhXb2ExbzN5NlVPN0Jzbjl5LU1UTUw1QllQMEl6QWo1UW1BYUdOTFdJeE5vWE0zbTFsYzlyczQxTnVfWFBzYVBVUjYtS0ktbWluVDZwZUh1ck1yQXROc1drOXM3bllnRQ?oc=5
+
+== INDUSTRY NEWS  q=shore excursions UK cruise passengers  HTTP 200, 70 results
+  2026-09-28  6 Best All-Inclusive Cruise Lines For Brits - Cruise Mummy
+      https://news.google.com/rss/articles/CBMiggFBVV95cUxNWWxRR1Fha2x1OGY1dmJwX1BqLXMtTC0yOXJOcXlONS1LN2hTSTdsWlAydmpITERsSlFpVFF0Q0VUN2QwMENjWVZfd2FqbjdSTzZXbWdJUFpyM3VrWHh4UTlTUHdKcHpXbWMzdGs1VndEejJoMG1IVks1TXVpZzQwdlZ3?oc=5
+  2026-09-16  21 of the best Mediterranean cruises for 2026 and beyond - The Times
+      https://news.google.com/rss/articles/CBMimwFBVV95cUxOLWI3Y2tUSnpEeVBGcWhFZjZFUWlsVHVfYzhVam5zMUZxeXZmZVN6OWVNaHBBWldsQ0lvbG9VaVJKYVNKNXN1MUQyUlZ3MU1FeGhVdjJiNXN5UXBEZkNKRDJlN0xHU0NXUWRNZV9hdTFFM0hkcVlrTG5EanVqeHhTb2RYSHhQVGhzaGpuMGxtWTNLWENIMDlDU0N2QQ?oc=5
+  2026-08-11  11 Things I Do Differently After 50+ Cruises - Cruise Mummy
+      https://news.google.com/rss/articles/CBMif0FVX3lxTE5zbGF4ZnpnMkRnbTFNRFdkdTBuSDJoUmV2MVA1TjAtZDBlMjI5U0RpXzIxRURvUG9ZcldzdEZyRTFhYV95alJRM1IxYldJNkdWT3NYdnhmMHk5WEhudWsyMDJ1ekV4MzNZejE0d081OWN5M0RHVU1tT1NoUXY5WEk?oc=5
+  2026-08-07  Cruise passenger feared rabies after bite from ‘swimming pig’ in Bahamas, suit says - The Independent
+      https://news.google.com/rss/articles/CBMivwFBVV95cUxPRkVWbElKVmVJaDVHNEpkWkVKeTNGNDlBU2RZSFg4U2UxT3duSXZBdmN1VDBic3h1R29CU1E2bzFneWxwU1FMSmVYdWVtRFJpOHRXSm94aHJ1cEtvM3FRSE10cWs3VDRta1dLQ19kX2ZZS1dkSFZOa0NRVjJmVWNKSTlmdWVONERwbWgzSXhUOVh0Q0h2QVFCU190cWY2SVhURVljSXM0cGpaQXN5YjJGZk1ZVzZNUVV4VGFTNVBnMA?oc=5
+  2026-08-03  Seasonal Glacier Flooding Threatens Juneau Shore Excursions This August - Cruise Mummy
+      https://news.google.com/rss/articles/CBMipAFBVV95cUxPRDhNSE5mR1RPTEJxOUtnY0x5VHJ0eS1OZkw0OFo4UG1yU2diYmdMUlFTallqOU8ybUlOM2YwTlZjUnk0R0VkdGhHbGZqTmpyM2dWbV9zYXVDRllRVEJXTUdmV2JWSWd5ZXBJWUFoNlgwVWtTQWxVeVpMYUUwVjhYblZ1NnBtM1FsZ3ZpWE1oMHMyS0xzcDJDRXY3d2s5U3pZdlRpMQ?oc=5
+  2026-07-31  Wall Collapse Forces Major Changes To Santorini Cruise Operations - Cruise Mummy
+      https://news.google.com/rss/articles/CBMinAFBVV95cUxPUlR2R3huZUtnRjlreC1TZFdpZlpabVI5Qng5VkRGSGlZYnc4YXh1bDhEdW9iN3M2bWVFMC1RcnRBcTB2dEFXQ1RNSUJjNnJabXp5ekU2ZFBJQVQxV0x5ZUNadk5yNm10Uld1Y1ptTVZHdWhNNmRfUGhLbTN3U2RRSE5RZS1kQm1PeTZ6cWxjSl9QVFlJVU81UmZlTU8?oc=5
+  2026-07-22  Louisiana Woman Suffers Severe Rope Swing Injury During Honduras Shore Excursion - Cruise Mummy
+      https://news.google.com/rss/articles/CBMisAFBVV95cUxOSGRuR3pMYkdLR0JvTzlPNXBrUXRvSktIdF9NbmloaWFKVEkzSHgwUWdoYUJFc1ctYjJncVhKbFBLMjgyZEZCSlV5a0lxajdFSTRjSHcxUnlWUHFiU1FiRVFsaUNzajFSZmJjNUVsSzRKd0hHdnNiS3NNUUtLQWhRZE1oQ3pFUjIwenppSkx6NGFZSC1VSGFpQkVoeTFhNXcwcXJuVHotZG9nVWozVUxpRw?oc=5
+  2026-07-08  The six best all-inclusive cruises to book now - The Telegraph
+      https://news.google.com/rss/articles/CBMiekFVX3lxTE55SDMyM0x3TExLaFJrTVZtY0dtM0U1VzEzTXc5dElOU3hJWmxQVlRpRkNMZ0Nac1lTWERORVp5LU5kMXMxVlJVbE9JWDc0a2s4dXJOWDV1Q3A2c2gxSG1jVC1rRTZNa1dTeVlZNTZOTktISE9JZDhzYXF3?oc=5
+  2026-07-06  Carnival Faces Lawsuit Over Shore Excursion Injury in Dominican Republic - Cruise Mummy
+      https://news.google.com/rss/articles/CBMipgFBVV95cUxOYUg3c3FYVjJnVHkzM2Y2c2pDOGxxZFMtOGdCYnh2aUJlU3RXMnRaT200TnJvUHJITmp4UzdQZ0V3eGhRM3M3cDRrTlhVWjdWZVJXRzVneDlIM29xRW9SdldxUVdxMHFsdFNBSHRSbFAzeFFtUm05SnNBSkxXRnNrT2ItZmdtM0QxUjhESXh5aTZpSEVIcXhtMUxvOV9IZ3BxNEhzZjNR?oc=5
+  2026-06-25  The 15 Worst Cruise Lines Ranked (2026 Reviews) - Cruise Mummy
+      https://news.google.com/rss/articles/CBMibEFVX3lxTFBJV2M4RGtLel9IVHpIdDhsQ0UzVUx0WFNJZjlIVzIwaDA5eWhKQk9wOVlheFEyakZlSWRjV0dzYVR0MEJMTHFQTFB5d2xibHdOWjh2cXpwT2FVRWpGU3UwNDVTdlVQS2hpVEdoMQ?oc=5
+  2026-06-17  17 of the best Norwegian fjords cruises, chosen by our experts - The Times
+      https://news.google.com/rss/articles/CBMilgFBVV95cUxNdUpqci1LcGx0X1NBOFBhQUdXQU9yVFZueFdlUHMtSkNGb1VKMmdoWERHc0ZDWjRYX3pwek81dUMzOTdlRjZySnRydnVmSjI1UHJUQzAxZW9kb0Z2XzE4TDFpQ1Nfci1jMUZoTlBPT0I3VzNmd0xXTnVHMFN0RFFJS3JHaHJpdkdOT2RYamg3dWsxQ2d3aGc?oc=5
+  2026-06-17  The best shore excursions on warm-water expedition cruises - Travel Weekly - Home
+      https://news.google.com/rss/articles/CBMijgFBVV95cUxOZE1fRi1KejJlWm5vaWpZc3lQVjBLNGtzQlRMS0N4ZWh2SThEb0R4cjV1bW05M2pXcmdiT2xfQk9oSGRoTDBSNy1zX0JaaHU4c0txSmk5ZGRlVEU3LVFGbUp3MXBtVFk4MlNiTU96WEhEcnRRMFktX3hSUVhUWDRkZVFwLTB6ZlpDeFdTZTZR?oc=5

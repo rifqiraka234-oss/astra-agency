@@ -1,0 +1,14 @@
+== EU VIEW from Webbkoll, Stockholm, nothing clicked  https://www.getholed.com/
+  results  https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.getholed.com%2F
+  Cookies: 6 (6 first-party; 0 third-party)
+  Third-party requests: 174 requests to 8 unique hosts
+  Final URL: https://www.getholed.com/
+    cookie   www.getholed.com | server-session-bind
+    cookie   www.getholed.com | ssr-caching
+    cookie   .www.getholed.com | XSRF-TOKEN
+    cookie   .www.getholed.com | hs
+    cookie   .www.getholed.com | svSession
+    cookie   .www.getholed.com | bSession
+    3rd party hosts  browser.sentry-cdn.com, frog.wix.com, maps.googleapis.com, panorama.wixapps.net, siteassets.parastorage.com, static.parastorage.com, static.wixstatic.com, video.wixstatic.com
+
+No screenshot here. Visible banner or not is still a render question.

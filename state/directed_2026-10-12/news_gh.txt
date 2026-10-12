@@ -1,0 +1,59 @@
+CONTROL  'Tesco'  HTTP 200, 100 results
+
+== GOOGLE NEWS, company  q="Get Holed golf"  HTTP 200, 0 results
+
+== GOOGLE NEWS, person  q="Joe Benucci"  HTTP 200, 1 results
+  2008-03-17  Robert L. Thompson - AL.com
+      https://news.google.com/rss/articles/CBMikAFBVV95cUxQd0FTYmx0aDVDTGM1Ny1mdXF2b29kVy1yT292TXFvVm5ybXBJOEd2NjFqQi1qYUJyN3VZSUJqMnc1ZVpjajJSVjJTTWFKODM4bjhCUERFd1JrRkJCakR4Q3JPQTRuMFJtNm9VdFJQaVhRY0U5S2VCd1BUVEg2eHRxVUlfclVJd0ZQQlNTUnBmU3Y?oc=5
+
+== REGIONAL NEWS, their industry in their region  q=(Hertfordshire golf day OR Hitchin golf) (corporate golf days UK)  HTTP 200, 77 results
+  2026-10-05  CCTV image released after clubs 'stolen' from golf cart - Welwyn Hatfield Times
+      https://news.google.com/rss/articles/CBMijgFBVV95cUxNaTd4WV9NYUFoaG1nakpiMUlSMTVVR005VUFqS1FYQklKd1pFUlN4U2QxZGlpQ2w0cy1hWDIyQlVKT2lHWC1oczZaZS14eFEwZ3lyczFFWlFhU3d5bFNnaUZWMXN0QlFfN0FtUkROZlRXVmlnd0pWNlJKNGhVSHlPUTczR2FKRlg3QWVyd3FB?oc=5
+  2026-09-20  13 of the best golf hotels in the UK - The Times
+      https://news.google.com/rss/articles/CBMilgFBVV95cUxPQ3VEZlU0TTM1SmxwazBJcjg2c2UzOUhwYzN6Qm9BVUVxWURHMXZhdnJpODliaXRCSm52THNsbDhqb1NlSEJhTlloaHVYMlRWby1mNVRhMGQxLTBWUElMZlJaUjlUMHNLd09wMUNwQW14ajZiNHZBZHRRMV8xOWhzTDJjb3k4akVmRENjNmpmc2VldjE5U2c?oc=5
+  2026-09-16  The best venues for team building and corporate away days in Hertfordshire - SquareMeal
+      https://news.google.com/rss/articles/CBMivwFBVV95cUxOVVpTU19wQzJEQjhXb1BBTVNTd3o4cmRXY2lTZkxINjlIVVIyeUVhdGdwU3BFS2tyS0tXMGlsSTA2ekRuSTdzNERUNlZwcHR2TXFzRHJ4SV9VV3RFa3JfMlpFRVNlS2thb042cUFCSkpKQ3RNZUEzQUFHNjRiZUVMYjdoM1BxelkxeW5qcnBoUHpFSGdUSm8taDR0SkFqcnI5SXFKcFg4WnpFQUlRV0VnaGhXTFZlQUpqN2t0X3hpRQ?oc=5
+  2026-08-13  The Hertfordshire golf day helping to rebuild lives across the community - InYourArea
+      https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVHFyMjRLVEJLaGI0WFN4WU1FeGdwUUo5Y1g1WVRDT1ltazlyX2tmSkpmcXlQcV9aejdmaDhCallac1hhNFN0R0JER3hIVzROOVFkRHB1aFEwWU9vMTZQdWx4eUQ5THZSWDU0ZnFWbGh6ZWdiSURVVllNeXh2VFlNQ2lBbVEydDllU0QtQzQ0Mlh3eFJfUXZibG56ZFpTaVlCYW5qaDNKM01EQQ?oc=5
+  2026-08-08  Golf Saudi, Muslim Golf Association Introduce Golf to 280 Girls, Women in UK - وكالة الأنباء السعودية
+      https://news.google.com/rss/articles/CBMiSkFVX3lxTFBKdVZBLWVvUjhsX28xbUhmcFhJb0VNNHF0dzVnVm9qdXo0MVRlTjY3UGFTYUFQSzdYZEdMcTFTMlVOd0Y3SnZqTHRR?oc=5
+  2026-08-03  St Albans golfer wins two trophies at national deaf championships - Herts Advertiser
+      https://news.google.com/rss/articles/CBMioAFBVV95cUxOdkFiQUdBLWpDMkl3ZGNMM1ViMmk2SGVGS2pSZTJpSnUyNVVka1dzQzdyaTBDdDBwUUNQSXRTUkxCRnpIMnJzVmdjcE9rZFpnS2d6Q0ZrUDhoc0VheE1iYVFVcmxCTVFXTUFJMXVIdy1HdFUxR3dkQzBpRmN4c3pqUmpCcE1faWNGUUFvWTRsdWdHY0JnUVhlaXY1SWU1MnNr?oc=5
+  2026-07-24  Golf club in Welwyn Garden City objects to being built over - BBC
+      https://news.google.com/rss/articles/CBMiXEFVX3lxTFBXbjhPei00NTVlRVI3ZjFxUlY5a004MU9xdGNoQWZHZHVPdUtCTEwteTE5VVhOUzM5NTM5aGNPMzhIX1ZILVdqTTNmNzJCaFFxWEt0SnRuTHRBaGRr?oc=5
+  2026-07-20  First Look: LIV Golf United Kingdom Presented by JCB - LIV Golf
+      https://news.google.com/rss/articles/CBMijgFBVV95cUxPeUs5X0NFZlZjS0ZlQWpVY0lzVDFzUnA1bXZiMkRLdE9mdTBMNGtMZUp1Zy1ya0trNHp2SXhQNEZqWUpfZHVPRGVROFE3RkFJWi11UzY5UHVydWZfd1gzZTdMMExlOENnNWN2bUx3R21GWXNjZTB4TExiNENySmZZR1R6RzB5UFIxMDI2RFFR?oc=5
+  2026-07-11  Hertfordshire hotel home to UK's 'most beautiful pool' that feels Mediterranean - Watford Observer
+      https://news.google.com/rss/articles/CBMingFBVV95cUxNbGVGOHpkT2xxN1NvcFpYN1VJVHplX0oyQm9lazU3SGRqdnZPTEFobVBaODlJR0wzYndtQm1OTC1SeVJ2WWRrd1BSU2FqLTBoUGtKcGxPWWhHNFl4UExQcHFERm5jaGhzWjZYWXBMUE5PZ1I2bnlCTFAxS1pqempaV3JFcWE3RGJSQTJKZElnZGJtcWZsTnN6TXFfWTJYZw?oc=5
+  2026-06-30  T&K tees up more than £42,000 for Wellingborough charity Niamh’s Next Step with golf events - Northamptonshire Telegraph
+      https://news.google.com/rss/articles/CBMi3wFBVV95cUxNVno2enlVZ3BXQ3FfaktFTEVRV1VKZDNzZVRxRWlPbDlfX214Ui1rLURRR2hLb1pNVGRwM0tUQ0c5OExORXByRnBFeDgyTnZIeGRPNEdrcGtnX2xwTVc2QWU4U05MSXNUM1hyd2xpQVhzdzZsM3ZsMlZYeHJlV2RWa3I3ZXpsMTNSTmJuTXlYZjRMUVlTMFlFNDRTNzlsdWZseGQwQzNCMksxZ21qWFo3TVJ0eUxUcm9QTXlZekZxT08xUUNwUS13RVpiT3hRVElSNFVaX3FnajVUNW8yZVVF?oc=5
+  2026-06-26  Where you should play 36 holes of golf in the UK - Golfshake.com
+      https://news.google.com/rss/articles/CBMingFBVV95cUxQVDJrYkdiWVR6cXFReGJZakRyWFFDZTlEaXA0TFNuMUE2dWxRcU56QXQ0cnE0ZUdiUjJfdHc1SU1uNjZjZVRGWEhtQVNsSWliYlFLTEk4NDdzY1ctZElINFU5M1d2aUJ0TXZqUzdrT1dVUTRlNkxydVI2VDZ6QVBDY1ZSd1VDQzVid1puLUNfNHV5V2hFakZ0NnZEOHFTUQ?oc=5
+  2026-06-17  Hemel Hempstead golf club reviews options after expansion rebuff - BBC
+      https://news.google.com/rss/articles/CBMiXEFVX3lxTE11aWFuT21rNG9GSTR4Smg4WEFKdXRnekZGZXlJRTdpQmlidGw2SFVnX1d4Y293amJoMFVLOHgyY3FZcGZJQy1JLWYwcmVnVzl5ck9YNDFXc1FFQW9T?oc=5
+
+== INDUSTRY NEWS  q=corporate golf days UK  HTTP 200, 73 results
+  2026-10-11  Charity golf day raises more than £6,000 for rare cancer research - The Western Telegraph
+      https://news.google.com/rss/articles/CBMimwFBVV95cUxNQWJLZnBYVHcyTlF2NWd2MjBSazRrcTRVOEg4Y2s4dUVoZkJPd2JZSXI4Skg3OGVvWV84TjZ6YWNQbTR5ckVsRl9TeWo2Smg3YWpIbmowelQ5YXpHUTBvLXFyemxYdGtzUXZwbktsMVctbkx5dW1uQWUyVi1KNjRyaWlPRUdmVmFiWkhnMVNnYU8xUjVlNDV6YU45Zw?oc=5
+  2026-10-08  UK Golf Federation’s GolfBIC brings industry together at Golf Business Expo - Golf Business News
+      https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZGI1U2dVWUdIcDFkZGxUR2VTcno4QUIwejlVcEM5cWVMLVh6NUwzVE1QaEdzNE1VbmVibUt4c1VPalJiRGZTME1XUWpIb09lbTdTZTNkTU5oRGRFYmp1V1YzY3lJQnNIYkJqNXhwR2dDS1kzMGZJTGYzMmdFanpPY3JnYUhHM3BUM09Hd0N1WHF5Qzl1Ymp4enIzcTB6UGtnZjExbXIwUXJxREdBZDY5MTA4U3ktNTlQSURHMGdyc2NNcUVmRkxfNzVvUDFhLVRYMWpr?oc=5
+  2026-09-19  Xsem appoints first golf events manager - Campaign UK
+      https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcDdFUGdud1g1VDFmRjRjQnItd3hTYVRCUXBSWGRlZUxUcmlCay1RUXlETVM1cUpvOUU1X25rSXZJWU9pRjhSaVNmd0tCNkRXS01SdFdOLUJFcmh0bzFZV3A0aUk5MnhqamR5SzdxVjZGZXBOdUhjSGxQdlhtTFAtY3JVZGJDQlBYUDJMY01YQWpvWDFDUHViTURVRGtYMEgtRFFqTUxVM0I?oc=5
+  2026-09-11  Guardtech donate to golf day fundraiser to cap off a series of donations close to business’ heart - Cleanroom Technology
+      https://news.google.com/rss/articles/CBMihwFBVV95cUxQMGhqN0xvRERMbmxLT0V0bjFxUGRqN2g2M0wxV05PSnVkTVZjVnJXOTBrbGhySmYyWXphY29NWFJkSmU5cUhiYVp5NUdSNEppSXZyb3EyVlFOT0d5Y0psY1FPeHRjQVFMODNteUREd05zWW0zZFUxZzk0UWgxbGNOUm9xT2lRV28?oc=5
+  2026-09-08  Insurance firms Hiscox and Howden win RDA’s first West Midlands golf day raising £2,500 for the charity - UK News Group
+      https://news.google.com/rss/articles/CBMiywFBVV95cUxQczhXZnBocHFOOEpKX05EdVZwOFFOaXNWLWhvM3kyQkp1aVUweXpoZ0VvejdTVkZqSnBwZWRLaW1HWWFYbnFUQ245bEgwUkxDZjM2WG5GSE1EVnpQaVcwUXczNGhNS0YxdGNHcDU3TFBhTzJSSl8xYWJVOFVidTVRSDg3ZU1TTWFmNHBlVEcwZ1NUWnRNR284LVlydERMbG1Pa0xtd2RhU0Y4YWU3ZWwzQURUb3FHZ3pLWjlrb2FjU29sOGxZZEpCeTlpZw?oc=5
+  2026-08-07  The club that Jack’s building - The Golf Business
+      https://news.google.com/rss/articles/CBMidkFVX3lxTE9wcEFoM2RMdkhzTG9nZGxHR1k4ZlpEZ0kyNDdDUVdpZnZEM2NrMmtGSVJZOUd4QlpEYThob3pWWmJVdGozUHVQZ0c4NDdrTmNFV0lfcS1EQlgxeGVzWmpJUXlaZllDN3dsdVI1Y2R2SUZObzhJWVE?oc=5
+  2026-07-30  Gwent business' golf day raises £3,500 for much-loved armed forces charity - South Wales Argus
+      https://news.google.com/rss/articles/CBMimwFBVV95cUxQOS1OYTY5U1oyMEdrTjVKWW43NEc2dEhaX1FoTFQ0SDlZbnBpWUlwU2syaGF4NnpZMm1YRXJ6MDI4TGhFNGtpUkZHRkRQcEd5dUJKLTJqTXhoSFRsTWRLWjB1Z0Q4X0NyalFoRmxTTzhHZVJOXzR5QXk4V1BMMjFsMnRnTG1SRXhrYkgzbkRwSzZ4R3ZEMno2YVkxNA?oc=5
+  2026-07-27  Stars come out on top at AFC Bournemouth’s Corporate Charity Golf Day - AFC Bournemouth
+      https://news.google.com/rss/articles/CBMisAFBVV95cUxNNTV1bUxCTHBpeFp5TGlhUV8ySDVpQzVkaUhpZ1A0UjBlUFk3MElKQjBMaXkwSEpaVFdkaGN3VjhON0lKVWZ0N1gyZ1RoNlVENnRpTUQtUUhTQjRsUXRIU3F6WGkxSGdYYjE0NmFJMFZTX3U0NEJHdFJWRWlMbnpFWUJiRXRxVmtERDRnbEtnamtHREJUeVdVa25DSjBjVzFIR1I0NFNDLVlma1gzcDlfMg?oc=5
+  2026-07-24  Gallery | Plymouth Argyle Corporate Golf Day - Plymouth Argyle - PAFC
+      https://news.google.com/rss/articles/CBMiekFVX3lxTE5DVjJ0OUN5c0lWWFNZamswMEZ0OHY0em9vcVRFaU5NRnhOQVFuTW04MDlkQWhrVEJISDhibnB4M0tYYV9SU0RmOEdZbDB5cjR5U0dHZm5oeGF3N2xMalBBdTVPX2VpQXNlZW5YNTc4Y3hPal9TcUhVaG9n?oc=5
+  2026-07-22  Stage set for LIV Golf’s UK event at JCB - Golf Business News
+      https://news.google.com/rss/articles/CBMingFBVV95cUxNcjNGTWNfMnhtYW9majdUTTlMMmsxVVcyUk55aHNSdEVDcUpQNHBkbFUzb2ZDazY0aU51NWdOdWtxYldTRHVRNm9jdVFMRzh3V21uX3NCRjZXUGF5Zzg0RnJQVzhxNldZdVMzT3FqZWJ0RlhQajJkeU5KNjMyLVZyQ2lISmFIUDRvQjJoLTZtLUhtLWU2cjZKUkZBcWNJUQ?oc=5
+  2026-07-20  LIV Golf hit with $1 million lawsuit days before UK event over alleged contract breach - Golfmagic
+      https://news.google.com/rss/articles/CBMiswFBVV95cUxPWE1WQlVGZVBVVlNoY19ZZkNRQzVBT2YtWmNwNVBBYW00UWVUbWVmVzlyeHR6a01mVE03VUd4dlpkR2N0elZLTHR1ak1WRndDNXZpUHFQTHZCZ21URTc3UmJaZU50aU94TUV4d21Sc3h0c0xFY0RSX2tMdEdoVXdpMWZqZS1hV0p6MHducW5QOHF4VnB6QkwzZ3Z4VFcxaUdqWk9VYXZxWEd0TThDNDcwelBPcw?oc=5
+  2026-07-02  Sporting greats take to golf course to support Beth Coulter - Newtownards Chronicle
+      https://news.google.com/rss/articles/CBMimwFBVV95cUxPaVdVWW40S2pHVGJjaFJZSjg3eEY1ME9nX3V2MWFkYkVOVzVRUFEzd1ZKT0djUWRHWVliaHpTRkRVMzRyZFhIY3piLWZoWkFyTUFueHlad2RhY0pQdnp1cVBCZlhXWDRnc1pDMDhfcktWb2RPMmlYV3R3eUV3QWhqRkRaQWJ3UUxEQkt5LUViVnZVcHlpVGZMQTVPQQ?oc=5

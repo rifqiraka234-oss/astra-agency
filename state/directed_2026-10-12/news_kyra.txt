@@ -1,0 +1,57 @@
+CONTROL  'Carrefour'  HTTP 200, 100 results
+
+== GOOGLE NEWS, company  q="Kyra Conseil"  HTTP 200, 0 results
+
+== GOOGLE NEWS, person  q="Sacko Diombera"  HTTP 200, 0 results
+
+== REGIONAL NEWS, their industry in their region  q=(expert-comptable Paris) (cabinets expertise comptable automatisation IA)  HTTP 200, 49 results
+  2026-10-12  La transformation de la valeur dans les cabinets d’expertise comptable à l’ère de l’automatisation - Revue Fiduciaire
+      https://news.google.com/rss/articles/CBMi4wFBVV95cUxOajNLRmVlNUhNV3BfS1UwTVktbmxzVlU5RjhNT1l5MGlZcUtGZ3pvcnp1ZzBwMGZVdmFtdUx5R01ZdEhEeW1yUm1qWnUtZXBVaEY0cnNzY0F0TWtIQ19ONEJfeGRHNHdMM1RZQVQ2QWk5dlREUjJMQm01N2FoblNwamtlN0lxZXppYnNIYlhCclB0eXliUnlGbExGd3VCQ2t3Ql9lSVN4ejJiZkl5dl9FTElKQjdGNlRPTDBYWWptT3hURU95bkxoSkR6TkRqODVxU05jOHJRZ0hBd2ZuRWNjbGtJaw?oc=5
+  2026-09-28  La consolidation de l'expertise comptable : une valeur qui échappe à la profession - Compta Online
+      https://news.google.com/rss/articles/CBMipgFBVV95cUxQWHdvUXI4TWRsVDlVVVd4NVUwZHUyWmZLWE5WSnh0Uk5RYzN0U2owbXlHT1prQ20tYjdpcTM5YTJORXlOUkZHZ0d5S3NnclA5ODNfaDl2WjNENXlaam1mNF85TDBUdnNDODNpN2Z4UUhnTHVjc0F6bWloYlNtS2ozaFFrMWpKQjVqdktUWW5nVFhmTE81WlUybVFzWkRJMWEzb3FWRTRR?oc=5
+  2026-09-18  Et si la destruction créatrice était une chance pour les experts-comptables ? - mesinfos
+      https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ1Nsb21fRlRsVG9LWUdsTnFvNFFlbV9VeThIcm5feV9CcFVDemRPMVM5TTJVSHVmdm91NXUxMGl1ajQ2UHN5bFJoeFRibXc2VVRSek0yTFJHWDFOZmdoWWdMR3VCLXN6ZDhXYm1PTTIwajhBVlZXbjIyVWZCclU4X1FFeXlXSTNaN3puODhlSktrcGlZT2NOU3U0WENwTW5MbXRVTG1YSjkwLTZlQ2RjRlpfcWNXcDJpMjBj?oc=5
+  2026-09-17  81ᵉ congrès des experts-comptables : la profession entre dans l’ère de la refondation - mesinfos
+      https://news.google.com/rss/articles/CBMixgFBVV95cUxQYlNDVDRaU3RYOW9HU2V4djB5a2hkSUxLRXhKcjB1X2F6X1RoUU5nd2l0N1g5MWNKMC1wS0c1aGNjeTRTODVlM0NFMDg1VnY3REpLNzNhY0kwbURmTzdZZl95TkQtNThieHBfZ0lLZEJWTlpDeDRNY0kxM0trb0VPZm5TUWxNYjlSaEwycVI5T0VjV005dmlvbG1qOG8tbmVmT0lqZVZheVJ3T2RiRE81dzlQT0J5LXdpVG1OTnBOZUlzckdvQXc?oc=5
+  2026-09-16  MYUNISOFT ACCÉLÈRE DANS L’IA ET DÉVOILE DEUX INNOVATIONS AU CONGRÈS DES EXPERTS-COMPTABLES - Dataevent
+      https://news.google.com/rss/articles/CBMicEFVX3lxTE52UVZCNm1YSGVsQ2NNODc4NkdNYjR4MExYOTBpTXgxdG51VVRJWkU3UVVQVzFvYUlBZVJsRXIwUmVKNGFoa2dra0N5R2NGdWJiOTgyMVZXcjc2eEdvYXZpTDlHNFdhOV9wR2xVYWdmY2s?oc=5
+  2026-09-16  81e Congrès des experts-comptables à Paris : cap sur l'IA - Presse Agence
+      https://news.google.com/rss/articles/CBMizgFBVV95cUxNQnlZajc0YTlJRW9LaFlTTmdSek5Db29YZUd6WGtBNjhzclNnSG45X2ItVzBTV2tkWUJRTS1wUnY1WWhPczJfb190UWw1WHA2QzhGcDdVa3JYdlBVaVVMalZWcEtiUS1jZV8xV1NGWHFwLVl4MGlWc29rXzVnT1NxeVJ5RkJ6NnZfWU9tQVI3ZkxDbktNcGdJTjFJcmp2TlVjMVRmVEpHdERmSmwwcnl2Y2xyMTEwWWJzQS1wR0xGcHE5dUpyRm9tckZHQ0E2UQ?oc=5
+  2026-09-15  France : Jean Fidèle Otandault au 81e Congrès de l’Ordre des experts-comptables à Paris - Gabon Media Time
+      https://news.google.com/rss/articles/CBMisgFBVV95cUxPRTYwZUk5MDlRSHdvR2RVc3JxWnhmU3NCY3pvMWt6OEFQbnRIbmFJOGFTSms5QkxfeG5MTldtcktsem1Dek1IS0FYN1pxZ0tCMVhoS2xXcm9QY1B5WEsycGktbkp2SlA1NkdOcXk3dmR4aTMtQ2NnTk1Pd1oxVXRkamFub2JVdGFYUmYweHFBbkxvUDBkMVRfOUF0U1pRZWRpaUItS09xOFQ5SkExamhqaXlB?oc=5
+  2026-09-07  La mutation des cabinets au cœur du 81e Congrès des experts-comptables - Affiches Parisiennes - mesinfos
+      https://news.google.com/rss/articles/CBMitgFBVV95cUxOeTdwb0x0XzdoaGtUVV9SR1hvdGwwNmZIRWtWRXhXSXh5N01ldTZIYWdRWHMtQVcydHUwVkVhOUd1YkZReWtUemdjX0dyNzdlVnR6cjh6TURPMkpxVGlrbkU1ZW5UUnRHS2hxRzBiY1B2SmNjSkZCcU5fTHVlY1NhREtPanFCZnhNeVQtLXdqaHpTWllGTTktaEluNHlyR2pOUW1aX3lIdkp6ZVdNY1dsb09vQkJrUQ?oc=5
+  2026-07-06  QONTO enterre discrètement REGATE et provoque le mécontentement des experts-comptables - frenchweb.fr
+      https://news.google.com/rss/articles/CBMiugFBVV95cUxQLWk5bzJ3QjFMWTNjRThQMU1vUVVxcTJvQkh5Sk8wdTctREhQZ0pMZDFxd3FMR0J6aGp3UGNPWFB3SjltcXZjcF9HUXVSWXZyekR0bkJPUk81WDBKeUlZSUQ2SUcwMVJRbkRqSnlnbkQ4Rkx1NnptcDJwWGJtNFdaZVJRUjVkWjQ1ZzRTN3RlNXlwOVNRWWdVZEN3Yk9XUzZKVzlhV0pVd2VfYzl3QUU0QmtaNEs2b1VCbHc?oc=5
+  2026-07-03  Congrès EPA 2026 : la profession comptable prépare l'après-automatisation au Pharo - LE MONDE DU CHIFFRE
+      https://news.google.com/rss/articles/CBMizAFBVV95cUxQZGgwSm9BZGx2WEtLMnM3b3IyaF9xQ3dTaGkwaDREbk92OXRyTlNWYkpRRHQ4MVNIdzdHRVh6U2hLYTZUQndUbWczWmNlekJ5S21Xcm1aRXNQMXBXQm16NTB6ZHNRdlNWdGgwLVhQVkI4YmdnSXM2MnJLSXpxMWhscFRWQmVzWl95Y2ktZm13VDhnSXV1UTBieS1FUkpUT3FGdXJFSlQybkR6ZXI0c1BOVFhQd2ZYcmJXNzNLWktXLUZ2dFkxQlU1c2hGOVg?oc=5
+  2026-06-25  Romain Passilly nommé Country Director France de Visma : interview - Compta Online
+      https://news.google.com/rss/articles/CBMijgFBVV95cUxPREJZSzUyS3VYTjFGX1cyMUxtT0NUNXFxX1Utekh3Q2djVnRKeDQ1Ujg0LXV3RTJXMUh4U3M3ZktNUGRyTnNCRkQ1YmRFWmtGdkV3UXBlRG9Fb2ZtaEZyRXNLbW0tREJaeGpUc1Q5WVZrZkpuTVRQUmdIZU1FLXFTUE9wV2tWWlZEa09TNGxB?oc=5
+  2026-06-15  IA en cabinet comptable : cas d'usage concrets et retours terrain - Compta Online
+      https://news.google.com/rss/articles/CBMibEFVX3lxTE9Jd0ZTaEViSm93cFlXNlQtdGxIbjhrQmpFVmowUHRpWEViUG5FTk9oY1RGNTgtZFFGQVhqTXBrUUFIVWxkZnhMSW9qWFhDa1g0Y1lzZVBTYXdpLVVxLXQ3UFUya2lTS05ScDVHZg?oc=5
+
+== INDUSTRY NEWS  q=cabinets expertise comptable automatisation IA  HTTP 200, 51 results
+  2026-10-12  La transformation de la valeur dans les cabinets d’expertise comptable à l’ère de l’automatisation - Revue Fiduciaire
+      https://news.google.com/rss/articles/CBMi4wFBVV95cUxOajNLRmVlNUhNV3BfS1UwTVktbmxzVlU5RjhNT1l5MGlZcUtGZ3pvcnp1ZzBwMGZVdmFtdUx5R01ZdEhEeW1yUm1qWnUtZXBVaEY0cnNzY0F0TWtIQ19ONEJfeGRHNHdMM1RZQVQ2QWk5dlREUjJMQm01N2FoblNwamtlN0lxZXppYnNIYlhCclB0eXliUnlGbExGd3VCQ2t3Ql9lSVN4ejJiZkl5dl9FTElKQjdGNlRPTDBYWWptT3hURU95bkxoSkR6TkRqODVxU05jOHJRZ0hBd2ZuRWNjbGtJaw?oc=5
+  2026-09-17  De la boîte à chaussures au tout numérique : la comptabilité, une profession en pleine mutation - Les Echos
+      https://news.google.com/rss/articles/CBMi8wFBVV95cUxOWnBGS3ZoTU1TbkFCbUpnTUh3bC0tcF9famxIcDhYMEI3X3U3QzQ0eEJZZHQ4aGN0T0dzRzFVaHlyOGs2Rmk5OGFlaUR4dEh6NE1ZRGhlLUhmcnhLRzcxSmxIeUhWWjJFdHB2c2wxVXpCNDBRV3N2b0tGTFVOZXItRnZoQmhUWnJyaFFQeW5sS2lNUzZCM2plMDhFWlNhLTlrc3Rmekhyb2xFaG51OWhmVXprVzd3a1YyVlJBeFBxNnQ2Y2lMbkp0Ujl0em9nclVSa0labDE2ajRNQmZ5V3ZnbV9Ub2NfTmNDam5QakJ0UWQ4SGM?oc=5
+  2026-09-16  Expertise comptable : les raisons du rapprochement d'Odycé avec Endrix - Les Echos
+      https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZmtCN3gzeGp5NWZJanB5aW1uWjh2c3JqUTVVa0t1UlQ1TndwUmdNYkZSaWNBMXQ1dmxuaDJjM3V1R05sSjBwQmJYWm5zOE1qLXAxbXFYSzU1SGEtLVhKbGpsbFl5bXhvdGNsYzFZdmpjQkhwZ1RjU2xwd0dQcHdHdjJNRVVsSXZxZ2k2T2g5U053XzNBa2hKamZzUDJmcVhYT3U4MVo5c0tWRUF4OVVfbVgyRW5kOE9sWjhYVS14em1zN1FPLUVMclNuRno3TFRiMWUw?oc=5
+  2026-08-26  IA, offshoring, conseil : ce que les cabinets doivent changer maintenant - Compta Online
+      https://news.google.com/rss/articles/CBMiakFVX3lxTE8wMVhJZFIyNk10VDRqWXU1WmxDd1E5T2QtRmR2TmZRUk1OaDZVSkZubzJjR2U2VS1KdDFLQ1NmT0VHZTkzaGxXNmRUYlNDU3N1dGpjWm5zenloN1RJY0R2dEhISnpjNDV3LVE?oc=5
+  2026-07-16  Experts-comptables et IA : la vraie révolution, c'est celle des équipes - journaldunet.com
+      https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3V5UUdnR05TN1hsYUZvRC1PSG1ETHhaS01aLU5vMGlkSFdJdjk2QjJha1hDeEl4Q1BncXNNMHZ5ZldEVUJETmk3a29Dd29CM29zWmdHQ0N4d3B4QnBaTk5IRlgzSEFoenZNMWVFeF9RTFlBSnlMeC1ScVhyQlhBMFdRUmZwWWZRNzl6aVRSWW1nNDYxZzcxUzNmalMyMlY5dmNMcXp5dENfanFXNkdacHhfNTA?oc=5
+  2026-07-03  Congrès EPA 2026 : la profession comptable prépare l'après-automatisation au Pharo - LE MONDE DU CHIFFRE
+      https://news.google.com/rss/articles/CBMizAFBVV95cUxQZGgwSm9BZGx2WEtLMnM3b3IyaF9xQ3dTaGkwaDREbk92OXRyTlNWYkpRRHQ4MVNIdzdHRVh6U2hLYTZUQndUbWczWmNlekJ5S21Xcm1aRXNQMXBXQm16NTB6ZHNRdlNWdGgwLVhQVkI4YmdnSXM2MnJLSXpxMWhscFRWQmVzWl95Y2ktZm13VDhnSXV1UTBieS1FUkpUT3FGdXJFSlQybkR6ZXI0c1BOVFhQd2ZYcmJXNzNLWktXLUZ2dFkxQlU1c2hGOVg?oc=5
+  2026-06-23  LINC lève 8,5 millions d'euros : pourquoi une nouvelle génération d'éditeurs tente de séduire les cabinets comptables avec l'IA - frenchweb.fr
+      https://news.google.com/rss/articles/CBMi6AFBVV95cUxQVHFSeXp4Y1hRd2ZwM0YwUS1nT1ppQUJxNXJSVTNRanI3QnNhcTN4Y0E3cjZtRVpUUWlnYVZfNUdPVVplUnc4LTQ5WmhqNWhzeHQ2MFNBVGl4MnVtdHJCaFE2TDAtYy12TGxuaXJodVNkWlBuVmRJa0MyTVUtVjNKeVpCLU1Tb1h1SUJ1QVJmZGUwRmx1UzFfYXQyZDlPZXA0OHlmZ1ptZG9NbUZ3QVp2Q3Z2alhSQU84a0kwbzdTeHFQUktBVEEtSy1iOWlnWUVveDlheWMwY1FHWTJiUEJpM0s2YTdUOWJO?oc=5
+  2026-06-16  Construire le cabinet de demain : comment automatiser la gestion des flux comptables et financiers ? - Compta Online
+      https://news.google.com/rss/articles/CBMid0FVX3lxTE5iUnRHdUtHWi1jVkdnM3dRUmtCa2pEdlVHSjU5WmJMOG9tbzVlX3dpRTJ3RkM2UUZLY19IeFVkaFltS2ZNRzF2TXRuYXR0WFpBdmpjcFVTRGYyb0tGTVlLT0gzQUpNWUdiWFFzZEFnczJoQ0ppb0pN?oc=5
+  2026-06-15  IA en cabinet comptable : cas d'usage concrets et retours terrain - Compta Online
+      https://news.google.com/rss/articles/CBMibEFVX3lxTE9Jd0ZTaEViSm93cFlXNlQtdGxIbjhrQmpFVmowUHRpWEViUG5FTk9oY1RGNTgtZFFGQVhqTXBrUUFIVWxkZnhMSW9qWFhDa1g0Y1lzZVBTYXdpLVVxLXQ3UFUya2lTS05ScDVHZg?oc=5
+  2026-05-27  Facturation en cabinet : comment l'IA redéfinit la tarification - Compta Online
+      https://news.google.com/rss/articles/CBMijgFBVV95cUxNdDdCV2NUbXhkUW1Kd1d5NWp4dXdDM2VJajJadFppTklNQUVXaWZEV3k4Rm1NaFhqMTR1dGZGYXAyMTV2ZUhaU2s4Qk1uc0pFOG9UWUptcXVTcFAtenJoalFta3dadzVCMHpOWl9SV2xydVZsbC1vR19QbWx2VHpTQUR4OHlyRFFLS3hkbEF3?oc=5
+  2026-05-22  Top 5 des outils d’IA et d’automatisation comptable en 2026 - Daf-Mag.fr
+      https://news.google.com/rss/articles/CBMirgFBVV95cUxNUG5SVkZnZFFFSmFBaFhhN1N4Nm5jNXhhRnpxQktPaTJUUjg2VVBrUDFSeVV6aktlN2JUeEVPby1ZUDZpZGpkRWFvclNBSW9RcDNrdU5DTVh4NlJsYTBFS0NhOVBfcE11bENxNF9vOVh2N1BybHAzSDZjMlZzT2FUc2RRcVFYMmpMX1VFTl90ZTFMVjNDdEFCUmxWRG5pZGYtclkzMHlnWUZMS3A0LXfSAbMBQVVfeXFMTmE3eVUzRjVidlFDRW5wREZNb2t3bTg3UWRURUVJbzhOMzFiMEp5Q1BLdG03ZGNRWV9OUzQ0V0VrOXNzWXI2cmwxWkluRmZGU2pod2x5SjlxTU54U2U5MFI4WGR3RFZJcDNoX3M5MWEyVW1uRlNtM1VLd3ZpaThTWGtXUFlPNkNiZmJEVzFHaFBjOXNzdGlsb3VmM0pyTHlVUzZDVlFZUHZkV0Nhck83bXV0QjQ?oc=5
+  2026-05-12  Arthur Waller : l'IA va-t-elle tuer les éditeurs SaaS ? - Compta Online
+      https://news.google.com/rss/articles/CBMibEFVX3lxTE1kcXItNS11NE1BYUxVdlZmLUptelhGSWZpR3dxVFpFS1Z5aGZJcUlibU9nWHVrbTQ0MzFYTGpuZno1cm9RTFdrUDJ3RXBhSHhES040SGluY0pRREtmVkZqVVBNMkpFM193MnUxbw?oc=5

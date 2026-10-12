@@ -1,0 +1,8 @@
+== EU VIEW from Webbkoll, Stockholm, nothing clicked  https://kyra-conseil.fr/
+  results  https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fkyra-conseil.fr%2F
+  Cookies: 0
+  Third-party requests: 12 requests to 3 unique hosts
+  Final URL: https://kyra-conseil.fr/
+    3rd party hosts  cdn-reach.hostinger.com, fonts.googleapis.com, fonts.gstatic.com
+
+No screenshot here. Visible banner or not is still a render question.

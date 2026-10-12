@@ -1,0 +1,232 @@
+{
+ "target": "https://www.getholed.com/",
+ "tag": "gh",
+ "status": 200,
+ "navError": null,
+ "fetchedAt": "2026-10-12T08:54:05.608Z",
+ "reach": {
+  "verdict": "READ",
+  "attempts": [
+   "networkidle:TimeoutError: page.goto: Timeout 60000ms exceeded.",
+   "domcontentloaded:200"
+  ],
+  "controlOk": null,
+  "plainHttp": null,
+  "dns": null
+ },
+ "hidden": {
+  "textLength": 656,
+  "mainHtmlLength": 252487,
+  "textToHtmlRatio": 0.0026,
+  "inlineScriptsInMain": 7,
+  "gateCandidates": [],
+  "contentProbablyHidden": true
+ },
+ "page": {
+  "title": "HOME | Get Holed | Golf Events",
+  "lang": "en",
+  "generator": "Wix.com Website Builder",
+  "description": "Get Holed...Golf But Better - Crafting unforgettable golf events and experiences for amateurs with a touch of LIV vibes. Join us & play or let us shape your dream golf event",
+  "forms": 0,
+  "inputs": 0,
+  "mailto": 0,
+  "tel": 0,
+  "images": 32,
+  "svgs": 9,
+  "videos": 2,
+  "h1": [
+   "GET Holed... Golf but Better"
+  ],
+  "nav": [
+   "Get => https://www.getholed.com",
+   "HOME => https://www.getholed.com",
+   "Events => https://www.getholed.com/event-list",
+   "ABOUT => https://www.getholed.com/about",
+   "Gallery => https://www.getholed.com/gallery",
+   "SERVICES => https://www.getholed.com/services",
+   "CONTACT => https://www.getholed.com/contact",
+   " => ./#comp-mf53ylni3",
+   " => ./#comp-mf53ylnj10"
+  ],
+  "social": {
+   "linkedin": "https://www.linkedin.com/company/get-holed/?viewAsMember=true",
+   "instagram": "https://www.instagram.com/get_holed/",
+   "facebook": "https://www.facebook.com/people/Get-Holed/61565019683057/",
+   "x": "https://wix.com/?utm_campaign=vir_created_with",
+   "tiktok": "https://www.tiktok.com/@get.holed"
+  },
+  "bannerPresent": false,
+  "acceptButton": null,
+  "rejectButton": null,
+  "privacyLink": null,
+  "imprintLink": null,
+  "textLength": 656,
+  "text": "Skip to Main Content\nGet\nHOled\nHOME\nEvents\nABOUT\nGallery\nSERVICES\nCONTACT\nEXPLORE\nGET Holed... Golf but Better\nExperience the next level of golf events\nJoin a Event\nWe think outside the hole, that’s the true difference…\nCreate your golf event now\nOur Partners\nI’ve played some corporate events…but this wins. Thank you to the tequila boys and DJ for creating a great atmosphere! See you at next year’s event\nJohn C – 30th August 2024\nGET\nHOLED \nPowered and secured by Wix\nHours of operation \nMon-Thu: 9AM to 8PM\nFriday: 9AM to 8PM\nSat-Sun: Closed\ncontact us\n9 Bradleys Corner, Hitchin, Herts, SG4 0PR\nT&C's \nTerms & Conditions\n​",
+  "mainHtmlLength": 252487,
+  "inlineScriptsInMain": 7,
+  "gateCandidates": []
+ },
+ "stack": {
+  "generator": "Wix.com Website Builder",
+  "wordpress": false,
+  "wpVersion": null,
+  "themes": [],
+  "boughtTheme": null,
+  "plugins": [],
+  "builder": [],
+  "saasBuilder": [
+   "wix"
+  ],
+  "fontFamilies": [
+   "Arial,Helvetica,sans-serif",
+   "Helvetica,Arial,sans-serif",
+   "Helvetica,Arial,メイリオ,meiryo,ヒラギノ角ゴ pro w3,hiragino kaku gothic pro,sans-serif",
+   "",
+   "din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif",
+   "lulo-clean-w01-one-bold,sans-serif",
+   "avenir-lt-w01_85-heavy1475544,sans-serif",
+   "helvetica-w01-light,sans-serif"
+  ],
+  "hexColours": [
+   [
+    "ffffff",
+    49
+   ],
+   [
+    "2d2e2d",
+    28
+   ],
+   [
+    "2b5672",
+    22
+   ],
+   [
+    "116dff",
+    14
+   ],
+   [
+    "e03939",
+    3
+   ],
+   [
+    "5d5d61",
+    3
+   ]
+  ]
+ },
+ "era": {
+  "datedTells": [],
+  "boughtTheme": null
+ },
+ "gdpr": {
+  "consentPlatform": [],
+  "bannerPresent": false,
+  "acceptButton": null,
+  "rejectButton": null,
+  "rejectMissingOrSmaller": true,
+  "privacyLink": null,
+  "imprintLink": null,
+  "cookiesBeforeAnyClick": [
+   {
+    "name": "server-session-bind",
+    "domain": "www.getholed.com",
+    "party": "first",
+    "session": true
+   },
+   {
+    "name": "XSRF-TOKEN",
+    "domain": ".www.getholed.com",
+    "party": "first",
+    "session": true
+   },
+   {
+    "name": "hs",
+    "domain": ".www.getholed.com",
+    "party": "first",
+    "session": true
+   },
+   {
+    "name": "svSession",
+    "domain": ".www.getholed.com",
+    "party": "first",
+    "session": false
+   },
+   {
+    "name": "bSession",
+    "domain": ".www.getholed.com",
+    "party": "first",
+    "session": false
+   },
+   {
+    "name": "client-session-bind",
+    "domain": "www.getholed.com",
+    "party": "first",
+    "session": true
+   },
+   {
+    "name": "ssr-caching",
+    "domain": "www.getholed.com",
+    "party": "first",
+    "session": false
+   }
+  ],
+  "thirdPartyCookiesBeforeAnyClick": [],
+  "trackersBeforeAnyClick": [
+   "maps.googleapis.com",
+   "fonts.googleapis.com",
+   "maps.gstatic.com",
+   "fonts.gstatic.com"
+  ],
+  "googleFontsRemote": true,
+  "allThirdPartyHosts": [
+   "static.wixstatic.com",
+   "frog.wix.com",
+   "panorama.wixapps.net",
+   "siteassets.parastorage.com",
+   "browser.sentry-cdn.com",
+   "static.parastorage.com",
+   "video.wixstatic.com",
+   "maps.googleapis.com",
+   "fonts.googleapis.com",
+   "maps.gstatic.com",
+   "fonts.gstatic.com"
+  ]
+ },
+ "social": {
+  "linkedin": "https://www.linkedin.com/company/get-holed/?viewAsMember=true",
+  "instagram": "https://www.instagram.com/get_holed/",
+  "facebook": "https://www.facebook.com/people/Get-Holed/61565019683057/",
+  "x": "https://wix.com/?utm_campaign=vir_created_with",
+  "tiktok": "https://www.tiktok.com/@get.holed"
+ },
+ "render": {
+  "suspectAssets": [],
+  "assetsOurFault": 0,
+  "assetsTheirFault": 0,
+  "assetFindingsTrustworthy": true
+ },
+ "health": {
+  "pageErrors": [],
+  "failedRequests": [
+   "https://video.wixstatic.com/video/4258e7_547b8cb2d3844113a8d0556d1400239c/1080p/mp4/file.mp4",
+   "https://video.wixstatic.com/video/4258e7_53a8310c6ab743c5a8671da4eac36367/1080p/mp4/file.mp4",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://frog.wix.com/bpm",
+   "https://frog.wix.com/bolt-performance",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://frog.wix.com/bolt-performance",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://frog.wix.com/",
+   "https://frog.wix.com/",
+   "https://video.wixstatic.com/video/4258e7_53a8310c6ab743c5a8671da4eac36367/1080p/mp4/file.mp4",
+   "https://video.wixstatic.com/video/4258e7_547b8cb2d3844113a8d0556d1400239c/1080p/mp4/file.mp4"
+  ]
+ },
+ "shots": {
+  "desktop": "/tmp/claude-0/agents/b16/gh-desktop.png",
+  "phone": "/tmp/claude-0/agents/b16/gh-phone.png"
+ }
+}
