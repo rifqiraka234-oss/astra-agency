@@ -11,6 +11,38 @@ One artefact, built for Ulrich Steppler after his yes to the offer in the opener
 
 The project was created with team SSO on. It was switched off and forms were switched on, as on the earlier prototypes.
 
+## v2, every page carried over as a story (12 October 2026, evening). Not sent
+
+Raka asked for the other pages in the v2 look, each telling the story simply, with the action at the end, and pictures, animations and graphs. All 13 pages are now v2. Each inner page opens on a stock picture or film with what the page is about in two lines and its chapters listed underneath, runs through numbered chapters (the same pill at the foot of the screen as the home page), and ends on the same next step as the home page, a walkthrough, with one gentler way in.
+
+| Page | The story, chapter by chapter | Pictures, animation, graphs |
+|---|---|---|
+| Platform | The claim comes in, the checks run, paid or answered, you see all of it, what it changes, where the new rules land | The three real justclaims screens with pins that walk through themselves, an animated branch (paid, handler decides, rejected), bars for up to 90 percent, 12 weeks with 6 to 12 lit, the seven rule table |
+| The new rules | One late flight (the five dial pinned story), every time limit (the ruler), what you prove, the exceptions, the dates, questions | Five dials, the 15 limit ruler, the 19 item Annex bar, the five steps, the 386 day arc and a timeline that draws itself with a row for today |
+| Customers | Eurowings Discover, TUI fly, the record, the press | Discover logo and quote, the Skift quote, a timeline 2019 to 2023, press logos |
+| About | What they saw, what they built, the founders, the company | FAZ quote, count ups, four step strip, founders' photos, stock photograph |
+| Resources | Three explainers, two tools, everything published | Picture cards with 96h, 30d and 19, the readiness ring turning, a mini claim clock bar |
+| 96 hour notice | The rule, who and to whom, how it arrives, what you prove, what's left open | The 96 hour grid counting down over the wing film, six requirement cards, a sample notice record (labelled as an illustration, not a justclaims screen, with a To confirm) |
+| 30 days | The rule, if you pay, if you don't, if they complain, what's left open | A 31 day calendar sweeping day 0 to day 30, four justification steps with their sentences, the complaint clocks on one scale |
+| Extraordinary circumstances | What counts, what to show, the 19 items, two more rules | The 19 item bar, five steps, the Annex list that opens item by item |
+| Claim clock, readiness | The tool, then how it counts or what happens after | The working calculator and the readiness ring, the readiness result carried into the request form |
+| Request a walkthrough, 404 | The three steps and the form, the places to start | Short heroes |
+
+**The trouble Raka saw.** The sample claim on the home page rendered as plain centred text because his browser held the stylesheet from before the story rework (Netlify sends assets with `max-age=3600`). A hard refresh fixed it then. Every stylesheet and script link now carries a content hash (`v2.css?v=...`), so a changed file always loads fresh. The live HTML is served `max-age=0, must-revalidate`.
+
+**Copy checked against sources this round.** Every product line was grepped against the justclaims.eu crawl (`research/site-now/rendered/`), the founders' lines against the About page and the FAZ portrait, and every legal paraphrase against the quoted sentence. Corrections made on the way: Parliament's 2014 and 2026 positions don't carry "first reading" or "second reading" in the text, so the rows say only the date. The 2031 review covers "requests for or payments of" compensation, not "and". The press list is PhocusWire, not FocusWire, checked on the justclaims.eu home page screenshot. "In your brand" on the home page claim form was unverified and is gone. "Payments in real time" is on the site, "by electronic bank transfer" isn't, so that row carries a To confirm.
+
+**v1 and v3 still carry two of those slips** (FocusWire on the customers page, "and payments" in the 2031 timeline row). v1 is the URL in the unsent delivery draft.
+
+| | |
+|---|---|
+| Live URL | https://astra-justclaims-v2.netlify.app |
+| Deploy id | 6accf94a57ff46c0f0f7bd7e |
+| Source | `build/v2/pages/*.html`, `build/v2/build_v2.py`, `site-v2/assets/pages2.js`, inner page styles at the end of `site-v2/assets/v2.css` |
+| To confirm tags | 15 across the site (platform 7, home 3, customers 2, request 2, 96 hour notice 1) |
+
+Checked. Page QA (errors, failed requests, sideways overflow, undecoded images) local and live, 13 pages at 1440 and 420, 0 problems. axe at both widths, 0 violations after two fixes (the branch cards and unlit timeline rows had faded below 4.5:1 while animating). Copy audit 0. No JS and reduced motion, no hidden text on any page. All internal links and anchors resolve, and the 404 page uses absolute paths so it works at any depth (checked live at `/some/missing/path`). All 57 deployed files match live, assets byte for byte, page text identical. Live interactions, the claim clock (EUR 400, 96 hours due Fri 19 November 2027 19.35, 30th day Mon 27 December 2027, None below three hours, EUR 600 with the Art. 7(2) note), the readiness check to the request form (7 of 10, three gaps, carried into the message), the pins stepping on their own and stopping on a pick, the branch, the Annex item opening with its steps, a link to one time limit opening the ruler on it, the today row placed before 22 Oct 2026, the calendar and the 96 hour grid moving, and empty forms flagging four fields. Netlify registered the new `demo-request` form with all nine fields and the honeypot. No test submission was sent.
+
 ## v2, reworked as one story (12 October 2026, late afternoon). Raka's pick. Not sent
 
 Raka preferred v2's look to v3's, and said nobody landing on it could tell what the business is. He read it as flight insurance himself. justclaims isn't insurance. It's software airlines use to handle the compensation claims passengers file after a delay or cancellation, so the home page now says that in its first sentence and then walks a visitor through six steps.

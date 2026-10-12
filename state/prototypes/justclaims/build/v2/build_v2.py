@@ -21,7 +21,7 @@ def header(cur):
     nav = HOME_NAV if cur == 'home' else NAV
     links = ''.join(f'<a href="{h}"' + (' aria-current="page"' if k == cur else '') + f'>{t}</a>' for h, t, k in nav)
     mlinks = ''.join(f'<a href="{h}">{t}</a>' for h, t, k in nav)
-    cta = '#walkthrough' if cur == 'home' else 'index.html#walkthrough'
+    cta = '#walkthrough' if cur == 'home' else 'request-a-demo.html'
     days = '#rules' if cur == 'home' else 'new-rules.html#timeline'
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="nav2" data-nav>
@@ -46,11 +46,15 @@ FOOTER = f'''<footer class="foot">
   <div class="wrap foot-bot"><span>&copy; 2026 CHS Claims Handling Solutions GmbH</span><span>Rules quoted from the Official Journal, <a href="{OJ}" rel="noopener" target="_blank">Regulation (EU) 2026/2202</a></span></div>
 </footer>'''
 
-CTA = f'''<section class="scene cta2" id="cta"><div class="wrap cta-in">
-  <span class="pill rv"><i class="dot amber"></i><b data-days-n>{DAYS}</b>&nbsp;days until the rules apply</span>
-  <h2 class="h-l rv" style="--d:1">See your claims handling against the <em>new clocks.</em></h2>
-  <p class="lead rv" style="--d:2">A live demo tailored to you. We take the 96 hour notice and the 30 day answer and set them beside the way you handle a claim today.</p>
-  <div class="row rv" style="--d:3"><a class="b pri" href="request-a-demo.html">Request a walkthrough {AR}</a><a class="b gl" href="readiness.html">Take the readiness check</a></div>
+def cta(alt=None):
+    """the last chapter of every inner page. The same action as the home page, a walkthrough, and one gentler way in"""
+    href, label = alt or ('readiness.html', 'Take the readiness check')
+    return f'''<section class="sx cta2" id="cta" data-step aria-labelledby="cta-h"><div class="wrap cta-in">
+  <span class="pill rv"><i class="dot amber"></i>Next step</span>
+  <h2 id="cta-h" class="h-l rv" style="--d:1">See it on <em>your</em> claims.</h2>
+  <p class="lead rv" style="--d:2">A live walkthrough tailored to your airline. We take the 96 hour notice and the 30 day answer and set them beside the way you handle a claim today.</p>
+  <div class="row rv" style="--d:3"><a class="b pri" href="request-a-demo.html">Request a walkthrough {AR}</a><a class="b gl" href="{href}">{label}</a></div>
+  <p class="cta-days rv" style="--d:4"><i class="pulse" aria-hidden="true"></i><b data-days-n>{DAYS}</b> days until the new rules apply</p>
 </div></section>'''
 
 # ---- the horizon. The 386 days from publication to application as ticks on a wide arc, the days left glowing from mint to amber.
@@ -109,9 +113,63 @@ def chart_v2(svg, gid):
     svg = re.sub(r'<rect class="bar([^"]*)" ([^>]*?)/>', lambda m: f'<rect class="bar{m.group(1)}" rx="10" {m.group(2)}/>', svg)
     return svg
 
+import hashlib
+def ver(rel):
+    try: return hashlib.sha1(open(os.path.join(OUT, rel), 'rb').read()).hexdigest()[:10]
+    except FileNotFoundError: return '0'
+IC = {'peak': '<path d="M3 17l5-6 4 4 4-7 5 9"/>', 'pay': '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h3"/>',
+      'check': '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.5L16 9.5"/>', 'x': '<circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/>',
+      'globe': '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/>',
+      'shield': '<path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/>',
+      'scale': '<path d="M12 4v16M5 20h14M6 8h12M6 8l-3 6h6l-3-6zM18 8l-3 6h6l-3-6z"/>', 'mail': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+      'clock': '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>', 'doc': '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/>',
+      'user': '<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/>', 'lock': '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+      'cal': '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>', 'noapp': '<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M4 4l16 16"/>',
+      'eye': '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>', 'access': '<circle cx="12" cy="4.5" r="2"/><path d="M5 9h14M12 9v12M8 21l4-7 4 7"/>',
+      'users': '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c1-3.5 3.6-5.5 6.5-5.5s5.5 2 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.3 0 4 1.5 4.7 4"/>',
+      'bed': '<path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="2"/>', 'search': '<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>',
+      'hand': '<path d="M9 12V5.5a1.5 1.5 0 0 1 3 0V11m0-6.5a1.5 1.5 0 0 1 3 0V11m0-4.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-4.7-2.3L4 15.5a1.6 1.6 0 0 1 2.5-2L9 16"/>',
+      'bolt': '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>', 'chart': '<path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"/>', 'link': '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>'}
+def icon(n): return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">{IC[n]}</svg>'
+PH = {'ph-wing': (1333, 750), 'ph-circ': (1200, 800), 'ph-lost': (1200, 800), 'ph-new': (1200, 750), 'ph-notice': (1200, 557), 'ph-ready': (1200, 1053), 'ph-res': (1200, 800), 'ph-thirty': (1200, 800)}
+def toc(chapters):
+    items = ''.join(f'<li><a href="#{cid}"><b>{i}</b><span>{E(lbl)}</span></a></li>' for i, (cid, lbl) in enumerate(chapters, 1))
+    items += f'<li class="last"><a href="#cta"><b>{len(chapters) + 1}</b><span>Next step</span></a></li>'
+    return f'<ol class="toc rv" style="--d:5" aria-label="On this page">{items}</ol>'
+def hero(h, chapters):
+    """the opening of every inner page. A stock picture or film, what the page is about in two lines, and the chapters ahead"""
+    if h.get('vid'):
+        v = h['vid']
+        media = (f'<img src="assets/film/{v}-poster.jpg" alt="" width="1280" height="720" fetchpriority="high">'
+                 f'<video muted loop playsinline preload="none" poster="assets/film/{v}-poster.jpg" data-src="assets/film/{v}.mp4" data-webm="assets/film/{v}.webm" data-min="760" tabindex="-1"></video>')
+        cap = 'Background, stock film.'
+    else:
+        wd, ht = PH[h['img']]
+        media = f'<img src="assets/img/ph/{h["img"]}.jpg" alt="" width="{wd}" height="{ht}" fetchpriority="high">'
+        cap = 'Background, stock photograph.'
+    lines = ' '.join(f'<span class="ln"><span>{l}</span></span>' for l in h['h1'])
+    acts = ''.join(f'<a class="b {"pri" if i == 0 else "gl"}" href="{href}">{lbl}{" " + AR if i == 0 else ""}</a>' for i, (href, lbl) in enumerate(h.get('acts', [])))
+    dot = ' amber' if h.get('amber') else ''
+    short = ' short' if h.get('short') else ''
+    return f'''<section class="ph2{short}" id="top" aria-labelledby="h1">
+  <div class="ph2-media" aria-hidden="true">{media}</div>
+  <div class="wrap ph2-in">
+    <span class="pill rv"><i class="dot{dot}"></i>{h['pill']}</span>
+    <h1 id="h1" class="h-xl split">{lines}</h1>
+    <p class="lead rv" style="--d:3">{h['lead']}</p>
+    {f'<div class="row rv" style="--d:4">{acts}</div>' if acts else ''}
+  </div>
+  <div class="wrap ph2-toc">{toc(chapters) if chapters else ''}</div>
+  <p class="film-cap">{cap}</p>
+</section>'''
+def jp(chapters):
+    """the pill at the foot of the screen, one link per chapter of the page and the next step last"""
+    items = ''.join(f'<a href="#{cid}"><b>{i}</b><span>{E(lbl)}</span></a>' for i, (cid, lbl) in enumerate(chapters, 1))
+    items += f'<a class="last" href="#cta"><b>{len(chapters) + 1}</b><span>Next step</span></a>'
+    return f'<nav class="jp" aria-label="Chapters on this page" data-jp>{items}</nav>'
 def page(meta, body):
     t = meta['title']; full = 'justclaims.eu, ' + t if meta.get('home') else t + ' | justclaims.eu'
-    js = ''.join(f'<script src="assets/{x}.js" defer></script>' for x in meta.get('extra', []) if os.path.exists(os.path.join(OUT, 'assets', x + '.js')))
+    js = ''.join(f'<script src="assets/{x}.js?v={ver("assets/" + x + ".js")}" defer></script>' for x in meta.get('extra', []) if os.path.exists(os.path.join(OUT, 'assets', x + '.js')))
     return f'''<!doctype html>
 <html lang="en-GB">
 <head>
@@ -130,7 +188,7 @@ def page(meta, body):
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/funnel-display.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/v2.css">
+<link rel="stylesheet" href="assets/v2.css?v={ver('assets/v2.css')}">
 <script>document.documentElement.className+=' js';</script>
 </head>
 <body class="p-{meta.get('nav', 'x')}" data-applies="{CL['applies']}" data-force="{CL['entersIntoForce']}" data-oj="{OJ}" data-built="{TODAY.isoformat()}">
@@ -140,7 +198,7 @@ def page(meta, body):
 {body}
 </main>
 {FOOTER}
-<script src="assets/v2.js" defer></script>{js}
+<script src="assets/v2.js?v={ver('assets/v2.js')}" defer></script>{js}
 </body>
 </html>
 '''
@@ -148,19 +206,25 @@ def page(meta, body):
 def render(name):
     srcp = open(os.path.join(V2, 'pages', name), encoding='utf-8').read()
     m = re.match(r'\s*<!--(\{.*?\})-->\s*', srcp, re.S); meta = json.loads(m.group(1)); body = srcp[m.end():]
+    if meta.get('hero'): body = hero(meta['hero'], meta.get('chapters')) + '\n' + body
     for _ in range(3):
         body = re.sub(r'\{\{INC:([a-z0-9\-]+)\}\}', lambda mm: open(os.path.join(V2, 'pages', '_parts', mm.group(1) + '.html'), encoding='utf-8').read(), body)
+    for cid, _ in meta.get('chapters', []):
+        if not re.search(r'<section[^>]*\bid="' + re.escape(cid) + r'"[^>]*\bdata-step', body): raise SystemExit(f'{name}: chapter {cid} has no section with data-step')
     rate, courts = G['chart_rate'](), G['chart_courts'](); tr, tc = G['chart_tables']()
-    rep = {'{{AR}}': AR, '{{TBC}}': TBC, '{{CTA}}': CTA, '{{DAYS}}': str(DAYS), '{{FORCEDAYS}}': str((FORCE - TODAY).days), '{{OJ}}': OJ,
+    alt = meta.get('cta2')
+    rep = {'{{AR}}': AR, '{{TBC}}': TBC, '{{CTA}}': cta(tuple(alt) if alt else None), '{{ANNEX}}': G['annex_html'](), '{{READYQS}}': G['readiness_qs'](), '{{CLOCKROWS}}': G['clockrows'](), '{{DAYS}}': str(DAYS), '{{FORCEDAYS}}': str((FORCE - TODAY).days), '{{OJ}}': OJ,
            '{{NCLOCKS}}': str(len(CL['clocks'])), '{{HORIZON}}': horizon(), '{{RULERLIST}}': G['rulerlist'](), '{{HOURGRID}}': G['hour_grid'](),
            '{{CHARTRATE}}': chart_v2(rate, 'cr') + tr, '{{CHARTCOURTS}}': chart_v2(courts, 'cc') + tc, '{{READYMAP}}': G['readiness_map'](),
-           '{{LOGO}}': LOGO, '{{G96}}': gauge(48, 48, 40), '{{G30}}': gauge(30, 30, 26), '{{G9}}': gauge(36, 36, 31), '{{GDAYS}}': gauge(40, 40, 34),
+           '{{LOGO}}': LOGO, '{{CAL31}}': '<div class="cal-g" aria-hidden="true">' + ''.join(f'<i class="{"d0" if k == 0 else "d30" if k == 30 else ""}"></i>' for k in range(31)).replace(' class=""', '') + '</div>', '{{G96}}': gauge(48, 48, 40), '{{G30}}': gauge(30, 30, 26), '{{G9}}': gauge(36, 36, 31), '{{GDAYS}}': gauge(40, 40, 34),
            '{{CLOCKSJSON}}': '<script type="application/json" id="clocks-data">' + json.dumps({'clocks': CL['clocks'], 'quotes': CL['quotes'], 'applies': CL['applies'], 'force': CL['entersIntoForce']}, ensure_ascii=False).replace('</', '<\\/') + '</script>'}
     for k, v in rep.items(): body = body.replace(k, v)
+    body = re.sub(r'\{\{IC:([a-z]+)\}\}', lambda mm: icon(mm.group(1)), body)
     body = re.sub(r'\{\{SDIAL:(\d)\}\}', lambda mm: G['story_dial'](int(mm.group(1))), body)
     body = re.sub(r'\{\{LAW:([a-z0-9\-]+)\}\}', lambda mm: G['law'](mm.group(1)), body)
     left = re.findall(r'\{\{[A-Z:a-z0-9\-]+\}\}', body)
     if left: raise SystemExit(f'{name}: unreplaced tokens {left}')
+    if meta.get('chapters'): body += '\n' + jp(meta['chapters'])
     return page(meta, body)
 
 if __name__ == '__main__':
@@ -172,5 +236,8 @@ if __name__ == '__main__':
         V1 = 'https://astra-justclaims-prototype.netlify.app/'
         have = set(x for x in os.listdir(os.path.join(V2, 'pages')) if x.endswith('.html'))
         html_out = re.sub(r'href="([a-z0-9\-]+\.html)((?:#[^"]*|\?[^"]*)?)"', lambda mm: f'href="{mm.group(1)}{mm.group(2)}"' if mm.group(1) in have else f'href="{V1}{mm.group(1)}{mm.group(2)}"', html_out)
+        html_out = html_out.replace('new-rules.html#duties', 'new-rules.html#proof').replace('new-rules.html#table', 'new-rules.html#ruler')
+        if f == '404.html':  # served at any missing path, so every local link and asset is made absolute
+            html_out = re.sub(r'(src|href|poster|data-src|data-webm)="(?!https?:|#|/|mailto:|tel:|data:)', r'\1="/', html_out)
         open(os.path.join(OUT, f), 'w', encoding='utf-8').write(html_out); built.append(f)
     print('v2 built', len(built), 'pages', ', '.join(built), '| days to apply', DAYS)

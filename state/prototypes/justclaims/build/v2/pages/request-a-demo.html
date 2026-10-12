@@ -1,0 +1,47 @@
+<!--{"title":"Request a walkthrough, a live demo tailored to you","desc":"Tell us your airline and role. We'll set up a live walkthrough of justclaims.eu tailored to you, with the new rules set beside the way you handle a claim today.","nav":"x","extra":["pages2","demo"],
+"hero":{"vid":"01-wing-pink-dusk-mixkit4204","short":true,"amber":true,"pill":"Request a walkthrough","h1":["See it on","<em>your</em> claims."],"lead":"A live walkthrough of justclaims.eu, tailored to your airline. Tell us about your claims team and what you'd like to see. {{TBC}} that a walkthrough can cover the new rules this way","acts":[["#form","Fill in the form"]]}}-->
+<section class="sx ch" id="form" aria-labelledby="form-h" style="padding-top:clamp(40px,5vw,72px)">
+  <div class="wrap">
+    <h2 id="form-h" class="sr">The request form</h2>
+    <ol class="steps2 s3" data-in>
+      <li style="--k:0"><b class="sn">1</b><h3>Send the form</h3><p>Your airline and how to reach you. A minute.</p></li>
+      <li style="--k:1"><b class="sn">2</b><h3>We set a time</h3><p>The team gets back to you to arrange the walkthrough. {{TBC}}</p></li>
+      <li style="--k:2"><b class="sn">3</b><h3>You see it live</h3><p>justclaims on your own claims process, with your questions answered.</p></li>
+    </ol>
+    <div class="form3 ch-body">
+      <div class="panel rv">
+        <form class="tform" name="demo-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-form novalidate>
+          <input type="hidden" name="form-name" value="demo-request">
+          <p hidden><label>Leave this empty <input name="bot-field"></label></p>
+          <div class="tgrid">
+            <div class="f2"><label for="d-airline">Airline</label><input id="d-airline" name="airline" type="text" autocomplete="organization" required><span class="err">Please tell us the airline.</span></div>
+            <div class="f2"><label for="d-dept">Department <i>optional</i></label><input id="d-dept" name="department" type="text"></div>
+          </div>
+          <div class="tgrid">
+            <div class="f2"><label for="d-role">Role <i>optional</i></label><input id="d-role" name="role" type="text" autocomplete="organization-title"></div>
+            <div class="f2"><label for="d-int">What you'd like to see</label><select id="d-int" name="interest"><option>The new rules and my claims process</option><option>The platform</option><option>Integration into our systems</option><option>Something else</option></select></div>
+          </div>
+          <div class="tgrid">
+            <div class="f2"><label for="d-first">First name</label><input id="d-first" name="first_name" type="text" autocomplete="given-name" required><span class="err">Please enter your first name.</span></div>
+            <div class="f2"><label for="d-last">Last name</label><input id="d-last" name="last_name" type="text" autocomplete="family-name" required><span class="err">Please enter your last name.</span></div>
+          </div>
+          <div class="tgrid">
+            <div class="f2"><label for="d-mail">Business email</label><input id="d-mail" name="email" type="email" autocomplete="email" required><span class="err">Please enter a valid email address.</span></div>
+            <div class="f2"><label for="d-phone">Phone <i>optional</i></label><input id="d-phone" name="phone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="f2"><label for="d-msg">Message <i>optional</i></label><textarea id="d-msg" name="message" rows="5"></textarea></div>
+          <p class="formerr">That didn't send. Please try again, or call +49 69 380 299 910.</p>
+          <button class="b pri" type="submit">Send the request {{AR}}</button>
+        </form>
+        <div class="sent" role="status" tabindex="-1"><h3>Request received.</h3><p>Thank you. We'll come back to you to set up the walkthrough.</p></div>
+      </div>
+      <aside class="panel addr rv" style="--d:1">
+        <div><h3>What you get</h3><p>A live demo tailored to you, and answers to your own questions.</p></div>
+        <div><h3>Rather talk now</h3><p><a href="tel:+4969380299910">+49 69 380 299 910</a></p></div>
+        <div><h3>The address</h3><p>CHS Claims Handling Solutions GmbH<br>Güterplatz 1<br>60327 Frankfurt am Main</p></div>
+        <div><h3>Not ready yet</h3><p><a href="readiness.html">Take the ten question readiness check</a>, or <a href="claim-clock.html">work out the dates for a flight</a>.</p></div>
+        <p class="note-s">This prototype's form posts to the project that hosts it. A message sent from here lands with the team that built it.</p>
+      </aside>
+    </div>
+  </div>
+</section>
