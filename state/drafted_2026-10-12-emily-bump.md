@@ -1,4 +1,4 @@
-<!-- Emily Levy bump, per Raka's 2026-10-12 rule (RULES.md, "A nudge is the plain bump"). SUPERSEDES the researched nudge in state/drafted_2026-10-09-emily.md, which is retired unless Raka asks for a researched one. NOT SENT. Re pull the thread immediately before sending. -->
+<!-- Emily Levy bump, per Raka's 2026-10-12 rule (RULES.md, "A nudge is the plain bump"). SUPERSEDES the researched nudge in state/drafted_2026-10-09-emily.md, which is retired unless Raka asks for a researched one. NOT SENT. HANDED TO THE OTHER SESSION (01CwL7) on Raka's word 2026-10-12, this session never sends it. Re pull the thread immediately before sending. -->
 # Emily Levy bump
 
 ### Emily Levy, Alquimia Legal, ctc_rMYGbmu7Piu5Pmwei
