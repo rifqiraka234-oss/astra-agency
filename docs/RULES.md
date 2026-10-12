@@ -115,6 +115,23 @@ catches this class of error before a single page is fetched.
 **If the record cannot be reconciled with evidence, the row is `BLOCKED_NEEDS_INFO` and
 stays untouched.** Never pick the plausible reading.
 
+### 0D. What the replies of 12 Oct taught (Josh Edelman, Steven Prins, Jochen Matzer)
+
+1. **A new site is not a website sale (Josh Edelman, The Wine Flight).** Company incorporated Jan 2026,
+   site built for him in mid 2026. Our opener offered "the Wine Flight site for gifts and companies" and he
+   answered "I'm not looking to change the website at this time." When the site is under a year old or
+   was just built for them, they've just paid for it. Lead with what it doesn't do yet as a selling job
+   (an AI workflow that wins gift and company bookings, a channel), not as a new or changed site.
+2. **Price on request is a model, not a gap (Steven Prins, Bulgarian Wine Hub).** Our 6 Oct nudge said there's
+   "no trade price list, trade terms or ordering on the site". His answer, "i sell to shops and bars in Belgium
+   only and have special pricelists for them". B2B sellers with a price list per customer keep trade prices
+   off the site on purpose. Before calling missing trade prices or ordering a gap, find out who they sell to
+   and how, and if it can't be found, ask instead of assert. Same family as 0C point 4. The Billie Swim opener
+   of 11 Oct carries this risk (wholesale by email is normal in her niche).
+3. **The plain bump gets answers fast, and the answers are mostly no.** Two replies within 2.5 hours of the
+   12 Oct bumps, both a no with a reason. A no is a result. Close silently, per "Close means NEVER SEND
+   ANYTHING ANYMORE", and log the reason, because the reason is the lesson.
+
 ### 0C. The odd thing may not be theirs (Debby Alles, 2026-10-09)
 
 Our opener told Debby "Google calls de Kogge Bij Veld't". She replied "Bij tveld is niet meer
