@@ -1,0 +1,33 @@
+<section class="sec calc-sec" id="clock" data-calc>
+<div class="wrap">
+  <div class="sec-h rv">
+    <p class="mono lab">The claim clock</p>
+    <h2>Put in a late flight. Read off the dates.</h2>
+    <p class="sub">For a delay at arrival, worked from Regulation (EU) 2026/2202. The sums run in your browser and nothing is sent anywhere. Cancellations and denied boarding follow Art. 5 and Art. 4, so they aren't covered here.</p>
+  </div>
+  <div class="calc rv d1">
+    <form class="calc-in" onsubmit="return false" novalidate>
+      <fieldset>
+        <legend>The flight</legend>
+        <div class="f"><label for="cc-dep">Date of departure</label><input id="cc-dep" type="date" value="2027-11-15" min="2027-10-23"></div>
+        <div class="f"><label for="cc-arr">Scheduled arrival at the final destination</label><input id="cc-arr" type="datetime-local" value="2027-11-15T16:20"></div>
+        <div class="f"><label for="cc-delay">Delay at arrival <output id="cc-delay-o" class="mono">3 h 15 min</output></label><input id="cc-delay" type="range" min="0" max="720" step="5" value="195"><span class="hint mono">0 to 12 hours, in steps of five minutes</span></div>
+      </fieldset>
+      <fieldset>
+        <legend>Distance, Art. 7(1)</legend>
+        <div class="radios">
+          <label><input type="radio" name="cc-dist" value="250"><span>1,500 km or less</span></label>
+          <label><input type="radio" name="cc-dist" value="400i"><span>More than 1,500 km, within the Union</span></label>
+          <label><input type="radio" name="cc-dist" value="400" checked><span>Between 1,500 and 3,500 km, other journeys</span></label>
+          <label><input type="radio" name="cc-dist" value="600"><span>More than 3,500 km, other journeys</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>The claim</legend>
+        <div class="f"><label for="cc-file">The passenger files on</label><input id="cc-file" type="date" value="2027-11-27"></div>
+      </fieldset>
+    </form>
+    <div class="calc-out" aria-live="polite" data-out></div>
+  </div>
+</div>
+</section>

@@ -1,0 +1,391 @@
+{
+ "_note": "Every number here is copied from FACTS.md (fact ids in brackets). Do not edit values without re-checking the source. Shares marked derived are my arithmetic on two cited numbers.",
+ "reform_timeline [D60-D70]": [
+  {
+   "date": "2013-03-13",
+   "event": "Commission proposal COM(2013) 130",
+   "fact": "D60"
+  },
+  {
+   "date": "2014-02-05",
+   "event": "European Parliament first reading position",
+   "fact": "D61"
+  },
+  {
+   "date": "2025-09-29",
+   "event": "Council first-reading position (published 2025-10-02 per OEIL)",
+   "fact": "D62"
+  },
+  {
+   "date": "2026-01-21",
+   "event": "European Parliament second reading",
+   "fact": "D63"
+  },
+  {
+   "date": "2026-03-24",
+   "event": "Council rejects Parliament's amendments (OEIL only)",
+   "fact": "D64"
+  },
+  {
+   "date": "2026-04-20",
+   "event": "Conciliation Committee formal meeting (OEIL only)",
+   "fact": "D64"
+  },
+  {
+   "date": "2026-06-15",
+   "event": "Conciliation Committee approves joint text",
+   "fact": "D64"
+  },
+  {
+   "date": "2026-07-07",
+   "event": "European Parliament third reading",
+   "fact": "D65"
+  },
+  {
+   "date": "2026-07-13",
+   "event": "Council decision (third reading)",
+   "fact": "D66"
+  },
+  {
+   "date": "2026-09-16",
+   "event": "Regulation (EU) 2026/2202 signed",
+   "fact": "D67"
+  },
+  {
+   "date": "2026-10-02",
+   "event": "Published in the Official Journal",
+   "fact": "D68"
+  },
+  {
+   "date": "2026-10-22",
+   "event": "Enters into force (twentieth day after publication)",
+   "fact": "D69"
+  },
+  {
+   "date": "2027-10-23",
+   "event": "Applies; Commission implementing acts due; (companion enforcement regulation would also apply, if adopted)",
+   "fact": "D70, D80, D81"
+  },
+  {
+   "date": "2031-10-23",
+   "event": "Commission review incl. feasibility of further automation of claims",
+   "fact": "D80"
+  }
+ ],
+ "proposal_to_signature_derived": "13 years, 6 months and 3 days (2013-03-13 to 2026-09-16)",
+ "destatis_fluggast_cases_concluded_amtsgerichte [D30]": {
+  "2021": 28514,
+  "2022": 55887,
+  "2023": 108092,
+  "2024": 134496,
+  "2025": 123938,
+  "measure": "concluded (erledigte) proceedings, Sachgebiet 33, German Amtsgerichte, not new filings"
+ },
+ "destatis_all_civil_concluded_amtsgerichte [D31]": {
+  "2021": 798529,
+  "2022": 716538,
+  "2023": 752424,
+  "2024": 801351,
+  "2025": 818189
+ },
+ "fluggast_share_of_all_concluded_pct_derived [D31]": {
+  "2021": 3.6,
+  "2022": 7.8,
+  "2023": 14.4,
+  "2024": 16.8,
+  "2025": 15.1
+ },
+ "hesse_fluggast_concluded [D32]": {
+  "2022": 8944,
+  "2023": 15618,
+  "2024": 15081,
+  "2025": 20750,
+  "note": "state of Hesse total; Amtsgericht Frankfurt not separated"
+ },
+ "hesse_all_civil_concluded [D32]": {
+  "2022": 61922,
+  "2023": 67730,
+  "2024": 66174,
+  "2025": 79291
+ },
+ "frankfurt_court_statements [D33, D34, D36]": {
+  "ministries_2023_per_year_approx": 15000,
+  "DRiZ_2024_new_approx": 16000,
+  "DRiZ_H1_2026_new": 8314,
+  "DRiZ_H1_2026_change_pct": -26,
+  "DRiZ_share_of_civil_cases_flight_and_travel_pct_approx": 50,
+  "measures": "statements and journal survey, new filings; not the Destatis measure"
+ },
+ "drb_new_filings_20_airport_courts [D34, D35]": {
+  "2023": 125000,
+  "2024": 131000,
+  "H1_2025": 65903,
+  "H1_2026": 53150,
+  "note": "survey of 20 largest airport courts; 2023 and 2024 rounded in source"
+ },
+ "case_endings_2025 [D37]": {
+  "total": 123938,
+  "par_91a_ZPO_cost_decision_after_matter_declared_resolved": 46082,
+  "contested_judgment": 34658,
+  "acknowledgement_or_waiver_judgment": 19245,
+  "claim_withdrawn": 10024,
+  "default_judgment": 6556,
+  "court_settlement": 1641,
+  "other_derived": 5732,
+  "shares_pct_derived": {
+   "par_91a": 37.2,
+   "contested": 28.0,
+   "acknowledgement": 15.5,
+   "withdrawn": 8.1,
+   "default": 5.3,
+   "settlement": 1.3,
+   "other": 4.6
+  }
+ },
+ "case_duration_2025 [D38]": {
+  "avg_months_all": 4.82,
+  "avg_months_contested_judgment": 7.05,
+  "avg_months_all_2024": 4.45,
+  "bins": {
+   "<=3m": 52062,
+   "3-6m": 40577,
+   "6-12m": 23966,
+   "12-24m": 6470,
+   ">24m": 863
+  }
+ },
+ "representation_and_costs_2025 [D39]": {
+  "both_parties_lawyers": 101480,
+  "of": 123938,
+  "cost_decisions": 112631,
+  "defendant_bore_all_court_costs": 102484
+ },
+ "claim_rate_weighted_avg_pct_by_year [D01]": {
+  "2011": 8.0,
+  "2012": 10.1,
+  "2013": 11.6,
+  "2014": 15.0,
+  "2015": 20.6,
+  "2016": 26.4,
+  "2017": 28.9,
+  "2018": 37.5,
+  "note": "consultant estimate (Steer for DG MOVE, Jan 2020); share of eligible passengers who claimed AND received compensation"
+ },
+ "claim_rate_2018_by_type_pct [D02]": {
+  "delays": 58,
+  "cancellations": 18,
+  "denied_boarding": 30,
+  "2011_delays": 10,
+  "2011_cancellations": 5,
+  "2011_denied_boarding": 6
+ },
+ "commission_2013_claim_rate_range_pct [D03]": {
+  "low": 5,
+  "high": 10,
+  "assumed": 10
+ },
+ "steer_scenario3_costs_eur_million [D08]": {
+  "years": [
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018
+  ],
+  "compensation": [
+   267,
+   412,
+   547,
+   437,
+   657,
+   954,
+   1217,
+   2258
+  ],
+  "care": [
+   324,
+   369,
+   473,
+   351,
+   400,
+   519,
+   677,
+   932
+  ],
+  "reimbursement_rerouting": [
+   889,
+   978,
+   1116,
+   914,
+   956,
+   1103,
+   1404,
+   1787
+  ],
+  "mishandled_baggage": [
+   81,
+   92,
+   111,
+   148,
+   197,
+   230,
+   274,
+   302
+  ],
+  "total": [
+   1560,
+   1851,
+   2247,
+   1849,
+   2209,
+   2805,
+   3572,
+   5279
+  ]
+ },
+ "steer_flights_delayed_over_2h [D25]": {
+  "years": [
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018
+  ],
+  "delayed_flights_thousand": [
+   61,
+   58,
+   61,
+   57,
+   62,
+   76,
+   80,
+   109
+  ],
+  "share_of_flights_pct": [
+   0.9,
+   0.8,
+   0.9,
+   0.8,
+   0.9,
+   1.0,
+   1.1,
+   1.4
+  ]
+ },
+ "passengers_affected_2018 [D07]": {
+  "cancellation_million": 17.6,
+  "long_delay_2h_plus_million": 16.5
+ },
+ "neb_complaints_vs_passengers_index_2011_100 [D09]": {
+  "complaints_2018": 328,
+  "passengers_2018": 135,
+  "complaints_total_2018_as_printed": 128352
+ },
+ "eurostat_passengers_carried_eu27 [D26]": {
+  "2019": 1035119832,
+  "2020": 276738788,
+  "2021": 374782077,
+  "2022": 816699952,
+  "2023": 964172570,
+  "2024": 1042254691,
+  "2025": 1093605497,
+  "pulled": "2026-10-12",
+  "dataset_update": "2026-10-09"
+ },
+ "eurocontrol_PRR2025_arrival_punctuality_pct [D21]": {
+  "2019": 77.8,
+  "2020": 87.4,
+  "2021": 83.0,
+  "2022": 71.5,
+  "2023": 70.6,
+  "2024": 72.5,
+  "2025": 76.1,
+  "summer_2024": 64.5,
+  "summer_2025": 71.1,
+  "definition": "share of flights arriving no later than 15 minutes after scheduled time (EUROCONTROL)"
+ },
+ "eurocontrol_PRR2025_avg_departure_delay_min [D22]": {
+  "2015": 10.4,
+  "2016": 11.4,
+  "2017": 12.5,
+  "2018": 14.9,
+  "2019": 13.2,
+  "2020": 7.5,
+  "2021": 9.2,
+  "2022": 17.9,
+  "2023": 18.0,
+  "2024": 17.7,
+  "2025": 14.7
+ },
+ "eurocontrol_2025 [D20, D23]": {
+  "flights_million": 11.1,
+  "en_route_atfm_delay_min_per_flight_2024": 2.13,
+  "en_route_atfm_delay_min_per_flight_2025": 1.67,
+  "en_route_atfm_total_million_minutes_2025": 18.4,
+  "en_route_atfm_cost_eur_billion_2025": 2.4
+ },
+ "sruv_2025 [D40, D41]": {
+  "applications": 41996,
+  "flight_applications": 34828,
+  "avg_procedure_days_2025": 125,
+  "avg_procedure_days_2024": 105,
+  "statutory_days": 90,
+  "agreement_rate_pct_approx": 88,
+  "cases_closed": 46063
+ },
+ "new_clocks_in_2026_2202 [D75-D78]": [
+  {
+   "clock": "Airline informs passenger of compensation right and how to claim",
+   "value": "96 hours after the end of the journey",
+   "article": "Art 7(4)"
+  },
+  {
+   "clock": "Passenger request window",
+   "value": "9 months from departure date",
+   "article": "Art 7(9)"
+  },
+  {
+   "clock": "Airline pays or justifies non-payment",
+   "value": "30 calendar days from receipt",
+   "article": "Art 7(9)"
+  },
+  {
+   "clock": "Automatic reimbursement when passenger chooses it",
+   "value": "7 calendar days (30 in contingency-plan cases)",
+   "article": "Art 8(1)(a)"
+  },
+  {
+   "clock": "Complaint filing window",
+   "value": "12 months from flight, or 3 months after a compensation request, whichever is later",
+   "article": "Art 15a(2)"
+  },
+  {
+   "clock": "Complaint acknowledged",
+   "value": "7 working days",
+   "article": "Art 15a(2)"
+  },
+  {
+   "clock": "Reasoned reply (or notice of final reply in under 2 months)",
+   "value": "1 month",
+   "article": "Art 15a(2)"
+  }
+ ],
+ "old_clocks_with_a_source": [
+  {
+   "clock": "Airline response target, set by each airline",
+   "value": "3 days to 3 months (self-reported, 2019)",
+   "fact": "D54"
+  },
+  {
+   "clock": "Refund deadline before the reform",
+   "value": "7 days (flights), 14 days (packages)",
+   "fact": "D55"
+  }
+ ]
+}
