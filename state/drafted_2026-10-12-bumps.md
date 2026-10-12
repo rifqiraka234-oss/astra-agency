@@ -1,6 +1,8 @@
 <!-- bumps, 2026-10-12 -->
 # Bumps, 2026-10-12.
 
+> **12:00 UTC run, 25 more sent between 12:02 and 12:06 UTC, one at a time**, the 10 the rate limit held back, the 4 first bumps to the 9 Oct openers and the 11 Raka approved from the held group. Every thread pulled right before and right after, every one landed once, no 429. Still to go, the 11 last bumps to the people messaged on 9 Oct, at 14:50 UTC.
+
 > **SENT 2026-10-12 06:18 to 06:23 UTC on Raka's "Send", 75 of the 87 due now.** Each thread pulled in full right before (total and newest matched the morning pull) and right after (one copy landed), activity ids in the queue rows. Cross checked against the lemlist conversation list, 71 in sentOnly plus 4 in myConversations equals 75, every preview the right bump. **2 FAILED**, Adad-Nirari Khochaba and Abraham Akrouche, LinkedIn said can-not-send-message, nothing landed, most likely no longer connected. **10 NOT YET SENT**, LinkedIn started returning 429 too many requests at about 06:23, nothing landed for any of them, they go out slowly in the 12:00 UTC run with a fresh thread pull each, Charles Burns, Claire Bartley, Jana Münzenberg, Jenna Goodwin, Romy Abbrederis, Simon Wilmes (a 502 on his, pull before any resend), Stuart Barron, Tim Balogun, Twan Bierens, Wilco Drijver. The 15 due later today and the 14 held are untouched.
 
 
@@ -247,6 +249,7 @@ NUDGE
 ```
 
 ### Charles Burns, WatchMarketplace. ctc_Jc3SXti4Km3dnBMeF
+SENT 2026-10-12T12:02:17Z, act_FCHu4zSyyhNinawQE, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-03 16:17 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -254,6 +257,7 @@ NUDGE
 ```
 
 ### Claire Bartley, the BookCellar. ctc_9ma29fTdvPjhMqPoB
+SENT 2026-10-12T12:02:28Z, act_XA3jsRer7cPY4qQ6s, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-03 16:18 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -405,6 +409,7 @@ NUDGE
 ```
 
 ### Jana Münzenberg, She Climbs. ctc_4HQm9YJCn6un4Mdip
+SENT 2026-10-12T12:02:36Z, act_dmZyRgd8wcdLNfB6i, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-03 16:21 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -412,6 +417,7 @@ NUDGE
 ```
 
 ### Jenna Goodwin, Raven Photography. ctc_w8M9KjdfGEQHb7REN
+SENT 2026-10-12T12:02:44Z, act_wBgCdB2cJZH5rTcuX, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-03 16:18 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -603,6 +609,7 @@ NUDGE
 ```
 
 ### Romy Abbrederis, Lobby. ctc_taxTbnHp5GC3hQndm
+SENT 2026-10-12T12:02:51Z, act_Gd9Rfu94TgQ5QPKDt, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-03 16:23 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -626,6 +633,7 @@ NUDGE
 ```
 
 ### Simon Wilmes, Snorly GmbH. ctc_eb8ySnZEpFiroQaXH
+SENT 2026-10-12T12:02:59Z, act_MHBmCfv7TW2s5j73w, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-06 18:58 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -649,6 +657,7 @@ NUDGE
 ```
 
 ### Stuart Barron, Barron Escapes Ltd. ctc_FqsfJfJh8oDGt2hbo
+SENT 2026-10-12T12:03:06Z, act_HigLxz7NJ5StidCe6, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-03 16:21 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -656,6 +665,7 @@ NUDGE
 ```
 
 ### Tim Balogun, London Makers (HF Mencap). ctc_R3SL6BjDXSjfXM5dz
+SENT 2026-10-12T12:03:13Z, act_6P38p8Fh2WYLKTKYA, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-03 16:23 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -671,6 +681,7 @@ NUDGE
 ```
 
 ### Twan Bierens, Cocoon Subsidiesoftware. ctc_z446qTApfbr6R8RuT
+SENT 2026-10-12T12:03:22Z, act_bBKbYfdcYTQfgxEEy, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-03 16:17 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -686,6 +697,7 @@ NUDGE
 ```
 
 ### Wilco Drijver, D&Z Domotica. ctc_Qhj4RS4RXnmBeyrxL
+SENT 2026-10-12T12:03:30Z, act_3CteePMjRKXg4gDex, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-03 16:19 UTC. Pulled 12 Oct, 3 items, newest ours.
 NUDGE
 ```
@@ -703,6 +715,7 @@ NUDGE
 ## First bump, opener sent 9 Oct, due from about 13:46 Amsterdam time today (4)
 
 ### Dan Waterfall-Chapman, Utee. ctc_eGXerDBzTghqprWZh
+SENT 2026-10-12T12:03:55Z, act_ZDDdxK8wSTWJCpey7, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-09 11:46 UTC. Pulled 12 Oct, 1 items, newest ours.
 NUDGE
 ```
@@ -710,6 +723,7 @@ NUDGE
 ```
 
 ### Jean-Christophe Conticello, GIANTS. ctc_iWGMxjeTYkzegg78v
+SENT 2026-10-12T12:04:03Z, act_aAvgDj9DHutuFgypG, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-09 11:46 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -717,6 +731,7 @@ NUDGE
 ```
 
 ### Niklas Mocker, dotega. ctc_Wg9Bv7Z7vMqpNQx78
+SENT 2026-10-12T12:03:39Z, act_b6E638SnbbbGhYbeM, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-09 11:45 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -724,6 +739,7 @@ NUDGE
 ```
 
 ### Orion Dai, Omnilabs Research. ctc_JiMGgwH639YbSSZfE
+SENT 2026-10-12T12:03:47Z, act_iHRYjTrLrB5uBnBaP, in the 12:00 UTC run. Do not send again.
 Our last 2026-10-09 11:45 UTC. Pulled 12 Oct, 2 items, newest ours.
 NUDGE
 ```
@@ -814,6 +830,7 @@ NUDGE
 Each has had one follow up, so by the count a last bump is allowed. But either a 3 Oct queue note planned a silent close, or our last message said we'd leave it or drop it on a condition. Say which go.
 
 ### Alexander Resner, Layer2 Marketing. ctc_iiGkmAQeJCTg7TF3h
+SENT 2026-10-12T12:04:20Z, act_wQbxgEKeAxAShD3WQ, in the 12:00 UTC run. Do not send again.
 Why it's held, 3 Oct note said next touch is a silent close. Thread last pulled 11 Oct, pull again before any send.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
@@ -826,6 +843,7 @@ Why it's held, got a correction and apology on 3 Oct, note said close or nothing
 CLOSED on Raka's word 12 Oct, no message.
 
 ### Alice Martin, Fabrikaa Learning. ctc_KMjZQEr5qdudxGgYP
+SENT 2026-10-12T12:04:29Z, act_M624mSgxCLdLK544F, in the 12:00 UTC run. Do not send again.
 Why it's held, 3 Oct note said next touch is a silent close (thread has no promise). Thread last pulled 11 Oct, pull again before any send.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
@@ -834,6 +852,7 @@ NUDGE
 ```
 
 ### Amna Abdulla, L'MANE. ctc_tEAMfkRou5jGBv8YT
+SENT 2026-10-12T12:04:37Z, act_FwebNHRfqPSREHcfm, in the 12:00 UTC run. Do not send again.
 Why it's held, 3 Oct note said next touch is a silent close. Thread last pulled 11 Oct, pull again before any send.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
@@ -842,6 +861,7 @@ NUDGE
 ```
 
 ### Benedikt Weber, ecoDMS GmbH. ctc_8FHv4ma3Ly2TCqYfK
+SENT 2026-10-12T12:05:38Z, act_cy8ZbDEavgfYscsJb, in the 12:00 UTC run. Do not send again.
 Why it's held, our 3 Oct line offered to drop it if pricing isn't a priority.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
@@ -850,6 +870,7 @@ NUDGE
 ```
 
 ### Cameron Syme, See Saw. ctc_k3p23YQzo9t7pbK3F
+SENT 2026-10-12T12:04:45Z, act_hofnPAF7iojEMz7Wq, in the 12:00 UTC run. Do not send again.
 Why it's held, 3 Oct note said next touch is a silent close. Thread last pulled 11 Oct, pull again before any send.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
@@ -858,6 +879,7 @@ NUDGE
 ```
 
 ### Joshua M Patton, We Are SDM. ctc_PchCw6xqb8YTfA9Cz
+SENT 2026-10-12T12:05:30Z, act_tKBBJ9bTLMGqjsajR, in the 12:00 UTC run. Do not send again.
 Why it's held, our 3 Oct line offered to drop it if he says no.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
@@ -874,6 +896,7 @@ Why it's held, his certificate expired, so visitors get a browser warning before
 CLOSED on Raka's word 12 Oct, no message.
 
 ### Robert van Glabbeek, Cryptofocus.nl. ctc_gd9G4Nssf6Qqa9pkr
+SENT 2026-10-12T12:05:08Z, act_MwpfzHNLouxrmw7hS, in the 12:00 UTC run. Do not send again.
 Why it's held, our 3 Oct line, 'Say if push already covers it and I'll leave it'. Thread last pulled 11 Oct, pull again before any send.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
@@ -882,6 +905,7 @@ NUDGE
 ```
 
 ### Rohith Devanathan, ScrubMarine. ctc_Wn6WBQz6D6pzv6bQq
+SENT 2026-10-12T12:05:22Z, act_SBHHoa8ho4MWdevYj, in the 12:00 UTC run. Do not send again.
 Why it's held, our 3 Oct line, 'Happy to drop it if not'. Thread last pulled 11 Oct, pull again before any send.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
@@ -890,6 +914,7 @@ NUDGE
 ```
 
 ### Sebastian Holz, journex. ctc_rsr2RnC2hLdcfh88E
+SENT 2026-10-12T12:04:52Z, act_cRoBrfhEjuph9eAbB, in the 12:00 UTC run. Do not send again.
 Why it's held, 3 Oct note said next touch is a silent close (thread has no promise, count is 1). Thread last pulled 11 Oct, pull again before any send.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
@@ -898,6 +923,7 @@ NUDGE
 ```
 
 ### Tyler Butler, Bunkz Golf Ltd. ctc_CwNQoXS434JF4pFX2
+SENT 2026-10-12T12:05:15Z, act_6HSDFjkumL75wrQfs, in the 12:00 UTC run. Do not send again.
 Why it's held, our 3 Oct line, 'Happy to leave it if the shop's the focus'. Thread last pulled 11 Oct, pull again before any send.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
@@ -906,6 +932,7 @@ NUDGE
 ```
 
 ### Willem Ruiter, bluedesk. ctc_LX8SwdtGKPPxqzFd2
+SENT 2026-10-12T12:05:00Z, act_nYCQQ5JTnvevHr9Dz, in the 12:00 UTC run. Do not send again.
 Why it's held, 3 Oct note said close or nothing. Thread last pulled 11 Oct, pull again before any send.
 APPROVED 12 Oct, sent one at a time in the 12:00 UTC run after a fresh thread pull.
 NUDGE
