@@ -16,19 +16,22 @@ The feedback line, rechecked 2026-10-13 ~09:30 UTC, control example.com 200 in t
 
 DELIVERY
 ```
-Steady corporate clients are the best kind, Chris, and they're who I built this for.
+Aah super, steady corporate clients are the best kind!
 
-Here it is. My feedback on your site was that every corporate option, even a lunch box, ends at an enquiry form and a 24 hour wait. So I made it an ordering site. Pick a menu card, fill in one reply card and pay, and your regulars reorder their usual in one tap.
+It came together quicker than I'd expected, so here it is. My feedback on your site was that every corporate option, even a lunch box, ends at an enquiry form and a 24 hour wait. So I made it an ordering site. Pick a menu card, fill in one reply card and pay, and your regulars reorder their usual in one tap.
 
 Try it yourself.
 https://astra-garnish-prototype.netlify.app
-
-It's dressed like one of your events, with your Christmas packages and brochure prices in there. Anything marked † is an example for you to set.
 
 What do you think?
 ```
 
 Notes for Raka.
+- Raka 2026-10-13 ~09:40 UTC, his edits. Opening line in his words, "aah super, steady corporate clients are the best
+  kind!", the line about the look, the Christmas prices and the † examples deleted, and "say i got faster than expected
+  in making it". True, the 05:46 UTC message promised it "in the next day or two" and it's ready the same day.
+- The exclamation mark in the first line is Raka's own wording, kept on his instruction.
+- The † examples are still labelled on the site itself, in the top bar and the footnote, so nothing is hidden.
 - The feedback is the same point the opener made on 12 Oct, so it reads as follow through, not a new criticism.
 - Raka 2026-10-13 ~09:30 UTC, "can we adjust the reply to reply to his message also, so it flows well". The first line
   now answers his 07:12 "Yeah we have a good consistency of corporate clients!", and the reorder line closes on it.
