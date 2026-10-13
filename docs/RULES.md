@@ -206,6 +206,48 @@ look for typos.
    lands on a page charging 375 pounds) are all small. That's NO_STRONG_ANGLE, recorded with
    its sweep, and the small flaws stay in the research as proof for later.
 
+### 0F. The owner's reply test. Write their no before they do (week one audit, 2026-10-13)
+
+Raka asked how to fix the audit's worst finding. Five people said no with a reason between 5 and 13
+October, and four of them answered a gap that was never a gap. Every fact in those four messages was
+true. What was wrong was what we said it meant.
+
+| Lead | What we called a gap | What they told us | The trap |
+|---|---|---|---|
+| Debby Alles, de Kogge | "Google calls de Kogge Bij Veld't" | "Bij tveld is niet meer gevestigd op dit adres" | Not theirs |
+| Ramona Hendriks, Negentien80 | no curtain calculator on the new site | "we had a calculator for years ... nobody used it ... So we decided to delete" | Removed on purpose |
+| Steven Prins, Bulgarian Wine Hub | no trade price list on the site | "i sell to shops and bars in Belgium only and have special pricelists for them" | A model, not a gap |
+| Josh Edelman, The Wine Flight | the site says nothing about gifts or company days | "I'm not looking to change the website at this time" | Just paid for |
+
+So before block two is written, the gap has to survive the owner's own answer.
+
+1. **Write their likely no first, in their voice, one line.** "That's not us." "We took that off,
+   nobody used it." "We sell on price lists per customer." "We've just had the site built." If you
+   can picture them writing it, test it.
+2. **Run the five traps, each with its check.**
+   - **Not theirs.** A listing, account or page near them by address or name. It's theirs only if
+     their own site links it, it links back, or it carries their phone, email or name (0C point 1).
+   - **Removed on purpose.** The thing existed before and is gone now. Check the Wayback Machine and
+     their old pages and posts. A removal is a decision, so don't pitch it back unless they've said
+     they miss it. A page that still mentions a removed feature is a leftover, not a promise.
+   - **Just built or just paid for.** The current design is under a year old (Wayback's first capture
+     of this design, a launch post, an agency credit in the footer, the copyright year). Then the
+     angle is never a new or changed site, it's what the site doesn't do yet as a sales job (0D
+     point 1).
+   - **A model, not a gap.** Prices on request, a price list per trade customer, enquiry only for
+     bespoke or high ticket work, a call instead of online booking. Find out who they sell to and how
+     before calling any of these missing (0D point 2, 0C point 4).
+   - **Already fixed or in hand.** Reopen it in the minute before the send (0D point 4), and read their
+     latest posts and job ads for a new site on the way or an agency already on it.
+3. **A trap you can't rule out with evidence means that gap isn't the angle.** Take the next pain on
+   the list, or the verdict is NO_STRONG_ANGLE. Never soften it into a maybe inside the message.
+4. **The red team reads it as the owner.** Whoever checks the draft, and never the one who wrote it,
+   writes the single most likely reply. If that reply is one of the five traps, the draft goes back.
+5. **The gate carries it.** `owner reply: <their likely no, in their words> | <the trap it falls
+   under> | <the evidence that rules it out, with its URL>`. tools/check-drafts.py fails any OPENER or
+   SKETCH in a file dated 2026-10-14 or later without all three parts, without a URL in the third, or
+   with "can't rule out", "unknown" or "unclear" in it.
+
 ---
 
 ## 1. Sending
@@ -316,15 +358,30 @@ Bo, Erisan, Terry and Peter were the first four.
 **Three days of silence is urgent (Raka, 2026-10-03).** His words, "we consider >3 days always
 urgent. We needa nudge them somehow if >3 days." Once our last message is more than three days
 old with no reply, the next nudge is due now, not at a week. The other rules still decide WHAT
-happens. Two follow ups since they last spoke, a meeting held or agreed, a written promise that a
-message was the last, or a DO_NOT_CONTACT row all mean a silent close instead of a nudge.
+happens. One follow up already sent since they last spoke (two pitches, then close, below), a
+meeting held or agreed, a written promise that a message was the last, or a DO_NOT_CONTACT row all
+mean a silent close instead of a nudge.
+
+**TWO PITCHES, THEN CLOSE (Raka, 2026-10-13).** His words after the week one audit, "let's Move to
+two pitches, then close, with bumps spread over a few days". Michaël Abramczuk got an opener, a
+researched nudge and a plain bump in seven days (5, 9 and 12 Oct) and answered the bump with "Stop
+spam please". Two others got the same run that week.
+- **Pitch one** is our opener, or any message of ours they haven't answered, a delivery after their
+  yes included.
+- **Pitch two** is the plain bump, due once pitch one is more than three days old with no reply.
+- **Then a silent close.** A researched nudge, when Raka asks for one, IS pitch two, never a third.
+- **A reply from them starts the count again.** Our answer to it is pitch one.
+- **Spread the bumps.** Never more than 20 in one day, oldest first, the rest roll to the next day.
+  On 12 Oct 111 went out in one day, against the 20 a day lemlist's own message limit is set to.
+- **Anyone who already had a follow up when this started closes silently** when the next one would
+  have been due. That's the 22 lined up for a last bump on 15 Oct.
 
 **A nudge is the plain bump, not a new researched message (Raka, 2026-10-12).** His words, "you
 didnt have to go like full research all you have to do is just like 👀 have you seen this". So a
 due nudge is exactly `👀 [first name], have you seen this?`, the line v0.2's automated step used,
 with the first name as we greeted them in our own last message. The thread rules don't relax. Pull
 the whole thread before drafting and again before sending, never bump a reply, a decline, a meeting,
-a promise of a last message or two follow ups. And don't bump a thread whose last message is now
+a promise of a last message or a thread that's already had its one follow up. And don't bump a thread whose last message is now
 wrong or already fixed (the problem we named was solved, the company was sold or renamed), because
 the bump points them straight back at it. Those close silently. A researched nudge is only for when
 Raka asks for one.
@@ -340,8 +397,8 @@ Unilever, AXA, Pertamina line, and `Shall I send you a sketch of [thing]?`. chec
 **"Close" means NEVER SEND ANYTHING ANYMORE (Raka, 2026-10-03, his capitals).** Not a goodbye
 message, not a graceful sign off, nothing. A close is a DO_NOT_CONTACT row in the queue and no
 message at all, which `tools/check-drafts.py` enforces on every draft. Twenty six drafted closing
-messages were withdrawn the day he said it. So two follow ups without a reply means the row is
-closed silently, and the same for a meeting that went quiet.
+messages were withdrawn the day he said it. So one follow up without a reply means the row is
+closed silently (two pitches, then close, 2026-10-13), and the same for a meeting that went quiet.
 
 ## 1A. ONE THREAD. The whole message is one problem, start to finish (Raka, 2026-09-25)
 

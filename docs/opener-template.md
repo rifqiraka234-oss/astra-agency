@@ -1,5 +1,41 @@
 # The opener template. What it needs, and the rules for every slot.
 
+## THE first message from 2026-10-13 is the SKETCH opener (Raka)
+
+His words on 12 Oct, "hi, so this looks cool. However, your website is this. I suggest to do this. We
+make websites for blah blah. Shall I send you a sketch of how it looks like?", and on 13 Oct after the
+week one audit, "lets continue using the id suggest". In its first two days it got 1 yes from 8 (Chris
+Hale, in under three hours), against 1 from 39 for the template further down. Every new first message
+is this shape. The template below is kept as history and for the slot rules that still apply.
+
+```
+Hi [name], [company] looks cool!
+
+However, your [website, social media or the page] [what you saw, one or two sentences, each 30 words max]. [what it likely costs them, worded as likely, probably or usually].
+
+I'd suggest [the project, specific, the thing that fixes block two].
+
+At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of [the thing]?
+```
+
+- Five blocks, 45 to 115 words, one exclamation mark, in block one.
+- **"I'd suggest" is the line that works.** It forces the project to be named in their words, the
+  corporate ordering site, the justclaims site ready for the new rules. Name the thing a stranger
+  could sketch, tied to how they make money.
+- Block four is that sentence. When the offer is an app, tool or AI workflow, use the Astra line that
+  fits from `docs/astra-company-profile.md`, still ending "for brands like Unilever, AXA, Pertamina."
+- Block five is at most 16 words.
+- In a warm chat (they answered the connect note and nothing was pitched), block one is
+  `Something I've been thinking about, [name]!` and block two opens `Your ...` (RULES section 1).
+- The full research gate, the `worth:` line at 2,500 euros or more (RULES 0E) and the `owner reply:`
+  line (RULES 0F) all apply. tools/check-drafts.py fails an OPENER shape in a file dated 2026-10-14 or
+  later, so a new first message is always tagged SKETCH.
+- After it, one plain bump and then a silent close (RULES section 1, two pitches, then close).
+
+## The template, 2026-09-22 to 2026-10-13
+
 **Raka's template, adopted as THE first message on 2026-09-22.** It replaces every earlier
 opener shape. First sent in this form to Daan Erisman at tuftuf, 2026-09-22 19:15:48Z.
 
