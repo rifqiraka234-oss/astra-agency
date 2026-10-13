@@ -1,4 +1,4 @@
-# The Garnish Collective, corporate ordering sketch. Build notes, 2026-10-13
+# The Garnish Collective, corporate ordering site, v2. Build notes, 2026-10-13
 
 Lead. Chris Hale (Christopher Colin Hale), founder and head chef, The Garnish Collective, sole director of
 THE GARNISH COLLECTIVE LTD 16179771. lemlist ctc_do7oK8f27qGMC89dA. He said "Sure Raka, would be interested in
@@ -6,267 +6,385 @@ seeing your take!" on 12 Oct 21:28 UTC to the SKETCH opener (corporate ordering 
 buffets, order and pay online, one tap reorders for regulars like Evri).
 
 NOT SENT. Nothing was sent to anyone, no lemlist write, no commit. The lead session commits and Raka sends.
+v1 (deploy 6acdcec9e1da4a850486f9ba, index sha256 98eb9eeb...1007) is in git, this folder now holds v2.
 
 ## Live
 
-- URL https://astra-garnish-prototype.netlify.app (name as briefed, it was free, Netlify's own "Not Found" at
-  05:25 UTC with https://astra-qualigraf-prototype.netlify.app returning 200 through the same path as control)
-- Netlify site id fe9f6751-04d5-48cd-8812-62f86b44c320, team 6a75917309221b32b3265992
-- Deploy id 6acdcec9e1da4a850486f9ba, state ready, published 2026-10-13 06:25:19 UTC
-- Permalink https://6acdcec9e1da4a850486f9ba--astra-garnish-prototype.netlify.app
-- Access controls, requiresSSOTeamLogin false, requiresPassword false (read back from get-project after deploy,
-  the project was created with SSO on for all deploys and it was switched off before the deploy)
-- sha256 index.html 98eb9eeb116fd74e4793c9da68b0617048db4ac89570d6a4d8a8dfc3244d1007 (90,183 bytes)
-- Deployed from a clean folder holding only index.html, img/, fonts/ and netlify.toml (publish ".", no command)
+- URL https://astra-garnish-prototype.netlify.app (same site as v1, site id fe9f6751-04d5-48cd-8812-62f86b44c320,
+  team 6a75917309221b32b3265992)
+- Deploy id **6acdee06d36c44e0c4659161**, state ready, published 2026-10-13 08:35 to 08:36 UTC, current deploy.
+  Permalink https://6acdee06d36c44e0c4659161--astra-garnish-prototype.netlify.app (200).
+  (6acded528fd7878b63c3ed39 went out four minutes earlier and was replaced to correct one alt text, see QA.)
+- Access controls read back from get-project after the deploy, requiresSSOTeamLogin false, requiresPassword false.
+- sha256 index.html **b65211cca6c3c7e7a45e7655350297a065deac87d9a72fa6847a03c696fec72a** (104,783 bytes)
+- Deployed from a clean folder holding only index.html, img/, fonts/ and netlify.toml (publish ".", no command).
 
-## What the site does
+## The reanalysis (agreed with Raka before the rebuild)
 
-1. Set menus. Three tabs, Bags & Boxes, Buffets and Christmas 2026. Each menu card shows the price a head, the
-   minimum and a tag saying whether the price is an example or from his brochure. Picking a card opens the dish
-   list, with every dish tagged "Chris's dish" (named by him somewhere, source below) or "Example".
-2. Order. Headcount and vegetarian, vegan, gluten free and dairy free counts with steppers, drawn live as a tray
-   of boxes (box menus) or a table with guests around it (buffets). Date chips that only offer dates the lead time
-   allows (UK time, weekends and England and Wales bank holidays skipped), or any date in a date field with a
-   reason when it's refused. Delivery or set up time. Address with a postcode check that prices delivery locally
-   and says "Chris confirms" outside the area.
-3. Pay. A kitchen ticket (sticky on desktop, a bottom bar and sheet on phones) totals it live. Checkout by card
-   (a demo with no card fields) or invoice to the account with an optional purchase order number. Confirmation
-   stamps the ticket with his monogram and gives an order reference.
-4. Reorder. Every order can be saved as a usual (browser storage only). The "Your usual" section shows a demo
-   account, "Your Company Ltd", with three example saved orders and the visitor's own, and one tap puts the order
-   back on the ticket for the next date that matches its usual weekday and time. Example invoices sit below.
-5. Story and proof around it. The office day (two ONS numbers, a chart), the kitchen (his sustainability lines),
-   the Evri quote word for word, and the made to measure lines (canapés, Installed Edible Displays, Tailored Event
-   Service, Bar Hire) linking to his real enquiry page.
+v1 worked but read like a SaaS checkout. A sticky "Ticket £162.00" pill, a monospace receipt following you down the
+page, a four item feature strip, an invoices table, a demo dashboard and EXAMPLE tags on nearly every line. Its story
+was office logistics (an ONS hybrid working chart), so Chris, his food and the feeling of the occasion came second,
+when his own site leads with "a luxury events and catering company", "led by MasterChef finalist Chris Hale" who has
+cooked "for royalty, world-class athletes, and A-list celebrities". The order was a long form in five blocks, and the
+look was flat green, Poppins, Cormorant and DM Mono in a generic layout.
 
-## Teardown, rendered and looked at (desktop 1440 and phone 390, 05:48 to 06:01 UTC)
+v2 keeps the goal (an office manager or EA orders chef made catering online, and a regular reorders in one tap) and
+earns it differently. The page is an invitation from Chris's kitchen, read top to bottom like an evening, and the
+order is the reply card. Dropped from v1, the ONS chart and all stats, the feature strip, the sticky cart, the
+receipt, the invoices table, the dashboard, Poppins and DM Mono, the tag soup. Kept, v1's working date, lead time,
+minimum and postcode logic, rewritten under a reply card, and v1's verified facts, dishes and images.
 
-17 rendered and usable, out of 23 attempted.
+## The flow, one line per section
 
-1. ezCater (ezcater.com). Address first, then category chips (Breakfast, Sandwiches, Individual packaging, Gluten
-   free) and "Perfect for team lunch" rails. The delivery address is the very first question.
-2. CaterCow (catercow.com). Names the two serving styles up front, family style or individually boxed, and offers
-   group ordering where each person's meal arrives labelled with their name. Review proof beside the hero.
-3. Feedr sandwich platters (feedr.co/en-gb/corporate-catering/sandwich-platters). One page per category with a
-   three step how it works and client logos. (Feedr's root is a country picker, not counted.)
-4. Just Eat for Business (citypantry.com redirects here). Postcode box in the hero, an "options for every diet"
-   chip row, popular dishes grid.
-5. Grubhub for Business (grubhub.com/corporate). Sells budgets and allowances to the employer, not the dish.
-6. Deliveroo for Work (deliveroo.co.uk/business). Allowances, and "all bundled into a single monthly invoice" as
-   a selling point. Invoicing matters to corporate buyers.
-7. itsu office catering in Leeds (itsu.com/catering/office-catering-in-leeds). States the rule in the first
-   paragraph, order by 6pm for next day, minimum £60. Platter cards say what's in them.
-8. itsu office catering in London. Same template, so the ordering rules read the same in every city.
-9. EAT Club (eatclub.com). Individually packaged meals and scale counters (meals, companies, cities).
-10. Fooda (fooda.com). A workplace programme of pop up restaurants, app screens, review badges.
-11. Great Food at Leeds (gfal.leeds.ac.uk/delivered-food). The Yorkshire baseline, PDF menus and orders by email
-    with two full working days' notice.
-12. PAUL UK catering (paul-uk.com/catering). The cleanest grid, photo, "Serves 6 to 10", a fixed price and a basket
-    button on every card, and "Order by 12pm for next day" in the top strip.
-13. Ottolenghi catering (ottolenghi.co.uk/catering). Chef led and editorial, photography first, packages, then an
-    ordering platform for office orders.
-14. LEON Feed Your Team (leon.co/feedyourteam). Minimum spend stated up front, prices match the restaurant,
-    platters marked coming soon.
-15. GAIL's (order.gailsbread.co.uk). Seasonal story first, ordering second.
-16. CaterSpot (caterspot.sg). Hero chips for "Pay by invoice" and "Group order", a food safety badge, a delivery
-    location box.
-17. Wenzel's (wenzels.co.uk). "Order before 3pm today for tomorrow's lunch" in the hero, platter carousel.
+1. **The invitation.** His plated food full bleed in a stepped gold frame, his wordmark under a sunburst, "Chef made
+   catering for the office, ordered online.", one button to the menus, a live cut off line, a green wax seal with his
+   TGC monogram pressing in at the frame's foot.
+2. **The host.** Chris Hale, founder, head chef and MasterChef UK quarter finalist, his own claims (royalty, world
+   class athletes, A list celebrities), an arched photo of his plated desserts and a tilted calling card.
+3. **The larder.** "Nothing is forced, except the Rhubarb." in gold, his sustainability commitment as six drawn
+   items (allotment, beehives, local suppliers, composting, pickling and his carrot top pesto, nose to tail), two
+   framed photos of his food.
+4. **The bill of fare.** Three printed menu cards (Bags & Boxes, Buffets, a wide Christmas 2026 card) with dotted
+   leaders to the price, his dishes in plain type and example contents in italics, his "No boxes. No set menus. Just
+   Christmas, your way." as the frame for every menu being a starting point.
+5. **The reply card.** Three steps (I Choose a card, II Reply, III Seal it). One card that reads as a sentence,
+   "Please prepare the [menu] for [12] guests, on [date], delivered by [time]. Of them [V, VE, GF, DF]. Bring it to
+   [company, street, town postcode]. Yours, [name], and kindly reply to [email]." The bill sits on the card. Settle it
+   by card or on account with an optional PO, then "Seal and send" stamps the seal and opens the confirmation.
+6. **The usual.** One calling card ("Your usual", the demo account or the visitor's own kept order), one button,
+   "Send it again for Thursday 15 October", and "Change it first".
+7. **Said of us.** The Evri words, verbatim, as a pinked edged press clipping, name and role as on his About page.
+8. **Grander occasions.** Canapés, Installed Edible Displays, Tailored Event Service, Bar Hire in arched frames,
+   each to his enquiry form, the Christmas canapé party and three course dinner as priced to order, and a "Write to
+   Chris" card with his phone, email and the 24 hour reply from his own enquiry page.
+9. **The close.** A gold sunburst with his monogram as a medallion, "with compliments", his own line "Because good
+   food has a way of bringing people together.", his contacts, wordmark, and the concept line with the footnote.
 
-Not usable, and why. Pret and Planet Organic and Daylesford, the catering paths were my guesses and returned 404
-(searches found no catering page for Planet Organic or Daylesford). Social Pantry rendered without its CSS. Just
-Eat for Business direct failed at the proxy tunnel (covered by the citypantry.com redirect, which rendered).
+## The signature scene
 
-What carried over, done for a chef led caterer. The live cut off line in the hero (Wenzel's, itsu), price a head
-and minimum on every card (PAUL), dietary needs as first class counts (Just Eat, CaterCow), invoice for account
-buyers (Deliveroo, CaterSpot). What none of them showed on the page, and the build leads with, is the regular's
-usual order as a one tap reorder on the same weekday, the chef's own dishes tagged as his, and his real Christmas
-packages orderable.
+A banquet table seen from above in gold line art sits beside the reply card and is driven by it. Every guest gets a
+place setting that draws itself in (a ribboned box for box menus, plate, cutlery and glass for buffets, crackers and a
+candle garland at Christmas), dietary needs appear as paper place cards (V, VE, GF, DF) at the right seats, and the
+table lengthens and splits into more tables as the headcount rises (up to four tables, then "and N more places").
+
+## Teardown, 2026-10-13 07:35 to 08:05 UTC (RULES section 5)
+
+Method. 95 URLs queued in two passes, 89 distinct sites (five pass two entries were corrected URLs for pass one sites, and partyingredients.co.uk redirects to Searcys). Each site rendered in Chromium (proxy CA pinned) at 1440 and 390, fold plus four
+frames down the scroll, with a runtime fingerprint (words, images, videos, SVGs, WebGL, sticky elements, running
+animations, style mutations while scrolling, libraries, loaded fonts, CTA labels). Any site that walled or failed was
+re-run with every request served through a local curl_cffi fetcher (real Chrome TLS fingerprint). A second pass
+removed cookie, country and newsletter overlays. All contact sheets were looked at, then re-looked at in seven review
+sheets before writing the lines below. Scripts, JSON and shots are in the session scratch, v2/td/.
+
+**63 of 89 sites rendered and looked at, 26 not.** Fingerprint, then what it teaches this build.
+
+Caterers, UK and abroad
+1. Social Pantry (socialpantry.co.uk). EB Garamond and futura, 38 images, 12,079px long. "London's leading independent,
+   female founded and sustainable catering company" leads, the values are the hero. Desktop CSS failed through our
+   fetcher, phone render used.
+2. Create (createfood.co.uk). Alegreya Sans, sage green blocks, a rotating "Since 1993" roundel stamped on the hero
+   food shot. The stamp as brand moment.
+3. The Admirable Crichton (admirable-crichton.co.uk). Swiper carousel of plated food, black and orange blocks, "Request
+   a Quote". Busy, no single idea per screen.
+4. Dine (dine.co.uk, Leeds). Yorkshire's luxury caterer. Blue glass dessert hero, venue carousel, Muli. Generic
+   WordPress grammar under good food photography.
+5. By Word of Mouth (bywordofmouth.co.uk). Dala Floda serif, a bw/m monogram roundel over the hero film, B Corp badge.
+   Monogram over food works.
+6. Moving Venue (movingvenue.com). Black, Made Mirage display type huge and centred, "London's most experienced
+   caterer for over 40 years and counting". Typography only hero.
+7. AP&Co, Alison Price (alisonprice.co.uk). Rose header, "STYLE. TASTE. LUXURY." over one plated dish full bleed,
+   Cormorant Garamond. One plate full bleed is the strongest food hero in the set.
+8. Ampersand Events (ampersandevents.co.uk). Script logo, collage of plated food, 118 words. Thin.
+9. Searcys (searcys.co.uk, partyingredients.co.uk redirects here). Spaced caps wordmark, Christmas banqueting hall
+   hero, "Christmas is coming". Seasonal story first.
+10. Dish (foodbydish.com). "food by dish" lowercase over a hazy chef shot, Cormorant, 84 words. Mood over menu.
+11. Pinch Food Design (pinchfooddesign.com, New York). A mobile of drawn coloured shapes, WebGL, IBM Plex Mono. Art
+    direction as illustration, not photography.
+12. Peter Callahan (petercallahan.com, New York). Pink, a red monogram, "The Art of Exceptional Entertaining", canapés
+    in red cups shot from above in rows. Symmetry and repetition of food.
+13. Lenôtre (lenotre.com, Paris). Pâtisserie hero, products with prices and basket buttons. Shop grammar.
+14. Jimmy Garcia Catering (jimmygarciacatering.com). Garamond Premier and a handwritten script for headings, venue
+    photos, "Seasonal Menus" in the nav. Script used as a flourish only.
+15. Rocket (rocketfood.com). Film hero (H.264, not playable in our Chromium), "London's leading luxury caterer",
+    four image cards. Case studies of venues.
+
+Hospitality and food houses
+16. The Ritz (theritzlondon.com). 16 videos, Old Style MT, "Two Michelin Star Dining", centred serif caps. Restraint.
+17. Claridge's (maybourne.com). Sang Bleu serif, "Centuries of Enduring Artistry", one booking button, Art Deco
+    interiors photographed.
+18. The Savoy (thesavoylondon.com). GSAP, ScrollTrigger and Lenis, 24,290 style mutations while scrolling, 9 videos,
+    "Feel the glamour of it all". Motion led, a booking bar glued to the viewport.
+19. Fortnum & Mason (fortnumandmason.com). Two coats of arms either side of the wordmark, teal and pink, hampers in
+    scenes. Heritage as ornament.
+20. Bettys (bettys.co.uk). 169 images, Advent calendar hero, "Next day delivery" and "Handcrafted in our Harrogate Craft
+    Bakery since 1919" in a strip. The Yorkshire heritage line done quietly.
+21. The Wolseley (thewolseley.com). Victor Serif, "Where everyone has a story to tell", centred tracked caps, dark
+    candlelit photography. The closest tonal reference.
+22. sketch (sketch.london). WebGL floating patterned shapes on pink, 48 words. Art first, information later.
+23. Dishoom (dishoom.com). A centred quotation on near black, Cheltenham and Gill Sans, "View menus" and "Book a table".
+    Story by quote.
+24. Hawksmoor (thehawksmoor.com). URW Classico caps, gold buttons, 2,052 words, steak and Sunday roast photography.
+25. Bob Bob Ricard (bobbobricard.com). A huge Art Deco BBR monogram over the dining room, pink and blue. The single
+    best Gatsby move in the set, the monogram as architecture.
+26. Brasserie Zédel (brasseriezedel.com). Arapey and a cursive, Art Deco menu cards stacked as objects, "Menus" as a
+    stamp. Menus as printed cards.
+27. The Beaumont (thebeaumont.com). GSAP and ScrollTrigger, Siena serif, black hero, cocktail and plate photography.
+28. The Ivy Collection (ivycollection.com). Bodoni Seventy Two, a booking widget over the hero, a newsletter modal.
+29. The Connaught (maybourne.com). Felix Titling, "A place of rare belonging", a legacy section, shop section.
+30. Grantley Hall (grantleyhall.co.uk, North Yorkshire). A GH 1680 crest centred on white, gold book button, 75
+    images, wedding and rooms stories. The crest as hero.
+31. L'Enclume (lenclume.co.uk). Black film panel, Simon Rogan photographed, "connected to our farm". Farm to plate
+    story, close to his larder.
+32. The Fat Duck (thefatduck.co.uk). GSAP, a drawn "Fable Tree" Christmas menu as an illustrated card with the story
+    beside it, Cormorant. A menu as an artwork.
+33. Eleven Madison Park (elevenmadisonpark.com). One plate on white, a laurel mark, 62 words, "Book on Resy".
+34. noma (noma.dk). Reckless serif, dark green, "Copenhagen 2026", produce photographed as still life.
+35. Ruinart (ruinart.com). Saol, cream and gold, bottles in a row. Champagne palette.
+36. Nightjar (barnightjar.com). Poiret One, a speakeasy badge, dark red, "Book your table". Deco type done cheaply.
+37. Mr Fogg's (mr-foggs.com). Victorian ornament, red and cream, 222 SVGs, a "Now Open" cart illustration. Theatre.
+38. Death & Co (deathandcompany.com). Diplomata SC with a drawn cocktail glass emblem over each photograph. Emblem as
+    a constant.
+39. The Star Inn at Harome (thestaratharome.co.uk, North Yorkshire). Michelin and Yorkshire awards as badges, thatched
+    inn, "Our Menus" as three framed cards. Yorkshire luxury, menus as cards.
+40. Gleneagles (gleneagles.com). Portrait serif, a framed green "Eat & Drink" card with stepped corners. Stepped frame.
+41. Rosewood London (rosewoodhotels.com). Engravers Gothic caps, cream, gilded detail photography.
+42. Hotel Café Royal (hotelcaferoyal.com). 23 videos, "Two of the world's most renowned chefs" with portraits.
+43. Moët & Chandon (moet.com). GSAP, a soft focus bottle hero, red wordmark, "Live a moment suspended in time".
+44. Maxim's de Paris (maxims-de-paris.com). Condensed caps over Belle Époque photos, "Les prestations traiteur" with a
+    drawn mascot. The caterer arm of a legend.
+
+Storytelling, invitation and luxury brands
+45. Trudon (trudon.com). EB Garamond and a crest, candles as objects in dark rooms. Product as still life.
+46. Paperless Post (paperlesspost.com). 126 running animations, RSVP chips on an invitation card. The reply mechanic.
+47. Minted (minted.com). Wedding invitations as a grid of real cards with style roundels. Discount modal on scroll.
+48. Crane (crane.com). "Perfection in Stationery Since 1801", hands engraving a plate, "Luxurious Printing Processes".
+    Engraving as craft proof.
+49. Floris (florislondon.com). Caslon, "British family perfumers since 1730", bottles on rich red.
+50. Ralph Lauren (ralphlauren.co.uk). Spaced caps over film stills, "Fall/Holiday 2026". Spaced caps lockup.
+51. Tiffany (tiffany.co.uk). Blue, Sterling serif, Elsa Peretti heart. Colour as brand.
+52. Bridgerton on Netflix Tudum. Wisteria and lilac, an Empire line dress from behind, episodes as cards. The Regency
+    look the brief cites.
+53. Cartier (cartier.com). Film tiles, Brilliant Cut serif, panther tales. Story through film.
+54. Assouline (assouline.com). Didot caps, books as objects, "Celebrating the art of refined living".
+55. Le Petit Chef (lepetitchef.com). Projection mapped dinner, Playfair, locations as cards. Table as theatre.
+
+Corporate ordering, for what their flow does well (v1's teardown, rerun today)
+56. ezCater. Address and category chips first, rails of food. Speed of start.
+57. CaterCow. "Reliable, on time corporate catering", address search, reviews beside the hero.
+58. PAUL UK catering. Card grid with "Serves 6 to 10", price and basket per card, "Order by 12pm for next day".
+59. itsu Leeds. The rule in one sentence, order by 6pm for next day, minimum £60.
+60. Wenzel's. "Order before 3pm today for tomorrow's lunch" in the hero.
+61. Feedr sandwich platters. One page per category, three step how it works, client logos.
+62. Ottolenghi catering. Chef led and editorial, photography first, packages, an FAQ on notice and dietary needs.
+63. GAIL's. "Order by 11am for delivery on Thursday" in the top strip, seasonal story first.
+
+**Not counted, and why.** Rhubarb (rhubarb.net reset on https and 503 on plain http, the proxy reached it, the site
+didn't answer). Bubble Food (blank render both paths). Lettice (lettice.co.uk is for sale, letticeevents.co.uk behind
+Cloudflare). Mustard, Vacherin and Chester Boyd (parked domains). Harrogate Food & Drink and the first Jimmy Garcia and
+Rocket guesses (no DNS, corrected URLs then rendered). Eden Caterers, Olivier Cheng and Potel et Chabot (502 on both
+paths). The Man Behind the Curtain (domain now serves an unrelated casino page). Hodroyd Hall (502). Aesop, Perrier
+Jouët, the Met Opera Gatsby page, Hermès, Dior (bot walls on every path). Awwwards (502). Annabel's, Penhaligon's and
+Pierre Hermé desktop (blank renders). Smythson, Papier, Black Swan at Oldstead, Ladurée and Diptyque (modals covered
+the page on both passes). None of these is evidence about the site, only that we couldn't look.
+
+**What the teardown decided.** Copy the monogram as architecture (Bob Bob Ricard), the stamp as the brand moment
+(Create, Death & Co), centred spaced caps (The Wolseley, Ralph Lauren), menus as printed cards (Zédel, The Star at
+Harome, The Fat Duck), food shot from above in rows (Peter Callahan, his own brochure), one plate full bleed (Alison
+Price), the heritage line said quietly (Bettys, Crane), and the reply mechanic people know (Paperless Post). From the
+ordering leaders keep only the rules (cut off, minimum, serves) written as sentences. Refuse address box heroes,
+marketplace grids, basket tiles, sticky totals, booking bars glued to the viewport, modals and carousels.
+
+**Bench render (addition 44), against Alison Price and Create at 1440.** Thinnest, Create (one idea per screen but
+little material and a cookie bar over every frame). Most material on screen, ours (a full menu, a working order and
+a scene in the space where they show one photo and a paragraph). Template pick, none of the three, ours least of all,
+because its concept names its own furniture. Two honest weaknesses found and fixed, our hero photo was darker than
+Alison Price's (the overlay was lifted at the edges) and the reply scene opened on an empty table (it now opens on a
+lunch box for 12, the hero's own example, so the table is laid on arrival).
+
+## Art direction note (written after the teardown, before any page code, unchanged)
+
+**The idea.** The page is an evening invitation from Chris's kitchen. It opens like a card arriving under a wax seal,
+introduces the host, shows what's in the larder, lays the bill of fare on the table, and the order is the reply card
+you send back. Regulars get a calling card. Great Gatsby gives the structure (symmetry, gold line, fans, stepped
+frames, deep green and near black). Bridgerton gives the paper (cream laid stock, engraved caps, a wax seal, a little
+copperplate script). The food is his, photographed like a feast.
+
+**Palette, his colours, decided not defaulted.** Night green #00241A (his LinkedIn tiles) and #001A13 for the dark
+chapters. Brochure paper #EDE3D9 for the light chapters, his site cream for cards (#F7F2EA used for the card stock).
+His brochure ink #425852 for body on paper (6.0 to 1), logo ink #042015 for headings (13.6 to 1). Gold as foil,
+never yellow. #C9A86A for line and type on green (7.3 to 1), #E8D5A6 highlights (11.4 to 1), #9C7A43 hairlines on
+paper (decorative only), #7A5C2B for gold text on paper (4.9 to 1). Errors #8A2A1B (6.8 to 1). Saturation comes from
+his food photography, the frame stays two tone, as his brochure does. Rhythm alternates dark and light, nine chapters.
+
+**Type.** Cormorant Garamond (his brochure face) for body, menus and italic headlines. Italiana (OFL) as the Art Deco
+display face in tracked capitals. Cormorant SC 600 for engraved labels, buttons and place cards. Pinyon Script (OFL)
+for four flourishes only ("with compliments" twice, "The favour of a reply", "Your usual"). Self hosted latin subsets.
+No sans, no monospace. Digits inside Italiana headings are set in Cormorant (Italiana's old style 2 and 4 read oddly).
+
+**Motifs, gold line in SVG.** A sunburst fan crowning the hero and every chapter, stepped deco corners on every
+frame and table, arched frames for photographs, his brochure's four point sparkle, a green wax seal with his TGC
+monogram embossed in gold (his file recoloured by an SVG filter, never redrawn), laid paper texture, dotted leaders
+on the menus, a pinked press clipping.
+
+**Nomenclature.** The host, The larder, The bill of fare, The reply card, The usual, Said of us, Grander occasions.
+I Choose a card, II Reply, III Seal it. "Choose this card", "Seal and send", "Send it again", "Sealed and sent".
+Menu cards, reply card, calling card, place cards. Empty table, "The table is laid once you choose a card".
+
+**Motion.** Gold frames draw themselves once, the hero seal presses in, place settings draw in as guests are added,
+the seal stamps the reply card. Reveals from a throttled scroll check. prefers-reduced-motion stills all of it. No
+smooth scrolling. Nothing waits on an animation.
+
+**Image treatment.** His photographs only, full colour, never captioned, never tinted, framed in arches or stepped
+frames with a gold keyline. LinkedIn tiles cropped to the top of the file so his overlaid captions never show.
 
 ## Sources, with fetch times (UTC, 13 Oct 2026)
 
-- His site, tools/crawl.py at 05:38, 9 URLs (8 pages plus the bare domain), all 200, sitemap.xml 404. Every page
-  rendered full page at 1440 and 390 in Chromium 05:40 to 05:43, raw HTML curled 05:44:51. site-audit.js on
-  /corporate, render trusted (the only failed requests were Wix telemetry).
-  https://www.garnishcollective.com/ , /about-1 , /corporate , /barhire , /weddings , /celebrations , /enquire ,
-  /about-1-1
-- His LinkedIn company page https://www.linkedin.com/company/thegarnishcollective rendered 05:46:48. Posts read in
-  full, burger sliders (3d), slow cooked pork belly (5d), paella for We Are Wakefield's summer social (1w), bar
-  hire (1w), canapés (1w), Hodroyd Corporate Christmas Party (2w), Corporate Christmas Packages brochure (2w),
-  dessert (2w), private dining (2w), "Corporate buffet. Steakhouse energy." with steak (3w). 160 followers.
-- His brochure "Corporate Christmas Packages", 10 pages, a LinkedIn document post, manifest, transcript and the PDF
-  fetched 05:47 (PDF metadata, created 2026-09-22 in Canva). Page 3 "Christmas Grazing Table from £18pp",
-  page 4 "Christmas Hot Sandwich Menu from £12pp, Includes serving staff, setup, disposable plates & cutlery",
-  "Add desserts £8pp". Read in the PDF text layer and in the rendered pages.
-- ONS, Who are the hybrid workers?, 11 November 2024, curled 05:50:42.
-  https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/articles/whoarethehybridworkers/2024-11-11
-  "More than a quarter of working adults in Great Britain (28%) were hybrid working in the autumn of 2024 ...
-  data collected between 2 and 27 October." "Close to half (45%) of those in more senior occupations (shown in the
-  chart below as 'managers, directors and senior officials') followed a hybrid working model, compared with 27% of
-  all workers. That compares with just 3% of people in 'elementary occupations'" (10 April to 30 June 2024).
-- Press check on MasterChef, Hemsworth and South Elmsall Express "Chris cooks up a storm in the MasterChef kitchen
-  and makes it to the quarter-finals" and Yorkshire Evening Post (search results, 2016 series). The site uses his
-  own wording, "MasterChef UK quarter finalist".
-- Dropped. The Eurest survey (77% of workers tempted back by free food, July 2022). The Compass page returns 404 to
-  curl and to tools/fetch-walled.py, so only second hand copies exist. Not on the page.
+- His site, fetched fresh 08:15:52, home, /about-1, /about-1-1, /corporate, /barhire, /enquire, all 200. 32 claims on
+  the page string matched against that text (MasterChef quarter finalist wording, founder and head chef, royalty and
+  athletes and celebrities, the Evri quote and attribution, all six larder items, the four corporate services and
+  their wording, Hodroyd Hall, the 24 hour reply, the enquiry form fields, the phone number), 32 of 32 found, and a
+  negative control ("MasterChef UK winner", "cooked for presidents") correctly not found.
+- His LinkedIn company page, fetched 08:16, 200. "MasterChef 2016" in the tagline, "Because good food has a way of
+  bringing people together", the canapé wording ("from elegant classics to more creative, flavour-packed bites",
+  "options to suit different dietary requirements", "drinks receptions, private parties"), "beautifully cooked
+  steak", "cooked and served fresh", "slow-cooked pork belly", all found.
+- His brochure "Corporate Christmas Packages" (LinkedIn document), re-fetched 07:38:51, byte identical to v1's copy,
+  sha256 7dd122bb...388e. Text layer checked for every Christmas dish, "from £12pp", "from £18pp", "£8pp", "Includes
+  serving staff, setup, disposable plates & cutlery", "No boxes. No set menus. Just Christmas, your way.", "Rhubarb &
+  custard millefeuille", "Plated or Feasting Style", all found.
+- Companies House and the 2016 press for MasterChef as recorded in v1's notes (not re-fetched, nothing new rests on
+  them beyond what his own site and LinkedIn say).
+- Bank holidays, England and Wales, gov.uk dates as in v1 (25 and 28 Dec 2026, 1 Jan, 26 and 29 Mar, 3 and 31 May,
+  30 Aug, 27 and 28 Dec 2027).
 
-## Brand, from his own files
+## Images and fonts
 
-- Logo. The TGC monogram and the spaced wordmark are his Wix uploads, served at size by Wix itself (the monogram
-  through Wix's crop step, since the file has wide transparent padding). Shown in his ink on light, and in cream
-  on dark with a CSS filter, as his LinkedIn tiles show it. Never redrawn.
-- Colours. From his site CSS, #275F49, #183E30, #8DA99B, #C0CDC4, #F3F2ED. Logo ink #042015. LinkedIn tile green
-  #00241A. Brochure paper #EDE3D9 and ink #425852.
-- Type. Poppins (his site) for text, Cormorant Garamond (his brochure and LinkedIn tiles) for display. DM Mono
-  only on the kitchen ticket, as our grammar. All OFL, self hosted latin subsets.
+Every file, hash and source is in `image-sources.txt`. Eight images reused from v1 (plated, dessertrow, emblem,
+sliders, steak, paella, bar, private dining) and his wordmark were re-fetched from source at 08:35 and matched the
+deployed bytes, 9 of 9. Four new photos are embedded images from his own brochure, resized only, and were zoomed at
+full size for other brands' text, faces or logos, none found. Not used from the brochure, the bar photo (a menu card
+in it) and the hands photo. v1's wordmark file was a Wix "fill" rendition that cropped the left arm of the T. v2
+uses his original upload, untransformed.
 
-## Images, all his, every one byte matched to its source at 06:24:25 UTC (12 of 12) and live after deploy
+No photo is captioned. Alt text describes only what's visible. Dish photos sit only next to the dish he posted them as
+(sliders with the hot and cold buffet, steak with the steakhouse buffet, paella with paella). The plated desserts, the
+pork belly, the canapés and the plates of sliced meat are his brochure's own photos, shown without a dish name.
 
-| File | Source | sha256 |
-|---|---|---|
-| plated.jpg | Wix rendition of his upload bb6496_e5781b70 (homepage and weddings page) | `1eb8cfeee871fd63ac445d604468267d09adbdb34e359fe747cd634b0bbe3de3` |
-| dessertrow.jpg | Wix rendition of his upload bb6496_b4bd1822 (corporate and weddings galleries) | `70a0e3dc49b90632d3c04832c708c07aa7febd55881cfb97ec68df31d6063145` |
-| emblem.png | Wix crop rendition of bb6496_280e3709, TGC LOGO V2 - Emblem.png | `712f3abcce020921a3603ab7ab472fed913323da560fbd4830902c1d3292874d` |
-| wordmark.png | Wix rendition of bb6496_23912fc4, TGC LOGO V2 - Text.png | `9d040d8873ad41f11daaf3fec0f4e1ce45bc39ae3bcc3b6c8678585e8ae433b5` |
-| li_sliders.jpg | LinkedIn post, burger sliders | `51c9078c52cf68dda3b66eb74c2b7d64c7fed80eab267051de5f445b6944b3e4` |
-| li_porkbelly.jpg | LinkedIn post, slow cooked pork belly | `ec6d6cc5140dd2951a7ac3b57941bf779078df438b374f29658e491649e34128` |
-| li_paella.jpg | LinkedIn post, paella | `8e3c93e2370088b939425858fb11bb603e7ba377efe0f8f1180c1b741d12b4cb` |
-| li_bar.jpg | LinkedIn post, bar hire | `0beb4a5d9c50abb3d17225024de6928ef2df9fdc1a74fdc595ccc6838f23352b` |
-| li_canapes.jpg | LinkedIn post, canapés | `5f3a6f063711fc21cd492f51f890419de1d0c27b95e3509e3b4be92f5da2eb22` |
-| li_dessert.jpg | LinkedIn post, dessert (same photo his brochure puts next to Add desserts) | `1b8377e1bcda4d2f00418ed66b6b4a0abe5d16c33933051a63a821c63de5b12b` |
-| li_privatedining.jpg | LinkedIn post, private dining | `4acfcc5c192605d6be783b3e07713e76f7422f6928194d86ec9b92e391cc0b05` |
-| li_steak.jpg | LinkedIn post, Corporate buffet. Steakhouse energy. | `0bb9162650333531ca03ec5ead9dfda509571c231467bfeaf98a49d871df4d76` |
+## Every number and figure on the page
 
-Full hashes and full source URLs are in `image-sources.txt` next to this file.
+His own, cited on the page as from his 2026 brochure
+- Christmas hot sandwich menu from £12 a head, desserts £8 a head, "serving staff, set up, disposable plates and
+  cutlery included". Christmas grazing table from £18 a head. All Christmas dish names.
+- 24 hour reply (his enquiry page). Phone 07899 767279 and feasting@garnishcollective.com (his footer and brochure).
+- MasterChef UK quarter finalist, 2016 (his site and LinkedIn tagline).
 
-- His LinkedIn tiles carry his caption over the bottom third. The page shows his exact file and crops it with CSS
-  to the top 62.5% (16:10 from the top), so no caption shows and no file was edited. The lowest caption starts at
-  70.7% (steak), measured.
-- No photo is captioned. Alt text describes only what's visible. Dish photos sit only next to the dish he posted
-  them as (sliders on the hot and cold buffet, steak on the steakhouse buffet, paella on paella, dessert on the
-  Christmas desserts add on).
-- Left out on purpose. Every lunch box photo on his corporate page carries another company's brand (Netflix,
-  Nivea, Twitter, Laura Ashley, M&Co, Bun Bun with "Taichung" on the box, Grape & Fig), as do the bar and display
-  photos (Johnnie Walker, Bulgari, LinkedIn, Crumbl, Yellowglen). Showing them implies relationships nobody has
-  verified, and several look like other caterers' work. Also left out, Wix stock media (11062b_ ids), the "medieval
-  4" banquet that looks like a film set, the grazing table on rugs (unverified), Hodroyd Hall, and every photo
-  where a person's face is the subject.
+EXAMPLE figures, marked † on the page, footnoted "† Example prices, minimums, contents, lead times, delivery charges
+and invoice terms, written for this concept for Chris to set."
+- Breakfast box £9.50, from 6. Lunch box £13.50, from 6. Banquet style package £16.50, from 10.
+- Hot and cold buffet £21, from 15. Steakhouse buffet £27, from 15. Paella for the team £15, from 20.
+- Christmas minimums 10 (hot sandwich) and 15 (grazing table). His prices, our minimums.
+- Order by 2pm, the working day before for boxes and packages, two working days before for buffets, five working days'
+  notice for Christmas, Christmas dates 16 November to 23 December 2026, Monday to Friday, bank holidays skipped.
+- Delivery local to WF, LS, BD, HD, HX and S70 to S75 postcodes, free over £150, otherwise £12. Buffet set up
+  included locally. Grazing table set up, Chris confirms. Outside the area, Chris confirms.
+- On account, 30 days. Delivery and set up times 7.30am to 6pm in half hours.
+- The reply card opens on a lunch box for 12, £162.00.
+- Example box and buffet contents, in italics on the menus (pastry, yoghurt and granola, fruit and juice, a filled roll
+  or flatbread, salads, sharing boards, breads and dips, roast potatoes, bread and green salad, something sweet).
+- Demo account "Your Company Ltd" (labelled "Demo account, a made up company"), Thursday team lunch, 14 lunch boxes, 2
+  vegetarian, 1 vegan, 1 gluten free, delivered by 12.30pm Thursdays, Floor 3, 1 Example Street, Wakefield WF1 2AB,
+  £189.00 (14 x 13.50), on account, note "Ask at reception".
+- Order references "Order TGC" plus four random digits.
 
-## Every number on the page, and where it comes from
+## QA (local over http, and live after deploy)
 
-His own, cited on the page as from the 2026 brochure
-- Christmas hot sandwich menu from £12 a head, desserts £8 a head, "Includes serving staff, setup, disposable plates
-  & cutlery".
-- Christmas grazing table from £18 a head.
-- Dish names on both Christmas menus, the canapé list and the three course dinner list.
-
-Public data, cited on the page with source and date
-- 28% of working adults in Great Britain hybrid working, autumn 2024 (data 2 to 27 October), ONS 11 Nov 2024.
-- 45% managers, directors and senior officials, 27% all workers, 3% elementary occupations, 10 April to 30 June
-  2024, same ONS article.
-
-EXAMPLE figures, labelled on the page, for Chris to replace
-- Breakfast box £9.50 a head, example minimum 6.
-- Lunch box £13.50 a head, example minimum 6.
-- Banquet style package £16.50 a head, example minimum 10.
-- Hot and cold buffet £21 a head, example minimum 15.
-- Steakhouse buffet £27 a head, example minimum 15.
-- Paella for the team £15 a head, example minimum 20.
-- Christmas menus, example minimums 10 (hot sandwich) and 15 (grazing table). His prices, our minimums.
-- Cut off 2pm, next working day for boxes and sharing packages, two working days for buffets, five working days
-  for Christmas menus, Christmas dates 16 November to 23 December 2026, deliveries Monday to Friday.
-- Delivery for boxes, local postcode areas WF, LS, BD, HD, HX and S70 to S75, free from £150, otherwise £12.
-  Outside them, "Chris confirms". Buffet set up included locally. Grazing table set up "to confirm".
-- Invoice terms 30 days.
-- Delivery and set up times 7.30am to 6pm in half hours.
-- Demo account "Your Company Ltd" (a made up company, labelled), address "Floor 3, 1 Example Street, Wakefield,
-  WF1 2AB", saved orders Thursday team lunch (14 lunch boxes, 2 vegetarian, 1 vegan, 1 gluten free, 12.30pm),
-  Board breakfast (8 breakfast boxes, 1 vegetarian, 8.30am), Quarterly team day (hot and cold buffet for 40, 6
-  vegetarian, 2 vegan, 3 gluten free, 12pm).
-- Example invoices INV 1187 £189.00 (8 Oct), INV 1184 £88.00 (6 Oct), INV 1176 £840.00 (25 Sep, due 25 Oct),
-  worked out from the example prices (14 x 13.50, 8 x 9.50 + 12, 40 x 21).
-- Order references "TGC" plus four random digits.
-
-Dishes. On box and buffet menus, every dish he doesn't name is tagged "Example" on the page. His named dishes,
-tagged "Chris's dish", are burger sliders, slow cooked pork belly, steak (his words "beautifully cooked steak"),
-paella "cooked and served fresh", and all Christmas dishes. Hyphens and colons were dropped from his dish names
-(for example "Treacle glazed ham", "Smoked salmon blinis, dill crème fraîche, lemon zest, capers").
-
-## QA results
-
-- Cold load, nothing forced, 1440 and 390, local and live. 0 page errors, 0 console errors, 0 failed requests,
-  13 of 13 reveals fired, 14 of 14 images decoded on load, every one of the 12 image files decoded across all three
-  tabs, scrollWidth equals viewport (1440 and 390), no element overflowing outside a scroller.
-- Tool exercised with a fixed UK clock (Tue 13 Oct 10am) and real inputs, values read back from the page.
-  - A. 14 lunch boxes, 2 vegetarian, 1 vegan, 1 gluten free, WF1 2AB, card. Ticket £189.00, delivery free, tray
-    drew 14 boxes, confirmation shown, saved as a usual, read back from localStorage after a reload, reorder put it
-    back for Thursday 15 October 12.30pm with address and dietary counts restored.
-  - B. Steakhouse buffet for 30, M1 1AE, invoice with a purchase order. £810.00 plus travel to confirm, label
-    "Set up by", Saturday refused ("Deliveries run Monday to Friday"), too soon date refused.
-  - C. Christmas hot sandwich menu for 25 with desserts, LS1 4AP. From £500.00 (25 x 12 + 25 x 8), 2 November
-    refused, first offered date Monday 16 November.
-  - Also. 9 lunch boxes to S70 2AB, £133.50 (121.50 + 12), both widths. Paella for 22 to WF2 9AB placed on the LIVE
-    site, £330.00. Validation with an empty form lists every missing field and blocks the order.
-  - Clock tests. 3.30pm Tuesday gives Thursday, Friday 10am gives Monday, Saturday gives Tuesday, 24 Dec 10am gives
-    Tuesday 29 December (25 and 28 Dec bank holidays skipped), Christmas menus show "orders have closed" after 23 Dec.
-- Screenshots at 1440 and 390 of every section, the three tabs, the guests step, the ticket sheet and the
-  confirmation, all looked at. Fixed along the way, a distorted wordmark, a LinkedIn caption showing through an
-  oversized photo, the stamp sitting on the first order line, an overflowing ticket line, clipped tabs at 390.
-- Copy. Every visible string captured across 467 lines in every state (all menus, errors, postcodes, dialog,
-  toasts, alt text, placeholders). 0 colons, 0 hyphens or dashes outside URLs and emails. 1 exclamation mark,
-  inside the Evri quote. No country other than the UK (Great Britain, from the ONS title). Contractions present, 11 distinct
-  in our copy (can't, date's, delivery's, don't, he'll, it's, set up's, that's, there's, you'd, you're).
-- NO-AI-SLOP section 8, run verbatim on the HTML and on the visible text, positive control fired on every check.
-  Visible text, 0 banned words, 0 hedges, 0 paired adjectives, 0 uncontracted verbs, 0 em dashes, 0 emoji. One
-  banned phrase, "when it comes to", inside Stacey Dockerty's quote, kept because it's her words. HTML file hits
-  are the CSS and JS `transform` property and JS `!` operators, not copy. Prose sentence lengths 2 to 30 words,
-  stdev 6.8.
-- Build rules. No inline grid styles, every grid minmax(0,1fr), no scroll-behavior, favicon (his monogram),
-  charset utf-8, both script blocks parse in the local file and in the downloaded live file.
-- Live. 200, title "Corporate ordering | The Garnish Collective", live HTML byte identical to the deployed file
-  (same sha256, no Netlify injection), visible text identical to local at both widths, 20 of 20 assets fetched live
-  and byte matched (12 images, 8 fonts), netlify.toml not served (404), SSO and password off.
+- Cold load, nothing forced, at 1440, 1080, 768, 420, 390 and 360 locally and at 1440 and 390 live. 0 page errors,
+  0 console errors or warnings, 0 failed requests, 0 responses over 400, 20 of 20 reveals fired, 11 of 11 gold frames
+  drew (the 12th sits in the closed dialog), 17 of 17 images decoded, all five fonts loaded, scrollWidth equals the
+  viewport at every width, no element outside the viewport, scroll-behavior auto.
+- Order exercised end to end through the UI with a fixed UK clock (Tue 13 Oct 10am), at 1440 and 390 locally and at
+  1440 and 390 live, values read back from the page.
+  - Boxes. 14 lunch boxes, 2 vegetarian, 1 vegan, 1 gluten free, WF1 2AB, card. "Fourteen lunch boxes at £13.50 each,
+    £189.00", delivery free, £189.00, 14 settings and 4 place cards drawn, sealed, confirmation shown, kept as usual.
+  - Small box order. 9 lunch boxes to S70 2AB, £121.50 plus £12 delivery, £133.50.
+  - Buffet with dietary needs, out of area, on account. Steakhouse buffet for 30, 6 V, 2 VE, 3 GF, M1 1AE, PO 4471,
+    a nut allergy note. £810.00 "plus the part Chris confirms", 30 settings and 11 place cards, confirmation reads
+    "On account, purchase order 4471".
+  - Christmas. Hot sandwich menu for 25 with desserts, LS1 4AP, card. First date offered Monday 16 November. "25
+    guests from £12.00 a head, £300.00", "Desserts for 25 at £8.00 a head, £200.00", set up included, from £500.00.
+  - Grazing table for 25, from £450.00, "Set up, Chris confirms".
+  - One tap reorder. The visitor's kept usual sent again for Monday 16 November, and it survived a reload. The demo
+    account sent again for Thursday 15 October, on account, £189.00.
+  - Validation. With the card cleared, sealing lists "Choose a card first.", "Choose a time.", the missing address
+    parts and "Add your name and an email we can reply to.", and blocks the seal.
+  - Clock tests. 3.30pm Tuesday gives Thursday 15 Oct, Friday 10am gives Monday 19 Oct, Saturday gives Tuesday 20 Oct,
+    24 Dec 10am gives Tuesday 29 Dec (25 and 28 Dec skipped), 18 Dec closes Christmas ("Christmas 2026 orders have
+    closed here. Write to Chris about anything later."). A bug found and fixed here, the closed state had said the
+    window ran to 23 December and then named 29 December as the first date.
+- Screenshots of every section at 1440 and 390 in four rounds, all looked at. Fixed along the way, the fan symbol
+  rendering as black half circles, the header wordmark colliding with the nav, his cropped wordmark file, a near
+  black hero, menu names wrapping beside their prices, Italiana's old style digits, a dead drop cap and stray quote
+  mark in the clipping, the larder photo upscaled, the phone address fields leaving lone commas, the confirmation
+  dialog opening scrolled to its foot on phones, the stamp staying on after a new card was chosen, an unbalanced
+  three column bill of fare (now two cards plus a wide Christmas card), the empty table on arrival.
+- Copy, every visible string captured across all states (all eight menus, five postcodes, errors, dialogs, toasts,
+  the usual in both forms, three clocks), 579 lines. 0 colons, 0 dash characters outside URLs and emails (stepper
+  minus glyphs drawn as SVG), 1 exclamation mark, inside the Evri quote. No country named. "finalist" only ever as
+  "quarter finalist". Detector controls fired on "a: b", "a - b", "a — b", "wow!" and "Bali". Contractions in our
+  copy include don't, isn't, it's, he'll, you'd, delivery's, set up's, week's. Concept line at the top, in the
+  confirmation and in the footer.
+- NO-AI-SLOP section 8, run verbatim on the visible text and the HTML. 0 banned words in the copy (HTML hits are the
+  CSS transform property), one banned phrase, "when it comes to", inside Stacey Dockerty's quote, kept as her words.
+  0 hedges, 0 paired adjectives, 0 uncontracted verbs, 0 em dashes, 0 emoji (control fired). Authored prose, 102
+  sentences, 2 to 34 words.
+- Build rules. No inline grid styles, every grid track minmax(0,1fr), no scroll-behavior smooth, favicon (his
+  monogram), charset utf-8, both script blocks parse in the local file and in the downloaded live file, a noscript
+  line on the reply card giving his phone and email.
+- Live. 200, title "Order chef made catering | The Garnish Collective", live HTML byte identical to the deployed file
+  and to this folder's index.html (sha256 b65211cc...c72a, no Netlify injection), 18 of 18 assets fetched live and
+  byte matched, visible text in every state identical to local apart from the random order references,
+  netlify.toml not served (404), SSO and password off. Control host astra-qualigraf-prototype returned 200 through the
+  same path.
+- One correction after the first deploy. Zooming the brochure photos showed I'd written "sliced beef" in an alt text
+  for a meat I can't identify, changed to "sliced seared meat" and redeployed (6acdee06...).
 
 ## Must not ship as is
 
-1. Every price on the box and buffet menus, every minimum, the cut off, lead times, delivery charges and areas,
-   set up inclusions, the Christmas date window, the invoice terms and the time slots. All examples.
-2. Every dish tagged "Example" on the box and buffet menus. Chris writes the real ones.
+1. Every † figure, prices, minimums, cut off, lead times, the Christmas window, delivery areas and charges, set up
+   inclusions, invoice terms and time slots. All examples for Chris to set.
+2. Every italic line on the box and buffet menus. Chris writes the real contents.
 3. Menu names "Breakfast box", "Lunch box", "Hot and cold buffet", "Steakhouse buffet", "Paella for the team" are
    ours, built from his product lines and posts.
-4. The demo account, its saved orders, address and invoices. Made up.
-5. Payment is a demo. A real build needs a payment provider, an order inbox or kitchen view, confirmation emails,
-   VAT treatment (hot food and catering are standard rated, his accountant decides how prices show), allergen
-   handling and terms.
-6. Saved usuals live in the visitor's browser only. A real account system is needed.
-7. "noindex" is set in the head, take it off at launch.
-8. Process lines that are our assumption, "A confirmation would go to ... and the order would land on the
-   kitchen's list", and "Chris confirms the delivery charge". Check they match how he works.
-9. The phone number 07899 767279 and feasting@garnishcollective.com are his, from his site footer and brochure.
-   Confirm he wants them on an ordering page.
+4. The demo account, its order and address. Made up.
+5. Payment is a demo, no payment provider, no order inbox, no confirmation email, no VAT treatment, no allergen
+   statement or terms. A real build needs all of them.
+6. A kept usual lives in the visitor's browser only. A real account system is needed.
+7. "noindex" in the head, take it off at launch.
+8. Process lines that are our assumption, "In the live site this goes straight to the kitchen", "Chris replies if
+   anything needs a word", "Chris confirms the delivery or travel", and the reply card opening on a lunch box for 12.
+9. The phone number and email are his, from his site and brochure. Confirm he wants them on an ordering page.
+10. "Every menu is where Chris starts, not where he stops." and "These don't fit on a card" are our lines, written to
+    honour his brochure's "No boxes. No set menus." Check he's happy with them.
 
 ## For Raka, before the delivery message
 
-- His Christmas brochure says "No boxes. No set menus. Just Christmas, your way." on page 2, then prints priced
-  menus. The page treats every Christmas menu as a starting point ("tell Chris what to change in the notes") and
-  keeps canapés and the three course dinner as "Ask Chris for a price". Worth saying in the delivery message that
-  the set menus are starting points, so it doesn't read as arguing with his own brochure.
-- Two things in his own brochure he may want to know about, not for the message. The three course dinner price
-  reads "From E45pp" in the PDF itself, and the canapé price line reads "(Canapes from £per canape, per, person)",
-  an unfilled template. Neither is shown on the page.
-- His site's Facebook and Instagram icons (Bar Hire and Enquire pages) link to facebook.com/wix and
-  instagram.com/wix, unconfigured placeholders. Not used, not mentioned on the page.
-- His site calls him both "MasterChef finalist" and "former MasterChef UK quarter-finalist". The page uses
-  quarter finalist, which press from 2016 confirms.
-- The site's "20 years Industry Experience" is a company stat (LinkedIn says the team "combines over 20 years").
-  It's not attributed to Chris on the page.
+- The page now reads as Chris's own site, an invitation and a reply card, with no SaaS furniture. Say what it does in
+  the delivery message, choose a menu card, reply in one card, see the price on it, pay by card or on account with a
+  PO, and send the usual again in one tap.
+- His brochure says "No boxes. No set menus." and then prints menus. The page uses that line as the frame for every
+  menu being a starting point.
 - The Evri quote stays word for word, so it keeps "when it comes to" and the one exclamation mark.
+- His site says both "MasterChef finalist" and "former MasterChef UK quarter-finalist". The page only uses quarter
+  finalist.
+- Two things in his brochure he may want to know, not for the message. The three course dinner price reads "From
+  E45pp" and the canapé line reads "(Canapes from £per canape, per, person)", an unfilled template. Neither is shown.
 
 ## Couldn't verify
 
-- Whether the LinkedIn post photos and his site photos were shot at his own events. They're his uploads and the
-  dishes match his captions, and nothing on the page claims more than that.
-- Whether the plated beef and the dessert row on his site are his own dishes (high resolution camera originals
-  with his file names, uncaptioned on the page).
-- Real lead times, prices, minimums or delivery area. His site and posts publish none outside the Christmas
-  brochure.
-- The brochure's prices are "from" prices dated September 2026. Whether they still hold.
+- Whether his LinkedIn, site and brochure photos were all shot at his own events. They're his uploads and his
+  brochure's, uncaptioned on the page, and nothing claims more than that.
+- What the meat on the brochure's page 8 plates is, so the page doesn't name it.
+- Real prices, minimums, lead times or delivery area. He publishes none outside the Christmas brochure.
+- Whether the brochure's September 2026 "from" prices still hold.
+- The 63 teardown renders are of what our browser could load today. 26 of the 89 sites could not be looked at, listed
+  above, and nothing is concluded about them.
