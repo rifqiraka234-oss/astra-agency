@@ -1,4 +1,5 @@
-# Draft, 2026-10-13. Ulrich Steppler, CHS Claims Handling Solutions. NOT SENT, waiting on Raka's word.
+<!-- GATE ARCHIVED -->
+# Draft, 2026-10-13. Ulrich Steppler, CHS Claims Handling Solutions. SENT 2026-10-13 07:56:59 UTC on Raka's 'send the one you draft', activity act_NbQ76jw8LMtq4rP8A, byte for byte, confirmed in the re-pulled thread. His reply was in lemlist before the send, act_4yLt8DyFZtzJyujqL.
 
 His reply, as Raka pasted it from LinkedIn on 2026-10-13, sent 9:44 AM Raka's time, which is 07:44 UTC (Raka's 6:41 PM matches our 16:41 UTC send, so his clock is UTC+2).
 
