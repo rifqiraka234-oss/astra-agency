@@ -1,7 +1,9 @@
-<!-- SKETCH drafts, 2026-10-13 ~18:50 UTC. Raka on the three "no angle" sites, after seeing their screenshots (state/look_2026-10-13/), "theyre all like shitty website, can be improved or modernised. modernised is the word/angle". So all three get the modernised website angle, each block two naming what a visitor actually sees on their own homepage, rechecked live. RULES 4A now says judge the look against the best, never against "it works". NOTHING SENT. Re pull each thread with the control and reopen every claim in the minute before any send. -->
+<!-- SKETCH drafts, 2026-10-13 ~18:50 UTC. Raka on the three "no angle" sites, after seeing their screenshots (state/look_2026-10-13/), "theyre all like shitty website, can be improved or modernised. modernised is the word/angle". So all three get the modernised website angle, each block two naming what a visitor actually sees on their own homepage, rechecked live. RULES 4A now says judge the look against the best, never against "it works". Wulf and Wisteria SENT 18:58 UTC, Kevin NOT SENT. Re pull each thread with the control and reopen every claim in the minute before any send. -->
 # SKETCH drafts, 2026-10-13, modernised websites. Sandro Wulf, Osman Zaman, Kevin Hanson
 
 ### Sandro Wulf, Rechtsanwälte Wulf & Collegen, ctc_YF6GhP26nDSvRyPZR
+
+> SENT 2026-10-13 18:58:01 UTC on Raka's 'send wulf and wisteria', act_Y8it7pv5coLfzvbMW, one copy, 601 characters byte for byte from this file. Before the send, 18:57 UTC, thread 0 items with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly search one contact (connect note only), lead record one campaign, state files no SENT row, every fact reopened live (4 paragraphs before the first button, 6 practice boxes, '4,88 / 5' and '1.234 Mandantenbewertungen', 'bundesweite Beratung' on the Arbeitgeber page). Do not send again.
 
 ```gate
 lead: Sandro Wulf, Rechtsanwalt since 1997 and Fachanwalt für Arbeitsrecht since 2004 per https://kanzlei-wulf.de/ra-sandro-wulf/ , named "Verantwortlich im Sinne von § 18 MStV: Rechtsanwalt Sandro Wulf" in https://kanzlei-wulf.de/impressum/ . lemlist jobTitle "Unternehmensinhaber", tagline "Arbeitsrecht für Arbeitgeber | Fachanwalt für Arbeitsrecht in Magdeburg & Stendal | Kündigungsmanagement". Six lawyers, three front office, three back office including "Heidi Wulf Kanzleimanagerin" per https://kanzlei-wulf.de/unser-team-fuer-sie/ . ctc_YF6GhP26nDSvRyPZR, leadId lea_RLetubZpXHHh6KwmN, campaign W5 cam_BRBXAzzDKMfC4fSCS. Thread pulled 2026-10-13 ~14:52 and again 18:36 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute. No other contact or queue row
@@ -63,6 +65,8 @@ Shall I send you a sketch of the modernised Wulf & Collegen site?
 
 ### Osman Zaman, Wisteria & Co., ctc_HZDGRZYXBDbJDhces
 
+> SENT 2026-10-13 18:58:03 UTC on Raka's 'send wulf and wisteria', act_q4WWToyMtA5nPsE9L, one copy, 481 characters byte for byte from this file. Before the send, 18:57 UTC, thread 0 items with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly search one contact (connect note only), lead record one campaign, state files no SENT row, every fact reopened live (own links only the home page and the PDF, both menu buttons to the PDF at 200 application/pdf, 'French toast' and '213A New City Road' on the page). Do not send again.
+
 ```gate
 lead: Osman Ali Zaman, director and 25 to 50% PSC of W&CO ENTERPRISE LTD SC883943, incorporated 26 March 2026, 213a New City Road Glasgow G4 9PA, SIC 56102 and 56210, with Marva Munir in the same band, per https://find-and-update.company-information.service.gov.uk/company/SC883943/persons-with-significant-control . The site says "Wisteria & Co. began with a shared vision between us - Osman and Marva". lemlist jobTitle "Co-Founder & Managing Director". ctc_HZDGRZYXBDbJDhces, leadId lea_nTbMZM7SNEciMdSgW, campaign W1b cam_7gnHSf6GvvGy8gH3n. Thread pulled ~14:52 and again 18:36 UTC, 0 items, nextPage null, control 3 items same minute. No other contact or queue row
 site pass 1: 3 URLs, tools/crawl.py on https://www.wisteriacocafe.com , home, the bare host and an unlinked /menus page, every page read, plus the PDF menu read with pdftotext
@@ -119,6 +123,8 @@ Shall I send you a sketch of the modernised Wisteria & Co. site?
 ```
 
 ### Kevin Hanson, Panoramix IP, ctc_BAsKeiWpJiTEmbqfz
+
+> NOT SENT. Raka held it ('send wulf and wisteria'), and the whole site crawl is still running, the site pass lines must be filled before it can go.
 
 ```gate
 lead: Kevin Hanson, director since 25 Mar 2019 and sole PSC of PANORAMIX LIMITED 11903869, and director and sole PSC of PANORAMIX US LIMITED 17428919, incorporated 31 August 2026, SIC 69109, per https://find-and-update.company-information.service.gov.uk/company/11903869/persons-with-significant-control and https://find-and-update.company-information.service.gov.uk/company/17428919/persons-with-significant-control (reopened 2026-10-13 ~18:45 UTC). lemlist jobTitle "Founder & IP Lawyer - Panoramix Limited (Lincoln)", tagline "UK & US qualified IP lawyer (Solicitor, Patent Attorney [CPA, EPA], California Bar Member) - Lincoln". ctc_BAsKeiWpJiTEmbqfz, leadId lea_JzMNhHBbAnb76ADnm, campaign W5 cam_BRBXAzzDKMfC4fSCS (running). Thread pulled 2026-10-12 16:35 and 2026-10-13 18:36 UTC, 0 items, nextPage null, control 3 items same minute. The 12 Oct consent SKETCH was never sent
