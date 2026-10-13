@@ -67,6 +67,8 @@ h1,h2,h3{margin:0;font-weight:400}
 .lede{font-size:21px;line-height:1.5;max-width:40em}
 .dark{background:var(--night);color:var(--cream)}
 .dark.deep{background:var(--abyss)}
+.dark.forest{background:var(--forest)}
+.paper.cream{background-color:var(--cream)}
 .paper{background-color:var(--paper);color:var(--ink);
   background-image:repeating-linear-gradient(0deg,rgba(66,88,82,.035) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,rgba(66,88,82,.03) 0 1px,transparent 1px 38px)}
 .chapter{padding:120px 0;position:relative}
@@ -151,6 +153,7 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
 .arch::before{content:"";position:absolute;inset:0;border:1px solid var(--gold-line);border-radius:999px 999px 0 0}
 .dark .arch::before{border-color:var(--gold)}
 .arch img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 0 0}
+.arch.portrait img{object-position:50% 30%}
 .host .txt p{margin:0 0 1em;max-width:34em}
 .host .txt .h2{margin-bottom:28px}
 .calling{position:relative;margin:40px 0 0;max-width:430px;background:var(--card);color:var(--ink);padding:34px 34px 28px;transform:rotate(-1.4deg);box-shadow:0 22px 40px -18px rgba(4,32,21,.45),0 2px 0 rgba(4,32,21,.05)}
@@ -173,10 +176,10 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
 .quote-h{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(40px,4.6vw,66px);line-height:1.08;margin:0 0 10px}
 .quote-src{font-size:16px;font-style:italic;color:#9db0a6;margin:0 0 30px}
 .larder .txt>p{max-width:34em}
-.pantry{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
-.pantry li{display:flex;gap:16px;align-items:center;padding:14px 0;border-top:1px solid rgba(201,168,106,.25);font-size:19px;line-height:1.3}
-.pantry svg{flex:0 0 40px;width:40px;height:40px;color:var(--gold)}
-.pantry svg *{fill:none;stroke:currentColor;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round}
+.ledger{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;border-bottom:1px solid rgba(201,168,106,.28)}
+.ledger li{display:grid;grid-template-columns:54px minmax(0,1fr);align-items:baseline;padding:15px 0 14px;border-top:1px solid rgba(201,168,106,.28);font-size:20px;line-height:1.3;font-style:italic}
+.ledger .rn{font-family:var(--sc);font-weight:600;font-style:normal;font-size:19px;letter-spacing:.04em;color:var(--gold)}
+.ledger li:nth-child(odd):last-child{grid-column:1/-1}
 .pantry-end{margin:30px 0 0;font-style:italic;color:#c9d2cc}
 
 /* bill of fare */
@@ -200,6 +203,7 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
 .card .sub{font-style:italic;font-size:17.5px;line-height:1.4;max-width:22em;margin:0 auto}
 .card .art{display:block;margin:22px auto 6px;height:150px;width:auto;color:var(--gold-line)}
 .card .art *{fill:none;stroke:currentColor;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+.card .art [fill]{fill:var(--card)}
 .card .archimg{margin:20px auto 8px;max-width:200px;position:relative;padding:8px}
 .card .archimg::before{content:"";position:absolute;inset:0;border:1px solid var(--gold-line);border-radius:999px 999px 0 0}
 .card .archimg img{aspect-ratio:1/1;object-fit:cover;border-radius:999px 999px 0 0;width:100%}
@@ -244,6 +248,10 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
 #table{min-height:180px;display:flex;align-items:center;justify-content:center}
 #table svg{width:100%;height:auto;display:block}
 .scene .cap{font-style:italic;font-size:18px;color:var(--cream);margin:16px 0 0;min-height:1.5em}
+#sceneSlot .scene{position:relative;top:auto;margin:26px 0 0;padding:18px 14px 14px}
+#sceneSlot .scene .t .n{font-size:24px}
+#sceneSlot .scene .cap{font-size:16.5px;margin-top:10px}
+#sceneSlot .scene .key{font-size:13.5px;gap:6px 12px;margin-top:8px}
 .scene .key{display:flex;flex-wrap:wrap;gap:8px 18px;margin:14px 0 0;font-size:15px;color:#9db0a6}
 .scene .key b{display:inline-block;background:var(--paper);color:var(--ink-deep);font-family:var(--sc);font-weight:600;font-size:12px;letter-spacing:.06em;padding:0 5px;margin-right:6px;border:1px solid var(--gold)}
 .st path,.st circle,.st rect,.st ellipse{vector-effect:non-scaling-stroke}
@@ -441,7 +449,7 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
   .hero .inner{padding:150px 30px 112px}
   .hero .hfan{width:150px;height:76px}
   .kicker::before,.kicker::after{display:none}
-  .kicker{font-size:12.5px;letter-spacing:.26em;gap:10px}
+  .kicker{font-size:11.5px;letter-spacing:.16em;gap:10px}
   .kicker::before,.kicker::after{width:22px}
   .hero h1 .a{font-size:clamp(36px,11vw,50px);letter-spacing:.05em}
   .hero .lede{font-size:19px;margin:22px auto 28px}
@@ -451,7 +459,7 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
   .host{padding-top:110px}
   .head{margin-bottom:44px}
   .lede{font-size:19px}
-  .pantry{grid-template-columns:minmax(0,1fr)}
+  .ledger{grid-template-columns:minmax(0,1fr)}
   .card{padding:36px 20px 26px}
   .step-mark{font-size:12px;letter-spacing:.14em;gap:8px}
   .step-mark i{font-size:15px}
@@ -520,9 +528,9 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
 
 <header class="top">
   <div class="wrap">
-    <nav class="nav nl" aria-label="About"><a href="#host">The host</a><a href="#larder">The larder</a><a href="#occasions">Occasions</a></nav>
+    <nav class="nav nl" aria-label="The story"><a href="#host">The host</a><a href="#larder">The larder</a><a href="#fare">Menus</a></nav>
     <a class="brand" href="#top" aria-label="The Garnish Collective, back to the top"><img class="mono-g" src="img/emblem.png" alt="" width="240" height="238"></a>
-    <nav class="nav nr" aria-label="Order"><a href="#fare">Menus</a><a href="#reply">Order</a><a href="#usual">Your usual</a></nav>
+    <nav class="nav nr" aria-label="Ordering"><a href="#reply">Order</a><a href="#usual">Your usual</a><a href="#occasions">Occasions</a></nav>
   </div>
 </header>
 
@@ -535,9 +543,9 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
   <div class="inner">
     <svg class="fan hfan" viewBox="0 0 240 122" aria-hidden="true"><use href="#fan"/></svg>
     <img class="wm hwm" src="img/wordmark.png" alt="The Garnish Collective" width="1838" height="56">
-    <p class="kicker">Chris Hale&#8217;s kitchen, Yorkshire</p>
-    <h1 id="h1"><span class="a foil">Chef made catering</span><span class="b">for the office, ordered online.</span></h1>
-    <p class="lede">Lunch boxes, buffets and Christmas menus from a MasterChef UK quarter finalist. Choose a card, reply with the details, and it&#8217;s booked.</p>
+    <p class="kicker">Corporate catering from Yorkshire</p>
+    <h1 id="h1"><span class="a foil">A chef&#8217;s table</span><span class="b">for the office, ordered online.</span></h1>
+    <p class="lede">Lunch boxes, buffets and Christmas menus from the kitchen of Chris Hale, MasterChef UK quarter finalist. Choose a card and reply, and it&#8217;s booked.</p>
     <a class="btn solid" href="#fare">See the menus</a>
     <p class="cut" id="cut">Order a lunch box by 2pm<span class="dag">†</span> and it&#8217;s with you the next working day.</p>
   </div>
@@ -547,12 +555,12 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
 <!-- 2. the host -->
 <section class="chapter paper host" id="host" aria-labelledby="h-host">
   <div class="wrap g">
-    <div class="arch rv"><img src="img/dessertrow.jpg" alt="A row of plated desserts with citrus and fresh herbs" width="1600" height="1110" loading="lazy"></div>
+    <div class="arch portrait rv"><img src="img/chris_host.jpg" alt="Chris Hale, head chef of The Garnish Collective, at work" width="880" height="1100" loading="lazy"></div>
     <div class="txt rv">
       <p class="label">The host</p>
-      <h2 class="h2" id="h-host">Chris Hale<em>founder, head chef and a MasterChef UK quarter finalist.</em></h2>
+      <h2 class="h2" id="h-host">Chris Hale<em>head chef, and a MasterChef UK quarter finalist.</em></h2>
       <p>Chris founded The Garnish Collective and leads its kitchen. His career has taken him across the globe, cooking for royalty, world class athletes and A list celebrities.</p>
-      <p>The same kitchen cooks for offices, a box lunch for Thursday&#8217;s meeting, a buffet for the conference, or the team&#8217;s Christmas.</p>
+      <p>The same kitchen cooks for offices. Thursday&#8217;s lunch boxes come from it, and so does the team&#8217;s Christmas.</p>
       <div class="calling" data-frame="ink">
         <img class="mono-i" src="img/emblem.png" alt="" width="240" height="238" loading="lazy">
         <div class="nm">Chris Hale</div>
@@ -572,14 +580,14 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
       <h2 class="quote-h foil" id="h-larder">&#8220;Nothing is forced, except the Rhubarb.&#8221;</h2>
       <p class="quote-src">From our sustainability commitment</p>
       <p>We cook with what Yorkshire grows and buy from the most local suppliers we can, so the menus run on reduced air miles rather than food wrapped in plastic and shipped around the world.</p>
-      <ul class="pantry">
-        <li><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 33H32"/><path d="M20 33V17"/><path d="M20 22C13 22 9.5 17.5 9.5 11.5C16 11.5 20 15 20 22Z"/><path d="M20 18.5C20 12 24.5 7 31 7C31 13.5 27 18.5 20 18.5Z"/></svg>Our own allotment</li>
-        <li><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 32C8 18 13 9.5 20 9.5S32 18 32 32Z"/><path d="M9.6 25H30.4M11.8 18.5H28.2M15.5 13H24.5"/><path d="M17.5 32V28.5A2.5 2.5 0 0 1 22.5 28.5V32"/><circle cx="33" cy="9" r="1.6"/><path d="M33 7.4C32 4.8 30 4.8 30.2 6.6M33 7.4C34 4.8 36 4.8 35.8 6.6"/></svg>Our own beehives</li>
-        <li><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M7 18H33L30.5 32H9.5Z"/><path d="M8 23H32M8.8 27.5H31.2"/><circle cx="13.5" cy="14" r="3.6"/><circle cx="20.5" cy="12.6" r="4.4"/><circle cx="27" cy="14.4" r="3.2"/></svg>The most local suppliers</li>
-        <li><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 31C9 17 18 9 31 9C31 22 24 31 9 31Z"/><path d="M9 31L24 16"/><path d="M15 25H20M19 21H24"/></svg>Waste and trimmings composted</li>
-        <li><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M13 7H27V11H13Z"/><path d="M12 12H28V30A3 3 0 0 1 25 33H15A3 3 0 0 1 12 30Z"/><path d="M15 19H25V26H15Z"/></svg>Pickled and preserved, down to a carrot top pesto</li>
-        <li><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M14.5 14C16.5 22 18.5 28 20 34C21.5 28 23.5 22 25.5 14Z"/><path d="M16.5 20H19M18 25H20.5"/><path d="M18 14C16 9 13 7 10 7M20 14V5M22 14C24 9 27 7 30 7"/></svg>Nose to tail, root to tip</li>
-      </ul>
+      <ol class="ledger">
+        <li><span class="rn" aria-hidden="true">I</span><span class="lt">Our own allotment</span></li>
+        <li><span class="rn" aria-hidden="true">II</span><span class="lt">Our own beehives</span></li>
+        <li><span class="rn" aria-hidden="true">III</span><span class="lt">The most local suppliers</span></li>
+        <li><span class="rn" aria-hidden="true">IV</span><span class="lt">Waste and trimmings composted</span></li>
+        <li><span class="rn" aria-hidden="true">V</span><span class="lt">Pickled and preserved, down to a carrot top pesto</span></li>
+        <li><span class="rn" aria-hidden="true">VI</span><span class="lt">Nose to tail, root to tip</span></li>
+      </ol>
       <p class="pantry-end">The rhubarb comes back at Christmas, in a rhubarb and custard millefeuille.</p>
     </div>
     <div class="collage rv">
@@ -589,14 +597,33 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
   </div>
 </section>
 
-<!-- 4. the bill of fare -->
+<!-- 4. said of us -->
+<section class="chapter dark forest" id="said" aria-labelledby="h-said">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="rulefan"><svg class="fan" viewBox="0 0 240 122" aria-hidden="true"><use href="#fan"/></svg></div>
+      <p class="label">Said of us</p>
+    </div>
+    <div class="clip-wrap rv">
+      <article class="clipping">
+        <div class="mast"><span>Event catering</span><span>Evri</span></div>
+        <h3 id="h-said">&#8220;The food is always amazing&#8221;</h3>
+        <p class="by">Stacey Dockerty, Marketing &amp; Events Manager, Evri</p>
+        <div class="body"><p><span class="sr">&#8220;We&#8217;ve</span><span class="dq" aria-hidden="true">&#8220;</span><span class="drop" aria-hidden="true">W</span><span aria-hidden="true">e&#8217;ve</span> worked with The Garnish Collective for over 3 years. They are our &#8216;go to&#8217; when it comes to event catering as they offer a wide range of hot and cold buffet options. Chris and his team are professional and reliable, and most importantly the food is always amazing!&#8221;</p></div>
+      </article>
+    </div>
+    <p class="clip-src">From the About page at garnishcollective.com</p>
+  </div>
+</section>
+
+<!-- 5. the bill of fare -->
 <section class="chapter paper" id="fare" aria-labelledby="h-fare">
   <div class="wrap">
     <div class="head rv">
       <div class="rulefan"><svg class="fan" viewBox="0 0 240 122" aria-hidden="true"><use href="#fan"/></svg></div>
       <p class="label">The bill of fare</p>
-      <h2 class="h2" id="h-fare">Choose a card<em>Every menu is where Chris starts, not where he stops.</em></h2>
-      <p class="lede">Say what you&#8217;d swap when you reply. A dish out, a course in, something that isn&#8217;t here at all.</p>
+      <h2 class="h2" id="h-fare">Choose a card<em>Each card is only where Chris starts.</em></h2>
+      <p class="lede">Say what you&#8217;d swap when you reply, even for something that isn&#8217;t on the card.</p>
     </div>
     <p class="step-mark"><span class="on"><i>I</i> Choose a card</span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="off"><i>II</i> Reply</span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="off"><i>III</i> Seal it</span></p>
     <div class="cards">
@@ -605,7 +632,7 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
           <span class="k">Meetings and strategy days</span>
           <h3 id="c-boxes">Bags &amp; Boxes</h3>
           <p class="sub">Freshly prepared, chef designed lunch boxes or banquet style packages, one each or to share.</p>
-          <svg class="art" viewBox="0 0 220 150" aria-hidden="true"><path d="M52 64H168V134H52Z"/><path d="M44 50H176V66H44Z"/><path d="M104 50V134M116 50V134"/><path d="M52 98H168" stroke-opacity=".5"/><path d="M110 50C98 30 76 30 80 42C83 50 100 50 110 50Z"/><path d="M110 50C122 30 144 30 140 42C137 50 120 50 110 50Z"/><path d="M110 50C104 60 96 70 90 74M110 50C116 60 124 70 130 74"/><circle cx="110" cy="50" r="4"/><path d="M30 134H190" stroke-opacity=".5"/><path d="M20 22l3 -6l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3Z" stroke-opacity=".7"/><path d="M190 30l2.4 -5l2.4 5l5 2.4l-5 2.4l-2.4 5l-2.4 -5l-5 -2.4Z" stroke-opacity=".7"/></svg>
+          <svg class="art" viewBox="0 0 220 150" aria-hidden="true"><path d="M110 134V96" stroke-opacity=".25"/><path d="M110 134L32 96M110 134L58 74M110 134L84 62M110 134L136 62M110 134L162 74M110 134L188 96" stroke-opacity=".25"/><path d="M28 136H192"/><path d="M40 141H180" stroke-opacity=".5"/><path d="M64 84H156V130H64Z" fill="#f7f2ea"/><path d="M58 76H162V84H58ZM70 68H150V76H70Z" fill="#f7f2ea"/><path d="M96 68V56A14 14 0 0 1 124 56V68"/><path d="M100 68V57A10 10 0 0 1 120 57V68" stroke-opacity=".5"/><path d="M84 90V124M98 90V124M122 90V124M136 90V124" stroke-opacity=".55"/><path d="M110 92L118 100L110 108L102 100Z"/><path d="M110 112L114 116L110 120L106 116Z" stroke-opacity=".7"/><path d="M68 88H152V126H68Z" stroke-opacity=".4"/><path d="M22 30l2.6 -5.4l2.6 5.4l5.4 2.6l-5.4 2.6l-2.6 5.4l-2.6 -5.4l-5.4 -2.6Z" stroke-opacity=".7"/><path d="M192 26l2 -4.2l2 4.2l4.2 2l-4.2 2l-2 4.2l-2 -4.2l-4.2 -2Z" stroke-opacity=".7"/></svg>
         </div>
         <ul class="menu" id="m-boxes"></ul>
         <div class="foot" aria-hidden="true"><svg viewBox="0 0 240 122"><use href="#fan"/></svg></div>
@@ -614,8 +641,8 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
         <div class="cat">
           <span class="k">Conferences and gala dinners</span>
           <h3 id="c-buffets">Buffets</h3>
-          <p class="sub">We arrive at your venue and set out a buffet, savoury and sweet, with something for everyone.</p>
-          <svg class="art" viewBox="0 0 220 150" aria-hidden="true"><path d="M26 124H194"/><path d="M38 132H182" stroke-opacity=".5"/><path d="M48 122C48 74 76 50 110 50C144 50 172 74 172 122"/><path d="M62 104C64 84 80 68 100 63" stroke-opacity=".5"/><path d="M110 50V44"/><circle cx="110" cy="39" r="5"/><path d="M40 122H180"/><path d="M20 22l3 -6l3 6l6 3l-6 3l-3 6l-3 -6l-6 -3Z" stroke-opacity=".7"/><path d="M190 30l2.4 -5l2.4 5l5 2.4l-5 2.4l-2.4 5l-2.4 -5l-5 -2.4Z" stroke-opacity=".7"/></svg>
+          <p class="sub">We arrive at your venue and set out a buffet of savoury and sweet dishes.</p>
+          <svg class="art" viewBox="0 0 220 150" aria-hidden="true"><path d="M110 134L30 112M110 134L42 84M110 134L66 58M110 134L154 58M110 134L178 84M110 134L190 112" stroke-opacity=".25"/><path d="M28 136H192"/><path d="M40 141H180" stroke-opacity=".5"/><path d="M96 136L102 128H118L124 136" fill="#f7f2ea"/><path d="M110 128V36"/><path d="M48 112H172M54 112L60 118H160L166 112" fill="#f7f2ea"/><path d="M68 86H152M73 86L78 91H142L147 86" fill="#f7f2ea"/><path d="M86 60H134M90 60L94 64H126L130 60" fill="#f7f2ea"/><circle cx="66" cy="107" r="4"/><circle cx="82" cy="107" r="4"/><circle cx="98" cy="107" r="4"/><circle cx="122" cy="107" r="4"/><circle cx="138" cy="107" r="4"/><circle cx="154" cy="107" r="4"/><circle cx="84" cy="81" r="4"/><circle cx="98" cy="81" r="4"/><circle cx="122" cy="81" r="4"/><circle cx="136" cy="81" r="4"/><circle cx="98" cy="55" r="4"/><circle cx="122" cy="55" r="4"/><path d="M110 36L110 22M110 36L101 26M110 36L119 26M110 36L96 33M110 36L124 33" stroke-opacity=".8"/><circle cx="110" cy="38" r="2.6"/><path d="M22 30l2.6 -5.4l2.6 5.4l5.4 2.6l-5.4 2.6l-2.6 5.4l-2.6 -5.4l-5.4 -2.6Z" stroke-opacity=".7"/><path d="M192 26l2 -4.2l2 4.2l4.2 2l-4.2 2l-2 4.2l-2 -4.2l-4.2 -2Z" stroke-opacity=".7"/></svg>
         </div>
         <ul class="menu" id="m-buffets"></ul>
         <div class="foot" aria-hidden="true"><svg viewBox="0 0 240 122"><use href="#fan"/></svg></div>
@@ -637,7 +664,7 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
   </div>
 </section>
 
-<!-- 5. the reply card -->
+<!-- 6. the reply card -->
 <section class="chapter dark reply" id="reply" aria-labelledby="h-reply">
   <div class="wrap">
     <div class="head rv">
@@ -686,7 +713,7 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
         <span class="err" id="e-addr"></span>
         <p class="pcmsg" id="pcmsg"></p>
 
-        <div class="notes"><label for="r-notes">Anything Chris should know, allergies, a dish to swap, where to set up</label><textarea id="r-notes"></textarea></div>
+        <div class="notes"><label for="r-notes">Anything Chris should know, like allergies or a dish to swap</label><textarea id="r-notes"></textarea></div>
 
         <p class="sig">Yours, <span class="f fnm" id="f-nm"><label class="sr" for="r-nm">Your name</label><input id="r-nm" autocomplete="name" placeholder="your name"></span><span class="pp">,</span> and kindly reply to <span class="f fem" id="f-em"><label class="sr" for="r-em">Email</label><input id="r-em" type="email" autocomplete="email" placeholder="email"></span><span class="pp">.</span></p>
         <span class="err" id="e-you"></span>
@@ -697,6 +724,7 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
           <div class="amt"><div class="k">The bill</div><div class="v" id="billTotal"><span class="ps">&#163;</span>0.00</div><div class="pl" id="billNote"></div></div>
         </div>
 
+        <div id="sceneSlot"></div>
         <div class="rule-g"></div>
         <p class="label" style="color:var(--gold-text)">Settle it</p>
         <div class="pay" role="radiogroup" aria-label="How you&#8217;d like to pay">
@@ -715,81 +743,62 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
   </div>
 </section>
 
-<!-- 6. the usual -->
+<!-- 7. the usual -->
 <section class="chapter paper usual" id="usual" aria-labelledby="h-usual">
   <div class="wrap g">
     <div class="txt rv">
       <p class="label">The usual</p>
       <h2 class="h2" id="h-usual">Your usual<em>sent again in one tap.</em></h2>
-      <p>Every order can be kept as your usual. One tap sends it again for the next matching day, the same food, the same time and the same address, on account.</p>
+      <p>Every order can be kept as your usual. One tap sends it again for the next matching day, with the same food and address, on account.</p>
       <ul class="ticks">
         <li><svg class="spark" aria-hidden="true"><use href="#spark"/></svg>The next date that fits its weekday and the lead time</li>
         <li><svg class="spark" aria-hidden="true"><use href="#spark"/></svg>Dietary places and notes kept as they were</li>
-        <li><svg class="spark" aria-hidden="true"><use href="#spark"/></svg>Change anything first, if this week&#8217;s different</li>
       </ul>
     </div>
     <div class="ucard rv" data-frame="ink" id="ucard"></div>
   </div>
 </section>
 
-<!-- 7. said of us -->
-<section class="chapter dark deep" id="said" aria-labelledby="h-said">
-  <div class="wrap">
-    <div class="head rv">
-      <p class="label">Said of us</p>
-    </div>
-    <div class="clip-wrap rv">
-      <article class="clipping">
-        <div class="mast"><span>Event catering</span><span>Evri</span></div>
-        <h3 id="h-said">&#8220;The food is always amazing&#8221;</h3>
-        <p class="by">Stacey Dockerty, Marketing &amp; Events Manager, Evri</p>
-        <div class="body"><p><span class="sr">&#8220;We&#8217;ve</span><span class="dq" aria-hidden="true">&#8220;</span><span class="drop" aria-hidden="true">W</span><span aria-hidden="true">e&#8217;ve</span> worked with The Garnish Collective for over 3 years. They are our &#8216;go to&#8217; when it comes to event catering as they offer a wide range of hot and cold buffet options. Chris and his team are professional and reliable, and most importantly the food is always amazing!&#8221;</p></div>
-      </article>
-    </div>
-    <p class="clip-src">From the About page at garnishcollective.com</p>
-  </div>
-</section>
-
 <!-- 8. grander occasions -->
-<section class="chapter paper" id="occasions" aria-labelledby="h-occ">
+<section class="chapter paper cream" id="occasions" aria-labelledby="h-occ">
   <div class="wrap">
     <div class="head rv">
       <div class="rulefan"><svg class="fan" viewBox="0 0 240 122" aria-hidden="true"><use href="#fan"/></svg></div>
       <p class="label">Grander occasions</p>
-      <h2 class="h2" id="h-occ">Launches, dinners and bars<em>go straight to Chris.</em></h2>
-      <p class="lede">These don&#8217;t fit on a card. Tell Chris the date, the numbers and the venue, and he&#8217;ll come back with a menu and a price.</p>
+      <h2 class="h2" id="h-occ">Launches and dinners<em>go straight to Chris.</em></h2>
+      <p class="lede">These don&#8217;t fit on a card. Tell Chris the date and the numbers, and he&#8217;ll come back with a menu and a price.</p>
     </div>
     <div class="occ">
       <article class="oc rv">
         <div class="arch"><img src="img/br_canapes.jpg" alt="Smoked salmon canap&#233;s on toasted bread, laid out on slate" width="960" height="640" loading="lazy"></div>
         <h3>Canap&#233;s</h3>
-        <p>For drinks receptions, corporate events and private parties, from elegant classics to more creative bites, with options for different dietary requirements.</p>
+        <p>For drinks receptions and corporate events, from elegant classics to more creative bites, with options for different dietary requirements.</p>
         <a class="link" href="https://www.garnishcollective.com/enquire">Ask Chris</a>
       </article>
       <article class="oc rv">
-        <div class="arch"><svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A line drawing of an edible display wall in an arched frame"><rect width="300" height="400" fill="#00241a"/><g fill="none" stroke="#c9a86a" stroke-width="1.2"><path d="M40 380V150A110 110 0 0 1 260 150V380"/><path d="M52 380V152A98 98 0 0 1 248 152V380" stroke-opacity=".5"/><path d="M20 380H280"/></g><g fill="none" stroke="#c9a86a" stroke-width="1.1"><circle cx="105" cy="140" r="14"/><circle cx="150" cy="128" r="14"/><circle cx="195" cy="140" r="14"/><circle cx="85" cy="190" r="14"/><circle cx="128" cy="190" r="14"/><circle cx="172" cy="190" r="14"/><circle cx="215" cy="190" r="14"/><circle cx="85" cy="240" r="14"/><circle cx="128" cy="240" r="14"/><circle cx="172" cy="240" r="14"/><circle cx="215" cy="240" r="14"/><circle cx="85" cy="290" r="14"/><circle cx="128" cy="290" r="14"/><circle cx="172" cy="290" r="14"/><circle cx="215" cy="290" r="14"/></g><g fill="none" stroke="#e8d5a6" stroke-width="1" stroke-opacity=".8"><circle cx="105" cy="140" r="5"/><circle cx="150" cy="128" r="5"/><circle cx="195" cy="140" r="5"/><circle cx="85" cy="190" r="5"/><circle cx="128" cy="190" r="5"/><circle cx="172" cy="190" r="5"/><circle cx="215" cy="190" r="5"/><circle cx="85" cy="240" r="5"/><circle cx="128" cy="240" r="5"/><circle cx="172" cy="240" r="5"/><circle cx="215" cy="240" r="5"/><circle cx="85" cy="290" r="5"/><circle cx="128" cy="290" r="5"/><circle cx="172" cy="290" r="5"/><circle cx="215" cy="290" r="5"/></g><g fill="none" stroke="#c9a86a" stroke-width="1" stroke-opacity=".6"><path d="M70 330H230M70 340H230"/><path d="M150 52l3 -7l3 7l7 3l-7 3l-3 7l-3 -7l-7 -3Z"/></g></svg></div>
+        <div class="arch"><svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A line drawing of a tiered edible display in an arched frame"><rect width="300" height="400" fill="#00241a"/><g fill="none" stroke="#c9a86a" stroke-width="1.2"><path d="M40 380V150A110 110 0 0 1 260 150V380"/><path d="M52 380V152A98 98 0 0 1 248 152V380" stroke-opacity=".5"/><path d="M20 380H280"/></g><g fill="none" stroke="#c9a86a" stroke-width=".9" stroke-opacity=".28"><path d="M150 352L62 300M150 352L76 240M150 352L104 196M150 352L196 196M150 352L224 240M150 352L238 300"/></g><g fill="none" stroke="#c9a86a" stroke-width="1.15"><path d="M150 342V120"/><path d="M134 352L142 342H158L166 352"/><path d="M60 352H240"/><path d="M68 310H232M74 310L80 317H220L226 310"/><circle cx="80.0" cy="304" r="5.5"/><circle cx="103.3" cy="304" r="5.5"/><circle cx="126.7" cy="304" r="5.5"/><circle cx="150.0" cy="304" r="5.5"/><circle cx="173.3" cy="304" r="5.5"/><circle cx="196.7" cy="304" r="5.5"/><circle cx="220.0" cy="304" r="5.5"/><path d="M86 262H214M92 262L98 269H202L208 262"/><circle cx="98.0" cy="256" r="5.5"/><circle cx="118.8" cy="256" r="5.5"/><circle cx="139.6" cy="256" r="5.5"/><circle cx="160.4" cy="256" r="5.5"/><circle cx="181.2" cy="256" r="5.5"/><circle cx="202.0" cy="256" r="5.5"/><path d="M104 214H196M110 214L116 221H184L190 214"/><circle cx="116.0" cy="208" r="5.5"/><circle cx="133.0" cy="208" r="5.5"/><circle cx="150.0" cy="208" r="5.5"/><circle cx="167.0" cy="208" r="5.5"/><circle cx="184.0" cy="208" r="5.5"/><path d="M122 166H178M128 166L134 173H166L172 166"/><circle cx="134.0" cy="160" r="5.5"/><circle cx="150.0" cy="160" r="5.5"/><circle cx="166.0" cy="160" r="5.5"/></g><g fill="none" stroke="#e8d5a6" stroke-width="1"><path d="M150 120V96M150 120L136 103M150 120L164 103M150 120L128 114M150 120L172 114"/><circle cx="150" cy="122" r="3.2"/></g><g fill="none" stroke="#c9a86a" stroke-width="1" stroke-opacity=".6"><path d="M150 52l3 -7l3 7l7 3l-7 3l-3 7l-3 -7l-7 -3Z"/></g></svg></div>
         <h3>Installed Edible Displays</h3>
-        <p>Custom built edible installations, fully branded if you like, with on site set up and styling. For brand launches, product launches and networking events.</p>
+        <p>Custom built edible installations, fully branded if you like, with on site set up and styling. For launch days and networking events.</p>
         <a class="link" href="https://www.garnishcollective.com/enquire">Ask Chris</a>
       </article>
       <article class="oc rv">
         <div class="arch"><img src="img/br_plates.jpg" alt="Rows of plates of sliced seared meat with pink radish and herbs, seen from above" width="960" height="723" loading="lazy"></div>
         <h3>Tailored Event Service</h3>
-        <p>Design, catering and the guests&#8217; evening, with multi course dining and a professional front of house team, at Hodroyd Hall or a venue of your choice.</p>
+        <p>Multi course dining with a professional front of house team, at Hodroyd Hall or a venue of your choice.</p>
         <a class="link" href="https://www.garnishcollective.com/enquire">Ask Chris</a>
       </article>
       <article class="oc rv">
         <div class="arch"><div class="crop"><img src="img/li_bar.jpg" alt="A cocktail with a salted rim and a lime wedge being served across a bar" width="1200" height="1200" loading="lazy"></div></div>
         <h3>Bar Hire</h3>
-        <p>Craft cocktails, classic pours or a drinks menu written for the occasion, on its own or alongside the food.</p>
+        <p>Craft cocktails or a drinks menu written for the occasion, on its own or alongside the food.</p>
         <a class="link" href="https://www.garnishcollective.com/enquire">Ask Chris</a>
       </article>
     </div>
     <p class="xm rv"><svg class="spark" aria-hidden="true"><use href="#spark"/></svg>&#160; At Christmas the canap&#233; party and the three course dinner, plated or feasting style, are priced to order. &#160;<svg class="spark" aria-hidden="true"><use href="#spark"/></svg></p>
     <div class="write rv" data-frame="ink">
       <p class="label">Write to Chris</p>
-      <p class="h3">The kitchen replies within <span class="nu">24</span> hours</p>
-      <p>His enquiry form asks for the date, the numbers, the venue and the kind of event.</p>
+      <p class="h3">Tell Chris about the occasion</p>
+      <p>His enquiry form asks for the date, the numbers, the venue and the kind of event, and the kitchen replies within 24 hours.</p>
       <div class="ways"><a href="tel:07899767279">07899 767279</a><a href="mailto:feasting@garnishcollective.com">feasting@garnishcollective.com</a></div>
       <a class="btn" href="https://www.garnishcollective.com/enquire">Use the enquiry form</a>
     </div>
@@ -807,7 +816,7 @@ html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
   <p class="who">Chris Hale &amp; The Garnish Collective</p>
   <div class="ways"><a href="tel:07899767279">07899 767279</a><a href="mailto:feasting@garnishcollective.com">feasting@garnishcollective.com</a><a href="https://www.garnishcollective.com/">garnishcollective.com</a></div>
   <img class="wm" src="img/wordmark.png" alt="The Garnish Collective" width="1838" height="56" loading="lazy">
-  <div class="small wrap"><p>A concept Astra built for The Garnish Collective. <span class="dag">†</span> Example prices, minimums, contents, lead times, delivery charges and invoice terms, written for this concept for Chris to set. Christmas dishes and from prices are from his 2026 Corporate Christmas Packages brochure. The demo account is a made up company. Payment is a demo, so no card details are asked for and nothing is charged, and nothing you type leaves your browser.</p></div>
+  <div class="small wrap"><p>A concept Astra built for The Garnish Collective. <span class="dag">†</span> Example prices, minimums, contents, lead times, delivery charges and invoice terms, written for this concept for Chris to set. Christmas dishes and from prices are from his 2026 Corporate Christmas Packages brochure. The demo account is a made up company. Payment is a demo, so nothing is charged and nothing you type leaves your browser.</p></div>
 </footer>
 
 <div class="ov" id="ov" role="dialog" aria-modal="true" aria-labelledby="dlgT">
@@ -834,9 +843,9 @@ const MENUS = [
   {id:"banquet",cat:"boxes",kind:"share",name:"Banquet style package",unit:"guests",unit1:"guest",price:16.5,from:false,src:"ex",min:10,lead:1,
    ds:[["Sharing boards of cold cuts and cheese, breads and dips, two salads and something sweet","ex"]]},
   {id:"hotcold",cat:"buffets",kind:"buffet",name:"Hot and cold buffet",unit:"guests",unit1:"guest",price:21,from:false,src:"ex",min:15,lead:2,img:"img/li_sliders.jpg",alt:"Burger sliders with pickled red onion",
-   ds:[["Burger sliders and slow cooked pork belly","his"],[", with seasonal salads, breads and something sweet","ex"]]},
+   ds:[["Burger sliders and slow cooked pork belly","his"],[", with seasonal salads and something sweet","ex"]]},
   {id:"steak",cat:"buffets",kind:"buffet",name:"Steakhouse buffet",unit:"guests",unit1:"guest",price:27,from:false,src:"ex",min:15,lead:2,img:"img/li_steak.jpg",alt:"Sliced steak with green herb sauce on a buffet",
-   ds:[["Beautifully cooked steak","his"],[", with seasonal salads, roast potatoes and breads","ex"]]},
+   ds:[["Beautifully cooked steak","his"],[", with roast potatoes and seasonal salads","ex"]]},
   {id:"paella",cat:"buffets",kind:"buffet",name:"Paella for the team",unit:"guests",unit1:"guest",price:15,from:false,src:"ex",min:20,lead:2,img:"img/li_paella.jpg",alt:"A large pan of paella being stirred",
    ds:[["Paella, cooked and served fresh","his"],[", with bread and a green salad","ex"]]},
   {id:"xsandwich",cat:"xmas",kind:"buffet",name:"Christmas hot sandwich menu",unit:"guests",unit1:"guest",price:12,from:true,src:"his",min:10,lead:5,xmas:true,
@@ -1017,13 +1026,14 @@ function renderTable(){
   const kind = m ? m.kind : "none", xm = !!(m && m.xmas);
   if(kind !== lastKind){ laid = 0; lastKind = kind; }
   const GOLD = "#c9a86a", HI = "#e8d5a6";
-  const perSide = Math.max(4, Math.floor((W - 70) / 44)), PER = perSide * 2, maxT = W < 480 ? 6 : 4;
+  const compact = !!box.closest("#sceneSlot");
+  const perSide = compact ? Math.max(6, Math.floor((W - 44) / 30)) : Math.max(4, Math.floor((W - 70) / 44)), PER = perSide * 2, maxT = compact ? 2 : (W < 480 ? 6 : 4);
   const T = Math.max(1, Math.min(maxT, Math.ceil(Math.max(g,1) / PER)));
   const shown = Math.min(g, PER * maxT);
   const codes = []; DIET.forEach(([k,,c]) => { for(let i=0;i<(S.diet[k]||0) && codes.length < g;i++) codes.push(c); });
   const sTop0 = Math.ceil(Math.min(Math.max(g,1), PER) / 2);
   const pitch0 = Math.min(64, (W - 70) / Math.max(sTop0, 3));
-  const k = Math.max(1, Math.min(1.3, pitch0 / 46));
+  const k = compact ? Math.max(.62, Math.min(1, pitch0 / 46)) : Math.max(1, Math.min(1.3, pitch0 / 46));
   const TH = Math.round(124 * k), gapY = Math.round(58 * k), top = Math.round(26 * k);
   const H = top + T * (TH + gapY) - gapY + Math.round(26 * k) + (g > shown ? 30 : 0);
   const step = (x,y,w,h,c) => `M${x+c} ${y}H${x+w-c}V${y+c/2}H${x+w-c/2}V${y+c}H${x+w}V${y+h-c}H${x+w-c/2}V${y+h-c/2}H${x+w-c}V${y+h}H${x+c}V${y+h-c/2}H${x+c/2}V${y+h-c}H${x}V${y+c}H${x+c/2}V${y+c/2}H${x+c}Z`;
@@ -1072,7 +1082,7 @@ function renderTable(){
       }
     }
   }
-  if(g > shown) s += `<text x="${W/2}" y="${H-8}" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-size="17" fill="${HI}">and ${g - shown} more places at further tables</text>`;
+  if(g > shown) s += `<text x="${W/2}" y="${H-8}" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-size="17" fill="${HI}">and ${g - shown} more ${g - shown === 1 ? "place" : "places"} at further tables</text>`;
   box.innerHTML = s + `</svg>`;
   laid = idx;
   $("tableN").textContent = m && g ? String(g) : "";
@@ -1258,6 +1268,16 @@ $("dlgClose").addEventListener("click", closeDlg);
 $("dlgUsual").addEventListener("click", () => { closeDlg(); const r = $("usual").getBoundingClientRect(); window.scrollTo(0, window.scrollY + r.top); });
 $("ov").addEventListener("click", e => { if(e.target.id === "ov") closeDlg(); });
 document.addEventListener("keydown", e => { if(e.key === "Escape" && $("ov").classList.contains("on")) closeDlg(); });
+
+/* ---------- on phones and tablets the table sits under the bill, so the form comes first ---------- */
+const sceneHome = document.querySelector("#reply .g"), sceneEl = document.querySelector("#reply .scene"), smallQ = window.matchMedia("(max-width:1080px)");
+function placeScene(){
+  const inSlot = sceneEl.parentElement.id === "sceneSlot";
+  if(smallQ.matches && !inSlot){ $("sceneSlot").appendChild(sceneEl); laid = 0; }
+  else if(!smallQ.matches && inSlot){ sceneHome.insertBefore(sceneEl, sceneHome.firstChild); laid = 0; }
+}
+placeScene();
+if(smallQ.addEventListener) smallQ.addEventListener("change", () => { placeScene(); renderTable(); frameAll(); });
 
 /* ---------- start ---------- */
 fillMenuSelect(); fillTimes(); fillDates(); renderFare(); renderReply(); renderUsual(); renderCut();

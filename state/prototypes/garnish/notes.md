@@ -12,11 +12,11 @@ v1 (deploy 6acdcec9e1da4a850486f9ba, index sha256 98eb9eeb...1007) is in git, th
 
 - URL https://astra-garnish-prototype.netlify.app (same site as v1, site id fe9f6751-04d5-48cd-8812-62f86b44c320,
   team 6a75917309221b32b3265992)
-- Deploy id **6acdee06d36c44e0c4659161**, state ready, published 2026-10-13 08:35 to 08:36 UTC, current deploy.
-  Permalink https://6acdee06d36c44e0c4659161--astra-garnish-prototype.netlify.app (200).
-  (6acded528fd7878b63c3ed39 went out four minutes earlier and was replaced to correct one alt text, see QA.)
+- Deploy id **6acdf5bbb52ac933c470a0e3** (final round), state ready, published 2026-10-13 09:11 UTC, current deploy.
+  Permalink https://6acdf5bbb52ac933c470a0e3--astra-garnish-prototype.netlify.app (200).
+  Earlier v2 deploys, 6acded528fd7878b63c3ed39 (08:35) and 6acdee06d36c44e0c4659161 (08:39, alt text fix).
 - Access controls read back from get-project after the deploy, requiresSSOTeamLogin false, requiresPassword false.
-- sha256 index.html **b65211cca6c3c7e7a45e7655350297a065deac87d9a72fa6847a03c696fec72a** (104,783 bytes)
+- sha256 index.html **5aa0d2452994946bd533a3139f5b41f9031ef71fbcfa72b51e83f980d82af6e1** (106,441 bytes)
 - Deployed from a clean folder holding only index.html, img/, fonts/ and netlify.toml (publish ".", no command).
 
 ## The reanalysis (agreed with Raka before the rebuild)
@@ -34,7 +34,7 @@ order is the reply card. Dropped from v1, the ONS chart and all stats, the featu
 receipt, the invoices table, the dashboard, Poppins and DM Mono, the tag soup. Kept, v1's working date, lead time,
 minimum and postcode logic, rewritten under a reply card, and v1's verified facts, dishes and images.
 
-## The flow, one line per section
+## The flow, one line per section (as first shipped, see the final round section for the current order)
 
 1. **The invitation.** His plated food full bleed in a stepped gold frame, his wordmark under a sunburst, "Chef made
    catering for the office, ordered online.", one button to the menus, a live cut off line, a green wax seal with his
@@ -289,6 +289,8 @@ and invoice terms, written for this concept for Chris to set."
   included locally. Grazing table set up, Chris confirms. Outside the area, Chris confirms.
 - On account, 30 days. Delivery and set up times 7.30am to 6pm in half hours.
 - The reply card opens on a lunch box for 12, £162.00.
+- Example contents now read "with seasonal salads and something sweet" (hot and cold buffet) and "with roast potatoes
+  and seasonal salads" (steakhouse buffet), shortened in the final round.
 - Example box and buffet contents, in italics on the menus (pastry, yoghurt and granola, fruit and juice, a filled roll
   or flatbread, salads, sharing boards, breads and dips, roast potatoes, bread and green salad, something sweet).
 - Demo account "Your Company Ltd" (labelled "Demo account, a made up company"), Thursday team lunch, 14 lunch boxes, 2
@@ -388,3 +390,88 @@ and invoice terms, written for this concept for Chris to set."
 - Whether the brochure's September 2026 "from" prices still hold.
 - The 63 teardown renders are of what our browser could load today. 26 of the 89 sites could not be looked at, listed
   above, and nothing is concluded about them.
+
+## Final round (coordinator's seven fixes, 09:00 to 09:15 UTC)
+
+Raka's question was "is this the final final thing that will make us win his deal". Seven fixes, one line before and
+after each, then the full QA again.
+
+1. **Flow, proof before the ask.** Before, Invitation, Host, Larder, Bill of fare, Reply card, Usual, Said of us,
+   Occasions, Close. After, Invitation, Host, Larder, **Said of us**, Bill of fare, Reply card, Usual, Occasions,
+   Close. The clipping sits on his forest green #183E30 with a sunburst rule, and Occasions moved to cream so the
+   rhythm doesn't repeat. Nav before, The host, The larder, Occasions | Menus, Order, Your usual. After, six items in
+   page order, The host, The larder, Menus | Order, Your usual, Occasions.
+2. **The host needs the host.** Before, an arch of plated desserts. After, Chris himself, cropped tight from the
+   photo in his homepage bio block. tools/verify_portraits.py (read in full first) was run against a fresh render of
+   https://www.garnishcollective.com/ (08:57 UTC, 200). Its own containment function puts the first "Hale" (the intro
+   paragraph) in a card whose only image is his logo, and the second "Hale" (the bio block, "We are proud to be led
+   by the incredible Chris Hale") in a card whose only image is Strata_InfluencerEvent_Sep23_086.jpg. With the bio
+   block section as source, the tool printed **PASS Chris Hale** and **ALL PORTRAITS CORRECTLY PAIRED**, the
+   embedded re-encode of his published upload matching byte for byte (ff49e3ed95393b92). Controls, the full page body
+   as source fails (pairs the logo), and a wrong image under his name fails ("does not match the client's own
+   photo"). The photo shows two guests either side and phones in the foreground, so it's cropped to Chris only (box
+   x 2169 to 3616, y 2329 to 4138 of 5464x8192, no guests' faces, no table, and no workwear sleeve patch, which
+   carries another brand's emblem). The crop was reproduced byte for byte from a fresh fetch of his upload (source
+   sha256 9d2903aa...4b2c, crop f1cbe041...df4b). Alt text "Chris Hale, head chef of The Garnish Collective, at work",
+   no caption, no event or venue named. The other photo of him (Venue_08.jpg beside the intro) wasn't used, the
+   tool doesn't pair it, its card holds the logo. dessertrow.jpg left the page and the deploy.
+3. **Hero headline.** Before, "CHEF MADE CATERING / for the office, ordered online." under "Chris Hale's kitchen,
+   Yorkshire". After, "A CHEF'S TABLE / for the office, ordered online." under "Corporate catering from Yorkshire",
+   and the lede names him, "Lunch boxes, buffets and Christmas menus from the kitchen of Chris Hale, MasterChef UK
+   quarter finalist. Choose a card and reply, and it's booked."
+4. **No clip art.** Before, a ribboned gift box on Bags & Boxes, a cloche on Buffets, a six icon larder grid and a
+   wall of circles for Installed Edible Displays. After, three ornaments drawn in the sunburst's hand, a stepped deco
+   hamper with a diamond clasp under radiating lines, a tiered stand crowned by a small sunburst, and the same tiered
+   stand drawn large in the gold arch for Edible Displays. The larder is an editorial ledger, I to VI in engraved
+   Cormorant SC numerals, italic entries between gold rules, no icons.
+5. **Wording.** (a) Before, "Every menu is where Chris starts, not where he stops." After, "Each card is only where
+   Chris starts.", with the swap line under it, now "Say what you'd swap when you reply, even for something that
+   isn't on the card." (b) Before, "THE KITCHEN REPLIES WITHIN 24 HOURS" as the events headline. After, "TELL CHRIS
+   ABOUT THE OCCASION", and the 24 hour reply is a quiet clause in the body. (c) A full reread against both
+   standards cut, "founder, head chef and a" (now "head chef, and a"), the three item Thursday line, "the same food,
+   the same time and the same address", a third usual tick, "Launches, dinners and bars" (now "Launches and
+   dinners"), "the venue" from the occasions lede, "private parties" from canapés, "brand launches, product launches"
+   (now "launch days"), "Design, catering and the guests' evening", "classic pours", "where to set up" from the notes
+   label, "something for everyone" from Buffets, and a double "and" from the footer. Kept on purpose, his own words
+   (royalty, world class athletes and A list celebrities, his brochure's included list, the Evri quote) and real menu
+   contents.
+6. **Phone.** Before, at 390 the banquet table sat above the reply card, about 600px of scene before the first
+   field. After, at 1080px and below the card comes first and a compact table sits under the bill, above Settle it.
+   It seats up to 32 at a smaller scale over two tables (12 fit one table), then "and N more places at further
+   tables". Desktop keeps the full table beside the card.
+7. **Don't touch what works.** The reply card sentence, the bill, Settle it, Seal and send, the usual card, the
+   Christmas card, the clipping style, the close, the † footnote and the concept line are unchanged (the scene moves
+   on phones only, the footer sentence lost one clause).
+
+### Final round QA
+
+- Cold load, nothing forced, local at 1440, 1080, 768, 420, 390 and 360, live at 1440 and 390. 0 page errors, 0
+  console errors, 0 failed requests, 20 of 20 reveals, 11 of 11 frames, 17 of 17 images decoded, no overflow.
+- Every section screenshotted at 1440 and 390 locally (three rounds) and live, all looked at. Fixed on the way,
+  Italiana numerals in the ledger (III spaced out, IV read as I\, now Cormorant SC), a phone kicker wrapping, a
+  compact table splitting 12 into 10 and 2. Compact table checked at 12, 14, 30, 25 and 60 guests.
+- Order tests at 1440 and 390, local and live, values read back. 14 lunch boxes with dietary needs to WF1 2AB by
+  card, £189.00. 9 lunch boxes to S70 2AB, £133.50. Steakhouse buffet for 30 with dietary needs to M1 1AE on account
+  with PO 4471, £810.00 plus travel Chris confirms. Christmas hot sandwich menu for 25 with desserts to LS1 4AP, from
+  £500.00. Grazing table for 25, from £450.00. The visitor's own usual sent again (survives a reload) and the demo
+  account sent again for Thursday 15 October, £189.00. Validation blocks an empty seal. Clock tests unchanged
+  (Tuesday 3.30pm, Friday, Saturday, 24 Dec, and Christmas closed from 18 Dec).
+- Copy, 583 visible lines in every state. 0 colons, 0 dashes, 1 exclamation mark inside the Evri quote, no country,
+  no "finalist" without "quarter", no not X but Y. NO-AI-SLOP section 8, 0 banned words, one banned phrase inside
+  the Evri quote, 0 hedges, 0 paired adjectives, 0 uncontracted verbs, 0 em dashes, 0 emoji.
+- Claims recheck for anything new, against his pages fetched 08:15 and 08:57 UTC. "MasterChef UK quarter finalist"
+  and "head chef" (home), "based in Yorkshire" (home), canapés for "drinks receptions" and "corporate events"
+  (LinkedIn), "Brand Launch Days" and "Networking Events", "multi-course dining", "front-of-house", "Hodroyd Hall, or
+  delivered at location of your choice", "craft cocktails" and "bespoke drinks menus", "savoury and sweet
+  selections" (corporate page), "within 24 hours" (enquire page). All found.
+- Live. 200, title unchanged, live HTML byte identical to the deployed file and to this folder (5aa0d245...f6e1),
+  18 of 18 assets byte matched, dessertrow.jpg and netlify.toml 404, visible text identical to local in every state
+  apart from random order references, SSO and password off, control host 200.
+
+### Must not ship as is, additions
+
+11. "A chef's table" and "Corporate catering from Yorkshire" are our lines. "Each card is only where Chris starts"
+    and "Tell Chris about the occasion" are ours too.
+12. The host photo is his own upload from his homepage, cropped. Confirm he's happy to have it on an ordering page
+    and with the crop (it's from a garden event with guests, all cropped out).
+
