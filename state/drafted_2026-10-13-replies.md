@@ -1,4 +1,7 @@
-# Drafts, 2026-10-13. Two replies. NOT SENT, waiting on Raka's word.
+<!-- GATE ARCHIVED -->
+> BOTH SENT 2026-10-13 on Raka's 'send both now'. Chris Hale act_z9gTg8h87D7MA7eh9 05:46:40 UTC, Lupo Benatti act_AwHvBwtPh79ekuXC2 05:46:47 UTC, one copy each. Do not send again.
+
+# Drafts, 2026-10-13. Two replies. SENT.
 
 Inbox pulled 2026-10-13 05:34 UTC, LinkedIn sync status `synced` at 05:34:58. Two new replies since the 12 Oct 17:58
 check, and nothing else in the window from 12 Oct 12:00 UTC that wasn't already handled on 12 Oct (Ramona closed,
