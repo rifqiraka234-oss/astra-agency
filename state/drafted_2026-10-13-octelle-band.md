@@ -3,6 +3,8 @@
 
 ### Kristof Spitael, Octelle, ctc_txXG7tvvtcPsGRyJC
 
+> SCHEDULED on Raka's word, 2026-10-13 ~20:20 UTC, "Octelle schedule it for tomorrow 07.30". Fires 2026-10-14 05:30 UTC (07:30 Amsterdam) into this session, send_later trigger trig_01Aj2bZtyNnL9WDhrziaA1FS. Checked at 20:28 UTC, thread 0 items with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly one contact (connect note 11 Oct, no reply), myConversations none, queue latest row DRAFTED, no SENT row or other draft in state/ or logs/inbox/. At fire time the thread, the four way check and every fact (homepage, Boeken hrefs, a booking engine date search, HotelRunner's page) are redone, and an available room on the engine stops the send. NOT SENT YET.
+>
 > REDRAFTED 2026-10-13 20:12 UTC on Raka's call, "Octelle a good example of like a 2000s wordpress! I tjink for me the website doesnt tell the full story of the b&b and the booking is bad. So again, i combined 2 things wrong with the website to make it stronger. This combined can be angled as modernising." The booking only version is superseded by the modernised one below. NOT SENT.
 >
 > Flag for Raka on who, the site says "Thijs & Kristof" bought the property in February 2026, but the KBO registers Octelle as the sole trader business of "van Bavel, Hendrikus" since 4 February 2026, so Kristof is a co-owner by the site's own words, not the registered owner.
