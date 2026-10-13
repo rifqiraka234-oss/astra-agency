@@ -1,0 +1,24 @@
+# Draft, 2026-10-13. Jennifer Michel, Dans ton cube. NOT SENT, waiting on Raka's word.
+
+Routine inbox check 13:56 UTC. Thread pulled 13:57 UTC, 1 item, nextPage null. Only her reply is stored,
+`act_pm3v7psWeZKbx679X`, 12:23 UTC, "Hi Raka, thanks a lot ! Nice to connect :)". Our connect note went 12:20 UTC (list
+preview "Hi Jennifer, saw your business and thought it was cool 😀"). Campaign W1b, lead `lea_q9Lb4uY4x8R5HSzTq`. No
+queue row before this one.
+
+Record read 13:58 UTC. jobTitle "Fondatrice", companyName "Dans ton cube", dans-ton-cube.fr, Chantilly. Tagline
+"Fondatrice de Dans ton cube • Je transforme tes événements d'entreprise en expériences immersives • Location de cube
+photo animé en Île-de-France & Picardie". She wrote in English, so the reply is in English.
+
+## Jennifer Michel, Dans ton cube. ctc_9NPmeGGY3SqDa8oNe
+
+REPLY
+```
+Thanks Jennifer! We're an agency building websites, apps and AI workflows for brands like Unilever, AXA and Pertamina.
+
+How's Dans ton cube going, is it mostly company events so far?
+```
+
+Notes for Raka.
+- Same shape as Julien Facchini (6 Oct) and Lupo Benatti (this morning).
+- The question comes from her own tagline, which leads with company events. No pitch yet, the first offer comes after
+  she answers, as a warm opener with a full gate.
