@@ -1,3 +1,4 @@
+<!-- NO DRAFTS -->
 <!-- New accepts sweep, 2026-10-13 ~14:50 UTC, on Raka's "anyone else we havent researched yet? some actually replied to us i think!". linkedinInviteAccepted since 2026-10-12T00:00Z, 16 events, 12 already in the queue, 4 new (Osman Zaman, Sandro Wulf, Clément Previtali, Giulia Restivo). All four threads pulled ~14:52 UTC, 0 items each, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute. Replies, inbox pulled for 12 Oct 00:00 to 13 Oct 14:50 UTC, sync 14:34:49, 20 threads. isYourTurn true on five, Jennifer Michel (reply drafted by the other session, state/drafted_2026-10-13-replies-jennifer.md, waiting on Raka), Ramona Hendriks, Josh Edelman and Jochen Matzer (closed, each said no on 12 Oct), Michaël Abramczuk ("Stop spam please", do not contact). NOTHING DRAFTED TO SEND IN THIS FILE. Evidence in /tmp/claude-0/agents/b19/. -->
 # New accepts, 2026-10-13. Two researched, two held
 
