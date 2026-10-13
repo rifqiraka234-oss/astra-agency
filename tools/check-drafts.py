@@ -65,8 +65,11 @@ BANNED_STRUCTURES = [
 ]
 
 
-SHAPES = ("OPENER", "REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY",
+SHAPES = ("OPENER", "SKETCH", "REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY",
           "CORRECTION")
+# SKETCH, Raka's test opener, 2026-10-12, "hi, so this looks cool. However, your website is this.
+# I suggest to do this. We make websites for blah blah. Shall I send you a sketch of how it looks
+# like?" Five blocks, a full research gate like any opener, its own wording checks below.
 # Shapes whose length, block count and exclamation rules are NOT the cold opener's.
 # The opener template is five blocks (since 2026-09-24) with exactly one exclamation. Nothing else is.
 RELAXED = {"REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY", "CORRECTION"}
@@ -213,6 +216,11 @@ def family_thin(text):
         text, re.I)
 
 
+# RULES 0E, 2026-10-12. Fixes a freelancer does for 50 euros. Never the angle of an opener.
+SMALL_FIX = re.compile(
+    r"\b(cookies?|cookie banner|consent|gdpr|dsgvo|rgpd|compliant|compliance|opt ?ins?|"
+    r"privacy (policy|notice)|impressum|mentions l[ée]gales|typos?|dropdown|broken link)\b", re.I)
+
 SOCIAL_OPENED = re.compile(r"social-audit|no social (account )?linked|links to no social|nothing to test|no domain", re.I)
 
 
@@ -279,8 +287,13 @@ def gate_problems(g):
     for k in GATE_KEYS:
         if not kv.get(k):
             probs.append(f"gate field '{k}' missing or empty")
-    n1 = re.search(r"\d+", kv.get("site pass 1", ""))
-    n2 = re.search(r"\d+", kv.get("site pass 2", ""))
+    # The page count opens the line. 2026-10-12, "PIX_PASS1 URLs" passed as a count of 1
+    # because the old pattern took the first digit anywhere in the field.
+    n1 = re.match(r"\s*(\d+)", kv.get("site pass 1", ""))
+    n2 = re.match(r"\s*(\d+)", kv.get("site pass 2", ""))
+    for k, n in (("site pass 1", n1), ("site pass 2", n2)):
+        if kv.get(k) and not n:
+            probs.append(f"{k} must open with the number of pages read, e.g. '33 URLs, tools/crawl.py ...'")
     if n1 and n2 and int(n2.group()) < int(n1.group()):
         probs.append(f"site pass 2 read {n2.group()} pages, pass 1 read {n1.group()}. "
                      "The second pass is the whole site again")
@@ -307,7 +320,7 @@ def gate_problems(g):
     return probs
 
 
-def thread_problems(g, msg):
+def thread_problems(g, msg, shape=None):
     """The one thread gate. The gate carries
         thread: problem <what block two names> | cost <how block three grows it> |
                 offer <what block five delivers> | link <word>, <word>
@@ -341,7 +354,8 @@ def thread_problems(g, msg):
     B = [b.strip() for b in msg.split("\n\n")]
     if len(B) >= 5 and parts.get("link"):
         block2 = B[1].lower()
-        proof = B[3].split("Pertamina.")[-1].lower() + " " + B[4].lower()
+        proof = (B[2].lower() + " " + B[4].lower()) if shape == "SKETCH" else \
+            (B[3].split("Pertamina.")[-1].lower() + " " + B[4].lower())
         for w in [x.strip().lower() for x in parts["link"].split(",") if x.strip()]:
             stem = w[:5]
             if stem not in block2:
@@ -414,10 +428,49 @@ def check(path, replies=False):
             sl = re.search(r"^sweep social:(.*)$", gates[i] or "", re.M)
             if dm and dm.group(1) >= "2026-09-28" and sl and not SOCIAL_OPENED.search(sl.group(1)):
                 bad(i, "RESEARCH GATE, sweep social must say the accounts were opened with tools/social-audit.js")
-            for tp in thread_problems(gates[i], m):
+            for tp in thread_problems(gates[i], m, shapes[i]):
                 bad(i, tp)
+            # Raka 2026-10-12, "scrap these like compliant or gdpr fixes. theyre tiny fixes and
+            # someone can do it like for 50 bucks. we gotta analyse things that are worth 2500
+            # euros at least". RULES.md 0E. From that date every opener names a project worth
+            # 2,500 euros or more in its gate, and no message pitches a compliance fix.
+            if dm and dm.group(1) >= "2026-10-12":
+                wl = re.search(r"^worth:(.*)$", gates[i] or "", re.M)
+                amts = [int(re.sub(r"[.,]", "", a)) for a in
+                        re.findall(r"(?:€|EUR|euros?)\s?(\d[\d.,]*)", wl.group(1) if wl else "", re.I)]
+                if not amts or max(amts) < 2500:
+                    bad(i, "RESEARCH GATE, worth must name the project and a figure of €2,500 or more, "
+                           "e.g. 'worth: €4,000+, ...'. Under that it's a task, not an angle (RULES 0E)")
+                hit = SMALL_FIX.search(flat) or re.search(r"\bAVG\b", flat)
+                if hit:
+                    bad(i, f"pitches a small fix, '{hit.group(0)}'. Compliance, GDPR and one line fixes "
+                           "are never the angle, find the 2,500 euro problem behind it (RULES 0E)")
+        sketch = shapes[i] == "SKETCH"
         if relaxed:
             pass
+        elif sketch:
+            # The test shape is short by design. Raka's spoken version runs about 50 to 70 words.
+            if not 45 <= words <= 115:
+                bad(i, f"{words} words, SKETCH shape, outside 45 to 115")
+            S = [" ".join(b.split()) for b in m.split("\n\n")]
+            if len(S) != 5:
+                bad(i, f"{len(S)} blocks, SKETCH is 5, hi, however, suggest, we make, sketch")
+            else:
+                if not re.fullmatch(r"Hi [^,]+, .+ looks cool!", S[0]):
+                    bad(i, "SKETCH block one must be 'Hi [name], [company] looks cool!'")
+                if not S[1].startswith("However, your "):
+                    bad(i, "SKETCH block two must open 'However, your [website or social media] ...'")
+                for k, sent in enumerate(re.split(r"(?<=[.!?]) (?=[A-Z])", S[1])):
+                    if len(sent.split()) > 30:
+                        bad(i, f"SKETCH block two sentence {k+1} is {len(sent.split())} words, cap 30")
+                if not re.match(r"I'd suggest ", S[2]):
+                    bad(i, "SKETCH block three must open 'I'd suggest ...'")
+                if "for brands like Unilever, AXA, Pertamina." not in S[3]:
+                    bad(i, "SKETCH block four must carry 'for brands like Unilever, AXA, Pertamina.'")
+                if not re.fullmatch(r"Shall I send you a sketch of .+\?", S[4]):
+                    bad(i, "SKETCH block five must be 'Shall I send you a sketch of [thing]?'")
+                elif len(S[4].split()) > 16:
+                    bad(i, f"SKETCH block five is {len(S[4].split())} words, cap 16")
         elif (m.split("\n\n")[1:2] or [""])[0].strip().startswith("I couldn't find your website"):
             # The no website variant drops a sentence from block two, so its floor is lower.
             if not 70 <= words <= 150:
@@ -477,12 +530,12 @@ def check(path, replies=False):
         # Raka added block three on 2026-09-24, "Especially, when you are [current goal,
         # actions, company direction], the [the problem growing bigger in the long run]".
         raw = m.split("\n\n")
-        if not relaxed and len(raw) != 5:
+        if not relaxed and not sketch and len(raw) != 5:
             bad(i, f"{len(raw)} blocks, the template is 5, with block three "
                    "'Especially, when you are [current goal], the [problem growing]'")
         # THE OPENER TEMPLATE, fixed wording. Raka, 2026-09-22, "follow the fucking
         # template i gave you". Only the brackets change. See docs/opener-template.md.
-        if not relaxed and len(raw) == 5:
+        if not relaxed and not sketch and len(raw) == 5:
             B = [" ".join(b.split()) for b in raw]
             esp = B.pop(2)
             if not esp.startswith("Especially, when you are "):
@@ -572,7 +625,9 @@ def check(path, replies=False):
              # Raka's Build Squad offer, his words, 2026-09-25. Kept verbatim, never reworded.
              "in half the time at half the price",
              # The social and branding block four, Raka, 2026-10-07. Fixed on purpose.
-             "branding and websites and social media management")
+             "branding and websites and social media management",
+             # The SKETCH test shape's fixed words, Raka, 2026-10-12.
+             "looks cool!", "i'd suggest", "shall i send you a sketch of")
     c = Counter()
     for m in msgs:
         low = m.lower()

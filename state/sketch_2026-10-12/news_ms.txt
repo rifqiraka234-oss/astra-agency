@@ -1,0 +1,105 @@
+CONTROL  'Tesco'  HTTP 200, 100 results
+
+== GOOGLE NEWS, company  q="Music Social" London  HTTP 200, 47 results
+  2026-06-08  From cinemas to smartphones: how London’s leisure habits became more interactive - London Post
+      https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSkFhdEc5SlR2MVFxOHVkV0JIdXRLT0pzYjJxVGhLM1JZb2JjUkdCRTBELWdreElydFV1bWk4eXM1NjVGbUhzS21oRGJKa2hpVG1PN1hTZHE0UEpOVUdMQUlRZ2Vfcmd2U0ZfU1A2Z3ZsMms5WjI0Umk3d2xncEp3eWxEV1RrWTdWMDNUS1BkOE1Fc3Z1V2lPakV5NHduNVNrNWQ3dWxSeU4?oc=5
+  2026-05-28  UNION CHAPEL LAUNCHES SUMMER-LONG YOUR STORY FESTIVAL TO MARK REOPENING OF HISTORIC SUNDAY SCHOOL - London Post
+      https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTHdPaENzNkxueS1jYkVia1Z0ekZacFBWU29sMktMZnRXSHZxcFdBRWJTcWYyeVZoTWk0a1UzazVXNFFUakloMktZOEJBNTNISUVyZGVQN3NyN2huYnB2WFUyU1RGaUFCREloRFFSSTROU0hucFlZekdYN3Y1WjdaSEkzU3lqUGtCM0d2cFJyRGRRTGJabFUxWGhUOS1rMmZSQ2RkMmwyQWhlRlVtNzI5UENiR09hVjNOaEpNRGVEcEhRdw?oc=5
+  2026-05-01  Gen Z use toxic texts from exes to make AI-generated music - The Times
+      https://news.google.com/rss/articles/CBMijAFBVV95cUxNYlFvdHA4NDUyUlR5cS04UWJISjBtazlVVnVTMVd2ZVR1UXFMeFNLVFZDd2p3d3l6MGxmM2VOVVRZYlAwU0xpdnlwRDItN295QnRXRm9heklsdU9xQTZ1MkJ1M2hXZGVIeEk3NFZhUXJuTDdmeXY5aWNQOE90OFBRZ3htaGhaZ2FON0VKNQ?oc=5
+  2026-03-27  Social Media Users Call for Vishal Dadlani’s Removal from ‘Indian Idol’ After Viral Video - INDIA New England News
+      https://news.google.com/rss/articles/CBMitgFBVV95cUxONnZQLVYwS1k3VmpjR0R4aG5Nc2JDRFJJVVJaSTRZM2NnUkJWQ0N0Qy1xdVIyTE93Uk5JWnVleWdpN19KRW1iRGU3amg4NzlJZHVSMWxMRkpMdmlfSVM0ZEwyZjlDcHFYTmY2VDlxcFZCck1EQVEyZHd5WHRiSGRSMW04MEpaeWRCcGRVZDdnM3Y3N2hLemtlbUY5Ui1YY2lEOFpucHFlOTducVB4NXdYaXEwUlhsUQ?oc=5
+  2026-03-25  Natalie Nunn records new songs with London on Da Track, says new solo rap album is coming soon - Rolling Out
+      https://news.google.com/rss/articles/CBMigwFBVV95cUxQQVFIVTFTM1hLUE11elNlT0pRbTZxVGo5UGQwOGY3UEd3RFNFS05xaXdSdGpkNjNCTTFpcUhsTV9ZcHVvT0FMUWNVTGxGZ25WWW1GWTJ1RGQtWktCZmptYW41VjBldEprSEhjRmFtYUx6Q3pVWEE4dWxfWElCMGZLRjdGYw?oc=5
+  2026-02-23  Apple revives the Apple Music Connect name — this time as a B2B promo platform for labels and distributors - Music Business Worldwide
+      https://news.google.com/rss/articles/CBMi3AFBVV95cUxQdFExcXdMZmlnQ3lJcGhtVFNtQjZjMVRpdnM4OXBCOW44VkZzNTFSaGJFSlZ6SXB0bVRxUFptZEtOWnJJMWpJRTdSV3UxS0YyN2F3ODRRWXBKQVVTMGRNcS1EODJVZGFocW1VMHpmTjNEX2xuYzE2dzBTa0JVb2xEWm1OS3JHUXNlbXFwUE1zZll3ZEFNR21ILTZTclo1T1V6NkRKX1Vmd3hHVmtSSHhuQVp1aW5QaHdEZUxQS3Z2b0x5b3Awb2xRWEhfbXRSRjRYeTBIYXpHUDg0dVdn?oc=5
+  2026-02-19  All the UK unis that are cutting back arts and humanities courses in 2026 to save money - The Tab
+      https://news.google.com/rss/articles/CBMiugFBVV95cUxNLWhxSEhOU1M2ak9Bd0JMWGlFV0xtMzRnUmdROGNkUFBFbk1mZnNfeGZXWnY3MjRKUFVOVXgwS0lOZ2JQUVd4Z1pwZUJnejY3WHQxV0FLeWs4Nk84c19yQzQ4dnNpQ0wwSmE5UHlxNGtfZENoakhSYXk2aFA0M20zTUt5bnBjV2pFX0txWDc4ZE51SnQ0aUZmWE5OVWUyS3lFNzZhRjlpY0J2LTdoeURCejVvaGVJVGRXdGc?oc=5
+  2025-11-27  Fashion world mourns Pam Hogg, designer to Lady Gaga and Kate Moss - The Times
+      https://news.google.com/rss/articles/CBMitwFBVV95cUxPMVNzNlIwSmFwZmtTbFRmamxocFh6QmJDQW5TOXp3REdRdnUyQUZNckU5aUF2eXdtSXNzQ0JXamhsbHYxT3dGWWhyZDRNdGltcnhUdTFhdEkyb3FhMjAxWmVIdkVVamMxZldxeWljY0hDRmEzbXItcUdTUUxCSm9xbDgxMXdmT3Z3RDdSc05GMkdZQzBOcHBIWDd0QmJWYmNoUzFpS2pQZF9DY1cxZ2JJS3gwZGlVa1k?oc=5
+  2025-11-14  The rock stars who flaunted swastikas - PressReader
+      https://news.google.com/rss/articles/CBMiggFBVV95cUxQTG5IT0wtVGxhOU84eU9pWkJzRU9rWmF1MmNvUFBvT0Q5d0dBMGI5SEg1azl3SkQ0TmRPZXBucXYxRC1zY2FUYUdoalBMemFxLVE2a0FNcTN1emI5aGhzTU9kRGtHUkFGeXdBVGZib3pWbUtydFY0NXNhdVNvWURERXhR?oc=5
+  2025-10-07  Momentum builds for Zubeen Garg Madame Tussauds statue; proposal sent to London - The Assam Tribune
+      https://news.google.com/rss/articles/CBMivAFBVV95cUxNY0M2YU9XMVVhcXhpZnk1Z1NGYTAzdlpQYnlYQjJUT01udlVvRFZmeDJzRmVwSXJHNGlVbzQ5WmF1QUhDd3ptcDMyaHRTdTRvTS1GSEdXeWluX0RrUnlzOHZkX0VHYnVybTJZQkZqMGdQUUx0TlJ2aW5EN1phaDdIVkQ2T0NCX19rRXAzSW5xQThLOFMzdnNFQmV0QTdXMjNoa04yWllWVkRPel9HUllNRy1KNnd2dXVOaG5HNdIBwgFBVV95cUxPMXh0cDdwMFZqbFZiSTBDUTBFVWlaVEdwaEgxc05zelljZVktQW5FNzVsWjNybUh3ZmUzaWlnQ0ZCTG83U0ljOU5VNmpVckU2Zm40dkktU1Z0MUNVRTF4VmJFUUVpQ2w3UmxaS2ZmdkhRSk50eW05MmdrLWljNjdUZWFJTjV4OUF0RUVEVDc2TDY3a1J6Z0syOG1peFFyU29HblNHd285YnBwVGZpMTQtWFNOV3BfNGVSYnNibzV6VmwwQQ?oc=5
+  2025-09-13  The Kutis: More than just musicians, Griots Of Fire, prophets of rhythm - The Guardian Nigeria News
+      https://news.google.com/rss/articles/CBMivgFBVV95cUxNcF9lc1h0VW1zRk5iV2JRZmVCNlNkNkJISGtGQlN0Zi02NVE0MGlqTy1vN2pUSUwzYVktM04zby1RMzgyMHo2ZEhlUG5HR0VMUThZcnQ4X1EwTmNSRmUxR0s3VXduQk5LNk9MS09ITUE2dlphWk5ab0dtUGRVVFhqWDdJSUtJS3p4NlFjOFNlcjNEN2NxOUlHeU83ZjFtSlFSSjB4QWJseFRpWjRYQzYwVkQ1YVdLR2ZCMGtrTzh3?oc=5
+  2025-08-11  RGM INTRODUCING – WE INTERVIEW BLKATS - rgm.press
+      https://news.google.com/rss/articles/CBMickFVX3lxTFAxcndCZzRLZ2sxZGJRNzk5ZjJlQVgwMkxyX01rbU1uTUVHQmdBVlhudk51VnRqSVh4UlA2NjN1QjNMMjBOanMzWXJ6SmRCSG10Z0ZDTmFYbkZpbUVfdTJ2M3JfNTVzaGYtZkhFbzBDd0lUZw?oc=5
+
+== GOOGLE NEWS, person  q=""Alex Talbot" music"  HTTP 200, 17 results
+  2026-09-24  Making it as a musician: 'Vital to make connections' if you want to play a festival - BBC
+      https://news.google.com/rss/articles/CBMiXkFVX3lxTFBiZGMyd1I4UTBHSFpVeDdOT0dSSUdsQ3FoLU9EQ3dPbHNiWklMRVhhYmVMQ1dKLXdrYlFIRExHdk8tclhGVjlzZlRiMWlHSzF0QXhveDlVYVhkX3pOSEE?oc=5
+  2026-07-02  Best Notting Hill Carnival Sound Systems for 2025 - Time Out Worldwide
+      https://news.google.com/rss/articles/CBMie0FVX3lxTE42ckZfQUtkTjJHZmlacXR1eDVfeXNBaGxjeHRlOS1ybEF4dHQ2SUZJdjNreG9JbUZvc0laM0hTdlAtTjI5YUZ2S1NqLWJITkxUOUktNHIwemdkOFlRVUlOd1hIT21qZlpqYjAtc19kRzE5OHJHdzNaN2c5SQ?oc=5
+  2026-03-10  Owners of Curiosity Doughnuts examine the creative process - Bucks County Herald newspaper
+      https://news.google.com/rss/articles/CBMi9wFBVV95cUxQZnJ6dmZQLXpzVXgtZ0lkOE1QVkp2ejI1YkF2Mmt0RVNKREZieXFSWE5nYUJJUDFEdFdldVF3MlhtaDIzdDRKaGNhMFB1ZTljaFo5WEcyUXU0WlFjZGZLc25QSmFBRDlPOGc0QUhHU08zWDZ6akpPMmM1ZmJfWmdITFBicm5qN0xnVk54YzZrT052Q1hyanZSOGFHbjZFTHNfbmNGa3BEWkNMNzlOd0hlX3hnRWtPa2lqWmMyUWdXTG13eWdVcHpCeWs4VEdwLVZSMFJQa3hFRk44MWNxQ2xoU2F0VkVXcUdpQmwyUUxCbU02SW1sX053?oc=5
+  2025-12-04  The lifeline for Manchester's most vulnerable people, where 'your donations mean survival' - Manchester Evening News
+      https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeUFFMGJrN1drWDhVbWxURFJ0SFM1dnhZWUx5U1FFSm5STXZ4YU56SjRnRU9LY19oeWJEdy1PWWdXcmQ1b3ZKakNlaDg4b3Z2eGFuMmZzemxwSlBqVnpaaXBLYW1qYmhYbVZ3bVlUQTQwd0dIeWZkdzA4aFNObVlFRHNuVTRiWm94YTFVdldpczBpbl8tbW5qRHAyUmZnNVh1aEs5UjA2RG3SAa4BQVVfeXFMTUhzRVhESmRIdkZVWUFpdFZyYnZ4X0dHSGZjeFJBNWN2OFB4TVRyclg2cHQ3NU5OUUQyRnBZdUlnVXB6ajBPR2lDNVJtZVh5MWkxR29IdkF1XzFxMjA5N2Y4U0lmQlBRRk1EN2ZXeVh4WXdUWkphbkVRd05EektrRzdIQlR1bVozbEpibEZqRFRheEd3YU5LVkdTNkx0QTc2cTR0THNqTVRrSVkteEpn?oc=5
+  2025-10-22  Jazz bassist Quinn Sternberg returns to Greenville’s Wheel Sessions: Upstate Beat - Greenville Journal
+      https://news.google.com/rss/articles/CBMiwAFBVV95cUxQWjljZ0g1MmtBTGhmTllyQUFxOUJyUW9qT1dmaTRIM0doWHNyc3p0SWVUcTlwajNwNDNWRG9iN1VSNmtuZzJEVWZZNFNuSkt6d2tiM2tUTXdGX2V0MG5hYmVUTnprZDROVk13WFhjb1YwV1VTbnJfRy1odGF4NFpPeElweHN1by1nc0lBZms5VFNfZXlVbWx0NTIyMWdSckpfckdYOXh1NlVjcVpudWhOSFZqcE9xTTloNXhRNy1Ea3I?oc=5
+  2025-05-09  McFly star says super fan at Swansea show was the sweetest - BBC
+      https://news.google.com/rss/articles/CBMiWkFVX3lxTE1sUDlKdVczS2dLVGxZOVZKbE0yUkxvVkJTMWtwemF4eWdRXzdtYkpyN3haeW9mQnFYbXNQeDd0MEstTXo3Y1h2Q2N2UmpWR1RvT3NvczFuVzlvdw?oc=5
+  2025-04-30  Port Talbot: Conspiracy claim debunked after arson rumours swirl - BBC
+      https://news.google.com/rss/articles/CBMiWkFVX3lxTE9QRXl0czZOdG50Vm9lOFNXRWxPNzBqTTZVRW5TZjREVGJDdlRXeHhiYVA4LTNVam1OSlYtNkNPSWVQbWdacEZpMXlhdXhRTkdiQ3pzbUZyblg4QQ?oc=5
+  2024-10-15  Virginia Vereschagin Talbot Homer Obituary (2024) - Orland, CA - Sweet-Olsen Family Mortuary - Orland - Legacy | Obituary
+      https://news.google.com/rss/articles/CBMijAFBVV95cUxQbFh4b0RTclJhOHp3Zkl1bXU2eVE2TkFhUG9XdENfbzNnWmlSYWktcmxsVjd2U01ScTA0WWc4R2hEU0lKM3ZIVjdhS05OWEpDLTRIMnFNdFNOWDJnTlg2UTZsQW82aWNNVTN2cUN0eEgxZnpYSlJra2lWbmFrSlliZUNrcUF5elZyQU5IQw?oc=5
+  2023-10-11  TCPS hosts motivational performer, author Alex Boyé - The Star Democrat
+      https://news.google.com/rss/articles/CBMi1gFBVV95cUxNRGprOVhqZFFUaVFiWk1fZ2kyV1hTTzlTY19EYndrcFdOcnhnYVdIaXR5bGV0cmxPMDFFd2k0QWZtTnVHMjA0X0VfTXd5Ykd0dUpUa0RrTk5LZ2tNc1JEeTJMS2lvYm1fcjV6ejZZUUsydFFlRWN1MnpreVB5RGRHRTlzUU1fbHY3bmF2VHhGbzMwd1VmWWlUb2l2cXdFd28yTU5Hd1ZreGRtZ0lDeURXYm9yZ0Y2bkRKX1ZpTEUzNld3djVtanRxdjFTclRGR2F4SXF0WTJn?oc=5
+  2022-09-12  METZ Link with IDLES’ Joe Talbot for New Song “Come on Down”: Stream - Consequence of Sound
+      https://news.google.com/rss/articles/CBMicEFVX3lxTE1QU2pOdzU0NkVhNmk3Mk4tX050MUZSaXlFNTd1dmMxR3Atc1ZMT1V2QTRSd0I0RWdsLVMzSloxZTFzblMtYVRDZVBTamhYSXIwQlNxNjFhWi15Vm5mWHVSSndSTm1Pc1VxUkVXcFJiMm0?oc=5
+  2022-08-23  PEP Achiever Says He Had to Do Well for His Grandmother - Jamaica Information Service
+      https://news.google.com/rss/articles/CBMijAFBVV95cUxNOXpyamhwZTFGOFZoMF9pNWpPQUNVbUZEdUJfazhrLUdLWHNWVHYwOXg3WHdSWGREdUloXzk5dUFrY3hGZTQ0VlNDSU5nTk5OSWQ5OEktSnF4YjBFRUdPeXdIVzR2LVNSWlM5WlJkRFRWbXBNWHJJaE5MaDBXYjg5MExZYzRkMU93ZHRFdA?oc=5
+  2020-02-07  Rita Wilson Shares "Heart Unknown" from 'A Simple Wedding' - iHeart
+      https://news.google.com/rss/articles/CBMingFBVV95cUxNXzFqZDQ4OWdtakZ6eUQya2ktczY5LTNJX2NjWHNYYjhTLUEtNDREUWNqZTBBS0RSbTZJcGEzMk12SkhsMHB0bG5VczR3bHRpOGJMSHpWemhleEhack81ZWQ5U0M0RmlXaENDdHZIQnhySkh2cGpHNXh5Q21nckJTMFJJaE5Ib3RweklBcms2RjFRelQ0MVVOV2hUZEhud9IBpgFBVV95cUxQOWdFb1gzdGNXbkpRNlRVa1B2dld5aE5xa1h5cEtyMGM2TUdPNmRxMkV3V0RnTzYxUjA0WmpzTUxvc1RBYnkydEluQ3drZUZYeWlRSHFvbWdPaWR1UWtxZFUzMzBKZ3NWcktWSGxHSWRvOFZZSVdMSjRsdVpQQ3lsek5VbE1QeDlfUmhoUXpfUUJPUVBQcENjZkRTdkt4LTV4QWgwNFRB?oc=5
+
+== REGIONAL NEWS, their industry in their region  q=(London) ("singalong" OR "music social" OR "team building music")  HTTP 200, 43 results
+  2026-10-01  Hollywood star surprises drinkers with singalong at London Irish bar - London Evening Standard
+      https://news.google.com/rss/articles/CBMitgFBVV95cUxPc1M2TVgzcEZiQWZjalBlcUVTUDB3S1dXTDg3S1N2N1E0NmNIcDBCQ1ZXZk1uSkY3aVdlQkJ0dU1oQXFSQ3ZQX1VBTzhELVR3LVZBN2MwVGJ5OEh6SzZGeFNJN0FzbDh3Y3dFVmw1MWJrQ1NQUUVGTUVsaTNPaFRWNzFQOUlLb2F4Vk5UZW1qZm1PYjJRZkVZRnFVb3ZRU1ZfY0o3N0czVmRlSEpTekcwQlpreFE3dw?oc=5
+  2026-10-01  Hollywood star surprises drinkers with impromptu singalong at London Irish bar - AOL.ca
+      https://news.google.com/rss/articles/CBMijwFBVV95cUxOcDAtU3hsNUdEM2VlblF4VG5FSVhBb3Bpd1F5cWZMR3pwTmhrZjkzRGNXeU0yXy01VGZXVFFNY3gxRm9kRGdWU19aWUlUTHpNUlRVUW5EWXk3cTUycFJiSlMyVWwwUnFzbjlxdXk3b0lMbFA5RFliUFZuZlhRbmxYUmpXMmdsdDVzTG5Ga2dLMA?oc=5
+  2026-09-29  The best Christmas carol services and concerts in London for 2026 - Time Out Worldwide
+      https://news.google.com/rss/articles/CBMikgFBVV95cUxQZ3FRalFHdEtyYkVQZ2U5MkZTNE1xaGtNVWJ0Wk5wbzhpdndUaWdyeTJnR2JxSDZRWEQ5VWVQZF9BbGV5LVVzRnY3VVZsZWlKVlg2Skw4cndFS24wT3lXUkRFVFBCcW16aDFuOWhRaEdva3VVdGgxRXVqd3hZUGt1dUpIVlhlM0ZRdGlEZ2thNGZ3Zw?oc=5
+  2026-09-27  Stranger Things’ Gaten Matarazzo surprises London crowds with Rent singalong - PA Media
+      https://news.google.com/rss/articles/CBMisgFBVV95cUxNa20teWp0dEptWDhzMmQxd1FKUjF4OVpTUV9lWWNQQU5wRXlUUFF3VnR6YXVYclluY0pIOUx4SnFrUU1hSDF5NzBXMnBFb0RIVHdCSHRidmN6T2p2MGhWM0xoZjh4d1pwdEI1Q3o2UUtncElseHh1T0RwTngteFkyWjgzSlhpdERHSGNrUFhrR3c2M2U1NWptTGR1Zmhrd1dieGVRUUNOTlNCYVJ4VUtVaFlR?oc=5
+  2026-09-08  Jay-Z Leads Beyoncé’s 45th Birthday Singalong With Fireworks at London Show - 24Hip-Hop
+      https://news.google.com/rss/articles/CBMiaEFVX3lxTE1rallJZWxWbWRCWFNyUmhNMGNDUXNjaGpPNkhNdVRvTy1SZHFMUU1CMFN1VThFZTUyOUZxM1djOXMyQ2pZLXViclJnV3FwaFVQYjU0bkF6bEZSTUx6OTljZGh3bFhYUlZ4?oc=5
+  2026-09-07  Jay-Z stops London concert for Beyoncé’s 45th birthday surprise - Briefly.co.za
+      https://news.google.com/rss/articles/CBMivgFBVV95cUxPbmQ4M1l3SHJLbmZQbmhWS2o1NU5Jak1JRnB1clVUeUVIdEpnd3NGNXpaOTFTQTRCX1FtVDNRQ1FSNEx5SzJHdlM0R291dmctRWNYWFdfMDJwNTdESzlDWHZEQ0Y0UlplR09ONE9GdjlKdFhJZEx1bFd3UjZYU0s1WW5aTjdxRm0tU2pYaElTX2VWWXI0dW91TEpsQU1GN3VmYTZmckhlcjhXSXJIWnRsU1ZnbUUzWUtkQ25QdGl3?oc=5
+  2026-09-05  Jay-Z Wishes Beyoncé a Happy 45th Birthday with Fireworks and a Singalong at London Concert - People.com
+      https://news.google.com/rss/articles/CBMiuwFBVV95cUxQczg1bDBNYXZha0RWVVJvbkFCRkxfMTFlaHNBYzNIbjNKRDd0Q1ZrbUNGcG44Y0dvT21LYmtFTjJYY1JEYk5NS1JIeFVJZFE1YUlRaFV5emZKSDVYaWdoYm5naW1ZeVRERlNlX0cxQjh6Q1R2Zi1Nb0RZZkI3THJLYjQ3ZWVjc1I5Y1gzM0VQU1ZWX3RBSm9UbGZqdGRfOXNTQWVaT1ZmNWNTX0VDNXhaajVjdjJOV0Zqd0Jj?oc=5
+  2026-09-05  Jay-Z pauses London show to wish Beyoncé a happy 45th birthday with crowd singalong - Page Six
+      https://news.google.com/rss/articles/CBMiwwFBVV95cUxNbU5mZDRzUjJsdVY2czROdU1IQS1peXY2SEpPRWtNTEtvVnV4cUJBTnJCaHV2MmZSbzNsYUI4SVc3bzRHZjRXZ2tTQWN4a0QyYUN6c3dVN2lDTy02bXBoR3NraWFJSGI5Rk04UUtxb0YxMWNvWnRWblhCNzg1cjJiYng4Mm9aNnZvQ3RtcVFCUnRRTElnZ3dNaVdHR3VvRFJJam0zLWdJcDRGX21mRmlReVFRbi1pWXptWXlXeHFBa2dBbEU?oc=5
+  2026-09-05  Jay-Z Surprises Beyoncé With Fireworks and a Birthday Singalong at London Concert - Music Times
+      https://news.google.com/rss/articles/CBMiwAFBVV95cUxPQ1BjVVZYYjM2a09WaXNJNmptVGRZcE52ZTR3dkNqSVA3ZzY5RjZuM3dIUW9WTTAxV0J6SGYxRkRJcEJOLU5VYlpyUzE4Qm44N0J4ZGgxS3EwR2g3RTl6UTFfazdwZkFpOEQ5MjhSdmJUcFIzWGZib0ZsNnkyUjFVcG56akl4U1QzU29MQ1YyZldISEZaS3N2aWp4UlhFMlNCcXBYQU1wOHIxZWxybWZXS254cVk2TTkwMjVRQ3RqZWE?oc=5
+  2026-06-11  Mick Jagger joins folk night at Oxford pub for a singalong - The Times
+      https://news.google.com/rss/articles/CBMikwFBVV95cUxOZ1NYdDFVcG5HRTIweG5wT09sbXRscVVXTFhvaGVKcXlNWjJpa3NDN1hwNjNnbDN6UXlmYkRabkZiQk1ITjVBZUl0dF9DaHVLME9jUU1ZT0s2VmFnTnA2OG9scG16QUxmd2Ntd0ZvVWtBazcyTl9henAtZ2thQS1sVHVEQmlIaVR4Q0R6MGloWVVsWjA?oc=5
+  2026-05-22  Kylie Minogue surprises fan with 'magical' singalong - Sky News
+      https://news.google.com/rss/articles/CBMijwFBVV95cUxPTWRNNmVsci16cjFwTWctNWFqN3BmVkN1Ri1Cb2JaZktWdzNzTnJ1Qi13Yjk2SFdLM0RFbE9mN0RlUGIzWnNiZ2dHSmppcEctTF9PV2ZyNVpiQ2JDR00zbTdSM2t1OG1ZX1llNldqYWFLc2dWQmhteU1rTHZGU3BFLXhUR3UwU1htaE44ckJURQ?oc=5
+  2026-05-13  'I tried London’s wild singalong brunch where the whole room went mad for Taylor Swift' - Daily Star
+      https://news.google.com/rss/articles/CBMigAFBVV95cUxOVXAzQVJDOGNHdTF4ekw3bEllZ3dlc2tjMEdVVERQVGNUTXNLSVdwRm1UVmxibHJzVEQ2N3JjUFg3bU5rRmctUUg1STBjVm9TdHotamdDbU9vd2xoRUEtVWpxSDJUZ2pHZllOd1JVNTRzU0FIckxybzJ4d25Fak9WXw?oc=5
+
+== INDUSTRY NEWS  q="singalong" OR "music social" OR "team building music"  HTTP 200, 100 results
+  2026-10-12  29 Years Ago Today, a Tragic Plane Crash Claimed the Life of the Folk-Rock Legend Behind One of America’s Most Iconic Singalong Anthems - American Songwriter
+      https://news.google.com/rss/articles/CBMi-AFBVV95cUxOMTRyNmdhZlVGRk9rUzMwcTJGYTVYWDViYWVqVzl4TmFETWhualJxSUdCWl92ZFp3NTlFWTZxSkVMdnhVaXFOanBZZURidU9WTGJVUlpFRy1OSFFWaFhMekhoZ1JHcHB1bHlpampYT1U3SzVTempZZEhpQ0NaSTFXWUJycXM1UXdOcC1mOWZhUVhPaXlLOVVVSWtpZUQzLW4xX3hHbEpJdDRzNXRoWW1VRklBbGJrMUtoSWxIQzFNTUhiODNWai1HdVZqVVRKbnh3alltSVd5NERHSkdCZ0QwM19mUDRhZDZRa1BNSEpLb0pJc09ndzBuMw?oc=5
+  2026-10-12  VALLEY VOICES CHRISTMAS SINGALONG - Kilcullen Diary
+      https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUGl5eXhqWEZwMC1MOWJManY0aktrSDVhOHVON3c0WnhnWnFPaUh4TmpPYlJDclNjMDZGMEhuVDJMV3NtdVRheHZET0FrM1lzNlF4cU5mM3N2YldtZWFFOWxwUzF2QnpjMWppUlhGdEdkSzJQZDBsbzVoYVFtNEduWnhkZWVleEZuemN3?oc=5
+  2026-10-11  Keswick group launches pub singing event alternative to parkrun - BBC
+      https://news.google.com/rss/articles/CBMiW0FVX3lxTE1uUEpxckNuUk4xVF9vdkl1WnNhUDF4Z1JmU2lSb0VNbllsaXFFX241Zi1CX01MdFJHRHp0bklNWjNwY1lTbUFkaDNTR1ZqUEpZVWdPQlJSR3BzaWM?oc=5
+  2026-10-10  Video: The Ting Tings Turn “That's Not My Name” Into A Festival-Sized Singalong At Rock Am Ring 2012 - That Eric Alper
+      https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUzlVbEpZYXBlelczM2FhazlwWC1xaGtycE1GWXRKNWV1N014WUhoTlZhc2ZETmRodDhzSGRkc2tycHFwUlVfN3lCWGJMY3RyYUVjdTFaLW5CamNKV3dYbTcweUFZc0xpUEZySFh3ZEMyeTFhVmdXTGdlUloyZVd5Rm5ucERQSUVtQmN0ZW1MWGxyRnVRMjJRSkpoaXF1ZzFfa0ZZSW9SRkZtSldpam1mempYMWpEYVVpbFQ2d2h4SkxRZ29SLVhTQTcwQm0zby1DM2Q1ZQ?oc=5
+  2026-10-10  Video: Florence + The Machine Turn Rio’s MITA Festival Into A Giant Singalong In 2023 - That Eric Alper
+      https://news.google.com/rss/articles/CBMiwAFBVV95cUxNbmdVSjMwMU9mb0ZwVjQ3VjZicGRxVWdUMHp5SVZJREF4a0M1T2ZVMV9adlpVeTlzcE1YRDN1TkQ4NC1ITXlxazk1OWZiN2xZUnpXZnNUTnZmWHgyLVdacmgzM0E5eERBUHdCb3hqVnc0andBQ1duU3Y2MFVaTXdqNGVNX2ZJdFhXUklaeV9NOTc2MkhkUFctZ2owZG5XNHRFa21feXpMLXBpT0NydE5kN3dDYnYyRk5ybEZlSHE2S3Q?oc=5
+  2026-10-09  Hollywood Icon’s Daughter Turns Mom’s Peaceful Singalong Into a Real-Life ‘Scream’ Scene - Wide Open Country
+      https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbkZtajF1NEd5S1ZrcERlX1ZraTRVTy1ZN3RITGdEbWhHc3dSVDVzTjh4TThIVjhfVkpia2czZmhLUTFnUFJyN3N2T3RGbEw3cmdldlJIMlp0c21mUHpZUW1WSEgtMXRHWVAzMjdqYVBvaEhzZnFQR01YZnBhaXpZSVZOTmFhdVhyN2w1NmVvSHFsRVQxOUdIWW9sSFdNaHRfQUhKT2JiSE0xUnNJa0xiMDlmZ0VBOVJt?oc=5
+  2026-10-08  Synch with a singalong - Sunbury & Macedon Ranges | Star Weekly
+      https://news.google.com/rss/articles/CBMigAFBVV95cUxOdHdzamNMY3JKc1hxXzE5T0pPNDFHQlRzaXVtakhYVkpUVlJCNldoNW1oNXVPVV9jalh0TU9sOTVDUnFTTUxhUG5wdEdkUjhOV19ITWpuZG5CZ29selVNNDVVcExpdTVWeUIyc255Y3ExWkVocWwtMmtrclJmcV9UbA?oc=5
+  2026-10-07  Tory singalong is busted by the fun police - The Times
+      https://news.google.com/rss/articles/CBMijAFBVV95cUxOUVJxdmRjRHBmaEdKQVhFN0RqbkVnNFFCT3haRWUtQnlvdHVHdXNWVU0zV1g1OVFZcFVjVzBzMGh5cHNqNVNIbWFtQlRFUWFoYjgwVmRJUFppRTBGTE9RWVpCdmxpTnhnXzd2bUlKWUlUQ2t5ajI4Mnk1dUlpcHBWN3ZZTUNMMkI5RWJObg?oc=5
+  2026-10-07  AMBLE BLESS GLASGOW WITH A NIGHT OF SINGALONG IRISH FOLK JOY - Northern Exposure Magazine
+      https://news.google.com/rss/articles/CBMiogFBVV95cUxNM21TQmJDYk1BQ2JCM19NaV93OGhweFdGT09YMU1QOGVyNHlxQl83QU8xdHVIZFhEQ0lOVW41UXhXMG9tTDFReUVod0tudFRVTFNWSlIwWmU3bnZsc1ZlTnpHdWVRZ2k3SXVXNzhsSk4zUHl0Y01wUU44QTdpRWFkc3NXYlZsN1JfU195cTF6OTR6QW1iVEQ0ekw1MTV1NXF3aVE?oc=5
+  2026-10-07  Tom DeLonge Gets Emotional as Padres Fans Sing Blink-182 Hit - Heavy.com
+      https://news.google.com/rss/articles/CBMigAFBVV95cUxPaGxaMFRUTFlNSU5MM1JOczVJdjF6QTU1Y2lCR2hzdHFUZjZhc3hxT2U5NENQZ0szcmp5OERnMFdmUGY2anNCTko1bjNUOWNXd0NGek0xVEJVb055d0lTREQ1MmRNTUpxVWZqS28xRmdhY0hBd291SmR2VmZmOFVXYQ?oc=5
+  2026-10-07  Blink-182 frontman gets emotional after incredible San Diego Padres singalong - Diario AS
+      https://news.google.com/rss/articles/CBMirwFBVV95cUxQSGxsRWt2TVVOeWxjMkdQSnNTdDJ4TGU2S2FjSGZ6cG03ZWZ1ZHp2Um1ZcW5hc1Zrbkw4V19DQXNZVW5EM0NSa3h2cnhUSjd2NENSaFhkNFBGaTItV3RCRzJRNEY4ckZvM2VHQm13NDA2NC1MQ2tEV3cyel9KcF9BcWxRYlMyNHJTMUtiMENLY1FlWVN4b3kxUWg5MzlCaWIzc1RTM3ZOWF9vcmhlSnNr0gHDAUFVX3lxTE4wcF92cm9VNnVPRW1HMTFuWUU2LUY2Rko4eEdocUt4OHRTLUl3R3FLck1hU2p0cm56NVJjUndod3dJVGs3eDhYNTFwSzVQMVhKZ0RCZWRYVkR1bWktX1pTQnEwQXpreGZXd3J0bWYxNHVUY2RTSllxb1NJNVZsSE1tTDc1WG1NbU1HQnl1c1FrWjFSc281bTl1Y1psVHBWRThoRXdXNGVUQnAwNW44ME0yd2F3UUdIbk4wUlM0ZV9hZDE1dw?oc=5
+  2026-10-06  Join the Savannah singalong - The Express Newspaper Mareeba, Atherton, Cooktown, Kuranda
+      https://news.google.com/rss/articles/CBMigwFBVV95cUxORzZ1VmZIZVNsZXVEWE44elJTUWZ1SGgwUEdndlFHOFNSQ21fNmVrRWV1cEdUYXZxdEt0bzhJR1ZOcHZCczgwSU9oRVNiZ2RheHY2TjIxYlhxX01PckdSeWtJWEhJcXh1TFF2RkVPWEJDMlhtc1JmeG1WY19nVFkzZmY0MA?oc=5

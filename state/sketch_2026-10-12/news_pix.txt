@@ -1,0 +1,57 @@
+CONTROL  'Tesco'  HTTP 200, 100 results
+
+== GOOGLE NEWS, company  q="Panoramix IP" OR "Panoramix Limited"  HTTP 200, 0 results
+
+== GOOGLE NEWS, person  q=""Kevin Hanson" patent"  HTTP 200, 0 results
+
+== REGIONAL NEWS, their industry in their region  q=(Lincoln OR Lincolnshire) ("patent attorney" OR "IP firm" OR "trade mark attorney")  HTTP 200, 14 results
+  2026-08-11  MATTHEWS INTERNATIONAL CORPORATION ANNOUNCES THE APPOINTMENT OF MICHAEL J. WHITEHEAD AS PRESIDENT AND CHIEF EXECUTIVE OFFICER - Morningstar
+      https://news.google.com/rss/articles/CBMikwJBVV95cUxQZjBNU2FVMjVFMFV2N2RKanpQbW84QWZNTnNTdHZ6SnZuVnpvU01EZWNJRDRQVDhuQjhCU00xbC1NV2NMbUlXdk96U2wzaUV4ZllNaldldjlTTkdVTS1IbElXc29OV3luRkppalhya2xWQXc5WGYtRmNSWjNyanFVbE0xN2VudTRzcjBkOTVvYzFMTEtuUHJQN0NUSHgyLTZCcmRFQTVrRTN5aElNUEJrSmxhSmRTTTM3S25aWjZvc1JRcnlJTDFab20xRmxOUXFFb3JZVU5tX2U3Tml6ZUtLTDRlQ2p6bTlLRWIzRFN5OVNqN243cE9sdEVKQkpZekFSbW9UWnFNb2c0OVdqQ3hpSDJTUQ?oc=5
+  2025-09-22  James Takemoto Obituary - Keller, TX - Dignity Memorial
+      https://news.google.com/rss/articles/CBMiggFBVV95cUxPTFRDY3l3ejhkdUxsYU83bkdMRzVQbC00U3o3a0Iyb1BGc1loRVRSSy10elg5S2xBY0E3b29BRlhwUmRuMmJCYUdSZENTWndQNWJDdE1hU19FZHBDNUl1M2czaGxnc05UUjdicFRNNE9pRFd6cV91dzJUam1sZHZkb1hR?oc=5
+  2025-08-30  Dorothy Clayton Obituary Jun 30, 2003 - Wood Funeral Home & Crematory
+      https://news.google.com/rss/articles/CBMiakFVX3lxTE9jZzliNVlBanA3VVVCaFBzcGVXYk4tVW9YbTVIQnNzaVVPQmxEeDVWWlNxVG5WeEVvZWU2SnZMVDBoSDBNYzZfdHpMMlNyNmFyWm5RaldnMVhMZi1TR0xyR1piNWJSRE9QbHc?oc=5
+  2024-10-23  Externship Spotlight: Annabelle Lincoln spends fall semester working at NASA Glenn Research Center - Case Western Reserve University
+      https://news.google.com/rss/articles/CBMixAFBVV95cUxOZWhHZFZnSml3OXpFNjBXTjVRa2RnNXlwdkxNQUtFWFdIWkhKbDR6S3RrR3BFLXRDZVNOUlRwSEgyTkw3NWNhNDNQTV81aWZmWmFMODFqNk0zaEdxSUVPTVhFdGxUU2VYa1RSWWQ5czdkbEJRYTdSM2JkSW1hRXF6OXlldnUycEdiYkZjUVlEU0tvN19qbHhSSjhUcmJucHJCWGl2MVJPOGxnRWhrcHg1OURwdnpDb25DOWhob3hkVVRMenI0?oc=5
+  2024-05-28  Henry Kohlmann Obituary | February 13, 2023 - Orange County Register
+      https://news.google.com/rss/articles/CBMifkFVX3lxTE1mUTdKTDM5ZzlKODJGay1ySWxQZHBuMExQZEczbUhBMjZURVQtRi04MGhsUmxFNnBsdnBiUm5TcTNnSEc3OEtVUmE2R2JPeW1OMDV5T0NXRngxZlFxNXMtRmN0WFZiWG9rd1k5R0tOdngxclp3RXZZZUdzTXlSdw?oc=5
+  2024-05-17  Roy Wonder Obituary - La Crescenta, CA (1928-2017) - Marin Independent Journal
+      https://news.google.com/rss/articles/CBMiZEFVX3lxTFBxdFdzcnNiWEFRcGF0NDZrU00xUldxYmdVWUFsSVV5b2ZHa0Fmb1pMQ1hZS1NOanZyZ0RZdUR3ZzJDbnpyVzhucm8yTmNiOW1rNjA4VWg5OUtCUERJTTJHekM0Q2c?oc=5
+  2024-05-03  John Leavitt Obituary - Resident Of San Jose, CA (1926-2021) - The Mercury News
+      https://news.google.com/rss/articles/CBMiakFVX3lxTE5nMlN6ZWFsNlhrZ3FPeF9KR2wyZDMxS2hGaFpaTHpwSFZlRklFV2Y4TkhyNEdXTkFtb3FyOFF5MkFSMlJuNFFkcGVkSXVYaWkxR1pJQ1lkMUktQkROcG9ZVDVIanpfTkZJOWc?oc=5
+  2023-05-02  Protecting investments in artificial intelligence for energy storage - Energy-Storage.News
+      https://news.google.com/rss/articles/CBMiowFBVV95cUxNT0hMMGZPbVJ5dWkyeUd4ZDJOWTY0ZUhUTUtZOXZJLXJoczVEVWd4V1JYV1lld2NsRlBUWjZ2cS1EVlFFa3Nkc0tCek9vMFZUVEtIV0FsLU5fU1ZYNGlDQXdoaW1ab1dpYnJjR0tBNG91aHFBeUhqcGstaEFBRnVBeTV4bV9CSHF2M2R3UlZ4cGhLa09LT0Utc1JkZllTRndXQ0FB?oc=5
+  2020-05-26  Lawrie IP signs up trademark attorney from rival as it gets gold rating - insider.co.uk
+      https://news.google.com/rss/articles/CBMiggFBVV95cUxQX3R6aDZvWG9SSF9HVzFERFBlR1I0aUppYzNZN3pIbkt6Slhqa290U3NvQ3lfdEhhODI0Si00cGdzcDN3R3BYakJ3bmRZTGY4WW5iUExHNHU0RkNMU1BLZ3kwSkExU01oM09YYTlScU9laE5ON1RxdTk0eWtOc3hYblpn0gGHAUFVX3lxTFBpOEt0ZEh0ZzJEaHJsQTRTTmhsNTd6cUJoQmxPR3dBaTZPNlVuX1Azc05LQjJoVmxRVjc1UTlub2ZXdTJMTTA1Z2xObXVyNlNza3B4UTFZTkVBZ3hhRzVNT3k0YTFCeWE2eGlaZUhGVk1nYlVwYktIMDJaREpYbGY1elhJV2JHYw?oc=5
+  2020-04-18  Herbert 'Herb' Duane Knudsen Obituary Apr 18, 2020 - Draucker Funeral Home
+      https://news.google.com/rss/articles/CBMickFVX3lxTFBUdEhtNUphTy0zc0s5RHRMUWN6TTNUaFlMVkh4WmV0Smd3UEg2RVNnbWFKX0tPbDJ2UmhDcnotU1ZyWVZFdWItMmo1YnluMDBWd1hVVm1jXzRaV2UxU29aYjVKMHlraG9peVBTd0FPcF81dw?oc=5
+  2019-03-05  St. John Neumann students file patent application for hydroelectric device - The Edwardsville Intelligencer
+      https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRDBlRDBRWlp3RGotM05lb21iQ283SWQ5bnRZMG12MjllblJCamEzNkVHTmdwNEVEMVp4RmJpa0VZUldYZl9oc3NDaC01QktkSFkwMkRuSnpGaHM4VFQ4SS1OMDBlcjdPZ0dsVXBETk5fV0pMZzVqSEFLSDJpcEJFSElHSWdyNEwyVkpJczMtNTlFWU55a0dZSmpXRVNNd1hPTmlpVHV2VjV0dkE?oc=5
+  2008-03-31  William Speranza Obituary (2008) - Stamford, CT - The Advocate - Legacy | Obituary
+      https://news.google.com/rss/articles/CBMinAFBVV95cUxQaXpKRU1iWkdfT1NxLU9QNzJoTk11ekZzS2syNEN2MUg2My04YUhkNUYyWVF2NWlNQmpyU3k3Z2kzYUhYZlhKTUEya3NoeFRLMkxtYklvNGhxNjhMZVMyZmFieThCUzVXeDdLWWpKdmdXU21LcDZ6UUhaMVdPR0VGeURrTDhneFQ4ME0tSTlnNFVCM3BCSndQU2IyRFg?oc=5
+
+== INDUSTRY NEWS  q="patent attorney" OR "IP firm" OR "trade mark attorney"  HTTP 200, 100 results
+  2026-10-08  HGF continues PE-backed expansion in France - JUVE Patent
+      https://news.google.com/rss/articles/CBMilwFBVV95cUxPb1RhbEVvRWtQaGNaNW9IOExlUTVoUERyYUJ3YTdRMVd0Y1JLZFFma3dicGNHSk5IOXQ0Vk9PWXZqeWlVblh3U1VBN25IbVZVaVRKYXZRQmg2aXJSTVRZRkxYcG5VUi1aMmN5NTdZemttcEI0R0FQMDZzZk1qbHQ2N0xiTUFqeldnZHdJdkVyd0N1NUUxZ2M0?oc=5
+  2026-10-02  Vietnam, Japan promote exchanges on law and justice - Vietnam+ (VietnamPlus)
+      https://news.google.com/rss/articles/CBMilgFBVV95cUxOM3FfVW81cEJaSExrVEpreFFIeEsxYTRPMDVnSEIySk1RUWVCdUhFM1JRa01TMHozTkREV1ZGcFdwQ1NJNGszQWNYTkM5bHBVU0JVc09WZDVjWi1OUmYzMElMdTdpNjEwazhzSmtfOUswOElzbFBrRmJyS3lpclluVWNWQlRlTEJxc25UZnU4dGRKTWE1WWc?oc=5
+  2026-10-01  Appraisers Association Urges Intellectual Property Office to Revise Patent Attorney Act... "Self-Appraisal Must Be Prevented" - 아시아경제
+      https://news.google.com/rss/articles/CBMiZEFVX3lxTFB6RzZ0M1RTVktJeTZGb3JQdGM3LVJNQlBsWTloX3FLM2x3OWFvYmhDWGw0cFd4dDBKclJvbHVYUXBuRURKX1d0Y0tOUU83c013dEZnc3V5UF93U1JIaFFaT08taGs?oc=5
+  2026-09-28  2026 Patent Attorney Market: Powerful Trends - JDJournal.com
+      https://news.google.com/rss/articles/CBMic0FVX3lxTE82dS00TC1MLUhpSjJVcFV2cGRRa29LQVlzZk1fS003VXZ0WWFVZmRfTGxWYmcza21WSENYSDk5LV8tVEZ6eTBET3UxV0syU0VaMmJ3MFZVLTluNkl6WVdIVnM2UDlrcVNEb0RaVDNfeXR6NVE?oc=5
+  2026-09-24  Hallucinated Help: USPTO Disciplines Patent Attorney for Failing to Verify AI-Generated Citations - The National Law Review
+      https://news.google.com/rss/articles/CBMisgFBVV95cUxNUHZwUXpNUlpURUwycDcwLWdTSi1SemZqbnpHYlpvTmFKcHJIQTJvLXZ6RTRqbUJHNFpGYTdiTVA2cjJWWmJFX0pQUFdPZHNoaDVyNXFLdlZGSXNDV2hYZG50TkdKZnhsZk9Ua0toR25lcm45bTMtbmNBanB1azlPRzhXanVqT1hJVDJVdDhKVDlVTDFITjVpTzhOejk4U1J4X2ozX3JiQ3JVTFo5ZTY1dDh30gG3AUFVX3lxTE1WOVB2aXRGUHJnUEY1UTlOazliNlAxMXJrRDBiZ3llQk5EbDMwTUFoSGs3dFNHSHI0VU96ZzVVX0FJVG1SSjZ2RVlmOXV2RVJ2SHNsM09ldmJYMENnUnI0Qzgta1ZfMXhpTUZpak83RFJDeXBKQVkyZFpjSUtLc1ZzMFB6Slc3WEhmOU1jMGJsOW4yVEJoSXByMFdGd0pWX0I2SzY4UjhDekVUcXpUU29tOXl3cXdlUQ?oc=5
+  2026-09-15  Not ‘that’ kind of lawyer: patent attorney shares career experience - Managing Intellectual Property
+      https://news.google.com/rss/articles/CBMiyAFBVV95cUxQNWl5ZHZWenZQQnNGYVV5cm5Fa0V6eFlSUFZaa3JSNjg5REhsaFNUNlhRMU5ySUs4bFhuVnNzQmVybDN0SEtaRGk5bzNvSEUxQzVrbHZ0dG14UWNqSHVOc01YdHdVaDRITVFxV045ckhuVnk0RVJMMXNWZExLaGxLRjhTY3VraklDMWx3Ui1PV1d5MXV0YjE0Tnp4LTRuMG85dHdzM1lzY3JFc1BzVVBldTQ5WjhOeE15TmYyX29OUENaU2lrbTBSdg?oc=5
+  2026-09-15  Pinsent Masons hires Simmons & Simmons patent attorney for London IP team - JUVE Patent
+      https://news.google.com/rss/articles/CBMivAFBVV95cUxOckNkS3hLQS1SejlvcUpJUW5faHBhTVVqNVNHcUgtVFJvUHViakdHbG4yemdJQkUzeUM4YjM4WXRfODYwcnlEa2UtMWllMEJDa1E5YkE4bFdKZG9Mbk5WQ0xSQVhvVG1wVWhNODVwN0RXdXJCWkU3cHhpY0ZLM1QwdHF0dUl6M2JkRXpmRTVrMVczNHdxWUhkWTZHRUJsV1NLbUt1Q2F4Wkc4bXhQQko4MlFnSS01YmQ2UkF2Wg?oc=5
+  2026-09-14  Ben Williams: IP & Patent Attorney in Denver and Los Angeles - Haute Living
+      https://news.google.com/rss/articles/CBMivAFBVV95cUxQbUdHZWhVZnhfa3FBcEdSQmNwMkVNTFJjUU1CMnYyVXhqeE8wVXlYUHpUczk3UzdJemVHay1EeEtUc2ZBWDFFYkYzSThpR0xkZ2h1dGxNSW9JOWo1U1ZUOWxNcGszMGRSYkx4aEpoc0ZZQ2FWdkZxT2o1ZUluallyNE1pZk5BYTgzLXRMaUNwWG5PXzluSHZWR2YyTFJPRXdPbUZQQUpjRl9GRmt5andqNHE1X1JoQUVBRTRwbA?oc=5
+  2026-09-02  IP Firm Finnegan Moves Into Texas With Dallas Office - Law.com
+      https://news.google.com/rss/articles/CBMinAFBVV95cUxPNkFJZUdXTTZMcnBxUHMxVGtxcjZFd2dPYnRJLVJXdzVIZzF6Q2JGdzBsU2pZLU52QkNyOWlHeEVaWEpXano1TFZXX0Z2X1U3Qi0tc3QxVG9SVTU5RkRjUU5heURSSW5CTmJpOUYwdW9JSktEMV81TU9XblV6RDdtSTlLc1J3SDdPOEcwNnBVd1p1dmlqZFNtUVMzbmM?oc=5
+  2026-09-01  Ankur Sangal Launches Aerion Legal IP Firm With 30 Professionals - Wansom AI
+      https://news.google.com/rss/articles/CBMitAFBVV95cUxQRmp3d1IxSUNQYkI5ZHlwa2JNcXJHelJ3OFdNRjZBWDM0Mm9wWGYyTWwxNUNVTTI4UFp6LUxNVExYQWdCN2tPMDhLWmlONXVpWXFnVk4yU2ZhVl9XOTdGbWd1dl9FZVNocXNJaDJUa18xWDJmTHVWMUlNR0VRN3U0bWh0TmFvcGhkdzc4Mzd4X0NJVjQtenl6Mjh2Q2o2VGRKY2E2Tmd1VnlYV2ZQR3dvQVQ3NVU?oc=5
+  2026-08-31  Bonabry to merge with patent attorney firm Hamm&Wittkopp - JUVE Patent
+      https://news.google.com/rss/articles/CBMipwFBVV95cUxOQTVTVXdMdmZFUVJ4NDRaT3h6aW5jazBjMlJ0aWZxbjdTZTU4eW5CUUJ6V1hFWVFIWVA4S0FGa2VrQTdJWl8yQVdJWDhoMUs1alZ3clA0cnRldGxIR3BpeUtpc3MzcnNQWXYtWXFqN0toMTg5VVE3ck1LOVlSRXp1ODdPdVl6WGZ3b0hKOWJ1b0g5Y0c2OVJJQlNGZXZnRVlKRTUzN0dORQ?oc=5
+  2026-08-26  Prolific Patent Attorney Beats Second Canva Sanctions Request - Bloomberg Law News
+      https://news.google.com/rss/articles/CBMinwFBVV95cUxOMEtNWDlTY2lpZHViTkwyT3ptamhaM1VOek0yQi1HalNUMENaUW95bWRhU1l1NXNSR3dvUW5ZRWdHWmNqWFZkdXJaSVdPLTlsWnFYNFNpd25FNnMzVTczbUV4dHFsNUtlSGpDMnRYaVA3YVk2MHR0VXJBZWlzWTh1dWVMblBUT2FncC1vVEJ0RWlxMzJXM1ZfenUzTDNQR1E?oc=5

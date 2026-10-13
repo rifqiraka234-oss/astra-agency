@@ -1,0 +1,48 @@
+{
+ "tag": "muush",
+ "checkedAt": "2026-10-12T16:44:50.417Z",
+ "results": [
+  {
+   "url": "https://www.instagram.com/drinkmuush/",
+   "platform": "instagram",
+   "reachable": true,
+   "followers": "7372",
+   "following": null,
+   "posts": "283",
+   "lastPostAgeDays": 4,
+   "lastPostLabel": "2026-10-08",
+   "joined": null,
+   "bio": null,
+   "dead": false,
+   "note": "read through the public /embed/ page"
+  },
+  {
+   "url": "https://www.facebook.com/muush.uk/",
+   "platform": "facebook",
+   "reachable": true,
+   "followers": "180",
+   "following": null,
+   "posts": null,
+   "lastPostAgeDays": null,
+   "lastPostLabel": null,
+   "joined": null,
+   "bio": null,
+   "dead": false,
+   "note": "follower count from the Page Plugin, post dates are behind the login, UNKNOWN recency"
+  },
+  {
+   "url": "https://www.youtube.com/@muush.uk1",
+   "platform": "youtube",
+   "reachable": true,
+   "followers": "63 ",
+   "following": null,
+   "posts": "3",
+   "lastPostAgeDays": null,
+   "lastPostLabel": null,
+   "joined": null,
+   "bio": "Skip navigation Sign in Home Shorts Subscriptions You MUUSH @muush.uk1 • 63 subscribers • 3 videos More about this channel  ...more Subscribe Home Videos Playlists 3:38 Simon Squibb - Round the block in the roller 32 1 yr ago 14:26 Elspeth Beard. Riding solo - One small step (episode 2) 2.4k 1 yr ag",
+   "dead": false,
+   "note": null
+  }
+ ]
+}

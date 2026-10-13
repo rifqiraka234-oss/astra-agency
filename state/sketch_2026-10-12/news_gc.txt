@@ -1,0 +1,61 @@
+CONTROL  'Tesco'  HTTP 200, 100 results
+
+== GOOGLE NEWS, company  q="Garnish Collective"  HTTP 200, 0 results
+
+== GOOGLE NEWS, person  q=""Chris Hale" chef OR "Hodroyd Hall""  HTTP 200, 2 results
+  2026-08-19  Civic announces charity ball featuring MasterChef contestant - We Are Barnsley
+      https://news.google.com/rss/articles/CBMiowFBVV95cUxPZmhNWWVSWU9Qd0dvTnFlWk5kTC1jdy15NGJjWjZpWFJ6cExfMG1sbUJoX1JVNEZUbHpLWjVyWnNQU05ZUjlueDR0NUs4eTNHNnl3LVU5Y2ZBdUN6S2J1QUZhOHVsejNnT0pISC1yUUFzdUYyeVNkd3J3OGxxa3dveV9hbGlkVXlqeXpGVGF0dUh3b29jMnMxOVZYdk13RU8yT01Z?oc=5
+  2026-07-25  Star chefs & Bake Off faves line up for second annual Temple Newsam Food Festival - Yorkshire Evening Post
+      https://news.google.com/rss/articles/CBMirwFBVV95cUxPUWRISWRfa0pURnlKeXdaRFZlR0hqTl9OSmM2bzJaYUE2ekRkMG9YSm93OTlOb1NON0RrSHVwTWk4NldPT3VmbWxfdU5SM184c28xVXpOR2hva29ZWW5oOHRsM2hycmJqdjY1b09acnFhTXpuWU1fdGY2ZjBWN0k3UnJUYjl4NzJPZWk1dlFaTURReGVyLTk4UDU2Q2ZwNWdBLWxkb3A0anY2N1hXSXRR?oc=5
+
+== REGIONAL NEWS, their industry in their region  q=(Wakefield OR Yorkshire) ("private chef" OR "event catering")  HTTP 200, 20 results
+  2026-06-12  Cookery theatre lineup revealed for Harrogate Food and Drink Festival - Your Harrogate
+      https://news.google.com/rss/articles/CBMiwAFBVV95cUxPckd2Q1lxQ19GVnpiV1kzM1JsVXh6eUZOMVFWc00yR1NDRkQxQmRGcGIwc1NNcVFfejEyV1F6THAycThfeEIzSHJRT0pEdmlqbVJPa0doQVhZMVNlZ2ZKcnFpeXpEdjBHUjZVQW5oYW9DQXRjY0VKT3ZwTGF1Q0ZUelllWHBVN0lJRVk3cFNJMzBFVkJVZG4wUWtueWJXalBlN21TSHBHbloxeUIwUTA4UjBUZU1PZXlXNXZ2UDRiS3o?oc=5
+  2026-05-08  Beverley cake sculptor unveils display in honour of David Attenborough’s 100th - Hull Live
+      https://news.google.com/rss/articles/CBMirwFBVV95cUxNaXlDQzQxblFZMkxuVmlJaFd2ZjJXLXo0SEtoZ1dOQm9lcDNTZmtESmwxMDhiTXFCdzBmZVg1OW15blFZSm9VQVhvOW4wX3JSaXd5QmktcWd5b1hwQ2QyRE51dDRSbGE3eXpmWlRKNEhycVVoS0lNV2FGcWJ4N1dEY3N2YXVqLWxfSDU0ZVNHaUZDR1h2dkwzTUJMSDA4T01LTnY1c1RKMFdDWV9EdHhF0gG0AUFVX3lxTFBiVllpWXViUlE3UmhYZS11amFUVUowaThFMl9UNGRiRTBRU1RUckFYVXQ0N2lsaUwzV0YyQjkzOEZocFl5YjY2ZEh6YWVmcWUzNXRuOWlOcklNMTlfOUlxVGRjVEQ4OF9VUmFUU3NrSEduU0U5dHduSTMxblg3dzlSX3MxY290ekZfR21EdkZETTFDTkZnWWVGSGpJUmMtV0xPWFVZMEN6SmozVGRZR1NJclp4MA?oc=5
+  2026-01-28  New café opens at York shopping centre in double-quick time - YorkMix
+      https://news.google.com/rss/articles/CBMijAFBVV95cUxNcEF0Z09LOFpfSzlSeG5iV0diRHJyV1hwYjYxQUZfdVVzcmJ2dnl2U0RwS3VxOHlrU1ctQTk2Wi1xU0UyaTBmSmVIVHBuSVBrWWQ5b3NUVjVGNGJERnB0MzhLRDdCX2UzUjhiek5iWndIMkRIYWV6amxWY0JVaGYyTjlGeTJ5RG1wWWZ4Rw?oc=5
+  2026-01-25  We asked a private chef the best cooking oils to buy — he named 6 - The Mirror
+      https://news.google.com/rss/articles/CBMijgFBVV95cUxQanNXZ3pZcGRXZDIxY3dtcWJLYXd2OE80WnN5YTFFcXlPaE16S0NKaFRjckVMUWJVZUtiSEY3ZFJLaV9PS3N4SFBfcVp0U0lBMmRZa291eXdST3lVNmRUQzVwVmpySlk1UXFNM0Q4cF9oekktSi1kbk9Oa1hsVGdueGIxclVfczJVdTlVMkRn0gGTAUFVX3lxTE5kOHNncGtKX0NwUGFlZFAtbkZVSW0xV3pqYTgtZ3I5cTR0N0ZNamM2aUdQVFA5eG9jM1BfX1liWjJRM0t2QlAxVVlkMWM1RU4tdEdBTE5FRWtMaFB6eFhLQWM5M2xoc0QtSHlVT0tubXhGRkljS09GVXFLVl9UdjBlM2JMdkV4WGlwLUtSUHJUalpyQQ?oc=5
+  2025-12-04  Mastering Christmas cooking with tips from top chef in Boroughbridge - Your Harrogate
+      https://news.google.com/rss/articles/CBMivwFBVV95cUxPWFFrWS1BY1JYMXBxdDVSOE1yYkdGc2E3UG91U1RGaFRrT01IbUcyQ2wzOXVEUzN3T2E5Zjh2U24wR3RHbWRJa29Nb2RTcm5ic3U4NE53X3pNUGN5MHIxaUtRSzZTeGZoeEpyS0F4VkhPZThHLTdCakNJWU1kaWY4UnJGNWVWZHBWQ1BvX2xUM2RxbDZSUVJ1NjVGMWVYTDNqVEFSVnZOeTlJNnRhdGVCc3VRc1Jva3RMd2dPYl9lbw?oc=5
+  2025-04-02  Popular pizza van to pitch up at Wakefield's Trinity Walk permanently next month - Wakefield Express
+      https://news.google.com/rss/articles/CBMi4AFBVV95cUxOOWl2bUtkSUtQLWVLaWRMVElpd2R4cWFwbS1CTXg4ZGllUGlMTXdKLUdSM1l3UnlRR3RXOFoxN256dzh4MzJoX1JlNHMyNXlxNFdyVDJteHJaeDR6ZVV5MWFQaTNwTWVCREkwM2NjUmtUVXBGN2wyNFByWGFNbUFGMlFEUFdWdjJJT284dUdST3A3cDVnWm1Lclk0VU9BYkdxTGdMWno2bVdHcUVxLUFLdGRHSWtlWnlaQWFrZkRMN2lqQTdHcFJ3Vzc3aC1WS0NiMVNUREh5ZzVWVGpWUFZDSA?oc=5
+  2024-04-12  'I'm a top private chef and cooking for Leeds United stars is a dream come true' - Yorkshire Evening Post
+      https://news.google.com/rss/articles/CBMioAFBVV95cUxQTHpDeS0yMjYyQXBHSjJmdHB1VWZLcExXREJPOThTck5rTlVCWHcwUXR3OVN1SmtfbzIyZDI4MVJCYWdKSFVCVUgxUXdnanlJbm1sYlBhU1ozRFloMkFsRXVlR0VERHJjdnpRRHZOUHBxRWM4S2t2c2gyNFNqcjJnd1VIaVk3UHJ0VmstTEh0dS1iUHd5SEVhc1JuWE5EeUYx?oc=5
+  2023-11-20  Yorkshire chef to compete on Masterchef: The Professionals 2023 judged by Gregg Wallace - Yorkshire Post
+      https://news.google.com/rss/articles/CBMijwNBVV95cUxNSE8zTFVFN2hCcEYtN0lkdVRlMnd0QzZKRWFQOHVXcS1JZW53Z291QVg4SVhKZzc1VjJ6bVp3cHFrX09TN0tSeUlfa2pJQzd6U3ZTbHhMWHlMNlNhdEQ1cmtRQVNmR0tJRXc2Q2VfNHFBRDA1OFBQTWw4U0k3SFZITjBEeHdMN3REdUFSa3ZJb2JOV0hzcjJ6Y2JVXzV0RkdjMUVKbVZkMkJDQV9oWGFqX1RrNVFNTjVXZG5KN2ZMLTlpckhrajZibkwyaEtPXzJWUDFsN2UteU1JbFFMelFHcy1ELTJTQjlQd0loaTVjSDdqQmVTRDlGTWsxU3JRVlg5b04zWklvSk5BcU5rQmRCODBHeUZkbnp3c0RzeU5yelNENFNrSGxRZDY2RDI2bExldEJyTXVvV0RQMm1RdzNBa05ja3ZyZ29lVHY4cG5JTl8wLTd5Rk1jYnI2bDdaZjZESVdvOU9NZzdFcmM4VkFLSUpNV21TRjBheHgxNUxjU1JMMmwxdWloTl9FZDYtbUE?oc=5
+  2023-09-25  A good sport - FRY Magazine
+      https://news.google.com/rss/articles/CBMiakFVX3lxTE1xM2w1Z3BBNVZ4SDBRcVdGdWJZN3FyNEl2SmdibHRzbnFRM0lMX3FtekVwV1Y2NnhnZU5WdGFlN01WWl9zZktTTW8wT1JwTVpZOTR3SmpqVC1hMXAtY1lJenFSYmZFMk4tM0E?oc=5
+  2023-08-08  Festival of Flavours returns to RHS Harlow Carr for 2023 - Harrogate Informer
+      https://news.google.com/rss/articles/CBMiowFBVV95cUxNUFdSYlNtUHhnd2tOb0xiN1Y3bTNIWW9VYldSMU9WRzMxbFN0eGMxS0ZSeVNJLW9ad1Z1LWViczVyaFgxZjFYMHJnemI0dWRNR21LcWhPQmxEWFcwR3lGdi1RSnhjcTR2cERDODBRNVVCQURNeGxaSlZQYVdlUEg2cm5JNTBYM2VYVmtJZFAxcnp0QWRncXRGblVGcFRNRHJtVlA4?oc=5
+  2023-08-08  RHS Harlow Carr to host 'Festival of Flavours' next month - Your Harrogate
+      https://news.google.com/rss/articles/CBMirgFBVV95cUxQb1UzV3M1ZXZLdGVzNzh2M1c1eVdLd0xGRExyNUFHOVJ3VDFHYWg2U1VYanY5RE81dmFYeW03SGR0Zlo0c21scFpuUHZkUXR2S1VOLXV6dkhDZlREWlN0ZHgtbkVsVnBLa0szSTgzb05IUFUtaHhxeWtrcExncHN1LU5OU2hNQzd6Y1FQckt5NEdSc3VjMnVVWXN0R1lSOFo1QW9sRUwtaDBxS2hmMEE?oc=5
+  2022-09-23  First food festival organised by MasterChef quarter finalist Chris Hale to go ahead at Sandal Cricket Club tomorrow - Wakefield Express
+      https://news.google.com/rss/articles/CBMi_wFBVV95cUxONEhmWjZPUUUtOEVyOVhwVnBaZXdDaUhDR1ZNZG1qOWpqa3VlM3FnWXdjaVJBb0NUTzFDbFFFMERvNmhSV3N5emM0TFpiaTJpQmk5bGZpVDZIRU0xUFhFZFBPeTlxTG5YNy1LWTQzcW0xZzA3UHQ0NUFzZUNmcGFpWFVrZkdJSnhQTWt5WnB6UVdjcnNFUTNWbHVEalYtSmljTEROc1lVX1VuQTUxc3VVMkI1T3pDRTZQZEY5amxQV3pFeExVc1lDOTRHWFlSNXY4ZElMb09xYXc0V1R0V0xFdVhIMXE1SzVYb1hKOFRGcUozLUpGdkdLd01waEZnb3c?oc=5
+
+== INDUSTRY NEWS  q="private chef" OR "event catering"  HTTP 200, 100 results
+  2026-10-11  This Private Chef’s Freezer Hack Could Make Your Next Batch of Soup Even Better - Food & Wine
+      https://news.google.com/rss/articles/CBMiigFBVV95cUxPVXdWS0RqYTBSZ2VEUGtLa0x6amI4MkpGUF9KSVNMMnlzUjhnSW9OOVZzY2lZWDJBN3FhcUxRWHZzMjZ5WjZDRXYxUHFWWEdvVFd5dEVUcFBObkw4eXdtYWUxY2JsejgzNk9ka01JdEpkamk5Zk5rMW4wU25tVFAxaG5mZGFPQXVpRGc?oc=5
+  2026-10-09  CHEFIN Brings Its Premium Private-Chef Service to Canada - 24-7PressRelease.com
+      https://news.google.com/rss/articles/CBMirwFBVV95cUxONEU0Y2xCaTBHVFd5dGlfWGdDVWs3eE10bjRfSXBUQVh5d3E3em05Q0xSZFlpbE14a3huY0Q0MTRIeUo4amNGdUdRVm44UFlsbjZJbVpuMEJic2FlRzM2Q3dZa1lzck9UR2hmdGdYSVRobnNTY0c3WE16WFZyS3NEcXhfVFhKSUEyMV9zR1ZPUnh4OEdXWGdJdkVZZUUzMTc2eTNiaHZHbkk5Uk9oUWRz?oc=5
+  2026-10-08  Licensable picture: Chef Willie Dixon of Thee Spice is Right private chef business in Fayetteville, N.C. served Creole Rice and Sausage and Spicy - Reuters Connect
+      https://news.google.com/rss/articles/CBMixAJBVV95cUxNRWY4N3VuSXpBa2Z4Y3hNT3pLbDNtX3Y2bWFsV1d1MzJ0X3RGM3NUaVhaVVUzVmVRLWVfVGNtZS1OaVphaDgtVXFSNG1KazF6Z3dnMXVUdW1FMENzSTRLX3pFb2VWRFdHZ0V0dGNCU3BLbDA5dWlibkxkX1JMdFBCOVdXdjRZd1ExOGVXUTl0Z1RQV3gwSGMxMkphc08zWk45RDFXbGQ1d1Z1dkJ1bEotYk9VNUt0ZGVqNGo2cE1NeEtfN0lUOWdyb1g0U0ctRlVUUUtJS0dvclMySnFfMXpBNEwtcVFVN05rRExKZnJqQW4zdDdIaGZqMlB2NEYtV3dLVm5XYXRRU2stTDBxQUVEeW9KaFNudHlCSDdqOTZLU0l2UWRtMjFhMWVEbk43N2oyLUpKQWhRLTdfXzlCZkVWLUtTblI?oc=5
+  2026-10-08  Hollywood heartthrob George Clooney loves Italian food so much that his private chef's gnocchi could bring him to tears. Now he's turning a humble French village pizzeria into an upscale Italian restaurant in Provence. - Luxurylaunches
+      https://news.google.com/rss/articles/CBMinAFBVV95cUxQNzFaQUQ5alR0cWFnSldHYUlhdmtwdExPT1FFcG16eExYQmZvYW5hNnozU1pIaEJkdXVtTkFDMEJLTFMwQ3hFX0Q0SjVEX1JhU3FjRmpnREYyLXFxU2d1aXV0ODYzMzZFaUNnUElaTmxMUjhzSXhHRzBsM3gzV0JUOGNJTUQ1TGpHYTQ4RUJoQ3lORDd3SmJheVZ2MUU?oc=5
+  2026-10-08  A Private Chef Teaches Us How to Eat (Like) the Rich - Town & Country Magazine
+      https://news.google.com/rss/articles/CBMipAFBVV95cUxNTUo0c3FfOVl2ZHdQSUJwMzdkLXlET2Z2eTFGeENHRjZZTXMyUmp4akpDbTNKSjEtSkRDUzIzWWo5cVMzcFhuUVNEQzJKZTlVb3hZckVqYTRiWjBMc2VoTWx4ZUpTa1Q3ajQ2YVlhLUhOVHdiVUN2Ny0xWHdFbFhtR0JWLTNQamNTbXFHYWo0LUlVd0N1Tk5IT2FjMmZVZE9uLTNRNA?oc=5
+  2026-10-08  Spicy Caterers Strengthens Presence in Goa’s Event Catering Sector with Focus on Customised Dining Experiences - Press Trust of India
+      https://news.google.com/rss/articles/CBMi-AFBVV95cUxQcGkzUUVybmtCODZSdG1EUExHWjQtRTE0TWE5VnJWbENrUjFzWlh4b0hocFNIYlh6UTNPTk1lbzg5VVZ1cWlLVGNhdWZJUGFxRERXVFM3aGN3anpOMkdsN1ViNmlFMmU0YkJGSWFvR012dEw0MmZkSkMzWEl1QTNqb3g5RmRkSk1VZ2NaSU1GVmw2WGwxb25xOGRYdkdRTXJuRkR0ZWx0OWZrVXBIZlVBUzA3OXFYT3FFRkFHSUctRXFqd09KT29aSE04dXk1bnB0cnFKNENqMmJhTDB1dEZ2eDVYUXY0TTZEOHIzUlgxLWJwazJvMTRabA?oc=5
+  2026-10-08  Spicy Caterers Strengthens Presence in Goa’s Event Catering Sector with Focus on Customised Dining Experiences - The Tribune
+      https://news.google.com/rss/articles/CBMi6AFBVV95cUxPTFgtMlRkOUhIOU16SVJYTlZyOHJ0cDFrWnRKWGo2NU8wT0lZRFdDMElxcHJPSm1zVGhqWlFDS1BSTndobmZBcDhoeXpKRzMwa1ZqejVUcnZJSm1DdWlrYm9XLW1Mb0dsTFFhQWZCWGJaSHdwUDRvMm9hN1pDM3JNaENHeC1NYWtOUEtUTFNabi1BMmxLQWVqcVU2RGVPQ2Ric05LNE8tYUxHYng1SXZSQlYtRzlBSHlFTHBRZFZBY3JrOVA2R3JPSjRwYVV1dTB3MURHOWNTN0RmalZHOExraXFObHRQZ3ox0gHsAUFVX3lxTE4wU0Y0QThxY2ZJbVVjYXhGQ2hSVUpDM3B0LS0zTjc2UFpPVzcxak1SYm1QX1A4UVFpMlE4WVp1RDU2MTh2OWswTWpSSFZkR19sV040NEM4cC1pNnBFOS1xZDdqNTVMd1hZQ3ZYNHhIQWswOVFhM04yYXhCc2c5MGpzS0g1MHpmOU9mVnN1clowcE1KNTlDN2x1MWhHOWNfSHJ6SWNUaE5PVkM4NkluclV2bUVUZGNNYUI3cVItbVN2dVF2c0ZhZjVxUnhZaHV5eFBOd1RMY3lNRklNd21DLXIzWXFwaXZxc0dWeE9B?oc=5
+  2026-10-07  JKHTS Catering Highlights Event Catering Opportunities as Thailand Targets THB 163 Billion MICE Economy - FinancialContent
+      https://news.google.com/rss/articles/CBMi-AFBVV95cUxPbFZzWjNJMkFucjhpVnA0MllhTl9Dczl0TjVqVWxXWmdwUk1nMURhSjNYWTNlOVBRQXI4ZzFOb1VhSjk3cDZVdURSY0NNNEx5VGRwUnJNVlJPdm5sMTFTSUJYR1gwTEdaekVYZG1SeVhid2tqR0w4VkQxek5MbWp3WDVpRmdqQncycENJNEI3MlZGSHhFZmlVQ2Z6c1FiOUV3MmF1Uk42VW1hMWFyY2I5QV8xR19UUVJpanoxckpJdUx1Q255WlVVM3hoaFdpazJUYll5Qy1qRm1sQ2liUy05ZW5PdTY0bzBUZXNrOTB6VzA0d2FHWlJBWg?oc=5
+  2026-10-03  Private chef shares creative pumpkin seed recipes - Fox News
+      https://news.google.com/rss/articles/CBMiVkFVX3lxTE1UX1B5dXY1akhXRVUxRDlqOVIzdW5QS2prTGh2VmZEUkxTVTZsX29hNVVrRVRQMXl1cXZIck9LZG9HbUx5eEwyWGsyb0J2S1hYazBzODJn?oc=5
+  2026-10-03  Meet the Shropshire event caterer with his own line of jams and spices - Shropshire Star
+      https://news.google.com/rss/articles/CBMitAFBVV95cUxNRTdkNTNXMXdXd2MyeW14T2hyVElHWEJmdHVRcmNjRjR6Zk5CT3FBZVo4Slo0NkthaHBjOV9LRzZPVlMtbEJWQnkzMFltdlI5SVU1eVh3d01RMGZydkxTdU9PNWxHeUFpZEFJdlJVd05pQTFBZmpyd2l0eUNtVTN2UF9LeG0tTVliQVc2UUhZRFRpMm1CM1hvUmFrUktoc25vaVRYSGhNZFVPNFdVUWpsc19OTGw?oc=5
+  2026-10-02  Happy birthday to me! A palace, pool and private chef — for £146 a head - The Times
+      https://news.google.com/rss/articles/CBMiwgFBVV95cUxQbUE4TmhtMTlMc1oyQ0xYWWMtZE56ZTV6UFd5WE9BSEtoR1BubEFZLWl5cm5MX2ZLM2FLZnRKQ2RNYUs1YW1LOC1wYjFINTVHUUFOdnVfVVlWaHNJNE5rdFctTEJ3SERmSFVzRGp0Nk81bEltcnZtdkpKd3BsZGx2a2Zsd2FfZHAxalFJTXloUTRCamt3ZHhWc3hSaVVTMm1EdU16Q1dUNTJXR1VhU1hmOEt4UGVWbEVKeW1lLWlFTS1iQQ?oc=5
+  2026-09-29  Pompano Beach luxury condo adds private chef service - The Business Journals
+      https://news.google.com/rss/articles/CBMirgFBVV95cUxOQXI3aFJQSFBaU0VhQkJJTnI5aG5tTWVUU1BZSkhRNEo3d2hlaFgtYUlfX1RadDctbm9hLXkzT2RjNExQczBnUVBmQVRYN2hKSkxhMjlMY1lfRFpTSGZQaGJoSFpvV196UHd1Tmh6S0E1UVBlSW91VmFVYkFaZl9lakN6OV83RWhEUTl0MUMxTGpPSkY4X2ZPdGVIZHhTTWdDa19ubDh1Wk43YzdWUEE?oc=5

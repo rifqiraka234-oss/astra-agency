@@ -38,6 +38,12 @@
 > gets `python3 tools/fetch-walled.py` before it's ever called blocked. check-drafts.py enforces
 > the social part.
 >
+> **WORTH 2,500 EUROS OR IT ISN'T AN ANGLE (Raka, 2026-10-12, "scrap these like compliant or gdpr
+> fixes. theyre tiny fixes and someone can do it like for 50 bucks").** GDPR is still checked in the
+> sweep and never pitched on its own. No cookie banners, consent boxes, typos, dropdowns, moved
+> sections or one line copy fixes as the angle. Every OPENER and SKETCH gate carries `worth: €X+,
+> the project`, and check-drafts.py fails it under 2,500 euros. **`docs/RULES.md` section 0E.**
+>
 > **The two tools that enforce rather than remind.** `node tools/site-audit.js <url>
 > <tag>` runs a positive control on itself and voids its own absence findings when the
 > detector fails. `python3 tools/check-drafts.py <file>` exits non zero, so it cannot be
