@@ -1,0 +1,1200 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corporate ordering | The Garnish Collective</title>
+<meta name="description" content="Order lunch boxes, buffets and Christmas menus from The Garnish Collective online, pay by card or on account, and reorder your usual in one tap. A concept built by Astra.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="img/emblem.png">
+<style>
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:300 700;font-display:swap;src:url(fonts/cormorant.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:300 700;font-display:swap;src:url(fonts/cormorant-ital.woff2) format("woff2")}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:300;font-display:swap;src:url(fonts/poppins-300.woff2) format("woff2")}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/poppins-400.woff2) format("woff2")}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/poppins-500.woff2) format("woff2")}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/poppins-600.woff2) format("woff2")}
+@font-face{font-family:"DM Mono";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/dmmono-400.woff2) format("woff2")}
+@font-face{font-family:"DM Mono";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/dmmono-500.woff2) format("woff2")}
+
+:root{
+  --night:#00241a;   /* his LinkedIn tile green */
+  --ink:#042015;     /* logo ink */
+  --forest:#183e30;
+  --green:#275f49;
+  --sage:#8da99b;
+  --mist:#c0cdc4;
+  --cream:#f3f2ed;
+  --paper:#ede3d9;   /* his Christmas brochure paper */
+  --slate:#425852;   /* his Christmas brochure ink */
+  --line:rgba(4,32,21,.16);
+  --line-l:rgba(243,242,237,.18);
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Poppins",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,Consolas,monospace;
+  --gut:24px;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.eyebrow{font-family:var(--sans);font-weight:500;font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;margin:0 0 18px;display:flex;align-items:center;gap:14px}
+.eyebrow::after{content:"";flex:0 0 48px;height:1px;background:currentColor;opacity:.5}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;letter-spacing:-.005em}
+h2{font-size:clamp(34px,4.3vw,58px);line-height:1.04;max-width:20ch}
+h3{font-size:28px;line-height:1.1}
+p{margin:0 0 1em}
+.lede{font-size:18px;max-width:58ch}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tag{display:inline-block;font-family:var(--sans);font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:3px 7px;border:1px solid currentColor;line-height:1.3;vertical-align:middle;white-space:nowrap}
+.tag.his{background:var(--green);border-color:var(--green);color:var(--cream)}
+.tag.ex{color:var(--slate)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border:1px solid var(--ink);background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;cursor:pointer;border-radius:2px}
+.btn:hover{background:var(--green);border-color:var(--green)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--cream)}
+.btn.light{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.btn.light:hover{background:var(--mist);border-color:var(--mist)}
+.btn.lghost{background:transparent;color:var(--cream);border-color:rgba(243,242,237,.6)}
+.btn.lghost:hover{background:var(--cream);color:var(--ink)}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+/* reveal, never hides content without JS */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+
+/* concept bar */
+.concept{background:var(--ink);color:var(--mist);font-size:12.5px;line-height:1.5;padding:9px 0;text-align:center}
+.concept b{color:var(--cream);font-weight:500}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--cream);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+.brand{display:flex;align-items:center;gap:16px;text-decoration:none;min-width:0}
+.brand .em{width:46px;height:46px}
+.brand .wm{width:260px;height:auto}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--ink);white-space:nowrap}
+.nav a:hover{color:var(--green)}
+.tick-btn{display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:0 16px;border:1px solid var(--ink);background:transparent;cursor:pointer;font-family:var(--mono);font-size:13px;border-radius:2px;white-space:nowrap}
+.tick-btn .n{background:var(--ink);color:var(--cream);min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:11.5px;padding:0 5px;border-radius:11px}
+
+/* hero */
+.hero{position:relative;background:var(--night);color:var(--cream);overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night) 0%,rgba(0,36,26,.94) 34%,rgba(0,36,26,.55) 58%,rgba(0,36,26,.1) 100%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:end;min-height:min(86vh,820px);padding-top:84px;padding-bottom:72px}
+.hero .wm-c{width:300px;filter:brightness(0) invert(94%);opacity:.9;margin-bottom:34px}
+.hero h1{font-size:clamp(46px,6.3vw,94px);line-height:.98;max-width:13ch;margin-bottom:26px}
+.hero h1 em{font-style:italic;color:var(--mist)}
+.hero .lede{color:rgba(243,242,237,.86);margin-bottom:26px}
+.cutoff{display:flex;gap:12px;align-items:flex-start;border-top:1px solid var(--line-l);border-bottom:1px solid var(--line-l);padding:14px 0;margin:0 0 30px;max-width:560px;font-size:15px}
+.cutoff svg{flex:0 0 18px;margin-top:3px}
+.cutoff small{display:block;color:var(--sage);font-size:12px;margin-top:2px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.mini{justify-self:end;width:100%;max-width:360px;background:var(--paper);color:var(--ink);font-family:var(--mono);font-size:13px;padding:22px 22px 20px;box-shadow:0 30px 60px rgba(0,0,0,.35);position:relative}
+.mini::before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;background:radial-gradient(circle at 6px 8px,var(--paper) 5px,transparent 5.5px) 0 0/12px 8px repeat-x}
+.mini .h{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed rgba(4,32,21,.35);padding-bottom:10px;margin-bottom:12px;letter-spacing:.08em;text-transform:uppercase;font-size:11.5px}
+.mini .h img{width:30px;height:30px}
+.mini .row{display:flex;justify-content:space-between;gap:12px;padding:3px 0}
+.mini .row span:last-child{text-align:right}
+.mini .big{font-family:var(--serif);font-size:24px;line-height:1.15;margin:4px 0 8px}
+.mini .btn{width:100%;margin-top:16px;font-family:var(--sans)}
+.mini .note{font-family:var(--sans);font-size:11.5px;color:var(--slate);margin:10px 0 0;line-height:1.45}
+
+/* facts strip */
+.facts{background:var(--cream);border-bottom:1px solid var(--line)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.fact{padding:26px 22px 26px 0;border-right:1px solid var(--line);margin-right:22px}
+.fact:last-child{border-right:0;margin-right:0}
+.fact b{display:block;font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.15;margin-bottom:6px}
+.fact span{font-size:13.5px;color:var(--slate)}
+
+/* story */
+.story{background:var(--paper);padding:110px 0}
+.story .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
+.story h2{margin-bottom:26px}
+.stat{display:flex;align-items:flex-end;gap:18px;margin:34px 0 0;border-top:1px solid var(--line);padding-top:24px}
+.stat .num{font-family:var(--serif);font-size:clamp(84px,10vw,132px);line-height:.8;color:var(--green)}
+.stat p{margin:0;max-width:26ch;font-size:15px}
+.chart{background:var(--cream);padding:30px 30px 24px;border:1px solid var(--line)}
+.chart h3{font-size:24px;margin-bottom:6px}
+.chart .sub{font-size:13px;color:var(--slate);margin-bottom:22px}
+.bar{display:grid;grid-template-columns:minmax(0,1fr) 54px;gap:6px 14px;align-items:center;margin-bottom:18px}
+.bar .lab{grid-column:1/-1;font-size:14px;font-weight:400}
+.bar .track{height:30px;background:rgba(4,32,21,.06);position:relative}
+.bar .fill{position:absolute;left:0;top:0;bottom:0;background:var(--green);width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.bar.all .fill{background:var(--sage)}
+.bar.low .fill{background:var(--mist)}
+.bar .pct{font-family:var(--mono);font-size:15px;text-align:right}
+.src{font-size:12px;color:var(--slate);line-height:1.5;margin:18px 0 0}
+.src a{color:var(--slate)}
+
+/* order */
+.order{padding:110px 0 120px;background:var(--cream)}
+.order-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:end;margin-bottom:44px}
+.order-head p{margin:0;color:var(--slate)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:48px;align-items:start}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin-bottom:26px;overflow-x:auto}
+.tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:14px 22px 14px 0;margin-right:22px;font-family:var(--serif);font-size:26px;cursor:pointer;color:var(--slate);white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+.tabnote{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:26px}
+.tabnote p{margin:0;max-width:62ch}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{position:relative;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;cursor:pointer;text-align:left;padding:0;border-radius:2px;transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:var(--sage)}
+.card[aria-pressed="true"]{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+.card .ph{aspect-ratio:16/10;overflow:hidden;background:var(--paper)}
+.card .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.card .ph svg{width:100%;height:100%;display:block}
+.card .bd{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card .nm{font-family:var(--serif);font-size:24px;line-height:1.1}
+.card .ln{font-size:13.5px;color:var(--slate);line-height:1.45}
+.card .pr{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--line)}
+.card .pr b{font-family:var(--mono);font-weight:500;font-size:15px}
+.card .chk{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--cream);display:none;place-items:center}
+.card[aria-pressed="true"] .chk{display:grid}
+.quote-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
+.qcard{background:var(--paper);border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;gap:10px}
+.qcard .nm{font-family:var(--serif);font-size:24px;line-height:1.1}
+.qcard ul{margin:0;padding:0 0 0 18px;font-size:13.5px;color:var(--slate)}
+.qcard a{align-self:flex-start}
+
+.detail{margin-top:22px;border:1px solid var(--line);background:#fff;padding:22px 24px}
+.detail .top2{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;margin-bottom:12px}
+.detail h3{font-size:30px}
+.dishes{list-style:none;margin:0;padding:0;columns:2;column-gap:32px}
+.dishes li{break-inside:avoid;padding:9px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;align-items:flex-start;font-size:14.5px}
+.dishes li .d{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--slate);margin-top:14px;align-items:center}
+.includes{font-size:13.5px;margin:12px 0 0;color:var(--green);font-weight:400}
+
+.step{margin-top:56px;border-top:1px solid var(--ink);padding-top:20px}
+.step .sh{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.step .sh .k{font-size:11.5px;font-weight:500;letter-spacing:.32em;text-transform:uppercase}
+.step .sh h3{font-size:30px;flex:1 1 280px}
+.guests{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+.ctr{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.ctr label{font-size:15px}
+.ctr label small{display:block;font-family:var(--sans);font-size:12px;color:var(--slate)}
+.stepper{display:flex;align-items:center;border:1px solid var(--ink);border-radius:2px}
+.stepper button{width:40px;height:40px;background:none;border:0;cursor:pointer;display:grid;place-items:center}
+.stepper button:hover{background:var(--paper)}
+.stepper input{width:58px;height:40px;border:0;border-left:1px solid var(--line);border-right:1px solid var(--line);text-align:center;font-family:var(--mono);font-size:16px;background:transparent;-moz-appearance:textfield;appearance:textfield}
+.stepper input::-webkit-outer-spin-button,.stepper input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.ctr.main label{font-family:var(--serif);font-size:24px}
+.ctr.main .stepper input{width:72px;font-size:19px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.field label{font-size:13px;font-weight:400}
+.field input,.field select,.field textarea{border:1px solid rgba(4,32,21,.35);background:#fff;padding:11px 12px;border-radius:2px;font-size:15px;width:100%}
+.field textarea{min-height:84px;resize:vertical}
+.field .hint{font-size:12.5px;color:var(--slate)}
+.err{color:#8a2a1b;font-size:12.5px;font-weight:400;display:none}
+.bad .err{display:block}
+.bad input,.bad select{border-color:#8a2a1b}
+.tray{background:var(--paper);border:1px solid var(--line);padding:18px}
+.tray svg{width:100%;height:auto;display:block}
+.tray .cap{font-family:var(--mono);font-size:12.5px;margin-top:10px;color:var(--slate)}
+.addon{display:flex;gap:14px;align-items:center;margin-top:18px;padding:14px;border:1px solid var(--line);background:#fff}
+.addon img{flex:0 0 128px;width:128px;height:80px;object-fit:cover;object-position:50% 30%}
+.addon label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-size:14px;flex:1}
+.addon input{margin-top:4px;width:18px;height:18px;accent-color:var(--green)}
+
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:14px}
+.day{flex:0 0 auto;min-width:86px;border:1px solid var(--line);background:#fff;padding:10px 12px;cursor:pointer;text-align:left;border-radius:2px}
+.day b{display:block;font-family:var(--mono);font-weight:500;font-size:13px}
+.day span{font-size:13px}
+.day[aria-pressed="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.when{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.rule{font-size:13px;color:var(--slate);margin:0 0 14px}
+.addr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 18px}
+.addr .full{grid-column:1/-1}
+.pcmsg{font-size:13px;margin-top:4px;color:var(--green)}
+.pay{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-bottom:18px}
+.payopt{border:1px solid var(--line);background:#fff;padding:16px;cursor:pointer;display:flex;gap:12px;align-items:flex-start;border-radius:2px}
+.payopt input{margin-top:5px;accent-color:var(--green);width:18px;height:18px}
+.payopt b{display:block;font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.1}
+.payopt span{font-size:13px;color:var(--slate)}
+.payopt.on{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+.demo{background:var(--paper);border-left:3px solid var(--green);padding:12px 14px;font-size:13.5px;margin:0 0 16px}
+.place{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.place .btn{min-height:56px;padding:0 30px}
+.formerr{color:#8a2a1b;font-size:13.5px;display:none}
+.formerr.on{display:block}
+.chkline{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:4px 0 12px}
+.chkline input{accent-color:var(--green);width:18px;height:18px;margin-top:3px}
+
+/* ticket */
+.ticket-col{position:sticky;top:96px}
+.ticket{background:var(--paper);font-family:var(--mono);font-size:13px;padding:26px 24px 22px;position:relative;box-shadow:0 18px 40px rgba(4,32,21,.12)}
+.ticket::before,.ticket::after{content:"";position:absolute;left:0;right:0;height:8px;background:radial-gradient(circle at 6px 8px,var(--paper) 5px,transparent 5.5px) 0 0/12px 8px repeat-x}
+.ticket::before{top:-8px}
+.ticket::after{bottom:-8px;transform:rotate(180deg)}
+.ticket .h{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed rgba(4,32,21,.4);padding-bottom:12px;margin-bottom:12px}
+.ticket .h img{width:36px;height:36px}
+.ticket .h .t{text-transform:uppercase;letter-spacing:.12em;font-size:12px}
+.ticket .h .ref{font-size:12px;color:var(--slate)}
+.tl{display:flex;justify-content:space-between;gap:14px;padding:4px 0}
+.tl span:last-child{text-align:right;white-space:nowrap}
+.tl.sub{color:var(--slate);font-size:12.5px;padding:1px 0 1px 12px}
+.tl.sep{border-top:1px dashed rgba(4,32,21,.4);margin-top:8px;padding-top:10px}
+.tl.tot{font-size:17px;font-weight:500;padding-top:12px}
+.tl.empty{color:var(--slate)}
+.tl.empty span{white-space:normal;text-align:left}
+.tk-note{font-family:var(--sans);font-size:11.5px;color:var(--slate);line-height:1.45;margin:12px 0 0}
+.ticket .btn{width:100%;margin-top:16px;font-family:var(--sans)}
+.tline-new{animation:print .45s ease}
+@keyframes print{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.tline-new{animation:none}}
+.mbar{display:none}
+
+/* usual */
+.usual{background:var(--forest);color:var(--cream);padding:110px 0}
+.usual .eyebrow{color:var(--mist)}
+.usual h2{margin-bottom:22px}
+.usual .head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:end;margin-bottom:40px}
+.usual .head p{color:rgba(243,242,237,.82);margin:0}
+.acct{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line-l);border-bottom:1px solid var(--line-l);padding:16px 0;margin-bottom:28px}
+.acct .who{display:flex;align-items:center;gap:14px}
+.acct .av{width:44px;height:44px;border-radius:50%;background:var(--cream);color:var(--forest);display:grid;place-items:center;font-family:var(--serif);font-size:22px}
+.acct b{font-weight:500;display:block}
+.acct small{color:var(--mist);font-size:12.5px}
+.acct .tag{color:var(--mist)}
+.ucards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ucard{background:var(--cream);color:var(--ink);padding:22px;display:flex;flex-direction:column;gap:10px;border-radius:2px}
+.ucard .t{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.ucard h3{font-size:26px}
+.ucard .meta{font-family:var(--mono);font-size:12.5px;color:var(--slate);line-height:1.6}
+.ucard .mini-tray{height:46px}
+.ucard .mini-tray svg{height:46px;width:auto}
+.ucard .btn{margin-top:auto;letter-spacing:.12em;padding:0 14px}
+.ucard .alt{background:none;border:0;padding:0;font-size:12.5px;text-decoration:underline;cursor:pointer;color:var(--slate);align-self:flex-start}
+.ucard.new{outline:2px solid var(--sage)}
+.inv{margin-top:44px}
+.inv h3{font-size:26px;margin-bottom:12px}
+.inv table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:13px}
+.inv th{text-align:left;font-weight:400;color:var(--mist);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;padding:8px 10px 8px 0;border-bottom:1px solid var(--line-l)}
+.inv td{padding:12px 14px 12px 0;border-bottom:1px solid var(--line-l);white-space:nowrap}
+.inv td.r,.inv th.r{text-align:right}
+.inv-wrap{overflow-x:auto}
+
+/* kitchen */
+.kitchen{padding:110px 0;background:var(--cream)}
+.kgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;align-items:center}
+.kphoto{position:relative}
+.kphoto .a{aspect-ratio:4/3;object-fit:cover;width:100%}
+.kphoto .b{position:absolute;right:-18px;bottom:-40px;width:42%;aspect-ratio:16/10;object-fit:cover;object-position:50% 0;border:8px solid var(--cream)}
+.kgrid h2{margin-bottom:22px}
+.pull{font-family:var(--serif);font-style:italic;font-size:clamp(28px,3vw,38px);line-height:1.15;margin:30px 0 8px;color:var(--green)}
+.pull-src{font-size:12.5px;color:var(--slate)}
+.evri{margin-top:96px;display:grid;grid-template-columns:minmax(0,.35fr) minmax(0,1fr);gap:40px;border-top:1px solid var(--line);padding-top:40px;align-items:start}
+.evri blockquote{margin:0;font-family:var(--serif);font-size:clamp(26px,2.6vw,36px);line-height:1.2}
+.evri cite{display:block;font-style:normal;margin-top:22px;font-size:14px;font-family:var(--sans);line-height:1.5;color:var(--slate)}
+.evri cite b{color:var(--ink)}
+.evri cite b{font-weight:500}
+
+/* events */
+.events{background:var(--night);color:var(--cream);padding:110px 0}
+.events .eyebrow{color:var(--mist)}
+.events h2{margin-bottom:20px}
+.events .head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:end;margin-bottom:44px}
+.events .head p{color:rgba(243,242,237,.82);margin:0}
+.ecards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.ecard{border-top:1px solid var(--line-l);padding-top:16px;display:flex;flex-direction:column;gap:10px}
+.ecard .ph{aspect-ratio:16/10;overflow:hidden;background:var(--forest)}
+.ecard .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.ecard .ph svg{width:100%;height:100%}
+.ecard h3{font-size:26px}
+.ecard p{font-size:14px;color:rgba(243,242,237,.8);margin:0}
+.ecard a{margin-top:auto;font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--cream)}
+
+/* footer */
+.foot{background:var(--ink);color:var(--mist);padding:64px 0 40px;font-size:13.5px}
+.foot .g{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+.foot .wm-c{width:280px;filter:brightness(0) invert(92%);margin-bottom:18px}
+.foot a{color:var(--cream)}
+.foot h4{font-family:var(--sans);font-weight:500;font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream);margin:0 0 12px}
+.foot .fine{border-top:1px solid rgba(192,205,196,.2);margin-top:44px;padding-top:20px;font-size:12px;line-height:1.6}
+
+/* dialog */
+.ov{position:fixed;inset:0;background:rgba(0,24,5,.72);z-index:80;display:none;align-items:center;justify-content:center;padding:16px}
+.ov.on{display:flex}
+.dlg{background:var(--paper);max-width:520px;width:100%;max-height:calc(100vh - 32px);overflow:auto;padding:32px 30px 28px;position:relative;font-family:var(--mono);font-size:13px}
+.dlg h3{font-family:var(--serif);font-size:34px;margin-bottom:6px}
+.dlg .hd{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.dlg .stamp{flex:0 0 96px;position:relative;width:96px;height:96px;border:2px solid var(--green);border-radius:50%;display:grid;place-items:center;transform:rotate(-12deg);opacity:0}
+.dlg .stamp img{width:42px;height:42px;margin-top:-14px}
+.dlg .stamp span{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:9px;letter-spacing:.18em;color:var(--green);text-transform:uppercase}
+.ov.on .stamp{animation:stamp .5s .25s cubic-bezier(.3,1.6,.5,1) forwards}
+@keyframes stamp{from{opacity:0;transform:rotate(-12deg) scale(1.6)}to{opacity:1;transform:rotate(-12deg) scale(1)}}
+@media (prefers-reduced-motion:reduce){.ov.on .stamp{animation:none;opacity:1}}
+.dlg .lines{margin:18px 0;border-top:1px dashed rgba(4,32,21,.4);border-bottom:1px dashed rgba(4,32,21,.4);padding:10px 0}
+.dlg p{font-family:var(--sans);font-size:14px}
+.dlg .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.dlg .acts .btn{font-family:var(--sans)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--cream);padding:14px 18px;font-size:14px;max-width:min(560px,calc(100vw - 32px));z-index:90;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;border-radius:2px}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* phone and tablet */
+@media (max-width:1080px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .ticket-col{display:none}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);color:var(--cream);padding:10px 16px;gap:12px;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:13px}
+  .mbar .s{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mbar .btn{min-height:40px;padding:0 14px;font-family:var(--sans);flex:0 0 auto}
+  body.has-mbar{padding-bottom:62px}
+  .sheet{position:fixed;inset:auto 0 0 0;z-index:60;max-height:86vh;overflow:auto;background:var(--cream);padding:24px 16px 20px;transform:translateY(105%);transition:transform .3s ease;box-shadow:0 -20px 40px rgba(0,0,0,.25)}
+  .sheet.on{transform:none}
+  .sheet .close{display:flex;justify-content:flex-end;margin-bottom:12px}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ucards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ecards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav{display:none}
+}
+@media (min-width:1081px){.sheet{display:none}}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);min-height:0;padding-top:0;padding-bottom:56px}
+  .hero .bg{position:relative;height:300px}
+  .hero .bg::after{background:linear-gradient(180deg,rgba(0,36,26,0) 35%,var(--night) 100%)}
+  .hero .wm-c{width:230px;margin:6px 0 22px}
+  .mini{justify-self:stretch;max-width:none}
+  .facts .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fact{margin-right:0;padding:20px 16px 20px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .fact:nth-child(odd){padding-right:16px;border-right:1px solid var(--line);margin-right:0}
+  .fact:nth-child(even){padding-left:16px}
+  .story .grid,.order-head,.usual .head,.events .head,.kgrid,.evri,.guests{grid-template-columns:minmax(0,1fr);gap:32px}
+  .foot .g{grid-template-columns:minmax(0,1fr)}
+  .kphoto .b{right:8px;bottom:-28px}
+}
+@media (max-width:620px){
+  :root{--gut:16px}
+  .top .wrap{height:62px}
+  .brand .wm{width:150px}
+  .brand .em{width:38px;height:38px}
+  .tick-btn .lbl{display:none}
+  .story,.order,.usual,.kitchen,.events{padding:76px 0}
+  .cards,.ucards,.ecards,.quote-cards,.pay,.when,.addr{grid-template-columns:minmax(0,1fr)}
+  .dishes{columns:1}
+  .tabs button{font-size:19px;padding-right:10px;margin-right:10px}
+  .evri{margin-top:72px}
+  .chart{padding:22px 18px 18px}
+  .bar{grid-template-columns:minmax(0,1fr) 46px}
+  .detail{padding:18px 16px}
+  .step .sh h3{font-size:26px}
+  .dlg{padding:26px 18px 22px}
+  .dlg .stamp{flex-basis:78px;width:78px;height:78px}
+  .dlg .stamp img{width:34px;height:34px;margin-top:-12px}
+  .dlg .stamp span{bottom:12px;font-size:8px}
+  .dlg h3{font-size:28px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+
+<div class="concept" role="note"><div class="wrap">A concept <b>Astra</b> built for <b>The Garnish Collective</b>. Menus and prices marked example are placeholders for Chris to set, and payment is a demo, so nothing is ever charged.</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Garnish Collective, back to the top">
+      <img class="em" src="img/emblem.png" alt="" width="240" height="238">
+      <img class="wm" src="img/wordmark.png" alt="The Garnish Collective" width="1200" height="37">
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#order" data-goto="boxes">Menus</a>
+      <a href="#order" data-goto="xmas">Christmas</a>
+      <a href="#usual">Your usual</a>
+      <a href="#events">Events</a>
+    </nav>
+    <button class="tick-btn" type="button" id="hdrTicket" aria-label="Show your kitchen ticket"><span class="lbl">Ticket</span><span id="hdrTotal">£0.00</span><span class="n" id="hdrCount">0</span></button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="bg"><img src="img/plated.jpg" alt="Plates being finished by hand with seeds and herbs" width="1800" height="1200" fetchpriority="high"></div>
+  <div class="wrap">
+    <div>
+      <img class="wm-c" src="img/wordmark.png" alt="" width="1200" height="37">
+      <h1 id="h1">Chef made lunch for the office, <em>ordered and paid for online.</em></h1>
+      <p class="lede">Lunch boxes, buffets and this year's Christmas menus from Chris Hale's kitchen in Yorkshire. Pick a menu, say how many and when, and see the price before you pay.</p>
+      <div class="cutoff" id="cutoff">
+        <svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 4.5V9l3 2" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        <div><span id="cutoffText">Order a lunch box by 2pm and it's with you the next working day.</span><small>Example cut off. Chris sets the real one.</small></div>
+      </div>
+      <div class="ctas">
+        <a class="btn light" href="#order" data-goto="boxes">Start an order</a>
+        <a class="btn lghost" href="#usual">Reorder your usual</a>
+      </div>
+    </div>
+    <aside class="mini" aria-label="Your usual order, ready to reorder">
+      <div class="h"><span>Your usual</span><img src="img/emblem.png" alt="" width="240" height="238"></div>
+      <div class="big" id="miniName">Thursday team lunch</div>
+      <div class="row"><span>Lunch box</span><span>x 14</span></div>
+      <div class="row"><span>Vegetarian</span><span>2</span></div>
+      <div class="row"><span>Vegan</span><span>1</span></div>
+      <div class="row"><span>Delivered by</span><span>12.30pm</span></div>
+      <div class="row"><span>Next date</span><span id="miniDate">Thursday</span></div>
+      <button class="btn" type="button" id="miniReorder">Reorder in one tap</button>
+      <p class="note">Example account and example prices.</p>
+    </aside>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact rv"><b>Next working day</b><span>for lunch boxes ordered by 2pm, as an example rule</span></div>
+    <div class="fact rv"><b>Card or invoice</b><span>pay now, or on account with a purchase order number</span></div>
+    <div class="fact rv"><b>Dietary needs counted</b><span>vegetarian, vegan, gluten free and dairy free, per order</span></div>
+    <div class="fact rv"><b>Your usual, one tap</b><span>saved orders drop back into the ticket with a new date</span></div>
+  </div>
+</div>
+
+<section class="story" aria-labelledby="h-story">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">The office day</p>
+      <h2 id="h-story">The days a team spends together are planned now, and lunch is part of the plan.</h2>
+      <p class="lede">More than a quarter of working adults in Great Britain were hybrid working in autumn 2024. Among managers, directors and senior officials it was 45% earlier that year. Office days get planned, so lunch can be booked the minute the date's set.</p>
+      <div class="stat"><span class="num">28%</span><p>of working adults in Great Britain were hybrid working in autumn 2024, data collected 2 to 27 October.</p></div>
+    </div>
+    <figure class="chart rv" style="margin:0" aria-labelledby="h-chart">
+      <h3 id="h-chart">Who works part at home, part in the office</h3>
+      <p class="sub">Share of working adults hybrid working, by occupation, Great Britain, 10 April to 30 June 2024</p>
+      <div class="bar"><span class="lab">Managers, directors and senior officials</span><span class="track"><span class="fill" data-w="45"></span></span><span class="pct">45%</span></div>
+      <div class="bar all"><span class="lab">All workers</span><span class="track"><span class="fill" data-w="27"></span></span><span class="pct">27%</span></div>
+      <div class="bar low"><span class="lab">Elementary occupations</span><span class="track"><span class="fill" data-w="3"></span></span><span class="pct">3%</span></div>
+      <figcaption class="src">Source ONS, <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/articles/whoarethehybridworkers/2024-11-11">Who are the hybrid workers?</a>, published 11 November 2024, from the Opinions and Lifestyle Survey.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="order" id="order" aria-labelledby="h-order">
+  <div class="wrap">
+    <div class="order-head">
+      <div>
+        <p class="eyebrow">Order</p>
+        <h2 id="h-order">Pick a menu, tell us how many, and see the price before you pay.</h2>
+      </div>
+      <p>Choose a menu, set the headcount and dietary needs, pick a date and a time, then pay by card or put it on account.</p>
+    </div>
+
+    <div class="layout">
+      <div class="build">
+        <div class="tabs" role="tablist" aria-label="Menu types">
+          <button role="tab" id="tab-boxes" aria-controls="panel" aria-selected="true" data-tab="boxes">Bags &amp; Boxes</button>
+          <button role="tab" id="tab-buffets" aria-controls="panel" aria-selected="false" data-tab="buffets">Buffets</button>
+          <button role="tab" id="tab-xmas" aria-controls="panel" aria-selected="false" data-tab="xmas">Christmas 2026</button>
+        </div>
+        <div id="panel" role="tabpanel" aria-labelledby="tab-boxes">
+          <div class="tabnote" id="tabnote"></div>
+          <div class="cards" id="cards"></div>
+          <div id="quotes"></div>
+          <div class="detail" id="detail" hidden></div>
+        </div>
+
+        <div class="step" id="s-guests">
+          <div class="sh"><span class="k">Guests</span><h3>How many, and who needs what</h3></div>
+          <div class="guests">
+            <div>
+              <div class="ctr main" id="f-guests">
+                <label for="guests">Guests<small id="minNote">Choose a menu first</small></label>
+                <div class="stepper"><button type="button" data-step="guests" data-d="-1" aria-label="One fewer guest"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10" stroke="currentColor" stroke-width="1.6"/></svg></button><input id="guests" type="number" inputmode="numeric" min="0" max="400" value="0"><button type="button" data-step="guests" data-d="1" aria-label="One more guest"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
+              </div>
+              <p class="err" id="e-guests"></p>
+              <div class="ctr"><label for="d-veg">Vegetarian</label><div class="stepper"><button type="button" data-step="veg" data-d="-1" aria-label="One fewer vegetarian"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10" stroke="currentColor" stroke-width="1.6"/></svg></button><input id="d-veg" data-diet="veg" type="number" inputmode="numeric" min="0" value="0"><button type="button" data-step="veg" data-d="1" aria-label="One more vegetarian"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="1.6"/></svg></button></div></div>
+              <div class="ctr"><label for="d-vegan">Vegan</label><div class="stepper"><button type="button" data-step="vegan" data-d="-1" aria-label="One fewer vegan"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10" stroke="currentColor" stroke-width="1.6"/></svg></button><input id="d-vegan" data-diet="vegan" type="number" inputmode="numeric" min="0" value="0"><button type="button" data-step="vegan" data-d="1" aria-label="One more vegan"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="1.6"/></svg></button></div></div>
+              <div class="ctr"><label for="d-gf">Gluten free</label><div class="stepper"><button type="button" data-step="gf" data-d="-1" aria-label="One fewer gluten free"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10" stroke="currentColor" stroke-width="1.6"/></svg></button><input id="d-gf" data-diet="gf" type="number" inputmode="numeric" min="0" value="0"><button type="button" data-step="gf" data-d="1" aria-label="One more gluten free"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="1.6"/></svg></button></div></div>
+              <div class="ctr"><label for="d-df">Dairy free</label><div class="stepper"><button type="button" data-step="df" data-d="-1" aria-label="One fewer dairy free"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10" stroke="currentColor" stroke-width="1.6"/></svg></button><input id="d-df" data-diet="df" type="number" inputmode="numeric" min="0" value="0"><button type="button" data-step="df" data-d="1" aria-label="One more dairy free"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="1.6"/></svg></button></div></div>
+              <p class="err" id="e-diet"></p>
+              <div class="field" style="margin-top:16px"><label for="allergy">Allergies, or anything else the kitchen should know</label><textarea id="allergy" placeholder="For example, one guest with a nut allergy"></textarea></div>
+            </div>
+            <div>
+              <div class="tray" id="tray" aria-live="polite"></div>
+              <div id="addonWrap"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step" id="s-when">
+          <div class="sh"><span class="k">When</span><h3>Pick the day and the time</h3></div>
+          <p class="rule" id="rule">Choose a menu to see the earliest date.</p>
+          <div class="days" id="days" role="group" aria-label="Next available dates"></div>
+          <div class="when">
+            <div class="field" id="f-date"><label for="otherDate">Or another date</label><input id="otherDate" type="date"><span class="err" id="e-date"></span></div>
+            <div class="field" id="f-time"><label for="time" id="timeLabel">Delivered by</label><select id="time"></select><span class="err" id="e-time"></span></div>
+          </div>
+        </div>
+
+        <div class="step" id="s-where">
+          <div class="sh"><span class="k">Where</span><h3>Where it's going</h3></div>
+          <div class="addr">
+            <div class="field full" id="f-company"><label for="a-company">Company</label><input id="a-company" autocomplete="organization"><span class="err">Add the company name</span></div>
+            <div class="field full" id="f-street"><label for="a-street">Building and street</label><input id="a-street" autocomplete="street-address"><span class="err">Add the building and street</span></div>
+            <div class="field" id="f-town"><label for="a-town">Town or city</label><input id="a-town" autocomplete="address-level2"><span class="err">Add the town or city</span></div>
+            <div class="field" id="f-postcode"><label for="a-postcode">Postcode</label><input id="a-postcode" autocomplete="postal-code" placeholder="WF1 2AB"><span class="err">Check the postcode</span><span class="pcmsg" id="pcmsg"></span></div>
+            <div class="field full"><label for="a-notes">Notes for the driver</label><input id="a-notes" placeholder="Floor, reception, parking"></div>
+          </div>
+        </div>
+
+        <div class="step" id="s-pay">
+          <div class="sh"><span class="k">Pay</span><h3>Check out</h3></div>
+          <div class="addr">
+            <div class="field" id="f-name"><label for="c-name">Your name</label><input id="c-name" autocomplete="name"><span class="err">Add your name</span></div>
+            <div class="field" id="f-email"><label for="c-email">Email for the confirmation</label><input id="c-email" type="email" autocomplete="email"><span class="err">Check the email address</span></div>
+          </div>
+          <div class="pay" role="radiogroup" aria-label="How you'd like to pay">
+            <label class="payopt on" id="po-card"><input type="radio" name="pay" value="card" checked><span><b>Pay by card</b><span>Pay now and you're done</span></span></label>
+            <label class="payopt" id="po-inv"><input type="radio" name="pay" value="invoice"><span><b>Invoice my account</b><span>For account customers, 30 days as an example term</span></span></label>
+          </div>
+          <div id="payCard"><p class="demo">Demo payment. There's no card form on this page and nothing is charged.</p></div>
+          <div id="payInv" hidden><div class="field"><label for="c-po">Purchase order number, if you use them</label><input id="c-po"></div><p class="demo">Demo invoice. Nothing is sent and nothing is charged.</p></div>
+          <label class="chkline"><input type="checkbox" id="saveUsual" checked><span>Save this as one of your usual orders</span></label>
+          <div class="field" id="f-saveName"><label for="saveName">Call it</label><input id="saveName" placeholder="Thursday team lunch"></div>
+          <div class="place"><button class="btn" type="button" id="placeBtn">Place demo order</button><span class="formerr" id="formerr" role="alert"></span></div>
+        </div>
+      </div>
+
+      <aside class="ticket-col" aria-label="Your kitchen ticket">
+        <div class="ticket" id="ticket"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="usual" id="usual" aria-labelledby="h-usual">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Your usual</p>
+        <h2 id="h-usual">Regulars reorder in one tap, on the day they always order for.</h2>
+      </div>
+      <p>Any order can be saved as a usual. Reorder puts it back on the ticket with the next date that matches, the same weekday and the same time, ready to check out.</p>
+    </div>
+    <div class="acct">
+      <div class="who"><span class="av" aria-hidden="true">Y</span><div><b>Your Company Ltd</b><small>Pays by invoice, 30 days, as an example</small></div></div>
+      <span class="tag">Demo account, a made up company</span>
+    </div>
+    <div class="ucards" id="ucards"></div>
+    <div class="inv">
+      <h3>Recent invoices</h3>
+      <div class="inv-wrap">
+        <table>
+          <thead><tr><th>Invoice</th><th>Date</th><th>Order</th><th class="r">Amount</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>INV 1187</td><td>8 Oct 2026</td><td>Thursday team lunch</td><td class="r">£189.00</td><td>Paid</td></tr>
+            <tr><td>INV 1184</td><td>6 Oct 2026</td><td>Board breakfast</td><td class="r">£88.00</td><td>Paid</td></tr>
+            <tr><td>INV 1176</td><td>25 Sep 2026</td><td>Quarterly team day</td><td class="r">£840.00</td><td>Due 25 Oct</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="src" style="color:var(--mist)">Example invoices for the demo account, worked out from the example prices.</p>
+    </div>
+  </div>
+</section>
+
+<section class="kitchen" id="kitchen" aria-labelledby="h-kitchen">
+  <div class="wrap">
+    <div class="kgrid">
+      <div class="kphoto rv">
+        <img class="a" src="img/dessertrow.jpg" alt="A row of plated desserts with citrus and fresh herbs" width="1600" height="1110" loading="lazy">
+        <img class="b" src="img/li_porkbelly.jpg" alt="Slow cooked pork belly on a dark plate" width="1200" height="1200" loading="lazy">
+      </div>
+      <div class="rv">
+        <p class="eyebrow">The kitchen</p>
+        <h2 id="h-kitchen">Led by Chris Hale, and built on Yorkshire produce.</h2>
+        <p>Chris is founder and head chef of The Garnish Collective, and a MasterChef UK quarter finalist. The kitchen buys from the most local suppliers it can, keeps menus low on air miles, composts its trimmings and has its own allotment and beehives.</p>
+        <p class="pull">“Nothing is forced, except the Rhubarb.”</p>
+        <p class="pull-src">From The Garnish Collective's sustainability commitment. Rhubarb turns up again on this year's Christmas dinner menu, in a rhubarb and custard millefeuille.</p>
+      </div>
+    </div>
+    <div class="evri rv">
+      <p class="eyebrow">A regular</p>
+      <blockquote>
+        “We’ve worked with The Garnish Collective for over 3 years. They are our ‘go to’ when it comes to event catering as they offer a wide range of hot and cold buffet options. Chris and his team are professional and reliable, and most importantly the food is always amazing!”
+        <cite><b>Stacey Dockerty</b><br>Marketing &amp; Events Manager, Evri</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="events" id="events" aria-labelledby="h-events">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Bigger than lunch</p>
+        <h2 id="h-events">Launches, dinners and bars are made to measure, so they go straight to Chris.</h2>
+      </div>
+      <p>These don't fit a set menu. Tell Chris the date, the headcount and the venue, and he'll come back with a menu and a price.</p>
+    </div>
+    <div class="ecards">
+      <article class="ecard rv">
+        <div class="ph"><img src="img/li_canapes.jpg" alt="Canapés on toasted bread" width="1200" height="1200" loading="lazy"></div>
+        <h3>Canapés</h3>
+        <p>Canapé menus for drinks receptions and corporate events, with options for different dietary requirements.</p>
+        <a href="https://www.garnishcollective.com/enquire">Ask Chris</a>
+      </article>
+      <article class="ecard rv">
+        <div class="ph"><svg viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#183e30"/><g fill="none" stroke="#8da99b" stroke-width="1.2"><rect x="60" y="34" width="200" height="132"/></g><g fill="#c0cdc4">
+          <circle cx="90" cy="64" r="11"/><circle cx="130" cy="64" r="11"/><circle cx="170" cy="64" r="11"/><circle cx="210" cy="64" r="11"/>
+          <circle cx="90" cy="100" r="11" opacity=".7"/><circle cx="130" cy="100" r="11"/><circle cx="170" cy="100" r="11" opacity=".7"/><circle cx="210" cy="100" r="11"/>
+          <circle cx="90" cy="136" r="11"/><circle cx="130" cy="136" r="11" opacity=".7"/><circle cx="170" cy="136" r="11"/><circle cx="210" cy="136" r="11" opacity=".7"/></g><g fill="#183e30"><circle cx="90" cy="64" r="4"/><circle cx="130" cy="64" r="4"/><circle cx="170" cy="64" r="4"/><circle cx="210" cy="64" r="4"/><circle cx="90" cy="100" r="4"/><circle cx="130" cy="100" r="4"/><circle cx="170" cy="100" r="4"/><circle cx="210" cy="100" r="4"/><circle cx="90" cy="136" r="4"/><circle cx="130" cy="136" r="4"/><circle cx="170" cy="136" r="4"/><circle cx="210" cy="136" r="4"/></g></svg></div>
+        <h3>Installed Edible Displays</h3>
+        <p>Custom built edible installations, with fully branded options and on site set up and styling, for launch days and networking events.</p>
+        <a href="https://www.garnishcollective.com/enquire">Ask Chris</a>
+      </article>
+      <article class="ecard rv">
+        <div class="ph"><img src="img/li_privatedining.jpg" alt="Plated salads and roasted squash on a wooden table" width="800" height="800" loading="lazy"></div>
+        <h3>Tailored Event Service</h3>
+        <p>Design, catering and guest experience, with multi course dining and a front of house team, at Hodroyd Hall or a venue of your choice.</p>
+        <a href="https://www.garnishcollective.com/enquire">Ask Chris</a>
+      </article>
+      <article class="ecard rv">
+        <div class="ph"><img src="img/li_bar.jpg" alt="A cocktail with a salted rim being served across a bar" width="1200" height="1200" loading="lazy"></div>
+        <h3>Bar Hire</h3>
+        <p>Craft cocktails, classic pours or a drinks menu written for the event, on its own or alongside the food.</p>
+        <a href="https://www.garnishcollective.com/enquire">Ask Chris</a>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div>
+        <img class="wm-c" src="img/wordmark.png" alt="The Garnish Collective" width="1200" height="37" loading="lazy">
+        <p>Corporate catering, weddings and celebrations, from a kitchen in Yorkshire.</p>
+      </div>
+      <div>
+        <h4>Talk to the kitchen</h4>
+        <p><a href="tel:07899767279">07899 767279</a><br><a href="mailto:feasting@garnishcollective.com">feasting@garnishcollective.com</a></p>
+      </div>
+      <div>
+        <h4>Where this comes from</h4>
+        <p>Menus, dishes and the Christmas from prices come from garnishcollective.com, The Garnish Collective's LinkedIn page and its 2026 Corporate Christmas Packages brochure, read on 13 October 2026.</p>
+      </div>
+    </div>
+    <div class="fine">A concept Astra built for The Garnish Collective. Menus and prices marked example are placeholders for Chris to set, and so are the cut off times, lead times and delivery charges. The account, its saved orders and its invoices are made up. Payment is a demo, there's no card form and nothing is charged. Nothing you type leaves your browser.</div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><span class="s" id="mbarText">Your ticket is empty</span><button class="btn light" type="button" id="mbarBtn">See ticket</button></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Your kitchen ticket"><div class="close"><button class="btn ghost" type="button" id="sheetClose">Close</button></div><div class="ticket" id="ticket2"></div></div>
+
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-labelledby="dlgTitle">
+  <div class="dlg">
+    <div class="hd"><h3 id="dlgTitle">Order in</h3><div class="stamp" aria-hidden="true"><img src="img/emblem.png" alt="" width="240" height="238"><span>Confirmed</span></div></div>
+    <div id="dlgBody"></div>
+    <div class="acts"><button class="btn" type="button" id="dlgUsual">See your usual</button><button class="btn ghost" type="button" id="dlgClose">Close</button></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- data ---------- */
+const MENUS = [
+  {id:"breakfast",tab:"boxes",kind:"box",name:"Breakfast box",price:9.5,from:false,src:"ex",min:6,lead:1,
+   line:"For an early start, packed one per person.",
+   dishes:[["A pastry from the morning bake","ex"],["Yoghurt, granola and honey","ex"],["Cut seasonal fruit","ex"],["Fresh juice","ex"]]},
+  {id:"lunch",tab:"boxes",kind:"box",name:"Lunch box",price:13.5,from:false,src:"ex",min:6,lead:1,
+   line:"Freshly prepared and chef designed, one box per person.",
+   dishes:[["A filled roll or flatbread","ex"],["A seasonal salad","ex"],["Something sweet","ex"],["Fruit","ex"]]},
+  {id:"banquet",tab:"boxes",kind:"share",name:"Banquet style package",price:16.5,from:false,src:"ex",min:10,lead:1,
+   line:"Sharing boards for the middle of the meeting table.",
+   dishes:[["Boards of cold cuts and cheese","ex"],["Breads and dips","ex"],["Two seasonal salads","ex"],["A board of something sweet","ex"]]},
+  {id:"hotcold",tab:"buffets",kind:"buffet",name:"Hot and cold buffet",price:21,from:false,src:"ex",min:15,lead:2,img:"img/li_sliders.jpg",alt:"Burger sliders on a wooden board",
+   line:"Savoury and sweet, hot and cold, set out at your venue.",
+   dishes:[["Burger sliders","his"],["Slow cooked pork belly","his"],["Two seasonal salads","ex"],["Breads","ex"],["Something sweet","ex"]]},
+  {id:"steak",tab:"buffets",kind:"buffet",name:"Steakhouse buffet",price:27,from:false,src:"ex",min:15,lead:2,img:"img/li_steak.jpg",alt:"Sliced steak with green sauce on a buffet",
+   line:"Steak cooked for the buffet table, with the sides around it.",
+   dishes:[["Steak, beautifully cooked","his"],["Seasonal salads","ex"],["Roast potatoes","ex"],["Breads","ex"]]},
+  {id:"paella",tab:"buffets",kind:"buffet",name:"Paella for the team",price:15,from:false,src:"ex",min:20,lead:2,img:"img/li_paella.jpg",alt:"A large pan of paella being stirred",
+   line:"One big pan, cooked and served fresh for your guests.",
+   dishes:[["Paella, cooked and served fresh","his"],["Bread","ex"],["A green salad","ex"],["Something sweet","ex"]]},
+  {id:"xsandwich",tab:"xmas",kind:"buffet",name:"Christmas hot sandwich menu",price:12,from:true,src:"his",min:10,lead:5,xmas:true,
+   line:"Hot Christmas sandwiches, served at your office or venue.",
+   includes:"Includes serving staff, set up, disposable plates and cutlery.",
+   dishes:[["Traditional roast turkey & stuffing bap","his"],["Hot turkey, brie & bacon ciabatta","his"],["Mulled pulled pork slider","his"]],
+   addon:{name:"Desserts",price:8,img:"img/li_dessert.jpg",dishes:["Chocolate brownie","Sticky toffee cake","Christmas “mess”","Mini mince pies"]}},
+  {id:"xgrazing",tab:"xmas",kind:"buffet",name:"Christmas grazing table",price:18,from:true,src:"his",min:15,lead:5,xmas:true,
+   line:"A festive table to graze from, for the office party or the team lunch.",
+   dishes:[["Cranberry, brie & caramelised onion tarts","his","V"],["Smoked salmon blinis, dill crème fraîche, lemon zest, capers","his"],["Christmas cheeseboard with rosemary focaccia, grissini sticks and chutney","his"],["Pigs in blankets","his"],["Charcuterie selection","his"],["Turkey, cranberry sausage roll","his"],["Braised red cabbage salad","his"],["Treacle glazed ham","his"],["Radicchio, fennel, pear & blue cheese salad","his"]]}
+];
+const TABS = {
+  boxes:{note:"Freshly prepared, chef designed lunch boxes or banquet style packages, for meetings, workshops and strategy days.",tag:`<span class="tag ex">Example menus and prices</span>`},
+  buffets:{note:"We arrive at your venue and set out a buffet with savoury and sweet dishes, for conferences, gala dinners and client entertainment. Dishes marked Chris's come from his own posts.",tag:`<span class="tag ex">Example prices</span>`},
+  xmas:{note:"From The Garnish Collective's 2026 Corporate Christmas Packages brochure, dishes and from prices as printed. Every menu is a starting point, so tell Chris what to change in the notes.",tag:`<span class="tag his">From the 2026 brochure</span>`}
+};
+const DIET = [["veg","Vegetarian","V"],["vegan","Vegan","VE"],["gf","Gluten free","GF"],["df","Dairy free","DF"]];
+const EXAMPLE_USUALS = [
+  {id:"u1",name:"Thursday team lunch",menu:"lunch",guests:14,diet:{veg:2,vegan:1,gf:1,df:0},time:"12:30",weekday:4,last:"2026-10-08",
+   addr:{company:"Your Company Ltd",street:"Floor 3, 1 Example Street",town:"Wakefield",postcode:"WF1 2AB",notes:"Ask at reception"},example:true},
+  {id:"u2",name:"Board breakfast",menu:"breakfast",guests:8,diet:{veg:1,vegan:0,gf:0,df:0},time:"08:30",weekday:2,last:"2026-10-06",
+   addr:{company:"Your Company Ltd",street:"Floor 3, 1 Example Street",town:"Wakefield",postcode:"WF1 2AB",notes:"Boardroom, floor 3"},example:true},
+  {id:"u3",name:"Quarterly team day",menu:"hotcold",guests:40,diet:{veg:6,vegan:2,gf:3,df:0},time:"12:00",weekday:5,last:"2026-09-25",
+   addr:{company:"Your Company Ltd",street:"Floor 3, 1 Example Street",town:"Wakefield",postcode:"WF1 2AB",notes:"Set up in the atrium"},example:true}
+];
+/* England and Wales bank holidays, plus the Christmas window, an example */
+const HOLIDAYS = ["2026-12-25","2026-12-28","2027-01-01","2027-03-26","2027-03-29","2027-05-03","2027-05-31","2027-08-30","2027-12-27","2027-12-28"];
+const XMAS_START = "2026-11-16", XMAS_END = "2026-12-23";
+const CUTOFF_MIN = 14*60;
+const LOCAL = ["WF","LS","BD","HD","HX"], LOCAL_S = [70,71,72,73,74,75];
+const DAYN = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const MON = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const STORE = "tgc-usuals-v1";
+
+/* ---------- dates, always in UK time ---------- */
+function londonNow(){
+  const parts = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/London",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+  const g = t => +(parts.find(p => p.type === t) || {value:0}).value;
+  return {key:`${g("year")}-${pad(g("month"))}-${pad(g("day"))}`, mins:g("hour")*60 + g("minute")};
+}
+function pad(n){ return String(n).padStart(2,"0"); }
+function toUTC(key){ const [y,m,d] = key.split("-").map(Number); return new Date(Date.UTC(y,m-1,d)); }
+function fromUTC(dt){ return `${dt.getUTCFullYear()}-${pad(dt.getUTCMonth()+1)}-${pad(dt.getUTCDate())}`; }
+function addDays(key,n){ const dt = toUTC(key); dt.setUTCDate(dt.getUTCDate()+n); return fromUTC(dt); }
+function dow(key){ return toUTC(key).getUTCDay(); }
+function isWorking(key){ const w = dow(key); return w > 0 && w < 6 && HOLIDAYS.indexOf(key) < 0; }
+function nextWorking(key){ let k = addDays(key,1); while(!isWorking(k)) k = addDays(k,1); return k; }
+function addWorking(key,n){ let k = key; for(let i=0;i<n;i++) k = nextWorking(k); return k; }
+function earliestFor(m){
+  const now = londonNow();
+  let base = now.key;
+  if(!isWorking(base) || now.mins >= CUTOFF_MIN) base = nextWorking(base);
+  let e = addWorking(base, m.lead);
+  if(m.xmas && e < XMAS_START){ e = XMAS_START; while(!isWorking(e)) e = addDays(e,1); }
+  return e;
+}
+function available(m,key){
+  if(!key || key < earliestFor(m) || !isWorking(key)) return false;
+  if(m.xmas && (key < XMAS_START || key > XMAS_END)) return false;
+  return true;
+}
+function nextDates(m,count){
+  const out = []; let k = earliestFor(m), guard = 0;
+  while(out.length < count && guard < 400){ if(available(m,k)) out.push(k); k = addDays(k,1); guard++; if(m.xmas && k > XMAS_END) break; }
+  return out;
+}
+function fmtLong(key){ const dt = toUTC(key); return `${DAYN[dt.getUTCDay()]} ${dt.getUTCDate()} ${MON[dt.getUTCMonth()]}`; }
+function fmtShort(key){ const dt = toUTC(key); return [DAYN[dt.getUTCDay()].slice(0,3), `${dt.getUTCDate()} ${MON[dt.getUTCMonth()].slice(0,3)}`]; }
+function fmtTime(t){ if(!t) return ""; let [h,mi] = t.split(":").map(Number); const ap = h >= 12 ? "pm" : "am"; let hh = h % 12; if(hh === 0) hh = 12; return mi ? `${hh}.${pad(mi)}${ap}` : `${hh}${ap}`; }
+function money(n){ return "£" + n.toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c]); }
+const $ = id => document.getElementById(id);
+
+/* ---------- state ---------- */
+const S = {tab:"boxes",menu:"lunch",guests:12,diet:{veg:0,vegan:0,gf:0,df:0},dessert:false,date:null,time:"",pay:"card",ref:null};
+function menu(){ return MENUS.find(m => m.id === S.menu) || null; }
+
+/* ---------- postcode and delivery ---------- */
+function parsePC(v){
+  const m = String(v||"").toUpperCase().replace(/\s+/g,"").match(/^([A-Z]{1,2})(\d[A-Z\d]?)(\d[A-Z]{2})$/);
+  if(!m) return null;
+  return {area:m[1], district:m[2], full:`${m[1]}${m[2]} ${m[3]}`};
+}
+function isLocal(pc){
+  if(!pc) return false;
+  if(LOCAL.indexOf(pc.area) >= 0) return true;
+  return pc.area === "S" && LOCAL_S.indexOf(parseInt(pc.district,10)) >= 0;
+}
+function delivery(m, sub){
+  const pc = parsePC($("a-postcode").value);
+  if(!m) return {label:"Delivery",val:null,txt:""};
+  if(m.id === "xgrazing") return {label:"Set up",val:null,txt:"To confirm"};
+  if(m.kind === "buffet"){
+    if(!pc) return {label:"Set up",val:0,txt:"Included"};
+    return isLocal(pc) ? {label:"Set up",val:0,txt:"Included"} : {label:"Travel",val:null,txt:"To confirm"};
+  }
+  if(!pc) return {label:"Delivery",val:null,txt:"Add a postcode"};
+  if(!isLocal(pc)) return {label:"Delivery",val:null,txt:"To confirm"};
+  return sub >= 150 ? {label:"Delivery",val:0,txt:"Free"} : {label:"Delivery",val:12,txt:money(12)};
+}
+function totals(){
+  const m = menu(); if(!m) return null;
+  const g = S.guests;
+  const food = m.price * g;
+  const add = (m.addon && S.dessert) ? m.addon.price * g : 0;
+  const sub = food + add;
+  const d = delivery(m, sub);
+  return {food, add, sub, d, total: sub + (d.val || 0), pending: d.val === null};
+}
+
+/* ---------- art ---------- */
+function boxArt(kind, id){
+  const lids = {breakfast:["#c0cdc4","#e9d8b8","#8da99b"],lunch:["#8da99b","#c0cdc4","#e2cfa6","#275f49"],banquet:["#c0cdc4","#e2cfa6","#8da99b","#275f49","#e9d8b8"]}[id] || ["#c0cdc4","#8da99b"];
+  if(kind === "share"){
+    return `<svg viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#ede3d9"/><rect x="34" y="40" width="252" height="120" rx="6" fill="#fff" stroke="#042015" stroke-opacity=".3"/>
+    <rect x="50" y="56" width="100" height="40" rx="3" fill="${lids[0]}"/><rect x="160" y="56" width="110" height="40" rx="3" fill="${lids[1]}"/>
+    <circle cx="80" cy="128" r="18" fill="${lids[2]}"/><circle cx="135" cy="128" r="18" fill="${lids[4]}"/><rect x="170" y="110" width="100" height="36" rx="3" fill="${lids[3]}" opacity=".85"/></svg>`;
+  }
+  const cells = id === "breakfast"
+    ? `<rect x="104" y="58" width="56" height="84" rx="3" fill="${lids[1]}"/><circle cx="196" cy="80" r="20" fill="${lids[0]}"/><rect x="176" y="112" width="40" height="30" rx="3" fill="${lids[2]}"/>`
+    : `<rect x="104" y="58" width="70" height="40" rx="3" fill="${lids[2]}"/><rect x="104" y="104" width="70" height="38" rx="3" fill="${lids[0]}"/><circle cx="198" cy="78" r="18" fill="${lids[1]}"/><rect x="182" y="104" width="34" height="38" rx="3" fill="${lids[3]}" opacity=".85"/>`;
+  return `<svg viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#ede3d9"/><rect x="92" y="46" width="136" height="108" rx="5" fill="#fff" stroke="#042015" stroke-opacity=".3"/>${cells}<path d="M92 46l-26 -18h188l-26 18" fill="#f3f2ed" stroke="#042015" stroke-opacity=".25"/></svg>`;
+}
+function xmasArt(id){
+  const label = id === "xsandwich" ? "Hot sandwiches" : "Grazing table";
+  return `<svg viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#ede3d9"/><path d="M40 60c30 -30 60 20 90 -6s50 -20 70 4" fill="none" stroke="#425852" stroke-width="1.4"/><path d="M200 58c8 -10 20 -10 22 0c-6 4 -14 6 -22 0zM222 58c8 -10 20 -10 22 0c-6 4 -14 6 -22 0z" fill="none" stroke="#425852" stroke-width="1.4"/><text x="160" y="118" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-size="38" fill="#183e30">Christmas</text><text x="160" y="148" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="10" letter-spacing="4" fill="#425852">${label.toUpperCase()}</text><path d="M250 150c10 -20 20 10 34 -4" fill="none" stroke="#425852" stroke-width="1.4"/></svg>`;
+}
+function cardArt(m){
+  if(m.img) return `<img src="${m.img}" alt="${esc(m.alt)}" loading="lazy" width="1200" height="1200">`;
+  if(m.xmas) return xmasArt(m.id);
+  return boxArt(m.kind, m.id);
+}
+function dietSlots(g, diet){
+  const out = []; DIET.forEach(([k,,code]) => { for(let i=0;i<(diet[k]||0) && out.length<g;i++) out.push(code); });
+  while(out.length < g) out.push("");
+  return out;
+}
+function trayArt(m, g, diet){
+  if(!m || g < 1) return `<svg viewBox="0 0 400 180" aria-hidden="true"><rect width="400" height="180" fill="none"/><text x="200" y="96" text-anchor="middle" font-family="DM Mono, monospace" font-size="13" fill="#425852">Your order appears here</text></svg>`;
+  const slots = dietSlots(g, diet);
+  const col = {V:"#8da99b",VE:"#275f49",GF:"#e2cfa6",DF:"#c9b7d9","":"#ffffff"};
+  const txt = {V:"#042015",VE:"#f3f2ed",GF:"#042015",DF:"#042015"};
+  if(m.kind === "box"){
+    const shown = Math.min(g, 48), cols = 8, s = 44, gap = 6, rows = Math.ceil(shown/cols);
+    const W = cols*(s+gap)+gap, H = rows*(s+gap)+gap + (g > 48 ? 26 : 0);
+    let b = "";
+    for(let i=0;i<shown;i++){
+      const x = gap + (i%cols)*(s+gap), y = gap + Math.floor(i/cols)*(s+gap), c = slots[i];
+      b += `<g class="tline-new"><rect x="${x}" y="${y}" width="${s}" height="${s}" rx="3" fill="${col[c]}" stroke="#042015" stroke-opacity=".28"/><path d="M${x+4} ${y+12}h${s-8}" stroke="#042015" stroke-opacity=".18"/>${c ? `<text x="${x+s/2}" y="${y+31}" text-anchor="middle" font-family="DM Mono, monospace" font-size="11" fill="${txt[c]}">${c}</text>` : ""}</g>`;
+    }
+    if(g > 48) b += `<text x="${W/2}" y="${H-8}" text-anchor="middle" font-family="DM Mono, monospace" font-size="12" fill="#425852">and ${g-48} more boxes</text>`;
+    return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${g} boxes">${b}</svg>`;
+  }
+  /* a table seen from above, guests around it, platters on it */
+  const W = 400, H = 220, tx = 70, ty = 70, tw = 260, th = 80;
+  const plat = Math.max(2, Math.min(12, Math.ceil(g/ (m.kind === "share" ? 5 : 8))));
+  let t = `<rect x="${tx}" y="${ty}" width="${tw}" height="${th}" rx="4" fill="#fff" stroke="#042015" stroke-opacity=".3"/>`;
+  const per = Math.ceil(plat/2);
+  for(let i=0;i<plat;i++){
+    const row = i < per ? 0 : 1, idx = row ? i-per : i, n = row ? plat-per : per;
+    const cx = tx + (idx+0.5)*(tw/n), cy = ty + (row ? th*0.7 : th*0.3);
+    t += `<circle class="tline-new" cx="${cx}" cy="${cy}" r="13" fill="${["#c0cdc4","#e2cfa6","#8da99b"][i%3]}" stroke="#042015" stroke-opacity=".25"/>`;
+  }
+  const shown = Math.min(g, 60), perim = 2*(tw+th) + 4*24;
+  for(let i=0;i<shown;i++){
+    let d = (i+0.5) * perim / shown, x, y;
+    const L1 = tw+48, L2 = th+48;
+    if(d < L1){ x = tx-24 + d; y = ty-22; }
+    else if((d -= L1) < L2){ x = tx+tw+22; y = ty-24 + d; }
+    else if((d -= L2) < L1){ x = tx+tw+24 - d; y = ty+th+22; }
+    else { d -= L1; x = tx-22; y = ty+th+24 - d; }
+    const c = slots[i];
+    t += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="7" fill="${c ? col[c] : "#183e30"}" stroke="#042015" stroke-opacity=".3"/>`;
+  }
+  if(g > 60) t += `<text x="200" y="${H-4}" text-anchor="middle" font-family="DM Mono, monospace" font-size="12" fill="#425852">and ${g-60} more guests</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="A table for ${g} guests">${t}</svg>`;
+}
+
+/* ---------- render ---------- */
+function renderTabs(){
+  document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === S.tab)));
+  $("panel").setAttribute("aria-labelledby","tab-"+S.tab);
+  const t = TABS[S.tab];
+  $("tabnote").innerHTML = `<p>${t.note}</p>${t.tag}`;
+  $("cards").innerHTML = MENUS.filter(m => m.tab === S.tab).map(m => {
+    const priceTag = m.src === "his" ? `<span class="tag his">2026 brochure</span>` : `<span class="tag ex">Example</span>`;
+    return `<button type="button" class="card" data-menu="${m.id}" aria-pressed="${S.menu === m.id}">
+      <span class="ph">${cardArt(m)}</span>
+      <span class="chk" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2.5 7.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+      <span class="bd"><span class="nm">${m.name}</span><span class="ln">${m.line}</span>
+      <span class="pr"><b>${m.from ? "from " : ""}${money(m.price)} a head</b>${priceTag}</span>
+      <span class="ln">Example minimum, ${m.min} guests</span></span></button>`;
+  }).join("");
+  $("quotes").innerHTML = S.tab !== "xmas" ? "" : `<div class="quote-cards">
+    <div class="qcard"><span class="nm">Christmas canapé party</span><ul><li>Mini yorkshire pudding with beef &amp; horseradish</li><li>Truffled wild mushroom &amp; stilton tartlets (V)</li><li>King prawn cocktail cups with bloody mary sauce</li><li>Fig &amp; goat's cheese crostini with walnut (V)</li></ul><span class="tag his" style="align-self:flex-start">From the 2026 brochure</span><a class="btn ghost" href="https://www.garnishcollective.com/enquire">Ask Chris for a price</a></div>
+    <div class="qcard"><span class="nm">Christmas three course dinner</span><ul><li>Brined turkey crown &amp; bread sauce</li><li>Beef cheek &amp; horseradish croquettes</li><li>Luxury fish pie with truffled mash</li><li>Rhubarb &amp; custard millefeuille</li></ul><span class="tag his" style="align-self:flex-start">Plated or feasting style</span><a class="btn ghost" href="https://www.garnishcollective.com/enquire">Ask Chris for a price</a></div></div>`;
+  renderDetail();
+}
+function renderDetail(){
+  const m = menu(), el = $("detail");
+  if(!m || m.tab !== S.tab){ el.hidden = true; return; }
+  el.hidden = false;
+  el.innerHTML = `<div class="top2"><h3>${m.name}</h3><span>${m.src === "his" ? `<span class="tag his">Dishes and from price from the 2026 brochure</span>` : `<span class="tag ex">Example price</span>`}</span></div>
+    <ul class="dishes">${m.dishes.map(([n,s,d]) => `<li><span class="d">${n}${d ? ` <span class="tag ex">${d}</span>` : ""}</span>${s === "his" ? `<span class="tag his">Chris's dish</span>` : `<span class="tag ex">Example</span>`}</li>`).join("")}</ul>
+    ${m.includes ? `<p class="includes">${m.includes}</p>` : ""}
+    <div class="legend"><span><span class="tag his">Chris's dish</span> named on his site, posts or brochure</span><span><span class="tag ex">Example</span> written for this concept, for Chris to replace</span></div>`;
+}
+function renderGuests(){
+  const m = menu();
+  $("guests").value = S.guests;
+  DIET.forEach(([k]) => { $("d-"+k).value = S.diet[k]; });
+  $("minNote").textContent = m ? `Example minimum for this menu, ${m.min}` : "Choose a menu first";
+  const cap = [];
+  DIET.forEach(([k,l]) => { if(S.diet[k]) cap.push(`${S.diet[k]} ${l.toLowerCase()}`); });
+  const unit = m && m.kind === "box" ? (S.guests === 1 ? "box" : "boxes") : (S.guests === 1 ? "guest" : "guests");
+  $("tray").innerHTML = trayArt(m, S.guests, S.diet) + `<p class="cap">${m && S.guests ? `${S.guests} ${unit}${cap.length ? `, ${cap.join(", ")}` : ""}` : "Choose a menu and a headcount"}</p>`;
+  $("addonWrap").innerHTML = (m && m.addon) ? `<div class="addon"><img src="${m.addon.img}" alt="Plated desserts, including a brownie with ice cream" width="800" height="800" loading="lazy"><label><input type="checkbox" id="dessert" ${S.dessert ? "checked" : ""}><span>Add desserts for everyone, ${money(m.addon.price)} a head. ${m.addon.dishes.join(", ")}.<br><span class="tag his">From the 2026 brochure</span></span></label></div>` : "";
+}
+function renderWhen(){
+  const m = menu();
+  const days = $("days"), od = $("otherDate");
+  if(!m){ days.innerHTML = ""; $("rule").textContent = "Choose a menu to see the earliest date."; od.removeAttribute("min"); fillTimes(null); return; }
+  const e = earliestFor(m);
+  if(m.xmas && e > XMAS_END){ days.innerHTML = ""; $("rule").textContent = "Christmas 2026 orders have closed. Chris can still take a late booking if you ask."; od.min = e; od.max = e; od.value = ""; fillTimes(m); return; }
+  const rule = m.xmas
+    ? `Christmas menus need five working days' notice, for dates from ${fmtLong(XMAS_START)} to ${fmtLong(XMAS_END)}. Example rule.`
+    : (m.lead === 1 ? `Order by 2pm and it's with you the next working day, Monday to Friday. Example rule.` : `Buffets need two working days' notice, Monday to Friday. Example rule.`);
+  $("rule").textContent = `Earliest for this menu is ${fmtLong(e)}. ${rule}`;
+  const list = nextDates(m, 10);
+  days.innerHTML = list.map(k => { const [a,b] = fmtShort(k); return `<button type="button" class="day" data-date="${k}" aria-pressed="${S.date === k}"><b>${a}</b><span>${b}</span></button>`; }).join("");
+  od.min = e; od.max = m.xmas ? XMAS_END : addDays(e, 180);
+  od.value = (S.date && list.indexOf(S.date) < 0) ? S.date : "";
+  fillTimes(m);
+}
+function fillTimes(m){
+  const sel = $("time");
+  $("timeLabel").textContent = m && m.kind === "buffet" ? "Set up by" : "Delivered by";
+  const opts = [`<option value="">Choose a time</option>`];
+  for(let h=7; h<=18; h++){ for(const mi of [0,30]){ if(h === 7 && mi === 0) continue; if(h === 18 && mi === 30) continue; const v = `${pad(h)}:${pad(mi)}`; opts.push(`<option value="${v}" ${S.time === v ? "selected" : ""}>${fmtTime(v)}</option>`); } }
+  sel.innerHTML = opts.join("");
+}
+function renderPC(){
+  const v = $("a-postcode").value.trim(), pc = parsePC(v), el = $("pcmsg"), m = menu();
+  if(!v){ el.textContent = ""; return; }
+  if(!pc){ el.textContent = ""; return; }
+  if(isLocal(pc)) el.textContent = m && m.id === "xgrazing" ? `${pc.area}${pc.district} is local. Chris confirms set up for the grazing table.` : (m && m.kind === "buffet" ? `${pc.area}${pc.district} is local, so set up's included. Example.` : `${pc.area}${pc.district} is local. Delivery's free from £150, otherwise £12. Example charge.`);
+  else el.textContent = `That's outside the usual area, so Chris confirms the delivery charge with you.`;
+}
+let lastLines = "";
+function ticketHTML(){
+  const m = menu(), t = totals();
+  const ref = S.ref ? S.ref : "Draft";
+  let L = [];
+  if(!m){
+    L.push(`<div class="tl empty"><span>Nothing on the ticket yet. Pick a menu to start.</span></div>`);
+  } else {
+    L.push(`<div class="tl"><span>${m.name}</span><span>x ${S.guests}</span></div>`);
+    L.push(`<div class="tl sub"><span>${m.from ? "from " : ""}${money(m.price)} a head</span><span>${money(t.food)}</span></div>`);
+    if(m.addon && S.dessert) L.push(`<div class="tl"><span>Desserts</span><span>${money(t.add)}</span></div>`);
+    DIET.forEach(([k,l]) => { if(S.diet[k]) L.push(`<div class="tl sub"><span>${l}</span><span>${S.diet[k]}</span></div>`); });
+    L.push(`<div class="tl sep"><span>Date</span><span>${S.date ? fmtLong(S.date) : "Not set"}</span></div>`);
+    L.push(`<div class="tl"><span>${m.kind === "buffet" ? "Set up by" : "Delivered by"}</span><span>${S.time ? fmtTime(S.time) : "Not set"}</span></div>`);
+    const pc = parsePC($("a-postcode").value);
+    if(pc) L.push(`<div class="tl"><span>To</span><span>${esc(pc.full)}</span></div>`);
+    L.push(`<div class="tl"><span>${t.d.label}</span><span>${t.d.txt}</span></div>`);
+    L.push(`<div class="tl tot sep"><span>${m.from ? "From" : "Total"}</span><span>${money(t.total)}${t.pending ? "*" : ""}</span></div>`);
+  }
+  const lines = L.join("");
+  const note = !m ? "" : (m.src === "his"
+    ? `From prices as printed in the 2026 Christmas brochure. Chris confirms the final price.${t && t.pending ? ` *Plus ${t.d.label.toLowerCase()}, to confirm.` : ""}`
+    : `Example prices for this concept. Chris sets the real ones.${t && t.pending ? ` *Plus ${t.d.label.toLowerCase()}, to confirm.` : ""}`);
+  return `<div class="h"><img src="img/emblem.png" alt="" width="240" height="238"><span class="t">Kitchen ticket</span><span class="ref">${esc(ref)}</span></div>
+    <div class="lines">${lines}</div>${note ? `<p class="tk-note">${note}</p>` : ""}
+    <button class="btn" type="button" data-act="checkout">${m ? "Go to checkout" : "See the menus"}</button>`;
+}
+function renderTicket(){
+  const html = ticketHTML();
+  [$("ticket"), $("ticket2")].forEach(el => { el.innerHTML = html; });
+  const m = menu(), t = totals();
+  $("hdrTotal").textContent = t ? money(t.total) : "£0.00";
+  $("hdrCount").textContent = m ? S.guests : 0;
+  $("mbarText").textContent = m ? `${m.name} x ${S.guests}, ${m.from ? "from " : ""}${money(t.total)}${t.pending ? ` plus ${t.d.label.toLowerCase()}` : ""}` : "Your ticket is empty";
+  const sig = m ? `${m.id}|${S.guests}|${S.date}|${S.time}|${S.dessert}` : "";
+  if(sig !== lastLines){ document.querySelectorAll(".ticket .lines").forEach(el => el.classList.remove("tline-new")); void document.body.offsetWidth; document.querySelectorAll(".ticket .lines").forEach(el => el.classList.add("tline-new")); lastLines = sig; }
+}
+function render(){ renderTabs(); renderGuests(); renderWhen(); renderPC(); renderTicket(); }
+
+/* ---------- usuals ---------- */
+function loadSaved(){ try { const v = JSON.parse(localStorage.getItem(STORE) || "[]"); return Array.isArray(v) ? v : []; } catch(e){ return []; } }
+function storeSaved(list){ try { localStorage.setItem(STORE, JSON.stringify(list.slice(0,6))); } catch(e){} }
+let SAVED = loadSaved();
+function allUsuals(){ return SAVED.concat(EXAMPLE_USUALS); }
+function reorderDate(u){
+  const m = MENUS.find(x => x.id === u.menu); const list = nextDates(m, 30);
+  const hit = list.find(k => dow(k) === u.weekday);
+  return hit || list[0];
+}
+function priceOf(u){
+  const m = MENUS.find(x => x.id === u.menu); const sub = m.price*u.guests + (u.dessert && m.addon ? m.addon.price*u.guests : 0);
+  let d = 0; if(m.kind !== "buffet"){ const pc = parsePC(u.addr.postcode); d = isLocal(pc) ? (sub >= 150 ? 0 : 12) : 0; }
+  return sub + d;
+}
+function renderUsuals(){
+  $("ucards").innerHTML = allUsuals().map(u => {
+    const m = MENUS.find(x => x.id === u.menu); const d = reorderDate(u);
+    const dl = []; DIET.forEach(([k,l]) => { if(u.diet[k]) dl.push(`${u.diet[k]} ${l.toLowerCase()}`); });
+    const mini = trayArt(m, Math.min(u.guests, 16), {veg:Math.min(u.diet.veg,16),vegan:u.diet.vegan,gf:u.diet.gf,df:u.diet.df});
+    return `<article class="ucard ${u.example ? "" : "new"}">
+      <div class="t"><h3>${esc(u.name)}</h3><span class="tag ${u.example ? "ex" : "his"}">${u.example ? "Example" : "Saved by you"}</span></div>
+      <div class="meta">${m.name} x ${u.guests}${dl.length ? `<br>${dl.join(", ")}` : ""}<br>${m.kind === "buffet" ? "Set up by" : "Delivered by"} ${fmtTime(u.time)}, ${DAYN[u.weekday]}s<br>${esc(u.addr.street)}, ${esc(u.addr.town)}${u.last ? `<br>Last ordered ${fmtLong(u.last)}` : ""}</div>
+      <div class="meta">${money(priceOf(u))}${u.example ? ", example price" : ""}</div>
+      <button class="btn" type="button" data-reorder="${u.id}">Reorder for ${fmtLong(d)}</button>
+      <button class="alt" type="button" data-edit="${u.id}">Change it first</button>
+    </article>`;
+  }).join("");
+  const u1 = EXAMPLE_USUALS[0]; $("miniDate").textContent = fmtLong(reorderDate(u1));
+}
+function loadUsual(u, withDate){
+  const m = MENUS.find(x => x.id === u.menu);
+  S.tab = m.tab; S.menu = m.id; S.guests = u.guests; S.diet = Object.assign({veg:0,vegan:0,gf:0,df:0}, u.diet); S.dessert = !!u.dessert; S.time = u.time; S.ref = null;
+  S.date = withDate ? reorderDate(u) : null;
+  $("a-company").value = u.addr.company || ""; $("a-street").value = u.addr.street || ""; $("a-town").value = u.addr.town || ""; $("a-postcode").value = u.addr.postcode || ""; $("a-notes").value = u.addr.notes || "";
+  $("allergy").value = u.allergy || "";
+  $("saveUsual").checked = false;
+  clearErrors(); render();
+}
+function reorder(id){
+  const u = allUsuals().find(x => x.id === id); if(!u) return;
+  loadUsual(u, true);
+  const target = window.matchMedia("(max-width:1080px)").matches ? $("s-pay") : $("s-pay");
+  target.scrollIntoView({block:"start"});
+  toast(`${u.name} is on the ticket for ${fmtLong(S.date)} at ${fmtTime(S.time)}. Change anything, or check out.`);
+}
+
+/* ---------- validation and checkout ---------- */
+function setBad(id, on, msg){ const el = $(id); if(!el) return; el.classList.toggle("bad", on); if(msg !== undefined){ const e = el.querySelector(".err"); if(e) e.textContent = msg; } }
+function clearErrors(){ document.querySelectorAll(".bad").forEach(el => el.classList.remove("bad")); ["e-guests","e-diet","e-date","e-time"].forEach(i => { $(i).textContent = ""; $(i).style.display = ""; }); $("formerr").classList.remove("on"); }
+function showErr(id, msg){ const e = $(id); e.textContent = msg; e.style.display = msg ? "block" : ""; }
+function validate(){
+  clearErrors();
+  const m = menu(), probs = [];
+  if(!m){ probs.push(["panel","Pick a menu first."]); }
+  if(m && S.guests < m.min){ showErr("e-guests", `This menu starts at ${m.min} guests.`); probs.push(["s-guests"]); }
+  const over = DIET.find(([k]) => S.diet[k] > S.guests);
+  if(over){ showErr("e-diet", `${over[1]} can't be more than the number of guests.`); probs.push(["s-guests"]); }
+  if(m && !available(m, S.date)){ showErr("e-date", S.date ? "That date isn't available for this menu. Pick one of the dates above." : "Pick a date."); setBad("f-date", true); probs.push(["s-when"]); }
+  if(!S.time){ showErr("e-time", "Pick a time."); setBad("f-time", true); probs.push(["s-when"]); }
+  [["f-company","a-company"],["f-street","a-street"],["f-town","a-town"]].forEach(([f,i]) => { if(!$(i).value.trim()){ setBad(f, true); probs.push(["s-where"]); } });
+  if(!parsePC($("a-postcode").value)){ setBad("f-postcode", true); probs.push(["s-where"]); }
+  if(!$("c-name").value.trim()){ setBad("f-name", true); probs.push(["s-pay"]); }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($("c-email").value.trim())){ setBad("f-email", true); probs.push(["s-pay"]); }
+  return probs;
+}
+function place(){
+  const probs = validate();
+  if(probs.length){
+    const fe = $("formerr"); fe.textContent = `${probs.length === 1 ? "One thing needs" : "A few things need"} sorting before the order can go in.`; fe.classList.add("on");
+    const first = $(probs[0][0]); if(first) first.scrollIntoView({block:"start"});
+    return;
+  }
+  const m = menu(), t = totals();
+  S.ref = "TGC " + String(1000 + Math.floor(Math.random()*9000));
+  let saved = "";
+  if($("saveUsual").checked){
+    const name = ($("saveName").value.trim() || `${DAYN[dow(S.date)]} ${/^Christmas/.test(m.name) ? m.name : m.name.charAt(0).toLowerCase() + m.name.slice(1)}`).slice(0,60);
+    const u = {id:"s"+Date.now(), name, menu:m.id, guests:S.guests, diet:Object.assign({},S.diet), dessert:S.dessert, time:S.time, weekday:dow(S.date), last:S.date,
+      addr:{company:$("a-company").value.trim(), street:$("a-street").value.trim(), town:$("a-town").value.trim(), postcode:parsePC($("a-postcode").value).full, notes:$("a-notes").value.trim()}, allergy:$("allergy").value.trim()};
+    SAVED = [u].concat(SAVED.filter(x => x.name !== u.name)); storeSaved(SAVED); renderUsuals();
+    saved = `<p>Saved to your usual as <b>${esc(name)}</b>. Next time it's one tap.</p>`;
+  }
+  renderTicket();
+  const pay = S.pay === "card" ? `Paid by card, demo` : `Invoice to your account, demo${$("c-po").value.trim() ? `, purchase order ${esc($("c-po").value.trim())}` : ""}`;
+  $("dlgTitle").textContent = `Order ${S.ref} is in`;
+  $("dlgBody").innerHTML = `<div class="lines">
+      <div class="tl"><span>${m.name}</span><span>x ${S.guests}</span></div>
+      ${m.addon && S.dessert ? `<div class="tl"><span>Desserts</span><span>x ${S.guests}</span></div>` : ""}
+      <div class="tl"><span>${fmtLong(S.date)}</span><span>${fmtTime(S.time)}</span></div>
+      <div class="tl"><span>${esc($("a-company").value.trim())}</span><span>${esc(parsePC($("a-postcode").value).full)}</span></div>
+      <div class="tl"><span>${pay}</span><span></span></div>
+      <div class="tl tot sep"><span>${m.from ? "From" : "Total"}</span><span>${money(t.total)}${t.pending ? "*" : ""}</span></div>
+    </div>
+    <p>A confirmation would go to ${esc($("c-email").value.trim())} and the order would land on the kitchen's list for ${fmtLong(S.date)}.</p>${saved}
+    <p style="color:var(--slate);font-size:12.5px">This is a demo, so nothing was sent to the kitchen and nothing was charged.${t.pending ? ` *Plus ${t.d.label.toLowerCase()}, to confirm.` : ""}</p>`;
+  openDlg();
+}
+
+/* ---------- small UI ---------- */
+let toastT = 0;
+function toast(msg){ const t = $("toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("on"), 5200); }
+let lastFocus = null;
+function openDlg(){ lastFocus = document.activeElement; $("ov").classList.add("on"); $("dlgUsual").focus(); }
+function closeDlg(){ $("ov").classList.remove("on"); if(lastFocus && lastFocus.focus) lastFocus.focus(); }
+function openSheet(){ $("sheet").classList.add("on"); }
+function closeSheet(){ $("sheet").classList.remove("on"); }
+function setGuests(v){ S.guests = Math.max(0, Math.min(400, Math.round(+v || 0))); }
+function setDiet(k,v){ S.diet[k] = Math.max(0, Math.min(400, Math.round(+v || 0))); }
+function goTab(tab){ S.tab = tab; renderTabs(); }
+
+/* ---------- events ---------- */
+document.addEventListener("click", e => {
+  const tab = e.target.closest("[data-tab]");
+  if(tab){ goTab(tab.dataset.tab); return; }
+  const go = e.target.closest("[data-goto]");
+  if(go){ goTab(go.dataset.goto); }
+  const card = e.target.closest("[data-menu]");
+  if(card){
+    const m = MENUS.find(x => x.id === card.dataset.menu);
+    if(S.menu !== m.id){ S.menu = m.id; S.ref = null; if(S.guests < m.min) setGuests(m.min); if(!available(m, S.date)) S.date = null; if(!m.addon) S.dessert = false; }
+    render();
+    $("detail").scrollIntoView({block:"nearest"});
+    return;
+  }
+  const st = e.target.closest("[data-step]");
+  if(st){ const k = st.dataset.step, d = +st.dataset.d; if(k === "guests") setGuests(S.guests + d); else setDiet(k, S.diet[k] + d); S.ref = null; renderGuests(); renderTicket(); return; }
+  const day = e.target.closest("[data-date]");
+  if(day){ S.date = day.dataset.date; S.ref = null; setBad("f-date", false); showErr("e-date",""); renderWhen(); renderTicket(); return; }
+  const act = e.target.closest("[data-act]");
+  if(act){ closeSheet(); if(menu()) $("s-pay").scrollIntoView({block:"start"}); else $("order").scrollIntoView({block:"start"}); return; }
+  const ro = e.target.closest("[data-reorder]");
+  if(ro){ reorder(ro.dataset.reorder); return; }
+  const ed = e.target.closest("[data-edit]");
+  if(ed){ const u = allUsuals().find(x => x.id === ed.dataset.edit); loadUsual(u, false); $("order").scrollIntoView({block:"start"}); toast(`${u.name} is loaded. Pick a date and change whatever you need.`); return; }
+});
+$("guests").addEventListener("input", e => { setGuests(e.target.value); S.ref = null; renderGuests(); renderTicket(); e.target.focus(); });
+DIET.forEach(([k]) => $("d-"+k).addEventListener("input", e => { setDiet(k, e.target.value); S.ref = null; renderGuests(); renderTicket(); }));
+document.addEventListener("change", e => { if(e.target.id === "dessert"){ S.dessert = e.target.checked; S.ref = null; renderTicket(); } });
+$("otherDate").addEventListener("change", e => {
+  const m = menu(), v = e.target.value;
+  if(!m || !v) return;
+  if(available(m, v)){ S.date = v; showErr("e-date",""); setBad("f-date", false); }
+  else { S.date = null; setBad("f-date", true); showErr("e-date", isWorking(v) ? "That's too soon, or outside the dates for this menu." : "Deliveries run Monday to Friday, not on bank holidays."); }
+  S.ref = null; renderWhen(); renderTicket();
+});
+$("time").addEventListener("change", e => { S.time = e.target.value; S.ref = null; setBad("f-time", false); showErr("e-time",""); renderTicket(); });
+$("a-postcode").addEventListener("input", () => { renderPC(); renderTicket(); });
+document.querySelectorAll("input[name=pay]").forEach(r => r.addEventListener("change", e => {
+  S.pay = e.target.value; $("po-card").classList.toggle("on", S.pay === "card"); $("po-inv").classList.toggle("on", S.pay === "invoice");
+  $("payCard").hidden = S.pay !== "card"; $("payInv").hidden = S.pay !== "invoice";
+}));
+$("saveUsual").addEventListener("change", e => { $("f-saveName").hidden = !e.target.checked; });
+$("placeBtn").addEventListener("click", place);
+$("miniReorder").addEventListener("click", () => reorder("u1"));
+$("hdrTicket").addEventListener("click", () => { if(window.matchMedia("(max-width:1080px)").matches) openSheet(); else $("order").scrollIntoView({block:"start"}); });
+$("mbarBtn").addEventListener("click", openSheet);
+$("sheetClose").addEventListener("click", closeSheet);
+$("dlgClose").addEventListener("click", closeDlg);
+$("dlgUsual").addEventListener("click", () => { closeDlg(); $("usual").scrollIntoView({block:"start"}); });
+$("ov").addEventListener("click", e => { if(e.target.id === "ov") closeDlg(); });
+document.addEventListener("keydown", e => { if(e.key === "Escape"){ closeDlg(); closeSheet(); } });
+
+/* ---------- hero cut off, live ---------- */
+function renderCutoff(){
+  const lunch = MENUS.find(x => x.id === "lunch"), now = londonNow(), e = earliestFor(lunch);
+  const before = isWorking(now.key) && now.mins < CUTOFF_MIN;
+  $("cutoffText").textContent = before
+    ? `Order a lunch box by 2pm today and it's with you ${fmtLong(e)}.`
+    : `Order a lunch box now and it's with you ${fmtLong(e)}.`;
+}
+
+/* ---------- reveal and chart ---------- */
+let pending = false;
+function reveal(){
+  pending = false;
+  const vh = window.innerHeight;
+  document.querySelectorAll(".rv:not(.in)").forEach(el => { const r = el.getBoundingClientRect(); if(r.top < vh*0.92 && r.bottom > 0) el.classList.add("in"); });
+  const ch = document.querySelector(".chart");
+  if(ch && !ch.dataset.done){ const r = ch.getBoundingClientRect(); if(r.top < vh*0.9){ ch.dataset.done = "1"; ch.querySelectorAll(".fill").forEach(f => { f.style.width = f.dataset.w + "%"; }); } }
+}
+window.addEventListener("scroll", () => { if(!pending){ pending = true; requestAnimationFrame(reveal); } }, {passive:true});
+window.addEventListener("resize", reveal);
+
+document.body.classList.add("has-mbar");
+renderCutoff(); render(); renderUsuals(); reveal();
+setInterval(renderCutoff, 60000);
+})();
+</script>
+</body>
+</html>
