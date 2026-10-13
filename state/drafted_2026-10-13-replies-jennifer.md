@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-10-13 17:53:11 UTC on Raka's 'send all three', Jennifer Michel act_qHEjKJfWLRmgeLAJ4, one copy, text byte for byte from this file (182 characters). Before the send, 17:51 to 17:53 UTC, the thread pulled unchanged (Jennifer 1 item, Adrien 2, Angelo 2) with control ctc_ch3vFcKAkjQdMKDCg 3 items, team search one contact each, lead record one campaign each (W1b), state files no SENT row, and every fact reopened live (her lemlist tagline still leads with 'événements d'entreprise'). Thread re pulled after, one copy. Do not send again.
+
 # Draft, 2026-10-13. Jennifer Michel, Dans ton cube. NOT SENT, waiting on Raka's word.
 
 Routine inbox check 13:56 UTC. Thread pulled 13:57 UTC, 1 item, nextPage null. Only her reply is stored,
