@@ -839,6 +839,18 @@ right now, and we lead with it.**
   isn't old. Check the date before using the word.
 - **What he calls a dated site.** "Squary, things in islands, it doesn't flow, a lot of gaps." Judge
   it from screenshots of every page, desktop and a real phone.
+- **Judge the look against the best, never against "it works" (Raka, 2026-10-13, on Wulf & Collegen).**
+  His words, "this is a pure example of a website that's made in 2010 ... you always need a compare
+  with the stuff that we make, or compare to Apple, or compare to Nike, or ... any other SaaS platforms
+  ... look how blocky everything is, the colors, they look like from SAP". I'd written the firm's site
+  off as "a current site" because it had an AI chatbot, a client portal, 1,234 reviews and fresh copy.
+  Working, busy and recently edited is not modern. So every NO_STRONG_ANGLE verdict carries a visual
+  line written after looking at the desktop and phone screenshots next to a best in class site, and
+  "the site works" never closes the website family on its own. A dated look on a firm whose substance
+  is strong (reviews, team, volume) is the angle, framed as the look not matching the firm, and still
+  checked against RULES 0D point 1 (Wulf's homepage went live 5 Nov 2025 on the Divi theme they've
+  run since 2022 and they edit it weekly, so "your site is old" is false and "it doesn't look like a
+  firm with 1,234 reviews" is the honest version).
 - **Odd findings aren't automatically the angle.** 130 casino spam posts on Ferry's own site were
   true and bizarre. Raka's call was to leave them out and roast the business. Record them, flag
   them, don't lead with them.
