@@ -908,6 +908,16 @@ right now, and we lead with it.**
   checked against RULES 0D point 1 (Wulf's homepage went live 5 Nov 2025 on the Divi theme they've
   run since 2022 and they edit it weekly, so "your site is old" is false and "it doesn't look like a
   firm with 1,234 reviews" is the honest version).
+- **Two things wrong with the site make one modernised angle (Raka, 2026-10-13, on Octelle).** His
+  words, "the website doesnt tell the full story of the b&b and the booking is bad. So again, i
+  combined 2 things wrong with the website to make it stronger. This combined can be angled as
+  modernising." I'd pitched the broken booking alone and folded the look in as a footnote. When the
+  site both undersells the business (what a buyer would pay for missing from the homepage) and fails
+  at the job it's there for (booking, quoting, ordering), block two names both in two short
+  sentences and block three offers ONE modernised site that fixes both. Each half still needs its own
+  live fact (Octelle, 0 homepage hits for rooms, pool, sauna or price and five 170 by 127 photos, and
+  a Boeken page with nothing available on five date ranges). It's still one thread, the website.
+  The rule that a new site is never called old still holds, so say what's missing, not its age.
 - **Odd findings aren't automatically the angle.** 130 casino spam posts on Ferry's own site were
   true and bizarre. Raka's call was to leave them out and roast the business. Record them, flag
   them, don't lead with them.
