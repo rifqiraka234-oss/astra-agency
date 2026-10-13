@@ -329,6 +329,14 @@ wrong or already fixed (the problem we named was solved, the company was sold or
 the bump points them straight back at it. Those close silently. A researched nudge is only for when
 Raka asks for one.
 
+**A warm chat's first offer is an opener, not a nudge (Raka, 2026-10-13).** When someone answered our
+connect note, we answered with a question and they went quiet, nothing was ever pitched, so there's
+nothing to nudge and no 👀. Their first offer is the SKETCH opener with its full research gate and the
+2,500 euro worth line, with Raka's warm opening. His words, "redo them in the opener format, like
+'something i've been thinking [name]'". Block one is `Something I've been thinking about, [name]!`,
+block two opens `Your ...` (no "However", there's no praise to turn from), then I'd suggest, the
+Unilever, AXA, Pertamina line, and `Shall I send you a sketch of [thing]?`. check-drafts.py accepts it.
+
 **"Close" means NEVER SEND ANYTHING ANYMORE (Raka, 2026-10-03, his capitals).** Not a goodbye
 message, not a graceful sign off, nothing. A close is a DO_NOT_CONTACT row in the queue and no
 message at all, which `tools/check-drafts.py` enforces on every draft. Twenty six drafted closing

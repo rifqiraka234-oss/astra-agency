@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SUPERSEDED, NEVER SENT. Raka 2026-10-13 ~12:05 UTC, these aren't nudges, "yes redo them in the opener format, like 'something i've been htinking [name]'". Rebuilt as warm SKETCH openers with full gates, see state/drafted_2026-10-13-warm-openers.md once checked. Do not send this text.
+
 # Warm chats, first offer, 2026-10-12. NOT SENT.
 
 > RECHECKED 2026-10-13 ~10:10 UTC, control example.com 200 in the same minute.

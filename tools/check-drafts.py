@@ -456,9 +456,17 @@ def check(path, replies=False):
             if len(S) != 5:
                 bad(i, f"{len(S)} blocks, SKETCH is 5, hi, however, suggest, we make, sketch")
             else:
-                if not re.fullmatch(r"Hi [^,]+, .+ looks cool!", S[0]):
-                    bad(i, "SKETCH block one must be 'Hi [name], [company] looks cool!'")
-                if not S[1].startswith("However, your "):
+                # The warm variant, Raka 2026-10-13, "redo them in the opener format, like
+                # 'something i've been thinking [name]'". For a chat where they answered our
+                # connect note and went quiet, block one is "Something I've been thinking about,
+                # [name]!" and block two opens "Your ..." because there's no praise to turn from.
+                warm = bool(re.fullmatch(r"Something I've been thinking about, [^,!]+!", S[0]))
+                if not warm and not re.fullmatch(r"Hi [^,]+, .+ looks cool!", S[0]):
+                    bad(i, "SKETCH block one must be 'Hi [name], [company] looks cool!' "
+                           "or, in a warm chat, 'Something I've been thinking about, [name]!'")
+                if warm and not S[1].startswith("Your "):
+                    bad(i, "warm SKETCH block two must open 'Your [website or social media] ...'")
+                elif not warm and not S[1].startswith("However, your "):
                     bad(i, "SKETCH block two must open 'However, your [website or social media] ...'")
                 for k, sent in enumerate(re.split(r"(?<=[.!?]) (?=[A-Z])", S[1])):
                     if len(sent.split()) > 30:
