@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SUPERSEDED, NEVER SENT. Raka 2026-10-13 ~07:15 UTC asked for the site 10x better (artsy, Gatsby and Bridgerton, his story, a simple flow). v2 is being built to the same URL, and the delivery message gets redrafted from v2. Do not send this text.
+
 # Draft, 2026-10-13. Chris Hale, The Garnish Collective, the sketch delivery. NOT SENT, waiting on Raka's word.
 
 Thread pulled 2026-10-13 ~06:35 UTC, 3 items, nextPage null. Newest is ours, 05:46 UTC, "I'm putting the sketch together
