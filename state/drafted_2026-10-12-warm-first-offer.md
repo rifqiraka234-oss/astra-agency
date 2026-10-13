@@ -1,5 +1,18 @@
 # Warm chats, first offer, 2026-10-12. NOT SENT.
 
+> RECHECKED 2026-10-13 ~10:10 UTC, control example.com 200 in the same minute.
+> - Bert. https://viewsvideomarketing.be/fr 200, "Vidéo en néerlandais" on the homepage. /fr/resultats 200, 12 case links to
+>   /cases/... pages, one opened (/cases/voltmasters) is lang nl-BE in Dutch. Holds.
+> - Adrien. https://ava-drinks.com/pages/espace-pro walls curl (403), read via tools/fetch-walled.py, "Nous structurons
+>   actuellement notre réseau national", Ankorstore "hors zone 40/64", "LANDES / PAYS BASQUE". Holds.
+> - Angelo. https://www.barmartinelli.com/reservation/ walls curl and Chromium (Cloudflare on Jimdo), read via
+>   fetch-walled.py. "weekend reservation highly recommended", email and "Reach us on WhatsApp" visible, home "starting at
+>   6 pm". The page's own JSON has its contact form module set "visible":false, so "by form" no longer holds. Line
+>   reworded to "Your reservation page takes table requests, and it recommends booking ahead for weekends." No channel
+>   list, so nothing in it can be wrong.
+> - Threads pulled 2026-10-13 ~06:57 UTC, newest message ours in all three (Bert 5 Oct, Adrien and Angelo 7 Oct). Pull
+>   again immediately before any send.
+
 Researched and independently checked on 11 Oct (scratchpad nudge11 W1.md and W1_check.md). Each of them replied to our
 connect note, we answered with a question, and they went quiet, so a plain bump doesn't fit and this carries the first offer.
 Every fact gets reopened and every thread pulled again right before any send. Julien Facchini and Pierre-Lou Pichon stay on
@@ -36,7 +49,7 @@ NUDGE
 ```
 👀 Angelo, a thought on the weekend table requests at Bar Martinelli
 
-Your reservation page takes table requests by form, email or WhatsApp, and there's a line recommending a booking for weekends. Once you open at 6 pm, a Friday request probably waits until someone behind the bar has a free minute, and a couple picking a bar for that night usually books whichever one confirms first.
+Your reservation page takes table requests, and it recommends booking ahead for weekends. Once you open at 6 pm, a Friday request probably waits until someone behind the bar has a free minute, and a couple picking a bar for that night usually books whichever one confirms first.
 
 Want to see an AI booking workflow that confirms those tables while you're mixing?
 ```
