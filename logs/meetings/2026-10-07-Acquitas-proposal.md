@@ -66,3 +66,9 @@ long stop date. Qualigraf (Steven Garratt, call 4 Nov) has not approved that con
 "Hi Raka, Thanks for the email. At present your cost is too high. If the cost comes down I will reconsider. I appreciate
 your time." A polite no at this price, door open. Our 13.56 email bounced as spam at mail.astraagency.nl for
 raka@astraagency.nl and josh@astraagency.nl, so they haven't seen it. Luna and Joshuavanzeelt@gmail.com had no bounce.
+
+## Final offer, sent 13 Oct 19.23 UTC
+
+Gmail 1a136b8c1d69ea17, reply all. £1,500 for the full website from the proposal (all nine pages, Luna's branding
+session, the calculator, SEO, the content editor), half to start and half at launch. Down from £2,500. If he accepts,
+the scope is the proposal's website list as written.

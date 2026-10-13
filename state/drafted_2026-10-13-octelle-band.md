@@ -1,0 +1,130 @@
+<!-- SKETCH drafts, 2026-10-13 ~19:25 UTC, the two remaining new accepts from Raka's "anyone else replied? or anone else accepted connection request?". Kristof Spitael (Octelle) and Rob Quinn (BAND). Both threads pulled 18:59 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute. NOT SENT, waiting on Raka. Re pull each thread with the control and reopen every claim in the minute before any send. Evidence in /tmp/claude-0/agents/b21/. -->
+# SKETCH drafts, 2026-10-13. Kristof Spitael, Octelle, and Rob Quinn, BAND
+
+### Kristof Spitael, Octelle, ctc_txXG7tvvtcPsGRyJC
+
+> NOT SENT. Flag for Raka on who, the site says "Thijs & Kristof" bought the property in February 2026, but the KBO registers Octelle as the sole trader business of "van Bavel, Hendrikus" since 4 February 2026, so Kristof is a co-owner by the site's own words, not the registered owner.
+
+```gate
+lead: Kristof Spitael, lemlist jobTitle "Company Owner", tagline "Head of Key Accounts" (a day job elsewhere, employer not named), location Ronse. The site signs the welcome "Thijs & Kristof." under "Sinds februari 2026 kochten we het pand over van de vorige eigenaren" on https://www.octelle.be/ . The KBO lists the establishment "Octelle", Miclette 12B 7890 Ellezelles, started 4 February 2026, under enterprise 1033.473.731, a natural person "van Bavel, Hendrikus", NACE 55.209 holiday accommodation and 55.204 guest rooms, per https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1033473731 . So Kristof co-owns by the site's words and the business is registered to his partner. Ronse is "10 minuten" from the property per the homepage. ctc_txXG7tvvtcPsGRyJC, leadId lea_zyCyPKtRtLMvp8X9J, campaign W1b cam_7gnHSf6GvvGy8gH3n, one campaign. Thread pulled 18:59 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute
+site pass 1: 40 pages, tools/crawl.py on https://www.octelle.be , 13 from the sitemap plus linked pages, all 40 at 200, NL 14, EN 13, FR 13, every page read
+site pass 2: 40 pages, second full crawl equal to pass 1, site-audit.js render trusted (0 page errors), then full page desktop and phone screenshots (look_oct-desktop.png, look_oct-phone.png) opened and compared with best in class boutique stays, and the booking page rendered and searched on five date ranges
+deep analysis: A newly built square farm in Ellezelles on the edge of the Flemish Ardennes, taken over in February 2026 from the owners of La Douceur de la Miclette. Four B&B rooms at €170 with breakfast, the whole house with 10 bedrooms from €1,800 for two nights, a wellness with pool, hammam, jacuzzi, sauna and infrared from €140, a boardroom for company days, a heated outdoor pool. Every "Boeken" button on the site (two on /bed-breakfast, one on /contact-3) opens /booking-engine, a HotelRunner engine inside Wix that lists one room type, "Room Only, Deluxe Room", and shows "Kamer niet beschikbaar" with a total of 0.00 € on all five ranges tried (13 to 14 Oct, 4 to 5 Nov, 13 to 15 Nov, 20 to 21 Nov, 24 to 25 Nov 2026). Its own availability JSON returns availability 0 and stop_sell false for every day, and HotelRunner's hosted engine https://octelle.hotelrunner.com/bv3/search says "Property unavailable. This property is not available at the moment. It may be under review or unpublished." The whole house goes through a quote, "Vraag dan een offerte op maat via het contactformulier", the wellness through a form, company days through a form and a quote, and free weekends are typed out by hand on /kalender ("Vrije weekends in 2026, 13/11 - 15/11, 4 tot 6 december, 11 tot 13 decmeber"), which 13 to 15 Nov shows free while the engine shows the room unavailable. The old domain ladouceurdelamiclette.be now redirects to the previous owners' Spanish villa at laplumadorada.be, which links back only to their own old pages. The look, a Wix template with small body text, a narrow capitals display font, a hazy drone photo under a blue band, five small thumbnails and a long form, undersells a 10 bedroom farm with a pool and a wellness next to best in class boutique stays, but the site is new with the business, so the look folds into the booking site and is never called old
+owner linkedin: Route 1 curl https://www.linkedin.com/in/kristof-spitael-a13ab620 999 at 19:17 UTC. Route 2 tools/fetch-walled.py same URL 999. Route 3 headless Chromium, LinkedIn authwall. Route 4 the company page https://www.linkedin.com/company/octelle through tools/social-audit.js, 16 followers, the same description as the site. Route 5 web search "Kristof Spitael", no match for him. Route 6 tools/news.py person "Kristof Spitael" 0. Route 7 the KBO record above. His profile stays UNKNOWN
+contact linkedin: same person as the owner. The site's "Kristof", the lemlist record (Company Owner, Octelle, Ronse) and the company LinkedIn agree, the registered owner is his partner
+google news: tools/news.py 2026-10-13 fr, company "Octelle" 0, person "Kristof Spitael" 0, nl, "Octelle Ellezelles" 0, "Spitael Octelle" 0
+regional news: tools/news.py fr (Ellezelles) with chambres d'hôtes, 11 results, Sudinfo 2023-05-30 "L'immobilier du Pays des Collines en plein boom", L'Avenir 2025-06-28 on a Wodecq farm, nl (Vlaamse Ardennen toerisme) with B&B vakantiewoning, 10 results, Nieuwsblad 2023-03-27 "Met de Ronde kunnen we onze kamers wel 200 keer verhuren"
+industry news: tools/news.py fr chambres d'hôtes Wallonie 71 results, Info-lux 2026-09-28 "Où dormir à Ath ? 19 gîtes, chambres d'hôtes et hébergements", nl B&B vakantiewoning 55 results, HLN 2025-06-17 on stricter rules for holiday lets, a crowded market where guests book what they can confirm
+sources:
+1. https://www.octelle.be/
+2. https://www.octelle.be/bed-breakfast
+3. https://www.octelle.be/booking-engine
+4. https://www.octelle.be/contact-3
+5. https://www.octelle.be/kalender
+6. https://www.octelle.be/vakantiewoning
+7. https://www.octelle.be/voor-bedrijven
+8. https://octelle.hotelrunner.com/bv3/search
+9. https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1033473731
+10. https://www.ladouceurdelamiclette.be/ (redirects to https://www.laplumadorada.be/)
+11. https://www.instagram.com/_octelle (tools/social-audit.js)
+12. https://www.facebook.com/octelle.be (tools/social-audit.js)
+13. https://www.linkedin.com/company/octelle (tools/social-audit.js)
+14. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwww.octelle.be%2F (tools/eu-view.py)
+15. https://news.google.com/rss (tools/news.py, company, person, region, industry)
+pains: 6 judged. (1) the site can't take a booking, every Boeken button opens an engine with nothing available and the house, the wellness and company days go through forms, CHOSEN. (2) the look undersells the farm next to best in class stays, folded into (1) because the site is new. (3) the old La Douceur de la Miclette domain sends 11 years of guests to the previous owners' Spanish villa, a redirect the old owners control, a small fix, folded in as a note. (4) Instagram 102 followers and 20 posts, Facebook 77, a new business, not proven to cost anything. (5) whether the rooms sell on Airbnb or Booking.com, UNKNOWN, Airbnb answers 410 for a control listing too and the directory pages are behind Cloudflare, kept out. (6) GDPR, no banner and no privacy link, never the angle
+chosen: (1), biggest, it's where the money comes in, a whole house weekend is €1,800 or more and today nobody can book one or a room on the site
+worth: €4,000+, a booking website for Octelle, live availability and online booking with payment for the four rooms, the whole house and the wellness, a company day enquiry with packages, the farm, the pool and the wellness up front, in Dutch, French and English
+sweep website: tools/crawl.py twice, 40 pages, full page screenshots desktop and phone opened against best in class stays, the booking page rendered and searched, CHOSEN as the booking site
+sweep gdpr: tools/eu-view.py from Stockholm on https://www.octelle.be/ , 7 first party cookies, 0 third party, site-audit.js found no banner and no privacy link (confirmed against its control), a small fix, never the angle (RULES 0E)
+sweep apps: the booking flow itself, HotelRunner engine unpublished on https://octelle.hotelrunner.com/bv3/search , forms and quotes for the house, wellness and company days on https://www.octelle.be/contact-3 , folded into the chosen booking site
+sweep social: tools/social-audit.js, https://www.instagram.com/_octelle 102 followers, 20 posts, latest 2026-09-13, https://www.facebook.com/octelle.be 77 followers, post dates UNKNOWN, LinkedIn 16, small for a new business, not chosen
+sweep squad: a B&B and holiday home per https://www.octelle.be/ and the KBO record, it builds no software, so Build Squad is not applicable
+thread: problem your website can't take a booking yet, the Boeken button shows the room not available on every date and the whole house goes through a form | cost a group planning a weekend in the Flemish Ardennes likely books somewhere they can confirm tonight | offer a booking site where guests see live dates and book a room, the whole house or the wellness themselves | link booking, book
+lead read: Kristof reads that his website can't take a booking yet because the Boeken button shows the room as not available and the whole house goes through a form, so groups likely book somewhere they can confirm, and gets offered a booking site where guests book a room, the house or the wellness themselves, one thread
+claims:
+your website can't take a booking yet, https://www.octelle.be/booking-engine rendered 2026-10-13 19:08 to 19:12 UTC, "Kamer niet beschikbaar" and "Totaal 0.00 €" on five ranges, and https://octelle.hotelrunner.com/bv3/search "Property unavailable ... It may be under review or unpublished"
+the Boeken button opens a page, https://www.octelle.be/bed-breakfast and https://www.octelle.be/contact-3 , every "Boeken" link href https://www.octelle.be/booking-engine in the live HTML at 19:05 UTC
+that shows the room as not available on every date I tried, https://www.octelle.be/booking-engine , 13 to 14 Oct, 4 to 5 Nov, 13 to 15 Nov, 20 to 21 Nov and 24 to 25 Nov 2026, each "Kamer niet beschikbaar", the engine's JSON from octelle.hotelrunner.com availability 0 every day
+and the whole house goes through a form, https://www.octelle.be/contact-3 "Wil je graag het volledige pand huren? Vraag dan een offerte op maat via het contactformulier of via info@octelle.be"
+in the Flemish Ardennes, https://www.octelle.be/ "Ruimte en rust in de Vlaamse Ardennen"
+a weekend, https://www.octelle.be/kalender "Er is een minimum van 2 dagen voor een boeking van het vakantiehuis" and "Vrije weekends in 2026"
+INFERENCE, a group likely books somewhere they can confirm tonight, rests on the booking page and the quote form at https://www.octelle.be/contact-3 , worded likely
+a room, the whole house or the wellness, https://www.octelle.be/bed-breakfast (4 rooms, €170), https://www.octelle.be/vakantiewoning (10 bedrooms), https://www.octelle.be/kopie-van-vakantiewoning (wellness arrangements)
+the farm and the pool, https://www.octelle.be/vakantiewoning "verwarmd buitenzwembad", lemlist companyDescription "our newly built square farm", https://www.linkedin.com/company/octelle
+websites credential, docs/astra-company-profile.md, Raka's fixed brand line, https://www.linkedin.com/in/raka-mulya-b92885196
+recheck: 2026-10-13 19:05 to 19:20 UTC, thread pulled (0 items, control 3), every Boeken href read in the live HTML, the booking page searched on five ranges by clicking real dates, its availability JSON read, HotelRunner's hosted engine opened. Disproof tried, looked for a second booking path (none, /book-online is unlinked and says "Er kan nog niets worden gereserveerd", the whole house and wellness are forms), checked the engine wasn't our render failing (it rendered their room card, photo and price box, the JSON came back 200 with the room type, and HotelRunner's own page names their phone and email), tried to show the rooms sell elsewhere (Airbnb UNKNOWN, control blocked too, so it stays out). No live HotelRunner store was found to compare against, so the positive control is the vendor's own explicit message rather than a second property. Flags for Raka, (a) the who flag above, (b) "under review" means they may be about to publish the engine, which would shrink the problem to the house, wellness and company forms. Facts hold, confidence MEDIUM
+```
+
+SKETCH
+```
+Hi Kristof, Octelle looks cool!
+
+However, your website can't take a booking yet. The Boeken button opens a page that shows the room as not available on every date I tried, and the whole house goes through a form. So a group planning a weekend in the Flemish Ardennes likely books somewhere they can confirm tonight.
+
+I'd suggest a booking site where guests see live dates and book a room, the whole house or the wellness themselves, with the farm and the pool up front.
+
+At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the Octelle booking site?
+```
+
+### Rob Quinn, BAND, ctc_k6YrDTTW2zZ3MhxB3
+
+> NOT SENT. Build Squad, the fifth family. "Half the time at half the price" is Raka's offer from RULES 4A, flagged, a lead can hold us to it. The website, brand and social families are TAKEN, BAND sells them through its own studio and Rob runs brand and creative for the group.
+
+```gate
+lead: Robert John Quinn, director of BAND ADVISORY GROUP LIMITED 12039502 since 26 March 2020 and a PSC with 25 to 50% of the shares since 31 March 2020, alongside Stelaris Group Limited with 50 to 75% of the votes, per https://find-and-update.company-information.service.gov.uk/company/12039502/persons-with-significant-control and https://find-and-update.company-information.service.gov.uk/company/12039502/officers . The company was FORTUS LONDON LIMITED until 3 May 2023. lemlist jobTitle "Co-Founder I Head of Creative Industries". https://weareband.co.uk/introducing/meet-the-band/ "Former marketing agency owner, now leading the Creative Industries team at BAND with responsibility across our agency, music, TV & Film client portfolio, whilst also overseeing brand, marketing and creative strategy for the group". https://weareband.co.uk/legal/statutory-directors/ lists him under BAND Advisory Group Limited. ctc_k6YrDTTW2zZ3MhxB3, leadId lea_T6atJwsay5twpL7Ru, campaign W5 cam_BRBXAzzDKMfC4fSCS, one campaign. Thread pulled 18:59 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute
+site pass 1: 209 pages, tools/crawl.py on https://weareband.co.uk , 150 from the sitemaps plus linked pages, 205 at 200, 2 at 403 (xmlrpc), 2 at 404 (two malformed links on the studio page), every page read, 115 of them BANDwidth articles
+site pass 2: 209 pages, second full crawl equal to pass 1, site-audit.js render (0 page errors), then full page desktop and phone screenshots (look_band-desktop.png, look_band-phone.png) opened, the team page and the studio page refetched live at 19:24 UTC
+deep analysis: Advisors, business managers and accountants to architecture, construction, creative agencies, music, sport and TV and film, London, 58 employees on LinkedIn, the site live since March 2023 (wp-json, home 2023-03-20) on a custom theme (/app/themes/band). On 26 June 2026 (wp-json, band-creative-studio) they launched BAND Creative Studio, "Strategic brand, creative and content services for BAND and beyond", selling brand strategy, design, social, pitch decks and "Web & UX, From landing pages to full websites, we design digital experiences", in embedded, project, fractional and package models, with a "Request Deck" for its work. The team page (modified 2026-09-10) lists Fiora Banousi "Head of Brand & Creative" and Marie Sadler "Junior Graphic Designer", and no developer anywhere, the only "develop" and "engineer" hits are R&D tax staff. So a studio three months old sells full websites with a head of brand and a junior designer. That's the capacity fact. Rob is the right person, he oversees creative strategy for the group. The look of BAND's own site is modern and run by that studio, never ours to pitch
+owner linkedin: Route 1 curl https://www.linkedin.com/in/robquinncreative 999 at 19:21 UTC. Route 2 the company page https://www.linkedin.com/company/bandadvisors/ through tools/social-audit.js, 1,802 followers, "The Art of Business", 58 employees. Route 3 his bio on https://weareband.co.uk/introducing/meet-the-band/ . Route 4 Companies House officers and PSC above. Route 5 tools/news.py person "Rob Quinn BAND" 0. Route 6 the lemlist record. His profile's posts stay UNKNOWN
+contact linkedin: same person as the owner, Companies House, the team page and lemlist agree
+google news: tools/news.py 2026-10-13 en, company "BAND Advisory Group" 4 results, MusicWeek 2025-11-28 "MMF reveals first cohort of certified music managers under new initiative" and 2025-09-17 on the MMF manager programme, person "Rob Quinn BAND" 0
+regional news: tools/news.py (London) with accountants creative industries, 77 results, Consultancy.uk 2026-07-31 "Moore Kingston Smith expands in London with new West End office", FF News 2026-10-12 on a surge in small business accountant searches
+industry news: tools/news.py accountants creative industries, 79 results, International Accounting Bulletin 2026-10-05 "MGI Worldwide expands UK network with addition of Plus Accounting", Arts Professional 2026-07-16 on Making Tax Digital worries across the creative sector, firms widening what they sell to the same clients
+sources:
+1. https://weareband.co.uk/
+2. https://weareband.co.uk/services/band-creative-studio/
+3. https://weareband.co.uk/introducing/meet-the-band/
+4. https://weareband.co.uk/legal/statutory-directors/
+5. https://weareband.co.uk/wp-json/wp/v2/pages?slug=band-creative-studio&_fields=date,modified,link
+6. https://weareband.co.uk/agency-performance-pulse-report/
+7. https://find-and-update.company-information.service.gov.uk/company/12039502/officers
+8. https://find-and-update.company-information.service.gov.uk/company/12039502/persons-with-significant-control
+9. https://www.instagram.com/bandadvisors/ (tools/social-audit.js)
+10. https://www.linkedin.com/company/bandadvisors/ (tools/social-audit.js)
+11. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fweareband.co.uk%2F (tools/eu-view.py)
+12. https://news.google.com/rss (tools/news.py, company, person, region, industry)
+pains: 5 judged. (1) a studio three months old selling full websites with a head of brand and a junior designer and no developer, CHOSEN as Build Squad. (2) BAND's own website, brand and social, TAKEN, their studio sells exactly that and Rob runs it for the group. (3) the Agency Performance Pulse report is a gated download behind a six field form, an interactive benchmark tool is possible but nothing shows it costs them, not chosen. (4) two malformed links on the studio page (Fiora's email and LinkedIn as relative URLs, 404), a small fix, never the angle. (5) GDPR, HubSpot cookies set before a click from Stockholm, never the angle
+chosen: (1), biggest, every full website the studio sells needs building, and it's new revenue for BAND that the team as listed can design but not code
+worth: €5,000+ per website build, a white label build squad behind BAND Creative Studio, developing the sites the studio designs and sells, ongoing
+sweep website: tools/crawl.py twice, 209 pages, screenshots opened, BAND's own site is modern, custom built in 2023 and run by its own studio, TAKEN, not ours to pitch
+sweep gdpr: tools/eu-view.py from Stockholm on https://weareband.co.uk/ , 5 first party cookies including HubSpot __hstc and hubspotutk before a click, CookieYes banner with Reject All, never the angle (RULES 0E)
+sweep apps: Karbon, Xero, QuickBooks, TaxCalc and HubSpot in the lemlist tech list, the Pulse report gated on https://weareband.co.uk/agency-performance-pulse-report/ , no process with a proven cost, not chosen
+sweep social: tools/social-audit.js, https://www.instagram.com/bandadvisors/ 201 followers, 229 posts, latest 2026-10-13, https://www.linkedin.com/company/bandadvisors/ 1,802 followers, active and run by their studio, TAKEN
+sweep squad: https://weareband.co.uk/services/band-creative-studio/ sells "landing pages to full websites", https://weareband.co.uk/introducing/meet-the-band/ lists a head of brand and a junior designer and no developer, CHOSEN
+thread: problem your studio sells everything from landing pages to full websites, and the team page lists a head of brand and a junior designer but no developer | cost every full website your clients sign likely needs a developer from outside BAND | offer our build squad as the developers behind BAND Creative Studio, building your designs | link developer, studio
+lead read: Rob reads that his studio sells full websites while the team page lists a head of brand and a junior designer but no developer, so every full website likely needs an outside developer, and gets offered our build squad as the studio's developers, one thread
+claims:
+your studio sells everything from landing pages to full websites, https://weareband.co.uk/services/band-creative-studio/ "Web & UX From landing pages to full websites, we design digital experiences", live at 19:24 UTC
+and your team page lists a head of brand and a junior designer, https://weareband.co.uk/introducing/meet-the-band/ "Fiora Banousi Head of Brand & Creative" and "Marie Sadler Junior Graphic Designer", live at 19:24 UTC
+but no developer, https://weareband.co.uk/introducing/meet-the-band/ live HTML at 19:24 UTC, 3 hits for develop, engineer, coder or programm, all on R&D tax staff ("Originally CEng Systems", "their ongoing developments", "a background routed in Engineering"), positive control the same search finds "Junior Graphic Designer" and 131 role words on the page
+INFERENCE, every full website your clients sign likely needs a developer from outside BAND, rests on https://weareband.co.uk/services/band-creative-studio/ and https://weareband.co.uk/introducing/meet-the-band/ , worded likely
+BAND Creative Studio, https://weareband.co.uk/services/band-creative-studio/ , launched 2026-06-26 per https://weareband.co.uk/wp-json/wp/v2/pages?slug=band-creative-studio&_fields=date,modified,link
+in half the time at half the price, Raka's Build Squad offer in docs/RULES.md section 4A, flagged, https://www.linkedin.com/in/raka-mulya-b92885196
+websites and apps credential, docs/astra-company-profile.md, Raka's fixed brand line, https://www.linkedin.com/in/raka-mulya-b92885196
+recheck: 2026-10-13 19:21 to 19:25 UTC, thread pulled (0 items, control 3), the studio page and the team page refetched live and searched, the studio's launch date read from wp-json, Companies House officers and PSC read. Disproof tried, searched the studio page for any build partner, developer or platform (develop, code, Webflow, WordPress, Framer, Shopify, all 0, the one "partner" is their own fractional offer), searched the team page for a developer (none). It's still possible they use a freelancer or a no code builder the site doesn't show, which is why the cost line says likely. Flags for Raka, (a) half the time at half the price is his offer and Rob can hold us to it, (b) Rob is an ex agency owner who runs creative for the group, so this reads as a partnership pitch, not a fix. Facts hold, confidence MEDIUM
+```
+
+SKETCH
+```
+Hi Rob, BAND looks cool!
+
+However, your studio sells everything from landing pages to full websites, and your team page lists a head of brand and a junior designer but no developer. So every full website your clients sign likely needs a developer from outside BAND.
+
+I'd suggest our build squad as the developers behind BAND Creative Studio, building your designs in half the time at half the price.
+
+At Astra agency we build websites and apps for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of how our build squad works with your studio?
+```
