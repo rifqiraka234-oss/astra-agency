@@ -1,4 +1,7 @@
-# Draft, 2026-10-13. Alice Martin, Fabrikaa Learning. NOT SENT, waiting on Raka's word.
+<!-- GATE ARCHIVED -->
+> SENT 2026-10-13 06:11:08 UTC on Raka's 'Yes send that', act_8a3MFJG37z3A8kk6u, one copy landed. Do not send again.
+
+# Draft, 2026-10-13. Alice Martin, Fabrikaa Learning. SENT.
 
 Raka asked this session at ~06:05 UTC, "What can we send for alice". So this session takes her, the queue row says so.
 
