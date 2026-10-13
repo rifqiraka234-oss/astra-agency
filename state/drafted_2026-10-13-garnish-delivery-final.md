@@ -16,9 +16,9 @@ The feedback line, rechecked 2026-10-13 ~09:30 UTC, control example.com 200 in t
 
 DELIVERY
 ```
-Here it is, Chris.
+Steady corporate clients are the best kind, Chris, and they're who I built this for.
 
-My feedback on your site was that every corporate option, even a lunch box, ends at an enquiry form and a 24 hour wait. So I made it an ordering site. Pick a menu card, fill in one reply card and pay, and regulars reorder their usual in one tap.
+Here it is. My feedback on your site was that every corporate option, even a lunch box, ends at an enquiry form and a 24 hour wait. So I made it an ordering site. Pick a menu card, fill in one reply card and pay, and your regulars reorder their usual in one tap.
 
 Try it yourself.
 https://astra-garnish-prototype.netlify.app
@@ -30,7 +30,8 @@ What do you think?
 
 Notes for Raka.
 - The feedback is the same point the opener made on 12 Oct, so it reads as follow through, not a new criticism.
-- "Regulars reorder their usual in one tap" answers his 07:12 line about steady corporate clients without quoting it.
+- Raka 2026-10-13 ~09:30 UTC, "can we adjust the reply to reply to his message also, so it flows well". The first line
+  now answers his 07:12 "Yeah we have a good consistency of corporate clients!", and the reorder line closes on it.
 - Final site, deploy 6acdf7abad1ad241ec2a099f, sha256 f059d086...46d6. Checked in this session ~09:25 UTC, live HTML
   byte identical, 18 of 18 assets byte matched, cold load 0 errors at 1440 and 390, every screen looked at across the
   final round. Host portrait is his own homepage bio photo, the only image in that section, source sha256 9d2903aa...,
