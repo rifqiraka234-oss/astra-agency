@@ -37,3 +37,15 @@ Would 30 minutes with you and Georgia this week or next work to go through it to
 
 Best,
 Raka
+
+## Redraft on Raka's edit, 2026-10-13. Not sent
+
+Raka's direction. Shorter, ask for feedback, offer a short call. No cc for Georgia, cc Luna and Josh.
+To Sanya.Chhugani@hotgreensolutions.com, reply in thread 1a0d2d5971a63502, cc lunaraisyamulya@gmail.com and josh@astraagency.nl.
+
+Hi Sanya,
+
+Hope you're having a good start to the week and that Georgia's back. I wanted to check in and see if you have any feedback on the proposal. We can also go through it together on a short catch up call if that's easier.
+
+Best,
+Raka
