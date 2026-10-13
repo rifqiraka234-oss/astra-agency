@@ -49,3 +49,14 @@ Hope you're having a good start to the week and that Georgia's back. I wanted to
 
 Best,
 Raka
+
+## Sent on Raka's word, 2026-10-13 07.28 UTC
+
+Gmail message 1a13429a6eb74be9 in thread 1a0d2d5971a63502. Read back after sending. To
+Sanya.Chhugani@hotgreensolutions.com, cc lunaraisyamulya@gmail.com and josh@astraagency.nl, body identical to the
+redraft above, the earlier thread quoted below it. The tool set the subject to "Re: Re: Hotgreen x Astra Agency
+Website Roadmap ...", the thread is unchanged. The thread was re-pulled immediately before sending, still 5 messages,
+nothing new from HotGreen.
+
+Still open. Sanya's LinkedIn message of 2 Oct 09.21 UTC hasn't been read, only Raka can open it.
+Josh's timeline still says it starts on 12 October.
