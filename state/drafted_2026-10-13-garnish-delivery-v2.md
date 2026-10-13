@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SUPERSEDED, NEVER SENT. Raka 2026-10-13 asked for a final pass on the site and a message in his shape, 'here it is, my feedback from your website was xyz thus i made it abc'. See state/drafted_2026-10-13-garnish-delivery-final.md.
+
 # Draft, 2026-10-13. Chris Hale, The Garnish Collective, the sketch delivery, v2. NOT SENT, waiting on Raka's word.
 
 Thread pulled 2026-10-13 07:56 UTC, 4 items, nextPage null. Newest is his, 07:12 UTC, "Ah that's good to hear! Yeah we
