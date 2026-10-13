@@ -1,0 +1,331 @@
+<title>Outreach Week One</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: one reading column, findings first, evidence tables under each claim, quotes set as chat bubbles */
+:root {
+  --bg: #F4F6F8;
+  --surface: #FFFFFF;
+  --ink: #15202B;
+  --muted: #586473;
+  --rule: #D9DFE6;
+  --accent: #1D5BC6;
+  --accent-soft: #E3ECFB;
+  --yes: #1D7A4B;
+  --yes-soft: #E1F2E8;
+  --no: #B0432C;
+  --no-soft: #F8E5DF;
+  --wait: #8A6512;
+  --wait-soft: #F6EDD5;
+  --bubble-us: #E8EEF6;
+  --bubble-them: #FFFFFF;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1319; --surface: #151C24; --ink: #E6EBF1; --muted: #9AA6B4; --rule: #27323F;
+    --accent: #79A6FF; --accent-soft: #1B2A44; --yes: #5BC991; --yes-soft: #163326; --no: #F0907A; --no-soft: #3A1F19;
+    --wait: #E3C463; --wait-soft: #352C14; --bubble-us: #1D2733; --bubble-them: #151C24; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1319; --surface: #151C24; --ink: #E6EBF1; --muted: #9AA6B4; --rule: #27323F;
+  --accent: #79A6FF; --accent-soft: #1B2A44; --yes: #5BC991; --yes-soft: #163326; --no: #F0907A; --no-soft: #3A1F19;
+  --wait: #E3C463; --wait-soft: #352C14; --bubble-us: #1D2733; --bubble-them: #151C24; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 780px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 72px; display: grid; gap: 52px; }
+header { display: grid; gap: 14px; }
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(32px, 6vw, 46px); line-height: 1.05; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 4vw, 28px); line-height: 1.15; margin: 0; text-wrap: balance; }
+h3 { font-family: var(--display); font-weight: 500; font-size: 19px; margin: 0; }
+p { margin: 0; max-width: 66ch; }
+.lede { font-size: 18px; color: var(--ink); }
+.meta { color: var(--muted); font-size: 14px; }
+section { display: grid; gap: 18px; }
+.num { font-variant-numeric: tabular-nums; }
+.tldr { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 22px 22px 8px; display: grid; gap: 4px; }
+.tldr ol { margin: 0; padding-left: 22px; display: grid; gap: 12px; }
+.tldr li { padding-left: 4px; }
+.tldr li b { font-weight: 700; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 10px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td:first-child { min-width: 170px; }
+.wide td:first-child { min-width: 230px; }
+.wide2 td:not(:first-child) { min-width: 170px; }
+td.r, th.r { text-align: right; white-space: nowrap; }
+.pill { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+.pill.yes { background: var(--yes-soft); color: var(--yes); }
+.pill.no { background: var(--no-soft); color: var(--no); }
+.pill.wait { background: var(--wait-soft); color: var(--wait); }
+.pill.info { background: var(--accent-soft); color: var(--accent); }
+.bar { height: 8px; border-radius: 4px; background: var(--rule); overflow: hidden; min-width: 90px; margin-top: 7px; }
+.bar > i { display: block; height: 100%; background: var(--accent); }
+.bar.y > i { background: var(--yes); }
+.compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 640px) { .compare { grid-template-columns: minmax(0, 1fr); } }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 18px; display: grid; gap: 10px; min-width: 0; align-content: start; }
+.card .stat { font-family: var(--display); font-size: 34px; font-weight: 700; line-height: 1; }
+.card .stat small { font-family: var(--body); font-size: 14px; font-weight: 400; color: var(--muted); }
+.msg { white-space: pre-line; font-size: 13.5px; line-height: 1.5; background: var(--bubble-us); border-radius: 12px 12px 12px 4px; padding: 12px 14px; }
+.thread { display: grid; gap: 14px; }
+.ex { display: grid; gap: 6px; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 16px; }
+.ex .who { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; font-size: 14px; }
+.ex .who b { font-weight: 700; }
+.ex .who span { color: var(--muted); }
+.ex blockquote { margin: 0; padding: 10px 14px; border-radius: 12px 12px 4px 12px; background: var(--bubble-them); border: 1px solid var(--rule); font-size: 15px; }
+.ex .lesson { font-size: 14px; color: var(--muted); }
+.ex .lesson b { color: var(--ink); font-weight: 600; }
+ul.plain { margin: 0; padding-left: 20px; display: grid; gap: 8px; max-width: 68ch; }
+.actions { counter-reset: a; display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.actions li { counter-increment: a; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; }
+.actions li::before { content: counter(a); font-family: var(--display); font-weight: 700; font-size: 22px; color: var(--accent); line-height: 1.2; }
+.actions .who { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.note { font-size: 14px; color: var(--muted); border-left: 3px solid var(--rule); padding-left: 12px; max-width: 68ch; }
+footer { border-top: 1px solid var(--rule); padding-top: 22px; display: grid; gap: 10px; font-size: 14px; color: var(--muted); }
+a { color: var(--accent); }
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Astra Agency, outreach audit</div>
+  <h1>Week one of the new plan, 5 to 13 October</h1>
+  <p class="lede">Every LinkedIn thread that moved this week, read in full, plus the email deals. What people said, what they ignored, which messages and which lists earned it, and what to change.</p>
+  <p class="meta">328 LinkedIn threads read one by one. 66 new accepts matched against lemlist's own campaign numbers. Three email deals read start to finish. Written 13 October, evening.</p>
+</header>
+
+<section class="tldr" aria-labelledby="short">
+  <h2 id="short">The short version</h2>
+  <ol>
+    <li><b>Your sketch line is the best opener we've got.</b> "I'd suggest X. Shall I send you a sketch of X?" got a yes from Chris Hale within three hours, 1 of 8 sent. The older "Shall I send you over what X looks like" opener got 1 yes from 39. Small numbers, but the right direction.</li>
+    <li><b>Every real yes came after the owner had already said yes once.</b> Builds sent after a yes turned into two calls and a "how do you bill?". Four builds sent without being asked got nothing back.</li>
+    <li><b>Most of the no's were us being wrong about the business.</b> Five people said no and gave a reason. In four of those, the gap we'd pointed at was a choice they'd made, wasn't theirs, or was on a site they'd just paid for.</li>
+    <li><b>Budget sank or stalled three deals, and you're right that we could have asked sooner.</b> Kyson told us on the call there was no money before his first deal. Tomatoworld is a foundation with no budget. Ciara said she wasn't earning much, and we built her a full site the next day.</li>
+    <li><b>The plain bump gets fast answers and no yeses.</b> 111 went out on 12 October. Six people answered within a day, none said yes, and one wrote "Stop spam please".</li>
+    <li><b>W1b is the list that works. The founders list doesn't, and W1c never started.</b> W1b gave us the yes and five warm hellos. Founders gave 0 replies from 11 openers, plus the stop request. W1c and W4 sent no invites at all, because the 18 a day ran out first.</li>
+  </ol>
+</section>
+
+<section aria-labelledby="funnel">
+  <h2 id="funnel">Where the week's invites went, and what came back</h2>
+  <p>All campaigns share one limit of 18 invites a day. This week it went to W1b, W5 and the founders campaign. W1c, the biggest list, got none.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Campaign</th><th class="r">Invites</th><th class="r">Accepts</th><th class="r">Said hi back</th><th class="r">We wrote to</th><th>What came of it</th></tr></thead>
+      <tbody>
+        <tr><td><b>W1b</b> new consumer firms on DIY site builders</td><td class="r">90</td><td class="r">31 <span class="meta">(34%)</span></td><td class="r">5</td><td class="r">27</td><td><span class="pill yes">1 yes</span> Chris Hale<br><span class="pill no">1 no</span> Josh Edelman</td></tr>
+        <tr><td><b>Founders</b> new firms hiring for marketing</td><td class="r">28</td><td class="r">16 <span class="meta">(39%)</span></td><td class="r">2</td><td class="r">11</td><td><span class="pill no">1 stop</span> Michaël Abramczuk<br>no other replies</td></tr>
+        <tr><td><b>W5 test</b> clinics, law, accounting</td><td class="r">43</td><td class="r">8 <span class="meta">(19%)</span></td><td class="r">0</td><td class="r">3</td><td><span class="pill yes">1 yes</span> Ulrich Steppler</td></tr>
+        <tr><td><b>W1c</b> established consumer firms</td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td><span class="pill wait">never started</span> 398 leads waiting</td></tr>
+        <tr><td><b>W4 test</b> agencies and tech firms</td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td class="r">0</td><td><span class="pill wait">never started</span> 5 profile visits, no invites</td></tr>
+        <tr><td><b>v0.1 backlog</b> paused, worked by hand</td><td class="r">2</td><td class="r">11 <span class="meta">late accepts</span></td><td class="r">0</td><td class="r">4</td><td><span class="pill info">2 calls</span> from September builds<br>no new yes</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Accept rates are early. The founders rate is 19 of its 49 invites so far, because some of its accepts came from invites sent before 5 October. Some of this week's invites haven't been answered yet, so these will move up a bit. "We wrote to" counts this week's accepts who've had a message from us, including replies to people who said hi. The rest are on hold or still being researched.</p>
+</section>
+
+<section aria-labelledby="messages">
+  <h2 id="messages">Which messages got answered</h2>
+  <p>Every message we sent this week, sorted by its shape. "Answered" means they wrote back before we sent anything else.</p>
+  <div class="tablewrap wide">
+    <table>
+      <thead><tr><th>What we sent</th><th class="r">Sent</th><th class="r">Answered</th><th>Rate</th><th>Yes</th></tr></thead>
+      <tbody>
+        <tr><td><b>Sketch opener</b>, "I'd suggest X. Shall I send you a sketch of X?" About 100 words.</td><td class="r">8</td><td class="r">1</td><td><span class="num">13%</span><div class="bar y"><i style="width:12.5%"></i></div></td><td><span class="pill yes">1</span> Chris Hale</td></tr>
+        <tr><td><b>Template opener</b>, "However... This causes... Shall I send you over what X looks like?" About 130 words.</td><td class="r">39</td><td class="r">3</td><td><span class="num">8%</span><div class="bar"><i style="width:7.7%"></i></div></td><td><span class="pill yes">1</span> Ulrich Steppler</td></tr>
+        <tr><td><b>Nudge with something new</b>, 👀 plus a fresh point or a small ask</td><td class="r">10</td><td class="r">2</td><td><span class="num">20%</span><div class="bar"><i style="width:20%"></i></div></td><td><span class="pill yes">1</span> Steven Garratt, a call</td></tr>
+        <tr><td><b>Plain bump</b>, "👀 [name], have you seen this?"</td><td class="r">111</td><td class="r">6</td><td><span class="num">5%</span><div class="bar"><i style="width:5.4%"></i></div></td><td><span class="pill no">0</span> 3 no, 1 stop</td></tr>
+        <tr><td><b>A build nobody asked for</b>, "rather than describe it again, I built it"</td><td class="r">4</td><td class="r">0</td><td><span class="num">0%</span><div class="bar"><i style="width:0%"></i></div></td><td><span class="pill no">0</span> Ramona said no later</td></tr>
+        <tr><td><b>A second angle to an old lead</b>, "I wrote in August, here's a different thought"</td><td class="r">5</td><td class="r">0</td><td><span class="num">0%</span><div class="bar"><i style="width:0%"></i></div></td><td><span class="pill no">0</span></td></tr>
+        <tr><td><b>Warm sketch</b>, "Something I've been thinking about, [name]!"</td><td class="r">3</td><td class="r">0</td><td><span class="meta">sent today</span></td><td><span class="pill wait">too early</span></td></tr>
+        <tr><td><b>Replies to people who wrote to us</b></td><td class="r">22</td><td class="r">6</td><td><span class="num">27%</span><div class="bar"><i style="width:27%"></i></div></td><td>2 calls booked (Kyson, Steven)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Six sketch openers went out on 12 October and two on 13 October. The template openers went out between 5 and 12 October. So the sketches have had a day or two and the templates up to eight. One yes is one person. Read the direction, not the decimals.</p>
+</section>
+
+<section aria-labelledby="sketch">
+  <h2 id="sketch">Why the sketch line works</h2>
+  <p>Both yeses had the same three things. A thing they could picture, named in their own words. A link to how they make money. And an offer to show it instead of a request to talk. Your "I'd suggest" line forces the first one, because you can't write it without naming the project.</p>
+  <div class="compare">
+    <div class="card">
+      <span class="pill yes" style="justify-self:start">Yes in 2h40</span>
+      <h3>Chris Hale, The Garnish Collective</h3>
+      <div class="msg">Hi Chris, The Garnish Collective looks cool!
+
+However, your corporate page sells lunch boxes for meetings and buffets for conferences, but every option leads to the same enquiry form and a reply within 24 hours. So an office manager who needs lunch for Thursday likely orders from a caterer they can book in a minute.
+
+I'd suggest a corporate ordering site, set menus for boxes and buffets, order and pay online, and one tap reorders for regulars like Evri.
+
+At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the Garnish corporate ordering site?</div>
+      <p class="meta">"Sure Raka, would be interested in seeing your take! How's business for you?"</p>
+    </div>
+    <div class="card">
+      <span class="pill no" style="justify-self:start">No, the next morning</span>
+      <h3>Josh Edelman, The Wine Flight</h3>
+      <div class="msg">Hi Josh, saw The Wine Flight, looks interesting!
+
+However, your site sells full days by private helicopter to England's finest wineries, but says nothing about gifts or company days. This causes people shopping for a Christmas present or a client day to likely book something else.
+
+Especially, when you are heading into winter with the vines bare, the gifts and company days people book now are likely what fill next summer's flights.
+
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I built a stroopwafel brand from zero with my family ...
+
+Shall I send you over what the Wine Flight site for gifts and companies looks like?</div>
+      <p class="meta">"Thanks for your message but I'm not looking to change the website at this time." His site was built this year.</p>
+    </div>
+  </div>
+  <p>The template's "the Wine Flight site for gifts and companies" reads as a new website, and Josh had just paid for one. Chris's offer reads as a way to take corporate orders. The other yes, Ulrich, came from a template opener, but his had a deadline in it. The new EC261 rules change what airlines expect, and his site doesn't mention them.</p>
+</section>
+
+<section aria-labelledby="said">
+  <h2 id="said">What people actually said</h2>
+  <div class="thread">
+    <div class="ex"><div class="who"><span class="pill yes">yes</span><b>Ulrich Steppler</b><span>justclaims, W5</span></div>
+      <blockquote>"Impressive, Raka. I need to take this up with my team. How do you bill for this?"</blockquote>
+      <p class="lesson"><b>Lesson.</b> He said yes to the sketch, then asked about money the morning after seeing it. That's what a build after a yes does.</p></div>
+    <div class="ex"><div class="who"><span class="pill yes">call</span><b>Steven Garratt</b><span>Qualigraf, call on 4 November</span></div>
+      <blockquote>"there are aspects I really like, the initial graphics with the meeting papers appearing to be in chaos, the flow of the site in the way it told a story ... Happy to have a call to discuss though"</blockquote>
+      <p class="lesson"><b>Lesson.</b> He'd been quiet since the build. What got him writing was "last one from me, tell me what didn't fit".</p></div>
+    <div class="ex"><div class="who"><span class="pill no">no</span><b>Debby Alles</b><span>Sportcafé de Kogge</span></div>
+      <blockquote>"Bij tveld is niet meer gevestigd op dit adres. Bedankt voor je berichtje maar ik heb geen interesse."</blockquote>
+      <p class="lesson"><b>Lesson.</b> The Google listing we quoted was the previous business at that address. We told her something about her business that wasn't hers.</p></div>
+    <div class="ex"><div class="who"><span class="pill no">no</span><b>Ramona Hendriks</b><span>Negentien80</span></div>
+      <blockquote>"we had a calculator for years on our website. But nobody used it. Not our clients and also not their customers. So we decided to delete the calculator."</blockquote>
+      <p class="lesson"><b>Lesson.</b> We built the thing they'd removed on purpose, without asking first.</p></div>
+    <div class="ex"><div class="who"><span class="pill no">no</span><b>Steven Prins</b><span>Bulgarian Wine Hub</span></div>
+      <blockquote>"i sell to shops and bars in Belgium only and have special pricelists for them."</blockquote>
+      <p class="lesson"><b>Lesson.</b> No trade prices on the site was how he sells, and we called it a gap.</p></div>
+    <div class="ex"><div class="who"><span class="pill no">no</span><b>Niklas Hanf</b> and <b>Jochen Matzer</b></div>
+      <blockquote>"My priorities are currently not about my website. Maybe next time 😁" and "Sorry, not for now"</blockquote>
+      <p class="lesson"><b>Lesson.</b> Fair no's on timing. Both came back fast to a bump after weeks of silence, which is what the bump is good for.</p></div>
+    <div class="ex"><div class="who"><span class="pill no">stop</span><b>Michaël Abramczuk</b><span>Archipel, an AI agency, founders list</span></div>
+      <blockquote>"Stop spam please"</blockquote>
+      <p class="lesson"><b>Lesson.</b> He got three pitches in seven days with no reply in between (5, 9 and 12 October), and he runs a marketing agency himself. Two other leads got the same run.</p></div>
+    <div class="ex"><div class="who"><span class="pill no">closed</span><b>Sergey Shalunov</b><span>SotoCat</span></div>
+      <blockquote>"our AI, produces websites and decks of the same quality. I wanted to see the client projects you've worked on." Then, "I meant links to their excisting websites and particular people those could refer."</blockquote>
+      <p class="lesson"><b>Lesson.</b> He'd asked to see our projects and got a build of his own site. When he asked for live links and people to call, we had none we could share.</p></div>
+    <div class="ex"><div class="who"><span class="pill wait">still talking</span><b>Alice Martin</b> and <b>Chris Ryalls</b></div>
+      <blockquote>"We're still in testing with different clients and the feebback is very positive so far" and "I've been out the country, so haven;t had the time to look at it properly"</blockquote>
+      <p class="lesson"><b>Lesson.</b> The bump also brings back people who were simply busy. Both threads are open again.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="built">
+  <h2 id="built">Builds only pay off after a yes</h2>
+  <div class="compare">
+    <div class="card">
+      <div class="stat">3 of 7 <small>moved to a real buying talk</small></div>
+      <h3>Built after the owner asked</h3>
+      <ul class="plain">
+        <li>Steven Garratt, Qualigraf. Call on 4 November.</li>
+        <li>Kyson Charles, Acquitas. Call, proposal, then a no on price.</li>
+        <li>Ulrich Steppler, justclaims. "How do you bill for this?"</li>
+        <li>Chris Ryalls, ExpoCall. Away, hasn't looked yet.</li>
+        <li>Ciara Neal. Silent since, and she'd told us money was tight.</li>
+        <li>Sergey Shalunov. He'd asked for proof, not a build.</li>
+        <li>Chris Hale, Garnish. Sent this morning.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="stat">0 of 4 <small>answered</small></div>
+      <h3>Built without being asked, 9 October</h3>
+      <ul class="plain">
+        <li>Ramona Hendriks, the curtain calculator. Said no after the bump.</li>
+        <li>Matthias Ufer, the spec form. Silent.</li>
+        <li>Nick Richards, the charge breakdown. Silent.</li>
+        <li>Melissa Carman, the instant valuation. Silent.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">The first column goes back to late September, because a build takes a week or two to turn into a call. Both of this week's calls came from builds sent then.</p>
+</section>
+
+<section aria-labelledby="budget">
+  <h2 id="budget">Three deals ran into money we could have asked about first</h2>
+  <p>This is your point, and the threads back it up. Each time, the warning was there before we did the work.</p>
+  <div class="tablewrap wide2">
+    <table>
+      <thead><tr><th>Deal</th><th>The warning</th><th>What we did anyway</th><th>Outcome</th></tr></thead>
+      <tbody>
+        <tr><td><b>Acquitas</b><br><span class="meta">Kyson Charles</span></td><td>On the 7 October call he said the database he wanted was too expensive before his first deal. Our call notes wrote "A big fixed fee up front is unlikely to land before he's closed one."</td><td>Proposal led with a £2,500 site and a £3,500 package. The last version in our files before it went out has no share of results option, though the call summary promised one.</td><td><span class="pill no">price no</span><br>"I paid £500 for my website." Then "If the cost comes down I will reconsider."</td></tr>
+        <tr><td><b>Tomatoworld</b><br><span class="meta">Ank, then Joyce</span></td><td>A foundation, with a website partner already in place. Ank was our contact, while Aart and Joyce decided.</td><td>A concept in July, a call in September and a full Dutch proposal, without the people who decide on the call.</td><td><span class="pill no">closed 6 Oct</span><br>"as a foundation, we unfortunately do not have the budget available"</td></tr>
+        <tr><td><b>Ciara Neal</b><br><span class="meta">Hire Quality Talent</span></td><td>"keen to know costings please as i am not earning very much right now"</td><td>A full six page site, built the next day.</td><td><span class="pill wait">silent</span> since 29 September</td></tr>
+        <tr><td><b>HotGreen</b><br><span class="meta">Sanya Chhugani</span></td><td>Sanya is the engagement manager. Georgia decides.</td><td>The proposal went to Sanya. It's been waiting on Georgia since 2 October.</td><td><span class="pill wait">waiting</span> check in sent this morning</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>So the fix is a short qualifying step before any proposal or any build bigger than a sketch. Find out three things on the first call. What they spent last time or have set aside, who signs, and when they need it. For a founder who hasn't made money yet, lead with a small paid first piece or the share of results option. Never send a full package first.</p>
+</section>
+
+<section aria-labelledby="targeting">
+  <h2 id="targeting">W1b is the list to feed. Founders isn't</h2>
+  <ul class="plain">
+    <li><b>W1b</b> brought 31 accepts, five people who said hi without being pitched, and Chris Hale's yes. Twelve of its 31 accepts are in hospitality, food and drink, and five run shops. That's the work the sketch opener suits best.</li>
+    <li><b>The founders campaign</b> has the highest accept rate (39%) and the worst replies. That's 0 replies from 11 openers, and the one stop request. It was built in your account without the owner rule, so its titles include a "Group Commercial Director". Seven of its sixteen accepts this week are professional services, including two agencies (Restless and Archipel Marketing), which makes them closer to competitors than to clients.</li>
+    <li><b>W5</b> has the lowest accept rate (19%), but its one answered opener was a yes. It worked because the angle was a deadline in Ulrich's market, not GDPR. That matches the 12 October rule, so research W5 leads for the bigger problem.</li>
+    <li><b>W1c and W4 never started.</b> Nothing is wrong with either. Their setup matches W1b's step for step, and they're simply last in line for the shared 18 a day. So the 19 October comparison has no W4 data, and the 398 established owners in W1c haven't been touched.</li>
+    <li><b>The v0.1 backlog is close to used up.</b> This week it got 9 openers, 5 second angles, 94 bumps, 8 nudges and 4 unasked builds, and none of that produced a new yes. What it did produce this week was the two calls, both from September builds.</li>
+  </ul>
+  <p>Who said yes this week were owner run firms of one to ten people, with a business customer behind the website (office lunches, airline claims teams) and a reason to act now. Who said no were owners who'd just paid for a site, B2B sellers who price per customer, and owners whose minds were elsewhere.</p>
+</section>
+
+<section aria-labelledby="other">
+  <h2 id="other">Smaller things that cost us</h2>
+  <ul class="plain">
+    <li><b>Saying hi back, then going quiet.</b> Seven people answered the connect note itself. We replied to each with a question about their business, and 0 of the 5 who've had time answered it. Today's warm sketch, an offer instead of a question, is the fix. Check on it Friday.</li>
+    <li><b>Three pitches in a week to strangers.</b> The opener, a nudge four days later and a bump three days after that. Michaël said stop, and two others got the same run.</li>
+    <li><b>111 messages in one day.</b> All of them were sent by hand through lemlist, against the 20 a day the campaigns are set to. Nothing has been flagged, but spreading bumps over two or three days costs nothing.</li>
+    <li><b>Proof.</b> "Brands like Unilever, AXA, Pertamina" invites the question Sergey asked, and we can't give links or references for partner work. Two or three Astra case pages we can link to would answer it. Qualigraf is ready now, and justclaims and Garnish could follow if Ulrich and Chris agree.</li>
+    <li><b>Our own mail server.</b> On 9 October astraagency.nl refused the copies of your Kyson reply to josh@ and raka@ as spam. Kyson got his copy. The email carried a Google redirect link instead of the clean prototype link, and that's my best guess at the trigger. Worth a word with whoever runs that server.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="change">
+  <h2 id="change">What to change in week two</h2>
+  <ol class="actions">
+    <li><div><b>Make the sketch opener the default for every new accept.</b> Keep "I'd suggest", and name the project in their words. The template opener retires.<div class="who">I can start tomorrow. It's a rule change, and I'll show you the wording first.</div></div></li>
+    <li><div><b>Ask before claiming a gap.</b> When the gap could be a choice (pricing, a removed feature, a listing, a site built this year), ask about it or leave it out.<div class="who">Mine to apply in research.</div></div></li>
+    <li><div><b>Build only after a yes.</b> No more "rather than describe it, I built it".<div class="who">Mine to apply.</div></div></li>
+    <li><div><b>Qualify budget and who signs before any proposal.</b> Three questions in every call brief, plus a small first step or share of results option for founders who aren't making money yet.<div class="who">I'll add it to the call brief. The pricing for the first step is your call.</div></div></li>
+    <li><div><b>Two pitches, then stop.</b> Opener, one bump after four or five quiet days, then close. Bumps spread over a few days.<div class="who">Your call, because it changes the current bump schedule.</div></div></li>
+    <li><div><b>Pause the founders campaign and give its invites to W1c.</b> Then decide whether W4 gets a start or gets dropped before the 19 October read.<div class="who">Your call. Starting and pausing campaigns is yours.</div></div></li>
+    <li><div><b>Make two or three case pages we can link.</b> Qualigraf first.<div class="who">I can draft them. Each needs the client's OK before it goes live.</div></div></li>
+  </ol>
+</section>
+
+<section aria-labelledby="deals">
+  <h2 id="deals">The deals as they stand tonight</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Deal</th><th>Stage</th><th>Next</th></tr></thead>
+      <tbody>
+        <tr><td><b>Qualigraf</b>, Steven Garratt</td><td><span class="pill yes">call booked</span> Wed 4 November, 11.00 UK</td><td>Brief is written. Lead with something that holds, not Surrey.</td></tr>
+        <tr><td><b>justclaims</b>, Ulrich Steppler</td><td><span class="pill yes">asked how we bill</span> answered this morning, call offered</td><td>Wait for his team. No price until he's on a call.</td></tr>
+        <tr><td><b>Garnish</b>, Chris Hale</td><td><span class="pill info">site delivered</span> this morning</td><td>Plain bump after three quiet days.</td></tr>
+        <tr><td><b>HotGreen</b>, Sanya Chhugani</td><td><span class="pill wait">waiting on Georgia</span> check in sent today</td><td>Ask for a call with Georgia on it.</td></tr>
+        <tr><td><b>Acquitas</b>, Kyson Charles</td><td><span class="pill no">price no</span> "If the cost comes down I will reconsider"</td><td>Your decision. A smaller first step fits what he told us.</td></tr>
+        <tr><td><b>Tomatoworld</b> and <b>SotoCat</b></td><td><span class="pill no">closed</span></td><td>Nothing more to send.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <p><b>How this was checked.</b> All 328 LinkedIn threads with activity since 5 October were pulled in full, one per person, and none failed (32 with replies, 296 without). Each message was matched against lemlist's own character count. 175 threads came back empty. Those are mostly invites still waiting, and empty means nothing was recorded, not that nothing was sent. This week's 66 accepts match lemlist's campaign stats exactly (31, 16, 11, 8), and all 453 accepts since July were used to tie each person to their list. The Acquitas, Tomatoworld and HotGreen email threads were read start to finish, along with the Acquitas call notes.</p>
+  <p><b>What it can't tell you yet.</b> The sketch openers are a day or two old, and every yes here is a single person. The 19 October read will say more.</p>
+</footer>
+
+</div>
