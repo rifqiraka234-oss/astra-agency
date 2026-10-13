@@ -12,11 +12,12 @@ v1 (deploy 6acdcec9e1da4a850486f9ba, index sha256 98eb9eeb...1007) is in git, th
 
 - URL https://astra-garnish-prototype.netlify.app (same site as v1, site id fe9f6751-04d5-48cd-8812-62f86b44c320,
   team 6a75917309221b32b3265992)
-- Deploy id **6acdf5bbb52ac933c470a0e3** (final round), state ready, published 2026-10-13 09:11 UTC, current deploy.
-  Permalink https://6acdf5bbb52ac933c470a0e3--astra-garnish-prototype.netlify.app (200).
-  Earlier v2 deploys, 6acded528fd7878b63c3ed39 (08:35) and 6acdee06d36c44e0c4659161 (08:39, alt text fix).
+- Deploy id **6acdf7abad1ad241ec2a099f** (host heading wording), state ready, published 2026-10-13 09:19 UTC, current
+  deploy. Permalink https://6acdf7abad1ad241ec2a099f--astra-garnish-prototype.netlify.app .
+  Earlier v2 deploys, 6acded528fd7878b63c3ed39 (08:35), 6acdee06d36c44e0c4659161 (08:39, alt text fix),
+  6acdf5bbb52ac933c470a0e3 (09:11, final round).
 - Access controls read back from get-project after the deploy, requiresSSOTeamLogin false, requiresPassword false.
-- sha256 index.html **5aa0d2452994946bd533a3139f5b41f9031ef71fbcfa72b51e83f980d82af6e1** (106,441 bytes)
+- sha256 index.html **f059d086569188c868e17007bf4448f2972403ab5ba3ca3078ef0d6c2a7146d6** (106,438 bytes)
 - Deployed from a clean folder holding only index.html, img/, fonts/ and netlify.toml (publish ".", no command).
 
 ## The reanalysis (agreed with Raka before the rebuild)
@@ -474,4 +475,17 @@ after each, then the full QA again.
     and "Tell Chris about the occasion" are ours too.
 12. The host photo is his own upload from his homepage, cropped. Confirm he's happy to have it on an ordering page
     and with the crop (it's from a garden event with guests, all cropped out).
+
+### Host heading wording (09:15 to 09:20 UTC)
+
+The italic under CHRIS HALE read "head chef, and a MasterChef UK quarter finalist." The preferred replacement,
+"founder, head chef and MasterChef UK quarter finalist.", was tried and measured character by character. It broke as
+"founder, head chef and MasterChef / UK quarter finalist." at both 1440 and 390, splitting the show's name, so the
+fallback was used as instructed. The line is now "head chef and MasterChef UK quarter finalist.", which breaks
+as "head chef and MasterChef UK / quarter finalist." at both widths. (A non breaking space in "MasterChef UK" would
+also keep the founder version clean, "founder, head chef and / MasterChef UK quarter finalist", if Raka prefers it.)
+Nothing else changed, the diff against the previous deploy is that one line. Rechecked, "founder and head chef" and
+"former MasterChef UK quarter-finalist" on his homepage, 0 colons, dashes or exclamation marks in the line, cold load
+0 errors at 1440 and 390 locally and live, live HTML byte identical (f059d086...46d6), 18 of 18 assets byte matched,
+both scripts parse in the live file, Host section screenshotted at both widths locally and live and looked at.
 

@@ -31,4 +31,7 @@ What do you think?
 Notes for Raka.
 - The feedback is the same point the opener made on 12 Oct, so it reads as follow through, not a new criticism.
 - "Regulars reorder their usual in one tap" answers his 07:12 line about steady corporate clients without quoting it.
-- Final site checks to be added here once the last round is live.
+- Final site, deploy 6acdf7abad1ad241ec2a099f, sha256 f059d086...46d6. Checked in this session ~09:25 UTC, live HTML
+  byte identical, 18 of 18 assets byte matched, cold load 0 errors at 1440 and 390, every screen looked at across the
+  final round. Host portrait is his own homepage bio photo, the only image in that section, source sha256 9d2903aa...,
+  crop reproduced byte for byte here. Host line now "head chef and MasterChef UK quarter finalist." 
