@@ -31,10 +31,13 @@ Raka can change a campaign at any time. The filters and the audit trail behind e
 | W1c Owners of established consumer businesses on DIY site builders | cam_xFYYBzvfSHk83epvw | Website | Founded 2005 to 2021, 1-50 people, headcount growing 5% or more, consumer facing, still on a DIY builder | 398 | 2026-10-05 |
 | W4 TEST 50 Owners of growing agencies and tech firms, Build Squad | cam_iDMXXfaWWg8RkgHpi | Build Squad | 50 random from W4 | 50 | 2026-10-05 |
 | W5 TEST 50 Owners of clinics, law and accounting firms, GDPR | cam_BRBXAzzDKMfC4fSCS | GDPR | 50 random from W5 | 50 | 2026-10-05 |
-| founders: new businesses with marketing hires | cam_Csq9BikBWz7dNqSs4 | Not set by us | Founders of new businesses hiring for marketing. Created 2026-10-02 in Raka's account, same sequence and connect note as v0.1, not built with the owner rule in `tools/owner_title_rule.py` | 332 | 2026-10-02 |
 
-The founders campaign was not built by the session that built W1 to W5, and its filters are not recorded here.
-By 2026-10-05 it had sent 27 invites and had 5 accepts. It shares the same 18 a day. Ask Raka before changing it.
+**founders: new businesses with marketing hires (cam_Csq9BikBWz7dNqSs4) was PAUSED by Raka on 2026-10-13**, confirmed
+paused in lemlist that evening. The week one audit (`logs/audits/2026-10-13-outreach-week-one.md`) had it at 19 accepts
+from 49 invites, then 0 replies from 11 openers and one "Stop spam please". It was never built with the owner rule,
+and two of its accepts are agencies. Threads already open finish under the normal rules, two pitches, then close.
+Whether the accepted leads nobody has messaged yet still get an opener was asked of Raka on 13 Oct. Restarting it
+is Raka's call. With it paused, the 18 a day goes to W1b, W5 (7 invites left), W1c and W4.
 
 W4 and W5 are tests because those angles were at 0 replies from 12 and 14 sends before this. Compare
 acceptance and replies against W1b and W1c around 2026-10-19 before giving them more volume.
@@ -81,4 +84,7 @@ The latest check is in `state/accepts_2026-10-05.md`.
 - 2026-10-04: seven segments built, all owners only, loaded and audited (14,468 leads).
 - 2026-10-05: schedules set, invite limit 18, v0.1 paused, W1b and W1c launched, W4 and W5 tests built from 50
   each and launched.
+- 2026-10-13: week one audit. W1c and W4 had sent 0 invites, starved by the shared 18 a day. Raka paused the
+  founders campaign. First messages are the SKETCH shape, and every thread gets two pitches, then a silent close
+  (RULES section 1).
 - Around 2026-10-19: first read of the tests, decide the next wave.

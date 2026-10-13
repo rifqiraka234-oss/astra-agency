@@ -445,6 +445,24 @@ def check(path, replies=False):
                 if hit:
                     bad(i, f"pitches a small fix, '{hit.group(0)}'. Compliance, GDPR and one line fixes "
                            "are never the angle, find the 2,500 euro problem behind it (RULES 0E)")
+            # Week one audit, 2026-10-13. Four of the five no's with a reason answered a gap that was
+            # deliberate, not theirs, or on a site just paid for (Ramona, Steven Prins, Debby, Josh).
+            # RULES.md 0F. From 14 Oct every opener writes the owner's likely no and what rules it out,
+            # and the first message is the SKETCH shape (Raka, "lets continue using the id suggest").
+            if dm and dm.group(1) >= "2026-10-14" and shapes[i] in ("OPENER", "SKETCH"):
+                if shapes[i] == "OPENER":
+                    bad(i, "the first message is the SKETCH shape from 2026-10-14, 'I'd suggest ...' and "
+                           "'Shall I send you a sketch of ...?' (docs/opener-template.md)")
+                ol = re.search(r"^owner reply:(.*)$", gates[i] or "", re.M)
+                parts = [p.strip() for p in ol.group(1).split("|")] if ol else []
+                if len(parts) != 3 or not all(len(p.split()) >= 2 for p in parts):
+                    bad(i, "RESEARCH GATE, owner reply must be 'owner reply: <their likely no, in their "
+                           "words> | <the trap> | <the evidence that rules it out, with its URL>' (RULES 0F)")
+                elif not re.search(r"https?://", parts[2]):
+                    bad(i, "RESEARCH GATE, owner reply evidence needs the URL it rests on (RULES 0F)")
+                elif re.search(r"can'?t rule|cannot rule|unknown|unclear|not checked", parts[2], re.I):
+                    bad(i, "RESEARCH GATE, owner reply, a trap that can't be ruled out means this gap "
+                           "isn't the angle. Take the next pain or NO_STRONG_ANGLE (RULES 0F)")
         sketch = shapes[i] == "SKETCH"
         if relaxed:
             pass
