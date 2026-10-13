@@ -1,0 +1,178 @@
+{
+ "target": "https://kyra-conseil.fr/",
+ "tag": "kyra",
+ "status": 200,
+ "navError": null,
+ "fetchedAt": "2026-10-12T08:54:20.615Z",
+ "reach": {
+  "verdict": "READ",
+  "attempts": [
+   "networkidle:200"
+  ],
+  "controlOk": null,
+  "plainHttp": null,
+  "dns": null
+ },
+ "hidden": {
+  "textLength": 2691,
+  "mainHtmlLength": 45572,
+  "textToHtmlRatio": 0.059,
+  "inlineScriptsInMain": 0,
+  "gateCandidates": [],
+  "contentProbablyHidden": false
+ },
+ "page": {
+  "title": "Cabinet expert-comptable pour dirigeants | Kyra Conseil",
+  "lang": "fr-FR",
+  "generator": "WordPress 6.9.9",
+  "description": "Cabinet d'expertise comptable orienté pilotage stratégique. Forfaits dès 149 €/mois. Entretien confidentiel sans engagement.",
+  "forms": 0,
+  "inputs": 0,
+  "mailto": 0,
+  "tel": 0,
+  "images": 0,
+  "svgs": 0,
+  "videos": 0,
+  "h1": [
+   "Votre comptabilité,\ntransformée\n\nen avantage stratégique."
+  ],
+  "nav": [
+   "Kyra.Conseil Cabinet d'expertise comptable => /",
+   "À propos => /a-propos/",
+   "Accompagnements => /accompagnements/",
+   "Forfaits => /forfaits/",
+   "Ressources => /ressources/",
+   "Blog => /blog/",
+   "Création d'entreprise => /creation-entreprise/",
+   "Entretien stratégique → => /contact/",
+   "À propos › => /a-propos/",
+   "Accompagnements › => /accompagnements/",
+   "Forfaits › => /forfaits/",
+   "Ressources › => /ressources/",
+   "Blog › => /blog/",
+   "Création d'entreprise › => /creation-entreprise/",
+   "Entretien stratégique → => /contact/"
+  ],
+  "social": {
+   "linkedin": "https://www.linkedin.com/company/kyra-conseil/",
+   "instagram": "https://www.instagram.com/kyra.conseil/"
+  },
+  "bannerPresent": false,
+  "acceptButton": null,
+  "rejectButton": null,
+  "privacyLink": null,
+  "imprintLink": "https://kyra-conseil.fr/mentions-legales/",
+  "textLength": 2691,
+  "text": "KYRA\n.\nCONSEIL\nCABINET D'EXPERTISE COMPTABLE\n450+\nENTREPRISES\n10 ans\nD'EXPÉRIENCE\nOEC\nINSCRIT À L'ORDRE\n100%\nCONFIDENTIEL\nÀ PROPOS\nACCOMPAGNEMENTS\nFORFAITS\nRESSOURCES\nBLOG\nCRÉATION D'ENTREPRISE\nENTRETIEN STRATÉGIQUE\n→\nCABINET D'EXPERTISE COMPTABLE\nVotre comptabilité,\ntransformée\nen avantage stratégique.\nNous accompagnons un nombre sélectionné de dirigeants ambitieux dans la structuration, l'optimisation et le pilotage de leur entreprise.\nDEMANDER UN ENTRETIEN\nDécouvrir notre approche\n→\n450+\nENTREPRISES ACCOMPAGNÉES\n10ans\nD'EXPÉRIENCE\nOEC\nINSCRIT À L'ORDRE\nEXPERT-COMPTABLE — OEC\n« La comptabilité est l'intelligence financière de votre entreprise. »\nSacko Diombera — Fondateur\nNOS ACCOMPAGNEMENTS\nTrois niveaux d'intervention,\nselon vos enjeux.\nVOIR TOUS LES FORFAITS →\n01\nESSENTIEL\nStructuration\n& Sécurisation\nPour les dirigeants souhaitant un cadre solide, conforme et serein.\n149 € HT/mois\nÀ partir de\nDÉCOUVRIR\nLE PLUS CHOISI\n02\nPERFORMANCE\nPilotage\n& Croissance\nPour les entreprises en croissance qui veulent piloter avec précision.\n349 € HT/mois\nÀ partir de\nDÉCOUVRIR\n03\nPREMIUM\nDirection Financière\nExternalisée\nPour les dirigeants ambitieux exigeant un partenaire stratégique de haut niveau.\nSur mesure\nAprès entretien stratégique\nDEMANDER UN ENTRETIEN\nNOTRE MÉTHODE\nUne approche structurée\nen quatre étapes.\n01\nAnalyse approfondie\nDiagnostic complet de votre situation financière, fiscale et organisationnelle.\n02\nIdentification des leviers\nCartographie des opportunités d'optimisation et de structuration.\n03\nOutils de pilotage\nMise en place de tableaux de bord et d'indicateurs sur mesure.\n04\nSuivi stratégique\nAccompagnement régulier et ajustements en temps réel.\nVOTRE EXPERT\nSacko Diombera\nEXPERT-COMPTABLE DIPLÔMÉ · INSCRIT À L'ORDRE\n« Mon approche est stratégique, exigeante et orientée performance. Je considère chaque relation comme un partenariat de long terme. »\nDiplômé d'expertise comptable, avec plus de 10 années d'expérience au sein de cabinets internationaux, Sacko accompagne des dirigeants dans la structuration, l'optimisation et le pilotage de leur entreprise.\nEN SAVOIR PLUS →\nSD\nSacko Diombera\nEXPERT-COMPTABLE · FONDATEUR\nPREMIÈRE ÉTAPE\nUn partenariat commence\npar une conversation.\nEntretien stratégique confidentiel — sans engagement — pour analyser vos enjeux.\nPLANIFIER UN ENTRETIEN CONFIDENTIEL\nKYRA.CONSEIL\nCabinet d'expertise comptable orienté performance, au service des dirigeants ambitieux.\nin\nig\nSERVICES\nEssentiel\nPerformance\nDirection Financière\nCréation d'entreprise\nCABINET\nÀ propos\nRessources\nBlog\nCONTACT\nEntretien stratégique\nLinkedIn\nInstagram\n© 2026 Kyra Conseil · Tous droits réservés\nMentions légales\nCGV",
+  "mainHtmlLength": 45572,
+  "inlineScriptsInMain": 0,
+  "gateCandidates": []
+ },
+ "stack": {
+  "generator": "WordPress 6.9.9",
+  "wordpress": true,
+  "wpVersion": "6.9.9",
+  "themes": [
+   "hello-elementor"
+  ],
+  "boughtTheme": null,
+  "plugins": [
+   "hostinger-reach",
+   "contact-form-7",
+   "elementor",
+   "*"
+  ],
+  "builder": [
+   "elementor"
+  ],
+  "saasBuilder": [],
+  "fontFamilies": [
+   "inherit",
+   ""
+  ],
+  "hexColours": [
+   [
+    "c9a96e",
+    46
+   ],
+   [
+    "0c1e3c",
+    30
+   ],
+   [
+    "8ea3bf",
+    8
+   ],
+   [
+    "14305a",
+    8
+   ],
+   [
+    "d0daea",
+    8
+   ],
+   [
+    "5a6e8c",
+    5
+   ]
+  ]
+ },
+ "era": {
+  "datedTells": [],
+  "boughtTheme": null
+ },
+ "gdpr": {
+  "consentPlatform": [],
+  "bannerPresent": false,
+  "acceptButton": null,
+  "rejectButton": null,
+  "rejectMissingOrSmaller": true,
+  "privacyLink": null,
+  "imprintLink": "https://kyra-conseil.fr/mentions-legales/",
+  "cookiesBeforeAnyClick": [
+   {
+    "name": "__cf_bm",
+    "domain": ".hostinger.com",
+    "party": "third",
+    "session": false
+   }
+  ],
+  "thirdPartyCookiesBeforeAnyClick": [
+   {
+    "name": "__cf_bm",
+    "domain": ".hostinger.com",
+    "party": "third",
+    "session": false
+   }
+  ],
+  "trackersBeforeAnyClick": [
+   "fonts.googleapis.com",
+   "fonts.gstatic.com"
+  ],
+  "googleFontsRemote": true,
+  "allThirdPartyHosts": [
+   "fonts.googleapis.com",
+   "cdn-reach.hostinger.com",
+   "fonts.gstatic.com",
+   ""
+  ]
+ },
+ "social": {
+  "linkedin": "https://www.linkedin.com/company/kyra-conseil/",
+  "instagram": "https://www.instagram.com/kyra.conseil/"
+ },
+ "render": {
+  "suspectAssets": [],
+  "assetsOurFault": 0,
+  "assetsTheirFault": 0,
+  "assetFindingsTrustworthy": true
+ },
+ "health": {
+  "pageErrors": [],
+  "failedRequests": []
+ },
+ "shots": {
+  "desktop": "/tmp/claude-0/agents/b16/kyra-desktop.png",
+  "phone": "/tmp/claude-0/agents/b16/kyra-phone.png"
+ }
+}

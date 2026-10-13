@@ -1,0 +1,55 @@
+<!--{"title":"The claim clock, deadlines for a late flight under the new rules","desc":"Put in a delay at arrival and the day a claim arrives, and read off the 96 hour notice, the 30 day answer and the nine month window, worked from Regulation (EU) 2026/2202.","nav":"rules","extra":["pages2","clock"],"cta2":["readiness.html","Take the readiness check"],
+"hero":{"vid":"03-wall-clock-mixkit28886","amber":true,"pill":"The new rules, a tool","h1":["The claim","<em>clock.</em>"],"lead":"Every duty after a late flight has a date. Put in the flight and the day the claim arrives, and the clock writes the dates down. <b>The sums run in your browser and nothing is sent anywhere.</b>","acts":[["#c1","Put in a flight"],["new-rules.html","Read the rules behind it"]]},
+"chapters":[["c1","Your flight"],["c2","How it counts"]]}-->
+<section class="sx ch" id="c1" data-step aria-labelledby="c1-h">
+  <div class="wrap">
+    <div class="sx-h">
+      <span class="pill rv step-pill"><i class="dot amber"></i><b>1</b>&nbsp;Your flight</span>
+      <h2 id="c1-h" class="h-l rv" style="--d:1">Put in a late flight. Read off the <em>dates.</em></h2>
+      <p class="lead rv" style="--d:2">For a delay at arrival, worked from Regulation (EU) 2026/2202. Cancellations and denied boarding follow Art. 5 and Art. 4, so they aren't covered here.</p>
+    </div>
+    <div class="calc2 ch-body rv" style="--d:2" data-calc>
+      <form class="panel calc-in2" onsubmit="return false" novalidate>
+        <fieldset>
+          <legend>The flight</legend>
+          <div class="f3"><label for="cc-dep">Date of departure</label><input id="cc-dep" type="date" value="2027-11-15" min="2027-10-23"></div>
+          <div class="f3"><label for="cc-arr">Scheduled arrival at the final destination</label><input id="cc-arr" type="datetime-local" value="2027-11-15T16:20"></div>
+          <div class="f3"><label for="cc-delay">Delay at arrival <output id="cc-delay-o">3 h 15 min</output></label><input id="cc-delay" type="range" min="0" max="720" step="5" value="195"><span class="hint">0 to 12 hours, in steps of five minutes</span></div>
+        </fieldset>
+        <fieldset>
+          <legend>Distance, Art. 7(1)</legend>
+          <div class="radios">
+            <label><input type="radio" name="cc-dist" value="250"><span>1,500 km or less</span></label>
+            <label><input type="radio" name="cc-dist" value="400i"><span>More than 1,500 km, within the Union</span></label>
+            <label><input type="radio" name="cc-dist" value="400" checked><span>Between 1,500 and 3,500 km, other journeys</span></label>
+            <label><input type="radio" name="cc-dist" value="600"><span>More than 3,500 km, other journeys</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>The claim</legend>
+          <div class="f3"><label for="cc-file">The passenger files on</label><input id="cc-file" type="date" value="2027-11-27"></div>
+        </fieldset>
+      </form>
+      <div class="panel calc-out2" aria-live="polite" data-out></div>
+    </div>
+  </div>
+</section>
+
+<section class="sx ch" id="c2" data-step aria-labelledby="c2-h">
+  <div class="wrap">
+    <div class="sx-h">
+      <span class="pill rv step-pill"><b>2</b>&nbsp;How it counts</span>
+      <h2 id="c2-h" class="h-l rv" style="--d:1">How it counts, and what it <em>covers.</em></h2>
+      <p class="lead rv" style="--d:2">The regulation doesn't settle the first three, so the clock makes a choice and says which. Check them with counsel before relying on a date.</p>
+    </div>
+    <div class="cards ch-body">
+      <div class="card2 amber rv"><span class="ic">{{IC:clock}}</span><h3>When the journey ends</h3><p>Taken as the scheduled arrival plus the delay. Time of arrival is on block time, Art. 2(x).</p></div>
+      <div class="card2 amber rv" style="--d:1"><span class="ic">{{IC:cal}}</span><h3>Day 0</h3><p>The day a request arrives counts as day 0, so the 30th day is the date of receipt plus 30 calendar days, to the end of that day.</p></div>
+      <div class="card2 amber rv" style="--d:2"><span class="ic">{{IC:cal}}</span><h3>Months</h3><p>Nine months and twelve months are counted as calendar months.</p></div>
+      <div class="card2 rv"><span class="ic">{{IC:search}}</span><h3>Scope</h3><p>A worked example for a delay at arrival, not legal advice. Rescheduled flights and missed connections are measured differently, Art. 2(o) and Art. 6b(3).</p></div>
+      <div class="card2 rv" style="--d:1"><span class="ic">{{IC:pay}}</span><h3>The amount</h3><p>EUR 250, 400 or 600 by distance, Art. 7(1), for more than three hours late at arrival, Art. 6(4). Art. 7(2) can halve it in some cases.</p></div>
+      <div class="card2 rv" style="--d:2"><span class="ic">{{IC:lock}}</span><h3>Your data</h3><p>Nothing you enter leaves the page. There's no form to send and nothing is stored.</p></div>
+    </div>
+  </div>
+</section>
+{{CTA}}

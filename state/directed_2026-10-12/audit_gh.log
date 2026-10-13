@@ -1,0 +1,34 @@
+
+== https://www.getholed.com/  (200)
+title        HOME | Get Holed | Golf Events
+stack        Wix.com Website Builder
+era tells    none greppable, judge from the screenshots
+flow         forms 0 inputs 0 mailto 0 tel 0 | img 32 svg 9 video 2
+gdpr banner  NONE FOUND [absence, confirmed against a working control] | reject NOT FOUND
+gdpr pre     7 cookies, 0 third party, before any click
+trackers pre maps.googleapis.com, fonts.googleapis.com, maps.gstatic.com, fonts.gstatic.com
+egress       US, NOT an EU or UK visitor
+    no consent code of any kind in the HTML, so no geo rule can exist. Tracker lines hold,
+    confirm with the list of hosts the page contacted before writing it.
+googlefonts  REMOTE, loaded from Google
+privacy      NO LINK FOUND [absence, confirmed against a working control]
+social       linkedin -> https://www.linkedin.com/company/get-holed/?viewAsMember=true
+             instagram -> https://www.instagram.com/get_holed/
+             facebook -> https://www.facebook.com/people/Get-Holed/61565019683057/
+             x -> https://wix.com/?utm_campaign=vir_created_with
+             tiktok -> https://www.tiktok.com/@get.holed
+
+!!  1 SOCIAL LINK(S) GO TO A BARE PLATFORM HOMEPAGE, not an account.
+!!  x. These are unconfigured theme placeholders.
+!!  Do NOT report this as a social presence. It is the opposite of one.
+errors       0 page errors, 21 failed requests
+
+!!  CONTENT MAY BE HIDDEN FROM THIS READER. DO NOT CALL THIS PAGE EMPTY OR THIN.
+!!  656 chars of text against 252487 chars of markup in the main area (ratio 0.0026).
+!!  7 inline script or style blocks sit inside the content area, so the page builds itself.
+!!  Open the screenshot. An emptiness claim needs a picture of an empty page, nothing less.
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/agents/b16/gh.json plus two screenshots. LOOK AT THEM.
+

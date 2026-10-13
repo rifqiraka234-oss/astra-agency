@@ -1,0 +1,57 @@
+CONTROL  'Carrefour'  HTTP 200, 100 results
+
+== GOOGLE NEWS, company  q="MajorDomo" Nice OR "Major Domo" villa  HTTP 200, 0 results
+
+== GOOGLE NEWS, person  q=""David Weyn""  HTTP 200, 0 results
+
+== REGIONAL NEWS, their industry in their region  q=(Côte d'\''Azur OR Nice) ("conciergerie" villa OR "gestion locative" luxe)  HTTP 200, 32 results
+  2026-08-10  Une nouvelle conciergerie de luxe à Bandol pour la Côte varoise - Presse Agence
+      https://news.google.com/rss/articles/CBMiogFBVV95cUxPNXE4TTZLNEpJQnpQaXNmRkFWRFFaN1MwSmNRMkdWN0RNT19MSzEzaTZJVkl3Y2stUDAzUElOOE5ZWXdCdUx3OVdnNkxqTTljTFd2N2JzZFNxUEx2R1VUcmM3M19uRkZDZDI3alZBRnVlXzlRYUNvcTk0c3EzZ3VuUEk5ZDVkM2tCY29fdnE0ZDdGQk9ldDZZOElaVU9KTkRfRUE?oc=5
+  2026-07-15  Laissez-vous séduire par ces villas avec vue sur mer à Saint-Tropez ! - Capital.fr
+      https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFcyeFJjUUFtdHZsQWYtZ1dkcjVjWjZJdURONmR3SWk4djRJenRPWVNkSEJyalpGT0ZIZ0tPRy0xQ1RXZjhvdXduQU1tWW5zZG0tb19WN0JFT29KZUppdkJWTDFZXzlTdEVYSFRQRnhaR3M4ZE1uYU1qNkV0LXMzSmtGSU9uX1JyUjBzOEtBcUwxT0l2dGFPc3FnVXNSYXV1YmJwWUprWVo0dzR0TUlZT0w5a0dxX09KUHc?oc=5
+  2026-06-28  Immobilier : Engel & Völkers se lance dans la location saisonnière de prestige sur la Côte d'Azur - MySweetImmo
+      https://news.google.com/rss/articles/CBMizAFBVV95cUxNRzZsOGFmNEhxa0s5NUVkbm9VTFN0dE9LUFZVZlBYWUN5TmNUTGpuM1hVbVdzSkl3M0R2aU8zQVh2VVdyTDhoTzBKTS1PcEFRZDlSdnk3cml0RmRIclZEUUZuOUZ6NkJfRUV5LWlDM24zeFJ0UnZ5VWk0QTJKVVFicURkVTc0TWRtTXotMVNseXFvRXFFSkZiTTFPb2pLSldhdU1JMzYta2hrcVZTWlgydXhlbHozRXNvRENDM0tTek1Rc3RzdXBKUndPRG4?oc=5
+  2026-06-24  Les plus beaux hôtels 5 étoiles de la Côte d'Azur - YONDER
+      https://news.google.com/rss/articles/CBMid0FVX3lxTE9tUllvMEo4Yjl0NWd1UjZTM0w3QnZtblUzbloxbXU3MzZVSWFsVTY3UDdKRUxoRk9VY242U2xyTUxFOHo2X20yUUprcVBtbEd1ekpFNHpudHBMUUxpVTdvNGM1VGxLa1JUMDc3ZHYxZmZfTHRhT2J3?oc=5
+  2026-06-16  Cette villa de luxe près de Nice s’est vendue pour 45 millions d’euros - Nice-Matin
+      https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVGh6VmFkOWN4aXJqVzNoWS1DNW53UXllTFJVRUtDb0Z6RTEzT2YySU9nXzdCRzdLVzFRaDhDQ0ZsY25wMGhzRFlleVBBeGdmUGI5TzVJVkdNX1NJSEFwWXJSaHh0TTRIZlpoMF90UXJDbnJ0RlItOVZYYlZZeHVTQllYckcwNGFsb3lYSEtZUU9CWE5ya0RkN3k1ajNVSkM0VVhrZXRzWlRGQ1pDV0h0NnNjWTJBWWtqZ1FDSE9jZUg?oc=5
+  2026-06-14  Les plus belles villas à louer en Provence - YONDER
+      https://news.google.com/rss/articles/CBMif0FVX3lxTE8xOE5TWEc3LXcwSlJPMVpNdERMUDlLRWFDRjJTdjUxTDQ3c01pOFBubUN1Mm1kS3VULXQ5bTJXbzh6VldiX2lnUC1mOGhXbjFvSDNlRTNSX1lmRWhwVXl3ZmZpemJuYjhPM3BxbGpWbDNyLWMxTEVyQTNzUjRyc2M?oc=5
+  2026-06-01  À Cannes, cette villa unique au monde à 150 millions d'euros cache un funiculaire privé, un aquarium à méduses et un écran de cinéma géant - Cannes Actus
+      https://news.google.com/rss/articles/CBMi4AFBVV95cUxPR0ZIUlZ3U3FIeFJVbWl3UkJKQlQ3cHZZOEl3THBPRnIxekgzUE5kckVSU3c4UDQxcHNkcVlRcUFhZHV4TzNEcWxWWG8zQlFXbjlhRTkwd1N3NXA4X09RcFgtYml0OWFMRjFIUUdIeUZNbE5QOGg3QzBNSjY2Mk5ob18yQVpSUHNKZG1wMHB6QmZ5UmtPOHQtWlVobUx5dnVLTlFEWGhvdWIwVDRMM0FuUDdWWFJhQlBMQzlQdXVrd1p2Zm14YXM5bUZ3N0dOTUVTamtfaWtBMWhVUWw5N19Qdw?oc=5
+  2026-05-13  Un Ukrainien bat le record de l’habitation la plus chère : 471 millions pour un appartement de luxe à Monaco - Immoweb
+      https://news.google.com/rss/articles/CBMi1wFBVV95cUxOblo1NXgyd1ZBZUdYN0lvOFlHa3pFMlFyYWFrcXJIQk9XakRBYjU4bzFZQ3FFbkI4SFF6T2E0aVg3bVR3RjdWN01iZHprUWNiOTJKdGZiWVdWX2VSVC1OdDQ0ZEF3VXVzMTRCRVFudlM0YmRNNlpRU0lfUXUxRW1kVElWNWpPd1l3WWpLYWwzQy1iQlM4cksyYW5KQmpoaFBtMmg0LWU4TklxU0dYR1FJMk1zTnVrWGw3OHBscVI2NWw3MGVtLU9pMVpEQ0hQUjJkNE51THJndw?oc=5
+  2026-03-15  Nos hôtels en bord de mer préférés, en France et ailleurs - YONDER
+      https://news.google.com/rss/articles/CBMijwFBVV95cUxOeUpGNXFZSlVmSE9xa25EbC1uZFIxWXNEZjdwNEtYWDBhN0JlbW53NE55Z0EwNVFGZGpwOWExanZ3ZlkzYXNQTjRTTXFqRTVjN29lMFp5dDdBb0pFYkRuV0NGM2R1TEVrc0R5MkVfYTNHbFRXX3hEWVZ0aUxsY2FXMGNuX243ZXlWaTZVdUl0SQ?oc=5
+  2026-03-13  Luxe, glamour et Méditerranée : les plus beaux hôtels de la Côte d'Azur - YONDER
+      https://news.google.com/rss/articles/CBMiqAFBVV95cUxNa3ZqeThXbWVaQzQ5WDlXODNPNnVfTE10SWhhdDYwNHVLRVRPdU01ZEptbUYwYzRNNEF5a25sUXdpQTIyYU9wc3hEbXRIYVhMNXlkTUVNMkpfSmc5LUNHLVUzeEFacEZGWEZtcm4waGlUYmREenp1RVh3WGxUeXpYT2kwTlBCS2FzMURWN1dpOGdPT1NEWXU2cGM3eVhvbk80SGdLUHRYQ0k?oc=5
+  2026-03-10  Immobilier de prestige : des prix toujours records malgré les turbulences économiques - Les Echos
+      https://news.google.com/rss/articles/CBMiygFBVV95cUxNV3dYWmhZWlZWT21BTUVmNnp1eGZKNFVTUEhfeklONldLcDhZbHZ1VU1GREpRSVRndkZJSmtVaGFJV3oyNVZtaWs3SUs5TFRsaml1aDBQaWRXVXN6YTB6MjItZy1rZzBERm1tM0F3M0Q1UDVJTE5jT3kzYVg5RWFKQjRjZXliUXdzeVNFUHdUanF5YUVqaDBmRkNWWXZKbmpscEt2QU1TOUIwRHRfWG81Yjc0SlY1NzdTcFJna21hOW9PTE5YcTFGSXdn?oc=5
+  2025-07-29  « Le Provençal » à Antibes : Arcadis participe à la renaissance d’un joyau architectural, symbole de l’époque Art déco - Arcadis
+      https://news.google.com/rss/articles/CBMiygFBVV95cUxOSFdlOHhVN0MyY3VRYVZFX3c0S1ZiRGpYY3lOVThHSXdTXzA1aUg3bldVRU5vMHJMUVdpTTQzYXZSX0NtVkFxX2lxMWpkcElMaHN1YUVCUzd3eTdiNjdZU1Z6d3lRRzNIOE81WU93aW42eTBlV0VQeXBaX1N4Uk9yYU5yZkdFYXlLeW1fc01LR2sxdnpGaVUxMzM2bEEwXzZ4TFhnZzVmVmI2bkhEWVNqY3NLaWNkdFl4R3EyN3E5NW5ROHlCcGZ0S3d3?oc=5
+
+== INDUSTRY NEWS  q="conciergerie" villa OR "gestion locative" luxe  HTTP 200, 48 results
+  2026-09-23  HELPING HANDS : une conciergerie de prestige révèle les trésors du Lot - Capital.fr
+      https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRXN0N3ZiU1lHWVF3Qm9ka1ppd0FMOE9aX213Y01uNHFlenQ4dWxGWWxBSW12WWkwZmFXTjB1RTdvVUE4aDVXSE5hZkZKQllVQWpKal9KaW42SDdGTmZJanpISlJGcklKTjFPTlA4X1g4Y0Y2NDNoZVJCT3pYWGFtX3hKaWMxNm5pSzFSZzZGc3Z2NU80djlKcU9RY3hmODZlbXM4Wjl3dkdKN1RfbVVXc1dEVkdwWEVTc01J?oc=5
+  2026-08-11  Les 12 meilleurs Airbnb de luxe en Guadeloupe - Generation Voyage
+      https://news.google.com/rss/articles/CBMiYEFVX3lxTE1iLVJxYTk0QU5Db0NCNVRSZk04dzl0NVBSUXYtY011eUx2eVY4V2doSXd3ZXRiR3lhM0FCeEpsem0wTm96dV9haHZNQUpqMHBHS2NkOVVKdEZEYXZsN0NxWQ?oc=5
+  2026-07-15  Laissez-vous séduire par ces villas avec vue sur mer à Saint-Tropez ! - Capital.fr
+      https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFcyeFJjUUFtdHZsQWYtZ1dkcjVjWjZJdURONmR3SWk4djRJenRPWVNkSEJyalpGT0ZIZ0tPRy0xQ1RXZjhvdXduQU1tWW5zZG0tb19WN0JFT29KZUppdkJWTDFZXzlTdEVYSFRQRnhaR3M4ZE1uYU1qNkV0LXMzSmtGSU9uX1JyUjBzOEtBcUwxT0l2dGFPc3FnVXNSYXV1YmJwWUprWVo0dzR0TUlZT0w5a0dxX09KUHc?oc=5
+  2026-07-02  WOAD Luxury Travel transforme le voyage en moment d’exception - Le Figaro
+      https://news.google.com/rss/articles/CBMipwFBVV95cUxNaE9lb0xOd3JPanlHX2dMZEpnR0dBLWJhYzRNYlRHNlgtcmI1WlVSRFVVdVlMR093TURyNGF0aF9tM2JoN1dJMXdLUC1aRzJNY1FsVG5NaWpvWk9Bc2F2aXducEZOLTVhZWhhYzJCLTNxRVZORW1mUUF6SFJKOEZWb0k5amYxaFlYaGlYTk9MeE5fZ2RKRGJoSGRDbEZmWmJUb3p3SnRHQQ?oc=5
+  2026-06-14  Les plus belles villas à louer en Provence - YONDER
+      https://news.google.com/rss/articles/CBMif0FVX3lxTE8xOE5TWEc3LXcwSlJPMVpNdERMUDlLRWFDRjJTdjUxTDQ3c01pOFBubUN1Mm1kS3VULXQ5bTJXbzh6VldiX2lnUC1mOGhXbjFvSDNlRTNSX1lmRWhwVXl3ZmZpemJuYjhPM3BxbGpWbDNyLWMxTEVyQTNzUjRyc2M?oc=5
+  2026-05-21  Villa d’Este étend son empire sur le lac de Côme - Luxury Tribune
+      https://news.google.com/rss/articles/CBMigwFBVV95cUxQYXc1RzkyQmpCdklKUDJTN3V0TmVlbVdzNnEtNDZ6cUFwS3RCcXJqekJVd2NpSjA2MFpPX1h6Wm1WLUVabFZPeXZJYW9nd2phV1N0ejIyT0diWkxPbkw4RGVtS1hMMnRTQmxvSFUtakF1ZVNqNEZFa0swc1lUTFNPSEZWUQ?oc=5
+  2026-03-18  Seine-et-Marne : love rooms, cinéma room, villas... cette conciergerie propose des logements atypiques ! - Actu.fr
+      https://news.google.com/rss/articles/CBMi6wFBVV95cUxNaE82X2Q0Zm5wM1ZleDVKejZQY0o2LVVTX3pkWUdoX0h4ajh6WVV6T19UUXFpMU15QUhKWFNScm01aWc4ZVdLRHFjUWhheE5rak1LVDFTVTYzNGpJS3NseERyX0FCNng1Q0M2MFU1cVVKcURlTFkyVVRCUTh4U1pUZ3p2S0JGUEpFcTliREhhdEw1NS1YTEtrdmFvUU9GRldzMWcxVFhjR0hnTkpNVWhtWHNHQWtXaFRHSDVaVWFkVlJ2bVJUSElwb3JFSjZSSzYyTmNVaWJUSVpwZk1iQzJTbzM3M2IwaXROTHVn?oc=5
+  2026-01-26  WhereInRio : immobilier de luxe à Rio de Janeiro et art de vivre au Brésil - Marie Claire
+      https://news.google.com/rss/articles/CBMicEFVX3lxTE4tSzNuWWRmejBuQTZqWXp2SFo1NTdKQzVjcnRJeVkzSHVsdjlyd3Y1U1JlVzBVZk1UazhFMlhXOTJ1UzM3Tkh4eVFLbVZSbERVRGQ1UE8yVXQzSWI4WXhXYkdXLTFqbUtObUtEbjVHcDE?oc=5
+  2026-01-15  La villa La Cassinella, située sur le lac de Côme, a été vendue à un prix record. - Montenapo Daily
+      https://news.google.com/rss/articles/CBMipgFBVV95cUxNeTRUSFJVX1kySDJhcHc5RkFvZEZIQ1d3RzVSNkxzWUxEdUZ0MnlCNXhYeVZzTG5HTXVyNzBEU0hQREtqVExsWFZxMV9RTml4aVZ1Ylc0LW82UXhtRURZU1hDYnp0bkxOS0ctQWNKSlZhcU1GQnBoYmtLemV5blQzVU1WWTY2SFJUVUFvb2U0ZlhEdnltajBIVzRrLVhveTlZNl83Rjdn?oc=5
+  2025-11-27  La liste ultime des sites de location de vacances de luxe - RSU by PriceLabs
+      https://news.google.com/rss/articles/CBMilgFBVV95cUxOczd4WG1HbWRvUUxLUjRyZDRyb0JiM2NyM2xCdnpvMU1lNkNvM211eDZUVnZhWWp1bTJSOGl4ejhkYXBwa1dHV2liekZUNG5PZnZKMk5NQlRYS2duM0xqcFNxNmpJZ3lOMUs2VVhvdWJrcmZfZkVkQ3piaVhqbkQ5bnZkR0UyT1Q3Q1dQbko4V3VudjJGcEE?oc=5
+  2025-11-07  Million Dollar Weekend (Émission) - TF1+
+      https://news.google.com/rss/articles/CBMiWEFVX3lxTE81elg4QU1OQnNDcTNpbUdtVTJTTmVJUVA0S1JySEQxOTlxTkRLcXpjZVpOSmxMVU9nRnNUUE9SMUF3Ylpkd1N3d1lhdjBvcktZVjNjTmI4cEg?oc=5
+  2025-09-19  La location courte durée à Paris, toute l’année : le savoir-faire de Paris Conciergerie - Le Figaro
+      https://news.google.com/rss/articles/CBMixAFBVV95cUxOcXQxTnBUQXg4REVVQVRYNXl4cm5wUk5yWlVSUFpxM3NtdXk0ZzhFLTd6SkFtOGJZdnlIXzFnNHlyQ1QyUlFjVF95ekdJOFgtMTlxaUtRSmdRVlMtWGNqdFhRSWlFY3ZoSllGQmRMMGdoZ09KUUpaSmR6a0Nzc21mQmNxR1VTeDFJalpGcEl2aFBmeXhfTWpLOC1iZ1kxdEI0a0Zma1JVOTVzdVg1V1RNWllWcFZpaWdYdEZOQXJPMDF5RDJN?oc=5

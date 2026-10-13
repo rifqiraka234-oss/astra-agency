@@ -1,0 +1,210 @@
+{
+ "target": "https://www.garnishcollective.com/",
+ "tag": "gc",
+ "status": 200,
+ "navError": null,
+ "fetchedAt": "2026-10-12T16:40:18.395Z",
+ "reach": {
+  "verdict": "READ",
+  "attempts": [
+   "networkidle:TimeoutError: page.goto: Timeout 60000ms exceeded.",
+   "domcontentloaded:200"
+  ],
+  "controlOk": null,
+  "plainHttp": null,
+  "dns": null
+ },
+ "hidden": {
+  "textLength": 2378,
+  "mainHtmlLength": 328003,
+  "textToHtmlRatio": 0.0072,
+  "inlineScriptsInMain": 4,
+  "gateCandidates": [],
+  "contentProbablyHidden": true
+ },
+ "page": {
+  "title": "Home | The Garnish Collective",
+  "lang": "en",
+  "generator": "Wix.com Website Builder",
+  "description": null,
+  "forms": 1,
+  "inputs": 2,
+  "mailto": 0,
+  "tel": 0,
+  "images": 47,
+  "svgs": 7,
+  "videos": 1,
+  "h1": [
+   "Join our mailing list"
+  ],
+  "nav": [
+   " => https://www.garnishcollective.com",
+   "Home => https://www.garnishcollective.com",
+   "About => https://www.garnishcollective.com/about-1",
+   "Corporate => https://www.garnishcollective.com/corporate",
+   "Bar Hire => https://www.garnishcollective.com/barhire",
+   "Weddings => https://www.garnishcollective.com/weddings",
+   "Celebrations => https://www.garnishcollective.com/celebrations",
+   "Enquire Now => https://www.garnishcollective.com/enquire"
+  ],
+  "social": {},
+  "bannerPresent": false,
+  "acceptButton": null,
+  "rejectButton": null,
+  "privacyLink": null,
+  "imprintLink": null,
+  "textLength": 2378,
+  "text": "Skip to Main Content\nHome\nAbout\nCorporate\nBar Hire\nWeddings\nCelebrations\nEnquire Now\nThe Garnish Collective is a luxury events and catering company based in Yorkshire, delivering unforgettable experiences across the UK and beyond. Led by MasterChef finalist Chris Hale, our team has had the privilege of catering for royalty, world-class athletes, and A-list celebrities around the world. A testament to the standard upheld at every event.\nWhat Do you Need?\nWe’ll help you choose the perfect services, styling, and extras to bring your vision to life.\nWeddings\nVIEW\nCreate your dream day with tailored menus, beautiful styling, and memorable service. \nEnjoy stunning settings, seamless coordination, and a stress-free experience from start to finish.\nCorporate\nVIEW\nHost productive, memorable business events with flexible catering packages, professional bar hire, and custom branding. Choose from event styling, venue access, and complete planning support.\nCelebrations &\nSpecial Events\nVIEW\nMake birthdays, parties, and milestones unforgettable with creative food choices, entertaining bar setups, and decor that pops. Pick your perfect package and let us bring the style, service, and fun.\nWith an innovative approach to culinary artistry and event management, The Garnish Collective provides bespoke catering solutions to events from corporate days to wedding banquets.\nCrafted with Vision\nFrom MasterChef to\nCreative Mastermind\nWe are proud to be led by the incredible Chris Hale, founder and head chef of The Garnish Collective.\nAs a former MasterChef UK quarter-finalist, Chris has built a reputation for pushing culinary boundaries with creativity, precision, and flair. His career has taken him across the globe, where he has cooked for royalty, world-class athletes, and A-list celebrities.\nExperiences that have shaped his vision for delivering extraordinary dining at every level.\nWhat We've Done\n250+\nEvents Catered\n20,000+\nDishes Served\n20 years\nIndustry Experience\nCorporate, weddings\n& celebrations of\nall types. \nUnparalleled culinary luxury.\nBook your event with The Garnish Collective to immerse yourself and your guests in the ultimate dining and event experience.\nBook Your Event\nJoin our mailing list\nEmail*\nSubscribe\nI want to subscribe to your mailing list.\n©2025 The Garnish Collective LTD\n07899767279\nSustainability Agreement",
+  "mainHtmlLength": 328003,
+  "inlineScriptsInMain": 4,
+  "gateCandidates": []
+ },
+ "stack": {
+  "generator": "Wix.com Website Builder",
+  "wordpress": false,
+  "wpVersion": null,
+  "themes": [],
+  "boughtTheme": null,
+  "plugins": [],
+  "builder": [],
+  "saasBuilder": [
+   "wix"
+  ],
+  "fontFamilies": [
+   "Arial,Helvetica,sans-serif",
+   "Helvetica,Arial,sans-serif",
+   "Helvetica,Arial,メイリオ,meiryo,ヒラギノ角ゴ pro w3,hiragino kaku gothic pro,sans-serif",
+   "var(--wix-forms-formPreviousButtonFont-family)",
+   "var(--wix-forms-formNextButtonFont-family)",
+   "var(--wix-forms-formSubmitButtonFont-family)",
+   "Madefor,Helvetica Neue,Helvetica,Arial,メイリオ,meiryo,ヒラギノ角ゴ pro w3,hiragino kaku gothic pro,sans-serif",
+   "var(--wix-ui-tpa-text-main-text-font-family,var(--wix-font-Page-title-family))"
+  ],
+  "hexColours": [
+   [
+    "275f49",
+    70
+   ],
+   [
+    "f3f2ed",
+    38
+   ],
+   [
+    "116dff",
+    24
+   ],
+   [
+    "2b5672",
+    22
+   ],
+   [
+    "212121",
+    9
+   ],
+   [
+    "8f8f8f",
+    8
+   ]
+  ]
+ },
+ "era": {
+  "datedTells": [],
+  "boughtTheme": null
+ },
+ "gdpr": {
+  "consentPlatform": [],
+  "bannerPresent": false,
+  "acceptButton": null,
+  "rejectButton": null,
+  "rejectMissingOrSmaller": true,
+  "privacyLink": null,
+  "imprintLink": null,
+  "cookiesBeforeAnyClick": [
+   {
+    "name": "server-session-bind",
+    "domain": "www.garnishcollective.com",
+    "party": "first",
+    "session": true
+   },
+   {
+    "name": "hs",
+    "domain": ".www.garnishcollective.com",
+    "party": "first",
+    "session": true
+   },
+   {
+    "name": "svSession",
+    "domain": ".www.garnishcollective.com",
+    "party": "first",
+    "session": false
+   },
+   {
+    "name": "bSession",
+    "domain": ".www.garnishcollective.com",
+    "party": "first",
+    "session": false
+   },
+   {
+    "name": "XSRF-TOKEN",
+    "domain": ".www.garnishcollective.com",
+    "party": "first",
+    "session": true
+   },
+   {
+    "name": "client-session-bind",
+    "domain": "www.garnishcollective.com",
+    "party": "first",
+    "session": true
+   },
+   {
+    "name": "ssr-caching",
+    "domain": "www.garnishcollective.com",
+    "party": "first",
+    "session": false
+   }
+  ],
+  "thirdPartyCookiesBeforeAnyClick": [],
+  "trackersBeforeAnyClick": [],
+  "googleFontsRemote": false,
+  "allThirdPartyHosts": [
+   "static.parastorage.com",
+   "static.wixstatic.com",
+   "frog.wix.com",
+   "panorama.wixapps.net",
+   "siteassets.parastorage.com",
+   "browser.sentry-cdn.com",
+   "video.wixstatic.com"
+  ]
+ },
+ "social": {},
+ "render": {
+  "suspectAssets": [],
+  "assetsOurFault": 0,
+  "assetsTheirFault": 0,
+  "assetFindingsTrustworthy": true
+ },
+ "health": {
+  "pageErrors": [],
+  "failedRequests": [
+   "https://video.wixstatic.com/video/11062b_0234bac6aabb4d45af0cbe02be372826/1080p/mp4/file.mp4",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://frog.wix.com/bpm",
+   "https://frog.wix.com/bolt-performance",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://frog.wix.com/bolt-performance",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://panorama.wixapps.net/api/v1/bulklog",
+   "https://frog.wix.com/",
+   "https://frog.wix.com/",
+   "https://video.wixstatic.com/video/11062b_0234bac6aabb4d45af0cbe02be372826/1080p/mp4/file.mp4",
+   "https://panorama.wixapps.net/api/v1/bulklog"
+  ]
+ },
+ "shots": {
+  "desktop": "/tmp/claude-0/agents/b17/audit/gc-desktop.png",
+  "phone": "/tmp/claude-0/agents/b17/audit/gc-phone.png"
+ }
+}

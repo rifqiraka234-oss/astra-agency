@@ -1,3 +1,5 @@
+<!-- SUPERSEDED 2026-10-12 by state/drafted_2026-10-12-emily-bump.md under Raka's plain bump rule. Do not send this researched version unless Raka asks for one. -->
+<!-- REVISED 2026-10-12 06:16 UTC, 'on Tuesday' became 'last Tuesday' (opener went 2026-10-06, a Tuesday), and 'can't tell' became 'likely can't tell' per RULES 0C, the .mx domain may tell some visitors. All four claims reopened 06:14 UTC, render of / and /en curl errors 0, bio 'lidera la proyección internacional de la firma desde Francia' and 'en español, inglés y francés', Wix languages es and en, /fr 404, México 0 Mexico 0 Guadalajara 0 IMPI 0 in visible copy (raw HTML hits only the timezone and a country list), control marca 7 and trademark 2. Thread pulled 06:13 UTC, 2 items, no reply, control 2 items. -->
 <!-- Emily Levy nudge. NOT BEFORE 2026-10-09 12:00 UTC. Re pull thread and recheck the site before sending. If after Sunday 11 Oct, change 'on Tuesday' to 'last Tuesday'. -->
 # Emily Levy nudge
 
@@ -49,9 +51,9 @@ recheck: 2026-10-07 06:25 UTC, all four claims reopened live in this session, th
 
 NUDGE
 ```
-Hi Emily, a different thought from my note on Tuesday.
+Hi Emily, a different thought from my note last Tuesday.
 
-You lead Alquimia's international side from France and offer your services in French too. But the site only comes in Spanish and English, and the homepage never once says Mexico. So a French company that wants its brand protected in Mexico can't tell you're the firm for it.
+You lead Alquimia's international side from France and offer your services in French too. But the site only comes in Spanish and English, and the homepage never once says Mexico. So a French company that wants its brand protected in Mexico likely can't tell you're the firm for it.
 
 Shall I send you over what a site in French that brings in clients from Europe looks like?
 ```

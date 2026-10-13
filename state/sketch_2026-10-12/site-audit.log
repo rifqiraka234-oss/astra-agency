@@ -1,0 +1,222 @@
+##### ms
+
+== https://www.musicsocial.co.uk/  (200)
+title        Music Social | Socials and Parties in London
+stack        Wix.com Website Builder
+era tells    none greppable, judge from the screenshots
+flow         forms 1 inputs 3 mailto 0 tel 0 | img 6 svg 23 video 3
+gdpr banner  NONE FOUND [absence, confirmed against a working control] | reject NOT FOUND
+gdpr pre     14 cookies, 4 third party, before any click
+trackers pre www.googletagmanager.com, www.google-analytics.com, www.youtube.com, fonts.gstatic.com, googleads.g.doubleclick.net, static.doubleclick.net
+egress       US, NOT an EU or UK visitor
+    no consent code of any kind in the HTML, so no geo rule can exist. Tracker lines hold,
+    confirm with the list of hosts the page contacted before writing it.
+googlefonts  REMOTE, loaded from Google
+privacy      NO LINK FOUND [absence, confirmed against a working control]
+social       linkedin -> https://il.linkedin.com/company/music-social
+             instagram -> https://www.instagram.com/musicsocialofficial
+errors       0 page errors, 8 failed requests
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/agents/b17/audit/ms.json plus two screenshots. LOOK AT THEM.
+
+##### muush
+
+== https://muush.co/  (200)
+title        Lion's Mane Soda & Elixirs | Functional Mushroom Drinks UK – MUUSH
+stack        shopify
+era tells    none greppable, judge from the screenshots
+flow         forms 14 inputs 36 mailto 0 tel 0 | img 68 svg 132 video 8
+gdpr banner  yes | reject NOT FOUND
+gdpr pre     25 cookies, 10 third party, before any click
+trackers pre www.clarity.ms, connect.facebook.net, www.googletagmanager.com, scripts.clarity.ms, www.googleadservices.com, ad.doubleclick.net, stats.g.doubleclick.net, googleads.g.doubleclick.net, c.clarity.ms, z.clarity.ms, fonts.googleapis.com, fonts.gstatic.com
+egress       US, NOT an EU or UK visitor
+!!  GEO VOID. Consent code on the page (privacy-banner,customerprivacy).
+!!  It can show an EU visitor a banner and block trackers that a US visitor never sees.
+!!  The banner, reject, pre consent cookie and tracker lines are VOID for EU visitors.
+!!  Never write a GDPR claim off this run. NEXT STEP, the EU view from Stockholm,
+!!    python3 tools/eu-view.py https://muush.co/ --shopify
+googlefonts  REMOTE, loaded from Google
+privacy      https://muush.co/policies/privacy-policy
+social       instagram -> https://www.instagram.com/drinkmuush/
+             facebook -> https://www.facebook.com/muush.uk/
+             youtube -> https://www.youtube.com/@muush.uk1
+errors       0 page errors, 45 failed requests
+
+!!  RENDER NOT TRUSTED. 12 of 12 assets this
+!!  reader could not load ARE SERVED FINE over a direct fetch, so the failure is
+!!  OURS, not theirs. Every asset, image, layout and breakage finding in this run
+!!  is VOID. You may NOT say anything is broken, missing or not loading, and the
+!!  screenshots are unreliable for this site because they are missing real assets.
+!!  NEXT STEP, the second render path. node tools/render-via-curl.js https://muush.co/ muush
+!!  If that serves every request with 0 curl errors, read its parts instead.
+!!    ours  200 image/jpeg         https://muush.co/cdn/shop/files/12_f5a867ae-035d-4d45-9e17-e4706ec52991.webp?v=1785949870&
+!!    ours  200 image/jpeg         https://muush.co/cdn/shop/files/21.webp?v=1785949885&width=1200
+!!    ours  200 image/jpeg         https://muush.co/cdn/shop/files/22.webp?v=1785949885&width=1200
+!!    ours  200 image/jpeg         https://muush.co/cdn/shop/files/23.webp?v=1785949884&width=1200
+!!    ours  200 image/jpeg         https://muush.co/cdn/shop/files/13_498a4d1c-eaa9-478a-8895-408e7c3cbed1.webp?v=1785949887&
+
+!!  CONTENT MAY BE HIDDEN FROM THIS READER. DO NOT CALL THIS PAGE EMPTY OR THIN.
+!!  3394 chars of text against 198119 chars of markup in the main area (ratio 0.0171).
+!!  32 inline script or style blocks sit inside the content area, so the page builds itself.
+!!  Open the screenshot. An emptiness claim needs a picture of an empty page, nothing less.
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/agents/b17/audit/muush.json plus two screenshots. LOOK AT THEM.
+
+##### pix
+
+== https://www.panoramixip.co.uk/  (200)
+title        International Intellectual Property Law Firm | Panoramix IP
+stack        WordPress 7.1.3 | WP 7.1.3
+era tells    none greppable, judge from the screenshots
+flow         forms 1 inputs 16 mailto 1 tel 3 | img 41 svg 7 video 0
+gdpr banner  NONE FOUND [absence, confirmed against a working control] | reject NOT FOUND
+gdpr pre     17 cookies, 3 third party, before any click
+trackers pre snap.licdn.com, www.googletagmanager.com, stats.g.doubleclick.net, googleads.g.doubleclick.net, ad.doubleclick.net
+egress       US, NOT an EU or UK visitor
+    no consent code of any kind in the HTML, so no geo rule can exist. Tracker lines hold,
+    confirm with the list of hosts the page contacted before writing it.
+googlefonts  not remote
+privacy      https://panoramixip.co.uk/services/confidentiality-agreements/
+social       linkedin -> https://uk.linkedin.com/company/panoramixip
+             instagram -> https://www.instagram.com/panoramixip/
+             facebook -> https://www.facebook.com/PanoramixIP/
+             whatsapp -> https://wa.me/447393185437
+errors       0 page errors, 6 failed requests
+
+!!  RENDER NOT TRUSTED. 1 of 1 assets this
+!!  reader could not load ARE SERVED FINE over a direct fetch, so the failure is
+!!  OURS, not theirs. Every asset, image, layout and breakage finding in this run
+!!  is VOID. You may NOT say anything is broken, missing or not loading, and the
+!!  screenshots are unreliable for this site because they are missing real assets.
+!!  NEXT STEP, the second render path. node tools/render-via-curl.js https://www.panoramixip.co.uk/ pix
+!!  If that serves every request with 0 curl errors, read its parts instead.
+!!    ours  200 image/webp         https://panoramixip.co.uk/wp-content/uploads/2026/05/cta-banner.webp
+
+!!  CONTENT MAY BE HIDDEN FROM THIS READER. DO NOT CALL THIS PAGE EMPTY OR THIN.
+!!  12651 chars of text against 110177 chars of markup in the main area (ratio 0.1148).
+!!  1 inline script or style blocks sit inside the content area, so the page builds itself.
+!!  A gate is in the way. Click it and look again. Buttons found: Get Started with Panoramix IP
+!!  Open the screenshot. An emptiness claim needs a picture of an empty page, nothing less.
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/agents/b17/audit/pix.json plus two screenshots. LOOK AT THEM.
+
+##### bal
+
+== https://www.baldoriaparis.com/  (200)
+title        Baldoria Paris ⎸ Agence événementielle
+stack        squarespace
+era tells    none greppable, judge from the screenshots
+flow         forms 2 inputs 8 mailto 0 tel 0 | img 7 svg 5 video 0
+gdpr banner  NONE FOUND [absence, confirmed against a working control] | reject NOT FOUND
+gdpr pre     5 cookies, 0 third party, before any click
+trackers pre www.googletagmanager.com, www.google-analytics.com, www.gstatic.com, fonts.gstatic.com
+egress       US, NOT an EU or UK visitor
+    no consent code of any kind in the HTML, so no geo rule can exist. Tracker lines hold,
+    confirm with the list of hosts the page contacted before writing it.
+googlefonts  REMOTE, loaded from Google
+privacy      NO LINK FOUND [absence, confirmed against a working control]
+social       linkedin -> https://www.linkedin.com/company/baldoriaparis/?viewAsMember=true
+             instagram -> https://www.instagram.com/baldoria.paris/
+errors       0 page errors, 2 failed requests
+
+!!  CONTENT MAY BE HIDDEN FROM THIS READER. DO NOT CALL THIS PAGE EMPTY OR THIN.
+!!  799 chars of text against 127013 chars of markup in the main area (ratio 0.0063).
+!!  49 inline script or style blocks sit inside the content area, so the page builds itself.
+!!  Open the screenshot. An emptiness claim needs a picture of an empty page, nothing less.
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/agents/b17/audit/bal.json plus two screenshots. LOOK AT THEM.
+
+##### sgb
+
+== https://www.stadsgroenteboer.nl/  (200)
+title        De Stadsgroenteboer
+stack        squarespace
+era tells    none greppable, judge from the screenshots
+flow         forms 0 inputs 2 mailto 1 tel 0 | img 11 svg 19 video 1
+gdpr banner  NONE FOUND [absence, confirmed against a working control] | reject NOT FOUND
+gdpr pre     3 cookies, 0 third party, before any click
+trackers pre none
+egress       US, NOT an EU or UK visitor
+    no consent code of any kind in the HTML, so no geo rule can exist. Tracker lines hold,
+    confirm with the list of hosts the page contacted before writing it.
+googlefonts  not remote
+privacy      NO LINK FOUND [absence, confirmed against a working control]
+social       instagram -> https://www.instagram.com/p/DZSgvkVDFJB/
+             facebook -> https://www.facebook.com/destadsgroenteboer/
+errors       0 page errors, 0 failed requests
+
+!!  CONTENT MAY BE HIDDEN FROM THIS READER. DO NOT CALL THIS PAGE EMPTY OR THIN.
+!!  5376 chars of text against 55622 chars of markup in the main area (ratio 0.0967).
+!!  30 inline script or style blocks sit inside the content area, so the page builds itself.
+!!  A gate is in the way. Click it and look again. Buttons found: Enter fullscreen
+!!  Open the screenshot. An emptiness claim needs a picture of an empty page, nothing less.
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/agents/b17/audit/sgb.json plus two screenshots. LOOK AT THEM.
+
+##### gc
+
+== https://www.garnishcollective.com/  (200)
+title        Home | The Garnish Collective
+stack        Wix.com Website Builder
+era tells    none greppable, judge from the screenshots
+flow         forms 1 inputs 2 mailto 0 tel 0 | img 47 svg 7 video 1
+gdpr banner  NONE FOUND [absence, confirmed against a working control] | reject NOT FOUND
+gdpr pre     7 cookies, 0 third party, before any click
+trackers pre none
+egress       US, NOT an EU or UK visitor
+    no consent code of any kind in the HTML, so no geo rule can exist. Tracker lines hold,
+    confirm with the list of hosts the page contacted before writing it.
+googlefonts  not remote
+privacy      NO LINK FOUND [absence, confirmed against a working control]
+social       NONE LINKED
+errors       0 page errors, 21 failed requests
+
+!!  CONTENT MAY BE HIDDEN FROM THIS READER. DO NOT CALL THIS PAGE EMPTY OR THIN.
+!!  2378 chars of text against 328003 chars of markup in the main area (ratio 0.0072).
+!!  4 inline script or style blocks sit inside the content area, so the page builds itself.
+!!  Open the screenshot. An emptiness claim needs a picture of an empty page, nothing less.
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/agents/b17/audit/gc.json plus two screenshots. LOOK AT THEM.
+
+##### md
+
+== https://www.majordomo.vip/  (200)
+title        MAJOR DOMO
+stack        squarespace
+era tells    none greppable, judge from the screenshots
+flow         forms 1 inputs 4 mailto 0 tel 0 | img 20 svg 26 video 0
+gdpr banner  yes | reject present
+gdpr pre     4 cookies, 0 third party, before any click
+trackers pre connect.facebook.net, www.googletagmanager.com, www.gstatic.com, www.google-analytics.com, fonts.gstatic.com
+egress       US, NOT an EU or UK visitor
+    no consent code of any kind in the HTML, so no geo rule can exist. Tracker lines hold,
+    confirm with the list of hosts the page contacted before writing it.
+googlefonts  REMOTE, loaded from Google
+privacy      https://www.majordomo.vip/privacy-policy
+social       linkedin -> https://www.linkedin.com/company/majordomo-vip
+             instagram -> http://instagram.com/MajorDomoVIP
+             pinterest -> https://www.pinterest.com/MajorDomoVIP
+errors       0 page errors, 1 failed requests
+
+!!  CONTENT MAY BE HIDDEN FROM THIS READER. DO NOT CALL THIS PAGE EMPTY OR THIN.
+!!  6207 chars of text against 202104 chars of markup in the main area (ratio 0.0307).
+!!  78 inline script or style blocks sit inside the content area, so the page builds itself.
+!!  A gate is in the way. Click it and look again. Buttons found: En Français | En Français
+!!  Open the screenshot. An emptiness claim needs a picture of an empty page, nothing less.
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/agents/b17/audit/md.json plus two screenshots. LOOK AT THEM.
+

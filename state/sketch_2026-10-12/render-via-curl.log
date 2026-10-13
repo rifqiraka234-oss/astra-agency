@@ -1,0 +1,54 @@
+== https://muush.co/
+served by curl 229   curl errors 0   images 68   undecoded 20
+page width 1440 against viewport 1440
+non 200 from their own server, these ARE theirs
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  404 https://muush.co/api/event/collect
+  404 https://muush.co/api/collect
+  404 https://muush.co/api/event/collect
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  404 https://muush.co/api/event/collect
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  404 https://muush.co/shopify_pay/accelerated_checkout
+  404 https://muush.co/api/collect
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  404 https://muush.co/api/collect
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  404 https://muush.co/api/collect
+  404 https://muush.co/api/event/collect
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  404 https://muush.co/api/collect
+  404 https://muush.co/api/collect
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  503 https://muush.co/.well-known/shopify/monorail/unstable/produce_batch
+  404 https://muush.co/api/event/collect
+  404 https://muush.co/api/collect
+  404 https://muush.co/api/collect
+  404 https://muush.co/api/collect
+  404 https://muush.co/api/event/collect
+  404 https://muush.co/api/collect
+wrote, LOOK AT EVERY PART
+  /tmp/claude-0/muush-curlrender-part0.png
+  /tmp/claude-0/muush-curlrender-part1.png
+  /tmp/claude-0/muush-curlrender-part2.png
+!!  Still gaps. Undecoded images can be lazy or hidden slides, never call them broken from this alone.
+== https://www.panoramixip.co.uk/
+served by curl 55   curl errors 0   images 41   undecoded 1
+page width 1440 against viewport 1440
+wrote, LOOK AT EVERY PART
+  /tmp/claude-0/pix-curlrender-part0.png
+  /tmp/claude-0/pix-curlrender-part1.png
+  /tmp/claude-0/pix-curlrender-part2.png
+  /tmp/claude-0/pix-curlrender-part3.png
+  /tmp/claude-0/pix-curlrender-part4.png
+  /tmp/claude-0/pix-curlrender-part5.png
+!!  Still gaps. Undecoded images can be lazy or hidden slides, never call them broken from this alone.

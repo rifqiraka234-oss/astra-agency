@@ -1,0 +1,28 @@
+
+== https://liverpooltourexperiences.co.uk/  (200)
+title        Liverpool Tour Experiences | Private Tours, Shore Excursions & Minibus Hire
+stack        Starfield Technologies; Go Daddy Website Builder 8.0.0000 | oxygen
+era tells    none greppable, judge from the screenshots
+flow         forms 1 inputs 10 mailto 1 tel 5 | img 45 svg 37 video 0
+gdpr banner  yes | reject present
+gdpr pre     6 cookies, 2 third party, before any click
+trackers pre www.googletagmanager.com, connect.facebook.net, www.google-analytics.com, www.gstatic.com, fonts.gstatic.com
+egress       US, NOT an EU or UK visitor
+!!  GEO VOID. Consent code on the page (gtag("consent).
+!!  It can show an EU visitor a banner and block trackers that a US visitor never sees.
+!!  The banner, reject, pre consent cookie and tracker lines are VOID for EU visitors.
+!!  Never write a GDPR claim off this run. NEXT STEP, the EU view from Stockholm,
+!!    python3 tools/eu-view.py https://liverpooltourexperiences.co.uk/
+googlefonts  REMOTE, loaded from Google
+privacy      https://policies.google.com/privacy
+social       linkedin -> https://www.linkedin.com/in/darrengilligan/
+             instagram -> https://www.instagram.com/liverpool_tour_experiences_/
+             facebook -> https://www.facebook.com/people/Liverpool-Tour-Experiences/61556224343389/
+             tiktok -> https://www.tiktok.com/@liverpooltourexper?_t=8kpnVQrQpzF&_r=1
+             whatsapp -> https://wa.me/447990984932
+errors       6 page errors, 6 failed requests
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/agents/b16/lte.json plus two screenshots. LOOK AT THEM.
+

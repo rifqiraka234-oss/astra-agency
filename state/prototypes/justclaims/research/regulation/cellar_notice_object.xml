@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NOTICE decoding="eng" type="object">
+   <EXPRESSION>
+      <URI>
+         <VALUE>http://publications.europa.eu/resource/cellar/54406a3d-bdf9-11f1-9aae-01aa75ed71a1.0006</VALUE>
+         <IDENTIFIER>54406a3d-bdf9-11f1-9aae-01aa75ed71a1.0006</IDENTIFIER>
+         <TYPE>cellar</TYPE>
+      </URI>
+      <SAMEAS>
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/oj/L_202602202.ENG</VALUE>
+            <IDENTIFIER>L_202602202.ENG</IDENTIFIER>
+            <TYPE>oj</TYPE>
+         </URI>
+      </SAMEAS>
+      <EXPRESSION_USES_LANGUAGE type="concept">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/authority/language/ENG</VALUE>
+            <IDENTIFIER>ENG</IDENTIFIER>
+            <TYPE>language</TYPE>
+         </URI>
+         <OP-CODE>ENG</OP-CODE>
+         <IDENTIFIER>ENG</IDENTIFIER>
+         <PREFLABEL>English</PREFLABEL>
+         <ALTLABEL>English</ALTLABEL>
+      </EXPRESSION_USES_LANGUAGE>
+      <TITLE type="data">
+         <VALUE>PE/39/REV2/2026</VALUE>
+      </TITLE>
+      <EXPRESSION_MANIFESTED_BY_MANIFESTATION type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/54406a3d-bdf9-11f1-9aae-01aa75ed71a1.0006.03</VALUE>
+            <IDENTIFIER>54406a3d-bdf9-11f1-9aae-01aa75ed71a1.0006.03</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/L_202602202.ENG.xhtml</VALUE>
+               <IDENTIFIER>L_202602202.ENG.xhtml</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_MANIFESTED_BY_MANIFESTATION>
+      <LANG type="data">
+         <VALUE>eng</VALUE>
+      </LANG>
+      <TITLE type="data">
+         <VALUE>Regulation (EU) 2026/2202 of the European Parliament and of the Council of 16 September 2026 amending Regulation (EC) No 261/2004 of the European Parliament and of the Council establishing common rules on compensation and assistance to passengers in the event of denied boarding and of cancellation or long delay of flights and Council Regulation (EC) No 2027/97 on air carrier liability in respect of the carriage of passengers and their baggage by air (Text with EEA relevance)</VALUE>
+         <LANG>en</LANG>
+      </TITLE>
+      <LASTMODIFICATIONDATE type="date">
+         <VALUE>2026-10-02T02:55:18.264+02:00</VALUE>
+         <YEAR>2026</YEAR>
+         <MONTH>10</MONTH>
+         <DAY>02</DAY>
+      </LASTMODIFICATIONDATE>
+      <EXPRESSION_MANIFESTED_BY_MANIFESTATION type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/54406a3d-bdf9-11f1-9aae-01aa75ed71a1.0006.01</VALUE>
+            <IDENTIFIER>54406a3d-bdf9-11f1-9aae-01aa75ed71a1.0006.01</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/L_202602202.ENG.pdfa2a</VALUE>
+               <IDENTIFIER>L_202602202.ENG.pdfa2a</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_MANIFESTED_BY_MANIFESTATION>
+      <EXPRESSION_BELONGS_TO_WORK type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/54406a3d-bdf9-11f1-9aae-01aa75ed71a1</VALUE>
+            <IDENTIFIER>54406a3d-bdf9-11f1-9aae-01aa75ed71a1</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/L_202602202</VALUE>
+               <IDENTIFIER>L_202602202</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/celex/32026R2202</VALUE>
+               <IDENTIFIER>32026R2202</IDENTIFIER>
+               <TYPE>celex</TYPE>
+            </URI>
+         </SAMEAS>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/eli/reg/2026/2202/oj</VALUE>
+               <IDENTIFIER>reg:2026:2202:oj</IDENTIFIER>
+               <TYPE>eli</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_BELONGS_TO_WORK>
+      <CREATIONDATE type="date">
+         <VALUE>2026-10-02T02:36:26.882+02:00</VALUE>
+         <YEAR>2026</YEAR>
+         <MONTH>10</MONTH>
+         <DAY>02</DAY>
+      </CREATIONDATE>
+      <EXPRESSION_MANIFESTED_BY_MANIFESTATION type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/54406a3d-bdf9-11f1-9aae-01aa75ed71a1.0006.02</VALUE>
+            <IDENTIFIER>54406a3d-bdf9-11f1-9aae-01aa75ed71a1.0006.02</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/L_202602202.ENG.fmx4</VALUE>
+               <IDENTIFIER>L_202602202.ENG.fmx4</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_MANIFESTED_BY_MANIFESTATION>
+      <EXPRESSION_TITLE type="data">
+         <VALUE>Regulation (EU) 2026/2202 of the European Parliament and of the Council of 16 September 2026 amending Regulation (EC) No 261/2004 of the European Parliament and of the Council establishing common rules on compensation and assistance to passengers in the event of denied boarding and of cancellation or long delay of flights and Council Regulation (EC) No 2027/97 on air carrier liability in respect of the carriage of passengers and their baggage by air (Text with EEA relevance)</VALUE>
+         <LANG>en</LANG>
+      </EXPRESSION_TITLE>
+      <EXPRESSION_SUBTITLE type="data">
+         <VALUE>PE/39/REV2/2026</VALUE>
+      </EXPRESSION_SUBTITLE>
+      <LANG type="data">
+         <VALUE>en</VALUE>
+      </LANG>
+   </EXPRESSION>
+</NOTICE>

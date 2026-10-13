@@ -115,6 +115,97 @@ catches this class of error before a single page is fetched.
 **If the record cannot be reconciled with evidence, the row is `BLOCKED_NEEDS_INFO` and
 stays untouched.** Never pick the plausible reading.
 
+### 0D. What the replies of 12 Oct taught (Josh Edelman, Steven Prins, Jochen Matzer)
+
+1. **A new site is not a website sale (Josh Edelman, The Wine Flight).** Company incorporated Jan 2026,
+   site built for him in mid 2026. Our opener offered "the Wine Flight site for gifts and companies" and he
+   answered "I'm not looking to change the website at this time." When the site is under a year old or
+   was just built for them, they've just paid for it. Lead with what it doesn't do yet as a selling job
+   (an AI workflow that wins gift and company bookings, a channel), not as a new or changed site.
+2. **Price on request is a model, not a gap (Steven Prins, Bulgarian Wine Hub).** Our 6 Oct nudge said there's
+   "no trade price list, trade terms or ordering on the site". His answer, "i sell to shops and bars in Belgium
+   only and have special pricelists for them". B2B sellers with a price list per customer keep trade prices
+   off the site on purpose. Before calling missing trade prices or ordering a gap, find out who they sell to
+   and how, and if it can't be found, ask instead of assert. Same family as 0C point 4. The Billie Swim opener
+   of 11 Oct carries this risk (wholesale by email is normal in her niche).
+3. **The plain bump gets answers fast, and the answers are mostly no.** Two replies within 2.5 hours of the
+   12 Oct bumps, both a no with a reason. A no is a result. Close silently, per "Close means NEVER SEND
+   ANYTHING ANYMORE", and log the reason, because the reason is the lesson.
+4. **A page can change between the research and the send (Darren Gilligan, 12 Oct).** His homepage WhatsApp
+   button pointed to his number with +1 at 08:58 and 09:15 UTC, and to +44 at 09:19, minutes before the
+   send. Only the send time recheck caught it, so the opener built on it would have been false. Reopen the
+   exact claim in the minute before every send, never trust the research pass, and when it has changed,
+   don't send, tell Raka.
+
+### 0C. The odd thing may not be theirs (Debby Alles, 2026-10-09)
+
+Our opener told Debby "Google calls de Kogge Bij Veld't". She replied "Bij tveld is niet meer
+gevestigd op dit adres", that business has left the address, and declined. The Maps listing
+had a different name AND a different phone number from hers, two signs it was someone else,
+and we read both as her mistake. Same family as the wrong domain trap, one level down.
+
+1. **"Your X" needs proof X is theirs.** A listing, page or account is theirs only if their own
+   site or HTML links it, or it links back to their site, or it carries their own phone, email or
+   name. Sitting at the same address proves nothing, a previous tenant leaves a listing behind.
+2. **A mismatch has two readings, and theirs-but-wrong is the less likely one.** Different name,
+   different number, different hours means test "this is another business" first, and say
+   nothing until one reading is proven.
+3. **Their goal comes from their own words, never from content they may not write.** finzo's
+   blog posts on Making Tax Digital read as syndicated news while its service pages never name
+   sole traders or landlords, so "you are helping sole traders get ready" was our presumption.
+4. **A deliberate choice is not a gap.** Legal Unmasked's one page sign up is a priority list
+   for early bird tickets, and its 2026 early bird sold out. Calling it "nothing to buy" was
+   wrong. Read what the page says it is for before calling it missing.
+5. **Their words, not our narrowing.** mellem wrote "for families and for the people who support
+   them". Turning that into "the cemeteries" is our guess. Quote their phrase.
+6. **A fact about their life goes in only if they said it.** "Christmas gifts" for a stylist whose
+   site never says Christmas, "grows faster than one person's week" for a lawyer whose site says
+   he retired from NautaDutilh. Cut it, or make it plainly about the season, never about them.
+
+### 0E. Worth 2,500 euros or it isn't an angle (Raka, 2026-10-12)
+
+His words, "scrap these like compliant or gdpr fixes. theyre tiny fixes and someone can do it
+like for 50 bucks. we gotta analyse things that are worth 2500 euros at least ... we gotta talk
+about the graander things."
+
+What caused it, three of the seven SKETCH drafts of 12 Oct. Kevin Hanson (Panoramix IP) was
+offered a cookie banner and an unticked opt in, every word true and sourced to the ICO, and
+worth fifty euros. David Weyn (Major Domo) was told to move his reviews to the homepage, a ten
+minute Squarespace edit. Chris Hale's (The Garnish Collective) offer ended "the enquiry form
+tidied up". True is not enough. Small and true still loses the lead, because it tells them we
+look for typos.
+
+1. **The angle is a problem whose fix is a project worth 2,500 euros or more to them.** Block
+   two names that problem and the offer names that project. A site rebuilt around what they
+   sell next, an app or tool that takes a job off the founder, a channel run for months, a
+   launch site. The quote floor of 500 euros in section 1 is unchanged. This is the floor on
+   what we analyse and pitch, not on what we quote.
+2. **Never the angle, always scrapped.** Compliance and GDPR fixes (cookie banners, consent,
+   opt ins, privacy policies, an Impressum, mentions légales), a typo, a form field or dropdown,
+   a broken link, moving a section, one line of copy, a setting. Any of them can be a proof
+   point inside a bigger angle. None is the angle. GDPR is still checked in the sweep (rule 13
+   of 4A), it just never becomes the pitch on its own, and that includes W5, whose campaign
+   name says GDPR. W5 leads get researched for the bigger angle like everyone else.
+3. **The 50 bucks test, before a word is drafted.** Could a freelancer fix this in an afternoon
+   for 50 euros? If yes, it's a task. Find the structural problem behind it, or the verdict is
+   NO_STRONG_ANGLE. This replaces the softer tweak test in section 3, which let these through.
+4. **Grander means it touches how they make money.** The revenue model (a subscription brand
+   whose homepage never sells the habit), a sales channel (company bookings with no channel to
+   companies, corporate lunches that can only be ordered by enquiry form), a launch (a dip
+   heading for supermarket shelves with a trade only site), the trust decision a buyer makes,
+   or the founder's own hours (a one person firm filling urgent jobs by public post). Ask what
+   they're trying to sell next and what in their setup stops it, at the size of a project.
+5. **The gate carries `worth:`.** The project and its value, written as a figure, e.g.
+   `worth: €4,000+, Shopify homepage and first order rebuilt around a 28 day routine, a starter
+   subscription and a Klaviyo flow to day 28`. tools/check-drafts.py fails any OPENER or SKETCH
+   in a file dated 2026-10-12 or later with no worth line at 2,500 euros or more, and any whose
+   message names a compliance fix. The figure stays in the gate. The money rule still keeps
+   it out of the message.
+6. **When the only true flaw is small, the lead waits.** Kevin Hanson's site is a strong sales
+   machine, and its real flaws (the consent setup, a LinkedIn post promising a free clinic that
+   lands on a page charging 375 pounds) are all small. That's NO_STRONG_ANGLE, recorded with
+   its sweep, and the small flaws stay in the research as proof for later.
+
 ---
 
 ## 1. Sending
@@ -227,6 +318,24 @@ urgent. We needa nudge them somehow if >3 days." Once our last message is more t
 old with no reply, the next nudge is due now, not at a week. The other rules still decide WHAT
 happens. Two follow ups since they last spoke, a meeting held or agreed, a written promise that a
 message was the last, or a DO_NOT_CONTACT row all mean a silent close instead of a nudge.
+
+**A nudge is the plain bump, not a new researched message (Raka, 2026-10-12).** His words, "you
+didnt have to go like full research all you have to do is just like 👀 have you seen this". So a
+due nudge is exactly `👀 [first name], have you seen this?`, the line v0.2's automated step used,
+with the first name as we greeted them in our own last message. The thread rules don't relax. Pull
+the whole thread before drafting and again before sending, never bump a reply, a decline, a meeting,
+a promise of a last message or two follow ups. And don't bump a thread whose last message is now
+wrong or already fixed (the problem we named was solved, the company was sold or renamed), because
+the bump points them straight back at it. Those close silently. A researched nudge is only for when
+Raka asks for one.
+
+**A warm chat's first offer is an opener, not a nudge (Raka, 2026-10-13).** When someone answered our
+connect note, we answered with a question and they went quiet, nothing was ever pitched, so there's
+nothing to nudge and no 👀. Their first offer is the SKETCH opener with its full research gate and the
+2,500 euro worth line, with Raka's warm opening. His words, "redo them in the opener format, like
+'something i've been thinking [name]'". Block one is `Something I've been thinking about, [name]!`,
+block two opens `Your ...` (no "However", there's no praise to turn from), then I'd suggest, the
+Unilever, AXA, Pertamina line, and `Shall I send you a sketch of [thing]?`. check-drafts.py accepts it.
 
 **"Close" means NEVER SEND ANYTHING ANYMORE (Raka, 2026-10-03, his capitals).** Not a goodbye
 message, not a graceful sign off, nothing. A close is a DO_NOT_CONTACT row in the queue and no
@@ -420,7 +529,9 @@ what ladder means tracing a verified defect to its real consequence, never infla
 small true thing into a big false one.
 
 **The tweak test.** If their existing web person could fix it in an afternoon, it is a task,
-not an angle. Use the defect as proof and sell the structural thing behind it.
+not an angle. Use the defect as proof and sell the structural thing behind it. **Tightened
+2026-10-12 into the 50 bucks test, section 0E.** The angle has to be worth 2,500 euros or more
+to them, and compliance or GDPR fixes are never the angle.
 
 **Money figures. The general numbers rule is SCRAPPED (Raka, 2026-09-22).** Do not put a
 figure in a message to make it feel researched, to set a scene or to show we did the work.
@@ -666,7 +777,9 @@ right now, and we lead with it.**
      goal's page missing or weak, a shop or booking path buried. Rendered and looked at.
    - **GDPR and privacy.** Trackers firing before consent (site-audit.js lists them), no or
      broken privacy policy, forms without consent, a missing Impressum in DE and AT. EU and UK
-     leads. It's a fine, a legal risk and a trust problem, so it passes the pay test when real.
+     leads. **Checked every time, never pitched on its own (Raka, 2026-10-12, section 0E).**
+     "theyre tiny fixes and someone can do it like for 50 bucks." A GDPR finding can be a
+     proof point inside a 2,500 euro angle, never the angle.
      **THE GEO TRAP (found 2026-09-25).** This container exits in Columbus, Ohio. GDPR doesn't
      cover a US visitor, so Cookiebot, Usercentrics, Complianz, Shopify's banner and Google
      consent mode region defaults show a US visitor no banner and let trackers run. From here
@@ -726,6 +839,18 @@ right now, and we lead with it.**
   isn't old. Check the date before using the word.
 - **What he calls a dated site.** "Squary, things in islands, it doesn't flow, a lot of gaps." Judge
   it from screenshots of every page, desktop and a real phone.
+- **Judge the look against the best, never against "it works" (Raka, 2026-10-13, on Wulf & Collegen).**
+  His words, "this is a pure example of a website that's made in 2010 ... you always need a compare
+  with the stuff that we make, or compare to Apple, or compare to Nike, or ... any other SaaS platforms
+  ... look how blocky everything is, the colors, they look like from SAP". I'd written the firm's site
+  off as "a current site" because it had an AI chatbot, a client portal, 1,234 reviews and fresh copy.
+  Working, busy and recently edited is not modern. So every NO_STRONG_ANGLE verdict carries a visual
+  line written after looking at the desktop and phone screenshots next to a best in class site, and
+  "the site works" never closes the website family on its own. A dated look on a firm whose substance
+  is strong (reviews, team, volume) is the angle, framed as the look not matching the firm, and still
+  checked against RULES 0D point 1 (Wulf's homepage went live 5 Nov 2025 on the Divi theme they've
+  run since 2022 and they edit it weekly, so "your site is old" is false and "it doesn't look like a
+  firm with 1,234 reviews" is the honest version).
 - **Odd findings aren't automatically the angle.** 130 casino spam posts on Ferry's own site were
   true and bizarre. Raka's call was to leave them out and roast the business. Record them, flag
   them, don't lead with them.

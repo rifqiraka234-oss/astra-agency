@@ -1,0 +1,38 @@
+<!--{"title":"Request a walkthrough, a live demo tailored to you","desc":"Tell us your airline and role. We'll set up a live demo of justclaims.eu tailored to you, with the new rules set beside the way you handle a claim today.","nav":"x","extra":["demo"]}-->
+<section class="pagehead"><div class="wrap"><div class="ph-t">
+  <p class="mono lab rv">Request a walkthrough</p>
+  <h1 class="rv d1">A live demo, tailored to you.</h1>
+  <p class="lead rv d2">Tell us about your claims team and what you want to see. {{TBC}} that a demo can cover the new rules in this way.</p></div>{{PHFIG}}
+</div></section>
+<section class="sec tight" id="form">
+<div class="wrap form-g">
+  <div>
+    <form class="dform" name="walkthrough" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-form novalidate>
+      <input type="hidden" name="form-name" value="walkthrough">
+      <p hidden><label>Leave this empty <input name="bot-field"></label></p>
+      <div class="fgrid">
+        <div class="f"><label for="d-airline">Airline</label><input id="d-airline" name="airline" type="text" autocomplete="organization" required><span class="err">Please tell us the airline.</span></div>
+        <div class="f"><label for="d-dept">Department</label><input id="d-dept" name="department" type="text"></div>
+        <div class="f"><label for="d-role">Role</label><input id="d-role" name="role" type="text" autocomplete="organization-title"></div>
+        <div class="f"><label for="d-int">What would you like to see</label><select id="d-int" name="interest"><option>The new rules and my claims process</option><option>The platform</option><option>Integration into our systems</option><option>Something else</option></select></div>
+        <div class="f"><label for="d-first">First name</label><input id="d-first" name="first_name" type="text" autocomplete="given-name" required><span class="err">Please enter your first name.</span></div>
+        <div class="f"><label for="d-last">Last name</label><input id="d-last" name="last_name" type="text" autocomplete="family-name" required><span class="err">Please enter your last name.</span></div>
+        <div class="f"><label for="d-mail">Business email address</label><input id="d-mail" name="email" type="email" autocomplete="email" required><span class="err">Please enter a valid email address.</span></div>
+        <div class="f"><label for="d-phone">Phone number</label><input id="d-phone" name="phone" type="text" autocomplete="tel"></div>
+      </div>
+      <div class="f"><label for="d-msg">Message</label><textarea id="d-msg" name="message" rows="5"></textarea></div>
+      <p class="formerr err" style="display:none">That didn't send. Please try again, or call +49 69 380 299 910.</p>
+      <button class="btn" type="submit"><span>Send the request {{AR}}</span></button>
+    </form>
+    <div class="sent" role="status" tabindex="-1"><h2>Request received.</h2><p>Thank you. We'll come back to you to set up the demo.</p></div>
+  </div>
+  <aside class="form-a">
+    <h2>What you get</h2>
+    <p>A live demo tailored to you, and answers to your specific questions.</p>
+    <h2>Our address</h2>
+    <p>CHS Claims Handling Solutions GmbH<br>Güterplatz 1<br>60327 Frankfurt am Main</p>
+    <p class="mono">T +49 69 380 299 910<br>F +49 69 380 299 911</p>
+    <p class="small mono">This prototype's form posts to the project that hosts it. A message sent from here lands with the team that built it.</p>
+  </aside>
+</div>
+</section>

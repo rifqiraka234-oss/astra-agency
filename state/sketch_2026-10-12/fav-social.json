@@ -1,0 +1,34 @@
+{
+ "tag": "fav",
+ "checkedAt": "2026-10-12T16:50:37.126Z",
+ "results": [
+  {
+   "url": "https://www.linkedin.com/in/andres-jara-2172a675/",
+   "platform": "linkedin",
+   "reachable": false,
+   "followers": null,
+   "following": null,
+   "posts": null,
+   "lastPostAgeDays": null,
+   "lastPostLabel": null,
+   "joined": null,
+   "bio": "Skip to main content LinkedIn Join LinkedIn Email Password (6+ characters) By clicking Agree & Join, you agree to the LinkedIn User Agreement, Privacy Policy, and Cookie Policy. Agree & Join or Already on Linkedin? Sign in LinkedIn © 2026 About Accessibility User Agreement Privacy Policy Your Califo",
+   "dead": false,
+   "note": null
+  },
+  {
+   "url": "https://www.instagram.com/favamole.nl/",
+   "platform": "instagram",
+   "reachable": true,
+   "followers": "1336",
+   "following": null,
+   "posts": "33",
+   "lastPostAgeDays": 54,
+   "lastPostLabel": "2026-08-19",
+   "joined": null,
+   "bio": null,
+   "dead": false,
+   "note": "read through the public /embed/ page"
+  }
+ ]
+}

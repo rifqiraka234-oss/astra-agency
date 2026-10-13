@@ -1,0 +1,1292 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order chef made catering | The Garnish Collective</title>
+<meta name="description" content="Lunch boxes, buffets and Christmas menus from Chris Hale's kitchen in Yorkshire, ordered online in three steps, with your usual a tap away. A concept built by Astra.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#00241a">
+<link rel="icon" type="image/png" href="img/emblem.png">
+<link rel="preload" href="fonts/italiana.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:300 700;font-display:swap;src:url(fonts/cormorant.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:300 700;font-display:swap;src:url(fonts/cormorant-ital.woff2) format("woff2")}
+@font-face{font-family:"Cormorant SC";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/cormorant-sc-600.woff2) format("woff2")}
+@font-face{font-family:"Italiana";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/italiana.woff2) format("woff2")}
+@font-face{font-family:"Pinyon Script";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/pinyon.woff2) format("woff2")}
+
+:root{
+  --night:#00241a;      /* his LinkedIn tile green */
+  --abyss:#001a13;
+  --forest:#183e30;
+  --green:#275f49;
+  --paper:#ede3d9;      /* his Christmas brochure paper */
+  --cream:#f3f2ed;      /* his site cream */
+  --card:#f7f2ea;
+  --ink:#425852;        /* his brochure ink */
+  --ink-deep:#042015;   /* his logo ink */
+  --gold:#c9a86a;
+  --gold-hi:#e8d5a6;
+  --gold-line:#9c7a43;  /* hairlines on paper, decorative */
+  --gold-text:#7a5c2b;  /* gold text on paper, 4.9 to 1 */
+  --err:#8a2a1b;
+  --serif:"Cormorant Garamond",Garamond,Georgia,"Times New Roman",serif;
+  --sc:"Cormorant SC","Cormorant Garamond",Garamond,Georgia,serif;
+  --deco:"Italiana","Cormorant Garamond",Georgia,serif;
+  --script:"Pinyon Script","Cormorant Garamond",Georgia,serif;
+  --gut:28px;
+  --max:1220px;
+  --foil:linear-gradient(100deg,#b08d57 0%,#ead9ae 24%,#c9a86a 44%,#f1e3bd 58%,#a8834a 80%,#d8c08a 100%);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--abyss);color:var(--cream);font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.55;overflow-x:hidden;font-variant-numeric:lining-nums}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.dag{font-size:.72em;vertical-align:.32em;margin-left:1px;font-family:var(--serif);font-style:normal}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.paper :focus-visible,.card :focus-visible{outline-color:var(--gold-text)}
+
+/* chapter furniture */
+.label{font-family:var(--sc);font-weight:600;font-size:14px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+.paper .label{color:var(--gold-text)}
+h1,h2,h3{margin:0;font-weight:400}
+.h2{font-family:var(--deco);font-size:clamp(34px,4.4vw,60px);line-height:1.08;letter-spacing:.04em;text-transform:uppercase}
+.h2 em{display:block;font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:0;font-size:.78em;line-height:1.15;margin-top:.18em}
+.dark .h2{color:var(--cream)}
+.paper .h2{color:var(--ink-deep)}
+.nu{font-family:var(--serif);font-weight:500;letter-spacing:.04em}
+.foil{background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (forced-colors:active){.foil{color:CanvasText;background:none}}
+.lede{font-size:21px;line-height:1.5;max-width:40em}
+.dark{background:var(--night);color:var(--cream)}
+.dark.deep{background:var(--abyss)}
+.dark.forest{background:var(--forest)}
+.paper.cream{background-color:var(--cream)}
+.paper{background-color:var(--paper);color:var(--ink);
+  background-image:repeating-linear-gradient(0deg,rgba(66,88,82,.035) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,rgba(66,88,82,.03) 0 1px,transparent 1px 38px)}
+.chapter{padding:120px 0;position:relative}
+.head{text-align:center;max-width:860px;margin:0 auto 64px}
+.head .lede{margin:22px auto 0}
+.fan{display:block;width:150px;height:76px;margin:0 auto 18px;color:var(--gold)}
+.paper .fan{color:var(--gold-line)}
+.fan path,.fan circle{fill:none;stroke:currentColor}
+.rulefan{display:flex;align-items:center;gap:18px;justify-content:center;margin:0 auto 18px;max-width:560px;color:var(--gold)}
+.rulefan::before,.rulefan::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,currentColor)}
+.rulefan::after{background:linear-gradient(270deg,transparent,currentColor)}
+.rulefan .fan{margin:0;flex:0 0 auto;width:120px;height:61px}
+.paper .rulefan{color:var(--gold-line)}
+.spark{width:14px;height:14px;display:inline-block;vertical-align:middle;color:var(--gold)}
+.paper .spark{color:var(--gold-line)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 30px;border:1px solid var(--gold);background:transparent;color:var(--gold-hi);font-family:var(--sc);font-weight:600;font-size:15px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;cursor:pointer;position:relative;transition:background .3s,color .3s}
+.btn::after{content:"";position:absolute;inset:4px;border:1px solid rgba(201,168,106,.45);pointer-events:none}
+.btn:hover{background:var(--gold);color:var(--abyss)}
+.btn.solid{background:var(--gold);color:var(--abyss)}
+.btn.solid::after{border-color:rgba(0,26,19,.35)}
+.btn.solid:hover{background:var(--gold-hi)}
+.paper .btn,.card .btn,.dlg .btn,.rcard .btn:not(.seal-btn){border-color:var(--gold-text);color:var(--ink-deep)}
+.paper .btn::after,.card .btn::after,.dlg .btn::after{border-color:rgba(122,92,43,.4)}
+.paper .btn:hover,.card .btn:hover,.dlg .btn:hover{background:var(--ink-deep);color:var(--gold-hi);border-color:var(--ink-deep)}
+.link{font-family:var(--sc);font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;background:none;border-top:0;border-left:0;border-right:0;cursor:pointer;color:inherit}
+
+/* reveal, content stays visible without JS */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity 1s ease,transform 1s ease}
+.js .rv.in{opacity:1;transform:none}
+.fr{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:2}
+.fr path{fill:none;stroke:var(--gold);stroke-width:1}
+.fr path.i{stroke-opacity:.55}
+.paper .fr path,.card .fr path,.fr.ink path{stroke:var(--gold-line)}
+.js .fr path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.2s cubic-bezier(.6,.1,.2,1)}
+.js .fr.on path{stroke-dashoffset:0}
+.js .fr path.i{transition-delay:.35s}
+html:not(.js) [data-frame]{outline:1px solid var(--gold);outline-offset:-1px}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.js .fr path{stroke-dashoffset:0;transition:none}}
+
+/* concept line */
+.concept{background:var(--abyss);color:#9db0a6;font-size:15px;font-style:italic;text-align:center;padding:8px 16px;line-height:1.4;border-bottom:1px solid rgba(201,168,106,.18)}
+
+/* header */
+.top{position:absolute;left:0;right:0;z-index:20;top:38px}
+.top .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:44px;padding-top:30px}
+.mono-g{width:62px;height:auto;filter:url(#goldify)}
+.wm{height:auto;filter:url(#creamify);opacity:.95}
+.nav{display:flex;gap:30px;align-items:center}
+.nav.nl{justify-content:flex-end}.nav.nr{justify-content:flex-start}
+.brand{display:block;line-height:0}
+.nav a{font-family:var(--sc);font-weight:600;font-size:13.5px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--gold-hi);white-space:nowrap}
+.nav a:hover{color:#fff}
+
+/* hero */
+.hero{position:relative;z-index:3;min-height:min(100svh,1000px);display:flex;align-items:flex-end;background:var(--abyss)}
+.hero .ph{position:absolute;inset:0;overflow:hidden}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:45% 62%}
+.hero .ph::after{content:"";position:absolute;inset:0;background:radial-gradient(50% 42% at 50% 52%,rgba(0,26,19,.74) 0%,rgba(0,26,19,.44) 64%,rgba(0,26,19,.04) 100%),linear-gradient(180deg,rgba(0,26,19,.72) 0%,rgba(0,26,19,.08) 24%,rgba(0,26,19,0) 62%,rgba(0,26,19,.85) 100%)}
+.hero .frame{position:absolute;inset:22px;pointer-events:none}
+.hero .hfan{width:210px;height:107px;margin:0 auto 10px;color:var(--gold);opacity:.9}
+.hero .hwm{width:min(420px,78vw);margin:0 auto 26px}
+.hero .inner{position:relative;z-index:3;width:100%;text-align:center;padding:170px 40px 150px}
+.kicker{font-family:var(--sc);font-weight:600;font-size:14px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin:0 0 26px;display:flex;align-items:center;justify-content:center;gap:16px}
+.kicker::before,.kicker::after{content:"";width:46px;height:1px;background:currentColor;opacity:.7}
+.hero h1{margin:0 auto;max-width:1140px;text-shadow:0 2px 30px rgba(0,26,19,.6)}
+.hero h1 .a{display:block;font-family:var(--deco);font-size:clamp(42px,6.1vw,92px);line-height:1;letter-spacing:.07em;text-transform:uppercase;text-shadow:none;filter:drop-shadow(0 2px 18px rgba(0,26,19,.7))}
+.hero h1 .b{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(30px,3.6vw,52px);line-height:1.15;color:var(--cream);margin-top:14px}
+.hero .lede{margin:28px auto 34px;color:#f3f2ed;max-width:33em;text-shadow:0 1px 16px rgba(0,26,19,.9)}
+.cut{margin:22px auto 0;font-size:17px;font-style:italic;color:#e3e8e4;max-width:34em;text-shadow:0 1px 12px rgba(0,26,19,.9)}
+.seal-wrap{position:absolute;left:50%;bottom:-66px;transform:translateX(-50%);z-index:6;width:132px;height:132px}
+.seal{width:100%;height:100%;display:block;filter:drop-shadow(0 10px 18px rgba(0,0,0,.45))}
+.js .seal-wrap .seal{animation:press 1.1s .5s cubic-bezier(.2,.9,.3,1.15) both}
+@keyframes press{from{opacity:0;transform:scale(1.35) rotate(-14deg)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.js .seal-wrap .seal{animation:none}}
+
+/* host */
+.host{padding-top:150px}
+.host .g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:84px;align-items:center}
+.arch{position:relative;padding:12px}
+.arch::before{content:"";position:absolute;inset:0;border:1px solid var(--gold-line);border-radius:999px 999px 0 0}
+.dark .arch::before{border-color:var(--gold)}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 0 0}
+.arch.portrait img{object-position:50% 30%}
+.host .txt p{margin:0 0 1em;max-width:34em}
+.host .txt .h2{margin-bottom:28px}
+.calling{position:relative;margin:40px 0 0;max-width:430px;background:var(--card);color:var(--ink);padding:34px 34px 28px;transform:rotate(-1.4deg);box-shadow:0 22px 40px -18px rgba(4,32,21,.45),0 2px 0 rgba(4,32,21,.05)}
+.calling .mono-i{width:46px;margin-bottom:12px;opacity:.92}
+.calling .nm{font-family:var(--deco);font-size:34px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-deep);line-height:1.05}
+.calling .rl{font-family:var(--sc);font-weight:600;font-size:13.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-text);margin:8px 0 14px}
+.calling .ln{font-size:18px;line-height:1.45;color:var(--ink)}
+.calling .cm{font-family:var(--script);font-size:30px;color:var(--ink-deep);margin-top:14px;line-height:1}
+
+/* larder */
+.larder .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:84px;align-items:center}
+.stepframe{position:relative;padding:14px}
+.stepframe .crop{overflow:hidden}
+.stepframe .crop.wide{aspect-ratio:16/10}
+.stepframe .crop img{width:100%;height:160%;object-fit:cover;object-position:50% 0}
+.collage{position:relative;padding:0 0 110px 0}
+.collage .big{margin-left:70px}
+.collage .sm{position:absolute;left:0;bottom:0;width:54%;background:var(--night);box-shadow:0 24px 40px -18px rgba(0,0,0,.6)}
+.collage .sm img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.quote-h{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(40px,4.6vw,66px);line-height:1.08;margin:0 0 10px}
+.quote-src{font-size:16px;font-style:italic;color:#9db0a6;margin:0 0 30px}
+.larder .txt>p{max-width:34em}
+.ledger{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;border-bottom:1px solid rgba(201,168,106,.28)}
+.ledger li{display:grid;grid-template-columns:54px minmax(0,1fr);align-items:baseline;padding:15px 0 14px;border-top:1px solid rgba(201,168,106,.28);font-size:20px;line-height:1.3;font-style:italic}
+.ledger .rn{font-family:var(--sc);font-weight:600;font-style:normal;font-size:19px;letter-spacing:.04em;color:var(--gold)}
+.ledger li:nth-child(odd):last-child{grid-column:1/-1}
+.pantry-end{margin:30px 0 0;font-style:italic;color:#c9d2cc}
+
+/* bill of fare */
+.step-mark{display:flex;justify-content:center;gap:14px;align-items:center;font-family:var(--sc);font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:14px;margin:0 0 34px;flex-wrap:wrap}
+.paper .step-mark{color:var(--gold-text)}
+.dark .step-mark{color:var(--gold)}
+.step-mark .on{color:inherit}
+.step-mark .off{opacity:.55}
+.step-mark i{font-style:normal;font-family:var(--deco);letter-spacing:.1em;font-size:18px;margin-right:2px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;align-items:stretch;max-width:1180px;margin:0 auto}
+.card.xmas{grid-column:1/-1}
+.xin{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1fr) minmax(0,1fr);gap:0 40px;align-items:start}
+.xmas .cat{margin-bottom:0}
+.xmas .menu{display:contents}
+.xmas .menu .mi:first-child{border-top:0}
+.xmas .mi{border-top:0;padding-top:4px}
+.card{position:relative;background:var(--card);color:var(--ink);padding:44px 34px 34px;box-shadow:0 30px 50px -30px rgba(4,32,21,.45)}
+.card .cat{text-align:center;margin-bottom:22px}
+.card .cat .k{font-family:var(--sc);font-weight:600;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-text)}
+.card h3{font-family:var(--deco);font-size:34px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-deep);line-height:1.05;margin:8px 0 10px}
+.card .sub{font-style:italic;font-size:17.5px;line-height:1.4;max-width:22em;margin:0 auto}
+.card .art{display:block;margin:22px auto 6px;height:150px;width:auto;color:var(--gold-line)}
+.card .art *{fill:none;stroke:currentColor;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+.card .art [fill]{fill:var(--card)}
+.card .archimg{margin:20px auto 8px;max-width:200px;position:relative;padding:8px}
+.card .archimg::before{content:"";position:absolute;inset:0;border:1px solid var(--gold-line);border-radius:999px 999px 0 0}
+.card .archimg img{aspect-ratio:1/1;object-fit:cover;border-radius:999px 999px 0 0;width:100%}
+.card .quote{font-style:italic;text-align:center;font-size:18px;margin:12px auto 0;color:var(--ink-deep)}
+.card .quote small{display:block;font-style:normal;font-size:14.5px;color:var(--ink);margin-top:4px}
+.menu{list-style:none;margin:20px 0 0;padding:0}
+.mi{border-top:1px solid rgba(156,122,67,.35);padding:18px 0 16px}
+.mi .row{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.mi .nm{flex:0 1 auto;font-size:22px;font-weight:600;color:var(--ink-deep);line-height:1.2}
+.mi .lead{flex:1 1 24px;border-bottom:1.5px dotted rgba(66,88,82,.45);transform:translateY(-5px);min-width:24px}
+.mi .pr{flex:0 0 auto;margin-left:auto;font-size:21px;font-weight:600;color:var(--ink-deep);white-space:nowrap}
+.mi .pr small{font-weight:400;font-size:15px;color:var(--ink)}
+.mi .ds{font-size:17.5px;line-height:1.42;margin:6px 0 0}
+.mi .ds .ex{font-style:italic}
+.dl{list-style:none;margin:8px 0 0;padding:0;font-size:17px;line-height:1.35}
+.dl li{padding:3px 0 3px 16px;position:relative;break-inside:avoid}
+.dl li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;transform:rotate(45deg);border:1px solid var(--gold-line)}
+.dl.two{font-size:17px}
+.card{display:flex;flex-direction:column}
+.card .foot{margin-top:auto;padding-top:26px;display:flex;justify-content:center;color:var(--gold-line)}
+.card .foot svg{width:86px;height:44px}
+.mi .meta{font-size:15.5px;color:var(--ink);margin:6px 0 0}
+.mi .pick{margin-top:12px;display:flex;align-items:center;gap:14px}
+.mi .pick .link{color:var(--gold-text)}
+.mi .chosen{display:none;font-family:var(--sc);font-weight:600;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--green)}
+.mi.sel .chosen{display:inline-flex;align-items:center;gap:8px}
+.mi.sel{background:linear-gradient(90deg,rgba(201,168,106,.16),rgba(201,168,106,0));margin:0 -14px;padding-left:14px;padding-right:14px}
+.mi.with-cam{display:grid;grid-template-columns:76px minmax(0,1fr);gap:16px;align-items:start}
+.cam{width:76px;height:76px;border-radius:50%;overflow:hidden;position:relative;margin-top:4px;box-shadow:0 0 0 1px var(--gold-line),0 0 0 5px var(--card),0 0 0 6px rgba(156,122,67,.5)}
+.cam img{width:100%;height:160%;object-fit:cover;object-position:50% 8%}
+.addon{margin-top:4px;border-top:1px dashed rgba(156,122,67,.5);padding-top:14px}
+.addon .nm{font-size:19px}
+.fine{font-size:15.5px;line-height:1.5;color:var(--ink);max-width:62em;margin:40px auto 0;text-align:center}
+.fine a{color:var(--gold-text)}
+
+/* reply */
+.reply .g{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:40px;align-items:start}
+.scene{position:sticky;top:24px;background:var(--abyss);padding:30px 26px 26px;min-width:0}
+.scene .t{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:16px}
+.scene .t .label{margin:0}
+.scene .t .n{font-family:var(--serif);font-weight:500;font-size:30px;color:var(--gold-hi)}
+#table{min-height:180px;display:flex;align-items:center;justify-content:center}
+#table svg{width:100%;height:auto;display:block}
+.scene .cap{font-style:italic;font-size:18px;color:var(--cream);margin:16px 0 0;min-height:1.5em}
+#sceneSlot .scene{position:relative;top:auto;margin:26px 0 0;padding:18px 14px 14px}
+#sceneSlot .scene .t .n{font-size:24px}
+#sceneSlot .scene .cap{font-size:16.5px;margin-top:10px}
+#sceneSlot .scene .key{font-size:13.5px;gap:6px 12px;margin-top:8px}
+.scene .key{display:flex;flex-wrap:wrap;gap:8px 18px;margin:14px 0 0;font-size:15px;color:#9db0a6}
+.scene .key b{display:inline-block;background:var(--paper);color:var(--ink-deep);font-family:var(--sc);font-weight:600;font-size:12px;letter-spacing:.06em;padding:0 5px;margin-right:6px;border:1px solid var(--gold)}
+.st path,.st circle,.st rect,.st ellipse{vector-effect:non-scaling-stroke}
+.st.new path,.st.new circle,.st.new rect,.st.new ellipse{stroke-dasharray:1;stroke-dashoffset:1;animation:draw .9s var(--d,0ms) ease forwards}
+.st.new .pc{opacity:0;animation:fade .6s calc(var(--d,0ms) + 600ms) ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.st.new path,.st.new circle,.st.new rect,.st.new ellipse{animation:none;stroke-dashoffset:0}.st.new .pc{animation:none;opacity:1}}
+
+.rcard{position:relative;background:var(--card);color:var(--ink);padding:46px 44px 40px;box-shadow:0 40px 70px -40px rgba(0,0,0,.6)}
+.rcard .hd{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.rcard .hd img{width:44px}
+.rcard .hd .t1{font-family:var(--sc);font-weight:600;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-text)}
+.rcard .hd .t2{font-family:var(--script);font-size:30px;color:var(--ink-deep);line-height:1.05}
+.sent{font-size:23px;line-height:2.15;color:var(--ink-deep);margin:0 0 6px}
+.sent .w{white-space:nowrap}
+.f{display:inline-block;vertical-align:baseline;position:relative}
+.f select,.f input{border:0;border-bottom:1.5px solid var(--gold-line);background:transparent;color:var(--ink-deep);font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;line-height:1.3;padding:2px 4px 1px;border-radius:0;max-width:100%}
+.f select{-webkit-appearance:none;appearance:none;padding-right:24px;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,var(--gold-text) 50%),linear-gradient(135deg,var(--gold-text) 50%,transparent 50%);background-position:calc(100% - 11px) 55%,calc(100% - 6px) 55%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.f select option,.f select optgroup{font-style:normal;font-weight:400;color:#042015;background:#fff}
+.f input::placeholder{color:rgba(66,88,82,.55);font-weight:400}
+.f input:focus,.f select:focus{outline:none;border-bottom-color:var(--ink-deep);background-color:rgba(201,168,106,.12)}
+.f.bad select,.f.bad input{border-bottom-color:var(--err)}
+.num{display:inline-flex;align-items:center;gap:2px;vertical-align:baseline}
+.num button{width:30px;height:30px;border:1px solid var(--gold-line);background:transparent;border-radius:50%;cursor:pointer;color:var(--gold-text);display:inline-grid;place-items:center;padding:0;line-height:1;transform:translateY(-2px)}
+.num button:hover{background:var(--ink-deep);color:var(--gold-hi);border-color:var(--ink-deep)}
+.num input{width:2.6em;text-align:center;-moz-appearance:textfield;appearance:textfield}
+.num input::-webkit-outer-spin-button,.num input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.num.sm input{width:2em;font-size:20px}
+.num.sm button{width:26px;height:26px}
+.diet{font-size:20px;line-height:2.2;margin:4px 0 0;color:var(--ink)}
+.addr{font-size:23px;line-height:2.15;color:var(--ink-deep);margin:10px 0 0}
+.addr .f input{width:100%}
+.addr .fco{width:13em}.addr .fst{width:15em}.addr .ftw{width:9em}.addr .fpc{width:6.5em}
+.pcmsg{font-size:16.5px;font-style:italic;color:var(--green);margin:2px 0 0;min-height:1.4em}
+.pcmsg a{color:var(--gold-text)}
+.notes{margin:18px 0 0}
+.notes label{display:block;font-size:17px;font-style:italic;color:var(--ink);margin-bottom:6px}
+.notes textarea{width:100%;min-height:76px;border:1px solid rgba(156,122,67,.6);background:rgba(255,255,255,.35);font-family:var(--serif);font-size:19px;padding:10px 12px;color:var(--ink-deep);resize:vertical}
+.sig{font-size:23px;line-height:2.15;color:var(--ink-deep);margin:16px 0 0}
+.sig .fnm input{width:11em}.sig .fem input{width:14em}
+.rule-g{height:1px;background:linear-gradient(90deg,transparent,var(--gold-line),transparent);margin:30px 0}
+.bill{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:end}
+.bill .lines{font-size:16.5px;line-height:1.55;color:var(--ink)}
+.bill .lines div{font-style:italic}
+.bill .amt{text-align:right}
+.bill .amt .k{font-family:var(--sc);font-weight:600;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-text)}
+.bill .amt .v{font-family:var(--deco);font-size:54px;line-height:1;color:var(--ink-deep);letter-spacing:.02em;white-space:nowrap}
+.ps{font-family:var(--serif);font-weight:400;letter-spacing:0;margin-right:.04em}
+.bill .amt .v .fr0{font-family:var(--serif);font-style:italic;font-size:22px;letter-spacing:0;margin-right:6px}
+.bill .amt .pl{font-size:15px;font-style:italic;color:var(--ink);margin-top:4px}
+.pay{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 10px}
+.pay label{border:1px solid rgba(156,122,67,.55);padding:14px 16px;cursor:pointer;display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.25)}
+.pay label.on{border-color:var(--ink-deep);box-shadow:inset 0 0 0 1px var(--ink-deep);background:rgba(255,255,255,.55)}
+.pay input{accent-color:var(--green);width:18px;height:18px;margin-top:6px;flex:0 0 18px}
+.pay b{display:block;font-weight:600;font-size:20px;color:var(--ink-deep);line-height:1.2}
+.pay .sub{display:block;font-size:15.5px;line-height:1.35;color:var(--ink)}
+.po{margin:4px 0 0}
+.po .f input{width:9em}
+.demo{font-size:15.5px;font-style:italic;color:var(--ink);margin:8px 0 0}
+.keep{display:flex;gap:10px;align-items:center;font-size:18px;margin:16px 0 0;color:var(--ink-deep)}
+.keep input{accent-color:var(--green);width:18px;height:18px}
+.go{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:24px}
+.btn.seal-btn{background:var(--ink-deep);border-color:var(--ink-deep);color:var(--gold-hi);min-height:60px;padding:0 28px 0 18px}
+.btn.seal-btn::after{border-color:rgba(201,168,106,.4)}
+.btn.seal-btn:hover{background:var(--green);border-color:var(--green)}
+.btn.seal-btn svg{width:36px;height:36px}
+.errs{color:var(--err);font-style:italic;font-size:17px;margin:14px 0 0;display:none}
+.errs.on{display:block}
+.err{display:block;color:var(--err);font-style:italic;font-size:16px;line-height:1.3;min-height:0}
+.stamp{position:absolute;right:30px;top:26px;width:118px;height:118px;opacity:0;pointer-events:none;z-index:4}
+.stamp.on{animation:stampin .7s cubic-bezier(.2,.9,.3,1.2) forwards}
+@keyframes stampin{from{opacity:0;transform:scale(1.6) rotate(-20deg)}to{opacity:1;transform:rotate(-8deg)}}
+@media (prefers-reduced-motion:reduce){.stamp.on{animation:none;opacity:1;transform:rotate(-8deg)}}
+
+/* usual */
+.usual .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:70px;align-items:center}
+.ucard{position:relative;background:var(--card);padding:40px 40px 34px;transform:rotate(1.2deg);box-shadow:0 34px 60px -32px rgba(4,32,21,.55);max-width:520px;justify-self:end;width:100%}
+.ucard .sc{font-family:var(--script);font-size:38px;color:var(--ink-deep);line-height:1}
+.ucard .co{font-family:var(--deco);font-size:28px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-deep);margin:12px 0 2px}
+.ucard .tag{font-family:var(--sc);font-weight:600;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-text)}
+.ucard .what{font-size:21px;line-height:1.45;color:var(--ink-deep);margin:18px 0 6px}
+.ucard .dt{font-size:17.5px;line-height:1.5;color:var(--ink)}
+.ucard .pr{font-family:var(--deco);font-size:34px;color:var(--ink-deep);margin:14px 0 0}
+.ucard .acts{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:22px}
+.ucard .acts .link{color:var(--gold-text)}
+.ucard .acts .btn{letter-spacing:.14em;padding:0 22px;text-align:center}
+.usual .txt p{max-width:30em}
+.usual .ticks{list-style:none;padding:0;margin:26px 0 0}
+.usual .ticks li{display:flex;gap:12px;align-items:baseline;padding:8px 0;border-top:1px solid rgba(156,122,67,.3);font-size:19px}
+
+/* said of us */
+.clip-wrap{display:flex;justify-content:center}
+.clipping{position:relative;max-width:820px;width:100%;background:#f1e9d8;color:#2b332f;padding:48px 52px 44px;transform:rotate(-1.2deg);box-shadow:0 30px 60px -20px rgba(0,0,0,.55);
+  background-image:radial-gradient(rgba(43,51,47,.08) .6px,transparent .8px);background-size:5px 5px;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50% 100%/9px 6px repeat-x,conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50% 0/9px 6px repeat-x,linear-gradient(#000 0 0) 0 6px/100% calc(100% - 12px) no-repeat;
+  mask:linear-gradient(#000 0 0) 0 6px/100% calc(100% - 12px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50% 100%/9px 6px repeat-x,conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50% 0/9px 6px repeat-x}
+.clipping .mast{display:flex;justify-content:space-between;align-items:center;border-top:3px double #2b332f;border-bottom:1px solid #2b332f;padding:8px 0;font-family:var(--sc);font-weight:600;font-size:13px;letter-spacing:.3em;text-transform:uppercase}
+.clipping h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(34px,4vw,50px);line-height:1.05;text-align:center;margin:26px 0 8px}
+.clipping .by{text-align:center;font-family:var(--sc);font-weight:600;font-size:14px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 22px}
+.clipping .body{column-count:2;column-gap:40px;column-rule:1px solid rgba(43,51,47,.35);font-size:19.5px;line-height:1.55;text-align:justify;hyphens:none}
+.clipping .body p{margin:0}
+.clipping .body p{position:relative}
+.clipping .drop{font-family:var(--deco);float:left;font-size:4.3em;line-height:.8;padding:7px 10px 0 0;color:#00241a}
+.clipping .dq{position:absolute;left:-24px;top:-6px;font-size:2.6em;line-height:1;color:#00241a;opacity:.8}
+.clip-src{text-align:center;color:#9db0a6;font-style:italic;font-size:16px;margin:30px 0 0}
+
+/* occasions */
+.occ{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.oc{display:flex;flex-direction:column;gap:12px}
+.oc .arch img,.oc .arch svg{aspect-ratio:3/4;width:100%;object-fit:cover;border-radius:999px 999px 0 0;display:block}
+.oc .arch .crop{aspect-ratio:3/4;overflow:hidden;border-radius:999px 999px 0 0}
+.oc .arch .crop img{height:160%;aspect-ratio:auto;object-position:50% 0;border-radius:0}
+.oc h3{font-family:var(--deco);font-size:24px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-deep);line-height:1.15;margin-top:6px}
+.oc p{margin:0;font-size:17.5px;line-height:1.45}
+.oc .link{align-self:flex-start;margin-top:auto;color:var(--gold-text)}
+.xm{margin:56px auto 0;max-width:880px;text-align:center;font-size:19px}
+.write{margin:70px auto 0;max-width:880px;position:relative;background:var(--card);padding:44px 40px;text-align:center;box-shadow:0 30px 50px -30px rgba(4,32,21,.45)}
+.write .h3{font-family:var(--deco);font-size:clamp(28px,3vw,38px);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-deep)}
+.write p{margin:12px auto 0;max-width:36em}
+.write .ways{display:flex;justify-content:center;gap:16px 34px;flex-wrap:wrap;margin:24px 0 0;font-size:21px;color:var(--ink-deep)}
+.write .ways a{text-decoration:none;border-bottom:1px solid var(--gold-line)}
+.write .btn{margin-top:28px}
+
+/* close */
+.close{text-align:center;padding:130px 0 0;overflow:hidden}
+.close{--sw:min(620px,92vw);--m:128px}
+.close .sun{width:var(--sw);height:auto;color:var(--gold);opacity:.8;display:block;margin:0 auto}
+.medal{position:relative;width:var(--m);height:var(--m);border-radius:50%;background:var(--abyss);margin:calc(-1 * (var(--sw) * 4 / 240 + var(--m) / 2)) auto 0;display:grid;place-items:center;box-shadow:0 0 0 1px var(--gold),0 0 0 8px var(--abyss),0 0 0 9px rgba(201,168,106,.45)}
+.close .medal .mono-g{width:64px;margin:0}
+.close .cm{font-family:var(--script);font-size:46px;color:var(--gold-hi);margin:34px 0 8px;line-height:1.1}
+.close blockquote{margin:0 auto;max-width:22em;font-style:italic;font-weight:300;font-size:clamp(28px,3.2vw,42px);line-height:1.2}
+.close .who{font-family:var(--sc);font-weight:600;letter-spacing:.26em;text-transform:uppercase;font-size:14px;color:var(--gold);margin:16px 0 0}
+.close .ways{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 34px;margin:44px 0 0;font-size:20px}
+.close .ways a{text-decoration:none;border-bottom:1px solid rgba(201,168,106,.5)}
+.close .wm{display:block;margin:60px auto 0;width:min(380px,80vw)}
+.small{border-top:1px solid rgba(201,168,106,.2);margin:56px auto 0;padding:26px 0 34px;font-size:15.5px;line-height:1.55;color:#9db0a6;font-style:italic}
+.small p{margin:0 auto;max-width:56em}
+
+/* dialog */
+.ov{position:fixed;inset:0;z-index:80;background:rgba(0,18,13,.82);display:none;align-items:center;justify-content:center;padding:16px}
+.ov.on{display:flex}
+.dlg{position:relative;background:var(--card);color:var(--ink);width:100%;max-width:560px;max-height:calc(100vh - 32px);overflow:auto;padding:44px 40px 34px;text-align:center}
+.dlg .seal{width:104px;height:104px;margin:-6px auto 6px}
+.ov.on .dlg .seal{animation:press .9s .15s cubic-bezier(.2,.9,.3,1.15) both}
+@media (prefers-reduced-motion:reduce){.ov.on .dlg .seal{animation:none}}
+.dlg h3:focus{outline:none}
+.dlg h3{font-family:var(--deco);font-size:34px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-deep)}
+.dlg .ref{font-family:var(--sc);font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:13.5px;color:var(--gold-text);margin:6px 0 18px}
+.dlg .sum{text-align:left;border-top:1px solid rgba(156,122,67,.45);border-bottom:1px solid rgba(156,122,67,.45);padding:12px 0;margin:0 0 16px}
+.dlg .sum div{display:flex;justify-content:space-between;gap:16px;padding:4px 0;font-size:18px;color:var(--ink-deep)}
+.dlg .sum div span:last-child{text-align:right}
+.dlg .sum .tot{font-size:22px;font-weight:600;border-top:1px dotted rgba(66,88,82,.5);margin-top:6px;padding-top:10px}
+.dlg p{font-size:17px;line-height:1.5;margin:0 0 10px}
+.dlg .cn{font-style:italic;font-size:15.5px;color:var(--ink)}
+.dlg .acts{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:18px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(16px);background:var(--ink-deep);color:var(--gold-hi);padding:14px 20px;font-size:17px;max-width:min(560px,calc(100vw - 32px));z-index:90;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;border:1px solid var(--gold)}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* tablet */
+@media (max-width:1080px){
+  .navl{display:none}
+  .cards{grid-template-columns:minmax(0,1fr);max-width:640px;margin:0 auto}
+  .xin{grid-template-columns:minmax(0,1fr)}
+  .xmas .menu{display:block}
+  .xmas .mi{border-top:1px solid rgba(156,122,67,.35);padding-top:18px}
+  .reply .g{grid-template-columns:minmax(0,1fr)}
+  .scene{position:relative;top:auto}
+  .occ{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .host .g,.larder .g,.usual .g{gap:56px}
+}
+@media (max-width:860px){
+  .top .wrap{grid-template-columns:minmax(0,1fr)!important;justify-items:center}
+  .top .nav{display:none}
+  .host .g,.larder .g,.usual .g{grid-template-columns:minmax(0,1fr)}
+  .host .arch{max-width:420px;margin:0 auto}
+  .larder .collage{max-width:520px;margin:0 auto;width:100%}
+  .ucard{justify-self:center}
+  .chapter{padding:96px 0}
+  .host{padding-top:130px}
+}
+/* phone */
+@media (max-width:620px){
+  :root{--gut:16px}
+  body{font-size:18px}
+  .concept{font-size:14px;padding:7px 12px}
+  .top{top:52px}
+  .top .wrap{padding-top:18px;gap:12px}
+  .mono-g{width:42px}
+  .wm{width:170px}
+  .nav a.mn{font-size:12.5px;letter-spacing:.16em}
+  .hero{min-height:0}
+  .hero .frame{inset:12px}
+  .hero .crown{width:180px;height:92px}
+  .hero .inner{padding:150px 30px 112px}
+  .hero .hfan{width:150px;height:76px}
+  .kicker::before,.kicker::after{display:none}
+  .kicker{font-size:11.5px;letter-spacing:.16em;gap:10px}
+  .kicker::before,.kicker::after{width:22px}
+  .hero h1 .a{font-size:clamp(36px,11vw,50px);letter-spacing:.05em}
+  .hero .lede{font-size:19px;margin:22px auto 28px}
+  .cut{font-size:16px}
+  .seal-wrap{width:104px;height:104px;bottom:-52px}
+  .chapter{padding:80px 0}
+  .host{padding-top:110px}
+  .head{margin-bottom:44px}
+  .lede{font-size:19px}
+  .ledger{grid-template-columns:minmax(0,1fr)}
+  .card{padding:36px 20px 26px}
+  .step-mark{font-size:12px;letter-spacing:.14em;gap:8px}
+  .step-mark i{font-size:15px}
+  .card h3{font-size:30px}
+  .mi.with-cam{grid-template-columns:60px minmax(0,1fr);gap:12px}
+  .cam{width:60px;height:60px}
+  .mi .nm{font-size:20px}
+  .scene{padding:26px 22px 22px}
+  .pp{display:none}
+  .larder .collage .big{margin-left:36px}
+  .larder .collage .sm{width:62%}
+  .oc .arch img,.oc .arch svg,.oc .arch .crop{aspect-ratio:4/3}
+  .close .ways{padding:0 16px;gap:10px 22px}
+  .rcard{padding:34px 18px 28px}
+  .sent,.addr,.sig{font-size:20px;line-height:2.2}
+  .f select,.f input{font-size:19px}
+  .addr .fco,.addr .fst,.addr .ftw,.addr .fpc,.sig .fnm,.sig .fem{width:100%;display:block}
+  .addr .fpc{width:8em;display:inline-block}
+  .diet{font-size:18px}
+  .pay{grid-template-columns:minmax(0,1fr)}
+  .bill{grid-template-columns:minmax(0,1fr)}
+  .bill .amt{text-align:left}
+  .bill .amt .v{font-size:46px}
+  .stamp{width:84px;height:84px;right:12px;top:12px}
+  .ucard{padding:32px 22px 28px;transform:rotate(.8deg)}
+  .clipping{padding:40px 22px 36px;transform:rotate(-.8deg)}
+  .clipping .body{column-count:1;text-align:left}
+  .clipping .dq{left:-14px;font-size:2.2em}
+  .clipping .mast{font-size:11px;letter-spacing:.18em}
+  .occ{grid-template-columns:minmax(0,1fr);max-width:420px;margin:0 auto}
+  .write{padding:34px 20px}
+  .dlg{padding:30px 18px 24px}
+  .dlg .seal{width:78px;height:78px}
+  .dlg h3{font-size:28px}
+  .dlg .sum div{font-size:16.5px}
+  .dlg .sum .tot{font-size:19px}
+  .close .cm{font-size:38px}
+  .close{--m:104px}
+  .close .medal .mono-g{width:52px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+
+<!-- shared SVG: gold and cream recolour filters for his own logo files, the fan, the seal -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="goldify" color-interpolation-filters="sRGB"><feFlood flood-color="#d4b87e"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+  <filter id="creamify" color-interpolation-filters="sRGB"><feFlood flood-color="#efe7d6"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+  <filter id="emboss" color-interpolation-filters="sRGB"><feFlood flood-color="#d9bf86"/><feComposite in2="SourceAlpha" operator="in" result="g"/><feGaussianBlur in="SourceAlpha" stdDeviation="1.2" result="b"/><feOffset in="b" dx="0" dy="1.6" result="o"/><feFlood flood-color="#000" flood-opacity=".45"/><feComposite in2="o" operator="in" result="sh"/><feMerge><feMergeNode in="sh"/><feMergeNode in="g"/></feMerge></filter>
+  <defs>
+    <symbol id="fan" viewBox="0 0 240 122"><g fill="none" stroke="currentColor"><path d="M80 118L16 118M80.3 112.8L42.7 107.8M81.4 107.6L19.5 91.1M83 102.7L47.9 88.2M85.4 98L29.9 66M88.3 93.6L58.1 70.5M91.7 89.7L46.5 44.5M95.6 86.3L72.5 56.1M100 83.4L68 27.9M104.7 81L90.2 45.9M109.6 79.4L93.1 17.5M114.8 78.3L109.8 40.7M120 78L120 14M125.2 78.3L130.2 40.7M130.4 79.4L146.9 17.5M135.3 81L149.8 45.9M140 83.4L172 27.9M144.4 86.3L167.5 56.1M148.3 89.7L193.5 44.5M151.7 93.6L181.9 70.5M154.6 98L210.1 66M157 102.7L192.1 88.2M158.6 107.6L220.5 91.1M159.7 112.8L197.3 107.8M160 118L224 118" stroke-width="1"/><path d="M84 118a36 36 0 0 1 72 0M92 118a28 28 0 0 1 56 0M104 118a16 16 0 0 1 32 0" stroke-width="1"/><path d="M4 118H236" stroke-width="1"/></g></symbol>
+    <symbol id="spark" viewBox="0 0 20 20"><path d="M10 0C10.8 6.6 13.4 9.2 20 10C13.4 10.8 10.8 13.4 10 20C9.2 13.4 6.6 10.8 0 10C6.6 9.2 9.2 6.6 10 0Z" fill="currentColor"/></symbol>
+    <radialGradient id="wax" cx="42%" cy="36%" r="70%"><stop offset="0" stop-color="#1c5a44"/><stop offset=".55" stop-color="#0d3a2b"/><stop offset="1" stop-color="#05241a"/></radialGradient>
+    <symbol id="seal" viewBox="0 0 120 120">
+      <path d="M109.7 54.3Q109.1 60 108 65.4Q107 70.7 106.4 76.4Q105.8 82 101.6 85.9Q97.4 89.8 94.3 94.5Q91.3 99.2 87 103.3Q82.8 107.3 77.1 108.5Q71.3 109.6 65.7 109.8Q60 110 54.7 108.2Q49.4 106.4 43.9 105.6Q38.5 104.7 34.3 101Q30.2 97.3 26.4 93.6Q22.6 89.8 18.9 85.7Q15.3 81.5 12.5 76.5Q9.6 71.5 10.8 65.8Q12 60 12.3 54.6Q12.7 49.2 13.5 43.6Q14.4 38 15.5 31.7Q16.6 25.4 22.6 23Q28.6 20.6 33.6 18Q38.5 15.4 43.4 12.1Q48.3 8.8 54.2 10.6Q60 12.4 65.8 10.9Q71.5 9.4 76.4 12.7Q81.2 15.9 85.6 19.1Q90 22.4 93.8 26.2Q97.5 30.1 100.8 34.4Q104.2 38.7 107.3 43.6Q110.3 48.5 109.7 54.3Z" fill="url(#wax)"/>
+      <circle cx="60" cy="60" r="38" fill="none" stroke="#000" stroke-opacity=".28" stroke-width="2.4"/>
+      <circle cx="60" cy="60" r="36.6" fill="none" stroke="#7fb59c" stroke-opacity=".22" stroke-width="1"/>
+      <path d="M27 40a38 38 0 0 1 30 -18" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="3" stroke-linecap="round"/>
+      <image href="img/emblem.png" x="33" y="33" width="54" height="54" filter="url(#emboss)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="concept" role="note">A concept Astra built for The Garnish Collective. Prices marked <span class="dag">†</span> are examples.</div>
+
+<header class="top">
+  <div class="wrap">
+    <nav class="nav nl" aria-label="The story"><a href="#host">The host</a><a href="#larder">The larder</a><a href="#fare">Menus</a></nav>
+    <a class="brand" href="#top" aria-label="The Garnish Collective, back to the top"><img class="mono-g" src="img/emblem.png" alt="" width="240" height="238"></a>
+    <nav class="nav nr" aria-label="Ordering"><a href="#reply">Order</a><a href="#usual">Your usual</a><a href="#occasions">Occasions</a></nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. the invitation -->
+<section class="hero" aria-labelledby="h1">
+  <div class="ph"><img src="img/plated.jpg" alt="Plates being finished by hand with seeds and herbs" width="1800" height="1200" fetchpriority="high"></div>
+  <div class="frame" data-frame="hero"></div>
+  <div class="inner">
+    <svg class="fan hfan" viewBox="0 0 240 122" aria-hidden="true"><use href="#fan"/></svg>
+    <img class="wm hwm" src="img/wordmark.png" alt="The Garnish Collective" width="1838" height="56">
+    <p class="kicker">Corporate catering from Yorkshire</p>
+    <h1 id="h1"><span class="a foil">A chef&#8217;s table</span><span class="b">for the office, ordered online.</span></h1>
+    <p class="lede">Lunch boxes, buffets and Christmas menus from the kitchen of Chris Hale, MasterChef UK quarter finalist. Choose a card and reply, and it&#8217;s booked.</p>
+    <a class="btn solid" href="#fare">See the menus</a>
+    <p class="cut" id="cut">Order a lunch box by 2pm<span class="dag">†</span> and it&#8217;s with you the next working day.</p>
+  </div>
+  <div class="seal-wrap"><svg class="seal" viewBox="0 0 120 120" role="img" aria-label="A green wax seal pressed with the TGC monogram"><use href="#seal"/></svg></div>
+</section>
+
+<!-- 2. the host -->
+<section class="chapter paper host" id="host" aria-labelledby="h-host">
+  <div class="wrap g">
+    <div class="arch portrait rv"><img src="img/chris_host.jpg" alt="Chris Hale, head chef of The Garnish Collective, at work" width="880" height="1100" loading="lazy"></div>
+    <div class="txt rv">
+      <p class="label">The host</p>
+      <h2 class="h2" id="h-host">Chris Hale<em>head chef and MasterChef UK quarter finalist.</em></h2>
+      <p>Chris founded The Garnish Collective and leads its kitchen. His career has taken him across the globe, cooking for royalty, world class athletes and A list celebrities.</p>
+      <p>The same kitchen cooks for offices. Thursday&#8217;s lunch boxes come from it, and so does the team&#8217;s Christmas.</p>
+      <div class="calling" data-frame="ink">
+        <img class="mono-i" src="img/emblem.png" alt="" width="240" height="238" loading="lazy">
+        <div class="nm">Chris Hale</div>
+        <div class="rl">Founder &amp; Head Chef</div>
+        <div class="ln">MasterChef UK quarter finalist, 2016<br>The Garnish Collective, Yorkshire</div>
+        <div class="cm">with compliments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. the larder -->
+<section class="chapter dark larder" id="larder" aria-labelledby="h-larder">
+  <div class="wrap g">
+    <div class="txt rv">
+      <p class="label">The larder</p>
+      <h2 class="quote-h foil" id="h-larder">&#8220;Nothing is forced, except the Rhubarb.&#8221;</h2>
+      <p class="quote-src">From our sustainability commitment</p>
+      <p>We cook with what Yorkshire grows and buy from the most local suppliers we can, so the menus run on reduced air miles rather than food wrapped in plastic and shipped around the world.</p>
+      <ol class="ledger">
+        <li><span class="rn" aria-hidden="true">I</span><span class="lt">Our own allotment</span></li>
+        <li><span class="rn" aria-hidden="true">II</span><span class="lt">Our own beehives</span></li>
+        <li><span class="rn" aria-hidden="true">III</span><span class="lt">The most local suppliers</span></li>
+        <li><span class="rn" aria-hidden="true">IV</span><span class="lt">Waste and trimmings composted</span></li>
+        <li><span class="rn" aria-hidden="true">V</span><span class="lt">Pickled and preserved, down to a carrot top pesto</span></li>
+        <li><span class="rn" aria-hidden="true">VI</span><span class="lt">Nose to tail, root to tip</span></li>
+      </ol>
+      <p class="pantry-end">The rhubarb comes back at Christmas, in a rhubarb and custard millefeuille.</p>
+    </div>
+    <div class="collage rv">
+      <div class="stepframe big" data-frame="larder"><div class="crop wide"><img src="img/li_privatedining.jpg" alt="Salads and roasted squash with herbs, plated on a wooden table" width="800" height="800" loading="lazy"></div></div>
+      <div class="stepframe sm" data-frame="larder"><img src="img/br_porkbelly.jpg" alt="Crisp slow cooked pork belly with micro herbs on a speckled plate" width="1100" height="731" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. said of us -->
+<section class="chapter dark forest" id="said" aria-labelledby="h-said">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="rulefan"><svg class="fan" viewBox="0 0 240 122" aria-hidden="true"><use href="#fan"/></svg></div>
+      <p class="label">Said of us</p>
+    </div>
+    <div class="clip-wrap rv">
+      <article class="clipping">
+        <div class="mast"><span>Event catering</span><span>Evri</span></div>
+        <h3 id="h-said">&#8220;The food is always amazing&#8221;</h3>
+        <p class="by">Stacey Dockerty, Marketing &amp; Events Manager, Evri</p>
+        <div class="body"><p><span class="sr">&#8220;We&#8217;ve</span><span class="dq" aria-hidden="true">&#8220;</span><span class="drop" aria-hidden="true">W</span><span aria-hidden="true">e&#8217;ve</span> worked with The Garnish Collective for over 3 years. They are our &#8216;go to&#8217; when it comes to event catering as they offer a wide range of hot and cold buffet options. Chris and his team are professional and reliable, and most importantly the food is always amazing!&#8221;</p></div>
+      </article>
+    </div>
+    <p class="clip-src">From the About page at garnishcollective.com</p>
+  </div>
+</section>
+
+<!-- 5. the bill of fare -->
+<section class="chapter paper" id="fare" aria-labelledby="h-fare">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="rulefan"><svg class="fan" viewBox="0 0 240 122" aria-hidden="true"><use href="#fan"/></svg></div>
+      <p class="label">The bill of fare</p>
+      <h2 class="h2" id="h-fare">Choose a card<em>Each card is only where Chris starts.</em></h2>
+      <p class="lede">Say what you&#8217;d swap when you reply, even for something that isn&#8217;t on the card.</p>
+    </div>
+    <p class="step-mark"><span class="on"><i>I</i> Choose a card</span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="off"><i>II</i> Reply</span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="off"><i>III</i> Seal it</span></p>
+    <div class="cards">
+      <article class="card rv" data-frame="card" aria-labelledby="c-boxes">
+        <div class="cat">
+          <span class="k">Meetings and strategy days</span>
+          <h3 id="c-boxes">Bags &amp; Boxes</h3>
+          <p class="sub">Freshly prepared, chef designed lunch boxes or banquet style packages, one each or to share.</p>
+          <svg class="art" viewBox="0 0 220 150" aria-hidden="true"><path d="M110 134V96" stroke-opacity=".25"/><path d="M110 134L32 96M110 134L58 74M110 134L84 62M110 134L136 62M110 134L162 74M110 134L188 96" stroke-opacity=".25"/><path d="M28 136H192"/><path d="M40 141H180" stroke-opacity=".5"/><path d="M64 84H156V130H64Z" fill="#f7f2ea"/><path d="M58 76H162V84H58ZM70 68H150V76H70Z" fill="#f7f2ea"/><path d="M96 68V56A14 14 0 0 1 124 56V68"/><path d="M100 68V57A10 10 0 0 1 120 57V68" stroke-opacity=".5"/><path d="M84 90V124M98 90V124M122 90V124M136 90V124" stroke-opacity=".55"/><path d="M110 92L118 100L110 108L102 100Z"/><path d="M110 112L114 116L110 120L106 116Z" stroke-opacity=".7"/><path d="M68 88H152V126H68Z" stroke-opacity=".4"/><path d="M22 30l2.6 -5.4l2.6 5.4l5.4 2.6l-5.4 2.6l-2.6 5.4l-2.6 -5.4l-5.4 -2.6Z" stroke-opacity=".7"/><path d="M192 26l2 -4.2l2 4.2l4.2 2l-4.2 2l-2 4.2l-2 -4.2l-4.2 -2Z" stroke-opacity=".7"/></svg>
+        </div>
+        <ul class="menu" id="m-boxes"></ul>
+        <div class="foot" aria-hidden="true"><svg viewBox="0 0 240 122"><use href="#fan"/></svg></div>
+      </article>
+      <article class="card rv" data-frame="card" aria-labelledby="c-buffets">
+        <div class="cat">
+          <span class="k">Conferences and gala dinners</span>
+          <h3 id="c-buffets">Buffets</h3>
+          <p class="sub">We arrive at your venue and set out a buffet of savoury and sweet dishes.</p>
+          <svg class="art" viewBox="0 0 220 150" aria-hidden="true"><path d="M110 134L30 112M110 134L42 84M110 134L66 58M110 134L154 58M110 134L178 84M110 134L190 112" stroke-opacity=".25"/><path d="M28 136H192"/><path d="M40 141H180" stroke-opacity=".5"/><path d="M96 136L102 128H118L124 136" fill="#f7f2ea"/><path d="M110 128V36"/><path d="M48 112H172M54 112L60 118H160L166 112" fill="#f7f2ea"/><path d="M68 86H152M73 86L78 91H142L147 86" fill="#f7f2ea"/><path d="M86 60H134M90 60L94 64H126L130 60" fill="#f7f2ea"/><circle cx="66" cy="107" r="4"/><circle cx="82" cy="107" r="4"/><circle cx="98" cy="107" r="4"/><circle cx="122" cy="107" r="4"/><circle cx="138" cy="107" r="4"/><circle cx="154" cy="107" r="4"/><circle cx="84" cy="81" r="4"/><circle cx="98" cy="81" r="4"/><circle cx="122" cy="81" r="4"/><circle cx="136" cy="81" r="4"/><circle cx="98" cy="55" r="4"/><circle cx="122" cy="55" r="4"/><path d="M110 36L110 22M110 36L101 26M110 36L119 26M110 36L96 33M110 36L124 33" stroke-opacity=".8"/><circle cx="110" cy="38" r="2.6"/><path d="M22 30l2.6 -5.4l2.6 5.4l5.4 2.6l-5.4 2.6l-2.6 5.4l-2.6 -5.4l-5.4 -2.6Z" stroke-opacity=".7"/><path d="M192 26l2 -4.2l2 4.2l4.2 2l-4.2 2l-2 4.2l-2 -4.2l-4.2 -2Z" stroke-opacity=".7"/></svg>
+        </div>
+        <ul class="menu" id="m-buffets"></ul>
+        <div class="foot" aria-hidden="true"><svg viewBox="0 0 240 122"><use href="#fan"/></svg></div>
+      </article>
+      <article class="card xmas rv" data-frame="card" aria-labelledby="c-xmas">
+        <div class="xin">
+        <div class="cat">
+          <span class="k">Corporate Christmas</span>
+          <h3 id="c-xmas">Christmas <span class="nu">2026</span></h3>
+          <div class="archimg"><img src="img/br_xmas_desserts.jpg" alt="Plated desserts seen from above on speckled black plates" width="720" height="720" loading="lazy"></div>
+          <p class="quote">&#8220;No boxes. No set menus. Just Christmas, your way.&#8221;<small>The 2026 Corporate Christmas Packages brochure</small></p>
+        </div>
+        <ul class="menu" id="m-xmas"></ul>
+        </div>
+        <div class="foot" aria-hidden="true"><svg viewBox="0 0 240 122"><use href="#fan"/></svg></div>
+      </article>
+    </div>
+    <p class="fine"><span class="dag">†</span> Example prices and minimums, for Chris to set. Lines in italics are example contents, and the dishes in plain type are his own, from his menus and posts. Christmas dishes and from prices are his, as printed in the 2026 Corporate Christmas Packages brochure, and canap&#233;s and the three course dinner are under <a href="#occasions">grander occasions</a>.</p>
+  </div>
+</section>
+
+<!-- 6. the reply card -->
+<section class="chapter dark reply" id="reply" aria-labelledby="h-reply">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="rulefan"><svg class="fan" viewBox="0 0 240 122" aria-hidden="true"><use href="#fan"/></svg></div>
+      <p class="label">The reply card</p>
+      <h2 class="h2" id="h-reply">Reply with the details<em>and it&#8217;s booked.</em></h2>
+    </div>
+    <p class="step-mark" id="steps"><span class="on" id="st1"><i>I</i> Choose a card</span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="on" id="st2"><i>II</i> Reply</span><svg class="spark" aria-hidden="true"><use href="#spark"/></svg><span class="off" id="st3"><i>III</i> Seal it</span></p>
+    <div class="g">
+      <aside class="scene" data-frame="scene" aria-labelledby="h-table">
+        <div class="t"><p class="label" id="h-table">Your table</p><span class="n" id="tableN"></span></div>
+        <div id="table" aria-live="polite"></div>
+        <p class="cap" id="tableCap"></p>
+        <p class="key"><span><b>V</b>vegetarian</span><span><b>VE</b>vegan</span><span><b>GF</b>gluten free</span><span><b>DF</b>dairy free</span></p>
+      </aside>
+
+      <form class="rcard" id="rcard" data-frame="ink" novalidate aria-label="Your order">
+        <svg class="stamp" id="stamp" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg>
+        <div class="hd"><img src="img/emblem.png" alt="" width="240" height="238"><div><div class="t1">The Garnish Collective</div><div class="t2">The favour of a reply</div></div></div>
+        <noscript><p class="demo">The reply card needs JavaScript switched on. You can also order on 07899 767279 or at feasting@garnishcollective.com.</p></noscript>
+
+        <p class="sent">
+          Please prepare the <span class="f" id="f-menu"><label class="sr" for="r-menu">Menu</label><select id="r-menu"></select></span>
+          for <span class="num w" id="f-guests"><button type="button" data-step="guests" data-d="-1" aria-label="One fewer guest"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8" stroke="currentColor" stroke-width="1.4"/></svg></button><span class="f"><label class="sr" for="r-guests">Number of guests</label><input id="r-guests" type="number" inputmode="numeric" min="1" max="400" value="12"></span><button type="button" data-step="guests" data-d="1" aria-label="One more guest"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6 2v8" stroke="currentColor" stroke-width="1.4"/></svg></button></span> <span id="unitWord">guests</span>,
+          on <span class="f" id="f-date"><label class="sr" for="r-date">Date</label><select id="r-date"></select></span>,
+          <span id="timeWord">delivered by</span> <span class="w"><span class="f" id="f-time"><label class="sr" for="r-time">Time</label><select id="r-time"></select></span>.</span>
+        </p>
+        <span class="err" id="e-menu"></span><span class="err" id="e-guests"></span><span class="err" id="e-when"></span>
+        <p class="pcmsg" id="leadmsg"></p>
+
+        <p class="diet">Of them,
+          <span class="num sm w"><button type="button" data-step="veg" data-d="-1" aria-label="One fewer vegetarian"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8" stroke="currentColor" stroke-width="1.4"/></svg></button><span class="f"><label class="sr" for="d-veg">Vegetarian</label><input id="d-veg" type="number" inputmode="numeric" min="0" value="0"></span><button type="button" data-step="veg" data-d="1" aria-label="One more vegetarian"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6 2v8" stroke="currentColor" stroke-width="1.4"/></svg></button></span> vegetarian,
+          <span class="num sm w"><button type="button" data-step="vegan" data-d="-1" aria-label="One fewer vegan"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8" stroke="currentColor" stroke-width="1.4"/></svg></button><span class="f"><label class="sr" for="d-vegan">Vegan</label><input id="d-vegan" type="number" inputmode="numeric" min="0" value="0"></span><button type="button" data-step="vegan" data-d="1" aria-label="One more vegan"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6 2v8" stroke="currentColor" stroke-width="1.4"/></svg></button></span> vegan,
+          <span class="num sm w"><button type="button" data-step="gf" data-d="-1" aria-label="One fewer gluten free"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8" stroke="currentColor" stroke-width="1.4"/></svg></button><span class="f"><label class="sr" for="d-gf">Gluten free</label><input id="d-gf" type="number" inputmode="numeric" min="0" value="0"></span><button type="button" data-step="gf" data-d="1" aria-label="One more gluten free"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6 2v8" stroke="currentColor" stroke-width="1.4"/></svg></button></span> gluten free and
+          <span class="num sm w"><button type="button" data-step="df" data-d="-1" aria-label="One fewer dairy free"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8" stroke="currentColor" stroke-width="1.4"/></svg></button><span class="f"><label class="sr" for="d-df">Dairy free</label><input id="d-df" type="number" inputmode="numeric" min="0" value="0"></span><button type="button" data-step="df" data-d="1" aria-label="One more dairy free"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M6 2v8" stroke="currentColor" stroke-width="1.4"/></svg></button></span> dairy free.
+        </p>
+        <span class="err" id="e-diet"></span>
+        <p class="keep" id="dessertRow" hidden><input type="checkbox" id="r-dessert"><label for="r-dessert">And desserts for everyone, &#163;8 a head. Chocolate brownie, sticky toffee cake, Christmas &#8220;mess&#8221; and mini mince pies.</label></p>
+
+        <p class="addr">Bring it to
+          <span class="f fco" id="f-co"><label class="sr" for="a-co">Company</label><input id="a-co" autocomplete="organization" placeholder="company"></span><span class="pp">,</span>
+          <span class="f fst" id="f-st"><label class="sr" for="a-st">Building and street</label><input id="a-st" autocomplete="street-address" placeholder="building and street"></span><span class="pp">,</span>
+          <span class="f ftw" id="f-tw"><label class="sr" for="a-tw">Town</label><input id="a-tw" autocomplete="address-level2" placeholder="town"></span>
+          <span class="f fpc" id="f-pc"><label class="sr" for="a-pc">Postcode</label><input id="a-pc" autocomplete="postal-code" placeholder="postcode"></span><span class="pp">.</span>
+        </p>
+        <span class="err" id="e-addr"></span>
+        <p class="pcmsg" id="pcmsg"></p>
+
+        <div class="notes"><label for="r-notes">Anything Chris should know, like allergies or a dish to swap</label><textarea id="r-notes"></textarea></div>
+
+        <p class="sig">Yours, <span class="f fnm" id="f-nm"><label class="sr" for="r-nm">Your name</label><input id="r-nm" autocomplete="name" placeholder="your name"></span><span class="pp">,</span> and kindly reply to <span class="f fem" id="f-em"><label class="sr" for="r-em">Email</label><input id="r-em" type="email" autocomplete="email" placeholder="email"></span><span class="pp">.</span></p>
+        <span class="err" id="e-you"></span>
+
+        <div class="rule-g"></div>
+        <div class="bill" aria-live="polite">
+          <div class="lines" id="billLines"></div>
+          <div class="amt"><div class="k">The bill</div><div class="v" id="billTotal"><span class="ps">&#163;</span>0.00</div><div class="pl" id="billNote"></div></div>
+        </div>
+
+        <div id="sceneSlot"></div>
+        <div class="rule-g"></div>
+        <p class="label" style="color:var(--gold-text)">Settle it</p>
+        <div class="pay" role="radiogroup" aria-label="How you&#8217;d like to pay">
+          <label class="on" id="p-card"><input type="radio" name="pay" value="card" checked><span><b>By card</b><span class="sub">Pay now, and it&#8217;s done.</span></span></label>
+          <label id="p-acct"><input type="radio" name="pay" value="account"><span><b>On account</b><span class="sub">We invoice the company, 30 days<span class="dag">†</span>.</span></span></label>
+        </div>
+        <p class="po" id="poRow" hidden>Purchase order number, if you use them, <span class="f"><label class="sr" for="r-po">Purchase order number</label><input id="r-po" placeholder="optional"></span></p>
+        <p class="demo">A demo, so no card details are asked for and nothing is charged.</p>
+        <p class="keep"><input type="checkbox" id="r-keep" checked><label for="r-keep">Keep this as our usual</label></p>
+        <div class="go">
+          <button class="btn seal-btn" type="submit" id="sealBtn"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg>Seal and send</button>
+        </div>
+        <p class="errs" id="errs" role="alert"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 7. the usual -->
+<section class="chapter paper usual" id="usual" aria-labelledby="h-usual">
+  <div class="wrap g">
+    <div class="txt rv">
+      <p class="label">The usual</p>
+      <h2 class="h2" id="h-usual">Your usual<em>sent again in one tap.</em></h2>
+      <p>Every order can be kept as your usual. One tap sends it again for the next matching day, with the same food and address, on account.</p>
+      <ul class="ticks">
+        <li><svg class="spark" aria-hidden="true"><use href="#spark"/></svg>The next date that fits its weekday and the lead time</li>
+        <li><svg class="spark" aria-hidden="true"><use href="#spark"/></svg>Dietary places and notes kept as they were</li>
+      </ul>
+    </div>
+    <div class="ucard rv" data-frame="ink" id="ucard"></div>
+  </div>
+</section>
+
+<!-- 8. grander occasions -->
+<section class="chapter paper cream" id="occasions" aria-labelledby="h-occ">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="rulefan"><svg class="fan" viewBox="0 0 240 122" aria-hidden="true"><use href="#fan"/></svg></div>
+      <p class="label">Grander occasions</p>
+      <h2 class="h2" id="h-occ">Launches and dinners<em>go straight to Chris.</em></h2>
+      <p class="lede">These don&#8217;t fit on a card. Tell Chris the date and the numbers, and he&#8217;ll come back with a menu and a price.</p>
+    </div>
+    <div class="occ">
+      <article class="oc rv">
+        <div class="arch"><img src="img/br_canapes.jpg" alt="Smoked salmon canap&#233;s on toasted bread, laid out on slate" width="960" height="640" loading="lazy"></div>
+        <h3>Canap&#233;s</h3>
+        <p>For drinks receptions and corporate events, from elegant classics to more creative bites, with options for different dietary requirements.</p>
+        <a class="link" href="https://www.garnishcollective.com/enquire">Ask Chris</a>
+      </article>
+      <article class="oc rv">
+        <div class="arch"><svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A line drawing of a tiered edible display in an arched frame"><rect width="300" height="400" fill="#00241a"/><g fill="none" stroke="#c9a86a" stroke-width="1.2"><path d="M40 380V150A110 110 0 0 1 260 150V380"/><path d="M52 380V152A98 98 0 0 1 248 152V380" stroke-opacity=".5"/><path d="M20 380H280"/></g><g fill="none" stroke="#c9a86a" stroke-width=".9" stroke-opacity=".28"><path d="M150 352L62 300M150 352L76 240M150 352L104 196M150 352L196 196M150 352L224 240M150 352L238 300"/></g><g fill="none" stroke="#c9a86a" stroke-width="1.15"><path d="M150 342V120"/><path d="M134 352L142 342H158L166 352"/><path d="M60 352H240"/><path d="M68 310H232M74 310L80 317H220L226 310"/><circle cx="80.0" cy="304" r="5.5"/><circle cx="103.3" cy="304" r="5.5"/><circle cx="126.7" cy="304" r="5.5"/><circle cx="150.0" cy="304" r="5.5"/><circle cx="173.3" cy="304" r="5.5"/><circle cx="196.7" cy="304" r="5.5"/><circle cx="220.0" cy="304" r="5.5"/><path d="M86 262H214M92 262L98 269H202L208 262"/><circle cx="98.0" cy="256" r="5.5"/><circle cx="118.8" cy="256" r="5.5"/><circle cx="139.6" cy="256" r="5.5"/><circle cx="160.4" cy="256" r="5.5"/><circle cx="181.2" cy="256" r="5.5"/><circle cx="202.0" cy="256" r="5.5"/><path d="M104 214H196M110 214L116 221H184L190 214"/><circle cx="116.0" cy="208" r="5.5"/><circle cx="133.0" cy="208" r="5.5"/><circle cx="150.0" cy="208" r="5.5"/><circle cx="167.0" cy="208" r="5.5"/><circle cx="184.0" cy="208" r="5.5"/><path d="M122 166H178M128 166L134 173H166L172 166"/><circle cx="134.0" cy="160" r="5.5"/><circle cx="150.0" cy="160" r="5.5"/><circle cx="166.0" cy="160" r="5.5"/></g><g fill="none" stroke="#e8d5a6" stroke-width="1"><path d="M150 120V96M150 120L136 103M150 120L164 103M150 120L128 114M150 120L172 114"/><circle cx="150" cy="122" r="3.2"/></g><g fill="none" stroke="#c9a86a" stroke-width="1" stroke-opacity=".6"><path d="M150 52l3 -7l3 7l7 3l-7 3l-3 7l-3 -7l-7 -3Z"/></g></svg></div>
+        <h3>Installed Edible Displays</h3>
+        <p>Custom built edible installations, fully branded if you like, with on site set up and styling. For launch days and networking events.</p>
+        <a class="link" href="https://www.garnishcollective.com/enquire">Ask Chris</a>
+      </article>
+      <article class="oc rv">
+        <div class="arch"><img src="img/br_plates.jpg" alt="Rows of plates of sliced seared meat with pink radish and herbs, seen from above" width="960" height="723" loading="lazy"></div>
+        <h3>Tailored Event Service</h3>
+        <p>Multi course dining with a professional front of house team, at Hodroyd Hall or a venue of your choice.</p>
+        <a class="link" href="https://www.garnishcollective.com/enquire">Ask Chris</a>
+      </article>
+      <article class="oc rv">
+        <div class="arch"><div class="crop"><img src="img/li_bar.jpg" alt="A cocktail with a salted rim and a lime wedge being served across a bar" width="1200" height="1200" loading="lazy"></div></div>
+        <h3>Bar Hire</h3>
+        <p>Craft cocktails or a drinks menu written for the occasion, on its own or alongside the food.</p>
+        <a class="link" href="https://www.garnishcollective.com/enquire">Ask Chris</a>
+      </article>
+    </div>
+    <p class="xm rv"><svg class="spark" aria-hidden="true"><use href="#spark"/></svg>&#160; At Christmas the canap&#233; party and the three course dinner, plated or feasting style, are priced to order. &#160;<svg class="spark" aria-hidden="true"><use href="#spark"/></svg></p>
+    <div class="write rv" data-frame="ink">
+      <p class="label">Write to Chris</p>
+      <p class="h3">Tell Chris about the occasion</p>
+      <p>His enquiry form asks for the date, the numbers, the venue and the kind of event, and the kitchen replies within 24 hours.</p>
+      <div class="ways"><a href="tel:07899767279">07899 767279</a><a href="mailto:feasting@garnishcollective.com">feasting@garnishcollective.com</a></div>
+      <a class="btn" href="https://www.garnishcollective.com/enquire">Use the enquiry form</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 9. the close -->
+<footer class="dark deep close" aria-label="The Garnish Collective">
+  <svg class="sun" viewBox="0 0 240 122" aria-hidden="true"><use href="#fan"/></svg>
+  <div class="medal"><img class="mono-g" src="img/emblem.png" alt="" width="240" height="238" loading="lazy"></div>
+  <p class="cm">with compliments</p>
+  <blockquote>&#8220;Because good food has a way of bringing people together.&#8221;</blockquote>
+  <p class="who">Chris Hale &amp; The Garnish Collective</p>
+  <div class="ways"><a href="tel:07899767279">07899 767279</a><a href="mailto:feasting@garnishcollective.com">feasting@garnishcollective.com</a><a href="https://www.garnishcollective.com/">garnishcollective.com</a></div>
+  <img class="wm" src="img/wordmark.png" alt="The Garnish Collective" width="1838" height="56" loading="lazy">
+  <div class="small wrap"><p>A concept Astra built for The Garnish Collective. <span class="dag">†</span> Example prices, minimums, contents, lead times, delivery charges and invoice terms, written for this concept for Chris to set. Christmas dishes and from prices are from his 2026 Corporate Christmas Packages brochure. The demo account is a made up company. Payment is a demo, so nothing is charged and nothing you type leaves your browser.</p></div>
+</footer>
+
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-labelledby="dlgT">
+  <div class="dlg" data-frame="ink">
+    <svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><use href="#seal"/></svg>
+    <h3 id="dlgT">Sealed and sent</h3>
+    <p class="ref" id="dlgRef"></p>
+    <div id="dlgBody"></div>
+    <div class="acts"><button class="btn" type="button" id="dlgUsual">See your usual</button><button class="btn" type="button" id="dlgClose">Close</button></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- menus. "his" = named by Chris on his site, his posts or his 2026 brochure. "ex" = example for him to replace ---------- */
+const MENUS = [
+  {id:"breakfast",cat:"boxes",kind:"box",name:"Breakfast box",unit:"breakfast boxes",unit1:"breakfast box",price:9.5,from:false,src:"ex",min:6,lead:1,
+   ds:[["A pastry from the morning bake, yoghurt with granola and honey, cut fruit and juice","ex"]]},
+  {id:"lunch",cat:"boxes",kind:"box",name:"Lunch box",unit:"lunch boxes",unit1:"lunch box",price:13.5,from:false,src:"ex",min:6,lead:1,
+   ds:[["A filled roll or flatbread, a seasonal salad, something sweet and fruit","ex"]]},
+  {id:"banquet",cat:"boxes",kind:"share",name:"Banquet style package",unit:"guests",unit1:"guest",price:16.5,from:false,src:"ex",min:10,lead:1,
+   ds:[["Sharing boards of cold cuts and cheese, breads and dips, two salads and something sweet","ex"]]},
+  {id:"hotcold",cat:"buffets",kind:"buffet",name:"Hot and cold buffet",unit:"guests",unit1:"guest",price:21,from:false,src:"ex",min:15,lead:2,img:"img/li_sliders.jpg",alt:"Burger sliders with pickled red onion",
+   ds:[["Burger sliders and slow cooked pork belly","his"],[", with seasonal salads and something sweet","ex"]]},
+  {id:"steak",cat:"buffets",kind:"buffet",name:"Steakhouse buffet",unit:"guests",unit1:"guest",price:27,from:false,src:"ex",min:15,lead:2,img:"img/li_steak.jpg",alt:"Sliced steak with green herb sauce on a buffet",
+   ds:[["Beautifully cooked steak","his"],[", with roast potatoes and seasonal salads","ex"]]},
+  {id:"paella",cat:"buffets",kind:"buffet",name:"Paella for the team",unit:"guests",unit1:"guest",price:15,from:false,src:"ex",min:20,lead:2,img:"img/li_paella.jpg",alt:"A large pan of paella being stirred",
+   ds:[["Paella, cooked and served fresh","his"],[", with bread and a green salad","ex"]]},
+  {id:"xsandwich",cat:"xmas",kind:"buffet",name:"Christmas hot sandwich menu",unit:"guests",unit1:"guest",price:12,from:true,src:"his",min:10,lead:5,xmas:true,
+   ds:[["Traditional roast turkey & stuffing bap. Hot turkey, brie & bacon ciabatta. Mulled pulled pork slider.","his"]],
+   inc:"Serving staff, set up, disposable plates and cutlery included.",
+   addon:{price:8,ds:"Chocolate brownie, sticky toffee cake, Christmas “mess” and mini mince pies"}},
+  {id:"xgrazing",cat:"xmas",kind:"graze",name:"Christmas grazing table",unit:"guests",unit1:"guest",price:18,from:true,src:"his",min:15,lead:5,xmas:true,
+   ds:[["Cranberry, brie & caramelised onion tarts (V). Smoked salmon blinis, dill crème fraîche, lemon zest, capers. Christmas cheeseboard with rosemary focaccia, grissini sticks and chutney. Pigs in blankets. Charcuterie selection. Turkey, cranberry sausage roll. Braised red cabbage salad. Treacle glazed ham. Radicchio, fennel, pear & blue cheese salad.","his"]]}
+];
+const DIET = [["veg","vegetarian","V"],["vegan","vegan","VE"],["gf","gluten free","GF"],["df","dairy free","DF"]];
+const DEMO = {id:"demo",demo:true,name:"Thursday team lunch",company:"Your Company Ltd",menu:"lunch",guests:14,diet:{veg:2,vegan:1,gf:1,df:0},time:"12:30",weekday:4,
+  addr:{co:"Your Company Ltd",st:"Floor 3, 1 Example Street",tw:"Wakefield",pc:"WF1 2AB"},notes:"Ask at reception",pay:"account",po:"",who:"Your name",email:""};
+/* England and Wales bank holidays to the end of 2027. Christmas window is an example */
+const HOLIDAYS = ["2026-12-25","2026-12-28","2027-01-01","2027-03-26","2027-03-29","2027-05-03","2027-05-31","2027-08-30","2027-12-27","2027-12-28"];
+const XMAS_START = "2026-11-16", XMAS_END = "2026-12-23";
+const CUTOFF_MIN = 14*60;
+const LOCAL = ["WF","LS","BD","HD","HX"], LOCAL_S = [70,71,72,73,74,75];
+const DAYN = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const MON = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const WORDS = ["no","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"];
+const STORE = "tgc-usual-v2";
+const DAG = '<span class="dag">†</span>';
+const $ = id => document.getElementById(id);
+
+/* ---------- dates, always UK time ---------- */
+function pad(n){ return String(n).padStart(2,"0"); }
+function londonNow(){
+  const parts = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/London",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+  const g = t => +(parts.find(p => p.type === t) || {value:0}).value;
+  return {key:`${g("year")}-${pad(g("month"))}-${pad(g("day"))}`, mins:g("hour")*60 + g("minute")};
+}
+function toUTC(k){ const [y,m,d] = k.split("-").map(Number); return new Date(Date.UTC(y,m-1,d)); }
+function fromUTC(dt){ return `${dt.getUTCFullYear()}-${pad(dt.getUTCMonth()+1)}-${pad(dt.getUTCDate())}`; }
+function addDays(k,n){ const dt = toUTC(k); dt.setUTCDate(dt.getUTCDate()+n); return fromUTC(dt); }
+function dow(k){ return toUTC(k).getUTCDay(); }
+function isWorking(k){ const w = dow(k); return w > 0 && w < 6 && HOLIDAYS.indexOf(k) < 0; }
+function nextWorking(k){ let x = addDays(k,1); while(!isWorking(x)) x = addDays(x,1); return x; }
+function addWorking(k,n){ let x = k; for(let i=0;i<n;i++) x = nextWorking(x); return x; }
+function earliestFor(m){
+  const now = londonNow(); let base = now.key;
+  if(!isWorking(base) || now.mins >= CUTOFF_MIN) base = nextWorking(base);
+  let e = addWorking(base, m.lead);
+  if(m.xmas && e < XMAS_START){ e = XMAS_START; while(!isWorking(e)) e = addDays(e,1); }
+  return e;
+}
+function available(m,k){
+  if(!m || !k || k < earliestFor(m) || !isWorking(k)) return false;
+  if(m.xmas && (k < XMAS_START || k > XMAS_END)) return false;
+  return true;
+}
+function nextDates(m,count){
+  const out = []; let k = earliestFor(m), guard = 0;
+  while(out.length < count && guard < 500){ if(available(m,k)) out.push(k); if(m.xmas && k > XMAS_END) break; k = addDays(k,1); guard++; }
+  return out;
+}
+function fmtLong(k){ const dt = toUTC(k); return `${DAYN[dt.getUTCDay()]} ${dt.getUTCDate()} ${MON[dt.getUTCMonth()]}`; }
+function fmtTime(t){ if(!t) return ""; const [h,mi] = t.split(":").map(Number); const ap = h >= 12 ? "pm" : "am"; let hh = h % 12; if(hh === 0) hh = 12; return mi ? `${hh}.${pad(mi)}${ap}` : `${hh}${ap}`; }
+function money(n){ return "£" + n.toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function moneyH(n){ return '<span class="ps">£</span>' + n.toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c]); }
+function word(n){ return n <= 20 ? WORDS[n] : String(n); }
+function cap1(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
+
+/* ---------- state ---------- */
+const S = {menu:"lunch",guests:12,diet:{veg:0,vegan:0,gf:0,df:0},dessert:false,date:"",time:"",pay:"card"};
+const menu = () => MENUS.find(m => m.id === S.menu) || null;
+
+/* ---------- postcode and delivery, all example rules ---------- */
+function parsePC(v){
+  const m = String(v||"").toUpperCase().replace(/\s+/g,"").match(/^([A-Z]{1,2})(\d[A-Z\d]?)(\d[A-Z]{2})$/);
+  return m ? {area:m[1],district:m[2],full:`${m[1]}${m[2]} ${m[3]}`} : null;
+}
+function isLocal(pc){ if(!pc) return false; if(LOCAL.indexOf(pc.area) >= 0) return true; return pc.area === "S" && LOCAL_S.indexOf(parseInt(pc.district,10)) >= 0; }
+function delivery(m, sub, pcv){
+  const pc = parsePC(pcv);
+  if(m.kind === "graze") return {txt:"Set up, Chris confirms",val:null};
+  if(m.kind === "buffet"){ if(!pc) return {txt:"Set up included locally"+DAG,val:0,soft:true}; return isLocal(pc) ? {txt:"Set up included"+DAG,val:0} : {txt:"Travel, Chris confirms",val:null}; }
+  if(!pc) return {txt:"Delivery priced by postcode",val:0,soft:true};
+  if(!isLocal(pc)) return {txt:"Delivery, Chris confirms",val:null};
+  return sub >= 150 ? {txt:"Delivery free over £150"+DAG,val:0} : {txt:"Delivery "+money(12)+DAG,val:12};
+}
+function totals(m, g, dessert, pcv){
+  const food = m.price * g, add = (m.addon && dessert) ? m.addon.price * g : 0, sub = food + add, d = delivery(m, sub, pcv);
+  return {food, add, sub, d, total: sub + (d.val || 0), pending: d.val === null};
+}
+
+/* ---------- bill of fare ---------- */
+function renderFare(){
+  ["boxes","buffets","xmas"].forEach(cat => {
+    $("m-"+cat).innerHTML = MENUS.filter(m => m.cat === cat).map(m => {
+      const ds = m.cat === "xmas" ? `<ul class="dl${m.id === "xgrazing" ? " two" : ""}">${m.ds[0][0].split(/\.\s+/).map(x => `<li>${esc(x.replace(/\.$/,""))}</li>`).join("")}</ul>` : m.ds.map(([t,s]) => s === "ex" ? `<span class="ex">${esc(t)}</span>` : esc(t)).join("");
+      const price = `${m.from ? '<small>from </small>' : ""}${money(m.price)}${m.src === "ex" ? DAG : ""}`;
+      const cam = m.img ? `<span class="cam"><img src="${m.img}" alt="${esc(m.alt)}" width="1200" height="1200" loading="lazy"></span>` : "";
+      const extra = (m.inc ? `<p class="meta">${m.inc}</p>` : "") + (m.addon ? `<div class="addon"><div class="row"><span class="nm">Add desserts</span><span class="lead"></span><span class="pr">${money(m.addon.price)} <small>a head</small></span></div><p class="ds">${m.addon.ds}</p></div>` : "");
+      const minTxt = m.xmas ? `From ${m.min} guests${DAG}, for dates from 16 November to 23 December${DAG}` : `From ${m.min} guests${DAG}, order by 2pm${DAG} ${m.lead === 1 ? "the working day before" : "two working days before"}`;
+      return `<li class="mi${m.img ? " with-cam" : ""}${S.menu === m.id ? " sel" : ""}" data-mi="${m.id}">${cam}<div>
+        <div class="row"><span class="nm">${m.name}</span><span class="lead"></span><span class="pr">${price} <small>a head</small></span></div>
+        ${m.cat === "xmas" ? ds : `<p class="ds">${ds}</p>`}${extra}<p class="meta">${minTxt}</p>
+        <div class="pick"><button type="button" class="link" data-choose="${m.id}" aria-label="Choose the ${esc(m.name)}">Choose this card</button><span class="chosen"><svg class="spark" aria-hidden="true"><use href="#spark"/></svg>Chosen</span></div></div></li>`;
+    }).join("");
+  });
+}
+
+/* ---------- reply card ---------- */
+function fillMenuSelect(){
+  const grp = {boxes:"Bags & Boxes",buffets:"Buffets",xmas:"Christmas 2026"};
+  $("r-menu").innerHTML = `<option value="">choose a card</option>` + Object.keys(grp).map(c => `<optgroup label="${grp[c]}">${MENUS.filter(m => m.cat === c).map(m => `<option value="${m.id}">${m.name}</option>`).join("")}</optgroup>`).join("");
+  $("r-menu").value = S.menu || "";
+}
+function fillDates(){
+  const m = menu(), sel = $("r-date");
+  if(!m){ sel.innerHTML = `<option value="">choose a card first</option>`; sel.value = ""; return; }
+  const list = nextDates(m, m.xmas ? 40 : 30);
+  if(!list.length){ sel.innerHTML = `<option value="">Christmas orders have closed</option>`; S.date = ""; return; }
+  if(S.date && list.indexOf(S.date) < 0) S.date = "";
+  sel.innerHTML = `<option value="">choose a date</option>` + list.map(k => `<option value="${k}">${fmtLong(k)}</option>`).join("");
+  sel.value = S.date || "";
+}
+function fillTimes(){
+  const sel = $("r-time"), opts = [`<option value="">a time</option>`];
+  for(let h=7; h<=18; h++) for(const mi of [0,30]){ if(h === 7 && mi === 0) continue; if(h === 18 && mi === 30) continue; const v = `${pad(h)}:${pad(mi)}`; opts.push(`<option value="${v}">${fmtTime(v)}</option>`); }
+  sel.innerHTML = opts.join(""); sel.value = S.time || "";
+}
+function sizeSelect(sel){
+  const o = sel.options[sel.selectedIndex]; const c = sizeSelect.c || (sizeSelect.c = document.createElement("canvas").getContext("2d"));
+  const cs = getComputedStyle(sel); c.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  sel.style.width = Math.ceil(c.measureText(o ? o.text : "").width + 34) + "px";
+}
+function renderReply(){
+  const m = menu();
+  $("r-menu").value = S.menu || "";
+  $("r-guests").value = S.guests;
+  DIET.forEach(([k]) => { $("d-"+k).value = S.diet[k]; });
+  $("unitWord").textContent = m ? (S.guests === 1 ? m.unit1 : m.unit) : (S.guests === 1 ? "guest" : "guests");
+  $("timeWord").textContent = m && m.kind !== "box" ? "set up by" : "delivered by";
+  $("dessertRow").hidden = !(m && m.addon); $("r-dessert").checked = !!S.dessert;
+  if(m){
+    const e = earliestFor(m);
+    $("leadmsg").innerHTML = (m.xmas && e > XMAS_END)
+      ? `Christmas 2026 orders have closed here. <a href="#occasions">Write to Chris</a> about anything later.`
+      : m.xmas
+      ? `Christmas menus need five working days&#8217; notice${DAG}, for dates from 16 November to 23 December${DAG}. The first is ${fmtLong(e)}.`
+      : `${m.lead === 1 ? "Order by 2pm" + DAG + " for the next working day" : "Buffets need two working days&#8217; notice" + DAG}, Monday to Friday. The first is ${fmtLong(e)}.`;
+  } else $("leadmsg").textContent = "";
+  ["r-menu","r-date","r-time"].forEach(id => sizeSelect($(id)));
+  renderPC(); renderBill(); renderTable(); renderSteps();
+}
+function renderPC(){
+  const v = $("a-pc").value.trim(), pc = parsePC(v), m = menu(), el = $("pcmsg");
+  if(!v || !pc){ el.textContent = ""; return; }
+  const area = `${pc.area}${pc.district}`;
+  if(!isLocal(pc)){ el.textContent = `${area} is outside our usual area, so Chris confirms the delivery or travel with you.`; return; }
+  if(!m){ el.textContent = `${area} is in our local area.`; return; }
+  el.innerHTML = m.kind === "graze" ? `${area} is local. Chris confirms the set up for a grazing table.` : (m.kind === "buffet" ? `${area} is local, so set up&#8217;s included${DAG}.` : `${area} is local. Delivery&#8217;s free over &#163;150${DAG}, otherwise &#163;12${DAG}.`);
+}
+function renderBill(){
+  const m = menu();
+  if(!m){ $("billLines").innerHTML = `<div>Choose a card and the bill writes itself.</div>`; $("billTotal").innerHTML = moneyH(0); $("billNote").textContent = ""; return; }
+  const t = totals(m, S.guests, S.dessert, $("a-pc").value);
+  const unit = S.guests === 1 ? m.unit1 : m.unit;
+  const L = [`<div>${cap1(word(S.guests))} ${unit} ${m.from ? "from" : "at"} ${money(m.price)}${m.src === "ex" ? DAG : ""} ${m.kind === "box" ? "each" : "a head"}, ${money(t.food)}</div>`];
+  if(m.addon && S.dessert) L.push(`<div>Desserts for ${word(S.guests)} at ${money(m.addon.price)} a head, ${money(t.add)}</div>`);
+  L.push(`<div>${t.d.txt}</div>`);
+  $("billLines").innerHTML = L.join("");
+  $("billTotal").innerHTML = `${m.from ? '<span class="fr0">from</span>' : ""}${moneyH(t.total)}`;
+  $("billNote").innerHTML = t.pending ? "plus the part Chris confirms" : (m.src === "his" ? "from prices in his 2026 brochure" : `example prices${DAG}`);
+}
+function renderSteps(){
+  $("st1").className = S.menu ? "on" : "off";
+  $("st3").className = "off";
+}
+
+/* ---------- the signature scene, a table laid from above ---------- */
+let laid = 0, lastKind = "";
+function renderTable(){
+  const m = menu(), box = $("table"), g = m ? Math.max(0, Math.min(400, S.guests)) : 0;
+  const W = Math.max(300, Math.min(640, Math.round(box.clientWidth || 520)));
+  const kind = m ? m.kind : "none", xm = !!(m && m.xmas);
+  if(kind !== lastKind){ laid = 0; lastKind = kind; }
+  const GOLD = "#c9a86a", HI = "#e8d5a6";
+  const compact = !!box.closest("#sceneSlot");
+  const perSide = compact ? Math.max(6, Math.floor((W - 44) / 30)) : Math.max(4, Math.floor((W - 70) / 44)), PER = perSide * 2, maxT = compact ? 2 : (W < 480 ? 6 : 4);
+  const T = Math.max(1, Math.min(maxT, Math.ceil(Math.max(g,1) / PER)));
+  const shown = Math.min(g, PER * maxT);
+  const codes = []; DIET.forEach(([k,,c]) => { for(let i=0;i<(S.diet[k]||0) && codes.length < g;i++) codes.push(c); });
+  const sTop0 = Math.ceil(Math.min(Math.max(g,1), PER) / 2);
+  const pitch0 = Math.min(64, (W - 70) / Math.max(sTop0, 3));
+  const k = compact ? Math.max(.62, Math.min(1, pitch0 / 46)) : Math.max(1, Math.min(1.3, pitch0 / 46));
+  const TH = Math.round(124 * k), gapY = Math.round(58 * k), top = Math.round(26 * k);
+  const H = top + T * (TH + gapY) - gapY + Math.round(26 * k) + (g > shown ? 30 : 0);
+  const step = (x,y,w,h,c) => `M${x+c} ${y}H${x+w-c}V${y+c/2}H${x+w-c/2}V${y+c}H${x+w}V${y+h-c}H${x+w-c/2}V${y+h-c/2}H${x+w-c}V${y+h}H${x+c}V${y+h-c/2}H${x+c/2}V${y+h-c}H${x}V${y+c}H${x+c/2}V${y+c/2}H${x+c}Z`;
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${m ? `A table laid for ${g}` : "An empty table"}">`;
+  let idx = 0;
+  for(let t=0; t<T; t++){
+    const n = m ? Math.min(PER, shown - t*PER) : 0, sTop = Math.ceil(n/2), sBot = n - sTop;
+    const cols = Math.max(sTop, m ? 3 : 6);
+    const pitch = Math.min(64, (W - 70) / cols);
+    const L = cols * pitch + 34, x0 = (W - L) / 2, ty = top + t * (TH + gapY), cy = ty + TH/2;
+    s += `<path d="${step(x0,ty,L,TH,10)}" fill="#03301f" stroke="${GOLD}" stroke-width="1.4"/><path d="${step(x0+6,ty+6,L-12,TH-12,8)}" fill="none" stroke="${GOLD}" stroke-opacity=".45" stroke-width=".8"/>`;
+    /* the middle of the table */
+    if(kind === "box" || kind === "none"){
+      s += `<path d="M${x0+26} ${cy-6}H${x0+L-26}M${x0+26} ${cy+6}H${x0+L-26}" stroke="${GOLD}" stroke-opacity=".7" stroke-width=".8"/>`;
+      for(let x = x0+40; x < x0+L-34; x += 26) s += `<path d="M${x} ${cy}l5 -4l5 4l-5 4Z" fill="none" stroke="${GOLD}" stroke-opacity=".55" stroke-width=".8"/>`;
+    } else {
+      const kk = Math.max(2, Math.round((L-50) / 84));
+      for(let i=0;i<kk;i++){ const px = x0 + 25 + (i+.5) * (L-50) / kk;
+        if(xm) s += `<g fill="none" stroke="${GOLD}" stroke-width=".9"><path d="M${px-34} ${cy}c6 -7 11 7 17 0s11 7 17 0s11 7 17 0s11 7 17 0" stroke-opacity=".75"/><circle cx="${px}" cy="${cy}" r="3.6" fill="${HI}"/><circle cx="${px}" cy="${cy}" r="9" stroke-opacity=".45"/><circle cx="${px}" cy="${cy}" r="14" stroke-opacity=".2"/></g>`;
+        else if(kind === "share" || kind === "graze") s += `<g fill="none" stroke="${GOLD}" stroke-width=".9"><rect x="${px-26}" y="${cy-12}" width="52" height="24" rx="3"/><circle cx="${px-12}" cy="${cy}" r="4" stroke-opacity=".7"/><circle cx="${px+1}" cy="${cy-3}" r="3" stroke-opacity=".7"/><circle cx="${px+12}" cy="${cy+2}" r="4.5" stroke-opacity=".7"/></g>`;
+        else s += `<g fill="none" stroke="${GOLD}" stroke-width=".9"><ellipse cx="${px}" cy="${cy}" rx="26" ry="12"/><ellipse cx="${px}" cy="${cy}" rx="20" ry="8" stroke-opacity=".5"/></g>`;
+      }
+    }
+    /* place settings, top row then bottom row */
+    for(let side=0; side<2; side++){
+      const cnt = side ? sBot : sTop;
+      for(let i=0;i<cnt;i++){
+        const x = x0 + 17 + (i + .5) * pitch + (side && sBot < sTop ? pitch/2 : 0), dir = side ? -1 : 1;
+        const py = side ? ty + TH - 24*k : ty + 24*k, code = codes[idx] || "", isNew = idx >= laid;
+        const d = Math.min(idx - laid, 24) * 45; idx++;
+        let st = `<g class="st${isNew ? " new" : ""}" style="--d:${Math.max(0,d)}ms" transform="translate(${x.toFixed(1)} ${py.toFixed(1)}) scale(${k.toFixed(3)})">`;
+        /* chair, a little fan behind each place */
+        const cyy = -dir * 35;
+        st += `<path pathLength="1" d="M-13 ${cyy + dir*4}A13 13 0 0 1 13 ${cyy + dir*4}" transform="${side ? `rotate(180 0 ${cyy+dir*4})` : ""}" fill="none" stroke="${GOLD}" stroke-opacity=".65" stroke-width="1"/>`;
+        st += `<path pathLength="1" d="M0 ${cyy+dir*4}V${cyy - dir*6}M-7 ${cyy+dir*2}L-10 ${cyy-dir*4}M7 ${cyy+dir*2}L10 ${cyy-dir*4}" fill="none" stroke="${GOLD}" stroke-opacity=".45" stroke-width=".8"/>`;
+        if(kind === "box"){
+          st += `<rect pathLength="1" x="-11" y="-11" width="22" height="22" fill="none" stroke="${GOLD}" stroke-width="1.1"/><path pathLength="1" d="M-1.5 -11V11M1.5 -11V11M-11 -1.5H11M-11 1.5H11" stroke="${GOLD}" stroke-opacity=".6" stroke-width=".7" fill="none"/><path pathLength="1" d="M0 0C-6 -8 -11 -3 -6 0C-3 1 -1 0 0 0C6 -8 11 -3 6 0C3 1 1 0 0 0" fill="none" stroke="${HI}" stroke-width=".9"/>`;
+        } else {
+          st += `<circle pathLength="1" r="11.5" fill="none" stroke="${GOLD}" stroke-width="1.1"/><circle pathLength="1" r="7.5" fill="none" stroke="${GOLD}" stroke-opacity=".5" stroke-width=".7"/>`;
+          st += `<path pathLength="1" d="M-17 -9V9M17 -9V9" stroke="${GOLD}" stroke-width="1" fill="none"/><path pathLength="1" d="M-19 -9V-4M-15 -9V-4" stroke="${GOLD}" stroke-width=".7" fill="none"/>`;
+          st += `<circle pathLength="1" cx="16" cy="${dir*16}" r="3.8" fill="none" stroke="${GOLD}" stroke-opacity=".85" stroke-width=".8"/>`;
+          if(xm) st += `<path pathLength="1" d="M-9 ${-dir*15}l3 -2v4zM-6 ${-dir*15}h12M6 ${-dir*15}l3 -2v4z" fill="none" stroke="${HI}" stroke-opacity=".8" stroke-width=".8"/>`;
+        }
+        if(code) st += `<g class="pc"><rect x="-12" y="${dir*20 - 6.5}" width="24" height="13" fill="#ede3d9" stroke="${GOLD}" stroke-width=".7"/><text x="0" y="${dir*20 + 3.8}" text-anchor="middle" font-family="Cormorant SC, Georgia, serif" font-weight="600" font-size="10" fill="#00241a">${code}</text></g>`;
+        s += st + `</g>`;
+      }
+    }
+  }
+  if(g > shown) s += `<text x="${W/2}" y="${H-8}" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-size="17" fill="${HI}">and ${g - shown} more ${g - shown === 1 ? "place" : "places"} at further tables</text>`;
+  box.innerHTML = s + `</svg>`;
+  laid = idx;
+  $("tableN").textContent = m && g ? String(g) : "";
+  const parts = []; DIET.forEach(([k2,l]) => { if(S.diet[k2]) parts.push(`${word(S.diet[k2])} ${l}`); });
+  $("tableCap").textContent = !m ? "The table is laid once you choose a card." :
+    `${cap1(word(g))} ${m.kind === "box" ? (g === 1 ? "box" : "boxes") : (g === 1 ? "place" : "places")} laid${parts.length ? ", " + parts.slice(0,-1).join(", ") + (parts.length > 1 ? " and " : "") + parts[parts.length-1] : ""}.`;
+}
+
+/* ---------- validation and sealing ---------- */
+function setErr(id, msg, fid){ $(id).textContent = msg || ""; if(fid) $(fid).classList.toggle("bad", !!msg); }
+function validate(){
+  const m = menu(); let n = 0;
+  ["e-menu","e-guests","e-when","e-diet","e-addr","e-you"].forEach(i => $(i).textContent = "");
+  document.querySelectorAll(".f.bad").forEach(f => f.classList.remove("bad"));
+  if(!m){ setErr("e-menu","Choose a card first.","f-menu"); n++; }
+  if(m && S.guests < m.min){ setErr("e-guests",`This card starts at ${m.min} guests.`); n++; }
+  const dietSum = DIET.reduce((a,[k]) => a + S.diet[k], 0);
+  if(dietSum > S.guests){ setErr("e-diet","There are more dietary places than guests."); n++; }
+  const w = []; if(m && !available(m, S.date)){ w.push("a date"); $("f-date").classList.add("bad"); } if(!S.time){ w.push("a time"); $("f-time").classList.add("bad"); }
+  if(w.length){ setErr("e-when",`Choose ${w.join(" and ")}.`); n++; }
+  const a = []; [["a-co","f-co","the company"],["a-st","f-st","the building and street"],["a-tw","f-tw","the town"]].forEach(([i,f,l]) => { if(!$(i).value.trim()){ a.push(l); $(f).classList.add("bad"); } });
+  if(!parsePC($("a-pc").value)){ a.push("a full postcode"); $("f-pc").classList.add("bad"); }
+  if(a.length){ setErr("e-addr",`Add ${a.slice(0,-1).join(", ")}${a.length > 1 ? " and " : ""}${a[a.length-1]}.`); n++; }
+  const y = []; if(!$("r-nm").value.trim()){ y.push("your name"); $("f-nm").classList.add("bad"); }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($("r-em").value.trim())){ y.push("an email we can reply to"); $("f-em").classList.add("bad"); }
+  if(y.length){ setErr("e-you",`Add ${y.join(" and ")}.`); n++; }
+  return n;
+}
+function orderFromForm(){
+  const pc = parsePC($("a-pc").value);
+  return {menu:S.menu,guests:S.guests,diet:Object.assign({},S.diet),dessert:S.dessert,date:S.date,time:S.time,
+    addr:{co:$("a-co").value.trim(),st:$("a-st").value.trim(),tw:$("a-tw").value.trim(),pc:pc ? pc.full : $("a-pc").value.trim()},
+    notes:$("r-notes").value.trim(),pay:S.pay,po:$("r-po").value.trim(),who:$("r-nm").value.trim(),email:$("r-em").value.trim()};
+}
+function summaryHTML(o, again){
+  const m = MENUS.find(x => x.id === o.menu), t = totals(m, o.guests, o.dessert, o.addr.pc);
+  const dl = []; DIET.forEach(([k,l]) => { if(o.diet[k]) dl.push(`${o.diet[k]} ${l}`); });
+  const payTxt = o.pay === "account" ? `On account${o.po ? `, purchase order ${esc(o.po)}` : ""}` : "By card";
+  return `<div class="sum">
+    <div><span>${m.name}</span><span>${o.guests} ${o.guests === 1 ? m.unit1 : m.unit}</span></div>
+    ${o.dessert && m.addon ? `<div><span>Desserts</span><span>for ${o.guests}</span></div>` : ""}
+    ${dl.length ? `<div><span>Dietary places</span><span>${dl.join(", ")}</span></div>` : ""}
+    <div><span>${fmtLong(o.date)}</span><span>${m.kind === "box" ? "delivered by" : "set up by"} ${fmtTime(o.time)}</span></div>
+    <div><span>${esc(o.addr.co)}</span><span>${esc(o.addr.pc)}</span></div>
+    <div><span>${payTxt}</span><span>a demo</span></div>
+    <div class="tot"><span>${m.from ? "From" : "Total"}</span><span>${money(t.total)}${t.pending ? ", plus what Chris confirms" : ""}</span></div></div>
+    <p>${again ? "Sent again, as usual." : "In the live site this goes straight to the kitchen."} A confirmation would go to ${o.email ? esc(o.email) : "the account&#8217;s email"}, and Chris replies if anything needs a word.</p>
+    <p class="cn">A concept Astra built for The Garnish Collective, so nothing was sent and nothing was charged.${m.src === "ex" ? " Prices are examples." : " From prices are his, from the 2026 brochure."}</p>`;
+}
+function newRef(){ return "Order TGC " + String(1000 + Math.floor(Math.random()*9000)); }
+let lastFocus = null;
+function openDlg(html, ref){
+  $("dlgRef").textContent = ref; $("dlgBody").innerHTML = html;
+  lastFocus = document.activeElement; $("ov").classList.add("on"); const dl = document.querySelector("#ov .dlg"); dl.scrollTop = 0; frameAll(); $("dlgT").setAttribute("tabindex","-1"); $("dlgT").focus({preventScroll:true}); dl.scrollTop = 0;
+}
+function closeDlg(){ $("ov").classList.remove("on"); if(lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true}); }
+function seal(e){
+  e.preventDefault();
+  const n = validate();
+  if(n){ const er = $("errs"); er.textContent = n === 1 ? "One thing needs filling in before the card can be sealed." : "A few things need filling in before the card can be sealed."; er.classList.add("on");
+    const first = document.querySelector("#rcard .err:not(:empty)"); if(first){ const r = first.getBoundingClientRect(); window.scrollTo(0, window.scrollY + r.top - 160); } return; }
+  $("errs").classList.remove("on");
+  const o = orderFromForm(), m = menu();
+  let kept = "";
+  if($("r-keep").checked){
+    const u = Object.assign({id:"mine",name:`The ${DAYN[dow(o.date)]} order`,weekday:dow(o.date),company:o.addr.co}, o);
+    try { localStorage.setItem(STORE, JSON.stringify(u)); } catch(err){}
+    kept = `<p>Kept as your usual. Next time it&#8217;s one tap.</p>`;
+    renderUsual();
+  }
+  $("st3").className = "on";
+  const sp = $("stamp"); sp.classList.remove("on"); void sp.getBoundingClientRect(); sp.classList.add("on");
+  setTimeout(() => openDlg(summaryHTML(o,false) + kept, newRef()), window.matchMedia("(prefers-reduced-motion:reduce)").matches ? 0 : 650);
+}
+
+/* ---------- the usual ---------- */
+function loadUsual(){ try { const v = JSON.parse(localStorage.getItem(STORE) || "null"); return v && v.menu && MENUS.find(m => m.id === v.menu) ? v : null; } catch(e){ return null; } }
+let showDemo = false;
+function currentUsual(){ const mine = loadUsual(); return (!showDemo && mine) ? mine : DEMO; }
+function usualDate(u){ const m = MENUS.find(x => x.id === u.menu), list = nextDates(m, 40); return list.find(k => dow(k) === u.weekday) || list[0] || ""; }
+function renderUsual(){
+  const u = currentUsual(), m = MENUS.find(x => x.id === u.menu), d = usualDate(u), mine = !u.demo;
+  const t = totals(m, u.guests, u.dessert, u.addr.pc);
+  const dl = []; DIET.forEach(([k,l]) => { if(u.diet[k]) dl.push(`${u.diet[k]} ${l}`); });
+  $("ucard").innerHTML = `<div class="sc">Your usual</div>
+    <div class="co">${esc(u.company || u.addr.co)}</div>
+    <div class="tag">${mine ? "Kept in this browser" : "Demo account, a made up company"}</div>
+    <div class="what">${esc(u.name)}, ${m.kind === "box" ? `${u.guests} ${u.guests === 1 ? m.unit1 : m.unit}` : `${m.name} for ${u.guests}`}${u.dessert && m.addon ? ", with desserts" : ""}</div>
+    <div class="dt">${dl.length ? dl.join(", ") + "<br>" : ""}${m.kind === "box" ? "Delivered by" : "Set up by"} ${fmtTime(u.time)}, ${DAYN[u.weekday]}s<br>${esc(u.addr.st)}, ${esc(u.addr.tw)} ${esc(u.addr.pc)}</div>
+    <div class="pr">${m.from ? "from " : ""}${moneyH(t.total)}${m.src === "ex" ? DAG : ""}</div>
+    <div class="acts">${d ? `<button class="btn" type="button" id="again">Send it again for ${fmtLong(d)}</button>` : `<span class="dt">No matching date is open for this card.</span>`}
+    <button class="link" type="button" id="changeFirst">Change it first</button>${mine ? `<button class="link" type="button" id="seeDemo">Show the demo account</button>` : (loadUsual() ? `<button class="link" type="button" id="seeMine">Show your own usual</button>` : "")}</div>`;
+  frameAll();
+}
+function intoReply(u, withDate){
+  unseal(); S.menu = u.menu; S.guests = u.guests; S.diet = Object.assign({veg:0,vegan:0,gf:0,df:0}, u.diet); S.dessert = !!u.dessert; S.time = u.time;
+  fillDates(); S.date = withDate ? usualDate(u) : ""; fillDates();
+  $("a-co").value = u.addr.co || ""; $("a-st").value = u.addr.st || ""; $("a-tw").value = u.addr.tw || ""; $("a-pc").value = u.addr.pc || "";
+  $("r-notes").value = u.notes || ""; $("r-nm").value = u.demo ? "" : (u.who || ""); $("r-em").value = u.demo ? "" : (u.email || "");
+  setPay(u.pay || "card"); $("r-po").value = u.po || ""; $("r-keep").checked = false;
+  renderFare(); renderReply();
+}
+function sendAgain(){
+  const u = currentUsual(), d = usualDate(u); if(!d) return;
+  intoReply(u, true);
+  const o = Object.assign({}, u, {date:d, pay:u.pay || "account"});
+  if(u.demo){ o.email = ""; }
+  openDlg(summaryHTML(o, true), newRef());
+}
+
+/* ---------- gold frames that draw themselves ---------- */
+function framePath(w,h,c,ins){
+  const x = ins, y = ins, W = w - 2*ins, H = h - 2*ins;
+  return `M${x+c} ${y}H${x+W-c}V${y+c/2}H${x+W-c/2}V${y+c}H${x+W}V${y+H-c}H${x+W-c/2}V${y+H-c/2}H${x+W-c}V${y+H}H${x+c}V${y+H-c/2}H${x+c/2}V${y+H-c}H${x}V${y+c}H${x+c/2}V${y+c/2}H${x+c}Z`;
+}
+function frameAll(){
+  document.querySelectorAll("[data-frame]").forEach(el => {
+    const r = el.getBoundingClientRect(); if(!r.width) return;
+    const w = Math.round(r.width), h = Math.round(r.height), key = w + "x" + h;
+    let sv = el.querySelector(":scope > svg.fr");
+    if(sv && sv.dataset.k === key) return;
+    const ink = el.dataset.frame === "ink" || el.dataset.frame === "card";
+    const c = el.dataset.frame === "hero" ? 22 : 14, ins = el.dataset.frame === "hero" ? 0 : 9;
+    const html = `<path pathLength="1" d="${framePath(w,h,c,ins)}"/><path class="i" pathLength="1" d="${framePath(w,h,c-3,ins+6)}"/>`;
+    if(!sv){ sv = document.createElementNS("http://www.w3.org/2000/svg","svg"); sv.setAttribute("class","fr" + (ink ? " ink" : "")); sv.setAttribute("aria-hidden","true"); el.prepend(sv); if(getComputedStyle(el).position === "static") el.style.position = "relative"; }
+    sv.setAttribute("viewBox",`0 0 ${w} ${h}`); sv.innerHTML = html; sv.dataset.k = key;
+  });
+  reveal();
+}
+
+/* ---------- reveal from a scroll check, never an observer ---------- */
+let rq = false;
+function reveal(){
+  rq = false; const vh = window.innerHeight;
+  document.querySelectorAll(".rv:not(.in)").forEach(el => { const r = el.getBoundingClientRect(); if(r.top < vh * .9 && r.bottom > 0) el.classList.add("in"); });
+  document.querySelectorAll("svg.fr:not(.on)").forEach(el => { const r = el.getBoundingClientRect(); if(r.top < vh * .92 && r.bottom > 0) el.classList.add("on"); });
+}
+window.addEventListener("scroll", () => { if(!rq){ rq = true; requestAnimationFrame(reveal); } }, {passive:true});
+let rz = 0; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { frameAll(); renderTable(); ["r-menu","r-date","r-time"].forEach(id => sizeSelect($(id))); }, 120); });
+
+/* ---------- small things ---------- */
+let tt = 0;
+function toast(msg){ const t = $("toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("on"), 5200); }
+function setPay(v){ S.pay = v; document.querySelectorAll("input[name=pay]").forEach(r => { r.checked = r.value === v; }); $("p-card").classList.toggle("on", v === "card"); $("p-acct").classList.toggle("on", v === "account"); $("poRow").hidden = v !== "account"; }
+function clampGuests(v){ S.guests = Math.max(1, Math.min(400, Math.round(+v || 0))); }
+function unseal(){ $("stamp").classList.remove("on"); $("st3").className = "off"; }
+function choose(id, jump){
+  const m = MENUS.find(x => x.id === id); if(!m) return; unseal();
+  const changed = S.menu !== id; S.menu = id;
+  if(changed){ if(S.guests < m.min) S.guests = m.min; if(!m.addon) S.dessert = false; }
+  fillDates(); renderFare(); renderReply(); validateSoft();
+  if(jump){ const r = $("reply").getBoundingClientRect(); window.scrollTo(0, window.scrollY + r.top); toast(`${m.name} is on your reply card.`); }
+}
+function validateSoft(){ if(!$("errs").classList.contains("on")) return; const n = validate(); if(!n) $("errs").classList.remove("on"); else $("errs").textContent = n === 1 ? "One thing needs filling in before the card can be sealed." : "A few things need filling in before the card can be sealed."; }
+function renderCut(){
+  const m = MENUS.find(x => x.id === "lunch"), now = londonNow(), e = earliestFor(m);
+  const before = isWorking(now.key) && now.mins < CUTOFF_MIN;
+  $("cut").innerHTML = before ? `Order a lunch box by 2pm today${DAG} and it&#8217;s with you on ${fmtLong(e)}.` : `Order a lunch box now and it&#8217;s with you on ${fmtLong(e)}${DAG}.`;
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click", e => {
+  const c = e.target.closest("[data-choose]"); if(c){ choose(c.dataset.choose, true); return; }
+  const st = e.target.closest("[data-step]");
+  if(st){ const k = st.dataset.step, d = +st.dataset.d; if(k === "guests"){ const m = menu(); clampGuests(S.guests + d); } else { S.diet[k] = Math.max(0, Math.min(400, (S.diet[k]||0) + d)); } renderReply(); validateSoft(); return; }
+  if(e.target.id === "again"){ sendAgain(); return; }
+  if(e.target.id === "changeFirst"){ intoReply(currentUsual(), true); const r = $("reply").getBoundingClientRect(); window.scrollTo(0, window.scrollY + r.top); toast("Your usual is on the reply card. Change anything, then seal it."); return; }
+  if(e.target.id === "seeDemo"){ showDemo = true; renderUsual(); return; }
+  if(e.target.id === "seeMine"){ showDemo = false; renderUsual(); return; }
+});
+$("r-menu").addEventListener("change", e => { if(e.target.value) choose(e.target.value, false); else { S.menu = null; fillDates(); renderFare(); renderReply(); } });
+$("r-guests").addEventListener("input", e => { clampGuests(e.target.value); renderBill(); renderTable(); $("unitWord").textContent = menu() ? (S.guests === 1 ? menu().unit1 : menu().unit) : "guests"; validateSoft(); });
+$("r-guests").addEventListener("change", () => renderReply());
+DIET.forEach(([k]) => $("d-"+k).addEventListener("input", e => { S.diet[k] = Math.max(0, Math.min(400, Math.round(+e.target.value || 0))); renderTable(); validateSoft(); }));
+$("r-date").addEventListener("change", e => { S.date = e.target.value; sizeSelect(e.target); validateSoft(); });
+$("r-time").addEventListener("change", e => { S.time = e.target.value; sizeSelect(e.target); validateSoft(); });
+$("r-dessert").addEventListener("change", e => { S.dessert = e.target.checked; renderBill(); });
+$("a-pc").addEventListener("input", () => { renderPC(); renderBill(); });
+document.querySelectorAll("#rcard input[type=text],#rcard input:not([type]),#rcard input[type=email]").forEach(i => i.addEventListener("input", validateSoft));
+document.querySelectorAll("input[name=pay]").forEach(r => r.addEventListener("change", e => setPay(e.target.value)));
+$("rcard").addEventListener("submit", seal);
+$("dlgClose").addEventListener("click", closeDlg);
+$("dlgUsual").addEventListener("click", () => { closeDlg(); const r = $("usual").getBoundingClientRect(); window.scrollTo(0, window.scrollY + r.top); });
+$("ov").addEventListener("click", e => { if(e.target.id === "ov") closeDlg(); });
+document.addEventListener("keydown", e => { if(e.key === "Escape" && $("ov").classList.contains("on")) closeDlg(); });
+
+/* ---------- on phones and tablets the table sits under the bill, so the form comes first ---------- */
+const sceneHome = document.querySelector("#reply .g"), sceneEl = document.querySelector("#reply .scene"), smallQ = window.matchMedia("(max-width:1080px)");
+function placeScene(){
+  const inSlot = sceneEl.parentElement.id === "sceneSlot";
+  if(smallQ.matches && !inSlot){ $("sceneSlot").appendChild(sceneEl); laid = 0; }
+  else if(!smallQ.matches && inSlot){ sceneHome.insertBefore(sceneEl, sceneHome.firstChild); laid = 0; }
+}
+placeScene();
+if(smallQ.addEventListener) smallQ.addEventListener("change", () => { placeScene(); renderTable(); frameAll(); });
+
+/* ---------- start ---------- */
+fillMenuSelect(); fillTimes(); fillDates(); renderFare(); renderReply(); renderUsual(); renderCut();
+setInterval(renderCut, 60000);
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(() => { frameAll(); ["r-menu","r-date","r-time"].forEach(id => sizeSelect($(id))); renderTable(); });
+frameAll();
+window.addEventListener("load", frameAll);
+if("ResizeObserver" in window){ const ro = new ResizeObserver(() => { clearTimeout(ro.t); ro.t = setTimeout(frameAll, 60); }); document.querySelectorAll("[data-frame]").forEach(el => ro.observe(el)); }
+})();
+</script>
+</body>
+</html>

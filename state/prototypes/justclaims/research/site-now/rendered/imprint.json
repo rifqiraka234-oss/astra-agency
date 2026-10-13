@@ -1,0 +1,119 @@
+{
+ "title": "Imprint | justclaims",
+ "description": "",
+ "text": "Weiter zum Hauptinhalt\n\nWhy justclaims.eu\n\nAbout us\n\nResources\n\nRequest a Demo\nImprint\n \n\nCHS Claims Handling Solutions GmbH \nGüterplatz 1\n60327 Frankfurt am Main\n\n​\n\nT +49 69 380 299 910\nF +49 69 380 299 911\n\nE info@claims-handling.com \nwww.claims-handling.com\n \n\nManaging Directors: Ulrich Steppler, Katja H. Brecke \nHRB 1089923, Local Court Frankfurt am Main\n \n\nVAT ID No. DE313612032\n \n\nRegistered debt collection service provider pursuant to sec. 10 ss. 1 sent. 1 no. 1 Rechtsdienstleistungsgesetz (RDG, Legal Services Act)\n \n\n0224.3712/1-I/3-2017/19576, Upper Regional Court Frankfurt, Zeil 42, 60313 Frankfurt am Main\n \n\nProfessional liability insurance at ERGO Versicherung AG, Victoriaplatz 1, 40477 Dusseldorf\n \n\nFor further information please click here\n\n​\n\nConcept, Design & Realisation\nsimple & pure _ a digital product agency\nhttp://www.simple.mt \n\nCHS Claims Handling Solutions GmbH \n\nGüterplatz 1\n60327 Frankfurt am Main\n\n​\n\nT +49 69 380 299 910\nF +49 69 380 299 911\n\nImprint\n\nPrivacy Policy",
+ "h": [
+  "H2 Imprint"
+ ],
+ "links": [
+  {
+   "t": "",
+   "h": "https://www.justclaims.eu/"
+  },
+  {
+   "t": "Why justclaims.eu",
+   "h": "https://www.justclaims.eu/why-justclaims-eu"
+  },
+  {
+   "t": "About us",
+   "h": "https://www.justclaims.eu/about-us"
+  },
+  {
+   "t": "Resources",
+   "h": "https://www.justclaims.eu/resources"
+  },
+  {
+   "t": "Request a Demo",
+   "h": "https://www.justclaims.eu/request-a-demo"
+  },
+  {
+   "t": "info@claims-handling.com",
+   "h": "mailto:info@claims-handling.com"
+  },
+  {
+   "t": "www.claims-handling.com",
+   "h": "https://www.claims-handling.com/"
+  },
+  {
+   "t": "here",
+   "h": "https://www.rechtsdienstleistungsregister.de/"
+  },
+  {
+   "t": "http://www.simple.mt",
+   "h": "http://www.simple.mt/"
+  },
+  {
+   "t": "Imprint",
+   "h": "https://www.justclaims.eu/imprint"
+  },
+  {
+   "t": "Privacy Policy",
+   "h": "https://www.justclaims.eu/privacy-policy"
+  },
+  {
+   "t": "",
+   "h": "https://www.linkedin.com/company/justclaims/"
+  }
+ ],
+ "imgs": [
+  {
+   "src": "https://static.wixstatic.com/media/084a8c_c55f55363cfc4d7e8e300065e501c38f~mv2.png/v1/fill/w_206,h_125,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/084a8c_c55f55363cfc4d7e8e300065e501c38f~mv2.png",
+   "alt": "Logo justclaims.eu",
+   "w": 206,
+   "h": 125
+  },
+  {
+   "src": "https://static.wixstatic.com/media/11062b_9e78da3320da497ab23ce28d738d388a~mv2.png/v1/fill/w_30,h_30,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_9e78da3320da497ab23ce28d738d388a~mv2.png",
+   "alt": "LinkedIn",
+   "w": 30,
+   "h": 30
+  }
+ ],
+ "fonts": [
+  "Helvetica, Arial, メイリオ, meiryo, \"ヒラギノ角ゴ pro w3\", \"hiragino kaku gothic pro\", sans-serif",
+  "Arial, Helvetica, sans-serif",
+  "wfont_b3480a_e578ed4d69ab4d8ebfbd1b3c59e92dd8, wf_e578ed4d69ab4d8ebfbd1b3c5, orig_source_sans_pro",
+  "wfont_b3480a_4549acf4c97a4dc39f9376d8d889019f, wf_4549acf4c97a4dc39f9376d8d, orig_source_sans_pro_bold"
+ ],
+ "colors": [
+  [
+   "rgb(0, 0, 0)",
+   232
+  ],
+  [
+   "rgb(88, 88, 90)",
+   44
+  ],
+  [
+   "rgb(255, 255, 255)",
+   22
+  ],
+  [
+   "rgb(0, 0, 238)",
+   14
+  ],
+  [
+   "rgb(87, 159, 148)",
+   5
+  ],
+  [
+   "rgb(17, 109, 255)",
+   1
+  ],
+  [
+   "rgba(255, 255, 255, 0)",
+   1
+  ]
+ ],
+ "height": 1411,
+ "status": 200,
+ "url": "https://www.justclaims.eu/imprint",
+ "pageerrors": [],
+ "failed": [
+  "https://frog.wix.com/bpm",
+  "https://frog.wix.com/bolt-performance",
+  "https://panorama.wixapps.net/api/v1/bulklog",
+  "https://panorama.wixapps.net/api/v1/bulklog",
+  "https://frog.wix.com/bolt-performance"
+ ]
+}

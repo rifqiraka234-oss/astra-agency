@@ -1,0 +1,53 @@
+<section class="sec prod-sec" id="platform">
+<div class="wrap">
+  <div class="sec-h rv">
+    <p class="mono lab">The platform, on its own screens</p>
+    <h2>Every claim already carries its own deadline.</h2>
+    <p class="sub">These are screens from justclaims, with sample data. Pick a screen, then a pin, to see the rule that touches that field.</p>
+  </div>
+  <div class="prod rv d1" data-prod>
+    <div class="chips prod-tabs" role="tablist" aria-label="Screens">
+      <button type="button" class="chipb" role="tab" aria-selected="true" data-t="0">A claim</button>
+      <button type="button" class="chipb" role="tab" aria-selected="false" data-t="1">A failed check</button>
+      <button type="button" class="chipb" role="tab" aria-selected="false" data-t="2">Reporting</button>
+    </div>
+
+    <div class="prod-p" data-p="0">
+      <figure class="shot"><div class="shot-in"><div class="shot-img" data-w="750" data-h="392"><i class="hl" aria-hidden="true"></i><img src="assets/img/product/claim.png" width="750" height="392" alt="A claim in justclaims, KSRQM, with a deadline, five automatic checks and a compensation amount of 400 euro worked out from distance and delay">
+        <button type="button" class="pin" data-n="1" data-rect="128 116 204 24" style="left:43.5%;top:32.7%" aria-label="Pin 1, Deadline at">1</button>
+        <button type="button" class="pin" data-n="2" data-rect="126 180 474 28" style="left:80.5%;top:49.5%" aria-label="Pin 2, compensation amount">2</button>
+        <button type="button" class="pin" data-n="3" data-rect="126 294 414 26" style="left:72%;top:78.6%" aria-label="Pin 3, passenger manifest check">3</button>
+        <button type="button" class="pin" data-n="4" data-rect="126 354 152 26" style="left:37.5%;top:93.9%" aria-label="Pin 4, EU 261 check">4</button>
+      </div></div><figcaption class="mono">Sample data from the justclaims screens.</figcaption></figure>
+      <ol class="notes">
+        <li data-n="1"><b>The deadline is on the claim.</b><span>Each claim shows when it's due. Under Art. 7(9) an airline has 30 calendar days from receiving a request to pay or justify. <span class="art">Art. 7(9)</span> {{TBC}} that this field can hold that limit.</span></li>
+        <li data-n="2"><b>The amount is worked out.</b><span>This claim shows a flight distance of 3,183 km, a delay of 200 minutes and an amount of 400.00 EUR. Art. 7(1) sets 250, 400 or 600 by distance and route, and Art. 6(4) needs a delay at arrival of more than three hours. <span class="art">Art. 7(1), Art. 6(4)</span></span></li>
+        <li data-n="3"><b>The checks list their results.</b><span>Duplicate booking, duplicate passenger, the manifest lookup and the carrier check each show a result. Art. 14(7) puts the burden of proof on the airline for what it sent and when. <span class="art">Art. 14(7)</span> {{TBC}} that each result keeps a date and time.</span></li>
+        <li data-n="4"><b>The scope check names the regulation.</b><span>It reads "EU 261 applicable". The new regulation adds definitions of delay at arrival and time of arrival. <span class="art">Art. 2(o), Art. 2(x)</span> {{TBC}} that the check follows the new definitions from 23 October 2027.</span></li>
+      </ol>
+    </div>
+
+    <div class="prod-p" data-p="1">
+      <figure class="shot"><div class="shot-in"><div class="shot-img" data-w="750" data-h="293"><i class="hl" aria-hidden="true"></i><img src="assets/img/product/check-failed.png" width="750" height="293" alt="A claim in justclaims with failed checks, a manual check asking whether a passenger was on board, and a delay below the EC 261 threshold">
+        <button type="button" class="pin" data-n="1" data-rect="28 40 708 70" style="left:92%;top:19.8%" aria-label="Pin 1, manual check">1</button>
+        <button type="button" class="pin" data-n="2" data-rect="28 116 362 28" style="left:52.5%;top:44.7%" aria-label="Pin 2, delay below threshold">2</button>
+      </div></div><figcaption class="mono">Sample data from the justclaims screens.</figcaption></figure>
+      <ol class="notes">
+        <li data-n="1"><b>A person decides when the data doesn't match.</b><span>When the manifest shows no exact match, the claim asks a handler to confirm by hand, Yes or No, and links to the manifest.</span></li>
+        <li data-n="2"><b>The delay threshold is a rule in the platform.</b><span>This claim stops at "Delay below threshold of EC 261; no entitlement to compensation". The new text states the three hour line and measures it at arrival. <span class="art">Art. 6(4), Art. 2(o)</span> {{TBC}} that the threshold follows the new definition.</span></li>
+      </ol>
+    </div>
+
+    <div class="prod-p" data-p="2">
+      <figure class="shot"><div class="shot-in"><div class="shot-img" data-w="750" data-h="395"><i class="hl" aria-hidden="true"></i><img src="assets/img/product/reporting.png" width="750" height="395" alt="The justclaims reporting screen with counts of created, new, in progress and closed claims and an average lead time of 20 hours 53 minutes">
+        <button type="button" class="pin" data-n="1" data-rect="60 262 660 92" style="left:41.5%;top:76%" aria-label="Pin 1, average lead time">1</button>
+        <button type="button" class="pin" data-n="2" data-rect="58 120 664 86" style="left:96%;top:49.4%" aria-label="Pin 2, claims by status">2</button>
+      </div></div><figcaption class="mono">Sample data from the justclaims screens.</figcaption></figure>
+      <ol class="notes">
+        <li data-n="1"><b>Lead time is written in days, hours and minutes.</b><span>On this sample the average from claim creation to an offer sent is 00d 20h 53min, based on 18 claims. That is a figure you can set against a limit of 30 calendar days. <span class="art">Art. 7(9)</span></span></li>
+        <li data-n="2"><b>Claims are counted by status.</b><span>Created, new and unassigned, in progress and closed. The open ones are the claims with a clock still running.</span></li>
+      </ol>
+    </div>
+  </div>
+</div>
+</section>

@@ -1,0 +1,21 @@
+<section class="sec ruler-sec" id="ruler">
+<div class="wrap">
+  <div class="sec-h rv">
+    <p class="mono lab">The time limits that touch a claim</p>
+    <h2>{{NCLOCKS}} time limits, on one ruler.</h2>
+    <p class="sub">These are {{NCLOCKS}} of the time limits in Regulation (EU) 2026/2202, picked because they touch a claim or a passenger's rights, and placed by how long each one runs. Airline duties sit above the line and passenger rights below it. Pick one to read the sentence it comes from.</p>
+  </div>
+  <div class="ruler rv d1" data-ruler>
+    <div class="ruler-ctl">
+      <div class="chips" role="group" aria-label="Which time limits to show"><button type="button" class="chipb" aria-pressed="true" data-f="claims">Claims handling</button><button type="button" class="chipb" aria-pressed="false" data-f="all">All {{NCLOCKS}} on the ruler</button></div>
+      <p class="legend mono"><span><i class="k a"></i>Airline duty</span><span><i class="k p"></i>Passenger right</span></p>
+    </div>
+    <div class="ruler-stage" data-stage role="group" aria-label="Time limits on a logarithmic scale from one hour to twelve months"></div>
+    <div class="ruler-card" data-card aria-live="polite"></div>
+  </div>
+  <ul class="rulerlist" aria-label="Time limits in order of length">
+{{RULERLIST}}
+  </ul>
+</div>
+{{CLOCKSJSON}}
+</section>

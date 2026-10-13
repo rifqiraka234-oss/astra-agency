@@ -1,0 +1,37 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://publications.europa.eu/ontology/cdm#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.1="http://www.w3.org/2004/02/skos/core#"
+    xmlns:j.2="http://publications.europa.eu/ontology/annotation#"
+    xmlns:j.3="http://publications.europa.eu/ontology/cdm/cmr#" > 
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/cellar/54406a3d-bdf9-11f1-9aae-01aa75ed71a1.0006">
+    <owl:sameAs rdf:resource="http://publications.europa.eu/resource/oj/L_202602202.ENG"/>
+    <j.3:lang rdf:datatype="http://www.w3.org/2001/XMLSchema#language">eng</j.3:lang>
+    <j.3:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-10-02T02:36:26.882+02:00</j.3:creationDate>
+    <j.3:lang rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</j.3:lang>
+    <j.3:lastModificationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-10-02T02:55:18.264+02:00</j.3:lastModificationDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/oj/L_202602202.ENG">
+    <j.0:expression_manifested_by_manifestation rdf:resource="http://publications.europa.eu/resource/oj/L_202602202.ENG.xhtml"/>
+    <j.0:expression_uses_language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <j.0:expression_belongs_to_work rdf:resource="http://publications.europa.eu/resource/oj/L_202602202"/>
+    <j.0:expression_subtitle>PE/39/REV2/2026</j.0:expression_subtitle>
+    <j.0:expression_manifested_by_manifestation rdf:resource="http://publications.europa.eu/resource/oj/L_202602202.ENG.pdfa2a"/>
+    <j.0:belongs_to rdf:resource="http://publications.europa.eu/resource/oj/L_202602202"/>
+    <j.0:title>PE/39/REV2/2026</j.0:title>
+    <j.0:expression_title xml:lang="en">Regulation (EU) 2026/2202 of the European Parliament and of the Council of 16 September 2026 amending Regulation (EC) No 261/2004 of the European Parliament and of the Council establishing common rules on compensation and assistance to passengers in the event of denied boarding and of cancellation or long delay of flights and Council Regulation (EC) No 2027/97 on air carrier liability in respect of the carriage of passengers and their baggage by air (Text with EEA relevance)</j.0:expression_title>
+    <j.0:expression_manifested_by_manifestation rdf:resource="http://publications.europa.eu/resource/oj/L_202602202.ENG.fmx4"/>
+    <j.0:subtitle>PE/39/REV2/2026</j.0:subtitle>
+    <j.0:uses rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <rdf:type rdf:resource="http://publications.europa.eu/ontology/cdm#expression"/>
+    <j.0:title xml:lang="en">Regulation (EU) 2026/2202 of the European Parliament and of the Council of 16 September 2026 amending Regulation (EC) No 261/2004 of the European Parliament and of the Council establishing common rules on compensation and assistance to passengers in the event of denied boarding and of cancellation or long delay of flights and Council Regulation (EC) No 2027/97 on air carrier liability in respect of the carriage of passengers and their baggage by air (Text with EEA relevance)</j.0:title>
+    <j.2:build_info rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reception-ID: PO-20261002-178; environment: PROD; CERES: 4.30.0; IMMC2CDM: 3.2.3; workflow: OJABA_SIGNED_PDF_DELIVERIES; rules: oj-20260130-0; builddate: 2026-10-02T02:33:15.206;</j.2:build_info>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/language/ENG">
+    <rdf:type rdf:resource="http://publications.europa.eu/ontology/cdm#concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://publications.europa.eu/ontology/cdm#language"/>
+    <j.1:inScheme rdf:resource="http://publications.europa.eu/resource/authority/language"/>
+  </rdf:Description>
+</rdf:RDF>
