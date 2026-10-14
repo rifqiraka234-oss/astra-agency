@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-10-14 05.32 UTC (07.32 Amsterdam), the scheduled run on Raka's 13 Oct word, all four, one at a time. Darren act_b7GnWCSNQvn4pqdnW 05:32:03, Marjolein act_9L3AuFpuo3cfRioNw 05:32:12, Fabian act_PHB27ExmtXGGercyu 05:32:20, Reno act_f6bXyJFHaCAgHtN5T 05:32:29 UTC. Each thread pulled right before (1 item, the 11 Oct opener, nothing newer) with control ctc_ch3vFcKAkjQdMKDCg (3 items) the same minute, and right after (2 items, one copy landed). Text byte for byte from this file. Do not send again. Each closes silently if still quiet once this bump is over 3 days old (two pitches, then close).
+
 <!-- bumps, 2026-10-14 07.30 Amsterdam -->
 # Bumps for 14 Oct, 07.30 Amsterdam (05.30 UTC). NOT SENT YET, scheduled on Raka's word.
 
