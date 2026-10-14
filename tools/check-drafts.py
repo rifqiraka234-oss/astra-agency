@@ -66,13 +66,16 @@ BANNED_STRUCTURES = [
 
 
 SHAPES = ("OPENER", "SKETCH", "REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY",
-          "CORRECTION")
+          "CORRECTION", "CHAT")
+# CHAT, Raka 2026-10-14, "non icp so just a light chat of what theyre up to". A short friendly
+# first message to someone we won't pitch, asking what they're working on. No gate, no pitch,
+# the writing bans still apply.
 # SKETCH, Raka's test opener, 2026-10-12, "hi, so this looks cool. However, your website is this.
 # I suggest to do this. We make websites for blah blah. Shall I send you a sketch of how it looks
 # like?" Five blocks, a full research gate like any opener, its own wording checks below.
 # Shapes whose length, block count and exclamation rules are NOT the cold opener's.
 # The opener template is five blocks (since 2026-09-24) with exactly one exclamation. Nothing else is.
-RELAXED = {"REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY", "CORRECTION"}
+RELAXED = {"REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY", "CORRECTION", "CHAT"}
 # A correction retracts a claim, so it has to be able to quote the thing it is retracting.
 EXEMPT_MONEY = {"CORRECTION"}
 

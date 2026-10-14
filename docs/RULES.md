@@ -393,6 +393,15 @@ wrong or already fixed (the problem we named was solved, the company was sold or
 the bump points them straight back at it. Those close silently. A researched nudge is only for when
 Raka asks for one.
 
+**Someone outside the ICP gets a light chat, not a pitch (Raka, 2026-10-14).** His words on Phoebe
+Morris (a one person law firm) and Laura Wynch (a fractional COO), "non icp so just a light chat of what
+theyre up to", and on Fernando Gomes (co owner of a franchise store), "ask him what he's up to". So an
+accepted lead who's too small or doesn't own the business we'd pitch gets one short friendly message, one
+true line about what they do, from their own page, and a question about what they're working on. No
+flaw, no offer, no gate. Tag it CHAT, which check-drafts.py treats as a relaxed shape with the writing bans
+still on. If they answer, the reply is a REPLY, and the first offer after that follows the warm chat rule
+below.
+
 **A warm chat's first offer is an opener, not a nudge (Raka, 2026-10-13).** When someone answered our
 connect note, we answered with a question and they went quiet, nothing was ever pitched, so there's
 nothing to nudge and no 👀. Their first offer is the SKETCH opener with its full research gate and the
