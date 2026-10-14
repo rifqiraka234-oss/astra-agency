@@ -375,6 +375,13 @@ spam please". Two others got the same run that week.
   On 12 Oct 111 went out in one day, against the 20 a day lemlist's own message limit is set to.
 - **Anyone who already had a follow up when this started closes silently** when the next one would
   have been due. That's the 22 lined up for a last bump on 15 Oct.
+- **People who said yes never close on silence (Raka, 2026-10-14).** His words, "lets just remember it
+  that they said yes and still pending from them". Anyone who said yes to a sketch, a build or a call,
+  or asked how we bill, still gets their one plain bump when it's due. After that they don't close.
+  Their queue row is `SAID_YES_PENDING` with the yes quoted and what's pending, and every pipeline
+  report lists them under Deals as said yes, waiting on them. Nothing more goes to them automatically,
+  so any further message is Raka's call. A no from them still closes them. First three, Ulrich
+  Steppler (justclaims), Chris Hale (Garnish) and Chris Ryalls (ExpoCall).
 
 **A nudge is the plain bump, not a new researched message (Raka, 2026-10-12).** His words, "you
 didnt have to go like full research all you have to do is just like 👀 have you seen this". So a
