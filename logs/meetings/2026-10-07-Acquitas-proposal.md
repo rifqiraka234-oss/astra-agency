@@ -72,3 +72,8 @@ raka@astraagency.nl and josh@astraagency.nl, so they haven't seen it. Luna and J
 Gmail 1a136b8c1d69ea17, reply all. £1,500 for the full website from the proposal (all nine pages, Luna's branding
 session, the calculator, SEO, the content editor), half to start and half at launch. Down from £2,500. If he accepts,
 the scope is the proposal's website list as written.
+
+## Kyson's answer to the £1,500 offer, 14 Oct 12.43 UTC
+
+"Thank you, I greatly appreciate your improved offer. I'll be in touch in the coming months." Not now. Closed lost
+for now, revisit after his first mandate or in the new year.
