@@ -1,4 +1,6 @@
-# Kyson Charles, Acquitas. LinkedIn heads up about the £1,500 email. Scheduled 14 Oct 08.00 Amsterdam. NOT SENT.
+# Kyson Charles, Acquitas. LinkedIn heads up about the £1,500 email. Scheduled 14 Oct 08.00 Amsterdam. NOT SENT, HELD.
+
+HELD 14 Oct 06.00 UTC when the wake fired. Raka never approved the text, so nothing went. Threads pulled at the wake, Gmail 11 messages with our 13 Oct 19.23 UTC email newest, LinkedIn 19 unchanged (synced 05.55 UTC), so Kyson hasn't replied anywhere. Waiting on Raka's word.
 
 Wake trigger trig_01A9wcBRUmF5CCva6pVowe1Q, fires 2026-10-14T06:00:00Z.
 
