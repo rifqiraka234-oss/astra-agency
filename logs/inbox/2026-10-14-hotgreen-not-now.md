@@ -32,3 +32,19 @@ Raka
 
 If she says yes to the list, recheck all twelve items on the live site that day before sending, and send a clean
 version, not the old proposal page link, which carries different prices.
+
+## Sent on Raka's word, 2026-10-14 15.47 UTC
+
+Raka, "Yes do all that and follow up december or jan". Gmail message 1a13b189960cf87c in thread 1a0d2d5971a63502,
+to Sanya, cc Luna and Josh, body copied from the draft above. The thread was re-pulled just before, still 7 messages,
+Sanya's 14 Oct reply the newest. Read back after sending, SENT label, recipients as intended.
+
+## Follow up set
+
+- Calendar, "Follow up HotGreen (Sanya Chhugani)", Wed 2 Dec 2026 09.00 Amsterdam, event v4jainatisg8nfk15438k1hre8,
+  popup and email reminder, marked free.
+- Session reminder, trigger trig_015bxrperasXFJQHcC43y3aQ, fires 2 Dec 2026 08.00 UTC. It re-pulls the thread, checks
+  whether Sanya took the fix list, checks HotGreen's site, LinkedIn and news, drafts a follow up for Raka, never
+  sends, and books a mid January check if nothing comes of it.
+- If Sanya says yes to the fix list before then, it's owed at once. Recheck all twelve items on the live site that
+  day and send a clean version, not the old proposal page link.
