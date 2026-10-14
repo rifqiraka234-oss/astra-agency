@@ -1,9 +1,13 @@
+<!-- GATE ARCHIVED -->
+<!-- SENT 2026-10-14 07:09 UTC on Raka's 'send all'. -->
 <!-- SKETCH draft, 2026-10-13, Kevin Hanson, moved out of state/drafted_2026-10-13-modernise.md at ~20:58 UTC once Wulf and Wisteria were sent, so the held draft stands alone. Modernised website angle on Raka's "modernised is the word/angle". NOT SENT, waiting on Raka. Re pull the thread with the control and reopen every claim in the minute before any send. -->
 # SKETCH draft, 2026-10-13, modernised website. Kevin Hanson, Panoramix IP
 
 ### Kevin Hanson, Panoramix IP, ctc_BAsKeiWpJiTEmbqfz
 
-> NOT SENT. Raka held it ('send wulf and wisteria'). Both crawls done 2026-10-13 (359 pages each), the gate is complete, waiting on his word.
+> SENT 2026-10-14 07:09:04 UTC on Raka's 'send all', act_3zDYzY4ig8e93ZrHF, one copy, 549 characters byte for byte from this file. Before the send, 07:07 to 07:09 UTC, thread 0 items three times (the last after LinkedIn finished syncing at 07:08:48) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly one contact (connect note only), myConversations no reply, lead record one campaign, queue latest row DRAFTED, no other draft or send in state/ or logs/. Facts reopened live, https://panoramixip.co.uk/ hero image Panoramix-IP-consultation.webp, a handshake in a fresh desktop screenshot at 07:08 UTC (/tmp/claude-0/agents/b23/pan_now-desktop.png), the US filing line once, the second paragraph of the hero card beside it, UK and US Trade Mark Filing on the page, https://panoramixip.co.uk/case-studies/ 7 case studies. Do not send again.
+>
+> Raka held it ('send wulf and wisteria'). Both crawls done 2026-10-13 (359 pages each), the gate is complete, waiting on his word.
 
 ```gate
 lead: Kevin Hanson, director since 25 Mar 2019 and sole PSC of PANORAMIX LIMITED 11903869, and director and sole PSC of PANORAMIX US LIMITED 17428919, incorporated 31 August 2026, SIC 69109, per https://find-and-update.company-information.service.gov.uk/company/11903869/persons-with-significant-control and https://find-and-update.company-information.service.gov.uk/company/17428919/persons-with-significant-control (reopened 2026-10-13 ~18:45 UTC). lemlist jobTitle "Founder & IP Lawyer - Panoramix Limited (Lincoln)", tagline "UK & US qualified IP lawyer (Solicitor, Patent Attorney [CPA, EPA], California Bar Member) - Lincoln". ctc_BAsKeiWpJiTEmbqfz, leadId lea_JzMNhHBbAnb76ADnm, campaign W5 cam_BRBXAzzDKMfC4fSCS (running). Thread pulled 2026-10-12 16:35 and 2026-10-13 18:36 UTC, 0 items, nextPage null, control 3 items same minute. The 12 Oct consent SKETCH was never sent

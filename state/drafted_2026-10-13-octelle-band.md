@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- BOTH SENT, Kristof 2026-10-14 05:34 UTC (scheduled), Rob 2026-10-14 07:09 UTC ('send all'). -->
 <!-- SKETCH drafts, 2026-10-13 ~19:25 UTC, the two remaining new accepts from Raka's "anyone else replied? or anone else accepted connection request?". Kristof Spitael (Octelle) and Rob Quinn (BAND). Both threads pulled 18:59 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute. NOT SENT, waiting on Raka. Re pull each thread with the control and reopen every claim in the minute before any send. Evidence in /tmp/claude-0/agents/b21/. -->
 # SKETCH drafts, 2026-10-13. Kristof Spitael, Octelle, and Rob Quinn, BAND
 
@@ -75,7 +77,9 @@ Shall I send you a sketch of the modernised Octelle site?
 
 ### Rob Quinn, BAND, ctc_k6YrDTTW2zZ3MhxB3
 
-> NOT SENT. Build Squad, the fifth family. "Half the time at half the price" is Raka's offer from RULES 4A, flagged, a lead can hold us to it. The website, brand and social families are TAKEN, BAND sells them through its own studio and Rob runs brand and creative for the group.
+> SENT 2026-10-14 07:09:01 UTC on Raka's 'send all', act_iCNwTMpQrW98dqdrr, one copy, 559 characters byte for byte from this file. Before the send, 07:07 to 07:09 UTC, thread 0 items three times (the last after LinkedIn finished syncing at 07:08:48) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly one contact (connect note only), myConversations no reply, lead record one campaign, queue latest row DRAFTED, no other draft or send in state/ or logs/. Facts reopened live, https://weareband.co.uk/services/band-creative-studio/ 'From landing pages to full websites', https://weareband.co.uk/introducing/meet-the-band/ 'Fiora Banousi Head of Brand & Creative' and 'Marie Sadler Junior Graphic Designer', develop or engineer only on R&D tax staff. Do not send again.
+>
+> Build Squad, the fifth family. "Half the time at half the price" is Raka's offer from RULES 4A, flagged, a lead can hold us to it. The website, brand and social families are TAKEN, BAND sells them through its own studio and Rob runs brand and creative for the group.
 
 ```gate
 lead: Robert John Quinn, director of BAND ADVISORY GROUP LIMITED 12039502 since 26 March 2020 and a PSC with 25 to 50% of the shares since 31 March 2020, alongside Stelaris Group Limited with 50 to 75% of the votes, per https://find-and-update.company-information.service.gov.uk/company/12039502/persons-with-significant-control and https://find-and-update.company-information.service.gov.uk/company/12039502/officers . The company was FORTUS LONDON LIMITED until 3 May 2023. lemlist jobTitle "Co-Founder I Head of Creative Industries". https://weareband.co.uk/introducing/meet-the-band/ "Former marketing agency owner, now leading the Creative Industries team at BAND with responsibility across our agency, music, TV & Film client portfolio, whilst also overseeing brand, marketing and creative strategy for the group". https://weareband.co.uk/legal/statutory-directors/ lists him under BAND Advisory Group Limited. ctc_k6YrDTTW2zZ3MhxB3, leadId lea_T6atJwsay5twpL7Ru, campaign W5 cam_BRBXAzzDKMfC4fSCS, one campaign. Thread pulled 18:59 UTC, 0 items, nextPage null, control ctc_ch3vFcKAkjQdMKDCg 3 items same minute
