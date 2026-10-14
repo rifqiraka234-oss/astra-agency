@@ -1,14 +1,18 @@
+<!-- GATE ARCHIVED -->
+<!-- ALL FOUR SENT 2026-10-14 07:58 UTC on Raka's 'send allll broo'. -->
 <!-- SKETCH drafts, 2026-10-14 ~07:50 UTC. Raka on the four no-angle sites he saw (state/look_2026-10-14/), "bro theyre all old websites, old looking, angle modernise". Guillaume Slee (Brovanture), Willem Straat (Hooft & Petiet), Claire Enders (Enders Analysis), Fabrice Beauchêne (Glyx Therapeutics). All four connected and never sent a real message, threads pulled 07:19 UTC (Fabrice holds only the 18 Jul connect note, the other three 0 items), control ctc_ch3vFcKAkjQdMKDCg 3 items same minute. NOT SENT, waiting on Raka. Re pull each thread with the control and reopen every claim in the minute before any send. Evidence in /tmp/claude-0/agents/b24/. RULES 4A now says a dated look is the angle whoever the firm is. -->
 # SKETCH drafts, 2026-10-14, modernised websites. Guillaume Slee, Willem Straat, Claire Enders, Fabrice Beauchêne
 
 ### Guillaume Slee, Brovanture, ctc_mG6iR58sQQAXKgKEk
+
+> SENT 2026-10-14 07:58:45 UTC on Raka's 'send allll broo', act_nFEo9Q8kjbjbjHmP6, one copy, 591 characters byte for byte from this file. Before the send, 07:57 to 07:58 UTC, thread 0 items (Fabrice only the 18 Jul connect note) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly one contact each (connect note only, no reply), myConversations no reply since 06:00, lead record one campaign (v0.1, paused, sent from the inbox), queue latest row DRAFTED, no other draft or log. Every claim reopened live at 07:57 UTC. Do not send again.
 
 > NOT SENT. Supersedes NO_STRONG_ANGLE (30 Sep and 7 Oct), which judged the site by its content.
 
 ```gate
 lead: Guillaume Patrick Slee, active director of BROVANTURE LIMITED 05582633 since 18 Jul 2016 per https://find-and-update.company-information.service.gov.uk/company/05582633/officers (reopened 2026-10-14 07:44 UTC), PSCs Malcolm James Brock and Marc Van Kan at 25 to 50% each per https://find-and-update.company-information.service.gov.uk/company/05582633/persons-with-significant-control . lemlist jobTitle "Chief Executive Officer", tagline "Chief Executive Officer @ Brovanture Ltd | Oracle Certified Specialist", and https://brovanture.com/brovanture/about/ names him CEO, so he runs it as CEO, the who rule's CEO case. ctc_mG6iR58sQQAXKgKEk, leadId lea_oMsxcdxJwgCWNDohj, campaign v0.1 cam_PryZp5LuvQv8NznHh (paused, the message goes from the inbox). Accepted 2026-09-29 15:02 UTC. Thread pulled 07:19 UTC, 0 items, nextPage null, sentOnly one contact with the 22 Sep connect note only, control 3 items same minute
 site pass 1: 363 pages, tools/crawl.py on https://www.brovanture.com , 330 from the sitemaps plus linked pages, 352 at 200, 10 at 404, 1 at 000, every page read (tools/crawl.py fixed today to skip a malformed bracketed href that had crashed it)
-site pass 2: BROV_PASS2
+site pass 2: 364 pages, second full crawl, 331 from the sitemaps, statuses {200: 353, 000: 1, 404: 10}, equal to or above pass 1, plus site-audit.js screenshots (render trusted, 0 page errors) and tools/render-via-curl.js, every part opened
 deep analysis: A 50 person Oracle EPM, ERP and analytics consultancy in Godalming, "The Number 1 Oracle Cloud EPM Partner in the UK and IRL 4th year running" on its own homepage, UKOUG gold badges for 2023 to 2026, ISO 9001, 14001 and 27001, Cyber Essentials, G-Cloud, NetSuite and Oracle partner logos, fixed price implementations ("we implement Oracle EPM applications for a fixed price"), public sector work. The homepage, built on Bricks in May 2024 (wp-json home date 2024-05-22, modified 2026-08-25), opens under two utility bars (a support phone line and a row of eight language flags) and a bright green menu, then stacks full width stock photo banners, a webinar band, citrus slices behind "a fresh approach", fanned price tags, a chess pawn behind "manage strategy and ensure execution", hands holding the letters RESOURCES, each with centred text and outline buttons (image files Home-banner_01.webp, BRO032_Tags_Fanned, chess-bg_01.webp, resources-background-1920x636.jpg in the live HTML). Seen in site-audit.js's Chromium screenshot and confirmed through tools/render-via-curl.js. Next to best in class consultancies it looks like a stock template, and it undersells a firm that wins the top Oracle partner award four years running. Built in 2024 and edited in August, so the message says it looks older, never that it is old
 owner linkedin: Route 1 /in/guillaume-slee-28688a20 not fetched, 999 on every prior attempt (7 Oct). Route 2 the company page https://www.linkedin.com/company/brovanture-ltd through tools/social-audit.js, 1,316 followers. Route 3 his CEO line on https://brovanture.com/brovanture/about/ . Route 4 Companies House officers above. Route 5 tools/news.py "Guillaume Slee" 0. Route 6 the lemlist record
 contact linkedin: same person as the owner case, Companies House, the site and lemlist agree
@@ -63,6 +67,8 @@ Shall I send you a sketch of the modernised Brovanture site?
 ```
 
 ### Willem Straat, Hooft & Petiet, ctc_XDgqhRAfzxcTmGKhZ
+
+> SENT 2026-10-14 07:58:48 UTC on Raka's 'send allll broo', act_3QhnzodXwNbHTgcki, one copy, 596 characters byte for byte from this file. Before the send, 07:57 to 07:58 UTC, thread 0 items (Fabrice only the 18 Jul connect note) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly one contact each (connect note only, no reply), myConversations no reply since 06:00, lead record one campaign (v0.1, paused, sent from the inbox), queue latest row DRAFTED, no other draft or log. Every claim reopened live at 07:57 UTC. Do not send again.
 
 > NOT SENT. Supersedes NO_STRONG_ANGLE (1, 6 and 7 Oct). Two site problems in one modernised angle (RULES 4A, Octelle).
 
@@ -124,6 +130,8 @@ Shall I send you a sketch of the modernised Hooft & Petiet and ReShare sites?
 
 ### Claire Enders, Enders Analysis, ctc_sQPTmkW8KGwkediDD
 
+> SENT 2026-10-14 07:58:50 UTC on Raka's 'send allll broo', act_6LALEEbZviFjLZFnK, one copy, 612 characters byte for byte from this file. Before the send, 07:57 to 07:58 UTC, thread 0 items (Fabrice only the 18 Jul connect note) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly one contact each (connect note only, no reply), myConversations no reply since 06:00, lead record one campaign (v0.1, paused, sent from the inbox), queue latest row DRAFTED, no other draft or log. Every claim reopened live at 07:57 UTC. Do not send again.
+
 > NOT SENT. Supersedes NO_STRONG_ANGLE (6 Oct), which judged the site current. Flag, a CBE and a public figure, the tone stays plain.
 
 ```gate
@@ -184,6 +192,8 @@ Shall I send you a sketch of the modernised Enders Analysis site?
 ```
 
 ### Fabrice Beauchêne, Glyx Therapeutics, ctc_nFBoAwdTou6kXWRLN
+
+> SENT 2026-10-14 07:58:53 UTC on Raka's 'send allll broo', act_n96NqNRKu4XMo9hXo, one copy, 592 characters byte for byte from this file. Before the send, 07:57 to 07:58 UTC, thread 0 items (Fabrice only the 18 Jul connect note) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly one contact each (connect note only, no reply), myConversations no reply since 06:00, lead record one campaign (v0.1, paused, sent from the inbox), queue latest row DRAFTED, no other draft or log. Every claim reopened live at 07:57 UTC. Do not send again.
 
 > NOT SENT. Supersedes NO_STRONG_ANGLE (held on timing). Flags, VitaDX (where he's Directeur Général) entered a safeguard procedure in June, and Glyx is preparing its seed round right now, which is why the site matters.
 
