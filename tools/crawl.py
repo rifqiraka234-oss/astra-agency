@@ -101,9 +101,14 @@ def main():
             "text": text,
         }
         for h in re.findall(r'href="([^"]+)"', body):
-            h = urllib.parse.urljoin(u, html.unescape(h)).split("#")[0]
-            if urllib.parse.urlparse(h).netloc.replace("www.", "") == host and h not in seen:
-                queue.append(h)
+            # A malformed href (brovanture.com has one with square brackets) made urljoin raise
+            # "Invalid IPv6 URL" and killed the whole crawl, 2026-10-14. Skip that one link instead.
+            try:
+                h = urllib.parse.urljoin(u, html.unescape(h)).split("#")[0]
+                if urllib.parse.urlparse(h).netloc.replace("www.", "") == host and h not in seen:
+                    queue.append(h)
+            except ValueError:
+                continue
     json.dump(pages, open(os.path.join(outdir, "crawl.json"), "w"), ensure_ascii=False)
     codes = collections.Counter(p["code"] for p in pages.values())
     print(f"{start}  {len(pages)} pages read, {from_sitemap} from sitemaps, statuses {dict(codes)}")

@@ -925,6 +925,14 @@ right now, and we lead with it.**
   live fact (Octelle, 0 homepage hits for rooms, pool, sauna or price and five 170 by 127 photos, and
   a Boeken page with nothing available on five date ranges). It's still one thread, the website.
   The rule that a new site is never called old still holds, so say what's missing, not its age.
+- **A dated look is the angle whoever the firm is, never soften it (Raka, 2026-10-14).** His words
+  on four no-angle sites I'd sorted into "strongest", "softer" and "hold", "bro theyre all old
+  websites, old looking, angle modernise". I'd hedged Enders Analysis because its founder is a CBE
+  with Ofcom as a subscriber and the site is updated daily, and held Glyx on timing. Prestige,
+  busyness and a fresh news feed are reasons the look matters more, not less, and a company raising
+  money is exactly when its site gets judged. So when the screenshot looks dated next to best in
+  class, the verdict is modernise and the draft gets written. Flags still go to Raka beside the
+  draft (a CBE, a parent company in court protection), they never decide the verdict on their own.
 - **Odd findings aren't automatically the angle.** 130 casino spam posts on Ferry's own site were
   true and bizarre. Raka's call was to leave them out and roast the business. Record them, flag
   them, don't lead with them.
