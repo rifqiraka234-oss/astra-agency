@@ -82,9 +82,13 @@ NUDGE
 SAID_YES_PENDING. He wrote on 12 Oct 15:09 UTC, "I've been out the country, so haven;t had the time to look at it
 properly", and our answer went at 16:17:40 UTC, "No worries Chris, hope the trip went well." Nothing since, 4 items.
 This is his one bump. After it he stays pending and doesn't close (RULES section 1, people who said yes).
+**MOVED TO SATURDAY 17 OCT on Raka's word, 15 Oct ~10.10 UTC, "Chris ryalls lets just send it on saturday".** He
+already got "👀 Chris, have you seen this?" on 12 Oct 14:51 UTC (act_2f72HrDNNqrdfm6rc), so the line below replaces it.
+Asked Raka which line and what time. Nothing is scheduled until he says. Thread re-pulled 15 Oct ~10.05 UTC, 9 items,
+our 12 Oct 16:17 reply newest.
 NUDGE
 ```
-👀 Chris, have you seen this?
+👀 Chris, had a chance to look at the hotel page?
 ```
 
 ## Due from 18:49 UTC (20:49 Amsterdam), SKETCH opener sent 12 Oct 18:48 UTC (5)
