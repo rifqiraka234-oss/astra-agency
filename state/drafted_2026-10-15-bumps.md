@@ -88,7 +88,7 @@ Asked Raka which line and what time. Nothing is scheduled until he says. Thread 
 our 12 Oct 16:17 reply newest.
 NUDGE
 ```
-👀 Chris, had a chance to look at the hotel page?
+👀 Chris, had a chance to look at the hotel page? It's still live.
 ```
 
 ## Due from 18:49 UTC (20:49 Amsterdam), SKETCH opener sent 12 Oct 18:48 UTC (5)
