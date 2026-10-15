@@ -248,6 +248,8 @@ Shall I send you a sketch of the modernised Country Club Aixois site?
 
 ### Emmanuel Montecer, Marques de France, ctc_z9nJPbeK9Q7sHv5aK
 
+> HIRING CHECK 2026-10-15 ~06:30 UTC on Raka's question. NO sign. 0 hits for recrut, développeur or offre d'emploi in the 400 page crawl, https://fr.linkedin.com/company/marquesdefrance no jobs line and 2 employees, https://fr.linkedin.com/company/echo-conseils no jobs line and 4 employees, a web search for jobs at either found none. They keep shipping themselves, the App Store record (itunes lookup id 6758521698) shows seller Marques de France, released 2026-02-17, version 1.3.0 updated 2026-10-14. The squad angle is our inference only.
+
 > NOT SENT. Raka said modernisation. Drafted as Build Squad instead, because the site footer reads "Site conçu par Echo Conseils", his own digital agency, so a modernise pitch gets "we build that ourselves", RULES 0F trap five. A competitor is a Build Squad lead (RULES 4A rule 13). Say the word and I'll write the modernise version.
 
 ```gate
@@ -309,6 +311,8 @@ Shall I send you a sketch of how our build squad would ship your next feature?
 
 ### Martijn van Dijk, StriData, ctc_Z3J4EAKarueohCqxj
 
+> HIRING CHECK 2026-10-15 ~06:30 UTC on Raka's question. YES in their own words, no job ad. https://stridata.com/about/ "When projects need additional capacity, we bring in trusted specialists from a working network: Power BI engineers, Azure data engineers, industrial automation consultants". LinkedIn https://nl.linkedin.com/company/stridatabv shows no jobs line and 2 employees, lemlist shows headcount growth of 100 percent, a web search for a StriData vacancy found none, Monzo control as above. They already buy outside developer time per project.
+
 > NOT SENT. Pitch two, not an opener. He got our homepage pitch on 26 Aug and never answered, so a second website pitch would repeat a message he ignored (RULES 1B). Raka's "website OR BUILD SQUAD if theyre improving", and StriData is growing, so Build Squad, a new angle.
 
 ```gate
@@ -369,6 +373,8 @@ Shall I send you a sketch of our build squad on a StriData project?
 
 ### Ollie Bartlett, Collier Pickard, ctc_y3mjzEXbiLzEHSAMB
 
+> HIRING CHECK 2026-10-15 ~06:30 UTC on Raka's question. YES, the clearest of the four. https://higherin.com/jobs/43801/qa-limited/software-developer-higher-apprenticeship-collier-pickard is a Software Developer Higher Apprenticeship at Collier Pickard, Sevenoaks, posted 2026-08-20, closed 2026-09-24 (datePosted and validThrough in its own JSON, the page now says expired), £26,000 to £30,000, to "Develop, maintain and improve customer-facing web applications" in HTML, CSS, JavaScript, TypeScript, Node.js, PHP, SQL and PostgreSQL. LinkedIn company page https://uk.linkedin.com/company/collier-pickard shows no See jobs line and 23 employees (the 4,479 and 5,319 counts there are LinkedIn's generic Head of Operations and Head of Sales job links), while the same read of https://uk.linkedin.com/company/monzo-bank shows See jobs and Monzo jobs 291 open jobs (positive control). So they were adding developer capacity two months ago, at apprentice level.
+
 > NOT SENT. Never messaged, thread 0 items. Raka's "modernisation OR build squad but they implement", and the site is a 2024 agency build (footer "Designed by Damteq") that looks current, so Build Squad.
 
 ```gate
@@ -427,6 +433,8 @@ Shall I send you a sketch of our build squad working beside your team?
 ```
 
 ### Florent Dal Ben-Salles, Ades Bootcamp, ctc_xdGfs3raLhZzrZ3yc
+
+> HIRING CHECK 2026-10-15 ~06:30 UTC on Raka's question. NO sign. 0 hits for nous recrutons, on recrute, rejoindre l'équipe or jobs in the 163 page crawl, no developer on the homepage team list, a web search for a developer or CTO job at Ades found none, the LinkedIn school page blocks us (999, and empty through tools/fetch-walled.py). They do run custom software, "Mon espace Ades" at https://hub.adesbootcamp.com is a Next.js app, but nothing says who builds it or that they're short. The squad angle is our inference only.
 
 > NOT SENT. Never messaged, thread 0 items. Raka's "skip unless build squad shows theyre growing". They're growing (launched May 2024, batch 18 next, an RNCP title and the move into SKEMA Business School in 2026) and they build software (Ades Sim and their own student platform), so Build Squad.
 
