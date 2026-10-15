@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- 2026-10-15 06:16 to 06:17 UTC, five SENT on Raka's "Send everything except the build squad" (Phoebe, Fernando, Severin, Albert, Clément), Laura SEND FAILED (can-not-send-message). The four Build Squad drafts (Emmanuel, Martijn, Ollie, Florent) NOT SENT, Raka asked first whether any of them show signs of needing developers. -->
 <!-- Drafts, 2026-10-14 afternoon, from Raka's verdicts on the 20 screenshots in state/look_2026-10-14b/. NOT SENT, waiting on Raka. Re pull each thread with the control ctc_ch3vFcKAkjQdMKDCg, run the four way never messaged check and reopen every claim in the minute before any send. Evidence in /tmp/claude-0/agents/b26/ (screenshots) and /tmp/claude-0/agents/b27/ (crawls, tools, notes). All ten drafted threads re-pulled 2026-10-14 16:1x UTC with control ctc_ch3vFcKAkjQdMKDCg 3 items, none changed. -->
 # Drafts, 2026-10-14 batch 2. Light chats, then modernised website SKETCH openers
 
@@ -10,6 +12,8 @@ Raka's verdicts, his words, 2026-10-14.
 
 ### Phoebe Morris, Legally Influenced, ctc_tDxBWmy3TogwgzNtv
 
+> SENT 2026-10-15 06:16:42 UTC on Raka's 'Send everything except the build squad', act_pYBEnt2oMN4Tj7Ahp, one copy, 178 characters byte for byte from this file. Before the send, 06:12 to 06:17 UTC, thread pulled (only the connect note or empty, nextPage null) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly search one contact with the connect note only and no reply, myConversations name and company searches empty, lead record one campaign, every state file grepped with no SENT row, every fact reopened live (sites refetched, Dariuz and Van der Kolk Legal first screens re-shot and opened, the club's price figures 0 times in text with 34 Aug and Sep flyer uploads, DS Private's store list names DS PRIVATE MATOSINHOS). Re-pulled after, exactly one copy. Do not send again.
+
 > NOT SENT. Founder, one person London law firm (lemlist companyEmployeeCount 1), accepted 2026-10-14 07:47 UTC. Thread 0 items at 08:2x UTC with control 3 items, sentOnly shows the connect note only, not in myConversations, no state file row before today's. Facts, https://legally-influenced.com/ reads "Legal support, reimagined. No suits, No jargon." and "For start-ups, agencies + creators.", fetched 2026-10-14.
 
 CHAT
@@ -19,6 +23,8 @@ Hi Phoebe, thanks for connecting! Legally Influenced looks cool, I like that it'
 
 ### Laura Wynch, ctc_Hwfeh9fRi3kAp9vwN
 
+> SEND FAILED 2026-10-15 06:16 UTC on Raka's 'Send everything except the build squad', lemlist returned HTTP 400 can-not-send-message, the thread re-pulled after shows 0 items so nothing landed, not retried. Same error as Abraham Akrouche and Adad-Nirari Khochaba on 12 Oct, most likely she isn't a first degree connection (the sentOnly row shows our invite note of 8 Sep). Raka's call, re-invite or drop.
+
 > NOT SENT. Thread 0 items at 08:2x UTC with control 3 items. Facts, https://laurawynch.com/ (read through tools/render-via-curl.js, 0 curl errors, Cloudflare blocks our browser) reads "I am a consultant, founder and operator in the world of startups/scaleups" and "a fractional COO or Chief of Staff, programme manager or special projects lead". Validify and The Portfolio Collective block every route we have, so they're left out.
 
 CHAT
@@ -27,6 +33,8 @@ Hi Laura, thanks for connecting! Your site looks cool, fractional COO and Chief 
 ```
 
 ### Fernando Gomes, DS Private Matosinhos, ctc_TFuBoDoAp5Tntr8vC
+
+> SENT 2026-10-15 06:17:06 UTC on Raka's 'Send everything except the build squad', act_PrJEStFLqrBtj8HPQ, one copy, 130 characters byte for byte from this file. Before the send, 06:12 to 06:17 UTC, thread pulled (only the connect note or empty, nextPage null) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly search one contact with the connect note only and no reply, myConversations name and company searches empty, lead record one campaign, every state file grepped with no SENT row, every fact reopened live (sites refetched, Dariuz and Van der Kolk Legal first screens re-shot and opened, the club's price figures 0 times in text with 34 Aug and Sep flyer uploads, DS Private's store list names DS PRIVATE MATOSINHOS). Re-pulled after, exactly one copy. Do not send again.
 
 > NOT SENT. lemlist jobTitle Co-Owner, experience "Co-Owner @DS PRIVATE MATOSINHOS", a DS Private franchise store, the brand site https://dsprivate.com/ is head office's. Thread holds only the 11 Aug connect note, pulled 2026-10-14 08:2x UTC. His LinkedIn location reads Lima and his first experience line is an engineering job at Gutor, so the question stays open rather than assuming he runs the store day to day.
 
@@ -47,6 +55,8 @@ Hi Fernando, thanks for connecting! DS Private looks cool. How's the Matosinhos 
 ## Modernised website SKETCH openers
 
 ### Severin Kloos, Dariuz, ctc_CJGZpaRQxRpP7Qb8e
+
+> SENT 2026-10-15 06:17:17 UTC on Raka's 'Send everything except the build squad', act_u2srGLt4L7iHxBcje, one copy, 605 characters byte for byte from this file. Before the send, 06:12 to 06:17 UTC, thread pulled (only the connect note or empty, nextPage null) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly search one contact with the connect note only and no reply, myConversations name and company searches empty, lead record one campaign, every state file grepped with no SENT row, every fact reopened live (sites refetched, Dariuz and Van der Kolk Legal first screens re-shot and opened, the club's price figures 0 times in text with 34 Aug and Sep flyer uploads, DS Private's store list names DS PRIVATE MATOSINHOS). Re-pulled after, exactly one copy. Do not send again.
 
 > NOT SENT. Never messaged, thread 0 items. Raka 2026-10-14 asked "have we not analysed him and sent him a message?", the 3 Oct sweep researched Dariuz and blocked it on ownership, nothing was ever sent.
 
@@ -110,6 +120,8 @@ Shall I send you a sketch of the modernised Dariuz site?
 
 ### Albert van der Kolk, Van der Kolk Legal, ctc_w4hXk3njKiearzeNu
 
+> SENT 2026-10-15 06:17:27 UTC on Raka's 'Send everything except the build squad', act_n2ANtQK9TEtTSm96s, one copy, 599 characters byte for byte from this file. Before the send, 06:12 to 06:17 UTC, thread pulled (only the connect note or empty, nextPage null) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly search one contact with the connect note only and no reply, myConversations name and company searches empty, lead record one campaign, every state file grepped with no SENT row, every fact reopened live (sites refetched, Dariuz and Van der Kolk Legal first screens re-shot and opened, the club's price figures 0 times in text with 34 Aug and Sep flyer uploads, DS Private's store list names DS PRIVATE MATOSINHOS). Re-pulled after, exactly one copy. Do not send again.
+
 > NOT SENT. Supersedes the 11 Oct AI drafting OPENER held in state/drafted_2026-10-11-held.md, on Raka's "albert van der kolk yes website modernisation". Flag for Raka, the reason we held him on 11 Oct still stands, he retired from NautaDutilh on 1 Jan 2024 and may not want more work.
 
 ```gate
@@ -170,6 +182,8 @@ Shall I send you a sketch of the modernised Van der Kolk Legal site?
 ```
 
 ### Clément Previtali, Country Club Aixois, ctc_FTkRAQh2MHpEQJjMB
+
+> SENT 2026-10-15 06:17:38 UTC on Raka's 'Send everything except the build squad', act_fwPNPStmZu4BCCH2d, one copy, 620 characters byte for byte from this file. Before the send, 06:12 to 06:17 UTC, thread pulled (only the connect note or empty, nextPage null) with control ctc_ch3vFcKAkjQdMKDCg 3 items, sentOnly search one contact with the connect note only and no reply, myConversations name and company searches empty, lead record one campaign, every state file grepped with no SENT row, every fact reopened live (sites refetched, Dariuz and Van der Kolk Legal first screens re-shot and opened, the club's price figures 0 times in text with 34 Aug and Sep flyer uploads, DS Private's store list names DS PRIVATE MATOSINHOS). Re-pulled after, exactly one copy. Do not send again.
 
 > NOT SENT. Supersedes the 13 Oct BLOCKED_NEEDS_INFO on Raka's "clement previtali modernisation", so a salaried club director counts here. Flag for Raka, the site was rebuilt by the local agency AVAELYS and announced on 18 Feb 2025, before Clément arrived in Sept 2025, so it's twenty months old and his predecessor's, and the message never calls it old.
 
