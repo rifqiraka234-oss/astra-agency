@@ -12,6 +12,13 @@ The second check was myConversations from 12 Oct 00:00 to 15 Oct 07:30 UTC, 26 c
 in it. The only new reply in that window is Fernando Gomes. The queue's latest row for each is SENT on 12 Oct.
 Chris Ryalls is SAID_YES_PENDING from 14 Oct.
 
+**Completeness, checked against lemlist's own listing, 15 Oct 09:32 UTC.** Every conversation with activity between 1 and
+12 Oct was pulled from myConversations (41 of 41) and sentOnly (458 of 458), for 499 rows in total. Of those, the threads where
+our message is newest and isn't only the connect note come to 219. That's these 13, the 104 bumped on 12 Oct (72 closed today and
+32 closing later today), and 102 already closed, on hold or parked under another verdict. Valeska Schaaf and Julien Facchini are
+warm with nothing pitched, so they get a warm SKETCH and not a bump (RULES section 1, Raka's call). No one else is due a
+bump today.
+
 **At send time, before each one.** Pull the thread again with the control. If anything is newer than the message
 named below, don't send, and tell Raka. Copy the text from this file, then pull again to confirm exactly one copy.
 Don't send before the "due from" time. That's when our message turns 3 days old.
