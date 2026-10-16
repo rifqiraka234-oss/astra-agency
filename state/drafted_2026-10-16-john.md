@@ -1,4 +1,5 @@
-<!-- Draft, 2026-10-16. NOT SENT, waiting on Raka. Re pull the thread with the control ctc_ch3vFcKAkjQdMKDCg in the minute before any send, and copy the text from this file. -->
+<!-- GATE ARCHIVED -->
+<!-- SENT 2026-10-16 06:47:31 UTC on Raka's "Send it", act_a7PykaQurNDB9NvQc, one copy, byte for byte from this file. Thread pulled right before (5 items, his reply newest) with control 3 items, and right after (6 items). Do not send again. -->
 # John Nabuurs, a thanks after his no, only on Raka's word
 
 ### John Nabuurs, Precision Construction Components, ctc_WfX2BkgSvtGrF6o6B
