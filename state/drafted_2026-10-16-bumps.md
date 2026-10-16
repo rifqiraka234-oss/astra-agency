@@ -1,4 +1,4 @@
-<!-- bumps, 2026-10-16. NOT SENT, waiting on Raka. -->
+<!-- bumps, 2026-10-16. 1 to 6 SENT 14:08:47 to 14:08:58 UTC on Raka's "yeah send its fine", each thread pulled right before (unchanged since the morning pull) with control ctc_ch3vFcKAkjQdMKDCg 3 items before and after, and right after (one copy each). Alice act_7o6Jfo2d4AkQfvHa9, Ulrich act_LnYjb7TML2ofupqxx, Chris Hale act_rhNztPFebcD3NW7ks, Marlies act_Gujz889EAypuzW6z5, Alessio act_7Ezhr99QQEWGT26JW, Bert act_gLcKgFGZyYFmGvqbG. Do not send these 6 again. Adrien, Angelo and Sandro on the same word, at their due times. -->
 # Bumps for 16 Oct. NOT SENT, waiting on Raka's word
 
 Two pitches, then close (RULES section 1). Each of these 9 has one message from us still unanswered, so this is their
