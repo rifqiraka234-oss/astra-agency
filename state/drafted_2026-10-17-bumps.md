@@ -1,4 +1,4 @@
-<!-- bumps, 2026-10-17. NOT SENT, waiting on Raka. -->
+<!-- bumps, 2026-10-17. ALL 7 SENT 13:15:10 to 13:15:22 UTC on Raka's "And send the drafts first message its fine" (his answer to 'Shall I send the 7 bumps now?'), by the other session. Each thread pulled right before (only the 14 Oct opener, Fabrice's also the July connect note) with control ctc_ch3vFcKAkjQdMKDCg 3 items, and right after (one copy each). Kristof act_ro9Y9ZQ6xqjL8hp8Z, Rob act_wAY7gK2ExuTbFR5kP, Kevin act_goRXCXBjF5i9hdcdd, Guillaume act_u5hBn65B7e3L8e2Z6, Willem act_4r3Tzt2G5rAi32SbC, Claire act_juHZPgKS6pSE6hqXD, Fabrice act_uTTfLkTbvsZrB9dHq. Do not send these again. They close silently if still quiet from 20 Oct 13:16 UTC. -->
 # Bumps for 17 Oct. NOT SENT, waiting on Raka's word
 
 Two pitches, then close (RULES section 1). Each of these 7 got one message from us on 14 Oct, sent by the other session
