@@ -1,7 +1,7 @@
 # Healthy Secrets site, handover (2026-10-19)
 
 Live: https://astra-healthy-secrets-prototype.netlify.app (Netlify project `astra-healthy-secrets-prototype`,
-id 72cc17e8-d569-404b-8200-02839e55cf7b, deploy 6ad607ea46c267f30efe223d (v2), team SSO off, password off).
+id 72cc17e8-d569-404b-8200-02839e55cf7b, deploy 6ad60e6c113563368d0ecd7a (v2, cache fix), team SSO off, password off).
 Source: `build/` (build.py, pages/, make_map.py, process_images.py). Output: `site/`. Research and art direction:
 `research.md`. Evidence: `research/` (site pages, products.json, press texts, Instagram captions, teardown of 60 sites,
 the Commission claims page, the Wien Geschichte Wiki page). Image provenance: `research/asset-provenance.md`.
@@ -21,6 +21,10 @@ Copy, routes and widgets are unchanged. The stylesheet was rewritten and the sha
 - **Same QA again.** 53 of 53 interaction checks locally and live, axe clean on 9 pages, no overflow at six widths,
   no JS check, 41 of 41 assets byte matched live, colon, dash and prototype word audit clean. One regression caught
   and fixed (the product dialog's close button sat under a label).
+- **Cache fix (deploy 6ad60e6c113563368d0ecd7a).** Raka first saw v2 markup with the v1 stylesheet his browser had
+  cached, because assets went out with an hour of caching under the same filenames. The CSS and JS links now carry a
+  content hash (`site.css?v=...`), assets revalidate on every load, and the font preloads match v2 (Jost 400 and 500).
+  A stale cache simulation renders v2, and the same test pointed at the v1 file reproduces his screenshot.
 
 Promised in the thread (17 Oct): "a modernised Healthy Secrets site built around the Gut Health Club, with the café,
 the medical story behind the range and the shop on one clear path." That's what this is.

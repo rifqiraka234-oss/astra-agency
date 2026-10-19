@@ -8,6 +8,7 @@ English in data-en. German is the default and the no-JS state; site.js swaps the
 Product data lives here once and feeds the cards, the detail dialogs and the JSON the cart reads.
 """
 import glob
+import hashlib
 import html
 import json
 import os
@@ -216,6 +217,12 @@ FOOTER = f'''<footer class="ftr"><div class="wrap">
 </div></footer>'''
 
 
+def ver(asset):
+    # content hash in the URL, so a browser holding an older copy can't pair it with new markup
+    with open(os.path.join(OUT, 'assets', asset), 'rb') as f:
+        return hashlib.sha256(f.read()).hexdigest()[:10]
+
+
 def page(meta, body, name):
     tde, ten = split(meta['title'])
     dde, den = split(meta['desc'])
@@ -236,9 +243,9 @@ def page(meta, body, name):
 <meta name="theme-color" content="#FBDCE2">
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
-<link rel="preload" href="assets/fonts/jost-300.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/jost-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="preload" href="assets/fonts/jost-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css?v={ver('site.css')}">
 <script>document.documentElement.classList.add('js');try{{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('hs-lang');if(l==='en'||l==='de')document.documentElement.lang=l}}catch(e){{}}</script>
 </head>
 <body class="{meta.get('body', '')}">
@@ -249,7 +256,7 @@ def page(meta, body, name):
 {FOOTER}
 {CART}
 {pdata()}
-<script src="assets/site.js" defer></script>
+<script src="assets/site.js?v={ver('site.js')}" defer></script>
 </body>
 </html>
 '''
