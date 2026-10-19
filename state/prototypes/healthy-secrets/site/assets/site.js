@@ -384,7 +384,7 @@
     $$('[data-rv]', f).forEach(function (el) {
       var v;
       if (el.type === 'radio') { if (!el.checked) return; v = el.closest('label').querySelector('b').innerHTML; }
-      else if (el.tagName === 'SELECT') v = esc(el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : '');
+      else if (el.tagName === 'SELECT') v = el.value && el.options[el.selectedIndex] ? esc(el.options[el.selectedIndex].text) : '';
       else v = esc(el.value.trim());
       if (!v) return;
       rows.push('<div><dt>' + el.dataset.rv + '</dt><dd>' + v + '</dd></div>');
@@ -405,8 +405,8 @@
         $$('[data-fill="name"]', wrap).forEach(function (s) { s.textContent = nm ? nm.value.trim().split(' ')[0] : ''; });
         $$('[data-fill="mail"]', wrap).forEach(function (s) { var m = $('[type="email"]', f); s.textContent = m ? m.value.trim() : ''; });
         $$('[data-fill="order"]', wrap).forEach(function (s) { s.textContent = 'HS ' + String(Date.now()).slice(-6); });
-        if (f.dataset.form === 'order') { store('hs-cart', '{}'); paint(); var cs = $('#coSum'); if (cs) cs.hidden = true; }
         wrap.classList.add('sent'); f.classList.remove('busy');
+        if (f.dataset.form === 'order') { store('hs-cart', '{}'); paint(); var cs = $('#coSum'); if (cs) cs.hidden = true; }
         var ok = $('.ok h3, .ok h2', wrap); if (ok) { ok.setAttribute('tabindex', '-1'); ok.focus(); }
       }, 700);
     });

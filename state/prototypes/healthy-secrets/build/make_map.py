@@ -84,7 +84,7 @@ for n in show:
             out.append(f'<text class="m-l" x="{x}" y="{y}">{n}</text>')
 cx, cy = xy(*CAFE)
 out.append(f'<g class="m-pin" transform="translate({cx},{cy})"><circle r="26" class="m-pulse"/><circle r="11"/><text x="18" y="-16" class="m-pl">Gut Health Club</text><text x="18" y="2" class="m-ps">Wildpretmarkt 1</text></g>')
-out.append(f'<text class="m-attr" x="{W - 10}" y="{H - 10}" text-anchor="end">Kartendaten © OpenStreetMap-Mitwirkende</text>')
+out.append(f'<text class="m-attr" x="{W - 10}" y="{H - 10}" text-anchor="end">Kartendaten © OpenStreetMap Mitwirkende</text>')
 out.append('</svg>')
 open(OUT, 'w').write('\n'.join(out))
 print('map', len(streets), 'streets', len(buildings), 'buildings', len(church), 'church', len(cafe_bld), 'cafe', len(entrances), 'U', 'labels', [n for n in show if n in labels], 'cafe xy', (cx, cy))

@@ -12,7 +12,7 @@
 :root{
   --ink:#14232E;--ink2:#46545F;--line:rgba(20,35,46,.14);
   --paper:#FFFBF8;--white:#fff;
-  --blush:#FBDCE2;--blush2:#FDEDF0;--coral:#E86060;--coralT:#B83232;
+  --blush:#FBDCE2;--blush2:#FDEDF0;--coral:#E86060;--coralT:#A82C2C;
   --sky:#3D9BE9;--skyT:#1F6FB8;--skyp:#C3D6E8;--skyl:#E8F1F9;
   --tile:#D8E2E4;--tile2:#C4D1D4;
   --sage:#93AA90;--sageT:#47613F;--sagep:#E2EBE0;
@@ -35,7 +35,7 @@ button{cursor:pointer}
 strong,b{font-weight:600}
 :focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
 [hidden]{display:none!important}
-.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.vh{position:absolute!important;left:0;top:0;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 .skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;text-decoration:none}
 .skip:focus{top:12px}
 .wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--g)}
@@ -51,7 +51,8 @@ html[lang="en"] .l-de{display:none!important}
 .h3{font-size:clamp(19px,1.5vw,23px);font-weight:700;letter-spacing:-.01em;line-height:1.2}
 .lead{font-size:clamp(19px,1.5vw,23px);line-height:1.5}
 .it{font-style:italic}
-.ss{color:var(--coral);font-weight:inherit}
+.ss{color:var(--coralT);font-weight:inherit}
+.ftr-claim .ss{color:var(--coral)}
 .muted{color:var(--ink2)}
 .prose p+p{margin-top:1em}
 .prose{max-width:62ch}
@@ -156,7 +157,7 @@ html.js .rv.dl1{transition-delay:.08s}html.js .rv.dl2{transition-delay:.16s}html
 .badge svg{position:absolute;inset:0;width:100%;height:100%}
 .badge text{font-family:var(--f);font-weight:600;font-size:10.6px;letter-spacing:2.2px;fill:#fff;text-transform:uppercase}
 .badge b{position:relative;font-weight:200;font-size:clamp(26px,2.6vw,38px);line-height:.9;text-align:center}
-.badge b small{display:block;font-weight:600;font-size:.32em;letter-spacing:.14em;margin-top:4px}
+.badge b small{display:block;font-weight:600;font-size:.32em;letter-spacing:.14em;margin-bottom:4px;text-transform:uppercase}
 @media (prefers-reduced-motion:no-preference){.badge svg{animation:spin 40s linear infinite}}
 @keyframes spin{to{transform:rotate(360deg)}}
 .m-peek{position:absolute;pointer-events:none}
@@ -302,7 +303,7 @@ blockquote{margin:0}
 .svc-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;background:var(--navy);color:#fff;border-radius:22px;padding:24px 26px;margin-top:28px}
 .svc-card .eyebrow{color:var(--blush)}
 .svc-card h3{font-size:1.35rem;margin-top:6px}
-.svc-card p{font-size:.95rem;margin-top:4px;opacity:.9}
+.svc-card p:not(.eyebrow){font-size:.95rem;margin-top:4px;opacity:.92}
 
 /* 15 Uhr */
 .after-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,80px);align-items:start}
@@ -815,6 +816,17 @@ html:not(.js) .tpanel+.tpanel{margin-top:26px}
   .facts li:first-child{border-top:0}
   .svc label{grid-template-columns:22px minmax(0,1fr)}
   .svc .p{grid-column:2;text-align:left}
+}
+@media (max-width:440px){
+  .hdr .wrap{gap:10px}
+  .tools{gap:6px}
+  .bw{font-size:.9rem}
+  .brand{gap:8px}
+}
+@media (max-width:380px){
+  .bw{display:none}
+  .tools{gap:6px}
+  .lang button{padding:.3em .45em}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
