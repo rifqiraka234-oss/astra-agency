@@ -1,3 +1,4 @@
+<!-- SUPERSEDED 2026-10-19 by state/drafted_2026-10-19-bumps.md. None of these 4 was sent on 18 Oct. Do not send from this file. -->
 <!-- bumps, 2026-10-18. NOT SENT, waiting on Raka. -->
 # Bumps for 18 Oct. NOT SENT, waiting on Raka's word
 
