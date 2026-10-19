@@ -75,6 +75,8 @@
   }
   function tickDial(force) {
     if (!day || !hours.length) return;
+    var dr = day.getBoundingClientRect(), vh = window.innerHeight;
+    day.classList.toggle('on', dr.top < vh * 0.55 && dr.bottom > vh * 0.6);
     var mid = window.scrollY + window.innerHeight * 0.45, H, f = 0, idx = 0;
     var tops = hours.map(function (s) { return s.getBoundingClientRect().top + window.scrollY; });
     var last = hours[hours.length - 1], lastEnd = tops[tops.length - 1] + last.offsetHeight;

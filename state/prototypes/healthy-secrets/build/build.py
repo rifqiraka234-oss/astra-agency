@@ -178,15 +178,11 @@ def header(cur):
     links = ''.join(f'<a href="{h}"' + (' aria-current="page"' if k == cur else '') + f'>{L(*t)}</a>' for h, k, t in NAV)
     mlinks = ''.join(f'<a href="{h}"' + (' aria-current="page"' if k == cur else '') + f'>{L(*t)}</a>' for h, k, t in NAV)
     return f'''<a class="skip" href="#main">{L('Zum Inhalt', 'Skip to content')}</a>
-<div class="topbar"><div class="wrap">
-  <a href="club.html#anfahrt">{ICONS['pin']}<span>Gut Health Club, Wildpretmarkt 1, 1010 Wien</span></a>
-  <span class="tb-mid">{ICONS['clock']}<span>{L('Ab 10 Uhr für dich da', 'Open from 10 am')}</span></span>
-  <span class="tb-end">{ICONS['truck']}<span>{L('In Österreich Versand inklusive, 1 bis 3 Werktage', 'Shipping included within Austria, 1 to 3 working days')}</span></span>
-</div></div>
-<header class="hdr"><div class="wrap">
+<header class="hdr"><div class="hdr-in">
   <a class="brand" href="index.html" aria-label="{L('Healthy Secrets, zur Startseite', 'Healthy Secrets, home')}"><img src="assets/img/logo-line.webp" width="600" height="496" alt=""><span class="bw">Healthy Secrets<small>Gesundheit is(s)t Alltag</small></span></a>
   <nav class="nav" aria-label="{L('Hauptnavigation', 'Main')}">{links}</nav>
   <div class="tools">
+    <a class="status" href="club.html#anfahrt"><i aria-hidden="true"></i>{L('Ab 10 Uhr, Wildpretmarkt 1', 'From 10 am, Wildpretmarkt 1')}</a>
     <div class="lang" role="group" aria-label="{L('Sprache', 'Language')}"><button type="button" data-lang="de" aria-pressed="true">DE</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
     <button type="button" class="cart-btn" aria-controls="cart" aria-expanded="false">{ICONS['bag']}<span class="vh">{L('Dein Tag, Warenkorb öffnen', 'Your day, open the basket')}</span><span class="cart-n" aria-hidden="true">0</span></button>
     <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mnav"><span class="vh">{L('Menü', 'Menu')}</span><i></i><i></i></button>
@@ -208,11 +204,10 @@ CART = f'''<div class="scrim" data-close hidden></div>
 <dialog class="pdlg" id="pdlg" aria-labelledby="pdlgT"><div class="pdlg-in" id="pdlgIn"></div></dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>'''
 
-FOOTER = f'''<footer class="ftr">
-<div class="ftr-band"><div class="wrap"><p class="ftr-claim">Gesundheit is<span class="ss">(s)</span>t Alltag.</p><a class="btn ghost-l" href="{IG}" rel="noopener" target="_blank">{ICONS['ig']}<span>@healthysecrets_at</span></a></div></div>
-<div class="wrap">
+FOOTER = f'''<footer class="ftr"><div class="wrap">
+  <div class="ftr-top"><p class="ftr-claim">Gesundheit is<span class="ss">(s)</span>t Alltag.</p><a class="btn ghost" href="{IG}" rel="noopener" target="_blank">{ICONS['ig']}<span>@healthysecrets_at</span></a></div>
   <div class="cols">
-    <div class="f-brand"><img src="assets/img/logo-gold.webp" width="600" height="497" alt="Healthy Secrets" loading="lazy"><p>{L('Lebensmittel, ärztlich und ernährungsmedizinisch entwickelt. Von drei Geschwistern selbst gemacht, in Wien.', 'Food developed with medical and dietetic expertise. Made by three siblings themselves, in Vienna.')}</p></div>
+    <div class="f-brand"><img src="assets/img/logo-line.webp" width="600" height="496" alt="Healthy Secrets" loading="lazy"><p>{L('Lebensmittel, ärztlich und ernährungsmedizinisch entwickelt. Von drei Geschwistern selbst gemacht, in Wien.', 'Food developed with medical and dietetic expertise. Made by three siblings themselves, in Vienna.')}</p></div>
     <div><h2>Gut Health Club</h2><ul><li>Wildpretmarkt 1<br>1010 Wien</li><li>{L('Ab 10 Uhr', 'From 10 am')}</li><li><a href="club.html#anfahrt">{L('Anfahrt', 'Getting here')}</a></li><li><a href="club.html#termine">{L('Workshops und Kurse', 'Workshops and classes')}</a></li></ul></div>
     <div><h2>Shop</h2><ul><li><a href="shop.html#morgen">{L('Granola und Brot', 'Granola and bread')}</a></li><li><a href="shop.html#nachmittag">Fibre Flow Drinks</a></li><li><a href="shop.html#abend">{L('Tee', 'Tea')}</a></li><li><a href="shop.html#planer">{L('Tagesplaner', 'Day planner')}</a></li><li><a href="shop.html#versand">{L('Versand und Rückgabe', 'Shipping and returns')}</a></li></ul></div>
     <div><h2>Healthy Secrets</h2><ul><li><a href="ueber-uns.html">{L('Über uns', 'About us')}</a></li><li><a href="beratung.html">{L('Ernährungstherapie', 'Nutrition therapy')}</a></li><li><a href="wissen.html">{L('Wissen', 'Know how')}</a></li><li><a href="handel.html">{L('Für Handel und Apotheken', 'For shops and pharmacies')}</a></li><li><a href="mailto:{MAIL}">{MAIL}</a></li></ul></div>

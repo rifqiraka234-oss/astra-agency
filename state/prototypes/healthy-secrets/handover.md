@@ -1,10 +1,26 @@
 # Healthy Secrets site, handover (2026-10-19)
 
 Live: https://astra-healthy-secrets-prototype.netlify.app (Netlify project `astra-healthy-secrets-prototype`,
-id 72cc17e8-d569-404b-8200-02839e55cf7b, deploy 6ad5fa3272281f250c90e44c, team SSO off, password off).
+id 72cc17e8-d569-404b-8200-02839e55cf7b, deploy 6ad607ea46c267f30efe223d (v2), team SSO off, password off).
 Source: `build/` (build.py, pages/, make_map.py, process_images.py). Output: `site/`. Research and art direction:
 `research.md`. Evidence: `research/` (site pages, products.json, press texts, Instagram captions, teardown of 60 sites,
 the Commission claims page, the Wien Geschichte Wiki page). Image provenance: `research/asset-provenance.md`.
+
+## v2, "seamless" (Raka's note, 19 Oct, after seeing v1)
+
+Raka: make it "more seamless, more modern", it still felt "old school, blocky ... like something out of WordPress",
+"sleek and flowing and integrated", easy to read, simple, and keep the widgets. v1 output is in git at 9d8db41.
+Copy, routes and widgets are unchanged. The stylesheet was rewritten and the shared markup reworked.
+- **One continuous surface.** No hard colour bands. The home page's colours fade the way light does through a day,
+  a sunset into 19 Uhr, night, then a dawn back to light at "Wer dahinter steckt". Sub page sections are pools of
+  colour that fade in and out of the paper. Dark sections are inset rounded panels instead of full width bands.
+- **A floating glass header** replaces the black top bar and the stacked header, with an "Ab 10 Uhr" status chip.
+- **The day dial is a floating capsule** at the bottom of the screen, shown only while you're in the day.
+- **Lighter type.** Jost 500 headlines instead of 800, 400 body, more air. Borderless product cards, soft shadows,
+  soft filled form fields, fewer outlines and pills. The awning became a shopfront cap over photos and cards.
+- **Same QA again.** 53 of 53 interaction checks locally and live, axe clean on 9 pages, no overflow at six widths,
+  no JS check, 41 of 41 assets byte matched live, colon, dash and prototype word audit clean. One regression caught
+  and fixed (the product dialog's close button sat under a label).
 
 Promised in the thread (17 Oct): "a modernised Healthy Secrets site built around the Gut Health Club, with the café,
 the medical story behind the range and the shop on one clear path." That's what this is.
