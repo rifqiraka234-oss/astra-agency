@@ -26,6 +26,26 @@ Copy, routes and widgets are unchanged. The stylesheet was rewritten and the sha
   content hash (`site.css?v=...`), assets revalidate on every load, and the font preloads match v2 (Jost 400 and 500).
   A stale cache simulation renders v2, and the same test pointed at the v1 file reproduces his screenshot.
 
+## v3, the final pass (Raka, 19 Oct, "is this the final final thing ... if theres mistakes, then redo it")
+
+Every page reviewed again at 1440 and 390, plus an independent design review. What was wrong and what changed.
+- **Two photos implied identities nobody has verified.** The 22 Uhr text opened with "Stephanies Lieblinge" right
+  beside the photo of a woman holding Moon Milk, and Niki's bio card on Über uns carried the kitchen photo of a
+  different person. Neither person is named anywhere by the client. The 22 Uhr text no longer names anyone, and the
+  bio cards no longer carry photos.
+- **The letter monograms read as missing photos.** Gone from the home trio, the Über uns bios and the Beratung hero.
+  The bios are now text plus a facts column, each sibling marked by their colour, favourite product shown as a small
+  product thumbnail where it's in the range. Beratung's arch holds their matcha mascot.
+- **Layout faults fixed.** Hero badge and the bunny were clipped on phones. The club hero's awning overhung its photo.
+  The club's space section had four staggered photos over three text columns, now three matched columns. The
+  sunset into 19 Uhr and the dawn into "Wer dahinter steckt" read as stripes, now longer eased fades. 19 Uhr's
+  headline sat in a narrow column, now the same header as every other hour. The trade page's shelf was tiny. The
+  planner showed a stray dot where a time would be.
+- **Shorter and simpler on phones.** Product cards are compact on phones (photo beside the name, buy row under),
+  the home page's club rows use thumbnails, and the duplicated "Auf der Tafel" chips at 12.30 are gone (the board
+  sits right above). The phone home page went from about 24,250 px to about 20,200 px, the phone shop from about
+  10,350 to about 8,650.
+
 Promised in the thread (17 Oct): "a modernised Healthy Secrets site built around the Gut Health Club, with the café,
 the medical story behind the range and the shop on one clear path." That's what this is.
 
@@ -115,9 +135,9 @@ Denise Auer), Wix stock videos, the Canva matcha clip, the "gut health era" reel
 
 **People.** The group photo is captioned "Die Geschwister Walkner" with no individual names. It comes from the
 Gastro.News article, not their site, so `tools/verify_portraits.py` can't pair faces to names, and their Über uns page
-mentions a twin sister, so which two sisters are pictured can't be proven. Each sibling gets a designed monogram instead
-of a portrait. Nobody else pictured is named (the man in two café photos, the woman with the Moon Milk pouch). Rosi is
-named because their own post names her.
+mentions a twin sister, so which two sisters are pictured can't be proven. The bio cards carry no portrait and no photo
+of anyone. Nobody else pictured is named (the man in the doorway and matcha photos, the woman with the Moon Milk pouch, the people
+in the kitchen photos), and no name sits next to any of those photos. Rosi is named because their own post names her.
 
 **Asset requests.** One named portrait each of Stephanie, Leonie and Niki. A daylight shot of the shopfront. The café
 hours and menu prices. Nutrition tables per product, which would also let the planner show grams of fibre per day.

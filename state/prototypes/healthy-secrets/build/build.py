@@ -149,9 +149,9 @@ def pcard(pid, size='m'):
     return f'''<article class="pcard pc-{size} rv" data-pid="{pid}" data-slot="{p['slot']}">
   <div class="pc-img"><img src="assets/img/{p['img']}.webp" width="900" height="{'900' if pid == 'chai' else '1125'}" loading="lazy" alt="{L(p['name'] + (' im Glas' if p['jar'] else ', Beutel'), p['name'] + (' jar' if p['jar'] else ' pouch'))}">{rib}<span class="pc-slot">{ICONS['clock']}{L(s[0], s[1])}</span></div>
   <div class="pc-body">
-    <p class="pc-cat">{L(*p['cat'])}</p>
+    <div class="pc-head"><p class="pc-cat">{L(*p['cat'])}</p>
     <h3 class="pc-name"><button type="button" class="pc-open" data-open="{pid}">{p['name']}</button></h3>
-    <p class="pc-size">{L(*p['size'])}</p>
+    <p class="pc-size">{L(*p['size'])}</p></div>
     <p class="pc-lead">{L(*p['lead'])}</p>
     <div class="pc-buy"><p class="pc-price"><strong>{eur(p['price'])}</strong><span>{L('inkl. Versand', 'shipping included')}</span>{'<span class="pc-pp">' + pp + '</span>' if pp else ''}</p>
     <button type="button" class="btn add" data-add="{pid}">{ICONS['plus']}<span>{L('In meinen Tag', 'Add to my day')}</span></button></div>
