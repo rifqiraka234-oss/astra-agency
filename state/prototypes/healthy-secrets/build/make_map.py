@@ -75,16 +75,16 @@ out += [f'<path d="{d}" class="m-ch"/>' for d in church]
 out += [f'<path d="{d}" class="m-cafe"/>' for d in cafe_bld]
 for x, y in entrances:
     out.append(f'<g class="m-u" transform="translate({x},{y})"><rect x="-9" y="-9" width="18" height="18" rx="3"/><text y="5" text-anchor="middle">U</text></g>')
-show = ['Stephansplatz', 'Brandstätte', 'Rotenturmstraße', 'Tuchlauben', 'Hoher Markt', 'Bauernmarkt', 'Graben', 'Goldschmiedgasse', 'Jasomirgottstraße']
+show = ['Stephansplatz', 'Brandstätte', 'Rotenturmstraße', 'Tuchlauben', 'Hoher Markt', 'Bauernmarkt', 'Graben', 'Jasomirgottstraße']  # Goldschmiedgasse collided with Jasomirgottstraße
 for n in show:
     if n in labels:
         pts = labels[n]
         x, y = pts[len(pts) // 2]
         if 0 < x < W and 0 < y < H:
-            out.append(f'<text class="m-l" x="{x}" y="{y}">{n}</text>')
+            out.append(f'<text class="m-l{" key" if n == "Stephansplatz" else ""}" x="{x}" y="{y}">{n}</text>')  # key, the one label phones keep
 cx, cy = xy(*CAFE)
 out.append(f'<g class="m-pin" transform="translate({cx},{cy})"><circle r="26" class="m-pulse"/><circle r="11"/><text x="18" y="-16" class="m-pl">Gut Health Club</text><text x="18" y="2" class="m-ps">Wildpretmarkt 1</text></g>')
-out.append(f'<text class="m-attr" x="{W - 10}" y="{H - 10}" text-anchor="end">Kartendaten © OpenStreetMap Mitwirkende</text>')
+# the attribution sits under the map as bilingual HTML, so a rounded corner can't clip it
 out.append('</svg>')
 open(OUT, 'w').write('\n'.join(out))
 print('map', len(streets), 'streets', len(buildings), 'buildings', len(church), 'church', len(cafe_bld), 'cafe', len(entrances), 'U', 'labels', [n for n in show if n in labels], 'cafe xy', (cx, cy))

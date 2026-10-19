@@ -26,6 +26,8 @@ PICKS = [
     ('matcha', 'instagram/ig29_DdUF8Jmj5Vs_thumb.jpg', 760, 'photo', 'Instagram @healthysecrets_at, post DdUF8Jmj5Vs', 'A man drinking a green matcha drink under the striped awning'),
     ('doorway', 'instagram/ig24_DdmJjybjh-D_c01.jpg', 900, 'photo', 'Instagram @healthysecrets_at, post DdmJjybjh-D', 'A man leaning in the café doorway beside the display window and awning'),
     ('moonmilk', 'instagram/ig24_DdmJjybjh-D_c02.jpg', 900, 'photo', 'Instagram @healthysecrets_at, post DdmJjybjh-D', 'A smiling woman holding a Moon Milk Fibre Flow pouch'),
+    ('wheel', 'instagram/ig00_DepEBKBjvMO_c06.jpg', 900, 'photo', 'Instagram @healthysecrets_at, post DepEBKBjvMO (opening day); post DejRW75jlY3 announced the Glücksrad', 'A hand turning a hand lettered prize wheel outside the café'),
+    ('outside', 'instagram/ig05_DeexWnDADJw_thumb.jpg', 760, 'photo', 'Instagram @healthysecrets_at, post DeexWnDADJw', 'Three bottled drinks held out of the café door, a bistro table and folding chairs on the pavement'),
     ('kitchen1', 'site/aadec6_4f44174a88154768b46290505830d7c3_mv2.jpg', 1000, 'photo', 'healthysecrets.at home page shop tile', 'Black and white, two people in hairnets at a steel bench in a commercial kitchen'),
     ('kitchen2', 'site/aadec6_547dbb06a8cb4c7585dbd2b0ffcc84f2_mv2.jpg', 1100, 'photo', 'healthysecrets.at home page shop tile', 'Black and white, a person at a combi oven in a tiled commercial kitchen'),
     ('granola', 'site/aadec6_ee8f729bb6d840af8fdb6fb1686d645c_mv2.jpg', 1100, 'photo', 'healthysecrets.at granola page', 'Close up of the Red Berry Mix granola'),
@@ -47,6 +49,7 @@ PICKS = [
 ]
 
 CLEAN = {'m-sitz'}
+KEEP_PNG = {'logo-gold'}
 
 
 def run():
@@ -69,8 +72,8 @@ def run():
         if im.width > width:
             im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
         if kind == 'cutout':
-            fn = f'{name}.png'
-            im.save(os.path.join(OUT, fn), optimize=True)
+            if name in KEEP_PNG:  # the site only serves webp, the gold logo png stays as the master
+                im.save(os.path.join(OUT, f'{name}.png'), optimize=True)
             fn2 = f'{name}.webp'
             im.save(os.path.join(OUT, fn2), 'WEBP', quality=86, method=6)
         else:

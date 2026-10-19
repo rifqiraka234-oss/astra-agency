@@ -15,6 +15,8 @@ Every image on the site is the client's own. Built by build/process_images.py.
 | matcha.webp | 760x1351 | 59888 | Instagram @healthysecrets_at, post DdUF8Jmj5Vs | A man drinking a green matcha drink under the striped awning | instagram/ig29_DdUF8Jmj5Vs_thumb.jpg |
 | doorway.webp | 900x1125 | 59976 | Instagram @healthysecrets_at, post DdmJjybjh-D | A man leaning in the café doorway beside the display window and awning | instagram/ig24_DdmJjybjh-D_c01.jpg |
 | moonmilk.webp | 900x1125 | 40006 | Instagram @healthysecrets_at, post DdmJjybjh-D | A smiling woman holding a Moon Milk Fibre Flow pouch | instagram/ig24_DdmJjybjh-D_c02.jpg |
+| wheel.webp | 900x1125 | 66846 | Instagram @healthysecrets_at, post DepEBKBjvMO (opening day); post DejRW75jlY3 announced the Glücksrad | A hand turning a hand lettered prize wheel outside the café | instagram/ig00_DepEBKBjvMO_c06.jpg |
+| outside.webp | 760x1351 | 53840 | Instagram @healthysecrets_at, post DeexWnDADJw | Three bottled drinks held out of the café door, a bistro table and folding chairs on the pavement | instagram/ig05_DeexWnDADJw_thumb.jpg |
 | kitchen1.webp | 1000x1333 | 136282 | healthysecrets.at home page shop tile | Black and white, two people in hairnets at a steel bench in a commercial kitchen | site/aadec6_4f44174a88154768b46290505830d7c3_mv2.jpg |
 | kitchen2.webp | 1100x825 | 54492 | healthysecrets.at home page shop tile | Black and white, a person at a combi oven in a tiled commercial kitchen | site/aadec6_547dbb06a8cb4c7585dbd2b0ffcc84f2_mv2.jpg |
 | granola.webp | 1100x1274 | 244434 | healthysecrets.at granola page | Close up of the Red Berry Mix granola | site/aadec6_ee8f729bb6d840af8fdb6fb1686d645c_mv2.jpg |

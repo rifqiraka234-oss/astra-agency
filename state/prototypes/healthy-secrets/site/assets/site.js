@@ -49,11 +49,11 @@
   /* ---------- reveal, by position, never forced */
   var rvs = [];
   function collect() { rvs = $$('.rv:not(.in), h1:not(.in), h2:not(.in), .chart:not(.in)'); }
-  function reveal() {
-    var h = window.innerHeight;
+  function reveal(first) {
+    var h = window.innerHeight * (first ? 1 : 0.92);
     rvs = rvs.filter(function (el) {
       var r = el.getBoundingClientRect();
-      if (r.top < h * 0.92 && r.bottom > 0) { el.classList.add('in'); return false; }
+      if (r.top < h && r.bottom > 0) { el.classList.add('in'); return false; }
       return true;
     });
   }
@@ -86,7 +86,7 @@
       for (var i = 0; i < hours.length; i++) {
         var a = tops[i], b = i < hours.length - 1 ? tops[i + 1] : lastEnd;
         if (mid >= a && (mid < b || i === hours.length - 1)) {
-          var p = Math.min(1, Math.max(0, (mid - a) / (b - a)));
+          var p = Math.min(1, Math.max(0, ((mid - a) / (b - a) - 0.8) / 0.2));
           var nh = i < hours.length - 1 ? hs[i + 1] : hs[i] + 1;
           H = hs[i] + p * (nh - hs[i]);
           f = i < hours.length - 1 ? i + p : i; idx = i; break;
@@ -126,6 +126,7 @@
   var toastT;
   function toast(html) {
     var el = $('#toast'); if (!el) return;
+    var dr = $('#cart'); if (dr && !dr.hidden) return;
     el.innerHTML = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>' + html + '</span>';
     el.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function () { el.classList.remove('show'); }, 2600);
   }
@@ -238,6 +239,7 @@
     var g = $('.pgrid'); if (!g) return;
     $$('.pcard', g).forEach(function (c) { c.classList.toggle('off', slot !== 'all' && c.dataset.slot !== slot); });
     $$('.slot-head', g).forEach(function (h) { h.classList.toggle('off', slot !== 'all' && h.id !== slot); });
+    $$('.slot-group', g).forEach(function (sg) { sg.classList.toggle('off', slot !== 'all' && sg.dataset.slot !== slot); });
     $$('.pcard', g).forEach(function (c) { if (!c.classList.contains('off')) c.classList.add('in'); });
   }
   fb.forEach(function (b) { b.addEventListener('click', function () { filter(b.dataset.filter); }); });
@@ -306,7 +308,7 @@
       pick.forEach(function (id) { var p = P[id]; sum += p.price; if (p.portions) { cups += 1; cost += p.price / p.portions; } });
       $('.res-day', pl).innerHTML = pick.length ? pick.map(function (id) {
         var p = P[id];
-        return '<li><span class="t">' + t(p.time[0].replace(' Uhr', ''), p.time[1]) + '</span><img src="assets/img/' + p.img + '.webp" alt="" width="56" height="56"><span><b>' + esc(p.name) + '</b><small>' + t(p.size[0], p.size[1]) + '</small></span><span class="cprice">' + eur(p.price) + '</span></li>';
+        return '<li><span class="t">' + t(p.time[0], p.time[1]) + '</span><img src="assets/img/' + p.img + '.webp" alt="" width="56" height="56"><span><b>' + esc(p.name) + '</b><small>' + t(p.size[0], p.size[1]) + '</small></span><span class="cprice">' + eur(p.price) + '</span></li>';
       }).join('') : '<li><span></span><span></span><span>' + t('Dein Tag läuft schon gut. Komm trotzdem auf einen Cold Brew in den Club.', "Your day already works. Come by the club for a cold brew anyway.") + '</span></li>';
       var stats = '';
       if (cups) stats += '<div><b>' + eur(cost) + '</b><span>' + t('kosten deine Fibre Flow Drinks pro Tag', 'a day for your Fibre Flow drinks') + '</span></div><div><b>' + t('14 Tage', '14 days') + '</b><span>' + t('reicht ein Beutel bei einer Tasse am Tag', 'is how long a pouch lasts at a cup a day') + '</span></div>';
@@ -317,7 +319,7 @@
     }
     $('[data-pl="all"]', pl).addEventListener('click', function () {
       picked.forEach(function (id) { add(id, 1); });
-      toast(t('Dein Tag ist eingepackt.', 'Your day is packed.')); openCart();
+      openCart();
     });
     show(0);
   }
@@ -428,6 +430,6 @@
   /* ---------- init */
   setLang(root.lang === 'en' ? 'en' : 'de', false);
   paint();
-  collect(); reveal(); tickDial(true);
-  window.addEventListener('load', function () { collect(); reveal(); tickDial(true); });
+  collect(); reveal(true); tickDial(true);
+  window.addEventListener('load', function () { collect(); reveal(true); tickDial(true); });
 })();

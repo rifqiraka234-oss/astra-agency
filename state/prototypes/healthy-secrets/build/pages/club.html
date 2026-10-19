@@ -18,7 +18,7 @@
 <section class="sec bg-white" id="anfahrt" aria-labelledby="anT">
   <div class="wrap">
     <div class="split top">
-      <figure class="mapbox rv" style="margin:0">{{MAP}}</figure>
+      <figure class="rv" style="margin:0"><div class="mapbox">{{MAP}}</div><figcaption class="src">[[Kartendaten © OpenStreetMap Mitwirkende||Map data © OpenStreetMap contributors]]</figcaption></figure>
       <div>
         <p class="eyebrow" style="color:var(--coralT)">[[Anfahrt||Getting here]]</p>
         <h2 id="anT" class="d2" style="margin:12px 0 20px">[[Such die gestreifte Markise.||Look for the striped awning.]]</h2>
@@ -84,12 +84,12 @@
         <div><h3 class="h3">[[Drinnen||Inside]]</h3><p>[[Rote Hocker, ein Lehnsessel und Tische mit Riffelblech. In den Regalen stehen unsere Produkte zum Mitnehmen.||Red stools, an armchair and checker plate tables. Our products sit on the shelves, ready to take home.]]</p></div>
       </article>
       <article class="rv dl1">
-        <div class="frame"><img src="assets/img/doorway.webp" width="900" height="1125" loading="lazy" alt="[[Ein Mann lehnt in der Tür unter der rot und weiß gestreiften Markise||A man leaning in the doorway under the red and white striped awning]]"></div>
+        <div class="frame"><img src="assets/img/outside.webp" width="760" height="1351" loading="lazy" alt="[[Drei Flaschen werden aus der Tür des Clubs gereicht, davor ein Bistrotisch und Klappstühle auf dem Gehsteig||Three bottles held out of the club's door, a bistro table and folding chairs on the pavement in front]]"></div>
         <div><h3 class="h3">[[Draußen||Outside]]</h3><p>[[Der wahrscheinlich kleinste Schanigarten Wiens, unter der Markise. Wer einen kleineren kennt, darf uns gern schreiben.||Probably the smallest Schanigarten, or pavement terrace, in Vienna, under the awning. If you know a smaller one, tell us.]]</p></div>
       </article>
       <article class="rv dl2">
-        <div class="frame"><img src="assets/img/opening.webp" width="900" height="1125" loading="lazy" alt="[[Gäste am Eröffnungstag vor dem Gut Health Club, sie halten ihre Getränke hoch||Guests outside the Gut Health Club on opening day, holding up their drinks]]"></div>
-        <div><h3 class="h3">[[17. Oktober, 10 Uhr||17 October, 10 am]]</h3><p>[[Die ersten Gäste standen schon vor der Tür, und die zehn Goodie Bags waren schnell weg.||The first guests were already at the door, and the ten goodie bags went fast.]]</p></div>
+        <div class="frame"><img src="assets/img/wheel.webp" width="900" height="1125" loading="lazy" alt="[[Eine Hand dreht am handbeschrifteten Glücksrad vor dem Club||A hand spinning the hand lettered prize wheel outside the club]]"></div>
+        <div><h3 class="h3">[[17. Oktober, 10 Uhr||17 October, 10 am]]</h3><p>[[Die ersten Gäste standen schon vor der Tür, die zehn Goodie Bags waren schnell weg, und am Glücksrad wurde gedreht.||The first guests were already at the door, the ten goodie bags went fast, and the prize wheel kept turning.]]</p></div>
       </article>
     </div>
   </div>
@@ -113,19 +113,16 @@
   </div>
 </section>
 
-<section class="sec bg-navy" id="termine" aria-labelledby="terT">
+<section class="sec" id="termine" aria-labelledby="terT">
   <div class="wrap">
-    <div class="split top" data-sent-wrap>
+    <div class="later" data-sent-wrap>
       <div>
-        <p class="eyebrow" style="color:var(--blush)">[[Bald im Club||Coming to the club]]</p>
-        <h2 id="terT" class="d2" style="margin-top:12px">[[Workshops, Vorträge und Kochkurse.||Workshops, talks and cooking classes.]]</h2>
-        <p class="lead" style="margin-top:18px">[[Daran denken wir gerade. Trag dich ein, dann erfährst du als Erstes, wann es losgeht.||That's what we're thinking about. Sign up and you'll be the first to hear when it starts.]]</p>
-        <div class="svc-card" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2)">
-          <div><p class="eyebrow">[[Ernährungstherapie||Nutrition therapy]]</p><h3>[[Lieber gleich persönlich?||Rather talk it through now?]]</h3><p>[[Leonie nimmt sich 60 Minuten für dich, 120 €.||Leonie takes 60 minutes with you, €120.]]</p></div>
-          <a class="btn light" href="beratung.html">[[Termin anfragen||Request a session]] {{I:ar}}</a>
-        </div>
+        <p class="eyebrow">[[Bald im Club||Coming to the club]]</p>
+        <h2 id="terT" class="d3">[[Workshops, Vorträge und Kochkurse.||Workshops, talks and cooking classes.]]</h2>
+        <p style="margin-top:14px">[[Daran denken wir gerade. Trag dich ein, dann erfährst du als Erstes, wann es losgeht.||That's what we're thinking about. Sign up and you'll be the first to hear when it starts.]]</p>
+        <p style="margin-top:22px"><a class="tlink" href="beratung.html">[[Lieber gleich persönlich? Eine Stunde mit Leonie, 120 €||Rather talk it through now? An hour with Leonie, €120]] {{I:ar}}</a></p>
       </div>
-      <div class="card" style="padding:clamp(22px,3vw,34px)">
+      <div>
         <form class="form" data-form="events" action="#termine">
           <div class="row">
             <div class="field"><label for="cvN">[[Vorname||First name]]</label><input class="inp" id="cvN" name="vorname" autocomplete="given-name" required><span class="err">[[Wie dürfen wir dich nennen?||What should we call you?]]</span></div>

@@ -1,7 +1,7 @@
 # Healthy Secrets site, handover (2026-10-19)
 
 Live: https://astra-healthy-secrets-prototype.netlify.app (Netlify project `astra-healthy-secrets-prototype`,
-id 72cc17e8-d569-404b-8200-02839e55cf7b, deploy 6ad60e6c113563368d0ecd7a (v2, cache fix), team SSO off, password off).
+id 72cc17e8-d569-404b-8200-02839e55cf7b, deploy 6ad62bdf0565e1544bbba75f (v3), team SSO off, password off).
 Source: `build/` (build.py, pages/, make_map.py, process_images.py). Output: `site/`. Research and art direction:
 `research.md`. Evidence: `research/` (site pages, products.json, press texts, Instagram captions, teardown of 60 sites,
 the Commission claims page, the Wien Geschichte Wiki page). Image provenance: `research/asset-provenance.md`.
@@ -45,6 +45,38 @@ Every page reviewed again at 1440 and 390, plus an independent design review. Wh
   the home page's club rows use thumbnails, and the duplicated "Auf der Tafel" chips at 12.30 are gone (the board
   sits right above). The phone home page went from about 24,250 px to about 20,200 px, the phone shop from about
   10,350 to about 8,650.
+
+Then an independent design review (`review-independent.md` in the session scratchpad, 95 screenshots plus about 70 of
+interactive states) found what the first pass missed. Every point below was fixed and re measured the way it was found.
+- **Shop time labels piled on top of each other** while scrolling (all four were sticky inside one grid). Each time slot
+  is now its own group, so a label lets go at the end of its products. Measured at nine scroll positions, zero overlaps,
+  and the same check on the previous live version reported up to six, so the check does catch it.
+- **Phone home screen opened with no button and no photo.** On phones the headline, the paragraph and both buttons come
+  first, the photo straight after, the long italic quote under the photo. Anything on screen at load now shows at once.
+  Buttons fully visible on load at 390 by 844 and 375 by 667, and at 1280 by 720 on a laptop.
+- **Trade table broke on a phone.** It's a list on phones, thumbnail, name, size, note, price, nothing to scroll sideways.
+- **Too many white boxes with shadows**, the "WordPress" feel. Shadows now sit only on things that float (header, dial,
+  basket, product dialog, badge, toast). Text only boxes became rows with a hairline (shipping, trade reasons, the six
+  ingredients in two columns, Leonie's prices, the club's menu notes). Forms and summaries are white panels with a
+  hairline. The cut off shadow lines are gone with the shadows.
+- **Home after 2 Uhr started over.** The three recap cards and the FAQ are gone from the home page (the balanced diet
+  question moved to the shop FAQ, the rest was already there or on the club page). The siblings are three plain columns
+  with a link to Über uns. Colour handovers are about 200 px. Home is about 14,150 px on desktop (was about 16,000) and
+  about 17,050 on a phone (was about 24,250).
+- **Smaller faults.** Club awning now exactly the width of its photo. The 10 Uhr collage photos end level. The Wissen
+  toggle stays on one line on a phone. Planner times say "8 Uhr" or "8 am", the last question shows empty boxes until
+  ticked. The added to basket message never sits on the open basket and is one wide line on phones. The dial readout
+  holds each section's hour and only runs on in the last fifth, so it always agrees with the highlighted chip. Header
+  and dial glass is more opaque over dark sections. Phone arch crops keep heads in. Steppers fit one line on phones.
+  Checkout has a slim footer, checkout and Impressum headings clear the header, the phone footer is two columns. The map
+  lost the label that collided, shows only Stephansplatz on phones, and its credit is bilingual text under it.
+- **Brand.** The gold key logo is in the header and footer. The club page has two of its own photos from their posts (the
+  bottles handed out of the door with the terrace table, and the opening day prize wheel their post announced). The
+  "Sitz" mascot sits on their flat blush instead of a white tile. The header chip shows a clock, not a red dot that
+  suggested "open now".
+- **Checks.** 53 of 53 interaction checks, 15 of 15 re measurements of the review's defects, axe clean on 9 pages, no
+  overflow at six widths, readable without JavaScript, copy audit zero colons, dashes and hyphens in about 2,200 lines
+  per language. Live, 43 of 43 assets byte matched and every page's text and attributes identical to the build.
 
 Promised in the thread (17 Oct): "a modernised Healthy Secrets site built around the Gut Health Club, with the café,
 the medical story behind the range and the shop on one clear path." That's what this is.
@@ -105,7 +137,7 @@ interaction 5, technical 5. **91.** Proof and trust lose points for no individua
 ## Things Nikolaus should confirm before any of this goes live
 
 1. **Opening hours.** Only "ab 10 Uhr" is verified (their posts). Closing time and days aren't stated anywhere, so the
-   site says "ab 10 Uhr" and nothing more.
+   site says "ab 10 Uhr" and nothing more. It's a walk in's first question, so it's the first thing to get from him.
 2. **Café prices.** None found (the board has none). The site lists the menu without prices.
 3. **Matcha at 44 €** while Chai and Moon Milk (same 215 g, 14 servings) are 25 €. Verified in their page data, may be
    right, may be a typo.
