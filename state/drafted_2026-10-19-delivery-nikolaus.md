@@ -1,4 +1,4 @@
-# Delivery, Healthy Secrets site, 19 Oct. NOT SENT, waiting on Raka's word
+# Delivery, Healthy Secrets site, 19 Oct. SENT 15:27 UTC on Raka's word, act_rcYeZt7KjvAeDHX5a, text verified in the thread after sending
 
 ### Nikolaus Walkner, Healthy Secrets, ctc_pdAKCyF8dJxPkKrdL
 
