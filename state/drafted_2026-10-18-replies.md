@@ -1,4 +1,9 @@
+<!-- GATE ARCHIVED -->
+<!-- Nikolaus SENT 2026-10-19 09:09:14 UTC on Raka's "yeah send milo and nikolaus", first line only on his pick, act_3zs3GWYfLuPZoXtrJ, one copy, byte for byte from this file. Thread pulled right before (2 items) with control 3 items, and right after (3 items). Do not send again. -->
 # Replies, 18 Oct. NOT SENT, waiting on Raka's word
+
+> 19 Oct ~09:10 UTC, Raka chose "First line only". The question "How did the opening go yesterday?" was dropped because it was
+> Monday by then and the opening was Saturday 17 Oct.
 
 ### Nikolaus Walkner, Healthy Secrets, ctc_pdAKCyF8dJxPkKrdL
 
@@ -13,6 +18,4 @@
 REPLY
 ```
 Thanks Nikolaus! I'll put the sketch together and send it over in the next day or two.
-
-How did the opening go yesterday?
 ```
