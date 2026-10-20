@@ -1,5 +1,20 @@
 # Replies, 20 Oct afternoon. NOT SENT, waiting on Raka's word
 
+### Chris Hale, The Garnish Collective, ctc_do7oK8f27qGMC89dA
+
+> NOT SENT. He answered our 16 Oct bump with "Hi Raka, the premise looks good! Interested to hear more about pricing
+> etc" (act_K4dXuYTR6qCDQB4rX, 20 Oct 16:55 UTC). That's his reaction to the corporate ordering site we sent on 13 Oct.
+> Thread pulled 20 Oct 17:04 UTC, 7 items, nextPage null, LinkedIn synced 17:01:25 UTC. Raka's steer, "it depends on
+> your budget and lets have a call". No figure quoted, so nothing outside the band. The slot is Raka's own calendar,
+> free 10:00 to 17:00 Amsterdam Wed 21 to Fri 23 Oct (checked 17:02 UTC), which is 9am to 4pm UK time, since both
+> clocks stay on summer time until 25 Oct. The Garnish Collective is a UK company (THE GARNISH COLLECTIVE LTD
+> 16179771, state/prototypes/garnish/notes.md).
+
+REPLY
+```
+Great to hear you like it, Chris! The price really depends on your budget and how much of it you'd want built, so it's easiest to talk it through. Shall we have a quick call? I'm free Wednesday to Friday this week between 9am and 4pm UK time, so just pick what suits you.
+```
+
 ### Aaron Mason, BidX, ctc_dWL5LypChqmTQ9QyZ
 
 > NOT SENT. He answered our 20 Oct 13:24 UTC bump with "Sure send the sketch" (act_fJZZFdwe83einTZh7, 14:07 UTC). Our
