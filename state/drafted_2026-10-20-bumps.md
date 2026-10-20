@@ -1,3 +1,4 @@
+<!-- 2026-10-20 07.27.01 to 07.27.39 UTC, 4 bumps SENT on Raka's "send all six and the 10 bumps. 0 mistakes policy". Severin act_qBxniWAS6v8HzRhzh, Albert act_44RRhdYsRv2Cswq7D, Clément act_n8jRjn3z49YkBCCFe, Ollie act_Mkw2MmpzT4qnj7kPL, each thread pulled before (opener only, control 3) and after (opener plus one bump), opener claims rechecked 07.24 UTC with example.com control. Do not send these 4 again. The other 6 (James, Aaron, Stacey, Constance, Jelle, Grigory) are approved by the same word but not due until 13.16 UTC today (their openers went at 13.15 UTC on 17 Oct and a bump waits for more than 3 days). They go after 13.16 UTC with the same checks. -->
 <!-- bumps, 2026-10-20. NOT SENT, waiting on Raka. 4 rolled over from state/drafted_2026-10-19-bumps.md, plus 6 that come due today. -->
 # Bumps for 20 Oct. NOT SENT, waiting on Raka's word
 
