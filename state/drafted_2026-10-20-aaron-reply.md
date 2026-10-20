@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- SUPERSEDED 2026-10-20 18:40 UTC. The inbox session drafted the same holding reply in state/drafted_2026-10-20-replies.md (committed 17:01 UTC). Send ONE reply to Aaron, from that file, never this one as well. Thread re-pulled 18:40 UTC, still 3 items, his "Sure send the sketch" is the last message, nothing sent since. -->
 # Reply to Aaron Mason, 20 Oct. NOT SENT, waiting on Raka's word
 
 ### Aaron Mason, BidX, ctc_dWL5LypChqmTQ9QyZ
