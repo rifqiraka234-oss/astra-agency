@@ -1,4 +1,4 @@
-<!-- bumps, 2026-10-19. NOT SENT, waiting on Raka. These are the 4 from state/drafted_2026-10-18-bumps.md, rolled over unsent. -->
+<!-- SUPERSEDED 20 Oct by state/drafted_2026-10-20-bumps.md, do not send from this file. bumps, 2026-10-19. NOT SENT, waiting on Raka. These are the 4 from state/drafted_2026-10-18-bumps.md, rolled over unsent. -->
 # Bumps for 19 Oct. NOT SENT, waiting on Raka's word
 
 The 4 bumps drafted on 18 Oct weren't sent, so they roll over to today (RULES section 1, oldest first, under the cap of
