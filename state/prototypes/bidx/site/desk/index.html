@@ -10,7 +10,7 @@
 <link rel="preload" href="/assets/fonts/hostgrotesk-normal-300-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/doto-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css?v=a6839574bf">
-<link rel="stylesheet" href="/assets/desk.css?v=99749322e1">
+<link rel="stylesheet" href="/assets/desk.css?v=b7f9864623">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body class="desk">
@@ -52,6 +52,7 @@
     <div class="stages"><div class="stage"><span class="n">1,284</span><span class="l">Fresh signals</span><span class="s">New companies, hires, raises and guide readers</span></div><div class="stage"><span class="n">186</span><span class="l">Fit a call</span><span class="s">Checked against every open Innovate UK call and the EIC</span></div><div class="stage hl"><span class="n"><span data-cap>40</span></span><span class="l">Picked for today</span><span class="s">The best fits, nearest deadlines first</span></div><div class="stage"><span class="n">40</span><span class="l">Drafted</span><span class="s">A first message each, in Simon&rsquo;s voice</span></div><div class="stage" id="stage-sent"><span class="n">0</span><span class="l">Approved</span><span class="s">Goes out between 9.40am and 4.30pm</span></div></div>
     <div class="capline">
       <label class="cap" for="cap">Daily number from tomorrow <input type="range" id="cap" min="30" max="50" step="1" value="40"> <output id="cap-o" for="cap">40 a day</output></label>
+      <span class="small">Up to 20 on LinkedIn, the rest by email</span>
       <span>Ready <b data-count="ready">40</b></span><span>Approved <b data-count="ok">0</b></span><span>Skipped <b data-count="skip">0</b></span>
       <span class="sp" style="flex:1"></span>
       <button type="button" class="btn pri sm" id="approve-all">Approve all ready</button>
@@ -74,6 +75,7 @@
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Won Innovate UK funding in 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Ravi and this call</div>
+    
     <label class="sr" for="m-foxglove">Message to Ravi</label>
     <textarea id="m-foxglove" rows="9">Hi Ravi, saw Foxglove&#x27;s breeding work with a seed company.
 
@@ -84,11 +86,7 @@ If it&#x27;s on your list, I&#x27;d be glad to show you how assessors score it a
 Simon</textarea>
     <div class="msg-f"><span class="chars">326 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Ravi, I&#x27;m Simon from BidX. We help founders win grant funding, and Foxglove Genomics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Ravi, did this reach you? The Engineering Biology CR&amp;D call closes on 3 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Ravi goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Ravi, I&#x27;m Simon from BidX. We help founders win grant funding, and Foxglove Genomics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Ravi, did this reach you? The Engineering Biology CR&amp;D call closes on 3 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Ravi goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -98,16 +96,17 @@ Simon</textarea>
 </article><article class="det" data-id="larkspur" aria-label="Hannah, Larkspur Diagnostics">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 7 of 8 clear, 1 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i></span>
     <div><h3>Hannah L., Larkspur Diagnostics</h3><p>A finger prick test for sepsis markers</p>
-    <div class="facts"><span>Founder</span><span>London</span><span>Since Jun 2022</span><span>12 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>London</span><span>Since Jun 2022</span><span>12 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated June 2022</span></span></li><li class="g"><span><b>Small enough</b><span>Small company</span></span></li><li class="g"><span><b>In scope</b><span>Deep tech, TRL 6 to 8, the EIC’s range</span></span></li><li class="g"><span><b>Something new</b><span>Own test cartridge</span></span></li><li class="g"><span><b>Team to deliver</b><span>Diagnostics scientists</span></span></li><li class="g"><span><b>Can fund its share</b><span>Seed round in 2024</span></span></li><li class="a"><span><b>Time to apply</b><span>Next short proposal batch 3 November</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
-    <div class="callcard"><div><b><a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en">EIC Accelerator, short proposal batch</a></b><span>Grant component below EUR 2.5 million</span></div>
+    <div class="callcard"><div><b><a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en">EIC Accelerator, short proposal batch</a></b><span>Grant only for UK companies, up to €2.5M</span></div>
     <div><span class="dotf" data-close="2026-11-03T17:00:00+01:00"><span class="dl-n">13</span></span><span class="u">days left</span></div></div>
   </div>
-  <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Read the EIC Accelerator guide</span></div></div>
+  <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Read the Smart grants guide</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Hannah and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Hannah and this call</div>
+    <div class="msg-s">Subject <b>EIC Accelerator, next batch 3 November</b></div>
     <label class="sr" for="m-larkspur">Message to Hannah</label>
     <textarea id="m-larkspur" rows="9">Hi Hannah, saw Larkspur&#x27;s test is in a hospital evaluation now.
 
@@ -118,11 +117,7 @@ Happy to walk you through how it&#x27;s scored on a free funding call, if that&#
 Simon</textarea>
     <div class="msg-f"><span class="chars">331 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Hannah, I&#x27;m Simon from BidX. We help founders win grant funding, and Larkspur Diagnostics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Hannah, did this reach you? The next EIC Accelerator batch is on 3 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Hannah goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Hannah, did this reach you? The next EIC Accelerator batch is on 3 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Hannah goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -136,12 +131,13 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated March 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>Health tech in the EIC’s range</span></span></li><li class="g"><span><b>Something new</b><span>Own sensing and app</span></span></li><li class="a"><span><b>Team to deliver</b><span>Two engineers and a physio lead</span></span></li><li class="a"><span><b>Can fund its share</b><span>Angel funded</span></span></li><li class="g"><span><b>Time to apply</b><span>Next short proposal batch 3 November</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
-    <div class="callcard"><div><b><a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en">EIC Accelerator, short proposal batch</a></b><span>Grant component below EUR 2.5 million</span></div>
+    <div class="callcard"><div><b><a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en">EIC Accelerator, short proposal batch</a></b><span>Grant only for UK companies, up to €2.5M</span></div>
     <div><span class="dotf" data-close="2026-11-03T17:00:00+01:00"><span class="dl-n">13</span></span><span class="u">days left</span></div></div>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Mar 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Isla and this call</div>
+    
     <label class="sr" for="m-meadowlark">Message to Isla</label>
     <textarea id="m-meadowlark" rows="9">Hi Isla, saw Meadowlark&#x27;s sensors are going home with patients after discharge now.
 
@@ -152,11 +148,7 @@ If you&#x27;re weighing it up, a free funding call would tell you quickly whethe
 Simon</textarea>
     <div class="msg-f"><span class="chars">367 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Isla, I&#x27;m Simon from BidX. We help founders win grant funding, and Meadowlark Rehab looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Isla, did this reach you? The next EIC Accelerator batch is on 3 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Isla goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Isla, I&#x27;m Simon from BidX. We help founders win grant funding, and Meadowlark Rehab looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Isla, did this reach you? The next EIC Accelerator batch is on 3 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Isla goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -176,6 +168,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated May 2022</span><span class="sig i">Grid connection news on LinkedIn</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Owen and this call</div>
+    
     <label class="sr" for="m-saltmarsh">Message to Owen</label>
     <textarea id="m-saltmarsh" rows="9">Hi Owen, saw the grid connection news for the estuary site.
 
@@ -186,11 +179,7 @@ Worth a free funding call to see if it&#x27;s a fit?
 Simon</textarea>
     <div class="msg-f"><span class="chars">255 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Owen, I&#x27;m Simon from BidX. We help founders win grant funding, and Saltmarsh Power looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Owen, did this reach you? The FOAK Builder call closes on 5 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Owen goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Owen, I&#x27;m Simon from BidX. We help founders win grant funding, and Saltmarsh Power looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Owen, did this reach you? The FOAK Builder call closes on 5 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Owen goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -200,7 +189,7 @@ Simon</textarea>
 </article><article class="det" data-id="heathland" aria-label="Ellie, Heathland Hydrogen">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 7 of 8 clear, 1 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i></span>
     <div><h3>Ellie V., Heathland Hydrogen</h3><p>Hydrogen from farm waste for tractors</p>
-    <div class="facts"><span>Founder</span><span>Shrewsbury</span><span>Since Oct 2022</span><span>11 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Shrewsbury</span><span>Since Oct 2022</span><span>11 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated October 2022</span></span></li><li class="g"><span><b>Small enough</b><span>Small company</span></span></li><li class="g"><span><b>In scope</b><span>Climate tech first of a kind</span></span></li><li class="g"><span><b>Something new</b><span>Own reactor</span></span></li><li class="g"><span><b>Team to deliver</b><span>Chemical engineers</span></span></li><li class="g"><span><b>Can fund its share</b><span>Seed round in 2024</span></span></li><li class="a"><span><b>Time to apply</b><span>Closes 5 November</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -209,7 +198,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Oct 2022</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Ellie and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Ellie and this call</div>
+    <div class="msg-s">Subject <b>FOAK Builder, closes 5 November</b></div>
     <label class="sr" for="m-heathland">Message to Ellie</label>
     <textarea id="m-heathland" rows="9">Hi Ellie, saw the first tractor running on your hydrogen.
 
@@ -220,11 +210,7 @@ If it&#x27;s on your list, I&#x27;d be glad to show you how assessors score it a
 Simon</textarea>
     <div class="msg-f"><span class="chars">353 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Ellie, I&#x27;m Simon from BidX. We help founders win grant funding, and Heathland Hydrogen looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Ellie, did this reach you? The FOAK Builder call closes on 5 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Ellie goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Ellie, did this reach you? The FOAK Builder call closes on 5 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Ellie goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -244,6 +230,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Apr 2022</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Amara and this call</div>
+    
     <label class="sr" for="m-lumenfold">Message to Amara</label>
     <textarea id="m-lumenfold" rows="9">Hi Amara, saw Lumenfold&#x27;s first warehouse roof go live.
 
@@ -254,11 +241,7 @@ Happy to walk you through how it&#x27;s scored on a free funding call, if that&#
 Simon</textarea>
     <div class="msg-f"><span class="chars">287 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Amara, I&#x27;m Simon from BidX. We help founders win grant funding, and Lumenfold Solar looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Amara, did this reach you? The FOAK Builder call closes on 5 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Amara goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Amara, I&#x27;m Simon from BidX. We help founders win grant funding, and Lumenfold Solar looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Amara, did this reach you? The FOAK Builder call closes on 5 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Amara goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -268,7 +251,7 @@ Simon</textarea>
 </article><article class="det" data-id="vantage" aria-label="Tom, Vantage Heatpumps">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 7 of 8 clear, 1 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i></span>
     <div><h3>Tom R., Vantage Heatpumps</h3><p>Heat pumps for tower blocks</p>
-    <div class="facts"><span>Founder</span><span>Manchester</span><span>Since Feb 2022</span><span>18 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Manchester</span><span>Since Feb 2022</span><span>18 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated February 2022</span></span></li><li class="g"><span><b>Small enough</b><span>Small company</span></span></li><li class="g"><span><b>In scope</b><span>Climate tech first of a kind</span></span></li><li class="g"><span><b>Something new</b><span>Own compressor design</span></span></li><li class="g"><span><b>Team to deliver</b><span>Engineers and installers</span></span></li><li class="g"><span><b>Can fund its share</b><span>Series A in 2025</span></span></li><li class="a"><span><b>Time to apply</b><span>Closes 5 November</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -277,7 +260,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Hiring a product engineer</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Tom and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Tom and this call</div>
+    <div class="msg-s">Subject <b>FOAK Builder, closes 5 November</b></div>
     <label class="sr" for="m-vantage">Message to Tom</label>
     <textarea id="m-vantage" rows="9">Hi Tom, saw the first tower block in Salford running on your heat pumps.
 
@@ -288,11 +272,7 @@ If you&#x27;re weighing it up, a free funding call would tell you quickly whethe
 Simon</textarea>
     <div class="msg-f"><span class="chars">320 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Tom, I&#x27;m Simon from BidX. We help founders win grant funding, and Vantage Heatpumps looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Tom, did this reach you? The FOAK Builder call closes on 5 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Tom goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Tom, did this reach you? The FOAK Builder call closes on 5 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Tom goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -312,6 +292,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Oct 2024</span><span class="sig i">Hiring a research engineer</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Marcus and this call</div>
+    
     <label class="sr" for="m-ironwood">Message to Marcus</label>
     <textarea id="m-ironwood" rows="9">Hi Marcus, saw the demo of the arm learning a new task from a single video.
 
@@ -322,11 +303,7 @@ Worth a free funding call to see if it&#x27;s a fit?
 Simon</textarea>
     <div class="msg-f"><span class="chars">305 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Marcus, I&#x27;m Simon from BidX. We help founders win grant funding, and Ironwood Robotics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Marcus, did this reach you? The Frontier AI call closes on 11 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Marcus goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Marcus, I&#x27;m Simon from BidX. We help founders win grant funding, and Ironwood Robotics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Marcus, did this reach you? The Frontier AI call closes on 11 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Marcus goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -346,6 +323,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">University spinout</span><span class="sig i">Incorporated Apr 2025</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Daniel and this call</div>
+    
     <label class="sr" for="m-lanternfish">Message to Daniel</label>
     <textarea id="m-lanternfish" rows="9">Hi Daniel, saw Lanternfish spun out of the department this spring.
 
@@ -356,11 +334,7 @@ If it&#x27;s on your list, I&#x27;d be glad to show you how assessors score it a
 Simon</textarea>
     <div class="msg-f"><span class="chars">396 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Daniel, I&#x27;m Simon from BidX. We help founders win grant funding, and Lanternfish AI looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Daniel, did this reach you? The Frontier AI call closes on 11 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Daniel goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Daniel, I&#x27;m Simon from BidX. We help founders win grant funding, and Lanternfish AI looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Daniel, did this reach you? The Frontier AI call closes on 11 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Daniel goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -370,7 +344,7 @@ Simon</textarea>
 </article><article class="det" data-id="moorland" aria-label="Leah, Moorland Data">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 7 of 8 clear, 1 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i></span>
     <div><h3>Leah B., Moorland Data</h3><p>Smaller, cheaper models for climate forecasting</p>
-    <div class="facts"><span>Founder</span><span>Exeter</span><span>Since Jul 2024</span><span>5 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Exeter</span><span>Since Jul 2024</span><span>5 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated July 2024</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>Efficient AI systems, which is the call</span></span></li><li class="g"><span><b>Something new</b><span>Own model compression work</span></span></li><li class="g"><span><b>Team to deliver</b><span>Research led team</span></span></li><li class="g"><span><b>Can fund its share</b><span>Pre seed round in 2025</span></span></li><li class="a"><span><b>Time to apply</b><span>Closes 18 November, four weeks out</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -379,7 +353,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Read the Smart grants guide</span><span class="sig i">Incorporated Jul 2024</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Leah and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Leah and this call</div>
+    <div class="msg-s">Subject <b>Efficient AI systems, closes 18 November</b></div>
     <label class="sr" for="m-moorland">Message to Leah</label>
     <textarea id="m-moorland" rows="9">Hi Leah, saw your paper on shrinking forecast models without losing accuracy.
 
@@ -390,11 +365,7 @@ Happy to walk you through how it&#x27;s scored on a free funding call, if that&#
 Simon</textarea>
     <div class="msg-f"><span class="chars">358 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Leah, I&#x27;m Simon from BidX. We help founders win grant funding, and Moorland Data looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Leah, did this reach you? The Efficient AI systems call closes on 18 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Leah goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Leah, did this reach you? The Efficient AI systems call closes on 18 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Leah goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -404,7 +375,7 @@ Simon</textarea>
 </article><article class="det" data-id="blackthorn" aria-label="Ellie, Blackthorn Acoustics">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 7 of 8 clear, 1 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Ellie C., Blackthorn Acoustics</h3><p>Machine listening that hears faults in pumps early</p>
-    <div class="facts"><span>Founder</span><span>Sheffield</span><span>Since Dec 2023</span><span>6 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Sheffield</span><span>Since Dec 2023</span><span>6 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated December 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>Efficient models on small devices</span></span></li><li class="g"><span><b>Something new</b><span>Own audio models</span></span></li><li class="g"><span><b>Team to deliver</b><span>Two engineers and a PhD</span></span></li><li class="a"><span><b>Can fund its share</b><span>No round announced</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 18 November</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -413,7 +384,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Dec 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Ellie and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Ellie and this call</div>
+    <div class="msg-s">Subject <b>Efficient AI systems, closes 18 November</b></div>
     <label class="sr" for="m-blackthorn">Message to Ellie</label>
     <textarea id="m-blackthorn" rows="9">Hi Ellie, saw Blackthorn&#x27;s sensor picking up a bearing fault weeks before it failed.
 
@@ -424,11 +396,7 @@ If you&#x27;re weighing it up, a free funding call would tell you quickly whethe
 Simon</textarea>
     <div class="msg-f"><span class="chars">381 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Ellie, I&#x27;m Simon from BidX. We help founders win grant funding, and Blackthorn Acoustics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Ellie, did this reach you? The Efficient AI systems call closes on 18 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Ellie goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Ellie, did this reach you? The Efficient AI systems call closes on 18 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Ellie goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -448,6 +416,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Read the Investor Partnerships guide</span><span class="sig i">Raised seed in 2025</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Amara and this call</div>
+    
     <label class="sr" for="m-northgate">Message to Amara</label>
     <textarea id="m-northgate" rows="9">Hi Amara, saw Northgate&#x27;s first cells came off the pilot line.
 
@@ -458,11 +427,7 @@ Worth a free funding call to see if it&#x27;s a fit?
 Simon</textarea>
     <div class="msg-f"><span class="chars">334 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Amara, I&#x27;m Simon from BidX. We help founders win grant funding, and Northgate Cells looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Amara, did this reach you? The Battery Investor Partnerships call closes on 25 November, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Amara goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Amara, I&#x27;m Simon from BidX. We help founders win grant funding, and Northgate Cells looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Amara, did this reach you? The Battery Investor Partnerships call closes on 25 November, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Amara goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -482,6 +447,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Exhibited at a Munich trade fair</span><span class="sig i">Incorporated Jun 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Daniel and this call</div>
+    
     <label class="sr" for="m-fenwick">Message to Daniel</label>
     <textarea id="m-fenwick" rows="9">Hi Daniel, saw Fenwick was at the Munich laser fair this year.
 
@@ -492,11 +458,7 @@ If it&#x27;s on your list, I&#x27;d be glad to show you how assessors score it a
 Simon</textarea>
     <div class="msg-f"><span class="chars">340 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Daniel, I&#x27;m Simon from BidX. We help founders win grant funding, and Fenwick Optics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Daniel, did this reach you? The UK Germany R&amp;D call closes on 1 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Daniel goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Daniel, I&#x27;m Simon from BidX. We help founders win grant funding, and Fenwick Optics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Daniel, did this reach you? The UK Germany R&amp;D call closes on 1 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Daniel goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -506,7 +468,7 @@ Simon</textarea>
 </article><article class="det" data-id="juniper" aria-label="Grace, Juniper Kinetics">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 7 of 8 clear, 1 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i></span>
     <div><h3>Grace W., Juniper Kinetics</h3><p>Flywheels for factory energy storage</p>
-    <div class="facts"><span>Founder</span><span>Derby</span><span>Since Feb 2023</span><span>10 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Derby</span><span>Since Feb 2023</span><span>10 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated February 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Small company</span></span></li><li class="g"><span><b>In scope</b><span>R&amp;D that suits a German partner</span></span></li><li class="g"><span><b>Something new</b><span>Own flywheel design</span></span></li><li class="g"><span><b>Team to deliver</b><span>Mechanical engineers</span></span></li><li class="g"><span><b>Can fund its share</b><span>Seed round in 2024</span></span></li><li class="a"><span><b>Time to apply</b><span>Closes 1 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -515,7 +477,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">German distributor named on site</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Grace and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Grace and this call</div>
+    <div class="msg-s">Subject <b>UK Germany R&amp;D, closes 1 December</b></div>
     <label class="sr" for="m-juniper">Message to Grace</label>
     <textarea id="m-juniper" rows="9">Hi Grace, saw you&#x27;ve signed a German distributor.
 
@@ -526,11 +489,7 @@ Happy to walk you through how it&#x27;s scored on a free funding call, if that&#
 Simon</textarea>
     <div class="msg-f"><span class="chars">263 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Grace, I&#x27;m Simon from BidX. We help founders win grant funding, and Juniper Kinetics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Grace, did this reach you? The UK Germany R&amp;D call closes on 1 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Grace goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Grace, did this reach you? The UK Germany R&amp;D call closes on 1 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Grace goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -550,6 +509,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">German research partner named on site</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Kit and this call</div>
+    
     <label class="sr" for="m-halcyon">Message to Kit</label>
     <textarea id="m-halcyon" rows="9">Hi Kit, saw Halcyon&#x27;s chip work with a German lab.
 
@@ -560,11 +520,7 @@ If you&#x27;re weighing it up, a free funding call would tell you quickly whethe
 Simon</textarea>
     <div class="msg-f"><span class="chars">280 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Kit, I&#x27;m Simon from BidX. We help founders win grant funding, and Halcyon Qubits looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Kit, did this reach you? The UK Germany R&amp;D call closes on 1 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Kit goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Kit, I&#x27;m Simon from BidX. We help founders win grant funding, and Halcyon Qubits looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Kit, did this reach you? The UK Germany R&amp;D call closes on 1 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Kit goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -574,7 +530,7 @@ Simon</textarea>
 </article><article class="det" data-id="marram" aria-label="Owen, Marram Batteries">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 8 of 8 clear"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Owen P., Marram Batteries</h3><p>Recovering lithium from old EV packs</p>
-    <div class="facts"><span>Founder</span><span>Newcastle</span><span>Since Mar 2023</span><span>9 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Newcastle</span><span>Since Mar 2023</span><span>9 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated March 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>Battery recycling is in scope</span></span></li><li class="g"><span><b>Something new</b><span>Own recovery process</span></span></li><li class="g"><span><b>Team to deliver</b><span>Process engineers</span></span></li><li class="g"><span><b>Can fund its share</b><span>Grant and angel funded</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 2 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -583,7 +539,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Won Innovate UK funding in 2024</span><span class="sig i">Incorporated Mar 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Owen and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Owen and this call</div>
+    <div class="msg-s">Subject <b>Battery feasibility, closes 2 December</b></div>
     <label class="sr" for="m-marram">Message to Owen</label>
     <textarea id="m-marram" rows="9">Hi Owen, saw the recovery rates you published for the pilot plant.
 
@@ -594,11 +551,7 @@ Worth a free funding call to see if it&#x27;s a fit?
 Simon</textarea>
     <div class="msg-f"><span class="chars">293 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Owen, I&#x27;m Simon from BidX. We help founders win grant funding, and Marram Batteries looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Owen, did this reach you? The Battery feasibility call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Owen goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Owen, did this reach you? The Battery feasibility call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Owen goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -608,7 +561,7 @@ Simon</textarea>
 </article><article class="det" data-id="brackenfield" aria-label="Tom, Brackenfield Bio">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 8 of 8 clear"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Tom E., Brackenfield Bio</h3><p>Enzymes that break down PET packaging</p>
-    <div class="facts"><span>Founder</span><span>Norwich</span><span>Since Feb 2024</span><span>7 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Norwich</span><span>Since Feb 2024</span><span>7 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated February 2024</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>Engineering biology product</span></span></li><li class="g"><span><b>Something new</b><span>Own enzyme designs</span></span></li><li class="g"><span><b>Team to deliver</b><span>Biochemists and a process lead</span></span></li><li class="g"><span><b>Can fund its share</b><span>Seed round from a biotech fund</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 2 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -617,7 +570,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Read the Investor Partnerships guide</span><span class="sig i">Incorporated Feb 2024</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Tom and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Tom and this call</div>
+    <div class="msg-s">Subject <b>Engineering Biology Investor Partnerships, closes 2 December</b></div>
     <label class="sr" for="m-brackenfield">Message to Tom</label>
     <textarea id="m-brackenfield" rows="9">Hi Tom, saw Brackenfield&#x27;s enzyme cut PET back to monomers in the lab.
 
@@ -628,11 +582,7 @@ If it&#x27;s on your list, I&#x27;d be glad to show you how assessors score it a
 Simon</textarea>
     <div class="msg-f"><span class="chars">393 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Tom, I&#x27;m Simon from BidX. We help founders win grant funding, and Brackenfield Bio looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Tom, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Tom goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Tom, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Tom goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -642,7 +592,7 @@ Simon</textarea>
 </article><article class="det" data-id="stillwater" aria-label="Joe, Stillwater Proteins">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 8 of 8 clear"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Joe F., Stillwater Proteins</h3><p>Dairy proteins made by fermentation</p>
-    <div class="facts"><span>Founder</span><span>Reading</span><span>Since Nov 2023</span><span>10 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Reading</span><span>Since Nov 2023</span><span>10 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated November 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Small company</span></span></li><li class="g"><span><b>In scope</b><span>Precision fermentation is engineering biology</span></span></li><li class="g"><span><b>Something new</b><span>Own production strains</span></span></li><li class="g"><span><b>Team to deliver</b><span>Fermentation scientists</span></span></li><li class="g"><span><b>Can fund its share</b><span>Seed round announced in spring</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 2 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -651,7 +601,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Hiring a fermentation scientist</span><span class="sig i">Incorporated Nov 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Joe and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Joe and this call</div>
+    <div class="msg-s">Subject <b>Engineering Biology Investor Partnerships, closes 2 December</b></div>
     <label class="sr" for="m-stillwater">Message to Joe</label>
     <textarea id="m-stillwater" rows="9">Hi Joe, saw Stillwater is hiring for the scale up work.
 
@@ -662,11 +613,7 @@ Happy to walk you through how it&#x27;s scored on a free funding call, if that&#
 Simon</textarea>
     <div class="msg-f"><span class="chars">314 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Joe, I&#x27;m Simon from BidX. We help founders win grant funding, and Stillwater Proteins looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Joe, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Joe goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Joe, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Joe goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -686,6 +633,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Read the concrete cohort page</span><span class="sig i">Incorporated Jan 2024</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Leah and this call</div>
+    
     <label class="sr" for="m-quillstone">Message to Leah</label>
     <textarea id="m-quillstone" rows="9">Hi Leah, saw Quillstone&#x27;s first test slab with a Welsh contractor.
 
@@ -696,11 +644,7 @@ If you&#x27;re weighing it up, a free funding call would tell you quickly whethe
 Simon</textarea>
     <div class="msg-f"><span class="chars">303 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Leah, I&#x27;m Simon from BidX. We help founders win grant funding, and Quillstone Materials looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Leah, did this reach you? The Low carbon concrete cohort call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Leah goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Leah, I&#x27;m Simon from BidX. We help founders win grant funding, and Quillstone Materials looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Leah, did this reach you? The Low carbon concrete cohort call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Leah goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -720,6 +664,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Won Innovate UK funding in 2024</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Priya and this call</div>
+    
     <label class="sr" for="m-bellwether">Message to Priya</label>
     <textarea id="m-bellwether" rows="9">Hi Priya, saw the flow process results you shared at the Nottingham event.
 
@@ -730,11 +675,7 @@ Worth a free funding call to see if it&#x27;s a fit?
 Simon</textarea>
     <div class="msg-f"><span class="chars">250 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Priya, I&#x27;m Simon from BidX. We help founders win grant funding, and Bellwether Clinical looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Priya, did this reach you? The Sustainable medicines call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Priya goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Priya, I&#x27;m Simon from BidX. We help founders win grant funding, and Bellwether Clinical looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Priya, did this reach you? The Sustainable medicines call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Priya goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -744,7 +685,7 @@ Simon</textarea>
 </article><article class="det" data-id="tinderbox" aria-label="Ravi, Tinderbox Mycelium">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 8 of 8 clear"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Ravi M., Tinderbox Mycelium</h3><p>Fire safe insulation grown from mycelium</p>
-    <div class="facts"><span>Founder</span><span>Bristol</span><span>Since Oct 2023</span><span>8 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Bristol</span><span>Since Oct 2023</span><span>8 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated October 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>Engineering biology material</span></span></li><li class="g"><span><b>Something new</b><span>Own growing method</span></span></li><li class="g"><span><b>Team to deliver</b><span>Biologists and a fire test lead</span></span></li><li class="g"><span><b>Can fund its share</b><span>Seed round in 2025</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 2 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -753,7 +694,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Passed a fire test, on LinkedIn</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Ravi and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Ravi and this call</div>
+    <div class="msg-s">Subject <b>Engineering Biology Investor Partnerships, closes 2 December</b></div>
     <label class="sr" for="m-tinderbox">Message to Ravi</label>
     <textarea id="m-tinderbox" rows="9">Hi Ravi, saw the fire test result you posted.
 
@@ -764,11 +706,7 @@ If it&#x27;s on your list, I&#x27;d be glad to show you how assessors score it a
 Simon</textarea>
     <div class="msg-f"><span class="chars">368 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Ravi, I&#x27;m Simon from BidX. We help founders win grant funding, and Tinderbox Mycelium looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Ravi, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Ravi goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Ravi, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Ravi goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -788,6 +726,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Jun 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Grace and this call</div>
+    
     <label class="sr" for="m-copperleaf">Message to Grace</label>
     <textarea id="m-copperleaf" rows="9">Hi Grace, saw Copperleaf is now monitoring a grid battery site in Scotland.
 
@@ -798,11 +737,7 @@ Happy to walk you through how it&#x27;s scored on a free funding call, if that&#
 Simon</textarea>
     <div class="msg-f"><span class="chars">338 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Grace, I&#x27;m Simon from BidX. We help founders win grant funding, and Copperleaf Grid looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Grace, did this reach you? The Battery feasibility call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Grace goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Grace, I&#x27;m Simon from BidX. We help founders win grant funding, and Copperleaf Grid looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Grace, did this reach you? The Battery feasibility call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Grace goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -822,6 +757,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Sep 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Hannah and this call</div>
+    
     <label class="sr" for="m-willowmere">Message to Hannah</label>
     <textarea id="m-willowmere" rows="9">Hi Hannah, saw the first dyed samples you showed at the textile fair.
 
@@ -832,11 +768,7 @@ If you&#x27;re weighing it up, a free funding call would tell you quickly whethe
 Simon</textarea>
     <div class="msg-f"><span class="chars">344 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Hannah, I&#x27;m Simon from BidX. We help founders win grant funding, and Willowmere Biotech looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Hannah, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Hannah goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Hannah, I&#x27;m Simon from BidX. We help founders win grant funding, and Willowmere Biotech looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Hannah, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Hannah goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -846,7 +778,7 @@ Simon</textarea>
 </article><article class="det" data-id="redshank" aria-label="Sam, Redshank Materials">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 7 of 8 clear, 1 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Sam B., Redshank Materials</h3><p>Concrete aggregate from demolition waste</p>
-    <div class="facts"><span>Founder</span><span>Leicester</span><span>Since Sep 2023</span><span>8 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Leicester</span><span>Since Sep 2023</span><span>8 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated September 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>Concrete decarbonisation</span></span></li><li class="g"><span><b>Something new</b><span>Own grading process</span></span></li><li class="g"><span><b>Team to deliver</b><span>Engineers and a plant lead</span></span></li><li class="a"><span><b>Can fund its share</b><span>No round announced</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 2 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -855,7 +787,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Sep 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Sam and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Sam and this call</div>
+    <div class="msg-s">Subject <b>Low carbon concrete cohort, closes 2 December</b></div>
     <label class="sr" for="m-redshank">Message to Sam</label>
     <textarea id="m-redshank" rows="9">Hi Sam, saw Redshank&#x27;s aggregate going into a school build in Leicester.
 
@@ -866,11 +799,7 @@ Worth a free funding call to see if it&#x27;s a fit?
 Simon</textarea>
     <div class="msg-f"><span class="chars">257 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Sam, I&#x27;m Simon from BidX. We help founders win grant funding, and Redshank Materials looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Sam, did this reach you? The Low carbon concrete cohort call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Sam goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Sam, did this reach you? The Low carbon concrete cohort call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Sam goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -890,6 +819,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Jun 2024</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Zara and this call</div>
+    
     <label class="sr" for="m-rivermint">Message to Zara</label>
     <textarea id="m-rivermint" rows="9">Hi Zara, saw Rivermint&#x27;s fat in a plant based burger at the food show.
 
@@ -900,11 +830,7 @@ If it&#x27;s on your list, I&#x27;d be glad to show you how assessors score it a
 Simon</textarea>
     <div class="msg-f"><span class="chars">393 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Zara, I&#x27;m Simon from BidX. We help founders win grant funding, and Rivermint Foods looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Zara, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Zara goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Zara, I&#x27;m Simon from BidX. We help founders win grant funding, and Rivermint Foods looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Zara, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Zara goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -914,7 +840,7 @@ Simon</textarea>
 </article><article class="det" data-id="ashgrove" aria-label="Nadia, Ashgrove Thermal">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 7 of 8 clear, 1 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Nadia E., Ashgrove Thermal</h3><p>Thermal batteries for food factories</p>
-    <div class="facts"><span>Founder</span><span>Hull</span><span>Since Jul 2023</span><span>7 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Hull</span><span>Since Jul 2023</span><span>7 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated July 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>Battery feasibility fits</span></span></li><li class="g"><span><b>Something new</b><span>Own storage medium</span></span></li><li class="g"><span><b>Team to deliver</b><span>Thermal engineers</span></span></li><li class="a"><span><b>Can fund its share</b><span>No round announced</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 2 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -923,7 +849,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Jul 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Nadia and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Nadia and this call</div>
+    <div class="msg-s">Subject <b>Battery feasibility, closes 2 December</b></div>
     <label class="sr" for="m-ashgrove">Message to Nadia</label>
     <textarea id="m-ashgrove" rows="9">Hi Nadia, saw Ashgrove&#x27;s pilot at a food factory in Hull.
 
@@ -934,11 +861,7 @@ Happy to walk you through how it&#x27;s scored on a free funding call, if that&#
 Simon</textarea>
     <div class="msg-f"><span class="chars">320 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Nadia, I&#x27;m Simon from BidX. We help founders win grant funding, and Ashgrove Thermal looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Nadia, did this reach you? The Battery feasibility call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Nadia goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Nadia, did this reach you? The Battery feasibility call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Nadia goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -948,7 +871,7 @@ Simon</textarea>
 </article><article class="det" data-id="elderflower" aria-label="Zara, Elderflower Labs">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 6 of 8 clear, 2 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="a"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Zara I., Elderflower Labs</h3><p>Fungal leathers for furniture makers</p>
-    <div class="facts"><span>Founder</span><span>London</span><span>Since Aug 2024</span><span>5 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>London</span><span>Since Aug 2024</span><span>5 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated August 2024</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>A biology made material</span></span></li><li class="g"><span><b>Something new</b><span>Own growing process</span></span></li><li class="a"><span><b>Team to deliver</b><span>A materials scientist and a designer</span></span></li><li class="a"><span><b>Can fund its share</b><span>Angel funded</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 2 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -957,7 +880,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Aug 2024</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Zara and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Zara and this call</div>
+    <div class="msg-s">Subject <b>Engineering Biology Investor Partnerships, closes 2 December</b></div>
     <label class="sr" for="m-elderflower">Message to Zara</label>
     <textarea id="m-elderflower" rows="9">Hi Zara, saw the chair you made with a furniture studio.
 
@@ -968,11 +892,7 @@ If you&#x27;re weighing it up, a free funding call would tell you quickly whethe
 Simon</textarea>
     <div class="msg-f"><span class="chars">331 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Zara, I&#x27;m Simon from BidX. We help founders win grant funding, and Elderflower Labs looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Zara, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Zara goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Zara, did this reach you? The Engineering Biology Investor Partnerships call closes on 2 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Zara goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -992,6 +912,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Read the BridgeAI guide</span><span class="sig i">Won Innovate UK funding in 2025</span><span class="sig i">Incorporated Jan 2024</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Priya and this call</div>
+    
     <label class="sr" for="m-sorrel">Message to Priya</label>
     <textarea id="m-sorrel" rows="9">Hi Priya, saw Sorrel won an Innovate UK award last year and the bed planning work has moved on since.
 
@@ -1002,11 +923,7 @@ Worth a free funding call to see if it&#x27;s a fit?
 Simon</textarea>
     <div class="msg-f"><span class="chars">394 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Priya, I&#x27;m Simon from BidX. We help founders win grant funding, and Sorrel Analytics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Priya, did this reach you? The BridgeAI, decision critical call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Priya goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Priya, I&#x27;m Simon from BidX. We help founders win grant funding, and Sorrel Analytics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Priya, did this reach you? The BridgeAI, decision critical call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Priya goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1026,6 +943,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Aug 2023</span><span class="sig i">Hiring two security engineers</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Nadia and this call</div>
+    
     <label class="sr" for="m-corvid">Message to Nadia</label>
     <textarea id="m-corvid" rows="9">Hi Nadia, saw Corvid is hiring two more engineers, so the detection side must be growing.
 
@@ -1036,11 +954,7 @@ If it&#x27;s on your list, I&#x27;d be glad to show you how assessors score it a
 Simon</textarea>
     <div class="msg-f"><span class="chars">492 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Nadia, I&#x27;m Simon from BidX. We help founders win grant funding, and Corvid Shield looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Nadia, did this reach you? The BridgeAI, assurance call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Nadia goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Nadia, I&#x27;m Simon from BidX. We help founders win grant funding, and Corvid Shield looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Nadia, did this reach you? The BridgeAI, assurance call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Nadia goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1050,7 +964,7 @@ Simon</textarea>
 </article><article class="det" data-id="cobalt" aria-label="Sam, Cobalt Wren">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 8 of 8 clear"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Sam H., Cobalt Wren</h3><p>Drone inspections of offshore wind blades</p>
-    <div class="facts"><span>Founder</span><span>Aberdeen</span><span>Since May 2023</span><span>8 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Aberdeen</span><span>Since May 2023</span><span>8 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated May 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>AI that runs inspection operations</span></span></li><li class="g"><span><b>Something new</b><span>Own defect detection models</span></span></li><li class="g"><span><b>Team to deliver</b><span>Pilots and two ML engineers</span></span></li><li class="g"><span><b>Can fund its share</b><span>Seed round announced in 2025</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 8 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -1059,7 +973,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated May 2023</span><span class="sig i">New contract with a wind operator on LinkedIn</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Sam and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Sam and this call</div>
+    <div class="msg-s">Subject <b>BridgeAI, operational systems, closes 8 December</b></div>
     <label class="sr" for="m-cobalt">Message to Sam</label>
     <textarea id="m-cobalt" rows="9">Hi Sam, saw the new inspection contract you announced with a wind farm operator.
 
@@ -1070,11 +985,7 @@ Happy to walk you through how it&#x27;s scored on a free funding call, if that&#
 Simon</textarea>
     <div class="msg-f"><span class="chars">389 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Sam, I&#x27;m Simon from BidX. We help founders win grant funding, and Cobalt Wren looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Sam, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Sam goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Sam, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Sam goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1094,6 +1005,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Read the BridgeAI guide</span><span class="sig i">Water company trial on LinkedIn</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Joe and this call</div>
+    
     <label class="sr" for="m-wychwood">Message to Joe</label>
     <textarea id="m-wychwood" rows="9">Hi Joe, saw the leak trial you&#x27;re running with a water company.
 
@@ -1104,11 +1016,7 @@ If you&#x27;re weighing it up, a free funding call would tell you quickly whethe
 Simon</textarea>
     <div class="msg-f"><span class="chars">388 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Joe, I&#x27;m Simon from BidX. We help founders win grant funding, and Wychwood Sensors looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Joe, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Joe goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Joe, I&#x27;m Simon from BidX. We help founders win grant funding, and Wychwood Sensors looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Joe, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Joe goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1128,6 +1036,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Read the BridgeAI guide yesterday</span><span class="sig i">Incorporated Mar 2024</span><span class="sig i">Hiring a field engineer</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Maya and this call</div>
+    
     <label class="sr" for="m-fernhollow">Message to Maya</label>
     <textarea id="m-fernhollow" rows="9">Hi Maya, saw your post about the first picking trial with a Kent grower this summer.
 
@@ -1138,11 +1047,7 @@ Worth a free funding call to see if it&#x27;s a fit?
 Simon</textarea>
     <div class="msg-f"><span class="chars">357 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Maya, I&#x27;m Simon from BidX. We help founders win grant funding, and Fernhollow Robotics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Maya, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Maya goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Maya, I&#x27;m Simon from BidX. We help founders win grant funding, and Fernhollow Robotics looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Maya, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Maya goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1152,7 +1057,7 @@ Simon</textarea>
 </article><article class="det" data-id="hollowbrook" aria-label="Ben, Hollowbrook AI">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 7 of 8 clear, 1 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Ben K., Hollowbrook AI</h3><p>AI that checks planning applications against local policy</p>
-    <div class="facts"><span>Founder</span><span>Bristol</span><span>Since Jun 2024</span><span>5 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Bristol</span><span>Since Jun 2024</span><span>5 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated June 2024</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>AI that checks documents against rules</span></span></li><li class="g"><span><b>Something new</b><span>Own models trained on planning policy</span></span></li><li class="g"><span><b>Team to deliver</b><span>Three engineers</span></span></li><li class="a"><span><b>Can fund its share</b><span>No round announced yet</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 8 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -1161,7 +1066,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Jun 2024</span><span class="sig i">Two council pilots named on site</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Ben and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Ben and this call</div>
+    <div class="msg-s">Subject <b>BridgeAI, assurance, closes 8 December</b></div>
     <label class="sr" for="m-hollowbrook">Message to Ben</label>
     <textarea id="m-hollowbrook" rows="9">Hi Ben, saw you&#x27;ve got two councils trialling the policy checks.
 
@@ -1172,11 +1078,7 @@ If it&#x27;s on your list, I&#x27;d be glad to show you how assessors score it a
 Simon</textarea>
     <div class="msg-f"><span class="chars">467 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Ben, I&#x27;m Simon from BidX. We help founders win grant funding, and Hollowbrook AI looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Ben, did this reach you? The BridgeAI, assurance call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Ben goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Ben, did this reach you? The BridgeAI, assurance call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Ben goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1186,7 +1088,7 @@ Simon</textarea>
 </article><article class="det" data-id="tessellate" aria-label="Ben, Tessellate Orbital">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 7 of 8 clear, 1 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Ben O., Tessellate Orbital</h3><p>Satellite alerts for crop disease</p>
-    <div class="facts"><span>Founder</span><span>Harwell</span><span>Since Aug 2023</span><span>9 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Harwell</span><span>Since Aug 2023</span><span>9 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated August 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>AI running farm operations</span></span></li><li class="g"><span><b>Something new</b><span>Own disease models</span></span></li><li class="g"><span><b>Team to deliver</b><span>Earth observation scientists</span></span></li><li class="a"><span><b>Can fund its share</b><span>Pre seed round</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 8 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -1195,7 +1097,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Aug 2023</span><span class="sig i">Agronomy partner named on site</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Ben and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Ben and this call</div>
+    <div class="msg-s">Subject <b>BridgeAI, operational systems, closes 8 December</b></div>
     <label class="sr" for="m-tessellate">Message to Ben</label>
     <textarea id="m-tessellate" rows="9">Hi Ben, saw Tessellate&#x27;s alerts going out to an agronomy firm&#x27;s farms.
 
@@ -1206,11 +1109,7 @@ Happy to walk you through how it&#x27;s scored on a free funding call, if that&#
 Simon</textarea>
     <div class="msg-f"><span class="chars">379 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Ben, I&#x27;m Simon from BidX. We help founders win grant funding, and Tessellate Orbital looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Ben, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Ben goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Ben, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Ben goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1220,7 +1119,7 @@ Simon</textarea>
 </article><article class="det" data-id="peregrine" aria-label="Tom, Peregrine Routing">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 6 of 8 clear, 2 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i><i class="a"></i></span>
     <div><h3>Tom A., Peregrine Routing</h3><p>Route planning for HGV fleets that cuts empty miles</p>
-    <div class="facts"><span>Founder</span><span>Leeds</span><span>Since Nov 2023</span><span>9 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Leeds</span><span>Since Nov 2023</span><span>9 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated November 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Small company, nine on LinkedIn</span></span></li><li class="g"><span><b>In scope</b><span>AI that plans live fleet operations</span></span></li><li class="g"><span><b>Something new</b><span>Own routing models</span></span></li><li class="g"><span><b>Team to deliver</b><span>Four engineers named on the team page</span></span></li><li class="a"><span><b>Can fund its share</b><span>No round announced yet</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 8 December, seven weeks out</span></span></li><li class="a"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -1229,7 +1128,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Nov 2023</span><span class="sig i">Pilot with a haulier on their site</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Tom and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Tom and this call</div>
+    <div class="msg-s">Subject <b>BridgeAI, operational systems, closes 8 December</b></div>
     <label class="sr" for="m-peregrine">Message to Tom</label>
     <textarea id="m-peregrine" rows="9">Hi Tom, saw the pilot you&#x27;re running with a Yorkshire haulier on your site.
 
@@ -1240,11 +1140,7 @@ If you&#x27;re weighing it up, a free funding call would tell you quickly whethe
 Simon</textarea>
     <div class="msg-f"><span class="chars">400 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Tom, I&#x27;m Simon from BidX. We help founders win grant funding, and Peregrine Routing looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Tom, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Tom goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Tom, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Tom goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1254,7 +1150,7 @@ Simon</textarea>
 </article><article class="det" data-id="quayside" aria-label="Kit, Quayside Autonomy">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 6 of 8 clear, 2 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="g"></i><i class="a"></i></span>
     <div><h3>Kit L., Quayside Autonomy</h3><p>Autonomous yard tractors for port terminals</p>
-    <div class="facts"><span>Founder</span><span>Southampton</span><span>Since Feb 2023</span><span>14 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Southampton</span><span>Since Feb 2023</span><span>14 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated February 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Small company</span></span></li><li class="g"><span><b>In scope</b><span>AI driving operational vehicles</span></span></li><li class="g"><span><b>Something new</b><span>Own autonomy stack</span></span></li><li class="g"><span><b>Team to deliver</b><span>Robotics and controls engineers</span></span></li><li class="a"><span><b>Can fund its share</b><span>Grant funded so far</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 8 December</span></span></li><li class="a"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -1263,7 +1159,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Won Innovate UK funding in 2024</span><span class="sig i">Incorporated Feb 2023</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Kit and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Kit and this call</div>
+    <div class="msg-s">Subject <b>BridgeAI, operational systems, closes 8 December</b></div>
     <label class="sr" for="m-quayside">Message to Kit</label>
     <textarea id="m-quayside" rows="9">Hi Kit, saw the yard tractor trial at Southampton is still running.
 
@@ -1274,11 +1171,7 @@ Worth a free funding call to see if it&#x27;s a fit?
 Simon</textarea>
     <div class="msg-f"><span class="chars">340 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Kit, I&#x27;m Simon from BidX. We help founders win grant funding, and Quayside Autonomy looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Kit, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Kit goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Kit, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Kit goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1298,6 +1191,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Read the BridgeAI guide</span><span class="sig i">Incorporated Sep 2024</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Isla and this call</div>
+    
     <label class="sr" for="m-tamarisk">Message to Isla</label>
     <textarea id="m-tamarisk" rows="9">Hi Isla, saw Tamarisk is in four GP practices now.
 
@@ -1308,11 +1202,7 @@ If it&#x27;s on your list, I&#x27;d be glad to show you how assessors score it a
 Simon</textarea>
     <div class="msg-f"><span class="chars">443 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Isla, I&#x27;m Simon from BidX. We help founders win grant funding, and Tamarisk Health looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Isla, did this reach you? The BridgeAI, decision critical call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Isla goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Isla, I&#x27;m Simon from BidX. We help founders win grant funding, and Tamarisk Health looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Isla, did this reach you? The BridgeAI, decision critical call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Isla goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1322,7 +1212,7 @@ Simon</textarea>
 </article><article class="det" data-id="brightpath" aria-label="Ellie, Brightpath Cargo">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 6 of 8 clear, 2 likely"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="a"></i><i class="a"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Ellie N., Brightpath Cargo</h3><p>Scheduling for council e cargo bike fleets</p>
-    <div class="facts"><span>Founder</span><span>Cambridge</span><span>Since Jan 2024</span><span>5 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Cambridge</span><span>Since Jan 2024</span><span>5 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated January 2024</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>AI running delivery operations</span></span></li><li class="g"><span><b>Something new</b><span>Own scheduling engine</span></span></li><li class="a"><span><b>Team to deliver</b><span>Two engineers</span></span></li><li class="a"><span><b>Can fund its share</b><span>Founder funded</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 8 December</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -1331,7 +1221,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Incorporated Jan 2024</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Ellie and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Ellie and this call</div>
+    <div class="msg-s">Subject <b>BridgeAI, operational systems, closes 8 December</b></div>
     <label class="sr" for="m-brightpath">Message to Ellie</label>
     <textarea id="m-brightpath" rows="9">Hi Ellie, saw Brightpath is running the cargo bikes for a council now.
 
@@ -1342,11 +1233,7 @@ Happy to walk you through how it&#x27;s scored on a free funding call, if that&#
 Simon</textarea>
     <div class="msg-f"><span class="chars">379 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Ellie, I&#x27;m Simon from BidX. We help founders win grant funding, and Brightpath Cargo looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Ellie, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Ellie goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Ellie, did this reach you? The BridgeAI, operational systems call closes on 8 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Ellie goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1366,6 +1253,7 @@ Simon</textarea>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Singapore port trial on LinkedIn</span></div></div>
   <div class="blk"><h4>First message</h4>
     <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Marcus and this call</div>
+    
     <label class="sr" for="m-seabright">Message to Marcus</label>
     <textarea id="m-seabright" rows="9">Hi Marcus, saw the Singapore ferry trial you posted about.
 
@@ -1376,11 +1264,7 @@ If you&#x27;re weighing it up, a free funding call would tell you quickly whethe
 Simon</textarea>
     <div class="msg-f"><span class="chars">285 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Marcus, I&#x27;m Simon from BidX. We help founders win grant funding, and Seabright Marine looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Marcus, did this reach you? The UK Singapore R&amp;D call closes on 16 December, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Marcus goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Marcus, I&#x27;m Simon from BidX. We help founders win grant funding, and Seabright Marine looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li><li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Marcus, did this reach you? The UK Singapore R&amp;D call closes on 16 December, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Marcus goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1390,7 +1274,7 @@ Simon</textarea>
 </article><article class="det" data-id="thistledown" aria-label="Nadia, Thistledown Aero">
   <div class="det-h"><span class="glyph big" role="img" aria-label="Fit, 8 of 8 clear"><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i><i class="g"></i></span>
     <div><h3>Nadia A., Thistledown Aero</h3><p>Lighter seats for regional aircraft</p>
-    <div class="facts"><span>Founder</span><span>Bristol</span><span>Since Mar 2023</span><span>9 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn</span></div></div>
+    <div class="facts"><span>Founder</span><span>Bristol</span><span>Since Mar 2023</span><span>9 people</span><span><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email</span></div></div>
   </div>
   <div class="blk"><h4>Why they fit</h4><ol class="checks"><li class="g"><span><b>UK company</b><span>Active, incorporated March 2023</span></span></li><li class="g"><span><b>Small enough</b><span>Micro company</span></span></li><li class="g"><span><b>In scope</b><span>R&amp;D with a Japanese SME partner</span></span></li><li class="g"><span><b>Something new</b><span>Own seat structures</span></span></li><li class="g"><span><b>Team to deliver</b><span>Aerospace engineers</span></span></li><li class="g"><span><b>Can fund its share</b><span>Seed round in 2025</span></span></li><li class="g"><span><b>Time to apply</b><span>Closes 20 January, three months out</span></span></li><li class="g"><span><b>Free to contact</b><span>Never contacted</span></span></li></ol></div>
   <div class="blk"><h4>The call</h4>
@@ -1399,7 +1283,8 @@ Simon</textarea>
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0"><span class="sig i">Japanese supplier on site</span></div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1" y="1" width="14" height="14" rx="3" fill="currentColor"/><path d="M4.4 6.6v5M4.4 4.3v.1M7.3 11.6V8.9c0-1.4 2.6-1.6 2.6 0v2.7M7.3 6.6v5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> LinkedIn, from Simon Dutta<span class="sp"></span>Written for Nadia and this call</div>
+    <div class="msg"><div class="msg-h"><svg viewBox="0 0 16 16" aria-hidden="true" width="15" height="15"><rect x="1.5" y="3" width="13" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m2 4.5 6 4.5 6-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Email, from Simon Dutta<span class="sp"></span>Written for Nadia and this call</div>
+    <div class="msg-s">Subject <b>Globalstars Japan, closes 20 January</b></div>
     <label class="sr" for="m-thistledown">Message to Nadia</label>
     <textarea id="m-thistledown" rows="9">Hi Nadia, saw Thistledown is working with a Japanese composites supplier.
 
@@ -1410,11 +1295,7 @@ Worth a free funding call to see if it&#x27;s a fit?
 Simon</textarea>
     <div class="msg-f"><span class="chars">237 characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;Hi Nadia, I&#x27;m Simon from BidX. We help founders win grant funding, and Thistledown Aero looks like a strong fit for a call that&#x27;s open now. Would be good to connect.&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;Nadia, did this reach you? The Globalstars Japan call closes on 20 January, so there&#x27;s still time.&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then Nadia goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq"><li><span class="d">Day 0</span><span class="k"></span><span>The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.</span></li><li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one follow up in the same thread. &ldquo;Nadia, did this reach you? The Globalstars Japan call closes on 20 January, so there&#x27;s still time.&rdquo;</span></li><li><span class="d">After</span><span class="k"></span><span>Nothing more. Two emails, then Nadia goes quiet on the list for 90 days.</span></li>
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -1456,7 +1337,7 @@ Simon</textarea>
 <td><span class="small">None today</span></td></tr><tr><td><b><a href="/calls/engineering-biology-collaborative-rd-round-3/">Engineering Biology Collaborative R&amp;D, Round 3</a></b><small>Project costs £750K to £2.5M, a consortium</small></td>
 <td class="hide-s">A business</td><td class="hide-s">20%</td>
 <td><span class="dotf" data-close="2026-11-03T11:00:00+00:00"><span class="dl-n">13</span></span><small>3 November</small></td>
-<td><span class="bars" aria-hidden="true"><i style="height:6px"></i></span> <b>1</b></td></tr><tr><td><b><a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en">EIC Accelerator, short proposal batch</a></b><small>Grant component below EUR 2.5 million</small></td>
+<td><span class="bars" aria-hidden="true"><i style="height:6px"></i></span> <b>1</b></td></tr><tr><td><b><a href="https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en">EIC Accelerator, short proposal batch</a></b><small>Grant only for UK companies, up to €2.5M</small></td>
 <td class="hide-s">An SME</td><td class="hide-s">Not stated</td>
 <td><span class="dotf" data-close="2026-11-03T17:00:00+01:00"><span class="dl-n">13</span></span><small>3 November</small></td>
 <td><span class="bars" aria-hidden="true"><i style="height:6px"></i><i style="height:9px"></i></span> <b>2</b></td></tr><tr><td><b><a href="/calls/cfi-battery-innovation-for-dual-use-and-defence-phase-1/">CfI, Battery innovation for dual use &amp; defence Phase 1</a></b><small>Contracts £20K to £50K</small></td>
@@ -1631,6 +1512,9 @@ Simon</textarea></div><div class="acts" style="border:0;padding-top:4px;margin-t
     </div>
     <div class="pane"><h2>Sending</h2>
       <div class="field"><label for="s-hours">Sending hours</label><select id="s-hours"><option>Weekdays, 9.40am to 4.30pm UK</option><option>Weekdays, 8am to 6pm UK</option></select></div>
+      <div class="field"><label for="s-li">LinkedIn requests a day</label><select id="s-li"><option>20, inside LinkedIn&rsquo;s limit of about 100 a week</option><option>15</option><option>10</option></select></div>
+      <div class="field"><label for="s-over">Founders over that</label><select id="s-over"><option>Email from Simon&rsquo;s address, with a one line opt out</option><option>Wait for tomorrow</option></select></div>
+      <p class="small" style="margin-top:10px">Notes on connection requests need Simon&rsquo;s LinkedIn on Premium or Sales Navigator. A free account gets three a month.</p>
       <div class="field"><label for="s-follow">Follow up</label><select id="s-follow"><option>One bump after 3 days, then stop</option><option>One bump after 5 days, then stop</option></select></div>
       <div class="field"><label for="s-approve">Approval</label><select id="s-approve"><option>Every message approved by a person</option><option>Approve the first 20, then send what scores all green</option></select></div>
     </div>
@@ -1638,9 +1522,9 @@ Simon</textarea></div><div class="acts" style="border:0;padding-top:4px;margin-t
 </section><section class="view" id="v-how" data-title="How it works" aria-label="How it works">
   <div class="run" style="margin-bottom:16px"><div class="run-h"><h2>From lemlist to a booked funding call.</h2>
   <p>lemlist finds the founders and sends the messages. Claude checks every founder against the calls that are open and writes each message. Nothing goes out until you approve it.</p></div>
-  <div class="flowwrap"><svg class="flowsvg" viewBox="0 0 1120 420" role="img" aria-labelledby="flow-t" xmlns="http://www.w3.org/2000/svg"><title id="flow-t">lemlist finds founders, Claude matches each to an open call and writes the messages, the BidX team approves, lemlist sends from Simon&#8217;s LinkedIn, replies come back through lemlist to Claude to be sorted, and the team books the funding call. Guide readers on bidx.ai and the campaign results feed the next day&#8217;s search.</title><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#686879"/></marker></defs><rect class="lane lem" x="0" y="46" width="1120" height="86" rx="14"/><circle class="ld lem" cx="20" cy="89.0" r="6"/><text class="ll" x="34" y="94.0">lemlist</text><rect class="lane cl" x="0" y="138" width="1120" height="86" rx="14"/><circle class="ld cl" cx="20" cy="181.0" r="6"/><text class="ll" x="34" y="186.0">Claude</text><rect class="lane team" x="0" y="230" width="1120" height="86" rx="14"/><circle class="ld team" cx="20" cy="273.0" r="6"/><text class="ll" x="34" y="278.0">BidX team</text><rect class="lane site" x="0" y="322" width="1120" height="86" rx="14"/><circle class="ld site" cx="20" cy="365.0" r="6"/><text class="ll" x="34" y="370.0">bidx.ai</text><g class="node lem"><rect x="129.9" y="61.0" width="112" height="56" rx="12"/><text class="nt" x="141.9" y="85.0">Find</text><text class="ns" x="141.9" y="103.0">People Database</text></g><g class="node site"><rect x="129.9" y="337.0" width="112" height="56" rx="12"/><text class="nt" x="141.9" y="361.0">Guides</text><text class="ns" x="141.9" y="379.0">Readers tracked</text></g><g class="node cl"><rect x="253.6" y="153.0" width="112" height="56" rx="12"/><text class="nt" x="265.6" y="177.0">Match</text><text class="ns" x="265.6" y="195.0">Eight checks</text></g><g class="node cl"><rect x="377.4" y="153.0" width="112" height="56" rx="12"/><text class="nt" x="389.4" y="177.0">Write</text><text class="ns" x="389.4" y="195.0">In Simon&#8217;s voice</text></g><g class="node team"><rect x="501.1" y="245.0" width="112" height="56" rx="12"/><text class="nt" x="513.1" y="269.0">Approve</text><text class="ns" x="513.1" y="287.0">Edit, approve</text></g><g class="node lem"><rect x="624.9" y="61.0" width="112" height="56" rx="12"/><text class="nt" x="636.9" y="85.0">Send</text><text class="ns" x="636.9" y="103.0">Simon&#8217;s LinkedIn</text></g><g class="node lem"><rect x="748.6" y="61.0" width="112" height="56" rx="12"/><text class="nt" x="760.6" y="85.0">Replies land</text><text class="ns" x="760.6" y="103.0">One inbox</text></g><g class="node cl"><rect x="872.4" y="153.0" width="112" height="56" rx="12"/><text class="nt" x="884.4" y="177.0">Sort and draft</text><text class="ns" x="884.4" y="195.0">Intent, answer</text></g><g class="node team"><rect x="996.1" y="245.0" width="112" height="56" rx="12"/><text class="nt" x="1008.1" y="269.0">Book</text><text class="ns" x="1008.1" y="287.0">Funding call</text></g><g class="node site"><rect x="996.1" y="337.0" width="112" height="56" rx="12"/><text class="nt" x="1008.1" y="361.0">Booking page</text><text class="ns" x="1008.1" y="379.0">get.bidx.ai</text></g><g class="node lem"><rect x="996.1" y="61.0" width="112" height="56" rx="12"/><text class="nt" x="1008.1" y="85.0">Results</text><text class="ns" x="1008.1" y="103.0">Campaign stats</text></g><path class="edge" d="M241.9 89.0H247.8V181.0H251.6" marker-end="url(#ah)"/><path class="edge" d="M365.6 181.0H375.4" marker-end="url(#ah)"/><path class="edge" d="M489.4 181.0H495.2V273.0H499.1" marker-end="url(#ah)"/><path class="edge" d="M613.1 273.0H619.0V89.0H622.9" marker-end="url(#ah)"/><path class="edge" d="M736.9 89.0H746.6" marker-end="url(#ah)"/><path class="edge" d="M860.6 89.0H866.5V181.0H870.4" marker-end="url(#ah)"/><path class="edge" d="M984.4 181.0H990.2V273.0H994.1" marker-end="url(#ah)"/><path class="edge" d="M1052.1 301.0V335.0" marker-end="url(#ah)"/><path class="edge" d="M185.9 337.0V119.0" marker-end="url(#ah)"/><path class="edge" d="M860.6 89.0H994.1" marker-end="url(#ah)"/><path class="edge" d="M1052.1 61.0V28H185.9V59.0" marker-end="url(#ah)"/><text class="el" x="619.0" y="22" text-anchor="middle">Results and guide readers shape the next morning&#8217;s search</text></svg></div></div>
+  <div class="flowwrap"><svg class="flowsvg" viewBox="0 0 1120 420" role="img" aria-labelledby="flow-t" xmlns="http://www.w3.org/2000/svg"><title id="flow-t">lemlist finds founders, Claude matches each to an open call and writes the messages, the BidX team approves, lemlist sends from Simon&#8217;s LinkedIn and email, replies come back through lemlist to Claude to be sorted, and the team books the funding call. Guide readers on bidx.ai and the campaign results feed the next day&#8217;s search.</title><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#686879"/></marker></defs><rect class="lane lem" x="0" y="46" width="1120" height="86" rx="14"/><circle class="ld lem" cx="20" cy="89.0" r="6"/><text class="ll" x="34" y="94.0">lemlist</text><rect class="lane cl" x="0" y="138" width="1120" height="86" rx="14"/><circle class="ld cl" cx="20" cy="181.0" r="6"/><text class="ll" x="34" y="186.0">Claude</text><rect class="lane team" x="0" y="230" width="1120" height="86" rx="14"/><circle class="ld team" cx="20" cy="273.0" r="6"/><text class="ll" x="34" y="278.0">BidX team</text><rect class="lane site" x="0" y="322" width="1120" height="86" rx="14"/><circle class="ld site" cx="20" cy="365.0" r="6"/><text class="ll" x="34" y="370.0">bidx.ai</text><g class="node lem"><rect x="129.9" y="61.0" width="112" height="56" rx="12"/><text class="nt" x="141.9" y="85.0">Find</text><text class="ns" x="141.9" y="103.0">People Database</text></g><g class="node site"><rect x="129.9" y="337.0" width="112" height="56" rx="12"/><text class="nt" x="141.9" y="361.0">Guides</text><text class="ns" x="141.9" y="379.0">Readers tracked</text></g><g class="node cl"><rect x="253.6" y="153.0" width="112" height="56" rx="12"/><text class="nt" x="265.6" y="177.0">Match</text><text class="ns" x="265.6" y="195.0">Eight checks</text></g><g class="node cl"><rect x="377.4" y="153.0" width="112" height="56" rx="12"/><text class="nt" x="389.4" y="177.0">Write</text><text class="ns" x="389.4" y="195.0">In Simon&#8217;s voice</text></g><g class="node team"><rect x="501.1" y="245.0" width="112" height="56" rx="12"/><text class="nt" x="513.1" y="269.0">Approve</text><text class="ns" x="513.1" y="287.0">Edit, approve</text></g><g class="node lem"><rect x="624.9" y="61.0" width="112" height="56" rx="12"/><text class="nt" x="636.9" y="85.0">Send</text><text class="ns" x="636.9" y="103.0">LinkedIn and email</text></g><g class="node lem"><rect x="748.6" y="61.0" width="112" height="56" rx="12"/><text class="nt" x="760.6" y="85.0">Replies land</text><text class="ns" x="760.6" y="103.0">One inbox</text></g><g class="node cl"><rect x="872.4" y="153.0" width="112" height="56" rx="12"/><text class="nt" x="884.4" y="177.0">Sort and draft</text><text class="ns" x="884.4" y="195.0">Intent, answer</text></g><g class="node team"><rect x="996.1" y="245.0" width="112" height="56" rx="12"/><text class="nt" x="1008.1" y="269.0">Book</text><text class="ns" x="1008.1" y="287.0">Funding call</text></g><g class="node site"><rect x="996.1" y="337.0" width="112" height="56" rx="12"/><text class="nt" x="1008.1" y="361.0">Booking page</text><text class="ns" x="1008.1" y="379.0">get.bidx.ai</text></g><g class="node lem"><rect x="996.1" y="61.0" width="112" height="56" rx="12"/><text class="nt" x="1008.1" y="85.0">Results</text><text class="ns" x="1008.1" y="103.0">Campaign stats</text></g><path class="edge" d="M241.9 89.0H247.8V181.0H251.6" marker-end="url(#ah)"/><path class="edge" d="M365.6 181.0H375.4" marker-end="url(#ah)"/><path class="edge" d="M489.4 181.0H495.2V273.0H499.1" marker-end="url(#ah)"/><path class="edge" d="M613.1 273.0H619.0V89.0H622.9" marker-end="url(#ah)"/><path class="edge" d="M736.9 89.0H746.6" marker-end="url(#ah)"/><path class="edge" d="M860.6 89.0H866.5V181.0H870.4" marker-end="url(#ah)"/><path class="edge" d="M984.4 181.0H990.2V273.0H994.1" marker-end="url(#ah)"/><path class="edge" d="M1052.1 301.0V335.0" marker-end="url(#ah)"/><path class="edge" d="M185.9 337.0V119.0" marker-end="url(#ah)"/><path class="edge" d="M860.6 89.0H994.1" marker-end="url(#ah)"/><path class="edge" d="M1052.1 61.0V28H185.9V59.0" marker-end="url(#ah)"/><text class="el" x="619.0" y="22" text-anchor="middle">Results and guide readers shape the next morning&#8217;s search</text></svg></div></div>
   <div class="pane" style="margin-bottom:16px"><div class="pane-h"><h2>Every working day</h2></div><ol class="dayline"><li><b>6am</b><span>Claude runs on the new founders and the calls open today</span></li><li><b>8.30am</b><span>Today is ready to read</span></li><li><b>9.40am to 4.30pm</b><span>lemlist sends what you approved</span></li><li><b>As they land</b><span>Replies are sorted and an answer drafted</span></li></ol></div>
-  <ol class="hsteps"><li class="hstep lem"><span class="hn">1</span><span class="hw">lemlist</span><h3>Find</h3><p>lemlist&rsquo;s People Database finds founders and CEOs of UK companies under 50 people, in the sectors the open calls fund. Watch lists add the moments that matter, a raise, a technical hire, a company reading a bidx.ai guide. Companies House and Innovate UK&rsquo;s list of past winners come in as signals of their own.</p><span class="tools"><span>People Database</span><span>Watch lists</span><span>External signals</span></span></li><li class="hstep cl"><span class="hn">2</span><span class="hw">Claude</span><h3>Match</h3><p>Every morning Claude takes the new founders and runs the eight checks against every call open on the Innovation Funding Service and the EIC. It reads their site, their Companies House record and their LinkedIn, and holds anyone a rule stops, with the reason.</p><span class="tools"><span>Eight checks</span><span>Live call list</span><span>Never picked rules</span></span></li><li class="hstep cl"><span class="hn">3</span><span class="hw">Claude</span><h3>Write</h3><p>For each founder who fits, Claude writes the connection note, the first message and one follow up in Simon&rsquo;s voice, with the call&rsquo;s own figures. They&rsquo;re saved on the lead in lemlist as custom fields the campaign reads.</p><span class="tools"><span>lemlist custom fields</span></span></li><li class="hstep team"><span class="hn">4</span><span class="hw">BidX team</span><h3>Approve</h3><p>You read them on Today, edit what you like, and approve or skip. Approved founders go into the lemlist campaign. A skip keeps its reason, so the rules get sharper.</p><span class="tools"><span>Today view</span></span></li><li class="hstep lem"><span class="hn">5</span><span class="hw">lemlist</span><h3>Send</h3><p>lemlist sends from Simon&rsquo;s LinkedIn on weekdays, 9.40am to 4.30pm, 30 to 50 a day. The connection request goes first, the message the morning after they accept, one follow up three days later, then nothing.</p><span class="tools"><span>Campaign sequence</span><span>Daily limit</span><span>Sending hours</span></span></li><li class="hstep lem"><span class="hn">6</span><span class="hw">lemlist and Claude</span><h3>Reply</h3><p>Replies land in lemlist&rsquo;s inbox, LinkedIn and email together, with lemlist&rsquo;s own read on interest. A webhook hands each one to Claude, which sorts it into wants a call, a question, later or not for us, and drafts the answer.</p><span class="tools"><span>Inbox</span><span>Interest score</span><span>Webhook</span></span></li><li class="hstep team"><span class="hn">7</span><span class="hw">BidX team</span><h3>Book</h3><p>You see it in Inbox, send the answer or pick a slot, and the funding call is booked through the BidX booking page.</p><span class="tools"><span>Inbox view</span><span>Booking page</span></span></li><li class="hstep lem"><span class="hn">8</span><span class="hw">lemlist</span><h3>Learn</h3><p>lemlist&rsquo;s campaign stats feed Results, replies and calls booked by call, so next month&rsquo;s plan comes from real numbers. Guide readers and results go back into the next morning&rsquo;s search.</p><span class="tools"><span>Campaign stats</span></span></li></ol>
+  <ol class="hsteps"><li class="hstep lem"><span class="hn">1</span><span class="hw">lemlist</span><h3>Find</h3><p>lemlist&rsquo;s People Database finds founders and CEOs of UK companies under 50 people, in the sectors the open calls fund. Watch lists add the moments that matter, a raise, a technical hire, a company reading a bidx.ai guide. Companies House and Innovate UK&rsquo;s list of past winners come in as signals of their own.</p><span class="tools"><span>People Database</span><span>Watch lists</span><span>External signals</span></span></li><li class="hstep cl"><span class="hn">2</span><span class="hw">Claude</span><h3>Match</h3><p>Every morning Claude takes the new founders and runs the eight checks against every call open on the Innovation Funding Service and the EIC. It reads their site, their Companies House record and their LinkedIn, and holds anyone a rule stops, with the reason.</p><span class="tools"><span>Eight checks</span><span>Live call list</span><span>Never picked rules</span></span></li><li class="hstep cl"><span class="hn">3</span><span class="hw">Claude</span><h3>Write</h3><p>For each founder who fits, Claude writes the connection note, the first message and one follow up in Simon&rsquo;s voice, with the call&rsquo;s own figures. They&rsquo;re saved on the lead in lemlist as custom fields the campaign reads.</p><span class="tools"><span>lemlist custom fields</span></span></li><li class="hstep team"><span class="hn">4</span><span class="hw">BidX team</span><h3>Approve</h3><p>You read them on Today, edit what you like, and approve or skip. Approved founders go into the lemlist campaign. A skip keeps its reason, so the rules get sharper.</p><span class="tools"><span>Today view</span></span></li><li class="hstep lem"><span class="hn">5</span><span class="hw">lemlist</span><h3>Send</h3><p>lemlist sends up to 20 connection requests a day from Simon&rsquo;s LinkedIn, which keeps inside LinkedIn&rsquo;s limit of about 100 a week. The rest of the day&rsquo;s founders get the same message by email from Simon&rsquo;s address, to a work email lemlist finds. Weekdays, 9.40am to 4.30pm. One follow up three days later, then nothing.</p><span class="tools"><span>Campaign sequence</span><span>Sending limits</span><span>Email finder</span></span></li><li class="hstep lem"><span class="hn">6</span><span class="hw">lemlist and Claude</span><h3>Reply</h3><p>Replies land in lemlist&rsquo;s inbox, LinkedIn and email together, with lemlist&rsquo;s own read on interest. A webhook hands each one to Claude, which sorts it into wants a call, a question, later or not for us, and drafts the answer.</p><span class="tools"><span>Inbox</span><span>Interest score</span><span>Webhook</span></span></li><li class="hstep team"><span class="hn">7</span><span class="hw">BidX team</span><h3>Book</h3><p>You see it in Inbox, send the answer or pick a slot, and the funding call is booked through the BidX booking page.</p><span class="tools"><span>Inbox view</span><span>Booking page</span></span></li><li class="hstep lem"><span class="hn">8</span><span class="hw">lemlist</span><h3>Learn</h3><p>lemlist&rsquo;s campaign stats feed Results, replies and calls booked by call, so next month&rsquo;s plan comes from real numbers. Guide readers and results go back into the next morning&rsquo;s search.</p><span class="tools"><span>Campaign stats</span></span></li></ol>
 </section>
   <p class="foot-note">Founders, companies, replies, results and the connections shown on this desk are sample data. Calls, rules, amounts and deadlines are the funders&rsquo; own, taken from the Innovation Funding Service and the EIC on 20 October 2026.</p>
 </main>

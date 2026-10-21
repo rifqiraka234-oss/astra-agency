@@ -71,7 +71,7 @@ def fmt_close(iso):
 
 
 EIC = dict(id='eic', slug=None, name='EIC Accelerator, short proposal batch', closes='2026-11-03T17:00:00+01:00',
-           size=['Grant component below EUR 2.5 million'], odds=None, url='https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en',
+           size=['Grant only for UK companies, up to €2.5M'], odds=None, url='https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en',
            lead='sme', theme='any', type='Grant', startup=True)
 
 # One line per call for the drafted messages. Every figure is the funder's own, see data/calls.json and research.md.
@@ -122,6 +122,26 @@ def bump(fd):
     return f"{fd['first']}, did this reach you? The {short} call closes on {fmt_close(fd['_call']['closes'])}, so there's still time."
 
 
+def subject(fd):
+    c = fd['_call']
+    if fd['call'] == 'eic':
+        return f"EIC Accelerator, next batch {fmt_close(c['closes'])}"
+    return f"{CALL_LINE[fd['call']][0]}, closes {fmt_close(c['closes'])}"
+
+
+def seq(fd, cn):
+    first = esc(fd['first'])
+    if fd['channel'] == 'LinkedIn':
+        rows = [('Day 0', f'Connection request. &ldquo;{esc(cn)}&rdquo;'), ('Accepted', 'The message above goes the next working morning.'),
+                ('3 days on', f'If there&rsquo;s no reply, one bump. &ldquo;{esc(bump(fd))}&rdquo;'),
+                ('After', f'Nothing more. Two messages, then {first} goes quiet on the list for 90 days.')]
+    else:
+        rows = [('Day 0', 'The email above, from Simon&rsquo;s address, to the work email lemlist found. It ends with a one line opt out.'),
+                ('3 days on', f'If there&rsquo;s no reply, one follow up in the same thread. &ldquo;{esc(bump(fd))}&rdquo;'),
+                ('After', f'Nothing more. Two emails, then {first} goes quiet on the list for 90 days.')]
+    return ''.join(f'<li><span class="d">{d}</span><span class="k"></span><span>{t}</span></li>' for d, t in rows)
+
+
 def dl(close_iso, cls=''):
     n = days_left(close_iso)
     return (f'<span class="dl {cls}" data-close="{close_iso}"><span class="dl-n">{n:02d}</span>'
@@ -167,6 +187,7 @@ def detail(B, fd, i):
     size = esc(SIZE.get(c['id']) or (c['size'][0].lstrip('- ') if c.get('size') else ''))
     msg = message(fd, i)
     cn = connect_note(fd)
+    li = fd['channel'] == 'LinkedIn'
     return f'''<article class="det" data-id="{fd["id"]}" aria-label="{esc(fd["first"])}, {esc(fd["company"])}">
   <div class="det-h">{B.glyph(fd["checks"], "big", "Fit, " + fit_label(fd["checks"]))}
     <div><h3>{esc(fd["first"])} {esc(fd["last"])}, {esc(fd["company"])}</h3><p>{esc(fd["what"])}</p>
@@ -179,16 +200,13 @@ def detail(B, fd, i):
   </div>
   <div class="blk"><h4>Signals</h4><div class="facts" style="margin-top:0">{sig}</div></div>
   <div class="blk"><h4>First message</h4>
-    <div class="msg"><div class="msg-h">{B.ICON["li"]} LinkedIn, from Simon Dutta<span class="sp"></span>Written for {esc(fd["first"])} and this call</div>
+    <div class="msg"><div class="msg-h">{B.ICON["li"] if li else B.ICON["mail"]} {"LinkedIn" if li else "Email"}, from Simon Dutta<span class="sp"></span>Written for {esc(fd["first"])} and this call</div>
+    {"" if li else f'<div class="msg-s">Subject <b>{esc(subject(fd))}</b></div>'}
     <label class="sr" for="m-{fd["id"]}">Message to {esc(fd["first"])}</label>
     <textarea id="m-{fd["id"]}" rows="9">{esc(msg)}</textarea>
     <div class="msg-f"><span class="chars">{len(msg)} characters</span><span>Edit it, then approve</span></div></div>
   </div>
-  <div class="blk"><h4>Then</h4><ol class="seq">
-    <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;{esc(cn)}&rdquo;</span></li>
-    <li><span class="d">Accepted</span><span class="k"></span><span>The message above goes the next working morning.</span></li>
-    <li><span class="d">3 days on</span><span class="k"></span><span>If there&rsquo;s no reply, one bump. &ldquo;{esc(bump(fd))}&rdquo;</span></li>
-    <li><span class="d">After</span><span class="k"></span><span>Nothing more. Two messages, then {esc(fd["first"])} goes quiet on the list for 90 days.</span></li>
+  <div class="blk"><h4>Then</h4><ol class="seq">{seq(fd, cn)}
   </ol></div>
   <div class="acts">
     <button type="button" class="btn pri do-ok">Approve and queue <span class="kbd">A</span></button>
@@ -358,7 +376,7 @@ LANES = [('lem', 'lemlist'), ('cl', 'Claude'), ('team', 'BidX team'), ('site', '
 NODES = [
     ('find', 0, 0, 'Find', 'People Database'), ('guides', 3, 0, 'Guides', 'Readers tracked'),
     ('match', 1, 1, 'Match', 'Eight checks'), ('write', 1, 2, 'Write', 'In Simon&#8217;s voice'),
-    ('approve', 2, 3, 'Approve', 'Edit, approve'), ('send', 0, 4, 'Send', 'Simon&#8217;s LinkedIn'),
+    ('approve', 2, 3, 'Approve', 'Edit, approve'), ('send', 0, 4, 'Send', 'LinkedIn and email'),
     ('reply', 0, 5, 'Replies land', 'One inbox'), ('sort', 1, 6, 'Sort and draft', 'Intent, answer'),
     ('book', 2, 7, 'Book', 'Funding call'), ('booking', 3, 7, 'Booking page', 'get.bidx.ai'), ('results', 0, 7, 'Results', 'Campaign stats'),
 ]
@@ -375,7 +393,7 @@ def flow_svg():
     pos = {}
     out = [f'<svg class="flowsvg" viewBox="0 0 {W} {H}" role="img" aria-labelledby="flow-t" xmlns="http://www.w3.org/2000/svg">',
            '<title id="flow-t">lemlist finds founders, Claude matches each to an open call and writes the messages, the BidX team approves, '
-           'lemlist sends from Simon&#8217;s LinkedIn, replies come back through lemlist to Claude to be sorted, and the team books the funding call. '
+           'lemlist sends from Simon&#8217;s LinkedIn and email, replies come back through lemlist to Claude to be sorted, and the team books the funding call. '
            'Guide readers on bidx.ai and the campaign results feed the next day&#8217;s search.</title>',
            '<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
            '<path d="M0 0L10 5L0 10z" fill="#686879"/></marker></defs>']
@@ -421,8 +439,8 @@ STEPS = [
      ['lemlist custom fields']),
     ('team', 'BidX team', 'Approve', "You read them on Today, edit what you like, and approve or skip. Approved founders go into the lemlist campaign. A skip keeps its reason, so the rules get sharper.",
      ['Today view']),
-    ('lem', 'lemlist', 'Send', "lemlist sends from Simon&rsquo;s LinkedIn on weekdays, 9.40am to 4.30pm, 30 to 50 a day. The connection request goes first, the message the morning after they accept, one follow up three days later, then nothing.",
-     ['Campaign sequence', 'Daily limit', 'Sending hours']),
+    ('lem', 'lemlist', 'Send', "lemlist sends up to 20 connection requests a day from Simon&rsquo;s LinkedIn, which keeps inside LinkedIn&rsquo;s limit of about 100 a week. The rest of the day&rsquo;s founders get the same message by email from Simon&rsquo;s address, to a work email lemlist finds. Weekdays, 9.40am to 4.30pm. One follow up three days later, then nothing.",
+     ['Campaign sequence', 'Sending limits', 'Email finder']),
     ('lem', 'lemlist and Claude', 'Reply', "Replies land in lemlist&rsquo;s inbox, LinkedIn and email together, with lemlist&rsquo;s own read on interest. A webhook hands each one to Claude, which sorts it into wants a call, a question, later or not for us, and drafts the answer.",
      ['Inbox', 'Interest score', 'Webhook']),
     ('team', 'BidX team', 'Book', "You see it in Inbox, send the answer or pick a slot, and the funding call is booked through the BidX booking page.",
@@ -497,6 +515,9 @@ def setup_view(B):
     </div>
     <div class="pane"><h2>Sending</h2>
       <div class="field"><label for="s-hours">Sending hours</label><select id="s-hours"><option>Weekdays, 9.40am to 4.30pm UK</option><option>Weekdays, 8am to 6pm UK</option></select></div>
+      <div class="field"><label for="s-li">LinkedIn requests a day</label><select id="s-li"><option>20, inside LinkedIn&rsquo;s limit of about 100 a week</option><option>15</option><option>10</option></select></div>
+      <div class="field"><label for="s-over">Founders over that</label><select id="s-over"><option>Email from Simon&rsquo;s address, with a one line opt out</option><option>Wait for tomorrow</option></select></div>
+      <p class="small" style="margin-top:10px">Notes on connection requests need Simon&rsquo;s LinkedIn on Premium or Sales Navigator. A free account gets three a month.</p>
       <div class="field"><label for="s-follow">Follow up</label><select id="s-follow"><option>One bump after 3 days, then stop</option><option>One bump after 5 days, then stop</option></select></div>
       <div class="field"><label for="s-approve">Approval</label><select id="s-approve"><option>Every message approved by a person</option><option>Approve the first 20, then send what scores all green</option></select></div>
     </div>
@@ -512,6 +533,8 @@ def build(B):
     for fd in fds:
         fd['_call'] = byid.get(fd['call'])
     picked = [fd for fd in fds if fd['picked']]
+    for k, fd in enumerate(picked):
+        fd['channel'] = 'LinkedIn' if k % 2 == 0 else 'Email'
     picked.sort(key=lambda fd: (fd['_call']['closes'], -fd['checks'].count('g')))
     held = [fd for fd in fds if not fd['picked']]
     matched = {}
@@ -540,6 +563,7 @@ def build(B):
     <div class="stages">{st_html}</div>
     <div class="capline">
       <label class="cap" for="cap">Daily number from tomorrow <input type="range" id="cap" min="30" max="50" step="1" value="{len(picked)}"> <output id="cap-o" for="cap">{len(picked)} a day</output></label>
+      <span class="small">Up to 20 on LinkedIn, the rest by email</span>
       <span>Ready <b data-count="ready">{len(picked)}</b></span><span>Approved <b data-count="ok">0</b></span><span>Skipped <b data-count="skip">0</b></span>
       <span class="sp" style="flex:1"></span>
       <button type="button" class="btn pri sm" id="approve-all">Approve all ready</button>

@@ -168,7 +168,7 @@ f('bellwether', 'Priya', 'K.', 'Bellwether Clinical', 'Continuous manufacturing 
 f('larkspur', 'Hannah', 'L.', 'Larkspur Diagnostics', 'A finger prick test for sepsis markers', 'London', 'Jun 2022', '12 people', EIC,
   'ggggggag', ['Active, incorporated June 2022', 'Small company', 'Deep tech, TRL 6 to 8, the EIC’s range', 'Own test cartridge',
                'Diagnostics scientists', 'Seed round in 2024', 'Next short proposal batch 3 November', 'Never contacted'],
-  ['Read the EIC Accelerator guide'],
+  ['Read the Smart grants guide'],
   "Saw Larkspur's test is in a hospital evaluation now")
 f('meadowlark', 'Isla', 'P.', 'Meadowlark Rehab', 'At home stroke rehab with motion sensors', 'Liverpool', 'Mar 2023', '7 people', EIC,
   'ggggaagg', ['Active, incorporated March 2023', 'Micro company', 'Health tech in the EIC’s range', 'Own sensing and app',

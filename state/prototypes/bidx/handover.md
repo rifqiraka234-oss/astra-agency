@@ -124,3 +124,27 @@ last three by swapping text and colour, is no.
 
 Drafted in state/drafted_2026-10-21-aaron-delivery.md, 82 words, check-drafts.py PASS. Not sent. Needs Raka's word.
 Re-pull the thread and fetch the live desk again immediately before sending.
+
+
+## Red team, 21 Oct (Raka asked how strong it is)
+
+Material strong, pitch middling. He said yes only after a bump, the named problem isn't urgent for him, and he can
+build this kind of thing himself. Objections, most damaging first, and what was done.
+
+1. **LinkedIn volume.** The desk said 30 to 50 a day from Simon's LinkedIn. lemlist's own help centre (articles
+   8514157 and 13673146) puts LinkedIn at roughly 100 invitations a rolling week, so 20 a day, and says 30 a day gets
+   accounts restricted. Free accounts get 3 invites with a note a month. FIXED, deploy 6ad89800c01f7d8cae1bb80e. 20
+   founders a day go by LinkedIn, the other 20 by email from Simon's address with a subject line, an opt out and an
+   email sequence. Setup states the limit and the Premium or Sales Navigator need. All 40 notes are under the 200
+   character cap, longest 170.
+2. **"I can build this myself."** For the call. The work is the content kept current, the fit logic and the daily
+   tuning. A one call pilot (BridgeAI, closes 8 Dec) is Raka's call.
+3. **The BidX app is ignored.** app.bidx.ai loads, no public sign up URL found (/signup and /register 404). Raka's call,
+   a plain link in the sketch or raise it on the call.
+4. **Can these founders pay the £3K to £15K upfront fee.** The eight checks test grant match funding, not the fee. Raka's
+   call whether to reword the Can fund its share check.
+5. **Assessor grade accuracy.** Home said a score above 70 "counts as a pass", the source says "typically considered a
+   passing score". FIXED to "typically a pass". Also fixed, a founder's signal said they read an EIC guide that is only
+   Planned on the desk's own Guides board, now the Smart grants guide, which covers the EIC.
+6. **Proof it works.** Results are sample. Astra's own lemlist numbers would answer it on a call, but they tell him our
+   own outreach runs this way. Raka's call.
