@@ -9,5 +9,5 @@
 
 REPLY
 ```
-Perfect, thanks Chris! Speak soon.
+Perfect, thanks Chris! I'll look out for it.
 ```
