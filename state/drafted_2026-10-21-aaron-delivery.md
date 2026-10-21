@@ -4,7 +4,8 @@ NOT SENT. Waiting on Raka's word.
 
 ### Aaron Mason, BidX, ctc_dWL5LypChqmTQ9QyZ
 
-> Thread pulled 21 Oct 06:2x UTC, 3 items, nextPage null, LinkedIn synced 06:23 UTC. Our 17 Oct opener
+> Thread pulled 21 Oct 06:2x UTC and again at about 14:35 UTC, 3 items both times, nextPage null, LinkedIn synced
+> 14:31 UTC. Nothing new from Aaron. Block two now says "searching", the opener's own word. Our 17 Oct opener
 > (act_MnQTNk42Xi4ket822) said the blog has no posts and every page leads to the one funding call, "So founders
 > who aren't already searching for grant help likely never come across BidX", and offered "a sketch of the BidX
 > outreach system". Our 20 Oct bump, his "Sure send the sketch" (act_fJZZFdwe83einTZh7, 20 Oct 14:07 UTC).
@@ -39,10 +40,13 @@ DELIVERY
 ```
 Aaron, I spent the whole day building this.
 
-My feedback on your site was that founders who aren't already looking for grant help likely never come across BidX. So I built the system that goes and finds them. It starts with past Innovate UK winners whose projects are ending and founders who've just raised, matches each to a call that's open now and writes them a first message in Simon's voice.
+My feedback on your site was that founders who aren't already searching for grant help likely never come across BidX. So I built the system that goes and finds them. It starts with past Innovate UK winners whose projects are ending and founders who've just raised, matches each to a call that's open now and writes them a first message in Simon's voice.
 
 Try it yourself.
 https://astra-bidx-prototype.netlify.app/desk/
 
 What do you think?
 ```
+
+After it's sent, if Aaron goes quiet, no bump is drafted. Raka follows up himself (RULES, said yes and went quiet,
+2026-10-21).
