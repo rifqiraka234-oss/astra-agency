@@ -1,6 +1,7 @@
 # Aaron Mason, BidX, delivery of the sketch, 21 Oct 2026
 
-NOT SENT. Waiting on Raka's word.
+SENT 21 Oct 2026 14:54:10 UTC on Raka's "okay send just the desk", act_QdoDtbSuM9DqjWx73, text byte for byte
+as below, confirmed in the re pulled thread (4 items). The landing page line was left out on his call.
 
 ### Aaron Mason, BidX, ctc_dWL5LypChqmTQ9QyZ
 
