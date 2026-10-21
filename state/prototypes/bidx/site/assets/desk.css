@@ -223,3 +223,32 @@ html:not(.js) .thread{display:block;border-top:1px solid var(--line)}
   .det{padding:16px}
   .callcard .dotf{font-size:24px}
 }
+
+/* How it works. The swimlane diagram, the working day and the eight steps. Lane colours come from the logo's dots. */
+.flowwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.flowsvg{display:block;width:100%;min-width:880px;height:auto;font-family:var(--sans)}
+.flowsvg .lane{fill:var(--mist)}
+.flowsvg .lane.cl,.flowsvg .lane.site{fill:#f9fafc}
+.flowsvg .ld.lem{fill:var(--indigo)}.flowsvg .ld.cl{fill:var(--amber)}.flowsvg .ld.team{fill:var(--green)}.flowsvg .ld.site{fill:var(--navy)}
+.flowsvg .ll{font-size:14px;font-weight:650;fill:var(--ink)}
+.flowsvg .node rect{fill:#fff;stroke-width:2}
+.flowsvg .node.lem rect{stroke:var(--indigo)}.flowsvg .node.cl rect{stroke:#e0a400}.flowsvg .node.team rect{stroke:var(--green)}.flowsvg .node.site rect{stroke:var(--navy)}
+.flowsvg .nt{font-size:14px;font-weight:650;fill:var(--ink)}
+.flowsvg .ns{font-size:11.5px;fill:var(--ink3)}
+.flowsvg .edge{fill:none;stroke:#9a9aab;stroke-width:1.6}
+.flowsvg .el{font-size:12px;fill:var(--ink3)}
+.dayline{list-style:none;margin:0;padding:6px 20px 20px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.dayline li{display:grid;gap:4px;padding:12px 14px;border-radius:12px;background:var(--mist)}
+.dayline b{font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--indigo)}
+.dayline span{font-size:14px;color:var(--ink2)}
+.hsteps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.hstep{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:8px;align-content:start;border-top:4px solid var(--hc)}
+.hstep.lem{--hc:var(--indigo)}.hstep.cl{--hc:var(--amber)}.hstep.team{--hc:var(--green)}
+.hstep .hn{font-family:var(--dot);font-variation-settings:'ROND' 100,'wght' 900;font-weight:900;font-size:26px;line-height:1;color:var(--ink)}
+.hstep .hw{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink3)}
+.hstep h3{font-size:18px;letter-spacing:-.01em;margin:0}
+.hstep p{font-size:14px;color:var(--ink2);margin:0}
+.hstep .tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.hstep .tools span{font-size:12px;padding:3px 8px;border-radius:8px;background:var(--mist);color:var(--ink2)}
+@media (max-width:1180px){.hsteps,.dayline{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.hsteps,.dayline{grid-template-columns:minmax(0,1fr)}}

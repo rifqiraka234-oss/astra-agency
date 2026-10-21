@@ -68,7 +68,7 @@ def build(B):
 
 <section class="sec mist" id="guides">
   <div class="wrap">
-    <div class="sh"><div><p class="kick">{B.glyph("raarragg")} Guides</p><h2 class="h-l rv">Smart grants have closed. The calls open now are narrower, and some put the odds at 2%.</h2></div>
+    <div class="sh"><div><h2 class="h-l rv">Smart grants have closed. The calls open now are narrower, and some put the odds at 2%.</h2></div>
     <p class="lede rv">A guide for each call founders are searching for, what it funds, who can lead, how it&rsquo;s scored and where applications lose points. Checked by a grant writer before it goes up.</p></div>
     <div class="gcards">
       {card(big, " big")}
@@ -81,7 +81,7 @@ def build(B):
 <section class="sec">
   <div class="wrap split" style="align-items:center">
     <div>
-      <p class="kick">{B.glyph("ggaaaaaa")} How applications are scored</p>
+      
       <h2 class="h-l rv">Good applications lose too.</h2>
       <p class="lede rv" style="margin-top:20px">Innovate UK&rsquo;s own evaluation of Smart grants matched 21,782 applications from February 2019 to April 2024. 1,295 were funded. 6,427 scored above 70, which counts as a pass on other Innovate UK programmes, and still missed out.</p>
       <p class="rv" style="margin-top:16px;color:var(--ink2)">Three independent assessors read each application and mark every scored question from 1 to 10. The gap between a good application and a funded one is in those marks, and that&rsquo;s the part we write for.</p>
@@ -99,7 +99,7 @@ def build(B):
 
 <section class="sec mist">
   <div class="wrap">
-    <div class="sh"><div><p class="kick">{B.glyph("gggaaarr")} Who&rsquo;s winning</p><h2 class="h-l rv">Fewer small companies are winning, so every mark counts more.</h2></div>
+    <div class="sh"><div><h2 class="h-l rv">Fewer small companies are winning, so every mark counts more.</h2></div>
     <p class="lede rv">UKRI supported 2,393 small and medium businesses in 2025 to 2026, down from 3,563 two years before. The award rate across UKRI fell from 27% to 19% over the same two years.</p></div>
     <div class="years">
       <div><span class="dotf">1,500</span><span>SMEs supported, 2019 to 2020</span></div>
@@ -119,7 +119,7 @@ def build(B):
 
 <section class="sec">
   <div class="wrap">
-    <div class="sh"><div><p class="kick">{B.glyph("ggggggaa")} How it works</p><h2 class="h-l rv">Your written technical narrative in five business days.</h2></div>
+    <div class="sh"><div><h2 class="h-l rv">Your written technical narrative in five business days.</h2></div>
     <p class="lede rv">Grant writer led from the kickoff, and reviewed against the funder&rsquo;s own criteria before it&rsquo;s delivered.</p></div>
     <ol class="steps">
       <li><span class="k">Day 1</span><h3>Kickoff</h3><p>We identify the strongest credible funding route for your company and roadmap.</p></li>
@@ -138,7 +138,7 @@ def build(B):
 
 <section class="sec mist">
   <div class="wrap">
-    <div class="sh"><div><p class="kick">{B.glyph("gggggggg")} Founders we&rsquo;ve helped</p><h2 class="h-l rv">&pound;125M+ secured for startups and SMEs.</h2></div>
+    <div class="sh"><div><h2 class="h-l rv">&pound;125M+ secured for startups and SMEs.</h2></div>
     <p class="lede rv">Three founders BidX has helped, and what they won.</p></div>
     <div class="quotes">
       <figure class="quote rv"><span class="amt">&pound;600K</span><blockquote>&ldquo;BidX helped Flock win &pound;600K after a failed Innovate UK application.&rdquo;</blockquote><figcaption>Sustainable tech startup</figcaption></figure>
@@ -150,7 +150,7 @@ def build(B):
 
 <section class="sec" id="founders">
   <div class="wrap">
-    <div class="sh"><div><p class="kick">{B.glyph("raarragg")} Founders</p><h2 class="h-l rv">Two founders who&rsquo;ve won it themselves.</h2></div>
+    <div class="sh"><div><h2 class="h-l rv">Two founders who&rsquo;ve won it themselves.</h2></div>
     <p class="lede rv">Between them, 40+ grant applications won and over $1B in contracts, with grant writers leading every application.</p></div>
     <div class="people">
       <div class="person rv"><div><h3>Simon Dutta</h3><p class="role">MBA, FCIM. Co Founder, Growth &amp; GTM</p></div>

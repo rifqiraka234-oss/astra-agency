@@ -44,6 +44,7 @@ def side(B, counts):
         ('v-guides', 'Guides', '<span class="sig a" aria-hidden="true"></span>', str(counts['guides']), ''),
         ('v-results', 'Results', '<span class="sig n" aria-hidden="true"></span>', '', ''),
         ('v-setup', 'Setup', '<span class="sig n" aria-hidden="true"></span>', '', ''),
+        ('v-how', 'How it works', '<span class="sig i" aria-hidden="true"></span>', '', ''),
     ]
     nav = ''.join(
         f'<button type="button" data-view="{v}" aria-current="false"><span class="ic">{ic}</span>{t}'
@@ -54,6 +55,7 @@ def side(B, counts):
   <nav class="vnav">{nav}</nav>
   <div class="side-f">
     <div class="health">
+      <span class="sig g">lemlist, connected</span>
       <span class="sig g">LinkedIn, sending as Simon</span>
       <span class="sig g">Email, sending as Simon</span>
     </div>
@@ -180,7 +182,7 @@ def detail(B, fd, i):
     <div class="msg"><div class="msg-h">{B.ICON["li"]} LinkedIn, from Simon Dutta<span class="sp"></span>Written for {esc(fd["first"])} and this call</div>
     <label class="sr" for="m-{fd["id"]}">Message to {esc(fd["first"])}</label>
     <textarea id="m-{fd["id"]}" rows="9">{esc(msg)}</textarea>
-    <div class="msg-f"><span class="chars">{len(msg)} characters</span><span>Edit before you approve</span></div></div>
+    <div class="msg-f"><span class="chars">{len(msg)} characters</span><span>Edit it, then approve</span></div></div>
   </div>
   <div class="blk"><h4>Then</h4><ol class="seq">
     <li><span class="d">Day 0</span><span class="k"></span><span>Connection request. &ldquo;{esc(cn)}&rdquo;</span></li>
@@ -351,6 +353,100 @@ def founders_view(B, fds):
 </section>'''
 
 
+LANES = [('lem', 'lemlist'), ('cl', 'Claude'), ('team', 'BidX team'), ('site', 'bidx.ai')]
+# (id, lane, column, title, line under it)
+NODES = [
+    ('find', 0, 0, 'Find', 'People Database'), ('guides', 3, 0, 'Guides', 'Readers tracked'),
+    ('match', 1, 1, 'Match', 'Eight checks'), ('write', 1, 2, 'Write', 'In Simon&#8217;s voice'),
+    ('approve', 2, 3, 'Approve', 'Edit, approve'), ('send', 0, 4, 'Send', 'Simon&#8217;s LinkedIn'),
+    ('reply', 0, 5, 'Replies land', 'One inbox'), ('sort', 1, 6, 'Sort and draft', 'Intent, answer'),
+    ('book', 2, 7, 'Book', 'Funding call'), ('booking', 3, 7, 'Booking page', 'get.bidx.ai'), ('results', 0, 7, 'Results', 'Campaign stats'),
+]
+EDGES = [('find', 'match'), ('match', 'write'), ('write', 'approve'), ('approve', 'send'), ('send', 'reply'), ('reply', 'sort'),
+         ('sort', 'book'), ('book', 'booking'), ('guides', 'find'), ('reply', 'results')]
+
+
+def flow_svg():
+    """The swimlane diagram. One lane per tool, the steps placed in the lane of whoever does them."""
+    W, top, lh, lx = 1120, 46, 92, 124
+    cw = (W - lx - 6) / 8
+    nw, nh = 112, 56
+    H = top + lh * 4 + 6
+    pos = {}
+    out = [f'<svg class="flowsvg" viewBox="0 0 {W} {H}" role="img" aria-labelledby="flow-t" xmlns="http://www.w3.org/2000/svg">',
+           '<title id="flow-t">lemlist finds founders, Claude matches each to an open call and writes the messages, the BidX team approves, '
+           'lemlist sends from Simon&#8217;s LinkedIn, replies come back through lemlist to Claude to be sorted, and the team books the funding call. '
+           'Guide readers on bidx.ai and the campaign results feed the next day&#8217;s search.</title>',
+           '<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
+           '<path d="M0 0L10 5L0 10z" fill="#686879"/></marker></defs>']
+    for k, (cls, name) in enumerate(LANES):
+        y = top + k * lh
+        out.append(f'<rect class="lane {cls}" x="0" y="{y}" width="{W}" height="{lh - 6}" rx="14"/>')
+        out.append(f'<circle class="ld {cls}" cx="20" cy="{y + (lh - 6) / 2}" r="6"/><text class="ll" x="34" y="{y + (lh - 6) / 2 + 5}">{name}</text>')
+    for nid, lane, col, t, sub in NODES:
+        x = lx + col * cw + (cw - nw) / 2
+        y = top + lane * lh + (lh - 6 - nh) / 2
+        pos[nid] = (x, y)
+        out.append(f'<g class="node {LANES[lane][0]}"><rect x="{x:.1f}" y="{y:.1f}" width="{nw}" height="{nh}" rx="12"/>'
+                   f'<text class="nt" x="{x + 12:.1f}" y="{y + 24:.1f}">{t}</text><text class="ns" x="{x + 12:.1f}" y="{y + 42:.1f}">{sub}</text></g>')
+    paths = []
+    for a, b in EDGES:
+        ax, ay = pos[a]
+        bx, by = pos[b]
+        if abs(ax - bx) < 1:
+            if by < ay:
+                paths.append(f'M{ax + nw / 2:.1f} {ay:.1f}V{by + nh + 2:.1f}')
+            else:
+                paths.append(f'M{ax + nw / 2:.1f} {ay + nh:.1f}V{by - 2:.1f}')
+        elif abs(ay - by) < 1:
+            paths.append(f'M{ax + nw:.1f} {ay + nh / 2:.1f}H{bx - 2:.1f}')
+        else:
+            mx = (ax + nw + bx) / 2
+            paths.append(f'M{ax + nw:.1f} {ay + nh / 2:.1f}H{mx:.1f}V{by + nh / 2:.1f}H{bx - 2:.1f}')
+    fx, fy = pos['find']
+    rx, ry = pos['results']
+    paths.append(f'M{rx + nw / 2:.1f} {ry:.1f}V{top - 18}H{fx + nw / 2:.1f}V{fy - 2:.1f}')
+    out += [f'<path class="edge" d="{d}" marker-end="url(#ah)"/>' for d in paths]
+    out.append(f'<text class="el" x="{(fx + rx + nw) / 2:.1f}" y="{top - 24}" text-anchor="middle">Results and guide readers shape the next morning&#8217;s search</text>')
+    out.append('</svg>')
+    return ''.join(out)
+
+
+STEPS = [
+    ('lem', 'lemlist', 'Find', "lemlist&rsquo;s People Database finds founders and CEOs of UK companies under 50 people, in the sectors the open calls fund. Watch lists add the moments that matter, a raise, a technical hire, a company reading a bidx.ai guide. Companies House and Innovate UK&rsquo;s list of past winners come in as signals of their own.",
+     ['People Database', 'Watch lists', 'External signals']),
+    ('cl', 'Claude', 'Match', "Every morning Claude takes the new founders and runs the eight checks against every call open on the Innovation Funding Service and the EIC. It reads their site, their Companies House record and their LinkedIn, and holds anyone a rule stops, with the reason.",
+     ['Eight checks', 'Live call list', 'Never picked rules']),
+    ('cl', 'Claude', 'Write', "For each founder who fits, Claude writes the connection note, the first message and one follow up in Simon&rsquo;s voice, with the call&rsquo;s own figures. They&rsquo;re saved on the lead in lemlist as custom fields the campaign reads.",
+     ['lemlist custom fields']),
+    ('team', 'BidX team', 'Approve', "You read them on Today, edit what you like, and approve or skip. Approved founders go into the lemlist campaign. A skip keeps its reason, so the rules get sharper.",
+     ['Today view']),
+    ('lem', 'lemlist', 'Send', "lemlist sends from Simon&rsquo;s LinkedIn on weekdays, 9.40am to 4.30pm, 30 to 50 a day. The connection request goes first, the message the morning after they accept, one follow up three days later, then nothing.",
+     ['Campaign sequence', 'Daily limit', 'Sending hours']),
+    ('lem', 'lemlist and Claude', 'Reply', "Replies land in lemlist&rsquo;s inbox, LinkedIn and email together, with lemlist&rsquo;s own read on interest. A webhook hands each one to Claude, which sorts it into wants a call, a question, later or not for us, and drafts the answer.",
+     ['Inbox', 'Interest score', 'Webhook']),
+    ('team', 'BidX team', 'Book', "You see it in Inbox, send the answer or pick a slot, and the funding call is booked through the BidX booking page.",
+     ['Inbox view', 'Booking page']),
+    ('lem', 'lemlist', 'Learn', "lemlist&rsquo;s campaign stats feed Results, replies and calls booked by call, so next month&rsquo;s plan comes from real numbers. Guide readers and results go back into the next morning&rsquo;s search.",
+     ['Campaign stats']),
+]
+
+
+def how_view():
+    cards = ''.join(f'<li class="hstep {c}"><span class="hn">{k + 1}</span><span class="hw">{w}</span><h3>{t}</h3><p>{d}</p>'
+                    f'<span class="tools">{"".join(f"<span>{x}</span>" for x in tools)}</span></li>' for k, (c, w, t, d, tools) in enumerate(STEPS))
+    day = [('6am', 'Claude runs on the new founders and the calls open today'), ('8.30am', 'Today is ready to read'),
+           ('9.40am to 4.30pm', 'lemlist sends what you approved'), ('As they land', 'Replies are sorted and an answer drafted')]
+    days = ''.join(f'<li><b>{a}</b><span>{b}</span></li>' for a, b in day)
+    return f"""<section class="view" id="v-how" data-title="How it works" aria-label="How it works">
+  <div class="run" style="margin-bottom:16px"><div class="run-h"><h2>From lemlist to a booked funding call.</h2>
+  <p>lemlist finds the founders and sends the messages. Claude checks every founder against the calls that are open and writes each message. Nothing goes out until you approve it.</p></div>
+  <div class="flowwrap">{flow_svg()}</div></div>
+  <div class="pane" style="margin-bottom:16px"><div class="pane-h"><h2>Every working day</h2></div><ol class="dayline">{days}</ol></div>
+  <ol class="hsteps">{cards}</ol>
+</section>"""
+
+
 def results_view():
     fun = [('Messages sent', 412), ('Replies', 61), ('Funding calls booked', 19), ('Proposals sent', 9), ('Clients signed', 4)]
     top = fun[0][1]
@@ -376,12 +472,12 @@ def results_view():
 
 def setup_view(B):
     src = [
+        ('lemlist People Database', 'Founders and CEOs of UK companies under 50 people, by sector, size and region', True),
         ('Companies House', 'New companies, SIC codes, officers and accounts size, for every UK company', True),
         ('Innovate UK funded projects', 'Who has won before, by company number, from UKRI&rsquo;s published list', True),
         ('Innovation Funding Service', 'Every open call, its rules, size and deadline', True),
         ('EIC Accelerator', 'Batch dates and the grant only route for UK companies', True),
-        ('LinkedIn company pages', 'Team size, new technical hires and posts', True),
-        ('bidx.ai guide readers', 'Companies that read a guide and didn&rsquo;t book yet', True),
+        ('lemlist watch lists', 'A raise, a technical hire, a new role, and companies reading a bidx.ai guide', True),
         ('Contracts Finder', 'Innovation contracts already won from government', False),
     ]
     srcs = ''.join(f'<li><span><b>{t}</b><span>{d}</span></span><button type="button" class="switch" role="switch" aria-checked="{"true" if on else "false"}" aria-label="{t}"></button></li>' for t, d, on in src)
@@ -440,7 +536,7 @@ def build(B):
                       for k, (n, l, s, c) in enumerate(stages))
     today = f'''<section class="view" id="v-today" data-title="Today" aria-label="Today">
   <div class="run">
-    <div class="run-h"><h2><span class="today-date">Tuesday 20 October</span>. {len(picked)} founders to reach.</h2><p>Every one fits a call that&rsquo;s open now, and every message is written for them. Read, edit, approve.</p></div>
+    <div class="run-h"><h2><span class="today-date">Tuesday 20 October</span>. {len(picked)} founders to reach.</h2><p>Every one fits a call that&rsquo;s open now, and every message is written for them. Read, edit, approve. <a href="#how" data-go="v-how">How it works</a></p></div>
     <div class="stages">{st_html}</div>
     <div class="capline">
       <label class="cap" for="cap">Daily number from tomorrow <input type="range" id="cap" min="30" max="50" step="1" value="{len(picked)}"> <output id="cap-o" for="cap">{len(picked)} a day</output></label>
@@ -458,7 +554,7 @@ def build(B):
 </section>'''
 
     body = (today + founders_view(B, picked + held) + calls_view(B, shown_calls, matched) + inbox_view(B) + guides_view(calls)
-            + results_view() + setup_view(B))
+            + results_view() + setup_view(B) + how_view())
     css_v, dcss_v, js_v = B.ver('assets/site.css'), B.ver('assets/desk.css'), B.ver('assets/desk.js')
     html = f'''<!doctype html>
 <html lang="en-GB">
@@ -483,7 +579,7 @@ def build(B):
   <header class="bar"><h1>Today</h1><span class="date mono"><span class="today-date">Tuesday 20 October</span></span><span class="sp"></span>
     <a class="btn sec sm" href="/">View bidx.ai</a></header>
   {body}
-  <p class="foot-note">Founders, companies, replies and results on this desk are sample data. Calls, rules, amounts and deadlines are the funders&rsquo; own, taken from the Innovation Funding Service and the EIC on 20 October 2026.</p>
+  <p class="foot-note">Founders, companies, replies, results and the connections shown on this desk are sample data. Calls, rules, amounts and deadlines are the funders&rsquo; own, taken from the Innovation Funding Service and the EIC on 20 October 2026.</p>
 </main>
 </div>
 <div class="toast" role="status" aria-live="polite"></div>

@@ -106,7 +106,7 @@ def call_page(B, c):
 <h2 id="scoring">How it&rsquo;s scored</h2>
 {assess or "<p>The brief sets out the assessment process on the Innovation Funding Service.</p>"}
 <h2 id="next">Next step</h2>
-<p>Read the full brief before you start. It has the scope, the eligible costs and the dates for the briefing events.</p>
+<p>Read the full brief first. It has the scope, the eligible costs and the dates for the briefing events.</p>
 <p><a class="btn sec" href="{c["url"]}">The brief on the Innovation Funding Service {B.ICON["ext"]}</a></p>
 <div class="endcta"><h2>Is this your call?</h2><p>On a free funding call we&rsquo;ll check it against your roadmap, show you where applications like yours usually lose points, and tell you straight if it&rsquo;s not worth it this round.</p>
 <div class="ctas" style="margin-top:20px"><a class="btn pri" href="{B.BOOK}">Book FREE funding call</a><a class="btn sec" href="/fit/">Check your fit</a></div></div>

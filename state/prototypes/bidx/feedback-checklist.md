@@ -74,3 +74,26 @@ guide readers turning into warm founders on the list, which is where the content
 
 - Nothing is sent without Raka's explicit word, this time too.
 - Aaron said yes to a sketch, so he never closes on silence. He gets one plain bump if quiet after the delivery.
+
+## Mining finished, 21 Oct, and what it changed
+
+Both remaining sessions were mined to their first event. The reply agent session gave 863 messages Raka typed
+(11 Aug to 20 Oct), 585 of them feedback. The inbox session gave 140 (21 Sep to 20 Oct). Nothing below was in the
+build before this pass unless it says so.
+
+- **The delivery skeleton.** Karim 15 Sep ("i spent the whole day building this / I built this / Try it yourself / I
+  also include other things / What do you think? / Keep it short"), Qualigraf 29 Sep ("Say i spent the whole day
+  yesterday building it"), Garnish 13 Oct ("my feedback from your website was xyz thus i made it abc"). The draft
+  follows all three. Already applied.
+- **"tell them they can really play around the prototype"** (19 Aug). "Try it yourself" and the desk link. Applied.
+- **The C3 recipe blacklist he pasted on 12 Aug.** Tiny uppercase eyebrow labels were on every home section and recur
+  in JustClaims and Negentien80. Removed from the home page on 21 Oct. "before you" constructions rewritten on every
+  page. No cream paper, no serif, no small radius cards, no pill controls were ever in it.
+- **"it should feel like a complete app... I dont understand how to use this app"** (Diisco, 1 Sep), and Raka on 21
+  Oct asking how it works on lemlist. A How it works view was added to the desk, a swimlane of lemlist, Claude, the
+  BidX team and bidx.ai, eight steps naming only real lemlist features, and the working day.
+- **Owner photos** ("Add real pictures of him or them or find online", 12 Sep, and 18 Aug). Not applied. BidX's own
+  site carries no founder photos and the photo identity rule needs a source that ties the face to the name. Their
+  LinkedIn photos are the only option and LinkedIn is walled. Flagged to Raka as his call.
+- **Never claim what isn't true in the delivery.** "It runs on lemlist" was drafted and taken out the same morning,
+  because the sketch isn't connected to lemlist. The How it works view carries the lemlist design instead.

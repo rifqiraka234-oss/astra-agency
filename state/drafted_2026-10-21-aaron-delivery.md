@@ -18,6 +18,10 @@ NOT SENT. Waiting on Raka's word.
 > "three full guides" is /guides/, Smart grants, BridgeAI and Investor Partnerships.
 > "I spent the whole day building this" is true, research from 20 Oct afternoon, build through to 21 Oct morning.
 > The founders on the desk are sample data. The desk says so in its footnote, the message does not.
+> lemlist is NOT named in the message on purpose. The sketch isn't connected to lemlist, so "it runs on lemlist" would be
+> a claim he could test and catch. The How it works view (added 21 Oct) shows the lemlist design, built only on features
+> lemlist's own tools describe, People Database, watch lists, external signals, custom fields, campaign sequence, inbox
+> with interest score, webhooks, campaign stats.
 
 DELIVERY
 ```

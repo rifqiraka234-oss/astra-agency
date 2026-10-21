@@ -10,9 +10,18 @@ Internal. For Raka and the next builder, never for the client.
   - /calls/ with a page for each of the 31 Innovate UK competitions on the Innovation Funding Service
   - /fit/ the seven question fit check, the founder's eight dots, matching calls, booking or email
 - Netlify project astra-bidx-prototype, id a067db1c-6da3-487e-8556-1b01bbac0000, deploys 6ad85af98c800e2f20111c45 then 6ad85d255e6cbbaa04b44884 (contractions in the sample
-  messages and bumps), the second verified the same way as the first.
+  messages and bumps), then 6ad8714dc92da7d5be0b9c97 (the How it works view, home labels removed, "before you"
+  rewritten), each verified the same way, every file fetched and matched.
   Team SSO switched off, no password. Every page carries noindex, nofollow.
 - Source, state/prototypes/bidx/build (python3 build.py writes ../site). The deployed folder is ../site.
+
+## How it works view (added 21 Oct, Raka asked how it runs on lemlist)
+
+A swimlane diagram, lemlist, Claude, the BidX team and bidx.ai, eight steps from Find to Learn, and the working day.
+Every lemlist feature named is one lemlist's own tools describe, People Database, watch lists including website
+visits, external signals, custom fields, campaign sequence, daily limit, sending hours, inbox with interest score,
+webhooks, campaign stats. The sidebar shows "lemlist, connected" as a design state, and the footnote now says the
+connections shown are sample data. The sketch is not connected to lemlist, and the delivery message doesn't say it is.
 
 ## The one thread
 

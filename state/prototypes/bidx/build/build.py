@@ -121,7 +121,7 @@ def footer():
       <div><h2 class="fh">BidX</h2><ul><li><a href="/#founders">Founders</a></li><li><a href="{BOOK}">Book FREE funding call</a></li><li><a href="{LI_SIMON}">Simon on LinkedIn</a></li><li><a href="{LI_AARON}">Aaron on LinkedIn</a></li></ul></div>
       <div><h2 class="fh">Legal</h2><ul><li><a href="{PRIVACY}">Privacy policy</a></li><li><a href="{TERMS}">Terms &amp; Conditions</a></li></ul></div>
     </div>
-    <div class="foot-b"><span>&copy; 2026 BidX.ai</span><span>Funding details are taken from each funder&rsquo;s own pages. Always check the official brief before you apply.</span></div>
+    <div class="foot-b"><span>&copy; 2026 BidX.ai</span><span>Funding details are taken from each funder&rsquo;s own pages. The official brief is always the final word.</span></div>
   </div>
 </footer>
 '''

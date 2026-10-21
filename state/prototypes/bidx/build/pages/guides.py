@@ -141,7 +141,7 @@ def bridgeai(B, calls):
                       ['Updated 20 October 2026', '7 minute read', 'Three calls, one set of rules'], 'board')
     body += f'''<div class="wrap">{facts([('&pound;200K', 'the most a project can ask for, and &pound;100K the least'), ('3 to 5', 'months, the project length'), ('TRL 5 or 6', 'an existing AI or ML solution, with a working MVP'), ('8 Dec', 'closes at 11am UK time')])}</div>
 <div class="wrap art">
-{toc([('who', 'Who can apply'), ('strands', 'Which strand is yours'), ('deployer', 'The deployer'), ('money', 'The money'), ('scoring', 'How it&rsquo;s scored'), ('checks', 'Five checks before you start')])}
+{toc([('who', 'Who can apply'), ('strands', 'Which strand is yours'), ('deployer', 'The deployer'), ('money', 'The money'), ('scoring', 'How it&rsquo;s scored'), ('checks', 'Five checks to run first')])}
 <article class="prose">
 <h2 id="who">Who can apply</h2>
 <p>BridgeAI Deployment Catalyst is for AI that already works and is ready to be put to use by a larger organisation. The rules are the same across all three strands.</p>
@@ -156,7 +156,7 @@ def bridgeai(B, calls):
 
 <h2 id="deployer">The deployer carries half the story</h2>
 <p>In our reading, the question behind every scored answer is whether this AI will really run inside a larger organisation within three to five months. The deployer is how you answer it. A named medium or large organisation, the part of its operation the system goes into, and what it will measure.</p>
-<div class="callout">{B.glyph("ggggggag", "big")}<div><b>Our advice</b><p>Get the deployer&rsquo;s commitment in writing before you start the application. Without one, the application can&rsquo;t go in at all.</p></div></div>
+<div class="callout">{B.glyph("ggggggag", "big")}<div><b>Our advice</b><p>Get the deployer&rsquo;s commitment in writing first. Without one, the application can&rsquo;t go in at all.</p></div></div>
 
 <h2 id="money">The money, worked through</h2>
 <p>Grant rates are up to 70% for a micro or small organisation, 60% for medium and 50% for large. Put in your own numbers to see your company&rsquo;s share.</p>
@@ -176,7 +176,7 @@ def bridgeai(B, calls):
 <p>The application has 19 questions. The first nine aren&rsquo;t scored, and the other ten are, each one by three independent assessors with expertise relevant to the project. In Innovate UK&rsquo;s assessor guidance for Frontier AI SME Champions, another AI call open now, each scored question is marked from 1 to 10.</p>
 <p>The brief doesn&rsquo;t state the odds for BridgeAI. Across the AI calls that do, Frontier AI SME Champions says 2% and Efficient, Structured and Controllable AI Systems says 4%.</p>
 
-<h2 id="checks">Five checks before you start</h2>
+<h2 id="checks">Five checks to run first</h2>
 <ol><li>Your product is at TRL 5 or 6, with a working MVP you can show.</li><li>A medium or large UK business, or a UK public sector body, will deploy it and will say so in writing.</li><li>You know which strand describes what the system does.</li><li>Your share of the costs sits between 40% and 70%.</li><li>You can fund your company&rsquo;s share, at least 30% for a micro or small company.</li></ol>
 {endcta(B, "Tell us what your system does and who&rsquo;d deploy it. On a free funding call we&rsquo;ll say which strand fits and where an application like yours usually loses points.")}
 <div class="srcs"><b>Sources</b><ol><li><a href="{by[2599]["url"]}">AI for Operational Systems</a></li><li><a href="{by[2598]["url"]}">AI for Decision Critical Systems</a></li><li><a href="{by[2597]["url"]}">AI for Assurance and Compliance</a></li><li><a href="{FAI_GUIDE}">Frontier AI assessor guidance</a></li><li>All read on the Innovation Funding Service, 20 October 2026</li></ol></div>
