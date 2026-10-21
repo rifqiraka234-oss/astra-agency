@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Noah Hertling SENT 2026-10-21 12:33:53 UTC on Raka's 'send noah', act_QkdXMz7wcAjBds6Ea, one copy, byte for byte from this file. Thread 4 items before, 5 after. Do not send again. -->
 <!-- Chris Hale SENT 2026-10-20 18:36:34 UTC on Raka's 'Send chris only', act_kgYT35SokWeqwiHwo, one copy, byte for byte from this file. Thread 7 items before, 8 after, control Rob Quinn 2 items. Do not send again. Aaron and Noah below are NOT sent. -->
 # Replies, 20 Oct afternoon. NOT SENT, waiting on Raka's word
 
