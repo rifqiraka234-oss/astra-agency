@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Matthias Ufer SENT 2026-10-21 12:26:40 UTC on Raka's 'send matthias', act_PDD6zjgjgjkdEs3dJ, one copy, byte for byte from this file. Thread 6 items before, 7 after, control Rob Quinn 2 items. Do not send again. -->
 # Replies, 21 Oct midday. NOT SENT, waiting on Raka's word
 
 ### Matthias Ufer, Schumacher Verfahrenstechnik, ctc_3L5hXyZ8hWrh8tAGC
