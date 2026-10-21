@@ -1,0 +1,36 @@
+<div class="np">
+<svg class="np-svg" viewBox="0 0 400 400" focusable="false">
+  <g class="np-edges" fill="none" stroke-linecap="round">
+    <path d="M200 70 V122"/>
+    <path d="M200 160 V196"/>
+    <path d="M200 214 H112"/>
+    <path d="M200 214 H288"/>
+    <path d="M200 232 V262 M74 262 H330 M74 262 V296 M126 262 V296 M178 262 V296 M230 262 V296 M282 262 V296 M330 262 V296"/>
+  </g>
+  <g class="np-nodes">
+    <path class="np-cloud" d="M168 66 a20 20 0 0 1 4 -39 a27 27 0 0 1 51 -6 a19 19 0 0 1 21 26 a16 16 0 0 1 -6 19 Z"/>
+    <rect class="np-dev" x="168" y="122" width="64" height="38" rx="7"/>
+    <path class="np-fw" d="M180 134 h40 M180 141 h40 M180 148 h40 M193 134 v7 M207 141 v7 M193 148 v6"/>
+    <rect class="np-dev" x="158" y="196" width="84" height="36" rx="7"/>
+    <g class="np-ports"><rect x="168" y="208" width="6" height="6" rx="1"/><rect x="178" y="208" width="6" height="6" rx="1"/><rect x="188" y="208" width="6" height="6" rx="1"/><rect x="198" y="208" width="6" height="6" rx="1"/><rect x="208" y="208" width="6" height="6" rx="1"/><rect x="218" y="208" width="6" height="6" rx="1"/><rect x="228" y="208" width="6" height="6" rx="1"/></g>
+    <circle class="np-dev" cx="96" cy="214" r="16"/>
+    <path class="np-wifi" d="M88 214 a8 8 0 0 1 16 0 M84 214 a12 12 0 0 1 24 0"/>
+    <rect class="np-dev" x="288" y="196" width="52" height="36" rx="7"/>
+    <path class="np-disk" d="M298 207 h32 M298 214 h32 M298 221 h32"/>
+    <g class="np-ws">
+      <rect x="58" y="296" width="32" height="22" rx="3"/><rect x="110" y="296" width="32" height="22" rx="3"/><rect x="162" y="296" width="32" height="22" rx="3"/>
+      <rect x="214" y="296" width="32" height="22" rx="3"/><rect x="266" y="296" width="32" height="22" rx="3"/>
+      <path d="M68 322 h12 M120 322 h12 M172 322 h12 M224 322 h12 M276 322 h12"/>
+    </g>
+    <rect class="np-dev" x="314" y="296" width="34" height="26" rx="4"/>
+    <path class="np-prn" d="M320 304 h22 M320 311 h22"/>
+  </g>
+</svg>
+<span class="np-tag" style="left:50%;top:5%">[[Cloud, Mail und Dateien||Cloud, mail and files]]<small>[[Rechte je Team||Access set per team]]</small></span>
+<span class="np-tag" style="left:79%;top:33.5%">[[Firewall||Firewall]]<small>[[Firmware geprüft 14.10.||Firmware checked 14 Oct]]</small></span>
+<span class="np-tag" style="left:16%;top:43%">[[2 Access Points||2 access points]]<small>[[Gäste getrennt||Guests kept apart]]</small></span>
+<span class="np-tag" style="left:84%;top:43%">[[Backup||Backup]]<small>[[Täglich 22 Uhr||Daily at 22.00]]</small></span>
+<span class="np-tag" style="left:50%;top:62%">[[Switch, 24 Ports||Switch, 24 ports]]<small>[[18 belegt, beschriftet||18 in use, all labelled]]</small></span>
+<span class="np-tag" style="left:40%;top:87%">[[12 Arbeitsplätze||12 workstations]]<small>[[Updates automatisch||Updates automatic]]</small></span>
+<span class="np-tag" style="left:83%;top:87%">[[Drucker||Printer]]<small>[[Feste Adresse||Fixed address]]</small></span>
+</div>

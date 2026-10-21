@@ -1,0 +1,42 @@
+{
+ "net": {
+  "file": "net-switch.jpg",
+  "w": 1200,
+  "h": 795,
+  "alt_de": "Switch mit blauen Patchkabeln, die Statuslampen leuchten",
+  "alt_en": "A switch with blue patch cables plugged in, status lights on",
+  "source": "still-switch-patch-cables-wm.jpg"
+ },
+ "sup": {
+  "file": "sup-desk.jpg",
+  "w": 1200,
+  "h": 900,
+  "alt_de": "Aufgeräumter Schreibtisch mit Laptop, Notizbuch und Taschenrechner",
+  "alt_en": "A tidy desk with a laptop, a notebook and a calculator",
+  "source": "still-desk-laptop-notebook-wm.jpg"
+ },
+ "cld": {
+  "file": "cld-roof.jpg",
+  "w": 1200,
+  "h": 900,
+  "alt_de": "Regen auf einer Fensterscheibe, dahinter ein Ziegeldach unter grauem Himmel",
+  "alt_en": "Rain on a window, a tiled roof under a grey sky behind it",
+  "source": "still-rain-window-tiled-roof-wm.jpg"
+ },
+ "sec": {
+  "file": "sec-drive.jpg",
+  "w": 1200,
+  "h": 650,
+  "alt_de": "Geöffnete Festplatte mit Scheibe und Lesekopf",
+  "alt_en": "An opened hard drive showing the platter and the read head",
+  "source": "still-hard-drive-platter-wm.jpg"
+ },
+ "hh": {
+  "file": "hh-speicherstadt.jpg",
+  "w": 1440,
+  "h": 1080,
+  "alt_de": "Backsteinspeicher an einem Fleet in der Hamburger Speicherstadt",
+  "alt_en": "Brick warehouses along a canal in Hamburg's Speicherstadt",
+  "source": "still-speicherstadt-canal-wm.jpg"
+ }
+}

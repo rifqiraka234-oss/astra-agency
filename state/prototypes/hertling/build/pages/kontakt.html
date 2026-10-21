@@ -1,0 +1,62 @@
+<!--{"title": "[[Kontakt. Systemhaus-Hertling in Reinbek||Contact. Systemhaus-Hertling in Reinbek]]", "desc": "[[Rufen Sie an unter 0152 27441804, Montag bis Freitag von 8 bis 18 Uhr, oder schreiben Sie. Birkenweg 18, 21465 Reinbek.||Call 0152 27441804, Monday to Friday 8am to 6pm, or send a message. Birkenweg 18, 21465 Reinbek.]]", "nav": "kontakt", "path": "kontakt/index.html", "js": ["form.js"], "body": "sub"}-->
+<section class="ph" aria-labelledby="ph-h">
+  <div class="ph-in">
+    <h1 id="ph-h" class="ph-h">[[Sprechen wir über Ihre IT.||Let's talk about your IT.]]</h1>
+    <p class="lede">[[Ob konkrete Anfrage oder erste Einschätzung, rufen Sie an, schreiben Sie, oder nutzen Sie das Formular. Ihre Nachricht landet direkt bei Noah Hertling.||Whether it's a specific request or a first opinion, call, write, or use the form. Your message goes straight to Noah Hertling.]]</p>
+  </div>
+</section>
+
+<section class="kt" aria-label="[[Kontaktwege||Ways to get in touch]]">
+  <div class="kt-in">
+    <div class="kt-l">
+      <div class="card kt-card" data-live>
+        <div class="card-top">{{MARK card-mark}}<div><b>Noah Hertling</b><span>[[Geschäftsführer||Managing director]]</span></div></div>
+        <a class="card-tel" href="tel:{{TEL}}">{{PHONE}}</a>
+        <a class="card-mail" href="mailto:{{MAIL}}">{{MAIL}}</a>
+        <div class="card-live"><i aria-hidden="true"></i><span data-live-t>[[Montag bis Freitag, 8 bis 18 Uhr||Monday to Friday, 8am to 6pm]]</span></div>
+      </div>
+      <dl class="kt-dl">
+        <div><dt>[[Adresse||Address]]</dt><dd>Systemhaus<span class="brand-dash">-</span>Hertling UG (haftungsbeschränkt)<br>Birkenweg 18<br>21465 Reinbek<br><a href="{{MAPS}}" rel="noopener">[[In Google Maps öffnen||Open in Google Maps]]</a></dd></div>
+        <div><dt>[[Erreichbar||Hours]]</dt><dd>[[Montag bis Freitag, 8 bis 18 Uhr||Monday to Friday, 8am to 6pm]]</dd></div>
+        <div><dt>[[Einsatzgebiet||Where]]</dt><dd>[[Hamburg und Umgebung, per Fernwartung deutschlandweit||Hamburg and around, remotely anywhere in Germany]]</dd></div>
+      </dl>
+      <figure class="kt-map">{{INC partials/map.svg}}</figure>
+    </div>
+
+    <div class="kt-r">
+      <form class="fm" name="kontakt" method="POST" action="/kontakt/danke/" data-netlify="true" netlify-honeypot="website" data-form novalidate>
+        <input type="hidden" name="form-name" value="kontakt">
+        <input type="hidden" name="sprache" value="de" data-form-lang>
+        <h2 class="fm-h">[[Nachricht schreiben||Send a message]]</h2>
+        <div class="fm-row">
+          <div class="fm-f"><label for="f-name">[[Name||Name]]</label><input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name"><p class="fm-e" id="e-name" data-err="name">[[Bitte geben Sie Ihren Namen an.||Please add your name.]]</p></div>
+          <div class="fm-f"><label for="f-firma">[[Firma <span class="fm-opt">optional</span>||Company <span class="fm-opt">optional</span>]]</label><input id="f-firma" name="firma" type="text" autocomplete="organization"></div>
+        </div>
+        <div class="fm-row">
+          <div class="fm-f"><label for="f-mail">[[Mailadresse||Email]]</label><input id="f-mail" name="mail" type="email" autocomplete="email" required aria-describedby="e-mail"><p class="fm-e" id="e-mail" data-err="mail">[[Bitte geben Sie eine gültige Mailadresse an, damit eine Antwort Sie erreicht.||Please add a valid email so a reply can reach you.]]</p></div>
+          <div class="fm-f"><label for="f-tel">[[Telefon <span class="fm-opt">optional</span>||Phone <span class="fm-opt">optional</span>]]</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
+        </div>
+        <fieldset class="fm-topic">
+          <legend>[[Worum geht es?||What's it about?]]</legend>
+          <div class="fm-chips">
+            <label><input type="radio" name="thema" value="Netzwerk"><span>[[Netzwerk||Network]]</span></label>
+            <label><input type="radio" name="thema" value="Support und Wartung"><span>[[Support und Wartung||Support and maintenance]]</span></label>
+            <label><input type="radio" name="thema" value="Cloud"><span>Cloud</span></label>
+            <label><input type="radio" name="thema" value="Sicherheit"><span>[[Sicherheit||Security]]</span></label>
+            <label><input type="radio" name="thema" value="Etwas anderes" checked><span>[[Etwas anderes||Something else]]</span></label>
+          </div>
+        </fieldset>
+        <div class="fm-f"><label for="f-msg">[[Nachricht||Message]]</label><textarea id="f-msg" name="nachricht" rows="6" required aria-describedby="e-msg"></textarea><p class="fm-e" id="e-msg" data-err="msg">[[Schreiben Sie bitte ein paar Worte dazu, worum es geht.||Please write a few words about what it's about.]]</p></div>
+        <p class="fm-hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></p>
+        <p class="fm-note">[[Ihre Angaben werden nur genutzt, um Ihre Anfrage zu beantworten. Mehr dazu im <a href="/datenschutz/">Datenschutz</a>.||Your details are only used to answer your request. More in the <a href="/datenschutz/">privacy notice</a>.]]</p>
+        <button class="btn pri btn-lg fm-go" type="submit">[[Nachricht senden||Send message]]</button>
+        <p class="fm-fail" data-form-fail hidden>[[Das hat gerade nicht geklappt. Schreiben Sie bitte direkt an <a href="mailto:{{MAIL}}" data-form-mailto>{{MAIL}}</a> oder rufen Sie an unter <a href="tel:{{TEL}}">{{PHONE}}</a>.||That didn't go through just now. Please write to <a href="mailto:{{MAIL}}" data-form-mailto>{{MAIL}}</a> directly or call <a href="tel:{{TEL}}">{{PHONE}}</a>.]]</p>
+      </form>
+      <div class="fm-ok" data-form-ok hidden tabindex="-1">
+        <svg class="fm-ok-i" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="22"/><path d="M14 25l7 7 13-15"/></svg>
+        <h2>[[Danke, Ihre Nachricht ist angekommen.||Thanks, your message has arrived.]]</h2>
+        <p>[[Noah Hertling meldet sich persönlich bei Ihnen. Wenn es eilt, rufen Sie an unter <a href="tel:{{TEL}}">{{PHONE}}</a>.||Noah Hertling will get back to you himself. If it's urgent, call <a href="tel:{{TEL}}">{{PHONE}}</a>.]]</p>
+      </div>
+    </div>
+  </div>
+</section>
