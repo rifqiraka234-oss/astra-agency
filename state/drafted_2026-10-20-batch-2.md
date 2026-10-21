@@ -1,3 +1,4 @@
+<!-- 2026-10-21, BOTH SENT on Raka's 'Send'. Sonny Wells 10.38.16 UTC act_AqZ3bi4xiKr3Limud, Julien Salvat 10.38.27 UTC act_GCcPAH5hC9y5Df5eR. Before, the four way never messaged check, every claim reopened 10.35 to 10.37 UTC two ways (39 checks all PASS, renders identical to 20 Oct), thread and control in the minute before, text byte for byte from this file, re pulled after, one copy each, lengths 658 and 566 equal. Do not send these again. Log in state/send_log_2026-10-21.txt. Julien's co founder Grégoire Colas was invited by W1b at 07.57 UTC today, hold him if he accepts. -->
 # Drafts, 2026-10-20, batch 2. Sonny Wells and Julien Salvat, on Raka's angle calls
 
 Raka, 2026-10-20, after the screenshots, word for word: "sonny our pitch should be a website that allows him to get more investors and tell his story better, his main focus is investors right i think? / Julien is for a sales making customer facing website get more sales etc".
