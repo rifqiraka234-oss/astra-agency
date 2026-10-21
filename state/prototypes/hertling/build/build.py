@@ -16,6 +16,7 @@ import shutil
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, '..', 'site')
+OUT2 = os.path.join(HERE, '..', 'site-presence')  # Astra's note to Noah, deployed on its own so it never sits inside his site
 
 PHONE = '0152 27441804'
 TEL = '+4915227441804'
@@ -41,6 +42,10 @@ def mark(cls='mark', title=None):
     """His logo, traced from Logo_Systemhaus-Hertling_Klein-Final.png. Two pillars and the band, separately addressable."""
     svg = open(os.path.join(HERE, 'assets', 'mark.svg')).read()
     lab = f' role="img" aria-label="{title}"' if title else ' aria-hidden="true"'
+    # every copy gets its own gradient ids, so hiding one copy never strips the colour off the others
+    mark.n = getattr(mark, 'n', 0) + 1
+    for gid in re.findall(r'id="([^"]+)"', svg):
+        svg = svg.replace(f'id="{gid}"', f'id="{gid}-{mark.n}"').replace(f'url(#{gid})', f'url(#{gid}-{mark.n})')
     return svg.replace('<svg ', f'<svg class="{cls}"{lab} focusable="false" ', 1)
 
 
@@ -53,6 +58,7 @@ def wlan():
     ap = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="11"/><path d="M7 12.5a5 5 0 0 1 10 0M9.5 13a2.5 2.5 0 0 1 5 0"/><circle cx="12" cy="15.5" r="1.4"/></svg>'
     data = json.dumps({'w': W, 'h': H, 'aps': f['aps'], 'walls': f['walls'], 'rooms': f['rooms']}, ensure_ascii=False).replace('[[', '[ [').replace(']]', '] ]')  # never a bilingual token
     return f'''<div class="wl" data-wlan>
+<span class="ex-tag ex-top">{L(f'Beispielbüro, {W} mal {H} Meter', f'Example office, {W} by {H} metres')}</span>
 <script type="application/json">{data}</script>
 <div class="wl-stage" style="aspect-ratio:{W}/{H}">
 <canvas aria-hidden="true"></canvas>
@@ -158,6 +164,16 @@ def header(nav):
 </div>'''
 
 
+def bar():
+    """The slim bar for Astra's own note to Noah, so it never reads as one of his pages."""
+    return f'''<a class="skip" href="#main">Skip to content</a>
+<header class="sk-bar" lang="en">
+  <a class="sk-b" href="https://astra-hertling-prototype.netlify.app/">{mark('sk-mark')}<span>Sketch for Systemhaus<span class="brand-dash">-</span>Hertling</span></a>
+  <span class="sk-by">by Astra</span>
+  <div class="lang" role="group" aria-label="Language of the sample posts"><button type="button" data-lang="de" aria-pressed="true">DE</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+</header>'''
+
+
 def footer():
     return f'''<footer class="foot">
   <div class="foot-in">
@@ -192,11 +208,11 @@ def page(meta, body, assets):
 {js}
 </head>
 <body class="{meta.get('body', '')}">
-{header(meta.get('nav'))}
+{bar() if meta.get('bare') else header(meta.get('nav'))}
 <main id="main">
 {body}
 </main>
-{footer()}
+{'' if meta.get('bare') else footer()}
 </body>
 </html>
 '''
@@ -205,8 +221,9 @@ def page(meta, body, assets):
 
 
 def build():
-    if os.path.isdir(OUT):
-        shutil.rmtree(OUT)
+    for d in (OUT, OUT2):
+        if os.path.isdir(d):
+            shutil.rmtree(d)
     os.makedirs(os.path.join(OUT, 'assets'))
     shutil.copytree(os.path.join(HERE, 'fonts'), os.path.join(OUT, 'fonts'), ignore=shutil.ignore_patterns('g.css'))
     assets = {}
@@ -238,10 +255,20 @@ def build():
         body = re.sub(r'\{\{FIG (\w+)\}\}', lambda mm: fig(mm.group(1)), body)
         for inc in re.findall(r'\{\{INC ([\w./-]+)\}\}', body):
             body = body.replace('{{INC ' + inc + '}}', open(os.path.join(HERE, inc)).read())
-        out = os.path.join(OUT, meta['path'])
+        out = os.path.join(OUT2 if meta.get('bare') else OUT, meta['path'])
         os.makedirs(os.path.dirname(out), exist_ok=True)
         open(out, 'w').write(page(meta, body, assets))
         print('wrote', meta['path'], os.path.getsize(out))
+    # the presence site carries only what its one page uses
+    os.makedirs(os.path.join(OUT2, 'media'), exist_ok=True)
+    shutil.copytree(os.path.join(OUT, 'assets'), os.path.join(OUT2, 'assets'))
+    shutil.copytree(os.path.join(OUT, 'fonts'), os.path.join(OUT2, 'fonts'))
+    shutil.copytree(os.path.join(OUT, 'media', 'presence'), os.path.join(OUT2, 'media', 'presence'))
+    shutil.rmtree(os.path.join(OUT, 'media', 'presence'))
+    for d in (OUT, OUT2):
+        open(os.path.join(d, 'netlify.toml'), 'w').write(
+            '[[headers]]\n  for = "/*"\n  [headers.values]\n    X-Robots-Tag = "noindex, nofollow"\n')
+    return
     open(os.path.join(OUT, 'netlify.toml'), 'w').write(
         '[[headers]]\n  for = "/*"\n  [headers.values]\n    X-Robots-Tag = "noindex, nofollow"\n')
 

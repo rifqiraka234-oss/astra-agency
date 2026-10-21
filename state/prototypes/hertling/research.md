@@ -156,3 +156,27 @@ IT Concept Hamburg already writes "documented" in SEO text, so Hertling has to s
   Rechtsberatung. Prüfen Sie ihn vor Veröffentlichung..." and says the form sends "direkt per E-Mail-Programm", while his
   live form posts to wp-admin/admin-post.php. VERIFIED (both pages refetched). Not an angle (RULES 0E), a handover tip.
 - Hosting named in his Datenschutz, IONOS SE, Montabaur. Kept as his production statement, flagged in the handover.
+
+## Presence sketch facts, 21 Oct evening
+
+- Google's contribution policy (support.google.com/contributionpolicy/answer/7400114, opened 21 Oct) lists under Rating
+  Manipulation "Discourage or prohibit negative reviews, or selectively solicit positive reviews from customers", and
+  says merchants should not require or pressure users to review while on the premises. The review page and card show
+  the Google button to everyone. VERIFIED at source.
+- Review QR encodes https://astra-hertling-prototype.netlify.app/bewertung/, decoded back with zxing-cpp, control image
+  decoded to nothing. VERIFIED. Recheck the URL serves the page after deploy.
+- Rain clip, Mixkit 2846 "Window on a rainy day", item page read again 21 Oct (copyrightNotice Free, data-license
+  videoFree), MP4 fetched individually from that page, SHA-256 50c6a4e9... identical to the agent's copy. Encoded to
+  960x540 WebM 1.57 MB and H.264 0.53 MB.
+
+## The three opener facts, rechecked 21 Oct 19:20 to 19:26 UTC (before drafting the delivery)
+
+1. Homepage, refetched 19:2x, visible text identical to this evening's fetch (68 lines, zero diff, the byte change is
+   inline WordPress CSS). 0 hits for Kunde, Kunden, Referenz, zertifiziert, Microsoft, Bewertung, Sterne, Fallstudie,
+   Projekt. Two case-insensitive hits for "partner" are both inside "Ansprechpartner", present in both fetches. Only image
+   is logo.png twice. Control hagel-it.de, Kunden 35, Sterne 27, Fallstudien 4. VERIFIED.
+2. LinkedIn, fetch-walled.py 19:24, "1 follower", "1 employee". Control Microsoft 29,342,170 followers, same path. VERIFIED.
+3. Google Maps "IT Systemhaus Reinbek", rendered 19:26, five results, IT-Reinbek Dominik Schäfer 5,0, Systemhaus-Hertling
+   "Keine Rezensionen", Sellenschlo IT 5,0, Base2 IT Consult 4,7, RA-MICRO Hamburg Systemhaus 4,0, list ends. Every other
+   firm on the list has stars. Control hagel IT-Services 4,9. Screenshot /tmp/claude-0/hertling/maps3-cat.png. VERIFIED.
+   New, a Reinbek competitor (IT-Reinbek, Dominik Schäfer, Schröders Stieg 6B) already rated 5,0.

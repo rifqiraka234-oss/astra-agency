@@ -32,6 +32,7 @@ html:not([lang="en"]) .l-en { display: none !important }
 html[lang="en"] .l-de { display: none !important }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f); font-size: 17px; line-height: 1.55; font-weight: 400; overflow-x: hidden }
 img, svg, video, canvas { display: block; max-width: 100% }
+img { height: auto }
 a { color: var(--blue-t); text-underline-offset: .18em; text-decoration-thickness: 1px }
 a:hover { text-decoration-thickness: 2px }
 h1, h2, h3, h4 { margin: 0; font-weight: 700; letter-spacing: -.012em; line-height: 1.08 }
@@ -718,3 +719,110 @@ html[lang="en"] .sv-box li::before { content: "“" } html[lang="en"] .sv-box li
 .cc-film video { width: 100%; height: 100%; object-fit: cover; opacity: .34; filter: saturate(.55) contrast(1.05) }
 .cc-film::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12, 18, 25, .88) 0%, rgba(12, 18, 25, .7) 48%, rgba(12, 18, 25, .38) 100%) }
 @media (max-width: 860px) { .cc-film::after { background: linear-gradient(180deg, rgba(12, 18, 25, .9), rgba(12, 18, 25, .7)) } }
+
+/* ---------------------------------------------------------------- presence sketch, Astra's note to Noah */
+.sk-bar { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; gap: 14px; height: 60px; padding: 0 var(--g); background: rgba(12, 18, 25, .96); color: #e6edf4; backdrop-filter: blur(14px) }
+.sk-b { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 650; font-size: 15.5px }
+.sk-mark { width: 28px; height: 26px }
+.sk-by { color: #8fa1b3; font-size: 14px }
+.sk-bar .lang { margin-left: auto; border-color: rgba(255, 255, 255, .2) }
+.sk-bar .lang button { color: #8fa1b3 }
+.sk-bar .lang button[aria-pressed="true"] { background: #fff; color: var(--night) }
+.pr-in { max-width: 1240px; margin: 0 auto; padding: 0 var(--g) }
+.pr-hero { padding: clamp(70px, 11vh, 130px) 0 clamp(40px, 6vh, 70px) }
+.pr-h { font-size: clamp(40px, 5.6vw, 84px); letter-spacing: -.04em; line-height: 1; max-width: 14ch }
+.pr-hero .lede { max-width: 60ch }
+.pr-note { margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: var(--paper2); color: var(--ink2); font-size: 15px; max-width: 70ch }
+.pr-jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px }
+.pr-jump a { display: inline-flex; align-items: center; height: 42px; padding: 0 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--white); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15px }
+.pr-s { padding: clamp(70px, 10vh, 120px) 0; border-top: 1px solid var(--line); scroll-margin-top: 60px }
+.pr-alt { background: var(--white) }
+.pr-two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); gap: clamp(36px, 6vw, 96px); align-items: center }
+.pr-n { display: block; font-family: var(--m); font-size: 14px; color: var(--blue-t); margin-bottom: 14px }
+.pr-t h2 { font-size: clamp(30px, 3.4vw, 50px); letter-spacing: -.032em; line-height: 1.04; max-width: 17ch }
+.pr-t p { margin-top: 18px; color: var(--ink2); font-size: 18px; max-width: 52ch }
+.pr-wide { margin-bottom: clamp(36px, 5vh, 56px) }
+.pr-try { font-weight: 650; color: var(--ink) !important }
+.pr-list { margin: 26px 0 0; padding: 0; list-style: none; counter-reset: pl; display: grid; gap: 14px }
+.pr-list li { counter-increment: pl; position: relative; padding-left: 44px; color: var(--ink2); font-size: 16.5px }
+.pr-list li::before { content: counter(pl); position: absolute; left: 0; top: -2px; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; font-weight: 700; font-size: 14px; display: grid; place-items: center }
+.pr-list b { color: var(--ink) }
+/* the phone */
+.phone { margin: 0 auto; width: min(100%, 380px); border-radius: 46px; padding: 12px; background: #0e141b; box-shadow: 0 50px 90px -40px rgba(12, 18, 25, .6), inset 0 0 0 2px #2a333d }
+.ph-scr { border-radius: 36px; overflow: hidden; background: #fff; font-family: Roboto, Arial, var(--f); color: #202124 }
+.gp-top { padding: 16px 14px 10px; background: #fff }
+.gp-search { display: block; padding: 11px 16px; border-radius: 24px; box-shadow: 0 1px 5px rgba(0, 0, 0, .18); font-size: 14.5px }
+.gp-photos { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: 1fr 1fr; gap: 3px; height: 170px }
+.gp-photos img { width: 100%; height: 100%; object-fit: cover }
+.gp-photos img:first-child { grid-row: 1 / 3 }
+.gp-logo { display: grid; place-items: center; background: #f3f5f7 }
+.gp-mark { width: 52px; height: 48px }
+.gp-body { padding: 14px 16px 20px }
+.gp-name { display: block; font-size: 20px; font-weight: 500; line-height: 1.25 }
+.gp-rev { display: flex; align-items: center; gap: 10px; margin-top: 6px; font-size: 14px; color: #5f6368 }
+.gp-rev a { color: #1a73e8; text-decoration: none; font-weight: 500 }
+.gp-acts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 16px 0 10px; text-align: center; font-size: 12px; color: #1a73e8; font-weight: 500 }
+.gp-acts i { display: block; width: 38px; height: 38px; margin: 0 auto 5px; border-radius: 50%; border: 1px solid #dadce0; background: radial-gradient(circle, #1a73e8 0 4px, transparent 4.5px) }
+.gp-info { list-style: none; padding: 10px 0; margin: 0; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; display: grid; gap: 9px; font-size: 14px }
+.gp-open { color: #188038; font-weight: 500 }
+.gp-sec { margin-top: 14px }
+.gp-sec > b { font-size: 15px; font-weight: 500 }
+.gp-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px }
+.gp-chips > span { padding: 5px 11px; border-radius: 16px; border: 1px solid #dadce0; font-size: 12.5px }
+.gp-post { margin-top: 8px; border: 1px solid #ececec; border-radius: 12px; overflow: hidden }
+.gp-post img { width: 100% }
+.gp-post p { padding: 10px 12px; font-size: 13px; color: #3c4043 }
+/* the review card */
+.cards { display: grid; gap: 18px; justify-items: center }
+.rc { width: min(100%, 420px); aspect-ratio: 148 / 105; border-radius: 14px; padding: 26px 28px; box-shadow: 0 30px 60px -36px rgba(20, 34, 56, .55), 0 0 0 1px var(--line) }
+.rc-front { background: var(--white); display: grid; grid-template-columns: minmax(0, 1fr) 120px; grid-template-rows: auto 1fr auto; gap: 6px 20px; transform: rotate(-2deg) }
+.rc-front > b { font-size: 24px; letter-spacing: -.02em; line-height: 1.1; grid-column: 1 }
+.rc-front > span { grid-column: 1; color: var(--ink2); font-size: 14px }
+.rc-qr { grid-column: 2; grid-row: 1 / 4; align-self: center; background: #fff; padding: 6px }
+.rc-qr .qr { width: 108px; height: 108px }
+.rc-front > small { grid-column: 1; align-self: end; font-size: 12.5px; color: var(--ink3) }
+.rc-back { background: var(--night); color: #e6edf4; display: grid; place-content: center; justify-items: center; text-align: center; gap: 4px; transform: rotate(1.5deg) }
+.rc-mark { width: 56px; height: 51px; margin-bottom: 8px }
+.rc-back b { font-size: 20px; color: #fff }
+.rc-back > span { font-size: 14px; color: #b8c4d0 }
+/* LinkedIn */
+.li { max-width: 760px; margin: 0 auto; font-family: -apple-system, 'Segoe UI', Roboto, var(--f); color: rgba(0, 0, 0, .9) }
+.li-head { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 0 0 1px #e0dfdc }
+.li-banner svg { width: 100%; height: 150px }
+.li-id { position: relative; padding: 52px 22px 20px; display: grid; gap: 4px }
+.li-logo { position: absolute; left: 22px; top: -46px; width: 92px; height: 92px; border-radius: 8px; background: #fff; box-shadow: 0 0 0 4px #fff, 0 0 0 5px #e0dfdc; display: grid; place-items: center }
+.li-mark { width: 64px; height: 58px }
+.li-id > b { font-size: 22px; font-weight: 600 }
+.li-tag { font-size: 15px }
+.li-meta { font-size: 13.5px; color: rgba(0, 0, 0, .6) }
+.li-btns { display: flex; gap: 8px; margin-top: 12px }
+.li-btns > span { display: inline-flex; align-items: center; height: 34px; padding: 0 16px; border-radius: 17px; font-weight: 600; font-size: 15px }
+.li-follow { background: #0a66c2; color: #fff; gap: 5px }
+.li-site { box-shadow: inset 0 0 0 1px #0a66c2; color: #0a66c2 }
+.li-posts { display: grid; gap: 14px; margin-top: 14px }
+.lp { background: #fff; border-radius: 12px; box-shadow: 0 0 0 1px #e0dfdc; overflow: hidden }
+.lp-h { display: flex; align-items: center; gap: 10px; padding: 14px 16px 4px }
+.lp-mark { width: 40px; height: 37px }
+.lp-h b { display: block; font-size: 14.5px; font-weight: 600 }
+.lp-h div > span { font-size: 12.5px; color: rgba(0, 0, 0, .6) }
+.lp > p { padding: 8px 16px 12px; font-size: 14.5px; line-height: 1.5 }
+.lp img { width: 100% }
+.pr-end { padding: clamp(80px, 12vh, 140px) 0; background: var(--night); color: #e6edf4 }
+.pr-end h2 { font-size: clamp(32px, 4vw, 60px); letter-spacing: -.035em; color: #fff }
+.pr-end p { margin-top: 18px; color: #b8c4d0; font-size: 18px; max-width: 58ch }
+.pr-end .pr-sig { color: #fff; font-weight: 650 }
+.pr-end .pr-foot { font-size: 13.5px; color: #8fa1b3; margin-top: 40px }
+@media (max-width: 900px) { .pr-two { grid-template-columns: minmax(0, 1fr) } }
+@media (max-width: 480px) { .rc { padding: 18px } .rc-front { grid-template-columns: minmax(0, 1fr) 96px } .rc-front > b { font-size: 19px } .rc-qr .qr { width: 86px; height: 86px } .sk-by { display: none } }
+.ex-tag { display: inline-flex; align-items: center; height: 22px; padding: 0 9px; margin-left: 10px; border-radius: 999px; border: 1px solid var(--line2); color: var(--ink3); font-size: 12px; font-weight: 600; letter-spacing: 0; vertical-align: 2px; white-space: nowrap }
+.ex-top { margin: 0 0 12px }
+.bx-log .ex-tag, .case + .ex-tag, .part-v .case ~ .ex-tag { border-color: rgba(255, 255, 255, .22); color: #8fa1b3 }
+.wl > .ex-tag { margin: 0 0 12px 2px }
+.perm > .ex-tag { justify-self: start }
+@media (max-width: 520px) {
+  .perm-r { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 6px }
+  .perm-r > span:first-child { grid-column: 1 / -1; margin-top: 6px }
+  .perm-h > span:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0) }
+  .perm-h > span { font-size: 11.5px }
+}
+.one-reg { margin-top: 14px; font-size: 14px; color: var(--ink3); max-width: 420px }
