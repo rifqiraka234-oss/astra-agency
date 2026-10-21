@@ -33,7 +33,7 @@ f('peregrine', 'Tom', 'A.', 'Peregrine Routing', 'Route planning for HGV fleets 
 f('sorrel', 'Priya', 'S.', 'Sorrel Analytics', 'Bed planning forecasts for NHS hospital wards', 'Manchester', 'Jan 2024', '6 people', DEC,
   'gggggggg', ['Active, incorporated January 2024', 'Micro company', 'AI behind decisions on patient flow', 'Own forecasting models',
                'Data scientists and a clinical lead', 'Seed round closed in spring', 'Closes 8 December', 'Never contacted'],
-  ['Read the BridgeAI guide', 'Won Innovate UK funding in 2025', 'Incorporated Jan 2024'],
+  ['Read the BridgeAI guide', 'Innovate UK project ends March 2027', 'Incorporated Jan 2024'],
   "Saw Sorrel won an Innovate UK award last year and the bed planning work has moved on since")
 f('hollowbrook', 'Ben', 'K.', 'Hollowbrook AI', 'AI that checks planning applications against local policy', 'Bristol', 'Jun 2024', '5 people', ASSUR,
   'gggggagg', ['Active, incorporated June 2024', 'Micro company', 'AI that checks documents against rules', 'Own models trained on planning policy',
@@ -48,7 +48,7 @@ f('corvid', 'Nadia', 'R.', 'Corvid Shield', 'Security monitoring built for small
 f('quayside', 'Kit', 'L.', 'Quayside Autonomy', 'Autonomous yard tractors for port terminals', 'Southampton', 'Feb 2023', '14 people', OPS,
   'gggggaga', ['Active, incorporated February 2023', 'Small company', 'AI driving operational vehicles', 'Own autonomy stack',
                'Robotics and controls engineers', 'Grant funded so far', 'Closes 8 December', 'Never contacted'],
-  ['Won Innovate UK funding in 2024', 'Incorporated Feb 2023'],
+  ['Innovate UK project ends January 2027', 'Incorporated Feb 2023'],
   "Saw the yard tractor trial at Southampton is still running")
 f('tamarisk', 'Isla', 'M.', 'Tamarisk Health', 'Triage support for GP practices', 'Edinburgh', 'Sep 2024', '4 people', DEC,
   'ggggaagg', ['Active, incorporated September 2024', 'Micro company', 'AI supporting clinical triage decisions', 'Own triage model',
@@ -60,9 +60,9 @@ f('cobalt', 'Sam', 'H.', 'Cobalt Wren', 'Drone inspections of offshore wind blad
                'Pilots and two ML engineers', 'Seed round announced in 2025', 'Closes 8 December', 'Never contacted'],
   ['Incorporated May 2023', 'New contract with a wind operator on LinkedIn'],
   "Saw the new inspection contract you announced with a wind farm operator")
-f('lanternfish', 'Daniel', 'W.', 'Lanternfish AI', 'Small language models that run on factory hardware', 'Cambridge', 'Apr 2025', '6 people', FRONT,
-  'gggggaga', ['Active, incorporated April 2025', 'Micro company', 'Frontier AI with a route to scale', 'Own model architecture',
-               'Two PhDs and an ML engineer', 'Angel funded', 'Closes 11 November, three weeks out', 'Never contacted'],
+f('lanternfish', 'Daniel', 'W.', 'Lanternfish AI', 'Small language models that run on factory hardware', 'Cambridge', 'Apr 2025', '6 people', EFF,
+  'gggggaga', ['Active, incorporated April 2025', 'Micro company', 'Efficient AI on small hardware, the call’s focus', 'Own model architecture',
+               'Two PhDs and an ML engineer', 'Angel funded', 'Closes 18 November, four weeks out', 'Never contacted'],
   ['University spinout', 'Incorporated Apr 2025'],
   "Saw Lanternfish spun out of the department this spring")
 f('moorland', 'Leah', 'B.', 'Moorland Data', 'Smaller, cheaper models for climate forecasting', 'Exeter', 'Jul 2024', '5 people', EFF,
@@ -71,10 +71,11 @@ f('moorland', 'Leah', 'B.', 'Moorland Data', 'Smaller, cheaper models for climat
   ['Read the Smart grants guide', 'Incorporated Jul 2024'],
   "Saw your paper on shrinking forecast models without losing accuracy")
 f('ironwood', 'Marcus', 'T.', 'Ironwood Robotics', 'General purpose robot arms that learn from video', 'London', 'Oct 2024', '10 people', FRONT,
-  'gggggggg', ['Active, incorporated October 2024', 'Small company', 'Frontier AI for robotics', 'Own learning stack',
-               'Five engineers and a research lead', 'Seed round announced in July', 'Closes 11 November', 'Never contacted'],
-  ['Incorporated Oct 2024', 'Hiring a research engineer'],
-  "Saw the demo of the arm learning a new task from a single video")
+  'ggggggrg', ['Active, incorporated October 2024', 'Small company', 'Frontier AI for robotics', 'Own learning stack',
+               'Five engineers and a research lead', 'Seed round announced in July', 'Frontier AI closes 11 November, inside three weeks', 'Never contacted'],
+  ['New shares filed at Companies House, 30 September', 'Hiring a research engineer'],
+  "Saw the demo of the arm learning a new task from a single video", picked=False, state='held')
+
 f('blackthorn', 'Ellie', 'C.', 'Blackthorn Acoustics', 'Machine listening that hears faults in pumps early', 'Sheffield', 'Dec 2023', '6 people', EFF,
   'gggggagg', ['Active, incorporated December 2023', 'Micro company', 'Efficient models on small devices', 'Own audio models',
                'Two engineers and a PhD', 'No round announced', 'Closes 18 November', 'Never contacted'],
@@ -83,12 +84,12 @@ f('blackthorn', 'Ellie', 'C.', 'Blackthorn Acoustics', 'Machine listening that h
 f('northgate', 'Amara', 'N.', 'Northgate Cells', 'Sodium ion cells for home storage', 'Coventry', 'Jan 2024', '12 people', BATT_IP,
   'gggggggg', ['Active, incorporated January 2024', 'Small company', 'Battery innovation, the call’s scope', 'Own cell chemistry',
                'Electrochemists and a pilot line lead', 'Seed round led by a deep tech fund', 'Closes 25 November', 'Never contacted'],
-  ['Read the Investor Partnerships guide', 'Raised seed in 2025'],
+  ['Read the Investor Partnerships guide', 'New shares filed at Companies House, 9 October'],
   "Saw Northgate's first cells came off the pilot line")
 f('marram', 'Owen', 'P.', 'Marram Batteries', 'Recovering lithium from old EV packs', 'Newcastle', 'Mar 2023', '9 people', BATT_FEAS,
   'gggggggg', ['Active, incorporated March 2023', 'Micro company', 'Battery recycling is in scope', 'Own recovery process',
                'Process engineers', 'Grant and angel funded', 'Closes 2 December', 'Never contacted'],
-  ['Won Innovate UK funding in 2024', 'Incorporated Mar 2023'],
+  ['Innovate UK project ends February 2027', 'Incorporated Mar 2023'],
   "Saw the recovery rates you published for the pilot plant")
 f('copperleaf', 'Grace', 'D.', 'Copperleaf Grid', 'Software that predicts battery health in grid storage', 'Glasgow', 'Jun 2023', '8 people', BATT_FEAS,
   'gggggagg', ['Active, incorporated June 2023', 'Micro company', 'Battery feasibility work fits', 'Own health models',
@@ -98,7 +99,7 @@ f('copperleaf', 'Grace', 'D.', 'Copperleaf Grid', 'Software that predicts batter
 f('brackenfield', 'Tom', 'E.', 'Brackenfield Bio', 'Enzymes that break down PET packaging', 'Norwich', 'Feb 2024', '7 people', BIO_IP,
   'gggggggg', ['Active, incorporated February 2024', 'Micro company', 'Engineering biology product', 'Own enzyme designs',
                'Biochemists and a process lead', 'Seed round from a biotech fund', 'Closes 2 December', 'Never contacted'],
-  ['Read the Investor Partnerships guide', 'Incorporated Feb 2024'],
+  ['New shares filed at Companies House, 6 October', 'Read the Investor Partnerships guide'],
   "Saw Brackenfield's enzyme cut PET back to monomers in the lab")
 f('willowmere', 'Hannah', 'G.', 'Willowmere Biotech', 'Microbes that make colour dyes for textiles', 'Manchester', 'Sep 2023', '6 people', BIO_IP,
   'ggggggag', ['Active, incorporated September 2023', 'Micro company', 'Engineering biology product', 'Own strains',
@@ -108,12 +109,12 @@ f('willowmere', 'Hannah', 'G.', 'Willowmere Biotech', 'Microbes that make colour
 f('stillwater', 'Joe', 'F.', 'Stillwater Proteins', 'Dairy proteins made by fermentation', 'Reading', 'Nov 2023', '10 people', BIO_IP,
   'gggggggg', ['Active, incorporated November 2023', 'Small company', 'Precision fermentation is engineering biology', 'Own production strains',
                'Fermentation scientists', 'Seed round announced in spring', 'Closes 2 December', 'Never contacted'],
-  ['Hiring a fermentation scientist', 'Incorporated Nov 2023'],
+  ['New shares filed at Companies House, 2 October', 'Hiring a fermentation scientist'],
   "Saw Stillwater is hiring for the scale up work")
-f('foxglove', 'Ravi', 'J.', 'Foxglove Genomics', 'Faster crop breeding from gene data', 'Norwich', 'Apr 2023', '9 people', BIO_CRD,
-  'ggggggag', ['Active, incorporated April 2023', 'Micro company', 'Engineering biology with partners', 'Own breeding models',
-               'Geneticists and a data lead', 'Grant funded so far', 'Closes 3 November, two weeks out', 'Never contacted'],
-  ['Won Innovate UK funding in 2023'],
+f('foxglove', 'Ravi', 'J.', 'Foxglove Genomics', 'Faster crop breeding from gene data', 'Norwich', 'Apr 2023', '9 people', BIO_IP,
+  'gggggagg', ['Active, incorporated April 2023', 'Micro company', 'Engineering biology product, the call’s scope', 'Own breeding models',
+               'Geneticists and a data lead', 'New shares filed, the investor needs to be a selected partner', 'Closes 2 December, six weeks out', 'Never contacted'],
+  ['Innovate UK project ends February 2027', 'New shares filed at Companies House, 14 October'],
   "Saw Foxglove's breeding work with a seed company")
 f('elderflower', 'Zara', 'I.', 'Elderflower Labs', 'Fungal leathers for furniture makers', 'London', 'Aug 2024', '5 people', BIO_IP,
   'ggggaagg', ['Active, incorporated August 2024', 'Micro company', 'A biology made material', 'Own growing process',
@@ -121,15 +122,17 @@ f('elderflower', 'Zara', 'I.', 'Elderflower Labs', 'Fungal leathers for furnitur
   ['Incorporated Aug 2024'],
   "Saw the chair you made with a furniture studio")
 f('saltmarsh', 'Owen', 'S.', 'Saltmarsh Power', 'Tidal kites for river estuaries', 'Swansea', 'May 2022', '13 people', FOAK,
-  'gggggagg', ['Active, incorporated May 2022', 'Small company', 'Climate tech first of a kind', 'Own kite design',
-               'Marine engineers', 'A larger raise needed for the first array', 'Closes 5 November, two weeks out', 'Never contacted'],
+  'gggggarg', ['Active, incorporated May 2022', 'Small company', 'Climate tech first of a kind', 'Own kite design',
+               'Marine engineers', 'A larger raise needed for the first array', 'FOAK Builder closes 5 November, inside three weeks', 'Never contacted'],
   ['Incorporated May 2022', 'Grid connection news on LinkedIn'],
-  "Saw the grid connection news for the estuary site")
+  "Saw the grid connection news for the estuary site", picked=False, state='held')
+
 f('heathland', 'Ellie', 'V.', 'Heathland Hydrogen', 'Hydrogen from farm waste for tractors', 'Shrewsbury', 'Oct 2022', '11 people', FOAK,
-  'ggggggag', ['Active, incorporated October 2022', 'Small company', 'Climate tech first of a kind', 'Own reactor',
-               'Chemical engineers', 'Seed round in 2024', 'Closes 5 November', 'Never contacted'],
+  'ggggggrg', ['Active, incorporated October 2022', 'Small company', 'Climate tech first of a kind', 'Own reactor',
+               'Chemical engineers', 'Seed round in 2024', 'FOAK Builder closes 5 November, inside three weeks', 'Never contacted'],
   ['Incorporated Oct 2022'],
-  "Saw the first tractor running on your hydrogen")
+  "Saw the first tractor running on your hydrogen", picked=False, state='held')
+
 f('fenwick', 'Daniel', 'R.', 'Fenwick Optics', 'Lenses for laser welding cameras', 'Oxford', 'Jun 2023', '8 people', DE,
   'ggaggggg', ['Active, incorporated June 2023', 'Micro company', 'Needs a German SME partner, likely from the fair', 'Own optics',
                'Optical engineers', 'Revenue from first customers', 'Closes 1 December', 'Never contacted'],
@@ -163,7 +166,7 @@ f('redshank', 'Sam', 'B.', 'Redshank Materials', 'Concrete aggregate from demoli
 f('bellwether', 'Priya', 'K.', 'Bellwether Clinical', 'Continuous manufacturing for generic medicines', 'Nottingham', 'Nov 2022', '16 people', MEDS,
   'gggggggg', ['Active, incorporated November 2022', 'Small company', 'Sustainable medicines manufacturing', 'Own flow process',
                'Process chemists', 'Series A in 2025', 'Closes 2 December', 'Never contacted'],
-  ['Won Innovate UK funding in 2024'],
+  ['Innovate UK project ends April 2027'],
   "Saw the flow process results you shared at the Nottingham event")
 f('larkspur', 'Hannah', 'L.', 'Larkspur Diagnostics', 'A finger prick test for sepsis markers', 'London', 'Jun 2022', '12 people', EIC,
   'ggggggag', ['Active, incorporated June 2022', 'Small company', 'Deep tech, TRL 6 to 8, the EIC’s range', 'Own test cartridge',
@@ -198,18 +201,20 @@ f('rivermint', 'Zara', 'C.', 'Rivermint Foods', 'Fermented fats for plant based 
 f('tinderbox', 'Ravi', 'M.', 'Tinderbox Mycelium', 'Fire safe insulation grown from mycelium', 'Bristol', 'Oct 2023', '8 people', BIO_IP,
   'gggggggg', ['Active, incorporated October 2023', 'Micro company', 'Engineering biology material', 'Own growing method',
                'Biologists and a fire test lead', 'Seed round in 2025', 'Closes 2 December', 'Never contacted'],
-  ['Passed a fire test, on LinkedIn'],
+  ['New shares filed at Companies House, 29 September', 'Passed a fire test, on LinkedIn'],
   "Saw the fire test result you posted")
 f('lumenfold', 'Amara', 'D.', 'Lumenfold Solar', 'Flexible solar film for warehouse roofs', 'Swindon', 'Apr 2022', '14 people', FOAK,
-  'gggggagg', ['Active, incorporated April 2022', 'Small company', 'Climate tech first of a kind plant', 'Own film process',
-               'Materials engineers', 'A bigger raise needed for the plant', 'Closes 5 November', 'Never contacted'],
+  'gggggarg', ['Active, incorporated April 2022', 'Small company', 'Climate tech first of a kind plant', 'Own film process',
+               'Materials engineers', 'A bigger raise needed for the plant', 'FOAK Builder closes 5 November, inside three weeks', 'Never contacted'],
   ['Incorporated Apr 2022'],
-  "Saw Lumenfold's first warehouse roof go live")
+  "Saw Lumenfold's first warehouse roof go live", picked=False, state='held')
+
 f('vantage', 'Tom', 'R.', 'Vantage Heatpumps', 'Heat pumps for tower blocks', 'Manchester', 'Feb 2022', '18 people', FOAK,
-  'ggggggag', ['Active, incorporated February 2022', 'Small company', 'Climate tech first of a kind', 'Own compressor design',
-               'Engineers and installers', 'Series A in 2025', 'Closes 5 November', 'Never contacted'],
+  'ggggggrg', ['Active, incorporated February 2022', 'Small company', 'Climate tech first of a kind', 'Own compressor design',
+               'Engineers and installers', 'Series A in 2025', 'FOAK Builder closes 5 November, inside three weeks', 'Never contacted'],
   ['Hiring a product engineer'],
-  "Saw the first tower block in Salford running on your heat pumps")
+  "Saw the first tower block in Salford running on your heat pumps", picked=False, state='held')
+
 f('halcyon', 'Kit', 'G.', 'Halcyon Qubits', 'Control chips for quantum computers', 'Glasgow', 'Sep 2023', '9 people', DE,
   'ggaggggg', ['Active, incorporated September 2023', 'Micro company', 'Partner is a German lab, an SME is still needed', 'Own chip design',
                'Chip designers and a physicist', 'Seed round in 2025', 'Closes 1 December', 'Never contacted'],

@@ -6,6 +6,8 @@ from html import escape as esc
 from .common import SIZE, live_count
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+with open(os.path.join(HERE, 'data', 'timeline.json'), encoding='utf-8') as _f:
+    TIMELINE = json.load(_f)
 
 CHECKS = [
     ('UK company', 'Registered and active at Companies House'),
@@ -14,7 +16,7 @@ CHECKS = [
     ('Something new', 'Real development work, not resale'),
     ('Team to deliver', 'Technical people to run the project'),
     ('Can fund its share', 'A sign it can cover the match'),
-    ('Time to apply', 'Enough working days before the deadline'),
+    ('Time to apply', 'More than three weeks before the deadline'),
     ('Free to contact', 'Not a client, not contacted in 90 days'),
 ]
 
@@ -39,6 +41,7 @@ def side(B, counts):
     items = [
         ('v-today', 'Today', B.glyph('raarragg', ''), str(counts['today']), ''),
         ('v-founders', 'Founders', '<span class="sig n" aria-hidden="true"></span>', f"{counts['fit']:,}", ''),
+        ('v-partners', 'Partners', '<span class="sig g" aria-hidden="true"></span>', str(sum(len(r) for _, r in PARTNERS)), ''),
         ('v-calls', 'Calls', '<span class="sig i" aria-hidden="true"></span>', str(counts['calls']), ''),
         ('v-inbox', 'Inbox', '<span class="sig g" aria-hidden="true"></span>', str(counts['inbox']), ' hot'),
         ('v-guides', 'Guides', '<span class="sig a" aria-hidden="true"></span>', str(counts['guides']), ''),
@@ -48,7 +51,7 @@ def side(B, counts):
     ]
     nav = ''.join(
         f'<button type="button" data-view="{v}" aria-current="false"><span class="ic">{ic}</span>{t}'
-        f'{f"<span class=\"ct{hot}\">{c}</span>" if c else ""}</button>' for v, t, ic, c, hot in items)
+        f'{f"<span class=\"ct{hot}\"{" data-picked" if v == "v-today" else ""}>{c}</span>" if c else ""}</button>' for v, t, ic, c, hot in items)
     return f'''<aside class="side" aria-label="Desk">
   <a class="logo" href="/" aria-label="BidX">{B.LOGO_SVG}</a>
   <p class="tag">Outreach</p>
@@ -156,14 +159,24 @@ def founders_data():
     return m.F
 
 
+def why_now(fd):
+    for x in fd['signals']:
+        if x.startswith('Innovate UK project ends'):
+            return 'Past winner'
+        if x.startswith('New shares filed'):
+            return 'Just raised'
+    return ''
+
+
 def lrow(B, fd, i):
     c = fd['_call']
     right = dl(c['closes']) if c else '<span class="dl">&middot;</span>'
     st = {'ready': ('Ready', ''), 'held': ('Held', ' sk')}[fd['state']]
     return (f'<li role="none"><button type="button" class="lrow" role="option" aria-selected="false" data-id="{fd["id"]}" '
-            f'data-first="{esc(fd["first"])}" data-state="{fd["state"]}">'
+            f'data-first="{esc(fd["first"])}" data-state="{fd["state"]}"'
+            f'{f' data-shut="{c["closes"]}"' if c else ""}{' data-gap="0"' if fd["call"] == "eic" else ""}>'
             f'{B.glyph(fd["checks"], "", "Fit, " + fit_label(fd["checks"]))}'
-            f'<span><span class="nm">{esc(fd["first"])} {esc(fd["last"])}, {esc(fd["company"])}</span>'
+            f'<span><span class="nm">{esc(fd["first"])} {esc(fd["last"])}, {esc(fd["company"])}{f' <span class="why">{why_now(fd)}</span>' if why_now(fd) else ''}</span>'
             f'<span class="wt">{esc(fd["what"])}</span></span>'
             f'<span class="rt">{right}<span class="st{st[1]}">{st[0]}</span></span></button></li>')
 
@@ -182,7 +195,7 @@ def detail(B, fd, i):
     c = fd['_call']
     checks = ''.join(f'<li class="{s}"><span><b>{esc(CHECKS[k][0])}</b><span>{esc(fd["reasons"][k])}</span></span></li>'
                      for k, s in enumerate(fd['checks']))
-    sig = ''.join(f'<span class="sig i">{esc(x)}</span>' for x in fd['signals'])
+    sig = ''.join(f'<span class="sig {"g" if x.startswith(("Innovate UK project ends", "New shares filed")) else "i"}">{esc(x)}</span>' for x in fd['signals'])
     href = f'/calls/{c["slug"]}/' if c.get('slug') else c['url']
     size = esc(SIZE.get(c['id']) or (c['size'][0].lstrip('- ') if c.get('size') else ''))
     msg = message(fd, i)
@@ -256,7 +269,7 @@ def inbox_view(B):
         rows.append(f'<li role="none"><button type="button" class="lrow" role="option" data-id="{t["id"]}" data-intent="{t["intent"]}" aria-selected="false">'
                     f'<span class="sig {cls}" aria-hidden="true"></span><span><span class="nm">{esc(t["first"])} {esc(t["last"])}, {esc(t["company"])}</span>'
                     f'<span class="wt">{esc(t["reply"])}</span></span><span class="rt"><span class="mono" style="color:var(--ink3)">{esc(t["when"].split(",")[0])}</span>'
-                    f'<span class="st{" q" if t["intent"] == "question" else ""}">{esc(t["label"])}</span></span></button></li>')
+                    f'<span class="st{" amb" if t["intent"] == "question" else ""}">{esc(t["label"])}</span></span></button></li>')
         sent = f'<div class="bub us">{esc(t["sent"])}<small>Simon, LinkedIn</small></div>' if t['sent'] else ''
         if t['intent'] == 'call':
             act = (f'<div class="blk"><h4>Book the funding call</h4><div class="slots">'
@@ -325,6 +338,27 @@ def guides_view(calls=()):
 </section>'''
 
 
+def window(c):
+    """Where a call sits in the outreach window. Start in the week it opens, around the briefing, stop three weeks before close."""
+    import datetime as dt
+    t = TIMELINE.get(str(c['id']))
+    left = days_left(c['closes'])
+    if not t:
+        if not str(c['id']).startswith('eic') and left < 21:
+            return '<span class="win st sk">Too close to start</span>', '<small>Closes 11am today</small>' if left < 1 else ''
+        return '<span class="win st">Rolling, batched monthly</span>', ''
+    since = (dt.date(2026, 10, 21) - dt.date.fromisoformat(t['open'])).days
+    if left < 21:
+        w = '<span class="win st sk">Too close to start</span>'
+    elif since <= 7:
+        w = '<span class="win st ok">Opened this week, start now</span>'
+    else:
+        w = '<span class="win st ok">In the window</span>'
+    br = f'Briefing {fmt_close(t["briefing"])}' if t.get('briefing') else 'No briefing listed'
+    res = fmt_close(t["notified"]) + (f' {t["notified"][:4]}' if not t["notified"].startswith('2026') else '')
+    return w, f'<small>{br}. Results {res}</small>'
+
+
 def calls_view(B, calls, matched):
     rows = []
     for c in calls:
@@ -339,13 +373,17 @@ def calls_view(B, calls, matched):
             m = re.search(r'(\d+)%', c['odds'])
             odds = f'{m.group(1)}%' if m else ''
         bars = ''.join(f'<i style="height:{6 + 3 * k}px"></i>' for k in range(min(n, 5)))
-        rows.append(f'''<tr><td><b><a href="{href}">{esc(c["name"])}</a></b><small>{size}</small></td>
+        win, when = window(c)
+        t = TIMELINE.get(str(c['id']))
+        attrs = f' data-open="{t["open"]}T00:00:00+01:00" data-shut="{c["closes"]}"' if t else ''
+        rows.append(f'''<tr{attrs}><td><b><a href="{href}">{esc(c["name"])}</a></b><small>{size}</small></td>
 <td class="hide-s">{lead}</td><td class="hide-s">{odds or "Not stated"}</td>
 <td><span class="dotf" data-close="{c["closes"]}"><span class="dl-n">{days_left(c["closes"]):02d}</span></span><small>{fmt_close(c["closes"])}</small></td>
+<td>{win}{when}</td>
 <td>{f'<span class="bars" aria-hidden="true">{bars}</span> <b>{n}</b>' if n else '<span class="small">None today</span>'}</td></tr>''')
     return f'''<section class="view" id="v-calls" data-title="Calls" aria-label="Calls">
-  <div class="pane"><div class="pane-h"><h2>Every call that&rsquo;s open, nearest deadline first</h2><span class="sp"></span><span class="small">From the Innovation Funding Service and the EIC, checked each morning</span></div>
-  <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Call</th><th class="hide-s">Who can lead</th><th class="hide-s">Innovate UK&rsquo;s odds</th><th>Days left</th><th>Founders picked today</th></tr></thead>
+  <div class="pane"><div class="pane-h"><h2>Every call that&rsquo;s open, nearest deadline first</h2><span class="sp"></span><span class="small">New outreach starts the week a call opens and stops three weeks before it closes</span></div>
+  <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Call</th><th class="hide-s">Who can lead</th><th class="hide-s">Innovate UK&rsquo;s odds</th><th>Days left</th><th>Outreach</th><th>Founders picked today</th></tr></thead>
   <tbody>{"".join(rows)}</tbody></table></div></div>
 </section>'''
 
@@ -363,18 +401,18 @@ def founders_view(B, fds):
         rows.append(f'<tr><td>{B.glyph(fd["checks"], "", "Fit, " + fit_label(fd["checks"]))}</td><td><b>{esc(fd["company"])}</b><small>{esc(fd["what"])}</small></td>'
                     f'<td class="hide-s">{cname}</td><td>{st}</td></tr>')
     return f'''<section class="view" id="v-founders" data-title="Founders" aria-label="Founders">
-  <div class="run" style="margin-bottom:16px"><div class="run-h"><h2>186 fit a call today. 40 made the list.</h2>
-  <p>The best fits with the nearest deadlines go first, and the rest wait their turn. One red dot holds a founder back, whatever the others say.</p></div>
+  <div class="run" style="margin-bottom:16px"><div class="run-h"><h2>186 fit a call today. {sum(1 for f in fds if f["picked"])} made the list.</h2>
+  <p>Past Innovate UK winners and fresh raises go first, then the nearest deadlines. Nobody is started on a call that closes inside three weeks. One red dot holds a founder back, whatever the others say.</p></div>
   <div class="capline">{B.glyph("gggggggg", "", "All eight clear")} Clear {B.glyph("ggggggag", "", "Seven clear, one likely")} Likely, worth checking on the call {B.glyph("gggggggr", "", "One failing")} Held</div></div>
   <div class="pane"><div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Fit</th><th>Company</th><th class="hide-s">Matched call</th><th>Status</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>
-  <p class="small" style="padding:14px 20px 18px">The 40 picked today, then {sum(1 for f in fds if not f["picked"])} held back and why. The other 146 that fit a call wait for a later day, nearest deadline first.</p></div>
+  <p class="small" style="padding:14px 20px 18px">The {sum(1 for f in fds if f["picked"])} picked today, then {sum(1 for f in fds if not f["picked"])} held back and why. The other {186 - sum(1 for f in fds if f["picked"])} that fit a call wait for a later day, strongest signal first.</p></div>
 </section>'''
 
 
 LANES = [('lem', 'lemlist'), ('cl', 'Claude'), ('team', 'BidX team'), ('site', 'bidx.ai')]
 # (id, lane, column, title, line under it)
 NODES = [
-    ('find', 0, 0, 'Find', 'People Database'), ('guides', 3, 0, 'Guides', 'Readers tracked'),
+    ('find', 0, 0, 'Find', 'Winners, raises'), ('guides', 3, 0, 'Guides', 'Readers tracked'),
     ('match', 1, 1, 'Match', 'Eight checks'), ('write', 1, 2, 'Write', 'In Simon&#8217;s voice'),
     ('approve', 2, 3, 'Approve', 'Edit, approve'), ('send', 0, 4, 'Send', 'LinkedIn and email'),
     ('reply', 0, 5, 'Replies land', 'One inbox'), ('sort', 1, 6, 'Sort and draft', 'Intent, answer'),
@@ -431,9 +469,9 @@ def flow_svg():
 
 
 STEPS = [
-    ('lem', 'lemlist', 'Find', "lemlist&rsquo;s People Database finds founders and CEOs of UK companies under 50 people, in the sectors the open calls fund. Watch lists add the moments that matter, a raise, a technical hire, a company reading a bidx.ai guide. Companies House and Innovate UK&rsquo;s list of past winners come in as signals of their own.",
-     ['People Database', 'Watch lists', 'External signals']),
-    ('cl', 'Claude', 'Match', "Every morning Claude takes the new founders and runs the eight checks against every call open on the Innovation Funding Service and the EIC. It reads their site, their Companies House record and their LinkedIn, and holds anyone a rule stops, with the reason.",
+    ('lem', 'lemlist', 'Find', "Two lists come first. Past Innovate UK winners whose project ends in the next six months, from UKRI&rsquo;s published list, and companies that have just filed new shares at Companies House, the public trace of a raise. Both go into lemlist as signals, the People Database finds the founder, and watch lists add hiring and guide readers.",
+     ['UKRI winners list', 'Companies House filings', 'People Database', 'Watch lists']),
+    ('cl', 'Claude', 'Match', "Every morning Claude runs the eight checks against every call open on the Innovation Funding Service and the EIC. It starts founders in the week a call opens, around its briefing, and never on a call that closes inside three weeks. It reads their site, Companies House record and LinkedIn, and holds anyone a rule stops, with the reason.",
      ['Eight checks', 'Live call list', 'Never picked rules']),
     ('cl', 'Claude', 'Write', "For each founder who fits, Claude writes the connection note, the first message and one follow up in Simon&rsquo;s voice, with the call&rsquo;s own figures. They&rsquo;re saved on the lead in lemlist as custom fields the campaign reads.",
      ['lemlist custom fields']),
@@ -445,7 +483,7 @@ STEPS = [
      ['Inbox', 'Interest score', 'Webhook']),
     ('team', 'BidX team', 'Book', "You see it in Inbox, send the answer or pick a slot, and the funding call is booked through the BidX booking page.",
      ['Inbox view', 'Booking page']),
-    ('lem', 'lemlist', 'Learn', "lemlist&rsquo;s campaign stats feed Results, replies and calls booked by call, so next month&rsquo;s plan comes from real numbers. Guide readers and results go back into the next morning&rsquo;s search.",
+    ('lem', 'lemlist', 'Learn', "lemlist&rsquo;s campaign stats feed Results, replies and calls booked by call, so next month&rsquo;s plan comes from real numbers. The week a call&rsquo;s results come out, founders in that sector hear about the next round.",
      ['Campaign stats']),
 ]
 
@@ -462,6 +500,40 @@ def how_view():
   <div class="flowwrap">{flow_svg()}</div></div>
   <div class="pane" style="margin-bottom:16px"><div class="pane-h"><h2>Every working day</h2></div><ol class="dayline">{days}</ol></div>
   <ol class="hsteps">{cards}</ol>
+</section>"""
+
+
+PARTNERS = [
+    ('Investor partners', [
+        ('Innovate UK&rsquo;s selected investor partners', 'The battery and engineering biology investor partnership calls need a selected investor behind each SME, and on the battery call the investor invites them. UKRI publishes the list.',
+         'We write the grant for the company they back, so their round goes further.', 'List to build'),
+    ]),
+    ('Accelerators', [
+        ('Founders Factory', 'Lists 500+ companies in its portfolio on its own site.', 'A free grant clinic for the cohort, one session per open call.', 'Not contacted'),
+        ('Carbon13', 'Says it has invested in over 100 climate tech start ups since 2021.', 'A free grant clinic for the cohort, one session per open call.', 'Not contacted'),
+        ('Entrepreneur First', 'Lists its companies by location, year and stage.', 'A free grant clinic for the London cohort.', 'Not contacted'),
+        ('Techstars London', 'Next class starts on 8 March 2027, applications close on 18 November.', 'A grant session inside the programme, before demo day.', 'Not contacted'),
+    ]),
+    ('R&amp;D tax firms with no grants service', [
+        ('Leyton UK', 'Its UK grants page now redirects to patent box.', 'A referral fee, or grants written for their clients.', 'Not contacted'),
+    ]),
+    ('Lenders', [
+        ('Fundsquire', 'Advances cash against grant awards and lists grant advisers as trusted partners.', 'Swap referrals. Winners need cash flow, and borrowers need grants won.', 'Not contacted'),
+    ]),
+]
+
+
+def partners_view():
+    groups = ''
+    for g, rows in PARTNERS:
+        trs = ''.join(f'<tr><td><b>{n}</b><small>{w}</small></td><td>{o}</td><td><span class="st{" amb" if s != "Not contacted" else ""}">{s}</span></td></tr>' for n, w, o, s in rows)
+        groups += f'<tr class="grp"><th colspan="3" scope="colgroup">{g}</th></tr>{trs}'
+    n = sum(len(r) for _, r in PARTNERS)
+    return f"""<section class="view" id="v-partners" data-title="Partners" aria-label="Partners">
+  <div class="run" style="margin-bottom:16px"><div class="run-h"><h2>One partner brings a whole cohort.</h2>
+  <p>Accelerators, investor partners, lenders and R&amp;D tax firms with no grants service of their own. A partner gets a different sequence from a founder, a free clinic or a referral fee, and Simon writes to them himself.</p></div></div>
+  <div class="pane"><div class="pane-h"><h2>{n} partners to start with</h2><span class="sp"></span><span class="small">Every fact here was checked on the partner&rsquo;s or the funder&rsquo;s own pages, 21 October</span></div>
+  <div style="overflow-x:auto"><table class="tbl ptbl"><thead><tr><th>Partner, and why they matter</th><th>The offer</th><th>Status</th></tr></thead><tbody>{groups}</tbody></table></div></div>
 </section>"""
 
 
@@ -491,8 +563,8 @@ def results_view():
 def setup_view(B):
     src = [
         ('lemlist People Database', 'Founders and CEOs of UK companies under 50 people, by sector, size and region', True),
-        ('Companies House', 'New companies, SIC codes, officers and accounts size, for every UK company', True),
-        ('Innovate UK funded projects', 'Who has won before, by company number, from UKRI&rsquo;s published list', True),
+        ('Companies House', 'New companies and new share filings, the public trace of a raise, for every UK company', True),
+        ('Innovate UK funded projects', 'Past winners and when their projects end, by company number, from UKRI&rsquo;s published list', True),
         ('Innovation Funding Service', 'Every open call, its rules, size and deadline', True),
         ('EIC Accelerator', 'Batch dates and the grant only route for UK companies', True),
         ('lemlist watch lists', 'A raise, a technical hire, a new role, and companies reading a bidx.ai guide', True),
@@ -501,7 +573,7 @@ def setup_view(B):
     srcs = ''.join(f'<li><span><b>{t}</b><span>{d}</span></span><button type="button" class="switch" role="switch" aria-checked="{"true" if on else "false"}" aria-label="{t}"></button></li>' for t, d, on in src)
     rules = ''.join(f'<li>{r}</li>' for r in [
         'Already a BidX client, or in a live proposal', 'Contacted in the last 90 days, by anyone at BidX', 'Asked us not to get in touch',
-        'Registered outside the UK, or dissolved', 'A call that closes in under ten working days', 'No technical people on the team'])
+        'Registered outside the UK, or dissolved', 'A call that closes inside three weeks', 'No technical people on the team'])
     return f'''<section class="view" id="v-setup" data-title="Setup" aria-label="Setup">
   <div class="setg">
     <div class="pane"><h2>Where founders come from</h2><ul class="src">{srcs}</ul></div>
@@ -515,6 +587,7 @@ def setup_view(B):
     </div>
     <div class="pane"><h2>Sending</h2>
       <div class="field"><label for="s-hours">Sending hours</label><select id="s-hours"><option>Weekdays, 9.40am to 4.30pm UK</option><option>Weekdays, 8am to 6pm UK</option></select></div>
+      <div class="field"><label for="s-cap">Writing capacity</label><select id="s-cap"><option>12 applications a month, so bookings never outrun the writers</option><option>8 applications a month</option><option>16 applications a month</option></select></div>
       <div class="field"><label for="s-li">LinkedIn requests a day</label><select id="s-li"><option>20, inside LinkedIn&rsquo;s limit of about 100 a week</option><option>15</option><option>10</option></select></div>
       <div class="field"><label for="s-over">Founders over that</label><select id="s-over"><option>Email from Simon&rsquo;s address, with a one line opt out</option><option>Wait for tomorrow</option></select></div>
       <p class="small" style="margin-top:10px">Notes on connection requests need Simon&rsquo;s LinkedIn on Premium or Sales Navigator. A free account gets three a month.</p>
@@ -533,9 +606,9 @@ def build(B):
     for fd in fds:
         fd['_call'] = byid.get(fd['call'])
     picked = [fd for fd in fds if fd['picked']]
+    picked.sort(key=lambda fd: (0 if why_now(fd) else 1, fd['_call']['closes'], -fd['checks'].count('g')))
     for k, fd in enumerate(picked):
         fd['channel'] = 'LinkedIn' if k % 2 == 0 else 'Email'
-    picked.sort(key=lambda fd: (fd['_call']['closes'], -fd['checks'].count('g')))
     held = [fd for fd in fds if not fd['picked']]
     matched = {}
     for fd in picked:
@@ -549,9 +622,9 @@ def build(B):
     tabs = ''.join(f'<button type="button" data-f="{f}" aria-pressed="{"true" if f == "all" else "false"}">{l}</button>'
                    for f, l in [('all', 'All'), ('ready', 'Ready'), ('ok', 'Approved'), ('skip', 'Skipped')])
     stages = [
-        ('1,284', 'Fresh signals', 'New companies, hires, raises and guide readers', ''),
+        ('1,284', 'Fresh signals', 'Past winners, new share filings, hires and guide readers', ''),
         ('186', 'Fit a call', 'Checked against every open Innovate UK call and the EIC', ''),
-        (f'<span data-cap>{len(picked)}</span>', 'Picked for today', 'The best fits, nearest deadlines first', ' hl'),
+        (f'<span data-cap>{len(picked)}</span>', 'Picked for today', 'Past winners and fresh raises first, then deadlines', ' hl'),
         (str(len(picked)), 'Drafted', 'A first message each, in Simon&rsquo;s voice', ''),
         ('0', 'Approved', 'Goes out between 9.40am and 4.30pm', ''),
     ]
@@ -559,11 +632,12 @@ def build(B):
                       for k, (n, l, s, c) in enumerate(stages))
     today = f'''<section class="view" id="v-today" data-title="Today" aria-label="Today">
   <div class="run">
-    <div class="run-h"><h2><span class="today-date">Tuesday 20 October</span>. {len(picked)} founders to reach.</h2><p>Every one fits a call that&rsquo;s open now, and every message is written for them. Read, edit, approve. <a href="#how" data-go="v-how">How it works</a></p></div>
+    <div class="run-h"><h2><span class="today-date">Wednesday 21 October</span>. <span data-picked>{len(picked)}</span> <span data-picked-w>founders</span> to reach.</h2><p>Past winners and fresh raises first, each matched to a call that&rsquo;s open now and more than three weeks from closing. Read, edit, approve. <a href="#how" data-go="v-how">How it works</a></p><p class="heldnote" hidden></p></div>
     <div class="stages">{st_html}</div>
     <div class="capline">
       <label class="cap" for="cap">Daily number from tomorrow <input type="range" id="cap" min="30" max="50" step="1" value="{len(picked)}"> <output id="cap-o" for="cap">{len(picked)} a day</output></label>
       <span class="small">Up to 20 on LinkedIn, the rest by email</span>
+      <span>Writing slots free this month <b>9</b> of 12</span>
       <span>Ready <b data-count="ready">{len(picked)}</b></span><span>Approved <b data-count="ok">0</b></span><span>Skipped <b data-count="skip">0</b></span>
       <span class="sp" style="flex:1"></span>
       <button type="button" class="btn pri sm" id="approve-all">Approve all ready</button>
@@ -577,7 +651,7 @@ def build(B):
   </div>
 </section>'''
 
-    body = (today + founders_view(B, picked + held) + calls_view(B, shown_calls, matched) + inbox_view(B) + guides_view(calls)
+    body = (today + founders_view(B, picked + held) + partners_view() + calls_view(B, shown_calls, matched) + inbox_view(B) + guides_view(calls)
             + results_view() + setup_view(B) + how_view())
     css_v, dcss_v, js_v = B.ver('assets/site.css'), B.ver('assets/desk.css'), B.ver('assets/desk.js')
     html = f'''<!doctype html>
@@ -600,7 +674,7 @@ def build(B):
 <div class="app">
 {side(B, counts)}
 <main class="main" id="desk-main">
-  <header class="bar"><h1>Today</h1><span class="date mono"><span class="today-date">Tuesday 20 October</span></span><span class="sp"></span>
+  <header class="bar"><h1>Today</h1><span class="date mono"><span class="today-date">Wednesday 21 October</span></span><span class="sp"></span>
     <a class="btn sec sm" href="/">View bidx.ai</a></header>
   {body}
   <p class="foot-note">Founders, companies, replies, results and the connections shown on this desk are sample data. Calls, rules, amounts and deadlines are the funders&rsquo; own, taken from the Innovation Funding Service and the EIC on 20 October 2026.</p>

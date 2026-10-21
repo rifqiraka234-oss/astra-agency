@@ -75,8 +75,9 @@ html:not(.js) .view{display:block;border-top:6px solid var(--line)}
 .st{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:2px 6px;border-radius:5px;background:var(--mist);color:var(--ink3)}
 .st.ok{background:var(--green-soft);color:var(--green-t)}
 .st.sk{background:var(--red-soft);color:var(--red-t)}
-.st.q{background:var(--amber-soft);color:var(--amber-t)}
-.lrow.gone{opacity:.55}
+.st.amb{background:var(--amber-soft);color:var(--amber-t)}
+.lrow.gone .glyph{opacity:.35}
+.lrow.gone .wt{color:var(--ink3)}
 
 .det{padding:20px 22px 22px;display:none}
 .det.on{display:block}
@@ -254,3 +255,10 @@ html:not(.js) .thread{display:block;border-top:1px solid var(--line)}
 @media (max-width:560px){.hsteps,.dayline{grid-template-columns:minmax(0,1fr)}}
 .msg-s{padding:10px 16px;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink3)}
 .msg-s b{color:var(--ink);font-weight:600;margin-left:6px}
+.lrow .why{display:inline-block;margin-left:6px;font-size:11px;font-weight:600;padding:1px 7px;border-radius:7px;background:var(--green-soft);color:var(--green-t);vertical-align:1px}
+.tbl .win{display:inline-block;margin-bottom:4px}
+.ptbl tr.grp th{background:var(--mist);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink3);text-align:left;padding:10px 14px}
+.ptbl td small{display:block;margin-top:4px}
+.ptbl td:last-child{white-space:nowrap}
+.heldnote{margin-top:6px;font-size:13.5px;color:var(--amber-t)}
+.held-b{margin:0 0 14px;padding:10px 14px;border-radius:10px;background:var(--amber-soft);color:var(--amber-t);font-size:13.5px}

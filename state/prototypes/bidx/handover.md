@@ -11,7 +11,9 @@ Internal. For Raka and the next builder, never for the client.
   - /fit/ the seven question fit check, the founder's eight dots, matching calls, booking or email
 - Netlify project astra-bidx-prototype, id a067db1c-6da3-487e-8556-1b01bbac0000, deploys 6ad85af98c800e2f20111c45 then 6ad85d255e6cbbaa04b44884 (contractions in the sample
   messages and bumps), then 6ad8714dc92da7d5be0b9c97 (the How it works view, home labels removed, "before you"
-  rewritten), each verified the same way, every file fetched and matched.
+  rewritten), then 6ad89800c01f7d8cae1bb80e (LinkedIn limits), then 6ad8caee416cdb4f878bb07b and
+  6ad8cf1a9581f3e89564ecda (the go to market pivot, see below), each verified the same way, every file fetched and
+  matched. The last one, 21 Oct afternoon, 60 served files, 39 pages identical by visible text, 21 assets by sha256.
   Team SSO switched off, no password. Every page carries noindex, nofollow.
 - Source, state/prototypes/bidx/build (python3 build.py writes ../site). The deployed folder is ../site.
 
@@ -30,8 +32,9 @@ already looking for grant help likely never come across BidX. It offered "a cont
 publishes grant guides founders search for and reaches 30 to 50 matching startups a day for those funding calls".
 
 - Guides founders search for. Three guides written from the funders' own pages plus a page per open call.
-- 30 to 50 matching startups a day. The desk picks 40 by default from a 30 to 50 slider, each matched to an open
-  call through eight checks drawn as BidX's own logo dots, each with a first message in Simon's voice.
+- 30 to 50 matching startups a day. The desk picks 35 by default from a 30 to 50 slider, up to 20 by LinkedIn and the
+  rest by email, each matched to an open call through eight checks drawn as BidX's own logo dots, each with a first
+  message in Simon's voice.
 - For those funding calls. Every CTA is BidX's real booking widget,
   https://get.bidx.ai/widget/bookings/book-your-free-consultation-and-win-100k-2m-funding
 - The loop closes. Guide readers come back to the desk as a signal, replies land in the Inbox with intent tags and a
@@ -122,7 +125,8 @@ last three by swapping text and colour, is no.
 
 ## The delivery
 
-Drafted in state/drafted_2026-10-21-aaron-delivery.md, 82 words, check-drafts.py PASS. Not sent. Needs Raka's word.
+Drafted in state/drafted_2026-10-21-aaron-delivery.md, rewritten 21 Oct after the pivot, 79 words, check-drafts.py
+PASS. It's about the outreach system only, the guides line was cut. Not sent. Needs Raka's word.
 Re-pull the thread and fetch the live desk again immediately before sending.
 
 
@@ -148,3 +152,50 @@ build this kind of thing himself. Objections, most damaging first, and what was 
    Planned on the desk's own Guides board, now the Smart grants guide, which covers the EIC.
 6. **Proof it works.** Results are sample. Astra's own lemlist numbers would answer it on a call, but they tell him our
    own outreach runs this way. Raka's call.
+
+
+## The go to market pivot, 21 Oct afternoon (Raka, "yes make those changes")
+
+Why. The research in research/gtm/ showed Aaron already runs the content side at GrantUp (212 grant pages in its
+sitemap), both founders now run Panda, an app builder that sells against agencies, and BidX's own channels are quiet
+(Meta ads stopped 12 Dec 2025). So the desk now leads with who to reach and when, not with content.
+
+What changed on the desk.
+- Today puts past Innovate UK winners whose project is ending (tagged Past winner) and founders who just filed new
+  shares (tagged Just raised) first. 9 of the 35 carry a tag, the rest come from hires and guide reads.
+- The Calls view has an Outreach column. Start the week a call opens, stop three weeks before it closes, with the
+  briefing and results dates from the Innovation Funding Service (data/timeline.json). The rolling EIC says so. The
+  three calls that closed at 11am on 21 Oct show Too close to start, then drop off.
+- No founder is picked for a call inside three weeks of closing. Checked from the Calls view, all 35 sit on calls In
+  the window, Opened this week or the EIC.
+- A Partners view, 7 partners. Every fact reopened on 21 Oct two ways (curl and a browser fingerprint). Ryan was taken
+  off, its innovationfunding.com page sells Grant Funding, so it's a competitor, not a partner. Leyton UK stays, its UK
+  homepage has no grants link and no use of the word (patent box links found as the control) and /uk/grants/ 301s
+  to patent box.
+- Setup has writing capacity (12 a month) and the LinkedIn limit. Sources include UKRI's funded projects file and
+  Companies House share filings.
+
+Things the desk now does on a later date, so it never contradicts itself.
+- A picked founder whose call slips inside three weeks of closing is held, with a banner on their card and a line
+  under the headline. The Ready, headline and nav counts follow. First hold is 28 Oct 11am (Efficient AI, 3
+  founders), then 4 Nov (Battery investor call), then most of the list around 10 to 12 Nov.
+- The EIC founders are held once the 3 November 5pm batch passes, because their message names that batch.
+- The guide's EIC line and the fit check roll to the next first Tuesday, the EIC's own rule ("batched for
+  evaluation every first Tuesday of the month at 5pm Brussels time", eic.ec.europa.eu, reopened 21 Oct).
+- Tested with a simulated clock at 21 Oct 3pm, 28 Oct, 3 Nov 4.59pm, 4 Nov, 5 Nov, 12 Nov, 2 Dec, 1 Mar and 7 Apr
+  2027. Held rows used to fade the whole row, which failed contrast, now only the dots fade, axe clean.
+
+Fixed on the way.
+- The no JavaScript date said Tuesday 20 October, now Wednesday 21 October.
+- Three calls closing 4 November (CfI battery dual use, DRIVE35, Future Leaders) flipped to Closing soon on the IFS
+  listing during the day, updated. The listing was re-read at about 14.10 UTC, 28 open, every closing date matched.
+
+QA after the pivot. 48 of 48 interactions, axe clean on 17 pages and views plus the held state at 1440 and 390, no
+overflow at 1024, 768, 390 and 360, zero page errors on 39 pages, zero colons and dashes in rendered text, the
+simulated clock agrees across calls, home and desk.
+
+Numbers, said carefully. Repeat winners were counted a third time after the context reset, 42.0, 46.1 and 43.1%
+against the earlier 44.0, 46.7 and 46.0%, and 1,115 against 1,012 with projects ending in six months. Different
+filters. The desk doesn't print these, the notes say "over 4 in 10" and "over 1,000".
+
+Call prep for Raka is in call-prep.md.

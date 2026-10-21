@@ -20,6 +20,16 @@
     prog.style.width = ((i) / steps.length * 100) + '%';
     err.hidden = true;
   };
+  /* EIC short proposals are batched every first Tuesday of the month at 5pm Brussels time (eic.ec.europa.eu). */
+  var nextBatch = function (now) {
+    for (var k = 0; k < 3; k++) {
+      var y = now.getUTCFullYear(), m = now.getUTCMonth() + k; y += Math.floor(m / 12); m %= 12;
+      var day = 1 + (2 - new Date(Date.UTC(y, m, 1)).getUTCDay() + 7) % 7;
+      var t = new Date(Date.UTC(y, m, day, m >= 3 && m <= 9 ? 15 : 16));
+      if (t > now) return t;
+    }
+  };
+  data.forEach(function (c) { if (c.id === 'eic' && new Date(c.closes) <= new Date()) c.closes = nextBatch(new Date()).toISOString(); });
   var days = function (iso) { return Math.ceil((new Date(iso) - new Date()) / 86400000); };
   var fmt = function (iso) { var m = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; var x = new Date(iso); return x.getDate() + ' ' + m[x.getMonth()]; };
   var match = function (a) {

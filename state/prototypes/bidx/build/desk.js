@@ -18,8 +18,15 @@
     var out = $('.dl-n', el), u = $('.dl-u', el);
     if (!out) return;
     out.textContent = n < 0 ? 'SHUT' : String(n).padStart(2, '0');
-    if (u) u.textContent = n === 1 ? 'day' : 'days';
+    if (u) u.textContent = n < 0 ? '' : n === 1 ? 'day' : 'days';
     if (n < 0) { var tr = el.closest('#v-calls tr'); if (tr) tr.hidden = true; }
+  });
+  $$('#v-calls tr[data-open]').forEach(function (tr) {
+    var left = (new Date(tr.getAttribute('data-shut')) - now) / 86400000, since = (now - new Date(tr.getAttribute('data-open'))) / 86400000;
+    var w = $('.win', tr); if (!w) return;
+    if (left < 21) { w.textContent = 'Too close to start'; w.className = 'win st sk'; }
+    else if (since <= 7) { w.textContent = 'Opened this week, start now'; w.className = 'win st ok'; }
+    else { w.textContent = 'In the window'; w.className = 'win st ok'; }
   });
   $$('[data-live-count]').forEach(function (e) {
     e.textContent = e.getAttribute('data-live-count').split(',').filter(function (x) { return new Date(x) > now; }).length;
@@ -63,8 +70,6 @@
       if (e.key === 'ArrowUp' || e.key === 'k') { e.preventDefault(); select(cur - 1, true); }
     });
   });
-  if (rows.length) select(0, false);
-
   var sent = 0, total = rows.length;
   var count = function () {
     var ready = rows.filter(function (r) { return r.getAttribute('data-state') === 'ready'; }).length;
@@ -79,8 +84,8 @@
   };
   var setState = function (row, state, label) {
     row.setAttribute('data-state', state);
-    var s = $('.st', row); if (s) { s.textContent = label; s.className = 'st' + (state === 'ok' ? ' ok' : state === 'skip' ? ' sk' : ''); }
-    row.classList.toggle('gone', state === 'skip');
+    var s = $('.st', row); if (s) { s.textContent = label; s.className = 'st' + (state === 'ok' ? ' ok' : state === 'skip' || state === 'held' ? ' sk' : ''); }
+    row.classList.toggle('gone', state === 'skip' || state === 'held');
     var det = $('#today-det .det[data-id="' + row.getAttribute('data-id') + '"]');
     if (det) {
       var a = $('.do-ok', det), sk = $('.do-skip', det);
@@ -134,6 +139,22 @@
     var n = +cap.value; capo.textContent = n + ' a day';
     $$('[data-cap]').forEach(function (e) { e.textContent = n; });
   });
+  /* A founder whose call has slipped inside three weeks of closing since the run is held, the same rule the picker uses. */
+  var held = 0, batch = 0;
+  rows.forEach(function (r) {
+    var shut = r.getAttribute('data-shut');
+    var gap = r.hasAttribute('data-gap') ? +r.getAttribute('data-gap') : 21;
+    if (!shut || r.getAttribute('data-state') !== 'ready' || (new Date(shut) - now) / 86400000 >= gap) return;
+    setState(r, 'held', 'Held'); held++; if (!gap) batch++;
+    var det = $('#today-det .det[data-id="' + r.getAttribute('data-id') + '"]');
+    if (det && !$('.held-b', det)) { var b = d.createElement('p'); b.className = 'held-b'; b.textContent = gap ? 'Held. This call is now inside three weeks of closing, so Simon doesn’t start anything new for it.' : 'Held. The EIC batch this message names has passed, so it gets redrafted for the next one.'; det.insertBefore(b, det.firstChild); }
+  });
+  if (held) {
+    $$('[data-picked]').forEach(function (e) { e.textContent = total - held; });
+    $$('[data-picked-w]').forEach(function (e) { e.textContent = total - held === 1 ? 'founder' : 'founders'; });
+    var hn = $('.heldnote'); if (hn) { hn.textContent = held + (held === 1 ? ' founder is' : ' founders are') + ' held, because ' + (batch === held ? 'the EIC batch their message names has passed.' : 'their call is now inside three weeks of closing' + (batch ? ', or the EIC batch their message names has passed.' : '.')); hn.hidden = false; }
+  }
+  if (rows.length) { var first = 0; for (var k = 0; k < rows.length; k++) { if (rows[k].getAttribute('data-state') === 'ready') { first = k; break; } } select(first, false); }
   count();
 
   /* ---------------------------------------------------------------- inbox */

@@ -16,3 +16,9 @@ Checked again by hand in the main session on 21 Oct.
   £15,000 for a weekend's work."
 - GrantUp. Team page, "Dr Aaron Mason, Founder". Sitemap 361 URLs, 213 under /grants/, 34 case studies, lastmod up
   to 19 Oct 2026. Fees from £1,750 setup plus success fee. Homepage warns against "grant platforms".
+
+Recounted after the context reset, 21 Oct afternoon, a third way. SME means Micro, Small, Micro/Small and Medium,
+keyed on company number (name when blank), voluntary withdrawals excluded. Repeat winners 42.0% (2023/24), 46.1%
+(2024/25), 43.1% (2025/26). SME winners with a project ending 21 Oct 2026 to 21 Apr 2027, 1,115. The earlier count
+gave 44.0, 46.7, 46.0 and 1,012 with different filters. Safe to say "over 4 in 10" and "over 1,000". Never quote
+one count as exact.
