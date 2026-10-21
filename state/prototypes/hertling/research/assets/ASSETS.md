@@ -197,3 +197,20 @@ Encoding settings were two pass libvpx-vp9 at `-b:v` between 0.98 and 1.2 Mbit/s
 - Clause 9 also bars selling copies of Items without altering them, and reselling or redistributing Items "on a stock or inventory basis". Using them as website background and section footage doesn't touch either.
 - Several clips show people's faces (39841, 233, 101536, 39852, 42620, 44748). These are stock models. Don't caption any of them as Hertling, his staff or his clients.
 - Don't caption any still as Reinbek, as Hertling's office or as a client site. The street signs name Hamburg streets elsewhere in the city.
+
+## v2 clips, fetched one at a time (21 Oct 2026, 20:54 UTC)
+
+The v2 home page uses four more clips besides 2846. Clause 9 forbids scripted mass downloads, so each was fetched again
+on its own, item page first (licence read again, `copyrightNotice` "Free" on all four), then its 720p file with the item
+page as referrer, two seconds apart. SHA-256 against the earlier copies in raw/.
+
+| Id | Item page | Bytes | SHA-256 (first 16) | Result |
+|---|---|---|---|---|
+| 42617 | people-working-in-the-office-42617 | 4,163,951 | a29b5e539e4fa813 | identical |
+| 233 | a-woman-having-a-telephone-call-in-her-office-233 | 4,342,040 | 10e91e37173adccb | identical |
+| 39841 | young-man-working-in-an-office-overtime-39841 | 3,744,370 | 1c948b2dc253b68a | identical |
+| 42620 | people-working-on-laptops-42620 | 3,184,288 | 4e26b16f9f85ac68 | identical |
+
+Where they're used. 42617 is the hero film (team.webm/mp4, poster team.jpg), 39841 gives the still late.jpg, 233 gives
+call.jpg and 42620 gives cloud-team.jpg. Nothing captions any of them as Noah, his office, staff or clients. The hero card
+that sits on 42617 carries his promise and firm name, never his name, so the man in the clip can't be read as him.

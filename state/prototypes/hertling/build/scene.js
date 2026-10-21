@@ -117,3 +117,51 @@
   addEventListener('resize', tick);
   tick();
 })();
+
+/* The hero frame. His logo around the film, the blue pillars either side, the grey band entering above the picture
+   on the right and leaving below it on the left, so the office sits inside the H. */
+(function () {
+  var fr = document.querySelector('[data-frame]');
+  if (!fr) return;
+  var art = fr.querySelector('.hf-art'), card = fr.querySelector('.hf-card');
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  function draw() {
+    var r = fr.getBoundingClientRect(), c = card.getBoundingClientRect();
+    var W = Math.round(r.width), H = Math.round(r.height);
+    if (!W || !H) return;
+    var cs = getComputedStyle(fr), P = parseFloat(cs.getPropertyValue('--p')), B = parseFloat(cs.getPropertyValue('--b'));
+    var top = c.top - r.top, bot = c.bottom - r.top, rad = Math.min(P * 0.45, 14);
+    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, 'aria-hidden': 'true', focusable: 'false' });
+    var defs = el('defs', {});
+    var gb = el('linearGradient', { id: 'hfb', x1: '0', y1: '0', x2: '1', y2: '1' });
+    gb.appendChild(el('stop', { offset: '0', 'stop-color': '#074a7c' })); gb.appendChild(el('stop', { offset: '1', 'stop-color': '#0b6aa6' }));
+    var gg = el('linearGradient', { id: 'hfg', gradientUnits: 'userSpaceOnUse', x1: W, y1: 0, x2: 0, y2: H });
+    gg.appendChild(el('stop', { offset: '0', 'stop-color': '#767d83' })); gg.appendChild(el('stop', { offset: '1', 'stop-color': '#adb3b8' }));
+    defs.appendChild(gb); defs.appendChild(gg); svg.appendChild(defs);
+    // right pillar runs from the band at the top down most of the way, the left one from a little below the top to the band at the bottom
+    svg.appendChild(el('rect', { class: 'pl', x: W - P, y: 0, width: P, height: H * 0.82, rx: rad }));
+    svg.appendChild(el('rect', { class: 'pl', x: 0, y: H * 0.18, width: P, height: H * 0.82, rx: rad }));
+    var yT = B / 2, yB = H - B / 2, x1 = W * 0.64, x2 = W * 0.36;
+    var d = 'M' + (W - P + 1) + ' ' + yT + ' L' + x1 + ' ' + yT + ' C' + (x1 - (x1 - x2) * 0.55) + ' ' + yT + ' ' + (x2 + (x1 - x2) * 0.55) + ' ' + yB + ' ' + x2 + ' ' + yB + ' L' + (P - 1) + ' ' + yB;
+    svg.appendChild(el('path', { class: 'bd', d: d, 'stroke-width': B }));
+    art.innerHTML = ''; art.appendChild(svg);
+  }
+  var t; addEventListener('resize', function () { clearTimeout(t); t = setTimeout(draw, 100); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw); else draw();
+  draw();
+})();
+
+/* The quick contact bar on phones. It stays out of the way while the hero buttons or the booking form are on screen,
+   so it never repeats a button that's already there or covers a field. */
+(function () {
+  var bar = document.querySelector('.mbar');
+  if (!bar || !('IntersectionObserver' in window)) return;
+  var seen = new Set();
+  bar.classList.add('off');
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
+    bar.classList.toggle('off', seen.size > 0);
+  });
+  ['.h2o-ctas', '#termin'].forEach(function (s) { var el = document.querySelector(s); if (el) io.observe(el); });
+})();

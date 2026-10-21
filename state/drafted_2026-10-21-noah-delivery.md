@@ -2,6 +2,16 @@
 
 NOT SENT. Waiting for Raka's word. We promised it "later this week" on 21 Oct 12:33 UTC.
 
+v2, 21 Oct evening. Raka asked for the site and posts rebuilt sales first ("put yourself in his shoes"). The message now
+says what v2 does for Noah's goal, a first conversation, and drops the wireless planner (it moved to Leistungen). Thread
+pulled again 20:56 UTC, still 5 items, nextPage null, LinkedIn synced 20:56, nothing new from Noah. Control Aaron Mason
+ctc_dWL5LypChqmTQ9QyZ came back full, 4 items. "lead every visitor to a call with you" (the booking form asks for a callback, the phone sits beside it). The self check line was cut for length, the site still has it, the booking
+button sits in the header, the hero, the steps, every Baustein on Leistungen, the self check result and a phone bar,
+checked at 7 sizes (handover QA v2). "all leading to that call", every post ends in a call or booking line
+and the Google update carries a booking button, presence v2 deploy 6ad92612a6a7d26e9ff5f6ae, 19 of 19 files byte
+matched. Site v2 deploy 6ad925fc0a94a08e345fc045, 36 of 38 byte matched, home and Kontakt differ only by Netlify's form
+rewrite.
+
 ### Noah Hertling, Systemhaus-Hertling UG (haftungsbeschränkt), ctc_ch3vFcKAkjQdMKDCg
 
 > Thread pulled 21 Oct 19:2x UTC, 5 items, nextPage null, LinkedIn synced 19:22 UTC, control Aaron Mason
@@ -37,12 +47,12 @@ DELIVERY
 ```
 Noah, I spent the whole day building this.
 
-My feedback was that your Google listing has no reviews yet, your LinkedIn page has one follower and your homepage names no client. So I built a Hertling site that shows the proof before the reviews arrive. It's got a sample of the documentation you promise, a wireless planner and a three minute self check.
+My feedback was that your Google listing has no reviews yet, your LinkedIn page one follower and your homepage no client. So I rebuilt your site to show proof before the reviews arrive and lead every visitor to a call with you. It's got a sample of the documentation you promise.
 
 Try it yourself.
 https://astra-hertling-prototype.netlify.app/
 
-I've also sketched your Google profile and first LinkedIn posts.
+I've also sketched your Google profile and LinkedIn posts, all leading to that call.
 https://astra-hertling-presence.netlify.app/
 
 What do you think?

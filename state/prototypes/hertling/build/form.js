@@ -1,12 +1,12 @@
-/* Contact form. Checks the fields in place, sends to Netlify Forms, and never leaves anyone stuck.
-   If sending fails, the message is offered as a ready written mail instead. A self check result arrives as ?ergebnis=&schwach= */
+/* The booking form. Checks the fields in place, sends to Netlify Forms, and never leaves anyone stuck.
+   If sending fails, the request is offered as a ready written mail instead. A self check result arrives as ?ergebnis=&schwach=, a Baustein from the services page as ?baustein= */
 (function () {
   var form = document.querySelector('[data-form]');
   if (!form) return;
   var d = document;
   var ok = d.querySelector('[data-form-ok]'), fail = form.querySelector('[data-form-fail]');
   var go = form.querySelector('.fm-go');
-  var AREAS = { net: ['Netzwerk', 'network', 'Netzwerk'], sup: ['Support', 'support', 'Support und Wartung'], cld: ['Cloud', 'cloud', 'Cloud'], sec: ['Sicherheit', 'security', 'Sicherheit'] };
+  var AREAS = { net: ['Netzwerk', 'network'], sup: ['Support', 'support'], cld: ['Cloud', 'cloud'], sec: ['Sicherheit', 'security'] };
   function en() { return d.documentElement.lang === 'en'; }
   function F(n) { return form.elements[n].value.trim(); }
   function list(a, and) { return a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' ' + and + ' ' + a[a.length - 1]; }
@@ -15,22 +15,31 @@
   var q = new URLSearchParams(location.search), pct = q.get('ergebnis');
   if (pct && /^\d{1,3}$/.test(pct) && +pct <= 100) {
     var weak = (q.get('schwach') || '').split(',').filter(function (k) { return AREAS[k]; });
-    var msg = form.querySelector('#f-msg');
-    var de = 'Mein Selbsttest ergab ' + pct + ' % Blackbox' + (weak.length ? ', am schwächsten bei ' + list(weak.slice(0, 2).map(function (k) { return AREAS[k][0]; }), 'und') : '') + '. Können wir darüber sprechen?';
-    var eng = 'My self check came out at ' + pct + '% black box' + (weak.length ? ', weakest on ' + list(weak.slice(0, 2).map(function (k) { return AREAS[k][1]; }), 'and') : '') + '. Could we talk it through?';
+    var msg = form.elements.anliegen;
+    var de = 'Mein Selbsttest ergab ' + pct + ' % Blackbox' + (weak.length ? ', am schwächsten bei ' + list(weak.slice(0, 2).map(function (k) { return AREAS[k][0]; }), 'und') : '') + '.';
+    var eng = 'My self check came out at ' + pct + '% black box' + (weak.length ? ', weakest on ' + list(weak.slice(0, 2).map(function (k) { return AREAS[k][1]; }), 'and') : '') + '.';
     msg.value = en() ? eng : de;
     msg.setAttribute('data-auto', '1');
     d.addEventListener('sh-lang', function () { if (msg.getAttribute('data-auto') === '1') msg.value = en() ? eng : de; });
     msg.addEventListener('input', function () { msg.removeAttribute('data-auto'); });
-    if (weak.length) { var r = form.querySelector('input[name="thema"][value="' + AREAS[weak[0]][2] + '"]'); if (r) r.checked = true; }
+  }
+
+  /* a Baustein handed over from the services page as ?baustein= */
+  var BS = { net: ['Netzwerk und WLAN', 'the network and wireless'], sup: ['Support und Wartung', 'support and maintenance'], cld: ['Cloud', 'the cloud'], sec: ['Sicherheit', 'security'] };
+  var bs = q.get('baustein');
+  if (!pct && BS[bs]) {
+    var m2 = form.elements.anliegen, de2 = 'Es geht um ' + BS[bs][0] + '.', en2 = "It's about " + BS[bs][1] + '.';
+    m2.value = en() ? en2 : de2;
+    m2.setAttribute('data-auto', '1');
+    d.addEventListener('sh-lang', function () { if (m2.getAttribute('data-auto') === '1') m2.value = en() ? en2 : de2; });
+    m2.addEventListener('input', function () { m2.removeAttribute('data-auto'); });
   }
 
   var rules = {
     name: function () { return F('name').length > 1; },
-    mail: function () { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(F('mail')); },
-    msg: function () { return F('nachricht').length > 9; }
+    kontakt: function () { var v = F('kontakt'); return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v) || v.replace(/[^\d]/g, '').length >= 6; }
   };
-  var fields = { name: form.querySelector('#f-name'), mail: form.querySelector('#f-mail'), msg: form.querySelector('#f-msg') };
+  var fields = { name: form.querySelector('#f-name'), kontakt: form.querySelector('#f-kontakt') };
   function check(k, show) {
     var good = rules[k]();
     if (show || good) {
@@ -45,8 +54,9 @@
   });
 
   function mailto() {
-    var body = F('nachricht') + '\n\n' + F('name') + (F('firma') ? ', ' + F('firma') : '') + (F('telefon') ? '\n' + F('telefon') : '');
-    var subj = (en() ? 'Request via the website, ' : 'Anfrage über die Website, ') + (form.querySelector('input[name="thema"]:checked') || { value: '' }).value;
+    var zeit = (form.querySelector('input[name="zeit"]:checked') || { value: '' }).value;
+    var body = (F('anliegen') ? F('anliegen') + '\n\n' : '') + F('name') + (F('firma') ? ', ' + F('firma') : '') + '\n' + F('kontakt') + (zeit ? '\n' + (en() ? 'Best time, ' : 'Rückruf am besten, ') + zeit : '');
+    var subj = en() ? 'First conversation, request via the website' : 'Kennenlerngespräch, Anfrage über die Website';
     return 'mailto:info@systemhaus-hertling.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
   }
   function done() {

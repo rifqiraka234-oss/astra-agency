@@ -107,6 +107,59 @@ def ports():
     return ''.join(out)
 
 
+def termin(page):
+    """The one booking form, on the home page and on Kontakt. As few fields as a first call needs."""
+    opt = '<span class="fm-opt">optional</span>'
+    mail = f'<a href="mailto:{MAIL}" data-form-mailto>{MAIL}</a>'
+    tel = f'<a href="tel:{TEL}">{PHONE}</a>'
+    t = {
+        'name': L('Name', 'Name'),
+        'name_e': L('Bitte geben Sie Ihren Namen an.', 'Please add your name.'),
+        'firma': L('Firma ' + opt, 'Company ' + opt),
+        'kontakt': L('Telefon oder Mailadresse', 'Phone or email'),
+        'kontakt_e': L('Bitte geben Sie eine Telefonnummer oder eine Mailadresse an, damit wir Sie erreichen.', 'Please add a phone number or an email so we can reach you.'),
+        'zeit': L('Wann passt ein Rückruf am besten?', 'When suits a call back best?'),
+        'vm': L('Vormittags', 'Mornings'), 'nm': L('Nachmittags', 'Afternoons'), 'eg': L('Egal', 'Any time'),
+        'msg': L('Worum geht es? ' + opt, "What's it about? " + opt),
+        'go': L('Kennenlerngespräch anfragen', 'Request a first conversation'),
+        'note': L('Noah Hertling meldet sich persönlich. Ihre Angaben werden nur dafür genutzt, mehr im <a href="/datenschutz/">Datenschutz</a>.',
+                  'Noah Hertling gets back to you himself. Your details are only used for that, more in the <a href="/datenschutz/">privacy notice</a>.'),
+        'fail': L(f'Das hat gerade nicht geklappt. Schreiben Sie bitte direkt an {mail} oder rufen Sie an unter {tel}.',
+                  f"That didn't go through just now. Please write to {mail} directly or call {tel}."),
+        'ok_h': L('Danke, Ihre Anfrage ist angekommen.', 'Thanks, your request has arrived.'),
+        'ok_p': L(f'Noah Hertling meldet sich persönlich bei Ihnen. Wenn es eilt, rufen Sie an unter {tel}.',
+                  f"Noah Hertling will get back to you himself. If it's urgent, call {tel}."),
+    }
+    return f"""<form class="fm" name="termin" method="POST" action="/kontakt/danke/" data-netlify="true" netlify-honeypot="website" data-form novalidate>
+  <input type="hidden" name="form-name" value="termin">
+  <input type="hidden" name="sprache" value="de" data-form-lang>
+  <input type="hidden" name="seite" value="{page}">
+  <div class="fm-row">
+    <div class="fm-f"><label for="f-name">{t['name']}</label><input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name"><p class="fm-e" id="e-name" data-err="name">{t['name_e']}</p></div>
+    <div class="fm-f"><label for="f-firma">{t['firma']}</label><input id="f-firma" name="firma" type="text" autocomplete="organization"></div>
+  </div>
+  <div class="fm-f"><label for="f-kontakt">{t['kontakt']}</label><input id="f-kontakt" name="kontakt" type="text" autocomplete="tel" required aria-describedby="e-kontakt"><p class="fm-e" id="e-kontakt" data-err="kontakt">{t['kontakt_e']}</p></div>
+  <fieldset class="fm-topic">
+    <legend>{t['zeit']}</legend>
+    <div class="fm-chips">
+      <label><input type="radio" name="zeit" value="Vormittags"><span>{t['vm']}</span></label>
+      <label><input type="radio" name="zeit" value="Nachmittags"><span>{t['nm']}</span></label>
+      <label><input type="radio" name="zeit" value="Egal" checked><span>{t['eg']}</span></label>
+    </div>
+  </fieldset>
+  <div class="fm-f"><label for="f-msg">{t['msg']}</label><textarea id="f-msg" name="anliegen" rows="3"></textarea></div>
+  <p class="fm-hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></p>
+  <button class="btn pri btn-lg fm-go" type="submit">{t['go']}</button>
+  <p class="fm-note">{t['note']}</p>
+  <p class="fm-fail" data-form-fail hidden>{t['fail']}</p>
+</form>
+<div class="fm-ok" data-form-ok hidden tabindex="-1">
+  <svg class="fm-ok-i" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="22"/><path d="M14 25l7 7 13-15"/></svg>
+  <h3>{t['ok_h']}</h3>
+  <p>{t['ok_p']}</p>
+</div>"""
+
+
 def fig(key):
     """A licensed photo for a service, from data/figs.json. No entry, no figure. Never captioned as the client's."""
     path = os.path.join(HERE, 'data', 'figs.json')
@@ -152,8 +205,8 @@ def header(nav):
   <a class="brand" href="/" aria-label="Systemhaus-Hertling, Start">{mark('brand-mark')}<span>Systemhaus<span class="brand-dash">-</span>Hertling</span></a>
   <nav class="nav" aria-label="{L('Hauptnavigation', 'Main')}">{links}</nav>
   <div class="top-r">
-    <span class="live" data-live><i aria-hidden="true"></i><span data-live-t>{L('Montag bis Freitag, 8 bis 18 Uhr', 'Monday to Friday, 8am to 6pm')}</span></span>
-    <a class="btn pri top-cta" href="/selbsttest/">{L('Selbsttest', 'Self check')}</a>
+    <a class="live" data-live href="tel:{TEL}"><i aria-hidden="true"></i><span data-live-t>{L('Montag bis Freitag, 8 bis 18 Uhr', 'Monday to Friday, 8am to 6pm')}</span></a>
+    <a class="btn pri top-cta" href="{'#termin' if nav == 'start' else '/kontakt/'}">{L('Termin vereinbaren', 'Book a call')}</a>
     <div class="lang" role="group" aria-label="{L('Sprache', 'Language')}"><button type="button" data-lang="de" aria-pressed="true">DE</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
     <button class="menu-b" type="button" aria-expanded="false" aria-controls="menu">{L('Menü', 'Menu')}</button>
   </div>
@@ -252,6 +305,7 @@ def build():
         body = body.replace('{{WLAN}}', wlan())
         body = body.replace('{{CAL}}', cal())
         body = body.replace('{{PORTS}}', ports())
+        body = re.sub(r'\{\{TERMIN (\w+)\}\}', lambda mm: termin(mm.group(1)), body)
         body = re.sub(r'\{\{FIG (\w+)\}\}', lambda mm: fig(mm.group(1)), body)
         for inc in re.findall(r'\{\{INC ([\w./-]+)\}\}', body):
             body = body.replace('{{INC ' + inc + '}}', open(os.path.join(HERE, inc)).read())
