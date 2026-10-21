@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Chris Hale SENT 2026-10-21 06:49:57 UTC on Raka's 'Send chris', act_DzdDGiqWtGg8XN2ZD, one copy, byte for byte from this file. Thread 9 items before, 10 after, control Rob Quinn 2 items. Do not send again. -->
 # Replies, 21 Oct morning. NOT SENT, waiting on Raka's word
 
 ### Chris Hale, The Garnish Collective, ctc_do7oK8f27qGMC89dA
