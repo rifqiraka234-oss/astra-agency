@@ -24,7 +24,7 @@ PRIVACY = 'https://app.bidx.ai/privacy-policy'
 TERMS = 'https://app.bidx.ai/terms-of-use'
 LI_SIMON = 'https://www.linkedin.com/in/simondutta/'
 LI_AARON = 'https://www.linkedin.com/in/aaronmase/'
-ADDRESS = 'BIDX Limited, 71-75 Shelton St, London, England, UK, WC2H 9JQ'
+ADDRESS = 'BIDX Limited, company number 15207532, London WC2H 9JQ'
 
 esc = html.escape
 
@@ -71,6 +71,7 @@ def head(title, desc, path, extra_css=''):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="https://bidx.ai{path}">
@@ -141,7 +142,7 @@ def write(rel, content):
 
 def main():
     os.makedirs(os.path.join(OUT, 'assets'), exist_ok=True)
-    for f in ('site.css', 'desk.css', 'site.js', 'desk.js'):
+    for f in ('site.css', 'desk.css', 'site.js', 'desk.js', 'fit.js', 'guides.js'):
         if os.path.exists(os.path.join(HERE, f)):
             shutil.copy(os.path.join(HERE, f), os.path.join(OUT, 'assets', f))
     fav = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#fff"/>'

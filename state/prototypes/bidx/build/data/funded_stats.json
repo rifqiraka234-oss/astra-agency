@@ -1,0 +1,185 @@
+{
+ "2023/24": {
+  "rows": 8050,
+  "sme_rows": 4389,
+  "sme_companies": 3207,
+  "sme_award_total": 994717100,
+  "sme_award_median": 72798,
+  "regions": [
+   [
+    "London",
+    771
+   ],
+   [
+    "South East",
+    475
+   ],
+   [
+    "South West",
+    322
+   ],
+   [
+    "East of England",
+    308
+   ],
+   [
+    "North West",
+    236
+   ],
+   [
+    "Scotland",
+    223
+   ],
+   [
+    "Yorkshire and The Humber",
+    191
+   ],
+   [
+    "West Midlands",
+    176
+   ],
+   [
+    "East Midlands",
+    162
+   ],
+   [
+    "North East",
+    134
+   ],
+   [
+    "Wales",
+    120
+   ],
+   [
+    "Northern Ireland",
+    84
+   ],
+   [
+    "Outside UK",
+    5
+   ]
+  ]
+ },
+ "2024/25": {
+  "rows": 4301,
+  "sme_rows": 2339,
+  "sme_companies": 1970,
+  "sme_award_total": 428716168,
+  "sme_award_median": 54684,
+  "regions": [
+   [
+    "London",
+    391
+   ],
+   [
+    "South East",
+    262
+   ],
+   [
+    "East of England",
+    201
+   ],
+   [
+    "South West",
+    192
+   ],
+   [
+    "West Midlands",
+    160
+   ],
+   [
+    "North West",
+    136
+   ],
+   [
+    "Yorkshire and The Humber",
+    132
+   ],
+   [
+    "Scotland",
+    127
+   ],
+   [
+    "East Midlands",
+    121
+   ],
+   [
+    "Wales",
+    99
+   ],
+   [
+    "North East",
+    83
+   ],
+   [
+    "Northern Ireland",
+    66
+   ]
+  ]
+ },
+ "2025/26": {
+  "rows": 3722,
+  "sme_rows": 2381,
+  "sme_companies": 1743,
+  "sme_award_total": 440081368,
+  "sme_award_median": 49997,
+  "regions": [
+   [
+    "London",
+    327
+   ],
+   [
+    "East of England",
+    248
+   ],
+   [
+    "South East",
+    234
+   ],
+   [
+    "South West",
+    209
+   ],
+   [
+    "West Midlands",
+    135
+   ],
+   [
+    "North West",
+    114
+   ],
+   [
+    "Yorkshire and The Humber",
+    114
+   ],
+   [
+    "East Midlands",
+    100
+   ],
+   [
+    "Scotland",
+    94
+   ],
+   [
+    "North East",
+    69
+   ],
+   [
+    "Wales",
+    68
+   ],
+   [
+    "Northern Ireland",
+    28
+   ],
+   [
+    "#N/A",
+    2
+   ],
+   [
+    "Outside UK",
+    1
+   ]
+  ]
+ }
+}

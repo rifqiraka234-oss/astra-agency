@@ -7,6 +7,19 @@
   var toastEl = $('.toast'), toastT;
   var toast = function (m) { if (!toastEl) return; toastEl.textContent = m; toastEl.classList.add('on'); clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove('on'); }, 2200); };
 
+  /* ---------------------------------------------------------------- today's date and live countdowns */
+  var now = new Date();
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  $$('.today-date').forEach(function (e) { e.textContent = days[now.getDay()] + ' ' + now.getDate() + ' ' + months[now.getMonth()]; });
+  $$('[data-close]').forEach(function (el) {
+    var n = Math.ceil((new Date(el.getAttribute('data-close')) - now) / 86400000);
+    var out = $('.dl-n', el), u = $('.dl-u', el);
+    if (!out) return;
+    out.textContent = n < 0 ? 'SHUT' : String(n).padStart(2, '0');
+    if (u) u.textContent = n === 1 ? 'day' : 'days';
+  });
+
   /* ---------------------------------------------------------------- views */
   var navs = $$('.vnav button');
   var show = function (id, push) {
@@ -20,6 +33,10 @@
   $$('[data-go]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); show(a.getAttribute('data-go')); }); });
   var start = (location.hash || '').replace('#', '');
   show(start && $('#v-' + start) ? 'v-' + start : 'v-today', false);
+  window.addEventListener('hashchange', function () {
+    var h = (location.hash || '').replace('#', '');
+    if (h && $('#v-' + h)) show('v-' + h, false);
+  });
 
   /* ---------------------------------------------------------------- today, list and detail */
   var rows = $$('#today-list .lrow');
@@ -62,7 +79,7 @@
     var det = $('#today-det .det[data-id="' + row.getAttribute('data-id') + '"]');
     if (det) {
       var a = $('.do-ok', det), sk = $('.do-skip', det);
-      if (a) { a.disabled = state !== 'ready'; a.innerHTML = state === 'ok' ? 'Approved, sends at 9.40' : 'Approve and queue <span class="kbd">A</span>'; }
+      if (a) { a.disabled = state !== 'ready'; a.innerHTML = state === 'ok' ? 'Approved, request goes at 9.40' : 'Approve and queue <span class="kbd">A</span>'; }
       if (sk) sk.disabled = state !== 'ready';
     }
     count();
@@ -74,7 +91,7 @@
     var id = det.getAttribute('data-id');
     var row = $('#today-list .lrow[data-id="' + id + '"]');
     var ok = $('.do-ok', det), sk = $('.do-skip', det), set = $('.skipset', det);
-    if (ok) ok.addEventListener('click', function () { setState(row, 'ok', 'Approved'); toast('Approved. ' + row.getAttribute('data-first') + ' gets it at 9.40'); next(); });
+    if (ok) ok.addEventListener('click', function () { setState(row, 'ok', 'Approved'); toast('Approved. ' + row.getAttribute('data-first') + '’s connection request goes at 9.40'); next(); });
     if (sk) sk.addEventListener('click', function () { if (set) set.classList.toggle('on'); });
     $$('.skipset button', det).forEach(function (b) {
       b.addEventListener('click', function () { set.classList.remove('on'); setState(row, 'skip', 'Skipped'); toast('Skipped, ' + b.textContent.toLowerCase()); next(); });
@@ -85,7 +102,7 @@
   var all = $('#approve-all');
   if (all) all.addEventListener('click', function () {
     var n = 0; rows.forEach(function (r) { if (r.getAttribute('data-state') === 'ready') { setState(r, 'ok', 'Approved'); n++; } });
-    toast(n + ' approved. They go out between 9.40 and 4.30, a few minutes apart');
+    toast(n + ' approved. The connection requests go out between 9.40 and 4.30, a few minutes apart');
   });
   d.addEventListener('keydown', function (e) {
     var v = $('#v-today'); if (!v || !v.classList.contains('on')) return;

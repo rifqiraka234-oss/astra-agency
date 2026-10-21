@@ -17,7 +17,7 @@
   }
 
   // Reveals. Checked against the viewport on scroll, so an element clipped to nothing still reveals.
-  var rv = [].slice.call(d.querySelectorAll('.rv'));
+  var rv = [].slice.call(d.querySelectorAll('.rv, .rv-dots, .rv-bars'));
   var check = function () {
     var h = window.innerHeight;
     rv = rv.filter(function (el) {
