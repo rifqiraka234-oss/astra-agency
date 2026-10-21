@@ -112,3 +112,12 @@ for words. Their indigo to green gradient once, on the brand moment, never on ev
 
 Their current site (gradient cards everywhere), the 2024 AI kit, the dated UK grant consultancies in the teardown
 (Myriad, GrantTree, Ryan, stock teams in blue boxes), and Instrumentl and Grantable's cream and serif.
+
+
+## Build, QA and score (21 Oct)
+
+Built and live at https://astra-bidx-prototype.netlify.app/desk/ with the guides and call pages on the same site.
+The full QA record, the G1 score (89 of 100, the gap is imagery), C5, I14, asset provenance, the things that must
+not surprise anyone and the side findings are in handover.md. The IFS listing was re-read on 21 Oct, same 31 calls,
+same closing dates, four statuses changed to Open now and were updated. BidX's own £99,350 Innovate UK award (2024,
+project 10105102) was confirmed in the UKRI funded projects list and in Gateway to Research and is on the home page.

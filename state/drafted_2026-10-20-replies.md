@@ -18,6 +18,9 @@ Great to hear you like it, Chris! The price really depends on your budget and ho
 
 ### Aaron Mason, BidX, ctc_dWL5LypChqmTQ9QyZ
 
+> SUPERSEDED 21 Oct. The sketch is built, so the delivery in state/drafted_2026-10-21-aaron-delivery.md replaces
+> this holding reply. Do not send this one.
+
 > NOT SENT. He answered our 20 Oct 13:24 UTC bump with "Sure send the sketch" (act_fJZZFdwe83einTZh7, 14:07 UTC). Our
 > 17 Oct opener offered "a sketch of the BidX outreach system", grant guides founders search for plus outreach to 30 to
 > 50 matching startups a day. Thread pulled 20 Oct 17:01 UTC, 3 items, nextPage null. This only says it's coming. It
