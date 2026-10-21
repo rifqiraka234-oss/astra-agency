@@ -382,6 +382,11 @@ spam please". Two others got the same run that week.
   report lists them under Deals as said yes, waiting on them. Nothing more goes to them automatically,
   so any further message is Raka's call. A no from them still closes them. First three, Ulrich
   Steppler (justclaims), Chris Hale (Garnish) and Chris Ryalls (ExpoCall).
+- **Said yes and went quiet, Raka follows up himself (Raka, 2026-10-21).** His words, "for the people
+  said yes and then went quiet no auto send please let me do that". This replaces the one plain bump
+  above for anyone `SAID_YES_PENDING`. No bump and no nudge is drafted or sent for them, by any session
+  or routine. They're listed under Deals with the yes quoted, what's pending and how many days quiet,
+  and the follow up is his. Replying when they write to us is unchanged, drafted and shown as always.
 
 **A nudge is the plain bump, not a new researched message (Raka, 2026-10-12).** His words, "you
 didnt have to go like full research all you have to do is just like 👀 have you seen this". So a

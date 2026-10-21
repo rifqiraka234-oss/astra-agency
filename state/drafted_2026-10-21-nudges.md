@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- WITHDRAWN 2026-10-21 14:18 UTC. Raka, "for the people said yes and then went quiet no auto send please let me do that". All four are said-yes people, so Raka follows them up himself. Do not send any of these. RULES section 1 and the daily pipeline prompt now say so. -->
 # Nudges to people who said yes, 21 Oct. NOT SENT, waiting on Raka's word
 
 Raka asked 21 Oct 12:3x UTC for everyone who got something from us and went quiet, or said yes to a call with no time.
