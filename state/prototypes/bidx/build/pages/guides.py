@@ -1,7 +1,7 @@
 """The guides. A hub and three long guides, every fact from the funder's own page and linked at the end."""
 from html import escape as esc
 
-from .common import load_calls, days_left, sdate, odds, SIZE, LEAD, THEME, short_name, STARTUP
+from .common import load_calls, days_left, sdate, odds, SIZE, LEAD, THEME, short_name, STARTUP, live_count
 from .home import GUIDES
 
 IFS = 'https://apply-for-innovation-funding.service.gov.uk'
@@ -77,11 +77,12 @@ def smart(B, calls):
     odd = [c for c in calls if odds(c) and c['id'] in STARTUP and days_left(c['closes']) >= 0]
     odd.sort(key=lambda c: odds(c))
     orows = ''.join(f'<div class="r {"low" if odds(c) <= 5 else ("hi" if odds(c) >= 20 else "")}"><a href="/calls/{c["slug"]}/">{esc(short_name(c))}</a>'
-                    f'<span class="t"><i style="width:{odds(c) / 30 * 100:.0f}%"></i></span><b>{odds(c)}%</b></div>' for c in odd)
+                    f'<span class="t" aria-hidden="true"><i style="width:{odds(c) / 30 * 100:.0f}%"></i></span><b>{odds(c)}%</b></div>' for c in odd)
     body = head_block(B, 'Smart grants', 'Smart grants are closed. Here&rsquo;s what to apply for instead',
                       'Innovate UK has stopped taking Smart applications. The calls open now are narrower, most close before Christmas, and some put the odds at 2%.',
                       ['Updated 20 October 2026', '8 minute read', 'From Innovate UK&rsquo;s own pages'], 'team')
-    body += f'''<div class="wrap">{facts([('Closed', 'Smart grants, for new applications'), ('31', 'Innovate UK calls on the funding service today'), ('2%', 'the lowest odds Innovate UK states on a call open today'), ('11am', 'every call closes at 11am UK time')])}</div>
+    n = live_count([c['closes'] for c in calls])
+    body += f'''<div class="wrap">{facts([('Closed', 'Smart grants, for new applications'), (n, 'Innovate UK calls on the funding service today'), ('2%', 'the lowest odds Innovate UK states on a call open today'), ('11am', 'every call closes at 11am UK time')])}</div>
 <div class="wrap art">
 {toc([('what-happened', 'What happened'), ('how-smart-went', 'How Smart went'), ('open-now', 'What&rsquo;s open now'), ('odds', 'The odds'), ('not-listed', 'If none of them fit')])}
 <article class="prose">
@@ -99,11 +100,11 @@ def smart(B, calls):
 <h2 id="open-now">What&rsquo;s open now, for a startup or SME</h2>
 <p>These are the calls on the Innovation Funding Service today that a UK SME can lead or join as the SME a consortium has to include. Each links to its own page with the rules as Innovate UK wrote them.</p>
 {lists}
-<p><a href="/calls/">See all 31 calls</a>, including the ones led by universities, farms and energy networks.</p>
+<p><a href="/calls/">See all {n} calls</a>, including the ones led by universities, farms and energy networks.</p>
 
 <h2 id="odds">The odds, in Innovate UK&rsquo;s words</h2>
 <p>Every competition page now says what chance an application has, based on similar competitions. Here&rsquo;s each one above that states it.</p>
-<div class="odds" role="img" aria-label="Stated chance of success by call">{orows}</div>
+<div class="odds">{orows}</div>
 <span class="src-l">Each figure is the sentence &ldquo;Our experience from similar competitions suggests that you could have a X% chance of success&rdquo; on that call&rsquo;s page.</span>
 
 <h2 id="not-listed">If none of them fit</h2>
@@ -136,7 +137,7 @@ def bridgeai(B, calls):
     panes = ''.join(f'<div class="strand{" on" if k == 0 else ""}" data-strand="{s[0]}"><h3>{s[1]}</h3><q>&ldquo;UK registered SMEs can apply for a share of up to &pound;5 million to deploy Artificial Intelligence and Machine Learning {s[3]}.&rdquo;</q>'
                     f'<p>{s[4]}</p><small><a href="{s[2]["url"]}" style="color:#fff">The {s[1].lower()} brief on the Innovation Funding Service</a></small></div>' for k, s in enumerate(strands))
     body = head_block(B, 'BridgeAI Deployment Catalyst', 'BridgeAI Deployment Catalyst, the three strands',
-                      'A grant of &pound;100K to &pound;200K for an AI SME with a working product and a larger organisation that will put it to use. Opens 21 October and closes 8 December at 11am.',
+                      'A grant of &pound;100K to &pound;200K for an AI SME with a working product and a larger organisation that will put it to use. Open from 21 October, closing 8 December at 11am.',
                       ['Updated 20 October 2026', '7 minute read', 'Three calls, one set of rules'], 'board')
     body += f'''<div class="wrap">{facts([('&pound;200K', 'the most a project can ask for, and &pound;100K the least'), ('3 to 5', 'months, the project length'), ('TRL 5 or 6', 'an existing AI or ML solution, with a working MVP'), ('8 Dec', 'closes at 11am UK time')])}</div>
 <div class="wrap art">
@@ -245,6 +246,7 @@ def hub(B, calls):
   <p class="lede">What each call funds, who can lead, how it&rsquo;s scored and where applications lose points. Written by grant writers, from the funder&rsquo;s own pages.</p>
 </div></section>
 <section class="sec tight"><div class="wrap">
+  <h2 class="sr">The guides</h2>
   <div class="gcards" style="grid-template-columns:repeat(3,minmax(0,1fr))">{cards}</div>
 </div></section>
 <section class="sec mist"><div class="wrap">

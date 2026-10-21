@@ -117,9 +117,9 @@ def footer():
         <p style="margin-top:18px;max-width:340px">Grant writer led applications for UK founders, built around how assessors score.</p>
         <p class="small" style="margin-top:18px;color:#a9a7c9">{esc(ADDRESS)}</p>
       </div>
-      <div><h4>Funding</h4><ul><li><a href="/calls/">Open calls</a></li><li><a href="/guides/">Guides</a></li><li><a href="/fit/">Fit check</a></li></ul></div>
-      <div><h4>BidX</h4><ul><li><a href="/#founders">Founders</a></li><li><a href="{BOOK}">Book FREE funding call</a></li><li><a href="{LI_SIMON}">Simon on LinkedIn</a></li><li><a href="{LI_AARON}">Aaron on LinkedIn</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="{PRIVACY}">Privacy policy</a></li><li><a href="{TERMS}">Terms &amp; Conditions</a></li></ul></div>
+      <div><h2 class="fh">Funding</h2><ul><li><a href="/calls/">Open calls</a></li><li><a href="/guides/">Guides</a></li><li><a href="/fit/">Fit check</a></li></ul></div>
+      <div><h2 class="fh">BidX</h2><ul><li><a href="/#founders">Founders</a></li><li><a href="{BOOK}">Book FREE funding call</a></li><li><a href="{LI_SIMON}">Simon on LinkedIn</a></li><li><a href="{LI_AARON}">Aaron on LinkedIn</a></li></ul></div>
+      <div><h2 class="fh">Legal</h2><ul><li><a href="{PRIVACY}">Privacy policy</a></li><li><a href="{TERMS}">Terms &amp; Conditions</a></li></ul></div>
     </div>
     <div class="foot-b"><span>&copy; 2026 BidX.ai</span><span>Funding details are taken from each funder&rsquo;s own pages. Always check the official brief before you apply.</span></div>
   </div>

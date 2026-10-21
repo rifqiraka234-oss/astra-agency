@@ -3,7 +3,7 @@ import json
 import os
 from html import escape as esc
 
-from .common import SIZE
+from .common import SIZE, live_count
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -28,7 +28,7 @@ def load(name):
     return data
 
 
-def days_left(close_iso, today='2026-10-20'):
+def days_left(close_iso, today='2026-10-21'):
     import datetime as dt
     c = dt.date.fromisoformat(close_iso[:10])
     t = dt.date.fromisoformat(today)
@@ -138,7 +138,7 @@ def lrow(B, fd, i):
     c = fd['_call']
     right = dl(c['closes']) if c else '<span class="dl">&middot;</span>'
     st = {'ready': ('Ready', ''), 'held': ('Held', ' sk')}[fd['state']]
-    return (f'<li><button type="button" class="lrow" role="option" aria-selected="false" data-id="{fd["id"]}" '
+    return (f'<li role="none"><button type="button" class="lrow" role="option" aria-selected="false" data-id="{fd["id"]}" '
             f'data-first="{esc(fd["first"])}" data-state="{fd["state"]}">'
             f'{B.glyph(fd["checks"], "", "Fit, " + fit_label(fd["checks"]))}'
             f'<span><span class="nm">{esc(fd["first"])} {esc(fd["last"])}, {esc(fd["company"])}</span>'
@@ -233,7 +233,7 @@ def inbox_view(B):
     rows, threads = [], []
     for k, t in enumerate(INBOX):
         cls = {'call': 'g', 'question': 'a', 'later': 'n', 'no': 'r'}[t['intent']]
-        rows.append(f'<li><button type="button" class="lrow" data-id="{t["id"]}" data-intent="{t["intent"]}" aria-selected="false">'
+        rows.append(f'<li role="none"><button type="button" class="lrow" role="option" data-id="{t["id"]}" data-intent="{t["intent"]}" aria-selected="false">'
                     f'<span class="sig {cls}" aria-hidden="true"></span><span><span class="nm">{esc(t["first"])} {esc(t["last"])}, {esc(t["company"])}</span>'
                     f'<span class="wt">{esc(t["reply"])}</span></span><span class="rt"><span class="mono" style="color:var(--ink3)">{esc(t["when"].split(",")[0])}</span>'
                     f'<span class="st{" q" if t["intent"] == "question" else ""}">{esc(t["label"])}</span></span></button></li>')
@@ -259,8 +259,8 @@ def inbox_view(B):
                    for f, l in [('all', 'All'), ('call', 'Wants a call'), ('question', 'Question'), ('later', 'Later'), ('no', 'Not for us')])
     return f'''<section class="view" id="v-inbox" data-title="Inbox" aria-label="Inbox">
   <div class="inbox">
-    <div class="pane"><div class="pane-h"><h3>Replies</h3><span class="sp"></span><div class="tabs" id="inbox-tabs">{tabs}</div></div>
-      <ul class="list" id="inbox-list" style="min-height:0">{"".join(rows)}</ul></div>
+    <div class="pane"><div class="pane-h"><h2>Replies</h2><span class="sp"></span><div class="tabs" id="inbox-tabs">{tabs}</div></div>
+      <ul class="list" id="inbox-list" role="listbox" aria-label="Replies" style="min-height:0">{"".join(rows)}</ul></div>
     <div class="pane" id="inbox-det">{"".join(threads)}</div>
   </div>
 </section>'''
@@ -271,7 +271,7 @@ GUIDES_PLAN = {
         ('Smart grants are closed. Here’s what to apply for instead', 'innovate uk smart grant', '/guides/smart-grants-closed/', 'Published 14 Oct'),
         ('BridgeAI Deployment Catalyst, the three strands', 'bridgeai deployment catalyst', '/guides/bridgeai-deployment-catalyst/', 'Published 16 Oct'),
         ('Investor Partnerships, a grant with an investor alongside', 'innovate uk investor partnerships', '/guides/investor-partnerships/', 'Published 19 Oct'),
-        ('Every open Innovate UK call, one page each', 'innovate uk competitions open', '/calls/', '31 pages, updated daily'),
+        ('Every open Innovate UK call, one page each', 'innovate uk competitions open', '/calls/', 'LIVECOUNT pages, updated daily'),
     ],
     'Grant writer check': [
         ('Frontier AI SME Champions, writing for a 2% call', 'frontier ai sme champions', None, 'With Aaron'),
@@ -288,13 +288,14 @@ GUIDES_PLAN = {
 }
 
 
-def guides_view():
+def guides_view(calls=()):
     cols = []
+    lc = live_count([c['closes'] for c in calls])
     for col, items in GUIDES_PLAN.items():
         dot = {'Live': 'g', 'Grant writer check': 'a', 'Writing': 'i', 'Planned': 'n'}[col]
         cards = ''
         for t, q, href, m in items:
-            inner = f'<b>{esc(t)}</b><span class="q">Search, &ldquo;{esc(q)}&rdquo;</span><span class="m"><span>{esc(m)}</span>{"<span>Open &rarr;</span>" if href else ""}</span>'
+            inner = f'<b>{esc(t)}</b><span class="q">Search, &ldquo;{esc(q)}&rdquo;</span><span class="m"><span>{esc(m).replace('LIVECOUNT', lc)}</span>{"<span>Open &rarr;</span>" if href else ""}</span>'
             cards += f'<a class="gcard" href="{href}">{inner}</a>' if href else f'<div class="gcard">{inner}</div>'
         cols.append(f'<div class="col"><h3><span class="sig {dot}" aria-hidden="true"></span>{esc(col)}<span class="ct">{len(items)}</span></h3>{cards}</div>')
     return f'''<section class="view" id="v-guides" data-title="Guides" aria-label="Guides">
@@ -323,7 +324,7 @@ def calls_view(B, calls, matched):
 <td><span class="dotf" data-close="{c["closes"]}"><span class="dl-n">{days_left(c["closes"]):02d}</span></span><small>{fmt_close(c["closes"])}</small></td>
 <td>{f'<span class="bars" aria-hidden="true">{bars}</span> <b>{n}</b>' if n else '<span class="small">None today</span>'}</td></tr>''')
     return f'''<section class="view" id="v-calls" data-title="Calls" aria-label="Calls">
-  <div class="pane"><div class="pane-h"><h3>Every call that&rsquo;s open, nearest deadline first</h3><span class="sp"></span><span class="small">From the Innovation Funding Service and the EIC, checked each morning</span></div>
+  <div class="pane"><div class="pane-h"><h2>Every call that&rsquo;s open, nearest deadline first</h2><span class="sp"></span><span class="small">From the Innovation Funding Service and the EIC, checked each morning</span></div>
   <div style="overflow-x:auto"><table class="tbl"><thead><tr><th>Call</th><th class="hide-s">Who can lead</th><th class="hide-s">Innovate UK&rsquo;s odds</th><th>Days left</th><th>Founders picked today</th></tr></thead>
   <tbody>{"".join(rows)}</tbody></table></div></div>
 </section>'''
@@ -356,10 +357,10 @@ def results_view():
     rows = ''.join(f'<div class="frow"><span>{l}</span><span class="tr"><i style="width:{max(2, round(v / top * 100))}%"></i></span><b>{v}</b></div>' for l, v in fun)
     return f'''<section class="view" id="v-results" data-title="Results" aria-label="Results">
   <div class="grid2">
-    <div class="pane"><div class="pane-h"><h3>October so far</h3><span class="sp"></span><span class="small">Since the desk went live</span></div><div class="funnel">{rows}</div>
+    <div class="pane"><div class="pane-h"><h2>October so far</h2><span class="sp"></span><span class="small">Since the desk went live</span></div><div class="funnel">{rows}</div>
       <p class="small" style="padding:0 20px 18px">Replies by call, top three. Frontier AI 22, Investor Partnerships 14, Battery feasibility 9.</p></div>
     <form class="pane" id="planner" onsubmit="return false" aria-label="Planner">
-      <div class="pane-h"><h3>Plan a month</h3><span class="sp"></span><span class="small">Your numbers, simple arithmetic</span></div>
+      <div class="pane-h"><h2>Plan a month</h2><span class="sp"></span><span class="small">Your numbers, simple arithmetic</span></div>
       <div class="plan">
         <label for="pl-perday"><span class="rowv">Founders reached a day <output for="pl-perday">40</output></span><input type="range" id="pl-perday" name="perday" min="30" max="50" step="1" value="40" data-fmt="#"></label>
         <label for="pl-days"><span class="rowv">Working days <output for="pl-days">20</output></span><input type="range" id="pl-days" name="days" min="10" max="23" step="1" value="20" data-fmt="#"></label>
@@ -389,16 +390,16 @@ def setup_view(B):
         'Registered outside the UK, or dissolved', 'A call that closes in under ten working days', 'No technical people on the team'])
     return f'''<section class="view" id="v-setup" data-title="Setup" aria-label="Setup">
   <div class="setg">
-    <div class="pane"><h3>Where founders come from</h3><ul class="src">{srcs}</ul></div>
-    <div class="pane"><h3>Who&rsquo;s never picked</h3><ul class="rules">{rules}</ul>
-      <h3 style="margin-top:22px">The eight dots</h3>
+    <div class="pane"><h2>Where founders come from</h2><ul class="src">{srcs}</ul></div>
+    <div class="pane"><h2>Who&rsquo;s never picked</h2><ul class="rules">{rules}</ul>
+      <h2 style="margin-top:22px">The eight dots</h2>
       <ol class="checks" style="grid-template-columns:minmax(0,1fr)">{"".join(f'<li class="g"><span><b>{esc(a)}</b><span>{esc(b)}</span></span></li>' for a, b in CHECKS)}</ol></div>
-    <div class="pane"><h3>Voice and sender</h3>
+    <div class="pane"><h2>Voice and sender</h2>
       <div class="field"><label for="s-sender">Messages go out as</label><select id="s-sender"><option>Simon Dutta, Co Founder, Growth &amp; GTM</option><option>Aaron Mason, Co Founder, Product &amp; AI</option></select></div>
       <div class="field"><label for="s-sign">Sign off</label><input id="s-sign" value="Simon"></div>
       <div class="field"><label for="s-voice">House rules for every draft</label><textarea id="s-voice" rows="4">Name what they build in one plain line. Quote the call&rsquo;s own figures. Offer the free funding call. Under 120 words.</textarea></div>
     </div>
-    <div class="pane"><h3>Sending</h3>
+    <div class="pane"><h2>Sending</h2>
       <div class="field"><label for="s-hours">Sending hours</label><select id="s-hours"><option>Weekdays, 9.40am to 4.30pm UK</option><option>Weekdays, 8am to 6pm UK</option></select></div>
       <div class="field"><label for="s-follow">Follow up</label><select id="s-follow"><option>One bump after 3 days, then stop</option><option>One bump after 5 days, then stop</option></select></div>
       <div class="field"><label for="s-approve">Approval</label><select id="s-approve"><option>Every message approved by a person</option><option>Approve the first 20, then send what scores all green</option></select></div>
@@ -422,7 +423,7 @@ def build(B):
         matched[fd['call']] = matched.get(fd['call'], 0) + 1
     shown_calls = [c for c in calls] + [EIC]
     shown_calls.sort(key=lambda c: c['closes'])
-    counts = dict(today=len(picked), fit=186, calls=len(shown_calls), inbox=sum(1 for t in INBOX if t['intent'] in ('call', 'question')), guides=4)
+    counts = dict(today=len(picked), fit=186, calls=live_count([c['closes'] for c in shown_calls]), inbox=sum(1 for t in INBOX if t['intent'] in ('call', 'question')), guides=4)
 
     list_html = ''.join(lrow(B, fd, i) for i, fd in enumerate(picked))
     det_html = ''.join(detail(B, fd, i) for i, fd in enumerate(picked))
@@ -449,14 +450,14 @@ def build(B):
     </div>
   </div>
   <div class="work">
-    <div class="pane"><div class="pane-h"><h3>Today&rsquo;s founders</h3><span class="sp"></span><div class="tabs" id="today-tabs">{tabs}</div></div>
+    <div class="pane"><div class="pane-h"><h2>Today&rsquo;s founders</h2><span class="sp"></span><div class="tabs" id="today-tabs">{tabs}</div></div>
       <div style="padding:10px 12px 0"><label class="find" for="today-q">{B.ICON["search"]}<span class="sr">Search today&rsquo;s founders</span><input id="today-q" type="search" placeholder="Search founders, companies, calls"></label></div>
       <ul class="list" id="today-list" role="listbox" aria-label="Today&rsquo;s founders">{list_html}</ul></div>
     <div class="pane" id="today-det">{det_html}</div>
   </div>
 </section>'''
 
-    body = (today + founders_view(B, picked + held) + calls_view(B, shown_calls, matched) + inbox_view(B) + guides_view()
+    body = (today + founders_view(B, picked + held) + calls_view(B, shown_calls, matched) + inbox_view(B) + guides_view(calls)
             + results_view() + setup_view(B))
     css_v, dcss_v, js_v = B.ver('assets/site.css'), B.ver('assets/desk.css'), B.ver('assets/desk.js')
     html = f'''<!doctype html>
@@ -478,12 +479,12 @@ def build(B):
 <a class="skip" href="#desk-main">Skip to the desk</a>
 <div class="app">
 {side(B, counts)}
-<div class="main" id="desk-main">
+<main class="main" id="desk-main">
   <header class="bar"><h1>Today</h1><span class="date mono"><span class="today-date">Tuesday 20 October</span></span><span class="sp"></span>
     <a class="btn sec sm" href="/">View bidx.ai</a></header>
   {body}
   <p class="foot-note">Founders, companies, replies and results on this desk are sample data. Calls, rules, amounts and deadlines are the funders&rsquo; own, taken from the Innovation Funding Service and the EIC on 20 October 2026.</p>
-</div>
+</main>
 </div>
 <div class="toast" role="status" aria-live="polite"></div>
 <script src="/assets/desk.js?v={js_v}" defer></script>

@@ -132,7 +132,7 @@ section.sec.mist{background:var(--mist)}
 .foot a{color:#fff;text-decoration:none}
 .foot a:hover{text-decoration:underline}
 .foot-g{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px}
-.foot h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:#a9a7c9;font-weight:500;margin-bottom:14px}
+.foot .fh{font-family:var(--mono);font-size:11.5px;line-height:1.4;letter-spacing:.07em;text-transform:uppercase;color:#a9a7c9;font-weight:500;margin-bottom:14px}
 .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
 .foot .logo svg{height:32px}
 .foot .logo svg path{fill:#fff}

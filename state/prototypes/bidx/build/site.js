@@ -37,10 +37,20 @@
     var days = Math.ceil((c - now) / 86400000);
     var out = el.querySelector('.dl-n'), unit = el.querySelector('.dl-u');
     if (!out) return;
-    if (days < 0) { out.textContent = 'SHUT'; if (unit) unit.textContent = 'closed'; el.classList.add('past'); return; }
+    if (c <= now) {
+      out.textContent = 'SHUT'; if (unit) unit.textContent = 'closed'; el.classList.add('past');
+      // A closed call leaves every list. On its own page it stays, marked closed.
+      var row = el.closest('[data-tags], tr, li, .brow');
+      if (row) { row.classList.add('closed'); row.hidden = true; }
+      return;
+    }
     out.textContent = String(days).padStart(2, '0');
     if (unit) unit.textContent = days === 1 ? 'day left' : 'days left';
     el.classList.toggle('now', days <= 7); el.classList.toggle('soon', days > 7 && days <= 21);
+  });
+
+  [].forEach.call(d.querySelectorAll('[data-live-count]'), function (el) {
+    el.textContent = el.getAttribute('data-live-count').split(',').filter(function (x) { return new Date(x) > now; }).length;
   });
 
   // Filters on the guides and calls lists.
@@ -57,7 +67,7 @@
       items.forEach(function (it) {
         var okTag = state.tag === 'all' || (' ' + it.getAttribute('data-tags') + ' ').indexOf(' ' + state.tag + ' ') > -1;
         var okQ = !state.q || it.textContent.toLowerCase().indexOf(state.q) > -1;
-        var show = okTag && okQ; it.hidden = !show; if (show) n++;
+        var show = okTag && okQ && !it.classList.contains('closed'); it.hidden = !show; if (show) n++;
       });
       if (empty) empty.hidden = n > 0;
       var c = box.querySelector('.count'); if (c) c.textContent = n + (n === 1 ? ' result' : ' results');

@@ -2,7 +2,7 @@
 import re
 from html import escape as esc
 
-from .common import load_calls, days_left, fdate, sdate, odds, SIZE, LEAD, THEME, short_name, STARTUP, board
+from .common import load_calls, days_left, fdate, sdate, odds, SIZE, LEAD, THEME, short_name, STARTUP, board, live_count
 
 GUIDE_FOR = {2599: 'bridgeai-deployment-catalyst', 2598: 'bridgeai-deployment-catalyst', 2597: 'bridgeai-deployment-catalyst',
              2595: 'investor-partnerships', 2580: 'investor-partnerships'}
@@ -44,7 +44,7 @@ def board_page(B, calls):
                  f'<td class="{cls}" data-close="{c["closes"]}"><span class="dotf dl-n">{d:02d}</span><small>{sdate(c["closes"])}, 11am</small></td></tr>')
     body = f'''<section class="ghero"><div class="wrap hero-g" style="align-items:end">
   <div><h1 class="h-l">Every Innovate UK call open now.</h1>
-  <p class="lede">{len(calls)} competitions on the Innovation Funding Service today, nearest deadline first. Each one links to a page with its rules, as Innovate UK wrote them.</p></div>
+  <p class="lede">{live_count([c["closes"] for c in calls])} competitions open on the Innovation Funding Service today, nearest deadline first. Each one links to a page with its rules, as Innovate UK wrote them.</p></div>
   <div>{board(calls, n=4, title="Closing soonest for startups")}</div>
 </div></section>
 <section class="sec tight"><div class="wrap">
@@ -55,7 +55,7 @@ def board_page(B, calls):
   </div>
   <table class="ctable"><thead><tr><th>Call</th><th class="hide-s">Who can lead</th><th class="hide-s">Odds</th><th>Days left</th></tr></thead><tbody id="ctab">{rows}</tbody></table>
   <p id="ctab-empty" hidden style="margin-top:16px">No call matches that filter. <a href="/fit/">Check your fit</a> and we&rsquo;ll match you instead.</p>
-  <p class="small" style="margin-top:18px">Read from the Innovation Funding Service on 20 October 2026. Every call closes at 11am UK time. The EIC Accelerator takes short proposals any time, batched on the first Tuesday of each month, and Innovation Loans are paused until January 2027.</p>
+  <p class="small" style="margin-top:18px">Checked against the Innovation Funding Service on 21 October 2026, and a call drops off this list once it closes. Every call closes at 11am UK time. The EIC Accelerator takes short proposals any time, batched on the first Tuesday of each month, and Innovation Loans are paused until January 2027.</p>
 </div></section>'''
     return B.page('Innovate UK calls open now | BidX', 'Every Innovate UK competition open on the Innovation Funding Service, with closing dates, sizes, odds and who can lead.',
                   '/calls/', body, cur='/calls/')

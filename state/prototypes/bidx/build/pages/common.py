@@ -6,7 +6,7 @@ import re
 from html import escape as esc
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TODAY = dt.date(2026, 10, 20)
+TODAY = dt.date(2026, 10, 21)
 
 
 def clean(t):
@@ -106,6 +106,12 @@ THEME = {'ai': 'AI', 'battery': 'Batteries', 'bio': 'Engineering biology', 'heal
 STARTUP = {2599, 2598, 2597, 2584, 2582, 2595, 2580, 2571, 2600, 2583, 2602, 2526, 2586, 2542, 2560}
 
 
+def live_count(dates):
+    """A count of calls still open. Built with today's number, and site.js recounts on the visitor's clock so a call that closes drops out."""
+    n = sum(1 for d in dates if days_left(d) >= 0)
+    return f'<span data-live-count="{",".join(dates)}">{n}</span>'
+
+
 def short_name(c):
     n = c['name']
     n = n.replace('BridgeAI Deployment Catalyst, ', 'BridgeAI, ')
@@ -128,5 +134,5 @@ def board(calls, n=6, title='Open now for startups'):
     return f'''<div class="board" aria-label="{esc(title)}">
   <div class="board-h"><span class="live">{esc(title)}</span><span>Innovation Funding Service</span></div>
   {rows}
-  <div class="board-f"><span>{len(calls)} Innovate UK calls listed today</span><a href="/calls/">See every call</a></div>
+  <div class="board-f"><span>{live_count([c["closes"] for c in calls])} Innovate UK calls open today</span><a href="/calls/">See every call</a></div>
 </div>'''

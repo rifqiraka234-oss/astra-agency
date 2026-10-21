@@ -17,7 +17,7 @@ body.desk{background:var(--mist);font-size:15px;line-height:1.5}
 .av{width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;background:var(--navy);color:#fff;font-weight:600;font-size:13px;flex:none}
 .av.s{background:var(--indigo)}
 .who b{display:block;font-size:14px;font-weight:600;line-height:1.2}
-.who span{font-size:12.5px;color:var(--ink3)}
+.who span:not(.av){font-size:12.5px;color:var(--ink3)}
 .health{display:grid;gap:6px;font-size:12.5px;color:var(--ink2)}
 .health .sig{font-size:12.5px;font-weight:500}
 
@@ -58,7 +58,7 @@ html:not(.js) .view{display:block;border-top:6px solid var(--line)}
 .work{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:16px;margin-top:16px;align-items:start}
 .pane{background:#fff;border:1px solid var(--line);border-radius:18px;min-width:0}
 .pane-h{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
-.pane-h h3{font-size:15.5px;letter-spacing:-.01em}
+.pane-h h2,.pane-h h3{font-size:15.5px;letter-spacing:-.01em;margin:0}
 .pane-h .sp{flex:1}
 .tabs{display:flex;gap:4px;flex-wrap:wrap}
 .tabs button{border:1px solid transparent;background:transparent;border-radius:8px;padding:5px 10px;font-size:13.5px;font-weight:540;color:var(--ink3);cursor:pointer}
@@ -177,7 +177,7 @@ html:not(.js) .thread{display:block;border-top:1px solid var(--line)}
 /* setup */
 .setg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .setg .pane{padding:18px 20px}
-.setg h3{font-size:16px;margin-bottom:12px}
+.setg h2,.setg h3{font-size:16px;margin:0 0 12px;letter-spacing:-.01em}
 .src{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .src li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start;padding:12px;border:1px solid var(--line);border-radius:12px;font-size:13.5px}
 .src b{display:block;font-size:14px;font-weight:600}

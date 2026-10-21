@@ -53,14 +53,14 @@ def build(B):
     <p class="ferr" id="fit-err" role="alert" hidden>Pick an answer for every question to see your fit.</p>
     <div class="fnav"><button type="button" class="btn sec" id="fit-back" disabled>Back</button><button type="button" class="btn pri" id="fit-next">Next {B.ICON["ar"]}</button></div>
   </form>
-  <aside class="fitside" aria-live="polite">
+  <div class="fitside" aria-live="polite">
     <div class="fitcard">
       {B.glyph("nnnnnnnn", "huge", "Your fit, not checked yet")}
       <h2 class="h-s" id="fit-h">Your fit appears here</h2>
       <p id="fit-p">Each answer fills a dot, green where you fit, amber where it&rsquo;s worth a conversation, red where a rule stops you.</p>
       <ol class="fitkeys" id="fit-keys"></ol>
     </div>
-  </aside>
+  </div>
 </div></section>
 <section class="sec tight" id="fit-res" hidden><div class="wrap">
   <h2 class="h-m" id="res-h">Calls that fit</h2>

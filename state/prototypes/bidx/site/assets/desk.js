@@ -13,11 +13,16 @@
   var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   $$('.today-date').forEach(function (e) { e.textContent = days[now.getDay()] + ' ' + now.getDate() + ' ' + months[now.getMonth()]; });
   $$('[data-close]').forEach(function (el) {
-    var n = Math.ceil((new Date(el.getAttribute('data-close')) - now) / 86400000);
+    var c = new Date(el.getAttribute('data-close'));
+    var n = c <= now ? -1 : Math.ceil((c - now) / 86400000);
     var out = $('.dl-n', el), u = $('.dl-u', el);
     if (!out) return;
     out.textContent = n < 0 ? 'SHUT' : String(n).padStart(2, '0');
     if (u) u.textContent = n === 1 ? 'day' : 'days';
+    if (n < 0) { var tr = el.closest('#v-calls tr'); if (tr) tr.hidden = true; }
+  });
+  $$('[data-live-count]').forEach(function (e) {
+    e.textContent = e.getAttribute('data-live-count').split(',').filter(function (x) { return new Date(x) > now; }).length;
   });
 
   /* ---------------------------------------------------------------- views */
