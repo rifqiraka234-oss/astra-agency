@@ -98,7 +98,7 @@ OFFERS = [
     "If it's on your list, I'd be glad to show you how assessors score it and where applications like yours tend to lose points, on a free funding call.",
     "Happy to walk you through how it's scored on a free funding call, if that's useful.",
     "If you're weighing it up, a free funding call would tell you quickly whether it's worth the effort.",
-    "Worth a free funding call to see if it fits?",
+    "Worth a free funding call to see if it's a fit?",
 ]
 
 
@@ -116,8 +116,8 @@ def connect_note(fd):
 def bump(fd):
     short = CALL_LINE[fd['call']][0]
     if fd['call'] == 'eic':
-        return f"{fd['first']}, did this reach you? The next EIC Accelerator batch is on {fmt_close(fd['_call']['closes'])}."
-    return f"{fd['first']}, did this reach you? The {short} call closes on {fmt_close(fd['_call']['closes'])}."
+        return f"{fd['first']}, did this reach you? The next EIC Accelerator batch is on {fmt_close(fd['_call']['closes'])}, so there's still time."
+    return f"{fd['first']}, did this reach you? The {short} call closes on {fmt_close(fd['_call']['closes'])}, so there's still time."
 
 
 def dl(close_iso, cls=''):

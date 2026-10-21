@@ -9,7 +9,8 @@ Internal. For Raka and the next builder, never for the client.
   - /guides/ with three long guides, Smart grants are closed, BridgeAI Deployment Catalyst, Investor Partnerships
   - /calls/ with a page for each of the 31 Innovate UK competitions on the Innovation Funding Service
   - /fit/ the seven question fit check, the founder's eight dots, matching calls, booking or email
-- Netlify project astra-bidx-prototype, id a067db1c-6da3-487e-8556-1b01bbac0000, deploy 6ad85af98c800e2f20111c45.
+- Netlify project astra-bidx-prototype, id a067db1c-6da3-487e-8556-1b01bbac0000, deploys 6ad85af98c800e2f20111c45 then 6ad85d255e6cbbaa04b44884 (contractions in the sample
+  messages and bumps), the second verified the same way as the first.
   Team SSO switched off, no password. Every page carries noindex, nofollow.
 - Source, state/prototypes/bidx/build (python3 build.py writes ../site). The deployed folder is ../site.
 
