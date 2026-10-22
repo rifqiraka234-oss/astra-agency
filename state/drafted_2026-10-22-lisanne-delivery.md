@@ -38,6 +38,8 @@ state/drafted_2026-10-22-replies.md, which should now never be sent, the sketch 
 > about page", her /over-mij/ says "praktische arbeidsrechtelijke kennis en hulpmiddelen", first on "ziekte en
 > re-integratie", reread live 22 Oct. "how client files stay private and what it should save you", chapters 04 and 05 of
 > the plan page.
+> "starting with new enquiries", the opener offered admin "from new enquiries to client updates and invoices". The app
+> does the new enquiries part, updates and invoices are "After that" on the plan, so the message says where it starts.
 > v1 text, superseded, never sent. "Lisanne, I built this for you today. / It's the AI workflow I offered, and it works.
 > ... / There's also the employee reintegration check from your about page, and the plan behind it, privacy included."
 
@@ -45,7 +47,7 @@ DELIVERY
 ```
 Lisanne, we've built two things for you today.
 
-The first is the AI workflow I offered, and it works. Every new enquiry becomes one card with the dates quoted, the deadlines worked out, a conflict check, and a draft reply and engagement letter waiting for your yes. It's got the employee reintegration check from your about page in there too.
+The first is the AI workflow I offered, starting with new enquiries, and it works. Every new enquiry becomes one card with the dates quoted, the deadlines worked out, a conflict check, and a draft reply and engagement letter waiting for your yes. It's got the employee reintegration check from your about page in there too.
 
 Try it yourself.
 https://astra-dejongvanhommerig-prototype.netlify.app/
