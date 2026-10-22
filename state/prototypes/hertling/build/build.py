@@ -160,6 +160,26 @@ def termin(page):
 </div>"""
 
 
+def cta(kind):
+    """The closing chapter on inner pages. One action, the call beside it, the self check as the quieter path."""
+    AR = '<svg class="ar" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    if kind == 'leistungen':
+        h = L('Nicht sicher, welcher Baustein <span class="it">passt?</span>', 'Not sure which part <span class="it">fits?</span>')
+        p = L('Das klären wir im Kennenlerngespräch. Oder der Selbsttest zeigt in rund drei Minuten, wo Ihre IT eine Blackbox ist.', "We'll work it out in a first conversation. Or the self check shows in about three minutes where your IT is a black box.")
+    else:
+        h = L('Lernen wir <span class="it">uns kennen.</span>', "Let's get <span class=\"it\">to know each other.</span>")
+        p = L('Der erste Schritt ist ein Gespräch, mehr nicht. Noah Hertling meldet sich persönlich.', 'The first step is a conversation, nothing more. Noah Hertling gets back to you himself.')
+    return f'''<section class="cta dk" data-tone="dark" aria-labelledby="cta-h">
+  <div class="cta-in">
+    <span class="lbl rv">{L('Kennenlernen', 'First conversation')}</span>
+    <h2 id="cta-h" class="d2" data-words>{h}</h2>
+    <p class="lede rv">{p}</p>
+    <div class="cta-row rv"><a class="btn pri btn-lg" href="/kontakt/">{L('Kennenlerngespräch vereinbaren', 'Book a first conversation')}{AR}</a><a class="btn glass btn-lg" href="/selbsttest/">{L('Selbsttest machen', 'Take the self check')}</a></div>
+    <a class="cta-tel rv" href="tel:{TEL}" data-live><i aria-hidden="true"></i><b>{PHONE}</b><span data-live-t>{L('Montag bis Freitag, 8 bis 18 Uhr', 'Monday to Friday, 8am to 6pm')}</span></a>
+  </div>
+</section>'''
+
+
 def fig(key):
     """A licensed photo for a service, from data/figs.json. No entry, no figure. Never captioned as the client's."""
     path = os.path.join(HERE, 'data', 'figs.json')
@@ -213,29 +233,34 @@ def header(nav):
 </header>
 <div class="menu" id="menu" hidden>
   <nav aria-label="{L('Menü', 'Menu')}">{links}</nav>
+  <div class="lang menu-lang" role="group" aria-label="{L('Sprache', 'Language')}"><button type="button" data-lang="de" aria-pressed="true">DE</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
   <a class="menu-call" href="tel:{TEL}">{PHONE}</a>
 </div>'''
 
 
 def bar():
-    """The slim bar for Astra's own note to Noah, so it never reads as one of his pages."""
+    """The header of Astra's growth plan, so it never reads as one of his pages."""
     return f'''<a class="skip" href="#main">Skip to content</a>
-<header class="sk-bar" lang="en">
-  <a class="sk-b" href="https://astra-hertling-prototype.netlify.app/">{mark('sk-mark')}<span>Sketch for Systemhaus<span class="brand-dash">-</span>Hertling</span></a>
-  <span class="sk-by">by Astra</span>
-  <div class="lang" role="group" aria-label="Language of the sample posts"><button type="button" data-lang="de" aria-pressed="true">DE</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+<header class="top pl-top" data-top lang="en">
+  <a class="brand" href="https://astra-hertling-prototype.netlify.app/">{mark('brand-mark')}<span>Growth plan <em>for Systemhaus<span class="brand-dash">-</span>Hertling</em></span></a>
+  <div class="top-r">
+    <span class="pl-by">by Astra</span>
+    <a class="btn pri top-cta" href="https://astra-hertling-prototype.netlify.app/">Open the new site</a>
+    <div class="lang" role="group" aria-label="Language of the sample posts"><button type="button" data-lang="de" aria-pressed="true">DE</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+  </div>
 </header>'''
 
 
 def footer():
-    return f'''<footer class="foot">
+    return f'''<footer class="foot dk" data-tone="dark">
   <div class="foot-in">
     <div class="foot-brand">{mark('foot-mark')}<p>Systemhaus<span class="brand-dash">-</span>Hertling UG (haftungsbeschränkt)<br>{L('Betreuung von Netzwerken, Servern und Arbeitsplätzen für kleine und mittlere Unternehmen in Hamburg und Umgebung.', 'IT care for networks, servers and workstations at small and mid sized businesses in Hamburg and around.')}</p></div>
     <div><h2 class="fh">{L('Kontakt', 'Contact')}</h2><p><a href="tel:{TEL}">{PHONE}</a><br><a href="mailto:{MAIL}">{MAIL}</a><br>{ADDR}</p></div>
     <div><h2 class="fh">{L('Erreichbar', 'Hours')}</h2><p>{L('Montag bis Freitag', 'Monday to Friday')}<br>{L('8 bis 18 Uhr', '8am to 6pm')}<br>{L('Vor Ort in Hamburg und Umgebung, per Fernwartung deutschlandweit', 'On site across Hamburg and around, remotely anywhere in Germany')}</p></div>
     <div><h2 class="fh">{L('Seiten', 'Pages')}</h2><p><a href="/leistungen/">{L('Leistungen', 'Services')}</a><br><a href="/selbsttest/">{L('Selbsttest', 'Self check')}</a><br><a href="/ueber-uns/">{L('Über uns', 'About')}</a><br><a href="/kontakt/">{L('Kontakt', 'Contact')}</a></p></div>
   </div>
-  <div class="foot-b"><span>© 2026 Systemhaus<span class="brand-dash">-</span>Hertling UG (haftungsbeschränkt)</span><span><a href="/impressum/">Impressum</a> <a href="/datenschutz/">{L('Datenschutz', 'Privacy')}</a></span>
+  <div class="foot-word" aria-hidden="true">Hertling</div>
+  <div class="foot-b"><span>© 2026 Systemhaus<span class="brand-dash">-</span>Hertling UG (haftungsbeschränkt)</span><span><a href="/impressum/">Impressum</a> &nbsp; <a href="/datenschutz/">{L('Datenschutz', 'Privacy')}</a></span>
   <span class="note">{L('Netzwerkpläne, Protokolle und Auswertungen auf dieser Website zeigen Beispieldaten.', 'Network plans, logs and results on this site show example data.')}</span></div>
 </footer>'''
 
@@ -253,9 +278,9 @@ def page(meta, body, assets):
 <title data-en="{html.escape(t_en, quote=True)}">{t_de}</title>
 <meta name="description" content="{html.escape(d_de, quote=True)}" data-en-content="{html.escape(d_en, quote=True)}">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#f3f5f7">
+<meta name="theme-color" content="#04070d">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/schibsted-grotesk-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geist-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 {css}
 <script>document.documentElement.classList.add('js');try{{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('sh-lang');if(l==='en'||l==='de')document.documentElement.lang=l}}catch(e){{}}</script>
 {js}
@@ -278,15 +303,18 @@ def build():
         if os.path.isdir(d):
             shutil.rmtree(d)
     os.makedirs(os.path.join(OUT, 'assets'))
-    shutil.copytree(os.path.join(HERE, 'fonts'), os.path.join(OUT, 'fonts'), ignore=shutil.ignore_patterns('g.css'))
+    shutil.copytree(os.path.join(HERE, 'fonts'), os.path.join(OUT, 'fonts'))
     assets = {}
     for f in sorted(glob.glob(os.path.join(HERE, 'assets', '*'))):
         name = os.path.basename(f)
-        if name in ('mark.svg', 'mark-trace.svg', 'logo-final.png') or os.path.isdir(f):
+        if name in ('mark-trace.svg', 'logo-final.png') or os.path.isdir(f):
             continue
         shutil.copy(f, os.path.join(OUT, 'assets', name))
         assets[name] = hashlib.sha1(open(f, 'rb').read()).hexdigest()[:8]
-    for f in ['site.css', 'site.js', 'wlan.js', 'check.js', 'scene.js', 'form.js']:
+    css = ''.join(open(os.path.join(HERE, 'css', c)).read() for c in ('base.css', 'comp.css', 'fix.css', 'plan.css') if os.path.exists(os.path.join(HERE, 'css', c)))
+    open(os.path.join(OUT, 'assets', 'site.css'), 'w').write(css.replace('@import url(../fonts/fonts.css);', '@import url(../fonts/fonts.css);', 1))
+    assets['site.css'] = hashlib.sha1(css.encode()).hexdigest()[:8]
+    for f in ['site.js', 'wlan.js', 'check.js', 'scene.js', 'form.js', 'hero.js', 'plan.js']:
         p = os.path.join(HERE, f)
         if os.path.exists(p):
             shutil.copy(p, os.path.join(OUT, 'assets', f))
@@ -306,6 +334,7 @@ def build():
         body = body.replace('{{CAL}}', cal())
         body = body.replace('{{PORTS}}', ports())
         body = re.sub(r'\{\{TERMIN (\w+)\}\}', lambda mm: termin(mm.group(1)), body)
+        body = re.sub(r'\{\{CTA (\w+)\}\}', lambda mm: cta(mm.group(1)), body)
         body = re.sub(r'\{\{FIG (\w+)\}\}', lambda mm: fig(mm.group(1)), body)
         for inc in re.findall(r'\{\{INC ([\w./-]+)\}\}', body):
             body = body.replace('{{INC ' + inc + '}}', open(os.path.join(HERE, inc)).read())
@@ -319,6 +348,8 @@ def build():
     shutil.copytree(os.path.join(OUT, 'fonts'), os.path.join(OUT2, 'fonts'))
     shutil.copytree(os.path.join(OUT, 'media', 'presence'), os.path.join(OUT2, 'media', 'presence'))
     shutil.rmtree(os.path.join(OUT, 'media', 'presence'))
+    shutil.copytree(os.path.join(OUT, 'media', 'plan'), os.path.join(OUT2, 'media', 'plan'))
+    shutil.rmtree(os.path.join(OUT, 'media', 'plan'))
     for d in (OUT, OUT2):
         open(os.path.join(d, 'netlify.toml'), 'w').write(
             '[[headers]]\n  for = "/*"\n  [headers.values]\n    X-Robots-Tag = "noindex, nofollow"\n')

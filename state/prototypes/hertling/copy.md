@@ -1,5 +1,9 @@
 # Systemhaus-Hertling, copy deck (DE first, EN beside it)
 
+> v3, 22 Oct 2026. This deck is the v1 and v2 working copy. v3's copy lives in the built pages themselves
+> (build/pages/*.html for the site, build/data/plan.json for the growth plan), and handover.md lists what changed and
+> every [CONFIRM] item. Read those, not this, for what's live.
+
 Internal working file. Built from Noah's own sentences on systemhaus-hertling.com (research.md, "His own words").
 Anything that isn't his is marked [CONFIRM] here and in the handover. No colons, no dashes, contractions in the English.
 Hyphenated German compounds are rewritten ("Mail" for E-Mail, "vor Ort" for Vor-Ort) so the no-dash rule holds. His

@@ -1,159 +1,104 @@
-/* The hero is his logo at the size of the screen. Two blue pillars on the edges and the grey band laid between them,
-   routed around the two headline blocks, so the words always sit in the H's two open corners. */
+/* Home page scenes. Each reads its own scroll position and writes CSS variables, nothing else.
+   Under reduced motion every scene jumps between its states instead of moving. */
 (function () {
-  var art = document.querySelector('[data-hero-art]');
-  if (!art) return;
-  var stage = art.parentNode, ha = stage.querySelector('.h-a'), hb = stage.querySelector('.h-b');
-  var NS = 'http://www.w3.org/2000/svg';
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
-  function rects(node, o) {
-    var r = document.createRange(); r.selectNodeContents(node);
-    return [].slice.call(r.getClientRects()).filter(function (c) { return c.width > 2; })
-      .map(function (c) { return { l: c.left - o.left, t: c.top - o.top, r: c.right - o.left, b: c.bottom - o.top }; });
-  }
-  function curve(x1, x2, k, yTop, yBot, W) {
-    var pts = [], n = 90, i;
-    for (i = 0; i <= 12; i++) pts.push([W - (W - x1) * i / 12, yTop]);
-    for (i = 0; i <= n; i++) {
-      var t = i / n, u = 1 - t;
-      var cx1 = x1 - (x1 - x2) * k, cx2 = x2 + (x1 - x2) * k;
-      pts.push([u * u * u * x1 + 3 * u * u * t * cx1 + 3 * u * t * t * cx2 + t * t * t * x2, u * u * u * yTop + 3 * u * u * t * yTop + 3 * u * t * t * yBot + t * t * t * yBot]);
-    }
-    for (i = 0; i <= 12; i++) pts.push([x2 - x2 * i / 12, yBot]);
-    return pts;
-  }
-  function clearance(pts, boxes) {
-    var m = 1e9;
-    boxes.forEach(function (b) {
-      pts.forEach(function (p) {
-        var dx = Math.max(b.l - p[0], 0, p[0] - b.r), dy = Math.max(b.t - p[1], 0, p[1] - b.b);
-        m = Math.min(m, Math.sqrt(dx * dx + dy * dy));
-      });
-    });
-    return m;
-  }
-  function draw(first) {
-    var o = stage.getBoundingClientRect(), W = Math.round(o.width), H = Math.round(o.height);
-    if (!W || !H) return;
-    var narrow = W < 700;
-    var P = narrow ? Math.max(24, W * 0.065) : Math.max(56, Math.min(W * 0.095, 150));
-    var B = narrow ? Math.max(50, Math.min(H * 0.075, 66)) : Math.max(86, Math.min(H * 0.16, 160));
-    stage.style.setProperty('--pill', P + 'px');
-    stage.style.setProperty('--band', B + 'px');
-    var gap = Math.max(5, B * 0.06), need = B / 2 + gap + (narrow ? 7 : 22);
-    var yTop = B / 2, yBot = H - B / 2;
-    hb.style.fontSize = '';
-    var best = null;
-    for (var shrink = 0; shrink < 8 && !best; shrink++) {
-      if (shrink) hb.style.fontSize = (parseFloat(getComputedStyle(hb).fontSize) * 0.93) + 'px';
-      var boxes = rects(ha, o).concat(rects(hb, o));
-      var lo = narrow ? 0.06 : 0.1, hi = narrow ? 0.94 : 0.861;
-      for (var x1f = 0.4; x1f <= hi; x1f += 0.02) {
-        for (var x2f = lo; x2f <= x1f - 0.02; x2f += 0.02) {
-          for (var k = 0.3; k <= 0.86; k += 0.1) {
-            var c = clearance(curve(W * x1f, W * x2f, k, yTop, yBot, W), boxes);
-            if (c < need) continue;
-            // prefer a centred, generous S, like the mark
-            var score = c - Math.abs((x1f + x2f) / 2 - 0.5) * W * 0.6 - Math.abs(k - 0.55) * 40 - Math.abs((x1f - x2f) - (narrow ? 0.6 : 0.22)) * W * 0.5;
-            if (!best || score > best.score) best = { x1: W * x1f, x2: W * x2f, k: k, score: score };
-          }
-        }
-      }
-    }
-    stage.setAttribute('data-fit', best ? Math.round(best.x1) + ',' + Math.round(best.x2) + ',' + best.k.toFixed(2) + ',' + (hb.style.fontSize || 'css') : 'none');
-    if (!best) best = { x1: W * 0.6, x2: W * 0.4, k: 0.55 };
-    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, 'aria-hidden': 'true', focusable: 'false', preserveAspectRatio: 'none' });
-    var defs = el('defs', {});
-    var gb = el('linearGradient', { id: 'hb', x1: '0', y1: '0', x2: '1', y2: '1' });
-    gb.appendChild(el('stop', { offset: '0', 'stop-color': '#074a7c' })); gb.appendChild(el('stop', { offset: '1', 'stop-color': '#0b6aa6' }));
-    var gg = el('linearGradient', { id: 'hg', gradientUnits: 'userSpaceOnUse', x1: W, y1: 0, x2: 0, y2: H });
-    gg.appendChild(el('stop', { offset: '0', 'stop-color': '#767d83' })); gg.appendChild(el('stop', { offset: '1', 'stop-color': '#adb3b8' }));
-    defs.appendChild(gb); defs.appendChild(gg); svg.appendChild(defs);
-    var rad = Math.min(22, P * 0.2), slant = P * 0.34, top = narrow ? H * 0.08 : H * 0.1;
-    var lp = el('path', { class: 'hp hp-l', fill: 'url(#hb)', d: 'M0 ' + (top + slant + rad) + ' Q0 ' + (top + slant) + ' ' + rad + ' ' + (top + slant - rad * 0.34) + ' L' + P + ' ' + top + ' L' + P + ' ' + yBot + ' L0 ' + yBot + 'Z' });
-    var rp = el('path', { class: 'hp hp-r', fill: 'url(#hb)', d: 'M' + (W - P) + ' ' + yTop + ' L' + W + ' ' + yTop + ' L' + W + ' ' + (H + 2) + ' L' + (W - P) + ' ' + (H + 2) + 'Z' });
-    var x1 = best.x1, x2 = best.x2, k = best.k;
-    var d = 'M' + (W + 4) + ' ' + yTop + ' L' + x1 + ' ' + yTop + ' C' + (x1 - (x1 - x2) * k) + ' ' + yTop + ' ' + (x2 + (x1 - x2) * k) + ' ' + yBot + ' ' + x2 + ' ' + yBot + ' L-4 ' + yBot;
-    var halo = el('path', { class: 'hb-halo', d: d, fill: 'none', stroke: '#f3f5f7', 'stroke-width': B + gap * 2 });
-    var band = el('path', { class: 'hb-band', d: d, fill: 'none', stroke: 'url(#hg)', 'stroke-width': B });
-    svg.appendChild(lp); svg.appendChild(rp); svg.appendChild(halo); svg.appendChild(band);
-    art.innerHTML = ''; art.appendChild(svg);
-    stage.classList.add('drawn');
-    if (first && !reduce) {
-      var len = band.getTotalLength();
-      [band, halo].forEach(function (p) { p.style.strokeDasharray = len; p.style.strokeDashoffset = len; });
-      requestAnimationFrame(function () { requestAnimationFrame(function () {
-        svg.classList.add('in');
-        [band, halo].forEach(function (p) { p.style.transition = 'stroke-dashoffset 1.6s cubic-bezier(.6,0,.2,1) .35s'; p.style.strokeDashoffset = 0; });
-      }); });
-    } else svg.classList.add('in');
-  }
-  function go() { draw(true); var t; addEventListener('resize', function () { clearTimeout(t); t = setTimeout(function () { draw(false); }, 120); }); }
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(go); else go();
-  document.addEventListener('sh-lang', function () { draw(false); });
-})();
-
-/* The black box. Scroll opens it, draws the cabling, tags every device and brings in the change log. */
-(function () {
-  var bx = document.querySelector('[data-bx]');
-  if (!bx) return;
-  var box = bx.querySelector('.bx-box'), tags = [].slice.call(bx.querySelectorAll('.np-tag')), log = bx.querySelector('.bx-log');
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var d = document, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(s, r) { return (r || d).querySelector(s); }
+  function $$(s, r) { return [].slice.call((r || d).querySelectorAll(s)); }
   function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
-  function tick() {
-    var r = bx.getBoundingClientRect(), span = r.height - innerHeight;
-    var p = clamp(-r.top / (span || 1));
-    var open = clamp((p - 0.22) / 0.26), edges = clamp((p - 0.36) / 0.2), lg = clamp((p - 0.7) / 0.12);
-    if (reduce) { open = p < 0.3 ? 0 : 1; edges = open; lg = p < 0.66 ? 0 : 1; }
-    box.style.setProperty('--o', (1 - open).toFixed(3));
-    box.style.setProperty('--e', edges.toFixed(3));
-    tags.forEach(function (t, i) { t.style.setProperty('--tg', clamp((p - 0.48 - i * 0.025) / 0.08).toFixed(3)); });
-    log.style.setProperty('--l', lg.toFixed(3));
-    bx.setAttribute('data-s', p < 0.3 ? '0' : p < 0.66 ? '1' : '2');
+  var jobs = [];
+  function tick() { jobs.forEach(function (f) { f(); }); }
+  var queued = false;
+  function onScroll() { if (queued) return; queued = true; requestAnimationFrame(function () { queued = false; tick(); }); }
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll);
+
+  /* 2. the black box turns to glass, the network draws itself, the devices get their tags, the log arrives */
+  var gb = $('[data-gb]');
+  if (gb) {
+    var cube = $('.cube', gb), net = $('.cube-net', gb), tags = $$('.np-tag', gb);
+    jobs.push(function () {
+      var r = gb.getBoundingClientRect(), span = r.height - innerHeight;
+      var p = clamp(-r.top / (span || 1));
+      var o = 1 - clamp((p - 0.16) / 0.3), e = clamp((p - 0.3) / 0.25), lg = clamp((p - 0.72) / 0.12);
+      if (reduce) { o = p < 0.3 ? 1 : 0; e = o ? 0 : 1; lg = p < 0.66 ? 0 : 1; }
+      cube.style.setProperty('--o', o.toFixed(3));
+      net.style.setProperty('--e', e.toFixed(3));
+      tags.forEach(function (t, i) { t.style.setProperty('--tg', reduce ? (p < 0.5 ? 0 : 1) : clamp((p - 0.48 - i * 0.03) / 0.08).toFixed(3)); });
+      gb.style.setProperty('--l', lg.toFixed(3));
+      gb.style.setProperty('--p', p.toFixed(3));
+      gb.setAttribute('data-s', p < 0.3 ? '0' : p < 0.66 ? '1' : '2');
+    });
   }
-  if (reduce) { box.style.setProperty('--o', 0); }
-  addEventListener('scroll', function () { requestAnimationFrame(tick); }, { passive: true });
-  addEventListener('resize', tick);
+
+  /* 3. four Bausteine, the item nearest the middle of the screen chooses the picture */
+  var bs = $('[data-bs]');
+  if (bs) {
+    var items = $$('.bs-it', bs), media = $$('.bs-m', bs), cap = $('[data-bs-cap]', bs), cur = -1;
+    var wide = matchMedia('(min-width: 861px)');
+    function show(n) {
+      if (n === cur) return; cur = n;
+      items.forEach(function (it, i) { it.classList.toggle('on', i === n); });
+      media.forEach(function (m, i) {
+        m.classList.toggle('on', i === n);
+        var v = $('video', m);
+        if (!v) return;
+        if (i === n && wide.matches && !reduce && !(navigator.connection && navigator.connection.saveData)) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); } else v.pause();
+      });
+      if (cap) cap.textContent = '0' + (n + 1) + ' / 04';
+    }
+    jobs.push(function () {
+      var r = bs.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) { media.forEach(function (m) { var v = $('video', m); if (v) v.pause(); }); cur = -2; return; }
+      var mid = innerHeight / 2, best = 0, bd = 1e9;
+      items.forEach(function (it, i) { var b = it.getBoundingClientRect(), c = Math.abs((b.top + b.bottom) / 2 - mid); if (c < bd) { bd = c; best = i; } });
+      show(best);
+    });
+  }
+
+  /* 4. the documentation window arrives at an angle and lies flat, the chips float at their own speed */
+  var dc = $('[data-dc]');
+  if (dc) {
+    var win = $('.dc-win', dc), stage = $('.dc-stage', dc), chips = $$('[data-par]', dc);
+    jobs.push(function () {
+      var r = stage.getBoundingClientRect();
+      var a = reduce ? 1 : clamp((innerHeight - r.top) / (innerHeight * 0.85));
+      win.style.setProperty('--a', a.toFixed(3));
+      var c = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+      chips.forEach(function (ch) { ch.style.setProperty('--py', reduce ? 0 : (c * +ch.getAttribute('data-par')).toFixed(1)); });
+    });
+  }
+
+  /* 5. Hamburg moves slower than the page */
+  var hh = $('[data-hh]');
+  if (hh) jobs.push(function () {
+    var r = hh.getBoundingClientRect();
+    hh.style.setProperty('--p', reduce ? 0.5 : clamp((innerHeight - r.top) / (innerHeight + r.height)).toFixed(3));
+  });
+
+  /* 6. the band from his logo draws itself under the three steps */
+  var st = $('[data-st]');
+  if (st) {
+    var band = $('.st-band', st);
+    jobs.push(function () {
+      var r = band.getBoundingClientRect();
+      band.style.setProperty('--d', reduce ? 1 : clamp((innerHeight * 0.9 - r.top) / (innerHeight * 0.55)).toFixed(3));
+    });
+  }
+
+  /* 7. the dial fills to the example result once it's on screen */
+  var sc = $('[data-sc]');
+  if (sc) {
+    var dial = $('[data-dial]', sc), done = false;
+    jobs.push(function () {
+      if (done) return;
+      var r = dial.getBoundingClientRect();
+      if (r.top < innerHeight * 0.85 && r.bottom > 0) { done = true; dial.style.setProperty('--v', dial.getAttribute('data-dial')); sc.classList.add('in'); }
+    });
+  }
   tick();
 })();
 
-/* The hero frame. His logo around the film, the blue pillars either side, the grey band entering above the picture
-   on the right and leaving below it on the left, so the office sits inside the H. */
-(function () {
-  var fr = document.querySelector('[data-frame]');
-  if (!fr) return;
-  var art = fr.querySelector('.hf-art'), card = fr.querySelector('.hf-card');
-  var NS = 'http://www.w3.org/2000/svg';
-  function el(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
-  function draw() {
-    var r = fr.getBoundingClientRect(), c = card.getBoundingClientRect();
-    var W = Math.round(r.width), H = Math.round(r.height);
-    if (!W || !H) return;
-    var cs = getComputedStyle(fr), P = parseFloat(cs.getPropertyValue('--p')), B = parseFloat(cs.getPropertyValue('--b'));
-    var top = c.top - r.top, bot = c.bottom - r.top, rad = Math.min(P * 0.45, 14);
-    var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, 'aria-hidden': 'true', focusable: 'false' });
-    var defs = el('defs', {});
-    var gb = el('linearGradient', { id: 'hfb', x1: '0', y1: '0', x2: '1', y2: '1' });
-    gb.appendChild(el('stop', { offset: '0', 'stop-color': '#074a7c' })); gb.appendChild(el('stop', { offset: '1', 'stop-color': '#0b6aa6' }));
-    var gg = el('linearGradient', { id: 'hfg', gradientUnits: 'userSpaceOnUse', x1: W, y1: 0, x2: 0, y2: H });
-    gg.appendChild(el('stop', { offset: '0', 'stop-color': '#767d83' })); gg.appendChild(el('stop', { offset: '1', 'stop-color': '#adb3b8' }));
-    defs.appendChild(gb); defs.appendChild(gg); svg.appendChild(defs);
-    // right pillar runs from the band at the top down most of the way, the left one from a little below the top to the band at the bottom
-    svg.appendChild(el('rect', { class: 'pl', x: W - P, y: 0, width: P, height: H * 0.82, rx: rad }));
-    svg.appendChild(el('rect', { class: 'pl', x: 0, y: H * 0.18, width: P, height: H * 0.82, rx: rad }));
-    var yT = B / 2, yB = H - B / 2, x1 = W * 0.64, x2 = W * 0.36;
-    var d = 'M' + (W - P + 1) + ' ' + yT + ' L' + x1 + ' ' + yT + ' C' + (x1 - (x1 - x2) * 0.55) + ' ' + yT + ' ' + (x2 + (x1 - x2) * 0.55) + ' ' + yB + ' ' + x2 + ' ' + yB + ' L' + (P - 1) + ' ' + yB;
-    svg.appendChild(el('path', { class: 'bd', d: d, 'stroke-width': B }));
-    art.innerHTML = ''; art.appendChild(svg);
-  }
-  var t; addEventListener('resize', function () { clearTimeout(t); t = setTimeout(draw, 100); });
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw); else draw();
-  draw();
-})();
-
-/* The quick contact bar on phones. It stays out of the way while the hero buttons or the booking form are on screen,
-   so it never repeats a button that's already there or covers a field. */
+/* The quick contact bar on phones. It stays out of the way while the hero buttons or the booking form are on screen. */
 (function () {
   var bar = document.querySelector('.mbar');
   if (!bar || !('IntersectionObserver' in window)) return;
@@ -163,5 +108,5 @@
     es.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
     bar.classList.toggle('off', seen.size > 0);
   });
-  ['.h2o-ctas', '#termin'].forEach(function (s) { var el = document.querySelector(s); if (el) io.observe(el); });
+  ['.hero-ctas', '#termin'].forEach(function (s) { var el = document.querySelector(s); if (el) io.observe(el); });
 })();

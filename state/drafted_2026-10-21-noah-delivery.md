@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SUPERSEDED on 22 Oct by state/drafted_2026-10-22-noah-delivery-v3.md. Never sent.
+
 # Noah Hertling, Systemhaus-Hertling, delivery of the presence sketch, 21 Oct 2026
 
 NOT SENT. Waiting for Raka's word. We promised it "later this week" on 21 Oct 12:33 UTC.

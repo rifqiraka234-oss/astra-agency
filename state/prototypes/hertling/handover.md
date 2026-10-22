@@ -1,4 +1,4 @@
-# Systemhaus-Hertling, handover. 21 Oct 2026, v2
+# Systemhaus-Hertling, handover. 22 Oct 2026, v3
 
 ## What it is, in plain words
 
@@ -6,188 +6,179 @@ Noah Hertling runs a one person IT firm in Reinbek, registered April 2026. Our 7
 comparing IT partners pick the ones that show proof, and he has none yet, no Google reviews, one LinkedIn follower, a
 homepage that names no client. He said yes to seeing "the Hertling online presence that wins Hamburg clients".
 
-His goal is more clients. So v2 is built to sell. Every page walks a visitor to one step, a first conversation with
-Noah (a short booking form or a call), and the proof a brand new firm can show today sits on the way there. The
-presence sketch does the same for Google and LinkedIn, posts from Noah himself, each ending in one next step.
+Two things are built. His site, rebuilt so it looks like a firm worth a contract and walks every visitor to a first
+conversation with him. And a growth plan for him, on its own site in Astra's voice, that says where he stands, what the
+market and the firms around him look like, and what to do in his first 90 days.
 
-## Why v2 (Raka, 21 Oct evening, "put yourself in his shoes")
+## Why v3 (Raka, 22 Oct morning)
 
-v1 in his shoes. It looked good and it didn't sell. Too long, too technical, a chapter of Eurostat figures, a demo in
-every section, the self check as the main button with no way to leave a number, photos of hardware and no people, and
-posts from a company page nobody follows, with no next step in them.
+"It looks like something out of the 2010s. Needa make it more sleek man. No islands and all. Colours. Gradients.
+Animations pictures ... And also the web strategy, is this the best you can do? ... it needs to be done €6000 euro worth
+at least."
 
-What v2 changes, and the reason for each.
+What v3 changes, and why.
 
-| Change | Why it sells |
+| Change | Why |
 |---|---|
-| One main action everywhere, "Kennenlerngespräch vereinbaren", in the header, hero, steps and a sticky bar on phones | One clear next step converts better than four competing ones |
-| A three field booking form (name, phone or mail, best time) on the home page and Kontakt | Leaving a number is the smallest possible yes |
-| "Kommt Ihnen das bekannt vor?" with four situations, each linking to its Baustein | A visitor who sees their own problem keeps reading |
-| Real people in the imagery, framed in his logo's pillars and band | Buyers picture themselves, hardware photos don't do that |
-| The person section, "Sie sprechen mit dem, der Ihre Systeme betreut" | His one person firm becomes the selling point |
-| Three steps, the first is just a conversation | Lowers the risk of the first move |
-| Demos moved to Leistungen, each Baustein ends in "Über Ihr Netzwerk sprechen" and prefills the form | Proof where people compare, a door to the call right after it |
-| Self check kept as the second path, its result goes into the form | Captures the visitor who isn't ready to call |
-| Facts chapter cut to one line with its source | Credibility without a lecture |
-| Posts from Noah's own profile, each ending in a call or booking line, plus an honest photo slot | A page with one follower reaches nobody, a person does |
+| The whole page runs night to daylight, his promise as the colour story (research/art-direction-v3.md) | One idea a visitor feels without reading, the black box opening |
+| Chapters edge to edge, no cards on a grey page | Raka's "no islands", the v2 look read as a 2015 theme |
+| The hero is his logo drawn as a network, lit by the pointer | His mark and his promise in the first second, no stock |
+| The black box turns to glass on scroll, the network and change log appear inside it | Shows what "documented" means instead of saying it |
+| Four Bausteine as one full screen film or photo each, each with its own call button | Pictures and motion, and a door to the call at every service |
+| Hamburg at blue hour behind his card, "Von Reinbek aus. Für Hamburg und Umgebung." | Local and premium, and his face is the one thing still missing |
+| Geist, Geist Mono and Instrument Serif italic, signal blue and ice on near black | Type and colour of the 2026 product sites in the teardown |
+| v2's "Kommt Ihnen das bekannt vor?" is gone | It was Matic-Tec's own section heading, copying a rival isn't positioning |
+| The presence sketch is replaced by a 12 chapter growth plan with charts computed from sourced data | Raka, "is this the best you can do" |
 
 ## Links
 
-- Live, https://astra-hertling-prototype.netlify.app/ (noindex, SSO off, forms on)
-- Presence sketch, https://astra-hertling-presence.netlify.app/ (its own site, Astra's voice, English, so the note
-  never sits inside his site)
-- Netlify project astra-hertling-prototype, id ddfbb769-744c-46cb-9780-caead079d70a. v1 final 6ad914d70552650b29ea252b,
-  v2 6ad925fc0a94a08e345fc045.
-- Netlify project astra-hertling-presence, id 75256c91-c631-4bdb-a4d0-33882f720a18. v1 6ad914caca1ab9374665367e, v2
-  6ad92612a6a7d26e9ff5f6ae.
-- Source state/prototypes/hertling/build, `python3 build.py` writes ../site and ../site-presence. No dependencies
-  beyond Python 3.
-- Research research.md, copy deck copy.md, teardown research/teardown/TEARDOWN.md, data research/data/DATA.md, assets
-  research/assets/ASSETS.md, no-swap sheets research/c5-no-swap-2026-10-21.jpg (v1) and
-  research/c5-no-swap-v2-2026-10-21.jpg (v2).
+- Site, https://astra-hertling-prototype.netlify.app/ (noindex, SSO off, forms on). Netlify project
+  astra-hertling-prototype, id ddfbb769-744c-46cb-9780-caead079d70a. v3 deploy 6ad9c4894138f06f055da7cd. Earlier, v1
+  6ad914d70552650b29ea252b, v2 6ad925fc0a94a08e345fc045.
+- Growth plan, https://astra-hertling-presence.netlify.app/. Netlify project astra-hertling-presence, id
+  75256c91-c631-4bdb-a4d0-33882f720a18. v3 deploy 6ad9c4a487342a00c2125006.
+- Source state/prototypes/hertling/build. `python3 plan_page.py` writes pages/presence.html from data/plan.json, then
+  `python3 build.py` writes ../site and ../site-presence. No dependencies beyond Python 3. v2's pages and CSS are kept
+  in build/v2pages.
+- Research, research.md (the lead), research/strategy-facts.md (every plan figure, reopened 22 Oct), research/
+  art-direction-v3.md, research/teardown/TEARDOWN.md, research/assets/ASSETS.md and research/assets/v3/ (manifest,
+  contact sheets, rejects).
+- Delivery draft, state/drafted_2026-10-22-noah-delivery-v3.md. NOT SENT.
 
-## Pages
+## The site, chapter by chapter
 
-Start, Leistungen, Selbsttest, Über uns, Kontakt (with a thank you page), Bewertung, Impressum, Datenschutz. The
-presence sketch is a separate one page site. German by default, every line in English too (DE EN switch, remembered per
-browser).
+Home. 0 night, his headline "Ihre IT läuft. Auch wenn gerade niemand hinschaut." over his logo as a lit network, the
+booking button and his number with a live line. 1 ink, an office after hours on film and four questions nobody asks
+until something stops, one Eurostat figure counted up. 2 the black box turning to glass. 3 the four Bausteine, film or
+photo, each with "Über Ihr ... sprechen". 4 the documentation window, five tabs, flattening as it arrives. 5 Hamburg at
+blue hour, his card, "16 km Luftlinie bis in die Innenstadt". 6 three steps on the band from his logo. 7 the self check
+as a dial filling to an example result. 8 daylight, the booking form and the FAQ. Footer back to night, his name huge.
 
-Home, in order. His own headline with the booking button and his number beside it, a film framed by his logo, three
-promises. "Kommt Ihnen das bekannt vor?" with four situations and one Eurostat line. The black box that opens on scroll
-into a documented network with a change log. The four Bausteine as picture cards. The documentation sample with five
-tabs. The person section with his card and the map. Three steps to start. The self check over the rain film. The booking
-form with the FAQ beside it. On phones a bar with Anrufen and Termin vereinbaren appears once the hero buttons scroll
-away and hides again at the form.
+Leistungen, the four Bausteine with demos (WLAN planner, support timeline, permissions matrix, backup calendar).
+Selbsttest, ten questions. Über uns, Schloss Reinbek in autumn beside the headline, his values and register facts.
+Kontakt, his card and the form. Bewertung, Impressum, Datenschutz. German first, every line in English (switch in the
+header, inside the menu below 400px wide).
 
-Leistungen. Each Baustein with his own bullets, a working demo (WLAN planner, support timeline, permissions matrix,
-backup calendar), typical reasons to call, and a link to the conversation about it. Kontakt. His card, then the booking
-form. Selbsttest. Ten questions, the result offers "Ergebnis im Kennenlerngespräch besprechen" first.
+## The growth plan, chapter by chapter
+
+Cover with three numbers (0 Google reviews, 1 LinkedIn follower, 0 clients named on his site). 01 where he stands,
+today's screenshots. 02 the market, businesses by size in Hamburg and Stormarn, three Eurostat rings, and the Microsoft
+end of support dates as "deadlines that make firms call". 03 the competition, the Google Maps ratings around Reinbek and
+a wall of 17 Hamburg firms. 04 positioning. 05 the journey from search to referral, built and next. 06 the new site in
+five screenshots. 07 town pages, with a Glinde sketch. 08 Google and reviews, the profile sketch and the review card. 09
+LinkedIn, three posts from his own profile. 10 offer and worth, the offer ladder, six published competitor prices and a
+calculator. 11 the first 90 days and what gets measured. 12 the team. Then "Give us thirty minutes."
+
+Facts changed today after reopening every source (research/strategy-facts.md, plus my own rechecks in the QA record).
+- hagel's 29 euros is its new Kjello line. Its managed care starts at 50 euros a workstation a month and projects are
+  140 an hour. The calculator now starts at 50.
+- "4 of 17 publish a price" only holds as "on the homepage or one click away". Base2 IT Consult in Wentorf posts 125
+  euros an hour on a notice no menu links to. Both now said on the page.
+- The ratings chart is rebuilt from today's "IT Systemhaus Reinbek" search (IT-Reinbek 5,0, Sellenschlo 5,0, IT-TEC
+  4,9 sponsored, Base2 4,7, RA-MICRO 4,0, Hertling no reviews). The 21 Oct Hamburg list no longer showed every firm
+  rated, so it's not used.
+- "Zuverlässig on 9 of 17 homepages" didn't survive a recount (7 visible, 10 in raw HTML). The number is cut.
+- Market heading now "Three in four already buy their IT help in" (Eurostat 75.98 percent, 2024 survey). The rings are
+  75.98, 15.55 and 20.69.
+- Wall column one rechecked site by site today. Eight show reviews or clients (Arconda's client logos load by script,
+  Sellenschlo's logos are partners, not clients). Five write about documentation, none shows any.
+- His homepage, 268 words, the logo the only picture. His Leistungen page has four stock photos, so the plan says "no
+  photo of you", not "no face". WordPress's sample page and first post are live and in his sitemap.
 
 ## What's his and what's ours
 
-His, word for word or nearly, every service line, the four values, the founding sentence, the hero headline, the
-closing question, his hours, address, phone, mail and register data. "Ihre IT ohne Blackbox" on the hero card is his
-"IT-Betreuung ohne Blackbox" shortened.
+His, word for word or nearly, every service line, the four values, the founding sentence, the hero headline, his hours,
+address, phone, mail and register data.
 
 Ours, and he has to say yes to each, marked [CONFIRM].
 
-1. [CONFIRM] The first conversation as the main offer, with a callback time choice (Vormittags, Nachmittags, Egal) and
-   "Noah Hertling meldet sich persönlich". Nothing says it's free, he decides that.
-2. [CONFIRM] The three start steps (Kennenlerngespräch, Bestandsaufnahme, Laufende Betreuung). v1 had four.
+1. [CONFIRM] The first conversation as the main offer, with a callback time choice and "Noah Hertling meldet sich
+   persönlich". Nothing says it's free.
+2. [CONFIRM] The three start steps (Kennenlerngespräch, Bestandsaufnahme, Laufende Betreuung).
 3. [CONFIRM] FAQ "Wem gehört die Dokumentation? Ihnen. Sie bekommen sie vollständig, auch wenn Sie später den Anbieter
-   wechseln." Strong trust line, but it's a commitment he hasn't made.
-4. [CONFIRM] FAQ "Was kostet das?" says a quote follows the first conversation. His site has no prices. 4 of 17 Hamburg
-   competitors publish one (hagel from 29 euros per workstation), worth raising with him.
-5. [CONFIRM] Über uns "Und wenn Noah mal ausfällt? Dann steht alles in der Dokumentation." Implies clients can reach
-   the documentation.
-6. [CONFIRM] The Selbsttest is our idea, ten questions, scored in the browser, nothing stored or sent until the visitor
-   sends the form themselves.
-7. [CONFIRM] FAQ "Für wen passt das eher nicht? Für Firmen, die rund um die Uhr Bereitschaft brauchen." True to his
-   Mo to Fr 8 to 18 hours, but it's his call to say it out loud.
-8. [CONFIRM] The four "Kommt Ihnen das bekannt vor?" situations and the "Typische Anlässe" on Leistungen are typical
-   reasons firms call, written by us, not quotes from his clients. They're set as quotes without a name on purpose.
-9. [CONFIRM] The three posts are written in his voice. Post 1 paraphrases his own founding sentence in the first
-   person, post 3 offers to check which machines still run Windows 10, which is our idea.
-10. [CONFIRM] Practices shown in the documentation sample (password safe, weekly copy off site, monthly restore test)
-    are example data, labelled as such on the page, not claims about how he works.
-11. Hardware sales are in his register purpose, not on his site. Left out.
+   wechseln." A commitment he hasn't made.
+4. [CONFIRM] FAQ "Was kostet das?" says a quote follows the first conversation. The plan shows what six rivals publish
+   and suggests a fixed price stock take. His call.
+5. [CONFIRM] Über uns "Und wenn Noah mal ausfällt? Dann steht alles in der Dokumentation."
+6. [CONFIRM] The self check is our idea, scored in the browser, nothing sent until the visitor sends the form.
+7. [CONFIRM] FAQ "Für wen passt das eher nicht? Für Firmen, die rund um die Uhr Bereitschaft brauchen."
+8. [CONFIRM] The four questions in chapter 1 and the "Typische Anlässe" on Leistungen are typical reasons firms call,
+   written by us, set as unnamed quotes on purpose.
+9. [CONFIRM] The plan's three LinkedIn posts are in his voice, and the positioning line is ours. The plan says both.
+10. [CONFIRM] Practices in the documentation sample are example data, labelled, not claims about how he works.
 
 ## Example data, and where it's labelled
 
-The office in the black box, the WLAN planner, the support timeline, the permissions matrix, the backup calendar, the
-documentation sample, the self check preview and the post images are one consistent made up office (12 workstations,
-the same rooms, the same dates, the same printer fix at 09.31 on Wed 14 Oct, the same "Finanzen" folder restored on
-Fri 2 Oct). Every one carries a visible "Beispiel" label, the documentation header says "Beispielbüro", and the footer
-says plans, logs and results show example data. The one statistic on the home page and the one on the self check result
-are real, both refetched from the Eurostat API at 20:5x UTC on 21 Oct (isoc_cisce_ic E_SEC2IUSVF DE 10 to 49, 2024 survey,
-20.69 percent, shown as "Gut jede fünfte", and isoc_cisce_ra E_SECPOL2 DE 10 to 49, 2024, 33.88 percent). Windows 10's
-end of support on 14 October 2025 was reread on Microsoft's own support page the same evening.
+One made up office runs through the hero network ("Beispielnetzwerk"), the black box, the WLAN planner, the support
+timeline, the permissions matrix, the backup calendar, the documentation ("Beispielbüro") and the self check dial
+(example result). Each carries a visible label, and the footer says plans, logs and results show example data. The real
+figures are Eurostat 20.69 percent on the home page and 33.88 percent on the self check, both refetched from the
+Eurostat API on 22 Oct.
 
-## Legal pages, changed from his live text [CONFIRM with his advisor]
+## Legal pages [CONFIRM with his advisor]
 
-- Impressum cites § 5 DDG, not § 5 TMG. The TMG was repealed on 14 May 2024 (IHK Bonn, IHK Nürnberg).
-- The EU OS platform link is gone. The platform closed on 20 July 2025, and the old link now lands on a page saying so.
-  His § 36 VSBG sentence stays.
-- Datenschutz keeps his IONOS hosting statement (true for his own hosting, not for this Netlify preview), drops the
-  sentence saying the form sends through the mail program, and adds three true sections for this build, the self check
-  runs in the browser, fonts are self hosted, the language choice is stored locally.
-- Free tips for the call, not pitched (RULES 0E). His live Datenschutz still shows the template note "Dieser Text ist
-  eine allgemeine Vorlage und ersetzt keine Rechtsberatung", and says the form uses the mail program while his live
-  form posts to WordPress.
+Unchanged from v2. § 5 DDG instead of the repealed TMG, the closed EU OS platform link removed, Datenschutz with three
+true sections for this build. New in v3, a Bildnachweis entry in the Impressum for the two photos below.
 
 ## Before it goes on his own domain
 
 - Remove the noindex meta and the X-Robots-Tag header.
-- Wire the booking form to his existing WordPress handler (his honeypot field is also called "website"). Here it posts
-  to Netlify Forms as "termin" (fields sprache, seite, name, firma, kontakt, zeit, anliegen). One labelled live test went
-  in at 20:5x UTC on 21 Oct ("ASTRA QA TEST v2", a .invalid address), POST 200 and the thank you showed. The v1 tests
-  were held by Netlify's spam filter, this one likely too. The old "kontakt" form is still registered from v1, unused.
-- Replace the Google button on /bewertung/ with the "Rezensionen erhalten" link from his Business Profile. It now opens
-  a Maps search for his listing.
-- The review card QR encodes the Netlify URL of /bewertung/. Regenerate it for his domain.
-- A real photo of Noah is the one thing only he can add, and it would lift trust more than anything else. 5 of 17
-  Hamburg competitors show a face. The person section and the posts use his logo and an honest placeholder until then.
+- Wire the form to his WordPress handler. Here it posts to Netlify Forms as "termin".
+- Replace the Google button on /bewertung/ with his own review link, and regenerate the review card QR for his domain.
+- A real photo of Noah is still the one thing that would lift trust most, and only he can add it.
 
 ## Assets and licences
 
-- Film and stills from film, Mixkit, Stock Video Free License. 2846 rain (self check section), 42617 office team (hero
-  film), 39841 man working late (still, "Kommt Ihnen das bekannt vor?"), 233 woman on a desk phone (still, Support
-  card), 42620 two people on laptops (still, Cloud card). The agent bulk downloaded 95 clips by script, which Mixkit's
-  terms clause 9 forbids, so each of the five used was fetched again on its own from its item page, licence read again
-  ("Free"), bytes identical (ASSETS.md, both v1 and v2 tables). The other clips are unused. None is captioned as his
-  office, staff or clients, and his name never sits on a clip.
-- Stills, Wikimedia Commons, CC0 or public domain, no credit needed, licence read two ways (ASSETS.md). Used,
-  still-switch-patch-cables (Netzwerk card), still-hard-drive-platter (Sicherheit card), still-speicherstadt-canal (Über
-  uns). v1's still-desk-laptop-notebook and still-rain-window-tiled-roof (sup-desk.jpg, cld-roof.jpg) and the WLAN
-  post image are no longer referenced anywhere, they're still in the deploy folders, unused.
-- Fonts, Schibsted Grotesk and Fragment Mono, SIL Open Font License, self hosted.
-- Map, OpenStreetMap boundaries via Nominatim, credited on the map.
-- Post images, rendered from the site's own components.
+- Films, Mixkit free licence, the same five clips as v2, each fetched singly and its licence reread (ASSETS.md). None
+  is captioned as his office, staff or clients.
+- Hamburg at blue hour (home, chapter 5), "Hafen City (Unsplash)" by Claudio Testa on Wikimedia Commons, CC0. Commons'
+  {{Unsplash}} template says it was on Unsplash before 5 June 2017 and dates it 11 Sep 2016, which I read on the file
+  page myself. Residual doubt, Unsplash's own page was behind a bot wall, so the date couldn't be read a second way.
+  Unsplash's current licence would allow this use anyway. Credited in the Impressum as a courtesy.
+- Schloss Reinbek (Über uns), Matthias v.d. Elbe, CC BY-SA 3.0, licence reread on the file page. Credited on the hero
+  and in the Impressum with links, and it's resized, which the credit says.
+- Stills from v2, Wikimedia Commons CC0. net-switch and sec-drive are used. rain.*, cld-roof.jpg and sup-desk.jpg are in
+  the deploy and unused.
+- Fonts, Geist, Geist Mono, Instrument Serif, SIL Open Font License, self hosted.
+- The imagery agent kept 10 more stills and 6 more clips (research/assets/v3/manifest.json), unused for now. Its notes
+  matter if any is picked later. Clip 4547 ends in a high five, trim before 26 s. The men in 39843 and 100326 are stock
+  models and must never read as Noah.
 
-## QA record v2, 21 Oct evening
+## QA record v3, 22 Oct
 
-- Copy audit over every visible string, alt, aria label and meta in both languages, both sites, with a planted control
-  file that trips every check (11 flags). 0 colons, 0 dashes outside the proper nouns Systemhaus-Hertling and
-  Schleswig-Holstein, 0 slop words, 0 hedges, 0 exclamations. Main site 0, presence 0.
-- axe 4.10, WCAG 2.2 AA plus best practice, 9 pages and the presence site, German and English, 1440 and 390, 40 runs, 0
-  violations. The first run caught the support timeline mid animation (contrast 1.6), fixed by switching that animation
-  off for reduced motion.
-- Overflow, console errors and failed requests, 10 pages, 2 languages, 8 widths from 1920 to 360, 160 loads, 0.
-- Text spilling out of its own box, 80 loads at 1440, 1024, 390 and 360, each with a planted control caught 80 of 80.
-  Found and fixed the permissions matrix ("Geschäftsführung" became "Leitung", "Buchhaltung" became "Finanzen" across
-  the example office). The only remaining hits are the documentation table's header row, hidden on phones on purpose
-  for screen readers.
-- Header at 13 widths from 981 to 1920, both languages, with and without JavaScript, 42 checks, 0 wrapped or
-  overlapping items. Found and fixed "Über uns" and the header button wrapping at 1280, and the language switch pushed
-  off screen at 1041.
-- Hero at 7 sizes, both languages, 14 checks. Booking button inside the first screen every time, headline and buttons
-  never touch the frame, the card stays inside the film. Controls confirm the overlap detector fires.
-- Booking form, 29 of 29 checks with POSTs intercepted. Prefill from the self check and from a Baustein, both languages,
-  own text kept on a switch, junk parameters ignored, validation of name and phone or mail, honeypot, a good request on
-  Kontakt and on the home page (every field arrives, seite says where), failure falls back to a ready written mail, and
-  the phone bar hides at the hero and the form.
-- Interactions, WLAN planner on Leistungen 51 to 96 to 99 percent at 1440 and 390, documentation tabs and switch ports by
-  mouse and keyboard, self check end to end at 45 percent, black box at 4 widths.
-- No JavaScript, 7 pages, nothing hidden, no English leaking. Reduced motion, neither film downloads.
-- Live, both deploys fetched file by file and hashed. Site 36 of 38 byte identical, the other two (home and Kontakt)
-  differ only where Netlify rewrites the form tag. Presence 19 of 19. Netlify registered the "termin" form with every
-  field and the honeypot. Live test POST 200, films stream (206), 0 broken images on a phone.
-- C5 no-swap, the v2 hero beside Schumacher, BidX, Garnish and Healthy Secrets, no shared recipe.
+- Copy audit, every visible string, alt, aria label and meta, both languages, both sites, 0 flags. A planted control
+  page tripped 10 flags across every category in the same session.
+- axe 4.10, WCAG 2.2 AA plus best practice, 10 pages, 2 languages, 1440 and 390, 40 runs, 0 violations. Fixed on the
+  way, the plan's competitor table (real table roles), the occupied switch ports (deeper blue for white 10px numbers),
+  the "Built" chips, the phone sketch caption, and the support timeline now honours reduced motion.
+- Overflow, console errors and failed requests, 10 pages, 2 languages, 9 widths from 1920 to 320, 180 loads, 0. Fixed,
+  the header menu button cut off at 360 and below (the language switch moves into the menu under 400px), the Über uns
+  headline at 320, a Leistungen demo at 320, the ratings label at 768.
+- Text spilling out of its box, 80 loads, control caught 80 of 80, 0 spills. Fixed, the glass box heading at 1440 and
+  1024, and the brand name in the plan table at 1024.
+- Header, 42 checks, 0. Hero, 9 sizes, both languages, 18 of 18.
+- Booking form, 29 of 29 with POSTs intercepted. WLAN planner 51 to 96 to 99 percent at 1440 and 390, documentation tabs
+  and ports by mouse and keyboard, self check end to end, each including the language switch through the phone menu.
+- No JavaScript, nothing hidden. Films play only for the chosen Baustein and never under reduced motion.
+- Live, both sites hashed file by file. Site 48 of 50 identical, home and Kontakt differ only by Netlify's form rewrite,
+  the other is the deploy tool's own note. Plan 31 of 31. Cold loads at 1440 and 390, titles right, 0 broken images.
+  A film request aborted mid scroll on one pass (net::ERR_ABORTED), the file serves 200 at the right size.
+- "16 km Luftlinie" rechecked, 16.3 km from Birkenweg to Hamburg's Rathaus (Nominatim, great circle).
 
-## G1 score v2, honest
+## G1 score v3, honest
 
-| Dimension | Weight | v1 | v2 | Why |
+| Dimension | Weight | v2 | v3 | Why |
 |---|---|---|---|---|
-| Brand specificity | 15 | 14 | 14 | His logo frames the film, his words, colours, town and promise |
-| Narrative and pacing | 15 | 13 | 14 | Recognition, black box, Bausteine, proof, the person, three steps, the form. Shorter |
-| Imagery and art direction | 15 | 12 | 13 | People and film now, framed in his mark. Still stock, still no photo of him |
-| Workflow completeness | 15 | 14 | 14 | Find, compare, self check, book, start, document, review. No prices |
-| Real proof and human trust | 15 | 12 | 12 | Register, real contact, live hours, a labelled sample. No face, no client yet |
+| Brand specificity | 15 | 14 | 15 | His logo is the hero, his promise is the colour story, his town in two photos |
+| Narrative and pacing | 15 | 14 | 14 | Night to daylight in eight chapters, one action throughout |
+| Imagery and art direction | 15 | 13 | 14 | Full bleed film and photos, a real art direction. Still no photo of him |
+| Workflow completeness | 15 | 14 | 14 | Find, compare, self check, book. No prices |
+| Real proof and human trust | 15 | 12 | 12 | Register, contact, live hours, labelled samples. No face, no client yet |
 | Buyer fit and objections | 10 | 9 | 9 | Single or ongoing, on site or remote, hours, ownership, cost, who it's not for |
 | Conversion completeness | 5 | 5 | 5 | One action everywhere, three field form, prefill, fallback, phone bar |
-| Interaction and accessibility | 5 | 5 | 5 | axe 0, keyboard on every control, reduced motion |
+| Interaction and accessibility | 5 | 5 | 5 | axe 0, keyboard on every control, reduced motion honoured |
 | Technical reliability | 5 | 5 | 5 | Every file verified live on both sites |
-| Total | 100 | 89 | 91 | Over the bar of 90 by one |
+| Total | 100 | 91 | 93 | |
 
-No G2 hard failure. The gap left is the same, trust and imagery, and only Noah can close it, a photo of him at work and
-a first client who agrees to be named.
+The gap left is the same two things, a photo of Noah at work and a first client who agrees to be named. Only he can
+close it.

@@ -1,11 +1,11 @@
 <div class="np">
 <svg class="np-svg" viewBox="0 0 400 400" focusable="false">
   <g class="np-edges" fill="none" stroke-linecap="round">
-    <path d="M200 70 V122"/>
-    <path d="M200 160 V196"/>
-    <path d="M200 214 H112"/>
-    <path d="M200 214 H288"/>
-    <path d="M200 232 V262 M74 262 H330 M74 262 V296 M126 262 V296 M178 262 V296 M230 262 V296 M282 262 V296 M330 262 V296"/>
+    <path pathLength="1" d="M200 70 V122"/>
+    <path pathLength="1" d="M200 160 V196"/>
+    <path pathLength="1" d="M200 214 H112"/>
+    <path pathLength="1" d="M200 214 H288"/>
+    <path pathLength="1" d="M200 232 V262 M74 262 H330 M74 262 V296 M126 262 V296 M178 262 V296 M230 262 V296 M282 262 V296 M330 262 V296"/>
   </g>
   <g class="np-nodes">
     <path class="np-cloud" d="M168 66 a20 20 0 0 1 4 -39 a27 27 0 0 1 51 -6 a19 19 0 0 1 21 26 a16 16 0 0 1 -6 19 Z"/>

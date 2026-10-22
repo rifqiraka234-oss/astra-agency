@@ -1,0 +1,647 @@
+{
+ "cover": {
+  "lede": "Noah, you said yes to seeing what an online presence that wins Hamburg clients looks like. Here's the plan, and the pieces already built. A new site, your Google profile, your first posts, local pages and a review card, and every one of them points to the same thing, a first conversation with you.",
+  "stats": [
+   {
+    "n": "0",
+    "t": "Google reviews on your listing",
+    "src": "Google Maps, 22 Oct 2026"
+   },
+   {
+    "n": "1",
+    "t": "follower on your LinkedIn page",
+    "src": "LinkedIn, 22 Oct 2026"
+   },
+   {
+    "n": "0",
+    "t": "clients named anywhere on your site",
+    "src": "systemhaus-hertling.com, all nine pages, 22 Oct 2026"
+   }
+  ]
+ },
+ "today": {
+  "lede": "Your site is tidy and recent. What's missing for a buyer is proof. No client, no review, no photo of you, no price, and 268 words on the homepage. A firm comparing three IT partners has nothing to hold on to.",
+  "shot_date": "22 Oct 2026",
+  "facts": [
+   {
+    "k": "Registered",
+    "v": "27 April 2026, Amtsgericht Lübeck, HRB 27513 HL"
+   },
+   {
+    "k": "Based in",
+    "v": "Reinbek, Birkenweg 18"
+   },
+   {
+    "k": "Offers",
+    "v": "Network, support, cloud and security, on site and remote"
+   },
+   {
+    "k": "On the homepage",
+    "v": "268 words, and the only picture is your logo"
+   },
+   {
+    "k": "Also live, and in your sitemap",
+    "v": "The sample page and the first post WordPress puts on every new site"
+   }
+  ]
+ },
+ "market": {
+  "rows": [
+   {
+    "label": "Hamburg, fewer than 10 staff",
+    "n": 87418
+   },
+   {
+    "label": "Hamburg, 10 to 49 staff",
+    "n": 11985
+   },
+   {
+    "label": "Kreis Stormarn, fewer than 10 staff",
+    "n": 9991
+   },
+   {
+    "label": "Kreis Stormarn, 10 to 49 staff",
+    "n": 1456
+   }
+  ],
+  "src": "Statistik Nord, Statistisches Jahrbuch Hamburg 2024, table 12.8. Stormarn from Bundestag Drucksache 21/7502, annex 1, which reproduces the 2024 business register.",
+  "reading": "So the work is rarely convincing a firm it needs IT help. Three in four already pay someone, and only one in six has an IT person of its own. Hiring one is hard too, with 79,000 IT jobs unfilled in Germany. The job is giving a firm a reason to switch, and switching takes trust a new firm has to show rather than claim.",
+  "src2": "Eurostat, German firms with 10 to 49 staff, isoc_ske_fct and isoc_ske_itspe (2024 survey), isoc_cisce_ic (2024 survey). Bitkom, 3 September 2026."
+ },
+ "eurostat": [
+  {
+   "v": 75.98,
+   "text": "have outside suppliers do some of their IT work",
+   "src": "Eurostat isoc_ske_fct, 2024"
+  },
+  {
+   "v": 15.55,
+   "text": "employ an IT specialist of their own",
+   "src": "Eurostat isoc_ske_itspe, 2024"
+  },
+  {
+   "v": 20.69,
+   "text": "lost IT services in 2023 because hardware or software failed",
+   "src": "Eurostat isoc_cisce_ic, 2024 survey"
+  }
+ ],
+ "ratings": {
+  "title": "Google Maps, the search “IT Systemhaus Reinbek”",
+  "src": "Google Maps signed out, in German, 22 Oct 2026, every firm the list showed. IT-TEC was a sponsored result. Which firms appear changes with the session and the language, and in both versions we ran, yours was the only listing without a rating.",
+  "rows": [
+   {
+    "name": "IT-Reinbek, Dominik Schäfer",
+    "stars": 5.0
+   },
+   {
+    "name": "Sellenschlo IT",
+    "stars": 5.0
+   },
+   {
+    "name": "IT-TEC IT-Systemhaus, sponsored",
+    "stars": 4.9
+   },
+   {
+    "name": "Base2 IT Consult",
+    "stars": 4.7
+   },
+   {
+    "name": "RA-MICRO Hamburg Systemhaus",
+    "stars": 4.0
+   },
+   {
+    "name": "Systemhaus<span class=\"brand-dash\">-</span>Hertling",
+    "none": true,
+    "label": "No reviews yet"
+   }
+  ]
+ },
+ "wall": {
+  "title": "What 17 Hamburg IT firms show on their sites",
+  "cols": [
+   "Reviews or clients on the homepage",
+   "A price, on the homepage or one click away",
+   "A real piece of documentation"
+  ],
+  "rows": [
+   {
+    "name": "hagel IT-Services",
+    "v": [
+     1,
+     1,
+     0
+    ]
+   },
+   {
+    "name": "Layer-X",
+    "v": [
+     1,
+     1,
+     0
+    ]
+   },
+   {
+    "name": "FL-ITService",
+    "v": [
+     1,
+     1,
+     0
+    ]
+   },
+   {
+    "name": "IT Service247",
+    "v": [
+     1,
+     1,
+     0
+    ]
+   },
+   {
+    "name": "ConnectIT24",
+    "v": [
+     1,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "novotec",
+    "v": [
+     1,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "IT Concept Hamburg",
+    "v": [
+     1,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Arconda Systems",
+    "v": [
+     1,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Sellenschlo IT",
+    "v": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Matic-Tec",
+    "v": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "PCProfi-Systems",
+    "v": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "HELLTHO",
+    "v": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "IT-Reinbek",
+    "v": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Base2 IT Consult",
+    "v": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "RA-MICRO Hamburg Systemhaus",
+    "v": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "running bit",
+    "v": [
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "name": "Bürgel IT",
+    "v": [
+     0,
+     0,
+     0
+    ]
+   }
+  ],
+  "you": [
+   0,
+   0,
+   1
+  ],
+  "src": "Each homepage rendered and read on 22 Oct 2026, and each site searched page by page for prices. FL-ITService's price sits in the PDF its footer links as “AGB”. Base2 IT Consult posts 125 € an hour on a customer notice that no menu links to, so it isn't counted here. Five of them write about documentation, none shows a piece of it.",
+  "gap": "Eight of them show proof you can't show yet, and four put a price within one click. None shows the thing you promise. A real piece of documentation, labelled as an example until a first client agrees to be shown, is proof a firm founded this year can show from day one."
+ },
+ "pos": {
+  "lede": "One sentence a buyer remembers, backed by things they can check. The firm closest to your promise is Matic-Tec, Martin Otto writing in the first person about documented systems. He writes about the documentation. You show it.",
+  "pillars": [
+   {
+    "h": "One person, named",
+    "p": "Your name, your number and your photo on every page. Being one person is the selling point, not the risk."
+   },
+   {
+    "h": "Written down, and shown",
+    "p": "The documentation sample on the site, the change log in your posts, the folder a client keeps."
+   },
+   {
+    "h": "Close by",
+    "p": "Reinbek, Glinde, Wentorf, Bergedorf, Oststeinbek and Barsbüttel. Short trips for visits, remote for the rest."
+   }
+  ],
+  "say": [
+   "IT ohne Blackbox, your own promise",
+   "The documentation, shown as an example",
+   "Your hours, Monday to Friday 8 to 18, said plainly",
+   "Who you're not for, firms that need cover around the clock"
+  ],
+  "avoid": [
+   "“Zuverlässig” and the other words any firm can claim",
+   "Rows of vendor logos",
+   "Counters a new firm can't fill",
+   "Stock photos of server rooms"
+  ]
+ },
+ "flow": [
+  {
+   "h": "Find",
+   "p": "A firm searches Google Maps or its own town, sees one of your posts, or hears your name.",
+   "parts": [
+    {
+     "s": "built",
+     "t": "Google profile, sketched"
+    },
+    {
+     "s": "next",
+     "t": "Pages for six towns"
+    },
+    {
+     "s": "built",
+     "t": "First three LinkedIn posts"
+    }
+   ]
+  },
+  {
+   "h": "Check",
+   "p": "They open the site and look for proof.",
+   "parts": [
+    {
+     "s": "built",
+     "t": "New site with a documentation sample"
+    },
+    {
+     "s": "next",
+     "t": "Your photo"
+    },
+    {
+     "s": "next",
+     "t": "First reviews"
+    }
+   ]
+  },
+  {
+   "h": "Try",
+   "p": "The undecided take the three minute self check.",
+   "parts": [
+    {
+     "s": "built",
+     "t": "Self check, ten questions"
+    },
+    {
+     "s": "built",
+     "t": "Result carried into the booking form"
+    }
+   ]
+  },
+  {
+   "h": "Talk",
+   "p": "They leave a number or call.",
+   "parts": [
+    {
+     "s": "built",
+     "t": "Booking form, three fields"
+    },
+    {
+     "s": "built",
+     "t": "A live line that says when you're reachable"
+    }
+   ]
+  },
+  {
+   "h": "Start",
+   "p": "The first conversation turns into a stock take.",
+   "parts": [
+    {
+     "s": "next",
+     "t": "A fixed price stock take, yours to set"
+    },
+    {
+     "s": "built",
+     "t": "The documentation structure"
+    }
+   ]
+  },
+  {
+   "h": "Stay and refer",
+   "p": "A happy client says so where the next one looks.",
+   "parts": [
+    {
+     "s": "built",
+     "t": "Review card with a working code"
+    },
+    {
+     "s": "built",
+     "t": "Review page on the site"
+    }
+   ]
+  }
+ ],
+ "site": {
+  "lede": "Dark to light, like your promise. The page opens at night, your network unseen, and the visitor's pointer lights it up. Every chapter after that gets lighter, and the booking sits in full daylight. One action runs through all of it, a first conversation with you.",
+  "shots": [
+   {
+    "img": "s-hero.jpg",
+    "alt": "The new homepage, the network hero",
+    "h": "Your logo as a network",
+    "p": "Move the pointer and the light finds the devices."
+   },
+   {
+    "img": "s-box.jpg",
+    "alt": "The new homepage, the box turned to glass",
+    "h": "The black box opens",
+    "p": "Scroll and the box turns to glass, the network inside it written down."
+   },
+   {
+    "img": "s-bs.jpg",
+    "alt": "The new homepage, the four services",
+    "h": "Four Bausteine",
+    "p": "A full screen picture or film for each, each with its own button."
+   },
+   {
+    "img": "s-doc.jpg",
+    "alt": "The new homepage, the documentation window",
+    "h": "The documentation, shown",
+    "p": "A real sample, labelled as an example office."
+   },
+   {
+    "img": "s-book.jpg",
+    "alt": "The new homepage, the booking form",
+    "h": "Three fields to a call",
+    "p": "Name, phone or mail, best time. The self check fills in the rest."
+   }
+  ]
+ },
+ "local": {
+  "lede": "Firms search for IT in their own town. hagel IT, 32 people, says on its Ahrensburg page that its own team does the on site work in Reinbek and Glinde, and it has no page for either town. Six short pages, one per town, each with your face, your number and the same documented promise, put you in those searches.",
+  "src": "hagel IT's homepage, its Ahrensburg page and its sitemap, read 22 Oct 2026."
+ },
+ "areas": [
+  {
+   "town": "Reinbek",
+   "note": "Kreis Stormarn, home"
+  },
+  {
+   "town": "Glinde",
+   "note": "Kreis Stormarn"
+  },
+  {
+   "town": "Wentorf bei Hamburg",
+   "note": "Kreis Herzogtum Lauenburg"
+  },
+  {
+   "town": "Bergedorf",
+   "note": "Hamburg"
+  },
+  {
+   "town": "Oststeinbek",
+   "note": "Kreis Stormarn"
+  },
+  {
+   "town": "Barsbüttel",
+   "note": "Kreis Stormarn"
+  }
+ ],
+ "google": {
+  "lede": "Search Google Maps for an IT Systemhaus in Reinbek and every other firm on the list shows stars. Yours shows none yet, and stars can't be bought. So every finished job ends with a card on the desk, and the profile makes calling or booking one tap.",
+  "list": [
+   "A photo of you first, then the work.",
+   "The four services, word for word from the site.",
+   "An update every two weeks, with a button to the booking form.",
+   "A review card after every job. It opens the review page, then Google."
+  ]
+ },
+ "li": {
+  "lede": "Your company page has one follower, so whatever it posts reaches almost nobody. Posts from your own profile reach the people you're connected to. One post a fortnight about the work itself, each ending with one next step."
+ },
+ "offer": [
+  {
+   "h": "Self check",
+   "p": "Ten questions, three minutes, no sign up. Shows a firm where its IT is a black box.",
+   "s": "Built, on the site"
+  },
+  {
+   "h": "First conversation",
+   "p": "Thirty minutes on the phone or on site, about what gets in the way day to day.",
+   "s": "Free or not, yours to decide"
+  },
+  {
+   "h": "Stock take with documentation",
+   "p": "Devices, network, logins and backups, written down. The client keeps the folder.",
+   "s": "A fixed price, yours to set"
+  },
+  {
+   "h": "Ongoing care",
+   "p": "Maintenance, updates and help, per workstation per month, every change in the log.",
+   "s": "Where the recurring revenue is"
+  },
+  {
+   "h": "Projects",
+   "p": "Windows 11, a new office, the wireless, a move to the cloud.",
+   "s": "Booked one at a time"
+  }
+ ],
+ "prices": [
+  {
+   "price": "from 29 € a month",
+   "what": "per workstation, Kjello, its new entry line",
+   "who": "hagel IT-Services"
+  },
+  {
+   "price": "from 50 € a month",
+   "what": "per workstation for full managed IT, projects at 140 € an hour",
+   "who": "hagel IT-Services"
+  },
+  {
+   "price": "70 € a month",
+   "what": "per client workstation plus VAT, in its price calculator",
+   "who": "Layer-X"
+  },
+  {
+   "price": "650 € a month",
+   "what": "one fixed all in package",
+   "who": "IT Service247"
+  },
+  {
+   "price": "120 € an hour",
+   "what": "on site, remote or by phone, plus VAT",
+   "who": "FL-ITService"
+  },
+  {
+   "price": "125 € an hour",
+   "what": "per technician hour plus VAT, from January 2026",
+   "who": "Base2 IT Consult, Wentorf"
+  }
+ ],
+ "prices_src": "Each firm's own site or price list, read 22 Oct 2026. hagel's own price page puts the going rate at 50 to 90 € per workstation a month.",
+ "roadmap": [
+  {
+   "when": "Weeks 1 to 2",
+   "h": "Launch",
+   "items": [
+    "The new site on systemhaus-hertling.com",
+    "Google profile completed, photos, services and hours",
+    "A photo session, you at work",
+    "Review page live and cards printed"
+   ]
+  },
+  {
+   "when": "Weeks 3 to 4",
+   "h": "First proof",
+   "items": [
+    "First reviews from the clients and contacts you already have",
+    "LinkedIn post one, an introduction",
+    "A Google update with a booking button"
+   ]
+  },
+  {
+   "when": "Weeks 5 to 8",
+   "h": "Be found locally",
+   "items": [
+    "Pages for Reinbek, Glinde and Wentorf",
+    "A post every two weeks",
+    "The Windows Server 2016 check as a short campaign, before 12 January"
+   ]
+  },
+  {
+   "when": "Weeks 9 to 12",
+   "h": "Compound",
+   "items": [
+    "Pages for Bergedorf, Oststeinbek and Barsbüttel",
+    "Every new client asked for a review and a name to pass on",
+    "The numbers read, what works kept"
+   ]
+  }
+ ],
+ "kpis": [
+  {
+   "h": "Calls and booking requests",
+   "where": "Your phone and the booking form"
+  },
+  {
+   "h": "Google reviews",
+   "where": "Your Business Profile"
+  },
+  {
+   "h": "Profile views and calls from Maps",
+   "where": "Business Profile performance"
+  },
+  {
+   "h": "Self checks finished",
+   "where": "The site"
+  },
+  {
+   "h": "Visits to the town pages",
+   "where": "The site's statistics"
+  }
+ ],
+ "team": {
+  "lede": "Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.",
+  "brands": "The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.",
+  "disclosure": "Built by Amwisesa, Astra's development partner, often through the brand's own agency.",
+  "people": [
+   {
+    "name": "Raka Mulya",
+    "role": "Go to market architect and entrepreneur. Your contact at Astra.",
+    "bio": "Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.",
+    "li": "https://www.linkedin.com/in/raka-mulya-b92885196/"
+   },
+   {
+    "name": "Joshua van Zeelt",
+    "role": "Founder of Astra Agency and JML Agency",
+    "bio": "Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.",
+    "li": "https://www.linkedin.com/in/joshua-van-zeelt/"
+   }
+  ]
+ },
+ "end": {
+  "lede": "We'll walk you through the site and the plan, hear what you'd change, and then send you a clear scope, price and timeline.",
+  "foot": "Prepared by Astra for Systemhaus<span class=\"brand-dash\">-</span>Hertling, October 2026. Screenshots of systemhaus<span class=\"brand-dash\">-</span>hertling.com taken 22 Oct 2026. Each figure names its source underneath."
+ },
+ "deadlines": {
+  "today": "22 Oct 2026",
+  "items": [
+   {
+    "date": "14 Oct 2025",
+    "h": "Windows 10",
+    "p": "Also Office 2016 and 2019, and Exchange Server 2016 and 2019.",
+    "s": "past"
+   },
+   {
+    "date": "14 Jul 2026",
+    "h": "SQL Server 2016",
+    "p": "Security fixes from here on only for a fee.",
+    "s": "past"
+   },
+   {
+    "date": "13 Oct 2026",
+    "h": "Office 2021",
+    "p": "And Windows 11 Home and Pro, version 24H2. Nine days ago.",
+    "s": "past"
+   },
+   {
+    "date": "12 Jan 2027",
+    "h": "Windows Server 2016",
+    "p": "The next one. Every firm still running it needs a plan before then.",
+    "s": "next"
+   }
+  ],
+  "reading": "Every end of support is a reason for a firm to call someone, and a moment it's open to a new name. A firm still on Windows 10 now pays Microsoft per device for fixes, 61 dollars for the first year and double that the next. Each date is a short campaign you can run, a check for the firms still on it.",
+  "src": "Microsoft Learn, the lifecycle page of each product and its yearly end of support list, read 22 Oct 2026. Windows Server 2022 only left mainstream support in October and runs to 2031, so it isn't on this list."
+ }
+}

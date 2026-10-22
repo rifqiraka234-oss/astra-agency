@@ -141,3 +141,61 @@
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) rv.forEach(function (e) { e.classList.add('in'); });
   else { addEventListener('scroll', reveal, { passive: true }); addEventListener('resize', reveal); reveal(); }
 })();
+
+/* v3. Words that arrive one by one, numbers that count up, and a header that takes the tone of the chapter under it. */
+(function () {
+  var d = document, root = d.documentElement, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $$(s, r) { return [].slice.call((r || d).querySelectorAll(s)); }
+
+  /* split headlines into words, each language on its own so both count from the first word */
+  var heads = $$('[data-words]');
+  if (!reduce) heads.forEach(function (h) {
+    var parts = $$('.l-de, .l-en', h);
+    (parts.length ? parts : [h]).forEach(function (part) {
+      var n = 0, walk = d.createTreeWalker(part, NodeFilter.SHOW_TEXT), nodes = [];
+      while (walk.nextNode()) nodes.push(walk.currentNode);
+      nodes.forEach(function (t) {
+        var bits = t.nodeValue.split(/(\s+)/), f = d.createDocumentFragment();
+        bits.forEach(function (b) {
+          if (!b) return;
+          if (/^\s+$/.test(b)) { f.appendChild(d.createTextNode(b)); return; }
+          var w = d.createElement('span'); w.className = 'w'; w.style.setProperty('--i', n++); w.textContent = b; f.appendChild(w);
+        });
+        t.parentNode.replaceChild(f, t);
+      });
+    });
+  });
+
+  /* numbers count up once, in the reader's own number format */
+  var counts = $$('[data-count]');
+  function fmt(el, v) {
+    var dec = +el.getAttribute('data-dec') || 0, en = root.lang === 'en', suf = el.getAttribute('data-suf') || '';
+    var s = v.toFixed(dec); if (!en) s = s.replace('.', ',');
+    el.textContent = s + (en ? suf.trim() : suf);
+  }
+  function run(el) {
+    var to = +el.getAttribute('data-count');
+    if (reduce) { fmt(el, to); return; }
+    var t0 = performance.now();
+    (function step(now) { var k = Math.min(1, (now - t0) / 1700); fmt(el, to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); })(t0);
+    el.setAttribute('data-ran', '1');
+  }
+  d.addEventListener('sh-lang', function () { counts.forEach(function (el) { if (el.getAttribute('data-ran') || reduce) fmt(el, +el.getAttribute('data-count')); }); });
+
+  /* the header reads the chapter under it */
+  var top = d.querySelector('[data-top]'), tones = $$('[data-tone]');
+  function look() {
+    var h = innerHeight;
+    heads = heads.filter(function (e) { var r = e.getBoundingClientRect(); if (r.top < h * 0.88 && r.bottom > 0) { e.classList.add('words-in'); return false; } return true; });
+    counts = counts.filter(function (e) { var r = e.getBoundingClientRect(); if (r.top < h * 0.85 && r.bottom > 0) { run(e); return false; } return true; });
+    if (top) {
+      var tone = 'light';
+      for (var i = 0; i < tones.length; i++) { var r = tones[i].getBoundingClientRect(); if (r.top <= 34 && r.bottom > 34) { tone = tones[i].getAttribute('data-tone'); break; } }
+      top.classList.toggle('on-light', tone === 'light');
+    }
+  }
+  addEventListener('scroll', look, { passive: true });
+  addEventListener('resize', look);
+  look();
+  if (reduce) heads.forEach(function (e) { e.classList.add('words-in'); });
+})();

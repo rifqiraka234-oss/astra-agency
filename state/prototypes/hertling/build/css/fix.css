@@ -1,0 +1,151 @@
+
+/* ================================================================ v3 glue */
+/* the network inside the glass box */
+.cube-net .np { position: relative; width: 100%; height: 100% }
+.cube-net .np-svg { width: 100%; height: 100%; overflow: visible }
+.cube-net .np-edges path { stroke: url(#gbline); stroke-width: 3; stroke-dasharray: 1; stroke-dashoffset: calc(1 - var(--e, 0)) }
+.cube-net .np-nodes > rect, .cube-net .np-nodes > circle, .cube-net .np-cloud { fill: rgba(8, 20, 38, .9); stroke: #8fd3ff; stroke-width: 1.6 }
+.cube-net .np-fw, .cube-net .np-wifi, .cube-net .np-disk, .cube-net .np-prn, .cube-net .np-ws path { fill: none; stroke: #8fd3ff; stroke-width: 1.6; stroke-linecap: round }
+.cube-net .np-ports rect { fill: #1a8fe0 }
+.cube-net .np-ws rect { fill: rgba(8, 20, 38, .9); stroke: #8fd3ff; stroke-width: 1.4 }
+.cube-net .np-tag { position: absolute; transform: translate(-50%, -50%) scale(calc(.85 + var(--tg, 0) * .15)); opacity: var(--tg, 0); padding: 6px 10px; border-radius: 9px; background: rgba(8, 16, 30, .82); box-shadow: inset 0 0 0 1px rgba(143, 211, 255, .3); font-size: clamp(10px, .85vw, 12.5px); line-height: 1.25; white-space: nowrap; color: #eef4fa; text-align: left }
+.cube-net .np-tag small { display: block; font-family: var(--m); font-size: .82em; color: #8fd3ff }
+html:not(.js) .cube-net .np-tag { opacity: 1 }
+html:not(.js) .cube-net .np-edges path { stroke-dashoffset: 0 }
+@media (max-width: 860px) { .cube-net .np-tag { font-size: 9.5px; padding: 4px 6px } }
+
+/* the label inside an example window or chip */
+.dc-win .ex-tag { margin-left: 8px }
+
+/* ================================================================ inner pages, v3 grammar */
+.ph-tall { min-height: 80vh; min-height: 80svh; display: flex; align-items: flex-end }
+.ph-tall .ph-in { width: 100% }
+.ph .lbl { margin-bottom: 4px }
+.ph-film img { filter: saturate(.6) brightness(.5) }
+
+/* services */
+.sv-nav { position: sticky; top: 64px; z-index: 30; background: rgba(6, 12, 22, .72); -webkit-backdrop-filter: blur(18px) saturate(1.5); backdrop-filter: blur(18px) saturate(1.5); border-bottom: 1px solid rgba(255, 255, 255, .08) }
+.sv-nav-in { max-width: var(--w); margin: 0 auto; padding: 10px var(--g); display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none }
+.sv-nav-in::-webkit-scrollbar { display: none }
+.sv-nav a { flex: none; display: inline-flex; align-items: center; gap: 10px; height: 40px; padding: 0 16px; border-radius: 999px; color: #b6c4d3; font-weight: 500; font-size: 14.5px; text-decoration: none; transition: background .2s, color .2s }
+.sv-nav a i { font-style: normal; font-family: var(--m); font-size: 11.5px; color: var(--ice) }
+.sv-nav a:hover, .sv-nav a.on { background: rgba(255, 255, 255, .09); color: #fff; box-shadow: none }
+.sv { padding: clamp(100px, 15vh, 180px) 0; border: 0; background: var(--frost); scroll-margin-top: 110px }
+.sv.dk { background: radial-gradient(60% 50% at 85% 20%, rgba(26, 143, 224, .2), transparent 70%), linear-gradient(180deg, #0a1c33, #0d2c4d) }
+.sv:nth-of-type(even) { background: var(--frost) }
+.sv.dk:nth-of-type(even) { background: radial-gradient(60% 50% at 85% 20%, rgba(26, 143, 224, .2), transparent 70%), linear-gradient(180deg, #0a1c33, #0d2c4d) }
+.sv-in { max-width: var(--w); gap: clamp(40px, 6vw, 110px) }
+.sv-n { font-family: var(--m); font-size: 12.5px; letter-spacing: .14em; color: var(--blue-t) }
+.sv h2 { font-size: clamp(36px, 4.6vw, 72px); letter-spacing: -.045em; line-height: .98; font-weight: 600 }
+.sv h2 .it { display: block }
+.sv-lede { color: var(--ink2) }
+.sv-list { border-top: 1px solid var(--line) }
+.sv-list li { border-bottom: 1px solid var(--line); font-weight: 500; color: var(--ink) }
+.sv-list li::after { background: var(--steel) }
+.sv-cta { margin-top: 34px }
+.sv-side { gap: 26px }
+.sv-box, .sv:nth-of-type(even) .sv-box { border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 18px 0 0; background: none }
+.sv-box h3 { font-family: var(--m); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 500; color: var(--blue-t) }
+.sv-box li { font-family: var(--s); font-style: italic; font-size: 21px; line-height: 1.3; padding: 6px 0; color: var(--ink) }
+.sv-box li::before, .sv-box li::after { color: var(--ink3) }
+.sv-doc p { color: var(--ink2) }
+.sv-try { margin-top: 12px; color: var(--ink2); font-size: 15px }
+.sv.dk .sv-try { color: #b6c4d3 }
+.sv-demo .wl, .sv-demo .perm, .sv-demo .cal { border: 0; box-shadow: 0 0 0 1px rgba(255, 255, 255, .5), 0 50px 100px -40px rgba(0, 0, 0, .55), 0 0 80px rgba(26, 143, 224, .18); border-radius: 22px }
+.sv:not(.dk) .sv-demo .wl, .sv:not(.dk) .sv-demo .perm, .sv:not(.dk) .sv-demo .cal { box-shadow: 0 0 0 1px rgba(8, 85, 138, .1), 0 50px 100px -50px rgba(8, 85, 138, .5) }
+.sv-demo .case { box-shadow: 0 50px 100px -50px rgba(4, 7, 13, .7) }
+.sv-demo .ex-tag { border-color: var(--line2); color: var(--ink3) }
+.sv.dk .sv-demo > .ex-tag { color: #b6c4d3; border-color: rgba(255, 255, 255, .25) }
+.case-live { color: var(--ink2) } .case-live a { color: var(--ink) }
+
+/* single part or ongoing care, two columns and a rule, no boxes */
+.how { padding: clamp(100px, 15vh, 180px) 0; background: #fbfdff }
+.how-in { max-width: var(--w) }
+.how-g { gap: 0; margin-top: clamp(40px, 6vh, 70px); border-top: 1px solid var(--line) }
+.how-c, .how-c.how-on { border: 0; border-radius: 0; background: none; padding: 34px clamp(20px, 3vw, 48px) 0 0; color: var(--ink) }
+.how-c + .how-c { border-left: 1px solid var(--line); padding-left: clamp(20px, 3vw, 48px) }
+.how-c h3 { font-size: clamp(26px, 2.6vw, 38px); letter-spacing: -.035em }
+.how-on h3 { background: linear-gradient(100deg, #08558a, #1a8fe0); -webkit-background-clip: text; background-clip: text; color: transparent }
+.how-c p, .how-on p { color: var(--ink2); font-size: 18px; max-width: 44ch }
+@media (max-width: 860px) { .how-c + .how-c { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); margin-top: 30px } }
+
+/* the closing chapter */
+.cta { position: relative; overflow: hidden; isolation: isolate; color: #fff; padding: clamp(110px, 17vh, 200px) 0; background: radial-gradient(50% 60% at 85% 30%, rgba(26, 143, 224, .38), transparent 70%), radial-gradient(40% 50% at 10% 100%, rgba(143, 211, 255, .16), transparent 70%), linear-gradient(180deg, #070e1a, #0a1c33) }
+.cta-in { max-width: var(--w); margin: 0 auto; padding: 0 var(--g) }
+.cta h2 { margin-top: 26px; max-width: 14ch }
+.cta .lede { color: #b6c4d3 }
+.cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px }
+.cta-tel { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; margin-top: 40px; color: #fff; text-decoration: none }
+.cta-tel i { width: 9px; height: 9px; border-radius: 50%; background: var(--steel); align-self: center }
+.cta-tel.on i { background: var(--mint); box-shadow: 0 0 12px var(--mint) }
+.cta-tel b { font-size: clamp(28px, 3vw, 42px); font-weight: 600; letter-spacing: -.04em }
+.cta-tel span { color: #8a9cb0; font-size: 15px }
+@media (max-width: 480px) { .cta-row .btn { width: 100% } }
+
+/* about */
+.ab { padding: clamp(100px, 15vh, 180px) 0; background: var(--frost) }
+.ab-in { max-width: var(--w); gap: clamp(40px, 6vw, 110px); align-items: start }
+.ab-t p { font-size: clamp(18px, 1.4vw, 21px); line-height: 1.6 }
+.ab-t p:first-of-type { font-family: var(--s); font-style: italic; font-size: clamp(24px, 2.2vw, 32px); line-height: 1.3; color: var(--ink); margin-top: 26px }
+.who-wrap { padding-top: 10px }
+.ab .who { background: linear-gradient(160deg, #0d2c4d, #04070d); -webkit-backdrop-filter: none; backdrop-filter: none; color: #fff }
+.vals { padding: clamp(100px, 15vh, 180px) 0; background: #fbfdff; border: 0 }
+.vals-in { max-width: var(--w) }
+.vals-g li { border-top: 2px solid var(--ink) }
+.vals-n { font-family: var(--m) }
+.vals-g h3 { font-size: 23px; letter-spacing: -.025em; font-weight: 600 }
+.ab-q { padding: clamp(110px, 17vh, 200px) 0; background: radial-gradient(50% 60% at 80% 40%, rgba(26, 143, 224, .25), transparent 70%), linear-gradient(180deg, #04070d, #0a1c33); color: #fff }
+.ab-q-in { max-width: var(--w) }
+.ab-q-in p { color: #b6c4d3; font-size: clamp(18px, 1.5vw, 22px); max-width: 52ch; margin-top: 28px }
+.facts-strip { background: #0a1c33; border: 0; border-top: 1px solid rgba(255, 255, 255, .08) }
+.fs-in { max-width: var(--w) }
+.fs-in div + div { border-left: 1px solid rgba(255, 255, 255, .1) }
+.fs-in dt { font-family: var(--m); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; font-weight: 500; color: #8a9cb0 }
+.fs-in dd { color: #fff; font-weight: 500; letter-spacing: -.01em }
+@media (max-width: 860px) { .fs-in div:nth-child(n+3) { border-top: 1px solid rgba(255, 255, 255, .1) } }
+
+/* contact, self check, review, legal sit in daylight */
+.kt { padding: clamp(70px, 10vh, 120px) 0 clamp(100px, 15vh, 160px); background: var(--frost) }
+.kt-in { max-width: var(--w) }
+.card { background: #fff; border: 0; border-radius: 24px; box-shadow: 0 0 0 1px rgba(8, 85, 138, .08), 0 40px 80px -50px rgba(8, 85, 138, .55) }
+.card.on .card-live i { background: #1fb978 }
+.kt-form .fm { background: rgba(255, 255, 255, .8); border: 0; border-radius: 28px; box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px rgba(8, 85, 138, .08), 0 50px 100px -50px rgba(8, 85, 138, .55) }
+.fm-h { font-size: clamp(26px, 2.4vw, 34px); letter-spacing: -.035em; font-weight: 600 }
+.kt-map .map { border-radius: 24px }
+.chk-wrap { background: var(--frost); padding-top: clamp(50px, 8vh, 90px) }
+.chk { border: 0; border-radius: 28px; box-shadow: 0 0 0 1px rgba(8, 85, 138, .08), 0 50px 100px -50px rgba(8, 85, 138, .55) }
+.rs .res { box-shadow: 0 60px 120px -50px rgba(4, 7, 13, .7) }
+.recs li { border: 0; box-shadow: 0 0 0 1px rgba(8, 85, 138, .1); border-radius: 20px }
+.rvw-wrap, .legal { background: var(--frost); padding-top: clamp(60px, 9vh, 100px) }
+.rvw-card { border: 0; border-radius: 28px; box-shadow: 0 0 0 1px rgba(8, 85, 138, .08), 0 50px 100px -50px rgba(8, 85, 138, .55) }
+.legal { max-width: none; padding-left: 0; padding-right: 0 }
+.legal > * { max-width: var(--w); margin-left: auto; margin-right: auto; padding-left: var(--g); padding-right: var(--g) }
+.ph-ok .ph-back .btn.sec { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .2); color: #fff }
+
+/* phones. The service panels size to the column, the brand name may break in big headings, and below 400px the
+   language switch moves into the menu so the menu button stays on screen */
+.sv-side { grid-template-columns: minmax(0, 1fr) }
+.menu-lang { display: none }
+@media (max-width: 480px) { h1 .nm, h2 .nm { white-space: normal } }
+@media (max-width: 400px) {
+  .top:not(.pl-top) .lang { display: none }
+  .menu .menu-lang { display: inline-flex; align-self: flex-start; margin-top: 28px; color: #fff; border-color: rgba(255, 255, 255, .22) }
+  .menu-b { padding: 8px 13px }
+}
+/* occupied ports in a blue that carries white 10px numbers (5.5 to 1) */
+.sw-p.sw-b, .sw-k .sw-b { background: #0b6cb5 }
+@media (prefers-reduced-motion: reduce) { .case li { transition: none } }
+/* the glass box heading starts with the full brand name, which can't wrap, so it sits a step smaller than the others */
+@media (min-width: 861px) { .gb-t .sec-h { font-size: clamp(34px, 3.7vw, 60px) } }
+.gb-t .sec-h .nm, .wall .nm { white-space: normal }
+/* photo credit on a hero, required by the photo's licence */
+.ph-credit { position: absolute; right: var(--g); bottom: 14px; z-index: 1; margin: 0; font-family: var(--m); font-size: 11px; letter-spacing: .02em; color: #b6c4d3 }
+.ph-credit a { color: #dbe6f0 }
+@media (max-width: 600px) { .ph-credit { left: var(--g); right: auto } }
+/* Über uns, the castle sits to the right of the words and keeps its daylight, faded into the night on the text side */
+@media (min-width: 861px) {
+  .ph-ab { background: #04070d }
+  .ph-ab .ph-film { left: 36% }
+  .ph-ab .ph-film img { filter: saturate(.85) brightness(.82) }
+  .ph-ab .ph-film::after { background: linear-gradient(90deg, #04070d 0%, rgba(4, 7, 13, .55) 22%, rgba(4, 7, 13, .08) 55%, rgba(4, 7, 13, .2) 100%), linear-gradient(180deg, rgba(4, 7, 13, .25) 0%, rgba(4, 7, 13, 0) 30%, rgba(4, 7, 13, 0) 65%, #0a1c33 100%) }
+}

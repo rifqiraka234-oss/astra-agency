@@ -214,3 +214,18 @@ page as referrer, two seconds apart. SHA-256 against the earlier copies in raw/.
 Where they're used. 42617 is the hero film (team.webm/mp4, poster team.jpg), 39841 gives the still late.jpg, 233 gives
 call.jpg and 42620 gives cloud-team.jpg. Nothing captions any of them as Noah, his office, staff or clients. The hero card
 that sits on 42617 carries his promise and firm name, never his name, so the man in the clip can't be read as him.
+
+## v3, 22 Oct 2026, two stills taken from research/assets/v3
+
+Picked from the imagery agent's 12 kept stills (research/assets/v3/manifest.json has the full record for all of them).
+Both licences reread by me on the Commons file pages through tools/fetch-walled.py at about 07:5x UTC. The Commons API
+returned 429 all day, as it did for the agent.
+
+| Used as | Source | Licence | Credit | Source hash (sha256, first 16) | Web file |
+|---|---|---|---|---|---|
+| media/hh-wasserschloss.jpg, home chapter 5 | https://commons.wikimedia.org/wiki/File:Hafen_City_(Unsplash).jpg | CC0, {{Unsplash}}, "published prior to 5 June 2017", Date 11 September 2016, author Claudio Testa | not required, given in the Impressum | 906142ed85758ea9 | 2000x1250, q76 |
+| media/ab-reinbek.jpg, Über uns hero | https://commons.wikimedia.org/wiki/File:Schlossreinbek-1.jpg | CC BY-SA 3.0 Unported (dual with GFDL, CC chosen), own work, Matthias v.d. Elbe, 31 Oct 2015 | on the hero and in the Impressum, with the licence link, resized | 801047b53a042e3c | 2000x1333, q76 |
+
+Residual doubt on the first, Unsplash's own photo page returned a bot wall (7.6 KB, no photo data), so the pre June
+2017 date rests on Commons alone. Under Unsplash's current licence the use is allowed too. media/hh-speicherstadt.jpg
+(v2) is removed from the build.
