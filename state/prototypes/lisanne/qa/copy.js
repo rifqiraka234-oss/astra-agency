@@ -16,7 +16,7 @@ function audit(label, text, out) {
   const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
   const out = [];
   audit('CONTROL', 'This planted line: has a colon — and a dash and we leverage seamless synergy.', out);
-  await p.goto('http://127.0.0.1:8765/site-plan/'); await p.waitForTimeout(3500);
+  await p.goto('http://127.0.0.1:8765/site-plan/'); await p.waitForTimeout(3500); await p.evaluate(() => { document.querySelectorAll('details').forEach(d => { d.open = true; }); const t = document.getElementById('trk'); if (t) t.classList.add('on'); });
   audit('plan', await p.evaluate(() => document.body.innerText), out);
   audit('plan-alt', await p.evaluate(() => [...document.querySelectorAll('[alt],[aria-label],title')].map(e => e.getAttribute('alt') || e.getAttribute('aria-label') || e.textContent).join('\n')), out);
   const A = 'http://127.0.0.1:8765/site-app/';

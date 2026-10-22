@@ -16,11 +16,16 @@ Two things are built, the Hertling v3 pattern.
    cards with quoted dates, fatal deadlines moved past weekends and holidays, a conflict check against her own list, a
    document list, a draft reply, a draft engagement letter with her terms, approve and decline, a deadlines page, a
    results page with the KPIs, settings). Everything runs in the browser, nothing is sent, the ribbon says so.
-2. **The pitch, in English.** Hero with the desk, two hours of eight (Clio), the four deadlines that end cases including
-   her own €2,000 own risk, four steps with close up crops, the employee check built from her own about page, try it,
-   the architecture (n8n EU, Claude on Bedrock EU with zero retention, her Microsoft 365, her approval as the gate),
-   the NOvA recommendations one by one, five KPIs and a calculator with her inputs, the four week plan, who builds it,
-   next step.
+2. **The pitch, in English, v2 (22 Oct 15.20 UTC).** Raka, "make the whole pitch flow better, easier to understand and
+   simpler, not info overload ... the reader can follow the journey one by one easily". v1 had eleven dense chapters.
+   v2 is six numbered chapters, each answering one question in order, with a tracker across the top that fills as she
+   reads, and a "Next" link closing every chapter.
+   01 The problem, two hours of eight (Clio). 02 The desk, one made up case (Laura Smeets) followed through four steps,
+   one picture each, "you only take the last". 03 For employees, the check from her about page. Then try it. 04 Privacy,
+   the diagram and four plain points, with the Bedrock reasoning and the seven NOvA rows behind "show more". 05 What you
+   get, the calculator and a week 1, week 4, then row. 06 How we start, the four week plan, then the next step and who
+   builds it. Cut from v1, the deadline grid with her €2,000 own risk (one thread, time on admin) and the five KPI grid
+   (three numbers now, inside the proof row).
 
 ## The one idea
 
@@ -33,7 +38,8 @@ and the pitch's progress bar is it. The app is named after her own words, "Geric
 - App, https://astra-dejongvanhommerig-prototype.netlify.app/ , Netlify project astra-dejongvanhommerig-prototype, id
   5916cc2a-47db-4eb3-8386-2b9039998260, deploy 6ada13f29c8ebc36d56f3337 (first deploy 6ada13017ff5b9430af58282).
 - Pitch, https://astra-dejongvanhommerig-plan.netlify.app/ , Netlify project astra-dejongvanhommerig-plan, id
-  6ab0927b-ba88-4316-98a6-ed7981bcda9d, deploy 6ada13f9cdf2135f96b7b56b (first deploy 6ada131bfeb6f0d181d50619).
+  6ab0927b-ba88-4316-98a6-ed7981bcda9d, v2 deploy 6ada2ae4667067634218bd24 (v1 6ada13f9cdf2135f96b7b56b, first deploy
+  6ada131bfeb6f0d181d50619).
 - Both, team SSO switched off, no password, X-Robots-Tag noindex. Deployed from clean copies in /tmp, never the repo.
 - Source, site-app (index.html, app.css, app.js) and site-plan (index.html, img), no build step. Research in research/
   (teardown, brand, legal/LEGAL.md). QA scripts in qa/.
@@ -50,6 +56,22 @@ and the pitch's progress bar is it. The app is named after her own words, "Geric
 - Keyboard, the employee check, the paste window with Escape, the calculator.
 - Live, 32 of 32 files byte matched, titles right, noindex on, cold loads at 1440 and 390 with all 25 reveals, no broken
   images, approve and the employee check run on the live app (qa/live.js).
+
+## QA on pitch v2, 22 Oct 15.00 to 15.25 UTC
+
+- Cold loads at 1440 and 390, 21 of 21 reveals, no broken images, no errors (qa/plan.js).
+- The tracker at 7 widths from 320 to 1440 (qa/tracker.js), 91 checks, 0 problems. Hidden on the hero, the right chapter
+  marked in all 8 sections, no clipped label, chapter links land under the bar, both "show more" panels open, no
+  overflow. Control run with a wrong expected chapter and a forced long label, both caught.
+- axe at 1440 and 390, closed and with the panels open and the tracker showing, all clean, the app pages clean too.
+- Overflow at 9 widths across 11 screens, 99 loads, 0 problems.
+- Copy audit with the panels opened (verified they're in the audited text), control caught, only her name flagged.
+  NO-AI-SLOP section 8 grep clean, its hits are the CSS transform property and "stays as it is".
+- The privacy claims refetched at source at 15.10 UTC. AWS data retention and data protection, the three NOvA lines,
+  Anthropic's "Only "us" and "global" are available", the eu regions on the AWS model regions page.
+- Live, 24 of 24 files byte matched, live HTML identical to the repo file, noindex on, title right, the four v1
+  screenshots now 404, cold loads at 1440 and 390 clean, the app still approves and runs the employee check (qa/live.js).
+- The delivery draft still describes the plan page correctly, so it's unchanged.
 
 ## Facts and where they came from (all read 22 Oct)
 
@@ -94,3 +116,9 @@ and state/research_2026-10-22-lisanne-ai-workflow.md.
 | Two deadlines landed on a Saturday | Read the Algemene termijnenwet and move fatal terms, say so on the card |
 | Enter in the date field did nothing | Enter submits a single question step |
 | The overflow and copy checks needed proof | Plant a control in every negative check, both caught theirs |
+| v1 of the pitch put eleven chapters in front of her | One question per chapter, numbered, a tracker, detail behind "show more", follow one case instead of describing features |
+| Wide card crops were unreadable on a phone | Art direct with picture and a phone sized crop taken from the app at 390 |
+| The phone crop caught the app's fixed bottom menu | Hide fixed and sticky elements before cropping |
+| Tracker labels hidden with display none left the links nameless | Hide visually, keep the name for screen readers |
+| A closed details panel isn't in innerText | Open every panel before the copy audit, and check the text is really there |
+| Calculator ids c1 to c4 clashed with the new chapter ids | Check every id after renaming sections |
