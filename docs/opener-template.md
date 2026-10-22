@@ -34,6 +34,43 @@ Shall I send you a sketch of [the thing]?
   later, so a new first message is always tagged SKETCH.
 - After it, one plain bump and then a silent close (RULES section 1, two pitches, then close).
 
+### The AI workflow variant, "did you know" (Raka, 2026-10-22)
+
+His words, "i think for ai workflows suggestion we can use this template, Hi [name], xxx looks cool /
+However, did you know that [her normalised job title] faces [shortcomings] / i'd suggest an ai
+workflow etc etc. / lets try, feel free to grow and improve it". Use it when the offer is an AI
+workflow. Block two names a shortcoming of their ROLE, backed by a published number, then ties it to
+them with one verified fact.
+
+```
+Hi [name], [company] looks cool!
+
+However, did you know that [their role in plain words, solo lawyers, independent physios] [the shortcoming, with the number]? [Who found it, named] links it to [the cause], and [one verified fact about them that makes it theirs].
+
+I'd suggest an AI workflow that [takes exactly that cause off them, named in their work's words].
+
+At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the AI workflow for [their practice, shop, team]?
+```
+
+- **Name the source inside the message.** "Clio's research links the gap to ..." A stat nobody can
+  look up reads as made up. The gate carries `did you know: <the fact> | <source, date, sample> |
+  <URL>`, and tools/check-drafts.py fails the draft without it.
+- **The role is how they'd describe themselves**, not their LinkedIn title. "Solo lawyers", not
+  "Founder | Attorney-at-law".
+- **The second sentence makes it theirs** with a fact from their own record, a one lawyer practice
+  from the register, every enquiry going through one inbox. Without it the message is a newsletter.
+- **The workflow fixes the exact cause the source names.** The thread link words have to be in block
+  two and in block three, so a stat about admin can't be followed by an offer about marketing.
+- **Use the source's own words for the comparison**, "larger firms" because Canadian Lawyer says
+  larger firms. Say the number the way the source says it, never rounded up.
+- **Flag where the number comes from to Raka** when it isn't their country or is more than two years
+  old. The first one (Lisanne, 2026-10-22) used Clio's 2023 North American study, worded as Clio's
+  research and never as a Dutch figure.
+- Everything else in the SKETCH rules applies, 45 to 115 words, 30 words a sentence in block two,
+  the `worth:` and `owner reply:` lines.
+
 ## The template, 2026-09-22 to 2026-10-13
 
 **Raka's template, adopted as THE first message on 2026-09-22.** It replaces every earlier

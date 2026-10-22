@@ -293,6 +293,19 @@ thing to a 100 percent accurate input that exists and it costs one fetch.
 - **Netherlands, KVK.** **Germany, Bundesanzeiger** and `unternehmensregister.de`.
   **Belgium, KBO/BCE** and the Nationale Bank filings. **France, Infogreffe** and
   `annuaire-entreprises.data.gouv.fr`, which publishes filed accounts for many SARLs.
+- **KVK can be read without a person (found 2026-10-22).** The kvk.nl search page ignores a
+  `?q=` in its URL and walled directories (openkvk, drimble) return Cloudflare challenges, but
+  the page itself calls `https://web-api.kvk.nl/zoeken/v3/search?q=<name or KVK number>&language=nl&site=kvk2014&size=10&start=0&inschrijvingsstatus=ingeschreven`,
+  which returns JSON with kvkNummer, rechtsvorm (eenmanszaak, BV), inschrijvingsdatum, the
+  visiting address, activiteitomschrijving and current and old trade names. A plain curl of it
+  is refused with 400 "profileId is required", so **run `node tools/kvk-search.js "<name>"
+  <kvk number>`**, which renders kvk.nl/zoeken, types each query and prints what the page
+  receives. Worked on Sagapo Coffee (98234374, eenmanszaak since 2025-09-01) and on a lawyer's
+  practice (96694750). Advocates are in the Orde's register at
+  `zoekeenadvocaat.advocatenorde.nl/zoeken?q=<surname>`, which renders in Chromium.
+- **France, the register API.** `recherche-entreprises.api.gouv.fr/search?q=<name>&code_postal=<cp>`
+  returns SIREN, creation date, NAF and the dirigeants with their roles. It resets connections
+  in bursts, so retry with a growing pause rather than calling it walled.
 
 **What the accounts TYPE alone tells you, and it is a legal definition rather than an
 estimate.** A UK company filing **micro entity** accounts is by statute under 632,000
