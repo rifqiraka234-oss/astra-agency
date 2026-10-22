@@ -1,3 +1,4 @@
+<!-- SUPERSEDED 2026-10-22 14.10 UTC. Raka chose to build the sketch the same day, so the holding reply below is not to be sent. The delivery draft is state/drafted_2026-10-22-lisanne-delivery.md. -->
 # Replies, 22 Oct. NOT SENT, waiting on Raka's word
 
 ### Lisanne De Jong Vanhommerig, De Jong - Vanhommerig advocatuur, ctc_E5FwxycX7v2A7Lnne
