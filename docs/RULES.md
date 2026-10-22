@@ -677,6 +677,16 @@ not a prototype. Before any page is built, every time, no exceptions:
 5. **Then the full QA, deploy and live verification** in `docs/build-and-deck.md`.
 The only thing that shrinks is the number of pages, never the bar.
 
+**HERTLING V3 IS THE REFERENCE BUILD RAKA SIGNED OFF (2026-10-22).** His words on seeing it, "love it
+man! keep making stuff like this remember to do stuff like this". When a lead says yes to seeing what
+winning looks like, ship both halves. The site, rebuilt around one idea taken from the lead's own
+promise (Hertling, dark to light because his promise is "no black box"), chapters edge to edge with no
+cards on a grey page, their logo as the hero object, full bleed licence checked film and photos of
+their place. And a growth plan on its own site in Astra's voice, every chart computed from sourced
+numbers reopened on the day it ships. The recipe and every hiccup are the last section of
+`docs/build-and-deck.md`. Open https://astra-hertling-prototype.netlify.app/ and
+https://astra-hertling-presence.netlify.app/ before building the next one.
+
 
 Read Stage L of `docs/prototype-build-spec.md` before any build. Verify by cold load with
 error capture, never by forcing reveal state. Every image fetched and byte matched. Every

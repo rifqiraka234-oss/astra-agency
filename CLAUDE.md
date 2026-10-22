@@ -44,6 +44,11 @@
 > sections or one line copy fixes as the angle. Every OPENER and SKETCH gate carries `worth: €X+,
 > the project`, and check-drafts.py fails it under 2,500 euros. **`docs/RULES.md` section 0E.**
 >
+> **HERTLING V3 IS THE BUILD TO REPEAT (Raka, 2026-10-22, "love it man! keep making stuff like this").** One idea
+> from the lead's own promise carried by the whole page, no islands, their logo as the hero object, full bleed licence
+> checked media of their place, and a sourced growth plan on its own site. **`docs/RULES.md` section 5** and the last
+> section of `docs/build-and-deck.md`.
+>
 > **The two tools that enforce rather than remind.** `node tools/site-audit.js <url>
 > <tag>` runs a positive control on itself and voids its own absence findings when the
 > detector fails. `python3 tools/check-drafts.py <file>` exits non zero, so it cannot be

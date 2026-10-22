@@ -574,3 +574,64 @@ What v2 did in about an hour on top of v1.
 | The chart's period labels read "Mar-May" | Data labels are copy too, "Mar to May" |
 | No JavaScript left a tall empty pinned section | Every pinned scene gets an html:not(.js) static fallback |
 | The industries film tiles linked to the page they sat on | Tiles that link elsewhere on one page are plain blocks on the target page |
+
+## When Raka says "love it man! keep making stuff like this", this is the stuff (Hertling v3, 2026-10-22)
+
+Noah Hertling, a one person IT firm in Reinbek, said yes to seeing "the Hertling online presence that wins Hamburg
+clients". v2 was correct and sales first, and Raka's verdict was "something out of the 2010s ... it needs to be done
+€6000 euro worth at least", and of the presence sketch, "is this the best you can do?". v3 was built in one day and he
+signed it off with the words above. Live, https://astra-hertling-prototype.netlify.app/ and
+https://astra-hertling-presence.netlify.app/. Source, state/prototypes/hertling (handover.md, research/
+art-direction-v3.md, research/strategy-facts.md).
+
+### What made it, repeat all of it
+
+1. **One idea from the lead's own words, carried by the whole page.** His promise is IT with no black box, so the page
+   runs from night to daylight, and light means documented. Colour tells the story before a word is read.
+2. **A redesign changes four things at once**, palette and type, page grammar, story spine and media (the Qualigraf v4
+   rule). Geist, Geist Mono and Instrument Serif italic for the one phrase per headline that carries the feeling.
+   Signal blue and ice on near black, frost and paper for daylight. Every font OFL, self hosted, licence read.
+3. **No islands.** Chapters edge to edge, handing over through their gradients, never a border. Glass only where a thing
+   is held (the form, a window, floating chips).
+4. **Their logo is the hero object.** His mark sampled into a network of nodes on a canvas, lit by the pointer, with
+   example device labels. Placed by measuring the text, never by guesswork, tested at 9 sizes in both languages.
+5. **Scroll scenes that show the promise.** A black cube that turns to glass with the network inside, a documentation
+   window that flattens as it arrives, a band from his logo that draws the three steps, a dial for the self check.
+   Each scene writes CSS variables only, and each has a static state for no JavaScript and for reduced motion.
+6. **Full bleed media of their place, licence checked twice.** Mixkit Free films, each fetched singly. Wikimedia
+   Commons stills with the licence read on the file page, a credit on the page and in the Impressum when the licence
+   asks for one. Hamburg at blue hour and Schloss Reinbek did more for "local" than any sentence.
+7. **One action everywhere.** Header button, phone bar, a button per service, the self check result, the booking form.
+8. **The growth plan is a second site in Astra's voice**, 12 chapters. Where they stand (today's screenshots), the market
+   (official counts and Eurostat rings), why now (dated triggers, here Microsoft's end of support list), the
+   competition (a ratings chart and a wall of 17 rivals, every cell checked), positioning, the journey with what's
+   built and what's next, the new site in screenshots, local pages, Google and reviews, LinkedIn posts, offer and
+   prices with a calculator the reader moves, the first 90 days with what gets measured, the team with the partner
+   disclosure. Every figure in one data file, every chart computed from it, every source named under it.
+9. **Every number reopened on the day it ships.** A research agent re-verified the plan's facts with three checks each.
+   Then I rechecked the ones it didn't cover, and one count from the day before failed ("Zuverlässig on 9 of 17", really
+   7 or 10 by method), so the number was cut.
+
+### The QA that ran, and the floor it sets
+
+Copy audit with a planted control. axe on every page, two languages, desktop and phone (40 runs). Overflow at nine
+widths from 1920 down to 320 (180 loads). Text spilling out of its box with a planted control caught every load. Header
+at 13 widths. Hero at 9 sizes. The booking form end to end with POSTs intercepted. Every interaction by mouse and
+keyboard. Films checked to play only in view and never under reduced motion. Live, every file hashed against the
+deploy, cold loads at 1440 and 390.
+
+### Every hiccup, and the rule it leaves
+
+| Hiccup | Rule |
+|---|---|
+| A layout class `.in` collided with the reveal class `in` and centred everything | Never name a layout class after a state class (`.in`, `.on`, `.live`, `.bar`) |
+| The menu button sat half off screen at 360 and below | The overflow suite's floor is 320. Below 400px the language switch moves into the menu |
+| Test scripts clicked a header control that phones no longer show | Scripts act the way a visitor can at that width, through the menu on phones |
+| White 10px numbers on the new signal blue failed contrast | Small text on a brand fill gets a deeper shade of the fill, checked with axe |
+| A table built from ul and li with ARIA roles failed | ARIA tables are divs with roles, never lists with roles |
+| axe measured an entrance animation halfway | Reduced motion switches every reveal transition off, and axe waits for reveals to finish |
+| The brand name, set to never wrap, spilled out of a heading and a table cell | Big headings and narrow cells may break the brand at its hyphen, or the heading steps down a size |
+| A daylight photo darkened behind the headline read as murky trees | Put the photo beside the words with a fade from the text side, don't bury it under them |
+| "DOCUMENTATIO / N" in a narrow column head on phones | Narrow tables number their columns on phones with a key above, full names kept for screen readers |
+| Competitor names written with spans to dodge the dash check | Proper nouns go on the audit's allow list as written, never disguised |
+| A quoted WordPress post title carried an exclamation mark | Describe a quoted title instead of misquoting it |

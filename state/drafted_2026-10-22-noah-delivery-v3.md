@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 22 Oct 08:34:45 UTC on Raka's word, act_CxrNYa3wsked9P9wv, identical to the text below.
+
 # Noah Hertling, Systemhaus-Hertling, delivery of the v3 site and growth plan, 22 Oct 2026
 
 NOT SENT. Waiting for Raka's word. We promised it "later this week" on 21 Oct 12:33 UTC. This replaces the v2 draft
