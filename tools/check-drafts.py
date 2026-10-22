@@ -485,10 +485,25 @@ def check(path, replies=False):
                 if not warm and not re.fullmatch(r"Hi [^,]+, .+ looks cool!", S[0]):
                     bad(i, "SKETCH block one must be 'Hi [name], [company] looks cool!' "
                            "or, in a warm chat, 'Something I've been thinking about, [name]!'")
+                # The AI workflow variant, Raka 2026-10-22, "for ai workflows suggestion we can use
+                # this template ... However, did you know that [her normalised job title] faces
+                # [shortcomings]". Block two names a shortcoming of their ROLE, so the fact has to be
+                # real and sourced, a 'did you know:' gate line with its URL, and the offer has to
+                # be an AI workflow.
+                dyk = S[1].startswith("However, did you know that ")
+                if dyk:
+                    if "AI workflow" not in S[2] + " " + S[3]:
+                        bad(i, "the 'However, did you know that' shape is for AI workflow offers, "
+                               "block three or four must say AI workflow")
+                    dl = re.search(r"^did you know:(.*)$", gates[i] or "", re.M)
+                    if not dl or not re.search(r"https?://", dl.group(1)):
+                        bad(i, "RESEARCH GATE, a 'did you know' block two needs 'did you know: <the role "
+                               "fact> | <source and date> | <URL>' in the gate, the fact must be sourced")
                 if warm and not S[1].startswith("Your "):
                     bad(i, "warm SKETCH block two must open 'Your [website or social media] ...'")
-                elif not warm and not S[1].startswith("However, your "):
-                    bad(i, "SKETCH block two must open 'However, your [website or social media] ...'")
+                elif not warm and not dyk and not S[1].startswith("However, your "):
+                    bad(i, "SKETCH block two must open 'However, your [website or social media] ...' "
+                           "or, for an AI workflow, 'However, did you know that ...'")
                 for k, sent in enumerate(re.split(r"(?<=[.!?]) (?=[A-Z])", S[1])):
                     if len(sent.split()) > 30:
                         bad(i, f"SKETCH block two sentence {k+1} is {len(sent.split())} words, cap 30")
