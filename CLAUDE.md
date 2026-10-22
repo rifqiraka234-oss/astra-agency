@@ -298,6 +298,12 @@ fulllll context."
 **The call is `get_inbox_conversation(contactId)`. One contact per call. There is no
 bulk version of this that works.**
 
+**Since 2026-10-22 the same pull runs as `python3 tools/lemlist.py thread <contactId> ...`**,
+straight from the API at a fraction of the context. It pages every thread, checks the count
+against `totalItems`, reads both text fields and pulls the control first. Proven 21 of 21 items
+against `get_inbox_conversation`. Reads only, sends stay on the MCP. `docs/lemlist-field-index.md`
+last section has the traps.
+
 **And it pages, which is the trap. Verified 2026-09-21.** It returns **newest first**,
 **ten per page**, and **`limit` is hard capped at 10**, a request for 50 is refused. So a
 thread longer than ten messages **hides its own beginning on page 1**. Page with `page`

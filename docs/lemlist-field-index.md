@@ -553,3 +553,28 @@ Stephanie De Decker (lea_fjLaPtXKKyu6Az7pc) returns the connect note, the accept
 profile visit, and NOT the 21 Sep opener that `get_inbox_conversation` shows in both threads
 (act_L7iWyYajF4yNgjMte, act_xW69t23ffP3o8w3CY, both `campaignId: null`). A message sent from
 the inbox is not attached to the lead. So this endpoint can confirm a send, it can't rule one out.
+
+## The API direct, `tools/lemlist.py` (2026-10-22)
+
+Raka added the lemlist key as a network secret on the Astra Agency environment, Basic auth.
+The proxy injects it, so it's never in the container. Bearer doesn't work, tested with a fake
+key, Bearer gets `no api key provided` like no header at all, Basic gets `incorrect` (401).
+A route that doesn't exist answers 200 with the lemlist app's HTML, so a non JSON answer means
+a wrong path, not an empty result.
+
+| Question | Route | Notes |
+|---|---|---|
+| The whole thread for one contact | `GET /api/inbox/<contactId>?page=N` | Same items, order and paging as `get_inbox_conversation`, 10 per page, newest first |
+| The conversation list | `GET /api/inbox?userId=usr_27bdxG7jzTn2rucGB&limit=100&page=N` | Has `isYourTurn`, `lastSentAt`, `lastRepliedAt`, previews. 167 rows on 22 Oct. Without `userId` it answers `User ID is required` |
+| Accept events | `GET /api/activities?version=v2&type=linkedinInviteAccepted&campaignId=...&limit=100&offset=N` | As before |
+
+**The trap, text lives in two fields.** What we sent through lemlist has `message`. What LinkedIn
+synced has `text`, and that includes their replies and the connect note. Noah Hertling's "Yes that
+would be great" is in `text` and `message` is absent. Read only `message` and every reply is blank.
+
+**Lengths.** lemlist's `messageLength` counts UTF-16, an emoji is 2. The script counts the same way.
+
+**Proof it matches.** Noah Hertling (ctc_ch3vFcKAkjQdMKDCg, 6 items) and Niklas Hanf
+(ctc_Hi8GaR2cuEE6SA6xy, 15 items over two pages) pulled both ways on 22 Oct 16.30 UTC. 21 of 21
+matched on id, order and length. Niklas's act_hfZE7PYuE8xEk8Arg is empty in both, lemlist holds
+no text for it. W5 TEST's accept events came back as the same 10 people both ways.
