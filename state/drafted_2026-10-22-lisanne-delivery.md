@@ -27,16 +27,30 @@ state/drafted_2026-10-22-replies.md, which should now never be sent, the sketch 
 > 6ada3209dbf56f4689d03c52), 37 of 37 files byte matched. The message still describes them, so its text is unchanged.
 > One nuance, on a conflict case the letter now waits for her decision, which "waiting for your yes" still covers.
 
+> v2, 22 Oct 16.10 UTC. Raka, "let her know we built two things". A wording change, so NOT SENT, shown to Raka first.
+> The two things are the ones the handover names, the working app (intake desk with the employee check inside it) and
+> the plan page. Same shape as the Hertling delivery Raka sent Noah on 22 Oct (act_CxrNYa3wsked9P9wv), first thing,
+> try it, the URL, the second thing, its URL, the question.
+> Thread re pulled 16.08 UTC, still 2 items (our opener act_xHqoN8dNHbrJ6EWYu, her yes act_RCC8zw3aecnqM3tzB), nextPage
+> null, LinkedIn synced 16.07 UTC, control ctc_ch3vFcKAkjQdMKDCg 6 items in the same minute. Both URLs 200 with their own
+> titles at 16.09 UTC.
+> "we've built two things for you today", true, both were built on 22 Oct. "the employee reintegration check from your
+> about page", her /over-mij/ says "praktische arbeidsrechtelijke kennis en hulpmiddelen", first on "ziekte en
+> re-integratie", reread live 22 Oct. "how client files stay private and what it should save you", chapters 04 and 05 of
+> the plan page.
+> v1 text, superseded, never sent. "Lisanne, I built this for you today. / It's the AI workflow I offered, and it works.
+> ... / There's also the employee reintegration check from your about page, and the plan behind it, privacy included."
+
 DELIVERY
 ```
-Lisanne, I built this for you today.
+Lisanne, we've built two things for you today.
 
-It's the AI workflow I offered, and it works. Every new enquiry turns into one card with the dates quoted, the deadlines worked out, a conflict check, and a draft reply and engagement letter waiting for your yes.
+The first is the AI workflow I offered, and it works. Every new enquiry becomes one card with the dates quoted, the deadlines worked out, a conflict check, and a draft reply and engagement letter waiting for your yes. It's got the employee reintegration check from your about page in there too.
 
 Try it yourself.
 https://astra-dejongvanhommerig-prototype.netlify.app/
 
-There's also the employee reintegration check from your about page, and the plan behind it, privacy included.
+The second is the plan behind it, how client files stay private and what it should save you.
 https://astra-dejongvanhommerig-plan.netlify.app/
 
 What do you think?
