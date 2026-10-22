@@ -590,3 +590,9 @@ no text for it. W5 TEST's accept events came back as the same 10 people both way
   usr_27bdxG7jzTn2rucGB. Without that filter her 102 March threads show up as replies waiting.
 - v0.1 sometimes logged the connect note after the acceptance, so the audit also spots it by its
   wording, "saw your business and thought it was cool".
+- Sending, `POST /api/inbox/linkedin` with `sendUserId`, `contactId`, `message` (docs list `leadId` too,
+  but the route answers "contactId or leadId is required", so either). Probed 22 Oct with requests that
+  can't send. Careful, with a contact and NO message it answered "Failed to send message", so it tries
+  anyway, and `tools/lemlist.py send` refuses an empty message for that reason.
+- Drafts in Raka's lemlist inbox, `POST /api/inbox/<contactId>/drafts?draftOwner=usr_...` with `channel`
+  and `content`. Not used yet.

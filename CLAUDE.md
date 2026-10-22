@@ -301,7 +301,9 @@ bulk version of this that works.**
 **Since 2026-10-22 the same pull runs as `python3 tools/lemlist.py thread <contactId> ...`**,
 straight from the API at a fraction of the context. It pages every thread, checks the count
 against `totalItems`, reads both text fields and pulls the control first. Proven 21 of 21 items
-against `get_inbox_conversation`. Reads only, sends stay on the MCP. `docs/lemlist-field-index.md`
+against `get_inbox_conversation`. `send` is built too (dry run by default, `--go` only with Raka's
+words in `--approval`, copies from the drafts file, refuses a changed thread, confirms one copy after),
+guards tested 22 Oct with the POST stubbed, not yet proven on a live send. `docs/lemlist-field-index.md`
 last section has the traps.
 
 **And it pages, which is the trap. Verified 2026-09-21.** It returns **newest first**,

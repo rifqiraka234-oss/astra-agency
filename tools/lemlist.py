@@ -365,6 +365,102 @@ def cmd_audit(args):
     print(f"\n{len(res)} contacts, {sum(len(t) for t in threads.values())} thread items, all pages. Saved {out}")
 
 
+PLAN = "/tmp/lemlist-raw/send-plan.json"
+
+
+def draft_text(path, cid, label):
+    """The message for one contact, copied byte for byte out of a drafts file.
+
+    A section starts at a `### ` heading carrying the contactId. A message is a fenced block whose
+    opening fence is a bare ``` (a ```gate block is never a message), labelled by the line above it.
+    """
+    text = open(path, encoding="utf8").read()
+    secs = [s for s in re.split(r"(?m)^(?=### )", text) if s.startswith("### ") and cid in s.split("\n", 1)[0]]
+    if len(secs) != 1:
+        sys.exit(f"REFUSED {cid}, {len(secs)} sections in {path} name it, need exactly 1")
+    blocks = re.findall(r"(?ms)^([^\n]*)\n```\n(.*?)\n```$", secs[0])
+    if label:
+        blocks = [b for b in blocks if b[0].strip() == label]
+    if len(blocks) != 1:
+        sys.exit(f"REFUSED {cid}, {len(blocks)} message blocks{' labelled ' + label if label else ''}, need exactly 1."
+                 " Pass --label to pick one.")
+    msg = blocks[0][1]
+    for bad, why in (("—", "an em dash"), ("–", "an en dash"), ("[", "a template bracket"), ("]", "a template bracket")):
+        if bad in msg:
+            sys.exit(f"REFUSED {cid}, the message has {why}")
+    if not msg.strip():
+        sys.exit(f"REFUSED {cid}, empty message. The API tries to send even with no message.")
+    return blocks[0][0].strip(), msg
+
+
+def cmd_send(args):
+    import hashlib
+    plan = {}
+    if os.path.exists(PLAN):
+        plan = json.load(open(PLAN))
+    ctl = pull_thread(CONTROL, args.raw)
+    if len(ctl) < CONTROL_MIN:
+        sys.exit(f"CONTROL FAILED, {CONTROL} returned {len(ctl)} items. Nothing sent.")
+    print(f"control {CONTROL} {len(ctl)} items, ok")
+    for cid in args.contacts:
+        label, msg = draft_text(args.file, cid, args.label)
+        sha = hashlib.sha256(msg.encode()).hexdigest()[:16]
+        items = pull_thread(cid, args.raw)
+        latest = items[-1]["_id"] if items else None
+        dup = sum(1 for a in items if body(a).strip() == msg.strip())
+        print(f"\n== {cid}  {label}, {u16(msg)} chars, sha256 {sha}, thread {len(items)} items")
+        for a in items[-2:]:
+            print(f"   last  {a['createdAt'][:16]}  {who(a)}  {body(a)[:100].replace(chr(10), ' ')}")
+        print("   ---- message ----\n" + msg + "\n   -----------------")
+        if dup:
+            print(f"   REFUSED, this exact text is already in the thread {dup} time(s)")
+            continue
+        if not args.go:
+            plan[cid] = {"sha": sha, "latest": latest, "items": len(items), "at": time.time(), "file": args.file}
+            print("   DRY RUN, nothing sent. Planned, the real send must follow within 30 minutes.")
+            continue
+        p = plan.get(cid)
+        if not p or p["sha"] != sha or time.time() - p["at"] > 1800:
+            print("   REFUSED, no dry run of this exact text in the last 30 minutes. Run it without --go first.")
+            continue
+        if p["latest"] != latest or p["items"] != len(items):
+            print(f"   REFUSED, the thread changed since the dry run ({p['items']} items then, {len(items)} now). "
+                  "Read it again, nothing sent.")
+            continue
+        r = subprocess.run(["curl", "-sS", "--max-time", "60", "-X", "POST", "-H", "Content-Type: application/json",
+                            "-d", json.dumps({"sendUserId": USER, "contactId": cid, "message": msg}),
+                            "-w", "\n%{http_code}", API + "/api/inbox/linkedin"], capture_output=True, text=True)
+        resp, _, code = r.stdout.rpartition("\n")
+        sent_at = time.strftime("%Y-%m-%d %H.%M.%S UTC", time.gmtime())
+        print(f"   POST {code} {resp[:200]}")
+        if code != "200":
+            print("   NOT SENT per the API. Pull the thread before any retry, a failed answer can still land.")
+            continue
+        plan.pop(cid, None)
+        act, copies = None, 0
+        for _ in range(8):
+            time.sleep(5)
+            after = pull_thread(cid, args.raw)
+            same = [a for a in after if body(a) == msg]
+            copies = sum(1 for a in after if body(a).strip() == msg.strip())
+            if same:
+                act = same[-1]["_id"]
+                break
+        if not act or copies != 1:
+            print(f"   CHECK FAILED, {copies} copies found after sending, exact match {'yes' if act else 'no'}. "
+                  "Pull the thread by hand now.")
+            continue
+        print(f"   SENT {act}, one copy, identical text, thread {len(after)} items")
+        line = (f"{sent_at}  {act}  {cid}, {label}, {u16(msg)} chars, on Raka's \"{args.approval}\". Sent through the "
+                f"API by tools/lemlist.py. Thread {len(items)} items before, unchanged since the dry run, control "
+                f"{len(ctl)} items. Text copied from {args.file} (sha256 {sha}), one copy after, identical.\n")
+        with open(f"state/send_log_{time.strftime('%Y-%m-%d', time.gmtime())}.txt", "a", encoding="utf8") as f:
+            f.write(line)
+        time.sleep(args.gap)
+    with open(PLAN, "w") as f:
+        json.dump(plan, f)
+
+
 def cmd_get(args):
     d = get(args.path, args.raw, "get")
     if isinstance(d, dict):
@@ -394,9 +490,18 @@ def main():
     g = sub.add_parser("get")
     g.add_argument("path")
     sub.add_parser("audit", help="every accepted contact in every campaign, thread pulled and sorted by the rules")
+    s = sub.add_parser("send", help="dry run by default. --go sends, only on Raka's word, quoted in --approval")
+    s.add_argument("--file", required=True, help="the drafts file the text is copied from")
+    s.add_argument("--label", help="the label line above the block, when a section has more than one")
+    s.add_argument("--go", action="store_true", help="actually send. Needs a dry run of the same text first")
+    s.add_argument("--approval", help="Raka's exact words approving this send, written to the send log")
+    s.add_argument("--gap", type=int, default=10, help="seconds between sends")
+    s.add_argument("contacts", nargs="+")
     args = ap.parse_args()
+    if args.cmd == "send" and args.go and not args.approval:
+        sys.exit("REFUSED, --go needs --approval with Raka's exact words")
     {"thread": cmd_thread, "accepts": cmd_accepts, "inbox": cmd_inbox, "get": cmd_get,
-     "audit": cmd_audit}[args.cmd](args)
+     "audit": cmd_audit, "send": cmd_send}[args.cmd](args)
 
 
 if __name__ == "__main__":

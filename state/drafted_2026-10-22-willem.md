@@ -22,7 +22,7 @@ Thanks Willem, will do! I'll send it over to marketing@keypro.nl today.
 ```
 
 EMAIL to marketing@keypro.nl, subject "Hooft & Petiet and ReShare websites, at Willem's request"
-REPLY
+EMAIL
 ```
 Hi there,
 
