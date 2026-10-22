@@ -1,6 +1,8 @@
+<!-- GATE ARCHIVED -->
 # Lisanne De Jong Vanhommerig, delivery of the intake desk sketch and the plan, 22 Oct 2026
 
-NOT SENT. Waiting for Raka's word. Raka, 22 Oct, "lets just do it now and not send anything first".
+SENT 22 Oct 16.12.50 UTC, act_6XRjTzddMeSCuntoo, the v2 text below, on Raka's "send! looking good man." One copy in
+the thread after, identical, 597 chars.
 
 She said yes to "Shall I send you a sketch of the AI workflow for your practice?" at 10.46 UTC with "Yes, that's
 interesting, thanks!". We haven't replied yet. This delivery replaces the holding reply in
