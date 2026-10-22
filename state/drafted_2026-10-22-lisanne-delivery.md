@@ -47,7 +47,7 @@ DELIVERY
 ```
 Lisanne, we've built two things for you today.
 
-The first is the AI workflow I offered, starting with new enquiries, and it works. Every new enquiry becomes one card with the dates quoted, the deadlines worked out, a conflict check, and a draft reply and engagement letter waiting for your yes. It's got the employee reintegration check from your about page in there too.
+The first is the AI workflow I offered, starting with new enquiries, and it works. Each one becomes a card with the dates quoted, the deadlines worked out, a conflict check, and a draft reply and engagement letter waiting for your yes. It's got the employee reintegration check from your about page in there too.
 
 Try it yourself.
 https://astra-dejongvanhommerig-prototype.netlify.app/
