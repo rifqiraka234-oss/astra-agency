@@ -578,3 +578,15 @@ would be great" is in `text` and `message` is absent. Read only `message` and ev
 (ctc_Hi8GaR2cuEE6SA6xy, 15 items over two pages) pulled both ways on 22 Oct 16.30 UTC. 21 of 21
 matched on id, order and length. Niklas's act_hfZE7PYuE8xEk8Arg is empty in both, lemlist holds
 no text for it. W5 TEST's accept events came back as the same 10 people both ways.
+
+**More found in the 22 Oct audit.**
+- `GET /api/inbox?userId=...` ignores `listId` and `search`, both tested, it returns the same 167
+  rows every time and every row has a reply. Threads where only we've written aren't in it, so
+  nudges are found from accept events plus per contact threads, which is what `audit` does.
+- Campaigns, `GET /api/campaigns?version=v2&limit=100`, key `campaigns`.
+- Stats, `GET /api/v2/campaigns/<id>/stats?startDate=...&endDate=...`, field `invitationAccepted`.
+  It matched the accept events in all seven campaigns on 22 Oct.
+- Accept events carry `sendUserId`. Luna's campaign is usr_MKy94ogmHZB9hQm3K, ours is
+  usr_27bdxG7jzTn2rucGB. Without that filter her 102 March threads show up as replies waiting.
+- v0.1 sometimes logged the connect note after the acceptance, so the audit also spots it by its
+  wording, "saw your business and thought it was cool".

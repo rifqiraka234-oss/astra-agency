@@ -6,6 +6,9 @@
     python3 tools/lemlist.py accepts cam_X [--since 2026-10-01]   # who accepted, with their queue status
     python3 tools/lemlist.py inbox [--your-turn]          # the conversation list, a candidate list only
     python3 tools/lemlist.py get "/api/team"              # any GET, raw saved, shape printed
+    python3 tools/lemlist.py audit                        # everyone accepted, every thread, sorted by the rules
+
+The audit is a candidate list. Before drafting for anyone in it, read their whole thread with `thread`.
 
 Reads only. Sends stay on the MCP send_message, on Raka's word, never from here.
 
@@ -32,6 +35,7 @@ because an empty thread only means "never messaged" when the method is shown to 
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -142,21 +146,26 @@ def queue_index():
     return idx
 
 
-def cmd_accepts(args):
-    q = {"version": "v2", "type": "linkedinInviteAccepted", "campaignId": args.campaign, "limit": 100}
-    if args.since:
-        q["minDate"] = args.since
+def pull_accepts(campaign, raw, since=None):
+    q = {"version": "v2", "type": "linkedinInviteAccepted", "campaignId": campaign, "limit": 100}
+    if since:
+        q["minDate"] = since
     rows, offset = [], 0
     while True:
         q["offset"] = offset
-        d = get("/api/activities?" + urllib.parse.urlencode(q), args.raw, f"accepts-{args.campaign}-{offset}")
+        d = get("/api/activities?" + urllib.parse.urlencode(q), raw, f"accepts-{campaign}-{offset}")
         data = d["data"] if isinstance(d, dict) else d
         rows += data
         if len(data) < 100:
             break
         offset += 100
     if len({a["_id"] for a in rows}) != len(rows):
-        sys.exit("DUPLICATE EVENTS, paging shifted, run it again")
+        sys.exit(f"DUPLICATE EVENTS in {campaign}, paging shifted, run it again")
+    return rows
+
+
+def cmd_accepts(args):
+    rows = pull_accepts(args.campaign, args.raw, args.since)
     idx = queue_index()
     counts = {}
     for a in sorted(rows, key=lambda a: a["createdAt"]):
@@ -189,6 +198,173 @@ def cmd_inbox(args):
     print(f"\n{len(shown)} shown of {len(rows)}. Previews lie, pull the thread before believing any row.")
 
 
+CLOSED = ("CLOSED", "DO_NOT_CONTACT", "DECLINED_CLOSED", "NOT_A_LEAD", "ALREADY_MESSAGED_VIA_COFOUNDER")
+DEALS = ("SAID_YES_PENDING", "PROTOTYPE_SENT", "DELIVERED", "MEETING_BOOKED")
+
+
+def ts(a):
+    return datetime.fromisoformat(a["createdAt"].replace("Z", "+00:00")).timestamp()
+
+
+def pitches(us):
+    """Our messages within 30 minutes of each other are one pitch, a message split in two."""
+    groups = []
+    for a in us:
+        if groups and ts(a) - groups[-1] < 1800:
+            groups[-1] = ts(a)
+        else:
+            groups.append(ts(a))
+    return len(groups)
+
+
+def classify(items, accepted_at):
+    """The follow up rules in RULES.md section 1, applied to one whole thread."""
+    us = [a for a in items if a["type"].endswith("Sent")]
+    them = [a for a in items if a["type"].endswith("Replied")]
+    # The connect note is our first item when it predates the acceptance. Everything else is real.
+    if us and (accepted_at is None and items[0] is us[0] or accepted_at and ts(us[0]) < accepted_at):
+        us = us[1:]
+    # v0.1 sometimes logged the connect note after the acceptance, so its wording settles it too.
+    us = [a for a in us if "saw your business and thought it was cool" not in body(a)]
+    last = items[-1] if items else None
+    out = {"items": len(items), "us": len(us), "them": len(them),
+           "lastUs": us[-1]["createdAt"] if us else None, "lastThem": them[-1]["createdAt"] if them else None,
+           "lastText": body(last)[:70].replace("\n", " ") if last else "",
+           "lastThemText": body(them[-1])[:90].replace("\n", " ") if them else "",
+           "lastUsText": body(us[-1])[:90].replace("\n", " ") if us else ""}
+    if last and last["type"].endswith("Replied"):
+        out["kind"] = "THEM_LAST"
+    elif not us:
+        out["kind"] = "NEVER"
+    else:
+        since = [a for a in us if not them or ts(a) > ts(them[-1])]
+        out["pitches"] = pitches(since)
+        out["ageDays"] = round((time.time() - ts(us[-1])) / 86400, 1)
+        out["kind"] = "ONE_PITCH" if out["pitches"] == 1 else "TWO_PLUS"
+    return out
+
+
+def cmd_audit(args):
+    camps = get("/api/campaigns?version=v2&limit=100", args.raw, "campaigns")["campaigns"]
+    who_ = {}
+    print("accept events per campaign, Raka's sender only")
+    for c in camps:
+        allrows = pull_accepts(c["_id"], args.raw)
+        rows = [a for a in allrows if a.get("sendUserId") == USER]
+        if len(rows) != len(allrows):
+            print(f"  skipped {len(allrows) - len(rows)} from another sender in {c['name']}")
+        if rows:
+            print(f"  {len(rows):4}  {c['status']:8} {c['name']}")
+        for a in rows:
+            cid = a.get("contactId")
+            if cid and (cid not in who_ or ts(a) < who_[cid]["acceptedAt"]):
+                who_[cid] = {"acceptedAt": ts(a), "name": f"{a.get('leadFirstName')} {a.get('leadLastName')}",
+                             "company": a.get("leadCompanyName"), "leadId": a.get("leadId"),
+                             "campaign": c["name"][:22], "source": "accept"}
+    print(f"  {len(who_)} unique contacts accepted")
+    # Anyone with a reply, or open in the queue, who has no accept event still gets checked.
+    extra = 0
+    page = 1
+    while True:
+        d = get(f"/api/inbox?userId={USER}&limit=100&page={page}", args.raw, f"audit-inbox-p{page}")
+        for r in d["data"]:
+            if r["contactId"] not in who_:
+                who_[r["contactId"]] = {"acceptedAt": None, "name": r["contact"].get("fullName"), "company": None,
+                                        "leadId": None, "campaign": "", "source": "inbox"}
+                extra += 1
+        if not d["pagination"]["nextPage"]:
+            break
+        page = d["pagination"]["nextPage"]
+    idx = queue_index()
+    seen = set()
+    for r in idx.values():
+        cid = r.get("contactId")
+        if cid and re.fullmatch(r"ctc_[A-Za-z0-9]+", cid) and cid not in who_ and cid not in seen \
+                and not str(r.get("status", "")).startswith(CLOSED):
+            seen.add(cid)
+            who_[cid] = {"acceptedAt": None, "name": r.get("name"), "company": r.get("companyName"),
+                         "leadId": r.get("leadId"), "campaign": "", "source": "queue"}
+            extra += 1
+    print(f"  {extra} more with no accept event, from the reply list and open queue rows")
+
+    ctl = pull_thread(CONTROL, args.raw)
+    if len(ctl) < CONTROL_MIN:
+        sys.exit(f"CONTROL FAILED, {CONTROL} returned {len(ctl)} items. Every result in this run is void.")
+    print(f"control {CONTROL} {len(ctl)} items, ok\n")
+
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(4) as ex:
+        threads = dict(zip(who_, ex.map(lambda c: pull_thread(c, args.raw), who_)))
+    res = []
+    for cid, w in who_.items():
+        r = idx.get(cid) or idx.get(w["leadId"])
+        st = r.get("status", "NO STATUS") if r else "NOT IN QUEUE"
+        c = classify(threads[cid], w["acceptedAt"])
+        c.update(w, contactId=cid, status=st, closed=st.startswith(CLOSED), deal=st in DEALS,
+                 empty=sum(1 for a in threads[cid] if not body(a)))
+        k = c["kind"]
+        ruled = r.get("date", "") if r else ""
+        parked = st.startswith(("HOLD", "LEFT_ALONE", "PARKED"))
+        if k == "THEM_LAST" and parked and c["lastThem"][:10] < ruled:
+            k = "RULED"   # their last word came before our ruling on the row, so the ruling stands
+        if k == "THEM_LAST":
+            c["bucket"] = "THEY WROTE LAST, row closed" if c["closed"] else "REPLY WAITING ON US"
+        elif k == "NEVER":
+            c["bucket"] = "ACCEPTED, NOTHING SENT" if w["acceptedAt"] else "NO ACCEPT EVENT, NOTHING SENT"
+        elif c["closed"]:
+            c["bucket"] = "CLOSED, QUIET"
+        elif st.startswith("HOLD"):
+            c["bucket"] = "HELD FOR RAKA'S CALL"
+        elif st.startswith("LEFT_ALONE"):
+            c["bucket"] = "LEFT ALONE"
+        elif st.startswith("PARKED"):
+            c["bucket"] = "PARKED, CHECK BACK LATER"
+        elif st in ("SEND_FAILED", "BLOCKED_NOT_CONNECTED", "NOT_CONNECTED"):
+            c["bucket"] = "LAST SEND FAILED, NOT CONNECTED"
+        elif c["deal"]:
+            c["bucket"] = "DEALS, RAKA FOLLOWS UP"
+        elif k == "ONE_PITCH":
+            c["bucket"] = "BUMP DUE NOW" if c["ageDays"] > 3 else "BUMP COMING"
+        else:
+            c["bucket"] = "HAD ITS FOLLOW UP, CLOSE SILENTLY" if c["ageDays"] > 3 else "HAD ITS FOLLOW UP, WAITING"
+        res.append(c)
+    out = os.path.join(args.raw, f"audit-{time.strftime('%Y%m%dT%H%M%S')}.json")
+    with open(out, "w") as f:
+        json.dump(res, f, ensure_ascii=False, indent=1)
+
+    order = ["REPLY WAITING ON US", "DEALS, RAKA FOLLOWS UP", "BUMP DUE NOW", "BUMP COMING",
+             "HELD FOR RAKA'S CALL", "PARKED, CHECK BACK LATER", "LAST SEND FAILED, NOT CONNECTED", "LEFT ALONE",
+             "HAD ITS FOLLOW UP, CLOSE SILENTLY", "HAD ITS FOLLOW UP, WAITING", "ACCEPTED, NOTHING SENT",
+             "NO ACCEPT EVENT, NOTHING SENT",
+             "THEY WROTE LAST, row closed", "CLOSED, QUIET"]
+    for b in order:
+        rows = sorted([c for c in res if c["bucket"] == b], key=lambda c: c["lastUs"] or c["lastThem"] or "")
+        print(f"== {b}  {len(rows)}")
+        if b in ("ACCEPTED, NOTHING SENT", "NO ACCEPT EVENT, NOTHING SENT"):
+            by = {}
+            for c in rows:
+                by.setdefault(c["status"], []).append(c)
+            for st, cs in sorted(by.items(), key=lambda kv: -len(kv[1])):
+                names = ", ".join(f"{c['name']} {c['contactId']}" for c in cs) if not st.startswith(CLOSED) \
+                    and st not in ("NO_STRONG_ANGLE", "BLOCKED_NEEDS_INFO", "NOT_CONNECTED") else ""
+                print(f"   {len(cs):3}  {st}  {names}")
+            continue
+        if b == "CLOSED, QUIET":
+            continue
+        for c in rows:
+            due = ""
+            if c["lastUs"] and b in ("BUMP COMING", "HAD ITS FOLLOW UP, WAITING"):
+                due = " due " + datetime.utcfromtimestamp(ts({"createdAt": c["lastUs"]}) + 3 * 86400).strftime("%d %b %H.%M")
+            print(f"   {c['name']} | {c['company']} | {c['contactId']} | {c['status']} | "
+                  f"us {(c['lastUs'] or '-')[:10]} them {(c['lastThem'] or '-')[:10]}"
+                  f"{' pitches ' + str(c['pitches']) if 'pitches' in c else ''}"
+                  f"{' age ' + str(c['ageDays']) + 'd' if 'ageDays' in c else ''}{due}"
+                  f"{' src ' + c['source'] if c['source'] != 'accept' else ''} | {c['lastText'][:60]}")
+            if b == "BUMP DUE NOW":
+                print(f"        THEM {c['lastThemText'] or '-'}\n        US   {c['lastUsText']}")
+    print(f"\n{len(res)} contacts, {sum(len(t) for t in threads.values())} thread items, all pages. Saved {out}")
+
+
 def cmd_get(args):
     d = get(args.path, args.raw, "get")
     if isinstance(d, dict):
@@ -217,8 +393,10 @@ def main():
     i.add_argument("--your-turn", action="store_true")
     g = sub.add_parser("get")
     g.add_argument("path")
+    sub.add_parser("audit", help="every accepted contact in every campaign, thread pulled and sorted by the rules")
     args = ap.parse_args()
-    {"thread": cmd_thread, "accepts": cmd_accepts, "inbox": cmd_inbox, "get": cmd_get}[args.cmd](args)
+    {"thread": cmd_thread, "accepts": cmd_accepts, "inbox": cmd_inbox, "get": cmd_get,
+     "audit": cmd_audit}[args.cmd](args)
 
 
 if __name__ == "__main__":
