@@ -13,3 +13,12 @@ REPLY
 ```
 Thanks Lisanne! I'll put the sketch together and send it over early next week. Which part of the admin takes most of your time right now, new enquiries, client updates or invoicing?
 ```
+
+> OPTION B, added 2026-10-22 ~12.05 UTC after the research in state/research_2026-10-22-lisanne-ai-workflow.md. It asks
+> the first unknown in section 7 instead, where her new cases arrive, which decides how the intake desk is wired. Raka
+> picks one, never both.
+
+REPLY (option B)
+```
+Thanks Lisanne! I'll put the sketch together and send it over early next week. So it fits how you work, where do most new cases reach you now, through your website, email, WhatsApp or referrals?
+```
