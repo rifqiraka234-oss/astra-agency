@@ -129,7 +129,7 @@ h2 em,h1 em{font-style:italic}
 .tries li:before{content:"0" counter(t);font-family:'Geist Mono',monospace;color:var(--orange-t);font-size:13px;padding-top:3px}
 .tries b{display:block;color:var(--teal);font-size:18px}
 .linkcard{display:block;text-decoration:none;border-radius:22px;background:var(--teal);color:#fff;padding:34px;position:relative;overflow:hidden}
-.linkcard .u{font-family:'Geist Mono',monospace;font-size:13px;color:var(--sand);word-break:break-all}
+.linkcard .u{font-family:'Geist Mono',monospace;font-size:13px;color:var(--sand);overflow-wrap:anywhere}
 .linkcard h3{font-size:38px;line-height:1.05;margin:12px 0 18px;color:#fff}
 .linkcard img{position:absolute;right:-24px;bottom:-30px;width:150px;opacity:.18}
 
@@ -162,7 +162,7 @@ h2 em,h1 em{font-style:italic}
 .calc{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:40px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px}
 .calc label{display:block;font-weight:600;font-size:15px;margin:0 0 6px}
 .calc .f{margin-bottom:22px}
-.calc input[type=range]{width:100%;accent-color:var(--teal)}
+.calc input[type=range]{width:100%;height:30px;margin:2px 0 0;accent-color:var(--teal)}
 .calc input[type=number]{width:140px;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:16px}
 .calc .v{font-family:'Geist Mono',monospace;font-size:14px;color:var(--teal);float:right}
 .out{background:var(--teal);color:#fff;border-radius:18px;padding:26px;display:flex;flex-direction:column;justify-content:center}
@@ -234,6 +234,7 @@ h2 em,h1 em{font-style:italic}
   .step .n{width:36px;height:36px}
   .step h3{font-size:27px}
   .calc{padding:20px}
+  .trk .wrap{gap:14px}
   .nx{margin-top:48px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
@@ -296,10 +297,10 @@ h2 em,h1 em{font-style:italic}
     <h2 id="h-c2">Four steps, and you only take <em>the last</em></h2>
     <p class="lede">Follow one made up message from the sketch. Laura's employer has just ended her contract.</p>
     <div class="steps">
-      <div class="step rv"><span class="n">01</span><div><h3>It lands in one list</h3><p>Laura writes through your website. Her message joins the others in one list, already tagged with where it came from, its type of case and its first deadline.</p></div><div class="shot"><img src="img/f1-list.jpg" alt="The list of new enquiries with Laura Smeets selected, tagged website, dismissal, conflict check and a deadline on 4 November" loading="lazy" width="720" height="1304"></div></div>
-      <div class="step rv"><span class="n">02</span><div><h3>The dates are found, the deadlines worked out</h3><p>Her contract ended on 4 September, quoted from her own sentence. That gives two fatal deadlines, each with its article. One that falls on a weekend or holiday moves to the next working day, as the Algemene termijnenwet says.</p></div><div class="shot"><picture><source media="(max-width:720px)" srcset="img/m2-facts.jpg" width="756" height="366"><img src="img/f2-facts.jpg" alt="The date her contract ended, 4 September 2026, next to the sentence it came from" loading="lazy" width="1432" height="280"></picture><picture><source media="(max-width:720px)" srcset="img/m2-terms.jpg" width="756" height="926"><img src="img/f2-terms.jpg" alt="Two fatal deadlines, 4 November and 4 December 2026, each with its article of the civil code" loading="lazy" width="1432" height="658"></picture></div></div>
-      <div class="step rv"><span class="n">03</span><div><h3>Conflicts are checked</h3><p>Her employer is on your own list as a former client, so it's flagged in red, in the list and on her card.</p></div><div class="shot"><picture><source media="(max-width:720px)" srcset="img/m3-conflict.jpg" width="756" height="468"><img src="img/f3-conflict.jpg" alt="The conflict check flags Heuvelland Metaal BV as a former client" loading="lazy" width="1432" height="378"></picture></div></div>
-      <div class="step rv"><span class="n">04</span><div><h3>You decide</h3><p>Because of the conflict, the draft only acknowledges her message. Without one, the full reply and the engagement letter with your own terms wait in your Outlook drafts. You read, change what you like and send.</p></div><div class="shot"><picture><source media="(max-width:720px)" srcset="img/m4-reply.jpg" width="756" height="500"><img src="img/f4-reply.jpg" alt="A draft reply to Laura that only acknowledges her message while the conflict is checked" loading="lazy" width="1432" height="500"></picture></div></div>
+      <div class="step rv"><span class="n">01</span><div><h3>It lands in one list</h3><p>Laura writes through your website. Her message joins the others in one list, already tagged with where it came from, its type of case and its first deadline.</p></div><div class="shot"><img src="img/f1-list.jpg" alt="The list of new enquiries with Laura Smeets selected, tagged website, dismissal, conflict check and a deadline on 4 November" width="720" height="1304"></div></div>
+      <div class="step rv"><span class="n">02</span><div><h3>The dates are found, the deadlines worked out</h3><p>The day her contract ended is found and quoted from her own sentence. That gives two fatal deadlines, each with its article. One that falls on a weekend or holiday moves to the next working day, as the Algemene termijnenwet says.</p></div><div class="shot"><picture><source media="(max-width:720px)" srcset="img/m2-facts.jpg" width="756" height="366"><img src="img/f2-facts.jpg" alt="The date her contract ended, 4 September 2026, next to the sentence it came from" width="1432" height="280"></picture><picture><source media="(max-width:720px)" srcset="img/m2-terms.jpg" width="756" height="926"><img src="img/f2-terms.jpg" alt="Two fatal deadlines, 4 November and 4 December 2026, each with its article of the civil code" width="1432" height="658"></picture></div></div>
+      <div class="step rv"><span class="n">03</span><div><h3>Conflicts are checked</h3><p>Her employer is on your own list as a former client, so it's flagged in red, in the list and on her card.</p></div><div class="shot"><picture><source media="(max-width:720px)" srcset="img/m3-conflict.jpg" width="756" height="512"><img src="img/f3-conflict.jpg" alt="The conflict check flags Heuvelland Metaal BV as a former client" width="1432" height="378"></picture></div></div>
+      <div class="step rv"><span class="n">04</span><div><h3>You decide</h3><p>Because of the conflict, the draft holds back. It thanks her, says you're checking whether you can take the case, and tells her when the deadline runs out, so she can act in time either way. The engagement letter waits until you've decided. Without a conflict, the full reply and the letter with your own terms wait in your Outlook drafts.</p></div><div class="shot"><picture><source media="(max-width:720px)" srcset="img/m4-reply.jpg" width="756" height="784"><img src="img/f4-reply.jpg" alt="A draft reply to Laura that holds back while the conflict is checked and warns her the deadline runs to 4 November" width="1432" height="644"></picture></div></div>
     </div>
     <a class="nx" href="#c3"><span>Next</span>The part for employees</a>
   </div>
@@ -312,9 +313,9 @@ h2 em,h1 em{font-style:italic}
     <blockquote class="quote rv" lang="nl">Daarom ontwikkel ik naast mijn advocatenpraktijk ook praktische arbeidsrechtelijke kennis en hulpmiddelen. … Mijn eerste inhoudelijke focus daarbij ligt op ziekte en re-integratie.<cite lang="en">Lisanne de Jong - Vanhommerig, dejongvanhommerig.com/over-mij</cite></blockquote>
     <p class="lede rv">So we built a first one. An employee enters the day they fell ill and sees which week they're in, UWV's step plan with its dates, and when it's worth calling a lawyer. One button sends you the whole picture.</p>
     <div class="phones">
-      <div class="rv"><div class="phone"><img src="img/ww-q.jpg" alt="The employee check asking which of six situations apply" loading="lazy" width="780" height="1688"></div><p class="cap">One question per screen.</p></div>
-      <div class="rv p2"><div class="phone"><img src="img/ww-result.jpg" alt="The result, week 9 of illness, with the step plan and the current step highlighted" loading="lazy" width="780" height="1688"></div><p class="cap">Where they stand, with UWV's dates.</p></div>
-      <div class="rv p3"><div class="phone"><img src="img/ww-flags.jpg" alt="Warnings about a missing plan of approach and a threat to stop wages, each with its source" loading="lazy" width="780" height="1688"></div><p class="cap">What to watch, each with its source.</p></div>
+      <div class="rv"><div class="phone"><img src="img/ww-q.jpg" alt="The employee check asking which of six situations apply" width="780" height="1688"></div><p class="cap">One question per screen.</p></div>
+      <div class="rv p2"><div class="phone"><img src="img/ww-result.jpg" alt="The result, week 9 of illness, with the step plan and the current step highlighted" width="780" height="1688"></div><p class="cap">Where they stand, with UWV's dates.</p></div>
+      <div class="rv p3"><div class="phone"><img src="img/ww-flags.jpg" alt="Warnings about a missing plan of approach and a threat to stop wages, each with its source" width="780" height="1688"></div><p class="cap">What to watch, each with its source.</p></div>
     </div>
     <p class="src">Built on UWV's own step plan, Rijksoverheid and the civil code. You'd read and approve every line before it goes live on your site.</p>
     <a class="nx" href="#try"><span>Next</span>Try both yourself</a>
@@ -331,7 +332,7 @@ h2 em,h1 em{font-style:italic}
         <li><span><b>Paste an old enquiry</b>With the names changed. Watch the dates, the deadlines and the draft appear. It stays in your browser.</span></li>
         <li><span><b>Fill in the employee check</b>As if you'd been ill since August, then find it at the top of your desk.</span></li>
       </ol>
-      <a class="linkcard rv" href="https://astra-dejongvanhommerig-prototype.netlify.app/"><span class="u">astra-dejongvanhommerig-prototype.netlify.app</span><h3>Open the sketch</h3><span class="btn btn-o">Try it now</span><img src="icon.svg" alt=""></a>
+      <a class="linkcard rv" href="https://astra-dejongvanhommerig-prototype.netlify.app/"><span class="u">astra-dejongvanhommerig-<wbr>prototype<wbr>.netlify.app</span><h3>Open the sketch</h3><span class="btn btn-o">Try it now</span><img src="icon.svg" alt=""></a>
     </div>
     <a class="nx" href="#c4"><span>Next</span>Where your data goes</a>
   </div>
@@ -409,7 +410,7 @@ h2 em,h1 em{font-style:italic}
           <div class="r h"><span>The NOvA recommends</span><span>The desk</span></div>
           <div class="r"><q lang="nl">Verifieer altijd de output … Gebruik uitsluitend tools met bronvermelding</q><p>Every fact on a card sits next to the sentence it came from. Every deadline names its article. Nothing is sent before you've read it.</p></div>
           <div class="r"><q lang="nl">Voer geen vertrouwelijke of cliëntgegevens in publieke AI-modellen.</q><p>No public chatbot. Claude runs on Amazon Bedrock under a business account, in an EU region, with zero data retention.</p></div>
-          <div class="r"><q lang="nl">Vraag toestemming aan de cliënt voor AI-gebruik in het dossier.</q><p>The engagement letter has one plain line about the AI step, and the client can say no.</p></div>
+          <div class="r"><q lang="nl">Vraag toestemming aan de cliënt voor AI-gebruik in het dossier.</q><p>The engagement letter asks the client's consent for the AI step in plain words. Without a yes, it isn't used.</p></div>
           <div class="r"><q lang="nl">Voer een Data Protection Impact Assessment uit</q><p>We write the DPIA with you in week one, before a single real message goes through.</p></div>
           <div class="r"><q lang="nl">Weet waar data worden opgeslagen en verwerkt … Zorg dat input en output binnen de kantooromgeving blijven.</q><p>One page that maps every data flow, country and supplier. What comes out lands in your own Outlook and OneDrive.</p></div>
           <div class="r"><q lang="nl">Stel een kantoorbreed AI-beleid op. Informeer cliënten over het AI-beleid.</q><p>A short AI policy for your practice and a client text for your site, written with you in week one.</p></div>
@@ -498,6 +499,22 @@ h2 em,h1 em{font-style:italic}
   "use strict";
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var root = document.documentElement;
+  /* an image that fails to load gets two more tries, and another when the connection comes back */
+  function retry(img) {
+    var n = +(img.getAttribute("data-try") || 0);
+    if (n >= 3) return;
+    img.setAttribute("data-try", n + 1);
+    setTimeout(function () {
+      var pic = img.parentNode && img.parentNode.tagName === "PICTURE" ? img.parentNode : null;
+      if (pic) [].forEach.call(pic.querySelectorAll("source"), function (s) { s.srcset = s.getAttribute("srcset").split("?")[0] + "?r=" + (n + 1); });
+      img.src = img.getAttribute("src").split("?")[0] + "?r=" + (n + 1);
+    }, 1200 * (n + 1));
+  }
+  [].forEach.call(document.images, function (img) {
+    img.addEventListener("error", function () { retry(img); });
+    if (img.complete && !img.naturalWidth) retry(img);
+  });
+  window.addEventListener("online", function () { [].forEach.call(document.images, function (img) { if (img.complete && !img.naturalWidth) { img.removeAttribute("data-try"); retry(img); } }); });
   /* her line, the hatch strokes settle into one stroke */
   if (!reduce) {
     var ls = document.querySelectorAll(".lineword i");
@@ -524,7 +541,7 @@ h2 em,h1 em{font-style:italic}
       a.classList.toggle("done", k + 1 < step);
       if (k + 1 === step) a.setAttribute("aria-current", "step"); else a.removeAttribute("aria-current");
     });
-    if (step) cur.innerHTML = "<b>0" + step + " of 06</b>" + links[step - 1].getAttribute("data-label");
+    if (step) cur.innerHTML = "<b>0" + step + "/06</b>" + links[step - 1].getAttribute("data-label");
   }
   window.addEventListener("scroll", track, { passive: true }); window.addEventListener("resize", track); track();
   /* calculator */

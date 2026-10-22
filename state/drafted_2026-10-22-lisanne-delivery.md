@@ -23,6 +23,9 @@ state/drafted_2026-10-22-replies.md, which should now never be sent, the sketch 
 > Both URLs live, 32 of 32 files byte matched against the deploys, titles right, noindex header on, cold loaded at
 > 1440 and 390 with no page errors and no broken images (qa/live.js, 22 Oct 13.47 UTC).
 > Reopen the thread and both URLs in the minute before sending.
+> 15.57 UTC, both sites redeployed after Raka's accuracy and phone pass (app 6ada31fca9e540a68b9c5290, pitch
+> 6ada3209dbf56f4689d03c52), 37 of 37 files byte matched. The message still describes them, so its text is unchanged.
+> One nuance, on a conflict case the letter now waits for her decision, which "waiting for your yes" still covers.
 
 DELIVERY
 ```

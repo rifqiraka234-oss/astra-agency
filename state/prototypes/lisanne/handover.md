@@ -36,10 +36,11 @@ and the pitch's progress bar is it. The app is named after her own words, "Geric
 ## Links
 
 - App, https://astra-dejongvanhommerig-prototype.netlify.app/ , Netlify project astra-dejongvanhommerig-prototype, id
-  5916cc2a-47db-4eb3-8386-2b9039998260, deploy 6ada13f29c8ebc36d56f3337 (first deploy 6ada13017ff5b9430af58282).
+  5916cc2a-47db-4eb3-8386-2b9039998260, current deploy 6ada31fca9e540a68b9c5290 after the accuracy and phone pass
+  (before it 6ada13f29c8ebc36d56f3337, first deploy 6ada13017ff5b9430af58282).
 - Pitch, https://astra-dejongvanhommerig-plan.netlify.app/ , Netlify project astra-dejongvanhommerig-plan, id
-  6ab0927b-ba88-4316-98a6-ed7981bcda9d, v2 deploy 6ada2ae4667067634218bd24 (v1 6ada13f9cdf2135f96b7b56b, first deploy
-  6ada131bfeb6f0d181d50619).
+  6ab0927b-ba88-4316-98a6-ed7981bcda9d, current deploy 6ada3209dbf56f4689d03c52 (v2 6ada2ae4667067634218bd24, v1
+  6ada13f9cdf2135f96b7b56b, first deploy 6ada131bfeb6f0d181d50619).
 - Both, team SSO switched off, no password, X-Robots-Tag noindex. Deployed from clean copies in /tmp, never the repo.
 - Source, site-app (index.html, app.css, app.js) and site-plan (index.html, img), no build step. Research in research/
   (teardown, brand, legal/LEGAL.md). QA scripts in qa/.
@@ -73,6 +74,53 @@ and the pitch's progress bar is it. The app is named after her own words, "Geric
   screenshots now 404, cold loads at 1440 and 390 clean, the app still approves and runs the employee check (qa/live.js).
 - The delivery draft still describes the plan page correctly, so it's unchanged.
 
+## Accuracy and phone pass, 22 Oct 15.30 to 15.57 UTC
+
+Raka, "just one more check for the prototype to be accurate to her workflow, the flows how it looks and also the
+wording ... check some things are not loading ... shes going to view this in her phone". His screenshot showed three
+step images broken on the live pitch.
+
+**The broken images.** Every file served 200 image/jpeg with a browser's own headers, the deploy was complete (9 new
+assets, nothing required), and Netlify set no deploy pinning cookie. A slow image renders blank and only a failed one
+shows the broken icon with its alt text, so his requests failed on the network, most likely on lazy loading as he
+scrolled. Now nothing on the pitch is lazy, and a failed image is retried twice, and again when the connection comes
+back (qa/imgretry.js, every first request failed on purpose, 9 of 9 recovered at 1440 and 390, a planted permanent
+failure stopped after 4 requests).
+
+**Checked against her own site and the law, all reread live today.** Her homepage, contact, terms (versie 12 mei 2026),
+privacy statement, her ziekte page, UWV's step plan (rendered), UWV deskundigenoordeel, Rijksoverheid, BW 7:670b,
+7:686a and 7:683, and the Algemene termijnenwet art. 1 to 4. What changed in the app.
+1. Lanes in her own words, "Wijziging & beëindiging", "Ziekte & re-integratie", "Complexe zaak & hoger beroep".
+2. Dutch spelling, "conceptantwoord", "Wegwijzer re-integratie", no split compounds, "agenda in Outlook".
+3. A conflict hit now holds the engagement letter back ("Deze gaat pas mee als je de zaak aanneemt") and the holding
+   reply names the running deadline, so the person can act in time even if she declines.
+4. The letter's liability line now carries "vermeerderd met het eigen risico" as her terms do, the AI line asks consent
+   (NOvA "Vraag toestemming"), and the close asks for a reply instead of a signed copy, since her terms say the
+   engagement exists once she confirms in writing.
+5. Documents follow her privacy statement ("bsn en pasfoto mag je afschermen"), ask for the legal expenses insurance
+   policy, name the one document that applies, and don't ask a referrer for a case number they already gave.
+6. 7:686a lid 4 sub d is the employer's term after a UWV refusal, now shown as that and not as the client's fatal term.
+7. Exit deal texts say "schriftelijk en zonder opgaaf van redenen", the words of 7:670b lid 2.
+8. A sign off with a capital G ("Groet,") wasn't read, so a pasted mail got "Beste Afzender,". Fixed, and an unknown
+   sender gets "Goedendag," and a [naam] mark.
+9. The employee check's conflict warning had our words under her name. It now quotes her own sentence, "Ziekte en
+   conflict lopen in de praktijk vaak door elkaar heen", and the advice after it isn't credited to her.
+10. Referral thanks reads "Dank u dat u de heer ... naar mij verwijst".
+The pitch now says the draft holds back and warns of the deadline, the NOvA consent row matches the letter, and the
+pitch prose no longer names fixed dates, because the example cases move with today's date.
+
+**Phone.** Walked every app screen at 390 and 360 with touch and a phone user agent (qa/phone.js) and the whole pitch
+(qa/pitchphone.js). Fixed, a card tapped from low in the list opened half scrolled, the empty "De lijn" heading on
+phones, "re-" breaking off "integratie" in headings, the greeting and counters hiding the card, the draft and letter
+scrolling inside the page, the "nog niet gemeten" tile, sliders under the 24 pixel touch size, the app address
+breaking mid word, and the tracker label clipping at 360 (now "05/06", and the tracker test checks that label too,
+control caught).
+
+**Checks after.** Engine and drafts read in full for all four cases, the paste example and a planted UWV refusal
+(qa/drafts.js). axe clean on 18 runs. Overflow 99 loads, 0 problems. Copy audit, only her name and "RE-INTEGRATIE".
+Tracker 91 checks, 0 problems. Live, 37 of 37 files byte matched across both sites, cold loads at 1440, 390 and on
+phone emulation at 390 and 360, 0 broken images, phone crops served, the tap and approve flow works live.
+
 ## Facts and where they came from (all read 22 Oct)
 
 Clio figures via LawNext and Canadian Lawyer. Art. 7:670b, 7:686a lid 4 BW, art. 358 lid 2 Rv, Algemene termijnenwet art.
@@ -102,6 +150,9 @@ and state/research_2026-10-22-lisanne-ai-workflow.md.
 10. **The made up companies** were checked against KVK, Vellmer Logistiek, Brunsveld Zorggroep, Terwinsel Bouw,
     Rechtshulp Mergelland, Heuvelland Metaal and Geleenbeek Techniek returned no results (control Sagapo found).
     Kroonhof Groothandel matched a real address and was dropped.
+11. **"The desk keeps no copy"** is a promise on the pitch. In the real build n8n must save no execution data
+    (success and error both off) or the promise is false. Check it at setup with a test enquiry.
+12. **Her response time.** The holding reply says "zo snel mogelijk". If she works to a fixed promise, use hers.
 
 ## Hiccups and the rule each leaves
 
@@ -122,3 +173,9 @@ and state/research_2026-10-22-lisanne-ai-workflow.md.
 | Tracker labels hidden with display none left the links nameless | Hide visually, keep the name for screen readers |
 | A closed details panel isn't in innerText | Open every panel before the copy audit, and check the text is really there |
 | Calculator ids c1 to c4 clashed with the new chapter ids | Check every id after renaming sections |
+| Raka saw broken step images that every check here passed | A lead's network isn't ours, so no lazy loading on a pitch and retry a failed image |
+| "Groet," with a capital G wasn't read as a sign off | Test the reader with the way people actually write, not only the examples |
+| Our advice sat under her name | Only her own sentences get her name, quoted exactly |
+| The pitch named dates the app recomputes daily | Prose on a page that outlives today doesn't name dates from a moving example |
+| An employer's deadline showed as the client's | Read whose right the article gives before labelling a term |
+| A tapped card opened half scrolled on a phone | Reset the page scroll on every screen change, and test the tap, not a direct link |

@@ -149,6 +149,7 @@ a{color:inherit}
 .kpi{display:flex;flex-direction:column;padding:4px 14px;border-left:1px solid var(--line);min-width:0}
 .kpi b{font-family:'Geist Mono',monospace;font-weight:500;font-size:17px;color:var(--teal);white-space:nowrap}
 .kpi b.kv-t{font-family:Inter,sans-serif;font-size:14px;font-weight:600;padding-top:3px}
+.bigs b.kv-t{font-family:Inter,sans-serif;font-size:16px!important;font-weight:600;line-height:1.4!important;padding:14px 0 6px;color:var(--teal)}
 .kpi span{font-size:11.5px;color:var(--muted);white-space:nowrap}
 .panes{display:grid;grid-template-columns:minmax(300px,360px) minmax(0,1fr);flex:1;min-height:0}
 .list{border-right:1px solid var(--line);overflow:auto;background:var(--cream)}
@@ -211,6 +212,9 @@ a{color:inherit}
 .docs li{display:flex;gap:8px;align-items:flex-start;font-size:14.5px}
 .docs li:before{content:"";flex:none;width:14px;height:14px;border:1.5px solid var(--teal);border-radius:4px;margin-top:3px}
 .draft{width:100%;min-height:220px;border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fff;font-size:15px;line-height:1.55;resize:vertical}
+.hold{margin:0 0 10px;color:#8A2A12;font-weight:600}
+.peek-letter summary{cursor:pointer;font-weight:600;color:var(--teal);font-size:14px;padding:6px 0;width:max-content;max-width:100%}
+.peek-letter[open] summary{margin-bottom:10px}
 .letter{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 28px;font-family:'EB Garamond',Georgia,serif;font-size:16.5px;line-height:1.5;color:#1C3034;max-height:420px;overflow:auto}
 .letter h4{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin:0 0 14px}
 .letter p{margin:0 0 10px}
@@ -294,4 +298,9 @@ a{color:inherit}
   *{transition:none!important;animation:none!important}
 }
 
-@media (max-width:720px){.lijn{display:none}.lijn + p{display:none}}
+@media (max-width:720px){.blk-lijn{display:none}}
+.nw{white-space:nowrap}
+
+/* telefoon, de kaart begint direct onder het lint en de brief loopt gewoon door */
+@media (max-width:900px){.card-open .topbar .kpis,.card-open .topbar .btn{display:none}.card-open .topbar{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);border:0}}
+@media (max-width:720px){.letter{max-height:none}}

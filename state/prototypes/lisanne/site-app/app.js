@@ -125,16 +125,16 @@
         out.push({ label: "Verzoek transitievergoeding", date: addMonths(f.date, 3), basis: "art. 7:686a lid 4 sub b BW, drie maanden na het einde", fatal: true });
       }
       if (f.kind === "uitspraak") out.push({ label: "Hoger beroep instellen", date: addMonths(f.date, 3), basis: "art. 358 lid 2 Rv, drie maanden na de uitspraak", fatal: true });
-      if (f.kind === "uwv") out.push({ label: "Verzoek kantonrechter na weigering UWV", date: addMonths(f.date, 2), basis: "art. 7:686a lid 4 sub d BW, twee maanden", fatal: true });
+      if (f.kind === "uwv") out.push({ label: "Werkgever kan ontbinding vragen na weigering UWV", date: addMonths(f.date, 2), basis: "art. 7:686a lid 4 sub d BW, twee maanden na de weigering, een termijn voor de werkgever", fatal: false });
       if (f.kind === "ziek") for (const s of POORT.slice(1)) out.push({ label: s.title + ", week " + s.week, date: poortDate(f.date, s), basis: "Stappenplan bij ziekte van UWV", fatal: false });
     }
     return out.map(o => (o.fatal ? withAtw(o) : o)).sort((a, b) => a.date - b.date);
   }
 
   const LANES = {
-    reint: { name: "Ziekte en re-integratie", re: /ziek|re-?integratie|bedrijfsarts|plan van aanpak|probleemanalyse|arbodienst|\bwia\b|loonstop|loon stop|deskundigenoordeel/g },
-    ontslag: { name: "Ontslag en beëindiging", re: /ontslag|opzeg|vaststellingsovereenkomst|\bvso\b|transitievergoeding|beëindig|beeindig|\bww\b|staande voet/g },
-    complex: { name: "Complexe zaak of hoger beroep", re: /hoger beroep|beschikking|uitspraak|kantonrechter|procedure|processtuk/g },
+    reint: { name: "Ziekte & re-integratie", re: /ziek|re-?integratie|bedrijfsarts|plan van aanpak|probleemanalyse|arbodienst|\bwia\b|loonstop|loon stop|deskundigenoordeel/g },
+    ontslag: { name: "Wijziging & beëindiging", re: /ontslag|opzeg|vaststellingsovereenkomst|\bvso\b|transitievergoeding|beëindig|beeindig|\bww\b|staande voet/g },
+    complex: { name: "Complexe zaak & hoger beroep", re: /hoger beroep|beschikking|uitspraak|kantonrechter|procedure|processtuk/g },
     verwijzer: { name: "Verwijzing", re: /verwijz|rechtsbijstand|verzekerde|dossiernummer|onze cliënt|namens/g }
   };
   function laneOf(text, source) {
@@ -149,7 +149,7 @@
   const NAME = "[A-Z][a-zà-ÿ]+(?:\\s+(?:van|de|der|den|el|ter|ten|op|da|di)?\\s*[A-Z][a-zà-ÿ'-]+){0,3}";
   function people(text) {
     const r = {}; let m;
-    m = new RegExp("(?:groet(?:en)?|groetjes|mvg),?\\s*\\n?\\s*((?:[A-Z]\\.\\s*)*" + NAME + "|[A-Z]\\.\\s*[A-Z][a-zà-ÿ'-]+)").exec(text); if (m) r.sender = m[1].trim();
+    m = new RegExp("(?:[Gg]roet(?:en|jes)?|[Mm]vg),?\\s*\\n?\\s*((?:[A-Z]\\.\\s*)*" + NAME + "|[A-Z]\\.\\s*[A-Z][a-zà-ÿ'-]+)").exec(text); if (m) r.sender = m[1].trim();
     const reC = new RegExp("(de heer|mevrouw|dhr\\.|mw\\.)\\s+(" + NAME + ")", "g");
     while ((m = reC.exec(text))) { const nm = m[2].trim(); if (/jong|vanhommerig|lisanne/i.test(nm)) continue; r.client = nm; r.clientTitle = /mevrouw|mw/i.test(m[1]) ? "mevrouw" : "de heer"; break; }
     if (r.sender && /jong|vanhommerig|lisanne/i.test(r.sender)) delete r.sender;
@@ -171,7 +171,7 @@
     reint: ["Probleemanalyse van de bedrijfsarts", "Plan van aanpak, als het er is", "Verslagen en adviezen van de bedrijfsarts", "Mail en brieven van je werkgever over je ziekte", "Je arbeidsovereenkomst en de cao", "Je laatste drie loonstroken"],
     ontslag: ["Je arbeidsovereenkomst en de cao", "De vaststellingsovereenkomst of de ontslagbrief", "Mail en brieven van je werkgever hierover", "Je laatste drie loonstroken"],
     complex: ["De beschikking van de kantonrechter", "Het verzoekschrift en het verweerschrift", "Het proces-verbaal van de zitting", "De producties uit de eerste aanleg"],
-    verwijzer: ["De beschikking van de kantonrechter", "Het verzoekschrift en het verweerschrift", "Het proces-verbaal van de zitting", "De dekkingsbevestiging en uw dossiernummer"]
+    verwijzer: ["De beschikking van de kantonrechter", "Het verzoekschrift en het verweerschrift", "Het proces-verbaal van de zitting", "De dekkingsbevestiging"]
   };
 
   function analyze(item, settings) {
@@ -198,18 +198,34 @@
   }
 
   /* ---------- concepten, door Lisanne te controleren ---------- */
+  /* Bij een mogelijke treffer reageert ze nog niet inhoudelijk, maar noemt ze wel de lopende termijn, zodat iemand op tijd verder kan. */
+  const purpose = l => /^Hoger beroep/.test(l) ? "om in hoger beroep te gaan" : /^Bedenktermijn/.test(l) ? "om de vaststellingsovereenkomst te ontbinden" : "voor een verzoek bij de kantonrechter";
+  function holdLine(it, a) {
+    const vz = it.source === "Verwijzer", nx = a.next;
+    let t = vz ? "Voor ik inhoudelijk reageer, controleer ik of ik deze zaak kan aannemen." : "Voor ik inhoudelijk reageer, controleer ik of ik je zaak kan aannemen.";
+    if (nx) t += " Let op, er loopt een termijn " + purpose(nx.label) + " tot en met " + fmtL(nx.date) + ". " + (vz ? "U hoort daarom zo snel mogelijk van mij." : "Je hoort daarom zo snel mogelijk van mij, zodat je op tijd verder kunt.");
+    else t += vz ? " U hoort zo snel mogelijk van mij." : " Je hoort zo snel mogelijk van mij.";
+    return t;
+  }
+  /* Wat ze opvraagt. Bij een verwijzing niet het dossiernummer als dat al in het bericht staat. */
+  function docsFor(it, a) {
+    const own = a.facts.some(f => /^vso/.test(f.kind)) ? "De vaststellingsovereenkomst" : a.facts.some(f => f.kind === "uwv") ? "De beslissing van UWV" : "De ontslagbrief";
+    const base = (DOCS[a.lane] || DOCS.ontslag).map(d => d === "De vaststellingsovereenkomst of de ontslagbrief" ? own : d);
+    if (it.source === "Verwijzer") { if (!/dossiernummer/i.test(it.text || "")) base.push("Uw dossiernummer"); return base; }
+    return base.concat(["Polis van je rechtsbijstandsverzekering, als je die hebt"]);
+  }
   function firstName(n) { const p = String(n || "").replace(/^(mr\.|dhr\.|mw\.)\s*/i, "").split(/\s+/); return /^[A-Z]\.$/.test(p[0]) ? n : p[0]; }
   function replyDraft(it, a, s) {
-    const fn = firstName(a.sender);
-    const hi = it.source === "WhatsApp" ? "Hoi " + fn + "," : it.source === "Verwijzer" ? "Geachte " + a.sender + "," : "Beste " + fn + ",";
+    const fn = firstName(a.sender), anon = a.sender === "Afzender onbekend";
+    const hi = anon ? (it.source === "WhatsApp" ? "Hoi," : "Goedendag,") : it.source === "WhatsApp" ? "Hoi " + fn + "," : it.source === "Verwijzer" ? "Geachte " + a.sender + "," : "Beste " + fn + ",";
     const P = [hi, ""];
     if (a.conflict.hits.some(h => h.client)) {
-      P.push(it.source === "Verwijzer" ? "Dank u voor uw bericht. Voor ik inhoudelijk reageer, controleer ik of ik deze zaak kan aannemen. U hoort vandaag van mij." : "Dank je voor je bericht. Voor ik inhoudelijk reageer, controleer ik of ik je zaak kan aannemen. Je hoort vandaag van mij.");
+      P.push((it.source === "Verwijzer" ? "Dank u voor uw bericht. " : "Dank je voor je bericht. ") + holdLine(it, a));
       P.push(""); P.push("Met vriendelijke groet,"); P.push(s.signName);
       return P.join("\n");
     }
     const org = a.orgs.find(o => !/rechtshulp|rechtsbijstand|advocat/i.test(o));
-    const docs = (DOCS[a.lane] || DOCS.ontslag).map(d => "• " + d.charAt(0).toLowerCase() + d.slice(1));
+    const docs = docsFor(it, a).map(d => "• " + d.charAt(0).toLowerCase() + d.slice(1));
     if (a.lane === "reint" && a.ziek) {
       P.push("Dank je voor je bericht." + (a.flags.indexOf("Ziekte en conflict lopen door elkaar") >= 0 ? " Vervelend dat je ziekte en het conflict nu door elkaar lopen, dat zie ik vaker." : ""));
       P.push("");
@@ -223,18 +239,18 @@
       const v = a.facts.find(f => f.kind === "vso_getekend"), e = a.facts.find(f => f.kind === "einde");
       const bt = a.deadlines.find(d => /Bedenktermijn/.test(d.label));
       if (v && bt) {
-        P.push("Je hebt de vaststellingsovereenkomst" + (org ? " met " + org : "") + " op " + fmtNY(v.date) + " getekend. " + (/drie weken/.test(bt.basis) ? "Er staat geen bedenktermijn in, dus volgens de wet heb je drie weken om de overeenkomst zonder reden te ontbinden, tot en met " : "Je kunt de overeenkomst binnen veertien dagen zonder reden ontbinden, tot en met ") + fmtL(bt.date) + ". Laten we hem daarom snel samen doornemen.");
+        P.push("Je hebt de vaststellingsovereenkomst" + (org ? " met " + org : "") + " op " + fmtNY(v.date) + " getekend. " + (/drie weken/.test(bt.basis) ? "Er staat geen bedenktermijn in, dus volgens de wet heb je drie weken om de overeenkomst schriftelijk en zonder opgaaf van redenen te ontbinden, tot en met " : "Je kunt de overeenkomst binnen veertien dagen schriftelijk en zonder opgaaf van redenen ontbinden, tot en met ") + fmtL(bt.date) + ". Laten we hem daarom snel samen doornemen.");
       } else if (e) {
         const t2 = a.deadlines.find(d => /vernietiging/.test(d.label)), t3 = a.deadlines.find(d => /transitie/.test(d.label));
         P.push("Je dienstverband" + (org ? " bij " + org : "") + " eindigde op " + fmtNY(e.date) + ". Wil je de opzegging aanvechten of een billijke vergoeding vragen, dan moet het verzoek uiterlijk " + fmtNY(t2.date) + " bij de kantonrechter liggen. Voor de transitievergoeding is dat uiterlijk " + fmtNY(t3.date) + ".");
       } else P.push("Ik kijk graag met je mee.");
     } else if (a.lane === "verwijzer" || a.lane === "complex") {
-      P.push(it.source === "Verwijzer" ? "Dank u voor de verwijzing" + (a.client ? " van " + (a.clientTitle || "de heer") + " " + a.client : "") + "." : "Dank je voor je bericht.");
+      P.push(it.source === "Verwijzer" ? (a.client ? "Dank u dat u " + (a.clientTitle || "de heer") + " " + a.client + " naar mij verwijst." : "Dank u voor de verwijzing.") : "Dank je voor je bericht.");
       const u = a.facts.find(f => f.kind === "uitspraak"), hb = a.deadlines.find(d => /Hoger beroep/.test(d.label));
       if (u && hb) { P.push(""); P.push("De beschikking van de kantonrechter is van " + fmtNY(u.date) + ". De termijn voor hoger beroep loopt tot en met " + fmtNY(hb.date) + "."); }
     } else { P.push("Dank je voor je bericht. Ik kijk graag met je mee."); }
     P.push("");
-    if (a.conflict.hits.some(h => h.client)) P.push(it.source === "Verwijzer" ? "Voor ik inhoudelijk reageer, controleer ik of ik deze zaak kan aannemen. U hoort vandaag van mij." : "Voor ik inhoudelijk reageer, controleer ik of ik je zaak kan aannemen. Je hoort vandaag van mij.");
+    if (a.conflict.hits.some(h => h.client)) P.push(holdLine(it, a));
     else {
       P.push(it.source === "Verwijzer" ? "Ik controleer of er geen tegenstrijdig belang is en stuur u daarna een kostenbegroting. Kunt u mij intussen deze stukken sturen?" : "Wil je me deze stukken sturen?");
       P.push(docs.join("\n"));
@@ -246,7 +262,7 @@
     return P.join("\n");
   }
   function letterHTML(it, a, s) {
-    const who = it.source === "Verwijzer" ? (a.client || "[naam cliënt]") : (a.sender || "[naam]");
+    const who = it.source === "Verwijzer" ? (a.client || "[naam cliënt]") : (a.sender && a.sender !== "Afzender onbekend" ? a.sender : "[naam]");
     const fn = firstName(who);
     const org = a.orgs.find(o => !/rechtshulp|rechtsbijstand|advocat/i.test(o));
     const u = a.facts.find(f => f.kind === "uitspraak");
@@ -254,7 +270,7 @@
       : (a.lane === "complex" || a.lane === "verwijzer") ? "Bijstand in hoger beroep tegen de beschikking van de kantonrechter" + (u ? " van " + fmt(u.date) : "") + "."
       : "Advies over en bijstand bij het einde van je arbeidsovereenkomst" + (org ? " met " + org : "") + ".";
     const rate = s.rate ? "€ " + esc(s.rate) : '<mark title="Vul je uurtarief in bij Instellingen">[uurtarief]</mark>';
-    return `<h4>Concept opdrachtbevestiging</h4>
+    return `<h4>Concept, nog niet verstuurd</h4>
       <p>${esc(s.place)}, ${fmt(today())}</p>
       <p>Aan ${esc(who)}, per e-mail</p>
       <p>Beste ${esc(fn)},</p>
@@ -262,9 +278,9 @@
       <p><span class="rl">De opdracht.</span> ${esc(opdr)}</p>
       <p><span class="rl">Tarief.</span> Ik reken op basis van een uurtarief van ${rate} exclusief btw en andere kosten, zoals griffierecht. Voor spoedzaken geldt een toeslag van 50%.${it.source === "Verwijzer" ? " Over de kosten maak ik afspraken met je rechtsbijstandsverzekeraar." : ""}</p>
       <p><span class="rl">Facturen.</span> Facturen betaal je binnen 14 dagen.</p>
-      <p><span class="rl">Voorwaarden.</span> Op deze opdracht zijn mijn algemene voorwaarden en mijn kantoorklachtenregeling van toepassing. Mijn aansprakelijkheid is beperkt tot het bedrag dat mijn beroepsaansprakelijkheidsverzekering uitkeert.</p>
-      <p><span class="rl">Hulpmiddelen.</span> Om binnenkomende stukken te ordenen gebruik ik een beveiligde AI-toepassing die binnen de EU draait en niets van jouw gegevens bewaart. Ik lees en controleer alles zelf. Wil je dat niet, laat het me weten, dan werk ik zonder.</p>
-      <p>Graag ontvang ik deze bevestiging ondertekend retour.</p>
+      <p><span class="rl">Voorwaarden.</span> Op deze opdracht zijn mijn algemene voorwaarden en mijn kantoorklachtenregeling van toepassing. Mijn aansprakelijkheid is beperkt tot het bedrag dat mijn beroepsaansprakelijkheidsverzekering uitkeert, vermeerderd met het eigen risico onder die verzekering.</p>
+      <p><span class="rl">Hulpmiddelen.</span> Om binnenkomende stukken te ordenen wil ik een beveiligde AI-toepassing gebruiken die binnen de EU draait en niets van jouw gegevens bewaart. Ik lees en controleer alles zelf. Ik gebruik die alleen als jij daarmee akkoord gaat.</p>
+      <p>Laat je me weten of je akkoord bent met deze opdrachtbevestiging, en of ik de AI-toepassing mag gebruiken? Een reactie op deze mail is genoeg.</p>
       <p>Met vriendelijke groet,<br>${esc(s.signName)}</p>`;
   }
 
@@ -310,11 +326,11 @@
       <div class="start-hero">
         <div class="kicker">Intakebureau</div>
         <h1>Elke nieuwe zaak <em>helder</em>, voordat je hem opent <span class="lineword" aria-hidden="true">${hatchSVG(9)}</span></h1>
-        <p class="lead">Een werknemer vult de wegwijzer in, of er komt een mail, een WhatsApp of een verwijzing binnen. Jij vindt een kaart met de feiten, de termijnen, de conflictcheck en een concept antwoord. Er gaat niets weg zonder jouw akkoord.</p>
+        <p class="lead">Een werknemer vult de wegwijzer in, of er komt een mail, een WhatsApp of een verwijzing binnen. Jij vindt een kaart met de feiten, de termijnen, de conflictcheck en een conceptantwoord. Er gaat niets weg zonder jouw akkoord.</p>
       </div>
       <div class="doors">
-        <a class="door" href="#/bureau"><span class="who">Voor Lisanne</span><h2>Intakebureau</h2><p>${open} nieuwe aanvragen staan klaar, met de termijnen berekend en een concept antwoord.</p><span class="go">Open het bureau</span><img class="peek" src="icon.svg" alt=""></a>
-        <a class="door" href="#/wegwijzer"><span class="who">Voor werknemers</span><h2>Re-integratie wegwijzer</h2><p>Zie waar je staat in je ziekte, wat er van je wordt verwacht en wanneer je hulp vraagt.</p><span class="go">Open de wegwijzer</span><img class="peek" src="icon.svg" alt=""></a>
+        <a class="door" href="#/bureau"><span class="who">Voor Lisanne</span><h2>Intakebureau</h2><p>${open} nieuwe aanvragen staan klaar, met de termijnen berekend en een conceptantwoord.</p><span class="go">Open het bureau</span><img class="peek" src="icon.svg" alt=""></a>
+        <a class="door" href="#/wegwijzer"><span class="who">Voor werknemers</span><h2>Wegwijzer <span class="nw">re-integratie</span></h2><p>Zie waar je staat in je ziekte, wat er van je wordt verwacht en wanneer je hulp vraagt.</p><span class="go">Open de wegwijzer</span><img class="peek" src="icon.svg" alt=""></a>
       </div>
       <div class="steps3">
         <div><b>01</b><strong>Er komt een aanvraag binnen</strong>Via je site, je mail, WhatsApp of een verwijzer.</div>
@@ -344,7 +360,7 @@
   ];
   function wwShell(inner) {
     return `<section class="ww"><header class="ww-head"><div class="ww-head-in"><img class="logo" src="logo.svg" alt="De Jong - Vanhommerig advocatuur"><a class="back" href="#/">Terug naar het begin</a></div></header>
-      <div class="ww-main"><div class="kicker" style="color:var(--orange-t)">Re-integratie wegwijzer</div>${inner}
+      <div class="ww-main"><div class="kicker" style="color:var(--orange-t)">Wegwijzer re-integratie</div>${inner}
       <p class="sources">Algemene informatie, geen advies. Deze wegwijzer werkt met vaste regels op basis van het <a href="https://www.uwv.nl/particulieren/ziek/ziek-met-werkgever/re-integreren-tijdens-ziekte/detail/stappenplan-bij-ziekte" rel="noopener" target="_blank">stappenplan bij ziekte van UWV</a>, <a href="https://www.rijksoverheid.nl/onderwerpen/ziekteverzuim-van-het-werk/regels-en-verplichtingen-bij-ziekte" rel="noopener" target="_blank">Rijksoverheid</a> en <a href="https://wetten.overheid.nl/BWBR0005290/2026-07-01" rel="noopener" target="_blank">het Burgerlijk Wetboek</a>. Wat je invult blijft op dit apparaat tot je het zelf naar Lisanne stuurt.</p></div></section>`;
   }
   function renderWW() {
@@ -368,12 +384,12 @@
       const nowIdx = POORT.reduce((acc, s, i) => (w >= s.week ? i : acc), 0);
       const tl = POORT.map((s, i) => { const dt = poortDate(d0, s); const cls = i < nowIdx ? "done" : i === nowIdx ? "now" : ""; return `<li class="${cls}"><span class="dot"></span><div class="when">week ${s.week}, ${i === 0 ? fmt(d0) : (i < nowIdx ? "rond " : "rond ") + fmt(dt)}</div><h3>${esc(s.title)}${i === nowIdx ? ", hier ben je nu" : ""}</h3><p>${esc(s.text)}</p>${s.ask && i >= nowIdx - 1 ? `<div class="ask">${esc(s.ask)}</div>` : ""}</li>`; }).join("");
       const fl = [];
-      if (WW.flags.conflict) fl.push(["Ziekte en conflict lopen vaak door elkaar", "Is er een conflict, dan helpt het om de feiten vroeg op een rij te zetten. Wie zei wat, en wanneer. Juist dan is een gesprek met een arbeidsrechtadvocaat zinvol.", "Lisanne, ziekte en re-integratie"]);
+      if (WW.flags.conflict) fl.push(["Ziekte en conflict lopen vaak door elkaar", "‘Ziekte en conflict lopen in de praktijk vaak door elkaar heen.’ Zet de feiten daarom vroeg op een rij, wie zei wat en wanneer, en bespreek ze met een arbeidsrechtadvocaat.", "Lisanne de Jong, ziekte en re-integratie op haar site"]);
       if (WW.flags.arts) fl.push(["Je kunt een second opinion vragen", "Ben je het niet eens met de bedrijfsarts, dan kun je een second opinion bij een andere bedrijfsarts vragen. Je kunt ook bij UWV een deskundigenoordeel aanvragen. Dat kost € 100 en het is een advies.", "UWV, deskundigenoordeel"]);
       if (WW.flags.loon) fl.push(["Loon stoppen mag niet zomaar", "Je werkgever mag je loon inhouden als je niet meewerkt aan je re-integratie. Dreigt dat, laat het dan snel bekijken.", "Rijksoverheid, regels bij ziekte"]);
       if (WW.flags.pva && w >= 8) fl.push(["Het plan van aanpak had er al moeten zijn", "Uiterlijk in week 8 maken jij en je werkgever samen het plan van aanpak. Jij bent nu in week " + w + ".", "UWV, stappenplan bij ziekte"]);
       if (WW.flags.werk) fl.push(["Is het werk passend?", "Of werk passend is, kun je laten beoordelen met een deskundigenoordeel van UWV.", "UWV, deskundigenoordeel, situatie 2"]);
-      if (WW.flags.vso) fl.push(["Teken niet zonder het te laten lezen", "Teken je een vaststellingsovereenkomst, dan mag je die binnen veertien dagen zonder reden ontbinden. Staat die bedenktermijn er niet in, dan zijn het drie weken. Laat hem bekijken voor je tekent.", "art. 7:670b BW"]);
+      if (WW.flags.vso) fl.push(["Teken niet zonder het te laten lezen", "Teken je een vaststellingsovereenkomst, dan mag je die binnen veertien dagen schriftelijk en zonder opgaaf van redenen ontbinden. Staat die bedenktermijn er niet in, dan zijn het drie weken. Laat hem bekijken voor je tekent.", "art. 7:670b BW"]);
       inner = `<h1>Jouw overzicht</h1>${p(3)}<div class="two"><div>
         <div class="q"><div class="week"><span class="n">${w}</span><span class="t"><b>Je bent in week ${w} van je ziekte</b>Eerste ziektedag ${fmt(d0)}</span></div>
         <ol class="tl">${tl}</ol><p class="small">Data zijn een hulpmiddel. Je werkgever en UWV houden de officiële data bij.</p></div></div>
@@ -394,7 +410,7 @@
     if (!n || !/.+@.+\..+/.test(e) || !c) { $("#werr").classList.remove("hidden"); return; }
     const d0 = fromISO(WW.d0), w = weekOf(d0);
     const picked = WFLAGS.filter(([k]) => WW.flags[k]).map(([, t]) => t);
-    const text = "Ingevuld in de re-integratie wegwijzer.\nEerste ziektedag " + fmt(d0) + ", nu week " + w + ".\n" + (picked.length ? "Wat speelt er. " + picked.join(". ") + ".\n" : "") + (m ? "\n" + m : "");
+    const text = "Ingevuld in de wegwijzer re-integratie.\nEerste ziektedag " + fmt(d0) + ", nu week " + w + ".\n" + (picked.length ? "Wat speelt er. " + picked.join(". ") + ".\n" : "") + (m ? "\n" + m : "");
     const it = { id: "w" + Date.now(), source: "Wegwijzer", name: n, email: e, received: Date.now(), text,
       structured: { facts: [{ kind: "ziek", date: toISO(d0), quote: "Eerste ziektedag ingevuld in de wegwijzer, " + fmt(d0) + ".", hit: fmt(d0) }] } };
     if (WW.flags.conflict) it.text += "\nEr is een conflict met mijn leidinggevende.";
@@ -411,7 +427,7 @@
     const times = done.filter(i => i.openedAt && i.doneAt).map(i => (i.doneAt - i.openedAt) / 1000).sort((a, b) => a - b);
     const med = times.length ? times[Math.floor(times.length / 2)] : null;
     let watched = 0, hits = 0; all.forEach(i => { const a = A(i); watched += a.fatal.length; if (a.conflict.hits.some(h => h.client)) hits++; });
-    const fmtT = s => s == null ? "nog geen" : s < 60 ? Math.round(s) + " s" : Math.floor(s / 60) + " min " + Math.round(s % 60) + " s";
+    const fmtT = s => s == null ? "nog niet gemeten" : s < 60 ? Math.round(s) + " s" : Math.floor(s / 60) + " min " + Math.round(s % 60) + " s";
     return { open: all.filter(i => !i.status).length, total: all.length, done: done.length, med: fmtT(med), watched, hits };
   }
   function rail(on) {
@@ -428,7 +444,7 @@
     return `<div class="topbar"><h1>${greet()}, Lisanne</h1><div class="kpis">
       <div class="kpi"><b>${k.open}</b><span>open aanvragen</span></div>
       <div class="kpi"><b>${k.watched}</b><span>termijnen bewaakt</span></div>
-      <div class="kpi"><b class="${k.med === "nog geen" ? "kv-t" : ""}">${k.med === "nog geen" ? "nog niet gemeten" : k.med}</b><span>van openen tot antwoord klaar</span></div>
+      <div class="kpi"><b class="${k.med === "nog niet gemeten" ? "kv-t" : ""}">${k.med}</b><span>van openen tot antwoord klaar</span></div>
       <div class="kpi"><b>${k.done}</b><span>antwoorden klaar</span></div></div>
       <button class="btn btn-o btn-s" data-act="paste">${icon.plus}Plak een aanvraag</button></div>`;
   }
@@ -491,37 +507,40 @@
     a.flags.forEach(f => sum.push(f + "."));
     if (a.next) sum.push("Eerstvolgende fatale termijn " + fmtL(a.next.date) + ".");
     const cf = a.conflict;
-    const cfHTML = cf.hits.length ? cf.hits.map(h => h.client ? `<div class="conflict hit"><span>!</span><div><b>Mogelijke treffer. ${esc(h.name)} staat in je lijst als ${esc(h.as)}${h.note ? " (" + esc(h.note) + ")" : ""}.</b>Kijk of je deze zaak mag aannemen voor je inhoudelijk reageert. Het concept antwoord houdt daar rekening mee.</div></div>` : `<div class="conflict clear"><span>i</span><div><b>${esc(h.name)} staat in je lijst als ${esc(h.as)}${h.note ? " (" + esc(h.note) + ")" : ""}.</b>Geen tegenstrijdig belang zolang je niet voor deze partij optreedt.</div></div>`).join("")
+    const cfHTML = cf.hits.length ? cf.hits.map(h => h.client ? `<div class="conflict hit"><span>!</span><div><b>Mogelijke treffer. ${esc(h.name)} staat in je lijst als ${esc(h.as)}${h.note ? " (" + esc(h.note) + ")" : ""}.</b>Kijk of je deze zaak mag aannemen voor je inhoudelijk reageert. Het conceptantwoord houdt daar rekening mee.</div></div>` : `<div class="conflict clear"><span>i</span><div><b>${esc(h.name)} staat in je lijst als ${esc(h.as)}${h.note ? " (" + esc(h.note) + ")" : ""}.</b>Geen tegenstrijdig belang zolang je niet voor deze partij optreedt.</div></div>`).join("")
       : `<div class="conflict clear"><span>${icon.check.replace("<svg", '<svg width="18" height="18"')}</span><div><b>Geen treffer in je lijst van ${cf.rows} namen.</b>Gecontroleerd op ${esc([a.sender].concat(a.client ? [a.client] : [], a.orgs).join(", "))}.</div></div>`;
-    const draft = it.draft != null ? it.draft : replyDraft(it, a, s);
+    const draft = it.draft != null ? it.draft : replyDraft(it, a, s), hit = a.conflict.hits.some(h => h.client);
     return `<div class="card"><div class="card-in">
       <button class="btn btn-g btn-s back-m" data-go="#/bureau">${icon.left}Alle aanvragen</button>
       <div class="card-head"><div><div class="meta"><span class="chip src">${esc(it.source)}</span><span>${whenTxt(it.received)}</span>${it.sample ? `<span class="chip src">voorbeeld, verzonnen</span>` : ""}</div>
         <h2>${esc(title)}</h2><div class="meta"><span class="chip lane">${esc(LANES[a.lane].name)}</span>${a.second ? `<span class="chip lane">${esc(LANES[a.second].name)}</span>` : ""}${a.urgent ? `<span class="chip hot"><i class="dotx"></i>spoed, termijn binnen 14 dagen</span>` : ""}</div></div></div>
       <div class="note-ai">${icon.info}<span>In de echte versie leest Claude dit bericht, binnen de EU, en zet n8n de concepten in je Outlook. In deze schets doen vaste regels hetzelfde in je browser. Bij elk feit staat de zin waar het uit komt.</span></div>
       <div class="block"><h3>Samenvatting</h3><ul class="summary">${sum.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-      ${a.facts.length ? `<div class="block"><h3>De lijn</h3>${lijn(a)}</div>` : ""}
+      ${a.facts.length ? `<div class="block blk-lijn"><h3>De lijn</h3>${lijn(a)}</div>` : ""}
       <div class="block"><h3>Uit het bericht</h3>${a.facts.length ? `<div class="facts">${a.facts.map(f => `<div class="fact"><div class="k">${esc(KIND_TXT[f.kind])}<b>${fmt(f.date)}</b></div><q>${highlight(f.quote, f.hit)}</q></div>`).join("")}</div>` : `<p class="small">Geen datum gevonden. Vraag de belangrijkste data na in je antwoord.</p>`}</div>
       ${a.deadlines.length ? `<div class="block"><h3>Termijnen</h3><div class="terms">${a.deadlines.map(d => `<div class="term ${d.fatal ? "fatal" : "step"}"><span class="d">${fmtL(d.date)}</span><span class="l"><b>${esc(d.label)}</b><span>${esc(d.basis)}${d.fatal ? ", fatale termijn" : ""}</span></span>${days(today(), d.date) < 0 && !d.fatal ? '<span class="left past">voorbij</span>' : leftChip(d.date)}</div>`).join("")}</div><p class="small" style="margin-top:10px">Berekend als hulpmiddel. Controleer elke termijn zelf.</p></div>` : ""}
       <div class="block"><h3>Conflictcheck</h3>${cfHTML}</div>
-      <div class="block"><h3>Op te vragen</h3><ul class="docs">${(DOCS[a.lane] || DOCS.ontslag).concat(it.source === "Verwijzer" ? [] : ["Kopie identiteitsbewijs, bsn en pasfoto afgeschermd"]).map(d => `<li>${esc(d)}</li>`).join("")}</ul></div>
-      <div class="block"><h3>Concept antwoord</h3><label class="sr" for="draft">Concept antwoord</label><textarea class="draft" id="draft">${esc(draft)}</textarea></div>
-      <div class="block"><h3>Concept opdrachtbevestiging</h3><div class="letter" tabindex="0" role="region" aria-label="Concept opdrachtbevestiging">${letterHTML(it, a, s)}</div></div>
-      <div class="actions">${it.status === "klaar" ? `<div class="status">${icon.check.replace("<svg", '<svg width="18" height="18"')}Klaar. Antwoord en opdrachtbevestiging staan als concept in je Outlook.</div><button class="btn btn-g btn-s" data-act="reopen">Terugzetten</button>`
+      <div class="block"><h3>Op te vragen</h3><ul class="docs">${docsFor(it, a).concat(it.source === "Verwijzer" ? [] : ["Kopie van je identiteitsbewijs, bsn en pasfoto mag je afschermen"]).map(d => `<li>${esc(d)}</li>`).join("")}</ul></div>
+      <div class="block"><h3>Conceptantwoord</h3><label class="sr" for="draft">Conceptantwoord</label><textarea class="draft" id="draft">${esc(draft)}</textarea></div>
+      <div class="block"><h3>Opdrachtbevestiging</h3>${hit ? `<p class="small hold">Deze gaat pas mee als je de zaak aanneemt. Eerst de conflictcheck.</p><details class="peek-letter"><summary>Bekijk het concept alvast</summary><div class="letter" tabindex="0" role="region" aria-label="Opdrachtbevestiging, concept">${letterHTML(it, a, s)}</div></details>` : `<div class="letter" tabindex="0" role="region" aria-label="Opdrachtbevestiging, concept">${letterHTML(it, a, s)}</div>`}</div>
+      <div class="actions">${it.status === "klaar" ? `<div class="status">${icon.check.replace("<svg", '<svg width="18" height="18"')}${hit ? "Klaar. Het antwoord staat als concept in je Outlook." : "Klaar. Antwoord en opdrachtbevestiging staan als concept in je Outlook."}</div><button class="btn btn-g btn-s" data-act="reopen">Terugzetten</button>`
         : it.status === "afgewezen" ? `<div class="status" style="background:#EEE;color:#444">Niet aangenomen.</div><button class="btn btn-g btn-s" data-act="reopen">Terugzetten</button>`
-        : `<button class="btn btn-o" data-act="approve">${icon.check}Goedkeuren, zet in Outlook concepten</button><button class="btn btn-g" data-act="decline">Niet aannemen</button>`}</div>
+        : `<button class="btn btn-o" data-act="approve">${icon.check}${hit ? "Zet het antwoord klaar in Outlook" : "Goedkeuren en klaarzetten in Outlook"}</button><button class="btn btn-g" data-act="decline">Niet aannemen</button>`}</div>
     </div></div>`;
   }
   function renderDesk(sel) {
     const it = sel ? byId(sel) : null;
-    $("#app").innerHTML = `<div class="desk">${rail("bureau")}<div class="main">${topbar()}<div class="panes ${it ? "has-card" : ""}">${listHTML(sel)}${cardHTML(it)}</div></div></div>`;
+    $("#app").innerHTML = `<div class="desk">${rail("bureau")}<div class="main ${it ? "card-open" : ""}">${topbar()}<div class="panes ${it ? "has-card" : ""}">${listHTML(sel)}${cardHTML(it)}</div></div></div>`;
+    fitDraft();
   }
+  /* het concept is zo hoog als de tekst, geen scrollvak in een scrollvak */
+  function fitDraft() { const d = $("#draft"); if (d) { d.style.height = "auto"; d.style.height = (d.scrollHeight + 6) + "px"; } }
   function renderTerms() {
     const rows = [];
     state.items.filter(i => !i.status).forEach(i => { const a = A(i); a.fatal.forEach(d => rows.push({ i, a, d })); });
     rows.sort((x, y) => x.d.date - y.d.date);
     $("#app").innerHTML = `<div class="desk">${rail("termijnen")}<div class="main">${topbar()}<div class="page"><div class="page-in">
-      <h2>Termijnen</h2><p class="small">Alle fatale termijnen uit open aanvragen, de eerstvolgende bovenaan. In de echte versie staan ze ook in je Outlook agenda.</p>
+      <h2>Termijnen</h2><p class="small">Alle fatale termijnen uit open aanvragen, de eerstvolgende bovenaan. In de echte versie staan ze ook in je agenda in Outlook.</p>
       <div class="terms" style="margin-top:18px">${rows.length ? rows.map(r => `<a class="term fatal" style="text-decoration:none;color:inherit" href="#/bureau/${esc(r.i.id)}"><span class="d">${fmtL(r.d.date)}</span><span class="l"><b>${esc(r.d.label)}</b><span>${esc(r.i.source === "Verwijzer" ? (r.a.client || "Verwijzing") : r.a.sender)}, ${esc(r.d.basis)}</span></span>${leftChip(r.d.date)}</a>`).join("") : `<p>Geen open termijnen.</p>`}</div>
       </div></div></div></div>`;
   }
@@ -531,8 +550,8 @@
     const max = Math.max.apply(null, Object.values(lanes).concat([1]));
     $("#app").innerHTML = `<div class="desk">${rail("resultaten")}<div class="main">${topbar()}<div class="page"><div class="page-in">
       <h2>Resultaten</h2><p class="small">Wat het bureau voor je doet, gemeten vanaf de eerste dag. In de schets tellen we wat je hier doet. In de echte versie komen de cijfers uit je Outlook.</p>
-      <div class="bigs"><div><b>${k.total}</b><span>aanvragen binnen</span></div><div><b>${k.done}</b><span>antwoorden klaar</span></div><div><b>${k.watched}</b><span>fatale termijnen bewaakt</span></div><div><b style="font-size:30px;line-height:1.5">${k.med}</b><span>van openen tot antwoord klaar, mediaan</span></div></div>
-      <div class="sec-h">Per spoor</div><div class="bars">${Object.keys(LANES).map(l => `<div class="bar"><span>${esc(LANES[l].name)}</span><span class="t"><i style="width:${((lanes[l] || 0) / max) * 100}%"></i></span><b class="mono">${lanes[l] || 0}</b></div>`).join("")}</div>
+      <div class="bigs"><div><b>${k.total}</b><span>aanvragen binnen</span></div><div><b>${k.done}</b><span>antwoorden klaar</span></div><div><b>${k.watched}</b><span>fatale termijnen bewaakt</span></div><div><b class="${k.med === "nog niet gemeten" ? "kv-t" : ""}" style="font-size:30px;line-height:1.5">${k.med}</b><span>van openen tot antwoord klaar, mediaan</span></div></div>
+      <div class="sec-h">Per spoor</div><div class="bars">${Object.keys(LANES).map(l => `<div class="bar"><span>${esc(LANES[l].name).replace("re-integratie", '<span class="nw">re-integratie</span>')}</span><span class="t"><i style="width:${((lanes[l] || 0) / max) * 100}%"></i></span><b class="mono">${lanes[l] || 0}</b></div>`).join("")}</div>
       <div class="sec-h">Wat je na dertig dagen ziet</div><p style="max-width:680px">Hoeveel aanvragen er binnenkwamen en via welk kanaal. Hoe snel elk eerste antwoord klaarstond. Hoeveel termijnen het bureau bewaakte. Hoeveel opdrachtbevestigingen dezelfde dag de deur uit gingen. En hoeveel aanvragen een zaak werden. Dat zijn jouw cijfers, uit je eigen mailbox.</p>
       </div></div></div></div>`;
   }
@@ -586,7 +605,7 @@
     const act = b.dataset.act, cur = (/^#\/bureau\/(.+)$/.exec(location.hash) || [])[1], it = cur ? byId(decodeURIComponent(cur)) : null;
     if (act === "paste") openPaste();
     if (act === "coach-x") { state.coach = false; save(); route(); }
-    if (act === "approve" && it) { const d = $("#draft"); it.draft = d ? d.value : it.draft; it.status = "klaar"; it.doneAt = Date.now(); state.coach = false; save(); route(); toast("<b>Klaar.</b> Het antwoord en de opdrachtbevestiging staan als concept in je Outlook. In deze schets blijft alles in je browser."); }
+    if (act === "approve" && it) { const d = $("#draft"); it.draft = d ? d.value : it.draft; it.status = "klaar"; it.doneAt = Date.now(); state.coach = false; save(); route(); toast(A(it).conflict.hits.some(h => h.client) ? "<b>Klaar.</b> Het antwoord staat als concept in je Outlook. De opdrachtbevestiging wacht op de conflictcheck. In deze schets blijft alles in je browser." : "<b>Klaar.</b> Het antwoord en de opdrachtbevestiging staan als concept in je Outlook. In deze schets blijft alles in je browser."); }
     if (act === "decline" && it) { it.status = "afgewezen"; it.doneAt = Date.now(); save(); route(); toast("Niet aangenomen. In de echte versie staat er een vriendelijk afwijzend concept klaar, met een doorverwijzing."); }
     if (act === "reopen" && it) { delete it.status; delete it.doneAt; save(); route(); }
     if (act === "save-set") { state.settings.conflicts = $("#cl").value; state.settings.rate = $("#rate").value.trim(); state.settings.place = $("#place").value.trim() || "Hoensbroek"; save(); toast("Opgeslagen."); }
@@ -601,8 +620,9 @@
     const f = e.target.closest("[data-flag]"); if (f) { WW.flags[f.dataset.flag] = f.checked; f.closest(".check").classList.toggle("on", f.checked); }
   });
   document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target && e.target.id === "d0") { e.preventDefault(); const btn = $('[data-act="ww-1"]'); if (btn) btn.click(); } });
-  document.addEventListener("input", e => { if (e.target.id === "draft") { const cur = (/^#\/bureau\/(.+)$/.exec(location.hash) || [])[1]; const it = cur && byId(decodeURIComponent(cur)); if (it) { it.draft = e.target.value; save(); } } });
-  window.addEventListener("hashchange", () => { route(); const c = $(".card"); if (c) c.scrollTop = 0; });
+  document.addEventListener("input", e => { if (e.target.id === "draft") { fitDraft(); const cur = (/^#\/bureau\/(.+)$/.exec(location.hash) || [])[1]; const it = cur && byId(decodeURIComponent(cur)); if (it) { it.draft = e.target.value; save(); } } });
+  /* een nieuw scherm begint bovenaan, ook op een telefoon waar de hele pagina scrolt */
+  window.addEventListener("hashchange", () => { route(); const c = $(".card"); if (c) c.scrollTop = 0; window.scrollTo(0, 0); });
   window.GV = { analyze: (t, src) => analyze({ text: t, source: src || "E-mail" }, state.settings), findFacts, today };
   route();
 })();
