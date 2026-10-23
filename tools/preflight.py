@@ -169,6 +169,13 @@ if p.exists():
     for r in op[-8:]:
         print(f"    {r.get('date','?')}  {r.get('companyName','?')}")
 
+rem = ROOT / "state/raka_reminders.md"
+if rem.exists():
+    todo = [l.strip()[6:] for l in rem.open(encoding="utf-8") if l.startswith("- [ ]")]
+    print(f"\n  RAKA'S REMINDERS, open {len(todo)}, repeat them in every report until he ticks them off")
+    for t in todo:
+        print(f"    {t[:150]}")
+
 head("4. THE LAST TWO SESSION LOGS, read them before deciding anything")
 logs = sorted((ROOT / "logs/inbox").glob("*.md")) if (ROOT / "logs/inbox").exists() else []
 for f in logs[-2:]:
