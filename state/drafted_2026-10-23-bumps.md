@@ -1,4 +1,4 @@
-<!-- 2026-10-23 09.22 to 09.24 UTC, 5 bumps SENT on Raka's 'you can put it to the send pipeline for these', through tools/lemlist.py send. Rayane act_bfuGNiNBkFRTqudnE, Rachel act_jtwEsZDrR5zWBNWFC, Natalie act_opb2og3DhKaPiqWYa, Lisa act_nEsuMY2spbRKYsc83, Léa act_26XeqLrBPeG94Knza. Do not send these 5 again. Thibert is approved by the same word, due from 13:46 UTC. -->
+<!-- 2026-10-23 09.22 to 09.24 UTC, 5 bumps SENT on Raka's 'you can put it to the send pipeline for these', through tools/lemlist.py send. Rayane act_bfuGNiNBkFRTqudnE, Rachel act_jtwEsZDrR5zWBNWFC, Natalie act_opb2og3DhKaPiqWYa, Lisa act_nEsuMY2spbRKYsc83, Léa act_26XeqLrBPeG94Knza. Do not send these 5 again. Thibert act_77RhKf8mzhT5hxvCn SENT 13.51 UTC on the same word. ALL 6 SENT, do not send any of them again. -->
 # Bumps for 23 Oct. NOT SENT, waiting on Raka's word
 
 Six plain bumps, under the cap of 20, oldest first (RULES section 1). Each lead got one pitch from us on 20 Oct and hasn't
