@@ -304,7 +304,7 @@ def cmd_audit(args):
                  empty=sum(1 for a in threads[cid] if not body(a)))
         k = c["kind"]
         ruled = r.get("date", "") if r else ""
-        parked = st.startswith(("HOLD", "LEFT_ALONE", "PARKED"))
+        parked = st.startswith(("HOLD", "LEFT_ALONE", "PARKED", "RESEARCH", "CLOSER"))
         if k == "THEM_LAST" and parked and c["lastThem"][:10] < ruled:
             k = "RULED"   # their last word came before our ruling on the row, so the ruling stands
         if k == "THEM_LAST":
@@ -315,6 +315,10 @@ def cmd_audit(args):
             c["bucket"] = "CLOSED, QUIET"
         elif st.startswith("HOLD"):
             c["bucket"] = "HELD FOR RAKA'S CALL"
+        elif st.startswith("RESEARCH"):
+            c["bucket"] = "QUEUED FOR RESEARCH"
+        elif st.startswith("CLOSER"):
+            c["bucket"] = "LAST POLITE BUMP DRAFTED"
         elif st.startswith("LEFT_ALONE"):
             c["bucket"] = "LEFT ALONE"
         elif st.startswith("PARKED"):
@@ -333,7 +337,7 @@ def cmd_audit(args):
         json.dump(res, f, ensure_ascii=False, indent=1)
 
     order = ["REPLY WAITING ON US", "DEALS, RAKA FOLLOWS UP", "BUMP DUE NOW", "BUMP COMING",
-             "HELD FOR RAKA'S CALL", "PARKED, CHECK BACK LATER", "LAST SEND FAILED, NOT CONNECTED", "LEFT ALONE",
+             "HELD FOR RAKA'S CALL", "QUEUED FOR RESEARCH", "LAST POLITE BUMP DRAFTED", "PARKED, CHECK BACK LATER", "LAST SEND FAILED, NOT CONNECTED", "LEFT ALONE",
              "HAD ITS FOLLOW UP, CLOSE SILENTLY", "HAD ITS FOLLOW UP, WAITING", "ACCEPTED, NOTHING SENT",
              "NO ACCEPT EVENT, NOTHING SENT",
              "THEY WROTE LAST, row closed", "CLOSED, QUIET"]
