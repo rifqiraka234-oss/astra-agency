@@ -382,7 +382,19 @@ def draft_text(path, cid, label):
     secs = [s for s in re.split(r"(?m)^(?=### )", text) if s.startswith("### ") and cid in s.split("\n", 1)[0]]
     if len(secs) != 1:
         sys.exit(f"REFUSED {cid}, {len(secs)} sections in {path} name it, need exactly 1")
-    blocks = re.findall(r"(?ms)^([^\n]*)\n```\n(.*?)\n```$", secs[0])
+    # Pair the fences in order. A regex over ``` lines took a gate block's closing fence for a message's opening one.
+    blocks, lines, i = [], secs[0].split("\n"), 0
+    while i < len(lines):
+        if lines[i].startswith("```"):
+            info, j = lines[i][3:].strip(), i + 1
+            while j < len(lines) and lines[j].strip() != "```":
+                j += 1
+            if not info:
+                above = [l for l in lines[:i] if l.strip()]
+                blocks.append((above[-1] if above else "", "\n".join(lines[i + 1:j])))
+            i = j + 1
+        else:
+            i += 1
     if label:
         blocks = [b for b in blocks if b[0].strip() == label]
     if len(blocks) != 1:

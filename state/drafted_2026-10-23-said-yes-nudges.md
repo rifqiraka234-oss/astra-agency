@@ -40,11 +40,11 @@ Hi Nikolaus, have you had a chance to click through the new Healthy Secrets site
 
 ### Chris Hale, The Garnish Collective. ctc_do7oK8f27qGMC89dA
 Thread 10 items. He asked about pricing 20 Oct 16:55, we offered a call Wednesday to Friday this week, he said "Yeah sure
-- will confirm tomorrow" 20 Oct 18:48, our "I'll look out for it" 21 Oct 06:49. No time came. The week we offered ends
-today, so this asks for a day next week and offers no slot Raka hasn't confirmed.
+- will confirm tomorrow" 20 Oct 18:48, our "I'll look out for it" 21 Oct 06:49. No time came. Raka's own wording, 23 Oct ("for chris hale just say Hi
+Chris, have you had any thoughts on above?"), copied as he wrote it.
 NUDGE
 ```
-Hi Chris, no worries if the week ran away from you. Shall we find a time next week for that call about the ordering site? Tell me a day that suits and I'll send an invite over.
+Hi Chris, have you had any thoughts on above?
 ```
 
 ### Aaron Mason, BidX. ctc_dWL5LypChqmTQ9QyZ

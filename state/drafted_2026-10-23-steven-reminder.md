@@ -15,9 +15,10 @@ kept on WordPress". It promises nothing new.
 cancelled means don't send), then dry run with `tools/lemlist.py send`.
 
 ### Steven Garratt, Qualigraf. ctc_sPysigrTQgntPu9c6
+Raka's own wording, 23 Oct, "hi steven all is fine, does that time still work for you?". "hope" added so it reads as a
+question to him, flagged to Raka. "That time" points back at our 6 Oct message, "11am UK time on Wednesday 4 November",
+the last one in the thread.
 BOOKING
 ```
-Hi Steven, a quick reminder of our call next Wednesday, 4 November, at 11am UK time. The Google Meet link is in the invite I sent to steven@qualigraf.com.
-
-We'll go through one site with pages for each of your markets, kept on WordPress so your team can keep editing it. Does that time still work for you?
+Hi Steven, hope all is fine! Does that time still work for you?
 ```
