@@ -370,6 +370,9 @@ def cmd_audit(args):
 
 
 PLAN = "/tmp/lemlist-raw/send-plan.json"
+# The same never again list as tools/check-drafts.py.
+NEVER_AGAIN = {"DO_NOT_CONTACT", "CLOSED_DO_NOT_CONTACT", "CLOSED_NO_FURTHER_CONTACT",
+               "CLOSED_PROMISED_LAST", "CLOSED_FINAL_MESSAGE", "CLOSED"}
 
 
 def draft_text(path, cid, label):
@@ -430,6 +433,10 @@ def cmd_send(args):
         print("   ---- message ----\n" + msg + "\n   -----------------")
         if dup:
             print(f"   REFUSED, this exact text is already in the thread {dup} time(s)")
+            continue
+        row = queue_index().get(cid, {})
+        if row.get("status") in NEVER_AGAIN:
+            print(f"   REFUSED, the queue says {row['status']}, never contact again")
             continue
         if not args.go:
             plan[cid] = {"sha": sha, "latest": latest, "items": len(items), "at": time.time(), "file": args.file}

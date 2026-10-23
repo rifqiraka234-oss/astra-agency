@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- 2026-10-23 09.25 to 09.26 UTC, ALL 5 SENT on Raka's 'you can put it to the send pipeline for these'. Ulrich act_JnbS9Jb4P6t8devDb, Chris act_jtspDvMvo9pvg3m7e, Nikolaus act_a8LXpEA943NhpmDTB, Chris act_DLeSLZ8SDodCw6wRy, Aaron act_atSPQr7L83Q7j9hZu. Do not send any of them again. -->
 # Nudges for the five who said yes, 23 Oct. NOT SENT, waiting on Raka's word
 
 Raka, 23 Oct, "these draft a nudge based on the previous message", for Ulrich, Chris Ryalls, Nikolaus, Chris Hale and

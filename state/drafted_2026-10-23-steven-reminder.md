@@ -1,3 +1,4 @@
+<!-- APPROVED 2026-10-23 by Raka, 'you can put it to the send pipeline for these', to go on 28 Oct after the checks below. Not sent yet. -->
 # Steven Garratt, Qualigraf, call reminder. NOT SENT, to go on 28 Oct on Raka's word
 
 Raka, 23 Oct, "steven draft something to remind him of our chat/call that will be sent on the 28th oct".

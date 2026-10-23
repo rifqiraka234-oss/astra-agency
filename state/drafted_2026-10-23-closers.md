@@ -1,3 +1,4 @@
+<!-- 2026-10-23 09.24 UTC, 4 closers SENT on Raka's 'you can put it to the send pipeline for these'. Severin act_Afuodfy4kvAag5Qz3, Albert act_wPSRZJYpjkPk2Wmys, Clément act_9CL5vuoaXokpsJRRN, Ollie act_ND3gKk6pJzC8SouXj. Do not send these 4 again. James, Stacey, Constance and Jelle are approved by the same word, due from 13:25 UTC. -->
 # Polite last bumps for 23 Oct. NOT SENT, waiting on Raka's word
 
 Raka, 23 Oct, "one last bump just to close. polite", for the eight who had their plain bump on 20 Oct and stayed
