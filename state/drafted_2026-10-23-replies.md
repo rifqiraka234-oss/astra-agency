@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Sonia Vivo Sarria SUPERSEDED 2026-10-23 07:56 UTC. Raka answered her himself on LinkedIn, three messages 07:31 to 07:32 UTC (act_82e3Sqbu95JiufCJ6, act_jrPmH4CJMtCszPvRD, act_omrrycxk3nrcy23zX), no session sent them. Do not send the draft below. -->
 # Replies, 23 Oct morning. NOT SENT, waiting on Raka's word
 
 ### Sonia Vivo Sarria, Sonia Vivo Design Ltd. ctc_W3pcv4BRouubNDxtd
