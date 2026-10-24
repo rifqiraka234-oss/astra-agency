@@ -1,3 +1,4 @@
+<!-- SENT 2026-10-24 10.02 to 10.03 UTC on Raka's word, Aiden act_XjCoGapMMXZh5LanW, Tom act_Nj8hoCK3EDz8n5CEp, Tatiana act_mZfupXPWMir3rgKvi, Laurens act_aoEyYc5hhqfNFZbCD, Lupo act_z29oGMt777fPD7uyk, Mark act_dJLHa8yDGakXYeWAM. GATE ARCHIVED. Do not send any of them again. -->
 <!-- APPROVED 2026-10-23 ~13.49 UTC by Raka, "make sure everything makes sense based on each persons message thread, and then schedule for next morning at 11.30". Scheduled for Sat 24 Oct 09.30 UTC (11.30 Amsterdam). Not sent yet. Threads checked 13.35 to 13.53 UTC, claims rechecked (batch 1 at 12.46 to 12.48 UTC, Mark at 13.52 UTC). At send time, pull each thread again (anything new from them means hold it and tell Raka), reopen each claim, dry run, then --go. -->
 # Drafts, 2026-10-23, batch 1 of Raka's angle calls. NOT SENT, waiting on Raka's word
 

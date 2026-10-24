@@ -1,5 +1,6 @@
 <!-- GATE ARCHIVED -->
 <!-- Lisanne SUPERSEDED 2026-10-24 09:57 UTC. She wrote again at 08:40 UTC, 'I'm actually very impressed. Would love to hear further possibilities and pricing', and Raka answered her himself at 08:56 UTC (act_u7Po5uTDfwF9JbBGn), a call next week. Do not send the draft below. -->
+<!-- SUPERSEDED 2026-10-24 ~10.05 UTC, DO NOT SEND the Lisanne reply below. She wrote again at 08:40 UTC (act_obET62SdLWF4eA6me), "I'm actually very impressed. Would love to hear further possibilities and pricing", and Raka answered her himself at 08:56 UTC (act_u7Po5uTDfwF9JbBGn), offering a call next week. Thread pulled 10.04 UTC, 6 items. -->
 # Replies, 24 Oct morning. NOT SENT, waiting on Raka's word
 
 ### Lisanne De Jong Vanhommerig, De Jong - Vanhommerig advocatuur. ctc_E5FwxycX7v2A7Lnne
