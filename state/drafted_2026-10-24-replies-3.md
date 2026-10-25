@@ -12,8 +12,10 @@
 > Blocks are from docs/astra-company-profile.md (how Raka asked to be described, 23 Sep). The stroopwafel business in
 > 2020 is Raka's own words to Sonia Vivo Sarria on 23 Oct 07:32 UTC. Nothing is said about ExitLane, it only asks.
 > Raka answered Sonia's similar question himself, so he may want to write this one too.
+> EDITED 25 Oct 08:03 UTC. The question no longer names ExitLane. His tagline says ExitLane while lemlist's accept event
+> names his company IkoPrep, and that isn't resolved, so the draft asks what he's working on instead of naming either.
 
 REPLY
 ```
-Thanks Jack, appreciate it! I worked across 23 markets at Heineken and on go to market at Betty Blocks, then started my own stroopwafel brand in 2020, and now I run Astra agency, where we build websites and apps for brands like Unilever, AXA, Pertamina. Happy to swap ideas too. What's ExitLane working on at the moment?
+Thanks Jack, appreciate it! I worked across 23 markets at Heineken and on go to market at Betty Blocks, then started my own stroopwafel brand in 2020, and now I run Astra agency, where we build websites and apps for brands like Unilever, AXA, Pertamina. Happy to swap ideas too. What's keeping you busy at the moment?
 ```
