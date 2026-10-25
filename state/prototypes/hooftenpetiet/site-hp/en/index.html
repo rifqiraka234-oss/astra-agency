@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="site-hp">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,28 +11,29 @@
 <link rel="alternate" hreflang="nl" href="https://astra-hooftenpetiet-prototype.netlify.app/">
 <link rel="preload" href="/fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/fx.css">
 <script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm')</script>
 </head>
 <body class="hp">
+<div class="fx-bg" aria-hidden="true"></div><div class="fx-grain" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
 <aside class="note" aria-label="About this site">Prototype by Astra agency. Not the live site.</aside>
 <header class="hdr"><div class="wrap hdr-in">
 <nav class="l" aria-label="Main menu"><button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav">Menu</button><a class="d " href="/en/#werkwijze">How it works</a><a class="d " href="/en/#projecten">Projects</a><a class="d w" href="/en/sales-styling/">Sales styling</a></nav>
-<a class="logo" href="/en/"><img src="/media/logo-hp.png" width="700" height="208" alt="Hooft &amp; Petiet"></a>
+<a class="logo" href="/en/"><img class="lg-l" src="/media/logo-hp.png" width="700" height="208" alt="Hooft &amp; Petiet"><img class="lg-d" src="/media/logo-hp-white.png" width="700" height="187" alt="Hooft &amp; Petiet"></a>
 <nav class="r" aria-label="Contact and language"><span class="d w"><span class="lang"><a href="/" lang="nl" hreflang="nl">NL</a><a href="/en/" lang="en" hreflang="en" aria-current="true">EN</a></span></span><a class="d w" href="tel:+31852734872">085 2734 872</a><a class="btn sm d" href="/en/quote/">Request a quote</a><a class="m-cta cap" href="/en/quote/">Quote</a></nav>
 </div></header>
 <div class="mnav" id="mnav" aria-hidden="true"><button class="close" type="button">Close</button><ul><li><a href="/en/#werkwijze">How it works</a></li><li><a href="/en/#projecten">Projects</a></li><li><a href="/en/sales-styling/">Sales styling</a></li><li><a href="/en/quote/">Request a quote</a></li><li><a href="tel:+31852734872">Call 085 2734 872</a></li><li><a href="https://astra-reshare-prototype.netlify.app/en/">ReShare Living Group</a></li></ul>
 <div class="foot"><span class="lang"><a href="/" lang="nl" hreflang="nl">NL</a><a href="/en/" lang="en" hreflang="en" aria-current="true">EN</a></span></div></div>
 
 <main id="main">
-<section class="hero" aria-labelledby="hero-h">
-<div class="hero-ph"><img src="/media/room-light-1000.jpg" srcset="/media/room-light-1000.jpg 1000w, /media/room-light-2000.jpg 2000w" sizes="(max-width:900px) 100vw, 58vw" width="2000" height="1333" alt="A bright dining room with a wooden table and French doors" loading="eager" fetchpriority="high" decoding="async"></div>
-<div class="hero-tx dark">
-<h1 class="t1" id="hero-h">Your residents only have to unpack their suitcase.</h1>
-<p>Guest, rest and swap homes for renovations by housing associations and builders. Furnished, managed and ready on time. Since 2010.</p>
-<div class="acts"><a class="btn" href="#werkwijze">How it works</a><a class="tel" href="tel:+31852734872">085 2734 872</a></div>
-</div>
-</section>
+<section class="hx" data-tone="dawn" aria-labelledby="hero-h"><div class="hx-stick">
+<div class="hx-lamp" aria-hidden="true"></div>
+<h1 class="hx-title" id="hero-h"><span class="hx-l l1">Your residents <span class="hx-win arch grow"><img src="/media/room-light-1000.jpg" alt="" loading="eager" decoding="async"></span></span> <span class="hx-l l2">only have to unpack</span> <span class="hx-l l3">their suitcase. <span class="hx-win house"><img src="/media/welcome-800.jpg" alt="" loading="eager" decoding="async"></span></span></h1>
+<a class="hx-badge" href="#werkwijze" aria-label="How it works"><svg viewBox="0 0 160 160" aria-hidden="true"><defs><path id="bc" d="M80,80 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1 -124,0"/></defs><g class="ring"><text><textPath href="#bc" textLength="386" lengthAdjust="spacing">Project furnishing · since 2010 · Utrecht · </textPath></text></g><circle cx="80" cy="80" r="40" fill="#2F2B45"/><path d="M80 58L101 74H59z" fill="#C8D020"/><rect x="65" y="77" width="30" height="24" fill="#C8D020"/></svg></a>
+<p class="hx-sub">Guest, rest and swap homes for renovations by housing associations and builders. Furnished, managed and ready on time. Since 2010.</p>
+<div class="hx-room"><img src="/media/room-light-1000.jpg" srcset="/media/room-light-1000.jpg 1000w, /media/room-light-2000.jpg 2000w" sizes="100vw" width="2000" height="1333" alt="A bright dining room with a wooden table and French doors" loading="eager" fetchpriority="high" decoding="async"><div class="hx-dusk"></div><div class="hx-sun"></div><div class="hx-scrim"></div></div>
+<p class="hx-end">Ready to live in, the moment the key is handed over.</p>
 <section class="pbar" aria-label="Your project">
 <form action="/en/quote/" method="get">
 <div class="pf"><label for="b-type">Kind of home</label><select id="b-type" name="type"><option value="Logeerwoning">Guest home</option><option value="Rustwoning">Rest home</option><option value="Wisselwoning">Swap home</option><option value="Calamiteitenwoning">Emergency home</option></select></div>
@@ -42,54 +43,66 @@
 <button type="submit">Check availability</button>
 </form>
 </section>
+</div></section>
 
-<section class="sec verdict" aria-label="What residents say"><div class="wrap">
-<blockquote>“We have no words for it, absolutely brilliant!”</blockquote>
+<section class="sec verdict" data-tone="dawn" aria-label="What residents say"><div class="wrap">
+<blockquote class="fill">“We have no words for it, absolutely brilliant!”</blockquote>
 <p class="by">A resident on their guest home, translated from Dutch. An independent agency measures for our clients how happy their residents are. In 2020 they gave us 8 to 8.5 out of 10.</p>
 <div class="logos"><span class="lab">Our partners</span><ul><li><img src="/media/clients/portaal.png" alt="Portaal" loading="lazy" height="30"></li><li><img src="/media/clients/stadgenoot.png" alt="Stadgenoot" loading="lazy" height="30"></li><li><img src="/media/clients/de-alliantie.png" alt="de Alliantie" loading="lazy" height="30"></li><li><img src="/media/clients/havensteder.png" alt="Havensteder" loading="lazy" height="30"></li><li><img src="/media/clients/hef-wonen.png" alt="HEF Wonen" loading="lazy" height="30"></li><li><img src="/media/clients/cazas-wonen.png" alt="Cazas Wonen" loading="lazy" height="30"></li><li><img src="/media/clients/heijmans.png" alt="Heijmans" loading="lazy" height="30"></li><li><img src="/media/clients/bam-wonen.png" alt="BAM Wonen" loading="lazy" height="30"></li></ul></div>
 </div></section>
 
-<section class="sec white" id="werkwijze" aria-labelledby="ww-h"><div class="wrap split2">
-<figure class="ph rv"><img src="/media/welcome-800.jpg" srcset="/media/welcome-800.jpg 800w" sizes="(max-width:900px) 100vw, 40vw" width="800" height="871" alt="A welcome card, a folder and a jar of sweets set out on a table" loading="lazy" decoding="async"></figure>
-<div>
-<h2 class="t2" id="ww-h">From keys to check out, in one pair of hands.</h2>
-<p class="lead">You choose what to hand to us. We make it all fit together, on the contractor’s schedule, with one point of contact for residents.</p>
-<dl class="rows"><div class="row"><dt>Furnishing</dt><dd>Seating and beds, tables and chairs, kitchenware and linen.</dd></div><div class="row"><dt>Floors and finishing</dt><dd>Floors, painting, window coverings and lighting.</dd></div><div class="row"><dt>Appliances</dt><dd>From white goods to television and internet.</dd></div><div class="row"><dt>Welcome</dt><dd>A clean, fresh home, a small gift and coffee or tea at check in.</dd></div><div class="row"><dt>Management</dt><dd>Keys, contracts, check in and out with an inventory check.</dd></div><div class="row"><dt>Cleaning between stays</dt><dd>After every change of resident, checked and ready.</dd></div><div class="row"><dt>One point of contact</dt><dd>For residents during their stay, and a report for you on every change.</dd></div></dl>
+<section class="sec hand" id="werkwijze" data-tone="day" aria-labelledby="ww-h"><div class="wrap">
+<div class="head"><h2 class="t2" id="ww-h">From keys to check out, in one pair of hands.</h2>
+<p class="lead">You choose what to hand to us. We make it all fit together, on the contractor’s schedule, with one point of contact for residents.</p></div>
+<div class="hand-g">
+<div class="hand-ph"><div class="hand-frame"><img src="/media/sofa-cushion-1000.jpg" srcset="/media/sofa-cushion-1000.jpg 1000w, /media/sofa-cushion-1280.jpg 1280w" sizes="(max-width:900px) 100vw, 40vw" width="1280" height="853" alt="A furnished living room with a sofa and coffee table" loading="lazy" decoding="async"><img src="/media/vloer-800.jpg" srcset="/media/vloer-800.jpg 800w" sizes="(max-width:900px) 100vw, 40vw" width="800" height="517" alt="A floor fitter laying a new floor" loading="lazy" decoding="async"><img src="/media/tv-room-1000.jpg" srcset="/media/tv-room-1000.jpg 1000w, /media/tv-room-2000.jpg 2000w" sizes="(max-width:900px) 100vw, 40vw" width="2000" height="1334" alt="Someone setting up a television" loading="lazy" decoding="async"><img src="/media/welcome-800.jpg" srcset="/media/welcome-800.jpg 800w" sizes="(max-width:900px) 100vw, 40vw" width="800" height="871" alt="A welcome card, a folder and a jar of sweets being set out" loading="lazy" decoding="async"><img src="/media/hp-bus-1280.jpg" srcset="/media/hp-bus-1280.jpg 1280w" sizes="(max-width:900px) 100vw, 40vw" width="1280" height="883" alt="Two people in Hooft &amp; Petiet jackets loading a chair into a van" loading="lazy" decoding="async"><img src="/media/cushion-1000.jpg" srcset="/media/cushion-1000.jpg 1000w, /media/cushion-2000.jpg 2000w" sizes="(max-width:900px) 100vw, 40vw" width="2000" height="2543" alt="Someone placing a cushion on a sofa" loading="lazy" decoding="async"><img src="/media/team-phone-1000.jpg" srcset="/media/team-phone-1000.jpg 1000w, /media/team-phone-1280.jpg 1280w" sizes="(max-width:900px) 100vw, 40vw" width="1280" height="853" alt="Someone on the phone in an office" loading="lazy" decoding="async"></div><div class="hand-cap" aria-hidden="true"><span data-hn>01</span><span data-ht>Furnishing</span></div></div>
+<div><ul class="hand-list"><li><span class="n">01</span><b>Furnishing</b><span class="d">Seating and beds, tables and chairs, kitchenware and linen.</span></li><li><span class="n">02</span><b>Floors and finishing</b><span class="d">Floors, painting, window coverings and lighting.</span></li><li><span class="n">03</span><b>Appliances</b><span class="d">From white goods to television and internet.</span></li><li><span class="n">04</span><b>Welcome</b><span class="d">A clean, fresh home, a small gift and coffee or tea at check in.</span></li><li><span class="n">05</span><b>Management</b><span class="d">Keys, contracts, check in and out with an inventory check.</span></li><li><span class="n">06</span><b>Cleaning between stays</b><span class="d">After every change of resident, checked and ready.</span></li><li><span class="n">07</span><b>One point of contact</b><span class="d">For residents during their stay, and a report for you on every change.</span></li></ul>
 <div class="say"><blockquote>“It gave us room to focus on the renovation itself.”</blockquote>
-<p class="by">Danny Mooren, social project lead at Portaal, on 570 renovated homes in Overvecht. Translated from Dutch.</p></div>
+<p class="by">Danny Mooren, social project lead at Portaal, on 570 renovated homes in Overvecht. Translated from Dutch.</p></div></div>
 </div>
 </div></section>
 
-<section class="sec" id="woningen" aria-labelledby="wo-h"><div class="wrap">
+<section class="sec" id="woningen" data-tone="day" aria-labelledby="wo-h" style="padding-top:0">
+<div class="kin" aria-hidden="true"><div class="kin-track"><span class="kin-item">Guest home<span class="hx-win arch"><img src="/media/logeer-800.jpg" alt="" loading="eager" decoding="async"></span></span><span class="kin-item">Rest home<span class="hx-win disc"><img src="/media/rust-500.jpg" alt="" loading="eager" decoding="async"></span></span><span class="kin-item">Swap home<span class="hx-win house"><img src="/media/wissel-800.jpg" alt="" loading="eager" decoding="async"></span></span><span class="kin-item">Guest home<span class="hx-win arch"><img src="/media/logeer-800.jpg" alt="" loading="eager" decoding="async"></span></span><span class="kin-item">Rest home<span class="hx-win disc"><img src="/media/rust-500.jpg" alt="" loading="eager" decoding="async"></span></span><span class="kin-item">Swap home<span class="hx-win house"><img src="/media/wissel-800.jpg" alt="" loading="eager" decoding="async"></span></span></div></div>
+<div class="wrap">
 <div class="head"><h2 class="t2" id="wo-h">Guest, rest or swap.</h2><p class="lead">How heavy the renovation is decides which home fits. If you’re not sure, we’ll think it through with you.</p></div>
-<div class="tbl"><div class="tbl-h"><span class="lab">Home</span><span class="lab">When</span><span class="lab">Residents bring</span><span></span></div><div class="tbl-r"><h3 class="t3">Guest home</h3><p>Residents can’t live at home for a few weeks.</p><p>Clothes, toiletries and their own bedding. Everything else is ready.</p><a class="go" href="/en/quote/?type=Logeerwoning" aria-label="Request, Guest home">Request</a></div><div class="tbl-r"><h3 class="t3">Rest home</h3><p>Renovation while people stay at home. A quiet place to work in the day, or to sleep after a night shift.</p><p>Nothing. A furnished living room with places to work and somewhere to cook.</p><a class="go" href="/en/quote/?type=Rustwoning" aria-label="Request, Rest home">Request</a></div><div class="tbl-r"><h3 class="t3">Swap home</h3><p>A renovation that takes longer.</p><p>Their own furniture. We fit the floors and curtains in advance.</p><a class="go" href="/en/quote/?type=Wisselwoning" aria-label="Request, Swap home">Request</a></div></div>
-</div></section>
+<div class="tbl"><div class="tbl-h"><span class="lab">Home</span><span class="lab">When</span><span class="lab">Residents bring</span><span></span></div><div class="tbl-r" data-peek="0"><h3 class="t3">Guest home</h3><p>Residents can’t live at home for a few weeks.</p><p>Clothes, toiletries and their own bedding. Everything else is ready.</p><a class="go" href="/en/quote/?type=Logeerwoning" aria-label="Request, Guest home">Request</a></div><div class="tbl-r" data-peek="1"><h3 class="t3">Rest home</h3><p>Renovation while people stay at home. A quiet place to work in the day, or to sleep after a night shift.</p><p>Nothing. A furnished living room with places to work and somewhere to cook.</p><a class="go" href="/en/quote/?type=Rustwoning" aria-label="Request, Rest home">Request</a></div><div class="tbl-r" data-peek="2"><h3 class="t3">Swap home</h3><p>A renovation that takes longer.</p><p>Their own furniture. We fit the floors and curtains in advance.</p><a class="go" href="/en/quote/?type=Wisselwoning" aria-label="Request, Swap home">Request</a></div></div>
+</div><div class="peek" aria-hidden="true"><img src="/media/logeer-800.jpg" alt="" loading="lazy" decoding="async"><img src="/media/rust-500.jpg" alt="" loading="lazy" decoding="async"><img src="/media/wissel-800.jpg" alt="" loading="lazy" decoding="async"></div></section>
 
-<figure class="band rv"><img src="/media/van-1000.jpg" srcset="/media/van-1000.jpg 1000w, /media/van-2000.jpg 2000w" sizes="100vw" width="2000" height="1334" alt="A van being loaded with furniture" loading="lazy" decoding="async"></figure>
-
-<section class="sec" id="projecten" aria-labelledby="pr-h"><div class="wrap">
+<section class="sec" id="projecten" data-tone="gold" aria-labelledby="pr-h"><div class="wrap">
 <div class="head"><h2 class="t2" id="pr-h">For housing associations across the Netherlands.</h2><p class="lead">Whether it’s 1 home or 100. A few projects, in the words of the people involved.</p></div>
+</div>
+<div class="pano" aria-hidden="true"><div class="pano-ring"><figure style="--i:0"><img src="/media/room-chaise-1000.jpg" srcset="/media/room-chaise-1000.jpg 1000w, /media/room-chaise-1200.jpg 1200w" sizes="280px" width="1200" height="900" alt="" loading="lazy" decoding="async"></figure><figure style="--i:1"><img src="/media/vk-01-1000.jpg" srcset="/media/vk-01-1000.jpg 1000w, /media/vk-01-1200.jpg 1200w" sizes="280px" width="1200" height="900" alt="" loading="lazy" decoding="async"></figure><figure style="--i:2"><img src="/media/room-living-1000.jpg" srcset="/media/room-living-1000.jpg 1000w, /media/room-living-2000.jpg 2000w" sizes="280px" width="2000" height="1333" alt="" loading="lazy" decoding="async"></figure><figure style="--i:3"><img src="/media/room-styled-1000.jpg" srcset="/media/room-styled-1000.jpg 1000w, /media/room-styled-1440.jpg 1440w" sizes="280px" width="1440" height="960" alt="" loading="lazy" decoding="async"></figure><figure style="--i:4"><img src="/media/room-dining-1000.jpg" srcset="/media/room-dining-1000.jpg 1000w, /media/room-dining-1200.jpg 1200w" sizes="280px" width="1200" height="900" alt="" loading="lazy" decoding="async"></figure><figure style="--i:5"><img src="/media/expat-living-800.jpg" srcset="/media/expat-living-800.jpg 800w" sizes="280px" width="800" height="600" alt="" loading="lazy" decoding="async"></figure><figure style="--i:6"><img src="/media/room-light-1000.jpg" srcset="/media/room-light-1000.jpg 1000w, /media/room-light-2000.jpg 2000w" sizes="280px" width="2000" height="1333" alt="" loading="lazy" decoding="async"></figure><figure style="--i:7"><img src="/media/room-lounge-1000.jpg" srcset="/media/room-lounge-1000.jpg 1000w, /media/room-lounge-1200.jpg 1200w" sizes="280px" width="1200" height="900" alt="" loading="lazy" decoding="async"></figure><figure style="--i:8"><img src="/media/bedroom-800.jpg" srcset="/media/bedroom-800.jpg 800w, /media/bedroom-1600.jpg 1600w" sizes="280px" width="1600" height="1067" alt="" loading="lazy" decoding="async"></figure><figure style="--i:9"><img src="/media/vk-08-1000.jpg" srcset="/media/vk-08-1000.jpg 1000w, /media/vk-08-1200.jpg 1200w" sizes="280px" width="1200" height="900" alt="" loading="lazy" decoding="async"></figure><figure style="--i:10"><img src="/media/room-sofa-1000.jpg" srcset="/media/room-sofa-1000.jpg 1000w, /media/room-sofa-2000.jpg 2000w" sizes="280px" width="2000" height="1333" alt="" loading="lazy" decoding="async"></figure><figure style="--i:11"><img src="/media/model-800.jpg" srcset="/media/model-800.jpg 800w" sizes="280px" width="800" height="520" alt="" loading="lazy" decoding="async"></figure><figure style="--i:12"><img src="/media/room-corner-1000.jpg" srcset="/media/room-corner-1000.jpg 1000w, /media/room-corner-1200.jpg 1200w" sizes="280px" width="1200" height="900" alt="" loading="lazy" decoding="async"></figure><figure style="--i:13"><img src="/media/calamiteit-800.jpg" srcset="/media/calamiteit-800.jpg 800w" sizes="280px" width="800" height="534" alt="" loading="lazy" decoding="async"></figure><figure style="--i:14"><img src="/media/room-bed-1000.jpg" srcset="/media/room-bed-1000.jpg 1000w, /media/room-bed-1600.jpg 1600w" sizes="280px" width="1600" height="1067" alt="" loading="lazy" decoding="async"></figure></div></div>
+<div class="wrap">
 <div class="tbl"><div class="tbl-h"><span class="lab">Client</span><span class="lab">Where</span><span class="lab">What we did</span><span class="lab" style="justify-self:end">Scale</span></div><div class="tbl-r"><h3 class="t3">Portaal</h3><p>Overvecht, Utrecht</p><p>Guest homes, contracts, check in and out and cleaning for the renovation of five ten storey blocks.</p><p class="num">570 homes</p></div><div class="tbl-r"><h3 class="t3">HEF Wonen</h3><p>Liskwartier, Rotterdam</p><p>Guest homes for the upgrade of 45 homes.</p><p class="num">12 guest homes</p></div><div class="tbl-r"><h3 class="t3">Stadgenoot</h3><p>West and Oud-West, Amsterdam</p><p>Guest, swap, rest and emergency homes for the coming years. Narrow stairwells call for furniture hoists and pieces that fit.</p><p class="num">4 kinds of home</p></div><div class="tbl-r"><h3 class="t3">Cazas Wonen</h3><p>IJsselstein</p><p>Guest homes for the flats on the Lanceerplaats and the Televisiebaan.</p><p class="num">A partner for several years</p></div></div>
 <div class="say" style="border-top:0;padding-top:0"><blockquote>“That there was even crockery, cleaning products and free internet, that made the difference!”</blockquote>
 <p class="by">Thierry Farla, resident support officer at HEF Wonen during the project. Translated from Dutch.</p></div>
 <div class="aside"><span class="lab">For your tender</span><p>Our building in Utrecht has energy label A and solar panels. Furniture is steam cleaned and used again after a rental, we look for FSC on wood, and we meet the 5% SROI standard. Since 1 September 2025 we’ve been part of ReShare Living Group, together with KeyPro.</p></div>
 </div></section>
 
-<section class="sec white" aria-labelledby="ook-h"><div class="wrap">
+<section class="sec" data-tone="gold" aria-labelledby="ook-h"><div class="wrap">
 <div class="head"><h2 class="t2" id="ook-h">Also for estate agents, employers and developers.</h2></div>
 <ul class="tiles"><li class="tile"><a href="/en/sales-styling/" tabindex="-1" aria-hidden="true"><div class="ph rv"><img src="/media/room-styled-1000.jpg" srcset="/media/room-styled-1000.jpg 1000w, /media/room-styled-1440.jpg 1440w" sizes="(max-width:900px) 50vw, 25vw" width="1440" height="960" alt="A bright living room after sales styling" loading="lazy" decoding="async"></div></a><h3 class="t3">Sales styling</h3><p>Two months of styling, from €2,150.</p><a class="cap" href="/en/sales-styling/">Work out your price<span class="sr">, Sales styling</span></a></li><li class="tile"><a href="/en/quote/?type=Expat%20huisvesting" tabindex="-1" aria-hidden="true"><div class="ph rv"><img src="/media/expat-living-800.jpg" srcset="/media/expat-living-800.jpg 800w" sizes="(max-width:900px) 50vw, 25vw" width="800" height="600" alt="A furnished living room" loading="lazy" decoding="async"></div></a><h3 class="t3">Expat homes</h3><p>From sofa to table lamp, vacuum cleaner to teaspoon.</p><a class="cap" href="/en/quote/?type=Expat%20huisvesting">Request<span class="sr">, Expat homes</span></a></li><li class="tile"><a href="/en/quote/?type=Model%2Fprojectwoning" tabindex="-1" aria-hidden="true"><div class="ph rv"><img src="/media/model-800.jpg" srcset="/media/model-800.jpg 800w" sizes="(max-width:900px) 50vw, 25vw" width="800" height="520" alt="A styled living room" loading="lazy" decoding="async"></div></a><h3 class="t3">Model and project homes</h3><p>Show what the finished home will look like, options included.</p><a class="cap" href="/en/quote/?type=Model%2Fprojectwoning">Request<span class="sr">, Model and project homes</span></a></li><li class="tile"><a href="/en/quote/?type=Calamiteitenwoning" tabindex="-1" aria-hidden="true"><div class="ph rv"><img src="/media/calamiteit-800.jpg" srcset="/media/calamiteit-800.jpg 800w" sizes="(max-width:900px) 50vw, 25vw" width="800" height="534" alt="A furnished bedroom" loading="lazy" decoding="async"></div></a><h3 class="t3">Emergency homes</h3><p>Clean and complete when residents have to leave suddenly.</p><a class="cap" href="/en/quote/?type=Calamiteitenwoning">Request<span class="sr">, Emergency homes</span></a></li></ul>
 </div></section>
 
-<section class="sec close dark" aria-labelledby="close-h"><div class="wrap">
-<h2 class="t2" id="close-h">Tell us about your project.</h2>
-<p>You’ll get a proposal for the furnishing and the services you hand to us.</p>
-<div class="acts"><a class="btn solid" href="/en/quote/">Request a quote</a><a class="btn" href="tel:+31852734872">Call 085 2734 872</a></div>
-<p class="meta"><a href="mailto:info@hooftenpetiet.nl">info@hooftenpetiet.nl</a>&nbsp;&nbsp;·&nbsp;&nbsp;Reactorweg 291 B, 3542 AD Utrecht</p>
+<div class="horizon" aria-hidden="true"></div>
+<section class="sec close3 dusk-sec dark" data-tone="dusk" aria-labelledby="close-h"><div class="wrap close3-g">
+<div class="window" aria-hidden="true"><i></i></div>
+<div>
+<h2 class="t1" id="close-h">Tell us about your project.</h2>
+<p class="lead" style="margin-top:22px">You’ll get a proposal for the furnishing and the services you hand to us.</p>
+<div class="pbar"><form action="/en/quote/" method="get">
+<div class="pf"><label for="c-type">Kind of home</label><select id="c-type" name="type"><option value="Logeerwoning">Guest home</option><option value="Rustwoning">Rest home</option><option value="Wisselwoning">Swap home</option><option value="Calamiteitenwoning">Emergency home</option></select></div>
+<div class="pf"><label for="c-n">Number of homes</label><input id="c-n" name="woningen" type="number" min="1" max="999" inputmode="numeric" placeholder="For example 24"></div>
+<button type="submit">Check availability</button>
+</form></div>
+<p class="meta"><a href="tel:+31852734872">085 2734 872</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="mailto:info@hooftenpetiet.nl">info@hooftenpetiet.nl</a>&nbsp;&nbsp;·&nbsp;&nbsp;Reactorweg 291 B, Utrecht</p>
+</div>
 </div></section>
 </main>
-<footer class="ftr"><div class="wrap">
+<footer class="ftr dusk-sec" data-tone="dusk"><div class="wrap">
 <div class="ftr-g">
-<div><img class="flogo" src="/media/logo-hp.png" width="700" height="208" alt="Hooft &amp; Petiet"><p class="about">Project furnishing and furniture rental since 2010. Part of <a class="u" href="https://astra-reshare-prototype.netlify.app/en/">ReShare Living Group</a>.</p></div>
+<div><img class="flogo" src="/media/logo-hp-white.png" width="700" height="187" alt="Hooft &amp; Petiet"><p class="about">Project furnishing and furniture rental since 2010. Part of <a class="u" href="https://astra-reshare-prototype.netlify.app/en/">ReShare Living Group</a>.</p></div>
 <div><h2>Homes</h2><ul>
 <li><a href="/en/quote/?type=Logeerwoning">Guest homes</a></li><li><a href="/en/quote/?type=Rustwoning">Rest homes</a></li>
 <li><a href="/en/quote/?type=Wisselwoning">Swap homes</a></li><li><a href="/en/quote/?type=Calamiteitenwoning">Emergency homes</a></li>
@@ -100,4 +113,5 @@
 <div class="base"><span>© H &amp; P Interieur B.V. 2026</span><span>Prototype by Astra agency, October 2026. Requests aren’t sent.</span><span class="lang"><a href="/" lang="nl" hreflang="nl">NL</a><a href="/en/" lang="en" hreflang="en" aria-current="true">EN</a></span></div>
 </div></footer>
 <script src="/js/site.js" defer></script>
+<script src="/js/fx.js" defer></script>
 </body></html>

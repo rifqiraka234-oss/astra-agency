@@ -78,3 +78,14 @@ Logos from their own sites (research/assets/brand). Fonts Fraunces and Instrumen
 Audience context, search results only, used in the brief and not on the sites. Eigen Haard's Rivierenhuis newsletter
 (July 2024) on outside satisfaction calls during renovation, AT5 on Stadgenoot Noord residents bounced between
 corporation and contractor.
+
+## Added for v3, 25 Oct
+
+| Fact or pairing | Source |
+|---|---|
+| "Projectinrichting en meubelverhuur" is the homepage title, "Sinds 2010" is on the page. Used in the hero's text ring with Utrecht from /contact/ | https://hooftenpetiet.nl/ (fetched 25 Oct) |
+| Home type photos. Logeerwoning-2.jpg sits on /wat-is-een-logeerwoning/ (5 hits), Rustwoning-Bussum-woonkamer.jpg on /woningcorporaties-rustwoning-renovatie/ (12), Wisselwoning-2.jpg on /wat-is-een-wisselwoning/ (5). Used in the kinetic line and the hover photo for each type | live fetch 25 Oct, page title control "Logeerwoning compleet laten inrichten" |
+| Hand over list, each photo from the page that covers it. Inrichting, IMG_5368 (/wat-is-een-rustwoning/). Stoffering, Vloerenlegger-wisselwoning (/onze-services/). Apparatuur, IMG_5078 (/wat-is-een-rustwoning/). Ontvangst, IMG_5315 (/wat-is-een-wisselwoning/). Beheer, hooft-en-petiet-meubelverhuur.jpeg, two people in H&P jackets at an H&P van (/beheer/). Wisselschoonmaak, IMG_5335 (/beheer/). Eén aanspreekpunt, IMG_0817 (/beheer/) | research/assets/hp-images.json, the crawl of 25 Oct |
+| Dropped from v3, the office and kitchen photos that only appear on their job ads (/vacature-supply-chain-lead/, /vacature-servicemedewerker-verhuizingen/), so no service is shown with a photo they never tied to it | same |
+| "Direct bewoonbaar, zodra de sleutel wordt overgedragen" closes the hero, in ReShare's words about H&P | https://reshareliving.com/ (row above) |
+| ReShare ring, Re, Share and Living with "hergebruik", "delen" and "tijdelijk en vast wonen", and the Leven counter, from "Re staat voor hergebruik, Share voor delen, en Living voor de tijdelijke en vaste woonoplossingen" and "meerdere levens" | https://reshareliving.com/ |

@@ -1,0 +1,547 @@
+{
+ "room-light": {
+  "src": "2026_04_2.jpg",
+  "files": [
+   "media/room-light-2000.jpg",
+   "media/room-light-1000.jpg"
+  ],
+  "sizes": [
+   [
+    2000,
+    1333
+   ],
+   [
+    1000,
+    667
+   ]
+  ]
+ },
+ "room-living": {
+  "src": "2026_04_6.jpg",
+  "files": [
+   "media/room-living-2000.jpg",
+   "media/room-living-1000.jpg"
+  ],
+  "sizes": [
+   [
+    2000,
+    1333
+   ],
+   [
+    1000,
+    667
+   ]
+  ]
+ },
+ "room-sofa": {
+  "src": "2026_04_1.jpg",
+  "files": [
+   "media/room-sofa-2000.jpg",
+   "media/room-sofa-1000.jpg"
+  ],
+  "sizes": [
+   [
+    2000,
+    1333
+   ],
+   [
+    1000,
+    667
+   ]
+  ]
+ },
+ "room-styled": {
+  "src": "2026_04_Verkoopstyling-HP-1.jpeg",
+  "files": [
+   "media/room-styled-1440.jpg",
+   "media/room-styled-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1440,
+    960
+   ],
+   [
+    1000,
+    667
+   ]
+  ]
+ },
+ "room-dining": {
+  "src": "2026_03_HooftPetiet-verkoopstyling-galerij-3.png",
+  "files": [
+   "media/room-dining-1200.jpg",
+   "media/room-dining-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1200,
+    900
+   ],
+   [
+    1000,
+    750
+   ]
+  ]
+ },
+ "room-bed": {
+  "src": "2026_04_WhatsApp-Image-2026-04-08-at-09.45.01.jpeg",
+  "files": [
+   "media/room-bed-1600.jpg",
+   "media/room-bed-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1600,
+    1067
+   ],
+   [
+    1000,
+    667
+   ]
+  ]
+ },
+ "room-chaise": {
+  "src": "2026_04_05-verkoopstyling-fotopresentatie-2.jpg",
+  "files": [
+   "media/room-chaise-1200.jpg",
+   "media/room-chaise-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1200,
+    900
+   ],
+   [
+    1000,
+    750
+   ]
+  ]
+ },
+ "room-corner": {
+  "src": "2026_04_12-verkoopstyling-fotopresentatie-2.jpg",
+  "files": [
+   "media/room-corner-1200.jpg",
+   "media/room-corner-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1200,
+    900
+   ],
+   [
+    1000,
+    750
+   ]
+  ]
+ },
+ "cushion": {
+  "src": "2026_07_IMG_5335-scaled.jpg",
+  "files": [
+   "media/cushion-2000.jpg",
+   "media/cushion-1000.jpg"
+  ],
+  "sizes": [
+   [
+    2000,
+    2543
+   ],
+   [
+    1000,
+    1272
+   ]
+  ]
+ },
+ "warehouse": {
+  "src": "2026_07_IMG_1216.jpg",
+  "files": [
+   "media/warehouse-2000.jpg",
+   "media/warehouse-1000.jpg"
+  ],
+  "sizes": [
+   [
+    2000,
+    1491
+   ],
+   [
+    1000,
+    746
+   ]
+  ]
+ },
+ "van": {
+  "src": "2026_09_IMG_0571-scaled.jpg",
+  "files": [
+   "media/van-2000.jpg",
+   "media/van-1000.jpg"
+  ],
+  "sizes": [
+   [
+    2000,
+    1334
+   ],
+   [
+    1000,
+    667
+   ]
+  ]
+ },
+ "trolley": {
+  "src": "2026_07_IMG_0487-scaled.jpg",
+  "files": [
+   "media/trolley-2000.jpg",
+   "media/trolley-1000.jpg"
+  ],
+  "sizes": [
+   [
+    2000,
+    1598
+   ],
+   [
+    1000,
+    799
+   ]
+  ]
+ },
+ "expat-living": {
+  "src": "2024_01_Expatwoning-woonkamer-2.jpg",
+  "files": [
+   "media/expat-living-800.jpg"
+  ],
+  "sizes": [
+   [
+    800,
+    600
+   ]
+  ]
+ },
+ "model": {
+  "src": "2024_01_Foto-woonkamer-modelwoning-800.jpg",
+  "files": [
+   "media/model-800.jpg"
+  ],
+  "sizes": [
+   [
+    800,
+    520
+   ]
+  ]
+ },
+ "calamiteit": {
+  "src": "2024_01_Afb-Calamiteitenwoning.jpg",
+  "files": [
+   "media/calamiteit-800.jpg"
+  ],
+  "sizes": [
+   [
+    800,
+    534
+   ]
+  ]
+ },
+ "plant": {
+  "src": "2026_10_IMG_5323-scaled.jpg",
+  "files": [
+   "media/plant-1707.jpg",
+   "media/plant-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1707,
+    2560
+   ],
+   [
+    1000,
+    1500
+   ]
+  ]
+ },
+ "sofa-cushion": {
+  "src": "2026_08_IMG_5368-groot.jpeg",
+  "files": [
+   "media/sofa-cushion-1280.jpg",
+   "media/sofa-cushion-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1280,
+    853
+   ],
+   [
+    1000,
+    666
+   ]
+  ]
+ },
+ "desk": {
+  "src": "2026_08_IMG_5097-1.jpg",
+  "files": [
+   "media/desk-2000.jpg",
+   "media/desk-1000.jpg"
+  ],
+  "sizes": [
+   [
+    2000,
+    1333
+   ],
+   [
+    1000,
+    667
+   ]
+  ]
+ },
+ "vk-08": {
+  "src": "2024_01_08-verkoopstyling-fotopresentatie.jpg",
+  "files": [
+   "media/vk-08-1200.jpg",
+   "media/vk-08-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1200,
+    900
+   ],
+   [
+    1000,
+    750
+   ]
+  ]
+ },
+ "welcome": {
+  "src": "2026_04_IMG_5315-groot.jpeg",
+  "files": [
+   "media/welcome-800.jpg"
+  ],
+  "sizes": [
+   [
+    800,
+    871
+   ]
+  ]
+ },
+ "vase": {
+  "src": "2026_10_IMG_5402-scaled.jpg",
+  "files": [
+   "media/vase-1600.jpg",
+   "media/vase-800.jpg"
+  ],
+  "sizes": [
+   [
+    1600,
+    2400
+   ],
+   [
+    800,
+    1200
+   ]
+  ]
+ },
+ "cushion2": {
+  "src": "2026_08_IMG_5365-scaled.jpg",
+  "files": [
+   "media/cushion2-1600.jpg",
+   "media/cushion2-800.jpg"
+  ],
+  "sizes": [
+   [
+    1600,
+    2400
+   ],
+   [
+    800,
+    1200
+   ]
+  ]
+ },
+ "bedroom": {
+  "src": "2026_04_WhatsApp-Image-2026-04-08-at-09.45.01.jpeg",
+  "files": [
+   "media/bedroom-1600.jpg",
+   "media/bedroom-800.jpg"
+  ],
+  "sizes": [
+   [
+    1600,
+    1067
+   ],
+   [
+    800,
+    534
+   ]
+  ]
+ },
+ "team-desk": {
+  "src": "2026_04_IMG_0773-scaled.jpg",
+  "files": [
+   "media/team-desk-2000.jpg",
+   "media/team-desk-1000.jpg"
+  ],
+  "sizes": [
+   [
+    2000,
+    1543
+   ],
+   [
+    1000,
+    771
+   ]
+  ]
+ },
+ "team-phone": {
+  "src": "2026_04_IMG_0817-groot.jpeg",
+  "files": [
+   "media/team-phone-1280.jpg",
+   "media/team-phone-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1280,
+    853
+   ],
+   [
+    1000,
+    666
+   ]
+  ]
+ },
+ "tv-room": {
+  "src": "2026_08_IMG_5078-scaled.jpg",
+  "files": [
+   "media/tv-room-2000.jpg",
+   "media/tv-room-1000.jpg"
+  ],
+  "sizes": [
+   [
+    2000,
+    1334
+   ],
+   [
+    1000,
+    667
+   ]
+  ]
+ },
+ "kitchen": {
+  "src": "2026_10_IMG_5269-scaled.jpg",
+  "files": [
+   "media/kitchen-1707.jpg",
+   "media/kitchen-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1707,
+    2560
+   ],
+   [
+    1000,
+    1500
+   ]
+  ]
+ },
+ "room-lounge": {
+  "src": "2026_03_HooftPetiet-verkoopstyling-galerij-4.png",
+  "files": [
+   "media/room-lounge-1200.jpg",
+   "media/room-lounge-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1200,
+    900
+   ],
+   [
+    1000,
+    750
+   ]
+  ]
+ },
+ "vk-01": {
+  "src": "2024_01_01-verkoopstyling-fotopresentatie.jpg",
+  "files": [
+   "media/vk-01-1200.jpg",
+   "media/vk-01-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1200,
+    900
+   ],
+   [
+    1000,
+    750
+   ]
+  ]
+ },
+ "vloer": {
+  "src": "2024_01_Vloerenlegger-wisselwoning.jpg",
+  "files": [
+   "media/vloer-800.jpg"
+  ],
+  "sizes": [
+   [
+    800,
+    517
+   ]
+  ]
+ },
+ "schilder": {
+  "src": "2024_01_Schilder-wisselwoning.jpg",
+  "files": [
+   "media/schilder-800.jpg"
+  ],
+  "sizes": [
+   [
+    800,
+    533
+   ]
+  ]
+ },
+ "logeer": {
+  "files": [
+   "media/logeer-800.jpg"
+  ],
+  "sizes": [
+   [
+    800,
+    600
+   ]
+  ],
+  "src": "2024_01_Logeerwoning-2.jpg"
+ },
+ "rust": {
+  "files": [
+   "media/rust-500.jpg"
+  ],
+  "sizes": [
+   [
+    500,
+    356
+   ]
+  ],
+  "src": "2018_02_Rustwoning-Bussum-woonkamer.jpg"
+ },
+ "wissel": {
+  "files": [
+   "media/wissel-800.jpg"
+  ],
+  "sizes": [
+   [
+    800,
+    600
+   ]
+  ],
+  "src": "2024_01_Wisselwoning-2.jpg"
+ },
+ "hp-bus": {
+  "src": "2026_04_hooft-en-petiet-meubelverhuur.jpeg",
+  "files": [
+   "media/hp-bus-1280.jpg"
+  ],
+  "sizes": [
+   [
+    1280,
+    883
+   ]
+  ]
+ }
+}
