@@ -71,7 +71,17 @@ Thanks Willem, I've just sent it over to marketing@keypro.nl!
 > functional 14 of 14 on the live URL. Every plan source reopened 25 Oct ~14.45 UTC (Aedes three pages, Rijksoverheid,
 > Dirkzwager, PBL, KeyPro, Moving-In, Furniture Lease). Still NOT SENT.
 
-EMAIL to marketing@keypro.nl, subject "Hooft & Petiet and ReShare, two working sites and the plan, at Willem's request"
+> APPROVED 25 Oct ~16.00 UTC, Raka's "Fuck it send. And have the subject Keypro x Astra Agency". NOT SENT BY US. The
+> Gmail connector rewrites every link, plain text and HTML href alike, into https://www.google.com/url?q=... (checked in
+> the RAW MIME of both drafts), and a click on that lands on Google's "Redirect Notice" page, fetched 25 Oct, even before
+> the ust expiry. Raka chose to send it himself. New Gmail draft r275296227707768740, subject "Keypro x Astra Agency",
+> same text as below, the three links need pasting in fresh. The old draft r3040318523259070641 (old subject) is
+> superseded, left in place for Raka to delete. Before that, all three sites 200 with their own titles (example.com
+> control 200), the thread pulled again 6 items with control 6, and Gmail shows nothing ever sent to or from keypro.nl
+> (control, the same search tool finds the Tomatoworld proposal in Sent). Once Raka confirms it went, mark it SENT here
+> and set sentAt on the prototypes row.
+
+EMAIL to marketing@keypro.nl, subject "Keypro x Astra Agency" (was "Hooft & Petiet and ReShare, two working sites and the plan, at Willem's request")
 DELIVERY
 ```
 Hi there,
