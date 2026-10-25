@@ -1,4 +1,9 @@
-# FOMO closers for the six bumped on 23 Oct. NOT SENT, waiting on Raka's word
+<!-- GATE ARCHIVED -->
+<!-- ALL 6 SENT 25 Oct on Raka's 'make it kinder and send'. Rayane act_tKDMuRdpKPMoYxgR5, Rachel act_nyE4THCBFYPQhJBFt, Natalie act_4mK8fS9ZDpKq5at5K, Lisa act_wLrcZZ8vedxce6exF, Léa act_tk4WkbvXZNxEAaat4, Thibert act_Ebb2yvWY6J3uvwuz2. One copy each, thread 2 items before, 3 after. Do not send again. -->
+# FOMO closers for the six bumped on 23 Oct, made kinder on Raka's "make it kinder and send"
+
+> EDITED 25 Oct ~09:00 UTC. Raka, "make it kinder and send". Same facts, a warmer tone, each still ends on what they
+> miss rather than an ask. The facts behind them are the ones reopened at 08:53 UTC below.
 
 Raka, 25 Oct, "the six bump i think just send a fomo closing now. drfat them". Each lead got a pitch on 20 Oct and a
 plain bump on 23 Oct and never replied. This is their last message, after it they close for good. The closing shape is
@@ -29,40 +34,40 @@ Raka. Copy from this file, then confirm one copy.
 
 CLOSER
 ```
-Rayane, this is my last message, and it's about the easiest bookings Cleantondressing will see all year. Your online booking page still ends in a quote request, so a household that wants a pickup slot today likely books one somewhere it can, and an office that clicks "Je suis un professionnel" lands on Wix's sample text. If now isn't the moment, I get it. That's pickups and contracts going to someone else every week.
+Rayane, this is my last message. I really think Cleantondressing could take pickup bookings straight from your price list instead of a quote request, and give offices their own page in place of Wix's sample text. If now isn't the right time, I completely understand. I'd just hate for you to miss the bookings that would come with it.
 ```
 
 ### Rachel Robinson, Premier Paris Concierge. ctc_YpcJRZbfqTAQsDDJ5
 
 CLOSER
 ```
-Rachel, last one from me, because this one's costing you right now. Your "Click here to start planning your trip today" button still sends emails to a misspelt Gmail address, so the travellers most ready to book never reach you. No pressure if the timing's wrong. Just know those trips are being planned with someone else.
+Rachel, last one from me, and only because I'd hate for you to miss this. The "Click here to start planning your trip today" button on your site sends emails to a misspelt Gmail address, so some travellers who want to book may never reach you. It's a quick one to check. Either way, I wish you a great season.
 ```
 
 ### Natalie Asprey, Empower. ctc_iWE8rBKcxyLLTWNaG
 
 CLOSER
 ```
-Natalie, I'll leave it after this. Your sponsor page still invites companies to chat about "our upcoming events in 2026", while the awards are already set for March 2027 in Manchester. A sponsor planning next year's budget reads that as a calendar nobody's updated. If the timing's off, that's fine. But it's 2027 money being decided on last year's page.
+Natalie, I'll leave it after this one. I noticed your sponsor page still talks about "our upcoming events in 2026", while the awards are already set for March 2027 in Manchester. Sponsors planning next year might read it as out of date, and the awards deserve better than that. If the timing's not right, no worries at all.
 ```
 
 ### Lisa Deklerck, DAPPER. ctc_fW7J53dLv7kwgFTFb
 
 CLOSER
 ```
-Lisa, this is my last note. The Skybox is the room most likely to win company dinners, and it still only has a Dutch page and an email address. So English speaking teams planning a dinner in Ghent probably never find it. If now's not the time, no problem. Each of those dinners ends up in a room they could find and book.
+Lisa, this is my last note. Dining in the Skybox with a view of the pitch is a real draw for company dinners, and right now it only has a Dutch page and an email address, so English speaking teams in Ghent might never come across it. If now's not the time, I completely understand. I just think it deserves to be found.
 ```
 
 ### Léa Mellet, Restaurant Héméra. ctc_yfxa5oZx9PZYs58fD
 
 CLOSER
 ```
-Léa, last message from me. Héméra's homepage still leaves out that Ioannis trained at Varoulko, with David Toutain and at Oka, which is the reason to cross Marseille for dinner. People who only read the homepage likely book somewhere else without ever knowing it. I understand if it isn't the right time. That story is worth more tables than it's getting.
+Léa, last message from me. Ioannis trained at Varoulko, with David Toutain and at Oka, and right now people only find that if they look past the homepage. It's the kind of story that gets people to cross Marseille for dinner. If the timing isn't right, I understand. I'd just love to see it up front where it belongs.
 ```
 
 ### Thibert Galleron Havnegjerde, Les Terrasses Blanches. ctc_6baeGDobMJio3bHPp
 
 CLOSER
 ```
-Thibert, I'll stop after this one. Your site asks owners between Marseille and Bandol to join la collection, but it never shows them a single home in it. An owner choosing who'll manage their villa likely picks the concierge who shows theirs. No worries if the timing's wrong. Those are owners who were already looking for someone like you.
+Thibert, I'll stop after this one. Your site invites owners between Marseille and Bandol to join la collection, and I think showing them a few of the homes already in it would make that an easy yes. If now's not the moment, no worries at all. Those owners are out there looking for someone like you.
 ```
