@@ -226,12 +226,12 @@
  },
  "built": {
   "h": "The new site, built around one ticket.",
-  "lede": "One order carries down the page. The guest picks who they'll be, reads the night in your own words, chooses a ticket and how to pay, and the checkout arrives filled in.",
+  "lede": "One order carries down the page. The guest picks who they'll be, reads the night in your own words, chooses a ticket and how to pay, and the checkout arrives filled in. The ticket is one tap away the whole time, with the price and a ticket button on the first screen, the order in a bar at the foot of the screen through the book, and the same button again at the end of the night.",
   "shots": [
    {
     "img": "s-hero-d",
     "h": "Who will you be?",
-    "p": "Your own question opens the site, under the moon and fairy from your logo. The answer gathers in her stardust as one of your guests in that look, then lands on the cover of the book and later on the ticket."
+    "p": "Your own question opens the site, under the moon and fairy from your logo. The answer gathers in her stardust as one of your guests in that look, then lands on the cover of the book and later on the ticket. The price and the ticket button sit right under it, for the guest who's already decided."
    },
    {
     "img": "s-book-d",
@@ -241,12 +241,12 @@
    {
     "img": "s-hall-d",
     "h": "Into the hall",
-    "p": "The last page opens into your photo of the hall at the Winter Gardens, with your own line on it."
+    "p": "The last page opens into your photo of the hall at the Winter Gardens, with your own line on it and the ticket button under it, at the moment they most want to go."
    },
    {
     "img": "s-tiers-d",
-    "h": "Two ways in",
-    "p": "Enchanted and Royal (VIP) as two foil invitations that catch the light. Royal is closed with a wax seal, and sold out shows the same everywhere."
+    "h": "Royal sold out, Enchanted open",
+    "p": "Enchanted and Royal (VIP) as two foil invitations that catch the light. Royal is closed with a wax seal, and sold out shows the same everywhere. Choosing Enchanted takes the guest straight on to how they'll pay."
    },
    {
     "img": "s-pay3-d",

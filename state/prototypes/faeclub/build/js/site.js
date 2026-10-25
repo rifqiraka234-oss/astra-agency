@@ -21,6 +21,15 @@
     $$('img[data-src]', el).forEach(function (n) { n.src = n.getAttribute('data-src'); n.removeAttribute('data-src'); });
   };
 
+  /* ------------------------------------------------ the menu on phones */
+  var mb = $('.mbtn'), nl = $('#mnav');
+  if (mb && nl) {
+    var setM = function (o) { nl.classList.toggle('open', o); mb.setAttribute('aria-expanded', o ? 'true' : 'false'); };
+    mb.addEventListener('click', function () { setM(mb.getAttribute('aria-expanded') !== 'true'); });
+    $$('a', nl).forEach(function (a) { a.addEventListener('click', function () { setM(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && mb.getAttribute('aria-expanded') === 'true') { setM(false); mb.focus(); } });
+  }
+
   /* ------------------------------------------------ the order */
   var co = $('[data-co]');
   var D = co ? JSON.parse($('script[data-d]', co).textContent) : null;
@@ -100,7 +109,8 @@
     setO('tkname', S.name || 'Your name');
     setO('tkas', 'arriving as ' + charWord());
     setO('tkref', ev.code);
-    setO('sbar', S.qty + (S.qty === 1 ? ' ticket' : ' tickets') + ' · ' + x.t.name.replace(' Tier', '').replace(' Entry', '') + ' · ' + (S.plan === 'three' ? 'Pay in 3 · ' + gbp(x.pays[0]) + ' today' : 'In full · ' + gbp(x.total)));
+    /* the price leads, so a narrow bar never cuts it off */
+    setO('sbar', (S.plan === 'three' ? gbp(x.pays[0]) + ' today, pay in 3' : gbp(x.total) + ' in full') + ' · ' + S.qty + ' ' + x.t.name.replace(' Tier', '').replace(' Entry', '') + (S.qty === 1 ? ' ticket' : ' tickets'));
   };
 
   $$('.ch').forEach(function (b) {
@@ -113,7 +123,10 @@
   window.addEventListener('load', function () { idle(function () { $$('.cov-o,.cj-o').forEach(wake); }); });
   $$('[data-q]').forEach(function (b) { b.addEventListener('click', function () { S.qty = clamp(S.qty + +b.getAttribute('data-q'), 1, MAXQ); render(); }); });
   $$('[data-plan]').forEach(function (b) { b.addEventListener('click', function () { S.plan = b.getAttribute('data-plan'); render(); }); });
-  $$('[data-pick]').forEach(function (b) { b.addEventListener('click', function () { S.event = 'ftb'; S.tier = b.getAttribute('data-pick'); drawTierRadios(); render(); }); });
+  $$('[data-pick]').forEach(function (b) { b.addEventListener('click', function () {
+    S.event = 'ftb'; S.tier = b.getAttribute('data-pick'); drawTierRadios(); render();
+    var next = $('#spread'); if (next) next.scrollIntoView({ behavior: rm ? 'auto' : 'smooth', block: 'start' });
+  }); });
   var pbFig = $('[data-plan-fig]'); if (pbFig) pbFig.addEventListener('click', function () { S.plan = S.plan === 'three' ? 'full' : 'three'; render(); });
   var evSel = $('select[data-f="event"]');
   if (evSel) evSel.addEventListener('change', function () { S.event = evSel.value; drawTierRadios(); render(); });
@@ -185,6 +198,7 @@
     conjEl.style.setProperty('--cs', (1 + (sx - 1) * kk).toFixed(4));
     conjEl.style.setProperty('--cjo', (1 - clamp((e - .82) / .16, 0, 1)).toFixed(3));
   };
+  var coNow = 1, hoNow = 0;
   var taleUpdate = function () {
     if (!live) return;
     var r = tale.getBoundingClientRect(), span = tale.offsetHeight - window.innerHeight;
@@ -207,7 +221,8 @@
     });
     var c0 = clamp(t, 0, 1);
     if (t < 0) c0 = 0;
-    tale.style.setProperty('--co', (1 - clamp(c0 * 2.2, 0, 1)).toFixed(3));
+    coNow = 1 - clamp(c0 * 2.2, 0, 1);
+    tale.style.setProperty('--co', coNow.toFixed(3));
     var chsEl = tale.querySelector('.chs'); if (chsEl) { var gone = c0 > .48; if (chsEl.inert !== gone) chsEl.inert = gone; }
     tale.querySelector('.tale-copy').style.pointerEvents = c0 > .48 ? 'none' : '';
     tale.style.setProperty('--bl', clamp((ease(c0) - .5) * 4, 0, 1).toFixed(3));
@@ -224,17 +239,22 @@
       tale.style.setProperty('--clip', 'inset(' + top.toFixed(1) + 'px ' + right.toFixed(1) + 'px ' + bot.toFixed(1) + 'px ' + left.toFixed(1) + 'px)');
       tale.style.setProperty('--hv', 'visible');
     } else { tale.style.setProperty('--hv', 'hidden'); }
-    tale.style.setProperty('--ho', clamp((d - .55) / .35, 0, 1).toFixed(3));
+    hoNow = clamp((d - .55) / .35, 0, 1);
+    tale.style.setProperty('--ho', hoNow.toFixed(3));
+    tale.style.setProperty('--hcv', hoNow > .3 ? 'visible' : 'hidden'); /* the hall's call can't be reached before it's seen */
     tale.style.setProperty('--bo', (1 - clamp((d - .7) / .3, 0, 1)).toFixed(3));
   };
 
   /* ------------------------------------------------ the sticky bar */
-  var sbar = $('[data-sbar]'), coSec = $('#checkout');
+  var sbar = $('[data-sbar]'), coSec = $('#checkout'), heroBuy = tale && $('.buy', tale), hallCta = $(live ? '[data-hall-cta]' : '.hall-flat-cta a');
   var barUpdate = function () {
     if (!sbar || !tale) return;
-    var past = tale.getBoundingClientRect().bottom < window.innerHeight * .5;
-    var at = coSec ? coSec.getBoundingClientRect().top < window.innerHeight * .9 && coSec.getBoundingClientRect().bottom > 0 : false;
-    var on = past && !at;
+    var vh = window.innerHeight;
+    var past = live ? coNow < .35 : heroBuy ? heroBuy.getBoundingClientRect().bottom < 0 : tale.getBoundingClientRect().bottom < vh * .5;
+    var hallOn = false;
+    if (hallCta && (!live || hoNow > .3)) { var hr = hallCta.getBoundingClientRect(); hallOn = hr.top < vh && hr.bottom > 0; }
+    var at = coSec ? coSec.getBoundingClientRect().top < vh * .9 && coSec.getBoundingClientRect().bottom > 0 : false;
+    var on = past && !at && !hallOn;
     sbar.classList.toggle('on', on);
     sbar.setAttribute('aria-hidden', on ? 'false' : 'true');
     $('a', sbar).tabIndex = on ? 0 : -1;

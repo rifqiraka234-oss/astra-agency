@@ -75,7 +75,7 @@ def orn(cls=''): return f'<div class="orn{(" " + cls) if cls else ""}" aria-hidd
 def sparkle(cls=''): return f'<svg class="spk{(" " + cls) if cls else ""}" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#sp"/></svg>'
 def arch_outline(): return f'<svg class="arch-o" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="{ARCH100}" vector-effect="non-scaling-stroke"/></svg>'
 
-def head(title, desc, path, body='', sky='dusk'):
+def head(title, desc, path, body='', sky='dusk', cta=('/#checkout', 'Get tickets')):
     return f'''<!doctype html>
 <html lang="en-GB" data-ch="knight">
 <head>
@@ -97,7 +97,7 @@ def head(title, desc, path, body='', sky='dusk'):
 <aside class="note" aria-label="About this site">Prototype by Astra agency for Fae Club. Not the live site, nothing is charged or sent.</aside>
 <header class="hdr"><div class="wrap hdr-in">
 <a class="logo" href="/" aria-label="Fae Club, home">{MARK}</a>
-<nav aria-label="Main"><a class="d" href="/#the-night">The Fairytale Ball</a><a class="d" href="/#night-club">The Night Club</a><a class="d" href="/valkyrie-retreat/">The Valkyrie Retreat</a><a class="d" href="/#faqs">FAQs</a><a class="btn" href="/#tickets">Get tickets</a></nav>
+<nav aria-label="Main"><button class="mbtn" type="button" aria-expanded="false" aria-controls="mnav">Menu</button><div class="nl" id="mnav"><a class="d" href="/#the-night">The Fairytale Ball</a><a class="d" href="/#night-club">The Night Club</a><a class="d" href="/valkyrie-retreat/">The Valkyrie Retreat</a><a class="d" href="/#faqs">FAQs</a></div><a class="btn" href="{cta[0]}">{cta[1]}</a></nav>
 </div></header>
 <main id="main">
 '''
@@ -136,6 +136,7 @@ def txt_page(kick, text, n, cls=''):
     return f'<div class="face back txt{cls}">{corners()}<p class="pg-k">{sparkle()}{kick}{sparkle()}</p><p class="pg-t">{dropcap(text)}</p><p class="pg-n">{n}</p></div>'
 
 def tale():
+    e = FT['tiers'][0]; tot = e['price'] + e['fee'] + e['vat']; now = split3(tot)[0]
     chars = ''.join(f'<li><button type="button" class="ch" data-ch="{c["id"]}" aria-pressed="{"true" if i == 0 else "false"}">{c["word"]}</button></li>' for i, c in enumerate(D['characters']))
     ovals = ''.join(f'<span class="cov-o{" on" if i == 0 else ""}" data-ch="{c["id"]}">{(pic(c["img"], "", "(max-width: 760px) 40vw, 220px", eager=True) if i == 0 else pic_later(c["img"], "", "(max-width: 760px) 40vw, 220px"))}</span>' for i, c in enumerate(D['characters']))
     conj = ''.join(f'<span class="cj-o{" on" if i == 0 else ""}" data-ch="{c["id"]}">{(pic(c["img"], "", "(max-width: 760px) 30vw, 200px", eager=True) if i == 0 else pic_later(c["img"], "", "(max-width: 760px) 30vw, 200px"))}</span>' for i, c in enumerate(D['characters']))
@@ -162,7 +163,8 @@ def tale():
       <h1 id="who-h" class="who">Who will you be?</h1>
       <p class="who-l" id="who-l">I’ll arrive as</p>
       <ul class="chs" aria-labelledby="who-l">{chars}</ul>
-      <p class="tale-hint" aria-hidden="true">Scroll to open the book</p>
+      <div class="buy"><a class="btn solid" href="#checkout">Get your ticket</a><p class="buy-p">Tickets {gbp(tot)}, or {gbp(now)} today with pay in 3</p></div>
+      <p class="tale-hint" aria-hidden="true">Or scroll to open the book</p>
     </div>
     <div class="moon" aria-hidden="true">
       <div class="moon-halo"></div>
@@ -171,10 +173,11 @@ def tale():
       <div class="conj"><div class="conj-in">{conj}</div></div>
     </div>
     <div class="book" aria-hidden="true"><div class="book-in">{"".join(leaves)}<div class="book-base l"></div><div class="book-base r"></div></div></div>
-    <div class="tale-hall" aria-hidden="true">{pic_later("hall", "", "100vw")}<div class="rays">{rays}</div><div class="tw">{twinkles}</div><p class="foil">For one night only, the fairytale is real, and you are part of it.</p></div>
+    <div class="tale-hall">{pic_later("hall", "", "100vw")}<div class="rays" aria-hidden="true">{rays}</div><div class="tw" aria-hidden="true">{twinkles}</div><div class="hall-c"><p class="foil">For one night only, the fairytale is real, and you are part of it.</p><a class="btn solid" href="#checkout" data-hall-cta>Get your ticket</a></div></div>
   </div>
   <ol class="tale-flat">{flat}</ol>
   <figure class="tale-hall-flat">{pic("hall", "The Spanish Hall at the Winter Gardens, Blackpool", "100vw")}<figcaption>For one night only, the fairytale is real, and you are part of it.</figcaption></figure>
+  <p class="hall-flat-cta"><a class="btn solid" href="#checkout">Get your ticket</a></p>
 </section>'''
 
 def guests():
@@ -190,6 +193,7 @@ def guests():
       <h2 id="solo-h" class="h2">Coming on your own?</h2>
       <blockquote class="solo-q"><p>Absolutely! Many of our fae attend solo.</p></blockquote>
       <p class="lead">Join our <a href="https://discord.gg/aXc38Uspr9" rel="noopener">Discord</a> to meet others going, plan outfits and travel, and find each other before the big night.</p>
+      <figure class="solo-v"><blockquote><p>{QUOTES[1][0]}</p></blockquote><figcaption>{sparkle()}{QUOTES[1][1]}</figcaption></figure>
     </div>
     <div class="count">
       <div class="ring" aria-hidden="true"><svg class="ring-arc" viewBox="0 0 100 50" preserveAspectRatio="none" focusable="false"><path d="M7 39 A43 31 0 0 1 93 39" vector-effect="non-scaling-stroke"/></svg><ul class="g-row">{ovals}</ul></div>
@@ -212,7 +216,7 @@ def tiers():
     return f'''<section class="sec tiers" id="tickets" data-sky="dance" aria-labelledby="t-h">
   <div class="wrap">
     {orn()}
-    <h2 id="t-h" class="h2 c">Two ways in.</h2>
+    <h2 id="t-h" class="h2 c">Royal has sold out. Enchanted hasn’t.</h2>
     <div class="tier-g">
       <article class="tier inv" data-tier="enchanted">
         <div class="inv-in">{corners()}
@@ -365,7 +369,7 @@ QUOTES = [
 PAST = [('The Fairytale Ball', 'April 2026'), ('Mythical Memories Ball', 'October 2025'), ('The Lions Solstice', 'August 2025'), ('The Twisted Temptations Masquerade Ball', 'May 2025'), ('The Starlit Soirée', 'October 2024'), ('Our Faerie Picnic', 'June 2024')]
 
 def community():
-    qs = ''.join(f'<li><span class="qm" aria-hidden="true">“</span><blockquote><p>{q}</p></blockquote><p class="who-q">{sparkle()}{n}</p></li>' for q, n in QUOTES)
+    qs = ''.join(f'<li><span class="qm" aria-hidden="true">“</span><blockquote><p>{q}</p></blockquote><p class="who-q">{sparkle()}{n}</p></li>' for q, n in QUOTES if n != 'Kimelle')
     past = ''.join(f'<li><b>{n}</b><span>{d}</span></li>' for n, d in PAST)
     return f'''<section class="sec comm" data-sky="late" aria-labelledby="c-h">
   <div class="wrap">
@@ -377,7 +381,8 @@ def community():
 </section>'''
 
 def bar():
-    return '''<div class="sbar" data-sbar aria-hidden="true"><div class="wrap sbar-in"><p data-o="sbar">1 ticket · Enchanted · Pay in 3 · £59.80 today</p><a class="btn solid" href="#checkout" tabindex="-1">Checkout</a></div></div>'''
+    e = FT['tiers'][0]; now = split3(e['price'] + e['fee'] + e['vat'])[0]
+    return f'''<div class="sbar" data-sbar aria-hidden="true"><div class="wrap sbar-in"><p data-o="sbar">{gbp(now)} today, pay in 3 · 1 Enchanted ticket</p><a class="btn solid" href="#checkout" tabindex="-1">Checkout</a></div></div>'''
 
 def home():
     return head('The Fairytale Ball 2027 | Fae Club', 'The Fairytale Ball, Saturday 17 April 2027 at the Winter Gardens, Blackpool. Tickets in full or in 3, with your QR ticket sent the moment you pay.', '/') + \
@@ -403,13 +408,14 @@ def retreat():
     bars = ''.join(f'<li style="--h:{v / price:.4f}"><span class="bar"><i></i>{arch_outline()}</span><b>{gbp(v)}</b><small>{"Today" if i == 0 else add_months(TODAY, i).strftime("%b %Y")}</small></li>' for i, v in enumerate(s))
     data = json.dumps({'price': price, 'friendOff': RT['friendOff'], 'max': RT['maxMonths'], 'today': D['today']})
     used.update(['logo-highfae-360.webp', 'logo-highfae-360.jpg'])
-    return head('The Valkyrie Retreat, 14 to 18 June 2027 | Fae Club', 'Five days on a private island manor on the edge of the Lake District. All included for £1,795, with payment plans.', '/valkyrie-retreat/', 'rt', 'aurora') + f'''
+    return head('The Valkyrie Retreat, 14 to 18 June 2027 | Fae Club', 'Five days on a private island manor on the edge of the Lake District. All included for £1,795, with payment plans.', '/valkyrie-retreat/', 'rt', 'aurora', ('#reserve', 'Reserve')) + f'''
 <section class="rt-hero" data-sky="aurora" aria-labelledby="rt-h">
   <div class="rt-ph">{pic("valkyrie", "A Valkyrie in black wings by a lake in the Lake District", "100vw", eager=True)}</div>
   <div class="wrap rt-in">
     <picture><source type="image/webp" srcset="/media/logo-highfae-360.webp"><img class="hf" src="/media/logo-highfae-360.jpg" width="360" height="360" alt="High Fae Retreats"></picture>
     <h1 id="rt-h" class="who steel">The Valkyrie Retreat</h1>
     <p class="lead">14 to 18 June 2027. A six star manor on its own private island, on the edge of the Lake District. 18 and over, women only.</p>
+    <p class="rt-price">All included for {gbp0(price)}, with a personalised payment plan if you’d like one.</p>
     <a class="btn solid" href="#reserve">Reserve your place</a>
   </div>
 </section>

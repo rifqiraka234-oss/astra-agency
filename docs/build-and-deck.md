@@ -824,6 +824,34 @@ repeat it for any lead whose business is an experience.
 | The first cross fade from moon to book ghosted | Sequence a hand over, the first thing leaves before the next arrives, the one object that travels (the portrait) carries the eye across |
 | numpy and scipy weren't on /usr/local/bin/python3 | `python3 -m pip install` for the python the build runs on |
 
+### Fae Club v3, the route to the ticket (25 Oct 2026, late evening)
+
+Raka on v2, "i love the art, just one last recheck or redo; does this website make it super easy to tell the story
+and guide the intended audience to the intended action?". It told the story and didn't guide. The art had grown around
+the flow table until the action was 9.5 screens away. **Run this walk on every build before it ships, and answer his
+two questions in the handover, who it's for and the one action.**
+
+`state/prototypes/faeclub/qa/guide-walk.js <url> <out dir>` scrolls the home page half a screen at a time at 390 and
+1440 and prints, for each step, whether the sticky bar is on and how many ticket actions are on screen. It also
+screenshots the hero, the scroll scene and the screen after it. The standard it sets.
+1. **The first screen carries the price and the action**, worked out from the data, beside the first input. The
+   immersive scene is the second path ("Or scroll to open the book"), never the only one.
+2. **No half screen without a way to the action**, from the top to the checkout. The bar starts when the hero's own
+   call leaves, not after the scene, and steps aside wherever another call is on screen.
+3. **The emotional peak ends on the action.** The best line in the scene gets the button under it.
+4. **Headings tell the truth about stock.** "Two ways in" over a sold out tier promised a choice that wasn't there.
+5. **The fear gets its proof where it's asked.** The solo guest's own words belong in "Coming on your own?", not at the
+   foot of the page.
+6. **Every visitor in the four lines has a route on a phone.** A hidden nav with no menu left the second visitor about
+   21 screens from her page. Each page's header calls its own action (the retreat says Reserve).
+7. **A bar on a phone leads with the price**, or the ellipsis eats the one thing it's for.
+
+| Hiccup | Rule |
+|---|---|
+| The phone menu panel at 97% opacity let the hero's gold type show through | A menu over a busy page is solid, with a shadow under it |
+| In reduced motion the bar and the flat hall button showed together | Whatever hides the bar beside a call checks the call each mode actually renders |
+| The phone bar's text "1 ticket · Enchanted · Pay in..." lost its price to the ellipsis | Rule 7 above |
+
 ### BeBetter, the Saavedra v3 recipe on a gymwear brand (25 Oct 2026)
 
 Laurens van Dorp said yes to "a sketch of the new BeBetter site", promised as "a more professional BeBetter site that

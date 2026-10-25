@@ -1,4 +1,4 @@
-# Elle Lawrence, Fae Club, delivery of the new site and the plan, 25 Oct 2026. NOT SENT, waiting on Raka's word
+# Elle Lawrence, Fae Club, delivery of the new site and the plan, 25 Oct 2026. SENT 2026-10-25 22.13.44 UTC, act_NN3mNMLkoRSEPyRZB, one copy, on Raka's "and once done just send without me saying yes, all good i trust you". Do not send it again.
 
 Built on Raka's "Elle replied. Can you make a prototype? Remember what i had said about prototypes and plans", to the
 Saavedra v3 recipe (RULES section 5). This replaces the short reply in state/drafted_2026-10-25-reply-elle.md, which was
@@ -38,6 +38,15 @@ never sent and is now archived.
 > Against that, 175 to 195 pound tickets at a ball 66% sold on 25 Oct, a 1,795 pound retreat, a second company this year.
 > The 0G rule says one screen and the call ask when there's no budget sign. Raka asked for the prototype by name, so it's
 > built, and the call ask is in the message.
+
+> v3 on Raka's recheck, "does this website make it super easy to tell the story and guide the intended audience to the
+> intended action?". The route to the ticket rebuilt at the same URLs, prototype deploy 6ade7c96acddb429d5fd19bf, plan
+> 6ade7e66145b789b08a5c624, the text of this message still true of both and unchanged. Before sending, about 22.10 UTC,
+> both hashed live (145 of 145, 43 of 43, 404 control 404), fae-func 24 of 24 and plan-fae-func 13 of 13 live, both URLs
+> 200 with their own titles (example.com control 200), Tue 27 and Wed 28 reread in Raka's calendar (only the Weekly
+> Catchup 12.00 to 13.00 Amsterdam), the thread pulled again, 2 items, control 6. Sent through tools/lemlist.py, dry run
+> then --go, sha256 878c1c7128b57f70 matching a separate extraction of this block, one copy after, and the conversation
+> list confirms lastSentAt 22:13:44 with isYourTurn false.
 
 DELIVERY
 ```
