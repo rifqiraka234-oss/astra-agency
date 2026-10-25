@@ -59,6 +59,9 @@ from 28 February 2026), Dirkzwager, PBL ("heel erg onwaarschijnlijk"), KeyPro ("
 ("9.4/10 Feedback Company"), Furniture Lease ("€ 149,50", "Onze opdrachtgevers aan het woord"). The 26 article titles
 fetched again, 12 share one.
 
+Live, after the deploy. H&P and ReShare 69 of 69 functional on the live URLs. Lighthouse on a phone, on the live
+compressed sites, H&P 97 (LCP 2.4 s), ReShare 97 (LCP 2.3 s), plan 99 (LCP 2.0 s), best practices 100 on all three.
+
 ## Who it's for and what it asks them to do (unchanged from v2)
 
 **H&P.** The project leader at a housing association or renovation contractor who has to move residents out for weeks.
