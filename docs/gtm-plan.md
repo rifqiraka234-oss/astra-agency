@@ -51,23 +51,32 @@ separate read of its description and site (who pays them), without seeing any ou
 | Professional services, English speaking | 0 of 31, and 0 replies | Mostly marketing agencies, studios, recruiters and consultants |
 | Consumer, all countries | 3 of 94 by label, 4 of 89 blind, 2 of 53 where both agree (B2B 15 of 80 there) | No meeting ever came from one. The gap is real but smaller since September (blind, 2 of 63 against 7 of 128) |
 | Agencies, studios, marketing firms, recruiters, coaches (blind) | 1 of 32, 3 replies | They sell what we sell |
-| France and Belgium, everyone | 3 of 74, 0 of 54 since September | Our messages are in English |
+| France | 3 of 55, 0 of 40 since September | Our messages are in English |
+| Belgium | 0 of 19 | Too few to judge. Only 1 Flemish B2B company was ever pitched, most were consumer |
+| Since 1 September, by country | UK 4 of 71, Netherlands 2 of 48, Germany 2 of 35 | The same rate in all three. The UK lead was a summer effect |
 
 **The profile, in order.**
 
-1. **Tier 1.** The owner, founder or CEO of a B2B company in the UK, Ireland or Canada. Software, tech services,
-   industrial and manufacturing, wholesale, logistics, engineering, B2B services. 5 to 50 staff, or funded, or clearly
-   trading (customers named, staff, an office).
-2. **Tier 2.** The same in the Netherlands, Germany, Austria and Switzerland. They engage, but they punish a wrong read,
-   so the RULES 0F and 0G checks are the whole game here.
-3. **Tier 3.** Law, accounting and clinic owners, only with the AI workflow "did you know" message.
+**Where (Raka, 25 Oct, "keep dutch and belgium in my opinion for close proximity and maybe germany").** The
+Netherlands, Flanders (the Dutch speaking half of Belgium), Germany, Austria and German speaking Switzerland, and the UK
+and Ireland. Since September the UK, the Netherlands and Germany convert at the same rate, and close by means a call can
+become a visit. Four of the seven companies we've met or booked are Dutch or run from the Netherlands (Curalis,
+Tomatoworld, Lisanne, Qualigraf), and Willem's deal is too.
+
+1. **Tier 1.** The owner, founder or CEO of a B2B company in those countries. Software, tech services, industrial and
+   manufacturing, wholesale, logistics, engineering, B2B services. 5 to 50 staff, or funded, or clearly trading
+   (customers named, staff, an office).
+2. **Tier 2.** Law, accounting and clinic owners, only with the AI workflow "did you know" message.
+3. **In the Netherlands, Flanders and Germany a wrong read costs the most.** They reply more than anyone (35% for
+   Dutch and German B2B) and say so when we're wrong. 6 of their 9 B2B noes were our misread. The RULES 0F and 0G checks
+   are the whole game there.
 
 **Don't invite, and don't pitch.**
 - Marketing, creative, web, SEO and social agencies, recruiters, coaches and growth consultants. They sell what we sell.
 - Consumer businesses, cafes, restaurants, hotels, shops, consumer brands, gyms, leisure, tutoring.
 - Foundations, charities and associations, unless they've said they have budget.
 - One person firms that haven't made their first sale. Acquitas.
-- France and Belgium, until Raka decides on a French message.
+- France, Wallonia and French speaking Brussels, until Raka decides on a French message.
 - Anyone who isn't the owner or the person who decides. 25 of the 84 accepts that lemlist shows as waiting were already
   closed as not the owner or not a fit.
 
@@ -83,8 +92,11 @@ builders") and W1c ("established consumer businesses on DIY site builders") are 
 2 yeses from 44 pitches, both from its few B2B leads.
 
 **The campaign Raka sets up in lemlist (his call), Tier 1 first.**
-- Country, United Kingdom, Ireland, Canada.
-- Titles, Owner, Founder, Co-Founder, CEO, Managing Director.
+- Country, the Netherlands, Belgium limited to the Flemish provinces (Antwerp, East Flanders, West Flanders, Flemish
+  Brabant, Limburg), Germany, Austria, Switzerland, the United Kingdom, Ireland. One campaign per language area keeps
+  the numbers readable, NL and Flanders, DACH, UK and Ireland.
+- Titles, Owner, Founder, Co-Founder, CEO, Managing Director, Eigenaar, Oprichter, Directeur, Zaakvoerder,
+  Geschäftsführer, Inhaber, Gründer.
 - Company size, 2 to 10 and 11 to 50.
 - Industries, Software Development, IT Services and IT Consulting, Technology Information and Internet, Industrial
   Machinery Manufacturing and other Manufacturing, Wholesale, Engineering Services, Transportation and Logistics,
