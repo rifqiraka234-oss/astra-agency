@@ -5,6 +5,10 @@ contact. 84 accepts show as waiting in lemlist, 49 of them are already closed in
 strong angle, do not contact). These are the other 35. Rank by `docs/gtm-plan.md` section 1. Every lead still gets the
 full research gate, including `still there:` and `budget:`, and the score is a candidate order, never a verdict.
 
+**Geography, Raka 25 Oct.** The Netherlands, Flanders, Germany, Austria, Switzerland, the UK and Ireland are in.
+France, Wallonia and French speaking Brussels wait for his call on a French message. The three Belgian leads below are
+all Flemish (Antwerp, Leuven, Sint-Niklaas).
+
 **Pitch within 2 days of the accept.** Simtec and EQ Nexus accepted on 23 Oct, so they're first.
 
 | # | Who | Company | Country | lemlist industry | Size | Days since accept | Queue | Do |
@@ -28,7 +32,7 @@ full research gate, including `still there:` and `budget:`, and the score is a c
 | 17 | Caroline Platt | Just Coffee Chester | United Kingdom | Accommodation Services | 1-10 | 2 | none | Consumer, don't pitch |
 | 18 | Phoebe Morris | Legally Influenced | United Kingdom | Professional Services | 1-10 | 11 | RESEARCH_QUEUED | Agency, recruiting or coaching words, check what they sell, likely don't pitch. Raka queued it on 23 Oct, so it stays his call |
 | 19 | Jessica Lazarus | Legal Unmasked | United Kingdom | Professional Services | 1-10 | 16 | RESEARCH_QUEUED | Agency, recruiting or coaching words, check what they sell, likely don't pitch. Raka queued it on 23 Oct, so it stays his call |
-| 20 | Robin Ibens | New World Architects | Belgium | Professional Services | 1-10 | 21 | RESEARCH_QUEUED | France or Belgium, hold for Raka's call on French. Raka queued it on 23 Oct, so it stays his call |
+| 20 | Robin Ibens | New World Architects | Belgium (Leuven, Flanders) | Professional Services | 1-10 | 21 | RESEARCH_QUEUED | Flanders is in scope (Raka, 25 Oct). Professional services, so the AI workflow shape. Raka queued it on 23 Oct |
 | 21 | Cristian Andriesei | Eldy | Switzerland | Hospitals and Health Care | 1-10 | 94 | RESEARCH_QUEUED | Old accept, a light chat at most. Raka queued it on 23 Oct, so it stays his call |
 | 22 | Louise Kean-Wood | Beyond Mountains: Creative Pioneers | United Kingdom | Professional Services | 1-10 | 54 | RESEARCH_QUEUED | Agency, recruiting or coaching words, check what they sell, likely don't pitch. Raka queued it on 23 Oct, so it stays his call |
 | 23 | Giulia Restivo | Baldoria Paris | France | Administrative and Support Services | 1-10 | 12 | RESEARCH_QUEUED | Agency, recruiting or coaching words, check what they sell, likely don't pitch. Raka queued it on 23 Oct, so it stays his call |
@@ -46,6 +50,6 @@ full research gate, including `still there:` and `budget:`, and the score is a c
 | 35 | Simon Chuinard | Le Stud’, Pilates Reformer Wellness | France | Entertainment Providers | 1-10 | 54 | RESEARCH_QUEUED | Consumer, don't pitch. Raka queued it on 23 Oct, so it stays his call |
 
 The score behind the order. +3 B2B industry, +1 professional services, minus 3 consumer, +2 English speaking country,
-minus 2 France or Belgium, minus 4 agency, marketing, recruiting or coaching words in the name or description, minus 2
+minus 2 France or Belgium (Flanders is now in scope, so read the Belgian rows by place), minus 4 agency, marketing, recruiting or coaching words in the name or description, minus 2
 charity or foundation words, +1 for 11 to 200 staff, minus 1 for an accept older than 30 days. Script,
 `review/target.py` and the ranking step in the 25 Oct session scratchpad.
