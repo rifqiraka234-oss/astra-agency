@@ -3,6 +3,20 @@
 > EDITED 25 Oct 08:15 UTC. "today" dropped from the LinkedIn thanks, it was written for 22 Oct and the email now waits
 > on the prototype for marketing Raka asked for on 23 Oct (state/raka_reminders.md), which isn't built yet.
 
+> EDITED 25 Oct ~08.22 UTC on Raka's "can we make the draft for keypro.nl. and check our last threads with him".
+> - LinkedIn thread pulled 08.18 UTC, 5 items, all pages, control 6. Our 14 Oct opener, our 17 Oct bump, his three
+>   messages of 22 Oct 13:35 UTC. Nothing since.
+> - Gmail searched for keypro, Hooft, ReShare, hooftenpetiet and Willem Straat in all folders, nothing ever sent to or
+>   from keypro.nl or hooftenpetiet.nl. Control, the same search finds the Acquitas and HotGreen proposals in Sent.
+> - Claims rechecked 08.19 UTC, example.com 200. reshareliving.com "Deze site is in ontwikkeling", hooftenpetiet.nl
+>   desktop render opened, six lime green buttons over a living room photo (wk-hp-desktop.png).
+> - New fact, the KeyPro press page names him "Willem Straat, oprichter & mede-eigenaar KeyPro"
+>   (https://www.keypro.nl/in-de-media/keypro-en-hooft-petiet-bundelen-krachten-binnen-reshare-living-group/),
+>   so marketing@keypro.nl is his own company's team.
+> - The email sits as a Gmail DRAFT, id r3040318523259070641, to marketing@keypro.nl, NOT SENT. The first version had
+>   "reshareliving.com" in it and Gmail turned it into a google.com redirect link, so the site is named in words.
+> - Order, the email first, then the LinkedIn thanks, which now says it has been sent.
+
 ### Willem Straat, Hooft & Petiet (ReShare Living Group), ctc_XDgqhRAfzxcTmGKhZ
 
 > NOT SENT. He answered our 17 Oct bump at 13:35 UTC with three messages, "Vriendelijk bedankt, Raka", "Please sent
@@ -21,7 +35,7 @@
 
 REPLY
 ```
-Thanks Willem, will do! I'll send it over to marketing@keypro.nl.
+Thanks Willem, I've just sent it over to marketing@keypro.nl!
 ```
 
 EMAIL to marketing@keypro.nl, subject "Hooft & Petiet and ReShare websites, at Willem's request"
@@ -31,7 +45,7 @@ Hi there,
 
 Willem Straat asked me to send this to you.
 
-I got in touch with him because the Hooft & Petiet homepage opens with six lime green buttons over a photo, and reshareliving.com still says the site is in development. So a developer checking the group likely sees a business that looks older and less finished than it is.
+I got in touch with him because the Hooft & Petiet homepage opens with six lime green buttons over a photo, and the ReShare Living Group site still says it's in development. So a developer checking the group likely sees a business that looks older and less finished than it is.
 
 I'd suggest a modernised Hooft & Petiet site and a finished ReShare site, built as one family, with your projects, rentals and quote request up front.
 
