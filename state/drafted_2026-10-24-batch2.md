@@ -1,3 +1,4 @@
+<!-- SENT 2026-10-25 08.16 UTC on Raka's "send.", Sebastian act_tSuzssG25n9rfLyYY, Matthew act_9NYDLPiQ3ajgJMrFg, Beckie act_7D3iLtstGW3jxJMpN. GATE ARCHIVED. Do not send any of them again. -->
 # Drafts, 2026-10-24, batch 2 of Raka's angle calls. NOT SENT, waiting on Raka's word
 
 Raka, 2026-10-23, word for word: "matthew tyas -> website to have more landings? / beckie taylor -> more beautiful, simple,
