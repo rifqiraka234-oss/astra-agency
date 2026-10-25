@@ -248,6 +248,48 @@ So before block two is written, the gap has to survive the owner's own answer.
    SKETCH in a file dated 2026-10-14 or later without all three parts, without a URL in the third, or
    with "can't rule out", "unknown" or "unclear" in it.
 
+### 0G. What the 42 noes taught (GTM review, 2026-10-25)
+
+Every no from July to 25 Oct was reread next to the pitch that caused it
+(`docs/reviews/2026-10-25-gtm-outreach-review.md`). About 19 of 42 said no because our read of their business was wrong,
+not because they didn't want help. 0B, 0C, 0D and 0F already cover part of this. These are the checks that still let
+noes through, each with the lead it would have saved.
+
+1. **They still hold the job, checked outside lemlist.** Craig had resigned from the chambers. Clément had left the club,
+   and his 15 Oct gate rested only on lemlist's copy of his profile, because his LinkedIn returned 999 and the club's own
+   site was never opened for its current director. lemlist keeps a profile the day it was scraped. So the role is
+   confirmed on the company's own team, contact or about page, the register, or a post of theirs from the last three
+   months. The gate carries `still there: <role, where it says so, date read> | <URL that isn't lemlist>`, and
+   check-drafts fails a first message dated 2026-10-26 or later without it. If nothing outside lemlist confirms it, the
+   verdict is BLOCKED_NEEDS_INFO.
+2. **A thin page may be a placeholder for something bigger.** Cédric's one photo page had a full Shopify store and an
+   agency behind it. Tatiana's GoDaddy page was a throwaway test, her least important venture. Before pitching a one
+   page site, a builder template or a single photo page, look for the real shop or project (Instagram bio link, their
+   LinkedIn posts, another domain, a crowdfunding page). If it could be a placeholder, the page isn't the angle.
+3. **Prices and booking hide in configurators, calculators, PDFs and widgets.** Tentopia had a configurator with prices
+   and we wrote "no guide price anywhere". Click through every interactive part rendered, search the rendered page and
+   its scripts for price words in their language (€, prijs, Preis, prix), and open the PDFs, before writing that
+   something is missing.
+4. **A full business isn't losing bookings.** Kristof's 2027 weekends from March to August were already full, 80% of his
+   guests speak Dutch and half book direct. Open their availability before writing "booking elsewhere" or "losing
+   bookings". When they're full, the pain is margin, staff or admin, never demand.
+5. **Pains inside the business can't be seen from outside.** Terry already had it in his platform, Marlies had "already
+   done" it, Wessel invested years ago, Denis had proof of concept, Johannes's portal was about to launch. If the gap is
+   about how they work inside, read their posts and job ads from the last three months for it being in hand. When it
+   still can't be seen, use the AI "did you know" shape, which names a sourced cost of their role instead of a claim about
+   them.
+6. **Who they sell to comes before what's missing.** B2B price lists, credit accounts, NDA clients, word of mouth and
+   stylists (Steven Prins, Intemax, REVVY, House of Wood). 0F's "a model, not a gap" trap, and 5 of the 19.
+7. **Their verb, never ours.** Section 1B. Sylvia asked never to be contacted again over "promises".
+8. **Tone.** No "looks like 2008", no crawler nitpicks, and never a third message inside seven days (Jelle, Michaël,
+   Luke). One first message, one bump, then quiet.
+9. **The send side.** Our domain lands in spam, so email only from Raka's Gmail until SPF, DKIM and DMARC are set on
+   astraagency.nl. Two sessions share the inbox, so the thread is pulled in the minute before every send.
+
+**From 26 Oct half of all first messages are SKETCHB**, the opener A/B test Raka approved on 25 Oct ("lets try"). The
+contactId picks the arm, check-drafts enforces it, and `tools/ab-count.py` counts it.
+`docs/experiments/2026-10-26-opener-ab.md`.
+
 ---
 
 ## 1. Sending
