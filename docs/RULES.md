@@ -781,6 +781,34 @@ numbers reopened on the day it ships. The recipe and every hiccup are the last s
 https://astra-hertling-presence.netlify.app/ before building the next one.
 
 
+**SAAVEDRA V3 IS THE PLAN AND PROTOTYPE TO MAKE EVERY TIME (Raka, 2026-10-25).** His words on seeing it, "Brooo
+amazing! Write in the mds to always make these kind of plans and prototypes." It came from his note on the build
+before it, "be more creative in animations, videos, photos, things, graphs, whatever, think about the DESIRED UX UI
+user action and how the whole flow guides them". Every prototype from now on does all of this.
+1. **The flow as a table before any code** (Saavedra's is research/flow.md). One row per step, the visitor's question
+   at that point, what they see and do, and the moment that answers it. The moments come out of the questions.
+2. **One state carried down the page.** The action the site exists for (a quote, a booking, a check) is built by the
+   visitor as they scroll. Every control writes one state and every display reads it, so the hero number, the scene,
+   the totals, a bar at the bottom and the form all agree, and the form arrives already filled in with the whole
+   request, in the fallback mail too. Nothing is typed twice.
+3. **The hero is the first input.** Saavedra opens on "Vous êtes combien ?" with a giant number to drag, over their own
+   sun, which turns with it. The headline asks the first question and the visitor answers it on the spot.
+4. **Show the thing they'd buy being made**, at their own published prices, labelled as an estimate. Boxes filling a
+   wooden table and a ticket printing the order, not a price list.
+5. **Graphs are controls.** The per head rows switch the order, the plan's minimum order wall is a slider. A chart the
+   visitor can move gets read, and every number in it is sourced or computed from sourced numbers.
+6. **All their pictures, and film only where it means something.** One of their photos for each step of the story,
+   licence checked loops masked into their own marks (fire in their sun and their arch), never captioned or claimed as
+   theirs, played only on screen, never under reduced motion or data saver, their own footage asked for.
+7. **The finish is a moment too.** The bar carrying the action leaves before the form, and sending ends on something
+   that belongs to the story (the ticket going up on a kitchen rail, stamped).
+8. **The plan beside it**, on its own site in Astra's voice, with graphs a visitor can move and screenshots retaken
+   from the final build.
+9. **QA that proves the sums.** A test that works the totals out on its own and compares them with the page, a film
+   test, and a planted failure for every test so a pass means something.
+Open https://astra-saavedra-prototype.netlify.app/entreprises/ and https://astra-saavedra-plan.netlify.app/ before
+building the next one. The recipe and every hiccup are in the Saavedra section of `docs/build-and-deck.md`.
+
 Read Stage L of `docs/prototype-build-spec.md` before any build. Verify by cold load with
 error capture, never by forcing reveal state. Every image fetched and byte matched. Every
 section screenshotted and actually looked at. Never caption a photograph as the client's

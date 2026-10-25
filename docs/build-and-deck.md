@@ -711,6 +711,10 @@ handover, state/prototypes/saavedra.
 
 ### v3, the same evening. One order carried down the page
 
+**Raka signed it off on 25 Oct, "Brooo amazing! Write in the mds to always make these kind of plans and prototypes."**
+So this is the recipe to repeat, written into `docs/RULES.md` section 5. The delivery went out the same afternoon
+without the "spent the whole day" line, which he cut and which is gone from the skeleton in CLAUDE.md.
+
 Raka on the restyled build, "be more creative in animations, videos, photos, things, graphs, whatever, think about the
 DESIRED UX UI user action and how the whole flow guides them". What worked, so it gets repeated.
 
