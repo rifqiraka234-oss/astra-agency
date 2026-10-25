@@ -39,6 +39,7 @@ Delivered 22 Oct 16:12 UTC, two things, the Hertling v3 pattern.
   only start my days at the office at 10". Raka, 25 Oct 08:48 UTC, "Friday at 10 works great, Lisanne! What's the best
   email to send the invite to?"
 - 25 Oct 11:06 UTC, "Lisanne@dejongvanhommerig.com". Invite sent 12:05 UTC.
+- Raka, 25 Oct 12:08 UTC, "Thanks Lisanne, I've just sent the invite to your email. See you Friday at 10!"
 
 ## For the call
 
