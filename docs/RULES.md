@@ -739,6 +739,19 @@ pill. Eleven sections on a home page. Every build instead starts from premium si
 "would this pass for a 25,000 euro site from a top studio, or a 500 euro template". Photography carries the colour,
 the brand colour is a whisper, buttons and type are sized and placed on purpose, and less is on the page.
 
+**SIMPLE IS NOT PLAIN. THE FLOW AND THE WOW, BOTH, EVERY TIME (Raka, 2026-10-25, the same afternoon).** On v2, which
+followed the rule above to the letter, "it feels like it's so plain and basic. What happened to like using all the
+pictures and animations and gradients and being like 10 times more extra creative? … Now you've done the flow, but not
+the artistic value. It needs to have a wow effect … something that they've never seen before and that we've never seen
+before in terms of animations, graphics, shapes, … gradients, colors. Search it up." So read the rule above this way.
+**"Break out of gradients" means reinvent them, never delete them.** The ban is on the generic AI versions (a purple to
+blue hero, a glow behind a card, a dark overlay on a photo), not on gradients, motion, colour or shape. Every build
+carries both halves. The flow, the visitor and the one action, from the rule above. And the art, at least one signature
+moment nobody has seen, built from the lead's own story (their mark, their photos, their promise), plus art directed
+gradients, real motion, shape and full use of their pictures. Research for it is award level work rendered that day
+(Awwwards, FWA, the studios behind them), not only premium brand sites. If a build is calm and correct but nobody would
+screenshot it, it isn't done.
+
 **EVERY PROTOTYPE STARTS AT THE QUALIGRAF BAR (Raka, 2026-09-29).** His words on Ciara's first
 build, "it looks like something she can do herself…come on what did i tell you before to start and
 keep doing when we created the prototype for qualigraf?" A clean reskin of the lead's own copy is
