@@ -1,5 +1,8 @@
 # Willem Straat, 22 Oct. NOT SENT, waiting on Raka's word
 
+> EDITED 25 Oct 08:15 UTC. "today" dropped from the LinkedIn thanks, it was written for 22 Oct and the email now waits
+> on the prototype for marketing Raka asked for on 23 Oct (state/raka_reminders.md), which isn't built yet.
+
 ### Willem Straat, Hooft & Petiet (ReShare Living Group), ctc_XDgqhRAfzxcTmGKhZ
 
 > NOT SENT. He answered our 17 Oct bump at 13:35 UTC with three messages, "Vriendelijk bedankt, Raka", "Please sent
@@ -18,7 +21,7 @@
 
 REPLY
 ```
-Thanks Willem, will do! I'll send it over to marketing@keypro.nl today.
+Thanks Willem, will do! I'll send it over to marketing@keypro.nl.
 ```
 
 EMAIL to marketing@keypro.nl, subject "Hooft & Petiet and ReShare websites, at Willem's request"
