@@ -448,6 +448,7 @@ def rs_page():
 </div></section>
 
 <div class="forest-h" aria-hidden="true"></div>
+<div class="forest-wrap">
 <section class="sec voice forest dark" data-tone="forest" aria-label="{t('Willem Straat over ReShare', 'Willem Straat on ReShare')}"><div class="wrap">
 <blockquote class="fill">{t('“We bouwen al jaren aan een alternatief voor kopen en weggooien, om die enorme afvalberg kleiner te maken.”', '“For years we’ve been building an alternative to buying and throwing away, to make that huge mountain of waste smaller.”')}</blockquote>
 <p class="by">{t('Willem Straat, oprichter en een van de eigenaren van KeyPro, bij de start van ReShare Living Group', 'Willem Straat, KeyPro’s founder and one of its owners, at the launch of ReShare Living Group. Translated from Dutch.')}</p>
@@ -458,6 +459,7 @@ def rs_page():
 <a class="mail" href="mailto:contact@reshareliving.com">contact@reshareliving.com</a>
 <div class="contact-more"><a class="btn" href="https://www.keypro.nl/" rel="noopener">KeyPro</a><a class="btn" href="{other('hp')}">Hooft &amp; Petiet</a></div>
 </div></section>
+</div>
 </main>
 <footer class="ftr forest" data-tone="forest"><div class="wrap">
 <div class="ftr-g">

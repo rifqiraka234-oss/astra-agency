@@ -709,6 +709,13 @@ handover, state/prototypes/saavedra.
 | Netlify rewrites the form tag on pages with a form | Live hashing will show those pages as different. Diff them, the form tag should be the only change |
 | Raka's "no Claude look" rule landed on the branch mid build, and the first deploy still had pill buttons with arrows, floating stickers, glows, photo fades, a soft shadow form card and a three step block | Pull the branch before the first deploy as well as at the start, because rules change during the day. Then check the build against RULES section 5's banned list item by item before anyone sees it |
 
+**Found in the final live pass (H&P v3, 25 Oct).** A radial glow whose visible area crosses a section's top or bottom
+edge leaves a faint straight seam where the next section starts, so keep every glow's visible radius inside its section,
+or put adjacent dark sections in one wrapper with one background. A three column form bar (two fields and a button)
+cut "Bijvoorbeeld 24" at 1440, a placeholder is content and needs its full width at every size. And a live sweep can
+fail one load because the proxy aborts a stylesheet (it arrives as text/plain), so before calling the site broken,
+fetch the file directly several times and reload the page, Netlify served text/css every time.
+
 ### v3, the same evening. One order carried down the page
 
 Raka on the restyled build, "be more creative in animations, videos, photos, things, graphs, whatever, think about the
