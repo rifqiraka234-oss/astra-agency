@@ -1,0 +1,159 @@
+[
+ {
+  "web": "p-breaking",
+  "from": "13-photo-hands-breaking-empanada-wood-table.jpg",
+  "src_size": [
+   2500,
+   2659
+  ],
+  "w1600": [
+   1600,
+   1702
+  ]
+ },
+ {
+  "web": "p-window",
+  "from": "14-photo-hands-holding-empanada-window.jpg",
+  "src_size": [
+   2500,
+   2648
+  ],
+  "w1600": [
+   1600,
+   1695
+  ]
+ },
+ {
+  "web": "p-tray",
+  "from": "15-photo-three-empanadas-tray-sauce.jpg",
+  "src_size": [
+   2500,
+   2682
+  ],
+  "w1600": [
+   1600,
+   1304
+  ],
+  "crop": "top 24% removed, a third party bottle label (imagery agent flag)"
+ },
+ {
+  "web": "p-shopfront",
+  "from": "17-photo-man-phone-eating-blue-shopfront.jpg",
+  "src_size": [
+   2500,
+   3750
+  ],
+  "w1600": [
+   1600,
+   2400
+  ]
+ },
+ {
+  "web": "p-pile",
+  "from": "18-photo-pile-of-opened-empanadas.jpg",
+  "src_size": [
+   2500,
+   3750
+  ],
+  "w1600": [
+   1600,
+   2400
+  ]
+ },
+ {
+  "web": "p-street",
+  "from": "19-photo-man-biting-empanada-street.jpg",
+  "src_size": [
+   2500,
+   3750
+  ],
+  "w1600": [
+   1600,
+   2400
+  ]
+ },
+ {
+  "web": "p-ledge",
+  "from": "20-photo-three-empanadas-terracotta-ledge.jpg",
+  "src_size": [
+   2500,
+   2829
+  ],
+  "w1600": [
+   1600,
+   1811
+  ]
+ },
+ {
+  "web": "p-pulling",
+  "from": "21-photo-hands-pulling-empanada-apart.jpg",
+  "src_size": [
+   2500,
+   3750
+  ],
+  "w1600": [
+   1600,
+   2400
+  ]
+ },
+ {
+  "web": "p-tee",
+  "from": "22-photo-tshirt-back-menos-palabras.jpg",
+  "src_size": [
+   2500,
+   3750
+  ],
+  "w1600": [
+   1600,
+   2400
+  ]
+ },
+ {
+  "web": "p-serving",
+  "from": "23-photo-tattooed-arm-serving-tray.jpg",
+  "src_size": [
+   2500,
+   3750
+  ],
+  "w1600": [
+   1600,
+   2400
+  ]
+ },
+ {
+  "web": "p-socios",
+  "from": "27-screenshot-socios-del-saavedra-club.png",
+  "src_size": [
+   542,
+   706
+  ],
+  "w1600": [
+   542,
+   706
+  ]
+ },
+ {
+  "web": "p-poster",
+  "from": "28-screenshot-poster-menos-palabras.png",
+  "src_size": [
+   540,
+   712
+  ],
+  "w1600": [
+   540,
+   712
+  ]
+ },
+ {
+  "web": "p-bag",
+  "from": "30-screenshot-paper-bag-mockup.png",
+  "src_size": [
+   1354,
+   1280
+  ],
+  "w1600": [
+   1354,
+   1280
+  ]
+ }
+]

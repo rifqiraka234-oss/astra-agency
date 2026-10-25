@@ -1,0 +1,258 @@
+# 1. counts
+queued 58 {'client': 1, 'comp_arg': 8, 'comp_events': 5, 'catering': 13, 'story': 26, 'motion': 5}
+rendered 56 {'client': 1, 'comp_arg': 8, 'comp_events': 5, 'catering': 12, 'story': 25, 'motion': 5}
+walled 2 [('shakeshack_co_uk_catering', 403, 'Attention Required! | Cloudflare'), ('joejuice_com', 429, 'Vercel Security Checkpoint')]
+obscured (rendered, excluded from visual counts) 4 bigmammagroup_com_fr_privatisation, bigmammagroup_com, pipandnut_com, francomanca_co_uk
+replaced URLs [('https://feedr.co/', '->', 'https://feedr.co/en-gb'), ('https://www.pret.co.uk/en-GB/catering', '->', 'https://www.pret.co.uk/en-GB/platters'), ('https://shakeshack.com/catering', '->', 'https://www.shakeshack.co.uk/catering/')]
+pass {'pass1': 35, 'pass2': 15, 'pass3': 8}
+hidden promo text (pass 3) [('bigmammagroup_com_fr_privatisation', ['RÉSERVER NOS RESTAURANTS NOSTRA STORIA RÉSERVER COMMANDER PRIVATISER CARTE CADEA']), ('flybyjing_com', ['Unlock 20% Off To claim your discount, tell us: How spicy do you like it? Fire H']), ('drinkghia_com', ["YOU'VE GOT A MYSTERY DISCOUNT ON YOUR FIRST ROUND Have you tried Ghia yet? YES, "]), ('bigmammagroup_com', ['BOOK A TABLE OUR RESTAURANTS NOSTRA STORIA BOOK A TABLE PRIVATE HIRE GIFT VOUCHE']), ('middaysquares_com', ['Take $5 Off Your First Order Where should we send it? Get Mine Here! Hate spam? ']), ('bachans_com', ['FREE RECIPE E-BOOK Plus, be the first to know about new products, exclusive offe'])]
+subpages attached 24
+
+# 2a. visual patterns (frames), per group, over rows with clean frames
+## client n=1
+  illus {'heavy': 1} | heavy: saavedraparis_fr
+  layout {'edge': 1}
+  collage 1 saavedraparis_fr
+  ticker 0 
+  poster type 1 saavedraparis_fr
+  photo subjects {'food': 1, 'people': 1}
+## comp_arg n=8
+  illus {'none': 7, 'accent': 1} | heavy: 
+  layout {'onescreen': 3, 'edge': 4, 'mixed': 1}
+  collage 1 anahi_paris_com
+  ticker 0 
+  poster type 1 asadoparis_com
+  photo subjects {'food': 7, 'people': 3, 'venue': 2}
+## comp_events n=4
+  illus {'accent': 3, 'none': 1} | heavy: 
+  layout {'mixed': 3, 'edge': 1}
+  collage 0 
+  ticker 1 bouillonlesite_com_privatisation
+  poster type 1 bouillonlesite_com_privatisation
+  photo subjects {'venue': 1, 'food': 3, 'people': 1}
+## catering n=12
+  illus {'accent': 6, 'none': 5, 'heavy': 1} | heavy: baolondon_com_private_hire
+  layout {'edge': 6, 'mixed': 3, 'cards': 3}
+  collage 1 pizzapilgrims_co_uk_pizza_pilgrims_catering
+  ticker 1 pizzapilgrims_co_uk_pizza_pilgrims_catering
+  poster type 1 pizzapilgrims_co_uk_pizza_pilgrims_catering
+  photo subjects {'food': 11, 'people': 3, 'venue': 1}
+## story n=22
+  illus {'heavy': 6, 'accent': 11, 'none': 5} | heavy: graza_co, eatfishwife_com, liquiddeath_com, magicspoon_com, tonyschocolonely_com, micheletaugustin_com
+  layout {'edge': 14, 'unknown': 1, 'mixed': 5, 'cards': 2}
+  collage 9 omsom_com, eatfishwife_com, oatly_com, flybyjing_com, magicspoon_com, sietefoods_com, fiveguys_fr, drinkpoppi_com, micheletaugustin_com
+  ticker 7 graza_co, brightland_co, flybyjing_com, drinkghia_com, takearecess_com, fiveguys_fr, drinkpoppi_com
+  poster type 9 graza_co, oatly_com, liquiddeath_com, flybyjing_com, drinkghia_com, fiveguys_fr, tonyschocolonely_com, drinkpoppi_com, bachans_com
+  photo subjects {'people': 11, 'product': 19, 'food': 7, 'venue': 3}
+## motion n=5
+  illus {'accent': 1, 'heavy': 1, 'none': 3} | heavy: driscolls_com
+  layout {'edge': 2, 'onescreen': 3}
+  collage 2 drinkcann_com, driscolls_com
+  ticker 1 drinkcann_com
+  poster type 2 drinkcann_com, und_ny_com
+  photo subjects {'product': 1, 'people': 2, 'food': 1, 'video': 1, '3d': 2}
+## all non-client clean n=51: illus {'none': 21, 'accent': 22, 'heavy': 8} layout {'onescreen': 6, 'edge': 27, 'mixed': 12, 'cards': 5, 'unknown': 1} collage 13 ticker 10 poster 14
+
+# 2b. DOM fingerprints per group (rendered rows)
+## client n=1
+  video>0 0 
+  webgl>0 0 
+  pinned sticky scene>0 0 
+  marquee class in DOM>0 0 
+  scroll mutations>500 1 [('saavedraparis_fr', 610)]
+  libs {'squarespace': 1}
+  clip>0 1  blend>0 0  blur>0 1
+  big rounded cards>=3 0  fullBleed bands>=3 1
+  median height 4383  median words 79  median imgs 40  median svgs 15
+  doc height 900 (inner scroller or one screen) 
+  pdf links>0 0 
+  h1 faces [('MTMPALMA', 1)]
+## comp_arg n=8
+  video>0 1 anahi_paris_com
+  webgl>0 0 
+  pinned sticky scene>0 0 
+  marquee class in DOM>0 0 
+  scroll mutations>500 1 [('anahi_paris_com', 959)]
+  libs {'webflow': 2, 'Swiper': 1, 'elementor': 1, 'gsap': 1, 'ScrollTrigger': 1, 'Lenis': 1}
+  clip>0 4  blend>0 1  blur>0 0
+  big rounded cards>=3 0  fullBleed bands>=3 4
+  median height 3474.5  median words 322.0  median imgs 18.5  median svgs 0.0
+  doc height 900 (inner scroller or one screen) volver_paris_com
+  pdf links>0 1 anahi_paris_com
+  h1 faces [('Radion', 1), ('Uomo condensed', 1), ('copperplate', 1), ('Montserrat', 1), ('Oswald', 1), ('Open Sans', 1), ('Bebas', 1), ('Playfair Display', 1)]
+## comp_events n=5
+  video>0 0 
+  webgl>0 0 
+  pinned sticky scene>0 0 
+  marquee class in DOM>0 1 bouillonlesite_com_privatisation
+  scroll mutations>500 1 [('cojean_fr_cojean_entreprise', 675)]
+  libs {'gsap': 2, 'elementor': 2, 'Swiper': 1, 'wordpress': 1}
+  clip>0 4  blend>0 0  blur>0 0
+  big rounded cards>=3 0  fullBleed bands>=3 2
+  median height 4894  median words 460  median imgs 40  median svgs 17
+  doc height 900 (inner scroller or one screen) 
+  pdf links>0 3 cojean_fr_cojean_entreprise, maison_kayser_com_evenements_entreprises_entreprises, pokawa_com_pokawa_pro
+  h1 faces [('Lora', 1), ('Point', 1), ('InterFace', 1), ('Calibre-Black', 1), ('Poppins', 1)]
+## catering n=12
+  video>0 2 ezcater_com, feedr_co_en_gb
+  webgl>0 0 
+  pinned sticky scene>0 1 lepainquotidien_com_us_en_catering
+  marquee class in DOM>0 3 foodcheri_com_plateau_repas, feedr_co_en_gb, pizzapilgrims_co_uk_pizza_pilgrims_catering
+  scroll mutations>500 3 [('sweetgreen_com_catering', 1615), ('feedr_co_en_gb', 723), ('gails_com_pages_office_catering', 583)]
+  libs {'gsap': 4, 'ScrollTrigger': 2, 'webflow': 2, 'Swiper': 1, 'shopify': 2, 'Lenis': 1}
+  clip>0 6  blend>0 0  blur>0 1
+  big rounded cards>=3 5  fullBleed bands>=3 7
+  median height 4610.0  median words 640.5  median imgs 28.0  median svgs 22.5
+  doc height 900 (inner scroller or one screen) 
+  pdf links>0 6 shop_popchef_com_shop_plateaux_repas_entreprise, foodcheri_com_plateau_repas, pret_co_uk_en_GB_platters, sweetgreen_com_catering, gails_com_pages_office_catering, pizzapilgrims_co_uk_pizza_pilgrims_catering
+  h1 faces [('MontserratBold', 1), ('LTC Globe Gothic', 1), ('Libre Franklin Variable', 1), ('Montserrat ✅', 1), ('Star Serif', 1), ('Grenette', 1), ('BasisGrotesque', 1), ('druk', 1), ('TradeGothicLTCom', 1), ('Pizza Pilgrims', 1), ('Brown', 1), ('Riforma', 1)]
+## story n=25
+  video>0 10 graza_co, liquiddeath_com, drinkghia_com, magicspoon_com, takearecess_com, bigmammagroup_com, drinkpoppi_com, middaysquares_com, pipandnut_com, francomanca_co_uk
+  webgl>0 0 
+  pinned sticky scene>0 3 diasporaco_com, dishoom_com, takearecess_com
+  marquee class in DOM>0 7 graza_co, brightland_co, drinkghia_com, takearecess_com, fiveguys_fr, drinkpoppi_com, francomanca_co_uk
+  scroll mutations>500 10 [('pipandnut_com', 6697), ('brightland_co', 3645), ('magicspoon_com', 2234), ('bachans_com', 2119), ('drinkolipop_com', 1177), ('diasporaco_com', 1126), ('eatfishwife_com', 1088), ('micheletaugustin_com', 1052), ('francomanca_co_uk', 782), ('drinkghia_com', 682)]
+  libs {'gsap': 8, 'lottie': 1, 'shopify': 14, 'framer': 2, 'Swiper': 6, 'splide': 2, 'Lenis': 1, 'wix': 1, 'ScrollTrigger': 1}
+  clip>0 13  blend>0 2  blur>0 5
+  big rounded cards>=3 7  fullBleed bands>=3 15
+  median height 6651  median words 606  median imgs 77  median svgs 41
+  doc height 900 (inner scroller or one screen) omsom_com, oatly_com
+  pdf links>0 5 flybyjing_com, bigmammagroup_com, fiveguys_fr, micheletaugustin_com, pipandnut_com
+  h1 faces [('ITC Garamond Condensed', 1), (None, 1), ('Recoleta', 1), ('Margo Pro Regular', 1), ('Acumin Pro', 1), ('CircularXXWeb', 1), ('JeanLuc', 1), ('p22-mackinac-pro', 1), ('FHA Condensed French NC', 1), ('Poppins', 1), ('system_ui', 1), ('cheltenhamBT', 1)]
+## motion n=5
+  video>0 2 drinkcann_com, und_ny_com
+  webgl>0 1 lusion_co
+  pinned sticky scene>0 1 und_ny_com
+  marquee class in DOM>0 0 
+  scroll mutations>500 2 [('und_ny_com', 1160), ('lusion_co', 503)]
+  libs {'shopify': 1, 'gsap': 2, 'THREE': 2}
+  clip>0 2  blend>0 3  blur>0 1
+  big rounded cards>=3 0  fullBleed bands>=3 2
+  median height 900  median words 485  median imgs 21  median svgs 41
+  doc height 900 (inner scroller or one screen) und_ny_com, lusion_co, igloo_inc
+  pdf links>0 1 driscolls_com
+  h1 faces [('Gotham - Medium', 1), ('gelicaSemiBold', 1), ('SuisseReg', 1), ('Aeonik', 1), (None, 1)]
+
+# 2c. palettes (DOM bg by area | screenshot pixels), all rendered rows
+  client      saavedraparis_fr                             dom #bde3fa #034a91 #fde2ce #e5e3df      shot #b0f0f0 #105090 #101010 #b0d0f0
+  comp_arg    clasicoargentino_com                         dom #ffffff #dddddd                      shot #f0f0f0 #707070 #b09070 #909090
+  comp_arg    asadoparis_com                               dom #dddddd #fefefe                      shot #f0f0f0 #b0b0b0 #503030 #503010
+  comp_arg    volver_paris_com                             dom #ffffff #61d0f2                      shot #f0f0f0 #d09050 #d0b090 #d09070
+  comp_arg    carnar_fr_fr                                 dom #7f2629 #ffffff #010101 #000000      shot #703030 #101010 #903030 #f0f0f0
+  comp_arg    biondi_restaurant_fr                         dom #ffffff #1e1f25 #000000 #333333      shot #f0f0f0 #101010 #103030 #301010
+  comp_arg    resto_unico_com                              dom #ffffff #091523 #000000 #f4ece0      shot #f0f0f0 #101030 #f07010 #101010
+  comp_arg    loco_restaurant_fr                           dom #f3e3c9 #3f3a32 #f7f7f7 #ffffff      shot #f0f0d0 #101010 #f0f0f0 #301010
+  comp_arg    anahi_paris_com                              dom #ffffff #f7f7f7 #303133 #000000      shot #f0f0f0 #909090 #303030 #d0d0d0
+  comp_events bigmammagroup_com_fr_privatisation           dom #321108 #fffdf4 #ffffff              shot #707070 #f0f0f0 #101010 #301010
+  comp_events bouillonlesite_com_privatisation             dom #ffffff #111111 #d61217 #f9fafb      shot #f0f0f0 #d01010 #101010 #301010
+  comp_events cojean_fr_cojean_entreprise                  dom #8ac2eb #ffffff #f7f6f1 #6ab1e2      shot #f0f0f0 #90d0f0 #70b0d0 #d0d0d0
+  comp_events maison_kayser_com_evenements_entreprises_ent dom #f5ebe4 #ffffff #ff6955              shot #f0f0f0 #f07050 #d0d0d0 #b0b0b0
+  comp_events pokawa_com_pokawa_pro                        dom #172672 #fff7ec #dfdfdf #2431eb      shot #f0f0f0 #3030f0 #103070 #d0d0d0
+  catering    shop_popchef_com_shop_plateaux_repas_entrepr dom #f8f8f8 #fcf7e2 #ffffff #631248      shot #f0f0f0 #701050 #f03030 #d0d0d0
+  catering    foodcheri_com_plateau_repas                  dom #ffffff #121010 #f5f1ea #f8f7f7      shot #f0f0f0 #101010 #f0f0d0 #d0d0d0
+  catering    ezcater_com                                  dom #003d24 #d7fcdc #ffffff #00e15d      shot #f0f0f0 #103030 #d0f0d0 #705030
+  catering    feedr_co_en_gb                               dom #f7f8f9 #ffffff #1e236e #ffd65f      shot #f0f0f0 #f0d070 #d0d0d0 #707070
+  catering    pret_co_uk_en_GB_platters                    dom #ffffff #faf9fa #9f1b32              shot #f0f0f0 #d0d0d0 #b0b0b0 #f0d0d0
+  catering    sweetgreen_com_catering                      dom #ffffff #00473c #d8e5d6 #000000      shot #f0f0f0 #d0f0d0 #105030 #d0d0d0
+  catering    gails_com_pages_office_catering              dom #f5f5ed #edebda #cf2030 #ffffff      shot #f0f0f0 #f0f0d0 #d0d0d0 #b0b0b0
+  catering    lepainquotidien_com_us_en_catering           dom #fbf5ee #ffffff #000000              shot #f0f0f0 #101010 #d0d0d0 #f0f0d0
+  catering    catering_chipotle_com                        dom #f2f2f1 #ffffff #786259 #e8e8e5      shot #f0f0f0 #707050 #503030 #d0d0d0
+  catering    pizzapilgrims_co_uk_pizza_pilgrims_catering  dom #00572e #e6eeea #003019 #00cc00      shot #105030 #f0f0f0 #10d010 #509070
+  catering    baolondon_com_private_hire                   dom #f9f9f5                              shot #f0f0f0 #301010 #101010 #705030
+  catering    ottolenghi_co_uk_pages_catering              dom #f9f2ec #fcf7f2 #ffffff #cd001a      shot #f0f0f0 #d0d0d0 #101010 #f0d0d0
+  story       graza_co                                     dom #f6e6d9 #d1e030 #fbd535 #9eef80      shot #f0f0d0 #707070 #707050 #505050
+  story       omsom_com                                    dom #ffffff #f7f3da #aceb9f #0e1318      shot #f0d0f0 #701010 #501010 #f0f050
+  story       eatfishwife_com                              dom #fff7e9 #fffcf3 #fff8ea #3ba76b      shot #f0f0f0 #101010 #b0d0b0 #d0d0d0
+  story       oatly_com                                    dom #fffef6 #ffffff #000000              shot #f0f0f0 #303030 #505050 #101010
+  story       liquiddeath_com                              dom #f5f5f5 #ffffff #000000 #e9e6e3      shot #f0f0f0 #101010 #d0d0d0 #301070
+  story       brightland_co                                dom #ffffff #f5f3ec #f2f2f2 #f2d4d7      shot #f0f0f0 #d0d0d0 #d0d0b0 #b0b0b0
+  story       flybyjing_com                                dom #ab2328 #000000 #fc521c #662e91      shot #101010 #f0d030 #f05010 #b03030
+  story       diasporaco_com                               dom #fffceb #d5137b #ffd000 #fffdf0      shot #f0f0f0 #d01070 #f0d010 #f0f0d0
+  story       drinkghia_com                                dom #651c32 #fef6ee #3e4938 #000000      shot #f0f0f0 #305030 #5070b0 #101010
+  story       magicspoon_com                               dom #dad9ff #ffffff #5b00ed #6e64c8      shot #d0f0f0 #f0f0f0 #d0d0f0 #5010f0
+  story       mastmarket_com                               dom #f6f5ef #d4c1b0 #e4e2dd #626161      shot #f0f0f0 #707070 #f0f0d0 #909090
+  story       dishoom_com                                  dom #f0ece0 #151515 #000000 #353839      shot #f0f0f0 #101010 #303030 #d0d0d0
+  story       takearecess_com                              dom #a2b0ff #0a0a3a #1d2a58 #c2caff      shot #b0b0f0 #f0f0f0 #f0d0d0 #101010
+  story       bigmammagroup_com                            dom #321108 #fffdf4 #bf1422 #50794d      shot #707070 #101010 #f0f0f0 #301010
+  story       sietefoods_com                               dom #710a5e #f2a900 #efe2cd #f8f0e2      shot #f0f0f0 #f0f0d0 #701050 #501010
+  story       momofuku_com                                 dom #faf7ee #000000 #232323 #f1ebdd      shot #f0f0f0 #101010 #909090 #303030
+  story       fiveguys_fr                                  dom #000000 #ffffff #f6f6f6 #d21033      shot #f0f0f0 #101010 #d01030 #b01030
+  story       tonyschocolonely_com                         dom #ffffff #eb0000 #006be1 #f1f1ec      shot #f0f0f0 #f01010 #1070d0 #f03030
+  story       drinkolipop_com                              dom #fff6ea #000000 #008168 #ffb8b3      shot #f0f0f0 #109070 #90d0f0 #f0b0b0
+  story       drinkpoppi_com                               dom #ec008c #f6f6f6 #ffffff #000000      shot #303030 #f01090 #10b0f0 #f0f0f0
+  story       micheletaugustin_com                         dom #ffffff #6aaae4 #6699cc              shot #f0f0f0 #d0d0d0 #b0b0b0 #f0d0d0
+  story       middaysquares_com                            dom #fff9e2 #101010 #48a23f #ffffff      shot #f0f0f0 #101010 #909090 #d0d0d0
+  story       bachans_com                                  dom #fff9f5 #eb002b #f9eee7 #f9e9df      shot #f0f0f0 #f01030 #f0d0d0 #303030
+  story       pipandnut_com                                dom #ffffff #000000 #f1f3fa #f9a61b      shot #f0f0f0 #503030 #905030 #303030
+  motion      drinkcann_com                                dom #ffffff #f2eea1 #00a7c7 #ebd2e1      shot #f0f0f0 #f0f0b0 #f0d070 #10b0d0
+  story       francomanca_co_uk                            dom #f3efe7 #ffffff #f8f4f2 #e02b28      shot #f0f0f0 #909090 #f0d0d0 #d0d0d0
+  motion      driscolls_com                                dom #ffffff #fdc41f #0a6100 #4a773c      shot #f0f0f0 #f0d010 #f0b0d0 #507030
+  motion      und_ny_com                                   dom #ddc383 #878145 #fefefe #fccbbe      shot #f0f0f0 #103010 #103030 #101010
+  motion      lusion_co                                    dom #ffffff #121416 #0016ec #f0f1fa      shot #101010 #f0f0f0 #909090 #707070
+  motion      igloo_inc                                    dom                                      shot #b0b0b0 #90b0b0 #b0b0d0 #9090b0
+
+# 3. catering set n=17: bigmammagroup_com_fr_privatisation, bouillonlesite_com_privatisation, cojean_fr_cojean_entreprise, maison_kayser_com_evenements_entreprises_entreprises, pokawa_com_pokawa_pro, shop_popchef_com_shop_plateaux_repas_entreprise, foodcheri_com_plateau_repas, ezcater_com, feedr_co_en_gb, pret_co_uk_en_GB_platters, sweetgreen_com_catering, gails_com_pages_office_catering, lepainquotidien_com_us_en_catering, catering_chipotle_com, pizzapilgrims_co_uk_pizza_pilgrims_catering, baolondon_com_private_hire, ottolenghi_co_uk_pages_catering
+  offer office 13 bouillonlesite_com_privatisation, maison_kayser_com_evenements_entreprises_entreprises, pokawa_com_pokawa_pro, shop_popchef_com_shop_plateaux_repas_entreprise, foodcheri_com_plateau_repas, ezcater_com, feedr_co_en_gb, pret_co_uk_en_GB_platters, sweetgreen_com_catering, gails_com_pages_office_catering, lepainquotidien_com_us_en_catering, pizzapilgrims_co_uk_pizza_pilgrims_catering, ottolenghi_co_uk_pages_catering
+  offer teamLunch 13 bouillonlesite_com_privatisation, cojean_fr_cojean_entreprise, maison_kayser_com_evenements_entreprises_entreprises, pokawa_com_pokawa_pro, shop_popchef_com_shop_plateaux_repas_entreprise, foodcheri_com_plateau_repas, ezcater_com, feedr_co_en_gb, pret_co_uk_en_GB_platters, sweetgreen_com_catering, gails_com_pages_office_catering, lepainquotidien_com_us_en_catering, pizzapilgrims_co_uk_pizza_pilgrims_catering
+  offer afterwork 2 shop_popchef_com_shop_plateaux_repas_entreprise, baolondon_com_private_hire
+  offer privateHire 5 bigmammagroup_com_fr_privatisation, bouillonlesite_com_privatisation, pizzapilgrims_co_uk_pizza_pilgrims_catering, baolondon_com_private_hire, ottolenghi_co_uk_pages_catering
+  offer events 14 bigmammagroup_com_fr_privatisation, bouillonlesite_com_privatisation, cojean_fr_cojean_entreprise, maison_kayser_com_evenements_entreprises_entreprises, pokawa_com_pokawa_pro, shop_popchef_com_shop_plateaux_repas_entreprise, foodcheri_com_plateau_repas, feedr_co_en_gb, sweetgreen_com_catering, lepainquotidien_com_us_en_catering, catering_chipotle_com, pizzapilgrims_co_uk_pizza_pilgrims_catering, baolondon_com_private_hire, ottolenghi_co_uk_pages_catering
+  all five offers 
+  price shown 8 bouillonlesite_com_privatisation, pokawa_com_pokawa_pro, shop_popchef_com_shop_plateaux_repas_entreprise, foodcheri_com_plateau_repas, sweetgreen_com_catering, gails_com_pages_office_catering, catering_chipotle_com, pizzapilgrims_co_uk_pizza_pilgrims_catering
+  per person (or per tray/item for one person) price 6 bouillonlesite_com_privatisation, pokawa_com_pokawa_pro, shop_popchef_com_shop_plateaux_repas_entreprise, foodcheri_com_plateau_repas, catering_chipotle_com, pizzapilgrims_co_uk_pizza_pilgrims_catering
+  price in the first screen 1 catering_chipotle_com
+  promises a response time 5 cojean_fr_cojean_entreprise, pokawa_com_pokawa_pro, shop_popchef_com_shop_plateaux_repas_entreprise, foodcheri_com_plateau_repas, sweetgreen_com_catering
+  minimum stated 8 bouillonlesite_com_privatisation, pokawa_com_pokawa_pro, foodcheri_com_plateau_repas, sweetgreen_com_catering, gails_com_pages_office_catering, catering_chipotle_com, pizzapilgrims_co_uk_pizza_pilgrims_catering, ottolenghi_co_uk_pages_catering
+  lead time stated (an answer, not just a question) 9 maison_kayser_com_evenements_entreprises_entreprises, pokawa_com_pokawa_pro, foodcheri_com_plateau_repas, pret_co_uk_en_GB_platters, sweetgreen_com_catering, gails_com_pages_office_catering, catering_chipotle_com, pizzapilgrims_co_uk_pizza_pilgrims_catering, ottolenghi_co_uk_pages_catering
+  area or radius stated 12 bigmammagroup_com_fr_privatisation, bouillonlesite_com_privatisation, pokawa_com_pokawa_pro, shop_popchef_com_shop_plateaux_repas_entreprise, foodcheri_com_plateau_repas, ezcater_com, feedr_co_en_gb, sweetgreen_com_catering, gails_com_pages_office_catering, catering_chipotle_com, pizzapilgrims_co_uk_pizza_pilgrims_catering, ottolenghi_co_uk_pages_catering
+  capacity stated bigmammagroup_com_fr_privatisation, bouillonlesite_com_privatisation, baolondon_com_private_hire
+  flow types {'drawer': 1, 'split': 1, 'form': 4, 'wizard': 3, 'order+form': 1, 'order': 6, 'email': 1}
+    bigmammagroup_com_fr_privatisation           drawer      steps=None fields=1
+    bouillonlesite_com_privatisation             split       steps=1 fields=5
+    cojean_fr_cojean_entreprise                  form        steps=1 fields=8
+    maison_kayser_com_evenements_entreprises_ent form        steps=1 fields=11
+    pokawa_com_pokawa_pro                        wizard      steps=13 fields=13
+    shop_popchef_com_shop_plateaux_repas_entrepr order+form  steps=1 fields=7
+    foodcheri_com_plateau_repas                  wizard      steps=3 fields=9
+    ezcater_com                                  order       steps=None fields=3
+    feedr_co_en_gb                               wizard      steps=6 fields=6
+    pret_co_uk_en_GB_platters                    order       steps=None fields=0
+    sweetgreen_com_catering                      form        steps=1 fields=10
+    gails_com_pages_office_catering              order       steps=None fields=1
+    lepainquotidien_com_us_en_catering           order       steps=None fields=1
+    catering_chipotle_com                        order       steps=None fields=1
+    pizzapilgrims_co_uk_pizza_pilgrims_catering  order       steps=None fields=1
+    baolondon_com_private_hire                   email       steps=None fields=0
+    ottolenghi_co_uk_pages_catering              form        steps=1 fields=8
+  one-screen quote forms 6 median fields 8.0 range (5, 11)
+  asks headcount bouillonlesite_com_privatisation, cojean_fr_cojean_entreprise, pokawa_com_pokawa_pro, shop_popchef_com_shop_plateaux_repas_entreprise, sweetgreen_com_catering, catering_chipotle_com, ottolenghi_co_uk_pages_catering
+  asks date pokawa_com_pokawa_pro, shop_popchef_com_shop_plateaux_repas_entreprise, ottolenghi_co_uk_pages_catering
+  menu [('bigmammagroup_com_fr_privatisa', 'none on the page'), ('bouillonlesite_com_privatisati', "words (menu cards) plus a PDF 'Voir la c"), ('cojean_fr_cojean_entreprise', 'none on the page'), ('maison_kayser_com_evenements_e', "none on the page (links to 'Commander en"), ('pokawa_com_pokawa_pro', 'words and prices on the simulator, plus '), ('shop_popchef_com_shop_plateaux', 'words with prices in the shop grid'), ('foodcheri_com_plateau_repas', 'words (tray contents list)'), ('ezcater_com', 'restaurant tiles'), ('feedr_co_en_gb', 'vendor cards'), ('pret_co_uk_en_GB_platters', 'words (platter types)'), ('sweetgreen_com_catering', 'PDF (Sweetgreen_Catering_Menu_10.6.26.pd'), ('gails_com_pages_office_caterin', 'words with prices (shop)'), ('lepainquotidien_com_us_en_cate', 'words (sections)'), ('catering_chipotle_com', 'words with prices'), ('pizzapilgrims_co_uk_pizza_pilg', 'words, plus a group dining menus PDF on '), ('baolondon_com_private_hire', 'none on the page'), ('ottolenghi_co_uk_pages_caterin', 'tiles by occasion (At work, Events, Priv')]
+  proof logos 2 ezcater_com, feedr_co_en_gb
+  proof reviews 2 foodcheri_com_plateau_repas, feedr_co_en_gb
+  proof counts 5 bigmammagroup_com_fr_privatisation, pokawa_com_pokawa_pro, foodcheri_com_plateau_repas, ezcater_com, feedr_co_en_gb
+  proof testimonials 2 cojean_fr_cojean_entreprise, feedr_co_en_gb
+  no proof at all bouillonlesite_com_privatisation, maison_kayser_com_evenements_entreprises_entreprises, shop_popchef_com_shop_plateaux_repas_entreprise, pret_co_uk_en_GB_platters, sweetgreen_com_catering, gails_com_pages_office_catering, lepainquotidien_com_us_en_catering, catering_chipotle_com, pizzapilgrims_co_uk_pizza_pilgrims_catering, baolondon_com_private_hire, ottolenghi_co_uk_pages_catering
+
+# 5. Paris competitors (paris facts)
+  saavedraparis_fr {'catering': 1, 'ordering': 1, 'menu': 1, 'proof': 1}
+  clasicoargentino_com {'catering': 2, 'price': 1, 'privateHire': 1, 'radius': 1, 'flow': 1, 'proof': 1, 'menu': 1, 'distance': 1}
+  asadoparis_com {'catering': 1, 'note': 1}
+  volver_paris_com {'catering': 1, 'price': 1, 'flow': 1}
+  carnar_fr_fr {'catering': 2, 'note': 1, 'price': 1}
+  biondi_restaurant_fr {'privateHire': 1, 'group': 1, 'price': 1}
+  resto_unico_com {'catering': 1, 'proof': 1}
+  loco_restaurant_fr {'catering': 1, 'proof': 1, 'distance': 1}
+  anahi_paris_com {'privateHire': 2, 'proof': 1}
+
+# 3b. menu kind in the catering set
+  {'no menu on the page': 4, 'words on the page': 9, 'tiles or cards': 3, 'pdf only': 1}
+  pdf linked bouillonlesite_com_privatisation, pokawa_com_pokawa_pro, sweetgreen_com_catering, pizzapilgrims_co_uk_pizza_pilgrims_catering
+  menu as images only 
+
+# 2d. blues in the DOM palette (all rendered rows)
+  light celeste-like blue (hue 185-215, sat>.5, light>.6) 9 saavedraparis_fr, clasicoargentino_com, volver_paris_com, cojean_fr_cojean_entreprise, pizzapilgrims_co_uk_pizza_pilgrims_catering, drinkghia_com, magicspoon_com, fiveguys_fr, micheletaugustin_com
+  deep blue (hue 205-240, sat>.5, light .15-.45) 5 saavedraparis_fr, pokawa_com_pokawa_pro, feedr_co_en_gb, takearecess_com, tonyschocolonely_com
+  both saavedraparis_fr
+  light blue as one of the two largest painted backgrounds 4 saavedraparis_fr, volver_paris_com, cojean_fr_cojean_entreprise, micheletaugustin_com
+  note: #6aaae4 on fiveguys_fr and micheletaugustin_com is the same value on both, likely a shared consent widget, check before quoting

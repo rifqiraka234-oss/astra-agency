@@ -1,0 +1,252 @@
+{
+ "source": "OpenStreetMap contributors, ODbL, api.openstreetmap.org map calls in 9 tiles fetched 25 Oct 2026, tags amenity=coworking_space or office=coworking, walking distance on the street graph at 5 km/h",
+ "shop": [
+  600.0,
+  450.0
+ ],
+ "w": 1200,
+ "h": 900,
+ "radius_m": 1250,
+ "places": [
+  {
+   "osm": "node/5003032836",
+   "name": "WeWork",
+   "addr": "37 Avenue Trudaine",
+   "pt": [
+    48.8809441,
+    2.3423369
+   ],
+   "straight_m": 110,
+   "walk_m": 151,
+   "walk_min": 2,
+   "xy": [
+    561.3,
+    414.3
+   ]
+  },
+  {
+   "osm": "way/69417582",
+   "name": "Patchwork Montholon",
+   "addr": "",
+   "pt": [
+    48.8767545,
+    2.3456186
+   ],
+   "straight_m": 423,
+   "walk_m": 614,
+   "walk_min": 7,
+   "xy": [
+    676.6,
+    638.2
+   ]
+  },
+  {
+   "osm": "node/6122303148",
+   "name": "Espaces Réunion",
+   "addr": "43 Rue de Dunkerque",
+   "pt": [
+    48.8808315,
+    2.3506188
+   ],
+   "straight_m": 529,
+   "walk_m": 682,
+   "walk_min": 8,
+   "xy": [
+    852.3,
+    420.4
+   ]
+  },
+  {
+   "osm": "node/11843199269",
+   "name": "La Casa Deskeo – Victoire",
+   "addr": "",
+   "pt": [
+    48.8751218,
+    2.3401793
+   ],
+   "straight_m": 621,
+   "walk_m": 770,
+   "walk_min": 9,
+   "xy": [
+    485.5,
+    725.4
+   ]
+  },
+  {
+   "osm": "node/7644560511",
+   "name": "Work In' Paris",
+   "addr": "20 Rue Jean-Baptiste Pigalle",
+   "pt": [
+    48.8789322,
+    2.3333827
+   ],
+   "straight_m": 751,
+   "walk_m": 892,
+   "walk_min": 11,
+   "xy": [
+    246.6,
+    521.8
+   ]
+  },
+  {
+   "osm": "way/69363832",
+   "name": "WeWork",
+   "addr": "33 Rue La Fayette",
+   "pt": [
+    48.8745705,
+    2.3377059
+   ],
+   "straight_m": 761,
+   "walk_m": 888,
+   "walk_min": 11,
+   "xy": [
+    398.5,
+    754.9
+   ]
+  },
+  {
+   "osm": "node/1232773687",
+   "name": "La pépite",
+   "addr": "40 Rue Laffitte",
+   "pt": [
+    48.8740412,
+    2.3381113
+   ],
+   "straight_m": 796,
+   "walk_m": 893,
+   "walk_min": 11,
+   "xy": [
+    412.8,
+    783.2
+   ]
+  },
+  {
+   "osm": "way/69220714",
+   "name": "Patchwork Sainte-Cécile",
+   "addr": "",
+   "pt": [
+    48.8733202,
+    2.3461497
+   ],
+   "straight_m": 799,
+   "walk_m": 1185,
+   "walk_min": 14,
+   "xy": [
+    695.2,
+    821.7
+   ]
+  },
+  {
+   "osm": "way/107220583 way/107220583",
+   "name": "Morning",
+   "addr": "34 Rue Laffitte",
+   "pt": [
+    48.8735159,
+    2.3383566
+   ],
+   "straight_m": 840,
+   "walk_m": 966,
+   "walk_min": 12,
+   "xy": [
+    421.4,
+    811.3
+   ]
+  },
+  {
+   "osm": "node/11783642825",
+   "name": "Patch Work",
+   "addr": "",
+   "pt": [
+    48.8743704,
+    2.3354021
+   ],
+   "straight_m": 882,
+   "walk_m": 1070,
+   "walk_min": 13,
+   "xy": [
+    317.6,
+    765.6
+   ]
+  },
+  {
+   "osm": "node/12641073822",
+   "name": "Wojo",
+   "addr": "",
+   "pt": [
+    48.8826706,
+    2.3306354
+   ],
+   "straight_m": 974,
+   "walk_m": 1111,
+   "walk_min": 13,
+   "xy": [
+    150.1,
+    322.1
+   ]
+  },
+  {
+   "osm": "node/13848684926 way/63200724",
+   "name": "Together Paris",
+   "addr": "12 Rue Martel",
+   "pt": [
+    48.8743075,
+    2.3533501
+   ],
+   "straight_m": 984,
+   "walk_m": 1286,
+   "walk_min": 15,
+   "xy": [
+    948.3,
+    769.0
+   ]
+  },
+  {
+   "osm": "node/10805325063",
+   "name": "Morning",
+   "addr": "",
+   "pt": [
+    48.8751374,
+    2.3315008
+   ],
+   "straight_m": 1045,
+   "walk_m": 1316,
+   "walk_min": 16,
+   "xy": [
+    180.5,
+    724.6
+   ]
+  },
+  {
+   "osm": "node/6010103757",
+   "name": "SPLIT Coworking",
+   "addr": "",
+   "pt": [
+    48.8852969,
+    2.3566009
+   ],
+   "straight_m": 1114,
+   "walk_m": 1294,
+   "walk_min": 16,
+   "xy": [
+    1062.5,
+    181.8
+   ]
+  },
+  {
+   "osm": "node/9169344501",
+   "name": "La Manufacture",
+   "addr": "",
+   "pt": [
+    48.8873445,
+    2.3556204
+   ],
+   "straight_m": 1189,
+   "walk_m": 1402,
+   "walk_min": 17,
+   "xy": [
+    1028.0,
+    72.3
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2407 @@
+[
+ {
+  "file": "own/01-logo-saavedra-fabrique-dempanadas.png",
+  "kind": "logo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/",
+   "https://www.saavedraparis.fr/menu",
+   "https://www.saavedraparis.fr/equipe",
+   "https://www.saavedraparis.fr/nos-produits-1",
+   "https://www.saavedraparis.fr/click-collect"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/773e7bac-526c-43e0-aafe-0aa032a0e866/SAAVEDRA_Logotype_Bleu2_CMJN.png",
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/f6b6c38a-1226-4e53-afde-2e75839e7d67/SAAVEDRA_Logotype_Bleu2_CMJN.png",
+   "https://static1.squarespace.com/static/68d931ba4748c81c26b09809/t/6a0efca12b822e625f796324/1779367073358/SAAVEDRA_Logotype_Bleu2_CMJN.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/773e7bac-526c-43e0-aafe-0aa032a0e866/SAAVEDRA_Logotype_Bleu2_CMJN.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 1981,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 210604,
+  "sha256": "1569ca1df242d6ba083f025c74f2e7ac5d154a9d3fa72ac9426d8e43f9497361",
+  "original_upload_dims": null,
+  "size_note": null,
+  "what_it_shows": "SAAVEDRA logotype in their blue (#034990), the letters stretched taller toward the middle so the word arches, with FABRIQUE D'EMPANADAS set small underneath. Transparent background.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": null,
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     43,
+     29,
+     151,
+     120
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "menu",
+    "viewport": "1440",
+    "box_xywh": [
+     43,
+     29,
+     151,
+     120
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "menu",
+    "viewport": "1440",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "menu",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "equipe",
+    "viewport": "1440",
+    "box_xywh": [
+     43,
+     29,
+     151,
+     120
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "equipe",
+    "viewport": "1440",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "equipe",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     43,
+     29,
+     151,
+     120
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "click-collect",
+    "viewport": "1440",
+    "box_xywh": [
+     43,
+     29,
+     151,
+     120
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "click-collect",
+    "viewport": "1440",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "click-collect",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     23,
+     114,
+     90
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "menu",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     23,
+     114,
+     90
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "equipe",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     23,
+     114,
+     90
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     23,
+     114,
+     90
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   },
+   {
+    "page": "click-collect",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     23,
+     114,
+     90
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA",
+    "original_upload_dims": null,
+    "links_to": "https://www.saavedraparis.fr/"
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/02-illustration-runner-with-tray.png",
+  "kind": "illustration",
+  "source_pages": [
+   "https://www.saavedraparis.fr/"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/933fce5c-ca5c-4c91-af8f-78c5d6e55eb9/13.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/933fce5c-ca5c-4c91-af8f-78c5d6e55eb9/13.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1181,
+  "height": 1181,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 85524,
+  "sha256": "ddcd788e104442510bada69d3112a237ba6f2002492458a424d6595f60984e73",
+  "original_upload_dims": "1181x1181",
+  "size_note": null,
+  "what_it_shows": "Line drawing in their blue of a cartoon girl racing forward, legs a blur of speed lines and dust clouds, carrying a tray of empanadas out in front of her. Black bob hair with a bow, dotted dress. The runner with a tray. Shown top left in the homepage hero.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "The character's black bob, bow and dotted dress may read as a nod to Quino's Mafalda, a copyrighted Argentine comic character. It's their own published brand art, so fine as their mark, but ask before making it the hero object, and don't redraw or animate it into something that looks more like Mafalda.",
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     60,
+     225,
+     310,
+     310
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     96,
+     203,
+     199,
+     199
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/03-illustration-sun.png",
+  "kind": "illustration",
+  "source_pages": [
+   "https://www.saavedraparis.fr/",
+   "https://www.saavedraparis.fr/menu"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/b22abf54-a1ac-4f98-b133-506ebb5432c1/8.png",
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/7e0cd8d7-4c8d-42b9-a46d-a6c9e6d87d35/8.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/b22abf54-a1ac-4f98-b133-506ebb5432c1/8.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1181,
+  "height": 1181,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 42861,
+  "sha256": "4268b388873396a36fc4035d5c6284a446f78adfca3e35c7d764b41d9a35e3ee",
+  "original_upload_dims": "1181x1181",
+  "size_note": null,
+  "what_it_shows": "Solid blue sun with wavy rays (the Argentine sol de mayo shape). Homepage hero top right and on the menu page.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": null,
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     1237,
+     399,
+     203,
+     203
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "menu",
+    "viewport": "1440",
+    "box_xywh": [
+     284,
+     874,
+     189,
+     189
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "menu",
+    "viewport": "390",
+    "box_xywh": [
+     131,
+     615,
+     129,
+     129
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/04-illustration-gaucho-horse-letter-ring.png",
+  "kind": "illustration",
+  "source_pages": [
+   "https://www.saavedraparis.fr/",
+   "https://www.saavedraparis.fr/equipe"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/c934e06a-89b7-4452-9ad9-c48d6aea1a09/11.png",
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/a4c58401-d6e9-4730-857c-55eeb9735500/11.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/c934e06a-89b7-4452-9ad9-c48d6aea1a09/11.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1181,
+  "height": 1181,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 69260,
+  "sha256": "d7a2881522fc918b40ec7e6e00e795303e42f3ef7845a12b6584e8dff2e36a73",
+  "original_upload_dims": "1181x1181",
+  "size_note": null,
+  "what_it_shows": "Gaucho in a hat on a rearing horse, one arm raised, with the letters S A A V E D R A in white circles ringed around a small sun on the horse's flank. All in their blue. Homepage hero left and the equipe page.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": null,
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     0,
+     783,
+     316,
+     316
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "equipe",
+    "viewport": "1440",
+    "box_xywh": [
+     953,
+     393,
+     310,
+     310
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "equipe",
+    "viewport": "1440",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "equipe",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "equipe",
+    "viewport": "390",
+    "box_xywh": [
+     112,
+     212,
+     166,
+     166
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/05-illustration-heart-arrow-s-badge.png",
+  "kind": "illustration",
+  "source_pages": [
+   "https://www.saavedraparis.fr/"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/384c7b0a-6652-43cc-a27f-d6e7073f83d7/12.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/384c7b0a-6652-43cc-a27f-d6e7073f83d7/12.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1181,
+  "height": 1181,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 38797,
+  "sha256": "35b25c0689e893fbd50fa7c343d253676146392e0f9d0d4c6f90009d5f732358",
+  "original_upload_dims": "1181x1181",
+  "size_note": null,
+  "what_it_shows": "Blue scalloped heart pierced by an arrow, with a white square S badge (their monogram) in the middle. Homepage hero bottom right.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": null,
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     1180,
+     932,
+     260,
+     260
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/06-illustration-burst-star.png",
+  "kind": "illustration",
+  "source_pages": [
+   "https://www.saavedraparis.fr/menu"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/2156b992-c055-400e-8d7c-ddd75f5da557/6.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/2156b992-c055-400e-8d7c-ddd75f5da557/6.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1181,
+  "height": 1181,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 40256,
+  "sha256": "d6ac06364f339d31478b028dd7cf71a6e212b80d368e4fc0a942db6d4fbafa31",
+  "original_upload_dims": "1181x1181",
+  "size_note": null,
+  "what_it_shows": "Distressed blue burst or zigzag star with speckled print texture. Menu page decoration.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": null,
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "menu",
+    "viewport": "1440",
+    "box_xywh": [
+     967,
+     1195,
+     189,
+     189
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "menu",
+    "viewport": "390",
+    "box_xywh": [
+     131,
+     1175,
+     129,
+     129
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/07-sticker-heart-arrow-s-lightblue.png",
+  "kind": "sticker",
+  "source_pages": [
+   "https://www.saavedraparis.fr/equipe"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/19316a74-b368-4468-b552-deec79b912ce/SAAVEDRA_Stickers_CMJN-06C.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/19316a74-b368-4468-b552-deec79b912ce/SAAVEDRA_Stickers_CMJN-06C.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1060,
+  "height": 990,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 43949,
+  "sha256": "04a1c4ce502824cdb1abc0614f816e76a00b96d9fb1c1d65a24a6b5d20cd9dc3",
+  "original_upload_dims": "1060x990",
+  "size_note": null,
+  "what_it_shows": "Sticker version of the heart: light blue scalloped heart, black arrow, white S badge, white die cut border.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": null,
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "equipe",
+    "viewport": "1440",
+    "box_xywh": [
+     384,
+     834,
+     202,
+     189
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1060x990",
+    "links_to": null
+   },
+   {
+    "page": "equipe",
+    "viewport": "390",
+    "box_xywh": [
+     156,
+     776,
+     78,
+     73
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1060x990",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/08-illustration-figure-holding-empanada-HIDDEN.png",
+  "kind": "illustration",
+  "source_pages": [
+   "https://www.saavedraparis.fr/"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/049c05a3-4f78-454e-94e0-0d6d7391ee0b/9.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/049c05a3-4f78-454e-94e0-0d6d7391ee0b/9.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1181,
+  "height": 1181,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 72195,
+  "sha256": "c36107198cbf7db22a0f7f1f251a6cc66541b826d08b9828a8b9e68ada0baa6e",
+  "original_upload_dims": "1181x1181",
+  "size_note": null,
+  "what_it_shows": "Blue silhouette of a curly haired man in a SAAVEDRA shirt holding an empanada up over his head with both arms. In the homepage HTML twice but hidden (zero size) at both 1440 px and 390 px, so visitors don't see it.",
+  "face_identifiable": "yes",
+  "do_not_use": true,
+  "do_not_use_reason": "Appears to be a likeness of Diego Maradona (curly hair, the arms raised trophy pose, the same figure as own file 32, the poster). A recognisable real public figure, his estate and image rights are actively enforced. Also not visible on the live site.",
+  "caution": null,
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": false,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "",
+    "original_upload_dims": "1181x1181",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/09-sticker-empanadas-de-dios.png",
+  "kind": "sticker",
+  "source_pages": [
+   "https://www.saavedraparis.fr/equipe"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/e36bcea0-d7ab-4b18-a74c-60237406c083/SAAVEDRA_Stickers_CMJN-16.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/e36bcea0-d7ab-4b18-a74c-60237406c083/SAAVEDRA_Stickers_CMJN-16.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 684,
+  "height": 1052,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 464528,
+  "sha256": "d37d5c061b1e80f772fd34f636ae122730be894394c895a9498fbe8138a7be6c",
+  "original_upload_dims": "684x1052",
+  "size_note": null,
+  "what_it_shows": "Sticker of a figure in a light blue and white striped Argentina style shirt leaping with an empanada held overhead, a starburst reading ¡EMPANADAS DE DIOS! and a small SAAVEDRA. Equipe page.",
+  "face_identifiable": "yes",
+  "do_not_use": true,
+  "do_not_use_reason": "Appears to depict Diego Maradona. The striped Argentina shirt, the curly hair and \"¡Empanadas de Dios!\" (a play on his \"mano de Dios\") point at a recognisable real public figure.",
+  "caution": null,
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "equipe",
+    "viewport": "1440",
+    "box_xywh": [
+     830,
+     1254,
+     234,
+     360
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "684x1052",
+    "links_to": null
+   },
+   {
+    "page": "equipe",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     1218,
+     122,
+     188
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "684x1052",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/10-favicon-logo-white-on-blue.png",
+  "kind": "logo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/",
+   "https://www.saavedraparis.fr/menu",
+   "https://www.saavedraparis.fr/equipe",
+   "https://www.saavedraparis.fr/nos-produits-1",
+   "https://www.saavedraparis.fr/click-collect"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/445ee125-a1d1-4de4-bfb3-befbc847c0ae/favicon.ico"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/445ee125-a1d1-4de4-bfb3-befbc847c0ae/favicon.ico",
+  "fetch_note": "Single curl GET of the favicon URL with Accept image/png, 2026-10-25. The .ico URL serves PNG bytes. Saved as served.",
+  "width": 1080,
+  "height": 1080,
+  "format": "PNG",
+  "mode": "RGB",
+  "bytes": 45778,
+  "sha256": "eaea3a7b8426283a308b5b02e0ea94221b90e79925fd1bb3a60762570b0653b8",
+  "original_upload_dims": null,
+  "size_note": null,
+  "what_it_shows": "Site favicon. The SAAVEDRA logotype in white on a square of their blue. Served at favicon.ico but the bytes are a PNG.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "Low detail at 1080 px. Use the 2500 px logo (01) or the traced SVG for anything large.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": null,
+  "rendered_positions": [],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/11-graphic-click-and-collect.png",
+  "kind": "graphic",
+  "source_pages": [
+   "https://www.saavedraparis.fr/"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/6d39da2a-b135-447e-9268-97d98b4bde86/C%26C.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/6d39da2a-b135-447e-9268-97d98b4bde86/C%26C.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1181,
+  "height": 591,
+  "format": "PNG",
+  "mode": "RGB",
+  "bytes": 34941,
+  "sha256": "3be33d06bc5a41a85e3df402749abd6dcc9057b380f0cba0b468e5ecf517d524",
+  "original_upload_dims": "1181x591",
+  "size_note": null,
+  "what_it_shows": "Text graphic \"Click & Collect\" in their blue display face on a light blue panel. A homepage button image linking to saavedra.zelty-order.fr.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "A button image with words baked in. Rebuild as live text instead of reusing it.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     498,
+     1625,
+     444,
+     230
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x591",
+    "links_to": "https://saavedra.zelty-order.fr/"
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     112,
+     849,
+     166,
+     129
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1181x591",
+    "links_to": "https://saavedra.zelty-order.fr/"
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/12-THIRDPARTY-deliveroo-logo.png",
+  "kind": "third_party_logo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/",
+   "https://www.saavedraparis.fr/click-collect"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/def8e5e5-e656-42a7-b2b7-50c5873a02f9/logo+deliveroo.png",
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/5a81fb4a-47e1-4aa6-9900-b7f38ef9d4ea/logo+deliveroo.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/def8e5e5-e656-42a7-b2b7-50c5873a02f9/logo+deliveroo.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 1221,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 151869,
+  "sha256": "b4e3294833b1cf3fc1633e60eedfd6f36626ce6aebaff3366b1e10a9ff003482",
+  "original_upload_dims": "4096x2000",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4096x2000 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Deliveroo logo (teal kangaroo mark and wordmark) on a light blue panel. Used on the homepage and the click-collect page next to the Deliveroo link.",
+  "face_identifiable": "no",
+  "do_not_use": true,
+  "do_not_use_reason": "Third party logo (Deliveroo). Not SAAVEDRA's to license. If delivery is mentioned, use plain text.",
+  "caution": null,
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     100,
+     2376,
+     558,
+     189
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4096x2000",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     68,
+     1258,
+     255,
+     129
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4096x2000",
+    "links_to": null
+   },
+   {
+    "page": "click-collect",
+    "viewport": "1440",
+    "box_xywh": [
+     1067,
+     875,
+     273,
+     133
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4096x2000",
+    "links_to": "https://deliveroo.fr/fr/menu/Paris/9eme-opera/saavedra-fabrique-dempanadas?geohash=u09wj4nkvm8p"
+   },
+   {
+    "page": "click-collect",
+    "viewport": "390",
+    "box_xywh": [
+     68,
+     660,
+     255,
+     125
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4096x2000",
+    "links_to": "https://deliveroo.fr/fr/menu/Paris/9eme-opera/saavedra-fabrique-dempanadas?geohash=u09wj4nkvm8p"
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/13-photo-hands-breaking-empanada-wood-table.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/e1de6029-9f90-49ef-acf6-754e1ea46a3e/P1242068.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/e1de6029-9f90-49ef-acf6-754e1ea46a3e/P1242068.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 2659,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 1118219,
+  "sha256": "a057bb1efbd98d3193df58339ae2e5acb19e0801b1bd0918f36879d1598ef38a",
+  "original_upload_dims": "4000x4255",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x4255 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Two hands breaking an empanada open over a tray, shredded beef filling and charred dough edges showing, a wooden table and blue painted window frame behind, low warm sun. A second empanada on their SAAVEDRA printed paper below.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": null,
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     0,
+     1304,
+     715,
+     871
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x4255",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     744,
+     390,
+     339
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x4255",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/14-photo-hands-holding-empanada-window.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/bb6984a0-80e2-4000-9522-ab9eea206d81/P1242054.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/bb6984a0-80e2-4000-9522-ab9eea206d81/P1242054.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 2648,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 1124786,
+  "sha256": "fa1bb31cf735f4b704f62a9722f6f892b59655febc0dcd54be080d4dd71500b7",
+  "original_upload_dims": "4000x4236",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x4236 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Two hands holding up a folded empanada with dark blistered char spots, on a wooden bench by a window, warm side light.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "Blurred stickers on the window behind (a star, a round sign), none legible.",
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     953,
+     1585,
+     444,
+     310
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x4236",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "visible": false,
+    "alt": "",
+    "original_upload_dims": "4000x4236",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/15-photo-three-empanadas-tray-sauce.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/",
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/3b7d86d8-669c-4b9d-aa9e-af6bbf3e62db/P1242027.jpg",
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/95ac3aca-340f-4bea-9847-19d3f843e3de/P1242027.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/3b7d86d8-669c-4b9d-aa9e-af6bbf3e62db/P1242027.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 2682,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 1441012,
+  "sha256": "85eeac545d6ff500e6bac711e978706dbfccfc9075cfaf7a845037c47b7de5c3",
+  "original_upload_dims": "4000x4291",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x4291 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Three wood fired empanadas with big char blisters on a metal tray over their SAAVEDRA paper, a ramekin of red sauce (criolla or chimichurri style), a bottle with a pale blue label behind. Also used on nos-produits.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "The bottle label behind is out of focus but partly readable as LA VIE FRAÎCHE (third party). Crop the top fifth if it shows large.",
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     839,
+     2861,
+     558,
+     350
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x4291",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     1653,
+     210,
+     164
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x4291",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     512,
+     465,
+     416,
+     446
+    ],
+    "visible": true,
+    "alt": "P1242027.jpg",
+    "original_upload_dims": "4000x4291",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     196,
+     408,
+     171,
+     183
+    ],
+    "visible": true,
+    "alt": "P1242027.jpg",
+    "original_upload_dims": "4000x4291",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/16-photo-empanadas-tray-bottle-stone-wall.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/2272deab-e12a-4c3b-a15f-55aef5694f1b/P1242023.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/2272deab-e12a-4c3b-a15f-55aef5694f1b/P1242023.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 3273,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 1821033,
+  "sha256": "266bab103c539bcbf62ad1be2e5000002cf831d1077185c7ada99f232ab672db",
+  "original_upload_dims": "4000x5236",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x5236 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Plate of three empanadas on a ribbed metal bistro table with a sauce ramekin and a bottle of drink, against a pale stone wall.",
+  "face_identifiable": "no",
+  "do_not_use": true,
+  "do_not_use_reason": "Third party brand legible: the bottle label reads LE SAUVAGEON, RETOUR AUX SOURCES with its leaf logo, plainly readable at full size. Usable only cropped to below the bottle, which loses most of the frame.",
+  "caution": null,
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     100,
+     3141,
+     444,
+     310
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x5236",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     156,
+     2073,
+     210,
+     164
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x5236",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/17-photo-man-phone-eating-blue-shopfront.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/e6ed5bed-3fc8-481a-b612-806d1d6dc573/P1242110.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/e6ed5bed-3fc8-481a-b612-806d1d6dc573/P1242110.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 3750,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 1597618,
+  "sha256": "02547dabaa4311fdb766eea6368531026d37513aa415354a38f2398bee307f7b",
+  "original_upload_dims": "4000x6000",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x6000 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Young man in round sunglasses and a black T-shirt eating an empanada while on the phone, standing at a blue painted shopfront in strong sun.",
+  "face_identifiable": "yes",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "Identifiable face (sunglasses, but the rest of the face is clear). Who he is isn't stated anywhere on the site, so never caption him as a founder, staff or a customer. iPhone in a printed sticker case, no logo legible.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "home",
+    "viewport": "1440",
+    "box_xywh": [
+     441,
+     2981,
+     558,
+     671
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   },
+   {
+    "page": "home",
+    "viewport": "390",
+    "box_xywh": [
+     68,
+     1793,
+     255,
+     339
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/18-photo-pile-of-opened-empanadas.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/a636a4fa-3fd9-4423-a411-82a96fc0c9a0/P1242105.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/a636a4fa-3fd9-4423-a411-82a96fc0c9a0/P1242105.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 3750,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 815105,
+  "sha256": "3be8f064524bf2f5dcabcc80aba5b8ed120923378a1b466bd188f3ed85b27fa2",
+  "original_upload_dims": "4000x6000",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x6000 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "A heap of empanadas broken open on a metal tray, chicken and beef fillings spilling out, deep shadows, stone wall behind. Flash lit, moody.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": null,
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     43,
+     1060,
+     415,
+     623
+    ],
+    "visible": true,
+    "alt": "P1242105.jpg",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     812,
+     170,
+     255
+    ],
+    "visible": true,
+    "alt": "P1242105.jpg",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/19-photo-man-biting-empanada-street.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/e3f12557-6e86-4762-8f0b-18ede8e4c239/P1242092.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/e3f12557-6e86-4762-8f0b-18ede8e4c239/P1242092.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 3750,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 1610948,
+  "sha256": "e1cea91b1d5df2796a3302bc33c533e4920baf98a7fcb34592240023f21b5b06",
+  "original_upload_dims": "4000x6000",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x6000 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Young man biting into an empanada on a sunny Paris street, mouth wide, Haussmann facades behind.",
+  "face_identifiable": "yes",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "Fully identifiable face. Identity not stated on the site, so never caption as a founder, staff or customer.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     512,
+     1446,
+     415,
+     623
+    ],
+    "visible": true,
+    "alt": "P1242092.jpg",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     196,
+     986,
+     170,
+     255
+    ],
+    "visible": true,
+    "alt": "P1242092.jpg",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/20-photo-three-empanadas-terracotta-ledge.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/be14c7d0-efba-4a5f-ac96-de94d0feba80/P1242134.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/be14c7d0-efba-4a5f-ac96-de94d0feba80/P1242134.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 2829,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 1488500,
+  "sha256": "ac2440900c98cefdadf84f07252a0b5d48e378af8e78fe487001e06a910ff7ee",
+  "original_upload_dims": "4000x4527",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x4527 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Three empanadas, one broken open, stacked on a terracotta tiled ledge, dark background, flash.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": null,
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     982,
+     1514,
+     415,
+     470
+    ],
+    "visible": true,
+    "alt": "P1242134.jpg",
+    "original_upload_dims": "4000x4527",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     1070,
+     171,
+     194
+    ],
+    "visible": true,
+    "alt": "P1242134.jpg",
+    "original_upload_dims": "4000x4527",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/21-photo-hands-pulling-empanada-apart.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/bb749e6d-12b4-4d4a-a910-5af36afb2c45/P1242046.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/bb749e6d-12b4-4d4a-a910-5af36afb2c45/P1242046.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 3750,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 1935562,
+  "sha256": "a8105f75c445c4ebeaa315a16bf6e4e49c98285d9562712a955b52f52b52521e",
+  "original_upload_dims": "4000x6000",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x6000 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Two hands pulling a stuffed empanada apart over a tray, filling showing, a pepper mill and a lamp blurred behind.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": null,
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     512,
+     2123,
+     415,
+     623
+    ],
+    "visible": true,
+    "alt": "P1242046.jpg",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     196,
+     1469,
+     170,
+     255
+    ],
+    "visible": true,
+    "alt": "P1242046.jpg",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/22-photo-tshirt-back-menos-palabras.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/6d262a98-fd47-4c76-89e7-1760b3a02abb/P1242140.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/6d262a98-fd47-4c76-89e7-1760b3a02abb/P1242140.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 3750,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 1951162,
+  "sha256": "cc99ce4e1a59cf8a37022cd5d519623e4eb8c60f697f98fbbff3ccdb3d82e354",
+  "original_upload_dims": "4000x6000",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x6000 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Back of a person in a grey SAAVEDRA T-shirt printed MENOS PALABRAS Y MÁS EMPANADAS with a drawing, another person out of focus behind.",
+  "face_identifiable": "partly",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "The person behind is out of focus but their face could be recognised by someone who knows them. Crop to the shirt if used large.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     43,
+     2330,
+     415,
+     623
+    ],
+    "visible": true,
+    "alt": "P1242140.jpg",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     1497,
+     170,
+     255
+    ],
+    "visible": true,
+    "alt": "P1242140.jpg",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/23-photo-tattooed-arm-serving-tray.jpg",
+  "kind": "photo",
+  "source_pages": [
+   "https://www.saavedraparis.fr/click-collect"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/a38b5ed0-829d-4ea5-af26-2864f6a8c990/P1242043.jpg"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/a38b5ed0-829d-4ea5-af26-2864f6a8c990/P1242043.jpg?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/jpeg so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 3750,
+  "format": "JPEG",
+  "mode": "RGB",
+  "bytes": 2049342,
+  "sha256": "8ecbb8c943f3a5319771cb92fff46bcc75ae4c148b198a807eded1ff73d149cf",
+  "original_upload_dims": "4000x6000",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 4000x6000 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "A tattooed forearm setting down a metal tray of three empanadas with a sauce ramekin on the ribbed metal table, all on SAAVEDRA paper. The photo on the click-collect page.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "Distinctive forearm tattoo, no face. Don't caption whose arm it is.",
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "click-collect",
+    "viewport": "1440",
+    "box_xywh": [
+     338,
+     586,
+     367,
+     550
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   },
+   {
+    "page": "click-collect",
+    "viewport": "390",
+    "box_xywh": [
+     68,
+     213,
+     166,
+     249
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "4000x6000",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/24-menu-empanadas.png",
+  "kind": "menu",
+  "source_pages": [
+   "https://www.saavedraparis.fr/menu"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/afd0c0f8-da53-4014-a31b-18086873cdce/1.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/afd0c0f8-da53-4014-a31b-18086873cdce/1.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1587,
+  "height": 2245,
+  "format": "PNG",
+  "mode": "RGB",
+  "bytes": 256961,
+  "sha256": "c980cd09776cc793a540452b26094ea063e3352513aad85b100f33b32fb63950",
+  "original_upload_dims": "1587x2245",
+  "size_note": null,
+  "what_it_shows": "Printed menu panel EMPANADAS, cream with a dark red border. Boxes of 6 and 12, 5 carne and 4 verduras empanadas at 4, two lunch formulas. Transcribed in menu-transcribed.md.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "A picture of text. Use the transcription as live text on a page rather than the image.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "menu",
+    "viewport": "1440",
+    "box_xywh": [
+     298,
+     273,
+     389,
+     550
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1587x2245",
+    "links_to": null
+   },
+   {
+    "page": "menu",
+    "viewport": "390",
+    "box_xywh": [
+     50,
+     195,
+     289,
+     409
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1587x2245",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/25-menu-dulces-y-mas.png",
+  "kind": "menu",
+  "source_pages": [
+   "https://www.saavedraparis.fr/menu"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/5efc20e5-2c2f-4312-9293-f848d2941ea1/2.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/5efc20e5-2c2f-4312-9293-f848d2941ea1/2.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1587,
+  "height": 2245,
+  "format": "PNG",
+  "mode": "RGB",
+  "bytes": 181025,
+  "sha256": "f4cfefc9fe94406ac2ceeef5299f3a5289b23f052f3b9724fb95be60e6c7a53f",
+  "original_upload_dims": "1587x2245",
+  "size_note": null,
+  "what_it_shows": "Printed menu panel DULCES Y MÁS. Two desserts and three sauces, with the heart, stars and gaucho drawn in dark red. Transcribed in menu-transcribed.md.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "A picture of text. Use the transcription.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "menu",
+    "viewport": "1440",
+    "box_xywh": [
+     753,
+     273,
+     389,
+     550
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1587x2245",
+    "links_to": null
+   },
+   {
+    "page": "menu",
+    "viewport": "390",
+    "box_xywh": [
+     50,
+     755,
+     289,
+     409
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1587x2245",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/26-menu-bebidas.png",
+  "kind": "menu",
+  "source_pages": [
+   "https://www.saavedraparis.fr/menu"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/2db6910c-a6e6-4917-a820-1fac38852d95/MENU+A5+NEW++%282%29.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/2db6910c-a6e6-4917-a820-1fac38852d95/MENU+A5+NEW++%282%29.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1410,
+  "height": 2000,
+  "format": "PNG",
+  "mode": "RGB",
+  "bytes": 233146,
+  "sha256": "56bd1ae8ee199474891acd27bd4434db2d33d15fc634ea265e982fbd0e490159",
+  "original_upload_dims": "1410x2000",
+  "size_note": null,
+  "what_it_shows": "Printed menu panel BEBIDAS, yellow on their blue. Softs, beers and cider, wines, with a SAAVEDRA CLUB badge bottom right. Transcribed in menu-transcribed.md.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "A picture of text that names third party drinks. Use the transcription.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "menu",
+    "viewport": "1440",
+    "box_xywh": [
+     526,
+     874,
+     388,
+     550
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1410x2000",
+    "links_to": null
+   },
+   {
+    "page": "menu",
+    "viewport": "390",
+    "box_xywh": [
+     51,
+     1315,
+     288,
+     409
+    ],
+    "visible": true,
+    "alt": "",
+    "original_upload_dims": "1410x2000",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/27-screenshot-socios-del-saavedra-club.png",
+  "kind": "screenshot",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/963a3a60-a8de-4759-a2f5-8f3679aaeaa4/Capture+d%E2%80%99e%CC%81cran+2026-05-21+a%CC%80+15.29.37.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/963a3a60-a8de-4759-a2f5-8f3679aaeaa4/Capture+d%E2%80%99e%CC%81cran+2026-05-21+a%CC%80+15.29.37.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 542,
+  "height": 706,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 855546,
+  "sha256": "d6f10f5b2289a744befb10112eed6a6d3b7faa637ff44248a69dc7e4a41f5c0d",
+  "original_upload_dims": "542x706",
+  "size_note": null,
+  "what_it_shows": "Close crop of a young woman in black cat eye sunglasses biting into an empanada, with white boxed words PARA LOS SOCIOS DEL SAAVEDRA CLUB laid over it and the heart sticker on the left edge. A screenshot (filename Capture d'écran 2026-05-21 15.29.37), 542x706.",
+  "face_identifiable": "partly",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "Partly identifiable face (eyes behind sunglasses). Low resolution screenshot of a social or design post, so the original photographer isn't known. Fine as a small, as-published tile, not as a hero.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     43,
+     465,
+     415,
+     540
+    ],
+    "visible": true,
+    "alt": "Capture d’écran 2026-05-21 à 15.29.37.png",
+    "original_upload_dims": "542x706",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     408,
+     171,
+     223
+    ],
+    "visible": true,
+    "alt": "Capture d’écran 2026-05-21 à 15.29.37.png",
+    "original_upload_dims": "542x706",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/28-screenshot-poster-menos-palabras.png",
+  "kind": "screenshot",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/2e05a422-0bec-4e52-baef-b957f340cf1e/Capture+d%E2%80%99e%CC%81cran+2026-05-21+a%CC%80+15.29.56.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/2e05a422-0bec-4e52-baef-b957f340cf1e/Capture+d%E2%80%99e%CC%81cran+2026-05-21+a%CC%80+15.29.56.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 540,
+  "height": 712,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 564416,
+  "sha256": "a15ee36dc5f4c30bf7fa8cbc3b5a1e7ad7748fced307a4347db5157857560d32",
+  "original_upload_dims": "540x712",
+  "size_note": null,
+  "what_it_shows": "Poster on a torn paper texture reading MENOS PALABRAS, MÁS EMPANADAS in blue and pink with a zigzag frame and a drawn empanada. Screenshot, 540x712.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "Low resolution. Their own slogan, reuse the words as live type.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     982,
+     465,
+     416,
+     548
+    ],
+    "visible": true,
+    "alt": "Capture d’écran 2026-05-21 à 15.29.56.png",
+    "original_upload_dims": "540x712",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     196,
+     594,
+     170,
+     224
+    ],
+    "visible": true,
+    "alt": "Capture d’écran 2026-05-21 à 15.29.56.png",
+    "original_upload_dims": "540x712",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/29-screenshot-tshirt-dealer-of-empanadas.png",
+  "kind": "screenshot",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/4bc68978-37a3-449a-97e3-39f074b96667/Capture+d%E2%80%99e%CC%81cran+2026-05-21+a%CC%80+15.30.07.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/4bc68978-37a3-449a-97e3-39f074b96667/Capture+d%E2%80%99e%CC%81cran+2026-05-21+a%CC%80+15.30.07.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 590,
+  "height": 606,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 573704,
+  "sha256": "2a7307ca0b17dd8f2996183c6a530ffc53606117ce6db7ebdf7c940103761035",
+  "original_upload_dims": "590x606",
+  "size_note": null,
+  "what_it_shows": "Back of a white T-shirt worn by a curly haired person, printed with THE DEALER OF EMPANADAS inside the SAAVEDRA letter ring, and SINCE / SAAVEDRA EMPANADAS / 32 RUE LAFAYETTE - 75009 / 2026 at the bottom. Screenshot, 590x606.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "The shirt prints 32 RUE LAFAYETTE 75009, which doesn't match the site's own address, 48 rue Condorcet 75009 (footer of every page, and their Zelty record). Never use it as an address source. Possibly an earlier address or a mockup. Unresolved.",
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     512,
+     965,
+     416,
+     428
+    ],
+    "visible": true,
+    "alt": "Capture d’écran 2026-05-21 à 15.30.07.png",
+    "original_upload_dims": "590x606",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     633,
+     171,
+     176
+    ],
+    "visible": true,
+    "alt": "Capture d’écran 2026-05-21 à 15.30.07.png",
+    "original_upload_dims": "590x606",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/30-screenshot-paper-bag-mockup.png",
+  "kind": "screenshot",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/540b7e12-acc8-4913-ba22-7c6a5f88f50d/Capture+d%E2%80%99e%CC%81cran+2026-05-21+a%CC%80+15.30.21.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/540b7e12-acc8-4913-ba22-7c6a5f88f50d/Capture+d%E2%80%99e%CC%81cran+2026-05-21+a%CC%80+15.30.21.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 1354,
+  "height": 1280,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 3808477,
+  "sha256": "03ea18ce0c2dc57e1fa97cc2cb975fb63fb3a9317030bae3077b308618906b13",
+  "original_upload_dims": "1354x1280",
+  "size_note": null,
+  "what_it_shows": "Mockup of a white SAAVEDRA paper bag printed with their drawings (empanadas, hands, an octopus, a star) with a real empanada sticking out the top, on a blue checked cloth, and a smaller bag reading PARA LOS SOCIOS DEL SAAVEDRA CLUB. Screenshot, 1354x1280.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "Reads like a packaging design mockup, so it may not be the bag in use today. Don't claim this exact bag is what customers get.",
+  "shortlist_for_catering_site": true,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     982,
+     1067,
+     415,
+     393
+    ],
+    "visible": true,
+    "alt": "Capture d’écran 2026-05-21 à 15.30.21.png",
+    "original_upload_dims": "1354x1280",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     196,
+     822,
+     170,
+     161
+    ],
+    "visible": true,
+    "alt": "Capture d’écran 2026-05-21 à 15.30.21.png",
+    "original_upload_dims": "1354x1280",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/31-screenshot-buenos-aires-bus-sticker.png",
+  "kind": "screenshot",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/d7a4d7f3-ec1f-4bf1-acb2-ad5d66074517/Capture+d%E2%80%99e%CC%81cran+2026-05-21+a%CC%80+15.32.06.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/d7a4d7f3-ec1f-4bf1-acb2-ad5d66074517/Capture+d%E2%80%99e%CC%81cran+2026-05-21+a%CC%80+15.32.06.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 554,
+  "height": 718,
+  "format": "PNG",
+  "mode": "RGBA",
+  "bytes": 1084616,
+  "sha256": "2c6b5583b424c4adc0503a591c50b50ba40d5e902e343bbf65627723698ff6ad",
+  "original_upload_dims": "554x718",
+  "size_note": null,
+  "what_it_shows": "Vintage photo of two Buenos Aires colectivo buses (route board EST. LINIERS with its number half hidden by a pink sun sticker, RETIRO on the second bus, plate 098335, VÍAS Y BUSES at the bottom) with the gaucho sticker and a pink sun stuck on, in a yellow sunburst frame. Screenshot, 554x718.",
+  "face_identifiable": "no",
+  "do_not_use": true,
+  "do_not_use_reason": "Third party logo: the Mercedes-Benz star is plainly visible on both bus grilles. The underlying bus photograph also looks like an archive or third party picture, its photographer and licence unknown.",
+  "caution": null,
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     43,
+     1737,
+     416,
+     539
+    ],
+    "visible": true,
+    "alt": "Capture d’écran 2026-05-21 à 15.32.06.png",
+    "original_upload_dims": "554x718",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     196,
+     1245,
+     171,
+     222
+    ],
+    "visible": true,
+    "alt": "Capture d’écran 2026-05-21 à 15.32.06.png",
+    "original_upload_dims": "554x718",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/32-poster-de-buenos-aires-a-paris.png",
+  "kind": "poster",
+  "source_pages": [
+   "https://www.saavedraparis.fr/nos-produits-1"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/d1a6e1e3-6f3a-4d8f-96be-738e811462b1/SAAVEDRA_Affiches-300x400mm-01.png"
+  ],
+  "fetched_as": "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/d1a6e1e3-6f3a-4d8f-96be-738e811462b1/SAAVEDRA_Affiches-300x400mm-01.png?format=2500w",
+  "fetch_note": "Single curl GET, 2026-10-25, Referer https://www.saavedraparis.fr/, Accept image/png so the CDN returns the native format instead of WebP. Saved byte for byte as served.",
+  "width": 2500,
+  "height": 3333,
+  "format": "PNG",
+  "mode": "RGB",
+  "bytes": 6084013,
+  "sha256": "2ad8876a85c1d8cda195403cae944aceb898ef55c529766e025821106dbb7e40",
+  "original_upload_dims": "3544x4725",
+  "size_note": "The CDN serves at most 2500 px wide. The upload is 3544x4725 per data-image-dimensions, but ?format=original, 3000w, 4000w and no parameter all returned the same 2500 px file (tested on P1242110.jpg).",
+  "what_it_shows": "Pink and blue screen print poster, a curly haired man in a SAAVEDRA shirt holding a giant empanada over his head, black stars, a sunburst border, SAAVEDRA DE BUENOS AIRES À PARIS. 2500x3333 (original 3544x4725, a 300x400 mm poster).",
+  "face_identifiable": "yes",
+  "do_not_use": true,
+  "do_not_use_reason": "Appears to be a likeness of Diego Maradona (face, curly hair, the raised arms trophy pose). A recognisable real public figure. Their wordmark and the line DE BUENOS AIRES À PARIS can be reused as type without the figure.",
+  "caution": null,
+  "shortlist_for_catering_site": false,
+  "visible_on_live_site": true,
+  "rendered_positions": [
+   {
+    "page": "nos-produits-1",
+    "viewport": "1440",
+    "box_xywh": [
+     982,
+     2038,
+     415,
+     554
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA_Affiches-300x400mm-01.png",
+    "original_upload_dims": "3544x4725",
+    "links_to": null
+   },
+   {
+    "page": "nos-produits-1",
+    "viewport": "390",
+    "box_xywh": [
+     23,
+     1267,
+     171,
+     228
+    ],
+    "visible": true,
+    "alt": "SAAVEDRA_Affiches-300x400mm-01.png",
+    "original_upload_dims": "3544x4725",
+    "links_to": null
+   }
+  ],
+  "credit": "SAAVEDRA's own published asset, from saavedraparis.fr. Use in a prototype for SAAVEDRA only. Photographer not credited on the site."
+ },
+ {
+  "file": "own/traced-svg/01-logo-saavedra-TRACED.svg",
+  "kind": "traced_svg",
+  "traced_from": "own/01-logo-saavedra-fabrique-dempanadas.png",
+  "source_pages": [
+   "https://www.saavedraparis.fr/",
+   "https://www.saavedraparis.fr/menu",
+   "https://www.saavedraparis.fr/equipe",
+   "https://www.saavedraparis.fr/nos-produits-1",
+   "https://www.saavedraparis.fr/click-collect"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/773e7bac-526c-43e0-aafe-0aa032a0e866/SAAVEDRA_Logotype_Bleu2_CMJN.png",
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/f6b6c38a-1226-4e53-afde-2e75839e7d67/SAAVEDRA_Logotype_Bleu2_CMJN.png",
+   "https://static1.squarespace.com/static/68d931ba4748c81c26b09809/t/6a0efca12b822e625f796324/1779367073358/SAAVEDRA_Logotype_Bleu2_CMJN.png"
+  ],
+  "width": 2500,
+  "height": 1981,
+  "bytes": 20708,
+  "sha256": "dc8cd87d6202b396e1510e4e50c08883d6c89c0763064bbdad550eb7f4e8dd8f",
+  "curves": 43,
+  "what_it_shows": "Vector trace of 01-logo-saavedra-fabrique-dempanadas.png, one path, fill-rule evenodd, filled with the source's dominant blue. SAAVEDRA logotype in their blue (#034990), the letters stretched taller toward the middle so the word arches, with FABRIQUE D'EMPANADAS set small underneath. Transparent background.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "NOT a SAAVEDRA source file. Their site has no SVG artwork (see notes in ASSETS.md); this is our own trace of their PNG, made 2026-10-25 with potracer 0.0.4 (turdsize 4, alphamax 1.0, opticurve on). Checked by rasterising it in Chromium at the source size and comparing with the source alpha mask: IoU 0.9960. Fine detail is softened, most on hairlines. Use it for crisp scaling and recolouring in the prototype, and ask SAAVEDRA for their real vector files before anything goes live.",
+  "trace_check_iou": 0.996,
+  "shortlist_for_catering_site": true,
+  "credit": "Derived from SAAVEDRA's own published artwork. Use in a prototype for SAAVEDRA only."
+ },
+ {
+  "file": "own/traced-svg/02-runner-with-tray-TRACED.svg",
+  "kind": "traced_svg",
+  "traced_from": "own/02-illustration-runner-with-tray.png",
+  "source_pages": [
+   "https://www.saavedraparis.fr/"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/933fce5c-ca5c-4c91-af8f-78c5d6e55eb9/13.png"
+  ],
+  "width": 1181,
+  "height": 1181,
+  "bytes": 73640,
+  "sha256": "a59aa53032db697a954d619547bca1fd095139614f295218322dcb1e235c5ab2",
+  "curves": 134,
+  "what_it_shows": "Vector trace of 02-illustration-runner-with-tray.png, one path, fill-rule evenodd, filled with the source's dominant blue. Line drawing in their blue of a cartoon girl racing forward, legs a blur of speed lines and dust clouds, carrying a tray of empanadas out in front of her. Black bob hair with a bow, dotted dress. The runner with a tray. Shown top left in the homepage hero.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "NOT a SAAVEDRA source file. Their site has no SVG artwork (see notes in ASSETS.md); this is our own trace of their PNG, made 2026-10-25 with potracer 0.0.4 (turdsize 4, alphamax 1.0, opticurve on). Checked by rasterising it in Chromium at the source size and comparing with the source alpha mask: IoU 0.9534. Fine detail is softened, most on hairlines. Use it for crisp scaling and recolouring in the prototype, and ask SAAVEDRA for their real vector files before anything goes live. The character's black bob, bow and dotted dress may read as a nod to Quino's Mafalda, a copyrighted Argentine comic character. It's their own published brand art, so fine as their mark, but ask before making it the hero object, and don't redraw or animate it into something that looks more like Mafalda.",
+  "trace_check_iou": 0.9534,
+  "shortlist_for_catering_site": true,
+  "credit": "Derived from SAAVEDRA's own published artwork. Use in a prototype for SAAVEDRA only."
+ },
+ {
+  "file": "own/traced-svg/03-sun-TRACED.svg",
+  "kind": "traced_svg",
+  "traced_from": "own/03-illustration-sun.png",
+  "source_pages": [
+   "https://www.saavedraparis.fr/",
+   "https://www.saavedraparis.fr/menu"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/b22abf54-a1ac-4f98-b133-506ebb5432c1/8.png",
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/7e0cd8d7-4c8d-42b9-a46d-a6c9e6d87d35/8.png"
+  ],
+  "width": 1181,
+  "height": 1181,
+  "bytes": 11473,
+  "sha256": "36bf17bb61fdf2befa5db773413565c36d29773150d15e178e7e6dcec57f3789",
+  "curves": 1,
+  "what_it_shows": "Vector trace of 03-illustration-sun.png, one path, fill-rule evenodd, filled with the source's dominant blue. Solid blue sun with wavy rays (the Argentine sol de mayo shape). Homepage hero top right and on the menu page.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "NOT a SAAVEDRA source file. Their site has no SVG artwork (see notes in ASSETS.md); this is our own trace of their PNG, made 2026-10-25 with potracer 0.0.4 (turdsize 4, alphamax 1.0, opticurve on). Checked by rasterising it in Chromium at the source size and comparing with the source alpha mask: IoU 0.9965. Fine detail is softened, most on hairlines. Use it for crisp scaling and recolouring in the prototype, and ask SAAVEDRA for their real vector files before anything goes live.",
+  "trace_check_iou": 0.9965,
+  "shortlist_for_catering_site": true,
+  "credit": "Derived from SAAVEDRA's own published artwork. Use in a prototype for SAAVEDRA only."
+ },
+ {
+  "file": "own/traced-svg/04-gaucho-letter-ring-TRACED.svg",
+  "kind": "traced_svg",
+  "traced_from": "own/04-illustration-gaucho-horse-letter-ring.png",
+  "source_pages": [
+   "https://www.saavedraparis.fr/",
+   "https://www.saavedraparis.fr/equipe"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/c934e06a-89b7-4452-9ad9-c48d6aea1a09/11.png",
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/a4c58401-d6e9-4730-857c-55eeb9735500/11.png"
+  ],
+  "width": 1181,
+  "height": 1181,
+  "bytes": 41223,
+  "sha256": "73befbfe33471c64c22c4023e08ec804cd1262a629d866e77b80d0ec83f56ca3",
+  "curves": 61,
+  "what_it_shows": "Vector trace of 04-illustration-gaucho-horse-letter-ring.png, one path, fill-rule evenodd, filled with the source's dominant blue. Gaucho in a hat on a rearing horse, one arm raised, with the letters S A A V E D R A in white circles ringed around a small sun on the horse's flank. All in their blue. Homepage hero left and the equipe page.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "NOT a SAAVEDRA source file. Their site has no SVG artwork (see notes in ASSETS.md); this is our own trace of their PNG, made 2026-10-25 with potracer 0.0.4 (turdsize 4, alphamax 1.0, opticurve on). Checked by rasterising it in Chromium at the source size and comparing with the source alpha mask: IoU 0.9834. Fine detail is softened, most on hairlines. Use it for crisp scaling and recolouring in the prototype, and ask SAAVEDRA for their real vector files before anything goes live.",
+  "trace_check_iou": 0.9834,
+  "shortlist_for_catering_site": true,
+  "credit": "Derived from SAAVEDRA's own published artwork. Use in a prototype for SAAVEDRA only."
+ },
+ {
+  "file": "own/traced-svg/05-heart-arrow-s-TRACED.svg",
+  "kind": "traced_svg",
+  "traced_from": "own/05-illustration-heart-arrow-s-badge.png",
+  "source_pages": [
+   "https://www.saavedraparis.fr/"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/384c7b0a-6652-43cc-a27f-d6e7073f83d7/12.png"
+  ],
+  "width": 1181,
+  "height": 1181,
+  "bytes": 11448,
+  "sha256": "726958cbb6801f468372345cce3f974fdc4d7546dc3a2b696b80d81001c32b98",
+  "curves": 38,
+  "what_it_shows": "Vector trace of 05-illustration-heart-arrow-s-badge.png, one path, fill-rule evenodd, filled with the source's dominant blue. Blue scalloped heart pierced by an arrow, with a white square S badge (their monogram) in the middle. Homepage hero bottom right.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "NOT a SAAVEDRA source file. Their site has no SVG artwork (see notes in ASSETS.md); this is our own trace of their PNG, made 2026-10-25 with potracer 0.0.4 (turdsize 4, alphamax 1.0, opticurve on). Checked by rasterising it in Chromium at the source size and comparing with the source alpha mask: IoU 0.9966. Fine detail is softened, most on hairlines. Use it for crisp scaling and recolouring in the prototype, and ask SAAVEDRA for their real vector files before anything goes live.",
+  "trace_check_iou": 0.9966,
+  "shortlist_for_catering_site": true,
+  "credit": "Derived from SAAVEDRA's own published artwork. Use in a prototype for SAAVEDRA only."
+ },
+ {
+  "file": "own/traced-svg/06-burst-star-TRACED.svg",
+  "kind": "traced_svg",
+  "traced_from": "own/06-illustration-burst-star.png",
+  "source_pages": [
+   "https://www.saavedraparis.fr/menu"
+  ],
+  "source_urls": [
+   "https://images.squarespace-cdn.com/content/v1/68d931ba4748c81c26b09809/2156b992-c055-400e-8d7c-ddd75f5da557/6.png"
+  ],
+  "width": 1181,
+  "height": 1181,
+  "bytes": 50169,
+  "sha256": "69f1e3ed4b077f020443bedb92cebbb6b983e62ecd5c4205a32de0f652ce90e7",
+  "curves": 160,
+  "what_it_shows": "Vector trace of 06-illustration-burst-star.png, one path, fill-rule evenodd, filled with the source's dominant blue. Distressed blue burst or zigzag star with speckled print texture. Menu page decoration.",
+  "face_identifiable": "no",
+  "do_not_use": false,
+  "do_not_use_reason": null,
+  "caution": "NOT a SAAVEDRA source file. Their site has no SVG artwork (see notes in ASSETS.md); this is our own trace of their PNG, made 2026-10-25 with potracer 0.0.4 (turdsize 4, alphamax 1.0, opticurve on). Checked by rasterising it in Chromium at the source size and comparing with the source alpha mask: IoU 0.9954. Fine detail is softened, most on hairlines. Use it for crisp scaling and recolouring in the prototype, and ask SAAVEDRA for their real vector files before anything goes live.",
+  "trace_check_iou": 0.9954,
+  "shortlist_for_catering_site": false,
+  "credit": "Derived from SAAVEDRA's own published artwork. Use in a prototype for SAAVEDRA only."
+ }
+]

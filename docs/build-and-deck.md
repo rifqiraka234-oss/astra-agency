@@ -636,3 +636,27 @@ deploy, cold loads at 1440 and 390.
 | "DOCUMENTATIO / N" in a narrow column head on phones | Narrow tables number their columns on phones with a key above, full names kept for screen readers |
 | Competitor names written with spans to dodge the dash check | Proper nouns go on the audit's allow list as written, never disguised |
 | A quoted WordPress post title carried an exclamation mark | Describe a quoted title instead of misquoting it |
+
+## Saavedra, the Hertling v3 recipe on a restaurant (25 Oct 2026)
+
+Julien Salvat said yes to "a sketch of the Saavedra catering and events site". Built the same day to the Hertling v3
+bar, French first with an English switch. The idea is their own poster line, "Menos palabras, más empanadas", and the
+page runs through a team's day, the sky following the clock. A box builder sizes the order at card prices and hands the
+headcount to a one step quote. The growth plan opens on the co-founder's own July post naming catering as the next
+step. Live, https://astra-saavedra-prototype.netlify.app/ and https://astra-saavedra-plan.netlify.app/. Source and
+handover, state/prototypes/saavedra.
+
+### Every hiccup, and the rule it leaves
+
+| Hiccup | Rule |
+|---|---|
+| A JSON data block (the opening hours, `[[["12:00"...`) looked like a `[[fr||en]]` pair and the translation pass ate half a form | The build fails on any `[[` that isn't a clean pair, and JSON in the page puts a space between brackets |
+| A translated label nested inside another translated label broke the same form on one page and not another | Never nest language pairs, build the pieces side by side. The build check catches it |
+| `var per` inside a loop shadowed the function `per()` and the box builder died, while its layout test passed | A test that counts things off the board must also assert the things exist. Every negative UI test gets a positive assertion, the same rule as absence claims |
+| A 16h "goûter" step in the day scene, when the shop is closed from 14h30 to 18h30 | A day or timeline scene only shows formats inside the business's published hours. Read the hours first (Zelty, Uber Eats and Google agreed) |
+| The scroll scene's sun crossed the paragraph at 18h30 | Moving decoration takes a path through empty space, behind the clock on desktop and the empty top half on phones |
+| Pastel pink headline words on light blue failed axe at 1.5 to 1 | Keep the brand's pastel for dark grounds, add a deeper shade of it for text on light ones |
+| Two of their own photos carried third party bottle labels | Their own photos get the third party check too, crop it out or drop the photo |
+| An agent said the menu was four images, it was three plus two decorations. Two counts of nearby offices differed by two | Agent facts are a candidate list. Recount what you'll print, and when two careful counts differ, print what both support (300+) |
+| New Netlify projects came up with team login on | Switch SSO off on every new project before the first deploy, then check a cold load sees the page |
+| Netlify rewrites the form tag on pages with a form | Live hashing will show those pages as different. Diff them, the form tag should be the only change |

@@ -1,0 +1,52 @@
+{
+ "shop": [
+  600.0,
+  430.0
+ ],
+ "w": 1200,
+ "h": 860,
+ "metres_shown": 860,
+ "routes": [
+  {
+   "key": "pigalle",
+   "fr": "Place Pigalle",
+   "en": "Place Pigalle",
+   "m": 579,
+   "end": [
+    363.2,
+    309.2
+   ]
+  },
+  {
+   "key": "saintgeorges",
+   "fr": "Place Saint-Georges",
+   "en": "Place Saint-Georges",
+   "m": 773,
+   "end": [
+    368.7,
+    542.3
+   ]
+  },
+  {
+   "key": "montholon",
+   "fr": "Square Montholon",
+   "en": "Square Montholon",
+   "m": 656,
+   "end": [
+    728.3,
+    642.2
+   ]
+  },
+  {
+   "key": "anvers",
+   "fr": "Square d'Anvers",
+   "en": "Square d'Anvers",
+   "m": 359,
+   "end": [
+    650.3,
+    284.3
+   ]
+  }
+ ],
+ "source": "OpenStreetMap contributors, ODbL, api.openstreetmap.org map calls in 9 tiles, 25 Oct 2026, routes by shortest walking path on the street graph"
+}

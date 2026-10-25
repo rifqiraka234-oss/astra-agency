@@ -1,0 +1,110 @@
+{
+ "_source": "Every value read from their own page code on 25 Oct 2026 (curl of saavedraparis.fr home, menu, equipe, nos-produits-1, click-collect), plus the hours and ratings below.",
+ "mail": "Contact@saavedraparis.fr",
+ "addr": "48 rue Condorcet, 75009 Paris",
+ "maps": "https://www.google.com/maps/search/?api=1&query=Saavedra+48+rue+Condorcet+75009+Paris",
+ "zelty": "https://saavedra.zelty-order.fr/",
+ "deliveroo": "https://deliveroo.fr/fr/menu/Paris/9eme-opera/saavedra-fabrique-dempanadas",
+ "instagram": "https://www.instagram.com/saavedra.empanadas/",
+ "tiktok": "https://www.tiktok.com/@saavedra.empanadas",
+ "linkedin": "https://www.linkedin.com/company/saavedra-paris/",
+ "site_url": "https://astra-saavedra-prototype.netlify.app/",
+ "hours": [
+  {
+   "fr": "Lundi au samedi, 12h à 14h30 et 18h30 à 22h",
+   "en": "Monday to Saturday, 12pm to 2.30pm and 6.30pm to 10pm"
+  },
+  {
+   "fr": "Dimanche, 18h30 à 22h",
+   "en": "Sunday, 6.30pm to 10pm"
+  }
+ ],
+ "price6": 20.9,
+ "price12": 40.9,
+ "_prices": "Box of 6 20,90 and box of 12 40,90 as printed on their card, https://www.saavedraparis.fr/menu image 1, read 25 Oct 2026. Card prices, not a catering price, and the page says so.",
+ "hours_week": [
+  [
+   [
+    "12:00",
+    "14:30"
+   ],
+   [
+    "18:30",
+    "22:00"
+   ]
+  ],
+  [
+   [
+    "12:00",
+    "14:30"
+   ],
+   [
+    "18:30",
+    "22:00"
+   ]
+  ],
+  [
+   [
+    "12:00",
+    "14:30"
+   ],
+   [
+    "18:30",
+    "22:00"
+   ]
+  ],
+  [
+   [
+    "12:00",
+    "14:30"
+   ],
+   [
+    "18:30",
+    "22:00"
+   ]
+  ],
+  [
+   [
+    "12:00",
+    "14:30"
+   ],
+   [
+    "18:30",
+    "22:00"
+   ]
+  ],
+  [
+   [
+    "12:00",
+    "14:30"
+   ],
+   [
+    "18:30",
+    "22:00"
+   ]
+  ],
+  [
+   [
+    "18:30",
+    "22:00"
+   ]
+  ]
+ ],
+ "_hours": "Zelty ordering API raw response (agent, 09:48 UTC) and Uber Eats JSON-LD fetched again by me 25 Oct 2026, slot for slot identical. Google agrees for Sunday. The site itself publishes none.",
+ "ubereats": "https://www.ubereats.com/fr/store/saavedra-empenadas-au-feu-de-bois/5JCzKU7kV7iA1aklxtC74A",
+ "_ubereats": "Link taken from Google's order panel by the facts agent, fetched again by me 25 Oct 2026, JSON-LD names 48 Rue Condorcet.",
+ "rating": {
+  "google": "5,0",
+  "google_n": 138,
+  "deliveroo": "4,7",
+  "deliveroo_n": 31,
+  "ubereats": "4,5",
+  "ubereats_n": 28,
+  "asof_fr": "octobre 2026",
+  "asof_en": "October 2026"
+ },
+ "_rating": "Google 5,0 from 138 reviews, Search knowledge panel and screenshot 10:10 UTC 25 Oct 2026. Deliveroo 4.7 from 31 and Uber Eats 4.5 from 28, same day. Update before launch.",
+ "siren": "103 109 583",
+ "siret": "103 109 583 00015",
+ "_siren": "recherche-entreprises.api.gouv.fr record fetched again 25 Oct 2026, nature juridique 5499 (SARL), gérants Grégoire Colas and Julien Salvat."
+}
