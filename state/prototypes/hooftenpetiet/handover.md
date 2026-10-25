@@ -16,8 +16,8 @@ git (build/, build2/), not on the web.
 | Hooft & Petiet | https://astra-hooftenpetiet-prototype.netlify.app | / , /verkoopstyling/ , /offerte/ , and /en/ , /en/sales-styling/ , /en/quote/ |
 | ReShare Living Group | https://astra-reshare-prototype.netlify.app | / and /en/ |
 
-Netlify ids, astra-hooftenpetiet-prototype c8d94385-c7d6-43a5-b5b1-9b2b88901ed3 (v3 deploy 6addf94a43a3b475cb6fd39b),
-astra-reshare-prototype 216660cc-b644-4e72-9ed5-cf4c6ecc79d3 (v3 deploy 6addf957d87531f02c820186). Team SSO off on both.
+Netlify ids, astra-hooftenpetiet-prototype c8d94385-c7d6-43a5-b5b1-9b2b88901ed3 (v3 deploy 6ade017f184e501f76d11b70),
+astra-reshare-prototype 216660cc-b644-4e72-9ed5-cf4c6ecc79d3 (v3 deploy 6ade018c06daee62cdeebde9). Team SSO off on both.
 noindex on every page, X-Robots-Tag header, disallow robots.txt.
 
 ## Who it's for and what it asks them to do (unchanged from v2)
@@ -70,6 +70,20 @@ clip paths or CSS variables, the canvases pause off screen, the gradient renders
 - Live, 72 of 72 files on H&P and 40 of 40 on ReShare match the build (assets by sha256, HTML by visible text). Live
   render of every page at 1440 and 390, 0 errors, every image decoded, WebGL on.
 - First load 1.1 MB on H&P, 1.8 MB on ReShare.
+
+## Final check, 25 Oct, on the live URLs after the last deploy
+
+- 72 of 72 and 40 of 40 live files match the build again.
+- All 8 pages loaded at 1440 and at 390 (phone, touch, DPR 2) and scrolled through slowly, 136 screenshots looked at.
+  0 broken images, 0 still loading, 0 sideways overflow, 0 script errors, 0 failed requests, both fonts loaded, gradient
+  on. Positive control on the live page, a planted missing image, its 404, a thrown error and a 2,000px div were all caught.
+- One phone load of the ReShare home got its stylesheet back aborted as text/plain through our proxy. Netlify served
+  text/css on 6 of 6 direct fetches and on 3 of 3 reloads of that page in Chromium, so it was our side.
+- Functional suite 69 of 69 against the live URLs, including the nine width overflow check. Every link on every page,
+  26, returns 200, with a 404 control.
+- Fixed in this pass, the dusk bar's number field cut its placeholder on desktop (now two fields over a full width
+  button), and the dusk and forest closes showed faint seams where a glow was cut at a section edge (glows moved inside,
+  ReShare's quote and contact now share one background).
 
 ## Two things found and fixed on the way
 
