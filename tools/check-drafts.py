@@ -466,6 +466,24 @@ def check(path, replies=False):
                 elif re.search(r"can'?t rule|cannot rule|unknown|unclear|not checked", parts[2], re.I):
                     bad(i, "RESEARCH GATE, owner reply, a trap that can't be ruled out means this gap "
                            "isn't the angle. Take the next pain or NO_STRONG_ANGLE (RULES 0F)")
+        # The GTM review, 2026-10-25, RULES 0G point 1. Craig had resigned and Clément had left, and
+        # Clément's gate rested on lemlist's copy of his profile. The role is confirmed outside lemlist.
+        if not relaxed and dm and dm.group(1) >= "2026-10-26" and shapes[i] in ("OPENER", "SKETCH"):
+            st = re.search(r"^still there:(.*)$", gates[i] or "", re.M)
+            urls = re.findall(r"https?://\S+", st.group(1)) if st else []
+            if not st or len(st.group(1).split()) < 4:
+                bad(i, "RESEARCH GATE, add 'still there: <their role, where it says so, date read> | <URL that "
+                       "isn't lemlist>' (RULES 0G point 1)")
+            elif not [u for u in urls if "lemlist" not in u]:
+                bad(i, "RESEARCH GATE, still there needs a URL outside lemlist, the company's own page, the "
+                       "register or a recent post of theirs (RULES 0G point 1)")
+        # The GTM plan, 2026-10-25, section 1. Every lost proposal stopped on budget, so a first message names
+        # one sign the company can pay (staff, a raise, an agency or paid tools, job ads, company customers).
+        if not relaxed and dm and dm.group(1) >= "2026-10-26" and shapes[i] in ("OPENER", "SKETCH"):
+            bl = re.search(r"^budget:(.*)$", gates[i] or "", re.M)
+            if not bl or len(bl.group(1).split()) < 3 or not re.search(r"https?://", bl.group(1)):
+                bad(i, "RESEARCH GATE, add 'budget: <one sign they can pay, staff, a raise, an agency or paid tools, "
+                       "job ads, company customers> | <URL>' (docs/gtm-plan.md section 1)")
         sketch = shapes[i] == "SKETCH"
         if relaxed:
             pass

@@ -49,6 +49,14 @@
 > checked media of their place, and a sourced growth plan on its own site. **`docs/RULES.md` section 5** and the last
 > section of `docs/build-and-deck.md`.
 >
+> **EVERY SITE GUIDES ONE VISITOR TO ONE ACTION, AND NEVER LOOKS LIKE CLAUDE MADE IT (Raka, 2026-10-25).** Before
+> designing, write who lands, what they're thinking, their goal and the one action we want, then build every section to
+> move them toward it. The AI site look (serif with italic second half, dash kickers, pill buttons with arrows, cream and
+> indigo, gradients, count up stats, cards, marquees) is banned. Expensive, chic, simple, researched from real premium
+> sites that day. **`docs/RULES.md` section 5**, first three paragraphs. **And simple is not plain (Raka, same day,
+> on v2).** "Break out of gradients" means reinvent them, not delete them. Every build has the flow AND a wow layer,
+> a signature moment nobody has seen, with motion, shape, colour and all their pictures. Research award level sites.
+>
 > **The two tools that enforce rather than remind.** `node tools/site-audit.js <url>
 > <tag>` runs a positive control on itself and voids its own absence findings when the
 > detector fails. `python3 tools/check-drafts.py <file>` exits non zero, so it cannot be

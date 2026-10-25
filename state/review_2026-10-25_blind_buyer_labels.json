@@ -1,0 +1,1982 @@
+[
+ {
+  "id": "ctc_y3mjzEXbiLzEHSAMB",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "CRM consultancy implementing systems for businesses"
+ },
+ {
+  "id": "ctc_Pzejgf5E4fAsp3FyC",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "SaaS scoring qualifications for universities and recruiters"
+ },
+ {
+  "id": "ctc_2J8oom4KjBoqds6Cm",
+  "buyer": "B2B",
+  "sector": "coaching and training",
+  "basis": "serves professionals, care organisations, schools, companies"
+ },
+ {
+  "id": "ctc_DB4f7hMWwZXF7vnPK",
+  "buyer": "B2B",
+  "sector": "agricultural supplies",
+  "basis": "specialist supplier to intensive poultry, pig, dairy farms"
+ },
+ {
+  "id": "ctc_XQDooFehywMZe9K3G",
+  "buyer": "B2B",
+  "sector": "HR consulting",
+  "basis": "outsourced HR for small and medium businesses"
+ },
+ {
+  "id": "ctc_3sPAr6qf3jXXaYeMP",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "scheduling platform sold to schools and universities"
+ },
+ {
+  "id": "ctc_vmg2iAtNxvpSW7d93",
+  "buyer": "B2C",
+  "sector": "retail brand",
+  "basis": "site: online women's swimwear shop"
+ },
+ {
+  "id": "ctc_fyP4ArYJKGDxjPL8u",
+  "buyer": "B2C",
+  "sector": "real estate",
+  "basis": "estate agent buying, selling, letting homes"
+ },
+ {
+  "id": "ctc_k5wbLRKyPJYio6aj8",
+  "buyer": "unclear",
+  "sector": "arts and care",
+  "basis": "site: inclusive theatre charity, funding source not stated"
+ },
+ {
+  "id": "ctc_Ftk7LZoKmetCxFDYh",
+  "buyer": "B2B",
+  "sector": "serviced accommodation",
+  "basis": "site: housing for contractors, business travellers, corporate teams"
+ },
+ {
+  "id": "ctc_x8ivje8MC5HSvdyMv",
+  "buyer": "B2C",
+  "sector": "hospitality",
+  "basis": "description says owner of Zurich bar"
+ },
+ {
+  "id": "ctc_X3smgNvaZLzrstcgq",
+  "buyer": "B2B",
+  "sector": "hospitality consulting",
+  "basis": "manages operations for independent hotels and groups"
+ },
+ {
+  "id": "ctc_G8gRt44CmSG6Rpdnu",
+  "buyer": "B2C",
+  "sector": "personal styling",
+  "basis": "personal stylist for individual wardrobes"
+ },
+ {
+  "id": "ctc_kPpKRKfLL9LsHFywM",
+  "buyer": "B2B",
+  "sector": "industrial manufacturing",
+  "basis": "thermoset parts for electrical, aircraft, rail industries"
+ },
+ {
+  "id": "ctc_FoezJqha3nh59Cmew",
+  "buyer": "mixed",
+  "sector": "health care",
+  "basis": "platform serving physicians and offering treatments to patients"
+ },
+ {
+  "id": "ctc_H4iEtDP9Yq8SB7WBe",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "management consulting for company growth and expansion"
+ },
+ {
+  "id": "ctc_dWL5LypChqmTQ9QyZ",
+  "buyer": "B2B",
+  "sector": "finance",
+  "basis": "grant funding service for startups and scaleups"
+ },
+ {
+  "id": "ctc_4HQm9YJCn6un4Mdip",
+  "buyer": "B2C",
+  "sector": "fitness",
+  "basis": "climbing training programme for individual mothers"
+ },
+ {
+  "id": "ctc_wnze5ZA9e9GozQ2Ls",
+  "buyer": "B2C",
+  "sector": "media",
+  "basis": "independent paper lifestyle magazine for readers"
+ },
+ {
+  "id": "ctc_E5FwxycX7v2A7Lnne",
+  "buyer": "B2B",
+  "sector": "legal",
+  "basis": "employment law advising employers, SMEs, international organisations"
+ },
+ {
+  "id": "ctc_Bi4TqichhqadXAoCN",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "operating system for UK professional service firms"
+ },
+ {
+  "id": "ctc_vsQq5j4wnfGgdffp2",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "media visibility agency for companies and their leaders"
+ },
+ {
+  "id": "ctc_suZBCi4aRsTNTGeEW",
+  "buyer": "B2B",
+  "sector": "recruitment",
+  "basis": "recruitment partner for SMEs, family firms, scaleups"
+ },
+ {
+  "id": "ctc_tCHuk5xY5ywSBbzCt",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "tagline: CIO, CTO, COO advisory, enterprise transformation"
+ },
+ {
+  "id": "ctc_vMWXWscT2JGxik3N5",
+  "buyer": "B2B",
+  "sector": "marketing automation",
+  "basis": "marketing and sales automation for SMEs"
+ },
+ {
+  "id": "ctc_YhyuAwqYsq9TQTmEQ",
+  "buyer": "B2B",
+  "sector": "health tech",
+  "basis": "lets businesses embed brain measurement in products"
+ },
+ {
+  "id": "ctc_PchCw6xqb8YTfA9Cz",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "web design and branding agency for brands"
+ },
+ {
+  "id": "ctc_EQEgHwLdmREfD2g6J",
+  "buyer": "B2B",
+  "sector": "finance",
+  "basis": "sustainable investment portfolios built for UK advisers"
+ },
+ {
+  "id": "ctc_iWE8rBKcxyLLTWNaG",
+  "buyer": "mixed",
+  "sector": "events",
+  "basis": "site: women in tech conference, tickets plus sponsors"
+ },
+ {
+  "id": "ctc_HZDGRZYXBDbJDhces",
+  "buyer": "B2C",
+  "sector": "hospitality",
+  "basis": "site: halal brunch cafe in Glasgow"
+ },
+ {
+  "id": "ctc_pMTuCCHvsuoaGQSfD",
+  "buyer": "B2B",
+  "sector": "coaching and training",
+  "basis": "team coaching masterclasses for organisations"
+ },
+ {
+  "id": "ctc_FqsfJfJh8oDGt2hbo",
+  "buyer": "B2C",
+  "sector": "travel",
+  "basis": "founder plans family holidays for travellers"
+ },
+ {
+  "id": "ctc_8brEA6237q8aBcncJ",
+  "buyer": "B2B",
+  "sector": "investment",
+  "basis": "tagline: investor building and growing companies"
+ },
+ {
+  "id": "ctc_5CacAA3M84ChXeJyN",
+  "buyer": "B2B",
+  "sector": "biotech",
+  "basis": "therapeutic opportunity mapping for drug strategy decisions"
+ },
+ {
+  "id": "ctc_NwqJExzhsL5SYoEME",
+  "buyer": "mixed",
+  "sector": "hospitality",
+  "basis": "after dinner club plus corporate event hire"
+ },
+ {
+  "id": "ctc_fToFAxkxJynw5nKhk",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "sponsorship effectiveness for brands, rights holders, agencies"
+ },
+ {
+  "id": "ctc_yfxa5oZx9PZYs58fD",
+  "buyer": "B2C",
+  "sector": "hospitality",
+  "basis": "tagline: contemporary Greek restaurant in Marseille"
+ },
+ {
+  "id": "ctc_ZYSuTMB2YScHH9Apw",
+  "buyer": "B2B",
+  "sector": "food wholesale",
+  "basis": "wholesale patisserie to hotels and restaurants"
+ },
+ {
+  "id": "ctc_pdAKCyF8dJxPkKrdL",
+  "buyer": "B2C",
+  "sector": "consumer food brand",
+  "basis": "site: online shop for gut health foods"
+ },
+ {
+  "id": "ctc_3Bu58Rji68L6jgFwH",
+  "buyer": "B2C",
+  "sector": "wellness",
+  "basis": "movement therapy space for women and girls"
+ },
+ {
+  "id": "ctc_iWGMxjeTYkzegg78v",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "strategic partner for SME leaders scaling up"
+ },
+ {
+  "id": "ctc_9KQJNwc4mq3WnGufS",
+  "buyer": "B2B",
+  "sector": "education",
+  "basis": "BIM and low carbon training for construction professionals"
+ },
+ {
+  "id": "ctc_su8BQMQwP7cnLdLFp",
+  "buyer": "B2B",
+  "sector": "business brokerage",
+  "basis": "valuers and sales agents for dental practices"
+ },
+ {
+  "id": "ctc_4NgbWujpWmFTW6Jb4",
+  "buyer": "B2B",
+  "sector": "hospitality consulting",
+  "basis": "helps hospitality businesses fix operational problems"
+ },
+ {
+  "id": "ctc_pNPsWdEMRCb4ccQev",
+  "buyer": "B2C",
+  "sector": "consumer electronics",
+  "basis": "site redirects to Indiegogo headphone crowdfunding campaign"
+ },
+ {
+  "id": "ctc_8fz9FBzEvnyoTPnEC",
+  "buyer": "B2B",
+  "sector": "industrial automation",
+  "basis": "machines, electrical cabinets, robots for industry"
+ },
+ {
+  "id": "ctc_5N8eTkQMH9tMYswtK",
+  "buyer": "mixed",
+  "sector": "food service",
+  "basis": "site: lunch takeaway plus company lunch delivery"
+ },
+ {
+  "id": "ctc_S5TaMLkjQfDeiWrcq",
+  "buyer": "B2B",
+  "sector": "printing",
+  "basis": "makes flexo print plates for printers"
+ },
+ {
+  "id": "ctc_BY3K7TQYXkrRDydck",
+  "buyer": "B2C",
+  "sector": "food and beverage",
+  "basis": "tagline: gluten free fast food brand"
+ },
+ {
+  "id": "ctc_StZTeBnDJxptFhzf4",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "marketing agency serving businesses"
+ },
+ {
+  "id": "ctc_WknX8u7geuafsLSMw",
+  "buyer": "B2B",
+  "sector": "biotech",
+  "basis": "enzyme solutions for industrial biomass conversion"
+ },
+ {
+  "id": "ctc_FTkRAQh2MHpEQJjMB",
+  "buyer": "B2C",
+  "sector": "sports club",
+  "basis": "tennis club with 750 members"
+ },
+ {
+  "id": "ctc_8HL4vo9cA55Yugaav",
+  "buyer": "B2B",
+  "sector": "production studio",
+  "basis": "site: livestream shopping productions for brands"
+ },
+ {
+  "id": "ctc_gye9ypfozqp4QQ8cs",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "innovation and subsidy advice for organisations"
+ },
+ {
+  "id": "ctc_6vZuyoNEdQuzugkAj",
+  "buyer": "B2B",
+  "sector": "procurement",
+  "basis": "purchasing solution for finance and purchasing departments"
+ },
+ {
+  "id": "ctc_8j6Phufo4Fa8QK8Tb",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "digital support mainly for charities, CICs, small firms"
+ },
+ {
+  "id": "ctc_5DAXs4jAEQB4C2Wpy",
+  "buyer": "B2C",
+  "sector": "wellness",
+  "basis": "Ayurvedic treatments for individual patients"
+ },
+ {
+  "id": "ctc_PLeDim4Mhp2CtQyiu",
+  "buyer": "B2B",
+  "sector": "events agency",
+  "basis": "site: immersive event design and production for brands"
+ },
+ {
+  "id": "ctc_3S2rDnBX9W5hd3F8G",
+  "buyer": "B2C",
+  "sector": "retail brand",
+  "basis": "bespoke suits for individual men"
+ },
+ {
+  "id": "ctc_cvtYxcP6hYR9d8jQx",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "film, TV and culture campaign agency"
+ },
+ {
+  "id": "ctc_cHaWqfG74a3tQenef",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "go to market and logistics solutions for automotive industry"
+ },
+ {
+  "id": "ctc_mG6iR58sQQAXKgKEk",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "Oracle EPM and ERP partner for organisations"
+ },
+ {
+  "id": "ctc_8tTpay4QwR9iHTmiK",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "rebuilds founder led service businesses with AI"
+ },
+ {
+  "id": "ctc_CF2ifxkLkH4Nv4RuR",
+  "buyer": "B2C",
+  "sector": "leisure",
+  "basis": "site: public art workshops and paint nights"
+ },
+ {
+  "id": "ctc_9ZD7Lv3sHRbmiZBAT",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "press relations and influence campaigns for clients' expertise"
+ },
+ {
+  "id": "ctc_Dr4JnQbD9oK23WYEf",
+  "buyer": "B2B",
+  "sector": "engineering consulting",
+  "basis": "engineering consultancy for automotive, aerospace, rail firms"
+ },
+ {
+  "id": "ctc_tnGL6B5XZdtWc6JP4",
+  "buyer": "B2B",
+  "sector": "investment",
+  "basis": "accelerator and venture funds investing in startups"
+ },
+ {
+  "id": "ctc_cAdQknSHnsBZMFvrP",
+  "buyer": "B2C",
+  "sector": "leisure",
+  "basis": "tagline: luxury helicopter wine tours"
+ },
+ {
+  "id": "ctc_w4hXk3njKiearzeNu",
+  "buyer": "mixed",
+  "sector": "legal",
+  "basis": "corporate employment law plus guidance for individual employees"
+ },
+ {
+  "id": "ctc_F57ZqzDSwGEB8ad8H",
+  "buyer": "B2C",
+  "sector": "hospitality",
+  "basis": "restaurant serving seasonal vegetarian menus to guests"
+ },
+ {
+  "id": "ctc_KBnbsnifCG6cRWg3n",
+  "buyer": "B2B",
+  "sector": "construction",
+  "basis": "custom sandwich panel climate rooms and production spaces"
+ },
+ {
+  "id": "ctc_YxzGAWb8tPPKSpfPo",
+  "buyer": "B2B",
+  "sector": "semiconductors",
+  "basis": "thin film materials platform for chipmakers"
+ },
+ {
+  "id": "ctc_zQLRTuTdMXcf29TF8",
+  "buyer": "B2B",
+  "sector": "health tech",
+  "basis": "overdose wearable for care settings and responders"
+ },
+ {
+  "id": "ctc_JYWKs8LSRDxAreesA",
+  "buyer": "B2C",
+  "sector": "photography",
+  "basis": "funeral photography for grieving families"
+ },
+ {
+  "id": "ctc_3v3cm8AGXbSXrCLbi",
+  "buyer": "B2C",
+  "sector": "education",
+  "basis": "site: free tools, interview prep, CV review for engineers"
+ },
+ {
+  "id": "ctc_dCyZdQTH58obb9oCe",
+  "buyer": "B2C",
+  "sector": "travel app",
+  "basis": "description: universe for travellers, consumer travel app"
+ },
+ {
+  "id": "ctc_biurQgp9YgReZKtL9",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "brand positioning for law, tax, wealth advisory firms"
+ },
+ {
+  "id": "ctc_q7gk5zRxrBkwfrdfA",
+  "buyer": "B2C",
+  "sector": "health care",
+  "basis": "tagline: physiotherapy clinic co owner treating patients"
+ },
+ {
+  "id": "ctc_rMYGbmu7Piu5Pmwei",
+  "buyer": "unclear",
+  "sector": "legal",
+  "basis": "description empty, website unreachable"
+ },
+ {
+  "id": "ctc_q5NZMCjRn6NgvuQbT",
+  "buyer": "B2B",
+  "sector": "finance",
+  "basis": "outsourced finance team and fractional FC for businesses"
+ },
+ {
+  "id": "ctc_vprJ9wmXfFGzQ6csE",
+  "buyer": "B2B",
+  "sector": "IT consulting",
+  "basis": "open source ITSM consulting for companies"
+ },
+ {
+  "id": "ctc_nYnQgsLWCc384BqPm",
+  "buyer": "B2B",
+  "sector": "data",
+  "basis": "wine market data for wine professionals"
+ },
+ {
+  "id": "ctc_SZnfaHSkw5p2CbqWs",
+  "buyer": "B2B",
+  "sector": "staffing platform",
+  "basis": "gig platform helping venues fill hospitality shifts"
+ },
+ {
+  "id": "ctc_4558xsj8YPprDPCDi",
+  "buyer": "B2B",
+  "sector": "IT services",
+  "basis": "IT infrastructure support for businesses and hospitality"
+ },
+ {
+  "id": "ctc_K8PwwxqA3xE42PxbR",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "marketing know how for CMOs and CEOs"
+ },
+ {
+  "id": "ctc_YF6GhP26nDSvRyPZR",
+  "buyer": "B2B",
+  "sector": "legal",
+  "basis": "tagline: employment law for employers"
+ },
+ {
+  "id": "ctc_CJGZpaRQxRpP7Qb8e",
+  "buyer": "B2B",
+  "sector": "public sector services",
+  "basis": "supports municipalities and sheltered work organisations"
+ },
+ {
+  "id": "ctc_KMjZQEr5qdudxGgYP",
+  "buyer": "B2B",
+  "sector": "education",
+  "basis": "instructional design and learning experience consultancy"
+ },
+ {
+  "id": "ctc_9yfzLTQP9ehdYKdY6",
+  "buyer": "B2B",
+  "sector": "wholesale trading",
+  "basis": "sources and distributes goods to trade partners"
+ },
+ {
+  "id": "ctc_cqo2xTDfrTkrPwZTY",
+  "buyer": "B2B",
+  "sector": "arts services",
+  "basis": "business management services for professional artists"
+ },
+ {
+  "id": "ctc_Wn6WBQz6D6pzv6bQq",
+  "buyer": "unclear",
+  "sector": "unclear",
+  "basis": "no description, no domain, tagline names other firm"
+ },
+ {
+  "id": "ctc_t8TKRJXP6cemMLBBg",
+  "buyer": "B2C",
+  "sector": "elder care",
+  "basis": "live in companions for seniors at home"
+ },
+ {
+  "id": "ctc_HzPuRCz7vMqinmXQ8",
+  "buyer": "unclear",
+  "sector": "unclear",
+  "basis": "no description, website expired, tagline names other job"
+ },
+ {
+  "id": "ctc_Na96y74W5uT3GkSam",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI and web development projects for clients"
+ },
+ {
+  "id": "ctc_cRhuCBWWwXsGvEWTf",
+  "buyer": "B2B",
+  "sector": "lead generation",
+  "basis": "go to market engineering and lead generation"
+ },
+ {
+  "id": "ctc_SEeEgPK3irExCxBpc",
+  "buyer": "B2B",
+  "sector": "fintech",
+  "basis": "stablecoin B2B payments for trade corridors"
+ },
+ {
+  "id": "ctc_iR5HN4BJc8ZaQyuxj",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "operational excellence consulting and training for companies"
+ },
+ {
+  "id": "ctc_3JX4pgf5sx8skNbh7",
+  "buyer": "B2B",
+  "sector": "workplace health",
+  "basis": "physical strain prevention for companies' workforces"
+ },
+ {
+  "id": "ctc_k9fKjr4at8JpdNaGW",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI food innovation workflow for food companies"
+ },
+ {
+  "id": "ctc_2Tut2pLjoXtnfXopo",
+  "buyer": "B2B",
+  "sector": "accounting",
+  "basis": "site: accounting mainly for businesses, few individuals"
+ },
+ {
+  "id": "ctc_CSEmgnWEjmfFEqXQd",
+  "buyer": "B2B",
+  "sector": "advertising",
+  "basis": "courier bag digital billboards sold to brands"
+ },
+ {
+  "id": "ctc_txXG7tvvtcPsGRyJC",
+  "buyer": "mixed",
+  "sector": "hospitality",
+  "basis": "holiday home plus company retreats and teambuildings"
+ },
+ {
+  "id": "ctc_kLF4aRGsEdBZvNruG",
+  "buyer": "B2B",
+  "sector": "accounting",
+  "basis": "accounting and audit for company managers"
+ },
+ {
+  "id": "ctc_Jc3SXti4Km3dnBMeF",
+  "buyer": "B2C",
+  "sector": "retail",
+  "basis": "luxury watch dealer for collectors"
+ },
+ {
+  "id": "ctc_aTDPrxZiySApvLHsN",
+  "buyer": "B2C",
+  "sector": "food service",
+  "basis": "private dining, delivery and take away"
+ },
+ {
+  "id": "ctc_LcYiWjzfjJFgssnBf",
+  "buyer": "B2C",
+  "sector": "consumer drinks brand",
+  "basis": "ready to drink cocktail brand"
+ },
+ {
+  "id": "ctc_a6CziXnHPCMCfn5Ma",
+  "buyer": "B2C",
+  "sector": "hospitality",
+  "basis": "bar serving drinks and small plates"
+ },
+ {
+  "id": "ctc_83MwQqhh6XPF8RzQJ",
+  "buyer": "unclear",
+  "sector": "marketing",
+  "basis": "no description, website only says coming soon"
+ },
+ {
+  "id": "ctc_mF4YgtZWWek4sDrb9",
+  "buyer": "B2B",
+  "sector": "energy",
+  "basis": "tagline: infrastructure projects, IAB business investments; site parked"
+ },
+ {
+  "id": "ctc_6HJLE7nCYnDRPs7ci",
+  "buyer": "B2B",
+  "sector": "web design",
+  "basis": "affordable websites for small businesses and charities"
+ },
+ {
+  "id": "ctc_vTWa3ghNbN6qHcjbp",
+  "buyer": "B2B",
+  "sector": "IT brokerage",
+  "basis": "matches Mittelstand firms with IT providers"
+ },
+ {
+  "id": "ctc_FHyyBwHpRManaTDC3",
+  "buyer": "mixed",
+  "sector": "mental health",
+  "basis": "supervision for organisations and counselling for individuals"
+ },
+ {
+  "id": "ctc_4YWJ9gcS2AbcHq6SL",
+  "buyer": "mixed",
+  "sector": "event content",
+  "basis": "site: event content capture for companies and social events"
+ },
+ {
+  "id": "ctc_NiKYm5rp2kXcAAyw3",
+  "buyer": "B2C",
+  "sector": "health care",
+  "basis": "physiotherapy clinic treating people of all ages"
+ },
+ {
+  "id": "ctc_Puf9L7o8nDTyDNn2Q",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI tenancy platform for letting agencies"
+ },
+ {
+  "id": "ctc_yazGxabCJaJLo5Swa",
+  "buyer": "B2C",
+  "sector": "consumer products",
+  "basis": "home cookware storage product for consumers"
+ },
+ {
+  "id": "ctc_7ta5sCZ7yXwrAy3ZP",
+  "buyer": "unclear",
+  "sector": "biotech",
+  "basis": "pre revenue target discovery, no customer stated"
+ },
+ {
+  "id": "ctc_ZsXsvh3xwxo6xt79K",
+  "buyer": "B2B",
+  "sector": "education",
+  "basis": "specialist IT courses for IT professionals"
+ },
+ {
+  "id": "ctc_piBZeydFpN4KiBeky",
+  "buyer": "B2B",
+  "sector": "energy",
+  "basis": "deep tech energy generation and storage systems"
+ },
+ {
+  "id": "ctc_MDdiddoYGMJGaDFHn",
+  "buyer": "B2B",
+  "sector": "recruitment",
+  "basis": "places teachers and assistants in London schools"
+ },
+ {
+  "id": "ctc_2zdt5XmnTSPqWvhJC",
+  "buyer": "B2C",
+  "sector": "retail brand",
+  "basis": "site: online fashion shop for women, men, kids"
+ },
+ {
+  "id": "ctc_gTJfNNvz2jLYgAJNd",
+  "buyer": "B2B",
+  "sector": "industrial manufacturing",
+  "basis": "lighting for furniture, shopfitting and shipbuilding"
+ },
+ {
+  "id": "ctc_wRuu8puzBRRBgNCyC",
+  "buyer": "B2C",
+  "sector": "sports club",
+  "basis": "semi professional football club with fans"
+ },
+ {
+  "id": "ctc_3S6EA258AheDuBKi5",
+  "buyer": "B2C",
+  "sector": "wine retail",
+  "basis": "site: online Bulgarian wine shop, small B2B page"
+ },
+ {
+  "id": "ctc_RDogafhkpGPbrnp7H",
+  "buyer": "mixed",
+  "sector": "interior design",
+  "basis": "residential, commercial and corporate design projects"
+ },
+ {
+  "id": "ctc_BNpEmdmTDaBJGZGLe",
+  "buyer": "B2C",
+  "sector": "property management",
+  "basis": "syndic managing co owned residential buildings"
+ },
+ {
+  "id": "ctc_pAPukszq8MBpRfYrT",
+  "buyer": "B2B",
+  "sector": "education services",
+  "basis": "free for students, revenue via university partnerships"
+ },
+ {
+  "id": "ctc_h2z4NX4fAYvBpNPsh",
+  "buyer": "B2B",
+  "sector": "business association",
+  "basis": "chamber providing support services to member businesses"
+ },
+ {
+  "id": "ctc_ojbk7CE5wCwwhPrJo",
+  "buyer": "mixed",
+  "sector": "education",
+  "basis": "work study business school, students enrol, employers fund"
+ },
+ {
+  "id": "ctc_8sEGGrwa7PDTfbuXg",
+  "buyer": "B2B",
+  "sector": "biotech",
+  "basis": "functional protein production, successor to contract research firm"
+ },
+ {
+  "id": "ctc_qiJ2ccpxRci3ajkLG",
+  "buyer": "B2B",
+  "sector": "data",
+  "basis": "AI purchase data enrichment platform for enterprises"
+ },
+ {
+  "id": "ctc_CLtuaZ8AQp3aYpfx5",
+  "buyer": "B2C",
+  "sector": "events",
+  "basis": "backyard ultra running races for everyday runners"
+ },
+ {
+  "id": "ctc_9ksSyBed6pYFvcHaN",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "quality management app for hotel and restaurant groups"
+ },
+ {
+  "id": "ctc_k2GNq2p5WKD64TYvx",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI voice agents answering business leads"
+ },
+ {
+  "id": "ctc_rCGMND9Cgx4sw6FBY",
+  "buyer": "unclear",
+  "sector": "media",
+  "basis": "local TV channel, revenue source not stated"
+ },
+ {
+  "id": "ctc_gd9G4Nssf6Qqa9pkr",
+  "buyer": "unclear",
+  "sector": "media",
+  "basis": "free crypto news platform, revenue source not stated"
+ },
+ {
+  "id": "ctc_km3Aa5T7prhXZX7PB",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "claims handling platform for air carriers"
+ },
+ {
+  "id": "ctc_CwNQoXS434JF4pFX2",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "golf content for brands, creators, golf clubs"
+ },
+ {
+  "id": "ctc_sQPTmkW8KGwkediDD",
+  "buyer": "B2B",
+  "sector": "research",
+  "basis": "subscription research for telecoms and media industries"
+ },
+ {
+  "id": "ctc_Wfbo48xvpB5QxMGuw",
+  "buyer": "mixed",
+  "sector": "event rental",
+  "basis": "tents for weddings and corporate events alike"
+ },
+ {
+  "id": "ctc_3HtSsCH34mMAJXgce",
+  "buyer": "B2B",
+  "sector": "pharmaceutical wholesale",
+  "basis": "medical cannabis manufacturer, importer and wholesaler"
+ },
+ {
+  "id": "ctc_mfxrvjytS6KDKniGw",
+  "buyer": "B2B",
+  "sector": "web development",
+  "basis": "tagline: WordPress technical partner for agencies; record mismatched"
+ },
+ {
+  "id": "ctc_cEx67ydg7DMYiHTSG",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "communication agency running campaigns for clients"
+ },
+ {
+  "id": "ctc_XDRJdGuNAsHxttMmv",
+  "buyer": "B2C",
+  "sector": "events",
+  "basis": "site: ticketed singalong socials in London"
+ },
+ {
+  "id": "ctc_czpdBfKjdtsHLrYtb",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI outbound revenue platform for sales teams"
+ },
+ {
+  "id": "ctc_QdhtaeDvqahLSQcSM",
+  "buyer": "B2C",
+  "sector": "fitness",
+  "basis": "semi private Pilates Reformer studio sessions"
+ },
+ {
+  "id": "ctc_aZswHFKfve2uo8iTr",
+  "buyer": "unclear",
+  "sector": "unclear",
+  "basis": "no description, website unreachable, tagline names other job"
+ },
+ {
+  "id": "ctc_nkQXNnHKZH4jz2ehF",
+  "buyer": "B2C",
+  "sector": "property tech",
+  "basis": "platform for tenants finding homes, investors funding"
+ },
+ {
+  "id": "ctc_bWcfiNE764D4PfGJt",
+  "buyer": "B2C",
+  "sector": "agriculture",
+  "basis": "site: CSA vegetable shares for members"
+ },
+ {
+  "id": "ctc_LX8SwdtGKPPxqzFd2",
+  "buyer": "B2B",
+  "sector": "e-commerce services",
+  "basis": "PIM, e-commerce and marketing for companies"
+ },
+ {
+  "id": "ctc_z446qTApfbr6R8RuT",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "subsidy software for entrepreneurs, advisers, accountants"
+ },
+ {
+  "id": "ctc_ZGv33qKajKqMjkqH9",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "helps organisations deliver change, team progress tool"
+ },
+ {
+  "id": "ctc_w4QnKtxBPTJ47Y2mu",
+  "buyer": "B2C",
+  "sector": "retail brand",
+  "basis": "ethical made in France clothing for consumers"
+ },
+ {
+  "id": "ctc_g9Fr5qqeRQDe3GEFu",
+  "buyer": "mixed",
+  "sector": "events",
+  "basis": "site: women in tech conference, tickets plus sponsors"
+ },
+ {
+  "id": "ctc_vm6BXBrFDAir6Rb3F",
+  "buyer": "B2C",
+  "sector": "property management",
+  "basis": "tagline: luxury villa management for owners, Riviera"
+ },
+ {
+  "id": "ctc_h9McQeY5zaJR9pbmm",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "project management platform for teams and clients"
+ },
+ {
+  "id": "ctc_xH6d56jWSsfPazmhS",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "tagline: board adviser, leadership and talent strategy"
+ },
+ {
+  "id": "ctc_icT5oEajhtmH6dcAd",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI assistants for SME customer service"
+ },
+ {
+  "id": "ctc_JiMGgwH639YbSSZfE",
+  "buyer": "unclear",
+  "sector": "medical technology",
+  "basis": "stroke rehab device, payer not stated, pre revenue"
+ },
+ {
+  "id": "ctc_YpcJRZbfqTAQsDDJ5",
+  "buyer": "B2C",
+  "sector": "travel",
+  "basis": "site: private Paris tours for travellers"
+ },
+ {
+  "id": "ctc_imcceXRFDb7GDh46P",
+  "buyer": "B2B",
+  "sector": "cybersecurity consulting",
+  "basis": "cyber governance advisory for FCA regulated IFA firms"
+ },
+ {
+  "id": "ctc_nM59cRCNqBsAgLxLT",
+  "buyer": "B2C",
+  "sector": "wellness",
+  "basis": "Ayurveda holistic spa for individuals"
+ },
+ {
+  "id": "ctc_fW7J53dLv7kwgFTFb",
+  "buyer": "B2C",
+  "sector": "hospitality",
+  "basis": "site: fine dining restaurant in Ghent arena"
+ },
+ {
+  "id": "ctc_Z3J4EAKarueohCqxj",
+  "buyer": "B2B",
+  "sector": "industrial software",
+  "basis": "machine data integration for machine builders"
+ },
+ {
+  "id": "ctc_8BQArSGfebNrTk72j",
+  "buyer": "unclear",
+  "sector": "unclear",
+  "basis": "every field empty"
+ },
+ {
+  "id": "ctc_k6YrDTTW2zZ3MhxB3",
+  "buyer": "mixed",
+  "sector": "accounting",
+  "basis": "advisers to creative businesses and individual performers"
+ },
+ {
+  "id": "ctc_rBP5uWNEwkGqLPTvH",
+  "buyer": "unclear",
+  "sector": "media",
+  "basis": "news media on Arab world, revenue not stated"
+ },
+ {
+  "id": "ctc_xtQnzSvvms6TEoAxS",
+  "buyer": "B2C",
+  "sector": "consumer app",
+  "basis": "intimacy app for couples"
+ },
+ {
+  "id": "ctc_YpijTFXfDCEb5mboD",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "web design and online marketing agency"
+ },
+ {
+  "id": "ctc_3fSkB4dv38ScfzXkH",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "human skills training platform for businesses"
+ },
+ {
+  "id": "ctc_nSviiCD4yMkFDaefo",
+  "buyer": "B2B",
+  "sector": "industrial services",
+  "basis": "welding and pipe fitting projects"
+ },
+ {
+  "id": "ctc_5SyckWYt9uMKL5CMt",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "M&A and advisory for corporate clients"
+ },
+ {
+  "id": "ctc_Wg9Bv7Z7vMqpNQx78",
+  "buyer": "B2C",
+  "sector": "property software",
+  "basis": "site: self management platform for apartment owner associations"
+ },
+ {
+  "id": "ctc_qm7h5xSbSnjHKxXXr",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "customs compliance software for importers and brokers"
+ },
+ {
+  "id": "ctc_5LYgS8GTT5QrzxPQh",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "data room review software for VCs"
+ },
+ {
+  "id": "ctc_e5TddBr53qxiLyida",
+  "buyer": "B2B",
+  "sector": "energy app",
+  "basis": "site: free household app funded by state programme, partners"
+ },
+ {
+  "id": "ctc_pq23X9G5KY9NwkDCn",
+  "buyer": "unclear",
+  "sector": "investment",
+  "basis": "family holding investing in property and companies"
+ },
+ {
+  "id": "ctc_bQXb7vJQNyQ4psRCc",
+  "buyer": "B2C",
+  "sector": "retail brand",
+  "basis": "Swiss luxury watches for personal legacy"
+ },
+ {
+  "id": "ctc_3eQBuQWxxCoZrFNxB",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "site: services for startups, universities, innovation hubs"
+ },
+ {
+  "id": "ctc_2XHwaefanCzHRkuWe",
+  "buyer": "mixed",
+  "sector": "e-commerce platform",
+  "basis": "two sided live shopping platform, buyers and sellers"
+ },
+ {
+  "id": "ctc_AdnACMeCPhQCdfbPr",
+  "buyer": "B2C",
+  "sector": "sports",
+  "basis": "tagline: helping toddlers swing, children's golf"
+ },
+ {
+  "id": "ctc_7qvzyxMbHLakaB2iG",
+  "buyer": "B2B",
+  "sector": "engineering consulting",
+  "basis": "antenna and microwave design consulting"
+ },
+ {
+  "id": "ctc_59ajvkH36kmFTthpN",
+  "buyer": "B2B",
+  "sector": "logistics",
+  "basis": "package and freight delivery company"
+ },
+ {
+  "id": "ctc_MvF898tMbDmzHBXhB",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "SEO and paid media agency for eCommerce brands"
+ },
+ {
+  "id": "ctc_sNWhXwPeSWYLPFqrJ",
+  "buyer": "B2C",
+  "sector": "art gallery",
+  "basis": "site: contemporary art gallery selling to collectors"
+ },
+ {
+  "id": "ctc_WqWnHna9o6anxvAzp",
+  "buyer": "mixed",
+  "sector": "retail brand",
+  "basis": "luxury chocolates, consumer gifts plus corporate gifting"
+ },
+ {
+  "id": "ctc_Qhj4RS4RXnmBeyrxL",
+  "buyer": "mixed",
+  "sector": "home automation",
+  "basis": "AV systems for residential, yachts, corporate, retail"
+ },
+ {
+  "id": "ctc_vp6dPpiBHosd9oW78",
+  "buyer": "B2C",
+  "sector": "food retail",
+  "basis": "site: pie and champagne shop, takeaway, gifts"
+ },
+ {
+  "id": "ctc_w8M9KjdfGEQHb7REN",
+  "buyer": "B2C",
+  "sector": "photography",
+  "basis": "pet and equine photography for owners"
+ },
+ {
+  "id": "ctc_sTn4F9QnwEGp5awfg",
+  "buyer": "mixed",
+  "sector": "security systems",
+  "basis": "site: alarms and cameras for homes and business premises"
+ },
+ {
+  "id": "ctc_HQWRGkBGkYT69xsb9",
+  "buyer": "B2B",
+  "sector": "sports fundraising",
+  "basis": "managed prize draw campaigns sold to clubs, foundations"
+ },
+ {
+  "id": "ctc_Ras7iMYqpCkjAc9Nz",
+  "buyer": "B2B",
+  "sector": "hospitality services",
+  "basis": "site: operating collective for independent boutique hotels"
+ },
+ {
+  "id": "ctc_PZhtBMpYkmp5jnScq",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "marketing communication concepts for business clients"
+ },
+ {
+  "id": "ctc_yw97PDpTGevphfmh6",
+  "buyer": "B2C",
+  "sector": "hospitality",
+  "basis": "wood fired empanada eatery"
+ },
+ {
+  "id": "ctc_JKSruaBKANQQHD48b",
+  "buyer": "mixed",
+  "sector": "outdoor products",
+  "basis": "outdoor products for commercial and residential use"
+ },
+ {
+  "id": "ctc_5JZq2Z56giuypc5qd",
+  "buyer": "mixed",
+  "sector": "events",
+  "basis": "description says both B2B and B2C wine tastings"
+ },
+ {
+  "id": "ctc_v4Kie5QRq97eaoHPR",
+  "buyer": "B2B",
+  "sector": "office interiors",
+  "basis": "office furnishing for SME businesses"
+ },
+ {
+  "id": "ctc_tEAMfkRou5jGBv8YT",
+  "buyer": "B2C",
+  "sector": "retail brand",
+  "basis": "site: online designer dresses shop"
+ },
+ {
+  "id": "ctc_PSY4YT5G55xrtTRZ2",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "sales intelligence for camera brands and dealers"
+ },
+ {
+  "id": "ctc_fpRF7TPZGkTAKwvTL",
+  "buyer": "B2C",
+  "sector": "food service",
+  "basis": "tagline: coffee foodtruck owner"
+ },
+ {
+  "id": "ctc_nHPaYSqrv7u32oPTY",
+  "buyer": "B2B",
+  "sector": "creative agency",
+  "basis": "illustration agency working for brands and agencies"
+ },
+ {
+  "id": "ctc_4XQDxYiE3NkeqKPEy",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "AI marketing company for brands"
+ },
+ {
+  "id": "ctc_wi8FEjzHKH9dhNFZ9",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI people insights platform for organisations"
+ },
+ {
+  "id": "ctc_WGtZ2trpDRmytwuoE",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI digital workers for logistics companies"
+ },
+ {
+  "id": "ctc_vHXN93Sa98zrL6roG",
+  "buyer": "B2B",
+  "sector": "catering",
+  "basis": "site: mobile coffee bar for companies, fairs, brands"
+ },
+ {
+  "id": "ctc_N4HiZgvZMCGkFTE63",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "operational and transformation consulting for companies"
+ },
+ {
+  "id": "ctc_pwJnZCGoTQiXhGfvj",
+  "buyer": "B2C",
+  "sector": "consumer food brand",
+  "basis": "saffron wellness teas for mindful consumers"
+ },
+ {
+  "id": "ctc_5rvRJdXGDJWccKEAm",
+  "buyer": "B2B",
+  "sector": "IT services",
+  "basis": "IT and cybersecurity partner for organisations"
+ },
+ {
+  "id": "ctc_sPysigrTQgntPu9c6",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "decision making software for public sector bodies"
+ },
+ {
+  "id": "ctc_tuogu2M6Ef24MFmYX",
+  "buyer": "B2B",
+  "sector": "virtual tours",
+  "basis": "3D scans of spaces for client businesses"
+ },
+ {
+  "id": "ctc_bJjDXZyP9jtQn8KGx",
+  "buyer": "B2B",
+  "sector": "recruitment",
+  "basis": "executive search for companies in Guinea"
+ },
+ {
+  "id": "ctc_bF7KcGsTjT23mo3ye",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "disinformation and opinion analysis for organisations"
+ },
+ {
+  "id": "ctc_aPRY7jaYgjJNthRzj",
+  "buyer": "B2C",
+  "sector": "hospitality",
+  "basis": "tagline: self service coffee shop to go"
+ },
+ {
+  "id": "ctc_XDgqhRAfzxcTmGKhZ",
+  "buyer": "B2B",
+  "sector": "interior services",
+  "basis": "furnishes homes for housing corporations and builders"
+ },
+ {
+  "id": "ctc_27mqQ2pvCXMP3kgJs",
+  "buyer": "B2B",
+  "sector": "apparel manufacturing",
+  "basis": "custom apparel for teams, clubs, brands"
+ },
+ {
+  "id": "ctc_HuQTYiyC54xwhswbM",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI governance product for industrial organisations"
+ },
+ {
+  "id": "ctc_XF88uc38dpxhLiwJR",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "business tool for independent photographers"
+ },
+ {
+  "id": "ctc_tndKY7x5nEmEPdDCg",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI hiring system for companies"
+ },
+ {
+  "id": "ctc_fnRmMWgxgv7mF2W76",
+  "buyer": "B2B",
+  "sector": "medical diagnostics",
+  "basis": "rapid diagnostic kits for labs"
+ },
+ {
+  "id": "ctc_urWosocAvuKznR9ux",
+  "buyer": "B2B",
+  "sector": "engineering services",
+  "basis": "3D scanning of industrial installations"
+ },
+ {
+  "id": "ctc_iaZXHL7R4ucKaGcFP",
+  "buyer": "B2C",
+  "sector": "retail",
+  "basis": "ready made party treats for parents"
+ },
+ {
+  "id": "ctc_iL43m4QAgbFop26d4",
+  "buyer": "mixed",
+  "sector": "architecture",
+  "basis": "private, agricultural and commercial building clients"
+ },
+ {
+  "id": "ctc_ZW6Axp4PFcgiNdciC",
+  "buyer": "B2B",
+  "sector": "media",
+  "basis": "local media network pitching audience reach to advertisers"
+ },
+ {
+  "id": "ctc_4a2LnTP8kLSHufaRh",
+  "buyer": "B2C",
+  "sector": "consumer health products",
+  "basis": "site: natural health product brand for consumers"
+ },
+ {
+  "id": "ctc_3LNpdH2kabaurkooj",
+  "buyer": "unclear",
+  "sector": "unclear",
+  "basis": "site only says elevate your alpine experience"
+ },
+ {
+  "id": "ctc_q7ZBCr8RKPTx9JHZJ",
+  "buyer": "B2B",
+  "sector": "logistics",
+  "basis": "logistics solutions for companies"
+ },
+ {
+  "id": "ctc_hgJ48N6PQ4Thn7wFB",
+  "buyer": "unclear",
+  "sector": "unclear",
+  "basis": "no domain, no description, tagline unrelated"
+ },
+ {
+  "id": "ctc_2hMDtaX6ztmeQq6To",
+  "buyer": "unclear",
+  "sector": "software",
+  "basis": "multi product tech hub, buyer not stated"
+ },
+ {
+  "id": "ctc_b3rkFAWDjoeDRrshF",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "quality systems consulting for pharma companies"
+ },
+ {
+  "id": "ctc_x6MbKQXwaYSrJvepd",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "field OS for Indigenous land stewardship programmes"
+ },
+ {
+  "id": "ctc_uYAHmsknNRHP7gRbZ",
+  "buyer": "B2C",
+  "sector": "software",
+  "basis": "site: pre launch fact checking tool, individual waitlist"
+ },
+ {
+  "id": "ctc_eGXerDBzTghqprWZh",
+  "buyer": "B2C",
+  "sector": "consumer health brand",
+  "basis": "tagline: DTC consumer health brands"
+ },
+ {
+  "id": "ctc_8WHfNcsptXW2SFs5Q",
+  "buyer": "B2B",
+  "sector": "events",
+  "basis": "executive events for GTM strategy"
+ },
+ {
+  "id": "ctc_gwPTszWN8NAhc4fQN",
+  "buyer": "unclear",
+  "sector": "non profit",
+  "basis": "happiness foundation, no paying customer stated"
+ },
+ {
+  "id": "ctc_2gRN4DKWsstCjknF6",
+  "buyer": "B2B",
+  "sector": "industrial automation",
+  "basis": "automation and digitalisation for manufacturers"
+ },
+ {
+  "id": "ctc_YR7cc276Goo7Fdi2F",
+  "buyer": "B2B",
+  "sector": "accounting",
+  "basis": "accountant for small businesses and self employed"
+ },
+ {
+  "id": "ctc_CmqhrPXcHCyuCjmPw",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "gift card programmes for retail, leisure businesses"
+ },
+ {
+  "id": "ctc_QZawcREsaQM3pMpPz",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "GEO and ads agency for companies"
+ },
+ {
+  "id": "ctc_HBDGvLq5kEwF8GEa9",
+  "buyer": "B2B",
+  "sector": "engineering services",
+  "basis": "offshore pile monitoring for contractors"
+ },
+ {
+  "id": "ctc_ahKmJxZKMJz9ue3NP",
+  "buyer": "B2B",
+  "sector": "design agency",
+  "basis": "tagline: unlimited design subscription agency"
+ },
+ {
+  "id": "ctc_xozMFobDpEC8sdukg",
+  "buyer": "B2B",
+  "sector": "venture studio",
+  "basis": "builds and turns around ventures"
+ },
+ {
+  "id": "ctc_cKjohKPv9nqMbDfg5",
+  "buyer": "B2B",
+  "sector": "construction",
+  "basis": "waterproofing design for UK construction industry"
+ },
+ {
+  "id": "ctc_9sL42u8eTWQSjB2tM",
+  "buyer": "B2C",
+  "sector": "property management",
+  "basis": "short term rental management for property owners"
+ },
+ {
+  "id": "ctc_nFBoAwdTou6kXWRLN",
+  "buyer": "unclear",
+  "sector": "biotech",
+  "basis": "pre revenue drug development, buyer not stated"
+ },
+ {
+  "id": "ctc_ii4DqtpBgQ6fwfwto",
+  "buyer": "B2B",
+  "sector": "marketing consulting",
+  "basis": "positioning and accessibility training for businesses"
+ },
+ {
+  "id": "ctc_vHnigB2dXAPYKJJ8k",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "hospitality investment and asset advisory"
+ },
+ {
+  "id": "ctc_Xn4u3Nce3KfCLngEi",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "market entry support for Mittelstand companies"
+ },
+ {
+  "id": "ctc_G7wn7qLMJebwJn7Qt",
+  "buyer": "B2B",
+  "sector": "industrial auctions",
+  "basis": "buys and auctions industrial machines"
+ },
+ {
+  "id": "ctc_6baeGDobMJio3bHPp",
+  "buyer": "B2C",
+  "sector": "property management",
+  "basis": "premium residence management for homeowners"
+ },
+ {
+  "id": "ctc_y3gpN63BLefNtaCpR",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "embedded AI marketing team for growing businesses"
+ },
+ {
+  "id": "ctc_EtNB7gamNJSdWbGKq",
+  "buyer": "B2C",
+  "sector": "hospitality",
+  "basis": "holiday cabins near the beach"
+ },
+ {
+  "id": "ctc_f4gwBMMyfBQjgz9CG",
+  "buyer": "B2B",
+  "sector": "arts in health",
+  "basis": "arts programmes delivered with health and care trusts"
+ },
+ {
+  "id": "ctc_mQBx2Mr64rqs7v4Qu",
+  "buyer": "B2B",
+  "sector": "wholesale",
+  "basis": "cash and carry wholesaler for restaurant professionals"
+ },
+ {
+  "id": "ctc_HeWiGtEWDobsd7azx",
+  "buyer": "unclear",
+  "sector": "unclear",
+  "basis": "no domain, no description, tagline not business specific"
+ },
+ {
+  "id": "ctc_4m23egE2XeDtibgfj",
+  "buyer": "unclear",
+  "sector": "media",
+  "basis": "writing platform, no product or buyer stated"
+ },
+ {
+  "id": "ctc_mf9cNTPBT92Ybqg9r",
+  "buyer": "B2B",
+  "sector": "industrial machinery",
+  "basis": "CNC machines for manufacturing industry"
+ },
+ {
+  "id": "ctc_zpSKf9Zh8XD5pz9c2",
+  "buyer": "B2B",
+  "sector": "industrial instruments",
+  "basis": "importer of measurement instruments and sensors"
+ },
+ {
+  "id": "ctc_XknfFnBmAo83YYeqh",
+  "buyer": "B2C",
+  "sector": "consumer food brand",
+  "basis": "marinated olives brand for home consumers"
+ },
+ {
+  "id": "ctc_Tih7FPjKfKkfBiNuM",
+  "buyer": "B2C",
+  "sector": "health care",
+  "basis": "laser pain therapy centre for patients"
+ },
+ {
+  "id": "ctc_inRn6RX8BGQ9w3PiK",
+  "buyer": "B2B",
+  "sector": "business products",
+  "basis": "NFC business cards for professionals"
+ },
+ {
+  "id": "ctc_rHvwocWb8FubKWECm",
+  "buyer": "unclear",
+  "sector": "sales outsourcing",
+  "basis": "site recruits salespeople, clients and buyers not stated"
+ },
+ {
+  "id": "ctc_7t4sjmWpsECwFc4Z9",
+  "buyer": "B2C",
+  "sector": "media",
+  "basis": "independent paper lifestyle magazine for readers"
+ },
+ {
+  "id": "ctc_eD2TwrqAxJEP8WbyQ",
+  "buyer": "B2B",
+  "sector": "legal tech",
+  "basis": "site: AML compliance for notaries, lawyers, accountants"
+ },
+ {
+  "id": "ctc_xvsocGv6PaJCDrgxs",
+  "buyer": "mixed",
+  "sector": "education",
+  "basis": "apprentice training centre, students enrol, employers fund"
+ },
+ {
+  "id": "ctc_eZ6muBxHZ6eAYYE6v",
+  "buyer": "B2C",
+  "sector": "sports facility",
+  "basis": "padel venue founded by two players"
+ },
+ {
+  "id": "ctc_wsqBdgSdjP6P6Yxvw",
+  "buyer": "B2B",
+  "sector": "marketing agency",
+  "basis": "brand strategy agency for companies and local authorities"
+ },
+ {
+  "id": "ctc_8FHv4ma3Ly2TCqYfK",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "document management software for companies"
+ },
+ {
+  "id": "ctc_Yaf69nqYfJPwxxspq",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "tagline: builds people focused organisations, strategy execution"
+ },
+ {
+  "id": "ctc_bE79WdHCo5BmCzWp8",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "SaaS creating AI alter egos of professionals"
+ },
+ {
+  "id": "ctc_kqKNB7SGPafWSK8hW",
+  "buyer": "mixed",
+  "sector": "events",
+  "basis": "site: ticketed singles events plus corporate events"
+ },
+ {
+  "id": "ctc_q8DfbH4BYw89sLjnh",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI ML platform for organisations"
+ },
+ {
+  "id": "ctc_MkwR6p5i9rJ2Jbj5x",
+  "buyer": "B2B",
+  "sector": "construction",
+  "basis": "demolition and groundworks for commissioning clients"
+ },
+ {
+  "id": "ctc_eb8ySnZEpFiroQaXH",
+  "buyer": "B2C",
+  "sector": "health products",
+  "basis": "custom anti snoring splints ordered online"
+ },
+ {
+  "id": "ctc_WiZMbK74FKmcAWqNs",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "tagline: marketing and process automation for B2B companies"
+ },
+ {
+  "id": "ctc_u65DEeDroGY2TpXrZ",
+  "buyer": "unclear",
+  "sector": "biotech",
+  "basis": "site title only: first trimester biology platform"
+ },
+ {
+  "id": "ctc_FEAEw2Ppc4n5Hn2YL",
+  "buyer": "B2C",
+  "sector": "consumer vehicles",
+  "basis": "electric motorcycle for urban riders"
+ },
+ {
+  "id": "ctc_pzSLzmNiDjKmDimX4",
+  "buyer": "B2C",
+  "sector": "fitness",
+  "basis": "CrossFit gym owner"
+ },
+ {
+  "id": "ctc_SmypArZJqYCc2Cjpg",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "innovation and subsidy advice for organisations"
+ },
+ {
+  "id": "ctc_4imqWJFLh33A3Qrw7",
+  "buyer": "B2B",
+  "sector": "HR consulting",
+  "basis": "employee retention insights for organisations"
+ },
+ {
+  "id": "ctc_ZSXZCGSgniBKAESgP",
+  "buyer": "B2C",
+  "sector": "consumer drinks brand",
+  "basis": "Lion's Mane functional drinks brand"
+ },
+ {
+  "id": "ctc_n3rxAxdmtuJpgW8NH",
+  "buyer": "B2C",
+  "sector": "real estate",
+  "basis": "new build property investments for individuals"
+ },
+ {
+  "id": "ctc_omrnsX6T8WbfqbA7G",
+  "buyer": "B2B",
+  "sector": "IT consulting",
+  "basis": "data centre migration for medium and large enterprises"
+ },
+ {
+  "id": "ctc_XwTQXEnpQWNDibeMK",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "optimisation for airports and manufacturers"
+ },
+ {
+  "id": "ctc_BAsKeiWpJiTEmbqfz",
+  "buyer": "B2B",
+  "sector": "legal",
+  "basis": "IP services for businesses of all sizes"
+ },
+ {
+  "id": "ctc_Snrpa85vhRhNiSzaw",
+  "buyer": "B2C",
+  "sector": "personal services",
+  "basis": "paperwork help for individuals and foreign nationals"
+ },
+ {
+  "id": "ctc_9ma29fTdvPjhMqPoB",
+  "buyer": "B2C",
+  "sector": "retail",
+  "basis": "independent bookshop and wine bar"
+ },
+ {
+  "id": "ctc_ymgMEZCY4G2ni8FfY",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "advisory for Indigenous communities on funding and fisheries"
+ },
+ {
+  "id": "ctc_RBjzAkhMRziM9wYj8",
+  "buyer": "B2B",
+  "sector": "IT services",
+  "basis": "IT services with organisational benefits for customers"
+ },
+ {
+  "id": "ctc_CwJ2yps7NY2ieaF7o",
+  "buyer": "B2B",
+  "sector": "consulting",
+  "basis": "facilities contracts consultancy for organisations"
+ },
+ {
+  "id": "ctc_W3kjdZFnbzXH85zTM",
+  "buyer": "B2B",
+  "sector": "biotech",
+  "basis": "generative AI for drug development process"
+ },
+ {
+  "id": "ctc_qW8ZiYbxdWtmz7iAH",
+  "buyer": "B2B",
+  "sector": "fintech",
+  "basis": "tokenisation infrastructure for financial institutions"
+ },
+ {
+  "id": "ctc_dNnyGwo6ybh9niKbR",
+  "buyer": "B2B",
+  "sector": "production studio",
+  "basis": "studio and event space for companies and creatives"
+ },
+ {
+  "id": "ctc_k3p23YQzo9t7pbK3F",
+  "buyer": "B2B",
+  "sector": "design agency",
+  "basis": "branding agency for brands"
+ },
+ {
+  "id": "ctc_8uvpfn6JqFEvP8fXK",
+  "buyer": "B2B",
+  "sector": "health tech",
+  "basis": "tele expertise calls for health professionals"
+ },
+ {
+  "id": "ctc_3ehgTL5RX8esp68ro",
+  "buyer": "unclear",
+  "sector": "non profit",
+  "basis": "fundraising charity, programmes run in schools"
+ },
+ {
+  "id": "ctc_WfX2BkgSvtGrF6o6B",
+  "buyer": "B2B",
+  "sector": "construction",
+  "basis": "site: prefab wall panels for builders"
+ },
+ {
+  "id": "ctc_kaH4qdP7fYDv5YBwy",
+  "buyer": "unclear",
+  "sector": "charity",
+  "basis": "donor funded charity giving dogs to veterans"
+ },
+ {
+  "id": "ctc_GeZjYLHZZtsoLej5u",
+  "buyer": "B2C",
+  "sector": "digital learning",
+  "basis": "personal development audio courses for individuals"
+ },
+ {
+  "id": "ctc_EYkaQDJ7NC7ifm6Wc",
+  "buyer": "B2B",
+  "sector": "IT services",
+  "basis": "IT for SMEs, municipalities, schools, some individuals"
+ },
+ {
+  "id": "ctc_ch3vFcKAkjQdMKDCg",
+  "buyer": "B2B",
+  "sector": "IT services",
+  "basis": "IT service and administration for companies"
+ },
+ {
+  "id": "ctc_hT784JThxqmEyTPZf",
+  "buyer": "B2C",
+  "sector": "consumer drinks brand",
+  "basis": "tea brand for personal wellbeing"
+ },
+ {
+  "id": "ctc_CFbKYC6c3yM6MrcAP",
+  "buyer": "mixed",
+  "sector": "cleaning services",
+  "basis": "site: car care for club members, padel court care"
+ },
+ {
+  "id": "ctc_9pQYAGoi9z3z8LvQt",
+  "buyer": "B2C",
+  "sector": "consumer food brand",
+  "basis": "hot honey product from local beekeepers"
+ },
+ {
+  "id": "ctc_HC5zk2s2kFaw9LxCJ",
+  "buyer": "B2B",
+  "sector": "hospitality consulting",
+  "basis": "growth advice for campsites, hotels, B&Bs"
+ },
+ {
+  "id": "ctc_kQqT7THXoonLA9z7M",
+  "buyer": "B2C",
+  "sector": "hospitality",
+  "basis": "sports cafe and club canteen"
+ },
+ {
+  "id": "ctc_LNNLeREacezwJQ3cp",
+  "buyer": "B2C",
+  "sector": "health care",
+  "basis": "tagline: community pharmacy and travel clinic"
+ },
+ {
+  "id": "ctc_8G7gAnX6a8eWimczm",
+  "buyer": "B2C",
+  "sector": "personal services",
+  "basis": "home pickup laundry and ironing"
+ },
+ {
+  "id": "ctc_hfHQfM3u3veSXZgS2",
+  "buyer": "B2C",
+  "sector": "retail",
+  "basis": "interior design store"
+ },
+ {
+  "id": "ctc_R6wymP5QzaKCuRwLP",
+  "buyer": "mixed",
+  "sector": "insurance",
+  "basis": "pleasure craft cover plus commercial hull insurance"
+ },
+ {
+  "id": "ctc_7hNbkAjk4urRmcjji",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "tagline: platform for UK infrastructure operations"
+ },
+ {
+  "id": "ctc_paKBTrRbhpgYQ2mBd",
+  "buyer": "mixed",
+  "sector": "catering",
+  "basis": "caterer for private, professional, institutional events"
+ },
+ {
+  "id": "ctc_vR5bseee3b8DtJNhv",
+  "buyer": "mixed",
+  "sector": "apparel",
+  "basis": "consumer gymwear plus custom apparel for gyms"
+ },
+ {
+  "id": "ctc_pBFM654gSKnMpiHiT",
+  "buyer": "B2C",
+  "sector": "sports club",
+  "basis": "tennis, padel, fitness venue for members"
+ },
+ {
+  "id": "ctc_QiQSe5GFnbAPXgLEE",
+  "buyer": "B2C",
+  "sector": "home furnishings",
+  "basis": "wooden fronts for IKEA kitchens"
+ },
+ {
+  "id": "ctc_yhAiLZCELHdLhGXwG",
+  "buyer": "B2B",
+  "sector": "industrial equipment",
+  "basis": "ultrasonic heating equipment for polymer processing"
+ },
+ {
+  "id": "ctc_i3GAp7FZtMeQ38KAX",
+  "buyer": "mixed",
+  "sector": "events",
+  "basis": "site: golf events for amateurs and corporate groups"
+ },
+ {
+  "id": "ctc_9Hpad8cD3gAX4KA3Z",
+  "buyer": "B2B",
+  "sector": "industrial equipment",
+  "basis": "industrial heat pumps for plants"
+ },
+ {
+  "id": "ctc_7KRGb5Fto77hpw2Wp",
+  "buyer": "B2C",
+  "sector": "health care",
+  "basis": "wound therapy for people with chronic wounds"
+ },
+ {
+  "id": "ctc_b5SM2pR7aSdRRzM69",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "digital workers automating business tasks"
+ },
+ {
+  "id": "ctc_spjv9MYphb6rvWRws",
+  "buyer": "B2C",
+  "sector": "health care",
+  "basis": "skin cancer screening centres for patients"
+ },
+ {
+  "id": "ctc_do7oK8f27qGMC89dA",
+  "buyer": "B2C",
+  "sector": "catering",
+  "basis": "tagline: private chef for occasions"
+ },
+ {
+  "id": "ctc_THtBhA3u5JqnsdL3Q",
+  "buyer": "B2C",
+  "sector": "wellness",
+  "basis": "retreats for personal energy and focus"
+ },
+ {
+  "id": "ctc_wzyEGEbnExHikwSxX",
+  "buyer": "B2C",
+  "sector": "retail brand",
+  "basis": "limited edition fashion label"
+ },
+ {
+  "id": "ctc_HY8yfmcYAQyYgjaxG",
+  "buyer": "B2C",
+  "sector": "sports facility",
+  "basis": "indoor padel club opening soon"
+ },
+ {
+  "id": "ctc_L7RyYpwyxfCcuR4WL",
+  "buyer": "B2B",
+  "sector": "fashion wholesale",
+  "basis": "fashion importer and agent supplying retailers"
+ },
+ {
+  "id": "ctc_pkmMjd96KrXMmDS6K",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "decision intelligence for enterprise conversations"
+ },
+ {
+  "id": "ctc_S9Gmwh5eMsJtphcio",
+  "buyer": "B2B",
+  "sector": "design agency",
+  "basis": "brand names and identities for businesses"
+ },
+ {
+  "id": "ctc_taxTbnHp5GC3hQndm",
+  "buyer": "B2B",
+  "sector": "software",
+  "basis": "AI booking agents for hospitality businesses"
+ },
+ {
+  "id": "ctc_CLQ5T3DEaeG2SMG9d",
+  "buyer": "mixed",
+  "sector": "bakery",
+  "basis": "site: neighbourhood bakery plus catering for cafes, events"
+ },
+ {
+  "id": "ctc_pBoGYPKGDCoEhB3kF",
+  "buyer": "B2B",
+  "sector": "industrial equipment",
+  "basis": "workplace and intralogistics solutions for companies"
+ }
+]

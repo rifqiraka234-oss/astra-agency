@@ -637,6 +637,26 @@ deploy, cold loads at 1440 and 390.
 | Competitor names written with spans to dodge the dash check | Proper nouns go on the audit's allow list as written, never disguised |
 | A quoted WordPress post title carried an exclamation mark | Describe a quoted title instead of misquoting it |
 
+## Hooft & Petiet v2, rebuilt after "it looks like a Claude website" (25 Oct 2026)
+
+Raka's words on v1, "a typical Claude and ChatGPT website … it just feels like it's a 500 euro website". The rules it
+left are in `docs/RULES.md` section 5, first two paragraphs. What actually worked, so the next build starts here.
+1. **Write the four lines first** (who lands, what they think in order, their goal, the one action) and cut every
+   section that doesn't move them. H&P went from eleven sections to seven, home page words roughly halved.
+2. **Render real premium sites that day and measure them.** 37 tried, 28 loaded (research/v2/shots, ref.jsonl). Buttons
+   were square on nearly all of them, 12 to 14px caps, grounds white or barely warm, colour from photos, one flat field
+   at most, headlines regular weight. Copying those measurements did more than any effect.
+3. **Make the action a bar, not a button,** where the visitor has something to book (Plum Guide, Hoxton, Ace). The H&P
+   bar carries type, number, month and duration into the quote form.
+4. **Type test before building.** Three hero variants rendered side by side, Newsreader beat EB Garamond and an all sans
+   version on screen.
+5. **Traps hit.** A white version of a logo made by flattening all pixels wiped out lettering that was white inside a
+   coloured shape (KeyPro's "key"), so map each colour, don't flatten. A focus call on a menu still at visibility hidden
+   silently fails, so focus on the next frame. A long Dutch compound ("Calamiteitenwoningen") overflowed at 320px in a
+   two column tile, check 320 every time. A reveal scale on a band image only looked like overflow, the real culprit was
+   the word. When a prototype is rebuilt, the delivery email's description of it has to be reread, v1's line described
+   scenes v2 no longer has.
+Brief, research and plan, `state/prototypes/hooftenpetiet/research/v2/brief.md`. Live at the same two URLs.
 ## Saavedra, the Hertling v3 recipe on a restaurant (25 Oct 2026)
 
 Julien Salvat said yes to "a sketch of the Saavedra catering and events site". Built the same day to the Hertling v3

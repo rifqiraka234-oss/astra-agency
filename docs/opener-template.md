@@ -30,8 +30,8 @@ Shall I send you a sketch of [the thing]?
 - In a warm chat (they answered the connect note and nothing was pitched), block one is
   `Something I've been thinking about, [name]!` and block two opens `Your ...` (RULES section 1).
 - The full research gate, the `worth:` line at 2,500 euros or more (RULES 0E) and the `owner reply:`
-  line (RULES 0F) all apply. tools/check-drafts.py fails an OPENER shape in a file dated 2026-10-14 or
-  later, so a new first message is always tagged SKETCH.
+  line (RULES 0F) all apply, and from 26 Oct the `still there:` line (RULES 0G point 1). tools/check-drafts.py
+  fails an OPENER shape in a file dated 2026-10-14 or later, so a new first message is always tagged SKETCH.
 - After it, one plain bump and then a silent close (RULES section 1, two pitches, then close).
 
 ### The AI workflow variant, "did you know" (Raka, 2026-10-22)

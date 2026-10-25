@@ -43,3 +43,34 @@ She asked for two things, further possibilities and pricing, so the call answers
 - Pricing. The public band is 500 to 50,000 euros and Raka told her "we're very flexible with one's budget". Any figure
   is Raka's to quote on the call.
 - Full build notes, state/prototypes/lisanne/handover.md and state/research_2026-10-22-lisanne-ai-workflow.md.
+
+## Call kit, written 25 Oct (GTM plan section 5)
+
+**The aim of the call.** She leaves with one fixed price for the four week start, and a start date or a decision date
+in the calendar.
+
+**Five questions, in this order.**
+1. "Which of your three lanes eats the most hours right now?" Let her pick the case type to walk through.
+2. "How many new enquiries a week, and how long does each take before you know if it's a case?" The plan's calculator
+   starts at 4 a week, 40 and 10 minutes, labelled as our guess. Replace them with her numbers on the call.
+3. "What's your hourly rate?" Her terms (https://dejongvanhommerig.com/algemene-voorwaarden/, section 5, read 25 Oct)
+   say she bills by the hour, excluding VAT, and the rate isn't published.
+4. "What do you use today for mail, files and time?" The plan assumes Outlook and OneDrive.
+5. "Is it your decision alone?" A one lawyer practice, so it should be.
+
+**The one recommendation.** The four week start from the plan's chapter 06. The intake desk only, set up inside the EU
+on her Outlook and OneDrive, the DPIA and AI policy written with her, measured in week 1 and week 4. The employee check
+comes after, as its own step.
+
+**The price, Raka's call.** The plan promises "one fixed price, agreed before anything starts" and names no number. The
+build notes estimated €3,000 to €5,000 for the intake desk, as a guess (state/prototypes/lisanne/handover.md, point 7).
+My suggestion, a fixed €2,500 to €3,500 for the four week start, half at the start, plus the running costs of the tools
+at cost. Do the sum with her on the call. Hours back a month times her rate is what it's worth to her each month.
+
+**Objections to expect.**
+- Privacy comes first for a lawyer. Chapter 04 of the plan and the seven NOvA rows behind "show more".
+- "Can Copilot do this?" The answer in the research file is an argument, not tested. Talk about it, don't promise it.
+- "Too much." The start is the intake desk alone, the employee check waits.
+
+**Close.** "Shall we start on [date]? I'll send the one page confirmation tonight." Book the date before hanging up, and
+the proposal goes the same day.

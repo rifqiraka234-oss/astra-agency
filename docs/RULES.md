@@ -248,6 +248,59 @@ So before block two is written, the gap has to survive the owner's own answer.
    SKETCH in a file dated 2026-10-14 or later without all three parts, without a URL in the third, or
    with "can't rule out", "unknown" or "unclear" in it.
 
+### 0G. What the 42 noes taught (GTM review, 2026-10-25)
+
+Every no from July to 25 Oct was reread next to the pitch that caused it
+(`docs/reviews/2026-10-25-gtm-outreach-review.md`). About 19 of 42 said no because our read of their business was wrong,
+not because they didn't want help. 0B, 0C, 0D and 0F already cover part of this. These are the checks that still let
+noes through, each with the lead it would have saved.
+
+1. **They still hold the job, checked outside lemlist.** Craig had resigned from the chambers. Clément had left the club,
+   and his 15 Oct gate rested only on lemlist's copy of his profile, because his LinkedIn returned 999 and the club's own
+   site was never opened for its current director. lemlist keeps a profile the day it was scraped. So the role is
+   confirmed on the company's own team, contact or about page, the register, or a post of theirs from the last three
+   months. The gate carries `still there: <role, where it says so, date read> | <URL that isn't lemlist>`, and
+   check-drafts fails a first message dated 2026-10-26 or later without it. If nothing outside lemlist confirms it, the
+   verdict is BLOCKED_NEEDS_INFO.
+2. **A thin page may be a placeholder for something bigger.** Cédric's one photo page had a full Shopify store and an
+   agency behind it. Tatiana's GoDaddy page was a throwaway test, her least important venture. Before pitching a one
+   page site, a builder template or a single photo page, look for the real shop or project (Instagram bio link, their
+   LinkedIn posts, another domain, a crowdfunding page). If it could be a placeholder, the page isn't the angle.
+3. **Prices and booking hide in configurators, calculators, PDFs and widgets.** Tentopia had a configurator with prices
+   and we wrote "no guide price anywhere". Click through every interactive part rendered, search the rendered page and
+   its scripts for price words in their language (€, prijs, Preis, prix), and open the PDFs, before writing that
+   something is missing.
+4. **A full business isn't losing bookings.** Kristof's 2027 weekends from March to August were already full, 80% of his
+   guests speak Dutch and half book direct. Open their availability before writing "booking elsewhere" or "losing
+   bookings". When they're full, the pain is margin, staff or admin, never demand.
+5. **Pains inside the business can't be seen from outside.** Terry already had it in his platform, Marlies had "already
+   done" it, Wessel invested years ago, Denis had proof of concept, Johannes's portal was about to launch. If the gap is
+   about how they work inside, read their posts and job ads from the last three months for it being in hand. When it
+   still can't be seen, use the AI "did you know" shape, which names a sourced cost of their role instead of a claim about
+   them.
+6. **Who they sell to comes before what's missing.** B2B price lists, credit accounts, NDA clients, word of mouth and
+   stylists (Steven Prins, Intemax, REVVY, House of Wood). 0F's "a model, not a gap" trap, and 5 of the 19.
+7. **Their verb, never ours.** Section 1B. Sylvia asked never to be contacted again over "promises".
+8. **Tone.** No "looks like 2008", no crawler nitpicks, and never a third message inside seven days (Jelle, Michaël,
+   Luke). One first message, one bump, then quiet.
+9. **The send side.** Our domain lands in spam, so email only from Raka's Gmail until SPF, DKIM and DMARC are set on
+   astraagency.nl. Two sessions share the inbox, so the thread is pulled in the minute before every send.
+
+**Who to message comes before how to word it. `docs/gtm-plan.md` is the plan from 26 Oct (Raka, 25 Oct, "do whatever
+you think for us to get meetings that will get sales").** Where lemlist's industry and a blind read of each
+company agree, B2B said yes 15 times in 80 and consumer businesses 2 in 53. English speaking B2B owners are the best group
+by both reads (11 of 45, 12 of 70). Agencies, marketing firms and recruiters, 1 yes in 32. None of the seven companies we've met is a shop,
+venue or hospitality business, and every lost proposal stopped on budget or on a decider who wasn't on the call. So,
+in short.
+- Research the open pool in the order of `state/next_batch_ranked.md`. Don't pitch agencies, recruiters, coaches,
+  consumer businesses, foundations or one person firms before their first sale.
+- Every first message dated 26 Oct or later carries `still there:` and `budget: <one sign they can pay> | <URL>` in its
+  gate, and check-drafts fails it without them.
+- After a yes, build only when there's a budget sign. Otherwise one screen and the call ask. Every delivery asks for the
+  call with two slots.
+- On the call, the owner is there, the price range is said out loud, and the next step is booked before hanging up. The
+  proposal follows within 24 hours, one recommendation, not a menu.
+
 ---
 
 ## 1. Sending
@@ -659,6 +712,46 @@ The four that cost us leads.
 ---
 
 ## 5. Building
+
+**THE VISITOR AND THE ACTION COME FIRST. A WEBSITE GUIDES, IT DOESN'T LIST (Raka, 2026-10-25).** His words
+on the Hooft & Petiet build, "we need to keep in mind the person who's most likely to be targeted by the website and
+what are they thinking of and what their goals are and how the whole experience of the whole of the website actually
+guides them to what we want them to have an action to … a website is not just about putting out a bunch of
+information and that's it, but it's all about guiding the intended audience into its specific desired action."
+Before a single section is designed, write four lines into the build's research folder and build from them.
+1. **Who lands here.** The one most likely visitor, by role, not "clients". (H&P, the project leader at a housing
+   association or renovation contractor who has to move residents out for weeks.)
+2. **What they're thinking when they land.** Their worries and questions, in the order they'd ask them.
+3. **Their goal.** What a good outcome is for them, in their words.
+4. **The one action we want.** One primary action per page, and the secondary path for the second audience.
+Then every section answers the visitor's next question in that order and moves them one step toward the action.
+A section that doesn't move them is cut, however good it looks. Fewer sections, each one doing a job.
+
+**NO CLAUDE LOOK. EXPENSIVE, CHIC, SIMPLE (Raka, 2026-10-25).** His words, "it's a typical Claude and ChatGPT
+website where all the stylings and the positionings are the same and like the buttons are the same, the position of
+the words are all the same … it just feels like it's a 500 euro website … simplicity is also key … the sizing of the
+buttons, the shapes, the words, it's really all important … Exclusive, premium." The tells that made H&P v1 read as
+an AI site, all banned as defaults. A serif headline with an italic second half. A small uppercase kicker with a dash
+in front. Pill buttons with a sliding arrow. Cream and indigo chapters taking turns. Gradients, glows, gradient
+overlays on photos. Big count up numbers with a source line under each. Three pillars of bullets, four facts with
+top rules. Rounded cards with soft shadows. A logo marquee. Cute SVG illustration scenes. Chips and tags. A floating
+pill. Eleven sections on a home page. Every build instead starts from premium sites researched online that day
+(real ones, rendered and looked at, not only the fingerprint pipeline), and the test before Raka sees it is
+"would this pass for a 25,000 euro site from a top studio, or a 500 euro template". Photography carries the colour,
+the brand colour is a whisper, buttons and type are sized and placed on purpose, and less is on the page.
+
+**SIMPLE IS NOT PLAIN. THE FLOW AND THE WOW, BOTH, EVERY TIME (Raka, 2026-10-25, the same afternoon).** On v2, which
+followed the rule above to the letter, "it feels like it's so plain and basic. What happened to like using all the
+pictures and animations and gradients and being like 10 times more extra creative? … Now you've done the flow, but not
+the artistic value. It needs to have a wow effect … something that they've never seen before and that we've never seen
+before in terms of animations, graphics, shapes, … gradients, colors. Search it up." So read the rule above this way.
+**"Break out of gradients" means reinvent them, never delete them.** The ban is on the generic AI versions (a purple to
+blue hero, a glow behind a card, a dark overlay on a photo), not on gradients, motion, colour or shape. Every build
+carries both halves. The flow, the visitor and the one action, from the rule above. And the art, at least one signature
+moment nobody has seen, built from the lead's own story (their mark, their photos, their promise), plus art directed
+gradients, real motion, shape and full use of their pictures. Research for it is award level work rendered that day
+(Awwwards, FWA, the studios behind them), not only premium brand sites. If a build is calm and correct but nobody would
+screenshot it, it isn't done.
 
 **EVERY PROTOTYPE STARTS AT THE QUALIGRAF BAR (Raka, 2026-09-29).** His words on Ciara's first
 build, "it looks like something she can do herself…come on what did i tell you before to start and
