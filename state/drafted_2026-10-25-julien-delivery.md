@@ -1,6 +1,6 @@
 # Julien Salvat, Saavedra, delivery of the catering and events site and growth plan, 25 Oct 2026
 
-NOT SENT. Waiting for Raka's word. This replaces the holding reply in state/drafted_2026-10-25-julien-reply.md, which
+SENT 25 Oct 13:27:42 UTC, act_tHDERxQKGBvPjnKTF, the DELIVERY block below, on Raka's "Brooo amazing! Write in the mds to always make these kind of plans and prototypes. Send but dont say we soent the whole day bulding it". Option B was not used. This replaces the holding reply in state/drafted_2026-10-25-julien-reply.md, which
 was never sent and isn't needed now the sketch is ready the same day.
 
 ### Julien Salvat, Saavedra, ctc_yw97PDpTGevphfmh6
@@ -26,7 +26,8 @@ was never sent and isn't needed now the sketch is ready the same day.
 > and the form arrives with the order in it, form.js 52 of 52.
 > "starting from Grégoire's July post", the plan's cover quotes his LinkedIn post of 19 July 2026 word for word,
 > read in the saved page and its Chromium render.
-> "I spent the whole day building this", true, built through 25 Oct from early morning.
+> Raka 25 Oct ~13.20 UTC, "Send but dont say we soent the whole day bulding it", so the opening line is gone and the
+> name moves onto the next line. Nothing else changed.
 > Both URLs on the v3 deploys (site 6addfe3aafd7b016433aa4bd, plan 6addfe550d9b058cdb3c543d), hashed file by file
 > against the build and cold loaded at 1440 and 390, 13:00 to 13:09 UTC. Reopen both and the thread again in
 > the minute before sending.
@@ -47,9 +48,7 @@ was never sent and isn't needed now the sketch is ready the same day.
 
 DELIVERY
 ```
-Julien, I spent the whole day building this.
-
-Here's what I offered, the Saavedra site with a door for companies. Your sun burns behind the logo, the day runs from the 12h30 boxes to the 20h private hire, and a team can build its whole order, recipes and all, before asking for a quote in one step.
+Julien, here's what I offered, the Saavedra site with a door for companies. Your sun burns behind the logo, the day runs from the 12h30 boxes to the 20h private hire, and a team can build its whole order, recipes and all, before asking for a quote in one step.
 
 Try it yourself.
 https://astra-saavedra-prototype.netlify.app/
@@ -63,7 +62,7 @@ Could we take 30 minutes to go through it, Wednesday 28 or Thursday 29 at 3.30pm
 Option B, the one screen version (GTM plan section 4, step 1). Attach state/prototypes/saavedra/delivery-screen.jpg, retaken
 from the live v3 site, the order for 24 people, 6 boxes of 12, the ticket at 245,40 €, recipes on the left.
 
-DELIVERY
+OPTION B, NOT USED, DELIVERY
 ```
 Julien, here's a first look at what I offered, a Saavedra site that opens a door for companies.
 

@@ -49,6 +49,14 @@
 > checked media of their place, and a sourced growth plan on its own site. **`docs/RULES.md` section 5** and the last
 > section of `docs/build-and-deck.md`.
 >
+> **SAAVEDRA V3 IS THE PLAN AND PROTOTYPE TO MAKE EVERY TIME (Raka, 2026-10-25, "Brooo amazing! Write in the mds to
+> always make these kind of plans and prototypes").** Write the flow as a table first, the visitor's question, what they
+> see and do, the moment. Then one state carried down the page so the action builds itself as they scroll, the hero is
+> the first input, the thing they'd buy is shown being made at their real prices, graphs are controls, their photos
+> everywhere, licence checked film only where it means something, and the form arrives filled in. The plan beside it on
+> its own site with graphs a visitor can move. **`docs/RULES.md` section 5** and the Saavedra section of
+> `docs/build-and-deck.md`.
+>
 > **EVERY SITE GUIDES ONE VISITOR TO ONE ACTION, AND NEVER LOOKS LIKE CLAUDE MADE IT (Raka, 2026-10-25).** Before
 > designing, write who lands, what they're thinking, their goal and the one action we want, then build every section to
 > move them toward it. The AI site look (serif with italic second half, dash kickers, pill buttons with arrows, cream and
@@ -585,9 +593,7 @@ carries a finished prototype or deck into a warm thread. Raka wrote the skeleton
 himself and it is deliberately tiny.
 
 ```
-[name], I spent the whole day building this.
-
-[what they asked for, in one sentence, and the fact that it works]
+[name], here's what I offered, [what they asked for, in one sentence, and the fact that it works]
 
 Try it yourself.
 [the URL, on its own line]
@@ -599,10 +605,12 @@ What do you think?
 
 Around 60 to 80 words. The one that shipped to Karim was 64.
 
-- **The opening line is allowed to be a bit dramatic**, and it must be true. He
-  did spend the day on it. Never claim effort that was not spent.
+- **Never open with how long it took (Raka, 2026-10-25).** "I spent the whole day building this" was
+  the skeleton's first line until he cut it on the Saavedra delivery, "Send but dont say we soent the
+  whole day bulding it". The name goes on the line that says what they asked for. Never claim effort
+  in any form, true or not.
 - **No exclamation marks, no emoji.** The opener template's one exclamation rule
-  is for cold openers. This lands in a warm thread and the first line carries it.
+  is for cold openers. This lands in a warm thread.
 - **The dash and colon bans are not relaxed.** The URL is exempt as a URL.
 - **Verify the artefact is live immediately before sending.** Fetch it, confirm
   200, confirm the title is still theirs, confirm any images actually load. Same
