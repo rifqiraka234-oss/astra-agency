@@ -34,7 +34,11 @@
 > The email goes from Raka's Gmail, which is how the Acquitas and HotGreen proposals went. Copies to the astraagency.nl
 > addresses bounced as spam on 9 Oct, so leave them off.
 
-REPLY
+> DO NOT SEND THIS REPLY. A LinkedIn thanks already went to Willem on 25 Oct 08:23:29 UTC (act_tHFMHq43QncAaP7is) with
+> the earlier wording, "Thanks Willem, will do! I'll send it over to marketing@keypro.nl." A second thanks after the
+> email would be a duplicate. Once the email goes, nothing more is needed on LinkedIn.
+
+WITHDRAWN
 ```
 Thanks Willem, I've just sent it over to marketing@keypro.nl!
 ```
