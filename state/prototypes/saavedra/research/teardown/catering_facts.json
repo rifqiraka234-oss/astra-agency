@@ -1,0 +1,758 @@
+{
+ "_legend": "Catering and events facts, each read on 2026-10-25 from the rendered page text (text/<slug>.txt), the saved HTML (html/<slug>.html), a subpage in subpages.jsonl, a PDF saved in evidence/, or quoteflows.jsonl. Every string in quotes is copied from the source. null means looked for on the page and its subpage and not found. steps counts screens the visitor must pass before the request is sent. fields counts visible inputs on the quote or enquiry path, consent boxes excluded. price.firstScreen = the price is visible in frame 0 (1440x900) of the kept render, checked by eye on shots/<slug>__0.jpg.",
+ "bigmammagroup_com_fr_privatisation": {
+  "offers": {
+   "office": false,
+   "teamLunch": false,
+   "afterwork": false,
+   "privateHire": true,
+   "events": true
+  },
+  "price": {
+   "shown": false,
+   "perPerson": false,
+   "where": null,
+   "example": null,
+   "note": "an '800€ TTC' minimum exists only in the page payload for La Felicità's own site, not in the visible text of /fr/privatisation/france",
+   "firstScreen": false
+  },
+  "minimum": null,
+  "leadTime": null,
+  "radius": "\"jusqu'à 2000 personnes, à Paris ou en région\"",
+  "capacity": "per venue, e.g. Gloria Osteria Paris \"Capacité assis (int) : 107 pers. ... Capacité cocktail : 115 pers.\"",
+  "flow": {
+   "type": "drawer",
+   "steps": null,
+   "fields": [
+    "Choix du restaurant (select, 53 options)"
+   ],
+   "note": "'Demander un sexy devis' opens a side drawer whose only field is the restaurant; choosing one did not render more fields in our session, later fields not read"
+  },
+  "menu": "none on the page",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": true,
+   "testimonials": false,
+   "examples": "\"La squadra Big Mamma, c'est plus de 2200 personnes\""
+  },
+  "src": [
+   "https://www.bigmammagroup.com/fr/privatisation",
+   "https://www.bigmammagroup.com/fr/privatisation/france",
+   "shots/quote_bigmamma_0.jpg"
+  ],
+  "responseTime": null
+ },
+ "bouillonlesite_com_privatisation": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": true,
+   "events": true
+  },
+  "price": {
+   "shown": true,
+   "perPerson": true,
+   "where": "privatisation menu cards on the page, and the traiteur page banner",
+   "example": "menus \"22 €\", \"26 €\", \"30 €\", \"33 €\"; traiteur \"ENTRÉE, PLAT & DESSERT DÈS 14 €\", \"Frais de livraison uniques pour toute commande : 90 € HT\"",
+   "firstScreen": false
+  },
+  "minimum": "\"quatre salons, de 15 à 140 couverts\"; Pigalle group form \"entre 12 et 80 personnes\"",
+  "leadTime": null,
+  "radius": "traiteur \"LIVRAISON 7J/7 DE 8H À 23H\" \"PARIS & PETITE COURONNE\"",
+  "flow": {
+   "type": "split",
+   "steps": 1,
+   "fields": [
+    "Prénom",
+    "Nom",
+    "E-mail",
+    "Téléphone",
+    "Nombre de personnes"
+   ],
+   "note": "Pigalle group form (5 fields). République private hire goes out to privateaser.com. Traiteur quote is a mailto: commercial@bouillonlesite.com"
+  },
+  "menu": "words (menu cards) plus a PDF 'Voir la carte complète' on the traiteur page",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": "\"leurs boiseries et leurs marqueteries de 1932\""
+  },
+  "terms": "\"aucun espace n'est privatisé du vendredi soir au dimanche soir\", \"Paiement ... par virement ou par Chorus. Confirmation par signature de devis ou empreinte bancaire.\"",
+  "src": [
+   "https://bouillonlesite.com/privatisation/",
+   "https://bouillonlesite.com/bouillon-traiteur/",
+   "https://bouillonlesite.com/reservation-bouillon-pigalle"
+  ],
+  "offersNote": "office from the traiteur page \"Au bureau, sur un tournage ou en plein évènement\"",
+  "responseTime": null
+ },
+ "cojean_fr_cojean_entreprise": {
+  "offers": {
+   "office": false,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": false,
+   "events": true
+  },
+  "price": {
+   "shown": false,
+   "perPerson": false,
+   "where": null,
+   "example": null,
+   "firstScreen": false
+  },
+  "minimum": null,
+  "leadTime": null,
+  "radius": null,
+  "flow": {
+   "type": "form",
+   "steps": 1,
+   "fields": [
+    "Nom",
+    "Prénom",
+    "E-mail",
+    "Téléphone",
+    "Nom d'entreprise",
+    "Code postal",
+    "Nombre de collaborateurs",
+    "Vous souhaitez préciser votre demande"
+   ],
+   "note": "\"notre équipe vous répond sous 24h\""
+  },
+  "menu": "none on the page",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": true,
+   "examples": "named company quotes: SISLEY, MAYBELLINE NEW YORK, CLUB MED, AUZOU"
+  },
+  "src": [
+   "https://www.cojean.fr/cojean-entreprise/"
+  ],
+  "responseTime": "\"notre équipe vous répond sous 24h\""
+ },
+ "maison_kayser_com_evenements_entreprises_entreprises": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": false,
+   "events": true
+  },
+  "price": {
+   "shown": false,
+   "perPerson": false,
+   "where": null,
+   "example": null,
+   "firstScreen": false
+  },
+  "minimum": null,
+  "leadTime": "\"Commande 72h à l'avance et frais de livraison à prévoir.\"",
+  "radius": null,
+  "flow": {
+   "type": "form",
+   "steps": 1,
+   "fields": [
+    "Société",
+    "Civilité",
+    "Prénom",
+    "Nom",
+    "Adresse",
+    "Code postal",
+    "Ville",
+    "E-mail",
+    "Téléphone",
+    "Objet de la demande",
+    "Message"
+   ],
+   "note": "/demande-de-devis/; the page also says to contact the nearest bakery for a quote"
+  },
+  "menu": "none on the page (links to 'Commander en ligne')",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": null
+  },
+  "src": [
+   "https://maison-kayser.com/evenements-entreprises/entreprises/",
+   "https://maison-kayser.com/demande-de-devis/"
+  ],
+  "responseTime": null
+ },
+ "pokawa_com_pokawa_pro": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": false,
+   "events": true
+  },
+  "price": {
+   "shown": true,
+   "perPerson": true,
+   "where": "the simulator page and a PDF offer, not the landing page",
+   "example": "\"LA BIG ORDER Dès 15 pokés · 1 par personne 13,90 € TTC le poké\", \"LE POKÉ BAR ... Dès 30 mini pokés · 2 à 3 par personne dès 5,90 € TTC le mini poké\"",
+   "firstScreen": false
+  },
+  "minimum": "\"De 15 à 1000 personnes\"",
+  "leadTime": "FAQ \"Idéalement 3 à 5 jours en amont\"",
+  "radius": "FAQ \"Partout où il y a un Pokawa présent : France, Belgique et Suisse\", delivery fees \"en fonction de la distance et du volume\"",
+  "flow": {
+   "type": "wizard",
+   "steps": 13,
+   "fields": [
+    "Occasion (6 choices)",
+    "Préciser votre besoin",
+    "Pour combien de personnes",
+    "Date",
+    "Heure souhaitée ou à confirmer",
+    "Heure",
+    "Livraison ou retrait",
+    "Adresse (6 sub-fields)",
+    "Format (Big Order, Poké Bar, les deux, conseillez-moi)",
+    "Recettes ou quantités",
+    "Complément (boissons, desserts, sides)",
+    "Dernier détail",
+    "Prénom, Entreprise, Email professionnel, Téléphone"
+   ],
+   "note": "embedded Typeform qjv3W2iQ, one question per screen, fields read from the form payload (evidence/pokawa_typeform_qjv3W2iQ_fields.txt). Alternative path: the simulator builds a priced basket with a running total, then 5 contact fields. \"Devis sous 24 h\""
+  },
+  "menu": "words and prices on the simulator, plus a PDF offer",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": true,
+   "testimonials": false,
+   "cases": true,
+   "examples": "\"ILS NOUS FONT CONFIANCE\" then four named client cases with photos, no logos: CX CICLE PARIS (\"Pokawa fournit la food pour 750 personnes\"), OLYMPIQUE LYONNAIS FEMME, MARINE LORPHELIN, ENTREPRENEUR FIRST; two named staff with portraits and M'APPELER"
+  },
+  "src": [
+   "https://pokawa.com/pokawa-pro/",
+   "https://pokawa.com/simulateur-pokawa-pro/",
+   "https://form.typeform.com/to/qjv3W2iQ",
+   "evidence/pokawa_pro_offer_2026-09.txt"
+  ],
+  "responseTime": "\"Devis sous 24 h\""
+ },
+ "shop_popchef_com_shop_plateaux_repas_entreprise": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": true,
+   "privateHire": false,
+   "events": true
+  },
+  "price": {
+   "shown": true,
+   "perPerson": true,
+   "where": "each tray card in the shop grid",
+   "example": "\"Menu Basse-cour ... 24,90 € HT\", \"Menu Potager ... 22,90 € HT\"",
+   "firstScreen": false
+  },
+  "minimum": null,
+  "leadTime": null,
+  "radius": "\"Saisissez une adresse située en Île-de-France\"; title \"livré chaud à Paris & IDF\"",
+  "flow": {
+   "type": "order+form",
+   "steps": 1,
+   "fields": [
+    "Prénom",
+    "Nom",
+    "Date de l'évènement",
+    "Nombre de convives",
+    "Email professionnel",
+    "Téléphone",
+    "Votre message"
+   ],
+   "note": "trays are ordered directly (address and date bar, basket); events and afterworks go to /quotemobile, \"Nous vous répondons en moins de 10 minutes\""
+  },
+  "menu": "words with prices in the shop grid",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": "\"RECETTES LENÔTRE\" partner line"
+  },
+  "src": [
+   "https://shop.popchef.com/shop/plateaux-repas-entreprise",
+   "https://shop.popchef.com/quotemobile"
+  ],
+  "responseTime": "\"Nous vous répondons en moins de 10 minutes\""
+ },
+ "foodcheri_com_plateau_repas": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": false,
+   "events": true
+  },
+  "price": {
+   "shown": true,
+   "perPerson": true,
+   "where": "body copy under the tray contents",
+   "example": "\"3 plateaux repas complets et généreux, à partir de 23,95€ TTC\"",
+   "firstScreen": false
+  },
+  "minimum": "\"Sans minimum de commande\", \"La livraison est possible dès 1 Plateau-repas\"",
+  "leadTime": "\"jusqu'à la veille de votre réunion (avant 15h)\", \"jusqu'à 2 semaines à l'avance\"",
+  "radius": "\"+1000 entreprises en île-de-France\", city pages Paris, Créteil, Pantin, Montreuil, Aubervilliers",
+  "flow": {
+   "type": "wizard",
+   "steps": 3,
+   "fields": [
+    "Quel est votre besoin (4 choices)",
+    "Taille et type d'entreprise (9 choices)",
+    "Prénom",
+    "Nom",
+    "Téléphone",
+    "Email professionnel",
+    "Nom de l'entreprise",
+    "Code postal",
+    "Décrivez votre situation"
+   ],
+   "note": "\"Un expert FoodChéri vous rappelle sous 24h\"; field order read from the HTML, the form is hidden until opened"
+  },
+  "menu": "words (tray contents list)",
+  "proof": {
+   "logos": false,
+   "reviews": true,
+   "counts": true,
+   "testimonials": false,
+   "examples": "\"4,3/5 note moyenne\", \"800 recettes\", \"+10K plats\", \"+1000 entreprises nous font confiance\""
+  },
+  "src": [
+   "https://www.foodcheri.com/plateau-repas"
+  ],
+  "responseTime": "\"Un expert FoodChéri vous rappelle sous 24h\""
+ },
+ "ezcater_com": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": false,
+   "events": false
+  },
+  "price": {
+   "shown": false,
+   "perPerson": false,
+   "where": null,
+   "example": null,
+   "firstScreen": false
+  },
+  "minimum": null,
+  "leadTime": null,
+  "radius": "address search, \"Restaurants nationwide\"",
+  "flow": {
+   "type": "order",
+   "steps": null,
+   "fields": [
+    "Search for restaurants or cuisines",
+    "Address search",
+    "event details"
+   ],
+   "note": "a marketplace; ordering starts from an address, no quote form"
+  },
+  "menu": "restaurant tiles",
+  "proof": {
+   "logos": true,
+   "reviews": false,
+   "counts": true,
+   "testimonials": false,
+   "examples": "\"TRUSTED BY\" logos; cases \"Increased onsite attendance by 3x\", \"Feeding 900+ employees across multiple locations\""
+  },
+  "src": [
+   "https://www.ezcater.com/"
+  ],
+  "responseTime": null
+ },
+ "feedr_co_en_gb": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": false,
+   "events": true
+  },
+  "price": {
+   "shown": false,
+   "perPerson": false,
+   "where": null,
+   "example": null,
+   "firstScreen": false
+  },
+  "minimum": null,
+  "leadTime": null,
+  "radius": "\"Delivery locations\" \"London\"",
+  "flow": {
+   "type": "wizard",
+   "steps": 6,
+   "fields": [
+    "Occasion (Regular office food deliveries / A one-off catering quote)",
+    "Details",
+    "Event Details",
+    "Preferences",
+    "Address",
+    "Summary"
+   ],
+   "note": "/en-gb/quote shows a 6-step progress bar; only step 1 was read, later steps need a choice"
+  },
+  "menu": "vendor cards",
+  "proof": {
+   "logos": true,
+   "reviews": true,
+   "counts": true,
+   "testimonials": true,
+   "examples": "\"1,361,478 Orders Delivered\", \"4.3 Google\", \"98.8% Satisfaction Rating\", \"200+ Vendors\", named quotes (Julia Vidic, LabGenius)"
+  },
+  "src": [
+   "https://feedr.co/en-gb",
+   "https://feedr.co/en-gb/quote",
+   "shots/quote_feedr_0.jpg"
+  ],
+  "responseTime": null
+ },
+ "pret_co_uk_en_GB_platters": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": false,
+   "events": false
+  },
+  "price": {
+   "shown": false,
+   "perPerson": false,
+   "where": null,
+   "example": null,
+   "firstScreen": false
+  },
+  "minimum": null,
+  "leadTime": "\"Order by 10 am for a lunchtime slot (11:30-12:30), or by midnight the day before\", \"Some shops require orders by 2pm the previous day\"",
+  "radius": null,
+  "flow": {
+   "type": "order",
+   "steps": null,
+   "fields": [],
+   "note": "ordering through Pret Delivers, no quote form"
+  },
+  "menu": "words (platter types)",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": null
+  },
+  "src": [
+   "https://www.pret.co.uk/en-GB/platters"
+  ],
+  "responseTime": null
+ },
+ "sweetgreen_com_catering": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": false,
+   "events": true
+  },
+  "price": {
+   "shown": true,
+   "perPerson": false,
+   "where": "FAQ (minimum and delivery fee); item prices only in the catering menu PDF",
+   "example": "\"All delivery and pick-up catering orders have a $50 minimum\", \"10% delivery fee (starting at $30)\"",
+   "firstScreen": false
+  },
+  "minimum": "\"$50 minimum\"; \"Both options work for 10 to 10,000+ people\"",
+  "leadTime": "FAQ \"at least 24 hours in advance\"; the hero step says \"Within 12 hours notice for delivery and pickup\" (the page says both)",
+  "radius": "\"up to 20 miles from our catering locations\"",
+  "flow": {
+   "type": "form",
+   "steps": 1,
+   "fields": [
+    "one-time event or recurring office meals",
+    "First name",
+    "Last name",
+    "Work email",
+    "Phone",
+    "Company or organization",
+    "Job title",
+    "Delivery zip code",
+    "Headcount",
+    "How did you hear about us?"
+   ],
+   "note": "/catering-inquiry/; direct ordering also linked through ezCater; \"will respond within 24 hours\""
+  },
+  "menu": "PDF (Sweetgreen_Catering_Menu_10.6.26.pdf) plus format cards",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": null
+  },
+  "src": [
+   "https://www.sweetgreen.com/catering",
+   "https://www.sweetgreen.com/catering-inquiry/?path=recurring-office-meals",
+   "evidence/sweetgreen_catering_menu_2026-10-06.txt"
+  ],
+  "responseTime": "\"will respond within 24 hours\""
+ },
+ "gails_com_pages_office_catering": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": false,
+   "events": false
+  },
+  "price": {
+   "shown": true,
+   "perPerson": false,
+   "where": "per product in the carousel",
+   "example": "\"£24.00\" (6 Chocolate Babka Buns), delivery fee \"£14.95\"",
+   "firstScreen": false
+  },
+  "minimum": "\"£20 minimum spend for delivery\"",
+  "leadTime": "\"Our cut-off time is 11am, two days before the delivery date\", \"at least 48 hours in advance\", \"up to 30 days in advance\"",
+  "radius": "\"in and around the City of London\", Postcode Check",
+  "flow": {
+   "type": "order",
+   "steps": null,
+   "fields": [
+    "Postcode"
+   ],
+   "note": "direct shop ordering, no quote form"
+  },
+  "menu": "words with prices (shop)",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": null
+  },
+  "src": [
+   "https://gails.com/pages/office-catering"
+  ],
+  "responseTime": null
+ },
+ "lepainquotidien_com_us_en_catering": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": false,
+   "events": true
+  },
+  "price": {
+   "shown": false,
+   "perPerson": false,
+   "where": null,
+   "example": null,
+   "firstScreen": false
+  },
+  "minimum": null,
+  "leadTime": "FAQ question present, answer not in the HTML",
+  "radius": null,
+  "flow": {
+   "type": "order",
+   "steps": null,
+   "fields": [
+    "address, city, state or postcode"
+   ],
+   "note": "'Order Online' goes to catering.lepainquotidien.us, a location map"
+  },
+  "menu": "words (sections)",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": null
+  },
+  "src": [
+   "https://www.lepainquotidien.com/us/en/catering",
+   "https://catering.lepainquotidien.us/"
+  ],
+  "offersNote": "\"host a private event or an office meeting\", catering for private events, not hire of the venue",
+  "responseTime": null
+ },
+ "catering_chipotle_com": {
+  "offers": {
+   "office": false,
+   "teamLunch": false,
+   "afterwork": false,
+   "privateHire": false,
+   "events": true
+  },
+  "price": {
+   "shown": true,
+   "perPerson": true,
+   "where": "on each build card, first screen",
+   "example": "\"SINGLE ... $8.75 /person\", \"DOUBLE ... $12.00 /person\", \"TRIPLE ... $13.50 /person\"",
+   "firstScreen": true
+  },
+  "minimum": "\"Minimum 10 people\"; Burritos by the Box \"Minimum 6 people\"",
+  "leadTime": "\"24 hours advance notice to order\"",
+  "radius": "\"VIEW LOCAL PRICING & AVAILABILITY\" (ZIP)",
+  "flow": {
+   "type": "order",
+   "steps": null,
+   "fields": [
+    "people stepper (10 to 190+)"
+   ],
+   "note": "add to bag, sign in to check out; no quote form"
+  },
+  "menu": "words with prices",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": null
+  },
+  "src": [
+   "https://catering.chipotle.com/"
+  ],
+  "offersNote": "the page names guests and group sizes, not offices or meetings (text has no office, meeting or team)",
+  "responseTime": null
+ },
+ "pizzapilgrims_co_uk_pizza_pilgrims_catering": {
+  "offers": {
+   "office": true,
+   "teamLunch": true,
+   "afterwork": false,
+   "privateHire": true,
+   "events": true
+  },
+  "price": {
+   "shown": true,
+   "perPerson": true,
+   "where": "body copy (group feasting menus); minimum in the fact list",
+   "example": "\"feasting menus from £25 per person\", \"£200 minimum order\"",
+   "firstScreen": false
+  },
+  "minimum": "\"£200 minimum order\"",
+  "leadTime": "\"48+ hours recommended\"; FAQ \"one week in advance for large weddings or corporate bashes\"",
+  "radius": "\"selected UK locations\"; London delivery by Pedal Me",
+  "flow": {
+   "type": "order",
+   "steps": null,
+   "fields": [
+    "postcode"
+   ],
+   "note": "'Start your catering order' goes to Orderswift (postcode, START MY ORDER); private hire enquiry not read (its button revealed only the newsletter form)"
+  },
+  "menu": "words, plus a group dining menus PDF on the private hire page",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": null
+  },
+  "src": [
+   "https://www.pizzapilgrims.co.uk/pizza-pilgrims-catering/",
+   "https://pizzapilgrims.orderswift.com/catering",
+   "https://www.pizzapilgrims.co.uk/private-hire/"
+  ],
+  "responseTime": null
+ },
+ "baolondon_com_private_hire": {
+  "offers": {
+   "office": false,
+   "teamLunch": false,
+   "afterwork": true,
+   "privateHire": true,
+   "events": true
+  },
+  "price": {
+   "shown": false,
+   "perPerson": false,
+   "where": null,
+   "example": null,
+   "firstScreen": false
+  },
+  "minimum": null,
+  "leadTime": null,
+  "radius": null,
+  "capacity": "\"Max seating 48\" \"Max Standing 118\" (King's Cross); \"Max seating 68\" \"Max Standing 150\" (Shoreditch)",
+  "flow": {
+   "type": "email",
+   "steps": null,
+   "fields": [],
+   "note": "'Enquire Here' is mailto:info@baolondon.com"
+  },
+  "menu": "none on the page",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": null
+  },
+  "src": [
+   "https://baolondon.com/private-hire/",
+   "https://baolondon.com/groups/"
+  ],
+  "offersNote": "afterwork counted from the facility \"Drinks reception\"",
+  "responseTime": null
+ },
+ "ottolenghi_co_uk_pages_catering": {
+  "offers": {
+   "office": true,
+   "teamLunch": false,
+   "afterwork": false,
+   "privateHire": true,
+   "events": true
+  },
+  "price": {
+   "shown": false,
+   "perPerson": false,
+   "where": null,
+   "example": null,
+   "firstScreen": false
+  },
+  "minimum": "\"do not have minimum or maximum capacity policies\"",
+  "leadTime": "\"We are able to accommodate most events within 48 hours\"",
+  "radius": "\"Greater London, the surrounding areas, or Oxfordshire\"",
+  "flow": {
+   "type": "form",
+   "steps": 1,
+   "fields": [
+    "Name",
+    "Email",
+    "Phone",
+    "Postcode",
+    "Event type",
+    "Number of guests",
+    "Date of event",
+    "Message"
+   ],
+   "note": "\"Drop us a message\" form on the page"
+  },
+  "menu": "tiles by occasion (At work, Events, Private dining, Weddings...)",
+  "proof": {
+   "logos": false,
+   "reviews": false,
+   "counts": false,
+   "testimonials": false,
+   "examples": null
+  },
+  "src": [
+   "https://ottolenghi.co.uk/pages/catering"
+  ],
+  "responseTime": null
+ }
+}

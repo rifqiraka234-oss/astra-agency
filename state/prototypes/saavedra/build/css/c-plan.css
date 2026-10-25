@@ -1,0 +1,198 @@
+/* The growth plan, Astra's voice on Saavedra's colours. Numbered chapters, charts computed from data/plan.json. */
+.pl-top { color: var(--azul) }
+.pl-name { margin-left: 14px; font: 800 18px/1 var(--h); text-transform: uppercase; letter-spacing: .02em; white-space: nowrap }
+.pl-name em { font-style: normal; color: var(--rosa-ink) }
+.pl-by { font: 700 12.5px/1 var(--m); text-transform: uppercase; letter-spacing: .06em }
+@media (max-width: 720px) { .pl-name em, .pl-by { display: none } }
+@media (max-width: 460px) { .pl-top .top-cta { padding: 0 12px; font-size: 14px } .pl-name { font-size: 15px; margin-left: 8px } }
+
+.pc { position: relative; padding: clamp(90px, 12vh, 150px) 0; overflow: hidden }
+.pc-in { max-width: var(--w); margin: 0 auto; padding: 0 var(--g) }
+.pc-n { display: flex; align-items: center; gap: 14px; font: 700 13px/1 var(--m); letter-spacing: .08em; text-transform: uppercase }
+.pc-n b { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--azul); color: var(--crema); font: 400 20px/1 var(--d); letter-spacing: 0 }
+.dark .pc-n b, .pc.azul .pc-n b, .pc.noche .pc-n b { background: var(--crema); color: var(--azul) }
+.pc h2 { margin-top: 18px; max-width: 18ch }
+.pc .lede { margin-top: 20px; max-width: 56ch }
+.pc p.body { margin-top: 16px; max-width: 64ch; color: var(--ink2) }
+.pc.azul p.body, .pc.noche p.body { color: rgba(253, 226, 206, .86) }
+.pc.azul .src, .pc.noche .src { color: rgba(253, 226, 206, .75) }
+.pc.azul .lbl, .pc.noche .lbl { color: var(--crema) }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 80px); align-items: start; margin-top: clamp(36px, 5vw, 60px) }
+.two.mid { align-items: center }
+@media (max-width: 900px) { .two { grid-template-columns: minmax(0, 1fr) } }
+
+/* cover */
+.cover { position: relative; isolation: isolate; overflow: hidden; min-height: 100svh; padding-top: calc(var(--hh) + 40px); display: flex; align-items: center; background: radial-gradient(50% 50% at 80% 30%, #fff8dc, transparent 70%), linear-gradient(180deg, var(--celeste2), var(--celeste)) }
+.cover .poster { font-size: clamp(48px, 8.6vw, 146px); margin: 20px 0 0; max-width: 12ch }
+.cover .lede { font-size: clamp(19px, 1.7vw, 24px); max-width: 48ch }
+.cover-sun { position: absolute; right: -10vw; top: 8vh; width: 44vw; max-width: 680px; color: var(--sol); z-index: -1 }
+.cover-sun svg { animation: spin 120s linear infinite }
+.cover-meta { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 10px 26px; font: 700 13px/1.4 var(--m); text-transform: uppercase; letter-spacing: .05em }
+.toc { margin-top: 44px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px 22px; max-width: 980px }
+.toc a { display: flex; gap: 10px; align-items: baseline; padding: 10px 0; border-top: 2px solid var(--line); text-decoration: none; font: 800 17px/1.15 var(--h); text-transform: uppercase }
+.toc a span { font: 700 12px/1 var(--m); color: var(--ink2) }
+.toc a:hover { border-color: var(--azul) }
+@media (max-width: 900px) { .toc { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
+
+/* the big numbers */
+.stats { margin-top: clamp(36px, 5vw, 60px); display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: clamp(16px, 2vw, 26px) }
+.stat { padding-top: 0 }
+.stat b { display: block; font: 400 clamp(54px, 6.4vw, 104px)/.9 var(--d); letter-spacing: -.01em }
+.stat b small { font-size: .42em }
+.stat p { margin-top: 12px; font-size: 16px; max-width: 30ch }
+.stat .src { margin-top: 8px }
+@media (max-width: 860px) { .stats { grid-template-columns: minmax(0, 1fr) } }
+
+/* screenshots, their pages held in a window */
+.win { border-radius: 4px; overflow: hidden; background: #fff; border: 2px solid var(--azul) }
+.win-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: #eef4f9; font: 400 12px/1 var(--m); color: #5b6b7d }
+.win-bar i { width: 10px; height: 10px; border-radius: 50%; background: #cfd9e3 }
+.win-bar span { margin-left: 10px; overflow-wrap: anywhere; min-width: 0 }
+.win img { width: 100%; height: auto; display: block }
+.win.tall { max-height: 640px; overflow-y: auto }
+.shots { margin-top: clamp(36px, 5vw, 60px); display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 30px); align-items: start }
+.shots figcaption { margin-top: 12px; font-size: 15px; color: var(--ink2) }
+.shots figcaption b { display: block; font: 800 18px/1.1 var(--h); text-transform: uppercase; color: var(--azul); margin-bottom: 4px }
+@media (max-width: 900px) { .shots { grid-template-columns: minmax(0, 1fr) } }
+.phone-shot { max-width: 300px; border-radius: 30px; overflow: hidden; border: 8px solid var(--noche); box-shadow: 0 30px 60px -30px rgba(2, 27, 56, .6) }
+.phone-shot img { width: 100%; display: block }
+
+/* findings, a ruled list with a verdict per line */
+.finds { margin-top: clamp(30px, 4vw, 50px); display: grid; gap: 0 }
+.find { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; padding: 20px 0; border-top: 2px solid var(--line) }
+.find:last-child { border-bottom: 2px solid var(--line) }
+.find .tag { align-self: start; justify-self: start; font: 700 12px/1.3 var(--m); text-transform: uppercase; letter-spacing: .08em; color: var(--azul) }
+.find .tag.good { color: #0f5b2c }
+.find .tag.gap { color: #8f0e30 }
+.find .tag.check { color: #6b4b00 }
+.find h3 { font: 800 21px/1.15 var(--h); text-transform: uppercase }
+.find p { margin-top: 6px; color: var(--ink2); max-width: 70ch }
+.find .src { margin-top: 6px }
+@media (max-width: 640px) { .find { grid-template-columns: minmax(0, 1fr); gap: 10px } }
+
+/* bar charts drawn from the data, values printed on the bars */
+.bars { margin-top: 28px; display: grid; gap: 12px }
+.bar { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 16px; align-items: center }
+.bar-l { font: 800 17px/1.1 var(--h); text-transform: uppercase }
+.bar-l small { display: block; font: 400 12.5px/1.3 var(--m); text-transform: none; color: var(--ink2); margin-top: 3px }
+.bar-t { position: relative; height: 34px; border-radius: 8px; background: rgba(3, 74, 145, .08) }
+.bar-f { position: absolute; left: 0; top: 0; bottom: 0; width: calc(var(--v) * 100%); border-radius: 8px; background: var(--azul); display: flex; align-items: center; justify-content: flex-end; padding: 0 10px; color: var(--crema); font: 700 13px/1 var(--m); white-space: nowrap; min-width: max-content }
+.bar.us .bar-f { background: var(--brasa); color: var(--noche) }
+.bar.soft .bar-f { background: var(--rosa); color: var(--noche) }
+html.js .bars.rv .bar-f { width: 0; transition: width 1.2s var(--ease) }
+html.js .bars.rv.in .bar-f { width: calc(var(--v) * 100%) }
+@media (max-width: 640px) { .bar { grid-template-columns: minmax(0, 1fr); gap: 6px } }
+
+/* tables as divs with roles, numbered heads on phones */
+.tbl { margin-top: 30px; border-top: 3px solid var(--azul) }
+.tr { display: grid; grid-template-columns: var(--tc); gap: 14px; padding: 14px 0; border-bottom: 2px solid var(--line); align-items: baseline }
+.tr.th { font: 700 12px/1.3 var(--m); text-transform: uppercase; letter-spacing: .05em; color: var(--ink2) }
+.tr b { font: 800 18px/1.15 var(--h); text-transform: uppercase }
+.tr span { font-size: 15px }
+.tr .us { color: var(--brasa) }
+.tr.mine { background: linear-gradient(90deg, rgba(246, 180, 14, .18), transparent) }
+@media (max-width: 820px) { .tr { grid-template-columns: minmax(0, 1fr); gap: 4px } .tr.th { display: none } .tr span[data-h]::before { content: attr(data-h) " "; font: 700 11px/1 var(--m); text-transform: uppercase; color: var(--ink2) } }
+
+/* the coworking map */
+.pmap-wrap { position: relative; margin-top: 30px }
+.pmap { width: 100% }
+.pmap .pm-st path { fill: none; stroke: rgba(3, 74, 145, .22); stroke-linecap: round; stroke-linejoin: round }
+.pmap .pm-ring { fill: none; stroke: var(--azul); stroke-width: 2; stroke-dasharray: 3 7; opacity: .55 }
+.pmap .pm-dot circle { fill: var(--brasa); stroke: #fff; stroke-width: 3 }
+.pmap .pm-shop circle { fill: var(--azul) } .pmap .pm-shop .pm-shop-c { fill: var(--sol) }
+.pm-lab { position: absolute; transform: translate(-50%, -150%); padding: 5px 9px; border-radius: 999px; background: #fff; color: var(--azul); font: 700 11.5px/1 var(--m); white-space: nowrap; box-shadow: 0 4px 10px -4px rgba(2, 27, 56, .35); pointer-events: none }
+.pm-lab.near { background: var(--brasa); color: var(--noche) }
+.pm-ring-l { position: absolute; font: 700 11px/1 var(--m); color: var(--azul); opacity: .8 }
+.cw { margin-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 30px }
+.cw li { display: flex; justify-content: space-between; gap: 14px; padding: 10px 0; border-bottom: 2px dotted var(--line); font-size: 15px }
+.cw li b { font: 800 17px/1.15 var(--h); text-transform: uppercase }
+.cw li span { font: 700 13px/1.3 var(--m); white-space: nowrap }
+@media (max-width: 760px) { .cw { grid-template-columns: minmax(0, 1fr) } .pm-lab:not(.near) { display: none } }
+
+/* the calendar of triggers */
+.cal { margin-top: 36px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 4px }
+.cal div { min-height: 140px; padding: 10px 8px; border-radius: 10px; background: rgba(3, 74, 145, .07); font-size: 13px; line-height: 1.3 }
+.cal div b { display: block; font: 700 12px/1 var(--m); text-transform: uppercase; margin-bottom: 8px }
+.cal div.hot { background: var(--azul); color: var(--crema) }
+.cal div.warm { background: var(--rosa); color: var(--noche) }
+.cal div.now { outline: 3px solid var(--brasa); outline-offset: 2px }
+@media (max-width: 900px) { .cal { grid-template-columns: repeat(3, minmax(0, 1fr)) } .cal div { min-height: 0 } }
+
+/* the calculator */
+.calc { margin-top: 36px; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(24px, 4vw, 60px); padding: clamp(22px, 3vw, 40px); border-radius: 4px; background: var(--azul); color: var(--crema) }
+.calc label { display: block; font: 800 17px/1.1 var(--h); text-transform: uppercase; margin-bottom: 8px }
+.calc .row + .row { margin-top: 22px }
+.calc output { font: 400 40px/1 var(--d); color: var(--sol) }
+.calc input[type="range"] { width: 100%; accent-color: var(--sol) }
+.calc-out { display: grid; gap: 14px; align-content: start }
+.calc-out div { padding: 14px 0; border-top: 1px solid rgba(253, 226, 206, .3) }
+.calc-out b { display: block; font: 400 clamp(36px, 4vw, 58px)/1 var(--d); color: var(--crema) }
+.calc-out span { font: 700 12.5px/1.3 var(--m); text-transform: uppercase; letter-spacing: .04em; opacity: .9 }
+.calc-out .big b { color: var(--sol); font-size: clamp(46px, 5vw, 74px) }
+.calc .src { color: rgba(253, 226, 206, .75) }
+@media (max-width: 900px) { .calc { grid-template-columns: minmax(0, 1fr) } }
+
+/* the journey */
+.jr { margin-top: 40px; display: grid; grid-template-columns: repeat(var(--cols, 5), minmax(0, 1fr)); gap: 14px; counter-reset: j }
+.jr li { position: relative; padding: 4px 0 0 }
+.jr li::before { counter-increment: j; content: counter(j); display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--azul); color: var(--crema); font: 400 18px/1 var(--d); margin-bottom: 14px }
+.jr h3 { font: 800 19px/1.1 var(--h); text-transform: uppercase }
+.jr p { margin-top: 8px; font-size: 15px; color: var(--ink2) }
+.jr .st { display: inline-block; margin-top: 12px; font: 700 12px/1 var(--m); text-transform: uppercase; letter-spacing: .08em; color: #0f5b2c }
+.jr .st.next { color: #6b4b00 }
+@media (max-width: 1000px) { .jr { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) } }
+@media (max-width: 560px) { .jr { grid-template-columns: minmax(0, 1fr) } }
+
+/* posts, drafts for their LinkedIn and Instagram */
+.posts { margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start }
+.post { border-radius: 6px; background: #fff; border: 1px solid rgba(3, 74, 145, .25); overflow: hidden }
+.post-h { display: flex; align-items: center; gap: 10px; padding: 14px 16px }
+.post-h i { width: 38px; height: 38px; border-radius: 50%; background: var(--azul); display: grid; place-items: center; color: var(--crema) }
+.post-h i svg { width: 24px; height: auto }
+.post-h b { font: 800 16px/1 var(--h); text-transform: uppercase; display: block }
+.post-h small { font: 400 12px/1 var(--m); color: var(--ink2) }
+.post img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block }
+.post p { padding: 14px 16px 18px; font-size: 15px; color: var(--tinta); white-space: pre-line }
+.post .lbl-ex { display: block; padding: 0 16px 14px; font: 700 11px/1 var(--m); text-transform: uppercase; color: #5c4100 }
+@media (max-width: 960px) { .posts { grid-template-columns: minmax(0, 1fr) } .post { max-width: 520px } }
+
+/* the 90 days */
+.days { margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px }
+.days > div { padding: 0 }
+.days h3 { font: 400 clamp(30px, 3vw, 44px)/1 var(--d); color: var(--sol) }
+.days h3 small { display: block; margin-top: 8px; font: 700 12.5px/1 var(--m); text-transform: uppercase; color: var(--crema); letter-spacing: .05em }
+.days ul { margin-top: 16px; display: grid; gap: 10px }
+.days li { padding-left: 20px; position: relative; color: rgba(253, 226, 206, .9); font-size: 15.5px }
+.days li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; border-radius: 50%; background: var(--sol) }
+.days .kpi { margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(253, 226, 206, .25); font: 700 12.5px/1.5 var(--m); color: var(--crema) }
+@media (max-width: 900px) { .days { grid-template-columns: minmax(0, 1fr) } }
+
+/* team */
+.team { margin-top: 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px }
+.team div { padding: 0 }
+.team b { display: block; font: 900 26px/1 var(--h); text-transform: uppercase }
+.team p { margin-top: 10px; color: var(--ink2); font-size: 15.5px }
+@media (max-width: 900px) { .team { grid-template-columns: minmax(0, 1fr) } }
+.team.team2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+@media (max-width: 900px) { .team.team2 { grid-template-columns: minmax(0, 1fr) } }
+.endnote { margin-top: 40px; font: 400 13px/1.6 var(--m); color: var(--ink2); max-width: 80ch }
+@media (prefers-reduced-motion: reduce) { .cover-sun svg { animation: none } html.js .bars.rv .bar-f { width: calc(var(--v) * 100%); transition: none } }
+.cw-wrap { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(24px, 4vw, 60px); align-items: center; margin-top: 30px }
+.cw-wrap .pmap-wrap { margin-top: 0 }
+.cw-wrap .cw { grid-template-columns: minmax(0, 1fr); margin-top: 0 }
+@media (max-width: 980px) { .cw-wrap { grid-template-columns: minmax(0, 1fr) } }
+.pc { isolation: isolate }
+.pl-quote { margin: 30px 0 0; padding: 4px 0 4px 24px; max-width: 760px; border-left: 6px solid var(--rosa-ink); background: none; border-radius: 0; font: 800 clamp(20px, 2vw, 27px)/1.2 var(--h); text-transform: uppercase; color: var(--azul) }
+.pl-quote cite { display: block; margin-top: 12px; font: 400 14px/1.4 var(--m); text-transform: none; font-style: normal; color: var(--ink2) }
+.mbars { margin-top: 40px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px; align-items: end; height: 300px }
+.mb { display: grid; grid-template-rows: auto 1fr auto; height: 100%; align-items: end; text-align: center; gap: 6px }
+.mb-b { display: block; height: calc(var(--h) * 100%); min-height: 8px; border-radius: 10px 10px 4px 4px; background: rgba(3, 74, 145, .22); align-self: end }
+.mb-v { font: 700 11.5px/1 var(--m); white-space: nowrap; align-self: end }
+.mb-l { font: 800 15px/1 var(--h); text-transform: uppercase }
+.mb.hot .mb-b { background: var(--brasa) } .mb.hot .mb-v { color: #9a3a00 }
+.mb.low .mb-b { background: var(--azul) }
+.mb.now .mb-b { background: var(--rosa) }
+html.js .mbars.rv .mb-b { transform: scaleY(0); transform-origin: bottom; transition: transform 1s var(--ease) }
+html.js .mbars.rv.in .mb-b { transform: none }
+@media (max-width: 640px) { .mbars { gap: 3px; height: 240px } .mb-v { font-size: 10px } .mb:not(.hot):not(.low):not(.peak) .mb-v { visibility: hidden } .mb-l { font-size: 11px } }
+@media (prefers-reduced-motion: reduce) { html.js .mbars.rv .mb-b { transform: none; transition: none } }

@@ -1,0 +1,51 @@
+{
+  "_legend": "What each Paris Argentine competitor does for companies, read 2026-10-25. V = on the page or its HTML or a linked PDF, I = inferred. Each fact names its source.",
+  "saavedraparis_fr": {
+    "catering": ["V: no catering, traiteur, privatisation, entreprise, événement or afterwork word in the visible text of home, /menu or /click-collect (text/ and html/ re-read, and facts_html.py over the HTML)"],
+    "ordering": ["V: home and /click-collect send pickup to Click & Collect (Zelty) and delivery to Deliveroo"],
+    "menu": ["V: /menu is the printed card as images (EMPANADAS, DULCES Y MÁS, BEBIDAS, wine)"],
+    "proof": ["V: no reviews, logos or counts on the 3 pages rendered"]
+  },
+  "clasicoargentino_com": {
+    "catering": ["V: nav item CATERING and hero line \"DINE IN | TAKE AWAY | DELIVERY | CATERING\" (home)", "V: /catering \"Dès 120 empanadas commandées, Clasico Catering vous livre le meilleur de l'Argentine, sur Paris et ses alentours\"; below that, Click and Collect or delivery"],
+    "price": ["V: brochure PDF linked from /catering (dated 6 Nov 2025): \"Prix : environs 4€ par empanada\", \"Min. de commande : 120 empanadas\"; staffed service \"Minimum de facturation : 2500€ HT\", \"Empanadas À partir de 13,5€ par p.a.x\", desserts 4,5€, soft 3,5€, soft + bière 9,5€, vin 6€ p.a.x, \"Matériel, installation, livraison, location de four À partir de 900€\", \"La team Clasico 200€ par personnel\""],
+    "privateHire": ["V: brochure, per restaurant capacity and price, e.g. CLASICO PIGALLE 22 rue Henry Monnier 75009: partial free, \"Privatisation totale assis\" 100€ HT lunch, 200€ HT evening, 300€ HT weekend, cocktail buffet 200, 300, 400€ HT, \"Tarif indicatif à confirmer par devis\"; groups of \"20 ou 40 convives\""],
+    "radius": ["V: brochure \"Zones d'intervention : Paris intramuros et banlieues proches de Paris\""],
+    "flow": ["V: /catering form, 1 step, 6 fields: Nom et Prénom, Email, Numéro de téléphone, Date de l'évènement, Particulier ou professionnel, message; plus traiteur@clasico-argentino.com in the brochure"],
+    "proof": ["V: brochure has a page \"ILS NOUS ONT FAIT CONFIANCE !\" (logos are images, not read)"],
+    "menu": ["V: the offer lives in an 18 page PDF; the /catering page itself is about 98 words"],
+    "distance": ["V: Clasico Pigalle is about 425 m in a straight line from 48 rue Condorcet (both addresses geocoded with api-adresse.data.gouv.fr, haversine)"]
+  },
+  "asadoparis_com": {
+    "catering": ["V: none; home reads \"NO RESA / LIVRAISON ONLY SUR UBER EATS\" and links Deliveroo \"asado-by-clasico-argentino\""],
+    "note": ["V: Asado is a Clasico Argentino concept per its delivery listing slug"]
+  },
+  "volver_paris_com": {
+    "catering": ["V: a \"traiteur asado\" page: \"Mariage, baptême, anniversaire…\", \"recevez vos amis chez vous\", \"Volver Paris se charge du reste !\"; no company, office or team word on it"],
+    "price": ["V: none"],
+    "flow": ["V: RÉSERVEZ VOTRE ASADO opens a contact pop-up, 1 step, 5 fields: Nom, E-mail, Téléphone, Objet de votre demande, Message"]
+  },
+  "carnar_fr_fr": {
+    "catering": ["V: /evenements \"ORGANISATION ASADO\" for \"UN ÉVÉNEMENT D'ENTREPRISE OU SOCIAL, UNE FÊTE DE FIN D'ANNÉE, UN ANNIVERSAIRE OU UN MARIAGE\", contact by phone and email", "V: the shop sells frozen empanadas (\"EMPANADAS CONGELADAS\") and empanada dough"],
+    "note": ["V: Carnar is a meat importer and butcher supplying \"plus de 100 restaurants à Paris et dans toute la France\", not a restaurant"],
+    "price": ["V: shop items only (e.g. \"PÂTE POUR EMPANADAS VILLA D'AGRI 5€\"), no event price"]
+  },
+  "biondi_restaurant_fr": {
+    "privateHire": ["V: PRIVATISER in the nav and footer opens a Zenchef privatisation widget: Nombre de personnes, Date, Email, Téléphone, Prénom, Nom, type d'événement, Budget, Code postal, commentaire (10 visible fields, 1 screen)"],
+    "group": ["V: the same Zenchef privatisation link pattern sits on paris-buenosaires.fr and restaurantblanca.fr (probe of their homepages)"],
+    "price": ["V: \"Formule déjeuner\" \"23,50 €\" for the restaurant, no event price"]
+  },
+  "resto_unico_com": {
+    "catering": ["V: none; FAQ \"plusieurs plats sont conçus pour 2 à 3 personnes\""],
+    "proof": ["V: review widgets Google 4,4/5 566 avis, TheFork 9,5/10, TripAdvisor (seen in the frames)"]
+  },
+  "loco_restaurant_fr": {
+    "catering": ["V: none on the homepage (0 catering, privatisation or entreprise words in the HTML text)"],
+    "proof": ["V: \"CE QUE NOS CLIENTS DISENT DE NOUS\" 4.8/5 Zenchef reviews"],
+    "distance": ["V: 31 bis rue du Faubourg-Montmartre, about 730 m from Saavedra in a straight line (geocoded)"]
+  },
+  "anahi_paris_com": {
+    "privateHire": ["V: nav GROUPES & ÉVÉNEMENTS goes to riccardogiraudi.com/groups-parties, a group form: service (lunch or dinner), type (group or privatization), name, email, phone, number of people (\"10 minimum\"), date, budget per person, restaurant, message", "V: the PRIVATISATION button is a download gated by an email field (\"Send download link to:\")"],
+    "proof": ["V: press logo wall (AD, Vogue, Le Figaro, Konbini and others)"]
+  }
+}

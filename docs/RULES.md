@@ -286,10 +286,20 @@ noes through, each with the lead it would have saved.
 9. **The send side.** Our domain lands in spam, so email only from Raka's Gmail until SPF, DKIM and DMARC are set on
    astraagency.nl. Two sessions share the inbox, so the thread is pulled in the minute before every send.
 
-**Who to message comes before how to word it.** Since 1 Sep, B2B companies (tech, manufacturing, wholesale, B2B
-services) said yes 6 times in 68 and consumer businesses (hospitality, retail, leisure, education) 0 in 69, and none
-of the seven companies we've met is a shop, venue or hospitality business. Six of the eight "untrue or not theirs" noes were consumer businesses too. When picking
-the next batch, research the B2B leads first. The numbers are in the review's targeting section.
+**Who to message comes before how to word it. `docs/gtm-plan.md` is the plan from 26 Oct (Raka, 25 Oct, "do whatever
+you think for us to get meetings that will get sales").** Where lemlist's industry and a blind read of each
+company agree, B2B said yes 15 times in 80 and consumer businesses 2 in 53. English speaking B2B owners are the best group
+by both reads (11 of 45, 12 of 70). Agencies, marketing firms and recruiters, 1 yes in 32. None of the seven companies we've met is a shop,
+venue or hospitality business, and every lost proposal stopped on budget or on a decider who wasn't on the call. So,
+in short.
+- Research the open pool in the order of `state/next_batch_ranked.md`. Don't pitch agencies, recruiters, coaches,
+  consumer businesses, foundations or one person firms before their first sale.
+- Every first message dated 26 Oct or later carries `still there:` and `budget: <one sign they can pay> | <URL>` in its
+  gate, and check-drafts fails it without them.
+- After a yes, build only when there's a budget sign. Otherwise one screen and the call ask. Every delivery asks for the
+  call with two slots.
+- On the call, the owner is there, the price range is said out loud, and the next step is booked before hanging up. The
+  proposal follows within 24 hours, one recommendation, not a menu.
 
 ---
 

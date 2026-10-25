@@ -1,0 +1,55 @@
+{
+ "_source": "Their printed card, the three images on https://www.saavedraparis.fr/menu (research/assets/own/24-menu-empanadas.png, 25-menu-dulces-y-mas.png, 26-menu-bebidas.png), read by eye on 25 Oct 2026. Prices in euros as printed. Names in their spelling. English lines are ours.",
+ "intro": ["Toutes nos empanadas sont faites maison et cuites au feu de bois", "All our empanadas are made in house and baked over a wood fire"],
+ "boxes": {"fr": "Retrouvez nos empanadas en box de 6 ou 12, à partager… ou pas", "en": "Our empanadas come in boxes of 6 or 12, for sharing… or not", "items": [["Par 6", "Box of 6", "20,90"], ["Par 12", "Box of 12", "40,90"]]},
+ "carne": [
+  ["Carne suave", "mijoté de boeuf, poivrons, oignons confits, mélange d'épices", "slow cooked beef, peppers, confit onions, spice blend", "4", false],
+  ["Carne picante", "mijoté de boeuf épicé, poivrons, oignons confits, mélange d'épices", "spicy slow cooked beef, peppers, confit onions, spice blend", "4", false],
+  ["Jamón y queso", "jambon de Paris, mozzarella, origan", "Paris ham, mozzarella, oregano", "4", false],
+  ["Pollo", "poulet mariné, poivrons, oignons confits, persil plat, mélange d'épices", "marinated chicken, peppers, confit onions, flat parsley, spice blend", "4", false],
+  ["Spianata", "salame épicé, provolone, oignons confits, miel, mélange d'épices", "spicy salami, provolone, confit onions, honey, spice blend", "4", true]
+ ],
+ "verduras": [
+  ["Caprese", "tomates, mozzarella, basilic frais, ail, mélange d'épices", "tomatoes, mozzarella, fresh basil, garlic, spice blend", "4", false],
+  ["Espinaca y salsa blanca", "épinards frais, salsa blanca, mélange d'épices", "fresh spinach, white sauce, spice blend", "4", false],
+  ["Fugazetta", "oignons confits, mozzarella origan, mélange d'épices", "confit onions, mozzarella, oregano, spice blend", "4", false],
+  ["Hongos", "champignons sautés, ricotta, bleu d'Auvergne, mélange d'épices", "sautéed mushrooms, ricotta, bleu d'Auvergne, spice blend", "4", true]
+ ],
+ "formules": {"fr": "Formules midi", "en": "Lunch deals", "items": [
+  ["Saavedra Classic", "3 empanadas + 1 soft", "3 empanadas + 1 soft drink", "13,90"],
+  ["Saavedra Mi Amor", "3 empanadas + 1 soft + 1 alfajor", "3 empanadas + 1 soft drink + 1 alfajor", "15,90"]
+ ], "note": ["Tous nos menus sont accompagnés d'une sauce chimichurri, criolla ou salsa verde", "Every deal comes with a chimichurri, criolla or salsa verde sauce"]},
+ "dulces_intro": ["Tous nos desserts et toutes nos sauces sont faits maison", "All our desserts and sauces are made in house"],
+ "dulces": [
+  ["Alfajor", "sablé argentin au dulce de leche", "Argentine shortbread with dulce de leche", "3"],
+  ["Cookie dulce de leche", "cookie aux pépites choco, pointes de dulce de leche", "chocolate chip cookie with dulce de leche", "4"]
+ ],
+ "sauces": [
+  ["Chimichurri", "huile d'olive, herbes fraîches, ail, piment doux, vinaigre, épices", "olive oil, fresh herbs, garlic, mild chilli, vinegar, spices", "0,5", false],
+  ["Criolla", "huile d'olive, oignons, poivrons, tomates fraîches, vinaigre, épices", "olive oil, onions, peppers, fresh tomatoes, vinegar, spices", "0,5", false],
+  ["Salsa verde", "huile d'olive, poivrons, piments verts, coriandre, citron, épices", "olive oil, peppers, green chillies, coriander, lemon, spices", "0,5", true]
+ ],
+ "softs": [
+  ["Limonade bio", "la parisienne, 33 cl", "la parisienne, 33 cl", "4,50"],
+  ["Ice tea bio", "la parisienne, 33 cl", "la parisienne, 33 cl", "4,50"],
+  ["Ginger ale bio", "la parisienne, 33 cl", "la parisienne, 33 cl", "4,50"],
+  ["Maté bio", "la parisienne, 33 cl", "la parisienne, 33 cl", "4,50"],
+  ["Coca, Coca zero, Ice tea", "33 cl", "33 cl", "3,50"],
+  ["Perrier", "33 cl", "33 cl", "3,50"],
+  ["Evian", "50 cl", "50 cl", "3,50"]
+ ],
+ "bieres": [
+  ["Blonde", "la parisienne 5°, 25 cl ou 50 cl", "la parisienne 5°, 25 cl or 50 cl", "4 / 7,50"],
+  ["Quilmes", "4,9°, 33 cl", "4.9°, 33 cl", "6,50"],
+  ["IPA", "la parisienne 5,5°, 33 cl", "la parisienne 5.5°, 33 cl", "5,50"],
+  ["Blonde sans alcool", "la parisienne 0°, 33 cl", "la parisienne 0°, 33 cl", "5,50"],
+  ["Cidre brut", "la parisienne 5°, 33 cl", "la parisienne 5°, 33 cl", "5,50"]
+ ],
+ "vins": [
+  ["Crios, domaine Susana Balbo", "Malbec, rouge, 12 cl ou 75 cl", "Malbec, red, 12 cl or 75 cl", "8 / 39"],
+  ["Finca La Niña", "Malbec, rouge, 12 cl ou 75 cl", "Malbec, red, 12 cl or 75 cl", "6 / 27"],
+  ["Finca La Niña", "Chardonnay et Torrontes, blanc, 12 cl ou 75 cl", "Chardonnay and Torrontes, white, 12 cl or 75 cl", "6 / 27"],
+  ["Bellevue la Forêt", "Viognier, blanc, 12 cl ou 75 cl", "Viognier, white, 12 cl or 75 cl", "5 / 24"],
+  ["Bellevue la Forêt", "Syrah, rosé, 12 cl ou 75 cl", "Syrah, rosé, 12 cl or 75 cl", "5 / 24"]
+ ]
+}

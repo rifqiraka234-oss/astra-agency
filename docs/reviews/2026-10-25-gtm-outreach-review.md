@@ -1,5 +1,10 @@
 # GTM and outreach review, 25 Oct 2026
 
+**Corrected later on 25 Oct after a full recheck.** Julien Chiaroni (Safenai) wrote "I'd be curious to see what you came
+up with" and got a build, so he's a yes, 26 not 25. Tomatoworld's meeting came from a yes too, so four of the yeses
+led to a meeting, not three. The "84 waiting" figure was lemlist's own bucket, and 49 of those are closed in the queue.
+Every number below is the corrected one. The plan built on this is `docs/gtm-plan.md`.
+
 Raka asked for a review of everything, what works, what doesn't, what we got wrong and whether the two message templates
 work, "to be 100x better".
 
@@ -20,26 +25,26 @@ work, "to be 100x better".
 | Accepted Raka's invite | 499 |
 | Got a cold first pitch | 330 |
 | Replied to it | 79 (24%) |
-| Said yes | 25 (7.6%) |
-| Got a prototype or deck | 23 of the 25 yeses (40 built in total) |
-| Meeting held or booked | 8 rows, 7 companies (Curalis twice, Monad Edge, which we cancelled as not a fit, HotGreen, Tomatoworld, Acquitas, Qualigraf, Lisanne) |
+| Said yes | 26 (7.9%) |
+| Got a prototype or deck | 24 of the 26 yeses (40 contacts got builds in total) |
+| Meeting held or booked | 10 rows, 7 companies (Curalis twice, Monad Edge, which we cancelled as not a fit, HotGreen, Tomatoworld, Acquitas, Qualigraf, Lisanne) |
 | Paid work | none recorded yet |
 
-**The leak is after the yes, not before it.** Of the 23 yeses that got a build, three turned into a meeting (Lisanne,
-HotGreen, Qualigraf). Ten builds still have no answer at all. Every build costs most of a day.
+**The leak is after the yes, not before it.** Of the 24 yeses that got a build, four turned into a meeting (Lisanne,
+HotGreen, Qualigraf, and Tomatoworld, whose meeting ran over email). Ten builds still have no answer at all. Every build costs most of a day.
 
 ## The message shapes, side by side
 
 | Shape | When | Sent | Replied | Yes | Notes |
 |---|---|---|---|---|---|
-| Free form, July and August | 14 Jul to 31 Aug | 102 | 36 (35%) | 16 (16%) | "thanks for connecting", a line showing we understood the business, one gap, "we sketched X, want me to send it?" |
+| Free form, July and August | 14 Jul to 31 Aug | 102 | 36 (35%) | 17 (17%) | "thanks for connecting", a line showing we understood the business, one gap, "we sketched X, want me to send it?" |
 | Free form, September | 1 to 21 Sep | 112 | 21 (19%) | 1 (0.9%) | longer (median 120 words), critique first in 79% of them, mostly the old accept backlog |
 | Five block template | 22 Sep to 12 Oct | 70 | 9 (13%) | 3 (4.3%) | "saw X, looks interesting! However ... This causes ... Especially ...", median 128 words |
 | SKETCH ("looks cool! ... I'd suggest") | 12 to 25 Oct | 45 | 12 (27%) | 4 (8.9%) | the current template, median 102 words |
 | AI workflow "did you know" | 22 Oct | 1 | 1 | 1 | Lisanne, now a booked meeting |
 
 What the numbers say.
-1. **September is where it broke.** Same channel and same kind of lead, and the yes rate fell from 16% to under 1%. Three
+1. **September is where it broke.** Same channel and same kind of lead, and the yes rate fell from 17% to under 1%. Three
    things changed at once. Messages got longer and led with the flaw, the batches came from leads who'd accepted weeks
    earlier, and the volume roughly doubled. It isn't only the old accepts. Even leads messaged within two days of
    accepting dropped from 14% yes in July and August to 6% from September on.
@@ -179,14 +184,22 @@ to the 330 cold first pitches above. 329 matched, only Joyce (Tomatoworld) has n
 
 | Group, by their LinkedIn industry | All, yes | Since 1 Sep, yes | Replied at all |
 |---|---|---|---|
-| B2B (tech, software, manufacturing, wholesale, finance, B2B services) | 16 of 115 (14%) | 6 of 68 (9%) | 31% |
+| B2B (tech, software, manufacturing, wholesale, finance, B2B services) | 17 of 115 (15%) | 6 of 68 (9%) | 31% |
 | Consumer (hospitality, retail, leisure, education, wellness) | 3 of 94 (3%) | 0 of 69 | 27% |
 | Professional services (consultants, lawyers, accountants, coaches) | 3 of 88 (3%) | 3 of 68 (4%) | 9% |
 | Other or unknown | 3 of 33 | 0 of 23 | 30% |
 
-- The gap is too big to be luck. The odds of chance alone splitting 0 of 69 against 6 of 68 are about 1 in 75, and 1 in
-  175 over all months. It's a much stronger signal than anything about the templates.
-- Tech and manufacturing alone, 12 of 80 (15%).
+- **The blind check, and it makes the gap smaller.** LinkedIn's industry label is noisy, lemlist's "Manufacturing"
+  includes consumer food and drink brands (Healthy Secrets, MUUSH, Suntail). So a separate agent read every company's
+  description and site without seeing any outcome and labelled who pays them. By that blind read, B2B said yes 21 of 189
+  (11%) and consumer 4 of 89 (4.5%). Where both methods agree, B2B 15 of 80 (19%) and consumer 2 of 53 (4%), about a 1
+  in 115 chance of luck. Since September alone the blind read gives 7 of 128 against 2 of 63, too close to call, so the
+  "0 of 69" above partly came from LinkedIn's labels. The direction holds, the size is about half what the first pass
+  said.
+- **English speaking B2B is the best group by both methods.** 11 of 45 by lemlist's label, 12 of 70 by the blind read,
+  against 14 of 260 for everyone else. Most of that came in the summer, since September it's 3 of 46.
+- **Agencies, studios, marketing firms, recruiters and coaches**, by the blind read, 1 yes from 32 and 3 replies.
+- Tech and manufacturing alone, 13 of 80 (16%).
 - Consumer businesses do answer, 27% of the time, but the answer is "own team", "not a priority" or a correction. Six
   of the eight "untrue or not theirs" noes were consumer businesses (de Kogge, Octelle, Averitopia, L'Office des
   Artistes, the Country Club, OKOJŪ).
@@ -196,7 +209,7 @@ to the 330 cold first pitches above. 329 matched, only Joyce (Tomatoworld) has n
   handler (Ulrich) and Lisanne, who said yes to the AI workflow message, not a site critique.
 
 **Weaker signals, direction only.**
-- **France and Belgium.** 2 yeses from 74, and 0 from 54 since September. The UK gave 11 from 93, the Netherlands 5 from
+- **France and Belgium.** 3 yeses from 74, and 0 from 54 since September. The UK gave 11 from 93, the Netherlands 5 from
   70, Germany 2 from 44. We write in English, which may be why. 21 of the 84 leads waiting for a first message are in
   France.
 - **Old accepts.** First pitch more than 31 days after accepting, 1 yes from 46 (2%).
@@ -208,8 +221,9 @@ to the 330 cold first pitches above. 329 matched, only Joyce (Tomatoworld) has n
 1. **The two campaigns sending invites now, W1b and W1c, target consumer businesses on DIY site builders.** That's the
    group with 3% yes and no meetings. Pointing them, or new ones, at B2B companies (the W2 and W3 drafts already describe
    B2B service firms and growing ops heavy businesses) is the biggest change on the table. Campaigns are Raka's call.
-2. **Of the 84 waiting for a first message, 30 are B2B, 26 professional services, 21 consumer and 7 other.** Research
-   the B2B ones first and the consumer ones last.
+2. **lemlist shows 84 accepts with nothing sent, but 49 of them are already closed in the queue** (not the owner, not a
+   fit, no strong angle, do not contact). The 35 truly open are ranked in `state/next_batch_ranked.md`, and only about 4
+   of them fit. The bottleneck is who we invite, see `docs/gtm-plan.md`.
 3. **Professional services get the AI workflow message**, the shape that booked Lisanne, rather than a site critique.
 4. **France and Belgium**, either stop inviting them or decide whether a French message is worth trying. English only
    is Raka's rule, so that's his call.
