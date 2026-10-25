@@ -150,10 +150,12 @@ html:not(.js) .pano-ring figure:nth-child(n+13),.rm .pano-ring figure:nth-child(
 
 /* The close, dusk and a lit window */
 .horizon{height:clamp(160px,28vh,300px);background:linear-gradient(180deg,rgba(34,30,56,0) 0%,rgba(34,30,56,.55) 55%,#221E38 100%)}
-.dusk-sec{color:var(--paper);background:radial-gradient(60% 55% at 22% 64%,rgba(201,115,63,.30),rgba(201,115,63,0) 70%),radial-gradient(50% 60% at 88% 12%,rgba(107,90,156,.42),rgba(107,90,156,0) 70%),#221E38}
+/* glows sit inside the section so no edge is cut at its top or bottom */
+.dusk-sec{color:var(--paper);background:radial-gradient(55% 48% at 22% 56%,rgba(201,115,63,.30),rgba(201,115,63,0) 70%),radial-gradient(45% 50% at 86% 46%,rgba(107,90,156,.42),rgba(107,90,156,0) 70%),#221E38}
 .ftr.dusk-sec{background:#1C1830}
 .forest-h{height:clamp(160px,28vh,300px);background:linear-gradient(180deg,rgba(21,48,42,0) 0%,rgba(21,48,42,.55) 55%,#15302A 100%)}
-.forest{background:radial-gradient(60% 60% at 80% 30%,rgba(47,165,151,.28),rgba(47,165,151,0) 70%),radial-gradient(50% 60% at 10% 90%,rgba(201,164,122,.18),rgba(201,164,122,0) 70%),#15302A}
+.forest-wrap{background:radial-gradient(55% 40% at 78% 40%,rgba(47,165,151,.28),rgba(47,165,151,0) 70%),radial-gradient(50% 35% at 12% 72%,rgba(201,164,122,.18),rgba(201,164,122,0) 70%),#15302A}
+.forest-wrap .forest,.forest-wrap .voice{background:transparent}
 .ftr.forest{background:#0F231F;border-top-color:rgba(255,255,255,.1)}
 .ftr.forest .about,.ftr.forest h2,.ftr.forest .base{color:#A9BDB6}
 .ftr.forest .base{border-top-color:rgba(255,255,255,.12)}
@@ -172,7 +174,8 @@ html:not(.js) .pano-ring figure:nth-child(n+13),.rm .pano-ring figure:nth-child(
 @keyframes flicker{0%,100%{filter:brightness(1)}50%{filter:brightness(1.07)}}
 .rm .window{animation:none}
 .close3 .pbar{margin-top:36px;background:rgba(255,255,255,.96)}
-.close3 .pbar form{grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto}
+.close3 .pbar form{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.close3 .pbar button{grid-column:1/-1;min-height:60px}
 .close3 .meta{margin-top:28px;font-size:14px;color:#D6D1E6}
 .close3 .meta a{text-decoration:none}.close3 .meta a:hover{text-decoration:underline}
 @media (max-width:900px){.close3-g{grid-template-columns:minmax(0,1fr)}.window{max-width:280px}.close3 .pbar form{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
