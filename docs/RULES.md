@@ -287,8 +287,9 @@ noes through, each with the lead it would have saved.
    astraagency.nl. Two sessions share the inbox, so the thread is pulled in the minute before every send.
 
 **Who to message comes before how to word it. `docs/gtm-plan.md` is the plan from 26 Oct (Raka, 25 Oct, "do whatever
-you think for us to get meetings that will get sales").** Since 1 Sep, B2B companies said yes 6 times in 68 and consumer
-businesses 0 in 69. English speaking B2B owners said yes 11 times in 45. None of the seven companies we've met is a shop,
+you think for us to get meetings that will get sales").** Where lemlist's industry and a blind read of each
+company agree, B2B said yes 15 times in 80 and consumer businesses 2 in 53. English speaking B2B owners are the best group
+by both reads (11 of 45, 12 of 70). Agencies, marketing firms and recruiters, 1 yes in 32. None of the seven companies we've met is a shop,
 venue or hospitality business, and every lost proposal stopped on budget or on a decider who wasn't on the call. So,
 in short.
 - Research the open pool in the order of `state/next_batch_ranked.md`. Don't pitch agencies, recruiters, coaches,

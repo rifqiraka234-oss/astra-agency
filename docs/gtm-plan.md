@@ -40,15 +40,17 @@ the price on the call, not three days later in a PDF.
 
 ## 1. Who we go after
 
-The targeting analysis, 329 of 330 pitches matched to lemlist's lead records. Yes rates by group.
+The targeting analysis, 329 of 330 pitches matched to lemlist's lead records, then every company relabelled blind by a
+separate read of its description and site (who pays them), without seeing any outcome. Yes rates by group.
 
 | Group | Yes | Note |
 |---|---|---|
-| English speaking B2B (UK, Canada) | 11 of 45, 24% | HotGreen and Qualigraf came from here |
+| English speaking B2B (UK, Canada) | 11 of 45 by lemlist's label, 12 of 70 by the blind read | Best by both. HotGreen and Qualigraf came from here. Since September 3 of 46, so it rests mostly on the summer |
 | Dutch, German, Swiss and Austrian B2B | 4 of 46, 9% | They reply most (35%) but 6 of their 9 noes were our wrong read of them |
 | Professional services, NL and DE | 3 of 34 | Noah, Ulrich, Lisanne. Lisanne said yes to the AI workflow message |
 | Professional services, English speaking | 0 of 31, and 0 replies | Mostly marketing agencies, studios, recruiters and consultants |
-| Consumer, all countries | 3 of 94, and 0 of 69 since September | No meeting ever came from one |
+| Consumer, all countries | 3 of 94 by label, 4 of 89 blind, 2 of 53 where both agree (B2B 15 of 80 there) | No meeting ever came from one. The gap is real but smaller since September (blind, 2 of 63 against 7 of 128) |
+| Agencies, studios, marketing firms, recruiters, coaches (blind) | 1 of 32, 3 replies | They sell what we sell |
 | France and Belgium, everyone | 3 of 74, 0 of 54 since September | Our messages are in English |
 
 **The profile, in order.**
@@ -86,7 +88,8 @@ builders") and W1c ("established consumer businesses on DIY site builders") are 
 - Company size, 2 to 10 and 11 to 50.
 - Industries, Software Development, IT Services and IT Consulting, Technology Information and Internet, Industrial
   Machinery Manufacturing and other Manufacturing, Wholesale, Engineering Services, Transportation and Logistics,
-  Business Consulting only where it's not marketing.
+  Business Consulting only where it's not marketing. LinkedIn's "Manufacturing" also holds consumer food, drink and
+  beauty brands, so research checks who pays them before anything is written.
 - Exclude, Marketing Services, Advertising Services, Design Services, Staffing and Recruiting, Hospitality, Restaurants,
   Retail, Education, Wellness and Fitness, Non-profit Organizations.
 - The same connect note as now. 20 to 30 invites a day is enough, because research is the limit, not volume.

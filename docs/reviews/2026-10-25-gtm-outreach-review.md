@@ -189,8 +189,16 @@ to the 330 cold first pitches above. 329 matched, only Joyce (Tomatoworld) has n
 | Professional services (consultants, lawyers, accountants, coaches) | 3 of 88 (3%) | 3 of 68 (4%) | 9% |
 | Other or unknown | 3 of 33 | 0 of 23 | 30% |
 
-- The gap is too big to be luck. The odds of chance alone splitting 0 of 69 against 6 of 68 are about 1 in 75, and 1 in
-  290 over all months. It's a much stronger signal than anything about the templates.
+- **The blind check, and it makes the gap smaller.** LinkedIn's industry label is noisy, lemlist's "Manufacturing"
+  includes consumer food and drink brands (Healthy Secrets, MUUSH, Suntail). So a separate agent read every company's
+  description and site without seeing any outcome and labelled who pays them. By that blind read, B2B said yes 21 of 189
+  (11%) and consumer 4 of 89 (4.5%). Where both methods agree, B2B 15 of 80 (19%) and consumer 2 of 53 (4%), about a 1
+  in 115 chance of luck. Since September alone the blind read gives 7 of 128 against 2 of 63, too close to call, so the
+  "0 of 69" above partly came from LinkedIn's labels. The direction holds, the size is about half what the first pass
+  said.
+- **English speaking B2B is the best group by both methods.** 11 of 45 by lemlist's label, 12 of 70 by the blind read,
+  against 14 of 260 for everyone else. Most of that came in the summer, since September it's 3 of 46.
+- **Agencies, studios, marketing firms, recruiters and coaches**, by the blind read, 1 yes from 32 and 3 replies.
 - Tech and manufacturing alone, 13 of 80 (16%).
 - Consumer businesses do answer, 27% of the time, but the answer is "own team", "not a priority" or a correction. Six
   of the eight "untrue or not theirs" noes were consumer businesses (de Kogge, Octelle, Averitopia, L'Office des
