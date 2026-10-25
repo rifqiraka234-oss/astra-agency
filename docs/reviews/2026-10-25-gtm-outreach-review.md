@@ -77,6 +77,54 @@ What the numbers say.
 **Most of these already have a rule** (RULES 0B, 0C, 0D, 0F, 1B, the 20 a day cap). The ones still open are deliverability,
 reply speed and one owner for sending.
 
+## Why the 42 people said no, and how much of it was our mistake
+
+Every no was reread next to the pitch that caused it. **About 19 of the 42 (45%) said no because we were wrong about
+them.** The market didn't turn us down. Our read of their business did.
+
+**1. We stated something that wasn't true, or wasn't theirs (8).**
+
+| Who | What we said | What they told us |
+|---|---|---|
+| Danny, Tentopia | no guide price anywhere | "we have a configurator on the website with the prices" |
+| Sylvia, L'Office des Artistes | the site "sells access to galleries, collectors and institutions" | "The site does not promise access ... Please do not contact me anymore" |
+| Debby, Sportcafé de Kogge | "Google calls de Kogge Bij Veld't" | that business left the address, not hers |
+| Craig, D&G Chamber | pitched as the chamber | "I resigned from the chambers some time ago" |
+| Clément, Country Club Aixois | pitched as the director | agreed with every point, but he'd left |
+| Kristof, Octelle | groups book elsewhere, the booking page showed no dates | 80% Dutch speaking guests, half of bookings direct, every 2027 weekend March to August already full. He'd also found all our emails in his spam |
+| Cédric, kitchen inserts | early backers decide from a page with one photo | a placeholder, with a full Shopify store and an agency already lined up |
+| Tatiana, Averitopia | the one page site | a throwaway GoDaddy experiment, her least important venture |
+
+**2. We called a deliberate choice a gap (5).**
+- **Steven Prins.** No trade prices, because he sells to shops and bars on a price list per customer.
+- **Jim, Intemax.** No prices online, because they only sell on credit accounts. "Those customers are never yours."
+- **Ramona, Negentien80.** The missing calculator was removed because nobody used it.
+- **Laura, REVVY.** No named clients, because they're under NDA.
+- **Benedicte, House of Wood.** Thin portfolio, because all work comes by word of mouth and stylists.
+
+**3. We assumed a pain they'd already solved (6).**
+- **Terry, MRF FieldTech.** "I already have those built into our platform."
+- **Marlies, CaTeC.** "It's already done."
+- **Wessel, SBZ.** "A few years ago we took a critical look at this and invested in it."
+- **Denis, neuLEAN.** "Customer demand and proof of concept is done."
+- **Johannes, ROOBS.** The B2B portal was about to launch.
+- **Josh, The Wine Flight.** The site had just been built.
+
+**The rest weren't our error.** These were said nicely and are the normal cost of outreach.
+- Already handled by their own team or another agency (8): De Kade, Palmyra, Spa Holistique, Grigory, Osman, Thijs,
+  Yero, Cédric.
+- Not a priority now (8): Alice, Adrianna, Mardi, Fabrice, Jochen, Jean Claude, Robert, James.
+- A flat no with no reason (4).
+
+**Three noes were about tone, not facts.**
+- **Jelle, EduOS.** "looks like 2008 and I mean that literally", "Simple answer: no".
+- **Michaël, Archipel.** A crawler nitpick and a third message in a week, "Stop spam please".
+- **Luke, RDA.** "I do get a fair few self-promoting DM slides".
+
+**The fix in one line.** If the gap could be a choice, a plan already in motion or someone else's listing, ask instead of
+telling. And confirm the person still owns or runs the thing before the first word. Those two checks would have stopped
+roughly 19 of the 42 noes.
+
 ## The two templates, verdict
 
 **SKETCH. Keep it, and fix its first line.**
