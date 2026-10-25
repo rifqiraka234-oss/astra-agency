@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Lisanne SENT 25 Oct on Raka's 'send lisanne', act_pWiZ8sP7u8hpGXmnX, one copy, thread 6 items before, 7 after. Do not send again. -->
 # Lisanne De Jong Vanhommerig, 25 Oct. NOT SENT, waiting on Raka's word
 
 Raka, 25 Oct, "for lisanne we can send her a message today saying im planning my week and its getting full etc".
