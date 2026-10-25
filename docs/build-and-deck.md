@@ -657,6 +657,33 @@ left are in `docs/RULES.md` section 5, first two paragraphs. What actually worke
    the word. When a prototype is rebuilt, the delivery email's description of it has to be reread, v1's line described
    scenes v2 no longer has.
 Brief, research and plan, `state/prototypes/hooftenpetiet/research/v2/brief.md`. Live at the same two URLs.
+
+## Hooft & Petiet v3, the wow layer on v2's flow (25 Oct 2026)
+
+Raka on v2, "it feels like it's so plain and basic … Now you've done the flow, but not the artistic value. It needs to
+have a wow effect." v3 kept every v2 section, question order and the one action, and added one signature idea per site
+taken from their own words. Brief in state/prototypes/hooftenpetiet/research/v3/brief.md, engine in build3/js/fx.js.
+
+**What carried the wow.** H&P, a living WebGL gradient that moves from dawn to dusk down the page, photos set inside a
+giant headline as an arch window and their house shape, the arch opening into the full room with the lights coming on
+(their promise, "direct bewoonbaar zodra de sleutel wordt overgedragen"), a sticky arch that swaps photo per row, a giant
+kinetic line with photos in the words, a hover photo per home type, a concave panorama, a lit window at dusk. ReShare, a
+particle sculpture that re-forms into four pieces of furniture with a life counter, a 3D photo ring with Re, Share and
+Living, doors on moving gradients, a cycle that draws round.
+
+**Traps, each one cost a pass.**
+
+| Trap | What happened | The rule |
+|---|---|---|
+| A sticky hero under a sticky header and a note bar | The availability bar sat 106px below the fold at scroll 0 | Stick at the header's height, height 100svh minus it, and lift the bar by the note's height |
+| A concave ring built with the wrong sign | rotateY on the figures and the ring added instead of cancelled, the panorama rendered nothing at all | Check a 3D scene in a screenshot before writing any other code around it |
+| A transparent sticky header over a WebGL canvas made with alpha false | Chromium composited black under the header and in clipped shapes | Make the context alpha true and give the header a 1% trace of colour. Then scan every screen for pure black with the grain overlay off, because the grain hid the fault |
+| Headless screenshots of a page with WebGL | The capture still drops the canvas under the header, though canvas readback shows every row drawn | Read the canvas pixels back before believing a screenshot about the canvas, and keep a CSS gradient under it so any gap is colour |
+| mediump in a noise shader | The permute and hash overflow at half precision on phones | highp with a mediump fallback, and a hash that keeps its numbers small |
+| A photo per service row picked for the look | Two came from job ads, and the caption beside the photo names the service | Pair a photo with a service only when their own page for that service carries it. hp-images.json maps every image to its pages |
+| Lazy images clipped to nothing under reduced motion | Never loaded, so the static page showed one photo where seven were promised | Let the swap run without animation under reduced motion rather than freezing it |
+| A word fill effect | axe flags every word not yet read | Accept it as a reading effect only if reduced motion and screen readers get the full text, and say so in the handover |
+
 ## Saavedra, the Hertling v3 recipe on a restaurant (25 Oct 2026)
 
 Julien Salvat said yes to "a sketch of the Saavedra catering and events site". Built the same day to the Hertling v3

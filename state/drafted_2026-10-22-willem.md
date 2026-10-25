@@ -57,6 +57,12 @@ Thanks Willem, I've just sent it over to marketing@keypro.nl!
 > same URLs. The v1 line about the floor plan and the sofa loop no longer describes the sites, both scenes are gone,
 > so the fourth paragraph changed. Live verified 46 of 46 and 16 of 16 files, functional suite 52 of 52 on the live URLs.
 
+> EDITED 25 Oct, v3. Both sites rebuilt with the art layer Raka asked for ("it needs to have a wow effect"), same URLs,
+> v2 flow kept. The request no longer sits "right under the first photo", it's on the first screen under the headline,
+> and the headline window opening into a lit room is the thing a reader should look for, so paragraph four changed.
+> Live verified 72 of 72 and 40 of 40 files, functional suite 69 of 69 locally on the same bytes, live render at 1440
+> and 390 with 0 errors and every image decoded. Still NOT SENT.
+
 EMAIL to marketing@keypro.nl, subject "Hooft & Petiet and ReShare, two working sites at Willem's request"
 EMAIL
 ```
@@ -70,7 +76,7 @@ Try them yourself.
 https://astra-hooftenpetiet-prototype.netlify.app
 https://astra-reshare-prototype.netlify.app
 
-Hooft & Petiet is built around the project leader planning a renovation, with an availability request right under the first photo, and ReShare sends each visitor to KeyPro or Hooft & Petiet. The quote form doesn't send anything, so click away.
+Hooft & Petiet is built around the project leader planning a renovation. The availability request is on the first screen, and as you scroll, the window in the headline opens into a room and the lights come on. ReShare sends each visitor to KeyPro or Hooft & Petiet. The quote form doesn't send anything, so click away.
 
 I run Astra agency. We make websites for brands like Unilever, AXA, Pertamina.
 

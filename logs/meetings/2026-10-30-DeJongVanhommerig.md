@@ -2,8 +2,12 @@
 
 **When.** Friday 30 October 2026, 10:00 to 10:30 Europe/Amsterdam.
 **Where.** Google Meet, https://meet.google.com/ktx-mexq-oqy
-**Calendar event.** "Raka X Lisanne (De Jong - Vanhommerig advocatuur)", id mthm17usf4g5jhhhba1gk50i48. No guest yet. We
-asked for her email on LinkedIn on 25 Oct, add her to the event when she sends it.
+**Calendar event.** "Raka X Lisanne (De Jong - Vanhommerig advocatuur)", id mthm17usf4g5jhhhba1gk50i48. Guest
+lisanne@dejongvanhommerig.com, added 25 Oct 12:05 UTC on Raka's "put her in the meeting invite", invite emailed by Google
+Calendar, not yet accepted. She sent the address on LinkedIn 25 Oct 11:06 UTC (act_3epxnC3zLubeKhihA) and her own site
+lists the same one. The event description was rewritten for her eyes first, the internal notes are out of it and this
+brief is where they live now. What she sees, "Half an hour on the AI workflow we built for your practice, further
+possibilities and pricing." plus the app and plan links.
 
 ## Who she is
 
@@ -34,6 +38,8 @@ Delivered 22 Oct 16:12 UTC, two things, the Hertling v3 pattern.
 - Raka, 25 Oct 08:41 UTC, asked for Tuesday or Friday morning. She answered 9:43 AM Amsterdam, "Friday would work, but I
   only start my days at the office at 10". Raka, 25 Oct 08:48 UTC, "Friday at 10 works great, Lisanne! What's the best
   email to send the invite to?"
+- 25 Oct 11:06 UTC, "Lisanne@dejongvanhommerig.com". Invite sent 12:05 UTC.
+- Raka, 25 Oct 12:08 UTC, "Thanks Lisanne, I've just sent the invite to your email. See you Friday at 10!"
 
 ## For the call
 

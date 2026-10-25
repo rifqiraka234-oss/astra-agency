@@ -1,4 +1,5 @@
-# Reply, 2026-10-25. NOT SENT, waiting on Raka's word
+<!-- GATE ARCHIVED. DO NOT SEND. Superseded 25 Oct ~11.30 UTC, the other session built the Saavedra site and plan the same day and drafted the delivery in state/drafted_2026-10-25-julien-delivery.md, which asks for the call. One message to Julien, not two. -->
+# Reply, 2026-10-25. WITHDRAWN, never sent
 
 ## Julien Salvat, Saavedra (saavedraparis.fr), ctc_yw97PDpTGevphfmh6
 
@@ -11,7 +12,6 @@ rather than a full day's build. The reply asks one question that tests the trap 
 lunches and events, or is it new to them), which also tells us if the catering idea is real for them. It makes no
 claim about the site, so nothing to reopen.
 
-REPLY
-```
+WITHDRAWN, kept as a record, unfenced so nothing gates or sends it
+
 Thanks Julien, no worries at all! I'll put the sketch together and send it over this week. So I get it right, do offices already ask you for team lunches or events, or would that be new for Saavedra?
-```
