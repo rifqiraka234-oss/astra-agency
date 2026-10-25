@@ -660,6 +660,33 @@ The four that cost us leads.
 
 ## 5. Building
 
+**THE VISITOR AND THE ACTION COME FIRST. A WEBSITE GUIDES, IT DOESN'T LIST (Raka, 2026-10-25).** His words
+on the Hooft & Petiet build, "we need to keep in mind the person who's most likely to be targeted by the website and
+what are they thinking of and what their goals are and how the whole experience of the whole of the website actually
+guides them to what we want them to have an action to … a website is not just about putting out a bunch of
+information and that's it, but it's all about guiding the intended audience into its specific desired action."
+Before a single section is designed, write four lines into the build's research folder and build from them.
+1. **Who lands here.** The one most likely visitor, by role, not "clients". (H&P, the project leader at a housing
+   association or renovation contractor who has to move residents out for weeks.)
+2. **What they're thinking when they land.** Their worries and questions, in the order they'd ask them.
+3. **Their goal.** What a good outcome is for them, in their words.
+4. **The one action we want.** One primary action per page, and the secondary path for the second audience.
+Then every section answers the visitor's next question in that order and moves them one step toward the action.
+A section that doesn't move them is cut, however good it looks. Fewer sections, each one doing a job.
+
+**NO CLAUDE LOOK. EXPENSIVE, CHIC, SIMPLE (Raka, 2026-10-25).** His words, "it's a typical Claude and ChatGPT
+website where all the stylings and the positionings are the same and like the buttons are the same, the position of
+the words are all the same … it just feels like it's a 500 euro website … simplicity is also key … the sizing of the
+buttons, the shapes, the words, it's really all important … Exclusive, premium." The tells that made H&P v1 read as
+an AI site, all banned as defaults. A serif headline with an italic second half. A small uppercase kicker with a dash
+in front. Pill buttons with a sliding arrow. Cream and indigo chapters taking turns. Gradients, glows, gradient
+overlays on photos. Big count up numbers with a source line under each. Three pillars of bullets, four facts with
+top rules. Rounded cards with soft shadows. A logo marquee. Cute SVG illustration scenes. Chips and tags. A floating
+pill. Eleven sections on a home page. Every build instead starts from premium sites researched online that day
+(real ones, rendered and looked at, not only the fingerprint pipeline), and the test before Raka sees it is
+"would this pass for a 25,000 euro site from a top studio, or a 500 euro template". Photography carries the colour,
+the brand colour is a whisper, buttons and type are sized and placed on purpose, and less is on the page.
+
 **EVERY PROTOTYPE STARTS AT THE QUALIGRAF BAR (Raka, 2026-09-29).** His words on Ciara's first
 build, "it looks like something she can do herself…come on what did i tell you before to start and
 keep doing when we created the prototype for qualigraf?" A clean reskin of the lead's own copy is
