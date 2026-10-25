@@ -1,0 +1,649 @@
+{
+ "meta": {
+  "title": "Hooft & Petiet and ReShare, the plan",
+  "desc": "The plan around the two new sites for Hooft & Petiet and ReShare Living Group, every figure sourced, prepared by Astra in October 2026.",
+  "today": "25 Oct 2026"
+ },
+ "cover": {
+  "h": "Hooft & Petiet and ReShare, the plan.",
+  "lede": "Willem asked us to send this to your team. Two sites are built, one for each brand, and this is the plan around them. It's written for two things, more renovation projects for Hooft & Petiet, and a home for the circular story ReShare was set up to tell.",
+  "found": [
+   {
+    "t": "Corporations tackle nearly 90,000 homes a year, and the agreements run to 2034.",
+    "src": "Aedes, 27 Mar 2025"
+   },
+   {
+    "t": "A household that has to move out for a renovation is owed at least €7,926, unless it’s offered a furnished home.",
+    "src": "Rijksoverheid, and the Hoge Raad on 1 Apr 2022"
+   },
+   {
+    "t": "12 of the 26 articles on hooftenpetiet.nl show Google the same title.",
+    "src": "Their sitemap, read 25 Oct 2026"
+   }
+  ]
+ },
+ "today": {
+  "h": "Both sites undersell what the group does.",
+  "lede": "Hooft & Petiet shows 25 client logos and has furnished homes since 2010. Its homepage opens on six lime buttons and 339 words, with no score, no price and no client’s words. ReShare Living Group, the name that brings the two companies together, still opens with “Deze site is in ontwikkeling”.",
+  "shot_date": "25 October 2026",
+  "facts": [
+   {
+    "k": "Built on",
+    "v": "WordPress with Elementor"
+   },
+   {
+    "k": "In the sitemap",
+    "v": "26 articles and 29 pages"
+   },
+   {
+    "k": "Server errors",
+    "v": "Both category pages return a 500"
+   },
+   {
+    "k": "Google titles",
+    "v": "12 of the 26 articles carry the same title"
+   },
+   {
+    "k": "Already loaded",
+    "v": "HubSpot"
+   },
+   {
+    "k": "Residents' score",
+    "v": "8 to 8.5, in a news post from 30 January 2020"
+   }
+  ],
+  "src": "hooftenpetiet.nl and reshareliving.com rendered and read in Chrome on 25 Oct 2026. The sitemap and every article fetched the same day."
+ },
+ "market": {
+  "h": "The work runs to 2034 at least.",
+  "lede": "Corporations tackle nearly 90,000 homes a year. They agreed to improve every home with an E, F or G label by the end of 2028, and the average heat demand of their homes has to fall from 108 kWh per m² to under 94 by 2030 and under 87 by the end of 2034. In every project somebody decides whether residents stay home, rest somewhere quiet in the day, or move out for weeks. That’s the decision the Hooft & Petiet site has to win.",
+  "heat": [
+   {
+    "y": 2024,
+    "v": 108,
+    "t": "average in 2024"
+   },
+   {
+    "y": 2030,
+    "v": 94,
+    "t": "the 2030 ceiling"
+   },
+   {
+    "y": 2034,
+    "v": 87,
+    "t": "the ceiling at the end of 2034"
+   }
+  ],
+  "heat_title": "Average heat demand of corporation homes, kWh per m² a year",
+  "heat_src": "Aedes, “Herijking NPA, van toekomstklaar isoleren naar warmtevraagreductie”, 27 Mar 2025.",
+  "side": [
+   {
+    "t": "255 corporations are members of Aedes, and 4 million people rent their home from one.",
+    "src": "aedes.nl/over-aedes, read 25 Oct 2026"
+   },
+   {
+    "t": "They put €200 million a year extra into improving homes, every year through 2030.",
+    "src": "Aedes on the national agreements, 30 Jun 2022"
+   }
+  ]
+ },
+ "dates": {
+  "h": "Six dates that shape the next projects.",
+  "items": [
+   {
+    "d": "1 Apr 2022",
+    "h": "The Hoge Raad on furnished swap homes",
+    "p": "A tenant offered a fully furnished and fitted swap home is in principle not owed the minimum moving allowance.",
+    "s": "past"
+   },
+   {
+    "d": "28 Feb 2026",
+    "h": "The allowance rises to €7,926",
+    "p": "Indexed every year before 1 March.",
+    "s": "past"
+   },
+   {
+    "d": "End of 2028",
+    "h": "E, F and G labels gone",
+    "p": "All of them, across every corporation.",
+    "s": "next"
+   },
+   {
+    "d": "2030",
+    "h": "Heat demand under 94, and half the raw materials",
+    "p": "The national aim is half the primary raw materials by 2030, and PBL calls that very unlikely on current trends. KeyPro words the purchasing aim as 50% circular by 2030.",
+    "s": "next"
+   },
+   {
+    "d": "End of 2034",
+    "h": "Heat demand under 87",
+    "p": "The next ceiling in the national agreements.",
+    "s": "next"
+   },
+   {
+    "d": "2050",
+    "h": "A fully circular economy",
+    "p": "The Dutch goal ReShare is built for.",
+    "s": "next"
+   }
+  ],
+  "src": "Dirkzwager on ECLI:NL:HR:2022:493, 7 Apr 2022. Rijksoverheid on the moving allowance, read 25 Oct 2026. Aedes, 30 Jun 2022 and 27 Mar 2025. PBL, “Toelichting haalbaarheid halveringsdoelstelling 2030”, 20 Feb 2025. KeyPro, 16 Oct 2025."
+ },
+ "allowance": {
+  "h": "A furnished home is also a legal answer.",
+  "lede": "Tenants who have to leave for a renovation are owed a minimum moving allowance, €7,926 for moves since 28 February 2026. On 1 April 2022 the Hoge Raad ruled that a tenant offered a fully furnished and fitted swap home is in principle not entitled to that minimum, also when they turn a reasonable offer down. Location and quality, the length of the stay, whether belongings have to move and the tenant’s circumstances decide whether the offer is reasonable, and costs like transport and storage remain. That belongs on the Hooft & Petiet site, in plain words, checked by a lawyer, right next to the request.",
+  "amount": 7926,
+  "default": 45,
+  "calc_label": "Households in your project",
+  "calc_note": "The statutory minimum per household times the number you enter. Whether it's owed depends on the offer, as the ruling says. It isn't a saving we promise.",
+  "src": "Rijksoverheid, “Wanneer heb ik recht op verhuiskostenvergoeding?”, read 25 Oct 2026. Dirkzwager, Robert Rijpstra and Lotte Blum, on ECLI:NL:HR:2022:493, 7 Apr 2022."
+ },
+ "rivals": {
+  "h": "Two rivals already show proof on the first screen.",
+  "lede": "We read the homepages of the firms a project leader finds next to you. Moving-In shows Portaal and Havensteder, two names from your own logo row, and a 9.4 out of 10 from Feedback Company in its header. Furniture Lease shows named reviews and a package from €149.50. You have an independent 8 to 8.5 from residents, and it sits in a news post from 2020.",
+  "cols": [
+   "Reviews or a score",
+   "A price",
+   "Clients' own words",
+   "Named corporation clients"
+  ],
+  "rows": [
+   {
+    "name": "Moving-In",
+    "v": [
+     1,
+     0,
+     1,
+     1
+    ],
+    "note": "9.4 out of 10, Feedback Company"
+   },
+   {
+    "name": "Furniture Lease",
+    "v": [
+     1,
+     1,
+     1,
+     0
+    ],
+    "note": "Named reviews, a package from €149.50"
+   },
+   {
+    "name": "Ross Tucker",
+    "v": [
+     0,
+     0,
+     1,
+     0
+    ],
+    "note": "One client quote"
+   },
+   {
+    "name": "Full House Meubelverhuur",
+    "v": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "note": "Prices one click away"
+   },
+   {
+    "name": "Hooft & Petiet today",
+    "v": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "note": "25 client logos",
+    "us": true
+   },
+   {
+    "name": "Hooft & Petiet, new site",
+    "v": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "note": "The residents’ score, a sales styling price, two clients and a resident in their own words, the logos",
+    "us": true
+   }
+  ],
+  "src": "Each homepage rendered in Chrome and read on 25 Oct 2026, text and image descriptions. Rentaro blocked our browser, so it isn’t scored. KeyPro is left out, it’s your sister company. A price counts when it’s on the homepage itself."
+ },
+ "position": {
+  "h": "“Alleen de koffer moet nog door de bewoners worden uitgepakt.”",
+  "lede": "Only the suitcase is left for the residents to unpack. It’s Brenda de Wilde’s line, and the new site is built to prove it. Rows that show what you take off a corporation’s hands, projects told by the people involved, the residents’ score next to the request, and the group behind it on the ReShare site.",
+  "src": "Brenda de Wilde, project manager at Hooft & Petiet, on the Cazas Wonen article, read 25 Oct 2026."
+ },
+ "journey": {
+  "h": "Find, check, ask, plan, stay, and again.",
+  "steps": [
+   {
+    "h": "Find",
+    "p": "A project leader searches, hears your name, or opens a tender.",
+    "parts": [
+     {
+      "s": "Built",
+      "t": "A clear page title for every home type"
+     },
+     {
+      "s": "Next",
+      "t": "All 55 pages carried over or redirected"
+     },
+     {
+      "s": "Next",
+      "t": "The moving allowance explained"
+     }
+    ]
+   },
+   {
+    "h": "Check",
+    "p": "They open the site and look for proof.",
+    "parts": [
+     {
+      "s": "Built",
+      "t": "Four projects as stories"
+     },
+     {
+      "s": "Built",
+      "t": "The residents' words and score"
+     },
+     {
+      "s": "Next",
+      "t": "A new residents' score"
+     }
+    ]
+   },
+   {
+    "h": "Ask",
+    "p": "They want dates for their homes.",
+    "parts": [
+     {
+      "s": "Built",
+      "t": "The availability bar, top and bottom"
+     },
+     {
+      "s": "Built",
+      "t": "A three step quote form"
+     },
+     {
+      "s": "Next",
+      "t": "Requests into HubSpot as deals"
+     }
+    ]
+   },
+   {
+    "h": "Plan",
+    "p": "They need to get it through procurement.",
+    "parts": [
+     {
+      "s": "Built",
+      "t": "The sales styling price calculator"
+     },
+     {
+      "s": "Next",
+      "t": "A tender pack to download"
+     }
+    ]
+   },
+   {
+    "h": "Stay",
+    "p": "The residents live with what you delivered.",
+    "parts": [
+     {
+      "s": "Next",
+      "t": "A short survey at check out"
+     },
+     {
+      "s": "Next",
+      "t": "The score back on the site"
+     }
+    ]
+   },
+   {
+    "h": "Again",
+    "p": "The furniture goes on to its next life.",
+    "parts": [
+     {
+      "s": "Built",
+      "t": "The finished ReShare site with both doors"
+     }
+    ]
+   }
+  ]
+ },
+ "built": {
+  "h": "Already built, and live.",
+  "lede": "Both sites run in Dutch and English, on phones and desktops. Open them and scroll, the photos below don't move and the sites do.",
+  "shots": [
+   {
+    "img": "s-hp-hero",
+    "h": "Their photos inside the headline",
+    "p": "The availability bar on the first screen."
+   },
+   {
+    "img": "s-hp-open",
+    "h": "The window opens",
+    "p": "Scrolling grows the arch into the room."
+   },
+   {
+    "img": "s-hp-room",
+    "h": "The lights come on",
+    "p": "Ready to live in, the moment the key is handed over."
+   },
+   {
+    "img": "s-hp-hand",
+    "h": "A photo for every task",
+    "p": "Each from the page where you describe that service."
+   },
+   {
+    "img": "s-hp-case",
+    "h": "Projects as stories",
+    "p": "Portaal, HEF Wonen, Stadgenoot and Cazas Wonen."
+   },
+   {
+    "img": "s-hp-close",
+    "h": "Dusk, and the bar again",
+    "p": "The same request, at the end of the page."
+   },
+   {
+    "img": "s-hp-vs",
+    "h": "Sales styling with the price",
+    "p": "Your own prices, with weeks added."
+   },
+   {
+    "img": "s-rs-hero",
+    "h": "Furniture with more than one life",
+    "p": "Points that keep forming a new piece."
+   },
+   {
+    "img": "s-rs-doors",
+    "h": "Two doors",
+    "p": "KeyPro and Hooft & Petiet, each on its own light."
+   }
+  ],
+  "phones": [
+   {
+    "img": "s-hp-phone",
+    "alt": "The Hooft & Petiet site on a phone"
+   },
+   {
+    "img": "s-rs-phone",
+    "alt": "The ReShare site on a phone"
+   }
+  ],
+  "links": [
+   {
+    "t": "Open Hooft & Petiet",
+    "u": "https://astra-hooftenpetiet-prototype.netlify.app"
+   },
+   {
+    "t": "Open ReShare",
+    "u": "https://astra-reshare-prototype.netlify.app"
+   }
+  ]
+ },
+ "google": {
+  "h": "Keep every page Google already knows.",
+  "lede": "The sitemap lists 26 articles and 29 pages. A new site that drops them loses whatever they bring in today, so every one moves across or gets a redirect. Eleven articles, the Cazas, Stadgenoot, HEF Wonen and Portaal stories among them, carry the title of the 2020 article about residents, so in a search twelve pages look like one. Both category pages return a server error.",
+  "articles": 26,
+  "same": 12,
+  "pages": 29,
+  "new": [
+   "A page per home type, logeer, rust, wissel and calamiteiten",
+   "A page per corporation project",
+   "The moving allowance, explained and checked by a lawyer",
+   "The tender pack, energy label A, solar panels, FSC and the 5% SROI standard"
+  ],
+  "src": "hooftenpetiet.nl sitemap_index.xml and the title of each article, fetched 25 Oct 2026.",
+  "dot_title": "The 26 articles in the sitemap, by their title in Google",
+  "posts": [
+   {
+    "slug": "studentenwoningen-laakhaven-west",
+    "title": "MS Vastgoed & Belegging realiseert ruim 100 studentenwoningen",
+    "k": "ok"
+   },
+   {
+    "slug": "rustwoning-tijdens-renovatie",
+    "title": "Wisselwoning tijdens Renovatieproject Deltawonen",
+    "k": "ok"
+   },
+   {
+    "slug": "modelwoning-wisseloord-hilversum",
+    "title": "Te koop: Appartementen Wisseloord Hilversum - Modelwoning aanwezig",
+    "k": "ok"
+   },
+   {
+    "slug": "woningcorporaties-rustwoning-renovatie",
+    "title": "Woningcorporaties bieden vaker rustwoning tijdens renovatie aan",
+    "k": "ok"
+   },
+   {
+    "slug": "senioren-studenten-wonen-in-de-molenhof",
+    "title": "Senioren en Studenten wonen samen in De nieuwe Molenhof",
+    "k": "ok"
+   },
+   {
+    "slug": "wk-yngling-zeilen-riva-del-garda",
+    "title": "Wereldkampioenschappen Yngling zeilen – Riva del Garda - Hooft & Petiet",
+    "k": "ok"
+   },
+   {
+    "slug": "blauw-groene-daken-met-eu-subsidie-op-amsterdamse-corporatiewoningen",
+    "title": "Bijna 5 miljoen EU subsidie voor blauw-groene daken in Amsterdam",
+    "k": "ok"
+   },
+   {
+    "slug": "terugkijken-op-een-fantastisch-jaar",
+    "title": "Terugkijken op een fantastisch jaar! - Hooft & Petiet",
+    "k": "ok"
+   },
+   {
+    "slug": "onze-logeerwoningen-stemmen-de-tijdelijke-bewoners-vrolijk",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "own"
+   },
+   {
+    "slug": "inrichten-logeerwoningen-met-hoog-laag-bedden",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "cazas-wonen-samen-zorgen-voor-woongeluk-ook-tijdens-renovaties",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "werken-als-senior-project-manager-bij-hooft-petiet",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "samenwerking-met-stadgenoot",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "hooft-petiet-is-partner-van-homeplan",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "logeerwoning-versus-wisselwoning-wat-is-het-verschil",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "theirry-farla-van-hef-wonen-over-de-samenwerking-met-hooft-petiet",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "verkoopstyling-bij-hooft-petiet-snel-een-woning-met-de-juiste-uitstraling",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "een-onmisbare-schakel-tijdens-renovatieprojecten",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "15-jaar-hooft-en-petiet-van-gedeelde-passie-naar-een-succesvol-bedrijf",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "een-kijkje-achter-de-schermen-samen-met-lars",
+    "title": "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk - Hooft & Petiet",
+    "k": "copy"
+   },
+   {
+    "slug": "stage-marketing-keypro-hooft-petiet-utrecht-amsterdam",
+    "title": "Stage marketing - KeyPro & Hooft & Petiet - Hooft & Petiet",
+    "k": "ok"
+   },
+   {
+    "slug": "stage-logistiek-medewerker-bol-niveau-2",
+    "title": "Stage - logistiek medewerker (BOL niveau 2) - Hooft & Petiet",
+    "k": "ok"
+   },
+   {
+    "slug": "vacature-verhuizer-woninginrichter",
+    "title": "Verhuizer - woninginrichter - Hooft & Petiet",
+    "k": "ok"
+   },
+   {
+    "slug": "vacature-servicemedewerker-verhuizingen",
+    "title": "Servicemedewerker verhuizingen - Hooft & Petiet",
+    "k": "ok"
+   },
+   {
+    "slug": "vacature-projectmanager",
+    "title": "Projectmanager woningen - Hooft & Petiet",
+    "k": "ok"
+   },
+   {
+    "slug": "vacature-supply-chain-lead",
+    "title": "Supply Chain Lead (Groningen of Amsterdam) - Hooft & Petiet",
+    "k": "ok"
+   }
+  ]
+ },
+ "hubspot": {
+  "h": "Every request lands in HubSpot.",
+  "lede": "Your current site already loads HubSpot. When the new site goes live, the availability bar and the quote form send their answers there as a deal, the kind of home, how many, the start month and how long, so whoever picks it up can answer with dates. Each request carries the page it came from, which is how you’ll see which pages win projects.",
+  "deal": [
+   [
+    "Kind of home",
+    "Logeerwoning"
+   ],
+   [
+    "Homes",
+    "24"
+   ],
+   [
+    "From",
+    "March 2027"
+   ],
+   [
+    "How long",
+    "One to three months"
+   ],
+   [
+    "Came from",
+    "/logeerwoning/"
+   ]
+  ],
+  "deal_note": "An example of what a request would carry, not a real one."
+ },
+ "roadmap": [
+  {
+   "when": "Weeks 1 to 3",
+   "h": "Hooft & Petiet goes live",
+   "items": [
+    "The new site on hooftenpetiet.nl",
+    "Every page carried over or redirected",
+    "The twelve titles fixed",
+    "Requests into HubSpot"
+   ]
+  },
+  {
+   "when": "Weeks 3 to 5",
+   "h": "ReShare is finished",
+   "items": [
+    "The group site on reshareliving.com",
+    "Both doors, KeyPro and Hooft & Petiet",
+    "A privacy page on both sites"
+   ]
+  },
+  {
+   "when": "Weeks 5 to 8",
+   "h": "Proof",
+   "items": [
+    "A new residents' score started",
+    "The tender pack page",
+    "The moving allowance page, checked by a lawyer"
+   ]
+  },
+  {
+   "when": "Weeks 9 to 12",
+   "h": "Pages that find projects",
+   "items": [
+    "A page per home type and per project",
+    "A monthly report on what each page brings in"
+   ]
+  }
+ ],
+ "kpis": [
+  {
+   "h": "Availability requests and quote forms",
+   "where": "HubSpot"
+  },
+  {
+   "h": "Requests per page",
+   "where": "HubSpot, by source page"
+  },
+  {
+   "h": "Calls from the site",
+   "where": "Call tracking on the phone number"
+  },
+  {
+   "h": "Clicks from Google per page",
+   "where": "Search Console"
+  },
+  {
+   "h": "The residents' score",
+   "where": "The check out survey"
+  }
+ ],
+ "team": {
+  "lede": "Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.",
+  "brands": "The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.",
+  "disclosure": "Built by Amwisesa, Astra's development partner, often through the brand's own agency.",
+  "people": [
+   {
+    "name": "Raka Mulya",
+    "role": "Go to market architect and entrepreneur. Your contact at Astra.",
+    "bio": "Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.",
+    "li": "https://www.linkedin.com/in/raka-mulya-b92885196/"
+   },
+   {
+    "name": "Joshua van Zeelt",
+    "role": "Founder of Astra Agency and JML Agency",
+    "bio": "Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.",
+    "li": "https://www.linkedin.com/in/joshua-van-zeelt/"
+   }
+  ]
+ },
+ "end": {
+  "h": "Next, a call.",
+  "lede": "We'll walk you through both sites and the plan, hear what you'd change, and then send you a clear scope, price and timeline.",
+  "cta": "Email Raka",
+  "mail": "mailto:rifqiraka234@gmail.com?subject=Hooft%20%26%20Petiet%20and%20ReShare%20plan",
+  "foot": "Prepared by Astra for Hooft & Petiet and ReShare Living Group, October 2026. Screenshots of hooftenpetiet.nl and reshareliving.com taken 25 Oct 2026. Each figure names its source underneath."
+ }
+}

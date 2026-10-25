@@ -63,14 +63,20 @@ Thanks Willem, I've just sent it over to marketing@keypro.nl!
 > Live verified 72 of 72 and 40 of 40 files, functional suite 69 of 69 locally on the same bytes, live render at 1440
 > and 390 with 0 errors and every image decoded. Still NOT SENT.
 
-EMAIL to marketing@keypro.nl, subject "Hooft & Petiet and ReShare, two working sites at Willem's request"
-EMAIL
+> EDITED 25 Oct ~15.00 UTC on Raka's "Do itt" (the plan site, H&P performance, projects as case stories). Now
+> carries the plan, https://astra-hooftenpetiet-plan.netlify.app (deploy 6ade134e75c372f94d80d9b0), in the shape of the
+> Saavedra delivery Raka approved today. "We spent the day building" is gone, his note on Saavedra was "dont say we
+> soent the whole day bulding it". The brands line now names Amwisesa, since RULES section 5 says the partner disclosure
+> travels with every partner project. Live verified, 180 of 180 H&P files, 86 of 86 ReShare, 43 of 43 plan, plan
+> functional 14 of 14 on the live URL. Every plan source reopened 25 Oct ~14.45 UTC (Aedes three pages, Rijksoverheid,
+> Dirkzwager, PBL, KeyPro, Moving-In, Furniture Lease). Still NOT SENT.
+
+EMAIL to marketing@keypro.nl, subject "Hooft & Petiet and ReShare, two working sites and the plan, at Willem's request"
+DELIVERY
 ```
 Hi there,
 
-Willem Straat asked me to send this your way.
-
-We spent the day building what I'd offered him, a modernised Hooft & Petiet site and a finished ReShare Living Group site, built as one family. Both work, in Dutch and English.
+Willem Straat asked me to send this your way. Here's what I'd offered him, a modernised Hooft & Petiet site and a finished ReShare Living Group site, built as one family, in Dutch and English.
 
 Try them yourself.
 https://astra-hooftenpetiet-prototype.netlify.app
@@ -78,7 +84,10 @@ https://astra-reshare-prototype.netlify.app
 
 Hooft & Petiet is built around the project leader planning a renovation. The availability request is on the first screen, and as you scroll, the window in the headline opens into a room and the lights come on. ReShare sends each visitor to KeyPro or Hooft & Petiet. The quote form doesn't send anything, so click away.
 
-I run Astra agency. We make websites for brands like Unilever, AXA, Pertamina.
+I've also written the plan behind them, from the renovation deadlines to the first twelve weeks.
+https://astra-hooftenpetiet-plan.netlify.app
+
+I run Astra agency. With Amwisesa, our development partner, our team has built for Unilever, AXA and Pertamina.
 
 What do you think?
 
@@ -86,20 +95,4 @@ Best,
 Raka
 ```
 
-SUPERSEDED, the sketch offer version that sat in the Gmail draft until 25 Oct ~10.40 UTC. Kept for the record, do not send.
-```
-Hi there,
-
-Willem Straat asked me to send this to you.
-
-I got in touch with him because the Hooft & Petiet homepage opens with six lime green buttons over a photo, and the ReShare Living Group site still says it's in development. So a developer checking the group likely sees a business that looks older and less finished than it is.
-
-I'd suggest a modernised Hooft & Petiet site and a finished ReShare site, built as one family, with your projects, rentals and quote request up front.
-
-I run Astra agency. We make websites for brands like Unilever, AXA, Pertamina.
-
-Shall I send you a sketch of what the two sites could look like?
-
-Best,
-Raka
-```
+The two superseded versions (v3 without the plan, and the sketch offer) are in state/drafted_2026-10-22-willem-superseded.md.

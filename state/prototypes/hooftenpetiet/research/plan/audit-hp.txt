@@ -1,0 +1,27 @@
+
+== https://hooftenpetiet.nl/  (200)
+title        Projectinrichting en meubelverhuur - Hooft & Petiet
+stack        WordPress 7.0.2 | WP 7.0.2 | elementor
+era tells    none greppable, judge from the screenshots
+flow         forms 0 inputs 0 mailto 1 tel 2 | img 50 svg 0 video 0
+gdpr banner  NONE FOUND [absence, confirmed against a working control] | reject NOT FOUND
+gdpr pre     14 cookies, 6 third party, before any click
+trackers pre www.googletagmanager.com, ajax.googleapis.com, www.google-analytics.com, track-eu1.hubspot.com, googleads.g.doubleclick.net, stats.g.doubleclick.net, ad.doubleclick.net
+egress       US, NOT an EU or UK visitor
+!!  GEO VOID. Consent code on the page (cookieconsent).
+!!  It can show an EU visitor a banner and block trackers that a US visitor never sees.
+!!  The banner, reject, pre consent cookie and tracker lines are VOID for EU visitors.
+!!  Never write a GDPR claim off this run. NEXT STEP, the EU view from Stockholm,
+!!    python3 tools/eu-view.py https://hooftenpetiet.nl/
+googlefonts  not remote
+privacy      NO LINK FOUND [absence, confirmed against a working control]
+social       linkedin -> https://nl.linkedin.com/company/hooftenpetiet
+             instagram -> https://www.instagram.com/hooftenpetiet/
+             facebook -> https://www.facebook.com/hooftenpetiet
+             youtube -> https://www.youtube.com/channel/UCFv_z_DJw7pYC0-KIsC9Sag
+errors       0 page errors, 6 failed requests
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/hp-plan-2510.json plus two screenshots. LOOK AT THEM.
+

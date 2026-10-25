@@ -4,6 +4,7 @@
    ../site-rs   ReShare Living Group    NL at /, EN at /en/
 Every fact is traced in ../research/research.md, the plan is ../research/v3/brief.md."""
 import os, json, shutil, re, html as H
+from PIL import Image
 from urllib.parse import quote
 
 B = os.path.dirname(os.path.abspath(__file__))
@@ -17,14 +18,30 @@ def esc(s): return H.escape(s, quote=True)
 def root(): return '/' if LANG == 'nl' else '/en/'
 def other(site): return URL[site] + ('/' if LANG == 'nl' else '/en/')
 
+def webp(f):
+    src = os.path.join(B, f); dst = os.path.splitext(src)[0] + '.webp'
+    if not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(src):
+        Image.open(src).convert('RGB').save(dst, 'WEBP', quality=78, method=6)
+    return os.path.splitext(f)[0] + '.webp'
+
+def small480(files):
+    f, (w, h) = files[0]
+    if w <= 640: return files
+    out = re.sub(r'-\d+\.jpg$', '-480.jpg', f)
+    dst = os.path.join(B, out)
+    if not os.path.exists(dst):
+        im = Image.open(os.path.join(B, f)).convert('RGB'); im = im.resize((480, round(h * 480 / w)), Image.LANCZOS); im.save(dst, quality=82, optimize=True, progressive=True)
+    return [(out, [480, round(h * 480 / w)])] + files
+
 def pic(key, alt, sizes='100vw', eager=False):
     m = MAN[key]
-    files = sorted(zip(m['files'], m['sizes']), key=lambda x: x[1][0])
+    files = small480(sorted(zip(m['files'], m['sizes']), key=lambda x: x[1][0]))
     srcset = ', '.join('/%s %dw' % (f, s[0]) for f, s in files)
+    wset = ', '.join('/%s %dw' % (webp(f), s[0]) for f, s in files)
     w, h = files[-1][1]
     small = files[0][0]
     load = 'eager" fetchpriority="high' if eager else 'lazy'
-    return '<img src="/%s" srcset="%s" sizes="%s" width="%d" height="%d" alt="%s" loading="%s" decoding="async">' % (small, srcset, sizes, w, h, esc(alt), load)
+    return '<picture><source type="image/webp" srcset="%s" sizes="%s"><img src="/%s" srcset="%s" sizes="%s" width="%d" height="%d" alt="%s" loading="%s" decoding="async"></picture>' % (wset, sizes, small, srcset, sizes, w, h, esc(alt), load)
 
 FAV = {
  'hp': "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232F2B45'/%3E%3Cpath d='M32 12L52 27H12z' fill='%23C8D020'/%3E%3Crect x='19' y='30' width='26' height='22' fill='%23C8D020'/%3E%3C/svg%3E",
@@ -45,8 +62,7 @@ def head(site, title, desc, path):
 <link rel="icon" href="{FAV[site]}">
 <link rel="alternate" hreflang="{alt}" href="{URL[site]}{path[alt]}">
 <link rel="preload" href="/fonts/{'newsreader-latin-opsz-normal' if site == 'hp' else 'albert-sans-latin-wght-normal'}.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css">
-<link rel="stylesheet" href="/css/fx.css">
+<link rel="stylesheet" href="/css/all.css">
 <script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm')</script>
 </head>
 <body class="{site}">
@@ -59,8 +75,8 @@ def langsw(path):
     return '<span class="lang">' + ''.join('<a href="%s" lang="%s" hreflang="%s"%s>%s</a>' % (path[l], l, l, ' aria-current="true"' if l == LANG else '', l.upper()) for l in ('nl', 'en')) + '</span>'
 
 def header(site, path, left, right_extra, cta, mfoot):
-    logo = ('<img class="lg-l" src="/media/logo-hp.png" width="700" height="208" alt="Hooft &amp; Petiet"><img class="lg-d" src="/media/logo-hp-white.png" width="700" height="187" alt="Hooft &amp; Petiet">' if site == 'hp'
-            else '<img class="lg-l" src="/media/logo-reshare-ink.png" width="900" height="264" alt="ReShare Living Group"><img class="lg-d" src="/media/logo-reshare-white.png" width="900" height="264" alt="ReShare Living Group">')
+    logo = ('<img class="lg-l" src="/media/logo-hp.png" width="700" height="208" alt="Hooft &amp; Petiet"><img class="lg-d" src="/media/logo-hp-white.png" width="700" height="187" alt="Hooft &amp; Petiet" loading="lazy">' if site == 'hp'
+            else '<img class="lg-l" src="/media/logo-reshare-ink.png" width="900" height="264" alt="ReShare Living Group"><img class="lg-d" src="/media/logo-reshare-white.png" width="900" height="264" alt="ReShare Living Group" loading="lazy">')
     lnav = ''.join('<a class="d %s" href="%s">%s</a>' % (c, h, l) for h, l, c in left)
     mlinks = ''.join('<li><a href="%s">%s</a></li>' % (h, l) for h, l, c in left) + ''.join('<li><a href="%s">%s</a></li>' % (h, l) for h, l in mfoot)
     return f'''<header class="hdr"><div class="wrap hdr-in">
@@ -108,7 +124,7 @@ def hp_footer(path):
     r = root(); q = r + t('offerte/', 'quote/')
     return f'''<footer class="ftr dusk-sec" data-tone="dusk"><div class="wrap">
 <div class="ftr-g">
-<div><img class="flogo" src="/media/logo-hp-white.png" width="700" height="187" alt="Hooft &amp; Petiet"><p class="about">{t('Projectinrichting en meubelverhuur sinds 2010. Onderdeel van <a class="u" href="' + other('rs') + '">ReShare Living Group</a>.', 'Project furnishing and furniture rental since 2010. Part of <a class="u" href="' + other('rs') + '">ReShare Living Group</a>.')}</p></div>
+<div><img class="flogo" src="/media/logo-hp-white.png" width="700" height="187" alt="Hooft &amp; Petiet" loading="lazy"><p class="about">{t('Projectinrichting en meubelverhuur sinds 2010. Onderdeel van <a class="u" href="' + other('rs') + '">ReShare Living Group</a>.', 'Project furnishing and furniture rental since 2010. Part of <a class="u" href="' + other('rs') + '">ReShare Living Group</a>.')}</p></div>
 <div><h2>{t('Woningen', 'Homes')}</h2><ul>
 <li><a href="{q}?type=Logeerwoning">{t('Logeerwoningen', 'Guest homes')}</a></li><li><a href="{q}?type=Rustwoning">{t('Rustwoningen', 'Rest homes')}</a></li>
 <li><a href="{q}?type=Wisselwoning">{t('Wisselwoningen', 'Swap homes')}</a></li><li><a href="{q}?type=Calamiteitenwoning">{t('Calamiteitenwoningen', 'Emergency homes')}</a></li>
@@ -144,14 +160,17 @@ def close_hp(title, text, bar=True, cta=None):
 </div>
 </div></section>'''
 
-def win(key, shape, alt=''):
+def win(key, shape, alt='', lazy=False):
     m = MAN[key]
     small = sorted(zip(m['files'], m['sizes']), key=lambda x: x[1][0])[0][0]
-    return '<span class="hx-win %s"><img src="/%s" alt="%s" loading="eager" decoding="async"></span>' % (shape, small, esc(alt))
+    out = 'media/win-%s.webp' % key
+    if not os.path.exists(os.path.join(B, out)):
+        im = Image.open(os.path.join(B, small)).convert('RGB'); im.thumbnail((360, 360)); im.save(os.path.join(B, out), 'WEBP', quality=80)
+    return '<span class="hx-win %s"><img src="/%s" alt="%s" loading="%s" decoding="async"></span>' % (shape, out, esc(alt), 'lazy' if lazy else 'eager')
 
 def win_img(key):
     m = MAN[key]
-    return '<img src="/%s" alt="" loading="lazy" decoding="async">' % sorted(zip(m['files'], m['sizes']), key=lambda x: x[1][0])[-1][0]
+    return '<img data-src="/%s" alt="" decoding="async">' % sorted(zip(m['files'], m['sizes']), key=lambda x: x[1][0])[-1][0]
 
 def hp_index():
     path = {'nl': '/', 'en': '/en/'}
@@ -161,7 +180,10 @@ def hp_index():
     dopts = ''.join('<option value="%s">%s</option>' % (esc(t(nl, en)), esc(t(nl, en))) for nl, en in DUUR)
     logos = ['portaal', 'stadgenoot', 'de-alliantie', 'havensteder', 'hef-wonen', 'cazas-wonen', 'heijmans', 'bam-wonen']
     names = {'portaal': 'Portaal', 'stadgenoot': 'Stadgenoot', 'de-alliantie': 'de Alliantie', 'havensteder': 'Havensteder', 'hef-wonen': 'HEF Wonen', 'cazas-wonen': 'Cazas Wonen', 'heijmans': 'Heijmans', 'bam-wonen': 'BAM Wonen'}
-    lg = ''.join('<li><img src="/media/clients/%s.png" alt="%s" loading="lazy" height="30"></li>' % (l, names[l]) for l in logos)
+    def lw(l):
+        w, h = Image.open(os.path.join(B, 'media', 'clients', l + '.png')).size
+        return round(w * 30 / h)
+    lg = ''.join('<li><img src="/media/clients/%s.png" alt="%s" loading="lazy" width="%d" height="30"></li>' % (l, names[l], lw(l)) for l in logos)
     rows = [
         (t('Inrichting', 'Furnishing'), t('Zitmeubels en bedden, tafels en stoelen, keukeninventaris en linnengoed.', 'Seating and beds, tables and chairs, kitchenware and linen.'), 'sofa-cushion', t('Een ingerichte woonkamer met bank en salontafel', 'A furnished living room with a sofa and coffee table')),
         (t('Stoffering en afwerking', 'Floors and finishing'), t('Vloeren, schilderwerk, raambekleding en verlichting.', 'Floors, painting, window coverings and lighting.'), 'vloer', t('Een vloerlegger legt een nieuwe vloer', 'A floor fitter laying a new floor')),
@@ -181,14 +203,31 @@ def hp_index():
     peek = '<div class="peek" aria-hidden="true">' + ''.join(win_img(k) for k in ('logeer', 'rust', 'wissel')) + '</div>'
     hrows = ''.join(f'<div class="tbl-r" data-peek="{i}"><h3 class="t3">{name}</h3><p>{when}</p><p>{bring}</p><a class="go" href="{q}?type={esc(v)}" aria-label="{t("Aanvragen", "Request")}, {name}">{t("Aanvragen", "Request")}</a></div>' for i, (v, name, when, bring) in enumerate(homes))
     kin_words = [(t('Logeerwoning', 'Guest home'), 'logeer', 'arch'), (t('Rustwoning', 'Rest home'), 'rust', 'disc'), (t('Wisselwoning', 'Swap home'), 'wissel', 'house')]
-    kin = ''.join('<span class="kin-item">%s%s</span>' % (w, win(k, s)) for w, k, s in kin_words) * 2
-    projects = [
-        ('Portaal', 'Overvecht, Utrecht', t('Logeerwoningen, contracten, in en uitcheck en schoonmaak bij de renovatie van vijf flats van tien hoog.', 'Guest homes, contracts, check in and out and cleaning for the renovation of five ten storey blocks.'), t('570 woningen', '570 homes')),
-        ('HEF Wonen', 'Liskwartier, Rotterdam', t('Logeerwoningen bij de verduurzaming van 45 woningen.', 'Guest homes for the upgrade of 45 homes.'), t('12 logeerwoningen', '12 guest homes')),
-        ('Stadgenoot', t('West en Oud-West, Amsterdam', 'West and Oud-West, Amsterdam'), t('Logeer, wissel, rust en calamiteitenwoningen voor de komende jaren. Smalle trappenhuizen vragen om verhuisliften en meubels die passen.', 'Guest, swap, rest and emergency homes for the coming years. Narrow stairwells call for furniture hoists and pieces that fit.'), t('4 soorten woningen', '4 kinds of home')),
-        ('Cazas Wonen', 'IJsselstein', t('Logeerwoningen bij de schakelflats aan de Lanceerplaats en de Televisiebaan.', 'Guest homes for the flats on the Lanceerplaats and the Televisiebaan.'), t('Al een aantal jaren partner', 'A partner for several years')),
+    kin = ''.join('<span class="kin-item">%s%s</span>' % (w, win(k, s, lazy=True)) for w, k, s in kin_words) * 2
+    cases = [
+        ('case-portaal', 'arch', t('Een flat van tien hoog in de steigers', 'A ten storey block of flats in scaffolding'), 'Portaal', 'Overvecht, Utrecht', '570', t('woningen', 'homes'),
+         t('Vijf flats van tien hoog gingen in renovatie. Wij richtten de logeerwoningen in, deden de in en uitchecks, tekenden de contracten en regelden de schoonmaak.', 'Five ten storey blocks were renovated. We furnished the guest homes, ran check in and out, signed the contracts and arranged the cleaning.'),
+         t('“Dit gaf ons de ruimte om ons te focussen op de renovatie zelf.”', '“It gave us room to focus on the renovation itself.”'),
+         t('Danny Mooren, sociaal projectleider bij Portaal', 'Danny Mooren, social project lead at Portaal. Translated from Dutch.')),
+        (None, 'num', '', 'HEF Wonen', 'Liskwartier, Rotterdam', '12', t('logeerwoningen', 'guest homes'),
+         t('Logeerwoningen bij de verduurzaming van 45 woningen.', 'Guest homes for the upgrade of 45 homes.'),
+         t('“Dat er zelfs servies, schoonmaakmiddelen en gratis internet aanwezig was, dat maakte het verschil!”', '“That there was even crockery, cleaning products and free internet, that made the difference!”'),
+         t('Thierry Farla, bewonersbegeleider bij HEF Wonen tijdens het project', 'Thierry Farla, resident support officer at HEF Wonen during the project. Translated from Dutch.')),
+        ('case-stadgenoot', 'house', t('Een ingerichte woonkamer', 'A furnished living room'), 'Stadgenoot', t('West en Oud-West, Amsterdam', 'West and Oud-West, Amsterdam'), '4', t('soorten woningen', 'kinds of home'),
+         t('Logeer, wissel, rust en calamiteitenwoningen voor de komende jaren. Smalle trappenhuizen vragen om verhuisliften en meubels die passen.', 'Guest, swap, rest and emergency homes for the coming years. Narrow stairwells call for furniture hoists and pieces that fit.'),
+         '', ''),
+        ('case-cazas', 'disc', t('Een ingerichte woonkamer met eethoek', 'A furnished living room with a dining corner'), 'Cazas Wonen', 'IJsselstein', t('Al jaren', 'For years'), t('partner', 'a partner'),
+         t('Logeerwoningen bij de schakelflats aan de Lanceerplaats en de Televisiebaan.', 'Guest homes for the flats on the Lanceerplaats and the Televisiebaan.'),
+         t('“Elke nieuwe logeerpartij begint met een schoon en fris huis en een gezellig presentje bij ontvangst.”', '“Every new stay starts with a clean, fresh home and a small welcome gift.”'),
+         t('Brenda de Wilde, projectmanager bij Hooft &amp; Petiet', 'Brenda de Wilde, project manager at Hooft &amp; Petiet. Translated from Dutch.')),
     ]
-    prows = ''.join(f'<div class="tbl-r"><h3 class="t3">{c}</h3><p>{w}</p><p>{d}</p><p class="num">{n}</p></div>' for c, w, d, n in projects)
+    def case(k, shape, alt, client, where, n, unit, d, q, by):
+        ph = ('<figure class="case-ph %s rv">%s</figure>' % (shape, pic(k, alt, '(max-width:900px) 100vw, 42vw')) if k
+              else '<div class="case-ph num" aria-hidden="true"><b>%s</b><span>%s</span></div>' % (n, unit))
+        say = ('<blockquote>%s</blockquote><p class="by">%s</p>' % (q, by)) if q else ''
+        nline = '<p class="case-n">%s <small>%s</small></p>' % (n, unit) if k else ''
+        return f'<li class="case">{ph}<div class="case-tx"><p class="case-k"><b>{client}</b><span>{where}</span></p>{nline}<p class="case-d">{d}</p>{say}</div></li>'
+    cl = ''.join(case(*c) for c in cases)
     pano_keys = ['room-chaise', 'vk-01', 'room-living', 'room-styled', 'room-dining', 'expat-living', 'room-light', 'room-lounge', 'bedroom', 'vk-08', 'room-sofa', 'model', 'room-corner', 'calamiteit', 'room-bed']
     pano = ''.join('<figure style="--i:%d">%s</figure>' % (i, pic(k, '', '280px')) for i, k in enumerate(pano_keys))
     tiles = [
@@ -207,7 +246,7 @@ def hp_index():
 <section class="hx" data-tone="dawn" aria-labelledby="hero-h"><div class="hx-stick">
 <div class="hx-lamp" aria-hidden="true"></div>
 <h1 class="hx-title" id="hero-h"><span class="hx-l l1">{t('Uw bewoners', 'Your residents')} {win('room-light', 'arch grow')}</span> <span class="hx-l l2">{t('pakken alleen hun', 'only have to unpack')}</span> <span class="hx-l l3">{t('koffer nog uit.', 'their suitcase.')} {win('welcome', 'house')}</span></h1>
-<a class="hx-badge" href="#werkwijze" aria-label="{t('Zo werkt het', 'How it works')}"><svg viewBox="0 0 160 160" aria-hidden="true"><defs><path id="bc" d="M80,80 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1 -124,0"/></defs><g class="ring"><text><textPath href="#bc" textLength="386" lengthAdjust="spacing">{badge}</textPath></text></g><circle cx="80" cy="80" r="40" fill="#2F2B45"/><path d="M80 58L101 74H59z" fill="#C8D020"/><rect x="65" y="77" width="30" height="24" fill="#C8D020"/></svg></a>
+<a class="hx-badge" href="#werkwijze"><span class="sr">{t('Zo werkt het', 'How it works')}</span><svg viewBox="0 0 160 160" aria-hidden="true"><defs><path id="bc" d="M80,80 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1 -124,0"/></defs><g class="ring"><text><textPath href="#bc" textLength="386" lengthAdjust="spacing">{badge}</textPath></text></g><circle cx="80" cy="80" r="40" fill="#2F2B45"/><path d="M80 58L101 74H59z" fill="#C8D020"/><rect x="65" y="77" width="30" height="24" fill="#C8D020"/></svg></a>
 <p class="hx-sub">{t('Logeer, rust en wisselwoningen voor renovaties van woningcorporaties en bouwbedrijven. Ingericht, beheerd en op tijd klaar. Sinds 2010.', 'Guest, rest and swap homes for renovations by housing associations and builders. Furnished, managed and ready on time. Since 2010.')}</p>
 <div class="hx-room">{pic('room-light', room_alt, '100vw', eager=True)}<div class="hx-dusk"></div><div class="hx-sun"></div><div class="hx-scrim"></div></div>
 <p class="hx-end">{t('Direct bewoonbaar, zodra de sleutel wordt overgedragen.', 'Ready to live in, the moment the key is handed over.')}</p>
@@ -233,9 +272,7 @@ def hp_index():
 <p class="lead">{t('U kiest zelf wat u bij ons onderbrengt. Wij zorgen dat alles op elkaar aansluit, op de planning van de aannemer, en dat bewoners één aanspreekpunt hebben.', 'You choose what to hand to us. We make it all fit together, on the contractor’s schedule, with one point of contact for residents.')}</p></div>
 <div class="hand-g">
 <div class="hand-ph"><div class="hand-frame">{himgs}</div><div class="hand-cap" aria-hidden="true"><span data-hn>01</span><span data-ht>{rows[0][0]}</span></div></div>
-<div><ul class="hand-list">{hl}</ul>
-<div class="say"><blockquote>{t('“Dit gaf ons de ruimte om ons te focussen op de renovatie zelf.”', '“It gave us room to focus on the renovation itself.”')}</blockquote>
-<p class="by">{t('Danny Mooren, sociaal projectleider bij Portaal, over 570 gerenoveerde woningen in Overvecht', 'Danny Mooren, social project lead at Portaal, on 570 renovated homes in Overvecht. Translated from Dutch.')}</p></div></div>
+<div><ul class="hand-list">{hl}</ul></div>
 </div>
 </div></section>
 
@@ -247,13 +284,11 @@ def hp_index():
 </div>{peek}</section>
 
 <section class="sec" id="projecten" data-tone="gold" aria-labelledby="pr-h"><div class="wrap">
-<div class="head"><h2 class="t2" id="pr-h">{t('Voor corporaties door heel Nederland.', 'For housing associations across the Netherlands.')}</h2><p class="lead">{t('Of het nu om 1 of 100 woningen gaat. Een paar projecten, in de woorden van wie erbij was.', 'Whether it’s 1 home or 100. A few projects, in the words of the people involved.')}</p></div>
+<div class="head"><h2 class="t2" id="pr-h">{t('Voor corporaties door heel Nederland.', 'For housing associations across the Netherlands.')}</h2><p class="lead">{t('Of het nu om 1 of 100 woningen gaat. Vier projecten, in de woorden van wie erbij was.', 'Whether it’s 1 home or 100. Four projects, in the words of the people involved.')}</p></div>
 </div>
 <div class="pano" aria-hidden="true"><div class="pano-ring">{pano}</div></div>
 <div class="wrap">
-<div class="tbl"><div class="tbl-h"><span class="lab">{t('Opdrachtgever', 'Client')}</span><span class="lab">{t('Waar', 'Where')}</span><span class="lab">{t('Wat we deden', 'What we did')}</span><span class="lab" style="justify-self:end">{t('Omvang', 'Scale')}</span></div>{prows}</div>
-<div class="say" style="border-top:0;padding-top:0"><blockquote>{t('“Dat er zelfs servies, schoonmaakmiddelen en gratis internet aanwezig was, dat maakte het verschil!”', '“That there was even crockery, cleaning products and free internet, that made the difference!”')}</blockquote>
-<p class="by">{t('Thierry Farla, bewonersbegeleider bij HEF Wonen tijdens het project', 'Thierry Farla, resident support officer at HEF Wonen during the project. Translated from Dutch.')}</p></div>
+<ol class="cases">{cl}</ol>
 <div class="aside"><span class="lab">{t('Voor uw aanbesteding', 'For your tender')}</span><p>{t('Ons pand in Utrecht heeft energielabel A en zonnepanelen. Meubels worden met stoom gereinigd en na een huurperiode opnieuw ingezet, bij hout letten we op FSC, en we voldoen aan de SROI norm van 5%. Sinds 1 september 2025 zijn we samen met KeyPro onderdeel van ReShare Living Group.', 'Our building in Utrecht has energy label A and solar panels. Furniture is steam cleaned and used again after a rental, we look for FSC on wood, and we meet the 5% SROI standard. Since 1 September 2025 we’ve been part of ReShare Living Group, together with KeyPro.')}</p></div>
 </div></section>
 
@@ -295,7 +330,7 @@ def hp_vs():
 <span class="lab" id="sz-l">{t('Woonoppervlak tot', 'Floor area up to')}</span>
 <div class="sizes" role="group" aria-labelledby="sz-l">{btns}</div>
 <div class="price" aria-live="polite"><span class="amt" data-amt>€ 2.549</span><span class="brk" data-brk></span></div>
-<div class="weeks" role="group" aria-label="{t('Verlengen per week', 'Extend by the week')}"><button type="button" data-dec aria-label="{t('Een week minder', 'One week less')}">−</button><output aria-live="polite">0</output><button type="button" data-inc aria-label="{t('Een week meer', 'One week more')}">+</button><span>{t('weken extra, à € 99,99', 'extra weeks, at €99.99')}</span></div>
+<div class="weeks" role="group" aria-label="{t('Verlengen per week', 'Extend by the week')}"><button type="button" data-dec aria-label="{t('Een week minder', 'One week less')}"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M1 6h10" stroke="currentColor" stroke-width="1.6"/></svg></button><output aria-live="polite">0</output><button type="button" data-inc aria-label="{t('Een week meer', 'One week more')}"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M1 6h10M6 1v10" stroke="currentColor" stroke-width="1.6"/></svg></button><span>{t('weken extra, à € 99,99', 'extra weeks, at €99.99')}</span></div>
 <div class="acts" style="margin-top:30px"><a class="btn solid" data-req data-base="{q}?type=Verkoopstyling" href="{q}?type=Verkoopstyling">{t('Pakket aanvragen', 'Request this package')}</a></div>
 <p class="fine">{t('De prijs hangt ook af van het aantal slaapkamers of werkkamers en van de regio.', 'The price also depends on the number of bedrooms or studies and on the region.')}</p>
 </div>
@@ -463,7 +498,7 @@ def rs_page():
 </main>
 <footer class="ftr forest" data-tone="forest"><div class="wrap">
 <div class="ftr-g">
-<div><img class="flogo" src="/media/logo-reshare-white.png" width="900" height="264" alt="ReShare Living Group"><p class="about">{t('KeyPro en Hooft &amp; Petiet, samen sinds 1 september 2025.', 'KeyPro and Hooft &amp; Petiet, together since 1 September 2025.')}</p></div>
+<div><img class="flogo" src="/media/logo-reshare-white.png" width="900" height="264" alt="ReShare Living Group" loading="lazy"><p class="about">{t('KeyPro en Hooft &amp; Petiet, samen sinds 1 september 2025.', 'KeyPro and Hooft &amp; Petiet, together since 1 September 2025.')}</p></div>
 <div><h2>{t('Bedrijven', 'Companies')}</h2><ul><li><a href="https://www.keypro.nl/" rel="noopener">KeyPro</a></li><li><a href="{other('hp')}">Hooft &amp; Petiet</a></li></ul></div>
 <div><h2>{t('Op deze site', 'On this site')}</h2><ul><li><a href="#werkwijze">{t('Werkwijze', 'How it works')}</a></li><li><a href="#missie">{t('Missie', 'Mission')}</a></li></ul></div>
 <div><h2>Contact</h2><ul><li><a href="mailto:contact@reshareliving.com">contact@reshareliving.com</a></li></ul></div>
@@ -493,7 +528,7 @@ def copy_static(site):
         os.makedirs(keep); open(os.path.join(keep, 'state.json'), 'w').write(saved)
     shutil.copytree(os.path.join(B, 'fonts'), os.path.join(o, 'fonts'))
     os.makedirs(os.path.join(o, 'css')); os.makedirs(os.path.join(o, 'js')); os.makedirs(os.path.join(o, 'media'))
-    for f in ('site.css', 'fx.css'): shutil.copy(os.path.join(B, 'css', f), os.path.join(o, 'css'))
+    open(os.path.join(o, 'css', 'all.css'), 'w').write(open(os.path.join(B, 'css', 'site.css')).read() + '\n' + open(os.path.join(B, 'css', 'fx.css')).read())
     for f in ('site.js', 'fx.js'): shutil.copy(os.path.join(B, 'js', f), os.path.join(o, 'js'))
     open(os.path.join(o, 'netlify.toml'), 'w').write('[[headers]]\n  for = "/*"\n  [headers.values]\n    X-Robots-Tag = "noindex, nofollow"\n')
     open(os.path.join(o, 'robots.txt'), 'w').write('User-agent: *\nDisallow: /\n')
@@ -503,7 +538,7 @@ def used_media(site):
     for dp, dn, fn in os.walk(OUT[site]):
         for f in fn:
             if f.endswith('.html') or f.endswith('.css'):
-                out |= set(re.findall(r'/media/([\w./-]+?\.(?:jpg|png))', open(os.path.join(dp, f)).read()))
+                out |= set(re.findall(r'/media/([\w./-]+?\.(?:jpg|png|webp))', open(os.path.join(dp, f)).read()))
     for m in out:
         dst = os.path.join(OUT[site], 'media', m)
         os.makedirs(os.path.dirname(dst), exist_ok=True); shutil.copy(os.path.join(B, 'media', m), dst)

@@ -543,5 +543,46 @@
     883
    ]
   ]
+ },
+ "case-portaal": {
+  "src": "2025_05_DA-scaled.jpg (cropped to the building, the people below left out)",
+  "files": [
+   "media/case-portaal-1440.jpg",
+   "media/case-portaal-1000.jpg"
+  ],
+  "sizes": [
+   [
+    1440,
+    880
+   ],
+   [
+    1000,
+    611
+   ]
+  ]
+ },
+ "case-stadgenoot": {
+  "src": "2024_12_after-samenwerking-stadgenoot-def.jpg",
+  "files": [
+   "media/case-stadgenoot-1078.jpg"
+  ],
+  "sizes": [
+   [
+    1078,
+    1121
+   ]
+  ]
+ },
+ "case-cazas": {
+  "src": "2024_11_cazas-artikel-op-website.jpg",
+  "files": [
+   "media/case-cazas-684.jpg"
+  ],
+  "sizes": [
+   [
+    684,
+    470
+   ]
+  ]
  }
 }

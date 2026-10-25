@@ -9,6 +9,13 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return [].slice.call((r || document).querySelectorAll(s)); };
   var fine = window.matchMedia('(pointer: fine)').matches;
+  /* Positions are measured once and on resize, then read from scrollY, so a scroll never forces layout */
+  var geo = new WeakMap(), tracked = [];
+  var docTop = function (el) { var t = 0; while (el) { t += el.offsetTop; el = el.offsetParent; } return t; };
+  var track = function (els) { [].concat(els).forEach(function (el) { if (el && tracked.indexOf(el) < 0) tracked.push(el); }); };
+  var measureAll = function () { tracked.forEach(function (el) { geo.set(el, { t: docTop(el), h: el.offsetHeight }); }); };
+  var R = function (el) { var g = geo.get(el), y = window.scrollY; return g ? { top: g.t - y, height: g.h, bottom: g.t - y + g.h } : el.getBoundingClientRect(); };
+  var lastMove = 0;
 
   /* ------------------------------------------------------------ the light behind the page */
   var TONES = {
@@ -56,7 +63,8 @@
     cvs.width = Math.max(2, Math.round(vw * sc)); cvs.height = Math.max(2, Math.round(vh * sc));
     if (gl) { gl.viewport(0, 0, cvs.width, cvs.height); gl.uniform2f(U.r, cvs.width, cvs.height); }
   };
-  if (bg && !rm) {
+  var startGL = function () {
+    if (!bg || rm || cvs) return;
     try {
       cvs = document.createElement('canvas');
       gl = cvs.getContext('webgl', { antialias: false, alpha: true, premultipliedAlpha: true, preserveDrawingBuffer: false, powerPreference: 'low-power' });
@@ -74,7 +82,8 @@
         var t0 = performance.now(), last = 0, first = true;
         var frame = function (ts) {
           requestAnimationFrame(frame);
-          if (document.hidden || ts - last < 33) return;
+          var gap = ts - lastMove < 1500 ? (vw < 760 ? 50 : 33) : (vw < 760 ? 140 : 90);
+          if (document.hidden || ts - last < gap) return;
           last = ts;
           for (var i = 0; i < 4; i++) for (var j = 0; j < 3; j++) cur[i][j] += (tgt[i][j] - cur[i][j]) * .05;
           gl.uniform1f(U.t, (ts - t0) / 1000); gl.uniform1f(U.s, scrollF);
@@ -84,8 +93,11 @@
         };
         requestAnimationFrame(frame);
       }
-    } catch (err) { if (cvs && cvs.parentNode) cvs.parentNode.removeChild(cvs); gl = null; cvs = null; }
-  }
+    } catch (err) { if (cvs && cvs.parentNode) cvs.parentNode.removeChild(cvs); gl = null; cvs = false; }
+  };
+  /* The light starts once the page has loaded, the CSS gradient underneath carries the first paint */
+  var glLater = function () { if ('requestIdleCallback' in window) requestIdleCallback(startGL, { timeout: 1500 }); else setTimeout(startGL, 600); };
+  if (document.readyState === 'complete') glLater(); else window.addEventListener('load', glLater);
 
   /* ------------------------------------------------------------ the header turns with the light */
   var hdr = $('.hdr');
@@ -103,8 +115,8 @@
   };
   var heroUpdate = function () {
     if (!r0) return;
-    var total = hx.offsetHeight - vh;
-    var p = clamp(-hx.getBoundingClientRect().top / Math.max(1, total), 0, 1);
+    var hr = R(hx), total = hr.height - vh;
+    var p = clamp(-hr.top / Math.max(1, total), 0, 1);
     var e = ease(clamp(p / .5, 0, 1));
     var g = ease(clamp((p - .03) / .55, 0, 1));
     var x = r0.x * (1 - g), y = r0.y * (1 - g), w = r0.w + (r0.W - r0.w) * g, h = r0.h + (r0.H - r0.h) * g;
@@ -123,6 +135,7 @@
     st.setProperty('--pe', p > .06 ? 'none' : 'auto');
   };
   if (hxStick && fine) {
+    hx.classList.add('lamp');
     hxStick.addEventListener('pointermove', function (ev) {
       var s = hxStick.getBoundingClientRect();
       hx.style.setProperty('--lx', (ev.clientX - s.left) + 'px'); hx.style.setProperty('--ly', (ev.clientY - s.top) + 'px'); hx.style.setProperty('--lo', 1);
@@ -150,7 +163,8 @@
   });
   var fillUpdate = function () {
     fills.forEach(function (el) {
-      var r = el.getBoundingClientRect();
+      var r = R(el);
+      if (r.bottom < -200 || r.top > vh + 200) return;
       var p = clamp((vh * .82 - r.top) / (r.height + vh * .3), 0, 1);
       var n = Math.round(p * el._w.length * 1.2);
       if (n === el._n) return;
@@ -165,7 +179,8 @@
   var handUpdate = function () {
     if (!hItems.length) return;
     var best = 0, bd = 1e9;
-    hItems.forEach(function (li, k) { var r = li.getBoundingClientRect(); var d = Math.abs(r.top + r.height / 2 - vh * .55); if (d < bd) { bd = d; best = k; } });
+    var hr = R(hand); if (hr.bottom < -200 || hr.top > vh + 200) return;
+    hItems.forEach(function (li, k) { var r = R(li); var d = Math.abs(r.top + r.height / 2 - vh * .55); if (d < bd) { bd = d; best = k; } });
     if (best === hIdx) return;
     hIdx = best;
     hItems.forEach(function (li, k) { li.classList.toggle('on', k === best); });
@@ -178,7 +193,7 @@
   var kin = rm ? null : $('.kin'), kTrack = kin && $('.kin-track', kin);
   var kinUpdate = function () {
     if (!kTrack) return;
-    var r = kin.getBoundingClientRect();
+    var r = R(kin);
     if (r.bottom < -100 || r.top > vh + 100) return;
     var p = clamp((vh - r.top) / (vh + r.height), 0, 1);
     kTrack.style.setProperty('--kx', (-p * Math.max(0, kTrack.scrollWidth - vw)).toFixed(1) + 'px');
@@ -190,7 +205,10 @@
     var pImgs = $$('img', peek), lastX = 0;
     $$('[data-peek]').forEach(function (row) {
       var k = +row.getAttribute('data-peek');
-      row.addEventListener('pointerenter', function () { pImgs.forEach(function (im, i) { im.classList.toggle('on', i === k); }); peek.classList.add('on'); });
+      row.addEventListener('pointerenter', function () {
+        pImgs.forEach(function (im, i) { if (!im.getAttribute('src')) im.src = im.getAttribute('data-src'); im.classList.toggle('on', i === k); });
+        peek.classList.add('on');
+      });
       row.addEventListener('pointerleave', function () { peek.classList.remove('on'); });
       row.addEventListener('pointermove', function (ev) {
         peek.style.setProperty('--px', ev.clientX + 'px'); peek.style.setProperty('--py', ev.clientY + 'px');
@@ -204,9 +222,8 @@
   if (pano) { pRing = $('.pano-ring', pano); pFigs = $$('figure', pRing); }
   var panoUpdate = function () {
     if (!pRing) return;
-    var r = pano.getBoundingClientRect();
+    var r = R(pano);
     if (r.bottom < -200 || r.top > vh + 200) return;
-    pStep = parseFloat(getComputedStyle(pano).getPropertyValue('--step')) || 10;
     var p = clamp((vh - r.top) / (vh + r.height), 0, 1), n = pFigs.length;
     var k = 1.5 + p * (n - 4);
     var rot = k * pStep;
@@ -218,7 +235,7 @@
   var gal = rm ? [] : $$('.gal3 figure');
   var galUpdate = function () {
     gal.forEach(function (f) {
-      var r = f.getBoundingClientRect();
+      var r = R(f);
       if (r.bottom < -200 || r.top > vh + 200) return;
       var c = (r.top + r.height / 2 - vh / 2) / vh;
       f.style.setProperty('--py', (c * -(parseFloat(f.getAttribute('data-speed')) || 0) * 100).toFixed(1) + 'px');
@@ -229,7 +246,7 @@
   var ring = rm ? null : $('.ring3'), rIn = ring && $('.ring3-in', ring), rWords = ring ? $$('[data-w]', ring) : [], rIdx = -1;
   var ringUpdate = function () {
     if (!rIn) return;
-    var r = ring.getBoundingClientRect();
+    var r = R(ring);
     if (r.bottom < -200 || r.top > vh + 200) return;
     var p = clamp((vh - r.top) / (vh + r.height), 0, 1);
     rIn.style.setProperty('--rot', (40 - p * 260).toFixed(2) + 'deg');
@@ -244,7 +261,7 @@
   }
   var cycUpdate = function () {
     if (!cyc || rm) return;
-    var r = cyc.getBoundingClientRect();
+    var r = R(cyc);
     if (r.bottom < -200 || r.top > vh + 200) return;
     var p = clamp((vh * .78 - r.top) / (r.height * .9), 0, 1);
     cArc.style.strokeDashoffset = (cLen * (1 - p)).toFixed(1);
@@ -268,22 +285,29 @@
     if (hdr) hdr.classList.toggle('scrolled', y > 8);
     var mid = vh * .5, tone = null, under = null;
     for (var i = 0; i < tones.length; i++) {
-      var r = tones[i].getBoundingClientRect();
+      var r = R(tones[i]);
       if (r.top <= mid) tone = tones[i].getAttribute('data-tone');
-      if (r.top <= 40 && r.bottom > 40) under = tones[i].getAttribute('data-tone');
+      if (r.top <= 40 && r.bottom > 40) under = tones[i].getAttribute('data-hdr') || tones[i].getAttribute('data-tone');
     }
     if (tone) setTone(tone);
     if (hdr) hdr.classList.toggle('dusk', under === 'dusk' || under === 'forest');
     heroUpdate(); fillUpdate(); handUpdate(); kinUpdate(); panoUpdate(); galUpdate(); ringUpdate(); cycUpdate();
   };
-  var req = function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  var req = function () { lastMove = performance.now(); if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  var remeasure = function () {
+    vh = window.innerHeight; vw = window.innerWidth;
+    if (pano) pStep = parseFloat(getComputedStyle(pano).getPropertyValue('--step')) || 10;
+    measureAll(); measureHero(); req();
+  };
+  track(tones); track([hx, hand, kin, pano, ring, cyc]); track(fills); track(hItems); track(gal);
+  tracked = tracked.filter(Boolean);
   window.addEventListener('scroll', req, { passive: true });
-  window.addEventListener('resize', function () {
-    vh = window.innerHeight; vw = window.innerWidth; sizeBg(); measureHero(); morphSize(); req();
-  });
-  measureHero(); update();
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measureHero(); update(); });
-  window.addEventListener('load', function () { measureHero(); update(); });
+  window.addEventListener('pointermove', function () { lastMove = performance.now(); }, { passive: true });
+  window.addEventListener('resize', function () { sizeBg(); morphSize(); remeasure(); });
+  remeasure(); update();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
+  window.addEventListener('load', remeasure);
+  if ('ResizeObserver' in window) { var roT = 0; new ResizeObserver(function () { cancelAnimationFrame(roT); roT = requestAnimationFrame(remeasure); }).observe(document.body); }
 
   /* ------------------------------------------------------------ mission lines arrive one by one */
   var mis = $$('.mission li');

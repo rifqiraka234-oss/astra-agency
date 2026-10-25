@@ -1,3 +1,4 @@
+picture{display:contents}
 /* v3 art layer on top of site.css. Light is the material. Every moving part writes transforms, opacity or variables. */
 @property --c0{syntax:'<color>';inherits:true;initial-value:#F6F0E6}
 @property --c1{syntax:'<color>';inherits:true;initial-value:#DCE48C}
@@ -17,9 +18,11 @@ body{background:transparent}
 /* Header floats on the light */
 /* a fully transparent sticky header over the WebGL layer composites black in Chromium, so it keeps a trace of paper */
 .hdr{background:rgba(251,250,247,.01);transition:background .4s,border-color .4s,color .4s}
-.hdr.scrolled{background:rgba(251,250,247,.66);-webkit-backdrop-filter:saturate(150%) blur(16px);backdrop-filter:saturate(150%) blur(16px)}
+/* no backdrop blur, it would re-blur the moving light on every frame */
+.hdr.scrolled{background:rgba(251,250,247,.92)}
 .hdr.dusk{color:var(--paper)}
-.hdr.dusk.scrolled{background:rgba(32,29,52,.55);border-bottom-color:rgba(255,255,255,.08)}
+.hdr.dusk.scrolled{background:rgba(32,29,52,.92);border-bottom-color:rgba(255,255,255,.08)}
+.site-rs .hdr.dusk.scrolled{background:rgba(21,48,42,.92)}
 .hdr.dusk nav{color:var(--paper)}
 .hdr.dusk .btn{border-color:rgba(251,250,247,.6);color:var(--paper)}
 .hdr.dusk .btn:hover{background:var(--paper);color:var(--ink)}
@@ -37,7 +40,8 @@ body{background:transparent}
 /* ---------------------------------------------------------------- H&P hero, the window that becomes the room */
 .hx{position:relative;height:250vh}
 .hx-stick{position:sticky;top:76px;height:calc(100vh - 76px);height:calc(100svh - 76px);overflow:hidden}
-.hx-lamp{position:absolute;left:0;top:0;width:620px;height:620px;margin:-310px 0 0 -310px;border-radius:50%;pointer-events:none;
+.hx.lamp .hx-lamp{display:block}
+.hx-lamp{display:none;position:absolute;left:0;top:0;width:620px;height:620px;margin:-310px 0 0 -310px;border-radius:50%;pointer-events:none;
   background:radial-gradient(closest-side,rgba(255,236,200,.85),rgba(255,214,160,.32) 45%,rgba(255,214,160,0));mix-blend-mode:soft-light;
   transform:translate3d(var(--lx,60vw),var(--ly,40vh),0);opacity:var(--lo,0);transition:opacity .6s}
 .hx-badge{position:absolute;right:clamp(20px,5vw,72px);top:clamp(96px,14vh,150px);width:clamp(104px,10vw,148px);aspect-ratio:1;z-index:4;color:var(--ink);text-decoration:none;opacity:calc(1 - var(--out,0))}
@@ -100,7 +104,7 @@ html:not(.js) .fill .wd,.rm .fill .wd{opacity:1}
 .hand-frame{position:relative;aspect-ratio:4/5;background:var(--stone);border-radius:999px 999px 0 0;overflow:hidden;box-shadow:0 40px 80px -50px rgba(43,39,66,.45)}
 .hand-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(100% 0 0 0);transform:scale(1.08);transition:clip-path 1s var(--ease),transform 1.6s var(--ease)}
 .hand-frame img.on{clip-path:inset(0 0 0 0);transform:none}
-.hand-frame img:first-child{clip-path:inset(0 0 0 0)}
+.hand-frame picture:first-child img{clip-path:inset(0 0 0 0)}
 .rm .hand-frame img{transition:none}
 .hand-cap{margin-top:16px;display:flex;justify-content:space-between;font:500 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
 .hand-list{list-style:none;padding:0;margin:44px 0 0;border-top:1px solid var(--ink)}
@@ -287,3 +291,27 @@ html:not(.js) .ring3-word,.rm .ring3-word{display:none}
 .peek img.on{opacity:1}
 #woningen .tbl-r{transition:padding-left .5s var(--ease)}
 @media (pointer:fine){#woningen .tbl-r:hover{padding-left:18px}}
+
+/* Projects as stories, each in a shape, the numbers set big */
+.cases{list-style:none;padding:0;margin:clamp(48px,6vw,96px) 0 0;display:grid;gap:clamp(64px,9vw,140px)}
+.case{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,104px);align-items:center}
+.case:nth-child(even){grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+.case:nth-child(even) .case-ph{order:2}
+.case-ph{margin:0;position:relative;overflow:hidden;background:var(--stone);width:100%;max-width:520px;justify-self:center}
+.case-ph img{width:100%;height:100%;object-fit:cover}
+.case-ph.arch{aspect-ratio:4/5;border-radius:999px 999px 0 0}
+.case-ph.house{aspect-ratio:1;clip-path:polygon(50% 0,100% 30%,100% 100%,0 100%,0 30%)}
+.case-ph.disc{aspect-ratio:1;border-radius:50%}
+.case-ph.num{aspect-ratio:4/5;border-radius:999px 999px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:radial-gradient(70% 60% at 50% 40%,#4A3E7A 0%,#2F2B45 70%);color:var(--paper)}
+.case-ph.num b{font:300 clamp(120px,16vw,240px)/.9 var(--serif);letter-spacing:-.05em;font-weight:300;color:#DCE48C}
+.case-ph.num span{margin-top:10px;font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#D6D1E6}
+.case-k{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline}
+.case-k b{font:400 clamp(24px,2.2vw,32px)/1.15 var(--serif);color:var(--ink);font-weight:400}
+.case-k span{font:500 11px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.case-n{margin-top:18px;font:300 clamp(48px,5.4vw,84px)/1 var(--serif);letter-spacing:-.03em;color:var(--ink)}
+.case-n small{font:500 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-left:6px}
+.case-d{margin-top:20px;font-size:16px;max-width:46ch}
+.case blockquote{margin-top:28px;padding-top:22px;border-top:1px solid rgba(25,24,23,.16);font:400 clamp(20px,1.7vw,25px)/1.36 var(--serif);color:var(--ink);max-width:32ch}
+.case .by{margin-top:12px}
+@media (max-width:900px){.case,.case:nth-child(even){grid-template-columns:minmax(0,1fr)}.case:nth-child(even) .case-ph{order:0}.case-ph{max-width:420px}.case-ph.num b{font-size:clamp(110px,32vw,180px)}}

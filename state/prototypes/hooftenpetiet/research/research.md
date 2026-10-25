@@ -89,3 +89,16 @@ corporation and contractor.
 | Dropped from v3, the office and kitchen photos that only appear on their job ads (/vacature-supply-chain-lead/, /vacature-servicemedewerker-verhuizingen/), so no service is shown with a photo they never tied to it | same |
 | "Direct bewoonbaar, zodra de sleutel wordt overgedragen" closes the hero, in ReShare's words about H&P | https://reshareliving.com/ (row above) |
 | ReShare ring, Re, Share and Living with "hergebruik", "delen" and "tijdelijk en vast wonen", and the Leven counter, from "Re staat voor hergebruik, Share voor delen, en Living voor de tijdelijke en vaste woonoplossingen" and "meerdere levens" | https://reshareliving.com/ |
+
+## Added for the plan, 25 Oct
+
+Every fact on the plan site, with the page it was read on and how it was checked, is in research/plan/facts.md. Reopened
+25 Oct ~14.45 UTC before the plan shipped, each found word for word, Aedes herijking NPA (bijna 90.000, 108, 94, 87),
+Aedes NPA hoofdlijnen (E, F, G label tot en met 2028, € 200 miljoen), aedes.nl/over-aedes (255, 4 miljoen), Rijksoverheid
+(https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/woning-huren/wanneer-heb-ik-recht-op-verhuiskostenvergoeding,
+"Verhuisde u vanaf 28 februari 2026? Dan is uw verhuiskostenvergoeding € 7926"), Dirkzwager on ECLI:NL:HR:2022:493 ("in
+beginsel"), PBL 20 Feb 2025 ("heel erg onwaarschijnlijk"), KeyPro press 16 Oct 2025 ("50% circulair in te kopen"),
+Moving-In ("9.4/10 Feedback Company", Portaal logo alt, Havensteder), Furniture Lease ("€ 149,50", "Onze opdrachtgevers aan
+het woord"). The 26 article titles were fetched again, 12 carry "Onze logeerwoningen stemmen tijdelijke bewoners vrolijk",
+the 2020 article's own title and 11 copies, the other 14 are unique. Brenda de Wilde's line on the Cazas article reads in
+full "alleen de koffer moet nog door de bewoners worden uitgepakt", inside her quote.

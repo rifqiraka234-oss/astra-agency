@@ -1,0 +1,21 @@
+
+== https://reshareliving.com/  (200)
+title        ReShare Living Group
+stack        unknown
+era tells    none greppable, judge from the screenshots
+flow         forms 0 inputs 0 mailto 1 tel 0 | img 2 svg 0 video 0
+gdpr banner  NONE FOUND [absence, confirmed against a working control] | reject NOT FOUND
+gdpr pre     0 cookies, 0 third party, before any click
+trackers pre fonts.googleapis.com, fonts.gstatic.com
+egress       US, NOT an EU or UK visitor
+    no consent code of any kind in the HTML, so no geo rule can exist. Tracker lines hold,
+    confirm with the list of hosts the page contacted before writing it.
+googlefonts  REMOTE, loaded from Google
+privacy      NO LINK FOUND [absence, confirmed against a working control]
+social       NONE LINKED
+errors       0 page errors, 0 failed requests
+
+control      detector found a banner, a reject, a privacy link, an imprint and a
+             social account on a synthetic page, so an absence above is real.
+wrote        /tmp/claude-0/rs-plan-2510.json plus two screenshots. LOOK AT THEM.
+

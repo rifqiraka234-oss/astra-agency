@@ -750,3 +750,21 @@ DESIRED UX UI user action and how the whole flow guides them". What worked, so i
 | Rebuilding while the long QA runs were going produced a 404 font in the overflow run | Never run the build while a QA chain is running. Note the build's hash when the chain starts and check it's unchanged when it ends |
 | The fire masked into the sun with `hard-light` turned their yellow sun brown | Test blend modes side by side on the real frame. `overlay` kept the brand yellow and let the flames move inside it |
 | The plan's coworking map labels were pills with a soft shadow, missed by the restyle | Check the plan site against the banned list too, not only the client's site |
+
+### Hooft & Petiet v3.1, the plan for a two brand group (25 Oct 2026)
+
+Raka's "Do itt" on an honest review of v3 (the sites were strong, the plan was missing). Live,
+https://astra-hooftenpetiet-plan.netlify.app/, beside the two sites. Source build-plan/ in state/prototypes/hooftenpetiet.
+What carried over from Saavedra and worked again. Every figure in one data file, the charts computed from it, and a
+functional test that works every sum out on its own from that file, then runs once more with a planted fault per check.
+
+| Hiccup | Rule |
+|---|---|
+| A photo of a woman setting a welcome card sat beside "Brenda de Wilde's line", so a reader would take her for Brenda | A photo next to a named person's words is read as that person. Use a photo with nobody in it unless the client's own page names who it shows |
+| Brenda's line went into the first draft shortened, "Alleen de koffer moet nog worden uitgepakt", the article says "nog door de bewoners worden uitgepakt" | A quote used as a headline is copied from the page, never from memory or a note, and checked against the page before the build |
+| "Four projects in their words" when two of the four quotes are clients, one a resident and one H&P's own project manager | Before counting quotes as client proof, label each quote by who said it |
+| A dark section mid page set the page light dark, and the next light section's first lines sat dark on dark until its top reached mid screen. axe with motion on caught it, 274 nodes | Mid page dark sections carry their own opaque background and keep the page light warm (data-tone stays light, data-hdr="dusk" turns the header). Only the last section may set a dark page light |
+| A hidden chart tooltip kept its desktop position after a resize and widened the page by 43 px at 320 | Hidden tooltips are display none, not opacity 0, and close on resize. Test overflow after a resize, not only on a fresh load |
+| The week stepper's minus was the U+2212 minus sign, which the dash scan rightly flags | Draw plus and minus as SVG lines, so the page carries no dash glyph at all |
+| The two superseded email versions in the drafts file failed the drafts gate as openers and as repeats of the live one | Move superseded versions to a sibling file marked GATE ARCHIVED, so the gate judges only what could be sent |
+| The new Netlify project came up with team SSO on, again | Switch SSO off right after create-new-project, before the first deploy, every time |
