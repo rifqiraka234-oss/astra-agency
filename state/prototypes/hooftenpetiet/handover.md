@@ -16,8 +16,8 @@ git (build/, build2/), not on the web.
 | Hooft & Petiet | https://astra-hooftenpetiet-prototype.netlify.app | / , /verkoopstyling/ , /offerte/ , and /en/ , /en/sales-styling/ , /en/quote/ |
 | ReShare Living Group | https://astra-reshare-prototype.netlify.app | / and /en/ |
 
-Netlify ids, astra-hooftenpetiet-prototype c8d94385-c7d6-43a5-b5b1-9b2b88901ed3 (v3 deploy 6addf546ca42b2053eb2bed9),
-astra-reshare-prototype 216660cc-b644-4e72-9ed5-cf4c6ecc79d3 (v3 deploy 6addf55b0205c37c1359dd2b). Team SSO off on both.
+Netlify ids, astra-hooftenpetiet-prototype c8d94385-c7d6-43a5-b5b1-9b2b88901ed3 (v3 deploy 6addf94a43a3b475cb6fd39b),
+astra-reshare-prototype 216660cc-b644-4e72-9ed5-cf4c6ecc79d3 (v3 deploy 6addf957d87531f02c820186). Team SSO off on both.
 noindex on every page, X-Robots-Tag header, disallow robots.txt.
 
 ## Who it's for and what it asks them to do (unchanged from v2)

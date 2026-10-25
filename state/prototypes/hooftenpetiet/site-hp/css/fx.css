@@ -226,7 +226,7 @@ html:not(.js) .pano-ring figure:nth-child(n+13),.rm .pano-ring figure:nth-child(
 .ring3-word span{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;transform:translate3d(0,18px,0);transition:opacity .6s var(--ease),transform .8s var(--ease)}
 .ring3-word span.on{opacity:1;transform:none}
 .ring3-word b{font:300 clamp(64px,11vw,184px)/.9 var(--sans);letter-spacing:-.05em;font-weight:300;color:var(--ink);text-shadow:0 2px 40px rgba(242,241,234,.9)}
-.ring3-word small{margin-top:14px;padding:8px 14px;background:rgba(251,250,247,.86);font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.ring3-word small{position:absolute;left:0;right:0;bottom:clamp(22px,4vw,48px);text-align:center;font:400 clamp(18px,1.6vw,24px)/1.2 var(--serif);letter-spacing:0;color:var(--ink);text-shadow:0 0 18px rgba(242,241,234,.95),0 0 4px rgba(242,241,234,.9)}
 @media (max-width:760px){.ring3{--rw3:130px;--rh3:170px;--rz:300px;perspective:800px}.ring3-in{transform:translateZ(-160px) rotateX(-8deg) rotateY(var(--rot,0deg))}}
 html:not(.js) .ring3,.rm .ring3{height:auto;perspective:none;overflow-x:auto}
 html:not(.js) .ring3-in,.rm .ring3-in{position:static;transform:none;width:auto;height:auto;display:flex;gap:12px;padding:0 var(--gut)}
