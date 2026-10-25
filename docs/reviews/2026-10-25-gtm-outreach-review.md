@@ -168,6 +168,52 @@ corrections.
     the 500 to 50,000 euro band, set by Raka, would let a call end with a yes instead of "I'll be in touch". Acquitas
     ended on price.
 
+## Targeting, who actually says yes (added 25 Oct, after Raka asked)
+
+**How it was measured.** lemlist's lead export for the seven outreach campaigns, 2,733 lead records, joined by leadId
+to the 330 cold first pitches above. 329 matched, only Joyce (Tomatoworld) has no lead record. Industry is lemlist's
+`companyIndustry`, the label the company gave itself on LinkedIn. Script and data in the scratchpad (`review/export.py`,
+`review/target.py`).
+
+**The one finding that holds up. B2B says yes, consumer businesses don't.**
+
+| Group, by their LinkedIn industry | All, yes | Since 1 Sep, yes | Replied at all |
+|---|---|---|---|
+| B2B (tech, software, manufacturing, wholesale, finance, B2B services) | 16 of 115 (14%) | 6 of 68 (9%) | 31% |
+| Consumer (hospitality, retail, leisure, education, wellness) | 3 of 94 (3%) | 0 of 69 | 27% |
+| Professional services (consultants, lawyers, accountants, coaches) | 3 of 88 (3%) | 3 of 68 (4%) | 9% |
+| Other or unknown | 3 of 33 | 0 of 23 | 30% |
+
+- The gap is too big to be luck. The odds of chance alone splitting 0 of 69 against 6 of 68 are about 1 in 75, and 1 in
+  175 over all months. It's a much stronger signal than anything about the templates.
+- Tech and manufacturing alone, 12 of 80 (15%).
+- Consumer businesses do answer, 27% of the time, but the answer is "own team", "not a priority" or a correction. Six
+  of the eight "untrue or not theirs" noes were consumer businesses (de Kogge, Octelle, Averitopia, L'Office des
+  Artistes, the Country Club, OKOJŪ).
+- None of the three consumer yeses (Toffe Traktaties, Zenara, Custom Kit) turned into a meeting. None of the seven
+  companies we've met is a shop, venue or hospitality business.
+- Professional services mostly ignore us, 9% even reply. Their three yeses were an IT systemhaus (Noah), a claims
+  handler (Ulrich) and Lisanne, who said yes to the AI workflow message, not a site critique.
+
+**Weaker signals, direction only.**
+- **France and Belgium.** 2 yeses from 74, and 0 from 54 since September. The UK gave 11 from 93, the Netherlands 5 from
+  70, Germany 2 from 44. We write in English, which may be why. 21 of the 84 leads waiting for a first message are in
+  France.
+- **Old accepts.** First pitch more than 31 days after accepting, 1 yes from 46 (2%).
+- **Nothing to read** in company size (1 to 10 people 7.7%, 11 to 50 people 6.0%) or role (316 of 330 are owners or
+  founders). lemlist only filled in B2B or B2C and founding year for the summer list, so those can't be told apart from
+  the summer effect.
+
+**What it means.**
+1. **The two campaigns sending invites now, W1b and W1c, target consumer businesses on DIY site builders.** That's the
+   group with 3% yes and no meetings. Pointing them, or new ones, at B2B companies (the W2 and W3 drafts already describe
+   B2B service firms and growing ops heavy businesses) is the biggest change on the table. Campaigns are Raka's call.
+2. **Of the 84 waiting for a first message, 30 are B2B, 26 professional services, 21 consumer and 7 other.** Research
+   the B2B ones first and the consumer ones last.
+3. **Professional services get the AI workflow message**, the shape that booked Lisanne, rather than a site critique.
+4. **France and Belgium**, either stop inviting them or decide whether a French message is worth trying. English only
+   is Raka's rule, so that's his call.
+
 ## What to keep
 
 - One plain bump, then close. The polite closer round of 23 Oct got one reply from eight, and it was a no.

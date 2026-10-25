@@ -286,9 +286,10 @@ noes through, each with the lead it would have saved.
 9. **The send side.** Our domain lands in spam, so email only from Raka's Gmail until SPF, DKIM and DMARC are set on
    astraagency.nl. Two sessions share the inbox, so the thread is pulled in the minute before every send.
 
-**From 26 Oct half of all first messages are SKETCHB**, the opener A/B test Raka approved on 25 Oct ("lets try"). The
-contactId picks the arm, check-drafts enforces it, and `tools/ab-count.py` counts it.
-`docs/experiments/2026-10-26-opener-ab.md`.
+**Who to message comes before how to word it.** Since 1 Sep, B2B companies (tech, manufacturing, wholesale, B2B
+services) said yes 6 times in 68 and consumer businesses (hospitality, retail, leisure, education) 0 in 69, and none
+of the seven companies we've met is a shop, venue or hospitality business. Six of the eight "untrue or not theirs" noes were consumer businesses too. When picking
+the next batch, research the B2B leads first. The numbers are in the review's targeting section.
 
 ---
 

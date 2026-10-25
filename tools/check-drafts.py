@@ -20,8 +20,6 @@ Tag every draft with its shape in the heading above its fenced block, one of OPE
 REPLY, NUDGE, CLOSER, BOOKING, DELIVERY or CORRECTION. Untagged is treated as OPENER, and
 the five block, one exclamation, 95 to 170 word rules are the OPENER'S ALONE. The
 --replies flag relaxes the whole file the same way and is the blunt version of tagging.
-First messages are SKETCH, or SKETCHB for half of all leads from 2026-10-26, the opener A/B
-test. The contactId picks which one, see variant_for() and docs/experiments/2026-10-26-opener-ab.md.
 The tag has to sit within twelve lines above the fence and nothing starting with # or **
 may sit between the two, so the safest place is the line directly above it.
 
@@ -67,7 +65,7 @@ BANNED_STRUCTURES = [
 ]
 
 
-SHAPES = ("OPENER", "SKETCH", "SKETCHB", "REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY",
+SHAPES = ("OPENER", "SKETCH", "REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY",
           "CORRECTION", "CHAT")
 # CHAT, Raka 2026-10-14, "non icp so just a light chat of what theyre up to". A short friendly
 # first message to someone we won't pitch, asking what they're working on. No gate, no pitch,
@@ -75,10 +73,6 @@ SHAPES = ("OPENER", "SKETCH", "SKETCHB", "REPLY", "NUDGE", "CLOSER", "CLOSE", "B
 # SKETCH, Raka's test opener, 2026-10-12, "hi, so this looks cool. However, your website is this.
 # I suggest to do this. We make websites for blah blah. Shall I send you a sketch of how it looks
 # like?" Five blocks, a full research gate like any opener, its own wording checks below.
-# SKETCHB, variant B of the opener A/B test, Raka 2026-10-25, "lets try". The summer opening
-# (thanks for connecting, one line that shows we understood the business) in front of SKETCH's
-# gap and "I'd suggest", no brand line, a short ask. docs/experiments/2026-10-26-opener-ab.md.
-# Which lead gets which is decided by the contactId, never by hand, see variant_for().
 # Shapes whose length, block count and exclamation rules are NOT the cold opener's.
 # The opener template is five blocks (since 2026-09-24) with exactly one exclamation. Nothing else is.
 RELAXED = {"REPLY", "NUDGE", "CLOSER", "CLOSE", "BOOKING", "DELIVERY", "CORRECTION", "CHAT"}
@@ -158,15 +152,6 @@ def blocks_of(path):
 # deleting the old one.
 NEVER_AGAIN = {"DO_NOT_CONTACT", "CLOSED_DO_NOT_CONTACT", "CLOSED_NO_FURTHER_CONTACT",
                "CLOSED_PROMISED_LAST", "CLOSED_FINAL_MESSAGE", "CLOSED"}
-
-
-def variant_for(cid):
-    """The opener A/B test arm for a contact, A (SKETCH) or B (SKETCHB). Decided by a hash of the
-    contactId so it can't be chosen by hand and any session gets the same answer."""
-    import hashlib
-    if not cid:
-        return None
-    return "B" if int(hashlib.sha256(cid.encode()).hexdigest(), 16) % 2 else "A"
 
 
 def addressees_of(path):
@@ -370,13 +355,10 @@ def thread_problems(g, msg, shape=None):
     if len(kv.get("lead read", "").split()) < 15:
         probs.append("THREAD, 'lead read' missing, read it as the lead in one sentence of 15+ words")
     B = [b.strip() for b in msg.split("\n\n")]
-    if (len(B) >= 5 or (shape == "SKETCHB" and len(B) == 4)) and parts.get("link"):
+    if len(B) >= 5 and parts.get("link"):
         block2 = B[1].lower()
-        if shape == "SKETCHB":
-            proof = B[2].lower() + " " + B[3].lower()
-        else:
-            proof = (B[2].lower() + " " + B[4].lower()) if shape == "SKETCH" else \
-                (B[3].split("Pertamina.")[-1].lower() + " " + B[4].lower())
+        proof = (B[2].lower() + " " + B[4].lower()) if shape == "SKETCH" else \
+            (B[3].split("Pertamina.")[-1].lower() + " " + B[4].lower())
         for w in [x.strip().lower() for x in parts["link"].split(",") if x.strip()]:
             stem = w[:5]
             if stem not in block2:
@@ -470,7 +452,7 @@ def check(path, replies=False):
             # deliberate, not theirs, or on a site just paid for (Ramona, Steven Prins, Debby, Josh).
             # RULES.md 0F. From 14 Oct every opener writes the owner's likely no and what rules it out,
             # and the first message is the SKETCH shape (Raka, "lets continue using the id suggest").
-            if dm and dm.group(1) >= "2026-10-14" and shapes[i] in ("OPENER", "SKETCH", "SKETCHB"):
+            if dm and dm.group(1) >= "2026-10-14" and shapes[i] in ("OPENER", "SKETCH"):
                 if shapes[i] == "OPENER":
                     bad(i, "the first message is the SKETCH shape from 2026-10-14, 'I'd suggest ...' and "
                            "'Shall I send you a sketch of ...?' (docs/opener-template.md)")
@@ -486,7 +468,7 @@ def check(path, replies=False):
                            "isn't the angle. Take the next pain or NO_STRONG_ANGLE (RULES 0F)")
         # The GTM review, 2026-10-25, RULES 0G point 1. Craig had resigned and Clément had left, and
         # Clément's gate rested on lemlist's copy of his profile. The role is confirmed outside lemlist.
-        if not relaxed and dm and dm.group(1) >= "2026-10-26" and shapes[i] in ("OPENER", "SKETCH", "SKETCHB"):
+        if not relaxed and dm and dm.group(1) >= "2026-10-26" and shapes[i] in ("OPENER", "SKETCH"):
             st = re.search(r"^still there:(.*)$", gates[i] or "", re.M)
             urls = re.findall(r"https?://\S+", st.group(1)) if st else []
             if not st or len(st.group(1).split()) < 4:
@@ -495,61 +477,10 @@ def check(path, replies=False):
             elif not [u for u in urls if "lemlist" not in u]:
                 bad(i, "RESEARCH GATE, still there needs a URL outside lemlist, the company's own page, the "
                        "register or a recent post of theirs (RULES 0G point 1)")
-        # Both arms of the opener A/B test are out of the old five block template's reach.
-        sketch = shapes[i] in ("SKETCH", "SKETCHB")
-        # The opener A/B test from 2026-10-26. The contactId decides the variant, so nobody picks
-        # the leads that look most likely to say yes for the version they prefer.
-        if not relaxed and dm and dm.group(1) >= "2026-10-26" and shapes[i] in ("SKETCH", "SKETCHB"):
-            cids = addressees_of(path)
-            cid = cids[i] if i < len(cids) else None
-            first_block = (m.split("\n\n") or [""])[0]
-            in_test = shapes[i] == "SKETCHB" or (
-                not first_block.startswith("Something I've been thinking about") and
-                "However, did you know that " not in m)
-            if in_test:
-                want = variant_for(cid)
-                got = "B" if shapes[i] == "SKETCHB" else "A"
-                vl = re.search(r"^variant:\s*([AB])\b", gates[i] or "", re.M)
-                if cid is None:
-                    bad(i, "A/B test, no contactId in the heading above this draft, so its variant can't be checked")
-                elif want != got:
-                    bad(i, f"A/B test, {cid} is assigned to variant {want} by its contactId, this draft is {got}. "
-                           f"Write it as {'SKETCHB' if want == 'B' else 'SKETCH'} (docs/experiments/2026-10-26-opener-ab.md)")
-                if not vl or vl.group(1) != got:
-                    bad(i, f"RESEARCH GATE, add 'variant: {got}' so the result can be counted")
+        sketch = shapes[i] == "SKETCH"
         if relaxed:
             pass
-        elif shapes[i] == "SKETCHB":
-            if not 45 <= words <= 95:
-                bad(i, f"{words} words, SKETCHB shape, outside 45 to 95")
-            S = [" ".join(b.split()) for b in m.split("\n\n")]
-            if len(S) != 4:
-                bad(i, f"{len(S)} blocks, SKETCHB is 4, thanks and understanding, however, I'd suggest, the ask")
-            else:
-                if not re.match(r"Hi [^,]+, thanks for connecting\. \S", S[0]):
-                    bad(i, "SKETCHB block one must be 'Hi [name], thanks for connecting. [one line that shows we "
-                           "understood what they do]'")
-                elif len(S[0].split(". ", 1)[1].split()) > 30:
-                    bad(i, "SKETCHB block one's understanding line is over 30 words, keep it to one sentence")
-                if re.search(r"looks (cool|interesting)", S[0], re.I):
-                    bad(i, "SKETCHB block one never says 'looks cool' or 'looks interesting', it shows what they do")
-                ul = re.search(r"^understood:(.*)$", gates[i] or "", re.M)
-                if not ul or not re.search(r"https?://", ul.group(1)):
-                    bad(i, "RESEARCH GATE, SKETCHB needs 'understood: <what they do, in their own words> | <URL>' "
-                           "behind the line in block one")
-                if not S[1].startswith("However"):
-                    bad(i, "SKETCHB block two must open 'However ...', the gap and what it likely costs them")
-                for k, sent in enumerate(re.split(r"(?<=[.!?]) (?=[A-Z])", S[1])):
-                    if len(sent.split()) > 30:
-                        bad(i, f"SKETCHB block two sentence {k+1} is {len(sent.split())} words, cap 30")
-                if not S[2].startswith("I'd suggest "):
-                    bad(i, "SKETCHB block three must open 'I'd suggest ...'")
-                if not re.fullmatch(r"Shall I send you a sketch( of .+)?\?", S[3]) or len(S[3].split()) > 14:
-                    bad(i, "SKETCHB block four must be 'Shall I send you a sketch?' or '... a sketch of [thing]?', "
-                           "14 words max")
-                if "Unilever" in m:
-                    bad(i, "SKETCHB carries no brand line, that's one of the things the test changes")
-        elif shapes[i] == "SKETCH":
+        elif sketch:
             # The test shape is short by design. Raka's spoken version runs about 50 to 70 words.
             if not 45 <= words <= 115:
                 bad(i, f"{words} words, SKETCH shape, outside 45 to 115")
@@ -623,9 +554,6 @@ def check(path, replies=False):
         if relaxed:
             if m.count("!") > 1:
                 bad(i, f"{m.count('!')} exclamation marks in a reply, at most 1")
-        elif shapes[i] == "SKETCHB":
-            if m.count("!") > 1 or ("!" in m and "!" not in m.split("\n\n")[0]):
-                bad(i, "SKETCHB has at most one exclamation mark, and only in block one")
         elif m.count("!") != 1:
             bad(i, f"{m.count('!')} exclamation marks, must be exactly 1")
         elif "!" not in m.split("\n\n")[0]:
@@ -754,9 +682,7 @@ def check(path, replies=False):
              # The social and branding block four, Raka, 2026-10-07. Fixed on purpose.
              "branding and websites and social media management",
              # The SKETCH test shape's fixed words, Raka, 2026-10-12.
-             "looks cool!", "i'd suggest", "shall i send you a sketch of",
-             # The SKETCHB shape's fixed words, 2026-10-25.
-             "thanks for connecting.", "shall i send you a sketch?")
+             "looks cool!", "i'd suggest", "shall i send you a sketch of")
     c = Counter()
     for m in msgs:
         low = m.lower()
