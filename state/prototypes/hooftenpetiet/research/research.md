@@ -62,3 +62,19 @@ either site depended on the rejected line.
 Their own photos, 73 downloaded from their own pages (research/assets/hp-photos, contact sheets sheet-0/1). Used only as
 the interiors and work they present them as, never captioned with a person's name or a place their page doesn't give.
 Logos from their own sites (research/assets/brand). Fonts Fraunces and Instrument Sans, OFL 1.1, self hosted.
+
+## Added for v2, 25 Oct
+
+| Fact | Source |
+|---|---|
+| "Een onafhankelijk bureau toetst de tevredenheid voor onze klanten bij hun logees! ... beoordeeld met een cijfer tussen de 8 en 8,5!", logee quote "We hebben er geen woorden voor, helemaal top!", published 30 Jan 2020 | https://hooftenpetiet.nl/onze-logeerwoningen-stemmen-de-tijdelijke-bewoners-vrolijk/ (crawl text, datePublished in the page) |
+| "Hooft & Petiet is ook al een aantal jaren betrokken als partner van Cazas" | /cazas-wonen-samen-zorgen-voor-woongeluk-ook-tijdens-renovaties/ |
+| "U kunt alleen de inrichting bij ons onderbrengen, maar ook aanvullende werkzaamheden, afwerking en beheer combineren", the four groups, "De huisvesting moet aansluiten op de planning van het renovatieproject" | /logeerwoning-rustwoning-wisselwoning/ |
+| Rustwoning, "een knusse woonkamer met werkplekken, verschillende zitjes en een kookvoorziening ... rustig te werken of om te slapen na een nachtdienst". Logees bring "kleding en toiletartikelen en eigen beddengoed en handdoeken", "TV en Wifi zijn geregeld" | /cazas-wonen-.../ |
+| Check in, "staat er een potje koffie/thee klaar" | /onze-logeerwoningen-stemmen-de-tijdelijke-bewoners-vrolijk/ |
+| ReShare's own reasoning, "Circulair inrichten is niet langer iets voor de toekomst, het is een noodzaak ... er is voorraad nodig, kennis van hergebruik, een betrouwbare logistieke keten en partners die meedenken" | https://reshareliving.com/ |
+| The welcome photo (2026_04_IMG_5315) shows a "Welkom" card, a welcome folder and a jar of sweets being set out. Used uncaptioned | their own image |
+
+Audience context, search results only, used in the brief and not on the sites. Eigen Haard's Rivierenhuis newsletter
+(July 2024) on outside satisfaction calls during renovation, AT5 on Stadgenoot Noord residents bounced between
+corporation and contractor.

@@ -53,6 +53,10 @@ Thanks Willem, I've just sent it over to marketing@keypro.nl!
 >   state/prototypes/hooftenpetiet/handover.md.
 > - Gmail draft r3040318523259070641 updated to this text. NOT SENT.
 
+> EDITED 25 Oct ~13.30 UTC. Both sites rebuilt as v2 on Raka's notes (audience first, one action, no Claude look),
+> same URLs. The v1 line about the floor plan and the sofa loop no longer describes the sites, both scenes are gone,
+> so the fourth paragraph changed. Live verified 46 of 46 and 16 of 16 files, functional suite 52 of 52 on the live URLs.
+
 EMAIL to marketing@keypro.nl, subject "Hooft & Petiet and ReShare, two working sites at Willem's request"
 EMAIL
 ```
@@ -66,7 +70,7 @@ Try them yourself.
 https://astra-hooftenpetiet-prototype.netlify.app
 https://astra-reshare-prototype.netlify.app
 
-Hooft & Petiet furnishes an empty home in your four steps as you scroll, and ReShare follows one sofa through its lives. The quote form doesn't send anything, so click away.
+Hooft & Petiet is built around the project leader planning a renovation, with an availability request right under the first photo, and ReShare sends each visitor to KeyPro or Hooft & Petiet. The quote form doesn't send anything, so click away.
 
 I run Astra agency. We make websites for brands like Unilever, AXA, Pertamina.
 

@@ -1,8 +1,13 @@
-# Hooft & Petiet and ReShare Living Group, handover. 25 Oct 2026
+# Hooft & Petiet and ReShare Living Group, handover. 25 Oct 2026, v2
 
 For Willem Straat's team at marketing@keypro.nl, on his instruction of 22 Oct ("Please sent you message to
 marketing@keypro.nl") and Raka's of 25 Oct ("wait i think we needa send a prototype, thats my thing"). Our 14 Oct opener
-offered "a modernised Hooft & Petiet site and a finished ReShare site, built as one family". This is that, built and live.
+offered "a modernised Hooft & Petiet site and a finished ReShare site, built as one family".
+
+**v2 replaces v1, same URLs.** Raka's note on v1, 25 Oct, it reads as a typical Claude or ChatGPT site, a 500 euro site,
+information without purpose. v2 was rebuilt from the visitor and the one action, after rendering 37 premium sites online
+(28 loaded). The brief, the research and the plan are in research/v2/brief.md. v1 is in git history (build/ and the
+commit f71d3e2), not on the web.
 
 ## Live
 
@@ -11,72 +16,58 @@ offered "a modernised Hooft & Petiet site and a finished ReShare site, built as 
 | Hooft & Petiet | https://astra-hooftenpetiet-prototype.netlify.app | / , /verkoopstyling/ , /offerte/ , and /en/ , /en/sales-styling/ , /en/quote/ |
 | ReShare Living Group | https://astra-reshare-prototype.netlify.app | / and /en/ |
 
-Netlify ids, astra-hooftenpetiet-prototype c8d94385-c7d6-43a5-b5b1-9b2b88901ed3 (deploy 6addc73eac3224c7e3fc5418),
-astra-reshare-prototype 216660cc-b644-4e72-9ed5-cf4c6ecc79d3 (deploy 6addc7541ec60705edf2e854). Team SSO switched off on
-both. noindex on every page, X-Robots-Tag noindex header and a disallow robots.txt.
+Netlify ids, astra-hooftenpetiet-prototype c8d94385-c7d6-43a5-b5b1-9b2b88901ed3 (v2 deploy 6adddb236e15f785d213e1d2),
+astra-reshare-prototype 216660cc-b644-4e72-9ed5-cf4c6ecc79d3 (v2 deploy 6adddb2f3a3b5d519badd4c1). Team SSO off on both.
+noindex on every page, X-Robots-Tag header, disallow robots.txt.
 
-## What it is
+## Who it's for and what it asks them to do
 
-**Hooft & Petiet, one idea, "alleen de koffer nog uitpakken"** (Brenda de Wilde, their Cazas page).
-1. Hero. Their house mark, lime roof and square with the ampersand, opens as you scroll into a full bleed room of theirs.
-   "Wij maken van elke woning een thuis." ends on "Direct bewoonbaar, zodra de sleutel omgaat."
-2. Why now. 180.000 corporatiewoningen still on E, F or G at the end of 2022, all to go by 2028 (Volkshuisvesting
-   Nederland). A day and night bar shows logeer, rust and wissel, keyboard tabs.
-3. An SVG floor plan of an empty home furnishes itself in their own four steps as you scroll, and ends with a suitcase in
-   the hall and "Alleen de koffer nog uitpakken."
-4. Brenda's quote, their photo strip, beheer in three pillars, the projects as a log (Portaal 570, HEF Wonen 12 of 45,
-   Stadgenoot, Cazas) with Danny Mooren's and Thierry Farla's quotes, seven service bands, the partner marquee, a band
-   handing over to ReShare, MVO, and a lime close with a starter form that carries type and number into the quote page.
-5. Verkoopstyling, a price calculator on their own published prices (2.150, 2.549, 3.150, 3.550, 250 m² op aanvraag,
-   plus 99,99 per week), and a gallery of their own styling photos.
-6. Offerte, a three step quote request on their real form fields (the ten project types, stijl, personen, ruimten,
-   datum, oppervlak, the seven pakketten) with a review step. It sends nothing and says so on the page.
+**H&P.** The project leader at a housing association or renovation contractor who has to move residents out for weeks.
+Their questions in order, can you have my homes ready on the contractor's date, will my residents be all right, what do
+you take off my hands, have you done this for a corporation like mine, what will it cost. The home page answers them in
+that order and the one action sits under the first photo, an availability bar (soort woning, aantal woningen, vanaf, hoe
+lang) that carries the answers into the quote form. Estate agents go to verkoopstyling with the price on screen, the
+others to a quiet "ook voor" row.
 
-**ReShare, one idea, "meubels meerdere levens geven"** (their mission).
-1. Re, Share and Living explained in their own words, KeyPro's teal ring orbiting behind.
-2. A loop scene, one sofa round the circle through magazijn, logeerwoning, expatwoning, verkoopstyling and on again, the
-   life counter going 1 to 4. Labelled on the page as an example.
-3. Why now (EEB 10 million tonnes, 50% circulair inkopen in 2030 as KeyPro words it, 2028), Willem's quote from the
-   launch, the two companies side by side, group figures, one way of working, their five mission points, contact.
+**ReShare.** Someone checking the group, often a buyer who has to purchase circular. The page explains the name in their
+words, then sends them through one of two doors, KeyPro or Hooft & Petiet, or to contact@reshareliving.com.
 
-Every fact and its source is in research/research.md. The art direction and the 50 site teardown are in
-research/art-direction.md and research/teardown/.
+## The design language
+
+Warm white and ink, photography carries the colour, one flat field per site (a muted dusk version of H&P's indigo, a deep
+green for ReShare that nods to KeyPro's teal), no gradients. Newsreader upright for H&P headlines, Albert Sans for
+everything else and light as ReShare's display face, both OFL and self hosted. Square buttons, 48px, small tracked caps.
+Logo in the middle. Seven sections on the H&P home where v1 had eleven. Only their 2026 photo shoot and their best styled
+rooms. Images settle in once, nothing else moves.
 
 ## Checked, 25 Oct
 
-- Copy traced phrase by phrase to the crawl of their own pages. Three lines did not trace and were rewritten (a
-  "sleutelpunt" for the projectwoning, a "binnen een werkdag" reply time on the quote page, "uw bestaande meubilair").
-  Group figures attributed where they came from, the 2 vestigingen are KeyPro's, Utrecht is H&P's, so it reads 3 steden.
-- 16 page views screenshotted at 1440 and 390 and every frame looked at, twice, after two rounds of fixes.
-- Functional, 42 of 42 pass. Starter form to quote with prefill, every quote step and its validation, the summary, the
-  no send, zero non GET requests, the price calculator at every size and with weeks, NL and EN number formats, the tabs
-  by keyboard, the phone menu and Escape, 32 internal links 200 and every anchor present, no horizontal overflow at 320,
-  360, 390, 414, 768, 1024, 1280, 1440 and 1920, and everything visible with no JavaScript and with reduced motion.
-- Every image decodes after a scroll, with and without JavaScript, 64 on the H&P home, 10 on verkoopstyling, 10 on ReShare.
-- axe, WCAG 2.1 AA plus best practice, clean on 12 views after fixing small source text contrast, the footer language
-  switch, heading order and the prototype pill's landmark.
-- Copy rules over all visible text, no dashes apart from Oud-West, no colons, no banned words or phrases, contractions in
-  every English page. The one exclamation mark is Thierry Farla's own.
-- Live, 80 of 80 files on H&P and 29 of 29 on ReShare verified (assets by sha256, HTML by visible text, since Netlify
-  rewrites HTML), cold render of 6 live pages at both widths with 0 errors and 0 broken images.
+- Every line traced to their own pages (research/research.md). New in v2, the residents' 8 to 8,5 from an independent
+  bureau is their own post of 30 Jan 2020 and is dated on the page. Cazas is "al een aantal jaren" partner in their words.
+- 16 page views screenshotted at 1440 and 390, plus 320, and looked at.
+- Functional, 52 of 52 locally and 52 of 52 on the live URLs. The bar prefills the quote (type, number, month as a date,
+  duration), every quote step validates, Enter can't submit early, the summary shows labels, nothing is sent, the
+  calculator on their prices with weeks, the package link carries size and weeks into the quote, NL and EN number
+  formats, the phone menu with focus moving in and Escape, no sideways scroll at nine widths, everything visible and every
+  image decoded with no JavaScript and with reduced motion. Internal links, 26 checked locally, all 200.
+- axe, WCAG 2.1 AA plus best practice, clean on all 16 views.
+- Copy rules over every visible word, no dashes apart from Oud-West, no colons, no banned words, contractions in English.
+  The two exclamation marks and "We have" sit inside residents' and HEF Wonen's own quotes.
+- Live, 46 of 46 files on H&P and 16 of 16 on ReShare match the build (assets by sha256, HTML by visible text).
 
 ## Must not ship as is
 
-- The prototype pill and the footer line say this is a prototype by Astra agency. Keep them while it's a pitch.
-- Photos are their own, taken from hooftenpetiet.nl, never captioned with a person or a place. The partner logos are 23
-  of the 25 on their own homepage (BNS and HomePlan not used), shown under "Onze partners" as their homepage does.
-- The 180.000 is a 2022 figure and is dated on the page. Refresh it from the Aedes benchmark before a real launch.
+- The prototype line at the top and in the footer stays while it's a pitch.
+- Photos are their own, never captioned as a person or a place. Partner logos are 8 of the 25 on their homepage.
+- The 8 to 8,5 dates from 2020. Use a newer measurement if they have one.
 
-## Sending, and the Gmail link problem
+## Sending
 
-The email to marketing@keypro.nl is a Gmail draft, id r3040318523259070641, text in state/drafted_2026-10-22-willem.md.
-NOT SENT. The Gmail connector rewrites every link it writes into a google.com/url redirect with a ust stamp about 24
-hours ahead, in the stored draft and in what it sends. Proven 25 Oct on the raw MIME of the 08.51 UTC meeting brief and on
-the 9 Oct Acquitas reply, where our link is wrapped and the links quoted from Kyson's mail are not. After the stamp passes,
-a click shows Google's redirect notice first. So this email is best sent by Raka from Gmail itself with the two links
-pasted fresh, or the links go on LinkedIn to Willem instead.
+Gmail draft r3040318523259070641 to marketing@keypro.nl, text in state/drafted_2026-10-22-willem.md, updated for v2.
+NOT SENT. The Gmail connector wraps every link in a google.com/url redirect that expires after about a day, so Raka sending
+it from Gmail himself with the links pasted fresh is the clean way.
 
 ## Rebuild
 
-`python3 build/build.py` regenerates site-hp and site-rs from build/ (css, js, fonts, media, and every word of copy in
-build.py). Serve each folder at its root, the pages use absolute paths.
+`python3 build2/build.py` regenerates site-hp and site-rs from build2/ (css/site.css, js/site.js, fonts, media, every word
+of copy in build.py). Serve each folder at its root.
