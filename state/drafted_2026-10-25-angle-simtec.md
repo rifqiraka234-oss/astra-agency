@@ -1,3 +1,4 @@
+<!-- SENT 2026-10-25 16.02.09 UTC on Raka's "Send the first message drafts", act_APmbPMbxsgsXs675z. GATE ARCHIVED. Do not send again. -->
 # Draft, 2026-10-25, Raka's angle call for Joseph O'Sullivan (Simtec). NOT SENT, waiting on Raka's word
 
 Raka, 2026-10-25, word for word: "modern website that has more sales. This is such a powerpoint website".

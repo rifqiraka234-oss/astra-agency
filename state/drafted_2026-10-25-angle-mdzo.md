@@ -1,3 +1,4 @@
+<!-- SENT 2026-10-25 16.02.46 UTC on Raka's "Send the first message drafts", act_oLwMoEtMeai8eTfJt. GATE ARCHIVED. Do not send again. -->
 # Draft, 2026-10-25, Raka's angle call for Mentor Bilali (MagenDarm Zentrum Oberaargau). NOT SENT, waiting on Raka's word
 
 Raka, 25 Oct, word for word: "modern website to get more sales and gtm to retain and have loyal customers, this is such a

@@ -1,3 +1,4 @@
+<!-- SENT 2026-10-25 16.03.21 UTC on Raka's "Send the first message drafts", act_KQRYuDnM7yQSCed7u. GATE ARCHIVED. Do not send again. -->
 # Drafts, 2026-10-25, Raka's angle call for Elle Lawrence (Fae Club). NOT SENT, waiting on Raka's word
 
 Raka, 2026-10-25, word for word: "modern website".

@@ -1,3 +1,4 @@
+<!-- SENT 2026-10-25 16.02.28 UTC on Raka's "Send the first message drafts", act_D7EMCbFseFeNmTFBA. GATE ARCHIVED. Do not send again. -->
 # Draft, 2026-10-25, Raka's angle call for EQ Nexus. NOT SENT, waiting on Raka's word
 
 Raka, 25 Oct, word for word: "website and gtm to get more sales".
