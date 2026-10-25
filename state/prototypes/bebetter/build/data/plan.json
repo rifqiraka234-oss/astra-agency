@@ -1,0 +1,107 @@
+{
+ "_note": "Every figure the plan prints or computes from, with its source and the time it was read on 25 Oct 2026 (UTC), copied from research/strategy-facts.md where each row has its three checks. The competitor table there has no per row time, only the session window.",
+ "gyms_cbs": {
+  "v": 2310,
+  "src": "CBS StatLine 83822NED, Fitnesscentra, 2023 (provisional), Vestigingen",
+  "url": "https://www.cbs.nl/nl-nl/cijfers/detail/83822NED",
+  "read": "17:56"
+ },
+ "clients_cbs": {
+  "v": 3237000,
+  "src": "CBS StatLine 83822NED, 2023 (provisional), Totaal klanten 3237 x 1000",
+  "url": "https://www.cbs.nl/nl-nl/cijfers/detail/83822NED",
+  "read": "17:56"
+ },
+ "shop_share": {
+  "v": 0.08,
+  "src": "CBS StatLine 83822NED, 2023 (provisional), Winkel met sportkleding e.d., 8% of establishments. 7% in 2015, 2019 and 2021",
+  "url": "https://www.cbs.nl/nl-nl/cijfers/detail/83822NED",
+  "read": "17:56"
+ },
+ "nlactief": {
+  "v": 1200,
+  "src": "NL Actief homepage, \"zo'n 1200 locaties met in totaal 4,3 miljoen fitnessconsumenten\"",
+  "url": "https://www.nlactief.nl/",
+  "read": "17:57"
+ },
+ "crossfit_nl": {
+  "v": 242,
+  "src": "CrossFit affiliate map data, Netherlands",
+  "url": "https://www.crossfit.com/map",
+  "read": "18:00"
+ },
+ "crossfit_be": {
+  "v": 99,
+  "src": "CrossFit affiliate map data, Belgium",
+  "url": "https://www.crossfit.com/map",
+  "read": "18:00"
+ },
+ "crossfit_rdam": {
+  "v": 8,
+  "src": "CrossFit affiliate map data, Rotterdam",
+  "url": "https://www.crossfit.com/map",
+  "read": "18:00"
+ },
+ "coaches": {
+  "v": 8400,
+  "src": "KVK figures via ANP, \"ruim 8400 fitnesscoaches\" early 2025",
+  "url": "https://nieuws.nl/economie/aantal-personal-trainers-in-tien-jaar-tijd-ruim-verviervoudigd",
+  "read": "18:02"
+ },
+ "january": {
+  "src": "ANP, 17 Jan 2023. Basic-Fit \"historisch gezien 30 tot 40 procent meer nieuwe leden ... in januari\", David Lloyd NL 25 to 30 percent",
+  "url": "https://www.harderwijkercourant.nl/sport/sport/893239/sportscholen-profiteren-weer-als-vanouds-van-goede-voornemens",
+  "read": "17:59"
+ },
+ "soe": {
+  "date": "2026-11-04",
+  "src": "Sport Ondernemers Expo, 4 November 2026, Evenementenhal Gorinchem, the first B2B fitness fair. Exhibitor list, 97 exhibitors, BeBetter under Apparel",
+  "url": "https://sportondernemersexpo.nl/deelnemerslijst/",
+  "read": "17:53"
+ },
+ "sold_out": {
+  "src": "BeBetter on LinkedIn, 26 Mar 2026, \"Four hours later… we got the call\"",
+  "url": "https://www.linkedin.com/feed/update/urn:li:activity:7442878572014264320/",
+  "read": "16:12"
+ },
+ "hungary": {
+  "v": 200,
+  "src": "BeBetter on LinkedIn, 29 Jun 2026, \"Great. We'd like 200 pieces.\"",
+  "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477367996512911360/",
+  "read": "16:13"
+ },
+ "worked_with": {
+  "gyms": 10,
+  "coaches": 3,
+  "src": "BeBetter on LinkedIn, 29 Jun 2026, \"working with 10 gyms and 3 personal coaches across Europe\"",
+  "url": "https://www.linkedin.com/feed/update/urn:li:activity:7477367996512911360/",
+  "read": "16:13"
+ },
+ "fibo": {
+  "src": "BeBetter on LinkedIn, 23 Apr 2026, \"€10.000+ in just 4 days at FIBO\"",
+  "url": "https://www.linkedin.com/feed/update/urn:li:activity:7453061415109726208/",
+  "read": "16:12"
+ },
+ "followers": {
+  "v": 62,
+  "src": "BeBetter Official company page on LinkedIn, \"62 followers\"",
+  "url": "https://www.linkedin.com/company/bebetter-official",
+  "read": "16:12"
+ },
+ "print_shop": {
+  "src": "Bedrukt.nl, \"vanaf 1 stuk, zonder opstartkosten\", \"productietijd van 3–5 werkdagen\". Tshirtdeal, sport shirt from €6.00, \"vanaf 1 stuk\"",
+  "url": "https://www.bedrukt.nl/sportkleding-bedrukken/",
+  "url2": "https://www.tshirtdeal.nl/diverse/sport-artikelen/sportshirt/",
+  "read": "between 16:12 and 18:10"
+ },
+ "yokkao": {
+  "src": "YOKKAO Custom Lab, \"Our designers create your collection mockup\", \"Production takes 6-8 weeks\"",
+  "url": "https://eu.yokkao.com/pages/custom-lab",
+  "read": "between 16:12 and 18:10"
+ },
+ "agency": {
+  "src": "Printo, sportscholen page, \"stuur je logo, wensen en aantallen door\", no price or time on the page",
+  "url": "https://www.printo-online.nl/pages/sportkleding-bedrukken-sportscholen",
+  "read": "between 16:12 and 18:10"
+ }
+}

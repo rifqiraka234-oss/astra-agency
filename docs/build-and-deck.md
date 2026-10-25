@@ -794,3 +794,44 @@ is the route a ticket takes, pay in full or in 3, today or the new site, with th
 | Klarna's own UK pay in 3 page couldn't be read, retailer pages said 30 and 60 days, Stripe's page said every two weeks | When two sources disagree on a provider's terms, the build labels its dates as an example and the plan says the provider sets them |
 | One rival from the first research (Through The Veil) had already happened and its page returned 410 | Rivals in a chart are reopened on the day and dropped once their date has passed. The day's search found a rival on the same night as the client's ball, which was worth more than the old one |
 | Raka's word "prototype" against the 0G rule of one screen when there's no budget sign | Build what he asked for by name, and put the budget flag at the top of the report and in the drafts file |
+
+### BeBetter, the Saavedra v3 recipe on a gymwear brand (25 Oct 2026)
+
+Laurens van Dorp said yes to "a sketch of the new BeBetter site", promised as "a more professional BeBetter site that
+sells the line and has its own page where gyms design and order their custom kit". Live,
+https://astra-bebetter-prototype.netlify.app/ (the kit page is /gyms/) and https://astra-bebetter-plan.netlify.app/.
+Source and handover, state/prototypes/bebetter. The idea came from their own work. Every custom kit they've posted shares
+one grammar, a washed tee from the back, the gym's name across the shoulders, an emblem, EST and a city. So the kit
+page is that back, full screen, and the visitor's gym is printed on it as they type, then every control changes the
+same garment. The teardown (53 sites) found 6 of 44 apparel sites showing a garment from the back and none letting you
+change it.
+
+What carried over and worked again. The four lines and the flow table before any code, one state written by every
+control and read by every display (the four garment symbols, the work order, the bar, the stub, the form and the mail),
+a planted control on every test, and the plan's numbers in one data file with their sources.
+
+| Hiccup | Rule |
+|---|---|
+| The print colour variable was called `--ink`, the same name as the page's ink, and the whole page turned tan when the script set it | Garment and brand variables get names nothing else uses (`--print`, `--g`). Grep the CSS for every custom property kit.js sets before the first build |
+| The size run's wrapper had class `sr`, which is the screen reader only utility, so every bar was 1 px wide and invisible | Utility class names are reserved. Grep the CSS for a class before giving it to a component |
+| Classes on a wrapper never reached the garment, because a `<use>` copy is styled from its symbol's place in the defs | Everything that changes inside a `<use>` is a CSS custom property (`display:var(--v-mono)`), set on `<html>`. They inherit into the shadow tree, classes don't |
+| An aria-label built as `{L(en, nl)} XS` put two language spans inside an attribute and broke the HTML | A language pair is a whole attribute value or nothing. The build now fails on any `l-en` span inside an attribute |
+| A blur filter on a perfectly vertical fold path drew a hard line | Filter regions default to the bounding box, and a straight line has no width. Use `filterUnits="userSpaceOnUse"` on soft shading |
+| An SVG with `width:auto` inside an inline block wrapper rendered at zero size | Give the SVG `aspect-ratio` and a height, and the wrapper `width:fit-content` |
+| The clock scene was wrapped twice, once by the page and once by its own builder, and its quotes floated over the next section | A component builder returns only its inside, the page owns the wrapper |
+| The plan's source times were typed from memory and some were wrong | Metadata is copied from the facts file, never typed. Where the file has no time, say the session window |
+| Two plan lines said more than the sources. "The one brand that designs" (Eigen Label also designs lines) and "gyms sign most of their members in January" (operators say 25 to 40% more that month) | Reread every plan sentence against its row in strategy-facts.md before the build, and state the limits of a search under the sources |
+| Their own kit artwork carried a Nike swoosh on the teddy's shoe (Bookaleap), a stand photo a BOSS logo, another Monster crates | The third party check covers the client's own designs as well as their photos. Crop it, or leave it out and tell them |
+| "By June we'd made custom kit with 10 gyms" when their post says "working with" | Quote their verb |
+| The drafts gate failed a €2,500 price quote, its money rule only allows a figure that quantifies a loss | Don't game the gate. Put the priced version in its own file, flag it, and let Raka decide |
+| The hidden RECEIVED stamp at scale 1.6 poked out of the screen at 390, caught only because the overflow control run listed every offender | Read the control run's full output, not only whether it caught the plant |
+| `a && b && (tests) &` backgrounded the whole chain, so nothing printed and it looked as if nothing ran | Background only the test runner, never the end of an `&&` chain |
+| The inbox routine drafted a holding reply to Laurens ("I'll put the sketch together this week") while the sketch was being built, so two different messages to one lead sat in drafts | Before writing a delivery draft, grep state/ for every draft to that contactId and archive the one it replaces, with a line saying why |
+| A build hash compared with absolute paths before and relative paths after reported a change that wasn't there | Hash the same path strings both times, or hash the file contents only. Rebuild twice to prove the build is deterministic before believing a change |
+| "Never dim text to show state" landed from another build mid session, and the clock's future quotes were dimmed to 50% (axe passed at large size) | Pull before the final deploy and check the build against rules added that day. Reveal what comes next, never dim it |
+
+The plan's spine came from the facts agent finding BeBetter on the Sport Ondernemers Expo exhibitor list for 4 Nov, the
+only Apparel entry of 97. They're already selling to gym owners face to face, so the plan builds on that instead of
+pitching gyms as new, and the delivery names the fair. The film is one Mixkit Free loop (a hand wrap, no face) played
+only inside a huge 1%, knocked out with multiply and outlined in their tan, because their creed is the one place film
+means something on a brand with no footage of its own.
