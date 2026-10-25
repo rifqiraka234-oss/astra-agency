@@ -794,3 +794,32 @@ is the route a ticket takes, pay in full or in 3, today or the new site, with th
 | Klarna's own UK pay in 3 page couldn't be read, retailer pages said 30 and 60 days, Stripe's page said every two weeks | When two sources disagree on a provider's terms, the build labels its dates as an example and the plan says the provider sets them |
 | One rival from the first research (Through The Veil) had already happened and its page returned 410 | Rivals in a chart are reopened on the day and dropped once their date has passed. The day's search found a rival on the same night as the client's ball, which was worth more than the old one |
 | Raka's word "prototype" against the 0G rule of one screen when there's no budget sign | Build what he asked for by name, and put the budget flag at the top of the report and in the drafts file |
+
+### Fae Club v2, after "its an art company and the website is not artsy enough" (25 Oct 2026, evening)
+
+Raka on v1, "Take the design 10x further with the art the animations the colours gradients and all!!! Come on". v1
+was correct, on brand and calm, and that was the problem for a company whose product is a night of fantasy. What made v2,
+repeat it for any lead whose business is an experience.
+1. **Find the hero inside their own mark.** Their logo's C is a crescent with a fairy scattering stars. Traced from
+   their own logo file with potrace (cut out by connected shape so the letters stay behind, upsampled 4x, the frame
+   curve dropped) into one crisp vector, then made the hero, huge, in moving foil, her stars turned into a live stream.
+   The interaction came out of the mark, her stardust gathers the guest's portrait.
+2. **A colour script, not a palette.** One WebGL sky behind the page whose colours move through the jewel tones their
+   audience lives in (rendered from the Sarah J. Maas and FairyLoot sites that evening), eased by the section in view,
+   tinted by the visitor's own choice.
+3. **Everything you'd hold gets a material.** Velvet and gilt for the cover, parchment and gilt edges for pages, foil
+   that tilts for invitations, liquid gold in arches for money, wax for a seal.
+4. **Their architecture as the frame.** The Spanish Hall's arches became the photo frames and the payment arches.
+
+| Hiccup | Rule |
+|---|---|
+| A liquid wave inside a clip-path arch was twice the arch's width and the page scrolled sideways at every width | clip-path hides, it doesn't contain. Anything animated inside a clipped shape gets overflow hidden on the clipped box too |
+| The scroll scene's class was added by the deferred script, which now waited behind a new art script, and the moon jumped at 2.7 s (CLS 0.14) | A layout that changes when script arrives is switched on by a one line inline script at the top of its section, not by the deferred bundle |
+| The moon's halo had a hard circular edge | Glows use closest-side gradients that reach zero inside their box, never a border-radius cutting a gradient that hasn't faded |
+| The wax seal sat on the ticket reference on phones | Stamps and seals sit across an edge (the band's foot), never on data |
+| The art loop on the plan, a document, cost 770 ms of blocking time on phones | Decoration on a reading page starts on the first scroll or touch. The hero of a prototype may start at load, with a low power mode that halves the work when frames run slow |
+| The late start let a mouse move draw sparkles before their sprites existed, and the plan test caught a script error | Every entry point of an art layer checks one ready flag. A delayed start needs its own test pass |
+| A translucent header turned grey over the plan's paper chapters and failed contrast | Glass only over a ground you control. Over paper the header is near opaque |
+| The guest ring read as scattered and its bottom portrait sat on the label | Shapes made of small photos need a visible line joining them and room below the arc |
+| The first cross fade from moon to book ghosted | Sequence a hand over, the first thing leaves before the next arrives, the one object that travels (the portrait) carries the eye across |
+| numpy and scipy weren't on /usr/local/bin/python3 | `python3 -m pip install` for the python the build runs on |

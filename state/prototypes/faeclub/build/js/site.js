@@ -68,7 +68,8 @@
     setO('qty', S.qty);
     setO('qtyline', S.qty === 1 ? 'Just you. You won’t be the only one.' : S.qty === 2 ? 'You and a friend.' : 'You and ' + (S.qty - 1) + ' friends.');
     $$('.g-o').forEach(function (o, i) { o.classList.toggle('on', i < S.qty); });
-    $$('.cov-o').forEach(function (o) { o.classList.toggle('on', o.getAttribute('data-ch') === S.ch); });
+    $$('.cov-o,.cj-o').forEach(function (o) { o.classList.toggle('on', o.getAttribute('data-ch') === S.ch); });
+    if (window.FAE) FAE.setChar(S.ch); else html.setAttribute('data-ch', S.ch);
     $$('.ch').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-ch') === S.ch ? 'true' : 'false'); });
     $$('[data-plan]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-plan') === S.plan ? 'true' : 'false'); });
     $$('[data-pick]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-pick') === S.tier && S.event === 'ftb' ? 'true' : 'false'); });
@@ -77,11 +78,11 @@
     /* the payment bars */
     var pb = $('[data-pb]');
     if (pb) {
-      var lis = $$('li', pb), max = x.pays[0];
-      lis.forEach(function (li, i) {
+      var lis = $$('li', pb);
+      lis.forEach(function (li, i) { /* each arch fills with that payment's share of the whole ticket */
         var on = i < x.pays.length;
         li.classList.toggle('off', !on);
-        li.style.setProperty('--h', on ? (x.pays[i] / max).toFixed(4) : 0);
+        li.style.setProperty('--h', on ? (x.pays[i] / x.total).toFixed(4) : 0);
         if (on) { setO('p' + i, gbp(x.pays[i])); setO('d' + i, i === 0 ? 'Today' : (function (d) { return d.getDate() + ' ' + MON[d.getMonth()]; })(addMonths(today, i))); }
       });
       pb.style.setProperty('--n', 3);
@@ -103,13 +104,13 @@
   };
 
   $$('.ch').forEach(function (b) {
-    var oval = function () { return $('.cov-o[data-ch="' + b.getAttribute('data-ch') + '"]'); };
-    ['pointerenter', 'focus'].forEach(function (ev) { b.addEventListener(ev, function () { wake(oval()); }); });
-    b.addEventListener('click', function () { wake(oval()); S.ch = b.getAttribute('data-ch'); render(); });
+    var ovals = function () { return $$('[data-ch="' + b.getAttribute('data-ch') + '"]').filter(function (o) { return o !== b; }); };
+    ['pointerenter', 'focus'].forEach(function (ev) { b.addEventListener(ev, function () { ovals().forEach(wake); }); });
+    b.addEventListener('click', function () { ovals().forEach(wake); var was = S.ch; S.ch = b.getAttribute('data-ch'); render(); if (window.FAE && was !== S.ch) FAE.cast(b); });
   });
   /* once the page has settled, the other portraits load quietly */
   var idle = function (f) { if ('requestIdleCallback' in window) requestIdleCallback(f, { timeout: 4000 }); else setTimeout(f, 2500); };
-  window.addEventListener('load', function () { idle(function () { $$('.cov-o').forEach(wake); }); });
+  window.addEventListener('load', function () { idle(function () { $$('.cov-o,.cj-o').forEach(wake); }); });
   $$('[data-q]').forEach(function (b) { b.addEventListener('click', function () { S.qty = clamp(S.qty + +b.getAttribute('data-q'), 1, MAXQ); render(); }); });
   $$('[data-plan]').forEach(function (b) { b.addEventListener('click', function () { S.plan = b.getAttribute('data-plan'); render(); }); });
   $$('[data-pick]').forEach(function (b) { b.addEventListener('click', function () { S.event = 'ftb'; S.tier = b.getAttribute('data-pick'); drawTierRadios(); render(); }); });
@@ -149,8 +150,9 @@
     err.hidden = !bad; err.textContent = bad;
     if (bad) { (!name ? co.name : co.email).focus(); return; }
     var x = sums(), ev = D.events[S.event], ref = ev.code + '-' + x.t.id.slice(0, 3).toUpperCase() + '-' + Math.random().toString(36).slice(2, 7).toUpperCase();
-    tk.classList.add('paid');
+    tk.classList.remove('paid'); void tk.offsetWidth; tk.classList.add('paid');
     drawQR('FAECLUB|' + ref + '|' + name + '|' + S.qty);
+    if (window.FAE) FAE.paid(tk);
     var now = new Date(), hh = String(now.getHours()).padStart(2, '0') + '.' + String(now.getMinutes()).padStart(2, '0');
     setO('tkpaid', S.plan === 'three' ? gbp(x.pays[0]) + ' of ' + gbp(x.total) : gbp(x.total));
     setO('tkref', ref);
@@ -170,12 +172,32 @@
     var cb = window.innerWidth <= 760 ? Math.round(copyEl.offsetTop + copyEl.offsetHeight + 16) : 0;
     tale.style.setProperty('--cb', cb + 'px');
   };
+  /* the portrait in her stardust flies onto the cover as the book rises */
+  var conjEl = tale && $('.conj', tale), covOval = tale && $('.cov-oval', tale), conjHome = null;
+  var homeConj = function () { if (!conjEl) return; conjEl.style.setProperty('--cx', '0px'); conjEl.style.setProperty('--cy', '0px'); conjEl.style.setProperty('--cs', 1); conjHome = conjEl.getBoundingClientRect(); };
+  var flyConj = function (e) {
+    if (!conjEl || !covOval) return;
+    if (e <= 0.001 || !conjHome) { homeConj(); conjEl.style.setProperty('--cjo', 1); return; }
+    var to = covOval.getBoundingClientRect(), k = clamp((e - .15) / .75, 0, 1), kk = ease(k);
+    var sx = to.width / conjHome.width;
+    conjEl.style.setProperty('--cx', ((to.left - conjHome.left) * kk).toFixed(1) + 'px');
+    conjEl.style.setProperty('--cy', ((to.top - conjHome.top) * kk).toFixed(1) + 'px');
+    conjEl.style.setProperty('--cs', (1 + (sx - 1) * kk).toFixed(4));
+    conjEl.style.setProperty('--cjo', (1 - clamp((e - .82) / .16, 0, 1)).toFixed(3));
+  };
   var taleUpdate = function () {
     if (!live) return;
     var r = tale.getBoundingClientRect(), span = tale.offsetHeight - window.innerHeight;
     var p = clamp(-r.top / Math.max(1, span), 0, 1);
-    var steps = TURNS + 1.4, t = p * steps; /* TURNS page turns, then the dive into the hall */
+    var steps = TURNS + 2.4, t0 = p * steps, t = t0 - 1; /* the moon gives way to the book, TURNS page turns, then the dive */
     var phone = window.innerWidth <= 760;
+    var intro = ease(clamp(t0, 0, 1));
+    var mo = 1 - clamp(intro * 1.8, 0, 1); window.__faeMo = mo;
+    tale.style.setProperty('--mo', mo.toFixed(3)); /* the moon sinks first */
+    tale.style.setProperty('--mv', intro > .6 ? 'hidden' : 'visible');
+    tale.style.setProperty('--bi', clamp((intro - .35) / .65, 0, 1).toFixed(3)); /* then the book rises under the portrait */
+    flyConj(intro);
+    tale.setAttribute('data-sky', t0 < .6 ? 'dusk' : t < TURNS - .2 ? 'night' : 'hall');
     leaves.forEach(function (lf, i) {
       if (i === 0 || t > i - 0.9) wake(lf);
       var k = i < TURNS ? ease(clamp(t - i, 0, 1)) : 0;
@@ -184,6 +206,7 @@
       lf.classList.toggle('gone', phone && k > .5);
     });
     var c0 = clamp(t, 0, 1);
+    if (t < 0) c0 = 0;
     tale.style.setProperty('--co', (1 - clamp(c0 * 2.2, 0, 1)).toFixed(3));
     var chsEl = tale.querySelector('.chs'); if (chsEl) { var gone = c0 > .48; if (chsEl.inert !== gone) chsEl.inert = gone; }
     tale.querySelector('.tale-copy').style.pointerEvents = c0 > .48 ? 'none' : '';
@@ -221,7 +244,7 @@
   var update = function () { ticking = false; taleUpdate(); barUpdate(); };
   var req = function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
   window.addEventListener('scroll', req, { passive: true });
-  window.addEventListener('resize', function () { measureCopy(); req(); });
+  window.addEventListener('resize', function () { measureCopy(); conjHome = null; req(); });
   measureCopy(); update();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measureCopy(); req(); });
 
@@ -230,13 +253,15 @@
   if (rp) {
     var RD = JSON.parse($('script[data-d]', rp).textContent);
     var rng = $('[data-r="months"]', rp), fr = $('[data-r="friend"]', rp), rb = $('[data-rb]'), friendF = $('.friend', rp), rdone = $('[data-done]');
+    var archTpl = $('[data-rb] .arch-o'); archTpl = archTpl ? archTpl.cloneNode(true) : null;
     var rdraw = function () {
       var n = +rng.value, total = RD.price - (fr.checked ? RD.friendOff : 0), pays = split(total, n);
       setO('m', n); rng.setAttribute('aria-valuetext', n + (n === 1 ? ' payment' : ' payments') + ' of about ' + gbp(pays[n - 1]));
       rb.innerHTML = ''; rb.style.setProperty('--n', n);
       pays.forEach(function (v, i) {
-        var li = document.createElement('li'); li.style.setProperty('--h', (v / pays[0]).toFixed(4));
+        var li = document.createElement('li'); li.style.setProperty('--h', (v / total).toFixed(4));
         var bar = document.createElement('span'); bar.className = 'bar'; bar.appendChild(document.createElement('i'));
+        if (archTpl) bar.appendChild(archTpl.cloneNode(true));
         var b = document.createElement('b'); b.textContent = gbp(v);
         var sm = document.createElement('small'); var d = addMonths(today, i); sm.textContent = i === 0 ? 'Today' : MON[d.getMonth()] + ' ' + d.getFullYear();
         li.appendChild(bar); li.appendChild(b); li.appendChild(sm); rb.appendChild(li);

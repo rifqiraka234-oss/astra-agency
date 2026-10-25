@@ -12,8 +12,8 @@
   --gut:clamp(18px,4vw,56px); --max:1240px; --ease:cubic-bezier(.2,.7,.1,1); --hh:64px;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--ivory)}
-body{margin:0;background:var(--ivory);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:#021A0E}
+body{margin:0;background:transparent;color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 h1,h2,h3,p,ol,ul,dl,dd,figure,blockquote{margin:0}
@@ -70,11 +70,12 @@ ol,ul{padding:0;list-style:none}
 
 /* sections */
 .sec{padding:clamp(80px,10vw,150px) 0;border-top:1px solid var(--rule)}
-.sec.dark{background:var(--forest);color:var(--text);border-top:0}
+.sec{background:var(--ivory)}
+.sec.dark{background:transparent;color:var(--text);border-top:0}
 .sec.dark+.sec{border-top:0}
 
 /* cover */
-.cv{background:var(--forest);color:var(--text);padding:clamp(56px,7vw,110px) 0 clamp(50px,6vw,90px);overflow:hidden}
+.cv{background:transparent;color:var(--text);padding:clamp(56px,7vw,110px) 0 clamp(50px,6vw,90px);overflow:hidden}
 .cv-in{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(30px,5vw,90px);align-items:center}
 .cv-by{font-size:14px;color:var(--muted);margin-bottom:22px}
 .cv-h{font:500 clamp(46px,6.2vw,104px)/.98 var(--serif);letter-spacing:-.02em;color:var(--gold-2);text-wrap:balance;margin-bottom:28px}
@@ -209,7 +210,7 @@ html:not(.js) .bf{grid-template-columns:minmax(0,1fr)}
 .un-alt{margin-top:46px}
 
 /* VII the retreat */
-.rtr{background:#101945;color:#E6E8F2;border-top:0}
+.sec.rtr{background:rgba(10,16,48,.55);color:#E6E8F2;border-top:0}
 .rtr .t1{color:#F0E6C8}
 .rtr .lead{color:#D5D9E8}
 .rtr .lead+.lead{margin-top:16px}
@@ -250,7 +251,7 @@ html:not(.js) .bf{grid-template-columns:minmax(0,1fr)}
 .pp .u{display:inline-block;margin-top:12px;font-size:14px;color:var(--forest);text-underline-offset:3px}
 
 /* the end */
-.end{background:var(--forest);color:var(--text);padding:clamp(90px,11vw,170px) 0}
+.end{background:transparent;color:var(--text);padding:clamp(90px,11vw,170px) 0}
 .end-h{font:500 clamp(48px,6.4vw,110px)/.98 var(--serif);color:var(--gold-2);letter-spacing:-.02em;margin-bottom:26px}
 .end-f{margin-top:60px;font-size:13px;color:var(--muted);max-width:80ch}
 
@@ -300,3 +301,13 @@ html:not(.js) .bf{grid-template-columns:minmax(0,1fr)}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none !important;animation:none !important}
 }
+
+/* the prototype's night behind the dark chapters, foil on their headings */
+.sky{position:fixed;inset:0;width:100%;height:100%;z-index:-3;display:block;background:radial-gradient(60% 50% at 78% 18%,rgba(201,138,90,.22),transparent 70%),radial-gradient(70% 60% at 15% 70%,rgba(75,44,122,.35),transparent 70%),linear-gradient(180deg,#0B2E2A 0%,#061B17 45%,#050B1E 100%)}
+.motes{position:fixed;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none;display:block}
+.fx{position:fixed;inset:0;width:100%;height:100%;z-index:150;pointer-events:none;display:block}
+.hdr{background:rgba(2,22,12,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .cv-h,.dark .t1,.end-h,.rtr .t1{background:linear-gradient(100deg,#A8873E 0%,#E7D08E 16%,#C8A85B 30%,#FFF3CC 42%,#D2B067 54%,#F1DFA6 70%,#B08F45 86%,#E9D49A 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:foil 14s ease-in-out infinite alternate}
+}
+@keyframes foil{from{background-position:0% 50%}to{background-position:100% 50%}}

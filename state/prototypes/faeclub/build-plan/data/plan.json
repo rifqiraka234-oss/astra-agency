@@ -10,9 +10,18 @@
   "h": "One checkout for every Fae Club ticket.",
   "lede": "Pay in full or in 3 in the same place, and the QR ticket lands the moment it's paid. Here's what we'd change, why it's worth doing while the Fairytale Ball is selling, and the first 90 days.",
   "found": [
-   {"t": "Pay in 3 tickets are sold as a second copy in the shop, and each guest is RSVP'd by hand before their QR goes out.", "src": "Your Enchanted, Royal and Night Club shop pages"},
-   {"t": "The pay in 3 link at the top of Upcoming Events opens a page that says “This product couldn't be found”.", "src": "fa3club.com/upcoming-events"},
-   {"t": "The Fairytale Ball is 66% sold with 174 days to go. The tickets sell, it's the paying that takes the work.", "src": "fa3club.com/fairytale-ball"}
+   {
+    "t": "Pay in 3 tickets are sold as a second copy in the shop, and each guest is RSVP'd by hand before their QR goes out.",
+    "src": "Your Enchanted, Royal and Night Club shop pages"
+   },
+   {
+    "t": "The pay in 3 link at the top of Upcoming Events opens a page that says “This product couldn't be found”.",
+    "src": "fa3club.com/upcoming-events"
+   },
+   {
+    "t": "The Fairytale Ball is 66% sold with 174 days to go. The tickets sell, it's the paying that takes the work.",
+    "src": "fa3club.com/fairytale-ball"
+   }
   ]
  },
  "today": {
@@ -21,19 +30,52 @@
   "quote_src": "Every pay in 3 ticket in your shop, and the Night Club ticket, 25 Oct 2026",
   "lede": "Two checkouts sell one ticket. The event checkout takes the full price. The shop sells a copy of the same ticket so people can pay in 3, and that copy needs you to add each guest by hand before their QR is emailed, within 48 hours.",
   "facts": [
-   ["Ways to buy one Fairytale Ball ticket", "Two, the event checkout and the shop"],
-   ["Pay in 3", "In the shop only, as a separate product"],
-   ["The QR after a shop order", "Within 48 hours, after an RSVP by hand"],
-   ["The pay in 3 link on Upcoming Events", "A page that can't be found"],
-   ["One tier, two names", "Enchanter in the checkout, Enchanted in the shop"],
-   ["Royal (VIP)", "Sold Out in the checkout, Add to Cart in the shop"],
-   ["The Valkyrie Retreat, £1,795", "Booked through a contact form and a Gmail address"]
+   [
+    "Ways to buy one Fairytale Ball ticket",
+    "Two, the event checkout and the shop"
+   ],
+   [
+    "Pay in 3",
+    "In the shop only, as a separate product"
+   ],
+   [
+    "The QR after a shop order",
+    "Within 48 hours, after an RSVP by hand"
+   ],
+   [
+    "The pay in 3 link on Upcoming Events",
+    "A page that can't be found"
+   ],
+   [
+    "One tier, two names",
+    "Enchanter in the checkout, Enchanted in the shop"
+   ],
+   [
+    "Royal (VIP)",
+    "Sold Out in the checkout, Add to Cart in the shop"
+   ],
+   [
+    "The Valkyrie Retreat, £1,795",
+    "Booked through a contact form and a Gmail address"
+   ]
   ],
   "shots": [
-   {"img": "t-shop", "cap": "The Enchanted pay in 3 ticket in your shop"},
-   {"img": "t-ue", "cap": "Upcoming Events, with the highlighted pay in 3 link"},
-   {"img": "t-dead", "cap": "Where that link lands"},
-   {"img": "t-event", "cap": "The event checkout, Royal sold out"}
+   {
+    "img": "t-shop",
+    "cap": "The Enchanted pay in 3 ticket in your shop"
+   },
+   {
+    "img": "t-ue",
+    "cap": "Upcoming Events, with the highlighted pay in 3 link"
+   },
+   {
+    "img": "t-dead",
+    "cap": "Where that link lands"
+   },
+   {
+    "img": "t-event",
+    "cap": "The event checkout, Royal sold out"
+   }
   ],
   "src": "Screenshots and wording from fa3club.com and highfaeretreats.com, taken 25 Oct 2026."
  },
@@ -41,30 +83,96 @@
   "h": "The route a ticket takes.",
   "lede": "Pick how a guest pays, then compare today with the new site. Every stop is a step somebody has to take, the guest or you.",
   "routes": {
-   "tf": {"stops": [
-     {"t": "Fairytale Ball page", "p": "Buy Tickets"},
-     {"t": "Event checkout", "p": "Enchanter Tier, £179.38 in full"},
-     {"t": "Ticket", "p": "From the event checkout"}],
-    "sum": "Three stops for the guest, and the ticket comes from the event checkout."},
-   "t3": {"stops": [
-     {"t": "Upcoming Events", "p": "The pay in 3 link opens a page that can't be found", "k": "bad"},
-     {"t": "Fairytale Ball page", "p": "A second link, “Click here to pay in 3”"},
-     {"t": "Ticket Shop", "p": "The Enchanted pay in 3 ticket, £179.38"},
-     {"t": "Shop checkout", "p": "Pays in 3 with the shop's payment options"},
-     {"t": "Your inbox", "p": "The order comes to you", "k": "you"},
-     {"t": "RSVP by hand", "p": "You add the guest to the event", "k": "you"},
-     {"t": "QR ticket", "p": "By email, within 48 hours", "k": "wait"}],
-    "sum": "Seven stops, two of them yours, and the guest waits up to 48 hours for the QR."},
-   "nf": {"stops": [
-     {"t": "Fae Club site", "p": "Picks who they'll be and a ticket"},
-     {"t": "One checkout", "p": "£179.38 in full"},
-     {"t": "QR ticket", "p": "On screen and by email, the moment it's paid", "k": "now"}],
-    "sum": "Three stops, none of them yours. The QR comes the moment it's paid."},
-   "n3": {"stops": [
-     {"t": "Fae Club site", "p": "Picks who they'll be and a ticket"},
-     {"t": "One checkout", "p": "£59.80 today, then two more payments"},
-     {"t": "QR ticket", "p": "On screen and by email, the moment it's paid", "k": "now"}],
-    "sum": "Three stops, none of them yours, and pay in 3 is in the same checkout."}
+   "tf": {
+    "stops": [
+     {
+      "t": "Fairytale Ball page",
+      "p": "Buy Tickets"
+     },
+     {
+      "t": "Event checkout",
+      "p": "Enchanter Tier, £179.38 in full"
+     },
+     {
+      "t": "Ticket",
+      "p": "From the event checkout"
+     }
+    ],
+    "sum": "Three stops for the guest, and the ticket comes from the event checkout."
+   },
+   "t3": {
+    "stops": [
+     {
+      "t": "Upcoming Events",
+      "p": "The pay in 3 link opens a page that can't be found",
+      "k": "bad"
+     },
+     {
+      "t": "Fairytale Ball page",
+      "p": "A second link, “Click here to pay in 3”"
+     },
+     {
+      "t": "Ticket Shop",
+      "p": "The Enchanted pay in 3 ticket, £179.38"
+     },
+     {
+      "t": "Shop checkout",
+      "p": "Pays in 3 with the shop's payment options"
+     },
+     {
+      "t": "Your inbox",
+      "p": "The order comes to you",
+      "k": "you"
+     },
+     {
+      "t": "RSVP by hand",
+      "p": "You add the guest to the event",
+      "k": "you"
+     },
+     {
+      "t": "QR ticket",
+      "p": "By email, within 48 hours",
+      "k": "wait"
+     }
+    ],
+    "sum": "Seven stops, two of them yours, and the guest waits up to 48 hours for the QR."
+   },
+   "nf": {
+    "stops": [
+     {
+      "t": "Fae Club site",
+      "p": "Picks who they'll be and a ticket"
+     },
+     {
+      "t": "One checkout",
+      "p": "£179.38 in full"
+     },
+     {
+      "t": "QR ticket",
+      "p": "On screen and by email, the moment it's paid",
+      "k": "now"
+     }
+    ],
+    "sum": "Three stops, none of them yours. The QR comes the moment it's paid."
+   },
+   "n3": {
+    "stops": [
+     {
+      "t": "Fae Club site",
+      "p": "Picks who they'll be and a ticket"
+     },
+     {
+      "t": "One checkout",
+      "p": "£59.80 today, then two more payments"
+     },
+     {
+      "t": "QR ticket",
+      "p": "On screen and by email, the moment it's paid",
+      "k": "now"
+     }
+    ],
+    "sum": "Three stops, none of them yours, and pay in 3 is in the same checkout."
+   }
   },
   "src": "Today's routes from fa3club.com/upcoming-events, fa3club.com/fairytale-ball, the event checkout and the shop pages, 25 Oct 2026. The new routes are the prototype."
  },
@@ -72,46 +180,124 @@
   "h": "The ball sells. Pay in 3 lets a £179 ticket start at £59.80.",
   "lede": "On 25 October, 66% of the Fairytale Ball was gone with 174 days to go, and the Lions Solstice sold out in under 48 hours. On the same night as your ball, the Eternal Throne Ball at Stowe House sells from £190 plus £38 VAT. Move the switch to see what a guest pays on the day they buy.",
   "rows": [
-   {"name": "The Court of Spice", "note": "Ragley Hall, 27 Oct 2026, sold out", "full": 14900, "plus": ""},
-   {"name": "The Fairytale Ball", "note": "Enchanted Tier, Winter Gardens, 17 Apr 2027", "full": 17938, "us": true},
-   {"name": "The Eternal Throne Ball", "note": "Courtier Tier, Stowe House, 17 Apr 2027", "full": 22800, "plus": "plus booking fees"},
-   {"name": "The Eternal Throne Ball", "note": "Noble Tier, Stowe House, 17 Apr 2027", "full": 27600, "plus": "plus booking fees"}
+   {
+    "name": "The Court of Spice",
+    "note": "Ragley Hall, 27 Oct 2026, sold out",
+    "full": 14900,
+    "plus": ""
+   },
+   {
+    "name": "The Fairytale Ball",
+    "note": "Enchanted Tier, Winter Gardens, 17 Apr 2027",
+    "full": 17938,
+    "us": true
+   },
+   {
+    "name": "The Eternal Throne Ball",
+    "note": "Courtier Tier, Stowe House, 17 Apr 2027",
+    "full": 22800,
+    "plus": "plus booking fees"
+   },
+   {
+    "name": "The Eternal Throne Ball",
+    "note": "Noble Tier, Stowe House, 17 Apr 2027",
+    "full": 27600,
+    "plus": "plus booking fees"
+   }
   ],
   "src": "Prices from each event's own ticket page on 25 Oct 2026, ticketspotapp.com/e/ciyl1, fa3club.com and tickettailor.com/events/mysticfate/2298844. Stowe House shows its booking fees at checkout. We didn't check how each rival takes payment. Demand from fa3club.com/fairytale-ball and the 2026 guide on your blog."
  },
  "hours": {
   "h": "What the hand work costs you.",
   "lede": "Every shop order means adding a guest by hand and sending their QR. Only you know how many and how long, so set both. The numbers start as an example.",
-  "orders": {"min": 10, "max": 400, "step": 10, "def": 80},
-  "mins": {"min": 1, "max": 20, "step": 1, "def": 5},
+  "orders": {
+   "min": 10,
+   "max": 400,
+   "step": 10,
+   "def": 80
+  },
+  "mins": {
+   "min": 1,
+   "max": 20,
+   "step": 1,
+   "def": 5
+  },
   "src": "An estimate you set. Nothing here comes from your sales."
  },
  "built": {
   "h": "The new site, built around one ticket.",
   "lede": "One order carries down the page. The guest picks who they'll be, reads the night in your own words, chooses a ticket and how to pay, and the checkout arrives filled in.",
   "shots": [
-   {"img": "s-hero-d", "h": "Who will you be?", "p": "Your own question opens the site. The answer puts one of your guests in that look on the cover of the book, and later on the ticket."},
-   {"img": "s-book-d", "h": "The night, page by page", "p": "Scroll and the book opens. The Prosecco or elderflower fizz, the characters, the dances, the costume contest and the DJ, in your words and your photos."},
-   {"img": "s-hall-d", "h": "Into the hall", "p": "The last page opens into your photo of the hall at the Winter Gardens, with your own line on it."},
-   {"img": "s-tiers-d", "h": "Two ways in", "p": "Enchanted and Royal (VIP) as two invitations. Sold out shows in one place, the same everywhere."},
-   {"img": "s-pay3-d", "h": "Pay in full or in 3", "p": "One switch. The bars show what's due and when, worked out to the penny from the ticket and the fee."},
-   {"img": "s-paid-d", "h": "The ticket, straight away", "p": "Pay, and the QR forms on a ticket with the guest's name on it. In the prototype nothing is charged or sent."}
+   {
+    "img": "s-hero-d",
+    "h": "Who will you be?",
+    "p": "Your own question opens the site, under the moon and fairy from your logo. The answer gathers in her stardust as one of your guests in that look, then lands on the cover of the book and later on the ticket."
+   },
+   {
+    "img": "s-book-d",
+    "h": "The night, page by page",
+    "p": "Scroll and the book opens, gilt edges, drop caps and arches like the Spanish Hall's. The Prosecco or elderflower fizz, the characters, the dances, the costume contest and the DJ, in your words and your photos."
+   },
+   {
+    "img": "s-hall-d",
+    "h": "Into the hall",
+    "p": "The last page opens into your photo of the hall at the Winter Gardens, with your own line on it."
+   },
+   {
+    "img": "s-tiers-d",
+    "h": "Two ways in",
+    "p": "Enchanted and Royal (VIP) as two foil invitations that catch the light. Royal is closed with a wax seal, and sold out shows the same everywhere."
+   },
+   {
+    "img": "s-pay3-d",
+    "h": "Pay in full or in 3",
+    "p": "One switch. Three arches fill with each payment's share, worked out to the penny from the ticket and the fee."
+   },
+   {
+    "img": "s-paid-d",
+    "h": "The ticket, straight away",
+    "p": "Pay, and the QR gathers from gold dust on a ticket with the guest's name, and a wax seal presses on. In the prototype nothing is charged or sent."
+   }
   ],
   "phones": [
-   {"img": "s-hero-m", "alt": "The new Fae Club home on a phone, the guest has chosen a fae"},
-   {"img": "s-paid-m", "alt": "The ticket with its QR on a phone"}
+   {
+    "img": "s-hero-m",
+    "alt": "The new Fae Club home on a phone, the guest has chosen a fae"
+   },
+   {
+    "img": "s-paid-m",
+    "alt": "The ticket with its QR on a phone"
+   }
   ]
  },
  "under": {
   "h": "What runs underneath.",
   "lede": "We'd build the site and take payments through Stripe with Klarna switched on. Stripe offers Klarna to UK businesses and pays the business in full up front, while Klarna collects the instalments and covers unpaid credit.",
   "items": [
-   ["One checkout", "Pay in full and pay in 3 on the same page, for every event."],
-   ["The QR ticket", "The site makes it when the payment clears, shows it on screen and emails it. No RSVP by hand."],
-   ["One count per tier", "Each tier has one number of places. If you hold some back, that's a setting on the tier."],
-   ["The door", "A scanning page on any phone marks each ticket as used, so your team can check guests in."],
-   ["Tickets already sold", "Everyone who's bought for 17 April keeps their ticket, and their names move into the new guest list so the door can find them."],
-   ["The dates", "Klarna sets when each instalment is due. The dates in the prototype are an example."]
+   [
+    "One checkout",
+    "Pay in full and pay in 3 on the same page, for every event."
+   ],
+   [
+    "The QR ticket",
+    "The site makes it when the payment clears, shows it on screen and emails it. No RSVP by hand."
+   ],
+   [
+    "One count per tier",
+    "Each tier has one number of places. If you hold some back, that's a setting on the tier."
+   ],
+   [
+    "The door",
+    "A scanning page on any phone marks each ticket as used, so your team can check guests in."
+   ],
+   [
+    "Tickets already sold",
+    "Everyone who's bought for 17 April keeps their ticket, and their names move into the new guest list so the door can find them."
+   ],
+   [
+    "The dates",
+    "Klarna sets when each instalment is due. The dates in the prototype are an example."
+   ]
   ],
   "alt": "If you'd rather keep your site and change only the checkout, Ticket Tailor takes Klarna through Stripe as well. We'd still pick the new site, because then the balls and the retreat sell in one place.",
   "src": "stripe.com/payments/klarna and help.tickettailor.com article 8826630, updated 14 Jul 2026, both read 25 Oct 2026."
@@ -123,17 +309,63 @@
   "src": "highfaeretreats.com/the-retreat and /enquire, and docs.stripe.com on instalment plans, read 25 Oct 2026."
  },
  "roadmap": [
-  {"when": "Weeks 1 to 2", "h": "Checkout first", "items": ["Stripe with Klarna switched on", "Tickets and QR emails", "The scanning page for the door", "The guest list for 17 April moved across"]},
-  {"when": "Weeks 3 to 6", "h": "The whole site", "items": ["The Fairytale Ball, the Night Club and the next events", "FAQs, Scrolls and Past Events carried over, every old address redirected", "Your Instagram and TikTok links pointed at the new pages"]},
-  {"when": "Weeks 7 to 8", "h": "The retreat", "items": ["Retreat bookings with payment plans", "High Fae Retreats in the same site, in its own colours"]},
-  {"when": "Weeks 9 to 12", "h": "Measure", "items": ["A monthly report on how people pay and how fast tickets go out", "The next event's page ready before it goes on sale"]}
+  {
+   "when": "Weeks 1 to 2",
+   "h": "Checkout first",
+   "items": [
+    "Stripe with Klarna switched on",
+    "Tickets and QR emails",
+    "The scanning page for the door",
+    "The guest list for 17 April moved across"
+   ]
+  },
+  {
+   "when": "Weeks 3 to 6",
+   "h": "The whole site",
+   "items": [
+    "The Fairytale Ball, the Night Club and the next events",
+    "FAQs, Scrolls and Past Events carried over, every old address redirected",
+    "Your Instagram and TikTok links pointed at the new pages"
+   ]
+  },
+  {
+   "when": "Weeks 7 to 8",
+   "h": "The retreat",
+   "items": [
+    "Retreat bookings with payment plans",
+    "High Fae Retreats in the same site, in its own colours"
+   ]
+  },
+  {
+   "when": "Weeks 9 to 12",
+   "h": "Measure",
+   "items": [
+    "A monthly report on how people pay and how fast tickets go out",
+    "The next event's page ready before it goes on sale"
+   ]
+  }
  ],
  "kpis": [
-  {"h": "Share of tickets paid in 3", "where": "Stripe"},
-  {"h": "Time from payment to QR ticket", "where": "The site's order log"},
-  {"h": "Emails asking where a ticket is", "where": "Your inbox"},
-  {"h": "Hours a month on ticket admin", "where": "Your own count"},
-  {"h": "Visits from Instagram and TikTok that end in a ticket", "where": "Site analytics"}
+  {
+   "h": "Share of tickets paid in 3",
+   "where": "Stripe"
+  },
+  {
+   "h": "Time from payment to QR ticket",
+   "where": "The site's order log"
+  },
+  {
+   "h": "Emails asking where a ticket is",
+   "where": "Your inbox"
+  },
+  {
+   "h": "Hours a month on ticket admin",
+   "where": "Your own count"
+  },
+  {
+   "h": "Visits from Instagram and TikTok that end in a ticket",
+   "where": "Site analytics"
+  }
  ],
  "team": {
   "lede": "Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.",

@@ -67,6 +67,40 @@ per tier, a door scanner, tickets already sold carried over), the retreat online
 - The Night Club hides itself after 30 Oct 2026, so the event switch only offers the Fairytale Ball from then.
 - Nothing is charged or sent anywhere. Every page says so.
 
+## v2, the art layer (25 Oct 2026, evening)
+
+Raka on v1, "Bro its an art company and the website is not artsy enough! Take the design 10x further with the art the
+animations the colours gradients and all!!! Come on". The flow and every number stayed, the art was rebuilt. References
+rendered that evening in research/award-v2.md, the plan of it in research/art-direction-v2.md.
+
+What's new, all of it from their own material.
+- **Their moon and fairy as the hero.** The C in their logo is a crescent with a fairy scattering stars. Traced from
+  their own 2048 px logo file (build/art/trace_moon.py, potrace on the cut out shape, letters left behind) into one
+  vector, set huge in gold foil with a slow sheen. Stardust streams from her hand, and choosing a character sends a
+  burst from the word into a portrait at her fingertips. Scrolling sinks the moon and raises the book with that portrait
+  flying onto the cover.
+- **A night sky behind the whole page**, a WebGL shader of slow aurora whose colours follow the section in view, forest
+  and teal at the moon, amethyst for the book, candlelight in the hall, rose violet at the checkout, moonlight teal at
+  the venue, midnight at the end. The chosen character tints it. Gold dust at depth behind the page, a fairy light at
+  the cursor on desktop, fine grain.
+- **The book illuminated**, a velvet cover with gilt corners, parchment pages with gilt edges, foil drop caps and
+  photos in Moorish arches like the Spanish Hall's. Light beams and twinkles in the hall.
+- **The ring** of their guests for Coming on your own, **foil invitations** that tilt and catch the light for the two
+  tiers, Royal closed with a wax seal, **three arches of liquid gold** for pay in 3, a **wax seal** pressed onto the paid
+  ticket with gold leaf, ornaments that draw themselves, the moon again in the footer.
+- **The retreat** in northern lights and steel, silver arches for the months.
+- **The plan** shares the night sky behind its dark chapters, foil on their headings, screens retaken from v2. Its sky
+  starts on the first scroll or touch so it stays out of the loading window.
+
+QA on v2, all on 25 Oct. fae-func 16 of 16 locally and live, plant mode catches all 14 planted faults. plan-fae-func 13
+of 13 locally and live, 0 of 13 in plant mode. axe clean, prototype 8 runs and plan 8 runs. Copy audits clean. No
+overflow at nine widths. Reduced motion and no script both looked at, full page. Live hashes 145 of 145 and 43 of 43,
+404 control 404. Lighthouse live, home 93 phone and 100 desktop, retreat 98 and 100, plan 96 and 100, accessibility and
+best practices 100 on all six. Deploys, prototype 6ade67e47947b282df38fefd, plan 6ade67f1da83b60a15a5b9e2.
+
+What the art doesn't claim. The moon and fairy are their mark, traced, not redrawn. The beams and twinkles in the hall
+are decoration, not light that's in the photo. Character colours are ours.
+
 ## Sending
 
 Delivery drafted in state/drafted_2026-10-25-elle-delivery.md, check-drafts PASS, NOT sent. It asks for the call on
