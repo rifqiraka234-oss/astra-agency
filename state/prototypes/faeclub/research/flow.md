@@ -67,3 +67,15 @@ Checkout". It's the order, always one tap away.
   follows the event checkout and the handover says so.
 - The retreat's plan terms. "Personalised payment plans available" is all they publish, so the plan builder is labelled
   as an example and the request says Elle confirms it.
+
+## Recheck on Raka's question (25 Oct 2026, late evening)
+
+"does this website make it super easy to tell the story and guide the intended audience to the intended action?" The
+four lines above stand. The audience is the reader and fantasy fan deciding on a £179.38 ticket, the second visitor the
+woman weighing the £1,795 retreat. The action is a Fairytale Ball ticket in one checkout, the retreat reservation second.
+
+v2 told the story and lost the route. A walk of the live site (qa/guide-walk.js) found no price or ticket action in the
+page for the first 9.5 screens, the bar hidden through the book, nothing to do at the end of the hall, a "Two ways in"
+heading over a sold out tier, and no way to the retreat on a phone. v3 fixed each one at the same URLs, and the
+handover's v3 section lists the changes. The flow table's rows hold, with one change to the sticky bar row. It now
+appears from the first scroll, leads with the price, and steps aside wherever another ticket call is on screen.

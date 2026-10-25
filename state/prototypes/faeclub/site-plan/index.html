@@ -12,7 +12,8 @@
 <link rel="stylesheet" href="/css/plan.css">
 <script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm')</script>
 </head>
-<body>
+<body data-sky="dusk" data-art-late>
+<canvas class="sky" id="sky" aria-hidden="true"></canvas><canvas class="motes" id="motes" aria-hidden="true"></canvas><canvas class="fx" id="fx" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
 <header class="hdr"><div class="wrap hdr-in">
 <a class="hb" href="#top"><span class="hb-t">The plan</span><span class="hb-s">for Fae Club, by Astra</span></a>
@@ -20,7 +21,7 @@
 </div></header>
 <main id="main">
 
-<section class="cv" id="top" aria-labelledby="cv-h">
+<section class="cv" id="top" data-sky="dusk" aria-labelledby="cv-h">
   <div class="wrap cv-in">
     <div class="cv-txt">
       <p class="cv-by">Prepared by Astra for Elle Lawrence, October 2026</p>
@@ -48,7 +49,7 @@
   </div>
 </section>
 
-<section class="sec dark" id="route" aria-labelledby="r-h">
+<section class="sec dark" id="route" data-sky="night" aria-labelledby="r-h">
   <div class="wrap">
     <p class="chn"><span class="chn-n">II</span><span class="chn-t">The route</span></p>
     <div class="two"><h2 id="r-h" class="t1">The route a ticket takes.</h2><p class="lead">Pick how a guest pays, then compare today with the new site. Every stop is a step somebody has to take, the guest or you.</p></div>
@@ -106,13 +107,13 @@
   </div>
 </section>
 
-<section class="sec dark" id="built" aria-labelledby="b-h">
+<section class="sec dark" id="built" data-sky="toast" aria-labelledby="b-h">
   <div class="wrap">
     <p class="chn"><span class="chn-n">V</span><span class="chn-t">Built</span></p>
-    <div class="two"><h2 id="b-h" class="t1">The new site, built around one ticket.</h2><p class="lead">One order carries down the page. The guest picks who they'll be, reads the night in your own words, chooses a ticket and how to pay, and the checkout arrives filled in.</p></div>
+    <div class="two"><h2 id="b-h" class="t1">The new site, built around one ticket.</h2><p class="lead">One order carries down the page. The guest picks who they'll be, reads the night in your own words, chooses a ticket and how to pay, and the checkout arrives filled in. The ticket is one tap away the whole time, with the price and a ticket button on the first screen, the order in a bar at the foot of the screen through the book, and the same button again at the end of the night.</p></div>
     <div class="bf" data-bf>
-      <ol class="bc"><li data-i="0"><span class="bc-n">01</span><div><h3>Who will you be?</h3><p>Your own question opens the site. The answer puts one of your guests in that look on the cover of the book, and later on the ticket.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-hero-d.webp"><img class="" src="/media/s-hero-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li><li data-i="1"><span class="bc-n">02</span><div><h3>The night, page by page</h3><p>Scroll and the book opens. The Prosecco or elderflower fizz, the characters, the dances, the costume contest and the DJ, in your words and your photos.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-book-d.webp"><img class="" src="/media/s-book-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li><li data-i="2"><span class="bc-n">03</span><div><h3>Into the hall</h3><p>The last page opens into your photo of the hall at the Winter Gardens, with your own line on it.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-hall-d.webp"><img class="" src="/media/s-hall-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li><li data-i="3"><span class="bc-n">04</span><div><h3>Two ways in</h3><p>Enchanted and Royal (VIP) as two invitations. Sold out shows in one place, the same everywhere.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-tiers-d.webp"><img class="" src="/media/s-tiers-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li><li data-i="4"><span class="bc-n">05</span><div><h3>Pay in full or in 3</h3><p>One switch. The bars show what's due and when, worked out to the penny from the ticket and the fee.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-pay3-d.webp"><img class="" src="/media/s-pay3-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li><li data-i="5"><span class="bc-n">06</span><div><h3>The ticket, straight away</h3><p>Pay, and the QR forms on a ticket with the guest's name on it. In the prototype nothing is charged or sent.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-paid-d.webp"><img class="" src="/media/s-paid-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li></ol>
-      <div class="bf-stick"><div class="bf-frame"><div class="bf-i on" data-i="0"><picture><source type="image/webp" srcset="/media/s-hero-d.webp"><img class="" src="/media/s-hero-d.jpg" width="1200" height="750" alt="The new Fae Club site, who will you be" loading="lazy" decoding="async"></picture></div><div class="bf-i" data-i="1"><picture><source type="image/webp" srcset="/media/s-book-d.webp"><img class="" src="/media/s-book-d.jpg" width="1200" height="750" alt="The new Fae Club site, the night, page by page" loading="lazy" decoding="async"></picture></div><div class="bf-i" data-i="2"><picture><source type="image/webp" srcset="/media/s-hall-d.webp"><img class="" src="/media/s-hall-d.jpg" width="1200" height="750" alt="The new Fae Club site, into the hall" loading="lazy" decoding="async"></picture></div><div class="bf-i" data-i="3"><picture><source type="image/webp" srcset="/media/s-tiers-d.webp"><img class="" src="/media/s-tiers-d.jpg" width="1200" height="750" alt="The new Fae Club site, two ways in" loading="lazy" decoding="async"></picture></div><div class="bf-i" data-i="4"><picture><source type="image/webp" srcset="/media/s-pay3-d.webp"><img class="" src="/media/s-pay3-d.jpg" width="1200" height="750" alt="The new Fae Club site, pay in full or in 3" loading="lazy" decoding="async"></picture></div><div class="bf-i" data-i="5"><picture><source type="image/webp" srcset="/media/s-paid-d.webp"><img class="" src="/media/s-paid-d.jpg" width="1200" height="750" alt="The new Fae Club site, the ticket, straight away" loading="lazy" decoding="async"></picture></div></div></div>
+      <ol class="bc"><li data-i="0"><span class="bc-n">01</span><div><h3>Who will you be?</h3><p>Your own question opens the site, under the moon and fairy from your logo. The answer gathers in her stardust as one of your guests in that look, then lands on the cover of the book and later on the ticket. The price and the ticket button sit right under it, for the guest who's already decided.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-hero-d.webp"><img class="" src="/media/s-hero-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li><li data-i="1"><span class="bc-n">02</span><div><h3>The night, page by page</h3><p>Scroll and the book opens, gilt edges, drop caps and arches like the Spanish Hall's. The Prosecco or elderflower fizz, the characters, the dances, the costume contest and the DJ, in your words and your photos.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-book-d.webp"><img class="" src="/media/s-book-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li><li data-i="2"><span class="bc-n">03</span><div><h3>Into the hall</h3><p>The last page opens into your photo of the hall at the Winter Gardens, with your own line on it and the ticket button under it, at the moment they most want to go.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-hall-d.webp"><img class="" src="/media/s-hall-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li><li data-i="3"><span class="bc-n">04</span><div><h3>Royal sold out, Enchanted open</h3><p>Enchanted and Royal (VIP) as two foil invitations that catch the light. Royal is closed with a wax seal, and sold out shows the same everywhere. Choosing Enchanted takes the guest straight on to how they'll pay.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-tiers-d.webp"><img class="" src="/media/s-tiers-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li><li data-i="4"><span class="bc-n">05</span><div><h3>Pay in full or in 3</h3><p>One switch. Three arches fill with each payment's share, worked out to the penny from the ticket and the fee.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-pay3-d.webp"><img class="" src="/media/s-pay3-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li><li data-i="5"><span class="bc-n">06</span><div><h3>The ticket, straight away</h3><p>Pay, and the QR gathers from gold dust on a ticket with the guest's name, and a wax seal presses on. In the prototype nothing is charged or sent.</p><div class="bc-m"><picture><source type="image/webp" srcset="/media/s-paid-d.webp"><img class="" src="/media/s-paid-d.jpg" width="1200" height="750" alt="" loading="lazy" decoding="async"></picture></div></div></li></ol>
+      <div class="bf-stick"><div class="bf-frame"><div class="bf-i on" data-i="0"><picture><source type="image/webp" srcset="/media/s-hero-d.webp"><img class="" src="/media/s-hero-d.jpg" width="1200" height="750" alt="The new Fae Club site, who will you be" loading="lazy" decoding="async"></picture></div><div class="bf-i" data-i="1"><picture><source type="image/webp" srcset="/media/s-book-d.webp"><img class="" src="/media/s-book-d.jpg" width="1200" height="750" alt="The new Fae Club site, the night, page by page" loading="lazy" decoding="async"></picture></div><div class="bf-i" data-i="2"><picture><source type="image/webp" srcset="/media/s-hall-d.webp"><img class="" src="/media/s-hall-d.jpg" width="1200" height="750" alt="The new Fae Club site, into the hall" loading="lazy" decoding="async"></picture></div><div class="bf-i" data-i="3"><picture><source type="image/webp" srcset="/media/s-tiers-d.webp"><img class="" src="/media/s-tiers-d.jpg" width="1200" height="750" alt="The new Fae Club site, royal sold out, enchanted open" loading="lazy" decoding="async"></picture></div><div class="bf-i" data-i="4"><picture><source type="image/webp" srcset="/media/s-pay3-d.webp"><img class="" src="/media/s-pay3-d.jpg" width="1200" height="750" alt="The new Fae Club site, pay in full or in 3" loading="lazy" decoding="async"></picture></div><div class="bf-i" data-i="5"><picture><source type="image/webp" srcset="/media/s-paid-d.webp"><img class="" src="/media/s-paid-d.jpg" width="1200" height="750" alt="The new Fae Club site, the ticket, straight away" loading="lazy" decoding="async"></picture></div></div></div>
     </div>
     <div class="bt-ph"><figure><picture><source type="image/webp" srcset="/media/s-hero-m.webp"><img class="" src="/media/s-hero-m.jpg" width="520" height="1126" alt="The new Fae Club home on a phone, the guest has chosen a fae" loading="lazy" decoding="async"></picture></figure><figure><picture><source type="image/webp" srcset="/media/s-paid-m.webp"><img class="" src="/media/s-paid-m.jpg" width="520" height="1126" alt="The ticket with its QR on a phone" loading="lazy" decoding="async"></picture></figure></div>
     <div class="acts"><a class="btn solid" href="https://astra-faeclub-prototype.netlify.app/">Open the prototype</a><a class="btn" href="https://astra-faeclub-prototype.netlify.app/valkyrie-retreat/">The Valkyrie Retreat page</a></div>
@@ -129,7 +130,7 @@
   </div>
 </section>
 
-<section class="sec rtr" id="retreat" aria-labelledby="re-h">
+<section class="sec rtr" id="retreat" data-sky="aurora" aria-labelledby="re-h">
   <div class="wrap rtr-g">
     <div>
       <p class="chn"><span class="chn-n">VII</span><span class="chn-t">The retreat</span></p>
@@ -164,7 +165,7 @@
   </div>
 </section>
 
-<section class="end" aria-labelledby="e-h">
+<section class="end" data-sky="late" aria-labelledby="e-h">
   <div class="wrap end-in">
     <h2 id="e-h" class="end-h">Next, a call.</h2>
     <p class="lead">We'll walk you through the site and the plan, hear how your events really run, and then send you a clear scope, price and timeline.</p>
@@ -173,5 +174,6 @@
   </div>
 </section>
 </main>
+<script src="/js/art.js" defer></script>
 <script src="/js/plan.js" defer></script>
 </body></html>

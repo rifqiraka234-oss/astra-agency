@@ -1,5 +1,5 @@
-<!-- LinkedIn REPLY to Willem SENT 2026-10-25 08.23.29 UTC on Raka's 'willem -> send if we havent sent our other chat is making the prototpe', act_tHFMHq43QncAaP7is, one copy. Do not send it again. The EMAIL below is NOT sent, it waits for the prototype the other session is building and changes to carry it. -->
-# Willem Straat, 22 Oct. NOT SENT, waiting on Raka's word
+<!-- LinkedIn REPLY to Willem SENT 2026-10-25 08.23.29 UTC on Raka's 'willem -> send if we havent sent our other chat is making the prototpe', act_tHFMHq43QncAaP7is, one copy. Do not send it again. The EMAIL below was SENT BY RAKA HIMSELF on 25 Oct, TWICE to marketing@keypro.nl, read from his Gmail Sent folder (search in:sent Keypro, both threads opened). 17:51:40 UTC, thread 1a173c98e609ccad, the draft r275296227707768740, no CC, its plain text shows a google.com/url redirect after each link. 21:45:16 UTC, thread 1a17383a2ae46d49, the draft r3040318523259070641, CC raka@astraagency.nl and josh@astraagency.nl, links clean. Raka's words, "keypro i sent it myself btw". Do not send it again. -->
+# Willem Straat, 22 Oct. EMAIL SENT by Raka himself, 25 Oct (two copies, see the line above)
 
 > EDITED 25 Oct 08:15 UTC. "today" dropped from the LinkedIn thanks, it was written for 22 Oct and the email now waits
 > on the prototype for marketing Raka asked for on 23 Oct (state/raka_reminders.md), which isn't built yet.

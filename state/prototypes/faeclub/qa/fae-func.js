@@ -127,6 +127,47 @@ const one = t => t.price + t.vat + t.fee;
     if (plant && u === '/') { await q.evaluate(() => { const d = document.createElement('div'); d.style.cssText = 'width:3000px;height:2px'; document.body.appendChild(d); }); ow.push(['plant', 0, await q.evaluate(() => document.documentElement.scrollWidth - innerWidth)]); }
   }
   ok('no overflow at nine widths', ow.every(x => x[2] <= 0), ow.filter(x => x[2] > 0));
+
+  // 13 the route to the ticket, a call in reach from the first screen to the checkout
+  const g = await (await b.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  await g.goto(base + '/', { waitUntil: 'networkidle' }); await g.waitForTimeout(600);
+  const e1 = one(e), e3 = split(e1, 3);
+  if (plant) await g.evaluate(() => { document.querySelector('.buy-p').textContent = 'Tickets £1.00'; });
+  const h13 = await g.evaluate(() => ({ href: document.querySelector('.buy a').getAttribute('href'), p: document.querySelector('.buy-p').textContent }));
+  ok('hero shows the price and the call', h13.href === '#checkout' && h13.p.includes(gbp(e1)) && h13.p.includes(gbp(e3[0])), { h13, want: [gbp(e1), gbp(e3[0])] });
+  if (plant) await g.evaluate(() => { const s = document.querySelector('[data-sbar]'); new MutationObserver(() => { if (s.classList.contains('on')) s.classList.remove('on'); }).observe(s, { attributes: true }); });
+  const barAt = async vh => { await g.evaluate(v => scrollTo(0, innerHeight * v), vh); await g.waitForTimeout(450); return g.evaluate(() => document.querySelector('[data-sbar]').classList.contains('on')); };
+  const bar0 = await barAt(0), bar3 = await barAt(3), bar6 = await barAt(6);
+  ok('the bar is there through the book', !bar0 && bar3 && bar6, { bar0, bar3, bar6 });
+  if (plant) await g.addStyleTag({ content: '.hall-c{display:none!important}' });
+  await g.evaluate(() => { const t = document.querySelector('[data-tale]'); scrollTo(0, t.offsetTop + (t.offsetHeight - innerHeight) * 0.999); }); await g.waitForTimeout(600);
+  const hc = await g.evaluate(() => { const a = document.querySelector('[data-hall-cta]'), r = a.getBoundingClientRect(), cs = getComputedStyle(a); return { href: a.getAttribute('href'), vis: cs.visibility, op: +getComputedStyle(a.parentNode).opacity, on: r.height > 0 && r.top >= 0 && r.bottom <= innerHeight, bar: document.querySelector('[data-sbar]').classList.contains('on') }; });
+  ok('the hall ends on the call', hc.href === '#checkout' && hc.vis === 'visible' && hc.op > 0.9 && hc.on && !hc.bar, hc);
+  await g.evaluate(() => scrollTo(0, 0)); await g.waitForTimeout(400);
+  if (plant) await g.evaluate(() => { document.querySelector('.buy a').setAttribute('href', '#venue'); });
+  await g.click('.buy a'); await g.waitForTimeout(900);
+  const land = await g.evaluate(() => { const r = document.querySelector('#co-h').getBoundingClientRect(); return { hash: location.hash, top: Math.round(r.top), hdr: document.querySelector('.hdr').getBoundingClientRect().bottom }; });
+  ok('hero call lands on the checkout', land.hash === '#checkout' && land.top >= land.hdr && land.top < 900, land);
+  await g.evaluate(() => document.querySelector('[data-pick="enchanted"]').scrollIntoView({ block: 'center' })); await g.waitForTimeout(300);
+  if (plant) await g.evaluate(() => document.querySelector('[data-pick="enchanted"]').addEventListener('click', e => e.stopImmediatePropagation(), true));
+  await g.click('[data-pick="enchanted"]'); await g.waitForTimeout(1600);
+  const sp = await g.evaluate(() => Math.round(document.querySelector('#spread').getBoundingClientRect().top));
+  ok('Choose Enchanted moves on to paying', Math.abs(sp) <= 80, { sp });
+  if (plant) await g.evaluate(() => document.querySelector('#solo .solo-v').remove());
+  const solo = await g.evaluate(() => ({ v: (document.querySelector('#solo .solo-v') || {}).textContent || '', comm: [...document.querySelectorAll('.quotes li')].map(l => l.textContent) }));
+  ok('the solo question answered by a guest who came alone', /attended alone/.test(solo.v) && /Kimelle/.test(solo.v) && solo.comm.length === 2 && solo.comm.every(t => !/Kimelle/.test(t)), solo);
+  const m = await (await b.newContext({ viewport: { width: 390, height: 844 } })).newPage();
+  await m.goto(base + '/', { waitUntil: 'networkidle' }); await m.waitForTimeout(400);
+  if (plant) await m.evaluate(() => document.querySelector('.mbtn').addEventListener('click', e => e.stopImmediatePropagation(), true));
+  await m.click('.mbtn'); await m.waitForTimeout(250);
+  const mo = await m.evaluate(() => ({ exp: document.querySelector('.mbtn').getAttribute('aria-expanded'), links: [...document.querySelectorAll('#mnav a')].filter(a => a.getBoundingClientRect().height > 0).map(a => a.getAttribute('href')) }));
+  await m.keyboard.press('Escape'); await m.waitForTimeout(200);
+  const mc = await m.evaluate(() => ({ exp: document.querySelector('.mbtn').getAttribute('aria-expanded'), shown: [...document.querySelectorAll('#mnav a')].filter(a => a.getBoundingClientRect().height > 0).length }));
+  ok('phone menu reaches the retreat', mo.exp === 'true' && mo.links.includes('/valkyrie-retreat/') && mo.links.length === 4 && mc.exp === 'false' && mc.shown === 0, { mo, mc });
+  await m.goto(base + '/valkyrie-retreat/', { waitUntil: 'networkidle' });
+  if (plant) await m.evaluate(() => { document.querySelector('.hdr .btn').setAttribute('href', '/#checkout'); });
+  const rt = await m.evaluate(() => ({ href: document.querySelector('.hdr .btn').getAttribute('href'), txt: document.querySelector('.hdr .btn').textContent, price: (document.querySelector('.rt-price') || {}).textContent || '' }));
+  ok('the retreat calls its own action', rt.href === '#reserve' && rt.txt === 'Reserve' && rt.price.includes('£' + (D.retreat.price / 100).toLocaleString('en-GB')), rt);
   await b.close();
   for (const x of res) console.log((x.p ? 'PASS ' : 'FAIL ') + x.n + (x.p && !plant ? '' : '  ' + JSON.stringify(x.info).slice(0, 500)));
   console.log(res.filter(x => x.p).length + ' of ' + res.length + ' pass' + (plant ? ' (plant mode, every check but the two script error checks should FAIL)' : ''));

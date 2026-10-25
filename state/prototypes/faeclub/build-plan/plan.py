@@ -186,7 +186,8 @@ def page():
 <link rel="stylesheet" href="/css/plan.css">
 <script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm')</script>
 </head>
-<body>
+<body data-sky="dusk" data-art-late>
+<canvas class="sky" id="sky" aria-hidden="true"></canvas><canvas class="motes" id="motes" aria-hidden="true"></canvas><canvas class="fx" id="fx" aria-hidden="true"></canvas>
 <a class="skip" href="#main">Skip to content</a>
 <header class="hdr"><div class="wrap hdr-in">
 <a class="hb" href="#top"><span class="hb-t">The plan</span><span class="hb-s">for Fae Club, by Astra</span></a>
@@ -194,7 +195,7 @@ def page():
 </div></header>
 <main id="main">
 
-<section class="cv" id="top" aria-labelledby="cv-h">
+<section class="cv" id="top" data-sky="dusk" aria-labelledby="cv-h">
   <div class="wrap cv-in">
     <div class="cv-txt">
       <p class="cv-by">{c["by"]}</p>
@@ -222,7 +223,7 @@ def page():
   </div>
 </section>
 
-<section class="sec dark" id="route" aria-labelledby="r-h">
+<section class="sec dark" id="route" data-sky="night" aria-labelledby="r-h">
   <div class="wrap">
     {ch(2, "The route")}
     <div class="two"><h2 id="r-h" class="t1">{rt["h"]}</h2><p class="lead">{rt["lede"]}</p></div>
@@ -248,7 +249,7 @@ def page():
   </div>
 </section>
 
-<section class="sec dark" id="built" aria-labelledby="b-h">
+<section class="sec dark" id="built" data-sky="toast" aria-labelledby="b-h">
   <div class="wrap">
     {ch(5, "Built")}
     <div class="two"><h2 id="b-h" class="t1">{bt["h"]}</h2><p class="lead">{bt["lede"]}</p></div>
@@ -271,7 +272,7 @@ def page():
   </div>
 </section>
 
-<section class="sec rtr" id="retreat" aria-labelledby="re-h">
+<section class="sec rtr" id="retreat" data-sky="aurora" aria-labelledby="re-h">
   <div class="wrap rtr-g">
     <div>
       {ch(7, "The retreat")}
@@ -302,7 +303,7 @@ def page():
   </div>
 </section>
 
-<section class="end" aria-labelledby="e-h">
+<section class="end" data-sky="late" aria-labelledby="e-h">
   <div class="wrap end-in">
     <h2 id="e-h" class="end-h">{en["h"]}</h2>
     <p class="lead">{en["lede"]}</p>
@@ -311,6 +312,7 @@ def page():
   </div>
 </section>
 </main>
+<script src="/js/art.js" defer></script>
 <script src="/js/plan.js" defer></script>
 </body></html>'''
 
@@ -322,6 +324,7 @@ def build():
     open(os.path.join(OUT, 'index.html'), 'w').write(html)
     shutil.copy(os.path.join(B, 'css', 'plan.css'), os.path.join(OUT, 'css', 'plan.css'))
     shutil.copy(os.path.join(B, 'js', 'plan.js'), os.path.join(OUT, 'js', 'plan.js'))
+    shutil.copy(os.path.join(PB, 'js', 'art.js'), os.path.join(OUT, 'js', 'art.js'))  # the same night sky as the prototype
     for f in os.listdir(os.path.join(PB, 'fonts')):
         shutil.copy(os.path.join(PB, 'fonts', f), os.path.join(OUT, 'fonts', f))
     for u in sorted(used):
