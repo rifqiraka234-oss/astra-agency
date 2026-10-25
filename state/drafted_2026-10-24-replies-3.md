@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Jack Yan SENT 2026-10-25 08.22.35 UTC on Raka's 'jack yan send it', act_fJcwhaoEy6pXrydpq, one copy, byte for byte from this file. Do not send again. -->
 # Replies, 24 Oct afternoon. NOT SENT, waiting on Raka's word
 
 ### Jack Yan, ExitLane. ctc_PawER3H2y8xuzkcpc

@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Rachel Munro SENT 2026-10-25 08.22.53 UTC on Raka's 'rachel munro send it', act_tNp6Wkrc3R5uCJtZ6, one copy, byte for byte from this file, tagline reread first. Do not send again. -->
 # Replies, 24 Oct morning (2). NOT SENT, waiting on Raka's word
 
 ### Rachel Munro, The Rebel Baker (Glasgow). ctc_moLTq5WbaqH8nFoGx

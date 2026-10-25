@@ -1,3 +1,4 @@
+<!-- LinkedIn REPLY to Willem SENT 2026-10-25 08.23.29 UTC on Raka's 'willem -> send if we havent sent our other chat is making the prototpe', act_tHFMHq43QncAaP7is, one copy. Do not send it again. The EMAIL below is NOT sent, it waits for the prototype the other session is building and changes to carry it. -->
 # Willem Straat, 22 Oct. NOT SENT, waiting on Raka's word
 
 > EDITED 25 Oct 08:15 UTC. "today" dropped from the LinkedIn thanks, it was written for 22 Oct and the email now waits

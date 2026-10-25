@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- SUPERSEDED 2026-10-25. Alice closed on Raka's 'alice -> put it in close pipeline', no message. Milo's reply went out from state/drafted_2026-10-25-reply-milo.md. Do not send either draft below. -->
 # Replies, 19 Oct afternoon. NOT SENT, waiting on Raka's word
 
 ### Alice Martin, Fabrikaa Learning, ctc_KMjZQEr5qdudxGgYP
