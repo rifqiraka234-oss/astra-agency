@@ -1,0 +1,54 @@
+# Hooft & Petiet and ReShare, research for the prototype. 25 Oct 2026
+
+Willem Straat (founder and co-owner of KeyPro, co-owner of Hooft & Petiet) asked on 22 Oct for our message to go to
+marketing@keypro.nl. Raka, 25 Oct, "i think we needa send a prototype, thats my thing". Our 14 Oct opener offered "a
+modernised Hooft & Petiet site and a finished ReShare site, built as one family". This is that.
+
+Every fact below was read on the page named, 25 Oct 2026 unless dated otherwise. Nothing from memory.
+
+## The three companies
+
+| Fact | Source |
+|---|---|
+| H&P "maakt van elke woning een thuis", "Sinds 2010", "Of het nu 1 of 100 woningen betreft", "duizenden woningen ... ingericht en gestyled" | https://hooftenpetiet.nl/ |
+| H&P serves woningcorporaties, bouwbedrijven, makelaars, projectontwikkelaars, beleggers, expats, vakantieparken | https://hooftenpetiet.nl/ |
+| H & P Interieur B.V., Reactorweg 291 B, 3542 AD Utrecht, info@hooftenpetiet.nl, 085 2734 872 | https://hooftenpetiet.nl/contact/ |
+| ReShare text, "Re staat voor hergebruik, Share voor delen, en Living voor de tijdelijke en vaste woonoplossingen", meubels "krijgen meerdere levens", five mission points ending "Klaarstaan voor 100% circulair inkopen in 2030", contact@reshareliving.com, the page opens "Deze site is in ontwikkeling" | https://reshareliving.com/ |
+| ReShare says KeyPro "bestaat sinds 2011", H&P "werd opgericht in 2010" and is "Servicepartner voor instapklare woningen", "direct bewoonbaar zodra de sleutel wordt overgedragen" | https://reshareliving.com/ |
+| KeyPro and H&P "bundelen vanaf 1 september hun krachten binnen ReShare Living Group", press 16 Oct 2025, Willem Straat "oprichter & mede-eigenaar KeyPro", Bas Anneveldt "mede-eigenaar KeyPro", the national aim "in 2030 50% circulair in te kopen" as KeyPro words it | https://www.keypro.nl/in-de-media/keypro-en-hooft-petiet-bundelen-krachten-binnen-reshare-living-group/ |
+| KeyPro founded 2011 by Willem Straat and Jurian Zijlstra, Grehamer Invest strategic shareholder from 1 March 2025, "internationale expansie" | https://www.emerce.nl/?p=6010525 (rendered, 17 Mar 2025) |
+| "Een boxspring verhuren voor een paar tientjes, wie doet dat nou?", "Met 45 medewerkers, een omzet richting de acht miljoen euro en locaties in Groningen en Amsterdam is de Reshare Living Group met KeyPro uitgegroeid tot een landelijke speler" (RTV Noord, 25 Nov 2025) | https://www.keypro.nl/in-de-media/hij-werd-uitgelachen-nu-verhuurt-willem-straat-meubels-door-heel-nederland/ |
+| KeyPro active in Nederland, België, Duitsland en Denemarken, ambition "Europees marktleider" (19 May 2025) | https://www.keypro.nl/in-de-media/meubelverhuurder-wil-circulair-europa-veroveren/ |
+
+## What H&P does, in their words
+
+| Fact | Source |
+|---|---|
+| Logeer, rust and wissel explained. Logeer, residents stay "een aantal weken". Rust, overdag only during renovation in bewoonde staat. Wissel, longer, "de bewoner neemt zijn eigen interieur mee" | /wat-is-een-rustwoning/, /cazas-wonen-samen-zorgen-voor-woongeluk-ook-tijdens-renovaties/ |
+| "Van lege woning naar tijdelijk thuis", four groups, Meubels en inventaris, Stoffering en afwerking, Apparatuur en voorzieningen, Welkomstpakket en beheer | /logeerwoning-rustwoning-wisselwoning/ |
+| Brenda de Wilde, projectmanager, "Elke nieuwe logeerpartij begint met een schoon en fris huis en een gezellig presentje bij ontvangst ... alleen de koffer moet nog door de bewoners worden uitgepakt" | /cazas-wonen-samen-zorgen-voor-woongeluk-ook-tijdens-renovaties/ |
+| Beheer, wisselschoonmaak, bewonersbegeleiding, dagelijks beheer, "Eén vast aanspreekpunt", "Heldere overzichten en rapportages per bewonerswissel" | /beheer/ |
+| Portaal, Overvecht Utrecht, "5, 10-hoog flats", "570 woningen", H&P did inrichting, in- en uitchecks, contracten, schoonmaak. Danny Mooren (Portaal) quote | /een-onmisbare-schakel-tijdens-renovatieprojecten/ |
+| HEF Wonen, "45 woningen Liskwartier" Rotterdam, "12 logeerwoningen", Thierry Farla quote "dat er zelfs servies, schoonmaakmiddelen en gratis internet aanwezig was, dat maakte het verschil" | /theirry-farla-van-hef-wonen-over-de-samenwerking-met-hooft-petiet/ |
+| Stadgenoot, "De komende jaren" logeer-, wissel-, rust- en calamiteitenwoningen in Amsterdam West en Oud-West, smalle trappenhuizen, verhuisliften | /samenwerking-met-stadgenoot/ |
+| Cazas Wonen, logeerwoningen in IJsselstein (Lanceerplaats, Televisiebaan) | /cazas-wonen-.../ |
+| Verkoopstyling 2 months, "Tot 50 m2: vanaf € 2.150", "Tot 75 m2 vanaf €2.549", "Tot 100 m2 vanaf €3.150", "Tot 125 m2 vanaf €3.550", "Tot 250 m2: prijs op aanvraag", incl. btw, depends on region, "Wekelijks verlengen kan al vanaf € 99,99 per week" | /verkoopstyling/ |
+| Quote form fields, Type project (10 options), stijl (Landelijk & Romantisch, Stoer & Trendy, Strak & Design, Anders), personen, ruimten, afleverdatum, oppervlak, pakketten (Keuken, Linnen, Huishoud, Tuin, Apparaten, Kinder, Senioren), apparaten list | /offerteaanvraag-meubelverhuur/ |
+| MVO, Utrecht pand energielabel A, zonnepanelen, laadpunten, meubels gereinigd "met milieuvriendelijke stoomapparatuur", FSC, SROI 5%, Nederlandse taallessen | /mvo/ |
+| 25 client logos on their homepage (Stadgenoot, de Alliantie, Portaal, Havensteder, Heijmans, BAM Wonen, Dudok Wonen and more) | https://hooftenpetiet.nl/ |
+| Homepage still opens with six lime buttons over a photo (desktop render 25 Oct 08.19 UTC), ten news posts share one page title, /category/ pages return a WordPress 500 | site-audit.js, crawl 25 Oct |
+
+## The market, sourced
+
+| Fact | Source |
+|---|---|
+| Corporations must phase out all E, F and G label homes "uiterlijk in 2028". Aedes benchmark 2023, 247,000 to 180,000 in 2022. Agreements extended to 2035 | https://www.volkshuisvestingnederland.nl/onderwerpen/verduurzaming-door-woningcorporaties |
+| "10 million tonnes of furniture are discarded by businesses and consumers in EU countries each year, the majority of which is destined for either landfill or incineration" (EEB, 24 Sep 2017) | https://eeb.org/library/circular-economy-opportunities-in-the-furniture-sector/ |
+
+Rejected. "247 miljoen kilo meubels per jaar in NL" (no study behind it). A Rijksoverheid "100% circulair inkopen 2030" target (none found, the 100% is ReShare's own mission). "KeyPro neemt concurrent over" (no source found).
+
+## Media
+
+Their own photos, 73 downloaded from their own pages (research/assets/hp-photos, contact sheets sheet-0/1). Used only as
+the interiors and work they present them as, never captioned with a person's name or a place their page doesn't give.
+Logos from their own sites (research/assets/brand). Fonts Fraunces and Instrument Sans, OFL 1.1, self hosted.

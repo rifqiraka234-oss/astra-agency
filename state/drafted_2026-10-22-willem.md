@@ -43,8 +43,40 @@ WITHDRAWN
 Thanks Willem, I've just sent it over to marketing@keypro.nl!
 ```
 
-EMAIL to marketing@keypro.nl, subject "Hooft & Petiet and ReShare websites, at Willem's request"
+> EDITED 25 Oct ~10.40 UTC on Raka's "wait i think we needa send a prototype, thats my thing". The sketch offer email
+> below is SUPERSEDED, the prototype is built and live, and the email now delivers it in the artefact delivery shape.
+> - Live, https://astra-hooftenpetiet-prototype.netlify.app (6 pages, NL and EN) and
+>   https://astra-reshare-prototype.netlify.app (2 pages). SSO off on both. 80 of 80 and 29 of 29 files verified live
+>   (assets by sha256, HTML by visible text), cold render at 1440 and 390 with 0 errors and every image decoded.
+> - Thread pulled again ~10.35 UTC, 6 items, control 6. The sixth is our thanks of 08.23.29 UTC. Nothing new from him.
+> - "We spent the day building" is true, the build ran through 25 Oct. Handover at
+>   state/prototypes/hooftenpetiet/handover.md.
+> - Gmail draft r3040318523259070641 updated to this text. NOT SENT.
+
+EMAIL to marketing@keypro.nl, subject "Hooft & Petiet and ReShare, two working sites at Willem's request"
 EMAIL
+```
+Hi there,
+
+Willem Straat asked me to send this your way.
+
+We spent the day building what I'd offered him, a modernised Hooft & Petiet site and a finished ReShare Living Group site, built as one family. Both work, in Dutch and English.
+
+Try them yourself.
+https://astra-hooftenpetiet-prototype.netlify.app
+https://astra-reshare-prototype.netlify.app
+
+Hooft & Petiet furnishes an empty home in your four steps as you scroll, and ReShare follows one sofa through its lives. The quote form doesn't send anything, so click away.
+
+I run Astra agency. We make websites for brands like Unilever, AXA, Pertamina.
+
+What do you think?
+
+Best,
+Raka
+```
+
+SUPERSEDED, the sketch offer version that sat in the Gmail draft until 25 Oct ~10.40 UTC. Kept for the record, do not send.
 ```
 Hi there,
 

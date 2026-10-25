@@ -1,0 +1,4 @@
+https://www.keypro.nl  300 pages read, 1403 from sitemaps, statuses {'200': 300}
+languages {'nl': 169, 'en': 89, 'de': 42}
+!!  stopped at the cap of 300 with 25986 links still queued. Raise --max.
+wrote /home/user/astra-agency/state/prototypes/hooftenpetiet/research/crawl/kp-pass1/crawl.json
