@@ -45,7 +45,17 @@ Every fact below was read on the page named, 25 Oct 2026 unless dated otherwise.
 | Corporations must phase out all E, F and G label homes "uiterlijk in 2028". Aedes benchmark 2023, 247,000 to 180,000 in 2022. Agreements extended to 2035 | https://www.volkshuisvestingnederland.nl/onderwerpen/verduurzaming-door-woningcorporaties |
 | "10 million tonnes of furniture are discarded by businesses and consumers in EU countries each year, the majority of which is destined for either landfill or incineration" (EEB, 24 Sep 2017) | https://eeb.org/library/circular-economy-opportunities-in-the-furniture-sector/ |
 
-Rejected. "247 miljoen kilo meubels per jaar in NL" (no study behind it). A Rijksoverheid "100% circulair inkopen 2030" target (none found, the 100% is ReShare's own mission). "KeyPro neemt concurrent over" (no source found).
+Rejected. "247 miljoen kilo meubels per jaar in NL" (no study behind it). A Rijksoverheid "100% circulair inkopen 2030" target (none found, the 100% is ReShare's own mission).
+
+CORRECTED 25 Oct ~11.00 UTC. "KeyPro neemt concurrent over" was rejected above for want of a source. The source exists.
+TranslinkCF, 23 Oct 2025, "advised the shareholders of Hooft & Petiet on the sale to ReShare Living Group"
+(https://translinkcf.com/2025/10/23/translinkcf-advised-the-shareholders-of-hooft-petiet-on-the-sale-to-reshare-living-group/,
+fetched 25 Oct, 200). H&P's own marketing internship page, "ReShare Living Group is een overkoepelende groep waar KeyPro
+en Hooft & Petiet onderdeel van zijn. Twee bedrijven met één duidelijke missie" and the group marketing team "werkt voor
+twee merken, KeyPro en Hooft & Petiet" (https://hooftenpetiet.nl/stage-marketing-keypro-hooft-petiet-utrecht-amsterdam/).
+KeyPro is "initiatiefnemer van de ReShare Living Group" (KeyPro press page). Willem's lemlist record, pulled 25 Oct,
+jobTitle "Mede-eigenaar", "Mede-eigenaar van Hooft & Petiet ... Als onderdeel van de ReShare Living Group". Nothing on
+either site depended on the rejected line.
 
 ## Media
 
