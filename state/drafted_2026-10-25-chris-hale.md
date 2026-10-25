@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Chris SENT 25 Oct on Raka's 'send chris and ulrich now', act_rnr9vQmqF8tKWiLJ2, one copy. Do not send again. -->
 # Chris Hale, The Garnish Collective, 25 Oct. NOT SENT, waiting on Raka's word
 
 Raka, 25 Oct, "maybe draft them a planning the week and its getting full? does it make sense?". Thread pulled 25 Oct

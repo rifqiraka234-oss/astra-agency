@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Ulrich SENT 25 Oct on Raka's 'send chris and ulrich now', act_n7f9u6xnPZm8mbyNt, one copy. Do not send again. -->
 # Ulrich Steppler, CHS Claims Handling Solutions (justclaims), 25 Oct. NOT SENT, waiting on Raka's word
 
 Raka, 25 Oct, "maybe draft them a planning the week and its getting full? does it make sense?". Thread pulled 25 Oct
