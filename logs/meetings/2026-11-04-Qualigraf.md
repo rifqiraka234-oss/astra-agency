@@ -41,3 +41,30 @@ to seeing what a UK site for Democratic Services teams would look like.
 - Don't name the country our build partner is in. If he asks about past work, it's partner work and the Amwisesa
   disclosure applies.
 - Our floor is €500 and the public band is €500 to €50k.
+
+## Call kit, written 25 Oct (GTM plan section 5)
+
+**The aim of the call.** He agrees to the UK site as the first step, with a price range said on the call and a decision
+date booked. He's Group CEO, so he decides.
+
+**Five questions, in this order.**
+1. "How do UK councils find and shortlist you today?" Where the site sits in a Democratic Services buying process.
+2. "Which market matters most in the next twelve months?" Confirms UK first, or changes the order.
+3. "Who runs the current WordPress site, and what did it cost to build?" The anchor before any number.
+4. "Is there a date this has to be live by?" A tender, a conference, a renewal round.
+5. "Who else would want to see the proposal?" Marketing in another country, a board.
+
+**The one recommendation.** One WordPress site with a custom theme his team can edit, UK pages first (the nine pages
+already designed in the prototype), built so each market is a set of pages, not a separate site. The other three
+markets follow as add ons.
+
+**The price, Raka's call.** UK agency custom builds run £3,500 to £12,000 (ProfileTree, updated 1 Oct 2026,
+https://profiletree.com/uk-website-design-costs/, read 9 Oct for the Acquitas check). My suggestion, €7,000 to €9,000
+for the UK site on WordPress, and €1,500 to €2,500 for each further market. Translation is quoted separately or done by
+his team. Half at the start.
+
+**What not to do.** Don't lead with Surrey, he said the story is out of date. Don't offer a menu. One start, one price
+range, one date.
+
+**Close.** "If the UK site is the right first step, I'll send a one page proposal today and we can start [date]. Shall
+we book fifteen minutes on [day] to confirm?"
