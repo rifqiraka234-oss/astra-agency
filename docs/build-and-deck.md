@@ -715,3 +715,34 @@ or put adjacent dark sections in one wrapper with one background. A three column
 cut "Bijvoorbeeld 24" at 1440, a placeholder is content and needs its full width at every size. And a live sweep can
 fail one load because the proxy aborts a stylesheet (it arrives as text/plain), so before calling the site broken,
 fetch the file directly several times and reload the page, Netlify served text/css every time.
+
+### v3, the same evening. One order carried down the page
+
+Raka on the restyled build, "be more creative in animations, videos, photos, things, graphs, whatever, think about the
+DESIRED UX UI user action and how the whole flow guides them". What worked, so it gets repeated.
+
+1. **Write the flow as a table before touching code** (research/flow.md). Each row is the visitor's question at that
+   point, what they see and do, and the moment that answers it. The moments came out of the questions, not the other
+   way round.
+2. **One state, every display reads it.** A single order (headcount, format, appetite, deal, drink, recipes) written by
+   every control and read by the hero number, the empanada line, the table, the ticket, the per head rows, the bar at the
+   bottom, the stub above the form, the hidden form field and the fallback mail. Nothing is typed twice, and the form
+   arrives filled in.
+3. **The hero is the first input.** "Vous êtes combien ?" with a giant draggable number is both the headline and the
+   first answer, and the sun turns with it. Drag is sideways on touch so the page still scrolls.
+4. **A graph that is also a control.** The per head rows switch the order when tapped, and the plan's 120 dot wall is a
+   slider. A chart the visitor can move gets read.
+5. **Film only where it means something, and never claimed.** Two Mixkit Free fire loops, no people, masked into their
+   sun and their arch. Still frames as posters, played only on screen, never under reduced motion or data saver, and the
+   handover asks for their own footage.
+
+| Hiccup | Rule |
+|---|---|
+| `.oc-rows span`, `.fm-chips span`, `.fmt-list li span`, `.card-boxes span` also hit the language spans inside, so every chip drew a box inside a box and price fonts landed on descriptions. Two of these shipped in the first deploy unnoticed | On a bilingual build every descendant `span` selector is a bug. Use child selectors (`label > span`), and grep the CSS for ` span {` before each deploy |
+| French thousands rendered as "1227,00" in the display font, the narrow no break space U+202F isn't in the subset | Replace U+202F with U+00A0 in every formatted number, in the page script and in the build's static copy |
+| The static no JS price said 10,22 and the script said 10,23 | Round the build's copy the way the browser does, from the shortest decimal, half up (`Decimal(repr(v))`). Check a tie (10.225) both ways |
+| A box of 6 stretched to the row height of the boxes of 12 and looked like three empanadas were missing | Flex rows of different sized objects get `align-items: center`. Look at the last box, not the first |
+| The form test missed once with a 560 px overshoot while axe loaded the machine | A smooth scroll followed by a timed focus isn't a landing. Land on `scrollend` with a timer fallback, re-align if off by more than 40 px, then focus |
+| Rebuilding while the long QA runs were going produced a 404 font in the overflow run | Never run the build while a QA chain is running. Note the build's hash when the chain starts and check it's unchanged when it ends |
+| The fire masked into the sun with `hard-light` turned their yellow sun brown | Test blend modes side by side on the real frame. `overlay` kept the brand yellow and let the flames move inside it |
+| The plan's coworking map labels were pills with a soft shadow, missed by the restyle | Check the plan site against the banned list too, not only the client's site |

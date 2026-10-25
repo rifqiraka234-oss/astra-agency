@@ -1,34 +1,36 @@
-<!--{"title": "[[Saavedra pour les entreprises, boxes, déjeuners, afterwork||Saavedra for companies, boxes, team lunches, afterwork]]", "desc": "[[Des box d'empanadas cuites au feu de bois pour le bureau, le déjeuner d'équipe et l'afterwork, dans le 9e. Un devis en une étape.||Boxes of wood fired empanadas for the office, team lunches and afterwork drinks in the 9th. A quote in one step.]]", "nav": "entreprises", "path": "entreprises/index.html", "js": ["scene.js", "box.js", "form.js"]}-->
-<section class="ch midi phero" data-tone="light">
-  <div class="phero-sun" aria-hidden="true">{{SVG sun.svg}}</div>
-  <div class="ch-in phero-in">
-    <div>
+<!--{"title": "[[Saavedra pour les entreprises, boxes, déjeuners, afterwork||Saavedra for companies, boxes, team lunches, afterwork]]", "desc": "[[Des box d'empanadas cuites au feu de bois pour le bureau, le déjeuner d'équipe et l'afterwork, dans le 9e. Composez la commande, le devis part avec.||Boxes of wood fired empanadas for the office, team lunches and afterwork drinks in the 9th. Build the order and the quote goes out with it.]]", "nav": "entreprises", "path": "entreprises/index.html", "js": ["scene.js", "order.js", "form.js"]}-->
+<section class="ch midi ho" id="combien" data-tone="light" aria-labelledby="ho-h">
+  <div class="ch-in ho-in">
+    <div class="ho-txt">
       <p class="lbl rv"><i>[[Entreprises||Companies]]</i> [[Paris 9e||Paris 9th]]</p>
-      <h1><span class="poster" lang="es" data-words style="display:block">Menos palabras, más empanadas.</span><span class="d3 rv rv-d1" style="display:block">[[Des empanadas au feu de bois pour toute l'équipe, du déjeuner à l'afterwork.||Wood fired empanadas for the whole team, from lunch to afterwork.]]</span></h1>
-      <div class="phero-cta rv rv-d2">
-        <a class="btn pri btn-lg" href="#boxes">[[Composer ma box||Build my box]]{{AR}}</a>
-        <a class="btn ghost btn-lg" href="#devis">[[Demander un devis||Ask for a quote]]</a>
-      </div>
+      <h1 class="poster ho-h" id="ho-h" data-words>[[Vous êtes combien&#8239;?||How many of you?]]</h1>
+      <p class="lede rv rv-d1">[[Des empanadas cuites au feu de bois pour toute l'équipe, du déjeuner à l'afterwork, rue Condorcet dans le 9e.||Wood fired empanadas for the whole team, from lunch to afterwork, on rue Condorcet in the 9th.]]</p>
     </div>
-    <div class="phero-art">
-      {{PRINT p-tray p1}}
-      {{PRINT p-breaking p2}}
+    <div class="ho-art">
+      <div class="ho-sun" aria-hidden="true">{{SVG sun.svg}}</div>
+      {{HEADCOUNT}}
+    </div>
+    <div class="ho-cta rv rv-d2">
+      <a class="btn pri btn-lg" href="#table" data-o-go>[[Composer la commande||Build the order]]</a>
+      <a class="btn ghost btn-lg" href="#devis" data-o-go>[[Demander un devis||Ask for a quote]]</a>
     </div>
   </div>
+  {{HEADLINE}}
 </section>
 
-<section class="ch boxes" id="boxes" data-tone="light" aria-labelledby="boxes-h">
+<section class="ch tbl" id="table" data-tone="light" aria-labelledby="tbl-h">
   <span class="hour" aria-hidden="true">[[12H30||12.30]]</span>
   <div class="ch-in">
     <div class="boxes-head">
       <div>
-        <p class="lbl rv"><i>[[12h30||12.30]]</i> [[Boxes au bureau||Boxes at the office]]</p>
-        <h2 class="d1" id="boxes-h" data-words>[[Une box, <em>douze</em> empanadas.||One box, <em>twelve</em> empanadas.]]</h2>
+        <p class="lbl rv"><i>[[12h30||12.30]]</i> [[La commande||The order]]</p>
+        <h2 class="d1" id="tbl-h" data-words>[[Une box, <em>douze</em> empanadas.||One box, <em>twelve</em> empanadas.]]</h2>
       </div>
-      <p class="lede rv">[[Bougez le curseur, la table se remplit. Le devis part avec le bon nombre.||Move the slider and the table fills up. The quote goes out with the right number.]]</p>
+      <p class="lede rv">[[Choisissez le format et les recettes. La table se remplit, le ticket s'imprime, et le devis part avec.||Pick the format and the recipes. The table fills up, the ticket prints, and the quote goes out with it.]]</p>
     </div>
-    {{BOX}}
-    <p class="src rv">[[Prix de la carte du restaurant, box de 6 à 20,90 € et box de 12 à 40,90 €. Le prix pour un événement se fixe dans le devis.||Card prices from the restaurant, 20.90 € for a box of 6 and 40.90 € for a box of 12. The price for an event is set in the quote.]]</p>
+    {{TABLE}}
+    <p class="src">[[Prix de la carte du restaurant, box de 6 à 20,90 €, box de 12 à 40,90 €, formules du midi à 13,90 € et 15,90 €. Une estimation pour vous faire une idée, le prix pour un événement se fixe dans le devis.||Card prices from the restaurant, 20.90 € for a box of 6, 40.90 € for a box of 12, lunch deals at 13.90 € and 15.90 €. An estimate to give you an idea, the price for an event is set in the quote.]]</p>
+    {{PERHEAD}}
   </div>
 </section>
 
@@ -36,8 +38,8 @@
   <div class="ch-in walk-in">
     <div>
       <p class="lbl rv"><i>48 rue Condorcet</i> [[Paris 9e||Paris 9th]]</p>
-      <h2 class="d2" id="walk-h" data-words>[[Le four est <em>à deux pas.</em>||The oven is <em>round the corner.</em>]]</h2>
-      <p class="lede rv" style="margin-top:20px">[[Passez prendre la commande, ou dites dans le devis où vous êtes, on vous dit comment elle arrive.||Pick the order up, or tell us in the quote where you're based and we'll tell you how it gets there.]]</p>
+      <h2 class="d2" id="walk-h" data-words>[[Où est <em>votre bureau&#8239;?</em>||Where's <em>your office?</em>]]</h2>
+      <p class="lede rv" style="margin-top:20px">[[À pied depuis le four, par les rues. Passez prendre la commande, ou dites dans le devis où vous êtes et on vous dit comment elle arrive.||On foot from the oven, along the streets. Pick the order up, or tell us in the quote where you're based and we'll tell you how it gets there.]]</p>
       {{WALKLIST}}
       <p class="src">[[Distances à pied par les rues, calculées sur le plan OpenStreetMap, minutes à 5 km/h. Plan © contributeurs OpenStreetMap, ODbL.||Walking distances along the streets, worked out on the OpenStreetMap plan, minutes at 5 km/h. Map © OpenStreetMap contributors, ODbL.]]</p>
     </div>
@@ -45,7 +47,7 @@
   </div>
 </section>
 
-<section class="ch crema fmt" data-tone="light" aria-labelledby="dej-h" style="--fade:var(--crema)">
+<section class="ch crema fmt" data-tone="light" aria-labelledby="dej-h">
   <figure class="fmt-pic">{{IMG p-serving}}</figure>
   <span class="hour" aria-hidden="true">[[13H||1PM]]</span>
   <div class="ch-in fmt-in">
@@ -58,12 +60,12 @@
         <li><span><b>Saavedra Mi Amor</b><small>[[3 empanadas, 1 soft et 1 alfajor||3 empanadas, 1 soft drink and 1 alfajor]]</small></span><span>15,90 €</span></li>
       </ul>
       <p class="src rv">[[Prix de la carte, chaque formule avec une sauce chimichurri, criolla ou salsa verde.||Card prices, every deal with a chimichurri, criolla or salsa verde sauce.]]</p>
-      <a class="btn pri btn-lg rv" href="/entreprises/?format=dejeuner#devis">[[Un déjeuner pour l'équipe||A lunch for the team]]{{AR}}</a>
+      <a class="btn pri btn-lg rv" href="#table" data-o-go data-o-set="dejeuner">[[Composer un déjeuner||Build a lunch]]</a>
     </div>
   </div>
 </section>
 
-<section class="ch tarde fmt flip" id="afterwork" data-tone="light" aria-labelledby="aw-h" style="--fade:#f29cb6">
+<section class="ch tarde fmt flip" id="afterwork" data-tone="light" aria-labelledby="aw-h">
   <figure class="fmt-pic">{{IMG p-ledge}}</figure>
   <span class="hour" aria-hidden="true">[[18H30||6.30PM]]</span>
   <div class="ch-in fmt-in">
@@ -78,7 +80,7 @@
         <li><span><b>[[Box de 12||Box of 12]]</b><small>[[À partager||For sharing]]</small></span><span>40,90 €</span></li>
       </ul>
       <p class="src rv">[[Prix de la carte du restaurant.||Card prices from the restaurant.]]</p>
-      <a class="btn pri btn-lg rv" href="/entreprises/?format=afterwork#devis">[[Préparer l'afterwork||Plan the afterwork]]{{AR}}</a>
+      <a class="btn pri btn-lg rv" href="#table" data-o-go data-o-set="afterwork">[[Composer l'afterwork||Build the afterwork]]</a>
     </div>
   </div>
 </section>
@@ -91,12 +93,11 @@
       <p class="lbl rv"><i>[[20h||8pm]]</i> [[Privatisation||Private hire]]</p>
       <h2 class="d1" id="pv-h" data-words style="margin-top:14px">[[Le restaurant, <em>rien que pour vous.</em>||The restaurant, <em>just for you.</em>]]</h2>
       <p class="lede rv" style="margin-top:22px">[[Une équipe, un anniversaire, un lancement. Le four à bois tourne pour vous, la carte aussi.||A team, a birthday, a launch. The wood oven runs for you, and so does the card.]]</p>
-      <p class="rv" style="margin-top:30px"><a class="btn pri btn-lg" href="/privatisation/">[[Voir la privatisation||See private hire]]{{AR}}</a></p>
+      <p class="rv" style="margin-top:30px"><a class="btn pri btn-lg" href="/privatisation/">[[Voir la privatisation||See private hire]]</a></p>
     </div>
-    <figure class="night-pic rv">{{IMG p-pile}}</figure>
+    <figure class="night-pic arch-fire rv">{{FILM fire-oven}}</figure>
   </div>
 </section>
-
 
 <section class="ch faq" data-tone="light" aria-labelledby="faq-h">
   <div class="ch-in faq-in">
@@ -119,7 +120,8 @@
     <div class="quote-side">
       <p class="lbl rv"><i>[[Devis||Quote]]</i> [[En une étape||In one step]]</p>
       <h2 class="poster" id="devis-h" data-words style="margin-top:16px">[[Et demain midi&#8239;?||And lunch tomorrow?]]</h2>
-      <p class="lede rv">[[Le nombre, la date, un contact. Julien et Grégoire vous répondent avec un devis.||The headcount, the date, a contact. Julien and Grégoire reply with a quote.]]</p>
+      {{BON}}
+      <p class="lede rv">[[Votre commande part avec la demande. Ajoutez la date et un contact, Julien et Grégoire vous répondent avec un devis.||Your order goes out with the request. Add the date and a contact, and Julien and Grégoire reply with a quote.]]</p>
       <p class="rv" style="margin-top:22px;font:700 14px/1.6 var(--m)">[[Ou écrivez directement à||Or write directly to]] <a href="mailto:{{MAIL}}">{{MAIL}}</a></p>
       <p class="rv proof"><b>{{RATING}}</b><span>[[Octobre 2026||October 2026]]</span></p>
     </div>
@@ -128,3 +130,4 @@
     </div>
   </div>
 </section>
+{{OBAR}}

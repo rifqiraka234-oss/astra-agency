@@ -1,0 +1,181 @@
+/* The order, carried down the Entreprises page. Headcount, table, ticket, per head rows, bar, the stub and the rail. */
+html:not(.js) .js-only { display: none !important }
+:root { --veg: #2e8a4f }
+
+/* ---------------------------------------------------------------- the headcount is the hero */
+.ho { min-height: 100svh; padding: calc(var(--hh) + 30px) 0 clamp(36px, 6vh, 64px); display: flex; flex-direction: column; justify-content: center;
+  background: radial-gradient(50% 46% at 74% 42%, #fff6d6 0%, rgba(255, 246, 214, 0) 70%), linear-gradient(180deg, var(--celeste2) 0%, var(--celeste) 80%) }
+.ho-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "txt art" "cta art"; gap: 0 clamp(24px, 4vw, 70px); align-items: center; width: 100% }
+.ho-txt { grid-area: txt; align-self: end; position: relative; z-index: 1 }
+.ho-art { grid-area: art; position: relative; display: grid; place-items: center; min-height: min(62vh, 600px) }
+.ho-cta { grid-area: cta; align-self: start; margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px }
+.ho-h { font-size: clamp(50px, 7.2vw, 124px); margin: 16px 0 0 }
+.ho .lede { margin-top: 20px; max-width: 34ch }
+.ho-sun { position: absolute; left: 50%; top: 50%; width: min(44vw, 620px); aspect-ratio: 1; color: var(--sol); transform: translate(-50%, -54%) rotate(var(--spin, 0deg)); transition: transform .9s var(--ease); pointer-events: none }
+.ho-sun svg { width: 100%; height: 100%; animation: spin 140s linear infinite }
+.ho-ctl { position: relative; z-index: 1; display: grid; justify-items: center }
+.ho-num { display: flex; align-items: center; gap: clamp(8px, 2vw, 26px) }
+.ho-big { cursor: ew-resize; touch-action: pan-y; user-select: none; -webkit-user-select: none; border-radius: 6px; padding: 0 .04em }
+.ho-big b { display: block; min-width: 1.6ch; text-align: center; font: 400 clamp(150px, 21vw, 330px)/.82 var(--d); color: var(--azul); letter-spacing: -.03em; transition: transform .25s var(--ease), font-size .3s var(--ease) }
+.ho-big.wide b { font-size: clamp(116px, 15.5vw, 250px) }
+.ho-big.drag b { transform: scale(1.05) rotate(-2deg) }
+.ho-step { width: 58px; height: 58px; flex: none; display: grid; place-items: center; border: 2px solid var(--azul); border-radius: 4px; background: var(--papel); color: var(--azul); cursor: pointer; transition: background .2s, color .2s }
+.ho-step:hover { background: var(--azul); color: var(--crema) }
+.ho-step svg { width: 20px; height: 20px }
+.ho-unit { margin-top: 6px; font: 800 clamp(22px, 2.2vw, 30px)/1 var(--h); text-transform: uppercase; letter-spacing: .04em }
+.ho-range { -webkit-appearance: none; appearance: none; width: min(420px, 80vw); height: 34px; margin-top: 16px; background: transparent; cursor: pointer }
+.ho-range::-webkit-slider-runnable-track { height: 8px; border-radius: 999px; background: rgba(3, 74, 145, .2) }
+.ho-range::-moz-range-track { height: 8px; border-radius: 999px; background: rgba(3, 74, 145, .2) }
+.ho-range::-webkit-slider-thumb { -webkit-appearance: none; width: 30px; height: 30px; margin-top: -11px; border-radius: 50%; background: var(--azul); border: 4px solid var(--sol) }
+.ho-range::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: var(--azul); border: 4px solid var(--sol) }
+
+/* the order as a line of empanadas, one for each in it */
+.ho-line { --s: clamp(15px, 1.65vw, 24px); position: relative; display: flex; flex-wrap: wrap; justify-content: center; align-content: flex-end; gap: 6px 4px; margin-top: clamp(30px, 5vh, 54px); padding: 0 var(--g); min-height: calc(var(--s) * .62) }
+.ho-line i { width: var(--s); height: calc(var(--s) * .62); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 40'%3E%3Cpath d='M3 35C3 15 17 4 32 4s29 11 29 31c0 2-1 3-3 3H6c-2 0-3-1-3-3z' fill='%23eeaa55'/%3E%3Cpath d='M7 34C7 18 18 8 32 8s25 10 25 26' fill='none' stroke='%23b0601f' stroke-width='4.5' stroke-linecap='round' stroke-dasharray='2.6 2.6'/%3E%3C/svg%3E") center / contain no-repeat }
+.ho-line i.veg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 40'%3E%3Cpath d='M3 35C3 15 17 4 32 4s29 11 29 31c0 2-1 3-3 3H6c-2 0-3-1-3-3z' fill='%23eeaa55'/%3E%3Cpath d='M7 34C7 18 18 8 32 8s25 10 25 26' fill='none' stroke='%23b0601f' stroke-width='4.5' stroke-linecap='round' stroke-dasharray='2.6 2.6'/%3E%3Ccircle cx='32' cy='26' r='6.5' fill='%232e8a4f'/%3E%3C/svg%3E") }
+html.motion .ho-line i.new { animation: drop .5s var(--ease) both; animation-delay: var(--d, 0ms) }
+@keyframes drop { from { opacity: 0; transform: translateY(-42px) rotate(-30deg) } 70% { opacity: 1; transform: translateY(3px) rotate(4deg) } }
+.ho-line[data-more]:not([data-more=""])::after { content: attr(data-more); align-self: center; margin-left: 8px; font: 700 13px/1 var(--m) }
+.ho-count { margin-top: 14px; text-align: center; font: 700 13px/1.4 var(--m); letter-spacing: .06em; text-transform: uppercase }
+.ho-count b { font-weight: 700 }
+.ho-count [data-o-boxes]::before { content: "·"; margin: 0 8px; opacity: .6 }
+@media (max-width: 900px) {
+  .ho { min-height: 0 }
+  .ho-in { grid-template-columns: minmax(0, 1fr); grid-template-areas: "txt" "art" "cta" }
+  .ho-art { min-height: 0; padding: 30px 0 6px }
+  .ho-sun { width: min(80vw, 440px); transform: translate(-50%, -50%) rotate(var(--spin, 0deg)) }
+  .ho-cta .btn { flex: 1 1 240px }
+}
+@media (max-width: 420px) { .ho-step { width: 48px; height: 48px } .ho-big b { font-size: 132px } .ho-big.wide b { font-size: 100px } }
+
+/* ---------------------------------------------------------------- the order: controls, then the table with the ticket on it */
+.tbl { background: linear-gradient(180deg, var(--celeste) 0%, var(--papel) 34%) }
+.ob { display: grid; grid-template-columns: minmax(0, .74fr) minmax(0, 1.26fr); gap: clamp(22px, 3vw, 44px); align-items: start }
+.oc { display: grid; gap: 24px; padding: clamp(22px, 2.6vw, 34px); border-radius: 4px; background: var(--azul); color: var(--crema) }
+.oc-g { border: 0; margin: 0; padding: 0; min-width: 0 }
+.oc-g[hidden] { display: none }
+.oc-g legend { padding: 0; margin-bottom: 12px; font: 800 18px/1 var(--h); text-transform: uppercase; letter-spacing: .03em }
+.oc-rows label, .oc-chips label { position: relative; display: block; cursor: pointer }
+.oc-rows input, .oc-chips input { position: absolute; opacity: 0; inset: 0; cursor: pointer; margin: 0 }
+.oc-rows label > span { display: grid; gap: 4px; padding: 13px 14px; border-top: 2px solid rgba(253, 226, 206, .22); transition: background .2s, color .2s }
+.oc-rows label:last-child > span { border-bottom: 2px solid rgba(253, 226, 206, .22) }
+.oc-rows b { font: 800 21px/1 var(--h); text-transform: uppercase }
+.oc-rows small { font: 400 13.5px/1.3 var(--t); opacity: .86 }
+.oc-rows input:checked + span { background: var(--crema); color: var(--azul); border-color: var(--crema) }
+.oc-chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px }
+.oc-chips.oc-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+.oc-chips label > span { display: grid; gap: 4px; padding: 11px 8px; border: 2px solid rgba(253, 226, 206, .4); border-radius: 4px; text-align: center; transition: background .2s, color .2s }
+.oc-chips b { font: 800 17px/1 var(--h); text-transform: uppercase }
+.oc-chips small { font: 400 12px/1.2 var(--m) }
+.oc-chips input:checked + span { background: var(--crema); color: var(--azul); border-color: var(--crema) }
+.oc input:focus-visible + span { outline: 3px solid var(--sol); outline-offset: 2px }
+.oc-quick { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px }
+.oc-quick button { min-height: 40px; padding: 0 14px; border: 2px solid rgba(253, 226, 206, .5); border-radius: 4px; background: none; color: var(--crema); font: 800 15px/1 var(--h); text-transform: uppercase; letter-spacing: .03em; cursor: pointer }
+.oc-quick button[aria-pressed="true"] { background: var(--sol); border-color: var(--sol); color: var(--noche) }
+.oc-list { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 16px }
+.oc-sub { grid-column: 1 / -1; margin: 10px 0 2px; font: 700 11.5px/1 var(--m); letter-spacing: .08em; text-transform: uppercase; opacity: .8 }
+.oc-sub:first-child { margin-top: 0 }
+.oc-list label { display: flex; align-items: center; gap: 10px; padding: 7px 0; cursor: pointer; font: 600 15px/1.2 var(--t) }
+.oc-list input { -webkit-appearance: none; appearance: none; flex: none; width: 22px; height: 22px; margin: 0; border: 2px solid rgba(253, 226, 206, .7); border-radius: 3px; display: grid; place-items: center; cursor: pointer }
+.oc-list input:checked { background: var(--sol) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5 6.5 12 13 4.5' fill='none' stroke='%23021b38' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 15px no-repeat; border-color: var(--sol) }
+.oc-list input:focus-visible { outline: 3px solid var(--sol); outline-offset: 2px }
+.oc-list label.veg > span::after { content: ""; display: inline-block; width: 8px; height: 8px; margin-left: 8px; border-radius: 50%; background: #7fd39b; vertical-align: middle }
+
+.tb { position: sticky; top: calc(var(--hh) + 16px); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(250px, .8fr); min-height: 540px; border-radius: 4px; overflow: hidden;
+  background: radial-gradient(80% 60% at 40% 100%, rgba(246, 180, 14, .22), transparent 70%), repeating-linear-gradient(90deg, #e9c9a3 0 60px, #e2bf96 60px 62px); box-shadow: inset 0 0 0 2px rgba(3, 74, 145, .1) }
+.tb-boxes { position: relative; min-height: 540px }
+.tb-boxes .bb-stack.bb-tall { min-height: 540px }
+.bx i.veg { position: relative }
+.bx i.veg::after { content: ""; position: absolute; left: 50%; top: 58%; width: 26%; aspect-ratio: 1; border-radius: 50%; background: var(--veg); transform: translate(-50%, -50%) }
+.bx.shut { width: calc(var(--e) * 4 + 21px); height: calc(var(--e) * 2 + 20px); background: var(--azul); background-image: none }
+.bx.bx3.shut { width: calc(var(--e) * 3 + 21px); height: calc(var(--e) + 14px) }
+.bx3 .bx-g { grid-template-columns: repeat(3, var(--e, 34px)) }
+.bx3 { padding-top: 10px; border-radius: 50%/38% }
+.bx3 .bx-lid { display: none }
+
+/* the ticket, printed on the table */
+.tk { position: relative; padding: 26px 26px 26px 0; display: flex; justify-content: center; align-items: flex-start; filter: drop-shadow(3px 5px 0 rgba(2, 27, 56, .2)) }
+.tk-p { width: 100%; max-width: 300px; padding: 22px 20px 34px; background: #fffdf8; color: var(--tinta); font: 400 12.5px/1.45 var(--m); transform: rotate(1.6deg);
+  -webkit-mask: linear-gradient(#000 0 0) top / 100% calc(100% - 10px) no-repeat, conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 16px 10px repeat-x;
+  mask: linear-gradient(#000 0 0) top / 100% calc(100% - 10px) no-repeat, conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 16px 10px repeat-x }
+.tk-h { text-align: center; font-weight: 700; letter-spacing: .14em; padding-bottom: 12px; border-bottom: 1.5px dashed rgba(3, 42, 82, .5) }
+.tk-h small { display: block; margin-top: 4px; font-size: 11.5px; font-weight: 400; letter-spacing: 0 }
+.tk-who { margin: 12px 0 8px; font-weight: 700; text-transform: uppercase }
+.tk-who [data-t-fmt] { display: block; font-weight: 400 }
+.tk-l li, .tk-tot { display: flex; justify-content: space-between; gap: 12px }
+.tk-l li { padding: 3px 0 }
+.tk-l b { font-weight: 700; white-space: nowrap }
+.tk-mix { margin-top: 10px; padding-top: 10px; border-top: 1.5px dashed rgba(3, 42, 82, .5); display: grid; gap: 1px }
+.tk-mix li { display: flex; gap: 8px; align-items: baseline }
+.tk-mix li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--brasa); transform: translateY(-1px) }
+.tk-mix li.veg::before { background: var(--veg) }
+.tk-mix b { min-width: 2.4ch; text-align: right }
+.tk-veg { margin-top: 6px; color: #1f6b3b; font-weight: 700 }
+.tk-tot { margin-top: 14px; padding-top: 10px; border-top: 2px solid var(--tinta); display: grid; gap: 6px; font-weight: 700; text-transform: uppercase }
+.tk-tot b { justify-self: end }
+.tk-tot b { font: 900 30px/1 var(--h); letter-spacing: .01em; white-space: nowrap }
+.tk-head { margin-top: 4px }
+.tk-go { margin-top: 18px; width: 100%; font-size: 17px }
+html.motion .tk.printing .tk-p { animation: print .55s steps(14, end) both }
+@keyframes print { from { clip-path: inset(0 0 100% 0); translate: 0 -10px } to { clip-path: inset(0 0 0 0); translate: 0 0 } }
+
+/* per head, at card prices. One series, so one colour, and the row the order is on lights up */
+.ph { margin-top: clamp(50px, 7vw, 96px); display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 20px clamp(24px, 4vw, 60px); align-items: start }
+.ph-head p { margin-top: 12px; color: var(--ink2); max-width: 32ch }
+.ph-r { display: grid; grid-template-columns: minmax(0, 15em) minmax(0, 1fr) 6.5em; align-items: center; gap: 18px; width: 100%; padding: 15px 4px; border: 0; border-top: 2px solid var(--line); background: none; color: var(--azul); text-align: left; cursor: pointer; transition: background .2s }
+.ph-r:last-child { border-bottom: 2px solid var(--line) }
+.ph-r:hover { background: rgba(3, 74, 145, .05) }
+.ph-l b { display: block; font: 800 20px/1.05 var(--h); text-transform: uppercase }
+.ph-l small { display: block; margin-top: 3px; font: 400 13.5px/1.3 var(--t); color: var(--ink2) }
+.ph-bar { position: relative; height: 14px }
+.ph-bar i { position: absolute; left: 0; top: 0; bottom: 0; width: calc(var(--v, .5) * 100%); background: #8fb4d9; border-radius: 0 4px 4px 0; transition: width .7s var(--ease), background .3s }
+.ph-r.cur .ph-bar i { background: var(--azul) }
+.ph-r.cur .ph-l b::after { content: ""; display: inline-block; width: 10px; height: 10px; margin-left: 10px; border-radius: 50%; background: var(--brasa); vertical-align: middle }
+.ph-v { font: 700 15px/1 var(--m); text-align: right; white-space: nowrap }
+html.js .ph.rv:not(.in) .ph-bar i { width: 0 }
+@media (max-width: 1100px) {
+  .ob { grid-template-columns: minmax(0, 1fr) }
+  .tb { position: relative; top: auto }
+  .ph { grid-template-columns: minmax(0, 1fr) }
+}
+@media (max-width: 760px) {
+  .tb { grid-template-columns: minmax(0, 1fr); min-height: 0 }
+  .tb-boxes { min-height: 360px }
+  .tk { padding: 0 20px 30px }
+  .ph-r { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 14px }
+  .ph-bar { grid-column: 1 / -1; grid-row: 2 }
+}
+@media (max-width: 460px) { .oc-list { grid-template-columns: minmax(0, 1fr) } .oc-chips { gap: 6px } .oc-chips b { font-size: 15px } }
+
+/* ---------------------------------------------------------------- the bar at the bottom, the order one tap away */
+.obar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 10px var(--g) max(10px, env(safe-area-inset-bottom)); background: var(--azul); color: var(--crema); box-shadow: 0 -2px 0 var(--tinta); transform: translateY(110%); transition: transform .45s var(--ease) }
+.obar.on { transform: none }
+.obar-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 800 clamp(15px, 1.5vw, 19px)/1.1 var(--h); text-transform: uppercase; letter-spacing: .03em }
+@media (max-width: 560px) { .obar-f { display: none } }
+.obar-go { flex: none; min-height: 44px; padding: 0 18px; background: var(--sol); color: var(--noche); font-size: 16px; box-shadow: 0 4px 0 var(--tinta) }
+@media (max-width: 420px) { .obar-go { padding: 0 12px; font-size: 14px } }
+
+/* ---------------------------------------------------------------- the stub above the form, and the rail it ends up on */
+.bon { margin-top: 26px; padding: 16px 18px; border-left: 4px solid var(--brasa); background: var(--papel); display: grid; gap: 6px; max-width: 460px }
+.bon-h { font: 700 11.5px/1 var(--m); letter-spacing: .08em; text-transform: uppercase; color: var(--ink2) }
+.bon-t { font: 800 22px/1.15 var(--h); text-transform: uppercase }
+.bon-x { justify-self: start; font: 700 13px/1 var(--m) }
+.rail { position: relative; height: 128px; margin: -6px 0 18px; border-top: 7px solid #c8d4df; box-shadow: 0 2px 0 rgba(0, 0, 0, .25) }
+.rail-t { position: absolute; left: 24px; top: -3px; width: min(250px, 70%); display: grid; gap: 4px; padding: 12px 14px 18px; background: #fffdf8; color: var(--tinta); font: 400 12px/1.4 var(--m); transform-origin: 50% 0;
+  -webkit-mask: linear-gradient(#000 0 0) top / 100% calc(100% - 8px) no-repeat, conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 12px 8px repeat-x;
+  mask: linear-gradient(#000 0 0) top / 100% calc(100% - 8px) no-repeat, conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / 12px 8px repeat-x }
+.rail-t b { letter-spacing: .12em }
+.rail-t em { justify-self: start; margin-top: 4px; padding: 3px 8px; border: 2.5px solid var(--brasa); color: var(--brasa); font: 900 22px/1 var(--h); font-style: normal; text-transform: uppercase; letter-spacing: .06em; transform: rotate(-7deg) }
+html.motion .fm-ok:not([hidden]) .rail-t { animation: railin 1s var(--ease) both .15s }
+html.motion .fm-ok:not([hidden]) .rail-t em { animation: stamp .35s cubic-bezier(.3, 1.6, .5, 1) both 1.05s }
+@keyframes railin { from { transform: translateX(-130%) rotate(-10deg) } 65% { transform: translateX(6%) rotate(3deg) } 82% { transform: rotate(-1.5deg) } to { transform: none } }
+@keyframes stamp { from { opacity: 0; transform: rotate(-7deg) scale(2.2) } to { opacity: 1; transform: rotate(-7deg) scale(1) } }
+
+/* ---------------------------------------------------------------- a wood fire inside the arch */
+.arch-fire { background: var(--noche) }
+.arch-fire .film { width: 100%; height: 100%; object-fit: cover }
+
+@media (prefers-reduced-motion: reduce) {
+  .ho-sun, .ho-big b, .ph-bar i, .obar { transition: none }
+  .ho-sun svg { animation: none }
+}

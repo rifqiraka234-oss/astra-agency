@@ -8,6 +8,16 @@
  "metres_shown": 860,
  "routes": [
   {
+   "key": "trudaine",
+   "fr": "37 avenue Trudaine",
+   "en": "37 avenue Trudaine",
+   "m": 151,
+   "end": [
+    559.5,
+    384.9
+   ]
+  },
+  {
    "key": "pigalle",
    "fr": "Place Pigalle",
    "en": "Place Pigalle",

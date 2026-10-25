@@ -111,6 +111,8 @@ def route(a, b):
 # from the same tiles), named as the place, never as a business
 PL = json.load(open(os.path.join(os.path.dirname(sys.argv[1]), 'places.json')))
 DEST = [
+    # the WeWork building, OSM node 5003032836, by its address since the page names places, not businesses
+    ('trudaine', '37 avenue Trudaine', '37 avenue Trudaine', (48.8809441, 2.3423369)),
     ('pigalle', 'Place Pigalle', 'Place Pigalle', tuple(PL['Place Pigalle'])),
     ('saintgeorges', 'Place Saint-Georges', 'Place Saint-Georges', tuple(PL['Place Saint-Georges'])),
     ('montholon', 'Square Montholon', 'Square Montholon', tuple(PL['Square Montholon'])),
@@ -119,6 +121,9 @@ DEST = [
 routes = []
 for key, fr, en, pt in DEST:
     path, m = route(SHOP, pt)
+    if key == 'trudaine':
+        # a door, not a square, so the steps from the street to each door count too, as tools/cowork.py counts them
+        m += dist(N[path[0]], SHOP) + dist(N[path[-1]], pt)
     pts = [xy(*N[n]) for n in path]
     d = 'M' + ' L'.join(f'{x:.1f} {y:.1f}' for x, y in pts)
     routes.append({'key': key, 'fr': fr, 'en': en, 'm': round(m), 'd': d, 'end': [round(pts[-1][0], 1), round(pts[-1][1], 1)]})

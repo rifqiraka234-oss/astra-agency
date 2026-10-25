@@ -65,6 +65,7 @@ def devis(page, compact=False, default="bureau"):
   <input type="hidden" name="form-name" value="devis">
   <input type="hidden" name="langue" value="fr" data-form-lang>
   <input type="hidden" name="page" value="{page}">
+  <input type="hidden" name="commande" value="">
   <fieldset class="fm-g">
     <legend>{L("Pour quoi&#8239;?", "What for?")}</legend>
     <div class="fm-chips">{chips}</div>
@@ -92,6 +93,7 @@ def devis(page, compact=False, default="bureau"):
   <p class="fm-fail" data-form-fail hidden>{L(f"Ça n'est pas passé. Écrivez directement à {mail}.", f"That didn't go through. Write to us directly at {mail}.")}</p>
 </form>
 <div class="fm-ok" data-form-ok hidden tabindex="-1">
+  <div class="rail" aria-hidden="true"><span class="rail-t"><b>SAAVEDRA</b><span data-ok-t></span><em>{L("Reçu", "Received")}</em></span></div>
   <h3>{L("Merci, c'est noté.", "Thanks, that's in.")}</h3>
   <p>{L("Julien et Grégoire reviennent vers vous avec un devis.", "Julien and Grégoire will come back to you with a quote.")}</p>
 </div>"""
@@ -105,28 +107,185 @@ EMP_DEFS = """<svg class="defs" width="0" height="0" aria-hidden="true" focusabl
 </symbol></defs></svg>"""
 
 
-def boxbuilder(price12=None, price6=None):
-    """Headcount and appetite in, boxes of 12 and 6 out. The counts per person are a suggestion, said so on the page."""
-    data = json.dumps({'price12': price12, 'price6': price6})
-    faim = [(2, 'Petite faim', 'Light', '2 par personne', '2 each'), (3, 'Déjeuner', 'Lunch', '3 par personne', '3 each'), (4, 'Grosse faim', 'Hungry', '4 par personne', '4 each')]
-    chips = ''.join(f'<label><input type="radio" name="faim" value="{v}"{" checked" if v == 3 else ""}><span><b>{L(a, b)}</b><small>{L(c, e)}</small></span></label>' for v, a, b, c, e in faim)
-    # the default, 20 people at 3 each, drawn in the page so it shows before and without the script
-    cells = ''.join(f'<i style="--j:{j}"><svg viewBox="0 0 64 40" aria-hidden="true" focusable="false"><use href="#emp"/></svg></i>' for j in range(12))
-    static = ''.join(f'<div class="bx bx12" style="--k:{k}"><span class="bx-lid">12</span><div class="bx-g">{cells}</div></div>' for k in range(5))
+# ---------------------------------------------------------------- the order, carried down the Entreprises page
+FORMATS = {'bureau': ['Boxes au bureau', 'Boxes at the office'], 'dejeuner': ["Déjeuner d'équipe", 'Team lunch'], 'afterwork': ['Afterwork', 'Afterwork']}
+DEALS = {'classic': {'name': 'Saavedra Classic', 'price': 13.9}, 'miamor': {'name': 'Saavedra Mi Amor', 'price': 15.9}}
+DRINKS = {'quilmes': {'fr': 'Quilmes 33 cl', 'en': 'Quilmes 33 cl', 'price': 6.5}, 'limonade': {'fr': 'Limonade bio', 'en': 'Organic lemonade', 'price': 4.5}}
+PLUS = '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h10M8 3v10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>'
+MINUS = '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>'
+
+
+def recipes():
+    M = json.load(open(os.path.join(HERE, 'data', 'menu.json')))
+    slug = lambda n: re.sub(r'[^a-z]+', '', n.lower().replace('ó', 'o').split(' y salsa')[0])
+    return [{'id': slug(r[0]), 'name': r[0], 'veg': veg} for veg, rows in ((False, M['carne']), (True, M['verduras'])) for r in rows]
+
+
+def cents(v):
+    # rounds the way the browser's number format does on the page, from the shortest decimal, half up
+    from decimal import Decimal, ROUND_HALF_UP
+    return Decimal(repr(v)).quantize(Decimal('0.01'), ROUND_HALF_UP)
+
+
+def eur(v):
+    return f'{cents(v):,.2f}'.replace(',', '\u00a0').replace('.', ',') + '\u00a0€'
+
+
+def eur0(v):
+    from decimal import Decimal, ROUND_HALF_UP
+    return f'{Decimal(repr(v)).quantize(Decimal("1"), ROUND_HALF_UP):,}'.replace(',', '\u00a0') + '\u00a0€'
+
+
+def eur_en(v):
+    return f'{cents(v):,.2f}' + '\u00a0€'
+
+
+def order_plan(n=20, k=3):
+    """The same sums as js/order.js, so the page reads right before and without the script."""
+    e = n * k
+    b12, r = divmod(e, 12)
+    b6 = 0
+    if r > 6:
+        b12 += 1
+    elif r:
+        b6 = 1
+    total_e = b12 * 12 + b6 * 6
+    R = recipes()
+    base, rest = divmod(total_e, len(R))
+    mix = [(x, base + (1 if i < rest else 0)) for i, x in enumerate(R)]
+    price = b12 * FACTS['price12'] + b6 * FACTS['price6']
+    return {'b12': b12, 'b6': b6, 'e': total_e, 'mix': mix, 'veg': sum(c for x, c in mix if x['veg']), 'total': price, 'head': price / n, 'n': n}
+
+
+def order_data():
+    d = {'price12': FACTS['price12'], 'price6': FACTS['price6'], 'formats': FORMATS, 'deals': DEALS, 'drinks': DRINKS, 'recipes': recipes()}
+    return f'<script type="application/json" id="sv-order-data">{re.sub(r"([\[\]])(?=[\[\]])", r"\1 ", json.dumps(d, ensure_ascii=False))}</script>'
+
+
+def headcount():
+    """The hero of the Entreprises page, the headcount. Its line of empanadas is headline(), below it."""
+    return f"""<div class="ho-ctl">
+      <div class="ho-num">
+        <button type="button" class="ho-step js-only" data-n-step="-1" aria-label="{L('Une personne de moins', 'One person less')}">{MINUS}</button>
+        <div class="ho-big" role="spinbutton" tabindex="0" aria-valuemin="1" aria-valuemax="400" aria-valuenow="20" aria-label="{L('Nombre de personnes', 'Number of people')}" data-o-big><b data-o="n">20</b></div>
+        <button type="button" class="ho-step js-only" data-n-step="1" aria-label="{L('Une personne de plus', 'One person more')}">{PLUS}</button>
+      </div>
+      <p class="ho-unit">{L('personnes', 'people')}</p>
+      <input class="ho-range js-only" type="range" min="4" max="120" step="1" value="20" data-o-range aria-label="{L('Nombre de personnes', 'Number of people')}">
+    </div>"""
+
+
+def headline():
+    p = order_plan()
+    line = ''.join(f'<i class="{"veg" if x["veg"] else "carne"}"></i>' for x, c in p['mix'] for _ in range(c))
+    return f"""<div class="ho-line" data-o-line aria-hidden="true">{line}</div>
+  <p class="ho-count ch-in"><b data-o-count>{p['e']}</b> empanadas <span data-o-boxes>{L(f"{p['b12']} box de 12", f"{p['b12']} boxes of 12")}</span></p>"""
+
+
+def table():
+    """Format, appetite, recipes on the left. The wooden table and the ticket on the right."""
+    p = order_plan()
+    R = recipes()
+    fmt_rows = [('bureau', 'Boxes au bureau', 'Boxes at the office', 'Des box de 6 et de 12 à partager', 'Boxes of 6 and 12 to share'),
+                ('dejeuner', "Déjeuner d'équipe", 'Team lunch', 'Une formule du midi par personne', 'One lunch deal each'),
+                ('afterwork', 'Afterwork', 'Afterwork', 'Des box et de quoi trinquer', 'Boxes and something to drink')]
+    fmts = ''.join(f'<label><input type="radio" name="o-format" value="{v}"{" checked" if v == "bureau" else ""}><span><b>{L(a, b)}</b><small>{L(c, e)}</small></span></label>' for v, a, b, c, e in fmt_rows)
+    faim = ''.join(f'<label><input type="radio" name="o-k" value="{v}"{" checked" if v == 3 else ""}><span><b>{L(a, b)}</b><small>{L(c, e)}</small></span></label>' for v, a, b, c, e in
+                   [(2, 'Petite faim', 'Light', '2 par personne', '2 each'), (3, 'Déjeuner', 'Lunch', '3 par personne', '3 each'), (4, 'Grosse faim', 'Hungry', '4 par personne', '4 each')])
+    deals = ''.join(f'<label><input type="radio" name="o-deal" value="{k}"{" checked" if k == "classic" else ""}><span><b>{v["name"].replace("Saavedra ", "")}</b><small>{eur(v["price"])}</small></span></label>' for k, v in DEALS.items())
+    drinks = ''.join(f'<label><input type="radio" name="o-drink" value="{k}"{" checked" if k == "quilmes" else ""}><span><b>{L(v["fr"].replace(" 33 cl", ""), v["en"].replace(" 33 cl", ""))}</b><small>{eur(v["price"])}</small></span></label>' for k, v in DRINKS.items())
+    drinks += f'<label><input type="radio" name="o-drink" value="none"><span><b>{L("Rien", "None")}</b><small>{L("pas de boisson", "no drinks")}</small></span></label>'
+    recs = ''
+    for veg, title in ((False, 'Carne'), (True, 'Verduras')):
+        recs += f'<p class="oc-sub">{title}</p>' + ''.join(f'<label class="{"veg" if x["veg"] else "carne"}"><input type="checkbox" name="o-recipe" value="{x["id"]}" checked><span>{x["name"]}</span></label>' for x in R if x['veg'] == veg)
+    # five boxes of twelve, filled in menu order, the same as the script draws them
+    flat = [x for x, c in p['mix'] for _ in range(c)]
+    boxes = ''
+    for i in range(p['b12']):
+        cells = ''.join(f'<i class="{"veg" if x["veg"] else "carne"}" style="--j:{j}" title="{x["name"]}"><svg viewBox="0 0 64 40" aria-hidden="true" focusable="false"><use href="#emp"/></svg></i>' for j, x in enumerate(flat[i * 12:(i + 1) * 12]))
+        boxes += f'<div class="bx bx12" style="--k:{i}"><span class="bx-lid" aria-hidden="true"></span><div class="bx-g">{cells}</div></div>'
+    mix_li = ''.join(f'<li class="{"veg" if x["veg"] else "carne"}"><b>{c}</b> {x["name"]}</li>' for x, c in p['mix'])
     return f"""{EMP_DEFS}
-<div class="bb" data-box>
-  <script type="application/json">{data}</script>
-  <div class="bb-ctl">
-    <label class="bb-q" for="bb-n">{L("Vous êtes combien&#8239;?", "How many of you?")}</label>
-    <div class="bb-n"><b data-box-nout>20</b><span>{L("personnes", "people")}</span></div>
-    <input id="bb-n" type="range" min="4" max="120" step="1" value="20" data-box-n>
-    <fieldset class="bb-faim"><legend>{L("Quel appétit&#8239;?", "How hungry?")}</legend><div class="bb-chips">{chips}</div></fieldset>
-    <p class="bb-out" data-box-out aria-live="polite">5 box de 12, 60 empanadas</p>
-    <p class="bb-sum" data-box-sum hidden></p>
-    <a class="btn pri btn-lg bb-go" href="/devis/?personnes=20&amp;format=bureau" data-box-go><span data-box-golab>Demander un devis pour 20</span>{AR}</a>
-    <p class="bb-note">{L("Une suggestion pour vous faire une idée. On ajuste ensemble dans le devis.", "A suggestion to give you an idea. We adjust it together in the quote.")}</p>
+{order_data()}
+<div class="ob">
+  <div class="oc js-only">
+    <fieldset class="oc-g"><legend>{L("Pour quoi&#8239;?", "What for?")}</legend><div class="oc-rows">{fmts}</div></fieldset>
+    <fieldset class="oc-g" data-when="bureau afterwork"><legend>{L("Quel appétit&#8239;?", "How hungry?")}</legend><div class="oc-chips">{faim}</div></fieldset>
+    <fieldset class="oc-g" data-when="dejeuner" hidden><legend>{L("Quelle formule&#8239;?", "Which deal?")}</legend><div class="oc-chips oc-2">{deals}</div></fieldset>
+    <fieldset class="oc-g" data-when="afterwork" hidden><legend>{L("Et à boire&#8239;?", "And to drink?")}</legend><div class="oc-chips">{drinks}</div></fieldset>
+    <fieldset class="oc-g oc-rec"><legend>{L("Quelles recettes&#8239;?", "Which recipes?")}</legend>
+      <div class="oc-quick"><button type="button" data-o-all aria-pressed="true">{L("Un peu de tout", "A bit of everything")}</button><button type="button" data-o-veg aria-pressed="false">{L("Que sans viande", "Meat free only")}</button></div>
+      <div class="oc-list">{recs}</div>
+    </fieldset>
   </div>
-  <div class="bb-stage"><div class="bb-stack" data-box-stack aria-hidden="true" style="--e:36px">{static}</div></div>
+  <div class="tb">
+    <div class="tb-boxes"><div class="bb-stack" data-o-stack aria-hidden="true" style="--e:30px">{boxes}</div></div>
+    <div class="tk" data-o-ticket>
+      <div class="tk-p">
+        <p class="tk-h">SAAVEDRA<small>48 rue Condorcet, 75009 Paris</small></p>
+        <p class="tk-who"><b data-o="n">20</b> {L("personnes", "people")} <span data-t-fmt>{L("Boxes au bureau", "Boxes at the office")}</span></p>
+        <ul class="tk-l" data-t-lines><li><span>{L(f"{p['b12']} × Box de 12", f"{p['b12']} × Box of 12")}</span><b>{L(eur(p['total']), eur_en(p['total']))}</b></li></ul>
+        <ul class="tk-mix" data-t-mix>{mix_li}</ul>
+        <p class="tk-veg" data-t-veg>{L(f"dont {p['veg']} sans viande", f"{p['veg']} without meat")}</p>
+        <p class="tk-tot"><span>{L("Total au prix de la carte", "Total at card prices")}</span><b data-t-total>{L(eur(p['total']), eur_en(p['total']))}</b></p>
+        <p class="tk-head" data-t-head>{L(f"environ {eur(p['head'])} par personne", f"about {eur_en(p['head'])} a head")}</p>
+        <a class="btn pri tk-go" href="#devis" data-o-go>{L("Recevoir mon devis", "Get my quote")}</a>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="sr" aria-live="polite" data-o-live></p>"""
+
+
+def perhead():
+    """Per head, at card prices, for the headcount picked. A row is also a button that switches the order to it."""
+    p = order_plan()
+    vals = {'bureau': p['head'], 'classic': 13.9, 'miamor': 15.9, 'afterwork': p['head'] + 6.5}
+    mx = max(vals.values()) * 1.08
+    rows = [('bureau', 'Boxes au bureau', 'Boxes at the office', '<span data-ph-k>3</span> empanadas par personne', '<span data-ph-k>3</span> empanadas each'),
+            ('classic', 'Saavedra Classic', 'Saavedra Classic', '3 empanadas et 1 soft', '3 empanadas and 1 soft drink'),
+            ('miamor', 'Saavedra Mi Amor', 'Saavedra Mi Amor', '3 empanadas, 1 soft et 1 alfajor', '3 empanadas, 1 soft drink and 1 alfajor'),
+            ('afterwork', 'Afterwork', 'Afterwork', 'les box et une Quilmes chacun', 'the boxes and a Quilmes each')]
+    out = ''.join(f'<button type="button" class="ph-r{" cur" if k == "bureau" else ""}" data-ph="{k}" aria-pressed="{"true" if k == "bureau" else "false"}" style="--v:{vals[k] / mx:.3f}"><span class="ph-l"><b>{L(a, b)}</b><small>{L(c, e)}</small></span><span class="ph-bar" aria-hidden="true"><i></i></span><span class="ph-v" data-ph-v>{L(eur(vals[k]), eur_en(vals[k]))}</span></button>' for k, a, b, c, e in rows)
+    return f"""<div class="ph rv">
+  <div class="ph-head">
+    <h3 class="d3" id="ph-h">{L("Par personne", "Per head")}</h3>
+    <p>{L('Au prix de la carte, pour <b data-o="n">20</b> personnes.', 'At card prices, for <b data-o="n">20</b> people.')} <span class="js-only">{L('Touchez une ligne pour passer la commande dessus.', 'Tap a row to switch the order to it.')}</span></p>
+  </div>
+  <div class="ph-rows" role="group" aria-labelledby="ph-h">{out}</div>
+</div>"""
+
+
+def mini():
+    """The home page only asks the headcount, then opens the order on Entreprises with it."""
+    return f"""<div class="mini rv" data-mini>
+      <p class="mini-q">{L("Vous êtes combien&#8239;?", "How many of you?")}</p>
+      <div class="mini-n">
+        <button type="button" class="ho-step js-only" data-mini-step="-1" aria-label="{L('Une personne de moins', 'One person less')}">{MINUS}</button>
+        <output data-mini-out aria-live="polite">20</output>
+        <button type="button" class="ho-step js-only" data-mini-step="1" aria-label="{L('Une personne de plus', 'One person more')}">{PLUS}</button>
+      </div>
+      <p class="mini-u">{L("personnes", "people")}</p>
+      <input class="ho-range js-only" type="range" min="4" max="120" step="1" value="20" data-mini-range aria-label="{L('Nombre de personnes', 'Number of people')}">
+      <a class="btn pri btn-lg mini-go" href="/entreprises/?personnes=20#table" data-mini-go>{L("Composer la commande", "Build the order")}</a>
+      <a class="mini-alt" href="/devis/">{L("Ou demander un devis tout de suite", "Or ask for a quote right away")}</a>
+    </div>"""
+
+
+def orderbar():
+    p = order_plan()
+    return f"""<div class="obar" data-o-bar aria-hidden="true" inert>
+  <p class="obar-t" data-bar-txt>{L(f'20 personnes · <span class="obar-f">Boxes au bureau · </span>≈ {eur0(p["total"])}', f'20 people · <span class="obar-f">Boxes at the office · </span>≈ {eur0(p["total"]).replace("\u00a0", ",", 1) if p["total"] >= 1000 else eur0(p["total"])}')}</p>
+  <a class="btn obar-go" href="#devis" data-o-go>{L("Recevoir mon devis", "Get my quote")}</a>
+</div>"""
+
+
+def bon():
+    p = order_plan()
+    return f"""<div class="bon" data-bon>
+  <p class="bon-h">{L("Votre commande", "Your order")}</p>
+  <p class="bon-t" data-bon-txt>{L(f"20 personnes · Boxes au bureau · {p['e']} empanadas · ≈ {eur(p['total'])}", f"20 people · Boxes at the office · {p['e']} empanadas · ≈ {eur_en(p['total'])}")}</p>
+  <a class="bon-x" href="#table" data-o-go>{L("Modifier", "Change it")}</a>
 </div>"""
 
 
@@ -160,6 +319,17 @@ def img(name, cls='', sizes='(max-width: 900px) 100vw, 50vw', lazy=True):
 def prt(name, cls='', ar='4 / 5', dup=False):
     extra = ' data-dup aria-hidden="true"' if dup else ''
     return f'<figure class="print {cls}" style="--ar:{ar}"{extra}>{img(name, sizes="320px")}</figure>'
+
+
+FILMS = {'fire-sun': (560, 560), 'fire-oven': (480, 640), 'fire-embers': (432, 768)}
+
+
+def film(name):
+    """A wood fire loop, Mixkit Free licence, no people. Never captioned, never presented as their oven. It plays only on
+    screen and never under reduced motion or data saver (site.js), the still is its own first frame."""
+    w, h = FILMS[name]
+    return (f'<video class="film" data-film muted loop playsinline preload="none" poster="/media/film/{name}.jpg" width="{w}" height="{h}" aria-hidden="true" tabindex="-1">'
+            f'<source src="/media/film/{name}.webm" type="video/webm"><source src="/media/film/{name}.mp4" type="video/mp4"></video>')
 
 
 def walk():
@@ -352,6 +522,7 @@ def tokens(body):
     body = re.sub(r'\{\{IMG ([\w-]+)(?: ([\w -]+))?\}\}', lambda mm: img(mm.group(1), mm.group(2) or ''), body)
     body = re.sub(r'\{\{IMG0 ([\w-]+)(?: ([\w -]+))?\}\}', lambda mm: img(mm.group(1), mm.group(2) or '', lazy=False), body)
     body = re.sub(r'\{\{PRINT ([\w-]+)(?: ([\w -]+))?\}\}', lambda mm: prt(mm.group(1), mm.group(2) or ''), body)
+    body = re.sub(r'\{\{FILM ([\w-]+)\}\}', lambda mm: film(mm.group(1)), body)
     def strip(mm):
         names = mm.group(1).split(',')
         one = ''.join(prt(n) for n in names)
@@ -365,7 +536,9 @@ def tokens(body):
         body = body.replace('{{COWORK}}', cowork())
     if '{{MENU}}' in body:
         body = body.replace('{{MENU}}', menu_html())
-    body = body.replace('{{BOX}}', boxbuilder(FACTS.get('price12'), FACTS.get('price6')))
+    for tok, fn in (('{{MINI}}', mini), ('{{HEADCOUNT}}', headcount), ('{{HEADLINE}}', headline), ('{{TABLE}}', table), ('{{PERHEAD}}', perhead), ('{{OBAR}}', orderbar), ('{{BON}}', bon)):
+        if tok in body:
+            body = body.replace(tok, fn())
     body = body.replace('{{MAP}}', open(os.path.join(HERE, 'assets', 'map-9e.svg')).read().replace('<svg ', '<svg aria-hidden="true" focusable="false" ', 1))
     return body
 

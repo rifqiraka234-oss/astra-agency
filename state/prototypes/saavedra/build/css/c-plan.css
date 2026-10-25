@@ -196,3 +196,40 @@ html.js .mbars.rv .mb-b { transform: scaleY(0); transform-origin: bottom; transi
 html.js .mbars.rv.in .mb-b { transform: none }
 @media (max-width: 640px) { .mbars { gap: 3px; height: 240px } .mb-v { font-size: 10px } .mb:not(.hot):not(.low):not(.peak) .mb-v { visibility: hidden } .mb-l { font-size: 11px } }
 @media (prefers-reduced-motion: reduce) { html.js .mbars.rv .mb-b { transform: none; transition: none } }
+
+/* Clasico's minimum, ten boxes of twelve, and the team's share of it */
+.wall { display: grid; gap: 16px; align-content: start }
+.wall-ctl label { display: flex; align-items: baseline; gap: 10px; font: 800 20px/1 var(--h); text-transform: uppercase }
+.wall-ctl output { font: 400 clamp(44px, 4.6vw, 64px)/.9 var(--d); color: var(--azul) }
+.wall-ctl input { width: 100%; margin-top: 8px; accent-color: var(--azul) }
+.wall-dots { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px }
+.wall-box { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; padding: 7px; border: 2px solid var(--azul); border-radius: 4px }
+.wall-dots i { aspect-ratio: 1; border-radius: 50%; border: 2px solid rgba(3, 74, 145, .45); transition: background .25s, border-color .25s, transform .3s var(--ease) }
+.wall-dots i.on { background: var(--sol); border-color: #c98a00; transform: scale(1.06) }
+.wall.full .wall-dots i.on { background: var(--brasa); border-color: #b4441a }
+.wall-k { display: flex; flex-wrap: wrap; gap: 6px 18px; font: 400 12.5px/1.3 var(--m) }
+.wall-k span { display: inline-flex; align-items: center; gap: 7px }
+.wall-k i { width: 12px; height: 12px; border-radius: 50%; border: 2px solid rgba(3, 74, 145, .45) }
+.wall-k i.on { background: var(--sol); border-color: #c98a00 }
+.wall-out { font: 600 16px/1.45 var(--t); max-width: 46ch }
+.wall.full .wall-k i.on { background: var(--brasa); border-color: #b4441a }
+@media (max-width: 560px) { .wall-dots { gap: 6px } .wall-box { padding: 4px; gap: 2px; border-width: 1.5px } .wall-dots i { border-width: 1.5px } }
+
+/* the month chart says where we are */
+.mb.now .mb-l::after { content: "today"; display: block; margin-top: 5px; font: 700 10.5px/1 var(--m); text-transform: none; color: var(--rosa-ink) }
+
+/* the coworking map, square labels and a walking reveal */
+.pm-lab { border-radius: 2px; box-shadow: none; border: 1.5px solid var(--azul) }
+.pm-lab.near { border-color: var(--brasa) }
+html.motion .pmap-wrap.wait .pm-ring { transform-box: view-box; transform-origin: 50% 50%; transform: scale(0); opacity: 0 }
+html.motion .pmap-wrap.wait .pm-dot circle { transform: scale(0) }
+html.motion .pmap-wrap.wait .pm-lab, html.motion .pmap-wrap.wait .pm-ring-l { opacity: 0 }
+html.motion .pmap-wrap .pm-ring { transition: transform 1.4s var(--ease), opacity .6s }
+html.motion .pmap-wrap .pm-ring + .pm-ring { transition-delay: .35s }
+html.motion .pmap-wrap .pm-dot circle { transition: transform .45s cubic-bezier(.3, 1.6, .5, 1); transition-delay: calc(.9s + var(--i, 0) * 110ms) }
+html.motion .pmap-wrap .pm-lab { transition: opacity .4s; transition-delay: calc(1s + var(--i, 0) * 110ms) }
+html.motion .pmap-wrap .pm-ring-l { transition: opacity .4s 1.2s }
+html.motion .pmap-wrap.go .pm-ring { transform: none; opacity: .55 }
+html.motion .pmap-wrap.go .pm-dot circle { transform: none }
+html.motion .pmap-wrap.go .pm-lab, html.motion .pmap-wrap.go .pm-ring-l { opacity: 1 }
+@media (prefers-reduced-motion: reduce) { .wall-dots i { transition: none } }

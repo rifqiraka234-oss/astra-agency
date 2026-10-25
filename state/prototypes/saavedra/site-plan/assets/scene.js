@@ -127,6 +127,36 @@
     addEventListener('resize', function () { var cur = btns.filter(function (b) { return b.getAttribute('aria-pressed') === 'true'; })[0]; if (cur) go(cur.getAttribute('data-route-btn'), true); });
   });
 
+  /* ---------------------------------------------------------------- what's inside each recipe, on hover or keyboard focus */
+  var ingOut = $('[data-ing-out]');
+  if (ingOut) {
+    var ingDef = ingOut.innerHTML, ingT;
+    $$('[data-ing]').forEach(function (a) {
+      function show() {
+        clearTimeout(ingT);
+        var b = d.createElement('b'); b.textContent = a.textContent;
+        ingOut.textContent = ''; ingOut.appendChild(b);
+        ingOut.appendChild(d.createTextNode(' ' + a.getAttribute(root.lang === 'en' ? 'data-ing-en' : 'data-ing')));
+        ingOut.parentNode.classList.add('on');
+      }
+      function hide() { ingT = setTimeout(function () { ingOut.innerHTML = ingDef; ingOut.parentNode.classList.remove('on'); }, 300); }
+      a.addEventListener('mouseenter', show); a.addEventListener('focus', show);
+      a.addEventListener('mouseleave', hide); a.addEventListener('blur', hide);
+    });
+  }
+
+  /* ---------------------------------------------------------------- their photos drift faster while the page moves */
+  var strip = $('.strip');
+  if (strip && !reduce && strip.getAnimations && 'IntersectionObserver' in window) {
+    var lastY = scrollY, vel = 0, sraf = 0, sOn = false;
+    var sloop = function () {
+      var y = scrollY; vel = vel * 0.9 + Math.abs(y - lastY) * 0.1; lastY = y;
+      var a = strip.getAnimations()[0]; if (a) a.playbackRate = 1 + Math.min(vel / 3, 9);
+      if (sOn) sraf = requestAnimationFrame(sloop);
+    };
+    new IntersectionObserver(function (es) { sOn = es[0].isIntersecting; cancelAnimationFrame(sraf); if (sOn) { lastY = scrollY; sloop(); } }).observe(strip);
+  }
+
   /* ---------------------------------------------------------------- drift, the hero sun and the order runner move a little with the page */
   var hs = $('.hero-sun'), ord = $('.order');
   function drift() {

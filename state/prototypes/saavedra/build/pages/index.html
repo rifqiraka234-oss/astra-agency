@@ -1,14 +1,14 @@
-<!--{"title": "[[Saavedra, empanadas cuites au feu de bois, Paris 9e||Saavedra, wood fired empanadas, Paris 9e]]", "desc": "[[Empanadas faites main et cuites au feu de bois, 48 rue Condorcet. Pour vous, pour l'équipe au bureau, pour l'afterwork et pour vos soirées privées.||Handmade empanadas baked over a wood fire, 48 rue Condorcet. For you, for the team at the office, for afterwork drinks and private evenings.]]", "nav": "accueil", "path": "index.html", "js": ["scene.js", "form.js"]}-->
+<!--{"title": "[[Saavedra, empanadas cuites au feu de bois, Paris 9e||Saavedra, wood fired empanadas, Paris 9e]]", "desc": "[[Empanadas faites main et cuites au feu de bois, 48 rue Condorcet. Pour vous, pour l'équipe au bureau, pour l'afterwork et pour vos soirées privées.||Handmade empanadas baked over a wood fire, 48 rue Condorcet. For you, for the team at the office, for afterwork drinks and private evenings.]]", "nav": "accueil", "path": "index.html", "js": ["scene.js", "order.js"]}-->
 <section class="ch hero" data-tone="light">
   <div class="ch-in hero-in">
     <div class="hero-stage">
-      <div class="hero-sun" aria-hidden="true">{{SVG sun.svg}}</div>
+      <div class="hero-sun" aria-hidden="true"><div class="sun-rot">{{SVG sun.svg}}<div class="sun-fire">{{FILM fire-sun}}</div></div></div>
       <h1><span class="sr">Saavedra, [[fabrique d'empanadas cuites au feu de bois||wood fired empanada kitchen]]</span>{{SVG logo-letters.svg hero-letters}}</h1>
     </div>
     <p class="hero-tag">[[Faites main, cuites au feu de bois, à partager du midi au soir.||Made by hand, baked over a wood fire, for sharing from lunch to late.]]</p>
     <p class="hero-meta"><a href="{{MAPS}}" rel="noopener">48 rue Condorcet, Paris 9e</a>{{LIVE}}<span>{{RATING}}</span></p>
     <div class="hero-cta">
-      <a class="btn pri btn-lg" href="/entreprises/">[[Pour l'équipe||For the team]]{{AR}}</a>
+      <a class="btn pri btn-lg" href="/entreprises/">[[Pour l'équipe||For the team]]</a>
       <a class="btn ghost btn-lg" href="/commander/">[[Commander pour moi||Order for me]]</a>
     </div>
   </div>
@@ -36,12 +36,15 @@
     <article class="day-step" data-sky="midi" data-tone="light">
       <div class="day-sun" aria-hidden="true">{{SVG sun.svg}}</div>
       <div class="day-in">
-        <p class="day-clock" aria-hidden="true">[[12<small>h30</small>||12<small>.30</small>]]</p>
+        <div class="day-left">
+          {{PRINT p-tray day-pic}}
+          <p class="day-clock" aria-hidden="true">[[12<small>h30</small>||12<small>.30</small>]]</p>
+        </div>
         <div class="day-txt">
           <p class="lbl"><i>[[12h30||12.30]]</i> [[Boxes au bureau||Boxes at the office]]</p>
           <h3 class="d2">[[Le déjeuner se partage en box de 12.||Lunch, shared by the dozen.]]</h3>
           <p>[[Neuf recettes au feu de bois, à partager sur la table de réunion. Vous dites combien vous êtes, on compose les box.||Nine wood fired recipes to share across the meeting table. Tell us your headcount and we'll fill the boxes.]]</p>
-          <a class="btn pri" href="/entreprises/#boxes">[[Composer ma box||Build my box]]{{AR}}</a>
+          <a class="btn pri" href="/entreprises/?format=bureau#table">[[Composer les box||Build the boxes]]</a>
         </div>
       </div>
     </article>
@@ -49,12 +52,15 @@
     <article class="day-step" data-sky="crema" data-tone="light">
       <div class="day-sun" aria-hidden="true">{{SVG sun.svg}}</div>
       <div class="day-in">
-        <p class="day-clock" aria-hidden="true">[[13<small>h</small>||1<small>pm</small>]]</p>
+        <div class="day-left">
+          {{PRINT p-serving day-pic}}
+          <p class="day-clock" aria-hidden="true">[[13<small>h</small>||1<small>pm</small>]]</p>
+        </div>
         <div class="day-txt">
           <p class="lbl"><i>[[13h||1pm]]</i> [[Déjeuner d'équipe||Team lunch]]</p>
           <h3 class="d2">[[Trois empanadas, un soft, un alfajor.||Three empanadas, a soft drink, an alfajor.]]</h3>
           <p>[[Nos formules du midi, pensées pour une personne, se commandent aussi pour vingt. Une sauce maison avec chacune.||Our lunch deals, made for one, work just as well for twenty. A house sauce with each.]]</p>
-          <a class="btn pri" href="/entreprises/?format=dejeuner#devis">[[Un déjeuner pour l'équipe||A lunch for the team]]{{AR}}</a>
+          <a class="btn pri" href="/entreprises/?format=dejeuner#table">[[Composer le déjeuner||Build the lunch]]</a>
         </div>
       </div>
     </article>
@@ -62,24 +68,30 @@
     <article class="day-step" data-sky="tarde" data-tone="light">
       <div class="day-sun" aria-hidden="true">{{SVG sun.svg}}</div>
       <div class="day-in">
-        <p class="day-clock" aria-hidden="true">[[18<small>h30</small>||6<small>.30pm</small>]]</p>
+        <div class="day-left">
+          {{PRINT p-ledge day-pic}}
+          <p class="day-clock" aria-hidden="true">[[18<small>h30</small>||6<small>.30pm</small>]]</p>
+        </div>
         <div class="day-txt">
           <p class="lbl"><i>[[18h30||6.30pm]]</i> Afterwork</p>
           <h3 class="d2">[[Malbec, Quilmes, et une box au milieu.||Malbec, Quilmes, and a box in the middle.]]</h3>
           <p>[[Le Malbec Crios de Susana Balbo, la bière argentine, et des empanadas qu'on partage avec les mains.||Susana Balbo's Crios Malbec, the Argentine beer, and empanadas you share with your hands.]]</p>
-          <a class="btn pri" href="/entreprises/#afterwork">[[Préparer l'afterwork||Plan the afterwork]]{{AR}}</a>
+          <a class="btn pri" href="/entreprises/?format=afterwork#table">[[Composer l'afterwork||Build the afterwork]]</a>
         </div>
       </div>
     </article>
 
     <article class="day-step" data-sky="noche" data-tone="dark">
       <div class="day-in">
-        <p class="day-clock" aria-hidden="true">[[20<small>h</small>||8<small>pm</small>]]</p>
+        <div class="day-left">
+          {{PRINT p-pile day-pic}}
+          <p class="day-clock" aria-hidden="true">[[20<small>h</small>||8<small>pm</small>]]</p>
+        </div>
         <div class="day-txt">
           <p class="lbl"><i>[[20h||8pm]]</i> [[Privatisation||Private hire]]</p>
           <h3 class="d2">[[Le four à bois, rien que pour vous.||The wood oven, just for you.]]</h3>
           <p>[[Le restaurant à votre nom pour une équipe, un anniversaire, un lancement. Dites combien vous serez.||The restaurant in your name for a team, a birthday, a launch. Say how many you'll be.]]</p>
-          <a class="btn pri" href="/privatisation/">[[Privatiser Saavedra||Book Saavedra]]{{AR}}</a>
+          <a class="btn pri" href="/privatisation/">[[Privatiser Saavedra||Book Saavedra]]</a>
         </div>
       </div>
     </article>
@@ -91,15 +103,14 @@
 </section>
 
 <section class="ch quote dawn" data-tone="light" aria-labelledby="quote-h">
+  <span class="hour" aria-hidden="true">[[DEMAIN 12H30||TOMORROW 12.30]]</span>
   <div class="ch-in quote-in">
     <div class="quote-side">
-      <p class="lbl rv"><i>[[Devis||Quote]]</i> [[En une étape||In one step]]</p>
+      <p class="lbl rv"><i>[[Entreprises||Companies]]</i> [[La commande||The order]]</p>
       <h2 class="poster" id="quote-h" data-words style="margin-top:16px">[[Et demain midi&#8239;?||And lunch tomorrow?]]</h2>
-      <p class="lede rv">[[Dites combien vous êtes et pour quand. Julien et Grégoire vous répondent avec un devis.||Say your headcount and the date. Julien and Grégoire reply with a quote.]]</p>
+      <p class="lede rv">[[Dites combien vous êtes. La commande se compose sur la page Entreprises, et le devis part avec.||Tell us your headcount. The order builds itself on the Companies page, and the quote goes out with it.]]</p>
     </div>
-    <div class="quote-card rv">
-      {{DEVIS accueil compact}}
-    </div>
+    {{MINI}}
   </div>
 </section>
 
@@ -114,9 +125,10 @@
       <figure class="oven-pic rv">{{IMG p-pulling}}</figure>
     </div>
     <p class="flav rv" aria-label="[[Les neuf recettes de la carte||The nine recipes on the card]]">
-      <a href="/menu/#carne">Carne suave</a><i aria-hidden="true"></i><a href="/menu/#carne">Carne picante</a><i aria-hidden="true"></i><a href="/menu/#carne">Jamón y queso</a><i aria-hidden="true"></i><a href="/menu/#carne">Pollo</a><i aria-hidden="true"></i><a href="/menu/#carne">Spianata</a><i aria-hidden="true"></i><a href="/menu/#verduras">Caprese</a><i aria-hidden="true"></i><a href="/menu/#verduras">Espinaca</a><i aria-hidden="true"></i><a href="/menu/#verduras">Fugazetta</a><i aria-hidden="true"></i><a href="/menu/#verduras">Hongos</a>
+      <a href="/menu/#carne" data-ing="mijoté de boeuf, poivrons, oignons confits, mélange d'épices" data-ing-en="slow cooked beef, peppers, confit onions, spice blend">Carne suave</a><i aria-hidden="true"></i><a href="/menu/#carne" data-ing="mijoté de boeuf épicé, poivrons, oignons confits, mélange d'épices" data-ing-en="spicy slow cooked beef, peppers, confit onions, spice blend">Carne picante</a><i aria-hidden="true"></i><a href="/menu/#carne" data-ing="jambon de Paris, mozzarella, origan" data-ing-en="Paris ham, mozzarella, oregano">Jamón y queso</a><i aria-hidden="true"></i><a href="/menu/#carne" data-ing="poulet mariné, poivrons, oignons confits, persil plat, mélange d'épices" data-ing-en="marinated chicken, peppers, confit onions, flat parsley, spice blend">Pollo</a><i aria-hidden="true"></i><a href="/menu/#carne" data-ing="salame épicé, provolone, oignons confits, miel, mélange d'épices" data-ing-en="spicy salami, provolone, confit onions, honey, spice blend">Spianata</a><i aria-hidden="true"></i><a href="/menu/#verduras" data-ing="tomates, mozzarella, basilic frais, ail, mélange d'épices" data-ing-en="tomatoes, mozzarella, fresh basil, garlic, spice blend">Caprese</a><i aria-hidden="true"></i><a href="/menu/#verduras" data-ing="épinards frais, salsa blanca, mélange d'épices" data-ing-en="fresh spinach, white sauce, spice blend">Espinaca</a><i aria-hidden="true"></i><a href="/menu/#verduras" data-ing="oignons confits, mozzarella origan, mélange d'épices" data-ing-en="confit onions, mozzarella, oregano, spice blend">Fugazetta</a><i aria-hidden="true"></i><a href="/menu/#verduras" data-ing="champignons sautés, ricotta, bleu d'Auvergne, mélange d'épices" data-ing-en="sautéed mushrooms, ricotta, bleu d'Auvergne, spice blend">Hongos</a>
     </p>
-    <p class="flav-cta rv"><a class="btn pri btn-lg" href="/menu/">[[Voir la carte||See the menu]]{{AR}}</a></p>
+    <p class="flav-ing rv" aria-hidden="true"><span data-ing-out>[[Toutes nos empanadas sont faites maison et cuites au feu de bois.||All our empanadas are made in house and baked over a wood fire.]]</span></p>
+    <p class="flav-cta rv"><a class="btn pri btn-lg" href="/menu/">[[Voir la carte||See the menu]]</a></p>
   </div>
 </section>
 
