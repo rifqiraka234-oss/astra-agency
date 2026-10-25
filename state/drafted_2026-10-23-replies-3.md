@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- SUPERSEDED 2026-10-25. Nikolaus's reply went out 25 Oct 08.14 UTC from state/drafted_2026-10-25-reply-nikolaus.md with Raka's apology line added. Do not send this one. -->
 # Replies, 23 Oct afternoon. NOT SENT, waiting on Raka's word
 
 ### Nikolaus Walkner, Healthy Secrets (Vienna). ctc_pdAKCyF8dJxPkKrdL

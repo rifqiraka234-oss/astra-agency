@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- SUPERSEDED 2026-10-25. Marco's reply went out 25 Oct 08.14 UTC from state/drafted_2026-10-25-reply-marco.md with Raka's apology line added. Do not send this one. -->
 # Replies, 23 Oct midday. NOT SENT, waiting on Raka's word
 
 ### Marco Ghilardi, QuasiScience. ctc_tmt7dACzww47FMfXx
