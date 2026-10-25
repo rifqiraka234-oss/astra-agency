@@ -1,0 +1,281 @@
+{
+ "generated": "2026-10-25",
+ "source": "Mixkit (mixkit.co), Mixkit Stock Video Free License only",
+ "method": "Each item page fetched as a single request at least 4 s apart, twice on separate requests (fetch 1 read the JSON-LD copyrightNotice, fetch 2 read the download box data-license). Each file fetched as its own single request with the item page as Referer. 720p. Every clip checked one frame per second on a contact sheet, suspicious areas re-checked on full-resolution frames and enlarged crops. Any clip with readable text or a brand mark was rejected (see REJECTS.md).",
+ "counts": {
+  "item_pages_checked": 34,
+  "item_page_requests": 57,
+  "free": 23,
+  "restricted_excluded": 11,
+  "downloaded": 23,
+  "accepted": 5,
+  "rejected_on_frames": 18
+ },
+ "clips": [
+  {
+   "slug": "hand-wrap-red",
+   "file": "hand-wrap-red.mp4",
+   "mixkit_id": 4596,
+   "title": "Man bandaging his hand before boxing",
+   "source_url": "https://mixkit.co/free-stock-video/man-bandaging-his-hand-before-boxing-4596/",
+   "download_url": "https://assets.mixkit.co/videos/4596/4596-720.mp4",
+   "download": {
+    "fetched_at": "2026-10-25T18:00:27Z",
+    "http": 200,
+    "bytes": 5692056,
+    "content_type": "video/mp4",
+    "referer": "https://mixkit.co/free-stock-video/man-bandaging-his-hand-before-boxing-4596/",
+    "method": "one curl request for this one file, item page as Referer, 4 s after the previous request"
+   },
+   "file_facts": {
+    "sha256": "341ff71a414274dcf6c00dd3a2efda1456022b9fdec5312e3589f2858bd6e86d",
+    "bytes": 5692056,
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": "30/1",
+    "duration_s": 18.27,
+    "audio_tracks": 0
+   },
+   "licence": {
+    "verdict": "Mixkit Stock Video Free License (commercial use allowed, no attribution required)",
+    "read_1": {
+     "how": "item page fetch 1, JSON-LD VideoObject copyrightNotice (and license URL)",
+     "fetched_at": "2026-10-25T17:58:12Z",
+     "copyrightNotice": "Free",
+     "license_url": "https://mixkit.co/license/#videoFree"
+    },
+    "read_2": {
+     "how": "item page fetch 2 (separate request), download box data-license",
+     "fetched_at": "2026-10-25T17:59:28Z",
+     "data_license": "videoFree",
+     "download_box_text": "Download this free stock video clip for commercial or personal use, under the Mixkit Stock Video Free License."
+    },
+    "cross_check": {
+     "fetch1_download_box": "videoFree",
+     "fetch2_jsonld": "Free",
+     "word_restricted_on_either_page": 0
+    },
+    "terms_read": "https://mixkit.co/license/ rendered once 2026-10-25T16:19:36Z; videoRestricted modal text read 16:20:16Z; videoFree modal text read 17:54:01Z (commercial and non-commercial use, modify, distribute, broadcast, no attribution required, limits in the User Terms)"
+   },
+   "shows": "Close-up of a man wrapping white hand wraps around his hands and wrists before boxing. Black sleeveless top, torso and arms only, static camera. Background is a dim red-walled boxing gym: a hanging steel chain at left, a black heavy bag at right, out-of-focus white labels low on the left wall. Warm, moody, low light; colour (deep red and black), desaturates well.",
+   "faces_visible": "no (head out of frame for all 19 seconds)",
+   "logo_check": "Pass. 19 frames (1 per second) checked on the contact sheet, then full-resolution frames and 2x crops of the background corners. Garment plain. The heavy bag carries no visible print. The white labels on the back wall at lower left are out of focus in every frame and no character is legible; a small white blob under the bag at right is unreadable. No brand mark found.",
+   "contact_sheet": "sheets/hand-wrap-red.jpg",
+   "poster": "posters/hand-wrap-red.jpg",
+   "use_note": "decorative, aria-hidden, never captioned as BeBetter's customers or gyms. Stock models, not BeBetter athletes or members; the handover asks for BeBetter's own footage to replace it. Muted, plays only in view, paused under prefers-reduced-motion, poster frame first. Convert to WebM for QA playback (the container Chromium has no H.264). If used full bleed, crop or mask the left 15% to keep the blurred wall labels out entirely."
+  },
+  {
+   "slug": "bike-breath-bw",
+   "file": "bike-breath-bw.mp4",
+   "mixkit_id": 50972,
+   "title": "A young woman takes a breath before continuing with her stationary bike training over a black backdrop",
+   "source_url": "https://mixkit.co/free-stock-video/a-young-woman-takes-a-breath-before-continuing-with-her-50972/",
+   "download_url": "https://assets.mixkit.co/videos/50972/50972-720.mp4",
+   "download": {
+    "fetched_at": "2026-10-25T18:00:36Z",
+    "http": 200,
+    "bytes": 5113779,
+    "content_type": "video/mp4",
+    "referer": "https://mixkit.co/free-stock-video/a-young-woman-takes-a-breath-before-continuing-with-her-50972/",
+    "method": "one curl request for this one file, item page as Referer, 4 s after the previous request"
+   },
+   "file_facts": {
+    "sha256": "d8d547be74ce1fc220289f714e8112462fcff96cabd8b699a37ef7926d92a389",
+    "bytes": 5113779,
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "duration_s": 17.1,
+    "audio_tracks": 0
+   },
+   "licence": {
+    "verdict": "Mixkit Stock Video Free License (commercial use allowed, no attribution required)",
+    "read_1": {
+     "how": "item page fetch 1, JSON-LD VideoObject copyrightNotice (and license URL)",
+     "fetched_at": "2026-10-25T17:58:25Z",
+     "copyrightNotice": "Free",
+     "license_url": "https://mixkit.co/license/#videoFree"
+    },
+    "read_2": {
+     "how": "item page fetch 2 (separate request), download box data-license",
+     "fetched_at": "2026-10-25T17:59:36Z",
+     "data_license": "videoFree",
+     "download_box_text": "Download this free stock video clip for commercial or personal use, under the Mixkit Stock Video Free License."
+    },
+    "cross_check": {
+     "fetch1_download_box": "videoFree",
+     "fetch2_jsonld": "Free",
+     "word_restricted_on_either_page": 0
+    },
+    "terms_read": "https://mixkit.co/license/ rendered once 2026-10-25T16:19:36Z; videoRestricted modal text read 16:20:16Z; videoFree modal text read 17:54:01Z (commercial and non-commercial use, modify, distribute, broadcast, no attribution required, limits in the User Terms)"
+   },
+   "shows": "Black and white. A woman in a light one-shoulder sports bra and leggings stands at a stationary bike against a pure black background, hands on hips, catching her breath, then leans onto the handlebars; the camera pushes in to her face. Studio light, high contrast.",
+   "faces_visible": "yes (her face is visible and sharp from about 8 s onwards)",
+   "logo_check": "Pass. 18 frames checked on the contact sheet plus a full-resolution frame at 2 s. Garments plain, no marks. Handlebars wrapped in plain textured tape, no print. Black void background. A forearm tattoo is visible (personal, not a mark).",
+   "contact_sheet": "sheets/bike-breath-bw.jpg",
+   "poster": "posters/bike-breath-bw.jpg",
+   "use_note": "decorative, aria-hidden, never captioned as BeBetter's customers or gyms. Stock models, not BeBetter athletes or members; the handover asks for BeBetter's own footage to replace it. Muted, plays only in view, paused under prefers-reduced-motion, poster frame first. Convert to WebM for QA playback (the container Chromium has no H.264)."
+  },
+  {
+   "slug": "bike-sweat-bw",
+   "file": "bike-sweat-bw.mp4",
+   "mixkit_id": 50964,
+   "title": "A focused woman with sweat pearls all over her body is training on the stationary bike",
+   "source_url": "https://mixkit.co/free-stock-video/a-focused-woman-with-sweat-pearls-all-over-her-body-50964/",
+   "download_url": "https://assets.mixkit.co/videos/50964/50964-720.mp4",
+   "download": {
+    "fetched_at": "2026-10-25T18:08:32Z",
+    "http": 200,
+    "bytes": 2663194,
+    "content_type": "video/mp4",
+    "referer": "https://mixkit.co/free-stock-video/a-focused-woman-with-sweat-pearls-all-over-her-body-50964/",
+    "method": "one curl request for this one file, item page as Referer, 4 s after the previous request"
+   },
+   "file_facts": {
+    "sha256": "46dac2ce2dfcb91f9a72e2b1c1a361060810b28c556ac97a7c66c110788df97e",
+    "bytes": 2663194,
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "duration_s": 7.42,
+    "audio_tracks": 0
+   },
+   "licence": {
+    "verdict": "Mixkit Stock Video Free License (commercial use allowed, no attribution required)",
+    "read_1": {
+     "how": "item page fetch 1, JSON-LD VideoObject copyrightNotice (and license URL)",
+     "fetched_at": "2026-10-25T18:06:58Z",
+     "copyrightNotice": "Free",
+     "license_url": "https://mixkit.co/license/#videoFree"
+    },
+    "read_2": {
+     "how": "item page fetch 2 (separate request), download box data-license",
+     "fetched_at": "2026-10-25T18:07:56Z",
+     "data_license": "videoFree",
+     "download_box_text": "Download this free stock video clip for commercial or personal use, under the Mixkit Stock Video Free License."
+    },
+    "cross_check": {
+     "fetch1_download_box": "videoFree",
+     "fetch2_jsonld": "Free",
+     "word_restricted_on_either_page": 0
+    },
+    "terms_read": "https://mixkit.co/license/ rendered once 2026-10-25T16:19:36Z; videoRestricted modal text read 16:20:16Z; videoFree modal text read 17:54:01Z (commercial and non-commercial use, modify, distribute, broadcast, no attribution required, limits in the User Terms)"
+   },
+   "shows": "Black and white. Same studio shoot as bike-breath-bw: the woman rides hard, leaning on the bars, sweat beading on her shoulders and arms, face in three-quarter view. Pure black background, hard side light.",
+   "faces_visible": "yes (face visible throughout)",
+   "logo_check": "Pass. 8 frames checked on the contact sheet plus a full-resolution crop of the garment at 3 s. Plain light bra, no mark. Only part of the bike (bar ends) in frame, no print.",
+   "contact_sheet": "sheets/bike-sweat-bw.jpg",
+   "poster": "posters/bike-sweat-bw.jpg",
+   "use_note": "decorative, aria-hidden, never captioned as BeBetter's customers or gyms. Stock models, not BeBetter athletes or members; the handover asks for BeBetter's own footage to replace it. Muted, plays only in view, paused under prefers-reduced-motion, poster frame first. Convert to WebM for QA playback (the container Chromium has no H.264)."
+  },
+  {
+   "slug": "bike-effort-close-bw",
+   "file": "bike-effort-close-bw.mp4",
+   "mixkit_id": 50963,
+   "title": "A woman's face shows signs of effort while training on the stationary bike",
+   "source_url": "https://mixkit.co/free-stock-video/a-womans-face-shows-signs-of-effort-while-training-on-50963/",
+   "download_url": "https://assets.mixkit.co/videos/50963/50963-720.mp4",
+   "download": {
+    "fetched_at": "2026-10-25T18:08:36Z",
+    "http": 200,
+    "bytes": 4470289,
+    "content_type": "video/mp4",
+    "referer": "https://mixkit.co/free-stock-video/a-womans-face-shows-signs-of-effort-while-training-on-50963/",
+    "method": "one curl request for this one file, item page as Referer, 4 s after the previous request"
+   },
+   "file_facts": {
+    "sha256": "442860658e0af58f27b6bde54f8b8f19ade5e5cbac5090d35a223bd955f69fdb",
+    "bytes": 4470289,
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "duration_s": 13.05,
+    "audio_tracks": 0
+   },
+   "licence": {
+    "verdict": "Mixkit Stock Video Free License (commercial use allowed, no attribution required)",
+    "read_1": {
+     "how": "item page fetch 1, JSON-LD VideoObject copyrightNotice (and license URL)",
+     "fetched_at": "2026-10-25T18:07:03Z",
+     "copyrightNotice": "Free",
+     "license_url": "https://mixkit.co/license/#videoFree"
+    },
+    "read_2": {
+     "how": "item page fetch 2 (separate request), download box data-license",
+     "fetched_at": "2026-10-25T18:08:01Z",
+     "data_license": "videoFree",
+     "download_box_text": "Download this free stock video clip for commercial or personal use, under the Mixkit Stock Video Free License."
+    },
+    "cross_check": {
+     "fetch1_download_box": "videoFree",
+     "fetch2_jsonld": "Free",
+     "word_restricted_on_either_page": 0
+    },
+    "terms_read": "https://mixkit.co/license/ rendered once 2026-10-25T16:19:36Z; videoRestricted modal text read 16:20:16Z; videoFree modal text read 17:54:01Z (commercial and non-commercial use, modify, distribute, broadcast, no attribution required, limits in the User Terms)"
+   },
+   "shows": "Black and white. Tight close-up of the same woman's face and shoulders while she trains on the bike: head down, breathing, then looks up past camera. Sweat, earrings, black background.",
+   "faces_visible": "yes (face fills the frame; most identifiable of the set)",
+   "logo_check": "Pass. 14 frames checked on the contact sheet. Nothing in frame but face, shoulders, the bra strap and black background. No text, no marks.",
+   "contact_sheet": "sheets/bike-effort-close-bw.jpg",
+   "poster": "posters/bike-effort-close-bw.jpg",
+   "use_note": "decorative, aria-hidden, never captioned as BeBetter's customers or gyms. Stock models, not BeBetter athletes or members; the handover asks for BeBetter's own footage to replace it. Muted, plays only in view, paused under prefers-reduced-motion, poster frame first. Convert to WebM for QA playback (the container Chromium has no H.264). Most identifiable person in the set: use small, as texture behind type, or not at all near any claim."
+  },
+  {
+   "slug": "bike-tired-white-bw",
+   "file": "bike-tired-white-bw.mp4",
+   "mixkit_id": 50983,
+   "title": "A visibly tired young black man exercising on a stationary bike over a white backdrop",
+   "source_url": "https://mixkit.co/free-stock-video/a-visibly-tired-young-black-man-exercising-on-a-stationary-50983/",
+   "download_url": "https://assets.mixkit.co/videos/50983/50983-720.mp4",
+   "download": {
+    "fetched_at": "2026-10-25T18:08:50Z",
+    "http": 200,
+    "bytes": 3566935,
+    "content_type": "video/mp4",
+    "referer": "https://mixkit.co/free-stock-video/a-visibly-tired-young-black-man-exercising-on-a-stationary-50983/",
+    "method": "one curl request for this one file, item page as Referer, 4 s after the previous request"
+   },
+   "file_facts": {
+    "sha256": "8d150335bc2d43f8d9bdcae2f4978fff148327790a5f429c708bc6dc5e31d9bb",
+    "bytes": 3566935,
+    "codec": "h264",
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "duration_s": 11.39,
+    "audio_tracks": 0
+   },
+   "licence": {
+    "verdict": "Mixkit Stock Video Free License (commercial use allowed, no attribution required)",
+    "read_1": {
+     "how": "item page fetch 1, JSON-LD VideoObject copyrightNotice (and license URL)",
+     "fetched_at": "2026-10-25T18:07:16Z",
+     "copyrightNotice": "Free",
+     "license_url": "https://mixkit.co/license/#videoFree"
+    },
+    "read_2": {
+     "how": "item page fetch 2 (separate request), download box data-license",
+     "fetched_at": "2026-10-25T18:08:14Z",
+     "data_license": "videoFree",
+     "download_box_text": "Download this free stock video clip for commercial or personal use, under the Mixkit Stock Video Free License."
+    },
+    "cross_check": {
+     "fetch1_download_box": "videoFree",
+     "fetch2_jsonld": "Free",
+     "word_restricted_on_either_page": 0
+    },
+    "terms_read": "https://mixkit.co/license/ rendered once 2026-10-25T16:19:36Z; videoRestricted modal text read 16:20:16Z; videoFree modal text read 17:54:01Z (commercial and non-commercial use, modify, distribute, broadcast, no attribution required, limits in the User Terms)"
+   },
+   "shows": "Black and white, inverted from the others: a bald, bearded man in a black tank top on a stationary bike against a bright white backdrop, leaning on the bars, head dropping with fatigue and lifting again. Soft high-key light.",
+   "faces_visible": "yes (face visible in most frames)",
+   "logo_check": "Pass. 12 frames checked on the contact sheet plus a full-resolution crop of the tank top at 1 s. Plain black tank, no mark; white seamless background; bike out of frame below.",
+   "contact_sheet": "sheets/bike-tired-white-bw.jpg",
+   "poster": "posters/bike-tired-white-bw.jpg",
+   "use_note": "decorative, aria-hidden, never captioned as BeBetter's customers or gyms. Stock models, not BeBetter athletes or members; the handover asks for BeBetter's own footage to replace it. Muted, plays only in view, paused under prefers-reduced-motion, poster frame first. Convert to WebM for QA playback (the container Chromium has no H.264). The only white-ground clip: pairs with BeBetter's white pages the way the others pair with black."
+  }
+ ]
+}

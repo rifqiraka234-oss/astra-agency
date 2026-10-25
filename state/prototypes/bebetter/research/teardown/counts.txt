@@ -1,0 +1,275 @@
+# 1. counts
+rows 62 {'client': 1, 'gym': 21, 'street': 14, 'custom': 19, 'motion': 7}
+walled 4 [('jugadorteamwear_nl', 400, '400 Bad Request', ''), ('helloprint_com_en_gb_sportswear', 403, 'Just a moment...', 'Error: page.evaluate: Execution context '), ('spreadshirt_nl', 403, '', ''), ('oneills_com', 403, 'Just a moment...', '')]
+unreached 2 [('gymcoffee_com', None, '', 'Error: page.goto: net::ERR_TUNNEL_CONNEC'), ('kukri_com', None, '', 'Error: page.goto: net::ERR_CONNECTION_RE')]
+replaced 3 [('vanquishfitness_com', 200, 'vanquishfitness.com is for sal', ''), ('echtapparel_com', 200, 'EchtApparel.com is for sale | ', ''), ('servicesport_com_services_instyle_clothing', 404, 'Page not found - ServiceSport', '')]
+rendered 53 {'client': 1, 'gym': 18, 'street': 14, 'custom': 13, 'motion': 7}
+rendered, not client 52
+states among rendered {'onescreen_scroller': 10, 'partial': 6, 'ok': 29, 'obscured': 3, 'render_fail': 2, 'intro': 3}
+  obscured representclo_com, adererror_com, printful_com_de_sportbekleidung_selbst_gestalten
+  render_fail aimeleondore_com, thetiebreak_merci_michel_com
+  intro immersivebags_miumiu_com, members_play_lacoste_com_ace_breaker_rg, theimmortals_world
+  onescreen_scroller bebetter_officiall_com, darcsport_com, rawgear_com, ryderwear_com, pursuefitness_com, stussy_com, ladolfinajumping_com, kidsuper_com, echt_com_au, shirtee_com_de
+  partial youngla_com, alphaleteathletics_com, oneractive_com, dailypaperclothing_com, stanno_com_nl, kitlocker_com
+replacements [('https://echtapparel.com/', '->', 'https://echt.com.au/'), ('https://vanquishfitness.com/', '->', 'https://www.vqfit.com/'), ('https://www.servicesport.com/services/instyle-clothing/', '->', 'https://www.servicesport.com/services/custom-gym-clothing-instyle-clothing/')]
+pass {1: 33, 2: 14, 3: 8, 4: 6, 5: 1}
+
+# 2. visual tags, non-client rows with read frames n=44
+## gym n=18
+  people       15  youngla_com, gymshark_com, alphaleteathletics_com, representclo_com_collections_mens_247, builtforathletes_com, gorillawear_com, ryderwear_com, pursuefitness_com, tlfapparel_com, buffbunny_com, oneractive_com, aybl_com, smilodox_com, echt_com_au, vqfit_com
+  back          4  gymshark_com, alphaleteathletics_com, pursuefitness_com, vqfit_com
+  ugc           2  alphaleteathletics_com, aybl_com
+  ticker        2  pursuefitness_com, echt_com_au
+  poster        6  alphaleteathletics_com, rawgear_com, builtforathletes_com, pursuefitness_com, buffbunny_com, vqfit_com
+  countdown     3  ryderwear_com, tlfapparel_com, oneractive_com
+  dark          4  darcsport_com, rawgear_com, builtforathletes_com, pursuefitness_com
+  promo_modal   7  youngla_com, gymshark_com, gorillawear_com, tlfapparel_com, oneractive_com, echt_com_au, vqfit_com
+  layout {'grid': 5, 'mixed': 8, 'onescreen': 5}
+## street n=11
+  people       10  stussy_com, fearofgod_com, satisfyrunning_com, kith_com, palaceskateboards_com, dailypaperclothing_com, arte_antwerp_com, patta_nl, olafhussein_com, colebuxton_com
+  back          1  colebuxton_com
+  ugc           2  patta_nl, olafhussein_com
+  ticker        0  
+  poster        3  fearofgod_com, patta_nl, olafhussein_com
+  countdown     0  
+  dark          1  corteiz_com
+  promo_modal   2  dailypaperclothing_com, olafhussein_com
+  layout {'onescreen': 1, 'grid': 1, 'edge': 8, 'mixed': 1}
+## custom n=12
+  people       10  masita_com, stanno_com_nl, owayo_nl, patrick_eu, teamshirts_de, spized_com_nl, kitlocker_com, brikl_com_branded_stores_gyms, shirtee_com_de, erima_de
+  back          1  spized_com_nl
+  ugc           0  
+  ticker        0  
+  poster        4  masita_com, stanno_com_nl, spized_com_nl, kitlocker_com
+  countdown     0  
+  dark          0  
+  promo_modal   2  kitlocker_com, erima_de
+  layout {'cards': 6, 'mixed': 5, 'onescreen': 1}
+## motion n=3
+  people        2  nickho_motorsports_nl, kidsuper_com
+  back          0  
+  ugc           0  
+  ticker        0  
+  poster        1  nickho_motorsports_nl
+  countdown     0  
+  dark          2  nickho_motorsports_nl, ladolfinajumping_com
+  promo_modal   0  
+  layout {'edge': 1, 'onescreen': 2}
+## all n=44
+  people       37  youngla_com, gymshark_com, alphaleteathletics_com, representclo_com_collections_mens_247, builtforathletes_com, gorillawear_com, ryderwear_com, pursuefitness_com, tlfapparel_com, buffbunny_com, oneractive_com, aybl_com, smilodox_com, stussy_com, fearofgod_com, satisfyrunning_com, kith_com, palaceskateboards_com, dailypaperclothing_com, arte_antwerp_com, patta_nl, olafhussein_com, colebuxton_com, masita_com, stanno_com_nl, owayo_nl, patrick_eu, teamshirts_de, spized_com_nl, kitlocker_com, brikl_com_branded_stores_gyms, nickho_motorsports_nl, kidsuper_com, echt_com_au, vqfit_com, shirtee_com_de, erima_de
+  back          6  gymshark_com, alphaleteathletics_com, pursuefitness_com, colebuxton_com, spized_com_nl, vqfit_com
+  ugc           4  alphaleteathletics_com, aybl_com, patta_nl, olafhussein_com
+  ticker        2  pursuefitness_com, echt_com_au
+  poster       14  alphaleteathletics_com, rawgear_com, builtforathletes_com, pursuefitness_com, buffbunny_com, fearofgod_com, patta_nl, olafhussein_com, masita_com, stanno_com_nl, spized_com_nl, kitlocker_com, nickho_motorsports_nl, vqfit_com
+  countdown     3  ryderwear_com, tlfapparel_com, oneractive_com
+  dark          7  darcsport_com, rawgear_com, builtforathletes_com, pursuefitness_com, corteiz_com, nickho_motorsports_nl, ladolfinajumping_com
+  promo_modal  11  youngla_com, gymshark_com, gorillawear_com, tlfapparel_com, oneractive_com, dailypaperclothing_com, olafhussein_com, kitlocker_com, echt_com_au, vqfit_com, erima_de
+  layout {'grid': 6, 'mixed': 14, 'onescreen': 9, 'edge': 9, 'cards': 6}
+
+# 3. DOM fingerprints per group (rendered rows)
+## client n=1
+  video in DOM                                    0  
+  video in first screen                           0  
+  webgl canvas                                    0  
+  pinned sticky scene                             0  
+  marquee class                                   0  
+  countdown or timer element                      1  bebetter_officiall_com
+  countdown text                                  1  bebetter_officiall_com
+  password page                                   1  bebetter_officiall_com
+  shopify                                         1  bebetter_officiall_com
+  gsap or ScrollTrigger                           0  
+  three.js                                        0  
+  lenis                                           0  
+  doc height 900 (inner scroller or one screen)   0  
+  3+ big rounded cards                            0  
+  3+ full-bleed bands                             0  
+  words drop                                      0  
+  words sold out                                  0  
+  words waitlist or early access                  1  bebetter_officiall_com
+  words community                                 1  bebetter_officiall_com
+  words custom                                    0  
+  reviews text                                    0  
+  fabric weight or wash words                     0  
+  model size note                                 0  
+  median height 927  median words 53  median imgs 2
+  h1 faces [('Times New Roman', 1)]
+## gym n=18
+  video in DOM                                    7  youngla_com, gymshark_com, alphaleteathletics_com, representclo_com_collections_mens_247, builtforathletes_com, aybl_com, echt_com_au
+  video in first screen                           6  youngla_com, gymshark_com, alphaleteathletics_com, builtforathletes_com, aybl_com, echt_com_au
+  webgl canvas                                    1  oneractive_com
+  pinned sticky scene                             2  builtforathletes_com, roguefitness_com_gear_apparel
+  marquee class                                   2  tlfapparel_com, echt_com_au
+  countdown or timer element                      1  oneractive_com
+  countdown text                                  2  tlfapparel_com, oneractive_com
+  password page                                   2  darcsport_com, rawgear_com
+  shopify                                        16  youngla_com, alphaleteathletics_com, darcsport_com, rawgear_com, representclo_com_collections_mens_247, builtforathletes_com, gorillawear_com, ryderwear_com, pursuefitness_com, tlfapparel_com, buffbunny_com, oneractive_com, aybl_com, smilodox_com, echt_com_au, vqfit_com
+  gsap or ScrollTrigger                           4  darcsport_com, rawgear_com, representclo_com_collections_mens_247, oneractive_com
+  three.js                                        1  youngla_com
+  lenis                                           0  
+  doc height 900 (inner scroller or one screen)   5  darcsport_com, rawgear_com, ryderwear_com, pursuefitness_com, echt_com_au
+  3+ big rounded cards                            0  
+  3+ full-bleed bands                             7  alphaleteathletics_com, representclo_com_collections_mens_247, builtforathletes_com, pursuefitness_com, buffbunny_com, oneractive_com, smilodox_com
+  words drop                                     10  youngla_com, darcsport_com, representclo_com_collections_mens_247, builtforathletes_com, pursuefitness_com, oneractive_com, aybl_com, smilodox_com, echt_com_au, vqfit_com
+  words sold out                                  5  youngla_com, representclo_com_collections_mens_247, gorillawear_com, buffbunny_com, smilodox_com
+  words waitlist or early access                  6  rawgear_com, builtforathletes_com, oneractive_com, aybl_com, echt_com_au, vqfit_com
+  words community                                12  gymshark_com, alphaleteathletics_com, builtforathletes_com, gorillawear_com, ryderwear_com, pursuefitness_com, tlfapparel_com, buffbunny_com, roguefitness_com_gear_apparel, aybl_com, smilodox_com, echt_com_au
+  words custom                                    2  builtforathletes_com, roguefitness_com_gear_apparel
+  reviews text                                    9  youngla_com, gymshark_com, representclo_com_collections_mens_247, builtforathletes_com, gorillawear_com, pursuefitness_com, tlfapparel_com, buffbunny_com, roguefitness_com_gear_apparel
+  fabric weight or wash words                     5  gymshark_com, representclo_com_collections_mens_247, gorillawear_com, aybl_com, vqfit_com
+  model size note                                 5  builtforathletes_com, gorillawear_com, ryderwear_com, oneractive_com, aybl_com
+  median height 5609.5  median words 629.0  median imgs 188.0
+  h1 faces [('Helvetica', 2), ('Montserrat', 2), ('Poppins', 2), ('Nunito Sans', 1), ('Plaak Gymshark', 1), ('proxima_nova_bold', 1), ('STKBureau', 1), ('Rajdhani', 1), ('Roboto', 1), ('Roboto Condensed Header', 1), ('Helvetica Neue', 1), ('Open Sans', 1), ('FF Good Pro', 1), ('Inter', 1)]
+## street n=14
+  video in DOM                                    7  representclo_com, aimeleondore_com, fearofgod_com, kith_com, adererror_com, dailypaperclothing_com, patta_nl
+  video in first screen                           5  aimeleondore_com, fearofgod_com, kith_com, dailypaperclothing_com, patta_nl
+  webgl canvas                                    2  palaceskateboards_com, patta_nl
+  pinned sticky scene                             0  
+  marquee class                                   1  stussy_com
+  countdown or timer element                      2  corteiz_com, colebuxton_com
+  countdown text                                  1  patta_nl
+  password page                                   0  
+  shopify                                        13  representclo_com, aimeleondore_com, stussy_com, corteiz_com, fearofgod_com, satisfyrunning_com, kith_com, palaceskateboards_com, dailypaperclothing_com, arte_antwerp_com, patta_nl, olafhussein_com, colebuxton_com
+  gsap or ScrollTrigger                           3  representclo_com, dailypaperclothing_com, olafhussein_com
+  three.js                                        2  palaceskateboards_com, patta_nl
+  lenis                                           0  
+  doc height 900 (inner scroller or one screen)   2  representclo_com, adererror_com
+  3+ big rounded cards                            0  
+  3+ full-bleed bands                             5  kith_com, dailypaperclothing_com, arte_antwerp_com, patta_nl, colebuxton_com
+  words drop                                      5  representclo_com, satisfyrunning_com, dailypaperclothing_com, patta_nl, colebuxton_com
+  words sold out                                  0  
+  words waitlist or early access                  4  satisfyrunning_com, dailypaperclothing_com, arte_antwerp_com, olafhussein_com
+  words community                                 1  patta_nl
+  words custom                                    0  
+  reviews text                                    1  representclo_com
+  fabric weight or wash words                     2  corteiz_com, olafhussein_com
+  model size note                                 0  
+  median height 2603.5  median words 184.5  median imgs 36.5
+  h1 faces [('STKBureau', 1), ('Sohne', 1), ('HelveticaNeue', 1), ('Courier New', 1), ('Optima', 1), ('ABC Walter Neue', 1), ('Georgia', 1), ('FuturaLTPro', 1), ('Neue Helvetica W01', 1), ('Commuters Sans', 1), ('Haas Grot Text 55 Roman', 1), ('HelveticaNeueMedium', 1), ('PP Mori', 1), ('Akkurat', 1)]
+## custom n=13
+  video in DOM                                    2  masita_com, spized_com_nl
+  video in first screen                           1  spized_com_nl
+  webgl canvas                                    1  kitlocker_com
+  pinned sticky scene                             2  hidalgo_nl_product_category_4716_kleding_4868_sportkleding, brikl_com_branded_stores_gyms
+  marquee class                                   1  spized_com_nl
+  countdown or timer element                      0  
+  countdown text                                  0  
+  password page                                   0  
+  shopify                                         1  masita_com
+  gsap or ScrollTrigger                           0  
+  three.js                                        0  
+  lenis                                           0  
+  doc height 900 (inner scroller or one screen)   1  shirtee_com_de
+  3+ big rounded cards                            2  masita_com, brikl_com_branded_stores_gyms
+  3+ full-bleed bands                             8  masita_com, stanno_com_nl, teamshirts_de, spized_com_nl, shirtee_com_de, erima_de, printful_com_de_sportbekleidung_selbst_gestalten, servicesport_com_services_custom_gym_clothing_instyle_clothing
+  words drop                                      3  masita_com, kitlocker_com, brikl_com_branded_stores_gyms
+  words sold out                                  1  masita_com
+  words waitlist or early access                  1  masita_com
+  words community                                 3  masita_com, teamshirts_de, brikl_com_branded_stores_gyms
+  words custom                                   13  hidalgo_nl_product_category_4716_kleding_4868_sportkleding, masita_com, stanno_com_nl, owayo_nl, patrick_eu, teamshirts_de, spized_com_nl, kitlocker_com, brikl_com_branded_stores_gyms, shirtee_com_de, erima_de, printful_com_de_sportbekleidung_selbst_gestalten, servicesport_com_services_custom_gym_clothing_instyle_clothing
+  reviews text                                    6  hidalgo_nl_product_category_4716_kleding_4868_sportkleding, masita_com, owayo_nl, teamshirts_de, kitlocker_com, printful_com_de_sportbekleidung_selbst_gestalten
+  fabric weight or wash words                     1  hidalgo_nl_product_category_4716_kleding_4868_sportkleding
+  model size note                                 3  stanno_com_nl, owayo_nl, erima_de
+  median height 7756  median words 828  median imgs 59
+  h1 faces [('Montserrat', 2), ('Poppins', 2), ('Helvetica Compressed', 1), ('Assistant', 1), ('AreaNormal-Black', 1), ('NHaasGroteskDSPro', 1), ('Roboto', 1), ('HudsonNYPro', 1), ('Open Sans', 1), (None, 1), ('ProximaNova', 1)]
+## motion n=7
+  video in DOM                                    3  nickho_motorsports_nl, ladolfinajumping_com, kidsuper_com
+  video in first screen                           1  ladolfinajumping_com
+  webgl canvas                                    3  members_play_lacoste_com_ace_breaker_rg, nickho_motorsports_nl, theimmortals_world
+  pinned sticky scene                             1  nickho_motorsports_nl
+  marquee class                                   0  
+  countdown or timer element                      1  nickho_motorsports_nl
+  countdown text                                  0  
+  password page                                   0  
+  shopify                                         1  kidsuper_com
+  gsap or ScrollTrigger                           2  nickho_motorsports_nl, ladolfinajumping_com
+  three.js                                        1  nickho_motorsports_nl
+  lenis                                           2  nickho_motorsports_nl, ladolfinajumping_com
+  doc height 900 (inner scroller or one screen)   6  thetiebreak_merci_michel_com, immersivebags_miumiu_com, members_play_lacoste_com_ace_breaker_rg, ladolfinajumping_com, kidsuper_com, theimmortals_world
+  3+ big rounded cards                            0  
+  3+ full-bleed bands                             3  members_play_lacoste_com_ace_breaker_rg, nickho_motorsports_nl, ladolfinajumping_com
+  words drop                                      0  
+  words sold out                                  1  kidsuper_com
+  words waitlist or early access                  0  
+  words community                                 0  
+  words custom                                    1  ladolfinajumping_com
+  reviews text                                    0  
+  fabric weight or wash words                     0  
+  model size note                                 0  
+  median height 900  median words 237  median imgs 24
+  h1 faces [(None, 3), ('MonaSans', 1), ('Anton', 1), ('Marcellus', 1), ('New York', 1)]
+
+# 4. custom group: subpages and click-throughs
+  jugadorteamwear_nl walled subpages [] config []
+  helloprint_com_en_gb_sportswear walled subpages [] config []
+  hidalgo_nl_product_category_4716_kleding_4868_sp ok subpages [] config []
+  masita_com ok subpages ['https://b2b.masita.com/'] config []
+  stanno_com_nl partial subpages ['https://www.stanno.com/nl/special-design/', 'https://www.stanno.com/nl/for-clubs/'] config []
+  owayo_nl ok subpages ['https://www.owayo.nl/wielrennen/levertijd-nl.htm', 'https://www.owayo.nl/wielrennen/prijslijst_all-nl.htm', 'https://www.owayo.nl/t-shirt-bedrukken.htm', 'https://www.owayo.nl/hoodies-bedrukken.htm', 'https://www.owayo.nl/wielrennen/prijsopgave-nl.htm'] config ['owayo_konfig', 'owayo_prijsopgave']
+  patrick_eu ok subpages ['https://jointhewinningteam.patrick.eu/'] config []
+  spreadshirt_nl walled subpages [] config []
+  teamshirts_de ok subpages [] config ['teamshirts_wizard']
+  oneills_com walled subpages [] config []
+  spized_com_nl ok subpages ['https://www.spized.com/nl/ontwerp-je-eigen-fitness-shirt', 'https://www.spized.com/nl/bestelproces-levertijd'] config ['spized_konfig']
+  kukri_com unreached subpages [] config []
+  kitlocker_com partial subpages ['https://kitlocker.com/customise-your-kit/', 'https://kitlocker.com/clubs/'] config ['kitlocker_customise']
+  servicesport_com_services_instyle_clothing replaced subpages ['https://www.servicesport.com/services/custom-gym-clothing-instyle-clothing/'] config ['servicesport_quote']
+  brikl_com_branded_stores_gyms ok subpages ['https://brikl.com/pricing'] config []
+  shirtee_com_de onescreen_scroller subpages ['https://www.shirtee.com/de/selbst-gestalten/hoodies-sweatshirts/'] config ['shirtee_designer']
+  erima_de ok subpages ['https://www.erima.de/corporate/vereine-teams'] config []
+  printful_com_de_sportbekleidung_selbst_gestalten obscured subpages [] config []
+  servicesport_com_services_custom_gym_clothing_in ok subpages [] config ['servicesport_quote']
+
+# 5. palettes (DOM bg by painted area), rendered rows
+  client  bebetter_officiall_com                       #ffffff #000000
+  gym     youngla_com                                  #f9f9f9 #efefef #ffffff #000000
+  gym     gymshark_com                                 #dee0e3 #ffffff #000000 #f4f5f6
+  gym     alphaleteathletics_com                       #111111 #ffffff #0a0908 #ababab
+  gym     darcsport_com                                
+  gym     rawgear_com                                  #000000 #ffffff
+  gym     representclo_com_collections_mens_247        #ffffff #f7f7f7
+  gym     builtforathletes_com                         #ffffff #000000 #f1f1f1 #121212
+  gym     gorillawear_com                              #efe8dd #f7f7f7 #ffffff #f4f4f4
+  gym     ryderwear_com                                #fafafa #f0f0f0 #ffffff #000000
+  gym     pursuefitness_com                            #ffffff #f5f5f5 #000000 #969696
+  gym     tlfapparel_com                               #efefef #171717 #fafafa #ffffff
+  gym     buffbunny_com                                #ededed #ffffff #000000 #f9f9f9
+  gym     roguefitness_com_gear_apparel                #f8f8f8 #000000 #333333 #ffffff
+  gym     oneractive_com                               #ffffff #000000 #efefef #f0f0f0
+  gym     aybl_com                                     #ffffff #f5f5f5 #1a1a1a #e8e8e8
+  street  representclo_com                             #ffffff
+  street  aimeleondore_com                             #000000
+  gym     smilodox_com                                 #ffffff #f8f6f4 #000000
+  street  stussy_com                                   #ffffff
+  street  corteiz_com                                  #191919 #a20000
+  street  fearofgod_com                                #ffffff #000000
+  street  satisfyrunning_com                           #ffffff #f8f9f9 #000000 #5c5951
+  street  kith_com                                     #333333 #ffffff #f2f2f2
+  street  adererror_com                                #ffffff #888888 #000000 #eaeaea
+  street  palaceskateboards_com                        #000000 #e4e4e4 #c9261c
+  street  dailypaperclothing_com                       #ffffff #efefef #eeeeee #000000
+  street  arte_antwerp_com                             #000000 #ffffff
+  street  patta_nl                                     #ffffff #000000 #fff1f2
+  street  olafhussein_com                              #000000 #ffffff
+  street  colebuxton_com                               #f6f6f6 #ffffff #333333 #f5f5f5
+  custom  hidalgo_nl_product_category_4716_kleding_486 #f2f2f2 #ffffff #f7f9fa #00a0e0
+  custom  masita_com                                   #ffffff #f6f6f6 #000000 #f9fafb
+  custom  stanno_com_nl                                #ffffff #1e293b #000000 #ea5b0c
+  custom  owayo_nl                                     #f1f3f5 #242424 #ffffff #efefef
+  custom  patrick_eu                                   #ffffff #fafafa #000000 #e61e32
+  custom  teamshirts_de                                #fafafa #ffffff #6693ab #2c5a73
+  custom  spized_com_nl                                #181c8f #000000 #efefef #f4f4f4
+  custom  kitlocker_com                                #ffffff #111111 #f3f3f3 #f6f7f9
+  custom  brikl_com_branded_stores_gyms                #08080b #f3f3f3 #3a63f5 #3a5fd9
+  motion  thetiebreak_merci_michel_com                 #05152d
+  motion  immersivebags_miumiu_com                     #ffffff
+  motion  members_play_lacoste_com_ace_breaker_rg      #00503c #021109 #082415 #ffffff
+  motion  nickho_motorsports_nl                        #ffffff #000000 #fed60a #f2f2f2
+  motion  ladolfinajumping_com                         #0a1b2e #ffffff #091119 #000000
+  motion  kidsuper_com                                 #ffffff #11111c #cdcac5 #000000
+  motion  theimmortals_world                           #121212 #f1f1f1
+  gym     echt_com_au                                  #ffffff #f6f6f6 #e9e1d5 #ebebeb
+  gym     vqfit_com                                    #000000 #ffffff #fafafa #1d1d1d
+  custom  shirtee_com_de                               #ffffff #eceff2 #3f464b #5a5859
+  custom  erima_de                                     #ffffff #f8f8f8 #76b935 #141414
+  custom  printful_com_de_sportbekleidung_selbst_gesta #ffffff #f8f8f8 #fff1e3 #000000
+  custom  servicesport_com_services_custom_gym_clothin #ffffff #aaaeb1 #f7f7f7 #080808

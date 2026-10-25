@@ -1,0 +1,39 @@
+/* the garment. Everything that changes reaches the four symbols as a custom property, because classes on a page
+   never reach inside a <use> copy and custom properties do. kit.js sets them on <html>. */
+:root{--g:#242321;--print:#d9b98a;--pf:'Graduate';--wash-mode:screen;--wash-op:.3;
+  --v-arc:inline;--v-block:none;--v-mono:inline;--v-tdk:none;--v-tlt:none;--v-logo:none}
+.garment{display:block;width:100%;height:auto;overflow:visible;aspect-ratio:1000/1080}
+.bb-defs{position:absolute;width:0;height:0;overflow:hidden}
+symbol .cloth{fill:var(--g)}
+symbol .edge{fill:none;stroke:#000;stroke-opacity:.38;stroke-width:2}
+symbol .wash{mix-blend-mode:var(--wash-mode);opacity:var(--wash-op)}
+symbol .seam{fill:#000;fill-opacity:.22;stroke:#000;stroke-opacity:.25;stroke-width:2}
+symbol .rib{fill:#000;fill-opacity:.14;stroke:#000;stroke-opacity:.22;stroke-width:1.5}
+symbol .inside{fill:#000;fill-opacity:.5}
+symbol .hood{fill:#000;fill-opacity:.1}
+symbol .hood-edge{fill:none;stroke:#000;stroke-opacity:.32;stroke-width:3}
+symbol .hood-edge.band{stroke-opacity:.18;stroke-width:28}
+symbol .stitch{fill:none;stroke:#000;stroke-opacity:.3;stroke-width:2.5;stroke-dasharray:7 6}
+symbol .cord{fill:none;stroke:#fff;stroke-opacity:.55;stroke-width:8;stroke-linecap:round}
+symbol .ink text{fill:var(--print)}
+symbol .em-mono circle{stroke:var(--print)}symbol .em-mono .star{fill:var(--print)}
+symbol .p-arc{font-family:var(--pf);letter-spacing:.02em;display:var(--v-arc)}
+symbol .p-block{font-family:'Anton';display:var(--v-block)}
+symbol .p-ini{font-family:var(--pf);font-size:110px}
+symbol .p-side{font-family:'IBM Plex Mono';font-weight:500;font-size:28px;letter-spacing:.14em}
+symbol .p-motto{font-family:'Archivo';font-weight:700;font-size:38px;letter-spacing:.22em}
+symbol .p-chest{font-family:var(--pf);letter-spacing:.06em}
+symbol .em-mono{display:var(--v-mono)}
+symbol .em-teddy.dk{display:var(--v-tdk)}
+symbol .em-teddy.lt{display:var(--v-tlt)}
+symbol .em-logo{display:var(--v-logo)}
+symbol .em-ph{display:var(--v-ph,none)}symbol .em-ph rect{stroke:var(--print);opacity:.7}symbol .em-ph text{font:500 40px 'IBM Plex Mono';letter-spacing:.2em;opacity:.7}
+/* the squeegee, pulled across the print */
+.gw{position:relative;display:block;width:fit-content;max-width:100%;margin:0 auto}
+.sq{position:absolute;top:17%;height:64%;left:22%;width:7px;background:var(--print);box-shadow:-3px 0 0 rgba(0,0,0,.45);opacity:0;pointer-events:none}
+.sq.go{animation:sq .76s cubic-bezier(.45,0,.55,1)}
+@keyframes sq{0%{left:22%;opacity:0}12%{opacity:1}85%{opacity:1}100%{left:78%;opacity:0}}
+
+/* the tour tee on the home page */
+.tr-ink{fill:var(--tan)}.tr-ink path[stroke-width]{stroke:var(--tan);fill:none}
+.tr-sub{font:500 30px/1 'IBM Plex Mono';letter-spacing:.3em}.tr-s2{font-size:24px}

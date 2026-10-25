@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- SUPERSEDED 25 Oct ~19:45 UTC, NEVER SENT. The sketch it promised "this week" was built and is live the same evening, so this holding reply must not go. The message to Laurens is state/drafted_2026-10-25-laurens-delivery.md (Option B) or its -option-a.md. -->
 # Reply, 2026-10-25. NOT SENT, waiting on Raka's word
 
 ### Laurens Van Dorp, BeBetter Official, ctc_vR5bseee3b8DtJNhv
