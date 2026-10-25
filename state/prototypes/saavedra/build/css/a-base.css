@@ -130,7 +130,7 @@ html.js [data-words].words-in .w { opacity: 1; transform: none }
 .fm-chips { display: flex; flex-wrap: wrap; gap: 8px }
 .fm-chips label { position: relative; cursor: pointer }
 .fm-chips input { position: absolute; opacity: 0; inset: 0; cursor: pointer }
-.fm-chips span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 2px solid var(--azul); border-radius: 4px; background: #fff; font: 800 16px/1 var(--h); text-transform: uppercase; color: var(--azul); transition: background .2s, color .2s }
+.fm-chips label > span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 2px solid var(--azul); border-radius: 4px; background: #fff; font: 800 16px/1 var(--h); text-transform: uppercase; color: var(--azul); transition: background .2s, color .2s }
 .fm-chips input:checked + span { background: var(--azul); color: var(--crema) }
 .fm-chips input:focus-visible + span { outline: 3px solid var(--sol); outline-offset: 2px }
 .fm-step { display: flex; align-items: stretch; border: 2px solid var(--azul); border-radius: 4px; background: #fff; overflow: hidden }

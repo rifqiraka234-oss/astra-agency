@@ -1,13 +1,13 @@
 // the copy as a visitor sees it after the scripts ran, every page, both languages: colons, dashes, exclamation marks
 const { chromium } = require('playwright');
 const pages = ['/', '/entreprises/', '/privatisation/', '/devis/', '/devis/merci/', '/menu/', '/equipe/', '/commander/', '/mentions-legales/', '/confidentialite/'].map(x => ['http://localhost:8791', x]).concat([['http://localhost:8792', '/']]);
-const ALLOW = ['Saint-Georges', 'Île-de-France', 'La Casa Deskeo – Victoire', 'Patchwork Sainte-Cécile', 'saavedraparis.fr/click-collect', '/click-collect', 'divinaempanada.com/service-traiteur', 'api-adresse.data.gouv.fr'];
+const ALLOW = ['Saint-Georges', 'Île-de-France', 'La Casa Deskeo – Victoire', 'LA CASA DESKEO – VICTOIRE', 'Patchwork Sainte-Cécile', 'saavedraparis.fr/click-collect', '/click-collect', 'divinaempanada.com/service-traiteur', 'api-adresse.data.gouv.fr'];
 (async () => {
   const b = await chromium.launch(); let flags = 0;
   for (const lang of ['fr', 'en']) for (const [h, path] of pages) {
     const p = await b.newPage({ viewport: { width: 1280, height: 900 }, reducedMotion: 'reduce' });
     await p.goto(h + path + (lang === 'en' ? '?lang=en' : ''), { waitUntil: 'networkidle' });
-    await p.evaluate(() => { const s = document.querySelector('#bb-n'); if (s) { s.value = 33; s.dispatchEvent(new Event('input')); } });
+    await p.evaluate(() => { const s = document.querySelector('[data-o-range]'); if (s) { s.value = 33; s.dispatchEvent(new Event('input')); } const w = document.querySelector('#w-n'); if (w) { w.value = 50; w.dispatchEvent(new Event('input')); } });
     await p.waitForTimeout(300);
     let t = await p.evaluate(() => document.body.innerText);
     if (path === '/' && h.endsWith('8791') && lang === 'fr') t += '\nCONTROL: une phrase – avec un tiret';

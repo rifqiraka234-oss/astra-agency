@@ -52,11 +52,15 @@
       var f = (form.querySelector('input[name="format"]:checked') || { value: 'bureau' }).value;
       var lines = [FORMATS[f][en() ? 1 : 0] + ', ' + F('personnes') + (en() ? ' people, ' : ' personnes, ') + F('date'), F('nom') + (F('entreprise') ? ', ' + F('entreprise') : ''), F('contact')];
       if (F('message')) lines.push('', F('message'));
+      if (F('commande')) lines.push('', F('commande').split(' | ').join('\n'));
       var subj = en() ? 'Quote request via the website' : 'Demande de devis via le site';
       return 'mailto:' + MAIL + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(lines.join('\n'));
     }
     function done() {
       form.hidden = true; if (!ok) return;
+      /* the ticket goes up on the kitchen rail */
+      var f = (form.querySelector('input[name="format"]:checked') || { value: 'bureau' }).value, t = ok.querySelector('[data-ok-t]');
+      if (t) t.textContent = FORMATS[f][en() ? 1 : 0] + ', ' + F('personnes') + (en() ? ' people, ' : ' personnes, ') + F('date');
       ok.hidden = false; ok.scrollIntoView({ block: 'center' }); ok.focus({ preventScroll: true });
     }
     form.addEventListener('submit', function (e) {

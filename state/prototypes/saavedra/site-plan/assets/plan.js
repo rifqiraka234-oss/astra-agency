@@ -24,3 +24,33 @@
   [n, k, m].forEach(function (x) { x.addEventListener('input', draw); });
   draw();
 })();
+
+/* Clasico's minimum as a wall of 120 empanadas, ten boxes of twelve. A team at three a head lights its share of it. */
+(function () {
+  var w = document.querySelector('[data-wall]');
+  if (!w) return;
+  var r = w.querySelector('input'), out = w.querySelector('[data-w-out]'), nOut = w.querySelector('[data-w-n]'), dots = [].slice.call(w.querySelectorAll('.wall-dots i'));
+  function draw() {
+    var n = +r.value, e = n * 3, lit = Math.min(e, 120);
+    dots.forEach(function (d, i) { d.classList.toggle('on', i < lit); });
+    nOut.textContent = n;
+    r.setAttribute('aria-valuetext', n + ' people');
+    out.textContent = e < 120
+      ? n + ' people at three a head order ' + e + ' empanadas, ' + (120 - e) + ' short of Clasico’s minimum. Clasico sends that order to its click and collect.'
+      : n + ' people at three a head order ' + e + ' empanadas. From 40 people up, Clasico’s catering competes for the order.';
+    w.classList.toggle('full', e >= 120);
+  }
+  r.addEventListener('input', draw);
+  draw();
+})();
+
+/* the coworking map, the rings open from the shop, then each place arrives in walking order */
+(function () {
+  var m = document.querySelector('.pmap-wrap');
+  if (!m) return;
+  [].forEach.call(m.querySelectorAll('.pm-dot'), function (g) { g.style.setProperty('--i', g.getAttribute('data-i')); });
+  [].forEach.call(m.querySelectorAll('.pm-lab'), function (l, i) { l.style.setProperty('--i', i); });
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) { m.classList.add('go'); return; }
+  m.classList.add('wait');
+  new IntersectionObserver(function (es, o) { es.forEach(function (e) { if (e.isIntersecting) { m.classList.add('go'); o.disconnect(); } }); }, { threshold: 0.3 }).observe(m);
+})();

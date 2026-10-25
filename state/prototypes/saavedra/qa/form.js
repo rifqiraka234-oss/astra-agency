@@ -28,13 +28,19 @@ const H = 'http://localhost:8791';
   { const { p } = await page('/privatisation/', 200);
     T('private hire page starts on privatisation', (await fmt(p)) === 'privatisation', await fmt(p)); await p.close(); }
 
-  // 2. the box builder hands its headcount to the form on the same page
+  // 2. the order on Entreprises hands everything to the form on the same page
   { const { p, errs } = await page('/entreprises/', 200);
-    await p.$eval('#bb-n', e => { e.value = 47; e.dispatchEvent(new Event('input')); });
-    await p.click('[data-box-go]'); await p.waitForTimeout(1200);
-    const st = await p.evaluate(() => ({ pers: document.querySelector('[data-pers]').value, fmt: document.querySelector('[data-form] input[name="format"]:checked').value, top: Math.round(document.getElementById('devis').getBoundingClientRect().top), lab: document.querySelector('[data-box-golab]').textContent }));
-    T('builder sets headcount and format, scrolls to the form', st.pers === '47' && st.fmt === 'bureau' && Math.abs(st.top) < 120 && st.lab === 'Demander un devis pour 47', st);
+    await p.$eval('[data-o-range]', e => { e.value = 47; e.dispatchEvent(new Event('input')); });
+    await p.waitForTimeout(200);
+    await p.click('.tk [data-o-go]'); await p.waitForTimeout(1400);
+    const st = await p.evaluate(() => ({ pers: document.querySelector('#devis [data-pers]').value, fmt: document.querySelector('#devis input[name="format"]:checked').value, top: Math.round(document.getElementById('devis').getBoundingClientRect().top), cmd: document.querySelector('#devis input[name="commande"]').value, bon: document.querySelector('[data-bon-txt]').textContent, focus: document.activeElement.name }));
+    T('order sets headcount, format and the order line, scrolls to the form, focuses the date', st.pers === '47' && st.fmt === 'bureau' && Math.abs(st.top) < 120 && /12 × Box de 12/.test(st.cmd) && /47 personnes/.test(st.bon) && st.focus === 'date', st);
+    await p.click('input[name="o-format"][value="afterwork"]', { force: true }); await p.waitForTimeout(200);
+    T('format chosen in the order reaches the form', await fmt(p) === 'afterwork', await fmt(p));
     T('no page errors 2', !errs.length, errs); await p.close(); }
+  { const { p } = await page('/entreprises/?personnes=12&format=dejeuner', 200);
+    const st = await p.evaluate(() => ({ n: document.querySelector('[data-o="n"]').textContent, pers: document.querySelector('#devis [data-pers]').value, fmt: document.querySelector('#devis input[name="format"]:checked').value, cmd: document.querySelector('#devis input[name="commande"]').value }));
+    T('address headcount and format reach the order and the form', st.n === '12' && st.pers === '12' && st.fmt === 'dejeuner' && /12 × Saavedra Classic/.test(st.cmd), st); await p.close(); }
 
   // 3. stepper
   { const { p } = await page('/devis/', 200);
@@ -65,13 +71,14 @@ const H = 'http://localhost:8791';
     T('honeypot still sees thanks', await p.$eval('[data-form-ok]', e => !e.hidden)); await p.close(); }
 
   // 6. a good request on every page with the form, French and English
-  for (const [path, pg, f, lang] of [['/devis/', 'devis', 'bureau', 'fr'], ['/entreprises/', 'entreprises', 'bureau', 'fr'], ['/', 'accueil', 'bureau', 'fr'], ['/privatisation/', 'privatisation', 'privatisation', 'fr'], ['/devis/?lang=en', 'devis', 'bureau', 'en']]) {
+  for (const [path, pg, f, lang] of [['/devis/', 'devis', 'bureau', 'fr'], ['/entreprises/', 'entreprises', 'bureau', 'fr'], ['/entreprises/?lang=en', 'entreprises', 'bureau', 'en'], ['/privatisation/', 'privatisation', 'privatisation', 'fr'], ['/devis/?lang=en', 'devis', 'bureau', 'en']]) {
     const { p, posts, errs } = await page(path, 200);
     await p.fill('[name="nom"]', 'Test Personne'); await p.fill('[name="entreprise"]', 'Test SAS'); await p.fill('[name="contact"]', 'test@example.fr'); await p.fill('[name="date"]', later);
     if (await p.$('[name="message"]')) await p.fill('[name="message"]', 'Pot de départ');
     await p.click('.fm-go'); await p.waitForTimeout(500);
     const body = Object.fromEntries(new URLSearchParams(posts[0] || ''));
     T(`${path} posts once`, posts.length === 1, posts.length);
+    T(`${path} order line ${pg === 'entreprises' ? 'carried' : 'empty'}`, pg === 'entreprises' ? /5 × Box (de|of) 12/.test(body.commande || '') && /204[.,]50/.test(body.commande || '') : body.commande === '', body.commande);
     T(`${path} body complete`, body['form-name'] === 'devis' && body.nom === 'Test Personne' && body.entreprise === 'Test SAS' && body.contact === 'test@example.fr' && body.date === later && body.personnes === '20' && body.format === f && body.langue === lang && body.page === pg && body.website === '', body);
     const st = await p.evaluate(() => ({ formHidden: document.querySelector('[data-form]').hidden, ok: !document.querySelector('[data-form-ok]').hidden, focus: document.activeElement === document.querySelector('[data-form-ok]') }));
     T(`${path} thanks shown and focused`, st.formHidden && st.ok && st.focus, st);
