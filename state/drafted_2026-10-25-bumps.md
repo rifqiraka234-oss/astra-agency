@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Sandra act_qzRC6knaiLETG6vhW and Jean-Charles act_hkXrcTZDQZqAvKKCd SENT 25 Oct on Raka's 'send the bumps, use your line for matthias without the emoji. and say im planning the week and its getting full', one copy each. Do not send again. -->
 # Bumps for 25 Oct. NOT SENT, waiting on Raka's word
 
 Two new plain bumps, oldest first, under the cap of 20 with the three still open from yesterday (RULES section 1). Each

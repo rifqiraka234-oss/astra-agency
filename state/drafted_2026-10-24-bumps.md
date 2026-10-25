@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Sonny act_fXuRumuvvk9rSvf5z and Julien act_kPxPvipkRwdiKvFbM SENT 25 Oct on Raka's 'send the bumps, use your line for matthias without the emoji. and say im planning the week and its getting full', one copy each. Matthias's line here was withdrawn, his went from state/drafted_2026-10-25-matthias.md. ALL DONE, send nothing from this file. -->
 # Bumps for 24 Oct. NOT SENT, waiting on Raka's word
 
 Three plain bumps, under the cap of 20, oldest first (RULES section 1). Each lead has one unanswered pitch from us.
@@ -39,7 +41,6 @@ NUDGE
 He said "Pretty cool" about the spec form on 21 Oct, and we offered a call the same day. 7 items. Note for Raka, he
 already got this exact line on 12 Oct (act_jet7RsJyDWdMZqDEL), before he answered. The rule gives the plain line, so it's
 here as written, but this is a warm deal and Raka may want his own words instead.
-NUDGE
-```
-👀 Matthias, have you seen this?
-```
+> WITHDRAWN 25 Oct. Raka chose a different line, in state/drafted_2026-10-25-matthias.md. Do not send this one.
+
+(withdrawn text, kept for the record without a fence: 👀 Matthias, have you seen this?)
