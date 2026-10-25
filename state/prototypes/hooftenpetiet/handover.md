@@ -147,8 +147,10 @@ clip paths or CSS variables, the canvases pause off screen, the gradient renders
 
 ## Sending
 
-Gmail draft r3040318523259070641 to marketing@keypro.nl, text in state/drafted_2026-10-22-willem.md, updated for the plan
-on 25 Oct ~15.00 UTC and read back. NOT SENT. The Gmail connector wraps every link in a google.com/url redirect that expires after about a day, so
+Approved by Raka 25 Oct ~16.00 UTC with the subject "Keypro x Astra Agency". He sends it himself from Gmail draft
+r275296227707768740, because the Gmail connector rewrites every link into a google.com redirect that shows Google's
+Redirect Notice page on each click. Text in state/drafted_2026-10-22-willem.md. The old draft r3040318523259070641 is
+superseded. Not sent by us. The Gmail connector wraps every link in a google.com/url redirect that expires after about a day, so
 Raka sending it from Gmail himself with the links pasted fresh is the clean way.
 
 ## Rebuild
