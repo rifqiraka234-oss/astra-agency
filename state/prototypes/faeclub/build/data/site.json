@@ -1,0 +1,152 @@
+{
+ "_note": "Every price, date and line here was read on fa3club.com and highfaeretreats.com on 25 Oct 2026. Source per block.",
+ "today": "2026-10-25",
+ "events": {
+  "ftb": {
+   "name": "The Fairytale Ball",
+   "date": "2027-04-17",
+   "dateText": "Saturday 17 April 2027",
+   "short": "Sat 17 April 2027",
+   "time": "6pm to 11.50pm",
+   "venue": "Winter Gardens, The Spanish Suite",
+   "address": "97 Church Street, Blackpool FY1 1HL",
+   "sold": 66,
+   "code": "FTB27",
+   "tiers": [
+    {
+     "id": "enchanted",
+     "name": "Enchanted Tier",
+     "price": 17500,
+     "fee": 438,
+     "vat": 0,
+     "soldOut": false
+    },
+    {
+     "id": "royal",
+     "name": "Royal (VIP) Tier",
+     "price": 19500,
+     "fee": 488,
+     "vat": 0,
+     "soldOut": true
+    }
+   ],
+   "src": "https://www.fa3club.com/event-details-registration/the-fairytale-ball-2027 and https://www.fa3club.com/fairytale-ball"
+  },
+  "nc": {
+   "name": "The Night Club",
+   "date": "2026-10-30",
+   "dateText": "Friday 30 October 2026",
+   "short": "Fri 30 October 2026",
+   "time": "8pm to 2am",
+   "venue": "Red Dog Saloon, Hoxton Square",
+   "address": "37 Hoxton Square, London N1 6NN",
+   "code": "NC26",
+   "tiers": [
+    {
+     "id": "standard",
+     "name": "Standard Entry",
+     "price": 2500,
+     "fee": 75,
+     "vat": 500,
+     "soldOut": false
+    },
+    {
+     "id": "vip",
+     "name": "VIP Entry",
+     "price": 3500,
+     "fee": 105,
+     "vat": 700,
+     "soldOut": true
+    }
+   ],
+   "src": "https://www.fa3club.com/event-details-registration/the-night-club"
+  }
+ },
+ "characters": [
+  {
+   "id": "knight",
+   "word": "a knight",
+   "img": "knight"
+  },
+  {
+   "id": "prince",
+   "word": "a prince",
+   "img": "prince"
+  },
+  {
+   "id": "princess",
+   "word": "a princess",
+   "img": "princess"
+  },
+  {
+   "id": "outlaw",
+   "word": "an outlaw",
+   "img": "outlaw"
+  },
+  {
+   "id": "fae",
+   "word": "a fae",
+   "img": "fae"
+  }
+ ],
+ "characters_src": "The Fairytale Ball event page, 'princes and princesses, knights and outlaws', the dress code 'a knight in shining armour, a dashing prince', and 'Many of our fae attend solo' on the FAQs",
+ "retreat": {
+  "name": "The Valkyrie Retreat",
+  "dates": "14 to 18 June 2027",
+  "price": 179500,
+  "friendOff": 15000,
+  "maxMonths": 7,
+  "src": "https://www.highfaeretreats.com/the-retreat, 'All Included for £ 1795', '*Personalised payment plans available', '**Get £150 OFF your booking when you book with a friend', '18+ | Female Only'"
+ },
+ "faqs": [
+  [
+   "Can I come on my own?",
+   "Absolutely! Many of our fae attend solo. Join our Discord server to meet others attending our events or meet ups and to make plans beforehand."
+  ],
+  [
+   "Is there an age requirement?",
+   "Yes, all of our events are for 18s and over but beyond that we have fae attending of all ages."
+  ],
+  [
+   "What is the dress code?",
+   "Each of our events has its own theme with outfit suggestions on the event page. Create your own or merge fantasy and formal. Note that we keep an eye out for hand crafted outfits for our costume competitions at our events. Head to our Discord server to discover what other attendees will be wearing."
+  ],
+  [
+   "Are prop swords allowed?",
+   "Prop swords and daggers made out of safe materials such as foam or rubber, with soft exteriors, are allowed as accessories, however note that if the security team deem a prop weapon as a risk, hazard or obstruction they have the right to remove it or refuse entry with it. Prop weapons such as crossbows, bows, arrows and guns are not allowed."
+  ],
+  [
+   "Should I eat before the event?",
+   "We recommend eating before the event. Canapés will be served however with lots of dancing and activities throughout the event it's definitely best to eat beforehand."
+  ],
+  [
+   "Will alcohol be served?",
+   "Yes, alcohol is available but absolutely not a requirement!"
+  ],
+  [
+   "What if I have an allergy?",
+   "Please inform us of any allergies or dietary requirements when purchasing your ticket or send us an email."
+  ],
+  [
+   "Will there be a cloak room?",
+   "Yes, we have cloak rooms with a ticketed system."
+  ],
+  [
+   "Is there anywhere to take a breather?",
+   "Yes! We always have more relaxed areas to sit and take a breath. You’ll also be allowed to step outside if you need some fresh air."
+  ],
+  [
+   "Can I bring a camera?",
+   "Professional cameras are not allowed but don't worry we have a whole team of photographers waiting to capture the magic for you."
+  ],
+  [
+   "Are your events based on specific books?",
+   "None of our events are based off of specific books."
+  ],
+  [
+   "Are tickets refundable?",
+   "We don’t offer refunds under any circumstances. If the event sells out, we may offer to resell your ticket for you upon request. Please note that due to health and safety requirements tickets can’t be resold privately."
+  ]
+ ],
+ "faqs_src": "https://www.fa3club.com/event-faqs, each answer opened 25 Oct 2026, two questions shortened ('Can I attend en event solo?', 'Are your events based off of specific books?')"
+}

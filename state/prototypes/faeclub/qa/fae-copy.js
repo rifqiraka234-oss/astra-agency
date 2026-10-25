@@ -1,0 +1,32 @@
+const { chromium } = require('playwright');
+(async () => {
+  const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1440, height: 900 } }); let all = '';
+  const grab = () => p.evaluate(() => {
+    const t = [document.title, document.querySelector('meta[name=description]').content, document.body.innerText];
+    document.querySelectorAll('[alt]').forEach(e => e.alt && t.push(e.alt));
+    document.querySelectorAll('[aria-label],[aria-valuetext],[placeholder]').forEach(e => t.push(e.getAttribute('aria-label') || '', e.getAttribute('aria-valuetext') || '', e.getAttribute('placeholder') || ''));
+    document.querySelectorAll('details p, .tale-flat, .sr, option').forEach(e => t.push(e.textContent));
+    return t.join('\n');
+  });
+  await p.goto('http://127.0.0.1:8704/', { waitUntil: 'networkidle' }); all += await grab();
+  await p.click('.ch[data-ch="fae"]'); await p.click('#solo [data-q="1"]'); await p.click('#solo [data-q="1"]');
+  await p.fill('input[name="name"]', ''); await p.click('.pay'); all += '\n' + await grab();
+  await p.fill('input[name="name"]', 'Test'); await p.fill('input[name="email"]', 'x'); await p.click('.pay'); all += '\n' + await grab();
+  await p.fill('input[name="email"]', 'a@b.co'); await p.click('.pay'); await p.waitForTimeout(1500); all += '\n' + await grab();
+  await p.selectOption('select[data-f="event"]', 'nc'); all += '\n' + await grab();
+  await p.click('#spread [data-plan="full"]'); all += '\n' + await grab();
+  await p.goto('http://127.0.0.1:8704/valkyrie-retreat/', { waitUntil: 'networkidle' }); all += '\n' + await grab();
+  await p.click('[data-r="friend"]'); await p.click('[data-rp] button[type=submit]'); all += '\n' + await grab();
+  await p.fill('[data-rp] input[name="name"]', 'A'); await p.fill('[data-rp] input[name="email"]', 'a@b.co'); await p.click('[data-rp] button[type=submit]'); all += '\n' + await grab();
+  await b.close();
+  require('fs').writeFileSync('fae-copy.txt', all);
+  let ours = all.replace(/https?:\/\/\S+/g, ' ').replace(/[\w.]+@[\w.]+/g, ' ').replace(/\b[A-Z0-9]{3,}-[A-Z]{3}-[A-Z0-9]{5}\b/g, ' ');
+  const lines = [...new Set(ours.split('\n'))];
+  const hit = (re, n) => { const h = lines.filter(l => re.test(l)); console.log(n, h.length ? h.length + ' ' + JSON.stringify(h.slice(0, 8)) : 'none'); };
+  hit(/[‐-―−]|(^|\s)-|-(\s|$)|\w-\w/, 'dashes');
+  hit(/:/, 'colons');
+  hit(/\b(delve|dive into|deep dive|leverage|utilize|harness|unlock|unleash|empower|elevate|streamline|revolutioniz|transform|supercharge|amplify|foster|facilitate|embark|underscore|spearhead|reimagine|bolster|resonate|seamless|robust|cutting.edge|state.of.the.art|best.in.class|world.class|bespoke|holistic|innovative|groundbreaking|game.chang|unparalleled|unprecedented|comprehensive|meticulous|curated|immersive|pivotal|crucial|paramount|impactful|scalable|future.proof|end.to.end|turnkey|customer.centric|landscape|ecosystem|realm|tapestry|testament|beacon|cornerstone|synergy|paradigm|plethora|myriad|furthermore|moreover|additionally|consequently|ultimately|essentially|rest assured|look no further|solutions)/i, 'banned words');
+  hit(/(it's worth noting|worth noting|in many cases|in most cases|tends to|generally speaking|arguably|to some extent|that said|at its core|when it comes to|not just)/i, 'hedges');
+  hit(/\b(it is|do not|does not|you will|we are|cannot|will not|that is)\b/i, 'uncontracted');
+  console.log('contractions', (ours.match(/\b\w+['’](s|t|re|ll|d|ve)\b/gi) || []).length);
+})();

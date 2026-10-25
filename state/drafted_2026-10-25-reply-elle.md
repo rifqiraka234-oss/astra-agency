@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Superseded 25 Oct ~19.10 UTC by state/drafted_2026-10-25-elle-delivery.md, after Raka asked for the prototype. Never sent. -->
 # Reply, 2026-10-25. NOT SENT, waiting on Raka's word
 
 ### Elle Lawrence, Fae Club Ltd, ctc_afBbzWCsFNa2AmJ8n

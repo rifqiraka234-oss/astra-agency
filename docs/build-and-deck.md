@@ -768,3 +768,29 @@ functional test that works every sum out on its own from that file, then runs on
 | The week stepper's minus was the U+2212 minus sign, which the dash scan rightly flags | Draw plus and minus as SVG lines, so the page carries no dash glyph at all |
 | The two superseded email versions in the drafts file failed the drafts gate as openers and as repeats of the live one | Move superseded versions to a sibling file marked GATE ARCHIVED, so the gate judges only what could be sent |
 | The new Netlify project came up with team SSO on, again | Switch SSO off right after create-new-project, before the first deploy, every time |
+
+### Fae Club, the Saavedra recipe on a fantasy ball (25 Oct 2026)
+
+Elle Lawrence said yes to "a sketch of the new Fae Club site", and Raka asked for the prototype and the plan. Built the
+same evening. Live, https://astra-faeclub-prototype.netlify.app/ and https://astra-faeclub-plan.netlify.app/. Source and
+handover, state/prototypes/faeclub. The hero is their own question, "Who will you be?", answered from their dress code,
+and the answer goes onto the cover of a storybook that opens through the night in their words and photos and dives into
+their photo of the hall. One ticket carries down the page to a QR that forms on the ticket. The plan's signature control
+is the route a ticket takes, pay in full or in 3, today or the new site, with the stops that are hers marked.
+
+| Hiccup | Rule |
+|---|---|
+| The first book photo was counted as the largest paint while it sat hidden under the closed cover, phone Lighthouse 68 | Photos inside a scene that opens on scroll load when the scene gets near them, not at page load. The scene's first frame is what the visitor sees, so that's what gets loaded first |
+| On phones the hero copy faded out and left an empty band above the book | When the words above a pinned object leave, the object moves into the space they leave |
+| White words on their bright hall floor were unreadable at the end of the dive | A caption on a photo gets a shade that fades in with the caption and only where the words sit. That's legibility, not the banned dark overlay on every photo |
+| The left base page faded in while the cover was mid turn and read as a flat sage panel | Nothing appears on the far side of a turning page until the page has passed upright |
+| The prototype note was cut off with an ellipsis on phones | Notes that say a page is a prototype wrap on phones, they're never truncated |
+| Wix pages rendered at 390 showed the desktop layout cut off | Today's screenshots of a Wix site come from the desktop render, and a phone render is only used after it's been looked at |
+| check-drafts read the archive marker's words inside a sentence of a live drafts file and skipped the whole file | Never write the marker's words in a live drafts file's prose. Check the gate printed a draft count, not ARCHIVED |
+| `pkill -f "http.server 8705"` matched its own shell and killed the command twice (exit 144) | Find the server's PID with ps filtered on the python process, or start it as a background task, never pkill a pattern that's also in the command line |
+| A local server started inside a folder the build deletes and recreates served nothing after the rebuild | Serve with `python3 -m http.server <port> -d <absolute path>` so it follows the path, not the old folder |
+| The plan's sticky frame showed the previous caption's screenshot while the next caption was being read | Pick the active caption by position, the last one whose top has passed 60% of the screen, and test that caption i shows frame i |
+| Inactive captions dimmed to 45% failed contrast in axe | Never dim text to show state. Mark the active item with a rule and a brighter heading, keep every line at full contrast |
+| Klarna's own UK pay in 3 page couldn't be read, retailer pages said 30 and 60 days, Stripe's page said every two weeks | When two sources disagree on a provider's terms, the build labels its dates as an example and the plan says the provider sets them |
+| One rival from the first research (Through The Veil) had already happened and its page returned 410 | Rivals in a chart are reopened on the day and dropped once their date has passed. The day's search found a rival on the same night as the client's ball, which was worth more than the old one |
+| Raka's word "prototype" against the 0G rule of one screen when there's no budget sign | Build what he asked for by name, and put the budget flag at the top of the report and in the drafts file |
