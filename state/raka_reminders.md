@@ -3,7 +3,7 @@
 Things Raka asked to be reminded of. `tools/preflight.py` prints every open `- [ ]` line at the start of each session,
 and every report to Raka repeats them until he ticks one off. Tick with `- [x]` and a date, never delete.
 
-- [ ] **Willem Straat, Hooft & Petiet, the prototype for marketing (Raka, 23 Oct).** 25 Oct, the plain email is a Gmail draft to marketing@keypro.nl (id r3040318523259070641), not sent, the prototype not built yet. Willem asked on 22 Oct 13:35 UTC
+- [ ] **Willem Straat, Hooft & Petiet, the prototype for marketing (Raka, 23 Oct).** 25 Oct, BUILT AND LIVE, https://astra-hooftenpetiet-prototype.netlify.app and https://astra-reshare-prototype.netlify.app (state/prototypes/hooftenpetiet/handover.md). The email now carries both links, Gmail draft r3040318523259070641, NOT SENT, waits on Raka's word, and the connector wraps links in expiring google.com redirects, so Raka sending it from Gmail himself is the clean way. The LinkedIn thanks already went 08.23 UTC. Willem asked on 22 Oct 13:35 UTC
   for our message to go to marketing@keypro.nl. Raka wants a prototype made for them, the modernised Hooft & Petiet site
   and a finished ReShare site as one family, sent to that address. Drafts so far, the LinkedIn thanks and a plain email,
   state/drafted_2026-10-22-willem.md, not sent. The email changes to carry the prototype once it's built.

@@ -327,6 +327,7 @@ Source, handover and research are in `state/prototypes/sotocat/`.
 | Live HTML never hash matches, because Netlify rewrites links to pretty URLs | Hash compare the assets. For HTML compare the visible text |
 | A live screenshot showed the deck hero half empty | A progressive JPEG caught mid load. Check the file before "fixing" anything |
 | The QA harness can't load the live URL (proxy certificate) | Curl the live HTML and assets into a folder, serve it, QA that. Or pin the proxy CA by key, see the toolchain section |
+| The Gmail connector wraps every link it writes in a google.com/url redirect with a ust stamp about 24h ahead, in drafts and in sent mail (raw MIME of the 25 Oct meeting brief and the 9 Oct Acquitas reply, where Kyson's quoted links stay plain). After the stamp a click shows Google's redirect notice first (H&P, 25 Oct) | A prototype link that goes by email is sent by Raka from Gmail with the link pasted fresh, or goes on LinkedIn. Read the draft back with get_draft before calling it ready |
 | **Draft and state** | |
 | `check-drafts.py` rejected the URLs for their colon and hyphens | Now fixed in the tool, URLs are stripped first, and a prose colon still fails as a control |
 | "yourself" twice in a row in the draft | Read the draft aloud |
