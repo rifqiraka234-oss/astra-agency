@@ -835,3 +835,26 @@ only Apparel entry of 97. They're already selling to gym owners face to face, so
 pitching gyms as new, and the delivery names the fair. The film is one Mixkit Free loop (a hand wrap, no face) played
 only inside a huge 1%, knocked out with multiply and outlined in their tan, because their creed is the one place film
 means something on a brand with no footage of its own.
+
+#### BeBetter v2, the art layer (25 Oct 2026, evening)
+
+Raka on v1, "supperr basic ... really just a cheap website ... make it like something they havent ever seen before. but
+still simple and tell the story and GUIDES THE AUDIENCE TO THE INTENDED ACTION". v1 had the flow and no wow layer. v2 kept
+every section's job and gave each one a signature moment built from the brand's own material, after rendering about 24
+award sites that evening (research/award-v2.md). The teddy, traced from their own PNG into the five tones a screen
+printer would separate, is printed live one pull at a time. Their creed, 1.01 to the power of the day, is a dial of 365
+bars that the scroll turns. The drop is a tag you swing. Their stand photos are tees on a rail. Their year on the road is a
+halftone map with a van. On the kit page the screen frame drops for every pull and a SOLD OUT stamp lands at four hours.
+
+| Hiccup | Rule |
+|---|---|
+| A local variable `L` in the dial builder shadowed the language helper `L()`, and the build died with "float is not callable" | Never give a local the name of a module helper. The language helper is one letter, so locals are words |
+| The dial's bars flew off the screen when turned, because CSS `transform-origin` with `transform-box:view-box` on an SVG group with a negative viewBox didn't rotate about the centre in Chromium | Rotate SVG groups with the `transform` attribute, `rotate(a)` about the user space origin, and put the origin at the centre with the viewBox |
+| A reveal class on the chart's text (`.in` sets visibility visible) beat the zoom's hide rule, so the lines showed through the flying bars | When two states set visibility, the later state's selector must be more specific than every earlier one. Test the hand off frame, not only the end frames |
+| The road scene never updated after a fast jump, because the loop cleared its dirty flag while the IntersectionObserver hadn't yet marked the section visible | Cheap scroll scenes recompute on every scroll, gated by nothing async. The scene test jumps straight to the end of each pinned section to catch it |
+| An absolutely positioned map with `grid-area` set took the grid cell as its containing block and landed in the wrong place | An absolute grid child uses its grid area as the containing block. Give it `grid-area:1/1/-1/-1` to place it against the whole grid |
+| `@keyframes stamp` in the new stylesheet silently replaced the work order's RECEIVED stamp of the same name | Grep every keyframe name across all CSS before adding one. Names are global |
+| `box-shadow` on the clip-path hang tag vanished, clip-path clips it | Put `filter:drop-shadow()` on the unclipped parent |
+| The moving window light and the swinging door hanger pushed the page wider at 390 | Anything that moves or rotates sits inside `overflow:clip` (which doesn't break sticky), and pendulums get a small maximum angle |
+| The kit page promised "watch it print" but the squeegee only pulled on blur or Enter | If the copy promises a reaction, the reaction happens on the gesture the copy names. The print now pulls 650 ms after typing stops |
+| The film test failed once the film was retired, and the retired film and unused photos would still have shipped | Retire the test with the feature and replace it with one for what's new. The build now copies only media a page references |

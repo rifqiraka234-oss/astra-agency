@@ -93,9 +93,10 @@
   if (defs) $$('[data-p="est"]', defs).forEach(function (n) { n.setAttribute('data-x', n.getAttribute('x')); });
 
   /* the print is pulled across the shoulders, a squeegee sweep, on every change of colour or style */
-  var pulling = 0;
+  var pulling = 0, pulledName = null, nameT = 0;
   function pull() {
     if (!defs) return;
+    clearTimeout(nameT); pulledName = S.name;
     var rects = $$('.pull', defs);
     $$('[data-sq]').forEach(function (s) { s.classList.remove('go'); void s.offsetWidth; if (!reduce) s.classList.add('go'); });
     if (reduce) { rects.forEach(function (r) { r.setAttribute('width', 1000); }); return; }
@@ -137,10 +138,10 @@
       var v = inp.value;
       if (key === 'year') { v = v.replace(/\D/g, '').slice(0, 4); if (inp.value !== v) inp.value = v; }
       S[key] = v;
-      if (key === 'name') $$('[data-k="name"], [data-form-gym]').forEach(function (o) { if (o !== inp) o.value = v; });
+      if (key === 'name') { $$('[data-k="name"], [data-form-gym]').forEach(function (o) { if (o !== inp) o.value = v; }); clearTimeout(nameT); nameT = setTimeout(pull, 650); }
       update();
     });
-    inp.addEventListener('change', function () { if (key === 'name') pull(); });
+    inp.addEventListener('change', function () { if (key === 'name' && S.name !== pulledName) pull(); });
     if (key === 'name') inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); pull(); } });
   });
   function radios(name, key) {
@@ -318,6 +319,7 @@
       tt.textContent = (p >= 1 ? 4 : Math.floor(p * 4)) + 'h';
       tees.forEach(function (t, i) { t.classList.toggle('gone', p > thr[i]); });
       l1.classList.add('on'); l2.classList.toggle('on', p > 0.3); l3.classList.toggle('on', p > 0.9);
+      ck.style.setProperty('--ck', p.toFixed(3)); ck.classList.toggle('out', p >= 0.97);
     };
     if (reduce) draw(1);
     else {

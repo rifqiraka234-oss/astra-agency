@@ -50,6 +50,28 @@
     }, { threshold: 0.15 }).observe(v);
   });
 
+  /* ---------------------------------------------------------------- dust drifting in the stage lights, only while they're on screen */
+  $$('.beams').forEach(function (beams) {
+    if (reduce || !('IntersectionObserver' in window)) return;
+    var cv = d.createElement('canvas'), cx = cv.getContext('2d'), motes = [], on = false, last = 0;
+    cv.className = 'pr-dust'; cv.setAttribute('aria-hidden', 'true'); beams.appendChild(cv);
+    for (var m = 0; m < 70; m++) motes.push({ x: Math.random(), y: Math.random(), s: .5 + Math.random() * 1.6, v: .004 + Math.random() * .012, ph: Math.random() * 6.3, a: .12 + Math.random() * .4 });
+    function size() { var r = devicePixelRatio || 1; cv.width = beams.clientWidth * r; cv.height = beams.clientHeight * r; cx.setTransform(r, 0, 0, r, 0, 0); }
+    function draw(t) {
+      if (!on) return;
+      var dt = last ? Math.min(.034, (t - last) / 1000) : .016, w = beams.clientWidth, h = beams.clientHeight; last = t;
+      cx.clearRect(0, 0, w, h); cx.fillStyle = '#ffe9c8';
+      motes.forEach(function (p) {
+        p.y -= p.v * dt; if (p.y < -0.02) { p.y = 1.02; p.x = Math.random(); }
+        cx.globalAlpha = p.a * (0.5 + 0.5 * Math.sin(t / 900 + p.ph));
+        cx.beginPath(); cx.arc((p.x + Math.sin(t / 2400 + p.ph) * .012) * w, p.y * h, p.s, 0, 6.283); cx.fill();
+      });
+      requestAnimationFrame(draw);
+    }
+    size(); addEventListener('resize', size);
+    new IntersectionObserver(function (es) { var was = on; on = es[0].isIntersecting; if (on && !was) { last = 0; requestAnimationFrame(draw); } }).observe(beams);
+  });
+
   /* ---------------------------------------------------------------- reveals, by position */
   var rv = $$('.rv');
   function look() {

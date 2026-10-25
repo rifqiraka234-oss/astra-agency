@@ -12,6 +12,7 @@ import hashlib
 import html
 import json
 import os
+import math
 import re
 import shutil
 
@@ -230,6 +231,11 @@ KITS = [('k-siem', 'Team Siem', 'Washed black, sand print, their goose on the ba
         ('k-summer', 'BeBetter Summer Club', 'Our own embroidery, on ecru', 'Ons eigen borduurwerk, op ecru')]
 
 
+def waffle():
+    """The Hungarian order drawn to scale, 200 tees on the wall."""
+    return '<div class="ch-in"><div class="wf" aria-hidden="true">' + ''.join(f'<i style="--i:{i}"></i>' for i in range(200)) + '</div></div>'
+
+
 def rail():
     items = ''
     for name, title, en, nl in KITS:
@@ -412,6 +418,126 @@ def shots():
     return f'<div class="psx" tabindex="0" role="region" aria-label="Five frames of the custom kit page">{out}</div>'
 
 
+# ---------------------------------------------------------------- v2, the home page as one year of 1% better
+TEDDY_ALT = ('Our teddy, the BeBetter mascot, flexing in his star shorts', 'Onze teddy, de BeBetter mascotte, flexend in zijn sterrenbroek')
+
+
+def printed():
+    """Their teddy, traced from their own PNG into five tones, printed live one colour per pull (stage.js). The image is
+    the no script and reduced motion state."""
+    en, nl = TEDDY_ALT
+    return f"""<div class="pr-ted" data-print>
+  <img class="pr-img" src="/assets/teddy-v.svg" width="1748" height="1396" alt="{L(en, nl)}" decoding="async">
+  <span class="pr-reg" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <span class="pr-sq" aria-hidden="true"><i></i><b></b></span>
+  <span class="pr-sheen" aria-hidden="true"></span>
+</div>"""
+
+
+def compound():
+    """365 bars round the teddy, each 1.01 to the power of its day. Scroll is the days."""
+    r0, Lmax, top = 168, 312, 1.01 ** 365
+    bars = ''
+    for d in range(1, 366):
+        a = math.radians(-90 + (d - 0.5) / 365 * 360)
+        ln = 6 + Lmax * (1.01 ** d) / top
+        x0, y0 = r0 * math.cos(a), r0 * math.sin(a)
+        x1, y1 = (r0 + ln) * math.cos(a), (r0 + ln) * math.sin(a)
+        bars += f'<line x1="{x0:.1f}" y1="{y0:.1f}" x2="{x1:.1f}" y2="{y1:.1f}"/>'
+    marks = ''
+    for d in (1, 100, 200, 300):
+        a = math.radians(-90 + (d - 0.5) / 365 * 360)
+        x, y = (r0 - 26) * math.cos(a), (r0 - 26) * math.sin(a)
+        marks += f'<text x="{x:.1f}" y="{y + 4:.1f}" text-anchor="middle">{d}</text>'
+    en, nl = TEDDY_ALT
+    return f"""<div class="cp-stage">
+  <svg class="cp-svg" viewBox="-500 -500 1000 1000" aria-hidden="true" focusable="false"><circle class="cp-ring" r="{r0}"/><g class="cp-bars" data-cp-bars>{bars}</g><g class="cp-marks">{marks}</g></svg>
+  <img class="cp-ted" src="/assets/teddy-v.svg" width="1748" height="1396" alt="" aria-hidden="true" decoding="async">
+</div>
+<div class="cp-read" aria-hidden="true"><span class="cp-day">{L('Day', 'Dag')} <b data-cp-day>365</b></span><span class="cp-x"><b data-cp-x>37.8</b>×</span></div>"""
+
+
+def tag():
+    """The drop as a hang tag on a string you can grab and swing. Days counted on Amsterdam's calendar, no hour."""
+    return f"""<div class="tg-hang" data-tag data-date="{FACTS['drop']}">
+  <span class="tg-string" aria-hidden="true"></span>
+  <div class="tg-card">
+    <span class="tg-hole" aria-hidden="true"></span>
+    {svg('wordmark.svg', 'tg-wm')}
+    <p class="tg-k">{L('New collection', 'Nieuwe collectie')}</p>
+    <p class="tg-d" data-t="27.10">27.10</p>
+    <p class="tg-when" data-drop-when>{L('Live on 27 October', 'Live op 27 oktober')}</p>
+    <img class="tg-ted" src="/assets/teddy-v.svg" width="1748" height="1396" alt="" aria-hidden="true" decoding="async">
+    <span class="tg-code" aria-hidden="true"></span>
+  </div>
+</div>"""
+
+
+RAILPHOTOS = [('p-builder', 'EVLS · PRAHA · OCT 2026'), ('p-fibo', 'FIBO · KÖLN · APR 2026'), ('p-crowd', 'EVLS · PRAHA · OCT 2026'),
+              ('p-wall', 'FIBO · KÖLN · APR 2026'), ('p-siggis', "SIGGI'S · BREDA · MAY 2026"), ('p-pose', 'EVLS · PRAHA · OCT 2026'), ('p-fibo2', 'FIBO · KÖLN · APR 2026')]
+
+
+def railphotos():
+    hook = '<svg class="rl-hook" viewBox="0 0 120 60" aria-hidden="true" focusable="false"><path d="M60 30V18a9 9 0 1 0-9-9M60 30L8 54h104z"/></svg>'
+    items = ''.join(f'<figure class="rl-i" data-swing style="--i:{i}">{hook}<div class="rl-tee">{img(n, "rl-img", sizes="(max-width: 700px) 60vw, 300px")}</div><figcaption class="rl-tag">{t}</figcaption></figure>' for i, (n, t) in enumerate(RAILPHOTOS))
+    return f'<div class="rl-rail" data-rail tabindex="0" role="region" aria-label="{L("Photos from our stands, drag the rail", "Foto&#39;s van onze stands, sleep het rek")}"><div class="rl-track" data-rail-track><span class="rl-bar" aria-hidden="true"></span>{items}</div></div>'
+
+
+ROADSTOPS = {
+    'home': ('', 'Rotterdam', 'Rotterdam', '', '', None),
+    'koln': ('APR', 'FIBO', 'FIBO', '“€10.000+ in just 4 days at FIBO.”', 'p-fibo2', '16 to 19 April 2026, the biggest fitness expo in the world.|16 tot 19 april 2026, de grootste fitnessbeurs ter wereld.'),
+    'breda': ('MAY', "SIGGI'S", "SIGGI'S", '“we are already building our stand at the next event SIGGI’S, in Breda for the whole weekend”', 'p-siggis', 'May 2026, a whole weekend in Breda.|Mei 2026, een heel weekend in Breda.'),
+    'praha': ('OCT', 'EVLS PRO SHOW', 'EVLS PRO SHOW', '“they loved our Teddy!”', 'p-crowd', 'October 2026, one of the biggest bodybuilding stages in Europe.|Oktober 2026, een van de grootste bodybuildingpodia van Europa.'),
+    'gorinchem': ('4 NOV', 'Sport Ondernemers Expo', 'Sport Ondernemers Expo', '', '', 'Next. The fair for gym owners.|Volgende. De beurs voor gymeigenaren.'),
+}
+
+
+def road():
+    R = json.load(open(os.path.join(HERE, 'data', 'road.json')))
+    W, H = R['w'], R['h']
+    P = {s['key']: s for s in R['stops']}
+    order = ['home', 'koln', 'breda', 'praha', 'gorinchem']
+    pts = [P[k]['xy'] for k in order]
+    # a road that bows between stops, quadratic through a lifted midpoint
+    d = f'M{pts[0][0]} {pts[0][1]}'
+    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+        mx, my = (x0 + x1) / 2, (y0 + y1) / 2
+        dx, dy = x1 - x0, y1 - y0
+        ln = math.hypot(dx, dy) or 1
+        bow = min(90, ln * 0.28)
+        cx, cy = mx - dy / ln * bow, my + dx / ln * bow
+        d += f'Q{cx:.1f} {cy:.1f} {x1} {y1}'
+    labs = {'home': (-12, -16, 'end'), 'koln': (14, 6, 'start'), 'breda': (-12, 18, 'end'), 'praha': (0, -22, 'middle'), 'gorinchem': (14, -12, 'start')}
+    marks = ''
+    for k in order:
+        x, y = P[k]['xy']
+        dx, dy, an = labs[k]
+        marks += f'<g class="rd-stop" data-stop-at="{k}"><circle cx="{x}" cy="{y}" r="6"/><circle class="rd-pulse" cx="{x}" cy="{y}" r="6"/><text x="{x + dx}" y="{y + dy}" text-anchor="{an}">{P[k]["name"].upper()}</text></g>'
+    gx, gy = P['gorinchem']['xy']
+    van = f'<g class="rd-van" data-van transform="translate({gx} {gy - 4}) scale(1.5)"><rect x="-17" y="-9" width="34" height="18" rx="3"/><rect class="rd-vw" x="6" y="-6" width="9" height="7" rx="1"/><circle cx="-9" cy="10" r="3.4"/><circle cx="9" cy="10" r="3.4"/></g>'
+    cards, tilt = '', {'koln': -4, 'breda': 3, 'praha': -2, 'gorinchem': 5}
+    for k in order[1:]:
+        month, en_n, nl_n, quote, pic, line = ROADSTOPS[k]
+        en_l, nl_l = (line or '|').split('|')
+        photo = f'<div class="rd-ph">{img(pic, "rd-img", sizes="240px")}</div>' if pic else ''
+        q = f'<p class="rd-q">{quote}</p>' if quote else ''
+        cards += f'<article class="rd-card rd-{k}" data-card="{k}" style="--r:{tilt[k]}deg">{photo}<p class="rd-m"><b>{month}</b> {L(en_n, nl_n)}</p>{q}<p class="rd-l">{L(en_l, nl_l)}</p></article>'
+    return f"""<div class="rd-map" data-road style="--ar:{W}/{H}">
+  <img class="rd-dots" src="/assets/road-dots.webp" width="{W * 2}" height="{H * 2}" alt="" aria-hidden="true" decoding="async">
+  <svg class="rd-svg" viewBox="0 0 {W} {H}" aria-hidden="true" focusable="false"><path class="rd-ghost" d="{d}"/><path class="rd-path" data-road-path d="{d}"/>{marks}{van}</svg>
+  <p class="rd-clock" data-road-clock aria-hidden="true">2026</p>
+</div>
+<div class="rd-pile" data-pile>{cards}</div>
+<ol class="sr">{''.join(f'<li>{ROADSTOPS[k][0]} {P[k]["name"]}, {ROADSTOPS[k][1]}</li>' for k in order[1:])}</ol>"""
+
+
+def hanger():
+    return f"""<div class="door" data-swing-door>
+  <svg class="door-hook" viewBox="0 0 120 60" aria-hidden="true" focusable="false"><path d="M60 30V18a9 9 0 1 0-9-9M60 30L8 54h104z"/></svg>
+  <div class="gw">{garment.use('tee-back', 'mini-garment')}<span class="sq" data-sq aria-hidden="true"></span></div>
+</div>"""
+
+
 # ---------------------------------------------------------------- the page
 def i18n(src):
     for m in re.finditer(r'\[\[', src):
@@ -457,6 +583,7 @@ def header(nav):
   <a class="brand" href="/" aria-label="{L('BeBetter, home', 'BeBetter, home')}">{svg('wordmark.svg', 'brand-mark')}</a>
   <nav class="nav" aria-label="{L('Main', 'Hoofdmenu')}">{links}<a href="{SHOP}" rel="noopener">{L('Shop', 'Shop')}</a></nav>
   <div class="top-r">
+    {'<span class="dayc js-only" data-dayc aria-hidden="true">DAY <b>001</b></span>' if nav == 'home' else ''}
     {lang}
     {cta}
     <button class="menu-b" type="button" aria-expanded="false" aria-controls="menu">{L('Menu', 'Menu')}</button>
@@ -486,6 +613,7 @@ def footer():
     <div><h2 class="fh">{L('Elsewhere', 'Elders')}</h2><p><a href="{COMMUNITY}" rel="noopener">{L('Instagram community', 'Instagram community')}</a><br><a href="{FACTS['linkedin']}" rel="noopener">LinkedIn</a><br><a href="{SHOP}" rel="noopener">{L('Shop', 'Shop')}</a></p></div>
   </div>
   <div class="foot-b"><span>© 2026 BeBetter Official · KVK {FACTS['kvk']} · Poortugaal</span><span><a href="/privacy/">{L('Privacy', 'Privacy')}</a></span></div>
+  <div class="foot-big" aria-hidden="true">{svg('wordmark.svg', 'foot-bigwm')}</div>
 </footer>'''
 
 
@@ -531,8 +659,10 @@ def tokens(body):
     body = re.sub(r'\{\{TEE ([\w-]+)(?: ([\w -]+))?\}\}', lambda mm: garment.use(mm.group(1), mm.group(2) or ''), body)
     for tok, fn in (('{{DEFS}}', garment.defs), ('{{KITDATA}}', kit_data), ('{{HERO}}', hero_field), ('{{STUDIO}}', studio),
                     ('{{SIZERUN}}', sizerun), ('{{ORDER}}', order), ('{{FORM}}', kitform), ('{{BAR}}', kitbar),
-                    ('{{CLOCK}}', clock), ('{{RAIL}}', rail), ('{{MINI}}', mini), ('{{DROP}}', drop), ('{{TOUR}}', tour),
-                    ('{{CURVE}}', curve), ('{{DOTS}}', dots), ('{{LEAD}}', lead), ('{{CALC}}', calc), ('{{SHOTS}}', shots)):
+                    ('{{CLOCK}}', clock), ('{{RAIL}}', rail), ('{{WAFFLE}}', waffle), ('{{MINI}}', mini), ('{{DROP}}', drop), ('{{TOUR}}', tour),
+                    ('{{CURVE}}', curve), ('{{DOTS}}', dots), ('{{LEAD}}', lead), ('{{CALC}}', calc), ('{{SHOTS}}', shots),
+                    ('{{PRINTED}}', printed), ('{{COMPOUND}}', compound), ('{{TAG}}', tag), ('{{RAILPHOTOS}}', railphotos),
+                    ('{{ROAD}}', road), ('{{HANGER}}', hanger)):
         if tok in body:
             body = body.replace(tok, fn())
     return body
@@ -556,7 +686,6 @@ def build():
         name = os.path.basename(p)
         shutil.copy(p, os.path.join(OUT, 'assets', name))
         assets[name] = hashlib.sha1(open(p, 'rb').read()).hexdigest()[:8]
-    shutil.copytree(os.path.join(HERE, 'media'), os.path.join(OUT, 'media'), ignore=shutil.ignore_patterns('plan'))
     for src in sorted(glob.glob(os.path.join(HERE, 'pages', '*.html'))):
         raw = open(src).read()
         m = re.match(r'<!--(.*?)-->\s*', raw, re.S)
@@ -566,6 +695,13 @@ def build():
         os.makedirs(os.path.dirname(out), exist_ok=True)
         open(out, 'w').write(page(meta, body, assets))
         print('wrote', ('plan/' if meta.get('bare') else '') + meta['path'], os.path.getsize(out))
+    # only the media a page actually uses ships, so nothing left over from an earlier version goes live
+    used = set()
+    for f in glob.glob(os.path.join(OUT, '**', '*.html'), recursive=True):
+        used |= set(re.findall(r'/media/([\w/-]+\.(?:jpg|png|webp|webm|mp4))', open(f).read()))
+    for name in sorted(used):
+        os.makedirs(os.path.dirname(os.path.join(OUT, 'media', name)), exist_ok=True)
+        shutil.copy(os.path.join(HERE, 'media', name), os.path.join(OUT, 'media', name))
     if os.path.exists(os.path.join(OUT2, 'index.html')):
         shutil.copytree(os.path.join(OUT, 'assets'), os.path.join(OUT2, 'assets'))
         shutil.copytree(os.path.join(OUT, 'fonts'), os.path.join(OUT2, 'fonts'))
