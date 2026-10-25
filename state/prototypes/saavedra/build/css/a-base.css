@@ -25,7 +25,8 @@ html[lang="fr"] .l-en, html[lang="en"] .l-fr { display: none !important }
 
 /* type */
 .lbl { display: inline-flex; align-items: center; gap: 10px; font: 700 13px/1 var(--m); letter-spacing: .06em; text-transform: uppercase; color: var(--ink) }
-.lbl i { font-style: normal; color: var(--rosa-hi); background: var(--azul); padding: 5px 8px; border-radius: 6px; letter-spacing: .04em }
+.lbl i { font-style: normal; color: inherit; letter-spacing: .06em }
+.lbl i::after { content: "·"; margin-left: 10px; opacity: .6 }
 .poster { font: 400 clamp(54px, 10vw, 168px)/.86 var(--d); letter-spacing: -.01em; text-transform: uppercase }
 .d1 { font: 900 clamp(46px, 7.4vw, 116px)/.9 var(--h); text-transform: uppercase; letter-spacing: -.005em }
 .d2 { font: 900 clamp(38px, 5.4vw, 84px)/.92 var(--h); text-transform: uppercase }
@@ -38,9 +39,8 @@ html[lang="fr"] .l-en, html[lang="en"] .l-fr { display: none !important }
 .src { margin-top: 12px; font: 400 12px/1.5 var(--m); color: var(--ink2); opacity: .85 }
 
 /* buttons */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 2px solid transparent; font: 800 18px/1 var(--h); letter-spacing: .02em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .25s var(--ease), background .25s, color .25s, box-shadow .25s }
-.btn .ar { width: 16px; height: 16px; transition: transform .25s var(--ease) }
-.btn:hover .ar { transform: translateX(3px) }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 4px; border: 2px solid transparent; font: 800 17px/1 var(--h); letter-spacing: .06em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .25s var(--ease), background .25s, color .25s, box-shadow .25s }
+.btn .ar { display: none }
 .btn.pri { background: var(--azul); color: var(--crema); box-shadow: 0 6px 0 var(--tinta) }
 .btn.pri:hover { transform: translateY(-2px); box-shadow: 0 8px 0 var(--tinta) }
 .btn.pri:active { transform: translateY(3px); box-shadow: 0 3px 0 var(--tinta) }
@@ -63,11 +63,11 @@ html[lang="fr"] .l-en, html[lang="en"] .l-fr { display: none !important }
 .top-r { margin-left: auto; display: flex; align-items: center; gap: 12px }
 .top .btn { min-height: 42px; padding: 0 18px; font-size: 16px }
 .top.on-dark .btn.pri { background: var(--crema); color: var(--azul); box-shadow: 0 5px 0 rgba(0, 0, 0, .4) }
-.lang { display: flex; border: 2px solid currentColor; border-radius: 999px; padding: 2px }
-.lang button { border: 0; background: none; padding: 4px 9px; font: 700 12.5px/1 var(--m); border-radius: 999px; cursor: pointer; color: inherit }
+.lang { display: flex; border: 2px solid currentColor; border-radius: 4px; padding: 2px }
+.lang button { border: 0; background: none; padding: 4px 9px; font: 700 12.5px/1 var(--m); border-radius: 2px; cursor: pointer; color: inherit }
 .lang button[aria-pressed="true"] { background: var(--azul); color: var(--crema) }
 .top.on-dark .lang button[aria-pressed="true"] { background: var(--crema); color: var(--azul) }
-.menu-b { display: none; border: 2px solid currentColor; background: none; padding: 8px 15px; border-radius: 999px; font: 800 16px/1 var(--h); text-transform: uppercase; cursor: pointer; color: inherit }
+.menu-b { display: none; border: 2px solid currentColor; background: none; padding: 8px 15px; border-radius: 4px; font: 800 16px/1 var(--h); text-transform: uppercase; cursor: pointer; color: inherit }
 .menu { position: fixed; inset: 0; z-index: 49; padding: calc(var(--hh) + 20px) var(--g) 30px; background: var(--azul); color: var(--crema); display: flex; flex-direction: column; overflow-y: auto }
 .menu[hidden] { display: none }
 .menu nav { display: grid }
@@ -120,7 +120,7 @@ html.js [data-words].words-in .w { opacity: 1; transform: none }
 .fm-f { display: grid; gap: 7px; align-content: start }
 .fm label, .fm legend { font: 800 16px/1.2 var(--h); text-transform: uppercase; letter-spacing: .02em }
 .fm-opt { font: 400 12px/1 var(--m); text-transform: none; opacity: .7; margin-left: 4px }
-.fm input[type="text"], .fm input[type="date"], .fm input[type="number"], .fm textarea { width: 100%; min-height: 50px; padding: 12px 14px; border: 2px solid var(--azul); border-radius: 12px; background: #fff; color: var(--tinta); font-size: 17px }
+.fm input[type="text"], .fm input[type="date"], .fm input[type="number"], .fm textarea { width: 100%; min-height: 50px; padding: 12px 14px; border: 2px solid var(--azul); border-radius: 4px; background: #fff; color: var(--tinta); font-size: 17px }
 .fm textarea { min-height: 76px; resize: vertical }
 .fm input:focus, .fm textarea:focus { outline: none; box-shadow: 0 0 0 4px rgba(246, 180, 14, .55) }
 .fm input[aria-invalid="true"] { border-color: #b3123d }
@@ -130,10 +130,10 @@ html.js [data-words].words-in .w { opacity: 1; transform: none }
 .fm-chips { display: flex; flex-wrap: wrap; gap: 8px }
 .fm-chips label { position: relative; cursor: pointer }
 .fm-chips input { position: absolute; opacity: 0; inset: 0; cursor: pointer }
-.fm-chips span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 2px solid var(--azul); border-radius: 999px; background: #fff; font: 800 16px/1 var(--h); text-transform: uppercase; color: var(--azul); transition: background .2s, color .2s }
+.fm-chips span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 2px solid var(--azul); border-radius: 4px; background: #fff; font: 800 16px/1 var(--h); text-transform: uppercase; color: var(--azul); transition: background .2s, color .2s }
 .fm-chips input:checked + span { background: var(--azul); color: var(--crema) }
 .fm-chips input:focus-visible + span { outline: 3px solid var(--sol); outline-offset: 2px }
-.fm-step { display: flex; align-items: stretch; border: 2px solid var(--azul); border-radius: 12px; background: #fff; overflow: hidden }
+.fm-step { display: flex; align-items: stretch; border: 2px solid var(--azul); border-radius: 4px; background: #fff; overflow: hidden }
 .fm-step button { width: 50px; border: 0; background: var(--celeste2); color: var(--azul); cursor: pointer; display: grid; place-items: center }
 .fm-step button svg { width: 16px; height: 16px }
 .fm-step input[type="number"] { border: 0 !important; border-radius: 0 !important; text-align: center; font: 800 24px/1 var(--h) !important; -moz-appearance: textfield; appearance: textfield }
@@ -141,8 +141,8 @@ html.js [data-words].words-in .w { opacity: 1; transform: none }
 .fm-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden }
 .fm-go { justify-self: start }
 .fm-note { font-size: 14px; color: var(--ink2) }
-.fm-fail { padding: 12px 14px; border-radius: 12px; background: #fff0f4; color: #8f0e30; font-weight: 600 }
-.fm-ok { padding: 28px; border-radius: 18px; background: var(--azul); color: var(--crema) }
+.fm-fail { padding: 12px 14px; border-radius: 4px; background: #fff0f4; color: #8f0e30; font-weight: 600 }
+.fm-ok { padding: 28px; border-radius: 0; background: var(--azul); color: var(--crema) }
 .fm-ok h3 { font: 900 34px/1 var(--h); text-transform: uppercase; margin-bottom: 8px }
 @media (max-width: 600px) { .fm-row { grid-template-columns: minmax(0, 1fr) } }
 

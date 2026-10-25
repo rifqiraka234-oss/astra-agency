@@ -27,7 +27,17 @@ was never sent and isn't needed now the sketch is ready the same day.
 > Both URLs on the final deploys, checked live in the minute before showing this. Reopen both and the thread again in
 > the minute before sending.
 >
-> Don't pitch Grégoire separately while Julien is in conversation (his queue row is RESEARCH_QUEUED, now hold).
+> Call slots, Raka's calendar read 25 Oct ~11:30 UTC for Mon 26 to Sat 31 Oct. Busy Tue 27 12:00 to 13:00 (weekly
+> catch up), Thu 29 10:00 to 12:00 (Intermat, Alphen), Fri 30 10:00 to 10:30 (Lisanne) and 14:00 to 15:00 (Bruynzeel).
+> Wed 28 and Thu 29 at 15:30 Paris (same as Amsterdam) are free, and sit between Saavedra's lunch service (ends 14:30)
+> and dinner (opens 18:30). Other drafts offer Marco Mon or Wed 10:00 to 17:00 and Nikolaus Tue or Thu 13:00 to 17:00,
+> so book whichever lead answers first and recheck the calendar before confirming anyone.
+> Budget sign (GTM plan section 4, step 1), they paid for a full brand identity, a custom logotype, drawings, posters,
+> tees and bags (saavedraparis.fr/nos-produits-1), and run Zelty, Deliveroo and Uber Eats. Hospitality hasn't booked a
+> call with us yet (docs/gtm-plan.md), so this is Raka's call. The build was finished before the 25 Oct budget rule
+> reached this session. Option B below is the rule's one screen version if he'd rather hold the build for the call.
+>
+> Don't pitch Grégoire separately while Julien is in conversation (his queue row is now HOLD_CO_FOUNDER_ENGAGED).
 > If Julien goes quiet after this, no bump is drafted. Raka follows up himself (RULES, said yes and went quiet).
 
 DELIVERY
@@ -42,5 +52,16 @@ https://astra-saavedra-prototype.netlify.app/
 I've also written the growth plan behind it, starting from Grégoire's July post.
 https://astra-saavedra-plan.netlify.app/
 
-What do you think?
+Could we take 30 minutes to go through it, Wednesday 28 or Thursday 29 at 3.30pm, between your lunch and dinner service?
+```
+
+Option B, the one screen version (GTM plan section 4, step 1). Attach state/prototypes/saavedra/delivery-screen.jpg.
+
+DELIVERY
+```
+Julien, here's a first look at what I offered, a Saavedra site that opens a door for companies.
+
+Office boxes sized by headcount, private hire, and a quote in one step, in French and English.
+
+I'd love to walk you through it. Would Wednesday 28 or Thursday 29 at 3.30pm work for half an hour, once lunch service is over?
 ```

@@ -17,12 +17,22 @@ Two things are built, to the Hertling v3 bar (RULES section 5).
    développer notre activité traiteur, les déjeuners d'équipe, les afterworks, les privatisations et les événements
    d'entreprise".
 
+## The restyle, same afternoon
+
+Raka's 25 Oct rules reached this session after the first deploy (RULES section 5, "No Claude look" and "Simple is not
+plain", and the GTM plan's call ask). The build was restyled before anything was sent. Gone, pill buttons with a sliding
+arrow (now rectangles like their own site's buttons), the floating stickers, the glow behind the sun, the gradient
+fades over photos (now a hard edge), the soft shadow form card, boxed route buttons and chips, the "how it works"
+three step block, the quote steps, and the team teaser on the home page (7 sections now, Entreprises 8). Kept, the
+day scene, the box builder, the map and runner, their photos and posters, which are the wow layer. The four lines the
+rule asks for are in research/four-lines.md.
+
 ## Links
 
 - Site, https://astra-saavedra-prototype.netlify.app/ (noindex, SSO off, forms on). Netlify project
-  astra-saavedra-prototype, id 4d43b892-48f8-4f26-bc77-123e35b887b9. Deploy 6adde0777e8ec8850af2e7c6.
+  astra-saavedra-prototype, id 4d43b892-48f8-4f26-bc77-123e35b887b9. Deploy 6addede04591120839515eed (restyle), first 6adde0777e8ec8850af2e7c6.
 - Growth plan, https://astra-saavedra-plan.netlify.app/ (noindex, SSO off). Netlify project astra-saavedra-plan, id
-  de92524a-2f7e-4275-9aac-36f255994008. Deploy 6adde094677867ddd1d971b6.
+  de92524a-2f7e-4275-9aac-36f255994008. Deploy 6addedff992048886003d118 (restyle), first 6adde094677867ddd1d971b6.
 - Source, state/prototypes/saavedra/build. `python3 build.py` writes ../site and ../site-plan. `python3 tools/map.py
   /tmp/claude-0/saav/map/osm-small.json` and `python3 tools/cowork.py /tmp/claude-0/saav/map` regenerate the two maps
   from the OpenStreetMap tiles. No dependencies beyond Python 3 and Pillow for the photo sizes.
@@ -133,6 +143,8 @@ Scripts are in qa/ (they expect the two preview servers on 8791 and 8792).
   board. An earlier version of this test passed while the script was broken because it never checked boxes existed,
   it now does.
 - No JavaScript, nothing hidden, French only, the default boxes drawn in the page. Reduced motion, every scene still.
+- After the restyle, everything above was run again. axe 44 runs 0, overflow 198 loads 0, spills 88 loads 0 with the
+  control caught 88 times, copy 0 flags both sites, form 45 of 45, box builder 132 of 132, no JavaScript nothing hidden.
 - Live, both sites hashed file by file. Site 61 of 65 identical, the 4 pages with the form differ only by Netlify's
   form tag rewrite, checked by diff. Plan 45 of 45. Netlify registered the form "devis" with its honeypot. Cold loads
   at 1440 and 390, 22 of 22 at 200 with the right title, 0 broken images, X-Robots-Tag noindex on every page.

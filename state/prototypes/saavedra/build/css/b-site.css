@@ -6,7 +6,7 @@
 .hero-in { text-align: center; display: flex; flex-direction: column; align-items: center }
 .hero-stage { position: relative; width: min(92vw, 1000px, calc((100svh - var(--hh) - 330px) * 1.6)); min-width: 280px; margin: 0 auto }
 .hero-sun { position: absolute; left: 50%; top: -9%; width: 44%; aspect-ratio: 1; transform: translate(-50%, calc(var(--sunY, 0) * 1%)) ; z-index: -1; color: var(--sol) }
-.hero-sun svg { width: 100%; height: 100%; animation: spin 90s linear infinite; filter: drop-shadow(0 0 40px rgba(246, 180, 14, .45)) }
+.hero-sun svg { width: 100%; height: 100%; animation: spin 90s linear infinite }
 @keyframes spin { to { transform: rotate(360deg) } }
 .hero-letters { width: 100%; height: auto; color: var(--azul); overflow: visible }
 .hero-letters .lt, .hero-letters .sub { transform-box: fill-box; transform-origin: 50% 100% }
@@ -103,11 +103,11 @@ html.js.motion .day-step .day-sun { display: none }
 html.js.motion .day-stage .btn.pri { transition: background .4s, color .4s }
 html.js.motion .day.dark .day-stage .btn.pri { background: var(--crema); color: var(--azul); box-shadow: 0 6px 0 rgba(0, 0, 0, .45) }
 .sky-sun { position: absolute; left: 0; top: 0; width: clamp(110px, 14vw, 210px); aspect-ratio: 1; color: var(--sol); transform: translate(calc(var(--sx, 70) * 1vw), calc(var(--sy, 20) * 1svh)) translate(-50%, -50%); opacity: var(--so, 1) }
-.sky-sun svg { width: 100%; height: 100%; animation: spin 60s linear infinite; filter: drop-shadow(0 0 30px rgba(246, 180, 14, .5)) }
+.sky-sun svg { width: 100%; height: 100%; animation: spin 60s linear infinite }
 .sky-arc { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .5 }
 .sky-arc path { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-dasharray: 2 9; stroke-linecap: round; vector-effect: non-scaling-stroke }
 .sky-dots { position: absolute; right: var(--g); bottom: 28px; display: flex; gap: 10px; z-index: 3 }
-.sky-dots button { border: 2px solid currentColor; background: none; color: inherit; padding: 6px 10px; border-radius: 999px; font: 700 12px/1 var(--m); cursor: pointer }
+.sky-dots button { border: 2px solid currentColor; background: none; color: inherit; padding: 6px 10px; border-radius: 3px; font: 700 12px/1 var(--m); cursor: pointer }
 .sky-dots button[aria-current="true"] { background: currentColor }
 .sky-dots button[aria-current="true"] span { color: var(--sky, var(--celeste)); filter: invert(0) }
 .embers { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: var(--eo, 1) }
@@ -144,8 +144,10 @@ html.js.motion .day.dark .day-stage .btn.pri { background: var(--crema); color: 
 .order-runner { color: var(--crema); width: 100%; max-width: 640px; justify-self: center }
 html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) * 30%)) }
 .order-opts { margin-top: 30px; display: grid; gap: 14px }
-.order-opt { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 20px 24px; border-radius: 18px; background: rgba(253, 226, 206, .08); border: 2px solid rgba(253, 226, 206, .3); text-decoration: none; transition: background .25s, border-color .25s, transform .25s var(--ease) }
-.order-opt:hover { background: var(--crema); color: var(--azul); border-color: var(--crema); transform: translateY(-2px) }
+.order-opts { gap: 0 }
+.order-opt { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px 0; border-top: 2px solid rgba(253, 226, 206, .3); text-decoration: none; transition: color .25s }
+.order-opt:last-child { border-bottom: 2px solid rgba(253, 226, 206, .3) }
+.order-opt:hover { color: var(--sol) }
 .order-opt b { display: block; font: 900 28px/1 var(--h); text-transform: uppercase }
 .order-opt small { display: block; margin-top: 6px; font: 400 15px/1.4 var(--t); opacity: .9 }
 .order-opt .ar { width: 22px; height: 22px; flex: none }
@@ -171,7 +173,7 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .quote-steps li { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 14px; align-items: start; font-size: 17px }
 .quote-steps li::before { counter-increment: q; content: counter(q); display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--azul); color: var(--crema); font: 400 22px/1 var(--d) }
 .quote-steps b { display: block; font: 800 20px/1.1 var(--h); text-transform: uppercase }
-.quote-card { position: relative; padding: clamp(24px, 3vw, 40px); border-radius: 26px; background: rgba(255, 255, 255, .72); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 30px 60px -30px rgba(3, 74, 145, .45), inset 0 0 0 2px rgba(3, 74, 145, .12) }
+.quote-card { position: relative; padding-top: 8px; border-top: 3px solid var(--azul) }
 .quote-card .stk { position: absolute; top: -18px; right: 22px; --r: 5deg }
 @media (max-width: 980px) { .quote-in { grid-template-columns: minmax(0, 1fr) } }
 
@@ -181,7 +183,7 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .boxes-head .d1 { max-width: 13ch; margin-top: 14px }
 .boxes-head .lede { max-width: 36ch }
 .bb { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(24px, 4vw, 60px); align-items: stretch }
-.bb-ctl { display: flex; flex-direction: column; gap: 16px; padding: clamp(22px, 3vw, 36px); border-radius: 26px; background: var(--azul); color: var(--crema) }
+.bb-ctl { display: flex; flex-direction: column; gap: 16px; padding: clamp(22px, 3vw, 36px); border-radius: 4px; background: var(--azul); color: var(--crema) }
 .bb-q { font: 800 18px/1 var(--h); text-transform: uppercase; letter-spacing: .02em }
 .bb-n { display: flex; align-items: baseline; gap: 12px }
 .bb-n b { font: 400 clamp(72px, 8vw, 116px)/.85 var(--d); color: var(--sol) }
@@ -197,7 +199,7 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .bb-chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px }
 .bb-chips label { position: relative; cursor: pointer }
 .bb-chips input { position: absolute; opacity: 0; inset: 0; cursor: pointer }
-.bb-chips span { display: grid; gap: 4px; padding: 12px 10px; border-radius: 14px; border: 2px solid rgba(253, 226, 206, .4); text-align: center; transition: background .2s, color .2s, border-color .2s }
+.bb-chips span { display: grid; gap: 4px; padding: 12px 10px; border-radius: 4px; border: 2px solid rgba(253, 226, 206, .4); text-align: center; transition: background .2s, color .2s, border-color .2s }
 .bb-chips b { font: 800 17px/1 var(--h); text-transform: uppercase }
 .bb-chips small { font: 400 12px/1.2 var(--m) }
 .bb-chips input:checked + span { background: var(--crema); color: var(--azul); border-color: var(--crema) }
@@ -207,7 +209,7 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .bb-go { align-self: stretch; margin-top: 4px }
 .bb-ctl .btn.pri { background: var(--sol); color: var(--noche); box-shadow: 0 6px 0 var(--tinta) }
 .bb-note { font-size: 13.5px; color: rgba(253, 226, 206, .82) }
-.bb-stage { position: relative; min-height: 460px; border-radius: 26px; overflow: hidden; background: radial-gradient(80% 60% at 50% 100%, rgba(246, 180, 14, .25), transparent 70%), repeating-linear-gradient(90deg, #e9c9a3 0 60px, #e2bf96 60px 62px); box-shadow: inset 0 0 0 2px rgba(3, 74, 145, .1) }
+.bb-stage { position: relative; min-height: 460px; border-radius: 4px; overflow: hidden; background: radial-gradient(80% 60% at 50% 100%, rgba(246, 180, 14, .25), transparent 70%), repeating-linear-gradient(90deg, #e9c9a3 0 60px, #e2bf96 60px 62px); box-shadow: inset 0 0 0 2px rgba(3, 74, 145, .1) }
 .bb-stage::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255, 250, 243, .55), transparent 30%); pointer-events: none }
 .bb-stack { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 14px; padding: 26px }
 .bx { position: relative; background: #fffaf3; border-radius: 10px; padding: 26px 10px 10px; box-shadow: 0 12px 22px -12px rgba(2, 27, 56, .55), inset 0 0 0 2px rgba(3, 74, 145, .2); background-image: radial-gradient(circle at 12px 12px, rgba(3, 74, 145, .08) 2px, transparent 2.5px); background-size: 18px 18px }
@@ -234,10 +236,12 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .walk-in { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(30px, 5vw, 80px); align-items: center }
 .walk .d2 { margin-top: 14px; max-width: 12ch }
 .walk-list { margin-top: 28px; display: grid; gap: 8px }
-.walk-list button { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; width: 100%; padding: 14px 18px; border-radius: 14px; border: 2px solid var(--line); background: #fff; color: var(--azul); cursor: pointer; text-align: left; transition: border-color .2s, background .2s, color .2s }
+.walk-list { gap: 0 }
+.walk-list button { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; width: 100%; padding: 15px 2px; border: 0; border-top: 2px solid var(--line); background: none; color: var(--azul); cursor: pointer; text-align: left; transition: color .2s, padding .25s var(--ease) }
+.walk-list button:last-child { border-bottom: 2px solid var(--line) }
 .walk-list button b { font: 800 21px/1 var(--h); text-transform: uppercase }
 .walk-list button span { font: 700 13px/1 var(--m); white-space: nowrap }
-.walk-list button[aria-pressed="true"] { background: var(--azul); color: var(--crema); border-color: var(--azul) }
+.walk-list button[aria-pressed="true"] { color: #a8471f; padding-left: 14px; box-shadow: inset 4px 0 0 var(--brasa) }
 .walk-map { position: relative; margin-right: calc(var(--g) * -1); aspect-ratio: 1200 / 860; -webkit-mask-image: radial-gradient(70% 70% at 50% 50%, #000 62%, transparent 100%); mask-image: radial-gradient(70% 70% at 50% 50%, #000 62%, transparent 100%) }
 .walk-map > svg { width: 100%; height: 100% }
 .map9 .mp-parks path { fill: #cfe8c3 }
@@ -248,8 +252,8 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .map9 .mp-shop circle { fill: var(--azul) } .map9 .mp-shop .mp-shop-c { fill: var(--sol) }
 .walk-runner { position: absolute; left: 0; top: 0; width: clamp(84px, 10vw, 150px); color: var(--azul); transform: translate(var(--rx, 50%), var(--ry, 50%)) translate(-50%, -78%) scaleX(var(--rf, 1)); pointer-events: none; transition: opacity .3s }
 .walk-runner svg { width: 100% }
-.walk-pin { position: absolute; left: 0; top: 0; transform: translate(var(--px, 0), var(--py, 0)) translate(-50%, -130%); padding: 7px 11px; border-radius: 999px; background: var(--azul); color: var(--crema); font: 700 12px/1 var(--m); white-space: nowrap; pointer-events: none }
-.walk-shop { position: absolute; left: 50%; top: 50%; transform: translate(-50%, 26px); padding: 6px 10px; border-radius: 999px; background: var(--sol); color: var(--noche); font: 700 11.5px/1 var(--m); white-space: nowrap }
+.walk-pin { position: absolute; left: 0; top: 0; transform: translate(var(--px, 0), var(--py, 0)) translate(-50%, -130%); padding: 7px 11px; border-radius: 3px; background: var(--azul); color: var(--crema); font: 700 12px/1 var(--m); white-space: nowrap; pointer-events: none }
+.walk-shop { position: absolute; left: 50%; top: 50%; transform: translate(-50%, 26px); padding: 6px 10px; border-radius: 3px; background: var(--sol); color: var(--noche); font: 700 11.5px/1 var(--m); white-space: nowrap }
 .walk .src { margin-top: 18px }
 @media (max-width: 980px) {
   .walk-in { grid-template-columns: minmax(0, 1fr) }
@@ -269,9 +273,9 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .fmt .btn { margin-top: 30px }
 .fmt-pic { position: absolute; top: 0; bottom: 0; right: 0; width: 46%; z-index: -1 }
 .fmt-pic img { width: 100%; height: 100%; object-fit: cover }
-.fmt-pic::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--fade, var(--crema)) 0%, rgba(0, 0, 0, 0) 38%) }
+.fmt-pic::after { content: none }
 .fmt.flip .fmt-pic { right: auto; left: 0 }
-.fmt.flip .fmt-pic::after { background: linear-gradient(270deg, var(--fade, var(--crema)) 0%, rgba(0, 0, 0, 0) 38%) }
+
 .fmt.flip .fmt-txt { grid-column: 2 }
 .fmt .src { margin-top: 16px }
 .tarde .fmt-list li { border-color: rgba(2, 27, 56, .4) }
@@ -284,7 +288,6 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
   .fmt-in { grid-template-columns: minmax(0, 1fr) }
   .fmt.flip .fmt-txt { grid-column: auto }
   .fmt-pic, .fmt.flip .fmt-pic { position: relative; width: auto; height: 68vw; max-height: 520px; margin-bottom: 40px; z-index: 0 }
-  .fmt-pic::after, .fmt.flip .fmt-pic::after { background: linear-gradient(0deg, var(--fade, var(--crema)) 0%, rgba(0, 0, 0, 0) 45%) }
 }
 
 /* how it works, three steps along a line drawn from their sun */
@@ -305,7 +308,7 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .faq-l details { border-bottom: 2px solid var(--line) }
 .faq-l summary { list-style: none; display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 22px 0; cursor: pointer; font: 800 clamp(20px, 2vw, 26px)/1.1 var(--h); text-transform: uppercase }
 .faq-l summary::-webkit-details-marker { display: none }
-.faq-l summary::after { content: "+"; flex: none; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--azul); color: var(--crema); font: 400 24px/1 var(--d); transition: transform .3s var(--ease) }
+.faq-l summary::after { content: "+"; flex: none; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 4px; background: var(--azul); color: var(--crema); font: 400 24px/1 var(--d); transition: transform .3s var(--ease) }
 .faq-l details[open] summary::after { transform: rotate(45deg) }
 .faq-l details p { padding: 0 0 22px; max-width: 60ch; color: var(--ink2) }
 @media (max-width: 900px) { .faq-in { grid-template-columns: minmax(0, 1fr) } }
@@ -315,9 +318,9 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .night-hero .poster { color: var(--crema); margin: 18px 0 10px; font-size: clamp(46px, 6.6vw, 108px) }
 .night-hero .poster em { font-style: normal; color: var(--brasa) }
 .night-in { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(30px, 5vw, 80px); align-items: center; width: 100% }
-.night-pic { position: relative; height: min(76vh, 700px); border-radius: 300px 300px 26px 26px; overflow: hidden; box-shadow: 0 0 0 10px rgba(255, 106, 43, .12), 0 40px 90px -20px rgba(255, 106, 43, .45) }
+.night-pic { position: relative; height: min(76vh, 700px); border-radius: 300px 300px 0 0; overflow: hidden; outline: 2px solid var(--brasa); outline-offset: 12px }
 .night-pic img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.05) contrast(1.05) }
-.night-pic::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(2, 27, 56, .55), transparent 40%) }
+
 @media (max-width: 900px) { .night-in { grid-template-columns: minmax(0, 1fr) } .night-pic { height: 100vw; max-height: 560px } }
 .pills { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px }
 .pills li { padding: 10px 16px; border-radius: 999px; border: 2px solid currentColor; font: 800 17px/1 var(--h); text-transform: uppercase }
@@ -338,16 +341,16 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .card-item h3 { font: 900 clamp(24px, 2.2vw, 30px)/1 var(--h); text-transform: uppercase; display: flex; align-items: center; gap: 10px; flex-wrap: wrap }
 .card-item p { grid-column: 1; color: var(--ink2); font-size: 16px }
 .card-item .pr { grid-row: 1; grid-column: 2; font: 700 18px/1 var(--m); white-space: nowrap }
-.new { font: 700 11px/1 var(--m); padding: 5px 8px; border-radius: 999px; background: var(--rosa); color: var(--noche); letter-spacing: .05em }
+.new { font: 700 11px/1 var(--m); color: #a8264f; letter-spacing: .08em; text-transform: uppercase }
 .card-boxes { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px }
-.card-boxes div { padding: 18px 24px; border-radius: 18px; background: var(--azul); color: var(--crema); display: flex; gap: 18px; align-items: baseline }
+.card-boxes div { padding: 18px 24px; border-radius: 4px; background: var(--azul); color: var(--crema); display: flex; gap: 18px; align-items: baseline }
 .card-boxes b { font: 900 30px/1 var(--h); text-transform: uppercase }
 .card-boxes span { font: 700 20px/1 var(--m); color: var(--sol) }
 .card-sec.alt { background: var(--crema) }
 .card-sec.dark { background: var(--azul); color: var(--crema) }
 .card-sec.dark .card-item p { color: rgba(253, 226, 206, .82) }
 .card-sec.dark .card-item { border-color: rgba(253, 226, 206, .3) }
-.card-sec.dark .new { background: var(--sol) }
+.card-sec.dark .new { color: var(--sol) }
 @media (max-width: 780px) { .card-grid { grid-template-columns: minmax(0, 1fr) } }
 
 /* ---------------------------------------------------------------- simple text pages */
@@ -369,8 +372,7 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 /* order page */
 .how-order { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 40px }
 @media (max-width: 1080px) { .how-order { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) } .how-order .zel { grid-column: 1 / -1 } }
-.how-order a { display: block; padding: clamp(24px, 3vw, 40px); border-radius: 26px; text-decoration: none; transition: transform .3s var(--ease) }
-.how-order a:hover { transform: translateY(-4px) }
+.how-order a { display: block; padding: clamp(24px, 3vw, 40px); border-radius: 4px; text-decoration: none; transition: background .3s }
 .how-order .zel { background: var(--azul); color: var(--crema) }
 .how-order .del { background: var(--crema); color: var(--azul); box-shadow: inset 0 0 0 2px var(--line) }
 .how-order b { display: block; font: 400 clamp(34px, 3.6vw, 56px)/.9 var(--d); text-transform: uppercase; overflow-wrap: anywhere }
@@ -408,5 +410,5 @@ html.js.motion .order-runner { transform: translateX(calc((var(--rp, .5) - .5) *
 .cmd-hero .poster { font-size: clamp(44px, 7vw, 116px) }
 .proof { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px }
 .proof b { font: 400 clamp(26px, 2.6vw, 36px)/1 var(--d); color: var(--azul) }
-.proof span { font: 700 12.5px/1.3 var(--m); text-transform: uppercase; letter-spacing: .04em; color: var(--ink2) }
+.proof > span { font: 700 12.5px/1.3 var(--m); text-transform: uppercase; letter-spacing: .04em; color: var(--ink2) }
 .bb-stack.bb-tall { position: relative; inset: auto }
