@@ -979,3 +979,51 @@ Handled the same day. Every hiccup below was found by a screenshot, a measuremen
 | Mobile Lighthouse 58, mostly long tasks in sky.js | Prove the cause before writing it down. The renderer string said SwiftShader, and blocking sky.js alone gave 78. Then cap the sky at 30 frames a second and rest it while it's covered, and report the live number |
 | An edit script failed halfway through, after build.py had changed and before site.js had, so the hero film stopped playing, and 19 of 19 checks still passed | Run multi file edits as separate calls or check every assertion before writing any file. And add the check that would have caught it (here, the hero film plays after load, with a plant that stubs play) |
 | Netlify skipped two v2 uploads, "Skipped due to account credit usage exceeded" | Read the deploy's error before touching the build. Commit and push first, retry later, and keep the delivery unsent while the live URL still serves the old build |
+
+### Honey It's Handled v2, the art build (26 Oct 2026, evening)
+
+Raka on v1, "i feel like this is a normal CLAUDE website ... be an artist ... shapes, gradients, animations photos,
+GRAPHICS, to tell the story". v1 was one pale marble texture, serif and italic, a kicker on every heading and her photos in
+small boxes. v2 is built in build-v2/ writing site-v2/ beside it, not deployed (Netlify credits), handed over as one file
+from tools/bundle-site.py. Source and handover, state/prototypes/honeyitshandled (research/v2-brief.md,
+art-direction-v2.md, flow-v2.md, the v2 section of handover.md).
+
+**What made it, repeat it.**
+1. **Her own post is the story.** Her 15 Sep caption ("It starts long before the guests arrive. With an idea. And a lot of
+   little decisions. Every detail considered. So when the doors open... there's nothing left to do but celebrate.") gave
+   the section headings in her words and the order, and her 17 June "Something Off-White. Something Blue. Something Red."
+   gave the colour script, once from off white to blue to red. Read every caption on the lead's Instagram before the
+   flow, the spine is often already written.
+2. **The hero asks who you are, and the answer re-sets the page.** "What are we celebrating?" with three answers, the
+   couple, the host and the company. Each answer swaps the words, the photo under the lens, the night behind the doors, the
+   order of her two nights, the help options, the form type, the letter and every button, so all three visitors get their
+   own route and action from one page (the Honey v1 tell was a single text link for the second and third visitor).
+3. **Every signature moment is made from her own material.** Her traced HH as WebGL lacquer, her HH split into two
+   doors, her "17 tabs open" as the planner that is the help control, her figures (125, 570+) as windows onto her own film
+   and photo, her studio photos as stickers in her own die cut grammar, a mirror ball of facets cut from 30 of her photos,
+   her envelope sticker for the sealed letter.
+4. **Type from the field, rendered that day.** 26 fashion houses and event producers, nearly all one grotesk and square
+   buttons. Mona Sans alone (520 for headlines, width 75 at 760 for the figures, width 125 caps for her own short lines)
+   and Fragment Mono for data. Her wordmark is the only serif.
+5. **One state, three paths.** `{path, date, place, kind, guests, help, tabs, first}` per path, so switching back keeps
+   each visitor's own choices, and the letter, the bar, the planner card and the 17 all read it.
+
+| Hiccup | Rule |
+|---|---|
+| The figure masks were `url("data:...")` inside a double quoted style attribute, the attribute broke and the 125 and 570+ came out empty | Percent encode every quote inside a data URI mask and wrap it in single quotes. Screenshot the mask before building anything around it |
+| The guest markers' `--x` carried a `%` into `calc(... * var(--x) / 100)`, the calc was invalid and the markers fell to the wrong end | Custom properties used in calc arithmetic are unitless numbers. Units go on at the end |
+| A Python edit sliced the file between two markers, the first marker also sat earlier in the vertex shader, the slice was empty and `replace('', new)` wrote the new text between every character of lacquer.js | Assert a slice isn't empty before replacing it, or use exact text edits. Committing work in progress every hour is what let `git checkout` undo it |
+| The launch offer checkbox and the letter's first name were both `name="first"`, and a test filled the checkbox | Every control name is unique across the page, not only inside its form |
+| v1 shipped the Apple mark on Elise's laptop in her best photo, nobody zoomed a portrait | The third party check zooms portraits too, laptops, phones, cups and bags. Here the mark is painted out of the cut out and the handover says so, she should know |
+| rembg's isnet model made the laptop lid half transparent. BiRefNet kept it whole | Try two cut out models on the real photo and look at the result on a coloured ground before choosing |
+| The media prep ran four BiRefNet cut outs in one process, was killed for memory (exit 137) after the first, and never wrote the manifest, so the build used an hour old manifest, three old cut outs and none of the new photo sizes, while every test passed | Heavy model steps run one per process with a sidecar file each, the prep asserts every step's exit code, and the manifest's time is checked against the newest media file before the final build |
+| Lighthouse phone 63, TBT 3.5 s, from the lacquer: a per pixel JS loop building the height field, and frames running nonstop on a CPU renderer | Build fields with canvas compositing (`lighter` and `multiply`) instead of a pixel loop, start decoration on idle after load, rest it once settled and wake it on a hand, cap the frame rate on slow devices. 76 to 80 after |
+| On phones the lens walked down the photo with the scroll, and each frame read layout twice, long tasks while nothing visible moved | Measure a scene's geometry once (and on resize or a path change), then move it by writing CSS variables only. Start scroll driven scenes only when they're near the screen |
+| `readPixels` returned zeros, and once the lacquer rested there was no frame to read at all | Read WebGL pixels inside a `requestAnimationFrame` after the page draws, look over several frames on a slow device, wake a resting scene with a real pointer first |
+| A plant changed the ball canvas's id, the test's frame callback threw, its promise never resolved, and the plant run hung for fifteen minutes | Every evaluate that waits on a frame or an event carries its own timeout |
+| The bar stepped aside for the letter section as soon as its top (the mirror ball) showed, leaving a half screen with no action on phones | The bar steps aside for the form's fields, not for the section that holds them |
+| "4 February 2027" at 11 vw ran under the right hand column | Size a figure that changes in place to its own column with container units (`min(13.6cqi, 196px)`), and test the longest value |
+| ball.js loaded media/facets.jpg from a string in the script, bundle-site.py inlined every attribute and missed it, and the ball was blank in the bundle | Any file a script loads is named in an HTML attribute (`data-src`), so the bundle and the build's copy list both see it |
+| Copy said "Every photo and the film are hers" and "her own aftermovie" while the Pro League photos credit Kaat DM | Say where footage is from ("from her page"), never who made it, unless the page says so |
+| The local server was a background task with the default limit and died mid chain | Start servers with the long limit, and give a long QA chain its own fresh server |
+| `pkill -f` matched its own shell again (exit 144), and the build ran twice while a QA chain was going | The Fae Club and Saavedra rules hold. Find PIDs with ps, and rerun the whole chain on one hash after any build |

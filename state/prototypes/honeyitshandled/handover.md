@@ -3,6 +3,167 @@
 One file for both builds. The prototype agent writes its own section, the plan's section is below. Neither overwrites
 the other.
 
+## The prototype v2, the art build (26 Oct 2026, evening)
+
+**Flag first, budget.** A one person consumer business, a sole trader since 1 January 2026 (KBO 1032.568.265), one paid
+private event of her own (Cinco Cero) and the Pro League Awards on her pages. RULES 0G and the GTM plan say one screen and
+the call ask without a budget sign. Raka asked for this build by name and sent v1 back for its look, so v2 is built. No
+price for her services anywhere, she publishes none.
+
+v1 (build/, site/) is kept untouched for comparison. v2 is build-v2/ writing site-v2/. Raka's words on v1 and the brief
+are research/v2-brief.md, the art plan research/art-direction-v2.md, the four lines and the flow research/flow-v2.md.
+
+### Where it is
+
+**NOT DEPLOYED**, Netlify is refusing deploys (account credits exceeded), so nothing was sent to it. One self contained
+file for Raka to open from disk,
+`/tmp/claude-0/-home-user-astra-agency/24052593-7323-58b2-9e3f-744f7080d43c/scratchpad/bundle/honey-its-handled-prototype-v2.html`
+(13.1 MB, 52 files inlined by tools/bundle-site.py, sha256 starts f02f5e62c79d34f2). Opened from disk at 1440 and 390
+with error and request capture, 0 script errors, 0 failed loads, 0 requests outside the file, 13 of 13 visible images
+decoded (the other 4 belong to the paths and the sealed state not on screen), both fonts loaded, the lacquer drawn, the
+mirror ball turning, the film playing inside the figures. The scratchpad is session storage, so the file has to be copied
+out before the session ends, or rebuilt with `python3 tools/bundle-site.py state/prototypes/honeyitshandled/site-v2 <out>`.
+When Netlify takes deploys again, deploy site-v2/ to the existing project d75c0db1-46e6-4842-b787-b1e2d9102daf (v1's
+project, SSO already off) only once Raka has picked v2, then run the live checks in v1's section with the -v2 scripts.
+
+### The idea, in two sentences
+
+Her own post of 15 Sep is the page, "It starts long before the guests arrive. With an idea. And a lot of little decisions.
+Every detail considered. So when the doors open... there's nothing left to do but celebrate.", run in the three colours
+she named on 17 June, off white for the idea, blue for the decisions behind the scenes, red for the night. The visitor
+says what they're celebrating on the first screen, every section answers that visitor in her words and her pictures, and
+the enquiry arrives already written in her red room under a mirror ball made of her own photos.
+
+### The signature moments
+
+1. **Her HH in living lacquer.** Her traced monogram poured in her red as glossy liquid (WebGL), settling, rippling like
+   honey under the hand, the light in it turning with the path chosen. Rests once settled, a hand wakes it.
+2. **Behind the curtain.** A room she set for Cinco Cero (the company path gets the Handelsbeurs) full bleed, the pointer a
+   lens onto the same room as a cyanotype in her blue with her own words pinned to it, plus a planner's card with the
+   visitor's own date, guests and help. "See what Elise sees" flips the whole photo, which is the phone and keyboard route.
+3. **Seventeen tabs.** "Usually found with 17 tabs open" as a planner with 17 index tabs, each a thing her pages say she
+   handles. The tabs are the control for the help, and a big 17 fills in her red as she takes them on.
+4. **The doors are her HH.** Two tall lacquer doors carrying the halves of her monogram swing open on scroll, light comes
+   through the gap, her night is behind them.
+5. **Her nights as architecture.** 570+ cut out of the dark as a window onto the Handelsbeurs that opens into the full
+   photo as you scroll, and 125 with the Cinco Cero aftermovie from her page playing inside the figures. The visitor's
+   number is a third figure dragged along a line with 125 and 570 marked.
+6. **Elise as stickers.** Her studio photos cut out with her white die cut edge, slapped onto her blue round "Type A, so
+   you don't have to be.", drifting with the pointer, and her "A little more Elise" lines as stickers that peel.
+7. **The final dance.** A mirror ball of facets cut from 30 of her photos turns and throws light over her red. Sending
+   folds the letter into her envelope and stamps her HH on it, "Consider it handled."
+
+### Who it's for and the one action, per visitor
+
+The first screen asks "What are we celebrating?" and the answer sets the words, the photo under the lens, the door's night,
+the order of her nights, the help options, the form type, the letter and every button.
+- **The couple** (Our wedding). Proof, her launch offer under the date for 2027 and 2028 and her years in events, then
+  Cinco Cero first. Action, "Tell me everything", Wedding or Destination Wedding, as one of her first couples when the
+  date qualifies.
+- **The host** (A birthday or a dinner). Proof, Cinco Cero and Jan Geysen's words first. Action, "Plan my celebration",
+  Private Event, the occasion from her own list.
+- **The company** (A company event). Proof, the Pro League Awards '26 and 570+ first, and "Elise in your team" as its own
+  choice (her freelance event manager offer). Action, "Hire Elise for your event", Corporate Event.
+The header carries Weddings, Events, About and "Tell me everything". The bar at the foot carries the choice so far and
+the path's own button, and steps aside for every visible button to the letter and for the letter's fields.
+
+### Sources and when they were read
+
+Her site, all nine sitemap pages, 15.34 to 15.36 UTC and again 17.49 UTC before the final build (all seven text pages
+unchanged between the two reads). Her Instagram through /embed/ at 15.42 UTC, 137 followers, 6 posts, newest 15 Sep, all
+six captions. 43 of her lines used on the page checked mechanically against the 17.49 read and the captions, 0 missing.
+Every fact and line with its source, build-v2/data/site.json. Art research, 34 award sites (FWA, CSS Design Awards,
+recent.design, Awwwards and siteinspire refused us) and 26 fashion and event houses rendered 15.36 to 15.56 UTC, written
+up with the fonts pulled off each in research/art-direction-v2.md.
+
+### Her words, and where we changed them
+
+Word for word, her 15 Sep post lines as headings, "The details are mine, the moment is yours.", "Tell me everything.",
+"Consider it handled", "Type A, so you don't have to be.", her line on the name, her Pro League page sentences, Cinco Cero's
+brief line, her 10 Sep caption, "And then, the night came alive." (8 Sep, the emoji left out), Jan Geysen's first sentence
+with his own exclamation mark, the four next steps, the launch offer, "Don't worry if you don't have all the answers yet.
+That's what I'm here for." Changed, as in v1, "the entire journey" to "all of it", ", but need" to " and need", "recieve"
+and "Usally" fixed, "&" written out, "Non-negotiable" without its hyphen. New in v2, her Events list "Bespoke celebrations"
+became "Something of your own" and "a full event from concept to execution" became "A full event, from the first idea to
+the final guest leaving" (her own words from the same page), both for our banned word and range rules. The company and
+private help lines ("Elise takes the tabs you hand her and runs them on the night") are ours in her terms.
+
+### What must not be read as fact
+
+- The pins on the cyanotype are her own words about that night placed on the parts of the photo they describe (the
+  string lights, the buffet, the DJ booth). Where exactly each happened in the room is our placing.
+- The planner's card lines (timeline open before breakfast, she knows where the florist is, the missing place card
+  noticed, plan B ready) are her About page sentence turned into a card, not a real run sheet.
+- The 17 tabs are things her pages say she handles, not her service list. Which tabs she takes on a partial plan is the
+  visitor's choice, the letter leaves the rest to the first conversation.
+- The guests line and its words ("a long table or a few round ones") are ours.
+- The Pro League Awards are her page's words and nothing more. Nothing says who hired her or her role that night.
+- Her launch offer's size isn't stated because she doesn't state it. The page never says a date is free.
+- The mirror ball, the doors, the planner and the lacquer are our objects made from her marks and photos. The HH and
+  wordmark are her artwork traced in v1.
+- Nothing is sent. The letter says so, the note says so, and the fallback opens the visitor's own email with the whole
+  request in it.
+
+### Every photo and the film
+
+All from honeyitshandled.com, the files her pages serve, downloaded 26 Oct. build-v2/media/manifest.json has each one's
+id, the page it's on today, its alt there, the sha256 of the original and every crop or edit.
+
+| On the page | Her file | Where it is on her site | Notes |
+|---|---|---|---|
+| The tent under the lens, and its cyanotype | 42a973_3eba9b82 | /gallerycincocero | Set and empty, no people. The cyanotype is ours |
+| The Handelsbeurs (lens on the company path, behind the doors, the 570+ window, full bleed) | 42a973_f181779c | /pro-league-awards, by Kaat DM | **Top 65.5% only**, as v1, clear of the sponsor wall in the arcade |
+| The mirror ball behind the doors | 42a973_2dc29647 | / and /cincocero | Guests seen from behind in silhouette |
+| The Cinco Cero sign at night, a heat lamp | 42a973_427f62a1, 42a973_aaf72253 | / and /cincocero | Beside Jan Geysen's words, neither shows a person |
+| Elise with a book on her head | 42a973_b81dcffa | /about | **Edited.** The Apple mark on her laptop lid is painted out (OpenCV inpaint from the lid). v1 shipped it with the mark. She should know |
+| Elise on her phone, sitting, walking | 42a973_05bb1bca, 42a973_6059565d, 42a973_bcd60d05 | /contact, /, /about | Cut out with BiRefNet, white sticker edge ours |
+| Her open envelope sticker | 42a973_79da123c | /about and /contact | The sealed state |
+| Mirror ball facets | 30 of her photos, list in the manifest | Cinco Cero, Pro League (roof, galleries and set tables only), Elise, her stationery | 128 px squares (media/facets.jpg, looked at), no stage screen or sponsor wall. A few table tiles carry a table number card a few pixels high, and some Cinco Cero tiles show guests, each 10 to 20 px on the ball |
+| Film | 42a973_5f3af2a4 | /cincocero aftermovie | v1's 4.2 s cut of the mirror ball and dance floor, no sound, plays only on screen, never under reduced motion or data saver |
+
+Left out on purpose, her /weddings photos (origin unknown, Pinterest widths), every Pro League photo with the stage
+screen, red carpet wall, trophies or table cards, the Pro League aftermovie (sponsor walls and identifiable guests), and
+42a973_ae0d2b8e (Elise with the laptop's Apple mark front on).
+
+### QA that ran, all local, on one build
+
+QA_RESULTS_V2
+
+### The banned Claude tells, item by item (RULES section 5)
+
+- Serif headline with an italic second half. None, the only serif is her own traced wordmark.
+- Small uppercase kicker with a dash. None. Two lines in wide caps (her story line on the hero, her line on the name),
+  neither sits over a heading.
+- Pill buttons with a sliding arrow. None, every button square. The "A little more Elise" stickers have a 7 px die cut
+  radius because her stickers do, and they're stickers, not buttons in the layout.
+- Cream and indigo chapters taking turns. No, the ground runs once from off white to blue to red.
+- Gradients, glows, overlays on photos. The gradients are lacquer, the light through the doors and the room light under the
+  ball. Captions on photos get a shade only where the words sit. No overlay darkens any photo.
+- Count up numbers with a source line under each. None count up. 570+ and 125 are windows onto her photo and film.
+- Three pillars, four facts with top rules, chips, a marquee, a floating pill, cute illustration scenes. None. The tabs
+  are the planner's index tabs and the pins are notes on a photo, the two places that come closest, flagged here.
+- Rounded cards with soft shadows. The planner's card under the lens is a square paper sheet with a hard short shadow,
+  held over a photo. Flagged.
+- Honey v1's tells. One texture under every section, no, each chapter has its own material. A kicker over every heading,
+  no. The same two column grid, still present in four places (hero, the date, the tabs, the text under her nights)
+  between full bleed scenes, flagged. Photos in boxes, the main photos are full bleed, two small Cinco Cero photos sit
+  beside Jan Geysen's words. Motion only fades, no. Her vibe, the wit lines, stickers, lacquer and the fiesta light.
+  Every visitor has a path and an action, yes.
+- Screenshots beside v1 (scratchpad honey-v2/shots/v1-v2.jpg). v1 is one pale marble page of serif italic and small boxed
+  photos. v2 is the lacquer HH, the doors, the figures with her film, the stickers and the ball. Those are the screens
+  someone would screenshot.
+
+### Hiccups, each with the rule it leaves
+
+Written up for everyone in docs/build-and-deck.md, "Honey It's Handled v2".
+
+### Rebuild
+
+`/usr/local/bin/python3 build-v2/build.py` writes site-v2/ (deterministic, the same hash twice). One time steps, already
+run, `art/prep_v2.py` (needs the originals in the session scratchpad, rembg and opencv, each cut out runs in its own
+process), `art/figures.py` (the 125, 570+ and 17 outlines from Mona Sans), `art/ball_still.py` (the still mirror ball).
+QA scripts qa/*-v2.js, server `python3 -m http.server 8741 -d <abs path to site-v2>`.
+
 ## The prototype (written by the prototype agent, 26 Oct 2026)
 
 **Flag first, budget.** A one person consumer business, a sole trader since 1 January 2026 (KBO 1032.568.265), one paid
