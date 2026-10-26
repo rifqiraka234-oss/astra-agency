@@ -107,7 +107,7 @@ DAYS = (DEF['wedding'] - TODAY).days
 # ------------------------------------------------------------------ head and header
 def head():
     title = 'Honey it’s Handled, wedding and event planner in Antwerp'
-    desc = 'Elise plans weddings here and abroad, private celebrations and company events from Antwerp. Tell her what you’re celebrating and she’ll handle the rest.'
+    desc = 'Elise plans weddings here and abroad, and private and company events, from Antwerp. Tell her what you’re celebrating and she’ll handle the rest.'
     return f'''<!doctype html>
 <html lang="en-GB" data-path="wedding" data-help="full" data-place="local">
 <head>
@@ -124,7 +124,7 @@ def head():
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<p class="note">Prototype by Astra agency for Honey it’s Handled. Not her live site, nothing here is sent.</p>
+<aside class="note" aria-label="About this page">Prototype by Astra agency for Honey it’s Handled. Not her live site, nothing here is sent.</aside>
 <header class="hdr" data-hdr>
   <a class="logo" href="#top" aria-label="Honey it’s Handled, back to the top">{mark(WORD, WW, WH, 'word')}</a>
   <nav class="nav" aria-label="Main">
@@ -224,20 +224,20 @@ def details():
     return f'''<section class="det" id="details" data-tone="light" aria-labelledby="h-det">
   <div class="wrap det-head">
     <h2 id="h-det">Every detail considered.</h2>
-    <p class="det-l"><span class="q">{esc(D["lines"]["mine"])}</span> Move the lens over her room, or flip the whole photo.</p>
+    <p class="det-l"><span class="q">{esc(D["lines"]["mine"])}</span> Move the lens over the room, or flip the whole photo.</p>
     <button type="button" class="btn ghost" data-peek aria-pressed="false"><span data-o="peek">See what Elise sees</span></button>
   </div>
   <div class="lens" data-lens style="--lx:62%;--ly:46%;--lr:150px">
     <div class="lens-img img-tent" style="--ar:{tent[0] / tent[1]:.4f}">
       <div class="lay under">{pic("tent-cy", "", sizes="(max-width: 700px) 900px, 1600px")}<div class="pins">{pins(TENT_PINS)}</div></div>
-      <div class="lay top">{pic("tent", "Cinco Cero, the tent under string lights with a mirror ball, the bar, the standing tables and the buffet set out, nobody there yet", sizes="(max-width: 700px) 900px, 1600px")}</div>
+      <div class="lay top">{pic("tent", "Cinco Cero, the tent under string lights with a mirror ball, the bar, the standing tables and the buffet set out and empty", sizes="(max-width: 700px) 900px, 1600px")}</div>
     </div>
     <div class="lens-img img-hall" style="--ar:{hall[0] / hall[1]:.4f}">
       <div class="lay under">{pic("hall-cy", "", sizes="(max-width: 700px) 700px, 1067px")}<div class="pins">{pins(HALL_PINS)}</div></div>
       <div class="lay top">{pic("hall", "The Handelsbeurs in Antwerp set for the Pro League Awards, its galleries and iron roof with the lighting rigged", sizes="(max-width: 700px) 700px, 1067px")}</div>
     </div>
     <div class="ring" aria-hidden="true"></div>
-    <aside class="plan" aria-label="Your plan, as Elise would write it">
+    <div class="plan" role="group" aria-label="Your plan, as Elise would write it">
       <p class="plan-h mono">Honey it’s Handled</p>
       <p class="plan-t" data-o="planWhat">Your wedding</p>
       <p class="plan-r mono"><span data-o="planDate">{short_date(DEF["wedding"])}</span> · <span data-o="planPlace">here in Belgium</span></p>
@@ -249,7 +249,7 @@ def details():
         <li><span>Plan B</span><span>ready</span></li>
         <li><span>Plan B for plan B</span><span>ready</span></li>
       </ul>
-    </aside>
+    </div>
     <p class="cap mono" data-o="lensCap">Cinco Cero, a 50th birthday, 28 August 2026</p>
   </div>
 </section>
@@ -295,7 +295,7 @@ def elise():
   <div class="eli-stage" data-eli>
     <h2 id="h-eli" class="eli-h">{esc(n["typeA"])}</h2>
     <figure class="stk s-book" style="--d:.9;--r:-5deg">{cutout("elise-book", "Elise Laeven with a book balanced on her head, a laptop in one hand and a glass and a pair of heels in the other", "(max-width: 700px) 46vw, 30vw", "stk-i")}</figure>
-    <figure class="stk s-phone" style="--d:.5;--r:4deg">{cutout("elise-phone", "Elise on her phone with her gold planner under her arm", "(max-width: 700px) 40vw, 22vw", "stk-i")}</figure>
+    <figure class="stk s-phone" style="--d:.5;--r:4deg">{cutout("elise-phone", "Elise on her phone with a gold folder under her arm", "(max-width: 700px) 40vw, 22vw", "stk-i")}</figure>
     <figure class="stk s-sit" style="--d:.7;--r:-2deg">{cutout("elise-sit", "Elise sitting, smiling", "(max-width: 700px) 42vw, 24vw", "stk-i")}</figure>
     <figure class="stk s-walk" style="--d:.35;--r:6deg">{cutout("elise-walk", "Elise walking past in a blur", "(max-width: 700px) 30vw, 16vw", "stk-i")}</figure>
   </div>
@@ -366,7 +366,7 @@ def nights():
         <video muted loop playsinline preload="none" poster="media/night-poster.jpg" aria-hidden="true" tabindex="-1"><source src="media/night.webm" type="video/webm"><source src="media/night.mp4" type="video/mp4"></video>
       </div>
       <svg class="fig-line" viewBox="0 0 {f125["w"]} {f125["h"]}" aria-hidden="true" focusable="false"><path d="{f125["d"]}"/></svg>
-      <p class="fig-cap mono">Inside the figures, her own Cinco Cero aftermovie</p>
+      <p class="fig-cap mono">Inside the figures, the Cinco Cero aftermovie from her page</p>
     </div>
     <div class="wrap night-t two">
       <div>
@@ -452,10 +452,10 @@ def footer():
       <p>Rather call?<br><a href="tel:{c["phoneHref"]}">{c["phone"]}</a></p>
       <p>Follow along<br><a href="{c["instagram"]}" rel="noopener">Instagram</a> · <a href="{c["linkedin"]}" rel="noopener">LinkedIn</a></p>
     </div>
-    <p class="fine">© 2026 Honey it’s Handled, Elise Laeven, Antwerp. Company number {c["kbo"]}. Pro League Awards photos by Kaat DM. Every photo and the film are hers, from honeyitshandled.com. Prototype by Astra agency, October 2026. Nothing on this page is sent.</p>
+    <p class="fine">© 2026 Honey it’s Handled, Elise Laeven, Antwerp. Company number {c["kbo"]}. Pro League Awards photos by Kaat DM. Every photo and the film come from honeyitshandled.com. Prototype by Astra agency, October 2026. Nothing on this page is sent.</p>
   </div>
 </footer>
-<div class="sbar" data-sbar aria-hidden="true"><p class="sbar-t" data-o="bar">{esc(DEF_BAR)}</p><a class="btn" href="#letter" tabindex="-1"><span data-o="cta">{esc(WED["cta"])}</span></a></div>
+<aside class="sbar" data-sbar aria-label="Your enquiry so far" aria-hidden="true"><p class="sbar-t" data-o="bar">{esc(DEF_BAR)}</p><a class="btn" href="#letter" tabindex="-1"><span data-o="cta">{esc(WED["cta"])}</span></a></aside>
 '''
 
 def data_block():

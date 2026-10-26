@@ -205,9 +205,10 @@
     const vh = innerHeight, hb = hdr.getBoundingClientRect().bottom, bt = vh - (sbar.offsetHeight || 64);
     const vis = e => { const r = e.getBoundingClientRect(); return r.width > 0 && r.height > 0 && r.top < bt - 8 && r.bottom > hb + 8 && getComputedStyle(e).visibility !== 'hidden'; };
     const calls = $$('main [data-cta]').filter(e => e.offsetParent !== null && vis(e));
-    const letter = $('#letter'), lr = letter.getBoundingClientRect();
-    const formIn = lr.top < vh * 0.9;
-    const on = !calls.length && !formIn && scrollY > 60;
+    // the bar steps aside for every visible call and for the letter itself, and stays away once it's sealed
+    const fields = S.sent ? [$('[data-sealed]')] : $$('[data-letter] input, [data-letter] textarea, [data-letter] .send');
+    const formIn = fields.some(e => { const r = e.getBoundingClientRect(); return r.top < bt && r.bottom > hb; });
+    const on = !calls.length && !formIn && !S.sent && scrollY > 60;
     sbar.classList.toggle('is-on', on); sbar.setAttribute('aria-hidden', String(!on)); $('a', sbar).tabIndex = on ? 0 : -1;
     const y = hb + 2; let tone = 'light';
     for (const s of tones) { const r = s.getBoundingClientRect(); if (r.top <= y && r.bottom > y) { tone = s.dataset.tone; break; } }
