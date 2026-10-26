@@ -1,4 +1,4 @@
-// Copy audit over every state the BWILD page can show. usage: node bwild-copy.js <base url>
+// Copy audit over every state the BWILD page can show. usage: node bwild-copy.js <base url> [plan]
 const { chromium } = require('playwright');
 const base = process.argv[2].replace(/\/$/, '');
 (async () => {
@@ -10,9 +10,15 @@ const base = process.argv[2].replace(/\/$/, '');
     document.querySelectorAll('details p, .caps li, option, [hidden], noscript').forEach(e => t.push(e.textContent));
     return t.join('\n');
   });
+  const plan = process.argv[3] === 'plan';
   for (const [w, h] of [[1440, 900], [390, 844]]) {
     const p = await (await b.newContext({ viewport: { width: w, height: h } })).newPage();
     await p.goto(base + '/', { waitUntil: 'networkidle' }); all += await grab(p);
+    if (plan) {
+      for (const k of ['tab', 'new', 'bar']) { await p.click(`[data-rt="${k}"]`); all += '\n' + await grab(p); }
+      for (const c of ['london', 'stockholm']) { await p.selectOption('[data-c]', c); all += '\n' + await grab(p); }
+      continue;
+    }
     await p.click('[data-pick="night"]'); all += '\n' + await grab(p);
     for (const c of ['london', 'stockholm', 'barcelona']) { await p.selectOption('#run select', c); all += '\n' + await grab(p); }
     const H = await p.evaluate(() => document.documentElement.scrollHeight);
@@ -26,7 +32,7 @@ const base = process.argv[2].replace(/\/$/, '');
     if (w < 500) { await p.evaluate(() => scrollTo(0, 0)); await p.click('.mbtn'); await p.waitForTimeout(150); all += '\n' + await grab(p); }
   }
   await b.close();
-  require('fs').writeFileSync('bwild-copy.txt', all);
+  require('fs').writeFileSync(process.argv[3] === 'plan' ? 'plan-copy.txt' : 'bwild-copy.txt', all);
   const ours = all.replace(/https?:\/\/\S+/g, ' ').replace(/\b[\w.]+@[\w.]+\b/g, ' ').replace(/\b[\w-]+\.(com|ch|org)\b/g, ' ');
   const lines = [...new Set(ours.split('\n').map(l => l.trim()).filter(Boolean))];
   let flags = 0;

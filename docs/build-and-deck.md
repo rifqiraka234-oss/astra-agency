@@ -930,3 +930,27 @@ and Pirata One stay only as the garment lettering choices.
 | A font swap touches every `font:` shorthand that names a weight, so a plain family replace would have left every headline at 400 in a grotesk | Sweep the rules with a script that rewrites weight, line height and tracking together, sized by the rule's own font size, and grep for the old family names after |
 | The garment text and kit.js both measured the side text and motto in the old fonts | When a family changes, grep the JS for family names too. Fit by measurement only works if it measures the font that renders |
 | The plan's screenshots of the kit page showed the old type | Screenshots of our own pages inside another artefact are build inputs. Retake them after any visual change |
+
+### BWILD, a launch site and a plan with the cost (26 Oct 2026)
+
+Lupo said yes to the SKETCH and asked for "your vision and expected cost". Raka, "lets do it. dont repeat wrong
+mistakes". The Saavedra v3 recipe with every Fae Club v3 route rule from the first build. Their Instagram question
+"Sunrise or night?" is the hero's input, the sky is the sun's real position at the runner's minute, headlights come up a
+dark road and the logo's three slashes flare at the BFU's 140 m, a year of daylight counts their dark runs, and the €1
+prints a race bib. The plan is the first to carry Astra's own price, one recommendation and one smaller start, because
+the lead asked for the cost in writing. State and URLs in state/prototypes/bwild/handover.md.
+
+| Hiccup | Rule |
+|---|---|
+| The research said "no Kickstarter page found" off a Kickstarter search. Their own SAVE THE DATE button links to a live prelaunch page | Before any absence claim about their launch, store or booking, read the hrefs of every button on their own pages. A search of a third party site is never the control |
+| A grep of six pages for a presale href found none, and "the site never links to the presale" was one line away. The bar's link lives in Squarespace's announcementBarSettings JSON | On a site builder, read the settings JSON in the home HTML (announcement bar, popup, footer) as well as the hrefs. Squarespace keeps the bar's link there |
+| The film check ran after the test had scrolled the whole page, so every film had loaded and the check failed for the wrong reason. Fixing the test then showed a real fault, all nine films loaded at the top | Test lazy loading on a fresh page before any scroll. An IntersectionObserver fires once for every target on observe with isIntersecting false, so the wake handler must do nothing for an unwoken element that isn't intersecting |
+| Mona Sans draws a slashed zero in its tabular figures, so "90" read as "9θ" | Use proportional figures for display numbers. Where a number changes in place, measure the widest value across its whole range in the page and fix the box to that width in em |
+| The sticky bar hid for the whole reserve section, so the header button was the only action on screen there. Then it sat on top of the email field | The bar steps aside for every visible element of the action itself (any reserve link and the form), not for a section's bounds. The walk counts, at every half screen, the bar, the in page actions and the header button |
+| The RESERVED stamp at top:61% covered "GENEVA" in the run line at 320 and 390 | Anchor an overlay to the thing it sits on (bottom of the strip), and test overlap mechanically at 320, 390, 768, 1024 and 1440 with getBoundingClientRect |
+| The lit panel at brightness(4.2) became a flat white box with a torn edge where the gathered hem fell under the mask threshold | Light reflective material at about 1.5 so the folds stay, and smooth a mask's ragged edge with a median filter over its per column contour |
+| A film inside three floating slashes beside the road was unreadable and sat apart from the scene | One object on the road. A film that can't be read at its size is cut from the scene, not shrunk into it |
+| Chromium got a 404 on the Adventure Vest page while curl got 200 with the product | tools/render-via-curl.js before any claim, and say in the handover that the 404 is ours |
+| check-drafts failed the delivery on €2,500, because a currency figure in a message must be a loss figure | A quote lives on the plan page, the message says the cost is there. Don't argue a gate by hand |
+| The plan's chapters alternated cream and black, the RULES section 5 tell | One bright chapter only, the figure that carries the argument (here LaunchBoom's 30×), everything else on their night |
+| Another session marked Lupo "waiting on Raka's price" while this one was building for him | The moment a session takes a lead's next message, append a queue row saying so and push, so the other session doesn't draft a second reply |

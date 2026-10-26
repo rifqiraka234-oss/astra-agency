@@ -1,0 +1,163 @@
+{
+ "_note": "Every figure here was reopened on 26 Oct 2026. How each was checked is in ../research/facts.md, the section 'Rechecked for the plan'. The price is Raka's call and is flagged in the handover.",
+ "meta": {
+  "title": "BWILD, the plan",
+  "desc": "The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.",
+  "today": "26 Oct 2026"
+ },
+ "cover": {
+  "by": "Prepared by Astra for Lupo Benatti, October 2026",
+  "h": "One site for the launch and the vest you sell today.",
+  "lede": "Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.",
+  "found": [
+   {"t": "The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.", "src": "bwildoutdoors.com and presale.bwildoutdoors.com"},
+   {"t": "Neither your Luminous Vest page nor the presale page gives a launch date yet.", "src": "bwildoutdoors.com/bwildluminousvest and presale.bwildoutdoors.com"},
+   {"t": "STREAK_LINE", "src": "Worked out from the sun's position for every day of the next year"}
+  ]
+ },
+ "today": {
+  "h": "Three places for one vest.",
+  "lede": "A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.",
+  "facts": [
+   ["Where the Luminous Vest lives", "Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page"],
+   ["The €1 for 30% off", "On presale.bwildoutdoors.com, opened in a new tab from the bar on your site"],
+   ["The KICKSTARTER tab", "Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer"],
+   ["SAVE THE DATE", "Opens Kickstarter's coming soon page"],
+   ["A first visit", "A popup for 10% off when you sign up, over the home page"],
+   ["The Adventure Vest", "€98 on your shop page, with 5 product reviews"],
+   ["Languages", "English and Italian"]
+  ],
+  "shots": [
+   {"img": "t-home", "cap": "Your home page on a first visit, with the 10% popup"},
+   {"img": "t-lum", "cap": "The KICKSTARTER tab, your Luminous Vest page"},
+   {"img": "t-presale", "cap": "presale.bwildoutdoors.com, where the €1 is taken"},
+   {"img": "t-shop", "cap": "The Adventure Vest, €98"}
+  ],
+  "src": "Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured."
+ },
+ "route": {
+  "h": "The route to the €1.",
+  "lede": "Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.",
+  "routes": {
+   "bar": {
+    "label": "Today, from the bar",
+    "stops": [
+     {"t": "bwildoutdoors.com", "p": "A 10% sign up popup comes first", "k": "pop"},
+     {"t": "The bar", "p": "“The new Luminous Vest is coming /// Learn more”"},
+     {"t": "presale.bwildoutdoors.com", "p": "A second site, in a new tab", "k": "away"},
+     {"t": "Early access", "p": "Email first"},
+     {"t": "€1", "p": "30% off locked", "k": "now"}
+    ],
+    "sum": "Five stops and a second site. The €1 is there, a bar and a new tab away, after a popup for a different offer."
+   },
+   "tab": {
+    "label": "Today, from the KICKSTARTER tab",
+    "stops": [
+     {"t": "bwildoutdoors.com", "p": "A 10% sign up popup comes first", "k": "pop"},
+     {"t": "KICKSTARTER", "p": "In your menu"},
+     {"t": "Your Luminous Vest page", "p": "“Coming soon on Kickstarter”, no date, no €1 offer", "k": "bad"},
+     {"t": "SAVE THE DATE", "p": "Kickstarter's coming soon page", "k": "away"}
+    ],
+    "sum": "Four stops, and the runner leaves for Kickstarter without seeing the 30% off."
+   },
+   "new": {
+    "label": "The new site",
+    "stops": [
+     {"t": "bwildoutdoors.com", "p": "Sunrise or night? and Reserve for €1 on the first screen"},
+     {"t": "Email", "p": "Their run already on the form"},
+     {"t": "€1", "p": "The bib prints, 30% off locked", "k": "now"}
+    ],
+    "sum": "Three stops on one site, from any page, with the price on the first screen."
+   }
+  },
+  "src": "Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype."
+ },
+ "dark": {
+  "h": "Most of a runner's winter starts in the dark.",
+  "lede": "That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.",
+  "use": "The same number is a line for your ads and posts, worked out for the city you're targeting.",
+  "src": "Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset."
+ },
+ "worth": {
+  "h": "Why the €1 belongs on your own site.",
+  "big": "30×",
+  "label": "more likely to convert than an email alone",
+  "lede": "LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.",
+  "src": "launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked."
+ },
+ "built": {
+  "h": "The new site, built around one run.",
+  "lede": "One run carries down the page. The runner picks sunrise or night, sets the time and the city, sees what their year looks like, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights.",
+  "shots": [
+   {"img": "s-hero-d", "h": "Sunrise or night?", "p": "Your own Instagram question opens the site. The answer sets a run time over the real sky in their city at that minute, with the price and Reserve for €1 right under it."},
+   {"img": "s-seen-d", "h": "Headlights behind you", "p": "Scroll and a car comes up the road behind a runner. Your three slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked."},
+   {"img": "s-dark-d", "h": "Their year, counted", "p": "The runner's own time against a year of sunrise and sunset in their city. Every lit mark is a run that starts in the dark, worked out, never typed."},
+   {"img": "s-vest-d", "h": "Your six features", "p": "Urban to trail, without the safety gear look, in your words and with your loops from the presale page."},
+   {"img": "s-paid-d", "h": "Reserve, and the bib prints", "p": "Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent."},
+   {"img": "s-adv-d", "h": "The vest for today", "p": "The Adventure Vest at €98 with the specs, Davide's review and a cart, for the runner who wants a vest now."}
+  ],
+  "phones": [
+   {"img": "s-hero-m", "alt": "The new BWILD home on a phone, a 06.30 sunrise run in Geneva"},
+   {"img": "s-paid-m", "alt": "The race bib after reserving, on a phone"}
+  ]
+ },
+ "under": {
+  "h": "What runs underneath.",
+  "lede": "We'd keep what already works for you and put it in one place.",
+  "items": [
+   ["One site", "bwildoutdoors.com, built from this prototype, in English and Italian like today."],
+   ["The €1 reservation", "LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site."],
+   ["The Adventure Vest", "Sold through Stripe Checkout, with your shipping and the 30 day returns as now."],
+   ["The countdown", "Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter."],
+   ["The dark run counter", "Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update."],
+   ["One offer at a time", "A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1."]
+  ],
+  "src": "launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026."
+ },
+ "cost": {
+  "h": "€2,500 for the whole site.",
+  "lede": "One price for everything in this plan, half to start and half when it's live.",
+  "price": 2500,
+  "items": [
+   "The site from this prototype, in English and Italian",
+   "The headlights, the dark run counter and the bib",
+   "The €1 reservation on your own domain, with LaunchKit",
+   "The countdown and the switch on launch day",
+   "The Adventure Vest checkout",
+   "Every old address redirected, and your Instagram and TikTok links pointed at the new pages",
+   "Reservations and orders measured from the first day"
+  ],
+  "small_h": "Or start with the launch page, €900.",
+  "small_p": "The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.",
+  "not": "Not in the price, LaunchKit's and Stripe's own fees and your ad spend."
+ },
+ "roadmap": [
+  {"when": "Weeks 1 to 2", "h": "The launch page", "items": ["The €1 reservation on your domain", "The countdown, the headlights and the dark run counter", "Live on bwildoutdoors.com"]},
+  {"when": "Weeks 3 to 5", "h": "The whole site", "items": ["The Adventure Vest checkout", "Your story, community and FAQ carried over, in English and Italian", "Every old address redirected"]},
+  {"when": "Week 6", "h": "Ready for launch day", "items": ["The switch to Kickstarter tested", "The first report on reservations"]}
+ ],
+ "after": "On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.",
+ "kpis": [
+  {"h": "Reservations a week", "where": "LaunchKit"},
+  {"h": "Share of visitors who reserve", "where": "Site analytics"},
+  {"h": "Reservations that came from Instagram", "where": "Site analytics"},
+  {"h": "Adventure Vest orders", "where": "Stripe"},
+  {"h": "Reservations that back on launch day", "where": "Kickstarter and LaunchKit"}
+ ],
+ "team": {
+  "lede": "Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.",
+  "brands": "The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.",
+  "disclosure": "Built by Amwisesa, Astra's development partner, often through the brand's own agency.",
+  "people": [
+   {"name": "Raka Mulya", "role": "Go to market architect and entrepreneur. Your contact at Astra.", "bio": "Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.", "li": "https://www.linkedin.com/in/raka-mulya-b92885196/"},
+   {"name": "Joshua van Zeelt", "role": "Founder of Astra Agency and JML Agency", "bio": "Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.", "li": "https://www.linkedin.com/in/joshua-van-zeelt/"}
+  ]
+ },
+ "end": {
+  "h": "Next, a call.",
+  "lede": "Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.",
+  "cta": "Email Raka",
+  "mail": "mailto:rifqiraka234@gmail.com?subject=BWILD%20plan",
+  "foot": "Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath."
+ }
+}

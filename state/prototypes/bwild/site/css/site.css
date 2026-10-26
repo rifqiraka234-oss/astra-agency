@@ -243,7 +243,7 @@ html[data-hdr=day] .hdr .btn.solid{background:var(--ink);color:var(--white);bord
 .bib.paid{transform:rotate(0)}
 .bib.paid .bib-strip::after{animation:glint 1.3s .35s var(--ease) both}
 @keyframes glint{0%{left:-40%;opacity:1}100%{left:120%;opacity:1}}
-.bib-stamp{position:absolute;right:18px;top:61%;font:700 15px/1 var(--sans);font-stretch:118%;text-transform:uppercase;letter-spacing:.08em;color:var(--ember-t);border:2px solid var(--ember-t);padding:8px 12px;transform:rotate(-8deg) scale(1.6);opacity:0;transition:transform .45s var(--ease),opacity .2s}
+.bib-stamp{position:absolute;right:18px;bottom:clamp(36px,4.2vw,50px);font:700 15px/1 var(--sans);font-stretch:118%;text-transform:uppercase;letter-spacing:.08em;color:var(--ember-t);border:2px solid var(--ember-t);padding:8px 12px;transform:rotate(-8deg) scale(1.6);opacity:0;transition:transform .45s var(--ease),opacity .2s}
 .bib.paid .bib-stamp{opacity:1;transform:rotate(-8deg) scale(1)}
 .rs-done{margin-top:22px;font-size:16px;max-width:46ch}
 @media (max-width:980px){.rs-g{grid-template-columns:minmax(0,1fr)}.bib-w{position:relative;top:0}}
@@ -333,4 +333,4 @@ html[data-hdr=day] .hdr .btn.solid{background:var(--ink);color:var(--white);bord
 .rm .bib,.rm .bib-stamp,.rm .sbar,.rm .disc,.rm .sky,.rm .stars{transition:none}
 .rm .bib.paid .bib-strip::after{animation:none}
 .ftr a,.fq a{overflow-wrap:anywhere}
-@media (max-width:360px){.time{font-size:84px}.clock{gap:8px}.step{width:44px;height:44px}}
+@media (max-width:360px){.time{font-size:84px}.clock{gap:8px}.step{width:44px;height:44px}.bib-stamp{font-size:11px;padding:5px 8px;right:10px;bottom:24px}}

@@ -53,7 +53,7 @@ For the plan, he asked for "expected cost" himself. Flag for Raka at the top of 
   BULK" (phone, keys, gels, "Quick-grab pockets", "Secure zip pockets"), "URBAN TO TRAIL A sleek vest for city streets and
   wild trails— stay visible without the “safety gear” look." "JOIN 1000+ RUNNERS". "HOW IT WORKS 1. Enter your email for
   early access 2. Secure 30% with only €1 desposit 3. Pledge on Kickstarter at launch." (their typo, desposit)
-- **No Kickstarter page found.** kickstarter.com search for bwild through fetch-walled.py, a web search for "BWILD
+- **CORRECTED 26 Oct, the plan pass. There IS a Kickstarter page, read the next line.** The old note said kickstarter.com search for bwild through fetch-walled.py, a web search for "BWILD
   Luminous Vest Kickstarter", nothing. The presale page's earlier "expected by end of Aug 26" (our 23 Oct gate) has
   passed. The launch date is unknown, so any countdown in the build is an example date, labelled.
 
@@ -98,3 +98,37 @@ For the plan, he asked for "expected cost" himself. Flag for Raka at the top of 
   astral library in QA. Nothing about daylight is typed in.
 - **Industry news**, tools/news.py running vest, GearJunkie 22 Oct 2026 "Half the Price, All the Features: Terignota
   Valhalla Running Vest Review". Price pressure in the category, plan only.
+
+
+## Rechecked for the plan, 26 Oct 2026, afternoon
+
+- **The Kickstarter page exists, the old "no Kickstarter page found" was wrong.** Their own Luminous Vest page's SAVE THE
+  DATE links to https://www.kickstarter.com/projects/bwildluminousvest/bwild-luminous-vest. Opened through
+  tools/fetch-walled.py, 200, title "BWILD Luminous Vest — Be Visible at Night by BWILD", og:title "Coming soon: BWILD
+  Luminous Vest — Be Visible at Night", page data project_prelaunch_activated true, project_state submitted, country CH.
+  The body is drawn by script, so no date and no follower count were read. Never claim either. The search that missed it
+  searched Kickstarter, the link was on their own page. Lesson, read the CTA hrefs on their own pages before any absence.
+- **The announcement bar on every page of bwildoutdoors.com**, "THE NEW LUMINOUS VEST IS COMING /// LEARN MORE", has
+  clickthroughUrl https://presale.bwildoutdoors.com/ with newWindow true (Squarespace announcementBarSettings in the home
+  HTML). A grep of hrefs on six pages found no presale link, because the bar's link lives in that JSON, not in an href.
+  So the site DOES link to the presale, from the bar. Never write that it doesn't.
+- **The KICKSTARTER tab** goes to /bwildluminousvest. Page text, "THE WORLD’S BRIGHTEST VEST We are working hard to launch
+  this new, unique vest that glows day & night. COMING SOON ON KICKSTARTER SAVE THE DATE". No "€1" and no "30%" on it,
+  same extraction finds both on the presale page (control).
+- **A popup on load**, "SIGN UP AND GET 10% OFF", popupOverlaySettings showOnTimer true, timerDelay 0, showOnAllPages
+  true. Screenshot 1440 by 900 shows it over the home page.
+- **The presale page now opens "RUN SAFELY AT NIGHT"** (it read "BE VISIBLE AT NIGHT" on the earlier pass). The text
+  "expected by end of Aug 26" is gone and no date is on it. 25 assets fetched through curl_cffi and rendered offline,
+  0 broken images in view. Still "JOIN 1000+ RUNNERS", the three steps, "desposit".
+- **The Adventure Vest page in Chromium returns 404, ours.** curl gets 200, 292,319 bytes, age 5185, every variant.
+  tools/render-via-curl.js, curl errors 0, the page renders, "€98.00", "5 Product Reviews", Davide Leporati's quote.
+  Never say their shop is broken.
+- **LaunchBoom, opened at source**, https://www.launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list,
+  "we asked emails to deposit $1 to lock in the best discount possible, after they gave us their email. This simple
+  addition resulted in a list of people that were 30 times more likely to convert on average, as opposed to people who
+  just gave us their email." Their claim about their own funnel, labelled so.
+- **LaunchKit runs on the brand's own domain**, https://www.launchboom.com/launchkit/, "so you can build your funnel on
+  your own domain. We integrate with your payment processing and email marketing software, so payments and
+  communications always go directly to you. yourbrand.com /reserve Your domain". The presale page's footer links to
+  LaunchKit and it loads a Facebook pixel script.
+- **Instagram bio link, unknown.** instagram.com/bwildnow answered 429 through fetch-walled.py. Never name where it points.

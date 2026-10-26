@@ -13,7 +13,7 @@ const base = process.argv[2].replace(/\/$/, '');
     await p.waitForTimeout(1200);
     for (const at of ['end', 'top', 'seen']) {
       if (at === 'top') await p.evaluate(() => scrollTo(0, 0));
-      if (at === 'seen') await p.evaluate(() => { const s = document.querySelector('#seen'); scrollTo(0, s.offsetTop + s.offsetHeight * 0.5); });
+      if (at === 'seen') await p.evaluate(() => { const s = document.querySelector('#seen') || document.querySelector('#dark'); scrollTo(0, s.offsetTop + s.offsetHeight * 0.5); });
       await p.waitForTimeout(500);
       await p.addScriptTag({ content: AXE });
       const r = await p.evaluate(async () => (await axe.run(document, { runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'] })).violations.map(v => ({ id: v.id, impact: v.impact, n: v.nodes.length, ex: v.nodes.slice(0, 12).map(n => n.target.join(' ') + ' :: ' + (n.failureSummary || '').split('\n').slice(1, 2).join('')) })));
