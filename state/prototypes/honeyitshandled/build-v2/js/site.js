@@ -72,8 +72,8 @@
     $$('input[name="path"]').forEach(i => { i.checked = i.value === path; });
     out('cta', P[path].cta);
     out('whenQ', P[path].when);
-    const big = c.noDate ? 'Sometime in ' + c.year : bigDate(c.date);
-    out('weekday', c.noDate ? 'No date yet' : WD[c.date.getDay()]);
+    const big = c.noDate ? String(c.year) : bigDate(c.date);
+    out('weekday', c.noDate ? 'No date yet, sometime in' : WD[c.date.getDay()]);
     out('dateBig', big);
     if (flip && big !== lastBig && !RM) { const e = $('.dd'); e.classList.remove('flip'); void e.offsetWidth; e.classList.add('flip'); }
     lastBig = big;
@@ -92,7 +92,7 @@
     // the planner
     const h = new Set(held());
     $$('.tab').forEach(b => b.setAttribute('aria-pressed', String(h.has(+b.dataset.tab))));
-    $('[data-planner]').style.setProperty('--held', c.help === 'day' ? '0' : (h.size / 17).toFixed(4));
+    $('#tabs').style.setProperty('--held', c.help === 'day' ? '0' : (h.size / 17).toFixed(4));
     out('tabsQ', path === 'company' ? 'How should Elise work with you?' : 'How much should Elise take on?');
     out('tabCount', c.help === 'day' ? 'You hold all 17. Elise takes the day itself.' : `Elise holds ${h.size} of 17.`);
     out('tabsHint', (c.help === 'full' || c.help === 'whole') ? 'Tap a tab to keep it yourself.' : c.help === 'day' ? 'Tap a tab to hand it over as well.' : h.size ? 'Tap a tab to take it back.' : 'Tap the tabs she should take.');

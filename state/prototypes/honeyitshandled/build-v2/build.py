@@ -175,7 +175,7 @@ def when():
   <div class="wrap when-g">
     <div class="when-q">
       <h2 id="h-when" data-o="whenQ">{esc(WED["when"])}</h2>
-      <p class="date-big" aria-live="polite"><span class="dw" data-o="weekday">{WD[d.weekday()]}</span> <span class="dd" data-o="dateBig">{big_date(d)}</span></p>
+      <p class="date-big" aria-live="polite" data-big><span class="dw" data-o="weekday">{WD[d.weekday()]}</span> <span class="dd" data-o="dateBig">{big_date(d)}</span></p>
       <p class="date-n mono" data-o="dateCount">{DAYS} days from today</p>
       <div class="date-ctl">
         <button type="button" class="step" data-step="-7" aria-label="A week earlier">{chev(0)}</button>
@@ -260,10 +260,9 @@ def tabs():
     lis = ''.join(f'<li style="--i:{i}"><button type="button" class="tab" data-tab="{i}" aria-pressed="true"><span>{esc(t)}</span></button></li>' for i, t in enumerate(TABS))
     def help_set(path, default):
         return ''.join(f'''<label class="hopt"><input type="radio" name="help-{path}" value="{h["id"]}"{" checked" if h["id"] == default else ""}><span class="hn">{esc(h["name"])}</span><span class="hl">{esc(h["line"])}</span></label>''' for h in P[path]['help'])
-    return f'''<section class="tabs" id="tabs" data-tone="blue" aria-labelledby="h-tabs">
+    return f'''<section class="tabs" id="tabs" data-tone="blue" aria-labelledby="h-tabs" style="--held:1">
   <div class="wrap tabs-g">
-    <div class="planner" data-planner style="--held:1">
-      <div class="seventeen" aria-hidden="true"><svg class="sv-o" viewBox="0 0 {FIG["17"]["w"]} {FIG["17"]["h"]}" focusable="false"><path d="{FIG["17"]["d"]}"/></svg><svg class="sv-f" viewBox="0 0 {FIG["17"]["w"]} {FIG["17"]["h"]}" focusable="false"><path d="{FIG["17"]["d"]}"/></svg></div>
+    <div class="planner" data-planner>
       <div class="pl-book" aria-hidden="true">
         <div class="pl-pages"></div>
         <div class="pl-cover">{mark(HH, HW, HHt, 'pl-hh')}<span class="pl-word">{mark(WORD, WW, WH, 'pl-wm')}</span></div>
@@ -277,7 +276,10 @@ def tabs():
       <fieldset class="help pp p-wedding"><legend class="sr">The help you’d like</legend>{help_set("wedding", "full")}</fieldset>
       <fieldset class="help pp p-private"><legend class="sr">The help you’d like</legend>{help_set("private", "whole")}</fieldset>
       <fieldset class="help pp p-company"><legend class="sr">The help you’d like</legend>{help_set("company", "whole")}</fieldset>
-      <p class="count"><b data-o="tabCount">Elise holds 17 of 17.</b> {esc(D["tabsLine"])}</p>
+      <div class="count-row">
+        <div class="seventeen" aria-hidden="true"><svg class="sv-o" viewBox="0 0 {FIG["17"]["w"]} {FIG["17"]["h"]}" focusable="false"><path d="{FIG["17"]["d"]}"/></svg><svg class="sv-f" viewBox="0 0 {FIG["17"]["w"]} {FIG["17"]["h"]}" focusable="false"><path d="{FIG["17"]["d"]}"/></svg></div>
+        <p class="count"><b data-o="tabCount">Elise holds 17 of 17.</b> {esc(D["tabsLine"])}</p>
+      </div>
       <p class="hint mono" data-o="tabsHint">Tap a tab to keep it yourself.</p>
       <a class="btn" href="#letter" data-cta><span data-o="cta">{esc(WED["cta"])}</span></a>
     </div>

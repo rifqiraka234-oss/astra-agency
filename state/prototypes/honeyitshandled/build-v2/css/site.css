@@ -81,8 +81,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 .path input:checked+span::before{background:var(--red);border-color:var(--red);transform:rotate(45deg) scale(.82)}
 .path input:focus-visible+span{outline:2px solid var(--red);outline-offset:4px}
 .hero-sub{max-width:36ch;color:var(--muted);margin-bottom:26px}
-.seventeen{position:absolute;right:-2%;top:50%;width:min(46%,340px);transform:translateY(-50%);z-index:0}
-.seventeen svg{width:100%;height:auto}
+.count-row{display:flex;align-items:flex-end;gap:22px;margin-bottom:8px}
+.seventeen{position:relative;flex:none;height:clamp(96px,10vw,150px)}
+.seventeen svg{height:100%;width:auto}
 .sv-o path{fill:none;stroke:rgba(31,69,82,.35);stroke-width:2.5;vector-effect:non-scaling-stroke}
 .sv-f{position:absolute;inset:0}
 .sv-f path{fill:rgba(150,33,34,.9)}
@@ -108,7 +109,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 .when h2{font-size:clamp(34px,4.2vw,64px);color:var(--ink);margin-bottom:22px}
 .date-big{margin:0;color:var(--red);line-height:.84}
 .date-big .dw{display:block;font-size:clamp(18px,1.6vw,22px);font-weight:520;letter-spacing:-.01em;color:var(--ink);margin-bottom:6px}
-.date-big .dd{display:block;font-size:clamp(62px,11.2vw,196px);font-weight:760;font-stretch:75%;letter-spacing:-.025em;white-space:nowrap}
+.when-q{container-type:inline-size}
+.date-big .dd{display:block;font-size:min(13.6cqi,196px);font-weight:760;font-stretch:75%;letter-spacing:-.025em;white-space:nowrap}
 .dd.flip{animation:flip .45s cubic-bezier(.2,.9,.2,1)}
 @keyframes flip{from{transform:translateY(.18em);opacity:.2;filter:blur(3px)}to{transform:none;opacity:1;filter:none}}
 .date-n{margin:14px 0 22px;color:var(--muted)}
@@ -191,7 +193,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   .plan-t{font-size:20px}
   .plan-r{font-size:12px}
   .cap{bottom:auto;top:12px}
-  .seventeen{display:none}
+
 }
 
 /* 4. the seventeen tabs */
@@ -230,7 +232,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hopt:has(input:checked) .hn{color:var(--red)}
 .hopt:has(input:checked) .hl{max-height:6em;opacity:1;margin-top:6px}
 .hopt:has(input:focus-visible){outline:2px solid var(--red);outline-offset:3px}
-.count{font-size:17px;margin-bottom:6px}
+.count{font-size:17px;margin-bottom:6px;max-width:30ch}
 .count b{font-weight:640;color:var(--red)}
 .hint{margin-bottom:24px;color:var(--inkb)}
 @media (max-width:860px){
