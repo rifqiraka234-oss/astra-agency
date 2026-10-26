@@ -1,0 +1,119 @@
+{
+ "built": "2026-10-26",
+ "readAt": "Her site reread 26 Oct 2026, curl 19.44 to 19.45 UTC and Chromium 19.47 to 19.49 UTC, all nine pages in her sitemap (lastmod 26 Oct). Her Instagram through /embed/ at 19.47 UTC (137 followers, posts_count 7, the newest six captions), and her 17 June brand reveal through /p/DZsg-pLCDT6/embed/captioned/ at 19.47 UTC. Raw HTML and text in the session scratchpad honey-v3/live.",
+ "colours": {
+  "ivory": "#F6F0E6", "card": "#FBF7F0", "ink": "#2A2420", "ink2": "#5B524B",
+  "blue": "#D3E9EE", "blueInk": "#1D3A48", "red": "#962122", "redInk": "#7E1A1C",
+  "source": "her blue rgb(211,233,238) and red rgb(150,33,34) are her Wix palette variables (v1, v2). Ivory and the inks are ours, set to her off white."
+ },
+ "lines": {
+  "hero": {"t": "For the moments you’ll never want to forget.", "src": "/ (home), heading FOR THE MOMENTS YOU'LL NEVER WANT TO FORGET., set in sentence case"},
+  "cta": {"t": "Be one of our first couples", "src": "/ (home), announcement bar SAYING ‘I DO’ SOON? BE ONE OF OUR FIRST COUPLES & ENJOY AN EXCLUSIVE LAUNCH OFFER."},
+  "offerTitle": {"t": "Will you be one of our first ‘I do’?", "src": "/weddings, EXCLUSIVE LAUNCH OFFER, WILL YOU BE ONE OF OUR FIRST 'I DO'?"},
+  "offerText": {"t": "We’re looking for a few special couples to become part of the very first Honey it’s Handled weddings. As one of our first couples, you’ll receive an exclusive launch offer on our wedding planning service, in exchange for allowing us to capture and share your celebration as part of our Honey it’s Handled story.", "src": "/weddings, EXCLUSIVE LAUNCH OFFER, word for word, 'recieve' fixed"},
+  "offerYears": {"t": "Saying ‘I do’ in 2027 or 2028? We’ll love to hear all about your plans.", "src": "/weddings, under the launch offer, word for word"},
+  "palette": {"t": ["Something Off-White.", "Something Blue.", "Something Red."], "src": "Instagram, 17 June 2026, her brand reveal, 'And meet the palette: Something Off-White. Something Blue. Something Red.'"},
+  "off": {"t": "From the first idea to the final dance, every detail thoughtfully considered.", "src": "/ (home), 01 Weddings, LOCAL & DESTINATION, word for word"},
+  "answers": {"t": "Don’t worry if you don’t have all the answers yet. That’s what I’m here for.", "src": "/contact, A FEW DETAILS FIRST., word for word"},
+  "blue": {"t": "I think ahead, so you don’t have to.", "src": "/ (home), MEET ELISE heading I THINK AHEAD, SO YOU DON'T HAVE TO., sentence case"},
+  "tabs": {"t": "Usually found with 17 tabs open.", "src": "/about, A LITTLE MORE ELISE, 'Usally found' and 'with 17 tabs open.', the typo fixed"},
+  "helpTitle": {"t": "How I can help", "src": "/weddings, WEDDING PLANNING SERVICES, HOW I CAN HELP"},
+  "red": {"t": "The details are mine, the moment is yours.", "src": "/ (home), THE HONEY PHILOSOPHY, sentence case"},
+  "dance": {"t": "You say ‘I do’. I’ll handle the rest.", "src": "/weddings, the last line, YOU SAY 'I DO'. I'LL HANDLE THE REST."},
+  "typeA": {"t": "Type A, so you don’t have to be.", "src": "Instagram, 17 June 2026, her brand reveal, word for word"},
+  "intro": {"t": "I’m Elise, founder, planner and the person behind Honey it’s Handled.", "src": "/ (home), MEET ELISE, word for word"},
+  "believe": {"t": "I believe the best events aren’t the ones where you notice how perfectly everything is organised. They’re the ones where you don’t have to think about it at all.", "src": "/ (home), MEET ELISE, word for word"},
+  "years": {"t": "Before starting Honey it’s Handled, I spent 5 years managing events and bringing together people, suppliers, timings, budgets and approximately a thousand moving parts.", "src": "/about, MEET ELISE, word for word"},
+  "tell": {"t": "Tell me everything.", "src": "/ and /contact, the form heading"},
+  "pinterest": {"t": "Whether there’s already a date, a Pinterest board with 847 pins or simply an idea you can’t stop thinking about, I’d love to hear about it.", "src": "/ (home), above the form, word for word"},
+  "handled": {"t": "Consider it handled", "src": "/ and /contact, the send button CONSIDER IT HANDLED"},
+  "nextTitle": {"t": "What happens next?", "src": "/contact, WHAT HAPPENS NEXT?"},
+  "foundQ": {"t": "How did you find Honey, it’s Handled?", "src": "/contact, the form"},
+  "celebratingQ": {"t": "What are we celebrating?", "src": "/contact, the form"},
+  "email": {"t": "Prefer email?", "src": "footer of every page"},
+  "phone": {"t": "Rather call?", "src": "footer of every page"}
+ },
+ "help": [
+  {"id": "full", "name": "Full planning", "line": "From finding the right setting and bringing together a dream team of suppliers, to timelines, budgets and all those tiny details no one else thinks about, I’m there to bring it all together.", "src": "/weddings, THE BEST WEDDINGS DON'T FEEL PLANNED. THEY FEEL LIKE YOU., word for word. Her own full planning line uses 'journey', on our banned list, so this line of hers from the same page sits under Full planning, our placing"},
+  {"id": "partial", "name": "Partial planning", "line": "Already on your way, but need a little extra support? I’ll step in where needed and help bring it all together.", "src": "/weddings, 02 PARTIAL PLANNING, word for word"},
+  {"id": "day", "name": "Wedding day coordination", "line": "You’ve planned it all, now it’s time to hand it over. I’ll make sure everything runs smoothly, so you can be fully present.", "src": "/weddings, 03 WEDDING DAY COORDINATION, word for word"}
+ ],
+ "lights": [
+  ["The date", "/contact, 'The date, the place, the people, the Pinterest board'"],
+  ["The place", "/contact"],
+  ["The people", "/contact"],
+  ["The Pinterest board", "/contact and /"],
+  ["The setting", "/weddings, 'finding the right setting'"],
+  ["Suppliers", "/weddings, 'a dream team of suppliers', /cincocero, /pro-league-awards"],
+  ["Timelines", "/weddings, /about 'the timeline open before breakfast'"],
+  ["Budgets", "/weddings, /about"],
+  ["The atmosphere", "/cincocero"],
+  ["The styling", "/cincocero"],
+  ["The flow of the evening", "/cincocero"],
+  ["Logistics", "/pro-league-awards"],
+  ["The guest experience", "/pro-league-awards"],
+  ["The florist", "/about, 'knows where the florist is'"],
+  ["Place cards", "/about, 'notices the missing place card'"],
+  ["Plan B", "/about, 'Non-negotiable a plan B'"],
+  ["Plan B for plan B", "/about, 'a backup plan for the backup plan'"]
+ ],
+ "dayLights": [6, 5, 10, 14, 15, 16],
+ "dayLightsNote": "ours, the six that belong to the day itself, as an example",
+ "offerYears": [2027, 2028],
+ "form": {
+  "celebrating": ["Wedding", "Destination Wedding", "Private Event", "Corporate Event", "Other"],
+  "found": ["Instagram", "Google", "Event", "Referral", "Other"],
+  "src": "the Wix form on / and /contact, options read from the HTML at 19.44 UTC"
+ },
+ "next": [
+  ["You tell me everything.", "Fill me in on what you’re planning."],
+  ["I’ll be in touch.", "If it feels like a match, we’ll arrange a first conversation."],
+  ["We get to know each other.", "We’ll talk through your ideas, priorities and what you need help with."],
+  ["Consider it handled.", "From there, we’ll figure out the best way to make it happen."]
+ ],
+ "nextSrc": "/contact, WHAT HAPPENS NEXT?, word for word",
+ "quote": {
+  "one": "My 50th birthday party has become an incredible memory, thanks to the collaboration with Honey it’s Handled!",
+  "two": "The collaboration with Elise from Honey it’s Handled was amazing, from the initial meeting to the end of the party!",
+  "who": "Jan Geysen",
+  "src": "/cincocero, his signed testimonial, the first two of its three sentences word for word with his exclamation marks, reread 19.45 UTC"
+ },
+ "events": {
+  "title": {"t": "Events, beautifully handled.", "src": "/events, EVENTS, BEAUTIFULLY HANDLED."},
+  "sub": {"t": "Milestones, dinners and gatherings designed around the people worth celebrating.", "src": "/ (home), 02 Events, word for word"},
+  "enjoy": {"t": "You enjoy the moment. We’ll handle the rest.", "src": "/events, YOU ENJOY THE MOMENT. WE'LL HANDLE THE REST."},
+  "cinco": {
+   "name": "Cinco Cero", "kind": "A 50th birthday", "date": "28 August 2026", "guests": 125,
+   "dateSrc": "Instagram 8 Sep 2026, 'CINCO CERO • 28.08.2026' and 'A 50th birthday, 125 guests'",
+   "brief": "For Cinco Cero, the brief wasn’t simply to organise a birthday party. It was to create an evening people wouldn’t want to leave.",
+   "briefSrc": "/cincocero, word for word",
+   "caption": "125 guests, Mexican food and one night to celebrate 50.",
+   "captionSrc": "Instagram, 10 Sep 2026, 'CINCO CERO • in motion', word for word",
+   "film": "From her Cinco Cero aftermovie"
+  },
+  "pro": {
+   "name": "Pro League Awards ’26", "kind": "A corporate award show", "date": "25 May 2026", "guests": "570+",
+   "kindSrc": "/events, CORPORATE EVENT · AWARD SHOW",
+   "text": "On May 25th, 2026, the Handelsbeurs in Antwerp set the stage for the Pro League Awards, bringing together over 570 guests to celebrate the very best of Belgian football.",
+   "scenes": "Behind the scenes, it was all about planning, precision and teamwork.",
+   "timing": "A production where timing was everything, teamwork made the difference and every detail mattered.",
+   "src": "/pro-league-awards, word for word, reread 19.45 UTC",
+   "credit": "Photos by Kaat DM.",
+   "creditSrc": "her image file names on /pro-league-awards, 'Pro League Awards - 011 - by Kaat DM.jpg' (as v1 and v2)"
+  },
+  "team": {
+   "quote": "an experienced freelance event manager to strengthen your team",
+   "src": "/events, the intro, word for word"
+  },
+  "private": ["Milestone birthdays and anniversaries", "Private parties and celebrations", "Exclusive dinners and garden parties", "Engagement parties", "Something of your own"],
+  "privateSrc": "/events, PRIVATE EVENTS, WHAT WE CAN HANDLE, '&' written out, 'Bespoke celebrations' became 'Something of your own' (banned word, as v2)",
+  "company": ["Corporate dinners and celebrations", "Product launches and brand activations", "Award ceremonies and gala events", "Networking events and receptions", "Company anniversaries and team events"],
+  "companySrc": "/events, CORPORATE EVENTS, WHAT WE CAN HANDLE, '&' written out"
+ },
+ "contact": {
+  "email": "info@honeyitshandled.com", "phone": "+32 470 58 48 54", "phoneHref": "+32470584854",
+  "instagram": "https://www.instagram.com/honeyitshandled/", "linkedin": "https://www.linkedin.com/company/honey-its-handled/",
+  "kbo": "1032.568.265",
+  "kboSrc": "https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1032568265"
+ }
+}

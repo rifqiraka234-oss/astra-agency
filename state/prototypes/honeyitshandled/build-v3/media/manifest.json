@@ -1,0 +1,368 @@
+{
+ "hero": {
+  "what": "the hero film, four cuts from one Mixkit wedding shoot, crossfaded, ends on the frame it starts from",
+  "length": 12.8,
+  "cuts": [
+   {
+    "mixkit": 5184,
+    "title": "Bride at her wedding holding bouquet",
+    "page": "https://mixkit.co/free-stock-video/bride-at-her-wedding-holding-bouquet-5184/",
+    "from": 2.8,
+    "seconds": 3.2,
+    "sha256_1080p": "3407c5e5d501561c9e0f19207f29bd4f2e94010982e60c4966a1eadcb40fc8d5"
+   },
+   {
+    "mixkit": 5183,
+    "title": "Bridesmaid helping to put on a wedding dress",
+    "page": "https://mixkit.co/free-stock-video/bridesmaid-helping-to-put-on-a-wedding-dress-5183/",
+    "from": 3.0,
+    "seconds": 4.0,
+    "sha256_1080p": "af0f7edd435d0709c3bcb9ed6d9fda53f9b50a3739417c48b3339d46c64f65c9"
+   },
+   {
+    "mixkit": 5206,
+    "title": "A bride's hand on the groom's shoulder at their wedding",
+    "page": "https://mixkit.co/free-stock-video/a-brides-hand-on-the-grooms-shoulder-at-their-wedding-5206/",
+    "from": 1.0,
+    "seconds": 4.0,
+    "sha256_1080p": "5acda9812bef63e199daf1e5da13b2f23b7ff6d8c9aa40d488def40c2e971879"
+   },
+   {
+    "mixkit": 5224,
+    "title": "Sequence of a decorated wedding table",
+    "page": "https://mixkit.co/free-stock-video/sequence-of-a-decorated-wedding-table-5224/",
+    "from": 0.5,
+    "seconds": 4.0,
+    "sha256_1080p": "a2f90734acecf4fce3c803ae1e440850995afbda655212db72300ee381bac7ed"
+   },
+   {
+    "mixkit": 5184,
+    "title": "Bride at her wedding holding bouquet",
+    "page": "https://mixkit.co/free-stock-video/bride-at-her-wedding-holding-bouquet-5184/",
+    "from": 2.0,
+    "seconds": 0.8,
+    "sha256_1080p": "3407c5e5d501561c9e0f19207f29bd4f2e94010982e60c4966a1eadcb40fc8d5"
+   }
+  ],
+  "licence": "Mixkit Stock Video Free License, item page copyrightNotice \"Free\", read 26 Oct 2026 19.57 UTC",
+  "grade": "eq=contrast=0.93:brightness=0.02:saturation=0.86:gamma=1.04,colorbalance=rs=0.015:bs=-0.025:rm=0.02:bm=-0.015:rh=0.02:bh=-0.02",
+  "files": [
+   "hero.webm",
+   "hero.mp4",
+   "hero-tall.webm",
+   "hero-tall.mp4"
+  ],
+  "poster": [
+   [
+    1600,
+    900
+   ],
+   [
+    800,
+    450
+   ]
+  ],
+  "posterTall": [
+   [
+    540,
+    960
+   ]
+  ]
+ },
+ "off": {
+  "what": "chapter film, Mixkit 5190, 6.5 s for 6.0 s, played forward then back",
+  "mixkit": 5190,
+  "title": "Beautiful wedding dress hanging in a white room",
+  "page": "https://mixkit.co/free-stock-video/beautiful-wedding-dress-hanging-in-a-white-room-5190/",
+  "licence": "Mixkit Stock Video Free License, item page copyrightNotice \"Free\", read 26 Oct 2026 19.57 UTC",
+  "grade": "eq=contrast=0.93:brightness=0.02:saturation=0.86:gamma=1.04,colorbalance=rs=0.015:bs=-0.025:rm=0.02:bm=-0.015:rh=0.02:bh=-0.02",
+  "sha256_1080p": "9e30d0500623d41a12345af396407d73d43831a7c4a8c4a7e901c1cc455140b3",
+  "files": [
+   "off.webm",
+   "off.mp4"
+  ],
+  "poster": [
+   [
+    1280,
+    720
+   ],
+   [
+    640,
+    360
+   ]
+  ]
+ },
+ "blue": {
+  "what": "chapter film, Mixkit 5213, 8.4 s for 6.0 s, played forward then back",
+  "mixkit": 5213,
+  "title": "Decorations on the ceiling of a wedding party",
+  "page": "https://mixkit.co/free-stock-video/decorations-on-the-ceiling-of-a-wedding-party-5213/",
+  "licence": "Mixkit Stock Video Free License, item page copyrightNotice \"Free\", read 26 Oct 2026 19.57 UTC",
+  "grade": "eq=contrast=0.92:brightness=0.03:saturation=0.62:gamma=1.05,colorbalance=rs=-0.07:gs=0.01:bs=0.03:rm=-0.07:gm=0.02:bm=0.02:rh=-0.04:bh=0.0",
+  "sha256_1080p": "1e86fb1af9e3ff895cc0fb8839615ee74c34acd5447fd9c92c0cafe3c7a95271",
+  "files": [
+   "blue.webm",
+   "blue.mp4"
+  ],
+  "poster": [
+   [
+    1280,
+    720
+   ],
+   [
+    640,
+    360
+   ]
+  ]
+ },
+ "red": {
+  "what": "chapter film, Mixkit 51655, 2.0 s for 6.5 s, played forward then back",
+  "mixkit": 51655,
+  "title": "A romantic dinner table adorned with lit candles, rose petals",
+  "page": "https://mixkit.co/free-stock-video/a-romantic-dinner-table-adorned-with-lit-candles-rose-petals-51655/",
+  "licence": "Mixkit Stock Video Free License, item page copyrightNotice \"Free\", read 26 Oct 2026 19.57 UTC",
+  "grade": "eq=contrast=0.95:brightness=0.0:saturation=0.95:gamma=1.0,colorbalance=rs=0.03:bs=-0.03:rm=0.03:bm=-0.02",
+  "sha256_1080p": "2f994d584fad41b776a7524e64099dc59fc6370568539b8bbbf8082a4e3e4218",
+  "files": [
+   "red.webm",
+   "red.mp4"
+  ],
+  "poster": [
+   [
+    1280,
+    720
+   ],
+   [
+    640,
+    360
+   ]
+  ]
+ },
+ "dance": {
+  "what": "chapter film, Mixkit 101211, 0.3 s for 8.2 s, played forward then back",
+  "mixkit": 101211,
+  "title": "Couple silhouette at colorful sunset",
+  "page": "https://mixkit.co/free-stock-video/couple-silhouette-at-colorful-sunset-101211/",
+  "licence": "Mixkit Stock Video Free License, item page copyrightNotice \"Free\", read 26 Oct 2026 19.57 UTC",
+  "grade": "eq=contrast=0.93:brightness=0.02:saturation=0.86:gamma=1.04,colorbalance=rs=0.015:bs=-0.025:rm=0.02:bm=-0.015:rh=0.02:bh=-0.02",
+  "sha256_1080p": "126d19a3130d89b3aa186cf6b76c07924db2ebb5f0d1a6c0c98a882898073839",
+  "files": [
+   "dance.webm",
+   "dance.mp4"
+  ],
+  "poster": [
+   [
+    1280,
+    720
+   ],
+   [
+    640,
+    360
+   ]
+  ]
+ },
+ "lace": {
+  "what": "stand in still, Unsplash",
+  "unsplash": "DTLT9ESXM9s",
+  "page": "https://unsplash.com/photos/grayscale-photo-of-beaded-lace-gown-DTLT9ESXM9s",
+  "by": "Wedding Photography",
+  "published": "Published on April 24, 2018",
+  "licence": "Unsplash License, the photo page reads \"Free to use under the Unsplash License\", read 26 Oct 2026 20.03 UTC",
+  "fetched": "images.unsplash.com, the og:image of its page, 2400 px wide",
+  "sha256": "61852140b26820131ee6d71c9b4d2bfe231bffb6c626612b9da4be9662a1aeb9",
+  "sizes": [
+   [
+    900,
+    1350
+   ],
+   [
+    560,
+    840
+   ]
+  ]
+ },
+ "veil": {
+  "what": "stand in still, Unsplash",
+  "unsplash": "HqatjVNJ31A",
+  "page": "https://unsplash.com/photos/a-white-dress-with-lace-HqatjVNJ31A",
+  "by": "Meg Jenson",
+  "published": "Published on August 12, 2022",
+  "licence": "Unsplash License, the photo page reads \"Free to use under the Unsplash License\", read 26 Oct 2026 20.03 UTC",
+  "fetched": "images.unsplash.com, the og:image of its page, 2400 px wide",
+  "sha256": "a3991804f7ef623b13d37e1ba145c80ee7e815b65e44ce1928e7cf38f71f4bd6",
+  "sizes": [
+   [
+    900,
+    1350
+   ],
+   [
+    560,
+    840
+   ]
+  ]
+ },
+ "elise-bw": {
+  "what": "her own studio photo",
+  "id": "42a973_8887369fb01c435db839dff61ac0ef8c~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_8887369fb01c435db839dff61ac0ef8c~mv2.jpg",
+  "page": "/weddings",
+  "altThere": "Honey it's Handled_Elise Laeven",
+  "sha256": "f2b821f00bfc46f0518c38c68696304385bba4128fa49b0e30ac73f0e56d0a56",
+  "edit": null,
+  "checked": "zoomed at full size 26 Oct, no marks",
+  "sizes": [
+   [
+    1100,
+    1649
+   ],
+   [
+    640,
+    960
+   ]
+  ]
+ },
+ "elise-sit": {
+  "what": "her own studio photo",
+  "id": "42a973_6059565d1b3b4a6a9c4e0cbe5201d610~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_6059565d1b3b4a6a9c4e0cbe5201d610~mv2.jpg",
+  "page": "/",
+  "altThere": "Honey it's Handled_Elise Laeven",
+  "sha256": "2bb85c85d2562796d7caa917c42c2d10aa332be90fe78fded8ee09506c5d0ff0",
+  "edit": null,
+  "checked": "zoomed at full size 26 Oct, no marks",
+  "sizes": [
+   [
+    900,
+    1349
+   ],
+   [
+    520,
+    780
+   ]
+  ]
+ },
+ "hall": {
+  "id": "42a973_f181779ca0d8460eb26ea5d57717a6ca~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_f181779ca0d8460eb26ea5d57717a6ca~mv2.jpg",
+  "page": "/pro-league-awards",
+  "altThere": "Pro League Awards 2026 in de Handelsbeurs Antwerpen",
+  "sha256": "ec6191264079804a14ff6959e89e98c57ee177da72aabbedb560286d08517184",
+  "crop": [
+   0.0,
+   0.0,
+   1.0,
+   0.655
+  ],
+  "note": "cropped to the top 65.5 percent, the ground floor arcade carries a Pro League and sponsor wall (as v1)",
+  "sizes": [
+   [
+    1067,
+    1048
+   ],
+   [
+    700,
+    688
+   ]
+  ],
+  "via": "build-v2/media, prepared from her original by art/prep_v2.py"
+ },
+ "tables": {
+  "id": "42a973_9e35ce1e33aa4252b89e45bd143d51cb~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_9e35ce1e33aa4252b89e45bd143d51cb~mv2.jpg",
+  "page": "/ (glimpse)",
+  "altThere": "Elegante tafelopstelling tijdens de Pro League Awards",
+  "sha256": "73a0cf5896cac9b87f4e8ff3d824d4e03d76f4aea6a43d748d7b458d9d3ede54",
+  "crop": [
+   0.0,
+   0.0,
+   1.0,
+   0.5
+  ],
+  "note": "top half only, the lower half has menu cards with a printed mark on the napkins",
+  "sizes": [
+   [
+    1067,
+    800
+   ],
+   [
+    700,
+    525
+   ]
+  ],
+  "via": "build-v2/media, prepared from her original by art/prep_v2.py"
+ },
+ "sign": {
+  "id": "42a973_427f62a1f26148caaf6c412ba7c974b6~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_427f62a1f26148caaf6c412ba7c974b6~mv2.jpg",
+  "page": "/ and /cincocero",
+  "altThere": "Welkomstbord in het donker tijdens priv\u00e9 feest",
+  "sha256": "cb8fc3b26775989e19f73cd26dda944ff2158b60ee88a0fbc5c9c635fe9d2bd7",
+  "crop": null,
+  "note": "Cinco Cero, the welcome sign at night",
+  "sizes": [
+   [
+    1100,
+    1650
+   ],
+   [
+    600,
+    900
+   ]
+  ],
+  "via": "build-v2/media, prepared from her original by art/prep_v2.py"
+ },
+ "lamp": {
+  "id": "42a973_aaf7225387334fcf8e88c6fb217f24e4~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_aaf7225387334fcf8e88c6fb217f24e4~mv2.jpg",
+  "page": "/cincocero",
+  "altThere": "Buffettafel private Event Antwerpen",
+  "sha256": "8a406722acd3154ea9a11cfa62e98cd64b177d97db33f5ff00d2e74057f3dc1b",
+  "crop": null,
+  "note": "Cinco Cero, a heat lamp over the buffet",
+  "sizes": [
+   [
+    1000,
+    1500
+   ],
+   [
+    600,
+    900
+   ]
+  ],
+  "via": "build-v2/media, prepared from her original by art/prep_v2.py"
+ },
+ "tent": {
+  "id": "42a973_3eba9b82e35c44a085882fdc52efea3d~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_3eba9b82e35c44a085882fdc52efea3d~mv2.jpg",
+  "page": "/gallerycincocero",
+  "altThere": "(no alt)",
+  "sha256": "3a2f8bbb193779adc226b9d1fa462484cf0714c1fe577ea63e832358fa3dac82",
+  "crop": null,
+  "note": "Cinco Cero, the tent set before the evening, no people",
+  "sizes": [
+   [
+    1600,
+    1066
+   ],
+   [
+    900,
+    600
+   ]
+  ],
+  "via": "build-v2/media, prepared from her original by art/prep_v2.py"
+ },
+ "night": {
+  "id": "42a973_5f3af2a4edee4ae89f88decc764ab82c",
+  "url": "https://video.wixstatic.com/video/42a973_5f3af2a4edee4ae89f88decc764ab82c/1080p/mp4/file.mp4",
+  "page": "https://www.honeyitshandled.com/cincocero",
+  "onPage": "Cinco Cero aftermovie, 76.35 s",
+  "cut": "44.0 to 46.6 s and 56.1 to 57.7 s, 960 x 540, no sound",
+  "sha256": "ab3585893c29ba728d258af22c1de93ffaa5afdb26a071e2197511fae3d730ac",
+  "files": [
+   "night.webm",
+   "night.mp4",
+   "night-poster.webp"
+  ],
+  "via": "build-v2/media"
+ }
+}
