@@ -251,7 +251,7 @@ def nights():
         <h3 id="h-cc" class="h3">{cc['name']}</h3>
         <p class="night-n"><span class="nn">{cc['guests']}</span> guests</p>
         <p>{cc['line']}</p>
-        <figure class="night-q">{pic('cc-sign', 'The Cinco Cero sign on an easel against a brick wall, two candles at its foot', '(max-width: 760px) 40vw, 220px')}<blockquote><p>“{q['text']}.”</p><footer>{q['who']}</footer></blockquote></figure>
+        <figure class="night-q">{pic('cc-sign', 'The Cinco Cero sign on an easel against a brick wall, two candles at its foot', '(max-width: 760px) 40vw, 220px')}<blockquote><p>“{q['text']}”</p><footer>{q['who']}</footer></blockquote></figure>
       </div>
     </article>
     <article class="night pl" aria-labelledby="h-pl">

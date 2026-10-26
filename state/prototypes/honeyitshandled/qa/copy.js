@@ -36,7 +36,8 @@ const U = base + '/?today=2026-10-26';
   await b.close();
   require('fs').writeFileSync(__dirname + '/copy-dump.txt', all);
   // strip what isn't our prose, URLs, the email address, and the proper nouns written as they are
-  let ours = all.replace(/https?:\/\/\S+/g, ' ').replace(/[\w.]+@[\w.]+/g, ' ').replace(/mailto\S*/g, ' ');
+  // Jan Geysen's testimonial is quoted word for word, his exclamation mark included, so it's taken out before the checks
+  let ours = all.split('My 50th birthday party has become an incredible memory, thanks to the collaboration with Honey it’s Handled!').join(' ').replace(/https?:\/\/\S+/g, ' ').replace(/[\w.]+@[\w.]+/g, ' ').replace(/mailto\S*/g, ' ');
   const lines = [...new Set(ours.split('\n').map(s => s.trim()).filter(Boolean))];
   const hit = (re, n) => { const h = lines.filter(l => re.test(l)); console.log(n.padEnd(14), h.length ? h.length + ' ' + JSON.stringify(h.slice(0, 6)) : 'none'); return h.length; };
   let bad = 0;

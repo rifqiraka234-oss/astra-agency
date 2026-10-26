@@ -282,3 +282,17 @@ screenshots and her brand files from the session scratchpad and keeps resized co
 screens, `node build-plan/shots/capture.js <prototype url> build-plan/shots`, then put each screen's caption in
 data/plan.json under built.shots and rebuild. The build switches from the placeholder to the screens on its own once
 research/PROTOTYPE_LIVE.txt holds the prototype's URL. QA scripts in qa/, prefix plan-.
+
+## Main session review, 26 Oct ~14.05 UTC
+
+- Looked at the cold load locally, 16 screens at 1440 and 19 at 390, no script errors. The flow holds, the action bar is
+  on every screen.
+- Every line used as hers rechecked on her live pages (about, contact, cincocero, events, weddings by curl since the
+  render hit Wix's "checking your request" screen) and her Instagram embed. All found, apart from typo fixes the handover
+  already lists.
+- **Fixed.** Jan Geysen's quote ended in a full stop we added. His page has "Honey it's Handled!", so the build now quotes
+  it with his exclamation mark, and qa/copy.js exempts that one verbatim quote. Copy audit clean, plant mode caught all 6
+  planted kinds, func.js 28 of 28. Rebuilt, hash 2852d3adc9d4a05f.
+- Her Pro League page moved again, /proleagueawards now 301s to /pro-league-awards (~14.00 UTC). The page doesn't link to
+  her pages, so only source notes are affected. The "by Kaat DM" credit is in her own image file names.
+- Still not deployed, Netlify refused a fresh plan deploy at 13.49 UTC (6adf5a72898eed5fe66cf267), same credits error.
