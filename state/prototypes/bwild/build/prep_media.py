@@ -115,6 +115,39 @@ def films():
         w, h = sc.split(':')
         MAN['film-' + key] = {'w': int(w), 'h': int(h), 'dur': t, 'src': src}
 
+def v2():
+    """v2, the golden segment of their brand film for the claw hero, the product render with a keyframe every half second
+    so the orange chapter can jump to the shot for each spec, and the pink dunes still that ends their brand film."""
+    V = os.path.join(SRC, 'video')
+    only = next((a.split('=', 1)[1].split(',') for a in sys.argv if a.startswith('--only=')), None)
+    for key, src, ss, t, sc, pt, gop in [('gold', 'hi-about.mp4', 2.0, 13.5, '1280:720', 0.25, 48),
+                                          # the claw film for phones, the centre of the same shot cut upright, a third of the bytes
+                                          ('gold-p', 'hi-about.mp4', 2.0, 13.5, '406:720', 0.25, 48),
+                                          ('productseek', 'hi-productv.mp4', 0, 34.5, '720:1280', 5.5, 12),
+                                          # Swiss Peaks for the bear, 8.4 s to 37.2 s, past their title card and before the end card
+                                          ('swisspeaks', 'hi-home.mp4', 8.4, 28.8, '1280:720', 10.2, 48)]:
+        if only and key not in only: continue
+        s = os.path.join(V, src)
+        base = ['-ss', str(ss), '-t', str(t), '-i', s, '-an', '-vf', f'scale={sc}:force_original_aspect_ratio=increase,crop={sc}']
+        ff(base + ['-c:v', 'libx264', '-profile:v', 'high', '-crf', '27', '-preset', 'slow', '-g', str(gop), '-keyint_min', str(gop), '-pix_fmt', 'yuv420p', '-movflags', '+faststart', os.path.join(OUT, key + '.mp4')])
+        ff(base + ['-c:v', 'libvpx-vp9', '-crf', '37', '-b:v', '0', '-g', str(gop), '-row-mt', '1', '-deadline', 'good', '-cpu-used', '4', os.path.join(OUT, key + '.webm')])
+        ff(['-ss', str(ss + pt), '-i', s, '-frames:v', '1', '-vf', f'scale={sc}:force_original_aspect_ratio=increase,crop={sc}', '-q:v', '3', os.path.join(OUT, key + '-poster.jpg')])
+        w, h = sc.split(':')
+        MAN['film-' + key] = {'w': int(w), 'h': int(h), 'dur': t, 'src': src}
+    if not only: v2stills()
+
+def v2stills():
+    V = os.path.join(SRC, 'video')
+    for key, at in [('dunes', 40.0), ('goldback', 39.0)]:  # the pink dunes before their logo fades in, the backlit runner
+        tmp = os.path.join(OUT, '_still.png')
+        ff(['-ss', str(at), '-i', os.path.join(V, 'hi-about.mp4'), '-frames:v', '1', tmp])
+        save(key, Image.open(tmp).convert('RGB'), [800, 1400, 1920]); os.remove(tmp)
+
+if __name__ == '__main__' and ('--v2' in sys.argv or '--v2stills' in sys.argv):
+    v2() if '--v2' in sys.argv else v2stills()
+    p = os.path.join(B, 'data', 'media.json'); old = json.load(open(p)); old.update(MAN)
+    json.dump(old, open(p, 'w'), indent=1); print('v2', sorted(MAN)); sys.exit()
+
 if __name__ == '__main__':
     photos()
     if '--no-film' not in sys.argv: films()

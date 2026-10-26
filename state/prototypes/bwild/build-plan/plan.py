@@ -31,8 +31,8 @@ def media():
     """Today's pages (taken 26 Oct 2026, in today/) and the final prototype (shots/), resized once into media/."""
     md = os.path.join(B, 'media'); os.makedirs(md, exist_ok=True)
     jobs = [(os.path.join(B, 'today', n + '-d.png'), 't-' + n, (1200, 750)) for n in ('home', 'lum', 'presale', 'shop')]
-    jobs += [(os.path.join(B, 'shots', n + '-d.png'), n + '-d', (1200, 750)) for n in ('s-hero', 's-seen', 's-dark', 's-vest', 's-paid', 's-adv')]
-    jobs += [(os.path.join(B, 'shots', n + '-m.png'), n + '-m', (520, 1126)) for n in ('s-hero', 's-paid')]
+    jobs += [(os.path.join(B, 'shots', n + '-d.png'), n + '-d', (1200, 750)) for n in ('s-hero', 's-dark', 's-seen', 's-paid', 's-adv', 's-bear')]
+    jobs += [(os.path.join(B, 'shots', n + '-m.png'), n + '-m', (520, 1126)) for n in ('s-hero', 's-dark')]
     for src, name, size in jobs:
         jp = os.path.join(md, name + '.jpg')
         if os.path.exists(jp) and os.path.exists(src) and os.path.getmtime(jp) >= os.path.getmtime(src): continue

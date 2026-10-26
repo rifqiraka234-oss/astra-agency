@@ -311,7 +311,7 @@
  "film-swisspeaks": {
   "w": 1280,
   "h": 720,
-  "dur": 20,
+  "dur": 28.8,
   "src": "hi-home.mp4"
  },
  "film-brand": {
@@ -405,5 +405,57 @@
    ]
   ],
   "alpha": false
+ },
+ "film-gold": {
+  "w": 1280,
+  "h": 720,
+  "dur": 13.5,
+  "src": "hi-about.mp4"
+ },
+ "film-productseek": {
+  "w": 720,
+  "h": 1280,
+  "dur": 34.5,
+  "src": "hi-productv.mp4"
+ },
+ "dunes": {
+  "sizes": [
+   [
+    800,
+    450
+   ],
+   [
+    1400,
+    788
+   ],
+   [
+    1920,
+    1080
+   ]
+  ],
+  "alpha": false
+ },
+ "goldback": {
+  "sizes": [
+   [
+    800,
+    450
+   ],
+   [
+    1400,
+    788
+   ],
+   [
+    1920,
+    1080
+   ]
+  ],
+  "alpha": false
+ },
+ "film-gold-p": {
+  "w": 406,
+  "h": 720,
+  "dur": 13.5,
+  "src": "hi-about.mp4"
  }
 }

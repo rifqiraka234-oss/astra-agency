@@ -6,7 +6,44 @@ professional BWILD site that sells the Adventure Vest and runs the Luminous Vest
 countdown in the same place". Raka, "lupo benatti says he wants to see something. lets do it. dont repeat wrong
 mistakes". Built the same day to the Saavedra v3 recipe and the Fae Club v3 route rules, RULES section 5.
 
-## Live
+## v2, the art build (26 Oct, afternoon)
+
+Raka sent v1 back, "i feel like this is a normal CLAUDE website ... use your creativity, creations, shapes, gradients,
+animations photos, GRAPHICS, to tell the story ... it really doesnt have a wow effect". v2 keeps every flow and goal and
+rebuilds the whole art layer around the light of one run, first light, gold, dusk, night and the next dawn. The art
+direction and the order of scenes are in research/v2-art.md, the references in research/v2-references.md.
+
+- **The claw.** Their three slashes strike down the screen with their golden brand film inside, and open on scroll until
+  the film fills it (a CSS mask from their logo, the film eased from the slashes' centre back to the screen's). On a
+  phone, an upright cut of the same film, a third of the bytes.
+- **The stars.** A WebGL sky (js/sky.js) sets from gold to night behind the ridge traced from their film. Every star is
+  one of the runner's own runs that starts in the dark in the next year, scattered like a sky with the year's shape in
+  it. A headlamp climbs the ridge. On a phone the stars are a band above the words.
+- **The flare**, as v1, now with a lens streak and sparkle on the panel. The last caption holds from 40 m.
+- **First light.** A pre dawn band carries the night into the peach reserve chapter, and the bib prints there.
+- **Orange.** Their render's orange, and the render plays the shot for each spec as it comes up. The bar offers the
+  Adventure Vest here.
+- **The bear.** Their bear, traced from the last frame of their brand film, opens onto the Swiss Peaks film (cut from
+  8.4 s to 37.2 s, past their title cards). Then Lupo's words, their photos on contour lines, the Strava club.
+- The sky rests under the chapters that paint their own ground and runs at 30 frames a second, and the claw's film and
+  the sky start after the page has loaded.
+
+v2 QA, local. bwild-func 20 of 20, 19 of 19 fail planted. axe clean in both motion modes at both widths. The walk finds
+no screen without a way to reserve. Copy audit, two flags, both quotes or false positives (Lupo's own "Not just to make a
+vest, but to make a promise", reopened live on /about-us, and "every star up there is"). No overflow at 320 to 1920.
+Lighthouse local, desktop 99 performance, mobile 67, accessibility 100 and best practices 100 on both, SEO 66 is the
+deliberate noindex. **Mobile 67 is this container**, WebGL renders on SwiftShader (the CPU), proven by blocking sky.js
+alone, which gives 78, and the local server sends HTML and CSS uncompressed. Take the real number from the live URL.
+
+**Not live yet.** Netlify skipped both v2 uploads on 26 Oct, 16.23 and 16.27 UTC, "Skipped due to account credit usage
+exceeded". Both URLs still serve v1. Retry, then hash live file by file and rerun bwild-func, plan-func and axe on the
+live URLs before the delivery goes anywhere.
+
+**The plan, for v2.** The built chapter's six shots and captions are retaken from v2 (slashes, stars, headlights, bib,
+orange, bear) and the two phone shots are the hero and the stars. One cost line renamed to the v2 scenes. **The prices
+are untouched, €2,500 and €900, and v2 is more build than v1, so whether they move is Raka's call.**
+
+## Live (v1)
 
 | What | URL | Deploy |
 |---|---|---|
@@ -67,7 +104,9 @@ underneath, the cost, six weeks to launch ready, and the team.
 
     cd state/prototypes/bwild/build && python3 build.py          # writes ../site
     cd ../build-plan && python3 plan.py                          # writes ../site-plan
-    node qa/bwild-func.js <prototype url> [plant]                # 16 checks, plant mode must fail 15
+    node qa/bwild-func.js <prototype url> [plant]                # v2, 20 checks, plant mode must fail 19 (v1's in bwild-func-v1.js)
+    node qa/look2.js <base> <outdir> [desk|phone]                # every v2 scene at its key scroll points
+    node qa/overflow.js <base>; node qa/overflow2.js <base> <width>; node qa/edge.js <base> <outdir>
     node qa/plan-func.js <plan url> [plant]                      # 7 checks, plant mode must fail 6
     node qa/axe-bwild.js <url>; node qa/bwild-copy.js <url> [plan]; node qa/walk.js <prototype url>
     python3 qa/livehash.py site <url>; python3 qa/livehash.py site-plan <url>

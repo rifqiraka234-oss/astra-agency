@@ -10,7 +10,7 @@ const res = []; const ok = (n, p, info) => res.push({ n, p: !!p, info });
   const b = await chromium.launch(); const errs = [];
   const p = await (await b.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
   p.on('pageerror', e => errs.push(e.message)); p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
-  await p.goto(base + '/', { waitUntil: 'networkidle' });
+  await p.goto(base + '/', { waitUntil: 'load' });
 
   // 1 the route switches, every stop from the data, in order
   if (plant) await p.evaluate(() => document.querySelector('[data-rt="new"]').addEventListener('click', e => e.stopImmediatePropagation(), true));
@@ -56,7 +56,7 @@ const res = []; const ok = (n, p, info) => res.push({ n, p: !!p, info });
   ok('no script errors', errs.length === 0, errs.slice(0, 3));
   const q = await (await b.newContext({ viewport: { width: 1440, height: 900 } })).newPage(); const ow = [];
   for (const wd of [320, 360, 390, 414, 600, 768, 1024, 1280, 1920]) {
-    await q.setViewportSize({ width: wd, height: 900 }); await q.goto(base + '/', { waitUntil: 'networkidle' });
+    await q.setViewportSize({ width: wd, height: 900 }); await q.goto(base + '/', { waitUntil: 'load' });
     if (plant && wd === 1280) await q.evaluate(() => { const d = document.createElement('div'); d.style.cssText = 'width:3000px;height:2px'; document.body.appendChild(d); });
     const H = await q.evaluate(() => document.documentElement.scrollHeight); for (let y = 0; y < H; y += 800) { await q.evaluate(y => scrollTo(0, y), y); await q.waitForTimeout(30); }
     const o = await q.evaluate(() => document.documentElement.scrollWidth - innerWidth); if (o > 0) ow.push([wd, o]);

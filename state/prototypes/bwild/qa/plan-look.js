@@ -7,7 +7,7 @@ require('fs').mkdirSync(out, { recursive: true });
   for (const [w, h, tag] of [[1440, 900, 'desk'], [390, 844, 'phone']]) {
     const p = await b.newPage({ viewport: { width: w, height: h } }); const errs = [];
     p.on('pageerror', e => errs.push(e.message)); p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
-    await p.goto(base + '/', { waitUntil: 'networkidle' }); await p.waitForTimeout(700);
+    await p.goto(base + '/', { waitUntil: 'load' }); await p.waitForTimeout(700);
     await p.screenshot({ path: `${out}/${tag}-0-cover.png` });
     for (const id of ['top', 'today', 'route', 'dark', 'worth', 'built', 'under', 'cost', 'weeks', 'team']) {
       await p.evaluate(id => { const s = document.getElementById(id); scrollTo(0, s.offsetTop + (id === 'top' ? innerHeight * 0.8 : 0)); }, id); await p.waitForTimeout(500);

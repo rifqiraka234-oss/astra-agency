@@ -954,3 +954,28 @@ the lead asked for the cost in writing. State and URLs in state/prototypes/bwild
 | check-drafts failed the delivery on €2,500, because a currency figure in a message must be a loss figure | A quote lives on the plan page, the message says the cost is there. Don't argue a gate by hand |
 | The plan's chapters alternated cream and black, the RULES section 5 tell | One bright chapter only, the figure that carries the argument (here LaunchBoom's 30×), everything else on their night |
 | Another session marked Lupo "waiting on Raka's price" while this one was building for him | The moment a session takes a lead's next message, append a queue row saying so and push, so the other session doesn't draft a second reply |
+
+### BWILD v2, the art build (26 Oct 2026)
+
+Raka sent v1 back the same afternoon, "i feel like this is a normal CLAUDE website ... it really doesnt have a wow
+effect". v2 kept every flow and goal and rebuilt the art around the light of one run, from first light through dusk and
+night to the next dawn. Their slashes open onto their golden film, a WebGL sky sets behind a ridge traced from their film,
+the runner's dark runs come out as stars, their render plays each spec in orange, and their bear opens onto the Swiss
+Peaks. The RULES section 5 rule that the first build is the art build was written from the same words on Honey It's
+Handled the same day. Every hiccup below was found by a screenshot, a measurement or a check, none by reading the code.
+
+| Hiccup | Rule |
+|---|---|
+| The sticky header sat in the page's flow, so the hero started 64 px down and its last link fell off a 900 px screen | An overlay header takes `margin-bottom:calc(-1 * var(--hh))`, and the first screen test measures every hero action against `innerHeight`, not the section's own box |
+| Inside their slashes the film showed mostly white sky | Find where the subject sits across the whole film (a contact sheet at one frame a second), then scale the film and move its centre onto the mask's centre, easing back to the screen's centre as the mask opens. Grade it warm so the bright frames read as light, not paper |
+| The stars sat behind the headline, and on a phone the slice of a 1440 wide SVG showed a third of the year | Data drawn behind words gets its own SVG laid out in real pixels from the screen's size, in a region measured clear of the copy (a gap of 59 px at 1440 checked with getBoundingClientRect), and its own layout on a phone |
+| The stars in crisp arcs under month labels read as a chart, one of the RULES tells | Scatter a data field with a seeded jitter big enough that it reads as the thing it pictures, keep the shape of the data in it, quieten the axis. Tapping still gives the exact value |
+| One fixed sky behind sections with white and black text. At each boundary the sky changed while the last section's words were still on screen, white words on peach | A section whose text needs a particular ground paints that ground itself. The shared sky only shows under chapters that agree on it, and a painted band carries one ground into the next (night to peach as first light, peach to night as dusk) |
+| The star SVG's own box took pointer events over the copy layer, so the clock couldn't be clicked | A full screen decorative SVG gets `pointer-events:none`, and only its live marks take `pointer-events:all` |
+| `inert` on the faded hero copy took the page's only h1 out of the accessibility tree once the slashes opened | Make the controls inert, never the heading. axe at the end of the scroll catches it, axe at the top doesn't |
+| ADVENTURE in the heading was wider than a 320 px screen, and the page panned 43 px sideways though body had `overflow-x:clip` | body's overflow is handed to the viewport, where clip behaves as hidden and scrollTo still pans. Test `scrollTo(200, y)` then read scrollX at 320 and 360, and size one word headlines to the narrowest screen |
+| Headless Chromium has no H.264, so it fetched the mp4, failed, and fetched the webm, doubling every film in Lighthouse | Name the codecs in each source's type (`avc1.64001F`, `vp9`), so a browser that can't play one never fetches it, and list the smaller file first. Here the x264 files were the smaller |
+| The 2.4 MB hero film and nine posters loaded before anything else on a phone | An upright phone cut of the hero film behind a `media` source, the hero film and the WebGL sky started after `load`, every poster from `data-poster` a screen away. Phone weight 3.2 MB to 1.6 MB |
+| Mobile Lighthouse 58, mostly long tasks in sky.js | Prove the cause before writing it down. The renderer string said SwiftShader, and blocking sky.js alone gave 78. Then cap the sky at 30 frames a second and rest it while it's covered, and report the live number |
+| An edit script failed halfway through, after build.py had changed and before site.js had, so the hero film stopped playing, and 19 of 19 checks still passed | Run multi file edits as separate calls or check every assertion before writing any file. And add the check that would have caught it (here, the hero film plays after load, with a plant that stubs play) |
+| Netlify skipped two v2 uploads, "Skipped due to account credit usage exceeded" | Read the deploy's error before touching the build. Commit and push first, retry later, and keep the delivery unsent while the live URL still serves the old build |
