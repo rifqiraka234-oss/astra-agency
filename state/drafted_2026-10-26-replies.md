@@ -6,6 +6,8 @@
 > your art limits with the animations, graphs, pictures, features gradients and all". Being built in
 > state/prototypes/honeyitshandled. Once it's live this reply is replaced by a delivery draft that carries the advice and
 > the link, and this one gets archived.
+> ALSO OUT OF DATE. After 10.40 UTC she added an EVENTS menu with the Pro League Awards '26 next to Cinco Cero, so "lands
+> on a 50th birthday" below is no longer true (checked ~12.10 UTC). Don't reuse that line.
 
 Thread pulled 2026-10-26 ~10.58 UTC with tools/lemlist.py, 2 items, all pages, control 6. Our SKETCHB opener 10.43 UTC
 (act_x4wu4gv9FWxqY8dSH, A/B test arm B), her reply 10.45 UTC (act_mGkeJneLZemxWYsry), "Hi Raka, thanks for your message :)

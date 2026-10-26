@@ -59,6 +59,15 @@ Shared by the two build agents, the prototype and the plan. Written by the main 
 - Full lead research, state/research_2026-10-26-honey.md (raw HTML and renders listed there, evidence folder in the
   scratchpad path it names, which may be gone, so refetch).
 
+## Her site changed after our opener (confirmed ~12.10 UTC)
+
+My pre send check at ~10.40 UTC still found the old /private-events ("RECENTLY HANDLED", Cinco Cero twice). By 11.58
+(the plan agent) and again at ~12.10 (main session, Chromium) the nav reads HOME, ABOUT, WEDDINGS, EVENTS, CINCO CERO,
+PRO LEAGUE AWARDS, CONTACT. EVENTS shows Cinco Cero and the Pro League Awards '26 ("On May 25th, 2026, the Handelsbeurs in
+Antwerp ... over 570 guests", /kopie-van-events) and offers her as a freelance event manager. Cinco Cero
+(/kopie-van-events-1) now carries a signed testimonial from Jan Geysen. Still no wedding of her own, /weddings and the
+launch offer unchanged. So the "only event is Cinco Cero" line above is out of date. Quote her pages as they stand now.
+
 ## Flags that travel with the build
 
 - **Budget.** A one person consumer business, sole trader since January, one paid event so far. The GTM plan says one
