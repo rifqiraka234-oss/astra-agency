@@ -30,7 +30,7 @@
       }
       return g.getImageData(0, 0, TS, TS).data;
     };
-    const sharp = draw(0), bev = draw(9), soft = draw(30);
+    const sharp = draw(0), bev = draw(7), soft = draw(26);
     const img = x.createImageData(TS, TS);
     for (let i = 0; i < img.data.length; i += 4) { img.data[i] = sharp[i]; img.data[i + 1] = bev[i]; img.data[i + 2] = soft[i]; img.data[i + 3] = 255; }
     x.putImageData(img, 0, 0);
@@ -52,12 +52,13 @@ float drip(float x){return .05*n2(vec2(x*9.,1.7))+.035*n2(vec2(x*23.,4.1));}
 float fillAt(vec2 t){return smoothstep(0.,.025,POUR*1.3-t.y-drip(t.x)+.02);}
 float H(vec2 t){
   vec4 s=texture2D(T,t);
-  float m=s.r*fillAt(t);
-  float h=pow(s.g,.75)*m;
-  float fl=n2(t*5.+vec2(TM*.05,TM*.11))*.6+n2(t*11.-vec2(TM*.09,0.))*.4;
-  h+=(fl-.5)*.06*m;
+  float f=fillAt(t);
+  float b=s.g*f;
+  float h=b*b*(3.-2.*b)*.8+s.b*f*.35;
+  float fl=n2(t*4.+vec2(TM*.05,TM*.12))*.6+n2(t*9.-vec2(TM*.08,0.))*.4;
+  h+=(fl-.5)*.05*b;
   vec2 d=t-M.xy;float r=length(d);
-  h+=M.z*(-.16*exp(-r*r*260.)+.035*sin(r*95.-TM*4.2)*exp(-r*9.))*m;
+  h+=M.z*(-.12*exp(-r*r*300.)+.03*sin(r*90.-TM*4.)*exp(-r*10.))*b;
   return h;
 }
 void main(){
@@ -72,8 +73,8 @@ void main(){
     float m=s.r*fillAt(t);
     if(m>.002){
       float e=1./1024.;
-      float h=H(t),hx=H(t+vec2(e*1.5,0.)),hy=H(t+vec2(0.,e*1.5));
-      vec3 N=normalize(vec3((h-hx)*95.,(hy-h)*95.,1.));
+      float hx=H(t+vec2(e*2.5,0.)),hy=H(t+vec2(0.,e*2.5)),hx2=H(t-vec2(e*2.5,0.)),hy2=H(t-vec2(0.,e*2.5));
+      vec3 N=normalize(vec3((hx2-hx)*30.,(hy-hy2)*30.,1.));
       vec3 V=vec3(0.,0.,1.);
       vec3 L1=normalize(vec3(-.55,.62,.75));
       vec3 L2=normalize(vec3(.7,-.2,.6));
@@ -81,7 +82,8 @@ void main(){
       float df=clamp(dot(N,L1),0.,1.);
       vec3 Rf=reflect(-V,N);
       float up=Rf.y*.5+.5;
-      vec3 env=mix(vec3(.18,.02,.03),mix(paper,TINT,.55),smoothstep(.35,.9,up));
+      vec3 env=mix(vec3(.16,.02,.03),mix(paper,TINT,.6),smoothstep(.42,.8,up));
+      env+=vec3(1.)*smoothstep(.06,0.,abs(Rf.x+.3))*smoothstep(.45,.75,up)*.8;
       float sp=pow(clamp(dot(Rf,L1),0.,1.),70.);
       float sp2=pow(clamp(dot(Rf,L2),0.,1.),24.);
       float fr=pow(1.-clamp(N.z,0.,1.),2.5);
@@ -149,7 +151,7 @@ void main(){
     requestAnimationFrame(frame);
   }
   function wake() { if (!running && visible) { running = true; last = 0; requestAnimationFrame(frame); } }
-  window.HIH_LACQUER = { ready: true, wake };
+  window.HIH_LACQUER = { ready: true, wake, repour() { pourT0 = null; wake(); } };
   size();
   new IntersectionObserver(es => es.forEach(en => { visible = en.isIntersecting; if (visible) wake(); }), { threshold: 0 }).observe(cv);
   addEventListener('resize', () => { size(); wake(); }, { passive: true });

@@ -84,7 +84,7 @@
     $('[data-years]').hidden = !c.noDate;
     $$('.yr').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.year === c.year)));
     $$('input[name="place"]').forEach(i => { i.checked = i.value === S.place; });
-    $('input[name="first"]').checked = S.first;
+    $('input[name="firstcouples"]').checked = S.first;
     $('[data-offer]').hidden = !offerOn();
     $('[data-offer-off]').hidden = path !== 'wedding' || offerOn();
     ['private', 'company'].forEach(k => $$(`input[name="kind-${k}"]`).forEach(i => { i.checked = +i.value === S.p[k].kind; }));
@@ -92,6 +92,7 @@
     // the planner
     const h = new Set(held());
     $$('.tab').forEach(b => b.setAttribute('aria-pressed', String(h.has(+b.dataset.tab))));
+    $('[data-planner]').style.setProperty('--held', c.help === 'day' ? '0' : (h.size / 17).toFixed(4));
     out('tabsQ', path === 'company' ? 'How should Elise work with you?' : 'How much should Elise take on?');
     out('tabCount', c.help === 'day' ? 'You hold all 17. Elise takes the day itself.' : `Elise holds ${h.size} of 17.`);
     out('tabsHint', (c.help === 'full' || c.help === 'whole') ? 'Tap a tab to keep it yourself.' : c.help === 'day' ? 'Tap a tab to hand it over as well.' : h.size ? 'Tap a tab to take it back.' : 'Tap the tabs she should take.');
@@ -145,7 +146,7 @@
     const t = e.target, n = t.name;
     if (n === 'path') set({ path: t.value }, true);
     else if (n === 'place') set({ place: t.value });
-    else if (n === 'first') set({ first: t.checked });
+    else if (n === 'firstcouples') set({ first: t.checked });
     else if (n === 'kind-private' || n === 'kind-company') set({ kind: +t.value });
     else if (/^help-/.test(n)) set({ help: t.value });
     else if (n === 'date' && t.value) set({ date: pd(t.value) }, true);

@@ -52,7 +52,7 @@ L = np.array([-.35, .55, .76]); L /= np.linalg.norm(L)
 spec = np.maximum((Rf * L[:, None, None]).sum(0), 0) ** 90
 silver = np.array([.83, .91, .93])
 k = (.35 + .65 * Rf[1] * .5 + .32)[..., None]
-col = (ph * (1 - .32) + silver * k * .32) * (.55 + .45 * fn[2])[..., None]
+col = (ph * 1.18 * (1 - .2) + silver * k * .2) * (.55 + .45 * fn[2])[..., None]
 col = col * (1 - (.12 * (1 - Rf[1]))[..., None]) + np.array([.59, .13, .13]) * (.12 * (1 - Rf[1]))[..., None]
 col += np.array([1., .97, .94]) * (spec * 1.5)[..., None]
 gx = np.clip(cx / .07, 0, 1) * np.clip((1 - cx) / .07, 0, 1); gy = np.clip(cy / .09, 0, 1) * np.clip((1 - cy) / .09, 0, 1)

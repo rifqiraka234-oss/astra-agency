@@ -94,7 +94,8 @@ FAV = "data:image/svg+xml," + f"%3Csvg xmlns='http://www.w3.org/2000/svg' viewBo
 def fig_mask(text):
     f = FIG[text]
     svg = f"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 {f['w']} {f['h']}'><path d='{f['d']}'/></svg>"
-    return 'url("data:image/svg+xml,' + svg.replace('<', '%3C').replace('>', '%3E').replace('#', '%23').replace('"', "'") + '")', f['w'], f['h']
+    enc = svg.replace('%', '%25').replace('<', '%3C').replace('>', '%3E').replace('#', '%23').replace("'", '%27').replace('"', '%22')
+    return "url('data:image/svg+xml," + enc + "')", f['w'], f['h']
 
 # ------------------------------------------------------------------ defaults (the page script starts from the same)
 DEF = {k: datetime.date.fromisoformat(v['defaultDate']) for k, v in P.items()}
@@ -156,7 +157,7 @@ def hero():
   <div class="hero-t">
     <h1 id="h-top">What are we celebrating?</h1>
     <fieldset class="paths"><legend class="sr">What are we celebrating?</legend>{opts}</fieldset>
-    <p class="hero-sub">Elise plans weddings here and abroad, private celebrations and company events, from Antwerp.</p>
+    <p class="hero-sub">Elise plans weddings here and abroad, and private and company events, from Antwerp.</p>
     <div class="acts"><a class="btn" href="#letter" data-cta data-hero-cta><span data-o="cta">{esc(WED["cta"])}</span></a><a class="tl" href="#when">Start with the date</a></div>
   </div>
   <p class="wide hero-line">{esc(D["lines"]["rest"])}</p>
@@ -193,7 +194,7 @@ def when():
         <div class="offer" data-offer>
           <h3>{esc(o["title"])}</h3>
           <p>{esc(o["text"])}</p>
-          <label class="check"><input type="checkbox" name="first" checked><span>We’d like to be one of the first couples</span></label>
+          <label class="check"><input type="checkbox" name="firstcouples" checked><span>We’d like to be one of the first couples</span></label>
           <a class="btn" href="#letter" data-cta>Tell me everything</a>
         </div>
         <p class="offer-off" data-offer-off hidden>Her launch offer is for weddings in 2027 or 2028. <a class="tl" href="#letter" data-cta>Tell me everything</a></p>
@@ -261,7 +262,8 @@ def tabs():
         return ''.join(f'''<label class="hopt"><input type="radio" name="help-{path}" value="{h["id"]}"{" checked" if h["id"] == default else ""}><span class="hn">{esc(h["name"])}</span><span class="hl">{esc(h["line"])}</span></label>''' for h in P[path]['help'])
     return f'''<section class="tabs" id="tabs" data-tone="blue" aria-labelledby="h-tabs">
   <div class="wrap tabs-g">
-    <div class="planner" data-planner>
+    <div class="planner" data-planner style="--held:1">
+      <div class="seventeen" aria-hidden="true"><svg class="sv-o" viewBox="0 0 {FIG["17"]["w"]} {FIG["17"]["h"]}" focusable="false"><path d="{FIG["17"]["d"]}"/></svg><svg class="sv-f" viewBox="0 0 {FIG["17"]["w"]} {FIG["17"]["h"]}" focusable="false"><path d="{FIG["17"]["d"]}"/></svg></div>
       <div class="pl-book" aria-hidden="true">
         <div class="pl-pages"></div>
         <div class="pl-cover">{mark(HH, HW, HHt, 'pl-hh')}<span class="pl-word">{mark(WORD, WW, WH, 'pl-wm')}</span></div>
@@ -385,8 +387,8 @@ def nights():
       <p class="gst-n" aria-hidden="true"><span data-o="guests">{WED["guests"]}</span></p>
       <div class="gst-line">
         <input type="range" name="guests" min="10" max="600" step="5" value="{WED["guests"]}" aria-labelledby="h-gst" aria-valuetext="{WED["guests"]} guests">
-        <span class="mk" style="--x:{(125 - 10) / 590 * 100:.2f}%"><b>125</b> Cinco Cero</span>
-        <span class="mk up" style="--x:{(570 - 10) / 590 * 100:.2f}%"><b>570+</b> Pro League Awards ’26</span>
+        <span class="mk" style="--x:{(125 - 10) / 590 * 100:.2f}"><b>125</b> Cinco Cero</span>
+        <span class="mk up" style="--x:{(570 - 10) / 590 * 100:.2f}"><b>570+</b> Pro League Awards ’26</span>
       </div>
       <div class="gst-steps"><button type="button" class="step" data-g="-10" aria-label="Ten fewer guests">{MINUS}</button><button type="button" class="step" data-g="10" aria-label="Ten more guests">{PLUS}</button></div>
       <p class="gst-l" data-o="guestsLine">Fewer than Cinco Cero’s 125, a long table or a few round ones.</p>
@@ -401,7 +403,7 @@ def letter():
     cel = ''.join(f'<option{" selected" if o == "Wedding" else ""}>{esc(o)}</option>' for o in D['form']['celebrating'])
     found = '<option value="">Choose one</option>' + ''.join(f'<option>{esc(o)}</option>' for o in D['form']['found'])
     nxt = ''.join(f'<li><b>{esc(a)}</b> {esc(b)}</li>' for a, b in D['next'])
-    used.add('facets.jpg'); used.add('ball.webp'); used.add('ball.png')
+    used.add('facets.jpg'); used.add('ball.png')
     return f'''<section class="fin" id="letter" data-tone="red" aria-labelledby="h-fin">
   <div class="ball-wrap" aria-hidden="true"><span class="ball-wire"></span><img class="ball-still" src="media/ball.png" width="640" height="640" alt="" loading="lazy" decoding="async"><canvas id="ball"></canvas></div>
   <canvas id="spots" aria-hidden="true"></canvas>

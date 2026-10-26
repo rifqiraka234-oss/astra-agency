@@ -49,7 +49,7 @@ void main(){
   float spec=pow(max(dot(Rf,L),0.),90.);
   float tw=step(.985,h1(vec2(ri,ci)+floor(TM*6.)))*FL;
   vec3 silver=vec3(.83,.91,.93);
-  vec3 col=mix(ph,silver*(.35+.65*Rf.y*.5+.32),.32)*(.55+.45*fn.z);
+  vec3 col=mix(ph*1.18,silver*(.35+.65*Rf.y*.5+.32),.2)*(.55+.45*fn.z);
   col=mix(col,vec3(.59,.13,.13),.12*(1.-Rf.y));
   col+=vec3(1.,.97,.94)*(spec*1.5+tw*.9);
   float gx=smoothstep(0.,.07,cell.x)*smoothstep(1.,.93,cell.x),gy=smoothstep(0.,.09,cell.y)*smoothstep(1.,.91,cell.y);
@@ -90,7 +90,7 @@ void main(){
   }
   // the light it throws, soft spots that travel with the turn
   const ctx = sp && sp.getContext('2d');
-  const SPOTS = Array.from({ length: 46 }, (_, i) => ({ a: (i * 2.399) % (Math.PI * 2), y: ((i * 0.6180339) % 1), r: 3 + ((i * 7) % 9), c: i % 5 === 0 ? '211,233,238' : '255,246,236' }));
+  const SPOTS = Array.from({ length: 90 }, (_, i) => ({ a: (i * 2.399) % (Math.PI * 2), y: ((i * 0.6180339) % 1), r: 1.6 + ((i * 7) % 5) * 0.7, c: i % 4 === 0 ? '211,233,238' : '255,246,236' }));
   function spots(t) {
     if (!ctx) return;
     const W = sp.width, Hh = sp.height; ctx.clearRect(0, 0, W, Hh);
@@ -98,9 +98,9 @@ void main(){
       const a = s.a + rot * 1.0, x = ((Math.cos(a) * 0.5 + 0.5) * 1.3 - 0.15) * W, y = (0.05 + s.y * 0.95) * Hh;
       const vis = Math.max(0, Math.sin(a)); if (vis < 0.05) continue;
       const rr = s.r * (1 + (sent ? 0.6 : 0)) * (W / 900 + 0.6);
-      const g = ctx.createRadialGradient(x, y, 0, x, y, rr * 3);
-      g.addColorStop(0, `rgba(${s.c},${0.55 * vis})`); g.addColorStop(1, `rgba(${s.c},0)`);
-      ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(x, y, rr * 3, rr * 2.2, 0, 0, Math.PI * 2); ctx.fill();
+      const g = ctx.createRadialGradient(x, y, 0, x, y, rr * 2.2);
+      g.addColorStop(0, `rgba(${s.c},${0.95 * vis})`); g.addColorStop(0.45, `rgba(${s.c},${0.6 * vis})`); g.addColorStop(1, `rgba(${s.c},0)`);
+      ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(x, y, rr * 2.2, rr * 1.6, 0.4, 0, Math.PI * 2); ctx.fill();
     }
   }
   function frame(now) {

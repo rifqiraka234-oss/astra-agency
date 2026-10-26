@@ -30,7 +30,7 @@ PHOTOS = [
     ('tent', '3eba9b82', '/gallerycincocero', '(no alt)', (900, 1600), None, 'Cinco Cero, the tent set before the evening, no people'),
     ('hall', 'f181779c', '/pro-league-awards', 'Pro League Awards 2026 in de Handelsbeurs Antwerpen', (700, 1067), (0.0, 0.0, 1.0, 0.655),
      'cropped to the top 65.5 percent, the ground floor arcade carries a Pro League and sponsor wall (as v1)'),
-    ('disco', '2dc29647', '/ and /cincocero', 'Discobal tijdens avond feest', (600, 1100), None, 'Cinco Cero, the mirror ball in the tent'),
+    ('disco', '2dc29647', '/ and /cincocero', 'Discobal tijdens avond feest', (600, 1100, 1365), None, 'Cinco Cero, the mirror ball in the tent'),
     ('sign', '427f62a1', '/ and /cincocero', 'Welkomstbord in het donker tijdens privé feest', (600, 1100), None, 'Cinco Cero, the welcome sign at night'),
     ('lamp', 'aaf72253', '/cincocero', 'Buffettafel private Event Antwerpen', (600, 1000), None, 'Cinco Cero, a heat lamp over the buffet'),
     ('tables', '9e35ce1e', '/ (glimpse)', 'Elegante tafelopstelling tijdens de Pro League Awards', (700, 1067), (0.0, 0.0, 1.0, 0.5),
