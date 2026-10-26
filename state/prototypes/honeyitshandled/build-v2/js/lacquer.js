@@ -13,27 +13,25 @@
   const VW = 1000, VH = 889, TS = 1024;
 
   // ---------------------------------------------------------------- the height field from her traced path
+  // Three versions of the mark, sharp in red, a bevel blur in green, a soft blur in blue, added together by the canvas
+  // itself (no pixel loop on the main thread). The blurs are drawn small and scaled up, which is also the blur where a
+  // browser has no canvas filter.
   function field() {
     const c = document.createElement('canvas'); c.width = c.height = TS;
     const x = c.getContext('2d');
-    const s = TS * 0.84 / VW, ox = (TS - VW * s) / 2, oy = (TS - VH * s) / 2;
+    x.fillStyle = '#000'; x.fillRect(0, 0, TS, TS);
     const P = new Path2D(window.HIH_HH);
-    const draw = (blur) => {
-      const t = document.createElement('canvas'); t.width = t.height = TS; const g = t.getContext('2d');
-      g.fillStyle = '#000'; g.fillRect(0, 0, TS, TS);
+    const layer = (size, blur, tint) => {
+      const t = document.createElement('canvas'); t.width = t.height = size; const g = t.getContext('2d');
+      const s = size * 0.84 / VW, ox = (size - VW * s) / 2, oy = (size - VH * s) / 2;
+      g.fillStyle = '#000'; g.fillRect(0, 0, size, size);
       if (blur) g.filter = `blur(${blur}px)`;
       g.setTransform(s, 0, 0, s, ox, oy); g.fillStyle = '#fff'; g.fill(P, 'evenodd');
-      if (blur && g.filter === 'none') { // no canvas filter (Safari), blur by down and up sampling
-        const k = Math.max(2, Math.round(blur / 2)), sm = document.createElement('canvas'); sm.width = sm.height = Math.round(TS / k);
-        const sg = sm.getContext('2d'); sg.imageSmoothingEnabled = true; sg.drawImage(t, 0, 0, sm.width, sm.height);
-        g.setTransform(1, 0, 0, 1, 0, 0); g.filter = 'none'; g.imageSmoothingEnabled = true; g.drawImage(sm, 0, 0, TS, TS);
-      }
-      return g.getImageData(0, 0, TS, TS).data;
+      g.setTransform(1, 0, 0, 1, 0, 0); g.filter = 'none';
+      g.globalCompositeOperation = 'multiply'; g.fillStyle = tint; g.fillRect(0, 0, size, size);
+      x.globalCompositeOperation = 'lighter'; x.imageSmoothingEnabled = true; x.drawImage(t, 0, 0, TS, TS);
     };
-    const sharp = draw(0), bev = draw(7), soft = draw(26);
-    const img = x.createImageData(TS, TS);
-    for (let i = 0; i < img.data.length; i += 4) { img.data[i] = sharp[i]; img.data[i + 1] = bev[i]; img.data[i + 2] = soft[i]; img.data[i + 3] = 255; }
-    x.putImageData(img, 0, 0);
+    layer(TS, 0, '#f00'); layer(TS / 2, 3.5, '#0f0'); layer(TS / 4, 6.5, '#00f');
     return c;
   }
 
@@ -109,11 +107,11 @@ void main(){
   const tex = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, tex);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, field());
   gl.uniform1i(U('T'), 0);
 
   // ---------------------------------------------------------------- size, the box the mark sits in, the light per path
-  let W = 0, Hh = 0, dpr = Math.min(1.5, devicePixelRatio || 1), box = [0, 0, 1, 1];
+  const COARSE = matchMedia('(pointer: coarse)').matches;
+  let W = 0, Hh = 0, dpr = Math.min(COARSE ? 1 : 1.5, devicePixelRatio || 1), box = [0, 0, 1, 1], minDt = 0, lastDraw = 0;
   function size() {
     const r = cv.getBoundingClientRect();
     W = Math.max(2, Math.round(r.width * dpr)); Hh = Math.max(2, Math.round(r.height * dpr));
@@ -129,12 +127,15 @@ void main(){
   const mouse = { x: -1, y: -1, s: 0, tx: -1, ty: -1 };
   function texPos(e) { const r = cv.getBoundingClientRect(); const u = (e.clientX - r.left) / r.width, v = (e.clientY - r.top) / r.height; return [(u - box[0]) / box[2], (v - box[1]) / box[3]]; }
   if (!RM) {
-    cv.addEventListener('pointermove', e => { const [x, y] = texPos(e); mouse.tx = x; mouse.ty = y; mouse.s = Math.min(1, mouse.s + 0.25); wake(); });
-    cv.addEventListener('pointerdown', e => { const [x, y] = texPos(e); mouse.tx = mouse.x = x; mouse.ty = mouse.y = y; mouse.s = 1; wake(); });
+    cv.addEventListener('pointermove', e => { const [x, y] = texPos(e); mouse.tx = x; mouse.ty = y; mouse.s = Math.min(1, mouse.s + 0.25); lastTouch = performance.now(); wake(); });
+    cv.addEventListener('pointerdown', e => { const [x, y] = texPos(e); mouse.tx = mouse.x = x; mouse.ty = mouse.y = y; mouse.s = 1; lastTouch = performance.now(); wake(); });
   }
-  let t0 = performance.now(), pourT0 = null, running = false, visible = true, slowFrames = 0, last = 0;
+  let t0 = performance.now(), pourT0 = null, running = false, visible = true, slowFrames = 0, last = 0, lastTouch = 0, tint0 = 0;
   function frame(now) {
     if (!running) return;
+    // on a slow device the pour plays at a lower frame rate rather than holding up the page
+    if (minDt && now - lastDraw < minDt) { requestAnimationFrame(frame); return; }
+    lastDraw = now;
     const tm = (now - t0) / 1000;
     if (pourT0 === null) pourT0 = now;
     const pt = Math.min(1, (now - pourT0) / 2100), pour = RM ? 1 : 1 - Math.pow(1 - pt, 3);
@@ -144,17 +145,28 @@ void main(){
     gl.uniform1f(uTM, RM ? 3.0 : tm); gl.uniform1f(uPOUR, pour); gl.uniform3f(uM, mouse.x, mouse.y, mouse.s); gl.uniform3f(uTINT, tint[0], tint[1], tint[2]);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     if (!H.classList.contains('gl-on')) H.classList.add('gl-on');
-    // low power, halve the resolution if frames run slow
-    if (last && now - last > 34) { if (++slowFrames > 40 && dpr > 0.75) { dpr = 0.75; size(); slowFrames = 0; } } else slowFrames = Math.max(0, slowFrames - 1);
+    // low power, lower the resolution in steps while frames run slow
+    if (last && now - last > (minDt ? 140 : 30)) { if (++slowFrames > 4) { if (dpr > 0.5) { dpr = dpr > 1 ? 0.85 : dpr > 0.7 ? 0.6 : 0.5; size(); } else minDt = 90; slowFrames = 0; } } else slowFrames = Math.max(0, slowFrames - 1);
     last = now;
-    if (RM || !visible) { running = false; return; }
+    // once poured and settled, the lacquer rests, a hand, a touch or a new path wakes it again
+    const resting = pt >= 1 && now - lastTouch > 4500 && now - tint0 > 1500;
+    if (RM || !visible || resting) { running = false; return; }
     requestAnimationFrame(frame);
   }
-  function wake() { if (!running && visible) { running = true; last = 0; requestAnimationFrame(frame); } }
-  window.HIH_LACQUER = { ready: true, wake, repour() { pourT0 = null; wake(); } };
-  size();
-  new IntersectionObserver(es => es.forEach(en => { visible = en.isIntersecting; if (visible) wake(); }), { threshold: 0 }).observe(cv);
-  addEventListener('resize', () => { size(); wake(); }, { passive: true });
-  document.addEventListener('change', e => { if (e.target.name === 'path') wake(); });
-  wake();
+  function wake() { if (started && !running && visible) { running = true; last = 0; requestAnimationFrame(frame); } }
+  window.HIH_LACQUER = { get ready() { return started; }, wake: () => wake(), repour() { pourT0 = null; wake(); } };
+  // start once the page has loaded and the main thread is idle, the gradient SVG holds the place until then
+  let started = false;
+  function start() {
+    if (started) return; started = true;
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, field());
+    size(); t0 = performance.now();
+    new IntersectionObserver(es => es.forEach(en => { visible = en.isIntersecting; if (visible) wake(); }), { threshold: 0 }).observe(cv);
+    addEventListener('resize', () => { size(); wake(); }, { passive: true });
+    document.addEventListener('change', e => { if (e.target.name === 'path') { tint0 = performance.now(); wake(); } });
+    wake();
+  }
+  const idle = window.requestIdleCallback || (f => setTimeout(f, 200));
+  const go = () => idle(start, { timeout: 900 });
+  if (document.readyState === 'complete') go(); else addEventListener('load', go, { once: true });
 })();

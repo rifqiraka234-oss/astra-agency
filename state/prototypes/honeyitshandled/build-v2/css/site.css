@@ -38,6 +38,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 /* the note and the header */
 .note{margin:0;background:var(--red);color:var(--paper);font:12px/1.4 var(--mono);text-align:center;padding:7px 16px}
+.note-s{display:none}
+@media (max-width:520px){.note-l{display:none}.note-s{display:inline}}
 .hdr{position:sticky;top:0;z-index:40;height:var(--hdrH);display:flex;align-items:center;gap:20px;padding:0 var(--gut);background:rgba(249,247,246,.96);color:var(--red);transition:background .35s,color .35s;box-shadow:0 1px 0 rgba(43,39,39,.08)}
 .hdr[data-tone="blue"]{background:rgba(211,233,238,.97);color:var(--inkb)}
 .hdr[data-tone="dark"]{background:rgba(20,11,12,.96);color:var(--paper);box-shadow:0 1px 0 rgba(249,247,246,.08)}
@@ -91,7 +93,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .hero-line{position:absolute;left:var(--gut);bottom:24px;color:var(--red);z-index:2}
 @media (max-width:860px){
   .hero{grid-template-columns:minmax(0,1fr);min-height:0}
-  .hero-art{grid-column:1;grid-row:1;height:clamp(200px,29svh,360px);min-height:0}
+  .hero-art{grid-column:1;grid-row:1;height:clamp(160px,29svh,360px);min-height:0}
   .hero-t{display:flex;flex-direction:column}
   .hero-sub{order:3;margin:22px 0 0}
   .hero h1{font-size:clamp(40px,11vw,64px)}

@@ -79,7 +79,7 @@ void main(){
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, img);
       ready = true; wake();
     };
-    img.src = 'media/facets.jpg';
+    img.src = cv.dataset.src || 'media/facets.jpg';
   }
   function size() {
     const r = cv.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1);

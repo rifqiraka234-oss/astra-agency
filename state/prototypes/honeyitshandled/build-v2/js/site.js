@@ -232,21 +232,28 @@
   let ticking = false;
   const onScroll = () => { if (ticking) return; ticking = true; requestAnimationFrame(() => { ticking = false; scenes(); bar(); }); };
   addEventListener('scroll', onScroll, { passive: true });
-  addEventListener('resize', () => { onScroll(); lensPlace(lens.x, lens.y); }, { passive: true });
+  addEventListener('resize', () => { geo = null; onScroll(); lensPlace(lens.x, lens.y); }, { passive: true });
 
   // ------------------------------------------------------------------ the lens
   const L = $('[data-lens]'), ring = $('.ring');
   const lens = { x: 0.62, y: 0.46, tx: 0.62, ty: 0.46, live: false, touched: false };
+  // the stage and image box are measured once (and again on resize or a new path), so moving the lens only writes
+  // CSS variables and never forces a layout of the page
+  let geo = null;
+  function measure() {
+    const s = L.getBoundingClientRect(), img = [...L.querySelectorAll('.lens-img')].find(e => e.offsetParent !== null);
+    if (!img) return null;
+    const b = img.getBoundingClientRect();
+    geo = { img, W: s.width, H: s.height, ox: b.left - s.left, oy: b.top - s.top, path: S.path };
+    L.style.setProperty('--lr', Math.round(clamp(Math.min(s.width, s.height) * 0.2, 96, 190)) + 'px');
+    return geo;
+  }
   function lensPlace(fx, fy) {
     // fx, fy are fractions of the stage. The mask is on the image box, so convert to its coordinates.
-    const s = L.getBoundingClientRect();
-    const img = [...L.querySelectorAll('.lens-img')].find(e => e.offsetParent !== null);
-    if (!img) return;
-    const b = img.getBoundingClientRect();
-    const px = s.left + fx * s.width, py = s.top + fy * s.height;
-    img.style.setProperty('--mx', (px - b.left).toFixed(1) + 'px'); img.style.setProperty('--my', (py - b.top).toFixed(1) + 'px');
+    if (!geo || geo.path !== S.path) measure();
+    if (!geo) return;
+    geo.img.style.setProperty('--mx', (fx * geo.W - geo.ox).toFixed(1) + 'px'); geo.img.style.setProperty('--my', (fy * geo.H - geo.oy).toFixed(1) + 'px');
     L.style.setProperty('--rx', (fx * 100).toFixed(2) + '%'); L.style.setProperty('--ry', (fy * 100).toFixed(2) + '%');
-    L.style.setProperty('--lr', Math.round(clamp(Math.min(s.width, s.height) * 0.2, 96, 190)) + 'px');
   }
   function lensLoop() {
     lens.x += (lens.tx - lens.x) * 0.16; lens.y += (lens.ty - lens.y) * 0.16;
@@ -264,7 +271,9 @@
   const PATH = [[0.5, 0.42], [0.38, 0.6], [0.6, 0.78], [0.52, 0.5]];
   function lensScroll() {
     if (lens.touched || matchMedia('(hover: hover)').matches || RM) return;
-    const r = L.getBoundingClientRect(), t = clamp((innerHeight - r.top) / (innerHeight + r.height), 0, 1) * (PATH.length - 1);
+    const r = L.getBoundingClientRect();
+    if (r.bottom < -100 || r.top > innerHeight + 100) return;
+    const t = clamp((innerHeight - r.top) / (innerHeight + r.height), 0, 1) * (PATH.length - 1);
     const i = Math.min(PATH.length - 2, Math.floor(t)), f = t - i;
     lensTo(PATH[i][0] + (PATH[i + 1][0] - PATH[i][0]) * f, PATH[i][1] + (PATH[i + 1][1] - PATH[i][1]) * f);
   }
@@ -289,7 +298,7 @@
   // ------------------------------------------------------------------ start
   try { const saved = localStorage.getItem('hih-path'); if (saved && P[saved] && !qs.get('today')) S.path = saved; } catch (e) {}
   render();
-  lensTo(0.62, 0.46, true);
   scenes(); bar();
-  addEventListener('load', () => { scenes(); bar(); lensPlace(lens.x, lens.y); });
+  addEventListener('load', () => requestAnimationFrame(() => { scenes(); bar(); }));
+  new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { geo = null; lensPlace(lens.x, lens.y); } }), { rootMargin: '300px 0px' }).observe(L);
 })();

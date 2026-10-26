@@ -63,21 +63,20 @@ def pic(key, alt, sizes='100vw', cls='', eager=False, attrs=''):
     return f'<picture><source type="image/webp" srcset="{ws}" sizes="{sizes}"><img{c} src="media/{key}-{ss[0][0]}.jpg" srcset="{js}" sizes="{sizes}" width="{w}" height="{h}" {a} loading="{load}" decoding="async"{attrs}></picture>'
 
 def cutout(key, alt, sizes, cls):
+    # webp with alpha only, every browser we aim at reads it, and the bundle stays light
     m = MAN[key]; ss = sorted(m['sizes'], key=lambda s: s[1])
-    for w, h in ss: used.update([f'{key}-{h}.png', f'{key}-{h}.webp'])
+    for w, h in ss: used.add(f'{key}-{h}.webp')
     ws = ', '.join(f'media/{key}-{h}.webp {w}w' for w, h in ss)
-    ps = ', '.join(f'media/{key}-{h}.png {w}w' for w, h in ss)
     w, h = ss[-1]
-    return f'<picture><source type="image/webp" srcset="{ws}" sizes="{sizes}"><img class="{cls}" src="media/{key}-{ss[0][1]}.png" srcset="{ps}" sizes="{sizes}" width="{w}" height="{h}" alt="{esc(alt)}" loading="lazy" decoding="async"></picture>'
+    return f'<img class="{cls}" src="media/{key}-{ss[0][1]}.webp" srcset="{ws}" sizes="{sizes}" width="{w}" height="{h}" alt="{esc(alt)}" loading="lazy" decoding="async">'
 
 def art_png(key, alt, sizes, cls=''):
     m = MAN[key]; ss = sorted(m['sizes'], key=lambda s: s[0])
-    for w, _ in ss: used.update([f'{key}-{w}.png', f'{key}-{w}.webp'])
+    for w, _ in ss: used.add(f'{key}-{w}.webp')
     ws = ', '.join(f'media/{key}-{w}.webp {w}w' for w, _ in ss)
-    ps = ', '.join(f'media/{key}-{w}.png {w}w' for w, _ in ss)
     w, h = ss[-1]
     a = f'alt="{esc(alt)}"' if alt else 'alt=""'
-    return f'<picture><source type="image/webp" srcset="{ws}" sizes="{sizes}"><img class="{cls}" src="media/{key}-{ss[0][0]}.png" srcset="{ps}" sizes="{sizes}" width="{w}" height="{h}" {a} loading="lazy" decoding="async"></picture>'
+    return f'<img class="{cls}" src="media/{key}-{ss[0][0]}.webp" srcset="{ws}" sizes="{sizes}" width="{w}" height="{h}" {a} loading="lazy" decoding="async">'
 
 def mark(d, w, h, cls, label=None):
     a = f'role="img" aria-label="{esc(label)}"' if label else 'aria-hidden="true"'
@@ -124,7 +123,7 @@ def head():
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<aside class="note" aria-label="About this page">Prototype by Astra agency for Honey it’s Handled. Not her live site, nothing here is sent.</aside>
+<aside class="note" aria-label="About this page"><span class="note-l">Prototype by Astra agency for Honey it’s Handled. Not her live site, nothing here is sent.</span><span class="note-s">Prototype by Astra agency, nothing here is sent.</span></aside>
 <header class="hdr" data-hdr>
   <a class="logo" href="#top" aria-label="Honey it’s Handled, back to the top">{mark(WORD, WW, WH, 'word')}</a>
   <nav class="nav" aria-label="Main">
@@ -160,7 +159,7 @@ def hero():
     <p class="hero-sub">Elise plans weddings here and abroad, and private and company events, from Antwerp.</p>
     <div class="acts"><a class="btn" href="#letter" data-cta data-hero-cta><span data-o="cta">{esc(WED["cta"])}</span></a><a class="tl" href="#when">Start with the date</a></div>
   </div>
-  <p class="wide hero-line">{esc(D["lines"]["rest"])}</p>
+  <p class="wide hero-line">{esc(D["story"]["lines"][1])} {esc(D["story"]["lines"][2])}</p>
 </section>
 '''
 
@@ -405,9 +404,9 @@ def letter():
     cel = ''.join(f'<option{" selected" if o == "Wedding" else ""}>{esc(o)}</option>' for o in D['form']['celebrating'])
     found = '<option value="">Choose one</option>' + ''.join(f'<option>{esc(o)}</option>' for o in D['form']['found'])
     nxt = ''.join(f'<li><b>{esc(a)}</b> {esc(b)}</li>' for a, b in D['next'])
-    used.add('facets.jpg'); used.add('ball.png')
+    used.add('facets.jpg'); used.add('ball.webp')
     return f'''<section class="fin" id="letter" data-tone="red" aria-labelledby="h-fin">
-  <div class="ball-wrap" aria-hidden="true"><span class="ball-wire"></span><img class="ball-still" src="media/ball.png" width="640" height="640" alt="" loading="lazy" decoding="async"><canvas id="ball"></canvas></div>
+  <div class="ball-wrap" aria-hidden="true"><span class="ball-wire"></span><img class="ball-still" src="media/ball.webp" width="640" height="640" alt="" loading="lazy" decoding="async"><canvas id="ball" data-src="media/facets.jpg"></canvas></div>
   <canvas id="spots" aria-hidden="true"></canvas>
   <div class="wrap fin-g">
     <h2 id="h-fin" class="fin-h">…there’s nothing left to do but celebrate.</h2>
@@ -478,7 +477,7 @@ def build():
     open(os.path.join(OUT, 'index.html'), 'w').write(html)
     open(os.path.join(OUT, 'robots.txt'), 'w').write('User-agent: *\nDisallow: /\n')
     open(os.path.join(OUT, 'netlify.toml'), 'w').write('[[headers]]\n  for = "/*"\n  [headers.values]\n    X-Robots-Tag = "noindex, nofollow"\n')
-    open(os.path.join(OUT, '404.html'), 'w').write(head().split('<main id="main">')[0].replace('</header>', '</header>') +
+    open(os.path.join(OUT, '404.html'), 'w').write(head().split('<main id="main">')[0].replace('href="#', 'href="index.html#').replace('href="index.html#main"', 'href="#main"') +
         '<main id="main" class="nf"><h1>This page isn’t here.</h1><p><a class="btn" href="index.html">Back to Honey it’s Handled</a></p></main></body></html>\n')
     # missing references are a build failure
     refs = set(re.findall(r'(?:src|href|srcset|poster)="(media/[^" ]+)', html)) | set(re.findall(r'(media/[\w.-]+\.\w+) \d+w', html))

@@ -210,8 +210,16 @@ const eq = (a, b, what) => a === b ? true : `${what || ''} page ${JSON.stringify
   const q = await ctx.newPage(); q.on('pageerror', e => errs.push(e.message));
   await q.goto(U, { waitUntil: 'load' }); await q.waitForTimeout(1500);
   await check('the lacquer HH is drawn in her red on the hero canvas', async () => {
-    // read inside the next animation frame, after the page has drawn, the buffer isn't preserved past compositing
-    const px = await q.evaluate(() => new Promise(res => { setTimeout(() => res([false, 'no frame read']), 3000); requestAnimationFrame(() => { const c = document.getElementById('lacquer'); const g = c.getContext('webgl'); const w = c.width, h = c.height; const out = new Uint8Array(4 * w * h); g.readPixels(0, 0, w, h, g.RGBA, g.UNSIGNED_BYTE, out); let red = 0; for (let i = 0; i < out.length; i += 16) if (out[i] > 100 && out[i + 1] < 70 && out[i + 2] < 80) red++; res([document.documentElement.classList.contains('gl-on'), red]); }); }));
+    // the lacquer rests once it has poured, so a hand over it wakes it, the way a visitor's would, then the pixels are
+    // read inside the next animation frame, after the page has drawn (the buffer isn't preserved past compositing)
+    const cr = await q.evaluate(() => { const r = document.getElementById('lacquer').getBoundingClientRect(); return [r.left, r.top, r.width, r.height]; });
+    for (let i = 0; i < 6; i++) { await q.mouse.move(cr[0] + cr[2] * (0.4 + i * 0.02), cr[1] + cr[3] * 0.5); await q.waitForTimeout(40); }
+    const px = await q.evaluate(() => new Promise(res => {
+      // a slow device skips frames, so look over up to 30 frames for one the page drew
+      let n = 0; const done = setTimeout(() => res([false, 'no frame read']), 4000);
+      const look = () => { const c = document.getElementById('lacquer'); const g = c.getContext('webgl'); const w = c.width, h = c.height; const out = new Uint8Array(4 * w * h); g.readPixels(0, 0, w, h, g.RGBA, g.UNSIGNED_BYTE, out); let red = 0; for (let i = 0; i < out.length; i += 16) if (out[i] > 100 && out[i + 1] < 70 && out[i + 2] < 80) red++;
+        if (red > 2000 || ++n > 30) { clearTimeout(done); res([document.documentElement.classList.contains('gl-on'), red]); } else requestAnimationFrame(look); };
+      requestAnimationFrame(look); }));
     return px[0] && px[1] > 2000 ? true : 'gl-on ' + px[0] + ', red pixels (every fourth) ' + px[1];
   }, async () => q.evaluate(() => { document.documentElement.classList.remove('gl-on'); window.HIH_LACQUER && (window.HIH_LACQUER.wake = () => {}); const c = document.getElementById('lacquer'); c.replaceWith(c.cloneNode()); }));
   await check('the bar is off on the first screen and on mid page where no call is in view', async () => {
