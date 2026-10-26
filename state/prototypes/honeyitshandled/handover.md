@@ -457,3 +457,11 @@ research/PROTOTYPE_LIVE.txt holds the prototype's URL. QA scripts in qa/, prefix
 - Her Pro League page moved again, /proleagueawards now 301s to /pro-league-awards (~14.00 UTC). The page doesn't link to
   her pages, so only source notes are affected. The "by Kaat DM" credit is in her own image file names.
 - Still not deployed, Netlify refused a fresh plan deploy at 13.49 UTC (6adf5a72898eed5fe66cf267), same credits error.
+
+## Plan deployed, 26 Oct ~19.45 UTC (main session)
+
+Raka added Netlify credit. Plan deployed from a clean copy of site-plan, deploy 6adfa9d2bfc231ced8bd639b, live at
+https://astra-honeyitshandled-plan.netlify.app/ . 29 of 29 site files hashed equal to the deploy (the deploy tool's local
+.netlify/state.json isn't served), 404 control 404, x-robots-tag noindex, cold loads at 1440 and 390 with no script errors
+and every image decoded, qa/plan-honey-func.js against the live URL 21 of 21. The new site chapter is still the labelled
+placeholder, it waits for the v2 prototype to go live, then the screenshots are retaken and the plan redeployed.
