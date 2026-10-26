@@ -47,7 +47,7 @@ MIX = {
     51655: ('A romantic dinner table adorned with lit candles, rose petals', 'https://mixkit.co/free-stock-video/a-romantic-dinner-table-adorned-with-lit-candles-rose-petals-51655/'),
     101211: ('Couple silhouette at colorful sunset', 'https://mixkit.co/free-stock-video/couple-silhouette-at-colorful-sunset-101211/'),
 }
-LIC_MIX = 'Mixkit Stock Video Free License, item page copyrightNotice "Free", read 26 Oct 2026 19.57 UTC'
+LIC_MIX = 'Mixkit Stock Video Free License, item page copyrightNotice "Free", read 26 Oct 2026 19.57 UTC, the 1080p file fetched singly at 20.14'
 
 def encode(src, base, w, h, vp9_crf, x264_crf):
     """One graded master (lossless intermediate) becomes webm VP9 and mp4 H.264."""
@@ -116,7 +116,7 @@ for key, uid, page, by, pub in STILLS:
         r = im.resize((w, round(im.size[1] * w / im.size[0])), Image.LANCZOS)
         r.save(os.path.join(OUT, f'{key}-{w}.webp'), quality=72, method=6); sizes.append([w, r.size[1]])
     MAN[key] = {'what': 'stand in still, Unsplash', 'unsplash': uid, 'page': page, 'by': by, 'published': pub,
-                'licence': 'Unsplash License, the photo page reads "Free to use under the Unsplash License", read 26 Oct 2026 20.03 UTC',
+                'licence': 'Unsplash License, the photo page reads "Free to use under the Unsplash License", read 26 Oct 2026 between 20.04 and 20.19 UTC, the file fetched at 20.19',
                 'fetched': 'images.unsplash.com, the og:image of its page, 2400 px wide', 'sha256': sha(p), 'sizes': sizes}
 
 # ------------------------------------------------------------------ Elise, her own studio photos, no edit

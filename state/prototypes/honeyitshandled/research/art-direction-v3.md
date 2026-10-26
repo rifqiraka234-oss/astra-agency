@@ -40,7 +40,8 @@ house and aw .jsonl, sheets refs/sheet-plan, sheet-house, sheet-aw, sheet-pace).
 
 **Award level wedding sites.** CSS Design Awards' own search for "wedding" (curl, 200) gave the list, thefwa.com's search
 didn't render a result list for us (it renders client side, three unrelated cases came back) and Awwwards still refuses us.
-Rendered, 10 tried, 9 loaded.
+Rendered with two candle houses, 10 tried, 8 loaded (weddingtalesantorini.com answered 403, cire-trudon.com reset the
+connection).
 
 | Site | Award | What it does | What we take |
 |---|---|---|---|
@@ -128,7 +129,7 @@ download box says "for commercial or personal use, under the Mixkit Stock Video 
 on mixkit.co/license, "can be used in your commercial and non-commercial projects, for free ... Attribution is not
 required"). Seven of the 70 item pages read today said "Mixkit Restricted License", personal use only, and are out,
 including the best veil film (8888, "Bride tosses veil while dressing for wedding"). Stills are Unsplash under the
-Unsplash License (each photo page reads "Free to use under the Unsplash License", read today, no Unsplash+ item).
+Unsplash License (each photo page reads "Free to use under the Unsplash License", read between 20.04 and 20.19 UTC, no Unsplash+ item).
 Pexels walls us (Cloudflare "Just a moment" on curl, tools/fetch-walled.py on all three fingerprints, and Chromium), so
 no Pexels item is used because its own page couldn't be read.
 

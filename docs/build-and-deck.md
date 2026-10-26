@@ -1030,3 +1030,49 @@ art-direction-v2.md, flow-v2.md, the v2 section of handover.md).
 | A plant added a MutationObserver that re-added a class on every attribute change, `classList.add` writes the attribute even when the class is there, the page looped in microtasks and the plant run hung | A plant breaks the page once. Never plant an observer that writes to what it observes |
 | Three plants were blind, the check read only `[data-o="cta"]` while the plant moved a button out of that set, and a plant listener on the textarea ran before the page's own and was undone by it | A check reads what the visitor sees (every visible call to the letter), and a plant that overrides a handler is registered after the page's. Run plant mode and read every PASS, 33 of 36 caught became 36 of 36 |
 | The bar counted a field a few px under the header as on screen while the walk didn't, one half screen with nothing on the company path at 390 | The bar and the walk share one definition of on screen, the same margin from the header and the bar |
+
+### Honey It's Handled v3, a wedding (26 Oct 2026, late evening)
+
+Raka on v2, "it doesn't give me wedding vibes ... it should be magical ... a big picture or a video as a hero ... It's not
+exclusive". v2 was built from her two non wedding nights and felt like a nightclub. v3 is built in build-v3/ writing
+site-v3/, not deployed (Raka wants the HTML first), one file from tools/bundle-site.py with the Events page as #events in the
+same document. Source and handover, state/prototypes/honeyitshandled (research/v3-brief.md, art-direction-v3.md,
+flow-v3.md, the v3 section of handover.md).
+
+**What made it, repeat it.**
+1. **The hero is the thing they sell, in film.** Four slow cuts from one licence checked wedding shoot (bouquet and lace, a
+   dress being buttoned, a ring on his shoulder, a rose in candle light), no faces, one loop that ends on its first frame,
+   her wordmark and her own line over it. Chapters drawn from the same shoot read as one couple's day.
+2. **Her own rhyme is the spine and the colour.** "Something Off-White. Something Blue. Something Red." (17 June) gave three
+   chapters and the reply card in all three at once, an off white card on her blue sealed in her red.
+3. **Exclusive is her offer, not a word.** "A few special couples" made the site an invitation and the enquiry a reply card,
+   names in foil script, sealed in wax. A thin serif (Fraunces at opsz 144, weights 200 to 300, the free face closest to
+   Canela Thin on Passalacqua), her own Figtree for text, Pinyon Script only for the names, square buttons, seven sections.
+4. **Magic from the wedding itself.** A WebGL veil the scroll lifts, her 17 tabs as candle lights at blue hour, petals that
+   part round the hand, foil names, a wax seal. Each one has a still state and none plays under reduced motion.
+5. **Titles on swatches, not glows.** Each chapter title sits on a flat swatch of its own colour, her palette as paper
+   samples. It solved contrast over film and removed the last glow.
+
+| Hiccup | Rule |
+|---|---|
+| The best veil film (Mixkit 8888) and six others read "Mixkit Restricted License", personal use only, though their JSON-LD licence link says videoFree | Read each Mixkit item's `copyrightNotice` and its download box text, never the licence link alone |
+| Pexels walled curl, fetch-walled and Chromium | No item is used whose own page couldn't be read, however good the clip |
+| Unsplash's download link sits behind an Anubis proof of work for curl | Read the photo page in Chromium (it passes), take the file from images.unsplash.com, the page's og:image |
+| New Mixkit items (six digit ids) list no mp4 on the page, the download endpoint answers with an HTML modal | The modal's `data-download--modal-url-value` is the file, fetch that singly |
+| Her Instagram embed now shows only the newest six posts and the 17 June brand reveal had dropped off | Read an older caption through its own /p/<code>/embed/captioned/ |
+| The type test showed six "serifs" all in Figtree, the font family's double quotes sat inside a double quoted style attribute | Quote families in single quotes inside attributes, and check the computed family before judging a face |
+| The first veil was vertical sine folds and read as a corrugated curtain | A veil hangs from a crown, folds radiate from a point above the screen, uneven, low contrast, lace at the hem. Look at it mid lift at six scroll points |
+| Two seals shared SVG gradient and filter ids, the build's id check stopped it | Inline SVGs drawn twice get an id suffix per instance, and the build asserts unique ids before it writes |
+| Seals and shadows inside a clip-path deckled card would be cut off | The clipped card sits in an unclipped wrapper that carries the seal and the drop-shadow |
+| The events form reused name="first", "email" and "message" from the wedding form | Every control name is unique across the document, the second form's names get a prefix |
+| Petals seeded above the screen took 10 to 30 s to reach the middle, the test found none there | Seed a scene's particles across the screen as well as above it, and test a pointer effect on a placed cluster (a test hook) so it can't pass or fail by chance |
+| The sticky petal canvas with `margin-bottom:-100svh` slid past its section and drew over Elise | A sticky layer with a negative margin can leave its section, give the section `overflow:clip` (sticky still works) |
+| Contrast over film, axe can't judge it, 26 of 56 lines measured low, and the first run measured the bar under the text | Measure words on pictures from pixels (qa/contrast-v3.js, the 90th percentile behind the line), bring each line between header and bar first, then fix by design, not by darkening the film |
+| The fix by shades read as glows behind the titles | Put the words on a flat field of the brand's own colour instead |
+| The bar check passed with the bar hidden, it read the class | A check reads what is drawn (display, size, position), the RULES rule again |
+| The walk found four half screens on the events page with no way to the enquiry, the bar and the walk counted differently | One `actions()` list and one on screen rule shared by the bar and the walk, and every page's first screen carries its own action |
+| The phone bar's ellipsis ate the help, as on Fae Club | On phones the bar is two lines, the date first |
+| Light labels at the edges were clipped by the stage | Align a label to the side its anchor sits near, per breakpoint |
+| The event meta lines and "When's your I do?" sat over headings as small caps kickers | Facts go under the heading, a question is set as a line of the voice, never as a kicker |
+| A rerun of the media prep changed the hashes of films it didn't touch, VP9 isn't byte identical run to run | Hash media and run the QA chain after the last prep, never compare across preps |
+| A full page screenshot without script showed no posters, while every image had decoded | Judge a no script page from viewport screenshots while scrolling and from decode counts, not one fullPage capture |
