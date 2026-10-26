@@ -810,6 +810,15 @@ nowhere on the page. And every visitor in the four lines gets their own path and
 gave birthdays and companies one text link). Put the screenshots beside the last build he loved and ask whether anyone
 would screenshot this one.
 
+**THE SITE FEELS LIKE WHAT THEY SELL, AND THE HERO SHOWS IT (Raka, 2026-10-26).** His words on Honey It's Handled v2,
+"it doesn't give me wedding vibes, man. It should give me wedding vibes. Like, it should be magical ... maybe a big
+picture or, like, a video ... as a hero ... It's not exclusive as well". v2 was bold and on brand, but built from the
+lead's two non wedding nights, so a wedding planner's site felt like a nightclub. Before the art, write the one feeling a
+buyer of their product expects (a wedding, magical and exclusive; a gym, sweat and pride; a restaurant, appetite), and
+make the hero full bleed film or photography of exactly that. When the lead has no footage of their core product yet,
+use licence checked mood film or photos, never captioned or claimed as theirs, and say in the handover they'd replace it
+with their own. Their real work goes where it fits, never in place of the feeling.
+
 **SAAVEDRA V3 IS THE PLAN AND PROTOTYPE TO MAKE EVERY TIME (Raka, 2026-10-25).** His words on seeing it, "Brooo
 amazing! Write in the mds to always make these kind of plans and prototypes." It came from his note on the build
 before it, "be more creative in animations, videos, photos, things, graphs, whatever, think about the DESIRED UX UI
