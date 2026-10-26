@@ -797,6 +797,19 @@ numbers reopened on the day it ships. The recipe and every hiccup are the last s
 https://astra-hertling-presence.netlify.app/ before building the next one.
 
 
+**THE FIRST BUILD IS THE ART BUILD. THERE IS NO CALM VERSION ONE (Raka, 2026-10-26).** His words on Honey It's
+Handled v1, "i feel like this is a normal CLAUDE website. look you need to be an artist, use lyour creativity, creations,
+shapes, gradients, animations photos, GRAPHICS, to tell the story, whats the vibe of the brand ... the website should have
+clear flows and guides the user to different goals/actions, simple but like it works ... its like any other websites and
+especially website made by claude". That's the fourth calm, correct first build he's sent back (H&P v2, Fae Club v1,
+BeBetter v1, Honey v1). So the art layer of Fae Club v2 and BeBetter v2 goes into the first build, never a second pass.
+The tells that sank Honey v1, check for each before anyone sees a build. One texture under every section. A kicker over
+every heading. The same two column grid again and again. The client's photos shrunk into boxes instead of carrying the
+page. A graphic that reads as a chart. Motion that's only fades. The brand's own vibe (its wit, its world, its energy)
+nowhere on the page. And every visitor in the four lines gets their own path and action, not only the main one (Honey v1
+gave birthdays and companies one text link). Put the screenshots beside the last build he loved and ask whether anyone
+would screenshot this one.
+
 **SAAVEDRA V3 IS THE PLAN AND PROTOTYPE TO MAKE EVERY TIME (Raka, 2026-10-25).** His words on seeing it, "Brooo
 amazing! Write in the mds to always make these kind of plans and prototypes." It came from his note on the build
 before it, "be more creative in animations, videos, photos, things, graphs, whatever, think about the DESIRED UX UI
