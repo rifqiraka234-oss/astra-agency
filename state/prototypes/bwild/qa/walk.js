@@ -5,7 +5,7 @@ const base = process.argv[2].replace(/\/$/, ''), OUT = process.argv[3] || 'walk'
   const b = await chromium.launch();
   for (const [w, h, tag] of [[390, 844, 'phone'], [1440, 900, 'desk']]) {
     const p = await b.newPage({ viewport: { width: w, height: h } });
-    await p.goto(base + '/', { waitUntil: 'networkidle' }); await p.waitForTimeout(800);
+    await p.goto(base + '/', { waitUntil: 'load' }); await p.waitForTimeout(800);
     const m = await p.evaluate(() => {
       const vh = innerHeight, y = s => { const e = document.querySelector(s); return e ? +((e.getBoundingClientRect().top + scrollY) / vh).toFixed(1) : null; };
       const vis = e => { const r = e.getBoundingClientRect(), s = getComputedStyle(e); return r.width > 0 && r.height > 0 && r.top < vh && r.bottom > 0 && s.visibility !== 'hidden' && +s.opacity > 0.05; };

@@ -1,6 +1,7 @@
-/* BWILD. One run carried down the page {city, t, email, cart}. The sky is the sun's real position at your run, the
-   year chart is worked out for each day from the same equations (NOAA's solar calculator), the headlights come up the
-   road with the scroll. Reduced motion and no script keep the whole page. */
+/* BWILD v2. One run carried down the page {city, t, email, cart}. The sky follows the chapter in view (js/sky.js),
+   their claw opens onto their film, the stars are the runner's own dark runs worked out from the sun (NOAA's
+   equations), headlights come up behind the vest, the orange chapter plays their render's shot for each spec, and their
+   bear opens onto the Swiss Peaks. Reduced motion and no script keep the whole page. */
 (function () {
   var html = document.documentElement, rm = html.classList.contains('rm');
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -17,6 +18,9 @@
     return mm + (mm === 1 ? ' minute' : ' minutes');
   };
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var prog = function (el) { var r = el.getBoundingClientRect(), span = el.offsetHeight - window.innerHeight; return clamp(-r.top / Math.max(1, span), 0, 1); };
+  var ease = function (x) { return x * x * (3 - 2 * x); };
 
   /* ------------------------------------------------ the sun, NOAA's general solar position equations */
   var R = Math.PI / 180;
@@ -39,7 +43,6 @@
     var cz = Math.sin(lat * R) * Math.sin(s.decl) + Math.cos(lat * R) * Math.cos(s.decl) * Math.cos(ha * R);
     return 90 - Math.acos(clamp(cz, -1, 1)) / R;
   };
-  /* sunrise or sunset for a civil date, in UTC minutes after that date's 00.00 UTC, solved twice */
   var event = function (y, mo, d, lat, lon, rise) {
     var day0 = Date.UTC(y, mo - 1, d), t = 720 - 4 * lon;
     for (var i = 0; i < 3; i++) {
@@ -51,200 +54,273 @@
     }
     return day0 + t * 60000;
   };
-
-  /* ------------------------------------------------ local time in the city's own time zone */
   var fmts = {};
   var parts = function (ms, tz) {
     var f = fmts[tz] || (fmts[tz] = new Intl.DateTimeFormat('en-GB', { timeZone: tz, year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hourCycle: 'h23' }));
     var o = {}; f.formatToParts(new Date(ms)).forEach(function (p) { if (p.type !== 'literal') o[p.type] = +p.value; });
     return o;
   };
-  var localMin = function (ms, tz) { var p = parts(ms, tz); return p.hour * 60 + p.minute + p.second / 60; };
   var offsetMin = function (ms, tz) { var p = parts(ms, tz); return Math.round((Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second) - Math.floor(ms / 1000) * 1000) / 60000); };
   var cityById = function (id) { return D.cities.filter(function (c) { return c.id === id; })[0]; };
-
-  /* a year of daylight for a city, from its local today, cached */
   var years = {};
+  /* a year of sunrises, the zone's offset looked up once a week at noon, and day by day only across a clock change */
   var yearOf = function (c) {
     if (years[c.id]) return years[c.id];
-    var now = parts(Date.now(), c.tz), out = [];
+    var now = parts(Date.now(), c.tz), out = [], noon = Date.UTC(now.year, now.month - 1, now.day, 12), off = [];
+    var offAt = function (i) { return off[i] !== undefined ? off[i] : (off[i] = offsetMin(noon + i * 864e5, c.tz)); };
+    for (var a = 0; a < 364; a += 7) {
+      var z = Math.min(a + 7, 364), same = offAt(a) === offAt(z);
+      for (var k = a + 1; k < z; k++) { if (same) off[k] = off[a]; else offAt(k); }
+    }
+    var loc = function (ms, i) { return ms === null ? null : (((ms / 60000 + off[i]) % 1440) + 1440) % 1440; };
     for (var i = 0; i < 365; i++) {
       var dt = new Date(Date.UTC(now.year, now.month - 1, now.day + i));
       var y = dt.getUTCFullYear(), mo = dt.getUTCMonth() + 1, d = dt.getUTCDate();
-      var r = event(y, mo, d, c.lat, c.lon, true), s = event(y, mo, d, c.lat, c.lon, false);
-      out.push({ y: y, mo: mo, d: d, rise: r === null ? null : localMin(r, c.tz), set: s === null ? null : localMin(s, c.tz) });
+      out.push({ y: y, mo: mo, d: d, wd: dt.getUTCDay(), rise: loc(event(y, mo, d, c.lat, c.lon, true), i), set: loc(event(y, mo, d, c.lat, c.lon, false), i) });
     }
     return (years[c.id] = out);
   };
   var isDark = function (x, t) { if (x.rise === null || x.set === null) return false; return t < x.rise || t > x.set; };
+  var darkMin = function (x, t) { return !isDark(x, t) ? 0 : t < x.rise ? x.rise - t : t - x.set; };
   var dayName = function (x) { return x.d + ' ' + MONTHS[x.mo - 1]; };
-
-  /* ------------------------------------------------ the one state */
-  var S = { city: 'geneva', t: D.picks.sunrise, email: '', cart: 0, paid: false };
-
-  /* ------------------------------------------------ the sky, every stop from the sun's altitude at your run */
-  var mix = function (a, b, k) { return a.map(function (v, i) { return Math.round(v + (b[i] - v) * k); }); };
-  var rgb = function (c) { return 'rgb(' + c.join(',') + ')'; };
-  var SKY = [ /* altitude, top, middle, bottom */
-    [-18, [4, 5, 9], [7, 9, 14], [11, 13, 20]],
-    [-9, [8, 11, 22], [16, 20, 36], [34, 30, 48]],
-    [-4, [20, 26, 46], [62, 50, 70], [148, 82, 58]],
-    [-0.6, [33, 42, 66], [104, 76, 86], [214, 112, 58]],
-    [-0.5, [150, 168, 196], [214, 186, 170], [240, 176, 112]],
-    [4, [158, 182, 210], [222, 206, 184], [244, 204, 150]],
-    [12, [170, 196, 220], [208, 222, 232], [236, 238, 233]],
-    [90, [160, 192, 222], [204, 220, 232], [237, 239, 234]]
-  ];
-  var skyAt = function (a) {
-    for (var i = 0; i < SKY.length - 1; i++) {
-      var p = SKY[i], q = SKY[i + 1];
-      if (a <= q[0]) { var k = clamp((a - p[0]) / (q[0] - p[0]), 0, 1); return [mix(p[1], q[1], k), mix(p[2], q[2], k), mix(p[3], q[3], k)]; }
-    }
-    var z = SKY[SKY.length - 1]; return [z[1], z[2], z[3]];
-  };
-
-  var hero = $('#run'), heroArt = hero && $('.hero-art', hero);
   var runMs = function (c, t) {
     var now = parts(Date.now(), c.tz), guess = Date.UTC(now.year, now.month - 1, now.day, 0, 0) + t * 60000;
     return guess - offsetMin(guess, c.tz) * 60000;
   };
-  var paintSky = function () {
-    var c = cityById(S.city), a = altitude(runMs(c, S.t), c.lat, c.lon), s = skyAt(a);
-    html.style.setProperty('--sky-t', rgb(s[0])); html.style.setProperty('--sky-m', rgb(s[1])); html.style.setProperty('--sky-b', rgb(s[2]));
-    var light = a >= -0.5;
-    html.style.setProperty('--tx', light ? '#08090B' : '#FFFFFF'); html.style.setProperty('--tx-inv', light ? '#FFFFFF' : '#08090B');
-    html.setAttribute('data-tx', light ? 'ink' : 'white');
-    hero.style.setProperty('--st', clamp((-a - 4) / 8, 0, 1).toFixed(3));
-    hero.style.setProperty('--gnd', light ? .06 : .35);
-    /* their low sun photo climbs with the sun, and once it's down their moon photo comes up */
-    hero.style.setProperty('--so', clamp((a + 5) / 5, 0, 1).toFixed(3));
-    hero.style.setProperty('--sy', (60 - clamp(a, -5, 30) * 1.1).toFixed(1) + '%');
-    hero.style.setProperty('--mo', clamp((-a - .5) / 5, 0, 1).toFixed(3));
-    hero.style.setProperty('--dy', (60 - clamp(-a, 0, 25) * 1.1).toFixed(1) + '%');
-    return a;
-  };
+  /* the same hash as build.py, so a star keeps its place */
+  var hsh = function (i, k) { var v = Math.sin(i * 12.9898 + k * 78.233) * 43758.5453; return v - Math.floor(v); };
 
-  /* ------------------------------------------------ render, every display reads the state */
+  /* ------------------------------------------------ the one state */
+  var S = { city: 'geneva', t: D.picks.sunrise, email: '', cart: 0, paid: false };
   var pickOf = function (t) { return t < 720 ? 'sunrise' : 'night'; };
   var line = function () {
     var c = cityById(S.city), yr = yearOf(c), x = yr[0];
-    if (x.rise !== null && S.t < x.rise) return 'Today in ' + c.name + ' the sun rises at ' + hm(x.rise) + ', so you’d start ' + dur(x.rise - S.t) + ' before it, in the dark.';
-    if (x.set !== null && S.t > x.set) return 'Today in ' + c.name + ' the sun sets at ' + hm(x.set) + ', so you’d start ' + dur(S.t - x.set) + ' after it, in the dark.';
+    if (x.rise !== null && S.t < x.rise) return 'Today in ' + c.name + ' the sun rises at ' + hm(x.rise) + ', so a ' + hm(S.t) + ' run starts ' + dur(x.rise - S.t) + ' before it, in the dark.';
+    if (x.set !== null && S.t > x.set) return 'Today in ' + c.name + ' the sun sets at ' + hm(x.set) + ', so a ' + hm(S.t) + ' run starts ' + dur(S.t - x.set) + ' after it, in the dark.';
     var nxt = yr.filter(function (z) { return isDark(z, S.t); })[0];
-    return 'Today in ' + c.name + ' that’s daylight.' + (nxt ? ' From ' + dayName(nxt) + ' it won’t be.' : ' It stays light at this time all year.');
+    return 'Today in ' + c.name + ' a ' + hm(S.t) + ' run is in daylight.' + (nxt ? ' From ' + dayName(nxt) + ' it won’t be.' : '');
   };
   var counts = function () {
     var c = cityById(S.city), yr = yearOf(c), n = 0, best = 0, bs = -1, cur = 0, cs = 0;
     yr.forEach(function (x, i) { if (isDark(x, S.t)) { n++; if (!cur) cs = i; cur++; if (cur > best) { best = cur; bs = cs; } } else cur = 0; });
     return { n: n, best: best, bs: bs, yr: yr, c: c };
   };
+
+  /* ------------------------------------------------ the stars, one per run that starts in the dark */
+  var stars = $$('[data-stars] circle'), starSky = $('[data-starsky]'), months = $$('[data-months] text');
+  /* the stars' own patch of sky, right of the words on a wide screen, a band above them on a phone */
+  var skyBox = function () {
+    var w = starSky ? starSky.clientWidth : 1440, h = starSky ? starSky.clientHeight : 900, ph = w < 760;
+    return ph ? { w: w, h: h, x0: .07 * w, x1: .93 * w, y0: .15 * h, y1: .43 * h, ph: true } : { w: w, h: h, x0: .46 * w, x1: .96 * w, y0: .17 * h, y1: .6 * h, ph: false };
+  };
+  var layStars = function (k) {
+    var b = skyBox();
+    if (starSky && b.w > 0) starSky.setAttribute('viewBox', '0 0 ' + b.w + ' ' + b.h);
+    k.yr.forEach(function (x, i) {
+      var c = stars[i]; if (!c) return;
+      var m = darkMin(x, S.t), on = m > 0;
+      var cx = b.x0 + i / 364 * (b.x1 - b.x0) + (hsh(i, 1) - .5) * 4;
+      var cy = b.y1 - Math.min(m, 150) / 150 * (b.y1 - b.y0) + (hsh(i, 2) - .5) * 18;
+      c.setAttribute('cx', cx.toFixed(1)); c.setAttribute('cy', cy.toFixed(1)); c.setAttribute('r', ((1.1 + Math.min(m, 90) / 90 * 2.1) * (b.ph ? .85 : 1)).toFixed(2));
+      c.classList.toggle('on', on); c._i = i;
+    });
+    months.forEach(function (t, j) {
+      t.setAttribute('x', (b.x0 + +t.getAttribute('data-i') / 364 * (b.x1 - b.x0)).toFixed(0)); t.setAttribute('y', (b.y0 - (b.ph ? 20 : 26)).toFixed(0));
+      t.style.display = b.ph && j % 2 ? 'none' : '';
+    });
+  };
+  var tip = $('[data-tip]'), stick = $('.dk-stick');
+  var showTip = function (c) {
+    if (!c || !c.classList.contains('on')) { tip.classList.remove('on'); return; }
+    stars.forEach(function (s) { s.classList.toggle('hit', s === c); });
+    var k = counts(), x = k.yr[c._i], m = darkMin(x, S.t);
+    tip.textContent = DAYS[x.wd] + ' ' + dayName(x) + ', ' + hm(S.t) + '. ' + (S.t < x.rise ? 'Sunrise ' + hm(x.rise) + ', ' + dur(m) + ' later.' : 'Sunset ' + hm(x.set) + ', ' + dur(m) + ' before.');
+    var r = c.getBoundingClientRect(), b = stick.getBoundingClientRect();
+    tip.style.left = clamp(r.left + r.width / 2 - b.left, 120, b.width - 120) + 'px'; tip.style.top = (r.top - b.top) + 'px';
+    tip.classList.add('on');
+  };
+  var sg = $('[data-stars]');
+  if (sg) {
+    sg.addEventListener('pointerover', function (e) { if (e.target.tagName === 'circle') showTip(e.target); });
+    sg.addEventListener('pointerout', function (e) { if (e.target.tagName === 'circle') { tip.classList.remove('on'); e.target.classList.remove('hit'); } });
+    sg.addEventListener('click', function (e) { if (e.target.tagName === 'circle') showTip(e.target); });
+  }
+
+  /* ------------------------------------------------ render, every display reads the state */
   var render = function () {
     var c = cityById(S.city), k = counts(), pick = pickOf(S.t), label = (pick === 'sunrise' ? 'Sunrise' : 'Night');
-    setO('time', hm(S.t)); setO('time2', hm(S.t));
-    var tm = $('[data-time]'); tm.setAttribute('aria-valuenow', S.t); tm.setAttribute('aria-valuetext', hm(S.t));
+    setO('time', hm(S.t));
+    var tm = $('[data-time]'); if (tm) { tm.setAttribute('aria-valuenow', S.t); tm.setAttribute('aria-valuetext', hm(S.t)); }
     $$('[data-pick]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-pick') === pick ? 'true' : 'false'); });
     setO('skyline', line());
     setO('darkn', k.n); setO('cityname', c.name);
     setO('streak', k.best ? 'The longest stretch runs from ' + dayName(k.yr[k.bs]) + ' to ' + dayName(k.yr[k.bs + k.best - 1]) + ', ' + k.best + (k.best === 1 ? ' run.' : ' runs in a row.') : 'At this time it stays light all year.');
-    setO('chartsum', 'Daylight for the next 365 days in ' + c.name + ', with a run at ' + hm(S.t) + ' marked. ' + k.n + ' of the 365 runs start in the dark.');
+    setO('chartsum', k.n + ' of the next 365 runs at ' + hm(S.t) + ' in ' + c.name + ' start before sunrise or after sunset.');
     var run = label + ' · ' + hm(S.t) + ' · ' + c.name;
     setO('runline', run); if (!S.paid) setO('bibrun', run);
     setO('sbar', '€1 today · 30% off at launch · ' + label + ' ' + hm(S.t) + ' ' + c.name);
-    var ln = $('[data-yrline]'); if (ln) ln.style.setProperty('--y', ((S.t - 240) / 1140).toFixed(4));
-    paintSky(); drawYear(k);
+    layStars(k); req();
   };
-
-  /* ------------------------------------------------ the hero controls */
   var setT = function (t) { S.t = clamp(Math.round(t / 5) * 5, 240, 1380); render(); };
   $$('[data-pick]').forEach(function (b) { b.addEventListener('click', function () { setT(D.picks[b.getAttribute('data-pick')]); }); });
   $$('[data-dt]').forEach(function (b) { b.addEventListener('click', function () { setT(S.t + +b.getAttribute('data-dt')); }); });
   var tm = $('[data-time]');
-  tm.addEventListener('keydown', function (e) {
-    var st = e.shiftKey ? 30 : 5, k = e.key;
-    if (k === 'ArrowRight' || k === 'ArrowUp') setT(S.t + st); else if (k === 'ArrowLeft' || k === 'ArrowDown') setT(S.t - st);
-    else if (k === 'PageUp') setT(S.t + 60); else if (k === 'PageDown') setT(S.t - 60);
-    else if (k === 'Home') setT(240); else if (k === 'End') setT(1380); else return;
-    e.preventDefault();
-  });
-  var drag = null;
-  tm.addEventListener('pointerdown', function (e) { drag = { x: e.clientX, t: S.t }; tm.setPointerCapture(e.pointerId); });
-  tm.addEventListener('pointermove', function (e) { if (drag) setT(drag.t + (e.clientX - drag.x) * 1.5); });
-  ['pointerup', 'pointercancel'].forEach(function (ev) { tm.addEventListener(ev, function () { drag = null; }); });
-  $('[data-city]').addEventListener('change', function (e) { S.city = e.target.value; render(); });
-
-  /* ------------------------------------------------ stars, drawn once */
-  var stars = $('[data-stars]');
-  var drawStars = function () {
-    if (!stars) return; var w = stars.clientWidth, h = stars.clientHeight, dpr = Math.min(2, window.devicePixelRatio || 1);
-    stars.width = w * dpr; stars.height = h * dpr; var x = stars.getContext('2d'); x.scale(dpr, dpr);
-    var seed = 7; var rnd = function () { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
-    for (var i = 0; i < 140; i++) { var r = rnd() * 1.1 + .2; x.globalAlpha = .25 + rnd() * .65; x.fillStyle = '#fff'; x.beginPath(); x.arc(rnd() * w, rnd() * h * .7, r, 0, 7); x.fill(); }
-  };
-
-  /* ------------------------------------------------ a year of daylight, and the run line that moves it */
-  var yc = $('[data-yr]'), plot = yc && yc.parentNode;
-  var drawYear = function (k) {
-    if (!yc) return; var w = yc.clientWidth, h = yc.clientHeight; if (!w || !h) return;
-    var dpr = Math.min(2, window.devicePixelRatio || 1); yc.width = Math.round(w * dpr); yc.height = Math.round(h * dpr);
-    var x = yc.getContext('2d'); x.scale(dpr, dpr); x.clearRect(0, 0, w, h);
-    var yOf = function (m) { return (m - 240) / 1140 * h; }, cw = w / 365;
-    x.fillStyle = 'rgba(255,255,255,.035)'; x.fillRect(0, 0, w, h);
-    /* daylight as one band, sunrise along the top and sunset along the bottom */
-    x.beginPath();
-    k.yr.forEach(function (d, i) { var px = (i + .5) * cw; if (i === 0) x.moveTo(0, yOf(d.rise)); x.lineTo(px, yOf(d.rise)); });
-    x.lineTo(w, yOf(k.yr[364].rise)); x.lineTo(w, yOf(k.yr[364].set));
-    for (var j = 364; j >= 0; j--) x.lineTo((j + .5) * cw, yOf(k.yr[j].set));
-    x.lineTo(0, yOf(k.yr[0].set)); x.closePath();
-    var g = x.createLinearGradient(0, 0, 0, h); g.addColorStop(0, 'rgba(239,237,231,.30)'); g.addColorStop(.5, 'rgba(239,237,231,.20)'); g.addColorStop(1, 'rgba(239,237,231,.30)');
-    x.fillStyle = g; x.fill();
-    var ty = yOf(S.t);
-    x.shadowColor = 'rgba(255,255,255,.9)'; x.shadowBlur = 6; x.fillStyle = '#fff';
-    k.yr.forEach(function (d, i) { if (isDark(d, S.t)) x.fillRect(i * cw, ty - 7, Math.max(1, cw - .6), 14); });
-    x.shadowBlur = 0;
-  };
-  if (plot) {
-    var pdrag = false;
-    var fromY = function (e) { var r = plot.getBoundingClientRect(); setT(240 + clamp((e.clientY - r.top) / r.height, 0, 1) * 1140); };
-    plot.addEventListener('pointerdown', function (e) { pdrag = true; plot.setPointerCapture(e.pointerId); fromY(e); });
-    plot.addEventListener('pointermove', function (e) { if (pdrag) fromY(e); });
-    ['pointerup', 'pointercancel'].forEach(function (ev) { plot.addEventListener(ev, function () { pdrag = false; }); });
+  if (tm) {
+    tm.addEventListener('keydown', function (e) {
+      var st = e.shiftKey ? 30 : 5, k = e.key;
+      if (k === 'ArrowRight' || k === 'ArrowUp') setT(S.t + st); else if (k === 'ArrowLeft' || k === 'ArrowDown') setT(S.t - st);
+      else if (k === 'PageUp') setT(S.t + 60); else if (k === 'PageDown') setT(S.t - 60);
+      else if (k === 'Home') setT(240); else if (k === 'End') setT(1380); else return;
+      e.preventDefault();
+    });
+    var drag = null;
+    tm.addEventListener('pointerdown', function (e) { drag = { x: e.clientX, t: S.t }; tm.setPointerCapture(e.pointerId); });
+    tm.addEventListener('pointermove', function (e) { if (drag) setT(drag.t + (e.clientX - drag.x) * 1.5); });
+    ['pointerup', 'pointercancel'].forEach(function (ev) { tm.addEventListener(ev, function () { drag = null; }); });
   }
+  var cs = $('[data-city]'); if (cs) cs.addEventListener('change', function (e) { S.city = e.target.value; render(); });
 
-  /* ------------------------------------------------ headlights up the road with the scroll */
-  var hl = $('[data-hl]'), V = D.visibility;
-  var hlLive = hl && hl.classList.contains('live');
-  var caps = hl ? $$('.caps li', hl) : [];
+  /* ------------------------------------------------ 1. the claw opens onto their film */
+  var hero = $('#run'), claw = $('[data-claw]'), heroLive = hero && hero.classList.contains('live');
+  var CLAW = { u: .494, v: .5 }; /* the widest point of the middle slash, measured from their logo */
+  var heroUpdate = function () {
+    if (!heroLive) return;
+    var p = prog(hero), w = claw.clientWidth, h = claw.clientHeight, phone = w < 760;
+    var H0 = (phone ? .38 : .86) * window.innerHeight, W0 = H0 * 268 / 340;
+    var l0 = (w - W0) * (phone ? .5 : .8), t0 = (h - H0) * (phone ? .03 : .58);
+    var X = l0 + CLAW.u * W0, Y = t0 + CLAW.v * H0;
+    var k = ease(clamp(p / .62, 0, 1)), z = 1 + Math.pow(k, 2.1) * 46;
+    var Hs = H0 * z, Ws = W0 * z, cx = X + (w / 2 - X) * k, cy = Y + (h / 2 - Y) * k;
+    claw.style.setProperty('--vs', (1.3 - .3 * k).toFixed(4));
+    claw.style.setProperty('--vx', ((l0 + W0 / 2 - w / 2) * (1 - k)).toFixed(1) + 'px');
+    claw.style.setProperty('--vy', ((phone ? -.22 * h : 0) * (1 - k)).toFixed(1) + 'px');
+    claw.style.setProperty('--mh', Hs.toFixed(1) + 'px');
+    claw.style.setProperty('--mx', (cx - CLAW.u * Ws).toFixed(1) + 'px');
+    claw.style.setProperty('--my', (cy - CLAW.v * Hs).toFixed(1) + 'px');
+    hero.style.setProperty('--ho', clamp(1 - p * 3.2, 0, 1).toFixed(3));
+    hero.style.setProperty('--hw', clamp((p - .5) / .22, 0, 1).toFixed(3));
+    hero.style.setProperty('--hs', clamp((p - .42) / .3, 0, 1).toFixed(3));
+    /* the faded copy's controls leave the tab order, its heading stays for screen readers */
+    $$('.when, .buy, .alt', $('[data-hero-copy]')).forEach(function (e) { e.inert = p > .3; });
+  };
+
+  /* ------------------------------------------------ 2. the sun sets behind their ridge, and the stars come out */
+  var dk = $('#dark'), dkLive = dk && dk.classList.contains('live'), ridge = $('[data-ridge]'), lamp = $('[data-lamp]');
+  var dkq = $('[data-dkq]'), dkn = $('[data-dkn]'), rlen = ridge ? ridge.getTotalLength() : 0;
+  var dkP = 1;
+  var dkUpdate = function () {
+    if (!dkLive) return;
+    var p = prog(dk); dkP = p;
+    dk.style.setProperty('--p', ease(clamp((p - .05) / .7, 0, 1)).toFixed(3));
+    dk.style.setProperty('--so', clamp((p - .42) / .18, 0, 1).toFixed(3));
+    dk.style.setProperty('--qo', (1 - clamp((p - .3) / .1, 0, 1)).toFixed(3));
+    var no = clamp((p - .46) / .12, 0, 1); dk.style.setProperty('--no', no.toFixed(3));
+    dkq.inert = p > .4; dkn.inert = no < .5;
+    dk.style.setProperty('--lo', clamp((p - .3) / .2, 0, 1).toFixed(3));
+    if (ridge && lamp) {
+      /* the headlamp climbs their ridge, along the front path from the saddle to near the peak */
+      var a = rlen * (.18 + .55 * clamp(p, 0, 1)), pt = ridge.getPointAtLength(a);
+      lamp.setAttribute('transform', 'translate(' + pt.x.toFixed(1) + ' ' + (pt.y - 6).toFixed(1) + ')');
+    }
+  };
+
+  /* ------------------------------------------------ 3. headlights come up behind the vest */
+  var hl = $('[data-hl]'), V = D.visibility, hlLive = hl && hl.classList.contains('live');
+  var caps = hl ? $$('.caps li', hl) : [], hlStick = hl && $('.fl-stick', hl), spark = $('[data-spark]'), sparkOn = 0;
   var hlUpdate = function () {
     if (!hlLive) return;
-    var r = hl.getBoundingClientRect(), span = hl.offsetHeight - window.innerHeight;
-    var p = clamp(-r.top / Math.max(1, span), 0, 1);
+    var p = prog(hl);
     var d = Math.round(V.start - p * (V.start - V.end));
-    var near = clamp(V.end / d, 0, 1); /* apparent size, 20 m over the distance */
+    var near = clamp(V.end / d, 0, 1);
     var flare = d <= V.bfu ? clamp(.7 + (V.bfu - d) / 80, 0, 1) : clamp((V.bfu + 14 - d) / 14, 0, 1) * .15;
-    hl.style.setProperty('--s', Math.max(.06, near).toFixed(4)); hl.style.setProperty('--lit', (.12 + .55 * Math.sqrt(near)).toFixed(3));
-    hl.style.setProperty('--flare', flare.toFixed(3));
-    hl.style.setProperty('--lane', (p * 2400).toFixed(0)); hl.style.setProperty('--rp', ((V.start - d) / V.start).toFixed(4));
+    hlStick.style.setProperty('--s', Math.max(.12, Math.pow(near, .72)).toFixed(4));
+    hlStick.style.setProperty('--lit', (.14 + .6 * Math.sqrt(near)).toFixed(3));
+    hlStick.style.setProperty('--flare', flare.toFixed(3));
+    sparkOn = flare;
     setO('dist', d);
     var on = null; caps.forEach(function (li) { if (d <= +li.getAttribute('data-at')) on = li; });
     caps.forEach(function (li) { var a = li === on; li.classList.toggle('on', a); li.inert = !a; });
     hl.setAttribute('data-d', d);
   };
-  if (hl && window.matchMedia('(pointer: fine)').matches && hlLive) {
-    hl.addEventListener('pointermove', function (e) { var r = hl.querySelector('.hl-stick').getBoundingClientRect(); hl.style.setProperty('--tx2', (e.clientX - r.left) + 'px'); hl.style.setProperty('--ty2', (e.clientY - r.top) + 'px'); hl.style.setProperty('--torch', 1); });
-    hl.addEventListener('pointerleave', function () { hl.style.setProperty('--torch', 0); });
-  }
+  /* glints on the reflective panel and slashes while it's lit */
+  var sparkLoop = function () {
+    if (spark && sparkOn > .3 && !rm && spark.getBoundingClientRect().bottom > 0 && spark.getBoundingClientRect().top < window.innerHeight) {
+      var w = spark.clientWidth, h = spark.clientHeight;
+      if (spark.width !== w) { spark.width = w; spark.height = h; }
+      var x = spark.getContext('2d'); x.clearRect(0, 0, w, h);
+      for (var i = 0; i < 26; i++) {
+        var zone = Math.random() < .3, px = zone ? w * (.33 + Math.random() * .2) : w * (.08 + Math.random() * .84), py = zone ? h * (.07 + Math.random() * .2) : h * (.6 + Math.random() * .32);
+        var r = (Math.random() * 1.6 + .4) * (w / 300), g = x.createRadialGradient(px, py, 0, px, py, r * 4);
+        g.addColorStop(0, 'rgba(255,255,255,' + (.9 * sparkOn) + ')'); g.addColorStop(1, 'rgba(200,225,255,0)');
+        x.fillStyle = g; x.beginPath(); x.arc(px, py, r * 4, 0, 7); x.fill();
+      }
+    } else if (spark && spark.width) { spark.getContext('2d').clearRect(0, 0, spark.width, spark.height); }
+    setTimeout(function () { requestAnimationFrame(sparkLoop); }, 70);
+  };
 
   /* ------------------------------------------------ films, theirs, only on screen */
   var saver = navigator.connection && navigator.connection.saveData;
   var wakeFilm = function (v, play) {
     if (rm || saver || (!play && !v._w)) return;
     if (!v._w) { v._w = 1; $$('source[data-src]', v).forEach(function (s) { s.src = s.getAttribute('data-src'); }); v.load(); }
+    if (v.hasAttribute('data-seek')) return; /* the orange chapter plays its own shots */
     if (play) { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); } else v.pause();
   };
+  /* the claw's film starts once the page has loaded, so the words, the fonts and the still frame come first */
+  var heroFilm = $('[data-hero-film]'), heroGo = false;
+  var inViewFilm = function () { var r = heroFilm.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight; };
+  var heroPlay = function () { if (!heroGo || rm || saver || !heroFilm) return; var p = heroFilm.play(); if (p && p.catch) p.catch(function () {}); };
+  var heroStart = function () { heroGo = true; if (heroFilm && !rm && !saver) { heroFilm.preload = 'auto'; if (inViewFilm()) heroPlay(); } };
+  if (document.readyState === 'complete') setTimeout(heroStart, 60); else window.addEventListener('load', function () { setTimeout(heroStart, 60); });
+  /* every still frame waits until its film is a screen or so away, in every mode */
+  var posters = $$('video[data-poster]'), givePoster = function (v) { if (!v.poster) v.poster = v.getAttribute('data-poster'); };
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { wakeFilm(e.target, e.isIntersecting); }); }, { rootMargin: '120px 0px' });
+    var pio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { givePoster(e.target); pio.unobserve(e.target); } }); }, { rootMargin: '100% 0px' });
+    posters.forEach(function (v) { pio.observe(v); });
+  } else posters.forEach(givePoster);
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { wakeFilm(e.target, e.isIntersecting); }); }, { rootMargin: '160px 0px' });
     $$('video[data-film]').forEach(function (v) { io.observe(v); });
+    if (heroFilm) new IntersectionObserver(function (es) { es.forEach(function (e) { if (rm || saver) return; if (e.isIntersecting) heroPlay(); else heroFilm.pause(); }); }).observe(heroFilm);
   }
+
+  /* ------------------------------------------------ 5. the Adventure Vest, their render plays the shot for each spec */
+  var seek = $('[data-seek]'), seg = null, specs = $$('[data-seg]');
+  var playSeg = function (li) {
+    specs.forEach(function (s) { s.classList.toggle('on', s === li); });
+    if (!seek || rm || saver) return;
+    var ab = li.getAttribute('data-seg').split(':'); seg = [+ab[0], +ab[1]];
+    wakeFilm(seek, true);
+    var go = function () { try { seek.currentTime = seg[0]; } catch (e) {} var p = seek.play(); if (p && p.catch) p.catch(function () {}); };
+    if (seek.readyState >= 1) go(); else seek.addEventListener('loadedmetadata', go, { once: true });
+  };
+  if (seek) seek.addEventListener('timeupdate', function () { if (seg && seek.currentTime >= seg[1]) seek.currentTime = seg[0]; });
+  if (specs.length && 'IntersectionObserver' in window) {
+    var sio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) playSeg(e.target); }); }, { rootMargin: window.innerWidth < 980 ? '-66% 0px -24% 0px' : '-45% 0px -45% 0px' });
+    specs.forEach(function (li) { sio.observe(li); });
+  }
+
+  /* ------------------------------------------------ 6. their bear opens onto the Swiss Peaks */
+  var st = $('#story'), pin = st && $('.st-pin', st), bw = $('[data-bearwin]'), stLive = st && st.classList.contains('live');
+  var BEAR = { u: .312, v: .387 }; /* the deepest point of their bear, measured from the trace */
+  var stUpdate = function () {
+    if (!stLive || !pin) return;
+    var p = prog(pin), w = bw.clientWidth, h = bw.clientHeight, phone = w < 760;
+    var W0 = phone ? .92 * w : Math.min(.44 * w, 660), H0 = W0 * 636 / 1040;
+    var l0 = (w - W0) * (phone ? .5 : .96), t0 = (h - H0) * (phone ? .74 : .62);
+    var X = l0 + BEAR.u * W0, Y = t0 + BEAR.v * H0, k = ease(clamp((p - .12) / .6, 0, 1));
+    var z = 1 + Math.pow(k, 2) * 12, Ws = W0 * z, Hs = H0 * z, cx = X + (w / 2 - X) * k, cy = Y + (h / 2 - Y) * k;
+    bw.style.setProperty('--bw', Ws.toFixed(1) + 'px');
+    bw.style.setProperty('--bx', (cx - BEAR.u * Ws).toFixed(1) + 'px');
+    bw.style.setProperty('--by', (cy - BEAR.v * Hs).toFixed(1) + 'px');
+    st.style.setProperty('--to', clamp(1 - (p - .1) * 3.4, 0, 1).toFixed(3));
+    st.style.setProperty('--oo', clamp((p - .62) / .2, 0, 1).toFixed(3));
+  };
+  var phs = $$('.ph');
+  var phUpdate = function () {
+    if (rm || window.innerWidth < 980) return;
+    phs.forEach(function (el, i) { var r = el.getBoundingClientRect(); if (r.bottom < -200 || r.top > window.innerHeight + 200) return; el.style.setProperty('--py', ((r.top + r.height / 2 - window.innerHeight / 2) * ((i % 3) - 1) * -.08).toFixed(1)); });
+  };
 
   /* ------------------------------------------------ the countdown, to an example date */
   var cd = $('[data-cd]');
@@ -267,7 +343,6 @@
     var h = 0; for (var i = 0; i < em.length; i++) h = (h * 31 + em.charCodeAt(i)) >>> 0;
     setO('bibn', String(1000 + h % 9000));
     bib.classList.add('paid');
-    var c = cityById(S.city);
     done.hidden = false;
     done.textContent = 'Reserved. €1 paid and 30% off locked for launch day. Early access goes to ' + em + '. Your number is an example, and in this prototype nothing is charged or sent.';
     render();
@@ -296,25 +371,36 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && mb.getAttribute('aria-expanded') === 'true') { setM(false); mb.focus(); } });
   }
 
-  /* ------------------------------------------------ the header's tone, and the bar that carries the run */
-  var tones = $$('[data-hdr-tone]'), hh = function () { return $('.hdr').offsetHeight; };
-  var heroCta = $('[data-hero-cta]'), sbar = $('[data-sbar]');
-  var others = $$('main a[href="#reserve"], [data-rs]');
+  /* ------------------------------------------------ the sky, the header, and the bar that offers the chapter's next step */
+  var hdr = $('.hdr'), secs = $$('main > section, .ftr'), heroCta = $('[data-hero-cta]'), sbar = $('[data-sbar]');
+  var acts = { reserve: $$('main a[href="#reserve"], [data-rs]'), buy: $$('main [data-add]') };
   var inView = function (el) { if (!el) return false; var r = el.getBoundingClientRect(); return r.width > 0 && r.top < window.innerHeight && r.bottom > 0; };
-  var visible = function (el) { if (!el || !inView(el)) return false; var li = el.closest('li'); return !li || !hlLive || li.classList.contains('on'); };
+  var visible = function (el) { if (!inView(el)) return false; var li = el.closest('li'); if (li && hlLive && li.closest('.caps')) return li.classList.contains('on'); var q = el.closest('[inert]'); return !q; };
+  var goalNow = 'reserve';
   var chrome = function () {
-    var y = hh() + 2, tone = 'night';
-    for (var i = 0; i < tones.length; i++) { var r = tones[i].getBoundingClientRect(); if (r.top <= y && r.bottom > y) { tone = tones[i].getAttribute('data-hdr-tone'); break; } }
-    html.setAttribute('data-hdr', tone);
-    var on = heroCta.getBoundingClientRect().bottom < 0 && !others.some(visible);
-    sbar.classList.toggle('on', on); sbar.setAttribute('aria-hidden', on ? 'false' : 'true'); $('a', sbar).tabIndex = on ? 0 : -1;
+    var mid = window.innerHeight / 2, sec = null;
+    for (var i = 0; i < secs.length; i++) { var r = secs[i].getBoundingClientRect(); if (r.top <= mid && r.bottom > mid) { sec = secs[i]; break; } }
+    if (sec && window.__sky) {
+      var sky = sec.getAttribute('data-sky');
+      if (sky === 'dawn' && pickOf(S.t) === 'night') sky = 'nightmoon';
+      window.__sky.to(sky, sky === 'sundown' ? dkP : 0);
+      /* the sky rests while only chapters that paint their own ground are on screen */
+      window.__sky.rest(!secs.some(function (x) { return !x.hasAttribute('data-own') && inView(x); }));
+    }
+    hdr.classList.toggle('solid', window.scrollY > 40);
+    var goal = (sec && sec.getAttribute('data-goal')) || 'reserve';
+    if (goal !== goalNow) { goalNow = goal; $$('[data-sbg]', sbar).forEach(function (g) { g.hidden = g.getAttribute('data-sbg') !== goal; }); }
+    var on = heroCta.getBoundingClientRect().bottom < 0 && !(acts[goal] || []).some(visible) && !(heroLive && prog(hero) < .95);
+    sbar.classList.toggle('on', on); sbar.setAttribute('aria-hidden', on ? 'false' : 'true');
+    $$('a, button', sbar).forEach(function (b) { b.tabIndex = on && !b.closest('[hidden]') ? 0 : -1; });
   };
 
   var ticking = false;
-  var update = function () { ticking = false; hlUpdate(); chrome(); };
-  var req = function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+  var update = function () { ticking = false; heroUpdate(); dkUpdate(); hlUpdate(); stUpdate(); phUpdate(); chrome(); };
+  function req() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   window.addEventListener('scroll', req, { passive: true });
-  window.addEventListener('resize', function () { drawStars(); render(); req(); });
-  drawStars(); render(); update();
-  window.__bwild = { S: S, altitude: altitude, event: event, yearOf: yearOf, cityById: cityById, isDark: isDark, runMs: runMs };
+  window.addEventListener('resize', function () { rlen = ridge ? ridge.getTotalLength() : 0; render(); req(); });
+  render(); update(); if (spark && !rm) sparkLoop();
+  window.addEventListener('skyready', req);
+  window.__bwild = { S: S, altitude: altitude, event: event, yearOf: yearOf, cityById: cityById, isDark: isDark, runMs: runMs, hsh: hsh };
 })();

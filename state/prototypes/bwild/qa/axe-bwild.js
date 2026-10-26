@@ -7,7 +7,7 @@ const base = process.argv[2].replace(/\/$/, '');
   const b = await chromium.launch();
   for (const rm of ['no-preference', 'reduce']) for (const [w, h] of [[1440, 900], [390, 844]]) {
     const p = await (await b.newContext({ viewport: { width: w, height: h }, reducedMotion: rm })).newPage();
-    await p.goto(base + '/', { waitUntil: 'networkidle' });
+    await p.goto(base + '/', { waitUntil: 'load' });
     const H = await p.evaluate(() => document.documentElement.scrollHeight);
     for (let y = 0; y < H; y += 500) { await p.evaluate(y => scrollTo(0, y), y); await p.waitForTimeout(60); }
     await p.waitForTimeout(1200);

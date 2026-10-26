@@ -1,4 +1,4 @@
-// BWILD functional checks. usage: node bwild-func.js <base url> [plant]
+// BWILD v2 functional checks. usage: node bwild-func.js <base url> [plant]. v1's are kept in bwild-func-v1.js.
 // Every daylight number is worked out independently by qa/expect.py with astral, never by the page's own code.
 // With "plant", each check gets a fault first and must FAIL, so a pass in normal mode means the check can see.
 const { chromium } = require('playwright');
@@ -10,7 +10,7 @@ const res = []; const ok = (n, p, info) => res.push({ n, p: !!p, info });
 const hm = m => { m = Math.round(m); return String(Math.floor(m / 60)).padStart(2, '0') + '.' + String(m % 60).padStart(2, '0'); };
 const dark = (city, t) => X[city].filter(r => t < r[0] || t > r[1]).length;
 (async () => {
-  const b = await chromium.launch();
+  const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
   const p = await (await b.newContext({ viewport: { width: 1440, height: 900 } })).newPage(); const errs = [];
   p.on('pageerror', e => errs.push(e.message)); p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
   await p.goto(base + '/', { waitUntil: 'networkidle' }); await p.waitForTimeout(700);
@@ -26,7 +26,8 @@ const dark = (city, t) => X[city].filter(r => t < r[0] || t > r[1]).length;
   const setOk = [hm(g0[1] - 1), hm(g0[1]), hm(g0[1] + 1)].some(s => h1.line.includes('sets at ' + s));
   ok('hero pick writes the run, sun times match astral', h1.t === hm(D.picks.night) && h1.pressed === 'true' && riseOk && setOk, { l1, h1, want: [hm(g0[0]), hm(g0[1])] });
 
-  // 2 the clock steps and takes the keyboard
+  // 2 the clock steps and takes the keyboard, where it is on screen, after the stars come out
+  await p.evaluate(() => scrollTo(0, document.querySelector('#dark').offsetTop + (document.querySelector('#dark').offsetHeight - innerHeight) * .9)); await p.waitForTimeout(500);
   if (plant) await p.evaluate(() => document.querySelector('[data-dt="5"]').addEventListener('click', e => e.stopImmediatePropagation(), true));
   await p.click('[data-dt="5"]'); await p.focus('[data-time]'); await p.keyboard.press('ArrowRight'); await p.keyboard.press('Shift+ArrowLeft'); await p.waitForTimeout(150);
   const c2 = await p.evaluate(() => ({ t: document.querySelector('[data-o="time"]').textContent, now: document.querySelector('[data-time]').getAttribute('aria-valuenow') }));
@@ -41,21 +42,32 @@ const dark = (city, t) => X[city].filter(r => t < r[0] || t > r[1]).length;
   const n3b = +(await txt('[data-o="darkn"]')), w3 = [dark('geneva', t3), dark('london', t3)];
   ok('dark runs counted like astral, two cities', Math.abs(n3 - w3[0]) <= 2 && Math.abs(n3b - w3[1]) <= 2 && n3 !== n3b, { got: [n3, n3b], want: w3 });
 
-  // 4 the chart is a control, dragging it moves the run everywhere
-  const box = await p.evaluate(() => { const r = document.querySelector('.ch-plot').getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top, h: r.height }; });
-  if (plant) await p.evaluate(() => document.querySelector('.ch-plot').addEventListener('pointerdown', e => e.stopImmediatePropagation(), true));
-  await p.mouse.move(box.x, box.y + box.h * 0.1); await p.mouse.down(); await p.mouse.move(box.x, box.y + box.h * 0.2, { steps: 4 }); await p.mouse.up(); await p.waitForTimeout(200);
-  const want4 = Math.round((240 + 0.2 * 1140) / 5) * 5;
-  const s4 = await p.evaluate(() => ({ t: document.querySelector('[data-o="time"]').textContent, n: +document.querySelector('[data-o="darkn"]').textContent, bar: document.querySelector('[data-o="sbar"]').textContent, run: document.querySelector('[data-o="runline"]').textContent }));
-  ok('chart drag moves the run, hero, bar and form agree', Math.abs(parseInt(s4.t) * 60 + +s4.t.slice(3) - want4) <= 5 && Math.abs(s4.n - dark('london', parseInt(s4.t) * 60 + +s4.t.slice(3))) <= 2 && s4.bar.includes(s4.t) && s4.run.includes(s4.t) && s4.run.includes('London'), { s4, want4 });
+  // 4 the clock is a control, dragging it moves the run everywhere, and the stars lit match the count
+  await p.evaluate(() => scrollTo(0, document.querySelector('#dark').offsetTop + (document.querySelector('#dark').offsetHeight - innerHeight) * .9)); await p.waitForTimeout(600);
+  const box = await p.evaluate(() => { const r = document.querySelector('[data-time]').getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; });
+  const t4a = await p.evaluate(() => document.querySelector('[data-time]').getAttribute('aria-valuenow'));
+  if (plant) await p.evaluate(() => document.querySelector('[data-time]').addEventListener('pointerdown', e => e.stopImmediatePropagation(), true));
+  await p.mouse.move(box.x, box.y); await p.mouse.down(); await p.mouse.move(box.x - 40, box.y, { steps: 4 }); await p.mouse.up(); await p.waitForTimeout(250);
+  const s4 = await p.evaluate(() => ({ now: +document.querySelector('[data-time]').getAttribute('aria-valuenow'), t: document.querySelector('[data-o="time"]').textContent, n: +document.querySelector('[data-o="darkn"]').textContent, lit: document.querySelectorAll('[data-stars] circle.on').length, bar: document.querySelector('[data-o="sbar"]').textContent, run: document.querySelector('[data-o="runline"]').textContent }));
+  ok('clock drag moves the run, stars, bar and form agree', s4.now === +t4a - 60 && Math.abs(s4.n - dark('london', s4.now)) <= 2 && s4.lit === s4.n && s4.bar.includes(s4.t) && s4.run.includes(s4.t) && s4.run.includes('London'), { t4a, s4, want: dark('london', s4.now) });
+
+  // 4b a star tapped gives its own day, and that day's sunrise is astral's
+  await p.evaluate(() => scrollTo(0, document.querySelector('#dark').offsetTop + (document.querySelector('#dark').offsetHeight - innerHeight) * .9)); await p.waitForTimeout(700);
+  if (plant) await p.evaluate(() => ['click', 'pointerover'].forEach(t => document.querySelector('[data-stars]').addEventListener(t, e => e.stopImmediatePropagation(), true)));
+  const pick = await p.evaluate(() => { const c = [...document.querySelectorAll('[data-stars] circle.on')]; const s = c[Math.floor(c.length / 3)]; const r = s.getBoundingClientRect(); return { i: [...document.querySelectorAll('[data-stars] circle')].indexOf(s), x: r.left + r.width / 2, y: r.top + r.height / 2 }; });
+  await p.mouse.click(pick.x, pick.y); await p.waitForTimeout(250);
+  const tip = await p.evaluate(() => ({ on: document.querySelector('[data-tip]').classList.contains('on'), t: document.querySelector('[data-tip]').textContent, hit: [...document.querySelectorAll('[data-stars] circle')].findIndex(c => c.classList.contains('hit')) }));
+  const row = X.london[tip.hit < 0 ? pick.i : tip.hit], dd = new Date(row[2] + 'T12:00:00Z'), MON = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const dayOk = tip.t.includes(dd.getUTCDate() + ' ' + MON[dd.getUTCMonth()]), sunOk = [-1, 0, 1].some(k => tip.t.includes(hm(row[0] + k)) || tip.t.includes(hm(row[1] + k)));
+  ok('a star tapped shows its day and astral\'s sun time', tip.on && dayOk && sunOk, { pick, tip, want: row });
   await p.selectOption('[data-city]', 'geneva'); await p.waitForTimeout(200);
 
   // 5 the headlights, the flare at the BFU's 140 m, the TCS's 112 m, the call at the end
   const at = async d => { await p.evaluate(d => { const s = document.querySelector('#seen'); scrollTo(0, s.offsetTop + (s.offsetHeight - innerHeight) * (300 - d) / 280); }, d); await p.waitForTimeout(400);
-    return p.evaluate(() => { const s = document.querySelector('#seen'); return { d: +document.querySelector('[data-o="dist"]').textContent, flare: +getComputedStyle(s).getPropertyValue('--flare'), on: [...s.querySelectorAll('.caps li.on')].map(l => l.getAttribute('data-at')) }; }); };
-  if (plant) await p.addStyleTag({ content: '#seen{--flare:0!important}' }), await p.evaluate(() => { const s = document.querySelector('#seen'); const st = s.style; const set = st.setProperty.bind(st); st.setProperty = (k, v) => set(k, k === '--flare' ? '0' : v); });
+    return p.evaluate(() => { const s = document.querySelector('#seen'); return { d: +document.querySelector('[data-o="dist"]').textContent, flare: +getComputedStyle(s.querySelector('.fl-stick')).getPropertyValue('--flare'), on: [...s.querySelectorAll('.caps li.on')].map(l => l.getAttribute('data-at')) }; }); };
+  if (plant) await p.evaluate(() => { const s = document.querySelector('#seen .fl-stick'); const st = s.style; const set = st.setProperty.bind(st); st.setProperty = (k, v) => set(k, k === '--flare' ? '0' : v); });
   const a = await at(200), bq = await at(130), cq = await at(100), dq = await at(20);
-  ok('headlights flare at 140 m, captions in order', a.flare < .3 && bq.flare >= .7 && Math.abs(a.d - 200) <= 3 && JSON.stringify([a.on, bq.on, cq.on, dq.on]) === JSON.stringify([['300'], ['140'], ['112'], ['20']]), { a, bq, cq, dq });
+  ok('headlights flare at 140 m, captions in order', a.flare < .3 && bq.flare >= .7 && Math.abs(a.d - 200) <= 3 && JSON.stringify([a.on, bq.on, cq.on, dq.on]) === JSON.stringify([['300'], ['140'], ['112'], ['40']]), { a, bq, cq, dq });
 
   // 6 the bar carries the run, leads with the price, and steps aside where another reserve call is on screen
   const bar = async () => p.evaluate(() => document.querySelector('[data-sbar]').classList.contains('on'));
@@ -66,6 +78,10 @@ const dark = (city, t) => X[city].filter(r => t < r[0] || t > r[1]).length;
   await p.evaluate(() => document.querySelector('[data-rs] button[type=submit]').scrollIntoView({ block: 'center' })); await p.waitForTimeout(300); const atRs = await bar();
   const lead = (await txt('[data-o="sbar"]')).startsWith('€1 today');
   ok('the bar shows mid page and steps aside', !atTop && mid && !atRs && !atEnd && lead, { atTop, mid, atRs, atEnd, lead });
+  await p.evaluate(() => { const e = document.querySelectorAll('[data-seg]')[2]; scrollTo(0, e.getBoundingClientRect().top + scrollY - innerHeight / 2); }); await p.waitForTimeout(400);
+  if (plant) await p.evaluate(() => document.querySelector('#adventure').setAttribute('data-goal', 'reserve')), await p.evaluate(() => scrollBy(0, 2)), await p.waitForTimeout(300);
+  const g6 = await p.evaluate(() => ({ on: document.querySelector('[data-sbar]').classList.contains('on'), buy: !document.querySelector('[data-sbg="buy"]').hidden, res: !document.querySelector('[data-sbg="reserve"]').hidden }));
+  ok('in the orange chapter the bar offers the Adventure Vest', g6.on && g6.buy && !g6.res, g6);
 
   // 7 reserving, a bad email is caught, then the bib prints the run
   if (plant) await p.evaluate(() => document.querySelector('[data-rs]').addEventListener('submit', e => { e.preventDefault(); e.stopImmediatePropagation(); document.querySelector('[data-bib]').classList.add('paid'); }, true));
@@ -94,6 +110,13 @@ const dark = (city, t) => X[city].filter(r => t < r[0] || t > r[1]).length;
   const c9b = await p.evaluate(() => ({ closed: document.querySelector('[data-cart]').hidden, focus: document.activeElement.hasAttribute('data-add') }));
   ok('cart adds the vest at its price, Esc closes', c9.open && c9.n === '1' && c9.body.includes('€' + D.adventure.price / 100) && c9b.closed && c9b.focus, { c9, c9b });
 
+  // 9b their claw opens onto the film, and their bear onto the Swiss Peaks
+  if (plant) await p.evaluate(() => { for (const s of ['[data-claw]', '[data-bearwin]']) { const st = document.querySelector(s).style, set = st.setProperty.bind(st); st.setProperty = (k, v) => set(k, /--(mh|bw)/.test(k) ? '100px' : v); } });
+  const grow = async (sel, el, k, f) => { await p.evaluate(([s, f]) => { const e = document.querySelector(s); scrollTo(0, e.getBoundingClientRect().top + scrollY + (e.offsetHeight - innerHeight) * f); }, [sel, f]); await p.waitForTimeout(300); return p.evaluate(([el, k]) => parseFloat(document.querySelector(el).style.getPropertyValue(k)), [el, k]); };
+  const c0 = await grow('#run', '[data-claw]', '--mh', 0), c1 = await grow('#run', '[data-claw]', '--mh', .7);
+  const w0 = await grow('.st-pin', '[data-bearwin]', '--bw', 0), w1 = await grow('.st-pin', '[data-bearwin]', '--bw', .85);
+  ok('the claw and the bear open as you scroll', c1 > c0 * 20 && w1 > w0 * 6, { c0, c1, w0, w1 });
+
   // 10 their films wait until they're on screen, on a fresh page
   const f = await (await b.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
   await f.goto(base + '/', { waitUntil: 'networkidle' }); await f.waitForTimeout(400);
@@ -104,6 +127,17 @@ const dark = (city, t) => X[city].filter(r => t < r[0] || t > r[1]).length;
   ok('films load only once seen', top10 === 0 && vest10 >= 3, { top10, vest10 });
   ok('no script errors', errs.length === 0, errs.slice(0, 3));
 
+  // 10b the claw's film plays once the page has loaded, the sky starts and then rests under the chapters that paint their own ground
+  const hf = await (await b.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  if (plant) await hf.addInitScript(() => { const pl = HTMLMediaElement.prototype.play; HTMLMediaElement.prototype.play = function () { return this.hasAttribute('data-hero-film') ? Promise.resolve() : pl.call(this); }; window.requestIdleCallback = () => 0; window.addEventListener('load', () => { document.documentElement.classList.remove('webgl'); }); });
+  await hf.goto(base + '/', { waitUntil: 'load' }); await hf.waitForTimeout(2500);
+  const h10 = await hf.evaluate(() => { const v = document.querySelector('[data-hero-film]'); return { paused: v.paused, t: +v.currentTime.toFixed(2), src: (v.currentSrc || '').split('/').pop(), webgl: document.documentElement.classList.contains('webgl'), sky: window.__sky && window.__sky.state() }; });
+  await hf.evaluate(() => document.querySelectorAll('[data-seg]')[3].scrollIntoView({ block: 'center' })); await hf.waitForTimeout(500);
+  const r10 = await hf.evaluate(() => window.__sky && window.__sky.state());
+  await hf.evaluate(() => document.querySelector('#dark').scrollIntoView()); await hf.waitForTimeout(500);
+  const w10 = await hf.evaluate(() => window.__sky && window.__sky.state());
+  ok('the hero film plays after load, the sky rests under painted chapters', !h10.paused && h10.t > 0 && h10.webgl && h10.sky && h10.sky.running && r10 && r10.resting && w10 && !w10.resting && w10.running, { h10, r10, w10 });
+
   // 11 the phone menu reaches every chapter
   const m = await (await b.newContext({ viewport: { width: 390, height: 844 } })).newPage();
   await m.goto(base + '/', { waitUntil: 'networkidle' });
@@ -113,7 +147,7 @@ const dark = (city, t) => X[city].filter(r => t < r[0] || t > r[1]).length;
   await m.keyboard.press('Escape'); await m.waitForTimeout(150);
   const mc = await m.evaluate(() => document.querySelector('.mbtn').getAttribute('aria-expanded'));
   ok('phone menu opens and closes', mo.length === 4 && mo.includes('#adventure') && mc === 'false', { mo, mc });
-  if (plant) await m.addStyleTag({ content: '[data-hero-cta]{margin-top:1400px!important}' });
+  if (plant) await m.addStyleTag({ content: '[data-hero-cta]{position:relative;top:1400px}' });
   const heroCta = await m.evaluate(() => { const a = document.querySelector('[data-hero-cta]').getBoundingClientRect(); return a.bottom <= innerHeight && a.top > 0; });
   ok('the phone first screen carries the reserve call', heroCta, heroCta);
 
@@ -126,7 +160,7 @@ const dark = (city, t) => X[city].filter(r => t < r[0] || t > r[1]).length;
 
   // 13 nothing sticks out at nine widths
   const ow = [];
-  const q = await b.newPage(); await q.goto(base + '/', { waitUntil: 'networkidle' });
+  const q = await b.newPage(); await q.goto(base + '/', { waitUntil: 'load' });
   for (const w of [320, 360, 390, 414, 600, 768, 1024, 1280, 1920]) { await q.setViewportSize({ width: w, height: 900 }); await q.waitForTimeout(200); ow.push([w, await q.evaluate(() => document.documentElement.scrollWidth - innerWidth)]); }
   if (plant) { await q.evaluate(() => { const d = document.createElement('div'); d.style.cssText = 'width:3000px;height:2px'; document.body.appendChild(d); }); ow.push(['plant', await q.evaluate(() => document.documentElement.scrollWidth - innerWidth)]); }
   ok('no overflow at nine widths', ow.every(x => x[1] <= 0), ow.filter(x => x[1] > 0));

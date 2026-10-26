@@ -1,0 +1,4369 @@
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+for BWILD, by Astra
+The prototype
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+A 10% sign up popup comes first
+A DIFFERENT OFFER FIRST
+The bar
+“The new Luminous Vest is coming /// Learn more”
+presale.bwildoutdoors.com
+A second site, in a new tab
+LEAVES YOUR SITE
+Early access
+Email first
+€1
+30% off locked
+30% OFF LOCKED
+
+Five stops and a second site. The €1 is there, a bar and a new tab away, after a popup for a different offer.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+255
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Week
+1
+2
+3
+4
+5
+6
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+for BWILD, by Astra
+The prototype
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+A 10% sign up popup comes first
+A DIFFERENT OFFER FIRST
+KICKSTARTER
+In your menu
+Your Luminous Vest page
+“Coming soon on Kickstarter”, no date, no €1 offer
+NO €1 OFFER
+SAVE THE DATE
+Kickstarter's coming soon page
+LEAVES YOUR SITE
+
+Four stops, and the runner leaves for Kickstarter without seeing the 30% off.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+255
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Week
+1
+2
+3
+4
+5
+6
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+for BWILD, by Astra
+The prototype
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+Sunrise or night? and Reserve for €1 on the first screen
+Email
+Their run already on the form
+€1
+The bib prints, 30% off locked
+30% OFF LOCKED
+
+Three stops on one site, from any page, with the price on the first screen.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+255
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Week
+1
+2
+3
+4
+5
+6
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+for BWILD, by Astra
+The prototype
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+A 10% sign up popup comes first
+A DIFFERENT OFFER FIRST
+The bar
+“The new Luminous Vest is coming /// Learn more”
+presale.bwildoutdoors.com
+A second site, in a new tab
+LEAVES YOUR SITE
+Early access
+Email first
+€1
+30% off locked
+30% OFF LOCKED
+
+Five stops and a second site. The €1 is there, a bar and a new tab away, after a popup for a different offer.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+255
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Week
+1
+2
+3
+4
+5
+6
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+for BWILD, by Astra
+The prototype
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+A 10% sign up popup comes first
+A DIFFERENT OFFER FIRST
+The bar
+“The new Luminous Vest is coming /// Learn more”
+presale.bwildoutdoors.com
+A second site, in a new tab
+LEAVES YOUR SITE
+Early access
+Email first
+€1
+30% off locked
+30% OFF LOCKED
+
+Five stops and a second site. The €1 is there, a bar and a new tab away, after a popup for a different offer.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+185
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Week
+1
+2
+3
+4
+5
+6
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+for BWILD, by Astra
+The prototype
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+A 10% sign up popup comes first
+A DIFFERENT OFFER FIRST
+The bar
+“The new Luminous Vest is coming /// Learn more”
+presale.bwildoutdoors.com
+A second site, in a new tab
+LEAVES YOUR SITE
+Early access
+Email first
+€1
+30% off locked
+30% OFF LOCKED
+
+Five stops and a second site. The €1 is there, a bar and a new tab away, after a popup for a different offer.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+166
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Week
+1
+2
+3
+4
+5
+6
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+StockholmBWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+A 10% sign up popup comes first
+A DIFFERENT OFFER FIRST
+The bar
+“The new Luminous Vest is coming /// Learn more”
+presale.bwildoutdoors.com
+A second site, in a new tab
+LEAVES YOUR SITE
+Early access
+Email first
+€1
+30% off locked
+30% OFF LOCKED
+
+Five stops and a second site. The €1 is there, a bar and a new tab away, after a popup for a different offer.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+255
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+A 10% sign up popup comes first
+A DIFFERENT OFFER FIRST
+KICKSTARTER
+In your menu
+Your Luminous Vest page
+“Coming soon on Kickstarter”, no date, no €1 offer
+NO €1 OFFER
+SAVE THE DATE
+Kickstarter's coming soon page
+LEAVES YOUR SITE
+
+Four stops, and the runner leaves for Kickstarter without seeing the 30% off.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+255
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+Sunrise or night? and Reserve for €1 on the first screen
+Email
+Their run already on the form
+€1
+The bib prints, 30% off locked
+30% OFF LOCKED
+
+Three stops on one site, from any page, with the price on the first screen.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+255
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+A 10% sign up popup comes first
+A DIFFERENT OFFER FIRST
+The bar
+“The new Luminous Vest is coming /// Learn more”
+presale.bwildoutdoors.com
+A second site, in a new tab
+LEAVES YOUR SITE
+Early access
+Email first
+€1
+30% off locked
+30% OFF LOCKED
+
+Five stops and a second site. The €1 is there, a bar and a new tab away, after a popup for a different offer.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+255
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+A 10% sign up popup comes first
+A DIFFERENT OFFER FIRST
+The bar
+“The new Luminous Vest is coming /// Learn more”
+presale.bwildoutdoors.com
+A second site, in a new tab
+LEAVES YOUR SITE
+Early access
+Email first
+€1
+30% off locked
+30% OFF LOCKED
+
+Five stops and a second site. The €1 is there, a bar and a new tab away, after a popup for a different offer.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+185
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+BWILD, the plan
+The plan behind the new BWILD site, the Luminous Vest reservation, the countdown and the Adventure Vest in one place. Prepared by Astra, October 2026.
+Skip to content
+THE PLAN
+EMAIL RAKA
+
+PREPARED BY ASTRA FOR LUPO BENATTI, OCTOBER 2026
+
+ONE SITE FOR THE LAUNCH AND THE VEST YOU SELL TODAY.
+
+Today the Luminous Vest lives in three places. Here's the site that puts the €1 reservation, the countdown and the Adventure Vest in one, what runs underneath, what it costs and how it's ready before your Kickstarter.
+
+OPEN THE PROTOTYPE
+SEE THE COST
+
+The bar at the top of your site opens the €1 reservation on a second site, in a new tab. The KICKSTARTER tab leads to a page with no €1 offer on it.
+
+BWILDOUTDOORS.COM AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+Neither your Luminous Vest page nor the presale page gives a launch date yet.
+
+BWILDOUTDOORS.COM/BWILDLUMINOUSVEST AND PRESALE.BWILDOUTDOORS.COM, 26 OCT 2026
+
+A 06.30 run in Geneva starts in the dark every day from 26 October to 24 March, 150 runs in a row.
+
+WORKED OUT FROM THE SUN'S POSITION FOR EVERY DAY OF THE NEXT YEAR, 26 OCT 2026
+I
+Today
+II
+The route
+III
+The dark
+IV
+The €1
+V
+Built
+VI
+Underneath
+VII
+The cost
+VIII
+Six weeks
+IX
+The team
+
+I
+TODAY
+
+THREE PLACES FOR ONE VEST.
+
+A runner who hears about the Luminous Vest can land in three places, and only one of them takes the €1 that locks 30% off. Your bar points to it in a new tab. Your KICKSTARTER tab points to Kickstarter's coming soon page.
+
+WHERE THE LUMINOUS VEST LIVES
+Your Luminous Vest page, presale.bwildoutdoors.com and Kickstarter's coming soon page
+THE €1 FOR 30% OFF
+On presale.bwildoutdoors.com, opened in a new tab from the bar on your site
+THE KICKSTARTER TAB
+Your Luminous Vest page, “Coming soon on Kickstarter”, no date and no €1 offer
+SAVE THE DATE
+Opens Kickstarter's coming soon page
+A FIRST VISIT
+A popup for 10% off when you sign up, over the home page
+THE ADVENTURE VEST
+€98 on your shop page, with 5 product reviews
+LANGUAGES
+English and Italian
+Your home page on a first visit, with the 10% popup
+The KICKSTARTER tab, your Luminous Vest page
+presale.bwildoutdoors.com, where the €1 is taken
+The Adventure Vest, €98
+
+Screenshots and wording from bwildoutdoors.com and presale.bwildoutdoors.com, taken 26 Oct 2026. The bar's link is in your site's own settings. Kickstarter's page was read, not pictured.
+
+II
+THE ROUTE
+
+THE ROUTE TO THE €1.
+
+Pick where a runner starts and compare today with the new site. Every stop is a page they have to get through before the €1.
+
+TODAY, FROM THE BAR
+TODAY, FROM THE KICKSTARTER TAB
+THE NEW SITE
+bwildoutdoors.com
+A 10% sign up popup comes first
+A DIFFERENT OFFER FIRST
+The bar
+“The new Luminous Vest is coming /// Learn more”
+presale.bwildoutdoors.com
+A second site, in a new tab
+LEAVES YOUR SITE
+Early access
+Email first
+€1
+30% off locked
+30% OFF LOCKED
+
+Five stops and a second site. The €1 is there, a bar and a new tab away, after a popup for a different offer.
+
+Today's routes from bwildoutdoors.com, its bar and its KICKSTARTER tab, and presale.bwildoutdoors.com, 26 Oct 2026. The new route is the prototype.
+
+III
+THE DARK
+
+MOST OF A RUNNER'S WINTER STARTS IN THE DARK.
+
+That's the reason the Luminous Vest exists, so the site counts it for each runner. Pick a city and a run time. The count is worked out from the sun's position for every day of the next year, the same way the site does it.
+
+CITY
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm
+RUN STARTS AT
+06.30
+
+166
+of the next 365 runs start in the dark
+
+Oct ’26
+Nov ’26
+Dec ’26
+Jan ’27
+Feb ’27
+Mar ’27
+Apr ’27
+May ’27
+Jun ’27
+Jul ’27
+Aug ’27
+Sep ’27
+Oct ’27
+
+a run in the dark
+a run in daylight
+
+The same number is a line for your ads and posts, worked out for the city you're targeting.
+
+Sunrise and sunset from NOAA's solar position equations, worked out in your browser and checked against the astral library. A run counts as dark when it starts before sunrise or after sunset.
+
+IV
+THE €1
+
+WHY THE €1 BELONGS ON YOUR OWN SITE.
+
+30×
+
+MORE LIKELY TO CONVERT THAN AN EMAIL ALONE
+
+LaunchBoom built the funnel your presale page runs on. In their words, people who put down $1 after giving their email were “30 times more likely to convert on average, as opposed to people who just gave us their email.” So the €1 is the most useful thing a runner can do before launch, and today it's a bar and a new tab away from your site.
+
+launchboom.com/crowdfunding-tips/how-to-build-a-prelaunch-email-list, read 26 Oct 2026. LaunchBoom's claim about its own funnel, not a figure we checked.
+
+V
+BUILT
+
+THE NEW SITE, BUILT AROUND ONE RUN.
+
+One run carries down the page, from first light into the night and out to the next dawn, in your colours, your films and your mark. The runner picks sunrise or night, sets the time and the city, sees their dark runs come out as stars, and the reservation arrives with their run already on it. Reserve for €1 is on the first screen, in a bar through the page, and again at the end of the headlights. In the orange chapter the bar offers the Adventure Vest instead.
+
+01
+Your slashes, your film
+
+Your three slashes strike down the screen with your golden film inside them, and as you scroll they open until the film fills it. Your own Instagram question, sunrise or night, sets the run, with Reserve for €1 right under it.
+
+02
+Their year, as stars
+
+The sun sets behind the ridge from your film and the stars come out. Every star is one of the runner's own runs that starts in the dark in the next year, worked out from the sun over their city, never typed. Tap one and it gives its date.
+
+03
+Headlights behind you
+
+A car comes up the road behind the runner. Your slashes and the panel flare at 140 metres, the BFU's distance for reflective material in dipped headlights, and the TCS's 112 metres to stop at 80 km/h on a wet road is marked.
+
+04
+First light, and the bib prints
+
+Email and €1, and a race bib prints with their number, run time and city, with 30% off stamped on it. In the prototype nothing is charged or sent.
+
+05
+The vest for today
+
+The Adventure Vest in your render's orange. As each spec comes up, the render plays the shot that shows it, then €98, Davide's review and a cart.
+
+06
+Built out there
+
+Your bear opens onto your Swiss Peaks film as you scroll, then Lupo's own words, your photos and the Strava club.
+
+OPEN THE PROTOTYPE
+
+VI
+UNDERNEATH
+
+WHAT RUNS UNDERNEATH.
+
+We'd keep what already works for you and put it in one place.
+
+01
+One site
+bwildoutdoors.com, built from this prototype, in English and Italian like today.
+02
+The €1 reservation
+LaunchKit keeps running it, with your payments, emails and ads, and it moves onto your own domain, which LaunchKit offers. A runner never changes site.
+03
+The Adventure Vest
+Sold through Stripe Checkout, with your shipping and the 30 day returns as now.
+04
+The countdown
+Reads one launch date you set. On the day, Reserve for €1 becomes Back it on Kickstarter.
+05
+The dark run counter
+Works out sunrise and sunset in the visitor's browser. Nothing is stored and there's nothing to update.
+06
+One offer at a time
+A first visit today meets 10% off in a popup and 30% for €1 in the bar. Until launch, the new site leads with the €1.
+
+launchboom.com/launchkit, “so you can build your funnel on your own domain”, and your own pages, read 26 Oct 2026.
+
+VII
+THE COST
+
+€2,500 FOR THE WHOLE SITE.
+
+One price for everything in this plan, half to start and half when it's live.
+
+€1,250
+TO START
+€1,250
+WHEN IT'S LIVE
+WHAT'S IN IT
+The site from this prototype, in English and Italian
+The slashes opening onto your film, the stars, the headlights, the bib and the bear
+The €1 reservation on your own domain, with LaunchKit
+The countdown and the switch on launch day
+The Adventure Vest checkout
+Every old address redirected, and your Instagram and TikTok links pointed at the new pages
+Reservations and orders measured from the first day
+Or start with the launch page, €900.
+
+The hero, the headlights, the €1 reservation and the countdown, live on bwildoutdoors.com before the campaign. Your shop stays as it is, and the rest of the site can follow after launch.
+
+Not in the price, LaunchKit's and Stripe's own fees and your ad spend.
+
+VIII
+SIX WEEKS
+
+SIX WEEKS TO LAUNCH READY, THE €1 FIRST.
+Weeks 1 to 2
+The launch page
+The €1 reservation on your domain
+The countdown, the headlights and the dark run counter
+Live on bwildoutdoors.com
+Weeks 3 to 5
+The whole site
+The Adventure Vest checkout
+Your story, community and FAQ carried over, in English and Italian
+Every old address redirected
+Week 6
+Ready for launch day
+The switch to Kickstarter tested
+The first report on reservations
+
+On launch day the countdown ends and every Reserve button points to Kickstarter. After the campaign the Luminous Vest joins the shop next to the Adventure Vest.
+
+What we’d measure, every week
+Reservations a week
+LAUNCHKIT
+Share of visitors who reserve
+SITE ANALYTICS
+Reservations that came from Instagram
+SITE ANALYTICS
+Adventure Vest orders
+STRIPE
+Reservations that back on launch day
+KICKSTARTER AND LAUNCHKIT
+
+IX
+THE TEAM
+
+ASTRA, ONE TEAM WITH AMWISESA.
+
+Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.
+
+The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.
+
+Built by Amwisesa, Astra's development partner, often through the brand's own agency.
+
+Raka Mulya
+
+GO TO MARKET ARCHITECT AND ENTREPRENEUR. YOUR CONTACT AT ASTRA.
+
+Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.
+
+Raka on LinkedIn
+Joshua van Zeelt
+
+FOUNDER OF ASTRA AGENCY AND JML AGENCY
+
+Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.
+
+Joshua on LinkedIn
+NEXT, A CALL.
+
+Twenty minutes to walk through the site and the plan, hear when you want to launch, and settle where to start.
+
+EMAIL RAKA
+OPEN THE PROTOTYPE
+
+Prepared by Astra for BWILD OÜ, October 2026. Screenshots of bwildoutdoors.com and presale.bwildoutdoors.com taken 26 Oct 2026. Each figure names its source underneath.
+Your home page on a first visit, with the 10% popup, 26 Oct 2026
+The KICKSTARTER tab, your Luminous Vest page, 26 Oct 2026
+presale.bwildoutdoors.com, where the €1 is taken, 26 Oct 2026
+The Adventure Vest, €98, 26 Oct 2026
+The new BWILD site, your slashes, your film
+The new BWILD site, their year, as stars
+The new BWILD site, headlights behind you
+The new BWILD site, first light, and the bib prints
+The new BWILD site, the vest for today
+The new BWILD site, built out there
+The new BWILD home on a phone, the golden film inside the three slashes over a sunrise
+The runner's dark runs as stars on a phone, 255 of the next 365 at 06.30 in Geneva
+The prototype and the contact
+
+
+
+Chapters
+
+
+
+Where the runner starts
+
+
+
+Runs in the dark over the next year
+
+
+
+
+06.30
+
+
+How it's paid
+
+
+
+Geneva
+Zurich
+Milan
+Paris
+London
+Amsterdam
+Berlin
+Barcelona
+Stockholm

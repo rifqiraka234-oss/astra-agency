@@ -13,14 +13,14 @@ const base = process.argv[2].replace(/\/$/, '');
   const plan = process.argv[3] === 'plan';
   for (const [w, h] of [[1440, 900], [390, 844]]) {
     const p = await (await b.newContext({ viewport: { width: w, height: h } })).newPage();
-    await p.goto(base + '/', { waitUntil: 'networkidle' }); all += await grab(p);
+    await p.goto(base + '/', { waitUntil: 'load' }); all += await grab(p);
     if (plan) {
       for (const k of ['tab', 'new', 'bar']) { await p.click(`[data-rt="${k}"]`); all += '\n' + await grab(p); }
       for (const c of ['london', 'stockholm']) { await p.selectOption('[data-c]', c); all += '\n' + await grab(p); }
       continue;
     }
     await p.click('[data-pick="night"]'); all += '\n' + await grab(p);
-    for (const c of ['london', 'stockholm', 'barcelona']) { await p.selectOption('#run select', c); all += '\n' + await grab(p); }
+    for (const c of ['london', 'stockholm', 'barcelona']) { await p.selectOption('[data-city]', c); all += '\n' + await grab(p); }
     const H = await p.evaluate(() => document.documentElement.scrollHeight);
     for (let y = 0; y < H; y += 700) { await p.evaluate(y => scrollTo(0, y), y); await p.waitForTimeout(40); }
     all += '\n' + await grab(p);
