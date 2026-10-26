@@ -1,6 +1,6 @@
 # Laurens van Dorp, BeBetter Official, delivery of the site, the custom kit page and the growth plan, 25 Oct 2026
 
-NOT SENT. Raka picks the price option and says send. Nothing here goes out on an edit instruction.
+SENT 26 Oct 2026 09:13 UTC, act_oAJdPLbGkBC8dmoGR, the DELIVERY block below byte for byte, on Raka's "2pm works, go send it". Option A was not sent.
 
 ### Laurens Van Dorp, BeBetter Official, ctc_vR5bseee3b8DtJNhv
 
