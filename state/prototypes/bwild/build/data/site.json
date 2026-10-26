@@ -1,0 +1,22 @@
+{
+ "read": "Every price, line and number read on bwildoutdoors.com, presale.bwildoutdoors.com, bfu.ch and tcs.ch on 26 Oct 2026. See research/facts.md.",
+ "adventure": {"name": "BWILD Adventure Vest", "price": 9800, "currency": "EUR",
+   "specs": [["Weight", "207 g"], ["Capacity", "7 L"], ["Pockets", "10"], ["Hydration", "2 × 500 ml soft flasks"], ["Fit", "Fully adjustable, one size, 84 to 120 cm chest"], ["Use", "Trail, road, adventure"]],
+   "box": ["The BWILD hydration vest", "Two 500 ml soft flasks, each marked DARE TO LIVE", "A BWILD pouch for essentials"],
+   "review": ["One of the most beautiful running vests I’ve ever seen.", "Davide Leporati, verified runner"]},
+ "luminous": {"name": "BWILD Luminous Vest", "deposit": 100, "discount": 30, "runners": "1000+",
+   "exampleLaunch": "2027-02-01T18:00:00+01:00"},
+ "visibility": {"bfu": 140, "tcs": 112, "tcsSpeed": 80, "start": 300, "end": 20},
+ "cities": [
+   {"id": "geneva", "name": "Geneva", "lat": 46.2044, "lon": 6.1432, "tz": "Europe/Zurich"},
+   {"id": "zurich", "name": "Zurich", "lat": 47.3769, "lon": 8.5417, "tz": "Europe/Zurich"},
+   {"id": "milan", "name": "Milan", "lat": 45.4642, "lon": 9.19, "tz": "Europe/Rome"},
+   {"id": "paris", "name": "Paris", "lat": 48.8566, "lon": 2.3522, "tz": "Europe/Paris"},
+   {"id": "london", "name": "London", "lat": 51.5072, "lon": -0.1276, "tz": "Europe/London"},
+   {"id": "amsterdam", "name": "Amsterdam", "lat": 52.3676, "lon": 4.9041, "tz": "Europe/Amsterdam"},
+   {"id": "berlin", "name": "Berlin", "lat": 52.52, "lon": 13.405, "tz": "Europe/Berlin"},
+   {"id": "barcelona", "name": "Barcelona", "lat": 41.3874, "lon": 2.1686, "tz": "Europe/Madrid"},
+   {"id": "stockholm", "name": "Stockholm", "lat": 59.3293, "lon": 18.0686, "tz": "Europe/Stockholm"}
+ ],
+ "picks": {"sunrise": 390, "night": 1170}
+}

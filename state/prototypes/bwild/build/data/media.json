@@ -1,0 +1,409 @@
+{
+ "moon": {
+  "sizes": [
+   [
+    320,
+    320
+   ],
+   [
+    640,
+    640
+   ],
+   [
+    760,
+    760
+   ]
+  ],
+  "alpha": false
+ },
+ "lum": {
+  "sizes": [
+   [
+    800,
+    446
+   ],
+   [
+    1500,
+    837
+   ]
+  ],
+  "alpha": false
+ },
+ "lumback": {
+  "sizes": [
+   [
+    419,
+    507
+   ]
+  ],
+  "alpha": true
+ },
+ "lumslash": {
+  "sizes": [
+   [
+    419,
+    507
+   ]
+  ],
+  "alpha": true,
+  "bbox": [
+   142,
+   76,
+   203,
+   140
+  ]
+ },
+ "dune": {
+  "sizes": [
+   [
+    800,
+    533
+   ],
+   [
+    1400,
+    934
+   ],
+   [
+    2000,
+    1334
+   ]
+  ],
+  "alpha": false
+ },
+ "dunetall": {
+  "sizes": [
+   [
+    600,
+    900
+   ],
+   [
+    1000,
+    1500
+   ]
+  ],
+  "alpha": false
+ },
+ "alps": {
+  "sizes": [
+   [
+    800,
+    533
+   ],
+   [
+    1400,
+    933
+   ],
+   [
+    1920,
+    1280
+   ]
+  ],
+  "alpha": false
+ },
+ "alpsrun": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": false
+ },
+ "snow": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": false
+ },
+ "sunset": {
+  "sizes": [
+   [
+    800,
+    445
+   ],
+   [
+    1400,
+    779
+   ],
+   [
+    2000,
+    1113
+   ]
+  ],
+  "alpha": false
+ },
+ "ridge": {
+  "sizes": [
+   [
+    800,
+    427
+   ],
+   [
+    1400,
+    746
+   ],
+   [
+    2000,
+    1066
+   ]
+  ],
+  "alpha": false
+ },
+ "vest": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": true
+ },
+ "vestflasks": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": true
+ },
+ "back": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": true
+ },
+ "drink": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": true
+ },
+ "straps": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": true
+ },
+ "detail": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": true
+ },
+ "flasks": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": true
+ },
+ "label": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": true
+ },
+ "redtee": {
+  "sizes": [
+   [
+    540,
+    540
+   ],
+   [
+    1080,
+    1080
+   ]
+  ],
+  "alpha": true
+ },
+ "print": {
+  "sizes": [
+   [
+    800,
+    533
+   ],
+   [
+    1600,
+    1066
+   ]
+  ],
+  "alpha": false
+ },
+ "logo": {
+  "sizes": [
+   [
+    400,
+    109
+   ]
+  ],
+  "alpha": true
+ },
+ "logoink": {
+  "sizes": [
+   [
+    400,
+    109
+   ]
+  ],
+  "alpha": true
+ },
+ "film-swisspeaks": {
+  "w": 1280,
+  "h": 720,
+  "dur": 20,
+  "src": "hi-home.mp4"
+ },
+ "film-brand": {
+  "w": 1280,
+  "h": 720,
+  "dur": 12.5,
+  "src": "hi-about.mp4"
+ },
+ "film-product": {
+  "w": 540,
+  "h": 960,
+  "dur": 34.5,
+  "src": "hi-productv.mp4"
+ },
+ "film-f-visible": {
+  "w": 540,
+  "h": 540,
+  "dur": 12.6,
+  "src": "ps-Gif8.360.mp4"
+ },
+ "film-f-breathe": {
+  "w": 540,
+  "h": 540,
+  "dur": 2.12,
+  "src": "ps-Gif2.mp4"
+ },
+ "film-f-fit": {
+  "w": 540,
+  "h": 540,
+  "dur": 5.96,
+  "src": "ps-Gif5-1.mp4"
+ },
+ "film-f-hydrate": {
+  "w": 540,
+  "h": 540,
+  "dur": 2.8,
+  "src": "ps-Gif1.mp4"
+ },
+ "film-f-grab": {
+  "w": 540,
+  "h": 540,
+  "dur": 2.52,
+  "src": "ps-Gif3.mp4"
+ },
+ "film-f-zip": {
+  "w": 540,
+  "h": 540,
+  "dur": 2.24,
+  "src": "ps-Gif4.mp4"
+ },
+ "film-f-urban": {
+  "w": 540,
+  "h": 540,
+  "dur": 1.0,
+  "src": "ps-GifsRun6.mp4"
+ },
+ "film-nightrun": {
+  "w": 540,
+  "h": 540,
+  "dur": 1.6,
+  "src": "ps-GifsRun8.mp4"
+ },
+ "lumpanel": {
+  "sizes": [
+   [
+    419,
+    507
+   ]
+  ],
+  "alpha": true,
+  "bbox": [
+   10,
+   275,
+   408,
+   494
+  ]
+ },
+ "sundisc": {
+  "sizes": [
+   [
+    320,
+    320
+   ],
+   [
+    640,
+    640
+   ],
+   [
+    760,
+    760
+   ]
+  ],
+  "alpha": false
+ }
+}
