@@ -72,7 +72,8 @@ The card's own lines are controls too, so a visitor who jumps straight to the re
 
 **The route rule (Fae Club v3).** The first screen carries the action. The bar at the foot comes in when the hero's button
 leaves, leads with their date, and steps aside wherever another button to the reply or the reply's own fields are on
-screen. No half screen without a way to the reply, checked by the guide walk at 390 and 1440.
+screen. No half screen without a way to the reply, checked by the guide walk at 390 and 1440. On phones the bar's button
+is one word (Reply on the wedding page, Enquire on Events) so their date, guests and help are never cut.
 
 ## The Events page, the second visitor
 

@@ -1,7 +1,254 @@
 # Honey It's Handled, handover (26 Oct 2026)
 
 One file for both builds. The prototype agent writes its own section, the plan's section is below. Neither overwrites
-the other.
+the other. Newest prototype first, v3 then v2 then v1.
+
+## The prototype v3, a wedding (26 Oct 2026, late evening)
+
+**Flag first, budget.** A one person consumer business, a sole trader since 1 January 2026 (KBO 1032.568.265), one paid
+private event of her own (Cinco Cero) and the Pro League Awards on her pages. RULES 0G and the GTM plan say one screen and
+the call ask without a budget sign. Raka asked for this build by name ("Put it into HTML. Let's redo it again"), so v3 is
+built. No price for her services anywhere, she publishes none. **Not deployed.** Raka wants the HTML first, v2 stays live
+at https://astra-honeyitshandled-prototype.netlify.app/ untouched, and nothing has been sent to Elise.
+
+v1 (build/, site/) and v2 (build-v2/, site-v2/) are untouched. v3 is build-v3/ writing site-v3/. Raka's words on v2 and the
+brief are research/v3-brief.md, the art research and media research/art-direction-v3.md, the four lines and the flow
+research/flow-v3.md.
+
+### Where it is
+
+One self contained file, for opening from disk,
+`/tmp/claude-0/-home-user-astra-agency/24052593-7323-58b2-9e3f-744f7080d43c/scratchpad/bundle/honey-its-handled-prototype-v3.html`
+(20,930,289 bytes, 20.9 MB, 52 files embedded, so the film needed no further compression, sha256 starting f880f341cc3ca4d5). The scratchpad is session storage, so copy the file out or rebuild it with
+`python3 tools/bundle-site.py state/prototypes/honeyitshandled/site-v3 <out>`. Both pages live in that one file, the Events
+page is the same document at #events (`/#events` once deployed, netlify.toml redirects /events there).
+
+### The idea, in two sentences
+
+Her launch offer asks "a few special couples" to be her very first weddings, so the site is her invitation, a wedding film
+under her wordmark, then her own rhyme from 17 June, "Something Off-White. Something Blue. Something Red.", as three
+chapters of one couple's year with her (the dress and the first idea, the planning behind the scenes at blue hour, the day
+itself in candlelight and petals). The enquiry is the reply card, all three colours at once, an off white card on her blue
+with the couple's names in red foil script, sealed with her HH pressed in red wax.
+
+### The hero film
+
+Four slow cuts from one Mixkit wedding shoot, crossfaded into a 12.8 s loop that ends on the frame it starts from, no
+sound. A bride's lace sleeves and orchid bouquet (5184), a lace dress being buttoned (5183), her hand on his shoulder
+(5206), a rose and white flowers in candle light on the table (5224, its first five seconds only, the later frames show a
+menu card with a printed monogram). No face in any frame. 1600 by 900 webm and mp4, and a 540 by 960 phone cut cropped
+round each subject. Each item's own page reads "Free Download ... for commercial or personal use, under the Mixkit Stock
+Video Free License" and `copyrightNotice` "Free", read 19.57 UTC, links in the table below.
+
+### The magical moments
+
+1. **The veil.** A sheer tulle veil drawn in WebGL hangs over the dress film, folds falling from a crown above the screen,
+   a fine net, a scalloped lace hem, moving in a slow wind and round the pointer. Scrolling lifts it from the hem, the
+   centre first, and "Something Off-White." arrives on an ivory swatch once the dress is clear.
+2. **Seventeen lights at blue hour.** Her "Usually found with 17 tabs open" as 17 candle lights hanging among glass globes,
+   breathing, each one a thing her pages say she handles. Her three ways to help are a menu card in her blue ink, choosing
+   one lights what she'd hold, tapping a light hands it over or back.
+3. **Petals that part.** Petals in her red, her powder blue and ivory fall over the candles and part round the pointer or
+   a finger, into the final dance in silhouette at dusk.
+4. **Foil names.** The couple types their names on the card and they appear in Pinyon Script in red foil that catches the
+   light as the pointer moves.
+5. **The wax seal.** Sending presses her HH into red wax across the card's lower edge, with a squash and a settle.
+   "Consider it handled."
+
+### Who it's for and the one action, per page
+
+- **The wedding page.** A couple, usually the bride first, in Antwerp or elsewhere in Flanders, marrying in 2027 or 2028,
+  no planner yet. One action, reply to the invitation as one of her first couples ("Be one of our first couples" on the
+  film, at the end of the final dance and under Elise, "Be one of the first" in the header and the bar, "Reply" on the phone bar). The card arrives
+  written, date, here or abroad, guests, the help and the lights handed over, and the message in her form's words. The
+  quiet second path is "Planning an event?" on the film and Events in the menu.
+- **The Events page.** A host or a company. "Events, beautifully handled." over her Cinco Cero tent, then Cinco Cero (a 50th
+  birthday, 28 August 2026, 125 guests, her brief line, Jan Geysen's first two sentences, her photos and her aftermovie
+  cut), the Pro League Awards '26 (her page's three sentences, photos by Kaat DM), and Elise in your team (her own phrase,
+  "an experienced freelance event manager to strengthen your team"). Each ends on its own button, "Plan a private event",
+  "Plan a company event", "Ask Elise to join your team", which sets the enquiry (Private Event, Corporate Event, Corporate
+  Event with the freelance line). "Tell me about your event" is on the first screen, in the header and the bar ("Enquire" on the phone bar).
+
+### Sources and when they were read
+
+Her site, all nine sitemap pages (lastmod 26 Oct), curl 19.44 to 19.45 UTC and Chromium 19.47 to 19.49 UTC. Her Instagram
+through /embed/ at 19.47 UTC, 137 followers, posts_count 7, the embed now shows the newest six (a new Pro League post at
+17.52 UTC today), and her 17 June brand reveal through its own /p/DZsg-pLCDT6/embed/captioned/ at 19.47 UTC. Every line with
+its source is in build-v3/data/site.json. 59 of her strings checked mechanically against those reads, 50 word for word and
+9 with the documented changes below. Art research, 40 sites tried and 35 rendered 19.51 to 19.54 UTC (12 wedding planners, 18 couture and
+hotel houses, 10 award level wedding sites from CSS Design Awards' own search and two candle houses), fonts pulled off each,
+in research/art-direction-v3.md.
+
+### Her words, and where we changed them
+
+Word for word, her film line "For the moments you'll never want to forget." (sentence case), "Be one of our first couples"
+(her announcement bar), the launch offer heading and paragraph, "Saying 'I do' in 2027 or 2028? We'll love to hear all about
+your plans.", "Something Off-White. Something Blue. Something Red.", "From the first idea to the final dance, every detail
+thoughtfully considered.", "Don't worry if you don't have all the answers yet. That's what I'm here for.", "I think ahead, so
+you don't have to.", "How I can help", her partial planning and day coordination lines, "The details are mine, the moment is
+yours.", "You say 'I do'. I'll handle the rest.", "Type A, so you don't have to be.", her MEET ELISE lines, "Tell me
+everything.", the Pinterest line, "Consider it handled", her four next steps, Jan Geysen's sentences with his own
+exclamation marks, her events heading and lines, Cinco Cero's brief, the Pro League sentences. Changed, she should see
+these. "recieve" fixed in the launch offer, "Usally" fixed, "&" written out in her two lists, "Bespoke celebrations" became
+"Something of your own" (banned word, as v2). Her own full planning line says "the entire journey", and "journey" is on our
+banned list, so under Full planning sits another line of hers from the same /weddings page ("From finding the right setting
+and bringing together a dream team of suppliers ... I'm there to bring it all together."), our placing. "Off-White" keeps
+her hyphen, the copy audit allows that one line as her own words, nothing else.
+
+### What must not be read as fact
+
+- **Every film and wedding photo on the wedding page is stock**, Mixkit and Unsplash, standing in for her own. None is her
+  wedding, her couple, her venue or her work, nothing captions or implies it, the note on the film and the footer say so,
+  and she'd replace them with footage from her first couples, which is what her launch offer collects.
+- The date 12 June 2027 and 100 guests are the page's example, not her availability. The page never says a date is free.
+- The 17 lights are things her pages say she handles, not a service list. The six lit for day coordination (timelines,
+  suppliers, the flow of the evening, place cards, plan B, plan B for plan B) are our example.
+- The card's wording ("are saying I do", "and would love Elise's full planning", "as one of her first couples") is ours.
+- Her launch offer's size isn't stated, and "a few" couples is her number, we never give one.
+- The Pro League Awards are her page's words and nothing more, nothing says who hired her or her role that night.
+- Cinco Cero is only ever "A 50th birthday". Jan Geysen is quoted on the wedding page as "on his 50th birthday, Cinco Cero".
+- "Elise in your team", "She also joins production teams as ..." and its next line are ours round her own phrase.
+- The veil, the lights, the menu card, the invitation card and the wax seal are our objects. Her HH and wordmark are her
+  artwork, traced in v1.
+- Nothing is sent. The card's note says so, the footer says so, and the fallback opens the visitor's own email with the
+  whole request in it.
+
+### Every stock item, with its licence page
+
+Films, Mixkit Stock Video Free License, each item page's `copyrightNotice` read "Free" and its download box "Free Download,
+Download this free stock video clip for commercial or personal use, under the Mixkit Stock Video Free License" at 19.57
+UTC, each 1080p file fetched singly at 20.14 UTC, sha256 in build-v3/media/manifest.json. The licence on
+https://mixkit.co/license/#videoFree reads "can be used in your commercial and non-commercial projects, for free ...
+Attribution is not required".
+
+| On the page | Item | Licence page | Cut |
+|---|---|---|---|
+| Hero, cut 1 and the loop's tail | Mixkit 5184, Bride at her wedding holding bouquet | https://mixkit.co/free-stock-video/bride-at-her-wedding-holding-bouquet-5184/ | 2.0 to 6.0 s |
+| Hero, cut 2 | Mixkit 5183, Bridesmaid helping to put on a wedding dress | https://mixkit.co/free-stock-video/bridesmaid-helping-to-put-on-a-wedding-dress-5183/ | 3.0 to 7.0 s |
+| Hero, cut 3 | Mixkit 5206, A bride's hand on the groom's shoulder at their wedding | https://mixkit.co/free-stock-video/a-brides-hand-on-the-grooms-shoulder-at-their-wedding-5206/ | 1.0 to 5.0 s |
+| Hero, cut 4 | Mixkit 5224, Sequence of a decorated wedding table | https://mixkit.co/free-stock-video/sequence-of-a-decorated-wedding-table-5224/ | 0.5 to 4.5 s, clear of the monogrammed menu cards |
+| Something Off-White, under the veil | Mixkit 5190, Beautiful wedding dress hanging in a white room | https://mixkit.co/free-stock-video/beautiful-wedding-dress-hanging-in-a-white-room-5190/ | 6.5 to 12.5 s, forward then back |
+| Something Blue, under the lights | Mixkit 5213, Decorations on the ceiling of a wedding party | https://mixkit.co/free-stock-video/decorations-on-the-ceiling-of-a-wedding-party-5213/ | 8.4 to 14.4 s, forward then back, graded to her blue |
+| Something Red, under the petals | Mixkit 51655, A romantic dinner table adorned with lit candles, rose petals | https://mixkit.co/free-stock-video/a-romantic-dinner-table-adorned-with-lit-candles-rose-petals-51655/ | 2.0 to 8.5 s, forward then back |
+| The final dance | Mixkit 101211, Couple silhouette at colorful sunset | https://mixkit.co/free-stock-video/couple-silhouette-at-colorful-sunset-101211/ | 0.3 to 8.5 s, forward then back |
+
+Stills, the Unsplash License, each photo page reads "Free to use under the Unsplash License" (read between 20.04 and 20.19
+UTC, neither is Unsplash+), the licence on https://unsplash.com/license reads "Commercial and non-commercial purposes, No permission needed".
+Fetched singly from images.unsplash.com, the og:image of each page.
+
+| On the page | Item | Licence page |
+|---|---|---|
+| Off White, left | Unsplash DTLT9ESXM9s, grayscale photo of beaded lace gown, by Wedding Photography, 24 April 2018 | https://unsplash.com/photos/grayscale-photo-of-beaded-lace-gown-DTLT9ESXM9s |
+| Off White, right | Unsplash HqatjVNJ31A, a white dress with lace, by Meg Jenson, 12 August 2022 | https://unsplash.com/photos/a-white-dress-with-lace-HqatjVNJ31A |
+
+Left out, and why. Seven of the 70 Mixkit items read were "Mixkit Restricted License", personal use only, though their
+JSON-LD licence link says videoFree, among them the best veil film (8888, Bride tosses veil while dressing for wedding),
+two candle films (17426, 29425) and the light leaks (48495). Pexels walls us (Cloudflare on curl, tools/fetch-walled.py on
+all three fingerprints and Chromium), so no Pexels item, since its own page couldn't be read. Films with faces of models
+(40584, 40590, 4639 and the like) stay out.
+
+### Her own pictures
+
+| On the page | Her file | Where it is on her site today | Notes |
+|---|---|---|---|
+| Elise in black and white, large | 42a973_8887369f | /weddings, alt "Honey it's Handled_Elise Laeven" | Zoomed at full size, a plain belt buckle, no marks, no edit |
+| Elise sitting | 42a973_6059565d | / (home), the same alt | Zoomed, no marks, no edit |
+| Events, the tent before the guests | 42a973_3eba9b82 | /gallerycincocero | As v2, set and empty |
+| Events, the Cinco Cero sign and a heat lamp | 42a973_427f62a1, 42a973_aaf72253 | / and /cincocero, /cincocero | As v2, no people |
+| Events, the Handelsbeurs roof and the tables | 42a973_f181779c, 42a973_9e35ce1e | /pro-league-awards, / (glimpse) | **Cropped** as v2, top 65.5% and top half, clear of the sponsor wall and the printed menu cards. "Photos by Kaat DM." under them |
+| Events, film | 42a973_5f3af2a4 | /cincocero aftermovie | v2's 4.2 s cut, no sound, "From her Cinco Cero aftermovie." |
+
+Left out on purpose, her /weddings photos and the two card photos on her home page (alts "Honey it's Handled_Wedding" and
+"_Private Events", origin not stated), and 42a973_b81dcffa and 42a973_ae0d2b8e (the Apple mark on her laptop), so v3 needs no
+edit to any photo of hers.
+
+### QA, all on one build (site-v3 files hash 4e5bbb643a618f11 at the start and the end of every run, 22.04 to 22.28 UTC)
+
+| Test | Result | Its plant |
+|---|---|---|
+| Functional, qa/func-v3.js, 30 checks, every expected value worked out from site.json and date sums | 30 of 30 pass | 30 of 30 planted faults caught |
+| Films, inside the functional test | A fresh page fetches only the hero film, a chapter film loads near the screen, plays on it and pauses off it, reduced motion and data saver fetch no film at all | caught |
+| The phone bar, new tonight, every state on both pages at 320, 360, 390 and 430 | Nothing cut, the bar at most 69 px tall | the ellipsis put back, caught |
+| Copy, qa/copy-v3.js, every reachable state, 326 unique lines | Clean, no dash, colon, banned word, hedge, uncontracted verb or exclamation outside Jan Geysen's own sentences and "Something Off-White." | 6 of 6 planted faults reported |
+| axe, 33 runs, 1440 and 390, motion on and reduced, both pages, menus open, errors shown, sealed | 33 of 33 clean | 33 of 33 report the plant |
+| Overflow, 9 widths from 1920 to 320, motion on and reduced, both pages, plus a sideways pan | 0 of 18 loads | both 390 loads overflow |
+| Guide walk, both pages at 390 and 1440 | 0 half screens without a way to the reply. First screens carry "Be one of our first couples" and "Tell me about your event" | 22 gaps found |
+| Contrast over film and photos, measured from pixels, 14 lines times 4 | 56 measured, 0 below the line, the closest 5.23 to 1 against 4.5 (the small capitals under her wordmark, over the phone film) | 18 below the line |
+| Lighthouse, phone three runs | Performance 95, 94, 94, LCP 2.8 to 2.9 s, TBT 0 ms, CLS 0, accessibility 100, best practices 100 | |
+| Lighthouse, desktop and the Events page on a phone | 100 (LCP 0.6 s) and 91 (LCP 3.4 s), accessibility and best practices 100 | |
+| SEO | 66 everywhere, the only failed audit is is-crawlable, the noindex on purpose | |
+| The bundle from disk, 1440 and 390 | 0 errors, 0 failed requests, 0 requests outside the file, 9 of 9 visible images decoded, 6 of 6 on Events, all five wedding films and the Events film played, the veil and petals drew, all three fonts loaded | |
+
+Every section was looked at at 1440 and 390 on both pages (session scratchpad honey-v3/shots/final, every 0.8 screen,
+0 errors, 0 failed requests). The first full chain ran clean on the build before tonight's bar fix (hash
+bfd7e59d593baa3e), the looking found the phone bar cutting the Events date ("Sat 20 Mar 20...") and the help in most
+states at 320 and 360, so the bar was fixed, a test was added for it and the whole chain ran again on the new build.
+
+### The banned Claude tells, item by item (RULES section 5)
+
+Checked on the final build against the computed styles and the HTML, not from memory.
+
+| Tell | v3 |
+|---|---|
+| A serif headline with an italic second half | None. No `font-style:italic` anywhere in the CSS, Fraunces is upright everywhere |
+| A small uppercase kicker with a dash over a heading | None. A script walked all 12 headings and legends on the wedding page and 6 on Events and found no small capitals line in the 60 px above any of them. The small capitals left are field labels, the menu, the event links and the meta lines under the event headings |
+| Pill buttons with a sliding arrow | None. Every button and field is square (`border-radius:0`), the only rounded things are the candle flames and globes |
+| Cream and indigo chapters taking turns | No. Ivory, her powder blue #D3E9EE and her red #962122, each once, in the order of her rhyme. The page does go back to ivory for Elise and to blue for the reply card, flagged below |
+| Gradients, glows, gradient overlays on photos | Partly. The glows behind the chapter titles are gone, the titles sit on flat swatches. Three dark scrims remain at the foot of film where words sit on it (the hero, the final dance, the Events tent), for contrast, and they're the generic overlay the rule names. The gradients that are ours are the veil, the candle flames, the foil on the names and the dusk sky fading from ivory into the blue film |
+| Big count up numbers with a source line | None. "Elise holds 6 of 17." is a sentence that changes as lights are handed over, nothing counts up |
+| Three pillars of bullets, four facts with top rules | No pillars. Her three ways to help are one menu card you choose from. Her four next steps are a numbered list (01 to 04) without rules, the closest thing to a template part on the page |
+| Rounded cards with soft shadows | Square deckled paper, but the menu card and the reply card do carry drop shadows, they're paper objects lying on the scene. Flagged |
+| A logo marquee | None. No third party logo in any frame |
+| Cute SVG illustration scenes | None. The only drawn SVGs are her HH, her wordmark and the wax seal |
+| Chips and tags | The date, place and guest controls are square bordered picks inside a sentence, not chips |
+| A floating pill | None. The bar is a full width strip on the bottom edge |
+| Eleven sections on a home page | Seven, film, invitation, three chapters, Elise, the reply |
+| One texture under every section | Grain sits only on the films and on the card paper |
+| A kicker over every heading | None, as above |
+| The same two column grid again and again | The three chapters are full screen scenes, each built differently (veil on film, lights on a stage, petals then the dance). Elise and the Events parts share a 12 column grid |
+| Her photos shrunk into boxes | Her two portraits are large in the Elise section. Her Events photos are in a two up pair and a strip, the plainest part of v3 |
+| A graphic that reads as a chart | None |
+| Motion that's only fades | The veil lifts in WebGL, candles breathe and flicker, petals fall and part, the foil moves with the pointer, the seal presses. Each has a still state under reduced motion |
+| The brand's own vibe nowhere | Her rhyme is the structure, her "17 tabs open" is the blue chapter, her "Consider it handled" is the send |
+| Every visitor gets a path | Couples get the card, hosts and companies get Events with three buttons of their own, each setting the enquiry |
+| A display serif as the voice (out unless the lead's brand uses one) | Fraunces carries the headings. Her own wordmark is high contrast serif lettering (v1 research), and every expensive wedding and hotel house rendered today sets a thin serif large, so it's paired to her field, not a default. Figtree, her own site's sans, carries the text |
+
+### Beside v2, honestly
+
+Sheets in the session scratchpad, honey-v3/shots/fin/v2-v3.jpg (v2 live on the left, v3 on the right, 1440) and
+honey-v3/shots/final (every 0.8 screen of both v3 pages at 1440 and 390, taken from the final build).
+
+- **Does it feel like a wedding.** Yes, from the first frame. v2 opens on a giant red HH and "What are we celebrating?",
+  then a disco ball, "125" and "570+" in huge numbers on black and red, which is her two nights and reads as a nightclub.
+  v3 is lace, an orchid bouquet, a dress being buttoned, her hand on his shoulder, candles, rose petals and a couple at dusk, then a reply
+  card with their names in script and her seal. Nobody would take it for anything but a wedding planner.
+- **Magical.** Yes, more than any build so far for her. The veil lifting off the dress, the candle lights at blue hour
+  and the petals parting round the hand are the three moments people would show someone else. The card with foil names
+  and the seal is the finish.
+- **Exclusive.** Mostly. The thin serif with air round it, square buttons, three colours and the invitation framing
+  ("Will you be one of our first 'I do'?") read as a house that picks its couples. What pulls it down is the stock film,
+  Mixkit clips that are a little soft and milky at 1440, and the blue globe film, which is busy behind the menu card.
+- **Screenshot worthy.** The hero frame, the three line rhyme on ivory, Something Red over the candles and the dance at
+  dusk, yes. The reply card, yes.
+- **Where v2 was better.** v2 had more of Elise's own punch, her HH huge, "Type A" with her cut out photo, the numbers of
+  her real nights. v3 trades that energy for romance, and her wit now lives in the copy and the 17 lights only.
+- **What I'd still change.** The Off White chapter holds the same pale dress for about three screens while the veil lifts,
+  and the pinned scenes make the wedding page 13.7 screens at 1440, where the luxury sites measured today ran five to
+  nine. The Events page is plainer than the wedding page, her photos in a pair and a strip with the aftermovie loop as
+  its only motion. Three dark scrims are still under words on film. And everything that looks like a wedding is stock,
+  so the site only becomes hers once her first couples' footage replaces it.
+
+### Hiccups, each with the rule it leaves
+
+Written up for everyone in docs/build-and-deck.md, "Honey It's Handled v3".
+
+### Rebuild
+
+`/usr/local/bin/python3 build-v3/build.py` writes site-v3/ and asserts unique ids before it writes. One time step, already
+run, `build-v3/art/prep_v3.py` (needs the Mixkit and Unsplash files fetched into the session scratchpad, honey-v3/media-src,
+and v2's folder of her originals, ffmpeg with VP9 and x264, Pillow; VP9 isn't byte identical run to run, so hash media after
+the last prep). Fonts are OFL with their licences in build-v3/fonts. QA scripts qa/*-v3.js, server
+`python3 -m http.server 8762 -d <abs path to site-v3>`, chain in the session scratchpad honey-v3/tools/chain.sh.
 
 ## The prototype v2, the art build (26 Oct 2026, evening)
 

@@ -514,7 +514,7 @@ def foot():
 </footer>
 <aside class="bar" data-bar aria-label="Your enquiry so far" aria-hidden="true">
   <p class="bar-s"><span class="bl" data-o="bar">{esc(DEF_BAR)}</span><span class="bs"><span data-o="barDate">{esc(short_date(DEF_DATE))}</span><span data-o="barMore">100 guests · Full planning</span></span></p>
-  <a class="btn bar-b" href="#reply" data-bar-cta tabindex="-1">Be one of the first</a>
+  <a class="btn bar-b" href="#reply" data-bar-cta tabindex="-1"><span class="bb-l">Be one of the first</span><span class="bb-s">Reply</span></a>
 </aside>
 <script type="application/json" id="hih-data">{DATA_JSON}</script>
 <script src="js/veil.js" defer></script>

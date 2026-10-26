@@ -1041,7 +1041,7 @@ flow-v3.md, the v3 section of handover.md).
 
 **What made it, repeat it.**
 1. **The hero is the thing they sell, in film.** Four slow cuts from one licence checked wedding shoot (bouquet and lace, a
-   dress being buttoned, a ring on his shoulder, a rose in candle light), no faces, one loop that ends on its first frame,
+   dress being buttoned, her hand on his shoulder, a rose in candle light), no faces, one loop that ends on its first frame,
    her wordmark and her own line over it. Chapters drawn from the same shoot read as one couple's day.
 2. **Her own rhyme is the spine and the colour.** "Something Off-White. Something Blue. Something Red." (17 June) gave three
    chapters and the reply card in all three at once, an off white card on her blue sealed in her red.
@@ -1071,7 +1071,7 @@ flow-v3.md, the v3 section of handover.md).
 | The fix by shades read as glows behind the titles | Put the words on a flat field of the brand's own colour instead |
 | The bar check passed with the bar hidden, it read the class | A check reads what is drawn (display, size, position), the RULES rule again |
 | The walk found four half screens on the events page with no way to the enquiry, the bar and the walk counted differently | One `actions()` list and one on screen rule shared by the bar and the walk, and every page's first screen carries its own action |
-| The phone bar's ellipsis ate the help, as on Fae Club | On phones the bar is two lines, the date first |
+| The phone bar's ellipsis ate the help, as on Fae Club. The two line fix still cut the Events date ("Sat 20 Mar 20...") and every state at 320, because only the default state at 390 was looked at, and the test compared the words, not whether they fit | On phones the bar's button is one word (Reply, Enquire) and the details wrap. A test sets every state on both pages at 320 to 430 and fails on any text wider than its box, with a plant that puts the ellipsis back |
 | Light labels at the edges were clipped by the stage | Align a label to the side its anchor sits near, per breakpoint |
 | The event meta lines and "When's your I do?" sat over headings as small caps kickers | Facts go under the heading, a question is set as a line of the voice, never as a kicker |
 | A rerun of the media prep changed the hashes of films it didn't touch, VP9 isn't byte identical run to run | Hash media and run the QA chain after the last prep, never compare across preps |

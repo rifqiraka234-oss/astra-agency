@@ -236,6 +236,32 @@ C('the bar is off on the first screen, on mid page and steps aside for the reply
   same(await shown(), false, 'bar over the reply');
 }, async p => { await p.addStyleTag({ content: '.bar{display:none!important}' }); });
 
+// the phone bar carries the whole request in every state, never cut by an ellipsis or its box, at 320 to 430
+C('the phone bar shows the whole state, nothing cut, on both pages from 320 to 430', async p => {
+  // every state is set in full, so nothing carries over from the one before
+  const states = [['home', { noDate: false, help: 'full', guests: 100 }], ['home', { noDate: false, help: 'partial', guests: 100 }], ['home', { noDate: false, help: 'day', guests: 600 }], ['home', { noDate: true, year: 2028, help: 'day', guests: 600 }],
+    ['events', { type: 'private', team: false, guests: 60 }], ['events', { type: 'company', team: false, guests: 600 }], ['events', { team: true, guests: 600 }]];
+  for (const w of [320, 360, 390, 430]) {
+    await p.setViewportSize({ width: w, height: 760 });
+    for (const [v, s] of states) {
+      await p.evaluate(v => { location.hash = v === 'events' ? '#events' : '#off-white'; }, v); await p.waitForTimeout(120);
+      const r = await p.evaluate(([v, s]) => {
+        if (v === 'home') HIH.set(s); else HIH.ev.set(s);
+        const bar = document.querySelector('[data-bar]'); bar.classList.add('on');
+        const box = document.querySelector('.bar-s'), btn = document.querySelector('[data-bar-cta]').getBoundingClientRect();
+        const parts = [...box.querySelectorAll('[data-o]')].filter(e => e.offsetParent !== null && e.getClientRects().length);
+        const cut = parts.filter(e => e.scrollWidth > e.clientWidth + 1 || e.getBoundingClientRect().right > box.getBoundingClientRect().right + 1).map(e => e.textContent);
+        if (box.scrollHeight > box.clientHeight + 1 || box.scrollWidth > box.clientWidth + 1) cut.push('the box');
+        if (btn.right > innerWidth || btn.left < box.getBoundingClientRect().right) cut.push('the button');
+        return { cut, text: parts.map(e => e.textContent).join(' | '), h: bar.offsetHeight };
+      }, [v, s]);
+      if (r.cut.length) throw new Error(`${w} ${v} ${JSON.stringify(s)} cut ${JSON.stringify(r.cut)}`);
+      if (!r.text.includes(v === 'home' ? (s.noDate ? 'Sometime in ' + s.year : '2027') : '2027')) throw new Error(`${w} ${v} the date is missing, ${r.text}`);
+      if (r.h > 104) throw new Error(`${w} ${v} the bar is ${r.h} px tall`);
+    }
+  }
+}, async p => { await p.addStyleTag({ content: '.bs [data-o]{white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}' }); }, { phone: true });
+
 C('the header is clear over the film and paper after it', async p => {
   same(await p.evaluate(() => document.querySelector('[data-hdr]').classList.contains('on-film')), true, 'on film at the top');
   await p.evaluate(() => document.getElementById('invited').scrollIntoView()); await p.mouse.wheel(0, 1); await p.waitForTimeout(300);

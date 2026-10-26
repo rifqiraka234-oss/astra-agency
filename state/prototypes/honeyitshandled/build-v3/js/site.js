@@ -291,7 +291,7 @@
       });
     }
     $$('[data-nav]').forEach(function (a) { if (a.dataset.nav === 'events' && v === 'events') a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-    var bc = $('[data-bar-cta]'); if (bc) { bc.href = v === 'events' ? '#ev-reply' : '#reply'; bc.textContent = v === 'events' ? 'Tell me about your event' : 'Be one of the first'; }
+    var bc = $('[data-bar-cta]'); if (bc) { bc.href = v === 'events' ? '#ev-reply' : '#reply'; $('.bb-l', bc).textContent = v === 'events' ? 'Tell me about your event' : 'Be one of the first'; $('.bb-s', bc).textContent = v === 'events' ? 'Enquire' : 'Reply'; }
     txt('[data-o="bar"]', v === 'events' ? evBar() : barText()); barTwo(v === 'events' ? evBarShort() : barShort());
   }
   window.addEventListener('hashchange', function () { route(false); });
