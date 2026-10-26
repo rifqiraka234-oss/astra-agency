@@ -1,3 +1,4 @@
+<!-- GATE ARCHIVED. SENT 25 Oct 13.27 UTC, act_tHDERxQKGBvPjnKTF, found in the thread 26 Oct 19.28 UTC. Do not send again. -->
 # Julien Salvat, Saavedra, delivery of the catering and events site and growth plan, 25 Oct 2026
 
 SENT 25 Oct 13:27:42 UTC, act_tHDERxQKGBvPjnKTF, the DELIVERY block below, on Raka's "Brooo amazing! Write in the mds to always make these kind of plans and prototypes. Send but dont say we soent the whole day bulding it". Option B was not used. This replaces the holding reply in state/drafted_2026-10-25-julien-reply.md, which
