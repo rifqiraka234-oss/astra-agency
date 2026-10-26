@@ -1,3 +1,5 @@
+> NOT SENT, and not to be sent. Raka chose Option B on 26 Oct, which went out at 09:13 UTC (act_oAJdPLbGkBC8dmoGR).
+
 # Laurens van Dorp, BeBetter Official, delivery Option A, with a from price, 25 Oct 2026
 
 NOT SENT. The context, the thread pull and the slots are in state/drafted_2026-10-25-laurens-delivery.md.
