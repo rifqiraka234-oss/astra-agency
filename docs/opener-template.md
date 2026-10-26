@@ -31,8 +31,36 @@ Shall I send you a sketch of [the thing]?
   `Something I've been thinking about, [name]!` and block two opens `Your ...` (RULES section 1).
 - The full research gate, the `worth:` line at 2,500 euros or more (RULES 0E) and the `owner reply:`
   line (RULES 0F) all apply, and from 26 Oct the `still there:` line (RULES 0G point 1). tools/check-drafts.py
-  fails an OPENER shape in a file dated 2026-10-14 or later, so a new first message is always tagged SKETCH.
+  fails an OPENER shape in a file dated 2026-10-14 or later, so a new first message is always tagged SKETCH,
+  or SKETCHB when the A/B test below assigns it.
 - After it, one plain bump and then a silent close (RULES section 1, two pitches, then close).
+
+### From 26 Oct, half of all first messages are SKETCHB, the A/B test (Raka, 2026-10-25, "lets try")
+
+The contactId decides which shape a lead gets, never a person. Full plan, rules and how it's counted are in
+`docs/experiments/2026-10-26-opener-ab.md`. The short version.
+
+```
+Hi [name], [company] looks cool.
+
+However, [what you saw]. [what it likely costs them].
+
+I'd suggest [the project].
+
+Shall I send you a sketch?
+```
+
+- **The opening is Raka's (2026-10-26), "maybe like change it to Hi name, [company] looks cool. however,".** It
+  replaced the "thanks for connecting" line on the day the test came back, before anything was sent.
+- Four blocks, 45 to 95 words, a full stop after "looks cool", and no brand line. The ask can name the thing,
+  "Shall I send you a sketch of [thing]?", 14 words max.
+- Write A first, then B is the same gap and suggestion with the brand line taken out and the short ask. Trim only to
+  fit 95 words, so the two versions differ in as little as possible.
+- The gate carries `variant: B`. A SKETCH in the test carries `variant: A`.
+- To see a lead's arm, `python3 -c "import importlib.util as u; s=u.spec_from_file_location('c','tools/check-drafts.py');
+  m=u.module_from_spec(s); s.loader.exec_module(m); print(m.variant_for('ctc_...'))"`, or just run check-drafts, which
+  names the right shape when the draft is in the wrong one.
+- The warm SKETCH and the AI workflow variant below stay outside the test.
 
 ### The AI workflow variant, "did you know" (Raka, 2026-10-22)
 

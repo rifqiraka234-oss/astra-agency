@@ -112,7 +112,8 @@ builders") and W1c ("established consumer businesses on DIY site builders") are 
 
 ## 3. The first message
 
-- **SKETCH stays** (`docs/opener-template.md`). The A/B test was dropped on 25 Oct.
+- **SKETCH against SKETCHB, the A/B test** (`docs/opener-template.md`, `docs/experiments/2026-10-26-opener-ab.md`).
+  Dropped on 25 Oct, back on from 26 Oct at Raka's word. The contactId picks the version.
 - **Tier 3 gets the AI workflow "did you know" shape**, a sourced cost of their role, not a site critique.
 - **Every gap passes RULES 0F and 0G before it's written.** In NL and DE especially, a gap that could be a choice is
   better left out than stated.
