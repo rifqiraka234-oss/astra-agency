@@ -99,6 +99,17 @@ Shall I send you a sketch of the AI workflow for [their practice, shop, team]?
 - Everything else in the SKETCH rules applies, 45 to 115 words, 30 words a sentence in block two,
   the `worth:` and `owner reply:` lines.
 
+### The Build Squad variant of "did you know" (Raka, 2026-10-26)
+
+His words, "leo build squad using did you know", on Léonard Chalvet of Bruno, a branding agency. Same shape as the AI
+workflow variant above, with a Build Squad offer. Block two names a capacity cost of their ROLE (branding agencies,
+design studios, how much build work they turn away, outsource or deliver late), backed by a published number with the
+source named in the message, then one verified fact about them that makes it theirs. Block three offers a build squad
+that takes exactly that cause off them. RULES section 1A still holds, a capacity fact in block two for a Build Squad
+offer. "Half the time at half the price" is Raka's own offer, used verbatim if at all and flagged to him every time.
+The gate carries the same `did you know:` line, and check-drafts.py accepts "build squad" in block three or four in
+place of "AI workflow". Like the AI workflow variant it sits outside the A/B test.
+
 ## The template, 2026-09-22 to 2026-10-13
 
 **Raka's template, adopted as THE first message on 2026-09-22.** It replaces every earlier

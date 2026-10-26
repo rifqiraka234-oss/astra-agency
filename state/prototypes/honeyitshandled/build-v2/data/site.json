@@ -1,0 +1,356 @@
+{
+ "built": "2026-10-26",
+ "readAt": "Her site reread 26 Oct 2026, 15.34 to 15.36 UTC (all nine pages in her sitemap, lastmod 26 Oct, /cincocero after one 429 and a pause), her Instagram through /embed/ at 15.42 UTC (137 followers, 6 posts, newest 15 Sep 2026). v1's facts in ../build/data/site.json were rechecked against these reads.",
+ "colours": {
+  "red": "#962122",
+  "blue": "#D3E9EE",
+  "paper": "#F9F7F6",
+  "ink": "#333333",
+  "source": "Wix palette variables in her home page HTML, as v1"
+ },
+ "story": {
+  "lines": [
+   "You enjoy. We handle.",
+   "It starts long before the guests arrive.",
+   "With an idea.",
+   "And a lot of little decisions.",
+   "Every detail considered.",
+   "Every piece falling into place.",
+   "So when the doors open…",
+   "…there’s nothing left to do but celebrate."
+  ],
+  "source": "https://www.instagram.com/honeyitshandled/ post of 15 Sep 2026, caption read in full through /embed/ at 15.42 UTC"
+ },
+ "palette": {
+  "line": "Something Off-White. Something Blue. Something Red.",
+  "source": "Instagram, 17 June 2026, her brand reveal"
+ },
+ "name": {
+  "honey": "“HONEY” because we’re the reassuring voice in the chaos.",
+  "handled": "“IT’S HANDLED” because once you call us, it genuinely is.",
+  "typeA": "Type A, so you don’t have to be.",
+  "source": "Instagram, 17 June 2026, her brand reveal, word for word"
+ },
+ "lines": {
+  "rest": "You be there. I’ll handle the rest.",
+  "restSource": "/ (home), under FOR THE MOMENTS YOU'LL NEVER WANT TO FORGET.",
+  "mine": "The details are mine, the moment is yours.",
+  "mineSource": "/ (home), THE HONEY PHILOSOPHY",
+  "tell": "Tell me everything.",
+  "tellSource": "/ and /contact, the form heading and button",
+  "handled": "Consider it handled.",
+  "handledSource": "/ and /contact, the send button CONSIDER IT HANDLED",
+  "pinterest": "Whether there’s already a date, a Pinterest board with 847 pins or simply an idea you can’t stop thinking about, I’d love to hear about it.",
+  "pinterestSource": "/ (home), above the form",
+  "answers": "Don’t worry if you don’t have all the answers yet. That’s what I’m here for.",
+  "answersSource": "/contact, A FEW DETAILS FIRST."
+ },
+ "paths": {
+  "wedding": {
+   "label": "Our wedding",
+   "short": "Wedding",
+   "when": "When’s the big day?",
+   "cta": "Tell me everything",
+   "celebrating": "Wedding",
+   "defaultDate": "2027-06-12",
+   "guests": 100,
+   "help": [
+    {
+     "id": "full",
+     "name": "Full planning",
+     "line": "From your first idea to the final dance, I’ll guide you through all of it, so you can enjoy every step.",
+     "src": "/weddings 01 FULL PLANNING, 'the entire journey' became 'all of it' (banned word)"
+    },
+    {
+     "id": "partial",
+     "name": "Partial planning",
+     "line": "Already on your way and need a little extra support? I’ll step in where needed and help bring it all together.",
+     "src": "/weddings 02 PARTIAL PLANNING, ', but need' became ' and need'"
+    },
+    {
+     "id": "day",
+     "name": "Wedding day coordination",
+     "line": "You’ve planned it all, now it’s time to hand it over. I’ll make sure everything runs smoothly, so you can be fully present.",
+     "src": "/weddings 03 WEDDING DAY COORDINATION, word for word"
+    }
+   ]
+  },
+  "private": {
+   "label": "A birthday or a dinner",
+   "short": "Celebration",
+   "when": "When’s the party?",
+   "cta": "Plan my celebration",
+   "celebrating": "Private Event",
+   "defaultDate": "2027-03-20",
+   "guests": 60,
+   "kinds": [
+    "A milestone birthday or anniversary",
+    "A private party",
+    "A dinner or a garden party",
+    "An engagement party",
+    "Something of your own"
+   ],
+   "kindsSource": "/events PRIVATE EVENTS, WHAT WE CAN HANDLE, '&' written out, 'Bespoke celebrations' became 'Something of your own' (banned word)",
+   "help": [
+    {
+     "id": "whole",
+     "name": "The whole event",
+     "line": "A full event, from the first idea to the final guest leaving. You enjoy the moment, Elise handles the rest.",
+     "src": "/events intro 'a full event from concept to execution' and OUR EXPERTISE 'From the first idea to the final guest leaving', 'YOU ENJOY THE MOMENT. WE'LL HANDLE THE REST.'"
+    },
+    {
+     "id": "coord",
+     "name": "Coordination",
+     "line": "You’ve got the plan. Elise takes the tabs you hand her and runs them on the night.",
+     "src": "/events intro 'expert coordination', ours in her terms"
+    }
+   ]
+  },
+  "company": {
+   "label": "A company event",
+   "short": "Company event",
+   "when": "When’s the event?",
+   "cta": "Hire Elise for your event",
+   "celebrating": "Corporate Event",
+   "defaultDate": "2027-02-04",
+   "guests": 250,
+   "kinds": [
+    "A company dinner or celebration",
+    "A product launch or brand activation",
+    "An award ceremony or gala",
+    "A networking event or reception",
+    "A company anniversary or team event"
+   ],
+   "kindsSource": "/events CORPORATE EVENTS, WHAT WE CAN HANDLE, '&' written out",
+   "help": [
+    {
+     "id": "whole",
+     "name": "The whole production",
+     "line": "The full event, from the first idea to the final guest leaving, run with structured project management.",
+     "src": "/events 'managing an entire production', 'From the first idea to the final guest leaving', 'structured project management'"
+    },
+    {
+     "id": "coord",
+     "name": "Coordination",
+     "line": "Your team has the plan. Elise coordinates the tabs you hand her, on the day and before it.",
+     "src": "/events intro 'expert coordination', ours in her terms"
+    },
+    {
+     "id": "freelance",
+     "name": "Elise in your team",
+     "line": "An experienced freelance event manager to strengthen your team, for the tabs you choose.",
+     "src": "/events intro and YOUR EVENT. OUR EXPERTISE., 'an experienced freelance event manager to strengthen your team' and 'to join your team'"
+    }
+   ]
+  }
+ },
+ "tabs": [
+  [
+   "The date",
+   "/contact"
+  ],
+  [
+   "The place",
+   "/contact"
+  ],
+  [
+   "The people",
+   "/contact"
+  ],
+  [
+   "The Pinterest board",
+   "/contact and /"
+  ],
+  [
+   "The setting",
+   "/weddings"
+  ],
+  [
+   "Suppliers",
+   "/weddings, /cincocero, /pro-league-awards"
+  ],
+  [
+   "Timelines",
+   "/weddings"
+  ],
+  [
+   "Budgets",
+   "/weddings, /about"
+  ],
+  [
+   "The atmosphere",
+   "/cincocero"
+  ],
+  [
+   "The styling",
+   "/cincocero"
+  ],
+  [
+   "The flow of the evening",
+   "/cincocero"
+  ],
+  [
+   "Logistics",
+   "/pro-league-awards"
+  ],
+  [
+   "The guest experience",
+   "/pro-league-awards"
+  ],
+  [
+   "The florist",
+   "/about"
+  ],
+  [
+   "Place cards",
+   "/about"
+  ],
+  [
+   "Plan B",
+   "/about"
+  ],
+  [
+   "Plan B for plan B",
+   "/about, 'a backup plan for the backup plan'"
+  ]
+ ],
+ "tabsLine": "Usually found with 17 tabs open.",
+ "tabsLineSource": "/about A LITTLE MORE ELISE, 'Usally found with 17 tabs open.' with the typo fixed",
+ "nights": {
+  "cinco": {
+   "name": "Cinco Cero",
+   "kind": "A 50th birthday",
+   "guests": 125,
+   "dateText": "28 August 2026",
+   "caption": "125 guests, Mexican food and one night to celebrate 50.",
+   "captionSource": "Instagram, 10 Sep 2026, 'CINCO CERO • in motion', word for word",
+   "alive": "And then, the night came alive.",
+   "aliveSource": "Instagram, 8 Sep 2026, 'And then, the night came alive 🪩', the emoji left out",
+   "brief": "The brief wasn’t simply to organise a birthday party. It was to create an evening people wouldn’t want to leave.",
+   "briefSource": "/cincocero, 'For Cinco Cero, the brief wasn't simply ...', word for word from 'The brief'",
+   "pins": [
+    "the atmosphere",
+    "the styling",
+    "suppliers",
+    "the flow of the evening",
+    "good food",
+    "good music"
+   ],
+   "pinsSource": "/cincocero, 'From the atmosphere and styling to the flow of the evening, suppliers and all the details happening behind the scenes' and 'good food, good music and even better company'"
+  },
+  "pro": {
+   "name": "Pro League Awards ’26",
+   "kind": "A corporate award show",
+   "guests": 570,
+   "guestsText": "570+",
+   "dateText": "25 May 2026",
+   "text": "On May 25th, 2026, the Handelsbeurs in Antwerp set the stage for the Pro League Awards, bringing together over 570 guests to celebrate the very best of Belgian football.",
+   "line": "570+ guests. One iconic venue.",
+   "scenes": "Behind the scenes, it was all about planning, precision and teamwork.",
+   "timing": "A production where timing was everything, teamwork made the difference and every detail mattered.",
+   "source": "https://www.honeyitshandled.com/pro-league-awards, word for word, read 15.35 UTC",
+   "credit": "Photos by Kaat DM.",
+   "creditSource": "her image file names on /pro-league-awards, 'Pro League Awards - 011 - by Kaat DM.jpg' (as v1)",
+   "pins": [
+    "planning",
+    "precision",
+    "teamwork",
+    "suppliers",
+    "logistics",
+    "timing"
+   ],
+   "pinsSource": "/pro-league-awards, 'planning, precision and teamwork', 'coordinating suppliers and managing logistics', 'timing was everything'"
+  }
+ },
+ "quote": {
+  "text": "My 50th birthday party has become an incredible memory, thanks to the collaboration with Honey it’s Handled!",
+  "who": "Jan Geysen",
+  "source": "/cincocero, the signed testimonial, its first sentence word for word with his exclamation mark, reread 15.35 UTC"
+ },
+ "elise": {
+  "intro": "I’m Elise, founder, planner and the person behind Honey it’s Handled.",
+  "introSource": "/ (home), MEET ELISE",
+  "lines": [
+   "I’m the person who has the timeline open before breakfast, knows where the florist is, notices the missing place card and has a backup plan for the backup plan.",
+   "Before starting Honey it’s Handled, I spent 5 years managing events and bringing together people, suppliers, timings, budgets and approximately a thousand moving parts."
+  ],
+  "linesSource": "/about, MEET ELISE, word for word",
+  "more": [
+   [
+    "Usually found",
+    "with 17 tabs open"
+   ],
+   [
+    "At an event",
+    "probably checking the timeline"
+   ],
+   [
+    "Off duty",
+    "pilates, dinner with friends and planning my next trip"
+   ],
+   [
+    "Love language",
+    "having already thought of it"
+   ],
+   [
+    "Non negotiable",
+    "a plan B"
+   ]
+  ],
+  "moreSource": "/about, A LITTLE MORE ELISE, 'Usally' fixed, '&' written out, 'Non-negotiable' written without its hyphen"
+ },
+ "offer": {
+  "title": "Will you be one of our first ‘I do’?",
+  "text": "We’re looking for a few special couples to become part of the very first Honey it’s Handled weddings. As one of our first couples, you’ll receive an exclusive launch offer on our wedding planning service, in exchange for allowing us to capture and share your celebration as part of our Honey it’s Handled story.",
+  "source": "/weddings, EXCLUSIVE LAUNCH OFFER, 'recieve' fixed",
+  "years": [
+   2027,
+   2028
+  ]
+ },
+ "form": {
+  "celebrating": [
+   "Wedding",
+   "Destination Wedding",
+   "Private Event",
+   "Corporate Event",
+   "Other"
+  ],
+  "found": [
+   "Instagram",
+   "Google",
+   "Event",
+   "Referral",
+   "Other"
+  ],
+  "source": "the Wix form on / and /contact, enum read from the HTML at 15.34 UTC"
+ },
+ "next": [
+  [
+   "You tell me everything.",
+   "Fill me in on what you’re planning."
+  ],
+  [
+   "I’ll be in touch.",
+   "If it feels like a match, we’ll arrange a first conversation."
+  ],
+  [
+   "We get to know each other.",
+   "We’ll talk through your ideas, priorities and what you need help with."
+  ],
+  [
+   "Consider it handled.",
+   "From there, we’ll figure out the best way to make it happen."
+  ]
+ ],
+ "nextSource": "/contact, WHAT HAPPENS NEXT?",
+ "contact": {
+  "email": "info@honeyitshandled.com",
+  "phone": "+32 470 58 48 54",
+  "phoneHref": "+32470584854",
+  "instagram": "https://www.instagram.com/honeyitshandled/",
+  "linkedin": "https://www.linkedin.com/company/honey-its-handled/",
+  "kbo": "1032.568.265",
+  "kboSource": "https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1032568265"
+ }
+}

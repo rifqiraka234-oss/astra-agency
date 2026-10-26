@@ -1,0 +1,323 @@
+{
+ "tent": {
+  "id": "42a973_3eba9b82e35c44a085882fdc52efea3d~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_3eba9b82e35c44a085882fdc52efea3d~mv2.jpg",
+  "page": "/gallerycincocero",
+  "altThere": "(no alt)",
+  "sha256": "3a2f8bbb193779adc226b9d1fa462484cf0714c1fe577ea63e832358fa3dac82",
+  "crop": null,
+  "note": "Cinco Cero, the tent set before the evening, no people",
+  "sizes": [
+   [
+    900,
+    600
+   ],
+   [
+    1600,
+    1066
+   ]
+  ]
+ },
+ "tent-cy": {
+  "id": "42a973_3eba9b82e35c44a085882fdc52efea3d~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_3eba9b82e35c44a085882fdc52efea3d~mv2.jpg",
+  "page": "/gallerycincocero",
+  "altThere": "(no alt)",
+  "sha256": "3a2f8bbb193779adc226b9d1fa462484cf0714c1fe577ea63e832358fa3dac82",
+  "crop": null,
+  "note": "Cinco Cero, the tent set before the evening, no people, our cyanotype of her photo in her blue (the details layer)",
+  "sizes": [
+   [
+    900,
+    600
+   ],
+   [
+    1600,
+    1066
+   ]
+  ]
+ },
+ "hall": {
+  "id": "42a973_f181779ca0d8460eb26ea5d57717a6ca~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_f181779ca0d8460eb26ea5d57717a6ca~mv2.jpg",
+  "page": "/pro-league-awards",
+  "altThere": "Pro League Awards 2026 in de Handelsbeurs Antwerpen",
+  "sha256": "ec6191264079804a14ff6959e89e98c57ee177da72aabbedb560286d08517184",
+  "crop": [
+   0.0,
+   0.0,
+   1.0,
+   0.655
+  ],
+  "note": "cropped to the top 65.5 percent, the ground floor arcade carries a Pro League and sponsor wall (as v1)",
+  "sizes": [
+   [
+    700,
+    688
+   ],
+   [
+    1067,
+    1048
+   ]
+  ]
+ },
+ "hall-cy": {
+  "id": "42a973_f181779ca0d8460eb26ea5d57717a6ca~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_f181779ca0d8460eb26ea5d57717a6ca~mv2.jpg",
+  "page": "/pro-league-awards",
+  "altThere": "Pro League Awards 2026 in de Handelsbeurs Antwerpen",
+  "sha256": "ec6191264079804a14ff6959e89e98c57ee177da72aabbedb560286d08517184",
+  "crop": [
+   0.0,
+   0.0,
+   1.0,
+   0.655
+  ],
+  "note": "cropped to the top 65.5 percent, the ground floor arcade carries a Pro League and sponsor wall (as v1), our cyanotype of her photo in her blue (the details layer)",
+  "sizes": [
+   [
+    700,
+    688
+   ],
+   [
+    1067,
+    1048
+   ]
+  ]
+ },
+ "disco": {
+  "id": "42a973_2dc29647937646469164f7f8fa16dbf0~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_2dc29647937646469164f7f8fa16dbf0~mv2.jpg",
+  "page": "/ and /cincocero",
+  "altThere": "Discobal tijdens avond feest",
+  "sha256": "c6cc0399b49713628b797beb6ac34750bd9b01830873722126f2b3cd7fe6cb91",
+  "crop": null,
+  "note": "Cinco Cero, the mirror ball in the tent",
+  "sizes": [
+   [
+    600,
+    900
+   ],
+   [
+    1100,
+    1650
+   ]
+  ]
+ },
+ "sign": {
+  "id": "42a973_427f62a1f26148caaf6c412ba7c974b6~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_427f62a1f26148caaf6c412ba7c974b6~mv2.jpg",
+  "page": "/ and /cincocero",
+  "altThere": "Welkomstbord in het donker tijdens priv\u00e9 feest",
+  "sha256": "cb8fc3b26775989e19f73cd26dda944ff2158b60ee88a0fbc5c9c635fe9d2bd7",
+  "crop": null,
+  "note": "Cinco Cero, the welcome sign at night",
+  "sizes": [
+   [
+    600,
+    900
+   ],
+   [
+    1100,
+    1650
+   ]
+  ]
+ },
+ "lamp": {
+  "id": "42a973_aaf7225387334fcf8e88c6fb217f24e4~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_aaf7225387334fcf8e88c6fb217f24e4~mv2.jpg",
+  "page": "/cincocero",
+  "altThere": "Buffettafel private Event Antwerpen",
+  "sha256": "8a406722acd3154ea9a11cfa62e98cd64b177d97db33f5ff00d2e74057f3dc1b",
+  "crop": null,
+  "note": "Cinco Cero, a heat lamp over the buffet",
+  "sizes": [
+   [
+    600,
+    900
+   ],
+   [
+    1000,
+    1500
+   ]
+  ]
+ },
+ "tables": {
+  "id": "42a973_9e35ce1e33aa4252b89e45bd143d51cb~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_9e35ce1e33aa4252b89e45bd143d51cb~mv2.jpg",
+  "page": "/ (glimpse)",
+  "altThere": "Elegante tafelopstelling tijdens de Pro League Awards",
+  "sha256": "73a0cf5896cac9b87f4e8ff3d824d4e03d76f4aea6a43d748d7b458d9d3ede54",
+  "crop": [
+   0.0,
+   0.0,
+   1.0,
+   0.5
+  ],
+  "note": "top half only, the lower half has menu cards with a printed mark on the napkins",
+  "sizes": [
+   [
+    700,
+    525
+   ],
+   [
+    1067,
+    800
+   ]
+  ]
+ },
+ "elise-book": {
+  "id": "42a973_b81dcffa835148faa694db932822a92f~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_b81dcffa835148faa694db932822a92f~mv2.jpg",
+  "page": "/about",
+  "altThere": "Honey it's Handled - Elise Laeven",
+  "sha256": "c9cc77a53fbe6a58cec8fc73837743c66f31eadd36178e3f50878466e94bfa65",
+  "crop": "cut out with rembg isnet-general-use, white sticker edge 13 px",
+  "edit": "Apple mark on the laptop lid painted out (9711 pixels, OpenCV Telea inpaint from the lid round it)",
+  "sizes": [
+   [
+    384,
+    560
+   ],
+   [
+    685,
+    1000
+   ]
+  ]
+ },
+ "elise-phone": {
+  "id": "42a973_05bb1bcabb13435d9f57c052465e628f~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_05bb1bcabb13435d9f57c052465e628f~mv2.jpg",
+  "page": "/contact",
+  "altThere": "Honey it's Handled_Elise Laeven",
+  "sha256": "eacfcc7c283fe703bae72780fe107c443bd57688deb013abe921b7f4344a1394",
+  "crop": "cut out with rembg isnet-general-use, white sticker edge 13 px",
+  "edit": null,
+  "sizes": [
+   [
+    450,
+    560
+   ],
+   [
+    803,
+    1000
+   ]
+  ]
+ },
+ "elise-sit": {
+  "id": "42a973_6059565d1b3b4a6a9c4e0cbe5201d610~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_6059565d1b3b4a6a9c4e0cbe5201d610~mv2.jpg",
+  "page": "/",
+  "altThere": "Honey it's Handled_Elise Laeven",
+  "sha256": "2bb85c85d2562796d7caa917c42c2d10aa332be90fe78fded8ee09506c5d0ff0",
+  "crop": "cut out with rembg isnet-general-use, white sticker edge 13 px",
+  "edit": null,
+  "sizes": [
+   [
+    429,
+    560
+   ],
+   [
+    766,
+    1000
+   ]
+  ]
+ },
+ "elise-walk": {
+  "id": "42a973_bcd60d05f5474a8f9560b88f7530b55a~mv2.jpg",
+  "url": "https://static.wixstatic.com/media/42a973_bcd60d05f5474a8f9560b88f7530b55a~mv2.jpg",
+  "page": "/about",
+  "altThere": "Honey it's Handled - Elise Laeven",
+  "sha256": "82ead1d36a4fc7653c205c8d3917b691fffdf45455958d18efb023a8a36a443f",
+  "crop": "cut out with rembg isnet-general-use, white sticker edge 13 px",
+  "edit": null,
+  "sizes": [
+   [
+    306,
+    560
+   ],
+   [
+    546,
+    1000
+   ]
+  ]
+ },
+ "env-card": {
+  "id": "42a973_3f8b90380c9542dd826d2c05acbdffc4~mv2.png",
+  "url": "https://static.wixstatic.com/media/42a973_3f8b90380c9542dd826d2c05acbdffc4~mv2.png",
+  "page": "/ and /weddings",
+  "altThere": "HIH-ENVELOPPE-2",
+  "sha256": "2c63464ab6c64ab7bf5e8e6cb0c222ca90ef4d74adf84c164c9a9493b1198eca",
+  "crop": "trimmed to the artwork",
+  "sizes": [
+   [
+    520,
+    552
+   ],
+   [
+    900,
+    956
+   ]
+  ]
+ },
+ "env-open": {
+  "id": "42a973_79da123c265d4d19828243bc8eba8c53~mv2.png",
+  "url": "https://static.wixstatic.com/media/42a973_79da123c265d4d19828243bc8eba8c53~mv2.png",
+  "page": "/about and /contact",
+  "altThere": "Honey it's Handled_Enveloppe",
+  "sha256": "1c72b21cbd54230d7dfa20d1c0c429ad42e8bda12bc5414d229c604dc844953e",
+  "crop": "trimmed to the artwork",
+  "sizes": [
+   [
+    520,
+    552
+   ],
+   [
+    900,
+    956
+   ]
+  ]
+ },
+ "facets": {
+  "note": "mirror ball facets, 64 squares cut from 30 of her photos, list in ids",
+  "ids": [
+   "42a973_03fbc82108624cd4be6cddf55c3725a3~mv2.jpg",
+   "42a973_05bb1bcabb13435d9f57c052465e628f~mv2.jpg",
+   "42a973_17bbcdbcc3e14ff2868e5c1fab56a9fe~mv2.jpg",
+   "42a973_2dc29647937646469164f7f8fa16dbf0~mv2.jpg",
+   "42a973_3eba9b82e35c44a085882fdc52efea3d~mv2.jpg",
+   "42a973_427f62a1f26148caaf6c412ba7c974b6~mv2.jpg",
+   "42a973_4765d2d40067455c950db66672264233~mv2.jpg",
+   "42a973_5429ce834bb34ebcac5d49bdeae5ac0f~mv2.jpg",
+   "42a973_6059565d1b3b4a6a9c4e0cbe5201d610~mv2.jpg",
+   "42a973_61c835ce00de4c2c8322a34a17d974d8~mv2.jpg",
+   "42a973_68e0f87cfc4b49038f8572369a98e84f~mv2.jpg",
+   "42a973_7624387b3435405fb8a11ec168872998~mv2.jpg",
+   "42a973_81c39f339bb04b5aa975449058e1b83f~mv2.jpg",
+   "42a973_8e6b7c2f009844769666a1e45573256b~mv2.jpg",
+   "42a973_96ead78840dc44e49ed96712723e9505~mv2.jpg",
+   "42a973_9e35ce1e33aa4252b89e45bd143d51cb~mv2.jpg",
+   "42a973_a0f125befb07444dafb821e7f7db4aa4~mv2.jpg",
+   "42a973_aaf7225387334fcf8e88c6fb217f24e4~mv2.jpg",
+   "42a973_bcd60d05f5474a8f9560b88f7530b55a~mv2.jpg",
+   "42a973_e2ab84ce2da74778a10350270cf55792~mv2.jpg",
+   "42a973_e62c395ff25f4169b8e4fa00c16cc197~mv2.jpg",
+   "42a973_e65c1746554f4055afe9ea14c25bb851~mv2.jpg",
+   "42a973_f107cefb41c441579cfb9880226dd3a9~mv2.jpg",
+   "42a973_f181779ca0d8460eb26ea5d57717a6ca~mv2.jpg",
+   "42a973_f1ed3030fa2c441f974242706b331e6a~mv2.jpg",
+   "42a973_f4380fd91d7f4f6e81aadc2e0431e1d3~mv2.jpg",
+   "42a973_f5f9367f18e6442ea56a212dbd0c8a35~mv2.jpg",
+   "42a973_f6708bedb4ed4590a6ba1d7d1864bf46~mv2.jpg",
+   "42a973_fbccf33b74314151b2031918e0069463~mv2.jpg"
+  ]
+ },
+ "night": {
+  "id": "42a973_5f3af2a4edee4ae89f88decc764ab82c",
+  "url": "https://video.wixstatic.com/video/42a973_5f3af2a4edee4ae89f88decc764ab82c/1080p/mp4/file.mp4",
+  "page": "https://www.honeyitshandled.com/cincocero",
+  "onPage": "Cinco Cero aftermovie, 76.35 s",
+  "cut": "44.0 to 46.6 s and 56.1 to 57.7 s, 960 x 540, no sound",
+  "sha256": "ab3585893c29ba728d258af22c1de93ffaa5afdb26a071e2197511fae3d730ac"
+ }
+}

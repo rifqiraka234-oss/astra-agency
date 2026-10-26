@@ -573,9 +573,11 @@ def check(path, replies=False):
                 # be an AI workflow.
                 dyk = S[1].startswith("However, did you know that ")
                 if dyk:
-                    if "AI workflow" not in S[2] + " " + S[3]:
-                        bad(i, "the 'However, did you know that' shape is for AI workflow offers, "
-                               "block three or four must say AI workflow")
+                    # Raka 2026-10-26, "leo build squad using did you know", so the shape carries a Build
+                    # Squad offer too. Block two then names a capacity cost of their role, still sourced.
+                    if "AI workflow" not in S[2] + " " + S[3] and "build squad" not in (S[2] + " " + S[3]).lower():
+                        bad(i, "the 'However, did you know that' shape is for AI workflow or Build Squad offers, "
+                               "block three or four must say AI workflow or build squad")
                     dl = re.search(r"^did you know:(.*)$", gates[i] or "", re.M)
                     if not dl or not re.search(r"https?://", dl.group(1)):
                         bad(i, "RESEARCH GATE, a 'did you know' block two needs 'did you know: <the role "
