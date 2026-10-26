@@ -5,10 +5,12 @@ effect"), so the prototype was rebuilt as an art build at the same URL and the p
 from it. The message below is unchanged, byte for byte, because every line of it is still true of v2. Thread pulled
 again 16.31 UTC with tools/lemlist.py, 4 items, all pages, control 6 items in the same call, nothing new since his
 26 Oct 10.24 reply. Calendar reread 16.33 UTC for Tue 27 to Fri 30, one new event, Gisella Tue 27 12.30 to 13.00
-Amsterdam. Wed 28 and Thu 29 at 18.00 are still free and no other open draft offers them. **Not live yet.** Netlify
-skipped both v2 uploads, 16.23 and 16.27 UTC, "Skipped due to account credit usage exceeded" (deploys
-6adf7e74262e7eef72db8c01 and 6adf7f5c15879ba5d1c6efb2), so both URLs still serve v1. Do not send until v2 is live,
-hashed file by file and its checks rerun on the live URL. The v1 evidence below is kept as the record, marked v1.
+Amsterdam. Wed 28 and Thu 29 at 18.00 are still free and no other open draft offers them. **Live since ~19.25 UTC**,
+after the Netlify credit was cleared (earlier uploads were skipped for credit). Prototype deploy 6adfa9bcbdc270377ae07f7c,
+plan 6adfa9dc745a6797ed5737d9. Hashed live 99 of 100 and 40 of 41 (only _headers, which Netlify consumes), bwild-func 20
+of 20 and plan-func 7 of 7 on the live URLs, axe clean, 11 of 11 images and 10 of 10 films live, 0 HTTP errors. Before
+sending, reopen both URLs, pull the thread and reread the calendar in the minute before. The v1 evidence below is kept as
+the record, marked v1.
 
 Built on Raka's "lupo benatti says he wants to see something. lets do it. dont repeat wrong mistakes", to the Saavedra
 v3 recipe and the Fae Club v3 route rules (RULES section 5). No other draft to this contact is open. The 13 Oct reply

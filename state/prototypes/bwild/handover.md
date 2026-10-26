@@ -35,7 +35,16 @@ Lighthouse local, desktop 99 performance, mobile 67, accessibility 100 and best 
 deliberate noindex. **Mobile 67 is this container**, WebGL renders on SwiftShader (the CPU), proven by blocking sky.js
 alone, which gives 78, and the local server sends HTML and CSS uncompressed. Take the real number from the live URL.
 
-**Not live yet.** Netlify skipped every v2 upload on 26 Oct with "Skipped due to account credit usage exceeded", the
+**Live since 26 Oct ~19.25 UTC**, after Raka cleared the Netlify credit. Prototype deploy 6adfa9bcbdc270377ae07f7c, plan
+6adfa9dc745a6797ed5737d9, same URLs. Hashed live file by file, prototype 99 of 100 and plan 40 of 41, the one
+difference on each is _headers, which Netlify consumes (x-robots-tag noindex, nofollow live on both). On the live URLs,
+bwild-func 20 of 20, plan-func 7 of 7, axe clean at all twelve points on each, 11 of 11 images decoded and 10 of 10
+films loaded at both widths with 0 HTTP errors, the phone taking gold-p. Live Lighthouse, prototype 96 desktop and 63
+mobile, plan 100 and 100, accessibility 100 and best practices 100 on all four, SEO 66 the deliberate noindex. Mobile 63
+is the sky on SwiftShader again, the same live run with only sky.js blocked gives 86. Screenshots of the live hero and
+stars at 1440 and 390 looked at, v2 renders.
+
+The record of the blocked uploads, kept. Netlify skipped every v2 upload on 26 Oct with "Skipped due to account credit usage exceeded", the
 prototype at 16.23, 16.27 and 18.00 UTC (6adf7e74262e7eef72db8c01, 6adf7f5c15879ba5d1c6efb2, 6adf952e27290b7591b1c9a5),
 the plan at 16.54 and 18.00 UTC (6adf85a8f122612d7d9355d3, 6adf9546be93c3858610ac3f). At 18.01 UTC both URLs answered
 200 with no v2 marker in the HTML (the same markers are in the local builds, example.com 200 as the control), so both
