@@ -240,7 +240,7 @@ def off_white():
     <div class="stage" data-stage="off">
       {film('off', 'off')}
       <canvas class="veil" data-veil aria-hidden="true"></canvas>
-      <div class="stage-t" data-veil-t>
+      <div class="stage-t sw" data-veil-t>
         <h2 id="h-off"><span class="nw">{esc(L["palette"][0])}</span></h2>
         <p class="stage-l">{esc(L["off"])}</p>
       </div>
@@ -275,13 +275,15 @@ def blue():
     for i, (name, _) in enumerate(D['lights']):
         x, y = pos[i]; xm, ym = posm[i]
         dl = (i * 37 % 23) / 10
-        lights += (f'<li><button type="button" class="lt" data-light="{i}" aria-pressed="true" style="--x:{x}%;--y:{y}%;--xm:{xm}%;--ym:{ym}%;--dl:{dl:.1f}s">'
+        al = 'l' if x < 16 else 'r' if x > 84 else 'c'
+        alm = 'l' if xm < 22 else 'r' if xm > 78 else 'c'
+        lights += (f'<li><button type="button" class="lt" data-light="{i}" data-al="{al}" data-alm="{alm}" aria-pressed="true" style="--x:{x}%;--y:{y}%;--xm:{xm}%;--ym:{ym}%;--dl:{dl:.1f}s">'
                    f'<span class="lt-s" aria-hidden="true"></span><span class="lt-h" aria-hidden="true"></span><span class="lt-f" aria-hidden="true"></span><span class="lt-n">{esc(name)}</span></button></li>')
     return f'''<section class="ch ch-blue" id="blue" aria-labelledby="h-blue">
   <div class="stage blue-stage" data-stage="blue">
     {film('blue', 'blue')}
     <ul class="lights" data-lights aria-label="Seventeen things Elise keeps open, lit when she holds them">{lights}</ul>
-    <div class="stage-t blue-t">
+    <div class="stage-t blue-t sw">
       <h2 id="h-blue">{esc(L["palette"][1])}</h2>
       <p class="stage-l">{esc(L["blue"])}</p>
       <p class="count" aria-live="polite"><span data-o="count">Elise holds 17 of 17.</span> <span class="tabs-l">{esc(L["tabs"])}</span></p>
@@ -304,7 +306,7 @@ def red():
   <canvas class="petals" data-petals aria-hidden="true"></canvas>
   <div class="stage red-stage" data-stage="red">
     {film('red', 'red')}
-    <div class="stage-t red-t">
+    <div class="stage-t red-t sw">
       <h2 id="h-red">{esc(L["palette"][2])}</h2>
       <p class="stage-l">{esc(L["red"])}</p>
     </div>
@@ -511,7 +513,7 @@ def foot():
   <p class="foot-n">A prototype by Astra agency for Honey it’s Handled, not her live site. The films and wedding photos on the wedding page are stock, standing in for footage from her first couples. Photos of Elise, Cinco Cero and the Pro League Awards are hers. KBO {c["kbo"]}, Antwerp.</p>
 </footer>
 <aside class="bar" data-bar aria-label="Your enquiry so far" aria-hidden="true">
-  <p class="bar-s"><span class="bl" data-o="bar">{esc(DEF_BAR)}</span><span class="bs" data-o="barShort">{esc(short_date(DEF_DATE))} · 100 guests</span></p>
+  <p class="bar-s"><span class="bl" data-o="bar">{esc(DEF_BAR)}</span><span class="bs"><span data-o="barDate">{esc(short_date(DEF_DATE))}</span><span data-o="barMore">100 guests · Full planning</span></span></p>
   <a class="btn bar-b" href="#reply" data-bar-cta tabindex="-1">Be one of the first</a>
 </aside>
 <script type="application/json" id="hih-data">{DATA_JSON}</script>

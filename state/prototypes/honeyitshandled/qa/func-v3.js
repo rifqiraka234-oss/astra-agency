@@ -32,6 +32,7 @@ function expect(o) {
     cardDate: when, cardPlace: `${where}, with about ${s.guests} guests`,
     cardHelp: s.help === 'full' ? 'and would love Elise’s full planning' : s.help === 'day' ? 'and would love Elise to coordinate the day itself' : 'and would love Elise’s help with ' + (held.length ? join(held.map(low)) : 'part of the planning'),
     bar: `${s.noDate ? 'Sometime in ' + s.year : shortDate(s.date)} · ${s.place === 'local' ? 'Belgium' : 'Abroad'} · ${s.guests} guests · ${helpName[s.help]}`,
+    barPhone: `${s.noDate ? 'Sometime in ' + s.year : shortDate(s.date)} | ${s.guests} guests · ${helpName[s.help]}`,
     celebrating: s.place === 'local' ? 'Wedding' : 'Destination Wedding',
     offerNote: offer ? `A ${year} date. You could be one of her first couples.` : 'Her launch offer is for weddings in 2027 or 2028. Tell her about yours anyway.',
     count: s.help === 'day' ? `Elise holds the day itself, ${held.length} of 17.` : `Elise holds ${held.length} of 17.`,
@@ -47,7 +48,7 @@ const read = p => p.evaluate(() => {
   const t = s => (document.querySelector(s) || {}).textContent;
   const f = document.querySelector('form[data-reply="wedding"]');
   return { sentence: t('[data-o="sentence"]'), cardDate: t('[data-o="cardDate"]'), cardPlace: t('[data-o="cardPlace"]'), cardHelp: t('[data-o="cardHelp"]'),
-    cardFirst: !document.querySelector('[data-o="cardFirst"]').hidden, bar: t('[data-o="bar"]'), msg: f.querySelector('[data-f="message"]').value,
+    cardFirst: !document.querySelector('[data-o="cardFirst"]').hidden, bar: t('[data-o="bar"]'), barPhone: t('[data-o="barDate"]') + ' | ' + t('[data-o="barMore"]'), msg: f.querySelector('[data-f="message"]').value,
     celebrating: f.querySelector('[name="celebrating"]').value, offerNote: t('[data-o="offerNote"]'), count: t('[data-o="count"]'),
     lit: [...document.querySelectorAll('[data-light]')].filter(b => b.getAttribute('aria-pressed') === 'true').map(b => +b.dataset.light),
     firstWrap: !f.querySelector('[data-first-wrap]').hidden, dates: [...document.querySelectorAll('input[data-k="date"]')].map(i => i.value),
@@ -56,7 +57,7 @@ const read = p => p.evaluate(() => {
 const same = (a, b, what) => { if (a !== b) throw new Error(`${what}\n      page ${JSON.stringify(a)}\n      want ${JSON.stringify(b)}`); };
 function all(r, e, tag) {
   same(r.sentence, e.sentence, tag + ' sentence'); same(r.cardDate, e.cardDate, tag + ' card date'); same(r.cardPlace, e.cardPlace, tag + ' card place');
-  same(r.cardHelp, e.cardHelp, tag + ' card help'); same(r.bar, e.bar, tag + ' bar'); same(r.msg, e.msg, tag + ' message'); same(r.celebrating, e.celebrating, tag + ' celebrating');
+  same(r.cardHelp, e.cardHelp, tag + ' card help'); same(r.bar, e.bar, tag + ' bar'); same(r.barPhone, e.barPhone, tag + ' phone bar'); same(r.msg, e.msg, tag + ' message'); same(r.celebrating, e.celebrating, tag + ' celebrating');
   same(r.offerNote, e.offerNote, tag + ' offer note'); same(r.cardFirst, e.offer, tag + ' card first couples line'); same(r.firstWrap, e.offer, tag + ' first couples box');
   same(r.count, e.count, tag + ' count'); same(r.lit.length, e.held, tag + ' lights lit');
 }
@@ -279,7 +280,7 @@ C('the first screen holds her line and the call at 1440, 390 and 320', async (p,
 
 C('without script the page shows the same defaults the script writes', async p => {
   const r = await read(p), e = expect({});
-  same(r.sentence, e.sentence, 'sentence'); same(r.cardDate, e.cardDate, 'card date'); same(r.cardPlace, e.cardPlace, 'card place'); same(r.cardHelp, e.cardHelp, 'card help'); same(r.msg, e.msg, 'message'); same(r.bar, e.bar, 'bar');
+  same(r.sentence, e.sentence, 'sentence'); same(r.cardDate, e.cardDate, 'card date'); same(r.cardPlace, e.cardPlace, 'card place'); same(r.cardHelp, e.cardHelp, 'card help'); same(r.msg, e.msg, 'message'); same(r.bar, e.bar, 'bar'); same(r.barPhone, e.barPhone, 'phone bar');
   same(r.lit.length, 17, 'lights'); same(await p.evaluate(() => [...document.images].filter(i => i.loading !== 'lazy').every(i => i.complete && i.naturalWidth > 0)), true, 'eager images');
 }, async p => { await p.evaluate(() => { document.querySelector('[data-o="cardHelp"]').textContent = 'and would love Elise’s help'; }); }, { noJs: true });
 

@@ -34,6 +34,7 @@ def hd(i): return os.path.join(SRC, 'hd', f'{i}.mp4')
 
 GRADE = 'eq=contrast=0.93:brightness=0.02:saturation=0.86:gamma=1.04,colorbalance=rs=0.015:bs=-0.025:rm=0.02:bm=-0.015:rh=0.02:bh=-0.02'
 GRADE_BLUE = 'eq=contrast=0.92:brightness=0.03:saturation=0.62:gamma=1.05,colorbalance=rs=-0.07:gs=0.01:bs=0.03:rm=-0.07:gm=0.02:bm=0.02:rh=-0.04:bh=0.0'
+GRADE_OFF = 'eq=contrast=0.9:brightness=0.06:saturation=0.8:gamma=1.12,colorbalance=rs=0.02:bs=-0.02:rm=0.025:bm=-0.02:rh=0.02:bh=-0.01'
 GRADE_RED = 'eq=contrast=0.95:brightness=0.0:saturation=0.95:gamma=1.0,colorbalance=rs=0.03:bs=-0.03:rm=0.03:bm=-0.02'
 
 MIX = {
@@ -96,7 +97,7 @@ MAN['hero'] = {'what': 'the hero film, four cuts from one Mixkit wedding shoot, 
                'poster': poster(m_wide, 0.0, 'hero-poster', (1600, 800)), 'posterTall': poster(m_tall, 0.0, 'hero-poster-tall', (540,))}
 
 # ------------------------------------------------------------------ chapter films, forward then back so the loop never jumps
-CHAPTERS = [('off', 5190, 6.5, 6.0, GRADE), ('blue', 5213, 8.4, 6.0, GRADE_BLUE), ('red', 51655, 2.0, 6.5, GRADE_RED), ('dance', 101211, 0.3, 8.2, GRADE)]
+CHAPTERS = [('off', 5190, 6.5, 6.0, GRADE_OFF), ('blue', 5213, 8.4, 6.0, GRADE_BLUE), ('red', 51655, 2.0, 6.5, GRADE_RED), ('dance', 101211, 0.3, 8.2, GRADE)]
 for key, c, s, d, g in CHAPTERS:
     master = os.path.join(TMP, f'{key}.mkv')
     fil = f'[0:v]settb=AVTB,fps=24,scale=1280:720:flags=lanczos,{g},format=yuv420p,split[a][b];[b]reverse[r];[a][r]concat=n=2:v=1:a=0[o]'

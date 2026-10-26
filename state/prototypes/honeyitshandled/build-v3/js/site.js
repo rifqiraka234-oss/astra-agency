@@ -42,7 +42,8 @@
   function barText() {
     return (S.noDate ? 'Sometime in ' + S.year : shortDate(S.date)) + ' · ' + (S.place === 'local' ? 'Belgium' : 'Abroad') + ' · ' + S.guests + ' guests · ' + HELPN[S.help];
   }
-  function barShort() { return (S.noDate ? 'Sometime in ' + S.year : shortDate(S.date)) + ' · ' + S.guests + ' guests'; }
+  function barShort() { return [S.noDate ? 'Sometime in ' + S.year : shortDate(S.date), S.guests + ' guests · ' + HELPN[S.help]]; }
+  function barTwo(t) { txt('[data-o="barDate"]', t[0]); txt('[data-o="barMore"]', t[1]); }
   function set(o) {
     o = o || {};
     if (o.date) { S.date = clampDate(o.date); S.noDate = false; }
@@ -111,7 +112,7 @@
     var ta = $('form[data-reply="wedding"] [data-f="message"]');
     if (ta && !S.edited && ta.value !== message()) ta.value = message();
     $$('form[data-reply="wedding"] [data-rewrite-wrap]').forEach(function (w) { w.hidden = !S.edited; });
-    if (H.dataset.view !== 'events') { txt('[data-o="bar"]', barText()); txt('[data-o="barShort"]', barShort()); }
+    if (H.dataset.view !== 'events') { txt('[data-o="bar"]', barText()); barTwo(barShort()); }
     foil('n1', S.n1); foil('n2', S.n2);
     mail($('form[data-reply="wedding"]'));
   }
@@ -128,7 +129,7 @@
     return s + (EV.team ? ', and we’d like you in our team as a freelance event manager.' : ', and we’d love you to handle it.');
   }
   function evBar() { return (EV.team ? 'Elise in your team' : EV.type === 'private' ? 'Private event' : 'Company event') + ' · ' + shortDate(EV.date) + ' · ' + EV.guests + ' guests'; }
-  function evBarShort() { return (EV.team ? 'In your team' : EV.type === 'private' ? 'Private event' : 'Company event') + ' · ' + shortDate(EV.date); }
+  function evBarShort() { return [EV.team ? 'Elise in your team' : EV.type === 'private' ? 'Private event' : 'Company event', shortDate(EV.date) + ' · ' + EV.guests + ' guests']; }
   function evSet(o) {
     o = o || {};
     if (o.type && o.type !== EV.type) { EV.type = o.type; EV.kind = o.type === 'company' ? 2 : 0; if (o.type === 'private') EV.team = false; }
@@ -160,7 +161,7 @@
     var ta = $('[data-f="message"]', f); if (ta && !EV.edited && ta.value !== evMessage()) ta.value = evMessage();
     $$('[data-rewrite-wrap]', f).forEach(function (w) { w.hidden = !EV.edited; });
     foil('ename', EV.name);
-    if (H.dataset.view === 'events') { txt('[data-o="bar"]', evBar()); txt('[data-o="barShort"]', evBarShort()); }
+    if (H.dataset.view === 'events') { txt('[data-o="bar"]', evBar()); barTwo(evBarShort()); }
     mail(f);
   }
 
@@ -291,7 +292,7 @@
     }
     $$('[data-nav]').forEach(function (a) { if (a.dataset.nav === 'events' && v === 'events') a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     var bc = $('[data-bar-cta]'); if (bc) { bc.href = v === 'events' ? '#ev-reply' : '#reply'; bc.textContent = v === 'events' ? 'Tell me about your event' : 'Be one of the first'; }
-    txt('[data-o="bar"]', v === 'events' ? evBar() : barText()); txt('[data-o="barShort"]', v === 'events' ? evBarShort() : barShort());
+    txt('[data-o="bar"]', v === 'events' ? evBar() : barText()); barTwo(v === 'events' ? evBarShort() : barShort());
   }
   window.addEventListener('hashchange', function () { route(false); });
 
