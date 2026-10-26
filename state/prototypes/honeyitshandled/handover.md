@@ -15,16 +15,28 @@ are research/v2-brief.md, the art plan research/art-direction-v2.md, the four li
 
 ### Where it is
 
-**NOT DEPLOYED**, Netlify is refusing deploys (account credits exceeded), so nothing was sent to it. One self contained
-file for Raka to open from disk,
+| What | URL | Deploy |
+|---|---|---|
+| The prototype v2 | https://astra-honeyitshandled-prototype.netlify.app/ | 6adfaa7fe2823bf3291bc4c3, published 19.31.25 UTC, project d75c0db1-46e6-4842-b787-b1e2d9102daf |
+
+Live once Raka added Netlify credit. The main session deployed the same build ten seconds earlier (6adfaa753440aa05579d2204,
+see its note at the foot), and Netlify reported this deploy's files as "already uploaded by a previous deploy", so both are
+the same files. research/PROTOTYPE_LIVE.txt holds the URL and 6adfaa7fe2823bf3291bc4c3. Live checks on this deploy, all
+on 26 Oct 19.31 to 19.40 UTC. 56 of 57 files hashed byte equal against the deployed copy (404.html differs only where
+Netlify's pretty URLs rewrote its `index.html#...` links to `/#...`, the deploy tool's .netlify/state.json isn't served),
+404 control 404 with our page, x-robots-tag noindex, title hers. Cold loads at 1440 (21 screens) and 390 (23 screens) with
+error capture, 0 script errors, every screen looked at. qa/func-v2.js against the live URL 36 of 36. Lighthouse live,
+phone 80, 87 and 84 over three runs (LCP 2.3 to 2.6 s, TBT 400 to 730 ms, CLS 0), desktop 98, accessibility and best
+practices 100, SEO 66 is the noindex. The one failed request in the screenshot runs is the browser aborting the film's
+first range request when the script switches it from preload none to auto, the film then plays (func-v2 checks it).
+
+One self contained file as well, for opening from disk,
 `/tmp/claude-0/-home-user-astra-agency/24052593-7323-58b2-9e3f-744f7080d43c/scratchpad/bundle/honey-its-handled-prototype-v2.html`
-(13.1 MB, 52 files inlined by tools/bundle-site.py, sha256 starts f02f5e62c79d34f2). Opened from disk at 1440 and 390
-with error and request capture, 0 script errors, 0 failed loads, 0 requests outside the file, 13 of 13 visible images
-decoded (the other 4 belong to the paths and the sealed state not on screen), both fonts loaded, the lacquer drawn, the
-mirror ball turning, the film playing inside the figures. The scratchpad is session storage, so the file has to be copied
-out before the session ends, or rebuilt with `python3 tools/bundle-site.py state/prototypes/honeyitshandled/site-v2 <out>`.
-When Netlify takes deploys again, deploy site-v2/ to the existing project d75c0db1-46e6-4842-b787-b1e2d9102daf (v1's
-project, SSO already off) only once Raka has picked v2, then run the live checks in v1's section with the -v2 scripts.
+(13.1 MB, 52 files inlined by tools/bundle-site.py from the final site-v2, sha256 starts 3b7213366a8b991e). Opened from
+disk at 1440 and 390 with error and request capture, 0 script errors, 0 failed loads, 0 requests outside the file, 13 of
+13 visible images decoded (the other 4 belong to the paths and the sealed state not on screen), both fonts loaded, the
+lacquer drawn, the mirror ball turning, the film playing inside the figures. The scratchpad is session storage, so copy
+the file out or rebuild it with `python3 tools/bundle-site.py state/prototypes/honeyitshandled/site-v2 <out>`.
 
 ### The idea, in two sentences
 
@@ -125,9 +137,45 @@ Left out on purpose, her /weddings photos (origin unknown, Pinterest widths), ev
 screen, red carpet wall, trophies or table cards, the Pro League aftermovie (sponsor walls and identifiable guests), and
 42a973_ae0d2b8e (Elise with the laptop's Apple mark front on).
 
-### QA that ran, all local, on one build
+### QA that ran, local, on one build
 
-QA_RESULTS_V2
+The final chain ran 19.18.45 to 19.27.32 UTC on site-v2 files hash a4b70703b0b62f23 (build.py's own hash
+2d1917ce7bb6871c, the same twice), unchanged from start to end, served on 127.0.0.1:8743, today fixed with
+?today=2026-10-26. Scripts in qa/, suffix -v2.
+- **Functional, qa/func-v2.js, 36 of 36.** Every expected value worked out in the test from build-v2/data/site.json and
+  date sums. The film not fetched before it's near, the defaults (date, weekday, 229 days, letter, bar), the no script page
+  saying what the script says, a week later and a picked date reaching every display, no date yet and 2029, the launch
+  offer for 2027 and 2028 only, abroad writing Destination Wedding, full planning holding 17 of 17 with the 17 full, a tab
+  tapped turning it into partial planning, chosen tabs written into the letter in order, day coordination with the day
+  tab out, the private and company paths with their own button on every visible call, form type and letter, the company
+  path meeting the Pro League Awards first and the Handelsbeurs under the lens and behind the doors, guests and their
+  words against 125 and 570, the guest steps clamped, an edited letter kept and rewritten on request, an empty letter caught
+  with the reason, a sealed letter with the whole request in the mail, the lacquer drawn in her red (pixels read back
+  after a real hand wakes it), the bar off on the first screen and on mid page, the lens following the pointer and
+  flipping, the doors open by the end of their scroll, the 570+ opening into the full photo, the film playing only on
+  screen, the mirror ball drawn, the header tone over her nights and the letter, reduced motion (doors open, tabs out,
+  stickers on, film never loaded), the first screen holding the question, three answers and the call at 1440, 390 and
+  320, no script errors. **Plant mode 36 of 36 caught** (run 19.28 UTC on the same files, after three blind plants were
+  fixed, see the hiccups). Against the live URL, 36 of 36.
+- **Copy, qa/copy-v2.js, clean** over 373 unique lines in every reachable state (26 state changes across the three paths,
+  the lens flipped, four letter errors, sealed, the phone menu, the 404 page), no dashes, colons, banned words, hedges,
+  uncontracted verbs or exclamation marks (Jan Geysen's sentence exempt as his own words), 2,514 contractions. **Plant 6
+  of 6 kinds found.**
+- **axe, qa/axe-v2.js, 23 of 23 runs clean** (1440 and 390, motion after a full scroll and reduced, back at the top, the
+  private and company paths, day coordination, no date yet, the lens flipped, the phone menu, the letter with an error,
+  sealed). **Plant, 23 of 23 reported.**
+- **Overflow, qa/overflow-v2.js, none at nine widths from 1920 to 320, both motion settings** (18 loads, each scrolled
+  through, five wide states, the lens flipped and a resize). **Plant, both 390 loads caught.**
+- **Guide walk, qa/guide-walk-v2.js, 0 half screens without a way to the letter** on all three paths at 390 and 1440, the
+  first screen holding each path's own call. **Plant (bar off), 54 gaps found.**
+- **Lighthouse local**, phone 73, 78 and 80 over three runs (LCP 3.1 to 3.2 s simulated, TBT 510 to 830 ms on SwiftShader,
+  CLS 0), desktop 98. Live numbers are in "Where it is". It was 63 before the lacquer stopped building its field with a
+  pixel loop and learned to rest.
+- **Looked at by eye**, every section at 1440 and 390 in all three paths, the help states, the lens and its flip, no date
+  yet, sealing and sealed, the whole page without script (17 of 17 images decoded, every scene in its still state) and
+  under reduced motion (the two images not loaded are the company lens and the envelope, both hidden in that state).
+- Her lines, 43 quoted on the page checked mechanically against her pages read at 17.49 UTC and her six captions, 0
+  missing.
 
 ### The banned Claude tells, item by item (RULES section 5)
 
@@ -457,3 +505,21 @@ research/PROTOTYPE_LIVE.txt holds the prototype's URL. QA scripts in qa/, prefix
 - Her Pro League page moved again, /proleagueawards now 301s to /pro-league-awards (~14.00 UTC). The page doesn't link to
   her pages, so only source notes are affected. The "by Kaat DM" credit is in her own image file names.
 - Still not deployed, Netlify refused a fresh plan deploy at 13.49 UTC (6adf5a72898eed5fe66cf267), same credits error.
+
+## Plan deployed, 26 Oct ~19.45 UTC (main session)
+
+Raka added Netlify credit. Plan deployed from a clean copy of site-plan, deploy 6adfa9d2bfc231ced8bd639b, live at
+https://astra-honeyitshandled-plan.netlify.app/ . 29 of 29 site files hashed equal to the deploy (the deploy tool's local
+.netlify/state.json isn't served), 404 control 404, x-robots-tag noindex, cold loads at 1440 and 390 with no script errors
+and every image decoded, qa/plan-honey-func.js against the live URL 21 of 21. The new site chapter is still the labelled
+placeholder, it waits for the v2 prototype to go live, then the screenshots are retaken and the plan redeployed.
+
+## Prototype v2 deployed, 26 Oct ~19.50 UTC (main session, on Raka's "deploy the v2 proto")
+
+site-v2 as built at 19.17 UTC, deployed to project d75c0db1-46e6-4842-b787-b1e2d9102daf, deploy 6adfaa753440aa05579d2204,
+live at https://astra-honeyitshandled-prototype.netlify.app/ . 56 of 57 files hash equal to the deploy, 404.html differs
+only where Netlify's pretty URLs rewrote its index.html#... links to /#..., 404 control 404, x-robots-tag noindex. Cold
+loads at 1440 and 390, no script errors, 17 of 17 images decoded, qa/func-v2.js against the live URL 36 of 36. The night
+film serves 200 at full size (the screenshot run's failed request was the browser aborting it mid scroll). Her lines
+"Type A, so you don't have to be." and the HONEY and IT'S HANDLED lines checked word for word in her 17 June 2026
+Instagram brand reveal. The v2 builder is still finishing its own QA and redeploys only if it changes the build.

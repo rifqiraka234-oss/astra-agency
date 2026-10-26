@@ -984,8 +984,8 @@ Handled the same day. Every hiccup below was found by a screenshot, a measuremen
 
 Raka on v1, "i feel like this is a normal CLAUDE website ... be an artist ... shapes, gradients, animations photos,
 GRAPHICS, to tell the story". v1 was one pale marble texture, serif and italic, a kicker on every heading and her photos in
-small boxes. v2 is built in build-v2/ writing site-v2/ beside it, not deployed (Netlify credits), handed over as one file
-from tools/bundle-site.py. Source and handover, state/prototypes/honeyitshandled (research/v2-brief.md,
+small boxes. v2 is built in build-v2/ writing site-v2/ beside it, live at https://astra-honeyitshandled-prototype.netlify.app/
+(deploy 6adfaa7fe2823bf3291bc4c3) once Raka added Netlify credit, and also one file from tools/bundle-site.py. Source and handover, state/prototypes/honeyitshandled (research/v2-brief.md,
 art-direction-v2.md, flow-v2.md, the v2 section of handover.md).
 
 **What made it, repeat it.**
@@ -1027,3 +1027,6 @@ art-direction-v2.md, flow-v2.md, the v2 section of handover.md).
 | Copy said "Every photo and the film are hers" and "her own aftermovie" while the Pro League photos credit Kaat DM | Say where footage is from ("from her page"), never who made it, unless the page says so |
 | The local server was a background task with the default limit and died mid chain | Start servers with the long limit, and give a long QA chain its own fresh server |
 | `pkill -f` matched its own shell again (exit 144), and the build ran twice while a QA chain was going | The Fae Club and Saavedra rules hold. Find PIDs with ps, and rerun the whole chain on one hash after any build |
+| A plant added a MutationObserver that re-added a class on every attribute change, `classList.add` writes the attribute even when the class is there, the page looped in microtasks and the plant run hung | A plant breaks the page once. Never plant an observer that writes to what it observes |
+| Three plants were blind, the check read only `[data-o="cta"]` while the plant moved a button out of that set, and a plant listener on the textarea ran before the page's own and was undone by it | A check reads what the visitor sees (every visible call to the letter), and a plant that overrides a handler is registered after the page's. Run plant mode and read every PASS, 33 of 36 caught became 36 of 36 |
+| The bar counted a field a few px under the header as on screen while the walk didn't, one half screen with nothing on the company path at 390 | The bar and the walk share one definition of on screen, the same margin from the header and the bar |

@@ -5,7 +5,7 @@ const { chromium } = require('playwright');
   for (const [w, h] of [[1440, 900], [390, 844]]) {
     const p = await b.newPage({ viewport: { width: w, height: h } }); const bad = [];
     p.on('response', r => { if (r.status() >= 400) bad.push(r.status() + ' ' + r.url()); });
-    await p.goto(process.argv[2], { waitUntil: 'networkidle' });
+    await p.goto(process.argv[2], { waitUntil: 'load' });
     const H = await p.evaluate(() => document.documentElement.scrollHeight);
     for (let y = 0; y < H; y += 400) { await p.evaluate(y => scrollTo(0, y), y); await p.waitForTimeout(120); }
     await p.waitForTimeout(2500);
