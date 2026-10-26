@@ -1,4 +1,5 @@
-# Drafts, 2026-10-26, Raka's angle call for Elise Laeven. NOT SENT, waiting on Raka's word
+<!-- GATE ARCHIVED -->
+# Drafts, 2026-10-26, Raka's angle call for Elise Laeven. SENT 2026-10-26 10.43.52 UTC, act_x4wu4gv9FWxqY8dSH, one copy. Do not send it again
 
 Raka, 2026-10-26, word for word: "I LOVE IT, a more storytelling artsy website to get more bookings".
 

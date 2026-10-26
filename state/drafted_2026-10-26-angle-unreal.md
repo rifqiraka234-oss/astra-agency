@@ -1,4 +1,5 @@
-# Drafts, 2026-10-26, Raka's angle call for Scott Buckley. NOT SENT, waiting on Raka's word
+<!-- GATE ARCHIVED -->
+# Drafts, 2026-10-26, Raka's angle call for Scott Buckley. SENT 2026-10-26 10.43.33 UTC, act_AAyWgggGkiCy8vjz6, one copy. Do not send it again
 
 Raka, 2026-10-26, word for word: "moderner website to get more sales".
 

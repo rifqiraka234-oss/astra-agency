@@ -1,4 +1,5 @@
-# Draft, 2026-10-26, Raka's angle call for Taste Frankfurt. NOT SENT, waiting on Raka's word
+<!-- GATE ARCHIVED -->
+# Draft, 2026-10-26, Raka's angle call for Taste Frankfurt. SENT 2026-10-26 10.44.27 UTC, act_Cg9Qr6bgcvhkJNHN7, one copy. Do not send it again
 
 Raka, 26 Oct, word for word, "a non claude looking website to get more sales".
 
