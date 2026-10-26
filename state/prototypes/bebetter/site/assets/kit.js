@@ -70,7 +70,7 @@
         var ini = $('[data-p="ini"]', back); ini.textContent = initials();
         ini.setAttribute('font-size', Math.min(110, 100 * 150 / measure(initials(), f, 0)).toFixed(1));
         var motto = S.motto.trim().toUpperCase(), mo = $('[data-p="motto"]', back);
-        mo.textContent = motto; mo.setAttribute('font-size', Math.min(38, 100 * 540 / measure(motto, 'Archivo', 0.22, 700)).toFixed(1));
+        mo.textContent = motto; mo.setAttribute('font-size', Math.min(38, 100 * 540 / measure(motto, 'Mona Sans', 0.22, 700)).toFixed(1));
         var est = $('[data-p="est"]', back), city = $('[data-p="city"]', back), cityT = S.city.trim().toUpperCase(), estT = S.year ? 'EST ' + S.year : '';
         if (em === 'none') {
           est.textContent = [estT, cityT].filter(Boolean).join('  ·  ');
@@ -79,7 +79,7 @@
           est.textContent = estT; city.textContent = cityT;
           est.setAttribute('x', est.getAttribute('data-x') || est.getAttribute('x')); est.setAttribute('text-anchor', 'end');
         }
-        [est, city].forEach(function (n) { n.setAttribute('font-size', Math.min(28, 100 * (em === 'none' ? 520 : 150) / measure(n.textContent, 'IBM Plex Mono', 0.14, 500)).toFixed(1)); });
+        [est, city].forEach(function (n) { n.setAttribute('font-size', Math.min(28, 100 * (em === 'none' ? 520 : 150) / measure(n.textContent, 'Fragment Mono', 0.14, 400)).toFixed(1)); });
         $$('[data-p="logo"]', back).forEach(function (im) { if (hasLogo) im.setAttribute('href', S.logo); else im.removeAttribute('href'); });
       }
       if (front) {

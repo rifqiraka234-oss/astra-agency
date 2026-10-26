@@ -20,20 +20,17 @@ symbol .em-mono circle{stroke:var(--print)}symbol .em-mono .star{fill:var(--prin
 symbol .p-arc{font-family:var(--pf);letter-spacing:.02em;display:var(--v-arc)}
 symbol .p-block{font-family:'Anton';display:var(--v-block)}
 symbol .p-ini{font-family:var(--pf);font-size:110px}
-symbol .p-side{font-family:'IBM Plex Mono';font-weight:500;font-size:28px;letter-spacing:.14em}
-symbol .p-motto{font-family:'Archivo';font-weight:700;font-size:38px;letter-spacing:.22em}
+symbol .p-side{font-family:'Fragment Mono';font-weight:400;font-size:28px;letter-spacing:.14em}
+symbol .p-motto{font-family:'Mona Sans';font-weight:700;font-size:38px;letter-spacing:.22em}
 symbol .p-chest{font-family:var(--pf);letter-spacing:.06em}
 symbol .em-mono{display:var(--v-mono)}
 symbol .em-teddy.dk{display:var(--v-tdk)}
 symbol .em-teddy.lt{display:var(--v-tlt)}
 symbol .em-logo{display:var(--v-logo)}
-symbol .em-ph{display:var(--v-ph,none)}symbol .em-ph rect{stroke:var(--print);opacity:.7}symbol .em-ph text{font:500 40px 'IBM Plex Mono';letter-spacing:.2em;opacity:.7}
+symbol .em-ph{display:var(--v-ph,none)}symbol .em-ph rect{stroke:var(--print);opacity:.7}symbol .em-ph text{font:400 40px 'Fragment Mono';letter-spacing:.2em;opacity:.7}
 /* the squeegee, pulled across the print */
 .gw{position:relative;display:block;width:fit-content;max-width:100%;margin:0 auto}
 .sq{position:absolute;top:17%;height:64%;left:22%;width:7px;background:var(--print);box-shadow:-3px 0 0 rgba(0,0,0,.45);opacity:0;pointer-events:none}
 .sq.go{animation:sq .76s cubic-bezier(.45,0,.55,1)}
 @keyframes sq{0%{left:22%;opacity:0}12%{opacity:1}85%{opacity:1}100%{left:78%;opacity:0}}
 
-/* the tour tee on the home page */
-.tr-ink{fill:var(--tan)}.tr-ink path[stroke-width]{stroke:var(--tan);fill:none}
-.tr-sub{font:500 30px/1 'IBM Plex Mono';letter-spacing:.3em}.tr-s2{font-size:24px}

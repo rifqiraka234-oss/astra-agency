@@ -40,6 +40,10 @@ object. The home page is one year, scrolled, with a DAY counter in the header ru
 - The licence checked hand wrap film (item 12 below) is no longer on any page and no longer ships. Only media a page
   references is deployed now.
 
+**v2.1, the type (26 Oct).** Raka found the fonts cheap. All site type is now Mona Sans and Fragment Mono, both OFL,
+licence files in build/fonts, matched to how Cole Buxton, Aimé Leon Dore, Our Legacy and Acne set theirs. Their wordmark
+is still the logo, the garment lettering choices (College, Gothic, Block) are unchanged.
+
 ## What it is (v1, still the structure under v2)
 
 The Saavedra v3 recipe (RULES section 5). The four lines and the flow table came first (research/four-lines.md,

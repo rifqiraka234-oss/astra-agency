@@ -632,8 +632,8 @@ def page(meta, body, assets):
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0d0d0c">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/mona-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fragment-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css?v={assets['site.css']}">
 <script>document.documentElement.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion');{'' if bare else "try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('bb-lang');if(l==='en'||l==='nl')document.documentElement.lang=l}catch(e){}"}</script>
 {js}

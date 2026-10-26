@@ -29,7 +29,7 @@
 .ck-tees i.gone .tt{transform:translateY(-90px) rotate(-8deg);filter:blur(3px)}
 .ck-stamp{position:absolute;z-index:3;left:50%;top:52%;translate:-50% -50%;rotate:-9deg;visibility:hidden;pointer-events:none;white-space:nowrap;
   padding:.04em .3em .02em;border:.08em solid currentColor;box-shadow:0 0 0 .025em var(--concrete),0 0 0 .055em currentColor;
-  font:400 clamp(38px,11vw,172px)/1 'Anton',var(--sans);letter-spacing:.05em;text-transform:uppercase;color:#a8231b;
+  font:800 clamp(38px,11vw,172px)/1 var(--disp);font-stretch:75%;letter-spacing:.01em;text-transform:uppercase;color:#a8231b;
   -webkit-mask:url(/assets/ink.webp) 0 0/300px auto;mask:url(/assets/ink.webp) 0 0/300px auto}
 .out .ck-stamp{visibility:visible}
 .motion .out .ck-stamp{animation:soldout .36s cubic-bezier(.3,1.5,.5,1) both}

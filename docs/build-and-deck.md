@@ -915,3 +915,18 @@ halftone map with a van. On the kit page the screen frame drops for every pull a
 | The moving window light and the swinging door hanger pushed the page wider at 390 | Anything that moves or rotates sits inside `overflow:clip` (which doesn't break sticky), and pendulums get a small maximum angle |
 | The kit page promised "watch it print" but the squeegee only pulled on blur or Enter | If the copy promises a reaction, the reaction happens on the gesture the copy names. The print now pulls 650 ms after typing stops |
 | The film test failed once the film was retired, and the retired film and unused photos would still have shipped | Retire the test with the feature and replace it with one for what's new. The build now copies only media a page references |
+
+#### BeBetter v2.1, the type (26 Oct 2026)
+
+Raka loved v2 apart from one thing, "the choice of fonts! They look cheap as f. Not exclusive". The font names pulled
+off 25 premium fashion and gymwear homepages that morning settled it (RULES section 5, "The type has to look expensive
+too"). Every site face moved to Mona Sans (OFL, variable weight 200 to 900 and width 75 to 125%) and Fragment Mono
+(OFL). Headlines are weight 520 with tracking at minus .045em, the big numbers (the dial's 37.8×, the tag's 27.10, the
+map's month, SOLD OUT) are condensed 75 to 78% at 640 to 800. Their serif wordmark stays as the logo. Anton, Graduate
+and Pirata One stay only as the garment lettering choices.
+
+| Hiccup | Rule |
+|---|---|
+| A font swap touches every `font:` shorthand that names a weight, so a plain family replace would have left every headline at 400 in a grotesk | Sweep the rules with a script that rewrites weight, line height and tracking together, sized by the rule's own font size, and grep for the old family names after |
+| The garment text and kit.js both measured the side text and motto in the old fonts | When a family changes, grep the JS for family names too. Fit by measurement only works if it measures the font that renders |
+| The plan's screenshots of the kit page showed the old type | Screenshots of our own pages inside another artefact are build inputs. Retake them after any visual change |

@@ -753,6 +753,19 @@ gradients, real motion, shape and full use of their pictures. Research for it is
 (Awwwards, FWA, the studios behind them), not only premium brand sites. If a build is calm and correct but nobody would
 screenshot it, it isn't done.
 
+**THE TYPE HAS TO LOOK EXPENSIVE TOO (Raka, 2026-10-26).** On BeBetter v2, which he loved otherwise, "the only thing
+i'm commenting is the choice of fonts! They look cheap as f. Not exclusive". It was Libre Caslon Display headlines,
+Archivo body, IBM Plex Mono labels and Anton for the big moments. Pulled that morning, the houses that read as expensive
+set everything in one Swiss grotesk plus a quiet mono (Cole Buxton Akkurat, Aimé Leon Dore Söhne, Our Legacy Neue Haas
+Unica, Acne Helvetica Now with Helvetica Monospaced, Satisfy ABC Walter with Simon Mono, Fear of God Helvetica
+Condensed), and the ones that read cheap use Montserrat and Nunito (Gymshark, YoungLA). So before a build, pull the
+font names off five or more premium sites in the lead's own field, and pair to them with fonts we may ship (OFL or a
+licence we hold, licence file in the repo). The default that passed is Mona Sans (one variable family, weight and
+width, condensed for big numbers) with Fragment Mono for labels, headlines in medium weight with tight tracking. Impact
+style display faces (Anton, Bebas, Oswald), a display serif as the voice, and Montserrat, Poppins or Archivo as body
+are out unless the lead's own brand uses them. The lead's logo stays as their logo, and garment or product lettering
+that copies real work is not site type.
+
 **EVERY PROTOTYPE STARTS AT THE QUALIGRAF BAR (Raka, 2026-09-29).** His words on Ciara's first
 build, "it looks like something she can do herself…come on what did i tell you before to start and
 keep doing when we created the prototype for qualigraf?" A clean reskin of the lead's own copy is
