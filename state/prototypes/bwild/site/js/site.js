@@ -111,7 +111,7 @@
   /* the stars' own patch of sky, right of the words on a wide screen, a band above them on a phone */
   var skyBox = function () {
     var w = starSky ? starSky.clientWidth : 1440, h = starSky ? starSky.clientHeight : 900, ph = w < 760;
-    return ph ? { w: w, h: h, x0: .07 * w, x1: .93 * w, y0: .15 * h, y1: .43 * h, ph: true } : { w: w, h: h, x0: .46 * w, x1: .96 * w, y0: .17 * h, y1: .6 * h, ph: false };
+    return ph ? { w: w, h: h, x0: .07 * w, x1: .93 * w, y0: .15 * h, y1: .43 * h, ph: true } : { w: w, h: h, x0: .5 * w, x1: .96 * w, y0: .17 * h, y1: .6 * h, ph: false };
   };
   var layStars = function (k) {
     var b = skyBox();
@@ -119,8 +119,9 @@
     k.yr.forEach(function (x, i) {
       var c = stars[i]; if (!c) return;
       var m = darkMin(x, S.t), on = m > 0;
-      var cx = b.x0 + i / 364 * (b.x1 - b.x0) + (hsh(i, 1) - .5) * 4;
-      var cy = b.y1 - Math.min(m, 150) / 150 * (b.y1 - b.y0) + (hsh(i, 2) - .5) * 18;
+      /* scattered like a sky, the shape of the year still in it */
+      var cx = b.x0 + i / 364 * (b.x1 - b.x0) + (hsh(i, 1) - .5) * (b.ph ? 14 : 22);
+      var cy = b.y1 - Math.min(m, 150) / 150 * (b.y1 - b.y0) + (hsh(i, 2) - .5) * (b.ph ? 44 : 70);
       c.setAttribute('cx', cx.toFixed(1)); c.setAttribute('cy', cy.toFixed(1)); c.setAttribute('r', ((1.1 + Math.min(m, 90) / 90 * 2.1) * (b.ph ? .85 : 1)).toFixed(2));
       c.classList.toggle('on', on); c._i = i;
     });

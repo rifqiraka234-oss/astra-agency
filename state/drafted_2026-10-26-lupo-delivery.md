@@ -1,5 +1,15 @@
 # Lupo Benatti, BWILD, delivery of the new site and the plan with the expected cost, 26 Oct 2026. DRAFT, shown to Raka, not sent. The price in it is Raka's call.
 
+**v2, 26 Oct ~16.40 UTC.** Raka sent v1 back ("i feel like this is a normal CLAUDE website ... it really doesnt have a wow
+effect"), so the prototype was rebuilt as an art build at the same URL and the plan's screenshots and captions retaken
+from it. The message below is unchanged, byte for byte, because every line of it is still true of v2. Thread pulled
+again 16.31 UTC with tools/lemlist.py, 4 items, all pages, control 6 items in the same call, nothing new since his
+26 Oct 10.24 reply. Calendar reread 16.33 UTC for Tue 27 to Fri 30, one new event, Gisella Tue 27 12.30 to 13.00
+Amsterdam. Wed 28 and Thu 29 at 18.00 are still free and no other open draft offers them. **Not live yet.** Netlify
+skipped both v2 uploads, 16.23 and 16.27 UTC, "Skipped due to account credit usage exceeded" (deploys
+6adf7e74262e7eef72db8c01 and 6adf7f5c15879ba5d1c6efb2), so both URLs still serve v1. Do not send until v2 is live,
+hashed file by file and its checks rerun on the live URL. The v1 evidence below is kept as the record, marked v1.
+
 Built on Raka's "lupo benatti says he wants to see something. lets do it. dont repeat wrong mistakes", to the Saavedra
 v3 recipe and the Fae Club v3 route rules (RULES section 5). No other draft to this contact is open. The 13 Oct reply
 (state/drafted_2026-10-13-replies.md) and the 24 Oct SKETCH (state/drafted_2026-10-23-batch1.md) were both sent.
@@ -14,7 +24,15 @@ v3 recipe and the Fae Club v3 route rules (RULES section 5). No other draft to t
 > Contact record read 12.29 UTC, jobTitle Founder, tagline "Senior Brand Manager at P&G /// Founder of BWILD", location
 > Geneva, Switzerland, timezone Europe/Zurich.
 >
-> "here's what I offered", every part of the SKETCH's offer is on the site. The Adventure Vest with its price, specs and
+> v2 evidence, local, 26 Oct. bwild-func 20 of 20, and 19 of 19 checks fail under planted faults (the script error check
+> is the one that can't be planted). "cart adds the vest at its price, Esc closes", "the bib prints the run on paying",
+> "countdown to the example date", "hero pick writes the run, sun times match astral", "clock drag moves the run, stars,
+> bar and form agree", "in the orange chapter the bar offers the Adventure Vest". axe clean on desktop and phone with and
+> without reduced motion. The walk finds no screen without a way to reserve. plan-func 7 of 7, 6 of 6 fail planted.
+> The quotes on the site reopened live 16.05 UTC, Lupo's two lines on bwildoutdoors.com/about-us, signed "Lupo, BWILD
+> Founder", and the Swiss Peaks lines on the home page.
+>
+> v1 evidence. "here's what I offered", every part of the SKETCH's offer is on the site. The Adventure Vest with its price, specs and
 > a cart (bwild-func "cart adds the vest at its price, Esc closes"). The Luminous Vest launch, the €1 reservation and the
 > Kickstarter countdown on the same page ("the bib prints the run on paying", "countdown to the example date"). "A runner
 > picks sunrise or night and reserves with their run already on the form", the hero's two answers write the run, the form

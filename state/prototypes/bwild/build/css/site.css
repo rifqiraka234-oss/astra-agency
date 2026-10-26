@@ -116,7 +116,7 @@ h2.shout{font-size:clamp(44px,7vw,112px)}
 .dk-stars circle.on{opacity:.92;animation:tw 3.2s ease-in-out infinite;animation-delay:calc(var(--d) * -3.2s)}
 .dk-stars circle.hit{fill:var(--gold);opacity:1}
 @keyframes tw{0%,100%{opacity:.95}50%{opacity:.45}}
-.dk-months text{fill:rgba(255,255,255,.55);font:400 13px var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.dk-months text{fill:rgba(255,255,255,.4);font:400 11px var(--mono);text-transform:uppercase;letter-spacing:.08em}
 .dk-months{opacity:var(--so,1)}
 .lamp{opacity:var(--lo,1);transform:translate(var(--lx,1000px),var(--ly,640px))}
 .lamp-g{fill:rgba(255,236,190,.35);filter:blur(6px)}

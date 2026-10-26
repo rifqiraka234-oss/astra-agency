@@ -76,7 +76,7 @@ def sky_line(cid, t):
 SKY_W, SKY_H = 1440, 900
 # where the stars go on a 1440 by 900 screen, right of the words and above the ridge. js/site.js lays them out the same
 # way in real pixels, and on a phone in a band above the words.
-SX0, SX1, SY0, SY1 = .46 * SKY_W, .96 * SKY_W, .17 * SKY_H, .6 * SKY_H
+SX0, SX1, SY0, SY1 = .5 * SKY_W, .96 * SKY_W, .17 * SKY_H, .6 * SKY_H
 def hsh(i, k):
     """The same hash as js/site.js, IEEE doubles on both sides, so the no script page and the live page agree."""
     import math
@@ -85,8 +85,8 @@ def hsh(i, k):
 def star_xy(i, m):
     """Day i across the sky from today to a year on, higher the deeper in the dark the run starts. The jitter is seeded
     by the day with hsh(), the same rule as js/site.js, so a star keeps its place when the run changes."""
-    x = SX0 + i / 364 * (SX1 - SX0) + (hsh(i, 1) - .5) * 4
-    y = SY1 - min(m, 150) / 150 * (SY1 - SY0) + (hsh(i, 2) - .5) * 18
+    x = SX0 + i / 364 * (SX1 - SX0) + (hsh(i, 1) - .5) * 22
+    y = SY1 - min(m, 150) / 150 * (SY1 - SY0) + (hsh(i, 2) - .5) * 70
     r = 1.1 + min(m, 90) / 90 * 2.1
     return x, y, r
 
