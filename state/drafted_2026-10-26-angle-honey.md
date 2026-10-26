@@ -18,6 +18,9 @@ four way never messaged check and reopen every claim in the minute before any se
 > not on her site, so the message shows we read her Instagram. (4) Her launch offer swaps a discount for filming the first
 > weddings, for couples marrying in 2027 or 2028, so she knows she has no weddings to show yet. The message builds on that
 > rather than pointing it out as a flaw.
+> (5) Rewritten as SKETCHB on 26 Oct ~10.40 UTC, the opener A/B test is back on (Raka, "I THOUGHT WE'RE GOING TO DO like an
+> ab test") and her contactId puts her in arm B. Same angle, same claims, trimmed to fit 95 words. The SKETCH version is in
+> git at commit 4caffef.
 
 ```gate
 lead: Elise Laeven, founder and owner of Honey It's Handled, a sole trader, KBO enterprise 1032.568.265 "Laeven, Elise", natural person, active since 1 January 2026, VAT registered since 1 January 2026, establishment unit 2.382.853.203 "Honey it's Handled", Ankerrui 12/101, 2000 Antwerpen, e-mail info@honeyitshandled.com and web www.honeyitshandled.com since 2 August 2026, NACE 82.300 and 82.990 (https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1032568265 read 2026-10-26 ~09.45 UTC, name searches Laeven and honey handled, control Colruyt 200+). lemlist jobTitle Oprichter, tagline "Oprichter van Honey It's Handled | Wedding & Event Agency Freelance | Event & Project Manager", companyName Honey It's Handled, companyDomain honeyitshandled.com, Antwerp. ctc_z9AByAoDiQAssohkn, leadId lea_NLHa3AjjwFkwSWrbw, campaign W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-25. Thread 0 items, control 6
@@ -54,6 +57,8 @@ owner reply: "We only launched the site in August and we love it" | just built |
 worth: €3,000+, a wedding story chapter on the Honey site, a couple's year with Elise from first call to final dance told in art directed scroll scenes in her red and blue, built from the Cinco Cero concept to night and her CityCubes years, the launch offer and the enquiry at the end, and a template that turns each first wedding into its own story
 still there: founder and owner, KBO enterprise 1032.568.265 "Laeven, Elise", "Oprichter van een geregistreerde entiteit-natuurlijk persoon" since 1 Jan 2026, trade name Honey it's Handled, web www.honeyitshandled.com since 2 Aug 2026, read 2026-10-26 ~09.45 UTC, and "I'm Elise, founder, planner and the person behind Honey it's Handled" on her home page, read 2026-10-26 | https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1032568265
 budget: a paying client already, Cinco Cero, a 125 guest 50th on 28 Aug 2026 ("A special thank you to Jan for trusting HONEY IT'S HANDLED"), plus a paid Wix plan on her own domain and VAT registration since 1 Jan 2026, thin for a one person firm | https://www.instagram.com/honeyitshandled/
+variant: B
+understood: Honey it's Handled plans weddings and private events in Belgium, their own words in the home's meta description "Wedding planner & event planner in Belgium for personal weddings and unforgettable events" and the home's two sections "01 Weddings" and "02 Private Events", read in Chromium 2026-10-26 ~10.40 UTC | https://www.honeyitshandled.com/
 sweep website: crawled twice, all five pages rendered on desktop and phone, the only event told is Cinco Cero, View Portfolio opens /private-events, no wedding story, CHOSEN, https://www.honeyitshandled.com/weddings
 sweep gdpr: tools/eu-view.py from Stockholm, 7 first party cookies, 0 third party, 151 requests to 6 Wix and Sentry hosts, no privacy link on the form per site-audit.js with its control, checked, never the angle (RULES 0E)
 sweep apps: one enquiry form to one person, an AI enquiry workflow is premature at a handful of enquiries, so no tool, the story ends in that same form, per the crawl of /contact
@@ -73,15 +78,13 @@ websites credential, docs/astra-company-profile.md, Raka's fixed brand line, htt
 recheck: 2026-10-26 09.54 UTC, thread 0 items with control 6, /weddings 200 with "WILL YOU BE ONE OF OUR FIRST", "2027 or 2028" and "EXCLUSIVE LAUNCH OFFER" once each, the home 200 with VIEW PORTFOLIO still on /private-events and the first couples strip, /private-events first 429 from Wix's rate limit (ours), then 200 through tools/fetch-walled.py with "Cinco Cero" 2, "50th birthday celebration" 1 and "RECENTLY HANDLED" 1, Instagram reread 09.54 with the CityCubes line and the Cinco Cero post, control example.com 200. To be rerun in the minute before sending. Disproof tried, every page in both languages searched for another event, couple, client, review or real wedding (none, control Cinco found), the wedding photos left unclaimed because whose they are isn't said, the VIEW PORTFOLIO href read from the render and the raw HTML, the aftermovie found as a video element so no "no film" claim is made, the phone gallery gap kept out of the message, and the launch date settled three ways (KBO 2 Aug, Instagram 5 Aug, sitemap 14 Sep) so the site is never called old. Facts hold, confidence MEDIUM, because the site is twelve weeks old and hers, and she's a one person consumer business
 ```
 
-SKETCH
+SKETCHB
 ```
-Hi Elise, Honey it's Handled looks cool!
+Hi Elise, thanks for connecting. Honey it's Handled plans weddings and private events in Belgium.
 
-However, your website invites couples to be one of your first 'I do', yet the only event it tells the story of is Cinco Cero, a 50th birthday. Couples marrying in 2027 usually want to see a wedding planned your way first, so many probably book a planner who can show them one.
+However, your website invites couples to be one of your first 'I do', yet the only event it tells the story of is Cinco Cero, a 50th birthday. Couples usually want to see a wedding planned your way first, so many probably pick a planner who can show one.
 
-I'd suggest a wedding story on your site, a couple's year with you from first call to final dance, told through Cinco Cero and your CityCubes years, ending in the launch offer.
+I'd suggest a wedding story, a couple's year with you from first call to final dance, told through Cinco Cero and your CityCubes years.
 
-At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
-
-Shall I send you a sketch of the wedding story?
+Shall I send you a sketch?
 ```

@@ -16,6 +16,9 @@ never messaged check and reopen every claim in the minute before any send.
 > and never says there's no price. (3) Unreal is a trading brand, the register only shows him as director of Clarity
 > Transforms Ltd in Knutsford with his wife. His ownership rests on his own words on teeshotgolf.uk. (4) He also runs Tee
 > Shot Golf, coffee and horsebox bar brands and ONWARD, so his time is the real squeeze.
+> (5) Rewritten as SKETCHB on 26 Oct ~10.40 UTC, the opener A/B test is back on (Raka, "I THOUGHT WE'RE GOING TO DO like an
+> ab test") and his contactId puts him in arm B. Same angle, same claims, the gap trimmed to fit 95 words. The SKETCH
+> version is in git at commit 4caffef.
 
 ```gate
 lead: Scott Buckley, founder of Unreal Events, a VR sports experience brand launched in February 2026 as the sister brand of his Tee Shot Golf ("I'm Scott, the proud owner of Tee Shot Golf ... In February 2026, we launched sister brand Unreal Events", https://www.teeshotgolf.uk/about read 2026-10-26 ~09.40 UTC, same phone 07306 803 133 as https://www.unrealevents.co.uk/contact). Companies House, Scott Christian BUCKLEY, active director of CLARITY TRANSFORMS LIMITED 13434886 since 1 April 2023, Mobberley, Knutsford, co-director Emma Louise Buckley, both 25 to 50% PSC (https://find-and-update.company-information.service.gov.uk/company/13434886/officers), which fits "We're a family business ... our base in Cheshire" on https://www.unrealevents.co.uk/about . UNREAL EVENTS LTD 13286125 in Thatcham is a different company. lemlist jobTitle Founder, tagline "Entrepreneur | Building: Unreal Events, Tee Shot Golf and ONWARD", High Legh, Cheshire East. ctc_MgyMbx3uk9mhg89jX, leadId lea_KqEpy4qHW5P28AqT4, campaign W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-14 15.04 UTC. Thread 0 items, control 6
@@ -53,12 +56,14 @@ owner reply: "We only launched the site in February, we're happy with it" | just
 worth: €3,500+, an Unreal site rebuilt around instant pricing, experiences, setups, hours, branding and venue picked on the page and priced at their own published rates, dates and the booking sent with the whole spec filled in and the deposit step, the BT, FICO and Laver Cup work as short case pages
 still there: founder, launched Unreal Events in February 2026 as the sister brand of the Tee Shot Golf he owns, in his own words on teeshotgolf.uk/about, read 2026-10-26, and active verified director of Clarity Transforms Ltd in Knutsford on Companies House, read 2026-10-26 | https://www.teeshotgolf.uk/about
 budget: company customers, BT Wholesale, Sodexo, MKM, FICO and Staysure logos on the home, and typical orders of £750 to £15,000 on the refer page | https://www.unrealevents.co.uk/refer
+variant: B
+understood: Unreal brings eight hosted VR sports to conferences, exhibitions and brand activations across the UK, their own words on the home "to bring the excitement of eight virtual sports experiences to your event as a fully hosted, competitive activity ... including conferences, exhibitions, team building and brand activations, across the UK", read in Chromium 2026-10-26 ~10.40 UTC | https://www.unrealevents.co.uk/
 sweep website: crawled twice, 37 URLs, price check on 11 pages in Chromium, the form JSON read, price closed in an FAQ everywhere and the form asks no spec, CHOSEN
 sweep gdpr: tools/eu-view.py from Stockholm, 1 first party cookie (crumb), 0 third party cookies, 86 requests to 7 hosts incl. Google Analytics, site-audit.js GEO VOID from the US, checked, never the angle (RULES 0E)
 sweep apps: quoting, the deposit and confirmation run by hand through one inbox while Scott hosts events, the instant pricing is that tool, folded into the site offer, no separate app
 sweep social: tools/social-audit.js, LinkedIn https://www.linkedin.com/company/unrealeventsvr 150 followers, Instagram https://www.instagram.com/unrealeventsvr 39 followers 12 posts newest 2026-09-25, Facebook 36, TikTok 1, thin but not where corporate buyers decide, not chosen
 sweep squad: an events business, not a builder of software, per its own pages and Companies House, not chosen
-thread: problem your website keeps the price in a closed FAQ and the enquiry form asks for dates and a message, not which experiences or how many setups | cost an agency pricing a few setups for a client likely shortlists whoever sends a price first while it's waiting on your reply | offer a modern Unreal site built around instant pricing, experiences and setups picked, the price shown and the booking made in one go | link price, setups
+thread: problem your website keeps the price in a closed FAQ and the enquiry form asks for dates and a message, not which experiences or how many setups | cost an agency pricing a few setups for a client likely shortlists whoever sends a price first while it's waiting on your reply | offer a modern Unreal site with instant pricing, experiences and setups picked, the price shown and the booking made in one go | link price, setups
 lead read: Scott reads that his price sits in a closed FAQ and his form never asks what the event needs, so agencies likely shortlist whoever prices first, and gets offered a modern Unreal site where buyers pick setups and see the price straight away, one thread
 claims:
 your website keeps the price in a closed FAQ on each experience page, https://www.unrealevents.co.uk/vr-golf and the other 7 experience pages plus /virtual-sports-day, "How much does it cost? ... we typically charge £750+VAT", Chromium 2026-10-26 ~09.45 UTC, the text hidden at height 0 on load on all 9 and on /faqs, shown after clicking the question on 9 of 11 pages, the VR golf screenshot shows the question closed
@@ -70,15 +75,13 @@ websites credential, docs/astra-company-profile.md, Raka's fixed brand line, htt
 recheck: 2026-10-26 09.45 to 09.51 UTC, the price hidden on load on 11 pages and shown on click on 9 (VR tennis rerun at 09.51, hidden then 216 px after the click), the form JSON fields refetched at 09.50 and unchanged, teeshotgolf.uk/about still carries "I'm Scott, the proud owner" and "In February 2026, we launched sister brand", the home with 0 price words while the same search finds £ on 17 pages, control example.com 200, thread re pulled 09.50, 0 items, control 6. To be rerun in the minute before sending. Disproof tried, every £ on all 37 pages counted (the refer page's order sizes are the only visible figure, so the message never says there's no price anywhere), the form read from its JSON and not only the render, the home's links read (CONTACT in the header is its only enquiry link), video checked in the raw HTML (a background loop on the persona pages, so no video claim), the Squarespace newsletter note checked for visibility (hidden, dropped). Facts hold, confidence MEDIUM, because the site is eight months old
 ```
 
-SKETCH
+SKETCHB
 ```
-Hi Scott, Unreal Events looks cool!
+Hi Scott, thanks for connecting. Unreal brings eight hosted VR sports to conferences, exhibitions and brand activations across the UK.
 
-However, your website keeps the price in a closed FAQ on each experience page. The enquiry form asks for dates and a message, but not which experiences or how many setups. So an agency pricing a few setups for a client likely shortlists whoever sends a price first, while it's waiting on your reply.
+However, your website keeps the price in a closed FAQ on each experience page, and the form asks for dates and a message, not experiences or setups. So an agency pricing a few setups for a client likely shortlists whoever sends a price first.
 
-I'd suggest a modern Unreal site built around instant pricing, where event managers pick their experiences and setups, see the price and book in one go.
+I'd suggest a modern Unreal site with instant pricing, where event managers pick experiences and setups, see the price and book in one go.
 
-At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
-
-Shall I send you a sketch of the Unreal site with instant pricing?
+Shall I send you a sketch?
 ```

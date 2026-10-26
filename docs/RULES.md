@@ -298,6 +298,9 @@ in short.
   gate, and check-drafts fails it without them.
 - After a yes, build only when there's a budget sign. Otherwise one screen and the call ask. Every delivery asks for the
   call with two slots.
+- **Half of all first messages are SKETCHB, the opener A/B test.** It was dropped on 25 Oct and turned back on 26 Oct
+  (Raka, "I THOUGHT WE'RE GOING TO DO like an ab test"). The contactId picks the version, check-drafts enforces it, and
+  `tools/ab-count.py` counts it. `docs/experiments/2026-10-26-opener-ab.md`.
 - On the call, the owner is there, the price range is said out loud, and the next step is booked before hanging up. The
   proposal follows within 24 hours, one recommendation, not a menu.
 
