@@ -207,7 +207,7 @@
     const calls = $$('main [data-cta]').filter(e => e.offsetParent !== null && vis(e));
     // the bar steps aside for every visible call and for the letter itself, and stays away once it's sealed
     const fields = S.sent ? [$('[data-sealed]')] : $$('[data-letter] input, [data-letter] textarea, [data-letter] .send');
-    const formIn = fields.some(e => { const r = e.getBoundingClientRect(); return r.top < bt && r.bottom > hb; });
+    const formIn = fields.some(e => { const r = e.getBoundingClientRect(); return r.top < bt - 8 && r.bottom > hb + 8; });
     const on = !calls.length && !formIn && !S.sent && scrollY > 60;
     sbar.classList.toggle('is-on', on); sbar.setAttribute('aria-hidden', String(!on)); $('a', sbar).tabIndex = on ? 0 : -1;
     const y = hb + 2; let tone = 'light';

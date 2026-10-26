@@ -33,3 +33,23 @@ The bigger one is the weddings page. You promise to guide couples from their fir
 
 Want me to sketch that page so you can see it before you build it?
 ```
+
+### Julien Salvat, Saavedra, ctc_yw97PDpTGevphfmh6
+
+> NOT SENT. Thread pulled 26 Oct ~19.05 UTC with tools/lemlist.py, 6 items, all pages, control 6. Our delivery of 25 Oct
+> 13.27 UTC (act_tHDERxQKGBvPjnKTF) offered "Wednesday 28 or Thursday 29 at 3.30pm, between your lunch and dinner
+> service". He replied 26 Oct 18.41 UTC (act_jPxhpMemM67iDKKHw), "Very interesting thanks for the time you spend doing it.
+> We could take 30min wednesday at 3:30 if it's ok for you ?". Raka's calendar for Wed 28 Oct read ~19.10 UTC, empty
+> (control, Tue 27 returned its three events). Event created 19.13 UTC on Raka's calendar, no guests yet, "Raka X Julien
+> (Saavedra)", Wed 28 Oct 15.30 to 16.00 Europe/Paris, id l88f56ubupmi59m7bj2ooi1ki0, Meet
+> https://meet.google.com/mmj-zdyj-rzu. Only the generic Contact@saavedraparis.fr is on file, so the message asks for his.
+> He calls Raka "Raya", left as is.
+
+> SENT 26 Oct 19.13.44 UTC, act_RuhhatYNgQLLDT3Qa, one copy. Don't send it again.
+> Raka, 26 Oct ~19.15 UTC, "send a message to him whats his email and say thanks". So the message thanks him, confirms
+> Wednesday and asks for his email. The Meet link goes in the invite.
+
+BOOKING
+```
+Thanks Julien, Wednesday at 3.30pm works great! What's the best email to send the invite to?
+```
