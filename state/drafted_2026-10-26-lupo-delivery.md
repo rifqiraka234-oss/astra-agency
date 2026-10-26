@@ -1,4 +1,4 @@
-# Lupo Benatti, BWILD, delivery of the new site and the plan with the expected cost, 26 Oct 2026. DRAFT, shown to Raka, not sent. The price in it is Raka's call.
+# Lupo Benatti, BWILD, delivery of the new site and the plan with the expected cost, 26 Oct 2026. **SENT 26 Oct 19.39 UTC** on Raka's "holy shit.. bro send it to him NOW", act_4tBi5igDLR6LRa8Fc, dry run sha256 aa551adb35066b9b, one copy, thread 5 items. In the minute before, both links 200 with v2 and their titles, thread 4 items unchanged, Wed 28 and Thu 29 18.00 free (new, Julien Wed 28 15.30 Paris).
 
 **v2, 26 Oct ~16.40 UTC.** Raka sent v1 back ("i feel like this is a normal CLAUDE website ... it really doesnt have a wow
 effect"), so the prototype was rebuilt as an art build at the same URL and the plan's screenshots and captions retaken
