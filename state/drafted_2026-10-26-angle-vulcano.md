@@ -1,4 +1,5 @@
-# Drafts, 2026-10-26, Raka's angle call for Vulcano Smaak. NOT SENT, waiting on Raka's word
+<!-- GATE ARCHIVED -->
+# Drafts, 2026-10-26, Raka's angle call for Vulcano Smaak. SENT 2026-10-26 10.44.09 UTC, act_5SAwuyHH8v4F82gqE, one copy. Do not send it again
 
 Raka, 2026-10-26, word for word: "modern non wix website to.. idk get more sales wtv".
 

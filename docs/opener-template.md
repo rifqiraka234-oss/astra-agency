@@ -41,7 +41,7 @@ The contactId decides which shape a lead gets, never a person. Full plan, rules 
 `docs/experiments/2026-10-26-opener-ab.md`. The short version.
 
 ```
-Hi [name], thanks for connecting. [one sentence that shows we understood what they do, in their own words].
+Hi [name], [company] looks cool.
 
 However, [what you saw]. [what it likely costs them].
 
@@ -50,10 +50,13 @@ I'd suggest [the project].
 Shall I send you a sketch?
 ```
 
-- Four blocks, 45 to 95 words, no brand line, at most one "!" and only in block one. The ask can name the thing,
+- **The opening is Raka's (2026-10-26), "maybe like change it to Hi name, [company] looks cool. however,".** It
+  replaced the "thanks for connecting" line on the day the test came back, before anything was sent.
+- Four blocks, 45 to 95 words, a full stop after "looks cool", and no brand line. The ask can name the thing,
   "Shall I send you a sketch of [thing]?", 14 words max.
-- The first sentence is what they do and who for, in their words, not praise. The gate carries `understood: <their
-  words> | <URL>` and `variant: B`. A SKETCH in the test carries `variant: A`.
+- Write A first, then B is the same gap and suggestion with the brand line taken out and the short ask. Trim only to
+  fit 95 words, so the two versions differ in as little as possible.
+- The gate carries `variant: B`. A SKETCH in the test carries `variant: A`.
 - To see a lead's arm, `python3 -c "import importlib.util as u; s=u.spec_from_file_location('c','tools/check-drafts.py');
   m=u.module_from_spec(s); s.loader.exec_module(m); print(m.variant_for('ctc_...'))"`, or just run check-drafts, which
   names the right shape when the draft is in the wrong one.

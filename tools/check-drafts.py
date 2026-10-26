@@ -75,9 +75,9 @@ SHAPES = ("OPENER", "SKETCH", "SKETCHB", "REPLY", "NUDGE", "CLOSER", "CLOSE", "B
 # SKETCH, Raka's test opener, 2026-10-12, "hi, so this looks cool. However, your website is this.
 # I suggest to do this. We make websites for blah blah. Shall I send you a sketch of how it looks
 # like?" Five blocks, a full research gate like any opener, its own wording checks below.
-# SKETCHB, variant B of the opener A/B test, Raka 2026-10-25, "lets try". The summer opening
-# (thanks for connecting, one line that shows we understood the business) in front of SKETCH's
-# gap and "I'd suggest", no brand line, a short ask. docs/experiments/2026-10-26-opener-ab.md.
+# SKETCHB, variant B of the opener A/B test, Raka 2026-10-25, "lets try". From 2026-10-26 it opens
+# "Hi [name], [company] looks cool." like SKETCH but with a full stop (Raka), then SKETCH's gap and
+# "I'd suggest", no brand line, a short ask. docs/experiments/2026-10-26-opener-ab.md.
 # Which lead gets which is decided by the contactId, never by hand, see variant_for().
 # Shapes whose length, block count and exclamation rules are NOT the cold opener's.
 # The opener template is five blocks (since 2026-09-24) with exactly one exclamation. Nothing else is.
@@ -532,19 +532,12 @@ def check(path, replies=False):
                 bad(i, f"{words} words, SKETCHB shape, outside 45 to 95")
             S = [" ".join(b.split()) for b in m.split("\n\n")]
             if len(S) != 4:
-                bad(i, f"{len(S)} blocks, SKETCHB is 4, thanks and understanding, however, I'd suggest, the ask")
+                bad(i, f"{len(S)} blocks, SKETCHB is 4, looks cool, however, I'd suggest, the ask")
             else:
-                if not re.match(r"Hi [^,]+, thanks for connecting\. \S", S[0]):
-                    bad(i, "SKETCHB block one must be 'Hi [name], thanks for connecting. [one line that shows we "
-                           "understood what they do]'")
-                elif len(S[0].split(". ", 1)[1].split()) > 30:
-                    bad(i, "SKETCHB block one's understanding line is over 30 words, keep it to one sentence")
-                if re.search(r"looks (cool|interesting)", S[0], re.I):
-                    bad(i, "SKETCHB block one never says 'looks cool' or 'looks interesting', it shows what they do")
-                ul = re.search(r"^understood:(.*)$", gates[i] or "", re.M)
-                if not ul or not re.search(r"https?://", ul.group(1)):
-                    bad(i, "RESEARCH GATE, SKETCHB needs 'understood: <what they do, in their own words> | <URL>' "
-                           "behind the line in block one")
+                # Raka, 2026-10-26, "maybe like change it to Hi name, [company] looks cool. however,".
+                # The thanks for connecting line is gone, so B is A's opening with a full stop.
+                if not re.fullmatch(r"Hi [^,]+, .+ looks cool\.", S[0]):
+                    bad(i, "SKETCHB block one must be 'Hi [name], [company] looks cool.' with a full stop")
                 if not S[1].startswith("However"):
                     bad(i, "SKETCHB block two must open 'However ...', the gap and what it likely costs them")
                 for k, sent in enumerate(re.split(r"(?<=[.!?]) (?=[A-Z])", S[1])):
@@ -764,7 +757,7 @@ def check(path, replies=False):
              # The SKETCH test shape's fixed words, Raka, 2026-10-12.
              "looks cool!", "i'd suggest", "shall i send you a sketch of",
              # The SKETCHB shape's fixed words, 2026-10-25.
-             "thanks for connecting.", "shall i send you a sketch?")
+             "looks cool.", "shall i send you a sketch?")
     c = Counter()
     for m in msgs:
         low = m.lower()
