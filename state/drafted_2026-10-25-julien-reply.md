@@ -1,3 +1,4 @@
+<!-- GATE ARCHIVED. NEVER SENT, superseded by the delivery act_tHDERxQKGBvPjnKTF of 25 Oct 13.27 UTC (checked in the thread 26 Oct 19.28 UTC). Do not send. -->
 # Julien Salvat, Saavedra, holding reply to his yes, 25 Oct 2026
 
 NOT SENT. Waiting for Raka's word.

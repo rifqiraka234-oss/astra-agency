@@ -457,3 +457,21 @@ research/PROTOTYPE_LIVE.txt holds the prototype's URL. QA scripts in qa/, prefix
 - Her Pro League page moved again, /proleagueawards now 301s to /pro-league-awards (~14.00 UTC). The page doesn't link to
   her pages, so only source notes are affected. The "by Kaat DM" credit is in her own image file names.
 - Still not deployed, Netlify refused a fresh plan deploy at 13.49 UTC (6adf5a72898eed5fe66cf267), same credits error.
+
+## Plan deployed, 26 Oct ~19.45 UTC (main session)
+
+Raka added Netlify credit. Plan deployed from a clean copy of site-plan, deploy 6adfa9d2bfc231ced8bd639b, live at
+https://astra-honeyitshandled-plan.netlify.app/ . 29 of 29 site files hashed equal to the deploy (the deploy tool's local
+.netlify/state.json isn't served), 404 control 404, x-robots-tag noindex, cold loads at 1440 and 390 with no script errors
+and every image decoded, qa/plan-honey-func.js against the live URL 21 of 21. The new site chapter is still the labelled
+placeholder, it waits for the v2 prototype to go live, then the screenshots are retaken and the plan redeployed.
+
+## Prototype v2 deployed, 26 Oct ~19.50 UTC (main session, on Raka's "deploy the v2 proto")
+
+site-v2 as built at 19.17 UTC, deployed to project d75c0db1-46e6-4842-b787-b1e2d9102daf, deploy 6adfaa753440aa05579d2204,
+live at https://astra-honeyitshandled-prototype.netlify.app/ . 56 of 57 files hash equal to the deploy, 404.html differs
+only where Netlify's pretty URLs rewrote its index.html#... links to /#..., 404 control 404, x-robots-tag noindex. Cold
+loads at 1440 and 390, no script errors, 17 of 17 images decoded, qa/func-v2.js against the live URL 36 of 36. The night
+film serves 200 at full size (the screenshot run's failed request was the browser aborting it mid scroll). Her lines
+"Type A, so you don't have to be." and the HONEY and IT'S HANDLED lines checked word for word in her 17 June 2026
+Instagram brand reveal. The v2 builder is still finishing its own QA and redeploys only if it changes the build.
