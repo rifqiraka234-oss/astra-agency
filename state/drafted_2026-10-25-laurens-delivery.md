@@ -37,6 +37,13 @@ NOT SENT. Raka picks the price option and says send. Nothing here goes out on an
 > was offered Wed 28 and Thu 29 at 15:30, Marco Mon or Wed 10:00 to 17:00, Nikolaus Tue or Thu 13:00 to 17:00, so these
 > two avoid Julien's and need a recheck before anyone is confirmed. Both are before the fair on 4 Nov.
 >
+> 26 Oct, before sending. Raka chose B, "send the link without the /gyms/ and just send", so the link is now the home
+> page. Thread pulled again with tools/lemlist.py, still 2 items, nothing from Laurens since 25 Oct 15:25, control
+> Noah Hertling 6 items. Calendar reread for Tue 27 and Wed 28. Tue 27 at 4pm is taken since this morning, Nikolaus
+> (Healthy Secrets) 16:00 to 16:30, booked 08:29 UTC. Tue 27 is free 13:00 to 16:00, Wed 28 has nothing. The slot moved
+> to Tue 27 at 2pm, which Raka hasn't seen yet, so it goes back to him before sending. Not sent, the lemlist send tool
+> isn't connected in this session either.
+>
 > GTM tension, said once. docs/gtm-plan.md lists consumer brands and gyms under don't pitch. Raka's "Lets build the
 > thing for them" overrides it, and the B2B side (kit for gyms) is the frame used.
 
@@ -45,10 +52,10 @@ DELIVERY
 Laurens, here's what I offered, a BeBetter site that sells the line, with its own page where a gym designs its kit. They type their gym's name, see it on the back of your tee, set the sizes and send you the whole brief with their logo attached.
 
 Try it yourself.
-https://astra-bebetter-prototype.netlify.app/gyms/
+https://astra-bebetter-prototype.netlify.app/
 
 I've also written a short growth plan behind it, built around the gym owners you'll meet in Gorinchem on 4 November.
 https://astra-bebetter-plan.netlify.app/
 
-For pricing we're very flexible with your budget. Could we take 30 minutes to go through it and the price, Tuesday 27 at 4pm or Wednesday 28 at 11am?
+For pricing we're very flexible with your budget. Could we take 30 minutes to go through it and the price, Tuesday 27 at 2pm or Wednesday 28 at 11am?
 ```
