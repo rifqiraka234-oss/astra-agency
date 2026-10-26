@@ -230,7 +230,7 @@ const eq = (a, b, what) => a === b ? true : `${what || ''} page ${JSON.stringify
     await q.evaluate(() => { const e = document.querySelector('.det-head'); window.scrollTo(0, e.getBoundingClientRect().top + scrollY + 40); }); await q.mouse.wheel(0, 2); await q.waitForTimeout(400);
     const mid = await q.evaluate(() => document.querySelector('[data-sbar]').classList.contains('is-on'));
     return eq(top + ' ' + mid, 'false true');
-  }, async () => q.evaluate(() => { document.querySelector('[data-sbar]').classList.add('is-on'); new MutationObserver(() => document.querySelector('[data-sbar]').classList.add('is-on')).observe(document.querySelector('[data-sbar]'), { attributes: true }); }));
+  }, async () => q.evaluate(() => { document.querySelector('[data-sbar]').classList.add('is-on'); }));
   await check('the lens follows the pointer and the peek button flips the photo', async () => {
     await q.evaluate(() => document.querySelector('.lens').scrollIntoView()); await q.waitForTimeout(300);
     const r = await q.evaluate(() => { const e = document.querySelector('.lens').getBoundingClientRect(); return [e.left, e.top, e.width, e.height]; });
