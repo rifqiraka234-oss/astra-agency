@@ -3,6 +3,165 @@
 One file for both builds. The prototype agent writes its own section, the plan's section is below. Neither overwrites
 the other.
 
+## The prototype (written by the prototype agent, 26 Oct 2026)
+
+**Flag first, budget.** A one person consumer business, a sole trader since 1 January 2026 (KBO 1032.568.265), one paid
+private event of her own (Cinco Cero) and the Pro League Awards on her Events page. RULES 0G and the GTM plan say one
+screen and the call ask without a budget sign. Raka asked for this build by name ("leeetss draft for elise!!!!!"), so
+it's built. No price for her services anywhere, she publishes none.
+
+### Live
+
+| What | URL | Deploy |
+|---|---|---|
+| The prototype, her site with the wedding story | https://astra-honeyitshandled-prototype.netlify.app/ (planned) | **NOT DEPLOYED**, project d75c0db1-46e6-4842-b787-b1e2d9102daf |
+
+**NOT DEPLOYED, Netlify credits exceeded.** Three attempts from a clean copy of site/, 13.30.57 (6adf56116776ca7b25090af8),
+13.31.19 (6adf562769aa40225bab75d7) and 13.31.46 (6adf5645f14efef1f2724cf7) UTC, every one "Skipped due to account credit
+usage exceeded", state error, skipped true. The build is fine. The project is created, team SSO came up on and was
+switched off before the first attempt, and the project record confirms it off. noindex three ways (meta, X-Robots-Tag in
+netlify.toml, robots.txt). research/PROTOTYPE_LIVE.txt is **not written**, it waits for a verified deploy.
+
+When Netlify takes deploys again. Copy site/ to a clean folder, run the deploy-site command for the project id above from
+it, then `python3 qa/livehash.py` (every file hashed against the deploy, a 404 control, the title), cold loads at 1440
+and 390 with `node qa/shots.js https://astra-honeyitshandled-prototype.netlify.app/ <out> 1440,390` looked at, `node
+qa/func.js https://astra-honeyitshandled-prototype.netlify.app` against the live URL, Lighthouse on the live URL, then
+write research/PROTOTYPE_LIVE.txt (one line, the URL and the deploy id) so the plan can take its screenshots.
+
+### The idea
+
+Her own promise, "from your first idea to the final dance", run as the couple's own year, in the three colours she named
+for her brand on 17 June, "Something Off-White. Something Blue. Something Red." The hero asks "When's your I do?" and the
+date the couple gives (drag it, step it a week, pick it, or "No date yet") is written onto a card that rises out of her red
+envelope. Scroll, and every day from today to that date is one ink stroke, and the strokes draw her own HH monogram one day
+at a time. Then the guests fill a hall of round tables beside her two real nights, her own Cinco Cero film plays inside her
+HH, her red spreads through the paper on the day itself with her line "The details are mine, the moment is yours.", and the
+enquiry, "Tell me everything.", arrives already written. Sending folds the card into her envelope and presses her HH
+sticker on it, "Consider it handled."
+
+**Signature moments.** The envelope that opens on your date. Your days drawn as her HH (one stroke a day, split red for
+days Elise carries and pale blue for yours when the help changes). The hall of tables with Cinco Cero's 125 and the Pro
+League Awards' 570+ ringed. Her own aftermovie inside her HH. Her red blooming through the paper. The letter sealed with her
+sticker. A planner page with 17 tabs for "Usually found with 17 tabs open".
+
+### Who it's for and the one action
+
+**Who.** A couple in Antwerp or elsewhere in Flanders, usually the bride first, marrying in 2027 or 2028, with no planner
+yet, who found Elise on Instagram, Google, at an event or through a friend. Second visitor, someone planning a birthday, a
+dinner or a company night. **The one action.** Send Elise the wedding enquiry, as one of her first couples when the date is
+in 2027 or 2028, with the date, here or abroad, the guests and the help already written in. "Tell me everything" is on the
+first screen beside the date, under the drawing, under the red line, under the launch offer, in the header and in the bar.
+The second visitor's link ("Planning a birthday, a dinner or a company night? Tell me about it") sets Private Event in the
+same letter. Four lines in research/four-lines.md, the flow table in research/flow.md.
+
+English only. Her site has a Dutch mirror, but the page's own lines (the hero, the drawing, the letter's prefilled text) are
+ours, and a Dutch version written by us wouldn't reach the bar. Her own /nl copy is there for the launch version.
+
+### Sources
+
+- Every fact and line, build/data/site.json, each with the page it came from. Her site read 11.55 to 12.00 UTC (all nine
+  sitemap pages, English and Dutch, raw HTML and full renders at 1440, every part looked at) and again 13.27 to 13.35 UTC
+  before the build that ships. She moved her event pages at about 12.50 UTC to /events, /cincocero and /proleagueawards.
+  Every quoted line was rechecked on the new addresses at 13.34 and 13.35 UTC and holds word for word.
+- Her Instagram through /embed/ at 12.03 UTC, 137 followers, 6 posts, newest 15 Sep 2026, captions read in full (the
+  palette line is the 17 June post).
+- Her marks traced from her own PNGs, build/art/trace.py. Her colours from her Wix palette variables.
+- Art research, research/award.md (58 renders across two passes, fonts pulled off 13 wedding and event planners and 3
+  paper and object houses). Art plan, research/art-direction.md.
+
+### Her words, and where we changed them
+
+Used word for word, "I think ahead, so you don't have
+to.", "The details are mine, the moment is yours.", "The person behind the handled.", "Tell me everything.", "Consider it
+handled", "You say I do" and "I'll handle the rest." (the end of /weddings), her Pro League sentence, Jan Geysen's words up
+to their first exclamation mark, the Cinco Cero brief line, the next steps on /contact, the launch offer. Changed, and she
+should see these before launch.
+- Full planning, "I'll guide you through the entire journey" became "I'll guide you through all of it" (our banned word list).
+- The four steps, "&" written out, "tailored" and "a focus on experience" cut, "pleople" and "possibillities" fixed.
+- Partial planning, "Already on your way, but need" became "Already on your way and need".
+- "A little more Elise", "Usally" fixed, "&" written out, "Non-negotiable" written "Non negotiable" (our no dash rule).
+- The launch offer, "recieve" fixed. "Can't wait to hear from you! Elise" lost its exclamation mark.
+- Ours, not hers, "When's your I do?", "How many people are coming?", "Wedding planner in Antwerp, here and abroad", the
+  count lines, the hall comparisons, the letter's prefilled first lines and every label.
+
+### What must not be read as fact
+
+- The split in the drawing for partial planning (half the days) and for wedding day coordination (the last 8 weeks) is an
+  example, and the page says so under the drawing. Her pages give the idea, not the weeks.
+- "No date yet" counts to 1 July of the chosen year.
+- The hall is our drawing, tables of ten in rows, not her venue or her floor plan. The rings mark where 125 and 570 guests
+  would end on that drawing.
+- The Pro League Awards are her page's words and nothing more. Nothing says who ran the night or her role in it.
+- Her launch offer's terms beyond her own sentence (the size of the discount) aren't stated, because she doesn't state them.
+- The envelope, the card and the paper are our drawing of her stationery. The HH and the wordmark are her own artwork,
+  traced. Dancing Script on the card is the script her own site loads, not proven to be her sticker's face.
+- Nothing is sent. The letter says so, the note bar says so, and the fallback opens the visitor's own email to
+  info@honeyitshandled.com with the whole request in it.
+
+### Every photo, and the film
+
+All from honeyitshandled.com, downloaded 26 Oct 2026 from the files her pages serve (static.wixstatic.com/media/<id>).
+build/media/manifest.json has each one's id, page, alt text there, sha256 of the original and crop.
+
+| On the page | Her file | Where it sits on her site | Notes |
+|---|---|---|---|
+| Elise with a book on her head | 42a973_b81dcffa835148faa694db932822a92f | /about, alt "Honey it's Handled - Elise Laeven" | Next to her own words only |
+| Elise on her phone | 42a973_05bb1bcabb13435d9f57c052465e628f | /contact, alt "Honey it's Handled_Elise Laeven" | |
+| The Cinco Cero sign | 42a973_427f62a1f26148caaf6c412ba7c974b6 | home glimpse, a Cinco Cero photo by its name | Beside Jan Geysen's words, it shows the sign, not a person |
+| Her sticker on red tiles | 42a973_68e0f87cfc4b49038f8572369a98e84f | /weddings, alt "HIH-ENVELOPPE-1" | Her own branding |
+| The Handelsbeurs roof and galleries | 42a973_f181779ca0d8460eb26ea5d57717a6ca | Pro League Awards 011, by Kaat DM | **Cropped to the top 65.5%**, the ground floor arcade carries a Pro League and sponsor wall (Coca-Cola and others). The coats of arms in the roof are the building's |
+| Tables from above | 42a973_f107cefb41c441579cfb9880226dd3a9 | Pro League Awards 035, by Kaat DM | **Cropped to the top 47.5%**, leaving out the nearest table card ("TABLE 25" with an unreadable mark). The far cards are a few pixels |
+| Film, the disco ball and the dance floor | 42a973_5f3af2a4edee4ae89f88decc764ab82c | the Cinco Cero aftermovie, 76.35 s | 44.0 to 46.6 s and 56.1 to 57.7 s, 960 by 540, no sound, plays only on screen, never under reduced motion or data saver |
+
+Credits on the page, "Photos by Kaat DM." under the Pro League Awards and in the footer. Left out on purpose, the photos on
+/weddings (alt "Honey it's Handled_Wedding"), whose origin isn't stated, six of them 735 or 736 px wide, the width Pinterest
+serves. Nothing on the page is captioned or implied as her wedding, her couple or her client beyond what her pages say.
+Cinco Cero is only ever "A 50th birthday".
+
+### QA that ran, all local on 26 Oct, last on build hash 7f9c854b40137c58 (unchanged across the chain, 13.44 to 13.47 UTC)
+
+Scripts in qa/, served from site/ on 127.0.0.1:8711, today fixed with ?today=2026-10-26.
+- Functional, qa/func.js, **28 of 28**. Every expected value worked out in the test from site.json and date sums. The date
+  writing the card, count, bar and letter, the arrows, the drag, one stroke a day (229 for 12 June 2027) all inked at the
+  end and half at half, partial and day coordination splits, 125 and 600 guests and the two rings, abroad writing
+  Destination Wedding, the offer only for 2027 and 2028, no date yet, an edited letter kept, an empty letter caught, the
+  sealed letter with the whole request in the mail, the private event route, the bar stepping aside, the hero call landing
+  on the letter, the film, reduced motion complete and still, no overflow at nine widths from 1920 to 320, the sticker never
+  on the card's words, notes never overlapping, the phone menu, the first screen holding the question, the date and the
+  call, the red spreading as the day arrives, no script errors. **Plant mode, 27 of 28 caught**, the script error check
+  passes by design.
+- Copy, qa/copy.js, **clean** over 247 unique lines in every reachable state (the drawing walked, 12 state changes, the
+  letter's errors, sent, the phone menu), no dashes, colons, banned words, hedges, uncontracted verbs or exclamation marks,
+  869 contractions. **Plant, 6 of 6 kinds found.**
+- axe, qa/axe.js, **15 runs clean** (1440 and 390, motion on after a full scroll and reduced, back at the top, no date yet,
+  menu open, the letter with an error, sealed). **Plant, 15 of 15 reported.**
+- Guide walk, qa/guide-walk.js, **0 half screens without a way to the letter** at 390 and 1440, from the top to the footer.
+- Lighthouse local, phone 81 to 86 across three runs (LCP 4.0 s simulated, CLS 0), desktop 100, accessibility and best
+  practices 100, SEO 66 is the noindex.
+- The last change (a function renamed in js/art.js) was followed by func 28 of 28, plant 27 of 28, copy clean, axe 15 of 15
+  and the walk with 0 gaps, on the hash above. The earlier chain at 13.35 to 13.40 on 5af3c3cf3c6fbaea gave the same,
+  plus copy plant 6 of 6 and axe plant 15 of 15.
+- Every section screenshotted at 1440 and 390 and looked at, the states (partial, day coordination, the bloom, the film
+  playing, sealing, sealed), and the whole page without script and under reduced motion (7 of 7 images load, every word
+  there, the drawing complete).
+
+### Hiccups, each with the rule it leaves
+
+| Hiccup | Rule |
+|---|---|
+| `var go` (the envelope's opener) and `function go()` (the art loop's start) in one scope. The var assignment replaced the function, the loop never started and the red never bloomed, while every test that set state directly still passed | Name every function in an art script for what it does (openSoon, startArt), and test a scroll scene on a fresh page started by a real wheel, with a plant that blocks the start |
+| Potrace traced the paper, not the mark, and the mask lookup rejected pixels at x just below zero, so the drawing used 16 of 27 hatch lines | Trace with the mark as foreground and a padding margin, and test edge lookups with a real coordinate that rounds to zero |
+| Her Pro League hall photo carries a sponsor wall in the ground floor arcade, only visible at full size | Zoom every event photo at full resolution for walls, screens and table cards before it ships |
+| The sealed envelope showed the card's top corners, the pocket's V started a third of the way down | Draw the pocket from the top corners, as a real envelope is |
+| The bar treated a call hidden under itself as on screen and stepped aside, leaving a half screen with no action | A call counts as on screen only between the header and the bar |
+| Wix answered 429 to curl on four of seven pages at 13.27 | Reread through Chromium with pauses, never call a page unchanged off a 429 |
+
+### Rebuild
+
+`/usr/local/bin/python3 build/build.py` writes site/. One time steps, already run, `art/trace.py` (her marks),
+`art/prep_media.py` (needs the originals in the session scratchpad, the build keeps resized copies), `art/make_fibre.py`.
+Fonts are OFL with their licences in build/fonts.
+
 ## The plan (written by the plan agent, 26 Oct 2026)
 
 **Flag first, budget.** A one person consumer business, a sole trader since 1 January 2026, one paid private event

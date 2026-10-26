@@ -1,0 +1,213 @@
+{
+ "built": "2026-10-26",
+ "readAt": "Her site reread 26 Oct 2026, 11.55 to 12.00 UTC (all pages, English and Dutch), again 13.27 to 13.35 UTC before the build that ships. She moved her event pages around 12.50 UTC, to /events, /cincocero and /proleagueawards, words unchanged. Instagram embed 12.03 UTC.",
+ "defaultDate": "2027-06-12",
+ "offerYears": [
+  2027,
+  2028
+ ],
+ "minDate": "2026-11-01",
+ "maxDate": "2029-12-31",
+ "guests": {
+  "min": 10,
+  "max": 600,
+  "default": 100,
+  "perTable": 10
+ },
+ "colours": {
+  "red": "#962122",
+  "blue": "#D3E9EE",
+  "paper": "#F9F7F6",
+  "ink": "#333333",
+  "source": "Wix palette variables in her home page HTML, --color_16/17/18 rgb(150,33,34), --color_12 rgb(211,233,238), --color_11 rgb(249,247,246), --color_14 rgb(51,51,51)"
+ },
+ "nights": {
+  "cinco": {
+   "name": "Cinco Cero",
+   "kind": "A 50th birthday",
+   "guests": 125,
+   "date": "2026-08-28",
+   "dateText": "28 August 2026",
+   "sources": [
+    "https://www.instagram.com/honeyitshandled/ post of 8 Sep 2026, 'A 50th birthday, 125 guests and one completely custom concept ... CINCO CERO • 28.08.2026', read through /embed/ 26 Oct 12.03 UTC",
+    "https://www.honeyitshandled.com/cincocero, 'THE OCCASION 50th birthday celebration'"
+   ],
+   "line": "The brief wasn’t simply to organise a birthday party. It was to create an evening people wouldn’t want to leave.",
+   "lineSource": "https://www.honeyitshandled.com/cincocero, 'For Cinco Cero, the brief wasn't simply to organise a birthday party. It was to create an evening people wouldn't want to leave.'"
+  },
+  "pro": {
+   "name": "Pro League Awards ’26",
+   "kind": "A corporate award show",
+   "guests": 570,
+   "guestsText": "570+",
+   "date": "2026-05-25",
+   "dateText": "25 May 2026",
+   "venue": "the Handelsbeurs, Antwerp",
+   "sources": [
+    "https://www.honeyitshandled.com/proleagueawards, 'On May 25th, 2026, the Handelsbeurs in Antwerp set the stage for the Pro League Awards, bringing together over 570 guests' and '570+ guests. One iconic venue.'"
+   ],
+   "line": "570+ guests. One iconic venue.",
+   "credit": "Photos by Kaat DM, as credited in the file names on her page",
+   "text": "On May 25th, 2026, the Handelsbeurs in Antwerp set the stage for the Pro League Awards, bringing together over 570 guests to celebrate the very best of Belgian football.",
+   "textSource": "https://www.honeyitshandled.com/proleagueawards (was /kopie-van-events until about 12.50 UTC), copied word for word 11.56 UTC, rechecked 13.34 UTC"
+  }
+ },
+ "quote": {
+  "text": "My 50th birthday party has become an incredible memory, thanks to the collaboration with Honey it’s Handled",
+  "who": "Jan Geysen",
+  "source": "https://www.honeyitshandled.com/cincocero, the signed testimonial, quoted up to its first exclamation mark"
+ },
+ "services": [
+  {
+   "id": "full",
+   "name": "Full planning",
+   "line": "From your first idea to the final dance, I’ll guide you through all of it, so you can enjoy every step.",
+   "stepIn": 0,
+   "source": "/weddings, 01 FULL PLANNING, 'From your first idea to the final dance, I'll guide you through the entire journey, so you can enjoy every step.'"
+  },
+  {
+   "id": "partial",
+   "name": "Partial planning",
+   "line": "Already on your way and need a little extra support? I’ll step in where needed and help bring it all together.",
+   "stepIn": 0.5,
+   "source": "/weddings, 02 PARTIAL PLANNING, 'Already on your way, but need a little extra support? I'll step in where needed and help bring it all together.'"
+  },
+  {
+   "id": "day",
+   "name": "Wedding day coordination",
+   "line": "You’ve planned it all, now it’s time to hand it over. I’ll make sure everything runs smoothly, so you can be fully present.",
+   "stepInDays": 56,
+   "source": "/weddings, 03 WEDDING DAY COORDINATION, same words"
+  }
+ ],
+ "steps": [
+  {
+   "name": "Dream",
+   "line": "We get to know each other, your story and your vision."
+  },
+  {
+   "name": "Plan",
+   "line": "We make the plan, with the right people, places and possibilities."
+  },
+  {
+   "name": "Create",
+   "line": "We bring it all to life, with an eye for detail."
+  },
+  {
+   "name": "Celebrate",
+   "line": "You enjoy every moment. I’ll take care of the rest."
+  }
+ ],
+ "stepsSource": "/weddings, THE PROCESS, Dream, Plan, Create, Celebrate, each line from her page with two typos fixed (pleople, possibillities) and 'tailored' and 'a focus on experience' cut",
+ "details": [
+  {
+   "t": "the right setting",
+   "src": "/weddings"
+  },
+  {
+   "t": "a dream team of suppliers",
+   "src": "/weddings"
+  },
+  {
+   "t": "timelines",
+   "src": "/weddings"
+  },
+  {
+   "t": "budgets",
+   "src": "/weddings"
+  },
+  {
+   "t": "where the florist is",
+   "src": "/about"
+  },
+  {
+   "t": "the missing place card",
+   "src": "/about"
+  },
+  {
+   "t": "a backup plan for the backup plan",
+   "src": "/about"
+  }
+ ],
+ "elise": {
+  "lines": [
+   "I’m Elise, founder, planner and the person behind Honey it’s Handled.",
+   "I’m the person who has the timeline open before breakfast, knows where the florist is, notices the missing place card and has a backup plan for the backup plan.",
+   "Before starting Honey it’s Handled, I spent 5 years managing events and bringing together people, suppliers, timings, budgets and approximately a thousand moving parts."
+  ],
+  "source": "/ (Meet Elise) and /about",
+  "more": [
+   [
+    "Usually found",
+    "with 17 tabs open"
+   ],
+   [
+    "At an event",
+    "probably checking the timeline"
+   ],
+   [
+    "Off duty",
+    "pilates, dinner with friends and planning my next trip"
+   ],
+   [
+    "Love language",
+    "having already thought of it"
+   ],
+   [
+    "Non negotiable",
+    "a plan B"
+   ]
+  ],
+  "moreSource": "/about, A LITTLE MORE ELISE, 'Usally' fixed, '&' written out"
+ },
+ "offer": {
+  "title": "Will you be one of our first ‘I do’?",
+  "text": "We’re looking for a few special couples to become part of the very first Honey it’s Handled weddings. As one of our first couples, you’ll receive an exclusive launch offer on our wedding planning service, in exchange for allowing us to capture and share your celebration as part of our Honey it’s Handled story.",
+  "source": "/weddings, EXCLUSIVE LAUNCH OFFER, 'recieve' fixed"
+ },
+ "form": {
+  "celebrating": [
+   "Wedding",
+   "Destination Wedding",
+   "Private Event",
+   "Corporate Event",
+   "Other"
+  ],
+  "found": [
+   "Instagram",
+   "Google",
+   "Event",
+   "Referral",
+   "Other"
+  ],
+  "source": "the Wix form on / and /contact, field what_are_we_celebrating enum and the how did you find options"
+ },
+ "next": [
+  [
+   "You tell me everything.",
+   "Fill me in on what you’re planning."
+  ],
+  [
+   "I’ll be in touch.",
+   "If it feels like a match, we’ll arrange a first conversation."
+  ],
+  [
+   "We get to know each other.",
+   "We’ll talk through your ideas, priorities and what you need help with."
+  ],
+  [
+   "Consider it handled.",
+   "From there, we’ll figure out the best way to make it happen."
+  ]
+ ],
+ "nextSource": "/contact, WHAT HAPPENS NEXT?",
+ "contact": {
+  "email": "info@honeyitshandled.com",
+  "phone": "+32 470 58 48 54",
+  "phoneHref": "+32470584854",
+  "instagram": "https://www.instagram.com/honeyitshandled/",
+  "linkedin": "https://www.linkedin.com/company/honey-its-handled/",
+  "kbo": "1032.568.265",
+  "kboSource": "https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1032568265"
+ }
+}
