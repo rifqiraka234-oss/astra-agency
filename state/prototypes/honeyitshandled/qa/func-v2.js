@@ -62,12 +62,14 @@ const eq = (a, b, what) => a === b ? true : `${what || ''} page ${JSON.stringify
   await check('default bar', async () => eq(await T('[data-o="bar"]'), `Wedding · ${short(d0)} · 100 guests · Full planning`),
     async () => p.evaluate(() => window.HIH.set({ guests: 105 })));
   await reset();
-  await check('static page and script agree before any input (no script build vs live)', async () => {
+  await check('the page without script says what the script says, letter and bar', async () => {
+    // the build writes the no script page from the same defaults, compare it with what the live page shows now
     const html = await (await p.request.get(base + '/')).text();
     const ta = html.match(/<textarea[^>]*>([^<]*)<\/textarea>/)[1].replace(/&#x27;/g, "'").replace(/&amp;/g, '&');
     const bar = html.match(/data-o="bar">([^<]*)</)[1];
-    return eq(ta + ' || ' + bar, msg0 + ' || ' + `Wedding · ${short(d0)} · 100 guests · Full planning`);
-  }, async () => { /* plant, compare against a page with a changed state */ await p.evaluate(() => window.HIH.set({ guests: 110 })); });
+    const live = await p.evaluate(() => document.querySelector('[data-f="message"]').value + ' || ' + document.querySelector('[data-o="bar"]').textContent);
+    return eq(ta + ' || ' + bar, live);
+  }, async () => p.evaluate(() => window.HIH.set({ guests: 110 })));
   await reset();
 
   // 3. the date controls
@@ -206,7 +208,8 @@ const eq = (a, b, what) => a === b ? true : `${what || ''} page ${JSON.stringify
     return eq(r.join(','), 'true,false,true,true,true,true');
   }, async () => p.evaluate(() => { document.querySelector('[data-letter]').addEventListener('submit', e => e.stopImmediatePropagation(), true); }));
 
-  // 9. reveal, lens, lacquer, ball on a fresh page started by a real wheel
+  // 9. reveal, lens, lacquer, ball on a fresh page started by a real wheel (the first page is closed to keep memory low)
+  await p.close();
   const q = await ctx.newPage(); q.on('pageerror', e => errs.push(e.message));
   await q.goto(U, { waitUntil: 'load' }); await q.waitForTimeout(1500);
   await check('the lacquer HH is drawn in her red on the hero canvas', async () => {
@@ -267,6 +270,7 @@ const eq = (a, b, what) => a === b ? true : `${what || ''} page ${JSON.stringify
   }, async () => q.evaluate(() => document.querySelectorAll('[data-tone="dark"]').forEach(e => { if (!e.matches('[data-hdr]')) e.dataset.tone = 'light'; })));
 
   // 10. reduced motion, every scene still and complete, no film
+  await ctx.close();
   const rc = await b.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' }); rc.setDefaultTimeout(6000);
   const r = await rc.newPage(); r.on('pageerror', e => errs.push(e.message));
   await r.goto(U, { waitUntil: 'load' }); await r.waitForTimeout(1200);
@@ -278,6 +282,7 @@ const eq = (a, b, what) => a === b ? true : `${what || ''} page ${JSON.stringify
   }, async () => r.evaluate(() => { const v = document.querySelector('[data-film] video'); v.preload = 'auto'; v.muted = true; v.play(); }));
 
   // 11. the first screen holds the question, the three answers and the call, at 1440 and 390
+  await rc.close();
   for (const [w, h] of [[1440, 900], [390, 844], [320, 640]]) {
     const fc = await b.newContext({ viewport: { width: w, height: h }, isMobile: w < 600, hasTouch: w < 600 });
     const f = await fc.newPage(); await f.goto(U, { waitUntil: 'load' }); await f.waitForTimeout(800);
