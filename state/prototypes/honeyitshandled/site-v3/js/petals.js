@@ -17,9 +17,9 @@
   }
   function make(i, top) {
     var z = .55 + Math.random() * .75;
-    return { x: Math.random() * W, y: top ? -40 - Math.random() * Hh * 1.2 : Math.random() * Hh, z: z, s: (7 + Math.random() * 9) * z,
+    return { x: Math.random() * W, y: top ? -Hh * .6 + Math.random() * Hh * 1.6 : Math.random() * Hh, z: z, s: (7 + Math.random() * 9) * z,
       r: Math.random() * 6.28, vr: (Math.random() - .5) * 1.2, f: Math.random() * 6.28, vf: .8 + Math.random() * 1.6,
-      sw: 18 + Math.random() * 34, ph: Math.random() * 6.28, vy: (26 + Math.random() * 30) * z, ox: 0, oy: 0, c: COL[i % COL.length] };
+      sw: 18 + Math.random() * 34, ph: Math.random() * 6.28, vy: (34 + Math.random() * 34) * z, ox: 0, oy: 0, c: COL[i % COL.length] };
   }
   function seed() { var n = W < 760 ? 26 : 46; P = []; for (var i = 0; i < n; i++) P.push(make(i, true)); }
   function petal(p) {
@@ -65,5 +65,7 @@
   sec.addEventListener('pointermove', hand, { passive: true });
   sec.addEventListener('pointerdown', hand, { passive: true });
   window.addEventListener('resize', function () { if (on) { var oW = W; size(); if (Math.abs(W - oW) > 60) seed(); } });
-  window.HIH_PETALS = { get frames() { return frames; }, get count() { return P.length; }, get on() { return on; }, pos: function () { return P.map(function (p) { return [p.x + p.ox, p.y + p.oy]; }); } };
+  // test handle, holds every petal still in a small cluster so the parting can be measured
+  function place(x, y) { P.forEach(function (p) { var a = Math.random() * 6.28, r = Math.random() * 30; p.x = x + Math.cos(a) * r; p.y = y + Math.sin(a) * r; p.ox = p.oy = 0; p.vy = 0; p.sw = 0; }); }
+  window.HIH_PETALS = { get frames() { return frames; }, get count() { return P.length; }, get on() { return on; }, place: place, pos: function () { return P.map(function (p) { return [p.x + p.ox, p.y + p.oy]; }); } };
 })();

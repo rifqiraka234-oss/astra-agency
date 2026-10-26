@@ -335,23 +335,25 @@
 
   // ------------------------------------------------------------------ header tone and the bar, one idea of on screen
   var hdr = $('[data-hdr]'), bar = $('[data-bar]');
+  // one definition of on screen, shared with the guide walk, between the header and the bar, drawn and not see through
   function onScreen(el) {
-    if (!el || !el.offsetParent && getComputedStyle(el).position !== 'fixed') return false;
-    var r = el.getBoundingClientRect(), top = hh() + 4, bot = innerHeight - ((bar && bar.classList.contains('on')) ? bar.offsetHeight : 0) - 4;
-    return r.height > 0 && r.bottom > top && r.top < bot;
+    if (!el || el.offsetParent === null) return false;
+    var r = el.getBoundingClientRect(), s = getComputedStyle(el), top = hh() + 6, bot = innerHeight - ((bar && bar.classList.contains('on')) ? bar.offsetHeight : 0) - 6;
+    return r.width > 0 && r.height > 0 && r.bottom > top && r.top < bot && s.visibility !== 'hidden' && +s.opacity > 0.05;
+  }
+  function actions(v) {
+    var scope = v === 'events' ? $('#events') : $('#home'), form = $(v === 'events' ? 'form[data-reply="event"]' : 'form[data-reply="wedding"]');
+    return $$('[data-cta]', scope).filter(function (b) { return !b.closest('.nl') && !b.classList.contains('hbtn'); })
+      .concat(form ? $$('input:not([type=hidden]), textarea, select, .send', form) : []);
   }
   function tick() {
     var v = H.dataset.view, scope = v === 'events' ? $('#events') : $('#home');
     var hero = $('[data-tone="film"]', scope);
     if (hdr) { var r = hero ? hero.getBoundingClientRect() : null; hdr.classList.toggle('on-film', !!(r && r.bottom > hh() + 2)); }
     if (!bar) return;
-    var heroCta = v === 'events' ? $('.ev-ways', scope) : $('[data-hero-cta]', scope);
+    var heroCta = $('[data-hero-cta]', scope);
     var past = heroCta ? heroCta.getBoundingClientRect().bottom < hh() : true;
-    var ctas = $$('.btn[data-cta]:not(.hbtn), .nl-cta', scope).filter(function (b) { return !b.closest('.nl'); });
-    var form = $(v === 'events' ? 'form[data-reply="event"]' : 'form[data-reply="wedding"]');
-    var parts = form ? $$('.card-wrap, .fields, .send-row, .sealed:not([hidden])', form) : [];
-    var other = ctas.some(onScreen) || parts.some(onScreen);
-    var on = past && !other;
+    var on = past && !actions(v).some(onScreen);
     bar.classList.toggle('on', on);
     var bc = $('[data-bar-cta]', bar); bc.tabIndex = on ? 0 : -1; bar.setAttribute('aria-hidden', on ? 'false' : 'true');
   }
@@ -365,6 +367,6 @@
   window.HIH = {
     get state() { return JSON.parse(JSON.stringify(S, function (k, v) { return v; })); }, set: set, message: message, barText: barText,
     ev: { get state() { return JSON.parse(JSON.stringify(EV)); }, set: evSet, message: evMessage, bar: evBar },
-    tick: tick, onScreen: onScreen, today: today || null, ready: true
+    tick: tick, onScreen: onScreen, actions: actions, today: today || null, ready: true
   };
 })();

@@ -250,7 +250,7 @@ def off_white():
     <figure class="still still-a">{webp('lace', 'Buttons being fastened on the back of a beaded lace wedding dress, in black and white', '(max-width: 700px) 60vw, 26vw')}</figure>
     <figure class="still still-b">{webp('veil', 'The lace back of a wedding dress under a long veil, in black and white', '(max-width: 700px) 52vw, 22vw')}</figure>
     <div class="when" role="group" aria-labelledby="h-when">
-      <p class="lab" id="h-when">When’s your I do?</p>
+      <p class="when-q" id="h-when">When’s your I do?</p>
       <p class="sent" aria-live="polite"><span data-o="sentence">We’re saying I do on <b data-o="dateLong">{long_date(d)}</b>, <b data-o="place">here in Belgium</b>, with about <b data-o="guestsN">100</b> guests.</span></p>
       <div class="ctls">
         {date_ctl('w')}
@@ -405,6 +405,7 @@ def events():
   <div class="ev-hero-t">
     <h1 id="h-ev">{esc(E["title"]["t"])}</h1>
     <p>{esc(E["sub"]["t"])}</p>
+    <a class="btn btn-ivory ev-cta" href="#ev-reply" data-cta data-hero-cta>Tell me about your event</a>
     <ul class="ev-ways">
       <li><a href="#ev-private" data-ev-go="private">A private celebration</a></li>
       <li><a href="#ev-company" data-ev-go="company">A company event</a></li>
@@ -415,8 +416,8 @@ def events():
 <section class="ev-part ev-private" id="ev-private" aria-labelledby="h-cinco">
   <div class="ev-media">{night}<p class="cap">{esc(c["film"])}.</p></div>
   <div class="ev-t">
-    <p class="meta">{esc(c["kind"])} · {esc(c["date"])} · {c["guests"]} guests</p>
     <h2 id="h-cinco">{esc(c["name"])}</h2>
+    <p class="meta">{esc(c["kind"])} · {esc(c["date"])} · {c["guests"]} guests</p>
     <p class="ev-l">{esc(c["brief"])}</p>
     <blockquote class="q"><p>“{esc(q["one"])} {esc(q["two"])}”</p><footer>{esc(q["who"])}</footer></blockquote>
     <a class="btn" href="#ev-reply" data-cta data-ev-set="private">Plan a private event</a>
@@ -433,8 +434,8 @@ def events():
     <p class="cap">{esc(p["credit"])}</p>
   </div>
   <div class="ev-t">
-    <p class="meta">{esc(p["kind"])} · {esc(p["date"])} · {esc(p["guests"])} guests</p>
     <h2 id="h-pro">{esc(p["name"])}</h2>
+    <p class="meta">{esc(p["kind"])} · {esc(p["date"])} · {esc(p["guests"])} guests</p>
     <p class="ev-l">{esc(p["text"])}</p>
     <p>{esc(p["scenes"])} {esc(p["timing"])}</p>
     <a class="btn" href="#ev-reply" data-cta data-ev-set="company">Plan a company event</a>
@@ -509,10 +510,10 @@ def foot():
   </div>
   <p class="foot-n">A prototype by Astra agency for Honey it’s Handled, not her live site. The films and wedding photos on the wedding page are stock, standing in for footage from her first couples. Photos of Elise, Cinco Cero and the Pro League Awards are hers. KBO {c["kbo"]}, Antwerp.</p>
 </footer>
-<div class="bar" data-bar aria-hidden="true">
+<aside class="bar" data-bar aria-label="Your enquiry so far" aria-hidden="true">
   <p class="bar-s"><span class="bl" data-o="bar">{esc(DEF_BAR)}</span><span class="bs" data-o="barShort">{esc(short_date(DEF_DATE))} · 100 guests</span></p>
   <a class="btn bar-b" href="#reply" data-bar-cta tabindex="-1">Be one of the first</a>
-</div>
+</aside>
 <script type="application/json" id="hih-data">{DATA_JSON}</script>
 <script src="js/veil.js" defer></script>
 <script src="js/petals.js" defer></script>

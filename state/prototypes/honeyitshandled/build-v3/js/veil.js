@@ -92,5 +92,17 @@
   stage.addEventListener('pointermove', function (e) {
     var r = cv.getBoundingClientRect(); ptr[0] = (e.clientX - r.left) / r.width; ptr[1] = 1 - (e.clientY - r.top) / r.height; ptr[2] = Math.min(1, ptr[2] + .12); ptrT = performance.now(); wake();
   });
-  window.HIH_VEIL = { get lift() { return lift; }, get frames() { return frames; }, get progress() { return progress(); } };
+  // the test handle draws one frame now and reads its alpha back in the same task, before the frame is shown
+  function sample() {
+    size(); var L = sstep(.06, .66, progress()), now = performance.now();
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    if (L < 0.999) {
+      gl.uniform2f(uR, cv.width, cv.height); gl.uniform1f(uT, (now - t0) / 1000); gl.uniform1f(uL, L);
+      gl.uniform3f(uP, ptr[0], ptr[1], ptr[2]); gl.uniform1f(uD, dpr); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    }
+    var px = new Uint8Array(4), out = [];
+    [[.5, .5], [.25, .3], [.75, .7], [.5, .12], [.5, .9]].forEach(function (q) { gl.readPixels(Math.floor(q[0] * cv.width), Math.floor(q[1] * cv.height), 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, px); out.push(px[3]); });
+    return { lift: L, alpha: out };
+  }
+  window.HIH_VEIL = { get lift() { return lift; }, get frames() { return frames; }, get progress() { return progress(); }, sample: sample };
 })();
