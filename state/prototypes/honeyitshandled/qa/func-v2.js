@@ -149,14 +149,15 @@ const eq = (a, b, what) => a === b ? true : `${what || ''} page ${JSON.stringify
       await p.click(`label.path:has(input[value="${path}"])`); await p.waitForTimeout(100);
       if (helpId === 'freelance') await p.click('label:has(input[name="help-company"][value="freelance"])');
       await p.waitForTimeout(80);
-      const ctas = await p.$$eval('[data-o="cta"]', es => [...new Set(es.map(e => e.textContent))]);
+      // every button to the letter that a visitor on this path can see, not only the ones the script writes
+      const ctas = await p.$$eval('main a[data-cta]', es => [...new Set(es.filter(e => e.offsetParent !== null).map(e => e.textContent.trim()))]);
       const d = new Date(P[path].defaultDate + 'T00:00:00Z');
       const k = { private: ['a milestone birthday or anniversary'], company: [null, null, 'an award ceremony or gala'] }[path][kindIdx];
       const who = path === 'private' ? 'I’m' : 'we’re';
       const want = `Hi Elise, ${who} planning ${k} on ${long(d)}, for about ${P[path].guests} guests. ${lead}`;
       const r = [ctas.join('/'), await p.$eval('select[name="celebrating"]', e => e.value), await p.$eval('[data-f="message"]', e => e.value)];
       return eq(r.join(' | '), `${P[path].cta} | ${cel} | ${want}`);
-    }, async () => p.evaluate(() => { const s = document.querySelectorAll('[data-o="cta"]'); s[s.length - 1].removeAttribute('data-o'); s[s.length - 1].textContent = 'Tell me everything'; }));
+    }, async () => p.evaluate(() => { const s = document.querySelectorAll('main [data-o="cta"]'); const e = s[s.length - 1]; e.removeAttribute('data-o'); e.textContent = 'Tell me everything'; }));
   }
   await check('company path meets the Pro League Awards first, the others Cinco Cero first', async () => {
     const order = async () => p.evaluate(() => { const a = document.querySelector('.n-pro').getBoundingClientRect().top, c = document.querySelector('.n-cinco').getBoundingClientRect().top; return a < c ? 'pro' : 'cinco'; });
@@ -192,7 +193,7 @@ const eq = (a, b, what) => a === b ? true : `${what || ''} page ${JSON.stringify
     const kept = await p.$eval('[data-f="message"]', e => e.value);
     await p.evaluate(() => document.querySelector('[data-rewrite]').click()); const back = await p.$eval('[data-f="message"]', e => e.value);
     return eq(kept + ' | ' + back.includes('about 140 guests'), 'Our own words | true');
-  }, async () => p.evaluate(() => { window.HIH.S.dirty = false; document.querySelector('[data-f="message"]').addEventListener('input', () => { window.HIH.S.dirty = false; }); }));
+  }, async () => p.evaluate(() => { document.addEventListener('input', () => { window.HIH.S.dirty = false; }); }));
   await reset();
   await check('an empty letter is caught, with the reason', async () => {
     await p.evaluate(() => document.getElementById('letter').scrollIntoView()); await p.waitForTimeout(300);
