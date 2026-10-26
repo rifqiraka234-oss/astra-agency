@@ -102,7 +102,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   .hh-still{width:auto;height:84%;transform:translate(-50%,-50%)}
   .hero-t{grid-column:1;grid-row:2;padding:6px var(--gut) 64px}
   .hero h1{margin-bottom:22px}
-  .hero-line{bottom:20px}
+  .hero-line{position:relative;left:auto;bottom:auto;grid-column:1;grid-row:3;padding:0 var(--gut) 30px;margin-top:-34px}
 }
 
 /* 2. when */

@@ -108,7 +108,7 @@ is the night when the doors open. Two layers all the way down, the calm front (y
 4. **The doors are her HH** ("So when the doors open"). Her monogram is two letters H. As the visitor scrolls, the two
    halves of the HH become two tall lacquer doors that part, light comes through the gap, and her nights are behind them.
 5. **Her nights, full bleed, numbers as architecture.** The Handelsbeurs under its iron and glass roof edge to edge with
-   570+ set the height of the screen, and Cinco Cero with 125 the same size, her own aftermovie of the dance floor playing
+   570+ set the height of the screen, and Cinco Cero with 125 the same size, the Cinco Cero aftermovie from her page (the dance floor) playing
    inside the figures. The visitor's own number is the third figure, dragged along a line where 125 and 570 are marked.
 6. **Elise as stickers** ("Type A, so you don't have to be."). Her own studio photos cut out with a white die cut edge,
    like the stickers she had printed, scattered on her blue round one line, drifting at different depths with the
@@ -136,7 +136,7 @@ is the night when the doors open. Two layers all the way down, the calm front (y
 
 Her photos only, from honeyitshandled.com, the originals her pages serve (static.wixstatic.com/media/<id>), downloaded
 26 Oct. build-v2/media/manifest.json has every file's source id, the page it sits on today, its alt text there, the
-sha256 of the original and any crop or edit. Her Cinco Cero aftermovie for the film (her own page, /cincocero). No stock
+sha256 of the original and any crop or edit. The film is the Cinco Cero aftermovie on her /cincocero page, never claimed as her own footage. No stock
 photos and no stock film, a stock couple would read as her wedding. Her /weddings photos stay out (origin unknown).
 
 Third party check, every photo zoomed at full size. Two found that v1 missed or that are new.
