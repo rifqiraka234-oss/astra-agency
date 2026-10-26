@@ -39,7 +39,8 @@ alone, which gives 78, and the local server sends HTML and CSS uncompressed. Tak
 prototype at 16.23, 16.27 and 18.00 UTC (6adf7e74262e7eef72db8c01, 6adf7f5c15879ba5d1c6efb2, 6adf952e27290b7591b1c9a5),
 the plan at 16.54 and 18.00 UTC (6adf85a8f122612d7d9355d3, 6adf9546be93c3858610ac3f). At 18.01 UTC both URLs answered
 200 with no v2 marker in the HTML (the same markers are in the local builds, example.com 200 as the control), so both
-still serve v1. No further retries unprompted, it needs Raka on the Netlify account's credit. Retry, then hash live file by file and rerun bwild-func, plan-func and axe on the
+still serve v1. No further retries unprompted, it needs Raka on the Netlify account's credit. Raka asked at 19.15 UTC whether it was uploaded, one more try,
+6adfa6cb142e110785a4de9c, same skip, both URLs still v1. Retry, then hash live file by file and rerun bwild-func, plan-func and axe on the
 live URLs before the delivery goes anywhere.
 
 **The plan, for v2.** The built chapter's six shots and captions are retaken from v2 (slashes, stars, headlights, bib,
