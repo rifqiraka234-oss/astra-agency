@@ -10,7 +10,8 @@
 
 The audit is a candidate list. Before drafting for anyone in it, read their whole thread with `thread`.
 
-Reads only. Sends stay on the MCP send_message, on Raka's word, never from here.
+Sends go through `send`, on Raka's word only. A dry run of the exact text first, then --go with his words in
+--approval. It refuses a changed thread or a duplicate, and confirms one identical copy after.
 
 The key is the LEMLIST network secret on the Astra Agency environment (Basic auth, added
 22 Oct 2026). The proxy injects it, so the key is never in this container or this file.
