@@ -18,9 +18,10 @@ four way never messaged check and reopen every claim in the minute before any se
 > not on her site, so the message shows we read her Instagram. (4) Her launch offer swaps a discount for filming the first
 > weddings, for couples marrying in 2027 or 2028, so she knows she has no weddings to show yet. The message builds on that
 > rather than pointing it out as a flaw.
-> (5) Rewritten as SKETCHB on 26 Oct ~10.40 UTC, the opener A/B test is back on (Raka, "I THOUGHT WE'RE GOING TO DO like an
-> ab test") and her contactId puts her in arm B. Same angle, same claims, trimmed to fit 95 words. The SKETCH version is in
-> git at commit 4caffef.
+> (5) SKETCHB, the opener A/B test is back on (Raka, "I THOUGHT WE'RE GOING TO DO like an ab test") and her contactId
+> puts her in arm B. B opens "Hi Elise, Honey it's Handled looks cool." (Raka, "maybe like change it to Hi name, [company]
+> looks cool. however,"), so this is the SKETCH text with a full stop, no brand line, the short ask, and "ending in the
+> launch offer" cut to fit 95 words.
 
 ```gate
 lead: Elise Laeven, founder and owner of Honey It's Handled, a sole trader, KBO enterprise 1032.568.265 "Laeven, Elise", natural person, active since 1 January 2026, VAT registered since 1 January 2026, establishment unit 2.382.853.203 "Honey it's Handled", Ankerrui 12/101, 2000 Antwerpen, e-mail info@honeyitshandled.com and web www.honeyitshandled.com since 2 August 2026, NACE 82.300 and 82.990 (https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1032568265 read 2026-10-26 ~09.45 UTC, name searches Laeven and honey handled, control Colruyt 200+). lemlist jobTitle Oprichter, tagline "Oprichter van Honey It's Handled | Wedding & Event Agency Freelance | Event & Project Manager", companyName Honey It's Handled, companyDomain honeyitshandled.com, Antwerp. ctc_z9AByAoDiQAssohkn, leadId lea_NLHa3AjjwFkwSWrbw, campaign W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-25. Thread 0 items, control 6
@@ -58,13 +59,12 @@ worth: €3,000+, a wedding story chapter on the Honey site, a couple's year wit
 still there: founder and owner, KBO enterprise 1032.568.265 "Laeven, Elise", "Oprichter van een geregistreerde entiteit-natuurlijk persoon" since 1 Jan 2026, trade name Honey it's Handled, web www.honeyitshandled.com since 2 Aug 2026, read 2026-10-26 ~09.45 UTC, and "I'm Elise, founder, planner and the person behind Honey it's Handled" on her home page, read 2026-10-26 | https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=1032568265
 budget: a paying client already, Cinco Cero, a 125 guest 50th on 28 Aug 2026 ("A special thank you to Jan for trusting HONEY IT'S HANDLED"), plus a paid Wix plan on her own domain and VAT registration since 1 Jan 2026, thin for a one person firm | https://www.instagram.com/honeyitshandled/
 variant: B
-understood: Honey it's Handled plans weddings and private events in Belgium, their own words in the home's meta description "Wedding planner & event planner in Belgium for personal weddings and unforgettable events" and the home's two sections "01 Weddings" and "02 Private Events", read in Chromium 2026-10-26 ~10.40 UTC | https://www.honeyitshandled.com/
 sweep website: crawled twice, all five pages rendered on desktop and phone, the only event told is Cinco Cero, View Portfolio opens /private-events, no wedding story, CHOSEN, https://www.honeyitshandled.com/weddings
 sweep gdpr: tools/eu-view.py from Stockholm, 7 first party cookies, 0 third party, 151 requests to 6 Wix and Sentry hosts, no privacy link on the form per site-audit.js with its control, checked, never the angle (RULES 0E)
 sweep apps: one enquiry form to one person, an AI enquiry workflow is premature at a handful of enquiries, so no tool, the story ends in that same form, per the crawl of /contact
 sweep social: tools/social-audit.js, Instagram https://www.instagram.com/honeyitshandled/ 137 followers, 6 posts, newest 2026-09-15, LinkedIn https://www.linkedin.com/company/honey-its-handled/ 154 followers, quiet but a separate thread from the site story
 sweep squad: a one person wedding planner, not a builder of software, Build Squad doesn't apply, per KBO (NACE 82.300 and 82.990) and the site's own services
-thread: problem your website invites couples to be one of your first 'I do', yet the only event it tells the story of is Cinco Cero, a 50th birthday | cost couples marrying in 2027 usually want to see a wedding planned your way first, so many probably book a planner who can show them one | offer a wedding story on your site, a couple's year with you from first call to final dance, told through Cinco Cero and your CityCubes years, ending in the launch offer | link wedding, story, Cinco
+thread: problem your website invites couples to be one of your first 'I do', yet the only event it tells the story of is Cinco Cero, a 50th birthday | cost couples marrying in 2027 usually want to see a wedding planned your way first, so many probably book a planner who can show them one | offer a wedding story on your site, a couple's year with you from first call to final dance, told through Cinco Cero and your CityCubes years | link wedding, story, Cinco
 lead read: Elise reads that her site asks for its first couples while the only event it tells is the Cinco Cero 50th, so 2027 couples probably pick a planner who shows them a wedding, and gets offered a wedding story on her site built from Cinco Cero and her CityCubes years, one thread
 claims:
 your website invites couples to be one of your first 'I do', https://www.honeyitshandled.com/weddings "WILL YOU BE ONE OF OUR FIRST 'I DO'? We're looking for a few special couples to become part of the very first Honey it's Handled weddings", and the home strip "BE ONE OF OUR FIRST COUPLES" on https://www.honeyitshandled.com/
@@ -80,11 +80,11 @@ recheck: 2026-10-26 09.54 UTC, thread 0 items with control 6, /weddings 200 with
 
 SKETCHB
 ```
-Hi Elise, thanks for connecting. Honey it's Handled plans weddings and private events in Belgium.
+Hi Elise, Honey it's Handled looks cool.
 
-However, your website invites couples to be one of your first 'I do', yet the only event it tells the story of is Cinco Cero, a 50th birthday. Couples usually want to see a wedding planned your way first, so many probably pick a planner who can show one.
+However, your website invites couples to be one of your first 'I do', yet the only event it tells the story of is Cinco Cero, a 50th birthday. Couples marrying in 2027 usually want to see a wedding planned your way first, so many probably book a planner who can show them one.
 
-I'd suggest a wedding story, a couple's year with you from first call to final dance, told through Cinco Cero and your CityCubes years.
+I'd suggest a wedding story on your site, a couple's year with you from first call to final dance, told through Cinco Cero and your CityCubes years.
 
 Shall I send you a sketch?
 ```
