@@ -1,0 +1,19 @@
+{
+ "id": "42a973_b81dcffa835148faa694db932822a92f~mv2.jpg",
+ "url": "https://static.wixstatic.com/media/42a973_b81dcffa835148faa694db932822a92f~mv2.jpg",
+ "page": "/about",
+ "altThere": "Honey it's Handled - Elise Laeven",
+ "sha256": "c9cc77a53fbe6a58cec8fc73837743c66f31eadd36178e3f50878466e94bfa65",
+ "crop": "cut out with rembg birefnet-general, white sticker edge 13 px",
+ "edit": "Apple mark on the laptop lid painted out (9711 pixels, OpenCV Telea inpaint from the lid round it)",
+ "sizes": [
+  [
+   385,
+   560
+  ],
+  [
+   688,
+   1000
+  ]
+ ]
+}

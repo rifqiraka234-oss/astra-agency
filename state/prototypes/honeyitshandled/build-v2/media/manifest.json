@@ -101,6 +101,10 @@
    [
     1100,
     1650
+   ],
+   [
+    1365,
+    2048
    ]
   ]
  },
@@ -172,15 +176,15 @@
   "page": "/about",
   "altThere": "Honey it's Handled - Elise Laeven",
   "sha256": "c9cc77a53fbe6a58cec8fc73837743c66f31eadd36178e3f50878466e94bfa65",
-  "crop": "cut out with rembg isnet-general-use, white sticker edge 13 px",
+  "crop": "cut out with rembg birefnet-general, white sticker edge 13 px",
   "edit": "Apple mark on the laptop lid painted out (9711 pixels, OpenCV Telea inpaint from the lid round it)",
   "sizes": [
    [
-    384,
+    385,
     560
    ],
    [
-    685,
+    688,
     1000
    ]
   ]
@@ -191,15 +195,15 @@
   "page": "/contact",
   "altThere": "Honey it's Handled_Elise Laeven",
   "sha256": "eacfcc7c283fe703bae72780fe107c443bd57688deb013abe921b7f4344a1394",
-  "crop": "cut out with rembg isnet-general-use, white sticker edge 13 px",
+  "crop": "cut out with rembg birefnet-general, white sticker edge 13 px",
   "edit": null,
   "sizes": [
    [
-    450,
+    451,
     560
    ],
    [
-    803,
+    805,
     1000
    ]
   ]
@@ -210,15 +214,15 @@
   "page": "/",
   "altThere": "Honey it's Handled_Elise Laeven",
   "sha256": "2bb85c85d2562796d7caa917c42c2d10aa332be90fe78fded8ee09506c5d0ff0",
-  "crop": "cut out with rembg isnet-general-use, white sticker edge 13 px",
+  "crop": "cut out with rembg birefnet-general, white sticker edge 13 px",
   "edit": null,
   "sizes": [
    [
-    429,
+    433,
     560
    ],
    [
-    766,
+    773,
     1000
    ]
   ]
@@ -229,15 +233,15 @@
   "page": "/about",
   "altThere": "Honey it's Handled - Elise Laeven",
   "sha256": "82ead1d36a4fc7653c205c8d3917b691fffdf45455958d18efb023a8a36a443f",
-  "crop": "cut out with rembg isnet-general-use, white sticker edge 13 px",
+  "crop": "cut out with rembg birefnet-general, white sticker edge 13 px",
   "edit": null,
   "sizes": [
    [
-    306,
+    298,
     560
    ],
    [
-    546,
+    533,
     1000
    ]
   ]

@@ -1,0 +1,19 @@
+{
+ "id": "42a973_bcd60d05f5474a8f9560b88f7530b55a~mv2.jpg",
+ "url": "https://static.wixstatic.com/media/42a973_bcd60d05f5474a8f9560b88f7530b55a~mv2.jpg",
+ "page": "/about",
+ "altThere": "Honey it's Handled - Elise Laeven",
+ "sha256": "82ead1d36a4fc7653c205c8d3917b691fffdf45455958d18efb023a8a36a443f",
+ "crop": "cut out with rembg birefnet-general, white sticker edge 13 px",
+ "edit": null,
+ "sizes": [
+  [
+   298,
+   560
+  ],
+  [
+   533,
+   1000
+  ]
+ ]
+}

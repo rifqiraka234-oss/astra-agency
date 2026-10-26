@@ -106,29 +106,16 @@ def main():
             c = cyanotype(im); e2 = dict(e, note=e['note'] + ', our cyanotype of her photo in her blue (the details layer)')
             save_photo(key + '-cy', c, widths, e2); man[key + '-cy'] = e2
 
-    # cut outs with her sticker edge
-    from rembg import remove, new_session
-    sess = new_session('birefnet-general')
+    # cut outs with her sticker edge. BiRefNet needs several GB, and four in one process got the whole prep killed
+    # (exit 137) after the first one while the manifest was never written, so each cut out runs in its own process and
+    # leaves a sidecar the manifest is built from. HIH_RECUT=1 makes them again.
+    import subprocess, sys
     for key, i, page, alt, paint in CUTS:
-        p, fname = src(i)
-        arr = np.asarray(Image.open(p).convert('RGB')).copy()
-        edit = None
-        if paint:
-            arr, n = paint_out_mark(arr); edit = f'Apple mark on the laptop lid painted out ({n} pixels, OpenCV Telea inpaint from the lid round it)'
-        im = Image.fromarray(arr); im.thumbnail((1500, 1500), Image.LANCZOS)
-        cut = remove(im, session=sess)
-        bb = cut.split()[-1].point(lambda v: 255 if v > 40 else 0).getbbox()
-        pad = 40
-        cut = cut.crop((max(0, bb[0] - pad), max(0, bb[1] - pad), min(cut.size[0], bb[2] + pad), min(cut.size[1], bb[3] + pad)))
-        st = sticker(cut, 13)
-        sizes = []
-        for h in (560, 1000):
-            w = round(st.size[0] * h / st.size[1]); r = st.resize((w, h), Image.LANCZOS)
-            r.save(os.path.join(OUT, f'{key}-{h}.webp'), quality=82, method=6)
-            r.save(os.path.join(OUT, f'{key}-{h}.png'), optimize=True)
-            sizes.append([w, h])
-        man[key] = {'id': fname, 'url': 'https://static.wixstatic.com/media/' + fname, 'page': page, 'altThere': alt,
-                    'sha256': sha(p), 'crop': 'cut out with rembg birefnet-general, white sticker edge 13 px', 'edit': edit, 'sizes': sizes}
+        side = os.path.join(OUT, key + '.cut.json')
+        if os.environ.get('HIH_RECUT') or not os.path.isfile(side):
+            r = subprocess.run([sys.executable, os.path.abspath(__file__), 'cut', key])
+            assert r.returncode == 0 and os.path.isfile(side), f'cut out {key} failed, exit {r.returncode}'
+        man[key] = json.load(open(side))
 
     # her envelope stickers (PNG artwork on /weddings, / and /contact)
     for key, i, page, alt in [('env-card', '3f8b9038', '/ and /weddings', 'HIH-ENVELOPPE-2'), ('env-open', '79da123c', '/about and /contact', "Honey it's Handled_Enveloppe")]:
@@ -173,5 +160,35 @@ def main():
     json.dump(man, open(os.path.join(OUT, 'manifest.json'), 'w'), indent=1)
     print(len(man), 'entries')
 
+def cut_one(key):
+    """One cut out, in its own process. Writes <key>-560 and -1000 as webp (and png, kept for the record) and a sidecar."""
+    from rembg import remove, new_session
+    key_, i, page, alt, paint = [c for c in CUTS if c[0] == key][0]
+    p, fname = src(i)
+    arr = np.asarray(Image.open(p).convert('RGB')).copy()
+    edit = None
+    if paint:
+        arr, n = paint_out_mark(arr); edit = f'Apple mark on the laptop lid painted out ({n} pixels, OpenCV Telea inpaint from the lid round it)'
+    im = Image.fromarray(arr); im.thumbnail((1400, 1400), Image.LANCZOS)
+    cut = remove(im, session=new_session('birefnet-general'))
+    bb = cut.split()[-1].point(lambda v: 255 if v > 40 else 0).getbbox()
+    pad = 40
+    cut = cut.crop((max(0, bb[0] - pad), max(0, bb[1] - pad), min(cut.size[0], bb[2] + pad), min(cut.size[1], bb[3] + pad)))
+    st = sticker(cut, 13)
+    sizes = []
+    for h in (560, 1000):
+        w = round(st.size[0] * h / st.size[1]); r = st.resize((w, h), Image.LANCZOS)
+        r.save(os.path.join(OUT, f'{key}-{h}.webp'), quality=82, method=6)
+        r.save(os.path.join(OUT, f'{key}-{h}.png'), optimize=True)
+        sizes.append([w, h])
+    json.dump({'id': fname, 'url': 'https://static.wixstatic.com/media/' + fname, 'page': page, 'altThere': alt, 'sha256': sha(p),
+               'crop': 'cut out with rembg birefnet-general, white sticker edge 13 px', 'edit': edit, 'sizes': sizes},
+              open(os.path.join(OUT, key + '.cut.json'), 'w'), indent=1)
+    print('cut', key, sizes)
+
 if __name__ == '__main__':
-    main()
+    import sys
+    if len(sys.argv) > 2 and sys.argv[1] == 'cut':
+        cut_one(sys.argv[2])
+    else:
+        main()
