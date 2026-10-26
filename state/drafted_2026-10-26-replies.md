@@ -2,6 +2,11 @@
 
 ### Elise Laeven, Honey It's Handled, ctc_z9AByAoDiQAssohkn
 
+> ON HOLD, don't send. Raka asked for the prototype at ~11.05 UTC, "leeetss draft for elise!!!!! come onnnn, artsy, push
+> your art limits with the animations, graphs, pictures, features gradients and all". Being built in
+> state/prototypes/honeyitshandled. Once it's live this reply is replaced by a delivery draft that carries the advice and
+> the link, and this one gets archived.
+
 Thread pulled 2026-10-26 ~10.58 UTC with tools/lemlist.py, 2 items, all pages, control 6. Our SKETCHB opener 10.43 UTC
 (act_x4wu4gv9FWxqY8dSH, A/B test arm B), her reply 10.45 UTC (act_mGkeJneLZemxWYsry), "Hi Raka, thanks for your message :)
 About the website, it's still a work in progress. I'm actually working on it as we speak. You can always give me advice if
