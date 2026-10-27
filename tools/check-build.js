@@ -279,7 +279,7 @@ async function measure(browser, base, page, view, plant) {
   if (plant === 'hero') await p.waitForTimeout(300);
   const r = { view: tag, errors: errs };
   r.hero = await ev(() => window.__cb.hero());
-  if (SHOTS && !plant) { fs.mkdirSync(SHOTS, { recursive: true }); await p.screenshot({ path: path.join(SHOTS, `${page.replace(/\W+/g, '_') || 'home'}-${tag}-first-screen.png`) }); }
+  if (SHOTS && !plant) { fs.mkdirSync(SHOTS, { recursive: true }); await p.screenshot({ path: path.join(SHOTS, `${page.replace(/\W+/g, '_').replace(/^_|_$/g, '') || 'home'}-${tag}-first-screen.png`) }); }
   // the walk, half a screen at a time, with the dimmed text noted as it passes
   const vars0 = await ev(() => window.__cb.scriptVars());
   const H = await ev(() => document.documentElement.scrollHeight - innerHeight);
@@ -300,7 +300,7 @@ async function measure(browser, base, page, view, plant) {
         .map(e => ({ top: e.getBoundingClientRect().top + scrollY, h: e.offsetHeight })); });
     let i = 0; const tagp = page.replace(/\W+/g, '_').replace(/^_|_$/g, '') || 'home';
     for (const b of tops) for (const y of (b.h > 1.5 * h ? [b.top, b.top + (b.h - h) / 2, b.top + b.h - h] : [b.top])) {
-      await ev(v => scrollTo(0, v), y); await p.waitForTimeout(600);
+      await ev(v => scrollTo(0, v), y); await p.waitForTimeout(1600); // reveals settle, never shoot a fade halfway
       await p.screenshot({ path: path.join(SECTIONS, `${tagp}-${tag}-${String(++i).padStart(2, '0')}.png`) });
     }
     r.sectionShots = i;

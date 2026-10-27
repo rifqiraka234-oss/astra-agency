@@ -92,7 +92,7 @@ new; each is written in RULES section 5 or build-and-deck.md. What changed was d
 7. **Rules landed mid build from other sessions.** Saavedra v1 shipped pill buttons and glows because the no Claude
    look rule arrived during the build. BeBetter dimmed text the day "never dim text" was written.
 
-## 5. The fix, proposed 27 Oct, waiting on Raka
+## 5. The fix. Raka 27 Oct, "go go do it. And like before its final lets put it to html or screenshot first"
 
 1. **One build card instead of 5,500 lines.** One page that holds all eight things from section 3 and the seven notes
    from section 2 as yes or no questions, filled in before any code. The long docs stay as the how.
@@ -109,3 +109,16 @@ new; each is written in RULES section 5 or build-and-deck.md. What changed was d
 
 The limit, said plainly. Items 1, 3, 4 and 5 make the first build better and cheaper. Item 2 is the one that actually
 stops a second run, because taste is what I'm worst at judging in my own work.
+
+## 6. What was done, 27 Oct
+
+1. `docs/build-card.md`, one page, the order of work with Raka's two looks and every note as a question.
+2. `tools/check-build.js`, run on 20 versions he judged, every plant caught on all 20. It fails 12 of the 13 he sent
+   back. The miss is BWILD v1, a clean build that still wasn't good enough, which is why the first look stays his.
+   Full table and hiccups in the last section of docs/build-and-deck.md.
+3. The order is in CLAUDE.md (a banner, the build procedure and the ship it checklist), RULES section 5 (first
+   paragraph), the top of the build spec and of build-and-deck.md, and `tools/preflight.py`, which every session runs.
+4. Hertling v3 stays the reference for the idea, the logo hero and the plan, not its italic halves and pill buttons,
+   which fail today.
+5. Found on the way. BeBetter v2.1 and Saavedra v3, both delivered, have stretches on a phone with no way to the
+   action. Not changed, it's Raka's call whether to redeploy.
