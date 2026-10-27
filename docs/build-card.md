@@ -56,7 +56,8 @@ back to research, never to guess.
 13. Every photo and film listed, whose it is, licence read on its own page, third party marks zoomed and checked.
 14. Not one of the RULES section 5 tells, and check-build passes. No italic halves, kickers, pill buttons with
     arrows, soft shadow cards, chips, marquees, count ups, glows, one texture under every section, the same two
-    column grid again and again, their photos shrunk into boxes, motion that's only fades. Nine sections at most.
+    column grid again and again, their photos shrunk into boxes, motion that's only fades. Ten sections at most on a
+    home page, eleven is the Hooft & Petiet v1 tell.
 
 ## D. The test before Raka sees either look
 

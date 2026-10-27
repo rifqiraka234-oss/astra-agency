@@ -46,7 +46,7 @@ const LIMITS = {
   chips: 2,       // pill shaped tags and chips
   arrows: 0,      // arrow glyphs in a button or link
   cards: 2,       // rounded boxes with a soft shadow
-  sections: 9,    // top level blocks on a home page
+  sections: 10,   // top level blocks on a home page. RULES section 5 names eleven as the Hooft & Petiet v1 tell
   turns: 4,       // light and dark chapters taking turns
   hero: 0.35,     // share of the first screen that is picture, film, canvas or their mark, at each size
   gaps: 0,        // half screens with no way to the action
