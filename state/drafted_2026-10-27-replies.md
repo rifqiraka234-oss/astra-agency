@@ -20,3 +20,19 @@ REPLY
 ```
 Thanks Neil! I came across you while looking for other founders of small businesses, since I'm one too. I run Astra agency, we build websites and apps for brands like Unilever, AXA, Pertamina, and right now I'm focused on growing it. Your profile mentions events as well as the podcast, what are they?
 ```
+
+### Milo Kamil, Warung Kopi, ctc_xnP5SnZ9gqse75J4Z
+
+> NOT SENT. Raka's own chat, he wrote the 26 Oct messages himself. Thread pulled 27 Oct ~19.58 UTC with tools/lemlist.py,
+> 11 items, all pages, control 6. Milo 19 Oct, looking for an investor and a location for Warung Kopi, Indonesian coffee
+> and food only, "Ideally in Zürich. But open for another city or country". Raka 26 Oct 10.20 to 10.27, a system that finds
+> qualified investors, writes the opening messages and does the outreach on LinkedIn and email, "Usually starts from
+> 150EUR", and "maybe i can send a prototype or a sample to get the inspration juice flowing?", which Milo never answered.
+> Milo 27 Oct 07.32, "Ok. Thank you. I'll think about it." Raka asked 27 Oct ~19.55 UTC how to keep the conversations going.
+> So the reply takes Raka's own unanswered offer and makes it concrete. The ten investors and the messages are a promise,
+> so only send it if Raka will build the sample. No price, he already gave one.
+
+REPLY
+```
+Sure Milo, take your time! If it helps you decide, I can send you a small sample first, ten investors who back coffee and food concepts around Zürich, each with the first message I'd send them. Then you can see what the system would actually do for Warung Kopi.
+```
