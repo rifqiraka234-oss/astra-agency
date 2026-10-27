@@ -1,182 +1,568 @@
 {
-  "_note": "Every figure on the plan comes from this file. How each was checked is in ../../research/plan-facts.md. Read 26 Oct 2026.",
-  "meta": {
-    "title": "Honey It's Handled, the plan",
-    "desc": "The plan beside the new Honey It's Handled site. The couples marrying in 2027 and 2028, when they choose a planner, who else they see, and the first 90 days. Prepared by Astra, October 2026.",
-    "today": "26 Oct 2026",
-    "proto_planned": "https://astra-honeyitshandled-prototype.netlify.app/"
-  },
-  "cover": {
-    "by": "Prepared by Astra for Elise Laeven, October 2026",
-    "h": "The couples marrying in 2027 are choosing their planner now.",
-    "lede": "You need a handful of them. The province of Antwerp registered 7,919 weddings in 2024. This plan is what those couples compare before they write to anyone, when they decide, the site we've sketched so they can see a wedding planned your way, and what we'd do in the first 90 days."
-  },
-  "today": {
-    "h": "Your brand is ready. A couple can't see a wedding on the site yet.",
-    "lede": "We read every page of honeyitshandled.com this morning while you were editing it. Since today the Events page tells two nights, Cinco Cero and the Pro League Awards '26, and Jan Geysen calls working with you \"amazing, from the initial meeting to the end of the party\". Weddings have their own page with your three ways of working and the launch offer for 2027 and 2028. What a couple planning a wedding can't find yet is one wedding, told from the first call to the final dance.",
-    "quote": "Will you be one of our first 'I do'?",
-    "quote_src": "Your Weddings page, 26 Oct 2026",
-    "facts": [
-      ["Registered", "1 January 2026, as Honey It's Handled in Antwerp"],
-      ["Online", "honeyitshandled.com, English and Dutch, on your KBO record since 2 August"],
-      ["Nights told", "Cinco Cero, a 50th birthday for 125 guests. The Pro League Awards '26, 570+ guests at the Handelsbeurs"],
-      ["Weddings told", "None yet. The launch offer is there to change that"],
-      ["Instagram", "137 followers and 6 posts, the newest on 15 September"],
-      ["LinkedIn", "154 followers on the company page"],
-      ["The way in", "One form, which asks how they found you, Instagram, Google, Event, Referral or Other"]
-    ],
-    "shots": [
-      {"img": "t-home", "cap": "Home, your wordmark on your red"},
-      {"img": "t-offer", "cap": "Weddings, the launch offer"},
-      {"img": "t-events", "cap": "Events, two nights since this morning"},
-      {"img": "t-jan", "cap": "Cinco Cero, Jan Geysen's words"}
-    ],
-    "src": "honeyitshandled.com, all nine pages in its sitemap, read and rendered at 1440 on 26 Oct 2026 between 11.58 and 12.01 UTC, and read again at 12.52 after the event pages moved to new addresses with the same words. Instagram through its public embed and LinkedIn's public company page the same day. KBO, enterprise 1032.568.265."
-  },
-  "market": {
-    "h": "The province of Antwerp registered 7,919 weddings in 2024, the most in ten years.",
-    "lede": "Flanders registered 27,147, up 6.7% on 2023, and the city of Antwerp 2,496. You don't need a big share of that. A planner who takes ten couples a year, which is Flowerytales' own ceiling, needs one wedding in 792 in the province. Change the place and the number of couples and watch your share.",
-    "scopes": [
-      {"key": "city", "label": "City of Antwerp", "in": "in the city of Antwerp", "n": 2496},
-      {"key": "prov", "label": "Province of Antwerp", "in": "in the province of Antwerp", "n": 7919},
-      {"key": "fl", "label": "Flanders", "in": "in Flanders", "n": 27147}
-    ],
-    "scope_def": "prov",
-    "couples": {"min": 1, "max": 20, "step": 1, "def": 10},
-    "years": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-    "prov_series": [7068, 7122, 7310, 7352, 7158, 5709, 6287, 7786, 7566, 7919],
-    "city_series": [2134, 2110, 2197, 2162, 2183, 1839, 2046, 2307, 2277, 2496],
-    "belgium": 48589,
-    "belgium_prev": 46564,
-    "flanders_prev": 25435,
-    "abroad": 4390,
-    "abroad_line": "Another 4,390 marriages of people living in Belgium were registered abroad in 2024, 9% of Belgium's 48,589. Statbel counts weddings in embassies and consulates in Belgium in that line too. Destination weddings are on your form already.",
-    "src": "Statbel, Marriages in 2024, the workbook and the web page (news of 12 March 2026), read 26 Oct 2026. Counted by the place of marriage, every marriage with at least one partner living in Belgium. Statistiek Vlaanderen gives 27,100 for Flanders (16 July 2026). Flowerytales' ceiling from flowerytales.be."
-  },
-  "calendar": {
-    "h": "Nine in ten 2027 weddings are already inside the year Wedding Dreamworx asks for.",
-    "lede": "Wedding Dreamworx asks couples for at least a year and would rather have eighteen months. Blossoms Together's planning timeline starts eighteen months out. In House of Weddings' 2025 survey, couples planning now expect to be engaged for 17.7 months, and two in three start planning the moment they're engaged. Pick the year and how far ahead couples book, and the months that have reached that point by today turn red.",
-    "months": [810, 1218, 1249, 2091, 3416, 3962, 2859, 4056, 3213, 1932, 1082, 1259],
-    "years": [2027, 2028],
-    "year_def": 2027,
-    "lead": {"min": 6, "max": 24, "step": 1, "def": 12},
-    "marks": [
-      {"m": 12, "t": "Wedding Dreamworx, at least a year"},
-      {"m": 18, "t": "Wedding Dreamworx's wish, and Blossoms Together's timeline"},
-      {"m": 24, "t": "Two years, how far ahead Art of Events says it sells many of its weddings"}
-    ],
-    "now": {"y": 2026, "m": 10},
-    "src": "Months, Statbel 2024 for the Flemish Region (27,147 weddings). Lead times, weddingdreamworx.be FAQ, Made in on Blossoms Together (3 July 2026), and House of Weddings' Nationale Huwelijksenquête 2025 (article of 5 June 2026, over 1,000 respondents, more than 80% women, self selected). All read 26 Oct 2026. A wedding's booking month is its month minus the months ahead. It counts as reached when that's October 2026 or earlier."
-  },
-  "rivals": {
-    "h": "Three of the four tell weddings by name. The fourth started eleven months before you.",
-    "lede": "We opened four Antwerp planners a couple would compare you with, three of them in Wilrijk. Wedding Dreamworx tells nine weddings and quotes seven couples. Flowerytales tells four and publishes a price. Salon Weddings tells nineteen, and last November it announced it's stopping. Its post names a 2026 that stayed \"té stil\" and too many weekends away from home. Bliss Weddings, registered in February 2025, has one couple's words and a stand at Trouw & Trends in February.",
-    "views": [
-      {"key": "told", "label": "Weddings told on the site"},
-      {"key": "ig", "label": "Instagram followers"}
-    ],
-    "rows": [
-      {"name": "Wedding Dreamworx", "place": "Wilrijk", "count": "Planner since 2015", "told": 9, "words": "7 couples on the home page", "price": "About 15% of the wedding budget, most clients spend €50,000 to €150,000", "ig": null, "season": "Takes a limited number of couples a year"},
-      {"name": "Salon Weddings", "place": "Antwerp", "count": "95 couples since 2017", "told": 19, "words": "1 couple on the home page", "price": "None shown", "ig": 9909, "season": "Stopping, three weddings left (Instagram, 24 Nov 2025)"},
-      {"name": "Flowerytales", "place": "Wilrijk", "count": "More than 50 weddings", "told": 4, "words": "4 couples on the home page", "price": "From €5,950 excl. VAT for planning and styling", "ig": 3831, "season": "At most 10 weddings a year"},
-      {"name": "Bliss Weddings", "place": "Wilrijk", "count": "Registered February 2025", "told": 0, "words": "1 couple, on its own page", "price": "None shown", "ig": 163, "season": "At Trouw & Trends Brasschaat, 21 Feb 2027"},
-      {"name": "Honey It's Handled", "place": "Antwerp", "count": "Registered January 2026", "told": 0, "words": "1, Jan Geysen, for a 50th", "price": "None shown", "ig": 137, "season": "Launch offer for 2027 and 2028", "us": true}
-    ],
-    "after": "What three of them have is a wedding a couple can picture. Yours arrive with the first couples. Until then, the site has to let a couple picture their own.",
-    "src": "Each site opened 26 Oct 2026 between 12.07 and 12.23 UTC. Weddings told counts each planner's own wedding story pages. Instagram through the public embed the same day. Wedding Dreamworx's Instagram didn't load for us, so it has no bar. Registration dates from KBO."
-  },
-  "money": {
-    "h": "Couples planning now expect to spend about €31,750. A planner in Flanders starts at €350 and runs to five figures.",
-    "lede": "That's the average from House of Weddings' 2025 survey for engaged couples, up from €21,339 in 2022. Wedding Dreamworx tells couples to count on about 15% of the budget for planning. Flowerytales starts at €5,950 excl. VAT for planning and styling. Bring us a dream starts at €350 on mariages.net. You don't publish a price, and this plan doesn't set one. Move the budget and see what Wedding Dreamworx's rule of thumb makes of it.",
-    "budget": {"min": 10000, "max": 100000, "step": 250, "def": 31750},
-    "share": 0.15,
-    "axis_max": 15000,
-    "marks": [
-      {"v": 350, "t": "Bring us a dream, from", "note": "mariages.net"},
-      {"v": 3150, "t": "Flowerytales, styling, from", "note": "excl. VAT"},
-      {"v": 5950, "t": "Flowerytales, planning and styling, from", "note": "excl. VAT"},
-      {"v": 10000, "t": "Bring us a dream, up to", "note": "mariages.net"}
-    ],
-    "survey": [
-      {"t": "Married couples, the survey's average", "v": "€25,500 to €27,000"},
-      {"t": "Engaged couples, the survey's average", "v": "€31,750"},
-      {"t": "The same survey in 2022", "v": "€21,339"}
-    ],
-    "after": "Your launch offer trades part of that fee for the right to capture and share the wedding. The plan builds on that trade, because each of those weddings is a story the next couple reads.",
-    "src": "House of Weddings, Nationale Huwelijksenquête 2025 (articles of 5 June and 24 September 2026, self selected sample). weddingdreamworx.be/faq. flowerytales.be/trouwen-belgie, prices excl. VAT, rental and transport. mariages.net listing for Bring us a dream, Overijse. All read 26 Oct 2026."
-  },
-  "why": {
-    "h": "The next four months are when 2027 and 2028 couples go looking.",
-    "lede": "After May, December and September are the most popular months to propose, and two in three couples start planning right away. The wedding fairs around Antwerp run from next Sunday to the end of February.",
-    "events": [
-      {"d": "1 Nov 2026", "t": "Marry Me Mechelen", "p": "The fourth edition, at Salons Van Dijck from 11 to 17, free, with local suppliers only."},
-      {"d": "16 Nov 2026", "t": "Trouw & Trends tickets open", "p": "Free tickets for Brasschaat and Mechelen open that Monday."},
-      {"d": "December", "t": "Proposals", "p": "With September, the most popular month to propose after May in House of Weddings' survey. Two in three couples start planning right after."},
-      {"d": "31 Jan 2027", "t": "Het Bruidsparadijs, Merksem", "p": "A trouwbeurs from 10 to 17 whose invitation opens with \"Ga jij trouwen in 2027, 2028 of zelfs nog later?\""},
-      {"d": "21 Feb 2027", "t": "Trouw & Trends Brasschaat", "p": "Kasteel van Brasschaat, 11 to 17. Bliss Weddings will be there."},
-      {"d": "28 Feb 2027", "t": "Trouw & Trends Mechelen", "p": "Van der Valk Hotel, 11 to 17."}
-    ],
-    "behind": [
-      {"d": "24 Nov 2025", "p": "Salon Weddings, 95 couples since 2017, says it's stopping. A planner with 9,909 followers on Instagram is leaving the market."},
-      {"d": "12 Mar 2026", "p": "Statbel, weddings up 4.3% in Belgium and 6.7% in Flanders in 2024."},
-      {"d": "3 Jul 2026", "p": "Blossoms Together launches a planning tool for couples who'd rather not hire a planner. A site that shows the months a planner takes off their hands is the answer to it."}
-    ],
-    "src": "radioreflex.be (12 Oct 2026) and marrymemechelen.be. trendytrouwen.be fair pages. bruidsparadijs.be. House of Weddings' survey (5 June 2026). Salon Weddings on Instagram. Made in (3 July 2026). Statbel (12 March 2026). All read 26 Oct 2026."
-  },
-  "built": {
-    "h": "The site we sketched lets a couple see their own year with you.",
-    "lede": "It opens on one question, \"When's your I do?\" The couple gives their date and the page counts back from it in your three colours, something off white, something blue, something red, month by month to the final dance, in your words and your pictures. One wedding is built down the page, the date, the place, the guests and the kind of help, and it arrives at the end as a letter in your red envelope, already filled in.",
-    "placeholder": "The screens of the new site arrive here once it's live. Until then this chapter is a placeholder with no screenshots in it.",
-    "shots": [],
-    "phones": []
-  },
-  "first": {
-    "h": "Six ways the first couples find you, all ending on the same letter.",
-    "lede": "Your form already asks how people found you. These are the answers it offers, plus the launch offer itself, which is the one channel nobody else in Antwerp has this year.",
-    "channels": [
-      {"h": "Instagram", "fact": "56% of the couples in House of Weddings' survey look for ideas there, and it's the first answer on your form.", "do": "Post the couple's year one month at a time, straight from the new site, and keep telling nights the way you told Cinco Cero, a sign, a setting, a night.", "n": "Visits from Instagram that reach the letter"},
-      {"h": "Pinterest", "fact": "65.3% of the same couples use it, more than any other source. Your home page already speaks it, \"a Pinterest board with 847 pins\".", "do": "Make a board for every page of the new site and every event, each pin linking back to the date question.", "n": "Saves and clicks to the site"},
-      {"h": "Google", "fact": "The second answer on your form.", "do": "Give weddings in Antwerp and destination weddings a page each, and put Jan's words where couples check before they write.", "n": "Searches that land on a wedding page"},
-      {"h": "Fairs and House of Weddings", "fact": "House of Weddings, used by 65% of the couples it surveyed, lists only planners with its label. In exceptional cases it lets a newcomer in, when several label partners who've worked with her vouch for her. Good online reviews are a condition for everyone.", "do": "Walk Marry Me Mechelen this Sunday and Het Bruidsparadijs in January, decide on a stand for Trouw & Trends, and ask the suppliers you work with about the label.", "n": "Letters that answer Event"},
-      {"h": "Referrals", "fact": "125 guests saw Cinco Cero and 570+ the Pro League Awards. Bliss Weddings' only quote is from a couple who'd seen Lissa work at a family wedding.", "do": "Put a card in your red envelope for every guest list you handle, with the date question on it.", "n": "Letters that answer Referral"},
-      {"h": "The launch offer", "fact": "Your offer already trades a discount for the right to capture and share the celebration.", "do": "Tell each first couple's year on the site as it happens, with their yes in writing, so the couples of 2028 meet a wedding planned your way.", "n": "First couples signed for 2027 and 2028"}
-    ],
-    "photos": [
-      {"img": "c-sign", "alt": "The Cinco Cero sign on an easel, 28.08.26, in daylight"},
-      {"img": "c-hall", "alt": "A quiet corridor at the Cinco Cero venue before the guests arrive"},
-      {"img": "c-ball", "alt": "A mirror ball over the dance floor at Cinco Cero"},
-      {"img": "c-night", "alt": "The Cinco Cero sign lit at night with candles at its foot"}
-    ],
-    "photos_cap": "How you told Cinco Cero, a 50th birthday, from your Events page. The first couples' years get told the same way.",
-    "src": "House of Weddings, Nationale Huwelijksenquête 2025 (5 June 2026) and its Kwaliteitslabel page. Your form and pages, Bliss Weddings' testimonials page, fair pages as in chapter VI. All read 26 Oct 2026."
-  },
-  "roadmap": [
-    {"when": "Weeks 1 to 2", "h": "The site", "items": ["Your edits to the sketch, with your words and photos in", "Your Dutch beside your English", "The letter lands in your inbox with the date, guests and help in it", "A privacy page and a cookie notice"]},
-    {"when": "Weeks 2 to 4", "h": "Found", "items": ["A page for weddings in Antwerp and one for destination weddings", "Jan's words on the site and where couples check", "Pinterest boards from every page"]},
-    {"when": "Weeks 3 to 10", "h": "Seen", "items": ["The couple's year on Instagram, one month a post", "Marry Me Mechelen and Het Bruidsparadijs walked", "A card in the envelope for every guest list"]},
-    {"when": "Weeks 8 to 12", "h": "Signed", "items": ["First couples for 2027 and 2028, with the offer's terms in writing", "Each first couple's year starts on the site", "What worked, what didn't, and the next 90 days"]}
+ "_note": "Every figure on the plan comes from this file. How each was checked is in ../../research/plan-facts.md. Read 26 Oct 2026.",
+ "meta": {
+  "title": "Honey It's Handled, the plan",
+  "desc": "The plan beside the new Honey It's Handled site. The couples marrying in 2027 and 2028, when they choose a planner, who else they see, and the first 90 days. Prepared by Astra, October 2026.",
+  "today": "26 Oct 2026",
+  "proto_planned": "https://astra-honeyitshandled-prototype.netlify.app/"
+ },
+ "cover": {
+  "by": "Prepared by Astra for Elise Laeven, October 2026",
+  "h": "The couples marrying in 2027 are choosing their planner now.",
+  "lede": "You need a handful of them. The province of Antwerp registered 7,919 weddings in 2024. This plan is what those couples compare before they write to anyone, when they decide, the site we've sketched so they can see a wedding planned your way, and what we'd do in the first 90 days."
+ },
+ "today": {
+  "h": "Your brand is ready. A couple can't see a wedding on the site yet.",
+  "lede": "We read every page of honeyitshandled.com this morning while you were editing it. Since today the Events page tells two nights, Cinco Cero and the Pro League Awards '26, and Jan Geysen calls working with you \"amazing, from the initial meeting to the end of the party\". Weddings have their own page with your three ways of working and the launch offer for 2027 and 2028. What a couple planning a wedding can't find yet is one wedding, told from the first call to the final dance.",
+  "quote": "Will you be one of our first 'I do'?",
+  "quote_src": "Your Weddings page, 26 Oct 2026",
+  "facts": [
+   [
+    "Registered",
+    "1 January 2026, as Honey It's Handled in Antwerp"
+   ],
+   [
+    "Online",
+    "honeyitshandled.com, English and Dutch, on your KBO record since 2 August"
+   ],
+   [
+    "Nights told",
+    "Cinco Cero, a 50th birthday for 125 guests. The Pro League Awards '26, 570+ guests at the Handelsbeurs"
+   ],
+   [
+    "Weddings told",
+    "None yet. The launch offer is there to change that"
+   ],
+   [
+    "Instagram",
+    "137 followers and 6 posts, the newest on 15 September"
+   ],
+   [
+    "LinkedIn",
+    "154 followers on the company page"
+   ],
+   [
+    "The way in",
+    "One form, which asks how they found you, Instagram, Google, Event, Referral or Other"
+   ]
   ],
-  "kpis": [
-    {"h": "Letters a week, weddings and the rest", "where": "The site's form log"},
-    {"h": "Where each letter came from", "where": "Your form's own question"},
-    {"h": "First calls held", "where": "Your diary"},
-    {"h": "First couples signed, 2027 and 2028", "where": "Your contracts"},
-    {"h": "Visits from Instagram and Pinterest that reach the letter", "where": "Site analytics"}
+  "shots": [
+   {
+    "img": "t-home",
+    "cap": "Home, your wordmark on your red"
+   },
+   {
+    "img": "t-offer",
+    "cap": "Weddings, the launch offer"
+   },
+   {
+    "img": "t-events",
+    "cap": "Events, two nights since this morning"
+   },
+   {
+    "img": "t-jan",
+    "cap": "Cinco Cero, Jan Geysen's words"
+   }
   ],
-  "team": {
-    "lede": "Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.",
-    "brands": "The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.",
-    "disclosure": "Built by Amwisesa, Astra's development partner, often through the brand's own agency.",
-    "people": [
-      {"name": "Raka Mulya", "role": "Go to market architect and entrepreneur. Your contact at Astra.", "bio": "Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.", "li": "https://www.linkedin.com/in/raka-mulya-b92885196/"},
-      {"name": "Joshua van Zeelt", "role": "Founder of Astra Agency and JML Agency", "bio": "Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.", "li": "https://www.linkedin.com/in/joshua-van-zeelt/"}
-    ]
+  "src": "honeyitshandled.com, all nine pages in its sitemap, read and rendered at 1440 on 26 Oct 2026 between 11.58 and 12.01 UTC, and read again at 12.52 after the event pages moved to new addresses with the same words. Instagram through its public embed and LinkedIn's public company page the same day. KBO, enterprise 1032.568.265."
+ },
+ "market": {
+  "h": "The province of Antwerp registered 7,919 weddings in 2024, the most in ten years.",
+  "lede": "Flanders registered 27,147, up 6.7% on 2023, and the city of Antwerp 2,496. You don't need a big share of that. A planner who takes ten couples a year, which is Flowerytales' own ceiling, needs one wedding in 792 in the province. Change the place and the number of couples and watch your share.",
+  "scopes": [
+   {
+    "key": "city",
+    "label": "City of Antwerp",
+    "in": "in the city of Antwerp",
+    "n": 2496
+   },
+   {
+    "key": "prov",
+    "label": "Province of Antwerp",
+    "in": "in the province of Antwerp",
+    "n": 7919
+   },
+   {
+    "key": "fl",
+    "label": "Flanders",
+    "in": "in Flanders",
+    "n": 27147
+   }
+  ],
+  "scope_def": "prov",
+  "couples": {
+   "min": 1,
+   "max": 20,
+   "step": 1,
+   "def": 10
   },
-  "end": {
-    "h": "Next, a call.",
-    "lede": "We'll walk you through the site and this plan, hear how you want to work with your first couples, and then send you a clear scope, price and timeline.",
-    "cta": "Email Raka",
-    "mail": "mailto:rifqiraka234@gmail.com?subject=Honey%20It%27s%20Handled%20plan",
-    "foot": "Prepared by Astra for Honey It's Handled, October 2026. Screenshots of honeyitshandled.com taken 26 Oct 2026. Each figure names its source underneath."
+  "years": [
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024
+  ],
+  "prov_series": [
+   7068,
+   7122,
+   7310,
+   7352,
+   7158,
+   5709,
+   6287,
+   7786,
+   7566,
+   7919
+  ],
+  "city_series": [
+   2134,
+   2110,
+   2197,
+   2162,
+   2183,
+   1839,
+   2046,
+   2307,
+   2277,
+   2496
+  ],
+  "belgium": 48589,
+  "belgium_prev": 46564,
+  "flanders_prev": 25435,
+  "abroad": 4390,
+  "abroad_line": "Another 4,390 marriages of people living in Belgium were registered abroad in 2024, 9% of Belgium's 48,589. Statbel counts weddings in embassies and consulates in Belgium in that line too. Destination weddings are on your form already.",
+  "src": "Statbel, Marriages in 2024, the workbook and the web page (news of 12 March 2026), read 26 Oct 2026. Counted by the place of marriage, every marriage with at least one partner living in Belgium. Statistiek Vlaanderen gives 27,100 for Flanders (16 July 2026). Flowerytales' ceiling from flowerytales.be."
+ },
+ "calendar": {
+  "h": "Nine in ten 2027 weddings are already inside the year Wedding Dreamworx asks for.",
+  "lede": "Wedding Dreamworx asks couples for at least a year and would rather have eighteen months. Blossoms Together's planning timeline starts eighteen months out. In House of Weddings' 2025 survey, couples planning now expect to be engaged for 17.7 months, and two in three start planning the moment they're engaged. Pick the year and how far ahead couples book, and the months that have reached that point by today turn red.",
+  "months": [
+   810,
+   1218,
+   1249,
+   2091,
+   3416,
+   3962,
+   2859,
+   4056,
+   3213,
+   1932,
+   1082,
+   1259
+  ],
+  "years": [
+   2027,
+   2028
+  ],
+  "year_def": 2027,
+  "lead": {
+   "min": 6,
+   "max": 24,
+   "step": 1,
+   "def": 12
+  },
+  "marks": [
+   {
+    "m": 12,
+    "t": "Wedding Dreamworx, at least a year"
+   },
+   {
+    "m": 18,
+    "t": "Wedding Dreamworx's wish, and Blossoms Together's timeline"
+   },
+   {
+    "m": 24,
+    "t": "Two years, how far ahead Art of Events says it sells many of its weddings"
+   }
+  ],
+  "now": {
+   "y": 2026,
+   "m": 10
+  },
+  "src": "Months, Statbel 2024 for the Flemish Region (27,147 weddings). Lead times, weddingdreamworx.be FAQ, Made in on Blossoms Together (3 July 2026), and House of Weddings' Nationale Huwelijksenquête 2025 (article of 5 June 2026, over 1,000 respondents, more than 80% women, self selected). All read 26 Oct 2026. A wedding's booking month is its month minus the months ahead. It counts as reached when that's October 2026 or earlier."
+ },
+ "rivals": {
+  "h": "Three of the four tell weddings by name. The fourth started eleven months before you.",
+  "lede": "We opened four Antwerp planners a couple would compare you with, three of them in Wilrijk. Wedding Dreamworx tells nine weddings and quotes seven couples. Flowerytales tells four and publishes a price. Salon Weddings tells nineteen, and last November it announced it's stopping. Its post names a 2026 that stayed \"té stil\" and too many weekends away from home. Bliss Weddings, registered in February 2025, has one couple's words and a stand at Trouw & Trends in February.",
+  "views": [
+   {
+    "key": "told",
+    "label": "Weddings told on the site"
+   },
+   {
+    "key": "ig",
+    "label": "Instagram followers"
+   }
+  ],
+  "rows": [
+   {
+    "name": "Wedding Dreamworx",
+    "place": "Wilrijk",
+    "count": "Planner since 2015",
+    "told": 9,
+    "words": "7 couples on the home page",
+    "price": "About 15% of the wedding budget, most clients spend €50,000 to €150,000",
+    "ig": null,
+    "season": "Takes a limited number of couples a year"
+   },
+   {
+    "name": "Salon Weddings",
+    "place": "Antwerp",
+    "count": "95 couples since 2017",
+    "told": 19,
+    "words": "1 couple on the home page",
+    "price": "None shown",
+    "ig": 9909,
+    "season": "Stopping, three weddings left (Instagram, 24 Nov 2025)"
+   },
+   {
+    "name": "Flowerytales",
+    "place": "Wilrijk",
+    "count": "More than 50 weddings",
+    "told": 4,
+    "words": "4 couples on the home page",
+    "price": "From €5,950 excl. VAT for planning and styling",
+    "ig": 3831,
+    "season": "At most 10 weddings a year"
+   },
+   {
+    "name": "Bliss Weddings",
+    "place": "Wilrijk",
+    "count": "Registered February 2025",
+    "told": 0,
+    "words": "1 couple, on its own page",
+    "price": "None shown",
+    "ig": 163,
+    "season": "At Trouw & Trends Brasschaat, 21 Feb 2027"
+   },
+   {
+    "name": "Honey It's Handled",
+    "place": "Antwerp",
+    "count": "Registered January 2026",
+    "told": 0,
+    "words": "1, Jan Geysen, for a 50th",
+    "price": "None shown",
+    "ig": 137,
+    "season": "Launch offer for 2027 and 2028",
+    "us": true
+   }
+  ],
+  "after": "What three of them have is a wedding a couple can picture. Yours arrive with the first couples. Until then, the site has to let a couple picture their own.",
+  "src": "Each site opened 26 Oct 2026 between 12.07 and 12.23 UTC. Weddings told counts each planner's own wedding story pages. Instagram through the public embed the same day. Wedding Dreamworx's Instagram didn't load for us, so it has no bar. Registration dates from KBO."
+ },
+ "money": {
+  "h": "Couples planning now expect to spend about €31,750. A planner in Flanders starts at €350 and runs to five figures.",
+  "lede": "That's the average from House of Weddings' 2025 survey for engaged couples, up from €21,339 in 2022. Wedding Dreamworx tells couples to count on about 15% of the budget for planning. Flowerytales starts at €5,950 excl. VAT for planning and styling. Bring us a dream starts at €350 on mariages.net. You don't publish a price, and this plan doesn't set one. Move the budget and see what Wedding Dreamworx's rule of thumb makes of it.",
+  "budget": {
+   "min": 10000,
+   "max": 100000,
+   "step": 250,
+   "def": 31750
+  },
+  "share": 0.15,
+  "axis_max": 15000,
+  "marks": [
+   {
+    "v": 350,
+    "t": "Bring us a dream, from",
+    "note": "mariages.net"
+   },
+   {
+    "v": 3150,
+    "t": "Flowerytales, styling, from",
+    "note": "excl. VAT"
+   },
+   {
+    "v": 5950,
+    "t": "Flowerytales, planning and styling, from",
+    "note": "excl. VAT"
+   },
+   {
+    "v": 10000,
+    "t": "Bring us a dream, up to",
+    "note": "mariages.net"
+   }
+  ],
+  "survey": [
+   {
+    "t": "Married couples, the survey's average",
+    "v": "€25,500 to €27,000"
+   },
+   {
+    "t": "Engaged couples, the survey's average",
+    "v": "€31,750"
+   },
+   {
+    "t": "The same survey in 2022",
+    "v": "€21,339"
+   }
+  ],
+  "after": "Your launch offer trades part of that fee for the right to capture and share the wedding. The plan builds on that trade, because each of those weddings is a story the next couple reads.",
+  "src": "House of Weddings, Nationale Huwelijksenquête 2025 (articles of 5 June and 24 September 2026, self selected sample). weddingdreamworx.be/faq. flowerytales.be/trouwen-belgie, prices excl. VAT, rental and transport. mariages.net listing for Bring us a dream, Overijse. All read 26 Oct 2026."
+ },
+ "why": {
+  "h": "The next four months are when 2027 and 2028 couples go looking.",
+  "lede": "After May, December and September are the most popular months to propose, and two in three couples start planning right away. The wedding fairs around Antwerp run from next Sunday to the end of February.",
+  "events": [
+   {
+    "d": "1 Nov 2026",
+    "t": "Marry Me Mechelen",
+    "p": "The fourth edition, at Salons Van Dijck from 11 to 17, free, with local suppliers only."
+   },
+   {
+    "d": "16 Nov 2026",
+    "t": "Trouw & Trends tickets open",
+    "p": "Free tickets for Brasschaat and Mechelen open that Monday."
+   },
+   {
+    "d": "December",
+    "t": "Proposals",
+    "p": "With September, the most popular month to propose after May in House of Weddings' survey. Two in three couples start planning right after."
+   },
+   {
+    "d": "31 Jan 2027",
+    "t": "Het Bruidsparadijs, Merksem",
+    "p": "A trouwbeurs from 10 to 17 whose invitation opens with \"Ga jij trouwen in 2027, 2028 of zelfs nog later?\""
+   },
+   {
+    "d": "21 Feb 2027",
+    "t": "Trouw & Trends Brasschaat",
+    "p": "Kasteel van Brasschaat, 11 to 17. Bliss Weddings will be there."
+   },
+   {
+    "d": "28 Feb 2027",
+    "t": "Trouw & Trends Mechelen",
+    "p": "Van der Valk Hotel, 11 to 17."
+   }
+  ],
+  "behind": [
+   {
+    "d": "24 Nov 2025",
+    "p": "Salon Weddings, 95 couples since 2017, says it's stopping. A planner with 9,909 followers on Instagram is leaving the market."
+   },
+   {
+    "d": "12 Mar 2026",
+    "p": "Statbel, weddings up 4.3% in Belgium and 6.7% in Flanders in 2024."
+   },
+   {
+    "d": "3 Jul 2026",
+    "p": "Blossoms Together launches a planning tool for couples who'd rather not hire a planner. A site that shows the months a planner takes off their hands is the answer to it."
+   }
+  ],
+  "src": "radioreflex.be (12 Oct 2026) and marrymemechelen.be. trendytrouwen.be fair pages. bruidsparadijs.be. House of Weddings' survey (5 June 2026). Salon Weddings on Instagram. Made in (3 July 2026). Statbel (12 March 2026). All read 26 Oct 2026."
+ },
+ "built": {
+  "h": "The site we sketched treats every couple as one of your first.",
+  "lede": "It opens on a wedding film and your own line, “For the moments you’ll never want to forget.” Then your launch offer, and your three colours as one couple’s day, something off white for the first idea, something blue for the planning you carry, something red for the day itself. It ends on a reply card that arrives already written, with their names, date, guests and the help they want. The wedding films are stand ins until your first couples are filmed, which is what your launch offer asks for.",
+  "placeholder": "The screens of the new site arrive here once it's live. Until then this chapter is a placeholder with no screenshots in it.",
+  "shots": [
+   {
+    "img": "v3-hero-d",
+    "h": "A wedding from the first frame",
+    "p": "A slow wedding film behind your wordmark and your own line, with one button, to be one of your first couples.",
+    "alt": "the first screen, a wedding film behind her wordmark and her line"
+   },
+   {
+    "img": "v3-invited-d",
+    "h": "Your launch offer, in your words",
+    "p": "“Will you be one of our first ‘I do’?” and your offer for 2027 and 2028, straight under the film.",
+    "alt": "her launch offer under the film"
+   },
+   {
+    "img": "v3-offwhite-d",
+    "h": "Something off white",
+    "p": "The first idea and the dress, behind a sheer veil that lifts as they scroll.",
+    "alt": "the off white chapter, a wedding dress behind a veil"
+   },
+   {
+    "img": "v3-blue-d",
+    "h": "Something blue",
+    "p": "Your 17 tabs as 17 lights. They pick the help they want and hand the lights to you.",
+    "alt": "the blue chapter, her 17 tabs as lights"
+   },
+   {
+    "img": "v3-red-d",
+    "h": "Something red",
+    "p": "The day itself, petals in your three colours, and your line, the details are mine, the moment is yours.",
+    "alt": "the red chapter, petals over a couple at dusk"
+   },
+   {
+    "img": "v3-elise-d",
+    "h": "You, in your words",
+    "p": "“Type A, so you don’t have to be.” Your years in events, and Jan Geysen’s words about Cinco Cero.",
+    "alt": "Elise in black and white beside her own words"
+   },
+   {
+    "img": "v3-reply-d",
+    "h": "The reply card",
+    "p": "Their names in red foil, the date, guests and help already written, sealed with your HH in red wax.",
+    "alt": "the reply card, already written"
+   }
+  ],
+  "phones": [
+   {
+    "img": "v3-hero-m",
+    "alt": "the first screen on a phone"
+   },
+   {
+    "img": "v3-reply-m",
+    "alt": "the reply card on a phone"
+   }
+  ]
+ },
+ "first": {
+  "h": "Six ways the first couples find you, all ending on the same reply card.",
+  "lede": "Your form already asks how people found you. These are the answers it offers, plus the launch offer itself, which is the one channel nobody else in Antwerp has this year.",
+  "channels": [
+   {
+    "h": "Instagram",
+    "fact": "56% of the couples in House of Weddings' survey look for ideas there, and it's the first answer on your form.",
+    "do": "Post the new site one colour at a time, off white, blue and red, and keep telling nights the way you told Cinco Cero, a sign, a setting, a night.",
+    "n": "Visits from Instagram that reach the reply card"
+   },
+   {
+    "h": "Pinterest",
+    "fact": "65.3% of the same couples use it, more than any other source. Your home page already speaks it, \"a Pinterest board with 847 pins\".",
+    "do": "Make a board for every page of the new site and every event, each pin linking back to the date question.",
+    "n": "Saves and clicks to the site"
+   },
+   {
+    "h": "Google",
+    "fact": "The second answer on your form.",
+    "do": "Give weddings in Antwerp and destination weddings a page each, and put Jan's words where couples check before they write.",
+    "n": "Searches that land on a wedding page"
+   },
+   {
+    "h": "Fairs and House of Weddings",
+    "fact": "House of Weddings, used by 65% of the couples it surveyed, lists only planners with its label. In exceptional cases it lets a newcomer in, when several label partners who've worked with her vouch for her. Good online reviews are a condition for everyone.",
+    "do": "Walk Marry Me Mechelen this Sunday and Het Bruidsparadijs in January, decide on a stand for Trouw & Trends, and ask the suppliers you work with about the label.",
+    "n": "Replies that answer Event"
+   },
+   {
+    "h": "Referrals",
+    "fact": "125 guests saw Cinco Cero and 570+ the Pro League Awards. Bliss Weddings' only quote is from a couple who'd seen Lissa work at a family wedding.",
+    "do": "Put a card in your red envelope for every guest list you handle, with the new site on it.",
+    "n": "Replies that answer Referral"
+   },
+   {
+    "h": "The launch offer",
+    "fact": "Your offer already trades a discount for the right to capture and share the celebration.",
+    "do": "Tell each first couple's year on the site as it happens, with their yes in writing, so the couples of 2028 meet a wedding planned your way.",
+    "n": "First couples signed for 2027 and 2028"
+   }
+  ],
+  "photos": [
+   {
+    "img": "c-sign",
+    "alt": "The Cinco Cero sign on an easel, 28.08.26, in daylight"
+   },
+   {
+    "img": "c-hall",
+    "alt": "A quiet corridor at the Cinco Cero venue before the guests arrive"
+   },
+   {
+    "img": "c-ball",
+    "alt": "A mirror ball over the dance floor at Cinco Cero"
+   },
+   {
+    "img": "c-night",
+    "alt": "The Cinco Cero sign lit at night with candles at its foot"
+   }
+  ],
+  "photos_cap": "How you told Cinco Cero, a 50th birthday, from your Events page. The first couples' years get told the same way.",
+  "src": "House of Weddings, Nationale Huwelijksenquête 2025 (5 June 2026) and its Kwaliteitslabel page. Your form and pages, Bliss Weddings' testimonials page, fair pages as in chapter VI. All read 26 Oct 2026."
+ },
+ "roadmap": [
+  {
+   "when": "Weeks 1 to 2",
+   "h": "The site",
+   "items": [
+    "Your edits to the sketch, with your words and photos in",
+    "Your Dutch beside your English",
+    "The reply card lands in your inbox with the date, guests and help in it",
+    "A privacy page and a cookie notice"
+   ]
+  },
+  {
+   "when": "Weeks 2 to 4",
+   "h": "Found",
+   "items": [
+    "A page for weddings in Antwerp and one for destination weddings",
+    "Jan's words on the site and where couples check",
+    "Pinterest boards from every page"
+   ]
+  },
+  {
+   "when": "Weeks 3 to 10",
+   "h": "Seen",
+   "items": [
+    "The new site on Instagram, one colour a post",
+    "Marry Me Mechelen and Het Bruidsparadijs walked",
+    "A card in the envelope for every guest list"
+   ]
+  },
+  {
+   "when": "Weeks 8 to 12",
+   "h": "Signed",
+   "items": [
+    "First couples for 2027 and 2028, with the offer's terms in writing",
+    "Each first couple's year starts on the site",
+    "What worked, what didn't, and the next 90 days"
+   ]
   }
+ ],
+ "kpis": [
+  {
+   "h": "Replies a week, weddings and the rest",
+   "where": "The site's form log"
+  },
+  {
+   "h": "Where each reply came from",
+   "where": "Your form's own question"
+  },
+  {
+   "h": "First calls held",
+   "where": "Your diary"
+  },
+  {
+   "h": "First couples signed, 2027 and 2028",
+   "where": "Your contracts"
+  },
+  {
+   "h": "Visits from Instagram and Pinterest that reach the reply card",
+   "where": "Site analytics"
+  }
+ ],
+ "team": {
+  "lede": "Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.",
+  "brands": "The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.",
+  "disclosure": "Built by Amwisesa, Astra's development partner, often through the brand's own agency.",
+  "people": [
+   {
+    "name": "Raka Mulya",
+    "role": "Go to market architect and entrepreneur. Your contact at Astra.",
+    "bio": "Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.",
+    "li": "https://www.linkedin.com/in/raka-mulya-b92885196/"
+   },
+   {
+    "name": "Joshua van Zeelt",
+    "role": "Founder of Astra Agency and JML Agency",
+    "bio": "Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.",
+    "li": "https://www.linkedin.com/in/joshua-van-zeelt/"
+   }
+  ]
+ },
+ "end": {
+  "h": "Next, a call.",
+  "lede": "We'll walk you through the site and this plan, hear how you want to work with your first couples, and then send you a clear scope, price and timeline.",
+  "cta": "Email Raka",
+  "mail": "mailto:rifqiraka234@gmail.com?subject=Honey%20It%27s%20Handled%20plan",
+  "foot": "Prepared by Astra for Honey It's Handled, October 2026. Screenshots of honeyitshandled.com taken 26 Oct 2026. Each figure names its source underneath."
+ }
 }

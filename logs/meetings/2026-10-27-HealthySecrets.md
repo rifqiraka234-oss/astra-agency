@@ -55,3 +55,47 @@ extra (the day planner, the English version) can follow.
 **Watch.** They're a medical food brand, so health claims on the site must stay in the words they already use (the build
 checked the EU claims register, see the handover). Three partners, so the decision may need a second call, book it before
 hanging up.
+
+## Refresh, 27 Oct 2026 morning (calendar, thread and web reread today)
+
+**Status.** office@healthysecrets.at has accepted the invite (calendar read 27 Oct, responseStatus accepted). Nikolaus
+answered our "See you Tuesday at 4!" with a thumbs up at 08:51 UTC on 26 Oct. Thread pulled in full, 12 items, nothing newer,
+so no reply is owed before the call. Still only office@ on the invite, so we don't know yet which cofounders join.
+
+**Who they are, from outside sources.** Three siblings. Dr. Stephanie Walkner (37, senior physician in general surgery, bowel
+specialist), Leonie Walkner (28, dietitian, studied pharmacy) and Nikolaus (34, medical law lawyer, owns law, taste and design).
+All three keep full time jobs and run the kitchen in Favoriten mostly at night (Heute, 16 Oct; Gastro.News, 14 Oct).
+Healthy Secrets OG is in the Firmenbuch as FN 661029b, first entry 2 Sep 2025, three partners, an address change published
+9 Jun 2026 and 8 image trademarks listed in 2026 (northdata). LinkedIn company page, 2 to 10 staff, 39 followers, founded 2025.
+
+**Stage.** Early. First bricks and mortar opened 17 Oct 2026, ten days ago. Until then they sold online, at markets and at
+pop ups. Self funded and part time by every source, no outside funding found. A tiny team that decides as three partners.
+
+**What they're experiencing, with sources.**
+- They opened a counter because customers kept asking health questions, "wird immer ein bisschen wie eine Mini-Ernährungsberatung"
+  (Leonie, Gastro.News). The café feeds Leonie's paid consultations (120 euros for 60 minutes on their services page).
+- Growth ambition is written down. Their LinkedIn page says they are "expanding partnerships with retailers, pharmacies, and
+  distribution partners across the DACH region", and the aim is young people and early prevention (Heute).
+- Capacity is the squeeze. Night kitchen shifts around three day jobs ("ab 2 Uhr Früh redet man schon anders miteinander").
+  Anything that takes founder hours off them lands well.
+- Product range today. Omega-3 Granola Red Berry Mix 9 euros, Fibre Flow drinks, Kombucha from 4.50, bread mixes 9 euros.
+  Café prices aren't published anywhere we found.
+- Press so far is local. Heute (16 Oct), Gastro.News (14 Oct), neueroeffnung.info. We found no sign of a review round yet.
+- Opening week was driven by Instagram (giveaway for the first 10 guests, countdown posts). Their live home page still never
+  mentions the café in its own copy. The only mentions are the embedded Instagram feed, the same as on 16 Oct, so our opener's
+  claim still holds. Reread 27 Oct, healthysecrets.at home page, visible text and raw HTML.
+
+**Not found, say so on the call instead of guessing.** Café opening hours and days, any sales figures, how many orders the
+online shop takes, whether pharmacy talks are real yet. Ask.
+
+**Things to confirm that only he can** (from the handover, 11 points). Opening hours, café prices, the 44 euro Matcha against
+25 euro Chai and Moon Milk, which health claims are registered, who the three portraits are, and who runs the current Wix site.
+
+**Budget sign, honest read.** None found in public sources. Three part time founders, no outside money, so the 500 euro floor
+and a phase one scope are realistic. The 6,000 euro valuation in the opener gate is our value of the project, not their budget.
+Say a range on the call and let the first question about money come from them, then book the follow up before hanging up.
+
+**Sources reread today.** Calendar event sr7ujebv0l10f6083g7abamva4. lemlist thread ctc_pdAKCyF8dJxPkKrdL (12 items, control thread
+6 items). https://www.heute.at/s/muesli-statt-kapsel-geschwister-eroeffnen-cafe-fuer-darm-120266362 .
+https://gastro.news/medizin-trifft-matcha-latte/ . https://www.northdata.de/Healthy%20Secrets%20OG,%20Wien/661029b .
+https://www.healthysecrets.at . Prototype URL 200, title still "Healthy Secrets | Gut Health Club am Wildpretmarkt und Shop".

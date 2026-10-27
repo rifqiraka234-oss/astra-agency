@@ -341,7 +341,7 @@ def built():
     bt = D['built']
     if not PROTO or not bt['shots']:
         return f'<div class="ph" role="note"><p class="ph-t">Placeholder</p><p>{esc(bt["placeholder"])}</p></div>'
-    frames = ''.join(f'<div class="bf-i{" on" if i == 0 else ""}" data-i="{i}">{pic(s["img"], "The new Honey It's Handled site, " + s["alt"], 1200, 750)}</div>' for i, s in enumerate(bt['shots']))
+    frames = ''.join(f'<div class="bf-i{" on" if i == 0 else ""}" data-i="{i}">{pic(s["img"], "The new Honey It’s Handled site, " + s["alt"], 1200, 750)}</div>' for i, s in enumerate(bt['shots']))
     caps = ''.join(f'<li data-i="{i}"><span class="bc-n">{i + 1:02d}</span><div><h3>{esc(s["h"])}</h3><p>{esc(s["p"])}</p><div class="bc-m">{pic(s["img"], "", 1200, 750)}</div></div></li>' for i, s in enumerate(bt['shots']))
     phones = ''.join(f'<figure>{pic(p["img"], p["alt"], 520, 1126)}</figure>' for p in bt['phones'])
     return f'''<div class="bf" data-bf><ol class="bc">{caps}</ol><div class="bf-stick"><div class="bf-frame">{frames}</div></div></div>

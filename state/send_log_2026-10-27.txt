@@ -1,0 +1,1 @@
+2026-10-27 07.56.42 UTC  act_gCX8PhYvmxEA3iWKL  ctc_z9AByAoDiQAssohkn, DELIVERY, 558 chars, on Raka's "Send! And make sure we havent sent anything to her". Sent through the API by tools/lemlist.py. Thread 2 items before, unchanged since the dry run, control 6 items. Text copied from state/drafted_2026-10-27-elise-delivery.md (sha256 cd6c609dc9b83c34), one copy after, identical.
