@@ -770,3 +770,18 @@ loads at 1440 and 390, no script errors, 17 of 17 images decoded, qa/func-v2.js 
 film serves 200 at full size (the screenshot run's failed request was the browser aborting it mid scroll). Her lines
 "Type A, so you don't have to be." and the HONEY and IT'S HANDLED lines checked word for word in her 17 June 2026
 Instagram brand reveal. The v2 builder is still finishing its own QA and redeploys only if it changes the build.
+
+## v3 live and the plan retaken, 27 Oct ~07.45 UTC (main session, on Raka's "Put it to netlify and draft smth for her")
+
+- Prototype v3 deployed from a clean copy of site-v3 to d75c0db1-46e6-4842-b787-b1e2d9102daf, deploy
+  6ae051dc51001439eeaa49bb, replacing v2 at https://astra-honeyitshandled-prototype.netlify.app/ . 58 of 58 files hashed
+  equal, 404 control 404, noindex on, cold loads at 1440 and 390 with no script errors and every image decoded,
+  qa/func-v3.js on the live URL 30 of 30. research/PROTOTYPE_LIVE.txt now holds that deploy.
+- Plan, chapter VII rewritten for v3 (heading, lede, seven captions, two phone frames) from screens captured on the live
+  v3 with build-plan/shots/capture-v3.js, and every line that described v1 corrected (the letter is now the reply card,
+  the Instagram and roadmap lines post the site one colour at a time, the guest card carries the new site). plan.py had
+  a quoting bug in the never run chapter VII path ("It's" inside a single quoted f-string on Python 3.11), fixed with the
+  typographic apostrophe. QA locally, func 21 of 21 (plant 0 of 21), copy clean (plant 4 of 4 kinds), axe 8 runs clean
+  (plant 8 of 8), overflow none (plant 2 failing loads). Deployed, deploy 6ae0548da53f9773d78c2c63, 47 of 47 files hashed
+  equal, 404 control 404, plan-honey-func.js on the live URL 21 of 21.
+- Delivery drafted, state/drafted_2026-10-27-elise-delivery.md, not sent.

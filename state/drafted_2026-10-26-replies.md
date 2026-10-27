@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- 27 Oct. Julien's booking line here was sent 26 Oct 19.13.44 UTC (act_RuhhatYNgQLLDT3Qa). Elise's on hold reply was never sent and is replaced by state/drafted_2026-10-27-elise-delivery.md. Nothing in this file is to be sent. -->
 # Replies, 2026-10-26. NOT SENT, waiting on Raka's word
 
 ### Elise Laeven, Honey It's Handled, ctc_z9AByAoDiQAssohkn
