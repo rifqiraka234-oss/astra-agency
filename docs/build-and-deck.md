@@ -1,5 +1,9 @@
 # The build toolchain and everything corrected across the WisTree deck
 
+> **Every prototype follows `docs/build-card.md` in order (Raka, 2026-10-27).** The card first, the first screen to
+> Raka, the rest on his go, `node tools/check-build.js` exit 0, every section to Raka as screenshots or one HTML file,
+> and only on his "final" the QA chain below and one deploy. The sections in this file are the how and the hiccups.
+>
 > **Moved out of `CLAUDE.md` on 2026-09-21 to make it readable.** Nothing was changed, only relocated. `docs/RULES.md` outranks this file.
 >
 > Exact paths, rendering, QA, images, deploying, deck architecture, and the full audit of corrections Raka made across five deck rebuilds. Open it before building anything.

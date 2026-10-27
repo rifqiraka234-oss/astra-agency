@@ -1,5 +1,11 @@
 # Astra Agency — Company Research and Prototype Build Spec
 
+> **The order of work is `docs/build-card.md` (Raka, 2026-10-27, "we needa do it in one go").** This spec is the how
+> of each stage. The card is the order, the two looks Raka gets before anything is deployed, and the questions every
+> one of his notes left. Fill the card, build the first screen only, send it, and build the rest on his go. Run
+> `node tools/check-build.js` before either look. Stages C and L already asked for this bar and twelve prototypes still
+> took thirty versions, so reading a stage is never the same as passing it.
+>
 > **Zero mistake policy. Read `CLAUDE.md` "TRIPLE CHECK EVERYTHING" before acting on
 > this file (Raka, 2026-09-21).** Every claim gets three different checks, not three
 > readings. Reopen the source, actively try to prove the claim false, then confirm it a

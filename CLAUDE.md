@@ -44,6 +44,15 @@
 > sections or one line copy fixes as the angle. Every OPENER and SKETCH gate carries `worth: €X+,
 > the project`, and check-drafts.py fails it under 2,500 euros. **`docs/RULES.md` section 0E.**
 >
+> **EVERY PROTOTYPE IN ONE GO. THE CARD, THE FIRST SCREEN, THEN THE BUILD (Raka, 2026-10-27, "we cant do second or
+> third runs of the prototype building we needa do it in one go", and "before its final lets put it to html or
+> screenshot first").** 12 prototypes took 30 versions between 12 and 26 Oct, and the notes were the same ones every
+> time, the Claude look, no wow, no route to the action, not what they sell, cheap type. So every build starts with
+> **`docs/build-card.md`** filled in, then only the hero and one signature moment, screenshotted and sent to Raka. On his
+> go the rest in one pass, `node tools/check-build.js` exit 0, every section screenshotted or bundled into one HTML file
+> for his final look. Only after his "final", the full QA and one Netlify deploy. Nothing is deployed for review. The
+> sections below this one are the notes the card was built from. The audit is `docs/reviews/2026-10-27-prototype-process-audit.md`.
+>
 > **HERTLING V3 IS THE BUILD TO REPEAT (Raka, 2026-10-22, "love it man! keep making stuff like this").** One idea
 > from the lead's own promise carried by the whole page, no islands, their logo as the hero object, full bleed licence
 > checked media of their place, and a sourced growth plan on its own site. **`docs/RULES.md` section 5** and the last
@@ -675,6 +684,9 @@ Every line is here because it failed at least once.
 - [ ] No photograph captioned as the client's premises, staff, customers or product.
 
 **Build**
+- [ ] `docs/build-card.md` filled, and Raka saw the first screen and said go before the rest was built.
+- [ ] `node tools/check-build.js <site> --action "<css>"` exit 0 on every page, every plant caught.
+- [ ] Raka saw every section as screenshots or one HTML file and said final before any deploy.
 - [ ] Cold load, nothing forced. Zero page errors.
 - [ ] Every reveal fired naturally. A count well short of the total means broken.
 - [ ] Every image 200 and decoded, on a multi file deploy the assets too.
@@ -1158,14 +1170,20 @@ not just a good conversation.
 
 1. **Trigger.** Either a "Ready for a mockup" entry from that day's inbox
    triage digest, or a direct request from Raka naming a company.
-2. **Build.** Follow `docs/prototype-build-spec.md` Steps 1 through 9 in
-   full. Check `state/prototypes.jsonl` first for this contact, if an
-   earlier attempt exists, the new angle must be genuinely different, not a
-   reskin of the declined one.
-3. **Host.** Deploy the single HTML file to a new Netlify site named per the
-   convention above. Confirm the live URL actually loads and renders
-   correctly (desktop and mobile) before sending it anywhere, do not send an
-   unverified link.
+2. **Build, in one go (Raka, 2026-10-27).** Follow the order in
+   `docs/build-card.md` exactly. Check `state/prototypes.jsonl` first for this
+   contact, if an earlier attempt exists, the new angle must be genuinely
+   different, not a reskin of the declined one. Fill the card, build only the
+   hero and one signature moment, run `node tools/check-build.js`, and send
+   Raka the card and the screenshots (first look). On his go, build the rest
+   in one pass, check-build exit 0, and send every section screenshotted or
+   one HTML file from `tools/bundle-site.py` (final look). The stages of
+   `docs/prototype-build-spec.md` are the how, the card is the order.
+3. **Host, once, on his "final".** Only then the full QA chain and one deploy
+   to a new Netlify site named per the convention above. Nothing is deployed
+   for review, every deploy costs credit. Confirm the live URL actually loads
+   and renders correctly (desktop and mobile) before sending it anywhere, do
+   not send an unverified link.
 4. **Send.** The message that links to the prototype still follows the
    outreach voice rules in `docs/astra-master-context.md` section 9 and the
    no-dash guardrail, low friction, references what was actually promised,
