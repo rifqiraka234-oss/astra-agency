@@ -1,4 +1,9 @@
-# Deal bumps, 27 Oct. NOT SENT, waiting on Raka's word
+# Deal bumps, 27 Oct. SCHEDULED on Raka's word, NOT SENT YET
+
+> Raka, 27 Oct ~19.10 UTC, "noah also send tomorrow at 6". Goes Wed 28 Oct 06.00 Amsterdam (05.00 UTC) with the four
+> in state/drafted_2026-10-28-bumps.md, send_later trigger trig_013uSpSyfZAqEBtjde1xnGHM. On the same message he moved
+> Elle, Laurens, Willem and Lupo to Wed 06.00 and asked for a still interested note to Chris Hale, Ulrich, Matthias and
+> Aaron on Fri 30 Oct 06.00 (state/drafted_2026-10-30-still-interested.md). Chris Ryalls gets nothing more.
 
 Raka, 27 Oct ~17.05 UTC, "Anyone we needa nudge? Especially if we had sent them a prototype or like they say yes it
 looks good and all". Separate from state/drafted_2026-10-27-bumps.md (Aiden, Tom, Mark), so a go on one file doesn't
