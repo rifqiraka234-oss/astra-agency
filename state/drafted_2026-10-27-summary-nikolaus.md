@@ -1,3 +1,4 @@
+<!-- SENT 2026-10-27 19.42.02 UTC on Raka's "send", Gmail 1a17ee24ba4fff46, to office@healthysecrets.at, text read back from the sent thread. Do not send again. -->
 # Call summary email, 27 Oct, Healthy Secrets. NOT SENT. Raka cut the microphone line and the price, Mollie and next step paragraphs on 27 Oct, proposal is promised only as 'in the upcoming days'.
 # Redone warm and family toned on Raka's "make it kind and human theyre a family company".
 # Recipients. office@healthysecrets.at is the only address we have. No address for Stephanie or Leonie in Gmail, lemlist or the
