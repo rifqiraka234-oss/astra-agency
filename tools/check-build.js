@@ -158,8 +158,9 @@ window.__cb = (function () {
       const blur = s.boxShadow.split(/,(?![^(]*\\))/).some(sh => { const n = sh.replace(/rgba?\\([^)]*\\)/g, '').trim().split(/\\s+/).map(parseFloat).filter(x => !isNaN(x)); return !/inset/.test(sh) && (n[2] || 0) >= 8; });
       if (blur) out.cards++;
     }
-    // an endless sideways loop, the logo marquee
-    out.marquee = document.getAnimations().filter(a => { try { if (a.effect.getComputedTiming().iterations !== Infinity) return false;
+    // an endless sideways loop carrying words or logos, the logo marquee. An empty grain or noise layer isn't one
+    const carries = e => e && ((e.textContent || '').trim().length >= 10 || e.querySelectorAll('img, svg').length >= 3);
+    out.marquee = document.getAnimations().filter(a => { try { if (a.effect.getComputedTiming().iterations !== Infinity || !carries(a.effect.target)) return false;
       return a.effect.getKeyframes().some(k => /translate(X|3d)?\\(\\s*-?[1-9][\\d.]*%/.test(k.transform || '') || /translateX\\(\\s*-?\\d{3,}/.test(k.transform || '')); } catch (e) { return false; } })
       .map(a => (a.effect.target && a.effect.target.className + '' || 'loop').slice(0, 30)).concat([...document.querySelectorAll('marquee')].map(() => 'marquee'));
     return out;
