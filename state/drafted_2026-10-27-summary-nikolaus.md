@@ -13,7 +13,7 @@ Hi Nikolaus, Stephanie and Leonie,
 
 Thanks for the time today, it was great to meet you. Here's what we covered.
 
-What I'll build. The Healthy Secrets site you've seen, moved off Wix so you can edit what matters yourselves. Products, prices, stock, descriptions and a blog for Leonie, plus her consultation booking. Your domain stays, and I'll set up redirects so your search ranking carries over.
+What I'll build. The Healthy Secrets site you've seen, moved off Wix so you can edit what matters yourselves. That covers products, prices and stock, and a blog for Leonie. Her consultation booking comes with it. Your domain stays, and I'll set up redirects so your search ranking carries over.
 
 Timeline and price. About two weeks from the start. I quoted the build at under 500 euros, and the proposal will confirm the exact scope and figure. Maintenance starts from 50 euros a month for updates, security and fixes.
 
