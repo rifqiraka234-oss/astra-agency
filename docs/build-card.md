@@ -14,15 +14,17 @@ back to research, never to guess.
    their photos and film, five or more premium sites in their own field for the type, and award level sites rendered
    today for the art. Facts for the plan go in one data file with their sources.
 3. **Fill the card.**
-4. **Build the first screen only,** the hero and the one signature moment, locally. Run `node tools/check-build.js`
-   on it. Screenshot it at 1440 and 390, plus three frames of the moment if it moves.
+4. **Build the first screen only,** the hero and the one signature moment, locally. Run
+   `node tools/check-build.js <site> --action "<css>" --shots <dir>`, which writes the first screen at 1440 and 390.
+   Add three frames of the moment if it moves. Look at every shot yourself before Raka does.
 5. **First look. Send Raka the card's section A to C and the screenshots** (SendUserFile, no Netlify). Wait for his
    go. A note here costs one screen, so redo the screen and send again.
 6. **Build the rest in one pass** to the card, the plan too when he asked for one.
 7. **`node tools/check-build.js <site> --action "<line 2's selector>"` on every page,** exit 0 with every plant
    caught. Fix and rerun. Never show a build that fails it.
-8. **Final look before anything goes live.** Every section screenshotted at 1440 and 390, or one file from
-   `tools/bundle-site.py`, sent to Raka. Still nothing deployed.
+8. **Final look before anything goes live.** `node tools/check-build.js <site> --action "<css>" --sections <dir>`
+   screenshots every section at 1440 and 390. Send those, or one file from `tools/bundle-site.py`, to Raka. Still
+   nothing deployed.
 9. **On his "final",** the full QA chain in build-and-deck.md once, SSO off, one Netlify deploy per site, live verify,
    the delivery drafted. Sending still needs his word.
 
