@@ -66,5 +66,8 @@ passed every check (the right faces, no tells, canvas and film, an 86% hero, an 
 still called it "a normal CLAUDE website ... it really doesnt have a wow effect". That's why the first look is his,
 not the script's.
 
-15. Put the screenshots beside BWILD v2, Saavedra v3 and Hertling v3 (the builds he signed off). Would this pass for
-    a 25,000 euro site from a top studio? Would anyone screenshot it? If the honest answer is "probably", it's a no.
+15. Put the screenshots beside BWILD v2, Saavedra v3 and Fae Club v3 (builds he signed off after the 25 Oct rules).
+    Hertling v3 is the reference for the idea, the logo as hero and the plan, not for its type and buttons, its italic
+    halves, pill buttons, soft shadow boxes and count ups came before the 25 Oct rules and fail check-build today.
+    Would this pass for a 25,000 euro site from a top studio? Would anyone screenshot it? If the honest answer is
+    "probably", it's a no.

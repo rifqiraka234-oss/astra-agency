@@ -812,7 +812,9 @@ cards on a grey page, their logo as the hero object, full bleed licence checked 
 their place. And a growth plan on its own site in Astra's voice, every chart computed from sourced
 numbers reopened on the day it ships. The recipe and every hiccup are the last section of
 `docs/build-and-deck.md`. Open https://astra-hertling-prototype.netlify.app/ and
-https://astra-hertling-presence.netlify.app/ before building the next one.
+https://astra-hertling-presence.netlify.app/ before building the next one. Repeat its idea, its logo as the hero and
+its plan, not its type and buttons. Its italic headline halves, pill buttons, soft shadow boxes and count ups came three
+days before the 25 Oct "no Claude look" rule, and `tools/check-build.js` fails them today (27 Oct).
 
 
 **THE FIRST BUILD IS THE ART BUILD. THERE IS NO CALM VERSION ONE (Raka, 2026-10-26).** His words on Honey It's

@@ -56,7 +56,8 @@
 > **HERTLING V3 IS THE BUILD TO REPEAT (Raka, 2026-10-22, "love it man! keep making stuff like this").** One idea
 > from the lead's own promise carried by the whole page, no islands, their logo as the hero object, full bleed licence
 > checked media of their place, and a sourced growth plan on its own site. **`docs/RULES.md` section 5** and the last
-> section of `docs/build-and-deck.md`.
+> section of `docs/build-and-deck.md`. Not its type and buttons, its italic headline halves and pill buttons came before
+> the 25 Oct "no Claude look" rule and fail `tools/check-build.js` today.
 >
 > **SAAVEDRA V3 IS THE PLAN AND PROTOTYPE TO MAKE EVERY TIME (Raka, 2026-10-25, "Brooo amazing! Write in the mds to
 > always make these kind of plans and prototypes").** Write the flow as a table first, the visitor's question, what they
