@@ -48,7 +48,8 @@ const LIMITS = {
   cards: 2,       // rounded boxes with a soft shadow
   sections: 10,   // top level blocks on a home page. RULES section 5 names eleven as the Hooft & Petiet v1 tell
   turns: 4,       // light and dark chapters taking turns
-  hero: 0.35,     // share of the first screen that is picture, film, canvas or their mark, at each size
+  hero: 0.25,     // share of the first screen that is picture, film, canvas or their mark, at each size. Under it fails
+  heroWarn: 0.35, // between the two the card has to say why (their mark at that size, Saavedra v3's wordmark is 29 to 34%)
   gaps: 0,        // half screens with no way to the action
 };
 
@@ -158,8 +159,11 @@ window.__cb = (function () {
       const blur = s.boxShadow.split(/,(?![^(]*\\))/).some(sh => { const n = sh.replace(/rgba?\\([^)]*\\)/g, '').trim().split(/\\s+/).map(parseFloat).filter(x => !isNaN(x)); return !/inset/.test(sh) && (n[2] || 0) >= 8; });
       if (blur) out.cards++;
     }
-    // an endless sideways loop carrying words or logos, the logo marquee. An empty grain or noise layer isn't one
-    const carries = e => e && ((e.textContent || '').trim().length >= 10 || e.querySelectorAll('img, svg').length >= 3);
+    // an endless sideways loop of logos (three or more small images) or of words with no photos, the logo marquee of
+    // Hooft & Petiet v1. A slow drift of their own large photos (Saavedra v3) and an empty grain layer aren't one
+    const carries = e => { if (!e) return false; const im = [...e.querySelectorAll('img, svg')];
+      const small = im.filter(i => { const r = i.getBoundingClientRect(); return r.height > 0 && r.height <= 140; }).length;
+      return small >= 3 || (im.length === small && (e.textContent || '').trim().length >= 10); };
     out.marquee = document.getAnimations().filter(a => { try { if (a.effect.getComputedTiming().iterations !== Infinity || !carries(a.effect.target)) return false;
       return a.effect.getKeyframes().some(k => /translate(X|3d)?\\(\\s*-?[1-9][\\d.]*%/.test(k.transform || '') || /translateX\\(\\s*-?\\d{3,}/.test(k.transform || '')); } catch (e) { return false; } })
       .map(a => (a.effect.target && a.effect.target.className + '' || 'loop').slice(0, 30)).concat([...document.querySelectorAll('marquee')].map(() => 'marquee'));
@@ -336,7 +340,9 @@ function judge(page, res, isHome) {
     add('sections', d.sections > LIMITS.sections, d.sections + ' top level sections');
     add('turns', d.turns > LIMITS.turns, d.turns + ' light and dark turns (' + d.tones + ')');
   }
-  add('hero', d.hero < LIMITS.hero || ph.hero < LIMITS.hero, 'first screen is ' + Math.round(d.hero * 100) + '% picture, film or mark at desktop, ' + Math.round(ph.hero * 100) + '% on a phone');
+  const hm = Math.min(d.hero, ph.hero), hd = 'first screen is ' + Math.round(d.hero * 100) + '% picture, film or mark at desktop, ' + Math.round(ph.hero * 100) + '% on a phone';
+  if (hm >= LIMITS.hero && hm < LIMITS.heroWarn) out.push({ page, check: 'hero', fail: false, warn: true, detail: hd + ', card line 5 has to say why the hero is mostly not picture' });
+  else add('hero', hm < LIMITS.hero, hd);
   const g = { desk: d.walk.gaps, phone: ph.walk.gaps };
   if (!ACTION) { add('walk', true, 'not judged, pass --action with the selector from card line 2'); add('first screen action', true, 'not judged, pass --action'); return out; }
   add('walk', g.desk.length + g.phone.length > LIMITS.gaps, (g.desk.length + g.phone.length) + ' half screens with no way to the action' + (g.desk.length ? ', desktop at ' + g.desk.slice(0, 6).join(' ') + ' screens' : '') + (g.phone.length ? ', phone at ' + g.phone.slice(0, 6).join(' ') : ''));
