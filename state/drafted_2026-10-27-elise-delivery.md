@@ -1,4 +1,5 @@
-# Delivery, 2026-10-27. NOT SENT, waiting on Raka's word
+<!-- GATE ARCHIVED -->
+# Delivery, 2026-10-27. SENT 07.56.42 UTC, act_gCX8PhYvmxEA3iWKL, one copy. Do not send it again
 
 Raka, 27 Oct, "Put it to netlify and draft smth for her". Replaces the on hold reply of 26 Oct in
 state/drafted_2026-10-26-replies.md, archived the same day.

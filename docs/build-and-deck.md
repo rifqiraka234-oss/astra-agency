@@ -1,5 +1,9 @@
 # The build toolchain and everything corrected across the WisTree deck
 
+> **Every prototype follows `docs/build-card.md` in order (Raka, 2026-10-27).** The card first, the first screen to
+> Raka, the rest on his go, `node tools/check-build.js` exit 0, every section to Raka as screenshots or one HTML file,
+> and only on his "final" the QA chain below and one deploy. The sections in this file are the how and the hiccups.
+>
 > **Moved out of `CLAUDE.md` on 2026-09-21 to make it readable.** Nothing was changed, only relocated. `docs/RULES.md` outranks this file.
 >
 > Exact paths, rendering, QA, images, deploying, deck architecture, and the full audit of corrections Raka made across five deck rebuilds. Open it before building anything.
@@ -1076,3 +1080,53 @@ flow-v3.md, the v3 section of handover.md).
 | The event meta lines and "When's your I do?" sat over headings as small caps kickers | Facts go under the heading, a question is set as a line of the voice, never as a kicker |
 | A rerun of the media prep changed the hashes of films it didn't touch, VP9 isn't byte identical run to run | Hash media and run the QA chain after the last prep, never compare across preps |
 | A full page screenshot without script showed no posters, while every image had decoded | Judge a no script page from viewport screenshots while scrolling and from decode counts, not one fullPage capture |
+
+## check-build.js, calibrated on 20 versions he judged (27 Oct 2026)
+
+Built the day Raka asked for one go builds (docs/build-card.md). Every version since 21 Oct was restored from git and
+run through `node tools/check-build.js` with every plant on. No detector failed its plant on any of the 20.
+
+| Version | His verdict | check-build |
+|---|---|---|
+| Hooft & Petiet v1 | "a typical Claude and ChatGPT website" | FAIL, italic halves, kickers, pill buttons, arrows, a logo marquee, 12 sections, hero 1%, count ups |
+| Hooft & Petiet v2 | "so plain and basic" | FAIL, no art layer at all |
+| Hooft & Petiet v3 | not sent back | pass |
+| BWILD v1 | "a normal CLAUDE website ... doesnt have a wow effect" | **pass, the one miss** |
+| BWILD v2 | "holy shit.. bro send it to him NOW" | pass |
+| BeBetter v1 | "supperr basic ... really just a cheap website" | FAIL, Libre Caslon and Archivo, no route on a phone |
+| BeBetter v2 | "the choice of fonts! They look cheap as f" | FAIL, Libre Caslon, Archivo and Anton |
+| BeBetter v2.1 | delivered | FAIL, 17 half screens on a phone with only the logo, language and Menu (real, see below) |
+| Fae Club v1 | "not artsy enough" | FAIL, hero under a quarter, no ticket action on the first screen |
+| Fae Club v2 | "does this website ... guide the intended audience to the intended action?" | FAIL, no ticket action on the first screen |
+| Fae Club v3 | sent on his trust | pass |
+| Honey v1 | "a normal CLAUDE website" | FAIL, kickers on 7 of 10 headlines |
+| Honey v2 | "a big picture or, like, a video ... as a hero" | FAIL on the route, and the hero warns at 25% on a phone |
+| Honey v3 | not yet judged | pass |
+| Hertling v1 | "put yourself in his shoes" | FAIL, soft shadow cards, no route on a phone |
+| Hertling v2 | "something out of the 2010s" | FAIL, soft shadow cards, hero under a quarter |
+| Hertling v3 | "love it man!" (22 Oct) | FAIL, italic halves, pill buttons, cards, count ups, all banned three days later |
+| Saavedra v1 | restyled the same day | FAIL, 14 pill buttons, chips |
+| Saavedra restyle | "be more creative ... how the whole flow guides them" | FAIL on the route, hero warns |
+| Saavedra v3 | "Brooo amazing!" | FAIL, a phone gap at 1 to 2 screens with only the logo and Menu (real), hero warns at 29 to 34% |
+
+12 of the 13 versions he sent back fail. The miss is BWILD v1, which had the right faces, no tells, canvas and film,
+an 86% hero and an action on every half screen, and still wasn't good enough. That's the limit of a script and the
+reason the first look is his.
+
+| Hiccup | Rule |
+|---|---|
+| The first plant for kickers added three labels to a page with thirty headlines and never crossed the line | A plant has to be big enough to fail on any page, here a label over every heading |
+| The "no art" plant couldn't fail on pages whose scripts keep writing CSS variables | Load that plant with the page's own scripts off |
+| Decorative canvas and film are `pointer-events:none`, so the hit test read Hooft & Petiet v3's WebGL hero as 1% | Give every element the pointer while measuring, and read past `<body>`, fixed layers sit after it in the stack |
+| A solid colour overlay drawn at partial opacity counted as covering the photo under it | An element only blocks when its colour and its own opacity are both near full |
+| Italic fired on a headline set wholly in italic | The tell is the mix, count a headline only when roman and italic text both sit in it |
+| An empty grain layer and Saavedra's slow drift of its own large photos counted as marquees | A marquee is three or more small images (logos) or words without photos, as on Hooft & Petiet v1 |
+| A generic button finder found no action on BWILD v2 and every action on others | The walk only means something with the card's own selector, so `--action` is required |
+| The calibration selector didn't know Saavedra's order buttons or the Hooft & Petiet bar's submit | Every action the visitor can take goes in the selector, the header button and the bar included |
+| Pixel coverage can't tell a mark hero (Saavedra v3, approved) from one with the wrong feeling (Honey v2, sent back) | Under a quarter fails, a quarter to a third warns and the card has to say why, the feeling is his call |
+| `pkill -f` and an awk kill matched their own shell twice more (exit 144) | Kill by PID in a command that names nothing else |
+| Section shots taken 600 ms after the scroll caught reveals halfway | Wait 1.6 s, and know that a scroll scene's state at that point is what the visitor sees |
+
+Two delivered builds have a real gap the check found. On a phone, BeBetter v2.1's home runs through the 365 day dial
+with nothing on screen but the logo, the language switch and Menu for 17 half screens, and Saavedra v3's home has the
+same for its first two screens. Both predate the walk rule of Fae Club v3. Neither live site was changed.

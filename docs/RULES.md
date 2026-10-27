@@ -716,6 +716,24 @@ The four that cost us leads.
 
 ## 5. Building
 
+**ONE GO. THE CARD, TWO LOOKS, ONE DEPLOY (Raka, 2026-10-27).** His words, "we only have an X amount of credits both
+in claude and netlify so we cant do second or third runs of the prototype building we needa do it in one go", and on
+the fix, "go go do it. And like before its final lets put it to html or screenshot first". Between 12 and 26 Oct, 12
+prototypes took 30 versions, and the rules below already existed when most of them came back. The first build was the
+safe version and the art came on the second pass, each note was fixed alone and the fix caused the next note, and the
+QA spent hours proving builds he then sent back for taste. So every build follows **`docs/build-card.md`**, in order.
+1. **The card, filled before any code.** Every note below is a line on it.
+2. **The first look.** Only the hero and one signature moment, built locally, `node tools/check-build.js` run, and
+   screenshots at 1440 and 390 sent to Raka with the card. Nothing more is built until he says go.
+3. **The rest in one pass**, then `node tools/check-build.js <site> --action "<css>"` exit 0 on every page with every
+   plant caught. It fails the Claude look, a first screen without their picture, film or mark, and a half screen with
+   no way to the action. It can't see a wow moment, the card and Raka's two looks are for that.
+4. **The final look.** Every section screenshotted at 1440 and 390, or one file from `tools/bundle-site.py`, sent to
+   Raka. Still nothing deployed.
+5. **On his "final"**, the full QA chain once and one Netlify deploy per site. Never a deploy for review, never the full
+   QA on a build he hasn't approved.
+The paragraphs below are the notes the card was built from. Read them for the why, follow the card for the order.
+
 **THE VISITOR AND THE ACTION COME FIRST. A WEBSITE GUIDES, IT DOESN'T LIST (Raka, 2026-10-25).** His words
 on the Hooft & Petiet build, "we need to keep in mind the person who's most likely to be targeted by the website and
 what are they thinking of and what their goals are and how the whole experience of the whole of the website actually
@@ -794,7 +812,9 @@ cards on a grey page, their logo as the hero object, full bleed licence checked 
 their place. And a growth plan on its own site in Astra's voice, every chart computed from sourced
 numbers reopened on the day it ships. The recipe and every hiccup are the last section of
 `docs/build-and-deck.md`. Open https://astra-hertling-prototype.netlify.app/ and
-https://astra-hertling-presence.netlify.app/ before building the next one.
+https://astra-hertling-presence.netlify.app/ before building the next one. Repeat its idea, its logo as the hero and
+its plan, not its type and buttons. Its italic headline halves, pill buttons, soft shadow boxes and count ups came three
+days before the 25 Oct "no Claude look" rule, and `tools/check-build.js` fails them today (27 Oct).
 
 
 **THE FIRST BUILD IS THE ART BUILD. THERE IS NO CALM VERSION ONE (Raka, 2026-10-26).** His words on Honey It's

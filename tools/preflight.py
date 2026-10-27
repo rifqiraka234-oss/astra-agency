@@ -132,7 +132,14 @@ print("""  It outranks every other doc except a live instruction from Raka.
       anything, read the tagline against companyName, separate the business
       they OWN from the job they HOLD, confirm the domain is actually theirs,
       and check the statutory record on any owner claim. Two of the first five
-      accepted leads were stale this way, one had sold his company.""")
+      accepted leads were stale this way, one had sold his company.
+
+    BUILDING A PROTOTYPE, ONE GO. docs/build-card.md, Raka 2026-10-27. 12 prototypes took 30
+      versions since 12 Oct, sent back for the Claude look, no wow, no route to the action,
+      the wrong feeling, cheap type. So the card first, then ONLY the hero and one signature
+      moment, screenshotted and sent to Raka. His go, the rest in one pass, check-build.js
+      exit 0, every section screenshotted or bundled to one HTML for his final look. Only on
+      his "final" the full QA and ONE Netlify deploy. Nothing is deployed for review.""")
 
 head("2. GIT")
 print(f"  branch   {sh('git rev-parse --abbrev-ref HEAD')}")
@@ -195,6 +202,7 @@ print("""  get_campaigns                      which are actually running, it cha
 head("6. BEFORE ANYTHING IS SHOWN OR SENT")
 print("""  node tools/site-audit.js <url> <tag>     then OPEN BOTH SCREENSHOTS
   python3 tools/check-drafts.py <file>     exits non zero, cannot be ignored
+  node tools/check-build.js <site> --action "<css>"   our own builds, before Raka sees one
 
   Neither tool judges truth. They only guarantee you never fail on something a
   script could have caught. Passes 1, 2 and 3 of the read back are still yours.""")
