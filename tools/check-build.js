@@ -3,6 +3,7 @@
 
      node tools/check-build.js <site folder or URL> --action "<css>" [--page /path/] [--allow-font "Name"] [--shots dir]
      node tools/check-build.js state/prototypes/x/site --action ".bar a, a[href='#book']" --shots /tmp/x-shots
+     --shots writes the first screen at both sizes for the first look, --sections every section for the final look.
 
    It serves a folder itself, loads each page at 1440x900 and 390x844, and measures what Raka has sent builds back for
    (docs/reviews/2026-10-27-prototype-process-audit.md). The Claude look, from RULES section 5: banned faces, an italic
@@ -25,11 +26,11 @@ const http = require('http'), fs = require('fs'), path = require('path');
 const args = process.argv.slice(2);
 const opt = (k, many) => { const v = []; args.forEach((a, i) => { if (a === k) v.push(args[i + 1]); }); return many ? v : v[0]; };
 const TARGET = args[0];
-if (!TARGET || TARGET.startsWith('--')) { console.log('usage: node tools/check-build.js <site folder or URL> --action "<css>" [--page /x/] [--allow-font Name] [--shots dir] [--json out] [--no-plant]'); process.exit(2); }
+if (!TARGET || TARGET.startsWith('--')) { console.log('usage: node tools/check-build.js <site folder or URL> --action "<css>" [--page /x/] [--allow-font Name] [--shots dir] [--sections dir] [--json out] [--no-plant]'); process.exit(2); }
 const PAGES = opt('--page', true).length ? opt('--page', true) : ['/'];
 const ACTION = opt('--action') || null;
 const ALLOW = opt('--allow-font', true).map(s => s.toLowerCase());
-const SHOTS = opt('--shots'), JSONOUT = opt('--json');
+const SHOTS = opt('--shots'), JSONOUT = opt('--json'), SECTIONS = opt('--sections');
 const PLANT = !args.includes('--no-plant');
 const VIEWS = [['desk', 1440, 900], ['phone', 390, 844]];
 
@@ -178,8 +179,9 @@ window.__cb = (function () {
     return { sections: B.length, tones: tones.join(''), turns };
   }
   function mediaAt(x, y) {
+    // fixed canvases and grain layers can sit after body in the stack, so body and html are skipped, not the end
     for (const e of document.elementsFromPoint(x, y)) {
-      if (e === document.body || e === document.documentElement) break;
+      if (e === document.body || e === document.documentElement) continue;
       const t = e.tagName;
       if (opac(e) < 0.2) continue;
       if (t === 'IMG' || t === 'VIDEO' || t === 'CANVAS' || t === 'PICTURE') return true;
@@ -187,7 +189,7 @@ window.__cb = (function () {
       const s = getComputedStyle(e);
       if (/url\\(/.test(s.backgroundImage) && !/repeat(?!-)/.test(s.backgroundRepeat.replace('no-repeat', ''))) { const r = e.getBoundingClientRect(); if (r.width * r.height >= 0.08 * vw() * vh()) return true; }
       if (/url\\(/.test(s.maskImage || s.webkitMaskImage || '') && e.querySelector('img, video, canvas')) return true;
-      if (alpha(s.backgroundColor) >= 0.95) return false;
+      if (alpha(s.backgroundColor) >= 0.95 && opac(e) >= 0.95) return false;
     }
     return false;
   }
@@ -284,6 +286,20 @@ async function measure(browser, base, page, view, plant) {
     if (y === 0) r.firstAction = await ev(sel => window.__cb.actions(sel, false).length, ACTION);
   }
   r.walk = { steps, gaps };
+  // the final look, every top level block from the top at both sizes, and the middle and end of anything taller
+  if (SECTIONS && !plant) {
+    fs.mkdirSync(SECTIONS, { recursive: true });
+    const tops = await ev(() => { const m = document.querySelector('main'); const root = m && m.children.length > 1 ? m : document.body;
+      const list = [...root.children]; const hd = document.querySelector('body > header'), ft = document.querySelector('body > footer, main + footer');
+      return [...new Set([...(hd ? [hd] : []), ...list, ...(ft ? [ft] : [])])].filter(e => !/^(SCRIPT|STYLE|NOSCRIPT|TEMPLATE|LINK|META)$/.test(e.tagName) && e.offsetHeight >= 120)
+        .map(e => ({ top: e.getBoundingClientRect().top + scrollY, h: e.offsetHeight })); });
+    let i = 0; const tagp = page.replace(/\W+/g, '_').replace(/^_|_$/g, '') || 'home';
+    for (const b of tops) for (const y of (b.h > 1.5 * h ? [b.top, b.top + (b.h - h) / 2, b.top + b.h - h] : [b.top])) {
+      await ev(v => scrollTo(0, v), y); await p.waitForTimeout(600);
+      await p.screenshot({ path: path.join(SECTIONS, `${tagp}-${tag}-${String(++i).padStart(2, '0')}.png`) });
+    }
+    r.sectionShots = i;
+  }
   r.scriptVarsChanged = (await ev(() => window.__cb.scriptVars())) !== vars0;
   if (plant === 'look') await ev(PLANTS.look);
   Object.assign(r, await ev(() => window.__cb.look()));
@@ -360,6 +376,7 @@ function judge(page, res, isHome) {
   }
   console.log('check-build ' + TARGET + (ACTION ? '  action "' + ACTION + '"' : '  (no --action, the generic finder was used)'));
   for (const x of all) console.log((x.broken ? 'DETECTOR BROKEN' : x.warn ? 'WARN' : x.fail ? 'FAIL' : 'pass').padEnd(16) + (x.page + ' ' + x.check).padEnd(30) + x.detail);
+  if (SECTIONS) console.log('section shots ' + Object.values(raw).reduce((n, r) => n + (r.desk.sectionShots || 0) + (r.phone.sectionShots || 0), 0) + ' in ' + SECTIONS);
   const errs = [...new Set(Object.values(raw).flatMap(r => [...(r.desk.errors || []), ...(r.phone.errors || [])]))];
   if (errs.length) console.log('page errors ' + errs.slice(0, 5).join(' | '));
   if (JSONOUT) fs.writeFileSync(JSONOUT, JSON.stringify({ target: TARGET, raw, verdicts: all }, null, 1));

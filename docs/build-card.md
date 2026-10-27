@@ -60,5 +60,10 @@ back to research, never to guess.
 
 ## D. The test before Raka sees either look
 
+check-build passing proves the build has none of the template tells. It doesn't prove the build is good. BWILD v1
+passed every check (the right faces, no tells, canvas and film, an 86% hero, an action on every half screen) and Raka
+still called it "a normal CLAUDE website ... it really doesnt have a wow effect". That's why the first look is his,
+not the script's.
+
 15. Put the screenshots beside BWILD v2, Saavedra v3 and Hertling v3 (the builds he signed off). Would this pass for
     a 25,000 euro site from a top studio? Would anyone screenshot it? If the honest answer is "probably", it's a no.
