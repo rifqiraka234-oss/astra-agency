@@ -1,4 +1,12 @@
-# Bumps for Wed 28 Oct 06.00 Amsterdam (05.00 UTC). SCHEDULED on Raka's word, NOT SENT YET
+<!-- GATE ARCHIVED -->
+# Bumps for Wed 28 Oct 06.00 Amsterdam (05.00 UTC). ALL FOUR SENT, do not send again
+
+> SENT 28 Oct, one copy each, thread pulled before and after. Elle 05.03.09 UTC act_YpdWnd2D6r6r2XBqL, Laurens 05.03.29
+> act_vpTYyyMeezWZ7awQZ, Lupo 05.03.50 act_uy8u23deHEb57BQHB. Do not send them again.
+> Willem HELD. His bump asks whether the email to marketing@keypro.nl came through, so it only goes once Gmail shows no
+> reply from keypro. Every Gmail call at 05.01 to 05.07 UTC returned "Resource has been exhausted".
+> Willem SENT 06.18 UTC (07.18 Amsterdam), act_tQaZQpLcmW5G4nM56, one copy, thread 8 items. Gmail answered at 06.18 UTC,
+> both Keypro threads still one message each, ours, no reply. Links 200 with their titles, thread unchanged before.
 
 Raka, 27 Oct ~19.10 UTC, on Elle, Laurens, Willem and Lupo, "these ones i'd do it wednesday at 6:00 since wednesday has the
 highest chance of reply". That's earlier than the 3 day rule would put them (Elle Wed 22.13, Laurens and Willem Thu 09.13,

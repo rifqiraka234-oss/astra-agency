@@ -1,4 +1,10 @@
-# Replies, 26 Oct evening. NOT SENT, waiting on Raka's word
+<!-- GATE ARCHIVED -->
+<!-- Rachel SENT 28 Oct 05.05.02 UTC, act_QLpA3FnQw3hxWob6c, one copy, site rechecked 05.01 UTC (trip button still gmail.comm, NXDOMAIN; Paris 101 still premire). Julien's was never sent and is dropped. Do not send anything in this file. -->
+# Replies, 26 Oct evening. Rachel SCHEDULED, Julien NOT to be sent, NOT SENT YET
+
+> Raka, 27 Oct ~20.10 UTC, "the rest, like, you can send them tomorrow morning at 6 as well". Rachel's goes Wed 28 Oct
+> 06.00 Amsterdam (05.00 UTC) in the send_later run trig_013uSpSyfZAqEBtjde1xnGHM, dry run clean ~20.12 UTC, facts rechecked
+> 27 Oct ~19.58 UTC. Julien's below was optional, he meets Raka Wed 15.30 and accepted the invite, so it's dropped.
 
 Inbox pulled 26 Oct 19:28 UTC with tools/lemlist.py inbox --your-turn, then every thread that moved today pulled whole
 (9 threads, all pages, control 6). Only these two need a word from us.

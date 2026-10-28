@@ -1,4 +1,10 @@
-# Replies, 27 Oct. NOT SENT, waiting on Raka's word
+<!-- GATE ARCHIVED -->
+<!-- SENT 28 Oct. Neil 05.04.25 UTC act_z9ZPZ8bPhy6cfkyw3, Milo 05.04.43 UTC act_5PpEhNv5QyR6DcFti, Marco 05.05.30 UTC act_hNDNMNvPSBZ2NJ2D9 (on Raka's "send marco"). One copy each. Do not send again. -->
+# Replies, 27 Oct. Neil and Milo SCHEDULED, Marco waiting on Raka's word, NOT SENT YET
+
+> Raka, 27 Oct ~20.10 UTC, "the rest, like, you can send them tomorrow morning at 6 as well". Neil and Milo go Wed 28 Oct
+> 06.00 Amsterdam (05.00 UTC) in the send_later run trig_013uSpSyfZAqEBtjde1xnGHM, dry runs clean ~20.12 UTC. Marco's was
+> drafted after that, from the Gisella call, and goes in the same run only if Raka says send.
 
 ### Neil Bhuiyan, HappySelling, ctc_4CQjbLtm5DXovG8WJ
 
@@ -35,4 +41,21 @@ Thanks Neil! I came across you while looking for other founders of small busines
 REPLY
 ```
 Sure Milo, take your time! If it helps you decide, I can send you a small sample first, ten investors who back coffee and food concepts around Zürich, each with the first message I'd send them. Then you can see what the system would actually do for Warung Kopi.
+```
+
+### Marco Ghilardi, QuasiScience, ctc_tmt7dACzww47FMfXx
+
+> NOT SENT, waiting on Raka's word for this one. Thread pulled 27 Oct ~19.58 UTC, 6 items, all pages, control 6. Marco
+> 23 Oct, "Seems like we both like racing too ... I definitely need more contacts with sales expertise. The next couple of
+> weeks I'm travelling though. Would you be up for a call with my chief of staff?". Marco 26 Oct 14.21 UTC, "Sent. Let me
+> know if not received. Looking forward to hearing more about your approach". The call with Gisella Doulton was today
+> 12.30 Amsterdam. Gisella's email after it, 27 Oct 16.21 UTC (Gmail thread 1a17df3da5a6e723), read 27 Oct ~20.15 UTC,
+> "It was a pleasure to meet you earlier today", the capability packs, a partnership idea and the KYC tool, and on their
+> own sales "we probably just need to get on with doing lots of outreach and calls to start off with". Raka's reply sent
+> by the "Gisella meeting prep" session, 16.53 UTC (1a17e48304c45b8a), to Gisella only, "My next step is to send you a
+> proposal for a lead generation setup". Marco wasn't copied, so this tells him.
+
+REPLY
+```
+Hey Marco, thanks for connecting me with Gisella, it was great to meet her today. She walked me through QuasiScience's tools and the plan to start with lots of outreach and calls, so I'm putting together a proposal for a lead generation setup to get that going. And when you're back from your travels, I'd love to hear about the racing too!
 ```
