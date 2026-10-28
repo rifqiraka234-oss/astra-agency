@@ -27,13 +27,15 @@ final lets put it to html or screenshot first". Since 12 Oct, 12 prototypes took
 was the safe one and the art came second. So.
 
 1. **Read this whole brief.**
-2. **Research for the build** (section 17). Their whole site, every Instagram post you can read, the menu, five or more
-   premium dessert and confectionery sites for the type, and 20 or more award level sites rendered today for the art.
+2. **Research for the build** (section 17). First the AI default, what a normal Claude or ChatGPT website for a dessert
+   shop looks like, so you know exactly what not to make. Then their whole site, every Instagram post you can read, the
+   menu, five or more premium dessert and confectionery sites for the type, and beyond the top 50, the best sites in the
+   world rendered and fingerprinted today for the art and the story.
 3. **Fill the build card** (section 19, A to D) with a source for every line. A line you can't answer sends you back to
    research, never to a guess.
 4. **Build the first screen only.** The hero and ONE signature moment (the pour, section 11), locally, working.
-5. **First look.** Send Raka the card's sections A to C plus screenshots at 1440 by 900 and 390 by 844, and three frames
-   of the pour mid motion. Then STOP and wait for his go. A note here costs one screen, not a site.
+5. **First look.** Send Raka the card's sections A to C plus screenshots at 1440 by 900 and 390 by 844, three frames
+   of the pour mid motion, and your first screen beside the AI default sites from 17A. Then STOP and wait for his go. A note here costs one screen, not a site.
 6. **On his go, build the rest in one pass** to the card.
 7. **Run every check in section 18** until all pass, each with its planted failure caught.
 8. **Final look.** Every section screenshotted at 1440 and 390, plus the whole site as ONE self contained HTML file
@@ -519,15 +521,56 @@ agency for Charlie's Desserts. Prices from Charlie's menu. Nothing here places a
 
 ## 17. Research you still do, today, before the card
 
+### 17A. Go beyond the normal Claude or ChatGPT website. Research the default first, then leave it behind
+
+Raka's words, on builds that came back. "think outside of your AI box ... it still feels like the lovable and AI stuff"
+(CustomKit). "take like the top 50 companies in the world ... Check their website ... Does it tell a story? What kind of
+media do you need to tell the story?" (Qualigraf). "we have just taken what they've done and put an icing cake on it ...
+You didn't redesign it" (Qualigraf again). And on 28 Oct, for this build, "go beyond the normal claude or chatgpt
+website's".
+
+**Say this to yourself plainly. You're an AI, and your default taste IS the look Raka sends back.** When you judge your
+own build, you judge it with the taste that made it, so "this looks good" passes when it shouldn't. The only fix is to
+look at the default on purpose, write it down, and build against it.
+
+1. **Map the AI default for exactly this brief.** Render ten or more sites made with AI site builders and templates
+   (Lovable, v0, Bolt, Framer AI, Wix AI, Durable, Squarespace and Shopify dessert, ice cream and cafe templates) and,
+   if you can, ask a plain chat model for "a website for a dessert parlour with online ordering" and screenshot what it
+   gives. Write the pattern list. Expect a pastel or dark hero with a centred headline, "Indulge in..." copy, pill
+   buttons, a three up bestsellers grid of square photos, rounded cards with soft shadows and emoji or line icons,
+   fade up reveals, a testimonial carousel, an Instagram strip, Inter or Poppins or a script face. Charlie's current
+   site is most of this list already.
+2. **Go beyond the top 50.** Render 50 of the best sites in the world, not only dessert. Food and drink brands,
+   confectionery and toy brands, product launch pages (Apple's product pages, Nike), Awwwards and FWA winners, studios
+   known for WebGL, physics and playful product configurators. Script it, one run, a screenshot of each at 1440 and
+   390. Get past bot walls with a real browser TLS fingerprint (curl_cffi impersonation through Playwright) before you
+   give up on one, and name the ones that stayed walled. Report how many actually rendered, never "top 50 studied" when
+   30 did.
+3. **Fingerprint them, don't just look.** Count at runtime while scrolling. WebGL canvases, videos, sticky and pinned
+   scenes, clip-path masks, blend modes, physics or animation libraries, words on the first screen, and how each one
+   moves a visitor to its action. The numbers tell you what the best actually do, which a screenshot can't.
+4. **For each, the one move worth taking**, and what kind of media tells each part of the story. Every chapter of
+   Charlie's gets a different medium (a pour, physics, a drag number, a printed ticket, a stripe wipe, their full bleed
+   photo, a shopfront). Two chapters in a row with the same medium reads as a template.
+5. **The departure table**, in the card. Left column, every pattern from step 1. Right column, what the Charlie's build
+   does instead, made from her own material. A redesign changes four things at once or it isn't one. Palette and type,
+   the page grammar (how a section is built), the story spine, and the media. Her site with effects on is the icing on
+   the cake Raka rejects.
+6. **The red team before the first look.** Write five lines describing how a default AI would have built this homepage.
+   Then put your first screen beside your step 1 screenshots and the best of step 2. If yours sits closer to step 1,
+   start again before Raka sees it.
+
+### 17B. The lead and the field
+
 1. **Their site and posts, opened yourself.** Every page of charliesdesserts.com, the menu PDF, and every Instagram post
    you can read (the public embed at https://www.instagram.com/charliesdessertshop/embed/ shows the newest six, older
    posts through https://www.instagram.com/p/<code>/embed/captioned/). Write down every caption line you might use.
 2. **Type and premium look.** Render five or more premium dessert, confectionery and patisserie sites and write down the
    faces each uses. Candidates to try, drop any that don't load. Milk Bar, Dominique Ansel, Ladurée, Pierre Hermé,
    Venchi, Amorino, Van Leeuwen, Salt & Straw, Jeni's, Morelli's, Crumbl, Sketch London. Add your own finds.
-3. **The art.** Render 20 or more award level sites today (Awwwards Sites of the Day, FWA, the studios behind them),
-   weighted to food, drink and playful brands with real motion, WebGL fluid, physics and product configurators. Write
-   one line per site on the technique worth taking. The signature moment is measured against these.
+3. **The art.** Within the 50 of 17A, at least 20 award level sites (Awwwards Sites of the Day, FWA, the studios
+   behind them), weighted to food, drink and playful brands with real motion, WebGL fluid, physics and product
+   configurators. One line per site on the technique worth taking. The signature moment is measured against these.
 4. **The rivals** in section 4, so the card can say in one line why Charlie's beats every one.
 5. **Media.** Any licence checked film or photo you'll use, with its page and licence.
 Record everything with its URL in `research/notes.md` in the build folder.
@@ -585,16 +628,20 @@ the one file HTML.
 12. What changed from their site, in one line.
 13. Every photo and film listed, whose it is, its licence, third party marks checked.
 14. Not one item from section 13, and the checks in section 18 pass.
+15. The AI default (17A step 1, how many sites, the pattern list) and the departure table (17A step 5).
+16. Beyond the top 50 (17A steps 2 to 4), how many rendered, which stayed walled, the moves taken and from where.
 
 **D. The test**
-15. Screenshots beside BWILD v2 and Saavedra v3. Would this pass for a 25,000 euro studio site? Would anyone screenshot
-    it? Say why, honestly.
+17. Screenshots beside BWILD v2 and Saavedra v3, and beside the AI default screenshots. Would this pass for a 25,000
+    euro studio site? Would anyone screenshot it? Does it sit closer to the best of the 50 than to the AI default? Say
+    why, honestly.
 
 ---
 
 ## 20. What you hand back
 
-**At the first look.** `card.md` (A to C), first screen at 1440 and 390, three frames of the pour. Then wait.
+**At the first look.** `card.md` (A to C, with lines 15 and 16), a contact sheet of the AI default sites beside your
+first screen, first screen at 1440 and 390, three frames of the pour. Then wait.
 
 **At the final look.** Every section at 1440 and 390, and the one file HTML. Then wait for "final".
 
