@@ -225,6 +225,12 @@ tagline and title, so it's a first cut, and research still checks who pays them 
 4. W1b and W1c paused, or kept to a few invites a day if Raka wants 500 euro builds for case studies.
 5. A split to start, about 8 invites a day to W3, 6 to W4, 4 to W5. Research is the limit, about 5 openers a day.
 
+**Raka's call, 28 Oct ~18.10 UTC.** "B2B and also consumer services, that's also still fine, because like I'm okay with load
+balling like to like 500 euros like healthy secrets ... Clinics and accounting, that's also fine as well. I like that."
+So consumer stays in at a 500 euro start, next to B2B and W5. The mix is W3 and W4 (B2B), W5 (clinics, law, accounting)
+and W1b and W1c (consumer services), roughly a quarter of the 18 daily invites each. Launching or pausing a campaign
+stays his word.
+
 **Retargeting the people we already have.** The 67 final closers run 10 a day from 29 Oct. The four still interested notes
 go 30 Oct. The not nows get a date, HotGreen mid December, Acquitas January, Saavedra end of January, Aiden for his 2027
 rebrand. Anyone who asks to move off LinkedIn moves (Lupo, WhatsApp).
