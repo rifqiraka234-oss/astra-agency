@@ -19,3 +19,7 @@ playbook says when in doubt show the draft and wait, and the call is a week away
 - Dry run, BOOKING, 63 chars, sha256 19fdd61a2edf08da, thread 13 items. Nothing sent.
 
 **On Raka's word.** Pull the thread and the event again, a fresh dry run, then `--go` with his words, one copy after.
+
+**Sent 07.54.15 UTC on Raka's "send steven", act_J3pYngRDj8F3Hr8xY.** Thread and event pulled again first, unchanged (13
+items, ours last, event confirmed 4 Nov 12.00 Amsterdam). Fresh dry run, same sha256 19fdd61a2edf08da, then --go. One copy
+after, identical text, thread 14 items, control 7.
