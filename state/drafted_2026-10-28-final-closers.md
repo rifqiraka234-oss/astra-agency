@@ -1,4 +1,4 @@
-# Final closing messages, 67 people. NOT SENT, waiting on Raka's word
+# Final closing messages, 67 people. SCHEDULED on Raka's word, 10 a day from Thu 29 Oct 06.00, NOT SENT YET
 
 Raka, 28 Oct ~11.35 UTC, "can we send a final final closing, like name, im gonna close it here, if you want to ever xxx you
 know where to find me", for the two groups in the 11.17 UTC audit, opener plus plain 👀 bump (48) and opener plus
@@ -21,6 +21,18 @@ wants it in Dutch.
 
 **The 20 a day limit.** 19 went out today already. So these go from Thu 29 Oct, oldest first, around the bumps and notes
 already due, Thu 15 (the 5 Thursday bumps take the rest), Fri 16 (the 4 Friday notes), Sat 20, Sun 16. Raka's call.
+
+
+**SCHEDULE, on Raka's 28 Oct ~12.35 UTC "Yeah, okay, then, like, let's do, like, for example, 10, and do it at 6 o'clock".** Ten a day at 06.00 Amsterdam (05.00 UTC), oldest first, in this file's order.
+- Batch 1, Thu 29 Oct, 10. Etienne Lefebvre ctc_nYnQgsLWCc384BqPm, Nikita-Tarass H. ctc_hgJ48N6PQ4Thn7wFB, Umer Adnan ctc_xozMFobDpEC8sdukg, Salim Saleem ctc_RDogafhkpGPbrnp7H, Jamie H. ctc_D5F2nC69pjMjAuvk2, Yolanda Heeren ctc_v4Kie5QRq97eaoHPR, Josh Fairbairn ctc_pNPsWdEMRCb4ccQev, Evie Barker ctc_5LYgS8GTT5QrzxPQh, Abraham Akrouche ctc_RBjzAkhMRziM9wYj8, Olivier Clybouw ctc_JKSruaBKANQQHD48b
+- Batch 2, Fri 30 Oct, 10. Angela Barlow ctc_4NgbWujpWmFTW6Jb4, Larissa Mora Morcillo ctc_kqKNB7SGPafWSK8hW, Roy Hoven ctc_gye9ypfozqp4QQ8cs, Manon Picot ctc_9sL42u8eTWQSjB2tM, Nina Jameson ctc_ii4DqtpBgQ6fwfwto, Julia Wilckens ctc_Xn4u3Nce3KfCLngEi, Marcel Van Milt ctc_2J8oom4KjBoqds6Cm, Mudabbir 孟達柏 ctc_wzyEGEbnExHikwSxX, Sebastien Goenen ctc_fnRmMWgxgv7mF2W76, Daan Erisman ctc_NwqJExzhsL5SYoEME
+- Batch 3, Sat 31 Oct, 10. William M. ctc_icT5oEajhtmH6dcAd, Muhammad Akbar ctc_9yfzLTQP9ehdYKdY6, Cédric Morel ctc_wsqBdgSdjP6P6Yxvw, Emmanuel Rivière ctc_bF7KcGsTjT23mo3ye, Bartek Ogonowski ctc_3fSkB4dv38ScfzXkH, Bouils Stéphane ctc_xvsocGv6PaJCDrgxs, David Brauman ctc_n3rxAxdmtuJpgW8NH, Emily R. ctc_rMYGbmu7Piu5Pmwei, Laurent Fournié ctc_e5TddBr53qxiLyida, Léo Grandperrin ctc_biurQgp9YgReZKtL9
+- Batch 4, Sun 1 Nov, 10. Vincent Bucaille ctc_xtQnzSvvms6TEoAxS, Frank Hemmert ctc_CLQ5T3DEaeG2SMG9d, Jamie Bolding ctc_4XQDxYiE3NkeqKPEy, Nicolas Bergé ctc_mQBx2Mr64rqs7v4Qu, Robin Conway ctc_7hNbkAjk4urRmcjji, Thomas Hebenstreit ctc_3S2rDnBX9W5hd3F8G, Thomas Langlet ctc_vp6dPpiBHosd9oW78, Victor Felipe Florenz ctc_CFbKYC6c3yM6MrcAP, Dan Waterfall-Chapman ctc_eGXerDBzTghqprWZh, Jean-Christophe Conticello ctc_iWGMxjeTYkzegg78v
+- Batch 5, Mon 2 Nov, 10. Niklas Mocker ctc_Wg9Bv7Z7vMqpNQx78, Orion D. ctc_JiMGgwH639YbSSZfE, Darren Buckley ctc_q5NZMCjRn6NgvuQbT, Fabian Mader ctc_vHXN93Sa98zrL6roG, Marjolein Schoot Uiterkamp ctc_vmg2iAtNxvpSW7d93, Reno Wiertz ctc_F57ZqzDSwGEB8ad8H, Martijn Dijk ctc_Z3J4EAKarueohCqxj, Alex Talbot ctc_XDRJdGuNAsHxttMmv, Alexandre Francois ctc_5N8eTkQMH9tMYswtK, Alice Poubelle ctc_PLeDim4Mhp2CtQyiu
+- Batch 6, Tue 3 Nov, 10. Andres Jara ctc_bWcfiNE764D4PfGJt, Charles De Brosses ctc_vHnigB2dXAPYKJJ8k, Dan D'souza ctc_ZSXZCGSgniBKAESgP, David Weyn ctc_vm6BXBrFDAir6Rb3F, Joe Benucci ctc_i3GAp7FZtMeQ38KAX, Maharjan Jagdees ctc_2zdt5XmnTSPqWvhJC, Paul Barnes ctc_wRuu8puzBRRBgNCyC, Rachel Blanckensee ctc_G8gRt44CmSG6Rpdnu, Sacko Diombera ctc_kLF4aRGsEdBZvNruG, Sandro Wulf ctc_YF6GhP26nDSvRyPZR
+- Batch 7, Wed 4 Nov, 7. Claire Enders ctc_sQPTmkW8KGwkediDD, Guillaume Slee ctc_mG6iR58sQQAXKgKEk, Kevin Hanson ctc_BAsKeiWpJiTEmbqfz, Rob Quinn ctc_k6YrDTTW2zZ3MhxB3, Sonny Wells ctc_BY3K7TQYXkrRDydck, Jean-Charles Chemin ctc_eD2TwrqAxJEP8WbyQ, Sandra Deddens-Otterspeer ctc_fpRF7TPZGkTAKwvTL
+
+Wake triggers, set 28 Oct 12.40 UTC: batch 1 Thu 29 Oct 05.00 UTC trig_01N9Fa2zA3p92Gqu1gZJGG8n, batch 2 Fri 30 Oct 05.05 UTC trig_01Y62Qwdz4raJ8jLaq3T23R7, batch 3 Sat 31 Oct 05.00 UTC trig_01LEG2sfHh1ypacevVhBmck8, batch 4 Sun 1 Nov 05.00 UTC trig_017r2vqgWBKC1xsnCrGbeFAf, batch 5 Mon 2 Nov 05.00 UTC trig_01DaLniVDrDnoQ24P6t8EDF8, batch 6 Tue 3 Nov 05.00 UTC trig_0156A7QermKs4RJ7Fq7GqXGF, batch 7 Wed 4 Nov 05.00 UTC trig_01F2RPRWS9Ze99HYLhFDKw7d. Friday's runs at 05.05 so the four still interested notes (trig_01647h2JWNKUJ8eMsu7rtBWE, 05.00) go first.
 
 **At send time, for each one.** Pull the thread with the control. Anything from them since our second message, or any
 newer queue row, means don't send and tell Raka. Copy from this file, confirm one copy after.
