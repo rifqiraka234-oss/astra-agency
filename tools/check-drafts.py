@@ -759,7 +759,11 @@ def check(path, replies=False):
              # The SKETCH test shape's fixed words, Raka, 2026-10-12.
              "looks cool!", "i'd suggest", "shall i send you a sketch of",
              # The SKETCHB shape's fixed words, 2026-10-25.
-             "looks cool.", "shall i send you a sketch?")
+             "looks cool.", "shall i send you a sketch?",
+             # Raka's final closer, his words, 2026-10-28, "name, im gonna close it here, if you want to ever xxx
+             # you know where to find me". The same frame in every message on purpose, only the offer changes.
+             "i'm going to close it here.", "if you ever want", "you know where to find me.",
+             "that sketch of the", "to see the")
     c = Counter()
     for m in msgs:
         low = m.lower()
