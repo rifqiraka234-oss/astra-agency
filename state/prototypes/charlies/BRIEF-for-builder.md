@@ -15,8 +15,9 @@ Charlie's site where people create their own dessert at your menu prices and ord
 "Yes pls". Build that site as a working prototype. A visitor lands, builds their own waffle, shake or cookie dough from
 the real menu at the real prices, watches it being made, and orders it straight from Charlie's for collection or
 delivery. Birthday and celebration tables book and confirm on the same site. It has to look like a 25,000 euro site from
-a top studio, feel like walking into their shop, and carry one moment nobody has seen on a dessert site before. One
-build, approved in two looks, no second version.
+a top studio, feel like walking into their shop, and carry one moment nobody has seen on a dessert site before. Beside
+it, a plan site in Astra's voice that shows what the new site does for her, what runs underneath, six weeks to live and
+the cost, €10,000 (section 21). One build, approved in two looks, no second version.
 
 ---
 
@@ -36,11 +37,13 @@ was the safe one and the art came second. So.
 4. **Build the first screen only.** The hero and ONE signature moment (the pour, section 11), locally, working.
 5. **First look.** Send Raka the card's sections A to C plus screenshots at 1440 by 900 and 390 by 844, three frames
    of the pour mid motion, and your first screen beside the AI default sites from 17A. Then STOP and wait for his go. A note here costs one screen, not a site.
-6. **On his go, build the rest in one pass** to the card.
-7. **Run every check in section 18** until all pass, each with its planted failure caught.
-8. **Final look.** Every section screenshotted at 1440 and 390, plus the whole site as ONE self contained HTML file
-   (images and fonts inlined as data URIs, so it opens offline by double click). Send those to Raka. Nothing deployed.
-9. **On his "final"**, hand back the build folder (section 20). Astra deploys it to Netlify itself. You don't deploy.
+6. **On his go, build the rest in one pass** to the card, and the plan site (section 21) with it, its screenshots taken
+   from the finished prototype.
+7. **Run every check in section 18** until all pass, each with its planted failure caught, on both sites.
+8. **Final look.** Every section of both sites screenshotted at 1440 and 390, plus each site as ONE self contained HTML
+   file (images and fonts inlined as data URIs, so it opens offline by double click). Send those to Raka. Nothing
+   deployed.
+9. **On his "final"**, hand back both folders (section 20). Astra deploys them to Netlify itself. You don't deploy.
 
 There is no calm version one. The art is in the first screen Raka sees.
 
@@ -343,11 +346,12 @@ The dessert the visitor picks rises out of the hat. Or the hat tips and the shop
 the camera falls into the hat and lands under their awning. Keep it theirs, keep it simple, and make sure the first
 screen still carries the first input and the order action.
 
-### The finish. The ticket
-Their own caption says "No golden ticket needed, just a sweet tooth". The order ends on a ticket that prints, gold foil
-that tilts with the phone or the cursor, with their creation drawn small on it, the shop, the time, the total and a
-ticket number. Placing the order stamps it. The booking ends the same way, a confirmed table ticket. Never use the word
-Wonka or anything from the film or books (section 15).
+### The finish. The golden ticket (Raka approved it, 28 Oct)
+Their own caption says "No golden ticket needed, just a sweet tooth". Every order ends on a golden ticket that prints,
+real gold foil that tilts with the phone or the cursor, with their creation drawn small on it, the shop, the collection
+time or delivery, the total and a ticket number. Placing the order stamps it. The booking ends the same way, a golden
+table ticket for the party, stamped confirmed. It's the finish of the whole page, so give it the same craft as the pour.
+Never use the word Wonka or anything from the film or books (section 15).
 
 ### Optional, only if each earns its place
 - Pick and mix as a wall of their own sweet macro (photo 16) that parts round the cursor.
@@ -487,7 +491,7 @@ agency for Charlie's Desserts. Prices from Charlie's menu. Nothing here places a
    source whose own page you read, with its licence written down (on Mixkit read each item's copyrightNotice, some are
    "Restricted", personal use only). Never captioned or implied as Charlie's. The handover lists each one.
 10. **Nothing time limited.** No half term sale, no "new" badges that will date.
-11. **Never put anything from section 21 on the site.** That's for Raka.
+11. **Never put anything from section 22 on either site.** That's for Raka.
 
 ---
 
@@ -656,7 +660,16 @@ charlies-prototype/
   qa/                   the check scripts and their last output, plants included
   HANDOVER.md
 ```
-**HANDOVER.md** says, in plain words. Who it's for and the one action. What's real and what's illustrative (delivery
+**And the plan, its own folder**, `charlies-plan/`.
+```
+charlies-plan/
+  index.html css/ js/ media/ fonts/
+  plan.json             every figure and line with its source URL and the date read
+  shots/                today's screenshots of her site and the six from the final prototype
+  _headers robots.txt favicon
+  qa/                   the sums test (recomputes every number from plan.json), with its plant
+```
+**HANDOVER.md** (one, for both sites) says, in plain words. Who it's for and the one action. What's real and what's illustrative (delivery
 area, time slots, the mock order). Every outside photo or film and its licence. Every assumption Danielle should confirm
 (what a create your own base includes, Huddersfield hours, whether Brighouse has frozen yoghurt, whether "Golden Box" has
 replaced The Ultimate Box). What she'd swap in (her own reels and footage of the counter and the pour). The check results
@@ -664,7 +677,71 @@ with numbers. Anything you couldn't do.
 
 ---
 
-## 21. Only for Raka, never on the site
+## 21. The plan site (Raka said yes, 28 Oct)
+
+Built in step 6 with the rest of the prototype, shown in the final look, handed back as `charlies-plan/` and deployed by
+Astra as astra-charlies-plan. A short site in Astra's voice ("we"), written to Danielle ("you"), an owner who knows her
+margins, so it never explains her business to her. Same look rules and copy rules as the prototype, its own art in the
+same world (her colours and shapes). One bright chapter only, the one that carries the argument, everything else on her
+purple. Graphs are controls. Every figure lives in `plan.json` with its source and the date read, and a test recomputes
+every sum from that file and compares it with the page, with a planted fault it must catch. Nine chapters at most.
+
+1. **Cover.** "Prepared by Astra for Danielle Best, October 2026." A headline about her own orders coming straight to
+   her, a short lede, then what we found, at most four lines, each with its source under it. The only order button on
+   her site goes to Uber Eats. The menu is two pictures and a PDF. The booking form asks for a time in Central European
+   Time and never confirms. Huddersfield isn't on the site.
+2. **Today.** Screenshots of her site taken on the day you build (the home's first screen, the menu page, the
+   reservations form, desktop and phone), each captioned with what a visitor can and can't do there. Never "old" or
+   "outdated" (the site is from Aug 2025) and never "broken".
+3. **Where an order goes.** A control. The visitor follows one order from an Instagram post to her site, today out to
+   Uber Eats, with the new site onto Charlie's own golden ticket. Built from her real links.
+4. **What the listed fees take.** A control, the bright chapter. Sliders for orders a week that start on her own site
+   or posts, the average order value, and the split between delivery and collection. It shows what Uber's listed UK
+   fees would come to over a year, 30% on delivery and 13% on pickup, both excluding VAT
+   (https://merchants.ubereats.com/gb/en/pricing/, read 28 Oct 2026). The defaults are examples and the sliders say so
+   ("move these to your own numbers"). Never write her own rate, her own order count or "you pay". Say her own agreement
+   with Uber may differ. The point is the orders her own channels start, Uber Eats can keep the ones that start on
+   Uber's app.
+5. **The build.** Six screenshots retaken from the final prototype (the hero, the pour, a favourite, the menu, the golden
+   ticket, the booking), one line each.
+6. **What runs underneath.** Proposed, and chosen with her. One site for both shops. Orders and payments straight into
+   her own account through a payment provider (Stripe or Square as examples). Each order lands on a tablet or printer in
+   the right shop. Collection slots inside opening hours. Delivery by her own drivers or a per delivery courier. Table
+   bookings that check availability and confirm by email. The menu as one file her team edits, so a price changes
+   everywhere at once. Orders, bookings and where each came from measured from the first day. Her Instagram, TikTok and
+   Facebook links pointed at the new pages. Never name or comment on the ordering system her other brands use.
+7. **The cost.** Headline "€10,000 for the whole site." Lede "One price for everything in this plan, half to start and
+   half when it's live." Then what's included, the site from the prototype with every moment in it and everything in
+   chapter 6. Then "Not in the price, the payment provider's and courier's own fees, and your ad spend." One price, no
+   smaller option. In euros, as Astra quotes.
+8. **Six weeks to live.** Weeks 1 to 2, the menu as data, her photos and footage, the builder and the pour. Weeks 3 to
+   5, ordering and payments for both shops, bookings, the rest of the site, every old address redirected. Week 6, tested
+   in both shops with real orders, then live.
+9. **Who builds it, and next.** The team, copied exactly as below. Then "Next, a call." with one line, "Twenty minutes to
+   walk through the site and the plan and settle where to start", and an email button to Raka (leave the address as
+   `RAKA_EMAIL`, Astra fills it in at deploy). The foot, "Prepared by Astra for Charlie's Desserts, October 2026.
+   Screenshots of charliesdesserts.com taken [the date you took them]. Each figure names its source underneath."
+
+**The team, word for word.**
+- "Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on
+  strategy and project management, Amwisesa building."
+- "The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and
+  Telkom."
+- "Built by Amwisesa, Astra's development partner, often through the brand's own agency." (This line must always sit
+  with the brand list.)
+- **Raka Mulya.** "Go to market architect and entrepreneur. Your contact at Astra." "Led global ebusiness data and
+  insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs
+  sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and
+  scaled it." https://www.linkedin.com/in/raka-mulya-b92885196/
+- **Joshua van Zeelt.** "Founder of Astra Agency and JML Agency." "Builds custom websites, software and apps from the
+  first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic
+  Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset
+  app that forecasts maintenance." https://www.linkedin.com/in/joshua-van-zeelt/
+No photos of either unless Raka supplies them.
+
+---
+
+## 22. Only for Raka, never on either site
 
 - **Budget flags.** Companies House, read 28 Oct 2026. DOBB LEISURE LIMITED (16057311, food services, registered at her
   group's Brighouse address, the likeliest operator of Charlie's, though nothing on the register names Charlie's) has an
@@ -672,29 +749,26 @@ with numbers. Anything you couldn't do.
   statement overdue. Could be filing lag or a restructure.
 - **Her group already sells direct** on Foodhub for Mexi Bean, so her likely question is "why not just add Charlie's to
   Foodhub". The answer the prototype gives is the create your own experience, which a Foodhub menu doesn't do.
-- **Part two, the plan site, only if Raka asks for it** after the prototype's final. If he does, a short site in Astra's
-  voice on its own folder. Today's three screens of her site (the Uber Eats button, the picture menu, the CET booking
-  form). A control where the visitor sets an example weekly order count and order value and sees what Uber's listed
-  30% delivery and 13% pickup fees (ex VAT, Uber's page, read 28 Oct 2026) would take in a year, labelled as an example,
-  never as her numbers. The build in screenshots from the final prototype. What runs underneath (direct ordering and
-  payments, delivery by her own drivers or a per delivery service, bookings that confirm, the menu as data she edits).
-  Six weeks to live. The price only if Raka gives one. Same look rules, same copy rules.
-- **The delivery message, drafted, sent only by Raka** after the live link is checked.
+- **The price.** Raka, 28 Oct, "it should be at least 10000 euro". The plan says €10,000 for the whole site, half to
+  start and half when it's live (the split carried over from the BWILD plan), with no smaller option.
+- **The delivery message, drafted, sent only by Raka** after both live links are checked. The price stays on the plan
+  page, never in the message.
 
 ```
-Danielle, here's the sketch I offered, a Charlie's site where people create their own dessert at your menu prices and order it straight from you, and every button on it works.
+Danielle, here's what I offered, a Charlie's site where people create their own dessert at your menu prices and order it straight from you. Birthday tables book and confirm on it too.
 
 Try it yourself.
 https://astra-charlies-prototype.netlify.app
 
-Birthday tables book and confirm on it too, and you'll find Huddersfield's frozen yoghurt in there.
+I've also written the plan behind it, with what it takes to go live and the cost.
+https://astra-charlies-plan.netlify.app
 
 What do you think?
 ```
 
 ---
 
-## 22. The menu as data
+## 23. The menu as data
 
 The full `menu.json` sits next to this file. If you only received this brief, here are the parts the builder needs
 most. Every named item and its price is in `menu.json`, and the PDF is the final word.
