@@ -1,4 +1,4 @@
-# Bumps for Thu 29 Oct 06.00 Amsterdam (05.00 UTC). SCHEDULED on Raka's word, NOT SENT YET
+# Bumps for Thu 29 Oct 06.00 Amsterdam (05.00 UTC). SCHEDULED on Raka's word, NOT SENT YET. Four, Danielle removed
 
 Raka, 28 Oct ~12.35 UTC, "Yeah, okay, then, like, let's do, like, for example, 10, and do it at 6 o'clock", on the plan
 that put these five in Thursday's 06.00 run with the first 10 closers. Each got one pitch on 26 Oct (the A/B test's first
@@ -40,12 +40,9 @@ NUDGE
 👀 Erik, have you seen this?
 ```
 
-### Danielle Best, Charlie's Desserts, ctc_EYmubFsDGMzFWbfxe
-
-NUDGE
-```
-👀 Danielle, have you seen this?
-```
+**Danielle Best (Charlie's Desserts) REMOVED 28 Oct ~14.58 UTC, do not bump.** She said "Yes pls" at 14.07 UTC
+(act_LRjEGpRLiSiD8SYQN), and the other session has her as SAID_YES_BUILDING with Raka building the prototype from
+state/prototypes/charlies/BRIEF-for-builder.md.
 
 ### Léonard Chalvet, Bruno, ctc_TWiur2DNPKzZcPmfM
 
