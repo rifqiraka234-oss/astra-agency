@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- SENT 28 Oct. Neil 05.04.25 UTC act_z9ZPZ8bPhy6cfkyw3, Milo 05.04.43 UTC act_5PpEhNv5QyR6DcFti, Marco 05.05.30 UTC act_hNDNMNvPSBZ2NJ2D9 (on Raka's "send marco"). One copy each. Do not send again. -->
 # Replies, 27 Oct. Neil and Milo SCHEDULED, Marco waiting on Raka's word, NOT SENT YET
 
 > Raka, 27 Oct ~20.10 UTC, "the rest, like, you can send them tomorrow morning at 6 as well". Neil and Milo go Wed 28 Oct

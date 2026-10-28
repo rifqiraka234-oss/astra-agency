@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Noah SENT 28 Oct 05.02.42 UTC, act_HfsXStfNEzciTg8mQ, one copy, thread 7 items. Do not send again. -->
 # Deal bumps, 27 Oct. SCHEDULED on Raka's word, NOT SENT YET
 
 > Raka, 27 Oct ~19.10 UTC, "noah also send tomorrow at 6". Goes Wed 28 Oct 06.00 Amsterdam (05.00 UTC) with the four

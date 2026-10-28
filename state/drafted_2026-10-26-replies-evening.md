@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Rachel SENT 28 Oct 05.05.02 UTC, act_QLpA3FnQw3hxWob6c, one copy, site rechecked 05.01 UTC (trip button still gmail.comm, NXDOMAIN; Paris 101 still premire). Julien's was never sent and is dropped. Do not send anything in this file. -->
 # Replies, 26 Oct evening. Rachel SCHEDULED, Julien NOT to be sent, NOT SENT YET
 
 > Raka, 27 Oct ~20.10 UTC, "the rest, like, you can send them tomorrow morning at 6 as well". Rachel's goes Wed 28 Oct
