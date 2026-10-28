@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- ALL SIX SENT 28 Oct on Raka's "steven send , todays bumps or yesterday if its not sent just send right now", the 16.02 three early on his word. Sebastian 11.05.33 UTC act_gnZe3D7KgJnCdGowq, Matthew 11.05.51 UTC act_Zbx5zDSxhTwJzGrRE, Beckie 11.06.09 UTC act_XKGAXj4BqLeeWuGQt, Joseph 11.06.27 UTC act_Kte9DAdEsxok3sG6g, Qasim 11.06.44 UTC act_gZHQHrMPT56wiHcsK, Mentor 11.07.05 UTC act_Gm7uyhcziYXbw9F88. One copy each. Do not send again. -->
 # Bumps for 28 Oct. NOT SENT, waiting on Raka's word
 
 Six plain bumps, under the cap of 20 (RULES section 1). Each lead got one pitch on 25 Oct and hasn't replied, so this is

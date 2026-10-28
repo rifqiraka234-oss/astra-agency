@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- ALL THREE SENT 28 Oct on Raka's "steven send , todays bumps or yesterday if its not sent just send right now". Aiden 11.04.30 UTC act_C9CxwdGTK9tRRNwNH, Tom 11.04.50 UTC act_6gwD2CjTZhT2yEHDw, Mark 11.05.08 UTC act_w9ZeMjBXqtjywj5aG. One copy each. Claims rechecked 28 Oct ~11.02 UTC, Sherwood still Squarespace Website Expired, At Home Stays homepage text identical to 25 Oct and the three Dutch form strings still there (fetch-walled, Chromium blocked), Alma Nómada line and both mailto buttons still there. Do not send again. -->
 # Bumps for 27 Oct. NOT SENT, waiting on Raka's word
 
 Three plain bumps, under the cap of 20 (RULES section 1). Each lead got one pitch from us on 24 Oct at 10.02 to 10.03 UTC

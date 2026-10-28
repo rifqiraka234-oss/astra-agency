@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- Steven SENT 28 Oct 11.01.48 UTC act_g9bBAKqX9KTQnqbkC, on Raka's "steven send", one copy, thread 16 items. Do not send again. -->
 # Replies, 28 Oct. NOT SENT, waiting on Raka's word
 
 ### Steven Garratt, Qualigraf Nederland, ctc_sPysigrTQgntPu9c6
