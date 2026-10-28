@@ -187,6 +187,48 @@ Invites sent, by campaign. Accepts. First messages sent within 2 days. Yeses. Bu
 decider on them. Proposals sent within 24 hours. Wins and euros. The aim for November is 2 calls a week with Tier 1
 owners and the first paid project.
 
+## Review, 28 Oct. Lead supply and where the invites should go
+
+Raka, 28 Oct, "Do we still have enough leads ... shall we retarget or should we just maybe expand the filter ... sharpen up
+our tactic and strategy". Every number below was pulled 28 Oct 17.00 to 17.50 UTC from the lemlist API and the threads.
+
+**October so far.** 119 first pitches, 30% replied, 18 said yes (15%, against 4% in September), calls with QuasiScience,
+Healthy Secrets and Saavedra held, Lisanne (30 Oct) and Qualigraf (4 Nov) booked. Still no paid project. Of October's
+replies, 18 came after the opener, 12 after the bump and 6 after a third message, so the bump and the final closer earn
+their place. `tools/lemlist.py audit` 17.43 UTC, 560 contacts, 1,945 items, control 7.
+
+**Consumer says yes, then can't pay.** W1b (consumer) gave 8 yeses from 62 pitches, the best yes rate we have, and both of
+its calls hit the budget wall, Saavedra "no budget", Healthy Secrets at about 450 to 500 euros, and Elise declined on budget
+before a call. B2B said yes less often but brought the bigger conversations, QuasiScience (W4 TEST, 2 yeses from 6),
+Lisanne, Qualigraf, and the quiet yeses from Noah, Willem, Matthias, Ulrich and Aaron.
+
+**We are not short of leads, we are inviting the wrong ones.** Raka's lemlist user is set to 18 invites and 20 messages a
+day (`GET /api/users/usr_27bdxG7jzTn2rucGB`, linkedIn.inviteLimit 18, sendLimit 20). At W1b's 29% accept rate that's about
+5 new accepts a day. Today those invites go to W1b (123 still to invite) and W1c (357 to invite), both consumer. The
+campaigns that match Tier 1 were built on 4 Oct and never launched (`GET /api/v2/campaigns/<id>/export/leads?state=scanned`).
+
+| Draft campaign | Leads | Owners in NL, BE, DE, AT, CH, UK, IE, agency, consultant and coach names taken out | What they are |
+|---|---|---|---|
+| W3, growing 11 to 50 ops heavy | 738 | 562 | Manufacturing 216, equipment rental 149, support services 113, clinics 44, logistics 11 |
+| W4, 11 to 50 agencies and tech | 2,363 | about 1,560 | Tech and IT 966, professional services 579 |
+| W5, 1 to 50 clinics, law, accounting | 4,283 | about 2,970 | Professional services 1,958, health 840 |
+| W2, new 1 to 10 B2B services | 4,127 | about 2,350 | Mostly small professional services, 1,607 more were consultants or agencies |
+| W1a, consumer EU and UK | 2,073 | about 940 | Hotels, retail |
+
+The country is read from the lead's location, the industry from lemlist. The agency filter is a keyword pass on name,
+tagline and title, so it's a first cut, and research still checks who pays them before any message.
+
+**So, retarget, don't widen.** The filter is wide enough, 562 W3 owners alone fill five weeks of invites.
+1. W3 on, France left out (93 leads) until there's a French message.
+2. W4 on, tech and IT firms only, agencies out. Build Squad and AI workflows. Its test gave the QuasiScience call.
+3. W5 on at a smaller share, the AI workflow message, the Lisanne and justclaims kind.
+4. W1b and W1c paused, or kept to a few invites a day if Raka wants 500 euro builds for case studies.
+5. A split to start, about 8 invites a day to W3, 6 to W4, 4 to W5. Research is the limit, about 5 openers a day.
+
+**Retargeting the people we already have.** The 67 final closers run 10 a day from 29 Oct. The four still interested notes
+go 30 Oct. The not nows get a date, HotGreen mid December, Acquitas January, Saavedra end of January, Aiden for his 2027
+rebrand. Anyone who asks to move off LinkedIn moves (Lupo, WhatsApp).
+
 ## Open pipeline, the deals closest to money
 
 | Lead | Fit | Next |
