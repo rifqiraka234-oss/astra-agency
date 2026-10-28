@@ -162,9 +162,11 @@ All money is stored as integer cents. All texts the client writes are translatab
 
 | Table | Fields |
 |---|---|
-| `products` | id, slug, planner_key, warn_medication bool, warn_pregnancy bool, name*, subtitle*, lead*, category_id, time_slot (morgen, nachmittag, abend, nacht), price_cents (gross), tax_rate_id, sku, stock, track_stock bool, net_quantity (number), net_unit (g, ml), portions (null or number, used by the planner), ribbon*, is_active, sort, seo_title*, seo_description*, timestamps |
+| `products` | id, slug, planner_key, warn_medication bool, warn_pregnancy bool, name*, subtitle*, lead*, category_id, time_slot (morgen, nachmittag, abend, nacht), price_cents (gross), tax_rate_id, cost_cents (admin only), weight_g, max_qty_per_order, low_stock_threshold, sku, stock (cached sum of `stock_movements`), track_stock bool, net_quantity (number), net_unit (g, ml), portions (null or number, used by the planner), ribbon*, is_active, sort, seo_title*, seo_description*, timestamps |
 | `product_food_info` (one to one) | ingredients* (allergens marked), allergens*, may_contain*, quid* (percentages of named ingredients), nutrition_per_100 (energy kJ and kcal, fat, saturates, carbohydrate, sugars, fibre, protein, salt), preparation*, storage*, warnings*, operator_name, operator_address, origin* (where required) |
 | `product_images` | product_id, path, alt*, sort |
+| `stock_movements` | product_id, quantity (+ or -), reason, order_id or user_id, batch_id, note, created_at. Stock is the sum of these (3.2 B) |
+| `stock_batches` | product_id, lot_number, best_before, quantity_in, created_at. P1 records them on stock in, P2 tracks them per order |
 | `categories` | id, slug, name*, sort |
 | `tax_rates` | id, name, rate (4.9, 10, 13, 20). Each product picks one. **The client's accountant sets the rate per product** (section 6.3) |
 | `bundles` | id, slug, name*, description*, price_cents, image, is_active, starts_at, ends_at. The saving is computed against the sum of the single prices, never typed in. Shown as cards on `/shop` in their own "Sets" row above the hours, and in the cart as one line with its products listed under it |
@@ -176,7 +178,7 @@ All money is stored as integer cents. All texts the client writes are translatab
 | `price_history` | product_id, price_cents, valid_from, valid_to (6.1) |
 | `credit_notes` | invoice_id, number (own sequence), amount_cents, tax lines, pdf_path, issued_at |
 | `activity_log` | admin user, action, subject, changes, time |
-| `orders` | id, number (yearly sequence, for example `HS-2026-0001`), status, email, phone, billing and shipping address, locale, shipping_method, shipping_rate_id, subtotal_cents, discount_cents, shipping_cents, tax lines (JSON, per rate), total_cents, coupon_code, terms_version_id, age_confirmed_at, terms_accepted_at, ip, user_agent, paid_at, shipped_at, tracking_number, cancelled_at, refunded_cents, notes, timestamps |
+| `orders` | id, number (yearly sequence, for example `HS-2026-0001`), source (shop, manual), status, email, company, customer_uid, phone, billing and shipping address, customer_note, locale, shipping_method (post, pickup), shipping_rate_id, subtotal_cents, discount_cents, shipping_cents, tax lines (JSON, per rate), total_cents, coupon_code, terms_version_id, age_confirmed_at, terms_accepted_at, ip, user_agent, paid_at, shipped_at, tracking_number, cancelled_at, refunded_cents, notes, timestamps |
 | `order_items` | order_id, product_id or bundle_id, name snapshot, unit_price_cents, qty, tax_rate snapshot, line_total_cents |
 | `payments` | order_id, provider, provider_payment_id, method, status, amount_cents, raw (JSON), timestamps |
 | `invoices` | order_id, number (own gapless sequence), pdf_path, issued_at |
@@ -191,29 +193,263 @@ All money is stored as integer cents. All texts the client writes are translatab
 
 `*` translatable.
 
-### 3.2 Admin (Filament)
+### 3.2 Admin (Filament), every back end feature
 
 Users and roles.
-- **Owner**, for the three partners. Products, stock, prices, sales, coupons, bundles, orders, bookings, enquiries,
-  blog, settings for opening hours and the café menu.
-- **Admin**, for Astra. Everything, plus legal documents, redirects, tax rates, shipping, users and homepage content.
-- Two factor sign in for every admin user. Three named logins, no shared password.
+- **Owner**, for the three partners. Everything in modules A to O below, except the parts marked Admin.
+- **Admin**, for Astra. Everything, plus legal documents, redirects, tax rates, shipping zones, payment settings, users,
+  homepage content and system settings.
+- Two factor sign in for every admin user. Three named logins for the partners, no shared password.
 
-Screens.
-1. **Products.** List with stock and price inline editable. Edit form with tabs, Basics, Food information (section
-   6.2, required fields block publishing), Images, SEO, both languages side by side.
-2. **Sales and coupons.** Create a timed sale or a code with start and end dates. A preview shows the resulting prices.
-3. **Bundles.** Pick products and quantities, set the bundle price, see the saving against the single prices.
-4. **Orders.** Filters by status. Order detail with items, addresses, payment status from Mollie, buttons **Mark as
-   shipped** (asks for a tracking number, captures a Klarna authorization, sends the shipping email), **Ship
-   partially**, **Reject and refund**, **Delay notice** (4.4), **Refund** (full or part, through the Mollie API, issues a
-   credit note), **Resend confirmation**, **Download invoice**. Each open order shows its working day count (4.4). CSV
-   export for the accountant.
-5. **Bookings.** New requests on top, change status, add notes.
-6. **Enquiries.** Trade and contact messages.
-7. **Blog.** Rich text editor, cover image, publish date, preview.
-8. **Settings.** Opening hours per weekday, café menu text, announcement bar, notification email.
-9. **Dashboard.** Today's orders, open orders to ship, low stock, new bookings.
+How to read the tables. **P1** is phase 1, it's in the 500 euro scope if Raka keeps section 11 as it is. **P2** is
+later, priced separately. **Check** means Josh confirms a fact before building it. Everything marked P1 is the
+minimum a webshop selling food in Austria needs to run day to day. Nothing in P1 is optional.
+
+#### A. Products and catalogue
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Product list | Table with image, name, category, price, stock, status (live, draft, hidden). Search, filter by category and status, sort. Price and stock editable inline in the list | P1 |
+| Product edit | Tabs, Basics (names, texts, category, time slot, ribbon), Price and tax, Stock, Food information (6.2), Images, Planner (key, portions, medication and pregnancy flags), SEO. German and English side by side | P1 |
+| Publish rules | A product can't go live without every required food field, a price, a tax rate, a net quantity and one image. The save button says which field is missing | P1 |
+| Draft and preview | Save as draft, preview the product page as a visitor sees it before going live | P1 |
+| Hide or archive | Take a product off the shop without deleting it. Old orders and invoices keep pointing at it. Products with orders can never be deleted | P1 |
+| Duplicate | Copy a product as a starting point for a new one | P1 |
+| Images | Several images per product, drag to reorder, alt text in both languages, automatic resize to WebP, max file size | P1 |
+| Categories | Create, rename, reorder. Used for the shop grouping, coupons and sales | P1 |
+| Ribbons | "Neu", "Best Seller" or free text per product, both languages | P1 |
+| Variants (sizes, flavours) | Not needed today, all 7 live products have no options in their Wix page data (read 27 Oct). Each new size is a separate product in phase 1 | P2 |
+| Weight per product | Grams with packaging, used if shipping is priced by weight (6.4) | P1 |
+
+#### B. Stock (inventory)
+
+The café sells the same packaged range to take home (Heute, 16 Oct 2026, "Alle Produkte können im Café probiert, aber
+auch gleich mit nach Hause genommen werden."). So the online stock and the café shelf come out of the same production. Stock is one number
+per product, and every change to it is written down.
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Stock per product | Current quantity, on or off (`track_stock`). Untracked products never sell out | P1 |
+| Stock ledger | Every change is a row in `stock_movements` (product, change, reason, order or user, note, time). The current stock is the sum, never edited directly. Gives a full history per product | P1 |
+| Reasons | Sold online (automatic), returned (automatic on a refund with return), production batch in, café sale or café shelf, damaged or expired, samples and giveaways, stock count correction. Reasons are a fixed list the Admin can extend | P1 |
+| Stock in | "Add production batch", quantity, batch or lot number, best before date, note | P1 |
+| Stock count | A stock take screen listing every product with the system quantity, type the counted quantity, the difference is booked as "stock count correction" | P1 |
+| Low stock threshold | Per product, with a store default. Email to office@ and a dashboard warning when stock drops below it | P1 |
+| Out of stock behaviour | At zero, the product shows "Ausverkauft" and can't be added to the cart. Store setting chooses between showing it sold out or hiding it. No backorders | P1 |
+| Household quantities | Their AGB sections 2 and 3 sell only "in Haushaltsmengen". A maximum quantity per product per order, store default 10, editable per product. The cart enforces it | P1 |
+| Bundles and stock | A bundle has no stock of its own. It's available while every product inside it is. Selling a bundle books each product out | P1 |
+| Taking stock | Stock is booked out when a payment is paid or authorized (4.2), with a row lock. Two orders for the last unit flag the second as `oversold` | P1 |
+| Returning stock | Refund screen asks "goods back and sellable?" yes or no. Yes books the quantity back in | P1 |
+| Batch and best before tracking | Which batch went into which order, first expiry first out. Useful for a food recall | P2 |
+| Café till sync | Café sales booked automatically from their till | P2, depends on which till they use |
+| Stock export | CSV of products with quantity and stock value at cost (if they enter cost) | P1 |
+
+#### C. Prices, sales, coupons and bundles
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Price | Gross price per product (6.1). Every change writes `price_history` | P1 |
+| Cost price | Optional, admin only, for stock value and margin in reports | P1 |
+| Timed sale | Percent off for chosen products or categories between two dates, "15% off for Christmas". Starts and ends on its own. The struck through price comes from `price_history`, lowest of the last 30 days (6.1) | P1 |
+| Coupon codes | Percent or fixed amount, minimum order value, start and end, total uses, uses per customer, products or categories it applies to, can exclude sale items. AGB section 4 limits promo codes to once per customer, household or delivery address, so the check uses email and the delivery address | P1 |
+| Free shipping coupon | A coupon type that sets shipping to zero | P1 |
+| Bundles | Pick products and quantities, set the bundle price, start and end dates, image. The saving against the single prices is computed. Shown as "Sets" on `/shop` | P1 |
+| Discount order | Sale on the item first, then the coupon. One coupon per order (6.1) | P1 |
+| Gift cards | Sell and redeem vouchers | P2. Vouchers that work like money have their own tax rules, the accountant decides first |
+| Customer price lists for trade | Special prices for shops and pharmacies | P2 (see G) |
+
+#### D. Cart and checkout settings
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Guest checkout | No customer account needed. Accounts are P2 | P1 |
+| Cart kept | Session cart kept for 14 days on the same device (setting) | P1 |
+| Countries | Only the countries the client ships to can be chosen (6.3, 6.4). Austria only at launch unless they say otherwise | P1 |
+| Minimum order value | Off by default, setting in euros | P1 |
+| Address checks | Required fields, Austrian postcode is 4 digits, phone optional (the prototype has it optional) | P1 |
+| Different delivery address | Tick box, second address block | P1 |
+| Company purchase | Optional company name and UID field on the billing address, shown on the invoice | P1 |
+| Order note | Free text from the customer, shown on the order | P1 |
+| Abandoned cart emails | Emails to people who left a cart | No. Needs marketing consent, and they don't want newsletters |
+
+#### E. Payments (Mollie)
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Methods | Cards, Klarna, EPS, Apple Pay, switched on in the client's Mollie dashboard (4.2). The checkout lists the methods Mollie returns for the basket amount, so a method switched off in Mollie disappears from the shop on its own | P1 |
+| Status handling | Mollie's statuses (docs.mollie.com, "Handling payment status", read 28 Oct) are `open`, `pending`, `authorized`, `paid`, `canceled`, `expired`, `failed`, and Mollie calls the webhook for every one except `open`. Mapping below | P1 |
+| Capture | Klarna is authorized at checkout and captured when the order is marked shipped (4.2). If the capture fails, the order stays unshipped and the admin shows the error | P1 |
+| Refunds | Full or partial, by amount or by item, from the order screen through the Mollie API. Shipping refundable or not. Creates a credit note (I). The order shows refunded total and what's left | P1 |
+| Chargebacks | **Check.** Mollie's webhook page (read 28 Oct) lists only payment events, so Josh confirms in Mollie's refund and chargeback docs how a chargeback reaches us. Either way, a nightly job reads chargebacks from the Mollie API, flags the order and emails office@ | P1 |
+| Payment link for manual orders | Create a Mollie payment link for an order typed in by the owners (G), send it by email | P1 |
+| Pay later on invoice for trade customers | Ship first, the trade customer pays to their Erste Bank IBAN (Impressum) within agreed terms, with open item tracking and reminders | P2. In P1 a manual order can already be marked paid by bank transfer once the money is in (G) |
+| Reconciliation | Mollie pays out in batches minus fees. Export (J) lists Mollie payment id and the order, so the accountant can match payouts. Mollie's own settlement reports come from their dashboard | P1 |
+| Test mode | Staging uses Mollie test keys, a banner on every staging page says "Testmodus" | P1 |
+
+Mollie status to order status.
+
+| Mollie payment | Order |
+|---|---|
+| `open`, `pending` | `pending_payment` |
+| `authorized` | `authorized` (Klarna). Stock booked out, receipt sent |
+| `paid` | `paid`. Stock booked out, receipt sent |
+| `canceled`, `expired`, `failed` | `cancelled`. Nothing booked. The customer can return to the cart, which is still there |
+
+#### F. Orders
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Order list | Number, date, customer, total, payment status, order status, working days open (4.4). Filters by status, date, payment method, product. Search by number, name, email | P1 |
+| Order detail | Items, prices, discounts, VAT per rate, shipping, addresses, customer note, payment with Mollie id, timeline from `order_events`, internal notes | P1 |
+| Actions | Mark as shipped (tracking number, captures Klarna, sends the shipping email and the invoice), Ship partially, Reject and refund, Delay notice (4.4), Cancel before payment, Refund, Edit address before shipping, Resend any customer email, Download invoice and credit notes | P1 |
+| Packing slip | PDF per order with items and quantities, no prices, delivery address. Bulk print for all orders ready to ship | P1 |
+| Address label | Printable delivery address for the parcel, A6 or A4 sheet | P1 |
+| Bulk actions | Select several orders, print packing slips, mark as shipped | P1 |
+| Order export | CSV of orders for any date range | P1 |
+| Returns | Customer withdraws by email or form (AGB section 10). The owner records the return on the order, refunds once the goods are back, rebooks stock if sellable | P1 |
+| Post shipping labels from the Post API | Labels and tracking created automatically | P2 |
+
+#### G. Manual orders, phone, email and trade
+
+Their AGB section 1 covers "telefonisch oder per E-Mail ausgelöste Fernabsatzbestellungen", and their LinkedIn page says
+they're building partnerships with retailers and pharmacies.
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Create order in the admin | Pick products and quantities, customer and addresses, optional discount, shipping. The same prices, VAT and stock rules as the shop | P1 |
+| Payment for a manual order | Send a Mollie payment link by email (E), or mark as paid by bank transfer once it's in their account, with a note. **Cash is not taken through the website.** A cash payment in the café is a cash sale and goes through the café's till with its receipt (usp.gv.at, Registrierkassen). The order is then marked paid with the till receipt number | P1 |
+| Trade customers | A customer flagged as trade, with company name, UID and its own price list and payment terms | P2 |
+
+#### H. Shipping and fulfilment
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Shipping zones | Countries per zone, Austria first (6.4) | P1 |
+| Shipping rates | Per zone, flat price, or by weight bands, or by basket value bands, plus a free shipping threshold. The client's model decides which (6.4, section 13) | P1 |
+| Pick up at the Gut Health Club | Collect the order at Wildpretmarkt 1 for free, a "ready to collect" email when packed. The order is paid online beforehand. Handing it over is the moment of delivery, so the action is **Mark as collected**, which captures Klarna, issues the invoice and sends it, the same as Mark as shipped. **The client decides** if they want it (section 13) | P1 if they want it |
+| Delivery time text | "Die Lieferung innerhalb Österreichs beträgt ab Versandzeitpunkt 1-3 Werktage." from their shipping page, editable | P1 |
+| Tracking link | The shipping email builds the Post tracking link from the tracking number | P1 |
+
+#### I. Invoicing and credit notes
+
+| Feature | What it does | Phase |
+|---|---|---|
+| When an invoice is made | When the order is marked shipped, because their AGB section 3 forms the contract on shipping. The invoice goes with the shipping email. Invoice date and delivery date are the same day | P1 |
+| Numbering | Own gapless sequence per year, prefix from settings, for example `RE-2026-00001`. Made inside a database transaction so two invoices never share a number and none is skipped. Order numbers are a separate sequence | P1 |
+| Content | Seller name, address, UID ATU82537658, FN 661029 b. Customer name and address, company and UID if given. Invoice number and date, delivery date. Items with quantity, net price, VAT rate, VAT amount, gross. Discounts as their own lines. Shipping as its own line. Net and VAT per rate, gross total. Payment method and Mollie id. The accountant confirms the list against UStG section 11 | P1 |
+| Small invoices | Austrian rules allow a simplified invoice up to 400 euros gross, but it still needs the note "Rechnungsdatum = Lieferdatum" (usp.gv.at, Kleinbetragsrechnungen, updated 1 Jan 2026). Our invoices carry the full set anyway, plus that note when the dates match | P1 |
+| Language | German, because their contract language is German (AGB section 3). An English line under the title is fine | P1 |
+| Immutable | An invoice is never edited or deleted. A mistake is fixed by a credit note and a new invoice | P1 |
+| Credit notes | On every refund, own gapless sequence, refers to the invoice number, negative amounts per VAT rate | P1 |
+| PDF storage | Stored privately on the server and in the backups, downloadable from the order. Kept for the retention period the accountant gives (6.5) | P1 |
+| Template | Their logo, company data from settings, footer with bank details from settings | P1 |
+| Receipts for the café | The café's till handles café sales. Online shop sales don't need a cash register when payment is not cash, but they need a receipt or invoice (usp.gv.at, Registrierkassen, updated 1 Oct 2026). Our invoice is that | P1 |
+| E-invoicing for business customers | Structured e-invoices | P2, only if a trade customer asks |
+
+#### J. Export for the accountant
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Monthly export | One click, choose a month, download a ZIP with every invoice and credit note PDF plus one CSV listing them | P1 |
+| CSV columns | Document type (invoice or credit note), number, date, delivery date, order number, customer name, country, UID if any, net, VAT and gross **per VAT rate**, shipping net and VAT, total gross, payment method, Mollie payment id, refers to (for credit notes). German number format option (comma decimals, semicolon separator) | P1 |
+| Format for their software | Austrian accountants mostly use BMD or RZL. There's no single public format for sales invoices into BMD. **Ask their accountant** which columns, account numbers and tax codes they want, and build the CSV to match. Test one month's file in their software before launch | P1, check |
+| Payments export | CSV of payments and refunds per month with Mollie ids, for matching Mollie payouts | P1 |
+| VAT summary | Per month, net and VAT per rate, for the VAT return. A report, not a filing | P1 |
+| Automatic monthly email | The export emailed to the accountant on the 3rd of each month | P2 |
+
+#### K. Customers and privacy
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Customer list | Built from orders by email, with order count, total spent, last order. No logins | P1 |
+| Customer detail | Their orders, addresses, notes | P1 |
+| Data access request | Export everything stored about one email as a file (GDPR article 15) | P1 |
+| Erasure request | Anonymise one email's personal data, except invoices and orders that must be kept by law, those stay and are marked as held for retention | P1 |
+| Automatic deletion | Booking requests and enquiries deleted after the period in settings (default 12 months after closing) | P1 |
+| Customer accounts | Log in, order history, saved addresses | P2 |
+
+#### L. Emails
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Templates | Every email in 3.3 has its subject and text editable in the admin, German and English, with placeholders (name, order number and so on). The layout uses their logo and colours | P1 |
+| Sender | From name "Healthy Secrets", from address on healthysecrets.at, reply to office@ | P1 |
+| Copy to office@ | Optional BCC of every customer email | P1 |
+| Email log | Every email sent, to whom, when, delivered or bounced (from the mail service) | P1 |
+
+#### M. Bookings and enquiries
+
+Section 5 for bookings, section 2.3 for the forms. Admin can change status, add notes, reply by email from their own
+mailbox, export CSV. Services editable (name, duration, price, text, on or off). P1.
+
+#### N. Blog and content
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Blog posts | Title, slug, excerpt, body with headings, images, links and lists, cover image, author, publish date (schedule ahead), both languages, SEO fields, draft and preview | P1 |
+| Categories for posts | Optional | P2 |
+| Opening hours | Per weekday, with closed days and holiday exceptions, shown on `/club` and in structured data | P1 |
+| Café menu | Text list with optional prices, both languages | P1 |
+| Announcement bar | One line at the top of every page with start and end dates, for example "Weihnachtsaktion bis 24.12." | P1 |
+| Legal documents | AGB, Datenschutz, Widerruf, Versand as versioned pages with PDF, Admin role only. The current AGB version is stored on every order | P1 |
+| Homepage and page texts | Changed by Astra under the care plan, as agreed on the call | Admin |
+
+#### O. Dashboard and reports
+
+| Feature | What it does | Phase |
+|---|---|---|
+| Dashboard | Today's and this month's sales, orders to ship with working day count, low stock, new bookings and enquiries, payments needing attention (failed captures, chargebacks) | P1 |
+| Sales report | By day, week, month, by product, by payment method, average order value, coupon use. Date range, CSV export | P1 |
+| Stock report | Current stock, stock value, movements per product over a date range | P1 |
+| Visitor analytics | Needs consent or a cookieless tool (6.5) | P2 |
+
+#### P. Users, security and audit
+
+Two factor sign in, roles as above, login rate limiting, every admin change written to `activity_log` with who and
+what changed, viewable by Admin. Password reset by email. Session timeout after inactivity. P1.
+
+#### Q. System, jobs and maintenance (Admin only)
+
+Scheduled jobs, each logged with its last run, visible to Admin.
+
+| Job | When |
+|---|---|
+| Start and end timed sales and bundles | Every minute |
+| Expire unpaid orders Mollie reports as expired | On the webhook, plus a check every hour |
+| Five working day warnings and Klarna capture warnings (4.4, 4.2) | Daily 07:00 Vienna |
+| Read chargebacks from Mollie | Nightly |
+| Low stock email | When it happens, plus a daily summary |
+| Delete old booking requests and enquiries | Nightly |
+| Regenerate `sitemap.xml` | On publish, plus nightly |
+| Database backup off the server | Nightly, kept 30 days |
+| Queue health, a job that hasn't run alerts Astra | Every 5 minutes |
+
+Also for Admin, maintenance mode with a message, clear caches, see failed queue jobs and retry them, see the email log.
+
+### 3.2b Settings, every configurable value
+
+| Setting | Default | Who |
+|---|---|---|
+| Shop name, company name, address, UID, FN, email, phone, bank details | from their Impressum | Admin |
+| Order number prefix and next number | `HS-2026-` | Admin |
+| Invoice and credit note prefixes and next numbers | `RE-2026-`, `GS-2026-` | Admin, locked once the first is issued |
+| Currency | EUR, prices include VAT | fixed |
+| Tax rates and product tax class | from the accountant (6.3) | Admin |
+| Shipping zones, rates, free threshold, delivery time text | from the client (6.4) | Admin |
+| Pick up at the café on or off | off until the client decides | Owner |
+| Countries allowed at checkout | Austria | Admin |
+| Minimum order value | off | Owner |
+| Max quantity per product per order | 10 | Owner |
+| Low stock default threshold | 5 | Owner |
+| Show sold out products or hide them | show as sold out | Owner |
+| Cart lifetime | 14 days | Admin |
+| Notification email for orders, bookings, enquiries | office@healthysecrets.at | Owner |
+| BCC customer emails to office@ | off | Owner |
+| Email sender name and address | Healthy Secrets, address on healthysecrets.at | Admin |
+| Opening hours, café menu, announcement bar | empty until the client sends them | Owner |
+| Retention for bookings and enquiries | 12 months after closing | Admin |
+| Mollie API keys, mail service keys | in `.env`, never in the database or the admin | Admin, on the server |
+| Maintenance mode | off | Admin |
 
 ### 3.3 Emails (queued, German or English by the order's locale)
 
@@ -223,6 +459,9 @@ Screens.
 | Order paid (or Klarna authorized) | office@ | New order alert with a link to the admin |
 | Marked as shipped | customer | Shipping confirmation, tracking number, any reduced quantities. This is the acceptance under their AGB. Invoice PDF attached |
 | Rejected, or delayed by stock | customer | From the admin actions in 4.4 |
+| Manual order created (3.2 G) | customer | Order details and the Mollie payment link |
+| Ready to collect (if café pick up is on) | customer | Address, opening hours |
+| Chargeback or failed capture | office@ | Which order and what to do |
 | Payment failed or expired | customer | Short note with a link back to the cart |
 | Refund made | customer | Amount and method |
 | Stock below a threshold | office@ | Low stock alert |
@@ -594,9 +833,9 @@ Cutover, in this order.
 | All 9 prototype pages in Laravel, DE and EN on their own URLs | Customer accounts and order history |
 | Product pages with full food information | Real time booking slots and online payment for Leonie |
 | Cart, checkout as in section 4, Mollie with cards, Klarna, EPS and Apple Pay | Events list with double opt in |
-| Admin for products, stock, prices, timed sales, coupons, bundles, orders, refunds | Carrier API labels with Post |
-| Receipt, shipping and refund emails, invoice PDF | Instagram feed, analytics with consent |
-| Booking request for Leonie's three services | Shipping outside Austria with OSS VAT |
+| Admin modules A to Q marked P1 in 3.2, products, stock ledger and stock count, sales, coupons, bundles, orders with packing slips, manual orders with payment links, refunds and credit notes, invoices, the accountant export, customers and privacy requests, reports | Carrier API labels with Post |
+| Every email in 3.3 with editable templates | Instagram feed, analytics with consent |
+| Booking request for Leonie's three services | Shipping outside Austria with OSS VAT, gift cards, customer price lists for trade, batch tracking per order, café till sync, automatic monthly export email |
 | Blog, Leonie writes in the admin | Nikolaus's own website (he asked about a bundle price on the call) |
 | Trade enquiry form and the contact form | |
 | Redirect map, sitemap, hreflang, structured data | |
@@ -634,6 +873,11 @@ Raka said "around two weeks" on the call. Phase 1 in two weeks needs every clien
 | 10 | Stock counts per product, and SKUs if they use them | 3.1 | any |
 | 11 | The 11 open content points in `handover.md` (Matcha at 44 € against 25 € for the other two drinks, claims to restore, portraits, kitchen photos and so on) | content | the three |
 | 12 | Names for three admin logins | 3.2 | the three |
+| 13 | The CSV layout their accountant wants (BMD, RZL or other), account numbers and tax codes, and the retention period | 3.2 J, 6.5 | their accountant |
+| 14 | Do they want pick up at the Gut Health Club | 3.2 H | the three |
+| 15 | How café sales of the packaged range are booked against stock, by hand per day or not at all | 3.2 B | Leonie |
+| 16 | Weight of each product with packaging, if shipping is priced by weight | 3.2 H | any |
+| 17 | Invoice footer details and the first invoice number, if they want to continue Wix's numbering | 3.2 I | their accountant |
 
 ---
 
@@ -657,6 +901,11 @@ the five working day count, and every redirect row.
   readable without JavaScript.
 - office@ receives a test email from outside after the DNS switch, and order emails pass SPF, DKIM and DMARC.
 - A backup restored onto staging and the site works from it.
+- Invoice and credit note numbers stay gapless when 20 orders are shipped at the same moment (parallel test).
+- One month's accountant export opens and imports in their accountant's software without manual fixes.
+- A stock count, a production batch in and a damaged item each show up in the product's stock history with the right
+  total.
+- A manual order with a payment link is paid in test mode and behaves like a shop order from then on.
 - The three owners each change a price, start a sale, ship an order and publish a blog post on their own, with Josh
   watching and not touching the keyboard.
 
