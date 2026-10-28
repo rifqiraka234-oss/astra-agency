@@ -171,17 +171,21 @@ All money is stored as integer cents. All texts the client writes are translatab
 | `tax_rates` | id, name, rate (4.9, 10, 13, 20). Each product picks one. **The client's accountant sets the rate per product** (section 6.3) |
 | `bundles` | id, slug, name*, description*, price_cents, image, is_active, starts_at, ends_at. The saving is computed against the sum of the single prices, never typed in. Shown as cards on `/shop` in their own "Sets" row above the hours, and in the cart as one line with its products listed under it |
 | `bundle_items` | bundle_id, product_id, qty. Stock comes off the products inside |
-| `coupons` | id, code, type (percent, fixed), value, min_order_cents, starts_at, ends_at, max_uses, max_uses_per_email, applies_to (all, products, categories), excludes_sale_items bool, is_active. Pivot tables `coupon_product` and `coupon_category`. AGB section 4 says promo codes are once per customer, household or delivery address, so check email and address |
+| `coupons` | id, code, type (percent, fixed), value, min_order_cents, starts_at, ends_at, max_uses, max_uses_per_email, applies_to (all, products, categories, bundles), excludes_sale_items bool, is_active. Pivot tables `coupon_product` and `coupon_category`. AGB section 4 says promo codes are once per customer, household or delivery address, so check email and address |
 | `sales` (timed price change) | id, name, percent_off, product or category scope, starts_at, ends_at. Covers "15% off for Christmas" without touching base prices. The struck through price shown during a sale comes from `price_history` (6.1), never from a typed field |
 | `shipping_zones`, `shipping_rates` | zone (countries), name, price_cents, free_from_cents, is_active. Values from the client (section 13) |
 | `order_events` | order_id, from_status, to_status, user_id, note, created_at |
 | `price_history` | product_id, price_cents, valid_from, valid_to (6.1) |
-| `credit_notes` | invoice_id, number (own sequence), amount_cents, tax lines, pdf_path, issued_at |
+| `credit_notes` | invoice_id, type (refund, cancellation), number (own sequence), refund_id, net, VAT and gross per rate, total_cents, pdf_path, issued_at |
+| `refunds` | order_id, mollie_refund_id or manual reference, amount_cents, lines (JSON), includes_shipping, status (processing, refunded, failed), reason, created_by |
+| `coupon_redemptions` | coupon_id, order_id, email, address_hash, created_at, released_at |
+| `captures` | order_id, mollie_capture_id, amount_cents, status |
 | `activity_log` | admin user, action, subject, changes, time |
-| `orders` | id, number (yearly sequence, for example `HS-2026-0001`), source (shop, manual), status, email, company, customer_uid, phone, billing and shipping address, customer_note, locale, shipping_method (post, pickup), shipping_rate_id, subtotal_cents, discount_cents, shipping_cents, tax lines (JSON, per rate), total_cents, coupon_code, terms_version_id, age_confirmed_at, terms_accepted_at, ip, user_agent, paid_at, shipped_at, tracking_number, cancelled_at, refunded_cents, notes, timestamps |
-| `order_items` | order_id, product_id or bundle_id, name snapshot, unit_price_cents, qty, tax_rate snapshot, line_total_cents |
+| `orders` | id, number (yearly sequence, for example `HS-2026-0001`), source (shop, manual), status, payment_status, oversold, stock_booked_at, receipt_sent_at, collected_at, rejected_at, till_receipt_number, email, company, customer_uid, phone, billing and shipping address, customer_note, locale, shipping_method (post, pickup), shipping_rate_id, subtotal_cents, discount_cents, shipping_cents, tax lines (JSON, per rate), total_cents, coupon_code, terms_version_id, age_confirmed_at, terms_accepted_at, ip, user_agent, paid_at, shipped_at, tracking_number, cancelled_at, refunded_cents, notes, timestamps |
+| `order_items` | order_id, product_id or bundle_id, name snapshot, unit_price_cents, qty_ordered, qty_shipped, qty_refunded, discount_share_cents, line_total_cents |
+| `order_item_parts` | order_item_id, product_id, tax_rate snapshot, gross_cents, VAT_cents. One part for a product, one per VAT rate for a bundle (3.4) |
 | `payments` | order_id, provider, provider_payment_id, method, status, amount_cents, raw (JSON), timestamps |
-| `invoices` | order_id, number (own gapless sequence), pdf_path, issued_at |
+| `invoices` | order_id, number (own gapless sequence), net, VAT and gross per rate (JSON), shipping net and VAT, total_cents, lines snapshot (JSON), delivery_date, pdf_path, issued_at, cancelled_by_credit_note_id |
 | `legal_documents` | type (agb, datenschutz, widerruf, versand, impressum), version, body*, pdf_path, valid_from. Orders store the AGB version they were placed under |
 | `services` | id, name*, duration_min, price_cents, description*, sort, is_active. Seeded with Leonie's three (section 5) |
 | `booking_requests` | service_id, preferred_days (JSON), preferred_time, first_name, last_name, email, phone, topic, message, health_consent_at, status (new, contacted, booked, closed), notes |
@@ -210,11 +214,14 @@ minimum a webshop selling food in Austria needs to run day to day. Nothing in P1
 | Feature | What it does | Phase |
 |---|---|---|
 | Product list | Table with image, name, category, price, stock, status (live, draft, hidden). Search, filter by category and status, sort. Price and stock editable inline in the list | P1 |
-| Product edit | Tabs, Basics (names, texts, category, time slot, ribbon), Price and tax, Stock, Food information (6.2), Images, Planner (key, portions, medication and pregnancy flags), SEO. German and English side by side | P1 |
+| Product edit | Tabs, Basics (names, texts, category, time slot, ribbon), Price (the tax rate is shown but only Admin can change it, as the accountant sets it), Stock, Food information (6.2), Images, Planner (key, portions, medication and pregnancy flags), SEO. German and English side by side | P1 |
 | Publish rules | A product can't go live without every required food field, a price, a tax rate, a net quantity and one image. The save button says which field is missing | P1 |
 | Draft and preview | Save as draft, preview the product page as a visitor sees it before going live | P1 |
 | Hide or archive | Take a product off the shop without deleting it. Old orders and invoices keep pointing at it. Products with orders can never be deleted | P1 |
 | Duplicate | Copy a product as a starting point for a new one | P1 |
+| Scheduled publish | A date and time a draft product goes live on its own | P1 |
+| Product import and export by CSV | Bulk changes in a spreadsheet | P2, seven products don't need it |
+| Reviews, related products, wishlists | Not built | Out |
 | Images | Several images per product, drag to reorder, alt text in both languages, automatic resize to WebP, max file size | P1 |
 | Categories | Create, rename, reorder. Used for the shop grouping, coupons and sales | P1 |
 | Ribbons | "Neu", "Best Seller" or free text per product, both languages | P1 |
@@ -239,7 +246,7 @@ per product, and every change to it is written down.
 | Household quantities | Their AGB sections 2 and 3 sell only "in Haushaltsmengen". A maximum quantity per product per order, store default 10, editable per product. The cart enforces it | P1 |
 | Bundles and stock | A bundle has no stock of its own. It's available while every product inside it is. Selling a bundle books each product out | P1 |
 | Taking stock | Stock is booked out when a payment is paid or authorized (4.2), with a row lock. Two orders for the last unit flag the second as `oversold` | P1 |
-| Returning stock | Refund screen asks "goods back and sellable?" yes or no. Yes books the quantity back in | P1 |
+| Returning stock | Booked back in automatically on reject, partial shipping, oversold and refunds before shipping. After shipping, the refund screen asks "goods back and sellable?", yes books it in, no books it as damaged. Full table in 3.4 | P1 |
 | Batch and best before tracking | Which batch went into which order, first expiry first out. Useful for a food recall | P2 |
 | Café till sync | Café sales booked automatically from their till | P2, depends on which till they use |
 | Stock export | CSV of products with quantity and stock value at cost (if they enter cost) | P1 |
@@ -250,7 +257,7 @@ per product, and every change to it is written down.
 |---|---|---|
 | Price | Gross price per product (6.1). Every change writes `price_history` | P1 |
 | Cost price | Optional, admin only, for stock value and margin in reports | P1 |
-| Timed sale | Percent off for chosen products or categories between two dates, "15% off for Christmas". Starts and ends on its own. The struck through price comes from `price_history`, lowest of the last 30 days (6.1) | P1 |
+| Timed sale | Percent off for chosen products or categories between two dates, "15% off for Christmas". Starts and ends on its own. The struck through price is the lowest price of the 30 days **before the sale started** (6.1) | P1 |
 | Coupon codes | Percent or fixed amount, minimum order value, start and end, total uses, uses per customer, products or categories it applies to, can exclude sale items. AGB section 4 limits promo codes to once per customer, household or delivery address, so the check uses email and the delivery address | P1 |
 | Free shipping coupon | A coupon type that sets shipping to zero | P1 |
 | Bundles | Pick products and quantities, set the bundle price, start and end dates, image. The saving against the single prices is computed. Shown as "Sets" on `/shop` | P1 |
@@ -279,8 +286,8 @@ per product, and every change to it is written down.
 | Methods | Cards, Klarna, EPS, Apple Pay, switched on in the client's Mollie dashboard (4.2). The checkout lists the methods Mollie returns for the basket amount, so a method switched off in Mollie disappears from the shop on its own | P1 |
 | Status handling | Mollie's statuses (docs.mollie.com, "Handling payment status", read 28 Oct) are `open`, `pending`, `authorized`, `paid`, `canceled`, `expired`, `failed`, and Mollie calls the webhook for every one except `open`. Mapping below | P1 |
 | Capture | Klarna is authorized at checkout and captured when the order is marked shipped (4.2). If the capture fails, the order stays unshipped and the admin shows the error | P1 |
-| Refunds | Full or partial, by amount or by item, from the order screen through the Mollie API. Shipping refundable or not. Creates a credit note (I). The order shows refunded total and what's left | P1 |
-| Chargebacks | **Check.** Mollie's webhook page (read 28 Oct) lists only payment events, so Josh confirms in Mollie's refund and chargeback docs how a chargeback reaches us. Either way, a nightly job reads chargebacks from the Mollie API, flags the order and emails office@ | P1 |
+| Refunds | Full or partial, by item or amount, from the order screen through the Mollie API, following the rules in 3.4. Shipping included by default on a full withdrawal. Credit note only once an invoice exists and the refund has reached `refunded`. The order shows refunded total and what's left | P1 |
+| Chargebacks | Mollie calls the webhook when "a chargeback is received on the payment" (docs.mollie.com/reference/webhooks, read 28 Oct). The handler sets `payment_status` to `charged_back`, flags the order and emails office@. A nightly check against the Mollie API catches any missed webhook | P1 |
 | Payment link for manual orders | Create a Mollie payment link for an order typed in by the owners (G), send it by email | P1 |
 | Pay later on invoice for trade customers | Ship first, the trade customer pays to their Erste Bank IBAN (Impressum) within agreed terms, with open item tracking and reminders | P2. In P1 a manual order can already be marked paid by bank transfer once the money is in (G) |
 | Reconciliation | Mollie pays out in batches minus fees. Export (J) lists Mollie payment id and the order, so the accountant can match payouts. Mollie's own settlement reports come from their dashboard | P1 |
@@ -290,10 +297,10 @@ Mollie status to order status.
 
 | Mollie payment | Order |
 |---|---|
-| `open`, `pending` | `pending_payment` |
-| `authorized` | `authorized` (Klarna). Stock booked out, receipt sent |
-| `paid` | `paid`. Stock booked out, receipt sent |
-| `canceled`, `expired`, `failed` | `cancelled`. Nothing booked. The customer can return to the cart, which is still there |
+| `open`, `pending` | status `pending_payment`, payment `unpaid` |
+| `authorized` | status `awaiting_shipment`, payment `authorized` (Klarna). Stock booked out and receipt sent, once (3.4) |
+| `paid` | before shipping, status `awaiting_shipment`, payment `paid`, stock and receipt once. After a Klarna capture, only `payment_status` changes, nothing else happens |
+| `canceled`, `expired`, `failed` | before anything was booked, status `cancelled`, the customer can return to the cart. A `canceled` after a Klarna release is the result of Reject, the order is already `rejected` and its stock already back |
 
 #### F. Orders
 
@@ -301,12 +308,12 @@ Mollie status to order status.
 |---|---|---|
 | Order list | Number, date, customer, total, payment status, order status, working days open (4.4). Filters by status, date, payment method, product. Search by number, name, email | P1 |
 | Order detail | Items, prices, discounts, VAT per rate, shipping, addresses, customer note, payment with Mollie id, timeline from `order_events`, internal notes | P1 |
-| Actions | Mark as shipped (tracking number, captures Klarna, sends the shipping email and the invoice), Ship partially, Reject and refund, Delay notice (4.4), Cancel before payment, Refund, Edit address before shipping, Resend any customer email, Download invoice and credit notes | P1 |
+| Actions | Mark as shipped (tracking number, captures Klarna, sends the shipping email and the invoice), Mark as collected, Ship partially, Reject and refund, Delay notice (4.4), Cancel before payment, Refund, Record manual refund, Send replacement, Returned undeliverable, Cancel invoice (Storno and corrected invoice), Edit address before shipping, Resend any customer email, Download invoice and credit notes | P1 |
 | Packing slip | PDF per order with items and quantities, no prices, delivery address. Bulk print for all orders ready to ship | P1 |
 | Address label | Printable delivery address for the parcel, A6 or A4 sheet | P1 |
 | Bulk actions | Select several orders, print packing slips, mark as shipped | P1 |
 | Order export | CSV of orders for any date range | P1 |
-| Returns | Customer withdraws by email or form (AGB section 10). The owner records the return on the order, refunds once the goods are back, rebooks stock if sellable | P1 |
+| Returns | Customer withdraws in any form, letter, phone or email (AGB section 10). The owner records the withdrawal date on the order. The owner records the return on the order, refunds once the goods are back, rebooks stock if sellable | P1 |
 | Post shipping labels from the Post API | Labels and tracking created automatically | P2 |
 
 #### G. Manual orders, phone, email and trade
@@ -339,8 +346,8 @@ they're building partnerships with retailers and pharmacies.
 | Content | Seller name, address, UID ATU82537658, FN 661029 b. Customer name and address, company and UID if given. Invoice number and date, delivery date. Items with quantity, net price, VAT rate, VAT amount, gross. Discounts as their own lines. Shipping as its own line. Net and VAT per rate, gross total. Payment method and Mollie id. The accountant confirms the list against UStG section 11 | P1 |
 | Small invoices | Austrian rules allow a simplified invoice up to 400 euros gross, but it still needs the note "Rechnungsdatum = Lieferdatum" (usp.gv.at, Kleinbetragsrechnungen, updated 1 Jan 2026). Our invoices carry the full set anyway, plus that note when the dates match | P1 |
 | Language | German, because their contract language is German (AGB section 3). An English line under the title is fine | P1 |
-| Immutable | An invoice is never edited or deleted. A mistake is fixed by a credit note and a new invoice | P1 |
-| Credit notes | On every refund, own gapless sequence, refers to the invoice number, negative amounts per VAT rate | P1 |
+| Immutable | An invoice is never edited or deleted. A mistake is fixed with the Cancel invoice action, a cancellation credit note plus a corrected invoice (3.4) | P1 |
+| Credit notes | For every refund made **after** an invoice exists, issued when the refund reaches `refunded`, plus cancellation credit notes for mistakes (3.4). Own gapless sequence, refers to the invoice number, negative amounts per VAT rate. A refund before shipping has no invoice and so no credit note | P1 |
 | PDF storage | Stored privately on the server and in the backups, downloadable from the order. Kept for the retention period the accountant gives (6.5) | P1 |
 | Template | Their logo, company data from settings, footer with bank details from settings | P1 |
 | Receipts for the café | The café's till handles café sales. Online shop sales don't need a cash register when payment is not cash, but they need a receipt or invoice (usp.gv.at, Registrierkassen, updated 1 Oct 2026). Our invoice is that | P1 |
@@ -354,7 +361,8 @@ they're building partnerships with retailers and pharmacies.
 | CSV columns | Document type (invoice or credit note), number, date, delivery date, order number, customer name, country, UID if any, net, VAT and gross **per VAT rate**, shipping net and VAT, total gross, payment method, Mollie payment id, refers to (for credit notes). German number format option (comma decimals, semicolon separator) | P1 |
 | Format for their software | Austrian accountants mostly use BMD or RZL. There's no single public format for sales invoices into BMD. **Ask their accountant** which columns, account numbers and tax codes they want, and build the CSV to match. Test one month's file in their software before launch | P1, check |
 | Payments export | CSV of payments and refunds per month with Mollie ids, for matching Mollie payouts | P1 |
-| VAT summary | Per month, net and VAT per rate, for the VAT return. A report, not a filing | P1 |
+| VAT summary | Per month, net and VAT per rate, for the VAT return. A report, not a filing. **When VAT is due depends on their tax setup.** Austria taxes payments received before delivery in the month they're paid (Mindest-Istbesteuerung), and a small business on the Kleinunternehmer rule charges no VAT at all. The accountant says which applies, and the summary groups by payment date or invoice date to match | P1, check |
+| Café till sales | Manual orders paid at the café till are listed in their own section of the export with the till receipt number and no invoice number, so they're never booked twice (3.4) | P1 |
 | Automatic monthly email | The export emailed to the accountant on the 3rd of each month | P2 |
 
 #### K. Customers and privacy
@@ -362,7 +370,7 @@ they're building partnerships with retailers and pharmacies.
 | Feature | What it does | Phase |
 |---|---|---|
 | Customer list | Built from orders by email, with order count, total spent, last order. No logins | P1 |
-| Customer detail | Their orders, addresses, notes | P1 |
+| Customer detail | Their orders, addresses, notes, and a **blocked** flag. AGB section 7 lets them refuse delivery after repeated failed deliveries, a blocked email or address can't check out and sees a short message to contact office@ | P1 |
 | Data access request | Export everything stored about one email as a file (GDPR article 15) | P1 |
 | Erasure request | Anonymise one email's personal data, except invoices and orders that must be kept by law, those stay and are marked as held for retention | P1 |
 | Automatic deletion | Booking requests and enquiries deleted after the period in settings (default 12 months after closing) | P1 |
@@ -399,7 +407,7 @@ mailbox, export CSV. Services editable (name, duration, price, text, on or off).
 | Feature | What it does | Phase |
 |---|---|---|
 | Dashboard | Today's and this month's sales, orders to ship with working day count, low stock, new bookings and enquiries, payments needing attention (failed captures, chargebacks) | P1 |
-| Sales report | By day, week, month, by product, by payment method, average order value, coupon use. Date range, CSV export | P1 |
+| Sales report | By day, week, month, by product, by payment method, average order value, coupon use, margin where a cost price is set. Date range, CSV export | P1 |
 | Stock report | Current stock, stock value, movements per product over a date range | P1 |
 | Visitor analytics | Needs consent or a cookieless tool (6.5) | P2 |
 
@@ -431,8 +439,8 @@ Also for Admin, maintenance mode with a message, clear caches, see failed queue 
 | Setting | Default | Who |
 |---|---|---|
 | Shop name, company name, address, UID, FN, email, phone, bank details | from their Impressum | Admin |
-| Order number prefix and next number | `HS-2026-` | Admin |
-| Invoice and credit note prefixes and next numbers | `RE-2026-`, `GS-2026-` | Admin, locked once the first is issued |
+| Order number pattern | `HS-{YYYY}-{00001}`, counter starts at 1 each year in Vienna time | Admin |
+| Invoice and credit note patterns | `RE-{YYYY}-{00001}` and `GS-{YYYY}-{00001}`, yearly counters, each gapless | Admin, the pattern locks once the first document of a year exists |
 | Currency | EUR, prices include VAT | fixed |
 | Tax rates and product tax class | from the accountant (6.3) | Admin |
 | Shipping zones, rates, free threshold, delivery time text | from the client (6.4) | Admin |
@@ -463,12 +471,91 @@ Also for Admin, maintenance mode with a message, clear caches, see failed queue 
 | Ready to collect (if café pick up is on) | customer | Address, opening hours |
 | Chargeback or failed capture | office@ | Which order and what to do |
 | Payment failed or expired | customer | Short note with a link back to the cart |
-| Refund made | customer | Amount and method |
+| Refund reached `refunded` | customer | Amount, method, credit note attached if one exists |
+| Order collected at the café | customer | Invoice attached |
+| Withdrawal received | customer | Confirmation of receipt, with date |
 | Stock below a threshold | office@ | Low stock alert |
 | Booking request | office@ and the customer | Request received, Leonie confirms by email or phone |
 | Trade or contact enquiry | office@ and the sender | Received |
 
 Sending goes through a transactional email service, not their Google mailbox (section 9 covers the DNS records).
+
+---
+
+### 3.4 Money, stock and documents. The exact rules for every order event
+
+This is the part where webshops go wrong, so it's written as rules, not features. Every rule here was checked against
+Mollie's docs on 28 Oct (docs.mollie.com, "Handling payment status", "Place a hold for a payment", "Webhooks",
+"Klarna") and their AGB.
+
+**Two statuses per order, not one.** `orders.status` is the work (`pending_payment`, `awaiting_shipment`, `shipped`,
+`collected`, `completed`, `rejected`, `cancelled`). `orders.payment_status` is the money (`unpaid`, `authorized`,
+`paid`, `partially_refunded`, `refunded`, `charged_back`). Plus the flag `oversold`, and timestamps `stock_booked_at`,
+`receipt_sent_at`, `shipped_at`, `collected_at`, `rejected_at`, `cancelled_at`.
+
+**Do it once.** Mollie calls the webhook again for every later change (capture, refund, chargeback). So stock is booked
+only when `stock_booked_at` is empty, and the receipt only goes out when `receipt_sent_at` is empty. The webhook handler
+never moves an order backwards.
+
+**Cards, EPS, Apple Pay.** Charged at checkout (automatic capture). Paid means `paid` at once.
+
+**Klarna.** Created with `captureMode: manual`. Without it Mollie captures straight away. Mollie's hold page says a
+Klarna authorization expires after **28 days**, so the dashboard warns at day 21. At checkout the payment is
+`authorized`. On Mark as shipped or Mark as collected, create a capture for the shipped amount with its lines. If not
+everything ships, release the rest of the authorization. When nothing is left authorized, Mollie sets the payment to
+`paid` and calls the webhook, which only updates `payment_status`. Card holds are shorter (Visa and American Express 7
+days, Mastercard 30 days per the same page), so cards stay on automatic capture.
+
+| Event | Money | Stock | Document | Email to customer |
+|---|---|---|---|---|
+| Paid (card, EPS, Apple Pay) | captured | booked out once | none yet | receipt (3.3) |
+| Authorized (Klarna) | held | booked out once | none yet | receipt |
+| Payment canceled, expired or failed before anything was booked | none | nothing | none | payment failed note |
+| Mark as shipped or collected, everything | Klarna captured | already out | **invoice** for the shipped lines | shipping or collected email with invoice |
+| Ship partially | cards and EPS refund the unshipped part, Klarna captures the shipped part and releases the rest | unshipped quantity booked back in | invoice for the shipped lines only | shipping email listing what was reduced |
+| Reject before shipping | cards refunded in full, Klarna released (payment becomes `canceled`) | booked back in | none, there's no invoice yet | rejection email |
+| Refund before shipping (customer changed their mind, oversold) | refunded | booked back in | none | refund email |
+| Withdrawal after shipping (AGB section 10) | refunded when the goods are back, including the original shipping on a full withdrawal, never the return postage | back in if sellable, else "damaged" | **credit note** | refund email |
+| Refund after shipping for a complaint, goods kept | refunded | nothing | credit note | refund email |
+| Replacement for damaged or missing goods (AGB sections 7 and 11) | none | booked out, reason "replacement" | none, it's free | shipping email |
+| Parcel returned undeliverable (AGB section 7) | the owner decides, reship or refund | back in if sellable | credit note if refunded | from the action taken |
+| Chargeback | taken back by the bank | nothing automatic | credit note once the owner confirms it | none, office@ is alerted |
+| Mistake on an invoice | none | nothing | **cancellation credit note** (Storno) for the whole invoice, then a corrected invoice | corrected invoice |
+
+**Refunds are asynchronous.** A Mollie refund goes `processing`, then `refunded` or `failed`, and the webhook fires for
+each (Mollie "Webhooks" page). Keep a `refunds` table. The credit note is issued when the refund reaches `refunded`,
+never when it's created. A failed refund alerts office@ and creates no document.
+
+**Refunds by line.** `order_items` stores `qty_ordered`, `qty_shipped`, `qty_refunded` and `discount_share_cents` (its
+part of any coupon). A line can't be refunded beyond what was paid for it. Refunding one item gives back its price
+minus its discount share.
+
+**Coupons on a partial withdrawal.** AGB section 4 says the coupon's minimum order value must still be reached after a
+partial withdrawal, or the coupon's value is owed. When a refund would drop the order below the coupon minimum, the
+refund screen shows the difference and the owner decides whether to deduct it.
+
+**Coupon uses** are counted in a `coupon_redemptions` table when the payment is paid or authorized, and given back when
+the order is cancelled or rejected before shipping.
+
+**Bundles and VAT lines.** A bundle is stored as one cart line for the customer, but on the order, the invoice and the
+Mollie `lines` it's split into one part per VAT rate (6.3). Mollie checks each line's `vatAmount` against its total and
+rate, so each part carries its own `vatRate`. Same for a fixed coupon, one discount line per VAT rate.
+
+**Manual orders paid by bank transfer.** Refunds can't go through Mollie, so the refund screen offers "record a manual
+refund" (date, amount, bank reference), which creates the credit note.
+
+**Café till payments.** If a manual order is paid in cash at the café, the till receipt is the document for that sale.
+The website issues **no invoice** for it, stores the till receipt number, and lists it separately in the export (J)
+so it's never counted twice. Stock comes off through the order, not again as "café sale". The accountant confirms this.
+
+**Changing an order after payment** (adding or swapping items) is not built in phase 1. The owner refunds what's
+dropped or cancels and makes a new order.
+
+**Time zone.** The app runs on `Europe/Vienna`. Dates on documents, the yearly number reset, monthly exports and the
+working day count all use Vienna time.
+
+**Public holidays** for the five working day count are computed, not typed in, including the ones that move with
+Easter (Easter Monday, Ascension, Whit Monday, Corpus Christi). Josh uses a maintained package or a tested function.
 
 ---
 
@@ -486,7 +573,8 @@ Eingabe/Rechnung/Versand/Bezahlart prüfen → Zusammenfassung", with correction
    address, and edit links back to each step.
 5. Two required checkboxes. "Ich bin mindestens 18 Jahre alt." (AGB section 3 sells only to people over 18, wording
    from the prototype). And the AGB box. AGB section 3 calls it „Akzeptieren der Allgemeinen Geschäftsbedingungen“ and
-   says the customer confirms reading section 12, while the prototype says "Ich habe die AGB gelesen, auch die
+   ties the "read section 12" confirmation to the "Zahlungspflichtig bestellen" button, while the prototype puts it in
+   the checkbox, "Ich habe die AGB gelesen, auch die
    Informationen zu Gesundheit und Ernährung in Abschnitt 12." Nikolaus picks the final wording. Store both timestamps
    on the order. Phone stays optional, as in the prototype.
 6. The final button reads exactly **"Zahlungspflichtig bestellen"** (AGB section 3 names it, and the prototype already
@@ -505,10 +593,9 @@ Eingabe/Rechnung/Versand/Bezahlart prüfen → Zusammenfassung", with correction
   order paid from the return URL.
 - **Klarna works differently.** Mollie's Klarna page (docs.mollie.com/docs/klarna, read 27 Oct) requires `lines` and
   the billing fields (given name, family name, street and number, postal code, city, country, email), and advises to
-  authorise first and capture when the goods ship. So a Klarna payment comes back `authorized`, not `paid`. Treat
-  `authorized` like paid for stock and the receipt, and **capture it when the order is marked shipped**, or release it
-  when the order is rejected. That matches AGB section 3, where the contract forms when the goods ship. Josh checks
-  Mollie's capture time limit for Klarna in the client's dashboard and shows a warning on orders getting close to it.
+  authorise first and capture when the goods ship. Create Klarna payments with `captureMode: manual`, capture on
+  shipping, release what isn't shipped, warn at day 21 of the 28 day hold. Full rules in 3.4. That matches AGB section
+  3, where the contract forms when the goods ship.
 - Send `lines` for every method, not only Klarna, so every payment shows its items in Mollie.
 - On paid or authorized, decrement stock in a database transaction with a row lock (`SELECT ... FOR UPDATE`). If two
   people pay for the last unit, the second order is flagged `oversold` in the admin and the office alert says so. The
@@ -529,8 +616,9 @@ Nikolaus is a lawyer, he writes it.
 
 ### 4.3 Order statuses
 
-`pending_payment` → `paid` (or `authorized` for Klarna) → `shipped` → (`completed` after 14 days) and side paths
-`rejected`, `cancelled`, `refunded`, `partially_refunded`, `oversold` as a flag. Every status change is written to an
+Two fields, as set out in 3.4. `status` runs `pending_payment` → `awaiting_shipment` → `shipped` or `collected` →
+`completed` (14 days after delivery), with side paths `rejected` and `cancelled`. `payment_status` runs `unpaid` →
+`authorized` or `paid` → `partially_refunded`, `refunded` or `charged_back`. `oversold` is a flag. Every status change is written to an
 `order_events` table (order, from, to, user, note, time).
 
 ### 4.4 What their AGB promises after the order
@@ -538,12 +626,12 @@ Nikolaus is a lawyer, he writes it.
 - **Five working days.** AGB section 3 says the contract forms when the goods ship within 5 working days (Monday to
   Friday, not public holidays) of the order receipt, and if stock is short the customer gets an email within those 5
   days. The admin shows each open order's working day count, and the dashboard warns at day 3. Austrian public holidays
-  come from a config list Josh keeps for the year.
+  are computed, including the ones tied to Easter (3.4).
 - **Reject.** AGB section 3 allows refusing an order without reasons. Admin action **Reject and refund**, full refund or
   Klarna release, email to the customer.
 - **Smaller quantity.** AGB section 2 allows shipping less when demand beats stock, the customer is told in the shipping
-  confirmation. Admin action **Ship partially**, set the quantity per line, refund the difference, and the shipping
-  email lists what was reduced.
+  confirmation. Admin action **Ship partially**, set the quantity per line, refund or release the difference as in
+  3.4, book the rest back into stock, and the shipping email lists what was reduced.
 - **Shortage notice.** Admin action **Delay notice**, a short email that the goods are delayed by stock.
 
 ---
@@ -582,8 +670,11 @@ Phase 2 option, real time slots from Leonie's calendar and paying online. Not pr
 - Show a unit price per kg or litre next to each price (computed from `net_quantity`). Nikolaus confirms whether it's
   required for them. It costs nothing to show.
 - A struck through old price follows the Austrian price rule for reductions (PrAG section 9a, from the EU Omnibus
-  directive). The reference price is the lowest price of the last 30 days. So keep a `price_history` table (product,
-  price, from, to) and compute the reference from it. Nikolaus confirms the details.
+  directive). The reference price is the lowest price charged in the 30 days **before the reduction started**, and it
+  stays the same for later steps of the same reduction (WKO FAQ on section 9a, and Verwaltungsgericht Wien
+  021-031-4195-2026). So `price_history` records every price the product was actually sold at, base prices and sale
+  prices, and the reference is computed from the 30 days before the sale's start date. Section 9a has a special rule
+  for goods that spoil quickly, Nikolaus says whether it applies to them.
 - Discounts apply in a fixed order. Timed sale on the item first, then the coupon on the discounted basket. A coupon
   never stacks with another coupon. Sales and coupons can be set to exclude each other per coupon.
 
@@ -632,8 +723,8 @@ Nikolaus add back what he signs off.
 - Invoice contents follow the Austrian VAT act (UStG section 11), the accountant confirms the list. Seller name,
   address and UID, customer name and address, a unique gapless number, issue date, delivery date, items and quantities,
   net amount and VAT per rate, the rate, gross total. Invoices under 400 € may be simplified, show the full set anyway.
-- A refund issues a credit note (Gutschrift or Storno) with its own number that refers to the invoice. Invoices are
-  never edited or deleted.
+- A refund after invoicing issues a credit note (Gutschrift) with its own number that refers to the invoice, and a
+  mistake is fixed with a cancellation credit note (Storno), as set out in 3.4. Invoices are never edited or deleted.
 - Sales to other EU countries. Under the EU rules, B2C sales to other EU states switch to the destination country's
   VAT (through OSS) once cross border sales pass 10,000 € a year. The accountant confirms how this applies to them. **Launch shipping to Austria only** unless the accountant
   says otherwise. The prototype offers AT, DE, IT and other EU, so trim that list to what they confirm.
@@ -878,6 +969,7 @@ Raka said "around two weeks" on the call. Phase 1 in two weeks needs every clien
 | 15 | How café sales of the packaged range are booked against stock, by hand per day or not at all | 3.2 B | Leonie |
 | 16 | Weight of each product with packaging, if shipping is priced by weight | 3.2 H | any |
 | 17 | Invoice footer details and the first invoice number, if they want to continue Wix's numbering | 3.2 I | their accountant |
+| 18 | Their VAT setup. Kleinunternehmer or not (they have UID ATU82537658, which doesn't settle it), and whether VAT is due on agreed or received payments | 3.2 J, 6.3 | their accountant |
 
 ---
 
@@ -901,7 +993,13 @@ the five working day count, and every redirect row.
   readable without JavaScript.
 - office@ receives a test email from outside after the DNS switch, and order emails pass SPF, DKIM and DMARC.
 - A backup restored onto staging and the site works from it.
-- Invoice and credit note numbers stay gapless when 20 orders are shipped at the same moment (parallel test).
+- Invoice and credit note numbers stay gapless when 20 orders are shipped at the same moment (parallel test), and
+  the first document of a new year starts at 1 (test with a frozen clock at 31 Dec 23:59 Vienna).
+- Every row of the 3.4 table run once in Mollie test mode, including a Klarna partial ship (capture plus release), a
+  Klarna reject (release), a refund before shipping (stock back, no credit note), a refund that fails (no credit note),
+  a chargeback (flag and alert) and a replayed capture webhook (no second receipt, no second stock booking).
+- A coupon limited to one use per customer can't be used twice, and its use comes back after a reject.
+- A bundle with two VAT rates produces Mollie lines that Mollie accepts, and an invoice with both rates.
 - One month's accountant export opens and imports in their accountant's software without manual fixes.
 - A stock count, a production batch in and a damaged item each show up in the product's stock history with the right
   total.
