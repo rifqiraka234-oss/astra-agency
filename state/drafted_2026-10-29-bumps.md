@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- ALL FOUR SENT 29 Oct on Raka's "Yeah, okay, then, like, let's do, like, for example, 10, and do it at 6 o'clock", the Thursday 06.00 run. Scott 05.02.32 UTC act_uK9yj644tWnrcpqkg, Antonio 05.02.49 UTC act_N8JpHjogEmGAdmJug, Erik 05.03.07 UTC act_rvvsvEDT6n4h3Cdyz, Léonard 05.03.24 UTC act_bjSJfKYKn37nL4Eqf. One copy each. Danielle was never bumped, she said yes. Do not send again. -->
 # Bumps for Thu 29 Oct 06.00 Amsterdam (05.00 UTC). SCHEDULED on Raka's word, NOT SENT YET. Four, Danielle removed
 
 Raka, 28 Oct ~12.35 UTC, "Yeah, okay, then, like, let's do, like, for example, 10, and do it at 6 o'clock", on the plan
