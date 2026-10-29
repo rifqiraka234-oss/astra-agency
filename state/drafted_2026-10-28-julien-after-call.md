@@ -1,3 +1,4 @@
+<!-- GATE ARCHIVED. NOT SENT and not to be sent, the email version went instead on 29 Oct (state/drafted_2026-10-28-julien-email-summary.md). One thanks to Julien, not two. -->
 # Julien Salvat, Saavedra, thanks after the call and the January catch up, 28 Oct 2026
 
 NOT SENT. Waits on Raka's word.

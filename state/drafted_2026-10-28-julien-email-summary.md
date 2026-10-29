@@ -1,6 +1,8 @@
+<!-- GATE ARCHIVED. SENT 29 Oct 06.59.28 UTC from Raka's Gmail, message 1a18674de07bf8e3, on Raka's "Send on email". Do not send again. -->
 # Julien Salvat, Saavedra, email after the call, 28 Oct 2026
 
-NOT SENT. Gmail draft r-8517035564866800144 (message 1a1839417e2bb6e0) in Raka's own account, waits on Raka's word.
+SENT 29 Oct 06.59.28 UTC, Gmail message 1a18674de07bf8e3, read back from the thread, one copy. The two Gmail drafts (r-8517035564866800144 and the test r7444902905134098570) were deleted after.
+ONE CHANGE from the approved text. The connector wraps every URL in an expiring google.com/url redirect, in plain text and in HTML (tested in a throwaway draft), dead after 24 hours, so the two link lines became "Both links are in my LinkedIn message and in our calendar invite." The text below is what was sent.
 LINKS. The connector wrapped both URLs in expiring google.com/url redirects, read back from the draft 28 Oct 17.34 UTC. Before sending, Raka retypes the two URL lines by hand in Gmail so they're the plain netlify.app addresses. Same fix as the Willem email.
 
 ### Julien Salvat, Saavedra, ctc_yw97PDpTGevphfmh6
@@ -31,9 +33,7 @@ You also told me that cash flow comes first, that you still have some debts to r
 
 So the plan is simple. I'll message you in January to see how things are going, and sooner if the third location opens before then. If you'd rather talk in February, just say so.
 
-The site and the growth plan will stay live in the meantime, in case you want to look again.
-https://astra-saavedra-prototype.netlify.app/
-https://astra-saavedra-plan.netlify.app/
+The site and the growth plan will stay live in the meantime, in case you want to look again. Both links are in my LinkedIn message and in our calendar invite.
 
 Best,
 Raka
