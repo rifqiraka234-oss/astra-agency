@@ -1,0 +1,1056 @@
+{
+ "_about": "Every image on tastefrankfurt.com, from all 57 pages fetched 29 Oct 2026, each downloaded (104 of 104 at 200) and looked at on the contact sheets in contact-sheets/ (the red number on each thumbnail is the id here). 'shows' is what we saw, 'their_alt' is their own alt text. Client logos (051 to 059) are listed but not for use. Zoom every photo you use for third party marks and faces.",
+ "_read": "2026-10-29",
+ "films": [
+  {
+   "id": "F1",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-sommerfest-15s.mp4",
+   "size": "1920x1080 h264, 15 s, 12.1 MB",
+   "page": "https://tastefrankfurt.com/sommerfest-catering/",
+   "shows": "Their live cooking station at a summer party under a black pavilion, a queue of guests, staff building bowls and handing one over. Guests faces and drink bottle labels visible.",
+   "use": "Their own film. The live cooking moment, full bleed. Recompress, poster frame, never under reduced motion or data saver."
+  },
+  {
+   "id": "F2",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-rooftop-trimmed-v2.mp4",
+   "size": "1920x1080 h264, 8.5 s, 3.2 MB",
+   "page": "https://tastefrankfurt.com/rooftop-catering/",
+   "shows": "A rooftop terrace on an office building at golden hour, guests round their counters, office towers and low sun behind. Nobody recognisable.",
+   "use": "Their own film, the strongest for a full bleed. Summer and company evenings."
+  }
+ ],
+ "logo": {
+  "wordmark": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-logo-scaled.webp",
+  "wordmark_size": "2560x1020, white on transparent",
+  "mark": "https://tastefrankfurt.com/wp-content/uploads/2026/05/tf-favicon-clean.png",
+  "mark_size": "512x512, black on transparent",
+  "shows": "A burger drawn in three strokes, a top bun, a wave, a bottom bun, beside Taste Frankfurt over catering. Trace the mark to SVG. Keep the wordmark as their logo, never retype it."
+ },
+ "photos": [
+  {
+   "id": "000",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/bh-flammkuchen-1.jpg",
+   "size": "1440x1920",
+   "their_alt": [
+    "Frischer Flammkuchen vom Holzbrett Catering Bad Homburg"
+   ],
+   "on_pages": 1,
+   "shows": "Flammkuchen on a wooden board held by staff in a Taste Frankfurt apron, topping trays below. Portrait."
+  },
+  {
+   "id": "001",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/bh-hero.jpg",
+   "size": "1440x1920",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "Their black counter on a terrace at dusk, arches with green garland, trees and evening sky. Small diamond mark on the counter (older Taste on Tour mark)."
+  },
+  {
+   "id": "002",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/bh-theke-bh.jpg",
+   "size": "1920x1440",
+   "their_alt": [
+    "Cocktail Bar mit Tropical Mango Smash Catering Bad Homburg"
+   ],
+   "on_pages": 1,
+   "shows": "Cocktail bar counter, chalk board \"Tropical Mango Smash\", pineapple, in front of a pink villa. A fritz-kola bar mat is readable (third party mark)."
+  },
+  {
+   "id": "003",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/black-angus-beef-burger.png",
+   "size": "2016x1717",
+   "their_alt": [
+    "Black Angus Beef Burger"
+   ],
+   "on_pages": 1,
+   "shows": "Black Angus burger held in black gloved hands, close, dark ground. A product shot, strong."
+  },
+  {
+   "id": "004",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/business-catering-buffet-1.jpg",
+   "size": "1951x2332",
+   "their_alt": [
+    "Business Catering Buffet Frankfurt"
+   ],
+   "on_pages": 4,
+   "shows": "Same Flammkuchen shot as 000, other crop."
+  },
+  {
+   "id": "005",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/business-catering-meeting-scaled.jpg",
+   "size": "2560x1706",
+   "their_alt": [
+    "Business Catering für Firmenmeeting"
+   ],
+   "on_pages": 1,
+   "shows": "Rooftop terrace at night, guests in business dress round black pavilions, lit office blocks. Corporate evening at scale. Guests faces visible."
+  },
+  {
+   "id": "006",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/business-catering-team-1.webp",
+   "size": "1068x1180",
+   "their_alt": [
+    "Business Catering Team Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Two bowls held up in front of an apron with the older TASTE ON TOUR EVENT CATERING diamond mark. Crop the mark out or skip."
+  },
+  {
+   "id": "007",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/cat-beilagen-v2-opt.webp",
+   "size": "1279x1600",
+   "their_alt": [
+    "Beilagen"
+   ],
+   "on_pages": 1,
+   "shows": "Fries seasoned from a steel shaker into a steel bowl, dark, moody."
+  },
+  {
+   "id": "008",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/cat-burger-service-3.jpg",
+   "size": "1600x1066",
+   "their_alt": [
+    "Burger Catering Frankfurt Taste Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Staff hand a burger plate to a guest in a red dress under a pavilion, evening. Faces."
+  },
+  {
+   "id": "009",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/cat-desserts-v2-opt.webp",
+   "size": "1228x1536",
+   "their_alt": [
+    "Desserts"
+   ],
+   "on_pages": 1,
+   "shows": "Kraft boat of crepe bites with chocolate, berries and cream, held in gloved hands, Poffertjes below."
+  },
+  {
+   "id": "010",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/cat-getraenke-v2-1-opt.webp",
+   "size": "628x786",
+   "their_alt": [
+    "Drinks"
+   ],
+   "on_pages": 1,
+   "shows": "Small, 628 px. Sekt bottles in an ice bucket on a terrace by the water at dusk."
+  },
+  {
+   "id": "011",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/cat-speisen-v2-opt.webp",
+   "size": "1023x1278",
+   "their_alt": [
+    "Speisen"
+   ],
+   "on_pages": 1,
+   "shows": "Two women on their team saucing burgers at the counter. Faces."
+  },
+  {
+   "id": "012",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/cocktail-theke.jpg",
+   "size": "1920x1279",
+   "their_alt": [
+    "Cocktail Bar mit Bartender Catering Frankfurt"
+   ],
+   "on_pages": 2,
+   "shows": "Bar at night, bartenders, guests at the counter, back bar of bottles (labels readable)."
+  },
+  {
+   "id": "013",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/coffee-baristas-2.jpg",
+   "size": "1920x1440",
+   "their_alt": [
+    "Barista-Catering mit Profi-Siebträger und Mühle"
+   ],
+   "on_pages": 1,
+   "shows": "Espresso bar in a tent, two baristas, a ROCKET grinder (brand readable)."
+  },
+  {
+   "id": "014",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/coffee-espresso-2.jpg",
+   "size": "1440x1920",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "Espresso machine close."
+  },
+  {
+   "id": "015",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/coffee-latteart.jpg",
+   "size": "1440x1920",
+   "their_alt": [
+    "Barista gießt Latte Art Herz in einen Taste Frankfurt Coffee-to-go-Becher"
+   ],
+   "on_pages": 1,
+   "shows": "Latte art heart poured into a Taste Frankfurt cup, gloved hands, their apron. Lovely detail."
+  },
+  {
+   "id": "016",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/coffee-rocket.jpg",
+   "size": "1920x1440",
+   "their_alt": [
+    "Specialty Coffee Bohnen in der Mühle und Profi-Siebträger"
+   ],
+   "on_pages": 1,
+   "shows": "Espresso machines and cups on the counter."
+  },
+  {
+   "id": "017",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/coffee-theke-1.jpg",
+   "size": "1440x1920",
+   "their_alt": [
+    "Specialty Coffee Bar bei der Instone Grundsteinlegung Taste Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Black counter with the Taste Frankfurt. wordmark, two baristas, white tent (their alt, Instone Grundsteinlegung)."
+  },
+  {
+   "id": "018",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/darmstadt-fingerfood-1.jpg",
+   "size": "1920x1440",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "Office kitchen counter with dozens of Weckgläser, a fir garland, staff and guests. Same as 019."
+  },
+  {
+   "id": "019",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/darmstadt-fingerfood-5.jpg",
+   "size": "1920x1440",
+   "their_alt": [
+    "Fingerfood im Glas Premium Catering Darmstadt"
+   ],
+   "on_pages": 1,
+   "shows": "Same as 018."
+  },
+  {
+   "id": "020",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/darmstadt-flammkuchen-1.jpg",
+   "size": "1536x1811",
+   "their_alt": [
+    "Frischer Flammkuchen mit Oliven und Tomaten Live-Cooking Catering Darmstadt"
+   ],
+   "on_pages": 1,
+   "shows": "Flammkuchen with olives and tomatoes on a board, Taste Frankfurt apron, oven behind, dark."
+  },
+  {
+   "id": "021",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/darmstadt-hero.jpg",
+   "size": "1920x1440",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "Brick courtyard at night, black pavilion with string lights, guests queueing and eating. A great night shot."
+  },
+  {
+   "id": "022",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/desserts-churros-1.jpg",
+   "size": "1118x839",
+   "their_alt": [
+    "Churros"
+   ],
+   "on_pages": 1,
+   "shows": "Two kraft boats of chocolate drizzled fruit and crepe held out to camera (their alt says Churros)."
+  },
+  {
+   "id": "023",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/drinks-cocktails-bar.jpg",
+   "size": "1920x486",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "1920x486 banner, drinks on a bar. Low use."
+  },
+  {
+   "id": "024",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/drinks-softdrinks.jpg",
+   "size": "1920x486",
+   "their_alt": [
+    "Softdrinks & Klassiker"
+   ],
+   "on_pages": 1,
+   "shows": "1920x486 banner, Corona bottles in ice (brand). Skip."
+  },
+  {
+   "id": "025",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/ep-griller.jpg",
+   "size": "1023x1537",
+   "their_alt": [
+    "Griller in Aktion Taste Frankfurt Live-Cooking"
+   ],
+   "on_pages": 1,
+   "shows": "Smiling griller turning patties on the plancha under a pavilion. Faces."
+  },
+  {
+   "id": "026",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/ep-servicekraft.jpg",
+   "size": "1023x1537",
+   "their_alt": [
+    "Service-Personal beim Aufbau Taste Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Same as 011."
+  },
+  {
+   "id": "027",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/equipment-bg-1.webp",
+   "size": "2560x1070",
+   "their_alt": [
+    "Taste Frankfurt Equipment Logistik"
+   ],
+   "on_pages": 1,
+   "shows": "2560x1070, dark indoor wide, counters and staff. Dim."
+  },
+  {
+   "id": "028",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/event-personal-service.jpg",
+   "size": "1536x2048",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "Smiling staff with tongs at the Poffertjes pan, Coca-Cola and fritz bottles in front (marks)."
+  },
+  {
+   "id": "029",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/event-personal-team.webp",
+   "size": "2560x1061",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "2560x1070, dark wide, smiling staff member. Dim."
+  },
+  {
+   "id": "030",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/flammkuchen-elsaesser-art.jpg",
+   "size": "1920x486",
+   "their_alt": [
+    "Flammkuchen Elsässer Art"
+   ],
+   "on_pages": 1,
+   "shows": "1920x486 banner, Flammkuchen with rocket. Low use."
+  },
+  {
+   "id": "031",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/frankfurt-burger-1.jpg",
+   "size": "1609x1920",
+   "their_alt": [
+    "Black Angus Beef Burger Live-Cooking Catering Frankfurt"
+   ],
+   "on_pages": 2,
+   "shows": "Burger with cheese and pickles held in black gloved hands in front of the Taste Frankfurt apron, dark. Strong."
+  },
+  {
+   "id": "032",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/frankfurt-corona-bier-2.jpg",
+   "size": "488x642",
+   "their_alt": [
+    "Corona Bier eisgekühlt Bar Service Catering Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Corona bottles in a bucket (brand is the subject). Skip."
+  },
+  {
+   "id": "033",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/french-menue-catering-opt.webp",
+   "size": "1620x810",
+   "their_alt": [
+    "Tatort Event"
+   ],
+   "on_pages": 17,
+   "shows": "1620x810, dark, hands at trays of toppings. Their alt says Tatort Event on some pages. Dim."
+  },
+  {
+   "id": "034",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/geburtstag-catering-feier-scaled.jpg",
+   "size": "2560x1808",
+   "their_alt": [
+    "Geburtstag Catering Feier in Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Garden party in sun, black pavilions, guests queueing (their alt, a birthday)."
+  },
+  {
+   "id": "035",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/geburtstag-illustration-scaled.png",
+   "size": "1920x2560",
+   "their_alt": [
+    "Geburtstag Catering Konzept"
+   ],
+   "on_pages": 1,
+   "shows": "Their illustration (geburtstag-illustration-scaled.png). Not for use."
+  },
+  {
+   "id": "036",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/grill-fingerfood-illustration-1-2.png",
+   "size": "688x934",
+   "their_alt": [
+    "Grill und Fingerfood Catering Konzept"
+   ],
+   "on_pages": 1,
+   "shows": "Their illustration (grill-fingerfood-illustration-1-2.png). Not for use."
+  },
+  {
+   "id": "037",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/grill-fingerfood-illustration-2-1.png",
+   "size": "1154x750",
+   "their_alt": [
+    "Grill Catering Konzept"
+   ],
+   "on_pages": 1,
+   "shows": "Their illustration (grill-fingerfood-illustration-2-1.png). Not for use."
+  },
+  {
+   "id": "038",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/hochzeit-feier-catering-1.webp",
+   "size": "2560x1093",
+   "their_alt": [
+    "Hochzeit Feier mit Catering Taste Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "2560x1093, the team of seven in black in front of a brick wall with plants. Dark. Same team as 083."
+  },
+  {
+   "id": "039",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/knackige-bowls-cous-cous.jpg",
+   "size": "1920x486",
+   "their_alt": [
+    "Knackige Bowls & Cous-Cous"
+   ],
+   "on_pages": 1,
+   "shows": "1920x486 banner, bowls from above. Low use."
+  },
+  {
+   "id": "040",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/kunden-bosch-v2-1-v2.webp",
+   "size": "1100x825",
+   "their_alt": [
+    "Bosch Roadshow",
+    "Bosch Roadshow Live-Cooking BBQ Catering",
+    "Bosch Sommerfest Live-Cooking BBQ Catering Frankfurt"
+   ],
+   "on_pages": 24,
+   "shows": "A BOSCH flag beside their black counter outside an office block (REMEX and RUBIX signs on the building). Their Bosch event."
+  },
+  {
+   "id": "041",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/kunden-dsv-v2-v2.webp",
+   "size": "1100x825",
+   "their_alt": [
+    "DSV Kundenevent",
+    "DSV Kundenevent Hofheim",
+    "DSV Logistik-Tag Mobile Standtheke Catering Hofheim"
+   ],
+   "on_pages": 24,
+   "shows": "Guests in winter coats queueing at their pavilion in front of a DSV truck, chalk board. Their DSV event."
+  },
+  {
+   "id": "042",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/kunden-instone-1-v2.webp",
+   "size": "825x1100",
+   "their_alt": [
+    "Instone Richtfest Bau-Catering Hofheim"
+   ],
+   "on_pages": 18,
+   "shows": "Portrait. Pavilions and counter in a paved court, guests. Their Instone event."
+  },
+  {
+   "id": "043",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/kunden-monzapark.jpg",
+   "size": "1600x1458",
+   "their_alt": [
+    "Monzapark Indoor-Weihnachtsfest Langen Catering"
+   ],
+   "on_pages": 1,
+   "shows": "Indoor, black counter with the Taste Frankfurt. wordmark, a Christmas tree, a star, chalk board with Flammkuchen. Their alt, Monzapark Indoor-Weihnachtsfest Langen."
+  },
+  {
+   "id": "044",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/kunden-panasonic.jpg",
+   "size": "1600x1200",
+   "their_alt": [
+    "Panasonic Mitarbeiter-Event Langen Live-Cooking Catering"
+   ],
+   "on_pages": 1,
+   "shows": "Indoor, two of their staff smiling behind two black counters with bowls, glass facade. Their alt, Panasonic Mitarbeiter-Event Langen."
+  },
+  {
+   "id": "045",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/kunden-porsche-v2-v2.webp",
+   "size": "1100x825",
+   "their_alt": [
+    "Porsche Showroom Opening Fingerfood Catering Frankfurt",
+    "Porsche Sommerfest"
+   ],
+   "on_pages": 23,
+   "shows": "Their pavilion beside a Porsche building with the PORSCHE sign, sports cars, blue sky. Their Porsche event."
+  },
+  {
+   "id": "046",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/kunden-staedel-v2-2-v2.webp",
+   "size": "1100x893",
+   "their_alt": [
+    "Städel Museum Event Kuratierter Empfang Catering Frankfurt",
+    "Städel Night",
+    "Städel Night Frankfurt"
+   ],
+   "on_pages": 24,
+   "shows": "Their pavilion and two counters on a lawn in front of the sandstone arches of the Städel Museum. Their Städel event."
+  },
+  {
+   "id": "047",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/kunden-yahoo-v2.webp",
+   "size": "1100x825",
+   "their_alt": [
+    "Yahoo Lunch Catering Frankfurt",
+    "Yahoo Lunch Event"
+   ],
+   "on_pages": 23,
+   "shows": "Office interior, purple balloons, a screen reading yahoo! Hello, Havas!, their counter at the back. Their Yahoo event."
+  },
+  {
+   "id": "048",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/langen-bowl-2-1.jpg",
+   "size": "1600x1200",
+   "their_alt": [
+    "Frische Bowls mit vegetarische Schaschlik und Avocado Bowls-Catering Langen"
+   ],
+   "on_pages": 1,
+   "shows": "Bowls on a wooden table, a gloved hand placing grilled chicken, basil in front. Strong food shot."
+  },
+  {
+   "id": "049",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/langen-bowls.jpg",
+   "size": "1280x1920",
+   "their_alt": [
+    "Live-Cooking Bowls Station Sommerfest Catering Langen"
+   ],
+   "on_pages": 1,
+   "shows": "Portrait, golden backlight, staff at the bowl station, a guest in an orange dress. Beautiful light."
+  },
+  {
+   "id": "050",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/langen-theke.jpg",
+   "size": "1440x1920",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "From above, the counter with every topping in steel trays and staff working. The station seen from the top."
+  },
+  {
+   "id": "051",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/logo-bosch.png",
+   "size": "474x243",
+   "their_alt": [
+    "Bosch",
+    "Bosch Catering-Referenz Taste Frankfurt"
+   ],
+   "on_pages": 24,
+   "shows": "Client logo (logo-bosch.png). Not for use, client names go in our type."
+  },
+  {
+   "id": "052",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/logo-delonghi-1-scaled.png",
+   "size": "2560x1440",
+   "their_alt": [
+    "DeLonghi",
+    "DeLonghi Catering-Referenz Taste Frankfurt"
+   ],
+   "on_pages": 23,
+   "shows": "Client logo (logo-delonghi-1-scaled.png). Not for use, client names go in our type."
+  },
+  {
+   "id": "053",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/logo-dsv.png",
+   "size": "2000x615",
+   "their_alt": [
+    "DSV",
+    "DSV Catering-Referenz Taste Frankfurt"
+   ],
+   "on_pages": 24,
+   "shows": "Client logo (logo-dsv.png). Not for use, client names go in our type."
+  },
+  {
+   "id": "054",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/logo-instone-1.png",
+   "size": "1549x550",
+   "their_alt": [
+    "Instone",
+    "Instone Group"
+   ],
+   "on_pages": 19,
+   "shows": "Client logo (logo-instone-1.png). Not for use, client names go in our type."
+  },
+  {
+   "id": "055",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/logo-panasonic.png",
+   "size": "800x800",
+   "their_alt": [
+    "Panasonic"
+   ],
+   "on_pages": 1,
+   "shows": "Client logo (logo-panasonic.png). Not for use, client names go in our type."
+  },
+  {
+   "id": "056",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/logo-porsche.png",
+   "size": "2000x238",
+   "their_alt": [
+    "Porsche",
+    "Porsche Catering-Referenz Taste Frankfurt"
+   ],
+   "on_pages": 23,
+   "shows": "Client logo (logo-porsche.png). Not for use, client names go in our type."
+  },
+  {
+   "id": "057",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/logo-staedel.png",
+   "size": "800x448",
+   "their_alt": [
+    "Städel Museum",
+    "Städel Museum Catering-Referenz Taste Frankfurt"
+   ],
+   "on_pages": 24,
+   "shows": "Client logo (logo-staedel.png). Not for use, client names go in our type."
+  },
+  {
+   "id": "058",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/logo-tatort.png",
+   "size": "1151x849",
+   "their_alt": [
+    "Tatort"
+   ],
+   "on_pages": 17,
+   "shows": "Client logo (logo-tatort.png). Not for use, client names go in our type."
+  },
+  {
+   "id": "059",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/logo-yahoo-transparent-1.png",
+   "size": "800x321",
+   "their_alt": [
+    "Yahoo",
+    "Yahoo Catering-Referenz Taste Frankfurt"
+   ],
+   "on_pages": 23,
+   "shows": "Client logo (logo-yahoo-transparent-1.png). Not for use, client names go in our type."
+  },
+  {
+   "id": "060",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/mainz-bowls-2.jpg",
+   "size": "1440x1920",
+   "their_alt": [
+    "Frische Bowls im Pappkrug Catering Mainz"
+   ],
+   "on_pages": 1,
+   "shows": "A bowl held in front of an apron with the older diamond mark. Crop."
+  },
+  {
+   "id": "061",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/mainz-burger.jpg",
+   "size": "1440x1920",
+   "their_alt": [
+    "Hausgemachte Burger Live-Cooking Catering Mainz"
+   ],
+   "on_pages": 1,
+   "shows": "Burger buns with ketchup drawn as hearts. A detail."
+  },
+  {
+   "id": "062",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/mainz-delonghi.jpg",
+   "size": "1920x1440",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "A modern office courtyard, a long queue of guests at black pavilions. Corporate scale."
+  },
+  {
+   "id": "063",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/mariniertes-schaschlik-grillspiess.png",
+   "size": "1154x750",
+   "their_alt": [
+    "Mariniertes Schaschlik"
+   ],
+   "on_pages": 1,
+   "shows": "Schaschlik skewer in a kraft tray."
+  },
+  {
+   "id": "064",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/messe-catering-frankfurt.jpg",
+   "size": "2304x1536",
+   "their_alt": [
+    "Messe Catering Frankfurt Rhein-Main"
+   ],
+   "on_pages": 1,
+   "shows": "Trade fair stand, staff cooking, a third party booth sign (mapp). Their Messe work."
+  },
+  {
+   "id": "065",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/messe-catering-station.webp",
+   "size": "1500x1202",
+   "their_alt": [
+    "Messe Catering Station Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "A young man setting up a counter with a herringbone top in a garden. Unnamed, never caption as Erik or Frederik."
+  },
+  {
+   "id": "066",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/offenbach-bowl-1.jpg",
+   "size": "1440x1920",
+   "their_alt": [
+    "Bowl Live-Cooking Station Frisches Catering Offenbach"
+   ],
+   "on_pages": 1,
+   "shows": "Gloved hands assembling bowls with greens."
+  },
+  {
+   "id": "067",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/offenbach-corona-1.jpg",
+   "size": "1440x1920",
+   "their_alt": [
+    "Bar Service mit Cocktails und Bier Event-Catering Offenbach"
+   ],
+   "on_pages": 1,
+   "shows": "Corona bucket and aprons with the older Taste on Tour mark. Skip."
+  },
+  {
+   "id": "068",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/offenbach-hero-1.jpg",
+   "size": "1920x1440",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "Office courtyard at dusk, black pavilion with lights, a Christmas tree, guests. A corporate winter evening."
+  },
+  {
+   "id": "069",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/originale-currywurst-toppings.jpg",
+   "size": "1920x486",
+   "their_alt": [
+    "Originale Currywurst"
+   ],
+   "on_pages": 1,
+   "shows": "1920x486 banner, currywurst. Low use."
+  },
+  {
+   "id": "070",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-bowls-sommer.jpg",
+   "size": "1066x1600",
+   "their_alt": [
+    "Sommerliche Bowls Catering Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Portrait, same golden backlit series as 049."
+  },
+  {
+   "id": "071",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-burger-catering.webp",
+   "size": "780x1174",
+   "their_alt": [
+    "Burger Catering Frankfurt Taste Frankfurt",
+    "Rooftop Catering Equipment"
+   ],
+   "on_pages": 15,
+   "shows": "780x1174, sauce drizzled on burgers, warm. Small."
+  },
+  {
+   "id": "072",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-cocktails-sommer-1.jpg",
+   "size": "1600x1063",
+   "their_alt": [
+    "Sommer Cocktails Catering Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Bartender at an outdoor bar in a garden, guest in a green coat from behind."
+  },
+  {
+   "id": "073",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-desserts-weckglas-real.jpg",
+   "size": "1600x1066",
+   "their_alt": [
+    "Diverse Desserts im Weckglas"
+   ],
+   "on_pages": 1,
+   "shows": "Rows of dessert jars on wood, fritz-kola bottles behind (marks)."
+  },
+  {
+   "id": "074",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-event-gaeste.webp",
+   "size": "2560x825",
+   "their_alt": [
+    "Rooftop Catering Frankfurt"
+   ],
+   "on_pages": 3,
+   "shows": "2560x825, dusk queue at a pavilion, chalk board BLACK ANGUS BURGER. Wide banner."
+  },
+  {
+   "id": "075",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-live-cooking-event-scaled-v2.webp",
+   "size": "1800x1350",
+   "their_alt": [],
+   "on_pages": 31,
+   "shows": "Glass lobby, two staff behind two black counters with the Taste Frankfurt. wordmark, bowls laid out. Used on 31 of their pages."
+  },
+  {
+   "id": "076",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-logo-scaled.webp",
+   "size": "2560x1020",
+   "their_alt": [
+    "Monzapark",
+    "Taste Frankfurt"
+   ],
+   "on_pages": 57,
+   "shows": "Their wordmark logo, white, see \"logo\" above."
+  },
+  {
+   "id": "077",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-poffertjes-pan-rotated.jpg",
+   "size": "1200x1600",
+   "their_alt": [
+    "Poffertjes"
+   ],
+   "on_pages": 1,
+   "shows": "Poffertjes pan and a kraft boat of Poffertjes with sugar."
+  },
+  {
+   "id": "078",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-sekt-wein-real.jpg",
+   "size": "1600x1070",
+   "their_alt": [
+    "Sekt & Wein"
+   ],
+   "on_pages": 1,
+   "shows": "Bartender pouring at an outdoor bar by the river, sekt bottles, a parasol."
+  },
+  {
+   "id": "079",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-theke-delonghi-3-v2.webp",
+   "size": "1800x1507",
+   "their_alt": [
+    "DeLonghi Event",
+    "DeLonghi Lunch"
+   ],
+   "on_pages": 47,
+   "shows": "Modern office courtyard, black counters with the Taste Frankfurt. wordmark, chalk board, staff. Their DeLonghi event."
+  },
+  {
+   "id": "080",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/taste-frankfurt-waffeln-real-rotated.jpg",
+   "size": "1200x1600",
+   "their_alt": [
+    "Waffeln"
+   ],
+   "on_pages": 1,
+   "shows": "Waffles with berries and chocolate in a kraft boat held in front of the Taste Frankfurt apron."
+  },
+  {
+   "id": "081",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/ueber-uns-erik.webp",
+   "size": "1280x930",
+   "their_alt": [
+    "Erik Founder Taste Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Two young men at a coffee urn, smiling, a Lillet label readable. Their alt says Erik Founder but two people are in it, so never name either."
+  },
+  {
+   "id": "082",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/ueber-uns-frederik.webp",
+   "size": "1920x1243",
+   "their_alt": [
+    "Frederik Founder Taste Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Composite of their team in Taste Frankfurt aprons at night. Their alt says Frederik Founder but it is a group, never name anyone."
+  },
+  {
+   "id": "083",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/unser-team-bg.webp",
+   "size": "2400x1800",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "The team of eight in black in front of a brick wall with ivy, a counter of bowls, pineapples and bottles. Good team shot, no names."
+  },
+  {
+   "id": "084",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/usp-angus-bg-v2.webp",
+   "size": "1800x1200",
+   "their_alt": [],
+   "on_pages": 56,
+   "shows": "Their chalk A board, BLACK ANGUS BURGER with toppings and POMMES, in front of a queue at the pavilion. The chalkboard motif."
+  },
+  {
+   "id": "085",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/wiesbaden-burger-2.jpg",
+   "size": "1920x1440",
+   "their_alt": [
+    "Premium Burger Catering Live-Cooking Wiesbaden"
+   ],
+   "on_pages": 1,
+   "shows": "Burger and fries on a plate held in front of a building, sunny."
+  },
+  {
+   "id": "086",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/wiesbaden-hero-3.jpg",
+   "size": "1920x1440",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "Sunny company courtyard, guests at their black pavilion."
+  },
+  {
+   "id": "087",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/05/wiesbaden-mojito.jpg",
+   "size": "1920x1279",
+   "their_alt": [
+    "Cocktail Mojito Bar Service Wiesbaden"
+   ],
+   "on_pages": 1,
+   "shows": "Mojito cup with a Taste Frankfurt sticker, dark bar."
+  },
+  {
+   "id": "088",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/06/jp-morgan-stand.webp",
+   "size": "1800x1350",
+   "their_alt": [
+    "Live-Cooking-Stand mit Pavillon beim J.P. Morgan Lauf Frankfurt Taste Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Rainy street, their pavilion, blue balloons. J.P. Morgan run."
+  },
+  {
+   "id": "089",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/06/jp-morgan-team.webp",
+   "size": "2000x1271",
+   "their_alt": [
+    "Firmen-Team beim After-Run-Catering nach dem J.P. Morgan Corporate Challenge Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "A client company team in blue shirts posing. Their people, not Taste Frankfurt. Skip."
+  },
+  {
+   "id": "090",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/07/american-menue-catering-v2.webp",
+   "size": "1600x800",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "1600x800, fries seasoned, dark wide."
+  },
+  {
+   "id": "091",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/07/frankfurt-hero-v2.webp",
+   "size": "1600x1200",
+   "their_alt": [],
+   "on_pages": 5,
+   "shows": "Rooftop at dusk, crowd, pavilion with lights, office towers. Corporate evening."
+  },
+  {
+   "id": "092",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/07/fusion-menue-catering-v2.webp",
+   "size": "1600x800",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "1600x800, bowls with a gloved hand and basil."
+  },
+  {
+   "id": "093",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/07/hochzeit-catering-frankfurt-v2.webp",
+   "size": "1509x1668",
+   "their_alt": [
+    "Hochzeitscatering mit Live-Cooking in Frankfurt"
+   ],
+   "on_pages": 1,
+   "shows": "Two bowls held up in front of an apron with the current Taste Frankfurt catering logo, burger mark included."
+  },
+  {
+   "id": "094",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/07/hochzeit-weihnachtsfeier-catering-v2.webp",
+   "size": "1600x1200",
+   "their_alt": [
+    "Festlich gedeckte Tafel für Hochzeit Catering",
+    "Geburtstag mit veganen Alternativen",
+    "Grill Catering vegane Alternativen",
+    "Messe Catering Vielfalt"
+   ],
+   "on_pages": 4,
+   "shows": "Night, their counters with string lights along the foot, star decorations and chalk boards in front of a curved modern building, staff behind. Christmas evening."
+  },
+  {
+   "id": "095",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/07/rhein-main-einzugsgebiet-karte.webp",
+   "size": "1536x768",
+   "their_alt": [
+    "Einzugsgebiet Taste Frankfurt: Frankfurt am Main und das Rhein-Main-Gebiet"
+   ],
+   "on_pages": 1,
+   "shows": "OpenStreetMap map of Rhein-Main. Needs OSM attribution. Draw your own map instead."
+  },
+  {
+   "id": "096",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/10/burger-station-weihnachtsfeier-pavillon.webp",
+   "size": "1200x1600",
+   "their_alt": [
+    "Burger-Station mit Toppings unter weihnachtlich dekoriertem Pavillon"
+   ],
+   "on_pages": 1,
+   "shows": "Portrait, night, pavilion with garland and lights, burger station, guests."
+  },
+  {
+   "id": "097",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/10/firmen-weihnachtsfeier-innenhof-catering.webp",
+   "size": "1600x1200",
+   "their_alt": [
+    "Firmen-Weihnachtsfeier im Innenhof: Gäste am Live-Cooking-Stand von Taste Frankfurt mit Weihnachtsbaum"
+   ],
+   "on_pages": 1,
+   "shows": "Company Christmas party in a courtyard, guests at the live cooking stand, a Christmas tree."
+  },
+  {
+   "id": "098",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/10/gluehwein-kinderpunsch-flammkuchen-tafel.webp",
+   "size": "1600x1200",
+   "their_alt": [
+    "Glühwein und Kinderpunsch an der Theke, Tafel mit Flammkuchen Elsässer Art und Camembert, Birne, Preiselbeeren"
+   ],
+   "on_pages": 1,
+   "shows": "Chalk board reading Flammkuchen Elsässer Art, Camembert Birne Preiselbeeren, Getränke Kinderpunsch Glühwein, the counter with the wordmark, a star, staff at the Glühwein urns."
+  },
+  {
+   "id": "099",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/10/waffeln-nutella-live-dessert-station.webp",
+   "size": "1600x1200",
+   "their_alt": [
+    "Frische Waffeln mit Nutella an der Live-Dessert-Station"
+   ],
+   "on_pages": 1,
+   "shows": "Waffles with a NUTELLA jar as the subject (brand). Crop or skip."
+  },
+  {
+   "id": "100",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/10/weihnachtsfeier-buero-catering-weckglaeser.webp",
+   "size": "1600x1200",
+   "their_alt": [
+    "Weihnachtsfeier im Büro: Theke mit Tannengirlande und Gerichten im Weckglas"
+   ],
+   "on_pages": 1,
+   "shows": "Office counter with Weckgläser and a fir garland."
+  },
+  {
+   "id": "101",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/10/weihnachtsfeier-catering-stand-lichterkette.webp",
+   "size": "1600x1200",
+   "their_alt": [
+    "Taste Frankfurt Stand mit Lichterkette und Weihnachtsbaum bei einer Weihnachtsfeier am Abend"
+   ],
+   "on_pages": 1,
+   "shows": "Night, pavilion with garland and string lights, a Christmas tree, the counter with the Taste Frankfurt. wordmark. Hero candidate."
+  },
+  {
+   "id": "102",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/10/weihnachtsfeier-live-cooking-pavillon-gaeste.webp",
+   "size": "1600x1200",
+   "their_alt": [],
+   "on_pages": 1,
+   "shows": "Night, guests eating at the pavilion in a brick courtyard."
+  },
+  {
+   "id": "103",
+   "url": "https://tastefrankfurt.com/wp-content/uploads/2026/10/weihnachtsmarkt-stand-firmengelaende-abend.webp",
+   "size": "1600x1200",
+   "their_alt": [
+    "Weihnachtsmarkt-Stand von Taste Frankfurt mit Pavillon, Lichterkette und Glühwein auf einem Firmengelände"
+   ],
+   "on_pages": 1,
+   "shows": "Night, pavilion with string lights on company grounds, a lone guest at the counter, a bare tree. The most atmospheric. Hero candidate."
+  }
+ ]
+}
