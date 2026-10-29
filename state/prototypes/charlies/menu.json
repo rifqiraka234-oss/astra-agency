@@ -1,0 +1,111 @@
+{
+  "_source": "Charlie's Desserts menu PDF, https://www.charliesdesserts.com/s/Charlies-Menu-2026.pdf (InDesign, created 7 Apr 2026, 2 A3 pages). Transcribed 28 Oct 2026 from the page images and checked against the PDF text layer. Frozen yoghurt from their Instagram post of 26 Oct 2026, https://www.instagram.com/p/De95MO1A9-o/. GBP. Named items keep their menu price. Additions on top use the list prices below. Never re price a named item by summing its parts.",
+  "rules": {
+    "create_your_own_floor": 5.00,
+    "create_your_own_floor_text": "Everything on our menu is available for your own creation from £5",
+    "sauce_each": 1.00,
+    "scoop_on_crepe_waffle_or_cookie_dough": { "vanilla_scoop": 2.00, "whippy": 4.00 },
+    "unknown": "The menu doesn't say what a 'from £5.50' create your own base includes. The builder treats the base as plain and adds every sauce and topping at list price, labelled as an estimate for Danielle to confirm."
+  },
+  "sauces": ["Milk choc", "White choc", "Bueno", "Biscoff", "Caramel", "Strawberry", "Raspberry", "Blue Raspberry", "Bubblegum", "Pistachio", "Mint Chocolate", "Orange"],
+  "toppings": [
+    ["Mango", 1.00], ["Strawberries", 1.00], ["Raspberries", 1.00], ["Sherbet", 1.00], ["Fudge Pieces", 1.00],
+    ["Marshmallows", 1.00], ["Oreo Bits", 1.00], ["Chocolate Chips", 1.00], ["Banana", 1.00], ["Hazelnuts", 1.00],
+    ["Peanut Butter", 1.00], ["Chocolate Stars", 1.00], ["Sprinkles", 1.00], ["Chocolate Curls", 1.00], ["Biscoff Bits", 1.00],
+    ["Popping Candy", 1.00], ["Gobstopper", 1.50], ["Gum Balls", 2.00], ["Pick & Mix Cup", 2.00]
+  ],
+  "bases": {
+    "crepe_or_waffle": { "create_your_own_from": 5.50, "note": "Choose a crepe or a waffle. Plain or available to create your own from £5.50. Add a scoop of vanilla ice cream for £2 or whippy ice cream for £4." },
+    "shake": { "create_your_own_from": 5.50 },
+    "cookie_dough": { "price": 6.50, "note": "Cookie dough, all £6.50. Add a scoop of vanilla ice cream for £2 or whippy ice cream for £4." },
+    "whippy_sundae": { "price": 5.00, "name": "Plain Whippy Sundae" },
+    "mini_dutch_pancakes": { "x10": 8.50, "x20": 15.50 },
+    "scoops": { "1": 2.50, "2": 4.50, "3": 6.50, "label": "Ice cream or sorbet", "cones": { "wafer cone": 0.50, "waffle cone": 1.00, "chocolate dipped cone": 1.50, "tub": 0.00 } },
+    "strawberry_cup": { "reg": 6.00, "large": 8.00, "add_own_chocolate_bar": 1.00, "add_marshmallows": 2.00, "named": ["Chocolate Strawberry Cup", "Strawberry & Brownie Cup"] },
+    "frozen_yoghurt": { "small": 4.99, "medium": 5.99, "large": 6.99, "note": "UNLIMITED standard toppings. Instagram 26 Oct 2026. Launched at 51 King St, Huddersfield (post of 23 Oct). Which toppings count as standard, and whether Brighouse serves it, isn't published." }
+  },
+  "named_items": {
+    "Sharers": [
+      { "name": "Dubai Kunafa Sharer", "price": 18.50, "desc": "Brownie, Mini Dutch pancakes, Strawberries, Kunafa, Marshmallows" },
+      { "name": "Dubai Kunafa / Sprinkle Dipping", "price": 22.50, "desc": "Sprinkle cake pieces, Warm custard with sprinkles, Brownies, Kunafa & strawberries" },
+      { "name": "Sprinkle Dipping Tray", "price": 8.50, "desc": "Sprinkle cake pieces with warm dipping custard" },
+      { "name": "The Ultimate Box", "price": 30.00, "desc": "2 cakes or bakes, 2 crepes or 2 waffles, pick & mix bag plus 2 drinks", "footnote": "Excludes Matilda and San Sebastián" }
+    ],
+    "Charlie in Dubai": [
+      { "name": "Kunafa Strawberry Cup", "price": 11.50 },
+      { "name": "Kunafa Matilda Cake", "price": 10.50 },
+      { "name": "Kunafa Charlie Flurry", "price": 3.50 },
+      { "name": "Kunafa Cookie Dough", "price": 9.50 },
+      { "name": "Kunafa Brownie", "price": 7.50 }
+    ],
+    "Shakes": [
+      { "name": "Grimace", "price": 6.50, "desc": "Blueberry ice cream shake. Topped with whipped cream, blueberry sauce & sprinkles" },
+      { "name": "Mint Choc Aero", "price": 6.50, "desc": "Mint aero ice cream shake, topped with mint sauce & mint aero pieces" },
+      { "name": "Chocolate", "price": 6.50, "desc": "Chocolate ice cream shake, topped with chocolate sauce" },
+      { "name": "Strawberry", "price": 6.50, "desc": "Strawberry ice cream shake, topped with strawberry sauce" },
+      { "name": "Vanilla", "price": 6.00, "desc": "Vanilla ice cream shake, topped with cream" },
+      { "name": "Bubblegum", "price": 6.50, "desc": "Bubblegum ice cream shake, topped with bubblegum sauce, blue sherbert & gum balls" },
+      { "name": "Charlie's Creation", "price": 7.50, "desc": "Chocolate ice cream shake, topped with sweets and a lollipop" },
+      { "name": "Chocolate Orange", "price": 6.50, "desc": "Chocolate orange blended with whippy ice cream topped with orange sherbert & chocolate orange pieces" },
+      { "name": "Oreo", "price": 6.50, "desc": "Oreo ice cream shake, topped with oreo bits and cream" },
+      { "name": "Bueno", "price": 6.50, "desc": "Bueno ice cream shake, topped with bueno chunks and bueno sauce" },
+      { "name": "Biscoff", "price": 6.50, "desc": "Biscoff ice cream shake, topped with biscoff bits and biscoff sauce" }
+    ],
+    "Crepe or Waffle": [
+      { "name": "Oreo / Cookies n Cream", "price": 7.00, "desc": "Milk & white chocolate sauce & oreo pieces" },
+      { "name": "Nutella & Nuts", "price": 7.50, "desc": "Nutella & hazelnuts" },
+      { "name": "Charlie's Creation", "price": 8.50, "desc": "Whippy ice cream, marshmallows, pick 'n' mix sweets & bubblegum sauce" },
+      { "name": "White Stars", "price": 7.50, "desc": "White chocolate sauce topped with white chocolate jazzle stars" },
+      { "name": "Biscoff", "price": 7.50, "desc": "Biscoff sauce & biscoff bits" },
+      { "name": "Bueno", "price": 7.50, "desc": "Bueno sauce & bueno pieces" }
+    ],
+    "Cookie Dough": [
+      { "name": "Charlie's Chocolate Chip", "price": 6.50, "desc": "Classic chocolate chip cookie dough topped with chocolate sauce" },
+      { "name": "Peanut Butter", "price": 6.50, "desc": "Milk chocolate cookie dough topped with chocolate sauce, peanut butter drizzle & chopped nuts" },
+      { "name": "White Choc & Raspberry", "price": 6.50, "desc": "White chocolate cookie dough topped with white chocolate sauce, chocolate curls & freeze dried raspberries" },
+      { "name": "Biscoff", "price": 6.50, "desc": "White chocolate cookie dough, biscoff sauce & biscoff bits" },
+      { "name": "Bueno", "price": 6.50, "desc": "Milk chocolate cookie dough, bueno sauce & bueno pieces" },
+      { "name": "Oreo", "price": 6.50, "desc": "Milk chocolate cookie dough, milk & white chocolate sauce & oreo pieces" }
+    ],
+    "Mini Dutch Pancakes": [
+      { "name": "Oreo", "desc": "With oreo bits & chocolate sauce" },
+      { "name": "Strawberry & Nutella", "desc": "With Nutella & strawberries" },
+      { "name": "Biscoff", "desc": "With Biscoff sauce & crumbs" },
+      { "name": "White Choc Stars", "desc": "With white chocolate sauce & stars" },
+      { "_price": "x10 £8.50, x20 £15.50" }
+    ],
+    "Whippy Ice Cream": [
+      { "name": "Plain Whippy Sundae", "price": 5.00 },
+      { "name": "Sherbet Fruit Sundae", "price": 7.50, "desc": "Mango & strawberry pieces with Whippy ice cream topped with strawberry sauce & sherbert" },
+      { "name": "Sherbet Pick 'n' Mix Sundae", "price": 7.50, "desc": "Whippy ice cream topped with sherbet & pic & mix" },
+      { "name": "Bubblegum Sundae", "price": 8.50, "desc": "Whippy ice cream topped with bubblegum sauce, gobstoppers & gum balls" },
+      { "name": "Fudgemallow Delight", "price": 8.50, "desc": "Whippy ice cream topped with toffee sauce, fudge pieces, marshmallows & a Charlie's wafer" }
+    ],
+    "Bakes & Cakes": [
+      { "group": "Specials", "note": "Add strawberries & cream £1.50" },
+      { "name": "Matilda Cake", "price": 9.00, "desc": "Served warm with a chocolate drizzle" },
+      { "name": "San Sebastián Cheesecake", "price": 9.00, "desc": "Served with a sauce drizzle of your choice" },
+      { "group": "Charlie's Choice" },
+      { "name": "Fudge Cake", "price": 5.00 },
+      { "name": "Rainbow Cake", "price": 5.00 },
+      { "name": "Triple Chocolate Brownie", "price": 4.50 },
+      { "group": "Golden Oldies, all £4.00", "note": "Add custard £1.50" },
+      { "name": "Fruit Crumble", "price": 4.00 },
+      { "name": "Jam Roly Poly", "price": 4.00 },
+      { "name": "Sticky Toffee Pudding", "price": 4.00 },
+      { "name": "Old-School Sprinkle Cake", "price": 4.00 },
+      { "group": "Fresh Bakes", "note": "from £4.00" }
+    ],
+    "Hot Drinks": [
+      { "name": "Charlie's Special Hot Chocolate", "price": 6.00, "desc": "With whipped cream, marshmallows" },
+      { "name": "Hot Chocolate", "price": 3.50 }, { "name": "Americano", "price": 3.50 }, { "name": "Espresso", "price": 2.50 },
+      { "name": "Latte", "price": 3.50 }, { "name": "Flat White", "price": 3.50 }, { "name": "Cappuccino", "price": 3.50 },
+      { "name": "Tea", "price": 1.90 }, { "name": "Syrups", "price": 0.50 }
+    ],
+    "Mocktails": [
+      { "name": "Blue Raspberry", "price": 5.00, "desc": "A blue raspberry & lemon flavoured fizzy mocktail" },
+      { "name": "Strawberry", "price": 5.00, "desc": "A strawberry & lemon flavoured fizzy mocktail" }
+    ]
+  },
+  "also_on_the_menu": ["Pick & Mix available", "Doggy ice cream available"]
+}

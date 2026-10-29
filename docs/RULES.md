@@ -293,7 +293,12 @@ by both reads (11 of 45, 12 of 70). Agencies, marketing firms and recruiters, 1 
 venue or hospitality business, and every lost proposal stopped on budget or on a decider who wasn't on the call. So,
 in short.
 - Research the open pool in the order of `state/next_batch_ranked.md`. Don't pitch agencies, recruiters, coaches,
-  consumer businesses, foundations or one person firms before their first sale.
+  foundations or one person firms before their first sale.
+- **Consumer services are back in, at a 500 euro start (Raka, 2026-10-28).** His words, "B2B and also consumer services,
+  that's also still fine, because like I'm okay with load balling like to like 500 euros like healthy secrets ... Clinics
+  and accounting, that's also fine as well." So the mix is B2B owners (W3, W4 tech firms), clinics, law and accounting
+  (W5), and consumer services (W1b, W1c). For consumer the build and the call aim at a 500 euro first project, the
+  Healthy Secrets shape, and the budget sign can be a small one, a shop, staff, a second location, paid tools.
 - Every first message dated 26 Oct or later carries `still there:` and `budget: <one sign they can pay> | <URL>` in its
   gate, and check-drafts fails it without them.
 - After a yes, build only when there's a budget sign. Otherwise one screen and the call ask. Every delivery asks for the

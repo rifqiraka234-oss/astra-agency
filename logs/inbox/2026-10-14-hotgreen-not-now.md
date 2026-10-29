@@ -41,10 +41,18 @@ Sanya's 14 Oct reply the newest. Read back after sending, SENT label, recipients
 
 ## Follow up set
 
-- Calendar, "Follow up HotGreen (Sanya Chhugani)", Wed 2 Dec 2026 09.00 Amsterdam, event v4jainatisg8nfk15438k1hre8,
+- Calendar, "Follow up HotGreen (Sanya Chhugani)", Tue 8 Dec 2026 09.00 Amsterdam, event v4jainatisg8nfk15438k1hre8,
   popup and email reminder, marked free.
-- Session reminder, trigger trig_015bxrperasXFJQHcC43y3aQ, fires 2 Dec 2026 08.00 UTC. It re-pulls the thread, checks
+- Session reminder, trigger trig_015bxrperasXFJQHcC43y3aQ, fires 8 Dec 2026 08.00 UTC. It re-pulls the thread, checks
   whether Sanya took the fix list, checks HotGreen's site, LinkedIn and news, drafts a follow up for Raka, never
   sends, and books a mid January check if nothing comes of it.
 - If Sanya says yes to the fix list before then, it's owed at once. Recheck all twelve items on the live site that
   day and send a clean version, not the old proposal page link.
+
+## Moved to 8 Dec (28 Oct)
+
+Raka, "Okay, let's move it", on the advice to go from 2 Dec to Tue 8 Dec. That's closer to the "next couple of
+months" Sanya named on 14 Oct, still well before the holidays, and after the EU heat auction is expected to open.
+Both moved and read back from source, calendar event start 2026-12-08T09:00:00+01:00, trigger next_run_at
+2026-12-08T08:00:00Z. Gmail checked the same day, nothing from hotgreensolutions.com since Sanya's 14 Oct reply,
+thread at 8 messages with our 14 Oct reply the newest.
