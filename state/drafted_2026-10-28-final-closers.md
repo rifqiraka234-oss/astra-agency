@@ -35,6 +35,8 @@ already due, Thu 15 (the 5 Thursday bumps take the rest), Fri 16 (the 4 Friday n
 
 Wake triggers, set 28 Oct 12.40 UTC: batch 1 Thu 29 Oct 05.00 UTC trig_01N9Fa2zA3p92Gqu1gZJGG8n, batch 2 Fri 30 Oct 05.05 UTC trig_01Y62Qwdz4raJ8jLaq3T23R7, batch 3 Sat 31 Oct 05.00 UTC trig_01LEG2sfHh1ypacevVhBmck8, batch 4 Sun 1 Nov 05.00 UTC trig_017r2vqgWBKC1xsnCrGbeFAf, batch 5 Mon 2 Nov 05.00 UTC trig_01DaLniVDrDnoQ24P6t8EDF8, batch 6 Tue 3 Nov 05.00 UTC trig_0156A7QermKs4RJ7Fq7GqXGF, batch 7 Wed 4 Nov 05.00 UTC trig_01F2RPRWS9Ze99HYLhFDKw7d. Friday's runs at 05.05 so the four still interested notes (trig_01647h2JWNKUJ8eMsu7rtBWE, 05.00) go first.
 
+**After each batch.** Turn every sent section's CLOSER block into a "> SENT ... Text sent, ..." record, as batch 1 shows, so check-drafts stays clean and nothing can be sent twice. A POST 400 can-not-send-message means we're not connected, pull the thread, don't retry, close the row (Abraham, batch 1).
+
 **At send time, for each one.** Pull the thread with the control. Anything from them since our second message, or any
 newer queue row, means don't send and tell Raka. Copy from this file, confirm one copy after.
 
