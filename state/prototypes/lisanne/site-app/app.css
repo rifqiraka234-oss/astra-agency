@@ -27,8 +27,13 @@ a{color:inherit}
 .hidden{display:none!important}
 
 /* ribbon */
-.ribbon{background:var(--teal-dd);color:var(--sand);font-size:12.5px;line-height:1.45;padding:8px 16px;text-align:center}
+.ribbon{background:var(--teal-dd);color:var(--sand);font-size:12.5px;line-height:1.45;padding:4px 16px;text-align:center;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px 14px;min-height:34px}
 .ribbon b{color:#fff;font-weight:600}
+.lang{display:inline-flex;border:1px solid rgba(233,215,196,.45);border-radius:999px;overflow:hidden;flex:none}
+.lang button{background:transparent;border:0;color:var(--sand);font-size:12px;font-weight:600;letter-spacing:.05em;padding:0 12px;min-height:26px;min-width:38px}
+.lang button:hover{background:rgba(233,215,196,.16)}
+.lang button[aria-pressed="true"]{background:var(--sand);color:var(--teal-dd)}
+.lang button:focus-visible{outline-color:#fff;outline-offset:-3px}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;border:1px solid transparent;padding:11px 18px;font-weight:600;font-size:14px;line-height:1.1;text-decoration:none;transition:transform .15s ease,background .2s ease,box-shadow .2s ease}

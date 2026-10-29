@@ -179,3 +179,27 @@ and state/research_2026-10-22-lisanne-ai-workflow.md.
 | The pitch named dates the app recomputes daily | Prose on a page that outlives today doesn't name dates from a moving example |
 | An employer's deadline showed as the client's | Read whose right the article gives before labelling a term |
 | A tapped card opened half scrolled on a phone | Reset the page scroll on every screen change, and test the tap, not a direct link |
+
+## 29 Oct 2026, English toggle for the demo
+
+Raka asked for an English version so he can demo to her on Fri 30 Oct. The app (site-app/app.js, app.css, index.html)
+now has a NL | EN switch in the top bar on every screen, `?lang=en` in the link works, the choice is remembered per
+browser. Dutch stays the default and is what she sees from the plain link.
+- Everything is translated, UI, the four example enquiries (a Dutch and an English text each), deadline labels and
+  bases, flags, the draft replies, the engagement letter, the employee guide and its sources. Law references stay as
+  article numbers with a gloss. The engine reads English and Dutch enquiries. Drafts are stored per language, so an
+  edit in one language doesn't leak into the other. Guide submissions are built from structured fields so they follow
+  the language.
+- Check run. All 14 screens (start, four cards, deadlines, results, settings, the guide, a guide submission, a pasted
+  enquiry, approve) rendered with the old and new build at a frozen clock, Dutch output identical, 0 diffs, 0 page
+  errors. Toggle, persistence, reload, draft per language, form kept across toggle, modal closed on toggle, legacy
+  localStorage migrated, at 1440 and 390. 36 axe runs, the only findings are two on the guide's last screen (contrast
+  on the two inputs in the teal box, a skipped heading level) and they're identical in the original Dutch build.
+  Overflow, 90 loads at 9 widths, 0 problems. Live, app.js, app.css and index.html hash match the deployed files, title
+  switches, approve works, no broken images, noindex on.
+- Bug fixed in both languages. Opening the desk from the start screen (`#/bureau`) selects the first card without an id
+  in the address, and Approve and draft edits read the id from the address, so they did nothing on that card. A `CUR`
+  variable now tracks the open card.
+- Deploy 6ae371be73f89bd4ac7bd34c on site 5916cc2a-47db-4eb3-8386-2b9039998260. Roll back to 6ada31fca9e540a68b9c5290
+  if needed. The pitch page was not changed. It still says "a working sketch in Dutch".
+- Demo notes, demo-script-2026-10-30.md.
