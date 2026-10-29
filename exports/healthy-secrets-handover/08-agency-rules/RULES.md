@@ -1,0 +1,1244 @@
+# RULES. The operative card.
+
+**This file outranks every other document in the repo except a live instruction from Raka
+in the current conversation.** Where any other doc disagrees with a number or a ban here,
+this file wins and that doc is wrong and should be corrected.
+
+It exists because the rules were spread across fourteen documents totalling about 139,000
+tokens, the same ban was restated in twenty places, and three documents gave three
+different word ceilings while two of them each claimed to outrank the other. A rule nobody
+can find is not a rule.
+
+**Read this in full. It is the only doc that has to be read in full every session.**
+Everything else is reference, opened when the task needs it.
+
+---
+
+## 0. The gate that comes before everything
+
+**Never send, ship or state as true anything you have not checked on this pass.** Three
+checks, and they are three different ACTIONS, not three readings.
+
+1. **Source.** Reopen the thing. The URL, the thread, the file. Not your notes on it.
+2. **Opposite.** Actively try to prove the claim FALSE. Open the page that would disprove
+   it. Open the href, not the label. Recount the number on the page it came from.
+3. **Independent.** Confirm a second way that does not share a failure mode with the first.
+   A screenshot against a grep. A thread pull against a state file. Two results from the
+   same tool are one check, not two.
+
+**Absence claims ship with a positive control.** "There is no X" is worthless until the
+method has been shown to find X when X is there. `tools/site-audit.js` now does this
+automatically and prints VOID when its own detector fails.
+
+**Evidence ranking. Never skip a rung upward.**
+
+1. The live page or thread, opened now. A screenshot for anything visual or about emptiness.
+2. The statutory record. Companies House, KVK, Bundesanzeiger, KBO, Infogreffe, the Impressum.
+3. A raw tool response read in full, not its summary.
+4. My own state files and notes. A CANDIDATE list, never proof of what happened.
+5. My own memory. Not evidence, ever.
+6. A summary written after a context compaction. The least reliable thing here, because it
+   is a lossy compression of rung 5 that carries conclusions with the evidence stripped off.
+
+**Being lazy is prohibited.** If a tool, an API call or a fetch can settle it, it settles
+it. Token cost is never a reason to skip a check. An inference that turns out right is
+still a process failure.
+
+**Nothing crosses a context compaction without being reopened.** A draft is copied from
+its file byte for byte, never retyped. A count is rebuilt from the system of record until
+the arithmetic closes. "We already checked that" is the most dangerous sentence there is,
+and if the check is not in a file it did not happen.
+
+**Three sentences you may never write.** "Your website isn't working." "Your page is
+empty." Anything you did not open, fetch, count or click on this pass.
+
+### 0A. The unloaded screen (Raka, 2026-09-22)
+
+**Our reader failing to load something is never evidence about their site.** This has now
+nearly shipped twice. Chromium reported HTTP 415 on six of nine images on `dariuz.nl` and
+a message saying six of nine images were broken was one step from being sent. Direct curl
+returned `200 image/png` for the same files. The same URL returns an image, a 415 or an
+HTML page depending only on the `Accept` header we send. Separately, `dialogue.earth`
+returned 403 on every attempt, and Raka's own screenshots show a full, modern, 20 year old
+newsroom with a live story grid.
+
+**`node tools/site-audit.js` now re-fetches every failed same origin asset through a
+second independent path and prints `RENDER NOT TRUSTED` when the failure turns out to be
+ours.** When that fires, **every visual, asset, layout, breakage and emptiness finding in
+that run is void, and the screenshots are unusable for that site** because they are missing
+real assets. Do not reason around it. Do not "just check the screenshot", the screenshot is
+the thing that is wrong.
+
+**The second render path exists, so use it before blocking (2026-09-23).** On wlfm.de,
+Chromium alone failed 16 requests with `ERR_TOO_MANY_RETRIES`, a proxy fault. Rendering with
+every wlfm.de request served by curl gave 63 served, 0 errors and a page that could be read.
+Undecoded images in that render can be lazy loading or hidden slides, never a finding alone.
+
+**The three states, and only one of them lets you write a sentence.**
+
+| State | What you may say |
+|---|---|
+| Rendered, guard quiet, screenshot opened | Describe what you saw |
+| `RENDER NOT TRUSTED` | **Nothing yet.** Run `node tools/render-via-curl.js <url> <tag>`, the second render path, which serves every request to their own host through curl. If it reports **0 curl errors**, read every part it writes and describe what you saw. If not, `BLOCKED_NEEDS_INFO` and Raka opens it |
+| A bot wall or a 403 | **Nothing yet.** Run `python3 tools/fetch-walled.py <url>` first, it presents a real browser's TLS fingerprint and got through Cloudflare on dialogue.earth and the check on qualigraf.com (2026-09-28). crawl.py now falls back to it on its own. Only when that fails too, `BLOCKED_NEEDS_INFO` and Raka opens it |
+| Asset failed here **and** failed the independent re-fetch | It is theirs, and still open the screenshot before writing it |
+
+**A blocked page is not a weak page.** A wall, a challenge, a timeout or a void render says
+we could not look. It never says the site is thin, dated, broken or empty.
+
+### 0B. Presumption (Raka, 2026-09-22)
+
+**A field in lemlist is a claim, not a fact, and it is often stale.** Two of the five leads
+in the first batch had wrong company data and both would have produced an embarrassing
+message.
+
+- **Adrian Steele.** `companyName` Mercian Labels, `jobTitle` Director. He had **sold the
+  company and resigned**, per Companies House. His own tagline said "Former Owner".
+- **Romain Coquio.** `companyDomain` `carrefour.fr`, a multinational he does not own, while
+  his tagline named a different employer.
+
+**So before any research, reconcile the record against itself.** It costs one read and it
+catches this class of error before a single page is fetched.
+
+1. **Read the tagline against `companyName`.** They disagreed on both failures above, and
+   in both cases the tagline was right. "Former", "ex", "previously" and a different
+   employer name are all stop signs.
+2. **Separate the business they OWN from the job they HOLD.** `jobTitle` naming a different
+   company than `companyName` means stop and resolve it. Tim Balogun's said "Founder -
+   London Makers" against `companyName` HF Mencap, and the answer was that London Makers is
+   a programme inside HF Mencap and he is its CEO.
+3. **Confirm the domain is actually theirs.** A corporate or franchise domain is not the
+   lead's website and cannot be rebuilt by them.
+4. **For any owner or founder claim, check the statutory record** before building an angle
+   on it. Companies House, KVK, societe.com, the Impressum. It outranks lemlist every time.
+
+**If the record cannot be reconciled with evidence, the row is `BLOCKED_NEEDS_INFO` and
+stays untouched.** Never pick the plausible reading.
+
+### 0D. What the replies of 12 Oct taught (Josh Edelman, Steven Prins, Jochen Matzer)
+
+1. **A new site is not a website sale (Josh Edelman, The Wine Flight).** Company incorporated Jan 2026,
+   site built for him in mid 2026. Our opener offered "the Wine Flight site for gifts and companies" and he
+   answered "I'm not looking to change the website at this time." When the site is under a year old or
+   was just built for them, they've just paid for it. Lead with what it doesn't do yet as a selling job
+   (an AI workflow that wins gift and company bookings, a channel), not as a new or changed site.
+2. **Price on request is a model, not a gap (Steven Prins, Bulgarian Wine Hub).** Our 6 Oct nudge said there's
+   "no trade price list, trade terms or ordering on the site". His answer, "i sell to shops and bars in Belgium
+   only and have special pricelists for them". B2B sellers with a price list per customer keep trade prices
+   off the site on purpose. Before calling missing trade prices or ordering a gap, find out who they sell to
+   and how, and if it can't be found, ask instead of assert. Same family as 0C point 4. The Billie Swim opener
+   of 11 Oct carries this risk (wholesale by email is normal in her niche).
+3. **The plain bump gets answers fast, and the answers are mostly no.** Two replies within 2.5 hours of the
+   12 Oct bumps, both a no with a reason. A no is a result. Close silently, per "Close means NEVER SEND
+   ANYTHING ANYMORE", and log the reason, because the reason is the lesson.
+4. **A page can change between the research and the send (Darren Gilligan, 12 Oct).** His homepage WhatsApp
+   button pointed to his number with +1 at 08:58 and 09:15 UTC, and to +44 at 09:19, minutes before the
+   send. Only the send time recheck caught it, so the opener built on it would have been false. Reopen the
+   exact claim in the minute before every send, never trust the research pass, and when it has changed,
+   don't send, tell Raka.
+
+### 0C. The odd thing may not be theirs (Debby Alles, 2026-10-09)
+
+Our opener told Debby "Google calls de Kogge Bij Veld't". She replied "Bij tveld is niet meer
+gevestigd op dit adres", that business has left the address, and declined. The Maps listing
+had a different name AND a different phone number from hers, two signs it was someone else,
+and we read both as her mistake. Same family as the wrong domain trap, one level down.
+
+1. **"Your X" needs proof X is theirs.** A listing, page or account is theirs only if their own
+   site or HTML links it, or it links back to their site, or it carries their own phone, email or
+   name. Sitting at the same address proves nothing, a previous tenant leaves a listing behind.
+2. **A mismatch has two readings, and theirs-but-wrong is the less likely one.** Different name,
+   different number, different hours means test "this is another business" first, and say
+   nothing until one reading is proven.
+3. **Their goal comes from their own words, never from content they may not write.** finzo's
+   blog posts on Making Tax Digital read as syndicated news while its service pages never name
+   sole traders or landlords, so "you are helping sole traders get ready" was our presumption.
+4. **A deliberate choice is not a gap.** Legal Unmasked's one page sign up is a priority list
+   for early bird tickets, and its 2026 early bird sold out. Calling it "nothing to buy" was
+   wrong. Read what the page says it is for before calling it missing.
+5. **Their words, not our narrowing.** mellem wrote "for families and for the people who support
+   them". Turning that into "the cemeteries" is our guess. Quote their phrase.
+6. **A fact about their life goes in only if they said it.** "Christmas gifts" for a stylist whose
+   site never says Christmas, "grows faster than one person's week" for a lawyer whose site says
+   he retired from NautaDutilh. Cut it, or make it plainly about the season, never about them.
+
+### 0E. Worth 2,500 euros or it isn't an angle (Raka, 2026-10-12)
+
+His words, "scrap these like compliant or gdpr fixes. theyre tiny fixes and someone can do it
+like for 50 bucks. we gotta analyse things that are worth 2500 euros at least ... we gotta talk
+about the graander things."
+
+What caused it, three of the seven SKETCH drafts of 12 Oct. Kevin Hanson (Panoramix IP) was
+offered a cookie banner and an unticked opt in, every word true and sourced to the ICO, and
+worth fifty euros. David Weyn (Major Domo) was told to move his reviews to the homepage, a ten
+minute Squarespace edit. Chris Hale's (The Garnish Collective) offer ended "the enquiry form
+tidied up". True is not enough. Small and true still loses the lead, because it tells them we
+look for typos.
+
+1. **The angle is a problem whose fix is a project worth 2,500 euros or more to them.** Block
+   two names that problem and the offer names that project. A site rebuilt around what they
+   sell next, an app or tool that takes a job off the founder, a channel run for months, a
+   launch site. The quote floor of 500 euros in section 1 is unchanged. This is the floor on
+   what we analyse and pitch, not on what we quote.
+2. **Never the angle, always scrapped.** Compliance and GDPR fixes (cookie banners, consent,
+   opt ins, privacy policies, an Impressum, mentions légales), a typo, a form field or dropdown,
+   a broken link, moving a section, one line of copy, a setting. Any of them can be a proof
+   point inside a bigger angle. None is the angle. GDPR is still checked in the sweep (rule 13
+   of 4A), it just never becomes the pitch on its own, and that includes W5, whose campaign
+   name says GDPR. W5 leads get researched for the bigger angle like everyone else.
+3. **The 50 bucks test, before a word is drafted.** Could a freelancer fix this in an afternoon
+   for 50 euros? If yes, it's a task. Find the structural problem behind it, or the verdict is
+   NO_STRONG_ANGLE. This replaces the softer tweak test in section 3, which let these through.
+4. **Grander means it touches how they make money.** The revenue model (a subscription brand
+   whose homepage never sells the habit), a sales channel (company bookings with no channel to
+   companies, corporate lunches that can only be ordered by enquiry form), a launch (a dip
+   heading for supermarket shelves with a trade only site), the trust decision a buyer makes,
+   or the founder's own hours (a one person firm filling urgent jobs by public post). Ask what
+   they're trying to sell next and what in their setup stops it, at the size of a project.
+5. **The gate carries `worth:`.** The project and its value, written as a figure, e.g.
+   `worth: €4,000+, Shopify homepage and first order rebuilt around a 28 day routine, a starter
+   subscription and a Klaviyo flow to day 28`. tools/check-drafts.py fails any OPENER or SKETCH
+   in a file dated 2026-10-12 or later with no worth line at 2,500 euros or more, and any whose
+   message names a compliance fix. The figure stays in the gate. The money rule still keeps
+   it out of the message.
+6. **When the only true flaw is small, the lead waits.** Kevin Hanson's site is a strong sales
+   machine, and its real flaws (the consent setup, a LinkedIn post promising a free clinic that
+   lands on a page charging 375 pounds) are all small. That's NO_STRONG_ANGLE, recorded with
+   its sweep, and the small flaws stay in the research as proof for later.
+
+### 0F. The owner's reply test. Write their no before they do (week one audit, 2026-10-13)
+
+Raka asked how to fix the audit's worst finding. Five people said no with a reason between 5 and 13
+October, and four of them answered a gap that was never a gap. Every fact in those four messages was
+true. What was wrong was what we said it meant.
+
+| Lead | What we called a gap | What they told us | The trap |
+|---|---|---|---|
+| Debby Alles, de Kogge | "Google calls de Kogge Bij Veld't" | "Bij tveld is niet meer gevestigd op dit adres" | Not theirs |
+| Ramona Hendriks, Negentien80 | no curtain calculator on the new site | "we had a calculator for years ... nobody used it ... So we decided to delete" | Removed on purpose |
+| Steven Prins, Bulgarian Wine Hub | no trade price list on the site | "i sell to shops and bars in Belgium only and have special pricelists for them" | A model, not a gap |
+| Josh Edelman, The Wine Flight | the site says nothing about gifts or company days | "I'm not looking to change the website at this time" | Just paid for |
+
+So before block two is written, the gap has to survive the owner's own answer.
+
+1. **Write their likely no first, in their voice, one line.** "That's not us." "We took that off,
+   nobody used it." "We sell on price lists per customer." "We've just had the site built." If you
+   can picture them writing it, test it.
+2. **Run the five traps, each with its check.**
+   - **Not theirs.** A listing, account or page near them by address or name. It's theirs only if
+     their own site links it, it links back, or it carries their phone, email or name (0C point 1).
+   - **Removed on purpose.** The thing existed before and is gone now. Check the Wayback Machine and
+     their old pages and posts. A removal is a decision, so don't pitch it back unless they've said
+     they miss it. A page that still mentions a removed feature is a leftover, not a promise.
+   - **Just built or just paid for.** The current design is under a year old (Wayback's first capture
+     of this design, a launch post, an agency credit in the footer, the copyright year). Then the
+     angle is never a new or changed site, it's what the site doesn't do yet as a sales job (0D
+     point 1).
+   - **A model, not a gap.** Prices on request, a price list per trade customer, enquiry only for
+     bespoke or high ticket work, a call instead of online booking. Find out who they sell to and how
+     before calling any of these missing (0D point 2, 0C point 4).
+   - **Already fixed or in hand.** Reopen it in the minute before the send (0D point 4), and read their
+     latest posts and job ads for a new site on the way or an agency already on it.
+3. **A trap you can't rule out with evidence means that gap isn't the angle.** Take the next pain on
+   the list, or the verdict is NO_STRONG_ANGLE. Never soften it into a maybe inside the message.
+4. **The red team reads it as the owner.** Whoever checks the draft, and never the one who wrote it,
+   writes the single most likely reply. If that reply is one of the five traps, the draft goes back.
+5. **The gate carries it.** `owner reply: <their likely no, in their words> | <the trap it falls
+   under> | <the evidence that rules it out, with its URL>`. tools/check-drafts.py fails any OPENER or
+   SKETCH in a file dated 2026-10-14 or later without all three parts, without a URL in the third, or
+   with "can't rule out", "unknown" or "unclear" in it.
+
+### 0G. What the 42 noes taught (GTM review, 2026-10-25)
+
+Every no from July to 25 Oct was reread next to the pitch that caused it
+(`docs/reviews/2026-10-25-gtm-outreach-review.md`). About 19 of 42 said no because our read of their business was wrong,
+not because they didn't want help. 0B, 0C, 0D and 0F already cover part of this. These are the checks that still let
+noes through, each with the lead it would have saved.
+
+1. **They still hold the job, checked outside lemlist.** Craig had resigned from the chambers. Clément had left the club,
+   and his 15 Oct gate rested only on lemlist's copy of his profile, because his LinkedIn returned 999 and the club's own
+   site was never opened for its current director. lemlist keeps a profile the day it was scraped. So the role is
+   confirmed on the company's own team, contact or about page, the register, or a post of theirs from the last three
+   months. The gate carries `still there: <role, where it says so, date read> | <URL that isn't lemlist>`, and
+   check-drafts fails a first message dated 2026-10-26 or later without it. If nothing outside lemlist confirms it, the
+   verdict is BLOCKED_NEEDS_INFO.
+2. **A thin page may be a placeholder for something bigger.** Cédric's one photo page had a full Shopify store and an
+   agency behind it. Tatiana's GoDaddy page was a throwaway test, her least important venture. Before pitching a one
+   page site, a builder template or a single photo page, look for the real shop or project (Instagram bio link, their
+   LinkedIn posts, another domain, a crowdfunding page). If it could be a placeholder, the page isn't the angle.
+3. **Prices and booking hide in configurators, calculators, PDFs and widgets.** Tentopia had a configurator with prices
+   and we wrote "no guide price anywhere". Click through every interactive part rendered, search the rendered page and
+   its scripts for price words in their language (€, prijs, Preis, prix), and open the PDFs, before writing that
+   something is missing.
+4. **A full business isn't losing bookings.** Kristof's 2027 weekends from March to August were already full, 80% of his
+   guests speak Dutch and half book direct. Open their availability before writing "booking elsewhere" or "losing
+   bookings". When they're full, the pain is margin, staff or admin, never demand.
+5. **Pains inside the business can't be seen from outside.** Terry already had it in his platform, Marlies had "already
+   done" it, Wessel invested years ago, Denis had proof of concept, Johannes's portal was about to launch. If the gap is
+   about how they work inside, read their posts and job ads from the last three months for it being in hand. When it
+   still can't be seen, use the AI "did you know" shape, which names a sourced cost of their role instead of a claim about
+   them.
+6. **Who they sell to comes before what's missing.** B2B price lists, credit accounts, NDA clients, word of mouth and
+   stylists (Steven Prins, Intemax, REVVY, House of Wood). 0F's "a model, not a gap" trap, and 5 of the 19.
+7. **Their verb, never ours.** Section 1B. Sylvia asked never to be contacted again over "promises".
+8. **Tone.** No "looks like 2008", no crawler nitpicks, and never a third message inside seven days (Jelle, Michaël,
+   Luke). One first message, one bump, then quiet.
+9. **The send side.** Our domain lands in spam, so email only from Raka's Gmail until SPF, DKIM and DMARC are set on
+   astraagency.nl. Two sessions share the inbox, so the thread is pulled in the minute before every send.
+
+**Who to message comes before how to word it. `docs/gtm-plan.md` is the plan from 26 Oct (Raka, 25 Oct, "do whatever
+you think for us to get meetings that will get sales").** Where lemlist's industry and a blind read of each
+company agree, B2B said yes 15 times in 80 and consumer businesses 2 in 53. English speaking B2B owners are the best group
+by both reads (11 of 45, 12 of 70). Agencies, marketing firms and recruiters, 1 yes in 32. None of the seven companies we've met is a shop,
+venue or hospitality business, and every lost proposal stopped on budget or on a decider who wasn't on the call. So,
+in short.
+- Research the open pool in the order of `state/next_batch_ranked.md`. Don't pitch agencies, recruiters, coaches,
+  foundations or one person firms before their first sale.
+- **Consumer services are back in, at a 500 euro start (Raka, 2026-10-28).** His words, "B2B and also consumer services,
+  that's also still fine, because like I'm okay with load balling like to like 500 euros like healthy secrets ... Clinics
+  and accounting, that's also fine as well." So the mix is B2B owners (W3, W4 tech firms), clinics, law and accounting
+  (W5), and consumer services (W1b, W1c). For consumer the build and the call aim at a 500 euro first project, the
+  Healthy Secrets shape, and the budget sign can be a small one, a shop, staff, a second location, paid tools.
+- Every first message dated 26 Oct or later carries `still there:` and `budget: <one sign they can pay> | <URL>` in its
+  gate, and check-drafts fails it without them.
+- After a yes, build only when there's a budget sign. Otherwise one screen and the call ask. Every delivery asks for the
+  call with two slots.
+- **Half of all first messages are SKETCHB, the opener A/B test.** It was dropped on 25 Oct and turned back on 26 Oct
+  (Raka, "I THOUGHT WE'RE GOING TO DO like an ab test"). The contactId picks the version, check-drafts enforces it, and
+  `tools/ab-count.py` counts it. `docs/experiments/2026-10-26-opener-ab.md`.
+- On the call, the owner is there, the price range is said out loud, and the next step is booked before hanging up. The
+  proposal follows within 24 hours, one recommendation, not a menu.
+
+---
+
+## 1. Sending
+
+**Every outward message needs Raka's explicit word, every time.** Editing instructions are
+edits, not authorisation. "Make it English", "shorter", "less cheesy" all mean redraft and
+show again. A batch approval covers that batch only and never rolls forward.
+
+**LOAD THE WHOLE CHAT BEFORE ANY MESSAGE. MANDATORY, no exceptions (Raka, 2026-09-21).**
+Before a nudge, a reply, a follow up, a delivery or any next message to anyone, load
+**every message in that thread, in both directions, ours and theirs, from the very first
+one.** Not the last message. Not the preview. Not what a state file says. Not what a
+summary of an earlier session says. The whole conversation.
+
+**The mechanics, verified today, and there is a trap in them.**
+`get_inbox_conversation` returns **newest first**, **ten per page**, and `limit` is hard
+capped at 10, so a `limit` of 50 is refused. **Any thread longer than ten messages
+therefore hides its own beginning on page 1.** Page through with `page` until
+`pagination.nextPage` is null, and check `pagination.totalItems` against what you actually
+read.
+
+**This is about to bite.** Niklas Hanf's thread sits at exactly 10 activities right now.
+The next message in it pushes it to 11, and from that moment page 1 no longer contains the
+connect note or the start of the conversation.
+
+**Why it is mandatory rather than advisable.** The beginning of a thread holds what was
+promised, what was already offered and declined, and what we swore we would not do again.
+Michele Legoratto and Antanas Juodiskis were both told in writing that a message was the
+last one. Jack Coulthard was told "one more nudge and then I will leave it be" and then
+nudged again ten days later. Every one of those is invisible from the last message alone.
+
+**Two more mandatory checks before any send (Raka, 2026-09-24).**
+
+**A. We have never messaged this person before, checked four ways, not one.** His words, "before
+sending the message mandatory to check that we haven't messaged to them before". One empty thread
+isn't enough, because the same person can sit under a second contact, in another campaign, or in
+an email thread.
+1. `get_inbox_conversation` on the `contactId`, paged to exhaustion. Only the connect note may be
+   there for an opener.
+2. `get_inbox_conversations` with `search: "<full name>"` and again with the company name, no
+   campaign filter, to catch a duplicate contact. Pull the thread of every hit.
+3. `search_campaign_leads` with the `leadId` and `include: ["campaigns"]`, to see every campaign
+   they're in, and pull the thread under any other contact it shows.
+4. grep every state file, `silent_accepted_queue.jsonl`, `prototypes.jsonl`,
+   `inbox_digest_log.jsonl`, `drafted_*.md`, `logs/`, for the name, the company, the
+   `contactId`, the `leadId` and the LinkedIn slug. A SENT row anywhere stops the send until
+   it's explained.
+A positive control in the same minute, a thread known to be full coming back full.
+
+**B. Every source the message rests on is reopened and still true.** His words, "mandatory to
+check the sources again used in the message to be true, the inference may not be 100% true but
+as long as the sources are true." Split the message into its FACTS and its INFERENCE.
+- **Facts** are anything the lead could check, what their site says or doesn't say, a product
+  name, a language, a post, a number, a date. Each one is reopened at its source in the minutes
+  before sending and has to hold exactly as written. One fact that fails stops the send.
+- **Inference** is the "This causes" and "Especially" reasoning, what we think it costs them. It
+  can't be proven and doesn't need to be. It does need to follow from facts that are true.
+- The gate's `claims` field lists every fact with its source URL, and the send record says
+  when each was reopened. Lasse's PULSE claim failed exactly here and wasn't sent.
+
+**Before any send, in order.**
+0. **Checks A and B above.** Both, every time, written into the send record.
+1. **Load the whole thread, paged to exhaustion**, immediately before sending. Not the
+   preview, not a bulk activities pull, not a state file. If a real message exists, this is
+   a Stalled lead and it does NOT get a cold opener. If a closing nudge was sent, or we
+   promised to stop, **the thread is finished and gets nothing.**
+2. Copy the text out of the drafts file verbatim. Never compose at send time.
+3. Send with `contactId`, channel `linkedin`, `sendUserId: usr_27bdxG7jzTn2rucGB`.
+4. Re-pull the thread to confirm it landed.
+5. Write the queue row in the SAME commit as the send, with `domain`, `openerText` in full
+   and a `claims` list each written so a later session can re-test it.
+
+**Also Raka's call, never yours.** Flipping a campaign to running. Deleting anything.
+Quoting outside the public band.
+
+**THE FLOOR IS NOW 500 EUROS (Raka, 2026-09-28).** His words, "our builds start at 500
+euros. we wanna make it cheap first". So the quotable band is **500 euros to 50,000 euros**,
+not 5,000 to 50,000, and a lead who says money is tight is no longer a lead we price out.
+The deck still prints 5,000 to 50,000, and Raka's live instruction outranks the deck.
+
+---
+
+## 1B. QUOTE THEIR VERB, never a stronger one (Sylvia Randazzo, 2026-09-28)
+
+L'Office des Artistes say **"Faciliter l'accès à un réseau de professionnels (galeries,
+collectionneurs, institutions)"**, facilitate access. We wrote **"the site promises access to
+galleries, collectors and institutions"** and built the criticism on that. She replied that the
+site promises no such thing, that we did not know what we were talking about, and asked never to
+be contacted again.
+
+The substance was right. Every fact checked out live, the sentence is on /qui-sommes-nous, the
+900 euros is on /services-loa, and nothing and nobody is named on any of the four public pages.
+**We lost the lead on one verb.**
+
+So, before any message that criticises a claim the lead makes:
+
+- **Paste their sentence into the draft first, in their language, then write around it.** If the
+  criticism only works once the verb is upgraded, there is no criticism.
+- Offer, facilitate, help with and support are not promise, guarantee or deliver. Aim at what
+  they wrote, never at the strongest reading of it.
+- A criticism the lead ignored once does not get sent again fourteen days later in the same
+  words. Silence is an answer. Nudge on something new or close the row.
+
+**Meetings mean close, not nudge (Raka, 2026-10-03).** His words, "people we have said or have done
+meetings with close". Anyone we've had a call with, or who agreed to one, is closed when they go quiet, never nudged.
+Bo, Erisan, Terry and Peter were the first four.
+
+**Three days of silence is urgent (Raka, 2026-10-03).** His words, "we consider >3 days always
+urgent. We needa nudge them somehow if >3 days." Once our last message is more than three days
+old with no reply, the next nudge is due now, not at a week. The other rules still decide WHAT
+happens. One follow up already sent since they last spoke (two pitches, then close, below), a
+meeting held or agreed, a written promise that a message was the last, or a DO_NOT_CONTACT row all
+mean a silent close instead of a nudge.
+
+**TWO PITCHES, THEN CLOSE (Raka, 2026-10-13).** His words after the week one audit, "let's Move to
+two pitches, then close, with bumps spread over a few days". Michaël Abramczuk got an opener, a
+researched nudge and a plain bump in seven days (5, 9 and 12 Oct) and answered the bump with "Stop
+spam please". Two others got the same run that week.
+- **Pitch one** is our opener, or any message of ours they haven't answered, a delivery after their
+  yes included.
+- **Pitch two** is the plain bump, due once pitch one is more than three days old with no reply.
+- **Then a silent close.** A researched nudge, when Raka asks for one, IS pitch two, never a third.
+- **A reply from them starts the count again.** Our answer to it is pitch one.
+- **Spread the bumps.** Never more than 20 in one day, oldest first, the rest roll to the next day.
+  On 12 Oct 111 went out in one day, against the 20 a day lemlist's own message limit is set to.
+- **Anyone who already had a follow up when this started closes silently** when the next one would
+  have been due. That's the 22 lined up for a last bump on 15 Oct.
+- **People who said yes never close on silence (Raka, 2026-10-14).** His words, "lets just remember it
+  that they said yes and still pending from them". Anyone who said yes to a sketch, a build or a call,
+  or asked how we bill, still gets their one plain bump when it's due. After that they don't close.
+  Their queue row is `SAID_YES_PENDING` with the yes quoted and what's pending, and every pipeline
+  report lists them under Deals as said yes, waiting on them. Nothing more goes to them automatically,
+  so any further message is Raka's call. A no from them still closes them. First three, Ulrich
+  Steppler (justclaims), Chris Hale (Garnish) and Chris Ryalls (ExpoCall).
+- **Said yes and went quiet, Raka follows up himself (Raka, 2026-10-21).** His words, "for the people
+  said yes and then went quiet no auto send please let me do that". This replaces the one plain bump
+  above for anyone `SAID_YES_PENDING`. No bump and no nudge is drafted or sent for them, by any session
+  or routine. They're listed under Deals with the yes quoted, what's pending and how many days quiet,
+  and the follow up is his. Replying when they write to us is unchanged, drafted and shown as always.
+
+**A nudge is the plain bump, not a new researched message (Raka, 2026-10-12).** His words, "you
+didnt have to go like full research all you have to do is just like 👀 have you seen this". So a
+due nudge is exactly `👀 [first name], have you seen this?`, the line v0.2's automated step used,
+with the first name as we greeted them in our own last message. The thread rules don't relax. Pull
+the whole thread before drafting and again before sending, never bump a reply, a decline, a meeting,
+a promise of a last message or a thread that's already had its one follow up. And don't bump a thread whose last message is now
+wrong or already fixed (the problem we named was solved, the company was sold or renamed), because
+the bump points them straight back at it. Those close silently. A researched nudge is only for when
+Raka asks for one.
+
+**Someone outside the ICP gets a light chat, not a pitch (Raka, 2026-10-14).** His words on Phoebe
+Morris (a one person law firm) and Laura Wynch (a fractional COO), "non icp so just a light chat of what
+theyre up to", and on Fernando Gomes (co owner of a franchise store), "ask him what he's up to". So an
+accepted lead who's too small or doesn't own the business we'd pitch gets one short friendly message, one
+true line about what they do, from their own page, and a question about what they're working on. No
+flaw, no offer, no gate. Tag it CHAT, which check-drafts.py treats as a relaxed shape with the writing bans
+still on. If they answer, the reply is a REPLY, and the first offer after that follows the warm chat rule
+below.
+
+**A warm chat's first offer is an opener, not a nudge (Raka, 2026-10-13).** When someone answered our
+connect note, we answered with a question and they went quiet, nothing was ever pitched, so there's
+nothing to nudge and no 👀. Their first offer is the SKETCH opener with its full research gate and the
+2,500 euro worth line, with Raka's warm opening. His words, "redo them in the opener format, like
+'something i've been thinking [name]'". Block one is `Something I've been thinking about, [name]!`,
+block two opens `Your ...` (no "However", there's no praise to turn from), then I'd suggest, the
+Unilever, AXA, Pertamina line, and `Shall I send you a sketch of [thing]?`. check-drafts.py accepts it.
+
+**"Close" means NEVER SEND ANYTHING ANYMORE (Raka, 2026-10-03, his capitals).** Not a goodbye
+message, not a graceful sign off, nothing. A close is a DO_NOT_CONTACT row in the queue and no
+message at all, which `tools/check-drafts.py` enforces on every draft. Twenty six drafted closing
+messages were withdrawn the day he said it. So one follow up without a reply means the row is
+closed silently (two pitches, then close, 2026-10-13), and the same for a meeting that went quiet.
+
+## 1A. ONE THREAD. The whole message is one problem, start to finish (Raka, 2026-09-25)
+
+His words, "i dont understand the angle, how does the website, then suddenly go to the build
+squad?" and then "can WE MAKE SURE WE DONT WANT TO MAKE THIS MISTAKE EVER AGAIN? like recheck if
+the whole message makes sense you know in terms of angle".
+
+**What went wrong.** Dan Kavanagh's draft named a website flaw in block two (placeholder phone and
+email in his phone menu) and offered a build squad in block five. The bridge between them, "no
+time to finish his own site means he's short of developers", existed only in my head. Every
+sentence was true and the message still made no sense, because the offer didn't fix the thing it
+had just pointed at.
+
+**The rule.** Block two names ONE problem. Block three says how THAT problem grows with their
+goal. Blocks four and five offer the thing that fixes THAT problem. Nothing else goes in.
+- Offering a website or a section, block two names a site fact.
+- Offering Build Squad, block two names a capacity fact, one builder, open engineering seats, a
+  new software company, a build time on their FAQ.
+- Offering an app or tool, block two names the process fact.
+- A true flaw from a different family is left out, however good it is. It goes in the sweep.
+
+**It's a gate, `check-drafts.py` enforces it.** Every OPENER's research gate carries
+```
+thread: problem <what block two names> | cost <how block three grows it> | offer <what block five delivers> | link <word>, <word>
+lead read: <the message read as the lead, block two then block five, one sentence>
+```
+Each link word has to appear in block two AND in the offer (block four's proof sentence or block
+five). If the offer never touches what block two names, no honest link word exists and the draft
+fails. Tested both ways on 2026-09-25, the old Dan draft fails on "placeholder", the rewrite passes
+on "Labs, build".
+
+**And the read, which no script can do.** Before showing Raka any draft, read block two, skip to
+block five, and ask out loud "does this offer fix the thing it just named?". Then read the whole
+message as the lead, knowing nothing we know. If a step needs our research to make sense, it's
+missing from the message.
+
+## 1B. The mistakes of 2026-09-25, each with the gate it got
+
+| Mistake | Cost | Gate now |
+|---|---|---|
+| Dan's draft pointed at the website and offered a build squad | Raka couldn't follow the angle, a lead wouldn't either | Section 1A, `thread` and `lead read` in the gate, checker fails a link word missing from the offer |
+| I reworded Raka's offer, "half the price" became "half what hiring would cost" and "twice the speed" | A claim about us that he never made | Raka's own words stay verbatim, "in half the time at half the price". The checker's fixed list lets it repeat across a batch, so there's no reason to reword it |
+| GDPR claims written off a US egress | Burton Clinic and Aurevia were very likely told something false on 2026-09-21 | site-audit.js prints the egress and GEO VOID, RULES 4A rule 13 |
+| site-audit.js printed "banner yes" on Burton Clinic | The accept word `ok` matched inside "Book now", a banner that doesn't exist | whole word matching, rerun prints NONE FOUND against its control |
+| "Raka opens it from the Netherlands" as the only EU check | Research handed back to Raka, the thing rule 12 bans | `tools/eu-view.py`, Webbkoll from Stockholm, controls Markoni and allbirds.eu |
+| Pierre-Lou's reply named Jakarta and Bali | Broke the company profile's no-country rule | checker fails the names |
+| The checker's fixed list still had yesterday's CTA | Every batch with two openers would fail on the template itself, and the fix I reached for was rewording Raka's claim | fixed list carries the five block wording |
+| I typed a guessed contactId for a positive control | A control that proves nothing | controls come from a file or an earlier pull, never typed |
+| "I run Astra agency ... I run a squad" in Luis's draft | Read like a template | caught on the read aloud, the proof sentence starts with a different verb |
+| The queue said "no angle" for ten people who'd already had a real pitch | Almost reopened them as cold leads | every thread pulled before reopening, RULES section 1 check A |
+| An old note called OLLY'S Real Olive's own product | A competitor's launch read as theirs | reopened at source, retailtimes and ollys-snacks.com |
+| `pgrep -f` wait loops that matched themselves | Time lost, three background tasks killed | check the output files instead |
+
+## 1C. The mistakes of 2026-09-27, each with the gate it got
+
+| Mistake | Cost | Gate now |
+|---|---|---|
+| site-audit.js printed banner NONE FOUND on halloween.fr, its buttons were plain divs | An absence claim the screenshot contradicted | leaf accept or reject words under a cookie or consent parent now count, tested both ways |
+| Six lines carried from the 25 Sep sweeps were paraphrased from memory, and wrong | Prevent's missing social accounts written as "nothing missing" | carry a line forward by copying it from the file, then reread the file before commit |
+| A cookie count from one tool treated as the count | kinspot.nl is 24 in Chromium and 7 in Webbkoll for the same trackers | quote tracker hosts and cookie names, a count only from the same tool |
+| social-audit.js read French LinkedIn "16 967 abonnés" as 967 (2026-09-28) | Halloween, Hula Hoop and Ethics & Boards logged at a tenth or less of their followers | the follower pattern takes space, no-break and narrow no-break thousands, tested on six strings. Read the bio line next to any count under 1,000 |
+| A 27 Sep favour said Halloween's 404 city pages "can't show up in search" (2026-09-28) | A claim one search disproved, the Paris, Cannes, Nice and Toulouse pages are listed | a status code is not an index. Search for the page's own title before saying search can't find it |
+| Katie Goodier was pitched on 16 Sep about Risk Averse Surveyors, another Katie's firm (found 2026-09-28) | A stranger told her business had a problem, the business wasn't hers. Risk Averse's sole officer is Katie Constable-Mayne, ours runs Therapeutic Fit | the lemlist companyDomain is the starting point, and the company pitched needs the person named on its own site or its statutory record before a word is written |
+| The 24 Sep sweep listed eleven pitched contacts as rapport only (found 2026-09-28) | Nudges nearly written as openers, and eleven people untracked in the queue | a thread's status comes from the pulled thread, never from a list preview, and every pitched contact gets a queue row with its domain |
+| Our Chromium can't play H.264, and the 14 Sep opener told Studio Live Productions there was no footage on the site (found 2026-09-28) | Three videos from June sit in the raw HTML, the opener was very likely false | any claim about video, reel or footage checks the raw HTML for mp4, webm, video and iframe tags, never the render alone |
+| The 13 Sep DJi Studio opener read demo file names as hidden real clients (found 2026-09-28) | The portfolio says the Sonic Profiles are fictional companies | a name on a demo is not a client until the site or the client says so |
+
+## 2. The message. One number per rule.
+
+**Opener length is 95 to 170 words since 2026-09-24**, when Raka added block three and shortened block five. Before that it was 90 to 145, and the rest of this paragraph is that history. **Opener length was 90 to 145 words.** This supersedes the 65 word ceiling in
+`docs/enrichment-pipeline-spec.md` and `docs/astra-master-context.md` section 9, and the
+90 to 150 general guidance in that same doc. Those three numbers contradicted each other
+and two of them each claimed precedence. **90 to 145 is the number.** The floor came down from 100 on 2026-09-22, because the plain block one removes about fourteen words from every opener and the substance now sits in blocks two to four. The roast register
+may run to about 180 because the evidence is the joke.
+
+**The opener template. THE first message, Raka's, adopted 2026-09-22. Filled EXACTLY.**
+Only the brackets change. Everything outside them is fixed wording. He rejected a version
+that added a clause to block two and reworded the brand line.
+
+```
+Hi [name], saw [company], looks interesting!
+
+However, your [surface] is [the critical flaw]. This causes [stakeholder] to [impact].
+
+Especially, when you are [current goal, actions, company direction], the [problem growing bigger in the long run].
+
+I run Astra agency. We build [xyz] for brands like Unilever, AXA, Pertamina. I [proof].
+
+Shall I send you over what the [thing] looks like?
+```
+
+**Block five shortened by Raka, 2026-09-24**, "the cta should be shorter". It names the thing and
+nothing else. The goal lives in block three, so it isn't repeated.
+
+**The thing is the bigger outcome, never the tiny fix (Raka, 2026-10-05).** "Shall I send you over
+what [a modern, professional, sales converting ... version] looks like", the whole better version
+that fixes block two and serves block three, named by what it achieves. "The crawlable case studies
+page" made the offer read as an afternoon's patch his own team could do. Full rule in
+`docs/opener-template.md` block five.
+
+**Block three added by Raka, 2026-09-24.** One sentence. Where the company is heading now,
+then the SAME block two problem getting bigger as they go there. Five blocks, always.
+
+**Full spec in `docs/opener-template.md`, read it before drafting any opener.** It lists
+the eleven inputs, the source for each, the rules block by block, the research that fills
+the flaw, how to match the proof, and what to do when the template cannot be filled. The
+short version.
+
+- **Block two is exactly two sentences.** One or two flaws, overarching across every page,
+  critically poor, and it must pass the positive control, render trust, the tweak test and
+  the red team. Then `This causes [stakeholder] to [impact]`, and **the impact is aimed at
+  their MOST CURRENT goal**, found and dated by research, never a timeless generic cost.
+- **The current goal is INFERRED from linked clues, never read off one source (Raka,
+  2026-09-22).** Open all eight clue sources, starting with the lead's own lemlist `jobDescription` and `summary`, in `docs/opener-template.md` section 3A, the
+  whole site and newsletter, company LinkedIn posts, the owner's own pages, job openings
+  read in full, and a web and news search of the company and the owner. Write each clue
+  with its URL and date, link two or more that agree, try to break it, grade it. **The
+  clue never appears in the message.** No "I saw you're hiring", only the consequence.
+- **No website at all, and only once that is earned by search**, block two becomes one
+  sentence, "I couldn't find your website, and that [impact to their most current goal]." 
+- **The brand line is fixed text.** "Unilever, AXA, Pertamina", never reworded or trimmed.
+- **One proof, and it carries the argument.** The experience AND why it bears, in one line.
+- **Block five's thing fixes block two's flaw** and serves block three's goal.
+
+**Hard bans in outreach prose.** No colon character anywhere. No em dash, en dash or
+hyphen, with one exemption, a hyphen inside a real proper noun such as Mercedes-Benz or
+Witt-Dörring. Exactly one exclamation mark and it lives in block one. Contractions must be
+present. English always, whatever language the lead or their site is in.
+
+**Tag every draft with its shape, in the heading above the fenced block.** One of
+OPENER, REPLY, NUDGE, CLOSER, BOOKING, DELIVERY or CORRECTION. The tool reads the tag and
+applies that shape's rules. **An untagged draft is treated as an OPENER**, which is how
+35 perfectly good replies got reported as gate failures on 2026-09-22 and several were
+mangled into four block openers to satisfy rules that never applied to them. A reply is
+not an opener. A correction may quote the accounts it is retracting.
+
+**Run `python3 tools/check-drafts.py <file>` before showing any batch.** It exits non zero
+on failure. It covers every mechanical rule above plus pass 4 across the batch. Passes 1,
+2 and 3 stay human, read it aloud, check the credential is the reason we can do the offer,
+check block five names a thing.
+
+**The five other shapes**, each with its own rules, all in `CLAUDE.md`. Reply variant.
+Nudge, the only place an emoji is allowed. Closing nudge, the only place urgency is
+allowed. Artefact delivery. Never resend a URL to someone who already has it.
+
+---
+
+## 3. Research
+
+**Order.** The person first, never the company's HTML. What are they measured on. Separate
+the business they OWN from the job they HOLD. Pull the statutory filing. Then the site,
+rendered and LOOKED at before any grep. Then the impact on that person's number. Then
+widen only if the site is genuinely fine.
+
+**Reconcile the lemlist record against itself before fetching anything.** Section 0B. The
+tagline against `companyName`, the business owned against the job held, and the domain
+actually being theirs.
+
+**Run `node tools/site-audit.js <url> <tag>` and open BOTH screenshots.** If it prints
+`RENDER NOT TRUSTED`, stop, the run is void and so are the screenshots. See section 0A. The five angles
+are dated looks, stack and social, GDPR, a shortcoming against their target, and
+certificates. Order of force is usually 4, 3, 1, 2, 5.
+
+**Before ANY absence claim about a website, run a plain web search for the company's own
+site FIRST (Raka, 2026-09-22).** Relatiq was one approval away from a message saying the
+company had no website. Five DNS paths agreed `relatiq.nl` had no A record, and a search
+returned `www.relatiq.nl` with detailed content only a crawler that read the page could
+have, calendar integration and named customer types. A search is the cheapest way to find
+a site and it was the one thing never run. Also checked in that pass, `relatiq.app`, which
+is a different company entirely, a consumer app that reads your texts for attachment
+styles. **A plausible TLD is the wrong domain trap wearing a new hat.**
+
+**Never guess** a domain, a nav path or a social handle. Take every URL from their own HTML
+or a search result, then fetch it and confirm the page names the right company.
+
+**A link to a bare platform homepage is not a social presence.** It is an unconfigured
+theme placeholder. The audit tool now shouts about this.
+
+**A fetch failure is UNKNOWN and retryable, never "no angle".** A TLS error seen through
+our proxy is never evidence about their certificate. Always load a control host through the
+same path in the same minute.
+
+**No manufactured pain.** `NO_STRONG_ANGLE` is a real, correct outcome. Climbing the so
+what ladder means tracing a verified defect to its real consequence, never inflating a
+small true thing into a big false one.
+
+**The tweak test.** If their existing web person could fix it in an afternoon, it is a task,
+not an angle. Use the defect as proof and sell the structural thing behind it. **Tightened
+2026-10-12 into the 50 bucks test, section 0E.** The angle has to be worth 2,500 euros or more
+to them, and compliance or GDPR fixes are never the angle.
+
+**Money figures. The general numbers rule is SCRAPPED (Raka, 2026-09-22).** Do not put a
+figure in a message to make it feel researched, to set a scene or to show we did the work.
+
+**The only number allowed is one that quantifies what they are forgoing, losing or being
+hurt by.** His words, "only numbers rule IF WE WANT TO CALCULATE HOW MUCH OF [METRIC] ARE
+THEY FORGONING/LOSING/HURTING". Everything else comes out.
+
+This is tighter than what it replaces and it would have stopped the error that caused it.
+The Hounds for Heroes message carried £255,378 of fundraising spend and a £76,600 deficit.
+Neither was a loss we were quantifying, both were context, so both now fail on sight.
+
+- **Never from filed accounts, a balance sheet or a statement of financial activities.**
+  A line in a financial statement is a label over a breakdown and the breakdown is the
+  source. We read "raising funds" as money spent driving people to a donate page. Note 7
+  said 88 percent of it was staff and support costs and the advertising line was £14,142.
+  We read "donations and legacies" as donate page income. Note 3 said £258,203 of it was
+  legacies. The arithmetic closed perfectly, which is exactly what made it feel checked.
+- **Inputs stay theirs and published**, a price list, a rate card, their own headline.
+  Show the sum. Anchor deliberately low. Never model a conversion rate, a traffic figure
+  or a margin.
+- **Never quantify a credibility, positioning or brand problem.** No honest figure exists
+  behind one.
+- **`tools/check-drafts.py` enforces this.** Any currency figure fails the batch unless
+  the drafts file carries a `LOSS FIGURE` block naming the metric being lost and the
+  source of every input, and it hard fails any figure sitting next to accounts language.
+
+---
+
+## 4. lemlist
+
+**Full field map in `docs/lemlist-field-index.md`, section 1 is a reverse lookup.**
+
+The four that cost us leads.
+
+- **Acceptance is `channelMetrics.linkedinInvitationAccepted` and the
+  `linkedinInviteAccepted` activity.** Never a timestamp heuristic.
+- **`lastSentMessagePreview` lies.** It has shown the connect note at the exact second a
+  real opener went out. Only `get_inbox_conversation` per contact is reliable.
+- **`get_inbox_conversation` is capped at 10 per page, newest first.** `limit` above 10 is
+  refused. **Page until `nextPage` is null**, or a thread over ten messages will hide its
+  own beginning, which is exactly where the promises live. See section 1.
+- **The activities endpoint is reliable for acceptances and NOT for sends.** It silently
+  omits real messages.
+- **Names are abbreviated** to an initial. Key on `contactId` or `linkedinUrl`, never a name.
+
+---
+
+## 5. Building
+
+**ONE GO. THE CARD, TWO LOOKS, ONE DEPLOY (Raka, 2026-10-27).** His words, "we only have an X amount of credits both
+in claude and netlify so we cant do second or third runs of the prototype building we needa do it in one go", and on
+the fix, "go go do it. And like before its final lets put it to html or screenshot first". Between 12 and 26 Oct, 12
+prototypes took 30 versions, and the rules below already existed when most of them came back. The first build was the
+safe version and the art came on the second pass, each note was fixed alone and the fix caused the next note, and the
+QA spent hours proving builds he then sent back for taste. So every build follows **`docs/build-card.md`**, in order.
+1. **The card, filled before any code.** Every note below is a line on it.
+2. **The first look.** Only the hero and one signature moment, built locally, `node tools/check-build.js` run, and
+   screenshots at 1440 and 390 sent to Raka with the card. Nothing more is built until he says go.
+3. **The rest in one pass**, then `node tools/check-build.js <site> --action "<css>"` exit 0 on every page with every
+   plant caught. It fails the Claude look, a first screen without their picture, film or mark, and a half screen with
+   no way to the action. It can't see a wow moment, the card and Raka's two looks are for that.
+4. **The final look.** Every section screenshotted at 1440 and 390, or one file from `tools/bundle-site.py`, sent to
+   Raka. Still nothing deployed.
+5. **On his "final"**, the full QA chain once and one Netlify deploy per site. Never a deploy for review, never the full
+   QA on a build he hasn't approved.
+The paragraphs below are the notes the card was built from. Read them for the why, follow the card for the order.
+
+**THE VISITOR AND THE ACTION COME FIRST. A WEBSITE GUIDES, IT DOESN'T LIST (Raka, 2026-10-25).** His words
+on the Hooft & Petiet build, "we need to keep in mind the person who's most likely to be targeted by the website and
+what are they thinking of and what their goals are and how the whole experience of the whole of the website actually
+guides them to what we want them to have an action to … a website is not just about putting out a bunch of
+information and that's it, but it's all about guiding the intended audience into its specific desired action."
+Before a single section is designed, write four lines into the build's research folder and build from them.
+1. **Who lands here.** The one most likely visitor, by role, not "clients". (H&P, the project leader at a housing
+   association or renovation contractor who has to move residents out for weeks.)
+2. **What they're thinking when they land.** Their worries and questions, in the order they'd ask them.
+3. **Their goal.** What a good outcome is for them, in their words.
+4. **The one action we want.** One primary action per page, and the secondary path for the second audience.
+Then every section answers the visitor's next question in that order and moves them one step toward the action.
+A section that doesn't move them is cut, however good it looks. Fewer sections, each one doing a job.
+
+**NO CLAUDE LOOK. EXPENSIVE, CHIC, SIMPLE (Raka, 2026-10-25).** His words, "it's a typical Claude and ChatGPT
+website where all the stylings and the positionings are the same and like the buttons are the same, the position of
+the words are all the same … it just feels like it's a 500 euro website … simplicity is also key … the sizing of the
+buttons, the shapes, the words, it's really all important … Exclusive, premium." The tells that made H&P v1 read as
+an AI site, all banned as defaults. A serif headline with an italic second half. A small uppercase kicker with a dash
+in front. Pill buttons with a sliding arrow. Cream and indigo chapters taking turns. Gradients, glows, gradient
+overlays on photos. Big count up numbers with a source line under each. Three pillars of bullets, four facts with
+top rules. Rounded cards with soft shadows. A logo marquee. Cute SVG illustration scenes. Chips and tags. A floating
+pill. Eleven sections on a home page. Every build instead starts from premium sites researched online that day
+(real ones, rendered and looked at, not only the fingerprint pipeline), and the test before Raka sees it is
+"would this pass for a 25,000 euro site from a top studio, or a 500 euro template". Photography carries the colour,
+the brand colour is a whisper, buttons and type are sized and placed on purpose, and less is on the page.
+
+**SIMPLE IS NOT PLAIN. THE FLOW AND THE WOW, BOTH, EVERY TIME (Raka, 2026-10-25, the same afternoon).** On v2, which
+followed the rule above to the letter, "it feels like it's so plain and basic. What happened to like using all the
+pictures and animations and gradients and being like 10 times more extra creative? … Now you've done the flow, but not
+the artistic value. It needs to have a wow effect … something that they've never seen before and that we've never seen
+before in terms of animations, graphics, shapes, … gradients, colors. Search it up." So read the rule above this way.
+**"Break out of gradients" means reinvent them, never delete them.** The ban is on the generic AI versions (a purple to
+blue hero, a glow behind a card, a dark overlay on a photo), not on gradients, motion, colour or shape. Every build
+carries both halves. The flow, the visitor and the one action, from the rule above. And the art, at least one signature
+moment nobody has seen, built from the lead's own story (their mark, their photos, their promise), plus art directed
+gradients, real motion, shape and full use of their pictures. Research for it is award level work rendered that day
+(Awwwards, FWA, the studios behind them), not only premium brand sites. If a build is calm and correct but nobody would
+screenshot it, it isn't done.
+
+**THE TYPE HAS TO LOOK EXPENSIVE TOO (Raka, 2026-10-26).** On BeBetter v2, which he loved otherwise, "the only thing
+i'm commenting is the choice of fonts! They look cheap as f. Not exclusive". It was Libre Caslon Display headlines,
+Archivo body, IBM Plex Mono labels and Anton for the big moments. Pulled that morning, the houses that read as expensive
+set everything in one Swiss grotesk plus a quiet mono (Cole Buxton Akkurat, Aimé Leon Dore Söhne, Our Legacy Neue Haas
+Unica, Acne Helvetica Now with Helvetica Monospaced, Satisfy ABC Walter with Simon Mono, Fear of God Helvetica
+Condensed), and the ones that read cheap use Montserrat and Nunito (Gymshark, YoungLA). So before a build, pull the
+font names off five or more premium sites in the lead's own field, and pair to them with fonts we may ship (OFL or a
+licence we hold, licence file in the repo). The default that passed is Mona Sans (one variable family, weight and
+width, condensed for big numbers) with Fragment Mono for labels, headlines in medium weight with tight tracking. Impact
+style display faces (Anton, Bebas, Oswald), a display serif as the voice, and Montserrat, Poppins or Archivo as body
+are out unless the lead's own brand uses them. The lead's logo stays as their logo, and garment or product lettering
+that copies real work is not site type.
+
+**EVERY PROTOTYPE STARTS AT THE QUALIGRAF BAR (Raka, 2026-09-29).** His words on Ciara's first
+build, "it looks like something she can do herself…come on what did i tell you before to start and
+keep doing when we created the prototype for qualigraf?" A clean reskin of the lead's own copy is
+not a prototype. Before any page is built, every time, no exceptions:
+1. **Tear down the best first.** Render and fingerprint at least 50 sites, the lead's own
+   competitors and the category leaders plus the best storytelling sites, and write down what they
+   do. The pipeline and 83 fingerprints so far are in the Qualigraf and Hire Quality Talent research.
+2. **Tell a story, not a brochure.** One spine, built on real public data from the lead's market,
+   each number cited on the page with its source and date.
+3. **Every kind of media the story needs.** A signature interactive scene tied to the lead's own
+   brand (their logo, their product), charts from the data, licence checked film, scroll scenes,
+   tools a visitor can put their own numbers into.
+4. **A new design language, not their layout with effects on.** Their colours and marks, our
+   grammar.
+5. **Then the full QA, deploy and live verification** in `docs/build-and-deck.md`.
+The only thing that shrinks is the number of pages, never the bar.
+
+**HERTLING V3 IS THE REFERENCE BUILD RAKA SIGNED OFF (2026-10-22).** His words on seeing it, "love it
+man! keep making stuff like this remember to do stuff like this". When a lead says yes to seeing what
+winning looks like, ship both halves. The site, rebuilt around one idea taken from the lead's own
+promise (Hertling, dark to light because his promise is "no black box"), chapters edge to edge with no
+cards on a grey page, their logo as the hero object, full bleed licence checked film and photos of
+their place. And a growth plan on its own site in Astra's voice, every chart computed from sourced
+numbers reopened on the day it ships. The recipe and every hiccup are the last section of
+`docs/build-and-deck.md`. Open https://astra-hertling-prototype.netlify.app/ and
+https://astra-hertling-presence.netlify.app/ before building the next one. Repeat its idea, its logo as the hero and
+its plan, not its type and buttons. Its italic headline halves, pill buttons, soft shadow boxes and count ups came three
+days before the 25 Oct "no Claude look" rule, and `tools/check-build.js` fails them today (27 Oct).
+
+
+**THE FIRST BUILD IS THE ART BUILD. THERE IS NO CALM VERSION ONE (Raka, 2026-10-26).** His words on Honey It's
+Handled v1, "i feel like this is a normal CLAUDE website. look you need to be an artist, use lyour creativity, creations,
+shapes, gradients, animations photos, GRAPHICS, to tell the story, whats the vibe of the brand ... the website should have
+clear flows and guides the user to different goals/actions, simple but like it works ... its like any other websites and
+especially website made by claude". That's the fourth calm, correct first build he's sent back (H&P v2, Fae Club v1,
+BeBetter v1, Honey v1). So the art layer of Fae Club v2 and BeBetter v2 goes into the first build, never a second pass.
+The tells that sank Honey v1, check for each before anyone sees a build. One texture under every section. A kicker over
+every heading. The same two column grid again and again. The client's photos shrunk into boxes instead of carrying the
+page. A graphic that reads as a chart. Motion that's only fades. The brand's own vibe (its wit, its world, its energy)
+nowhere on the page. And every visitor in the four lines gets their own path and action, not only the main one (Honey v1
+gave birthdays and companies one text link). Put the screenshots beside the last build he loved and ask whether anyone
+would screenshot this one.
+
+**THE SITE FEELS LIKE WHAT THEY SELL, AND THE HERO SHOWS IT (Raka, 2026-10-26).** His words on Honey It's Handled v2,
+"it doesn't give me wedding vibes, man. It should give me wedding vibes. Like, it should be magical ... maybe a big
+picture or, like, a video ... as a hero ... It's not exclusive as well". v2 was bold and on brand, but built from the
+lead's two non wedding nights, so a wedding planner's site felt like a nightclub. Before the art, write the one feeling a
+buyer of their product expects (a wedding, magical and exclusive; a gym, sweat and pride; a restaurant, appetite), and
+make the hero full bleed film or photography of exactly that. When the lead has no footage of their core product yet,
+use licence checked mood film or photos, never captioned or claimed as theirs, and say in the handover they'd replace it
+with their own. Their real work goes where it fits, never in place of the feeling.
+
+**SAAVEDRA V3 IS THE PLAN AND PROTOTYPE TO MAKE EVERY TIME (Raka, 2026-10-25).** His words on seeing it, "Brooo
+amazing! Write in the mds to always make these kind of plans and prototypes." It came from his note on the build
+before it, "be more creative in animations, videos, photos, things, graphs, whatever, think about the DESIRED UX UI
+user action and how the whole flow guides them". Every prototype from now on does all of this.
+1. **The flow as a table before any code** (Saavedra's is research/flow.md). One row per step, the visitor's question
+   at that point, what they see and do, and the moment that answers it. The moments come out of the questions.
+2. **One state carried down the page.** The action the site exists for (a quote, a booking, a check) is built by the
+   visitor as they scroll. Every control writes one state and every display reads it, so the hero number, the scene,
+   the totals, a bar at the bottom and the form all agree, and the form arrives already filled in with the whole
+   request, in the fallback mail too. Nothing is typed twice.
+3. **The hero is the first input.** Saavedra opens on "Vous êtes combien ?" with a giant number to drag, over their own
+   sun, which turns with it. The headline asks the first question and the visitor answers it on the spot.
+4. **Show the thing they'd buy being made**, at their own published prices, labelled as an estimate. Boxes filling a
+   wooden table and a ticket printing the order, not a price list.
+5. **Graphs are controls.** The per head rows switch the order, the plan's minimum order wall is a slider. A chart the
+   visitor can move gets read, and every number in it is sourced or computed from sourced numbers.
+6. **All their pictures, and film only where it means something.** One of their photos for each step of the story,
+   licence checked loops masked into their own marks (fire in their sun and their arch), never captioned or claimed as
+   theirs, played only on screen, never under reduced motion or data saver, their own footage asked for.
+7. **The finish is a moment too.** The bar carrying the action leaves before the form, and sending ends on something
+   that belongs to the story (the ticket going up on a kitchen rail, stamped).
+8. **The plan beside it**, on its own site in Astra's voice, with graphs a visitor can move and screenshots retaken
+   from the final build.
+9. **QA that proves the sums.** A test that works the totals out on its own and compares them with the page, a film
+   test, and a planted failure for every test so a pass means something.
+Open https://astra-saavedra-prototype.netlify.app/entreprises/ and https://astra-saavedra-plan.netlify.app/ before
+building the next one. The recipe and every hiccup are in the Saavedra section of `docs/build-and-deck.md`.
+
+Read Stage L of `docs/prototype-build-spec.md` before any build. Verify by cold load with
+error capture, never by forcing reveal state. Every image fetched and byte matched. Every
+section screenshotted and actually looked at. Never caption a photograph as the client's
+premises, staff or customers. The partner disclosure travels with every partner project,
+worded "Built by Amwisesa, Astra's development partner" (Raka, 2026-09-23). Before a site
+plus deck job for a lead, read the SotoCat section at the end of `docs/build-and-deck.md`.
+
+---
+
+## 4A. Finding the angle. The biggest pain, not the first flaw (Raka, 2026-09-22 to 24)
+
+**THE DEFAULT ANGLE, before any lead is closed NO_STRONG_ANGLE (Raka, 2026-10-06).** His words,
+"we can just always go this angle default because everyone's all about AI angles, like who doesnt
+want to have ai workflows for themselves OR AI apps for their business. Or better website due to
+growth expansion". So a lead is never closed as NO_STRONG_ANGLE until both of these were hunted
+and came back empty, with the evidence written down.
+- **A, an AI workflow or AI app that makes them more efficient.** Find the specific job in THEIR
+  business that eats hours, from their own words: how customers book, order, enrol or request a
+  quote, intake forms and documents, quotes and proposals written by hand, reporting, scheduling,
+  follow up, support questions answered one by one, job ads describing manual work, a team too
+  small for the volume they claim. The message names that job and what it costs them, and offers
+  the AI workflow or app that does it ("the AI intake workflow for ...", "the quoting app for ...").
+  The pay test is treated as met by default for this angle, because owners want it. Still check
+  they don't already run it (an AI product company, an automation agency, a tool they already
+  name on their site), and never invent the job, it must be visible in their own material.
+- **B, a better website because of growth or expansion.** Funding, new market, new language, new
+  service line, new company, hiring, a site that doesn't serve where they're going.
+Only owners, founders, co-founders and CEOs. Truth rules, the triple check, the judge and the red
+team all still apply. The block five rule (name the bigger outcome) applies.
+- **C, an AI workflow for the owner personally (Raka, 2026-10-06).** "In the end of the day it might
+  not be for the company but also for them personally." When A and B fail, the subject can be the
+  owner's own week: the founder who does sales, ops and posting alone, runs two businesses or one
+  next to a day job, answers every enquiry, writes every proposal. Visible in their own material,
+  never invented, never personal life. Skip owners who sell AI or automation themselves. Brief in
+  docs/personal-ai-workflow-brief.md.
+- **Write it simple (Raka, 2026-10-06).** "Everything sounds a bit too technical, make it much more
+  simple, just go like AI workflow." Plain words, no tool names, no mechanics, the offer is "the AI
+  workflow for ...". See state/drafted_2026-10-06-simple.md for the approved register.
+- **D, social media and branding, for any consumer or local business (Raka, 2026-10-06 and 07).**
+  Baked was judged on its website and legal pages, and the opener was about a broken Imprint
+  link. Raka asked "isnt it better for social media branding stuff", and he was right. A pickup
+  only cookie bakery had gone 157 days without an Instagram post, with 95 followers against Berlin
+  peers at 800 to 12,000, a wrong district on its homepage and three different names. So for a
+  shop, bakery, café, venue, salon, brewery, consumer brand or local service, the social and
+  brand lens is researched as deeply as the site: dated post history, every account, the Google
+  profile and its category, and a benchmark of 4 to 8 comparable local businesses opened at source
+  (state/accepts_2026-10-06/b9_baked.md is the model). Block four then reads "We build branding
+  and websites and social media management for brands like Unilever, AXA, Pertamina." A consumer
+  lead isn't NO_STRONG_ANGLE until D came back empty too.
+- **All four, every lead, then pick the most expensive (Raka, 2026-10-07).** "Basically for all
+  test: better website for sales or for growth / personal AI assistant workflow / AI apps for
+  company / or SOCIAL MEDIA AND INSTAGRAM. Judge where THE BIGGEST PROBLEM FOR THEM LAYS. The most
+  expensive problem." So B, C, A and D are each tested with live evidence and written into one
+  table (proof, cost, would they name it, would an incumbent take it), and the opener leads with the
+  single most expensive one. The working brief is /tmp/claude-0/agents/FOUR_ANGLE_BRIEF.md, kept in
+  state/four_angle_brief.md.
+- **Clues and inference, not only a smoking gun (Raka, 2026-10-07).** His words, "its not about the
+  ultimate like signal you can find but you can find like these clues here and there. Are the company
+  new, are they growing, whats going on in their industry, what MIGHT be going on in their company
+  right now is probably the most and best thing you should ask, instead of trying to root on ultimate
+  or direct signals." So when nothing direct turns up, the angle can be built from clues: how new the
+  company is, signs of growth, team size, the industry's known day to day pains (a transport firm with
+  five depots lives on quotes, dispatch and paperwork), and the persona (a young firm still winning its
+  first customers wants more sales, so an AI sales workflow fits by default). This replaces "no direct
+  signal, so NO_STRONG_ANGLE".
+  **How it stays true.** Every fact about THEM is still verified (founded date, size, sites, what they
+  sell). The inference is worded as what's typical or likely, never as something we saw: "firms running
+  five depots usually lose hours to...", "at your stage, most of the work is finding the next
+  customers", "I'd guess quotes and dispatch eat a lot of the week". Never "your team spends X" or "your
+  dispatch is manual" unless we saw it. The gate records each inference as an inference, with the clue
+  it rests on. Owner only, the incumbent check and the "they already sell it" check still apply.
+
+Everything Raka said while working Ferry de Haas and the batches before him, in one place. The
+detailed method is in `docs/opener-template.md` sections 3A and 3B. These are the rules.
+
+**The principle, in his words.** "People pay for people who solve problems that are big and
+painful." A broken button is real and small. **The angle is the biggest proven pain the owner has
+right now, and we lead with it.**
+
+1. **Look at four levels, every lead.** Him, his company, his region, his industry. Pain can sit in
+   any of them. Ferry's biggest pain wasn't on any website, it was customs, every parcel to the US
+   charged duties since Aug 2025 and new EU rules since Jul 2026, landing on a one man business.
+2. **Research past the website.** Efficiency, regulations, costs, capacity, competition, hiring.
+   **Astra builds apps and internal tools too**, not only websites, so a pain we fix with a tool is
+   as good as one we fix with a page.
+3. **Clues, then inference, never the clue in the message.** Read every source through fully, the
+   whole site and newsletter, company LinkedIn posts, the owner's own pages, job ads in full, news
+   on the company and on the owner, and the lead's own lemlist `jobDescription` and `summary`.
+   Link them. A social media manager hire means expanding. A marketer who needs web design skills
+   means the website needs changing. Sales hires plus partnerships means growing fast. **Say the
+   consequence, never "I saw your job ad".**
+4. **Put every pain in one table and judge it.** How big for him, how current, how well proven,
+   can we build for it. The winner is the biggest one that's proven, not the easiest to spot.
+5. **Frame the cost for who he is.** An incumbent, not technical owner, a logistics man, won't
+   notice leads leaking through a web form. Say what it costs him in his own terms, hours, lost
+   customers, stuck shipments.
+6. **Use more sources when it matters, and check the numbers at source.** The trade association
+   (evofenedex for Dutch logistics), the regulator or chamber (KVK), the supplier itself (DHL's own
+   page), the statutory record. When two searches disagree on a number, open the source. A US
+   tariff came back as 15% in one snippet and 10% in another, KVK settled it at 10%.
+7. **Check nobody already solves it for him.** His franchisor, his supplier, his platform. Before
+   pitching a customs tool to an InXpress franchisee, check what WebShipX already does.
+8. **For a franchisee, the brand's site is his website.** It's what his customers see. Roast it
+   like his own, every page. The offer is the thing he can own, like his local page or a tool.
+9. **Biggest AND costliest, because that's what he'll pay to fix (Raka, 2026-09-24).** His words,
+   "We always wanna angle out with the biggest and costliest pain points because that means
+   they'd pay for us. If it's just a tiny fix then they're not gonna buy it." Same rule for website
+   work and for apps and tools. The pain table gets two more columns, every lead.
+   - **What it costs him in a year, in his terms.** Orders lost, a crew short, hours burnt, a
+     market shrinking under him. Use his size from the register (staff, balance sheet) and the
+     industry's own numbers. Internal estimates are labelled as estimates and never go in the
+     message as a figure.
+   - **The pay test.** Would he pay €5k to €50k to make it go away? A true flaw that's a tiny fix
+     (a missing menu link, an old PDF, a cookie banner) fails even when it sits on his goal. A
+     tiny flaw is only usable as the visible symptom of a costly pain, never as the pain itself.
+   - **The impact sentence names the cost, not the inconvenience.** "Makers abroad can't read it"
+     is an inconvenience. "The orders German makers are cutting stay lost" is a cost.
+   - **If the only proven pain is small, the verdict is NO_STRONG_ANGLE**, however true it is.
+   - **Report the table to Raka with the cost column filled**, and say which pain is costliest
+     and whether it's proven, before any draft.
+10. **Every page, many sources, judged as a whole (Raka, 2026-09-24).** His words, "Did you try
+   to use a lot of sources?? Did you try to like read all pages of the website and analyse the
+   whole thing as a whole instead of just one fix??" The first batch 6 pass read four pages of each
+   site and five sources. That's not research, it's spotting.
+   - **Crawl every page, and say the count.** Sitemaps, the WordPress API (`wp-json/wp/v2/types`
+     shows custom types like `product`), or a link crawl for Webflow and the rest. wlfm.de was 108
+     URLs including 95 products, sbzbv.nl was 32. Screenshot each page TYPE and look at it.
+   - **Then judge the site as a whole.** What can each visitor do on it, a buyer abroad, a
+     specifier, an applicant? What's missing across all pages, not on one.
+   - **At least eight outside sources**, named in the drafts file. Statutory register and its
+     history (North Data), the industry association, trade press, the company's LinkedIn, the
+     owner's own pages, news on the company, their sales agent or distributors, competitors'
+     sites, job boards, reviews. A walled source is written down as walled, never as empty.
+   - **Break every count before using it.** "84 of 95 products have no datasheet" was wrong, the
+     2023 catalogue covers 62 of them by article number. Cross check a number against every other
+     place the same information could live.
+   - **Report the counts to Raka** in one line, pages read and sources used.
+11. **When the goal is growth, ask whether the INSIDE can carry it (Raka, 2026-09-24).** His words,
+   "shouldn't scaling up their internal processes be a bigger priority? why didn't you think of
+   it". On SBZ I found the goal, moving into defence, aerospace and export, and then pitched the
+   website. I anchored on what I could see from outside, and the template's "your [surface] is"
+   pulled me to a public page. Every time the goal is growth, run these before choosing an angle.
+   - **Can they deliver more of it?** Quoting, design, work prep, planning, production, crews,
+     compliance paperwork, invoicing. Where does each job queue?
+   - **Who is the bottleneck?** Read the owner's own role title. Wessel's LinkedIn headline is
+     "Werkvoorbereiding, planning, projectleiding/coördinatie", on top of owner, sales and the
+     job ads. When sales, planning and hiring all run through one person, that person is the
+     ceiling on growth, and an internal tool is the bigger sale.
+   - **What changes with bigger clients?** Defence and aerospace bring bigger drawings, stricter
+     documentation, security rules and longer projects. That's process load, not a web page.
+   - **Internal tools are a first class angle**, quoting tools, planning boards, portals. Astra
+     builds them. The flaw sentence names the process fact that's publicly true (every job custom,
+     designed, quoted and planned from scratch) and the impact names the cost.
+12. **The owner's own LinkedIn and posts are read by me, every lead, never handed to Raka (Raka,
+   2026-09-24).** His words, "what did I tell you as well on looking on the owners linkedin posts?
+   why do you keep on cutting corners?" I asked him to open Wessel's profile without trying a
+   single route. LinkedIn returns 999 to WebFetch and curl, so that's the start, not the end.
+   Try every route and write each result into the drafts file.
+   1. WebFetch and curl on `/in/<slug>` and `/in/<slug>/recent-activity/all/`. Expect 999.
+   2. A web search on `"<full name>" <company>`. The result TITLE is the profile headline, and
+      it's a real clue (tier G, label it). Wessel's gave his actual job.
+   3. A web search on `linkedin.com/posts <slug>` and `site:linkedin.com/posts "<company>"`.
+   4. People data sites (rocketreach org chart, the company's team list) for role titles.
+   5. The company page's posts through WebFetch, which does work.
+   6. Instagram, Facebook, a personal site, podcasts, news quotes.
+   Only when all six are written down as tried may Raka be asked, and then as "these six failed,
+   can you open X", never as a substitute for doing it.
+
+13. **The angle sweep. All four families, every lead, before any verdict (Raka, 2026-09-25).**
+   His words, "We have website is shit angle for growth, we have gdpr angle, we have the building
+   apps for efficiency and growth angle, we also have social media, did we test on all of them?
+   This is mandatory." 38 leads sat at NO_STRONG_ANGLE, most judged on the website alone. A
+   strong site is one family out of four, not a verdict.
+   - **Website holding back growth.** Dated look, a buyer who can't do what they came for, the
+     goal's page missing or weak, a shop or booking path buried. Rendered and looked at.
+   - **GDPR and privacy.** Trackers firing before consent (site-audit.js lists them), no or
+     broken privacy policy, forms without consent, a missing Impressum in DE and AT. EU and UK
+     leads. **Checked every time, never pitched on its own (Raka, 2026-10-12, section 0E).**
+     "theyre tiny fixes and someone can do it like for 50 bucks." A GDPR finding can be a
+     proof point inside a 2,500 euro angle, never the angle.
+     **THE GEO TRAP (found 2026-09-25).** This container exits in Columbus, Ohio. GDPR doesn't
+     cover a US visitor, so Cookiebot, Usercentrics, Complianz, Shopify's banner and Google
+     consent mode region defaults show a US visitor no banner and let trackers run. From here
+     "trackers before consent, no banner" is only true for an EU visitor when the page carries
+     NO consent code at all. site-audit.js now prints the egress country and `GEO VOID` when it
+     finds consent code. Burton Clinic and Aurevia Syndic were both told on 2026-09-21 that
+     trackers ran before consent, and both sites set consent mode to denied for GB and the EEA.
+     **A GEO VOID site now gets the EU view, never Raka's browser (2026-09-25).**
+     `python3 tools/eu-view.py <url>` loads it from Stockholm through Webbkoll and lists every
+     cookie and third party request before a click. Add `--shopify` on a Shopify store, it reads
+     the banner's own country list (`regionVisibility`), because Sweden only stands in for the
+     lead's country when both sit on the same side of that list. Add `--ads <domain>` for the
+     Google Ads Transparency Center, advertiser, ads, first and last date shown. It's a scanner,
+     it can't say whether a banner is VISIBLE, and a Cloudflare challenge is BLOCKED, not clean.
+     **Two patterns the redo found, name them right.** Google Site Kit consent mode with the EEA
+     and GB defaulted to denied and NO consent tool installed means EU and UK visitors are never
+     tracked at all. That's not "trackers before consent", it's the opposite. Google Analytics
+     leaves them out of reports and Google Ads can't tie a click to a sale, which is a measurement
+     angle when the lead pays for ads (Burton Clinic, Aurevia). A Shopify banner set to a country
+     list that leaves out the lead's own market (Snorly, Austria only) means that market gets
+     every pixel with no banner, which IS the GDPR angle, and Germany now has competitor
+     Abmahnungen for GDPR breaches since BGH 27 March 2025.
+   - **Apps and internal tools for efficiency and growth.** Quoting, booking, planning, portals,
+     manual paperwork, one person as the bottleneck, hiring for admin. Rule 11.
+   - **Social media.** Every account taken from their own HTML, opened, last post dated, the
+     platform their buyers use, a dead or missing channel where the goal needs one.
+     **Opened means `node tools/social-audit.js <tag>`, every lead, no exceptions (Raka,
+     2026-09-28, "make sure you always check all angles").** Listing the links a site carries is
+     not checking them, and on 27 Sep that's all I did. The tool now reads Instagram through the
+     public /embed/ page (followers, posts, last post date), Facebook's follower count through the
+     Page Plugin, YouTube and X directly. Facebook post dates stay behind the login on every route
+     tried. check-drafts.py fails a sweep or gate from 2026-09-28 on whose social line doesn't
+     show social-audit.js was run.
+   - **Build Squad, the fifth family (Raka, 2026-09-25, on Harold Engelen).** His words, "for
+     harold, fuck it lets do the build squad. Our angle is, with our build squad you can do it in
+     half the time and half the price, and we have a shit load of people so you/them can just focus
+     on getting more clients." **A competitor is no longer a dead end, it's a Build Squad lead.**
+     Agencies, studios, consultancies that build, funded startups and product teams all get it.
+     Evidence is capacity, how many people actually build (their own team page), how long a
+     delivery takes (their FAQ), how much they sell (branches, services, cases, hiring), and
+     whether they already outsource or invite partners. Harold's site said one builder, 8 to 12
+     weeks, 11 branches and a partners page asking for builders, and that became the message.
+     "Half the time at half the price" is Raka's offer, flag it every time, a lead can hold us to it.
+     The only leads still out on "who" are ones where nothing is ours to sell, a listed plc, a firm
+     acquired into a group, a closed business, or a person who doesn't run the business.
+   - **Each family gets a line with its evidence and a verdict**, in a ```sweep block for a lead
+     with no opener, and as `sweep website/gdpr/apps/social/squad` in the gate for one with.
+     `check-drafts.py` fails a file dated 2026-09-25 or later without it, or with a family line
+     under 12 words or with no source. Absence claims still need their positive control.
+   - **Then the pain table picks the costliest across all four.** NO_STRONG_ANGLE is only
+     allowed when all four were tested and none passes the pay test.
+
+**Guardrails he added along the way.**
+- **Don't overstate.** InXpress rebuilt its site and the old location links landed on a general
+  page. "Your page is gone" overstated it and Raka caught it. Describe what a customer sees now.
+- **Don't call a new site old.** InXpress's site was rebuilt in August 2026. It looks dated, it
+  isn't old. Check the date before using the word.
+- **What he calls a dated site.** "Squary, things in islands, it doesn't flow, a lot of gaps." Judge
+  it from screenshots of every page, desktop and a real phone.
+- **Judge the look against the best, never against "it works" (Raka, 2026-10-13, on Wulf & Collegen).**
+  His words, "this is a pure example of a website that's made in 2010 ... you always need a compare
+  with the stuff that we make, or compare to Apple, or compare to Nike, or ... any other SaaS platforms
+  ... look how blocky everything is, the colors, they look like from SAP". I'd written the firm's site
+  off as "a current site" because it had an AI chatbot, a client portal, 1,234 reviews and fresh copy.
+  Working, busy and recently edited is not modern. So every NO_STRONG_ANGLE verdict carries a visual
+  line written after looking at the desktop and phone screenshots next to a best in class site, and
+  "the site works" never closes the website family on its own. A dated look on a firm whose substance
+  is strong (reviews, team, volume) is the angle, framed as the look not matching the firm, and still
+  checked against RULES 0D point 1 (Wulf's homepage went live 5 Nov 2025 on the Divi theme they've
+  run since 2022 and they edit it weekly, so "your site is old" is false and "it doesn't look like a
+  firm with 1,234 reviews" is the honest version).
+- **Two things wrong with the site make one modernised angle (Raka, 2026-10-13, on Octelle).** His
+  words, "the website doesnt tell the full story of the b&b and the booking is bad. So again, i
+  combined 2 things wrong with the website to make it stronger. This combined can be angled as
+  modernising." I'd pitched the broken booking alone and folded the look in as a footnote. When the
+  site both undersells the business (what a buyer would pay for missing from the homepage) and fails
+  at the job it's there for (booking, quoting, ordering), block two names both in two short
+  sentences and block three offers ONE modernised site that fixes both. Each half still needs its own
+  live fact (Octelle, 0 homepage hits for rooms, pool, sauna or price and five 170 by 127 photos, and
+  a Boeken page with nothing available on five date ranges). It's still one thread, the website.
+  The rule that a new site is never called old still holds, so say what's missing, not its age.
+- **A dated look is the angle whoever the firm is, never soften it (Raka, 2026-10-14).** His words
+  on four no-angle sites I'd sorted into "strongest", "softer" and "hold", "bro theyre all old
+  websites, old looking, angle modernise". I'd hedged Enders Analysis because its founder is a CBE
+  with Ofcom as a subscriber and the site is updated daily, and held Glyx on timing. Prestige,
+  busyness and a fresh news feed are reasons the look matters more, not less, and a company raising
+  money is exactly when its site gets judged. So when the screenshot looks dated next to best in
+  class, the verdict is modernise and the draft gets written. Flags still go to Raka beside the
+  draft (a CBE, a parent company in court protection), they never decide the verdict on their own.
+- **Odd findings aren't automatically the angle.** 130 casino spam posts on Ferry's own site were
+  true and bizarre. Raka's call was to leave them out and roast the business. Record them, flag
+  them, don't lead with them.
+- **Every claim in a draft still gets reopened live in the minute before sending.**
+
+## 4B. The research gate. Seven things, every lead, all mandatory (Raka, 2026-09-24)
+
+His list, word for word in substance, "mandatory it always searched the website fully all
+mandatory 2x and deep analyses, ensure that to check the owner's and the person we're talking
+to's linkedin profile, mandatory to check the google news of the company, mandatory to check
+regional and industry news of the company, mandatory to have 10+ sources, mandatory to judge and
+analyse all the problems and then choose the most costly, the most hot, the most big, mandatory
+to check the sources again and the thesis we're sending for accuracy and confidence."
+
+**It is enforced, not remembered.** Every OPENER in a drafts file needs a ```gate block directly
+above it. `tools/check-drafts.py` fails the draft when the gate is missing or thin, and it exits
+non zero. There is no draft without a gate and no gate without the work.
+
+1. **The whole website, twice, then a deep analysis.** Pass 1 crawls every page (sitemaps, the
+   WordPress API and its `types`, or a link crawl) and reads all of them. Pass 2 reads the whole
+   site AGAIN with fresh eyes and screenshots every page type, desktop and a real phone. Pass 2's
+   page count can't be lower than pass 1's. Then the deep analysis, what the site does for each
+   visitor as a whole, what's missing across all pages, how the business actually runs as its
+   own pages describe it (quotes, delivery, terms, privacy policy, job ads).
+2. **Two LinkedIn profiles, the owner AND the person we're messaging.** Often the same person,
+   and then the gate says so, after checking the statutory record and the headline agree. When
+   they differ (a director who isn't the owner, a son running a father's firm), both are read.
+   Six routes each, RULES 4A rule 12, every result written down.
+3. **Google News on the company**, and on the person. `python3 tools/news.py`, in the lead's own
+   language, with its control query. An empty result only counts when the control came back full.
+4. **Regional news and industry news.** The same tool runs both, their industry in their region,
+   and their industry nationally. Plus the trade association and the trade press by name.
+5. **Ten sources or more, across six domains or more.** Listed with URLs in the gate. Their own
+   site counts once per page actually used, and a walled source is listed as walled, not as read.
+6. **Judge every problem, then pick the most costly, the most hot, the most big.** The pain
+   table from rule 9 with every pain found, at least three. The gate names how many were judged
+   and why the winner wins, costliest, hottest (most urgent right now) or biggest.
+7. **Recheck the sources and the thesis before it's shown, and again before it's sent.** Every
+   claim reopened at its source, and the thesis, the one sentence we're betting on, tested for
+   accuracy. The gate ends in a confidence. HIGH or MEDIUM can be shown. **LOW is not shown**,
+   it goes back to research or becomes NO_STRONG_ANGLE. The Lasse PULSE claim was caught false at
+   exactly this step, a 700 character read had called a bilingual PDF German only.
+
+**The gate, copy this.**
+
+```gate
+lead: <name, company, contactId>
+site pass 1: <N> pages, <how crawled>, every page read
+site pass 2: <N> pages, second full read, screenshots of <page types>, desktop and phone
+deep analysis: <the site as a whole and how the business runs, from its own pages>
+owner linkedin: <six routes and what each returned>
+contact linkedin: <same person as owner, how confirmed> | <six routes>
+google news: tools/news.py <lang>, <queries and counts>, control <n>
+regional news: tools/news.py <query>, <what came back>
+industry news: tools/news.py <query>, <what came back>, plus <association or trade press>
+sources:
+1. https://...
+(10 or more, 6 or more domains)
+pains: <n> judged, <list>
+chosen: <the pain>, <costliest | hottest | biggest>, <why>
+claims: every FACT in the message, one per line, fact then source URL. Inference is not listed
+recheck: every claim reopened <time>, thesis confidence <HIGH | MEDIUM>
+```
+
+**Report the gate to Raka in one line per lead**, pages read twice, profiles read, news checked,
+source count, confidence. Say which item was walled and what was tried.
+
+## 5A. Reporting to Raka. Plain words first (Raka, 2026-09-23)
+
+His words, "whats the angle with ferry again? i dont get it. can you in general make things
+more easier to understand". The Ferry write up was accurate and he still couldn't follow it,
+because the point was buried under REST endpoints, author ids and render paths.
+
+**Every lead in a report starts with the angle in one or two everyday sentences**, the way you'd
+say it out loud to a friend. What the business is, what's wrong, why the owner would care.
+"Ferry runs an express shipping business. Someone's been secretly adding casino articles to his
+website, 130 so far. A customer who Googles him could find gambling pages with his name on them."
+
+- **No jargon in the report.** Not render, REST API, 503, positive control, contactId, WP user
+  id, curl, proxy. Say "our browser couldn't load it" or "I checked it a second way". The evidence
+  still gets done in full and written into the drafts file, where it belongs.
+- **Say what you did in one line, not the method.** "Checked three ways" beats a paragraph on
+  which tools.
+- **If the angle is weak or odd, say so plainly and first**, before the draft.
+- **The same test applies to the message itself.** If Raka can't understand it, the lead won't.
+  Plain words in the brackets, no clever phrasing.
+
+---
+
+## 6. Where everything else lives
+
+| Need | File |
+|---|---|
+| Operating procedure, all five message shapes, the corrections history | `CLAUDE.md` |
+| Which lemlist field answers which question | `docs/lemlist-field-index.md` |
+| How to research a prospect to the evidence standard | `docs/astra-prospect-research-master.md` |
+| Choosing the angle, the G/O/I/B library | `docs/astra-commercial-angle-master.md` |
+| Business identity, ICP, pricing, Raka's credentials in section 2A | `docs/astra-master-context.md` |
+| How the writing must read | `docs/writing-standard-anti-ai.md` and `docs/NO-AI-SLOP.md` |
+| Build and craft bar | `docs/prototype-build-spec.md` plus its round 3 addendum |
+| The three pipelines | the enrichment and inbox triage specs |

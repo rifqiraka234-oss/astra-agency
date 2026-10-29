@@ -1,0 +1,278 @@
+=================== logs/inbox/2026-10-18-1155-inbox-check.md
+1:# Inbox check, 2026-10-18 09:55 UTC (routine). 07:00 to 10:00 UTC, sync 09:47:17 UTC. No new replies since the 07:56 UTC check. The one conversation in the window is Nikolaus Walkner, still ending on his 07:13 yes, which is the positive control (his reply is drafted, waiting on Raka). Control thread ctc_ch3vFcKAkjQdMKDCg returned 3 items. No new queue rows from the other session.
+=================== logs/inbox/2026-10-22-audit.md
+39-| Ulrich Steppler, CHS | Said yes 13 Oct | 16 Oct, 6 days quiet |
+40-| Chris Ryalls, ExpoCall | Said yes 12 Oct | 17 Oct, 5 days quiet |
+41:| Nikolaus Walkner, Healthy Secrets | Site delivered | 19 Oct, 3 days quiet |
+42-| Chris Hale, The Garnish Collective | He'd confirm a call time | 21 Oct |
+43-| Aaron Mason, BidX | Build delivered | 21 Oct |
+44-| Noah Hertling, Systemhaus Hertling | Site and plan delivered | 22 Oct 08.34 UTC |
+45-| Lisanne De Jong Vanhommerig | App and plan delivered | 22 Oct 16.12 UTC |
+=================== logs/inbox/2026-10-19-pipeline.md
+8-with nextPage null and no errors. LinkedIn synced at 06:51:38 UTC, and the control thread ctc_ch3vFcKAkjQdMKDCg returned
+9-3 items each time. The overnight inbox (myConversations, 18 Oct 07:00 to 19 Oct 07:00 UTC) had no new reply. The only
+10:conversation in it was Nikolaus Walkner's yes from 18 Oct.
+11-
+12-## Bumps due today, 4, drafted, NOT SENT
+13-
+14-These are yesterday's 4, rolled over unsent. The text is in state/drafted_2026-10-19-bumps.md, check-drafts PASS. The 18
+--
+40-## Deals
+41-
+42:- **Said yes, we owe the sketch.** Nikolaus Walkner (Healthy Secrets) said yes on 18 Oct. The reply promising the sketch
+43-  in a day or two is drafted (state/drafted_2026-10-18-replies.md), not sent. The build starts once Raka says go.
+44-- **Said yes, waiting on them.** Ulrich (justclaims) and Chris Hale (Garnish) had their bumps on 16 Oct, and Chris Ryalls
+45-  (ExpoCall) on 17 Oct. All three threads still end on our message with the same item count as yesterday. They stay
+46-  pending.
+--
+52-## Waiting on Raka
+53-
+54:1. Nikolaus Walkner's reply, and the go to build his sketch.
+55-2. The 4 bumps above.
+56-3. Phoebe Morris. Leave her, or one light line.
+57-4. Optional thanks to Fabrice, Marlies and Alessio.
+58-5. Fernando Gomes's reply (state/drafted_2026-10-15-fernando-reply.md).
+=================== logs/inbox/2026-10-22-pipeline.md
+5-The queue's latest row per contact was scanned for anyone whose last message from us is over 3 days old (before
+6-19 Oct 06:57 UTC). Twelve threads pulled by contact at 06:58 UTC, each item count unchanged since its last pull and the
+7:newest item ours: Ulrich Steppler 6, Chris Ryalls 10, Nikolaus Walkner 4, Chris Hale 10, Matthias Ufer 7, Aaron Mason 4,
+8-Noah Hertling 5, Phoebe Morris 1, Valeska Schaaf 3, Lupo Benatti 2, Julien Facchini 3, and the control Rob Quinn 2.
+9-LinkedIn synced 06:45:35 UTC. myConversations 05:50 to 07:05 UTC empty, and the inbox checks since yesterday's run
+10-(21 Oct 06:57 to 22 Oct 05:58) caught Matthias Ufer and Grigory Nagaev and nothing else.
+11-
+--
+31-- **Chris Ryalls (ExpoCall).** "I'd be curious to see how your page for hotels would look" (4 Oct), hotel page 5 Oct,
+32-  call offer 12 Oct, his bump 17 Oct. Quiet 5 days.
+33:- **Nikolaus Walkner (Healthy Secrets).** "Hey, yes sure why not" (18 Oct), the whole site delivered 19 Oct 15:27 UTC.
+34-  Quiet 2.6 days.
+35-- **Aaron Mason (BidX).** "Sure send the sketch" (20 Oct), the outreach desk delivered 21 Oct 14:54 UTC by the other
+36-  session. Quiet 16 hours.
+37-- **Noah Hertling (Systemhaus Hertling).** "Yes that would be great" (20 Oct). Promised later this week. The other
+--
+46-  in Portugal, unanswered since 15 Oct.
+47-- **Not now, door open.** Kyson (Acquitas), Sanya (HotGreen), Mardi Witzel (PolyML), Fabrice Beauchêne (Glyx).
+48:- **Prototypes.** Garnish and Schumacher liked, justclaims liked, BidX delivered, Healthy Secrets pending.
+49-
+50-## Waiting on Raka
+51-
+52-1. Noah's sketch delivery, due by Friday.
+=================== logs/inbox/2026-10-23-pipeline.md
+48-| Ulrich Steppler (justclaims) | "Impressive, Raka. I need to take this up with my team. How do you bill for this?" (13 Oct) | His team's answer, our billing reply and call offer 13 Oct, bump 16 Oct | 6.7 days |
+49-| Chris Ryalls (ExpoCall) | "I'd be curious to see how your page for hotels would look" (4 Oct) | His look at the hotel page, call offer 12 Oct, bump 17 Oct | 6 days |
+50:| Nikolaus Walkner (Healthy Secrets) | "Hey, yes sure why not" (18 Oct) | His reaction to the whole site, delivered 19 Oct | 3.6 days |
+51-| Chris Hale (Garnish) | "Yeah sure - will confirm tomorrow" (20 Oct), to a call | A call time, none came on 21 or 22 Oct | 2 days |
+52-| Aaron Mason (BidX) | "Sure send the sketch" (20 Oct) | His reaction to the outreach desk, delivered 21 Oct | 1.7 days |
+53-| Noah Hertling (Systemhaus Hertling) | "Yes that would be great" (20 Oct) | His reaction to the site and plan, delivered 22 Oct 08:34 | 0.9 days |
+54-| Lisanne De Jong Vanhommerig | "Yes, that's interesting, thanks!" (22 Oct) | Her reaction to the intake app and plan, delivered 22 Oct 16:12 | 0.6 days |
+=================== logs/inbox/2026-10-19-0756-inbox-check.md
+1:# Inbox check, 2026-10-19 06:58 UTC (routine). Three checks (18 Oct 15:55 and 17:55 UTC, 19 Oct 05:56 UTC) reached this session together at 06:57 UTC, so they ran as one pull, 18 Oct 07:00 to 19 Oct 07:00 UTC, sync 06:51:38 UTC. No new replies since Nikolaus Walkner's 07:13 UTC yes on 18 Oct, which is the positive control (his reply is drafted, waiting on Raka). Control thread ctc_ch3vFcKAkjQdMKDCg returned 3 items. No new queue rows or commits from the other session since 17 Oct 13:37.
+=================== logs/inbox/2026-10-20-pipeline.md
+7-07:00 and 07:10 UTC, all with nextPage null and no errors:
+8-- 19 by two readers in parallel, the nine 16 and 17 Oct bumps and the ten bumps due.
+9:- 9 by me: Phoebe Morris, the three who said yes, Nikolaus Walkner, Alice Martin, Milo Kamil, Valeska Schaaf and Lupo
+10-  Benatti.
+11-
+12-LinkedIn synced at 06:51:01 UTC, and the control thread ctc_ch3vFcKAkjQdMKDCg returned 3 items every time. The overnight
+13-inbox (myConversations, 19 Oct 17:50 to 20 Oct 07:10 UTC) had no reply from anyone.
+--
+48-## Deals
+49-
+50:- **Delivered, waiting on him.** Nikolaus Walkner (Healthy Secrets). The site went on 19 Oct 15:27 UTC, thread 4 items,
+51-  no reply yet. He said yes, so he gets one bump if quiet, due from 22 Oct 15:27 UTC, then never closes on silence.
+52-- **Said yes, waiting on them.** Ulrich (justclaims), Chris Hale (Garnish) and Chris Ryalls (ExpoCall). Each has had its
+53-  one bump (16, 16 and 17 Oct) and each thread still ends on our message, same item count as yesterday (6, 6, 10).
+54-  Nothing more without Raka's word.
+--
+58-- **Not now, door open.** Acquitas (Kyson, closing thanks drafted, not sent), HotGreen (Sanya), Mardi Witzel (PolyML),
+59-  Fabrice Beauchêne (Glyx).
+60:- **Prototypes.** Healthy Secrets added as sent. The other pending rows are unchanged.
+61-
+62-## Waiting on Raka
+63-
+64-1. The 10 bumps.
+=================== logs/inbox/2026-10-18-1555-inbox-check.md
+1:# Inbox check, 2026-10-18 13:56 UTC (routine). 07:00 to 14:00 UTC, sync 13:49:57 UTC. No new replies since the 11:56 UTC check. The one conversation in the window is Nikolaus Walkner, still ending on his 07:13 yes, which is the positive control (his reply is drafted, waiting on Raka). Control thread ctc_ch3vFcKAkjQdMKDCg returned 3 items. No new queue rows from the other session.
+=================== logs/inbox/2026-10-26-pipeline.md
+46-| Chris Hale (Garnish) | 20 Oct, "the premise looks good! Interested to hear more about pricing etc" | a call, slots sent 25 Oct | 0.9 days |
+47-| Ulrich Steppler (justclaims) | 13 Oct, "Impressive, Raka. I need to take this up with my team. How do you bill for this?" | a call, slots sent 25 Oct | 0.9 days |
+48:| Nikolaus Walkner (Healthy Secrets) | 23 Oct, "it looks good! ... What is the next step?" | a call, slots sent 25 Oct | 1.0 days |
+49-| Matthias Ufer (Schumacher) | 21 Oct, "Pretty cool" | a call, asked 25 Oct | 1.0 days |
+50-| Chris Ryalls (ExpoCall) | "I'd be curious to see how your page for hotels would look" | his view of the hotels page, nudged 23 Oct | 2.9 days |
+51-
+52-**Delivered, waiting on them**
+=================== logs/inbox/2026-10-18-pipeline.md
+60-  in the evening). Ulrich and Chris Hale stay pending.
+61-- **20 Oct.** The 17 Oct bumps close if quiet (Rob Quinn, Kevin Hanson, Guillaume Slee, Willem Straat, Claire Enders).
+62:  The other session's 7 SKETCH openers of 17 Oct come due for a bump (Nikolaus Walkner, James Harrison, Aaron Mason,
+63-  Stacey Winter, Constance Dogger, Jelle Sauwen, Grigory Nagaev).
+64-
+65-Nothing was sent by this run. Calls made were 8 thread pulls and 1 control by me, and 13 thread pulls and 2 controls by
+66-the reader, plus 5 site fetches and 1 control fetch.
+=================== logs/inbox/2026-10-20-0756-inbox-check.md
+1:# Inbox check, 2026-10-20 05:56 UTC (routine). 19 Oct 17:50 to 20 Oct 06:00 UTC, sync 05:50:29 UTC. Nothing new overnight. Positive control, the 19 Oct 15:20 to 15:50 window still returns Nikolaus Walkner's thread with our 15:27 delivery, his thread 4 items with the delivery newest and no reply; control thread ctc_ch3vFcKAkjQdMKDCg 3 items. No queue rows from the other session since the 17:56 check. Alice and Milo drafts still waiting on Raka's word.
+=================== logs/inbox/2026-10-24-pipeline.md
+30-| Who | Their last | Draft |
+31-|---|---|---|
+32:| Nikolaus Walkner (Healthy Secrets) | 23 Oct, "it looks good! ... What is the next step?" | call Tue 27 or Thu 29 Oct, state/drafted_2026-10-23-replies-3.md |
+33-| Marco Ghilardi (QuasiScience) | 23 Oct, a call with his chief of staff | Mon 26 or Wed 28 Oct, state/drafted_2026-10-23-replies-2.md |
+34-| Lisanne De Jong Vanhommerig | 24 Oct 00:26, "looks great at first glance", a closer look after the weekend | optional short thanks, state/drafted_2026-10-24-replies.md |
+35-| Willem Straat (Hooft & Petiet) | 22 Oct, send it to marketing@keypro.nl | prototype for marketing on Raka's reminder list, state/raka_reminders.md |
+36-| Milo Kamil, Alice Martin | 19 Oct | state/drafted_2026-10-19-replies-2.md |
+=================== logs/inbox/2026-10-21-pipeline.md
+5-The queue's latest row per contact was scanned for anyone whose last message from us is over 3 days old (before
+6-18 Oct 06:56 UTC). Nine threads were pulled by contact at 06:58 to 07:00 UTC, all nextPage null: Phoebe Morris,
+7:Valeska Schaaf, Lupo Benatti, Julien Facchini, Ulrich Steppler, Chris Ryalls, Nikolaus Walkner, plus Chris Hale and the
+8-control Rob Quinn ctc_k6YrDTTW2zZ3MhxB3 (2 items). LinkedIn synced 06:53:05 UTC. myConversations 05:55 to 07:05 UTC
+9-shows only Chris Hale, ending on our 06:49 message. The inbox checks since yesterday's run (20 Oct 07:10 to 21 Oct 05:58)
+10-caught three replies, Aaron Mason, Noah Hertling and Chris Hale, and nothing from anyone else.
+11-
+--
+40-- **Said yes, reply waiting on Raka.** Noah Hertling (Systemhaus Hertling), reply in state/drafted_2026-10-20-replies.md.
+41-  The 7 Oct claims get reopened before anything is built.
+42:- **Delivered, waiting on him.** Nikolaus Walkner (Healthy Secrets), 4 items, our 19 Oct 15:27 delivery newest. His one
+43-  bump comes due from 22 Oct 15:27 UTC, then he never closes on silence.
+44-- **Said yes, had their one bump, waiting on them.** Ulrich Steppler (justclaims, 6 items, our 16 Oct bump newest) and
+45-  Chris Ryalls (ExpoCall, 10 items, our 17 Oct bump newest). Nothing more without Raka's word.
+46-- **Replied, our reply drafted.** Alice Martin and Milo Kamil, state/drafted_2026-10-19-replies-2.md. Milo researched
+=================== logs/inbox/2026-10-28-pipeline.md
+57-**Owed by us**
+58-- QuasiScience, the lead generation proposal promised to Gisella on 27 Oct.
+59:- Healthy Secrets, the proposal after the 27 Oct call, the other session is on it (spec commits this morning).
+60-- Milo, the ten investor sample, only if he says yes.
+61-
+62-**Said yes, waiting on them**
+63-
+=================== logs/inbox/2026-10-27-pipeline.md
+37-**Meetings in the next 7 days, all with briefs**
+38-- Today 12.30 Amsterdam, Gisella Doulton for Marco Ghilardi (QuasiScience). Clashes with the Weekly Catchup.
+39:- Today 16.00 Vienna, Nikolaus Walkner and cofounders (Healthy Secrets).
+40-- Wed 28 15.30 Paris, Julien Salvat (Saavedra), his invite sent and his email confirmed in lemlist.
+41-- Fri 30 10.00 Amsterdam, Lisanne de Jong (De Jong Vanhommerig).
+42-- Qualigraf on Wed 4 Nov is outside the 7 days.
+43-
+=================== logs/inbox/2026-10-26-0856-inbox-check.md
+1:# Inbox check, 2026-10-26 08:56 UTC (routine). 06:58 to 08:56 UTC through tools/lemlist.py inbox, control 6 items. The only movement was Nikolaus, handled this morning on Raka's word (booked Tue 27 Oct 16:00 Vienna, invite to office@healthysecrets.at, invite line sent 08:50 UTC). No other new replies. Laurens's delivery is redrafted in the other session (commit 674acaf), not sent.
+=================== logs/inbox/2026-10-26-1056-inbox-check.md
+11-- Thibert Galleron Havnegjerde, "Stop please" at 10.18 UTC. DO_NOT_CONTACT, no message (row written ~10.50 UTC).
+12-- Milo Kamil, Raka's own live chat 10.20 to 10.27 UTC, his turn now. Left to Raka.
+13:- Nikolaus Walkner, 👍 at 08.51 UTC to the invite line, nothing to answer. Meeting Tue 27 Oct 16.00 Vienna.
+=================== logs/inbox/2026-10-19-0956-inbox-check.md
+1-# Inbox check, 2026-10-19 07:56 UTC (routine). 18 Oct 07:00 to 19 Oct 08:00 UTC, sync 07:50:17 UTC.
+2-
+3:One new reply. Control thread ctc_ch3vFcKAkjQdMKDCg returned 3 items, and Nikolaus Walkner (18 Oct) is still in the
+4-window as the positive control.
+5-
+6-- **Milo Kamil (Warung Kopi, Zurich), 07:13 UTC.** He answered our connect note, "It was a pop up, but currently looking
+7-  for investor and location to carry Warung Kopi concept". Warm, nothing pitched yet, so REPLIED. A chat reply with one
+=================== logs/inbox/2026-10-19-1156-inbox-check.md
+1:# Inbox check, 2026-10-19 09:56 UTC (routine). 07:00 to 10:00 UTC, sync 09:54:50 UTC. No new replies since the 07:56 UTC check. The two conversations in the window are Milo Kamil and Nikolaus Walkner, both ending on our own replies sent at 09:08 and 09:09 UTC on Raka's word, which are the positive control. Nikolaus's thread shows a 09:19 UTC activity time but no new message (3 items, ours newest). Control thread ctc_ch3vFcKAkjQdMKDCg returned 3 items.
+=================== logs/inbox/2026-10-25-pipeline.md
+29-| Who | Their last | Draft |
+30-|---|---|---|
+31:| Nikolaus Walkner (Healthy Secrets) | 23 Oct, "What is the next step?" | call Tue 27 or Thu 29 Oct, state/drafted_2026-10-23-replies-3.md |
+32-| Marco Ghilardi (QuasiScience) | 23 Oct, a call with his chief of staff | Mon 26 or Wed 28 Oct, state/drafted_2026-10-23-replies-2.md |
+33-| Rachel Munro (The Rebel Baker) | 24 Oct, "Thanks Raka" | light chat, state/drafted_2026-10-24-replies-2.md |
+34-| Jack Yan | 24 Oct, asked about Raka's background | state/drafted_2026-10-24-replies-3.md, edited today so it no longer names ExitLane (lemlist's accept event says IkoPrep) |
+35-| Willem Straat (Hooft & Petiet) | 22 Oct, send it to marketing@keypro.nl | prototype for marketing, on Raka's reminder list |
+=================== logs/inbox/2026-10-29-pipeline.md
+41-- Erik, the Taste Frankfurt sketch, early next week.
+42-- Danielle, Charlie's Desserts, the external build reviewed by the other session (three must fix), not deployed.
+43:- QuasiScience, the lead generation proposal. Healthy Secrets, the proposal (the other session, spec as PDF today).
+44-- Milo, the ten investor sample, only if he says yes.
+45-
+46-**Said yes, waiting on them**
+47-
+=================== logs/inbox/2026-10-18-1355-inbox-check.md
+1:# Inbox check, 2026-10-18 11:56 UTC (routine). 07:00 to 12:00 UTC, sync 11:43:37 UTC. No new replies since the 09:55 UTC check. The one conversation in the window is Nikolaus Walkner, still ending on his 07:13 yes, which is the positive control (his reply is drafted, waiting on Raka). Control thread ctc_ch3vFcKAkjQdMKDCg returned 3 items. No new queue rows from the other session.
+=================== logs/inbox/2026-10-23-1556-inbox-check.md
+1:# Inbox check, 2026-10-23 15:56 UTC (routine). 13:50 to 16:00 UTC, sync 15:54:05 UTC. Nothing new. Positive control, the same filter over 11:50 to 16:00 UTC returns Nikolaus Walkner's 12:13 reply, already drafted at 13:56, so the empty window is real. Nikolaus still isYourTurn with nothing sent since, his reply and Marco Ghilardi's still wait on Raka's word. No new commits from the other session since 13:57.
+=================== logs/inbox/2026-10-19-1756-inbox-check.md
+1:# Inbox check, 2026-10-19 15:56 UTC (routine, read 15:57 UTC). 14:10 to 16:00 UTC, sync 15:53:38 UTC. No new replies. The window returned one conversation, Nikolaus Walkner, and it's our own delivery (act_rcYeZt7KjvAeDHX5a, 15:27 UTC); thread pulled, 4 items, nextPage null, his last message still the 18 Oct yes. That return doubles as the positive control for the date filter. Control thread ctc_ch3vFcKAkjQdMKDCg 3 items. The other session's 6a2d9a6 queued 12 new accepts as UNRESEARCHED, no replies among them, nothing handled twice. Alice and Milo drafts still waiting on Raka's word.
+=================== logs/inbox/2026-10-25-0816-sends.md
+17-
+18-The feed also shows two sends at 08.14 UTC by the other session on Raka's word (commit 0edf583), the answers to Marco
+19:Ghilardi and Nikolaus Walkner. Their queue rows say REPLIED_SENT so the old drafts never go.
+=================== logs/inbox/2026-10-19-1956-inbox-check.md
+1:# Inbox check, 2026-10-19 17:56 UTC (routine). 15:50 to 18:00 UTC, sync 17:45:41 UTC. Nothing new. Positive control, the 15:20 to 15:50 window returns Nikolaus Walkner's thread with our 15:27 delivery as logged, his last reply still the 18 Oct yes; control thread ctc_ch3vFcKAkjQdMKDCg 3 items. No queue rows from the other session since the 15:56 check. Alice and Milo drafts still waiting on Raka's word.
+=================== logs/inbox/2026-10-23-1756-inbox-check.md
+1:# Inbox check, 2026-10-23 17:56 UTC (routine). 15:50 to 18:00 UTC, sync 17:54:56 UTC. Nothing new. Positive control, the same filter over 11:50 to 18:00 UTC returns Nikolaus Walkner's 12:13 reply, so the empty window is real. Nikolaus and Marco Ghilardi still wait on Raka's word. No new commits from the other session since 15:56.
+=================== logs/inbox/2026-10-23-1356-inbox-check.md
+1:# Inbox check, 2026-10-23 13:56 UTC (routine). 11:50 to 14:00 UTC, sync 13:48:39 UTC. One new reply. Nikolaus Walkner (Healthy Secrets, Vienna) answered the 09:26 nudge at 12:13, "i just flicked through and it looks good! I would need to liaise with my co-founders. What is the next step?" Thread pulled in full, 6 items, control 6, prototype live 200. REPLY drafted in state/drafted_2026-10-23-replies-3.md, a call with him and his cofounders Tue 27 or Thu 29 Oct 1pm to 5pm his time from Raka's calendar, then a proposal, check-drafts PASS, not sent. prototypes.jsonl outcome liked. The other session's commits since 11:57 (batch 1 drafts, Marco's row restored to REPLY_DRAFTED, four closers and Thibert's bump sent on Raka's word, six openers scheduled for 24 Oct) don't touch Nikolaus.
+=================== logs/inbox/2026-10-18-0956-inbox-check.md
+4-the positive control.
+5-
+6:- **Nikolaus Walkner (Healthy Secrets), 07:13 UTC, "Hey, yes sure why not".** A yes to the sketch the other session
+7-  offered on 17 Oct. SAID_YES_PENDING, with the sketch owed by us. The reply is in state/drafted_2026-10-18-replies.md,
+8-  check-drafts PASS, and goes only on Raka's word. It promises the sketch within a day or two, so the build starts once
+9-  he says go.
+=================== docs/reviews/2026-10-25-gtm-outreach-review.md
+191-
+192-- **The blind check, and it makes the gap smaller.** LinkedIn's industry label is noisy, lemlist's "Manufacturing"
+193:  includes consumer food and drink brands (Healthy Secrets, MUUSH, Suntail). So a separate agent read every company's
+194-  description and site without seeing any outcome and labelled who pays them. By that blind read, B2B said yes 21 of 189
+195-  (11%) and consumer 4 of 89 (4.5%). Where both methods agree, B2B 15 of 80 (19%) and consumer 2 of 53 (4%), about a 1
+196-  in 115 chance of luck. Since September alone the blind read gives 7 of 128 against 2 of 63, too close to call, so the
+197-  "0 of 69" above partly came from LinkedIn's labels. The direction holds, the size is about half what the first pass
+=================== docs/reviews/2026-10-27-prototype-process-audit.md
+18-| CHS justclaims, 12 Oct | 3 designs, then 2 passes on v2 | v1 dated, v2 Claude looking (notes). Picked v2, asked for a simpler story and inner pages as stories with pictures, animations and graphs (notes) | yes, yes |
+19-| The Garnish Collective, 13 Oct | 2 plus a final pass | "10x, artsy, Gatsby and Bridgerton, his story, simple flow, not SaaS" (notes). "is this the final final thing" | yes |
+20:| Healthy Secrets, 19 Oct | 3 | "seamless, modern, not blocky, keep the widgets" (notes). v3 after "is it final" and a review | yes |
+21-| Hertling, 21 to 22 Oct | 3 | v1 "put yourself in his shoes". v2 "something out of the 2010s ... it needs to be done €6000 euro worth at least", presence "is this the best you can do?". v3 "love it man! keep making stuff like this" | no, yes |
+22-| Hooft & Petiet, 25 Oct | 3 plus the plan | v1 "a typical Claude and ChatGPT website … it just feels like it's a 500 euro website". v2 "it feels like it's so plain and basic … It needs to have a wow effect". v3, then "Do itt" on adding the plan | yes, yes |
+23-| Saavedra, 25 Oct | 3 | v1 restyled the same afternoon because the no Claude look rule landed mid build. Restyle, "be more creative in animations, videos, photos, things, graphs, whatever, think about the DESIRED UX UI user action and how the whole flow guides them". v3 "Brooo amazing!" | partly |
+24-| Fae Club, 25 Oct | 3 | v1 "its an art company and the website is not artsy enough! Take the design 10x further". v2 "i love the art, just one last recheck or redo; does this website make it super easy to tell the story and guide the intended audience to the intended action?". v3 sent | yes, no |
+=================== docs/RULES.md
+296-  foundations or one person firms before their first sale.
+297-- **Consumer services are back in, at a 500 euro start (Raka, 2026-10-28).** His words, "B2B and also consumer services,
+298:  that's also still fine, because like I'm okay with load balling like to like 500 euros like healthy secrets ... Clinics
+299-  and accounting, that's also fine as well." So the mix is B2B owners (W3, W4 tech firms), clinics, law and accounting
+300-  (W5), and consumer services (W1b, W1c). For consumer the build and the call aim at a 500 euro first project, the
+301:  Healthy Secrets shape, and the budget sign can be a small one, a shop, staff, a second location, paid tools.
+302-- Every first message dated 26 Oct or later carries `still there:` and `budget: <one sign they can pay> | <URL>` in its
+303-  gate, and check-drafts fails it without them.
+304-- After a yes, build only when there's a budget sign. Otherwise one screen and the call ask. Every delivery asks for the
+305-  call with two slots.
+=================== docs/gtm-plan.md
+194-
+195-**October so far.** 119 first pitches, 30% replied, 18 said yes (15%, against 4% in September), calls with QuasiScience,
+196:Healthy Secrets and Saavedra held, Lisanne (30 Oct) and Qualigraf (4 Nov) booked. Still no paid project. Of October's
+197-replies, 18 came after the opener, 12 after the bump and 6 after a third message, so the bump and the final closer earn
+198-their place. `tools/lemlist.py audit` 17.43 UTC, 560 contacts, 1,945 items, control 7.
+199-
+200-**Consumer says yes, then can't pay.** W1b (consumer) gave 8 yeses from 62 pitches, the best yes rate we have, and both of
+201:its calls hit the budget wall, Saavedra "no budget", Healthy Secrets at about 450 to 500 euros, and Elise declined on budget
+202-before a call. B2B said yes less often but brought the bigger conversations, QuasiScience (W4 TEST, 2 yeses from 6),
+203-Lisanne, Qualigraf, and the quiet yeses from Noah, Willem, Matthias, Ulrich and Aaron.
+204-
+205-**We are not short of leads, we are inviting the wrong ones.** Raka's lemlist user is set to 18 invites and 20 messages a
+--
+227-
+228-**Raka's call, 28 Oct ~18.10 UTC.** "B2B and also consumer services, that's also still fine, because like I'm okay with load
+229:balling like to like 500 euros like healthy secrets ... Clinics and accounting, that's also fine as well. I like that."
+230-So consumer stays in at a 500 euro start, next to B2B and W5. The mix is W3 and W4 (B2B), W5 (clinics, law, accounting)
+231-and W1b and W1c (consumer services), roughly a quarter of the 18 daily invites each. Launching or pausing a campaign
+232-stays his word.
+233-
+--
+242-| Qualigraf, Steven Garratt, Group CEO | Tier 1, B2B software to councils in four countries | Call 4 Nov. Call kit with a price range ready by 2 Nov |
+243-| Lisanne de Jong, solo employment lawyer | Tier 3, said "Would love to hear further possibilities and pricing" | Call 30 Oct. Her email still needed for the invite. Call kit ready by 28 Oct |
+244:| Nikolaus (Healthy Secrets), Marco (QuasiScience), Chris Hale (Garnish), Ulrich (justclaims), Matthias (Schumacher) | Said yes or liked the build | Call slots offered 25 Oct, book the moment any of them answers |
+245-| Willem, Hooft & Petiet and ReShare | Tier 2, manufacturing and rentals, 11 to 50 | Prototype live, email to marketing@keypro.nl waits on Raka |
+246-| HotGreen | Tier 1 | "back in touch in the next couple of months" (14 Oct). Recontact mid December |
+247-| Acquitas | Not yet, no budget before his first deal | "in touch in the coming months" (14 Oct). Recontact in January |
+=================== state/prototypes/bidx/handover.md
+53-| Copy | zero colons, zero dashes in rendered text, no exclamation marks, NO-AI-SLOP section 8 words clean in our copy |
+54-| I14 grep | every hit is real copy, funder call names, a fit answer "A prototype", plus the one desk footnote |
+55:| C5 no swap | side by side with Garnish, Healthy Secrets, JustClaims v3, Negentien80. See below |
+56-| Live | 61 files fetched. 39 pages identical to the build by visible text, 21 assets identical by sha256. Chromium on the live URL, all 200, no errors, no broken images, fonts loaded, film playing |
+57-| Live data | the IFS listing re-read at 06:2x UTC on 21 Oct. Same 31 competitions, all 31 closing dates match, four statuses changed overnight (BridgeAI's three strands and the concrete cohort opened) and were updated |
+58-
+59-## Score, G1, honest
+=================== state/prototypes/bidx/research.md
+97-
+98-- Host Grotesk (OFL, Google Fonts), headings and UI, 400 to 700. Rounded terminals that sit with the logo's circles,
+99:  not Poppins, not Inter, not any of the last three builds (Jost for Healthy Secrets, Barlow and Newsreader for
+100-  justclaims, Garnish's serif set).
+101-- Doto (OFL, variable, ROND 100), round dot matrix for deadlines, counts and the board, numbers only, never body text.
+102-- Martian Mono (OFL), timestamps, ids and data labels, small.
+103-- All self hosted woff2, latin subset.
