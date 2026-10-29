@@ -1,0 +1,180 @@
+# Healthy Secrets site, handover (2026-10-19)
+
+Live: https://astra-healthy-secrets-prototype.netlify.app (Netlify project `astra-healthy-secrets-prototype`,
+id 72cc17e8-d569-404b-8200-02839e55cf7b, deploy 6ad62bdf0565e1544bbba75f (v3), team SSO off, password off).
+Source: `build/` (build.py, pages/, make_map.py, process_images.py). Output: `site/`. Research and art direction:
+`research.md`. Evidence: `research/` (site pages, products.json, press texts, Instagram captions, teardown of 60 sites,
+the Commission claims page, the Wien Geschichte Wiki page). Image provenance: `research/asset-provenance.md`.
+
+## v2, "seamless" (Raka's note, 19 Oct, after seeing v1)
+
+Raka: make it "more seamless, more modern", it still felt "old school, blocky ... like something out of WordPress",
+"sleek and flowing and integrated", easy to read, simple, and keep the widgets. v1 output is in git at 9d8db41.
+Copy, routes and widgets are unchanged. The stylesheet was rewritten and the shared markup reworked.
+- **One continuous surface.** No hard colour bands. The home page's colours fade the way light does through a day,
+  a sunset into 19 Uhr, night, then a dawn back to light at "Wer dahinter steckt". Sub page sections are pools of
+  colour that fade in and out of the paper. Dark sections are inset rounded panels instead of full width bands.
+- **A floating glass header** replaces the black top bar and the stacked header, with an "Ab 10 Uhr" status chip.
+- **The day dial is a floating capsule** at the bottom of the screen, shown only while you're in the day.
+- **Lighter type.** Jost 500 headlines instead of 800, 400 body, more air. Borderless product cards, soft shadows,
+  soft filled form fields, fewer outlines and pills. The awning became a shopfront cap over photos and cards.
+- **Same QA again.** 53 of 53 interaction checks locally and live, axe clean on 9 pages, no overflow at six widths,
+  no JS check, 41 of 41 assets byte matched live, colon, dash and prototype word audit clean. One regression caught
+  and fixed (the product dialog's close button sat under a label).
+- **Cache fix (deploy 6ad60e6c113563368d0ecd7a).** Raka first saw v2 markup with the v1 stylesheet his browser had
+  cached, because assets went out with an hour of caching under the same filenames. The CSS and JS links now carry a
+  content hash (`site.css?v=...`), assets revalidate on every load, and the font preloads match v2 (Jost 400 and 500).
+  A stale cache simulation renders v2, and the same test pointed at the v1 file reproduces his screenshot.
+
+## v3, the final pass (Raka, 19 Oct, "is this the final final thing ... if theres mistakes, then redo it")
+
+Every page reviewed again at 1440 and 390, plus an independent design review. What was wrong and what changed.
+- **Two photos implied identities nobody has verified.** The 22 Uhr text opened with "Stephanies Lieblinge" right
+  beside the photo of a woman holding Moon Milk, and Niki's bio card on Über uns carried the kitchen photo of a
+  different person. Neither person is named anywhere by the client. The 22 Uhr text no longer names anyone, and the
+  bio cards no longer carry photos.
+- **The letter monograms read as missing photos.** Gone from the home trio, the Über uns bios and the Beratung hero.
+  The bios are now text plus a facts column, each sibling marked by their colour, favourite product shown as a small
+  product thumbnail where it's in the range. Beratung's arch holds their matcha mascot.
+- **Layout faults fixed.** Hero badge and the bunny were clipped on phones. The club hero's awning overhung its photo.
+  The club's space section had four staggered photos over three text columns, now three matched columns. The
+  sunset into 19 Uhr and the dawn into "Wer dahinter steckt" read as stripes, now longer eased fades. 19 Uhr's
+  headline sat in a narrow column, now the same header as every other hour. The trade page's shelf was tiny. The
+  planner showed a stray dot where a time would be.
+- **Shorter and simpler on phones.** Product cards are compact on phones (photo beside the name, buy row under),
+  the home page's club rows use thumbnails, and the duplicated "Auf der Tafel" chips at 12.30 are gone (the board
+  sits right above). The phone home page went from about 24,250 px to about 20,200 px, the phone shop from about
+  10,350 to about 8,650.
+
+Then an independent design review (`review-independent.md` in the session scratchpad, 95 screenshots plus about 70 of
+interactive states) found what the first pass missed. Every point below was fixed and re measured the way it was found.
+- **Shop time labels piled on top of each other** while scrolling (all four were sticky inside one grid). Each time slot
+  is now its own group, so a label lets go at the end of its products. Measured at nine scroll positions, zero overlaps,
+  and the same check on the previous live version reported up to six, so the check does catch it.
+- **Phone home screen opened with no button and no photo.** On phones the headline, the paragraph and both buttons come
+  first, the photo straight after, the long italic quote under the photo. Anything on screen at load now shows at once.
+  Buttons fully visible on load at 390 by 844 and 375 by 667, and at 1280 by 720 on a laptop.
+- **Trade table broke on a phone.** It's a list on phones, thumbnail, name, size, note, price, nothing to scroll sideways.
+- **Too many white boxes with shadows**, the "WordPress" feel. Shadows now sit only on things that float (header, dial,
+  basket, product dialog, badge, toast). Text only boxes became rows with a hairline (shipping, trade reasons, the six
+  ingredients in two columns, Leonie's prices, the club's menu notes). Forms and summaries are white panels with a
+  hairline. The cut off shadow lines are gone with the shadows.
+- **Home after 2 Uhr started over.** The three recap cards and the FAQ are gone from the home page (the balanced diet
+  question moved to the shop FAQ, the rest was already there or on the club page). The siblings are three plain columns
+  with a link to Über uns. Colour handovers are about 200 px. Home is about 14,150 px on desktop (was about 16,000) and
+  about 17,050 on a phone (was about 24,250).
+- **Smaller faults.** Club awning now exactly the width of its photo. The 10 Uhr collage photos end level. The Wissen
+  toggle stays on one line on a phone. Planner times say "8 Uhr" or "8 am", the last question shows empty boxes until
+  ticked. The added to basket message never sits on the open basket and is one wide line on phones. The dial readout
+  holds each section's hour and only runs on in the last fifth, so it always agrees with the highlighted chip. Header
+  and dial glass is more opaque over dark sections. Phone arch crops keep heads in. Steppers fit one line on phones.
+  Checkout has a slim footer, checkout and Impressum headings clear the header, the phone footer is two columns. The map
+  lost the label that collided, shows only Stephansplatz on phones, and its credit is bilingual text under it.
+- **Brand.** The gold key logo is in the header and footer. The club page has two of its own photos from their posts (the
+  bottles handed out of the door with the terrace table, and the opening day prize wheel their post announced). The
+  "Sitz" mascot sits on their flat blush instead of a white tile. The header chip shows a clock, not a red dot that
+  suggested "open now".
+- **Checks.** 53 of 53 interaction checks, 15 of 15 re measurements of the review's defects, axe clean on 9 pages, no
+  overflow at six widths, readable without JavaScript, copy audit zero colons, dashes and hyphens in about 2,200 lines
+  per language. Live, 43 of 43 assets byte matched and every page's text and attributes identical to the build.
+
+Promised in the thread (17 Oct): "a modernised Healthy Secrets site built around the Gut Health Club, with the café,
+the medical story behind the range and the shop on one clear path." That's what this is.
+
+## The idea
+
+**One ordinary day, 8 Uhr to 2 Uhr früh.** It's their own founding sentence from the Über uns page ("Den Morgen mit
+einer Schüssel Granola starten ... Klingt doch nach einem ganz normalen Tag, oder?"). The home page is that day. A sticky
+dial (a sun on an arc that becomes a moon after 20 Uhr, with a clock that counts as you scroll) runs over seven hours:
+8 Uhr breakfast, 10 Uhr the Gut Health Club opens (under their red and white awning), 12.30 lunch and advice over the
+counter, 15 Uhr the afternoon slump and the fibre gap, 19 Uhr after dinner, 22 Uhr before bed, and 2 Uhr früh, the
+secret hour, when the three of them are in the kitchen in Favoriten (Niki's line in Heute). The cart is "Dein Tag",
+grouped by hour. The shop is a 24 hour clock with the products placed at their hour.
+
+Their palette from Instagram and the café graphics (blush, coral, sky, tile blue grey, sage, navy, gold), their gold
+key logo, their arch frames, their mascots, Jost (a Futura revival, their body face is Futura Light), German first with
+a full English switch.
+
+## Routes (Site Completeness Contract, final status)
+
+| Route | What's on it | Status |
+|---|---|---|
+| `/` Start | The day, 7 hours, products in their moments, the fibre gap chart, the three siblings, closing stack with FAQ and events sign up | built |
+| `/club` Gut Health Club | Awning, map drawn from OpenStreetMap data, directions in their words, the letter board, the space, opening day, the square's history since 1302, events interest form | built |
+| `/shop` | 24 hour product clock, 7 products by time of day with filter, detail dialog, day planner quiz, shipping, returns, payment, product FAQ | built |
+| `/kasse` | Three step checkout (delivery, payment, review), 18+ and AGB section 12 consents, success with order number | built |
+| `/beratung` | Leonie's three services and prices, topics, process, three step request flow with health data consent | built |
+| `/wissen` | The fibre gap (two views, per day and per MJ), six ingredients explained, how a product is made, day planner link | built |
+| `/ueber-uns` | Founding story, three bios with monograms, night kitchen, timeline, press | built |
+| `/handel` | Retail and pharmacy pitch, range table, trade enquiry form | built |
+| `/impressum` | Their Impressum data, links to the Nov 2025 AGB and Datenschutz PDFs | built |
+| AGB, Datenschutz | Linked to their current PDFs, not rebuilt | linked |
+| Customer accounts, real payment provider | Not part of a sketch | deferred |
+
+## Verified (19 Oct)
+
+- Local, all 9 pages: zero console errors, every image decodes, every reveal fires on a cold load (75 of 75 on home),
+  all 8 Jost weights load, axe (WCAG 2 A and AA) clean on every page, no horizontal overflow at 320, 390, 420, 768,
+  1024 and 1280, every page readable with JavaScript off.
+- 53 scripted interaction checks pass, locally and again on the live URL. Language switch (incl. titles, alt text,
+  options, persistence), cart add, quantity, empty state, Escape, product dialog with quantity, filter by hour, the
+  planner end to end (St John's wort swap, caffeine removal, 4,93 € a day computed as 44/14 + 25/14), checkout with
+  every validation step and the success state, booking with every step, three forms with errors and success, the chart
+  tabs by mouse and arrow keys, the dial (22.30 Uhr and moon at 22 Uhr, tick jumps), mobile menu.
+- Live: 9 pages 200 with the right titles, 41 of 41 assets byte matched, visible and attribute text identical to the
+  build on every page (Netlify only rewrites the link format), cold load in Chromium clean. One bug found and fixed
+  during QA: the checkout success message was hidden by the empty cart state.
+- Copy audit over every visible word in both languages, all panels forced open: zero colons, zero dashes, no banned
+  words or phrases, no hedges, 138 contractions in the English, nothing that says prototype, sample or agency.
+
+Density, home page: 24 photos plus 3 drawn figures (floor 25), about 2,150 words (floor 900), 25 h3 (floor 12), 1 form.
+Bench (teardown counts): Seed 24 images, 2 h3, 399 words. ZOE 28, 2, 426. The Gut Stuff 43, 9, 562. Verival 166, 104,
+2,236 (a full shop). Ours sits between the category sites and a full shop, and isn't the thinnest.
+
+Score (G1): brand 14, narrative 14, imagery 13, workflow 14, proof and trust 12, buyer fit 9, conversion 5,
+interaction 5, technical 5. **91.** Proof and trust lose points for no individual portraits (see below) and no reviews.
+
+## Things Nikolaus should confirm before any of this goes live
+
+1. **Opening hours.** Only "ab 10 Uhr" is verified (their posts). Closing time and days aren't stated anywhere, so the
+   site says "ab 10 Uhr" and nothing more. It's a walk in's first question, so it's the first thing to get from him.
+2. **Café prices.** None found (the board has none). The site lists the menu without prices.
+3. **Matcha at 44 €** while Chai and Moon Milk (same 215 g, 14 servings) are 25 €. Verified in their page data, may be
+   right, may be a typo.
+4. **Claims left out on purpose.** EU rules allow only registered health claims, and their product pages carry no
+   nutrition tables to check claims against. So the site states ingredients, sizes, preparation and their own warnings
+   and leaves out "nachweislich", "Cholesterin senken", "Diabetesprävention", "Darmkrebs", the father's blood test and
+   "100% frei von gesättigten Fettsäuren" (rapeseed oil has some saturated fat). He's a medical law lawyer, he'll know
+   which of their claims are registered and can put those back.
+5. **Names that are claims.** "Slimming Sips" and "Probiotic Frozen Yoghurt" (the menu board) are kept as they are,
+   because they're their names. Worth his eye.
+6. **Leonie's scope sentence**, "the only profession besides doctors allowed to support, diagnose and treat", is their
+   own copy from the services page, kept word for word.
+7. **Old documents still live.** The 2021 e.U. terms, privacy policy and cancellation form are still on the current site
+   next to the Nov 2025 OG versions, and the FAQ and shipping page still talk about natural cosmetics. The new site links
+   the 2025 PDFs only.
+8. **Three email addresses** on the current site (office@, two Gmail). The new site uses office@healthysecrets.at only.
+9. **Contract language.** Their AGB say the shop runs in German only. The English checkout says so in one line.
+10. **"Du" everywhere**, including Beratung, where their own page says "Sie". Easy to switch back.
+11. **Kitchen photos.** The two black and white photos from their home page are shown in the "2 Uhr früh" section
+    without a caption naming the place. Confirm they're the Favoriten kitchen.
+
+## Assets
+
+All 29 images are their own (their site, their Instagram, and four Gastro.News photos credited "© Healthy Secrets").
+Table with source and what's in each frame: `research/asset-provenance.md`. Not used: the Heute photo (third party,
+Denise Auer), Wix stock videos, the Canva matcha clip, the "gut health era" reel footage.
+
+**People.** The group photo is captioned "Die Geschwister Walkner" with no individual names. It comes from the
+Gastro.News article, not their site, so `tools/verify_portraits.py` can't pair faces to names, and their Über uns page
+mentions a twin sister, so which two sisters are pictured can't be proven. The bio cards carry no portrait and no photo
+of anyone. Nobody else pictured is named (the man in the doorway and matcha photos, the woman with the Moon Milk pouch, the people
+in the kitchen photos), and no name sits next to any of those photos. Rosi is named because their own post names her.
+
+**Asset requests.** One named portrait each of Stephanie, Leonie and Niki. A daylight shot of the shopfront. The café
+hours and menu prices. Nutrition tables per product, which would also let the planner show grams of fibre per day.
+
+## Next steps to production
+
+Confirm the eleven points above, swap monograms for the three portraits, connect the real shop (Wix Stores or Shopify
+with Wix Payments and Klarna as in their AGB), connect the forms to their inbox, and decide on the domain.

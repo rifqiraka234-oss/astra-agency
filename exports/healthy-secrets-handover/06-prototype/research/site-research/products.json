@@ -1,0 +1,461 @@
+{
+ "checked_at": "2026-10-19 (UTC), from https://www.healthysecrets.at/store-products-sitemap.xml (7 URLs) and each product page's wix-warmup-data + JSON-LD",
+ "count_in_online_shop": 7,
+ "products": [
+  {
+   "source_url": "https://www.healthysecrets.at/product-page/calming-secret-tea",
+   "status": "VERIFIED (parsed from the page's own wix-warmup-data and JSON-LD, fetched 2026-10-19)",
+   "name_exact": "Lullaby Leaves 50g",
+   "urlPart": "calming-secret-tea",
+   "price_eur": 12,
+   "formattedPrice": "12,00€",
+   "comparePrice": 0,
+   "discount": {
+    "mode": "PERCENT",
+    "value": 0
+   },
+   "ribbon": "",
+   "isInStock": true,
+   "inventory": "in_stock",
+   "weight": 0,
+   "sku": "",
+   "description_de": "Unterstützt das Einschlafen und dient zur Reduktion psychischer Anspannung.\nWirkt beruhigend, hilft dabei Stressreaktionen abzumildern und den natürlichen Schlaf-Wach-Rhythmus zu fördern.\nLullaby Leaves kann durch seine Inhaltsstoffe einer verbesserten Schlafqualität und gesteigertem Wohlbefinden beitragen.",
+   "info_sections": [
+    {
+     "title": "Physiologische Wirkung",
+     "text_de": "Hilft Ihnen beim Einschlafen, Durchschlafen und fördert ein Gefühl der Entspanntheit."
+    },
+    {
+     "title": "Hinweis",
+     "text_de": "Johanniskraut kann Wechselwirkungen mit bestimmten Arzneimitteln verursachen."
+    },
+    {
+     "title": "Zutaten",
+     "text_de": "Johanniskraut, Zitronenmelisse, Lavendel"
+    }
+   ],
+   "options": [],
+   "media": [
+    {
+     "id": "aadec6_49fee10b7cb047c886064ec2764a73d4~mv2.png",
+     "original_url": "https://static.wixstatic.com/media/aadec6_49fee10b7cb047c886064ec2764a73d4~mv2.png",
+     "width": 1080,
+     "height": 1350,
+     "altText": null,
+     "title": "Design ohne Titel (2).png"
+    }
+   ],
+   "ld_json_image": [
+    "https://static.wixstatic.com/media/aadec6_49fee10b7cb047c886064ec2764a73d4~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
+   ],
+   "category": "Teemischungen",
+   "category_url": "https://www.healthysecrets.at/shop",
+   "size": "50 g",
+   "short_description_en_gloss": "Herbal tea (St John's wort, lemon balm, lavender) for falling and staying asleep; warns St John's wort can interact with medicines. URL slug is the old name \"calming-secret-tea\".",
+   "claims_status": "COMPANY CLAIM (health claims are the site's own wording, not verified by us)",
+   "price_note": "Displayed as \"<price> inkl. Versand\" on shop tiles (the button text, verified in HTML).",
+   "main_image_file": "img/site/aadec6_49fee10b7cb047c886064ec2764a73d4_mv2.png",
+   "main_image_url_original": "https://static.wixstatic.com/media/aadec6_49fee10b7cb047c886064ec2764a73d4~mv2.png"
+  },
+  {
+   "source_url": "https://www.healthysecrets.at/product-page/chai-latte-fibre-flow",
+   "status": "VERIFIED (parsed from the page's own wix-warmup-data and JSON-LD, fetched 2026-10-19)",
+   "name_exact": "Chai Latte Fibre Flow | 215g  14 Portionen",
+   "urlPart": "chai-latte-fibre-flow",
+   "price_eur": 25,
+   "formattedPrice": "25,00€",
+   "comparePrice": 0,
+   "discount": {
+    "mode": "PERCENT",
+    "value": 0
+   },
+   "ribbon": "NEW",
+   "isInStock": true,
+   "inventory": "in_stock",
+   "weight": 0,
+   "sku": "",
+   "description_de": "Chai Latte Fibre Flow verbindet das warme, würzige Aroma fein abgestimmter Chai-Gewürze mit einem hohen Anteil an löslichen Ballaststoffen aus teilhydrolysiertem Guarkernmehl.\nEin Chai Latte pro Tag trägt zu einer gesunden Darmflora bei und unterstützt eine sanfte, natürliche Verdauung. Auf Haferbasis, pflanzlich & vegan.",
+   "info_sections": [
+    {
+     "title": "Mehr als nur Chai Latte",
+     "text_de": "- Ballaststoffreich – unterstützt die natürliche Darmtätigkeit & Stuhlregulation. Für einen gesunden Darm.\n-\nErnährungsmedizinisch entwickelt – entwickelt auf Basis ärztlicher & diätologischer Expertise\n-\nCremig & pflanzenbasiert – feiner Geschmack auf cremiger Haferbasis"
+    },
+    {
+     "title": "Allergene",
+     "text_de": "Kann Spuren von Soja, Laktose, Schalenfrüchten, Sellerie & Senf enthalten"
+    },
+    {
+     "title": "Zutaten",
+     "text_de": "Teilhydrolisiertes Guarkernmehl, Haferpulver, Kokosblütenzucker, Kardamon, Zimt, Ingwer, Muskatnuss, Reishi-Pulver, Nelken, Sternanis, Pfeffer"
+    },
+    {
+     "title": "Zubereitung",
+     "text_de": "1 Messlöffel* + 250ml Flüssigkeit (pflanzen Drink, Milch oder alles was dir sonst so schmeckt)\n*in der Packung enthalten"
+    }
+   ],
+   "options": [],
+   "media": [
+    {
+     "id": "aadec6_ff79bf44953045a6ab89d8a0d1a0125a~mv2.png",
+     "original_url": "https://static.wixstatic.com/media/aadec6_ff79bf44953045a6ab89d8a0d1a0125a~mv2.png",
+     "width": 2400,
+     "height": 2400,
+     "altText": null,
+     "title": "Design ohne Titel (6).png"
+    }
+   ],
+   "ld_json_image": [
+    "https://static.wixstatic.com/media/aadec6_ff79bf44953045a6ab89d8a0d1a0125a~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
+   ],
+   "category": "Fibre Flow Drinks",
+   "category_url": "https://www.healthysecrets.at/shop-2",
+   "size": "215 g, 14 Portionen",
+   "short_description_en_gloss": "Chai spiced oat based drink powder with soluble fibre from partially hydrolysed guar gum; site says one a day supports a healthy gut flora and gentle digestion; plant based and vegan.",
+   "claims_status": "COMPANY CLAIM (health claims are the site's own wording, not verified by us)",
+   "price_note": "Displayed as \"<price> inkl. Versand\" on shop tiles (the button text, verified in HTML).",
+   "main_image_file": "img/site/aadec6_ff79bf44953045a6ab89d8a0d1a0125a_mv2.png",
+   "main_image_url_original": "https://static.wixstatic.com/media/aadec6_ff79bf44953045a6ab89d8a0d1a0125a~mv2.png"
+  },
+  {
+   "source_url": "https://www.healthysecrets.at/product-page/haferbrot-backmischung-500g",
+   "status": "VERIFIED (parsed from the page's own wix-warmup-data and JSON-LD, fetched 2026-10-19)",
+   "name_exact": "Haferbrot Backmischung 500g",
+   "urlPart": "haferbrot-backmischung-500g",
+   "price_eur": 9.5,
+   "formattedPrice": "9,50€",
+   "comparePrice": 0,
+   "discount": {
+    "mode": "PERCENT",
+    "value": 0
+   },
+   "ribbon": "",
+   "isInStock": true,
+   "inventory": "in_stock",
+   "weight": 0,
+   "sku": "",
+   "description_de": "Genieße die Vorteile von Beta-Glucan aus Haferflocken, jetzt auch in Brotform!\nUnsere ausgewählten Zutaten unterstützen aktiv die Aufrechterhaltung eines normalen Cholesterinspiegels.\nDie enthaltenen Hafer-Ballaststoffe tragen zusätzlich zu einem normalen Blutzuckerspiegel bei.\nPerfekt für ein gesundes Frühstück oder als Snack zwischendurch.",
+   "info_sections": [
+    {
+     "title": "Haferflocken mal anders",
+     "text_de": "Unsere Backmischung überzeugt mit einer hohen Zufuhr an Beta-Glucan, hochwertigem Protein und einem geringen Anteil gesättigter Fettsäuren. Die vielen Ballaststoffe unterstützen zudem eine gesunde Verdauung und machen das Brot zu einem idealen Begleiter für eine ausgewogene Ernährung.\nKlingt fast zu gut, um wahr zu sein? Ist es aber!"
+    },
+    {
+     "title": "Hinweis",
+     "text_de": "Gluten\nDas Brot enthält Topfen und Eier. Bitte lagere es im Kühlschrank, Haltbarkeit 3-4 Tage"
+    },
+    {
+     "title": "Zutaten",
+     "text_de": "Haferflocken Großblatt, Haferflocken Kleinblatt, Kümmel, Fenchel, Koriander"
+    },
+    {
+     "title": "Zubereitung",
+     "text_de": "Backmischung mit 500g Magertopfen und 2 Eiern zu einem Teig verrühren.\nKastenform mit Backpapier auslegen, Teig einfüllen und gleichmäßig andrücken.\nOptional mit Haferflocken bestreuen.\nBei 180°C auf mittlerer Schiene ca. 50 Minuten backen.\nBrot aus der Form lösen, abkühlen lassen."
+    },
+    {
+     "title": "Unser Tipp",
+     "text_de": "Für eine köstliche Abwechslung kannst du den Teig ganz einfach mit zwei fein geriebenen Karotten oder einem Apfel verfeinern. Für noch mehr Saftigkeit und Geschmack!"
+    }
+   ],
+   "options": [],
+   "media": [
+    {
+     "id": "aadec6_736864eb6ea14908becc25fe13f75707~mv2.png",
+     "original_url": "https://static.wixstatic.com/media/aadec6_736864eb6ea14908becc25fe13f75707~mv2.png",
+     "width": 1080,
+     "height": 1350,
+     "altText": null,
+     "title": "Haferbrot Produktfoto shop.png"
+    }
+   ],
+   "ld_json_image": [
+    "https://static.wixstatic.com/media/aadec6_736864eb6ea14908becc25fe13f75707~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
+   ],
+   "category": "Backmischung",
+   "category_url": "https://www.healthysecrets.at/shop-3",
+   "size": "500 g",
+   "short_description_en_gloss": "Oat bread baking mix (you add 500 g low fat quark and 2 eggs); beta glucan for cholesterol and blood sugar, high fibre.",
+   "claims_status": "COMPANY CLAIM (health claims are the site's own wording, not verified by us)",
+   "price_note": "Displayed as \"<price> inkl. Versand\" on shop tiles (the button text, verified in HTML).",
+   "main_image_file": "img/site/aadec6_736864eb6ea14908becc25fe13f75707_mv2.png",
+   "main_image_url_original": "https://static.wixstatic.com/media/aadec6_736864eb6ea14908becc25fe13f75707~mv2.png",
+   "press_price": {
+    "value": "9 Euro",
+    "source": "https://www.heute.at/s/muesli-statt-kapsel-geschwister-eroeffnen-cafe-fuer-darm-120266362",
+    "quote": "Brotbackmischungen (9 Euro)",
+    "note": "site says 9,50 €"
+   }
+  },
+  {
+   "source_url": "https://www.healthysecrets.at/product-page/moon-milk-fibre-flow",
+   "status": "VERIFIED (parsed from the page's own wix-warmup-data and JSON-LD, fetched 2026-10-19)",
+   "name_exact": "Moon Milk Fibre Flow  215g | 14 Portionen",
+   "urlPart": "moon-milk-fibre-flow",
+   "price_eur": 25,
+   "formattedPrice": "25,00€",
+   "comparePrice": 0,
+   "discount": {
+    "mode": "PERCENT",
+    "value": 0
+   },
+   "ribbon": "Best Seller",
+   "isInStock": true,
+   "inventory": "in_stock",
+   "weight": 0,
+   "sku": "",
+   "description_de": "Unsere Golden Moon Milk als deine Unterstützung für eine gesunde, regelmäßige Verdauung.\nMit ihrem hohen Anteil an löslichen Ballaststoffen aus teilhydrolysiertem Guarkernmehl trägt deine tägliche Portion Moon Milk nachweislich zu einer normalen Darmfunktion bei und unterstützt eine sanfte, natürliche Verdauung.",
+   "info_sections": [
+    {
+     "title": "Mehr als nur Moon Milk",
+     "text_de": "-\nBallaststoffreich – unterstützt die natürliche Darmtätigkeit & Stuhlregulation. Für einen gesunden Darm.\n-\nErnährungsmedizinisch entwickelt – entwickelt auf Basis ärztlicher & diätologischer Expertise\n-\nCremig & wohltuend – feiner Geschmack, einfache Zubereitung"
+    },
+    {
+     "title": "Ballaststoffreich",
+     "text_de": "- Reich an löslichen Ballaststoffen – unterstützt eine gesunde, regelmäßige Verdauung\n- Fördert das Gleichgewicht der Darmflora – dient als Nahrung für „gute“ Bakterien\n- Ideal für den täglichen Genuss – fördert Wohlbefinden und ein gutes Bauchgefühl"
+    },
+    {
+     "title": "Zutaten",
+     "text_de": "Teilhydrolysiertes Guarkernmehl, Kurkuma, Zimt, Ingwer, Muskatnuss, Kardamom, Pfeffer\nAllergene: Kann Sellerie enthalten"
+    },
+    {
+     "title": "Zubereitung",
+     "text_de": "1 Messlöffel* + 250ml Flüssigkeit (pflanzen Drink, Milch oder alles was dir sonst so schmeckt) + Süßmittel deiner Wahl\n*in der Packung enthalten"
+    }
+   ],
+   "options": [],
+   "media": [
+    {
+     "id": "aadec6_34fa2757f7d4486d9b32eb68ded155b3~mv2.png",
+     "original_url": "https://static.wixstatic.com/media/aadec6_34fa2757f7d4486d9b32eb68ded155b3~mv2.png",
+     "width": 1080,
+     "height": 1350,
+     "altText": null,
+     "title": "Design ohne Titel (1).png"
+    }
+   ],
+   "ld_json_image": [
+    "https://static.wixstatic.com/media/aadec6_34fa2757f7d4486d9b32eb68ded155b3~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
+   ],
+   "category": "Fibre Flow Drinks",
+   "category_url": "https://www.healthysecrets.at/shop-2",
+   "size": "215 g, 14 Portionen",
+   "short_description_en_gloss": "Golden turmeric \"moon milk\" powder with soluble guar fibre; site says it \"demonstrably\" contributes to normal bowel function.",
+   "claims_status": "COMPANY CLAIM (health claims are the site's own wording, not verified by us)",
+   "price_note": "Displayed as \"<price> inkl. Versand\" on shop tiles (the button text, verified in HTML).",
+   "main_image_file": "img/site/aadec6_34fa2757f7d4486d9b32eb68ded155b3_mv2.png",
+   "main_image_url_original": "https://static.wixstatic.com/media/aadec6_34fa2757f7d4486d9b32eb68ded155b3~mv2.png"
+  },
+  {
+   "source_url": "https://www.healthysecrets.at/product-page/omega-3-müsli-red-berry-mix-300g",
+   "status": "VERIFIED (parsed from the page's own wix-warmup-data and JSON-LD, fetched 2026-10-19)",
+   "name_exact": "Omega-3 Müsli Red Berry Mix 300g",
+   "urlPart": "omega-3-müsli-red-berry-mix-300g",
+   "price_eur": 9.5,
+   "formattedPrice": "9,50€",
+   "comparePrice": 0,
+   "discount": {
+    "mode": "PERCENT",
+    "value": 0
+   },
+   "ribbon": "Best Seller",
+   "isInStock": true,
+   "inventory": "in_stock",
+   "weight": 0,
+   "sku": "",
+   "description_de": "Unsere einzigartige Rezeptur ist 100% frei von gesättigten Fettsäuren und reich an Omega-3-Fettsäuren. Diese Kombination unterstützt einen gesunden Cholesterinspiegel und fördert die Herzgesundheit. Deine bewusste Wahl für Herz und Gefäße, jeden Tag.",
+   "info_sections": [
+    {
+     "title": "Gut zu Wissen",
+     "text_de": "Herkömmliche Knuspermüslis verwenden meist Sonnenblumenöl oder Kokosfett, um ihre knusprige Konsistenz zu erzielen. Diese Fette begünstigen einen erhöhten Cholesterinspiegel und Gefäßablagerungen.\nUnser Müsli geht einen anderen Weg: Dank einer einzigartigen Rezeptur enthält es ausschließlich Omega-3-Fettsäuren und ist dabei genauso crunchy wie klassisches Knuspermüsli. Das Ergebnis: volle Knusprigkeit, voller Geschmack und eine Rezeptur, die die Herz-Gefäßgesundheit unterstützt."
+    },
+    {
+     "title": "Zutaten",
+     "text_de": "bio Haferflocken, bio Dinkelpops, Rapsöl, bio Ahornsirup, Kleie bio, gefriergetrocknete Beeren, Vanille"
+    },
+    {
+     "title": "Allergene",
+     "text_de": "Gluten"
+    }
+   ],
+   "options": [],
+   "media": [
+    {
+     "id": "aadec6_dcc5c15556f24e7bab83058e50256b83~mv2.png",
+     "original_url": "https://static.wixstatic.com/media/aadec6_dcc5c15556f24e7bab83058e50256b83~mv2.png",
+     "width": 1080,
+     "height": 1350,
+     "altText": null,
+     "title": "Design ohne Titel (4).png"
+    }
+   ],
+   "ld_json_image": [
+    "https://static.wixstatic.com/media/aadec6_dcc5c15556f24e7bab83058e50256b83~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
+   ],
+   "category": "Granola",
+   "category_url": "https://www.healthysecrets.at/granola",
+   "size": "300 g",
+   "short_description_en_gloss": "Crunchy granola said to be free of saturated fat and rich in omega-3, for cholesterol and heart health; made with rapeseed oil instead of sunflower or coconut fat.",
+   "claims_status": "COMPANY CLAIM (health claims are the site's own wording, not verified by us)",
+   "price_note": "Displayed as \"<price> inkl. Versand\" on shop tiles (the button text, verified in HTML).",
+   "main_image_file": "img/site/aadec6_dcc5c15556f24e7bab83058e50256b83_mv2.png",
+   "main_image_url_original": "https://static.wixstatic.com/media/aadec6_dcc5c15556f24e7bab83058e50256b83~mv2.png",
+   "press_price": {
+    "value": "9 Euro",
+    "source": "https://www.heute.at/s/muesli-statt-kapsel-geschwister-eroeffnen-cafe-fuer-darm-120266362",
+    "quote": "Omega-3-Müsli \"Red Berry Mix\" (9 Euro)",
+    "note": "site says 9,50 €"
+   }
+  },
+  {
+   "source_url": "https://www.healthysecrets.at/product-page/shaping-secret",
+   "status": "VERIFIED (parsed from the page's own wix-warmup-data and JSON-LD, fetched 2026-10-19)",
+   "name_exact": "Matcha Latte Fibre Flow 215g | 14 Portionen",
+   "urlPart": "shaping-secret",
+   "price_eur": 44,
+   "formattedPrice": "44,00€",
+   "comparePrice": 0,
+   "discount": {
+    "mode": "PERCENT",
+    "value": 0
+   },
+   "ribbon": "",
+   "isInStock": true,
+   "inventory": "in_stock",
+   "weight": 0,
+   "sku": "",
+   "description_de": "Matcha Latte Fibre Flow verbindet den Geschmack von hochwertigem Matcha mit einem hohen Anteil an löslichen Ballaststoffen aus teil hydrolysiertem Guarkernmehl.\nEin Matcha Latte pro Tag trägt nachweislich zur normalen Darmfunktion bei und unterstützen eine sanfte, natürliche Verdauung.",
+   "info_sections": [
+    {
+     "title": "Mehr als nur Matcha Latte",
+     "text_de": "-\nBallaststoffreich – unterstützt die natürliche Darmtätigkeit & Stuhlregulation. Für einen gesunden Darm.\n-\nErnährungsmedizinisch entwickelt – entwickelt auf Basis ärztlicher & diätologischer Expertise\n-\nCremig & wohltuend – feiner Geschmack, einfache Zubereitung"
+    },
+    {
+     "title": "Allergene",
+     "text_de": "Glutenfrei / Laktosefrei / Vegan; Frei von Farbstoffen ; Frei von Konservierungsmitteln"
+    },
+    {
+     "title": "Zutaten",
+     "text_de": "Japanischer Bio Matcha, teilhydrolysiertes Guarkernmehl, Kokosblütenzucker, Bourbon Vanille"
+    },
+    {
+     "title": "Zubereitung",
+     "text_de": "1 Messlöffel* + 250ml Flüssigkeit (pflanzen Drink, Milch oder alles was dir sonst so schmeckt)\n*in der Packung enthalten"
+    }
+   ],
+   "options": [],
+   "media": [
+    {
+     "id": "aadec6_fa4cd3adb0ba44cd94a84629a4025c14~mv2.png",
+     "original_url": "https://static.wixstatic.com/media/aadec6_fa4cd3adb0ba44cd94a84629a4025c14~mv2.png",
+     "width": 1080,
+     "height": 1350,
+     "altText": null,
+     "title": "Design ohne Titel.png"
+    }
+   ],
+   "ld_json_image": [
+    "https://static.wixstatic.com/media/aadec6_fa4cd3adb0ba44cd94a84629a4025c14~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
+   ],
+   "category": "Fibre Flow Drinks",
+   "category_url": "https://www.healthysecrets.at/shop-2",
+   "size": "215 g, 14 Portionen",
+   "short_description_en_gloss": "Matcha latte powder (organic Japanese matcha) with soluble guar fibre; site says it \"demonstrably\" contributes to normal bowel function. URL slug is the old name \"shaping-secret\".",
+   "claims_status": "COMPANY CLAIM (health claims are the site's own wording, not verified by us)",
+   "price_note": "Displayed as \"<price> inkl. Versand\" on shop tiles (the button text, verified in HTML).",
+   "main_image_file": "img/site/aadec6_fa4cd3adb0ba44cd94a84629a4025c14_mv2.png",
+   "main_image_url_original": "https://static.wixstatic.com/media/aadec6_fa4cd3adb0ba44cd94a84629a4025c14~mv2.png",
+   "flag": "Price 44,00 € while Moon Milk and Chai Latte Fibre Flow of the same 215 g / 14 portions cost 25,00 €. Verified in the page JSON and JSON-LD. Could be right (matcha costs more) or a typo; confirm with the client."
+  },
+  {
+   "source_url": "https://www.healthysecrets.at/product-page/slimming-secret-tea",
+   "status": "VERIFIED (parsed from the page's own wix-warmup-data and JSON-LD, fetched 2026-10-19)",
+   "name_exact": "Slimming Sips 50g",
+   "urlPart": "slimming-secret-tea",
+   "price_eur": 12,
+   "formattedPrice": "12,00€",
+   "comparePrice": 0,
+   "discount": {
+    "mode": "PERCENT",
+    "value": 0
+   },
+   "ribbon": "",
+   "isInStock": true,
+   "inventory": "in_stock",
+   "weight": 0,
+   "sku": "",
+   "description_de": "Die fein abgestimmte Kräutermischung unterstützt dein Bauchwohl, versorgt dich mit neuer Energie und wird besonders gerne bei Blähbauch oder Völlegefühl nach dem Essen getrunken. Ihre natürliche Zusammensetzung kann helfen, ein sanftes Gefühl von Leichtigkeit zu fördern. Ideal als After-Dinner-Tee für ein rundum angenehmes Wohlbefinden",
+   "info_sections": [
+    {
+     "title": "Physiologische Wirkung",
+     "text_de": "Unsere harmonisch abgestimmte Kräutermischung kombiniert Bio-Grünen Kaffee, Mate und Weißen Tee mit ausgewählten, milden Zutaten. Perfekt als natürlicher After-Dinner-Tee. Die feine Mischung unterstützt das Verdauungswohl und kann helfen, ein Gefühl von Leichtigkeit statt Völlegefühl zu fördern."
+    },
+    {
+     "title": "Hinweis",
+     "text_de": "enthält Koffein - für Kinder, Schwangere und Stillende nicht empfohlen"
+    },
+    {
+     "title": "Zutaten",
+     "text_de": "*Grüner Kaffee, Weißer Tee, Mate, Ingwer, Zimt\n*alle Zutaten stammen aus biologischem Anbau"
+    }
+   ],
+   "options": [],
+   "media": [
+    {
+     "id": "aadec6_03229674429f45c6ab36f7dde8352108~mv2.png",
+     "original_url": "https://static.wixstatic.com/media/aadec6_03229674429f45c6ab36f7dde8352108~mv2.png",
+     "width": 1080,
+     "height": 1350,
+     "altText": null,
+     "title": "Design ohne Titel (3).png"
+    }
+   ],
+   "ld_json_image": [
+    "https://static.wixstatic.com/media/aadec6_03229674429f45c6ab36f7dde8352108~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
+   ],
+   "category": "Teemischungen",
+   "category_url": "https://www.healthysecrets.at/shop",
+   "size": "50 g",
+   "short_description_en_gloss": "Organic herbal after dinner tea (green coffee, white tea, mate, ginger, cinnamon) for bloating and fullness; contains caffeine. URL slug is the old name \"slimming-secret-tea\".",
+   "claims_status": "COMPANY CLAIM (health claims are the site's own wording, not verified by us)",
+   "price_note": "Displayed as \"<price> inkl. Versand\" on shop tiles (the button text, verified in HTML).",
+   "main_image_file": "img/site/aadec6_03229674429f45c6ab36f7dde8352108_mv2.png",
+   "main_image_url_original": "https://static.wixstatic.com/media/aadec6_03229674429f45c6ab36f7dde8352108~mv2.png"
+  }
+ ],
+ "mentioned_but_not_in_online_shop": [
+  {
+   "name": "Kombucha",
+   "status": "VERIFIED absent from shop: category \"Komucha\" on https://www.healthysecrets.at/kombucha has totalCount 0 and the page shows \"Es gibt keine Produkte zum Anzeigen.\" (positive control: Darmgesundheit category on /shop-2 totalCount 3, same widget). Page copy: \"Spritziger Kombucha mit Milchsäurebakterien zur Unterstützung deiner Darmflora. Perfekt für zwischendurch oder als Basis für deinen Lieblings Drink.\"",
+   "press": "heute.at: \"Kombucha (ab 4,50 Euro)\"; gastro.news lists Kombucha in the range. Instagram reel 13 Oct (DeHmFxBj7YL): \"Komm vorbei und gönn dir einen healthy Kombucha!\" so it is sold in the café (COMPANY/PRESS CLAIM)"
+  },
+  {
+   "name": "Merch",
+   "status": "VERIFIED absent: category \"Merch A\" on https://www.healthysecrets.at/shop-1 totalCount 0, \"Coming Soon\" banner, \"More for your Style\". An Instagram opening day photo shows a white T shirt being held up (ig00 c08), not confirmed as merch for sale."
+  },
+  {
+   "name": "Amazing Apple Granola",
+   "status": "Only mentioned on Über uns as Niki's favourite product (\"Mein Lieblingsprodukt: Amazing Apple Granola\"). Not in the shop, not in the product sitemap."
+  },
+  {
+   "name": "Café menu items (not sold online)",
+   "status": "Letter board and Instagram: Fibre Flow Matcha/Chai/Moon (hot and cold), Coffee (Cold Brew, Latte, Cappuccino, Filter), Soda Zitron, Chia Pudding, Probiotic Frozen Yoghurt, Omega 3 Overnight Oats, Banana Bread, Granola Bowl, Puppy Parfait. See SUMMARY.md café section. No prices found."
+  }
+ ],
+ "services": [
+  {
+   "name": "Ernährungstherapie (Leonie Walkner BSc., Diätologin)",
+   "duration": "60 Minuten",
+   "price": "120 €"
+  },
+  {
+   "name": "BIA Messung",
+   "duration": "30 Minuten",
+   "price": "50 €"
+  },
+  {
+   "name": "Ernährungstherapie & BIA Messung",
+   "duration": "120 Minuten",
+   "price": "160 €"
+  }
+ ],
+ "services_source": "https://www.healthysecrets.at/services-2 (\"Termin buchen\"). VERIFIED on page. Note: no link on the site points to this page; it is only in the sitemap and Wix page list."
+}

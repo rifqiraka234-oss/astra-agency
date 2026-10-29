@@ -1,0 +1,6 @@
+{
+ "id": "ctc_pdAKCyF8dJxPkKrdL",
+ "buyer": "B2C",
+ "sector": "consumer food brand",
+ "basis": "site: online shop for gut health foods"
+}

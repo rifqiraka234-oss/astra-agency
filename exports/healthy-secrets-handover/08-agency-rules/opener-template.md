@@ -1,0 +1,783 @@
+# The opener template. What it needs, and the rules for every slot.
+
+## THE first message from 2026-10-13 is the SKETCH opener (Raka)
+
+His words on 12 Oct, "hi, so this looks cool. However, your website is this. I suggest to do this. We
+make websites for blah blah. Shall I send you a sketch of how it looks like?", and on 13 Oct after the
+week one audit, "lets continue using the id suggest". In its first two days it got 1 yes from 8 (Chris
+Hale, in under three hours), against 1 from 39 for the template further down. Every new first message
+is this shape. The template below is kept as history and for the slot rules that still apply.
+
+```
+Hi [name], [company] looks cool!
+
+However, your [website, social media or the page] [what you saw, one or two sentences, each 30 words max]. [what it likely costs them, worded as likely, probably or usually].
+
+I'd suggest [the project, specific, the thing that fixes block two].
+
+At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of [the thing]?
+```
+
+- Five blocks, 45 to 115 words, one exclamation mark, in block one.
+- **"I'd suggest" is the line that works.** It forces the project to be named in their words, the
+  corporate ordering site, the justclaims site ready for the new rules. Name the thing a stranger
+  could sketch, tied to how they make money.
+- Block four is that sentence. When the offer is an app, tool or AI workflow, use the Astra line that
+  fits from `docs/astra-company-profile.md`, still ending "for brands like Unilever, AXA, Pertamina."
+- Block five is at most 16 words.
+- In a warm chat (they answered the connect note and nothing was pitched), block one is
+  `Something I've been thinking about, [name]!` and block two opens `Your ...` (RULES section 1).
+- The full research gate, the `worth:` line at 2,500 euros or more (RULES 0E) and the `owner reply:`
+  line (RULES 0F) all apply, and from 26 Oct the `still there:` line (RULES 0G point 1). tools/check-drafts.py
+  fails an OPENER shape in a file dated 2026-10-14 or later, so a new first message is always tagged SKETCH,
+  or SKETCHB when the A/B test below assigns it.
+- After it, one plain bump and then a silent close (RULES section 1, two pitches, then close).
+
+### From 26 Oct, half of all first messages are SKETCHB, the A/B test (Raka, 2026-10-25, "lets try")
+
+The contactId decides which shape a lead gets, never a person. Full plan, rules and how it's counted are in
+`docs/experiments/2026-10-26-opener-ab.md`. The short version.
+
+```
+Hi [name], [company] looks cool.
+
+However, [what you saw]. [what it likely costs them].
+
+I'd suggest [the project].
+
+Shall I send you a sketch?
+```
+
+- **The opening is Raka's (2026-10-26), "maybe like change it to Hi name, [company] looks cool. however,".** It
+  replaced the "thanks for connecting" line on the day the test came back, before anything was sent.
+- Four blocks, 45 to 95 words, a full stop after "looks cool", and no brand line. The ask can name the thing,
+  "Shall I send you a sketch of [thing]?", 14 words max.
+- Write A first, then B is the same gap and suggestion with the brand line taken out and the short ask. Trim only to
+  fit 95 words, so the two versions differ in as little as possible.
+- The gate carries `variant: B`. A SKETCH in the test carries `variant: A`.
+- To see a lead's arm, `python3 -c "import importlib.util as u; s=u.spec_from_file_location('c','tools/check-drafts.py');
+  m=u.module_from_spec(s); s.loader.exec_module(m); print(m.variant_for('ctc_...'))"`, or just run check-drafts, which
+  names the right shape when the draft is in the wrong one.
+- The warm SKETCH and the AI workflow variant below stay outside the test.
+
+### The AI workflow variant, "did you know" (Raka, 2026-10-22)
+
+His words, "i think for ai workflows suggestion we can use this template, Hi [name], xxx looks cool /
+However, did you know that [her normalised job title] faces [shortcomings] / i'd suggest an ai
+workflow etc etc. / lets try, feel free to grow and improve it". Use it when the offer is an AI
+workflow. Block two names a shortcoming of their ROLE, backed by a published number, then ties it to
+them with one verified fact.
+
+```
+Hi [name], [company] looks cool!
+
+However, did you know that [their role in plain words, solo lawyers, independent physios] [the shortcoming, with the number]? [Who found it, named] links it to [the cause], and [one verified fact about them that makes it theirs].
+
+I'd suggest an AI workflow that [takes exactly that cause off them, named in their work's words].
+
+At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the AI workflow for [their practice, shop, team]?
+```
+
+- **Name the source inside the message.** "Clio's research links the gap to ..." A stat nobody can
+  look up reads as made up. The gate carries `did you know: <the fact> | <source, date, sample> |
+  <URL>`, and tools/check-drafts.py fails the draft without it.
+- **The role is how they'd describe themselves**, not their LinkedIn title. "Solo lawyers", not
+  "Founder | Attorney-at-law".
+- **The second sentence makes it theirs** with a fact from their own record, a one lawyer practice
+  from the register, every enquiry going through one inbox. Without it the message is a newsletter.
+- **The workflow fixes the exact cause the source names.** The thread link words have to be in block
+  two and in block three, so a stat about admin can't be followed by an offer about marketing.
+- **Use the source's own words for the comparison**, "larger firms" because Canadian Lawyer says
+  larger firms. Say the number the way the source says it, never rounded up.
+- **Flag where the number comes from to Raka** when it isn't their country or is more than two years
+  old. The first one (Lisanne, 2026-10-22) used Clio's 2023 North American study, worded as Clio's
+  research and never as a Dutch figure.
+- Everything else in the SKETCH rules applies, 45 to 115 words, 30 words a sentence in block two,
+  the `worth:` and `owner reply:` lines.
+
+### The Build Squad variant of "did you know" (Raka, 2026-10-26)
+
+His words, "leo build squad using did you know", on Léonard Chalvet of Bruno, a branding agency. Same shape as the AI
+workflow variant above, with a Build Squad offer. Block two names a capacity cost of their ROLE (branding agencies,
+design studios, how much build work they turn away, outsource or deliver late), backed by a published number with the
+source named in the message, then one verified fact about them that makes it theirs. Block three offers a build squad
+that takes exactly that cause off them. RULES section 1A still holds, a capacity fact in block two for a Build Squad
+offer. "Half the time at half the price" is Raka's own offer, used verbatim if at all and flagged to him every time.
+The gate carries the same `did you know:` line, and check-drafts.py accepts "build squad" in block three or four in
+place of "AI workflow". Like the AI workflow variant it sits outside the A/B test.
+
+## The template, 2026-09-22 to 2026-10-13
+
+**Raka's template, adopted as THE first message on 2026-09-22.** It replaces every earlier
+opener shape. First sent in this form to Daan Erisman at tuftuf, 2026-09-22 19:15:48Z.
+
+**It is filled exactly as written.** Raka rejected a version that added a clause to block
+two and reworded the brand line, with "follow the fucking template i gave you". So the
+wording outside the brackets is fixed. Only the brackets change.
+
+```
+Hi [name], saw [company], looks interesting!
+
+However, your [surface] is [the critical flaw]. This causes [stakeholder] to [impact].
+
+Especially, when you are [current goal, actions, company direction], the [problem growing bigger in the long run].
+
+I run Astra agency. We build [xyz] for brands like Unilever, AXA, Pertamina. I [proof].
+
+Shall I send you over what the [thing] looks like?
+```
+
+**The shorter CTA, Raka 2026-09-24.** "I think the cta should be shorter maybe like 'shall i
+send you over how it looks like?'" The old block five, "Shall I build the [thing] so
+[stakeholder achieves goal], and send it over?", ran 20 to 25 words and repeated the goal that
+block three now carries. The new one is one short question. Two choices made filling it in,
+both flagged to Raka: "what it looks like" rather than "how it looks like", which is the
+grammatical form, and "the [thing]" kept in, because no other block names what we'd build and a
+bare "it" would point at nothing. The first opener sent with it was after Wessel van Noort, who
+got the old CTA.
+
+**Block three was added by Raka on 2026-09-24**, writing it straight into the Wessel van Noort
+draft. "Especially, when you are [current goal, actions, company direction], the [make the
+problem feel more bigger on longing]." It ties the flaw to where the company is heading and shows
+the cost growing over time. Every opener from then on is five blocks, and check-drafts.py enforces
+it. The four block example below is kept as the history of how block two is written.
+
+The reference filled example, as sent (four blocks, before 2026-09-24).
+
+```
+Hi Daan, saw tuftuf, looks interesting!
+
+However, your site is two pages with not a single photo of the room. This causes event planners booking for forty to two hundred guests to pick a venue they can actually see.
+
+I run Astra agency. We build websites for brands like Unilever, AXA, Pertamina. I built a food brand from zero with my family and ran the inventory, so I know what an unsold night costs.
+
+Shall I build the private events page so planners can see the room they're booking, and send it over?
+```
+
+### The no website variant, block two only (Raka, 2026-09-22)
+
+When the lead genuinely has no website, block two is replaced with his exact words, one
+sentence.
+
+```
+I couldn't find your website, and that [impact to their most current goal].
+```
+
+Everything else in the template stays as it is. It runs shorter, so its word floor is 70 rather than 88. **It is only used when "no website" has been
+earned**, which after Relatiq means all of these, written into the queue row's `claims`.
+
+1. **A plain web search for the company's site**, run FIRST, returning nothing live that is
+   theirs. A search index entry that cannot be opened at source does not count as a site.
+2. **lemlist's `companyDomain` fetched**, and it does not load, with a control host loading
+   through the same path in the same minute.
+3. **Every plausible other TLD checked and confirmed to be a different company or empty.**
+   For Relatiq, `.io` was a data product, `.co` a LinkedIn CRM, `.app` a texting app.
+4. **Their own LinkedIn company page or other profiles checked for a website link**, where it
+   can be read.
+
+If any of those turns up a site that is theirs, it is the normal template with that site.
+
+---
+
+**Before any slot is filled, the research gate (RULES.md 4B).** Seven mandatory items, recorded
+in a ```gate block above the draft, enforced by check-drafts.py. The first one written, for SBZ,
+is in `state/drafted_2026-09-24-sbz-wessel-five-block.md`.
+
+## 1. The eleven inputs, where each comes from, and what goes wrong
+
+You cannot fill a slot you have not researched. Every slot below names its source. **If a
+slot has no source, the message does not get written.**
+
+| # | Slot | What it is | Where it comes from | The trap, and the lead it cost |
+|---|---|---|---|---|
+| 1 | `[name]` | First name only | lemlist `firstName` | lemlist puts titles in it. Adrian Steele's `firstName` was "Dr". Abbreviated surnames are never used |
+| 2 | `[company]` | The business they OWN, styled as they style it | lemlist `companyName`, reconciled per RULES.md 0B, then the statutory record for any owner claim | The business they own is not the job they hold. Steele had sold Mercian Labels, Mandy Kerley does not own Trickle |
+| 3 | `[surface]` | `site` or `social media`, whichever is theirs and readable | A web search for the site FIRST, then their own HTML for social handles | lemlist `companyDomain` is wrong often. `carrefour.fr`, `trickle.works`, and `relatiq.nl`, which has no website on it |
+| 4 | `[the critical flaw]` | One or two overarching things critically poor about the whole surface | Every published page, rendered and looked at, see section 3 | An absence claim with no positive control. Dariuz's "broken images" were our proxy |
+| 5 | `[stakeholder]` | The specific party the business depends on | The site's own words, who it sells to and how | A generic "visitors". tuftuf's was event planners, from its own guest range field |
+| 6 | `[impact]` | What that stakeholder does instead, landing on the lead's **most current goal** | Their current goal, found by research per section 3 step 8, dated, newest evidence first. The impact itself is inference, the only one allowed, and the owner must be able to test it | A timeless, generic cost. And a made up number, the money rule forbids modelling any rate or revenue |
+| 7 | `[xyz]` | What we build, relevant to this lead | The offer in block five | Mismatch with block five |
+| 7a | `[current goal, actions, company direction]` | Where the company is heading NOW, stated as what they're doing | The goal research, section 3A, at least two agreeing clues, newest first | Quoting the clue ("your LinkedIn post"). State the direction, never where you saw it |
+| 7b | `[problem growing bigger]` | How the block two cost grows as they pursue that goal | Inference from the goal and the flaw together | A new, second problem. It's the SAME problem getting bigger, not another one |
+| 8 | brand line | **Fixed.** "Unilever, AXA, Pertamina" | Raka's template, recorded in `docs/astra-company-profile.md` | Never reworded, never trimmed, never extended |
+| 9 | `[proof]` | ONE personal credential of Raka's that makes the offer believable | `docs/astra-master-context.md` section 2A, matched per section 4 below | Decoration. The credential has to be the reason we can do the thing |
+| 10 | `[thing]` | A concrete artefact a stranger could draw, named in the CTA | Derived from the flaw in block two and the goal in block three | A brochure. "A page that shows the room" priced itself low |
+| 11 | `[stakeholder achieves goal]` | **Retired from the CTA on 2026-09-24.** The goal now lives in block three | Block three | Putting it back into the CTA makes it long again |
+
+---
+
+## 2. The rules, block by block
+
+### Block one, `Hi [name], saw [company], looks interesting!`
+
+- **Word for word.** No detail, no description, no compliment beyond "looks interesting".
+- The only exclamation mark in the message lives here.
+
+### Block two, exactly two sentences, nothing added
+
+- **Sentence one is `However, your [surface] is [the critical flaw].`** One or two flaws,
+  never three. The flaw must be **overarching**, true of the whole surface, never one page's
+  nit. And **critically poor**, it touches money or trust, not taste.
+- **Sentence two is `This causes [stakeholder] to [impact].`** The stakeholder is whoever is
+  actually hurt, their customer, the owner themselves, the business, or any other party they
+  depend on. **The impact lands on the most valuable goal or pain they have RIGHT NOW (Raka,
+  2026-09-22).** Not a timeless cost that would be true of any business, the thing they are
+  working on this month. Find it, section 3 step 8, then aim the impact at it.
+- **No extra clauses.** No "while it sells", no "so your team loses". That was the draft Raka
+  rejected.
+- **What Raka calls a dated site, in his words (2026-09-23), pointing at nl.inxpress.com.**
+  "Squary, things are in islands, it doesn't flow, a lot of gaps." So look for boxy cards and
+  panels that sit as separate blocks, sections that don't lead into each other, and big empty
+  gaps between them. That's a design flaw he recognises on sight, and it counts even when the copy
+  and the facts are fine. Judge it from the screenshots, never from the HTML.
+- **For a franchisee, the brand's site IS his website (Raka, 2026-09-24).** It's what his
+  customers see when they look him up, so roast it like his own, every page. He can't rebuild
+  head office's site, so the offer is the thing he can own, his local page.
+- **A rebuild is not a breakage.** When InXpress rebuilt its site the old location links started
+  landing on a general page. "Your page is gone" overstated that, Raka caught it. Describe what a
+  customer sees now, not what disappeared.
+- **The flaw survives four tests before it is written.**
+  1. **Positive control** on any absence. "Not a single photo" shipped because the same sweep
+     found 23 images on hfmencap.org.
+  2. **Render trust.** `site-audit.js` must not print `RENDER NOT TRUSTED`. If it does, run
+     `tools/render-via-curl.js` and only use a visual finding when that reports 0 curl errors.
+  3. **The tweak test.** If their web person fixes it in an afternoon, it is a task and it
+     cannot be the flaw. tuftuf's missing privacy policy and HF Mencap's missing cookie
+     banner were both true and both held back for this reason.
+  4. **The red team.** Is it deliberate? tuftuf's one screen club front is deliberate and was
+     never the flaw. The private events buyer being shown no room is not a style choice.
+
+### Block three, one sentence, `Especially, when you are [goal], the [problem growing].` (Raka, 2026-09-24)
+
+- **Word for word outside the brackets**, including the comma after "Especially".
+- **`[current goal, actions, company direction]`** is where they're heading right now, in their
+  terms. For SBZ, "taking on defence, aircraft and overseas work". Evidenced by at least two
+  agreeing clues, never named as a source.
+- **`[problem growing bigger]`** is the block two problem getting bigger as they chase that goal.
+  Same problem, not a new one. For SBZ, "the hours behind every quote and crew plan grow with each
+  bigger job you win".
+- One sentence, 35 words at most.
+
+### Block four, three sentences, the middle one fixed
+
+- `I run Astra agency.` Fixed.
+- `We build [xyz] for brands like Unilever, AXA, Pertamina.` Only `[xyz]` changes. Plain
+  and short, "websites", "websites and apps", "booking tools".
+- **Social media or branding angle (Raka, 2026-10-07).** `[xyz]` may be "branding and websites
+  and social media management" (written with "and" because the checker allows 2 commas per sentence and the client list already uses them). His words, "for social media angle we can always say we
+  build branding websites and social media management etc etc. On the bottom". This is his
+  call on how Astra describes its own offer, so the red team doesn't strip it back to
+  "websites and apps" again.
+- `I [proof].` One credential, and it has to carry the argument. Eten Maar "ran the
+  inventory, so I know what an unsold night costs" works because a venue's unsold nights are
+  inventory. "I had a food brand" alone would be decoration.
+
+### Block five, one short question (Raka, 2026-09-24)
+
+- `Shall I send you over what the [thing] looks like?` Word for word outside the bracket.
+- `[thing]` names an artefact a stranger could sketch, "the quoting and planning tool", "the
+  English PULSE site". Not "a solution", not "some ideas".
+- 16 words at most. The goal is not repeated here, block three carries it.
+- **`[thing]` is the bigger outcome, never the tiny fix (Raka, 2026-10-05).** His words, "the cta
+  should be like 'shall i send you over what [a modern or professional or sales converting or any
+  of the goal] looks like' instead of just like the tiny fix because now it seems like its just a
+  tiny fix". So the thing is the whole better version that fixes block two's flaw AND serves block
+  three's goal, described by what it achieves, "the sales converting Archipel site", "a modern
+  booking site for La Warroom", "a professional English site for PULSE". Not the patch, "the
+  crawlable case studies page", "the fixed contact form". A tiny fix tells the owner his team can
+  do it in an afternoon, which kills the pay test in the lead's own head. The thread link words
+  still have to appear in it or in block four's proof, so name the outcome around the same subject.
+- **History.** Until 2026-09-24 this block was `Shall I build the [thing] so [stakeholder
+  achieves goal], and send it over?`. Lasse Wessel and Wessel van Noort got that version.
+
+### Across the whole message
+
+- **Three consistency checks, and they are the ones a script cannot do.** The stakeholder
+  The thing in block five fixes the flaw in block two. The `[xyz]` in block four covers the
+  thing in block five, a tool means "websites and apps". Block three's goal is the direction
+  the thing in block five serves.
+- **The hard bans from RULES.md still hold.** No colon anywhere, no dash of any kind outside
+  a proper noun, contractions present, English, five blocks.
+- **Length falls out of the shape**, roughly 100 to 130 words. The gate's range is 95 to 170.
+
+---
+
+## 3. The research that fills `[the critical flaw]`, in order
+
+This is where the template's "after a deep analysis of the whole website or social media,
+all pages" gets done. Nothing in it is optional.
+
+1. **Reconcile the lemlist record against itself**, RULES.md 0B. Tagline against
+   `companyName`, owned against held, domain actually theirs.
+2. **Web search for their site before touching `companyDomain`.** Relatiq was one approval
+   from "you have no website" off DNS alone.
+3. **Fetch the domain and confirm it names the right company.** A plausible TLD is often a
+   different company. relatiq.io, relatiq.co and relatiq.app are three different businesses.
+4. **List every published page, not just the nav.** The sitemap, and on WordPress
+   `/wp-json/wp/v2/pages`, which is how tuftuf's unlinked `/friends/` page turned up.
+5. **`node tools/site-audit.js` on every page, and open both screenshots of each.**
+6. **Social handles only from their own HTML.** Try to read them. If it is a login wall, a
+   401 or a 429, say nothing about social at all and use `site` as the surface.
+7. **Find the revenue line in their own words.** Their form fields, their pricing, their
+   CTAs. tuftuf's guest range and "For example €15,000" budget are what made the stake visible.
+8. **Find their MOST CURRENT goal and pain by linking clues, then date it (Raka,
+   2026-09-22).** Full method in **section 3A below**. It is not optional and it is not a
+   single search. Every one of the eight clue sources gets opened and read through, the
+   clues get written down with dates, and the goal is INFERRED from how they fit together.
+   The impact in block two is then aimed at THAT goal.
+9. **Pick the flaw that sits on that goal and that revenue line**, then run it through the
+   four tests in section 2.
+10. **Confirm it a second, independent way.** tuftuf's zero photos was an HTML sweep, the
+    screenshots, and the CMS media library, three mechanisms that cannot fail together.
+11. **Write every verified fact into the queue row's `claims` at the moment it is verified**,
+    including the current goal, its source and its date.
+
+---
+
+## 3A. Clues to inference. How the current goal and pain are found (Raka, 2026-09-22)
+
+His words, "these are just clues... that can be put together and you can infer something
+out of it", "don't just skip around, you read through it and understand it and analyse
+it", "linking it together, multifaceted".
+
+**The principle.** No single source tells you what someone is trying to do this month.
+Several sources each leave a clue, and the goal is what makes all of them make sense at
+once. **A clue is evidence for the inference. It is never the content of the message.**
+
+### The eight clue sources. All eight are opened, every lead, no skipping
+
+| # | Source | How to get it | What to read for |
+|---|---|---|---|
+| 0 | **The lead's own lemlist `jobDescription` and `summary`** | The lead record, or the `linkedinInviteAccepted` activity, which carries it | Their mandate in their own words. The strongest single clue in batch 3, see 3B |
+| 1 | **Their website, all of it** | Section 3 steps 3 to 5. Plus any news, blog, press, "updates" or newsletter archive, and the newsletter signup itself | Expansion plans, new locations, new products, what the main CTA pushes, what changed recently and what looks abandoned |
+| 2 | **Their newsletter** | An archive page on the site, a Mailchimp or Substack archive linked from their HTML, a web search for `"<company>" newsletter` | What they tell existing customers they are doing next. This is usually the most honest statement of plans a small business publishes |
+| 3 | **The company LinkedIn page, recent posts** | `companyLinkedinUrl` from lemlist, opened. If walled, a web search for `site:linkedin.com/posts "<company>"` and open each result | Launches, hires, wins, events, partnerships. The dates matter as much as the words |
+| 4 | **The owners' own pages** | The lead's `linkedinUrl` and their summary in lemlist, their posts via search, any personal site, podcast, talk or interview | What they are up against. Their complaints, their asks, what they celebrate, what they keep coming back to |
+| 5 | **Job openings** | Their careers page, the LinkedIn jobs tab, a web search for `"<company>" vacature` / `Stellenangebot` / `hiring` / `job`, Indeed, Werkzoeken, their own "we're hiring" bar | **Read the whole job description**, the requirements and the responsibilities, not the title. The requirements say what the business lacks |
+| 6 | **A web and news search of the company name** | Plain web search, then a news search, in the site's own language | Funding, awards, grants, openings, closures, acquisitions, press features, local news |
+| 7 | **A web and news search of the owner's name** | Name plus company, then name plus an ownership word in their language | Other ventures, interviews, talks, a recent move, the thing they're known for |
+
+**Every source gets a written outcome in the research note**, including the empty ones.
+"LinkedIn posts, walled, 401, nothing read" is an outcome. A source that was not opened
+is written as not opened, and then it gets opened.
+
+### How clues become an inference. Read, understand, then link
+
+1. **Read each source through fully.** A job ad's title is not the clue, its requirements
+   are. A post's headline is not the clue, what it announces and when is. Skimming is the
+   failure Raka named.
+2. **Write each clue down on its own line, with its source URL and its date.** No
+   interpretation yet. `2026-08-14, company page post, signed distribution partnership
+   with X` is a clue.
+3. **Ask of each clue, "what does this mean for them".** One step of meaning, no more.
+4. **Link them.** Look for two or more independent clues pointing the same way. That is
+   the inference. Write it as one sentence naming the clues it rests on.
+5. **Try to break it.** Is there a clue pointing the other way? A hiring spree and a
+   closure notice in the same month is not expansion. Write the contradiction down.
+6. **Grade it.** Two or more independent clues agreeing is `SUPPORTED`. One clue alone is
+   `WEAK` and cannot carry the impact, fall back to the stage based analysis and say so.
+   Contradicted is `UNRESOLVED`, and the impact stays generic to their revenue line.
+
+### Raka's worked inferences, and the shape they all share
+
+| Clues | What they mean | Inference |
+|---|---|---|
+| Hiring a social media manager | Someone is being paid to make them more visible | They're expanding and want to be found |
+| A marketer role whose requirements include web design | The site is on the new hire's list of jobs | They know the website needs changing, and they are trying to solve it with a hire |
+| Hiring salespeople, plus recent partnership announcements | More channels and more people to work them | They're expanding quickly, so anything that slows a new lead down costs them more now |
+
+More in the same shape, so the method generalises.
+
+| Clues | Inference |
+|---|---|
+| A new location announced, plus a site that still lists one address | The site hasn't caught up with the business |
+| A newsletter promising a new product, plus no product page | The launch will land on a site that can't sell it |
+| The founder posting about wanting bigger clients, plus a portfolio of small ones | They're trying to move upmarket and the proof points the other way |
+| Funding or a grant, plus hiring | A growth push with a deadline on it |
+| Every recent post about one service line | That line is where they want the next money from |
+
+### What the inference is allowed to do in the message
+
+- **It drives the `[impact]` slot and the `[thing]` in block four. That is all.**
+- **The clue itself never appears.** Not "I saw your job opening for a marketer", not "I
+  saw you're hiring", not "congrats on the partnership". Raka, "Don't use it as like, oh,
+  if I saw your job opening for this". Quoting a clue reads as surveillance and swaps a
+  diagnosis for a recital. The message states the consequence, the owner recognises it
+  because it is true.
+- **Block one stays word for word.** The inference never leaks into the compliment.
+- **The owner must be able to test the impact** against their own experience. If only our
+  research could confirm it, it is too clever and it gets rewritten plainer.
+
+### The written record, in the queue row and the research note
+
+```
+clues
+  <date> <source url> <what it says, no interpretation>
+  ...
+sources with nothing       <which of the eight, and why, eg walled 401>
+inference                  <one sentence>, rests on clues <n> and <m>
+contradictions             <none, or what points the other way>
+grade                      SUPPORTED | WEAK | UNRESOLVED
+impact aimed at            <the goal, in plain words>
+```
+
+**No inference, no impact.** If the grade is `WEAK` or `UNRESOLVED` and the stage based
+analysis gives nothing better than a timeless cost, the lead is not ready.
+
+---
+
+## 3B. What the first run taught (batch 3, 2026-09-23, one sent out of five)
+
+The method was run on five leads. Grzegorz Sobieszuk at PharmaSupport was sent, three were
+genuinely no angle, one was not a lead. The worked example is in
+`state/drafted_2026-09-23-batch3-new-accepts.md`. What it taught, in the order it comes up.
+
+### Picking the batch
+
+- **Take new leads from the acceptance count, never from an old "untouched" list.** Batch 2's
+  file named five leads as untouched and all five already had queue rows. The reliable source is
+  the difference. `get_campaigns_stats` gives `linkedinInvitationAccepted` now. The last audit
+  gives the count then. `GET /api/activities?version=v2&type=linkedinInviteAccepted&campaignId=
+  <id>&minDate=<audit date>` lists who accepted in between. **The arithmetic has to close**, 322
+  plus 5 equals 327, before anyone is researched.
+- **The activities record carries the whole lemlist lead**, `jobTitle`, `tagline`, `summary`,
+  `jobDescription` and company fields. Read it there first, it saves a lookup per lead.
+
+### Rule someone out on the record, before any fetch
+
+Two of five went on the record alone, and both are cheap to spot.
+- **A student or an employee is not a lead.** Oluchi Okafor's `summary` says Year 12 student.
+- **An agency is a competitor.** Hula Hoop's `companyDescription` says brand strategy agency,
+  80+ staff. Confirm with one fetch of their homepage title, then stop.
+
+### The eighth clue source, and it was the strongest
+
+**The lead's own lemlist `jobDescription` and `summary`.** People write their mandate there in
+their own words. Grzegorz's said "growth journey to becoming a leading service provider ...
+across Europe ... creating new service offerings, leading business development". That is a
+stated goal, which is better than any inferred one. **Read it first, then look for independent
+clues that agree.** It counts as one clue, never two, however many goals it names.
+
+**The other sources that paid off.**
+- **The company register via North Data**, for dates. It dated the takeover to 9 Dec 2025 and
+  showed he holds his stake through his own holding company, which also settled ownership.
+- **Third party employer profiles**, StudySmarter Talents, Indeed, Magnet.me. An employer profile
+  on a graduate platform is a hiring clue that doesn't depend on LinkedIn at all.
+- **WebFetch on a public company LinkedIn page** returned recent posts with relative ages. Treat
+  the ages as approximate and say so.
+
+### Check the site where the goal lives, not the whole site
+
+Once the goal is inferred, the question is **whether the site serves that goal**, not whether it
+has faults. QWIC's goal is dealer led growth in Germany. So the checks were qwic.de, the new
+models on it (Elan 36 mentions, Signal 13), and the dealer locator. All three held up, so the
+answer was no angle, although the site had a real GDPR fault. **A true fault that doesn't sit on
+their current goal is not the flaw.** The flaw that was sent, no careers content, sits exactly
+on PharmaSupport's goal of hiring scientists.
+
+### An absence claim over a whole site, done properly
+
+"Not a single line, on any page" was earned with four layers. Use the same four next time.
+1. **Crawl every linked page**, DE and EN, not the nav alone. 107 fetched.
+2. **Read every keyword hit in context.** German "stellen" is a verb far more often than a noun,
+   and every hit on PharmaSupport was the verb. A count of hits is not a finding.
+3. **Probe the likely unlinked paths**, `/karriere`, `/jobs`, `/stellenangebote`, `/career`,
+   `/en/careers` and so on, with a path that exists as the control. All 404, `/team` 200.
+4. **Search the index**, `site:domain` plus the terms, for pages the crawl can't reach.
+
+**And pick a control that is KNOWN to have the thing.** The first control grep ran on qwic.nl
+and found nothing, because QWIC's homepage doesn't link its careers page. A control that fails
+proves nothing either way. hfmencap.org, whose homepage says "Work for us", was the valid one.
+
+### Tool traps hit this run
+
+- **A Playwright script written by hand must set `ignoreHTTPSErrors: true`.** Without it every
+  page shows "Your connection is not private", which is the proxy's CA, never their certificate.
+  site-audit already handles this. Ad hoc scripts don't.
+- **Clear the temp file before every fetch in a loop.** A domain sweep reused the last page's
+  title for two domains that returned 000. This is the second time. `rm -f` first, every loop.
+- **A search tool you drove wrong is not a broken search.** Pressing Enter in QWIC's Mapbox
+  search listed nothing, most likely because it wants a suggestion clicked. Never write "broken"
+  about an interactive part you haven't driven the way a visitor would.
+
+### Retrying blocked leads (batch 4, 2026-09-23), what changed the answers
+
+Five blocked leads were retried. Every block turned out to rest on something other than the lead.
+- **Re read the lemlist record before trusting an old block.** Paul Prescott was blocked on
+  `raiseyourgame.co.uk`, a domain that isn't on his record, which gives `raise-your-game.com`.
+  Emily Levy's `alquimialawyers.com` is dead but her firm moved to `alquimialegal.mx`. Debby Alles'
+  name collision was settled by her own `companyDescription`. Use `search_campaign_leads` with
+  the `id`, it returns the full record including every `experience` line.
+- **A 503 can be the page itself.** The WordPress Under Construction Page plugin serves 503 on
+  purpose. Aksonz was "503 on every fetch" for weeks and the page behind it is a placeholder.
+- **When our proxy can't read a site, use a reader on another network.** (As of 2026-09-24
+  r.jina.ai refuses our IP, see batch 6 below, so use `tools/render-via-curl.js` first.) `r.jina.ai/<url>` returns
+  the text, and with the header `X-Return-Format: screenshot` a screenshot URL. Control it with a
+  known site through the same reader. It is a separate path from curl, Chromium and WebFetch.
+- **Counters in raw HTML start at zero.** "0 Prizes Won, £0 Money Raised" was a count up
+  animation, 750 and £80,000 once rendered and scrolled. Never quote a number from HTML that a
+  script animates.
+- **A phone screenshot needs a phone user agent.** Wix and other builders pick the layout by user
+  agent, so a 390px desktop browser got the desktop layout with text clipped off the edge. site-audit
+  now shoots the phone view with a real iPhone profile.
+- **Look for the other language before claiming there isn't one.** Wix Multilingual flags in the
+  HTML meant `/en` existed, which killed "your site is Spanish only" before it was written.
+- **Companies House name matches need the company, not the name.** The first "Neeraj Sharma"
+  appointments page was a different man in Teesside. Search the company, then open its officers.
+
+### Batch 5 (2026-09-23), three more traps and one new check
+
+- **On WordPress, always list the posts and the users.** `wp-json/wp/v2/posts?per_page=100`
+  with `X-WP-Total`, and `wp-json/wp/v2/users`. On ferrydehaas.nl this found 130 casino and
+  betting posts by a second account, all in nine days, none linked from the homepage. The design
+  looked fine. A render never shows this, and it's the most serious thing a site can have.
+- **A video that won't play in our Chromium may play everywhere else.** The Chromium here has no
+  H.264 codec, so "Media error, Format(s) not supported" on an mp4 that serves 200 video/mp4 is
+  ours. Never report a video as broken off our render.
+- **"LinkedIn invitation withdrawn" on an accepted lead is the campaign step, not the connection.**
+  Read the lead's activity history, `GET /api/activities?version=v2&leadId=<id>`. An accept followed
+  by `linkedinWithdrawInvitationDone` is still a connection.
+- **A title is not ownership, even at a startup.** Shail Niazi's company was right all along, but
+  he's its Chief Culture Officer and a government page names the CEO and co founder. Check who
+  founded it before writing to a C level title.
+
+### Research past the website, the business side (Raka, 2026-09-24)
+
+His words, "find evidence pain points in his business that allows him to not reach certain goals
+... internal apps for improvements ... efficiency, regulations". First run on Ferry de Haas.
+Astra builds apps and tools as well as websites, so look for these too, every lead.
+
+1. **What does the business actually do all day?** For a franchisee, read the franchisor's own
+   description of the franchisee's job. InXpress franchisees sell and look after accounts, head
+   office does billing. That says where his hours go.
+2. **Their own tools, not just their homepage.** List every page, and click every button, booking
+   links, sign up forms, portals. On ferrydehaas.nl the Book Consultation button on every page was
+   dead, and four sign up pages he built in 2023 showed raw plugin code. Check whether anything
+   links to a broken page before calling it a live loss. Unlinked means clue, not cost.
+3. **The rules changing under their industry this year.** Search the trade association first
+   (evofenedex for Dutch logistics), then the regulator. Date it. For Ferry, the EU dropped the
+   €150 duty free limit on 1 July 2026, and more customs data is due from November.
+4. **Costs moving against them or their customers.** Surcharges, prices, fees. Only use a number
+   from the right source. DHL eCommerce's surcharge isn't DHL Express's.
+5. **Tie it to their own words.** Ferry's LinkedIn leads with shipments stuck at customs, so a
+   customs rule change lands on the exact problem he sells himself on.
+6. **Grade each angle and recommend one.** A verified, visible problem beats a bigger inferred
+   one. The bigger one goes into what we'd build, not into the flaw sentence.
+7. **Then ask the question that decides it, is this the BIGGEST pain he has (Raka, 2026-09-24)?**
+   His words, "people pay for people solve for problems that are big and painful". A broken
+   button is real and small. Look at four levels, him, his company, his region, his industry,
+   and put every pain in one table, size for him, how current, how well proven, can we build for
+   it. Lead with the biggest one that's proven. For Ferry that was customs, every parcel to the US
+   charged duties since Aug 2025 and new EU rules since Jul 2026, landing on a one man business,
+   not his website. Also check his own franchisor or supplier isn't already solving it.
+8. **Then the cost, and whether he'd pay (Raka, 2026-09-24).** "If it's just a tiny fix then
+   they're not gonna buy it." For each pain, what it costs him a year and whether he'd pay €5k to
+   €50k to fix it. Batch 6 is the worked example. The first drafts led with an old English PDF and
+   a hidden jobs link, both true, both tiny. Re judged on cost, Lasse's pain is his home market
+   shrinking under him (German furniture makers down, 40% on short time), and the German only site
+   is just the symptom. SBZ's is crews, a busy order book across four countries in the tightest
+   market for fitters there is. RULES.md 4A rule 9.
+
+### Batch 6 (2026-09-24), what the business side run taught
+
+- **Take the domain from the record every single time, even for a quick screenshot.** I shot
+  `sbz.nl` from memory for SBZ B.V. and it's a pension fund. The record says `sbzbv.nl`. Read
+  `companyDomain`, then pull the nav from that site's own HTML before opening any inner page.
+- **Webflow's "No items found." is usually invisible.** It sits in `w-dyn-hide w-dyn-empty`,
+  the hidden empty state of a CMS list. Check the class before calling a section empty.
+- **Webflow scroll reveals render blank in our screenshots.** Parts of a full page render came
+  back white. That's the reveal animation never firing, never an empty page. Read the HTML text.
+- **A language claim needs a control that renders hreflang server side.** Wix adds it by script,
+  so alquimialegal.mx returned nothing and failed as a control. A direct competitor that serves
+  it, hera-online.de, worked, and doubles as the comparison.
+- **Search a PDF, don't assume it.** An English catalogue existed, which nearly killed "German
+  only". Opened with PyMuPDF, dated 1 May 2023, and it has none of the 2026/27 products. Strip
+  spaces before searching, catalogue titles are letter spaced, and control with a word from its
+  own contents page. pypdf is broken in this container, PyMuPDF works.
+- **Where the industry is shrinking, look for where the lead is going instead.** German furniture
+  makers are down, domestic worst. Lasse's fair in Italy, his English catalogue and his languages
+  all point abroad, so the angle is the site failing the buyers he's chasing, not the downturn.
+- **`curl --compressed`**, always. Without it some sites return gzip bytes that look like a broken
+  page (Collier Pickard).
+- **r.jina.ai now refuses our IP**, 401 with "bad IP reputation". Don't plan on it as the second
+  path. `tools/render-via-curl.js` is the second path now.
+- **A job ad is still a clue in the flaw sentence.** check-drafts flagged "vacancies" in block
+  two. Describe what the site does to the people he's hiring, as with PharmaSupport.
+- **Read the WHOLE document before saying what language it's in.** The PULSE PDFs open in
+  German and switch to English halfway. A 700 character read called them German only, Raka
+  approved that message, and only the pre send re check caught it. Search the full text for the
+  other language's words ("Instruction", "Application") before any language claim.
+- **An approved message that turns out false is not sent, and the fix needs his word again.**
+- **The goal was growth, and I pitched a web page (Raka, 2026-09-24).** SBZ is moving into
+  defence, aerospace and export with 21 people, every job custom. The bigger question was whether
+  the inside can carry it, quoting, planning, work prep, crews. Wessel's own headline says
+  planning and work prep are his job. RULES.md 4A rule 11.
+- **The owner's LinkedIn is mine to read, six routes, never handed to Raka.** The profile gives
+  999, the search result title gave his real job. RULES.md 4A rule 12.
+- **An incumbent agency on the site is the "someone already solves it" rule.** A privacy or
+  credit link to an active agency (avermann.eu on Schumacher) means they have a builder already.
+
+### Batch 7 (2026-09-24), the first run under the research gate
+
+- **`tools/crawl.py` does pass 1 and pass 2.** Sitemaps first, then links, text of every page
+  into crawl.json. Real Olive was 353 pages plus a 237 page trade subdomain. **A subdomain that's
+  theirs is part of the site**, crawl it too.
+- **A crawl that stops at the cap isn't always a big site.** Check the URL kinds and the duplicate
+  texts first. Ethics & Boards was genuinely 600+ pages of press and weekly data. The Real Olive
+  trade site's "1,071 queued" was filters and repeats, 237 real pages.
+- **A 403 to curl and Chromium isn't the end.** Diggecard walls both, WebFetch reads it, it runs on
+  another network. Write the wall down and use the path that works.
+- **Registers by country, all open.** Companies House officers, PSC and filing history in HTML.
+  Norway, `data.brreg.no/enhetsregisteret/api/enheter?navn=` and `/enheter/<orgnr>/roller`.
+  France, `recherche-entreprises.api.gouv.fr/search?q=`, through WebFetch when curl's tunnel drops.
+- **A CEO title isn't ownership, twice more.** Andrew Johnson is daglig leder for a board, David
+  Risser is DG under a Président. Both were closed on that plus the rest.
+- **The costliest pain can be real and still not ours.** Real Olive's is a funded rival on the
+  same supermarket shelf. That's fought in buyer meetings. When everything we could build is a
+  tweak, the verdict is NO_STRONG_ANGLE and the tweaks are noted as favours.
+- **`[wpsl]` and other raw shortcodes.** A WordPress plugin that's switched off leaves its
+  shortcode as visible text. Grep crawl text for `\[[a-z_]+\]` and screenshot any hit.
+- **Stale promo banners.** A dated promotion still live months later ("23RD – 31ST MARCH" in
+  September) is a symptom that nobody tends that site. A symptom, not the angle.
+
+### Batch 8 (2026-09-24), building a batch when the pool runs dry
+
+- **Rebuild the pool from lemlist every time.** Four `linkedinInviteAccepted` pages, joined to the
+  queue. The sum has to equal `linkedinInvitationAccepted`, 336 on 24 Sep. A glob that picked up
+  two of the four files gave 136 and nearly produced a wrong list.
+- **`THREAD_VERIFIED_CLEAN` means already sent.** It records that a 21 Sep send was correct.
+- **"Not in queue" means unknown, not untouched.** The queue doesn't cover July and August.
+- **A connect note can be missing from a thread.** Pierre-Lou's thread shows only his reply.
+- **A friendly question gets a warm answer, not the template.** Answer it truthfully, ask one back.
+- **When the pool is used up, say so.** Ten were asked for, two were real. Weak drafts to fill a
+  number is exactly the tiny fix rule broken.
+
+### Batches 9 and 10 (2026-09-25), the redo, the geo trap and Build Squad
+
+- **The queue lies about "no angle" too.** 10 of 44 NO_STRONG_ANGLE or BLOCKED rows already had a
+  real pitch in their thread from July or August. Pull every thread before reopening anything.
+- **An empty thread is checked a second way**, the lead's full activity history,
+  `GET /api/activities?version=v2&leadId=...`. Sent messages show as `linkedinSent`, the connect
+  note as `linkedinInviteDone`. Five leads checked that way on batch 10.
+  **But it misses our own manual sends (proven 2026-09-25).** Chris Burton's and Stephanie De
+  Decker's threads both hold the 21 Sep opener, `linkedinSent` with `campaignId: null`. Their
+  per lead activity history shows the connect note and nothing after it. A message sent from the
+  inbox isn't tied to the lead, so it never lands in `leadId` activities. That check can only
+  confirm, it can never clear. The thread is the record, and for an empty thread the second way
+  is a name search with `get_inbox_conversations` plus the state files, never activities alone.
+- **The geo trap.** Our egress is Ohio. A consent tool shows a US visitor nothing, so trackers
+  before consent are only real when the page carries no consent code at all. site-audit.js says
+  GEO VOID. Burton Clinic and Aurevia were told the wrong thing on 2026-09-21.
+- **The geo recheck, same day.** `tools/eu-view.py` gives the EU view from Stockholm with no help
+  from Raka. Of the four 21 Sep GDPR sends, Markoni holds, AutoDevPro is half right, Burton and
+  Aurevia were wrong. Their Site Kit blocks Google entirely for UK and EU visitors because no consent
+  tool is installed, so the true angle is that the Google Ads they paid for can't see who booked.
+  The correction and the new angle are one thread, so they go in one CORRECTION message. Snorly's
+  Shopify banner is set for Austria only, which made it a real GDPR opener. The ad dates came from
+  the Google Ads Transparency Center, `--ads` in the same tool.
+- **Build Squad evidence, where it lives.** The register (Ignition Search Labs Ltd, SIC 62012,
+  registered 11 days earlier, owned by the agency), the careers page (Lobby hiring two founding
+  engineers), the team page (significa, one Web-Entwickler among ten, the FAQ for build times at
+  Harold's). A competitor with in-house developers and no hiring (Collier Pickard, Hula Hoop) is
+  not a Build Squad lead. Capacity has to be shown, not assumed.
+- **Statutory pages settle stale titles.** Luis Raab's summary said Junior Account Manager, the
+  Impressum names him Geschäftsführer and a company post dates it to 1 January 2026.
+- **Vary the offer line per lead.** Three openers with the same Build Squad sentence fail the
+  batch repetition gate, and they'd read as a template to anyone who compares. The fixed list in
+  check-drafts.py now carries the five block wording, it still had the old CTA until batch 10.
+- **Look at the phone menu.** Ignition's placeholder phone and email only showed with the menu
+  open at phone width. Raw HTML, a live render with the menu open and the curl render all agreed.
+  `PHONE=1 node tools/render-via-curl.js` now renders at 390 and prints the page width, and a
+  control site measured 390 against 390.
+- **`pgrep -f` matches its own wait loop.** An `until [ -z "$(pgrep -f crawl.py)" ]` never ends,
+  because the loop's command line contains the pattern. Check the output files instead.
+
+- **One thread, start to finish (Raka, 2026-09-25, on Dan Kavanagh).** His words, "i dont
+  understand the angle, how does the website, then suddenly go to the build squad?" Block two named
+  a website flaw (placeholder contact details) and block five offered a build squad. The link, "no
+  time to finish their own site means no developers", lived only in my head. The flaw in block two,
+  the growing cost in block three and the offer in block five must be the same problem. If the
+  offer is Build Squad, block two names the capacity fact. If the only visible flaw is on the site,
+  the offer is about the site. Read the draft as the lead would, block two then block five, and ask
+  whether the offer fixes the thing just named.
+
+### Batch 11 (2026-09-27), the refresh of every accepted lead never messaged
+
+Three openers out of 35 (LMtv, Qualigraf, ScrubMarine), in `state/drafted_2026-09-27-refresh.md`.
+What it taught.
+- **The tool's banner "NONE FOUND" was wrong on a Nuxt site.** halloween.fr's buttons were plain
+  divs with the click handler on a parent. site-audit.js now counts a leaf whose whole text is an
+  accept or reject word when a parent mentions cookies or consent. Tested both ways, halloween.fr
+  now yes, lmtv.fr and bunkzgolf.com still none, qualigraf.com now finds Complianz's "Deny all".
+  Still open the screenshot before any banner claim, the screenshot caught it.
+- **A page can show a visitor content and tell Google "not found".** halloween.fr's nine city
+  staffing pages render in Chromium and answer HTTP 404, because the static host only knows the
+  prerendered routes. Check the status code, not only the render, for any page meant to rank.
+- **A domain can change under you mid research.** mapler.com rendered a new Mapler AIx page with
+  its stylesheet missing, then served the host's "under construction" page to six fetches minutes
+  later. Write both states down, judge nothing, recheck in a week.
+- **An expired domain can carry the lead's old name.** vialmtv.tv, LMtv's old Vià name, now sells
+  paid TV help under "Via LMTV" with a SIREN that fails the Luhn checksum. A French SIREN (and a
+  SIRET's first nine digits) can be checked for fabrication in one line, keep it.
+- **Cookie counts depend on the tool.** Chromium from Ohio counted 24 cookies on kinspot.nl,
+  Webbkoll from Stockholm 7, because Webbkoll leaves third party cookies out of its count. The
+  trackers matched. Quote hosts and names, never a count, unless it's the same tool both times.
+- **The contradiction search found the goal half gone.** Steven Garratt's July post pointed at
+  the reorganisation shadow authorities. On 7 Sep the government withdrew or paused most of it,
+  only Surrey goes ahead. Block three was written to the goal that's still true.
+- **The register corrects old verdicts.** Norway's register shows Andrew Johnson is daglig leder of
+  Diggecard AS itself, which undoes the 25 Sep line that he was only the UK CEO.
+- **I paraphrased six 25 Sep findings from memory and got them wrong** (Prevent's missing social
+  accounts, Hula Hoop's size, Elevate's unfinished Wix site among them). Caught by rereading the
+  file. Any line carried forward from an older file is copied from it, never recalled.
+
+### The pre send sequence that worked, keep it exactly
+
+1. `get_inbox_conversation`, still empty.
+2. Re-verify the claim live in the same minute, with its control, and the Impressum.
+3. **Extract the text from the drafts file with a regex**, never retype it.
+4. `send_message` with `contactId`, `linkedin`, `usr_27bdxG7jzTn2rucGB`.
+5. Re-pull, confirm the body matches, record the activity id.
+6. Queue row `SENT` with `openerText`, `openerSentAt` and `sentActivityId`, a `GATE ARCHIVED`
+   marker on the drafts file, one commit.
+
+---
+
+## 4. Matching `[proof]` to the lead
+
+From `docs/astra-master-context.md` section 2A. One per message. The line after "I" states
+the experience AND why it bears on this lead, in the same sentence.
+
+| Lead | Credential | Why it bears |
+|---|---|---|
+| Owner operator, hospitality, food, retail, venues | Eten Maar, built a food brand from zero with five relatives, owned pricing, inventory and unit economics | Same week they are having, and unsold stock is unsold nights |
+| Dutch or European B2B software, SaaS, GTM | Betty Blocks, a year and a half on go to market | How buyers of that kind of product decide |
+| Enterprise, operations, industrial, data | Heineken, global e business insights across 23 markets | Scale and process buys credibility with operators |
+| Revenue or sales leadership | Betty Blocks and efficy, pipeline, routing, playbooks | Closest match to what we sell under Grow and Optimise |
+
+**Never stretch it.** If none of these genuinely bears on the lead, the message is not ready.
+
+---
+
+## 5. When the template cannot be filled, and what to do instead
+
+| Situation | Outcome |
+|---|---|
+| The business is not theirs, or cannot be tied to them | `BLOCKED_NEEDS_INFO`, or `DO_NOT_CONTACT` if they sold it |
+| No readable surface, a Cloudflare wall or a void render | `BLOCKED_NEEDS_INFO`, Raka opens it |
+| Genuinely strong surface, no flaw passes the four tests | `NO_STRONG_ANGLE`. Never force a flaw |
+| Only a tweak level flaw exists | `NO_STRONG_ANGLE`, note the tweak as a later favour |
+| No website at all, earned per the four checks above | **The no website variant.** Block two becomes "I couldn't find your website, and that [impact to their most current goal]." Everything else unchanged |
+
+---
+
+## 6. Before it is sent, unchanged from RULES.md section 1
+
+Whole thread, paged to exhaustion, immediately before the send. Every claim re-verified live
+in the same minute, with its control. Text copied out of the drafts file byte for byte.
+`contactId`, `linkedin`, `usr_27bdxG7jzTn2rucGB`. Re-pull to confirm it landed. Queue row
+written in the same commit.

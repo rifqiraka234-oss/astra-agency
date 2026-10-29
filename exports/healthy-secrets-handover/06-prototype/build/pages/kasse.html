@@ -1,0 +1,65 @@
+<!--{"title": "[[Kasse||Checkout]]", "desc": "[[Deine Bestellung bei Healthy Secrets.||Your Healthy Secrets order.]]", "nav": "shop", "body": "p-kasse"}-->
+<section class="sec bg-paper" aria-labelledby="coT">
+  <div class="wrap">
+    <p class="when" style="color:var(--coralT)">{{I:bag}}[[Dein Tag||Your day]]</p>
+    <h1 id="coT" class="d2" style="margin:12px 0 30px">[[Kasse||Checkout]]</h1>
+    <noscript><p class="lead">[[Für die Kasse braucht dein Browser JavaScript. Du kannst auch per Mail bestellen, an||Checkout needs JavaScript in your browser. You can also order by email at]] <a href="mailto:{{MAIL}}">{{MAIL}}</a>.</p></noscript>
+    <div class="empty js-only" id="coEmpty" hidden>
+      <img src="assets/img/m-bear.webp" width="520" height="776" alt="">
+      <p class="lead">[[Dein Tag ist noch leer. Fang doch mit dem Frühstück an.||Your day's still empty. Why not start with breakfast?]]</p>
+      <a class="btn" href="shop.html">[[Zum Shop||Go to the shop]] {{I:ar}}</a>
+    </div>
+    <div class="co js-only" id="coWrap" data-steps data-review="1" data-sent-wrap>
+      <div>
+        <ol class="stepper"><li><b>1</b>[[Lieferung||Delivery]]</li><li><b>2</b>[[Zahlung||Payment]]</li><li><b>3</b>[[Überblick||Review]]</li></ol>
+        <form class="form" data-form="order" action="#coWrap">
+          <fieldset class="stp">
+            <legend class="d3" style="margin-bottom:18px">[[Wohin dürfen wir liefern?||Where should we deliver?]]</legend>
+            <div class="form">
+              <div class="row">
+                <div class="field"><label for="oV">[[Vorname||First name]]</label><input class="inp" id="oV" name="vorname" autocomplete="given-name" required data-rv="[[Vorname||First name]]"><span class="err">[[Bitte deinen Vornamen.||Please add your first name.]]</span></div>
+                <div class="field"><label for="oN">[[Nachname||Last name]]</label><input class="inp" id="oN" name="nachname" autocomplete="family-name" required data-rv="[[Nachname||Last name]]"><span class="err">[[Bitte deinen Nachnamen.||Please add your last name.]]</span></div>
+              </div>
+              <div class="field"><label for="oM">[[Mailadresse||Email]]</label><input class="inp" id="oM" name="mail" type="email" autocomplete="email" required data-rv="[[Mail||Email]]"><span class="err">[[Bitte eine gültige Mailadresse, dorthin kommt die Bestätigung.||Please enter a valid email, that's where your confirmation goes.]]</span></div>
+              <div class="field"><label for="oS">[[Straße und Hausnummer||Street and number]]</label><input class="inp" id="oS" name="strasse" autocomplete="street-address" required data-rv="[[Adresse||Address]]"><span class="err">[[Bitte Straße und Hausnummer.||Please add your street and number.]]</span></div>
+              <div class="row">
+                <div class="field"><label for="oP">[[Postleitzahl||Postcode]]</label><input class="inp" id="oP" name="plz" autocomplete="postal-code" inputmode="numeric" required data-rv="[[Postleitzahl||Postcode]]"><span class="err">[[Bitte die Postleitzahl.||Please add your postcode.]]</span></div>
+                <div class="field"><label for="oO">[[Ort||Town]]</label><input class="inp" id="oO" name="ort" autocomplete="address-level2" required data-rv="[[Ort||Town]]"><span class="err">[[Bitte den Ort.||Please add your town.]]</span></div>
+              </div>
+              <div class="field"><label for="oL">[[Land||Country]]</label><select class="inp" id="oL" name="land" required data-rv="[[Land||Country]]"><option value="AT">[[Österreich||Austria]]</option><option value="DE">[[Deutschland||Germany]]</option><option value="IT">[[Italien||Italy]]</option><option value="EU">[[Anderes Land in der EU oder im EWR||Another EU or EEA country]]</option></select><span class="fine">[[In Österreich ist der Versand inklusive. Ins Ausland können Lieferzeit und Versandkosten abweichen.||Shipping's included within Austria. Abroad, delivery times and shipping costs can differ.]]</span></div>
+              <div class="field"><label for="oT">[[Telefon <span class="optl">(optional, für die Post)</span>||Phone <span class="optl">(optional, for the courier)</span>]]</label><input class="inp" id="oT" name="tel" type="tel" autocomplete="tel"></div>
+              <div class="btns"><button type="button" class="btn" data-next>[[Weiter zur Zahlung||Continue to payment]] {{I:ar}}</button></div>
+            </div>
+          </fieldset>
+          <fieldset class="stp">
+            <legend class="d3" style="margin-bottom:18px">[[Wie möchtest du zahlen?||How would you like to pay?]]</legend>
+            <div class="field"><div class="paym">
+              <label><input type="radio" name="zahlung" value="karte" required data-rv="[[Zahlung||Payment]]"><span><b>[[Kreditkarte||Credit card]]</b><small>Visa, Mastercard, American Express</small></span></label>
+              <label><input type="radio" name="zahlung" value="klarna" data-rv="[[Zahlung||Payment]]"><span><b>Klarna</b><small>[[Sofort bezahlen, Rechnung oder Ratenkauf, je nachdem, was Klarna dir anbietet||Pay now, pay later or in instalments, depending on what Klarna offers you]]</small></span></label>
+            </div>
+            <p class="err">[[Such dir eine Zahlungsart aus.||Please pick a way to pay.]]</p></div>
+            <p class="fine" style="margin-top:12px">[[Die Zahlung läuft über unseren Zahlungsanbieter. Deine Kartendaten sehen wir nie.||Payment runs through our payment provider. We never see your card details.]]</p>
+            <div class="btns" style="margin-top:20px"><button type="button" class="btn ghost" data-prev>[[Zurück||Back]]</button><button type="button" class="btn" data-next>[[Weiter zum Überblick||Continue to review]] {{I:ar}}</button></div>
+          </fieldset>
+          <fieldset class="stp">
+            <legend class="d3" style="margin-bottom:18px">[[Passt alles?||All correct?]]</legend>
+            <dl class="sum review" data-review-out></dl>
+            <div class="form" style="margin-top:20px">
+              <label class="consent"><input type="checkbox" name="alter" required><span>[[Ich bin mindestens 18 Jahre alt.||I'm 18 or over.]]</span></label>
+              <label class="consent"><input type="checkbox" name="agb" required><span>[[Ich habe die <a href="{{AGB}}" rel="noopener" target="_blank">AGB</a> gelesen, auch die Informationen zu Gesundheit und Ernährung in Abschnitt 12.||I've read the <a href="{{AGB}}" rel="noopener" target="_blank">terms</a>, including the health and nutrition information in section 12.]]</span></label>
+              <p class="fine l-en" lang="en">Your contract, customer service and our terms are in German.</p>
+              <div class="btns"><button type="button" class="btn ghost" data-prev>[[Zurück||Back]]</button><button type="submit" class="btn coral">[[Zahlungspflichtig bestellen||Place order and pay]] {{I:ar}}</button></div>
+            </div>
+          </fieldset>
+        </form>
+        <div class="ok" role="status">{{I:check}}<h2 class="d3">[[Danke, <span data-fill="name"></span>! Deine Bestellung ist eingegangen.||Thanks, <span data-fill="name"></span>! Your order's in.]]</h2><p>[[Bestellnummer||Order number]] <b data-fill="order"></b>. [[Die Bestätigung geht an||The confirmation's on its way to]] <span data-fill="mail"></span>. [[In Österreich ist dein Paket 1 bis 3 Werktage nach dem Versand bei dir.||Within Austria, your parcel arrives 1 to 3 working days after dispatch.]]</p><div class="btns" style="margin-top:16px"><a class="btn" href="index.html">[[Zurück zum Start||Back to home]]</a><a class="btn ghost" href="club.html">[[Zum Gut Health Club||To the Gut Health Club]]</a></div></div>
+      </div>
+      <aside class="co-sum" id="coSum" aria-labelledby="coSumT">
+        <h2 id="coSumT" class="d3">[[Dein Tag||Your day]]</h2>
+        <div id="coItems"></div>
+        <dl class="sum" style="margin-top:12px"><div><dt>[[Versand in Österreich||Shipping in Austria]]</dt><dd>[[inklusive||included]]</dd></div><div class="tot"><dt>[[Gesamt||Total]]</dt><dd id="coTotal">0,00 €</dd></div></dl>
+        <p class="fine" style="margin-top:10px">[[Alle Preise inklusive Mehrwertsteuer. Ungeöffnet zurück binnen 14 Tagen.||All prices include VAT. Unopened returns within 14 days.]]</p>
+      </aside>
+    </div>
+  </div>
+</section>
