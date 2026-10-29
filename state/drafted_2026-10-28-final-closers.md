@@ -42,91 +42,61 @@ newer queue row, means don't send and tell Raka. Copy from this file, confirm on
 
 > Opener 2026-07-14, second message 2026-07-21 (plain), no reply. Opener's ask, "Want me to send it over?"
 
-CLOSER
-```
-Etienne, I'm going to close it here. If you ever want the Arvest homepage that splits Analytics and Market, you know where to find me.
-```
+> SENT 29 Oct 05.03.51 UTC, act_kstuidBzcsRYHNXmu, batch 1. Text sent, "Etienne, I'm going to close it here. If you ever want the Arvest homepage that splits Analytics and Market, you know where to find me."
 
 ### Nikita-Tarass H., Reformer Loft, ctc_hgJ48N6PQ4Thn7wFB
 
 > Opener 2026-07-14, second message 2026-07-21 (plain), no reply. Opener's ask, "Want me to send it?"
 
-CLOSER
-```
-Nikita, I'm going to close it here. If you ever want the Reformer Loft homepage we sketched, you know where to find me.
-```
+> SENT 29 Oct 05.04.09 UTC, act_egEk4MMytB9HNbNwH, batch 1. Text sent, "Nikita, I'm going to close it here. If you ever want the Reformer Loft homepage we sketched, you know where to find me."
 
 ### Umer Adnan, Cowlar Venture Studio, ctc_xozMFobDpEC8sdukg
 
 > Opener 2026-07-16, second message 2026-07-21 (plain), no reply. Opener's ask, "Want me to send it?"
 
-CLOSER
-```
-Umer, I'm going to close it here. If you ever want the group homepage for Cowlar, you know where to find me.
-```
+> SENT 29 Oct 05.04.27 UTC, act_xrbZv5LjBvojiSFez, batch 1. Text sent, "Umer, I'm going to close it here. If you ever want the group homepage for Cowlar, you know where to find me."
 
 ### Salim Saleem, Innovators for engineering and interior design, ctc_RDogafhkpGPbrnp7H
 
 > Opener 2026-07-18, second message 2026-07-21 (plain), no reply. Opener's ask, "Want me to send it over?"
 
-CLOSER
-```
-Salim, I'm going to close it here. If you ever want the sharper Close System homepage, you know where to find me.
-```
+> SENT 29 Oct 05.04.44 UTC, act_cMBgkJGEvasBhzq77, batch 1. Text sent, "Salim, I'm going to close it here. If you ever want the sharper Close System homepage, you know where to find me."
 
 ### Jamie H., Revive Auto Repairs, ctc_D5F2nC69pjMjAuvk2
 
 > Opener 2026-08-13, second message 2026-08-18 (plain), no reply. Opener's ask, "Our agency sketched an open now booking page. Want me to send it over?"
 
-CLOSER
-```
-Jamie, I'm going to close it here. If you ever want the open now booking page for Revive, you know where to find me.
-```
+> SENT 29 Oct 05.05.02 UTC, act_fCtvnh7rxsGHvkNvM, batch 1. Text sent, "Jamie, I'm going to close it here. If you ever want the open now booking page for Revive, you know where to find me."
 
 ### Yolanda Heeren, YOOS!, ctc_v4Kie5QRq97eaoHPR
 
 > Opener 2026-09-16, second message 2026-09-28 (researched), no reply. Opener's ask, "Shall I build the quote request that sits under each project, so the desk sized jobs come in without a call, and send it over?"
 
-CLOSER
-```
-Yolanda, I'm going to close it here. If you ever want that quote request under each YOOS! project, you know where to find me.
-```
+> SENT 29 Oct 05.05.19 UTC, act_ftap7jTbhXrdzwDAt, batch 1. Text sent, "Yolanda, I'm going to close it here. If you ever want that quote request under each YOOS! project, you know where to find me."
 
 ### Josh Fairbairn, écoute audio, ctc_pNPsWdEMRCb4ccQev
 
 > Opener 2026-08-02, second message 2026-10-03 (researched), no reply. Opener's ask, "Can I send you over the sketch?"
 
-CLOSER
-```
-Josh, I'm going to close it here. If you ever want to see the owner hub for écoute backers, you know where to find me.
-```
+> SENT 29 Oct 05.05.37 UTC, act_eXtrybSBfoJChj3iW, batch 1. Text sent, "Josh, I'm going to close it here. If you ever want to see the owner hub for écoute backers, you know where to find me."
 
 ### Evie Barker, Barker Longhorn, ctc_5LYgS8GTT5QrzxPQh
 
 > Opener 2026-08-17, second message 2026-10-03 (researched), no reply. Opener's ask, "Hey Evie, thanks for connecting. DOCRA is sharp, and the site is built on clarity and privacy for investors. That is what made one thing stand out. Your About p"
 
-CLOSER
-```
-Evie, I'm going to close it here. If you ever want the trust section for DOCRA, you know where to find me.
-```
+> SENT 29 Oct 05.05.54 UTC, act_vnNJf5suqQyuj5Q7c, batch 1. Text sent, "Evie, I'm going to close it here. If you ever want the trust section for DOCRA, you know where to find me."
 
 ### Abraham Akrouche, iFathom, ctc_RBjzAkhMRziM9wYj8
 
 > Opener 2026-08-26, second message 2026-10-03 (researched), no reply. Opener's ask, "Hey Abraham, thanks for connecting. iFathom sits in a space I find genuinely interesting, helping teams actually deliver their tech projects. One thing I saw on"
 
-CLOSER
-```
-Abraham, I'm going to close it here. If you ever want case study pages for iFathom, you know where to find me.
-```
+> NOT SENT 29 Oct ~05.06 UTC, LinkedIn refused it (can-not-send-message), not retried. Text was "Abraham, I'm going to close it here. If you ever want case study pages for iFathom, you know where to find me."
 
 ### Olivier Clybouw, Caerus Vision, ctc_JKSruaBKANQQHD48b
 
 > Opener 2026-08-26, second message 2026-10-03 (researched), no reply. Opener's ask, "Hoi Olivier, bedankt voor het connecten. Ik zag Caerus Vision, en eigen LED oplossingen bouwen voor sport, festivals en events is echt gaaf. Wat me opviel is je"
 
-CLOSER
-```
-Olivier, I'm going to close it here. If you ever want one Caerus Vision reference written up with the result, you know where to find me.
-```
+> SENT 29 Oct 05.06.13 UTC, act_vhwtHHmHWH4vYoQuC, batch 1. Text sent, "Olivier, I'm going to close it here. If you ever want one Caerus Vision reference written up with the result, you know where to find me."
 
 ### Angela Barlow, The Upscaler, ctc_4NgbWujpWmFTW6Jb4
 
