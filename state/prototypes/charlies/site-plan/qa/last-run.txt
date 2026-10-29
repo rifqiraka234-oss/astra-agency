@@ -1,0 +1,26 @@
+Charlie’s plan, checks, 2026-10-29T00:26:25.462Z
+PASS  sums
+    clean:   27 slider positions and the price checked to the pound. 40/wk £14 60% delivered: £6,756 ok; 5/wk £38 30% delivered: £1,788 ok; 45/wk £31 55% delivered: £16,213 ok; 70/wk £32 75% delivered: £29,994 ok
+    planted: caught. 27 slider positions and the price checked to the pound. 40/wk £14 60% delivered: £6,756 GOT year=£6,931,dfee=£5,416; 5/wk £38 30% delivered: £1,788 GOT year=£1,818,dfee=£919; 45/wk £31 55% delivered: £16,213 GOT year=£16,612,dfee=£12,368; 70/wk £32 75% delivered: £29,994 GOT year=£30,867,dfee=£27,08
+PASS  look 390
+    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, 9 chapters, 1 bright chapter
+    planted: caught. banned font poppins; pill "Book now →"; arrow glyph
+PASS  look 1440
+    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, 9 chapters, 1 bright chapter
+    planted: caught. banned font poppins; pill "Book now →"; arrow glyph
+PASS  copy
+    clean:   no dashes, no colons, no emoji, 0 exclamation marks, no banned words, nothing uncontracted, never old or broken, no "you pay", no Foodhub, the brief’s fixed lines all present
+    planted: caught. dashes: —; colons: broken:; 2 exclamation marks; banned words: seamless, furthermore; uncontracted: it is; calls her site old, outdated or broken; says you pay
+PASS  overflow
+    clean:   320 ok, 360 ok, 390 ok, 430 ok, 768 ok, 1024 ok, 1440 ok, 1920 ok
+    planted: caught. 320 FAIL 2616/320, 360 FAIL 2616/360, 390 FAIL 2616/390, 430 FAIL 2616/430, 768 FAIL 2640/768, 1024 FAIL 2640/1024, 1440 FAIL 2672/1440, 1920 FAIL 2672/1920
+PASS  errors
+    clean:   390: 15 images, 0 errors; 1440: 15 images, 0 errors
+    planted: caught. 390: 16 images NOT shots/missing.webp, 404: http://localhost:64613/shots/missing.webp | console: Failed to load resource: the server responded with a status of 404 (Not Found); 1440: 16 images NOT shots/missing.webp, 404: http://localhost:64613/shots/missing.webp | console: Failed to load resource: 
+PASS  axe
+    clean:   390 top: clean; 390 middle: clean; 390 end: clean; 390 reduced top: clean; 390 reduced middle: clean; 390 reduced end: clean; 1440 top: clean; 1440 middle: clean; 1440 end: clean; 1440 reduced top: clean; 1440 reduced middle: clean; 1440 reduced end: clean
+    planted: caught. 390 top: button-name(1) image-alt(1); 390 middle: button-name(1) image-alt(1); 390 end: button-name(1) image-alt(1); 390 reduced top: button-name(1) image-alt(1); 390 reduced middle: button-name(1) image-alt(1); 390 reduced end: button-name(1) image-alt(1); 1440 top: button-name(1) image-alt(1); 144
+PASS  no JavaScript
+    clean:   no JS: £6,756 a year at the defaults, €10,000, 4 findings, 9 tickets, 6 weeks, 15 pictures
+    planted: caught. no JS: £0 a year at the defaults, €10,000, 4 findings, 9 tickets, 6 weeks, 15 pictures
+ALL PASS, 8 of 8

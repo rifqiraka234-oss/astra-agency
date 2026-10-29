@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 396 354" width="396" height="354">
+  <!-- Charlie's top hat, traced from their logo (Charlies-Logo-1536x928.png), the band in their gold -->
+  <defs>
+    <clipPath id="hat-clip"><path d="M 194 4.610 C 160.906 7.526, 132.270 13.982, 105.044 24.666 C 59.547 42.518, 31.497 68.515, 35.383 89.229 C 35.732 91.088, 38.291 96.185, 41.069 100.555 C 64.717 137.748, 77.003 196.353, 71.560 246 C 70.626 254.525, 69.637 262.287, 69.363 263.250 C 68.370 266.740, 64.716 265.003, 56.545 257.158 C 41.791 242.994, 27.770 242.061, 15.470 254.426 C -7.545 277.563, 5.434 309.871, 41.410 318.994 C 53.222 321.990, 56.371 321.691, 67.161 316.551 L 76.500 312.102 124.500 304.507 C 177.978 296.045, 253.411 281.447, 297.500 271.028 C 313.450 267.259, 328.180 263.891, 330.234 263.545 C 332.288 263.199, 337.913 260.842, 342.734 258.309 C 365.779 246.198, 380.870 233.118, 387.659 219.370 C 396.896 200.665, 390.206 180.255, 371.827 171.071 C 353.351 161.839, 338.087 169.311, 330.628 191.240 C 326.056 204.682, 325.286 204.541, 314.621 188.317 C 285.943 144.689, 269.288 87.245, 273.951 48.037 C 276.064 30.269, 273.762 23.846, 262.633 16.457 C 249.653 7.839, 218.460 2.454, 194 4.610 Z"/></clipPath>
+    <linearGradient id="hat-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1c0638" stop-opacity=".62"/>
+      <stop offset=".2" stop-color="#1c0638" stop-opacity=".22"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".74" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset=".86" stop-color="#fff" stop-opacity=".2"/>
+      <stop offset=".95" stop-color="#1c0638" stop-opacity=".18"/>
+    </linearGradient>
+    <linearGradient id="hat-brim" x1="0" y1="0" x2="0" y2="1" gradientTransform="rotate(-11 .5 .5)">
+      <stop offset=".66" stop-color="#1c0638" stop-opacity="0"/>
+      <stop offset=".8" stop-color="#1c0638" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#1c0638" stop-opacity=".55"/>
+    </linearGradient>
+    <radialGradient id="hat-top" cx=".57" cy=".05" r=".42">
+      <stop offset="0" stop-color="#b39ddb" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#b39ddb" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hat-band" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-20 .5 .5)">
+      <stop offset="0" stop-color="#b07a26"/>
+      <stop offset=".22" stop-color="#F0B962"/>
+      <stop offset=".46" stop-color="#ffe3a3"/>
+      <stop offset=".62" stop-color="#F0B962"/>
+      <stop offset="1" stop-color="#D09337"/>
+    </linearGradient>
+    <linearGradient id="hat-band-shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".45"/>
+      <stop offset=".2" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".75" stop-color="#5a3500" stop-opacity="0"/>
+      <stop offset="1" stop-color="#5a3500" stop-opacity=".4"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#hat-clip)">
+    <rect width="396" height="354" fill="#5F3F90"/>
+    <rect width="396" height="354" fill="url(#hat-side)"/>
+    <rect width="396" height="354" fill="url(#hat-top)"/>
+    <rect width="396" height="354" fill="url(#hat-brim)"/>
+    <path d="M 262 30 C 252 90, 262 150, 300 205" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 52 98 C 76 150, 84 210, 79 252" fill="none" stroke="#0e0222" stroke-opacity=".25" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <path fill="url(#hat-band)" d="M 305.461 187.029 C 244.763 218.125, 161.905 239.490, 89.698 242.666 C 71.556 243.464, 71.829 243.254, 70.163 257.698 C 68.871 268.911, 69.389 270.313, 76.591 275.096 C 90.872 284.580, 117.509 291.116, 135.470 289.543 C 187.330 285.004, 220.783 277.313, 266 259.534 C 286.677 251.405, 294.431 246.573, 307 233.984 C 318.566 222.400, 325 212.787, 325 207.092 C 325 202.364, 313.290 185, 310.101 185 C 309.728 185, 307.640 185.913, 305.461 187.029 Z"/>
+  <path fill="url(#hat-band-shade)" d="M 305.461 187.029 C 244.763 218.125, 161.905 239.490, 89.698 242.666 C 71.556 243.464, 71.829 243.254, 70.163 257.698 C 68.871 268.911, 69.389 270.313, 76.591 275.096 C 90.872 284.580, 117.509 291.116, 135.470 289.543 C 187.330 285.004, 220.783 277.313, 266 259.534 C 286.677 251.405, 294.431 246.573, 307 233.984 C 318.566 222.400, 325 212.787, 325 207.092 C 325 202.364, 313.290 185, 310.101 185 C 309.728 185, 307.640 185.913, 305.461 187.029 Z"/>
+  <path d="M 92 247 C 165 244, 245 222, 304 192" fill="none" stroke="#fff6dc" stroke-opacity=".7" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

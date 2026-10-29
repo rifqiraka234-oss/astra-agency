@@ -1,0 +1,36 @@
+{
+  "_about": "Every figure and line on the plan site, with its source and the date it was read. qa/sums.js recomputes every sum on the page from this file. build.js copies it into index.html so the page reads it offline too.",
+  "prepared": { "for": "Danielle Best", "by": "Astra", "month": "October 2026", "screenshots_taken": "28 October 2026" },
+  "findings": [
+    { "line": "The only order button on your site goes to Uber Eats.", "source_label": "charliesdesserts.com, read 28 Oct 2026", "source": "https://www.charliesdesserts.com/", "read": "2026-10-28" },
+    { "line": "The menu is two pictures and a PDF, so no price on the site can be tapped or added to an order.", "source_label": "charliesdesserts.com/menu, read 28 Oct 2026", "source": "https://www.charliesdesserts.com/menu", "read": "2026-10-28" },
+    { "line": "The booking form asks for a time in Central European Time and never confirms the table.", "source_label": "charliesdesserts.com/reservations, read 28 Oct 2026", "source": "https://www.charliesdesserts.com/reservations", "read": "2026-10-28" },
+    { "line": "Huddersfield isn’t on the site, though your post of 23 October says it’s open on King St.", "source_label": "charliesdesserts.com and your Instagram post of 23 Oct 2026", "source": "https://www.instagram.com/p/De1u2ejA_m6/", "read": "2026-10-28" }
+  ],
+  "links": {
+    "site": "https://www.charliesdesserts.com/",
+    "instagram_post": "https://www.instagram.com/p/DfAgHSVgLOH/",
+    "instagram_post_date": "27 Oct 2026",
+    "uber_store": "https://www.ubereats.com/gb/store/charlies-desserts/Nec__aR5RRaNU1CHd2wU9A",
+    "read": "2026-10-28"
+  },
+  "audience": { "instagram": 4318, "tiktok": 3857, "facebook": 1917, "source": "your Instagram, TikTok and Facebook pages", "read": "2026-10-28" },
+  "uber_fees": {
+    "delivery": 0.30, "delivery_uber_one": 0.33, "pickup": 0.13, "self_delivery": 0.13, "activation_gbp": 650,
+    "basis": "of the order, excluding VAT",
+    "source_label": "Uber Eats UK merchant pricing page, read 28 Oct 2026",
+    "source": "https://merchants.ubereats.com/gb/en/pricing/", "read": "2026-10-28"
+  },
+  "calculator": {
+    "weeks_a_year": 52,
+    "defaults": { "orders_a_week": 40, "average_order_gbp": 14, "delivery_share": 0.6 },
+    "ranges": { "orders_a_week": [5, 200, 5], "average_order_gbp": [6, 40, 1], "delivery_share": [0, 1, 0.05] },
+    "note": "Example numbers, not yours. Move them to your own."
+  },
+  "price": { "eur": 10000, "first_payment_share": 0.5, "second_payment_share": 0.5, "first_when": "to start", "second_when": "when it’s live", "source": "Astra", "read": "2026-10-28" },
+  "weeks": [
+    { "from": 1, "to": 2, "what": "The menu as data, your photos and footage, the builder and the pour." },
+    { "from": 3, "to": 5, "what": "Ordering and payments for both shops, bookings, the rest of the site, every old address redirected." },
+    { "from": 6, "to": 6, "what": "Tested in both shops with real orders, then live." }
+  ]
+}

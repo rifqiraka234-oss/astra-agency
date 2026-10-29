@@ -1,0 +1,3 @@
+# Astra's notes and checks stay in the folder, but the site doesn't serve them
+/research/*    /404.html    404!
+/qa/*          /404.html    404!

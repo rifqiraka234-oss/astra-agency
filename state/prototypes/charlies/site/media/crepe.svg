@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360">
+  <!-- A crepe folded in four on a lilac plate like Charlie's own, drawn by Astra in the site's glossy style (no photo of theirs) -->
+  <defs>
+    <radialGradient id="cr-plate" cx=".45" cy=".35" r=".7">
+      <stop offset="0" stop-color="#f1e9f8"/>
+      <stop offset=".7" stop-color="#d8c8eb"/>
+      <stop offset="1" stop-color="#b59fd4"/>
+    </radialGradient>
+    <linearGradient id="cr-top" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#e2a24f"/>
+      <stop offset=".45" stop-color="#f2c272"/>
+      <stop offset="1" stop-color="#e8b05e"/>
+    </linearGradient>
+    <linearGradient id="cr-edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7dca2"/>
+      <stop offset="1" stop-color="#d79c4e"/>
+    </linearGradient>
+    <filter id="cr-lace" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".055 .09" numOctaves="3" seed="11" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .52  0 0 0 0 .27  0 0 0 0 .08  0 0 0 -3 1.55"/>
+    </filter>
+    <clipPath id="cr-topclip"><path d="M108 268 L 300 120 C 380 100, 470 150, 484 222 L 108 268 Z"/></clipPath>
+  </defs>
+  <ellipse cx="290" cy="262" rx="262" ry="86" fill="url(#cr-plate)"/>
+  <ellipse cx="290" cy="254" rx="228" ry="66" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="3"/>
+  <ellipse cx="300" cy="262" rx="190" ry="34" fill="#4b2f7a" fill-opacity=".2"/>
+  <!-- thin layers showing along the front fold -->
+  <path d="M104 272 L 486 226 L 488 236 L 108 284 Z" fill="#c98a3c"/>
+  <path d="M104 268 L 486 222 L 487 230 L 106 278 Z" fill="url(#cr-edge)"/>
+  <path d="M106 262 L 300 116 L 304 124 L 112 270 Z" fill="url(#cr-edge)"/>
+  <!-- the top layer -->
+  <path d="M108 268 L 300 120 C 380 100, 470 150, 484 222 L 108 268 Z" fill="url(#cr-top)"/>
+  <g clip-path="url(#cr-topclip)"><rect x="100" y="90" width="400" height="190" fill="#000" filter="url(#cr-lace)" opacity=".8"/></g>
+  <path d="M300 122 C 376 104, 460 150, 480 214" fill="none" stroke="#fff1cf" stroke-opacity=".7" stroke-width="3" stroke-linecap="round"/>
+  <path d="M130 254 L 296 128" fill="none" stroke="#fff5dc" stroke-opacity=".5" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

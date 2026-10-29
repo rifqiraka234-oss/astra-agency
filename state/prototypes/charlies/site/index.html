@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Charlie’s Desserts, make it your way and order it from Charlie’s</title>
+<meta name="description" content="Build your own waffle, shake or cookie dough at Charlie’s menu prices, watch it being made, and order it from Charlie’s in Brighouse or Huddersfield. A prototype by Astra agency.">
+<meta name="theme-color" content="#2b0b47">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/MonaSans-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="media/logo.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="css/site.css">
+<script>(function(d){d.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('is-shut','motion');})(document.documentElement);</script>
+</head>
+<body>
+<a class="skip" href="#make">Skip to the builder</a>
+<header class="proto-top"><p>A prototype by Astra agency for Charlie’s Desserts. Prices from Charlie’s menu. Nothing here places a real order or booking.</p></header>
+
+<main>
+  <!-- 1. The hat. Their top hat on the counter, under the awning, and the dessert you pick comes out of it -->
+  <section class="hero" id="open" aria-labelledby="open-h">
+    <div class="hero__pin">
+      <div class="hero__sky" aria-hidden="true"><video class="film hero__film" muted playsinline loop preload="none" data-src="media/film/bokeh.mp4" data-type="video/mp4" data-poster="media/film/bokeh.webp" aria-hidden="true" tabindex="-1" data-after="open" data-rate="0.7"></video></div>
+      <div class="hero__bokeh" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero__stage" id="hero-stage">
+        <picture class="hero__poster" id="hero-poster">
+          <source srcset="media/hero-poster-390.webp" media="(max-width: 759.98px)" width="682" height="828">
+          <img src="media/hero-poster-1440.webp" alt="Charlie’s top hat upside down on the counter, with a waffle rising out of it in a swirl of sweets" width="1440" height="900" decoding="async">
+        </picture>
+        <canvas class="hero__gl" id="hero-gl" aria-hidden="true"></canvas>
+      </div>
+      <div class="awning" aria-hidden="true">
+        <div class="awning__cloth"></div>
+        <div class="awning__edge"></div>
+        <img class="awning__sign" src="media/logo.webp" alt="" width="640" height="387" fetchpriority="high">
+      </div>
+      <div class="festoon" id="festoon" aria-hidden="true"></div>
+      <img class="hero__logo-top" src="media/logo.webp" alt="" width="640" height="387" aria-hidden="true">
+
+      <div class="hero__copy">
+        <img class="hero__logo" src="media/logo.webp" alt="Charlie’s" width="640" height="387">
+        <h1 id="open-h" class="hero__h"><span class="line">What are</span> <span class="line">you making?</span></h1>
+        <p class="hero__lede">Everything on our menu is available for your own creation from £5</p>
+        <div class="bases" role="group" aria-label="Choose your base">
+<!-- gen:bases -->
+          <button type="button" class="base" data-base="waffle" aria-pressed="true"><span class="base__pic"><img src="media/waffle-rail.webp" alt="" width="250" height="300" decoding="async"></span><span class="base__name">Waffle</span><span class="base__price price">from £5.50</span></button>
+          <button type="button" class="base" data-base="crepe" aria-pressed="false"><span class="base__pic"><img src="media/crepe.svg" alt="" width="560" height="360" decoding="async"></span><span class="base__name">Crepe</span><span class="base__price price">from £5.50</span></button>
+          <button type="button" class="base" data-base="shake" aria-pressed="false"><span class="base__pic"><img src="media/shake-rail.webp" alt="" width="116" height="300" decoding="async"></span><span class="base__name">Shake</span><span class="base__price price">from £5.50</span></button>
+          <button type="button" class="base" data-base="cookie_dough" aria-pressed="false"><span class="base__pic"><img src="media/cookie-dough-rail.webp" alt="" width="284" height="300" decoding="async"></span><span class="base__name">Cookie dough</span><span class="base__price price">£6.50</span></button>
+          <button type="button" class="base" data-base="sundae" aria-pressed="false"><span class="base__pic"><img src="media/sundae.svg" alt="" width="400" height="640" decoding="async"></span><span class="base__name">Whippy sundae</span><span class="base__price price">£5.00</span></button>
+          <button type="button" class="base" data-base="froyo" aria-pressed="false"><span class="base__pic"><img src="media/frozen-yoghurt.svg" alt="" width="400" height="600" decoding="async"></span><span class="base__name">Frozen yoghurt</span><span class="base__price price">from £4.99</span></button>
+<!-- /gen:bases -->
+        </div>
+        <p class="hero__hint">Pick one and it comes out of the hat. Scroll down and you fall in after it.</p>
+      </div>
+      <div class="sticker" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="ring" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs><circle cx="100" cy="100" r="96" class="sticker__disc"/><text class="sticker__ring"><textPath href="#ring">everything on our menu is available for your own creation · </textPath></text><text class="sticker__from" x="100" y="88" text-anchor="middle">from</text><text class="sticker__price" x="100" y="130" text-anchor="middle">£5</text></svg></div>
+      <div class="dive-wipe" id="dive-wipe" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- 2. Make it. Their lilac menu world, the dessert centre stage, the pour and the toppings -->
+  <section class="make" id="make" aria-labelledby="make-h">
+    <div class="make__stage-wrap">
+      <div class="stage" id="stage">
+        <p class="stage__word" id="stage-word" aria-hidden="true"><span>Waffle</span></p>
+        <div class="stage__drips" aria-hidden="true"></div>
+        <img class="stage__img" id="stage-img" src="media/waffle.webp" alt="Two of Charlie’s waffles with whippy swirls, foam sweets and blue drizzle" width="1100" height="1320" decoding="async">
+        <canvas class="stage__gl" id="gl" aria-hidden="true"></canvas>
+        <canvas class="stage__tp" id="tp" aria-hidden="true"></canvas>
+        <div class="stage__counter" aria-hidden="true"></div>
+        <div class="ticket" id="ticket" data-total="0">
+          <div class="ticket__head"><span>CHARLIE’S</span><span>No. 0427</span></div>
+          <ul class="ticket__lines" id="ticket-lines"></ul>
+          <div class="ticket__total" id="ticket-total"></div>
+          <p class="ticket__note">Estimated from Charlie’s menu, final price at the counter</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="make__steps">
+      <div class="step step--intro" id="step-base">
+        <h2 id="make-h" class="step__h">Your way, at the menu’s prices</h2>
+        <p class="step__sub">The base is plain at its menu price, and every sauce and topping you add goes on at its own menu price. The photo shows it the way Charlie’s serves it.</p>
+        <div class="minibases" role="group" aria-label="Change the base">
+<!-- gen:minibases -->
+          <button type="button" class="minibase" data-base="waffle" aria-pressed="true"><img src="media/waffle-rail.webp" alt="" width="250" height="300" decoding="async"><span>Waffle</span></button>
+          <button type="button" class="minibase" data-base="crepe" aria-pressed="false"><img src="media/crepe.svg" alt="" width="560" height="360" decoding="async"><span>Crepe</span></button>
+          <button type="button" class="minibase" data-base="shake" aria-pressed="false"><img src="media/shake-rail.webp" alt="" width="116" height="300" decoding="async"><span>Shake</span></button>
+          <button type="button" class="minibase" data-base="cookie_dough" aria-pressed="false"><img src="media/cookie-dough-rail.webp" alt="" width="284" height="300" decoding="async"><span>Cookie dough</span></button>
+          <button type="button" class="minibase" data-base="sundae" aria-pressed="false"><img src="media/sundae.svg" alt="" width="400" height="640" decoding="async"><span>Whippy sundae</span></button>
+          <button type="button" class="minibase" data-base="froyo" aria-pressed="false"><img src="media/frozen-yoghurt.svg" alt="" width="400" height="600" decoding="async"><span>Frozen yoghurt</span></button>
+<!-- /gen:minibases -->
+        </div>
+        <div class="sizes" id="sizes-wrap" hidden>
+          <p class="step__label" id="sizes-l">Frozen yoghurt comes in three sizes</p>
+          <div class="sizes__row" role="group" aria-labelledby="sizes-l">
+            <button type="button" class="size" data-size="small" aria-pressed="true"><span>Small</span><span class="price">£4.99</span></button>
+            <button type="button" class="size" data-size="medium" aria-pressed="false"><span>Medium</span><span class="price">£5.99</span></button>
+            <button type="button" class="size" data-size="large" aria-pressed="false"><span>Large</span><span class="price">£6.99</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step" id="step-sauce">
+        <div class="film-arch" aria-hidden="true"><video class="film " muted playsinline loop preload="none" data-src="media/film/choc-pour.mp4" data-type="video/mp4" data-poster="media/film/choc-pour.webp" aria-hidden="true" tabindex="-1" data-rate="0.8"></video></div>
+        <h2 class="step__h">Twelve sauces, a pound a pour</h2>
+        <p class="step__sub">Tap one and it runs down from the top like the drips on our menu, then drizzles over. Tap another and it goes on over the first.</p>
+        <div class="sauces" role="group" aria-label="Sauces">
+<!-- gen:sauces -->
+          <button type="button" class="sauce" data-sauce="Milk choc" aria-pressed="false" style="--s:#4b2714;--s-hi:#978277;--s-lo:#2f180c"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Milk choc</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="White choc" aria-pressed="false" style="--s:#f6eedd;--s-hi:#faf5eb;--s-lo:#999489"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">White choc</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="Bueno" aria-pressed="false" style="--s:#b58457;--s-hi:#d4b89e;--s-lo:#705236"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Bueno</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="Biscoff" aria-pressed="false" style="--s:#a35b22;--s-hi:#caa07f;--s-lo:#653815"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Biscoff</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="Caramel" aria-pressed="false" style="--s:#c9741a;--s-hi:#e0ae7a;--s-lo:#7d4810"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Caramel</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="Strawberry" aria-pressed="false" style="--s:#d0213d;--s-hi:#e47e8e;--s-lo:#811426"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Strawberry</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="Raspberry" aria-pressed="false" style="--s:#a8103f;--s-hi:#cd7490;--s-lo:#680a27"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Raspberry</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="Blue Raspberry" aria-pressed="false" style="--s:#1767e6;--s-hi:#78a7f1;--s-lo:#0e408f"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Blue Raspberry</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="Bubblegum" aria-pressed="false" style="--s:#ff6fb3;--s-hi:#ffabd3;--s-lo:#9e456f"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Bubblegum</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="Pistachio" aria-pressed="false" style="--s:#97b45c;--s-hi:#c3d4a0;--s-lo:#5e7039"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Pistachio</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="Mint Chocolate" aria-pressed="false" style="--s:#4fae83;--s-hi:#99d0b7;--s-lo:#316c51"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Mint Chocolate</span><span class="sauce__price price">£1.00</span></button>
+          <button type="button" class="sauce" data-sauce="Orange" aria-pressed="false" style="--s:#ef861b;--s-hi:#f6b97b;--s-lo:#945311"><span class="sauce__blob" aria-hidden="true"></span><span class="sauce__name">Orange</span><span class="sauce__price price">£1.00</span></button>
+<!-- /gen:sauces -->
+        </div>
+      </div>
+
+      <div class="step" id="step-toppings">
+        <div class="film-arch film-arch--scallop" aria-hidden="true"><img src="media/film/sprinkles.webp" alt="" width="1100" height="733" loading="lazy" decoding="async"></div>
+        <h2 class="step__h">Sherbet to gobstoppers</h2>
+        <p class="step__sub" id="top-sub">All nineteen toppings on our menu, from £1.00. They rain down and land where they land.</p>
+        <div class="toppings" role="group" aria-label="Toppings">
+<!-- gen:toppings -->
+          <button type="button" class="topping" data-topping="Mango" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Mango</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Strawberries" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Strawberries</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Raspberries" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Raspberries</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Sherbet" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Sherbet</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Fudge Pieces" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Fudge Pieces</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Marshmallows" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Marshmallows</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Oreo Bits" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Oreo Bits</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Chocolate Chips" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Chocolate Chips</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Banana" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Banana</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Hazelnuts" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Hazelnuts</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Peanut Butter" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Peanut Butter</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Chocolate Stars" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Chocolate Stars</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Sprinkles" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Sprinkles</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Chocolate Curls" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Chocolate Curls</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Biscoff Bits" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Biscoff Bits</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Popping Candy" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Popping Candy</span><span class="topping__price price" data-price="£1.00">£1.00</span></button>
+          <button type="button" class="topping" data-topping="Gobstopper" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Gobstopper</span><span class="topping__price price" data-price="£1.50">£1.50</span></button>
+          <button type="button" class="topping" data-topping="Gum Balls" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Gum Balls</span><span class="topping__price price" data-price="£2.00">£2.00</span></button>
+          <button type="button" class="topping" data-topping="Pick &amp; Mix Cup" aria-pressed="false"><canvas width="72" height="56" aria-hidden="true"></canvas><span class="topping__name">Pick &amp; Mix Cup</span><span class="topping__price price" data-price="£2.00">£2.00</span></button>
+<!-- /gen:toppings -->
+        </div>
+      </div>
+
+      <div class="step step--finish" id="step-finish">
+        <h2 class="step__h">Ice cream with it, and how many</h2>
+        <div class="extras" id="extras-wrap">
+          <p class="step__label" id="extras-l">A scoop on your waffle, crepe or cookie dough</p>
+          <div class="extras__row" role="group" aria-labelledby="extras-l">
+            <button type="button" class="extra" data-extra="vanilla" aria-pressed="false"><span>Vanilla scoop</span><span class="price">£2.00</span></button>
+            <button type="button" class="extra" data-extra="whippy" aria-pressed="false"><span>Whippy</span><span class="price">£4.00</span></button>
+          </div>
+        </div>
+        <p class="step__sub" id="extras-none" hidden>It comes just like that, nothing more to add here.</p>
+        <div class="qty" role="group" aria-label="How many">
+          <button type="button" class="qty__b" id="qty-minus" aria-label="One fewer"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          <output class="qty__n" id="qty" aria-live="polite">1</output>
+          <button type="button" class="qty__b" id="qty-plus" aria-label="One more"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+        <p class="finish__total"><span class="price" id="step-total">£5.50</span></p>
+        <p class="finish__note">Estimated from Charlie’s menu, final price at the counter</p>
+        <button type="button" class="btn-order btn-order--big" id="order-final" data-action="order">Order</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Favourites. Their photos, big, each one a quick start into the builder at its menu price -->
+  <section class="favs" id="favourites" aria-labelledby="favs-h">
+    <div class="favs__pin">
+      <div class="favs__head">
+        <h2 id="favs-h" class="favs__h">Or start from a favourite</h2>
+        <p class="favs__sub">Each one is at its menu price. Add to it and the extras go on top, take something off and it still costs the same.</p>
+      </div>
+      <div class="favs__track" id="favs-track">
+<!-- gen:favs -->
+        <article class="fav" aria-labelledby="fav-creation_waffle">
+          <figure class="fav__pic"><img src="media/photo/p11-1000.webp" srcset="media/photo/p11-640.webp 640w, media/photo/p11-1000.webp 1000w, media/photo/p11-1500.webp 1500w" sizes="(min-width: 1024px) 34vw, 82vw" alt="A spoon going into Charlie’s waffles, piled with whippy and foam sweets, a shake either side" width="1000" height="1499" loading="lazy" decoding="async"></figure>
+          <div class="fav__text">
+            <p class="fav__kind">Waffle</p>
+            <h3 class="fav__name" id="fav-creation_waffle">Charlie’s Creation</h3>
+            <p class="fav__desc">Whippy ice cream, marshmallows, pick ’n’ mix sweets &amp; bubblegum sauce</p>
+            <p class="fav__price price">£8.50</p>
+            <button type="button" class="btn-order fav__go" data-preset="creation_waffle">Make it yours</button>
+          </div>
+        </article>
+        <article class="fav" aria-labelledby="fav-creation_shake">
+          <figure class="fav__pic fav__pic--sauce" style="--fs:#4b2714;--fs-hi:#978277" aria-hidden="true"></figure>
+          <div class="fav__text">
+            <p class="fav__kind">Shake</p>
+            <h3 class="fav__name" id="fav-creation_shake">Charlie’s Creation</h3>
+            <p class="fav__desc">Chocolate ice cream shake, topped with sweets and a lollipop</p>
+            <p class="fav__price price">£7.50</p>
+            <button type="button" class="btn-order fav__go" data-preset="creation_shake">Make it yours</button>
+          </div>
+        </article>
+        <article class="fav" aria-labelledby="fav-cd_white_rasp">
+          <figure class="fav__pic"><img src="media/photo/p08-1000.webp" srcset="media/photo/p08-640.webp 640w, media/photo/p08-1000.webp 1000w, media/photo/p08-1500.webp 1500w" sizes="(min-width: 1024px) 34vw, 82vw" alt="A fork lifting a bite of Charlie’s cookie dough with white chocolate drizzle and raspberry pieces" width="1000" height="1499" loading="lazy" decoding="async"></figure>
+          <div class="fav__text">
+            <p class="fav__kind">Cookie dough</p>
+            <h3 class="fav__name" id="fav-cd_white_rasp">White Choc &amp; Raspberry</h3>
+            <p class="fav__desc">White chocolate cookie dough topped with white chocolate sauce, chocolate curls &amp; freeze dried raspberries</p>
+            <p class="fav__price price">£6.50</p>
+            <button type="button" class="btn-order fav__go" data-preset="cd_white_rasp">Make it yours</button>
+          </div>
+        </article>
+        <article class="fav" aria-labelledby="fav-biscoff_waffle">
+          <figure class="fav__pic fav__pic--sauce" style="--fs:#a35b22;--fs-hi:#caa07f" aria-hidden="true"></figure>
+          <div class="fav__text">
+            <p class="fav__kind">Waffle</p>
+            <h3 class="fav__name" id="fav-biscoff_waffle">Biscoff</h3>
+            <p class="fav__desc">Biscoff sauce &amp; biscoff bits</p>
+            <p class="fav__price price">£7.50</p>
+            <button type="button" class="btn-order fav__go" data-preset="biscoff_waffle">Make it yours</button>
+          </div>
+        </article>
+        <article class="fav" aria-labelledby="fav-grimace">
+          <figure class="fav__pic fav__pic--sauce" style="--fs:#3b3a9e;--fs-hi:#8f8fe0" aria-hidden="true"></figure>
+          <div class="fav__text">
+            <p class="fav__kind">Shake</p>
+            <h3 class="fav__name" id="fav-grimace">Grimace</h3>
+            <p class="fav__desc">Blueberry ice cream shake. Topped with whipped cream, blueberry sauce &amp; sprinkles</p>
+            <p class="fav__price price">£6.50</p>
+            <button type="button" class="btn-order fav__go" data-preset="grimace">Make it yours</button>
+          </div>
+        </article>
+        <article class="fav" aria-labelledby="fav-white_stars">
+          <figure class="fav__pic fav__pic--sauce" style="--fs:#cdb88f;--fs-hi:#faf5eb" aria-hidden="true"></figure>
+          <div class="fav__text">
+            <p class="fav__kind">Waffle</p>
+            <h3 class="fav__name" id="fav-white_stars">White Stars</h3>
+            <p class="fav__desc">White chocolate sauce topped with white chocolate jazzle stars</p>
+            <p class="fav__price price">£7.50</p>
+            <button type="button" class="btn-order fav__go" data-preset="white_stars">Make it yours</button>
+          </div>
+        </article>
+<!-- /gen:favs -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. The whole menu. Their printed menu come to life, every item and price as text you can tap -->
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="menu__drips" aria-hidden="true"></div>
+    <div class="menu__head">
+      <h2 id="menu-h" class="menu__h">The whole menu, and every price on it</h2>
+      <p class="menu__sub">Anything with a hat beside it opens in the builder for you to make your own. Everything else goes straight on your order.</p>
+    </div>
+<!-- gen:menu -->
+    <div class="menu__cols">
+    <div class="mg" id="mg-own">
+      <h3 class="mg__h">Create your own</h3>
+      <p class="mg__note">Everything on our menu is available for your own creation from £5. Add a scoop of vanilla ice cream for £2 or whippy ice cream for £4 on a crepe, waffle or cookie dough.</p>
+      <ul class="mg__list">
+          <li class="mi mi--make"><button type="button" class="mi__b" data-base-open="waffle"><span class="mi__name">Crepe or waffle</span><span class="mi__price price">from £5.50</span><span class="mi__desc">Plain, or made your own</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-base-open="shake"><span class="mi__name">Shake</span><span class="mi__price price">from £5.50</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-base-open="cookie_dough"><span class="mi__name">Cookie dough</span><span class="mi__price price">£6.50</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-base-open="sundae"><span class="mi__name">Plain Whippy Sundae</span><span class="mi__price price">£5.00</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-base-open="froyo" data-size-open="small"><span class="mi__name">Frozen yoghurt, small</span><span class="mi__price price">£4.99</span><span class="mi__desc">Unlimited standard toppings</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-base-open="froyo" data-size-open="medium"><span class="mi__name">Frozen yoghurt, medium</span><span class="mi__price price">£5.99</span><span class="mi__desc">Unlimited standard toppings</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-base-open="froyo" data-size-open="large"><span class="mi__name">Frozen yoghurt, large</span><span class="mi__price price">£6.99</span><span class="mi__desc">Unlimited standard toppings</span><span class="mi__act">Make it yours</span></button></li>
+      </ul>
+    </div>
+    <div class="mg" id="mg-shakes">
+      <h3 class="mg__h">Shakes</h3>
+      <ul class="mg__list">
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="grimace"><span class="mi__name">Grimace</span><span class="mi__price price">£6.50</span><span class="mi__desc">Blueberry ice cream shake. Topped with whipped cream, blueberry sauce &amp; sprinkles</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="mint_shake"><span class="mi__name">Mint Choc Aero</span><span class="mi__price price">£6.50</span><span class="mi__desc">Mint aero ice cream shake, topped with mint sauce &amp; mint aero pieces</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="choc_shake"><span class="mi__name">Chocolate</span><span class="mi__price price">£6.50</span><span class="mi__desc">Chocolate ice cream shake, topped with chocolate sauce</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="strawberry_shake"><span class="mi__name">Strawberry</span><span class="mi__price price">£6.50</span><span class="mi__desc">Strawberry ice cream shake, topped with strawberry sauce</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="vanilla_shake"><span class="mi__name">Vanilla</span><span class="mi__price price">£6.00</span><span class="mi__desc">Vanilla ice cream shake, topped with cream</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="bubblegum_shake"><span class="mi__name">Bubblegum</span><span class="mi__price price">£6.50</span><span class="mi__desc">Bubblegum ice cream shake, topped with bubblegum sauce, blue sherbert &amp; gum balls</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="creation_shake"><span class="mi__name">Charlie’s Creation</span><span class="mi__price price">£7.50</span><span class="mi__desc">Chocolate ice cream shake, topped with sweets and a lollipop</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="choc_orange_shake"><span class="mi__name">Chocolate Orange</span><span class="mi__price price">£6.50</span><span class="mi__desc">Chocolate orange blended with whippy ice cream topped with orange sherbert &amp; chocolate orange pieces</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="oreo_shake"><span class="mi__name">Oreo</span><span class="mi__price price">£6.50</span><span class="mi__desc">Oreo ice cream shake, topped with oreo bits and cream</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="bueno_shake"><span class="mi__name">Bueno</span><span class="mi__price price">£6.50</span><span class="mi__desc">Bueno ice cream shake, topped with bueno chunks and bueno sauce</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="biscoff_shake"><span class="mi__name">Biscoff</span><span class="mi__price price">£6.50</span><span class="mi__desc">Biscoff ice cream shake, topped with biscoff bits and biscoff sauce</span><span class="mi__act">Make it yours</span></button></li>
+      </ul>
+      <figure class="mg__pic mg__pic--arch"><img src="media/photo/p17-1000.webp" srcset="media/photo/p17-640.webp 640w, media/photo/p17-1000.webp 1000w, media/photo/p17-1500.webp 1500w" sizes="(min-width: 1024px) 30vw, 90vw" alt="A white shake from Charlie’s held up with a rainbow lollipop, a chocolate shake behind" width="1000" height="1499" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="mg" id="mg-waffles">
+      <h3 class="mg__h">Crepe or waffle</h3>
+      <p class="mg__note">Choose a crepe or a waffle. Add a scoop of vanilla ice cream for £2 or whippy ice cream for £4.</p>
+      <ul class="mg__list">
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="oreo_waffle"><span class="mi__name">Oreo / Cookies n Cream</span><span class="mi__price price">£7.00</span><span class="mi__desc">Milk &amp; white chocolate sauce &amp; oreo pieces</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="nutella_waffle"><span class="mi__name">Nutella &amp; Nuts</span><span class="mi__price price">£7.50</span><span class="mi__desc">Nutella &amp; hazelnuts</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="creation_waffle"><span class="mi__name">Charlie’s Creation</span><span class="mi__price price">£8.50</span><span class="mi__desc">Whippy ice cream, marshmallows, pick ’n’ mix sweets &amp; bubblegum sauce</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="white_stars"><span class="mi__name">White Stars</span><span class="mi__price price">£7.50</span><span class="mi__desc">White chocolate sauce topped with white chocolate jazzle stars</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="biscoff_waffle"><span class="mi__name">Biscoff</span><span class="mi__price price">£7.50</span><span class="mi__desc">Biscoff sauce &amp; biscoff bits</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="bueno_waffle"><span class="mi__name">Bueno</span><span class="mi__price price">£7.50</span><span class="mi__desc">Bueno sauce &amp; bueno pieces</span><span class="mi__act">Make it yours</span></button></li>
+      </ul>
+      <figure class="mg__pic mg__pic--scallop"><img src="media/photo/p11-1000.webp" srcset="media/photo/p11-640.webp 640w, media/photo/p11-1000.webp 1000w, media/photo/p11-1500.webp 1500w" sizes="(min-width: 1024px) 30vw, 90vw" alt="A spoon going into Charlie’s waffles, piled with whippy and foam sweets" width="1000" height="1499" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="mg" id="mg-dough">
+      <h3 class="mg__h">Cookie dough</h3>
+      <p class="mg__note">All £6.50. Add a scoop of vanilla ice cream for £2 or whippy ice cream for £4.</p>
+      <ul class="mg__list">
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="cd_chip"><span class="mi__name">Charlie’s Chocolate Chip</span><span class="mi__price price">£6.50</span><span class="mi__desc">Classic chocolate chip cookie dough topped with chocolate sauce</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="cd_pb"><span class="mi__name">Peanut Butter</span><span class="mi__price price">£6.50</span><span class="mi__desc">Milk chocolate cookie dough topped with chocolate sauce, peanut butter drizzle &amp; chopped nuts</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="cd_white_rasp"><span class="mi__name">White Choc &amp; Raspberry</span><span class="mi__price price">£6.50</span><span class="mi__desc">White chocolate cookie dough topped with white chocolate sauce, chocolate curls &amp; freeze dried raspberries</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="cd_biscoff"><span class="mi__name">Biscoff</span><span class="mi__price price">£6.50</span><span class="mi__desc">White chocolate cookie dough, biscoff sauce &amp; biscoff bits</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="cd_bueno"><span class="mi__name">Bueno</span><span class="mi__price price">£6.50</span><span class="mi__desc">Milk chocolate cookie dough, bueno sauce &amp; bueno pieces</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="cd_oreo"><span class="mi__name">Oreo</span><span class="mi__price price">£6.50</span><span class="mi__desc">Milk chocolate cookie dough, milk &amp; white chocolate sauce &amp; oreo pieces</span><span class="mi__act">Make it yours</span></button></li>
+      </ul>
+      <figure class="mg__pic mg__pic--hat"><img src="media/photo/p08-1000.webp" srcset="media/photo/p08-640.webp 640w, media/photo/p08-1000.webp 1000w, media/photo/p08-1500.webp 1500w" sizes="(min-width: 1024px) 30vw, 90vw" alt="A fork lifting a bite of Charlie’s cookie dough with a star biscuit" width="1000" height="1499" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="mg" id="mg-whippy">
+      <h3 class="mg__h">Whippy ice cream</h3>
+      <ul class="mg__list">
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="sundae_fruit"><span class="mi__name">Sherbet Fruit Sundae</span><span class="mi__price price">£7.50</span><span class="mi__desc">Mango &amp; strawberry pieces with Whippy ice cream topped with strawberry sauce &amp; sherbert</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="sundae_pnm"><span class="mi__name">Sherbet Pick ’n’ Mix Sundae</span><span class="mi__price price">£7.50</span><span class="mi__desc">Whippy ice cream topped with sherbet &amp; pic &amp; mix</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="sundae_bubble"><span class="mi__name">Bubblegum Sundae</span><span class="mi__price price">£8.50</span><span class="mi__desc">Whippy ice cream topped with bubblegum sauce, gobstoppers &amp; gum balls</span><span class="mi__act">Make it yours</span></button></li>
+          <li class="mi mi--make"><button type="button" class="mi__b" data-preset="sundae_fudge"><span class="mi__name">Fudgemallow Delight</span><span class="mi__price price">£8.50</span><span class="mi__desc">Whippy ice cream topped with toffee sauce, fudge pieces, marshmallows &amp; a Charlie’s wafer</span><span class="mi__act">Make it yours</span></button></li>
+      </ul>
+    </div>
+    <div class="mg" id="mg-pancakes">
+      <h3 class="mg__h">Mini Dutch pancakes</h3>
+      <p class="mg__note">Ten for £8.50, twenty for £15.50</p>
+      <ul class="mg__list">
+          <li class="mi"><button type="button" class="mi__b" data-item="mdp:oreo:10" data-name="Mini Dutch pancakes, Oreo, ten" data-pence="850"><span class="mi__name">Oreo, ten</span><span class="mi__price price">£8.50</span><span class="mi__desc">With oreo bits &amp; chocolate sauce</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="mdp:oreo:20" data-name="Mini Dutch pancakes, Oreo, twenty" data-pence="1550"><span class="mi__name">Oreo, twenty</span><span class="mi__price price">£15.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="mdp:strawberry-nutella:10" data-name="Mini Dutch pancakes, Strawberry &amp; Nutella, ten" data-pence="850"><span class="mi__name">Strawberry &amp; Nutella, ten</span><span class="mi__price price">£8.50</span><span class="mi__desc">With Nutella &amp; strawberries</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="mdp:strawberry-nutella:20" data-name="Mini Dutch pancakes, Strawberry &amp; Nutella, twenty" data-pence="1550"><span class="mi__name">Strawberry &amp; Nutella, twenty</span><span class="mi__price price">£15.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="mdp:biscoff:10" data-name="Mini Dutch pancakes, Biscoff, ten" data-pence="850"><span class="mi__name">Biscoff, ten</span><span class="mi__price price">£8.50</span><span class="mi__desc">With Biscoff sauce &amp; crumbs</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="mdp:biscoff:20" data-name="Mini Dutch pancakes, Biscoff, twenty" data-pence="1550"><span class="mi__name">Biscoff, twenty</span><span class="mi__price price">£15.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="mdp:white-choc-stars:10" data-name="Mini Dutch pancakes, White Choc Stars, ten" data-pence="850"><span class="mi__name">White Choc Stars, ten</span><span class="mi__price price">£8.50</span><span class="mi__desc">With white chocolate sauce &amp; stars</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="mdp:white-choc-stars:20" data-name="Mini Dutch pancakes, White Choc Stars, twenty" data-pence="1550"><span class="mi__name">White Choc Stars, twenty</span><span class="mi__price price">£15.50</span><span class="mi__act">Add</span></button></li>
+      </ul>
+    </div>
+    <div class="mg" id="mg-sharers">
+      <h3 class="mg__h">Sharers</h3>
+      <p class="mg__note">The Ultimate Box excludes Matilda and San Sebastián</p>
+      <ul class="mg__list">
+          <li class="mi"><button type="button" class="mi__b" data-item="sharers:dubai-kunafa-sharer" data-name="Dubai Kunafa Sharer" data-pence="1850"><span class="mi__name">Dubai Kunafa Sharer</span><span class="mi__price price">£18.50</span><span class="mi__desc">Brownie, Mini Dutch pancakes, Strawberries, Kunafa, Marshmallows</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="sharers:dubai-kunafa-sprinkle-dipping" data-name="Dubai Kunafa / Sprinkle Dipping" data-pence="2250"><span class="mi__name">Dubai Kunafa / Sprinkle Dipping</span><span class="mi__price price">£22.50</span><span class="mi__desc">Sprinkle cake pieces, Warm custard with sprinkles, Brownies, Kunafa &amp; strawberries</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="sharers:sprinkle-dipping-tray" data-name="Sprinkle Dipping Tray" data-pence="850"><span class="mi__name">Sprinkle Dipping Tray</span><span class="mi__price price">£8.50</span><span class="mi__desc">Sprinkle cake pieces with warm dipping custard</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="sharers:the-ultimate-box" data-name="The Ultimate Box" data-pence="3000"><span class="mi__name">The Ultimate Box</span><span class="mi__price price">£30.00</span><span class="mi__desc">2 cakes or bakes, 2 crepes or 2 waffles, pick &amp; mix bag plus 2 drinks</span><span class="mi__act">Add</span></button></li>
+      </ul>
+    </div>
+    <div class="mg" id="mg-dubai">
+      <h3 class="mg__h">Charlie in Dubai</h3>
+      <ul class="mg__list">
+          <li class="mi"><button type="button" class="mi__b" data-item="charlie-in-dubai:kunafa-strawberry-cup" data-name="Kunafa Strawberry Cup" data-pence="1150"><span class="mi__name">Kunafa Strawberry Cup</span><span class="mi__price price">£11.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="charlie-in-dubai:kunafa-matilda-cake" data-name="Kunafa Matilda Cake" data-pence="1050"><span class="mi__name">Kunafa Matilda Cake</span><span class="mi__price price">£10.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="charlie-in-dubai:kunafa-charlie-flurry" data-name="Kunafa Charlie Flurry" data-pence="350"><span class="mi__name">Kunafa Charlie Flurry</span><span class="mi__price price">£3.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="charlie-in-dubai:kunafa-cookie-dough" data-name="Kunafa Cookie Dough" data-pence="950"><span class="mi__name">Kunafa Cookie Dough</span><span class="mi__price price">£9.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="charlie-in-dubai:kunafa-brownie" data-name="Kunafa Brownie" data-pence="750"><span class="mi__name">Kunafa Brownie</span><span class="mi__price price">£7.50</span><span class="mi__act">Add</span></button></li>
+      </ul>
+    </div>
+    <div class="mg" id="mg-cups">
+      <h3 class="mg__h">Strawberry cups</h3>
+      <p class="mg__note">Regular £6.00, large £8.00</p>
+      <ul class="mg__list">
+          <li class="mi"><button type="button" class="mi__b" data-item="cup:chocolate-strawberry-cup:reg" data-name="Chocolate Strawberry Cup, regular" data-pence="600"><span class="mi__name">Chocolate Strawberry Cup, regular</span><span class="mi__price price">£6.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="cup:chocolate-strawberry-cup:large" data-name="Chocolate Strawberry Cup, large" data-pence="800"><span class="mi__name">Chocolate Strawberry Cup, large</span><span class="mi__price price">£8.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="cup:strawberry-brownie-cup:reg" data-name="Strawberry &amp; Brownie Cup, regular" data-pence="600"><span class="mi__name">Strawberry &amp; Brownie Cup, regular</span><span class="mi__price price">£6.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="cup:strawberry-brownie-cup:large" data-name="Strawberry &amp; Brownie Cup, large" data-pence="800"><span class="mi__name">Strawberry &amp; Brownie Cup, large</span><span class="mi__price price">£8.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="cup:own-bar" data-name="Your own chocolate bar on a cup" data-pence="100"><span class="mi__name">Your own chocolate bar on a cup</span><span class="mi__price price">+£1.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="cup:marshmallows" data-name="Marshmallows on a cup" data-pence="200"><span class="mi__name">Marshmallows on a cup</span><span class="mi__price price">+£2.00</span><span class="mi__act">Add</span></button></li>
+      </ul>
+    </div>
+    <div class="mg" id="mg-scoops">
+      <h3 class="mg__h">Ice cream or sorbet</h3>
+      <p class="mg__note">In a tub, or in one of three cones</p>
+      <ul class="mg__list">
+          <li class="mi"><button type="button" class="mi__b" data-item="scoop:1" data-name="One scoop of ice cream or sorbet" data-pence="250"><span class="mi__name">One scoop</span><span class="mi__price price">£2.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="scoop:2" data-name="Two scoops of ice cream or sorbet" data-pence="450"><span class="mi__name">Two scoops</span><span class="mi__price price">£4.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="scoop:3" data-name="Three scoops of ice cream or sorbet" data-pence="650"><span class="mi__name">Three scoops</span><span class="mi__price price">£6.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="cone:50" data-name="A cone at £0.50" data-pence="50"><span class="mi__name">In a cone at £0.50</span><span class="mi__price price">+£0.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="cone:100" data-name="A cone at £1.00" data-pence="100"><span class="mi__name">In a cone at £1.00</span><span class="mi__price price">+£1.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="cone:150" data-name="A cone at £1.50" data-pence="150"><span class="mi__name">In a cone at £1.50</span><span class="mi__price price">+£1.50</span><span class="mi__act">Add</span></button></li>
+      </ul>
+    </div>
+    <div class="mg" id="mg-bakes">
+      <h3 class="mg__h">Bakes and cakes</h3>
+      <ul class="mg__list">
+          <li class="mi mi--sub"><p class="mi__subh">Specials</p><p class="mi__subn">Add strawberries &amp; cream £1.50</p></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:add:strawberries-cream" data-name="Add strawberries &amp; cream" data-pence="150"><span class="mi__name">Add strawberries &amp; cream</span><span class="mi__price price">+£1.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:matilda-cake" data-name="Matilda Cake" data-pence="900"><span class="mi__name">Matilda Cake</span><span class="mi__price price">£9.00</span><span class="mi__desc">Served warm with a chocolate drizzle</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:san-sebasti-n-cheesecake" data-name="San Sebastián Cheesecake" data-pence="900"><span class="mi__name">San Sebastián Cheesecake</span><span class="mi__price price">£9.00</span><span class="mi__desc">Served with a sauce drizzle of your choice</span><span class="mi__act">Add</span></button></li>
+          <li class="mi mi--sub"><p class="mi__subh">Charlie’s Choice</p></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:fudge-cake" data-name="Fudge Cake" data-pence="500"><span class="mi__name">Fudge Cake</span><span class="mi__price price">£5.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:rainbow-cake" data-name="Rainbow Cake" data-pence="500"><span class="mi__name">Rainbow Cake</span><span class="mi__price price">£5.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:triple-chocolate-brownie" data-name="Triple Chocolate Brownie" data-pence="450"><span class="mi__name">Triple Chocolate Brownie</span><span class="mi__price price">£4.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi mi--sub"><p class="mi__subh">Golden Oldies, all £4.00</p><p class="mi__subn">Add custard £1.50</p></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:add:custard" data-name="Add custard" data-pence="150"><span class="mi__name">Add custard</span><span class="mi__price price">+£1.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:fruit-crumble" data-name="Fruit Crumble" data-pence="400"><span class="mi__name">Fruit Crumble</span><span class="mi__price price">£4.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:jam-roly-poly" data-name="Jam Roly Poly" data-pence="400"><span class="mi__name">Jam Roly Poly</span><span class="mi__price price">£4.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:sticky-toffee-pudding" data-name="Sticky Toffee Pudding" data-pence="400"><span class="mi__name">Sticky Toffee Pudding</span><span class="mi__price price">£4.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="bake:old-school-sprinkle-cake" data-name="Old-School Sprinkle Cake" data-pence="400"><span class="mi__name">Old-School Sprinkle Cake</span><span class="mi__price price">£4.00</span><span class="mi__act">Add</span></button></li>
+          <li class="mi mi--sub"><p class="mi__subh">Fresh Bakes</p><p class="mi__subn">from £4.00</p></li>
+      </ul>
+    </div>
+    <div class="mg" id="mg-hot">
+      <h3 class="mg__h">Hot drinks</h3>
+      <ul class="mg__list">
+          <li class="mi"><button type="button" class="mi__b" data-item="hot-drinks:charlie-s-special-hot-chocolate" data-name="Charlie’s Special Hot Chocolate" data-pence="600"><span class="mi__name">Charlie’s Special Hot Chocolate</span><span class="mi__price price">£6.00</span><span class="mi__desc">With whipped cream, marshmallows</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="hot-drinks:hot-chocolate" data-name="Hot Chocolate" data-pence="350"><span class="mi__name">Hot Chocolate</span><span class="mi__price price">£3.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="hot-drinks:americano" data-name="Americano" data-pence="350"><span class="mi__name">Americano</span><span class="mi__price price">£3.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="hot-drinks:espresso" data-name="Espresso" data-pence="250"><span class="mi__name">Espresso</span><span class="mi__price price">£2.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="hot-drinks:latte" data-name="Latte" data-pence="350"><span class="mi__name">Latte</span><span class="mi__price price">£3.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="hot-drinks:flat-white" data-name="Flat White" data-pence="350"><span class="mi__name">Flat White</span><span class="mi__price price">£3.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="hot-drinks:cappuccino" data-name="Cappuccino" data-pence="350"><span class="mi__name">Cappuccino</span><span class="mi__price price">£3.50</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="hot-drinks:tea" data-name="Tea" data-pence="190"><span class="mi__name">Tea</span><span class="mi__price price">£1.90</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="hot-drinks:syrups" data-name="Syrups" data-pence="50"><span class="mi__name">Syrups</span><span class="mi__price price">£0.50</span><span class="mi__act">Add</span></button></li>
+      </ul>
+    </div>
+    <div class="mg" id="mg-mocktails">
+      <h3 class="mg__h">Mocktails</h3>
+      <ul class="mg__list">
+          <li class="mi"><button type="button" class="mi__b" data-item="mocktails:blue-raspberry" data-name="Blue Raspberry" data-pence="500"><span class="mi__name">Blue Raspberry</span><span class="mi__price price">£5.00</span><span class="mi__desc">A blue raspberry &amp; lemon flavoured fizzy mocktail</span><span class="mi__act">Add</span></button></li>
+          <li class="mi"><button type="button" class="mi__b" data-item="mocktails:strawberry" data-name="Strawberry" data-pence="500"><span class="mi__name">Strawberry</span><span class="mi__price price">£5.00</span><span class="mi__desc">A strawberry &amp; lemon flavoured fizzy mocktail</span><span class="mi__act">Add</span></button></li>
+      </ul>
+    </div>
+    </div>
+    <div class="pickmix" id="pickmix">
+      <canvas class="pickmix__gl" id="pickmix-gl" aria-hidden="true"></canvas>
+      <img class="pickmix__img" src="media/photo/p16-1400.webp" srcset="media/photo/p16-800.webp 800w, media/photo/p16-1400.webp 1400w" sizes="100vw" alt="A heap of Charlie’s fizzy sweets, close up" width="1400" height="2099" loading="lazy" decoding="async">
+      <div class="pickmix__card">
+        <h3 class="pickmix__h">Pick &amp; Mix available</h3>
+        <p>A cup of it on anything you make is £2.00.</p>
+        <button type="button" class="btn-order" data-topping-open="Pick &amp; Mix Cup">Add a cup</button>
+      </div>
+    </div>
+    <div class="doggy">
+      <svg class="doggy__paw" viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="66" rx="24" ry="20"/><ellipse cx="22" cy="40" rx="10" ry="13"/><ellipse cx="40" cy="24" rx="10" ry="13"/><ellipse cx="62" cy="24" rx="10" ry="13"/><ellipse cx="79" cy="40" rx="10" ry="13"/></svg>
+      <p>Doggy ice cream available. Ask at the counter, it isn’t on the price list.</p>
+    </div>
+<!-- /gen:menu -->
+  </section>
+
+  <!-- 5. A roll call of what they make, hard cuts on their own colours, their desserts through giant type -->
+  <section class="roll" id="roll" aria-label="What Charlie’s makes">
+    <div class="roll__pin">
+      <div class="roll__f" data-i="0" style="--bg:#5F3F90;--fg:#FBF3FD;--n:7"><p class="roll__w">Waffles</p><img class="roll__img" src="media/waffle.webp" alt="" width="1100" height="1320" loading="lazy" decoding="async"><p class="roll__w roll__w--front" aria-hidden="true">Waffles</p></div>
+      <div class="roll__f" data-i="1" style="--bg:#3A8A96;--fg:#FBF3FD;--n:6"><p class="roll__w">Shakes</p><img class="roll__img" src="media/shake.webp" alt="" width="376" height="974" loading="lazy" decoding="async"><p class="roll__w roll__w--front" aria-hidden="true">Shakes</p></div>
+      <div class="roll__f" data-i="2" style="--bg:#F0B962;--fg:#2b0b47;--n:12"><p class="roll__w">Cookie dough</p><img class="roll__img" src="media/cookie-dough.webp" alt="" width="1420" height="950" loading="lazy" decoding="async"><p class="roll__w roll__w--front" aria-hidden="true">Cookie dough</p></div>
+      <div class="roll__f" data-i="3" style="--bg:#F75F9B;--fg:#2b0b47;--n:7"><p class="roll__w">Sundaes</p><img class="roll__img" src="media/sundae-hero.webp" alt="" width="625" height="1000" loading="lazy" decoding="async"><p class="roll__w roll__w--front" aria-hidden="true">Sundaes</p></div>
+      <div class="roll__f" data-i="4" style="--bg:#DED2E8;--fg:#471273;--n:14"><p class="roll__w">Frozen yoghurt</p><img class="roll__img" src="media/froyo-hero.webp" alt="" width="667" height="1000" loading="lazy" decoding="async"><p class="roll__w roll__w--front" aria-hidden="true">Frozen yoghurt</p></div>
+      <div class="roll__f" data-i="5" style="--bg:#2b0b47;--fg:#F8C559;--n:10"><p class="roll__w">Pick &amp; mix</p><img class="roll__img roll__img--photo" src="media/photo/p16-800.webp" alt="" width="800" height="1199" loading="lazy" decoding="async"><p class="roll__w roll__w--front" aria-hidden="true">Pick &amp; mix</p></div>
+      <div class="roll__f roll__f--end" data-i="6" style="--bg:#471273;--fg:#F0B962"><img class="roll__logo" src="media/logo.webp" alt="" width="640" height="387" loading="lazy"><p class="roll__end">Every one of them, straight from Charlie’s</p></div>
+    </div>
+  </section>
+
+  <!-- 6. The order. Collect or delivery, which shop, a time, a name, and it prints as a golden ticket -->
+  <section class="order" id="order" aria-labelledby="order-h">
+    <div class="order__inner">
+      <div class="order__form-col">
+        <h2 id="order-h" class="order__h">Collect it, or have it brought to you</h2>
+        <p class="order__sub">It goes straight to the shop you pick, and the ticket prints there.</p>
+        <form class="oform" id="oform" novalidate>
+          <fieldset class="ofs">
+            <legend>Which shop</legend>
+            <div class="seg seg--shops">
+              <label class="segb"><input type="radio" name="order-shop" value="brighouse" required><span class="segb__t">Brighouse</span><span class="segb__s">3 Bridge Road, open 12 to 10</span></label>
+              <label class="segb"><input type="radio" name="order-shop" value="huddersfield"><span class="segb__t">Huddersfield</span><span class="segb__s">51 King St, hours to confirm</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="ofs">
+            <legend>Collect or delivery</legend>
+            <div class="seg">
+              <label class="segb"><input type="radio" name="order-mode" value="collect" required><span class="segb__t">Collect</span></label>
+              <label class="segb"><input type="radio" name="order-mode" value="delivery"><span class="segb__t">Delivery</span></label>
+            </div>
+            <p class="ofs__note" id="delivery-note" hidden>Delivery area set by Charlie’s. Your address is checked against it in the full build.</p>
+            <label class="field" id="addr-field" hidden><span>Delivery address</span><input name="order-address" id="order-address" autocomplete="street-address"></label>
+          </fieldset>
+          <fieldset class="ofs">
+            <legend id="slot-l">When, in UK time</legend>
+            <p class="ofs__note" id="slot-note">Example collection times, inside opening hours</p>
+            <div class="slots" id="slots" role="radiogroup" aria-labelledby="slot-l"></div>
+          </fieldset>
+          <div class="ofs ofs--you">
+            <label class="field"><span>Your name</span><input name="order-name" id="order-name" autocomplete="name" required></label>
+            <label class="field"><span>Your phone</span><input name="order-phone" id="order-phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+          </div>
+          <p class="oform__err" id="oform-err" role="alert"></p>
+          <button type="submit" class="btn-order btn-order--big" id="place-order">Order</button>
+          <p class="proto">A prototype by Astra agency for Charlie’s Desserts. Prices from Charlie’s menu. Nothing here places a real order or booking.</p>
+        </form>
+      </div>
+      <div class="order__ticket-col">
+        <p class="order__wink">No golden ticket needed, just a sweet tooth!</p>
+        <div class="gticket" id="gticket" data-state="draft">
+          <div class="gticket__foil" aria-hidden="true"><video class="film gticket__glitter" muted playsinline loop preload="none" data-src="media/film/gold-glitter.mp4" data-type="video/mp4" data-poster="media/film/gold-glitter.webp" aria-hidden="true" tabindex="-1"></video></div>
+          <div class="gticket__body">
+            <div class="gticket__top"><img src="media/logo.webp" alt="" width="640" height="387" class="gticket__logo"><span class="gticket__no" id="gt-no">No. 0427</span></div>
+            <div class="gticket__artwrap"><canvas class="gticket__art" id="gt-art" width="320" height="220" aria-hidden="true"></canvas><div class="gticket__stamp" id="gt-stamp" aria-hidden="true">Ordered</div></div>
+            <ul class="gticket__lines" id="gt-lines"></ul>
+            <div class="gticket__meta" id="gt-meta"></div>
+            <div class="gticket__total"><span>Total</span><b id="gt-total">£5.50</b></div>
+            <p class="gticket__note">Estimated from Charlie’s menu, final price at the counter</p>
+          </div>
+        </div>
+        <p class="order__done" id="order-done" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Birthdays and celebrations. A giant number, seats round a table, a table ticket stamped confirmed -->
+  <section class="party" id="party" aria-labelledby="party-h">
+    <div class="party__inner">
+      <div class="party__copy">
+        <h2 id="party-h" class="party__h">A table for the party, confirmed before you leave the page</h2>
+        <p class="party__sub">Book for a birthday, a celebration or a date night, and everyone picks their own when they get here.</p>
+      </div>
+      <div class="party__table" aria-hidden="true">
+        <svg class="table-svg" id="table-svg" viewBox="-200 -200 400 400"></svg>
+        <video class="film party__confetti" muted playsinline loop preload="none" data-src="media/film/confetti.mp4" data-type="video/mp4" data-poster="media/film/confetti.webp" aria-hidden="true" tabindex="-1" data-on="booked"></video>
+      </div>
+      <form class="bform" id="bform" novalidate>
+        <div class="partysize">
+          <label class="partysize__l" for="party-size">How many of you</label>
+          <div class="partysize__row">
+            <button type="button" class="qty__b" id="party-minus" aria-label="One fewer"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+            <input class="partysize__n" id="party-size" name="party-size" type="range" min="1" max="10" step="1" value="6" aria-valuetext="6 people">
+            <output class="partysize__big" id="party-big" for="party-size">6</output>
+            <button type="button" class="qty__b" id="party-plus" aria-label="One more"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          </div>
+          <p class="ofs__note">Drag the number, or use the buttons. 10 means 10 or more.</p>
+        </div>
+        <fieldset class="ofs">
+          <legend>Which shop</legend>
+          <div class="seg">
+            <label class="segb"><input type="radio" name="party-shop" value="brighouse" required><span class="segb__t">Brighouse</span></label>
+            <label class="segb"><input type="radio" name="party-shop" value="huddersfield"><span class="segb__t">Huddersfield</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="ofs">
+          <legend>The occasion</legend>
+          <div class="seg seg--3">
+            <label class="segb"><input type="radio" name="party-occasion" value="Birthday" required><span class="segb__t">Birthday</span></label>
+            <label class="segb"><input type="radio" name="party-occasion" value="Celebration"><span class="segb__t">Celebration</span></label>
+            <label class="segb"><input type="radio" name="party-occasion" value="Date night"><span class="segb__t">Date night</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="ofs">
+          <legend id="pdate-l">Which day</legend>
+          <div class="days" id="days" role="radiogroup" aria-labelledby="pdate-l"></div>
+        </fieldset>
+        <fieldset class="ofs">
+          <legend id="ptime-l">What time, in UK time</legend>
+          <p class="ofs__note" id="ptime-note">Example times, inside opening hours</p>
+          <div class="slots" id="pslots" role="radiogroup" aria-labelledby="ptime-l"></div>
+        </fieldset>
+        <div class="ofs ofs--you">
+          <label class="field"><span>Name for the booking</span><input name="party-name" id="party-name" autocomplete="name" required></label>
+          <label class="field"><span>Your phone</span><input name="party-phone" id="party-phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        </div>
+        <p class="oform__err" id="bform-err" role="alert"></p>
+        <button type="submit" class="btn-order btn-order--big btn-book" id="place-booking">Book</button>
+        <p class="proto">A prototype by Astra agency for Charlie’s Desserts. Prices from Charlie’s menu. Nothing here places a real order or booking.</p>
+      </form>
+      <div class="tticket" id="tticket" hidden>
+        <div class="gticket__foil" aria-hidden="true"></div>
+        <div class="tticket__body">
+          <p class="tticket__k">Table ticket</p>
+          <p class="tticket__big" id="tt-big"></p>
+          <p class="tticket__line" id="tt-line"></p>
+        </div>
+        <div class="gticket__stamp" aria-hidden="true">Confirmed</div>
+      </div>
+      <p class="order__done" id="booking-done" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- 8. Two shops, in their own stripes -->
+  <section class="shops" id="shops" aria-labelledby="shops-h">
+    <h2 id="shops-h" class="shops__h">Find us in Brighouse and Huddersfield</h2>
+    <div class="shops__row">
+      <article class="shopfront" aria-labelledby="sf-b">
+        <div class="shopfront__awning" aria-hidden="true"></div>
+        <div class="shopfront__sign" aria-hidden="true"><img src="media/logo.webp" alt="" width="640" height="387"></div>
+        <div class="shopfront__body">
+          <h3 id="sf-b">Brighouse</h3>
+          <p>3 Bridge Road, Brighouse HD6 1EP</p>
+          <p>Open every day, 12 to 10</p>
+          <p>Food hygiene rating 5, inspected 17 Mar 2025. <a href="https://ratings.food.gov.uk/business/1770212" rel="noopener">See it at the Food Standards Agency</a></p>
+          <div class="shopfront__acts">
+            <button type="button" class="btn-order" data-action="order" data-shop="brighouse">Order</button>
+            <button type="button" class="btn-ghost" data-action="book" data-shop="brighouse">Book</button>
+          </div>
+        </div>
+      </article>
+      <article class="shopfront shopfront--h" aria-labelledby="sf-h">
+        <div class="shopfront__awning" aria-hidden="true"></div>
+        <div class="shopfront__sign" aria-hidden="true"><img src="media/logo.webp" alt="" width="640" height="387"></div>
+        <div class="shopfront__body">
+          <h3 id="sf-h">Huddersfield</h3>
+          <p>51 King St, Huddersfield HD1 2PZ</p>
+          <p>Hours to confirm</p>
+          <p>Frozen yoghurt with unlimited standard toppings is here, small £4.99, medium £5.99, large £6.99.</p>
+          <p>Food hygiene rating 4, inspected 9 Apr 2026. <a href="https://ratings.food.gov.uk/business/1918346" rel="noopener">See it at the Food Standards Agency</a></p>
+          <div class="shopfront__acts">
+            <button type="button" class="btn-order" data-action="order" data-shop="huddersfield">Order</button>
+            <button type="button" class="btn-ghost" data-action="book" data-shop="huddersfield">Book</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot__grid">
+      <div>
+        <h2>Brighouse</h2>
+        <p>3 Bridge Road, Brighouse HD6 1EP</p>
+        <p>Monday to Sunday, 12pm to 10pm</p>
+        <p>Food hygiene rating 5, <a href="https://ratings.food.gov.uk/business/1770212" rel="noopener">Food Standards Agency</a></p>
+      </div>
+      <div>
+        <h2>Huddersfield</h2>
+        <p>51 King St, Huddersfield HD1 2PZ</p>
+        <p>Hours to confirm</p>
+        <p>Food hygiene rating 4, <a href="https://ratings.food.gov.uk/business/1918346" rel="noopener">Food Standards Agency</a></p>
+      </div>
+      <div>
+        <h2>Follow Charlie’s</h2>
+        <p><a href="https://www.instagram.com/charliesdessertshop/" rel="noopener">Instagram @charliesdessertshop</a></p>
+        <p><a href="https://www.tiktok.com/@charlies.desserts" rel="noopener">TikTok @charlies.desserts</a></p>
+      </div>
+    </div>
+    <p class="proto">A prototype by Astra agency for Charlie’s Desserts. Prices from Charlie’s menu. Nothing here places a real order or booking.</p>
+  </footer>
+</main>
+
+<aside class="orderbar" id="orderbar" aria-label="Your order">
+  <div class="orderbar__text">
+    <p class="orderbar__line" aria-live="polite"><span class="orderbar__price price" id="bar-price">£5.50</span> <span class="orderbar__name" id="bar-name">Your waffle</span></p>
+    <p class="orderbar__note">Estimated from Charlie’s menu, final price at the counter</p>
+  </div>
+  <button type="button" class="btn-order" data-action="order">Order</button>
+</aside>
+
+<script>/* the page paints first from its HTML and CSS, then its scripts load, in order */
+(function (s) { var go = function () { s.forEach(function (src) { var e = document.createElement('script'), inl = window.__SCRIPTS && window.__SCRIPTS[src]; if (inl) e.text = inl; else { e.src = src; e.async = false; } document.body.appendChild(e); }); };
+  requestAnimationFrame(function () { setTimeout(go, 0); }); })(['js/menu-data.js','js/state.js','js/pour.js','js/toppings.js','js/builder.js','js/hero.js','js/menu.js','js/order.js','js/party.js','js/motion.js','js/app.js','js/sprinkles.js','js/film.js']);</script>
+</body>
+</html>

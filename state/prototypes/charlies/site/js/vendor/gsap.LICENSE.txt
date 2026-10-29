@@ -1,0 +1,1 @@
+GSAP 3.15.0 is distributed under the GreenSock Standard 'no charge' license, https://gsap.com/standard-license (read 28 Oct 2026). Free for commercial use, including every plugin.

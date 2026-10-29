@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 640" width="400" height="640">
+  <!-- A plain whippy sundae, drawn by Astra in the site's glossy style (Charlie's has no photo of one) -->
+  <defs>
+    <linearGradient id="su-glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cbb8e6" stop-opacity=".7"/>
+      <stop offset=".18" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset=".3" stop-color="#e9def5" stop-opacity=".25"/>
+      <stop offset=".72" stop-color="#e9def5" stop-opacity=".2"/>
+      <stop offset=".86" stop-color="#ffffff" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#b9a3dc" stop-opacity=".75"/>
+    </linearGradient>
+    <linearGradient id="su-inside" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff9ee"/>
+      <stop offset="1" stop-color="#efe1c8"/>
+    </linearGradient>
+    <radialGradient id="su-cream" cx=".38" cy=".3" r=".75">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".55" stop-color="#fff6e7"/>
+      <stop offset="1" stop-color="#e4d0ae"/>
+    </radialGradient>
+    <linearGradient id="su-foot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#bfa9df" stop-opacity=".9"/>
+      <stop offset=".3" stop-color="#ffffff" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#a98fd4" stop-opacity=".9"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="200" cy="612" rx="100" ry="19" fill="url(#su-foot)"/>
+  <ellipse cx="200" cy="606" rx="86" ry="12" fill="#fff" fill-opacity=".35"/>
+  <path d="M186 470 C 190 520, 186 570, 178 604 L 222 604 C 214 570, 210 520, 214 470 Z" fill="url(#su-glass)"/>
+  <path d="M58 214 C 60 340, 118 440, 186 474 L 214 474 C 282 440, 340 340, 342 214 Z" fill="url(#su-inside)"/>
+  <path d="M58 214 C 60 340, 118 440, 186 474 L 214 474 C 282 440, 340 340, 342 214 Z" fill="url(#su-glass)"/>
+  <path d="M86 236 C 92 330, 126 400, 168 440" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="7" stroke-linecap="round"/>
+  <path d="M318 246 C 312 320, 290 372, 258 412" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="4" stroke-linecap="round"/>
+  <!-- the whippy, four soft tiers and a curl -->
+  <g>
+    <path d="M44 210 C 40 168, 92 150, 200 150 C 308 150, 362 168, 356 210 C 352 238, 300 246, 200 246 C 100 246, 48 238, 44 210 Z" fill="url(#su-cream)"/>
+    <path d="M70 168 C 66 128, 118 110, 204 112 C 290 114, 336 132, 330 168 C 326 196, 284 204, 202 204 C 120 204, 74 196, 70 168 Z" fill="url(#su-cream)"/>
+    <path d="M104 128 C 102 94, 144 78, 206 80 C 268 82, 302 98, 298 128 C 294 152, 262 160, 204 160 C 146 160, 108 152, 104 128 Z" fill="url(#su-cream)"/>
+    <path d="M140 94 C 140 66, 168 54, 206 56 C 244 58, 266 70, 262 94 C 258 114, 238 120, 204 120 C 170 120, 144 114, 140 94 Z" fill="url(#su-cream)"/>
+    <path d="M176 62 C 178 34, 200 18, 226 20 C 214 30, 212 44, 222 58 C 232 72, 222 86, 202 86 C 186 86, 176 76, 176 62 Z" fill="url(#su-cream)"/>
+    <g fill="none" stroke="#c9b08a" stroke-opacity=".55" stroke-width="3" stroke-linecap="round">
+      <path d="M64 216 C 120 236, 280 238, 340 214"/><path d="M88 174 C 140 194, 270 196, 316 172"/><path d="M118 134 C 160 150, 250 152, 286 132"/><path d="M152 98 C 180 110, 232 112, 252 98"/>
+    </g>
+    <g fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="5" stroke-linecap="round">
+      <path d="M86 178 C 104 162, 140 154, 176 154"/><path d="M112 136 C 128 122, 156 116, 182 116"/><path d="M146 100 C 158 88, 176 84, 192 84"/><path d="M188 44 C 194 34, 204 28, 214 26"/>
+    </g>
+  </g>
+  <ellipse cx="200" cy="214" rx="142" ry="10" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2.5"/>
+</svg>

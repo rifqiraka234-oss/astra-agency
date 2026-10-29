@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Charlie’s Desserts, the plan for your own ordering site, by Astra</title>
+<meta name="description" content="Prepared by Astra for Danielle Best, October 2026. What the new Charlie’s site does, what runs underneath, six weeks to live and the cost.">
+<meta name="theme-color" content="#2b0b47">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/MonaSans-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/plan.css">
+<script>(function(d){d.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('motion');})(document.documentElement);</script>
+</head>
+<body>
+<main>
+  <!-- 1. Cover -->
+  <section class="cover" id="cover" aria-labelledby="cover-h">
+    <div class="awning" aria-hidden="true"><div class="awning__cloth"></div><div class="awning__edge"></div></div>
+    <div class="cover__inner">
+      <p class="cover__by">Prepared by Astra for Danielle Best, October 2026.</p>
+      <img class="cover__logo" src="media/logo.webp" alt="Charlie’s" width="640" height="387">
+      <h1 id="cover-h" class="cover__h">The orders your posts start, straight to Charlie’s</h1>
+      <p class="cover__lede">You said yes to a sketch, so we built the whole site. This is the plan behind it, with what we found on your site today, what the new one does, what runs underneath, six weeks to live and the cost.</p>
+      <div class="found">
+        <h2 class="found__h">What we found on your site today</h2>
+        <ol class="found__list">
+<!-- gen:findings -->
+          <li class="found__i"><span class="found__n">1</span><p class="found__l">The only order button on your site goes to Uber Eats.</p><p class="found__s"><a href="https://www.charliesdesserts.com/" rel="noopener">charliesdesserts.com, read 28 Oct 2026</a></p></li>
+          <li class="found__i"><span class="found__n">2</span><p class="found__l">The menu is two pictures and a PDF, so no price on the site can be tapped or added to an order.</p><p class="found__s"><a href="https://www.charliesdesserts.com/menu" rel="noopener">charliesdesserts.com/<wbr>menu, read 28 Oct 2026</a></p></li>
+          <li class="found__i"><span class="found__n">3</span><p class="found__l">The booking form asks for a time in Central European Time and never confirms the table.</p><p class="found__s"><a href="https://www.charliesdesserts.com/reservations" rel="noopener">charliesdesserts.com/<wbr>reservations, read 28 Oct 2026</a></p></li>
+          <li class="found__i"><span class="found__n">4</span><p class="found__l">Huddersfield isn’t on the site, though your post of 23 October says it’s open on King St.</p><p class="found__s"><a href="https://www.instagram.com/p/De1u2ejA_m6/" rel="noopener">charliesdesserts.com and your Instagram post of 23 Oct 2026</a></p></li>
+<!-- /gen:findings -->
+        </ol>
+      </div>
+    </div>
+    <img class="cover__hat" src="media/hat.svg" alt="" width="396" height="354" aria-hidden="true">
+  </section>
+
+  <!-- 2. Today -->
+  <section class="today" id="today" aria-labelledby="today-h">
+    <h2 id="today-h" class="ch__h">Your site today, as a visitor sees it</h2>
+    <p class="ch__sub">Screenshots taken on 28 October 2026, on a laptop and on a phone.</p>
+    <div class="shots">
+      <figure class="shot">
+        <div class="shot__pair"><img class="shot__d" src="shots/today-home-1440.webp" alt="The home page of charliesdesserts.com on a laptop, a waffle photo with View menu and Order on Uber Eats buttons" width="1440" height="900" loading="lazy"><img class="shot__p" src="shots/today-home-390.webp" alt="The same home page on a phone" width="390" height="844" loading="lazy"></div>
+        <figcaption>Your waffle and two buttons. View menu opens the PDF, and the order button takes them out to Uber Eats.</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="shot__pair"><img class="shot__d" src="shots/today-menu-1440.webp" alt="The menu page on a laptop, the printed menu shown as a picture" width="1440" height="900" loading="lazy"><img class="shot__p" src="shots/today-menu-390.webp" alt="The menu page on a phone" width="390" height="844" loading="lazy"></div>
+        <figcaption>Your menu as two pictures. Every price is there to read, and none can be tapped or added to an order.</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="shot__pair"><img class="shot__d" src="shots/today-booking-1440.webp" alt="The reservations form, with the time asked in Central European Time" width="501" height="937" loading="lazy"><img class="shot__p" src="shots/today-booking-390.webp" alt="The reservations form on a phone" width="344" height="942" loading="lazy"></div>
+        <figcaption>A visitor can ask for a table by email. The time is asked in Central European Time, and nothing confirms the booking.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3. Where an order goes -->
+  <section class="route" id="route" aria-labelledby="route-h">
+    <h2 id="route-h" class="ch__h">Where one order goes</h2>
+    <p class="ch__sub">Follow one order from your Instagram post to the counter. Switch between today and the new site, then send it.</p>
+    <div class="route__ctl" role="group" aria-label="Which route">
+      <button type="button" class="seg" data-route="today" aria-pressed="true">Today</button>
+      <button type="button" class="seg" data-route="new" aria-pressed="false">With the new site</button>
+      <button type="button" class="btn" id="route-send">Send it</button>
+    </div>
+    <div class="route__map" id="route-map">
+<!-- gen:route -->
+      <ol class="path path--today" data-path="today">
+        <li class="node"><span class="node__n">1</span><span class="node__t">Your post</span><span class="node__d"><a href="https://www.instagram.com/p/DfAgHSVgLOH/" rel="noopener">Your Instagram post of 27 Oct 2026</a></span></li>
+        <li class="node"><span class="node__n">2</span><span class="node__t">Your site</span><span class="node__d"><a href="https://www.charliesdesserts.com/" rel="noopener">charliesdesserts.com, the home page</a></span></li>
+        <li class="node"><span class="node__n">3</span><span class="node__t">The button</span><span class="node__d"><a href="https://www.charliesdesserts.com/" rel="noopener">Order on Uber Eats, the only order button</a></span></li>
+        <li class="node"><span class="node__n">4</span><span class="node__t">Uber Eats</span><span class="node__d"><a href="https://www.ubereats.com/gb/store/charlies-desserts/Nec__aR5RRaNU1CHd2wU9A" rel="noopener">Their app, set to delivery, at Uber’s listed fees</a></span></li>
+        <li class="node"><span class="node__n">5</span><span class="node__t">Your counter</span><span class="node__d">The order reaches you through Uber</span></li>
+      </ol>
+      <ol class="path path--new" data-path="new" hidden>
+        <li class="node"><span class="node__n">1</span><span class="node__t">Your post</span><span class="node__d"><a href="https://www.instagram.com/p/DfAgHSVgLOH/" rel="noopener">Your Instagram post of 27 Oct 2026</a></span></li>
+        <li class="node"><span class="node__n">2</span><span class="node__t">Your site</span><span class="node__d">The new charliesdesserts.com</span></li>
+        <li class="node"><span class="node__n">3</span><span class="node__t">The builder</span><span class="node__d">They make it their way, at your menu prices</span></li>
+        <li class="node"><span class="node__n">4</span><span class="node__t">Your slots</span><span class="node__d">Collect or delivery, inside your opening hours</span></li>
+        <li class="node"><span class="node__n">5</span><span class="node__t">Your counter</span><span class="node__d">The golden ticket prints in the shop they picked</span></li>
+      </ol>
+      <div class="path__ticket" id="route-ticket" aria-hidden="true"></div>
+<!-- /gen:route -->
+    </div>
+  </section>
+
+  <!-- 4. What the listed fees take, the one bright chapter -->
+  <section class="fees" id="fees" aria-labelledby="fees-h">
+    <div class="fees__drips" aria-hidden="true"></div>
+    <div class="fees__inner">
+      <h2 id="fees-h" class="ch__h">What the listed fees take from the orders you start</h2>
+      <p class="ch__sub" id="fees-note">Example numbers, not yours. Move them to your own.</p>
+      <div class="fees__grid">
+        <div class="fees__ctl">
+          <label class="sl"><span class="sl__l">Orders a week that start on your site or your posts</span><output class="sl__v" id="v-orders">40</output>
+            <input type="range" id="in-orders" min="5" max="200" step="5" value="40"></label>
+          <label class="sl"><span class="sl__l">Average order</span><output class="sl__v" id="v-aov">£14</output>
+            <input type="range" id="in-aov" min="6" max="40" step="1" value="14"></label>
+          <label class="sl"><span class="sl__l">Share of them delivered, the rest collected</span><output class="sl__v" id="v-share">60%</output>
+            <input type="range" id="in-share" min="0" max="1" step="0.05" value="0.6"></label>
+        </div>
+        <div class="fees__out">
+          <p class="fees__big"><span id="fee-year">£6,756</span> <span class="fees__per">a year</span></p>
+          <p class="fees__what">at Uber’s listed UK fees, on orders that started with you</p>
+          <div class="bar" id="fee-bar" aria-hidden="true">
+            <div class="bar__d" id="bar-d"><span>Delivered</span></div><div class="bar__c" id="bar-c"><span>Collected</span></div>
+            <div class="bar__handle" id="bar-handle" title="Drag to change the share delivered"></div>
+          </div>
+          <dl class="fees__rows">
+            <div><dt>Delivered orders, <span id="r-dpct">30%</span> of <span id="r-dval">£17,472</span></dt><dd id="r-dfee">£5,242</dd></div>
+            <div><dt>Collected orders, <span id="r-cpct">13%</span> of <span id="r-cval">£11,648</span></dt><dd id="r-cfee">£1,514</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="fees__src" id="fees-src">Listed fees from the <a href="https://merchants.ubereats.com/gb/en/pricing/" rel="noopener">Uber Eats UK merchant pricing page, read 28 Oct 2026</a>. Delivery 30% (33% for Uber One members), pickup 13%, both of the order, excluding VAT, plus a £650 activation fee. Your own agreement with Uber may differ.</p>
+      <p class="fees__point">The point is the orders your own channels start. Uber Eats can keep the ones that start on Uber’s app.</p>
+    </div>
+  </section>
+
+  <!-- 5. The build -->
+  <section class="build" id="build" aria-labelledby="build-h">
+    <h2 id="build-h" class="ch__h">What you saw in the sketch</h2>
+    <p class="ch__sub">Six screens from the prototype, taken on 29 October 2026. <a href="https://astra-charlies-prototype.netlify.app/">Open the sketch</a></p>
+    <div class="reel">
+      <figure class="frame"><img src="shots/proto-hero.webp" alt="The prototype’s first screen, Charlie’s hat upside down on the counter with a waffle rising out of it" width="1440" height="900" loading="lazy"><figcaption>The shop opens, the hat flips over and the dessert they pick rises out of it.</figcaption></figure>
+      <figure class="frame"><img src="shots/proto-pour.webp" alt="A sauce pouring over the waffle in the builder, in the shape of the drips on the menu" width="1440" height="900" loading="lazy"><figcaption>Every sauce pours in the shape of the drips on your menu, a pound a pour.</figcaption></figure>
+      <figure class="frame"><img src="shots/proto-favourite.webp" alt="A favourite from the menu in the builder" width="1440" height="900" loading="lazy"><figcaption>A favourite lands in the builder already dressed, at its menu price.</figcaption></figure>
+      <figure class="frame"><img src="shots/proto-menu.webp" alt="The whole menu set as text" width="1440" height="900" loading="lazy"><figcaption>The whole menu as text, every price, every item one tap from an order.</figcaption></figure>
+      <figure class="frame"><img src="shots/proto-ticket.webp" alt="The golden ticket at the end of an order" width="1440" height="900" loading="lazy"><figcaption>The order ends on a golden ticket with their creation drawn on it.</figcaption></figure>
+      <figure class="frame"><img src="shots/proto-booking.webp" alt="A birthday table booked and confirmed" width="1440" height="900" loading="lazy"><figcaption>Birthday tables book and confirm on the page.</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 6. What runs underneath -->
+  <section class="under" id="under" aria-labelledby="under-h">
+    <h2 id="under-h" class="ch__h">What runs underneath, chosen with you</h2>
+    <p class="ch__sub">Proposed, and settled with you before we start. Tap a ticket on the rail to read it.</p>
+    <div class="rail">
+<!-- gen:rail -->
+      <button type="button" class="rt" aria-expanded="false" style="--i:0"><span class="rt__no">01</span><span class="rt__t">One site for both shops</span><span class="rt__d">Brighouse and Huddersfield on one site, each with its own hours, menu notes and order and booking buttons.</span></button>
+      <button type="button" class="rt" aria-expanded="false" style="--i:1"><span class="rt__no">02</span><span class="rt__t">Orders and payments into your account</span><span class="rt__d">Paid on the site straight into your own account, through a payment provider such as Stripe or Square, chosen with you.</span></button>
+      <button type="button" class="rt" aria-expanded="false" style="--i:2"><span class="rt__no">03</span><span class="rt__t">Each order prints in the right shop</span><span class="rt__d">An order lands on a tablet or a ticket printer in the shop the customer picked.</span></button>
+      <button type="button" class="rt" aria-expanded="false" style="--i:3"><span class="rt__no">04</span><span class="rt__t">Collection slots inside your hours</span><span class="rt__d">Customers pick a time the shop can do, in UK time, and the shop can pause slots when it’s busy.</span></button>
+      <button type="button" class="rt" aria-expanded="false" style="--i:4"><span class="rt__no">05</span><span class="rt__t">Delivery your way</span><span class="rt__d">By your own drivers or a courier booked per delivery, with the area and the fee set by you.</span></button>
+      <button type="button" class="rt" aria-expanded="false" style="--i:5"><span class="rt__no">06</span><span class="rt__t">Tables that confirm</span><span class="rt__d">Bookings check the diary for that shop and confirm by email, so nobody emails into the void.</span></button>
+      <button type="button" class="rt" aria-expanded="false" style="--i:6"><span class="rt__no">07</span><span class="rt__t">The menu as one file</span><span class="rt__d">Your team edits one menu file and a price changes everywhere at once, the builder and the menu page together.</span></button>
+      <button type="button" class="rt" aria-expanded="false" style="--i:7"><span class="rt__no">08</span><span class="rt__t">Counted from day one</span><span class="rt__d">Orders, bookings and where each one came from, your posts, your site or a search, measured from the first day.</span></button>
+      <button type="button" class="rt" aria-expanded="false" style="--i:8"><span class="rt__no">09</span><span class="rt__t">Your socials pointed at it</span><span class="rt__d">Your Instagram, TikTok and Facebook links sent to the new pages, so a post leads straight to an order.</span></button>
+<!-- /gen:rail -->
+    </div>
+  </section>
+
+  <!-- 7. The cost -->
+  <section class="cost" id="cost" aria-labelledby="cost-h">
+    <div class="cost__ticket">
+      <div class="cost__foil" aria-hidden="true"></div>
+      <div class="cost__body">
+        <h2 id="cost-h" class="cost__h"><span id="cost-eur">€10,000</span> for the whole site.</h2>
+        <p class="cost__lede">One price for everything in this plan, half to start and half when it’s live.</p>
+        <div class="cost__split"><p><span class="k">To start</span><b id="cost-1">€5,000</b></p><p><span class="k">When it’s live</span><b id="cost-2">€5,000</b></p></div>
+        <p class="cost__in">In the price, the site from the sketch with every moment in it, and everything on the rail above.</p>
+        <p class="cost__out">Not in the price, the payment provider’s and courier’s own fees, and your ad spend.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Six weeks to live -->
+  <section class="weeks" id="weeks" aria-labelledby="weeks-h">
+    <h2 id="weeks-h" class="ch__h">Six weeks to live</h2>
+    <p class="ch__sub">Drag the hat along the weeks, or tap one.</p>
+    <div class="tl" id="tl">
+      <div class="tl__track" id="tl-track">
+<!-- gen:weeks -->
+        <button type="button" class="wk" data-week="1" data-what="The menu as data, your photos and footage, the builder and the pour." data-phase="0"><b>Week 1</b></button>
+        <button type="button" class="wk" data-week="2" data-what="The menu as data, your photos and footage, the builder and the pour." data-phase="0"><b>Week 2</b></button>
+        <button type="button" class="wk" data-week="3" data-what="Ordering and payments for both shops, bookings, the rest of the site, every old address redirected." data-phase="1"><b>Week 3</b></button>
+        <button type="button" class="wk" data-week="4" data-what="Ordering and payments for both shops, bookings, the rest of the site, every old address redirected." data-phase="1"><b>Week 4</b></button>
+        <button type="button" class="wk" data-week="5" data-what="Ordering and payments for both shops, bookings, the rest of the site, every old address redirected." data-phase="1"><b>Week 5</b></button>
+        <button type="button" class="wk" data-week="6" data-what="Tested in both shops with real orders, then live." data-phase="2"><b>Week 6</b></button>
+<!-- /gen:weeks -->
+      </div>
+      <img class="tl__hat" id="tl-hat" src="media/hat.svg" alt="" width="396" height="354" aria-hidden="true">
+    </div>
+    <p class="tl__read" id="tl-read" aria-live="polite"></p>
+  </section>
+
+  <!-- 9. Who builds it, and next -->
+  <section class="team" id="team" aria-labelledby="team-h">
+    <h2 id="team-h" class="ch__h">Who builds it</h2>
+    <div class="team__grid">
+      <div class="team__us">
+        <p>Astra plans and builds websites, apps and the systems around them. Astra and Amwisesa work as one team, Astra on strategy and project management, Amwisesa building.</p>
+        <p>The team has built for Unilever, Pertamina, the World Bank, Nestlé, IKEA, Panasonic, AXA, AIA, Bank Mandiri and Telkom.</p>
+        <p>Built by Amwisesa, Astra’s development partner, often through the brand’s own agency.</p>
+      </div>
+      <div class="person">
+        <h3>Raka Mulya</h3>
+        <p class="person__role">Go to market architect and entrepreneur. Your contact at Astra.</p>
+        <p>Led global ebusiness data and insights at Heineken across 23 markets, and ran global go to market for Betty Blocks, the low code platform. Now runs sales and channel operations at efficy, a European CRM company. He also founded a stroopwafel brand from nothing and scaled it.</p>
+        <p><a href="https://www.linkedin.com/in/raka-mulya-b92885196/" rel="noopener">Raka on LinkedIn</a></p>
+      </div>
+      <div class="person">
+        <h3>Joshua van Zeelt</h3>
+        <p class="person__role">Founder of Astra Agency and JML Agency.</p>
+        <p>Builds custom websites, software and apps from the first conversation to launch. Studied artificial intelligence at VU Amsterdam and holds an MSc in Strategic Entrepreneurship from RSM Erasmus. Spent seven years coordinating projects at Schiphol, where he helped develop an asset app that forecasts maintenance.</p>
+        <p><a href="https://www.linkedin.com/in/joshua-van-zeelt/" rel="noopener">Joshua on LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="next">
+      <h2 class="next__h">Next, a call.</h2>
+      <p>Twenty minutes to walk through the site and the plan and settle where to start</p>
+      <a class="btn btn--gold" href="mailto:RAKA_EMAIL?subject=Charlie%E2%80%99s%20site%20and%20plan">Email</a> <a class="btn" href="https://astra-charlies-prototype.netlify.app/">Open the sketch</a>
+    </div>
+    <footer class="foot">
+      <p>Prepared by Astra for Charlie’s Desserts, October 2026. Screenshots of charliesdesserts.com taken 28 October 2026. Each figure names its source underneath.</p>
+    </footer>
+  </section>
+</main>
+<script type="application/json" id="plan-data">{"_about":"Every figure and line on the plan site, with its source and the date it was read. qa/sums.js recomputes every sum on the page from this file. build.js copies it into index.html so the page reads it offline too.","prepared":{"for":"Danielle Best","by":"Astra","month":"October 2026","screenshots_taken":"28 October 2026"},"findings":[{"line":"The only order button on your site goes to Uber Eats.","source_label":"charliesdesserts.com, read 28 Oct 2026","source":"https://www.charliesdesserts.com/","read":"2026-10-28"},{"line":"The menu is two pictures and a PDF, so no price on the site can be tapped or added to an order.","source_label":"charliesdesserts.com/menu, read 28 Oct 2026","source":"https://www.charliesdesserts.com/menu","read":"2026-10-28"},{"line":"The booking form asks for a time in Central European Time and never confirms the table.","source_label":"charliesdesserts.com/reservations, read 28 Oct 2026","source":"https://www.charliesdesserts.com/reservations","read":"2026-10-28"},{"line":"Huddersfield isn’t on the site, though your post of 23 October says it’s open on King St.","source_label":"charliesdesserts.com and your Instagram post of 23 Oct 2026","source":"https://www.instagram.com/p/De1u2ejA_m6/","read":"2026-10-28"}],"links":{"site":"https://www.charliesdesserts.com/","instagram_post":"https://www.instagram.com/p/DfAgHSVgLOH/","instagram_post_date":"27 Oct 2026","uber_store":"https://www.ubereats.com/gb/store/charlies-desserts/Nec__aR5RRaNU1CHd2wU9A","read":"2026-10-28"},"audience":{"instagram":4318,"tiktok":3857,"facebook":1917,"source":"your Instagram, TikTok and Facebook pages","read":"2026-10-28"},"uber_fees":{"delivery":0.3,"delivery_uber_one":0.33,"pickup":0.13,"self_delivery":0.13,"activation_gbp":650,"basis":"of the order, excluding VAT","source_label":"Uber Eats UK merchant pricing page, read 28 Oct 2026","source":"https://merchants.ubereats.com/gb/en/pricing/","read":"2026-10-28"},"calculator":{"weeks_a_year":52,"defaults":{"orders_a_week":40,"average_order_gbp":14,"delivery_share":0.6},"ranges":{"orders_a_week":[5,200,5],"average_order_gbp":[6,40,1],"delivery_share":[0,1,0.05]},"note":"Example numbers, not yours. Move them to your own."},"price":{"eur":10000,"first_payment_share":0.5,"second_payment_share":0.5,"first_when":"to start","second_when":"when it’s live","source":"Astra","read":"2026-10-28"},"weeks":[{"from":1,"to":2,"what":"The menu as data, your photos and footage, the builder and the pour."},{"from":3,"to":5,"what":"Ordering and payments for both shops, bookings, the rest of the site, every old address redirected."},{"from":6,"to":6,"what":"Tested in both shops with real orders, then live."}]}</script>
+<script src="js/fees.js" defer></script>
+<script src="js/plan.js" defer></script>
+</body>
+</html>

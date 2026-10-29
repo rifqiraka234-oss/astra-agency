@@ -1,0 +1,15 @@
+{
+ "source": "Charlie's menu PDF page 1 (2381px wide render), clean columns x 1465-2381 then 0-350, joined across the page edge; 110px smoothstep at the wrap; 1D open/close (11px) removes residue narrower than any drip; the drip at x 145-167 capped at 640 with a round tip (its real tip meets a text line); band kept at least 22px deep",
+ "templatePx": [
+  1266,
+  679
+ ],
+ "texture": [
+  1024,
+  549
+ ],
+ "encoding": "r = 128 + 2*signedDistance (texture px), inside positive",
+ "maxLen": 639,
+ "bandMin": 22,
+ "variant": "drips only: lobes wider than 61px capped to a 34px band, drips kept at full length, 26px fillets"
+}
