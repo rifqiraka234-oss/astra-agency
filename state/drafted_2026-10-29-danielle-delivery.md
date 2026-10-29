@@ -1,3 +1,4 @@
+<!-- HELD 29 Oct on Raka's round 2 (pages, header, sleeker flow). Do not send until the new build is live and rechecked. -->
 # Danielle Best, Charlie's Desserts, the delivery. NOT SENT, needs Raka's word
 
 She said "Yes pls" on 28 Oct 14.07 UTC (act_LRjEGpRLiSiD8SYQN) to our 26 Oct SKETCHB opener. Thread pulled 29 Oct, 2 items

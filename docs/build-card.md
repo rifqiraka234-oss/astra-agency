@@ -35,6 +35,10 @@ back to research, never to guess.
    carries it in the page, not only in the header, and no half screen from top to foot is without it, phone included.
 3. The flow table (file name). One row per step, the visitor's question, what they see and do, the moment that answers.
 4. The one state carried down the page, and the form arriving already filled in.
+4b. The pages and the header (Raka, 29 Oct, on Charlie's v1, one 25 screen page with no navigation, "do we not design a
+    home page and different pages ... on the header as well", "it's a bit too much ... more sleek the flow"). A header on
+    every page with a page per visitor's action (home, menu, booking, find us or their equivalents), the order kept
+    across pages, a home of about 10 screens at 1440, and their photos and film carrying every page.
 
 ## B. The idea and the feeling. Notes "normal CLAUDE website", "no wow effect", "doesn't give me wedding vibes"
 
