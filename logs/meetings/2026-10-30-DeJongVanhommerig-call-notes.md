@@ -7,8 +7,9 @@ clear is written down here. Calendar event of the call, mthm17usf4g5jhhhba1gk50i
 
 **Second meeting booked, the refinement session. Thursday 5 Nov 2026, 10:00 to 11:00 Amsterdam, one hour, with Raka's
 partner, who speaks Dutch.** Raka said "I'll send you the invite soon". She is in court all day Wednesday. Event on
-Raka's calendar, id fbicbb7998qd8tcju5gmcemgig, Meet https://meet.google.com/mvp-gyag-wsx . **No guest added and no
-invite sent yet**, it waits for Raka's go. The Thursday slot was free, his only event that day is the Ivan catch up at 15:00.
+Raka's calendar, id fbicbb7998qd8tcju5gmcemgig, Meet https://meet.google.com/mvp-gyag-wsx . **Invite sent 30 Oct 10:07 UTC** to
+lisanne@dejongvanhommerig.com and Josh (joshuavanzeelt@gmail.com and josh@astraagency.nl) on Raka's go. The description she sees is one
+line, the internal notes live here. The Thursday slot was free, his only event that day is the Ivan catch up at 15:00.
 
 ## Why she took the call
 
