@@ -1,5 +1,5 @@
-<!-- APPROVED 29 Oct by Raka, "just put it to netlify and then remote send for tomorrow at 06.00 to her". Meant for Fri 30 Oct 06.00 Amsterdam. MISSED, the worker restarted before the send was scheduled. NOT SENT. Needs a new time from Raka. -->
-# Danielle Best, Charlie's Desserts, the delivery. NOT SENT, waiting on a new time from Raka
+<!-- SENT 2026-10-30 06.56.11 UTC on Raka's "Send now fpr her", act_rNP4rKeELjNovcGFE. Do not send again. -->
+# Danielle Best, Charlie's Desserts, the delivery. SENT 30 Oct 06.56 UTC
 
 She said "Yes pls" on 28 Oct 14.07 UTC (act_LRjEGpRLiSiD8SYQN) to our 26 Oct SKETCHB opener. Thread pulled 29 Oct, 2 items
 (ours, hers), nothing since. Not in any bump run (removed from the 29 Oct bumps by the other session).
