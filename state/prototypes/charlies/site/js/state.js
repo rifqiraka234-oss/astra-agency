@@ -2,21 +2,24 @@
    (window.CHARLIE_MENU, generated from menu.json). Money is kept in pence so no total drifts by a penny.
    order   = the creation (base, size, preset, sauces, toppings, extras, qty) plus menu items added beside it,
              then where it goes (shop, mode, time, name, phone)
-   booking = a party table (shop, partySize, date, time, occasion, name, phone) */
+   booking = a party table (shop, partySize, date, time, occasion, name, phone)
+   Both are kept in sessionStorage, so the order and the booking follow the visitor from page to page. If storage is
+   blocked the page still works, it just starts fresh on the next page. */
 (function () {
   'use strict';
-  var M = window.CHARLIE_MENU;
+  var M = window.CHARLIE_MENU, ITEMS = window.CHARLIE_ITEMS || {};
+  var R = window.CD_ROOT || ''; // the page's way back to the site's root, for the pictures
   var p = function (pounds) { return Math.round(pounds * 100); };
 
   // The six create your own bases. A base is plain at its menu price, everything added goes on top at list price.
   var BASES = {
-    waffle:       { name: 'Waffle', pence: p(M.bases.crepe_or_waffle.create_your_own_from), from: true, extras: true, img: 'media/waffle.webp', rail: 'media/waffle-rail.webp', alt: 'Two of Charlie’s waffles with whippy swirls, foam sweets and blue drizzle', photo: true },
-    crepe:        { name: 'Crepe', pence: p(M.bases.crepe_or_waffle.create_your_own_from), from: true, extras: true, img: 'media/crepe.svg', rail: 'media/crepe.svg', alt: 'A crepe folded in four on a lilac plate, drawn for this prototype', photo: false },
-    shake:        { name: 'Shake', pence: p(M.bases.shake.create_your_own_from), from: true, extras: false, img: 'media/shake.webp', rail: 'media/shake-rail.webp', alt: 'A blue raspberry shake from Charlie’s, piled with foam sweets, with a rainbow lollipop', photo: true },
-    cookie_dough: { name: 'Cookie dough', pence: p(M.bases.cookie_dough.price), from: false, extras: true, img: 'media/cookie-dough.webp', rail: 'media/cookie-dough-rail.webp', alt: 'Charlie’s cookie dough with white chocolate drizzle, raspberry pieces and a star biscuit', photo: true },
-    sundae:       { name: 'Whippy sundae', pence: p(M.bases.whippy_sundae.price), from: false, extras: false, img: 'media/sundae.svg', rail: 'media/sundae.svg', alt: 'A plain whippy sundae, drawn for this prototype', photo: false },
+    waffle:       { name: 'Waffle', pence: p(M.bases.crepe_or_waffle.create_your_own_from), from: true, extras: true, img: R + 'media/waffle.webp', rail: R + 'media/waffle-rail.webp', alt: 'Two of Charlie’s waffles with whippy swirls, foam sweets and blue drizzle', photo: true },
+    crepe:        { name: 'Crepe', pence: p(M.bases.crepe_or_waffle.create_your_own_from), from: true, extras: true, img: R + 'media/crepe.svg', rail: R + 'media/crepe.svg', alt: 'A crepe folded in four on a lilac plate, drawn for this prototype', photo: false },
+    shake:        { name: 'Shake', pence: p(M.bases.shake.create_your_own_from), from: true, extras: false, img: R + 'media/shake.webp', rail: R + 'media/shake-rail.webp', alt: 'A blue raspberry shake from Charlie’s, piled with foam sweets, with a rainbow lollipop', photo: true },
+    cookie_dough: { name: 'Cookie dough', pence: p(M.bases.cookie_dough.price), from: false, extras: true, img: R + 'media/cookie-dough.webp', rail: R + 'media/cookie-dough-rail.webp', alt: 'Charlie’s cookie dough with white chocolate drizzle, raspberry pieces and a star biscuit', photo: true },
+    sundae:       { name: 'Whippy sundae', pence: p(M.bases.whippy_sundae.price), from: false, extras: false, img: R + 'media/sundae.svg', rail: R + 'media/sundae.svg', alt: 'A plain whippy sundae, drawn for this prototype', photo: false },
     froyo:        { name: 'Frozen yoghurt', sizes: { small: p(M.bases.frozen_yoghurt.small), medium: p(M.bases.frozen_yoghurt.medium), large: p(M.bases.frozen_yoghurt.large) },
-                    from: true, extras: false, toppingsIncluded: true, img: 'media/frozen-yoghurt.svg', rail: 'media/frozen-yoghurt.svg', alt: 'A frozen yoghurt in a striped cup, drawn for this prototype', photo: false }
+                    from: true, extras: false, toppingsIncluded: true, img: R + 'media/frozen-yoghurt.svg', rail: R + 'media/frozen-yoghurt.svg', alt: 'A frozen yoghurt in a striped cup, drawn for this prototype', photo: false }
   };
   BASES.froyo.pence = BASES.froyo.sizes.small;
   var BASE_ORDER = ['waffle', 'crepe', 'shake', 'cookie_dough', 'sundae', 'froyo'];
@@ -113,6 +116,45 @@
 
   function money(pence) { return '£' + (pence / 100).toFixed(2); }
 
+  // ---------- kept from page to page ----------
+  var KEY = 'charlies-order-1', BKEY = 'charlies-booking-1';
+  function save() {
+    try {
+      var o = {}; ['shop', 'mode', 'base', 'size', 'preset', 'sauces', 'toppings', 'extras', 'qty', 'creation', 'items', 'time', 'address', 'name', 'phone'].forEach(function (k) { o[k] = order[k]; });
+      sessionStorage.setItem(KEY, JSON.stringify(o)); sessionStorage.setItem(BKEY, JSON.stringify(booking));
+    } catch (e) { /* storage blocked, the page carries on */ }
+  }
+  var str = function (v, n) { return typeof v === 'string' ? v.slice(0, n || 120) : ''; };
+  var list = function (v, ok) { var out = []; (Array.isArray(v) ? v : []).forEach(function (x) { if (ok(x) && out.indexOf(x) < 0) out.push(x); }); return out; };
+  // anything read back is checked against the menu, so a stored order can only ever hold the menu's own prices
+  function restore() {
+    var o = null, b = null;
+    try { o = JSON.parse(sessionStorage.getItem(KEY) || 'null'); b = JSON.parse(sessionStorage.getItem(BKEY) || 'null'); } catch (e) { return; }
+    if (o && typeof o === 'object') {
+      if (BASES[o.base]) order.base = o.base;
+      if (SIZE_NAMES[o.size]) order.size = o.size;
+      order.sauces = list(o.sauces, function (x) { return SAUCES.indexOf(x) >= 0; });
+      order.toppings = list(o.toppings, function (x) { return TOPPING_PENCE[x] != null; });
+      order.extras = BASES[order.base].extras ? list(o.extras, function (x) { return !!EXTRAS[x]; }).slice(0, 1) : [];
+      order.preset = o.preset && PRESETS[o.preset] && PRESETS[o.preset].base === order.base ? o.preset : null;
+      order.qty = Math.max(1, Math.min(20, o.qty | 0 || 1));
+      order.items = (Array.isArray(o.items) ? o.items : []).filter(function (i) { return i && ITEMS[i.key]; })
+        .map(function (i) { return { key: i.key, name: ITEMS[i.key].name, pence: ITEMS[i.key].pence, qty: Math.max(1, Math.min(20, i.qty | 0 || 1)) }; });
+      order.creation = o.creation !== false || !order.items.length;
+      order.shop = o.shop === 'brighouse' || o.shop === 'huddersfield' ? o.shop : null;
+      order.mode = o.mode === 'collect' || o.mode === 'delivery' ? o.mode : null;
+      order.time = str(o.time, 40) || null; order.address = str(o.address); order.name = str(o.name); order.phone = str(o.phone, 40);
+    }
+    if (b && typeof b === 'object') {
+      booking.shop = b.shop === 'brighouse' || b.shop === 'huddersfield' ? b.shop : null;
+      booking.partySize = Math.max(1, Math.min(10, b.partySize | 0 || 6));
+      booking.date = str(b.date, 60) || null; booking.time = str(b.time, 20) || null;
+      booking.occasion = ['Birthday', 'Celebration', 'Date night'].indexOf(b.occasion) >= 0 ? b.occasion : null;
+      booking.name = str(b.name); booking.phone = str(b.phone, 40);
+      booking.placed = b.placed && typeof b.placed === 'object' ? { at: +b.placed.at || 0 } : null;
+    }
+  }
+
   function set(patch, why) {
     for (var k in patch) order[k] = patch[k];
     if (!BASES[order.base].extras) order.extras = order.extras.filter(function () { return false; });
@@ -120,6 +162,7 @@
     order.qty = Math.max(1, Math.min(20, order.qty | 0));
     if (!order.creation && !order.items.length) order.creation = true;
     order.total = totalPence(order);
+    save();
     subs.forEach(function (fn) { fn(order, why || {}); });
   }
   function toggle(listName, value) {
@@ -134,8 +177,9 @@
     var pr = PRESETS[id]; if (!pr) return;
     set({ base: pr.base, preset: id, sauces: pr.sauces.slice(), toppings: pr.toppings.slice(), extras: pr.extras.slice(), creation: true, size: 'small' }, { preset: id });
   }
-  // menu items that aren't built, added beside the creation
+  // menu items that aren't built, added beside the creation, always at the menu's own price for that item
   function addItem(key, name, pence) {
+    if (ITEMS[key]) { name = ITEMS[key].name; pence = ITEMS[key].pence; }
     var items = order.items.map(function (i) { return Object.assign({}, i); }), f = null;
     items.forEach(function (i) { if (i.key === key) f = i; });
     if (f) f.qty = Math.min(20, f.qty + 1); else items.push({ key: key, name: name, pence: pence, qty: 1 });
@@ -149,13 +193,15 @@
   function setBooking(patch) {
     for (var k in patch) booking[k] = patch[k];
     booking.partySize = Math.max(1, Math.min(10, booking.partySize | 0));
+    save();
     bsubs.forEach(function (fn) { fn(booking); });
   }
 
+  restore();
   order.total = totalPence(order);
   window.CharlieOrder = {
     BASES: BASES, BASE_ORDER: BASE_ORDER, SAUCES: SAUCES, SAUCE_PENCE: SAUCE_PENCE, TOPPINGS: TOPPINGS, TOPPING_PENCE: TOPPING_PENCE, EXTRAS: EXTRAS, SIZE_NAMES: SIZE_NAMES, PRESETS: PRESETS,
-    get: function () { return order; },
+    get: function () { return order; }, ITEMS: ITEMS,
     set: set, toggle: toggle, usePreset: usePreset, addItem: addItem, changeItem: changeItem, presetOf: presetOf,
     lines: lines, creationLines: creationLines, total: totalPence, each: eachPence, itemsPence: itemsPence, nameOf: nameOf, barName: barName, money: money, basePence: basePence,
     subscribe: function (fn) { subs.push(fn); },

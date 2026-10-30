@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<!-- gen:head -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2b0b47">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../fonts/MonaSans-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../media/logo.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="../css/site.css">
+<script>window.CD_ROOT = '../'; window.CD_PAGE = 'birthdays';
+(function (d) { d.classList.add('js'); if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; d.classList.add('motion');
+  /* Home opens with the shutter down, unless the visitor came straight for the builder */
+  if (window.CD_PAGE === 'home' && location.hash !== '#make') d.classList.add('is-shut'); })(document.documentElement);</script>
+<!-- /gen:head -->
+<title>Charlie’s Desserts, book a table for the party</title>
+<meta name="description" content="Book a table at Charlie’s in Brighouse or Huddersfield for a birthday, a celebration or a date night, and watch a chair appear for each of you. A prototype by Astra agency.">
+</head>
+<body data-page="birthdays">
+<!-- gen:top -->
+<a class="skip" href="#main">Skip to the page</a>
+<aside class="proto-top" aria-label="About this prototype"><p>A prototype by Astra agency for Charlie’s Desserts. Prices from Charlie’s menu. Nothing here places a real order or booking.</p></aside>
+<header class="hd" id="hd">
+  <a class="hd__logo" href="../"><img src="../media/logo.webp" alt="Charlie’s, home" width="640" height="387"></a>
+  <nav class="hd__nav" aria-label="Pages"><a class="hd__link" href="../#make" data-nav="make">Make your own</a><a class="hd__link" href="../menu/" data-nav="menu">Menu</a><a class="hd__link" href="../birthdays/" data-nav="birthdays" aria-current="page">Birthdays</a><a class="hd__link" href="../find-us/" data-nav="find-us">Find us</a></nav>
+  <div class="hd__acts">
+    <p class="hd__note">Estimated from Charlie’s menu, final price at the counter</p>
+    <a class="btn-order btn-order--book hd__book" href="#book" data-action="book">Book</a>
+    <button type="button" class="btn-order hd__order" data-action="order" data-order="header"><span class="price" data-live="total">£5.50</span> <span>Order</span></button>
+    <button type="button" class="hd__menu" id="hd-menu" aria-expanded="false" aria-controls="panel"><span class="hd__burger" aria-hidden="true"><i></i><i></i></span>Menu</button>
+  </div>
+</header>
+<nav class="panel" id="panel" aria-label="All pages" hidden>
+  <div class="panel__nav"><a class="panel__link" href="../#make" data-nav="make">Make your own</a><a class="panel__link" href="../menu/" data-nav="menu">Menu</a><a class="panel__link" href="../birthdays/" data-nav="birthdays" aria-current="page">Birthdays</a><a class="panel__link" href="../find-us/" data-nav="find-us">Find us</a></div>
+  <div class="panel__shops">
+    <p><b>Brighouse</b> 3 Bridge Road, open every day 12 to 10</p>
+    <p><b>Huddersfield</b> 51 King St, hours to confirm</p>
+  </div>
+  <p class="note panel__note">A prototype by Astra agency for Charlie’s Desserts. Prices from Charlie’s menu. Nothing here places a real order or booking.</p>
+</nav>
+<!-- /gen:top -->
+
+<main id="main">
+  <!-- 1. Their waffles with a spoon going in, full bleed, and the one thing this page does -->
+<!-- gen:phero -->
+  <section class="phero" aria-labelledby="ph-h">
+    <figure class="phero__pic" style="--pos:50% 46%"><img src="../media/photo/p11-1000.webp" srcset="../media/photo/p11-640.webp 640w, ../media/photo/p11-1000.webp 1000w, ../media/photo/p11-1500.webp 1500w, ../media/photo/p11-2000.webp 2000w" sizes="100vw" alt="A spoon going into Charlie’s waffles, piled with whippy and foam sweets, a shake either side" width="1000" height="1499" fetchpriority="high" decoding="async"></figure>
+    <div class="phero__copy">
+      <h1 id="ph-h" class="h1 phero__h">A table for the party, confirmed before you leave the page</h1>
+      <p class="phero__sub">Book for a birthday, a celebration or a date night, and everyone picks their own when they get here.</p>
+      <a class="btn-order btn-order--book btn-order--big" href="#book" data-action="book">Book a table</a>
+    </div>
+  </section>
+<!-- /gen:phero -->
+
+  <!-- 2. The booking. A giant number, a chair round the table for each of you, and a table ticket stamped confirmed -->
+  <section class="party" id="book" aria-labelledby="party-h">
+    <div class="party__inner">
+      <div class="party__copy">
+        <h2 id="party-h" class="h2 party__h">A chair for each of you, round the one table</h2>
+        <p class="party__sub">Drag the number and the table fills up. Then the shop, the day and a time, and your table ticket stamps.</p>
+      </div>
+      <div class="party__table" aria-hidden="true">
+        <svg class="table-svg" id="table-svg" viewBox="-200 -200 400 400"></svg>
+        <video class="film party__confetti" muted playsinline loop preload="none" data-src="media/film/confetti.mp4" data-type="video/mp4" data-poster="media/film/confetti.webp" aria-hidden="true" tabindex="-1" data-on="booked"></video>
+      </div>
+      <form class="bform" id="bform" novalidate>
+        <div class="partysize">
+          <label class="partysize__l" for="party-size">How many of you</label>
+          <div class="partysize__row">
+            <button type="button" class="qty__b" id="party-minus" aria-label="One fewer"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+            <input class="partysize__n" id="party-size" name="party-size" type="range" min="1" max="10" step="1" value="6" aria-valuetext="6 people">
+            <output class="partysize__big" id="party-big" for="party-size">6</output>
+            <button type="button" class="qty__b" id="party-plus" aria-label="One more"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M2 7h10M7 2v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          </div>
+          <p class="ofs__note">Drag the number, or use the buttons. 10 means 10 or more.</p>
+        </div>
+        <fieldset class="ofs">
+          <legend>Which shop</legend>
+          <div class="seg">
+            <label class="segb"><input type="radio" name="party-shop" value="brighouse" required><span class="segb__t">Brighouse</span></label>
+            <label class="segb"><input type="radio" name="party-shop" value="huddersfield"><span class="segb__t">Huddersfield</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="ofs">
+          <legend>The occasion</legend>
+          <div class="seg seg--3">
+            <label class="segb"><input type="radio" name="party-occasion" value="Birthday" required><span class="segb__t">Birthday</span></label>
+            <label class="segb"><input type="radio" name="party-occasion" value="Celebration"><span class="segb__t">Celebration</span></label>
+            <label class="segb"><input type="radio" name="party-occasion" value="Date night"><span class="segb__t">Date night</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="ofs">
+          <legend id="pdate-l">Which day</legend>
+          <div class="days" id="days" role="radiogroup" aria-labelledby="pdate-l"></div>
+        </fieldset>
+        <fieldset class="ofs">
+          <legend id="ptime-l">What time, in UK time</legend>
+          <p class="ofs__note" id="ptime-note">Example times, inside opening hours</p>
+          <div class="slots" id="pslots" role="radiogroup" aria-labelledby="ptime-l"></div>
+        </fieldset>
+        <div class="ofs ofs--you">
+          <label class="field"><span>Name for the booking</span><input name="party-name" id="party-name" autocomplete="name" required></label>
+          <label class="field"><span>Your phone</span><input name="party-phone" id="party-phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        </div>
+        <p class="oform__err" id="bform-err" role="alert"></p>
+        <button type="submit" class="btn-order btn-order--big btn-order--book" id="place-booking">Book</button>
+        <p class="note proto">A prototype by Astra agency for Charlie’s Desserts. Prices from Charlie’s menu. Nothing here places a real order or booking.</p>
+      </form>
+      <div class="tticket" id="tticket" hidden>
+        <div class="gticket__foil" aria-hidden="true"></div>
+        <div class="tticket__body">
+          <p class="tticket__k">Table ticket</p>
+          <p class="tticket__big" id="tt-big"></p>
+          <p class="tticket__line" id="tt-line"></p>
+        </div>
+        <div class="gticket__stamp" aria-hidden="true">Confirmed</div>
+      </div>
+      <p class="order__done" id="booking-done" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- 3. Their white shake, full bleed. Everyone picks their own when they get here -->
+  <section class="pband" aria-labelledby="pband-h">
+<!-- gen:band -->
+    <figure class="pband__pic"><img src="../media/photo/p06-1400.webp" srcset="../media/photo/p06-800.webp 800w, ../media/photo/p06-1400.webp 1400w, ../media/photo/p06-1600.webp 1600w" sizes="100vw" alt="A white shake from Charlie’s piled with foam sweets and whippy, a chocolate shake behind" width="1400" height="788" loading="lazy" decoding="async"></figure>
+<!-- /gen:band -->
+    <div class="pband__cap">
+      <h2 id="pband-h" class="h2 pband__h">Everyone picks their own when they get here</h2>
+      <a class="pband__go" href="../menu/">See the whole menu</a>
+    </div>
+  </section>
+</main>
+<!-- gen:foot -->
+<footer class="foot">
+  <div class="foot__grid">
+    <div>
+      <h2>Brighouse</h2>
+      <p>3 Bridge Road, Brighouse HD6 1EP</p>
+      <p>Monday to Sunday, 12pm to 10pm</p>
+      <p>Food hygiene rating 5, <a href="https://ratings.food.gov.uk/business/1770212" rel="noopener">Food Standards Agency</a></p>
+    </div>
+    <div>
+      <h2>Huddersfield</h2>
+      <p>51 King St, Huddersfield HD1 2PZ</p>
+      <p>Hours to confirm</p>
+      <p>Food hygiene rating 4, <a href="https://ratings.food.gov.uk/business/1918346" rel="noopener">Food Standards Agency</a></p>
+    </div>
+    <div>
+      <h2>Follow Charlie’s</h2>
+      <p><a href="https://www.instagram.com/charliesdessertshop/" rel="noopener">Instagram @charliesdessertshop</a></p>
+      <p><a href="https://www.tiktok.com/@charlies.desserts" rel="noopener">TikTok @charlies.desserts</a></p>
+    </div>
+  </div>
+  <nav class="foot__nav" aria-label="Pages, again"><a class="foot__link" href="../#make" data-nav="make">Make your own</a><a class="foot__link" href="../menu/" data-nav="menu">Menu</a><a class="foot__link" href="../birthdays/" data-nav="birthdays" aria-current="page">Birthdays</a><a class="foot__link" href="../find-us/" data-nav="find-us">Find us</a></nav>
+  <p class="note foot__note">A prototype by Astra agency for Charlie’s Desserts. Prices from Charlie’s menu. Nothing here places a real order or booking.</p>
+</footer>
+
+<aside class="orderbar" id="orderbar" aria-label="Your order">
+  <div class="orderbar__text">
+    <p class="orderbar__line" aria-live="polite"><span class="orderbar__price price" id="bar-price">£5.50</span> <span class="orderbar__name" id="bar-name">Your waffle</span></p>
+    <p class="orderbar__note">Estimated from Charlie’s menu, final price at the counter</p>
+  </div>
+  <button type="button" class="btn-order" data-action="order">Order</button>
+</aside>
+
+<!-- The order. Every Order on every page opens this one drawer. Pick the shop, collect or delivery, a time, a name and
+     a phone, and it ends on the golden ticket. Nothing is sent anywhere. -->
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer__scrim" data-close-drawer></div>
+  <section class="drawer__sheet" role="dialog" aria-modal="true" aria-labelledby="drawer-h" tabindex="-1" data-lenis-prevent data-view="form">
+    <div class="drawer__top">
+      <h2 class="drawer__h" id="drawer-h">Your order</h2>
+      <button type="button" class="drawer__x" data-close-drawer aria-label="Close your order"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 3l12 12M15 3L3 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="drawer__grid">
+      <div class="drawer__cart">
+        <ul class="cart" id="cart"></ul>
+        <p class="cart__total"><span>Total</span> <b class="price" id="cart-total">£5.50</b></p>
+        <p class="note">Estimated from Charlie’s menu, final price at the counter</p>
+        <a class="cart__change" id="cart-change" href="../#make">Change what’s on it</a>
+      </div>
+      <form class="oform" id="oform" novalidate>
+        <fieldset class="ofs">
+          <legend>Which shop</legend>
+          <div class="seg seg--shops">
+            <label class="segb"><input type="radio" name="order-shop" value="brighouse" required><span class="segb__t">Brighouse</span><span class="segb__s">3 Bridge Road, open 12 to 10</span></label>
+            <label class="segb"><input type="radio" name="order-shop" value="huddersfield"><span class="segb__t">Huddersfield</span><span class="segb__s">51 King St, hours to confirm</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="ofs">
+          <legend>Collect or delivery</legend>
+          <div class="seg">
+            <label class="segb"><input type="radio" name="order-mode" value="collect" required><span class="segb__t">Collect</span></label>
+            <label class="segb"><input type="radio" name="order-mode" value="delivery"><span class="segb__t">Delivery</span></label>
+          </div>
+          <p class="ofs__note" id="delivery-note" hidden>Delivery area set by Charlie’s. Your address is checked against it in the full build.</p>
+          <label class="field" id="addr-field" hidden><span>Delivery address</span><input name="order-address" id="order-address" autocomplete="street-address"></label>
+        </fieldset>
+        <fieldset class="ofs">
+          <legend id="slot-l">When, in UK time</legend>
+          <p class="ofs__note" id="slot-note">Example collection times, inside opening hours</p>
+          <div class="slots" id="slots" role="radiogroup" aria-labelledby="slot-l"></div>
+        </fieldset>
+        <div class="ofs ofs--you">
+          <label class="field"><span>Your name</span><input name="order-name" id="order-name" autocomplete="name" required></label>
+          <label class="field"><span>Your phone</span><input name="order-phone" id="order-phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        </div>
+        <p class="oform__err" id="oform-err" role="alert"></p>
+        <button type="submit" class="btn-order btn-order--big" id="place-order">Order</button>
+        <p class="note proto">A prototype by Astra agency for Charlie’s Desserts. Prices from Charlie’s menu. Nothing here places a real order or booking.</p>
+      </form>
+      <div class="drawer__ticket" id="drawer-ticket">
+        <p class="order__wink">No golden ticket needed, just a sweet tooth!</p>
+        <div class="gticket" id="gticket" data-state="draft">
+          <div class="gticket__foil" aria-hidden="true"><video class="film gticket__glitter" muted playsinline loop preload="none" data-src="media/film/gold-glitter.mp4" data-type="video/mp4" data-poster="media/film/gold-glitter.webp" aria-hidden="true" tabindex="-1"></video></div>
+          <div class="gticket__body">
+            <div class="gticket__top"><img src="../media/logo.webp" alt="" width="640" height="387" class="gticket__logo"><span class="gticket__no" id="gt-no">No. 0427</span></div>
+            <div class="gticket__artwrap"><canvas class="gticket__art" id="gt-art" width="320" height="220" aria-hidden="true"></canvas><div class="gticket__stamp" id="gt-stamp" aria-hidden="true">Ordered</div></div>
+            <ul class="gticket__lines" id="gt-lines"></ul>
+            <div class="gticket__meta" id="gt-meta"></div>
+            <div class="gticket__total"><span>Total</span><b id="gt-total">£5.50</b></div>
+            <p class="gticket__note">Estimated from Charlie’s menu, final price at the counter</p>
+          </div>
+        </div>
+        <p class="order__done" id="order-done" role="status" aria-live="polite" tabindex="-1"></p>
+        <button type="button" class="btn-order" data-close-drawer>Back to Charlie’s</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>/* the page paints first from its HTML and CSS, then its scripts load, in order */
+(function (s) { var go = function () { var ready = function () { window.CD_READY = true; document.dispatchEvent(new Event('cd:ready')); };
+  s.forEach(function (src, i) { var e = document.createElement('script'), inl = window.__SCRIPTS && window.__SCRIPTS[src]; if (inl) e.text = inl; else { e.src = (window.CD_ROOT || '') + src; e.async = false; if (i === s.length - 1) e.onload = e.onerror = ready; } document.body.appendChild(e); });
+  if (window.__SCRIPTS) ready(); };
+  requestAnimationFrame(function () { setTimeout(go, 0); }); })(['js/menu-data.js','js/items-data.js','js/state.js','js/chrome.js','js/order.js','js/party.js','js/motion.js','js/sprinkles.js','js/film.js']);</script>
+<!-- /gen:foot -->
+</body>
+</html>

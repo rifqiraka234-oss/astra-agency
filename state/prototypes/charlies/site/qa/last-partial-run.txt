@@ -1,5 +1,8 @@
-Charlie’s prototype, final look checks, 2026-10-28T23:55:04.611Z
-PASS  overflow
-    clean:   320 ok, 360 ok, 390 ok, 430 ok, 768 ok, 1024 ok, 1440 ok, 1920 ok, resize 1440 to 320 ok
-    planted: caught. 320 FAIL scrollX 200 2416/320 a.skip,header.proto-top,p., 360 FAIL scrollX 200 2416/360 a.skip,header.proto-top,p., 390 FAIL scrollX 200 2416/390 a.skip,header.proto-top,p., 430 FAIL scrollX 200 2416/430 a.skip,header.proto-top,p., 768 FAIL scrollX 200 2432/768 a.skip,header.proto-top,p., 1024 FAIL scrollX 200 3000/1024 a.skip,header.proto-top,p., 1440 FAIL scrollX 200 3329/1440 a.skip,header.prot
-ALL PASS, 1 of 1
+Charlie’s prototype, round 2 checks on 4 pages, 2026-10-29T17:27:38.161Z
+PASS  axe
+    clean:   home 390: clean; home 390 reduced: clean; home 1440: clean; home 1440 reduced: clean; menu 390: clean; menu 390 reduced: clean; menu 1440: clean; menu 1440 reduced: clean; birthdays 390: clean; birthdays 390 reduced: clean; birthdays 1440: clean; birthdays 1440 reduced: clean; find-us 390: clean; find-us 390 reduced: clean; find-us 1440: clean; find-us 1440 reduced: clean
+    planted: caught. home 390: top button-name(1) image-alt(1), middle button-name(1) image-alt(1), end button-name(1) image-alt(1), drawer button-name(1) image-alt(1), panel button-name(1) image-alt(1); home 390 reduced: top button-name(1) image-alt(1), middle button-name(1) image-alt(1), end button-name(1) image-alt(1), drawer button-name(1) image-alt(1), panel button-name(1) image-alt(1); home 1440: top button-name
+PASS  order and booking
+    clean:   390: Home order stamped (Charlie’s BrighouseCollect, Today 6pmFor Sam), Find us Order opens on its shop and stamps, its Book carries the shop, booking confirmed with 7 chairs and kept after another page, with motion 7 of 7 chairs round the table and the teaser 6 of 6, "Table ticket Table for 7 Birthday at Charlie’s HuddersfieldSaturday 31 October, 12pmBooked for Sam Confirmed"; 1440: Home order stamped (Charlie’s BrighouseCollect, Today 6pmFor Sam), Find us Order opens on its shop and stamps, its Book carries the shop, booking confirmed with 7 chairs and kept after another page, with motion 7 of 7 chairs round the table and the teaser 6 of 6, "Table ticket Table for 7 Birthday at Charlie’s HuddersfieldSaturday 31 October, 12pmBooked for Sam Confirmed"
+    planted: caught. 390: Home order NOT PLACED (Charlie’s BrighouseCollectFor Sam), Find us Order opens on its shop and NOT PLACED, its Book carries the shop, booking confirmed with 7 chairs and kept after another page, with motion 0 of 7 chairs round the table and the teaser 0 of 6, "Table ticket Table for 7 Birthday at Charlie’s HuddersfieldSaturday 31 October, 12pmBooked for Sam Confirmed"; 1440: Home order NOT PL
+ALL PASS, 2 of 2

@@ -1,4 +1,6 @@
-# Still interested?, Fri 30 Oct 06.00 Amsterdam (05.00 UTC). SCHEDULED on Raka's word, NOT SENT YET
+<!-- GATE ARCHIVED -->
+<!-- ALL FOUR SENT Fri 30 Oct on Raka's 27 Oct ~19.10 UTC "draft and schedule smth for friday ask if its still interesting, friday morning 06.00". Chris Hale 05.02.26 UTC act_QPfQZw8eMDNYFJMHK, Ulrich 05.02.43 UTC act_7XP4XmruoA5syssad, Matthias act_uF4jMGQfLra7S4W9M, Aaron act_4QZWvBkAJxtTAbu2t. Threads pulled before (nothing newer than our last), links 200 with their titles, no call booked in the calendar for 30 Oct, one copy each after. Do not send again. -->
+# Still interested?, Fri 30 Oct 06.00 Amsterdam (05.00 UTC). SENT 30 Oct 05.02 to 05.03 UTC, do not send again
 
 Raka, 27 Oct ~19.10 UTC, on Chris Hale, Ulrich Steppler, Matthias Ufer and Aaron Mason, "draft and schedule smth for
 friday ask if its still interesting, friday morning 06.00". All four said yes and have had their follow ups, so anything

@@ -1,0 +1,37 @@
+{
+ "ig-shopfront": {
+  "w": 720,
+  "h": 700,
+  "widths": [
+   720
+  ],
+  "post": "DfAgHSVgLOH"
+ },
+ "ig-lamps": {
+  "w": 1120,
+  "h": 380,
+  "widths": [
+   640,
+   1120
+  ],
+  "post": "De6qWbXgnu8"
+ },
+ "ig-giantcup": {
+  "w": 1460,
+  "h": 2800,
+  "widths": [
+   640,
+   1000,
+   1460
+  ],
+  "post": "DezobVFgAlz"
+ },
+ "ig-cups": {
+  "w": 912,
+  "h": 296,
+  "widths": [
+   912
+  ],
+  "post": "De95MO1A9-o"
+ }
+}
