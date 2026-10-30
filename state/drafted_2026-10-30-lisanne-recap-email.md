@@ -1,9 +1,10 @@
+<!-- GATE ARCHIVED -->
 # Lisanne De Jong Vanhommerig, 30 Oct, EMAIL, thank you, recap, prototype links, team intro. On Raka's "just say thank you again and see you next thursday ... put the link of the prototypes in the email ... cc joshuavanzeelt@gmail.com josh@astraagency.nl lunaraisyamulya@gmail.com"
 
 To lisanne@dejongvanhommerig.com (her own address, 25 Oct 11:06 UTC act_3epxnC3zLubeKhihA, also on her site). CC joshuavanzeelt@gmail.com,
 josh@astraagency.nl, lunaraisyamulya@gmail.com. Subject "Thank you, and see you Thursday at 10". Supersedes the LinkedIn version in
 state/drafted_2026-10-30-lisanne-thanks.md (same text, no links). Both prototype links fetched 30 Oct, 200, titles right. Price left out on purpose.
-Created as a Gmail DRAFT only, draft id r971821034857463637. NOT SENT, waits for Raka's word. Luna is not on the Thursday calendar invite.
+Gmail draft r971821034857463637 SENT 30 Oct ~10:20 UTC on Raka's "and send it", message 1a18c4eb875d0aa2, thread 1a18c4d9ae5dabdd. One copy. Do not send again. Luna added to the Thursday invite as optional at the same time.
 
 ### Lisanne De Jong Vanhommerig, De Jong - Vanhommerig advocatuur. ctc_E5FwxycX7v2A7Lnne
 
