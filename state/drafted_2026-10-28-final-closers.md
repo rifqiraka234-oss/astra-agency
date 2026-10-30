@@ -27,6 +27,7 @@ already due, Thu 15 (the 5 Thursday bumps take the rest), Fri 16 (the 4 Friday n
 - Batch 1, Thu 29 Oct, 10. Etienne Lefebvre ctc_nYnQgsLWCc384BqPm, Nikita-Tarass H. ctc_hgJ48N6PQ4Thn7wFB, Umer Adnan ctc_xozMFobDpEC8sdukg, Salim Saleem ctc_RDogafhkpGPbrnp7H, Jamie H. ctc_D5F2nC69pjMjAuvk2, Yolanda Heeren ctc_v4Kie5QRq97eaoHPR, Josh Fairbairn ctc_pNPsWdEMRCb4ccQev, Evie Barker ctc_5LYgS8GTT5QrzxPQh, Abraham Akrouche ctc_RBjzAkhMRziM9wYj8, Olivier Clybouw ctc_JKSruaBKANQQHD48b
   SENT 29 Oct, one copy each, Etienne 05.03.51 act_kstuidBzcsRYHNXmu, Nikita-Tarass 05.04.09 act_egEk4MMytB9HNbNwH, Umer 05.04.27 act_xrbZv5LjBvojiSFez, Salim 05.04.44 act_cMBgkJGEvasBhzq77, Jamie 05.05.02 act_fCtvnh7rxsGHvkNvM, Yolanda 05.05.19 act_ftap7jTbhXrdzwDAt, Josh 05.05.37 act_eXtrybSBfoJChj3iW, Evie 05.05.54 act_vnNJf5suqQyuj5Q7c, Abraham NOT SENT, LinkedIn can-not-send-message, Olivier 05.06.13 act_vhwtHHmHWH4vYoQuC.
 - Batch 2, Fri 30 Oct, 10. Angela Barlow ctc_4NgbWujpWmFTW6Jb4, Larissa Mora Morcillo ctc_kqKNB7SGPafWSK8hW, Roy Hoven ctc_gye9ypfozqp4QQ8cs, Manon Picot ctc_9sL42u8eTWQSjB2tM, Nina Jameson ctc_ii4DqtpBgQ6fwfwto, Julia Wilckens ctc_Xn4u3Nce3KfCLngEi, Marcel Van Milt ctc_2J8oom4KjBoqds6Cm, Mudabbir 孟達柏 ctc_wzyEGEbnExHikwSxX, Sebastien Goenen ctc_fnRmMWgxgv7mF2W76, Daan Erisman ctc_NwqJExzhsL5SYoEME
+  SENT 30 Oct, one copy each, Angela 05.07.28 act_kN38ePB96Z45RTwEC, Larissa 05.07.45 act_YiP3i4oWQjHKkWrFL, Roy 05.08.03 act_LsytcqhN2fXiDpvbb, Manon 05.08.20 act_agnmzS35By237ERFY, Nina 05.08.38 act_CChm6m3kAJD35ttuQ, Julia 05.08.56 act_nS4syxkNHEL9ACf6A, Marcel 05.09.13 act_C54cKjFYGgq9E4Lej, Mudabbir 05.09.31 act_8gCXpWnKdg5enLkSz, Sebastien 05.09.48 act_nwBvbfFWvSsQpoBys, Daan 05.10.06 act_bTkcXbsMgKEcshwNr.
 - Batch 3, Sat 31 Oct, 10. William M. ctc_icT5oEajhtmH6dcAd, Muhammad Akbar ctc_9yfzLTQP9ehdYKdY6, Cédric Morel ctc_wsqBdgSdjP6P6Yxvw, Emmanuel Rivière ctc_bF7KcGsTjT23mo3ye, Bartek Ogonowski ctc_3fSkB4dv38ScfzXkH, Bouils Stéphane ctc_xvsocGv6PaJCDrgxs, David Brauman ctc_n3rxAxdmtuJpgW8NH, Emily R. ctc_rMYGbmu7Piu5Pmwei, Laurent Fournié ctc_e5TddBr53qxiLyida, Léo Grandperrin ctc_biurQgp9YgReZKtL9
 - Batch 4, Sun 1 Nov, 10. Vincent Bucaille ctc_xtQnzSvvms6TEoAxS, Frank Hemmert ctc_CLQ5T3DEaeG2SMG9d, Jamie Bolding ctc_4XQDxYiE3NkeqKPEy, Nicolas Bergé ctc_mQBx2Mr64rqs7v4Qu, Robin Conway ctc_7hNbkAjk4urRmcjji, Thomas Hebenstreit ctc_3S2rDnBX9W5hd3F8G, Thomas Langlet ctc_vp6dPpiBHosd9oW78, Victor Felipe Florenz ctc_CFbKYC6c3yM6MrcAP, Dan Waterfall-Chapman ctc_eGXerDBzTghqprWZh, Jean-Christophe Conticello ctc_iWGMxjeTYkzegg78v
 - Batch 5, Mon 2 Nov, 10. Niklas Mocker ctc_Wg9Bv7Z7vMqpNQx78, Orion D. ctc_JiMGgwH639YbSSZfE, Darren Buckley ctc_q5NZMCjRn6NgvuQbT, Fabian Mader ctc_vHXN93Sa98zrL6roG, Marjolein Schoot Uiterkamp ctc_vmg2iAtNxvpSW7d93, Reno Wiertz ctc_F57ZqzDSwGEB8ad8H, Martijn Dijk ctc_Z3J4EAKarueohCqxj, Alex Talbot ctc_XDRJdGuNAsHxttMmv, Alexandre Francois ctc_5N8eTkQMH9tMYswtK, Alice Poubelle ctc_PLeDim4Mhp2CtQyiu
@@ -104,91 +105,61 @@ newer queue row, means don't send and tell Raka. Copy from this file, confirm on
 
 > Opener 2026-09-02, second message 2026-10-03 (researched), no reply. Opener's ask, "Hi Angela, thanks for connecting. Had a look at The Upscaler, 30 years untangling the operational problems that keep coming back in hospitality is a strong nich"
 
-CLOSER
-```
-Angela, I'm going to close it here. If you ever want a tighter version of The Upscaler's homepage, you know where to find me.
-```
+> SENT 30 Oct 05.07.28 UTC, act_kN38ePB96Z45RTwEC, batch 2. Text sent, "Angela, I'm going to close it here. If you ever want a tighter version of The Upscaler's homepage, you know where to find me."
 
 ### Larissa Mora Morcillo, pure:absicht gmbh, ctc_kqKNB7SGPafWSK8hW
 
 > Opener 2026-09-02, second message 2026-10-03 (researched), no reply. Opener's ask, "Hi Larissa, thanks for connecting. Had a look at pure:absicht and the three formats have a real identity, absicht liebe and nacht markt especially. What jumped "
 
-CLOSER
-```
-Larissa, I'm going to close it here. If you ever want a page that shows what your evenings feel like, you know where to find me.
-```
+> SENT 30 Oct 05.07.45 UTC, act_YiP3i4oWQjHKkWrFL, batch 2. Text sent, "Larissa, I'm going to close it here. If you ever want a page that shows what your evenings feel like, you know where to find me."
 
 ### Roy Hoven, Noventes, ctc_gye9ypfozqp4QQ8cs
 
 > Opener 2026-09-03, second message 2026-10-03 (researched), no reply. Opener's ask, "Hi Roy, thanks for connecting. Had a look at Noventes, and helping organisations actually win subsidies and get their innovation projects funded is the kind of "
 
-CLOSER
-```
-Roy, I'm going to close it here. If you ever want a Noventes homepage that leads with your track record, you know where to find me.
-```
+> SENT 30 Oct 05.08.03 UTC, act_LsytcqhN2fXiDpvbb, batch 2. Text sent, "Roy, I'm going to close it here. If you ever want a Noventes homepage that leads with your track record, you know where to find me."
 
 ### Manon Picot, Calanque Conciergerie, ctc_9sL42u8eTWQSjB2tM
 
 > Opener 2026-09-14, second message 2026-10-03 (researched), no reply. Opener's ask, "Shall I put that page together for you?"
 
-CLOSER
-```
-Manon, I'm going to close it here. If you ever want the owner page with your rates on it, you know where to find me.
-```
+> SENT 30 Oct 05.08.20 UTC, act_agnmzS35By237ERFY, batch 2. Text sent, "Manon, I'm going to close it here. If you ever want the owner page with your rates on it, you know where to find me."
 
 ### Nina Jameson, Gehirngerecht Positionieren, ctc_ii4DqtpBgQ6fwfwto
 
 > Opener 2026-09-19, second message 2026-10-03 (researched), no reply. Opener's ask, "Shall I build the page that puts both halves of Gehirngerecht in front of the same visitor and send it over?"
 
-CLOSER
-```
-Nina, I'm going to close it here. If you ever want the page that puts both halves of Gehirngerecht together, you know where to find me.
-```
+> SENT 30 Oct 05.08.38 UTC, act_CChm6m3kAJD35ttuQ, batch 2. Text sent, "Nina, I'm going to close it here. If you ever want the page that puts both halves of Gehirngerecht together, you know where to find me."
 
 ### Julia Wilckens, PowerPitch - When It Really Counts, ctc_Xn4u3Nce3KfCLngEi
 
 > Opener 2026-09-21, second message 2026-10-03 (researched), no reply. Opener's ask, "Shall I build the enquiry side properly, a form that lands somewhere plus the readiness questions you'd want before a first call?"
 
-CLOSER
-```
-Julia, I'm going to close it here. If you ever want an enquiry form that actually lands with you, you know where to find me.
-```
+> SENT 30 Oct 05.08.56 UTC, act_nS4syxkNHEL9ACf6A, batch 2. Text sent, "Julia, I'm going to close it here. If you ever want an enquiry form that actually lands with you, you know where to find me."
 
 ### Marcel Van Milt, Inner leadership institute, ctc_2J8oom4KjBoqds6Cm
 
 > Opener 2026-09-21, second message 2026-10-03 (researched), no reply. Opener's ask, "Shall I rebuild the booking side as one page, the trainings with their dates and prices and a checkout that opens, and send it over?"
 
-CLOSER
-```
-Marcel, I'm going to close it here. If you ever want the booking side as one page, you know where to find me.
-```
+> SENT 30 Oct 05.09.13 UTC, act_C54cKjFYGgq9E4Lej, batch 2. Text sent, "Marcel, I'm going to close it here. If you ever want the booking side as one page, you know where to find me."
 
 ### Mudabbir 孟達柏, amuu, ctc_wzyEGEbnExHikwSxX
 
 > Opener 2026-09-21, second message 2026-10-03 (researched), no reply. Opener's ask, "Shall I build amuu a small shop of its own that you control, the collection, the story and a checkout, and send it over?"
 
-CLOSER
-```
-Mudabbir, I'm going to close it here. If you ever want a small shop of your own for amuu, you know where to find me.
-```
+> SENT 30 Oct 05.09.31 UTC, act_8gCXpWnKdg5enLkSz, batch 2. Text sent, "Mudabbir, I'm going to close it here. If you ever want a small shop of your own for amuu, you know where to find me."
 
 ### Sebastien Goenen, CORIS BIOCONCEPT, ctc_fnRmMWgxgv7mF2W76
 
 > Opener 2026-09-21, second message 2026-10-03 (researched), no reply. Opener's ask, "Shall I build the CDMO side its own enquiry page, with a form that works, and send it over?"
 
-CLOSER
-```
-Sebastien, I'm going to close it here. If you ever want a CDMO enquiry page with its own form, you know where to find me.
-```
+> SENT 30 Oct 05.09.48 UTC, act_nwBvbfFWvSsQpoBys, batch 2. Text sent, "Sebastien, I'm going to close it here. If you ever want a CDMO enquiry page with its own form, you know where to find me."
 
 ### Daan Erisman, tuftuf, ctc_NwqJExzhsL5SYoEME
 
 > Opener 2026-09-22, second message 2026-10-03 (researched), no reply. Opener's ask, "Shall I build the private events page so planners can see the room they're booking, and send it over?"
 
-CLOSER
-```
-Daan, I'm going to close it here. If you ever want the private events page with the room on it, you know where to find me.
-```
+> SENT 30 Oct 05.10.06 UTC, act_bTkcXbsMgKEcshwNr, batch 2. Text sent, "Daan, I'm going to close it here. If you ever want the private events page with the room on it, you know where to find me."
 
 ### William M., Relatiq, ctc_icT5oEajhtmH6dcAd
 
