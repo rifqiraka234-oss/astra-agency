@@ -424,3 +424,44 @@ sites prints or stamps a ticket (line 16).
 - The crepe, the whippy sundae and the frozen yoghurt are still drawn, and they read as drawn beside her photos.
 - The films are stock until her own reels or footage replace them.
 - Ordering and booking are a full mock. Payment, the shop tablet and the diary are the plan's six weeks.
+
+## F. Round 2, 29 Oct 2026. Pages, a header, a sleeker flow, more of their photos and film
+
+Raka's words after seeing it live, "do we not design a home page and different pages ... on the header as well and
+all?" and "I'm also missing kind of like photos and videos and overall flow ... it should be more sleek the flow". The
+art he liked stays as it was, the hat, the pour, the golden ticket and the table ticket. What changed is the shape.
+
+**From one long page to four.** Round 1 was one page of 25 screens at 1440 and 33 at 390, eight long sections in a row.
+Now Home is the hat, make your own in one screen, the favourites, their world, a birthdays teaser and a Find us line,
+about 10 screens at 1440 and 11 at 390. The 89 row menu is `/menu/`, the booking is `/birthdays/`, the shops are
+`/find-us/`, and the order form became one drawer that every Order on every page opens.
+
+**Sleeker, in the details.** One heading style, one note style, one button style (the gold ticket stub, pink for Book).
+The hero's line under the question went, because the sticker beside it says the same words. On the builder's screen the
+header's Order and the bar step aside, so the builder's own total is the only one there. On a phone the header's Order is
+one word, so the price shows once, in the bar, with its label.
+
+**Their photos and film.** Every true photo of theirs is now used, most of them full bleed, and each page opens on one.
+Four of their Instagram photos came in, cropped clear of the text baked into them, any face and any other brand. The
+three roll interludes became one moment, a caramel pour full bleed under their own line "Welcome to Charlie’s little
+world of sweetness", then their photos laid one over the next, two to a frame on a wide screen so each portrait keeps
+its shape.
+
+**The hero share, round 2.** With the header taking the top strip, the phone's first screen first measured 19.4%. Their
+logo went back under the awning on a phone (the header's waits until you scroll, so it never shows twice), the stage
+grew, and the headline now sits over the foot of the hat rather than in front of a dark band. It measures 30.9% at 390
+and 26.9% at 1440, over the 25% floor, still short of the 35% aim at 1440.
+
+**The numbers, round 2.** The checks are 33 of 33 on four pages, each with its planted fault caught (qa/last-run.txt).
+Home is 8.6 screens at 1440 and 10.6 at 390. Lighthouse, Home on its phone 77, 83 and 79 over three runs, 96 on desktop,
+the other pages 89 to 93 on the phone and 99 to 100 on desktop. Two fixes got Home there. The shutter rolls up on a
+transform over the awning instead of changing the awning's height, which had shifted the page, and the builder's WebGL
+and 3D toppings start on the first scroll toward them, not during the load.
+
+**Where it's still short, said plainly.**
+- Home at 390 is 10.6 screens, under the 12 to 14 target, because it is short. Nothing was added to pad it.
+- The hero share at 1440 is 26.9%, under the 35% aim.
+- The one film is stock, a caramel pour over ice cream, until her own reels come. No free clip of a pour over a waffle met
+  the rules.
+- Brighouse has no photo of its own, and the crepe, the whippy sundae and the frozen yoghurt are still drawn.
+- Ordering and booking are a full mock.
