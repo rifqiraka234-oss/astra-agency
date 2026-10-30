@@ -11,7 +11,12 @@ Not repeated from the deck, the 3 to 4 week timeline (the call said about two we
 To office@healthysecrets.at, the only address we have. CC joshuavanzeelt@gmail.com and lunaraisyamulya@gmail.com on Raka's "cc josh and luna as well, their gmails" (the same addresses the 27 Oct brief was forwarded to). Thread and Gmail checked 30 Oct, nothing new since 27 Oct.
 The deck is too large to attach through the Gmail connector, so Raka attaches it in Gmail before sending.
 
-Prices are left to the deck. tools/check-drafts.py fails any money figure that isn't a lead's loss, and only exempts
+UPDATE 30 Oct, Raka, "maybe say i do apologise that the price is increased by 50 euros due to complexity of the
+integration and updated security". The email now names the price, on his explicit instruction, so the money gate
+fails on purpose (his live instruction outranks the tool, RULES section 0 header). The 450 is from the 27 Oct call
+transcript, "€450 in total", the 500 from the deck slides 3 and 8.
+
+Earlier note, superseded. Prices were left to the deck. tools/check-drafts.py fails any money figure that isn't a lead's loss, and only exempts
 CORRECTION drafts, so a version naming €500, €250 plus €250 and €50 a month fails the gate. That version is kept below
 as an option for Raka, outside a code fence so the gate doesn't read it.
 
@@ -30,7 +35,9 @@ Hi Nikolaus, Stephanie and Leonie,
 
 As promised, here's the proposal for the new Healthy Secrets website and shop. You'll find it attached.
 
-In short, we turn the site you've seen into a working shop that you run yourselves. You'll manage products, prices, stock, offers and the blog, and Leonie's consultation requests come straight to your inbox. The price, what's included and the plan are all in the deck.
+In short, we turn the site you've seen into a working shop that you run yourselves. You'll manage products, prices and stock, plus offers and the blog. Leonie's consultation requests come straight to your inbox. The price, what's included and the plan are all in the deck.
+
+I do apologise that the price is 50 euros more than the 450 I mentioned on our call. The integration turned out more complex than I expected and we've added updated security, so the build is now €500.
 
 The next step is a short meeting with Joshua, Luna and me to agree the final scope together. Could you suggest a time that works for the three of you?
 
