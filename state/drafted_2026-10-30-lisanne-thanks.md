@@ -12,7 +12,7 @@ REPLY
 ```
 Hi Lisanne, thank you for your time this morning, and for being so open about how your days really go.
 
-Here's what I took from it. The documents clients send you have no good place to land, and nobody could pick up your cases if you were ever out. Billing and other one-off admin take more of your time than they should. You also don't want to buy one piece now and swap it later, so we'll plan the whole picture before we build the first part.
+Here's what I took from it. The documents clients send you have no good place to land, and nobody could pick up your cases if you were ever out. Billing and other admin that comes up once take more of your time than they should. You also don't want to buy one piece now and swap it later, so we'll plan the whole picture before we build the first part.
 
 That's what Thursday at 10 is for. We'll follow one case from first contact to final invoice, pick the pain that costs you the most and agree exactly what we build first. After that we build it, test it with you and hand it over with a short guide. If you can, have the name of your practice software ready and one recent case we can walk through.
 
