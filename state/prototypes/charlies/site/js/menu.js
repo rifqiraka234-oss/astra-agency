@@ -1,15 +1,20 @@
 /* The favourites and the menu. A favourite or anything with a hat beside it opens in the builder, dressed, at its
-   menu price. Everything else goes straight on the order. The pick and mix wall is their own macro of fizzy sweets,
-   and it parts round your finger or the cursor. Exposes window.CharlieMenu. */
+   menu price: on Home it scrolls to the builder, on the menu page it goes to Home's builder with the item loaded.
+   Everything else goes straight on the order. The pick and mix wall is their own macro of fizzy sweets, and it parts
+   round your finger or the cursor. Exposes window.CharlieMenu. */
 (function () {
   'use strict';
   var O = window.CharlieOrder;
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var $ = function (s, r) { return (r || document).querySelector(s); }, $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
-  function toBuilder() {
+  // to the builder: on Home a scroll, from any other page Home's builder, where the item plays in
+  function toBuilder(play) {
     var t = document.getElementById('make');
-    if (window.CharlieMotion) window.CharlieMotion.scrollTo(t); else t.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
+    if (t) { if (window.CharlieMotion) window.CharlieMotion.scrollTo(t); else t.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' }); return; }
+    try { if (play) sessionStorage.setItem('charlies-play', '1'); } catch (e) { /* it still opens, just without the pour playing in */ }
+    // the one file build names each page's file in CD_HOME, the site goes by its folders
+    location.href = (window.CD_HOME || window.CD_ROOT || '') + '#make';
   }
 
   function flash(btn, text) {
@@ -19,17 +24,19 @@
     clearTimeout(btn._t); btn._t = setTimeout(function () { btn.classList.remove('is-added'); a.textContent = was; }, 1600);
   }
 
-  function wire(onPreset, onBase, onTopping) {
+  // cb is Home's builder; on the menu page there's none, and the order carries the choice to Home
+  function wire(cb) {
+    cb = cb || { preset: function () {}, base: function (patch) { O.set(Object.assign({ creation: true }, patch)); }, topping: function (name) { if (O.get().toppings.indexOf(name) < 0) O.toggle('toppings', name); } };
     // favourites and hat items: the favourite lands dressed in the builder
     $$('[data-preset]').forEach(function (b) {
-      b.addEventListener('click', function () { O.usePreset(b.dataset.preset); onPreset(b.dataset.preset); toBuilder(); });
+      b.addEventListener('click', function () { O.usePreset(b.dataset.preset); cb.preset(b.dataset.preset); toBuilder(true); });
     });
     // create your own lines open that base, and a frozen yoghurt in its size
     $$('[data-base-open]').forEach(function (b) {
       b.addEventListener('click', function () {
         var patch = { base: b.dataset.baseOpen, preset: null, creation: true };
         if (b.dataset.sizeOpen) patch.size = b.dataset.sizeOpen;
-        onBase(patch); toBuilder();
+        cb.base(patch); toBuilder(true);
       });
     });
     // everything else is added beside the creation
@@ -37,7 +44,7 @@
       b.addEventListener('click', function () { O.addItem(b.dataset.item, b.dataset.name, +b.dataset.pence); flash(b, 'Added'); });
     });
     $$('[data-topping-open]').forEach(function (b) {
-      b.addEventListener('click', function () { onTopping(b.dataset.toppingOpen); toBuilder(); });
+      b.addEventListener('click', function () { cb.topping(b.dataset.toppingOpen); toBuilder(true); });
     });
   }
 

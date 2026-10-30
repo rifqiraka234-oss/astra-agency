@@ -1,7 +1,7 @@
-/* Motion for the whole page, only when motion is on. Smooth scroll (Lenis) driving GSAP ScrollTrigger, headings that
+/* Motion for every page, only when motion is on. Smooth scroll (Lenis) driving GSAP ScrollTrigger, headings that
    rise word by word out of a mask, the favourites carried sideways on a pin on desktop, their photos drifting
-   against the scroll inside their frames, and the menu's drips running down as it arrives.
-   Exposes window.CharlieMotion. */
+   against the scroll inside their frames, each photo of their world laid over the last, and the menu's drips running
+   down as it arrives. Each part only runs on a page that has it. Exposes window.CharlieMotion. */
 (function () {
   'use strict';
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -35,22 +35,9 @@
   }
 
   // GSAP, ScrollTrigger and Lenis load after the first paint, they're only for motion
-  function script(src) { return new Promise(function (res, rej) { var s = document.createElement('script'), inl = window.__SCRIPTS && window.__SCRIPTS[src]; if (inl) { s.text = inl; document.head.appendChild(s); return res(); } s.src = src; s.async = false; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }
-  // the roll call: the scroll picks the frame, and frames cut hard, no tweens between them
-  function roll() {
-    var sec = $('#roll'); if (!sec) return;
-    var frames = $$('.roll__f', sec), cur = -1, tick = false;
-    var on = function () {
-      tick = false; var r = sec.getBoundingClientRect(), range = sec.offsetHeight - window.innerHeight;
-      var p = range > 0 ? Math.max(0, Math.min(0.9999, -r.top / range)) : 0, i = Math.floor(p * frames.length);
-      if (i !== cur) { if (frames[cur]) frames[cur].classList.remove('is-on'); frames[i].classList.add('is-on'); cur = i; }
-    };
-    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(on); } }, { passive: true });
-    on();
-  }
+  function script(src) { return new Promise(function (res, rej) { var s = document.createElement('script'), inl = window.__SCRIPTS && window.__SCRIPTS[src]; if (inl) { s.text = inl; document.head.appendChild(s); return res(); } s.src = (window.CD_ROOT || '') + src; s.async = false; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }
   function init() {
     if (reduced) return;
-    roll();
     // after the page has loaded and gone quiet, so it never competes with the first screen
     var go = function () { Promise.all([script('js/vendor/gsap.min.js'), script('js/vendor/ScrollTrigger.min.js'), script('js/vendor/lenis.min.js')]).then(setup).catch(function () {}); };
     var idle = function () { (window.requestIdleCallback || function (f) { return setTimeout(f, 200); })(go, { timeout: 1500 }); };
@@ -68,7 +55,7 @@
     }
 
     // headings rise word by word as they come on screen
-    $$('.step__h, .favs__h, .menu__h, .order__h, .party__h, .shops__h, .fav__name, .mg__h').forEach(function (h) {
+    $$('.h1, .h2, .fav__name, .mg__h, .world__w, .shop__h').forEach(function (h) {
       splitWords(h);
       gsap.from($$('.rv-line > span', h), { yPercent: 115, rotate: 4, duration: 0.95, ease: 'expo.out', stagger: 0.05,
         scrollTrigger: { trigger: h, start: 'top 88%', once: true } });
@@ -76,7 +63,7 @@
 
     // the favourites travel sideways while the section is pinned, on a wide screen
     var mm = gsap.matchMedia();
-    mm.add('(min-width: 1024px)', function () {
+    if ($('#favs-track')) mm.add('(min-width: 1024px)', function () {
       var track = $('#favs-track'), pinEl = $('.favs__pin');
       var dist = function () { return Math.max(0, track.scrollWidth - window.innerWidth + 48); };
       gsap.to(track, { x: function () { return -dist(); }, ease: 'none',
@@ -94,14 +81,27 @@
     });
     $$('.fav__pic img').forEach(function (img) { img.style.setProperty('--py', '0%'); });
 
+    // their world: the welcome rises line by line over the pour, and each photo drifts inside its frame as the next is laid over it
+    $$('.world__h > span').forEach(function (l, i) {
+      gsap.from(l, { yPercent: 60, opacity: 0, duration: 1.1, ease: 'expo.out', delay: i * 0.12, scrollTrigger: { trigger: '.world__f--film', start: 'top 70%', once: true } });
+    });
+    $$('.world__f--photo').forEach(function (f) {
+      var img = $('img', f), cap = $('.world__cap', f);
+      gsap.fromTo(img, { scale: 1.18, yPercent: -4 }, { scale: 1.04, yPercent: 4, ease: 'none', scrollTrigger: { trigger: f, start: 'top bottom', end: 'bottom top', scrub: true } });
+      gsap.from(cap, { y: 60, rotate: -3, opacity: 0, duration: 0.9, ease: 'back.out(1.6)', scrollTrigger: { trigger: f, start: 'top 45%', once: true } });
+    });
+    // each page opens on one of their photos, and it eases back as the page scrolls on
+    $$('.phero__pic img').forEach(function (img) {
+      gsap.fromTo(img, { scale: 1.12 }, { scale: 1, yPercent: 8, ease: 'none', scrollTrigger: { trigger: img.closest('.phero'), start: 'top top', end: 'bottom top', scrub: true } });
+    });
     // the menu's drips run down as the menu arrives
-    gsap.fromTo('.menu__drips', { scaleY: 0.12 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#menu', start: 'top bottom', end: 'top 20%', scrub: true } });
+    if ($('.menu__drips')) gsap.fromTo('.menu__drips', { scaleY: 0.12 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '#menu', start: 'top bottom', end: 'top 20%', scrub: true } });
     // the menu's rows come in like the printed menu being laid down
     $$('.mg').forEach(function (g) {
       gsap.from($$('.mi', g), { y: 18, opacity: 0, duration: 0.6, ease: 'power3.out', stagger: 0.025, scrollTrigger: { trigger: g, start: 'top 90%', once: true } });
     });
     // the pick and mix wall opens out of a hat shaped window
-    gsap.fromTo('#pickmix', { clipPath: 'inset(18% 30% 18% 30% round 46% 46% 6% 6%)' }, { clipPath: 'inset(0% 0% 0% 0% round 0% 0% 0% 0%)', ease: 'none',
+    if ($('#pickmix')) gsap.fromTo('#pickmix', { clipPath: 'inset(18% 30% 18% 30% round 46% 46% 6% 6%)' }, { clipPath: 'inset(0% 0% 0% 0% round 0% 0% 0% 0%)', ease: 'none',
       scrollTrigger: { trigger: '#pickmix', start: 'top bottom', end: 'top 15%', scrub: true } });
     // the shopfronts swing their awnings down
     $$('.shopfront__awning').forEach(function (a) {

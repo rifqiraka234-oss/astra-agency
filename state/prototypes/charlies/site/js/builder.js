@@ -158,7 +158,10 @@
     el.onTicket = opts && opts.onTicket;
     current = O.get().base; geo = layout(current); placeImg(geo.rect);
     el.img.src = O.BASES[current].img; el.img.alt = O.BASES[current].alt;
-    landed.base = true; word(O.get()); renderTicket(O.get());
+    // an order kept from another page is already dressed, so what's on it counts as landed
+    var o0 = O.get(); landed.base = true;
+    o0.sauces.forEach(function (s) { landed['sauce:' + s] = true; }); o0.toppings.forEach(function (t) { landed['top:' + t] = true; }); o0.extras.forEach(function (e) { landed['extra:' + e] = true; });
+    word(o0); renderTicket(o0);
     window.addEventListener('resize', function () { clearTimeout(resize.t); resize.t = setTimeout(resize, 120); });
     desk.addEventListener('change', resize);
   }

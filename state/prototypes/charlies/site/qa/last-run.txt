@@ -1,79 +1,130 @@
-Charlie’s prototype, final look checks, 2026-10-29T00:13:30.163Z
-PASS  walk 390
-    clean:   66 steps. 0:bar 422:bar 844:bar 1266:bar 1688:bar 2110:bar 2532:bar 2954:bar 3376:bar 3798:bar 4220:bar 4642:order-final 5064:bar 5486:bar 5908:bar 6330:bar 6752:bar 7174:bar 7596:bar 8018:bar 8440:bar 8862:bar 9284:bar 9706:bar 10128:bar 10550:bar 10972:bar 11394:bar 11816:bar 12238:bar 12660:bar 13082:bar 13504:bar 13926:bar 14348:bar 14770:bar 15192:bar 15614:bar 16036:bar 16458:bar 16880:bar 17302:bar 17724:bar 18146:bar 18568:bar 18990:bar 19412:bar 19834:bar 20256:bar 20678:bar 21100:place-order 21522:place-order 21944:bar 22366:bar 22788:bar 23210:bar 23632:bar 24054:bar 24476:bar 24898:shop+bar 25320:shop+bar 25742:shop+bar 26164:shop+bar 26586:shop+bar 27008:shop+bar 27028:shop+bar
-    planted: caught. 66 steps. 0:NONE 422:NONE 844:NONE 1266:NONE 1688:NONE 2110:NONE 2532:NONE 2954:NONE 3376:NONE 3798:NONE 4220:NONE 4642:NONE 5064:NONE 5486:NONE 5908:NONE 6330:NONE 6752:NONE 7174:NONE 7596:NONE 8018:NONE 8440:NONE 8862:NONE 9284:NONE 9706:NONE 10128:NONE 10550:NONE 10972:NONE 11394:NONE 11816:NONE 12238:NONE 12660:NONE 13082:NONE 13504:NONE 13926:NONE 14348:NONE 14770:NONE 15192:NONE 15614:NONE 1
-PASS  hero 390 (under 35%, reason in the card)
-    clean:   27.4% of the first screen is their hat, dessert, logo and photos (3D), sweets not counted
-    planted: caught. 0.8% of the first screen is their hat, dessert, logo and photos (3D), sweets not counted
-PASS  look 390
-    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, no count ups, 9 top level parts, tones DLLLDDDDD (2 turns)
-    planted: caught. banned font poppins on <div>; italic in heading "Plant heading"; 3 small uppercase kickers above headings; pill button "Order now →"; arrow glyph in "Order now →"; soft shadow rounded box <div class="">
-PASS  walk 1440
-    clean:   51 steps. 0:bar 450:bar 900:bar 1350:bar 1800:bar 2250:bar 2700:bar 3150:bar 3600:bar 4050:bar 4500:bar 4950:order-final+bar 5400:order-final 5850:bar 6300:bar 6750:bar 7200:bar 7650:bar 8100:bar 8550:bar 9000:bar 9450:bar 9900:bar 10350:bar 10800:bar 11250:bar 11700:bar 12150:bar 12600:bar 13050:bar 13500:bar 13950:bar 14400:bar 14850:bar 15300:bar 15750:bar 16200:bar 16650:bar 17100:bar 17550:bar 18000:place-order 18450:place-order 18900:bar 19350:bar 19800:bar 20250:bar 20700:shop+bar 21150:shop+bar 21600:shop+bar 22050:shop+bar 22060:shop+bar
-    planted: caught. 51 steps. 0:NONE 450:NONE 900:NONE 1350:NONE 1800:NONE 2250:NONE 2700:NONE 3150:NONE 3600:NONE 4050:NONE 4500:NONE 4950:NONE 5400:NONE 5850:NONE 6300:NONE 6750:NONE 7200:NONE 7650:NONE 8100:NONE 8550:NONE 9000:NONE 9450:NONE 9900:NONE 10350:NONE 10800:NONE 11250:NONE 11700:NONE 12150:NONE 12600:NONE 13050:NONE 13500:NONE 13950:NONE 14400:NONE 14850:NONE 15300:NONE 15750:NONE 16200:NONE 16650:NONE 
-PASS  hero 1440 (under 35%, reason in the card)
-    clean:   27.8% of the first screen is their hat, dessert, logo and photos (3D), sweets not counted
-    planted: caught. 1.3% of the first screen is their hat, dessert, logo and photos (3D), sweets not counted
-PASS  look 1440
-    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, no count ups, 9 top level parts, tones DLLLDDDDD (2 turns)
-    planted: caught. banned font poppins on <div>; italic in heading "Plant heading"; 3 small uppercase kickers above headings; pill button "Order now →"; arrow glyph in "Order now →"; soft shadow rounded box <div class="">
+Charlie’s prototype, round 2 checks on 4 pages, 2026-10-29T18:09:42.092Z
+PASS  walk home 390
+    clean:   21 steps. 0:bar 422:bar 844:bar 1266:bar 1688:bar 2110:bar 2532:bar 2954:bar 3376:bar 3798:bar 4220:bar 4642:bar 5064:bar 5486:bar 5908:bar 6330:bar 6752:bar 7174:bar 7596:bar 8018:bar 8175:bar
+    planted: caught. 21 steps. 0:NONE 422:NONE 844:NONE 1266:NONE 1688:NONE 2110:NONE 2532:NONE 2954:NONE 3376:NONE 3798:NONE 4220:NONE 4642:NONE 5064:NONE 5486:NONE 5908:NONE 6330:NONE 6752:NONE 7174:NONE 7596:NONE 8018:NONE 8175:NONE
+PASS  hero home 390 (under 35%, reason in the card)
+    clean:   30.9% of the first screen is their hat, dessert, logo and photos (3D), sweets not counted, the dive lands on the builder yes with the hero at 0.00
+    planted: caught. 1.0% of the first screen is their hat, dessert, logo and photos (3D), sweets not counted, the dive lands on the builder yes with the hero at 1.00
+PASS  look home 390
+    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, no count ups, one button style, 6 sections, tones DLLDDD (2 turns), 10.6 screens long
+    planted: caught. banned font poppins on <div>; italic in heading "Plant heading"; 3 small uppercase kickers above headings; pill button "Order now →"; arrow glyph in "Order now →"; soft shadow rounded box <div class="">; buttons outside the one style: Order now →
+PASS  walk home 1440
+    clean:   17 steps. 0:bar 450:bar 900:bar 1350:order-final 1800:bar 2250:bar 2700:bar 3150:bar 3600:bar 4050:bar 4500:bar 4950:bar 5400:bar 5850:bar 6300:bar 6750:bar 6990:bar
+    planted: caught. 17 steps. 0:NONE 450:NONE 900:NONE 1350:NONE 1800:NONE 2250:NONE 2700:NONE 3150:NONE 3600:NONE 4050:NONE 4500:NONE 4950:NONE 5400:NONE 5850:NONE 6300:NONE 6750:NONE 6990:NONE
+PASS  hero home 1440 (under 35%, reason in the card)
+    clean:   26.9% of the first screen is their hat, dessert, logo and photos (3D), sweets not counted, the dive lands on the builder yes with the hero at 0.00
+    planted: caught. 0.1% of the first screen is their hat, dessert, logo and photos (3D), sweets not counted, the dive lands on the builder yes with the hero at 1.00
+PASS  look home 1440
+    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, no count ups, one button style, 6 sections, tones DLLDDD (2 turns), 8.6 screens long
+    planted: caught. banned font poppins on <div>; italic in heading "Plant heading"; 3 small uppercase kickers above headings; pill button "Order now →"; arrow glyph in "Order now →"; soft shadow rounded box <div class="">; buttons outside the one style: Order now →
+PASS  walk menu 390
+    clean:   27 steps. 0:bar 422:bar 844:bar 1266:bar 1688:bar 2110:bar 2532:bar 2954:bar 3376:bar 3798:bar 4220:bar 4642:bar 5064:bar 5486:bar 5908:bar 6330:bar 6752:bar 7174:bar 7596:bar 8018:bar 8440:bar 8862:bar 9284:bar 9706:bar 10128:bar 10550:bar 10938:bar
+    planted: caught. 27 steps. 0:NONE 422:NONE 844:NONE 1266:NONE 1688:NONE 2110:NONE 2532:NONE 2954:NONE 3376:NONE 3798:NONE 4220:NONE 4642:NONE 5064:NONE 5486:NONE 5908:NONE 6330:NONE 6752:NONE 7174:NONE 7596:NONE 8018:NONE 8440:NONE 8862:NONE 9284:NONE 9706:NONE 10128:NONE 10550:NONE 10938:NONE
+PASS  hero menu 390
+    clean:   55.7% of the first screen is their photo and logo
+    planted: caught. 0.0% of the first screen is their photo and logo
+PASS  look menu 390
+    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, no count ups, one button style, 2 sections, tones DL (1 turns), 13.9 screens long
+    planted: caught. banned font poppins on <div>; italic in heading "Plant heading"; 3 small uppercase kickers above headings; pill button "Order now →"; arrow glyph in "Order now →"; soft shadow rounded box <div class="">; buttons outside the one style: Order now →
+PASS  walk menu 1440
+    clean:   12 steps. 0:bar 450:bar 900:bar 1350:bar 1800:bar 2250:bar 2700:bar 3150:bar 3600:bar 4050:bar 4500:bar 4779:bar
+    planted: caught. 12 steps. 0:NONE 450:NONE 900:NONE 1350:NONE 1800:NONE 2250:NONE 2700:NONE 3150:NONE 3600:NONE 4050:NONE 4500:NONE 4779:NONE
+PASS  hero menu 1440
+    clean:   48.5% of the first screen is their photo and logo
+    planted: caught. 0.0% of the first screen is their photo and logo
+PASS  look menu 1440
+    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, no count ups, one button style, 2 sections, tones DL (1 turns), 6.1 screens long
+    planted: caught. banned font poppins on <div>; italic in heading "Plant heading"; 3 small uppercase kickers above headings; pill button "Order now →"; arrow glyph in "Order now →"; soft shadow rounded box <div class="">; buttons outside the one style: Order now →
+PASS  walk birthdays 390
+    clean:   10 steps. 0:bar+book 430:bar+book 860:bar+book 1290:bar+book 1720:bar+book 2150:bar+book 2580:bar+book 3010:bar+book 3440:bar+book 3796:bar+book
+    planted: caught. 10 steps. 0:NONE+book 430:NONE+book 860:NONE+book 1290:NONE+book 1720:NONE+book 2150:NONE+book 2580:NONE+book 3010:NONE+book 3440:NONE+book 3796:NONE+book
+PASS  hero birthdays 390
+    clean:   55.7% of the first screen is their photo and logo
+    planted: caught. 0.0% of the first screen is their photo and logo
+PASS  look birthdays 390
+    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, no count ups, one button style, 3 sections, tones DDD (0 turns), 5.3 screens long
+    planted: caught. banned font poppins on <div>; italic in heading "Plant heading"; 3 small uppercase kickers above headings; pill button "Order now →"; arrow glyph in "Order now →"; soft shadow rounded box <div class="">; buttons outside the one style: Order now →
+PASS  walk birthdays 1440
+    clean:   9 steps. 0:bar+book 450:bar+book 900:bar+book 1350:bar+book 1800:bar+book 2250:bar+book 2700:bar+book 3150:bar+book 3417:bar+book
+    planted: caught. 9 steps. 0:NONE+book 450:NONE+book 900:NONE+book 1350:NONE+book 1800:NONE+book 2250:NONE+book 2700:NONE+book 3150:NONE+book 3417:NONE+book
+PASS  hero birthdays 1440
+    clean:   43.2% of the first screen is their photo and logo
+    planted: caught. 0.0% of the first screen is their photo and logo
+PASS  look birthdays 1440
+    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, no count ups, one button style, 3 sections, tones DDD (0 turns), 4.6 screens long
+    planted: caught. banned font poppins on <div>; italic in heading "Plant heading"; 3 small uppercase kickers above headings; pill button "Order now →"; arrow glyph in "Order now →"; soft shadow rounded box <div class="">; buttons outside the one style: Order now →
+PASS  walk find-us 390
+    clean:   9 steps. 0:bar 422:bar 844:shop+bar 1266:shop+bar 1688:shop+bar 2110:shop+bar 2532:bar 2954:bar 3125:bar
+    planted: caught. 9 steps. 0:NONE 422:NONE 844:NONE 1266:NONE 1688:NONE 2110:NONE 2532:NONE 2954:NONE 3125:NONE
+PASS  hero find-us 390
+    clean:   55.7% of the first screen is their photo and logo
+    planted: caught. 0.0% of the first screen is their photo and logo
+PASS  look find-us 390
+    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, no count ups, one button style, 3 sections, tones DDD (0 turns), 4.6 screens long
+    planted: caught. banned font poppins on <div>; italic in heading "Plant heading"; 3 small uppercase kickers above headings; pill button "Order now →"; arrow glyph in "Order now →"; soft shadow rounded box <div class="">; buttons outside the one style: Order now →
+PASS  walk find-us 1440
+    clean:   9 steps. 0:bar 450:bar 900:shop+bar 1350:shop+bar 1800:shop+bar 2250:shop+bar 2700:bar 3150:bar 3422:bar
+    planted: caught. 9 steps. 0:NONE 450:NONE 900:NONE 1350:NONE 1800:NONE 2250:NONE 2700:NONE 3150:NONE 3422:NONE
+PASS  hero find-us 1440
+    clean:   43.9% of the first screen is their photo and logo
+    planted: caught. 0.0% of the first screen is their photo and logo
+PASS  look find-us 1440
+    clean:   fonts mona sans + fragment mono, no italics, 0 kickers, no pills, no arrows, no soft shadow cards, no count ups, one button style, 3 sections, tones DDD (0 turns), 4.6 screens long
+    planted: caught. banned font poppins on <div>; italic in heading "Plant heading"; 3 small uppercase kickers above headings; pill button "Order now →"; arrow glyph in "Order now →"; soft shadow rounded box <div class="">; buttons outside the one style: Order now →
 PASS  sums
-    clean:   30 orders, instant
-    1 390 shake s1 t0 e0 x2 items2 want 2700 ok
-    2 1440 shake s3 t4 e0 x3 items0 want 3750 ok
-    3 390 fav Chocolate Orange +s1 +t1 -1 x2 items0 want 1700 ok
-    4 1440 crepe s2 t0 e0 x3 items0 want 2250 ok
-    5 390 froyo/large s0 t2 e0 x3 items0 want 2097 ok
-    6 1440 waffle s1 t0 e1 x3 items0 want 2550 ok
-    7 390 crepe s1 t3 e1 x2 items0 want 2300 ok
-    8 1440 fav Bueno +s0 +t2 -1 x1 items2 want 2050 ok
-    9 390 crepe s1 t1 e0 x2 items1 want 1690 ok
-    10 1440 waffle s0 t1 e1 x3 items0 want 2550 ok
-    11 390 crepe s2 t4 e1 x3 items1 want 4700 ok
-    12 1440 shake s1 t0 e0 x1 items2 want 1440 ok
-    13 390 fav White Choc & Raspberry +s0 +t1 x2 items2 want 6350 ok
-    14 1440 fav Biscoff +s1 +t1 x3 items2 want 3940 ok
-    15 390 crepe s1 t0 e0 x2 items1 want 1650 ok
-    16 1440 cookie_dough s3 t1 e1 x3 items1 want 4250 ok
-    17 390 crepe s2 t4 e1 x3 items2 want 8250 ok
-    18 1440 crepe s1 t3 e1 x3 items2 want 5350 ok
-    19 390 fav Chocolate +s1 +t0 x1 items1 want 1100 ok
-    20 1440 fav Oreo / Cookies n Cream +s0 +t0 x2 items2 want 2100 ok
-    21 390 fav Chocolate +s0 +t1 x3 items1 want 3200 ok
-    22 1440 sundae s3 t3 e0 x3 items0 want 3600 ok
-    23 390 froyo/medium s0 t4 e0 x2 items0 want 1198 ok
-    24 1440 froyo/large s1 t0 e0 x1 items2 want 2199 ok
-    25 390 fav Mint Choc Aero +s0 +t1 x1 items0 want 750 ok
-    26 1440 waffle s1 t2 e1 x1 items2 want 4000 ok
-    27 390 sundae s2 t4 e0 x1 items0 want 1100 ok
-    28 1440 shake s3 t2 e0 x3 items0 want 3300 ok
-    29 390 fav Oreo +s1 +t1 -1 x1 items1 want 2700 ok
-    30 1440 froyo/large s3 t2 e0 x3 items1 want 4147 ok
+    clean:   24 orders, instant
+    1 390 crepe s1 t0 e1 x2 items2 want 2100 then 2950 ok at Home, /menu/ and back
+    2 1440 cookie_dough s3 t2 e1 x2 items1 want 3100 then 3700 ok at Home, /menu/ and back
+    3 390 crepe s1 t3 e1 x1 items0 want 1150 then 1150 ok at Home, /menu/ and back
+    4 1440 shake s1 t3 e0 x1 items0 want 1050 then 1050 ok at Home, /menu/ and back
+    5 390 sundae s1 t4 e0 x3 items2 want 3000 then 6000 ok at Home, /menu/ and back
+    6 1440 cookie_dough s3 t2 e1 x3 items0 want 4050 then 4050 ok at Home, /menu/ and back
+    7 390 fav Strawberry +s0 +t0 -1 x3 items0 want 1950 then 1950 ok at Home, /menu/ and back
+    8 1440 sundae s2 t2 e0 x2 items1 want 2000 then 2750 ok at Home, /menu/ and back
+    9 390 shake s3 t1 e0 x3 items2 want 2850 then 3640 ok at Home, /menu/ and back
+    10 1440 sundae s1 t2 e0 x3 items0 want 2400 then 2400 ok at Home, /menu/ and back
+    11 390 fav Nutella & Nuts +s0 +t1 x1 items0 want 850 then 850 ok at Home, /menu/ and back
+    12 1440 sundae s2 t2 e0 x2 items1 want 1900 then 2250 ok at Home, /menu/ and back
+    13 390 waffle s0 t0 e1 x1 items1 want 950 then 2000 ok at Home, /menu/ and back
+    14 1440 fav Chocolate Orange +s1 +t0 -1 x3 items1 want 2250 then 3300 ok at Home, /menu/ and back
+    15 390 shake s3 t0 e0 x2 items1 want 1700 then 1750 ok at Home, /menu/ and back
+    16 1440 fav Vanilla +s0 +t2 x1 items0 want 850 then 850 ok at Home, /menu/ and back
+    17 390 fav Peanut Butter +s1 +t2 x2 items0 want 1900 then 1900 ok at Home, /menu/ and back
+    18 1440 fav White Choc & Raspberry +s2 +t0 -1 x3 items2 want 2550 then 3150 ok at Home, /menu/ and back
+    19 390 crepe s1 t1 e1 x3 items0 want 2850 then 2850 ok at Home, /menu/ and back
+    20 1440 sundae s2 t1 e0 x2 items2 want 1600 then 4400 ok at Home, /menu/ and back
+    21 390 shake s0 t1 e0 x2 items2 want 1300 then 2150 ok at Home, /menu/ and back
+    22 1440 cookie_dough s3 t1 e1 x2 items1 want 2900 then 2950 ok at Home, /menu/ and back
+    23 390 froyo/small s0 t2 e0 x2 items1 want 998 then 1498 ok at Home, /menu/ and back
+    24 1440 fav Biscoff +s1 +t0 -1 x3 items2 want 2550 then 3750 ok at Home, /menu/ and back
     4 orders with the pour and the falling toppings
-    1 1440 fav Sherbet Fruit Sundae +s1 +t0 x1 items2 want 1600 ok
-    2 1440 cookie_dough s3 t1 e1 x3 items1 want 4950 ok
-    3 1440 waffle s1 t0 e0 x3 items1 want 4950 ok
-    4 1440 froyo/small s2 t2 e0 x3 items0 want 2097 ok
-    planted: caught. 1 1440 crepe s2 t4 e1 x1 items0 want 1550 GOT state=1580,step=1580,bar=1580,ticket=1580,ticketText=1580,golden=1580,goldenText=1580
+    1 1440 fav Sherbet Fruit Sundae +s1 +t0 x1 items2 want 850 then 1600 ok at Home, /menu/ and back
+    2 1440 cookie_dough s3 t1 e1 x3 items1 want 4350 then 4950 ok at Home, /menu/ and back
+    3 1440 waffle s1 t0 e0 x3 items1 want 1950 then 4950 ok at Home, /menu/ and back
+    4 1440 froyo/small s2 t2 e0 x3 items0 want 2097 then 2097 ok at Home, /menu/ and back
+    planted: caught. 1 1440 crepe s2 t4 e1 x1 items0 want 1550 then 1550 GOT home.state=1580,home.header=1580,home.bar=1580,home.step=1580,home.ticket=1580,home.ticketText=1580,home.cart=1580,home.golden=1580,home.goldenText=1580,menu.state=1580,menu.header=1580,menu.bar=1580,menu.cart=1580,menu.golden=1580,menu.goldenText=1580,back.state=1580,back.header=1580,back.bar=1580,back.step=1580,back.ticket=1580,back.ticketT
 PASS  menu
-    clean:   115 menu lines and prices checked, 115 found as text
-    planted: caught. 115 menu lines and prices checked, 114 found as text. MISSING Hot Chocolate 3.5
+    clean:   120 menu lines and prices checked, 120 found as text
+    planted: caught. 120 menu lines and prices checked, 119 found as text. MISSING Hot Chocolate 3.5
 PASS  copy
-    clean:   no dashes, no colons, no emoji, 1 exclamation mark, no banned words, nothing uncontracted, no Uber, the prototype note 4 times, 93 contractions
-    planted: caught. dashes: —; colons: great:; 3 exclamation marks; banned words: seamless, journey, indulge; uncontracted: it is
+    clean:   4 pages and the 404, no dashes, no colons, no emoji, 1 exclamation mark, no banned words, nothing uncontracted, no Uber, the prototype note home 2 + drawer 3, menu 2 + drawer 3, birthdays 3 + drawer 4, find-us 2 + drawer 3, 424 contractions
+    planted: caught. dashes: —; colons: great:; 2 different lines with an exclamation mark: No golden ticket needed, just a sweet tooth! | Our seamless journey — it is great: indulge! Go!; banned words: seamless, journey, indulge; uncontracted: it is
 PASS  overflow
-    clean:   320 ok, 360 ok, 390 ok, 430 ok, 768 ok, 1024 ok, 1440 ok, 1920 ok, resize 1440 to 320 ok
-    planted: caught. 320 FAIL scrollX 200 2416/320 a.skip,header.proto-top,p., 360 FAIL scrollX 200 2416/360 a.skip,header.proto-top,p., 390 FAIL scrollX 200 2416/390 a.skip,header.proto-top,p., 430 FAIL scrollX 200 2416/430 a.skip,header.proto-top,p., 768 FAIL scrollX 200 2432/768 a.skip,header.proto-top,p., 1024 FAIL scrollX 200 3000/1024 a.skip,header.proto-top,p., 1440 FAIL scrollX 200 3329/1440 a.skip,header.prot
+    clean:   home ok at 8 widths and a resize, menu ok at 8 widths and a resize, birthdays ok at 8 widths and a resize, find-us ok at 8 widths and a resize
+    planted: caught. home FAIL 320 scrollX 200 2400/320 a.skip,aside.proto-top,p.; 360 scrollX 200 2400/360 a.skip,aside.proto-top,p.; 390 scrollX 200 2400/390 a.skip,aside.proto-top,p.; 430 scrollX 200 2400/430 a.skip,aside.proto-top,p.; 768 scrollX 200 2400/768 a.skip,aside.proto-top,p.; 1024 scrollX 200 2400/1024 a.skip,aside.proto-top,p.; 1440 scrollX 200 2400/1440 a.skip,aside.proto-top,header.hd; 1920 scrollX 20
 PASS  errors
-    clean:   390: 38 images decoded, 4 films, 0 console errors, 0 failed requests; 1440: 38 images decoded, 4 films, 0 console errors, 0 failed requests
-    planted: caught. 390: 39 images decoded, NOT media/missing-plant.webp, 4 films, 404: http://localhost:50494/media/missing-plant.webp | console: Failed to load resource: the server responded with a status of 404 (Not Found); 1440: 39 images decoded, NOT media/missing-plant.webp, 4 films, 404: http://localhost:50494/media/missing-plant.webp | console: Failed to load resource: the server responded with a status of 40
+    clean:   home 390: 24 images, 3 films, 0 errors; home 1440: 24 images, 3 films, 0 errors; menu 390: 7 images, 1 films, 0 errors; menu 1440: 7 images, 1 films, 0 errors; birthdays 390: 4 images, 2 films, 0 errors; birthdays 1440: 4 images, 2 films, 0 errors; find-us 390: 6 images, 1 films, 0 errors; find-us 1440: 6 images, 1 films, 0 errors
+    planted: caught. home 390: 25 images, NOT media/missing-plant.webp, 3 films, 404: http://localhost:64795/media/missing-plant.webp | console: Failed to load resource: the server responded with a status of 404 (Not Found); home 1440: 25 images, NOT media/missing-plant.webp, 3 films, 404: http://localhost:64795/media/missing-plant.webp | console: Failed to load resource: the server responded with a status of 404 (Not
 PASS  axe
-    clean:   390 top: clean; 390 middle: clean; 390 end: clean; 390 reduced top: clean; 390 reduced middle: clean; 390 reduced end: clean; 1440 top: clean; 1440 middle: clean; 1440 end: clean; 1440 reduced top: clean; 1440 reduced middle: clean; 1440 reduced end: clean
-    planted: caught. 390 top: button-name(1) image-alt(1); 390 middle: button-name(1) image-alt(1); 390 end: button-name(1) image-alt(1); 390 reduced top: button-name(1) image-alt(1); 390 reduced middle: button-name(1) image-alt(1); 390 reduced end: button-name(1) image-alt(1); 1440 top: button-name(1) image-alt(1); 1440 middle: button-name(1) image-alt(1); 1440 end: button-name(1) image-alt(1); 1440 reduced top: butt
+    clean:   home 390: clean; home 390 reduced: clean; home 1440: clean; home 1440 reduced: clean; menu 390: clean; menu 390 reduced: clean; menu 1440: clean; menu 1440 reduced: clean; birthdays 390: clean; birthdays 390 reduced: clean; birthdays 1440: clean; birthdays 1440 reduced: clean; find-us 390: clean; find-us 390 reduced: clean; find-us 1440: clean; find-us 1440 reduced: clean
+    planted: caught. home 390: top button-name(1) image-alt(1), middle button-name(1) image-alt(1), end button-name(1) image-alt(1), drawer button-name(1) image-alt(1), panel button-name(1) image-alt(1); home 390 reduced: top button-name(1) image-alt(1), middle button-name(1) image-alt(1), end button-name(1) image-alt(1), drawer button-name(1) image-alt(1), panel button-name(1) image-alt(1); home 1440: top button-name
 PASS  reduced motion and no JS
-    clean:   no JS: headline true, 6 bases, 12 sauces, 19 toppings, 89 menu rows, 150 prices as text, the hero still shown; reduced motion: shutter open, no intro true, a pour, a topping and a base swap finished at once
-    planted: caught. no JS: headline true, 6 bases, 0 sauces, 19 toppings, 89 menu rows, 138 prices as text, the hero still shown; reduced motion: shutter open, no intro true, a pour, a topping and a base swap finished at once
+    clean:   no JS home: 6 bases, 12 sauces, 19 toppings, 46 prices as text, the opening picture shown; no JS menu: 89 menu rows, 99 prices as text, the opening picture shown; no JS birthdays: 8 booking fields, 1 prices as text, the opening picture shown; no JS find-us: both shops, their hours and the frozen yoghurt prices, 4 prices as text, the opening picture shown; reduced motion: shutter open, no intro true, a pour, a topping and a base swap finished at once
+    planted: caught. no JS home: 6 bases, 0 sauces, 19 toppings, 34 prices as text, the opening picture shown FAIL; no JS menu: 89 menu rows, 99 prices as text, the opening picture shown; no JS birthdays: 8 booking fields, 1 prices as text, the opening picture shown; no JS find-us: both shops, their hours and the frozen yoghurt prices, 4 prices as text, the opening picture shown; reduced motion: shutter open, no intro
 PASS  order and booking
-    clean:   390: order placed and stamped (Charlie’s BrighouseCollect, Today 12pmFor Sam), booking confirmed, 7 chairs, with motion 7 of 7 chairs round the table, "Table ticket Table for 7 Birthday at Charlie’s HuddersfieldSaturday 31 October, 12pmBooked for Sam Confirmed"; 1440: order placed and stamped (Charlie’s BrighouseCollect, Today 12pmFor Sam), booking confirmed, 7 chairs, with motion 7 of 7 chairs round the table, "Table ticket Table for 7 Birthday at Charlie’s HuddersfieldSaturday 31 October, 12pmBooked for Sam Confirmed"
-    planted: caught. 390: order NOT PLACED (Charlie’s BrighouseCollectFor Sam), booking confirmed, 7 chairs, with motion 0 of 7 chairs round the table, "Table ticket Table for 7 Birthday at Charlie’s HuddersfieldSaturday 31 October, 12pmBooked for Sam Confirmed"; 1440: order NOT PLACED (Charlie’s BrighouseCollectFor Sam), booking confirmed, 7 chairs, with motion 0 of 7 chairs round the table, "Table ticket Table for 7
-ALL PASS, 14 of 14
+    clean:   390: Home order stamped (Charlie’s BrighouseCollect, Today 7pmFor Sam), Find us Order opens on its shop and stamps, its Book carries the shop, booking confirmed with 7 chairs and kept after another page, with motion 7 of 7 chairs round the table and the teaser 6 of 6, "Table ticket Table for 7 Birthday at Charlie’s HuddersfieldSaturday 31 October, 12pmBooked for Sam Confirmed"; 1440: Home order stamped (Charlie’s BrighouseCollect, Today 7pmFor Sam), Find us Order opens on its shop and stamps, its Book carries the shop, booking confirmed with 7 chairs and kept after another page, with motion 7 of 7 chairs round the table and the teaser 6 of 6, "Table ticket Table for 7 Birthday at Charlie’s HuddersfieldSaturday 31 October, 12pmBooked for Sam Confirmed"
+    planted: caught. 390: Home order NOT PLACED (Charlie’s BrighouseCollectFor Sam), Find us Order opens on its shop and NOT PLACED, its Book carries the shop, booking confirmed with 7 chairs and kept after another page, with motion 0 of 7 chairs round the table and the teaser 0 of 6, "Table ticket Table for 7 Birthday at Charlie’s HuddersfieldSaturday 31 October, 12pmBooked for Sam Confirmed"; 1440: Home order NOT PL
+PASS  kept across pages
+    clean:   Home to /menu/ and back kept, £13.50 then £15.40 with the tea, a tampered order came back at menu prices, unknown parts dropped, at most 20, with storage blocked all 4 pages open and take an order
+    planted: caught. the order was not kept: menu page £5.50 "Your waffle", back on Home £5.50 waffle waffle+waffle
+ALL PASS, 33 of 33

@@ -60,11 +60,13 @@ no second version.
    caterer and food event sites for the type, and award level sites rendered today for the art.
 3. **Fill the build card** (section 20, A to D) with a source for every line. A line you can't answer sends you back
    to research, never to a guess.
-4. **Build the first look only, locally.** The header (desktop and the phone menu), the first three screens of Home,
-   and the ONE signature moment working (section 12). The enquiry drawer open on a phone.
+4. **Build the first look only, locally.** First sketch three directions for the hero moment as stills and pick the
+   one you'd bet the whole build on, the boldest that still guides a planner to the enquiry, never the safest. Then
+   build the header (desktop and the phone menu), the first three screens of Home, and that ONE signature moment
+   working (section 12). The enquiry drawer open on a phone.
 5. **First look.** Send Raka the card's sections A to C, screenshots at 1440 by 900 and 390 by 844 of those screens,
-   three frames of the moment mid motion, the drawer on a phone, and your first screen beside the AI default
-   screenshots from 18A. Then STOP and wait for his go. A note here costs one screen, not a site.
+   three frames of the moment mid motion, the drawer on a phone, your first screen beside the AI default screenshots
+   from 18A, and the two directions you didn't pick as small stills. Then STOP and wait for his go. A note here costs one screen, not a site.
 6. **On his go, build the rest in one pass** to the card, every page, and the plan site (section 22) with it, its
    screenshots taken from the finished prototype.
 7. **Run every check in section 19** until all pass, each with its planted failure caught, on both sites.
@@ -707,7 +709,7 @@ doesn't prove the build is good, BWILD v1 passed every check and still came back
 
 **At the first look.** `card.md` (A to C, with lines 15 and 16), a contact sheet of the AI default sites beside your
 first screen, the header and Home's first three screens at 1440 and 390, three frames of the moment, the drawer open on
-a phone. Then wait.
+a phone, the two hero directions you didn't pick as stills. Then wait.
 
 **At the final look.** Every section of every page at 1440 and 390, both languages for Home, and the one file HTML per
 page. Then wait for "final".
