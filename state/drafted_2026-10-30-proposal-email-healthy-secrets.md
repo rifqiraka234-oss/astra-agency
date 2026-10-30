@@ -1,3 +1,4 @@
+<!-- GATE ARCHIVED. Raka sent this himself from Gmail 30 Oct 10:40:37 UTC, message 1a18c65bcc08cb23, subject he changed to "Healthy Secrets Website Proposal", deck attached, cc Josh and Luna. -->
 # Proposal email, Healthy Secrets, 30 Oct. NOT SENT. Waiting on Raka's word. Gmail draft r-4665995359041695024, no attachment yet.
 
 Raka, 30 Oct, "lets just send it to them, draft an email", with the deck Healthy_Secrets_Astra_Proposal_Final.pptx

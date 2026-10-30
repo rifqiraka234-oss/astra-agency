@@ -1,3 +1,4 @@
+<!-- SENT 2026-10-30 on Raka's "send" through tools/lemlist.py, act_mAtCd39kyYApySEpS, one copy, identical text, thread 13 items after. Do not send again. -->
 # LinkedIn heads up to Nikolaus, 30 Oct. NOT SENT. Waiting on Raka's word.
 
 Raka, 30 Oct, "sent! send a message to nikolaus on linkedin also that we sent the proposal". Proposal email confirmed
