@@ -1,4 +1,5 @@
 <!-- APPROVED by Raka 2026-10-31, word for word "Commit send tomorrow at 08.30". Covers the 16 SKETCH and SKETCHB drafts in this file (not CheLati, Nouvelle Hôtellerie, Birch Stays or Clara). Scheduled for 2026-11-01 08.30 Europe/Amsterdam (07.30 UTC). NOT SENT until each section carries its own SENT line. -->
+<!-- CAP, Raka 2026-10-31 ~21.10 UTC, "Make sure we maximise the 30 a day message on linkedin send the urgent ones are earlier". Sunday already has 16 earlier sends from the other session (10 closers 05.00 UTC, Danielle 06.30, Milo and four still interested 06.39), so 14 of these go at 07.30 UTC in order Mark, Felix, Sylvain, Lewis, Sarah, Marion, Jordane, Jeffrey, Romain, Owen, Agathe, Denise, René, Florian, and Alexandre and Gregory roll to Mon 2 Nov 08.30 Amsterdam (trig_0183F3FXdCqrnUNnRMK3fkeb). Sunday wake trig_01EGAnyKqTA7C7f4h1TYVc4Y. -->
 # Drafts, 2026-10-31, group A, Raka's angle calls. NOT SENT
 
 Raka, 2026-10-31, word for word: "abriteo -> website for more sales / hetgoedvanbovy -> website for more reservations /

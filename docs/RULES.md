@@ -434,6 +434,12 @@ spam please". Two others got the same run that week.
 - **A reply from them starts the count again.** Our answer to it is pitch one.
 - **Spread the bumps.** Never more than 20 in one day, oldest first, the rest roll to the next day.
   On 12 Oct 111 went out in one day, against the 20 a day lemlist's own message limit is set to.
+- **30 LinkedIn messages a day, filled, urgent first (Raka, 2026-10-31).** His words, "Make sure we maximise the 30 a
+  day message on linkedin send the urgent ones are earlier". The day's total across every session and every shape
+  (openers, replies, nudges, deliveries, closers) is 30, counted from that day's `state/send_log_<date>.txt` before each
+  batch. Aim to use all 30. Urgent goes earliest in the day, in this order, replies and said yes follow ups, due bumps
+  and nudges, closers, then openers with oldest accept and time bound angles first. What doesn't fit rolls to the next
+  day's first open slot. Every message still needs Raka's word, the cap never authorises a send.
 - **Anyone who already had a follow up when this started closes silently** when the next one would
   have been due. That's the 22 lined up for a last bump on 15 Oct.
 - **People who said yes never close on silence (Raka, 2026-10-14).** His words, "lets just remember it
