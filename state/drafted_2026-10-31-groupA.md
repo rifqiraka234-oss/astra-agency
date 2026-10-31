@@ -645,3 +645,70 @@ At Astra agency we build websites and AI workflows for brands like Unilever, AXA
 
 Shall I send you a sketch of the host page?
 ```
+
+### Romain Bretoneiche, Kilomètre Zéro, ctc_pJB7XabfQmT9zmrME
+
+> NOT SENT. Flags for Raka. (1) The record resolves through the register. KILOMETRE ZERO SAS (SIREN 981452774, Paris,
+> November 2023, a restaurant with 3 to 5 staff) has as Président ALL THE ROADS GROUP, whose gérant is Romain (his
+> software company, 62.01Z, €141,150 revenue in 2025). (2) He's a fullstack developer and the table booking runs on a
+> custom app hosted on Netlify, so a website pitch would land on the one person who builds it. The message offers
+> outreach only. (3) Their group booking by email is a choice ("No endless forms or frustrating wait times"), so it's
+> never called a gap. (4) Arm A.
+
+```gate
+lead: Romain Bretoneiche, co founder of Kilomètre Zéro, a brewpub at 39 rue Notre-Dame de Nazareth, Paris 3e. Register, KILOMETRE ZERO SAS 981452774, created 2023-11-09, NAF 56.10A, Président ALL THE ROADS GROUP, Directeur Général ETAVERNE (https://recherche-entreprises.api.gouv.fr/search?q=981452774), and ALL THE ROADS GROUP 920467016, Paris, NAF 62.01Z, gérant ROMAIN THOMAS DOMINIQUE BRETONEICHE born 1991 (https://recherche-entreprises.api.gouv.fr/search?q=all%20the%20roads%20group). lemlist jobTitle Co-fondateur, tagline "Développeur Fullstack Freelance", the two jobs reconcile through his holding. ctc_pJB7XabfQmT9zmrME, leadId lea_xT5ZApBu2PhC8aBgw, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-29 13.57 UTC. Thread 0 items, control 7
+site pass 1: 141 URLs, tools/crawl.py on https://km-0.bar (86 from the sitemap), 117 at 200 and 24 rate limited, every page read (bar, brewpub, menu, tap rental, events list and 40+ event pages, 15 blog posts in French and English, reservations)
+site pass 2: 157 URLs, tools/crawl.py again with the rate limited pages read, plus dom.js on the private hire guide and reservations, site-audit.js desktop and phone, all opened
+deep analysis: a Wix site run as a search engine for a brewpub. Co founder Django writes and updates long guides every month ("Article mis à jour en octobre 2026"), on private hire, brewery tours, beer styles, the 450 Google reviews. Tables book through a custom app embedded from scintillating-creponne-ec5c9e.netlify.app. Groups under 30 use that form, 30+ "Send us a message by email", by choice ("No endless forms or frustrating wait times"). The private hire guide pitches afterworks to "teams working in central Paris" and "your Marais startup". Weeknights are filled with quizzes and board games (Toms Quiz Mondays and Tuesdays, board games Sundays). Tap and keg rental for events from the brewery
+owner linkedin: Route 1 curl https://www.linkedin.com/in/romain-bretoneiche 999, walled. Route 2 Google News "Romain Bretoneiche" 0 with the control at 100. Route 3 the register, gérant of ALL THE ROADS GROUP, Président of the brewpub. Route 4 the site names Django as co founder and author, not Romain. Route 5 social-audit.js on the linked accounts, Instagram UNKNOWN, TikTok 22, YouTube 10. Route 6 the lemlist record, co founder and freelance developer
+contact linkedin: same person as the owner, the register chain and the lemlist record agree
+google news: tools/news.py fr 2026-10-31, "Kilomètre Zéro brasserie" 0, "Romain Bretoneiche" 0, control Carrefour 100
+regional news: tools/news.py (Paris brasserie artisanale) x (bière artisanale OR microbrasserie), Sortir à Paris 28 Oct 2026 on Paris beer bars, Kintsugi Beer brewpub opening by the canal (3 Aug 2026), France 3 Régions 8 Jun 2026 "Marché de la bière artisanale en difficulté"
+industry news: tools/news.py bière artisanale brasseries fermetures OR microbrasserie, 83, craft beer under pressure in 2026, more brewpubs competing for the same afterworks
+sources:
+1. https://www.km-0.bar/
+2. https://www.km-0.bar/en/post/private-hire-craft-beer-bar-paris-group-event
+3. https://www.km-0.bar/en/reservations
+4. https://www.km-0.bar/en/location-tireuse-biere-paris-republique
+5. https://www.km-0.bar/en/bar-biere-republique
+6. https://www.km-0.bar/en/event-list
+7. https://recherche-entreprises.api.gouv.fr/search?q=981452774
+8. https://recherche-entreprises.api.gouv.fr/search?q=all%20the%20roads%20group
+9. https://scintillating-creponne-ec5c9e.netlify.app/?embed=auto
+10. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fkm-0.bar
+11. https://news.google.com/rss (tools/news.py)
+12. https://www.linkedin.com/in/romain-bretoneiche (walled)
+pains: 5 judged. (1) the guides sell afterworks to offices around République but only reach offices that search, while weeknights need quizzes to fill, CHOSEN. (2) group booking by email, their choice, never the angle. (3) the website, built and run by a developer co founder, ruled out. (4) GDPR, a Usercentrics consent setup, GEO VOID from our side, never the angle. (5) a tough craft beer market, context
+chosen: (1), hottest, weeknight team nights are the bookings they work to fill and December is when offices book them, and it's the GTM automation Raka named
+owner reply: "We're full most nights already" | a full business | they fill Mondays and Tuesdays with quizzes and Sundays with board games (https://www.km-0.bar/en/event-list), which a bar does when early week nights need people, and the outreach aims at those nights
+worth: €3,000+, an outreach flow that sends the private hire guide to offices, startups and HR teams around République each month, follows up and books weeknight team nights and tap rentals into their calendar
+still there: gérant of the holding that presides the brewpub on the register read 2026-10-31, and the brewpub's blog updated in October 2026 | https://recherche-entreprises.api.gouv.fr/search?q=all%20the%20roads%20group
+budget: a brewpub with its own brewery, 3 to 5 staff, a custom booking app and a tap rental line, and his software company's 2025 revenue | https://www.km-0.bar/en/location-tireuse-biere-paris-republique
+variant: A
+sweep website: crawled twice, 157 URLs, a strong SEO site with a custom booking app built by a developer co founder, no website angle
+sweep gdpr: site-audit.js GEO VOID (Usercentrics), tools/eu-view.py from Stockholm 7 first party cookies, 0 third party, 25 third party hosts, never the angle (RULES 0E)
+sweep apps: the table booking app already exists (https://scintillating-creponne-ec5c9e.netlify.app/?embed=auto), the outreach flow is the tool, CHOSEN
+sweep social: tools/social-audit.js, Instagram UNKNOWN, TikTok 22 followers, YouTube 10, Facebook read, small, not chosen
+sweep squad: a brewpub, though a co founder runs a software company (ALL THE ROADS GROUP, 62.01Z), he's a builder himself, not a capacity buyer for the bar, not chosen
+thread: problem the private hire guide sells afterworks to teams around République, and it sits on the blog waiting for offices to find it | cost while Mondays and Tuesdays get filled with quizzes, offices nearby likely book their usual bar | offer an outreach flow that sends the guide to offices and startups around République and books weeknight team nights | link guide, offices
+lead read: Romain reads that their private hire guide sits on the blog waiting for offices to find it, while early week nights need quizzes, then gets offered a flow that sends that guide to nearby offices and books team nights, one thread
+claims:
+your private hire guide sells afterworks to teams around République, https://www.km-0.bar/en/post/private-hire-craft-beer-bar-paris-group-event "Afterworks and drinks with colleagues ... accessible for teams working in central Paris" and "your Marais startup"
+it sits on your blog, https://www.km-0.bar/en/post/private-hire-craft-beer-bar-paris-group-event is a blog post ("Article written by Django Co-founder", "Updated: Oct 11")
+Mondays and Tuesdays get quizzes, https://www.km-0.bar/en/event-list Toms Quiz on 2026-11-02 (Monday) and 2026-11-03 (Tuesday), and the same pair on 9 and 10, 16 and 17 November
+INFERENCE, offices nearby likely book their usual bar and only meet the guide if they search, rests on the guide being a blog page (https://www.km-0.bar/en/post/private-hire-craft-beer-bar-paris-group-event), worded likely
+recheck: 2026-10-31, the guide's text and update line, the event list dates against the calendar, the register chain, thread re pulled 0 items with the control at 7. Disproof tried, read how groups book (email by choice, kept out), found the custom booking app so no website claim is made, checked the quiz days are Monday and Tuesday. Facts hold, confidence MEDIUM, a developer co founder may build this himself
+```
+
+SKETCH
+```
+Hi Romain, Kilomètre Zéro looks cool!
+
+However, your private hire guide sells afterworks to teams around République, and it sits on your blog waiting for offices to find it. While Mondays and Tuesdays get filled with quizzes, offices nearby likely book their usual bar.
+
+I'd suggest an outreach flow that sends the guide to offices and startups around République each month and books their weeknight team nights.
+
+At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the outreach flow?
+```
