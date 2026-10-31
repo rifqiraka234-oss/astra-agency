@@ -377,7 +377,76 @@ However, your company events page shows no price and one client name, Padel Next
 
 I'd suggest a business page with your winter packages, prices and client stories, plus an outreach flow that sends it to office managers around Amsterdam each autumn.
 
-At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
+At Astra agency we build websites and AI workflows for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the business page and outreach flow?
+```
+
+### Sylvain Protais, Nighthawks, ctc_tGmsetQJ9r7zSQKmF (Clara Darcq, ctc_uAmLxhSMH7qncePot, held)
+
+> NOT SENT. Flags for Raka. (1) One message per company. Sylvain is Président of SAS NIGHTHAWKS (SIREN 811966886,
+> Clichy, created June 2015), Clara and Anaïs Leoni are Directeurs Généraux. Sylvain accepted first and his tagline says
+> "Pour pros & particuliers", so he gets it and Clara is held, never both. (2) A real B2B brand, founded 2016, sold at
+> Printemps, Galeries Lafayette, the Samaritaine and BHV, 5,531 LinkedIn and 8,042 Instagram followers, a sales team and
+> Ankorstore for retail. The register shows a 2023 net loss of €133,131. (3) Risk, their contact page names a sales team,
+> so they may already prospect hotels. The offer feeds that team booked tastings rather than replacing it. (4) Arm A.
+
+```gate
+lead: Sylvain Protais, co founder and Président of SAS NIGHTHAWKS, SIREN 811966886, 1 avenue Anatole France, 92110 Clichy, created 2015-06-08, NAF 56.30Z, Clara Darcq and Anaïs Leoni Directeurs Généraux (https://recherche-entreprises.api.gouv.fr/search?q=811966886), "Nighthawks est fondée en 2016 par Clara et Sylvain" (https://www.nighthawks.fr/notre-histoire/), mentions légales "Editeur du Site : SAS NIGHTHAWKS" (https://www.nighthawks.fr/mentions-legales/). lemlist jobTitle Co-Founder, tagline "Fondateur de Nighthawks Cocktails | Cocktails premium prêts à servir avec & sans alcool | Pour pros & particuliers", location Bordeaux. ctc_tGmsetQJ9r7zSQKmF, leadId lea_CuLmwLQ3NwkcdCX99, W1c cam_xFYYBzvfSHk83epvw, accepted 2026-10-27 14.55 UTC. Thread 0 items, control 7. Clara ctc_uAmLxhSMH7qncePot also 0 items, held
+site pass 1: 118 URLs, tools/crawl.py on https://nighthawks.fr (64 from the sitemap), 108 at 200, 4 redirects, 6 at 404, every page read (shop and products, hotel, events, restaurants, retail, 15 blog posts, FAQ, stockists, CGV, mentions légales, contact)
+site pass 2: 118 URLs, tools/crawl.py again, plus site-audit.js desktop and phone with both screenshots opened
+deep analysis: a WordPress and WooCommerce site for a ready to drink cocktail maker with a lab in Clichy since 2016. Consumers buy in the e-shop and at Printemps, Galeries Lafayette, the Samaritaine and BHV. Professionals get four pages (Événementiel, Hôtellerie, Restauration, Retail) with formats from 20cl minibar bottles to 5L bag in box, a Mercure Opéra quote, and one action, "Demander un devis. Réponse sous 48h", or Ankorstore for retailers. The blog is a sales engine aimed at pros, guides on hotel honesty bars (9 Oct and 7 May 2026, 3 Apr 2025), choosing alcohol free cocktails for professionals (12 Oct 2026), cocktail menus for business events (20 Oct 2026). The contact page offers a sample kit and a custom quote through the same form, and says "notre équipe commerciale vous accompagne"
+owner linkedin: Route 1 curl https://www.linkedin.com/in/sylvain-protais 301 to the login wall, walled. Route 2 Google News "Clara Darcq" 0 and "Nighthawks cocktails" 0 with the control at 100. Route 3 the register, Président since the company's creation. Route 4 the story page, co founder with Clara. Route 5 the company LinkedIn page through social-audit.js, 5,531 followers. Route 6 the lemlist records of both founders, both co founders
+contact linkedin: same person as the owner, the register, the story page and the lemlist record agree
+google news: tools/news.py fr 2026-10-31, "Nighthawks cocktails" 0, "Clara Darcq" 0, control Carrefour 100
+regional news: tools/news.py (Bordeaux cocktails) x (cocktails prêts à boire OR RTD cocktails), 10, Sud Ouest 18 Jun 2026 on Goguette de Haux cocktails, Sud Ouest 11 Nov 2025 on a Blanquefort ready to drink maker, competitors around their new Bordeaux base
+industry news: tools/news.py cocktails prêts à boire OR RTD cocktails, 100, Vinetur 28 Oct 2026 "Les cocktails prêts à boire, seul grand segment des boissons alcoolisées en croissance à la mi-octobre", the alcohol free cocktail market report (2 Oct 2026)
+sources:
+1. https://www.nighthawks.fr/
+2. https://www.nighthawks.fr/hotellerie/
+3. https://www.nighthawks.fr/evenementiel/
+4. https://www.nighthawks.fr/contact/
+5. https://www.nighthawks.fr/notre-histoire/
+6. https://www.nighthawks.fr/mentions-legales/
+7. https://www.nighthawks.fr/ou-nous-trouver-magasins/
+8. https://www.nighthawks.fr/blog-honesty-bar-hotel-mise-en-place/
+9. https://www.nighthawks.fr/blog-menu-cocktails-evenement-professionnel/
+10. https://recherche-entreprises.api.gouv.fr/search?q=811966886
+11. https://www.linkedin.com/company/nighthawks-paris
+12. https://www.instagram.com/nighthawkscocktails/
+13. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fnighthawks.fr
+14. https://news.google.com/rss (tools/news.py)
+15. https://www.linkedin.com/in/sylvain-protais (walled)
+pains: 5 judged. (1) the pro sales depend on hotels finding the guides and filling a quote form, while the guides could be sent to the hotels, CHOSEN for Raka's "gtm automation for b2b sales". (2) a 2023 net loss of €133,131, growth pressure, context only. (3) no pro prices online, a model (price per customer), never the angle. (4) GDPR, a banner with reject present, never the angle. (5) the site, a working WooCommerce shop with strong pro pages, no website angle
+chosen: (1), biggest, ready to drink is the only growing segment in French alcohol right now (Vinetur, 28 Oct 2026) and the brand already writes the sales material for hotels and events, the missing part is getting it to them
+owner reply: "Our sales team already prospects hotels" | already in hand | their contact page describes the team accompanying professionals after they ask (https://www.nighthawks.fr/contact/ "notre équipe commerciale vous accompagne dans le choix des références"), so the flow books tastings into that team's calendar rather than replacing it, and it's offered as that
+worth: €4,000+, an outreach flow that sends the right Nighthawks guide and a sample kit offer to 4 and 5 star hotels, caterers and event agencies each week, follows up and books tastings for the sales team, with a pro landing page per segment
+still there: Président of SAS NIGHTHAWKS on the national register read 2026-10-31, and the blog published on 20 Oct 2026 | https://recherche-entreprises.api.gouv.fr/search?q=811966886
+budget: a SAS with 6 to 9 staff (register band 03), a sales team, department store listings and an Ankorstore wholesale account | https://www.nighthawks.fr/ou-nous-trouver-magasins/
+variant: A
+sweep website: crawled twice, 118 URLs, a working shop with four pro pages and a strong blog, no website angle, the outreach flow is CHOSEN
+sweep gdpr: site-audit.js banner yes with reject present, tools/eu-view.py from Stockholm run, checked, never the angle (RULES 0E)
+sweep apps: the outreach flow with booked tastings is the tool, CHOSEN, no other process visible from outside
+sweep social: tools/social-audit.js, LinkedIn https://www.linkedin.com/company/nighthawks-paris 5,531 followers, Instagram 8,042 followers newest 2026-10-22, Pinterest 0, strong, not chosen
+sweep squad: a drinks maker with a lab and a shop, per the register NAF 56.30Z and its story page, not a builder of software, not chosen
+thread: problem the blog published guides this month on hotel honesty bars and cocktails for business events, and the hotel page ends in a quote request answered within 48 hours | cost most hotel buyers likely only meet those guides if they search for them | offer an AI workflow that sends the right guide and a sample kit offer to 4 and 5 star hotels and event agencies, and books tastings | link guide, hotel
+lead read: Sylvain reads that his blog writes guides for hotels and events but the hotel page waits for a quote request, so most hotel buyers only meet the guides if they search, then gets offered a flow that sends those guides with a sample kit to hotels and books tastings, one thread
+claims:
+your blog published guides this month on hotel honesty bars and cocktails for business events, https://www.nighthawks.fr/blog-honesty-bar-hotel-mise-en-place/ dated 9 octobre 2026 and https://www.nighthawks.fr/blog-menu-cocktails-evenement-professionnel/ dated 20 octobre 2026
+your hotel page ends in a quote request answered within 48 hours, https://www.nighthawks.fr/hotellerie/ "Demander un devis. Réponse sous 48h."
+INFERENCE, most hotel buyers likely only meet those guides if they search for them, rests on the guides being blog pages with no outreach visible (https://www.nighthawks.fr/blog-honesty-bar-hotel-mise-en-place/), worded likely
+recheck: 2026-10-31, both blog posts and their dates re read, the hotel page call to action, the register, thread re pulled 0 items for both founders with the control at 7. Disproof tried, read the contact page for a sales team (there is one, written into the offer), checked Ankorstore is for retail so the message never says pros can't order, kept the 2023 loss out of the message. Facts hold, confidence MEDIUM, the sales team may already prospect hotels
+```
+
+SKETCH
+```
+Hi Sylvain, Nighthawks looks cool!
+
+However, your blog published guides this month on hotel honesty bars and cocktails for business events, and your hotel page ends in a quote request answered within 48 hours. Most hotel buyers likely only meet those guides if they search for them.
+
+I'd suggest an AI workflow that sends the right guide and a sample kit offer to 4 and 5 star hotels and event agencies, and books tastings for your sales team.
+
+At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the hotel outreach workflow?
 ```
