@@ -169,3 +169,74 @@ At Astra agency we build websites and apps for brands like Unilever, AXA, Pertam
 
 Shall I send you a sketch of the squad on a Code Of Us project?
 ```
+
+### Kat Sale, House of Performance, ctc_SffDGx48HvyaPpAfW
+
+> NOT SENT. Flags for Raka. (1) House of Performance Limited, 13350481, incorporated 21 April 2021, Katherine May Sale and
+> Emma Jane Welland the two active directors (Companies House officers page), the company number matches their own privacy
+> policy. A London paid media agency, Standout Paid Media Agency of the Year 2025, team page of eight. (2) Your call, AI
+> workflow with did you know. (3) The number is AgencyAnalytics' 2026 benchmarks, 494 agency respondents surveyed
+> February to April 2026, only 8% of them UK, and AgencyAnalytics sells client reporting software, so it's a vendor survey.
+> The full report is behind a form, the 55% is from their 30 June 2026 press release. (4) Their media management page says
+> every account gets a Looker Studio dashboard and a weekly performance analysis, and 95% of clients are on 30 day rolling
+> contracts, so the weekly analysis is what keeps clients. (5) Their team page calls one director a "Claude guru", so expect
+> "we already use AI", the owner reply line answers it.
+
+```gate
+lead: Kat Sale, co founder and director of House of Performance Limited, 13350481, incorporated 21 April 2021, officers SALE Katherine May (Active Director, appointed 21 April 2021) and WELLAND Emma Jane (https://find-and-update.company-information.service.gov.uk/company/13350481/officers read 2026-10-31), the number matches https://houseofperformance.co.uk/privacy-policy "company number 13350481". Team page "Kat Sale Co-Founder". lemlist jobTitle Co-Founder, tagline "Paid Media Audits & Mgmt | Co-Founder at House of Performance", Stony Stratford. ctc_SffDGx48HvyaPpAfW, leadId lea_LkjDMctumxHYT7ZHX, W4 TEST 50, accepted. Thread 0 items, control 7
+site pass 1: 95 URLs, tools/crawl.py on https://houseofperformance.co.uk (89 from the sitemap), 91 at 200 and 4 at 404 (two work category pages and two old paths), every page read
+site pass 2: 95 URLs, tools/crawl.py again, the same 91 and 4, plus site-audit.js desktop and phone with the desktop screenshot opened, a modern site behind a CookieYes banner
+deep analysis: a London paid media agency, consultancy (strategic support, auditing, in housing, training) and media management (paid search, paid social, programmatic, ChatGPT ads). About says "Built 5 years ago" and "95% of our clients work with us on 30 day rolling contracts". Media management says "As standard, every account includes a Looker Studio dashboard, weekly performance analysis and regular calls". Audits deliver an executive summary, analysis pack, action roadmap, ranked opportunity list and a stakeholder session. Case studies for Universal, Fuller's, Asda, Jamie Oliver, Bensons for Beds, FixMyCar. The home page shows "Standout Paid Media Agency of the Year 2025", the blog lists 4 UK Agency Awards 2026 nominations (17 Jul 2026). The team page lists eight, two co founders, a non executive director, a paid media director ("Claude guru") and four performance staff. Their iOS 26 post tells clients to track "closed revenue" through CRM integration. INFERENCE, with clients free to leave any month, the weekly analysis is the renewal case, and building it per account is the team's time
+owner linkedin: Route 1 curl the profile from lemlist 301 to the login wall, walled. Route 2 Google News "Kat Sale" 9 hits, none about her. Route 3 Companies House, active director since 2021. Route 4 the team page, co founder. Route 5 the company LinkedIn page through social-audit.js, UNKNOWN, could not read. Route 6 the awards post, quoted as "Kat Sale Co-Founder"
+contact linkedin: same person as the owner, the register, the team page and the lemlist record agree
+google news: tools/news.py en 2026-10-31, "House of Performance" 9 hits, one possibly theirs (Econsultancy 11 Dec 2024, performance marketing trends for 2025), the rest a Dutch consultancy of the same name joining Highberg (2022) and unrelated, "Kat Sale" 9 hits none about her, control Tesco 98
+regional news: tools/news.py (Milton Keynes marketing agency) x (paid media agency AI), 3 (allthingsbusiness 1 Jul 2026 on AI in advertising and commercial risk, BBC 7 Dec 2025 on AI and creative jobs, BBC 29 Aug 2025 Domino's ad ruling)
+industry news: tools/news.py paid media agency AI, 76, plus AgencyAnalytics' 2026 Marketing Agency Benchmarks press release (30 Jun 2026), "55% say the question they hear most from clients is 'Can you connect marketing performance to revenue?'", "79% of agencies save five or more hours per week using AI, with reporting and performance summaries cited as the area of greatest value (42%)"
+did you know: 55% of marketing agencies say the question they hear most from clients is whether they can connect marketing performance to revenue | AgencyAnalytics, 2026 Marketing Agency Benchmarks Report, 494 agency professionals surveyed February to April 2026, US 64%, Australia 13%, UK 8%, Canada 7%, a vendor survey | https://agencyanalytics.com/company/newsroom/press-release-agency-benchmarks-report-2026
+sources:
+1. https://houseofperformance.co.uk/
+2. https://houseofperformance.co.uk/about-us
+3. https://houseofperformance.co.uk/about-us/meet-the-team
+4. https://houseofperformance.co.uk/media-management
+5. https://houseofperformance.co.uk/consultancy-services/auditing
+6. https://houseofperformance.co.uk/blog/ios26-and-the-impacts-on-attribution-and-digital-marketing
+7. https://houseofperformance.co.uk/privacy-policy
+8. https://find-and-update.company-information.service.gov.uk/company/13350481/officers
+9. https://agencyanalytics.com/company/newsroom/press-release-agency-benchmarks-report-2026
+10. https://agencyanalytics.com/p/agency-benchmarks-2026
+11. https://www.instagram.com/houseofperformanceuk/
+12. https://www.facebook.com/houseofperformanceltd/
+13. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fhouseofperformance.co.uk
+14. https://news.google.com/rss (tools/news.py)
+pains: 4 judged. (1) every account gets a weekly performance analysis while clients most want marketing tied to revenue and 95% can leave any month, so the analysis is hand built proof, CHOSEN. (2) LinkedIn page unreadable to our tools, Instagram 740 followers posting this week, no social angle. (3) the site, modern and awarded, no angle. (4) GDPR, CookieYes with a reject, eu-view 2 first party cookies (CSRF and the consent cookie) before a click, fine, never the angle
+chosen: (1), costliest, it's hours per account every week, and it's the AI workflow angle Raka named
+owner reply: "Alex is our Claude guru, we already use AI" | true, their team page says so | a chat window doesn't pull each client's ad and CRM revenue data into their weekly format, the workflow does (https://houseofperformance.co.uk/about-us/meet-the-team "Claude guru", https://houseofperformance.co.uk/media-management "weekly performance analysis")
+worth: €6,000+, an AI workflow that joins each client's Google, Meta and LinkedIn ad data with their CRM or shop revenue and drafts the weekly performance analysis in HOP's format for the team to review
+still there: Katherine May Sale active director on the officers page read 2026-10-31 | https://find-and-update.company-information.service.gov.uk/company/13350481/officers
+budget: an award winning agency with Asda, Universal and Jamie Oliver case studies and eight staff | https://houseofperformance.co.uk/
+sweep website: crawled twice, 95 URLs, modern site, awards, case studies, no website angle
+sweep gdpr: site-audit.js found CookieYes with a reject against its control, tools/eu-view.py from Stockholm 2 first party cookies (CRAFT_CSRF_TOKEN, cookieyes-consent), checked, never the angle (RULES 0E)
+sweep apps: the weekly analysis per account (https://houseofperformance.co.uk/media-management), an AI workflow candidate, CHOSEN
+sweep social: tools/social-audit.js, LinkedIn https://www.linkedin.com/company/house-of-performance-uk/ UNKNOWN unreadable, Instagram https://www.instagram.com/houseofperformanceuk/ 740 followers last post 29 Oct 2026, Facebook https://www.facebook.com/houseofperformanceltd/ 107, not chosen
+sweep squad: an agency of eight running client accounts, they hire paid media people not builders, not chosen
+thread: problem clients ask most whether marketing ties to revenue, and HOP writes a weekly analysis for every account | cost hours per account every week building that proof by hand, with 95% of clients on 30 day rolling contracts | offer an AI workflow joining ad and revenue data that drafts the weekly analysis | link revenue, weekly
+lead read: Kat reads that most agencies get asked to tie marketing to revenue and that every HOP account gets a weekly analysis, then gets offered an AI workflow that drafts that weekly analysis from ad and revenue data, one thread
+claims:
+55% of marketing agencies say the question they hear most from clients is about connecting marketing performance to revenue, https://agencyanalytics.com/company/newsroom/press-release-agency-benchmarks-report-2026 "55% say the question they hear most from clients is 'Can you connect marketing performance to revenue?'"
+AgencyAnalytics surveyed 494 agencies in 2026, https://agencyanalytics.com/p/agency-benchmarks-2026 "494 marketing agencies" and "From February to April 2026"
+every HOP account gets a weekly performance analysis, https://houseofperformance.co.uk/media-management "As standard, every account includes a Looker Studio dashboard, weekly performance analysis and regular calls"
+recheck: 2026-10-31, the press release and the landing page fetched, the media management, about, team and privacy pages reread from crawl pass 2, Companies House officers fetched. Disproof tried, searched for a second source for the 55% and found only the press release, so it's credited to AgencyAnalytics by name, checked HOP don't already sell automated reporting (they offer a Looker dashboard plus a weekly analysis, the analysis is the human part), the landing page's 81% confident against the press release's 88% shows the vendor's own numbers drift, so only the press release figure is used. Facts hold, confidence MEDIUM
+```
+
+SKETCH
+```
+Hi Kat, House of Performance looks cool!
+
+However, did you know that 55% of marketing agencies say the question clients ask most is whether they can tie marketing to revenue? AgencyAnalytics found it in a 2026 survey of 494 agencies, and every HOP account gets a weekly performance analysis.
+
+I'd suggest an AI workflow that joins each client's ad data with their revenue and drafts that weekly analysis in your format for the team to check.
+
+At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the AI workflow for HOP?
+```
