@@ -135,13 +135,13 @@ sweep gdpr: tools/eu-view.py from Stockholm, 4 first party cookies (crumb, ss_cv
 sweep apps: the planner is the tool, folded into the offer, table booking already runs on reservaties.net (dom.js iframe on /reservatie), so no separate booking app
 sweep social: tools/social-audit.js, Instagram https://www.instagram.com/het.goed.van.bovy/ 2,106 followers 74 posts newest 2026-10-31, Facebook 2,042 followers, LinkedIn 30 followers, strong and active, not chosen
 sweep squad: a hospitality concession with a bistro, a bar and a hall, per its own pages and Made in, not a builder of software, not chosen
-thread: problem the wedding, company and party pages end on the same three questions and a contact form, no formula, price per guest or free dates | cost with the Ons Huis hall closing on 31 December its families and clubs will likely ask a few halls and book whoever makes it easiest | offer an events planner where people pick a date, guests and a formula, see a starting price and send a ready request | link formula, price
+thread: problem the wedding, company and party pages end on the same three questions and a contact form, no formula, price per guest or free dates | cost with the Ons Huis hall closing on 31 December its families and clubs will likely book whichever hall makes it easiest | offer an events planner where people pick a date, guests and a formula, see a starting price and send a ready request | link formula, price
 lead read: René reads that his three hall pages only offer a form, no formula, price or free dates, so with Ons Huis closing its parties will likely book whoever makes it easiest, then gets offered a planner where people pick a date, guests and a formula and see a price, one thread
 claims:
 your wedding, company and party pages end on the same three questions and a contact form, https://www.hetgoedvanbovy.be/trouwfeest https://www.hetgoedvanbovy.be/bedrijven https://www.hetgoedvanbovy.be/evenementen each read "Veelgestelde vragen" with Capaciteit, Catering, Techniek and a form, dom.js counts 1 form on trouwfeest and bedrijven (name, email, phone, date, info), screenshots r/bovy/p2/02 and 03
 no formula, price per guest or free dates to see, 0 euro signs in the crawled text of each of the three pages against 1 on https://www.hetgoedvanbovy.be/bistro (the control, "€35 per persoon"), no calendar or date picker beyond the form's date field
 the Ons Huis hall in Berkenbos closes on 31 December, https://www.heusden-zolder.eu/ons-huis-wordt-verkocht-feestzaal-sluit-op-31-12.aspx "De feestzaal gaat op 31 december dicht"
-INFERENCE, its families and clubs will likely ask a few halls and book whoever makes it easiest, rests on the closure article's "duizenden huwelijksfeesten, bals, eetdagen" (https://www.heusden-zolder.eu/ons-huis-wordt-verkocht-feestzaal-sluit-op-31-12.aspx), worded likely
+INFERENCE, its families and clubs will likely book whichever hall makes it easiest, rests on the closure article's "duizenden huwelijksfeesten, bals, eetdagen" (https://www.heusden-zolder.eu/ons-huis-wordt-verkocht-feestzaal-sluit-op-31-12.aspx), worded likely
 recheck: 2026-10-31, the three hall pages re crawled and rendered (forms and FAQ), the euro count against the bistro control, the Ons Huis article opened at source, the Made in article opened, thread re pulled 0 items with the control at 7. Disproof tried, the reservatie iframe was found so the message never says booking is missing, the hall form's date field is named so the message says free dates rather than no date, the "just built" trap is written into the offer. Facts hold, confidence MEDIUM, a new venue may want to quote by hand
 ```
 
@@ -149,9 +149,75 @@ SKETCHB
 ```
 Hi René, Het Goed van Bovy looks cool.
 
-However, your wedding, company and party pages end on the same three questions and a contact form, with no formula, price per guest or free dates to see. With the Ons Huis hall in Berkenbos closing on 31 December, its families and clubs will likely ask a few halls and book whoever makes it easiest.
+However, your wedding, company and party pages end on the same three questions and a contact form, with no formula, price per guest or free dates to see. With the Ons Huis hall in Berkenbos closing on 31 December, its families and clubs will likely book whichever hall makes it easiest.
 
 I'd suggest an events planner on your site where people pick a date, guests and a formula, see a starting price and send a ready request.
 
-Shall I send you a sketch?
+Shall I send you a sketch of the planner?
+```
+
+### Agathe Thiriez, Saveurs Végés, ctc_EbT44fJeRdDPjMDPd
+
+> NOT SENT. Flags for Raka. (1) The record resolves, Saveurs Végés is her sole trader business, AGATHE THIRIEZ (SAVEURS
+> VEGES), SIREN 929268704, created 1 June 2024, NAF 56.21Z catering, Lille. (2) One person kitchen, so the budget sign is
+> small (a lab, delivery across the MEL, a festive menu every year). (3) Her company prices still say "Tarifs 2025" and her
+> festive page still says the offers run "jusqu'au 31 janvier 2026", but that page isn't linked from the menu, so neither is
+> in the message. (4) Arm B of the A/B test. (5) Raka said "website for more reservations", and for a caterer the
+> reservation is the booked date.
+
+```gate
+lead: Agathe Thiriez, founder and chef of Saveurs Végés, vegetarian caterer in Lille and the MEL (https://www.saveursveges.fr/a-propos "Derrière Saveurs Végés, il y a moi, Agathe"), sole trader AGATHE THIRIEZ (SAVEURS VEGES), SIREN 929268704, created 2024-06-01, NAF 56.21Z, Lille (https://recherche-entreprises.api.gouv.fr/search?q=saveurs%20veges). lemlist jobTitle Fondatrice et cheffe, tagline "Créatrice de saveurs végétales", both hers. ctc_EbT44fJeRdDPjMDPd, leadId lea_s8qf3E92e3wJhciKn, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-30 18.50 UTC. Thread 0 items, control 7
+site pass 1: 15 URLs, tools/crawl.py on https://saveursveges.fr (12 from the sitemap), 14 at 200 and /mariages at 429 rate limited, every page read (home, entreprises, particuliers, mariages, retraites, fêtes for companies and for individuals, menu du moment, témoignages, à propos, contact, devis, allergènes)
+site pass 2: 15 URLs, tools/crawl.py again with /mariages at 200 this time, plus dom.js on home, entreprises and fêtes entreprises for every quote, order and booking link, site-audit.js desktop and phone, screenshots opened
+deep analysis: a Wix site for a one person caterer. The companies page lists every formula with a price per person, cocktails 8.50, 12 and 16 € HT (minimum 20), breakfasts 7.50 to 8 € HT, lunch buffets 16 to 18.50 € HT, and says "Vous choisissez la formule et le nombre de participants", then every button on home, entreprises and fêtes goes to one page, /demande-devis, a form (name, company, type, email, guests, phone, place, date, message) after which "je vous recontacterai par email avec un devis", or a phone call booking. No date check, no order and no payment anywhere. The menu changes monthly (October 2026 live), delivery across the MEL with distance fees. Prices are marked "Tarifs 2025", and the festive offer page (not linked from the menu) still says the offers run until 31 January 2026 and advises booking December before 15 November
+owner linkedin: Route 1 curl https://www.linkedin.com/in/agathe-thiriez-saveurs-veges 301 to the login wall, walled. Route 2 Google News "Agathe Thiriez" 0 with the control at 100. Route 3 the register, sole trader since June 2024. Route 4 the company LinkedIn page through social-audit.js, 76 followers. Route 5 her About page, a convinced vegetarian who began cooking during a change of diet. Route 6 the lemlist record, title and tagline
+contact linkedin: same person as the owner, the register, the About page and the lemlist record agree
+google news: tools/news.py fr 2026-10-31, "Saveurs Végés" 0, "Agathe Thiriez" 0, control Carrefour 100
+regional news: tools/news.py (Lille traiteur) x (traiteur végétarien OR traiteur végétal), 25, a Lille burger maker at the Champions Burger (Actu.fr 22 Aug 2026), ACCRO raising 49 million for plant alternatives in the Pas de Calais (Actu.fr 30 Sep 2025), the plant food market close to her
+industry news: tools/news.py traiteur végétarien OR traiteur végétal, 80, LSA "Tous les chiffres sur le marché du traiteur" (5 Oct 2026), HappyVore claiming 27% of plant alternatives in supermarkets (LSA 3 Sep 2026), U adding plant ranges at the deli counter (Linéaires 2 Sep 2026)
+sources:
+1. https://www.saveursveges.fr/
+2. https://www.saveursveges.fr/entreprises
+3. https://www.saveursveges.fr/demande-devis
+4. https://www.saveursveges.fr/particuliers
+5. https://www.saveursveges.fr/fetes-entreprises
+6. https://www.saveursveges.fr/a-propos
+7. https://www.saveursveges.fr/temoignages
+8. https://recherche-entreprises.api.gouv.fr/search?q=saveurs%20veges
+9. https://www.instagram.com/saveursveges/
+10. https://www.facebook.com/people/Saveurs-V%C3%A9g%C3%A9s/61566934829970
+11. https://www.linkedin.com/company/saveurs-v%C3%A9g%C3%A9s
+12. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fsaveursveges.fr
+13. https://news.google.com/rss (tools/news.py)
+14. https://www.linkedin.com/in/agathe-thiriez-saveurs-veges (walled)
+pains: 5 judged. (1) clear prices per person for every formula, yet every button ends at one quote form and an emailed quote, so a company that knows what it wants still waits, in the weeks December parties get booked, CHOSEN. (2) stale labels, "Tarifs 2025" and a festive page ending 31 January 2026, 50 euro fixes, proof only. (3) one person's hours, quotes by hand, folded into the booking flow. (4) GDPR, no consent banner and no privacy link found against the control on a Wix site with 17 third party hosts, never the angle. (5) social, 455 Instagram followers posting today, active, not chosen
+chosen: (1), hottest, company year end parties are booked in these weeks and each one waits on her email, it's the reservations job behind Raka's "website for more reservations"
+owner reply: "Every event is different, I need to talk to them before I quote" | a model, not a gap | her own companies page fixes the formulas and the prices per person and says "Vous choisissez la formule et le nombre de participants" (https://www.saveursveges.fr/entreprises), and her quote page asks those who are clear to send everything for a quote by email (https://www.saveursveges.fr/demande-devis "Si tout est clair et souhaitez recevoir directement un devis"), so the booking flow does what she already does for the clear ones and the call stays for the rest
+worth: €3,000+, a booking flow on the Wix site for companies and private parties, formula, guests, date, address and delivery fee into a full price and a booked date, the quote and the confirmation sent automatically, the call kept for custom events
+still there: founder and chef on her About page read 2026-10-31, sole trader active on the national register read 2026-10-31, and the October 2026 menu live on her site | https://www.saveursveges.fr/a-propos
+budget: a registered catering business with its own lab, delivery across the MEL, a monthly menu and a paid photo shoot ("crédits photos @MD Video et @YourCoffeeShot") | https://www.saveursveges.fr/general-clean
+variant: B
+sweep website: crawled twice, 15 URLs, dom.js on 3 pages, every action is one quote form, no booking, CHOSEN as a booking flow
+sweep gdpr: tools/eu-view.py from Stockholm, 6 first party cookies, 0 third party, 17 third party hosts, site-audit.js no banner and no privacy link against its control, checked, never the angle (RULES 0E)
+sweep apps: the booking flow with an automatic quote is the tool, folded into the offer, nothing else in her own pages names a job to take off her
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/saveursveges/ 455 followers 236 posts newest 2026-10-31, Facebook 62 followers posting 40 minutes before the read, LinkedIn company 76 followers, active, not chosen
+sweep squad: a one person vegetarian caterer, per her About page and the register NAF 56.21Z, not a builder of software, not chosen
+thread: problem the site shows a price per person for each formula yet every button leads to the same quote form | cost with December parties being booked now, companies likely book whoever confirms first rather than wait for an email | offer a booking flow where a company picks its formula and date, sees the full price with delivery and books it | link formula, price
+lead read: Agathe reads that her prices are clear but every button goes to a quote form, so in December party season companies likely book whoever confirms first, then gets offered a flow where they pick a formula and see the full price and book, one thread
+claims:
+your website shows a price per person for each formula, https://www.saveursveges.fr/entreprises "Formule 7 pièces ... 8,50 € HT", "Formule 10 pièces ... 12 € HT", "Formule 14 pièces ... 16 € HT", breakfasts 7,50 and 8 € HT, lunches 16 to 18,50 € HT, and https://www.saveursveges.fr/particuliers the same with TTC
+every button leads to the same quote form, dom.js on https://www.saveursveges.fr/ https://www.saveursveges.fr/entreprises https://www.saveursveges.fr/fetes-entreprises, every action link ("Demande de devis", "Je veux régaler mes invités", "Demandez votre devis", "Prêt à régaler vos équipes ?", "Réservez dès maintenant") points to https://www.saveursveges.fr/demande-devis, a form with "je vous recontacterai par email avec un devis", control the same read finds the Facebook link
+INFERENCE, with December parties being booked now companies likely book whoever confirms first, rests on the quote by email on https://www.saveursveges.fr/demande-devis and the season, worded likely
+recheck: 2026-10-31, the companies page prices re read, dom.js on three pages for every action link, the quote page text, the register, thread re pulled 0 items with the control at 7. Disproof tried, searched every page for a shop, cart, calendar or booking widget (none, no iframe), read the call booking option so the message says quote form rather than no contact, and kept the stale 2025 labels out because the festive page isn't in the menu. Facts hold, confidence MEDIUM, a one person kitchen may prefer to talk to every client
+```
+
+SKETCHB
+```
+Hi Agathe, Saveurs Végés looks cool.
+
+However, your website shows a price per person for each formula, yet every button leads to the same quote form. With December parties being booked now, companies likely book whoever confirms first rather than wait for an email.
+
+I'd suggest a booking flow where a company picks its formula and date, sees the full price with delivery and books it.
+
+Shall I send you a sketch of the booking flow?
 ```
