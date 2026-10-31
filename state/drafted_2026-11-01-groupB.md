@@ -596,3 +596,22 @@ social: tools/social-audit.js, https://www.instagram.com/ies_ingredients/ 2,829 
 squad: a B2B ingredient distributor that just had an agency build its site per https://ies-ingredients.com/fr, builds no software itself, not chosen
 verdict: NO_STRONG_ANGLE, a new site just launched and active social, revisit Q1 2027
 ```
+
+## Robin Ibens, New World Architects, ctc_mK3f5YmJXSCyi77PF. NOT DRAFTED, NO_STRONG_ANGLE
+
+> Your 14 Oct call was modernisation. The site is a Webflow build from June 2026 and it looks modern next to best in class
+> (desktop screenshot opened today, full bleed motion colour hero, a clean type system, NL and EN). RULES 0D says a new site
+> is never called old. His own collective, The Kind Kids, runs Fairy (AI for good) and Statik (workflows and portals), so
+> an AI or apps pitch sells him his partners' product. The Team page has two typos ("furure", "someting") and the privacy
+> pages are 27 words with Google Analytics firing before consent, small fixes, kept out (RULES 0E). Nothing worth €2,500
+> survives, so he stays unmessaged unless you want a GTM angle for a 30 year consultant with a new brand.
+
+```sweep
+lead: Robin Ibens, founder of New World Architects, Leuven, lemlist jobTitle Founder, tagline "Potentialist", ctc_mK3f5YmJXSCyi77PF, thread 0 items with the control at 7
+website: tools/crawl.py twice on https://newworldarchitects.eu, 14 URLs on the .eu and .be hosts, all 200, site-audit.js desktop screenshot opened, a modern Webflow site from June 2026, not chosen (RULES 0D)
+gdpr: site-audit.js no banner found against its control, 3 third party cookies before a click, privacy page https://newworldarchitects.eu/privacy-policy-eng 27 words, checked, never the angle (RULES 0E)
+apps: his collective The Kind Kids includes Fairy (AI) and Statik (workflows and portals) per the 6 Oct research and the partners list on https://newworldarchitects.eu/, not chosen
+social: tools/social-audit.js, the site links https://www.linkedin.com/in/sarahvanassche/ (a partner) and https://www.instagram.com/somosconscientecolectivo (1,357 followers, not his brand), no own channel to judge, not chosen
+squad: a leadership consultancy whose team page lists coaches and strategists, no developers, per https://newworldarchitects.eu/team-eng, builds no software, not chosen
+verdict: NO_STRONG_ANGLE, a four month old modern site and a collective that already sells AI and workflows
+```
