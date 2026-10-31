@@ -294,3 +294,21 @@ At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the AI workflow for Haardt Hills?
 ```
+
+## Federico Hochreuter, CheLati, ctc_Gd9izYiDDA8bY6X8W. DO_NOT_CONTACT for now, Raka's call
+
+> NOT DRAFTED. The Bezirksgericht Laufenburg opened bankruptcy proceedings over the family company on the morning of
+> 20 October 2026, triggered by a debt collection from the Swiss Life pension fund, and the gelateria in Gipf-Oberfrick is
+> closed with an uncertain future (Neue Fricktaler Zeitung, 30 Oct 2026, opened at source). Since 29 October friends have
+> been raising donations to save it (Aargauer Zeitung, "Rettet die beste Chelati!", walled to our reader, headline only).
+> A sales pitch eleven days into a bankruptcy would read as tone deaf and there's no budget. Raka decides if and when.
+
+```sweep
+lead: Federico Hochreuter, Inhaber of CheLati, Gipf-Oberfrick, ctc_Gd9izYiDDA8bY6X8W, leadId lea_cYvW9RciJLKY44vvH, W1c cam_xFYYBzvfSHk83epvw, accepted 2026-10-30, thread 0 items with the control at 7
+website: crawled with tools/crawl.py, 102 URLs on https://chelati.ch (88 at 200, 14 rate limited), gelato catering, a franchise page, a gastro wholesale page, a customer portal and 30+ flavour pages, the B2B sales angle Raka named was there, set aside because of the bankruptcy below
+gdpr: tools/eu-view.py from Stockholm run on https://chelati.ch and site-audit.js with its control, checked, never the angle (RULES 0E), and moot while the company is in bankruptcy
+apps: the customer portal and catering forms were read in the crawl, a B2B ordering tool would have been the apps angle, set aside, no budget during proceedings per https://www.nfz.ch/gipf-oberfrick-gelateria-geschlossen-konkursverfahren-eingeleitet
+social: accounts opened with tools/social-audit.js from the site's own links, active until the closure, not a reason to write to a founder in bankruptcy, recorded in r/chelati/social.log
+squad: a family gelateria with shops, catering and wholesale per https://chelati.ch/gastro and the NFZ history, not a builder of software, not chosen
+verdict: DO_NOT_CONTACT for now, bankruptcy proceedings opened 20 Oct 2026 by the Bezirksgericht Laufenburg and the gelateria closed (https://www.nfz.ch/gipf-oberfrick-gelateria-geschlossen-konkursverfahren-eingeleitet, 30 Oct 2026), a crowdfunding running since 29 Oct (Aargauer Zeitung, walled), Raka's call whether to wait for the outcome
+```
