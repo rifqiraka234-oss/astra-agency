@@ -841,3 +841,25 @@ At Astra agency we build websites and AI workflows for brands like Unilever, AXA
 
 Shall I send you a sketch of the company order page?
 ```
+
+## Arnaud Bultiaux, Nouvelle Hôtellerie, ctc_T3u7jz76rMASFYqaA. BLOCKED_NEEDS_INFO, his role can't be confirmed outside lemlist
+
+> NOT DRAFTED. RULES 0G point 1. His title (Managing Director of the group) appears only in lemlist's copy of his
+> profile. The group's three hotels are real and his angle is ready, but the operating company of Les Tourelles, HOTELEAU
+> (SIREN 394903769, Le Crotoy, €2.73M revenue in 2024, 20 to 49 staff), lists three gérants and not him, the Belgian
+> register search returns no table to our reader, Google News on his name has nothing about the group, and his LinkedIn
+> is walled. The angle once confirmed: three hotels (Les Tourelles at Le Crotoy, Les Sorbiers at Hastière, Plein Ciel at
+> Champéry) on three separate sites built the same way years ago, linked only by a banner at the top, so a guest who loves
+> one rarely meets the other two. Offer, one modern group site with each hotel's own page and one booking path through
+> their Mews engine, worth €8,000+. Raka's call was "more modern website for more reservation". A post or page of his from
+> the last three months naming the role unblocks it.
+
+```sweep
+lead: Arnaud Bultiaux, Managing Director of Nouvelle Hôtellerie per lemlist only, ctc_T3u7jz76rMASFYqaA, leadId lea_D4ZwE6Pw62NQrWmry, v0.1 cam_PryZp5LuvQv8NznHh, accepted 2026-10-28, thread 0 items with the control at 7
+website: crawled with tools/crawl.py, 28 URLs on https://lestourelles.com, the hotel, rooms, rates, restaurant and Mews booking (https://app.mews.com/distributor/eac18b02-3c4d-460f-8492-b3f300e88859), plus Les Sorbiers rendered at 1440 and iPhone 13 (r/tourelles/sheet.jpg), three hotels on three sites linked only by a top banner, the group site angle is ready
+gdpr: site-audit.js banner none found against its control on https://lestourelles.com, tools/eu-view.py from Stockholm run, checked, never the angle (RULES 0E)
+apps: booking already runs on Mews per the raw HTML of https://www.lestourelles.com/views/FR/tourelles/hotel.php, no separate tool needed, the group site uses it
+social: tools/social-audit.js found no social link on the splash at https://lestourelles.com, the hotel page links Facebook LesTourelles and Instagram lestourelles_baiedesomme in its raw HTML, not chosen
+squad: a hotel group, Les Tourelles operated by HOTELEAU NAF 56.10A per https://recherche-entreprises.api.gouv.fr/search?q=394903769, not a builder of software, not chosen
+verdict: BLOCKED_NEEDS_INFO, his current role at Nouvelle Hôtellerie is confirmed only by lemlist, HOTELEAU's gérants are Cedric Callens, Bernard Richelle and Alexandra Fontaine (https://recherche-entreprises.api.gouv.fr/search?q=394903769), the angle is written above and ready once a non lemlist source names him
+```
