@@ -378,3 +378,68 @@ At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the new homepage?
 ```
+
+### Florent Dal Ben-Salles, Ades Bootcamp, ctc_xdGfs3raLhZzrZ3yc
+
+> NOT SENT. SUPERSEDES the 14 Oct draft, same angle, every claim reopened today and the wording brought to the current
+> template. Flags for Raka. (1) Your call 14 Oct, "skip unless build squad shows theyre growing". Still growing, the site
+> went from 163 to 250 pages since 14 Oct, seventeen batches, the RNCP block, the move into SKEMA Business School in 2026,
+> Instagram 3,015 followers posting this week, and they ran the first Media Buying Awards and a Mastermind in October.
+> (2) The 15 Oct hiring check found no developer job and no developer on the team list, so who builds Ades Sim is unknown,
+> the squad is our inference. (3) "In half the time at half the price" is dropped, say if you want it back.
+
+```gate
+lead: Florent Rodolphe Dal Ben-Salles, Président de SAS of ADES BOOTCAMP, SIREN 928031228, created 2024-04-23, Paris, Romaric Kerdelhue Directeur Général (https://recherche-entreprises.api.gouv.fr/search?q=ades%20bootcamp read 2026-10-31 through fr.py). lemlist jobTitle Co-Fondateur, tagline "Expert Google Ads ... Co-fondateur d'Ades Bootcamp". ctc_xdGfs3raLhZzrZ3yc, leadId lea_GExGFgsBFeWJrJaGn. Thread 0 items, control 7
+site pass 1: 250 URLs, tools/crawl.py on https://adesbootcamp.com (155 from the sitemaps), all 200, every page read
+site pass 2: 250 URLs, tools/crawl.py again, all 200, plus site-audit.js which printed RENDER NOT TRUSTED (12 of 12 failed assets served fine directly), so no visual claim is used, the 14 Oct render-via-curl.js pass found the site modern
+deep analysis: a Qualiopi certified media buying bootcamp in Paris, "1000+ élèves", 4.9/5, "Dix-sept promos", the RNCP39250 block with Oreegami, "Le programme Ades intègre SKEMA Business School" in 2026 (https://adesbootcamp.com/qui-sommes-nous). They run their own software, "Ades Sim reproduit Google Ads, Meta Ads, GA4, Tag Manager et Data Studio. Vous agissez sur un compte, l'IA vous corrige tout de suite" (https://adesbootcamp.com/experience-ades), plus a Hub and a Salon. The course menu on every page lists "TikTok Ads Bientôt Snapchat Ads Bientôt Pinterest Ads Bientôt". October saw the first Media Buying Awards and "Le 1er Mastermind Media Buying en France". INFERENCE, each new platform course needs its copy in Ades Sim before students can practise on it, and nothing on the site says who builds those copies
+owner linkedin: Route 1 the profile, walled (999 on 14 Oct). Route 2 Google News "Florent Dal Ben-Salles" 3, Favikon 2 Oct 2025 top 20 PPC influencers in France. Route 3 the register, Président. Route 4 the blog bylines, "Florent Dal Ben-Salles Expert Google Ads". Route 5 the company LinkedIn through social-audit.js, unreadable. Route 6 the lemlist record
+contact linkedin: same person as the owner, the register, the blog and the lemlist record agree
+google news: tools/news.py fr 2026-10-31, "Ades Bootcamp" 2 (CB News 5 Oct 2026, the first Media Buying Awards on 5 Nov), "Florent Dal Ben-Salles" 3, control Carrefour 100
+regional news: tools/news.py (formation media buyer) x (formation Google Ads freelance), 0 with the control at 100
+industry news: tools/news.py formation Google Ads freelance, 7, E-marketing.fr 21 May 2026 top 5 marketing training platforms, Journal du CM 4 Aug 2026
+sources:
+1. https://adesbootcamp.com/
+2. https://adesbootcamp.com/qui-sommes-nous
+3. https://adesbootcamp.com/experience-ades
+4. https://adesbootcamp.com/freelance-house
+5. https://adesbootcamp.com/blog
+6. https://recherche-entreprises.api.gouv.fr/search?q=ades%20bootcamp
+7. https://www.instagram.com/adesbootcamp/
+8. https://www.linkedin.com/company/ades-bootcamp/
+9. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fadesbootcamp.com
+10. https://adesbootcamp.com/formation-google-analytics4
+11. https://news.google.com/rss (tools/news.py)
+pains: 4 judged. (1) Ades Sim covers five tools while TikTok, Snapchat and Pinterest Ads courses wait as coming soon, a build queue for a school growing into SKEMA, CHOSEN. (2) the site, 250 modern pages, no website angle. (3) social, Instagram 3,015 posting 30 Oct, no angle. (4) GDPR, CookieYes with no reject found and 16 cookies before a click, never the angle
+chosen: (1), hottest, three platform courses are announced and waiting, and the school is scaling into higher education
+owner reply: "We built Ades Sim in house" | likely, it's theirs | the three new platforms still say coming soon today, so the squad builds the next copies beside whoever built the first five (https://adesbootcamp.com/ "TikTok Ads Bientôt Snapchat Ads Bientôt Pinterest Ads Bientôt")
+worth: €10,000+, TikTok, Snapchat and Pinterest Ads copies inside Ades Sim with the same AI correction, built by our build squad
+still there: Florent as Président in the register read 2026-10-31 | https://recherche-entreprises.api.gouv.fr/search?q=ades%20bootcamp
+budget: a Qualiopi school with 1000+ students, a CPF route, an RNCP block and SKEMA integration | https://adesbootcamp.com/qui-sommes-nous
+variant: A
+sweep website: crawled twice, 250 URLs, modern per the 14 Oct curl render, render not trusted today so nothing visual is claimed, not chosen
+sweep gdpr: site-audit.js found CookieYes with no reject and 16 cookies before a click against its control, tools/eu-view.py from Stockholm 14 cookies (6 first party, 8 third party) before a click, checked, never the angle (RULES 0E)
+sweep apps: Ades Sim and the Hub per https://adesbootcamp.com/experience-ades, folded into the squad
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/adesbootcamp/ 3,015 followers last post 30 Oct 2026, LinkedIn unreadable, not chosen
+sweep squad: a growing school building its own simulator with three platforms still to come, CHOSEN
+thread: problem Ades Sim copies five tools while the TikTok, Snapchat and Pinterest Ads courses still say coming soon | cost each new platform waits for its copy to be built before students can practise on it | offer a build squad that builds the next Ades Sim platforms | link Sim, platform
+lead read: Florent reads that Ades Sim covers five tools while three new courses still say coming soon, so each new platform waits for its copy, then gets offered a build squad to build the next Ades Sim platforms, one thread
+claims:
+Ades Sim copies five tools from Google Ads to Data Studio, https://adesbootcamp.com/experience-ades "Ades Sim reproduit Google Ads, Meta Ads, GA4, Tag Manager et Data Studio"
+TikTok, Snapchat and Pinterest Ads still say coming soon, https://adesbootcamp.com/ "TikTok Ads Bientôt Snapchat Ads Bientôt Pinterest Ads Bientôt" (226 of 250 pages carry it in the menu)
+INFERENCE, each new platform likely waits until someone builds its copy, rests on https://adesbootcamp.com/experience-ades and the Bientôt menu on https://adesbootcamp.com/, worded likely
+recheck: 2026-10-31, both quotes found in crawl pass 2 today, the register reread, the thread pulled. Disproof tried, searched all 250 pages for a TikTok, Snapchat or Pinterest simulator (Ades Sim still lists five tools), searched for a developer job or recruiting page (none, recruteur hits are course copy). Facts hold, confidence MEDIUM
+```
+
+SKETCH
+```
+Hi Florent, Ades Bootcamp looks cool!
+
+However, your Ades Sim copies five tools from Google Ads to Data Studio, while TikTok, Snapchat and Pinterest Ads still say coming soon. Each new platform your students want to practise on likely waits until someone builds its copy.
+
+I'd suggest a build squad that builds the next Ades Sim platforms beside your team, starting with TikTok Ads.
+
+At Astra agency we build websites and apps for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of TikTok Ads inside Ades Sim?
+```
