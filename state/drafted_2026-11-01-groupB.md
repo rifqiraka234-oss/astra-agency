@@ -240,3 +240,70 @@ At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the AI workflow for HOP?
 ```
+
+### Mersedeh Heydari, MOODI (The Moodi Studio), ctc_Eri95nNgTJe8c6Lf5
+
+> NOT SENT. Flags for Raka. (1) THE MOODISTUDIO LTD, 16377797, incorporated 9 April 2025, London W12, Mersedeh
+> Heydarialikamar active director since 4 May 2026 (the co director resigned 16 May 2026). A London fashion label from 2024,
+> eleven pieces from £129 to £890, editions of 10, numbered, optional embroidery, fashion shaped by gaming. (2) Your call,
+> AI workflow with did you know. Her Instagram (3,406 followers, 136 posts) last posted on 4 August per social-audit.js
+> today, so the workflow is a posting one. (3) The number is Buffer's, published 13 Aug 2025, 2 million+ posts from
+> 100,000+ accounts, all accounts not fashion only, and Buffer sells scheduling software. It's a correlation, Buffer says
+> "can more than double", so the message keeps "can". (4) Budget is the soft spot, a one director label with eleven pieces.
+> (5) site-audit.js printed RENDER NOT TRUSTED for this site, so no visual or site claim is made anywhere.
+
+```gate
+lead: Mersedeh Heydari, founder of MOODI, active director of THE MOODISTUDIO LTD, 16377797, incorporated 9 April 2025, officers HEYDARIALIKAMAR Mersedeh (Active Director, appointed 4 May 2026) and ALARAHIMI Alireza (resigned 16 May 2026) (https://find-and-update.company-information.service.gov.uk/company/16377797/officers read 2026-10-31). About page "Founded in London by Mersedeh Heydari, Founder and Creative Director". lemlist jobTitle Founder, tagline "Fashion and Game Design | Creative Director". ctc_Eri95nNgTJe8c6Lf5, leadId lea_hc364vG7Lhv9vfPs9, W1b Owners of new 1-10 consumer businesses on DIY site builders, accepted. Thread 0 items, control 7
+site pass 1: 72 URLs, tools/crawl.py on https://themoodistudio.com (5 from the sitemap, the rest products, collections, oembed and checkout links), all 200, every product, collection and policy page read
+site pass 2: 72 URLs, tools/crawl.py again, all 200, plus site-audit.js which printed RENDER NOT TRUSTED (2 of 2 failed assets served fine directly), so its screenshots are void and no visual finding is used
+deep analysis: a Shopify store for a London label ("LONDON EST. 2024"), eleven products in stock from £129 (Confusion Vest) to £890 (Light Grey Signature Coat, Black Anxious Sweatshirt), each "a strictly limited edition of 10 pieces worldwide", hand numbered, the buyer picks the edition number and can add embroidery. Pieces are named for moods (Wonder, Confusion, Delighted, Trust, Care Free, Anxious). About ties it to gaming, "Inspired by the way games build characters". The news blog is empty. Instagram is the one channel linked from the footer. INFERENCE, a new label selling ten of each piece lives on attention, and the channel it links to has gone quiet
+owner linkedin: Route 1 curl the profile from lemlist 301 to the login wall, walled. Route 2 Google News "Mersedeh Heydari" 0 with the control at 98. Route 3 Companies House, active director of THE MOODISTUDIO LTD. Route 4 the about page, founder and creative director. Route 5 Instagram through social-audit.js, https://www.instagram.com/themoodistudio/ 3,406 followers
+contact linkedin: same person as the owner, the about page, the register and the lemlist record agree (the register spells the surname Heydarialikamar)
+google news: tools/news.py en 2026-10-31, "Moodi Studio" 0, "Mersedeh Heydari" 0, control Tesco 98
+regional news: tools/news.py (UK fashion design studio) x (fashion game design), 33, The Guardian 27 Sep 2026 on Es Devlin, The Guardian 20 Sep 2026 London fashion week, none about MOODI
+industry news: tools/news.py fashion game design, 84, WWD 3 Sep 2026 on designer moves, UK Nigeria Season of Culture call for fashion and gaming creatives (5 Sep 2026), plus Buffer's Instagram frequency study (13 Aug 2025)
+did you know: Instagram accounts posting 3 to 5 times a week can more than double their follower growth rate against posting once or twice, and weeks with no posts sit below an account's usual growth | Buffer, published 13 Aug 2025, over 2 million posts from 100,000+ Instagram accounts, a vendor study | https://buffer.com/resources/how-often-to-post-on-instagram/
+sources:
+1. https://themoodistudio.com/
+2. https://themoodistudio.com/pages/about
+3. https://themoodistudio.com/products/confusion-vest
+4. https://themoodistudio.com/collections/all
+5. https://themoodistudio.com/pages/returns
+6. https://themoodistudio.com/blogs/news
+7. https://find-and-update.company-information.service.gov.uk/company/16377797/officers
+8. https://www.instagram.com/themoodistudio/
+9. https://buffer.com/resources/how-often-to-post-on-instagram/
+10. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fthemoodistudio.com
+11. https://news.google.com/rss (tools/news.py)
+pains: 4 judged. (1) a label of ten piece editions whose one linked channel, Instagram, has been silent since 4 August, CHOSEN. (2) product pages, most of the twelve product pages carry no size guide in the crawled text (two do), not used, the render isn't trusted and a text crawl can miss a tab. (3) the news blog is empty, small. (4) GDPR, no banner found against the control and Shopify analytics and marketing cookies set from Stockholm before a click, never the angle
+chosen: (1), biggest, ten numbered pieces per design only sell if people keep seeing them, and it's the AI workflow angle Raka named
+owner reply: "It's a luxury label, posting less is the point" | scarcity is the brand | the workflow drafts in her own voice from her own pieces and she approves every post, and Buffer's data says silent weeks sit below an account's usual growth (https://buffer.com/resources/how-often-to-post-on-instagram/ "no-post penalty")
+worth: €3,000+, an AI workflow that reads each Shopify piece, its photos, mood, edition numbers left and embroidery options and drafts a week of Instagram posts and captions in MOODI's voice for her to approve and schedule
+still there: Mersedeh active director on the officers page read 2026-10-31 | https://find-and-update.company-information.service.gov.uk/company/16377797/officers
+budget: a label selling coats at £890 and £485 with numbered editions and a registered company | https://themoodistudio.com/collections/all
+sweep website: crawled twice, 72 URLs, a working Shopify store with a clear edition and personalisation flow, render not trusted so nothing visual is claimed, not chosen
+sweep gdpr: site-audit.js no banner found against its control, tools/eu-view.py from Stockholm sets Shopify essential, analytics and marketing cookies before a click, checked, never the angle (RULES 0E)
+sweep apps: a posting workflow from the Shopify catalogue to Instagram drafts, CHOSEN
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/themoodistudio/ 3,406 followers, 136 posts, last post 4 Aug 2026, the only social link on the site, feeds the chosen angle
+sweep squad: a one director fashion label, no build team to extend, not chosen
+thread: problem accounts posting 3 to 5 times a week can more than double follower growth, and MOODI's last post went up on 4 August | cost ten numbered pieces per design that fewer people see each quiet week | offer an AI workflow that drafts a week of posts from each piece for her to approve | link posts, week
+lead read: Mersedeh reads that regular posting can double follower growth and that her last post was 4 August, then gets offered an AI workflow that drafts a week of posts from her own pieces, one thread
+claims:
+Instagram accounts posting 3 to 5 times a week can more than double their follower growth rate against once or twice, https://buffer.com/resources/how-often-to-post-on-instagram/ "Posting between 3 and 5 times weekly can more than double follower growth rate, compared to posting one or two times weekly"
+Buffer's study covers 2 million posts, https://buffer.com/resources/how-often-to-post-on-instagram/ "We analyzed over 2 million posts from 100,000+ Instagram accounts"
+MOODI's last Instagram post went up on 4 August, https://www.instagram.com/themoodistudio/ read by tools/social-audit.js 2026-10-31, lastPostLabel 2026-08-04, 136 posts, 3,406 followers
+recheck: 2026-10-31, Buffer's page fetched and the sentences read, the officers page fetched, the store pages reread from crawl pass 2, social-audit.js run today. Disproof tried, Buffer's numbers checked on its own page rather than the write ups (one cites 9.6 million posts, Buffer says 2 million), "can" kept because Buffer says can and it's a correlation, the Instagram date is from one tool so it's re read in the minute before any send. Facts hold, confidence MEDIUM
+```
+
+SKETCH
+```
+Hi Mersedeh, MOODI looks cool!
+
+However, did you know that Instagram accounts posting 3 to 5 times a week can grow followers more than twice as fast as those posting once or twice? Buffer found it across 2 million posts, and MOODI's last post went up on 4 August.
+
+I'd suggest an AI workflow that turns each piece's mood, photos and edition numbers into a week of posts for you to approve.
+
+At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the posting workflow for MOODI?
+```
