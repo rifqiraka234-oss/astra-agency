@@ -29,7 +29,7 @@ Re pull the thread, run the four way never messaged check and reopen every claim
 ```gate
 lead: Florian Casier Gueho, co founder of Abriteo, Directeur Général of NAXOLUTION SAS which publishes abriteo.fr (https://www.abriteo.fr/mentions-légales "L'édition du Site est assurée par la société Naxolution ... 991607466", register https://recherche-entreprises.api.gouv.fr/search?q=991607466 Florian CASIER-GUEHO Directeur Général, born 1988). About page "Nous sommes Julie et Florian, les fondateurs de l'entreprise Abriteo" (https://www.abriteo.fr/a-propos-abriteo). lemlist jobTitle Co-fondateur, tagline "Repreneur de PME industrielles | Investisseur opérationnel", also gérant of ARYVY (Puteaux, Jan 2026) per the register, so Abriteo is one of his ventures. ctc_FibmN2p3bXtYWSqac, leadId lea_ubp4bbJNoZyPSmmJM, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-31 13.42 UTC. Thread 0 items, control 7
 site pass 1: 70 URLs, tools/crawl.py on https://abriteo.fr (53 from the sitemap), 59 at 200, 8 at 429 rate limited, 2 at 404, every page read (3 kits, 25 single products, 11 guide posts, FAQ, CGV, CGU, mentions légales, privacy, about, contact)
-site pass 2: 70 URLs, tools/crawl.py again, plus home, kits, the XXL kit, the guide and about rendered in Chromium at 1440 and iPhone 13 (10 full page screenshots in r/abriteo/p2, sheet r/abriteo/sheet.jpg), site-audit.js desktop and phone, all opened
+site pass 2: 72 URLs, tools/crawl.py again (a first rerun was rate limited at 67, the second read 72 with 68 at 200), plus home, kits, the XXL kit, the guide and about rendered in Chromium at 1440 and iPhone 13 (10 full page screenshots in r/abriteo/p2, sheet r/abriteo/sheet.jpg), site-audit.js desktop and phone, all opened
 deep analysis: a Wix shop launched with the company in September 2025 (mentions légales "En vigueur au 01/09/2025"). Three ready kits, Voiture 49.90 €, Confort 139.90 €, XXL 184.90 € marked "Promo de l'été !", plus 25 items sold singly to build your own kit, free relay delivery from 49 €, Stripe card payment. The home compares an "Essentiel" kit that has no product page. The XXL page shows 1 review (Jérôme BS, 19 Oct). A long guide blog and a FAQ carry the SEO. On a phone the home opens on a flat lay photo of loose gear, the headline and two buttons, and the three kits start 2.05 screens down (y 1117 of a 545 px screen, firstpos.js). The CGV limit quantities per order "afin d'éviter tout usage abusif ou revente", so no bulk or company ordering. Workshops in Chémery, Région Centre
 owner linkedin: Route 1 curl https://www.linkedin.com/in/florian-casier-gueho 301 to the login wall, walled. Route 2 web search "Florian Casier" Abriteo OR Naxolution, nothing of his. Route 3 the register, three companies, Naxolution (DG), Aryvy (gérant), Spetses SCI (associé). Route 4 the About page, "Florian, expert en gestion de crise". Route 5 the lemlist record, tagline and title. Route 6 Google News on his name, 0 results with the control at 100
 contact linkedin: same person as the owner, the register, the About page and the lemlist record agree
@@ -1073,4 +1073,65 @@ I'd suggest an investor page with your traction and deck, plus outreach to SEIS 
 At Astra agency we build websites and AI workflows for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the investor page?
+```
+
+### Lewis Wheatley, Queerish, ctc_Ehr5LjPy2vnzR5Bht
+
+> NOT SENT. Flags for Raka. (1) Your 27 Oct call, an exception to the GTM plan, "a proper website, he only has a link
+> page". (2) The Queerish LinkedIn page gives https://beacons.ai/queerish as its website, founded 2024, self employed,
+> Lewis the only employee, and his post there says it turned two this year and grew out of a uni project name. (3) The
+> Beacons page blocks every reader we have (Cloudflare, fetch-walled and Chromium), so the message only says the website
+> is a link page, never what's on it. (4) Small budget, a first project at the 500 euro start. (5) Arm B.
+
+```gate
+lead: Lewis Wheatley, founder of Queerish, a Nottingham events company for the LGBTQ+ community. LinkedIn company page read through curl, "A Nottingham based event company dedicated to bringing amazing and inclusive events to the LGBTQ+ community Website https://beacons.ai/queerish ... Type Self-Employed Founded 2024 ... Employees at Queerish Lewis Wheatley", and his reposted post "Queerish celebrated their 2nd Birthday on Saturday ... What started out to be a random name for uni projects became a huge part of the Nottingham Queer Scene" (https://www.linkedin.com/company/queerish). No company on Companies House by that name, self employed per the page. lemlist jobTitle Founder, tagline "Founder of Queerish - Live events promoter / Photographer / Festivals / Broadcaster / Event Manager", no domain. ctc_Ehr5LjPy2vnzR5Bht, leadId lea_LPbwdYtGc6cPd7Nwq, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-27 16.38 UTC. Thread 0 items, control 7
+site pass 1: 1 URLs, https://beacons.ai/queerish is the only website named anywhere (the LinkedIn company page), walled to tools/fetch-walled.py ("Just a moment"), Chromium ("Sorry, you have been blocked") and curl, read as walled, never as weak
+site pass 2: 1 URLs, the same page tried again through all three paths 2026-10-31, still walled, so no claim is made about its content
+deep analysis: Queerish has no website of its own. Its own LinkedIn page names a Beacons link in bio page as the website. A web search for "Queerish Nottingham" and Google News return nothing about it, so a venue, sponsor or new guest searching the name finds no page of its own. The Nottingham scene is busy, Nottingham Post 5 Jan 2026 "Nottingham's LGBTQ+ community is having a revival for the first time since 1990s", LeftLion 15 Oct 2025 on a new queer club night
+owner linkedin: Route 1 curl https://www.linkedin.com/in/lewiswheatleysmith 301 to the login wall, walled. Route 2 Google News "Lewis Wheatley" 10, none his. Route 3 web search "Queerish Nottingham events Lewis Wheatley", nothing of his. Route 4 the Queerish company page through curl, his post and the employee list. Route 5 Companies House, no company, self employed per the page. Route 6 the lemlist record, founder, promoter and photographer
+contact linkedin: same person as the owner, the company page's employee list and post and the lemlist record agree
+google news: tools/news.py en 2026-10-31, "Queerish Nottingham" 0, "Lewis Wheatley" 10 none his, control Tesco 101
+regional news: tools/news.py (Nottingham queer events) x (LGBTQ nightlife UK venues), 10, Nottingham Post 5 Jan 2026 on a revival of Nottingham's LGBTQ+ scene, LeftLion 15 Oct 2025 on a new queer club night "Trancesexuals"
+industry news: tools/news.py LGBTQ nightlife UK venues, UK queer venues closing while event promoters run nights in shared spaces, the promoter's own site is the only place a night lives
+sources:
+1. https://www.linkedin.com/company/queerish
+2. https://beacons.ai/queerish (walled)
+3. https://www.linkedin.com/in/lewiswheatleysmith (walled)
+4. https://find-and-update.company-information.service.gov.uk/search/companies?q=queerish
+5. https://leftlion.co.uk/features/2024/10/queer-up-duck-new-lgbtqplus-arts-festival-takes-over-nottingham/
+6. https://www.fiveleavesbookshop.co.uk/events/queer-nottingham-now-we-celebrate-the-90s-and-this-century/
+7. https://leftlion.co.uk/features/2025/10/a-new-queer-club-night-arriving-in-nottingham-the-creation-of-trancesexuals/
+8. https://www.outdoorlads.com/events/nottingham-queer-history-walk-and-social-240630
+9. https://news.google.com/rss (tools/news.py)
+10. https://www.bing.com/search?q=Queerish+Nottingham
+pains: 4 judged. (1) no website of its own, the company's named website is a link page, so the nights, photos and track record live nowhere he owns, CHOSEN. (2) search, nothing comes up for "Queerish Nottingham", folded in. (3) GDPR, nothing of his own to check, never the angle. (4) social, the accounts can't be named without guessing a handle from his own page, which is walled, so not chosen
+chosen: (1), biggest, two years of nights with no page that shows them, and it's the website Raka named
+owner reply: "The Beacons page does the job" | a model, not a gap | the company page itself lists the Beacons page as the website (https://www.linkedin.com/company/queerish) and a search for the name finds nothing of his (https://www.bing.com/search?q=Queerish+Nottingham), so venues and sponsors have nowhere to see what two years of nights look like
+worth: €2,500+, a Queerish website with every night, its photos and ticket links, a page for venues and sponsors with past crowds, and a sign up list
+still there: the only employee on the Queerish LinkedIn company page read 2026-10-31, with his post on the company's second birthday | https://www.linkedin.com/company/queerish
+budget: a two year events company running ticketed nights, a founder who is also a photographer and broadcaster | https://www.linkedin.com/company/queerish
+variant: B
+sweep website: the only website named is https://beacons.ai/queerish, walled through three paths, no site of its own, CHOSEN
+sweep gdpr: no domain of his own to test, the Beacons page is walled to every reader, nothing to check, never the angle (RULES 0E)
+sweep apps: ticketing runs on outside platforms per the link page's purpose, no tool angle visible from outside, not chosen
+sweep social: no social account named outside the walled link page, the LinkedIn company page read through curl has the post, social-audit.js has no URL to open without guessing a handle, not chosen
+sweep squad: a one person events company per its LinkedIn page, not a builder of software, not chosen
+thread: problem the LinkedIn page names a Beacons link page as the Queerish website, two years in | cost venues, sponsors and new guests likely find links rather than the nights and crowds he's built | offer a Queerish website of its own with every night, its photos and ticket links, and a page for venues and sponsors | link website
+lead read: Lewis reads that Queerish's website is a link page two years in, so venues and sponsors likely can't see the nights he's built, then gets offered a Queerish website of its own with the nights, photos and a page for venues, one thread
+claims:
+your LinkedIn page names a Beacons link page as the Queerish website, https://www.linkedin.com/company/queerish "Website https://beacons.ai/queerish"
+two years in, https://www.linkedin.com/company/queerish his reposted post "Queerish celebrated their 2nd Birthday on Saturday", page "Founded 2024"
+INFERENCE, venues, sponsors and new guests likely find links rather than the nights and crowds he's built, rests on the website being a link in bio page (https://www.linkedin.com/company/queerish), worded likely, and the page's content is never described because it's walled
+recheck: 2026-10-31, the company page re read through curl, the Beacons page tried through three paths and recorded as walled, Companies House searched, thread re pulled 0 items with the control at 7. Disproof tried, searched the web and Google News for a Queerish site (none), never guessed an Instagram handle, never described the walled page. Facts hold, confidence MEDIUM, a one person promoter with a small budget
+```
+
+SKETCHB
+```
+Hi Lewis, Queerish looks cool.
+
+However, your LinkedIn names a Beacons link page as the Queerish website, two years into your nights. Venues, sponsors and new guests likely find links rather than the nights and crowds you've built.
+
+I'd suggest a Queerish website with every night, its photos and ticket links, and a page for venues and sponsors.
+
+Shall I send you a sketch of the Queerish website?
 ```
