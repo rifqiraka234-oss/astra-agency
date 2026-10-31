@@ -509,3 +509,71 @@ I'd suggest a build squad working beside your team on the guide's next features 
 
 Shall I send you a sketch of the squad on your next feature?
 ```
+
+### Jessica Lazarus, Legal Unmasked, ctc_EegeYzXabJWMGf5FS
+
+> NOT SENT. SUPERSEDES the 11 Oct hold and the 14 Oct hold. Flags for Raka. (1) Your 14 Oct call was modernisation. I held
+> it then under RULES 0C point 4 (the one page sign up is a deliberate priority list). This draft doesn't call the sign up a
+> gap. It says what's missing for someone deciding whether to register, nothing about the 2026 day, its speakers or its
+> press. (2) The page does show one photo of a full event room, the screenshot caught it and the crawl's text didn't, so
+> "nothing from 2026" would have been false and isn't used. (3) The Law Society Gazette pieces (1 and 11 May 2026) are
+> walled to us on every route (AWS human check, 405 on WebFetch). The message only says the coverage exists, from Google
+> News' exact match on "Legal Unmasked". Search snippets say DWF and Legora sponsored and Rory Bremner spoke. Unopened, so
+> they're not used. (4) She's sole director of THE UNMASKED COLLECTIVE LIMITED. The site links no social account.
+
+```gate
+lead: Jessica Polly Lazarus, sole Active Director of THE UNMASKED COLLECTIVE LIMITED 16711225 since 11 September 2025, Leamington Spa (https://find-and-update.company-information.service.gov.uk/company/16711225/officers read 2026-10-31), which trades as Legal Unmasked. lemlist jobTitle Founder, tagline "Driving innovation and harnessing neurodivergent talent in the legal profession", City of London. ctc_EegeYzXabJWMGf5FS, leadId lea_S2yn3dqJ8JFQbPPHz, W5 TEST 50. Thread 0 items, control 7
+site pass 1: 5 URLs, tools/crawl.py on https://legalunmasked.co.uk (2 from the sitemap, lastmod 2026-08-17), all 200, every page read (home, landing page, contact, both hosts)
+site pass 2: 5 URLs, tools/crawl.py again, all 200, plus site-audit.js desktop and phone screenshots opened, the desktop shows a title, one photo of a full event room, "We're doing it again! Coming to London in May 2027" and a register button
+deep analysis: Legal Unmasked is an annual one day conference for neurodivergent people in law. The first ran "Wed 6 May 2026 9:00 AM - 7:00 PM Woolwich Works, SE18 6HD" with "Powerful keynotes & interactive sessions led by thought-leaders, coaches, doctors and innovators" (https://www.tickettailor.com/events/leadingunmasked/1903238), and the Tickettailor list now shows "No events currently listed". The site, built August 2026, is one photo, 32 words and a register button, "Register for priority access to a limited release of early bird tickets", and the contact page is the same priority list form. The Law Society Gazette ran two pieces matching "Legal Unmasked" (1 May 2026 "Unmasking law: The woman aiming to reshape the profession for neurodivergent minds", 11 May 2026 "In depth: Celebrating law's neurodivergent community"). The site links no social account and no privacy page. INFERENCE, a lawyer or a firm deciding whether to register for 2027 has nothing on the page about what the day was
+owner linkedin: Route 1 the profile, walled (429 on 11 Oct). Route 2 Google News "Jessica Lazarus" 10, the two Gazette pieces are hers, the rest other people. Route 3 Companies House, sole director. Route 4 the company LinkedIn page read 11 Oct, 1,010 followers. Route 5 Tickettailor, the organiser account "leadingunmasked". Route 6 the lemlist record
+contact linkedin: same person as the owner, the register, Tickettailor and the lemlist record agree
+google news: tools/news.py en 2026-10-31, "Legal Unmasked" 2 (Law Society Gazette 1 May and 11 May 2026), "Jessica Lazarus" 10, control Tesco 98
+regional news: tools/news.py (London legal conference) x (neurodiversity legal profession), 12
+industry news: tools/news.py neurodiversity legal profession, plus Law Society of Scotland and other neurodiversity in law events found in search, none opened as facts for the message
+sources:
+1. https://legalunmasked.co.uk/
+2. https://www.legalunmasked.co.uk/contact
+3. https://www.legalunmasked.co.uk/sitemap.xml
+4. https://www.tickettailor.com/events/leadingunmasked/1903238
+5. https://www.tickettailor.com/events/leadingunmasked
+6. https://find-and-update.company-information.service.gov.uk/company/16711225/officers
+7. https://www.lawgazette.co.uk/news/unmasking-law-the-woman-aiming-to-reshape-the-profession-for-neurodivergent-minds/5126667.article (walled, title from Google News only)
+8. https://www.lawgazette.co.uk/news-focus/in-depth-celebrating-laws-neurodivergent-community/5126747.article (walled, title from Google News only)
+9. https://www.linkedin.com/company/leading-unmasked
+10. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Flegalunmasked.co.uk
+11. https://news.google.com/rss (tools/news.py)
+pains: 4 judged. (1) the 2027 page shows nothing of the 2026 day, speakers or press to someone deciding whether to register, CHOSEN. (2) no social links on the site, small on its own. (3) the LinkedIn company page pointed at a dead Stan store on 11 Oct, a one minute fix. (4) GDPR, no banner and no privacy link against the control, 4 first party cookies, never the angle
+chosen: (1), biggest, registrations are the page's own job and the 2026 day is the proof, and it's your modernise call
+owner reply: "It's just a priority list until we announce 2027" | a deliberate choice | the list is the page's job and it stays, the site around it is what's missing, one photo and 32 words about a day with keynotes and Gazette coverage (https://www.tickettailor.com/events/leadingunmasked/1903238)
+worth: €3,000+, a modern Legal Unmasked site with the 2026 day, speakers, photos and press, sponsor and firm pages, and the 2027 priority list kept as the main action
+still there: Jessica sole director on the officers page read 2026-10-31 | https://find-and-update.company-information.service.gov.uk/company/16711225/officers
+budget: a ticketed one day conference at Woolwich Works with a 2027 edition coming | https://www.tickettailor.com/events/leadingunmasked/1903238
+variant: A
+sweep website: crawled twice, 5 URLs, both screenshots opened, one photo and 32 words, CHOSEN
+sweep gdpr: site-audit.js no banner and no privacy link found against its control, tools/eu-view.py from Stockholm 4 first party cookies, checked, never the angle (RULES 0E)
+sweep apps: a one person conference business, ticketing already on Tickettailor, no process angle, not chosen
+sweep social: tools/social-audit.js, the site links no social account, the company LinkedIn https://www.linkedin.com/company/leading-unmasked had 1,010 followers on 11 Oct, folded into the site pitch
+sweep squad: a one director company, builds no software, not chosen
+thread: problem the site is one photo and a sign up for May 2027 with nothing on the 2026 speakers, the day or its press | cost someone deciding whether to register can't see what they'd sign up for | offer a modern site that shows 2026 and turns it into 2027 registrations | link register
+lead read: Jessica reads that her site shows nothing of the 2026 day to someone deciding whether to register, then gets offered a site that shows 2026 and turns it into 2027 registrations, one thread
+claims:
+the website is one photo and a sign up for May 2027, https://legalunmasked.co.uk/ "Coming to London in May 2027. Register for priority access to a limited release of early bird tickets", 32 words and 1 image in both crawls, screenshot opened
+nothing on the 2026 speakers or the day, https://legalunmasked.co.uk/ 32 words total, the only words are the title, "We're doing it again!", the two lines above and the button, positive control the same crawler read 1,000+ word pages on other sites today
+Legal Unmasked has Law Society Gazette coverage, https://news.google.com/rss exact query "Legal Unmasked", two Law Society Gazette items dated 2026-05-01 and 2026-05-11
+the first Legal Unmasked was a full day at Woolwich Works, https://www.tickettailor.com/events/leadingunmasked/1903238 "Wed 6 May 2026 9:00 AM - 7:00 PM Woolwich Works"
+recheck: 2026-10-31, the site crawled twice and the screenshot opened, the Tickettailor event and list pages fetched, the register fetched, the Gazette tried on three routes (curl walled, fetch-walled AWS check, WebFetch 405). Disproof tried, the screenshot showed a photo the text crawl missed so "nothing from 2026" was dropped, the 0C point 4 reading kept (the sign up stays the main action in the offer). Facts hold, confidence MEDIUM
+```
+
+SKETCH
+```
+Hi Jessica, Legal Unmasked looks cool!
+
+However, your website is one photo and a sign up for May 2027, with nothing on the 2026 speakers, the day itself or its Law Society Gazette coverage. Someone deciding whether to register likely can't see what they'd be signing up for.
+
+I'd suggest a modern Legal Unmasked site that shows the 2026 day, its speakers and press, and turns them into 2027 registrations.
+
+At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the Legal Unmasked site?
+```
