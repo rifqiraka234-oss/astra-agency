@@ -1,4 +1,4 @@
-# Final closers for the three bumped on 29 Oct, DRAFTED, NOT SENT, NOT SCHEDULED
+# Final closers for the three bumped on 29 Oct, SCHEDULED on Raka's word, NOT SENT YET
 
 Raka asked 31 Oct ~20.30 UTC "Anyone we needa send a nudge again after sending first message or second?". Audit
 `tools/lemlist.py audit` 31 Oct 20.32 UTC, 574 contacts, 1,990 items, control 7. Everyone with an opener and a bump and
@@ -6,8 +6,8 @@ no reply is already in closers batches 4 to 7 (37 of 37), except these three, bu
 was built. Same rule as `state/drafted_2026-10-28-final-closers.md`, Raka's 28 Oct "name, im gonna close it here, if you
 want to ever xxx you know where to find me", xxx from the opener's own offer. After it they're CLOSED_FINAL_MESSAGE.
 
-Suggested slot Thu 5 Nov 06.00 Amsterdam (05.00 UTC), the day after batch 7, a week after their bump. Needs Raka's word
-for the send and the time. Threads pulled 31 Oct ~20.40 UTC, 2 items each, nothing from them.
+**SCHEDULED** on Raka's 31 Oct ~20.50 UTC "Schedule the last nudges", at the slot proposed, Thu 5 Nov 06.00 Amsterdam
+(05.00 UTC), trig_0138RTuuB8XATkfvAkpJiykB. The wake pulls each thread again first. Threads pulled 31 Oct ~20.40 UTC, 2 items each, nothing from them.
 
 ### Scott Buckley, Unreal Events, ctc_MgyMbx3uk9mhg89jX
 
