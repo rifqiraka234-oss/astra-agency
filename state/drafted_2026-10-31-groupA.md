@@ -87,3 +87,71 @@ At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the new Abriteo shop?
 ```
+
+### René Geurts, Het Goed van Bovy, ctc_umnv96hbtYAa9dgiL
+
+> NOT SENT. Flags for Raka. (1) The record resolves. René and Filip Vanheusden set up the company Het Goed van Bovy to
+> run the hospitality concession on the municipal Domein Bovy in Zolder (Made in, 26 Apr 2024), with Bistro Bovy, Bar
+> Joseph and the De Schuur hall. (2) The site is new, built by COCO media around a December 2025 photo shoot, so the
+> offer is never a new site, it's an events planner added to it (RULES 0F, just built). (3) The hot part is local. The
+> big Ons Huis hall in Berkenbos, Heusden-Zolder, closes on 31 December after nearly 70 years of weddings, balls and
+> club dinners (Internetgazet Heusden-Zolder). (4) Arm B of the A/B test. (5) Hospitality, the 500 euro start.
+
+```gate
+lead: René Geurts, co founder and operator of Het Goed van Bovy, the company that holds the hospitality concession on Domein Bovy, Galgeneinde 22, 3550 Heusden-Zolder (https://www.made-in.be/limburg/hasseltse-horeca-ondernemers-nu-baas-in-bovy/ 26 Apr 2024, "Samen met René Geurts ... heeft Vanheusden de vennootschap Het Goed van Bovy opgericht, die nu de concessie voor de horeca-exploitatie van het domein kreeg toegewezen"). lemlist jobTitle Eigenaar, tagline "Gepassioneerde horeca ondernemer", both his. The register search on kbopub returned no table to our reader, so the company is confirmed through the press and the concession, not the KBO. ctc_umnv96hbtYAa9dgiL, leadId lea_sAYm4p6LMYu5conYA, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-31 08.43 UTC. Thread 0 items, control 7
+site pass 1: 20 URLs, tools/crawl.py on https://hetgoedvanbovy.be (9 from the sitemap, 10 distinct paths with www twins), all 200, every page read (home, bistro, feestzaal for companies, private events and weddings, Bar Joseph, zomerbar, reservatie, join) plus the menu PDFs listed
+site pass 2: 20 URLs, tools/crawl.py again, plus home, trouwfeest, bedrijven and reservatie rendered at 1440 and iPhone 13 (8 screenshots, r/bovy/sheet.jpg), dom.js on four pages for forms and iframes, site-audit.js desktop and phone, all opened
+deep analysis: a Squarespace site by COCO media ("Website gemaakt door COCO media", photo files 2512_CocoMedia_HetGoedVanBovy, sitemap lastmod 2025-12-18 to 2026-07-21). Three businesses on one domain, Bistro Bovy (table booking through an embedded https://hetgoedvanbovy.reservaties.net/ widget, breakfast €35 per person), Bar Joseph (summer bar from 5 April) and De Schuur, the hall, 100 seated and 130 standing, 20 to 200 guests. The money is the hall. Its three pages (bedrijven, evenementen, trouwfeest) each run a text block, a photo carousel, the same three questions (Capaciteit, Catering, Techniek) and an enquiry form (name, email, phone, date, info). No formula, no price per guest and no free dates on any of the three, 0 euro signs on each. The wedding page carousel is the December dinner shoot, plates and tables. Instagram is strong, 2,106 followers, posting today
+owner linkedin: Route 1 curl https://www.linkedin.com/in/rené-geurts-b418b017b 301 to the login wall, walled. Route 2 web search "René Geurts" Bovy, the Made in article. Route 3 Google News "René Geurts", HBVL 11 Sep 2026 on René (23) and Mia (82) as café owners, Made in Apr 2024, Borrelhuis Aug 2026 (Filip Vanheusden's group), a Vakblad Onder Glas grower with the same name ruled out. Route 4 the company LinkedIn page through social-audit.js, 30 followers, Heusden-Zolder. Route 5 the site footer, no names. Route 6 the lemlist record, title and tagline
+contact linkedin: same person as the owner, the lemlist record and the Made in article agree
+google news: tools/news.py nl 2026-10-31, "Het Goed van Bovy" 11 (Wijersfeest on Bovy 27 Sep 2026, Restaurant Het Goed van Bovy open 30 Aug 2024, HLN 16 May 2024 new operator), "René Geurts" 11, control Heineken 93
+regional news: tools/news.py (Bolderberg OR Heusden-Zolder) x (feestzaal OR evenementenlocatie), 9, "Ons Huis wordt verkocht, feestzaal sluit op 31/12" (Internetgazet Heusden-Zolder, opened at source, "duizenden huwelijksfeesten, bals, eetdagen"), the mine site becoming event venue The Pit (VRT 2 Jul 2026)
+industry news: tools/news.py feestzaal OR evenementenlocatie, 58, a cow barn turned party hall (Nieuwsblad 30 Oct 2026), Gashouder Amsterdam, more barn halls competing for the same parties
+sources:
+1. https://www.hetgoedvanbovy.be/
+2. https://www.hetgoedvanbovy.be/trouwfeest
+3. https://www.hetgoedvanbovy.be/bedrijven
+4. https://www.hetgoedvanbovy.be/evenementen
+5. https://www.hetgoedvanbovy.be/bistro
+6. https://www.hetgoedvanbovy.be/reservatie
+7. https://www.hetgoedvanbovy.be/sitemap.xml
+8. https://www.made-in.be/limburg/hasseltse-horeca-ondernemers-nu-baas-in-bovy/
+9. https://www.heusden-zolder.eu/ons-huis-wordt-verkocht-feestzaal-sluit-op-31-12.aspx
+10. https://www.instagram.com/het.goed.van.bovy/
+11. https://www.facebook.com/profile.php?id=61559636469787
+12. https://www.linkedin.com/company/het-goed-van-bovy
+13. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fhetgoedvanbovy.be
+14. https://hetgoedvanbovy.reservaties.net/
+15. https://news.google.com/rss (tools/news.py)
+pains: 5 judged. (1) the hall's three pages give a formula list in words but no price per guest and no free dates, every booking starts as a form and a wait, while Ons Huis closes on 31 December, CHOSEN. (2) the wedding page shows the dinner shoot, no wedding at De Schuur yet, proof for the planner, not the angle. (3) Bar Joseph is a summer bar, the winter gap is the hall's to fill, folded in. (4) GDPR, no consent tool and no privacy link, Squarespace first party cookies only, never the angle. (5) a new site, ruled out, it's under a year old
+chosen: (1), hottest, a hall with nearly 70 years of weddings and club dinners closes in the same municipality in two months, and every group it leaves behind meets a contact form, it's the reservations job behind Raka's "website for more reservations"
+owner reply: "We make every couple a tailored offer, we don't put prices online" | a model, not a gap | they already publish a per person price for the bistro breakfast (https://www.hetgoedvanbovy.be/bistro "€35 per persoon") and list the formulas and capacity on the hall pages (https://www.hetgoedvanbovy.be/bedrijven "buffet, barbecue of meergangendiner", "20–200 gasten"), so a starting price per formula shows what they already decide, and the site was just built (COCO media, December 2025 shoot) so the offer adds a planner, never a new site
+worth: €3,000+, an events planner added to the Squarespace site for weddings, company events and parties, date check against their calendar, guests, formula, a starting price per guest and a ready request with a follow up
+still there: co founder of the operating company named in Made in (26 Apr 2024), Het Goed van Bovy posted on Instagram 2026-10-31, and HBVL 11 Sep 2026 still calls him a café owner | https://www.made-in.be/limburg/hasseltse-horeca-ondernemers-nu-baas-in-bovy/
+budget: a three outlet concession with a hall for 200, a paid agency site and photo shoot (COCO media), a paid reservations widget and a partner who chaired the Limburg hospitality federation | https://www.hetgoedvanbovy.be/
+variant: B
+sweep website: crawled twice, 20 URLs, 4 page types rendered on desktop and iPhone 13 and opened, the hall pages carry no price, formula choice or free dates, CHOSEN as a planner added to the new site
+sweep gdpr: tools/eu-view.py from Stockholm, 4 first party cookies (crumb, ss_cvr), 0 third party, 6 third party hosts, site-audit.js no banner and no privacy link against its control, no consent code in the HTML, checked, never the angle (RULES 0E)
+sweep apps: the planner is the tool, folded into the offer, table booking already runs on reservaties.net (dom.js iframe on /reservatie), so no separate booking app
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/het.goed.van.bovy/ 2,106 followers 74 posts newest 2026-10-31, Facebook 2,042 followers, LinkedIn 30 followers, strong and active, not chosen
+sweep squad: a hospitality concession with a bistro, a bar and a hall, per its own pages and Made in, not a builder of software, not chosen
+thread: problem the wedding, company and party pages end on the same three questions and a contact form, no formula, price per guest or free dates | cost with the Ons Huis hall closing on 31 December its families and clubs will likely ask a few halls and book whoever makes it easiest | offer an events planner where people pick a date, guests and a formula, see a starting price and send a ready request | link formula, price
+lead read: René reads that his three hall pages only offer a form, no formula, price or free dates, so with Ons Huis closing its parties will likely book whoever makes it easiest, then gets offered a planner where people pick a date, guests and a formula and see a price, one thread
+claims:
+your wedding, company and party pages end on the same three questions and a contact form, https://www.hetgoedvanbovy.be/trouwfeest https://www.hetgoedvanbovy.be/bedrijven https://www.hetgoedvanbovy.be/evenementen each read "Veelgestelde vragen" with Capaciteit, Catering, Techniek and a form, dom.js counts 1 form on trouwfeest and bedrijven (name, email, phone, date, info), screenshots r/bovy/p2/02 and 03
+no formula, price per guest or free dates to see, 0 euro signs in the crawled text of each of the three pages against 1 on https://www.hetgoedvanbovy.be/bistro (the control, "€35 per persoon"), no calendar or date picker beyond the form's date field
+the Ons Huis hall in Berkenbos closes on 31 December, https://www.heusden-zolder.eu/ons-huis-wordt-verkocht-feestzaal-sluit-op-31-12.aspx "De feestzaal gaat op 31 december dicht"
+INFERENCE, its families and clubs will likely ask a few halls and book whoever makes it easiest, rests on the closure article's "duizenden huwelijksfeesten, bals, eetdagen" (https://www.heusden-zolder.eu/ons-huis-wordt-verkocht-feestzaal-sluit-op-31-12.aspx), worded likely
+recheck: 2026-10-31, the three hall pages re crawled and rendered (forms and FAQ), the euro count against the bistro control, the Ons Huis article opened at source, the Made in article opened, thread re pulled 0 items with the control at 7. Disproof tried, the reservatie iframe was found so the message never says booking is missing, the hall form's date field is named so the message says free dates rather than no date, the "just built" trap is written into the offer. Facts hold, confidence MEDIUM, a new venue may want to quote by hand
+```
+
+SKETCHB
+```
+Hi René, Het Goed van Bovy looks cool.
+
+However, your wedding, company and party pages end on the same three questions and a contact form, with no formula, price per guest or free dates to see. With the Ons Huis hall in Berkenbos closing on 31 December, its families and clubs will likely ask a few halls and book whoever makes it easiest.
+
+I'd suggest an events planner on your site where people pick a date, guests and a formula, see a starting price and send a ready request.
+
+Shall I send you a sketch?
+```
