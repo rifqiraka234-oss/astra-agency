@@ -312,3 +312,72 @@ social: accounts opened with tools/social-audit.js from the site's own links, ac
 squad: a family gelateria with shops, catering and wholesale per https://chelati.ch/gastro and the NFZ history, not a builder of software, not chosen
 verdict: DO_NOT_CONTACT for now, bankruptcy proceedings opened 20 Oct 2026 by the Bezirksgericht Laufenburg and the gelateria closed (https://www.nfz.ch/gipf-oberfrick-gelateria-geschlossen-konkursverfahren-eingeleitet, 30 Oct 2026), a crowdfunding running since 29 Oct (Aargauer Zeitung, walled), Raka's call whether to wait for the outcome
 ```
+
+### Denise Geestman, A Fuego, ctc_qMXXqCjntDZN8LBC8
+
+> NOT SENT. Flags for Raka. (1) The record resolves. A Fuego is her sole trader business, KvK 71507604, Amsterdam,
+> trade names A Fuego, A Fuego X and Geestman Hospitality (the footer carries the same KvK). Started in May 2020 after
+> Covid ended her party manager work. lemlist places her in Marseille and her tagline adds luxury travel design, so A Fuego
+> may be one of two lines of work, still live with an Instagram post yesterday. (2) Prices are public for private
+> clients, from €28 to €93 a head, but not for companies. (3) Arm A of the A/B test. (4) Raka's call was "website for gtm
+> automation bigger b2b sales", so the offer pairs a business page with an autumn outreach flow.
+
+```gate
+lead: Denise Geestman, founder of A Fuego, sole trader KvK 71507604, Marius Bauerstraat 149, Amsterdam, "Het aanbieden van voedselbelevenissen waarbij traditionele gerechten worden bereid op vuur" (tools/kvk-search.js, 2026-10-31), footer "KvK 71507604 ... © 2025 A Fuego by Denise Geestman" (https://www.afuego.nl/reviews), her page "In april 2020 ontstond het idee en in mei 2020 had ik mijn eerste event" (https://www.afuego.nl/denise-geestman). lemlist jobTitle Owner, tagline "International High-End Event Producer & Luxury Travel Designer | Founder of A Fuego", location Marseille. ctc_qMXXqCjntDZN8LBC8, leadId lea_9Tu9sFiMDD4QD59FQ, W1c cam_xFYYBzvfSHk83epvw, accepted 2026-10-30 09.56 UTC. Thread 0 items, control 7
+site pass 1: 94 URLs, tools/crawl.py on https://afuego.nl (54 from the sitemap), 88 at 200 and 6 rate limited, every page read (experiences, paellas, winter BBQ, wedding, company events, tapas, shop, 25 blog posts, reviews, about, Denise, contact, terms, privacy)
+site pass 2: 94 URLs, tools/crawl.py again with the rate limited pages retried, plus site-audit.js desktop and phone with both screenshots opened
+deep analysis: a Wix site for live fire paella and winter BBQ catering around Amsterdam, the Gooi, Haarlem, Utrecht and Den Haag. Private pages show prices, paella from €28 to €60 a head and the winter BBQ from €54 to €93 a head. The company events page (/bedrijfsevenement) has no price, one client under "Happy Clients" (PADEL NEXT), and a form that sends "onze A Fuego Experience Guide met inspiratie, prijzen en mogelijkheden" only after name, email and phone. The reviews page names the same one client and lists search terms (Kerstborrel, Nieuwjaarsborrel, Personeelsfeest). A blog post of 4 Nov 2025 pitches Christmas and New Year borrels. Every action ends in a proposal form, no outreach of their own is visible beyond Instagram
+owner linkedin: Route 1 curl https://www.linkedin.com/in/denise-geestman 301 to the login wall, walled. Route 2 Google News "Denise Geestman" 0 with the control at 91. Route 3 KvK, sole trader since 2018 with A Fuego and Geestman Hospitality as trade names. Route 4 her page on the site, Amsterdam born, ex party manager. Route 5 the company LinkedIn URL from lemlist, a-fuego-paella-bbq-experiences, walled. Route 6 the lemlist record, owner and founder
+contact linkedin: same person as the owner, KvK, the footer, her own page and the lemlist record agree
+google news: tools/news.py nl 2026-10-31, "A Fuego paella" 0, "Denise Geestman" 0, control Heineken 91
+regional news: tools/news.py (paella catering Nederland) x (BBQ catering bedrijfsfeest), 0 with the control at 91
+industry news: tools/news.py BBQ catering bedrijfsfeest, 4 (Events.nl BeachBrancheBBQ 200+ sign ups, older pieces), the company party market is booked through events trade press and direct relationships, plus her own post https://www.afuego.nl/post/kerst-of-nieuwjaarsborrel-catering
+sources:
+1. https://www.afuego.nl/
+2. https://www.afuego.nl/bedrijfsevenement
+3. https://www.afuego.nl/paella-catering
+4. https://www.afuego.nl/winter-bbq-catering
+5. https://www.afuego.nl/reviews
+6. https://www.afuego.nl/denise-geestman
+7. https://www.afuego.nl/contact
+8. https://www.afuego.nl/post/kerst-of-nieuwjaarsborrel-catering
+9. https://www.kvk.nl/zoeken/?source=all&q=71507604
+10. https://www.instagram.com/afuego.paellacatering/
+11. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fafuego.nl
+12. https://www.linkedin.com/in/denise-geestman (walled)
+13. https://news.google.com/rss (tools/news.py)
+14. https://www.events.nl/
+pains: 5 judged. (1) companies get no price and one client name before they hand over their phone number, while private visitors see prices from €28 a head, and nothing reaches companies unless they find her, CHOSEN. (2) she may be splitting time with luxury travel work from Marseille, so selling time is short, folded into the outreach flow. (3) GDPR, no banner found against the control on Wix with 21 third party hosts, never the angle. (4) social, 1,442 Instagram followers posting yesterday, active, not chosen. (5) weddings and private parties, priced and served, not the money Raka asked about
+chosen: (1), hottest, Christmas and New Year borrels are booked in these weeks and her own blog sells them, and it's the B2B sales job Raka named
+owner reply: "Companies get my Experience Guide with prices the moment they fill in the form" | a model, not a gap | her private pages show prices openly (https://www.afuego.nl/paella-catering "vanaf €28 p.p.", https://www.afuego.nl/winter-bbq-catering "vanaf €93 p.p."), so hiding them only from companies is a choice the business page makes, and the outreach half of the offer stands even if she keeps the guide
+worth: €4,000+, a business events page with winter packages, prices from and client stories, plus an outreach flow that finds office and HR managers in Amsterdam, the Gooi, Utrecht and Den Haag each autumn and sends them the page, with follow ups
+still there: owner of the sole trader A Fuego active on KvK read 2026-10-31, footer "A Fuego by Denise Geestman", Instagram post 2026-10-30 | https://www.afuego.nl/denise-geestman
+budget: a registered business since 2018 with chefs, fire assistants, furniture and staff hire ("inclusief meubilair, servies, glaswerk, bediening en entertainment") and a paid shop | https://www.afuego.nl/bedrijfsevenement
+variant: A
+sweep website: crawled twice, 94 URLs, business page has no price and one client name against priced private pages, CHOSEN with the outreach flow
+sweep gdpr: tools/eu-view.py from Stockholm, 7 first party cookies, 0 third party, 21 third party hosts, site-audit.js no banner against its control and a privacy page at https://www.afuego.nl/privacy-policy, never the angle (RULES 0E)
+sweep apps: the outreach flow is the tool, folded into the offer, the proposal form already works, no other process visible
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/afuego.paellacatering/ 1,442 followers 170 posts newest 2026-10-30, the Facebook and WhatsApp links are share buttons, not accounts, not chosen
+sweep squad: a live fire catering business, per KvK and its own pages, not a builder of software, not chosen
+thread: problem the company events page shows no price and one client name, Padel Next, while the paella and winter BBQ pages show prices per person | cost with Christmas and New Year borrels being planned now, office managers likely shortlist caterers they can price in a minute | offer a business page with winter packages, prices and client stories, plus an outreach flow that sends it to office managers | link price, office
+lead read: Denise reads that companies see no price and one client on her business page while private guests see prices, so office managers planning borrels likely skip her, then gets offered a priced business page sent to office managers, one thread
+claims:
+your company events page shows no price, https://www.afuego.nl/bedrijfsevenement 0 euro signs in the crawled text, its form promises the Experience Guide "met inspiratie, prijzen en mogelijkheden" after the details are sent, control the same euro count finds 4 prices on https://www.afuego.nl/paella-catering
+one client name, Padel Next, https://www.afuego.nl/bedrijfsevenement "Happy Clients PADEL NEXT" and https://www.afuego.nl/reviews "Happy clients PADEL NEXT"
+your paella and winter BBQ pages show prices per person, https://www.afuego.nl/paella-catering four experiences each "vanaf" a price per person, https://www.afuego.nl/winter-bbq-catering each package "Vanaf" a price per person
+INFERENCE, office managers likely shortlist caterers they can price in a minute, rests on the business page asking for details before any price (https://www.afuego.nl/bedrijfsevenement), worded likely
+recheck: 2026-10-31, the business page and reviews page re read, the euro counts against the paella page control, KvK by number, thread re pulled 0 items with the control at 7. Disproof tried, searched every page for corporate logos or other company names (Padel Next only), read the form to see the guide holds prices so the message never says prices don't exist, and kept the Marseille question out of the message. Facts hold, confidence MEDIUM, she may now spend most of her time on luxury travel
+```
+
+SKETCH
+```
+Hi Denise, A Fuego looks cool!
+
+However, your company events page shows no price and one client name, Padel Next, while your paella and winter BBQ pages show prices per person. With Christmas and New Year borrels being planned now, office managers likely shortlist caterers they can price in a minute.
+
+I'd suggest a business page with your winter packages, prices and client stories, plus an outreach flow that sends it to office managers around Amsterdam each autumn.
+
+At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the business page and outreach flow?
+```
