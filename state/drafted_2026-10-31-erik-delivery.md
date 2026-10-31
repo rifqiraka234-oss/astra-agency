@@ -1,4 +1,6 @@
-# Erik Schmidt-Lange, Taste Frankfurt, the delivery. NOT SENT, waiting on Raka's word
+<!-- GATE ARCHIVED -->
+<!-- SENT 2026-10-31 ~19.10 UTC on Raka's "okay we needa send chalries and erik", act_saRs96T2w66vBsBQb, one copy, thread 3 items before (unchanged since his 29 Oct yes) and 4 after, both links 200 with their titles in the minute before. Do not send again. -->
+# Erik Schmidt-Lange, Taste Frankfurt, the delivery. SENT 31 Oct
 
 He said "Yeah of course I'm open to see your opinion:) thanks" on 29 Oct 07.14 UTC (act_6fLqLjqsmhXCL2Lgn) to our 26 Oct
 SKETCH opener and the 29 Oct bump. Thread pulled 31 Oct ~09.20 UTC, 3 items, control 7, nothing since his yes. This
