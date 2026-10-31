@@ -863,3 +863,22 @@ social: tools/social-audit.js found no social link on the splash at https://lest
 squad: a hotel group, Les Tourelles operated by HOTELEAU NAF 56.10A per https://recherche-entreprises.api.gouv.fr/search?q=394903769, not a builder of software, not chosen
 verdict: BLOCKED_NEEDS_INFO, his current role at Nouvelle Hôtellerie is confirmed only by lemlist, HOTELEAU's gérants are Cedric Callens, Bernard Richelle and Alexandra Fontaine (https://recherche-entreprises.api.gouv.fr/search?q=394903769), the angle is written above and ready once a non lemlist source names him
 ```
+
+## Jonathan Leyland, Birch Stays, ctc_dyg7tEvBgv9YFgENv. NO_STRONG_ANGLE for "more modern website"
+
+> NOT DRAFTED. Raka's call was "more modern website". The site is already modern, a custom Next.js build on Vercel (a
+> deployment id in every asset path, "© 2026 Birch Stays"), a date and guest search with an AI search line in the hero
+> (seen in our A sheet render), 350+ homes, "Hosted 10,000+ trips", a homeowners section with a revenue calculator, Birch
+> Builds and interior design, and 69,129 Instagram followers. Telling them it isn't modern would be false. If Raka wants
+> a different angle, the one with room is homeowner acquisition, they cap at 30 homes per location and recruit owners
+> through one page, an outreach flow to design led holiday homes in their regions. Not drafted without his word.
+
+```sweep
+lead: Jonathan Leyland, co founder of Birch Stays, ctc_dyg7tEvBgv9YFgENv, leadId lea_unsF2CLpGQ9hdmuau, founders cam_Csq9BikBWz7dNqSs4, accepted 2026-10-28, thread 0 items with the control at 7
+website: crawled with tools/crawl.py, 250 URLs to the cap on https://birchstays.com (149 holiday let pages, 60 property pages, blog, homeowners), a custom Next.js site on Vercel per the raw HTML, AI search in the hero in the A sheet render, modern, the "more modern website" call has no honest ground
+gdpr: site-audit.js banner yes via consentmanager, GEO VOID from our US egress, tools/eu-view.py from Stockholm run, checked, never the angle (RULES 0E)
+apps: they already run search, a revenue calculator for owners and a booking flow per https://birchstays.com/homeowners/, no tool gap visible, homeowner acquisition outreach is the only open route
+social: tools/social-audit.js, Instagram https://www.instagram.com/birchstays/ 69,129 followers newest 2026-10-29, LinkedIn 225, very strong, not an angle
+squad: a holiday let agency with design and build arms per https://birchstays.com/homeowners/, not a builder of software, not chosen
+verdict: NO_STRONG_ANGLE for a more modern website, the site is a recent custom build with AI search and a revenue calculator, a homeowner acquisition outreach angle is noted for Raka and not drafted without his word
+```
