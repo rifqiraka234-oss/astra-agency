@@ -413,7 +413,7 @@ sources:
 9. https://www.nighthawks.fr/blog-menu-cocktails-evenement-professionnel/
 10. https://recherche-entreprises.api.gouv.fr/search?q=811966886
 11. https://www.linkedin.com/company/nighthawks-paris
-12. https://www.instagram.com/nighthawkscocktails/
+12. https://www.instagram.com/nighthawksparis/
 13. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fnighthawks.fr
 14. https://news.google.com/rss (tools/news.py)
 15. https://www.linkedin.com/in/sylvain-protais (walled)
@@ -427,7 +427,7 @@ variant: A
 sweep website: crawled twice, 118 URLs, a working shop with four pro pages and a strong blog, no website angle, the outreach flow is CHOSEN
 sweep gdpr: site-audit.js banner yes with reject present, tools/eu-view.py from Stockholm run, checked, never the angle (RULES 0E)
 sweep apps: the outreach flow with booked tastings is the tool, CHOSEN, no other process visible from outside
-sweep social: tools/social-audit.js, LinkedIn https://www.linkedin.com/company/nighthawks-paris 5,531 followers, Instagram 8,042 followers newest 2026-10-22, Pinterest 0, strong, not chosen
+sweep social: tools/social-audit.js, LinkedIn https://www.linkedin.com/company/nighthawks-paris 5,531 followers, Instagram https://www.instagram.com/nighthawksparis/ 8,042 followers newest 2026-10-22 (the handle taken from their own site's link), Pinterest 0, strong, not chosen
 sweep squad: a drinks maker with a lab and a shop, per the register NAF 56.30Z and its story page, not a builder of software, not chosen
 thread: problem the blog published guides this month on hotel honesty bars and cocktails for business events, and the hotel page ends in a quote request answered within 48 hours | cost most hotel buyers likely only meet those guides if they search for them | offer an AI workflow that sends the right guide and a sample kit offer to 4 and 5 star hotels and event agencies, and books tastings | link guide, hotel
 lead read: Sylvain reads that his blog writes guides for hotels and events but the hotel page waits for a quote request, so most hotel buyers only meet the guides if they search, then gets offered a flow that sends those guides with a sample kit to hotels and books tastings, one thread
@@ -711,4 +711,69 @@ I'd suggest an outreach flow that sends the guide to offices and startups around
 At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the outreach flow?
+```
+
+### Jordane Morel, MERINO, ctc_YbeTTgcHKWEyD4yDp
+
+> NOT SENT. Flags for Raka. (1) The record resolves. SAS MERINO, SIREN 932380116, Nancy, created 28 Aug 2024, Jordane
+> Président and Louis Petitcolin Directeur Général, licence CPI 5401 2024 000 000 013, a team of four on the site. (2)
+> The site is a solid agency platform (Netty) with listings, alerts and a valuation tool, so the angle is the seller side,
+> where the big money is, not the look. (3) Cold outreach to private owners in France runs into consent rules, so the GTM
+> half is a follow up flow for owners who already asked for a valuation, not cold outreach. (4) Arm A.
+
+```gate
+lead: Jordane Morel, co founder and Président of SAS MERINO, SIREN 932380116, Nancy, created 2024-08-28, NAF 68.31Z, Louis Petitcolin Directeur Général (https://recherche-entreprises.api.gouv.fr/search?q=merino%20nancy), mentions légales "SAS Merino ... SIRET 93238011600016 ... Carte pro CPI 5401 2024 000 000 013" (https://www.agencemerino.com/mentions-legales,113), team page "Jordane MOREL Co-fondateur / Agent immobilier" (https://www.agencemerino.com/conseillers). lemlist jobTitle Agent immobilier / Co-fondateur, both his. ctc_YbeTTgcHKWEyD4yDp, leadId lea_2rhWYCY3sY3WRX4Yn, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-28 14.45 UTC. Thread 0 items, control 7
+site pass 1: 138 URLs, tools/crawl.py on https://agencemerino.com (78 from the sitemap), 137 at 200 and 1 at 404, every page read (home, 84 listing URLs, sold, sell, valuation, team, agency, blog posts, fees, legal, privacy)
+site pass 2: 138 URLs, tools/crawl.py again, plus site-audit.js desktop and phone with both screenshots opened and the A sheet render
+deep analysis: an agency site on the Netty platform for selling and valuing older homes in Nancy, "Transaction dans l'ancien". Buyers get search, alerts and favourites. Owners get "Estimez votre bien", "Vendre avec nous" and an "Espace propriétaire". The valuation page promises "Recevez votre estimation gratuitement, en 2 minutes seulement !" in three steps, "1 Votre bien 2 État du bien 3 Vos coordonnées", so the owner hands over contact details before any figure. The selling page lists virtual tours, home staging on request and multi portal diffusion. The home promises "une totale transparence". Four agents, two founders and two negotiators. 1,872 Facebook, 1,656 TikTok and 798 Instagram followers
+owner linkedin: Route 1 curl https://www.linkedin.com/in/jordane-morel 301 to the login wall, walled. Route 2 Google News "Jordane Morel" 4, none about the agency. Route 3 the register, Président since 2024. Route 4 his agent page on the site, co founder and agent with his own listings. Route 5 the company LinkedIn page through social-audit.js, 365 followers. Route 6 the lemlist record, agent and co founder
+contact linkedin: same person as the owner, the register, the team page and the lemlist record agree
+google news: tools/news.py fr 2026-10-31, "agence Merino Nancy" 0, "Jordane Morel" 4 none about the agency, control Carrefour 100
+regional news: tools/news.py (immobilier Nancy) x (agences immobilières marché ancien), 35, L'Est Républicain 23 May 2026 "Prix du marché dans l'ancien et le neuf : une légère progression à Nancy", Le Progrès 30 Jun 2026 "un marché de l'ancien rattrapé par le doute"
+industry news: tools/news.py agences immobilières marché ancien, Immo Matin 8 Oct 2026 "Orpi : pourquoi le marché immobilier marque le pas au troisième trimestre ?", fewer sellers and more agencies chasing each listing
+sources:
+1. https://www.agencemerino.com/
+2. https://www.agencemerino.com/estimation-prix-m2-nancy,107
+3. https://www.agencemerino.com/vendre-immobilier-nancy,108
+4. https://www.agencemerino.com/conseillers
+5. https://www.agencemerino.com/vendu
+6. https://www.agencemerino.com/mentions-legales,113
+7. https://recherche-entreprises.api.gouv.fr/search?q=merino%20nancy
+8. https://www.linkedin.com/company/agencemerino
+9. https://www.facebook.com/agencemerino
+10. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fagencemerino.com
+11. https://news.google.com/rss (tools/news.py)
+12. https://www.linkedin.com/in/jordane-morel (walled)
+pains: 5 judged. (1) owners who come to value their home hand over their details before any figure, then nothing on the site keeps them warm until they sell, in a market where listings are scarcer, CHOSEN. (2) cold outreach to owners, ruled out on French consent rules, the follow up stays with owners who asked. (3) the look, a standard agency platform, proof only. (4) GDPR, a banner with reject, never the angle. (5) social, strong across four networks, not chosen
+chosen: (1), costliest, a seller listing is the agency's biggest sale and the valuation page is where owners arrive, and it's the bigger sales job Raka named
+owner reply: "Every agency asks for details first, that's how we get leads" | a model, not a gap | their own home promises "une totale transparence" (https://www.agencemerino.com/), and the offer keeps the contact step for booking the visit, it moves a price range in front of it and adds the follow up the site doesn't do
+worth: €4,000+, a valuation page that shows a range from their own Nancy sales at once and books the home visit, plus a follow up flow that sends every owner who valued a monthly note on sales near them until they list
+still there: Président on the register read 2026-10-31 and co founder on the team page read 2026-10-31 | https://www.agencemerino.com/conseillers
+budget: a licensed agency with four agents, an office at 171 rue de Newcastle and a paid Netty platform | https://www.agencemerino.com/agence/merino-nancy-54000,2
+variant: A
+sweep website: crawled twice, 138 URLs, a working agency platform, the valuation step is CHOSEN as the seller angle
+sweep gdpr: tools/eu-view.py from Stockholm, 1 first party cookie, 0 third party, 7 third party hosts, site-audit.js banner yes with reject present, never the angle (RULES 0E)
+sweep apps: the valuation and owner follow up flow is the tool, CHOSEN with the page
+sweep social: tools/social-audit.js, Facebook 1,872, TikTok 1,656, Instagram https://www.instagram.com/agencemerino/ 798 newest 2026-10-29, LinkedIn 365, strong, not chosen
+sweep squad: an estate agency per the register NAF 68.31Z and its licence, not a builder of software, not chosen
+thread: problem the valuation page promises an estimate in 2 minutes, then asks for the owner's details at step 3 before any figure | cost owners comparing agencies likely want a number first, and those who stop at step 3 are gone | offer a valuation page that shows a range from their own Nancy sales right away, books the visit and follows up every owner | link valuation, owner
+lead read: Jordane reads that owners must give their details before any figure on his valuation page, so many likely stop there, then gets offered a valuation page that shows a range first, books the visit and follows up, one thread
+claims:
+your valuation page promises an estimate in 2 minutes, https://www.agencemerino.com/estimation-prix-m2-nancy,107 "Recevez votre estimation gratuitement, en 2 minutes seulement !"
+then asks for the owner's details at step 3 before any figure, https://www.agencemerino.com/estimation-prix-m2-nancy,107 "1 Votre bien 2 État du bien 3 Vos coordonnées"
+INFERENCE, owners comparing agencies likely want a number first and those who stop at step 3 are gone, rests on the three step order (https://www.agencemerino.com/estimation-prix-m2-nancy,107), worded likely
+recheck: 2026-10-31, the valuation page text re read, the register, the team page, thread re pulled 0 items with the control at 7. Disproof tried, read the selling page for an existing follow up or newsletter (none named), kept cold outreach out on consent rules, never called the site old. Facts hold, confidence MEDIUM, every French agency asks for details first and they may like it that way
+```
+
+SKETCH
+```
+Hi Jordane, MERINO looks cool!
+
+However, your valuation page promises an estimate in 2 minutes, then asks for the owner's details at step 3 before any figure. Owners comparing agencies likely want a number first, and those who stop at step 3 are gone.
+
+I'd suggest a valuation page that shows a range from your own Nancy sales right away, books the visit and follows up every owner until they're ready to sell.
+
+At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the new valuation page?
 ```
