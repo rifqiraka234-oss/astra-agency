@@ -1,0 +1,15 @@
+qa/imagery.js 2026-10-30T15:20:29.824Z
+PASS  imagery / 1440               hero 61%, the least of 30 other screens 41%
+PASS  imagery / 390                hero 64%, the least of 29 other screens 42%
+PASS  imagery /weihnachtsfeier/ 1440 hero 63%, the least of 23 other screens 44%
+PASS  imagery /weihnachtsfeier/ 390 hero 64%, the least of 22 other screens 45%
+PASS  imagery /menues/ 1440        hero 69%, the least of 20 other screens 44%
+PASS  imagery /menues/ 390         hero 70%, the least of 27 other screens 45%
+PASS  imagery /referenzen/ 1440    hero 62%, the least of 18 other screens 44%
+PASS  imagery /referenzen/ 390     hero 64%, the least of 17 other screens 41%
+PASS  imagery /ueber-uns/ 1440     hero 69%, the least of 8 other screens 44%
+PASS  imagery /ueber-uns/ 390      hero 70%, the least of 8 other screens 41%
+PASS  imagery /kontakt/ 1440       hero 80%, the least of 4 other screens 42%
+PASS  imagery /kontakt/ 390        hero 97%, the least of 6 other screens 45%
+plant caught  imagery  every picture hidden on Home, 31 of 31 screens under
+PASS, every plant caught

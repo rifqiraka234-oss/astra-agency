@@ -1,0 +1,8 @@
+qa/sums.js 2026-10-30T15:07:42.930Z
+PASS  sums /                 30 random parties, page, chalk board and hidden fields agree with offer.json to the euro
+plant caught  sums           a per head figure of 47 € planted in place of 45 €, 21 of 30 parties caught
+PASS  state / to /referenzen/ Sommerfest, 240 guests, Fusion and Innenhof from Home, Churros from /menues/, all in the drawer on /referenzen/. Ort "Innenhof, draußen", Speisen "Churros"
+plant caught  state          Anzahl_Gaeste planted so it never updates, caught: Anzahl_Gaeste 
+PASS  menu /menues/          41 lines, dishes, drinks, desserts and their texts from offer.json found in German, 13 of 13 items each with English
+plant caught  menu           Originale Currywurst planted out of the page, caught: Originale Currywurst / Frisch gebraten, mit hausgemachter Sauce und individuellen Toppings, der Klassiker.
+PASS, every plant caught

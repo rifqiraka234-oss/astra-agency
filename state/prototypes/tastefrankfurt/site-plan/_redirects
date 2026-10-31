@@ -1,0 +1,2 @@
+# The checks travel in this folder but are never served
+/qa/* /index.html 404!

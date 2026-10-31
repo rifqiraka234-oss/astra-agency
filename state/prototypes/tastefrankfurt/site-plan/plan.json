@@ -1,0 +1,93 @@
+{
+  "_about": "Every figure and line on the plan, with its source and the date it was read. The plan page and qa/sums.js both read this file.",
+  "prepared": "October 2026",
+  "prepared_for": [
+    "Erik Schmidt-Lange",
+    "Frederik Schreier"
+  ],
+  "price_eur": 500,
+  "price_note": "Raka's figure, given in the chat on 30 Oct 2026.",
+  "weeks": 4,
+  "weeks_note": "Raka's figure, given in the chat on 30 Oct 2026.",
+  "phases": [
+    {
+      "name": "The content and the hero",
+      "share": 0.35
+    },
+    {
+      "name": "The pages, the enquiry and the redirects",
+      "share": 0.45
+    },
+    {
+      "name": "The test week and live",
+      "share": 0.2
+    }
+  ],
+  "findings": [
+    {
+      "id": "screens",
+      "value": 4.21,
+      "unit": "screens",
+      "line": "On a phone, Porsche Sommerfest and Städel Night first show 4.21 screens down your home page, inside a strip that moves.",
+      "source": "https://tastefrankfurt.com/ at 390 by 844, y 3,552 of 7,518 px",
+      "read": "2026-10-30"
+    },
+    {
+      "id": "desktop",
+      "value": 2.57,
+      "unit": "screens",
+      "line": "On a laptop it's 2.57 screens down.",
+      "source": "https://tastefrankfurt.com/ at 1440 by 900, y 2,315 of 6,376 px",
+      "read": "2026-10-30"
+    },
+    {
+      "id": "pages",
+      "value": 17,
+      "of": 57,
+      "line": "The same three reasons stand on 17 of your 57 pages, each time beside the client strip.",
+      "source": "every URL in https://tastefrankfurt.com/page-sitemap.xml",
+      "read": "2026-10-29"
+    },
+    {
+      "id": "price",
+      "value": 41,
+      "of": 57,
+      "home": 0,
+      "line": "Your price page is linked from 41 of those pages, and not once from the home or the menu.",
+      "source": "every URL in https://tastefrankfurt.com/page-sitemap.xml, the home rechecked",
+      "read": "2026-10-30"
+    },
+    {
+      "id": "reviews",
+      "value": 5,
+      "of": 13,
+      "line": "There are no customers' words on the site, while Naboo shows 5 from 13 reviews.",
+      "source": "https://www.naboo.app/en-us/explorer/restaurants/taste-frankfurt",
+      "read": "2026-10-29"
+    }
+  ],
+  "prices": {
+    "typical_low_eur_pp": 45,
+    "typical_high_eur_pp": 65,
+    "minimum_order_net_eur": 1800,
+    "source": "https://tastefrankfurt.com/catering-preise/",
+    "read": "2026-10-29"
+  },
+  "worth_defaults": {
+    "guests": 80,
+    "eur_pp": 55,
+    "events": 3,
+    "guests_min": 30,
+    "guests_max": 300,
+    "events_min": 1,
+    "events_max": 12
+  },
+  "ihk": {
+    "per_head_eur": 110,
+    "per_year": 2,
+    "line": "Companies plan their Christmas party around the 110 € a head line, which holds for up to two such parties a year.",
+    "source": "https://www.ihk-muenchen.de/ratgeber/recht/arbeitsrecht/bestehende-arbeitsverhaeltnisse-kuendigung-sozialversicherung/weihnachtsfeier/",
+    "read": "2026-10-30"
+  },
+  "shots_taken": "2026-10-30"
+}

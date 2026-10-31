@@ -1,0 +1,180 @@
+{
+  "_about": "Everything Taste Frankfurt publishes about what they sell, what it costs and how they work, copied from their own pages on 29 Oct 2026 (57 of 57 sitemap pages fetched, 200). Every value carries its page. The site is German, so values are German as they wrote them. Reopen the page before a value goes on a site.",
+  "_read": "2026-10-29, curl of every URL in https://tastefrankfurt.com/page-sitemap.xml (lastmod 2026-10-20 on all 57)",
+
+  "business": {
+    "name": "Taste Frankfurt",
+    "trading_as": "Freddi On Tour",
+    "owners": ["Erik Schmidt-Lange", "Frederik Schreier"],
+    "founded": 2024,
+    "address": "Schloss Wolfsgarten 1, 63225 Langen",
+    "phone": "+49 176 34877333",
+    "email": "hello@tastefrankfurt.com",
+    "source": "https://tastefrankfurt.com/impressum/ , https://tastefrankfurt.com/erik-schmidt-lange/ , https://tastefrankfurt.com/ueber-uns/"
+  },
+
+  "their_lines": {
+    "_use": "Their own words, copy exactly. The one idea comes from here.",
+    "home_hero": "Mobiles Live-Cooking & Catering: Wir machen dein Event in Hessen zum Highlight",
+    "home_scale": "Frisch vor Ort gekocht von 30 bis 2.000 Gästen.",
+    "xmas_title": "Weihnachtsfeier Catering für Firmen in Frankfurt",
+    "xmas_h2": "Weihnachtszauber, der verbindet: Dein Catering-Highlight in Frankfurt",
+    "xmas_market": "Dein privater Weihnachtsmarkt direkt bei dir vor Ort",
+    "xmas_market_body": "Warum in die Ferne schweifen, wenn das Winterwunderland zu dir kommen kann? Egal ob in einer schicken Eventlocation, direkt in deinen Büroräumen, rustikal im Warenlager oder auf dem Firmengelände: Wir verwandeln deine Fläche in einen festlichen Treffpunkt.",
+    "xmas_live": "Wir kochen live bei euch vor Ort",
+    "xmas_hut": "Hüttenzauber: Unser Glühweinstand mit Glühwein, Punsch und heißer Schokolade wird zum Treffpunkt für gute Gespräche.",
+    "erik_direct": "Persönliche Beratung statt anonymer Catering-Industrie. Wer uns anfragt, spricht direkt mit uns.",
+    "kontakt_h1": "Dein Event? Unser Job!",
+    "kontakt_reply": "Antwort innerhalb von 24 Stunden. Auch am Wochenende erreichbar.",
+    "about_mission": "Kein Standard-Catering, sondern ein Unternehmen, das den Anspruch hat, Events durch Geschmack, Atmosphäre und Individualität zu bereichern.",
+    "about_host": "Du kannst dich voll und ganz auf deine Rolle als Gastgeber konzentrieren",
+    "region": "Da uns echte Nachhaltigkeit wichtig ist, konzentrieren wir uns bewusst auf das Bundesland Hessen die Region, für die unser Herz schlägt.",
+    "quiz_meta": "Persönliche Beratung statt Preisrechner",
+    "sources": "https://tastefrankfurt.com/ , https://tastefrankfurt.com/weihnachtsfeier/ , https://tastefrankfurt.com/erik-schmidt-lange/ , https://tastefrankfurt.com/kontakt/ , https://tastefrankfurt.com/ueber-uns/ , https://tastefrankfurt.com/catering-konzept-finder/"
+  },
+
+  "menu_lines": {
+    "_source": "https://tastefrankfurt.com/menues/ , each line has '+ Menü zur Anfrage hinzufügen'. 'frei kombinierbar und in jeder Linie vegetarisch oder vegan abwandelbar' (https://tastefrankfurt.com/weihnachtsfeier/)",
+    "american": {"label": "American Menü", "items": ["Burger", "Pommes", "Poffertjes", "Softdrinks"], "note": "*Vegane & vegetarische Optionen"},
+    "french": {"label": "French Menü", "items": ["Flammkuchen", "Waffeln", "Softdrinks"], "note": "*Vegane & vegetarische Optionen"},
+    "fusion": {"label": "Fusion Menü", "items": ["Bowls", "Schaschlik", "Desserts im Glas"], "note": "*Vegane & vegetarische Optionen"}
+  },
+
+  "dishes": {
+    "_source": "https://tastefrankfurt.com/essen/ , each with 'Zur Anfrage hinzufügen' (goes into the hidden field Ausgewaehlte_Speisen)",
+    "mains": [
+      {"name": "Black Angus Beef Burger", "text": "Saftiges Black Angus Beef (180 g) im Brioche- oder Laugenbrötchen. Toppings nach Wahl: Chili, Mango-Chutney, Guacamole, Röstzwiebeln.", "tags": ["180g", "Veggie-Option", "Vegan möglich"]},
+      {"name": "Flammkuchen Elsässer Art", "text": "Goldbraun und knusprig aus dem Ofen. Klassisch mit Speck und Zwiebeln oder kreative Sondersorten.", "tags": ["Live-Cooking", "Vegetarisch"]},
+      {"name": "Knackige Bowls & Cous-Cous", "text": "Frische Bowls mit knackigem Gemüse, Hülsenfrüchten, Toppings und Dressings nach Wahl.", "tags": ["Vegan", "Glutenfrei opt."]},
+      {"name": "Mariniertes Schaschlik", "text": "Mariniertes Fleisch und buntes Gemüse am Spieß, frisch vom Grill für maximales Aroma.", "tags": ["Grill", "Glutenfrei"]},
+      {"name": "Originale Currywurst", "text": "Frisch gebraten, mit hausgemachter Sauce und individuellen Toppings: der Klassiker.", "tags": ["Streetfood", "Veggie-Option"]}
+    ],
+    "drinks": {
+      "_source": "https://tastefrankfurt.com/getraenke/",
+      "items": [
+        {"name": "Softdrinks & Klassiker", "text": "Cola, Apfelschorle, Wasser, Säfte: alle Klassiker für jede Veranstaltung. Auch Bio-Limonaden auf Wunsch."},
+        {"name": "Sekt & Wein", "text": "Auserwählte Weine, Sekt, Champagner und Prosecco: passend zu deinem Anlass kuratiert."},
+        {"name": "Cocktails & Long Drinks", "text": "Profi-Bar mit Bartender vor Ort. Klassische Cocktails, Long Drinks und individuelle Signature-Mixe."},
+        {"name": "Glühwein & Heißgetränke", "text": "Glühwein, Punsch, heiße Schokolade: perfekt für Winterevents und Weihnachtsfeiern", "season": "winter"}
+      ]
+    },
+    "desserts": {
+      "_source": "https://tastefrankfurt.com/desserts/",
+      "items": [
+        {"name": "Poffertjes", "text": "Fluffige niederländische Mini-Pfannkuchen mit Puderzucker, Ahornsirup, Schokoladensauce oder frischen Früchten."},
+        {"name": "Churros", "text": "Goldbraun und knusprig: frisch frittiert mit Zimt-Zucker, Nutella oder fruchtiger Sauce."},
+        {"name": "Waffeln", "text": "Frische belgische Waffeln: flauschig innen, knusprig außen. Mit Puderzucker, Beeren, Sahne oder Schokolade."},
+        {"name": "Diverse Desserts im Weckglas", "text": "Schichtdesserts, Mousses, Cremes und Frucht-Variationen: kunstvoll im Weckglas serviert. Perfekt für gehobene Anlässe."}
+      ]
+    },
+    "addons": {
+      "_source": "https://tastefrankfurt.com/specialty-coffee-catering/ , https://tastefrankfurt.com/cocktail-catering-frankfurt/ , https://tastefrankfurt.com/erik-schmidt-lange/ ('Mobile Cocktail-Bar mit Bartender als Add-on')",
+      "items": ["Mobile Cocktail-Bar mit Bartender", "Specialty Coffee Bar"]
+    }
+  },
+
+  "christmas": {
+    "_source": "https://tastefrankfurt.com/weihnachtsfeier/ (page text and its FAQ schema)",
+    "live_cooking": "Live-Cooking vom Plancha-Grill: Flammkuchen, Burger aus Black Angus Beef, Schaschlik (Rind, Hähnchen oder vegetarisch) und Currywurst mit Pommes, frisch zubereitet vor den Augen deiner Gäste.",
+    "desserts": "Weihnachtsmarkt-Desserts: Poffertjes frisch vor Ort gebacken, dazu Churros und Waffeln: die Klassiker vom Weihnachtsmarkt, direkt an der Theke.",
+    "drinks": "Glühwein, Punsch und heiße Schokolade, außerdem Softdrinks, Sekt und Wein. Auf Wunsch kommt unsere mobile Cocktail-Bar mit Bartender dazu.",
+    "atmosphere": "Festliche Atmosphäre: Mit liebevoller weihnachtlicher Dekoration zaubern wir ein Ambiente, das den Alltag vergessen lässt.",
+    "places": ["schicke Eventlocation", "Büroräume", "Warenlager", "Firmengelände"],
+    "not_offered": "Klassische Weihnachtsbraten wie Gänsebraten gehören nicht zu unserem Angebot.",
+    "min_guests": 30,
+    "largest": "Städel Night mit 2.000 Gästen an 2 Tagen",
+    "minimum_order_net_eur": 1800,
+    "lead_time": "Ideal sind 3-4 Wochen Vorlauf, gerade für größere Events. Für Termine im Dezember lohnt es sich, früh anzufragen.",
+    "space": "Im Schnitt brauchen wir ca. 3 x 5 Meter, unsere kleinsten Caterings kommen schon mit 160 x 160 cm aus. Wir kochen im Büro, in der Eventlocation, im Warenlager oder draußen auf dem Firmengelände, dort mit wetterfestem Pavillon.",
+    "diet": "Ja, alle unsere Speisen lassen sich vegetarisch und vegan abwandeln. Wir gehen auf Allergien und besondere Ernährungsformen individuell ein.",
+    "cities": "In Frankfurt und im gesamten Rhein-Main-Gebiet, zum Beispiel in Offenbach, Darmstadt, Wiesbaden, Mainz, Bad Homburg, Eschborn, Hanau und Langen.",
+    "enquiry_link": "/kontakt/?anlass=weihnachtsfeier"
+  },
+
+  "prices": {
+    "_source": "https://tastefrankfurt.com/catering-preise/ , 'Transparente Preise · 2026'. All net, per person, guide values ('Richtwerte'), never a final price.",
+    "examples": [
+      {"concept": "Lunch-Catering Bowls & Nebenspeise", "from_eur_pp": 40, "guide_guests": 50},
+      {"concept": "Live-Cooking Gala Night", "from_eur_pp": 60, "guide_guests": 50},
+      {"concept": "Sommerfest mit Burger-Station", "from_eur_pp": 45, "guide_guests": 80},
+      {"concept": "Live-Cooking-Hochzeit mit mobiler Bar", "from_eur_pp": 90, "guide_guests": 60},
+      {"concept": "Mobile Cocktail-Bar mit Bartender", "from_eur_pp": null, "text": "Auf Anfrage kalkuliert. Mindestauftragswert 1.800 € netto"}
+    ],
+    "typical_range": "Die meisten Events landen zwischen 45 € und 65 € pro Person netto (einfaches Buffet ab 40 €).",
+    "typical_low_eur_pp": 45,
+    "typical_high_eur_pp": 65,
+    "simple_buffet_from_eur_pp": 40,
+    "weddings": "Hochzeiten mit Komplett-Paket liegen typischerweise bei 95 bis 180 € pro Person, Premium-Pakete ab ca. 220 €.",
+    "minimum_order_net_eur": 1800,
+    "min_guests": 30,
+    "max": "Nach oben offen bis 2.000 Gäste über mehrere Tage.",
+    "why_no_fixed_price": "Weil jedes Event anders ist. 80 Gäste auf einer Dachterrasse mit Live-Cooking sind kalkulatorisch nicht vergleichbar mit 80 Gästen Buffet im Büro. Wir geben dir aber gerne realistische Spannen: und ein konkretes Angebot binnen 24 Stunden.",
+    "offer_time": "In der Regel binnen 24 Stunden nach deiner Anfrage. Bei kurzfristigen Events oft schneller: am direktesten per Anruf unter 0176 34877333.",
+    "not_binding": "Nein. Du bekommst ein detailliertes Angebot, das du dir in Ruhe ansehen kannst. Erst wenn du zusagst, wird gebucht.",
+    "breakdown": "Mit dem Angebot bekommst du eine transparente Kostenaufschlüsselung: keine versteckten Posten.",
+    "included": ["Anfahrt im Rhein-Main-Gebiet (bis 25 km) ohne Aufschlag", "Aufbau & Abbau", "Personal, geschultes Service- und Küchenteam", "Equipment, Theken, Geschirr, Besteck, Bar-Module", "Lebensmittel, alle Speisen, Getränke und Verbrauchsmaterialien", "Persönliche Vorab-Beratung & individuelle Menüplanung"],
+    "factors": ["Catering-Konzept", "Anzahl der Gäste", "Personal & Service-Dauer", "Equipment & Logistik", "Anfahrt & Standort (Frankfurt + 25 km um Langen ohne Aufschlag)", "Saison & Wochentag (Hochsaison Mai-September und Dezember)"]
+  },
+
+  "cases": {
+    "_source": "Text on https://tastefrankfurt.com/ ('Referenzen, Auszug unserer Events') and the same block on /weihnachtsfeier/ and /menues/. Their image alt texts name some events differently on different pages (see media.json), so a photo is captioned with the company only, never a specific event, unless the text block and the photo agree.",
+    "items": [
+      {"client": "Porsche", "event": "Porsche Sommerfest", "what": "Sommerfest für 100 Personen", "photo": "045"},
+      {"client": "Städel Museum", "event": "Städel Night", "what": "2.000 Gäste an 2 Tagen", "photo": "046"},
+      {"client": "Yahoo", "event": "Yahoo Lunch Event", "what": "Lunch für 100 Personen", "photo": "047"},
+      {"client": "Tatort", "event": "Tatort Filmpremiere", "what": "Premieren-Catering für Cast & Crew", "photo": null},
+      {"client": "Bosch", "event": "Bosch Roadshow", "what": "Live-Cooking BBQ für 60 Personen", "photo": "040"},
+      {"client": "DeLonghi", "event": "DeLonghi Lunch Meeting", "what": "Lunch-Catering für 150 Personen", "photo": "079"},
+      {"client": "DSV", "event": "DSV Kundenevent", "what": "Mobile Standtheke für 80 Gäste", "photo": "041"},
+      {"client": "Instone", "event": "Instone Richtfest & Grundsteinlegung", "what": "Bau-Catering für 70 Gäste", "photo": "042"}
+    ],
+    "also_on_their_site": ["Monzapark Indoor-Weihnachtsfest Langen (photo 043, alt text only)", "Panasonic Mitarbeiter-Event Langen (photo 044, alt text only)", "J.P. Morgan Corporate Challenge Frankfurt, After-Run-Catering (https://tastefrankfurt.com/catering-jp-morgan-lauf-frankfurt/ , photos 088, 089)"]
+  },
+
+  "enquiry_form": {
+    "_source": "https://tastefrankfurt.com/kontakt/ , form posts to https://api.web3forms.com/submit",
+    "fields": [
+      {"name": "Name", "type": "text", "required": true},
+      {"name": "email", "type": "email", "required": true},
+      {"name": "Telefon", "type": "tel"},
+      {"name": "Wunschdatum", "label": "Event-Datum", "type": "date"},
+      {"name": "Uhrzeit", "type": "time"},
+      {"name": "Anzahl_Gaeste", "label": "Anzahl Gäste", "type": "number"},
+      {"name": "Menü", "label": "Hast du ein Menü im Auge?", "options": ["American Menü", "French Menü", "Fusion Menü"]},
+      {"name": "Ausgewaehlte_Speisen", "type": "hidden", "from": "the Zur Anfrage hinzufügen buttons on /essen/, /getraenke/, /desserts/"},
+      {"name": "Ausgewaehlte_Menues", "type": "hidden"},
+      {"name": "Anfragequelle", "type": "hidden"},
+      {"name": "Nachricht", "label": "Erzähl uns von deinem Event", "type": "textarea"},
+      {"name": "Datenschutz", "type": "checkbox", "required": true}
+    ],
+    "occasion_param": "?anlass=weihnachtsfeier exists"
+  },
+
+  "konzept_finder": {
+    "_source": "https://tastefrankfurt.com/catering-konzept-finder/ , five questions then 'Unsere Empfehlung Live-Cooking'. These are the steps of the one state.",
+    "questions": [
+      {"q": "Welcher Anlass?", "options": ["Hochzeit", "Firmenfeier / Weihnachtsfeier", "Sommerfest / Outdoor-Event", "Geburtstag / Privatfeier", "Empfang / Messe / Lunch"]},
+      {"q": "Wie viele Gäste erwartest du?", "options": ["30 - 50 Gäste", "50 - 100 Gäste", "100 - 300 Gäste", "300+ Gäste"]},
+      {"q": "Welches Menü passt zu deinem Event?", "options": ["American: Burger, Pommes, Poffertjes", "French: Flammkuchen, Waffeln", "Fusion: Bowls, Schaschlik, Desserts im Glas", "Noch unklar: berate uns"]},
+      {"q": "Wo findet das Event statt?", "options": ["Indoor (Saal, Halle, Restaurant)", "Outdoor (Garten, Park, Terrasse)", "Beides oder mit Wetter-Backup", "Noch unklar"]},
+      {"q": "Möchtest du auch eine Bar?", "options": ["Ja, mobile Cocktail-Bar mit Bartender", "Ja, nur Sekt, Wein und Softdrinks", "Nein, kein Bar-Service nötig", "Noch unklar: berate uns"]}
+    ]
+  },
+
+  "logistics": {
+    "service_region": "Service-Region: Frankfurt + 50 km (Rhein-Main) (https://tastefrankfurt.com/erik-schmidt-lange/). No surcharge within 25 km (https://tastefrankfurt.com/catering-preise/)",
+    "cities_listed": ["Frankfurt", "Offenbach", "Wiesbaden", "Mainz", "Darmstadt", "Hanau", "Aschaffenburg", "Bad Homburg", "Friedrichsdorf", "Bad Vilbel", "Eschborn", "Langen"],
+    "lead_time_conflict": "Home and /menues/ FAQ say 4-6 Wochen on one and 3-4 Wochen on the other, /weihnachtsfeier/ says 3-4 Wochen. Use 3-4 Wochen for Christmas, flag the mismatch for Erik.",
+    "response": "Antwort innerhalb von 24 Stunden. Auch am Wochenende erreichbar. (https://tastefrankfurt.com/kontakt/)"
+  },
+
+  "outside_proof": {
+    "naboo": {"url": "https://www.naboo.app/en-us/explorer/restaurants/taste-frankfurt", "shows": "5 (13 Reviews)", "read": "2026-10-29", "note": "Review texts weren't in the page HTML. Show the rating with its link and date only if you reopen it. Quote a review only if you can read it on Naboo with the reviewer's name as shown."},
+    "instaff": {"url": "https://en.instaff.jobs/employer-reviews/freddi-on-tour", "shows": "41 completed jobs, 5.00 stars from temporary staff (read 26 Oct)", "note": "Staff reviews, not client reviews. Plan only, if at all."}
+  },
+
+  "social": {
+    "instagram": {"url": "https://www.instagram.com/tastefrankfurtcatering", "followers": 92, "posts": 7, "newest": "2026-05-05", "read": "2026-10-26"},
+    "linkedin": {"url": "https://www.linkedin.com/company/tastefrankfurt", "followers": 133, "read": "2026-10-26"}
+  }
+}

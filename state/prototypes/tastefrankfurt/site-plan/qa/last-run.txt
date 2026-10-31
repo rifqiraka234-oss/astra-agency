@@ -1,0 +1,4 @@
+qa/sums.js 2026-10-30T15:36:28.404Z
+PASS  plan sums  20 slider positions, the findings, the price, the weeks, all recomputed from plan.json
+plant caught  a minimum order of 1,700 € planted, 6 mismatches found
+PASS, every plant caught

@@ -1,0 +1,7 @@
+# Two of their old addresses that their own site links to. The real build maps every one of today's 57, one to one
+/catering-preise/ /menues/#preise 301
+/kontakt /kontakt/ 301
+# The handover, the research and the checks travel in this folder but are never served
+/HANDOVER.md /404.html 404!
+/research/* /404.html 404!
+/qa/* /404.html 404!

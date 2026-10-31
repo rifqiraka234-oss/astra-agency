@@ -1,0 +1,50 @@
+qa/check.js 2026-10-30T15:20:00.896Z
+PASS  walk / 390                     30 steps, 0 without a way to the enquiry. 0:hero-ask 422:hero-ask 844:hero-ask 1266:hero-ask 1688:hero-ask 2110:case-ask 2532:case-ask 2954:case-ask 3376:case-ask 3798:case-ask 4220:case-ask 4642:live-ask 5064:live-ask 5486:live-ask 5908:live-ask 6330:live-ask 6752:bar 7174:place-ask+bar 7596:place-ask 8018:place-ask 8440:bar 8862:eat-ask 9284:eat-ask 9706:price-ask+bar 10128:price-ask 10550:price-ask 10972:team-ask 11394:team-ask 11816:priv-ask+inline 12238:priv-ask+inline
+plant caught  walk 390               30 of 30 steps empty with the bar and inline buttons hidden
+PASS  walk / 1440                    31 steps, 0 without a way to the enquiry. 0:hero-ask 450:hero-ask 900:hero-ask 1350:hero-ask 1800:hero-ask 2250:case-ask 2700:case-ask 3150:case-ask 3600:case-ask 4050:case-ask 4500:case-ask 4950:live-ask 5400:live-ask 5850:live-ask 6300:live-ask 6750:live-ask 7200:bar 7650:bar 8100:place-ask 8550:place-ask 9000:bar 9450:eat-ask+bar 9900:eat-ask 10350:bar 10800:price-ask 11250:price-ask 11700:team-ask 12150:team-ask 12600:priv-ask+inline 13050:priv-ask+inline 13500:bar
+plant caught  walk 1440              31 of 31 steps empty with the bar and inline buttons hidden
+PASS  copy / de                      1020 words clean
+PASS  copy / en                      1131 words clean
+plant caught  copy                   planted dash, banned words, exclamations, uncontracted: 4 found
+plant caught  overflow               a heading forced wider than a 320 phone
+PASS  overflow /                     320, 360, 390, 430, 768, 1024, 1440, 1920 and a resize to 320, no sideways scroll, no word past its line
+PASS  errors / 390                   0 errors, 16 of 16 images decoded
+PASS  errors / 1440                  0 errors, 16 of 16 images decoded
+plant caught  errors                 a blocked case photo shows as failed http://127.0.0.1:5310/media/brand/taste-frankfurt-log
+PASS  axe /                          24 runs, top middle and end, 390 and 1440, DE and EN, both motion modes, 0 violations
+plant caught  axe                    planted missing alt and dark h1, axe found image-alt
+PASS  nojs /                         h1 "Wir kochen live bei euch vor Ort", 24 pictures, 5 of 5 cases readable, guide 3.600 bis 5.200 €
+PASS  reduced motion /               the finished state at once, at 0.7 s, 3 of 3 burger lines shown
+PASS  walk /weihnachtsfeier/ 390     23 steps, 0 without a way to the enquiry. 0:x-ask 422:bar 844:bar 1266:xp-ask 1688:xp-ask 2110:xw-ask 2532:xw-ask+xf-ask 2954:xf-ask 3376:xf-ask 3798:xf-ask 4220:xf-ask 4642:xs-ask 5064:xs-ask 5486:xg-ask 5908:xg-ask 6330:bar 6752:price-ask 7174:price-ask 7596:bar 8018:xq-ask+bar 8440:xq-ask 8862:xq-ask+xe-ask 9284:xe-ask
+plant caught  walk 390               23 of 23 steps empty with the bar and inline buttons hidden
+PASS  walk /weihnachtsfeier/ 1440    24 steps, 0 without a way to the enquiry. 0:x-ask 450:bar 900:bar 1350:xp-ask 1800:xp-ask 2250:xw-ask 2700:xw-ask+xf-ask 3150:xf-ask 3600:xf-ask 4050:xf-ask 4500:xf-ask 4950:xs-ask 5400:xs-ask 5850:xg-ask+bar 6300:xg-ask 6750:xg-ask 7200:bar 7650:price-ask 8100:price-ask 8550:xq-ask 9000:xq-ask 9450:xe-ask 9900:xe-ask 10350:bar
+plant caught  walk 1440              24 of 24 steps empty with the bar and inline buttons hidden
+PASS  copy /weihnachtsfeier/ de      952 words clean
+PASS  copy /weihnachtsfeier/ en      1062 words clean
+plant caught  copy                   planted dash, banned words, exclamations, uncontracted: 4 found
+plant caught  overflow               a heading forced wider than a 320 phone
+PASS  overflow /weihnachtsfeier/     320, 360, 390, 430, 768, 1024, 1440, 1920 and a resize to 320, no sideways scroll, no word past its line
+PASS  errors /weihnachtsfeier/ 390   0 errors, 12 of 12 images decoded
+PASS  errors /weihnachtsfeier/ 1440  0 errors, 12 of 12 images decoded
+plant caught  errors                 a blocked case photo shows as failed http://127.0.0.1:5310/media/brand/taste-frankfurt-log
+PASS  axe /weihnachtsfeier/          24 runs, top middle and end, 390 and 1440, DE and EN, both motion modes, 0 violations
+plant caught  axe                    planted missing alt and dark h1, axe found color-contrast image-alt
+PASS  nojs /weihnachtsfeier/         h1 "Dein privater Weihnachtsmarkt direkt bei dir vor", 17 pictures, 0 of 0 cases readable, guide 3.600 bis 5.200 €
+PASS  reduced motion /weihnachtsfeier/ the finished state at once, at 0.7 s, the page opening open and lit
+PASS  walk /menues/ 390              28 steps, 0 without a way to the enquiry. 0:m-ask 422:bar 844:bar 1266:bar 1688:bar 2110:bar 2532:bar 2954:bar 3376:bar 3798:bar 4220:bar 4642:bar 5064:bar 5486:bar 5908:bar 6330:bar 6752:bar 7174:bar 7596:bar 8018:bar 8440:bar 8862:bar 9284:bar 9706:mp-ask 10128:mp-ask 10550:bar 10972:mq-ask 11394:mq-ask
+plant caught  walk 390               28 of 28 steps empty with the bar and inline buttons hidden
+PASS  walk /menues/ 1440             21 steps, 0 without a way to the enquiry. 0:m-ask 450:bar 900:bar 1350:bar 1800:bar 2250:bar 2700:bar 3150:bar 3600:bar 4050:bar 4500:bar 4950:bar 5400:bar 5850:bar 6300:bar 6750:bar 7200:mp-ask 7650:mp-ask 8100:mq-ask 8550:mq-ask 9000:bar
+plant caught  walk 1440              21 of 21 steps empty with the bar and inline buttons hidden
+PASS  copy /menues/ de               1009 words clean
+PASS  copy /menues/ en               1179 words clean
+plant caught  copy                   planted dash, banned words, exclamations, uncontracted: 4 found
+plant caught  overflow               a heading forced wider than a 320 phone
+PASS  overflow /menues/              320, 360, 390, 430, 768, 1024, 1440, 1920 and a resize to 320, no sideways scroll, no word past its line
+PASS  errors /menues/ 390            0 errors, 10 of 10 images decoded
+PASS  errors /menues/ 1440           0 errors, 10 of 10 images decoded
+plant caught  errors                 a blocked case photo shows as failed http://127.0.0.1:5310/media/brand/taste-frankfurt-log
+PASS  axe /menues/                   24 runs, top middle and end, 390 and 1440, DE and EN, both motion modes, 0 violations
+plant caught  axe                    planted missing alt and dark h1, axe found color-contrast image-alt
+PASS  nojs /menues/                  h1 "Drei Menüs, alles live vor Ort gekocht", 10 pictures, 0 of 0 cases readable, guide none here, 13 dishes, drinks and desserts
+PASS  reduced motion /menues/        the finished state at once, at 0.7 s, the page opening open and lit
+PASS, every plant caught
