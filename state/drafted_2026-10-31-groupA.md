@@ -579,3 +579,69 @@ I'd suggest a private investor area where investors qualify, sign the agreement 
 
 Shall I send you a sketch of the investor area?
 ```
+
+### Owen Warne, OneFortyNine Games, ctc_dAhvHyq2QMbqgzLKN
+
+> NOT SENT. Flags for Raka. (1) The record resolves. ONEFORTYNINE GAMES LTD, 17293756, incorporated 22 June 2026, Owen
+> Peter Warne sole director, verified. Four months old. (2) His product is a B2B add on for holiday lets and hospitality,
+> a lockable cool box escape game, bought from £350 or rented from £60 a month, hosts keep the revenue. (3) The /shop page
+> is still Squarespace's template, six "Product Name" items at £25, not in the menu but in the sitemap, a 50 euro fix, kept
+> out. (4) The site is new, so the offer adds a host page and outreach, never a new site. Small budget, a first client
+> sized project. (5) Arm A.
+
+```gate
+lead: Owen Warne, founder and sole director of ONEFORTYNINE GAMES LTD, 17293756, 149 High Street, Swindon, incorporated 2026-06-22, SIC 62011 (https://find-and-update.company-information.service.gov.uk/company/17293756 and /officers, "WARNE, Owen Peter ... Active Director ... Appointed on 22 June 2026", identity verified). lemlist jobTitle Founder, tagline "Building 5* Wow Into Every Stay | Cool Box Escape Rooms", both his. ctc_dAhvHyq2QMbqgzLKN, leadId lea_R8WGxdxSk2wzKiRE3, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-29 14.52 UTC. Thread 0 items, control 7
+site pass 1: 16 URLs, tools/crawl.py on https://onefortyninegames.com (11 from the sitemap), all 200, every page read (home, Breakout Box, contact, hints, the template shop and its six template products)
+site pass 2: 16 URLs, tools/crawl.py again, plus dom.js on Breakout Box and contact for every action, the raw HTML of Breakout Box for every href, site-audit.js desktop and phone, all opened
+deep analysis: a Squarespace site for one product sold to businesses. Breakout Box, "A portable escape room experience. in a cool box", for "hospitality and events, to training and team building". The pitch to hosts, "Hire it out to your guests; keep 100% of the revenue", "Guests book directly with you. You set the pricing", from £350 to buy or £60 a month to rent. The two actions on that page, "book a 15 minute call" and "click here" to order, are both mailto links to owen@onefortyninegames.com. The contact page has a form. The /shop page is Squarespace's unedited template, six "Product Name" items at £25, in the sitemap but not the menu. A hints page supports players. No host stories, no figures on what a box earns
+owner linkedin: Route 1 curl https://www.linkedin.com/in/owen-warne 301 to the login wall, walled. Route 2 Google News "Owen Warne" 8, none his (US football, obituaries). Route 3 Companies House, sole director, verified. Route 4 the company LinkedIn page through social-audit.js, 46 followers. Route 5 the site footer, the same company number. Route 6 the lemlist record, founder
+contact linkedin: same person as the owner, Companies House, the mailto address and the lemlist record agree
+google news: tools/news.py en 2026-10-31, "OneFortyNine Games" 0, "Owen Warne" 8 none his, control Tesco 101
+regional news: tools/news.py (Swindon escape room) x (holiday let guest experience OR escape room), 0 with the control at 101
+industry news: tools/news.py holiday let guest experience OR escape room, 77, holiday lets selling experiences on royal estates (31 Oct 2026), hosts competing on extras, and the end of the furnished holiday lettings tax regime from April 2025 (https://www.gov.uk/government/publications/furnished-holiday-lettings-tax-regime-abolition) squeezing host margins, the reason an add on that earns per stay matters to them
+sources:
+1. https://www.onefortyninegames.com/
+2. https://www.onefortyninegames.com/breakoutbox
+3. https://www.onefortyninegames.com/contact
+4. https://www.onefortyninegames.com/shop
+5. https://www.onefortyninegames.com/hints
+6. https://find-and-update.company-information.service.gov.uk/company/17293756
+7. https://find-and-update.company-information.service.gov.uk/company/17293756/officers
+8. https://www.linkedin.com/company/onefortynine-games
+9. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fonefortyninegames.com
+10. https://news.google.com/rss (tools/news.py)
+11. https://www.linkedin.com/in/owen-warne (walled)
+12. https://www.gov.uk/government/publications/furnished-holiday-lettings-tax-regime-abolition
+pains: 5 judged. (1) a four month old B2B product with no way to order or book online, both actions are emails, and nothing that reaches hosts unless they find the site, CHOSEN. (2) no proof of what a box earns a host, folded into the host page. (3) the template shop, a 50 euro fix, kept out. (4) GDPR, checked, never the angle. (5) social, 46 LinkedIn followers, a new company, folded into the outreach
+chosen: (1), biggest, every sale of a new product starts with a host hearing of it and then writing an email, and it's the website and GTM job Raka named
+owner reply: "It's early, I'm talking to hosts one by one" | just built | the company is four months old (https://find-and-update.company-information.service.gov.uk/company/17293756), so the offer adds a host page and an outreach flow to what he has, never a new site, and his own page already asks hosts to order (https://www.onefortyninegames.com/breakoutbox "If you want to go ahead and get your order started click here")
+worth: €3,000+, a host page that shows what a box earns per stay and takes orders and rentals online, plus an outreach flow that finds holiday let hosts, glamping sites and small hotels across the UK and books his 15 minute calls
+still there: sole director on Companies House read 2026-10-31, and the order email on his own site | https://find-and-update.company-information.service.gov.uk/company/17293756/officers
+budget: a limited company with stock of lockable boxes, locks and branded cups, a player hints portal and a rental scheme | https://www.onefortyninegames.com/breakoutbox
+variant: A
+sweep website: crawled twice, 16 URLs, both actions on the product page are mailtos and the shop is a template, CHOSEN as a host page added to the new site
+sweep gdpr: tools/eu-view.py from Stockholm and site-audit.js with its control, checked, never the angle (RULES 0E)
+sweep apps: online ordering and rentals for hosts is the tool, folded into the host page offer
+sweep social: tools/social-audit.js, LinkedIn https://www.linkedin.com/company/onefortynine-games 46 followers, no other accounts linked, small, folded into the outreach
+sweep squad: a games product company per its SIC 62011, but one founder making one boxed game, not a capacity buyer, not chosen
+thread: problem the Breakout Box page tells hosts they keep 100% of the revenue, yet both book a call and order just open an email | cost hosts likely move on before writing to him | offer a host page that shows what a box earns per stay and takes the order online, plus outreach to holiday let hosts and glamping sites | link hosts, order
+lead read: Owen reads that his product page promises hosts the revenue but call and order are just emails, so hosts likely move on, then gets offered a host page that shows the earnings and takes the order, plus outreach to hosts, one thread
+claims:
+your Breakout Box page tells hosts they keep 100% of the revenue, https://www.onefortyninegames.com/breakoutbox "Hire it out to your guests; keep 100% of the revenue"
+both book a call and order just open an email, https://www.onefortyninegames.com/breakoutbox raw HTML, "book a 15 minute call" -> mailto:owen@onefortyninegames.com and "click here" -> mailto:owen@onefortyninegames.com?subject=I'd like to order Breakout Box, dom.js 0 forms on the page, control dom.js finds the form on https://www.onefortyninegames.com/contact
+INFERENCE, hosts likely move on before writing to him, rests on both actions being emails (https://www.onefortyninegames.com/breakoutbox), worded likely
+recheck: 2026-10-31, the raw HTML hrefs and dom.js on both pages, Companies House overview and officers, thread re pulled 0 items with the control at 7. Disproof tried, found the contact form so the message speaks only of the product page's two actions, kept the template shop and the prices out. Facts hold, confidence MEDIUM, a four month old company with a small budget
+```
+
+SKETCH
+```
+Hi Owen, OneFortyNine Games looks cool!
+
+However, your Breakout Box page tells hosts they keep 100% of the revenue, yet both "book a 15 minute call" and "order" just open an email. Many hosts likely move on before writing to you.
+
+I'd suggest a host page that shows what a box earns per stay and takes the order online, plus outreach that brings it to holiday let hosts and glamping sites.
+
+At Astra agency we build websites and AI workflows for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the host page?
+```
