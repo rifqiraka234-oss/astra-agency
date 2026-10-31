@@ -1,0 +1,3 @@
+# Scheduled send, Sat 31 Oct 06.00 Amsterdam (05.00 UTC), closers batch 3
+
+On Raka's 28 Oct "Yeah, okay, then, like, let's do, like, for example, 10, and do it at 6 o'clock". All ten sent 05.01.41 to 05.04.21 UTC, one copy each, act ids in state/send_log_2026-10-31.txt and under the batch line in state/drafted_2026-10-28-final-closers.md. William M., Muhammad Akbar, Cédric Morel, Emmanuel Rivière, Bartek Ogonowski, Bouils Stéphane, David Brauman, Emily R., Laurent Fournié, Léo Grandperrin. Before, every thread 3 items with nothing from them (control 7) and every latest queue row FINAL_CLOSE_DRAFTED. No refusals. Rows now CLOSED_FINAL_MESSAGE, check-drafts PASS after. Batch 4 is Sun 1 Nov 05.00 UTC.
