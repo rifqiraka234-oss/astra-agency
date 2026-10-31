@@ -35,7 +35,7 @@ verdict: ALREADY_MESSAGED, via her co founder Alice Poubelle, opener 12 Oct, bum
 > go, footnoted to the OECD's 2019 employment protection data. The OECD page is behind Cloudflare for us (403 on curl and
 > fetch-walled), so the message credits the Games Monitor by name rather than stating it bare. The fixed contracts line is a
 > round table studio quoted in the report. (4) "In half the time at half the price" isn't used. (5) The
-> AI did you know shape sits outside the A/B test.
+> did you know shape sits outside the A/B test.
 
 ```gate
 lead: Sicko Van Oene, co founder of XOLBOR, team page "Hidde Co-Founder Sicko Co-Founder" (https://www.xolbor.io/team), Xolbor B.V. KvK 86902601, Jan Pieterszoon Coenstraat 17, Utrecht, registered 2022-07-01 (tools/kvk-search.js 2026-10-31). lemlist jobTitle Co-Founder and Co-Owner, tagline "XOLBOR Creates Roblox Experiences for Brands. Co-Founder: XOLBOR and DEDICATED PEOPLE. Co-Owner: Bfocussed and The Tosti Club." ctc_XfiYnETWEAui4JYDi, leadId lea_AhqzMpcEWnD6HSNKP, W4 TEST, accepted per the queue before 19 Oct. Thread 0 items, control 7
@@ -66,7 +66,7 @@ owner reply: "We like building our own team in Utrecht" | a model, not a gap | t
 worth: €6,000+, a Roblox build squad, Lua developers and 3D artists who take on branded game projects at the peaks, scaled up and down per project
 still there: co founder on the team page read 2026-10-31 | https://www.xolbor.io/team
 budget: a studio of 15+ with games past 2.4 billion visits and branded work for broadcasters like KRO-NCRV | https://www.xolbor.io/
-variant: A
+variant: none, the did you know shape sits outside the A/B test (check-drafts in_test), variant_for gives B
 sweep website: crawled twice, 67 URLs, a working Webflow site with game stats and case studies, no website angle
 sweep gdpr: site-audit.js no banner found against its control, tools/eu-view.py from Stockholm sets 2 Google Analytics cookies (_ga, _ga_WNX3BYZDMS) before any click with no banner, checked, never the angle (RULES 0E)
 sweep apps: no internal process named in their pages, the capacity need is on the careers page, not chosen
@@ -92,4 +92,80 @@ I'd suggest a build squad of Roblox developers and artists that scales up and do
 At Astra agency we build websites and apps for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the build squad for XOLBOR?
+```
+
+### Sandi Slonjšak, Code Of Us, ctc_T5juhy6XKRrw2ChtX
+
+> NOT SENT. Flags for Raka. (1) Code Of Us d.o.o., Zagreb, founded 19 Feb 2015, Sandi and Robert Rudolf Slonjšak are the
+> directors (companywall.hr, OIB 19717666785), 9 employees in the latest year. A software agency for B2B clients, offices in
+> Zagreb and Antwerp, and Sandi sits in Antwerp. (2) Your call, build squad with did you know. They sell team extension
+> themselves ("We do it with you, we join your team"), so the squad is pitched as overflow under their name while their two
+> open roles stay open, the ZeptronIT framing. (3) The .NET Engineer and Flutter Developer pages are both dated 9 June 2026
+> and still listed as open today, Zagreb office, .NET at 3.800 to 5.200 EUR gross a month. (4) Eurostat 2024, half of
+> Croatian software companies (10+ staff) that tried to hire ICT specialists had vacancies that were hard to fill. Code Of
+> Us is under that size line, so the fact is about their market, not them. The top two reasons given were applicants'
+> missing ICT training (41%) and missing work experience (39%), which is what the message says Eurostat links it to. (5) The
+> job pages are the fact that makes it theirs, as your did you know shape asks, and the word vacancies stays out (clue rule).
+> (6) Their LinkedIn page now says "Building
+> products to replace tedious workflows in companies, with ai agents" while the site still says web and mobile apps, a
+> repositioning angle if the squad call doesn't land.
+
+```gate
+lead: Sandi Slonjšak, director of Code Of Us d.o.o., Zagreb, founded 19.02.2015, directors Robert Rudolf Slonjšak and Sandi Slonjšak (https://www.companywall.hr/tvrtka/code-of-us-doo/MMZkfGY read 2026-10-31). lemlist jobTitle "Chief Executive Officer & Founder", tagline "In-House Product Team + Senior Product Judgment + AI-Accelerated Delivery = Software Products That Actually Ship For Benelux Region", location Antwerp. ctc_T5juhy6XKRrw2ChtX, leadId lea_yLrjiRcXG5Zv7HXaS, W4 TEST 50 Owners of growing agencies and tech firms, Build Squad, accepted 19 Oct. Thread 0 items, control 7
+site pass 1: 29 URLs, tools/crawl.py on https://codeofus.com (13 from the sitemap), all 200, every page read (home, work, three case studies, about, process, careers, two job pages, open application, contact, privacy, blog)
+site pass 2: 29 URLs, tools/crawl.py again, all 200, plus site-audit.js desktop and phone with the desktop screenshot opened, a clean modern site behind a Cookiebot banner
+deep analysis: a European software agency building web and mobile apps, cloud and long term product partnerships for B2B clients, three ways to work (we do it for you, with you, all of it). About says 10 team members, 23 projects, average project 12 months. Work shows Go Thrive (Sept 2024), SaaS Innovation Hub for IBD Consulting (April 2024), Teorem (June 2023, "We are still working together"). Careers lists two open roles, .NET Engineer and Flutter Developer, both dated June 9, 2026, Zagreb office at Gradišćanska 34, .NET at "3.800 – 5.200 EUR gross per month". The register shows 5, 9, 9 employees over the last three years. INFERENCE, long client engagements staffed by a team of about ten means every unfilled seat is client work someone else has to carry
+owner linkedin: Route 1 curl the profile from lemlist 301 to the login wall, walled. Route 2 Google News "Sandi Slonjšak" 3 results, none about him. Route 3 companywall.hr, director of Code Of Us d.o.o. Route 4 the company LinkedIn page through social-audit.js, 940 followers, "View all 13 employees", "Building products to replace tedious workflows in companies, with ai agents". Route 5 the lemlist record, CEO and founder
+contact linkedin: same person as the owner, the register and the lemlist record agree
+google news: tools/news.py en 2026-10-31, "Code Of Us" 18 hits all the words in other stories (Microsoft, WSJ), 0 about the company, "Sandi Slonjšak" 3 hits none about him, control Tesco 100
+regional news: tools/news.py (Antwerpen software bureau) x (software developers shortage Belgium), 0 with the control at 100. Eurostat isoc_ske_itrcrn2 for Croatia read instead, 2024 computer programming firms (J62_J63, 10+ staff) recruiting ICT specialists, 50.51% had hard to fill vacancies, EU 66.12%
+industry news: tools/news.py software developers shortage Belgium, 11, Belgium adding IT roles to its shortage occupation list (Gistlover, 31 Jul 2025), Y Axis Belgium shortage occupations (8 Sep 2026)
+did you know: half of Croatian software companies that tried to hire ICT specialists in 2024 had vacancies that were hard to fill | Eurostat, isoc_ske_itrcrn2, 2024, enterprises with 10+ persons employed in NACE J62_J63 computer programming, consultancy and information services, 50.51% of those that recruited or tried to | https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/isoc_ske_itrcrn2/A.GE10.J62_J63.E_ITSPVAC2.PC_ENT_ITSPRCR2.HR+EU27_2020?format=TSV
+sources:
+1. https://www.codeofus.com/
+2. https://www.codeofus.com/careers
+3. https://www.codeofus.com/careers/dotnet-engineer
+4. https://www.codeofus.com/careers/flutter-developer
+5. https://www.codeofus.com/about
+6. https://www.codeofus.com/work
+7. https://www.companywall.hr/tvrtka/code-of-us-doo/MMZkfGY
+8. https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_ske_itrcrn2?format=JSON&lang=EN&geo=HR&geo=BE&geo=EU27_2020&sinceTimePeriod=2022
+9. https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/isoc_ske_itrcrn2/A.GE10.J62_J63.E_ITSPVAC2.PC_ENT_ITSPRCR2.HR+EU27_2020?format=TSV
+10. https://www.linkedin.com/company/code-of-us
+11. https://twitter.com/code_of_us
+12. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fcodeofus.com
+13. https://news.google.com/rss (tools/news.py)
+pains: 4 judged. (1) two developer roles open since 9 June in a market where half of Croatian software firms struggle to fill such roles, while long client engagements need the seats, CHOSEN. (2) positioning, LinkedIn says AI agents for tedious workflows and the site says web and mobile apps, real but not Raka's call. (3) the blog page reads 6 words in both crawls, small. (4) GDPR, Cookiebot with a reject and 0 cookies before a click, fine, never the angle
+chosen: (1), biggest, it's client work waiting on seats, and it's the Build Squad angle Raka named
+owner reply: "We are a dev team ourselves, we don't need another one" | true, they sell team extension | the squad is overflow under their name for the seats their own careers pages have shown open since 9 June (https://www.codeofus.com/careers/dotnet-engineer "June 9, 2026")
+worth: €6,000+, two senior developers, .NET and Flutter, placed on a Code Of Us client engagement under their name for a month or more
+still there: Sandi as director in the register read 2026-10-31 | https://www.companywall.hr/tvrtka/code-of-us-doo/MMZkfGY
+budget: a ten year old agency running 12 month B2B engagements with a salary band of 3.800 to 5.200 EUR gross a month per developer | https://www.codeofus.com/careers/dotnet-engineer
+sweep website: crawled twice, 29 URLs, a clean modern site with real case studies and named quotes, no website angle beyond the AI repositioning noted
+sweep gdpr: site-audit.js found Cookiebot with a reject and 0 cookies before a click against its control, tools/eu-view.py from Stockholm 0 cookies, checked, never the angle (RULES 0E)
+sweep apps: their LinkedIn says they now build AI agents for tedious workflows, so an AI workflow pitch would be selling them their own product, not chosen
+sweep social: tools/social-audit.js, LinkedIn https://www.linkedin.com/company/code-of-us 940 followers, Twitter https://twitter.com/code_of_us reachable, not chosen
+sweep squad: a software agency with .NET and Flutter roles open since 9 June (https://www.codeofus.com/careers), a capacity buyer, CHOSEN
+thread: problem half of Croatian software firms hiring tech roles can't easily fill them, and Code Of Us has had .NET and Flutter roles open since 9 June | cost client engagements carry empty seats while the hires don't land | offer a build squad of senior .NET and Flutter developers on their client work under their name | link .NET, Flutter
+lead read: Sandi reads that half his Croatian peers can't fill tech roles and that his own .NET and Flutter roles have been up since 9 June, then gets offered .NET and Flutter developers under the Code Of Us name, one thread
+claims:
+half of Croatian software companies that tried to hire ICT specialists in 2024 had vacancies that were hard to fill, https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/isoc_ske_itrcrn2/A.GE10.J62_J63.E_ITSPVAC2.PC_ENT_ITSPRCR2.HR+EU27_2020?format=TSV "HR 69.58 50.51" (2022, 2024)
+Code Of Us has a .NET role up since 9 June, https://www.codeofus.com/careers/dotnet-engineer ".NET Engineer June 9, 2026" and listed under "Currently opened positions" on https://www.codeofus.com/careers
+Code Of Us has a Flutter role up since 9 June, https://www.codeofus.com/careers/flutter-developer "Flutter Developer June 9, 2026"
+Eurostat links it to applicants without the right training or experience, the top two reasons Croatian software firms gave in 2024, https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/isoc_ske_itrcrn2/A.GE10.J62_J63.E_ITSPDLET+E_ITSPDLWE+E_ITSPDLA+E_ITSPDSAL.PC_ENT_ITSPRCR2.HR?format=TSV&startPeriod=2024 "E_ITSPDLET 41.26, E_ITSPDLWE 39.48, E_ITSPDLA 34.79, E_ITSPDSAL 34.26"
+the roles are in Zagreb, https://www.codeofus.com/careers/dotnet-engineer "Work in new and modern offices—Gradišćanska 34", the Zagreb office in the footer
+recheck: 2026-10-31, both job pages and the careers list reread from crawl pass 2, the register page fetched, Eurostat read through two endpoints (JSON stat and SDMX TSV) agreeing at 50.51 for HR 2024. Disproof tried, Belgium's J62_J63 2024 figure is not published so the fact stays on Croatia where the roles are, the Eurostat line is 10+ staff and Code Of Us has 9 so it's worded as Croatian software companies, not as them, the dates are the pages' own and both roles still sit under "Currently opened positions". Facts hold, confidence MEDIUM, the job pages could be left up after a hire
+```
+
+SKETCH
+```
+Hi Sandi, Code Of Us looks cool!
+
+However, did you know that half of Croatia's software companies hiring for tech roles in 2024 found them hard to fill? Eurostat links it to applicants without the right training or experience, and your .NET and Flutter roles in Zagreb have been up since 9 June.
+
+I'd suggest a build squad of senior .NET and Flutter developers who work on your client projects under the Code Of Us name until the hires land.
+
+At Astra agency we build websites and apps for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the squad on a Code Of Us project?
 ```
