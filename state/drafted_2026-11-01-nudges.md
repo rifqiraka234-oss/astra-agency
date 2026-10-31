@@ -23,6 +23,9 @@ NUDGE
 > His 27 Oct "Ok. Thank you. I'll think about it.", our 28 Oct 05.04 UTC offer of a sample of ten investors who back coffee
 > and food concepts around Zürich, each with a first message. Thread 12 items, nothing since. Raka's own words for the line, plus "if you'd like" so it carries a contraction (the gate fails a line with none).
 > The sample has to be ready before this goes, since it says right now. 06.39 UTC.
+> **The sample is READY (31 Oct ~20.20 UTC).** Verified version `state/milo-sample-2026-10-31.md` (30 of 30 sources
+> reopened), and what Milo would receive `state/milo-sample-2026-10-31-for-milo.md`, NOT SENT. Sending the sample itself
+> needs Milo's yes and then Raka's own word, the 07.39 line doesn't cover it.
 
 NUDGE
 ```
