@@ -514,3 +514,68 @@ I'd suggest an office page where managers book a tasting at their place in a few
 
 Shall I send you a sketch of the tasting page?
 ```
+
+### Alexandre Gassoul, WYNSTANLEY, ctc_34aD5Sc3FDqezCPDg
+
+> NOT SENT. Flags for Raka. (1) The record mostly resolves. The site says Alexandre and his brother Thomas founded
+> Wynstanley, and every action mails alex@wynstanley.com. But no company named Wynstanley is on the French register.
+> Alexandre has a sole trader consulting business (SIREN 901314187, Houilles, 2021), so Wynstanley may be a brand not
+> yet incorporated, or registered abroad. (2) The site looks new. The journal has its first analysis (October 2026) and
+> says more will follow, so the offer adds what the site doesn't do yet (RULES 0F, just built). (3) No real estate licence
+> number or legal notice is visible. That's compliance, never the angle, but a family office doing diligence may notice.
+> (4) Your call was "website and marketability". (5) Arm B.
+
+```gate
+lead: Alexandre Gassoul, co founder of Wynstanley with his brother Thomas (https://wynstanley.com/ "Alexandre et Thomas Gassoul ont fondé Wynstanley"), every action on the site mails alex@wynstanley.com. Register, ALEXANDRE GASSOUL sole trader SIREN 901314187, Houilles, created 2021-07-07, NAF 70.22Z consulting (https://recherche-entreprises.api.gouv.fr/search?q=gassoul), no entity named Wynstanley found. lemlist jobTitle Directeur-fondateur, tagline "Directeur & Fondateur Wynstanley", company description "Présence en France, Suisse, Mexique et États-Unis". ctc_34aD5Sc3FDqezCPDg, leadId lea_H5nSbR7caPjcqq6ws, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-29 18.57 UTC. Thread 0 items, control 7
+site pass 1: 6 URLs, tools/crawl.py on https://wynstanley.com (no sitemap, link crawl), all 200, every page read (home, private management, journal, the one analysis, FAQ, index twin)
+site pass 2: 6 URLs, tools/crawl.py again, plus the home rendered in the A sheet at 1440 (state/leads_2026-10-31/A-never-researched.jpg), site-audit.js desktop and phone, and a raw HTML read of every mailto link, all opened
+deep analysis: a hand built static site for an off market property house, hotels, offices and mixed assets, villas and châteaux, data centres, across eight countries. It sells discretion and a four step method, "01 Un échange confidentiel, 02 Qualification ... vérifions l'identité, la capacité d'investissement, 03 Confidentialité & accès ... Adresses, chiffres et documentation ne sont accessibles qu'après accord de confidentialité, 04 De l'offre à la signature". Yet the site has 0 forms. Its 8 action links are mailtos to alex@wynstanley.com, 3 with the subject "Demande d'acces investisseur" and 4 with "Proposition d'actif". The asset cards are labelled illustrative. One testimonial, one journal analysis (Décret BACS and hotels, October 2026), no privacy page, no legal notice, 0 cookies from Stockholm
+owner linkedin: Route 1 curl https://www.linkedin.com/in/alexandre-gassoul 999, walled. Route 2 Google News "Alexandre Gassoul" 0 with the control at 100. Route 3 the register, a consulting sole trader since 2021 in Houilles, and a Lesley Gassoul (Winstanley) sole trader in Houilles since Dec 2024, the family name behind the brand. Route 4 the site's family section, two brothers from five star hotel concierge work. Route 5 the company LinkedIn page through social-audit.js, UNKNOWN behind the login. Route 6 the lemlist record, director and founder
+contact linkedin: same person as the owner, the site, the mailto address and the lemlist record agree
+google news: tools/news.py fr 2026-10-31, "Wynstanley" 0, "Alexandre Gassoul" 0, control Carrefour 100
+regional news: tools/news.py (immobilier de luxe off market) x (immobilier de prestige marché), 21, Le nouvel Économiste 17 Oct 2026 "Immobilier de prestige, les intermédiaires off-market", Journal de l'Agence 15 Sep 2026 on valuing trophy assets, Paris Match 19 Aug 2026 on record Corsican villas
+industry news: tools/news.py immobilier de prestige marché, 57, Le nouvel Économiste 11 Sep 2026 "Dans un marché sous tension, l'immobilier de prestige tient bon", more off market intermediaries chasing the same family offices
+sources:
+1. https://wynstanley.com/
+2. https://wynstanley.com/gestion-privee.html
+3. https://wynstanley.com/blog/
+4. https://wynstanley.com/blog/decret-bacs-gtb-hotellerie-2026/
+5. https://wynstanley.com/faq.html
+6. https://recherche-entreprises.api.gouv.fr/search?q=gassoul
+7. https://recherche-entreprises.api.gouv.fr/search?q=wynstanley
+8. https://www.instagram.com/wynstanley_/
+9. https://www.linkedin.com/company/wynstanley
+10. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fwynstanley.com
+11. https://news.google.com/rss (tools/news.py)
+12. https://www.linkedin.com/in/alexandre-gassoul (walled)
+pains: 5 judged. (1) the site promises qualification, a confidentiality agreement and documents after access, then every investor and owner request is an email to one inbox, CHOSEN. (2) no deal record, illustrative cards and one testimonial, trust for family offices, folded into the investor area. (3) no legal notice or licence number, compliance, never the angle. (4) the journal has one analysis, content, small. (5) social, 2,371 Instagram followers posting 26 Oct, fine
+chosen: (1), biggest, every deal starts at that step and the site's own method describes a process the site can't run, and it's the marketability Raka asked about, aimed at family offices and owners
+owner reply: "We keep everything by email on purpose, discretion first" | a model, not a gap | the site itself promises a step by step access process, identity and capacity checks, then documents only after a confidentiality agreement (https://wynstanley.com/ "02 Qualification", "03 Confidentialité & accès"), which a private investor area runs with less exposure than documents sent by email, and the site is new so the offer adds that area, never a new site
+worth: €6,000+, a private investor and owner area added to the site, investor qualification, an online confidentiality agreement, matched opportunities and documents behind a login, an asset submission flow for owners, and a dashboard for the brothers
+still there: founder named on the home page read 2026-10-31 with every action mailing alex@wynstanley.com, and a journal analysis published October 2026 | https://wynstanley.com/
+budget: an eight country deal network, a five star concierge background, a hand built site and a paid analysis programme on hotel regulation | https://wynstanley.com/blog/decret-bacs-gtb-hotellerie-2026/
+variant: B
+sweep website: crawled twice, 6 URLs, every action a mailto, no forms, CHOSEN as an investor area added to the new site
+sweep gdpr: tools/eu-view.py from Stockholm, 0 cookies, site-audit.js no banner and no privacy link against its control, checked, never the angle (RULES 0E)
+sweep apps: the investor area with qualification and documents is the tool, CHOSEN inside the website offer
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/wynstanley_/ 2,371 followers newest 2026-10-26, LinkedIn UNKNOWN behind the login, active, not chosen
+sweep squad: a property brokerage house per its own pages, not a builder of software, not chosen
+thread: problem the site promises qualification, a confidentiality agreement and documents after access, yet every investor and owner request opens an email to one inbox | cost family offices likely expect to qualify and sign online, and requests probably wait on that inbox | offer a private investor area where investors qualify, sign the confidentiality agreement and see matching opportunities, and owners submit an asset | link agreement, investor
+lead read: Alexandre reads that his site promises qualification and a confidentiality agreement but every request is just an email, so family offices likely expect more, then gets offered a private investor area that runs that exact process, one thread
+claims:
+your website promises qualification, a confidentiality agreement and documents after access, https://wynstanley.com/ "02 Qualification", "03 Confidentialité & accès Adresses, chiffres et documentation ne sont accessibles qu'après accord de confidentialité"
+every investor and owner request opens an email to one inbox, https://wynstanley.com/ raw HTML, 8 mailto links all to alex@wynstanley.com, 3 "Demande d'acces investisseur" and 4 "Proposition d'actif", 0 forms in the crawl and site-audit.js (forms 0 inputs 0 mailto 8), control site-audit.js counts forms on other sites in this batch
+INFERENCE, family offices likely expect to qualify and sign online, rests on the mailto actions against the promised process (https://wynstanley.com/), worded likely
+recheck: 2026-10-31, the raw HTML mailto count, the four step text, the register search, thread re pulled 0 items with the control at 7. Disproof tried, searched the HTML for any form, portal or login (none), read the FAQ for an access process (it describes qualification, not a portal), kept the licence question out of the message. Facts hold, confidence MEDIUM, a new house may prefer email for now
+```
+
+SKETCHB
+```
+Hi Alexandre, WYNSTANLEY looks cool.
+
+However, your website promises qualification, a confidentiality agreement and documents after access, yet every investor and owner request opens an email to one inbox. Family offices likely expect to qualify and sign online.
+
+I'd suggest a private investor area where investors qualify, sign the agreement and see matching opportunities, and owners submit an asset.
+
+Shall I send you a sketch of the investor area?
+```
