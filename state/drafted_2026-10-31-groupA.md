@@ -221,3 +221,76 @@ I'd suggest a booking flow where a company picks its formula and date, sees the 
 
 Shall I send you a sketch of the booking flow?
 ```
+
+### Gregory Thomas Emmel, Haardt Hills, ctc_wqNXAKB68Ga7TjoxJ
+
+> NOT SENT. Flags for Raka. (1) The record resolves. Haardt Hills eGbR, Gimmeldingen, register GsR 299 at Amtsgericht
+> Neustadt, Gregory Emmel the authorised partner (Impressum). Founded 2025, alcohol free Riesling, Chardonnay and rosé
+> from family estates within 8 km, poured at 60+ restaurants including Haerlin, JAN and Anne-Sophie Pic, listed at
+> Tesdorpf, and "active" in Austria, Switzerland, the Netherlands, Denmark, Canada and the UK one year in. (2) Your weather
+> idea doesn't fit. He buys from family estates, so the vineyards and the weather are theirs. What's talked about in the
+> wine market now is the crisis (SWR 20 Oct, "Weinbau in der Krise", alcohol free as the hope) and Rheinland-Pfalz's first
+> alcohol free award (Sep 2026). (3) The number. No wine specific time study exists that I could find, so the message uses
+> the IHK Region Stuttgart survey of 800+ firms (10 Jul 2026), 27% of working time on bureaucratic processes, worded as
+> German firms, which is what it measured. (4) The AI variant sits outside the A/B test. (5) Medium, his inside work can't
+> be seen, so the message names the cost of the role, never a claim about his week.
+
+```gate
+lead: Gregory Thomas Emmel, founder of Haardt Hills, "Vertretungsberechtigter Gesellschafter: Gregory Emmel", Haardt Hills eGbR, Peter-Koch-Straße 43, 67435 Neustadt an der Weinstraße, Gesellschaftsregister Amtsgericht Neustadt GsR 299 (https://www.haardt-hills.de/impressum), founded 2025 ("1678 vs. 2025" on https://www.haardt-hills.de/blog/haardt-hills-jetzt-bei-tesdorpf-gelistet-premium-alkoholfreie-weine). lemlist jobTitle Founder, tagline "Handwerklich hergestellte Weine ohne Alkohol mit Herkunft", both his. ctc_wqNXAKB68Ga7TjoxJ, leadId lea_sygZDrP87w9uxyqf7, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-30 11.34 UTC. Thread 0 items, control 7
+site pass 1: 199 URLs, tools/crawl.py on https://haardt-hills.de (40 from the sitemap, German and English twins), all 200, every page read (home, sortiment, über uns, shop and 10 products, 16 blog posts, stockists, FAQ, terms, impressum)
+site pass 2: 199 URLs, tools/crawl.py again, plus site-audit.js desktop and phone with both screenshots opened
+deep analysis: a Squarespace shop and brand site. Three wines, a sparkling rosé, Riesling and Chardonnay, single bottles, six packs and a tasting pack. The stockist page lists 60+ restaurants and shops ("SERVED AT THE FINEST PLACES"), Haerlin, JAN, Es:senz, Anne-Sophie Pic, Feinkost Käfer. The blog is Gregory's voice, export from day one ("schon in Österreich, der Schweiz, den Niederlanden, Dänemark, Kanada und dem UK aktiv", 15 Jul), the Tesdorpf listing since early 2025 (3 Jun), hand picking from vintage 2025, 50 creators via brandsyoulove.de, and "Die Familienweingüter im Umkreis von 8 km", so the grapes are bought, not farmed. No staff, no job ads, everything written as "ich"
+owner linkedin: Route 1 curl https://www.linkedin.com/in/gregory-thomas-emmel 999, walled. Route 2 social-audit.js on the profile URL from the site, UNKNOWN behind the login. Route 3 Google News "Gregory Thomas Emmel" 2 (a 2022 SommChallenge piece and a 2019 Brand Eins piece on canteens, both older work). Route 4 the Impressum, authorised partner. Route 5 his blog in the first person, founder and exporter. Route 6 the lemlist record, title and tagline
+contact linkedin: same person as the owner, the Impressum, the blog and the lemlist record agree
+google news: tools/news.py de 2026-10-31, "Haardt Hills" 5 (Falstaff 2025 Chardonnay 16 Oct 2026, WELT 10 Aug 2026 on alcohol free wine, DWI Burda Weintest winners 29 Apr 2026, Falstaff 2024 Riesling 20 Feb 2026), "Gregory Thomas Emmel" 2, control Volkswagen 99
+regional news: tools/news.py (Pfalz Wein) x (alkoholfreier Wein), 50, SWR 20 Oct 2026 "Weinbau in der Krise | Sind alkoholfreie Weine und Proxys die neuen Hoffnungsträger?", Rheinland-Pfalz's first own award for alcohol free wine (openPR 18 Sep 2026), Die Rheinpfalz 28 Sep 2026 checking what's in alcohol free wine
+industry news: tools/news.py alkoholfreier Wein, 33, Main-Post 30 Oct 2026 "Alkoholfreier Wein boomt", Rotkäppchen-Mumm shopper study on alcohol free (Lebensmittel Zeitung 29 Oct 2026), plus the IHK Region Stuttgart survey https://www.ihk.de/stuttgart/presse/pm-buerokratieumfrage-7114396
+did you know: German firms spend 27% of their working time on bureaucratic processes, mostly reporting and documentation duties | IHK Region Stuttgart survey, 10 Jul 2026, more than 800 companies in the Stuttgart region | https://www.ihk.de/stuttgart/presse/pm-buerokratieumfrage-7114396
+sources:
+1. https://www.haardt-hills.de/
+2. https://www.haardt-hills.de/impressum
+3. https://www.haardt-hills.de/uber-uns
+4. https://www.haardt-hills.de/verzeichnis
+5. https://www.haardt-hills.de/shop
+6. https://www.haardt-hills.de/blog/warum-ich-von-tag-1-auch-auf-den-export-meiner-haardt-hills-weine-setze
+7. https://www.haardt-hills.de/blog/haardt-hills-jetzt-bei-tesdorpf-gelistet-premium-alkoholfreie-weine
+8. https://www.haardt-hills.de/blog/werde-creator-fr-haardt-hills
+9. https://www.ihk.de/stuttgart/presse/pm-buerokratieumfrage-7114396
+10. https://www.instagram.com/haardt.hills/
+11. https://www.linkedin.com/in/gregory-thomas-emmel (walled)
+12. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fhaardt-hills.de
+13. https://news.google.com/rss (tools/news.py)
+14. https://www.tageskarte.io/zahlen/detail/22-prozent-der-arbeitszeit-fuer-buerokratie-noetig.html
+pains: 5 judged. (1) one founder running a shop, 60+ restaurant accounts, a fine wine merchant and six export markets, the documentation of every order and market lands on him, CHOSEN through the AI variant because it can't be seen from outside. (2) vineyard weather and harvest monitoring, Raka's idea, ruled out, the estates farm the grapes. (3) the site, a strong Squarespace shop with 60+ named stockists, no angle. (4) GDPR, 5 third party cookies before any click from Stockholm, never the angle. (5) Instagram quiet since 27 Sep, 2,418 followers, small
+chosen: (1), biggest, it grows with every market and account he adds, and it's the efficiency job Raka named
+owner reply: "My importers handle the paperwork" | a model, not a gap | the message never claims his paperwork, it names the cost the IHK survey measured and one fact he wrote himself, that he's active in six countries (https://www.haardt-hills.de/blog/warum-ich-von-tag-1-auch-auf-den-export-meiner-haardt-hills-weine-setze), and his own shop and 60+ stockists still run through him (https://www.haardt-hills.de/verzeichnis)
+worth: €4,000+, an AI workflow for Haardt Hills that turns each trade and export order into its invoice, delivery papers, market documents and follow up, with reorder reminders for the restaurant accounts
+still there: authorised partner in the Impressum read 2026-10-31 and the Falstaff review of the 2025 Chardonnay on 16 Oct 2026 | https://www.haardt-hills.de/impressum
+budget: listed at Tesdorpf, 60+ restaurant and shop partners, six export markets and a paid creator campaign with brandsyoulove.de | https://www.haardt-hills.de/verzeichnis
+sweep website: crawled twice, 199 URLs, a strong shop with 60+ named stockists and current reviews, screenshots opened, no angle
+sweep gdpr: tools/eu-view.py from Stockholm, 7 cookies (2 first party, 5 third party), 15 third party hosts, checked, never the angle (RULES 0E)
+sweep apps: the order and documentation workflow is CHOSEN through the did you know shape, the vineyard weather tool Raka floated is ruled out because the family estates farm the grapes (his blog, 8 km)
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/haardt.hills/ 2,418 followers 110 posts newest 2026-09-27, LinkedIn profile walled, quiet for a month, not chosen
+sweep squad: a one founder wine brand, per its Impressum (eGbR) and blog, not a builder of software, not chosen
+thread: problem German firms spend 27% of their working time on bureaucracy, mostly reporting and documentation, and Haardt Hills is active in six countries | cost every new market and account adds documentation | offer an AI workflow that does the documentation for every trade order and market | link documentation
+lead read: Gregory reads that German firms lose 27% of their time to bureaucracy, mostly documentation, and that he's active in six countries, then gets offered an AI workflow that does the documentation for every order and market, one thread
+claims:
+German firms spend 27% of their working time on bureaucracy, https://www.ihk.de/stuttgart/presse/pm-buerokratieumfrage-7114396 "Die Betriebe wenden im Durchschnitt 27 Prozent ihrer Arbeitszeit für bürokratische Prozesse auf"
+an IHK survey of over 800 firms around Stuttgart in July 2026, https://www.ihk.de/stuttgart/presse/pm-buerokratieumfrage-7114396 "An der Umfrage haben sich mehr als 800 Unternehmen in der Region Stuttgart beteiligt", dated 10 Juli 2026
+links it to reporting and documentation duties, https://www.ihk.de/stuttgart/presse/pm-buerokratieumfrage-7114396 "umfangreiche Berichts- und Dokumentationspflichten"
+Haardt Hills is already active in six countries besides Germany, https://www.haardt-hills.de/blog/warum-ich-von-tag-1-auch-auf-den-export-meiner-haardt-hills-weine-setze "schon in Österreich, der Schweiz, den Niederlanden, Dänemark, Kanada und dem UK aktiv"
+recheck: 2026-10-31, the IHK release opened at source (date, 27 Prozent, 800, the duties), the export post and the Impressum re read, thread re pulled 0 items with the control at 7. Disproof tried, searched for a wine specific time study (none found, Meininger says the cost can't be put in figures), checked who farms the grapes before using Raka's weather idea, kept his verb "aktiv" rather than "sells". Facts hold, confidence MEDIUM, a general business figure and an inside need we can't see
+```
+
+SKETCH
+```
+Hi Gregory, Haardt Hills looks cool!
+
+However, did you know that German firms lose 27% of their working time to bureaucracy? An IHK survey of over 800 firms around Stuttgart (July 2026) links it to reporting and documentation duties, and Haardt Hills is already active in six countries besides Germany.
+
+I'd suggest an AI workflow that does the documentation for every trade order and market, so your week goes to selling.
+
+At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the AI workflow for Haardt Hills?
+```
