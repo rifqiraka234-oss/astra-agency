@@ -1,9 +1,11 @@
-# Still interested?, for the four who said yes and went quiet after their bump. NOT SENT, waiting on Raka's word
+# Still interested?, for the four who said yes and went quiet after their bump. SCHEDULED Sun 1 Nov 06.39 UTC (07.39 Amsterdam) on Raka's word, NOT SENT YET
 
 Raka, 31 Oct ~19.05 UTC, "do we have some people we needa nudge?". These four said yes, got their site and plan, then one
 bump on 28 Oct, and nothing since (3.5 days). They never close on silence and any next message is Raka's, so these are the
 same kind of note he sent Chris Hale, Ulrich, Matthias and Aaron on Friday. Threads pulled 31 Oct ~19.12 UTC, control 7.
 Every link they hold fetched ~19.14 UTC, 200. No URL is resent. Gmail shows no reply from Keypro to the two emails of 25 Oct.
+
+Raka, 31 Oct ~19.10 UTC, "send nudge tomorrow morning at 07.39" with these four lines word for word. Wake trig_01CW2uv73SSGns7dybq2SJXY.
 
 **Before sending, for each one.** Pull the thread with the control. If anything is newer than the message named below,
 don't send it. Dry run, then `--go` with Raka's words, then confirm one copy.
