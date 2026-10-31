@@ -945,3 +945,67 @@ I'd suggest a modern SMARTPINZ site that opens on those real pins and campaigns,
 
 Shall I send you a sketch of the new homepage?
 ```
+
+### Sarah Eliza Steel, APEX NEURO, ctc_Jk7NZ7nGhruJFD5GJ
+
+> NOT SENT. Flags for Raka. (1) The record resolves. APEX NEURO LTD (12711827, July 2020), directors Sarah Eliza Steel
+> and Robert Cartwright, and the team page names "Founder & Clinic Director Sarah Cartwright-Steel". (2) Your 27 Oct
+> check, hiring. No open role on the site, the "join our team" lines are about past hires and a general "contact us". (3)
+> Booking already works (a Book Now page for a free consultation), so the angle isn't booking itself, it's the money
+> before it. The news coverage is families raising thousands for therapy here, and nothing on the programme pages helps a
+> family fund it. (4) Arm B. (5) A clinic, so the tone stays gentle.
+
+```gate
+lead: Sarah Eliza Steel, co founder and Clinic Director of APEX NEURO, a neurorehabilitation clinic in Bollington near Macclesfield. Companies House, APEX NEURO LTD 12711827, incorporated 2020-07-01, directors STEEL, Sarah Eliza (appointed 1 July 2020) and CARTWRIGHT, Robert Vincent (https://find-and-update.company-information.service.gov.uk/company/12711827/officers), team page "Founder & Clinic Director Sarah Cartwright-Steel" (https://www.apexneuro.co.uk/team-new). lemlist jobTitle Co-Founder, tagline "Co-Founder of APEX NEURO | WINNER Best Health & Wellbeing Facility 2024 | WINNER Neurorehabilitation Clinic of the Year 2026". ctc_Jk7NZ7nGhruJFD5GJ, leadId lea_HazA99hqCZjBut8wZ, W1c cam_xFYYBzvfSHk83epvw, accepted 2026-10-27 18.50 UTC. Thread 0 items, control 7
+site pass 1: 250 URLs, tools/crawl.py on https://apexneuro.co.uk to the 250 cap (155 posts, 76 blog index pages and every service page), every page read
+site pass 2: 250 URLs, tools/crawl.py again, plus the home rendered with rtext.js for every action, the 8 programme pages searched for funding words, site-audit.js desktop and phone, all opened
+deep analysis: a Wix site for a private neuro rehab clinic. Programme pages for intensive rehab, MS, stroke, FND, MND, transverse myelitis, remote support (£155 a month) and general neurorehab, each ending in "Book Now" or "Request a consultation" to /book-online, a free consultation. The blog has 155 patient story posts, among them "APEX NEURO featured in news, woman walks again after thousands raised for life changing FND therapy". Google News carries the same pattern, families and friends raising money for therapy here (Luton Today 2 Dec 2025, Hemel Today 2 Sep 2025, Belfast Live 26 Apr 2026). None of the 8 programme pages mentions funding, fundraising or a payment plan ("fund" matches only "fundamentals"), and the intensive programme shows no price. Instagram 15,455 followers, posting yesterday
+owner linkedin: Route 1 curl https://www.linkedin.com/in/sarahelizasteel 301 to the login wall, walled. Route 2 Google News "Sarah Eliza Steel" 0 with the control at 101. Route 3 Companies House, director since 2020. Route 4 the team page, founder and Clinic Director, a brain injury of her own behind the mission. Route 5 Google News "Apex Neuro" 8, the clinic's patients and awards. Route 6 the lemlist record, co founder and award lines
+contact linkedin: same person as the owner, Companies House, the team page and the lemlist record agree
+google news: tools/news.py en 2026-10-31, "Apex Neuro" 8 (Luton Today 2 Dec 2025 "Dunstable woman walks again after thousands raised for life-changing FND therapy", Hemel Today 2 Sep 2025, Belfast Live 26 Apr 2026, Insider North West Young Professionals Awards Apr 2025, Macclesfield Nub News Jul 2024 on the Bollington opening), "Sarah Eliza Steel" 0, control Tesco 101
+regional news: tools/news.py (Manchester neurorehabilitation) x (neurorehabilitation private clinic UK), 1, thin, the clinic's own coverage carries the region
+industry news: tools/news.py neurorehabilitation private clinic UK, private neuro rehab paid out of pocket, families crowdfunding therapy, the pattern in the clinic's own coverage
+sources:
+1. https://www.apexneuro.co.uk/
+2. https://www.apexneuro.co.uk/intensiveneurorehab
+3. https://www.apexneuro.co.uk/multiplesclerosis
+4. https://www.apexneuro.co.uk/remote
+5. https://www.apexneuro.co.uk/team-new
+6. https://www.apexneuro.co.uk/book-online
+7. https://www.apexneuro.co.uk/post/apex-neuro-featured-in-news-woman-walks-again-after-thousands-raised-for-life-changing-fnd-therapy
+8. https://find-and-update.company-information.service.gov.uk/company/12711827/officers
+9. https://www.instagram.com/apexneuro/
+10. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fapexneuro.co.uk
+11. https://news.google.com/rss (tools/news.py)
+12. https://www.linkedin.com/in/sarahelizasteel (walled)
+pains: 5 judged. (1) families raise thousands for the therapy, yet nothing on the programme pages helps them fund it, so cost likely stops some before the consultation, CHOSEN. (2) hiring, Raka's first check, no open role found. (3) booking itself, already working, ruled out. (4) GDPR, a banner without a reject found, never the angle. (5) TikTok and Instagram, strong (15,455), not chosen
+chosen: (1), costliest, a programme lost to cost is the biggest single loss for a clinic like this, and the press already shows families finding the money, it's the bookings job Raka named
+owner reply: "We don't do finance, people pay as they go" | a model, not a gap | the offer is a page and a kit for families who already fundraise for this clinic's therapy, as their own blog and the press show (https://www.apexneuro.co.uk/post/apex-neuro-featured-in-news-woman-walks-again-after-thousands-raised-for-life-changing-fnd-therapy), with a payment plan only if they want one
+worth: €3,500+, a funding page on the site with programme costs, a fundraising kit families can share (story, photos, the clinic's details), an optional payment plan and a route into the free consultation, plus TikTok clips pointing to it
+still there: Clinic Director on the team page read 2026-10-31, director on Companies House read 2026-10-31 | https://www.apexneuro.co.uk/team-new
+budget: an award winning clinic since 2020 with a team of practitioners, Neubie devices and a remote programme | https://www.apexneuro.co.uk/team-new
+variant: B
+sweep website: crawled twice, 250 URLs to the cap with all 8 programme pages read, booking works, no funding help on any programme page, CHOSEN
+sweep gdpr: site-audit.js banner yes with no reject found against its control, tools/eu-view.py from Stockholm 6 first party and 1 third party cookies, never the angle (RULES 0E)
+sweep apps: the funding page and kit are the tool, folded into the offer, booking already runs on /book-online
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/apexneuro/ 15,455 followers newest 2026-10-30, strong, folded into the offer as clips
+sweep squad: a clinic per Companies House and its pages, not a builder of software, not chosen
+thread: problem their own blog celebrates a woman who walked again after thousands were raised for her therapy, yet none of the programme pages helps a family fund a programme | cost many families likely stop at the cost before they book a consultation | offer a funding page with the programme costs, a fundraising kit families can share and a payment plan, leading into a booked consultation | link families, programme
+lead read: Sarah reads that her own blog shows families raising thousands for therapy while her programme pages say nothing about funding, so some families likely stop at the cost, then gets offered a funding page with costs, a kit and a plan leading into the consultation, one thread
+claims:
+your own blog celebrates a woman who walked again after thousands were raised for her therapy, https://www.apexneuro.co.uk/post/apex-neuro-featured-in-news-woman-walks-again-after-thousands-raised-for-life-changing-fnd-therapy
+none of your programme pages helps a family fund a programme, the 8 programme pages (https://www.apexneuro.co.uk/intensiveneurorehab and the MS, stroke, FND, MND, transverse myelitis, remote and neurorehab pages) searched for fund, fundraising, payment plan and instalment, the only hits are "fundamentals", control the same search finds "funding" on https://www.apexneuro.co.uk/post/functional-neurological-disorder-rehabilitation
+INFERENCE, many families likely stop at the cost before they book a consultation, rests on the fundraising in the clinic's own coverage and no funding help on the pages (https://www.apexneuro.co.uk/intensiveneurorehab), worded likely
+recheck: 2026-10-31, the blog post title, the 8 programme pages and the control post, Companies House officers, the team page, thread re pulled 0 items with the control at 7. Disproof tried, looked for a job opening first (none), found the booking page so the message never says booking is missing, kept the wording gentle for a clinic. Facts hold, confidence MEDIUM, a clinic may prefer to talk money on the call
+```
+
+SKETCHB
+```
+Hi Sarah, APEX NEURO looks cool.
+
+However, your own blog celebrates a woman who walked again after thousands were raised for her therapy, yet none of your programme pages helps a family fund a programme. Many families likely stop at the cost before they book a consultation.
+
+I'd suggest a funding page with your programme costs, a fundraising kit families can share and a payment plan, leading into a booked consultation.
+
+Shall I send you a sketch of the funding page?
+```
