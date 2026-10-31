@@ -577,3 +577,22 @@ At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the Legal Unmasked site?
 ```
+
+## Noël Poinsignon, IES Ingredients, ctc_99cWS2YkkatHCePGg. NOT DRAFTED, NO_STRONG_ANGLE today
+
+> The rebuild we held for on 5 and 14 Oct is now live, and the home page says "Bienvenue sur notre nouveau site". It's
+> bilingual with 3,242 sitemap URLs, a sample button on every product card, technical sheets, a client area, a complaints
+> form and a trade show calendar, built by Agence Web HDS. Your 14 Oct call was modernisation, which a brand new site
+> answers. Instagram (921 posts, last 30 Oct) and LinkedIn (6,695) are active. An AI or squad angle would be invented pain.
+> Noël is the Directeur Général appointed in March 2026 (Sabater handed over after 33 years), not the owner. Revisit in
+> Q1 2027 once the new site has a few months of data, or give me an angle and I'll write it.
+
+```sweep
+lead: Noël Poinsignon, Directeur Général of INTERNATIONAL EXPRESS SERVICE (IES INGREDIENTS), SIREN 391647971, created 1993-06-17, Allauch, board chaired by François Sabater (fr.py 2026-10-31), not the owner, ctc_99cWS2YkkatHCePGg, thread 0 items with the control at 7
+website: tools/crawl.py twice on https://ies-ingredients.com, 250 URLs of 3,242 in the sitemaps, all 200, the home reads "Bienvenue sur notre nouveau site", sample request on every product, client area, complaints form, a new build, not chosen
+gdpr: site-audit.js found a banner with a reject and 0 cookies before a click against its control on https://ies-ingredients.com, checked, never the angle (RULES 0E)
+apps: samples and technical documents "disponibles sur demande" through forms built into the new site per https://ies-ingredients.com/fr/catalogue/cosmetique, no named process pain, not chosen
+social: tools/social-audit.js, https://www.instagram.com/ies_ingredients/ 2,829 followers 921 posts last 30 Oct 2026, https://www.linkedin.com/company/ies-ingredients/ 6,695, active, not chosen
+squad: a B2B ingredient distributor that just had an agency build its site per https://ies-ingredients.com/fr, builds no software itself, not chosen
+verdict: NO_STRONG_ANGLE, a new site just launched and active social, revisit Q1 2027
+```
