@@ -1,3 +1,4 @@
+<!-- APPROVED by Raka 2026-10-31, word for word "Commit send tomorrow at 08.30". Covers the 16 SKETCH and SKETCHB drafts in this file (not CheLati, Nouvelle Hôtellerie, Birch Stays or Clara). Scheduled for 2026-11-01 08.30 Europe/Amsterdam (07.30 UTC). NOT SENT until each section carries its own SENT line. -->
 # Drafts, 2026-10-31, group A, Raka's angle calls. NOT SENT
 
 Raka, 2026-10-31, word for word: "abriteo -> website for more sales / hetgoedvanbovy -> website for more reservations /
@@ -15,6 +16,8 @@ one, dont stop until done".
 Threads pulled 2026-10-31 with `tools/lemlist.py thread`, all 20 contacts 0 items, control ctc_ch3vFcKAkjQdMKDCg 7
 items. Evidence folder /tmp/claude-0/-home-user-astra-agency/535b0528-0e36-5b6e-a11b-9344c62d2e80/scratchpad/r/<slug>.
 Re pull the thread, run the four way never messaged check and reopen every claim in the minute before any send.
+
+Pre checks done 2026-10-31 ~21.00 UTC for the 16. Dry run of all 16 through tools/lemlist.py send, each text picked up from this file (sha256 Abriteo 4e48a541, Bovy d1f701b9, Saveurs 181c9edb, Haardt b763b9f3, A Fuego b5b86344, Nighthawks e766c923, Zwarts e2ed5c4a, Wynstanley 83120f9c, OneFortyNine 76371e66, KM0 b413dbe9, Merino 354e1c49, Mama bbc7bc2b, Smartpinz 01f03113, Apex d2ca7354, Sagrado 514cb3a1, Queerish 48e0d35e), every thread 0 items, control 7. Check A part 2, all 186 inbox conversations paged, no other contact matches any of the 16 names or companies, control Hertling found. Part 3, each contact record shows one active campaign (W1b or W1c), invite accepted. Part 4, grep of drafted files, prototypes, digest log and logs, only the automatic connect note to Agathe on 20 Oct and an accept list mention of Sarah on 27 Oct, no pitch. To repeat in the minute before the send, with every claim reopened.
 
 ### Florian Casier Gueho, Abriteo, ctc_FibmN2p3bXtYWSqac
 
