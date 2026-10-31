@@ -450,3 +450,67 @@ At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the hotel outreach workflow?
 ```
+
+### Jeffrey Zwarts, Meneer Zwarts Koffie, ctc_PdtXdTBcwEsv3RyP4
+
+> NOT SENT. Flags for Raka. (1) The record resolves, sole trader Meneer Zwarts Koffie, KvK 85885150, Den Haag,
+> registered 1 April 2022, wholesale in coffee, tea and coffee machines. Jeffrey founded it after years at "de grote
+> jongens" (About page). (2) B2B prices per office are a normal model, so the message never says prices are missing, it
+> names the missing next step. (3) Some home page blocks rendered blank for us, likely late loading, so nothing about
+> emptiness is said. (4) Arm B of the A/B test.
+
+```gate
+lead: Jeffrey Zwarts, founder and owner of Meneer Zwarts Koffie, sole trader KvK 85885150, Henricuskade 99, Den Haag, registered 2022-04-01, "Groothandel in koffie, thee en koffiemachines" (tools/kvk-search.js 2026-10-31), About page "Opgericht door Jeffrey Zwarts, een barista met een scherp oog en een zakelijk hart" (https://www.meneerzwartskoffie.nl/overons). lemlist jobTitle Eigenaar, tagline "Ondernemer l Meneer Zwarts Koffie l Barista l Trainer l Koffie Expert", both his. ctc_PdtXdTBcwEsv3RyP4, leadId lea_bkp4Q6kZYA5hkS2A9, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-29 20.21 UTC. Thread 0 items, control 7
+site pass 1: 92 URLs, tools/crawl.py on https://meneerzwartskoffie.nl (27 from the sitemap), 89 at 200 and 3 at 404, every page read (home, coffee, machines, service, op het werk, horeca, thuis, about, shop, 7 blog posts, policies, a hidden contact page)
+site pass 2: 92 URLs, tools/crawl.py again, plus home, op het werk and horeca rendered at 1440 and iPhone 13 (6 screenshots, r/zwarts/sheet.jpg), dom.js on shop, op het werk and home for every form and contact link, site-audit.js, all opened
+deep analysis: a Squarespace site in a typewriter face for a one man coffee supplier in Den Haag. Three audiences in the menu, offices ("Op het werk"), hospitality ("In de horeca") and home, plus machines, service ("all-in service of juist uurtje-factuurtje ... altijd direct opzegbaar") and barista training. The shop sells three roasts and a tasting pack ("PROEFPAKKET") to consumers. The office and horeca pages explain the offer and end in "Bellen met Meneer Zwarts" (tel:0702230203) or "Meer weten? Mail ons!" (a mailto with the subject "Wij willen Barista worden...help!"), no form, no quote request and no way to book a tasting. The only form is a message box on the home. A hidden contact page still reads "test bellen met meneer zwarts?Graag!"
+owner linkedin: Route 1 curl https://www.linkedin.com/in/jzwarts 301 to the login wall, walled. Route 2 Google News "Jeffrey Zwarts" 3, none his. Route 3 KvK, sole trader since 2022. Route 4 the About page, founder and barista. Route 5 the company LinkedIn page through social-audit.js, 457 followers. Route 6 the lemlist record, owner and trainer
+contact linkedin: same person as the owner, KvK, the About page and the lemlist record agree
+google news: tools/news.py nl 2026-10-31, "Meneer Zwarts" 2 and "Jeffrey Zwarts" 3, none about him, control Heineken 93
+regional news: tools/news.py (Den Haag koffie) x (koffie op kantoor OR koffiemachines bedrijven), 9, coffee supplier MAAS in the news after an FNV dispute (Apr 2025), AD on getting Gen Z back to the office with free coffee (Oct 2023), Omroep West bankruptcies of the week
+industry news: tools/news.py koffie op kantoor OR koffiemachines bedrijven, offices choosing coffee as a perk, big suppliers on long contracts, the gap his "geen contractuele verplichtingen" line aims at (https://www.meneerzwartskoffie.nl/home)
+sources:
+1. https://www.meneerzwartskoffie.nl/
+2. https://www.meneerzwartskoffie.nl/ophetwerk
+3. https://www.meneerzwartskoffie.nl/horeca
+4. https://www.meneerzwartskoffie.nl/service
+5. https://www.meneerzwartskoffie.nl/overons
+6. https://www.meneerzwartskoffie.nl/meneer-zwarts-shop
+7. https://www.kvk.nl/zoeken/?source=all&q=85885150
+8. https://www.linkedin.com/company/meneer-zwarts
+9. https://www.instagram.com/meneerzwartskoffie/
+10. https://www.facebook.com/profile.php?id=61580000815844
+11. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fmeneerzwartskoffie.nl
+12. https://news.google.com/rss (tools/news.py)
+13. https://www.linkedin.com/in/jzwarts (walled)
+pains: 5 judged. (1) offices and horeca read the offer, then can only phone or email, no tasting to book and no request to send, CHOSEN. (2) prices per office aren't shown, a model in B2B coffee, never the angle. (3) the look, a typewriter face and long text blocks, proof only. (4) GDPR, a banner without a reject button found, 5 third party cookies before any click from Stockholm, never the angle. (5) social, 204 Instagram followers posting yesterday, small
+chosen: (1), biggest, every office or café that reads the pages has to pick up the phone to go further, and it's the B2B sales job Raka named
+owner reply: "Offices just call me, that's how this works" | a model, not a gap | he already sells a tasting pack online to consumers (https://www.meneerzwartskoffie.nl/meneer-zwarts-shop "PROEFPAKKET"), so tasting first is already his way of selling, and the office page gives offices nothing but a phone number and an email link (https://www.meneerzwartskoffie.nl/ophetwerk, dom.js)
+worth: €3,000+, an office and horeca page where managers book a tasting at their place in a few taps, plus an outreach flow that invites offices and cafés around Den Haag to it and follows up
+still there: founder on the About page read 2026-10-31, sole trader active on KvK read 2026-10-31, Instagram post 2026-10-30 | https://www.meneerzwartskoffie.nl/overons
+budget: a wholesale coffee and machine business with service on call, a training offer, a Squarespace shop with Stripe and a registered address in Den Haag | https://www.meneerzwartskoffie.nl/service
+variant: B
+sweep website: crawled twice, 92 URLs, 3 page types rendered and opened, the business pages end in a phone number or an email, CHOSEN
+sweep gdpr: tools/eu-view.py from Stockholm, 7 cookies (2 first party, 5 third party), 12 third party hosts, site-audit.js banner yes and reject not found against its control, never the angle (RULES 0E)
+sweep apps: the tasting booking and outreach flow is the tool, folded into the offer, no other process visible
+sweep social: tools/social-audit.js, LinkedIn https://www.linkedin.com/company/meneer-zwarts 457 followers, Instagram 204 followers newest 2026-10-31, Facebook 19 followers, small, not chosen
+sweep squad: a one man coffee wholesaler, per KvK and his About page, not a builder of software, not chosen
+thread: problem the office and horeca pages end in a phone call or an email, with no tasting to book | cost an office manager comparing suppliers likely picks one they can try without a call | offer an office page where managers book a tasting in a few taps, plus outreach that invites offices around Den Haag | link tasting, office
+lead read: Jeffrey reads that his office and horeca pages only offer a call or an email and no tasting, so office managers likely go with a supplier they can try without calling, then gets offered a page where they book a tasting plus outreach to offices, one thread
+claims:
+your office and horeca pages end in a phone call or an email, https://www.meneerzwartskoffie.nl/ophetwerk dom.js links "Bellen met Meneer Zwarts -> tel:0702230203" and "Meer weten? Mail ons! -> mailto:info@meneerzwarts.nl", 0 forms, https://www.meneerzwartskoffie.nl/horeca the same in the screenshot r/zwarts/p2/03, control dom.js finds the home's form on https://www.meneerzwartskoffie.nl/
+no tasting to book, no booking link, calendar or form on either page in dom.js and the crawl, the tasting pack exists only as a consumer product in https://www.meneerzwartskoffie.nl/meneer-zwarts-shop
+INFERENCE, an office manager likely picks a supplier they can try without a call, rests on the pages offering only tel and mailto (https://www.meneerzwartskoffie.nl/ophetwerk), worded likely
+recheck: 2026-10-31, dom.js on the office page and shop, the crawl's form counts, KvK by number, thread re pulled 0 items with the control at 7. Disproof tried, found the home message form so the message speaks only of the office and horeca pages, found the consumer tasting pack so the message says no tasting to book on those pages, kept prices out. Facts hold, confidence MEDIUM, a one man business may sell mostly by phone and like it
+```
+
+SKETCHB
+```
+Hi Jeffrey, Meneer Zwarts Koffie looks cool.
+
+However, your office and horeca pages end in a phone call or an email, with no tasting to book. An office manager comparing suppliers likely picks one they can try without a call.
+
+I'd suggest an office page where managers book a tasting at their place in a few taps, plus outreach that invites offices around Den Haag to it.
+
+Shall I send you a sketch of the tasting page?
+```
