@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- SUPERSEDED 31 Oct, never sent. The sites went live the same day, so the delivery in state/drafted_2026-10-31-erik-delivery.md replaces this holding reply. -->
 # Replies, 29 Oct. NOT SENT, waiting on Raka's word
 
 ### Erik Schmidt-Lange, Taste Frankfurt, ctc_nmWYD59STFBerEswh
