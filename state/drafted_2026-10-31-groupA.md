@@ -1009,3 +1009,68 @@ I'd suggest a funding page with your programme costs, a fundraising kit families
 
 Shall I send you a sketch of the funding page?
 ```
+
+### Felix Jordan, Sagrado, ctc_PtfwGN84zbyGgvwB3
+
+> NOT SENT. Flags for Raka. (1) The record resolves, SAGRADO DRINKS LTD (15548674, March 2024), Felix Marshall Jordan sole
+> director. Your 27 Oct call, an exception to the consumer rule, a go to market to raise money and reach investors. (2)
+> His home page says he's raising £200,000 through SEIS after 200+ points of sale and 800,000 people reached at 40+ events,
+> and the button for the deck opens the contact page. (3) Google News on "Felix Jordan" returns only unrelated US people,
+> never used. (4) Arm A.
+
+```gate
+lead: Felix Jordan, founder of Sagrado, sparkling agave drinks. Companies House, SAGRADO DRINKS LTD 15548674, incorporated 2024-03-08, sole director JORDAN, Felix Marshall, appointed 8 March 2024, verified (https://find-and-update.company-information.service.gov.uk/company/15548674/officers). lemlist jobTitle Founder, tagline "Raising SEIS : Founder and Head Tribesman at SAGRADO Pioneering a new category of Sparkling Agave Beverages", both his. ctc_PtfwGN84zbyGgvwB3, leadId lea_asD7KJ9gxCLWr9tyj, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-27 14.38 UTC. Thread 0 items, control 7
+site pass 1: 100 URLs, tools/crawl.py on https://sagrado.co.uk (46 from the sitemap), 94 at 200, every page read (home, shop and products, stockists, where to find us, collaborations, explore more, contact, terms, 54 Mezchool blog pages)
+site pass 2: 100 URLs, tools/crawl.py again, plus the raw HTML of the home for every invest link and the contact page, site-audit.js desktop and phone (behind an age check in our A sheet render), all opened
+deep analysis: a Squarespace shop and brand site. The home and where to find us carry "INVEST IN SAGRADO ... Having launched with no investment and since growing to over 200 points of sale, and having got Sagrado infront of 800,000 across 40+ events we are now ready for the next chapter! We are raising £200,000 investment via Start up Enterprise Investment Scheme - SEIS ... If you're interested and want to see our investment dec click the link below! invest today", and "invest today" links to /contactus, the general contact page. No investor page, deck, traction figures page, team or use of funds anywhere else in the crawl. Bar hire for events, a shop, a blog on agave and Mexican culture
+owner linkedin: Route 1 curl https://www.linkedin.com/in/felix-jordan-6a117913b 301 to the login wall, walled. Route 2 Google News "Felix Jordan" 36, all unrelated US people, ruled out. Route 3 Companies House, sole director since 2024. Route 4 Google News "Sagrado agave", Brewbound 29 Jul 2024 on the UK debut. Route 5 social-audit.js, Instagram sagrado_tribe 2,162. Route 6 the lemlist record, founder raising SEIS
+contact linkedin: same person as the owner, Companies House and the lemlist record agree
+google news: tools/news.py en 2026-10-31, "Sagrado agave" 1 (Brewbound 29 Jul 2024, "From Mexico to the UK: SAGRADO Makes Its Debut"), "Felix Jordan" 36 none his, control Tesco 101
+regional news: tools/news.py (UK drinks startup SEIS) x (no and low alcohol drinks UK OR agave), 70, The Independent 23 Oct 2026 on non alcoholic wines, the low and no aisle crowded with brands raising money
+industry news: tools/news.py no and low alcohol drinks UK OR agave, drinks startups competing for the same SEIS angels, plus the government's SEIS guidance (https://www.gov.uk/guidance/venture-capital-schemes-apply-to-use-the-seed-enterprise-investment-scheme)
+sources:
+1. https://www.sagrado.co.uk/
+2. https://www.sagrado.co.uk/wheretofindus
+3. https://www.sagrado.co.uk/contactus
+4. https://www.sagrado.co.uk/stockists
+5. https://www.sagrado.co.uk/shop
+6. https://find-and-update.company-information.service.gov.uk/company/15548674/officers
+7. https://www.brewbound.com/pr/2024/07/29/from-mexico-to-the-uk-sagrado-makes-its-debut-as-the-drink-of-the-summer-with-its-innovative-use-of-agave
+8. https://www.instagram.com/sagrado_tribe/
+9. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fsagrado.co.uk
+10. https://news.google.com/rss (tools/news.py)
+11. https://www.gov.uk/guidance/venture-capital-schemes-apply-to-use-the-seed-enterprise-investment-scheme
+12. https://www.linkedin.com/in/felix-jordan-6a117913b (walled)
+pains: 5 judged. (1) a live SEIS raise whose only investor route is a line on the home and a button to the contact page, no deck, no investor page, no outreach visible, CHOSEN. (2) consumer sales, 200+ points of sale, working, not the ask. (3) GDPR, checked, never the angle. (4) social, 2,162 Instagram followers posting 27 Oct, fine. (5) the site, a working shop behind an age check, not the ask
+chosen: (1), hottest, the raise is open now and every interested angel hits a contact form, and it's the fundraising go to market Raka named
+owner reply: "I send the deck to people who ask" | a model, not a gap | his own home says "If you're interested and want to see our investment dec click the link below!" (https://www.sagrado.co.uk/), so he means investors to see it from the site, and an investor page can still ask for an email before the deck
+worth: €4,000+, an investor page with traction, the deck behind an email, SEIS explained and use of funds, plus an outreach flow to SEIS angels, angel networks and drinks investors that books calls
+still there: sole director on Companies House read 2026-10-31 and the live SEIS raise on his home page read 2026-10-31 | https://find-and-update.company-information.service.gov.uk/company/15548674/officers
+budget: a limited company with 200+ points of sale, event bar hire and an open £200,000 SEIS raise | https://www.sagrado.co.uk/
+variant: A
+sweep website: crawled twice, 100 URLs, the investor route is a home section and a button to /contactus, CHOSEN as an investor page
+sweep gdpr: tools/eu-view.py from Stockholm run and site-audit.js with its control, checked, never the angle (RULES 0E)
+sweep apps: the investor outreach flow is the tool, folded into the offer
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/sagrado_tribe/ 2,162 followers newest 2026-10-27, a WhatsApp link, not chosen
+sweep squad: a drinks brand per Companies House and its pages, not a builder of software, not chosen
+thread: problem the homepage says Sagrado is raising through SEIS after over 200 points of sale, yet the button for the investment deck opens the general contact page | cost angel investors likely move on to raises they can read in a few minutes | offer an investor page with the traction and the deck, plus outreach to SEIS angels and drinks investors that books the calls | link investor, deck
+lead read: Felix reads that his live SEIS raise sends interested investors to a contact form instead of the deck, so angels likely move on, then gets offered an investor page with the deck plus outreach to SEIS angels, one thread
+claims:
+your homepage says Sagrado is raising through SEIS after over 200 points of sale, https://www.sagrado.co.uk/ "growing to over 200 points of sale ... We are raising £200,000 investment via Start up Enterprise Investment Scheme - SEIS"
+the button for the investment deck opens the general contact page, https://www.sagrado.co.uk/ raw HTML "invest today" -> /contactus under "want to see our investment dec click the link below", and https://www.sagrado.co.uk/contactus is the contact page
+INFERENCE, angel investors likely move on to raises they can read in a few minutes, rests on no deck or investor page in the crawl (https://www.sagrado.co.uk/), worded likely
+recheck: 2026-10-31, the home text and the invest link's href, Companies House officers, thread re pulled 0 items with the control at 7. Disproof tried, searched the crawl for a deck, investor or crowdfunding page (none, no Crowdcube or Seedrs mention), kept the raise amount out of the message. Facts hold, confidence MEDIUM, he may already work with an angel network
+```
+
+SKETCH
+```
+Hi Felix, Sagrado looks cool!
+
+However, your homepage says Sagrado is raising through SEIS after over 200 points of sale, yet the button for the investment deck opens your general contact page. Angel investors likely move on to raises they can read in a few minutes.
+
+I'd suggest an investor page with your traction and deck, plus outreach to SEIS angels and drinks investors that books the calls.
+
+At Astra agency we build websites and AI workflows for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the investor page?
+```
