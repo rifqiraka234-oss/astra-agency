@@ -1,4 +1,5 @@
-# Basile Marin, keeping the 16 Aug promise. DRAFTED, NOT SENT
+<!-- GATE ARCHIVED -->
+# Basile Marin, keeping the 16 Aug promise. SENT 31 Oct on Raka's "Send."
 
 Raka, 31 Oct ~20.50 UTC, "also send smth for basile?". Shown to him before any send.
 
@@ -16,7 +17,4 @@ Raka, 31 Oct ~20.50 UTC, "also send smth for basile?". Shown to him before any s
 > display none, invisible to visitors, so not mentioned. No pitch, he's an investor and not a lead, the message keeps the
 > promise and asks a real question.
 
-REPLY
-```
-Hi Basile, I said I'd come back once I'd read The Biomass Insider, and it's The Biofuels Insider now! I liked Anindita's pyrolysis edition, Boeing funding a trial that turned forest residue oil into aviation fuel components in a pilot refinery unit instead of a new plant. This week's had contracted carbon removal backing loans too, like Terradot's. Are you seeing more of your deals financed that way?
-```
+> SENT 2026-10-31 ~20.58 UTC, act_YJMhFSatJ8t9wikuk, one copy, thread 6 items after. Text sent, "Hi Basile, I said I'd come back once I'd read The Biomass Insider, and it's The Biofuels Insider now! I liked Anindita's pyrolysis edition, Boeing funding a trial that turned forest residue oil into aviation fuel components in a pilot refinery unit instead of a new plant. This week's had contracted carbon removal backing loans too, like Terradot's. Are you seeing more of your deals financed that way?"
