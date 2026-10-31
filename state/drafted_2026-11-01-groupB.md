@@ -443,3 +443,69 @@ At Astra agency we build websites and apps for brands like Unilever, AXA, Pertam
 
 Shall I send you a sketch of TikTok Ads inside Ades Sim?
 ```
+
+### Emmanuel Montecer, Marques de France, ctc_z9nJPbeK9Q7sHv5aK
+
+> NOT SENT. SUPERSEDES the 14 Oct draft, same Build Squad angle, every claim reopened today, now in the B arm shape that
+> his contactId draws. Flags for Raka. (1) Your 14 Oct call was modernisation. It stays Build Squad because the footer says
+> "Site conçu par Echo Conseils", his own agency, so a modernise pitch gets "we build that ourselves". Say the word for the
+> modernise version. (2) The 15 Oct hiring check found no developer jobs, so the squad is our inference. Since then the app
+> went from 1.3.0 to 1.5.0 (28 Oct), they keep shipping. (3) No "half the time at half the price".
+
+```gate
+lead: Emmanuel Montecer, Président de SAS of MARQUES DE FRANCE, SIREN 888485273, created 2020-08-12, Meximieux, Élodie Lapierre Directeur Général (https://recherche-entreprises.api.gouv.fr/search?q=888485273 read 2026-10-31 through fr.py). lemlist jobTitle Co-Founder, tagline "Co-founder at Marques de France and Echo Conseils". ctc_z9nJPbeK9Q7sHv5aK, leadId lea_jKywEWtiMxsjCybnw. Thread 0 items, control 7
+site pass 1: 250 URLs, tools/crawl.py on https://marques-de-france.fr (4386 in the sitemaps, 250 cap), all 200, every page read
+site pass 2: 250 URLs, tools/crawl.py again, all 200, plus the wp-json posts feed read for every launch date and site-audit.js desktop and phone screenshots
+deep analysis: the made in France buying guide, revenue from listings, sponsored posts and affiliate links. 2026 launches from their own posts feed, a mobile app (23 Feb), a Shopify app (16 May), a WooCommerce extension (28 May), a PrestaShop module (19 Jun), an AI gift assistant (13 Oct), plus the Trophées Marques de France (May). The App Store record shows seller "Marques de France (Apps)", released 2026-02-17, version 1.5.0 on 2026-10-28. Since Feb 2025 the same team runs Echo Conseils, "une agence dédiée à celles et ceux qui veulent accélérer leur croissance digitale, bien au-delà de Marques de France", "Une agence à taille humaine". The footer reads "Site conçu par Echo Conseils". The register lists one establishment and a headcount band of 01. INFERENCE, a small team shipping five products this year while selling client work means the guide's next feature competes with client deadlines
+owner linkedin: Route 1 the profile, walled (999 on 14 Oct). Route 2 his author page https://www.marques-de-france.fr/author/emmanuel/. Route 3 the register, Président. Route 4 Google News, RMC 24 Apr 2026 "Emmanuel Montecer à votre service". Route 5 the company LinkedIn through social-audit.js, unreadable. Route 6 the lemlist record
+contact linkedin: same person as the owner, the register, his author page and the lemlist record agree
+google news: tools/news.py fr 2026-10-31, "Marques de France" 10 (La Vie Economique 20 Oct 2026 "S.24 rejoint Marques de France", RMC 24 Apr 2026 on the app), control Carrefour 100
+regional news: tools/news.py (Lyon made in France) x (made in France marques), Lyon Entreprises 11 Apr 2026 on the app (14 Oct read)
+industry news: tools/news.py made in France marques, plus their own Trophées Marques de France 2026 winners post (5 May 2026)
+sources:
+1. https://marques-de-france.fr/
+2. https://www.marques-de-france.fr/wp-json/wp/v2/posts?per_page=40
+3. https://www.marques-de-france.fr/marques-de-france-lance-la-1ere-application-mobile-dediee-au-made-in-france/
+4. https://www.marques-de-france.fr/marques-de-france-lance-son-application-officielle-sur-shopify/
+5. https://www.marques-de-france.fr/marques-de-france-deploie-son-module-officiel-pour-prestashop/
+6. https://www.marques-de-france.fr/marques-de-france-lance-le-premier-assistant-qui-vous-aide-a-trouver-des-cadeaux-vraiment-fabriques-en-france/
+7. https://www.marques-de-france.fr/marques-de-france-lance-son-agence-conseil-en-strategie-digitale/
+8. https://itunes.apple.com/lookup?id=6758521698&country=fr
+9. https://recherche-entreprises.api.gouv.fr/search?q=888485273
+10. https://www.facebook.com/marquesdefrance/
+11. https://www.linkedin.com/company/19095487/
+12. https://news.google.com/rss (tools/news.py)
+pains: 4 judged. (1) one small team shipping five products this year while Echo Conseils sells client work, the guide's next feature competes with client deadlines, CHOSEN. (2) the site's look, your modernise call, but his own agency built it, fails the owner reply test. (3) social, Facebook 12,636 and Instagram active, strong, not chosen. (4) GDPR, CookieYes with 20 first party cookies before a click on 14 Oct, never the angle
+chosen: (1), hottest, the AI assistant launched 13 Oct and the app shipped 1.5.0 on 28 Oct
+owner reply: "We build everything ourselves, that's what Echo Conseils is for" | a model, not a gap | Echo Conseils is "une agence à taille humaine" selling client work next to five launches for the guide this year (https://www.marques-de-france.fr/marques-de-france-lance-son-agence-conseil-en-strategie-digitale/), so extra developers add to the model rather than replace it
+worth: €10,000+, a build squad behind Marques de France and Echo Conseils, developers on the app, the plugins and the guide's next features
+still there: Emmanuel as Président in the register read 2026-10-31 | https://recherche-entreprises.api.gouv.fr/search?q=888485273
+budget: "200k monthly unique users ... 150k€+ ARR" per his lemlist summary, plus a five product year | https://www.marques-de-france.fr/wp-json/wp/v2/posts?per_page=40
+variant: B
+sweep website: crawled twice, 250 URLs, a working guide built by his own agency, not chosen on the owner reply test
+sweep gdpr: site-audit.js and tools/eu-view.py from Stockholm on 14 Oct, CookieYes and 20 first party cookies before a click, checked, never the angle (RULES 0E)
+sweep apps: they ship their own app, plugins and AI assistant, software is their trade, folded into the squad
+sweep social: tools/social-audit.js, Facebook https://www.facebook.com/marquesdefrance/ 12,636, Instagram 30,074 on 14 Oct, strong, not chosen
+sweep squad: five launches this year plus agency work, "une agence à taille humaine", CHOSEN
+thread: problem a small team shipped a mobile app, a Shopify app, two plugins and an AI gift assistant this year while Echo Conseils serves client brands | cost the guide's next feature likely waits behind client work | offer a build squad that builds the guide's next features beside the team | link feature, guide
+lead read: Emmanuel reads that his team shipped five products this year while also serving Echo Conseils clients, so the guide's next feature likely waits, then gets offered a build squad for the guide's next features, one thread
+claims:
+a mobile app, https://www.marques-de-france.fr/marques-de-france-lance-la-1ere-application-mobile-dediee-au-made-in-france/ posts feed date 2026-02-23
+a Shopify app, https://www.marques-de-france.fr/marques-de-france-lance-son-application-officielle-sur-shopify/ posts feed date 2026-05-16
+WooCommerce and PrestaShop modules, https://www.marques-de-france.fr/marques-de-france-deploie-son-module-officiel-pour-prestashop/ posts feed dates 2026-05-28 and 2026-06-19
+an AI gift assistant, https://www.marques-de-france.fr/marques-de-france-lance-le-premier-assistant-qui-vous-aide-a-trouver-des-cadeaux-vraiment-fabriques-en-france/ posts feed date 2026-10-13
+Echo Conseils serves client brands, https://www.marques-de-france.fr/marques-de-france-lance-son-agence-conseil-en-strategie-digitale/ "une agence dédiée à celles et ceux qui veulent accélérer leur croissance digitale, bien au-delà de Marques de France"
+INFERENCE, the guide's next feature likely waits behind client work, rests on "Une agence à taille humaine" on https://www.marques-de-france.fr/marques-de-france-lance-son-agence-conseil-en-strategie-digitale/, worded likely
+recheck: 2026-10-31, the posts feed pulled for all five dates, the agency post fetched and both phrases found, the App Store record pulled, the register reread. Disproof tried, checked the launches are theirs (their own posts, seller "Marques de France (Apps)"), checked for developer jobs on 14 Oct (none), checked the agency is his (tagline, footer). Facts hold, confidence MEDIUM
+```
+
+SKETCHB
+```
+Hi Emmanuel, Marques de France looks cool.
+
+However, your team shipped a mobile app, a Shopify app, WooCommerce and PrestaShop modules and an AI gift assistant this year, while Echo Conseils serves client brands. The guide's next feature likely waits behind client work.
+
+I'd suggest a build squad working beside your team on the guide's next features and app releases.
+
+Shall I send you a sketch of the squad on your next feature?
+```
