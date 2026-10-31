@@ -307,3 +307,74 @@ At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the posting workflow for MOODI?
 ```
+
+### Darren Gilligan, Liverpool Tour Experiences, ctc_yF9Zxdgp3anbjKB5x
+
+> NOT SENT. SUPERSEDES the 12 Oct draft (the +1 WhatsApp button he fixed minutes before that send, so it's dead). Flags
+> for Raka. (1) Your 12 Oct call was "website OR social media". Social is active (Instagram 1,614 followers, last post
+> 27 Oct, Facebook 635, TikTok 1,930), so it's the website. (2) He builds the site himself on GoDaddy and has been adding
+> FareHarbor booking, six tour pages carry a calendar today against three on 12 Oct, so "you can't book online" is false.
+> The angle is the look plus the homepage, a 5.0 firm from over 300 reviews on a template whose homepage asks for a
+> contact or a quote and books nothing. (3) He moved the trade side to its own GoDaddy site, dmc-liverpool.com, and five
+> old DMC menu pages on the main site are now empty (Liverpool DMC, Incentive Travel, Event Planning, Liverpool
+> Destination, What is a DMC?). A ten minute fix, kept out. (4) The name search returns an unrelated Irish Darren
+> Gilligan in court stories, never used.
+
+```gate
+lead: Darren Lea Gilligan, founder of Liverpool Tour Experiences, Active Director of TOUR POUR LIMITED 16739086 since 24 September 2025, also its secretary (https://find-and-update.company-information.service.gov.uk/company/16739086/officers read 2026-10-31), 12 Oct research also found him director of BREWERY TOURS LTD 14503133 and the FareHarbor account is "brewerybustoursliverpool". lemlist jobTitle Founder, company "Liverpool Tour Experiences | DMC". The site's cruise page reviews name him, "Fantastic service from Darren". ctc_yF9Zxdgp3anbjKB5x, leadId lea_m3HbrGhQE7fKDsHQq, accepted. Thread 0 items, control 7
+site pass 1: 77 URLs, tools/crawl.py on https://liverpooltourexperiences.co.uk (71 from the sitemap), 75 at 200, 1 at 000 and 1 at 404, every page read
+site pass 2: 77 URLs, tools/crawl.py again, the same 75, 1 and 1, plus 41 non blog pages refetched raw over the bare domain (retried where our proxy reset) to count booking calendars and buttons, site-audit.js desktop and phone screenshots opened, and dmc-liverpool.com/trade-partners fetched
+deep analysis: a GoDaddy Website Builder 8 site ("Starfield Technologies; Go Daddy Website Builder 8.0.0000"), an orange WhatsApp bar, a scrolling "Liverpool's local Tour and transport experts" banner, a group photo hero. Tours from £30 (Chester and Cheshire Oaks) to £795 to £1,095 per vehicle for cruise excursions, minibus hire, transfers, football tours, a 2027 cruise call schedule ("101 cruise ship calls are published for Liverpool in 2027"). FareHarbor calendars on six tour pages (best of Liverpool, LFC fan day, Liverpool FC shore ex, pub history, Welsh adventure shore tour, wine and vineyard). The cruise page shows "5.0 on Google ... From over 100 Google reviews" and "From over 200 Tripadvisor reviews". The homepage buttons are "Start Your Liverpool Adventure Today! Contact us", "Get a quote today", "View Brewery Bus Tour", "Plan a Private Liverpool Tour", "View Tour Details", "Get a quote", "Send us your enquiry on WhatsApp", and the homepage carries no FareHarbor calendar or book button. The trade side lives at https://dmc-liverpool.com/trade-partners, also GoDaddy. INFERENCE, a cruise passenger or visitor who lands on the homepage has to message him before they can buy, while the same tours take bookings two clicks away
+owner linkedin: Route 1 https://www.linkedin.com/in/darrengilligan/ through social-audit.js, unreadable. Route 2 Google News "Darren Gilligan" 32, all an unrelated Irish man, never used. Route 3 Companies House, director of TOUR POUR LIMITED. Route 4 the site's reviews naming Darren as driver and guide. Route 5 the lemlist record, founder
+contact linkedin: same person as the owner, the register, the reviews and the lemlist record agree
+google news: tools/news.py en 2026-10-31, "Liverpool Tour Experiences" 2 hits, neither about the company, "Darren Gilligan" 32 about someone else, control Tesco 100
+regional news: tools/news.py (Liverpool tourism) x (Liverpool cruise passengers OR group tours), 33, Liverpool Express 4 Sep 2026 on the Disney Dream visit
+industry news: tools/news.py Liverpool cruise passengers OR group tours, 77, Travel Weekly 21 Oct 2026 "Cunard to mark 500th transatlantic crossing with Liverpool departure"
+sources:
+1. https://liverpooltourexperiences.co.uk/
+2. https://liverpooltourexperiences.co.uk/liverpool-cruise-tours
+3. https://liverpooltourexperiences.co.uk/cruise-ships-2027
+4. https://liverpooltourexperiences.co.uk/pub-history-tour
+5. https://liverpooltourexperiences.co.uk/wine-%26-vineyard-tour
+6. https://liverpooltourexperiences.co.uk/liverpool-dmc
+7. https://dmc-liverpool.com/trade-partners
+8. https://find-and-update.company-information.service.gov.uk/company/16739086/officers
+9. https://www.instagram.com/liverpool_tour_experiences_/
+10. https://www.facebook.com/people/Liverpool-Tour-Experiences/61556224343389/
+11. https://www.tiktok.com/@liverpooltourexper
+12. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fliverpooltourexperiences.co.uk%2F
+13. https://news.google.com/rss (tools/news.py)
+pains: 5 judged. (1) a 5.0 firm from over 300 reviews on a template whose homepage asks for a contact or quote and books nothing, while six tours already book online, CHOSEN. (2) five empty DMC menu pages since the trade side moved to dmc-liverpool.com, a ten minute fix, out (RULES 0E). (3) the cruise quote form, he prices per vehicle and quotes groups by hand, folded into (1). (4) social, all accounts active, no angle. (5) GDPR, a banner with decline, eu-view 4 first party cookies with Facebook and Google Analytics hosts requested, never the angle
+chosen: (1), biggest, the homepage is where visitors land and it's the one page that can't take a booking, and the look undersells his reviews (RULES 4A, dated look on a strong firm)
+owner reply: "I've just added online booking to my tours" | true, six tour pages have FareHarbor | it's the homepage and the look that don't match, the homepage still books nothing and asks visitors to contact you (https://liverpooltourexperiences.co.uk/ buttons "Contact us", "Get a quote")
+worth: €4,000+, a modern site for tours, cruise excursions and transport that shows the 5.0 reviews up front and books tours from the homepage through his FareHarbor account, with the cruise schedule tied to the shore tours
+still there: Darren active director on the officers page read 2026-10-31 | https://find-and-update.company-information.service.gov.uk/company/16739086/officers
+budget: cruise excursions at £795 to £1,095 per vehicle and coach groups of 200 or more | https://liverpooltourexperiences.co.uk/liverpool-cruise-tours
+variant: A
+sweep website: crawled twice, 77 URLs, 41 pages refetched raw, desktop and phone screenshots opened, a GoDaddy template whose homepage books nothing while six tour pages do, CHOSEN
+sweep gdpr: site-audit.js found a banner with a reject against its control, tools/eu-view.py from Stockholm 4 first party cookies and Facebook and Google Analytics requested before a click, checked, never the angle (RULES 0E)
+sweep apps: group quotes over WhatsApp and a quote form, folded into the website angle, not a separate pitch
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/liverpool_tour_experiences_/ 1,614 followers last post 27 Oct 2026, Facebook 635, TikTok https://www.tiktok.com/@liverpooltourexper 1,930, all active, not chosen
+sweep squad: a tour and transport operator, builds no software, not chosen
+thread: problem the site doesn't look like a 5.0 firm and its homepage books nothing | cost visitors who land on the homepage have to contact him before they can buy | offer a modern site that books tours from the homepage | link book, homepage
+lead read: Darren reads that his site undersells his 5.0 reviews and that the homepage books nothing though his tours already book online, then gets offered a modern site that books tours from the homepage, one thread
+claims:
+rated 5.0 from over 300 Google and Tripadvisor reviews, https://liverpooltourexperiences.co.uk/liverpool-cruise-tours "5.0 ★ on Google ... From over 100 Google reviews" and "5.0 ★ on Tripadvisor ... From over 200 Tripadvisor reviews"
+the main homepage button says Contact us, https://liverpooltourexperiences.co.uk/ "Start Your Liverpool Adventure Today! Contact us"
+nothing on the homepage books a tour, https://liverpooltourexperiences.co.uk/ raw HTML 0 FareHarbor mentions and no book button, positive control the same count found FareHarbor calendars on six tour pages of the same site in the same run
+the Pub History Tour already takes bookings online, https://liverpooltourexperiences.co.uk/pub-history-tour "FareHarbor calendar of item #470578"
+recheck: 2026-10-31, homepage, cruise page and pub history page raw HTML read, Companies House officers fetched, the DMC trade site fetched. Disproof tried, counted FareHarbor on every non blog page (six found, so online booking exists and the message says so), checked the empty DMC pages against the trade site link before calling them a gap (they're leftovers, kept out), checked the review counts are the site's own. Facts hold, confidence MEDIUM, he edits the site often so every claim is re read in the minute before a send
+```
+
+SKETCH
+```
+Hi Darren, Liverpool Tour Experiences looks cool!
+
+However, your website doesn't look like a firm rated 5.0 from over 300 Google and Tripadvisor reviews. Its main button says Contact us and nothing on the homepage books a tour, though the Pub History Tour already takes bookings online.
+
+I'd suggest a modern site that looks as good as your reviews and lets visitors and cruise passengers book a tour straight from the homepage.
+
+At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the new homepage?
+```
