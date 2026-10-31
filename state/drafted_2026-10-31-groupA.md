@@ -882,3 +882,66 @@ social: tools/social-audit.js, Instagram https://www.instagram.com/birchstays/ 6
 squad: a holiday let agency with design and build arms per https://birchstays.com/homeowners/, not a builder of software, not chosen
 verdict: NO_STRONG_ANGLE for a more modern website, the site is a recent custom build with AI search and a revenue calculator, a homeowner acquisition outreach angle is noted for Raka and not drafted without his word
 ```
+
+### Mark Colin-Thomé, SMARTPINZ, ctc_cJJohQhGGtyM7rrSy
+
+> NOT SENT. Flags for Raka. (1) The record resolves. SMARTPINZ® is his brand (lemlist, and the company LinkedIn page's
+> own posts name him presenting at Stadiums of the Future, Milton Keynes Tech Week). Companies House shows Antony Mark
+> Colin-Thomé as director of FOCUSED SOLUTIONS LTD (16375421) since April 2025, the company in his tagline. The site doesn't
+> name the company behind the brand. (2) Your call was the poor site with AI images. I can't prove an image is AI, so the
+> message says what's there, a circuit board and a designed ad image. (3) Real clients on the site, GRPF, Wasps Legends,
+> Team GB Foundation, Masked Charity Ball. (4) Arm B.
+
+```gate
+lead: Mark Colin-Thomé, founder of SMARTPINZ®, NFC enamel pins, key rings, medals and wristbands for charities, clubs and events. Companies House, Antony Mark COLIN-THOME born January 1970, director of FOCUSED SOLUTIONS LTD 16375421 appointed 9 April 2025, verified (https://find-and-update.company-information.service.gov.uk/officers/i_jXaVpJN4h9h9VU38eZFlBaSPM/appointments). SMARTPINZ LinkedIn company page posts, "Mark Colin-Thomé presented Next Level Fan Engagement at Stadiums of the Future" (https://www.linkedin.com/company/smartpinz/). lemlist jobTitle Founder SMARTPINZ, tagline "Founder, SMARTPINZ | Founder, FOCUSED Solutions Ltd | ... Former adidas VP". ctc_cJJohQhGGtyM7rrSy, leadId lea_Car6AyyhLxbPFtQKR, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-26 17.40 UTC. Thread 0 items, control 7
+site pass 1: 7 URLs, tools/crawl.py on https://www.smartpinz.com (7 from the sitemap), all 200, a client rendered app so the raw text is 5 words a page, every page then read rendered in Chromium (home, about, products, use cases, tap to donate, tap to bid, contact)
+site pass 2: 7 URLs, rendered again with rtext.js for text, images and actions, the home screenshotted at 1440 and iPhone 13 (r/smartpinz/p2, r/smartpinz/home-top.jpg), site-audit.js, all opened
+deep analysis: a dark, circuit board styled single page app for a B2B product. The home opens on a circuit background, the headline "Every Pin Tells a Story" and a designed ad image (ad-souvenir-gateway, a hand holding a glowing pin beside a phone with "UX: Every Smartpinz is both a physical souvenir and a digital gateway" set in the image), then product cards and client logos (GRPF, Masked Charity Ball, Wasps Legends, Team GB Foundation, Nightsafe, Cure NF2, Headway Derby). The real campaign photos (grpf-pin-closeup, grpf-ambassadors-hk, masked-ball-pin, wasps-legends-pin-hand, team-gb-foundation-pin) appear only on /products under "SMARTPINZ® in the Wild". Pricing tiers from £5 a unit (MOQ 50), every action goes to /contact, a quote form
+owner linkedin: Route 1 curl https://www.linkedin.com/in/mark-colin-thome-focusedsolutionsltd 999, walled. Route 2 Google News "Mark Colin-Thomé" 0 with the control at 101. Route 3 Companies House, director of FOCUSED SOLUTIONS LTD. Route 4 the SMARTPINZ company page posts read through curl, his talk at Milton Keynes Tech Week. Route 5 social-audit.js, company LinkedIn 157 followers, Instagram 37. Route 6 the lemlist record, founder and former adidas VP
+contact linkedin: same person as the owner, the company page posts, Companies House and the lemlist record agree
+google news: tools/news.py en 2026-10-31, "Smartpinz" 0, "Mark Colin-Thomé" 0, control Tesco 101
+regional news: tools/news.py (charity fundraising pins) x (NFC fundraising OR charity pin badge), 0 with the control at 101
+industry news: tools/news.py NFC fundraising OR charity pin badge, 1 (Charity Digital, five fundraising methods every charity should try), contactless giving as a known charity channel
+sources:
+1. https://www.smartpinz.com/
+2. https://www.smartpinz.com/products
+3. https://www.smartpinz.com/about
+4. https://www.smartpinz.com/contact
+5. https://www.smartpinz.com/use-cases/tap-to-donate
+6. https://find-and-update.company-information.service.gov.uk/officers/i_jXaVpJN4h9h9VU38eZFlBaSPM/appointments
+7. https://www.linkedin.com/company/smartpinz/
+8. https://instagram.com/smartpinz
+9. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fsmartpinz.com
+10. https://news.google.com/rss (tools/news.py)
+11. https://www.linkedin.com/in/mark-colin-thome-focusedsolutionsltd (walled)
+pains: 5 judged. (1) the home sells a physical product with a circuit board and a designed ad image, while photos of real pins in real campaigns sit lower on another page, CHOSEN. (2) every action is a quote form, a normal B2B model for custom pins, kept out. (3) no company named behind the brand on the site, trust for charities, proof only. (4) GDPR, checked, never the angle. (5) social, 37 Instagram followers, small, not chosen
+chosen: (1), biggest, a charity or club buys a pin by how the real thing looks in a real campaign, and it's the website angle Raka named
+owner reply: "We just launched this site" | just built | the offer keeps the site's content and products and moves the real campaign photos he already has (https://www.smartpinz.com/products "SMARTPINZ® in the Wild") to where buyers land, a homepage and use case rebuild, not a reskin
+worth: €3,500+, a modern SMARTPINZ site that opens on real pins in real campaigns, a page per use case showing the tap and the result, and the quote request carried through with the product chosen
+still there: founder named in the SMARTPINZ company page's own posts read 2026-10-31 and director of FOCUSED SOLUTIONS LTD on Companies House | https://www.linkedin.com/company/smartpinz/
+budget: a product company with charity and sports clients, tiered production from 50 to global rollout, a former adidas VP running it | https://www.smartpinz.com/products
+variant: B
+sweep website: crawled and rendered twice, 7 URLs, the home opens on a circuit board and a designed ad while real campaign photos sit on /products, CHOSEN
+sweep gdpr: site-audit.js no banner found against its control, tools/eu-view.py from Stockholm run, checked, never the angle (RULES 0E)
+sweep apps: the tap to donate and tap to bid platform is their own product per https://www.smartpinz.com/use-cases/tap-to-donate, no tool gap visible
+sweep social: tools/social-audit.js, LinkedIn https://www.linkedin.com/company/smartpinz/ 157 followers, Instagram https://instagram.com/smartpinz 37 followers newest 2026-10-24, small, not chosen
+sweep squad: a product company with its own digital platform, could buy build capacity, but nothing in its pages names a backlog, not chosen
+thread: problem the homepage opens on a circuit board and a designed ad image, while the real pins for GRPF, Wasps Legends and the Masked Charity Ball sit lower on the products page | cost a charity buyer likely wants to see real pins at work before asking for a quote | offer a modern SMARTPINZ site that opens on those real pins and campaigns | link real, pins
+lead read: Mark reads that his homepage shows a circuit board and an ad while his real pins sit on another page, so buyers likely want the real thing first, then gets offered a site that opens on those real pins, one thread
+claims:
+your homepage opens on a circuit board and a designed ad image, https://www.smartpinz.com/ rendered images circuit-bg-C7AOsBEQ.jpg and ad-souvenir-gateway-CdlAYBWS.jpg above the product cards, screenshot r/smartpinz/home-top.jpg
+your real pins for GRPF, Wasps Legends and the Masked Charity Ball sit lower down the products page, https://www.smartpinz.com/products rendered images grpf-pin-closeup.jpg, wasps-legends-pin-hand.jpg, masked-ball-pin.jpg under "SMARTPINZ® in the Wild", control the same image read on the home lists only logos for those clients
+INFERENCE, a charity buyer likely wants to see real pins at work before asking for a quote, rests on the photos' placement (https://www.smartpinz.com/products), worded likely
+recheck: 2026-10-31, both pages rendered twice for their images, the home screenshot opened, Companies House and the company page posts, thread re pulled 0 items with the control at 7. Disproof tried, never called the images AI since it can't be proven, checked the home has client logos so the message says photos, not proof. Facts hold, confidence MEDIUM, the site may be newly launched
+```
+
+SKETCHB
+```
+Hi Mark, SMARTPINZ looks cool.
+
+However, your homepage opens on a circuit board and a designed ad, while your real pins for GRPF, Wasps Legends and the Masked Charity Ball sit on the products page. A charity buyer likely wants to see real pins at work before asking for a quote.
+
+I'd suggest a modern SMARTPINZ site that opens on those real pins and campaigns, with each use case showing the tap and the result.
+
+Shall I send you a sketch of the new homepage?
+```
