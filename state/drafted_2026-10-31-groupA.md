@@ -777,3 +777,67 @@ At Astra agency we make websites for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the new valuation page?
 ```
+
+### Marion Gautier, MAMATRAITEUR78, ctc_9KK4FjKsXD342scS9
+
+> NOT SENT. Flags for Raka. (1) The record resolves, sole trader MARION PRESTIFILIPPO (GAUTIER) (MAMATRAITEUR78), SIREN
+> 900117698, Vernouillet, since April 2021, NAF 56.10C. The site calls her Marion, the founder. (2) The site's cart shows
+> raw template code ("{NAME} {PRICE} €") and a broken "{HREF}" link, 50 euro fixes, kept out. (3) Strong Instagram, 4,230
+> followers. (4) Arm A.
+
+```gate
+lead: Marion Gautier, founder of Mama Traiteur 78, sole trader MARION PRESTIFILIPPO (GAUTIER) (MAMATRAITEUR78), SIREN 900117698, Vernouillet, created 2021-04-05, NAF 56.10C (https://recherche-entreprises.api.gouv.fr/search?q=900117698), mentions "Siret : 90011769800051" (https://www.mamatraiteur78.fr/mentions.html), home "Marion, fondatrice de Mama Traiteur 78" (https://www.mamatraiteur78.fr/). lemlist jobTitle Fondateur, tagline "Entrepreneuse culinaire", both hers. ctc_9KK4FjKsXD342scS9, leadId lea_2TpJqFhyREYi4Boio, W1b cam_7gnHSf6GvvGy8gH3n, accepted 2026-10-28 07.57 UTC. Thread 0 items, control 7
+site pass 1: 250 URLs, tools/crawl.py on https://mamatraiteur78.fr (link crawl to the 250 cap, most are shop and filter variants), every page read (home, traiteur, services, carte, boutique and cart, plats, avis, actualités, contact, legal)
+site pass 2: 250 URLs, tools/crawl.py again, plus the raw HTML of the traiteur page for its button target, site-audit.js desktop and phone, and the A sheet render, all opened
+deep analysis: a builder site for a caterer near Cergy-Pontoise serving the 78, 95, 92 and Paris. The menu page prices every piece (burgers 2 €, clubs 1,50 €, verrines 1,50 €, HT), the shop sells sandwiches, salads and desserts with a cart, and the professional block offers "plateaux repas, buffets et brunchs faits maison" for meetings and team lunches. Its one action, "Demander un devis", links to contact.html, the general form (name, email, phone, subject, message). No order or date step for companies. Open weekdays 9 to 16. The cart's template placeholders show in the raw text
+owner linkedin: Route 1 curl https://www.linkedin.com/in/mamatraiteur78 301 to the login wall, walled. Route 2 Google News "Marion Gautier traiteur" 0 with the control at 100. Route 3 the register, sole trader since 2021. Route 4 the home page, founder and restaurateur's daughter. Route 5 the company LinkedIn page through social-audit.js, 30 followers. Route 6 the lemlist record, founder
+contact linkedin: same person as the owner, the register, the home page and the lemlist record agree
+google news: tools/news.py fr 2026-10-31, "Mamatraiteur78" 0, "Marion Gautier traiteur" 0, control Carrefour 100
+regional news: tools/news.py (Yvelines traiteur) x (traiteur événementiel mariage), 10, InfosYvelines on Poissy food businesses, Kohen 20 Oct 2026 on event cancellations and deposits, trust worries for event caterers
+industry news: tools/news.py traiteur événementiel mariage, caterers judged on reliability and quick answers, plus LSA "Tous les chiffres sur le marché du traiteur" (5 Oct 2026) from the Saveurs Végés run
+sources:
+1. https://www.mamatraiteur78.fr/
+2. https://www.mamatraiteur78.fr/traiteur.html
+3. https://www.mamatraiteur78.fr/contact.html
+4. https://www.mamatraiteur78.fr/carte.html
+5. https://www.mamatraiteur78.fr/produits.html
+6. https://www.mamatraiteur78.fr/mentions.html
+7. https://recherche-entreprises.api.gouv.fr/search?q=900117698
+8. https://www.instagram.com/mamatraiteur78
+9. https://www.facebook.com/61565730418201
+10. https://fr.linkedin.com/company/mamatraiteur78
+11. https://webbkoll.5july.net/en/results?url=http%3A%2F%2Fmamatraiteur78.fr
+12. https://news.google.com/rss (tools/news.py)
+pains: 5 judged. (1) companies, the bigger orders, meet priced pieces on the menu but a general contact form to order, no date, guests or price step, CHOSEN. (2) template code and a broken link, 50 euro fixes, kept out. (3) weekday hours 9 to 16, phone orders end early, folded in. (4) GDPR, no banner found against the control, 1 first party cookie from Stockholm, never the angle. (5) social, Instagram strong at 4,230, LinkedIn 30, the B2B channel is thin, folded into outreach
+chosen: (1), biggest, team lunches and seminars repeat every week for offices around Cergy and Poissy, and it's the bigger sales job Raka named
+owner reply: "Companies like to explain what they need, I quote each one" | a model, not a gap | her own menu already prices every piece and her shop takes orders with a cart (https://www.mamatraiteur78.fr/carte.html, https://www.mamatraiteur78.fr/produits.html), so a company order page uses prices she already sets, and custom requests keep the form
+worth: €3,000+, a company order page for plateaux repas, buffets and brunch, guests, date and address into a price and a booking, plus outreach to offices and HR teams around Cergy-Pontoise and Poissy with follow ups
+still there: founder named on the home page read 2026-10-31, sole trader active on the register, Instagram post 2026-10-28 | https://www.mamatraiteur78.fr/
+budget: a registered catering business with a kitchen in Vernouillet, two phone lines, a shop with a cart and service across four départements | https://www.mamatraiteur78.fr/contact.html
+variant: A
+sweep website: crawled twice, 250 URLs, the company block's button goes to the general contact form, CHOSEN as a company order page
+sweep gdpr: tools/eu-view.py from Stockholm, 1 first party cookie, 0 third party, 6 third party hosts, site-audit.js banner none found against its control, checked, never the angle (RULES 0E)
+sweep apps: the order and booking flow is the tool, folded into the offer
+sweep social: tools/social-audit.js, Instagram https://www.instagram.com/mamatraiteur78 4,230 followers newest 2026-10-28, Facebook 165, LinkedIn 30, consumer strong, B2B thin, folded into outreach
+sweep squad: a one woman catering business per the register NAF 56.10C, not a builder of software, not chosen
+thread: problem the menu shows a price per piece, yet the page for companies ends in a quote request through the general contact form | cost an office manager ordering a team lunch likely books a caterer who confirms online the same day | offer an order page where companies pick plateaux, buffets or brunch, guests and date, see the price and book, plus outreach to offices | link companies, price
+lead read: Marion reads that her pieces are priced but companies must go through the general contact form, so office managers likely book whoever confirms online, then gets offered an order page for companies with the price and booking, plus outreach to offices, one thread
+claims:
+your menu shows a price per piece, https://www.mamatraiteur78.fr/carte.html "Burger 2 €", "Clubs 1,50 €", "Verrines 1,50 €" under "Buffet & apéritifs (prix HT)"
+your page for companies ends in a quote request through the general contact form, https://www.mamatraiteur78.fr/traiteur.html raw HTML <a href="contact.html"><span>Demander un devis</span></a> under "Service traiteur pour les professionnels", and https://www.mamatraiteur78.fr/contact.html is the form with Nom et prénom, Adresse email, Numéro de téléphone, Sujet, Message
+INFERENCE, an office manager likely books a caterer who confirms online the same day, rests on the general form being the only route (https://www.mamatraiteur78.fr/traiteur.html), worded likely
+recheck: 2026-10-31, the raw HTML button target, the contact form fields, the menu prices, the register, thread re pulled 0 items with the control at 7. Disproof tried, found the consumer shop and cart so the message never says nothing can be ordered online, kept the template code out. Facts hold, confidence MEDIUM, she may prefer to talk to every company
+```
+
+SKETCH
+```
+Hi Marion, MAMATRAITEUR78 looks cool!
+
+However, your menu shows a price per piece, yet your page for companies ends in a quote request through the general contact form. An office manager ordering a team lunch likely books a caterer who confirms online the same day.
+
+I'd suggest an order page where companies pick plateaux, buffets or brunch, guests and date, see the price and book, plus outreach to offices around Cergy and Poissy.
+
+At Astra agency we build websites and AI workflows for brands like Unilever, AXA, Pertamina.
+
+Shall I send you a sketch of the company order page?
+```
