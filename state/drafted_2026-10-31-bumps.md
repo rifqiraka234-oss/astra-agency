@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- SUPERSEDED 31 Oct ~19.25 UTC, never sent. Raka chose his own line for Milo, in state/drafted_2026-11-01-nudges.md. -->
 # Bump for 31 Oct. NOT SENT, waiting on Raka's word, and his call whether it goes at all
 
 ### Milo Kamil, Warung Kopi, ctc_xnP5SnZ9gqse75J4Z
