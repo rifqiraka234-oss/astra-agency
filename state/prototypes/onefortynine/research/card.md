@@ -126,3 +126,15 @@ NEC, the order. check-build PASS at 1440 and 390, 8 sections, 0 turns, walk 0, t
 - Ten lodges sharing one box is our default, not his. He knows his parks better, the drum makes it one click to change.
 - The calculator leaves out the cost of the snacks and drinks inside, the sources line says so.
 - The photos are still his phone shots. Better photos would lift it most.
+
+### The triple check before the final look (1 Nov, Raka "Make no mistakes okay?")
+
+Reopened live today. /breakoutbox, home, contact and hints (all 200, control example.com 200), the show banner image,
+three LinkedIn posts, Companies House 17293756, Cliffhanger Rooms and Locked In Cornwall. 28 product claims matched their
+own pages word for word. Puzzle 1 Entry Point and Puzzle 6 The Vault on /hints. Banner image reads NEC Birmingham, 4 to 5
+November 2026, stand LLT155, and "Startup Zone" is in the 25 Jul post. £88 is 4 × £22 and £104 is 4 × £26, both live.
+Key Data stays recomputed to 2.88 a month. Five lines fixed. The torch's second photo was described as inside the open lid
+when it's the closed lid under the strap. "Every box comes with" listed the cups, notepads, pencils, training and support,
+which come with every order, so the heading became their own question "What you get" with per box and per order marked.
+"One box can serve a whole site" was our inference stated as fact, now "The box is portable, so one box can go from unit to
+unit". "Oak floor" became wooden floor (it's oak effect). "Two sets of The Heist" became the latest game, their own words.

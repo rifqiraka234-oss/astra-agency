@@ -408,7 +408,7 @@
       setO('donehead', 'Call booked in.');
       setO('donetext', "We'll be in touch to fix a time. This is a prototype, so nothing was sent.");
     } else {
-      setO('tagline', 'The Heist, ' + S.boxes + (S.boxes > 1 ? ' boxes, ' : ' box, ') + (S.plan === 'buy' ? 'bought' : 'rented'));
+      setO('tagline', S.boxes + (S.boxes > 1 ? ' boxes, ' : ' box, ') + (S.plan === 'buy' ? 'bought' : 'rented'));
       setO('tagpc', pc ? 'Delivery to ' + pc.toUpperCase() : siteText());
       setO('donehead', 'Locked in.');
       setO('donetext', "We'll be in touch to confirm the details and the delivery. This is a prototype, so nothing was sent or charged.");
