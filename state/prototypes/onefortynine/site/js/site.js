@@ -48,6 +48,16 @@
     var fl = ctx.createRadialGradient(px, H * .98, 0, px, H * .98, W * .55);
     fl.addColorStop(0, 'rgba(255,170,110,' + (.18 * lightI) + ')'); fl.addColorStop(1, 'rgba(255,170,110,0)');
     ctx.fillStyle = fl; ctx.fillRect(0, 0, W, H);
+    if (unlockedAt) {
+      var age = (performance.now() - unlockedAt) / 1000, lidEl = $('.o-lid');
+      if (age < 3.2 && lidEl) {
+        var lr = lidEl.getBoundingClientRect(), fx = lr.left + lr.width / 2, fy = lr.top + lr.height * .62;
+        var pulse = Math.sin(clamp(age / 3.2, 0, 1) * Math.PI) * lightI;
+        var fg = ctx.createRadialGradient(fx, fy, 0, fx, fy, lr.width * 1.1);
+        fg.addColorStop(0, 'rgba(255,190,120,' + (.55 * pulse) + ')'); fg.addColorStop(.45, 'rgba(255,145,77,' + (.25 * pulse) + ')'); fg.addColorStop(1, 'rgba(255,145,77,0)');
+        ctx.fillStyle = fg; ctx.fillRect(0, 0, W, H);
+      }
+    }
     ctx.globalCompositeOperation = 'lighter';
     for (var k = 0; k < motes.length; k++) {
       var d = motes[k];
@@ -156,11 +166,44 @@
     hdr.classList.toggle('solid', -hr.top > 10);
   }
 
+  /* ---------- the lock in the headline, rolls to 1 4 9, and the click opens the box ---------- */
+  var strips = $$('[data-strip]'), wheelH = 20, unlockedAt = 0;
+  strips.forEach(function (s) { var h = ''; for (var k = 0; k < 30; k++) h += '<span>' + (k % 10) + '</span>'; s.innerHTML = h; });
+  function setPos(s, pos) { s._pos = pos; s.style.transform = 'translateY(' + (-pos * wheelH).toFixed(2) + 'px)'; }
+  function sizeWheels() {
+    var w = $('.lk-w'); if (!w) return;
+    wheelH = w.getBoundingClientRect().height;
+    strips.forEach(function (s) { s.style.setProperty('--wh', wheelH + 'px'); setPos(s, s._pos || 0); });
+  }
+  function unlock() {
+    hero.classList.add('opened'); unlockedAt = performance.now();
+  }
+  function spin() {
+    var t0 = performance.now();
+    var plan = strips.map(function (s, i) {
+      return { s: s, from: 2 + Math.floor(Math.random() * 6), to: 20 + (+s.getAttribute('data-strip')), dur: 1500 + i * 450, delay: 900 + i * 150 };
+    });
+    (function frame(now) {
+      var done = 0;
+      plan.forEach(function (q) {
+        var t = clamp((now - t0 - q.delay) / q.dur, 0, 1);
+        var e = 1 - Math.pow(1 - t, 3);
+        var kick = t > .84 && t < 1 ? Math.sin((t - .84) / .16 * Math.PI) * .08 : 0;
+        setPos(q.s, lerp(q.from, q.to, e) + kick);
+        if (t >= 1) done++;
+      });
+      if (done < plan.length) requestAnimationFrame(frame); else setTimeout(unlock, 160);
+    })(t0);
+  }
+
   /* ---------- start ---------- */
-  function onResize() { resize(); }
+  function onResize() { resize(); sizeWheels(); }
   window.addEventListener('resize', onResize);
   onResize();
   arrive();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeWheels);
+  if (RM) { strips.forEach(function (s) { setPos(s, 20 + (+s.getAttribute('data-strip'))); }); unlock(); }
+  else { strips.forEach(function (s) { setPos(s, 2); }); spin(); }
   function frame(t) {
     ptr.x = lerp(ptr.x, ptr.tx, .06); ptr.y = lerp(ptr.y, ptr.ty, .06);
     draw(t); placeObjs(t); placeTorch();

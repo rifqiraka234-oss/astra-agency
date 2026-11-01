@@ -57,6 +57,20 @@ social.md, data.json, calculator.md, references.md, flow.md. First look built, h
     emboss softened in the inside photo, both sizes. Their website images are AI edits and aren't used.
 14. **check-build.** Passes, one expected warning, the serif voice, answered in line 10.
 
+## v4, the first three seconds (1 Nov, Raka "Your recommendation for the best ... Is it giving wow effect?")
+
+- **Headline, what it is.** "An escape room in a cool box." is their own product line (/breakoutbox, "A portable escape
+  room experience. in a cool box."). "Unlock New Sales" (their /contact H1) didn't say what the thing is, a park manager
+  landing cold reads "sales of what". Lede, their words shortened, "Hire it out to your guests; keep 100% of the
+  revenue", "Or, Integrate it into your existing offering".
+- **Their lock is the O of box.** The 149 combination lock from their own logo (li-2026-08-11-we-built-a-box.jpg, the
+  ring and brackets measured off it) sits in the word "box", its three wheels roll and click to 1 4 9 on load. Screen
+  readers read "box", the lock is aria hidden with a hidden "o".
+- **The click opens the box.** When the last wheel lands, their real lid (cut out of their 10 Jul photo) folds up on its
+  hinge and their real packed box shows underneath (their 31 Aug photo, LOCKABOX softened) in a flare of their orange.
+  Their own promise, "escape room meets unboxing" and "that yes we did it moment as each lock clicks open", acted out in
+  the first three seconds.
+
 ## The journey, checked (v3, Raka "who's the intended audience and what's the journey and action")
 
 A holiday park manager or multi unit host lands (Owen's LinkedIn, his NEC stand LLT155, an outreach message). They ask,

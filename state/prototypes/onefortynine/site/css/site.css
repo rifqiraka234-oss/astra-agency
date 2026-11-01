@@ -54,17 +54,40 @@ main{position:relative;z-index:1}
 .still{position:absolute;inset:0;z-index:1;pointer-events:none}
 .obj{position:absolute;will-change:transform,opacity,filter}
 .obj img{width:100%;height:auto}
-.o-lid{right:3vw;top:15vh;width:45vw;max-width:700px;z-index:1}
+.o-lid{right:4vw;top:17vh;width:42vw;max-width:660px;z-index:1}
 .o-lid img{filter:drop-shadow(0 46px 56px rgba(2,0,20,.6)) drop-shadow(0 6px 10px rgba(2,0,20,.45))}
 .o-case{right:30vw;top:51vh;width:19vw;max-width:300px;z-index:3}
 .o-case img{filter:drop-shadow(0 32px 36px rgba(2,0,20,.62))}
 .o-cups{right:4vw;top:55vh;width:11.5vw;max-width:190px;z-index:3}
 .o-cups img{filter:drop-shadow(0 24px 26px rgba(2,0,20,.55))}
 
-.lead{position:absolute;left:var(--pad);top:calc(var(--hdr) + 24px + clamp(28px,7vh,90px));z-index:2;max-width:46vw}
-.title{margin:0;font-family:var(--serif);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 0;font-size:clamp(64px,11.2vw,180px);line-height:.86;letter-spacing:-.042em;color:var(--white)}
+.lead{position:absolute;left:var(--pad);top:calc(var(--hdr) + 24px + clamp(34px,9vh,110px));z-index:2;max-width:50vw}
+.title{margin:0;font-family:var(--serif);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 0;font-size:clamp(56px,7.7vw,126px);line-height:1.02;letter-spacing:-.04em;color:var(--white)}
 .title .w{display:inline-block}
 .title .w:first-child{display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* their lock, the O of box, as in their own logo */
+.lk{position:relative;display:inline-block;width:.5em;height:.53em;margin:0 .035em 0 .02em;vertical-align:-.01em}
+.lk svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.lk-ring{fill:none;stroke:var(--white);stroke-width:26}
+.lk-brk{fill:none;stroke:var(--white);stroke-width:24;stroke-linecap:round;stroke-linejoin:round;transition:transform .9s cubic-bezier(.2,.9,.2,1.2)}
+.opened .lk-top{transform:translateY(-14px)}
+.opened .lk-bot{transform:translateY(14px)}
+.lk-wheels{position:absolute;left:17.4%;top:35.4%;width:65.2%;height:27.4%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:5.5%}
+.lk-w{position:relative;overflow:hidden;border-radius:12%/8%;background:var(--white)}
+.lk-w::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,0,74,.6),rgba(9,0,74,0) 36%,rgba(9,0,74,0) 64%,rgba(9,0,74,.6))}
+.lk-s{position:absolute;left:0;right:0;top:0;will-change:transform}
+.lk-s span{display:flex;align-items:center;justify-content:center;height:var(--wh,20px);font-family:var(--sans);font-weight:640;font-size:calc(var(--wh,20px) * .62);line-height:1;color:var(--navy);letter-spacing:0;font-variant-numeric:tabular-nums}
+/* the lid that opens when the lock clicks */
+.lid-in{position:relative;perspective:3400px}
+.lid-under{position:absolute;left:4%;right:4%;top:9%;bottom:10%;border-radius:7%/10%;overflow:hidden;opacity:0;transition:opacity .5s .15s}
+.lid-under img{width:100%;height:100%;object-fit:cover;filter:brightness(1.05) sepia(.12)}
+.lid-glow{position:absolute;inset:-10%;background:radial-gradient(ellipse 60% 55% at 50% 70%,rgba(255,190,120,.85),rgba(255,145,77,.35) 45%,rgba(255,145,77,0) 75%);mix-blend-mode:screen;opacity:0;transition:opacity 1.2s .3s}
+.lid-top{position:relative;transform-origin:50% 8%;transition:transform 1.5s cubic-bezier(.2,.9,.2,1.04)}
+.opened .lid-top{transform:rotateX(64deg)}
+.opened .lid-under{opacity:1}
+.opened .lid-glow{opacity:1}
+.rm .lid-top,.rm .lid-under,.rm .lid-glow,.rm .lk-brk{transition:none}
 .lede{margin:clamp(22px,3.6vh,38px) 0 0;max-width:24em;font-size:clamp(16px,1.2vw,18px);line-height:1.55;color:var(--mist)}
 .acts{margin-top:clamp(22px,3.4vh,34px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}
 .price{margin:16px 0 0;font-size:13.5px;color:var(--mist)}
@@ -114,7 +137,7 @@ main{position:relative;z-index:1}
   .hero{height:auto;min-height:0;padding-bottom:36px;display:flex;flex-direction:column}
   .lead{order:1;position:relative;left:auto;top:auto;max-width:none;padding:calc(var(--hdr) + 24px + 22px) var(--pad) 0}
   .still{order:2;position:relative;inset:auto;height:72vw;margin-top:4vw}
-  .title{font-size:clamp(56px,17vw,78px)}
+  .title{font-size:clamp(44px,12.4vw,56px)}
   .lede{margin-top:16px;font-size:15.5px}
   .acts{margin-top:20px}
   .o-lid{right:-4vw;top:0;width:74vw}
