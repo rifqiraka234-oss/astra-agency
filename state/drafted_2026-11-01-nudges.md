@@ -13,10 +13,7 @@ Raka has said otherwise, don't send it and tell him. Dry run, then `--go` with h
 > Her 28 Oct 14.07 UTC "Yes pls". Delivery 30 Oct 06.56 UTC (act_rNP4rKeELjNovcGFE), both sites. Thread 3 items, nothing
 > since, pulled 31 Oct ~19.25 UTC. Her one bump, the plain line, never sent to her before. 06.30 UTC.
 
-NUDGE
-```
-👀 Danielle, have you seen this?
-```
+> SENT 1 Nov 06.30.54 UTC, act_mimst5KxHZ4E3qvnN, one copy, thread 4 items after. Text sent, "👀 Danielle, have you seen this?"
 
 ### Milo Kamil, Warung Kopi, ctc_xnP5SnZ9gqse75J4Z
 
