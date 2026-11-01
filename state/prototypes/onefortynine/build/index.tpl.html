@@ -37,7 +37,7 @@
       <div class="lid-under"><picture><source type="image/webp" srcset="/media/inside.webp"><img src="/media/inside.jpg" alt="" width="1070" height="820" decoding="async"></picture><i class="lid-glow"></i></div>
       <div class="lid-top"><picture><source type="image/webp" srcset="/media/lid.webp"><img src="/media/lid.png" alt="" width="769" height="564" fetchpriority="high"></picture></div>
     </div></div>
-    <div class="obj o-case" data-obj data-d="1.15" data-r="5"><picture><source type="image/webp" srcset="/media/obj-case.webp"><img src="/media/obj-case.png" alt="" width="720" height="715" decoding="async"></picture></div>
+    <div class="obj o-case" data-obj data-d="1.15" data-r="5"><picture><source type="image/webp" srcset="/media/obj-case.webp"><img src="/media/obj-case.png" alt="" width="678" height="673" decoding="async"></picture></div>
     <div class="obj o-cups" data-obj data-d="1.6" data-r="9"><picture><source type="image/webp" srcset="/media/obj-cups.webp"><img src="/media/obj-cups.png" alt="" width="488" height="449" decoding="async"></picture></div>
   </div>
 
@@ -96,11 +96,196 @@
   </div>
 </section>
 
-<section class="after" id="stay" aria-label="The rest of the page">
-  <p>First look, the opening and the torch only. The rest of the page (how a stay plays, what it earns, rent or buy, team days and the order) is built after Raka's go.</p>
-  <a class="btn" href="#order" data-order>Order a box</a>
+<section class="stay" id="stay" aria-labelledby="stay-h" data-stay>
+  <h2 id="stay-h" class="h2 stay-h">The game does the work. The reaction does the marketing.</h2>
+  <div class="stay-pics" aria-hidden="true">
+    <picture class="sp" data-sp="0" style="--ox:30%;--oy:62%"><source media="(max-width: 760px)" type="image/webp" srcset="/media/s4p.webp"><source type="image/webp" srcset="/media/s4.webp"><img src="/media/s4.jpg" alt="" width="1500" height="1094" loading="lazy" decoding="async"></picture>
+    <picture class="sp" data-sp="1" style="--ox:22%;--oy:30%"><source type="image/webp" srcset="/media/s5.webp"><img src="/media/s5.jpg" alt="" width="960" height="1200" loading="lazy" decoding="async"></picture>
+    <picture class="sp" data-sp="2" style="--ox:60%;--oy:40%"><source type="image/webp" srcset="/media/s2.webp"><img src="/media/s2.jpg" alt="" width="1440" height="864" loading="lazy" decoding="async"></picture>
+    <picture class="sp" data-sp="3" style="--ox:50%;--oy:50%"><source type="image/webp" srcset="/media/s1.webp"><img src="/media/s1.jpg" alt="" width="1500" height="1464" loading="lazy" decoding="async"></picture>
+  </div>
+  <ol class="steps">
+    <li class="step" data-step="0"><h3>Offer it to your guests.</h3><p>You set the price and what goes in the boxes. They pay you, and you keep all of it.</p><p class="st-t">Before they arrive</p></li>
+    <li class="step" data-step="1"><h3>Fill it and leave it in the lodge.</h3><p>Snacks, drinks or treats go in the cases and bottle locks. Nobody on your team has to run it.</p><p class="st-t">Under 10 minutes</p></li>
+    <li class="step" data-step="2"><h3>They play The Heist.</h3><p>Teams of up to six crack six puzzles. If they get stuck, the online portal gives them hints.</p><p class="st-t">60 to 90 minutes</p></li>
+    <li class="step" data-step="3"><h3>Back in the cupboard.</h3><p>It's portable, easy to store and fits in the boot of a car. Every box comes with two sets of the game.</p><p class="st-t">After they leave</p></li>
+  </ol>
+</section>
+
+<section class="earn" id="earn" aria-labelledby="earn-h" data-earn>
+  <picture class="earn-pic" aria-hidden="true"><source type="image/webp" srcset="/media/clear.webp"><img src="/media/clear.jpg" alt="" width="900" height="922" loading="lazy" decoding="async"></picture>
+  <div class="earn-head">
+    <h2 id="earn-h" class="h2">Roll in your numbers.</h2>
+    <p class="sub">One box can serve a whole site. Set what you run and see what it could earn you. Every number here is an estimate you can change.</p>
+  </div>
+  <div class="earn-grid">
+    <div class="ctrls">
+      <div class="ctl">
+        <p class="ctl-l" id="run-q">What do you run?</p>
+        <div class="drum" data-drum role="radiogroup" aria-labelledby="run-q">
+          <div class="drum-in" data-drum-in>
+            <input type="radio" name="run" id="r-cottage" value="cottage"><label for="r-cottage">A holiday cottage</label>
+            <input type="radio" name="run" id="r-cottages" value="cottages"><label for="r-cottages">A few cottages</label>
+            <input type="radio" name="run" id="r-lodges" value="lodges" checked><label for="r-lodges">Holiday park lodges</label>
+            <input type="radio" name="run" id="r-pods" value="pods"><label for="r-pods">Glamping pods</label>
+          </div>
+        </div>
+      </div>
+      <div class="ctl ctl-units">
+        <p class="ctl-l" id="units-l">Units sharing one box</p>
+        <div class="units">
+          <button type="button" class="step-b" data-units="-1" aria-label="One fewer unit"><svg viewBox="0 0 20 20" aria-hidden="true"><line x1="4" y1="10" x2="16" y2="10"/></svg></button>
+          <div class="ulock" role="spinbutton" tabindex="0" aria-labelledby="units-l" aria-valuemin="1" aria-valuemax="20" aria-valuenow="10" data-ulock>
+            <span class="lk-w"><span class="lk-s" data-uw="0"></span></span><span class="lk-w"><span class="lk-s" data-uw="1"></span></span>
+          </div>
+          <button type="button" class="step-b" data-units="1" aria-label="One more unit"><svg viewBox="0 0 20 20" aria-hidden="true"><line x1="4" y1="10" x2="16" y2="10"/><line x1="10" y1="4" x2="10" y2="16"/></svg></button>
+        </div>
+      </div>
+      <label class="ctl rng"><span class="ctl-l">Stays a month, each <b data-o="stays">2.5</b></span><input type="range" min="0.5" max="8" step="0.1" value="2.5" data-in="stays"></label>
+      <label class="ctl rng"><span class="ctl-l">Groups that play <b data-o="share">20%</b></span><input type="range" min="5" max="60" step="5" value="20" data-in="share"></label>
+      <label class="ctl rng"><span class="ctl-l">Your price a game <b data-o="price">£40</b></span><input type="range" min="15" max="100" step="5" value="40" data-in="price"></label>
+    </div>
+    <div class="out" aria-live="polite">
+      <div class="out-top">
+        <div><span class="out-n" data-o="month">£200</span><span class="out-u">a month from the box</span></div>
+        <div><span class="out-n sm" data-o="plays">5</span><span class="out-u">games a month</span></div>
+      </div>
+      <svg class="chart" viewBox="0 0 640 300" data-chart role="img" aria-label="Your first year, owning against renting">
+        <g class="ch-grid" data-grid></g>
+        <path class="ch-rent" data-rent d=""/>
+        <path class="ch-own" data-own d=""/>
+        <g class="ch-key" data-key></g>
+      </svg>
+      <ul class="legend"><li><i class="k-own"></i>Owning, after the £350</li><li><i class="k-rent"></i>Renting, after £60 a month</li></ul>
+      <p class="verdict" data-o="verdict">Own it and it pays for itself in month 2. Rent it and you keep about £140 a month after the rent.</p>
+      <p class="src">Estimates. Stays are worked out from Key Data's 2025 holiday cottage occupancy and stay lengths, about 2.9 a month a cottage from July to November. A team of four pays £88 to £104 at Lake District and Cornish escape rooms. How many groups play is our assumption, so set your own. Before the cost of what you put in the box.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cost" id="cost" aria-labelledby="cost-h" data-cost>
+  <div class="cost-pics" aria-hidden="true">
+    <picture class="cp cp-case"><source type="image/webp" srcset="/media/obj-case.webp"><img src="/media/obj-case.png" alt="" width="678" height="673" loading="lazy" decoding="async"></picture>
+    <picture class="cp cp-cups"><source type="image/webp" srcset="/media/obj-cups.webp"><img src="/media/obj-cups.png" alt="" width="488" height="449" loading="lazy" decoding="async"></picture>
+  </div>
+  <div class="cost-in">
+    <h2 id="cost-h" class="h2">Rent it or own it.</h2>
+    <div class="plans">
+      <div class="plan" data-plan="rent">
+        <p class="pl-n">From £60<span> a month</span></p>
+        <p class="pl-t">Rent. Flexible rental options to suit your business.</p>
+        <p class="pl-y" data-o="rentline">About £140 a month to you, after the rent.</p>
+        <a class="btn" href="#order" data-order data-choose="rent">Rent a box</a>
+      </div>
+      <div class="plan" data-plan="buy">
+        <p class="pl-n">From £350<span> once</span></p>
+        <p class="pl-t">Own it outright. No ongoing cost and no subscription.</p>
+        <p class="pl-y" data-o="buyline">Pays for itself in month 2, at your numbers.</p>
+        <a class="btn" href="#order" data-order data-choose="buy">Buy a box</a>
+      </div>
+    </div>
+    <div class="incl">
+      <p class="incl-h">Every box comes with</p>
+      <ul>
+        <li>Two sets of The Heist, six puzzles each</li>
+        <li>Boxes, cases and bottle top locks to fill</li>
+        <li>Branded notepads, pencils and six reusable cups</li>
+        <li>The online hints portal for your guests</li>
+        <li>A 30 minute online training session</li>
+        <li>Product and marketing support, and new games you can add</li>
+      </ul>
+      <p class="same">Owning costs less than renting after six months, since six months of rent is £360.</p>
+    </div>
+  </div>
+</section>
+
+<section class="teams" id="teams" aria-labelledby="teams-h">
+  <picture class="teams-pic" aria-hidden="true"><source media="(max-width: 760px)" type="image/webp" srcset="/media/s3p.webp"><source type="image/webp" srcset="/media/s3.webp"><img src="/media/s3.jpg" alt="" width="1500" height="1150" loading="lazy" decoding="async"></picture>
+  <div class="teams-in">
+    <h2 id="teams-h" class="h2">Pit team against team.</h2>
+    <p>The first puzzle opens the cool box. The rest can be solved in any order, one at a time or all at once, so run it as a timed game or a competition for training and team building days.</p>
+    <p class="said">No digital. No AI. No staff needed to run it.</p>
+    <a class="btn" href="#call" data-call>Book a 15 minute call</a>
+  </div>
+</section>
+
+<section class="nec" aria-labelledby="nec-h">
+  <div class="nec-in">
+    <h2 id="nec-h" class="h2">See it at the NEC, 4 to 5 November.</h2>
+    <p>We're at the Land Leisure &amp; Tourism Show in the Startup Zone. Find us on stand LLT155, NEC Birmingham.</p>
+  </div>
+  <div class="nec-tag" aria-hidden="true"><span>Stand</span><b>LLT155</b></div>
+</section>
+
+<section class="order" id="order" aria-labelledby="order-h" data-orderbox>
+  <span id="call" class="anchor"></span>
+  <div class="order-in">
+    <div class="order-side">
+      <h2 id="order-h" class="h2">Your box, ready to go.</h2>
+      <div class="modes" role="tablist" aria-label="Order or call">
+        <button type="button" role="tab" aria-selected="true" data-mode="order">Order a box</button>
+        <button type="button" role="tab" aria-selected="false" data-mode="call">Book a 15 minute call</button>
+      </div>
+      <div class="sum" data-sum>
+        <p class="sum-h">Your order</p>
+        <p class="sum-l" data-o="sumplan">Rent, 1 box, £60 a month</p>
+        <p class="sum-l" data-o="sumsite">Holiday park lodges, 10 units</p>
+        <p class="sum-l est" data-o="sumest">About £200 a month from the box, an estimate</p>
+      </div>
+    </div>
+    <form class="form" data-form novalidate>
+      <fieldset class="f-plan" data-only="order">
+        <legend class="f-l">Rent or buy</legend>
+        <div class="seg"><input type="radio" name="plan" id="p-rent" value="rent" checked><label for="p-rent">Rent, from £60 a month</label><input type="radio" name="plan" id="p-buy" value="buy"><label for="p-buy">Buy, from £350</label></div>
+      </fieldset>
+      <div class="f-row" data-only="order">
+        <label class="f"><span class="f-l">Boxes</span><select name="boxes" data-in="boxes"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        <label class="f"><span class="f-l">Starting</span><select name="start"><option>As soon as possible</option><option>December 2026</option><option>January 2027</option><option>February 2027</option><option>March 2027</option><option>Spring 2027</option></select></label>
+      </div>
+      <div class="f-row">
+        <label class="f"><span class="f-l">Your name</span><input name="name" autocomplete="name" required></label>
+        <label class="f"><span class="f-l">Business</span><input name="business" autocomplete="organization" required data-in="business"></label>
+      </div>
+      <div class="f-row">
+        <label class="f"><span class="f-l">Email</span><input name="email" type="email" autocomplete="email" required></label>
+        <label class="f"><span class="f-l">Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
+      </div>
+      <div class="f-row" data-only="order">
+        <label class="f"><span class="f-l">Delivery postcode</span><input name="postcode" autocomplete="postal-code" data-in="postcode"></label>
+        <label class="f"><span class="f-l">What you run</span><input name="site" data-o="sitefield" value="Holiday park lodges, 10 units"></label>
+      </div>
+      <div class="f-row" data-only="call" hidden>
+        <label class="f"><span class="f-l">Best time to call</span><select name="when"><option>Weekday morning</option><option>Weekday afternoon</option><option>Weekday evening</option></select></label>
+        <label class="f"><span class="f-l">What you run</span><input name="site2" data-o="sitefield2" value="Holiday park lodges, 10 units"></label>
+      </div>
+      <label class="f"><span class="f-l">Anything else</span><textarea name="note" rows="3"></textarea></label>
+      <input type="hidden" name="estimate" data-o="estfield" value="">
+      <div class="f-go"><button class="btn" type="submit" data-submit data-order>Send the order</button><p class="f-n">A prototype, nothing is sent or charged.</p></div>
+    </form>
+    <div class="done" data-done hidden tabindex="-1">
+      <div class="tag" data-tag>
+        <svg class="tag-lock" viewBox="401 507 382 406" aria-hidden="true"><rect class="lk-ring" x="424.5" y="530.5" width="335" height="359" rx="78"/><path class="lk-brk lk-top" d="M500 612V600Q500 591 509 591H674Q683 591 683 600V612"/><path class="lk-brk lk-bot" d="M505 801V812Q505 821 514 821H669Q678 821 678 812V801"/><g class="tag-w"><rect x="467.5" y="650.7" width="73.9" height="111" rx="10"/><text x="504.5" y="733">1</text><rect x="555.1" y="650.7" width="73.9" height="111" rx="10"/><text x="592.1" y="733">4</text><rect x="642.7" y="650.7" width="73.9" height="111" rx="10"/><text x="679.7" y="733">9</text></g></svg>
+        <p class="tag-k">Breakout Box</p>
+        <p class="tag-to" data-o="tagto">To your business</p>
+        <p class="tag-l" data-o="tagline">The Heist, 1 box, rented</p>
+        <p class="tag-l" data-o="tagpc"></p>
+      </div>
+      <h3 data-o="donehead">Locked in.</h3>
+      <p data-o="donetext">We'll be in touch to confirm the details and the delivery.</p>
+    </div>
+  </div>
 </section>
 </main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <svg class="foot-mark" viewBox="50 343 1116 143" aria-hidden="true"><path fill-rule="evenodd" d="{{BREAKOUT}}"/></svg>
+    <p>OneFortyNine Games Ltd, 149 High Street, Swindon, SN4 7AB. Registered in England and Wales, company 17293756.</p>
+    <p><a href="mailto:owen@onefortyninegames.com">owen@onefortyninegames.com</a> <a href="https://www.linkedin.com/company/onefortynine-games">LinkedIn</a></p>
+    <p class="foot-n">Prototype by Astra agency for OneFortyNine Games. Not the live site.</p>
+  </div>
+</footer>
+
 
 <div class="bar" data-bar role="region" aria-label="Order">
   <p><b>Breakout Box</b> <span>from £60 a month, or £350 to own</span></p>

@@ -14,7 +14,7 @@
   var ptr = { x: .5, y: .5, tx: .5, ty: .5, on: false };
   window.addEventListener('pointermove', function (e) { if (e.pointerType === 'touch') return; ptr.tx = e.clientX / innerWidth; ptr.ty = e.clientY / innerHeight; ptr.on = true; }, { passive: true });
 
-  /* ---------- the light, a studio sweep in copper over teal ---------- */
+  /* ---------- the light, their orange behind their pieces, over their navy ---------- */
   var cv = $('#light'), ctx = cv.getContext('2d');
   var W = 0, H = 0, DPR = 1, motes = [], lightI = 1;
   function resize() {
@@ -40,7 +40,7 @@
     c.addColorStop(.52, 'rgba(120,40,40,' + (.2 * lightI) + ')');
     c.addColorStop(.7, 'rgba(9,0,74,0)');
     ctx.fillStyle = c; ctx.fillRect(0, 0, W, H);
-    // a cold rim from the top left, the teal of the night outside
+    // a cold rim from the top left
     var rim = ctx.createRadialGradient(W * .08, -H * .1, 0, W * .08, -H * .1, Math.max(W, H) * .75);
     rim.addColorStop(0, 'rgba(255,255,255,' + (.07 * lightI) + ')'); rim.addColorStop(1, 'rgba(255,255,255,0)');
     ctx.fillStyle = rim; ctx.fillRect(0, 0, W, H);
@@ -112,6 +112,7 @@
   /* ---------- the torch, their own photos found in the dark ---------- */
   var torch = $('[data-torch]'), tstage = $('.t-stage', torch), scenes = $$('[data-scene]', torch), caps = $$('[data-cap]', torch);
   var countEl = $('[data-o="count"]'), bar = $('[data-bar]'), hdr = $('[data-hdr]');
+  var barWant = false;
   // where the torch looks in each picture, in screen fractions, from the pieces in each photo
   var PATHS = [
     [[.16, .78], [.36, .52], [.56, .36], [.6, .4]],
@@ -162,7 +163,7 @@
     // the studio light goes down as the torch comes on
     var hr = hero.getBoundingClientRect();
     lightI = 1 - .85 * clamp(-hr.top / hr.height, 0, 1);
-    bar.classList.toggle('on', -hr.top > hr.height * .35);
+    barWant = -hr.top > hr.height * .35;
     hdr.classList.toggle('solid', -hr.top > 10);
   }
 
@@ -196,17 +197,247 @@
     })(t0);
   }
 
+  /* ---------- how a stay plays, their photos open through the lock one by one ---------- */
+  var stay = $('[data-stay]'), steps = $$('[data-step]'), sps = $$('[data-sp]'), stayIdx = -1;
+  function placeStay() {
+    if (!stay) return;
+    var mid = innerHeight * (PH() ? .62 : .55), idx = 0;
+    steps.forEach(function (s, i) { if (s.getBoundingClientRect().top < mid) idx = i; });
+    if (idx === stayIdx) return;
+    stayIdx = idx;
+    steps.forEach(function (s, i) { s.classList.toggle('on', i === idx); });
+    sps.forEach(function (s, i) { s.classList.toggle('on', i <= idx); });
+  }
+
+  /* ---------- what it earns. One state, read by the estimate, the plans and the order ---------- */
+  var PRESET = {
+    cottage: { name: 'A holiday cottage', units: 1, stays: 2.5, share: 20, price: 40 },
+    cottages: { name: 'A few cottages', units: 3, stays: 2.5, share: 20, price: 40 },
+    lodges: { name: 'Holiday park lodges', units: 10, stays: 2.5, share: 20, price: 40 },
+    pods: { name: 'Glamping pods', units: 4, stays: 6.7, share: 10, price: 40 }
+  };
+  var RENT = 60, BUY = 350;
+  var S = { run: 'lodges', units: 10, stays: 2.5, share: 20, price: 40, plan: 'rent', boxes: 1, business: '', postcode: '' };
+  var O = function (k) { return $$('[data-o="' + k + '"]'); };
+  var setO = function (k, v) { O(k).forEach(function (e) { if ('value' in e && e.tagName === 'INPUT') e.value = v; else e.textContent = v; }); };
+  var money = function (v) { return '£' + Math.round(v).toLocaleString('en-GB'); };
+  var dec = function (v) { return (Math.round(v * 10) / 10).toString(); };
+  function calc() {
+    var plays = S.units * S.stays * S.share / 100, month = plays * S.price;
+    var pb = month > 0 ? Math.ceil(BUY / month) : Infinity;
+    return { plays: plays, month: month, rentNet: month - RENT, pb: pb };
+  }
+  function playsText(p) { return p <= 0 ? '0' : p < 1 ? '1' : dec(p); }
+  function playsUnit(p) { return p > 0 && p < 1 ? 'game every ' + Math.round(1 / p) + ' months' : dec(p) === '1' ? 'game a month' : 'games a month'; }
+  function siteText() { return PRESET[S.run].name + ', ' + S.units + (S.units === 1 ? ' unit' : ' units'); }
+  function ownText(pb) { return pb <= 1 ? 'pays for itself in the first month' : pb <= 36 ? 'pays for itself in month ' + pb : 'takes more than three years to pay for itself'; }
+  function rentText(n) { return n >= .5 ? 'About ' + money(n) + ' a month to you, after the rent.' : n > -.5 ? 'About covers its rent at your numbers.' : 'Costs you about ' + money(-n) + ' a month at your numbers.'; }
+
+  var earnFlash = 0;
+  function render(fromInput) {
+    var c = calc();
+    setO('month', money(c.month));
+    setO('plays', playsText(c.plays));
+    var pu = $('[data-o="plays"]'); if (pu && pu.nextElementSibling) pu.nextElementSibling.textContent = playsUnit(c.plays);
+    var v;
+    if (c.month <= 0) v = "At these numbers it doesn't earn yet.";
+    else v = 'Own it and it ' + ownText(c.pb) + '. ' + (c.rentNet >= .5 ? 'Rent it and you keep about ' + money(c.rentNet) + ' a month after the rent.' : c.rentNet > -.5 ? 'Rent it and it about covers the rent.' : 'Renting costs more than it earns at these numbers.');
+    setO('verdict', v);
+    setO('rentline', rentText(c.rentNet));
+    setO('buyline', c.month > 0 ? ownText(c.pb).charAt(0).toUpperCase() + ownText(c.pb).slice(1) + ', at your numbers.' : "Doesn't earn yet at your numbers.");
+    setO('stays', dec(S.stays)); setO('share', S.share + '%'); setO('price', '£' + S.price);
+    // the order, filled in from all of it
+    var site = siteText();
+    setO('sitefield', site); setO('sitefield2', site);
+    var boxes = S.boxes, plan = S.plan === 'buy' ? 'Buy, ' + boxes + (boxes > 1 ? ' boxes, ' : ' box, ') + money(BUY * boxes) : 'Rent, ' + boxes + (boxes > 1 ? ' boxes, ' : ' box, ') + money(RENT * boxes) + ' a month';
+    setO('sumplan', plan);
+    setO('sumsite', site);
+    setO('sumest', c.month > 0 ? 'About ' + money(c.month) + ' a month from the box, an estimate' : 'No estimate yet');
+    setO('estfield', money(c.month) + ' a month, ' + playsText(c.plays) + ' ' + playsUnit(c.plays) + ', ' + dec(S.stays) + ' stays a unit, ' + S.share + '% play, £' + S.price + ' a game');
+    chartTo(c);
+    if (fromInput && !RM) { O('month').forEach(function (e) { e.classList.add('hot'); }); clearTimeout(earnFlash); earnFlash = setTimeout(function () { O('month').forEach(function (e) { e.classList.remove('hot'); }); }, 90); }
+  }
+
+  // the drum
+  var drumIn = $('[data-drum-in]'), runs = $$('input[name="run"]');
+  function placeDrum() {
+    if (!drumIn) return;
+    var i = 0; runs.forEach(function (r, k) { if (r.checked) i = k; });
+    var rh = parseFloat(getComputedStyle($('[data-drum]')).getPropertyValue('--rh')) || 52;
+    drumIn.style.transform = 'translateY(' + ((1 - i) * rh) + 'px)';
+  }
+  runs.forEach(function (r) {
+    r.addEventListener('change', function () {
+      if (!r.checked) return;
+      S.run = r.value; var p = PRESET[r.value];
+      S.stays = p.stays; S.share = p.share; S.price = p.price;
+      setUnits(p.units);
+      syncRanges(); placeDrum(); render(true);
+    });
+  });
+
+  // the units, their own lock wheels
+  var uw = $$('[data-uw]'), ulock = $('[data-ulock]'), uH = 68;
+  uw.forEach(function (s) { var h = ''; for (var k = 0; k < 30; k++) h += '<span>' + (k % 10) + '</span>'; s.innerHTML = h; s._pos = 10; });
+  function uSet(s, pos) { s._pos = pos; s.style.transform = 'translateY(' + (-pos * uH).toFixed(2) + 'px)'; }
+  function sizeU() { var w = $('.ulock .lk-w'); if (!w) return; uH = w.getBoundingClientRect().height || 68; uw.forEach(function (s) { s.style.setProperty('--wh', uH + 'px'); uSet(s, s._pos); }); }
+  function rollTo(s, digit) {
+    var from = s._pos, cur = ((Math.round(from) % 10) + 10) % 10;
+    var to = 10 + digit; if (digit === cur) { uSet(s, to); return; }
+    if (RM) { uSet(s, to); return; }
+    from = 10 + cur; var t0 = performance.now(), dur = 520;
+    (function f(now) {
+      var t = clamp((now - t0) / dur, 0, 1), e = 1 - Math.pow(1 - t, 3);
+      var kick = t > .8 && t < 1 ? Math.sin((t - .8) / .2 * Math.PI) * .06 * Math.sign(to - from) : 0;
+      uSet(s, lerp(from, to, e) + kick);
+      if (t < 1) requestAnimationFrame(f);
+    })(t0);
+  }
+  function setUnits(n) {
+    S.units = clamp(Math.round(n), 1, 20);
+    rollTo(uw[0], Math.floor(S.units / 10)); rollTo(uw[1], S.units % 10);
+    if (ulock) { ulock.setAttribute('aria-valuenow', S.units); ulock.setAttribute('aria-valuetext', S.units + (S.units === 1 ? ' unit' : ' units')); }
+  }
+  $$('[data-units]').forEach(function (b) { b.addEventListener('click', function () { setUnits(S.units + (+b.getAttribute('data-units'))); render(true); }); });
+  if (ulock) ulock.addEventListener('keydown', function (e) {
+    var d = { ArrowUp: 1, ArrowRight: 1, ArrowDown: -1, ArrowLeft: -1, PageUp: 5, PageDown: -5 }[e.key];
+    if (e.key === 'Home') { e.preventDefault(); setUnits(1); render(true); return; }
+    if (e.key === 'End') { e.preventDefault(); setUnits(20); render(true); return; }
+    if (d) { e.preventDefault(); setUnits(S.units + d); render(true); }
+  });
+
+  // the sliders
+  var ranges = $$('input[type=range][data-in]');
+  function fill(r) { r.style.setProperty('--p', ((r.value - r.min) / (r.max - r.min) * 100).toFixed(2) + '%'); }
+  function syncRanges() { ranges.forEach(function (r) { r.value = S[r.getAttribute('data-in')]; fill(r); }); }
+  ranges.forEach(function (r) { r.addEventListener('input', function () { S[r.getAttribute('data-in')] = +r.value; fill(r); render(true); }); });
+
+  // the chart, the first year owning against renting, and the month it pays off
+  var chart = $('[data-chart]'), cur = null, tgt = null, tw0 = 0;
+  function series(c) { var own = [], rent = []; for (var m = 0; m <= 12; m++) { own.push(c.month * m - BUY); rent.push(c.rentNet * m); } return { own: own, rent: rent, month: c.month, pb: c.pb }; }
+  function nice(v) { var p = Math.pow(10, Math.floor(Math.log10(v))), f = v / p; return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * p; }
+  function drawChart(s) {
+    if (!chart) return;
+    var w = Math.max(280, Math.round(chart.getBoundingClientRect().width || 600)), h = PH() ? 230 : 290;
+    chart.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    var L = 8, R = 12, T = 18, B = 30;
+    var lo = Math.min(-BUY, Math.min.apply(null, s.rent)), hi = Math.max(100, Math.max.apply(null, s.own), Math.max.apply(null, s.rent));
+    var step = nice((hi - lo) / 4); lo = Math.floor(lo / step) * step; hi = Math.ceil(hi / step) * step;
+    var X = function (m) { return L + (w - L - R) * m / 12; }, Y = function (v) { return T + (h - T - B) * (hi - v) / (hi - lo); };
+    var g = '';
+    for (var v = lo; v <= hi + .1; v += step) {
+      var y = Y(v).toFixed(1);
+      g += '<line x1="' + L + '" x2="' + (w - R) + '" y1="' + y + '" y2="' + y + '"' + (Math.abs(v) < .1 ? ' class="zero"' : '') + '/>';
+      if (v > .1) g += '<text x="' + L + '" y="' + (Y(v) - 7).toFixed(1) + '">' + money(v) + '</text>';
+    }
+    g += '<text x="' + L + '" y="' + (Y(0) - 7).toFixed(1) + '">Even</text>';
+    [0, 3, 6, 9, 12].forEach(function (m) { g += '<text x="' + X(m).toFixed(1) + '" y="' + (h - 8) + '" text-anchor="' + (m === 0 ? 'start' : m === 12 ? 'end' : 'middle') + '">' + (m === 12 ? '12 months' : m) + '</text>'; });
+    $('[data-grid]', chart).innerHTML = g;
+    var path = function (arr) { return arr.map(function (v, m) { return (m ? 'L' : 'M') + X(m).toFixed(1) + ' ' + Y(v).toFixed(1); }).join(''); };
+    $('[data-own]', chart).setAttribute('d', path(s.own));
+    $('[data-rent]', chart).setAttribute('d', path(s.rent));
+    var k = '';
+    k += '<text x="' + (X(0) + 10).toFixed(1) + '" y="' + (Y(-BUY) + 18).toFixed(1) + '">You pay £350</text>';
+    if (s.month > 0 && BUY / s.month <= 12) {
+      var px = X(BUY / s.month), py = Y(0), lbl = 'Paid off in month ' + Math.ceil(BUY / s.month), right = px > w * .6;
+      k += '<circle class="ring" cx="' + px.toFixed(1) + '" cy="' + py.toFixed(1) + '" r="6"/><circle cx="' + px.toFixed(1) + '" cy="' + py.toFixed(1) + '" r="5"/>';
+      k += '<text class="k" x="' + (px + (right ? -12 : 12)).toFixed(1) + '" y="' + (py + 22).toFixed(1) + '" text-anchor="' + (right ? 'end' : 'start') + '">' + lbl + '</text>';
+    } else {
+      k += '<text class="k" x="' + (w - R) + '" y="' + (Y(s.own[12]) - 10).toFixed(1) + '" text-anchor="end">Not paid off in year one</text>';
+    }
+    $('[data-key]', chart).innerHTML = k;
+  }
+  function chartTo(c) {
+    tgt = series(c);
+    if (!cur || RM) { cur = tgt; drawChart(cur); return; }
+    var from = cur; tw0 = performance.now();
+    (function f(now) {
+      var t = ease(clamp((now - tw0) / 650, 0, 1));
+      var mix = function (a, b) { return a.map(function (v, i) { return lerp(v, b[i], t); }); };
+      cur = { own: mix(from.own, tgt.own), rent: mix(from.rent, tgt.rent), month: lerp(from.month, tgt.month, t), pb: tgt.pb };
+      drawChart(cur);
+      if (t < 1) requestAnimationFrame(f); else cur = tgt;
+    })(tw0);
+  }
+
+  /* ---------- rent or own, and the pieces drifting by ---------- */
+  var cost = $('[data-cost]'), cps = $$('.cp'), teamsPic = $('.teams-pic'), teams = $('#teams');
+  function placeDrift() {
+    if (cost && !RM) {
+      var r = cost.getBoundingClientRect(), p = (innerHeight - r.top) / (innerHeight + r.height);
+      if (p > -.1 && p < 1.1) cps.forEach(function (c, i) { c.style.transform = 'translate3d(0,' + ((.5 - p) * (i ? 220 : 120)).toFixed(1) + 'px,0) rotate(' + ((.5 - p) * (i ? 16 : -10)).toFixed(2) + 'deg)'; });
+    }
+    if (teams && teamsPic && !RM) {
+      var r2 = teams.getBoundingClientRect(), p2 = (innerHeight - r2.top) / (innerHeight + r2.height);
+      if (p2 > -.1 && p2 < 1.1) teamsPic.style.transform = 'translate3d(0,' + ((.5 - p2) * 80).toFixed(1) + 'px,0) scale(1.04)';
+    }
+  }
+
+  /* ---------- the order, arriving filled in ---------- */
+  var orderBox = $('[data-orderbox]'), form = $('[data-form]'), done = $('[data-done]'), mode = 'order';
+  function setMode(m) {
+    mode = m;
+    $$('[data-mode]').forEach(function (b) { b.setAttribute('aria-selected', b.getAttribute('data-mode') === m ? 'true' : 'false'); });
+    $$('[data-only]', form).forEach(function (e) { e.hidden = e.getAttribute('data-only') !== m; });
+    $('[data-submit]').textContent = m === 'call' ? 'Ask for the call' : 'Send the order';
+    $('#order-h').textContent = m === 'call' ? 'A 15 minute call, when it suits you.' : 'Your box, ready to go.';
+    $('[data-sum]').hidden = false;
+  }
+  $$('[data-mode]').forEach(function (b) { b.addEventListener('click', function () { setMode(b.getAttribute('data-mode')); }); });
+  $$('[data-mode]').forEach(function (b, i, all) { b.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { var n = all[(i + 1) % 2]; n.focus(); setMode(n.getAttribute('data-mode')); } }); });
+  $$('a[href="#call"]').forEach(function (a) { a.addEventListener('click', function () { setMode('call'); }); });
+  $$('a[href="#order"]').forEach(function (a) { a.addEventListener('click', function () { setMode('order'); var c = a.getAttribute('data-choose'); if (c) { S.plan = c; var r = $('#p-' + c); if (r) r.checked = true; render(); } }); });
+  $$('input[name="plan"]').forEach(function (r) { r.addEventListener('change', function () { if (r.checked) { S.plan = r.value; render(); } }); });
+  var boxesSel = $('select[data-in="boxes"]'); if (boxesSel) boxesSel.addEventListener('change', function () { S.boxes = +boxesSel.value; render(); });
+  if (form) form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var need = [['name', 'Add your name'], ['business', 'Add your business'], ['email', 'Add an email we can reply to']], first = null;
+    need.forEach(function (n) {
+      var el = form.elements[n[0]], f = el.closest('.f'), old = $('.err', f); if (old) old.remove();
+      var bad = !el.value.trim() || (n[0] === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value.trim()));
+      el.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      if (bad) { var m = document.createElement('span'); m.className = 'err'; m.id = 'err-' + n[0]; m.textContent = n[1]; f.appendChild(m); el.setAttribute('aria-describedby', m.id); if (!first) first = el; }
+      else el.removeAttribute('aria-describedby');
+    });
+    if (first) { first.focus(); return; }
+    var biz = form.elements.business.value.trim(), pc = form.elements.postcode ? form.elements.postcode.value.trim() : '';
+    setO('tagto', 'To ' + biz);
+    if (mode === 'call') {
+      setO('tagline', 'A 15 minute call, ' + form.elements.when.value.toLowerCase());
+      setO('tagpc', siteText());
+      setO('donehead', 'Call booked in.');
+      setO('donetext', "We'll be in touch to fix a time. This is a prototype, so nothing was sent.");
+    } else {
+      setO('tagline', 'The Heist, ' + S.boxes + (S.boxes > 1 ? ' boxes, ' : ' box, ') + (S.plan === 'buy' ? 'bought' : 'rented'));
+      setO('tagpc', pc ? 'Delivery to ' + pc.toUpperCase() : siteText());
+      setO('donehead', 'Locked in.');
+      setO('donetext', "We'll be in touch to confirm the details and the delivery. This is a prototype, so nothing was sent or charged.");
+    }
+    form.hidden = true; done.hidden = false; $('.modes').hidden = true;
+    requestAnimationFrame(function () { done.classList.add('in'); done.focus({ preventScroll: true }); done.scrollIntoView({ block: 'center', behavior: RM ? 'auto' : 'smooth' }); });
+  });
+
+  function placeRest() {
+    placeStay(); placeDrift();
+    // the lights come back up where the numbers are
+    var lit = function (el, a) { if (!el) return 0; var r = el.getBoundingClientRect(); return a * clamp(Math.min(innerHeight - r.top, r.bottom) / innerHeight, 0, 1); };
+    lightI = Math.max(lightI, .15 + lit($('[data-earn]'), .6), .15 + lit(cost, .4), .15 + lit(orderBox, .45));
+    if (orderBox) { var o = orderBox.getBoundingClientRect(); if (o.top < innerHeight * .7 && o.bottom > innerHeight * .3) barWant = false; }
+    if (bar.classList.contains('on') !== barWant) bar.classList.toggle('on', barWant);
+  }
+
   /* ---------- start ---------- */
-  function onResize() { resize(); sizeWheels(); }
+  function onResize() { resize(); sizeWheels(); sizeU(); placeDrum(); if (cur) drawChart(cur); }
   window.addEventListener('resize', onResize);
   onResize();
   arrive();
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(sizeWheels);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { sizeWheels(); sizeU(); });
+  syncRanges(); setUnits(S.units); placeDrum(); render();
   if (RM) { strips.forEach(function (s) { setPos(s, 20 + (+s.getAttribute('data-strip'))); }); unlock(); }
   else { strips.forEach(function (s) { setPos(s, 2); }); spin(); }
   function frame(t) {
     ptr.x = lerp(ptr.x, ptr.tx, .06); ptr.y = lerp(ptr.y, ptr.ty, .06);
-    draw(t); placeObjs(t); placeTorch();
+    placeTorch(); placeRest(); draw(t); placeObjs(t);
     if (!RM) requestAnimationFrame(frame);
   }
   if (RM) { frame(0); window.addEventListener('scroll', function () { frame(0); }, { passive: true }); }

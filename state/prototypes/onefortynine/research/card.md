@@ -92,3 +92,37 @@ in order, what is it, will my guests love it, what's in it, what does it earn, w
 - The economics are honest. One cottage renting loses money at the sourced defaults, so the hero leads with park lodges
   (£140 a month after rent, an estimate) and shows one cottage as "18 months to pay off a £350 box".
 - Owen asked publicly for a new website on 29 Sep and later said he'd found someone (social.md). This sketch competes.
+
+## The full build (1 Nov, after Raka's "Yes! Go for ittt" on first look v4)
+
+Eight sections, in the order a host asks. Hero, torch, how a stay plays, what it earns, rent or own, team days, the
+NEC, the order. check-build PASS at 1440 and 390, 8 sections, 0 turns, walk 0, the serif warning answered in line 10.
+
+- **How a stay plays.** Their line "The game does the work. The reaction does the marketing." (/breakoutbox) as the
+  heading. Four steps from their own sentences (you set the price and contents, under 10 minutes and no staff, teams of
+  up to six for 60 to 90 minutes with the hints portal, portable and fits a car boot). Each step opens one of their
+  photos through a circle from where its lock sits. One new photo, boxes-packed-1 (31 Aug), LOCKABOX softened.
+- **What it earns.** "What do you run?" is a drum that turns like their lock wheel, the units sharing one box are two
+  wheels in their lock ring, then stays, share that play and price. Outputs a month, games a month, a 12 month chart
+  owning against renting with the payback month marked, and one sentence. Defaults and presets from calculator.md,
+  tested in the browser. One cottage £20 a month, pays off in month 18, renting loses £40. Three cottages £60, month 6,
+  renting breaks even. Four pods at 6.7 stays and 10% £107, month 4, £47 after rent. Ten lodges £200, month 2, £140 after
+  rent (the default). The units sharing one box is our inference from portability and the page says the numbers are
+  estimates and play share is an assumption. Behind it their clear lock box with the 149 decal (10 Jul photo, LOCKABOX
+  softened).
+- **Rent or own.** Their two prices, their words for each, a line from the state for each, the six month crossover
+  (6 × £60 = £360 > £350), and what every box comes with from /breakoutbox.
+- **Team days.** "Pit team against team." from their 7 Sep post, the any order play line from /breakoutbox, and "No
+  digital. No AI. No staff needed to run it." from their post. Book a 15 minute call.
+- **The NEC.** Land Leisure & Tourism Show, Startup Zone, stand LLT155, 4 to 5 Nov, as a luggage tag.
+- **The order.** Arrives filled in from the calculator (what you run, units, the estimate as a hidden field), rent or
+  buy and boxes carry from the plan buttons, call mode from every call link. Validation tested. Sending turns into a
+  dispatch tag with their 1 4 9 lock, the business and the postcode. Nothing is sent, the page says so.
+- **Footer.** Company details from their footer and Companies House 17293756.
+
+### Honest notes for the final look
+
+- The page is dated by the NEC section, it's 4 to 5 Nov. If it goes to Owen after the show, that section comes out.
+- Ten lodges sharing one box is our default, not his. He knows his parks better, the drum makes it one click to change.
+- The calculator leaves out the cost of the snacks and drinks inside, the sources line says so.
+- The photos are still his phone shots. Better photos would lift it most.
