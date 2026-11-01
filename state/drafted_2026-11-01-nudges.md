@@ -1,4 +1,5 @@
-# Sunday 1 Nov nudges, Danielle and Milo. SCHEDULED on Raka's word, NOT SENT YET
+<!-- GATE ARCHIVED -->
+# Sunday 1 Nov nudges, Danielle and Milo. SENT 1 Nov on Raka's word, NOT SENT YET
 
 Raka, 31 Oct ~19.10 UTC, "for milo send smth tomorrow hey what do you think? i can send it to you right now" and "danielle
 also tomorrow morning at 07.30 nudge". Amsterdam is on CET, so 07.30 there is 06.30 UTC and 07.39 is 06.39 UTC. Danielle
@@ -24,7 +25,4 @@ Raka has said otherwise, don't send it and tell him. Dry run, then `--go` with h
 > reopened), and what Milo would receive `state/milo-sample-2026-10-31-for-milo.md`, NOT SENT. Sending the sample itself
 > needs Milo's yes and then Raka's own word, the 07.39 line doesn't cover it.
 
-NUDGE
-```
-Hey Milo, what do you think? I can send you the sample right now if you'd like.
-```
+> SENT 1 Nov 06.41.32 UTC, act_reLgN5gNTw97MBCSX, one copy. Text sent, "Hey Milo, what do you think? I can send you the sample right now if you'd like."
