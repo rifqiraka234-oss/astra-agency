@@ -22,48 +22,46 @@ social.md, data.json, calculator.md, references.md, flow.md. First look built, h
 4b. **Pages and header.** Header from the first screen, What's in the box, How a stay plays, What it earns, Rent or buy,
    Team days, Order a box. Second pass, a /teams/ page and an /order/ page, the host page about 10 screens.
 
-## B. The idea and the feeling
+## B. The idea and the feeling (v2, 1 Nov, after Raka's "Not exclusive enough ... Redesign the whole thing and palette")
 
-5. **The feeling.** The "yes we did it" moment as a lock clicks open, their own words (home page). Dark, then the lock
-   opens and warm light comes out of the box. The hero is their own mark, not a stock photo of a cottage, because they
-   have no photos of guests playing, and we don't invent them.
-6. **The one idea, in their words.** "Stock Breakout Box. Unlock New Sales." (their /contact page, both H1s). The lock
-   in their own logo reads 149, their company name and their address, 149 High Street. Another company can't use it with
-   the nouns swapped.
-7. **Their mark as the hero object.** media/li-2026-08-11-we-built-a-box.jpg (their LinkedIn, 11 Aug, not on their
-   site), traced with potrace into the B and X mazes, the O redrawn as geometry measured off the file (ring 23 px,
-   brackets 22 px, windows 72 by 109). The three wheels are live drums that roll to 1 4 9 on load and click.
-8. **The signature moment.** Scroll and the lock opens. The brackets part, the red lasers switch off one by one (their
-   puzzle 2 is Laser Maze), the B and X walk off, the O grows into the outline of their real lid
-   (li-2026-07-10-coming-together-1.jpg, cut out), the lid swings up and their real packed box is inside
-   (li-2026-08-31-boxes-packed-1.jpg), with the six puzzles of The Heist beside it. Measured against Oryzo (Lusion, the
-   object drawn before it's shown) and Lightship (Locomotive, the film inside the brand's own mark), both rendered today.
-   No 2025 or 2026 award site found uses locks or escape rooms (references.md, 28 of 46 rendered).
-9. **Is the art in this first build.** Yes. The lasers, the dust that catches them, the live wheels, the lock opening into
-   the box and the warm light are all in this screen.
+5. **The feeling.** A product launch for their box, then the heist in the dark. Their own pieces lit like Analogue's
+   console and Oryzo's coaster (references.md B and C, rendered today), then a torch finding their real photos one by one,
+   and the lights coming up on the "yes we did it" moment (their words, home page).
+6. **The one idea, in their words.** "Stock Breakout Box. Unlock New Sales." (their /contact page, both H1s), set as the
+   headline with their own pieces in front of and behind the words (Ink Games, Obsidian Assembly, rendered today).
+7. **Their mark as the hero object.** Their real lid with the 149 lock logo on its label (li-2026-07-10-coming-together-1,
+   cut out), floating with their open aluminium case, The Heist briefing and the frosted 149 cups (video still 12s and
+   li-2026-08-31-boxes-packed-2, cut out). Real objects, no drawings.
+8. **The signature moment.** The torch. The light goes down and a torch beam finds their own photos in the dark, four
+   stops counted 01 to 04 (Haunted Boulder City's numbered night): the lid by a stone wall, The Heist briefing and the
+   strap lock under the lid, the cases and lock box inside, then the cups, where the light floods up. Measured against
+   Lightship (their film inside the mark) and Cyphr (the photo seen through a cut), rendered today. No award site found
+   uses locks or escape rooms.
+9. **Is the art in this first build.** Yes, the light, the floating pieces, the entrance, the pointer and the torch.
 
 ## C. The look
 
-10. **Type.** Mona Sans (one variable family, headlines 560 weight, tight) and Fragment Mono for labels, both SIL OFL,
-    licences in site/fonts. Premium in their field rendered today, references.md section B, 18 sites with their faces.
-    Their own Cooper Black and Helvetica Neue aren't used, their logo stays their logo.
-11. **Colour script.** Their navy #09004a taken darker into night, their pure red #ff0000 as the lasers, their orange
-    #ff914d (the "GAMES" in their logo) as the warm light out of the box and the selection line, their logo grey #d9d9d9
-    for the mark. No cream, no indigo turns, no purple glow (removed, it read as the AI default).
-12. **New design language.** Their site is centred text over photos under a navy overlay, with pill buttons and an
-    accordion. This is a dark stage, their mark as an object at full width, a live lock, and a scroll that opens it.
-13. **Every photo and film.** All theirs. The lid and the packed box from their LinkedIn (10 Jul and 31 Aug posts). The
-    clear box in the packed photo carries "LOCKABOX" embossed (a supplier mark), softened in that one patch, noted for
-    the handover. Their website images are AI edits (Firefly, ChatGPT, research/media.json) and aren't used. The red
-    diamond on the strap lock (a TSA mark) is in no photo used.
-14. **check-build.** Passes, see the first look run. No italic halves, kickers, pills, chips, arrows, soft shadow cards,
-    marquees or count ups. First screen 98% their mark or the light layer at both sizes.
+10. **Type.** Fraunces (variable, SIL OFL, licence in site/fonts) for the voice, roman only, no italic halves, at opsz
+    144 with the SOFT axis up. A serif voice because the field sets one. The hosts' premium world, Kip Hideaways in
+    Argent CF, Unplugged in Quincy CF, Plum Guide in Domaine Display, Canopy & Stars in Cira Serif. The best boxed mystery
+    and immersive brands, Mysterious Package Company in Newsreader, Punchdrunk in Scotch Display (references.md B, all
+    rendered 1 Nov). And their own headline face is Cooper Black, a 1970s soft serif, which Fraunces descends from in
+    spirit. Mona Sans for the reading text, Fragment Mono only for codes and prices.
+11. **Colour script.** Graded like a heist film. Teal in the shadows (#061417 to #0d2a2b), copper light (#c8743f,
+    #e9955a, #ffc48a) as a lamp behind their pieces that leans toward the pointer, a cold teal rim from the night
+    outside, cream (#f4ead8) for the words. Then black teal for the torch, warming to copper when the lights come up.
+    Their navy and red are gone from the page, their logo keeps its own colours on the product.
+12. **New design language.** Their site is centred text over photos under a navy overlay. This is a lit still life
+    of their real objects and a cinematic torch through their real photos.
+13. **Every photo.** All theirs, from their LinkedIn posts and video (media.json). The clear box's "LOCKABOX" supplier
+    emboss softened in the inside photo, both sizes. Their website images are AI edits and aren't used.
+14. **check-build.** Passes, one expected warning, the serif voice, answered in line 10.
 
 ## D. Honest notes before Raka looks
 
 - The weakest part is the photo inside the box. It's a phone shot of grey plastic on a carpet, the only real top down
   photo they have. It reads true, not glossy. A new photo from Owen would lift it most.
-- The lid swing is a flat plane turning, it reads as a lid opening but it isn't a 3D box.
+- Their photos are phone shots, the torch scenes are upscaled 1.25 to 2 times and kept dark with grain, which hides it. New photos from Owen would lift the build most.
 - The economics are honest. One cottage renting loses money at the sourced defaults, so the hero leads with park lodges
   (£140 a month after rent, an estimate) and shows one cottage as "18 months to pay off a £350 box".
 - Owen asked publicly for a new website on 29 Sep and later said he'd found someone (social.md). This sketch competes.

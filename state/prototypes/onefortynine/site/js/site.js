@@ -8,6 +8,7 @@
   var seg = function (p, a, b) { return clamp((p - a) / (b - a), 0, 1); };
   var ease = function (t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
   var lerp = function (a, b, t) { return a + (b - a) * t; };
+  var PH = function () { return innerWidth < 760; };
 
   /* ---------- the one state, and what it earns ---------- */
   // Every default is in research/calculator.md with its source. All of it is an estimate and the page says so.
@@ -27,224 +28,183 @@
     else {
       var month = t.units * t.stays * t.share * t.price, net = month - RENT;
       if (net > 0.5) { big = money(net); unit = 'a month to you,<br>after the £60 rent'; }
-      else { var m = Math.ceil(BUY / month); big = m + ' months'; unit = 'to pay off a £350 box,<br>then about ' + money(month) + ' a month'; }
+      else { big = Math.ceil(BUY / month) + ' months'; unit = 'to pay off a £350 box,<br>then about ' + money(month) + ' a month'; }
     }
     $('[data-o="big"]').textContent = big;
     $('[data-o="unit"]').innerHTML = unit;
     $('[data-o="why"]').textContent = t.why;
     var cta = $('[data-hero-cta]');
-    if (cta) { cta.textContent = t.team ? 'Book a 15 minute call' : 'Order a box'; cta.setAttribute('href', t.team ? '#call' : '#order'); }
+    cta.textContent = t.team ? 'Book a 15 minute call' : 'Order a box';
+    cta.setAttribute('href', t.team ? '#call' : '#order');
   }
-
-  /* ---------- what do you run, the drum ---------- */
   var drumIn = $('[data-drum-in]');
   function placeDrum() {
     var radios = $$('input', drumIn), i = radios.findIndex(function (r) { return r.checked; });
-    var lab = $('label', drumIn), h = lab ? lab.getBoundingClientRect().height : 44;
+    var lab = $('label', drumIn), h = lab ? lab.getBoundingClientRect().height : 34;
     drumIn.style.transform = 'translateY(' + (-(i * h) - h / 2) + 'px)';
-    $$('label', drumIn).forEach(function (l, k) { var d = Math.abs(k - i); l.style.opacity = d === 0 ? 1 : d === 1 ? .62 : .3; });
+    $$('label', drumIn).forEach(function (l, k) { var d = Math.abs(k - i); l.style.opacity = d === 0 ? 1 : d === 1 ? .6 : .28; });
   }
   drumIn.addEventListener('change', function (e) { state.run = e.target.value; placeDrum(); render(); });
   placeDrum(); render();
 
-  /* ---------- the lock wheels, rolling to 1 4 9 ---------- */
-  var strips = $$('[data-strip]');
-  var wheelH = 100;
-  strips.forEach(function (s) { var h = ''; for (var k = 0; k < 30; k++) h += '<span>' + (k % 10) + '</span>'; s.innerHTML = h; });
-  function sizeWheels() {
-    var w = $('.wheel'); if (!w) return;
-    wheelH = w.getBoundingClientRect().height;
-    strips.forEach(function (s) { s.style.setProperty('--wh', wheelH + 'px'); s.style.transform = 'translateY(' + (-(s._pos || 0) * wheelH) + 'px)'; });
-  }
-  function setPos(s, pos) { s._pos = pos; s.style.transform = 'translateY(' + (-pos * wheelH) + 'px)'; }
-  var mark = $('[data-mark]');
-  var unlockedAt = 0;
-  function spin() {
-    var t0 = performance.now();
-    var plan = strips.map(function (s, i) {
-      var target = 20 + (+s.getAttribute('data-strip'));
-      return { s: s, from: 3 + Math.floor(Math.random() * 7), to: target, dur: 1250 + i * 420, delay: 250 + i * 120 };
-    });
-    (function frame(now) {
-      var done = 0;
-      plan.forEach(function (q) {
-        var t = clamp((now - t0 - q.delay) / q.dur, 0, 1);
-        // a heavy wheel, fast then settling with one small kick past the number and back
-        var e = t < 1 ? 1 - Math.pow(1 - t, 3) : 1;
-        var kick = t > .82 && t < 1 ? Math.sin((t - .82) / .18 * Math.PI) * .09 : 0;
-        setPos(q.s, lerp(q.from, q.to, e) + kick);
-        if (t >= 1) done++;
-      });
-      if (done < plan.length) requestAnimationFrame(frame);
-      else { mark.classList.add('open'); unlockedAt = performance.now(); }
-    })(t0);
-  }
+  /* ---------- pointer, eased ---------- */
+  var ptr = { x: .5, y: .5, tx: .5, ty: .5, on: false };
+  window.addEventListener('pointermove', function (e) { if (e.pointerType === 'touch') return; ptr.tx = e.clientX / innerWidth; ptr.ty = e.clientY / innerHeight; ptr.on = true; }, { passive: true });
 
-  /* ---------- light, red lasers in the dark and warm light from the box ---------- */
-  var cv = $('#lasers'), ctx = cv.getContext('2d');
-  var W = 0, H = 0, DPR = 1, beams = [], dust = [], warm = { x: 0, y: 0, i: 0, r: 300 }, laserI = 1;
+  /* ---------- the light, a studio sweep in copper over teal ---------- */
+  var cv = $('#light'), ctx = cv.getContext('2d');
+  var W = 0, H = 0, DPR = 1, motes = [], lightI = 1;
   function resize() {
     DPR = Math.min(window.devicePixelRatio || 1, 1.5);
     W = cv.clientWidth; H = cv.clientHeight;
     cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    var n = W < 760 ? 5 : 7;
-    beams = [];
-    for (var i = 0; i < n; i++) {
-      var left = i % 2 === 0;
-      beams.push({
-        x: left ? -20 : W + 20,
-        y: H * (.18 + .7 * ((i * .37) % 1)),
-        a: (left ? 0 : Math.PI) + (left ? 1 : -1) * (-.42 + .84 * ((i * .61) % 1)),
-        amp: .05 + .07 * ((i * .29) % 1),
-        sp: .00009 + .00006 * ((i * .43) % 1),
-        ph: i * 1.7,
-        off: .08 + i * (.16 / n)
-      });
-    }
-    dust = [];
-    var m = Math.round(W * H / 9000);
-    for (var k = 0; k < m; k++) dust.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .07, vy: -.02 - Math.random() * .06, r: .5 + Math.random() * 1.3, tw: Math.random() * 6.28 });
-    sizeWheels();
-  }
-  function beamLine(b, t) {
-    var a = b.a + Math.sin(t * b.sp + b.ph) * b.amp;
-    return { x: b.x, y: b.y, dx: Math.cos(a), dy: Math.sin(a) };
+    motes = [];
+    var m = Math.round(W * H / 11000);
+    for (var k = 0; k < m; k++) motes.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .08, vy: -.03 - Math.random() * .07, r: .6 + Math.random() * 1.4, tw: Math.random() * 6.28 });
   }
   function draw(t) {
-    ctx.clearRect(0, 0, W, H);
-    // the room, a navy night that is darker at the edges and lit low where the beams cross
-    var g = ctx.createRadialGradient(W * .5, H * .78, 0, W * .5, H * .78, Math.max(W, H) * .8);
-    g.addColorStop(0, 'rgba(15,4,66,1)'); g.addColorStop(.5, 'rgba(8,1,44,1)'); g.addColorStop(1, 'rgba(3,0,22,1)');
+    var g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, '#04100f'); g.addColorStop(.55, '#0a2226'); g.addColorStop(1, '#0d2a2b');
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-    // the warm light out of the box, painted as amber over the dark, never added onto the navy (that reads mauve)
-    if (warm.i > .01) {
-      var wg = ctx.createRadialGradient(warm.x, warm.y, 0, warm.x, warm.y, warm.r);
-      wg.addColorStop(0, 'rgba(196,108,48,' + (.5 * warm.i) + ')'); wg.addColorStop(.4, 'rgba(120,52,22,' + (.3 * warm.i) + ')'); wg.addColorStop(1, 'rgba(60,20,10,0)');
-      ctx.fillStyle = wg; ctx.fillRect(0, 0, W, H);
-    }
+    // the copper pool, a lamp behind the pieces that leans toward the pointer and breathes
+    var px = W * (PH() ? .55 : .7) + (ptr.x - .5) * W * .12, py = H * (PH() ? .55 : .62) + (ptr.y - .5) * H * .1;
+    var br = Math.max(W, H) * (.58 + .03 * Math.sin(t * .0007));
+    var c = ctx.createRadialGradient(px, py, 0, px, py, br);
+    c.addColorStop(0, 'rgba(246,168,98,' + (.9 * lightI) + ')');
+    c.addColorStop(.18, 'rgba(214,120,62,' + (.72 * lightI) + ')');
+    c.addColorStop(.42, 'rgba(140,60,32,' + (.42 * lightI) + ')');
+    c.addColorStop(.7, 'rgba(60,26,20,' + (.2 * lightI) + ')');
+    c.addColorStop(1, 'rgba(20,12,10,0)');
+    ctx.fillStyle = c; ctx.fillRect(0, 0, W, H);
+    // a cold rim from the top left, the teal of the night outside
+    var rim = ctx.createRadialGradient(W * .08, -H * .1, 0, W * .08, -H * .1, Math.max(W, H) * .75);
+    rim.addColorStop(0, 'rgba(64,158,150,' + (.42 * lightI) + ')'); rim.addColorStop(1, 'rgba(47,116,113,0)');
+    ctx.fillStyle = rim; ctx.fillRect(0, 0, W, H);
+    // a floor line under the pieces, where the light lands
+    var fl = ctx.createRadialGradient(px, H * .98, 0, px, H * .98, W * .55);
+    fl.addColorStop(0, 'rgba(255,196,138,' + (.16 * lightI) + ')'); fl.addColorStop(1, 'rgba(255,196,138,0)');
+    ctx.fillStyle = fl; ctx.fillRect(0, 0, W, H);
     ctx.globalCompositeOperation = 'lighter';
-    var lines = [];
-    if (laserI > .02) {
-      var L = Math.hypot(W, H) * 1.2;
-      lines = [];
-      beams.forEach(function (b, i) {
-        var l = beamLine(b, t);
-        var x2 = l.x + l.dx * L, y2 = l.y + l.dy * L;
-        var k = 1 - seg(prog, b.off, b.off + .018);
-        if (k <= 0) return;
-        if (k < 1) k *= Math.random() > .45 ? 1 : .15;
-        var flick = (.85 + .15 * Math.sin(t * .011 + i * 2.1)) * k;
-        lines.push(l);
-        [[16, .022], [6, .06], [2.2, .2], [.9, .85]].forEach(function (p) {
-          ctx.strokeStyle = 'rgba(255,' + (p[0] < 2 ? 70 : 32) + ',' + (p[0] < 2 ? 60 : 40) + ',' + (p[1] * laserI * flick) + ')';
-          ctx.lineWidth = p[0]; ctx.beginPath(); ctx.moveTo(l.x, l.y); ctx.lineTo(x2, y2); ctx.stroke();
-        });
-      });
-    }
-    // dust in the air, it catches the red where it crosses a beam and the amber near the box
-    for (var k = 0; k < dust.length; k++) {
-      var d = dust[k];
+    for (var k = 0; k < motes.length; k++) {
+      var d = motes[k];
       if (!RM) { d.x += d.vx; d.y += d.vy; if (d.y < -4) { d.y = H + 4; d.x = Math.random() * W; } if (d.x < -4) d.x = W + 4; if (d.x > W + 4) d.x = -4; }
-      var red = 0;
-      for (var j = 0; j < lines.length; j++) {
-        var l2 = lines[j], px = d.x - l2.x, py = d.y - l2.y, dist = Math.abs(px * l2.dy - py * l2.dx);
-        if (dist < 18) red = Math.max(red, 1 - dist / 18);
-      }
-      var wd = warm.i > .01 ? Math.max(0, 1 - Math.hypot(d.x - warm.x, d.y - warm.y) / (warm.r * .9)) * warm.i : 0;
-      var base = .1 + .06 * Math.sin(t * .002 + d.tw);
-      if (red > 0) { ctx.fillStyle = 'rgba(255,90,80,' + (base + red * .8 * laserI) + ')'; ctx.beginPath(); ctx.arc(d.x, d.y, d.r * (1 + red), 0, 6.283); ctx.fill(); }
-      if (wd > 0) { ctx.fillStyle = 'rgba(255,205,150,' + (wd * .8) + ')'; ctx.beginPath(); ctx.arc(d.x, d.y, d.r * 1.3, 0, 6.283); ctx.fill(); }
-      if (red === 0 && wd === 0) { ctx.fillStyle = 'rgba(200,195,235,' + base + ')'; ctx.fillRect(d.x, d.y, d.r, d.r); }
-    }
-    // the moment the third wheel lands, light leaks out of the lock
-    if (unlockedAt) {
-      var age = (performance.now() - unlockedAt) / 1000;
-      if (age < 2.6) {
-        var o = $('[data-ring]').getBoundingClientRect(), cx = o.left + o.width / 2, cy = o.top + o.height / 2;
-        var pulse = Math.sin(clamp(age / 2.6, 0, 1) * Math.PI) * (1 - seg(prog, 0, .1));
-        var pg = ctx.createRadialGradient(cx, cy, 0, cx, cy, o.width * 1.1);
-        pg.addColorStop(0, 'rgba(196,108,48,' + (.55 * pulse) + ')'); pg.addColorStop(.5, 'rgba(110,46,20,' + (.25 * pulse) + ')'); pg.addColorStop(1, 'rgba(60,20,10,0)');
-        ctx.globalCompositeOperation = 'source-over'; ctx.fillStyle = pg; ctx.fillRect(0, 0, W, H);
-      }
+      var near = Math.max(0, 1 - Math.hypot(d.x - px, d.y - py) / (br * .8));
+      var a = (.05 + .05 * Math.sin(t * .002 + d.tw) + near * .5) * lightI;
+      ctx.fillStyle = 'rgba(255,205,160,' + a + ')';
+      ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, 6.283); ctx.fill();
     }
     ctx.globalCompositeOperation = 'source-over';
   }
 
-  /* ---------- the scroll, the lock opens into their own box ---------- */
-  var scene = $('[data-scene]'), stage = $('.stage', scene), copy = $('[data-copy]');
-  var mb = $('[data-mb]'), mx = $('[data-mx]'), ring = $('[data-ring]'), top = $('[data-top]'), bot = $('[data-bot]'), wheels = $('[data-wheels]');
-  var box = $('[data-box]'), lid = $('[data-lid]'), spill = $('[data-spill]');
-  var lineEls = $$('[data-line]'), bar = $('[data-bar]'), hdr = $('[data-hdr]');
-  var prog = 0;
-  function target() {
-    var vw = innerWidth, vh = innerHeight, ph = vw < 760;
-    var tw = ph ? vw * .86 : Math.min(vw * .5, vh * .6 * 1.364);
-    return { w: tw, h: tw / 1.364, cx: ph ? vw / 2 : vw * .63, cy: ph ? vh * .34 : vh * .53 };
+  /* ---------- the still life, their pieces arrive and float ---------- */
+  var hero = $('[data-hero]'), objs = $$('[data-obj]'), title = $('[data-title]'), band = $('[data-band]');
+  var born = 0;
+  objs.forEach(function (o, i) { o._d = +o.getAttribute('data-d'); o._r = +o.getAttribute('data-r'); o._ph = i * 1.9; });
+  function arrive() {
+    born = performance.now();
+    if (RM) return;
+    $$('.t-big .w', title).forEach(function (w, i) {
+      w.animate([{ transform: 'translateY(.7em)', opacity: 0, filter: 'blur(10px)' }, { transform: 'none', opacity: 1, filter: 'blur(0)' }],
+        { duration: 1100, delay: 180 + i * 140, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
+    });
+    $('.t-small', title).animate([{ opacity: 0 }, { opacity: 1 }], { duration: 900, delay: 80, fill: 'backwards' });
+    band.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 900, delay: 700, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
   }
-  function layoutScene() {
-    var r = scene.getBoundingClientRect(), span = scene.offsetHeight - innerHeight;
-    prog = clamp(-r.top / span, 0, 1);
-    var p = prog, T = target();
-    // the copy leaves first
-    var pc = ease(seg(p, .015, .13));
-    copy.style.opacity = 1 - pc; copy.style.transform = 'translateY(' + (-70 * pc) + 'px)';
-    copy.style.visibility = pc > .99 ? 'hidden' : '';
-    // B and X walk off, the O comes to the middle and grows into the lid
-    var pm = ease(seg(p, .03, .27));
-    mb.style.transform = 'translateX(' + (-620 * pm) + 'px)'; mb.style.opacity = 1 - seg(p, .04, .2);
-    mx.style.transform = 'translateX(' + (620 * pm) + 'px)'; mx.style.opacity = 1 - seg(p, .04, .2);
-    var po = ease(seg(p, .06, .2));
-    top.style.transform = 'translateY(' + (-46 * po) + 'px)'; bot.style.transform = 'translateY(' + (46 * po) + 'px)';
-    top.style.opacity = bot.style.opacity = 1 - seg(p, .14, .24);
-    var rw = lerp(335, 489.7, pm); ring.setAttribute('width', rw); ring.setAttribute('x', 592 - rw / 2);
-    var mr = mark.getBoundingClientRect(), base = mr.width / (mark._s || 1);
-    var ppu = base / 1142, s = lerp(1, T.w / ((489.7 + 23) * ppu), pm);
-    // where the O's centre sits before any transform
-    var ox = (mark._l0 + (592 - 44) * ppu), oy = (mark._t0 + (710 - 509) * ppu);
-    var dx = lerp(0, T.cx - ox, pm), dy = lerp(0, T.cy - oy, pm);
-    mark._s = s;
-    mark.style.transform = 'translateX(-50%) translate(' + dx + 'px,' + dy + 'px) scale(' + s + ')';
-    mark.style.transformOrigin = ((592 - 44) / 1142 * 100) + '% ' + ((710 - 509) / 402 * 100) + '%';
-    wheels.style.opacity = 1 - seg(p, .2, .27);
-    ring.style.opacity = 1 - seg(p, .25, .31);
-    // the real box takes the O's place, then the lid swings up and the light comes out
-    box.style.left = (T.cx - T.w / 2) + 'px'; box.style.top = (T.cy - T.h / 2) + 'px';
-    box.style.width = T.w + 'px'; box.style.height = T.h + 'px';
-    var pb = seg(p, .22, .3);
-    var pl = ease(seg(p, .36, .58));
-    var pz = ease(seg(p, .58, .84));
-    box.style.opacity = pb;
-    box.style.transform = 'scale(' + lerp(1, innerWidth < 760 ? 1.06 : 1.16, pz) + ')';
-    lid.style.transform = 'rotateX(' + (82 * pl) + 'deg) translateZ(' + (40 * pl) + 'px)';
-    lid.style.opacity = 1 - seg(p, .5, .6);
-    spill.style.opacity = Math.min(1, seg(p, .38, .5)) * (1 - .4 * pz);
-    // the words that go with each beat
-    var l0 = seg(p, .19, .24) * (1 - seg(p, .33, .38)), l1 = seg(p, .52, .6);
-    lineEls[0].style.opacity = l0; lineEls[0].style.transform = (innerWidth < 760 ? '' : 'translateY(-50%) ') + 'translateY(' + (24 * (1 - seg(p, .19, .24)) - 24 * seg(p, .33, .38)) + 'px)';
-    lineEls[1].style.opacity = l1; lineEls[1].style.transform = (innerWidth < 760 ? '' : 'translateY(-50%) ') + 'translateY(' + (24 * (1 - l1)) + 'px)';
-    // light, the lasers go down as the box opens and the warm light comes up
-    laserI = 1 - .7 * seg(p, .1, .32);
-    warm.x = T.cx; warm.y = T.cy - T.h * .1; warm.r = T.w * .95; warm.i = seg(p, .38, .52) * (1 - .3 * pz);
-    bar.classList.toggle('on', p > .1);
-    hdr.classList.toggle('solid', p > .985 || r.bottom < innerHeight);
+  function placeObjs(t) {
+    var r = hero.getBoundingClientRect(), p = clamp(-r.top / Math.max(1, r.height), 0, 1);
+    var age = RM ? 9 : (performance.now() - born) / 1000;
+    objs.forEach(function (o, i) {
+      var inT = RM ? 1 : ease(clamp((age - .15 - i * .18) / 1.3, 0, 1));
+      var bob = RM ? 0 : Math.sin(t * .0009 + o._ph) * 9 * o._d;
+      var sway = RM ? 0 : Math.sin(t * .0006 + o._ph) * 1.3;
+      var mx = (ptr.x - .5) * -34 * o._d, my = (ptr.y - .5) * -24 * o._d;
+      var out = ease(p);
+      var dir = i === 1 ? -1 : 1;
+      var tx = mx + dir * out * 140 * o._d;
+      var ty = my + bob + (1 - inT) * 90 * o._d - out * 260 * o._d;
+      var rot = o._r + sway + (1 - inT) * o._r * 1.6 + out * o._r * 2.2;
+      var sc = lerp(1.18, 1, inT) + out * .12 * o._d;
+      o.style.transform = 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0) rotate(' + rot.toFixed(2) + 'deg) scale(' + sc.toFixed(3) + ')';
+      o.style.opacity = inT * (1 - seg(p, .55, .9));
+      o.style.filter = inT < 1 ? 'blur(' + ((1 - inT) * 12).toFixed(1) + 'px)' : '';
+    });
+    if (!PH()) {
+      title.style.transform = 'translateY(' + (-p * 120) + 'px)';
+      title.style.opacity = 1 - seg(p, .35, .8);
+      band.style.opacity = 1 - seg(p, .15, .5);
+    }
   }
-  function measureMark() {
-    mark.style.transform = 'translateX(-50%)';
-    var r = mark.getBoundingClientRect(); mark._l0 = r.left; mark._t0 = r.top; mark._s = 1;
+
+  /* ---------- the torch, their own photos found in the dark ---------- */
+  var torch = $('[data-torch]'), tstage = $('.t-stage', torch), scenes = $$('[data-scene]', torch), caps = $$('[data-cap]', torch);
+  var countEl = $('[data-o="count"]'), bar = $('[data-bar]'), hdr = $('[data-hdr]');
+  // where the torch looks in each picture, in screen fractions, from the pieces in each photo
+  var PATHS = [
+    [[.16, .78], [.36, .52], [.56, .36], [.6, .4]],
+    [[.56, .44], [.64, .58], [.74, .5], [.58, .22]],
+    [[.24, .3], [.36, .62], [.58, .74], [.74, .56]],
+    [[.18, .42], [.42, .44], [.7, .46], [.6, .5]]
+  ];
+  var PATHS_PH = [
+    [[.2, .62], [.5, .42], [.55, .32], [.5, .36]],
+    [[.3, .48], [.5, .52], [.6, .44], [.5, .3]],
+    [[.32, .26], [.45, .5], [.55, .6], [.5, .48]],
+    [[.3, .36], [.6, .4], [.55, .42], [.5, .45]]
+  ];
+  function along(path, q) {
+    var n = path.length - 1, f = clamp(q, 0, 1) * n, i = Math.min(n - 1, Math.floor(f)), u = ease(f - i);
+    return [lerp(path[i][0], path[i + 1][0], u), lerp(path[i][1], path[i + 1][1], u)];
+  }
+  function placeTorch() {
+    var hr0 = hero.getBoundingClientRect(), heroOut = seg(-hr0.top / hr0.height, .45, .95);
+    tstage.style.setProperty('--on', heroOut.toFixed(3));
+    var r = torch.getBoundingClientRect(), span = torch.offsetHeight - innerHeight;
+    var p = clamp(-r.top / span, 0, 1), n = scenes.length;
+    var f = p * n, idx = Math.min(n - 1, Math.floor(f)), q = f - idx;
+    var last = idx === n - 1;
+    var R0 = PH() ? innerWidth * .46 : Math.min(innerWidth, innerHeight) * .34;
+    var on = seg(q, .02, .14), off = last ? 0 : seg(q, .84, .98);
+    var flick = (on > 0 && on < 1 && !RM) ? (Math.random() > .3 ? 1 : .35) : 1;
+    var rad = R0 * ease(on) * (1 - ease(off)) * flick;
+    if (last) rad = lerp(rad, Math.hypot(innerWidth, innerHeight) * 1.1, ease(seg(q, .55, .9)));
+    var path = (PH() ? PATHS_PH : PATHS)[idx], pos = along(path, seg(q, .1, .86));
+    var nx = ptr.on && !PH() ? (ptr.x - .5) * .12 : 0, ny = ptr.on && !PH() ? (ptr.y - .5) * .1 : 0;
+    tstage.style.setProperty('--tx', ((pos[0] + nx) * 100).toFixed(2) + '%');
+    tstage.style.setProperty('--ty', ((pos[1] + ny) * 100).toFixed(2) + '%');
+    tstage.style.setProperty('--tr', rad.toFixed(1) + 'px');
+    scenes.forEach(function (s, i) {
+      var o = 0;
+      if (i === idx) o = seg(q, 0, .06) * (last ? 1 : 1 - seg(q, .94, 1));
+      if (i === 0 && idx === 0) o = Math.max(o, heroOut);
+      s.style.opacity = o;
+    });
+    caps.forEach(function (c, i) {
+      var o = i === idx ? seg(q, .1, .2) * (last ? 1 : 1 - seg(q, .8, .9)) : 0;
+      c.style.opacity = o;
+      c.style.transform = 'translateY(' + ((1 - o) * 26) + 'px)';
+      c.style.visibility = o < .02 ? 'hidden' : '';
+    });
+    countEl.textContent = '0' + (idx + 1);
+    // the studio light goes down as the torch comes on
+    var hr = hero.getBoundingClientRect();
+    lightI = 1 - .85 * clamp(-hr.top / hr.height, 0, 1);
+    bar.classList.toggle('on', -hr.top > hr.height * .35);
+    hdr.classList.toggle('solid', -hr.top > 10);
   }
 
   /* ---------- start ---------- */
-  function onResize() { resize(); measureMark(); placeDrum(); layoutScene(); }
+  function onResize() { resize(); placeDrum(); }
   window.addEventListener('resize', onResize);
-  window.addEventListener('scroll', layoutScene, { passive: true });
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { placeDrum(); sizeWheels(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(placeDrum);
   onResize();
-  if (RM) { strips.forEach(function (s) { setPos(s, 20 + (+s.getAttribute('data-strip'))); }); mark.classList.add('open'); draw(0); }
-  else {
-    strips.forEach(function (s) { setPos(s, 3); });
-    spin();
-    (function loop(t) { draw(t); requestAnimationFrame(loop); })(0);
+  arrive();
+  function frame(t) {
+    ptr.x = lerp(ptr.x, ptr.tx, .06); ptr.y = lerp(ptr.y, ptr.ty, .06);
+    draw(t); placeObjs(t); placeTorch();
+    if (!RM) requestAnimationFrame(frame);
   }
-  window.__ofn = { state: state, render: render, prog: function () { return prog; } };
+  if (RM) { frame(0); window.addEventListener('scroll', function () { frame(0); }, { passive: true }); }
+  else requestAnimationFrame(frame);
+  window.__ofn = { state: state, render: render };
 })();
