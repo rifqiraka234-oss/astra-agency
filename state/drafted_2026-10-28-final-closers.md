@@ -31,6 +31,7 @@ already due, Thu 15 (the 5 Thursday bumps take the rest), Fri 16 (the 4 Friday n
 - Batch 3, Sat 31 Oct, 10. William M. ctc_icT5oEajhtmH6dcAd, Muhammad Akbar ctc_9yfzLTQP9ehdYKdY6, Cédric Morel ctc_wsqBdgSdjP6P6Yxvw, Emmanuel Rivière ctc_bF7KcGsTjT23mo3ye, Bartek Ogonowski ctc_3fSkB4dv38ScfzXkH, Bouils Stéphane ctc_xvsocGv6PaJCDrgxs, David Brauman ctc_n3rxAxdmtuJpgW8NH, Emily R. ctc_rMYGbmu7Piu5Pmwei, Laurent Fournié ctc_e5TddBr53qxiLyida, Léo Grandperrin ctc_biurQgp9YgReZKtL9
   SENT 31 Oct, one copy each, William 05.01.41 act_cMod8FumumjzgQbG8, Muhammad 05.02.00 act_jXiHQoXd2pxhMgiqk, Cédric 05.02.18 act_sETw5pqfAYh5X3R3w, Emmanuel 05.02.35 act_vpsW5yzkEM623h653, Bartek 05.02.53 act_u38neEKYP3ccTnDmY, Stéphane 05.03.10 act_PQbHYaZ6zLr5jwJd5, David 05.03.28 act_mm2GyuNAmwqck66Ss, Emily 05.03.45 act_Tfqe9SZY6sFGE4TRX, Laurent 05.04.03 act_TvbRakT4GWHmNA8qu, Léo 05.04.21 act_HDir6WkhAd6X5iSv8.
 - Batch 4, Sun 1 Nov, 10. Vincent Bucaille ctc_xtQnzSvvms6TEoAxS, Frank Hemmert ctc_CLQ5T3DEaeG2SMG9d, Jamie Bolding ctc_4XQDxYiE3NkeqKPEy, Nicolas Bergé ctc_mQBx2Mr64rqs7v4Qu, Robin Conway ctc_7hNbkAjk4urRmcjji, Thomas Hebenstreit ctc_3S2rDnBX9W5hd3F8G, Thomas Langlet ctc_vp6dPpiBHosd9oW78, Victor Felipe Florenz ctc_CFbKYC6c3yM6MrcAP, Dan Waterfall-Chapman ctc_eGXerDBzTghqprWZh, Jean-Christophe Conticello ctc_iWGMxjeTYkzegg78v
+  SENT 1 Nov, one copy each, Vincent 05.02.09 act_5EsrCnSA4rSKfZTwh, Frank 05.02.27 act_fg4NdvEr6LSNG5ju5, Jamie 05.02.45 act_DALzy6puR5dvLjpzj, Nicolas 05.03.03 act_rzisebxrG5cCo5gyf, Robin 05.03.20 act_3zrPgFJPxQ3dZLEoP, Thomas 05.03.37 act_BG52C7vrXTRvPDfzH, Thomas 05.03.55 act_vH4Tsai2S8wbF36j3, Victor 05.04.13 act_6z8Wg977htqE4CuD6, Dan 05.04.31 act_LnLWDciWqLBhwCNuw, Jean-Christophe 05.04.49 act_AYvddLxjRiNZPWR9K.
 - Batch 5, Mon 2 Nov, 10. Niklas Mocker ctc_Wg9Bv7Z7vMqpNQx78, Orion D. ctc_JiMGgwH639YbSSZfE, Darren Buckley ctc_q5NZMCjRn6NgvuQbT, Fabian Mader ctc_vHXN93Sa98zrL6roG, Marjolein Schoot Uiterkamp ctc_vmg2iAtNxvpSW7d93, Reno Wiertz ctc_F57ZqzDSwGEB8ad8H, Martijn Dijk ctc_Z3J4EAKarueohCqxj, Alex Talbot ctc_XDRJdGuNAsHxttMmv, Alexandre Francois ctc_5N8eTkQMH9tMYswtK, Alice Poubelle ctc_PLeDim4Mhp2CtQyiu
 - Batch 6, Tue 3 Nov, 10. Andres Jara ctc_bWcfiNE764D4PfGJt, Charles De Brosses ctc_vHnigB2dXAPYKJJ8k, Dan D'souza ctc_ZSXZCGSgniBKAESgP, David Weyn ctc_vm6BXBrFDAir6Rb3F, Joe Benucci ctc_i3GAp7FZtMeQ38KAX, Maharjan Jagdees ctc_2zdt5XmnTSPqWvhJC, Paul Barnes ctc_wRuu8puzBRRBgNCyC, Rachel Blanckensee ctc_G8gRt44CmSG6Rpdnu, Sacko Diombera ctc_kLF4aRGsEdBZvNruG, Sandro Wulf ctc_YF6GhP26nDSvRyPZR
 - Batch 7, Wed 4 Nov, 7. Claire Enders ctc_sQPTmkW8KGwkediDD, Guillaume Slee ctc_mG6iR58sQQAXKgKEk, Kevin Hanson ctc_BAsKeiWpJiTEmbqfz, Rob Quinn ctc_k6YrDTTW2zZ3MhxB3, Sonny Wells ctc_BY3K7TQYXkrRDydck, Jean-Charles Chemin ctc_eD2TwrqAxJEP8WbyQ, Sandra Deddens-Otterspeer ctc_fpRF7TPZGkTAKwvTL
@@ -226,91 +227,61 @@ newer queue row, means don't send and tell Raka. Copy from this file, confirm on
 
 > Opener 2026-10-06, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the privacy safe Melba website looks like?"
 
-CLOSER
-```
-Vincent, I'm going to close it here. If you ever want to see the privacy safe Melba website, you know where to find me.
-```
+> SENT 1 Nov 05.02.09 UTC, act_5EsrCnSA4rSKfZTwh, batch 4. Text sent, "Vincent, I'm going to close it here. If you ever want to see the privacy safe Melba website, you know where to find me."
 
 ### Frank Hemmert, Hemmert & Narcy GbR, ctc_CLQ5T3DEaeG2SMG9d
 
 > Opener 2026-10-07, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the Baked Instagram that fills your pickup orders looks like?"
 
-CLOSER
-```
-Frank, I'm going to close it here. If you ever want to see the Baked Instagram that fills your pickup orders, you know where to find me.
-```
+> SENT 1 Nov 05.02.27 UTC, act_fg4NdvEr6LSNG5ju5, batch 4. Text sent, "Frank, I'm going to close it here. If you ever want to see the Baked Instagram that fills your pickup orders, you know where to find me."
 
 ### Jamie Bolding, Restless.co, ctc_4XQDxYiE3NkeqKPEy
 
 > Opener 2026-10-07, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the squad that ships your Antenna roadmap looks like?"
 
-CLOSER
-```
-Jamie, I'm going to close it here. If you ever want to see the squad that ships your Antenna roadmap, you know where to find me.
-```
+> SENT 1 Nov 05.02.45 UTC, act_DALzy6puR5dvLjpzj, batch 4. Text sent, "Jamie, I'm going to close it here. If you ever want to see the squad that ships your Antenna roadmap, you know where to find me."
 
 ### Nicolas Bergé, promocash Narbonne, ctc_mQBx2Mr64rqs7v4Qu
 
 > Opener 2026-10-07, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the AI workflow that keeps your restaurants ordering looks like?"
 
-CLOSER
-```
-Nicolas, I'm going to close it here. If you ever want to see the AI workflow that keeps your restaurants ordering, you know where to find me.
-```
+> SENT 1 Nov 05.03.03 UTC, act_rzisebxrG5cCo5gyf, batch 4. Text sent, "Nicolas, I'm going to close it here. If you ever want to see the AI workflow that keeps your restaurants ordering, you know where to find me."
 
 ### Robin Conway, XMP SaaS Ltd, ctc_7hNbkAjk4urRmcjji
 
 > Opener 2026-10-07, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the AI GTM workflow that wins XMP customers looks like?"
 
-CLOSER
-```
-Robin, I'm going to close it here. If you ever want to see the AI GTM workflow that wins XMP customers, you know where to find me.
-```
+> SENT 1 Nov 05.03.20 UTC, act_3zrPgFJPxQ3dZLEoP, batch 4. Text sent, "Robin, I'm going to close it here. If you ever want to see the AI GTM workflow that wins XMP customers, you know where to find me."
 
 ### Thomas Hebenstreit, Sartoria Vienna, ctc_3S2rDnBX9W5hd3F8G
 
 > Opener 2026-10-07, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the AI reorder workflow for measured customers looks like?"
 
-CLOSER
-```
-Thomas, I'm going to close it here. If you ever want to see the AI reorder workflow for measured customers, you know where to find me.
-```
+> SENT 1 Nov 05.03.37 UTC, act_BG52C7vrXTRvPDfzH, batch 4. Text sent, "Thomas, I'm going to close it here. If you ever want to see the AI reorder workflow for measured customers, you know where to find me."
 
 ### Thomas Langlet, Maison Champenoise, ctc_vp6dPpiBHosd9oW78
 
 > Opener 2026-10-07, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the AI sales workflow for more business orders looks like?"
 
-CLOSER
-```
-Thomas, I'm going to close it here. If you ever want to see the AI sales workflow for more business orders, you know where to find me.
-```
+> SENT 1 Nov 05.03.55 UTC, act_vH4Tsai2S8wbF36j3, batch 4. Text sent, "Thomas, I'm going to close it here. If you ever want to see the AI sales workflow for more business orders, you know where to find me."
 
 ### Victor Felipe Florenz, Vaporé Auto Pflege, ctc_CFbKYC6c3yM6MrcAP
 
 > Opener 2026-10-07, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the AI workflow to win more club sales looks like?"
 
-CLOSER
-```
-Victor, I'm going to close it here. If you ever want to see the AI workflow to win more club sales, you know where to find me.
-```
+> SENT 1 Nov 05.04.13 UTC, act_6z8Wg977htqE4CuD6, batch 4. Text sent, "Victor, I'm going to close it here. If you ever want to see the AI workflow to win more club sales, you know where to find me."
 
 ### Dan Waterfall-Chapman, Utee, ctc_eGXerDBzTghqprWZh
 
 > Opener 2026-10-09, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the Utee investor site and AI workflow looks like?"
 
-CLOSER
-```
-Dan, I'm going to close it here. If you ever want to see the Utee investor site and AI workflow, you know where to find me.
-```
+> SENT 1 Nov 05.04.31 UTC, act_LnLWDciWqLBhwCNuw, batch 4. Text sent, "Dan, I'm going to close it here. If you ever want to see the Utee investor site and AI workflow, you know where to find me."
 
 ### Jean-Christophe Conticello, GIANTS, ctc_iWGMxjeTYkzegg78v
 
 > Opener 2026-10-09, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the build squad that delivers your members' roadmaps looks like?"
 
-CLOSER
-```
-Jean-Christophe, I'm going to close it here. If you ever want to see the build squad that delivers your members' roadmaps, you know where to find me.
-```
+> SENT 1 Nov 05.04.49 UTC, act_AYvddLxjRiNZPWR9K, batch 4. Text sent, "Jean-Christophe, I'm going to close it here. If you ever want to see the build squad that delivers your members' roadmaps, you know where to find me."
 
 ### Niklas Mocker, dotega, ctc_Wg9Bv7Z7vMqpNQx78
 
