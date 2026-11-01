@@ -1,5 +1,5 @@
 <!-- GATE ARCHIVED -->
-# Still interested?, for the four who said yes and went quiet after their bump. SCHEDULED Sun 1 Nov 06.39 UTC (07.39 Amsterdam) on Raka's word, NOT SENT YET
+# Still interested?, for the four who said yes and went quiet after their bump. ALL FOUR SENT 1 Nov 06.40 to 06.41 UTC on Raka's word
 
 Raka, 31 Oct ~19.05 UTC, "do we have some people we needa nudge?". These four said yes, got their site and plan, then one
 bump on 28 Oct, and nothing since (3.5 days). They never close on silence and any next message is Raka's, so these are the

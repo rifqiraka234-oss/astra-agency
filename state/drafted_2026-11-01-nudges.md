@@ -1,5 +1,5 @@
 <!-- GATE ARCHIVED -->
-# Sunday 1 Nov nudges, Danielle and Milo. SENT 1 Nov on Raka's word, NOT SENT YET
+# Sunday 1 Nov nudges, Danielle and Milo. BOTH SENT 1 Nov on Raka's word (06.30 and 06.41 UTC)
 
 Raka, 31 Oct ~19.10 UTC, "for milo send smth tomorrow hey what do you think? i can send it to you right now" and "danielle
 also tomorrow morning at 07.30 nudge". Amsterdam is on CET, so 07.30 there is 06.30 UTC and 07.39 is 06.39 UTC. Danielle
