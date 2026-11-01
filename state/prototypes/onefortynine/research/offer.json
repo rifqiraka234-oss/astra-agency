@@ -1,0 +1,384 @@
+{
+ "source": "onefortyninegames.com crawled 2026-11-01 (13 URLs, all 200), LinkedIn company page fetched 2026-11-01 via tools/fetch-walled.py, Companies House 17293756",
+ "items": [
+  {
+   "what": "product name and one line",
+   "value": "Breakout Box, a portable escape room in a lockable cool box",
+   "quote": "A portable escape room experience. in a cool box.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "Raw HTML text. The page renders it as 'A Portable Escape Room Experience.      In A Cool Box.' because the heading style is text-transform capitalize.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "home pitch",
+   "value": "escape room meets unboxing",
+   "quote": "Think escape room meets unboxing.",
+   "url": "https://www.onefortyninegames.com/",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "home pitch, the stakes",
+   "value": "snacks, drinks and treats are locked inside",
+   "quote": "A locked cool box. Real puzzles. Real stakes - because the snacks, drinks and treats inside only open when you crack the codes.",
+   "url": "https://www.onefortyninegames.com/",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "home pitch, no screens",
+   "value": "no screens, face to face",
+   "quote": "No screens, no VR headsets. Just face-to-face teamwork, tension, and that \"yes we did it\" moment as each lock clicks open.",
+   "url": "https://www.onefortyninegames.com/",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "home pitch, modular",
+   "value": "modular, replayable, minimum setup",
+   "quote": "Breakout Box is modular, replayable and built for maximum payoff with minimum setup. The game does the work. The reaction does the marketing.",
+   "url": "https://www.onefortyninegames.com/",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "mechanic",
+   "value": "each solved puzzle unlocks a prop holding drinks or snacks",
+   "quote": "Each puzzle solved unlocks a prop that holds drinks and/or snacks, bringing a new twist to guest experiences.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "revenue model, hire to guests",
+   "value": "host keeps 100% of hire revenue",
+   "quote": "Hire it out to your guests; keep 100% of the revenue.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "'keep 100% of the revenue' is bold on the page.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "revenue model, include in offer",
+   "value": "or bundle it into the existing offer",
+   "quote": "Or, Integrate it into your existing offering, adding value and talking points.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "revenue share",
+   "value": "zero",
+   "quote": "Zero revenue share.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "Inside the 'What do we get?' accordion. The whole accordion answer text renders navy on navy and is invisible, see site-notes.md.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "guest booking",
+   "value": "guests book directly with the host",
+   "quote": "Guests book directly with you.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "Accordion 'What do we get?'",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "host pricing control",
+   "value": "host sets the guest price and what goes in the boxes",
+   "quote": "You set the pricing and the contents for the boxes.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "Accordion 'What do we get?'",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "price the host charges guests",
+   "value": "NOT STATED anywhere on the site or LinkedIn",
+   "quote": null,
+   "url": null,
+   "note": "Gap. No guest hire price, no example per stay figure, no suggested price exists in any of their own pages or posts.",
+   "verified": "absence, see note"
+  },
+  {
+   "what": "price to buy",
+   "value": "from £350 per box, owned outright, no subscription",
+   "quote": "Breakout box is available to purchase from £350 per box - you own the box outright, and there is no ongoing cost or subscription.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "Accordion 'How much does it cost?'. Whether £350 includes VAT is not stated. The footer shows 'VAT Registration No: GB' with no number after GB.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "price to rent",
+   "value": "from £60 per month",
+   "quote": "Flexible rental options to suit your business needs are also available from £60 per month.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "Accordion 'How much does it cost?'",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "minimum rental term",
+   "value": "NOT STATED",
+   "quote": null,
+   "url": null,
+   "note": "Gap. 'Flexible rental options' is the only wording, no term, deposit or notice period.",
+   "verified": "absence, see note"
+  },
+  {
+   "what": "add ons",
+   "value": "extra games and supplies on demand",
+   "quote": "You may wish to purchase additional games, and supplies which are available on demand.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "No prices for these anywhere.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "games per box",
+   "value": "two sets of the latest game, six puzzles",
+   "quote": "Each lockable cool box comes with two sets of our latest game, which includes six separate puzzles.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "Accordion 'What's in the box?'",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "containers",
+   "value": "boxes, cases and bottle top locks to fill",
+   "quote": "Inside the cool box, you will find boxes, cases and bottle top locks, which can be filled with a variety of snacks, drinks or surprises.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "Accordion 'What's in the box?'. LinkedIn photos (31 Aug) show these as a clear lockable box, a black lockable box, an aluminium briefcase with two combination locks and combination bottle locks.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "hints portal",
+   "value": "online portal for hints",
+   "quote": "The game is linked to our easy to use online portal, which gives players hints and tips if they get stuck.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "The portal is the /hints page, not in the site nav.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "starter supplies",
+   "value": "branded note pads, pencils, six reusable branded cups",
+   "quote": "Every order includes a supply of branded note pads, pencils and six re-usable branded cups to get you started, with more supplies available to order.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "game title",
+   "value": "The Heist",
+   "quote": "We shipped out our first orders today and we're delighted to introduce The Heist: our first escape room game.",
+   "url": "https://www.linkedin.com/company/onefortynine-games",
+   "note": "LinkedIn company post dated 2026-09-07. The website never names the game.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "game premise",
+   "value": "break into a secure facility, unlock a series of containers",
+   "quote": "YOU ARE GOING TO BREAK INTO A HIGHLY SECURE FACILITY TO SECURE SOME EXTREMELY VALUABLE GOODS. YOU WILL NEED TO ORGANISE YOUR TEAM, SOLVE THE PUZZLES, AND UNLOCK A SERIES OF CONTAINERS.",
+   "url": "image: media/li-2026-09-07-first-orders-video-720p.mp4 at 11.0s (The Heist card)",
+   "note": "Read off a 720p video frame of the printed card, best reading of small text, not machine verifiable. Not on the website.",
+   "verified": "read from an image or video frame by eye, not machine checked"
+  },
+  {
+   "what": "hints need a phone",
+   "value": "smartphone with internet needed for hints",
+   "quote": "A SMARTPHONE WITH ACCESS TO THE INTERNET IS REQUIRED FOR HINTS",
+   "url": "image: media/li-2026-09-07-first-orders-video-720p.mp4 at 11.0s (The Heist card)",
+   "note": "Read off a low resolution video frame. The QR code on the card could not be decoded.",
+   "verified": "read from an image or video frame by eye, not machine checked"
+  },
+  {
+   "what": "puzzle names",
+   "value": "Entry Point, Laser Maze, Encrypted Message, Guard Patrol Route, EMP Charge, The Vault",
+   "quote": "Puzzle 1 - Entry Point",
+   "url": "https://www.onefortyninegames.com/hints",
+   "note": "The six headings on /hints are 'Puzzle 1 - Entry Point', 'Puzzle 2 - Laser Maze', 'Puzzle 3 - Encrypted Message', 'Puzzle 4 - Guard Patrol Route', 'Puzzle 5 - EMP Charge', 'Puzzle 6 - The Vault'. Each has two or three hints, a walkthrough and the solution code, 25 accordions in all.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "players",
+   "value": "teams of up to six",
+   "quote": "We recommend up 60 - 90 minutes for teams of up to six working together.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "Copied exactly, including their typo 'recommend up'. Accordion 'How does it work for our business?'",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "duration",
+   "value": "60 to 90 minutes",
+   "quote": "We recommend up 60 - 90 minutes for teams of up to six working together.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "ages",
+   "value": "NOT STATED",
+   "quote": null,
+   "url": null,
+   "note": "Gap. Closest is LinkedIn 7 Sep: 'Breakout Box is great fun for couples, groups, families or even pitting team against team.' No age guidance anywhere.",
+   "verified": "absence, see note"
+  },
+  {
+   "what": "audience",
+   "value": "couples, groups, families, teams",
+   "quote": "Breakout Box is great fun for couples, groups, families or even pitting team against team.",
+   "url": "https://www.linkedin.com/company/onefortynine-games",
+   "note": "LinkedIn post 2026-09-07.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "play order",
+   "value": "first puzzle opens the box, the rest in any order",
+   "quote": "Play is flexible, the first puzzle opens the cool box, and the remainder can be solved in any order, one at a time or simultaneously, creating opportunities for team building, timed games, or competition!",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "settings",
+   "value": "hospitality, events, training, team building",
+   "quote": "Breakout Box can be used in a wide range of settings, from hospitality and events, to training and team building.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "portability",
+   "value": "fits in a car boot",
+   "quote": "The box is portable, easy to store and will fit in the boot of a car.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "reset time and staffing",
+   "value": "under 10 minutes setup, no staff",
+   "quote": "Set up takes less than 10 minutes for each use and the session requires no staff involvement, just set it up and let them play!",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "This is the only reset or refill wording. Refills are 'more supplies available to order'.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "reusability",
+   "value": "three options for reusable puzzles",
+   "quote": "So we have worked hard on putting together three options for all our customers. Each option provides a solution and we believe each customer will be happy with at least one of them.",
+   "url": "https://www.linkedin.com/company/onefortynine-games",
+   "note": "LinkedIn post 2026-08-05. The three options are never named.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "support",
+   "value": "product and marketing support, supplies, new games",
+   "quote": "We provide product and marketing support, additional supplies and new game releases",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "training",
+   "value": "30 minute online training",
+   "quote": "We provide a 30 minute online training session.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "delivery",
+   "value": "NOT STATED on the site",
+   "quote": null,
+   "url": null,
+   "note": "Gap. No delivery cost, area or lead time anywhere. LinkedIn only says 'We're getting a couple of boxes packed up ready to be shipped out to a customer.' (2026-08-31) and 'We shipped out our first orders today' (2026-09-07).",
+   "verified": "absence, see note"
+  },
+  {
+   "what": "shipping evidence",
+   "value": "boxes shipped to a customer",
+   "quote": "We're getting a couple of boxes packed up ready to be shipped out to a customer.",
+   "url": "https://www.linkedin.com/company/onefortynine-games",
+   "note": "LinkedIn post 2026-08-31.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "venue outcome claim",
+   "value": "longer stays, higher spend",
+   "quote": "Venues will see longer stays, higher average spend.",
+   "url": "https://www.linkedin.com/company/onefortynine-games",
+   "note": "LinkedIn post 2026-08-11, a claim, no figure behind it.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "margin claim",
+   "value": "host controls margins",
+   "quote": "YOU control the margins.",
+   "url": "https://www.linkedin.com/company/onefortynine-games",
+   "note": "LinkedIn post 2026-08-05.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "no staff claim",
+   "value": "no digital, no AI, no staff",
+   "quote": "No digital. No AI. No staff needed to run it.",
+   "url": "https://www.linkedin.com/company/onefortynine-games",
+   "note": "LinkedIn post 2026-08-11.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "traction",
+   "value": "national holiday park over the October Bank Holiday",
+   "quote": "We are thrilled to announce that we will be seeing Breakout Box in a national holiday park site over the October Bank Holiday.",
+   "url": "https://www.linkedin.com/company/onefortynine-games",
+   "note": "LinkedIn post 2026-09-23. The park is never named, so it cannot be named on our page.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "traction",
+   "value": "negotiating with a leadership training organisation",
+   "quote": "On the same day, we started negotiations with a large Leadership Training organisation about buying Breakout Box.",
+   "url": "https://www.linkedin.com/company/onefortynine-games",
+   "note": "LinkedIn post 2026-09-23, unnamed.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "trade show",
+   "value": "Startup Zone at Land Leisure & Tourism Show",
+   "quote": "Lastly, we'll be showcasing Breakout Box at Land Leisure & Tourism Show in November as well, with a spot in the Startup Zone.",
+   "url": "https://www.linkedin.com/company/onefortynine-games",
+   "note": "Owen Warne's post, reshared by the company page 2026-07-25.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "trade show stand",
+   "value": "NEC Birmingham, 4 to 5 November 2026, stand LLT155",
+   "quote": "Find us on stand LLT155",
+   "url": "image: media/home-email-signature-lltshow.png on https://www.onefortyninegames.com/",
+   "note": "Text inside the banner image on the home page, read by eye. Also in it, 'NEC Birmingham', '4-5 November 2026', 'We're exhibiting at the Land Leisure & Tourism Show!', 'SECURE YOUR FREE PASS'. The show is three days after this research (2026-11-01).",
+   "verified": "read from an image or video frame by eye, not machine checked"
+  },
+  {
+   "what": "call booking action",
+   "value": "15 minute call, a mailto",
+   "quote": "Please use the link to book a 15 minute call to talk about how Breakout Box can generate revenue or add value to your business.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "The link text 'book a 15 minute call' has href mailto:owen@onefortyninegames.com?subject=I'd%20like%20a%2015%20minute%20call%20to%20discuss%20how%20Breakout%20Box%20can%20work%20for%20my%20business . No calendar.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "order action",
+   "value": "order is a mailto",
+   "quote": "If you want to go ahead and get your order started click here.",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "The link text 'click here' has href mailto:owen@onefortyninegames.com?subject=I'd%20like%20to%20order%20Breakout%20Box . No checkout, no form, no price selection. The /shop page is the unedited Squarespace template (six 'Product Name' items at £25.00, one on sale at £20.00) and is not in the nav.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "contact email",
+   "value": "owen@onefortyninegames.com",
+   "quote": "mailto:owen@onefortyninegames.com",
+   "url": "https://www.onefortyninegames.com/breakoutbox",
+   "note": "Taken from the two hrefs in the raw HTML. The address is not printed as text anywhere on the site.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "contact form",
+   "value": "Squarespace form on /contact",
+   "quote": "Drop your information below and we’ll contact you to discuss how Breakout Box can unlock value for your business",
+   "url": "https://www.onefortyninegames.com/contact",
+   "note": "Fields, First Name (required), Last Name (required), Email (required), Company Name, Subject (required), Message (required), button 'Submit'. Heading 'Stock Breakout Box.' / 'Unlock New Sales.'",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  },
+  {
+   "what": "company",
+   "value": "OneFortyNine Games Ltd, 149 High Street, Swindon, SN4 7AB, company 17293756",
+   "quote": "Registered Office: 149 High Street, Swindon, SN4 7AB Company Registration No: 17293756 - Registered in England and Wales VAT Registration No: GB",
+   "url": "https://www.onefortyninegames.com/",
+   "note": "Footer, every page. Companies House (fetched 2026-11-01) confirms ONEFORTYNINE GAMES LTD 17293756, active, incorporated 22 June 2026, SIC 62011, one officer WARNE, Owen Peter, director appointed 22 June 2026.",
+   "verified": "exact substring of the fetched page text, 2026-11-01"
+  }
+ ]
+}

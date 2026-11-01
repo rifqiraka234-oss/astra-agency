@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Breakout Box for hosts | OneFortyNine Games</title>
+<meta name="description" content="Breakout Box, an escape room in a cool box for your guests. Six puzzles, your snacks and drinks locked inside, and you keep 100% of what they pay to play. Rent from £60 a month or buy from £350.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#061417">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23061417'/%3E%3Crect x='7' y='7' width='50' height='50' rx='12' fill='none' stroke='%23f4ead8' stroke-width='5'/%3E%3Crect x='15' y='24' width='10' height='16' rx='2' fill='%23f4ead8'/%3E%3Crect x='27' y='24' width='10' height='16' rx='2' fill='%23f4ead8'/%3E%3Crect x='39' y='24' width='10' height='16' rx='2' fill='%23e9955a'/%3E%3C/svg%3E">
+<link rel="preload" href="/fonts/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/mona-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/media/lid.webp" as="image" type="image/webp">
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm')</script>
+</head>
+<body>
+<canvas class="light" id="light" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+<aside class="note" aria-label="About this page">Prototype by Astra agency for OneFortyNine Games. Not the live site, nothing is ordered or sent.</aside>
+<header class="hdr" data-hdr>
+  <a class="brand" href="#top" aria-label="Breakout Box, back to the top"><svg viewBox="50 343 1116 143" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="{{BREAKOUT}}"/></svg><span>by OneFortyNine Games</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#inside">What's in the box</a>
+    <a href="#stay">How a stay plays</a>
+    <a href="#earn">What it earns</a>
+    <a href="#cost">Rent or buy</a>
+    <a href="#teams">Team days</a>
+    <a class="btn sm" href="#order" data-order>Order a box</a>
+  </nav>
+</header>
+<main id="main">
+
+<section class="hero" id="top" aria-labelledby="hero-h" data-hero>
+  <div class="still" data-still aria-hidden="true">
+    <div class="obj o-lid" data-obj data-d="0.55" data-r="-7"><picture><source type="image/webp" srcset="/media/lid.webp"><img src="/media/lid.png" alt="" width="769" height="564" fetchpriority="high"></picture></div>
+    <div class="obj o-case" data-obj data-d="1.15" data-r="5"><picture><source type="image/webp" srcset="/media/obj-case.webp"><img src="/media/obj-case.png" alt="" width="720" height="715" decoding="async"></picture></div>
+    <div class="obj o-cups" data-obj data-d="1.6" data-r="9"><picture><source type="image/webp" srcset="/media/obj-cups.webp"><img src="/media/obj-cups.png" alt="" width="488" height="449" decoding="async"></picture></div>
+  </div>
+
+  <h1 class="title" id="hero-h" data-title>
+    <span class="t-small">Stock Breakout Box.</span>
+    <span class="t-big"><span class="w">Unlock</span> <span class="w">new</span> <span class="w">sales.</span></span>
+  </h1>
+
+  <div class="band" data-band>
+    <p class="lede">An escape room in a cool box. Your guests crack six puzzles to reach the snacks and drinks you've locked inside, and <b>you keep 100% of what they pay to play.</b></p>
+    <div class="ask">
+      <div class="run" role="group" aria-labelledby="run-q">
+        <p class="run-q" id="run-q">What do you run?</p>
+        <div class="drum" data-drum>
+          <fieldset class="drum-in" data-drum-in>
+            <legend class="skip">What do you run?</legend>
+            <input type="radio" name="run" id="r-cottage" value="cottage"><label for="r-cottage">A holiday cottage</label>
+            <input type="radio" name="run" id="r-cottages" value="cottages"><label for="r-cottages">A few cottages</label>
+            <input type="radio" name="run" id="r-lodges" value="lodges" checked><label for="r-lodges">Holiday park lodges</label>
+            <input type="radio" name="run" id="r-pods" value="pods"><label for="r-pods">Glamping pods</label>
+            <input type="radio" name="run" id="r-teams" value="teams"><label for="r-teams">Team days</label>
+          </fieldset>
+        </div>
+      </div>
+      <div class="read" aria-live="polite">
+        <span class="read-n" data-o="big">£140</span>
+        <span class="read-u" data-o="unit">a month to you,<br>after the £60 rent</span>
+        <p class="read-w"><span data-o="why">Ten lodges sharing one box, about 2.5 stays each a month, one group in five playing at £40.</span> <span class="est">An estimate, set your own numbers further down.</span></p>
+      </div>
+    </div>
+    <div class="acts">
+      <a class="btn" href="#order" data-order data-hero-cta>Order a box</a>
+      <a class="lnk" href="#call" data-call>Book a 15 minute call</a>
+      <p class="price">From £60 a month, or £350 to own</p>
+    </div>
+  </div>
+</section>
+
+<section class="torch" id="inside" aria-label="What happens when the box comes out" data-torch>
+  <div class="t-stage">
+    <div class="scenes">
+      <figure class="scene" data-scene="0">
+        <picture class="base"><source type="image/webp" srcset="/media/s1.webp"><img src="/media/s1.jpg" alt="" width="1500" height="1464" loading="lazy" decoding="async"></picture>
+        <picture class="lit"><source type="image/webp" srcset="/media/s1.webp"><img src="/media/s1.jpg" alt="The Breakout Box lid, its 149 lock logo on the label, on an oak floor by a stone wall" width="1500" height="1464" loading="lazy" decoding="async"></picture>
+      </figure>
+      <figure class="scene" data-scene="1">
+        <picture class="base"><source type="image/webp" srcset="/media/s2.webp"><img src="/media/s2.jpg" alt="" width="1440" height="864" loading="lazy" decoding="async"></picture>
+        <picture class="lit"><source type="image/webp" srcset="/media/s2.webp"><img src="/media/s2.jpg" alt="Inside the open lid, The Heist briefing, a branded notepad and pencils, and the strapped combination lock" width="1440" height="864" loading="lazy" decoding="async"></picture>
+      </figure>
+      <figure class="scene" data-scene="2">
+        <picture class="base"><source media="(max-width: 760px)" type="image/webp" srcset="/media/s3p.webp"><source type="image/webp" srcset="/media/s3.webp"><img src="/media/s3.jpg" alt="" width="1500" height="1150" loading="lazy" decoding="async"></picture>
+        <picture class="lit"><source media="(max-width: 760px)" type="image/webp" srcset="/media/s3p.webp"><source type="image/webp" srcset="/media/s3.webp"><img src="/media/s3.jpg" alt="The open cool box, a clear lock box, a locked aluminium case and a bottle lock inside" width="1500" height="1150" loading="lazy" decoding="async"></picture>
+      </figure>
+      <figure class="scene" data-scene="3">
+        <picture class="base"><source media="(max-width: 760px)" type="image/webp" srcset="/media/s4p.webp"><source type="image/webp" srcset="/media/s4.webp"><img src="/media/s4.jpg" alt="" width="1500" height="1094" loading="lazy" decoding="async"></picture>
+        <picture class="lit"><source media="(max-width: 760px)" type="image/webp" srcset="/media/s4p.webp"><source type="image/webp" srcset="/media/s4.webp"><img src="/media/s4.jpg" alt="The aluminium case open, stacks of frosted Breakout Box cups and two bottle locks in the foam" width="1500" height="1094" loading="lazy" decoding="async"></picture>
+      </figure>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <p class="count" aria-hidden="true"><span data-o="count">01</span> / 04</p>
+    <div class="caps">
+      <div class="cap" data-cap="0">
+        <h2>A locked cool box.<br>Real puzzles. Real stakes.</h2>
+        <p>The snacks, drinks and treats inside only open when your guests crack the codes.</p>
+      </div>
+      <div class="cap" data-cap="1">
+        <h2>The first puzzle opens the cool box.</h2>
+        <ol class="puzzles" aria-label="The six puzzles in The Heist">
+          <li><span>01</span>Entry Point</li><li><span>02</span>Laser Maze</li><li><span>03</span>Encrypted Message</li><li><span>04</span>Guard Patrol Route</li><li><span>05</span>EMP Charge</li><li><span>06</span>The Vault</li>
+        </ol>
+      </div>
+      <div class="cap" data-cap="2">
+        <h2>Cases, boxes and bottle locks inside.</h2>
+        <p>You fill them with snacks, drinks or surprises, and you set the price. Set up takes less than 10 minutes and nobody needs to run it.</p>
+      </div>
+      <div class="cap" data-cap="3">
+        <h2>That “yes we did it” moment as each lock clicks open.</h2>
+        <p>No screens, no VR headsets. Teams of up to six, 60 to 90 minutes.</p>
+        <a class="btn" href="#order" data-order>Order a box</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="after" id="stay" aria-label="The rest of the page">
+  <p>First look, the opening and the torch only. The rest of the page (how a stay plays, what it earns, rent or buy, team days and the order) is built after Raka's go.</p>
+  <a class="btn" href="#order" data-order>Order a box</a>
+</section>
+</main>
+
+<div class="bar" data-bar role="region" aria-label="Order">
+  <p><b>Breakout Box</b> <span>from £60 a month, or £350 to own</span></p>
+  <a class="btn sm" href="#order" data-order>Order a box</a>
+</div>
+
+<script src="/js/site.js" defer></script>
+</body>
+</html>
