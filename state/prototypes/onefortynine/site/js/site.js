@@ -10,43 +10,6 @@
   var lerp = function (a, b, t) { return a + (b - a) * t; };
   var PH = function () { return innerWidth < 760; };
 
-  /* ---------- the one state, and what it earns ---------- */
-  // Every default is in research/calculator.md with its source. All of it is an estimate and the page says so.
-  var RENT = 60, BUY = 350;
-  var TYPES = {
-    cottage: { units: 1, stays: 2.5, share: .2, price: 40, why: 'One cottage at about 2.5 stays a month, one group in five playing at £40. Renting pays where one box is shared.' },
-    cottages: { units: 3, stays: 2.5, share: .2, price: 40, why: 'Three cottages sharing one box, about 2.5 stays each a month, one group in five playing at £40.' },
-    lodges: { units: 10, stays: 2.5, share: .2, price: 40, why: 'Ten lodges sharing one box, about 2.5 stays each a month, one group in five playing at £40.' },
-    pods: { units: 4, stays: 6.7, share: .1, price: 40, why: 'Four pods sharing one box, about 6.7 short stays each a month, one group in ten playing at £40.' },
-    teams: { team: true, why: 'No screens, no staff needed to run it. Pit team against team, then book a 15 minute call to plan the day.' }
-  };
-  var state = { run: 'lodges' };
-  var money = function (n) { return '£' + Math.round(n).toLocaleString('en-GB'); };
-  function render() {
-    var t = TYPES[state.run], big, unit;
-    if (t.team) { big = '6'; unit = 'players a team,<br>60 to 90 minutes'; }
-    else {
-      var month = t.units * t.stays * t.share * t.price, net = month - RENT;
-      if (net > 0.5) { big = money(net); unit = 'a month to you,<br>after the £60 rent'; }
-      else { big = Math.ceil(BUY / month) + ' months'; unit = 'to pay off a £350 box,<br>then about ' + money(month) + ' a month'; }
-    }
-    $('[data-o="big"]').textContent = big;
-    $('[data-o="unit"]').innerHTML = unit;
-    $('[data-o="why"]').textContent = t.why;
-    var cta = $('[data-hero-cta]');
-    cta.textContent = t.team ? 'Book a 15 minute call' : 'Order a box';
-    cta.setAttribute('href', t.team ? '#call' : '#order');
-  }
-  var drumIn = $('[data-drum-in]');
-  function placeDrum() {
-    var radios = $$('input', drumIn), i = radios.findIndex(function (r) { return r.checked; });
-    var lab = $('label', drumIn), h = lab ? lab.getBoundingClientRect().height : 34;
-    drumIn.style.transform = 'translateY(' + (-(i * h) - h / 2) + 'px)';
-    $$('label', drumIn).forEach(function (l, k) { var d = Math.abs(k - i); l.style.opacity = d === 0 ? 1 : d === 1 ? .6 : .28; });
-  }
-  drumIn.addEventListener('change', function (e) { state.run = e.target.value; placeDrum(); render(); });
-  placeDrum(); render();
-
   /* ---------- pointer, eased ---------- */
   var ptr = { x: .5, y: .5, tx: .5, ty: .5, on: false };
   window.addEventListener('pointermove', function (e) { if (e.pointerType === 'touch') return; ptr.tx = e.clientX / innerWidth; ptr.ty = e.clientY / innerHeight; ptr.on = true; }, { passive: true });
@@ -65,25 +28,25 @@
   }
   function draw(t) {
     var g = ctx.createLinearGradient(0, 0, 0, H);
-    g.addColorStop(0, '#04100f'); g.addColorStop(.55, '#0a2226'); g.addColorStop(1, '#0d2a2b');
+    g.addColorStop(0, '#03001a'); g.addColorStop(.55, '#09004a'); g.addColorStop(1, '#120a5a');
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
     // the copper pool, a lamp behind the pieces that leans toward the pointer and breathes
-    var px = W * (PH() ? .55 : .7) + (ptr.x - .5) * W * .12, py = H * (PH() ? .55 : .62) + (ptr.y - .5) * H * .1;
+    var px = W * (PH() ? .55 : .72) + (ptr.x - .5) * W * .12, py = H * (PH() ? .5 : .66) + (ptr.y - .5) * H * .1;
     var br = Math.max(W, H) * (.58 + .03 * Math.sin(t * .0007));
     var c = ctx.createRadialGradient(px, py, 0, px, py, br);
-    c.addColorStop(0, 'rgba(246,168,98,' + (.9 * lightI) + ')');
-    c.addColorStop(.18, 'rgba(214,120,62,' + (.72 * lightI) + ')');
-    c.addColorStop(.42, 'rgba(140,60,32,' + (.42 * lightI) + ')');
-    c.addColorStop(.7, 'rgba(60,26,20,' + (.2 * lightI) + ')');
-    c.addColorStop(1, 'rgba(20,12,10,0)');
+    c.addColorStop(0, 'rgba(255,160,96,' + (.95 * lightI) + ')');
+    c.addColorStop(.16, 'rgba(255,145,77,' + (.82 * lightI) + ')');
+    c.addColorStop(.34, 'rgba(216,98,46,' + (.5 * lightI) + ')');
+    c.addColorStop(.52, 'rgba(120,40,40,' + (.2 * lightI) + ')');
+    c.addColorStop(.7, 'rgba(9,0,74,0)');
     ctx.fillStyle = c; ctx.fillRect(0, 0, W, H);
     // a cold rim from the top left, the teal of the night outside
     var rim = ctx.createRadialGradient(W * .08, -H * .1, 0, W * .08, -H * .1, Math.max(W, H) * .75);
-    rim.addColorStop(0, 'rgba(64,158,150,' + (.42 * lightI) + ')'); rim.addColorStop(1, 'rgba(47,116,113,0)');
+    rim.addColorStop(0, 'rgba(255,255,255,' + (.07 * lightI) + ')'); rim.addColorStop(1, 'rgba(255,255,255,0)');
     ctx.fillStyle = rim; ctx.fillRect(0, 0, W, H);
     // a floor line under the pieces, where the light lands
     var fl = ctx.createRadialGradient(px, H * .98, 0, px, H * .98, W * .55);
-    fl.addColorStop(0, 'rgba(255,196,138,' + (.16 * lightI) + ')'); fl.addColorStop(1, 'rgba(255,196,138,0)');
+    fl.addColorStop(0, 'rgba(255,170,110,' + (.18 * lightI) + ')'); fl.addColorStop(1, 'rgba(255,170,110,0)');
     ctx.fillStyle = fl; ctx.fillRect(0, 0, W, H);
     ctx.globalCompositeOperation = 'lighter';
     for (var k = 0; k < motes.length; k++) {
@@ -91,25 +54,26 @@
       if (!RM) { d.x += d.vx; d.y += d.vy; if (d.y < -4) { d.y = H + 4; d.x = Math.random() * W; } if (d.x < -4) d.x = W + 4; if (d.x > W + 4) d.x = -4; }
       var near = Math.max(0, 1 - Math.hypot(d.x - px, d.y - py) / (br * .8));
       var a = (.05 + .05 * Math.sin(t * .002 + d.tw) + near * .5) * lightI;
-      ctx.fillStyle = 'rgba(255,205,160,' + a + ')';
+      ctx.fillStyle = 'rgba(255,200,160,' + a + ')';
       ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, 6.283); ctx.fill();
     }
     ctx.globalCompositeOperation = 'source-over';
   }
 
   /* ---------- the still life, their pieces arrive and float ---------- */
-  var hero = $('[data-hero]'), objs = $$('[data-obj]'), title = $('[data-title]'), band = $('[data-band]');
+  var hero = $('[data-hero]'), objs = $$('[data-obj]'), title = $('[data-title]');
   var born = 0;
   objs.forEach(function (o, i) { o._d = +o.getAttribute('data-d'); o._r = +o.getAttribute('data-r'); o._ph = i * 1.9; });
   function arrive() {
     born = performance.now();
     if (RM) return;
-    $$('.t-big .w', title).forEach(function (w, i) {
-      w.animate([{ transform: 'translateY(.7em)', opacity: 0, filter: 'blur(10px)' }, { transform: 'none', opacity: 1, filter: 'blur(0)' }],
-        { duration: 1100, delay: 180 + i * 140, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
+    $$('.title .w', title).forEach(function (w, i) {
+      w.animate([{ transform: 'translateY(.6em)', opacity: 0, filter: 'blur(12px)' }, { transform: 'none', opacity: 1, filter: 'blur(0)' }],
+        { duration: 1300, delay: 160 + i * 180, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
     });
-    $('.t-small', title).animate([{ opacity: 0 }, { opacity: 1 }], { duration: 900, delay: 80, fill: 'backwards' });
-    band.animate([{ opacity: 0, transform: 'translateY(18px)' }, { opacity: 1, transform: 'none' }], { duration: 900, delay: 700, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
+    $$('.lede, .acts, .price', title).forEach(function (el, i) {
+      el.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }], { duration: 900, delay: 760 + i * 120, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
+    });
   }
   function placeObjs(t) {
     var r = hero.getBoundingClientRect(), p = clamp(-r.top / Math.max(1, r.height), 0, 1);
@@ -131,8 +95,7 @@
     });
     if (!PH()) {
       title.style.transform = 'translateY(' + (-p * 120) + 'px)';
-      title.style.opacity = 1 - seg(p, .35, .8);
-      band.style.opacity = 1 - seg(p, .15, .5);
+      title.style.opacity = 1 - seg(p, .3, .75);
     }
   }
 
@@ -194,9 +157,8 @@
   }
 
   /* ---------- start ---------- */
-  function onResize() { resize(); placeDrum(); }
+  function onResize() { resize(); }
   window.addEventListener('resize', onResize);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(placeDrum);
   onResize();
   arrive();
   function frame(t) {
@@ -206,5 +168,5 @@
   }
   if (RM) { frame(0); window.addEventListener('scroll', function () { frame(0); }, { passive: true }); }
   else requestAnimationFrame(frame);
-  window.__ofn = { state: state, render: render };
+  window.__ofn = {};
 })();

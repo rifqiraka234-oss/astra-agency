@@ -47,15 +47,28 @@ social.md, data.json, calculator.md, references.md, flow.md. First look built, h
     and immersive brands, Mysterious Package Company in Newsreader, Punchdrunk in Scotch Display (references.md B, all
     rendered 1 Nov). And their own headline face is Cooper Black, a 1970s soft serif, which Fraunces descends from in
     spirit. Mona Sans for the reading text, Fragment Mono only for codes and prices.
-11. **Colour script.** Graded like a heist film. Teal in the shadows (#061417 to #0d2a2b), copper light (#c8743f,
-    #e9955a, #ffc48a) as a lamp behind their pieces that leans toward the pointer, a cold teal rim from the night
-    outside, cream (#f4ead8) for the words. Then black teal for the torch, warming to copper when the lights come up.
-    Their navy and red are gone from the page, their logo keeps its own colours on the product.
+11. **Colour script (v3, 1 Nov, Raka "use their colour palette but then like this").** Their own palette, lit the
+    v2 way. Their navy #09004a taken to night #04001f in the shadows, their orange #ff914d as the light behind their
+    pieces, deepening to #d8622e, their white for every word, their pure red #ff0000 for one small thing (the dot by the
+    price). The torch scenes are toned to their navy and lit in their orange.
 12. **New design language.** Their site is centred text over photos under a navy overlay. This is a lit still life
     of their real objects and a cinematic torch through their real photos.
 13. **Every photo.** All theirs, from their LinkedIn posts and video (media.json). The clear box's "LOCKABOX" supplier
     emboss softened in the inside photo, both sizes. Their website images are AI edits and aren't used.
 14. **check-build.** Passes, one expected warning, the serif voice, answered in line 10.
+
+## The journey, checked (v3, Raka "who's the intended audience and what's the journey and action")
+
+A holiday park manager or multi unit host lands (Owen's LinkedIn, his NEC stand LLT155, an outreach message). They ask,
+in order, what is it, will my guests love it, what's in it, what does it earn, what does it cost, how do I get one.
+
+- **First screen, what is it, and the action.** "Unlock new sales.", one line on what it is and that they keep 100%,
+  "Order a box", "Book a 15 minute call", the price. Nothing else, v2's hero answered four questions at once.
+- **The torch, will guests love it and what's in it.** Four stops in their photos and words, ending on "Order a box".
+- **Next (the full build), what it earns.** "What do you run?" and the estimate move here from the hero, where they
+  answer the visitor's next question instead of crowding the first one. Then rent or buy, team days, and the order
+  arriving filled in.
+- **The bar** carries "Order a box" from the first scroll, so no half screen is without the action (check-build walk 0).
 
 ## D. Honest notes before Raka looks
 
