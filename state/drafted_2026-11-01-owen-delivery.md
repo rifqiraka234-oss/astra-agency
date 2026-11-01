@@ -1,4 +1,9 @@
-# Owen Warne, delivery of the Breakout Box host page sketch, 1 Nov 2026. NOT SENT, waiting on Raka's word.
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-01 20.59.24 UTC on Raka's "Send to owen", act_2hNx92EyqedMqZqKZ, one copy, 364 chars, text byte for byte
+> from this file. Thread pulled right before (2 items, unchanged) with control 8 items, link 200 with the same sha256
+> b765b903bd67935c, dry run first. Pulled again after, 3 items, one copy. Do not send again.
+
+# Owen Warne, delivery of the Breakout Box host page sketch, 1 Nov 2026.
 
 Raka 1 Nov, "Final and send it to him now". Deployed on "final", the text below has not been shown to him yet, so it
 waits for his word on this exact message.
@@ -23,7 +28,7 @@ waits for his word on this exact message.
 > deployed file, 37 of 37 files byte matched, cold loaded at 1440 and 390, 20 of 20 images, 0 page errors, 0 HTTP fails.
 > Reopen the thread and the URL in the minute before sending.
 
-DELIVERY
+> SENT, text kept as the record.
 ```
 Owen, here's the host page sketch I offered. It works out what a box could earn a host, and the order form arrives filled in from their numbers.
 
