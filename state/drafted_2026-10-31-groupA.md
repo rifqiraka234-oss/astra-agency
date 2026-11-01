@@ -1,4 +1,5 @@
 <!-- APPROVED by Raka 2026-10-31, word for word "Commit send tomorrow at 08.30". Covers the 16 SKETCH and SKETCHB drafts in this file (not CheLati, Nouvelle Hôtellerie, Birch Stays or Clara). Scheduled for 2026-11-01 08.30 Europe/Amsterdam (07.30 UTC). NOT SENT until each section carries its own SENT line. -->
+<!-- SENT 2026-11-01 07.52 to 07.56 UTC, 14 of 16: Mark, Felix, Sylvain, Lewis, Sarah, Marion, Jordane, Jeffrey, Owen, Agathe, Denise, René, Florian, Alexandre. ROMAIN HELD, check B found the Kilomètre Zéro event list now shows the next quiz Tue 3 Nov and no Monday 2 Nov, so "Mondays and Tuesdays get filled with quizzes" no longer holds, Raka's call. Alexandre took his slot. GREGORY rolls to Mon 2 Nov 08.30 Amsterdam. The 07.30 wake fired but a worker restart dropped it, sent 22 minutes late. -->
 <!-- CAP, Raka 2026-10-31 ~21.10 UTC, "Make sure we maximise the 30 a day message on linkedin send the urgent ones are earlier". Sunday already has 16 earlier sends from the other session (10 closers 05.00 UTC, Danielle 06.30, Milo and four still interested 06.39), so 14 of these go at 07.30 UTC in order Mark, Felix, Sylvain, Lewis, Sarah, Marion, Jordane, Jeffrey, Romain, Owen, Agathe, Denise, René, Florian, and Alexandre and Gregory roll to Mon 2 Nov 08.30 Amsterdam (trig_0183F3FXdCqrnUNnRMK3fkeb). Sunday wake trig_01EGAnyKqTA7C7f4h1TYVc4Y. -->
 # Drafts, 2026-10-31, group A, Raka's angle calls. NOT SENT
 
@@ -21,6 +22,8 @@ Re pull the thread, run the four way never messaged check and reopen every claim
 Pre checks done 2026-10-31 ~21.00 UTC for the 16. Dry run of all 16 through tools/lemlist.py send, each text picked up from this file (sha256 Abriteo 4e48a541, Bovy d1f701b9, Saveurs 181c9edb, Haardt b763b9f3, A Fuego b5b86344, Nighthawks e766c923, Zwarts e2ed5c4a, Wynstanley 83120f9c, OneFortyNine 76371e66, KM0 b413dbe9, Merino 354e1c49, Mama bbc7bc2b, Smartpinz 01f03113, Apex d2ca7354, Sagrado 514cb3a1, Queerish 48e0d35e), every thread 0 items, control 7. Check A part 2, all 186 inbox conversations paged, no other contact matches any of the 16 names or companies, control Hertling found. Part 3, each contact record shows one active campaign (W1b or W1c), invite accepted. Part 4, grep of drafted files, prototypes, digest log and logs, only the automatic connect note to Agathe on 20 Oct and an accept list mention of Sarah on 27 Oct, no pitch. To repeat in the minute before the send, with every claim reopened.
 
 ### Florian Casier Gueho, Abriteo, ctc_FibmN2p3bXtYWSqac
+
+> SENT 2026-11-01 07.55.58 UTC, act_WdPjhrQPsFa87b4tx, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
 
 > NOT SENT. Flags for Raka. (1) The record resolves. Abriteo is a trading name of NAXOLUTION SAS (RCS Paris 991607466,
 > created 16 Sep 2025, NAF 47.91B distance selling), Florian is its Directeur Général, Sylvie Virlouvet its Président,
@@ -94,6 +97,8 @@ Shall I send you a sketch of the new Abriteo shop?
 
 ### René Geurts, Het Goed van Bovy, ctc_umnv96hbtYAa9dgiL
 
+> SENT 2026-11-01 07.55.41 UTC, act_RHxeoxe3TZssECoRN, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
+
 > NOT SENT. Flags for Raka. (1) The record resolves. René and Filip Vanheusden set up the company Het Goed van Bovy to
 > run the hospitality concession on the municipal Domein Bovy in Zolder (Made in, 26 Apr 2024), with Bistro Bovy, Bar
 > Joseph and the De Schuur hall. (2) The site is new, built by COCO media around a December 2025 photo shoot, so the
@@ -161,6 +166,8 @@ Shall I send you a sketch of the planner?
 ```
 
 ### Agathe Thiriez, Saveurs Végés, ctc_EbT44fJeRdDPjMDPd
+
+> SENT 2026-11-01 07.55.06 UTC, act_NBbf8RNeHNz98kEDQ, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
 
 > NOT SENT. Flags for Raka. (1) The record resolves, Saveurs Végés is her sole trader business, AGATHE THIRIEZ (SAVEURS
 > VEGES), SIREN 929268704, created 1 June 2024, NAF 56.21Z catering, Lille. (2) One person kitchen, so the budget sign is
@@ -319,6 +326,8 @@ verdict: DO_NOT_CONTACT for now, bankruptcy proceedings opened 20 Oct 2026 by th
 
 ### Denise Geestman, A Fuego, ctc_qMXXqCjntDZN8LBC8
 
+> SENT 2026-11-01 07.55.23 UTC, act_q6Ca9d2Rcd5dtxJE9, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
+
 > NOT SENT. Flags for Raka. (1) The record resolves. A Fuego is her sole trader business, KvK 71507604, Amsterdam,
 > trade names A Fuego, A Fuego X and Geestman Hospitality (the footer carries the same KvK). Started in May 2020 after
 > Covid ended her party manager work. lemlist places her in Marseille and her tagline adds luxury travel design, so A Fuego
@@ -387,6 +396,8 @@ Shall I send you a sketch of the business page and outreach flow?
 ```
 
 ### Sylvain Protais, Nighthawks, ctc_tGmsetQJ9r7zSQKmF (Clara Darcq, ctc_uAmLxhSMH7qncePot, held)
+
+> SENT 2026-11-01 07.53.04 UTC, act_RuLumz5pwaZ7FB9FY, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
 
 > NOT SENT. Flags for Raka. (1) One message per company. Sylvain is Président of SAS NIGHTHAWKS (SIREN 811966886,
 > Clichy, created June 2015), Clara and Anaïs Leoni are Directeurs Généraux. Sylvain accepted first and his tagline says
@@ -457,6 +468,8 @@ Shall I send you a sketch of the hotel outreach workflow?
 
 ### Jeffrey Zwarts, Meneer Zwarts Koffie, ctc_PdtXdTBcwEsv3RyP4
 
+> SENT 2026-11-01 07.54.31 UTC, act_iz6CvJwgMxm29niQp, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
+
 > NOT SENT. Flags for Raka. (1) The record resolves, sole trader Meneer Zwarts Koffie, KvK 85885150, Den Haag,
 > registered 1 April 2022, wholesale in coffee, tea and coffee machines. Jeffrey founded it after years at "de grote
 > jongens" (About page). (2) B2B prices per office are a normal model, so the message never says prices are missing, it
@@ -520,6 +533,8 @@ Shall I send you a sketch of the tasting page?
 ```
 
 ### Alexandre Gassoul, WYNSTANLEY, ctc_34aD5Sc3FDqezCPDg
+
+> SENT 2026-11-01 07.56.16 UTC, act_n3hd7bfPtuxRfjvfG, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
 
 > NOT SENT. Flags for Raka. (1) The record mostly resolves. The site says Alexandre and his brother Thomas founded
 > Wynstanley, and every action mails alex@wynstanley.com. But no company named Wynstanley is on the French register.
@@ -585,6 +600,8 @@ Shall I send you a sketch of the investor area?
 ```
 
 ### Owen Warne, OneFortyNine Games, ctc_dAhvHyq2QMbqgzLKN
+
+> SENT 2026-11-01 07.54.48 UTC, act_Gt5CQ2JcEuaRDjsPx, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
 
 > NOT SENT. Flags for Raka. (1) The record resolves. ONEFORTYNINE GAMES LTD, 17293756, incorporated 22 June 2026, Owen
 > Peter Warne sole director, verified. Four months old. (2) His product is a B2B add on for holiday lets and hospitality,
@@ -719,6 +736,8 @@ Shall I send you a sketch of the outreach flow?
 
 ### Jordane Morel, MERINO, ctc_YbeTTgcHKWEyD4yDp
 
+> SENT 2026-11-01 07.54.13 UTC, act_xusj6arZ4jvykRrWg, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
+
 > NOT SENT. Flags for Raka. (1) The record resolves. SAS MERINO, SIREN 932380116, Nancy, created 28 Aug 2024, Jordane
 > Président and Louis Petitcolin Directeur Général, licence CPI 5401 2024 000 000 013, a team of four on the site. (2)
 > The site is a solid agency platform (Netty) with listings, alerts and a valuation tool, so the angle is the seller side,
@@ -783,6 +802,8 @@ Shall I send you a sketch of the new valuation page?
 ```
 
 ### Marion Gautier, MAMATRAITEUR78, ctc_9KK4FjKsXD342scS9
+
+> SENT 2026-11-01 07.53.56 UTC, act_tGFKSAFuec6bCAWTb, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
 
 > NOT SENT. Flags for Raka. (1) The record resolves, sole trader MARION PRESTIFILIPPO (GAUTIER) (MAMATRAITEUR78), SIREN
 > 900117698, Vernouillet, since April 2021, NAF 56.10C. The site calls her Marion, the founder. (2) The site's cart shows
@@ -889,6 +910,8 @@ verdict: NO_STRONG_ANGLE for a more modern website, the site is a recent custom 
 
 ### Mark Colin-Thomé, SMARTPINZ, ctc_cJJohQhGGtyM7rrSy
 
+> SENT 2026-11-01 07.52.29 UTC, act_ZMs2iRjC9LxujHFSp, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
+
 > NOT SENT. Flags for Raka. (1) The record resolves. SMARTPINZ® is his brand (lemlist, and the company LinkedIn page's
 > own posts name him presenting at Stadiums of the Future, Milton Keynes Tech Week). Companies House shows Antony Mark
 > Colin-Thomé as director of FOCUSED SOLUTIONS LTD (16375421) since April 2025, the company in his tagline. The site doesn't
@@ -951,6 +974,8 @@ Shall I send you a sketch of the new homepage?
 ```
 
 ### Sarah Eliza Steel, APEX NEURO, ctc_Jk7NZ7nGhruJFD5GJ
+
+> SENT 2026-11-01 07.53.39 UTC, act_MB9gDQDQcxxQZy4eo, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
 
 > NOT SENT. Flags for Raka. (1) The record resolves. APEX NEURO LTD (12711827, July 2020), directors Sarah Eliza Steel
 > and Robert Cartwright, and the team page names "Founder & Clinic Director Sarah Cartwright-Steel". (2) Your 27 Oct
@@ -1016,6 +1041,8 @@ Shall I send you a sketch of the funding page?
 
 ### Felix Jordan, Sagrado, ctc_PtfwGN84zbyGgvwB3
 
+> SENT 2026-11-01 07.52.47 UTC, act_F5q4tjkamL7EAEti2, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
+
 > NOT SENT. Flags for Raka. (1) The record resolves, SAGRADO DRINKS LTD (15548674, March 2024), Felix Marshall Jordan sole
 > director. Your 27 Oct call, an exception to the consumer rule, a go to market to raise money and reach investors. (2)
 > His home page says he's raising £200,000 through SEIS after 200+ points of sale and 800,000 people reached at 40+ events,
@@ -1080,6 +1107,8 @@ Shall I send you a sketch of the investor page?
 ```
 
 ### Lewis Wheatley, Queerish, ctc_Ehr5LjPy2vnzR5Bht
+
+> SENT 2026-11-01 07.53.21 UTC, act_JMowbKss3sqYhbc8B, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30", checks A and B rerun 07.40 to 07.52 UTC, all claims held.
 
 > NOT SENT. Flags for Raka. (1) Your 27 Oct call, an exception to the GTM plan, "a proper website, he only has a link
 > page". (2) The Queerish LinkedIn page gives https://beacons.ai/queerish as its website, founded 2024, self employed,
