@@ -1,0 +1,198 @@
+<title>Astra Pipeline Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, a week strip up top, then deals as rows with a status chip, closed talk last */
+:root{
+  --bg:#f5f6f4; --surface:#ffffff; --fg:#16181a; --muted:#5d6461; --line:#dfe3df;
+  --accent:#1d5f57; --accent-soft:#e3efec;
+  --ok:#1f7a4d; --ok-soft:#e2f2e9; --wait:#9a6400; --wait-soft:#fbf0d9; --stop:#6b6f74; --stop-soft:#eceeef; --lost:#a33a2b; --lost-soft:#f8e4e0;
+  --display:"Schibsted Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --body:"Schibsted Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121514; --surface:#1a1e1d; --fg:#e8ebe9; --muted:#9aa29e; --line:#2c3331;
+  --accent:#6cc2b3; --accent-soft:#1d302d;
+  --ok:#6fcf9b; --ok-soft:#18301f; --wait:#e8b35a; --wait-soft:#33280f; --stop:#a4a9ad; --stop-soft:#262a2c; --lost:#ef8a79; --lost-soft:#3a1f1a;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121514; --surface:#1a1e1d; --fg:#e8ebe9; --muted:#9aa29e; --line:#2c3331;
+  --accent:#6cc2b3; --accent-soft:#1d302d;
+  --ok:#6fcf9b; --ok-soft:#18301f; --wait:#e8b35a; --wait-soft:#33280f; --stop:#a4a9ad; --stop-soft:#262a2c; --lost:#ef8a79; --lost-soft:#3a1f1a;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15.5px;line-height:1.55;margin:0}
+.wrap{max-width:860px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:40px}
+header{display:flex;flex-direction:column;gap:10px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,5vw,42px);line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.lede{margin:0;max-width:62ch;color:var(--fg);font-size:17px}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:8px}
+.fact{background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.fact b{font-family:var(--display);font-size:26px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1}
+.fact span{font-size:13px;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:14px}
+h2{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.note{margin:0;color:var(--muted);font-size:14px;max-width:66ch}
+.week{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.day .when{font-family:var(--mono);font-size:12.5px;color:var(--accent);font-variant-numeric:tabular-nums}
+.day .who{font-weight:600}
+.day p{margin:0;font-size:14px;color:var(--muted)}
+.rows{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.row .side{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.row .date{font-family:var(--mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.row h3{margin:0;font-size:16px;font-weight:600}
+.row h3 small{font-weight:400;color:var(--muted);font-size:14px}
+.row p{margin:4px 0 0;max-width:62ch}
+.row .next{margin-top:8px;font-size:14px;color:var(--muted)}
+.row .next strong{color:var(--fg);font-weight:600}
+.chip{display:inline-block;font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.chip.ok{background:var(--ok-soft);color:var(--ok)}
+.chip.wait{background:var(--wait-soft);color:var(--wait)}
+.chip.stop{background:var(--stop-soft);color:var(--stop)}
+.chip.lost{background:var(--lost-soft);color:var(--lost)}
+.list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:12px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.li .name{font-weight:600}
+.li .name small{font-weight:400;color:var(--muted)}
+.li .what{grid-column:1/-1;margin:0;font-size:14px;color:var(--muted)}
+.li .d{font-family:var(--mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.closed{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:8px 24px}
+.closed div{font-size:14px;padding:8px 0;border-bottom:1px solid var(--line);min-width:0}
+.closed div b{font-weight:600}
+.closed div span{color:var(--muted)}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:640px){
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row{grid-template-columns:minmax(0,1fr)}
+  .row .side{flex-direction:row;align-items:center;flex-wrap:wrap}
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="kicker">Astra agency · 19 Oct to 2 Nov 2026</span>
+    <h1>Pipeline review, last two weeks</h1>
+    <p class="lede">Five discovery calls held, four prices out and four calls this week. No deal signed yet. Lisanne and Owen are closest, Healthy Secrets is waiting on a reply to the €500 proposal.</p>
+    <div class="facts" role="list">
+      <div class="fact" role="listitem"><b>5</b><span>calls held</span></div>
+      <div class="fact" role="listitem"><b>4</b><span>prices out</span></div>
+      <div class="fact" role="listitem"><b>4</b><span>calls this week</span></div>
+      <div class="fact" role="listitem"><b>0</b><span>signed so far</span></div>
+    </div>
+  </header>
+
+  <section aria-labelledby="week">
+    <h2 id="week">This week</h2>
+    <div class="week">
+      <div class="day"><span class="when">Tue 3 Nov · 15.30</span><span class="who">Owen, OneFortyNine Games</span><p>Loved the Breakout Box host page, Raka quoted £500. Agree scope, his colours and images, how orders come in. Josh on the invite.</p></div>
+      <div class="day"><span class="when">Wed 4 Nov · 12.00</span><span class="who">Steven, Qualigraf</span><p>Site concept, one site with pages per market. Confirmed on LinkedIn, calendar invite not accepted yet.</p></div>
+      <div class="day"><span class="when">Thu 5 Nov · 10.00</span><span class="who">Lisanne, De Jong Vanhommerig</span><p>Refinement session, one hour, Josh joins. Internal deal review Wed 9.30.</p></div>
+      <div class="day"><span class="when">Thu 5 Nov · afternoon</span><span class="who">Gisella, QuasiScience</span><p>Managed outbound session, proposed by email with Ivan in cc. No calendar invite yet.</p></div>
+    </div>
+    <p class="note">Times are Amsterdam.</p>
+  </section>
+
+  <section aria-labelledby="held">
+    <h2 id="held">Calls held</h2>
+    <div class="rows">
+      <article class="row">
+        <div class="side"><span class="date">Fri 30 Oct</span><span class="chip ok">second call booked</span></div>
+        <div>
+          <h3>Lisanne <small>De Jong Vanhommerig advocatuur</small></h3>
+          <p>A one lawyer employment practice. She saw the AI intake desk and wants more, a client portal for documents, intake and a timeline of what came in when. Raka quoted €450 per build plus €50 a month maintenance.</p>
+          <p class="next"><strong>Next</strong> Refinement session Thu 5 Nov. Her wish list is bigger than one €450 build, so agree per build pricing or one fixed price before Thursday.</p>
+        </div>
+      </article>
+      <article class="row">
+        <div class="side"><span class="date">Tue 27 Oct</span><span class="chip wait">proposal out</span></div>
+        <div>
+          <h3>Nikolaus and Stephanie <small>Healthy Secrets, Vienna</small></h3>
+          <p>Liked the prototype and want more online sales, but are careful with costs as a young company. Proposal emailed 30 Oct, €500 build (€250 to start, €250 at launch) plus €50 a month care and hosting.</p>
+          <p class="next"><strong>Next</strong> No reply yet. If still quiet, a nudge goes Tue 3 Nov 07.00 to Nikolaus and the office email.</p>
+        </div>
+      </article>
+      <article class="row">
+        <div class="side"><span class="date">Tue 27 Oct</span><span class="chip wait">pivot to outbound</span></div>
+        <div>
+          <h3>Gisella for Marco <small>QuasiScience, London</small></h3>
+          <p>Marco wanted more sales contacts. Raka emailed a proposal on 30 Oct. Strategy work was declined, but Gisella said managed outbound could be of more interest.</p>
+          <p class="next"><strong>Next</strong> A session Thu 5 Nov afternoon, Ivan in cc. Needs a calendar invite.</p>
+        </div>
+      </article>
+      <article class="row">
+        <div class="side"><span class="date">Fri 30 Oct</span><span class="chip stop">his move</span></div>
+        <div>
+          <h3>Lupo <small>BWILD</small></h3>
+          <p>Liked the site. He's preparing a Kickstarter for the Luminous Vest and wants 300 reservations before producing. New brand assets are being shot now.</p>
+          <p class="next"><strong>Next</strong> He needs about three weeks for the assets, so around 20 Nov and his to start.</p>
+        </div>
+      </article>
+      <article class="row">
+        <div class="side"><span class="date">Wed 28 Oct</span><span class="chip lost">no budget now</span></div>
+        <div>
+          <h3>Julien <small>Saavedra, Paris</small></h3>
+          <p>Liked the door for companies (catering, team lunches, private hire). They opened in June and cash flow comes first.</p>
+          <p class="next"><strong>Next</strong> Summary emailed. Raka follows up in January, reminder set for 26 Jan.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="yes">
+    <h2 id="yes">Said yes to a sketch, delivered, waiting on them</h2>
+    <p class="note">Each got a still interested note or a bump on 30 Oct or 1 Nov. Raka follows these up himself, they never close on silence.</p>
+    <div class="list">
+      <div class="li"><span class="name">Owen <small>OneFortyNine Games</small></span><span class="d">moved to a call</span><p class="what">Host page delivered 1 Nov, "It looks great", call Tue.</p></div>
+      <div class="li"><span class="name">Erik <small>Taste Frankfurt</small></span><span class="d">31 Oct</span><p class="what">Site for company catering delivered.</p></div>
+      <div class="li"><span class="name">Danielle <small>Charlie's Desserts</small></span><span class="d">30 Oct</span><p class="what">Said "Yes pls", sketch delivered, bumped 1 Nov.</p></div>
+      <div class="li"><span class="name">Laurens <small>BeBetter</small></span><span class="d">26 Oct</span><p class="what">Site with the gym kit page delivered. He asked for a price point.</p></div>
+      <div class="li"><span class="name">Elle <small>Fae Club</small></span><span class="d">25 Oct</span><p class="what">New Fae Club site delivered.</p></div>
+      <div class="li"><span class="name">Willem <small>Hooft &amp; Petiet</small></span><span class="d">25 Oct</span><p class="what">Two sites delivered, no reply to either email.</p></div>
+      <div class="li"><span class="name">Noah <small>Systemhaus Hertling</small></span><span class="d">22 Oct</span><p class="what">New Hertling site delivered.</p></div>
+      <div class="li"><span class="name">Aaron <small>BidX</small></span><span class="d">21 Oct</span><p class="what">Outreach desk delivered.</p></div>
+      <div class="li"><span class="name">Chris Hale, Ulrich, Matthias <small>Garnish, justclaims, Schumacher</small></span><span class="d">earlier</span><p class="what">Said yes before the window. Still interested notes 30 Oct, no reply.</p></div>
+      <div class="li"><span class="name">Chris Ryalls <small>ExpoCall</small></span><span class="d">stopped</span><p class="what">Five messages, one reply. Stopped 27 Oct.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="open">
+    <h2 id="open">Open conversations</h2>
+    <div class="list">
+      <div class="li"><span class="name">Darren Glynn <small>Tap Talks</small></span><span class="d">2 Nov</span><p class="what">Answered the connect note, our reply went today.</p></div>
+      <div class="li"><span class="name">Adriana <small>Space of Hearts</small></span><span class="d">2 Nov</span><p class="what">Asked what we do, our reply went today.</p></div>
+      <div class="li"><span class="name">Milo <small>Warung Kopi</small></span><span class="d">1 Nov</span><p class="what">"I'll think about it". The investor sample is ready to send on his yes.</p></div>
+      <div class="li"><span class="name">Lewis <small>Queerish</small></span><span class="d">3 Nov</span><p class="what">Deleted his reply. One nudge Tue 8.30.</p></div>
+      <div class="li"><span class="name">Aiden <small>Sherwood Villa Sauce</small></span><span class="d">drafted</span><p class="what">Rebrand ready for 2027, on hold. Reply drafted, not sent.</p></div>
+      <div class="li"><span class="name">Jack Yan, Rachel Munro <small>IkoPrep, The Rebel Baker</small></span><span class="d">queued</span><p class="what">Warm chats, queued for a researched first offer.</p></div>
+      <div class="li"><span class="name">New today <small>X-Club, Nexylan, KOERHOUSE, Downley Dairy</small></span><span class="d">2 Nov</span><p class="what">Four researched openers sent at 11.59.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="closed">
+    <h2 id="closed">Closed in the window</h2>
+    <div class="closed">
+      <div><b>Grigory</b> <span>Coffeeme, their own team is updating the site</span></div>
+      <div><b>Clément</b> <span>Country Club Aixois, no longer the director</span></div>
+      <div><b>Tatiana</b> <span>Averitopia, sites not a priority now</span></div>
+      <div><b>Elise</b> <span>Honey It's Handled, liked it, not now</span></div>
+      <div><b>Rachel Robinson</b> <span>Premier Paris Concierge, later when there's budget</span></div>
+      <div><b>Qasim</b> <span>EQ Nexus, no thanks</span></div>
+      <div><b>Thibert</b> <span>Les Terrasses Blanches, asked us to stop</span></div>
+      <div><b>Neil</b> <span>HappySelling, closed today</span></div>
+      <div><b>Sonia, Alice, Marcel, Basile, Jean Claude</b> <span>closed after a thanks or on Raka's word</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="own">
+    <h2 id="own">Raka's own meetings in the window</h2>
+    <p class="note">Not from outreach and not tracked here. Superkeukens and the De Ruijters architect (25 Oct), Intermat (29 Oct), Bruynzeel (30 Oct), and Ivan at kano.group (29 Oct, plus calls Tue 3 and Thu 5 Nov).</p>
+  </section>
+
+  <footer>Built 2 Nov 2026 from lemlist threads, Raka's calendar and the meeting notes kept in the Astra repo.</footer>
+</div>
