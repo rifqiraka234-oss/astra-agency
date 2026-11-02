@@ -27,6 +27,8 @@ verdict: ALREADY_MESSAGED, via her co founder Alice Poubelle, opener 12 Oct, bum
 
 ### Sicko Van Oene, XOLBOR, ctc_XfiYnETWEAui4JYDi
 
+> SENT 2026-11-02 07.43.57 UTC, act_DQi6GxeuXZhrnMppa, one copy, thread 1 item after, on Raka's 1 Nov "Openers as much as you can do today" and "Monday 08.30 (Recommended)". Checks A and B rerun 07.37 to 07.45 UTC, all claims held.
+
 > NOT SENT. Flags for Raka. (1) XOLBOR B.V., KvK 86902601, Utrecht, July 2022, a Roblox studio making branded games, with
 > hits of its own (Super Hero Tycoon 2.4 billion visits). The team page lists Sicko as co founder beside Hidde, plus 16
 > staff, mostly Lua developers and 3D artists. (2) Your call, build squad with did you know, careers page. The careers page lists a full time
@@ -96,6 +98,8 @@ Shall I send you a sketch of the build squad for XOLBOR?
 ```
 
 ### Sandi Slonjšak, Code Of Us, ctc_T5juhy6XKRrw2ChtX
+
+> SENT 2026-11-02 07.44.14 UTC, act_cqawEgaoHTLSu9KS3, one copy, thread 1 item after, on Raka's 1 Nov "Openers as much as you can do today" and "Monday 08.30 (Recommended)". Checks A and B rerun 07.37 to 07.45 UTC, all claims held.
 
 > NOT SENT. Flags for Raka. (1) Code Of Us d.o.o., Zagreb, founded 19 Feb 2015, Sandi and Robert Rudolf Slonjšak are the
 > directors (companywall.hr, OIB 19717666785), 9 employees in the latest year. A software agency for B2B clients, offices in
@@ -173,6 +177,8 @@ Shall I send you a sketch of the squad on a Code Of Us project?
 
 ### Kat Sale, House of Performance, ctc_SffDGx48HvyaPpAfW
 
+> SENT 2026-11-02 07.44.32 UTC, act_XJ2ZptPXxZRvLuXau, one copy, thread 1 item after, on Raka's 1 Nov "Openers as much as you can do today" and "Monday 08.30 (Recommended)". Checks A and B rerun 07.37 to 07.45 UTC, all claims held.
+
 > NOT SENT. Flags for Raka. (1) House of Performance Limited, 13350481, incorporated 21 April 2021, Katherine May Sale and
 > Emma Jane Welland the two active directors (Companies House officers page), the company number matches their own privacy
 > policy. A London paid media agency, Standout Paid Media Agency of the Year 2025, team page of eight. (2) Your call, AI
@@ -244,6 +250,8 @@ Shall I send you a sketch of the AI workflow for HOP?
 
 ### Mersedeh Heydari, MOODI (The Moodi Studio), ctc_Eri95nNgTJe8c6Lf5
 
+> SENT 2026-11-02 07.44.50 UTC, act_5gdkiA5m4WaYm7nic, one copy, thread 1 item after, on Raka's 1 Nov "Openers as much as you can do today" and "Monday 08.30 (Recommended)". Checks A and B rerun 07.37 to 07.45 UTC, all claims held.
+
 > NOT SENT. Flags for Raka. (1) THE MOODISTUDIO LTD, 16377797, incorporated 9 April 2025, London W12, Mersedeh
 > Heydarialikamar active director since 4 May 2026 (the co director resigned 16 May 2026). A London fashion label from 2024,
 > eleven pieces from £129 to £890, editions of 10, numbered, optional embroidery, fashion shaped by gaming. (2) Your call,
@@ -310,6 +318,8 @@ Shall I send you a sketch of the posting workflow for MOODI?
 ```
 
 ### Darren Gilligan, Liverpool Tour Experiences, ctc_yF9Zxdgp3anbjKB5x
+
+> SENT 2026-11-02 07.42.46 UTC, act_mMWxrnAP6fAKnXo7r, one copy, thread 1 item after, on Raka's 1 Nov "Openers as much as you can do today" and "Monday 08.30 (Recommended)". Checks A and B rerun 07.37 to 07.45 UTC, all claims held.
 
 > NOT SENT. SUPERSEDES the 12 Oct draft (the +1 WhatsApp button he fixed minutes before that send, so it's dead). Flags
 > for Raka. (1) Your 12 Oct call was "website OR social media". Social is active (Instagram 1,614 followers, last post
@@ -382,6 +392,8 @@ Shall I send you a sketch of the new homepage?
 
 ### Florent Dal Ben-Salles, Ades Bootcamp, ctc_xdGfs3raLhZzrZ3yc
 
+> SENT 2026-11-02 07.43.21 UTC, act_X7ZbZFdazB9XZLcgJ, one copy, thread 1 item after, on Raka's 1 Nov "Openers as much as you can do today" and "Monday 08.30 (Recommended)". Checks A and B rerun 07.37 to 07.45 UTC, all claims held.
+
 > NOT SENT. SUPERSEDES the 14 Oct draft, same angle, every claim reopened today and the wording brought to the current
 > template. Flags for Raka. (1) Your call 14 Oct, "skip unless build squad shows theyre growing". Still growing, the site
 > went from 163 to 250 pages since 14 Oct, seventeen batches, the RNCP block, the move into SKEMA Business School in 2026,
@@ -446,6 +458,8 @@ Shall I send you a sketch of TikTok Ads inside Ades Sim?
 ```
 
 ### Emmanuel Montecer, Marques de France, ctc_z9nJPbeK9Q7sHv5aK
+
+> SENT 2026-11-02 07.43.39 UTC, act_PGZwmFgxpZjGCXkJP, one copy, thread 1 item after, on Raka's 1 Nov "Openers as much as you can do today" and "Monday 08.30 (Recommended)". Checks A and B rerun 07.37 to 07.45 UTC, all claims held.
 
 > NOT SENT. SUPERSEDES the 14 Oct draft, same Build Squad angle, every claim reopened today, now in the B arm shape that
 > his contactId draws. Flags for Raka. (1) Your 14 Oct call was modernisation. It stays Build Squad because the footer says
@@ -512,6 +526,8 @@ Shall I send you a sketch of the squad on your next feature?
 ```
 
 ### Jessica Lazarus, Legal Unmasked, ctc_EegeYzXabJWMGf5FS
+
+> SENT 2026-11-02 07.43.03 UTC, act_YJDPbFCy5R4GZYcy9, one copy, thread 1 item after, on Raka's 1 Nov "Openers as much as you can do today" and "Monday 08.30 (Recommended)". Checks A and B rerun 07.37 to 07.45 UTC, all claims held.
 
 > NOT SENT. SUPERSEDES the 11 Oct hold and the 14 Oct hold. Flags for Raka. (1) Your 14 Oct call was modernisation. I held
 > it then under RULES 0C point 4 (the one page sign up is a deliberate priority list). This draft doesn't call the sign up a

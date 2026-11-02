@@ -235,6 +235,8 @@ Shall I send you a sketch of the booking flow?
 
 ### Gregory Thomas Emmel, Haardt Hills, ctc_wqNXAKB68Ga7TjoxJ
 
+> SENT 2026-11-02 07.42.10 UTC, act_Ja3dKs9xRofeet8bJ, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30" (Gregory) and his 1 Nov "Monday 08.30" answer for Romain's Tuesday fix. Checks A and B rerun 07.37 to 07.45 UTC, all claims held.
+
 > NOT SENT. Flags for Raka. (1) The record resolves. Haardt Hills eGbR, Gimmeldingen, register GsR 299 at Amtsgericht
 > Neustadt, Gregory Emmel the authorised partner (Impressum). Founded 2025, alcohol free Riesling, Chardonnay and rosé
 > from family estates within 8 km, poured at 60+ restaurants including Haerlin, JAN and Anne-Sophie Pic, listed at
@@ -668,6 +670,8 @@ Shall I send you a sketch of the host page?
 ```
 
 ### Romain Bretoneiche, Kilomètre Zéro, ctc_pJB7XabfQmT9zmrME
+
+> SENT 2026-11-02 07.42.28 UTC, act_gtkQtGSjfqt7ZpfEy, one copy, thread 1 item after, on Raka's 31 Oct "Commit send tomorrow at 08.30" (Gregory) and his 1 Nov "Monday 08.30" answer for Romain's Tuesday fix. Checks A and B rerun 07.37 to 07.45 UTC, all claims held.
 
 > FIXED 2026-11-01 ~17.15 UTC on Raka's "Monday 08.30" answer to "Nine are ready ... Romain with the Tuesday quiz fix". Block two now says Tuesdays only, the quiz series lists four Tuesdays (3, 10, 17, 24 Nov). APPROVED to send Mon 2 Nov 08.30 Amsterdam.
 
