@@ -1,5 +1,7 @@
 # Opener, KOERHOUSE events, 2 Nov 2026. NOT SENT, waiting on Raka's word.
 
+> SCHEDULED, Raka 2 Nov 10.20 UTC, "send at 11.59 today for all", 11.59 Amsterdam = 10.59 UTC. Copy the text from this file byte for byte. Before sending, pull the thread with the control (must still be 0 items, and the queue row DRAFTED), reopen the message's claims live, dry run, then --go with that sentence as --approval.
+
 Researched 2 Nov 2026 between about 09.20 and 09.55 UTC. Evidence folder
 /tmp/claude-0/-home-user-astra-agency/24052593-7323-58b2-9e3f-744f7080d43c/scratchpad/koer (crawls wpass1 and wpass2,
 raw HTML in raw/, screenshots in shots/ and shots2/, the hero film frames in vid/grid.png). Rerun check A and check B, pull

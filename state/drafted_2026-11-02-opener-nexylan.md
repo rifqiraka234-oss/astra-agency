@@ -1,5 +1,7 @@
 # Opener, Nexylan, 2 Nov 2026. NOT SENT, waiting on Raka's word.
 
+> SCHEDULED, Raka 2 Nov 10.20 UTC, "send at 11.59 today for all", 11.59 Amsterdam = 10.59 UTC. Copy the text from this file byte for byte. Before sending, pull the thread with the control (must still be 0 items, and the queue row DRAFTED), reopen the message's claims live, dry run, then --go with that sentence as --approval.
+
 Raka's angle, his words, "nexyland -> ai powered gtm workflows for more sales, using did you know that companies like them already infused it". Draft only. Thread pulled 2026-11-02 09.44 UTC with `tools/lemlist.py thread`, 0 items, control ctc_ch3vFcKAkjQdMKDCg 8 items. Evidence folder /tmp/claude-0/-home-user-astra-agency/24052593-7323-58b2-9e3f-744f7080d43c/scratchpad/nexylan. Re pull the thread, run the four way never messaged check and reopen every claim in the minute before any send.
 
 ### Julien Koziel, Nexylan, ctc_gmEBsJoqj9SNd7NPT

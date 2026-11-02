@@ -1,5 +1,7 @@
 # Opener, Downley Dairy, 2 Nov 2026. NOT SENT, waiting on Raka's word.
 
+> SCHEDULED, Raka 2 Nov 10.20 UTC, "send at 11.59 today for all", 11.59 Amsterdam = 10.59 UTC. Copy the text from this file byte for byte. Before sending, pull the thread with the control (must still be 0 items, and the queue row DRAFTED), reopen the message's claims live, dry run, then --go with that sentence as --approval.
+
 ### Roshan Russell, Downley Dairy, ctc_34ZGmjMfKv2g7WjPS
 
 > Main session recheck 2 Nov ~11.00 UTC, independent of the researcher. Homepage and product page (downley-dairy-milk-v2) rendered

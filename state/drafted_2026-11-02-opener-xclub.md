@@ -1,5 +1,7 @@
 # Opener, X-Club, 2 Nov 2026. NOT SENT, waiting on Raka's word.
 
+> SCHEDULED, Raka 2 Nov 10.20 UTC, "send at 11.59 today for all", 11.59 Amsterdam = 10.59 UTC. Copy the text from this file byte for byte. Before sending, pull the thread with the control (must still be 0 items, and the queue row DRAFTED), reopen the message's claims live, dry run, then --go with that sentence as --approval.
+
 Raka's angle, 2 Nov 2026, "x club -> building ai infused apps for better loyalty of customers and more stickiness? if you cant find anything can go did you know". Thread pulled 2026-11-02 09.23 UTC with `tools/lemlist.py thread`, ctc_NkGq9SrS5oiJoMnX8 0 items, control ctc_ch3vFcKAkjQdMKDCg 8 items. Evidence folder /tmp/claude-0/-home-user-astra-agency/24052593-7323-58b2-9e3f-744f7080d43c/scratchpad/xclub. Re pull the thread, run the four way never messaged check and reopen every claim in the minute before any send. Daily cap 30 (RULES 1).
 
 ### Stephanie Davidge, X-Club, ctc_NkGq9SrS5oiJoMnX8
