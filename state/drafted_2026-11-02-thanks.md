@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-02 on Raka's "Send them now", one copy each, Stephanie act_uCznu2os6256b6szT, Qasim act_bmucNRLsg5SNEQ3Ey, Tatiana act_wEEfh4T6QuwsmjcRC, Grigory act_XHAWsAdx8pPvLpyTi. Do not send again.
+
 # Thanks to the people who said no, 2 Nov 2026. NOT SENT, waiting on Raka's word.
 
 Raka 2 Nov, "for the people that just rejected us, we can say like thanks if we havent closed or sent a closing message".
