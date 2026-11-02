@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-02 between 10.59 and 11.00 UTC (11.59 Amsterdam) on Raka's "send at 11.59 today for all", act_kXLbAweygs8jBpH2D, one copy, byte for byte from this file. Thread 0 items before with the control, claims reopened live 10.56 to 10.57 UTC. Do not send again. One plain bump after three days if quiet, then a silent close.
+
 # Opener, Downley Dairy, 2 Nov 2026. NOT SENT, waiting on Raka's word.
 
 > SCHEDULED, Raka 2 Nov 10.20 UTC, "send at 11.59 today for all", 11.59 Amsterdam = 10.59 UTC. Copy the text from this file byte for byte. Before sending, pull the thread with the control (must still be 0 items, and the queue row DRAFTED), reopen the message's claims live, dry run, then --go with that sentence as --approval.
