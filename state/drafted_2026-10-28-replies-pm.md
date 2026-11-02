@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> CLOSED 2026-11-02 on Raka's "neil close". The reply below is never sent.
+
 # Replies, 28 Oct afternoon. NOT SENT, waiting on Raka's word
 
 ### Neil Bhuiyan, HappySelling, ctc_4CQjbLtm5DXovG8WJ

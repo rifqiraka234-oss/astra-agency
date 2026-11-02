@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-02 09.12.07 UTC, act_XGbWPQ9LFcABe83kL, identical text, not through tools/lemlist.py (Raka or the other session). Do not send again.
+
 # Draft, 2026-11-01. Darren Glynn, Tap Talks. NOT SENT, waiting on Raka's word.
 
 Routine inbox check 18.56 UTC. Thread pulled 18.56 UTC with `tools/lemlist.py thread`, 1 item, all pages, control

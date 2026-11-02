@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-02 09.19 UTC on Raka's "adriana send smhth", act_XiBf745rgiPuonHxD, one copy, 379 chars, byte for byte from this file. Do not send again.
+
 # Replies, 30 Oct. NOT SENT, waiting on Raka's word
 
 ### Adriana Takeuchi Libotte, Space Of Hearts, ctc_5RdENBLsvjDvhLoBc
