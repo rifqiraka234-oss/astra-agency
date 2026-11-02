@@ -33,6 +33,7 @@ already due, Thu 15 (the 5 Thursday bumps take the rest), Fri 16 (the 4 Friday n
 - Batch 4, Sun 1 Nov, 10. Vincent Bucaille ctc_xtQnzSvvms6TEoAxS, Frank Hemmert ctc_CLQ5T3DEaeG2SMG9d, Jamie Bolding ctc_4XQDxYiE3NkeqKPEy, Nicolas Bergé ctc_mQBx2Mr64rqs7v4Qu, Robin Conway ctc_7hNbkAjk4urRmcjji, Thomas Hebenstreit ctc_3S2rDnBX9W5hd3F8G, Thomas Langlet ctc_vp6dPpiBHosd9oW78, Victor Felipe Florenz ctc_CFbKYC6c3yM6MrcAP, Dan Waterfall-Chapman ctc_eGXerDBzTghqprWZh, Jean-Christophe Conticello ctc_iWGMxjeTYkzegg78v
   SENT 1 Nov, one copy each, Vincent 05.02.09 act_5EsrCnSA4rSKfZTwh, Frank 05.02.27 act_fg4NdvEr6LSNG5ju5, Jamie 05.02.45 act_DALzy6puR5dvLjpzj, Nicolas 05.03.03 act_rzisebxrG5cCo5gyf, Robin 05.03.20 act_3zrPgFJPxQ3dZLEoP, Thomas 05.03.37 act_BG52C7vrXTRvPDfzH, Thomas 05.03.55 act_vH4Tsai2S8wbF36j3, Victor 05.04.13 act_6z8Wg977htqE4CuD6, Dan 05.04.31 act_LnLWDciWqLBhwCNuw, Jean-Christophe 05.04.49 act_AYvddLxjRiNZPWR9K.
 - Batch 5, Mon 2 Nov, 10. Niklas Mocker ctc_Wg9Bv7Z7vMqpNQx78, Orion D. ctc_JiMGgwH639YbSSZfE, Darren Buckley ctc_q5NZMCjRn6NgvuQbT, Fabian Mader ctc_vHXN93Sa98zrL6roG, Marjolein Schoot Uiterkamp ctc_vmg2iAtNxvpSW7d93, Reno Wiertz ctc_F57ZqzDSwGEB8ad8H, Martijn Dijk ctc_Z3J4EAKarueohCqxj, Alex Talbot ctc_XDRJdGuNAsHxttMmv, Alexandre Francois ctc_5N8eTkQMH9tMYswtK, Alice Poubelle ctc_PLeDim4Mhp2CtQyiu
+  SENT 2 Nov, one copy each, Niklas 05.04.16 act_jCNe2uNWqArQQwkZa, Orion 05.04.33 act_qvhRdBRFNM3wAKTmR, Darren 05.04.51 act_wRaeQRQ4vWZJwARep, Fabian 05.05.09 act_ghZPk82LJs4LffJPE, Marjolein 05.05.27 act_uWeoLjZo69zkRj9Zj, Reno 05.05.45 act_qM565ZJQYzWisriHn, Alex 05.06.03 act_2aeLJwkDZ9rSTjrXP, Alexandre 05.06.21 act_jJPH3PLoj2W2eFzmT, Alice 05.06.39 act_EY6JxiQkwcBdu7Lkt. Martijn Dijk HELD, not sent. His closer says "the StriData homepage we sketched", no sketch exists anywhere in the repo, and stridata.com was rebuilt with both August points fixed (3 Oct research). Needs Raka's word on new text.
 - Batch 6, Tue 3 Nov, 10. Andres Jara ctc_bWcfiNE764D4PfGJt, Charles De Brosses ctc_vHnigB2dXAPYKJJ8k, Dan D'souza ctc_ZSXZCGSgniBKAESgP, David Weyn ctc_vm6BXBrFDAir6Rb3F, Joe Benucci ctc_i3GAp7FZtMeQ38KAX, Maharjan Jagdees ctc_2zdt5XmnTSPqWvhJC, Paul Barnes ctc_wRuu8puzBRRBgNCyC, Rachel Blanckensee ctc_G8gRt44CmSG6Rpdnu, Sacko Diombera ctc_kLF4aRGsEdBZvNruG, Sandro Wulf ctc_YF6GhP26nDSvRyPZR
 - Batch 7, Wed 4 Nov, 7. Claire Enders ctc_sQPTmkW8KGwkediDD, Guillaume Slee ctc_mG6iR58sQQAXKgKEk, Kevin Hanson ctc_BAsKeiWpJiTEmbqfz, Rob Quinn ctc_k6YrDTTW2zZ3MhxB3, Sonny Wells ctc_BY3K7TQYXkrRDydck, Jean-Charles Chemin ctc_eD2TwrqAxJEP8WbyQ, Sandra Deddens-Otterspeer ctc_fpRF7TPZGkTAKwvTL
 
@@ -287,57 +288,41 @@ newer queue row, means don't send and tell Raka. Copy from this file, confirm on
 
 > Opener 2026-10-09, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the squad shipping dotega's next features looks like?"
 
-CLOSER
-```
-Niklas, I'm going to close it here. If you ever want to see the squad shipping dotega's next features, you know where to find me.
-```
+> SENT 2 Nov 05.04.16 UTC, act_jCNe2uNWqArQQwkZa, batch 5. Text sent, "Niklas, I'm going to close it here. If you ever want to see the squad shipping dotega's next features, you know where to find me."
 
 ### Orion D., Omnilabs Research, ctc_JiMGgwH639YbSSZfE
 
 > Opener 2026-10-09, second message 2026-10-12 (plain), no reply. Opener's ask, "Shall I send you over what the rehab team launch site and AI workflow looks like?"
 
-CLOSER
-```
-Orion, I'm going to close it here. If you ever want to see the rehab team launch site and AI workflow, you know where to find me.
-```
+> SENT 2 Nov 05.04.33 UTC, act_qvhRdBRFNM3wAKTmR, batch 5. Text sent, "Orion, I'm going to close it here. If you ever want to see the rehab team launch site and AI workflow, you know where to find me."
 
 ### Darren Buckley, finzo, ctc_q5NZMCjRn6NgvuQbT
 
 > Opener 2026-10-11, second message 2026-10-14 (plain), no reply. Opener's ask, "Shall I send you over what the AI workflow that finds finzo's next clients looks like?"
 
-CLOSER
-```
-Darren, I'm going to close it here. If you ever want to see the AI workflow that finds finzo's next clients, you know where to find me.
-```
+> SENT 2 Nov 05.04.51 UTC, act_wRaeQRQ4vWZJwARep, batch 5. Text sent, "Darren, I'm going to close it here. If you ever want to see the AI workflow that finds finzo's next clients, you know where to find me."
 
 ### Fabian Mader, fama – Mobile Specialty Coffee & Matcha Bar, ctc_vHXN93Sa98zrL6roG
 
 > Opener 2026-10-11, second message 2026-10-14 (plain), no reply. Opener's ask, "Shall I send you over what the AI quote workflow for fama's events looks like?"
 
-CLOSER
-```
-Fabian, I'm going to close it here. If you ever want to see the AI quote workflow for fama's events, you know where to find me.
-```
+> SENT 2 Nov 05.05.09 UTC, act_ghZPk82LJs4LffJPE, batch 5. Text sent, "Fabian, I'm going to close it here. If you ever want to see the AI quote workflow for fama's events, you know where to find me."
 
 ### Marjolein Schoot Uiterkamp, BILLIE SWIM, ctc_vmg2iAtNxvpSW7d93
 
 > Opener 2026-10-11, second message 2026-10-14 (plain), no reply. Opener's ask, "Shall I send you over what the wholesale site that wins Billie Swim stockists looks like?"
 
-CLOSER
-```
-Marjolein, I'm going to close it here. If you ever want to see the wholesale site that wins Billie Swim stockists, you know where to find me.
-```
+> SENT 2 Nov 05.05.27 UTC, act_uWeoLjZo69zkRj9Zj, batch 5. Text sent, "Marjolein, I'm going to close it here. If you ever want to see the wholesale site that wins Billie Swim stockists, you know where to find me."
 
 ### Reno Wiertz, Down to Earth Dining, ctc_F57ZqzDSwGEB8ad8H
 
 > Opener 2026-10-11, second message 2026-10-14 (plain), no reply. Opener's ask, "Shall I send you over what the AI system for your franchise looks like?"
 
-CLOSER
-```
-Reno, I'm going to close it here. If you ever want to see the AI system for your franchise, you know where to find me.
-```
+> SENT 2 Nov 05.05.45 UTC, act_qM565ZJQYzWisriHn, batch 5. Text sent, "Reno, I'm going to close it here. If you ever want to see the AI system for your franchise, you know where to find me."
 
 ### Martijn Dijk, StriData, ctc_Z3J4EAKarueohCqxj
+
+> HELD 2 Nov 05.03 UTC, not sent. "the StriData homepage we sketched" is unverified, no sketch in state/prototypes.jsonl or anywhere in the repo, and the 3 Oct research found stridata.com rebuilt with both points of the 26 Aug pitch fixed. Do not send this text. New text needs Raka's word.
 
 > Opener 2026-08-26, second message 2026-10-15 (plain), no reply. Opener's ask, "Hey Martijn, thanks for connecting. StriData is solving a real headache, getting manufacturers off scattered Excel and email into something usable. One thing I "
 
@@ -350,28 +335,19 @@ Martijn, I'm going to close it here. If you ever want the StriData homepage we s
 
 > Opener 2026-10-12, second message 2026-10-15 (plain), no reply. Opener's ask, "Shall I send you a sketch of Music Social's LinkedIn sales channel?"
 
-CLOSER
-```
-Alex, I'm going to close it here. If you ever want that sketch of Music Social's LinkedIn sales channel, you know where to find me.
-```
+> SENT 2 Nov 05.06.03 UTC, act_2aeLJwkDZ9rSTjrXP, batch 5. Text sent, "Alex, I'm going to close it here. If you ever want that sketch of Music Social's LinkedIn sales channel, you know where to find me."
 
 ### Alexandre Francois, Cressonnette, ctc_5N8eTkQMH9tMYswtK
 
 > Opener 2026-10-12, second message 2026-10-15 (plain), no reply. Opener's ask, "Shall I send you over what the AI workflow filling your platform with offices looks like?"
 
-CLOSER
-```
-Alexandre, I'm going to close it here. If you ever want to see the AI workflow filling your platform with offices, you know where to find me.
-```
+> SENT 2 Nov 05.06.21 UTC, act_jJPH3PLoj2W2eFzmT, batch 5. Text sent, "Alexandre, I'm going to close it here. If you ever want to see the AI workflow filling your platform with offices, you know where to find me."
 
 ### Alice Poubelle, Baldoria Paris, ctc_PLeDim4Mhp2CtQyiu
 
 > Opener 2026-10-12, second message 2026-10-15 (plain), no reply. Opener's ask, "Shall I send you a sketch of the Back Market project as a case study?"
 
-CLOSER
-```
-Alice, I'm going to close it here. If you ever want that sketch of the Back Market project as a case study, you know where to find me.
-```
+> SENT 2 Nov 05.06.39 UTC, act_EY6JxiQkwcBdu7Lkt, batch 5. Text sent, "Alice, I'm going to close it here. If you ever want that sketch of the Back Market project as a case study, you know where to find me."
 
 ### Andres Jara, De Stadsgroenteboer, ctc_bWcfiNE764D4PfGJt
 
