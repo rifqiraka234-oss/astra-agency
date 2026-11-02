@@ -1,3 +1,4 @@
+<!-- APPROVED by Raka 2026-11-01 ~17.10 UTC. He wrote "Openers as much as you can do today", then, told Sunday was at 30 of 30, picked "Monday 08.30 (Recommended)" for "All 9 go tomorrow at 08.30 Amsterdam with Gregory". Covers the 8 SKETCH and SKETCHB drafts in this file (Sicko, Sandi, Kat, Mersedeh, Darren, Florent, Emmanuel, Jessica), not IES, New World Architects or Giulia. Send Mon 2 Nov 08.30 Amsterdam (07.30 UTC) through wake trig_0183F3FXdCqrnUNnRMK3fkeb, after closers batch 5. Rerun check A and check B in the minutes before. NOT SENT until each section carries its own SENT line. -->
 # Drafts, 2026-11-01, group B, the researched but never sent pool. NOT SENT
 
 Raka, 2026-10-31 ~21.20 UTC, on filling Monday's free slots with group B, "Yeah dont forget openers tomorrow and the prototype

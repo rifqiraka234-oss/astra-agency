@@ -669,6 +669,8 @@ Shall I send you a sketch of the host page?
 
 ### Romain Bretoneiche, Kilomètre Zéro, ctc_pJB7XabfQmT9zmrME
 
+> FIXED 2026-11-01 ~17.15 UTC on Raka's "Monday 08.30" answer to "Nine are ready ... Romain with the Tuesday quiz fix". Block two now says Tuesdays only, the quiz series lists four Tuesdays (3, 10, 17, 24 Nov). APPROVED to send Mon 2 Nov 08.30 Amsterdam.
+
 > NOT SENT. Flags for Raka. (1) The record resolves through the register. KILOMETRE ZERO SAS (SIREN 981452774, Paris,
 > November 2023, a restaurant with 3 to 5 staff) has as Président ALL THE ROADS GROUP, whose gérant is Romain (his
 > software company, 62.01Z, €141,150 revenue in 2025). (2) He's a fullstack developer and the table booking runs on a
@@ -716,7 +718,7 @@ lead read: Romain reads that their private hire guide sits on the blog waiting f
 claims:
 your private hire guide sells afterworks to teams around République, https://www.km-0.bar/en/post/private-hire-craft-beer-bar-paris-group-event "Afterworks and drinks with colleagues ... accessible for teams working in central Paris" and "your Marais startup"
 it sits on your blog, https://www.km-0.bar/en/post/private-hire-craft-beer-bar-paris-group-event is a blog post ("Article written by Django Co-founder", "Updated: Oct 11")
-Mondays and Tuesdays get quizzes, https://www.km-0.bar/en/event-list Toms Quiz on 2026-11-02 (Monday) and 2026-11-03 (Tuesday), and the same pair on 9 and 10, 16 and 17 November
+Tuesdays get quizzes, https://www.km-0.bar/en/event-details/toms-quiz-2026-11-03-19-00 "Nov 03, 2026, 7:00 PM" with "Other dates Tue, Nov 10 ... Tue, Nov 17 ... Tue, Nov 24", and https://www.km-0.bar/en/event-list lists Tom's Quiz next on Tue, Nov 03 (rechecked 2026-11-01 17.15 UTC, the Monday 2 and 9 Nov pages open only by direct link and list the Tuesdays as their other dates, so Mondays are dropped from the message)
 INFERENCE, offices nearby likely book their usual bar and only meet the guide if they search, rests on the guide being a blog page (https://www.km-0.bar/en/post/private-hire-craft-beer-bar-paris-group-event), worded likely
 recheck: 2026-10-31, the guide's text and update line, the event list dates against the calendar, the register chain, thread re pulled 0 items with the control at 7. Disproof tried, read how groups book (email by choice, kept out), found the custom booking app so no website claim is made, checked the quiz days are Monday and Tuesday. Facts hold, confidence MEDIUM, a developer co founder may build this himself
 ```
@@ -725,7 +727,7 @@ SKETCH
 ```
 Hi Romain, Kilomètre Zéro looks cool!
 
-However, your private hire guide sells afterworks to teams around République, and it sits on your blog waiting for offices to find it. While Mondays and Tuesdays get filled with quizzes, offices nearby likely book their usual bar.
+However, your private hire guide sells afterworks to teams around République, and it sits on your blog waiting for offices to find it. While Tuesdays get filled with quizzes, offices nearby likely book their usual bar.
 
 I'd suggest an outreach flow that sends the guide to offices and startups around République each month and books their weeknight team nights.
 
