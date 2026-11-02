@@ -50,3 +50,5 @@ that arrives filled in. Built in their navy, orange and white, with their own Li
   host page sits inside a wider rebuild.
 - £500 is at the bottom of our €500 to €50k band (about €575).
 - He's two days from the trade show, so a page live before or right after it is worth a lot to him.
+
+**Sent to the team.** 2 Nov ~12.20 UTC on Raka's "send the meeting/deal summary to me josh and luna", Gmail id 1a19c2e679d019bf, to rifqiraka234@gmail.com, joshuavanzeelt@gmail.com and lunaraisyamulya@gmail.com (Luna checked, no bounces, in use since Oct).
