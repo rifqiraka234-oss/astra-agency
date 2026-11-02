@@ -81,3 +81,5 @@ SharePoint confirmed as her environment, so Microsoft 365 holds.
 5. Rank the pains by cost in hours, then agree the first build and what comes after. Write the spec on the call.
 6. Price per build and the monthly fee, said plainly, with the list of what's in and out. Test session and handover
    dates in the calendar before hanging up.
+
+**2 Nov ~19.15 UTC.** Raka asked Lisanne by email to move the refinement session to Thu 5 Nov 14.00 or Fri 6 Nov 10.00 (Josh has urgent matters), Gmail 1a19db57278cc1f9. The calendar event stays at Thu 10.00 until she answers.

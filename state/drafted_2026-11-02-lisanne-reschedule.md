@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-02 ~19.15 UTC on Raka's "Yws send! And the email subject will be lisanne de x astra or something", as a new email, subject "Lisanne de Jong x Astra Agency, refinement session", Gmail id 1a19db57278cc1f9, to lisanne@dejongvanhommerig.com, cc joshuavanzeelt@gmail.com and lunaraisyamulya@gmail.com. One copy in Sent. Body byte for byte from below. When she answers, move event fbicbb7998qd8tcju5gmcemgig to her pick, Meet link unchanged.
+
 # Email to Lisanne, move the refinement session, 2 Nov 2026. NOT SENT, waiting on Raka's word.
 
 Raka 2 Nov ~19.00 UTC, "draft an email to Lisanne that hope everything's well? Is it possible to reschedule the
