@@ -50,6 +50,8 @@ Raka's angle, his words, "nexyland -> ai powered gtm workflows for more sales, u
 > hosted on an American hyperscaler each week and drafts the first message for your sales team. / At Astra agency we build AI
 > workflows for brands like Unilever, AXA, Pertamina. / Shall I send you a sketch of that workflow for Nexylan?"
 
+> Raka 2 Nov, "delete the 'At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.' to cut words". Brand line removed, and "an AI prospecting workflow" became "a prospecting AI workflow" so block three still names the AI workflow. Not sent, shown again.
+
 ```gate
 lead: Julien Georges Koziel, Directeur Général of SAS NEXYLAN, SIREN 517884722, created 2009-10-26, active, NAF 63.11Z, staff band 12 (20 to 49, 2024), Président YOUR.ONLINE PERFORMANCE MANAGEMENT B.V. (https://recherche-entreprises.api.gouv.fr/search?q=nexylan read 2026-11-02, curl reset by our proxy so read through WebFetch). He runs it, a group owns it, Raka chose to write anyway. lemlist jobTitle "Directeur général", tagline "Directeur général Nexylan", leadId lea_WYah4rtSM4euLyD4C, one campaign cam_PryZp5LuvQv8NznHh. ctc_gmEBsJoqj9SNd7NPT, thread 0 items, control 8, inbox list of 189 conversations has no Koziel or Nexylan
 site pass 1: 105 URLs, tools/crawl.py on https://www.nexylan.com (47 from the sitemaps, past Cloudflare through its fetch-walled fallback), 101 at 200, 2 Cloudflare 403s (xmlrpc, an old /contacter-nexylan/), 2 Cloudflare email protection 404s, 58 unique pages once www and /product/ duplicates fold, every page read
@@ -107,9 +109,7 @@ Hi Julien, Nexylan looks cool!
 
 However, did you know that 54% of sales teams already use AI agents, according to a Salesforce survey of 4,050 sales people? The top performers are 1.7 times more likely than underperformers to use them for prospecting, and every Nexylan service page points to a quote or an expert.
 
-I'd suggest an AI prospecting workflow that finds French companies hosted on an American hyperscaler each week and drafts the first message for your sales team.
-
-At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
+I'd suggest a prospecting AI workflow that finds French companies hosted on an American hyperscaler each week and drafts the first message for your sales team.
 
 Shall I send you a sketch of that workflow for Nexylan?
 ```

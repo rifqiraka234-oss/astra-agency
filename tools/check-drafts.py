@@ -370,9 +370,12 @@ def thread_problems(g, msg, shape=None):
     if len(kv.get("lead read", "").split()) < 15:
         probs.append("THREAD, 'lead read' missing, read it as the lead in one sentence of 15+ words")
     B = [b.strip() for b in msg.split("\n\n")]
-    if (len(B) >= 5 or (shape == "SKETCHB" and len(B) == 4)) and parts.get("link"):
+    # Raka 2026-11-02, "delete the 'At Astra agency we build AI workflows ...' to cut words". A did you know
+    # SKETCH may run four blocks without the brand line, so its offer and ask are blocks three and four.
+    dyk4 = shape == "SKETCH" and len(B) == 4 and B[1].startswith("However, did you know that ")
+    if (len(B) >= 5 or (shape == "SKETCHB" and len(B) == 4) or dyk4) and parts.get("link"):
         block2 = B[1].lower()
-        if shape == "SKETCHB":
+        if shape == "SKETCHB" or dyk4:
             proof = B[2].lower() + " " + B[3].lower()
         else:
             proof = (B[2].lower() + " " + B[4].lower()) if shape == "SKETCH" else \
@@ -555,6 +558,11 @@ def check(path, replies=False):
             if not 45 <= words <= 115:
                 bad(i, f"{words} words, SKETCH shape, outside 45 to 115")
             S = [" ".join(b.split()) for b in m.split("\n\n")]
+            # Raka 2026-11-02, "delete the 'At Astra agency we build AI workflows for brands like Unilever, AXA,
+            # Pertamina.' to cut words". The did you know shape may drop the brand line, four blocks.
+            nobrand = len(S) == 4 and S[1].startswith("However, did you know that ")
+            if nobrand:
+                S = S[:3] + [""] + S[3:]
             if len(S) != 5:
                 bad(i, f"{len(S)} blocks, SKETCH is 5, hi, however, suggest, we make, sketch")
             else:
@@ -592,7 +600,7 @@ def check(path, replies=False):
                         bad(i, f"SKETCH block two sentence {k+1} is {len(sent.split())} words, cap 30")
                 if not re.match(r"I'd suggest ", S[2]):
                     bad(i, "SKETCH block three must open 'I'd suggest ...'")
-                if "for brands like Unilever, AXA, Pertamina." not in S[3]:
+                if not nobrand and "for brands like Unilever, AXA, Pertamina." not in S[3]:
                     bad(i, "SKETCH block four must carry 'for brands like Unilever, AXA, Pertamina.'")
                 if not re.fullmatch(r"Shall I send you a sketch of .+\?", S[4]):
                     bad(i, "SKETCH block five must be 'Shall I send you a sketch of [thing]?'")

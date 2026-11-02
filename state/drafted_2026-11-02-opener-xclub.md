@@ -35,6 +35,8 @@ Raka's angle, 2 Nov 2026, "x club -> building ai infused apps for better loyalty
 > the 2 Nov pipeline log). The campaigns lookup on the leadId (lea_b8ZrwjgzMp9MReQYD) had no tool in this session, so run
 > it before the send.
 
+> Raka 2 Nov, "delete the 'At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.' to cut words". Brand line removed. Not sent, shown again.
+
 ```gate
 lead: Stephanie Davidge, co founder of X-Club, active director of X CLUB LIMITED 13136772 since 17 January 2022 (formerly X PILATES LIMITED, incorporated 15 January 2021), also director of X CLUB WELLNESS LIMITED 15542881 and X CLUB WEST LIMITED 15541469, officers BARACHO DA FONSECA GOBEY Amanda (Active Director since 15 January 2021) and DAVIDGE Stephanie Florence (Active Director), https://find-and-update.company-information.service.gov.uk/company/13136772/officers read 2026-11-02. lemlist jobTitle "Co-Founder at X-Club", tagline the same, companyName X-Club, companyDomain xclubs.co.uk, 11-50 staff, record reconciles. ctc_NkGq9SrS5oiJoMnX8, leadId lea_b8ZrwjgzMp9MReQYD, W1c cam_xFYYBzvfSHk83epvw, accepted 31 Oct 2026. Thread 0 items, control 8
 site pass 1: 205 URLs, tools/crawl.py on https://www.xclubs.co.uk (108 from the sitemaps), 197 at 200 and 8 at 404, 56 blog posts, every page read
@@ -100,8 +102,6 @@ Hi Stephanie, X-Club looks cool!
 However, did you know that on average Pilates studios get only 43% of first time clients back for a second visit? Mariana Tek's 2026 Pilates report says retention is strong once clients get past their first two visits, and X-Club's class intro offers run out two weeks after purchase.
 
 I'd suggest an AI workflow that writes to every intro client after their first class and gets their second one booked before the two weeks run out.
-
-At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
 
 Shall I send you a sketch of the AI workflow for X-Club's intro clients?
 ```

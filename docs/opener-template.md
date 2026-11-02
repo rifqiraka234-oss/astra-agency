@@ -82,6 +82,11 @@ At Astra agency we build AI workflows for brands like Unilever, AXA, Pertamina.
 Shall I send you a sketch of the AI workflow for [their practice, shop, team]?
 ```
 
+- **No brand line, four blocks (Raka, 2026-11-02).** His words, "delete the 'At Astra agency we build AI workflows
+  for brands like Unilever, AXA, Pertamina.' to cut words", on the X-Club and Nexylan drafts. The did you know shape
+  now runs Hi, However did you know, I'd suggest an AI workflow, the ask. Block three has to say "AI workflow" (or
+  "build squad") itself, since the brand line that used to carry it is gone. tools/check-drafts.py accepts the four
+  block form, and still accepts the old five block one.
 - **Name the source inside the message.** "Clio's research links the gap to ..." A stat nobody can
   look up reads as made up. The gate carries `did you know: <the fact> | <source, date, sample> |
   <URL>`, and tools/check-drafts.py fails the draft without it.
