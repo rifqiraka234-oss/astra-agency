@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Framed, the bookings desk</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="media/logo.png">
+<link rel="preload" href="fonts/gloock-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="bar">
+  <a class="mark" href="./" aria-label="Framed Photobooths, home"><img src="media/logo.png" alt="Framed Photobooths" width="800" height="563"></a>
+  <nav aria-label="Pages"><a href="./" aria-current="page">Home</a><a href="desk/">Desk</a><a href="returns/">Returns</a><a href="start/">Start</a></nav>
+  <a class="btn cream" href="desk/">Open the desk</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <h1><svg class="brk" viewBox="0 0 800 563" preserveAspectRatio="none" aria-hidden="true"><path class="b1" d="M612,0 V10 Q612,30 592,30 H90 Q8,30 8,112 V420 Q8,466 54,466 H122"/><path class="b2" d="M352,563 V520 Q352,468 404,468 H650 Q708,468 708,410 V92 Q708,38 750,38 Q792,38 792,92 V162"/></svg>This December, Framed asks first.</h1>
+    <p class="lede">Your site asks <q lang="nl">Is de photobooth vrij op jouw datum?</q> and waits. This desk finds Dutch companies planning a December party, a staff day or a gala, tells you why now, and drafts your first message to each one in Dutch. You keep the ones you like.</p>
+    <div class="acts"><button class="btn cream run" type="button" data-run>Run this week's search</button><a class="btn line" href="desk/">Open the desk</a></div>
+    <p class="note">A working sketch for Kian by Astra agency. Real companies, real reasons, nothing gets sent.</p>
+  </div>
+  <figure class="hero-film">
+    <video src="media/framed-2.mp4" poster="media/framed-2.jpg" autoplay muted loop playsinline preload="auto" aria-label="The Framed photobooth in a client's house style at a business event, a guest holding her strip"></video>
+    <figcaption>Framed in house style at a business event, from get-framed.com</figcaption>
+  </figure>
+</section>
+
+<section class="booth-sec" id="booth" aria-labelledby="booth-h">
+  <div class="stage">
+    <div class="side">
+      <h2 id="booth-h">Every Monday the desk prints you a strip per company.</h2>
+      <p class="sub">Who they are, why they're planning something now, the first lines of your message, and when it's for. Keep it and the message goes out. Skip it and the desk learns.</p>
+      <div class="booth" aria-hidden="true">
+        <div class="body">
+          <div class="ringl"></div>
+          <div class="screen"><p class="say">Strike a pose!<br>De zoekopdracht start na de countdown</p></div>
+          <div class="slot"></div>
+        </div>
+        <div class="stand"></div><div class="foot"></div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="table" aria-live="polite"><p class="wait">Press run and the booth prints this week's first three.</p></div>
+      <div class="after"><span class="count" data-count>0 kept</span><button class="btn cream run" type="button" data-run>Print the next three</button><a class="btn line" href="desk/">All 14 in the desk</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<div class="flash" aria-hidden="true"></div>
+<p class="ribbon">Sketch. Real companies with linked reasons, draft messages, nothing is sent.</p>
+<script src="js/leads.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>
