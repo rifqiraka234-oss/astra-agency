@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-03 ~07.35 UTC on Raka's "The first opener drafts send", act_xCEHpyBdP38E5JdWp, one copy. Claims reopened live 07.26 to 07.30 UTC. Do not send again.
+
 # Opener, Framed Photobooths, 2 Nov 2026. NOT SENT, waiting on Raka's word.
 
 Raka's angle, his words, "Gtm auotmation strategy to get more b2b salessss". Did you know shape, four blocks, no brand line (Raka, 2 Nov). Draft only. Thread pulled 2026-11-02 19.41 UTC with `tools/lemlist.py thread`, ctc_sTr4564J5jSZQthun 0 items, control ctc_ch3vFcKAkjQdMKDCg 8 items. Evidence folder /tmp/claude-0/-home-user-astra-agency/24052593-7323-58b2-9e3f-744f7080d43c/scratchpad/framed. Re pull the thread, run the four way never messaged check and reopen every claim in the minute before any send. Daily cap 30 (RULES 1).

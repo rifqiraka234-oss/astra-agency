@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-03 ~07.35 UTC on Raka's "The first opener drafts send", act_3sab8fgKbvXSscCwx, one copy. Claims reopened live 07.26 to 07.30 UTC. Do not send again.
+
 # Opener, Helios Retreats, 2 Nov 2026. NOT SENT, waiting on Raka's word.
 
 Raka's angle, his words, "Gtm auotmation strategy to get more b2b salessss". Draft only. Thread pulled 2026-11-02 19.42 UTC with `tools/lemlist.py thread`, ctc_LMvqRxyCdNJywZEWz 0 items, control ctc_ch3vFcKAkjQdMKDCg 8 items. Evidence folder /tmp/claude-0/-home-user-astra-agency/24052593-7323-58b2-9e3f-744f7080d43c/scratchpad/helios. Re pull the thread, run the four way never messaged check and reopen every claim in the minute before any send.

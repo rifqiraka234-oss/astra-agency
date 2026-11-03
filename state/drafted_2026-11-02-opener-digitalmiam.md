@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-03 ~07.35 UTC on Raka's "The first opener drafts send", act_rSLhxP4PpBQnQi64K, one copy. Claims reopened live 07.26 to 07.30 UTC. Do not send again.
+
 # Opener, Digital MIAM, 2 Nov 2026. NOT SENT, waiting on Raka's word.
 
 Researched 2 Nov 2026 between about 19.40 and 20.40 UTC. Evidence folder
