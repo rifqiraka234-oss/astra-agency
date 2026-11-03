@@ -83,3 +83,8 @@ like let him calculate returns".
 - Line 5 note for the inner pages. Desk, Returns and Start are tools, so the title shares the first screen with his film (28 to 38 percent), check-build warns and passes.
 - check-build PASS on all four pages. Copy grep, no colons or dashes in our prose, quotes from sources kept verbatim. NO-AI-SLOP section 8, clean.
 - Rechecked 3 Nov, his prices and terms on four of his pages, Djunes and photobooths-huren.nl prices, Belkins 10.5 and 10.9, Instantly 3.43, Expandi 10.4, Robin Radar, Helloprint, UNFC, Sluyter, Hell's Kitchen sources. One claim cut (Robin Radar's growth line, not in its linked source).
+
+## v2, one page (Raka 3 Nov evening, "a one pager for him to test out how it is ... at the end of the demo flows see how everything connects ... the architecture")
+- One page. Hero, the booth printing strips, then "Now be Kian for one week", his phone running the desk with six steps (Sunday search, keep or skip, it goes out as you with a preview of how it lands, an example reply with the answer ready, December fills, results), then "How it all connects", the architecture of the week he just played (sources, Claude Sunday run, his desk, lemlist, the company, the reply, lemlist inbox, Claude reply run, his desk, his booking form), lit along the path he walked and playable, then December night by night, then the start form filled from what he did, copied to LinkedIn.
+- The four page version is kept in v1-pages/ for reference, not deployed.
+- Selector for --action `a[href$="#try"], .run, .go`. check-build PASS, copy grep clean, NO-AI-SLOP clean. Flow played end to end at 1440 and 390, zero page errors.

@@ -8,12 +8,13 @@
 <link rel="icon" href="media/logo.png">
 <link rel="preload" href="fonts/gloock-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/demo.css">
 </head>
 <body>
 <header class="bar">
   <a class="mark" href="./" aria-label="Framed Photobooths, home"><img src="media/logo.png" alt="Framed Photobooths" width="800" height="563"></a>
-  <nav aria-label="Pages"><a href="./" aria-current="page">Home</a><a href="desk/">Desk</a><a href="returns/">Returns</a><a href="start/">Start</a></nav>
-  <a class="btn cream" href="desk/">Open the desk</a>
+  <nav aria-label="On this page"><a href="#booth">The strips</a><a href="#try">Try it</a><a href="#how">How it connects</a><a href="#december">December</a></nav>
+  <a class="btn cream go" href="#try">Try your Monday</a>
 </header>
 
 <main>
@@ -21,7 +22,7 @@
   <div class="hero-copy">
     <h1><svg class="brk" viewBox="0 0 800 563" preserveAspectRatio="none" aria-hidden="true"><path class="b1" d="M612,0 V10 Q612,30 592,30 H90 Q8,30 8,112 V420 Q8,466 54,466 H122"/><path class="b2" d="M352,563 V520 Q352,468 404,468 H650 Q708,468 708,410 V92 Q708,38 750,38 Q792,38 792,92 V162"/></svg>This December, Framed asks first.</h1>
     <p class="lede">Your site asks <q lang="nl">Is de photobooth vrij op jouw datum?</q> and waits. This desk finds Dutch companies planning a December party, a staff day or a gala, tells you why now, and drafts your first message to each one in Dutch. You keep the ones you like.</p>
-    <div class="acts"><button class="btn cream run" type="button" data-run>Run this week's search</button><a class="btn line" href="desk/">Open the desk</a></div>
+    <div class="acts"><button class="btn cream run" type="button" data-run>Run this week's search</button><a class="btn line go" href="#try">Try your Monday</a></div>
     <p class="note">A working sketch for Kian by Astra agency. Real companies, real reasons, nothing gets sent.</p>
   </div>
   <figure class="hero-film">
@@ -46,34 +47,56 @@
     </div>
     <div class="right">
       <div class="table" aria-live="polite"><p class="wait">Press run and the booth prints this week's first three.</p></div>
-      <div class="after"><span class="count" data-count>0 kept</span><button class="btn cream run" type="button" data-run>Print the next three</button><a class="btn line" href="desk/">All 14 in the desk</a></div>
+      <div class="after"><span class="count" data-count>0 kept</span><button class="btn cream run" type="button" data-run>Print the next three</button><a class="btn line go" href="#try">Try the whole week</a></div>
     </div>
   </div>
 </section>
 
-<section class="week" id="week" aria-labelledby="week-h">
-  <h2 class="h2" id="week-h">Ten minutes on a Monday. That's your part.</h2>
-  <p class="p" style="margin-top:18px">Claude does the finding and the writing on Sunday night, lemlist does the sending from your own LinkedIn, and you only ever say yes, no, or which date.</p>
-  <div class="week-strip">
-    <div class="wk"><div class="media"><div class="tile"><div><p class="big">14</p><p class="lab" style="color:var(--sand);margin-top:10px">companies with a reason this week</p></div></div></div>
-      <div class="txt"><p class="day">Sunday night, Claude</p><h3>It finds who's planning</h3><p>Job ads with events in them, anniversaries, new offices, funding, galas already in an agenda. Only companies near you with a date and a link.</p></div></div>
-    <div class="wk"><div class="media"><video src="media/framed-5.mp4" poster="media/framed-5.jpg" muted loop playsinline autoplay preload="metadata" aria-label="The Framed booth screen, Strike a pose"></video></div>
-      <div class="txt"><p class="day">Monday morning, you</p><h3>You keep or skip</h3><p>A strip per company on your phone, with the reason and your message in Dutch. Change a word if you want. Skips teach it what you don't want.</p></div></div>
-    <div class="wk"><div class="media"><video src="media/framed-4.mp4" poster="media/framed-4.jpg" muted loop playsinline autoplay preload="metadata" aria-label="The Framed booth in an event hall"></video></div>
-      <div class="txt"><p class="day">Tuesday to Friday, lemlist</p><h3>It goes out as you</h3><p>A visit, a connection request, your message the day after they accept, one short bump. About 20 a day, office hours, from your own account.</p></div></div>
-    <div class="wk"><div class="media"><video src="media/framed-1.mp4" poster="media/framed-1.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Guests at the Framed booth at night"></video></div>
-      <div class="txt"><p class="day">When they answer, you</p><h3>You pick the date</h3><p>Replies land in one inbox with an answer ready that offers your free nights and your booking form filled in. You press send.</p></div></div>
+<section class="try" id="try" aria-labelledby="try-h">
+  <h2 class="h2" id="try-h">Now be Kian for one week. This is the desk on your phone.</h2>
+  <p class="p" style="margin-top:18px">Six steps from Sunday night to a booked night in December. Press the button in each step, or tap inside the phone yourself.</p>
+  <div class="try-grid">
+    <div class="phone-wrap"><div class="phone"><div class="notch"></div><div class="scr">
+      <div class="top"><img src="media/logo.png" alt="" width="800" height="563"><span class="t" data-ptitle>Desk</span><span class="c" data-pclock>Sun 22.00</span></div>
+      <div class="body" data-pbody aria-live="polite"></div>
+      <div class="tabbar" aria-hidden="true"><span data-ptab="0">This week</span><span data-ptab="1">Replies</span><span data-ptab="2">December</span><span data-ptab="3">Results</span></div>
+    </div></div></div>
+    <ol class="steps" data-steps>
+      <li class="step" data-step="1"><span class="no">1</span><div><p class="day">Sunday night</p><h3>Claude searches while you're off</h3><p>Job ads with events in them, local news, new offices, funding, galas already in an agenda. It keeps companies near you with a dated reason, and writes your first message to each.</p><p class="who">Claude, on its own</p><div class="acts"><button class="btn wine go" type="button" data-do="1">Run Sunday's search</button></div></div></li>
+      <li class="step" data-step="2"><span class="no">2</span><div><p class="day">Monday morning, ten minutes</p><h3>You keep or skip</h3><p>One strip per company. Tap a name to read your message in Dutch. Keep at least one, three is a good week.</p><p class="who">You, on your phone</p><div class="acts"><button class="btn wine go" type="button" data-do="2">Keep the first three for me</button><button class="btn line dark go" type="button" data-next="3">I've kept mine, next</button></div></div></li>
+      <li class="step" data-step="3"><span class="no">3</span><div><p class="day">Tuesday to Thursday</p><h3>It goes out as you</h3><p>From your own LinkedIn. A visit, a connection request, your message the day after they accept. You'll see exactly how it lands in their inbox.</p><p class="who">lemlist, from your account</p><div class="acts"><button class="btn wine go" type="button" data-do="3">Send the week</button></div></div></li>
+      <li class="step" data-step="4"><span class="no">4</span><div><p class="day">Friday, a reply</p><h3>Someone answers, your reply is ready</h3><p>Claude reads it, sees a date, checks your nights and writes your answer with the booking link filled in. You pick the night and press send.</p><p class="who">Claude writes, you send</p><div class="acts"><button class="btn wine go" type="button" data-do="4">Open the reply</button></div></div></li>
+      <li class="step" data-step="5"><span class="no">5</span><div><p class="day">The night is yours</p><h3>December fills up</h3><p>The night goes into your December straight away, so the next reply only gets offered what's still free.</p><p class="who">Your desk</p><div class="acts"><button class="btn wine go" type="button" data-next="6">See the week's results</button></div></div></li>
+      <li class="step" data-step="6"><span class="no">6</span><div><p class="day">Sunday again</p><h3>The search gets sharper</h3><p>What you kept, skipped and booked tunes next Sunday's search. Then it starts over, every week until the Christmas parties.</p><p class="who">Claude learns, you keep going</p><div class="acts"><a class="btn wine go" href="#how">See how it all connects</a><button class="btn line dark go" type="button" data-restart>Play the week again</button></div></div></li>
+    </ol>
   </div>
-  <p class="who-does"><span class="c1">Claude finds and writes</span><span class="c2">lemlist sends and collects</span><span class="c3">you decide</span></p>
-  <div class="acts" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:34px"><a class="btn wine" href="desk/">Try your Monday in the desk</a></div>
 </section>
 
-<section class="voice" id="voice" aria-labelledby="voice-h">
-  <h2 class="h2" id="voice-h" style="max-width:12em">It writes like you, and it says why now.</h2>
-  <p class="p" style="margin-top:18px">Every message starts from that company's own news, then your offer as your site puts it. Pick one.</p>
-  <div class="voice-grid">
-    <div class="pick" role="group" aria-label="Pick a company" data-pick></div>
-    <article class="letter" aria-live="polite" data-letter></article>
+<section class="how" id="how" aria-labelledby="how-h">
+  <h2 class="h2" id="how-h">How it all connects, the week you just played.</h2>
+  <p class="p" style="margin-top:18px">Claude finds and writes, lemlist sends and collects, and you decide in the desk. The numbers match the six steps. Press play to follow one company through it.</p>
+  <div class="arch" data-arch>
+    <svg class="wires" data-wires aria-hidden="true"></svg>
+    <div class="row-a">
+      <div class="node" id="nA1"><span class="n">1</span><p class="k">Every Sunday</p><h3>Public sources</h3><p>Job ads with events in them, local and trade news, new offices, funding, association agendas. Public pages only.</p><p class="bw">Recruitee and Indeed, Google News in Dutch, regional sites</p></div>
+      <div class="node" id="nA2"><span class="n">1</span><p class="k">Sunday night</p><h3>Claude finds and writes</h3><p>Keeps companies near you with a dated reason, skips anyone you've already messaged, finds who to write to and writes your Dutch message from their news and your offer.</p><p class="bw">Claude, a scheduled weekly run</p></div>
+      <div class="node you" id="nA3"><span class="n">2</span><p class="k">Monday</p><h3>Your desk</h3><p>The strips on your phone. Keep, edit or skip. Nothing goes out without your keep.</p><p class="bw">A web app in your colours on Netlify, with a small database</p></div>
+      <div class="node" id="nA4"><span class="n">3</span><p class="k">Tuesday to Thursday</p><h3>lemlist sends</h3><p>Your LinkedIn connected. A visit, a connection request, your message after they accept, one short bump. About 20 a day, office hours.</p><p class="bw">lemlist campaign and API</p></div>
+      <div class="node" id="nA5"><span class="n">3</span><p class="k">Their inbox</p><h3>The company</h3><p>The office manager, HR or the committee gets one message from you, about their own news.</p><p class="bw">LinkedIn first, email later</p></div>
+    </div>
+    <div class="row-b">
+      <div class="node you" id="nB1"><span class="n">5</span><p class="k">Booked</p><h3>Your booking</h3><p>Your own booking form at get-framed.com and the €100 deposit, like today. The night lands in your December.</p><p class="bw">get-framed.com/boeken, your calendar</p></div>
+      <div class="node you" id="nB2"><span class="n">4</span><p class="k">You</p><h3>Your desk, replies</h3><p>Pick the night and press send, or change a word first.</p><p class="bw">The same desk</p></div>
+      <div class="node" id="nB3"><span class="n">4</span><p class="k">Every two hours</p><h3>Claude answers for you</h3><p>Reads new replies, sorts them into yes, question, not now or stop, and writes your answer with your free nights and booking link.</p><p class="bw">Claude, a scheduled run</p></div>
+      <div class="node" id="nB4"><span class="n">4</span><p class="k">Collected</p><h3>lemlist inbox</h3><p>LinkedIn and email replies in one place. Any answer stops the sequence for that company.</p><p class="bw">lemlist inbox and API</p></div>
+      <div class="node" id="nB5"><span class="n">4</span><p class="k">They answer</p><h3>A reply</h3><p>Yes with a date, a question, not now, or stop. A stop is final.</p><p class="bw">LinkedIn or email</p></div>
+    </div>
+  </div>
+  <div class="acts"><button class="btn cream go" type="button" data-play>Play one company through it</button><a class="btn line go" href="#start">Set it up for Framed</a></div>
+  <div class="how-foot">
+    <div><h4>What we build</h4><p>The desk in your colours, the two Claude runs, the lemlist campaign on your LinkedIn, and the list of sources for the Randstad.</p></div>
+    <div><h4>What you bring</h4><p>Your LinkedIn, connected by you. A lemlist plan in your name. Ten minutes on a Monday and a tap when someone answers.</p></div>
+    <div><h4>What stays safe</h4><p>Public business news only. Nothing goes out without your keep. A stop is final. Email, when it comes, goes from a separate domain so your own mail stays clean.</p></div>
   </div>
 </section>
 
@@ -89,13 +112,25 @@
   </div>
   <div class="nights" data-nights aria-label="Nights from 9 November to 3 January"></div>
   <div class="dec-sum"><div><span class="big" data-o="bk">0</span><span class="lab">nights booked</span></div><div><span class="big" data-o="eur">€0</span><span class="lab">at €299 a night</span></div><div><span class="big" data-o="rp">0</span><span class="lab">replies to answer</span></div>
-    <a class="btn cream" href="returns/" style="margin-left:auto">See the full sum</a></div>
+    <a class="btn cream go" href="#start" style="margin-left:auto">Set it up for Framed</a></div>
 </section>
 
-<section class="close" id="start" aria-labelledby="close-h">
-  <h2 class="h2" id="close-h">Start next Monday and the first strips print on the 16th.</h2>
-  <p class="p" style="margin-top:18px">We set it up in your colours, connect your LinkedIn to lemlist, teach it your voice from your own site, and run the first week with you. The form on the next page is already filled in with what you kept and dragged here.</p>
-  <div class="acts"><a class="btn wine" href="start/">Set it up for Framed</a><a class="btn line dark" href="desk/">Open the desk</a></div>
+<section class="startf" id="start" aria-labelledby="start-h">
+  <h2 class="h2" id="start-h" style="max-width:12em">Start next Monday, first strips on the 16th.</h2>
+  <p class="p" style="margin-top:18px;color:#4f3f3c">Already filled in from what you did on this page. Change anything, copy it and send it to Raka on LinkedIn. He'll come back with the price and a time to set it up.</p>
+  <div class="startf-grid">
+    <div class="fields">
+      <label>Booths you can send out<input type="number" min="1" max="5" data-f="booths"></label>
+      <label>Companies a week you'd like<input type="number" min="5" max="40" data-f="pw"></label>
+      <label>Events a month you'd like from companies<input type="number" min="1" max="30" value="4" data-f="goal"></label>
+      <label>What matters more right now<select data-f="focus"><option>Companies and staff parties</option><option>Both, companies and weddings</option><option>Weddings, the desk for the rest</option></select></label>
+      <label>December nights you already have<textarea data-f="busy" placeholder="For example 12 Dec, a wedding"></textarea></label>
+      <label>Start<select data-f="start"><option>Monday 9 November</option><option>Monday 16 November</option><option>After December, for spring</option></select></label>
+    </div>
+    <div class="summary"><p class="lab">Your message to Raka</p><pre data-sum></pre>
+      <div class="acts"><button class="btn cream go" type="button" data-copy>Copy it</button><a class="btn line go" href="https://www.linkedin.com/messaging/" target="_blank" rel="noopener">Open LinkedIn</a></div>
+      <p class="copied" data-copied aria-live="polite"></p></div>
+  </div>
   <div class="logos" aria-label="Where Framed has stood, from get-framed.com">
     <img src="media/logos/pink-noir.png" alt="Pink Noir"><img src="media/logos/erasmus-universiteit.svg" alt="Erasmus Universiteit"><img src="media/logos/open32.png" alt="Open32"><img src="media/logos/modefabriek.png" alt="Modefabriek"><img src="media/logos/universiteit-utrecht.svg" alt="Universiteit Utrecht"><img src="media/logos/kula.png" alt="Kula"><img src="media/logos/qurc.png" alt="Qurc"><img src="media/logos/emmauscollege.png" alt="Emmauscollege"><img src="media/logos/het-paleis.png" alt="Het Paleis"><img src="media/logos/ss-rotterdam.png" alt="SS Rotterdam">
   </div>
@@ -109,5 +144,6 @@
 <script src="js/core.js"></script>
 <script src="js/site.js"></script>
 <script src="js/home.js"></script>
+<script src="js/demo.js"></script>
 </body>
 </html>
