@@ -1,3 +1,4 @@
+<!-- SENT 2026-11-03 at 07:00 Amsterdam, condition met (no reply on LinkedIn or Gmail since 30 Oct). LinkedIn bump act_H9LxFDmeb8YqnXruf 06:01 UTC, thread 14 items, one copy. Email reply in thread 1a18c637ed762945, message 1a19ffffefb869a2, 06:01:56 UTC, to office@healthysecrets.at, cc Josh and Luna, thread now 2 messages. On Raka's 2 Nov conditional instruction, confirmed 'all good for tomorrow'. Do not send again. -->
 # Nudges to Healthy Secrets, for Tue 3 Nov 07:00 Amsterdam (06:00 UTC). CONDITIONAL, NOT SENT.
 
 Scheduled check, trig_01JFD7seUPXBrANVt9y672Xr, fires into this session 2026-11-03T06:00:00Z (07:00 Amsterdam and Vienna).
