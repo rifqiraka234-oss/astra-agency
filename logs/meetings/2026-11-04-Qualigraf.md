@@ -68,3 +68,19 @@ range, one date.
 
 **Close.** "If the UK site is the right first step, I'll send a one page proposal today and we can start [date]. Shall
 we book fifteen minutes on [day] to confirm?"
+
+## Refresh, Tue 3 Nov 08.2x UTC (the day before)
+
+- **Thread.** Pulled in full, 3 Nov. Nothing new since his 28 Oct "yep, that's still good for me" and our confirmation.
+  Still 11.00 UK, 12.00 Amsterdam.
+- **Invite.** Calendar read 3 Nov, steven@qualigraf.com still shows "needsAction". He confirmed on LinkedIn, so the time
+  holds, but he may not have the Meet link in his calendar. Paste https://meet.google.com/phi-oddn-uek into the
+  LinkedIn thread at about 10.50 UK if he isn't in the room by 11.02.
+- **Their UK site.** https://www.qualigraf.com/uk/ is behind a bot wall for plain curl (400, "One moment..."), read through
+  tools/fetch-walled.py, 200, title "Homepage - Qualigraf". It still talks about "legislative processes (decision-making)"
+  and "legislative process from idea to archive", so the 28 Sep angle still stands.
+- **Our concept.** https://astra-qualigraf-prototype.netlify.app 200, title "Qualigraf UK | Every decision, in one place".
+- **News.** tools/news.py 3 Nov. Nothing on Qualigraf or Steven. LGR is still the story in UK councils, mixed. Derbyshire
+  "LGR faces more delays" (2 Nov), Hampshire "further wait for Government decision" (2 Nov), Devon decision withdrawn
+  (3 Nov), while The Planner has "moves forward in five counties" (3 Nov). So his 6 Oct point stands, don't build the
+  pitch on any one council's merger. If it comes up, the site helps whatever shape councils end up in.
