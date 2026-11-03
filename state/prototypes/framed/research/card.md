@@ -13,7 +13,7 @@ like let him calculate returns".
    the messages sound like me, in Dutch? How much work is it for me each week? What does it earn me before December is
    gone? What does it cost and how do we start? Second visitor, Raka on the call, walking him through it. Third, anyone
    Kian forwards it to (a friend who helps at events).
-2. **The one action.** Try the desk, then say "set it up". Selector `a[href$="desk/"], a[href$="start/"], .run`.
+2. **The one action.** Try the desk, then say "set it up". Selector `a[href$="desk/"], a[href$="start/"], .run, .go, a[href="#form"]`.
    First screen carries "Run this week's search" (runs the moment in place) and "Open the desk". Every half screen
    has one of them, phone included.
 3. **Flow table**, `research/flow.md`.
@@ -73,3 +73,13 @@ like let him calculate returns".
   (research/README.md). Messages are drafts written for this sketch, nothing is sent, the ribbon says so.
 - Prices from get-framed.com, €299 per event incl. VAT, travel, setup, unlimited prints, met or zonder begeleiding.
 - Returns defaults from research/benchmarks.md, each with its source, every input movable.
+
+## Built 3 Nov, final look
+
+- Home, hero and booth (first look), then the week as one strip with his films, the voice (four companies, his offer underlined as his site says it), December night by night with two sliders, the close with his ten client logos.
+- Desk, his film head, then This week (14 companies and 5 venues, keep, edit in Dutch, skip with a reason), Replies (three examples, labelled as examples, book a night), December (his calendar, tap to block), Results (funnel, kept by kind of reason, what skips teach).
+- Returns, every input sourced and movable, the chart drags, payback line, his price against five rivals.
+- Start, three lanes (Claude, Kian, lemlist), four weeks, the form filled from what he did, copies to LinkedIn, no email address published.
+- Line 5 note for the inner pages. Desk, Returns and Start are tools, so the title shares the first screen with his film (28 to 38 percent), check-build warns and passes.
+- check-build PASS on all four pages. Copy grep, no colons or dashes in our prose, quotes from sources kept verbatim. NO-AI-SLOP section 8, clean.
+- Rechecked 3 Nov, his prices and terms on four of his pages, Djunes and photobooths-huren.nl prices, Belkins 10.5 and 10.9, Instantly 3.43, Expandi 10.4, Robin Radar, Helloprint, UNFC, Sluyter, Hell's Kitchen sources. One claim cut (Robin Radar's growth line, not in its linked source).

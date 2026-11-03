@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Framed, the desk</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../media/logo.png">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/desk.css">
+</head>
+<body class="app">
+<header class="bar solid">
+  <a class="mark" href="../" aria-label="Framed Photobooths, home"><img src="../media/logo.png" alt="Framed Photobooths" width="800" height="563"></a>
+  <nav aria-label="Pages"><a href="../">Home</a><a href="./" aria-current="page">Desk</a><a href="../returns/">Returns</a><a href="../start/">Start</a></nav>
+  <a class="btn cream" href="../start/">Set it up for Framed</a>
+</header>
+<main>
+  <section class="phead"><div class="tx"><h1>Your Monday, ten minutes.</h1><p class="p">This is the desk you'd open on your phone. Sunday night's strips, your replies, your December and what it adds up to. Try it, everything you press is kept on this device.</p><div class="acts"><a class="btn cream go" href="#week" data-jump="week">Start with this week's strips</a><a class="btn line go" href="#replies" data-jump="replies">See the replies</a></div></div>
+  <figure><video src="../media/framed-5.mp4" poster="../media/framed-5.jpg" autoplay muted loop playsinline preload="metadata" aria-label="The Framed booth screen, Strike a pose"></video><figcaption>Your booth, from get-framed.com</figcaption></figure></section>
+  <div class="app-head" id="app">
+    <div class="row"><h2 class="h2" style="font-size:clamp(30px,3vw,46px)">Week of 16 November</h2><p class="status" data-status></p></div>
+    <div class="tabs" role="tablist" aria-label="Desk">
+      <button role="tab" aria-selected="true" data-tab="week">This week<span class="n" data-n="week"></span></button>
+      <button role="tab" aria-selected="false" data-tab="replies">Replies<span class="n" data-n="replies"></span></button>
+      <button role="tab" aria-selected="false" data-tab="december">December<span class="n" data-n="dec"></span></button>
+      <button role="tab" aria-selected="false" data-tab="results">Results</button>
+    </div>
+  </div>
+
+  <section class="pane on" id="week" role="tabpanel" aria-label="This week">
+    <p class="intro">Sunday night's search. Every one has a dated reason and a source you can open. Keep it and your message goes out on Tuesday from your LinkedIn, skip it and say why so next week gets sharper.</p>
+    <div class="toggle" role="group" aria-label="Show"><button type="button" aria-pressed="true" data-kind="lead">Companies</button><button type="button" aria-pressed="false" data-kind="partner">Venues and agencies</button></div>
+    <div class="split"><div class="list" data-list></div><article class="detail" data-detail aria-live="polite"></article></div>
+  </section>
+
+  <section class="pane" id="replies" role="tabpanel" aria-label="Replies">
+    <p class="intro">Every LinkedIn and email answer lands here with one ready to send. Pick a free night and it's booked into December. These three are examples written for the sketch, not real replies.</p>
+    <div class="inbox" data-inbox></div>
+  </section>
+
+  <section class="pane" id="december" role="tabpanel" aria-label="December">
+    <p class="intro">Your nights from 9 November. Booked from replies in wine. Tap a night you already have a wedding or a party to block it, the desk then only offers what's free.</p>
+    <div class="cal" data-cal></div>
+    <p class="cal-key"><span><i style="background:var(--wine)"></i>booked from the desk</span><span><i style="background:repeating-linear-gradient(135deg,var(--sand2) 0 3px,var(--cream) 3px 6px)"></i>already busy</span><span><i style="background:var(--cream);box-shadow:inset 0 0 0 1px var(--sand)"></i>Friday and Saturday</span></p>
+    <div style="margin-top:30px"><a class="btn wine" href="../returns/">Work out what December earns</a></div>
+  </section>
+
+  <section class="pane" id="results" role="tabpanel" aria-label="Results">
+    <p class="intro">What this week turns into, from what you kept, with the reply rate from Belkins' 2026 study of LinkedIn outreach in the Netherlands and your own reply to booking number from Returns.</p>
+    <div class="funnel" data-funnel></div>
+    <div class="bars" data-bars></div>
+    <div class="learn" data-learn></div>
+    <div style="margin-top:34px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn wine" href="../start/">Set it up for Framed</a><a class="btn ghost" href="../returns/">Change the numbers</a></div>
+  </section>
+</main>
+<p class="ribbon">Sketch. Real companies with linked reasons, draft messages, example replies, nothing is sent.</p>
+<script>window.FRAMED_ROOT='../';</script>
+<script src="../js/leads.js"></script>
+<script src="../js/core.js"></script>
+<script src="../js/desk.js"></script>
+</body>
+</html>
