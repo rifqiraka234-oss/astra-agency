@@ -26,7 +26,7 @@ Hi Steven,
 
 Thank you so much for your time today. I really enjoyed hearing how Qualigraf fits together across the four countries.
 
-Here's what I took away. You're focused on new customers in the UK and Canada, budget opens up in spring or summer next year, and you'd like councils to know Qualigraf about a year before they go to market, without anyone chasing them. You also liked how the concept tells the life of a decision, since that's how you already sell in demos.
+Here's what I took away. You're focused on new customers in the UK and Canada. Budget opens up in spring or summer next year. And you'd like councils to know Qualigraf about a year before they go to market, without anyone chasing them. You also liked how the concept tells the life of a decision, since that's how you already sell in demos.
 
 I'll send you the one pager soon, with rough starting prices. There's no rush at all. Would a short catch up next week suit you, to go through it together?
 
