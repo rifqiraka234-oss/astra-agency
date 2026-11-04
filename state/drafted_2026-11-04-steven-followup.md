@@ -1,4 +1,5 @@
-# Draft, 2026-11-04. Steven Garratt, Qualigraf. Thank you, recap and next steps by email. NOT SENT.
+<!-- GATE ARCHIVED -->
+# Draft, 2026-11-04. Steven Garratt, Qualigraf. Thank you and recap email. SENT 2026-11-04 19.12 UTC from Raka's Gmail on Raka's "Send the email", Gmail id 1a1a7f9dadc3f5e2, one copy, to steven@qualigraf.com. Do not send again.
 
 Goes by email from Raka's Gmail to steven@qualigraf.com (the address Raka confirmed on the call), never from the astraagency.nl
 domain (RULES 0G point 9). The one pager (`proposals/qualigraf/onepager.pdf`) is NOT attached, the email says Raka will send it soon, so send it as its own follow up. The LinkedIn thread was pulled in full on 4 Nov, 16
