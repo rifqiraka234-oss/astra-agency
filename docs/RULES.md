@@ -434,6 +434,13 @@ spam please". Two others got the same run that week.
 - **A reply from them starts the count again.** Our answer to it is pitch one.
 - **Spread the bumps.** Never more than 20 in one day, oldest first, the rest roll to the next day.
   On 12 Oct 111 went out in one day, against the 20 a day lemlist's own message limit is set to.
+- **The default angle is an AI powered GTM outreach flow for B2B sales (Raka, 2026-11-04).** His words, "I think I should be
+  AI-powered go-to-market workflow outreach flow for something for B2B sales, you know? It's always the case." Said on
+  Cheeky Charging, T.A.I Studio, Scarpetta and Dees. When a lead sells to other businesses at all (venues, hotels, offices,
+  brands, trade), the first angle tried is an AI powered outreach flow that finds those buyers, reaches them with the offer
+  and books the meeting, visit or date. Call it "an AI powered outreach flow" in the message, and leave the Astra credential
+  line out (his 3 Nov edit on Cameron). The website, the squad and the rest stay in the sweep and win only when the evidence
+  is clearly stronger, and that gets flagged to him. The research gate, the claims and the falsification pass are unchanged.
 - **30 LinkedIn messages a day, filled, urgent first (Raka, 2026-10-31).** His words, "Make sure we maximise the 30 a
   day message on linkedin send the urgent ones are earlier". The day's total across every session and every shape
   (openers, replies, nudges, deliveries, closers) is 30, counted from that day's `state/send_log_<date>.txt` before each
