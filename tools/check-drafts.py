@@ -517,6 +517,11 @@ def check(path, replies=False):
             in_test = shapes[i] == "SKETCHB" or (
                 not first_block.startswith("Something I've been thinking about") and
                 "However, did you know that " not in m)
+            # Raka, 2026-11-04, the default angle is "an AI powered outreach flow" with no credential
+            # line (docs/RULES.md section 1), so arm A's five blocks can't be written for it. Those
+            # drafts sit outside the test, as Cameron Young's did, and say so on their variant line.
+            if "AI powered outreach flow" in m and dm.group(1) >= "2026-11-04":
+                in_test = False
             if in_test:
                 want = variant_for(cid)
                 got = "B" if shapes[i] == "SKETCHB" else "A"
@@ -771,7 +776,9 @@ def check(path, replies=False):
              # Raka's final closer, his words, 2026-10-28, "name, im gonna close it here, if you want to ever xxx
              # you know where to find me". The same frame in every message on purpose, only the offer changes.
              "i'm going to close it here.", "if you ever want", "you know where to find me.",
-             "that sketch of the", "to see the")
+             "that sketch of the", "to see the",
+             # Raka's default angle, his words, 2026-11-04. Named the same way in every message on purpose.
+             "an ai powered outreach flow", "the ai powered outreach flow", "ai powered outreach flow")
     c = Counter()
     for m in msgs:
         low = m.lower()
