@@ -1,10 +1,12 @@
-# Opener, 2026-11-04. Cameron Young, Cheeky Charging. NOT SENT.
+# Opener, 2026-11-04. Cameron Young, Cheeky Charging. SENT 2026-11-04 08.30.25 UTC, act_a7zsN4tP2D9TJaGp6.
 
 Raka, 3 Nov, on the GTM angle draft, "At Astra agency we build websites and AI workflows for brands like Unilever, AXA,
 Pertamina. delete / the ai powered outreach flow", then 4 Nov "yeah do it and send today". Credential line removed on his
 word. His contactId draws arm A of the opener test, so with no credential line this one is logged outside the test.
 
 ### Cameron Young, Cheeky Charging, ctc_jFXCMdHuM4mXHr6t2
+
+> SENT 2026-11-04 08.30.25 UTC, act_a7zsN4tP2D9TJaGp6, one copy, thread 0 items before, 1 after, on Raka's "send cameron now yes" for this exact text. Day 8 of 30.
 
 > Flags. (1) Cheeky Charging Ltd, 15348193, incorporated 13 Dec 2023, Cameron Malcolm Young sole Active Director, the
 > press page gives the same number. Bootstrapped, "We're small, we build fast, and we're bootstrapped". (2) The homepage
