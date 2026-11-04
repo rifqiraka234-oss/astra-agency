@@ -1,4 +1,4 @@
-# Kian Sattarian, delivery of the Framed bookings desk sketch, 4 Nov 2026. NOT SENT, waiting on Raka's word.
+# Kian Sattarian, delivery of the Framed bookings desk sketch, 4 Nov 2026. NOT SENT, SCHEDULED 12.07 Amsterdam (11.07 UTC) on Raka's "schedule it at 12.07 today", trig_012zSpcCCr2hguBvEd1bNLzB.
 
 Raka 4 Nov, "final". Deployed on that word. The text below has not been shown to him yet, so it waits for his word on this exact message.
 
