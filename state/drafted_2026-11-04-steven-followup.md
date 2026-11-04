@@ -2,7 +2,7 @@
 
 Goes by email from Raka's Gmail to steven@qualigraf.com (the address Raka confirmed on the call), never from the astraagency.nl
 domain (RULES 0G point 9). The one pager (`proposals/qualigraf/onepager.pdf`) is NOT attached, the email says Raka will send it soon, so send it as its own follow up. The LinkedIn thread was pulled in full on 4 Nov, 16
-activities, last message ours on 28 Oct. Rewritten at Raka's request, "thank him, summarise meeting and next steps", then "be kinder, and say I will send him the one pager soon", then "a bit shorter", then "just end it with I'll send you the one pager".
+activities, last message ours on 28 Oct. Rewritten at Raka's request, "thank him, summarise meeting and next steps", then "be kinder, and say I will send him the one pager soon", then "a bit shorter", then "just end it with I'll send you the one pager", then "Thanks again" put back.
 
 Before it goes, for Raka.
 1. **The prices live on the one pager, not in the email.** check-drafts.py fails any figure that isn't a loss figure, and only a
@@ -30,6 +30,8 @@ Here's what I took away. You're focused on new customers in the UK and Canada. B
 
 I'll send you the one pager soon.
 
+Thanks again, Steven!
+
 Raka
 ```
 
@@ -41,6 +43,6 @@ Notes for Raka.
   go to market workflows were possible, so it's offered as something to look at, not agreed.
 - **Nothing is promised beyond the call.** No date, no start, no price in the body. The one pager is promised as "soon". There's no ask for a catch up in it.
 - **No Astra credentials line**, as in the 3 Nov edit on Cameron, and no outbound or cold call offer, since he pushed back on it.
-- **No exclamation marks, no emoji**, it lands in a warm thread. No hyphens or colons in the prose.
+- **One exclamation mark, at the sign off, no emoji**, it lands in a warm thread. No hyphens or colons in the prose.
 - **Not in it, on purpose.** Surrey, the four countries worry (he didn't raise it again), potential returns (no honest figure
   exists), and any figures.
