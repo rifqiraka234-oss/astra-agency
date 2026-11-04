@@ -6,7 +6,7 @@ domain (RULES 0G point 9). The LinkedIn thread was pulled in full on 4 Nov, 16 a
 Before it goes, three things for Raka.
 1. **The one pager is built** at `proposals/qualigraf/onepager.pdf` (source `onepager.html`). Attach it from your Gmail. Its prices are proposals until you confirm them.
 2. **The prices live on the one pager, not in the email.** check-drafts.py fails any figure that isn't a loss figure, and only a
-   CORRECTION is exempt, so a requested price in an email body fails it. I didn't relabel the draft to get past it. The one pager carries Raka's 4 Nov figures, website from £850, care plan from £350 a month, go to market from £650, branding and storytelling €500. The transcript has Raka saying "£7950" for a redesign on the call, so Steven may remember a much higher number. If you'd rather the price sat in the email itself, say so and
+   CORRECTION is exempt, so a requested price in an email body fails it. I didn't relabel the draft to get past it. The one pager carries Raka's 4 Nov figures, website from £750, care plan from £350 a month, go to market from £650, branding and storytelling €500. The transcript has Raka saying "£7950" for a redesign on the call, so Steven may remember a much higher number. If you'd rather the price sat in the email itself, say so and
    the gate needs a deliberate exemption, which is your call.
 3. **Laravel replaces the WordPress promise.** On 6 Oct we told Steven in writing it "can sit on WordPress so your team keeps editing it", and his worry on the call was long term updates on a bespoke build. The email now says Laravel with an editor his team uses. He may push back, so be ready to say how his team edits it.
 
