@@ -17,7 +17,7 @@ Before it goes, for Raka.
 
 ## Steven Garratt, Qualigraf. DELIVERY. ctc_sPysigrTQgntPu9c6
 
-Subject line, "Thanks Steven, and what happens next".
+Subject line, "Qualigraf x Astra Agency".
 
 DELIVERY
 
