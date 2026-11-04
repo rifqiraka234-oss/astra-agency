@@ -1,3 +1,5 @@
+<!-- GATE ARCHIVED -->
+<!-- SENT 4 Nov on Raka's "send it", Gmail message 1a1a5f2ef9dffbf5 in thread 1a19db57278cc1f9. One copy. Do not send again. -->
 # Lisanne De Jong Vanhommerig, 4 Nov, EMAIL follow up in the 2 Nov thread, ask again to move the session. On Raka's "Reply to Lisanna again. To just ask her if we can move it. If not, then it's okay. Then we can still do tomorrow at 10, but I will be there instead of Josh. to the same email thread"
 
 Thread pulled 4 Nov. Gmail thread 1a19db57278cc1f9 has one message, Raka's 2 Nov 19:21 UTC "Lisanne de Jong x Astra Agency, refinement session" asking for Thu 14.00 or Fri 10.00,
