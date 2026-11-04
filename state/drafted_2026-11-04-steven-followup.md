@@ -2,7 +2,7 @@
 
 Goes by email from Raka's Gmail to steven@qualigraf.com (the address Raka confirmed on the call), never from the astraagency.nl
 domain (RULES 0G point 9). The one pager (`proposals/qualigraf/onepager.pdf`) is NOT attached, the email says Raka will send it soon, so send it as its own follow up. The LinkedIn thread was pulled in full on 4 Nov, 16
-activities, last message ours on 28 Oct. Rewritten at Raka's request, "thank him, summarise meeting and next steps", then "be kinder, and say I will send him the one pager soon".
+activities, last message ours on 28 Oct. Rewritten at Raka's request, "thank him, summarise meeting and next steps", then "be kinder, and say I will send him the one pager soon", then "a bit shorter".
 
 Before it goes, for Raka.
 1. **The prices live on the one pager, not in the email.** check-drafts.py fails any figure that isn't a loss figure, and only a
@@ -24,13 +24,11 @@ DELIVERY
 ```
 Hi Steven,
 
-Thank you so much for your time today. I really enjoyed hearing how Qualigraf came together and how you're bringing the four countries closer, and I appreciate how openly you shared it.
+Thank you so much for your time today. I really enjoyed hearing how Qualigraf fits together across the four countries.
 
-Here's what I took away, so you can tell me if I've missed anything. Your focus is new customers in the UK and Canada, growing the public sector in the Netherlands, and looking after the French base. You're building one group under local expertise and global innovation. Budget opens up in spring or summer next year, so you're planning now for what you'll start then. You liked how the concept tells the life of a decision, since that's how you already sell in demos. And on outbound, you'd like councils to know Qualigraf about a year before they go to market, without being one of the suppliers who chase too hard. That's a really useful steer, and I'll keep it in mind in everything I suggest.
+Here's what I took away. You're focused on new customers in the UK and Canada, budget opens up in spring or summer next year, and you'd like councils to know Qualigraf about a year before they go to market, without anyone chasing them. You also liked how the concept tells the life of a decision, since that's how you already sell in demos.
 
-I'll send you the one pager soon, with rough starting prices. It covers a unified website with a page set for each market, an inbound flow and an editor your team uses, a quiet go to market workflow that follows councils towards a change of supplier, and one group story that holds across the four countries.
-
-There's no rush on your side at all. Once you've had a look, would a short catch up next week suit you, so we can go through it together and find the right starting point?
+I'll send you the one pager soon, with rough starting prices. There's no rush at all. Would a short catch up next week suit you, to go through it together?
 
 Thanks again, Steven!
 
@@ -39,7 +37,7 @@ Raka
 
 Notes for Raka.
 
-- **Everything in it comes from the call.** The market focus, the four teams and "local expertise and global innovation", the spring
+- **Everything in it comes from the call.** The UK and Canada focus, the spring
   or summer budget, the decision story as how they sell in demos, and "known about a year before the tender" without chasing. The
   workflow wording is ours, built from what he said about bids being lined up before a council goes to market. He only said smart
   go to market workflows were possible, so it's offered as something to look at, not agreed.
