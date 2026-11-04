@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-04 ~11.08 UTC (12.08 Amsterdam) on Raka's "schedule it at 12.07 today", act_hg6AXCDJvJTd5N4eK, one copy, 381 chars. Thread 2 items before with control 8, live URL 200 with the right title, dry run first. Do not send again.
+
 # Kian Sattarian, delivery of the Framed bookings desk sketch, 4 Nov 2026. NOT SENT, SCHEDULED 12.07 Amsterdam (11.07 UTC) on Raka's "schedule it at 12.07 today", trig_012zSpcCCr2hguBvEd1bNLzB.
 
 Raka 4 Nov, "final". Deployed on that word. The text below has not been shown to him yet, so it waits for his word on this exact message.
