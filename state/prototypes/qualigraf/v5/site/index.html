@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qualigraf UK, every decision from idea to archive</title>
+<meta name="description" content="Committee management for UK councils. Reports, sign offs, agenda packs, meetings, minutes and the public record in one file, from the forward plan to the archive.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/v5.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="top">
+  <a class="brand" href="#top" aria-label="Qualigraf UK, home"><img src="assets/img/logo-uk.svg" alt="Qualigraf UK" width="132" height="44"></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#track">The decision track</a>
+    <a href="#">Who it's for</a>
+    <a href="#">Security</a>
+    <a href="#">Group</a>
+    <a href="#">Resources</a>
+  </nav>
+  <details class="country">
+    <summary><span class="vh">Country, </span>UK</summary>
+    <ul>
+      <li><a href="https://www.qualigraf.com/fr/homepage-fr/" lang="fr">France</a></li>
+      <li><a href="https://www.qualigraf.com/nl/homepage-nl/" lang="nl">Nederland</a></li>
+      <li><a href="https://www.qualigraf.com/en_ca/homepage-ca/">Canada</a></li>
+    </ul>
+  </details>
+  <a class="btn btn-top" href="#walkthrough">Book a walkthrough</a>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top" aria-labelledby="h-hero">
+  <div class="hero-pin">
+    <canvas class="hero-gl" aria-hidden="true"></canvas>
+    <div class="hero-copy">
+      <h1 id="h-hero">Every decision,<br>from idea to archive.</h1>
+      <p class="lede">Committee management for UK councils. Reports, sign offs, agenda packs, meetings, minutes and the public record stay linked in one file, from the forward plan to the archive.</p>
+      <form class="sentence" aria-label="Try it on your own meeting" onsubmit="return false">
+        <span>My next</span>
+        <span class="pick"><span class="face" data-bind="committee" aria-hidden="true">Cabinet</span>
+          <label class="vh" for="committee">Committee</label>
+          <select id="committee" name="committee">
+            <option value="cabinet">Cabinet</option>
+            <option value="council">Full Council</option>
+            <option value="planning">Planning Committee</option>
+          </select></span>
+        <span>meeting is on</span>
+        <span class="pick pick-date"><span class="face" data-bind="meeting" aria-hidden="true">Thursday 11 March 2027</span>
+          <label class="vh" for="mdate">Meeting date</label>
+          <input id="mdate" name="mdate" type="date" value="2027-03-11" required></span>
+      </form>
+      <div class="hero-acts">
+        <a class="btn act" href="#walkthrough">Book a walkthrough</a>
+        <a class="quiet" href="#track">Follow your meeting down the track</a>
+      </div>
+    </div>
+    <p class="beat" aria-hidden="true">Qualigraf keeps it all <span>in one&nbsp;file.</span></p>
+  </div>
+</section>
+
+<section class="track" id="track" aria-labelledby="h-track">
+  <div class="track-pin">
+    <div class="track-head">
+      <div>
+        <h2 id="h-track">Follow your <span data-bind="committee">Cabinet</span> meeting down the track.</h2>
+        <p class="sub"><span data-bind="meeting">Thursday 11 March 2027</span>, from the forward plan to the archive. Every date here is worked out from the law for this meeting.</p>
+      </div>
+      <div class="track-act">
+        <p class="track-meet"><span data-bind="committee">Cabinet</span>, <span data-bind="meetingShort">Thu 11 Mar 2027</span></p>
+        <a class="btn act" href="#walkthrough">Book a walkthrough for this meeting</a>
+      </div>
+    </div>
+
+    <div class="rail" aria-hidden="true">
+      <div class="rail-base"></div>
+      <div class="rail-fill"></div>
+      <ol class="stops"></ol>
+      <div class="file"><span class="file-tab"></span><span class="file-label"><b data-bind="committee">Cabinet</b><i data-bind="meetingShort">Thu 11 Mar 2027</i></span><span class="stamps"></span></div>
+    </div>
+
+    <ol class="stations" aria-label="The eight stations of your meeting"></ol>
+
+    <p class="rule-note">We count clear days the cautious way. Only weekdays that aren't bank holidays in England and Wales count, and never the day of publication or the meeting day (R v Swansea City Council, ex p Elitestone, 1993). Your constitution may count differently. <a class="quiet act" href="#walkthrough">Ask us how your council counts them</a>. Sample council and sample items.</p>
+  </div>
+</section>
+
+<section class="invite" id="walkthrough" aria-labelledby="h-invite">
+  <div class="invite-copy">
+    <h2 id="h-invite">Bring your hardest meeting. We'll run it on Qualigraf.</h2>
+    <p>A walkthrough built around your own <span data-bind="committee">Cabinet</span> meeting on <span data-bind="meeting">Thursday 11 March 2027</span>, your deadlines, your approval routes and your Members.</p>
+    <p class="call">Or call the UK team on <a class="act" href="tel:+447741080343">07741 080343</a></p>
+  </div>
+  <form class="book" aria-label="Book a walkthrough" novalidate>
+    <div class="field meet">
+      <span class="lab">Your meeting</span>
+      <output id="f-meeting" data-bind="summary">Cabinet, Thursday 11 March 2027</output>
+      <a class="quiet" href="#top">Change it</a>
+    </div>
+    <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+    <div class="field"><label for="f-council">Your council</label><input id="f-council" name="council" autocomplete="organization" required></div>
+    <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+    <input type="hidden" name="meeting" id="f-meeting-hidden" value="Cabinet, Thursday 11 March 2027">
+    <button class="btn act" type="submit">Book a walkthrough</button>
+    <p class="form-msg" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <img src="assets/img/logo-uk-light.svg" alt="Qualigraf UK" width="132" height="44">
+    <p>Qualigraf UK, 53 Chapel Street, Mow Cop, Stoke-on-Trent ST7 4NS<br><a href="mailto:info@qualigraf.com">info@qualigraf.com</a> · <a href="tel:+447741080343">07741 080343</a></p>
+    <p>Part of Qualigraf Groupe B.V., Dordrecht, with teams in the UK, France, the Netherlands and Canada.</p>
+    <p class="foot-links"><a href="https://qualigraf.com/uk/your-rights-and-privacy-uk/">Your rights and privacy</a> · <a href="https://qualigraf.com/uk/complaints-procedure-uk/">Complaints procedure</a> · <a class="act" href="#walkthrough">Book a walkthrough</a></p>
+    <p class="fine">Examples on this page show sample data. A concept by Astra Agency for Qualigraf, not Qualigraf's live site.</p>
+  </div>
+</footer>
+
+<nav class="phonebar" aria-label="Quick action"><a class="btn act" href="#walkthrough">Book a walkthrough</a></nav>
+
+<script type="module" src="assets/main.js"></script>
+<script type="module" src="assets/hero.js"></script>
+</body>
+</html>
