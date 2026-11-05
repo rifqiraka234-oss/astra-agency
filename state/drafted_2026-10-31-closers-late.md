@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 5 Nov ~06.55 UTC (05.00 slot missed by a worker restart) on Raka's "Schedule the last nudges", ctc_MgyMbx3uk9mhg89jX act_ZA6aGDrjGqK4eegf6, ctc_dbdS2Hgi9Ad4npHJe act_b6wfNuJfjNfLRr4yE, ctc_TWiur2DNPKzZcPmfM act_oRgTqEE6ZuSkFdabM. Do not send again.
+
 # Final closers for the three bumped on 29 Oct, SCHEDULED on Raka's word, NOT SENT YET
 
 Raka asked 31 Oct ~20.30 UTC "Anyone we needa send a nudge again after sending first message or second?". Audit

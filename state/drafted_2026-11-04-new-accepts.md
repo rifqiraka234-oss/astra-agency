@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 5 Nov ~07.00 UTC on Raka's "Send tomorrow 06.26" (late after a worker restart), ctc_LnKjJZtEe2vhYLfFp act_kn5QsNG9n3omndHYB, ctc_KjcqsmYtMGWuWonZf act_Y9Aw27SWBoXLL64yq, ctc_DaSimSeKeTqjbbyxc act_eP5MzLXiJDjxx2Hoc. Claims reopened live first. Do not send again.
+
 # Openers, 2026-11-04. The three accepts not yet researched. Angle by Raka's standing rule of 4 Nov
 
 Raka, 4 Nov, "Yeah, I think I should be AI-powered go-to-market workflow outreach flow for something for B2B sales,

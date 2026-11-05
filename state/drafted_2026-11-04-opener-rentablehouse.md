@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 5 Nov ~07.00 UTC on Raka's "Send tomorrow 06.26" (late after a worker restart), ctc_9uvth9NEkSx6Py4ZX act_fbe4jsA9jMkiyvScw. Claims reopened live first. Do not send again.
+
 # Opener, Rentable House, 4 Nov 2026. NOT SENT, waiting on Raka's word.
 
 Researched 4 Nov 2026 between about 19.15 and 19.40 UTC. Evidence folder

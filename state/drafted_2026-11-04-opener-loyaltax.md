@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 5 Nov ~07.00 UTC on Raka's "Send tomorrow 06.26" (late after a worker restart), ctc_DgaSLP7KWDQGRu4ES act_yotoTXuqcXHSJNPC5. Claims reopened live first. Do not send again.
+
 # Opener, LoyalTAX Fiduciaire, 4 Nov 2026. NOT SENT, waiting on Raka's word.
 
 Raka's angle, his words, "AI WORKFLOWS FOR LAWYERS SAME LIKE LISANNE". LoyalTAX is a fiduciary (tax, accounting, payroll), not a law firm, so it's the same offer as Lisanne's, an AI workflow for the admin around each client, set up privately. Did you know shape, four blocks, no brand line. Draft only. Thread pulled 2026-11-04 19.17 and 19.40 UTC with `tools/lemlist.py thread`, ctc_DgaSLP7KWDQGRu4ES 0 items both times, control ctc_ch3vFcKAkjQdMKDCg 8 items. Evidence folder /tmp/claude-0/-home-user-astra-agency/24052593-7323-58b2-9e3f-744f7080d43c/scratchpad/loyaltax. Re pull the thread, run the four way never messaged check and reopen every claim in the minute before any send. Daily cap 30 (RULES 1).
