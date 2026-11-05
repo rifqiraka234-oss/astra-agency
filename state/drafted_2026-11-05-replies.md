@@ -8,9 +8,9 @@
 > So he already does the outreach by hand and asks what we do. Answer it, tie it to what he just said, one question back.
 > "one this week for a photobooth company" is the Framed sketch delivered 4 Nov, true and unnamed.
 
+> Raka 5 Nov, "say we have a gtm automation and also the outbound for nicholas. make it shorter". Redrafted, not sent.
+
 REPLY
 ```
-Thanks Nicholas, good to hear the Vikasa story is already going out. Right now we're building AI powered outreach flows for small brands, this week one for a photobooth company that finds Dutch companies planning a party and drafts the first message to each.
-
-For you it'd be the same idea, a list of openings and refurbs across Thailand that keeps itself up to date, with the design and pre opening contacts, so your Vikasa assets reach more of them each week. How are you finding the openings at the moment?
+Thanks Nicholas, good to hear the Vikasa story is already going out. We build GTM automation and run the outbound for small brands. For T.A.I it'd find the openings and refurbs across Thailand each week and get your Vikasa assets to their design teams. How are you finding the openings now?
 ```
