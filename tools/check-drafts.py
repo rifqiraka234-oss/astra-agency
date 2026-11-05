@@ -666,7 +666,10 @@ def check(path, replies=False):
         # tell is an English one and a Dutch thread stays Dutch.
         # Raka's plain bump, 2026-10-12, "👀 [name], have you seen this?", is fixed wording with
         # no contraction in it by design, so the exact line and nothing longer is exempt.
-        is_bump = re.fullmatch(r"👀 [^\W\d_][^\n,]{0,40}, have you seen this\?", m.strip())
+        # Raka's second bump shape, 2026-11-05, the first name, a row of dots, empty lines, then
+        # "have you seen this?". Same fixed wording, so it gets the same exemption.
+        is_bump = bool(re.fullmatch(r"👀 [^\W\d_][^\n,]{0,40}, have you seen this\?", m.strip())
+                       or re.fullmatch(r"[^\W\d_][^\n.,]{0,40}\.{10,}\n(\s*\n){0,12}have you seen this\?", m.strip()))
         if langs[i] == "EN" and not is_bump and len(re.findall(r"\w'(s|t|re|ve|ll|d|m)\b", m)) < 1:
             bad(i, "no contractions at all")
         # Five blocks, per the opener template. Replies have their own shape.

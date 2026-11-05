@@ -1,6 +1,6 @@
 # Bumps for Fri 6 Nov 2026. NOT SENT, waiting on Raka's word and a time.
 
-The plain bump (RULES 1B), first name as we greeted them. Threads pulled 5 Nov ~07.10 UTC with tools/lemlist.py, control 8, each has only our message since, nothing from them. Re pull right before sending.
+Raka 5 Nov, the new nudge shape, the first name, a long row of dots, eight empty lines, then "have you seen this?". First name as we greeted them. Threads pulled 5 Nov ~07.10 UTC with tools/lemlist.py, control 8, each has only our message since, nothing from them. Re pull right before sending.
 
 ### Julien Koziel, Nexylan, ctc_gmEBsJoqj9SNd7NPT
 
@@ -8,7 +8,16 @@ The plain bump (RULES 1B), first name as we greeted them. Threads pulled 5 Nov ~
 
 NUDGE
 ```
-👀 Julien, have you seen this?
+Julien.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Steff Koerhuis, KOERHOUSE events, ctc_HtsYcgEiaQvBZA88q
@@ -17,7 +26,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Steff, have you seen this?
+Steff.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Roshan Russell, Downley Dairy, ctc_34ZGmjMfKv2g7WjPS
@@ -26,7 +44,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Roshan, have you seen this?
+Roshan.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Darren Glynn, Tap Talks, ctc_Qbpifd7YvceSs8szc
@@ -35,7 +62,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Darren, have you seen this?
+Darren.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Hugo Martini Mensch, Helios Retreats, ctc_LMvqRxyCdNJywZEWz
@@ -44,7 +80,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Hugo, have you seen this?
+Hugo.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Romina Kamran, Digital MIAM, ctc_7RQYWuPrJWQsv2s3r
@@ -53,7 +98,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Romina, have you seen this?
+Romina.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ## Group A, the other session's 1 Nov openers, due since 4 Nov 07.52 UTC and not bumped. Added 5 Nov by the pipeline run.
@@ -64,7 +118,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Mark, have you seen this?
+Mark.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Felix Jordan, Sagrado Drinks, ctc_PtfwGN84zbyGgvwB3
@@ -73,7 +136,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Felix, have you seen this?
+Felix.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Sylvain Protais, Nighthawks cocktails, ctc_tGmsetQJ9r7zSQKmF
@@ -82,7 +154,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Sylvain, have you seen this?
+Sylvain.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Sarah Eliza Steel, APEX NEURO, ctc_Jk7NZ7nGhruJFD5GJ
@@ -91,7 +172,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Sarah, have you seen this?
+Sarah.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Marion Gautier, MAMATRAITEUR78, ctc_9KK4FjKsXD342scS9
@@ -100,7 +190,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Marion, have you seen this?
+Marion.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Jordane Morel, MERINO, ctc_YbeTTgcHKWEyD4yDp
@@ -109,7 +208,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Jordane, have you seen this?
+Jordane.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Jeffrey Zwarts, Meneer Zwarts Koffie, ctc_PdtXdTBcwEsv3RyP4
@@ -118,7 +226,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Jeffrey, have you seen this?
+Jeffrey.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Agathe Thiriez, Saveurs Végés, ctc_EbT44fJeRdDPjMDPd
@@ -127,7 +244,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Agathe, have you seen this?
+Agathe.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Denise Geestman, A Fuego, ctc_qMXXqCjntDZN8LBC8
@@ -136,7 +262,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Denise, have you seen this?
+Denise.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### René Geurts, Het Goed van Bovy, ctc_umnv96hbtYAa9dgiL
@@ -145,7 +280,16 @@ NUDGE
 
 NUDGE
 ```
-👀 René, have you seen this?
+René.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Florian Casier Gueho, Abriteo, ctc_FibmN2p3bXtYWSqac
@@ -154,7 +298,16 @@ NUDGE
 
 NUDGE
 ```
-👀 Florian, have you seen this?
+Florian.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```
 
 ### Alexandre Gassoul, WYNSTANLEY, ctc_34aD5Sc3FDqezCPDg
@@ -163,5 +316,14 @@ NUDGE
 
 NUDGE
 ```
-👀 Alexandre, have you seen this?
+Alexandre.........................................................
+
+
+
+
+
+
+
+
+have you seen this?
 ```

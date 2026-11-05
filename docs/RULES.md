@@ -472,6 +472,12 @@ wrong or already fixed (the problem we named was solved, the company was sold or
 the bump points them straight back at it. Those close silently. A researched nudge is only for when
 Raka asks for one.
 
+**The second bump shape (Raka, 2026-11-05).** His words, "maybe the nudge should be [name]......... have you
+seen this?" with the line breaks. So a due bump may also be the first name as we greeted them, a row of
+dots (57), eight empty lines, then `have you seen this?` in lower case. The preview shows only the name and
+the dots, and the question lands when they open it. Same rules as the plain bump. check-drafts.py knows
+both shapes (exempt from the contraction and repeated closing checks, controls tested 5 Nov).
+
 **Someone outside the ICP gets a light chat, not a pitch (Raka, 2026-10-14).** His words on Phoebe
 Morris (a one person law firm) and Laura Wynch (a fractional COO), "non icp so just a light chat of what
 theyre up to", and on Fernando Gomes (co owner of a franchise store), "ask him what he's up to". So an
