@@ -6,5 +6,5 @@ the Meet link. Send only on Raka's word for this exact text. Pull the thread fir
 ### REPLY Matthias Ufer, Schumacher Verfahrenstechnik, ctc_3L5hXyZ8hWrh8tAGC
 
 ```
-Perfect Matthias, the invite for 13.15 is in your inbox at info@schumacher-vt.de with the Meet link. Talk soon!
+Perfect Matthias, the invite for 13.15 is in the info inbox you gave me, with the Meet link. I'll walk you through the spec form there, talk soon!
 ```
