@@ -22,7 +22,7 @@ Screens are saved next to this file in `benchmark/`, the raw numbers in `measure
 ## 1. The finding
 
 1. **The category is a low bar.** Seven competitor homepages, and almost none shows the real product on the first screen, almost
-   none says plainly what it does, and half have a cookie box over the phone first screen. They are mostly fast, though. Six of
+   none says plainly what it does, and three of the eight open with a cookie box over the phone first screen. They are mostly fast, though. Six of
    eight pass Google's loading threshold.
 2. **Qualigraf's current site is behind all of them on speed and stability.** MEASURED, repeated three times.
 3. **The best sites outside the category agree on a short list of moves.** One plain sentence. The real product, shown at once.
@@ -79,18 +79,18 @@ Seen today, in `benchmark/exemplars-desktop.png`.
 | **Proof beside the claim** | Stripe's one big figure. Mercury's regulatory line | Rare. Public-i leads with a slogan |
 | **Task first** | GOV.UK opens on a search box and the five things people come to do | Nobody |
 | **Quick first screen, heavy load staged** | Stripe, Mercury, Linear | Four of eight are quick. Two are not |
-| **Consent that doesn't take the screen** | GOV.UK and Attio use a small bar | **Four competitors and Qualigraf's own site cover half the phone first screen** |
+| **Consent that doesn't take the screen** | Attio keeps it to a small bar at the foot. Mercury shows none. GOV.UK's takes the top of the phone screen too | **Public-i, Notubiz, eScribe and Qualigraf's own Canadian site open behind a box on a phone** |
 
-Phone first screens are in `benchmark/phone-first-screens.png`. Notubiz, Public-i, eScribe and Granicus open behind a box. The
+Phone first screens are in `benchmark/phone-first-screens.png`. Notubiz, Public-i and eScribe open behind a consent box, and Granicus opens with a promo popup on desktop. The
 better sites show the idea first.
 
 ## 4. How we beat each competitor
 
 | Competitor | Where they are weak, MEASURED or seen | Our advantage |
 |---|---|---|
-| **Civica Modern.Gov** | Walled to us. A claim of about 380 UK customers (their G-Cloud document). They own "committee management" | Don't fight on that. Show the whole life of a decision, with the topic and its history |
-| **eScribe** | An eight stage strip, the cycle idea, no named UK foothold | A topic file that carries its dossier, goals and memory. Their stages are our stations, so the file is the difference |
-| **Notubiz** | Fast and stable. Owns "clear decision-making" in the Netherlands | In the UK and Canada they aren't present. In the Netherlands, differ on memory and strategy links, not on clarity |
+| **Civica Modern.Gov** | Walled to us. A claim of about 380 UK customers (their G-Cloud document). They appear to hold the words "committee management", since tenders use them. INFERRED | Don't fight on that. Show the whole life of a decision, with the topic and its history |
+| **eScribe** | An eight stage strip, the cycle idea, a Canadian focus in what I read | A topic file that carries its dossier, goals and memory. Their stages are our stations, so the file is the difference |
+| **Notubiz** | Fast and stable. Owns "clear decision-making" in the Netherlands | A Dutch company. I saw nothing on UK or Canadian presence, but I didn't check. In the Netherlands, differ on memory and strategy links, not on clarity |
 | **Berger-Levrault** | Generic "trusted publisher" headline, stock photos, two critical axe issues. Shipped AI in October | A named, honest AI story and a demonstrable product |
 | **Diligent** | Strong first screen with real product. Boards, not councils | Council language and UK statutory detail they can't copy |
 | **Granicus** | 40 serious axe flags, popups over the hero, 256 requests | Calm, accessible and specific |
@@ -101,7 +101,7 @@ accessibility statement that holds up. A consent bar that doesn't block. A tool 
 
 ## 5. The bar the next build must clear
 
-These are measurable. The prototype fails four of them today.
+These are measurable. The prototype fails five of them today, accessibility, phone, first screen, imagery and weight once scrolled.
 
 | Standard | Target | Prototype today |
 |---|---|---|
