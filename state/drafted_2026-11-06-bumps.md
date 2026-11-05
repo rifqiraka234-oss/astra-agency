@@ -1,4 +1,4 @@
-# Bumps for Fri 6 Nov 2026. NOT SENT, waiting on Raka's word and a time.
+# Bumps for Fri 6 Nov 2026. NOT SENT, SCHEDULED 06.17 Amsterdam (05.17 UTC) on Raka's "send 06.17 tomorrow", trig_012Deyy2FhvtZjtu3G6xgWbR.
 
 Raka 5 Nov, the new nudge shape, the first name, a long row of dots, eight empty lines, then "have you seen this?". First name as we greeted them. Threads pulled 5 Nov ~07.10 UTC with tools/lemlist.py, control 8, each has only our message since, nothing from them. Re pull right before sending.
 
