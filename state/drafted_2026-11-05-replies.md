@@ -8,9 +8,9 @@
 > So he already does the outreach by hand and asks what we do. Answer it, tie it to what he just said, one question back.
 > "one this week for a photobooth company" is the Framed sketch delivered 4 Nov, true and unnamed.
 
-> Raka 5 Nov, "say we have a gtm automation and also the outbound for nicholas. make it shorter". Redrafted, not sent.
+> Raka 5 Nov, "say we have a gtm automation and also the outbound for nicholas. make it shorter", then "and just say, are the things abve perhaps something you're looking for?". Redrafted, not sent.
 
 REPLY
 ```
-Thanks Nicholas, good to hear the Vikasa story is already going out. We build GTM automation and run the outbound for small brands. For T.A.I it'd find the openings and refurbs across Thailand each week and get your Vikasa assets to their design teams. How are you finding the openings now?
+Thanks Nicholas, good to hear the Vikasa story is already going out. We build GTM automation and run the outbound for small brands. For T.A.I it'd find the openings and refurbs across Thailand each week and get your Vikasa assets to their design teams. Are those perhaps something you're looking for?
 ```
