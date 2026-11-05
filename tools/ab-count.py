@@ -69,7 +69,11 @@ def test_drafts(cd, since):
             os.unlink(tf.name)
         for i, (msg, shape, gate, _) in enumerate(pairs):
             v = re.search(r"^variant:\s*([AB])\b", gate or "", re.M)
-            if shape in ("SKETCH", "SKETCHB") and v:
+            # Did you know openers sit outside the test (docs/experiments/2026-10-26-opener-ab.md), but
+            # their drafts carry the SKETCH fence label and a variant line, so they are told apart by text.
+            # Found 5 Nov, Framed, Helios and Nexylan had been counted in arm A.
+            did_you_know = bool(re.search(r"did you know", " ".join(msg.split("\n")[:4]), re.I))
+            if shape in ("SKETCH", "SKETCHB") and v and not did_you_know:
                 out.append({"file": name, "cid": cids[i] if i < len(cids) else None,
                             "variant": v.group(1), "shape": shape, "text": msg})
     return out
