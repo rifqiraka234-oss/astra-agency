@@ -126,9 +126,9 @@ track, not as full bleed blocks elsewhere. Peach for soft panels.
 **Gradients.** None. Their brand is flat and illustrated, and the build carries 48 lines of gradient CSS, mostly glow effects on dark
 scenes. If a scene needs depth, use the light on the paper in the hero, not a colour wash.
 
-**Type.** Roman headlines, no italic second halves. Emphasis by colour or weight. Their own body face, Source Sans 3. Their site
-loads an Adobe Fonts kit that defines Zenon and Zenon Dark, which they license. Ask whether it is their heading face and use it
-if so, otherwise Source Serif 4 in roman. Drop the mono kickers and the "ITEM 0x" labels. Keep station numbers only.
+**Type.** Roman headlines, no italic second halves. Emphasis by colour or weight. Their own body face, Source Sans 3. Their heading face is
+Zenon, an Adobe Fonts serif they license, confirmed from the computed style on their French homepage. Use it in roman, and keep
+Source Serif 4 only as a fallback. Drop the mono kickers and the "ITEM 0x" labels. Keep station numbers only.
 
 **Buttons and shapes.** Flat, square cornered coral buttons with navy text. No black pills, no arrows, no chips.
 
