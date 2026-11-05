@@ -1,0 +1,459 @@
+[
+ {
+  "n": "granicus",
+  "u": "https://granicus.com/",
+  "loadMs": 3454,
+  "reqs": 256,
+  "MB": 4.8,
+  "failed": 19,
+  "lcpMs": 2076,
+  "cls": 0.02,
+  "h1": 1,
+  "dom": 2044,
+  "imgs": 146,
+  "noAlt": 0,
+  "videos": 4,
+  "iframes": 1,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 8,
+   "nodes": {
+    "serious": 40,
+    "moderate": 39
+   },
+   "contrast": 36
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "diligent",
+  "u": "https://www.diligent.com/",
+  "loadMs": 3535,
+  "reqs": 116,
+  "MB": 5.1,
+  "failed": 2,
+  "lcpMs": 792,
+  "cls": 0,
+  "h1": 1,
+  "dom": 1766,
+  "imgs": 63,
+  "noAlt": 0,
+  "videos": 0,
+  "iframes": 4,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 4,
+   "nodes": {
+    "serious": 6,
+    "moderate": 16
+   },
+   "contrast": 2
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "fcs",
+  "u": "https://www.fcssoftware.co.uk/",
+  "loadMs": 2857,
+  "reqs": 40,
+  "MB": 3.7,
+  "failed": 0,
+  "lcpMs": 2264,
+  "cls": 0,
+  "h1": 1,
+  "dom": 269,
+  "imgs": 14,
+  "noAlt": 0,
+  "videos": 0,
+  "iframes": 0,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 5,
+   "nodes": {
+    "serious": 8,
+    "moderate": 10
+   },
+   "contrast": 6
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "mcs",
+  "u": "https://mycouncilservices.com/",
+  "loadMs": 9056,
+  "reqs": 81,
+  "MB": 4.6,
+  "failed": 2,
+  "lcpMs": 6920,
+  "cls": 0,
+  "h1": 8,
+  "dom": 1091,
+  "imgs": 45,
+  "noAlt": 4,
+  "videos": 0,
+  "iframes": 0,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 6,
+   "nodes": {
+    "serious": 6,
+    "moderate": 3,
+    "critical": 3
+   },
+   "contrast": 5
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "publici",
+  "u": "https://www.public-i.tv/",
+  "loadMs": 9221,
+  "reqs": 98,
+  "MB": 9.4,
+  "failed": 3,
+  "lcpMs": 9028,
+  "cls": 0.008,
+  "h1": 1,
+  "dom": 2245,
+  "imgs": 76,
+  "noAlt": 0,
+  "videos": 1,
+  "iframes": 1,
+  "demoCtaFold": false,
+  "axe": {
+   "rules": 8,
+   "nodes": {
+    "critical": 11,
+    "serious": 16,
+    "moderate": 6
+   },
+   "contrast": 6
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "notubiz",
+  "u": "https://www.notubiz.nl/",
+  "loadMs": 2733,
+  "reqs": 104,
+  "MB": 4.1,
+  "failed": 1,
+  "lcpMs": 1212,
+  "cls": 0.082,
+  "h1": 1,
+  "dom": 1159,
+  "imgs": 141,
+  "noAlt": 0,
+  "videos": 1,
+  "iframes": 3,
+  "demoCtaFold": false,
+  "axe": {
+   "rules": 8,
+   "nodes": {
+    "minor": 6,
+    "serious": 16,
+    "moderate": 26
+   },
+   "contrast": 13
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "escribe",
+  "u": "https://www.escribemeetings.com/",
+  "loadMs": 4388,
+  "reqs": 276,
+  "MB": 3.8,
+  "failed": 9,
+  "lcpMs": 1932,
+  "cls": 0.033,
+  "h1": 3,
+  "dom": 1114,
+  "imgs": 39,
+  "noAlt": 0,
+  "videos": 0,
+  "iframes": 3,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 5,
+   "nodes": {
+    "serious": 7,
+    "moderate": 19
+   },
+   "contrast": 1
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "berger",
+  "u": "https://www.berger-levrault.com/fr/",
+  "loadMs": 3523,
+  "reqs": 52,
+  "MB": 3.5,
+  "failed": 2,
+  "lcpMs": 1552,
+  "cls": 0.025,
+  "h1": 1,
+  "dom": 1197,
+  "imgs": 51,
+  "noAlt": 0,
+  "videos": 0,
+  "iframes": 2,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 4,
+   "nodes": {
+    "serious": 2,
+    "critical": 2,
+    "moderate": 1
+   },
+   "contrast": 0
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "qual_fr",
+  "u": "https://www.qualigraf.com/fr/homepage-fr/",
+  "loadMs": 7187,
+  "reqs": 132,
+  "MB": 4.1,
+  "failed": 2,
+  "lcpMs": 6992,
+  "cls": 0.871,
+  "h1": 1,
+  "dom": 1235,
+  "imgs": 45,
+  "noAlt": 0,
+  "videos": 0,
+  "iframes": 0,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 6,
+   "nodes": {
+    "serious": 3,
+    "moderate": 53,
+    "minor": 8
+   },
+   "contrast": 2
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "qual_ca",
+  "u": "https://www.qualigraf.com/en_ca/homepage-ca/",
+  "loadMs": 7603,
+  "reqs": 129,
+  "MB": 5,
+  "failed": 7,
+  "lcpMs": 7012,
+  "cls": 0.789,
+  "h1": 1,
+  "dom": 1141,
+  "imgs": 43,
+  "noAlt": 0,
+  "videos": 1,
+  "iframes": 0,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 7,
+   "nodes": {
+    "serious": 7,
+    "moderate": 49,
+    "minor": 8,
+    "critical": 1
+   },
+   "contrast": 2
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "proto",
+  "u": "https://astra-qualigraf-prototype.netlify.app/",
+  "loadMs": 1878,
+  "reqs": 29,
+  "MB": 1.1,
+  "failed": 0,
+  "lcpMs": 1080,
+  "cls": 0,
+  "h1": 1,
+  "dom": 1395,
+  "imgs": 17,
+  "noAlt": 0,
+  "videos": 9,
+  "iframes": 0,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 2,
+   "nodes": {
+    "serious": 11,
+    "moderate": 1
+   },
+   "contrast": 11
+  },
+  "mobile": {
+   "sw": 444,
+   "vw": 390
+  }
+ },
+ {
+  "n": "stripe",
+  "u": "https://stripe.com/gb",
+  "loadMs": 5640,
+  "reqs": 171,
+  "MB": 8.1,
+  "failed": 14,
+  "lcpMs": 872,
+  "cls": 0.009,
+  "h1": 2,
+  "dom": 2876,
+  "imgs": 34,
+  "noAlt": 0,
+  "videos": 0,
+  "iframes": 2,
+  "demoCtaFold": true,
+  "axe": "axe failed",
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "linear",
+  "u": "https://linear.app/",
+  "loadMs": 1885,
+  "reqs": 303,
+  "MB": 2.9,
+  "failed": 0,
+  "lcpMs": 1752,
+  "cls": 0,
+  "h1": 1,
+  "dom": 4786,
+  "imgs": 38,
+  "noAlt": 0,
+  "videos": 0,
+  "iframes": 0,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 2,
+   "nodes": {
+    "serious": 15,
+    "moderate": 1
+   },
+   "contrast": 15
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "mercury",
+  "u": "https://mercury.com/",
+  "loadMs": 1821,
+  "reqs": 167,
+  "MB": 10.8,
+  "failed": 1,
+  "lcpMs": 768,
+  "cls": 0,
+  "h1": 1,
+  "dom": 2206,
+  "imgs": 47,
+  "noAlt": 0,
+  "videos": 1,
+  "iframes": 1,
+  "demoCtaFold": true,
+  "axe": {
+   "rules": 4,
+   "nodes": {
+    "serious": 4,
+    "moderate": 2
+   },
+   "contrast": 0
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "attio",
+  "u": "https://attio.com/",
+  "loadMs": 2719,
+  "reqs": 212,
+  "MB": 6.9,
+  "failed": 10,
+  "lcpMs": 3892,
+  "cls": 0,
+  "h1": 2,
+  "dom": 4314,
+  "imgs": 76,
+  "noAlt": 2,
+  "videos": 0,
+  "iframes": 2,
+  "demoCtaFold": false,
+  "axe": {
+   "rules": 4,
+   "nodes": {
+    "serious": 45,
+    "moderate": 1
+   },
+   "contrast": 41
+  },
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ },
+ {
+  "n": "govuk",
+  "u": "https://www.gov.uk/",
+  "loadMs": 554,
+  "reqs": 16,
+  "MB": 0.6,
+  "failed": 0,
+  "lcpMs": 464,
+  "cls": 0.226,
+  "h1": 1,
+  "dom": 617,
+  "imgs": 4,
+  "noAlt": 0,
+  "videos": 0,
+  "iframes": 0,
+  "demoCtaFold": false,
+  "axe": "axe failed",
+  "mobile": {
+   "sw": 390,
+   "vw": 390
+  }
+ }
+]
