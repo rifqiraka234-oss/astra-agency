@@ -1,4 +1,4 @@
-# Healthy Secrets check in, reply in the proposal thread, 5 Nov 2026. NOT SENT, SCHEDULED Fri 6 Nov 06.00 Amsterdam on Raka's word.
+# Healthy Secrets check in, reply in the proposal thread, 5 Nov 2026. NOT SENT, SCHEDULED Sun 8 Nov 06.00 Amsterdam (moved by Raka 5 Nov, "send it like at sunday morning instead") on Raka's word.
 
 Raka 5 Nov, "Find nikolaus' sister they havent replied to shit". Neither sister is on LinkedIn (searched, none found) or in
 lemlist. But office@healthysecrets.at is Leonie's own account, it accepted the 27 Oct invite as "Leonie Marie-Luise Walkner"
@@ -12,7 +12,7 @@ written to her. Subject below.
 > Raka 5 Nov, "Send tomorrow at 06.00 for the office, address all of them", then "Just reply to the thread we sent. Just wanna
 > check in again". So it goes as a REPLY in the proposal thread 1a18c637ed762945 (subject "Re: Healthy Secrets Website Proposal"),
 > to office@healthysecrets.at, cc joshuavanzeelt@gmail.com and lunaraisyamulya@gmail.com, as a short check in.
-> SCHEDULED Fri 6 Nov 06.00 Amsterdam (05.00 UTC), trig_01BpiqDHquTTirqC8aAPhBeo.
+> SCHEDULED Sun 8 Nov 06.00 Amsterdam (05.00 UTC), trig_01BpiqDHquTTirqC8aAPhBeo, moved from Fri on Raka's word.
 > Before sending, Gmail search for anything from healthysecrets.at or Walkner since 30 Oct, and pull Nikolaus's LinkedIn thread.
 > Any reply from them cancels this and goes to Raka.
 
