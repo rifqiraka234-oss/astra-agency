@@ -118,3 +118,12 @@ can stay as the small paid start the GTM plan asks for, but the Health Check is 
 9. How to start. One step per buyer.
 
 The deck follows `docs/build-and-deck.md` and the no Claude look rules once the structure is agreed.
+
+## The base deck, built 5 Nov
+
+Google Slides, in the Astra deck's own style (Inter, navy, greige, the arches, the deck's own photos):
+https://docs.google.com/presentation/d/12EGOK5OpWevHEMVFIiIKWJu1zmtJ861KIHznGSzMRNo/edit
+
+15 slides. The generator is `tools/gtm-deck-slides.py` and the image crops are in `assets/gtm-deck/`, served to Slides from
+this public repo by commit SHA. Prices on slides 10, 11 and 12 are the suggestions above and still need Raka's numbers.
+To confirm with Raka: "Leexi" as the call tool, raka@astraagency.nl as the contact, and naming efficy while he works there.
