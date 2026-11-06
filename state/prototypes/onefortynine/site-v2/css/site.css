@@ -428,3 +428,4 @@ input[type="range"]::-moz-range-thumb { width: 26px; height: 26px; border-radius
 .get .get-form .sent-big { font-size: 34px; color: var(--ink); margin: 0 0 6px; }
 .get .get-form .btn-solid { background: var(--ink); color: #fff; }
 .get .get-form .btn-solid:hover { background: #000; }
+.proto p { margin: 0; }

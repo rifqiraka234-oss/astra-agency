@@ -12,7 +12,7 @@
 </head>
 <body>
 <a class="skip" href="#crack">Skip to the box</a>
-<p class="proto">Prototype by Astra agency for OneFortyNine Games. Not the live site, nothing is ordered or sent.</p>
+<aside class="proto" aria-label="Prototype note"><p>Prototype by Astra agency for OneFortyNine Games. Not the live site, nothing is ordered or sent.</p></aside>
 
 <header class="hdr" data-hdr>
   <a class="brand" href="#top" aria-label="Breakout Box by OneFortyNine Games, home">
@@ -283,7 +283,7 @@
           <button type="button" role="tab" aria-selected="true" aria-controls="f-one" id="t-one" data-tab="one">One to ten boxes</button>
           <button type="button" role="tab" aria-selected="false" aria-controls="f-group" id="t-group" data-tab="group">A group of sites</button>
         </div>
-        <form class="form" id="f-one" role="tabpanel" aria-labelledby="t-one" data-form="one" novalidate>
+        <div id="f-one" role="tabpanel" aria-labelledby="t-one" data-form="one"><form class="form" novalidate>
           <p class="form-sum" data-sum></p>
           <div class="fgrid">
             <label>Your name<input name="name" autocomplete="name" required></label>
@@ -296,8 +296,8 @@
           <label class="full">Anything else<textarea name="note" rows="3"></textarea></label>
           <button class="btn btn-solid btn-lg" type="submit" data-order>Send to Owen</button>
           <p class="form-small">A prototype, nothing is sent or charged.</p>
-        </form>
-        <form class="form" id="f-group" role="tabpanel" aria-labelledby="t-group" data-form="group" novalidate hidden>
+        </form></div>
+        <div id="f-group" role="tabpanel" aria-labelledby="t-group" data-form="group" hidden><form class="form" novalidate>
           <p class="form-sum" data-sum></p>
           <div class="fgrid">
             <label>Your name<input name="name" autocomplete="name" required></label>
@@ -310,7 +310,7 @@
           <label class="check"><input type="checkbox" name="callback"> Prefer a call back? Owen will ring you.</label>
           <button class="btn btn-solid btn-lg" type="submit" data-order>Send to Owen</button>
           <p class="form-small">A prototype, nothing is sent or charged.</p>
-        </form>
+        </form></div>
         <div class="sent" data-sent hidden tabindex="-1">
           <div class="sent-lock" aria-hidden="true"><span>1</span><span>4</span><span>9</span></div>
           <p class="sent-big">Locked in.</p>
