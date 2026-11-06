@@ -6,27 +6,34 @@
 <title>GTM Engine Check</title>
 <meta name="description" content="Four minutes. Find out what your sales engine costs you next year, where it leaks, and what to build or learn first.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d1b38'/%3E%3Cpath d='M16 6l2.6 7.4L26 16l-7.4 2.6L16 26l-2.6-7.4L6 16l7.4-2.6z' fill='%23e6ddd8'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Mona+Sans:wdth,wght@75..125,300..800&display=swap">
+<link rel="preload" href="fonts/open-sauce-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/open-sauce-one-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/gloock-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:"Open Sauce One";src:url(fonts/open-sauce-one-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Open Sauce One";src:url(fonts/open-sauce-one-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Open Sauce One";src:url(fonts/open-sauce-one-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Open Sauce One";src:url(fonts/open-sauce-one-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Gloock";src:url(fonts/gloock-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
 /* One app, three views. Intro is a split screen with a full bleed photo. Questions keep the chapter photo on the left and
    a live ledger of what we heard. The report reads like a diagnosis, headline first, money second, then the plan. */
 :root{
   --paper:#f5f4f1; --ink:#0e1525; --muted:#5d6475; --rule:#d9d6d0; --navy:#0d1b38; --navy2:#16264a;
   --sand:#e6ddd8; --slate:#405b8d; --risk:#c4432c; --gain:#2b7a52; --tint:#ebe8e3;
-  --sans:"Mona Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  --mono:"Fragment Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --sans:"Open Sauce One","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Gloock",Georgia,"Times New Roman",serif;
+  --mono:"Open Sauce One","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--paper);color:var(--ink);overflow-x:clip}
 body{font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
 img{max-width:100%;display:block}
-h1,h2,h3{font-weight:560;letter-spacing:-0.025em;line-height:1.02;margin:0;text-wrap:balance}
+h1,h2,h3{font-weight:700;letter-spacing:-0.025em;line-height:1.05;margin:0;text-wrap:balance}
+.sec h2,.pack h2,.plan h2,.qphoto .chap strong{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
 p{margin:0}
 button{font:inherit;color:inherit;cursor:pointer}
 button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-offset:3px}
-.mono{font-family:var(--mono);font-size:13px;letter-spacing:.02em}
+.mono{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:2px;padding:16px 24px;background:var(--navy);color:#fff;font-weight:600;font-size:16px}
 .btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
 .btn.light{background:var(--sand);color:var(--navy)}
@@ -44,7 +51,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .qphoto img{width:100%;height:100%;object-fit:cover}
 .intro .side{padding:48px max(24px,env(safe-area-inset-right,0px)) 40px 56px;display:flex;flex-direction:column;gap:36px;justify-content:center}
 .wordmark{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.16em;font-size:13px}
-.intro h1{font-size:clamp(40px,5.2vw,76px);font-stretch:88%}
+.intro h1{font-size:clamp(40px,5.2vw,76px);}
 .intro .lede{color:var(--muted);max-width:44ch;font-size:18px}
 .doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .door{display:grid;grid-template-rows:150px auto;text-align:left;background:#fff;border:0;padding:0;box-shadow:inset 0 0 0 1px var(--rule);transition:box-shadow .15s}
@@ -69,7 +76,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .seg{height:3px;background:var(--rule);position:relative;overflow:hidden}
 .seg i{position:absolute;inset:0;width:0;background:var(--navy);transition:width .35s}
 .qbody{display:grid;align-content:center;gap:26px;max-width:720px;padding-block:40px}
-.qbody h2{font-size:clamp(28px,3.3vw,44px);font-stretch:92%}
+.qbody h2{font-size:clamp(28px,3.3vw,44px);}
 .qbody .hint{color:var(--muted);max-width:56ch}
 .opts{display:grid;gap:8px}
 .opt{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;align-items:center;text-align:left;background:#fff;border:0;border-radius:2px;padding:16px 18px;box-shadow:inset 0 0 0 1px var(--rule);transition:box-shadow .12s,background .12s;font-size:17px}
@@ -80,12 +87,12 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .field{background:#fff;box-shadow:inset 0 0 0 1px var(--rule);padding:14px 16px;display:grid;gap:4px}
 .field label{font-size:14px;color:var(--muted)}
-.field .row{display:flex;align-items:baseline;gap:6px;font-size:28px;font-weight:560;font-stretch:90%}
+.field .row{display:flex;align-items:baseline;gap:6px;font-size:28px;font-weight:560;}
 .field input{font:inherit;border:0;background:transparent;color:var(--ink);width:100%;padding:0;min-width:0}
 .field .u{color:var(--muted);font-size:20px}
 .qfoot{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
 .ledger{display:grid;gap:4px;min-width:0}
-.ledger .amt{font-size:30px;font-weight:600;font-stretch:85%;color:var(--risk);letter-spacing:-.02em}
+.ledger .amt{font-size:30px;font-weight:600;color:var(--risk);letter-spacing:-.02em}
 .ledger .heard{color:var(--muted);font-size:15px;max-width:52ch;min-height:1.5em}
 .qnav{display:flex;gap:10px}
 
@@ -94,7 +101,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .bar0{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px max(24px,env(safe-area-inset-right,0px)) 22px max(24px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--rule)}
 .wrap{max-width:1180px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
 .diag{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:56px;padding-block:64px 56px;align-items:end}
-.diag h1{font-size:clamp(38px,5vw,72px);font-stretch:86%}
+.diag h1{font-size:clamp(38px,5vw,72px);}
 .diag .sub{color:var(--muted);font-size:19px;margin-top:22px;max-width:52ch}
 .level{display:grid;gap:14px}
 .ladder{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
@@ -104,17 +111,17 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .ladder .on{background:var(--navy);color:#fff}
 .ladder .on .mono{color:#aab4cc}
 .scoreRow{display:flex;align-items:baseline;gap:12px}
-.scoreRow .n{font-size:84px;font-weight:620;font-stretch:80%;letter-spacing:-.04em;line-height:.9}
+.scoreRow .n{font-size:84px;font-weight:620;letter-spacing:-.04em;line-height:.9}
 .money{background:var(--navy);color:#fff}
 .money .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
 .col{padding:48px 40px 52px 0;display:grid;gap:22px;align-content:start;min-width:0}
 .col+.col{padding-left:40px;padding-right:0;border-left:1px solid #2b3b62}
 .col .mono{color:#aab4cc}
-.huge{font-size:clamp(54px,7vw,96px);font-weight:640;font-stretch:78%;letter-spacing:-.04em;line-height:.9}
+.huge{font-size:clamp(54px,7vw,96px);font-weight:640;letter-spacing:-.04em;line-height:.9}
 .r{color:#ff8a72}.g{color:#7fd4a5}
 .line{display:grid;gap:8px;padding-top:16px;border-top:1px solid #2b3b62}
 .line .t{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
-.line .t b{font-size:22px;font-weight:600;font-stretch:90%}
+.line .t b{font-size:22px;font-weight:600;}
 .line .how{font-size:14px;color:#aab4cc}
 .meter{height:8px;background:#22325a}
 .meter i{display:block;height:100%}
@@ -123,7 +130,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .band{height:42vh;min-height:260px;background:center/cover}
 .sec{padding-block:64px;display:grid;gap:32px}
 .sec>header{display:grid;gap:10px;max-width:62ch}
-.sec h2{font-size:clamp(30px,3.4vw,46px);font-stretch:90%}
+.sec h2{font-size:clamp(30px,3.4vw,46px);}
 .sec header p{color:var(--muted)}
 .engine{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:48px;align-items:center}
 .dims{display:grid;gap:0}
@@ -145,14 +152,14 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .plan li span{color:var(--muted);font-size:15px}
 .pack{background:var(--navy);color:#fff}
 .pack .wrap{display:grid;gap:36px;padding-block:64px}
-.pack h2{font-size:clamp(30px,3.4vw,48px);font-stretch:90%;max-width:24ch}
+.pack h2{font-size:clamp(30px,3.4vw,48px);max-width:24ch}
 .pack .why{color:#c8cfdf;max-width:60ch;font-size:18px}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border-top:1px solid #2b3b62}
 .step{padding:22px 22px 24px 0;display:grid;gap:8px;align-content:start}
 .step+.step{padding-left:22px;border-left:1px solid #2b3b62}
 .step .mono{color:#aab4cc}
 .step b{font-weight:600;font-size:19px}
-.step .price{font-size:34px;font-weight:620;font-stretch:80%;color:var(--sand);letter-spacing:-.02em}
+.step .price{font-size:34px;font-weight:620;color:var(--sand);letter-spacing:-.02em}
 .step p{font-size:15px;color:#c8cfdf}
 .total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-top:1px solid #2b3b62;padding-top:22px}
 .total .huge{font-size:clamp(44px,5vw,68px);color:var(--sand)}
@@ -353,7 +360,7 @@ function quiz(){
     <h2>${q.q}</h2>${q.hint?`<p class="hint">${q.hint}</p>`:''}${body}
    </div>
    <div class="qfoot">
-    <div class="ledger" aria-live="polite"><span class="mono" style="color:var(--muted)">${st.path==='team'?'At risk next year, so far':'Paid time lost a year, so far'}</span><span class="amt">${eur(live.risk)}</span><span class="heard">${heardLine()}</span><span class="mono" style="color:var(--muted)">${findings()} findings in your report so far</span></div>
+    <div class="ledger" aria-live="polite"><span class="mono" style="color:var(--muted)">${st.path==='team'?'At risk next year, so far':'Paid time lost a year, so far'}</span><span class="amt">${eur(live.risk)}</span><span class="heard">${heardLine()}</span><span class="mono" style="color:var(--muted)">${findings()} ${findings()===1?'finding':'findings'} in your report so far</span></div>
     <div class="qnav"><button class="btn line" id="back">Back</button>${needNext?`<button class="btn" id="next">${st.i===qs.length-1?'See my report':'Next'}</button>`:''}</div>
    </div>
   </div></section>`;
@@ -378,8 +385,9 @@ function compute(partial){
  const a=st.a,team=st.path==='team';
  const qs=team?TEAM:ME;const nq=qs.find(q=>q.type==='nums');const N={};nq.fields.forEach(f=>N[f.k]=(a.nums&&a.nums[f.k]!==undefined)?a.nums[f.k]:f.d);
  const dims={};DIMS.forEach(([k])=>dims[k]=a[k]?a[k].v:0);
- const avg=Object.values(dims).reduce((s,v)=>s+v,0)/DIMS.length;
- let score=team?avg*25:avg*25*0.85+((a.tools||[]).length/7)*15;
+ const W={target:1.3,data:1,signals:.9,message:1.1,speed:1.3,measure:1.1,loyalty:1};
+ const wsum=DIMS.reduce((t,[k])=>t+W[k],0),wavg=DIMS.reduce((t,[k])=>t+W[k]*dims[k],0)/wsum;
+ let score=team?wavg*25:wavg*25*0.85+((a.tools||[]).length/7)*15;
  score=Math.round(Math.min(100,score));
  const level=score<30?0:score<55?1:score<80?2:3;
  const LV=team?['Manual','Repeatable','Systemised','Compounding']:['Starter','Operator','Builder','Architect'];
@@ -391,7 +399,7 @@ function compute(partial){
   const dealsYr=deals*12, perRep=reps?dealsYr/reps:0, extraDeals=dealsYr*g, extraReps=perRep?extraDeals/perRep:0, hire=(partial&&!a.speed)?0:extraReps*cost;
   const keyRisk=key*dealsYr*deal/4;
   const freed=admin*rec, hoursFreed=reps*freed*40*46, moreDeals=perRep*reps*(freed/Math.max(0.05,1-admin)), oppRev=moreDeals*deal, oppLeak=leak*0.8;
-  Object.assign(r,{m:{reps,cost,deal,deals,g,inbound,admin,nf,conv,key,timeCost,lost,leak,dealsYr,perRep,extraDeals,extraReps,hire,keyRisk,hoursFreed,moreDeals,oppRev,oppLeak},risk:timeCost+leak+hire+keyRisk,opp:timeCost*rec+oppRev+oppLeak});
+  Object.assign(r,{m:{reps,cost,deal,deals,g,inbound,admin,nf,conv,key,timeCost,lost,leak,dealsYr,perRep,extraDeals,extraReps,hire,keyRisk,hoursFreed,moreDeals,oppRev,oppLeak},risk:timeCost+leak+hire+keyRisk,opp:oppRev+oppLeak});
  }else{
   const inc=N.income,h=Math.min(40,N.adminh),meet=N.meet,deal=N.deal,mpd=Math.max(1,N.mpd);
   const hourly=inc/1840, timeCost=(partial&&!a.nums)?0:h*46*hourly, selling=Math.max(1,40-h), perHour=meet/(selling*4.33);
@@ -399,7 +407,9 @@ function compute(partial){
   Object.assign(r,{m:{inc,h,meet,deal,mpd,hourly,timeCost,selling,perHour,hFree,moreMeet,moreDealsYr,oppRev},risk:timeCost,opp:oppRev});
  }
  if(partial)return r;
- r.weak=DIMS.map(([k])=>k).sort((x,y)=>dims[x]-dims[y]).slice(0,3);
+ const PAINDIM=team?['speed','data','measure','measure','loyalty','target','data']:['data','target','message','speed','measure',null];
+ const pull={};((team?a.pains:a.mypains)||[]).forEach(j=>{const d=PAINDIM[j];if(d)pull[d]=(pull[d]||0)+0.75});
+ r.weak=DIMS.map(([k])=>k).sort((x,y)=>(dims[x]-(pull[x]||0))/W[x]-(dims[y]-(pull[y]||0))/W[y]).slice(0,3);
  r.pack=team?packTeam(r):packMe(r);
  return r;
 }
@@ -463,11 +473,11 @@ function report(){
  const mirror=[st.a.goal?'You want '+mir('goal',st.a.goal.j):'',st.a.fear?'you worry about '+mir('fear',st.a.fear.j):''].filter(Boolean).join(', ');
  const worth=st.a.worth?st.a.worth.v:0;
  const p=r.pack,bandImg=r.team?'img/city.jpg':'img/career.jpg';
- const sub=r.team?`Run the way it runs today, your sales engine puts about ${eur(r.risk)} at risk over the next 12 months. A working system could unlock about ${eur(r.opp)} in time, deals and saved leads.`:`Admin costs you about ${eur(m.timeCost)} of paid time a year. Hand ${st.recover}% of it to a system and you could add about ${eur(m.oppRev)} of pipeline.${st.a.quota&&st.a.quota.v>=2?' You told us you’re behind target, so this year every hour counts.':''}`;
+ const sub=r.team?`Run the way it runs today, your sales engine puts about ${eur(r.risk)} at risk over the next 12 months. A working system could unlock about ${eur(r.opp)} in extra deals and saved leads.`:`Admin costs you about ${eur(m.timeCost)} of paid time a year. Hand ${st.recover}% of it to a system and you could add about ${eur(m.oppRev)} of pipeline.${st.a.quota&&st.a.quota.v>=2?' You told us you’re behind target, so this year every hour counts.':''}`;
  app.innerHTML=`<div class="rep fade">
  <div class="bar0"><div class="wordmark">${STAR} ASTRA AGENCY</div><span class="mono">Your GTM Engine Check</span></div>
  <div class="wrap"><section class="diag">
-  <div><p class="mono" style="color:var(--muted);margin-bottom:18px">${['Running on hustle','Running on heroes','Running on a system','Running like a machine'][r.level]}${mirror?' \u00b7 '+mirror:''}</p><h1>${head}</h1><p class="sub">${sub}</p></div>
+  <div><p style="color:var(--muted);margin-bottom:18px;font-size:16px"><b style="color:var(--ink);font-family:var(--serif);font-weight:400;font-size:22px;display:block;margin-bottom:6px">${['Running on hustle','Running on heroes','Running on a system','Running like a machine'][r.level]}</b>${mirror?mirror+'.':''}</p><h1>${head}</h1><p class="sub">${sub}</p></div>
   <div class="level"><span class="mono" style="color:var(--muted)">${r.team?'Company':'Individual'} GTM maturity</span><div class="scoreRow"><span class="n">${r.score}</span><span class="mono">of 100 · ${r.LV[r.level]}</span></div>
    <div class="ladder">${r.LV.map((n,i)=>`<div class="${i===r.level?'on':''}"><b>${n}</b><span class="mono">${['0 to 29','30 to 54','55 to 79','80 to 100'][i]}</span></div>`).join('')}</div></div>
  </section></div>
@@ -514,7 +524,7 @@ function report(){
  document.getElementById('mail').onclick=()=>copy('raka@astraagency.nl','Email copied.');
  scrollTo(0,0);
 }
-function anchor(p,r,worth){const bits=[];if(r.risk>0)bits.push(`That\u2019s ${Math.max(1,Math.round(p.once/r.risk*100))}% of the ${eur(r.risk)} at risk you just measured`);if(worth)bits.push(p.once<=worth?`and less than the ${eur(worth)} you said one fix is worth`:`and you said one fix is worth ${eur(worth)}`);return bits.length?`<p class="why" style="color:var(--sand)">${bits.join(' ')}.</p>`:''}
+function anchor(p,r,worth){const bits=[];if(r.risk>0)bits.push(`That\u2019s ${Math.max(1,Math.round(p.once/r.risk*100))}% of the ${eur(r.risk)} at risk you just measured`);if(worth)bits.push(p.once<=worth?`and less than the ${eur(worth)} you said one fix is worth`:`and you said one fix is worth ${eur(worth)}`);if(worth&&p.once>worth)bits.push(r.team?'. If that is more than you want to spend now, start with the free Health Check and a Strategy session at \u20ac750':'. If that is more than you want to spend now, start with one level at \u20ac125 self learn');return bits.length?`<p class="why" style="color:var(--sand)">${bits.join(' ').replace(' .','.')}.</p>`:''}
 function summary(r){const p=r.pack;return [`GTM Engine Check, ${r.team?'my team':'me'}`,`Maturity ${r.LV[r.level]}, ${r.score} of 100`,`Money at risk next 12 months ${eur(r.risk)}`,`Opportunity ${eur(r.opp)}`,`Weakest parts ${r.weak.map(k=>LABEL[k]).join(', ')}`,`Recommended ${p.steps.map(s=>s.t).join(', then ')}`,`Total to start ${eur(p.once)}${p.mo?` then ${eur(p.mo)} a month`:''}`].join('\n')}
 function copy(t,msg){const ok=()=>toast(msg);if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,()=>fb(t,msg));else fb(t,msg)}
 function fb(t,msg){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast(msg)}catch(e){toast('Select the text and copy it yourself.')}ta.remove()}
