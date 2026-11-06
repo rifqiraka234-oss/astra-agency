@@ -156,3 +156,24 @@ on the slides reuses an existing brand text box (replace or find and replace kee
 that was a bullet list can add a bullet to a heading; format_text list_level 0 removes it. Some stock photos in the
 brand deck render with a Canva watermark in API previews (MAGgACgERsk was swapped for MAG9YVoETeY); check the
 exported PDF before sending.
+
+## The academy deck in Google Slides, off Luna's template (6 Nov, current version)
+
+Raka, 6 Nov, "yes do it in slides off luna's template", after pointing out that the Schumacher deck works in Slides
+with lookalike fonts. This replaces the Canva build as the version to use.
+https://docs.google.com/presentation/d/1BHyetlHNCWacOaHR2en3xzXN1SS8t_egIVJDv7nXcXA/edit (15 slides).
+
+It is a copy of Luna's template, so it keeps her Sora and Cormorant Garamond type, her arches, plates and photos.
+Order. Cover, Why GTM engineering now, One chain six links, Who teaches it, Our own engine (330, 15%, 7), Your
+free GTM score, Three levels one ladder, What you build, By role, How every course works, Two ways to learn, The
+prices, Rather have it built, Is this for you, Start here.
+
+How it was built. Every line is a replaceAllText scoped to one slide with pageObjectIds, replaced run by run so the
+bold sans and italic serif accents carry over. Order matters, a long sentence before any short word inside it, and
+a short pattern like "For " hits every run on the slide (it changed three card subtitles once, reverted). Slides
+reorder one slide per updateSlidesPosition request, since a multi slide move must already be in presentation order.
+All 15 thumbnails checked after the last edit, and a full text pull showed no dashes and no colons outside "1:1".
+
+Still open for Raka. "RAKA TO ADD a photo of you" sits on the photo band on Who teaches it. "RAKA TO CONFIRM these
+prices" sits under the price table, together with the efficy line on the bio. The Canva copies DAHaJAXOLEs and
+DAHaJIb3fbg can be deleted in Canva, the API has no delete.
