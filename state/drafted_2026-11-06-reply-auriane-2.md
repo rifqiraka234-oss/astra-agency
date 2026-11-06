@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-06 on Raka's "Send", act_R58w3QhfJmhy4PGXN, one copy, 155 chars. Thread 3 items before, 4 after. Do not send again.
+
 # Reply, Auriane Rezé-Duclos, 6 Nov 2026. NOT SENT, needs Raka's word.
 
 ### Auriane Rezé-Duclos, En Route, Mauvaise Troupe, ctc_cnzfXKz94xdeD5sMv
