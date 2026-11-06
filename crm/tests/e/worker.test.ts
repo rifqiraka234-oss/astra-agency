@@ -139,9 +139,9 @@ describe('scheduled rules', () => {
       // Issue it the way agent F does: a number and open. The guard allows draft to open.
       await t`update invoices set state = 'open', external_number = 'TEST-E-1', issue_date = '2026-09-01', due_date = '2026-10-01' where id = ${inv.id}`;
       const [rule] = await t<RuleRow[]>`select * from automation_rules where key = 'invoice_mark_late'`;
-      const res = await runScheduleRule(t, rule, new Date('2026-11-06T09:00:00Z'));
+      const res = await runScheduleRule(t, rule, new Date('2031-03-03T09:00:00Z')); // a day no real worker has run
       expect(res.status).toBe('success');
-      const again = await runScheduleRule(t, rule, new Date('2026-11-06T10:00:00Z'));
+      const again = await runScheduleRule(t, rule, new Date('2031-03-03T10:00:00Z'));
       expect(again.status).toBe('already');
       const [ev] = await t<{ id: string }[]>`select id::text as id from domain_events where type = 'invoice.late' and aggregate_id = ${inv.id}`;
       await processEvent(t, ev.id);
