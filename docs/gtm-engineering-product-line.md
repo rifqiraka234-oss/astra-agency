@@ -222,3 +222,42 @@ batch of uploads with the watermark sits unused in Raka's Canva uploads and can 
 Canva API notes. merge-designs takes one operation per call. A copy of a page comes from inserting the same design's
 pages and moving them. crop_media takes the image box (top, left, width, height) relative to the element.
 find_and_replace_text "For " style patterns hit every run in the element, so keep finds specific.
+
+## GTM automation, the flow rebuilt (6 Nov, current version)
+
+Raka, 6 Nov. Call it GTM automation, make the problem bigger (you're winning now, what about next quarter and next
+year), add group packages and team seminars, show the curriculum in full, list everything we build, use Eten Maar,
+Betty Blocks and efficy as proof, then "I don't feel like the flow of it ... reanalyze it". Our Own Engine is dropped.
+Same Canva design DAHaJAXOLEs, saved after he approved the preview and the page moves. 22 pages.
+
+| # | Page | Job in the story |
+|---|---|---|
+| 1 | Cover | GTM automation, taught or built |
+| 2 | Why GTM automation now | The pain, this quarter is fine, next year the manual way hits its limit |
+| 3 | What GTM automation runs | What it is, the six links |
+| 4 | Who's behind it | Raka |
+| 5 | Proof from real work | Eten Maar, Betty Blocks, efficy |
+| 6 | Two ways in | I teach you, or I build it for you |
+| 7 | I teach you, pick your path | Sell better, a GTM career, train your team |
+| 8 | Every course, step by step | The format |
+| 9 | The score | Find your level |
+| 10 | Three levels, one ladder | The career path |
+| 11 to 13 | Level 1, 2, 3 | Curriculum module by module, from docs/academy |
+| 14 | Want to sell better? | GTM Seller and GTM Leader modules |
+| 15 | For your team | Seminar and group package, €3,000 to €8,000 per team |
+| 16 | Two ways to learn | Self learn or 1:1 |
+| 17 | The ladder in prices | Teaching prices |
+| 18 | I build it for you | Health Check, Engine Build, Run or Direct |
+| 19 | Everything we build | Campaigns, AI agents, lead to loyalty, forecasting, feedback loops |
+| 20 | How a build runs | Health Check, seminar, build, hand over, run, Fractional RevOps Director |
+| 21 | Which door is yours? | Self select |
+| 22 | Start here | Score, Health Check, or a call |
+
+Facts and where they come from. "€0 to €100K revenue in a year" for Eten Maar is Raka's own statement on 6 Nov, not
+recorded anywhere else in the repo. "GTM engineering and RevOps job postings rose 205% in 2025" is Bloomberry
+(https://bloomberry.com/blog/i-analyzed-1000-gtm-engineering-jobs-here-is-what-i-learned/), January to September 2025
+against the same months of 2024, checked on the page 6 Nov. Team pricing €3,000 to €8,000 is Raka's pick from the
+earlier suggestion. The efficy contract question still stands for the Fractional RevOps Director offer.
+
+Canva API lesson. replace_text on a text box with mixed bold and normal runs drops the brand font to Canva's default,
+and format_text cannot set a font back. For those boxes, change each run with find_and_replace_text instead.
