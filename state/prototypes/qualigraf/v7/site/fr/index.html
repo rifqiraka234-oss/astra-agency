@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr-FR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qualigraf, la dématérialisation des délibérations pour les collectivités</title>
+<meta name="description" content="Du rapport au procès-verbal, le cycle de vie des délibérations dans un seul outil, hébergé en France.">
+<meta name="theme-color" content="#101B33">
+<link rel="icon" href="../assets/img/brand/Logo-Qualigraf.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/mona-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script>window.PAGE = {"lang": "fr-FR", "rules": "fr", "committees": [{"v": "cm", "label": "conseil municipal", "item": "Point 4, Budget primitif"}], "sizes": [{"v": "big", "label": "3 500 habitants et plus", "days": 5, "tokens": {"art": "L2121-12", "pub": "Publication sous forme électronique, la règle depuis le 1er juillet 2022. Article L2131-1 du CGCT"}}, {"v": "small", "label": "moins de 3 500 habitants", "days": 3, "tokens": {"art": "L2121-11", "pub": "Affichage, publication papier ou électronique, selon le choix de la commune. Article L2131-1 du CGCT"}}], "summary": "{committee}, {meeting}", "form": {"missing": "Merci d’indiquer votre nom, votre collectivité et votre email.", "thanks": "Merci. Cette maquette n’envoie rien. Sur le site, l’équipe française recevra votre demande pour {summary}."}, "country": "fr", "defaultDate": "2027-03-11", "stations": [{"n": "Rapport", "c": "#37BAC5", "date": "Selon le rétroplanning de votre séance", "law": "Votre calendrier interne", "what": "Les rapports sont instruits dans Délibération, avec une aide rédactionnelle intelligente pour les rapports de séance.", "img": "dossier-screen.webp"}, {"n": "Circuit des visas", "c": "#37BAC5", "date": "Avant l’envoi de la convocation", "law": "Votre circuit de validation", "what": "Chaque rapport suit son circuit des visas, et chaque action reste tracée.", "img": "worklist-screen.webp"}, {"n": "Convocation", "c": "#FE764A", "date": "Envoyée au plus tard le {convocation}", "law": "{days} jours francs avant la séance. Article {art} du CGCT", "what": "KBox envoie la convocation électronique à valeur probante, avec le cartable numérique de l’élu et l’annotation des documents.", "img": "meeting-screen.webp"}, {"n": "Séance", "c": "#F4B63F", "date": "{meeting}", "law": "Présences, pouvoirs et votes", "what": "États de présence et enregistrement des votes, gestion des pouvoirs et des déports, avec l’application de vote sur mobile.", "img": "meeting-screen.webp"}, {"n": "Procès-verbal", "c": "#F4B63F", "date": "Disponible dès la fin de la séance", "law": "Compte rendu intégral ou synthétique", "what": "Le procès-verbal est généré automatiquement à partir de la séance.", "img": "aimin-screen.webp"}, {"n": "Publicité", "c": "#7A5D7B", "date": "Vos actes en ligne dès leur adoption", "law": "{pub}", "what": "Publication certifiée et disponibilité immédiate de vos actes en ligne, et télétransmission au contrôle de légalité.", "img": "publish-screen.webp"}]};</script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="top dark">
+  <a class="brand" href="#top" aria-label="Qualigraf France"><img class="logo-dark" src="../assets/img/brand/Logo-Qualigraf_General.svg" alt="" width="140" height="44"><img class="logo-light" src="../assets/img/brand/Logo-Qualigraf_General-contrast.svg" alt="" width="140" height="44"></a>
+  <nav class="nav" aria-label="Principal"><a href="#track">Votre séance</a><a href="#roles">Métiers</a><a href="#proof">Références</a><a href="#trust">Hébergement</a></nav>
+  <a class="where" href="../">France <span>changer de pays</span></a>
+  <a class="btn btn-top act" href="#book">Demander une démonstration</a>
+</header>
+<main id="main">
+<section class="hero" id="top" aria-labelledby="h-hero">
+  <canvas class="art" aria-hidden="true"></canvas>
+  <div class="hero-copy">
+    <h1 id="h-hero">Dématérialisez le cycle de vie des délibérations</h1>
+    <p class="lede">Un bouquet de services pour simplifier la prise de décision dans les collectivités territoriales, du rapport au procès-verbal.</p>
+    <form class="sentence" onsubmit="return false">
+      <span>Notre prochain conseil municipal a lieu le</span>
+        <span class="pick pick-date"><span class="face" data-bind="meeting" aria-hidden="true">&nbsp;</span><label class="vh" for="mdate">Date de la séance</label><input id="mdate" name="mdate" type="date" value="2027-03-11" required></span>
+        <span>dans une commune de</span>
+        <span class="pick"><span class="face" data-bind="size" aria-hidden="true">3 500 habitants et plus</span><label class="vh" for="size">Taille de la commune</label><select id="size" name="size"><option value="big">3 500 habitants et plus</option><option value="small">moins de 3 500 habitants</option></select></span>
+    </form>
+    <div class="hero-acts"><a class="btn act" href="#book">Demander une démonstration</a><a class="quiet" href="#track">Voir votre calendrier de séance</a></div>
+  </div>
+  <div class="stage">
+    <figure class="window"><img class="win-img" src="../assets/img/meeting-screen.webp" width="1575" height="1107" alt="Écran de séance d’exemple dans Qualigraf"></figure>
+    <div class="live" aria-live="polite"><span class="live-k">Convocation envoyée au plus tard le</span><b data-bind="convocation"></b><span class="live-l" data-fill="{days} jours francs, article {art} du CGCT"></span></div>
+    <div class="file-chip"><b data-bind="committee">conseil municipal</b><span data-bind="meetingShort"></span></div>
+  </div>
+</section>
+<section class="proof" id="proof" aria-labelledby="h-proof">
+  <h2 id="h-proof">Près de 200 collectivités déjà connectées</h2>
+  <p class="intro">Communes, départements et services d’incendie utilisent déjà les services Qualigraf.</p>
+  <ul class="logos" style="--cols:4"><li><img src="../assets/img/clients/ville-de-marseille-logo.png" alt="Ville de Marseille" loading="lazy"></li><li><img src="../assets/img/clients/Departement-Moselle.png" alt="Département de la Moselle" loading="lazy"></li><li><img src="../assets/img/clients/Sapeurs-pompier-de-la-Moselle-logo.png" alt="Sapeurs-pompiers de la Moselle" loading="lazy"></li><li><img src="../assets/img/clients/CALVI-logo.png" alt="Ville de Calvi" loading="lazy"></li></ul>
+  <div class="voices"><blockquote><p>« Nous avons réduit de 40 % le temps de préparation des séances grâce à Qualigraf. L’interface est claire et les envois électroniques sont instantanés. »</p><cite>DGS d’une communauté d’agglomération du Sud-Ouest</cite></blockquote><blockquote><p>« Les élus apprécient la simplicité d’accès sur tablette et la traçabilité des documents. La mise en place s’est faite en moins de deux semaines. »</p><cite>Secrétaire de mairie, commune de 5 000 habitants</cite></blockquote></div>
+  <p class="src">Témoignages publiés par Qualigraf sur <a href="https://qualigraf.com/fr/temoignages-clients-collectivites/">qualigraf.com</a>.</p>
+</section>
+<section class="track" id="track" aria-labelledby="h-track" style="--n:6">
+  <div class="track-pin">
+    <div class="track-text">
+      <h2 id="h-track">Suivez votre <span data-bind="committee">conseil municipal</span> du rapport à la publication</h2>
+      <p class="sub">Chaque étape de la délibération dans un seul outil, et la date limite de convocation calculée pour votre séance.</p>
+      <div class="rail" aria-hidden="true"><div class="rail-segs"></div></div>
+      <ol class="stations"></ol>
+      <div class="track-act"><a class="btn act" href="#book">Demander une démonstration pour cette séance</a></div>
+    </div>
+    <div class="track-screen">
+      <div class="screens" aria-hidden="true"><img src="../assets/img/dossier-screen.webp" alt="" loading="lazy" data-i="0"><img src="../assets/img/worklist-screen.webp" alt="" loading="lazy" data-i="1"><img src="../assets/img/meeting-screen.webp" alt="" loading="lazy" data-i="2"><img src="../assets/img/meeting-screen.webp" alt="" loading="lazy" data-i="3"><img src="../assets/img/aimin-screen.webp" alt="" loading="lazy" data-i="4"><img src="../assets/img/publish-screen.webp" alt="" loading="lazy" data-i="5"></div>
+      <div class="screen-chip" aria-hidden="true"><b data-bind="committee">conseil municipal</b><span data-bind="meetingShort"></span></div>
+      <p class="screens-note">Écrans d’exemple, données fictives</p>
+      <p class="rule-note">Jours francs. Le jour de l’envoi et le jour de la séance ne comptent pas, et un week-end ou un jour férié ne prolonge pas le délai (réponse ministérielle à la question écrite n° 29767). En cas d’urgence, le maire peut abréger le délai, sans descendre sous un jour franc. En Alsace-Moselle, le droit local peut s’appliquer. <a class="quiet act" href="#book">Posez-nous la question pour votre collectivité</a>.</p>
+    </div>
+  </div>
+  <p class="rule-note rule-phone">Jours francs. Le jour de l’envoi et le jour de la séance ne comptent pas, et un week-end ou un jour férié ne prolonge pas le délai (réponse ministérielle à la question écrite n° 29767). En cas d’urgence, le maire peut abréger le délai, sans descendre sous un jour franc. En Alsace-Moselle, le droit local peut s’appliquer. <a class="quiet act" href="#book">Posez-nous la question pour votre collectivité</a>.</p>
+</section>
+<section class="room" aria-label="Une délibération vit bien après la séance. Qualigraf garde c">
+  <picture><source media="(max-width: 760px)" srcset="../assets/photo/fr-salle-s.webp"><img src="../assets/photo/fr-salle.webp" alt="Une salle du conseil municipal lumineuse, tables en ovale" loading="lazy"></picture>
+  <p class="room-line">Une délibération vit bien après la séance. Qualigraf garde chaque rapport, chaque vote et chaque acte dans un seul dossier.</p>
+</section>
+<section class="platform" id="roles" aria-labelledby="h-platform">
+  <h2 id="h-platform">Un bouquet de services, un seul dossier</h2>
+  <p class="intro">Délibération, KBox, Vote, PV et Publicité travaillent sur le même dossier, de la préparation à la publication.</p>
+  <div class="bento"><figure class="tile t1 film"><div class="media"><video class="film" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="../assets/film/paperless.webm" type="video/webm"><source src="../assets/film/paperless.mp4" type="video/mp4"></video></div><figcaption><b>Délibération, 100 % cloud</b>Instruction des rapports, circuit des visas, gestion des séances et télétransmission.</figcaption></figure><figure class="tile t2 film"><div class="media"><video class="film" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="../assets/film/member.webm" type="video/webm"><source src="../assets/film/member.mp4" type="video/mp4"></video></div><figcaption><b>KBox, le cartable numérique de l’élu</b>Convocation à valeur probante et annotation des documents.</figcaption></figure><figure class="tile t3 screen"><div class="media"><img class="shot" src="../assets/img/meeting-screen.webp" width="1575" height="1107" loading="lazy" alt="Vote"></div><figcaption><b>Vote</b>États de présence, pouvoirs, déports et votes, avec l’application sur mobile.</figcaption></figure><figure class="tile t4 screen"><div class="media"><img class="shot" src="../assets/img/publish-screen.webp" width="1282" height="900" loading="lazy" alt="Publicité"></div><figcaption><b>Publicité</b>Publication certifiée et disponibilité immédiate de vos actes en ligne.</figcaption></figure><figure class="tile t5 film"><div class="media"><video class="film" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="../assets/film/sign.webm" type="video/webm"><source src="../assets/film/sign.mp4" type="video/mp4"></video></div><figcaption><b>PV</b>Le procès-verbal généré automatiquement, intégral ou synthétique.</figcaption></figure></div>
+  <p class="bento-act"><a class="quiet act" href="#book">Demander une démonstration</a></p>
+</section>
+<section class="trust" id="trust" aria-labelledby="h-trust">
+  <div><h2 id="h-trust">Hébergé en France, dans un cloud souverain</h2><p class="intro">Depuis le 1er janvier 2026, vos données sont protégées par Outscale dans un cloud qualifié SecNumCloud 3.2, la qualification la plus exigeante de l’ANSSI.</p></div>
+  <ul><li><b>SecNumCloud 3.2</b><span>La qualification de l’ANSSI exigée pour les données sensibles de l’État et des collectivités</span></li><li><b>Hébergé en France</b><span>Protégé contre les lois extraterritoriales</span></li><li><b>Conforme aux recommandations de la CNIL</b><span>Pour la souveraineté et la pérennité de vos usages numériques</span></li><li><b>Traçabilité</b><span>Chaque action et chaque vote restent tracés</span></li></ul>
+</section>
+<section class="invite" id="book" aria-labelledby="h-invite">
+  <canvas class="art art-2" aria-hidden="true"></canvas>
+  <div class="invite-copy">
+    <h2 id="h-invite">Une information ou une démonstration ?</h2>
+    <p>Une démonstration autour de votre propre <span data-bind="committee">conseil municipal</span> du <span data-bind="meeting"></span>, avec vos rapports, votre circuit des visas et vos élus.</p>
+    <p class="call">Ou appelez l’équipe à Paris au <a class="act" href="tel:+33155763838">01 55 76 38 38</a></p>
+  </div>
+  <form class="book" novalidate aria-labelledby="h-invite">
+    <div class="field meet"><span class="lab">Votre séance</span><output id="f-meeting" data-bind="summary"></output><a class="quiet" href="#top">La modifier</a></div>
+    <div class="field"><label for="f-name">Nom et prénom</label><input id="f-name" name="name" type="text" autocomplete="name" required></div><div class="field"><label for="f-council">Collectivité</label><input id="f-council" name="council" type="text" autocomplete="organization" required></div><div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+    <input type="hidden" name="meeting" id="f-meeting-hidden" value="">
+    <button class="btn act" type="submit">Demander une démonstration</button>
+    <p class="form-msg" role="status" aria-live="polite"></p>
+  </form>
+</section>
+</main>
+<footer class="foot">
+  <div class="foot-in">
+    <img src="../assets/img/brand/Logo-Qualigraf_General-contrast.svg" alt="Qualigraf France" width="140" height="44">
+    <p>Qualigraf, 32 rue Brancion, 75015 Paris</p><p><a href="mailto:info@qualigraf.fr">info@qualigraf.fr</a>, <a href="tel:+33155763838">01 55 76 38 38</a></p><p>Membre de Qualigraf Groupe, avec des équipes en France, aux Pays-Bas, au Royaume-Uni et au Canada.</p>
+    <p><a href="../">Qualigraf dans les autres pays</a></p>
+    <p class="fine">Photo CC0, Wikimedia Commons. Films, Mixkit. Les écrans montrent des données fictives. Les exemples de cette page sont fictifs. Une proposition d’Astra Agency pour Qualigraf, pas le site officiel de Qualigraf.</p>
+  </div>
+</footer>
+<nav class="phonebar" aria-label="Demander une démonstration"><a class="btn act" href="#book">Demander une démonstration</a></nav>
+<script type="module" src="../assets/page.js"></script>
+</body>
+</html>
