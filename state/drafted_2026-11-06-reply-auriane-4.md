@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-06 on Raka's "send", act_TsXFAqdAi7ryiuo8b, one copy, 70 chars. Thread 12 items before, 13 after. Do not send again.
+
 # Reply, Auriane Rezé-Duclos, LOCA, 6 Nov 2026. NOT SENT, needs Raka's word.
 
 ### Auriane Rezé-Duclos, LOCA, ctc_cnzfXKz94xdeD5sMv
