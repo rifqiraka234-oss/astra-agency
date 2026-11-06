@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breakout Box | There's money on the table</title>
+<meta name="description" content="Breakout Box is an escape room in a cool box for pubs, cafés, holiday parks and training teams. No staff, no screens, and you keep what your guests pay.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2309004a'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='22' fill='%23ff914d' text-anchor='middle'%3E149%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/mona-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#crack">Skip to the box</a>
+<p class="proto">Prototype by Astra agency for OneFortyNine Games. Not the live site, nothing is ordered or sent.</p>
+
+<header class="hdr" data-hdr>
+  <a class="brand" href="#top" aria-label="Breakout Box by OneFortyNine Games, home">
+    <span class="brand-name">Breakout Box</span>
+    <span class="brand-by">by OneFortyNine Games</span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#crack">What's inside</a>
+    <a href="#crack">Ways to earn</a>
+    <a href="#get">The numbers</a>
+    <a href="#get">Games</a>
+  </nav>
+  <a class="btn btn-solid" href="#get" data-order>Get your box</a>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero-film" aria-hidden="true">
+      <video class="film" data-film muted playsinline loop preload="metadata" poster="media/film/hero-poster.jpg">
+        <source src="media/film/hero-phone.webm" type='video/webm; codecs="vp9"' media="(max-width: 700px)">
+        <source src="media/film/hero-phone.mp4" type='video/mp4; codecs="avc1.64001F"' media="(max-width: 700px)">
+        <source src="media/film/hero-1280.webm" type='video/webm; codecs="vp9"'>
+        <source src="media/film/hero-1280.mp4" type='video/mp4; codecs="avc1.64001F"'>
+      </video>
+    </div>
+    <div class="hero-in">
+      <h1 id="hero-h"><span class="h1-a">There's money <span class="nw">on the table.</span></span>
+        <span class="h1-b" data-where aria-live="off">In your pub.</span></h1>
+      <div class="hero-side">
+        <p class="lede">Breakout Box is an escape room in a cool box. Your guests crack the codes, the snacks and drinks inside are the prize, and you keep every penny they pay. No staff. No screens.</p>
+        <div class="hero-act">
+          <a class="btn btn-solid btn-lg" href="#get" data-order>Get your box</a>
+          <a class="btn btn-line btn-lg" href="#crack">Crack it open</a>
+        </div>
+        <p class="price">From £60 a month, or £350 to own</p>
+      </div>
+    </div>
+    <button class="film-toggle" type="button" data-film-toggle aria-pressed="false">Pause film</button>
+  </section>
+
+  <section class="crack" id="crack" aria-labelledby="crack-h">
+    <div class="crack-head">
+      <h2 id="crack-h">Every game starts the same way. The first puzzle opens the box.</h2>
+      <p class="crack-sub" data-crack-sub>Crack this one and see what's inside for your venue. Three digits. They're on every cup, and they're our name.</p>
+    </div>
+
+    <div class="crack-grid">
+      <div class="stage" data-stage>
+        <div class="table-light" aria-hidden="true"></div>
+        <div class="box" data-box>
+          <picture class="box-inside">
+            <source srcset="media/inside.webp" type="image/webp">
+            <img src="media/inside.jpg" width="1070" height="820" alt="The Breakout Box open from above. A clear lock box with the Breakout Box logo, a black lock box, an aluminium case with two combination locks, and a bottle lock.">
+          </picture>
+          <button class="spot" type="button" data-spot="0" style="--x:20%;--y:37%" aria-label="The clear lock box"><span>1</span></button>
+          <button class="spot" type="button" data-spot="1" style="--x:44%;--y:40%" aria-label="The black lock box"><span>2</span></button>
+          <button class="spot" type="button" data-spot="2" style="--x:41%;--y:69%" aria-label="The aluminium case"><span>3</span></button>
+          <button class="spot" type="button" data-spot="3" style="--x:84%;--y:71%" aria-label="The bottle lock"><span>4</span></button>
+          <div class="lid" data-lid aria-hidden="true">
+            <picture>
+              <source srcset="media/lid.webp" type="image/webp">
+              <img src="media/lid.png" width="769" height="564" alt="">
+            </picture>
+          </div>
+        </div>
+
+        <div class="lock" data-lock role="group" aria-label="Combination lock, three wheels">
+          <div class="shackle" aria-hidden="true"></div>
+          <div class="lock-body">
+            <div class="wheel" data-wheel="0" tabindex="0" role="spinbutton" aria-label="First digit" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
+              <button class="w-btn up" type="button" tabindex="-1" aria-hidden="true" data-step="-1"></button>
+              <div class="w-win"><div class="w-strip" data-strip></div></div>
+              <button class="w-btn down" type="button" tabindex="-1" aria-hidden="true" data-step="1"></button>
+            </div>
+            <div class="wheel" data-wheel="1" tabindex="0" role="spinbutton" aria-label="Second digit" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
+              <button class="w-btn up" type="button" tabindex="-1" aria-hidden="true" data-step="-1"></button>
+              <div class="w-win"><div class="w-strip" data-strip></div></div>
+              <button class="w-btn down" type="button" tabindex="-1" aria-hidden="true" data-step="1"></button>
+            </div>
+            <div class="wheel" data-wheel="2" tabindex="0" role="spinbutton" aria-label="Third digit" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
+              <button class="w-btn up" type="button" tabindex="-1" aria-hidden="true" data-step="-1"></button>
+              <div class="w-win"><div class="w-strip" data-strip></div></div>
+              <button class="w-btn down" type="button" tabindex="-1" aria-hidden="true" data-step="1"></button>
+            </div>
+          </div>
+        </div>
+        <button class="just-open" type="button" data-just-open>Stuck? Open it for me</button>
+      </div>
+
+      <div class="panel" data-panel>
+        <div class="panel-closed" data-closed>
+          <p class="panel-big">Spin the wheels.</p>
+          <p class="panel-note">Tap a wheel and use the arrows, scroll it, or drag it up and down. That's the feeling your guests get, six times a game.</p>
+        </div>
+        <div class="panel-open" data-open hidden>
+          <h3 class="panel-q" id="venue-q">Who's opening it?</h3>
+          <div class="venues" role="radiogroup" aria-labelledby="venue-q" data-venues></div>
+          <ol class="items" data-items></ol>
+          <div class="money" data-money hidden>
+            <p class="money-line" data-money-line></p>
+            <p class="money-ask">So why isn't it on your tables yet?</p>
+            <div class="money-act">
+              <a class="btn btn-solid" href="#get" data-order>Get your box</a>
+              <a class="btn btn-line" href="#get">Work out your own numbers</a>
+            </div>
+            <p class="money-small" data-money-small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="get" id="get" aria-labelledby="get-h">
+    <h2 id="get-h">Get your box.</h2>
+    <p>Tell us what you run and we'll come back with a plan for your venue. Rent from £60 a month or own it for £350.</p>
+    <a class="btn btn-solid btn-lg" href="mailto:owen@onefortyninegames.com?subject=Breakout%20Box%20for%20my%20venue" data-order>Get your box</a>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>OneFortyNine Games Ltd, 149 High Street, Swindon, SN4 7AB. Registered in England and Wales, company 17293756.</p>
+  <p>Film from Mixkit, free licence. Not OneFortyNine Games' customers or venues.</p>
+</footer>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>
