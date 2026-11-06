@@ -67,6 +67,7 @@
       ['Who plays', 'Families and friends staying with you, no screens needed.'] ] }
   ];
   var RENT = 60, OWN = 350;
+  window.BB = { VENUES: VENUES, RENT: RENT, OWN: OWN };
 
   /* ---------- the lock, three wheels, the code is 1 4 9 ---------- */
   var CODE = [1, 4, 9];
@@ -179,6 +180,7 @@
     $('[data-bar-take-v]').textContent = fmt(month);
     $$('img', scene).forEach(function (im) { im.classList.toggle('on', +im.dataset.v === i); });
     stage.classList.add('has-scene');
+    window.dispatchEvent(new CustomEvent('bb:venue', { detail: i }));
     result.hidden = false;
     money.hidden = false;
     money.style.animation = 'none'; void money.offsetWidth; money.style.animation = '';

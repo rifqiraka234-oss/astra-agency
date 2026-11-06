@@ -121,3 +121,40 @@ Active Theory refuses headless browsers.
   back for lodges), with two bars, the £60 rent against their takings, growing on choose. No count ups, the numbers are set, the
   bars grow.
 - check-build PASS, 0 page errors at 1440 and 390, frames in `first-look-v8/`.
+
+## v3.2, the full build (Raka 6 Nov, "Use stock videos and animations. Go for it")
+
+Nine sections on the home page plus the hidden hints page. check-build PASS on both pages (home with `[data-order]`, hints with
+`.hints-venue a`), 0 page errors, 0 failed requests, sections at 1440 and 390 in `final-look-v3/`.
+
+1. **Hero**, film band and "There's money on the table", unchanged.
+2. **Crack the box**, the wow layer, unchanged.
+3. **How it works.** Four square tiles, his strapped lid (s2), a film of friends working a puzzle together (Mixkit 5328, Free,
+   cropped to hands, a printed T shirt kept out of frame), a film of a parent and child at a puzzle (Mixkit 40418, Free), his
+   closed box (s1). Facts from his /breakoutbox page and the call (70 litre, under a metre, under 10 minutes, 60 to 90 minutes,
+   teams of up to six, online hints).
+4. **The numbers.** What you run, games a week a box, price a game, extra sold with each game, rent or own, boxes. A 12 month
+   profit after the box chart, and dragging the chart up or down changes games a week (graph as a control, keyboard arrows
+   too). Checked by hand, park 3 a week at £20 is £260, plus £10 extra is £390, five a week is £650, owned that's £7,450 in year
+   one and pays back in month 1.
+5. **Your proposal.** A document built live from the numbers, venue, plan, games, takings, cost, first year, payback, how it
+   works at their venue, what's included (his /breakoutbox list). Print or save as PDF (print shows the proposal alone), copy a
+   share link that reopens the same proposal for whoever signs it off (tested), send it to Owen.
+6. **What's the catch.** Six questions, space, who runs it, cost and cut, coming back, breakages, digital and VR. Answers only
+   from his pages and the call, no promise he hasn't made (breakages answered with his "additional supplies" line).
+7. **Games.** The Heist (his case photo s4) and "New games on the way" from his "new game releases".
+8. **Who.** "The code is our name." Company facts from Companies House, no photo of Owen until he says yes.
+9. **Get your box.** Two tabs, one to ten boxes, or a group of sites (how many sites, who else decides, call back tick box). The
+   numbers arrive filled in. Validation tested, sends nothing, says so.
+- **Hidden hints, `/play/the-heist/`.** noindex, nofollow, not linked from the site. All six puzzles built from his live /hints
+  page text (fetched 6 Nov), one hint at a time, then the walkthrough, then "Sure?", then the code. His photo across the top,
+  and "Run a pub, park or café? Get your own box" for venue owners who play it.
+
+### Must not ship as is
+
+- The money examples and the calculator defaults are ours. Owen's trial numbers should replace them.
+- All film and venue photos are Mixkit stock, decorative, never captioned as his. His own footage and photos replace them.
+- If his printed QR codes point at onefortyninegames.com/hints, that exact address must keep working or redirect.
+- The proposal says "Prices from OneFortyNine Games", check the volume pricing with Owen before a group sees it.
+- Copy checks, no dashes or colons in our words, the NO-AI-SLOP section 8 scan clean. Its sentence length score is low because
+  button and label text counts as short sentences.
