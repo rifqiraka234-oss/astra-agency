@@ -1,5 +1,10 @@
 # lemlist campaigns, the live map (updated 2026-10-05)
 
+> **Status on 6 Nov 2026, read from lemlist.** Running, W1b only, with about 57 invites left (three days). Paused, v0.1,
+> v0.2, W1c, W4 TEST, W5 TEST, founders. Draft, W1a, W2, W3, W4, W5. The 28 Oct mix Raka chose (`docs/gtm-plan.md`, end)
+> was never switched on. The list check behind the next wave is `state/icp-sample-2026-11-06.md`. The tables below are
+> the 5 Oct picture.
+
 Read this before touching any campaign. It is the one place that says which campaign is which, what it is
 for, and what state it is in. Re-check status in lemlist (`get_campaign_details`) before acting on it, since
 Raka can change a campaign at any time. The filters and the audit trail behind every list are in
