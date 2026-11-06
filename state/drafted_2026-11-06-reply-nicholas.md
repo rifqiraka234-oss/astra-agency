@@ -48,15 +48,18 @@
 > Prospect 2, Nivata Koh Samui kept for the openings line he named, Hilton release 23 Oct 2025, 78 rooms, est. 2027. Weaker fit
 > (chain soft brand), flagged to Raka.
 
+> REDRAFTED 6 Nov on Raka's edit, open with "I understand", then what's working for us is signals and an AI powered signal
+> engine, then "here's what it picked up" and the prospects. Facts unchanged from the reworked version above.
+
 REPLY
 ```
-Fair, and that's why every message would go out as you, in your own words. Two I'd go after now.
+Yeah, I understand. What's working for us right now is signals. We run an AI powered signal engine that spots the moment a company's likely to buy, so you reach them right then, in your own words.
 
-Banyan Tree Phuket and Banyan Tree Krabi, if they don't stock you yet. Both run a Banyan Tree Gallery like Samui's, and Naphasawan at Samui already said your bags fit the group's own ethos. You'd reach the spa and gallery manager at each, with the Samui launch and her words as the reason to talk now.
+Here's what it picked up for T.A.I.
 
-Nivata Koh Samui, a 78 room Hilton resort on the southwest tip that Hilton has opening in 2027. Its guest bags and villa retail likely get chosen in the coming months. The moment Hilton names its general manager, you'd send a short note with the Vikasa pieces and an offer to bring samples.
+Banyan Tree Phuket and Banyan Tree Krabi, if they don't stock you yet. Both run a Banyan Tree Gallery like Samui's, and Naphasawan at Samui already said your bags fit the group's own ethos. The signal is your Samui launch, and you'd reach the spa and gallery manager at each with her words.
 
-Both came from signals, a partnership announcement and an opening list. The flow watches those every week, tells you who to contact and why that week, and gets every reply answered fast.
+Nivata Koh Samui, a 78 room Hilton resort on the southwest tip that Hilton has opening in 2027. Its guest bags and villa retail likely get chosen in the coming months. The signal to wait for is Hilton naming its general manager, then a short note from you with the Vikasa pieces and an offer to bring samples.
 
-Shall I show you what the AI powered signal for T.A.I looks like, with who to contact this week?
+Shall I show you what the signal engine for T.A.I looks like, with who to contact this week?
 ```
