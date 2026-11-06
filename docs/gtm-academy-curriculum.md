@@ -1,5 +1,7 @@
 # GTM Engineering Academy, the full curriculum (5 Nov 2026)
 
+> **Superseded on 6 Nov 2026 by the full course pack in `docs/academy/`** (rulebook in `docs/academy/README.md`, one file per track). Keep this file as the outline it started from.
+
 Raka, 5 Nov, "2 types, one self learn online, one 1-1. And also three audiences ... one for people who wanna be GTM
 engineer, one for sales people who want to accelerate their sales using GTM engineering and one for sales managers who
 want their team to be using GTM engineering."
