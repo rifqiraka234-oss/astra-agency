@@ -1,8 +1,8 @@
 # GTM Engineering Academy, the course pack
 
 Raka, 6 Nov 2026, "I want it the best it can be. Be detailed exactly what's going to be done. I also wanna use
-assignments and tests." This folder replaces the outline in `docs/gtm-academy-curriculum.md`. Prices in it are still
-suggestions for Raka to set.
+assignments and tests." This folder replaces the outline in `docs/gtm-academy-curriculum.md`. Prices in it were set by
+Raka on 6 Nov 2026.
 
 **What's in this folder**
 
@@ -28,15 +28,19 @@ Builder (55 to 79) at Level 2, Architect (80 to 100) at Level 3. Sellers and man
 
 | Course | Who it's for | Length | Self learn | 1:1 with Raka |
 |---|---|---|---|---|
-| **Level 1, GTM Operator** | New to the systems behind pipeline. Runs an engine someone else built by the end | About 4 weeks | €199 | €1,200, 6 sessions |
-| **Level 2, GTM Builder** | Builds the engine end to end, sending, automation, CRM, dashboards | About 5 weeks | €249 | €1,200, 5 sessions and a project review |
-| **Level 3, GTM Architect** | Designs the whole revenue system, AI agents in production, signals, leads the build | About 5 weeks | €299 | €1,500, 5 sessions and the capstone |
-| **All three levels** | The full ladder | About 14 weeks | €599 | €3,500 |
-| **GTM Seller** | AEs, SDRs and founders who sell and want more meetings | 3 weeks plus a 30 day capstone | €149 | €790, 4 sessions |
-| **GTM Leader** | Sales managers and heads of sales | 3 to 4 weeks plus a team workshop | €249 | €2,200, 5 sessions and a team workshop |
+| **Level 1, GTM Operator** | New to the systems behind pipeline. Runs an engine someone else built by the end | About 4 weeks | €125 | €1,000, 6 sessions |
+| **Level 2, GTM Builder** | Builds the engine end to end, sending, automation, CRM, dashboards | About 5 weeks | €125 | €1,000, 5 sessions and a project review |
+| **Level 3, GTM Architect** | Designs the whole revenue system, AI agents in production, signals, leads the build | About 5 weeks | €125 | €1,000, 5 sessions and the capstone |
+| **All three levels** | The full ladder | About 14 weeks | €299 | €2,500 |
+| **GTM Seller track** | AEs, SDRs and founders who sell and want more meetings. Three levels, Find, Reach and Scale | 3 weeks plus a 30 day capstone | €125 a level, €299 for all three | €1,000 a level, €2,500 for all three |
+| **GTM Leader** | Sales managers and heads of sales | 3 to 4 weeks plus a team workshop | €500 | €2,000, 5 sessions and a team workshop |
 
 Extras. A single 1:1 hour €150, a marked assignment €49, the Level 1 practical test review €49, a capstone or build
-project review for Certified €149, team seats of GTM Seller €99 each. All prices are suggestions for Raka to set.
+project review for Certified €149.
+
+Teams. A seminar is one live session on one topic with the whole team, €125 per person per hour. A group package is
+the team taking a full level together over 4 to 5 weeks, €600 per person per level, from 4 people. Prices set by Raka
+on 6 Nov 2026, the same as the GTM automation deck.
 
 Each course has one curriculum. Self learn and 1:1 use the same lessons, assignments and tests. The difference is who
 marks the work, how fast you go and whether Raka builds alongside you.

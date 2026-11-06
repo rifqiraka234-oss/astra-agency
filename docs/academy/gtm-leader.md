@@ -1,7 +1,7 @@
 # GTM Leader. Lead a GTM engineered team
 
 The role course for sales managers. Five modules, every lesson, quiz and assignment, the practical test, the final exam
-and the capstone. It follows the rulebook in `README.md` in this folder. Prices are suggestions for Raka to set.
+and the capstone. It follows the rulebook in `README.md` in this folder. Prices set by Raka on 6 Nov 2026.
 
 ---
 
@@ -101,11 +101,11 @@ up. No real person or company appears anywhere in it.
 | Team | Not included | One 90 minute team workshop to launch the sales bible, run by Raka with your team |
 | After | 30 day email | A 30 minute check in 30 days after the last session |
 | Marking | You mark your own work against the rubric. Optional single review by Raka €49, capstone review for Certified €149 | Raka marks everything. Certified on passing |
-| Suggested price | €249 | €2,200, team workshop and 30 day check in included |
+| Price | €500 | €2,000, team workshop and 30 day check in included |
 
 Extra help on self learn. A single 1:1 hour with Raka is €150.
 
-**Team seats.** Add GTM Seller self learn seats for your sellers at €99 each. GTM Seller teaches the individual seller the
+**Your team.** Put your sellers on the Seller track as a group package, €600 per person per level from 4 people. GTM Seller teaches the individual seller the
 same chain you design here (ICP, research, the message, sequences, the CRM), in the same words. Most managers add one seat
 per SDR and AE.
 
@@ -1857,7 +1857,7 @@ the course, the date, the capstone title and, if you agree, a link to a one page
 
 # What's next
 
-**Bring the team with you.** Add GTM Seller self learn seats at €99 each. Your sellers learn the same chain you designed
+**Bring the team with you.** Put your sellers on the Seller track as a group package, €600 per person per level. Your sellers learn the same chain you designed
 here, in the same words that are now in your sales bible. Most managers add one per SDR and AE.
 
 **Get it built.** If your 90 day plan says "buy", two Astra services start where this course ends. Prices are quoted per
