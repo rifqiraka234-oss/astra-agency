@@ -1,4 +1,5 @@
-# Draft, 2026-11-06. Steven Garratt, Qualigraf. The one pager, the new website, a catch up on Thursday. NOT SENT. Raka said send with the PDF attached (6 Nov). The PDF could not be attached reliably from the session (the Gmail tool takes it only as base64 in the call, about 87k tokens for a 69 KB PDF), so it was not sent without it. Gmail draft r5158941056652620214 created in thread 1a1a7f9dadc3f5e2. The connector wrapped the link in a google.com/url redirect, so Raka replaces that line with the plain link, attaches proposals/qualigraf/onepager.pdf (68,748 bytes, sha256 b1cbc1c5) and sends from Gmail.
+<!-- GATE ARCHIVED -->
+# Draft, 2026-11-06. Steven Garratt, Qualigraf. SENT 2026-11-06 14.06 UTC by Raka from Gmail, message 1a1b12ee8d0581d7 in thread 1a1a7f9dadc3f5e2, one copy, to steven@qualigraf.com, cc Joshuavanzeelt@gmail.com and lunaraisyamulya@gmail.com. Attachment "qualigraf onepager.pdf" (application/pdf), link plain https://astra-qualigraf-group.netlify.app/. Checked in the thread on 6 Nov. Do not send again.
 
 Goes by email from Raka's Gmail to steven@qualigraf.com, as a reply in the 4 Nov thread "Qualigraf x Astra Agency" (Gmail
 thread 1a1a7f9dadc3f5e2, pulled 6 Nov, one message, ours, no reply from Steven). Attach `proposals/qualigraf/onepager.pdf`
