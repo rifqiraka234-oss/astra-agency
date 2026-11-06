@@ -251,3 +251,76 @@ img, video { max-width: 100%; display: block; }
 .invite .art { height: 32vh; bottom: auto; }
 @media (max-width: 760px) { .invite .art { height: 24vh; } }
 .offices .quiet { display: inline-block; margin-top: 14px; font-size: 17px; color: var(--white); }
+
+/* Gradients on the big pieces, Apple style (Raka, 6 Nov). Their own colours only, smooth and wide, never on small parts. */
+:root {
+  --g-deep: radial-gradient(120% 90% at 85% 10%, #2E4470 0%, rgba(46, 68, 112, 0) 55%), radial-gradient(90% 80% at 10% 100%, #3A2F55 0%, rgba(58, 47, 85, 0) 60%), linear-gradient(180deg, #0F1A31 0%, #0C1529 100%);
+  --g-navy: linear-gradient(150deg, #22355C 0%, #2A3C5E 45%, #3E5384 100%);
+  --g-coral: linear-gradient(155deg, #FFF0E8 0%, #FFD3BF 100%);
+  --g-teal: linear-gradient(155deg, #E8F7F8 0%, #B9E6EA 100%);
+  --g-mustard: linear-gradient(155deg, #FFF6E0 0%, #F9DC9C 100%);
+  --g-plum: linear-gradient(155deg, #F4EEF5 0%, #D8C7DA 100%);
+  --g-stage: linear-gradient(160deg, #1D2D52 0%, #2A3C5E 50%, #1E5560 100%);
+  --g-mist: linear-gradient(180deg, #F3F5F8 0%, #E6ECF4 100%);
+}
+.hero, .invite, .door-hero { background-color: var(--deep); background-image: var(--g-deep); }
+.offices-band, .foot { background-color: #0C1529; }
+
+/* proof, three big blocks */
+.facts { gap: 20px; }
+.facts p { border-radius: 24px; padding: 34px 32px 38px; color: var(--ink); min-height: 220px; }
+.facts p:nth-child(1) { background: var(--g-coral); }
+.facts p:nth-child(2) { background: var(--g-teal); }
+.facts p:nth-child(3) { background: var(--g-mustard); }
+.facts b { font-size: 28px; margin-bottom: 14px; }
+.facts a { color: var(--ink); }
+
+/* the track, their screens on a gradient stage */
+.track { background-color: var(--mist); background-image: var(--g-mist); }
+.track-screen { background: var(--g-stage); border-radius: 28px; padding: 5% 5% 4%; }
+.screens { border-radius: 12px; }
+.screens-note, .track-screen .rule-note { color: #C8D2E5; }
+.track-screen .rule-note .quiet { color: var(--white); }
+.screen-chip { top: 20px; right: 20px; background: var(--deep); }
+
+/* the room line */
+.room-line { background: var(--g-navy); }
+
+/* the platform, big gradient blocks with the film and screens inside */
+.bento { gap: 20px; }
+.tile { border-radius: 28px; padding: 22px 22px 30px; gap: 22px; }
+.tile .media { border-radius: 16px; }
+.tile figcaption { color: var(--ink); padding: 0 8px; }
+.t1 { background: var(--g-navy); }
+.t1 figcaption, .t1 figcaption b { color: var(--white); }
+.t2 { background: var(--g-coral); }
+.t3 { background: var(--g-teal); }
+.t4 { background: var(--g-mustard); }
+.t5 { background: var(--g-plum); }
+
+/* trust, one big panel */
+.trust { background: var(--white); }
+.trust > div { background: var(--g-teal); border-radius: 28px; padding: 6vh 4vw; }
+.trust > div .intro { color: var(--ink); }
+.trust ul { padding-top: 6vh; }
+
+/* the people, on soft blocks */
+.person { background: var(--g-mist); border-radius: 28px; padding: 28px; }
+
+/* the form, a gradient panel */
+.book { background: var(--g-navy); }
+.field input { background: #142243; }
+
+/* the front door tiles */
+.countries a { background: linear-gradient(160deg, #2A3C5E 0%, #18264A 100%); border-radius: 24px; padding: 14px 14px 22px; }
+.countries img { border-radius: 14px; }
+.countries b, .countries span { padding: 0 8px; }
+
+@media (max-width: 760px) {
+  .tile { padding: 16px 16px 24px; border-radius: 22px; }
+  .facts p { min-height: 0; }
+  .trust > div { padding: 32px 22px; }
+  .person { padding: 18px; }
+  .track-screen { border-radius: 20px; }
+  .countries a { padding: 10px 10px 16px; border-radius: 18px; }
+}

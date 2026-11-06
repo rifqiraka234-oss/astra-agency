@@ -17,4 +17,4 @@ const li = pick && list && list.querySelector(`[data-country="${pick}"]`);
 if (li) { li.classList.add('first'); list.prepend(li); }
 
 // the art, loose ribbons drifting over the four countries
-mount(document.querySelector('.door-hero .art'), { merge: () => 0, x: 6.6, y: 2.2, rz: .5, spread: 3.2, mx: 0, my: .4 });
+mount(document.querySelector('.door-hero .art'), { merge: () => 0, x: 8.2, y: 2.4, rz: .5, spread: 3.2, mx: 0, my: .4 });
