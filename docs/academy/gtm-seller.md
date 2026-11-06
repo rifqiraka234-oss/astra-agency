@@ -6,7 +6,7 @@ assignments and rubric scoring in section 4, tests in section 5, the 1:1 session
 9, the legal topics in section 10, tools in section 8). Where this file and the rulebook disagree, the rulebook wins,
 except where this file says it changes something on purpose.
 
-Prices here are suggestions. Raka sets them.
+Prices set by Raka on 6 Nov 2026.
 
 ---
 
@@ -102,7 +102,11 @@ real call and real numbers.
 | Feedback | Self marked against the rubric and the good example | Raka marks every assignment within 2 working days and reviews your sequence before it sends |
 | Questions | Questions form, answered within 3 working days | Shared channel or email, answered within 1 working day |
 | Certificate | Completed. Certified if you buy the capstone review | Certified, marked by Raka at the check in |
-| Suggested price | **€149** | **€790** (4 x 60 min plus the 30 day check in) |
+| Price | **€125 a level**, €299 for all three | **€1,000 a level**, €2,500 for all three |
+
+**The three Seller levels.** Level 1 Find is Modules 1 and 2. Level 2 Reach is Modules 3 and 4. Level 3 Scale is
+Module 5, the capstone and an AI research assistant on your own list. The assistant lessons aren't written yet, so
+Level 3 isn't on sale until they are.
 
 **Add ons for self learn.** A single assignment review by Raka, €49. The capstone review that earns Certified, €149. A
 single 1:1 hour, €150. If you upgrade from self learn to 1:1 within 30 days, what you paid comes off the 1:1 price.

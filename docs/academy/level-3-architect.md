@@ -138,13 +138,13 @@ revenue system.
 | Marking | You mark yourself against the rubric and good example. Optional paid review of a single assignment (€49) | Raka marks every assignment within 2 working days and goes through it in the next session |
 | Questions | Questions form, answered within 3 working days. Optional single 1:1 hours (€150) | Async channel or email, answered within 1 working day |
 | Certificate | Completed. GTM Architect Certified if you buy the capstone review (€149), present it and pass | GTM Architect Certified, when the capstone and exam pass |
-| Suggested price | €299 | €1,500 |
+| Price | €125 | €1,000 |
 
 | Bundle | Self learn | 1:1 with Raka |
 |---|---|---|
-| The ladder, Levels 1, 2 and 3 | €599 | €3,500 |
+| The ladder, Levels 1, 2 and 3 | €299 | €2,500 |
 
-Prices are suggestions for Raka to set. Tool costs are separate and mostly free plans or trials you already have from
+Prices set by Raka on 6 Nov 2026. Tool costs are separate and mostly free plans or trials you already have from
 Level 2.
 
 ## Self learn plan, week by week (about 5 weeks)

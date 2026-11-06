@@ -108,10 +108,10 @@ AEs, 1 manager). Every company and person in it is invented. Account IDs look li
 | Questions | Questions form, answered within 3 working days. Optional single 1:1 hours (€150) | Async channel or email, answered within 1 working day |
 | Certificate | Completed. Operator Certified if you buy the practical test review (€49) and pass | Operator Certified, when the assignments, practical test and exam pass |
 | Also included | Templates, prompt library, checklists, lifetime access and updates | Everything in self learn, plus a 30 minute check in 30 days after |
-| Suggested price | €199 | €1,200 for the 6 sessions |
-| Ladder bundle (Levels 1, 2 and 3) | €599 | €3,500 |
+| Price | €125 | €1,000 for the 6 sessions |
+| Ladder bundle (Levels 1, 2 and 3) | €299 | €2,500 |
 
-Prices are suggestions for Raka to set. Tool costs are separate and mostly free plans or trials.
+Prices set by Raka on 6 Nov 2026. Tool costs are separate and mostly free plans or trials.
 
 ## Self learn plan, week by week
 
@@ -1952,5 +1952,5 @@ the rest of it yourself, so nothing depends on a setup someone else made.
 | Dashboards | A pipeline dashboard and the weekly scorecard from Lesson 5.6, filled with your own numbers |
 
 Your Level 1 builds carry straight over. The ICP sheet, master list, scoring model, research log and sequence become the
-inputs of the engine you build in Level 2. Suggested price, self learn €249, 1:1 €1,200 for 5 sessions of 90 minutes, or
-all three levels as the ladder bundle (self learn €599, 1:1 €3,500). Prices are suggestions for Raka to set.
+inputs of the engine you build in Level 2. Price, self learn €125, 1:1 €1,000 for 5 sessions of 90 minutes, or
+all three levels as the ladder bundle (self learn €299, 1:1 €2,500).
