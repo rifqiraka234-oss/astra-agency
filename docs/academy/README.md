@@ -128,7 +128,7 @@ assignment.
 | | |
 |---|---|
 | When | After all modules are passed |
-| Length | 25 to 30 questions, 40 minutes, timed |
+| Length | Track 1, 30 questions in 40 minutes. Tracks 2 and 3, 25 questions in 30 minutes. Timed |
 | Mix | About 60% knowledge questions, 40% scenarios |
 | Pass mark | 80% |
 | Retakes | Two, at least 48 hours apart, from a different question pool |
@@ -372,3 +372,54 @@ and tells the learner to check their own country and company.
 | 7 | Load quizzes into the platform with a second question per item for the retake pool | Quizzes live |
 | 8 | Test the whole self learn course with one person who knows nothing about sales | They finish Module 1 without asking a question |
 | 9 | Launch, track by track | Sales page, LinkedIn posts, deck updated |
+
+---
+
+## 14. The build list, everything the lessons expect to exist
+
+The track files name templates and practice pack contents that don't exist yet. Build all of this at step 2 of section
+13, before anything is recorded. If a name changes here, change it in the track file too.
+
+### 14.1 Templates
+
+| Track | Templates (Google Sheets, Docs or Slides in a view only shared folder, learners make a copy) |
+|---|---|
+| 1 | T1 Setup sheet, T1 Capstone brief, T1 ICP sheet, T1 Data source map, Legitimate interest note, T1 Enrichment report, T1 Scoring model, Signal library, T1 Research log, Prompt library, T1 Sequence, A/B plan, CRM field map, n8n starter workflows, Dashboard and scorecard, Capstone plan, Evidence log, Portfolio page |
+| 2 | Time and Source Audit, ICP and Tier List, Signal Tracker, Research Card, Prompt Library, Sequence Template, Legitimate Interest Note, Reply Playbook, Call Prep, Follow Up, Personal Scorecard, Capstone One Pager, Practical Test tab, "Ask your company to pay" email |
+| 3 | T3-00 Team current state, T3-01 Operating model, T3-02 Sales bible, T3-03 ICP territory routing, T3-04 Hygiene rules, T3-05 Dashboard spec and forecast, T3-06 Win loss and coaching, T3-07 90 day plan, T3-PT Practical test, T3-CAP Capstone deck, Build buy or hire calculator |
+
+### 14.2 The practice pack (Routeful), and the facts the lessons rely on
+
+| Item | Must contain |
+|---|---|
+| 50 accounts sheet | IDs RF-001 to RF-050. The lessons use RF-007, RF-012, RF-021, RF-031 (Kanaalweg Transport, contact "Sanne") and RF-044 with specific facts; read those lessons and make the rows match |
+| Messy CRM export | 400 contacts with duplicates, missing emails, mixed job titles and country spellings ("NL", "Netherlands", "Holland") |
+| 10 call transcripts | 6 won, 4 lost. Track 1 uses W1, W2, W3 and W5 with quotes about Monday replanning and sick drivers, and a proof line "cut Monday replanning to under an hour" from W3. Track 2 uses transcript 3 (won) and 8 (lost). The 4 losses are 2 too small, 1 new TMS already being installed, 1 price |
+| Pipeline | 60 deals across New, Meeting booked, Discovery done, Demo done, Proposal sent, Won, Lost. Track 3's good examples use illustrative figures (9 won, 21 lost, €37k commit, median speed to lead 19 hours). Either make the pipeline produce them or update the examples |
+| Sales team | Eva (manager), Sanne and Joris (SDRs), Lotte, Daan and Mira (AEs) |
+| Research snippets, fake web pages and job ads | As referenced in Track 1 Module 6 and Track 2 Module 2 and 3 |
+| Track 1 practical test set | 20 accounts RF-101 to RF-120 on `.example` domains with the planted traps listed in the marker's key (duplicate, existing customer, broker, wrong size or country, RF-108 contradiction, RF-117 wrong company news, RF-111 signal outside 30 days, catch all and invalid emails), three made up provider tabs, and a second version for retakes |
+| Track 3 practical test files | test-pipeline.csv, test-crm-export.csv, test-call-A.txt, test-call-B.txt, with the leaks the marker's guide expects |
+
+Every invented company and person name must be checked against real companies before recording, and changed if one
+matches.
+
+### 14.3 Course defaults that are ours, not the tools'
+
+The lessons give these as cautious starting settings and tell learners to check current guidance. Raka confirms or changes
+them before recording.
+
+| Setting | Course default |
+|---|---|
+| Cold email per warmed mailbox | Start at 15 to 20 a day, stay at or under about 40 |
+| LinkedIn invites | 10 to 15 a day in the first week |
+| LinkedIn profile visits | 20 to 30 a day in the first week |
+| Warm up before the first cold send | At least 14 days |
+| A/B test, smallest group | About 100 people per version before calling a winner |
+
+### 14.4 To check on screen before recording
+
+Tool menus change. Before recording, click through every screen demo in the current HubSpot (duplicates, required fields
+per stage, webhooks and private or legacy apps), Clay (find companies, enrichment, webhook import), lemlist (warm up,
+tracking domain, stop on reply), n8n (HubSpot and lemlist nodes), Sales Navigator, PhantomBuster, Google Alerts, Looker
+Studio and Gong or Leexi, and fix the step text.
