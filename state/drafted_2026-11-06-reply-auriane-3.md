@@ -16,11 +16,13 @@
 > Answers her question with what we do, ties it to her own pro buffet, closes on a show me, same voice as Nicholas.
 > "end of year drinks" is the season, November, an inference worded as what it would spot.
 
+> Raka 6 Nov edit, "outbound so they get more sales. is this something maybe beneficial for you?". Redrafted, not sent.
+
 REPLY
 ```
-I run Astra, we build AI powered signal engines and run the outbound for small businesses, so they reach the right people at the right moment.
+I run Astra, we build AI powered signal engines and run the outbound for small businesses so they get more sales.
 
 For LOCA it'd spot Sarthe companies planning a seminar, a team day or their end of year drinks, and get your buffet pro in front of whoever organises it before they book someone else. The Surfonds seminar and that event for several hundred people on your site are the kind of orders it would go after.
 
-Shall I show you what that would look like for LOCA?
+Is this something that could be beneficial for you?
 ```
