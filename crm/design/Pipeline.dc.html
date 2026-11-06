@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Astra CRM, pipelines</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F4F1}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+a.nav:hover{background:#20242A !important;color:#FFFFFF !important}
+a.card:hover{border-color:#A9ADB4 !important}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="font-family: Geist, Inter, system-ui, sans-serif; color: #15171A; background: #F4F4F1; display: flex; flex-wrap: wrap; align-items: stretch; min-height: 1100px">
+
+<nav aria-label="Main" style="flex: 1 1 220px; max-width: 100%; background: #15171A; color: #C9CCD1; padding: 20px 14px; display: flex; flex-direction: column; gap: 22px; box-sizing: border-box">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 30px; height: 30px; border-radius: 8px; background: #C2410C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px">A</div>
+<div style="color: #FFFFFF; font-weight: 600; font-size: 16px; letter-spacing: -0.01em">Astra CRM</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Work</div>
+<a class="nav" href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"></path></svg>Home</a>
+<a class="nav" href="Tasks.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="m8 12 3 3 5-6"></path></svg><span style="flex: 1">Tasks</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; background: #C2410C; color: #FFFFFF; border-radius: 10px; padding: 1px 7px">4</span></a>
+<a class="nav" href="Pipeline.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #FFFFFF; background: #262A31; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="5" height="16" rx="1"></rect><rect x="10" y="4" width="5" height="11" rx="1"></rect><rect x="17" y="4" width="4" height="7" rx="1"></rect></svg>Pipelines</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Records</div>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M15 9h4a1 1 0 0 1 1 1v11M3 21h18M8 8h3M8 12h3M8 16h3"></path></svg>Organizations</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Contacts</a>
+<a class="nav" href="Deal.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M17 7.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 2.2 2.6 5 3 5 1.3 5 3.2-2.2 3.1-5 3.1-5-1.2-5-3.1"></path></svg>Deals</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3zM8 7V4h8v3"></path></svg>Projects</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z"></path></svg>Tickets</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"></path></svg>Invoices</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Admin</div>
+<a class="nav" href="Settings.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"></path></svg>Settings</a>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 24px 28px; box-sizing: border-box">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">{{title}}</h1>
+<div style="font-size: 13px; color: #5B6068">{{subtitle}}</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+<div role="group" aria-label="Pipeline" style="display: flex; gap: 4px; background: #E9E9E4; padding: 4px; border-radius: 10px">
+<sc-for list="{{pipes}}" as="p" hint-placeholder-count="2">
+<button type="button" onClick="{{p.pick}}" aria-pressed="{{p.active}}" style="{{p.style}}">{{p.label}}</button>
+</sc-for>
+</div>
+<div role="group" aria-label="Owner" style="display: flex; gap: 4px; background: #E9E9E4; padding: 4px; border-radius: 10px">
+<sc-for list="{{owners}}" as="o" hint-placeholder-count="4">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.active}}" style="{{o.style}}">{{o.label}}</button>
+</sc-for>
+</div>
+<span style="font-size: 12px; font-weight: 500; color: #92400E; background: #FDF3E1; border-radius: 6px; padding: 5px 9px">Sample data</span>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<sc-for list="{{totals}}" as="m" hint-placeholder-count="4">
+<div style="flex: 1 1 170px; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 12px; padding: 12px 16px">
+<div style="font-size: 12px; color: #5B6068">{{m.label}}</div>
+<div style="font-family: 'Geist Mono', monospace; font-size: 20px; font-weight: 500; margin-top: 4px">{{m.value}}</div>
+</div>
+</sc-for>
+</div>
+
+<div role="region" aria-label="Board" tabindex="0" style="overflow-x: auto; padding-bottom: 8px">
+<div style="display: flex; gap: 12px; align-items: flex-start; min-width: min-content">
+<sc-for list="{{columns}}" as="c" hint-placeholder-count="6">
+<section aria-label="{{c.name}}" style="flex: 0 0 252px; background: #ECECE7; border-radius: 14px; padding: 10px; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box">
+<div style="padding: 4px 6px 6px; display: flex; flex-direction: column; gap: 3px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 6px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600">{{c.name}}</h2>
+<span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #3A3E45">{{c.count}}</span>
+</div>
+<div style="font-size: 12px; color: #5B6068">{{c.meta}}</div>
+</div>
+<sc-for list="{{c.cards}}" as="k" hint-placeholder-count="2">
+<div style="background: #FFFFFF; border: 1px solid #DEDED7; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; gap: 8px; align-items: flex-start">
+<a href="{{k.href}}" style="font-size: 14px; font-weight: 600; color: #15171A; text-decoration: none; line-height: 1.3">{{k.title}}</a>
+<span style="flex: none; width: 26px; height: 26px; border-radius: 13px; background: {{k.ownerBg}}; color: #15171A; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center" aria-label="Owner {{k.owner}}">{{k.initials}}</span>
+</div>
+<div style="font-size: 13px; color: #3A3E45">{{k.sub}}</div>
+<sc-if value="{{k.amount}}" hint-placeholder-val="{{true}}"><div style="font-family: 'Geist Mono', monospace; font-size: 14px">{{k.amount}}</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center">
+<span style="{{k.chipStyle}}">{{k.chip}}</span>
+<span style="font-size: 12px; color: #5B6068">{{k.age}}</span>
+</div>
+<sc-if value="{{k.warn}}" hint-placeholder-val="{{false}}"><div style="font-size: 12px; color: #B91C1C; font-weight: 500">{{k.warn}}</div></sc-if>
+<sc-if value="{{k.canQualify}}" hint-placeholder-val="{{false}}">
+<button type="button" onClick="{{k.qualify}}" style="min-height: 36px; border: 1px solid #15171A; background: #FFFFFF; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; color: #15171A">Qualify and create deal</button>
+</sc-if>
+<sc-if value="{{k.qualified}}" hint-placeholder-val="{{false}}">
+<div style="font-size: 12px; color: #166534; background: #E7F5EC; border-radius: 7px; padding: 7px 9px">Deal created in Discovery booked, organization and contact linked</div>
+</sc-if>
+</div>
+</sc-for>
+<sc-if value="{{c.more}}" hint-placeholder-val="{{false}}"><div style="font-size: 12px; color: #5B6068; padding: 2px 6px">{{c.more}}</div></sc-if>
+</section>
+</sc-for>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<sc-for list="{{closed}}" as="z" hint-placeholder-count="2">
+<div style="flex: 1 1 320px; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; gap: 8px"><h2 style="margin: 0; font-size: 14px; font-weight: 600">{{z.name}}</h2><span style="font-family: 'Geist Mono', monospace; font-size: 13px">{{z.value}}</span></div>
+<div style="font-size: 13px; color: #3A3E45; line-height: 1.5">{{z.detail}}</div>
+</div>
+</sc-for>
+</div>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { pipe: 'sales', owner: 'all', qualified: {} };
+  }
+  renderVals() {
+    const s = this.state;
+    const seg = (on) => 'min-height: 40px; padding: 0 14px; border: 0; border-radius: 8px; font-size: 14px; cursor: pointer; ' + (on ? 'background: #FFFFFF; color: #15171A; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.12)' : 'background: transparent; color: #3A3E45');
+    const pipes = [{ id: 'lead', label: 'Lead pipeline' }, { id: 'sales', label: 'Sales pipeline' }].map((p) => ({ ...p, active: s.pipe === p.id ? 'true' : 'false', style: seg(s.pipe === p.id), pick: () => this.setState({ pipe: p.id }) }));
+    const owners = [{ id: 'all', label: 'Everyone' }, { id: 'raka', label: 'Raka' }, { id: 'luna', label: 'Luna' }, { id: 'josh', label: 'Josh' }].map((o) => ({ ...o, active: s.owner === o.id ? 'true' : 'false', style: seg(s.owner === o.id), pick: () => this.setState({ owner: o.id }) }));
+    const ppl = { raka: { i: 'RM', bg: '#DCE6FB', n: 'Raka' }, luna: { i: 'LU', bg: '#F6E3D3', n: 'Luna' }, josh: { i: 'JZ', bg: '#DDEFE3', n: 'Josh' } };
+    const chip = (tone) => {
+      const t = { grey: ['#F1F1EC', '#3A3E45'], blue: ['#E8EEFD', '#1E40AF'], amber: ['#FDF3E1', '#92400E'], green: ['#E7F5EC', '#166534'], red: ['#FDECEC', '#B91C1C'] }[tone];
+      return 'font-size: 12px; border-radius: 6px; padding: 2px 7px; background: ' + t[0] + '; color: ' + t[1];
+    };
+    const eur = (n) => '€' + n.toLocaleString('en-US');
+    const salesCols = [
+      { name: 'Discovery booked', p: 0.15, deals: [
+        { t: 'Maison Orée', sub: 'Online ordering and pickup', amt: 8000, o: 'raka', chip: 'Call Fri 16:30', tone: 'blue', age: '3 days in stage' },
+        { t: 'Noordzee Surf School', sub: 'Lesson booking app', amt: 4500, o: 'josh', chip: 'Call Tue', tone: 'blue', age: '1 day in stage' },
+        { t: 'Bloem Florists', sub: 'Subscription shop', amt: 2500, o: 'raka', chip: 'No next task', tone: 'red', age: '6 days in stage' } ] },
+      { name: 'Prototype agreed', p: 0.3, deals: [
+        { t: 'Greywater Labs', sub: 'Investor data room site', amt: 18000, o: 'josh', chip: 'Build card Mon', tone: 'grey', age: '4 days in stage' },
+        { t: 'Okra Kitchen', sub: 'Catering quote tool', amt: 6000, o: 'raka', chip: 'First screen Wed', tone: 'grey', age: '2 days in stage' } ] },
+      { name: 'Prototype sent', p: 0.4, deals: [
+        { t: 'Harbor Physio', sub: 'Booking flow prototype', amt: 5500, o: 'raka', chip: 'Nudge overdue', tone: 'red', age: '16 days in stage', warn: 'Rotting, past the 14 day limit' },
+        { t: 'Ridgeway Joinery', sub: 'Quote calculator', amt: 3500, o: 'josh', chip: 'Opened twice', tone: 'grey', age: '5 days in stage' } ] },
+      { name: 'Proposal sent', p: 0.6, deals: [
+        { t: 'Brouwerij De Kade', sub: 'Taproom booking app', amt: 14500, o: 'raka', chip: 'Follow up today', tone: 'amber', age: '9 days in stage', href: 'Deal.dc.html' },
+        { t: 'Vellum & Co', sub: 'Client portal', amt: 7400, o: 'luna', chip: 'Call Thu', tone: 'blue', age: '4 days in stage' } ] },
+      { name: 'Negotiation', p: 0.75, deals: [
+        { t: 'Lumen Dental Group', sub: 'Patient portal phase 2', amt: 12000, o: 'luna', chip: 'Pricing call Mon', tone: 'blue', age: '7 days in stage' } ] },
+      { name: 'Contract sent', p: 0.9, deals: [
+        { t: 'Atlas Freight BV', sub: 'Tracking dashboard add on', amt: 2500, o: 'luna', chip: 'Awaiting signature', tone: 'amber', age: '2 days in stage' },
+        { t: 'Corvo Coffee', sub: 'Wholesale order form', amt: 2000, o: 'josh', chip: 'Awaiting signature', tone: 'amber', age: '1 day in stage' } ] }
+    ];
+    const leadCols = [
+      { name: 'New', total: 61, meta: 'Accepted on LinkedIn, not yet researched', leads: [
+        { id: 'l1', t: 'Sophie Laurent', sub: 'Atelier Laurent, owner', o: 'raka', chip: 'Unresearched', tone: 'grey', age: 'Accepted 5 Nov' },
+        { id: 'l2', t: 'Daan Visser', sub: 'Visser Installatietechniek, eigenaar', o: 'raka', chip: 'Unresearched', tone: 'grey', age: 'Accepted 5 Nov' },
+        { id: 'l3', t: 'Ama Mensah', sub: 'Mensah Legal, founder', o: 'luna', chip: 'Unresearched', tone: 'grey', age: 'Accepted 3 Nov' } ] },
+      { name: 'Researching', total: 34, meta: 'Research gate and opener draft', leads: [
+        { id: 'l4', t: 'Martin Kessler', sub: 'Kessler Werkzeugbau, Geschäftsführer', o: 'raka', chip: 'Awaiting approval', tone: 'amber', age: 'Drafted today' },
+        { id: 'l5', t: 'Clara Weber', sub: 'Weber Gartenbau, Inhaberin', o: 'raka', chip: 'Drafted', tone: 'blue', age: 'Drafted 4 Nov' },
+        { id: 'l6', t: "Liam O'Connor", sub: "O'Connor Builders, director", o: 'josh', chip: 'Researching', tone: 'grey', age: 'Started 5 Nov' } ] },
+      { name: 'Attempting', total: 30, meta: 'Opener sent, waiting on a reply', leads: [
+        { id: 'l7', t: 'Jens Holm', sub: 'Holm Rejser, ejer', o: 'raka', chip: 'Nudge due', tone: 'amber', age: 'Opener 22 Oct', warn: 'No reply in 15 days' },
+        { id: 'l8', t: 'Fatima Benali', sub: 'Benali Dental, owner', o: 'luna', chip: 'Opener sent', tone: 'grey', age: 'Opener 28 Oct' },
+        { id: 'l9', t: 'Marco Rossi', sub: 'Rossi Trattoria, titolare', o: 'raka', chip: 'Nudge sent', tone: 'grey', age: 'Nudge 2 Nov' } ] },
+      { name: 'Connected', total: 23, meta: 'Real reply received', leads: [
+        { id: 'l10', t: 'Hannah Schmidt', sub: 'Schmidt Fahrräder, Inhaberin', o: 'raka', chip: 'Asked for prototype', tone: 'green', age: 'Replied 4 Nov', q: true },
+        { id: 'l11', t: 'Tobias Lind', sub: 'Lind Arkitekter, partner', o: 'josh', chip: 'Questions on price', tone: 'green', age: 'Replied 1 Nov', q: true },
+        { id: 'l12', t: 'Inès Moreau', sub: 'Moreau Fleurs, gérante', o: 'luna', chip: 'Our turn', tone: 'amber', age: 'Replied 30 Oct', q: true } ] }
+    ];
+    const keep = (o) => s.owner === 'all' || s.owner === o;
+    let columns, totals, closed, title, subtitle;
+    if (s.pipe === 'sales') {
+      columns = salesCols.map((c) => {
+        const ds = c.deals.filter((d) => keep(d.o));
+        const sum = ds.reduce((a, d) => a + d.amt, 0);
+        return {
+          name: c.name, count: String(ds.length),
+          meta: Math.round(c.p * 100) + '% · ' + eur(sum) + ' · weighted ' + eur(Math.round(sum * c.p)),
+          more: '',
+          cards: ds.map((d) => ({ title: d.t, sub: d.sub, amount: eur(d.amt), href: d.href || 'Deal.dc.html', initials: ppl[d.o].i, ownerBg: ppl[d.o].bg, owner: ppl[d.o].n, chip: d.chip, chipStyle: chip(d.tone), age: d.age, warn: d.warn || '', canQualify: false, qualified: false }))
+        };
+      });
+      const all = salesCols.flatMap((c) => c.deals.filter((d) => keep(d.o)).map((d) => ({ a: d.amt, w: d.amt * c.p })));
+      const open = all.reduce((a, d) => a + d.a, 0);
+      const w = Math.round(all.reduce((a, d) => a + d.w, 0));
+      totals = [
+        { label: 'Open deals', value: String(all.length) },
+        { label: 'Open value', value: eur(open) },
+        { label: 'Weighted value', value: eur(w) },
+        { label: 'Won this quarter', value: '€23,700' }
+      ];
+      closed = [
+        { name: 'Won, last 90 days', value: '5 deals · €23,700', detail: 'Studio Fjell website build €9,800, Pellegrino Ceramics shop €6,200, Brouwerij De Kade website €3,400, and two retainers. Each win opens a project automatically.' },
+        { name: 'Lost, last 90 days', value: '11 deals', detail: 'Lost reason is required on the way in. Went with someone cheaper 4, not now 3, built it in house 2, no budget 2.' }
+      ];
+      title = 'Sales pipeline';
+      subtitle = 'New business. Stage sets the probability, every move is logged with its date.';
+    } else {
+      columns = leadCols.map((c) => {
+        const ls = c.leads.filter((l) => keep(l.o));
+        return {
+          name: c.name, count: String(c.total), meta: c.meta,
+          more: '+ ' + (c.total - ls.length) + ' more',
+          cards: ls.map((l) => {
+            const q = !!s.qualified[l.id];
+            return { title: l.t, sub: l.sub, amount: '', href: 'Organization.dc.html', initials: ppl[l.o].i, ownerBg: ppl[l.o].bg, owner: ppl[l.o].n, chip: l.chip, chipStyle: chip(l.tone), age: l.age, warn: l.warn || '', canQualify: !!l.q && !q, qualified: q, qualify: () => this.setState({ qualified: { ...s.qualified, [l.id]: true } }) };
+          })
+        };
+      });
+      totals = [
+        { label: 'Leads in play', value: '148' },
+        { label: 'Waiting on a reply', value: '30' },
+        { label: 'Reply rate, 30 days', value: '19%' },
+        { label: 'Qualified this month', value: '3' }
+      ];
+      closed = [
+        { name: 'Qualified this month', value: '3', detail: 'Qualifying turns the lead into a deal in Discovery booked and keeps the full LinkedIn thread on the timeline.' },
+        { name: 'Disqualified this month', value: '12', detail: 'No strong angle 5, do not contact 3, former owner 2, wrong company 2. A reason is required and do not contact also adds them to the suppression list.' }
+      ];
+      title = 'Lead pipeline';
+      subtitle = 'From LinkedIn accept to a qualified deal. Synced from lemlist, every thread pulled per contact.';
+    }
+    return { pipes, owners, columns, totals, closed, title, subtitle };
+  }
+}
+</script>
+</body>
+</html>

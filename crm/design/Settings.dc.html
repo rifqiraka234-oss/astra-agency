@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Astra CRM, settings</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F4F1}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+a.nav:hover{background:#20242A !important;color:#FFFFFF !important}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="font-family: Geist, Inter, system-ui, sans-serif; color: #15171A; background: #F4F4F1; display: flex; flex-wrap: wrap; align-items: stretch; min-height: 1300px">
+
+<nav aria-label="Main" style="flex: 1 1 220px; max-width: 100%; background: #15171A; color: #C9CCD1; padding: 20px 14px; display: flex; flex-direction: column; gap: 22px; box-sizing: border-box">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 30px; height: 30px; border-radius: 8px; background: #C2410C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px">A</div>
+<div style="color: #FFFFFF; font-weight: 600; font-size: 16px; letter-spacing: -0.01em">Astra CRM</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Work</div>
+<a class="nav" href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"></path></svg>Home</a>
+<a class="nav" href="Tasks.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="m8 12 3 3 5-6"></path></svg><span style="flex: 1">Tasks</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; background: #C2410C; color: #FFFFFF; border-radius: 10px; padding: 1px 7px">4</span></a>
+<a class="nav" href="Pipeline.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="5" height="16" rx="1"></rect><rect x="10" y="4" width="5" height="11" rx="1"></rect><rect x="17" y="4" width="4" height="7" rx="1"></rect></svg>Pipelines</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Records</div>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M15 9h4a1 1 0 0 1 1 1v11M3 21h18M8 8h3M8 12h3M8 16h3"></path></svg>Organizations</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Contacts</a>
+<a class="nav" href="Deal.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M17 7.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 2.2 2.6 5 3 5 1.3 5 3.2-2.2 3.1-5 3.1-5-1.2-5-3.1"></path></svg>Deals</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3zM8 7V4h8v3"></path></svg>Projects</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z"></path></svg>Tickets</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"></path></svg>Invoices</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Admin</div>
+<a class="nav" href="Settings.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #FFFFFF; background: #262A31; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"></path></svg>Settings</a>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px; padding: 24px 28px; box-sizing: border-box">
+
+<div style="flex: 1 1 200px; max-width: 100%; display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0 0 12px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em">Settings</h1>
+<sc-for list="{{sections}}" as="sx" hint-placeholder-count="7">
+<button type="button" onClick="{{sx.pick}}" aria-current="{{sx.current}}" style="{{sx.style}}"><span style="display: block; font-size: 14px; font-weight: 500">{{sx.label}}</span><span style="display: block; font-size: 12px; color: #5B6068; margin-top: 2px">{{sx.sub}}</span></button>
+</sc-for>
+</div>
+
+<div style="flex: 4 1 620px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 4px"><h2 style="margin: 0; font-size: 22px; font-weight: 600">{{panelTitle}}</h2><div style="font-size: 13px; color: #5B6068; max-width: 640px; line-height: 1.5">{{panelSub}}</div></div>
+<div style="display: flex; gap: 8px; align-items: center"><span style="font-size: 12px; font-weight: 500; color: #92400E; background: #FDF3E1; border-radius: 6px; padding: 5px 9px">Sample data</span><button type="button" style="min-height: 44px; padding: 0 16px; border: 0; background: #15171A; color: #FFFFFF; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer">{{panelCta}}</button></div>
+</div>
+
+<sc-if value="{{isFields}}" hint-placeholder-val="{{true}}">
+<div role="group" aria-label="Object" style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{objects}}" as="ob" hint-placeholder-count="8">
+<button type="button" onClick="{{ob.pick}}" aria-pressed="{{ob.active}}" style="{{ob.style}}">{{ob.label}}</button>
+</sc-for>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px">
+<thead><tr>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Label</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Internal name</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Type</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Group</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Rules</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Source</th>
+</tr></thead>
+<tbody>
+<sc-for list="{{fieldRows}}" as="fr" hint-placeholder-count="8">
+<tr>
+<td style="padding: 11px 16px; border-top: 1px solid #F0F0EB; font-weight: 500">{{fr.label}}</td>
+<td style="padding: 11px 16px; border-top: 1px solid #F0F0EB; font-family: 'Geist Mono', monospace; font-size: 12px; color: #3A3E45">{{fr.key}}</td>
+<td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{fr.type}}</td>
+<td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{fr.group}}</td>
+<td style="padding: 11px 16px; border-top: 1px solid #F0F0EB; font-size: 13px; color: #3A3E45">{{fr.rules}}</td>
+<td style="padding: 11px 16px; border-top: 1px solid #F0F0EB"><span style="{{fr.srcStyle}}">{{fr.src}}</span></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 15px; font-weight: 600">Field types you can add</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{fieldTypes}}" as="ft" hint-placeholder-count="12"><span style="font-size: 13px; border: 1px solid #D6D6CF; border-radius: 8px; padding: 6px 10px">{{ft}}</span></sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isPipelines}}" hint-placeholder-val="{{false}}">
+<div style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px">
+<thead><tr>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Stage, sales pipeline</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Probability</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Required to enter</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Rotting after</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Type</th>
+</tr></thead>
+<tbody>
+<sc-for list="{{stageRows}}" as="sr" hint-placeholder-count="8">
+<tr><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB; font-weight: 500">{{sr.n}}</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB; font-family: 'Geist Mono', monospace">{{sr.p}}</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB; font-size: 13px">{{sr.r}}</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{sr.d}}</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{sr.t}}</td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+<div style="font-size: 13px; color: #3A3E45; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; padding: 14px 16px; line-height: 1.5">Also set up: Lead pipeline (New, Researching, Attempting, Connected, Qualified, Disqualified), Existing business, Project delivery and Tickets. Skipping stages is allowed, moving back needs a reason and is logged.</div>
+</sc-if>
+
+<sc-if value="{{isAutomations}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 1 1 320px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; overflow: hidden">
+<sc-for list="{{flows}}" as="fl" hint-placeholder-count="6">
+<button type="button" onClick="{{fl.pick}}" style="{{fl.style}}">
+<span style="display: flex; justify-content: space-between; gap: 8px"><span style="font-size: 14px; font-weight: 500">{{fl.name}}</span><span style="{{fl.stateStyle}}">{{fl.state}}</span></span>
+<span style="display: block; font-size: 12px; color: #5B6068; margin-top: 4px">{{fl.runs}}</span>
+</button>
+</sc-for>
+</div>
+<div style="flex: 1.3 1 360px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 0">
+<h3 style="margin: 0 0 14px; font-size: 16px; font-weight: 600">{{flow.name}}</h3>
+<sc-for list="{{flow.steps}}" as="stp" hint-placeholder-count="4">
+<div style="display: flex; gap: 12px">
+<div style="display: flex; flex-direction: column; align-items: center; flex: none; width: 28px">
+<span style="{{stp.dotStyle}}">{{stp.n}}</span>
+<span style="flex: 1; width: 2px; background: #E2E2DC; min-height: 14px"></span>
+</div>
+<div style="flex: 1; min-width: 0; padding-bottom: 14px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #5B6068">{{stp.kind}}</div>
+<div style="font-size: 14px; margin-top: 3px; line-height: 1.45">{{stp.text}}</div>
+</div>
+</div>
+</sc-for>
+<div style="font-size: 12px; color: #5B6068; border-top: 1px solid #ECECE7; padding-top: 12px">Every run is logged with what it changed. Anything that sends a message stops at the approval queue.</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isRoles}}" hint-placeholder-val="{{false}}">
+<div style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px">
+<thead><tr>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">User</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Role</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Team</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Gmail</th>
+</tr></thead>
+<tbody>
+<tr><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Raka Mulya</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Admin</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Sales</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Connected</td></tr>
+<tr><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Joshua van Zeelt</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Admin</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Delivery</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Connected</td></tr>
+<tr><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Luna</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Account manager</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">Accounts</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB; color: #B45309">Not connected</td></tr>
+</tbody>
+</table>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px">
+<caption style="text-align: left; padding: 14px 16px 6px; font-size: 15px; font-weight: 600">What each role can do</caption>
+<thead><tr>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Permission</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Admin</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Sales</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Account manager</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Client in portal</th>
+</tr></thead>
+<tbody>
+<sc-for list="{{perms}}" as="pm" hint-placeholder-count="7">
+<tr><th scope="row" style="text-align: left; font-weight: 500; padding: 11px 16px; border-top: 1px solid #F0F0EB">{{pm.k}}</th><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{pm.a}}</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{pm.s}}</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{pm.m}}</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{pm.c}}</td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</sc-if>
+
+<sc-if value="{{isIntegrations}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-wrap: wrap; gap: 14px">
+<sc-for list="{{integrations}}" as="ig" hint-placeholder-count="6">
+<div style="flex: 1 1 280px; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; gap: 8px; align-items: center"><h3 style="margin: 0; font-size: 15px; font-weight: 600">{{ig.name}}</h3><span style="{{ig.stateStyle}}">{{ig.state}}</span></div>
+<div style="font-size: 13px; color: #3A3E45; line-height: 1.5">{{ig.what}}</div>
+<div style="font-size: 12px; color: #5B6068">{{ig.meta}}</div>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{isImport}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 1 1 360px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-size: 15px; font-weight: 600">Map columns, events-london.csv</h3>
+<sc-for list="{{mapping}}" as="mp" hint-placeholder-count="5">
+<div style="display: flex; gap: 10px; align-items: center; font-size: 14px; flex-wrap: wrap">
+<span style="flex: 1 1 140px; font-family: 'Geist Mono', monospace; font-size: 13px; background: #F1F1EC; border-radius: 6px; padding: 7px 10px">{{mp.col}}</span>
+<span aria-hidden="true" style="color: #5B6068">to</span>
+<span style="flex: 1 1 160px; border: 1px solid #D6D6CF; border-radius: 8px; padding: 7px 10px">{{mp.field}}</span>
+</div>
+</sc-for>
+<div style="font-size: 13px; background: #E8EEFD; color: #1E3A8A; border-radius: 10px; padding: 10px 12px; line-height: 1.5">Preview. 212 rows, 164 new contacts, 41 update existing by email, 7 skipped with errors you can download. Blank cells never wipe a value.</div>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; overflow: hidden">
+<h3 style="margin: 0; padding: 14px 16px; font-size: 15px; font-weight: 600; border-bottom: 1px solid #ECECE7">Import history</h3>
+<sc-for list="{{imports}}" as="im" hint-placeholder-count="3">
+<div style="padding: 12px 16px; border-bottom: 1px solid #F0F0EB; display: flex; justify-content: space-between; gap: 10px; align-items: center">
+<div style="min-width: 0"><div style="font-size: 14px; font-weight: 500">{{im.name}}</div><div style="font-size: 12px; color: #5B6068">{{im.meta}}</div></div>
+<button type="button" onClick="{{im.revert}}" style="{{im.btnStyle}}">{{im.btn}}</button>
+</div>
+</sc-for>
+<div style="padding: 12px 16px; font-size: 12px; color: #5B6068">Revert removes what an import created and puts back every value it changed. Export works from any list view as CSV or XLSX.</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isDupes}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-wrap: wrap; gap: 14px">
+<sc-for list="{{dupRules}}" as="dr" hint-placeholder-count="3">
+<div style="flex: 1 1 240px; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0; font-size: 14px; font-weight: 600">{{dr.n}}</h3>
+<div style="font-size: 13px; color: #3A3E45; line-height: 1.5">{{dr.d}}</div>
+</div>
+</sc-for>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; overflow: hidden">
+<h3 style="margin: 0; padding: 14px 16px; font-size: 15px; font-weight: 600; border-bottom: 1px solid #ECECE7">Possible duplicates to review</h3>
+<sc-for list="{{pairs}}" as="pr" hint-placeholder-count="3">
+<div style="padding: 14px 16px; border-bottom: 1px solid #F0F0EB; display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+<div style="flex: 1 1 200px; min-width: 0"><div style="font-size: 14px; font-weight: 500">{{pr.a}}</div><div style="font-size: 12px; color: #5B6068">{{pr.aSub}}</div></div>
+<div style="flex: 1 1 200px; min-width: 0"><div style="font-size: 14px; font-weight: 500">{{pr.b}}</div><div style="font-size: 12px; color: #5B6068">{{pr.bSub}}</div></div>
+<span style="font-size: 12px; color: #3A3E45; background: #F1F1EC; border-radius: 6px; padding: 3px 8px">{{pr.why}}</span>
+<sc-if value="{{pr.open}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; gap: 8px"><button type="button" onClick="{{pr.merge}}" style="min-height: 40px; padding: 0 14px; border: 0; background: #15171A; color: #FFFFFF; border-radius: 9px; font-size: 13px; font-weight: 600; cursor: pointer">Merge</button><button type="button" onClick="{{pr.keep}}" style="min-height: 40px; padding: 0 14px; border: 1px solid #D6D6CF; background: #FFFFFF; border-radius: 9px; font-size: 13px; cursor: pointer; color: #15171A">Not the same</button></div>
+</sc-if>
+<sc-if value="{{pr.result}}" hint-placeholder-val="{{false}}"><span style="font-size: 13px; color: #166534">{{pr.result}}</span></sc-if>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { section: 'fields', object: 'org', flow: 0, reverted: {}, pairs: {} };
+  }
+  renderVals() {
+    const s = this.state;
+    const secDefs = [
+      { id: 'fields', label: 'Fields', sub: 'Custom fields per object', title: 'Fields', desc: 'Every object has fixed core fields plus the ones you add. Unique and required rules are checked on create, edit, import and the API.', cta: 'New field' },
+      { id: 'pipelines', label: 'Pipelines and stages', sub: 'Probability, required fields', title: 'Pipelines and stages', desc: 'Stages set the probability. Required fields stop a move until they are filled.', cta: 'New pipeline' },
+      { id: 'automations', label: 'Automations', sub: 'Triggers, conditions, actions', title: 'Automations', desc: 'When something happens, check a condition, then act. Delays and branches are steps like any other.', cta: 'New automation' },
+      { id: 'roles', label: 'Users and roles', sub: 'Who sees and edits what', title: 'Users and roles', desc: 'Each permission is set to all records, team records, own records or none, and the database enforces it.', cta: 'Invite user' },
+      { id: 'integrations', label: 'Integrations and API', sub: 'lemlist, Gmail, Moneybird', title: 'Integrations and API', desc: 'Connected services, API keys and outgoing webhooks.', cta: 'New API key' },
+      { id: 'import', label: 'Import and export', sub: 'CSV and XLSX, with undo', title: 'Import and export', desc: 'Map columns, preview what changes, import. Any import can be reverted.', cta: 'Import a file' },
+      { id: 'dupes', label: 'Duplicates', sub: 'Rules and merge history', title: 'Duplicates', desc: 'Exact rules block duplicates on create. Fuzzy matches land here for a person to decide.', cta: 'Run a scan' }
+    ];
+    const sections = secDefs.map((x) => ({ ...x, current: s.section === x.id ? 'page' : 'false', pick: () => this.setState({ section: x.id }),
+      style: 'text-align: left; min-height: 52px; padding: 8px 12px; border: 0; border-radius: 10px; cursor: pointer; color: #15171A; ' + (s.section === x.id ? 'background: #FFFFFF; box-shadow: 0 1px 2px rgba(0,0,0,0.1)' : 'background: transparent') }));
+    const sec = secDefs.find((x) => x.id === s.section);
+    const objDefs = [
+      { id: 'org', label: 'Organizations' }, { id: 'contact', label: 'Contacts' }, { id: 'lead', label: 'Leads' }, { id: 'deal', label: 'Deals' },
+      { id: 'project', label: 'Projects' }, { id: 'ticket', label: 'Tickets' }, { id: 'invoice', label: 'Invoices' }, { id: 'task', label: 'Tasks' }
+    ];
+    const objects = objDefs.map((o) => ({ ...o, active: s.object === o.id ? 'true' : 'false', pick: () => this.setState({ object: o.id }),
+      style: 'min-height: 40px; padding: 0 14px; border-radius: 9px; font-size: 13px; cursor: pointer; ' + (s.object === o.id ? 'background: #15171A; color: #FFFFFF; border: 1px solid #15171A' : 'background: #FFFFFF; color: #3A3E45; border: 1px solid #D6D6CF') }));
+    const core = 'font-size: 12px; border-radius: 6px; padding: 2px 7px; background: #F1F1EC; color: #3A3E45';
+    const custom = 'font-size: 12px; border-radius: 6px; padding: 2px 7px; background: #FDF3E1; color: #92400E';
+    const F = (label, key, type, group, rules, isCustom) => ({ label, key, type, group, rules, src: isCustom ? 'Custom' : 'Core', srcStyle: isCustom ? custom : core });
+    const fieldSets = {
+      org: [F('Name', 'name', 'Single line text', 'About', 'Required'), F('Domains', 'domains', 'Domain list', 'About', 'Unique, normalised'), F('Industry', 'industry', 'Dropdown', 'About', '24 options'),
+        F('Employees', 'employee_band', 'Dropdown', 'About', ''), F('Record owner', 'owner_id', 'User', 'Ownership', 'Required'), F('Account manager', 'account_manager_id', 'User', 'Ownership', ''),
+        F('Lifecycle stage', 'lifecycle_stage', 'Dropdown', 'Account', 'Set by system, forward only'), F('Health', 'health', 'Dropdown', 'Account', ''), F('KvK number', 'kvk_number', 'Single line text', 'Legal', '8 digits', true),
+        F('Open deal value', 'open_deal_value', 'Rollup, sum', 'Account', 'Calculated from deals', true)],
+      contact: [F('First name', 'first_name', 'Single line text', 'About', 'Required'), F('Emails', 'emails', 'Email list', 'About', 'Unique, case ignored'), F('LinkedIn URL', 'linkedin_url', 'URL', 'About', 'Unique, normalised'),
+        F('Job title', 'job_title', 'Single line text', 'About', ''), F('Lawful basis', 'lawful_basis', 'Dropdown', 'Privacy', 'Required'), F('Do not contact', 'do_not_contact', 'Checkbox', 'Privacy', 'Adds to suppression list'),
+        F('Preferred language', 'language', 'Dropdown', 'About', '', true)],
+      lead: [F('Stage', 'stage_id', 'Pipeline stage', 'Pipeline', 'Required'), F('Research status', 'research_status', 'Dropdown', 'Research', ''), F('Angle', 'angle', 'Multi line text', 'Research', '', true),
+        F('Worth', 'worth_eur', 'Currency', 'Research', 'At least €2,500', true), F('Disqualify reason', 'disqualify_reason', 'Dropdown', 'Pipeline', 'Required on Disqualified'), F('Accepted on LinkedIn', 'linkedin_accepted_at', 'Date and time', 'Source', 'From lemlist')],
+      deal: [F('Amount', 'amount', 'Currency', 'Deal', '€500 to €50,000 warns outside'), F('Close date', 'close_date', 'Date', 'Deal', 'Required'), F('Stage', 'stage_id', 'Pipeline stage', 'Deal', 'Required'),
+        F('Probability', 'probability', 'Percent', 'Deal', 'From stage'), F('Weighted amount', 'weighted_amount', 'Calculation', 'Deal', 'amount times probability', true), F('Lost reason', 'lost_reason', 'Dropdown', 'Close', 'Required on Lost'), F('Next step', 'next_step', 'Single line text', 'Deal', '')],
+      project: [F('Name', 'name', 'Single line text', 'About', 'Required'), F('Stage', 'stage_id', 'Pipeline stage', 'Delivery', ''), F('Health', 'health', 'Dropdown', 'Delivery', ''), F('Budget', 'budget', 'Currency', 'Money', 'From won deal'), F('Hours used', 'hours_used', 'Rollup, sum', 'Money', 'From time entries', true)],
+      ticket: [F('Subject', 'subject', 'Single line text', 'About', 'Required'), F('Priority', 'priority', 'Dropdown', 'About', ''), F('Status', 'status_id', 'Pipeline stage', 'About', ''), F('First reply due', 'first_reply_due_at', 'Date and time', 'SLA', 'Set by SLA policy'), F('Source', 'source', 'Dropdown', 'About', 'Portal, email, manual')],
+      invoice: [F('Number', 'number', 'Single line text', 'Legal', 'From Moneybird, gapless'), F('Status', 'status', 'Dropdown', 'Money', 'Draft, open, paid, late'), F('Due date', 'due_date', 'Date', 'Money', 'Required'), F('VAT treatment', 'vat_treatment', 'Dropdown', 'Legal', 'NL 21%, reverse charge, export')],
+      task: [F('Title', 'title', 'Single line text', 'Task', 'Required'), F('Type', 'type', 'Dropdown', 'Task', ''), F('Owner', 'owner_id', 'User', 'Task', 'Required'), F('Due', 'due_at', 'Date and time', 'Task', ''), F('Repeat', 'recurrence_rule', 'Repeat rule', 'Task', ''), F('Reminder', 'remind_before', 'Duration', 'Task', '')]
+    };
+    const stageRows = [
+      { n: 'Discovery booked', p: '15%', r: 'Meeting date', d: '7 days', t: 'Open' },
+      { n: 'Prototype agreed', p: '30%', r: 'Build card link', d: '10 days', t: 'Open' },
+      { n: 'Prototype sent', p: '40%', r: 'Prototype URL', d: '14 days', t: 'Open' },
+      { n: 'Proposal sent', p: '60%', r: 'Amount, quote', d: '10 days', t: 'Open' },
+      { n: 'Negotiation', p: '75%', r: 'Next step, decision date', d: '10 days', t: 'Open' },
+      { n: 'Contract sent', p: '90%', r: 'Signer', d: '7 days', t: 'Open' },
+      { n: 'Won', p: '100%', r: 'Won reason, start date', d: '', t: 'Closed won' },
+      { n: 'Lost', p: '0%', r: 'Lost reason', d: '', t: 'Closed lost' }
+    ];
+    const flowDefs = [
+      { name: 'Deal won, start delivery', on: true, runs: '5 runs, last 18 Sep', steps: [['When', 'A deal in Sales moves to Won'], ['Then', 'Create a project from the matching template, budget from the deal amount'], ['Then', 'Draft a 50% deposit invoice for Moneybird, billing contact from the organization'], ['Then', 'Set lifecycle to Customer and give Josh a kickoff task, due in 2 working days']] },
+      { name: 'LinkedIn reply, move the lead', on: true, runs: '41 runs this month', steps: [['When', 'lemlist reports a LinkedIn reply and the thread pull confirms it'], ['If', 'The lead is in Attempting'], ['Then', 'Move it to Connected and log the reply on the timeline'], ['Then', 'Task for the owner, reply today, priority High']] },
+      { name: 'No next step on an open deal', on: true, runs: '12 runs this month', steps: [['When', 'Every morning at 08:00'], ['If', 'An open deal has no open task, or it passed the stage rotting limit'], ['Then', 'Task for the deal owner, plan the next step'], ['Then', 'Flag the card red on the board']] },
+      { name: 'Quarterly check in', on: true, runs: 'Next run 1 Jan', steps: [['When', 'First Monday of every quarter'], ['If', 'Organization lifecycle is Customer'], ['Then', 'Check in task for the account manager, linked to the organization and its open project'], ['Then', 'Reminder 1 day before']] },
+      { name: 'Invoice late', on: true, runs: '3 runs this month', steps: [['When', 'Moneybird marks an invoice late'], ['Wait', '2 days'], ['If', 'Still not paid'], ['Then', 'Task for the account manager and a note on the organization']] },
+      { name: 'Portal ticket in', on: false, runs: 'Draft', steps: [['When', 'A client opens a ticket in the portal'], ['Then', 'Assign to the account manager and start the SLA clock for its priority'], ['Then', 'Confirm receipt to the client, after approval']] }
+    ];
+    const flows = flowDefs.map((f, i) => ({ name: f.name, runs: f.runs, state: f.on ? 'On' : 'Off', pick: () => this.setState({ flow: i }),
+      stateStyle: 'font-size: 12px; border-radius: 6px; padding: 2px 7px; ' + (f.on ? 'background: #E7F5EC; color: #166534' : 'background: #F1F1EC; color: #3A3E45'),
+      style: 'display: block; width: 100%; text-align: left; padding: 14px 16px; border: 0; border-bottom: 1px solid #F0F0EB; cursor: pointer; color: #15171A; ' + (s.flow === i ? 'background: #F4F4F1' : 'background: #FFFFFF') }));
+    const fd = flowDefs[s.flow];
+    const kindTone = { When: '#1E40AF', If: '#92400E', Then: '#15171A', Wait: '#5B6068' };
+    const flow = { name: fd.name, steps: fd.steps.map((st, i) => ({ n: String(i + 1), kind: st[0], text: st[1], dotStyle: 'width: 28px; height: 28px; border-radius: 14px; background: ' + kindTone[st[0]] + '; color: #FFFFFF; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center' })) };
+    const perms = [
+      { k: 'View organizations and contacts', a: 'All', s: 'All', m: 'All', c: 'Own organization only' },
+      { k: 'Edit deals', a: 'All', s: 'Own', m: 'Team', c: 'None' },
+      { k: 'Delete records', a: 'All', s: 'None', m: 'None', c: 'None' },
+      { k: 'Approve and send messages', a: 'Yes', s: 'Own', m: 'Own', c: 'No' },
+      { k: 'Invoices', a: 'All', s: 'View', m: 'Edit drafts', c: 'View own' },
+      { k: 'Export', a: 'Yes', s: 'No', m: 'No', c: 'No' },
+      { k: 'Settings, fields, automations', a: 'Yes', s: 'No', m: 'No', c: 'No' }
+    ];
+    const ok = 'font-size: 12px; border-radius: 6px; padding: 2px 7px; background: #E7F5EC; color: #166534';
+    const warn = 'font-size: 12px; border-radius: 6px; padding: 2px 7px; background: #FDF3E1; color: #92400E';
+    const integrations = [
+      { name: 'lemlist', state: 'Connected', stateStyle: ok, what: 'Webhooks for accepts and replies give a fast hint. Every hour each changed contact gets a full thread pull, checked against the message count.', meta: 'Last full reconcile 07:00, 1,212 threads, 0 mismatches' },
+      { name: 'Gmail', state: '2 of 3 inboxes', stateStyle: warn, what: 'Raka and Josh sync both ways and can send from the CRM. Emails match contacts by address, unknown senders wait in a review list.', meta: 'Luna has not connected yet' },
+      { name: 'Google Calendar', state: 'Connected', stateStyle: ok, what: 'Meetings with known contacts are logged with their outcome. Booking links create the meeting and the task.', meta: 'Synced 1 min ago' },
+      { name: 'Moneybird', state: 'Connected', stateStyle: ok, what: 'Draft invoices go across, Moneybird numbers and sends them, paid and late status comes back.', meta: 'Last sync 06:45' },
+      { name: 'API keys', state: '2 active', stateStyle: ok, what: 'Scoped keys for your own tools, for example the Claude routines read and write leads and tasks.', meta: 'claude-routines, read write leads. reporting, read only' },
+      { name: 'Outgoing webhooks', state: '1 endpoint', stateStyle: ok, what: 'Signed events with retries when a deal changes stage, a ticket opens or an invoice is paid.', meta: 'Slack bridge, 99.8% delivered' }
+    ];
+    const mapping = [
+      { col: 'Company', field: 'Organization, Name' }, { col: 'Website', field: 'Organization, Domain, match key' },
+      { col: 'Email', field: 'Contact, Email, match key' }, { col: 'Full name', field: 'Contact, First and last name' }, { col: 'Sector', field: 'Organization, Industry' }
+    ];
+    const impDefs = [
+      { id: 'i1', name: 'events-london.csv', meta: 'Ready to import, 212 rows', ready: true },
+      { id: 'i2', name: 'kvk-export-utrecht.xlsx', meta: '3 Nov, Raka, 88 created, 12 updated' },
+      { id: 'i3', name: 'lemlist backfill', meta: '28 Oct, system, 594 contacts, 3,181 rows merged' }
+    ];
+    const imports = impDefs.map((im) => {
+      const r = !!s.reverted[im.id];
+      return { name: im.name, meta: r ? 'Reverted just now, every change undone' : im.meta,
+        btn: im.ready ? 'Import' : (r ? 'Reverted' : 'Revert'),
+        revert: () => { if (!im.ready) this.setState({ reverted: { ...s.reverted, [im.id]: true } }); },
+        btnStyle: 'min-height: 40px; padding: 0 14px; border-radius: 9px; font-size: 13px; cursor: pointer; flex: none; ' + (im.ready ? 'background: #15171A; color: #FFFFFF; border: 0; font-weight: 600' : 'background: #FFFFFF; color: #15171A; border: 1px solid #D6D6CF') };
+    });
+    const dupRules = [
+      { n: 'Contacts, exact', d: 'Email, ignoring case and spaces. LinkedIn URL, cleaned to the profile slug. A match blocks creating a second record.' },
+      { n: 'Organizations, exact', d: 'Every domain they own, without https, www or path. Subdomains roll up to the main domain. Free mail like gmail.com never matches.' },
+      { n: 'Fuzzy, for review', d: 'Same name and city, or a similar name with the same phone. These never merge on their own.' }
+    ];
+    const pairDefs = [
+      { id: 'p1', a: 'Kessler Werkzeugbau GmbH', aSub: 'kessler-werkzeugbau.de · from lemlist', b: 'Kessler Werkzeugbau', bSub: 'no domain · added by hand', why: 'Same name and city' },
+      { id: 'p2', a: 'Tom Bakker', aSub: 'tom@dekade.nl · Brouwerij De Kade', b: 'Thomas Bakker', bSub: '+31 6 1234 5678 · no organization', why: 'Same phone' }
+    ];
+    const pairs = pairDefs.map((p) => {
+      const st = s.pairs[p.id];
+      return { ...p, open: !st, result: st === 'merged' ? 'Merged, activities and links moved, can be undone' : (st === 'kept' ? 'Marked as different people' : ''),
+        merge: () => this.setState({ pairs: { ...s.pairs, [p.id]: 'merged' } }), keep: () => this.setState({ pairs: { ...s.pairs, [p.id]: 'kept' } }) };
+    });
+    return {
+      sections, objects, flows, flow, perms, integrations, mapping, imports, dupRules, pairs, stageRows,
+      panelTitle: sec.title, panelSub: sec.desc, panelCta: sec.cta,
+      fieldRows: fieldSets[s.object],
+      fieldTypes: ['Single line text', 'Multi line text', 'Number', 'Currency', 'Percent', 'Date', 'Date and time', 'Dropdown', 'Multi select', 'Checkbox', 'User', 'Email', 'Phone', 'URL', 'File', 'Calculation', 'Rollup', 'Link to record'],
+      isFields: s.section === 'fields', isPipelines: s.section === 'pipelines', isAutomations: s.section === 'automations',
+      isRoles: s.section === 'roles', isIntegrations: s.section === 'integrations', isImport: s.section === 'import', isDupes: s.section === 'dupes'
+    };
+  }
+}
+</script>
+</body>
+</html>

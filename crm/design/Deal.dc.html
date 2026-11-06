@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Astra CRM, deal record</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F4F1}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+a.nav:hover{background:#20242A !important;color:#FFFFFF !important}
+button{font-family:inherit}
+dl{margin:0}dd{margin:0}
+</style>
+</helmet>
+<div style="font-family: Geist, Inter, system-ui, sans-serif; color: #15171A; background: #F4F4F1; display: flex; flex-wrap: wrap; align-items: stretch; min-height: 1300px">
+
+<nav aria-label="Main" style="flex: 1 1 220px; max-width: 100%; background: #15171A; color: #C9CCD1; padding: 20px 14px; display: flex; flex-direction: column; gap: 22px; box-sizing: border-box">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 30px; height: 30px; border-radius: 8px; background: #C2410C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px">A</div>
+<div style="color: #FFFFFF; font-weight: 600; font-size: 16px; letter-spacing: -0.01em">Astra CRM</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Work</div>
+<a class="nav" href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"></path></svg>Home</a>
+<a class="nav" href="Tasks.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="m8 12 3 3 5-6"></path></svg><span style="flex: 1">Tasks</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; background: #C2410C; color: #FFFFFF; border-radius: 10px; padding: 1px 7px">4</span></a>
+<a class="nav" href="Pipeline.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="5" height="16" rx="1"></rect><rect x="10" y="4" width="5" height="11" rx="1"></rect><rect x="17" y="4" width="4" height="7" rx="1"></rect></svg>Pipelines</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Records</div>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M15 9h4a1 1 0 0 1 1 1v11M3 21h18M8 8h3M8 12h3M8 16h3"></path></svg>Organizations</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Contacts</a>
+<a class="nav" href="Deal.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #FFFFFF; background: #262A31; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M17 7.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 2.2 2.6 5 3 5 1.3 5 3.2-2.2 3.1-5 3.1-5-1.2-5-3.1"></path></svg>Deals</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3zM8 7V4h8v3"></path></svg>Projects</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z"></path></svg>Tickets</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"></path></svg>Invoices</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Admin</div>
+<a class="nav" href="Settings.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"></path></svg>Settings</a>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #E2E2DC; padding: 18px 28px 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 13px; color: #5B6068"><a href="Pipeline.dc.html" style="text-decoration: none">Sales pipeline</a> / <a href="Organization.dc.html" style="text-decoration: none">Brouwerij De Kade</a></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h1 style="margin: 0; font-size: 26px; font-weight: 600; letter-spacing: -0.02em">Taproom booking app</h1>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; color: #3A3E45; align-items: baseline">
+<span style="font-family: 'Geist Mono', monospace; font-size: 22px; color: #15171A">€14,500</span>
+<span>Close 30 Nov</span><span>Owner Raka</span><span>{{probLine}}</span>
+<span style="font-size: 12px; font-weight: 500; color: #92400E; background: #FDF3E1; border-radius: 6px; padding: 3px 8px">Sample data</span>
+</div>
+</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<button type="button" style="min-height: 44px; padding: 0 14px; border: 1px solid #D6D6CF; background: #FFFFFF; border-radius: 10px; font-size: 14px; cursor: pointer; color: #15171A">New task</button>
+<button type="button" style="min-height: 44px; padding: 0 16px; border: 0; background: #15171A; color: #FFFFFF; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer">Write email</button>
+</div>
+</div>
+
+<ol aria-label="Stages" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{stages}}" as="st" hint-placeholder-count="8">
+<li style="flex: 1 1 110px"><button type="button" onClick="{{st.pick}}" aria-current="{{st.current}}" style="{{st.style}}"><span style="display: block; font-size: 13px; font-weight: 600">{{st.name}}</span><span style="display: block; font-size: 11px; margin-top: 2px">{{st.sub}}</span></button></li>
+</sc-for>
+</ol>
+
+<sc-if value="{{gateOpen}}" hint-placeholder-val="{{false}}">
+<div role="dialog" aria-label="{{gateTitle}}" style="border: 1px solid #D6D6CF; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 12px; background: #FAFAF8">
+<div style="display: flex; justify-content: space-between; gap: 8px; align-items: baseline; flex-wrap: wrap">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">{{gateTitle}}</h2>
+<span style="font-size: 12px; color: #5B6068">{{gateHint}}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<sc-for list="{{gateFields}}" as="gf" hint-placeholder-count="3">
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: #3A3E45">{{gf.label}}<input type="text" value="{{gf.value}}" placeholder="Required" style="height: 44px; border: 1px solid #D6D6CF; border-radius: 10px; padding: 0 12px; font-family: inherit; font-size: 14px; background: #FFFFFF"></label>
+</sc-for>
+</div>
+<sc-if value="{{gateEffects}}" hint-placeholder-val="{{false}}"><div style="font-size: 13px; color: #166534; background: #E7F5EC; border-radius: 9px; padding: 10px 12px">{{gateEffects}}</div></sc-if>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<button type="button" onClick="{{confirm}}" style="min-height: 44px; padding: 0 16px; border: 0; background: #C2410C; color: #FFFFFF; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer">{{gateCta}}</button>
+<button type="button" onClick="{{cancel}}" style="min-height: 44px; padding: 0 16px; border: 1px solid #D6D6CF; background: #FFFFFF; border-radius: 10px; font-size: 14px; cursor: pointer; color: #15171A">Cancel</button>
+</div>
+</div>
+</sc-if>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 24px 28px; align-items: flex-start">
+
+<section aria-labelledby="df-h" style="flex: 1 1 260px; max-width: 100%; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; padding: 14px 16px">
+<h2 id="df-h" style="margin: 0 0 10px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #3A3E45">Deal details</h2>
+<dl style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{fields}}" as="f" hint-placeholder-count="8">
+<div style="display: flex; flex-direction: column; gap: 2px"><dt style="font-size: 12px; color: #5B6068">{{f.k}}</dt><dd style="font-size: 14px">{{f.v}}</dd></div>
+</sc-for>
+</dl>
+</section>
+
+<div style="flex: 3 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+<section aria-labelledby="li-h" style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; overflow: hidden">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding: 14px 16px; border-bottom: 1px solid #ECECE7; align-items: center">
+<h2 id="li-h" style="margin: 0; font-size: 16px; font-weight: 600">Quote Q-2026-019, sent 28 Oct</h2>
+<span style="font-size: 12px; color: #1E40AF; background: #E8EEFD; border-radius: 6px; padding: 3px 8px">Viewed 3 times</span>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px">
+<thead><tr>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Line item</th>
+<th scope="col" style="text-align: right; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Qty</th>
+<th scope="col" style="text-align: right; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Price</th>
+<th scope="col" style="text-align: right; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Total</th>
+</tr></thead>
+<tbody>
+<sc-for list="{{lines}}" as="l" hint-placeholder-count="4">
+<tr><td style="padding: 12px 16px; border-top: 1px solid #F0F0EB">{{l.name}}<div style="font-size: 12px; color: #5B6068">{{l.note}}</div></td><td style="padding: 12px 16px; border-top: 1px solid #F0F0EB; text-align: right; font-family: 'Geist Mono', monospace">{{l.qty}}</td><td style="padding: 12px 16px; border-top: 1px solid #F0F0EB; text-align: right; font-family: 'Geist Mono', monospace">{{l.price}}</td><td style="padding: 12px 16px; border-top: 1px solid #F0F0EB; text-align: right; font-family: 'Geist Mono', monospace">{{l.total}}</td></tr>
+</sc-for>
+<tr><td colspan="3" style="padding: 12px 16px; border-top: 1px solid #E2E2DC; text-align: right; color: #5B6068">Subtotal excl. VAT</td><td style="padding: 12px 16px; border-top: 1px solid #E2E2DC; text-align: right; font-family: 'Geist Mono', monospace; font-weight: 500">€14,500</td></tr>
+<tr><td colspan="3" style="padding: 4px 16px 14px; text-align: right; color: #5B6068">VAT 21%, NL</td><td style="padding: 4px 16px 14px; text-align: right; font-family: 'Geist Mono', monospace">€3,045</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section aria-labelledby="sh-h" style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; overflow: hidden">
+<div style="padding: 14px 16px; border-bottom: 1px solid #ECECE7"><h2 id="sh-h" style="margin: 0; font-size: 16px; font-weight: 600">Stage history</h2></div>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 520px">
+<thead><tr>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Stage</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Entered</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Time in stage</th>
+<th scope="col" style="text-align: left; font-size: 12px; font-weight: 500; color: #5B6068; padding: 10px 16px; background: #FAFAF8">Moved by</th>
+</tr></thead>
+<tbody>
+<sc-for list="{{history}}" as="h" hint-placeholder-count="4">
+<tr><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{h.s}}</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{h.e}}</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{h.t}}</td><td style="padding: 11px 16px; border-top: 1px solid #F0F0EB">{{h.b}}</td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</section>
+
+</div>
+
+<div style="flex: 1 1 260px; max-width: 100%; display: flex; flex-direction: column; gap: 14px">
+<section aria-labelledby="dc-h" style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+<h2 id="dc-h" style="margin: 0; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #3A3E45">Contacts on this deal</h2>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 500">Eva Jansen</span><span style="font-size: 12px; color: #5B6068">Decision maker · eva@dekade.nl</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 500">Tom Bakker</span><span style="font-size: 12px; color: #5B6068">Champion, day to day user</span></div>
+<button type="button" style="min-height: 40px; border: 1px dashed #A9ADB4; background: #FFFFFF; border-radius: 9px; font-size: 13px; cursor: pointer; color: #3A3E45">Link a contact with a role</button>
+</section>
+<section aria-labelledby="dt-h" style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+<h2 id="dt-h" style="margin: 0; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #3A3E45">Next tasks</h2>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 500">Answer the deposit question</span><span style="font-size: 12px; color: #B45309">Raka · Today 14:00</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 500">Review scope with the team</span><span style="font-size: 12px; color: #5B6068">Josh · Today 13:00</span></div>
+</section>
+<section aria-labelledby="dr-h" style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 8px">
+<h2 id="dr-h" style="margin: 0; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #3A3E45">Linked</h2>
+<a href="Organization.dc.html" style="font-size: 14px; text-decoration: none">Brouwerij De Kade, customer</a>
+<span style="font-size: 14px">Prototype, booking flow v2</span>
+<span style="font-size: 14px">Lead from LinkedIn, qualified 5 Sep</span>
+<span style="font-size: 13px; color: #5B6068">On won, a project and a 50% deposit invoice draft are created.</span>
+</section>
+</div>
+
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { current: 3, target: null, moves: [] };
+  }
+  renderVals() {
+    const s = this.state;
+    const defs = [
+      { name: 'Discovery booked', p: 15, req: [] },
+      { name: 'Prototype agreed', p: 30, req: [] },
+      { name: 'Prototype sent', p: 40, req: [] },
+      { name: 'Proposal sent', p: 60, req: [] },
+      { name: 'Negotiation', p: 75, req: [{ label: 'Next step', value: 'Pricing call with Eva' }, { label: 'Decision date', value: '' }] },
+      { name: 'Contract sent', p: 90, req: [{ label: 'Contract sent on', value: '' }, { label: 'Signer', value: 'Eva Jansen' }] },
+      { name: 'Won', p: 100, req: [{ label: 'Won reason', value: '' }, { label: 'Start date', value: '' }], effects: 'On save, a project is created from the App build template, Josh is set as lead, and a 50% deposit invoice draft is made for Moneybird.' },
+      { name: 'Lost', p: 0, req: [{ label: 'Lost reason', value: '' }, { label: 'Competitor or alternative', value: '' }] }
+    ];
+    const cur = s.current;
+    const stages = defs.map((d, i) => {
+      const isCur = i === cur;
+      const passed = i < cur && i < 6;
+      const isTarget = s.target === i;
+      let bg = '#F1F1EC', fg = '#3A3E45', border = '1px solid transparent';
+      if (passed) { bg = '#E4E7EC'; fg = '#15171A'; }
+      if (isCur) { bg = '#15171A'; fg = '#FFFFFF'; }
+      if (i === 6 && isCur) { bg = '#166534'; }
+      if (i === 7 && isCur) { bg = '#B91C1C'; }
+      if (isTarget) { border = '2px solid #C2410C'; }
+      return {
+        name: d.name,
+        sub: (i === 7 ? 'Closed' : d.p + '%') + (passed ? ' · done' : ''),
+        current: isCur ? 'step' : 'false',
+        pick: () => { if (i !== cur) this.setState({ target: i }); },
+        style: 'width: 100%; min-height: 52px; text-align: left; padding: 8px 12px; border-radius: 10px; cursor: pointer; background: ' + bg + '; color: ' + fg + '; border: ' + border
+      };
+    });
+    const t = s.target;
+    const td = t === null ? null : defs[t];
+    const backwards = t !== null && t < cur && t < 6;
+    const history = [
+      { s: 'Discovery booked', e: '28 Sep', t: '4 days', b: 'Raka' },
+      { s: 'Prototype agreed', e: '2 Oct', t: '14 days', b: 'Raka' },
+      { s: 'Prototype sent', e: '16 Oct', t: '12 days', b: 'Raka' },
+      { s: 'Proposal sent', e: '28 Oct', t: '9 days so far', b: 'Raka' }
+    ].concat(s.moves);
+    const p = defs[cur].p;
+    return {
+      stages,
+      probLine: defs[cur].name + ' · ' + p + '% · weighted €' + Math.round(14500 * p / 100).toLocaleString('en-US'),
+      gateOpen: t !== null,
+      gateTitle: td ? (backwards ? 'Move back to ' + td.name + '?' : 'To enter ' + td.name + ', fill these in') : '',
+      gateHint: td ? (backwards ? 'Moving back is allowed for admins and gets logged' : 'Required fields are set per stage in Settings') : '',
+      gateFields: td && !backwards ? td.req : [{ label: 'Reason for moving back', value: '' }],
+      gateEffects: td && td.effects ? td.effects : '',
+      gateCta: td ? 'Move to ' + td.name : '',
+      confirm: () => this.setState({ current: t, target: null, moves: s.moves.concat([{ s: defs[t].name, e: '6 Nov', t: 'Just now', b: 'Raka' }]) }),
+      cancel: () => this.setState({ target: null }),
+      fields: [
+        { k: 'Pipeline', v: 'Sales, new business' },
+        { k: 'Amount', v: '€14,500 excl. VAT' },
+        { k: 'Forecast category', v: 'Best case' },
+        { k: 'Expected close', v: '30 Nov 2026' },
+        { k: 'Next step', v: 'Answer the deposit question, then a pricing call' },
+        { k: 'Owner', v: 'Raka Mulya' },
+        { k: 'Team', v: 'Josh, build lead' },
+        { k: 'Source', v: 'Lead pipeline, LinkedIn via lemlist' },
+        { k: 'Angle', v: 'Lost Friday bookings to no shows' },
+        { k: 'Created', v: '28 Sep 2026' }
+      ],
+      lines: [
+        { name: 'Booking flow with deposits', note: 'Table booking, deposit by iDEAL or card', qty: '1', price: '€6,500', total: '€6,500' },
+        { name: 'Waitlist and no show handling', note: 'Auto offer freed tables to the waitlist', qty: '1', price: '€3,000', total: '€3,000' },
+        { name: 'Staff dashboard', note: 'Tonight view, covers, deposits taken', qty: '1', price: '€3,500', total: '€3,500' },
+        { name: 'Launch support', note: 'One month, fixes and tweaks', qty: '1', price: '€1,500', total: '€1,500' }
+      ],
+      history
+    };
+  }
+}
+</script>
+</body>
+</html>
