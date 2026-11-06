@@ -54,6 +54,7 @@
   </section>
 
   <section class="crack" id="crack" aria-labelledby="crack-h">
+    <div class="thread" data-thread aria-hidden="true"><i></i></div>
     <div class="crack-head">
       <h2 id="crack-h">Every game starts the same way. The first puzzle opens the box.</h2>
       <p class="crack-sub" data-crack-sub>Crack this one and see what's inside for your venue. Three digits. They're on every cup, and they're our name.</p>
@@ -61,6 +62,7 @@
 
     <div class="crack-grid">
       <div class="stage" data-stage>
+        <div class="scene" data-scene aria-hidden="true"></div>
         <div class="table-light" aria-hidden="true"></div>
         <div class="box" data-box>
           <picture class="box-inside">
@@ -80,6 +82,7 @@
         </div>
 
         <div class="lock" data-lock role="group" aria-label="Combination lock, three wheels">
+          <div class="halo" data-halo aria-hidden="true"></div>
           <div class="shackle" aria-hidden="true"></div>
           <div class="lock-body">
             <div class="wheel" data-wheel="0" tabindex="0" role="spinbutton" aria-label="First digit" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
@@ -105,20 +108,27 @@
       <div class="panel" data-panel>
         <div class="panel-closed" data-closed>
           <p class="panel-big">Spin the wheels.</p>
-          <p class="panel-note">Tap a wheel and use the arrows, scroll it, or drag it up and down. That's the feeling your guests get, six times a game.</p>
+          <p class="panel-note">Tap the arrows, scroll a wheel or drag it. That click is the feeling your guests get, six times a game.</p>
         </div>
         <div class="panel-open" data-open hidden>
           <h3 class="panel-q" id="venue-q">Who's opening it?</h3>
           <div class="venues" role="radiogroup" aria-labelledby="venue-q" data-venues></div>
+          <div class="result" data-result hidden>
           <ol class="items" data-items></ol>
           <div class="money" data-money hidden>
+            <p class="money-big" data-money-big></p>
             <p class="money-line" data-money-line></p>
+            <div class="bars" data-bars aria-hidden="true">
+              <div class="bar"><span class="bar-l">Rent</span><span class="bar-t"><i class="bar-f rent" data-bar-rent></i></span><span class="bar-v">£60</span></div>
+              <div class="bar"><span class="bar-l">Your takings</span><span class="bar-t"><i class="bar-f take" data-bar-take></i></span><span class="bar-v" data-bar-take-v></span></div>
+            </div>
             <p class="money-ask">So why isn't it on your tables yet?</p>
             <div class="money-act">
               <a class="btn btn-solid" href="#get" data-order>Get your box</a>
               <a class="btn btn-line" href="#get">Work out your own numbers</a>
             </div>
             <p class="money-small" data-money-small></p>
+          </div>
           </div>
         </div>
       </div>

@@ -175,3 +175,76 @@ h2 { margin: 0 0 18px; font-weight: 700; font-size: clamp(36px, 4.6vw, 74px); li
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; transition-delay: 0s !important; animation-delay: 0s !important; }
 }
+
+/* ---------- v3.1, the wow layer (Raka 6 Nov, "Is this the best design we can do? ... The wow effect!!") ---------- */
+/* the hero arrives */
+.h1-a, .h1-b, .lede, .hero-act, .price { animation: rise 1s cubic-bezier(.2,.8,.2,1) both; }
+.h1-b { animation-delay: .12s; } .lede { animation-delay: .24s; } .hero-act { animation-delay: .34s; } .price { animation-delay: .42s; }
+.hero-film { animation: open-tile 1.4s cubic-bezier(.2,.8,.2,1) both .1s; }
+@keyframes open-tile { from { clip-path: inset(12% 10% 12% 10% round 28px); } to { clip-path: inset(0 0 0 0 round 28px); } }
+
+/* the thread, drawn as you scroll, from the hero into the lock */
+.crack { padding-top: clamp(130px, 17vh, 190px); }
+.thread { position: absolute; left: 50%; top: 0; width: 2px; height: clamp(96px, 13vh, 150px); transform: translateX(-50%); background: rgba(0,0,0,.07); overflow: hidden; }
+.thread i { position: absolute; inset: 0; background: linear-gradient(180deg, #ffa646, #ff2f4e 70%, #d81b72); transform-origin: top; transform: scaleY(var(--p, 0)); }
+
+/* the box, centred and big like a product shot, tilting with the pointer */
+.crack-head { text-align: center; margin: 0 auto clamp(40px, 6vh, 64px); }
+.crack-sub { margin: 0 auto; }
+.crack-grid { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+.stage { width: min(100%, 880px); }
+.box { z-index: 1; transform: perspective(1500px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .35s ease-out; }
+.box-inside img { box-shadow: 0 50px 90px -40px rgba(0,0,0,.45); }
+
+/* the venue, the box lands on their table */
+.scene { position: absolute; left: -9%; right: -9%; top: -8%; bottom: 40px; z-index: 0; border-radius: 34px; overflow: hidden; opacity: 0; transform: scale(.94); transition: opacity .9s ease, transform 1.2s cubic-bezier(.2,.8,.2,1); background: #111; }
+.scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity .8s ease, transform 6s ease-out; }
+.scene img.on { opacity: 1; transform: scale(1); }
+.stage.has-scene .scene { opacity: 1; transform: none; }
+.stage.has-scene .table-light { opacity: 0; }
+
+/* the halo, his gradient as a ring that turns with the wheels and bursts on the click */
+.lock { isolation: isolate; }
+.halo { position: absolute; left: 50%; top: 62%; width: 300px; height: 300px; z-index: -1; border-radius: 50%; pointer-events: none;
+  background: conic-gradient(from 0deg, #ffa646, #ff6a3d, #ff2f4e, #d81b72, #ff6a3d, #ffa646);
+  -webkit-mask: radial-gradient(closest-side, transparent 70%, #000 71.5%, #000 100%); mask: radial-gradient(closest-side, transparent 70%, #000 71.5%, #000 100%);
+  transform: translate(-50%, -50%) rotate(var(--a, 0deg)) scale(var(--s, 1)); transition: transform .55s cubic-bezier(.3,1.4,.5,1), opacity .8s ease; opacity: .95; }
+.lock.unlocked .halo { --s: 2.8; opacity: 0; transition: transform .9s cubic-bezier(.2,.8,.2,1), opacity .9s ease; }
+.wheel.tick .w-win { animation: tick .24s cubic-bezier(.3,1.6,.5,1); }
+@keyframes tick { 40% { transform: scale(1.07); } }
+
+/* who is opening it, as pictures */
+.panel { width: min(100%, 1140px); margin: clamp(36px, 5vh, 56px) auto 0; min-height: 0; }
+.panel-closed { text-align: center; }
+.panel-note { margin: 0 auto; }
+.panel-q { text-align: center; margin-bottom: 22px; }
+.venues { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; border: 0; margin-bottom: clamp(36px, 5vh, 56px); }
+.venue { flex-direction: column; align-items: stretch; justify-content: flex-start; padding: 0; border: 0; color: var(--ink); font-size: 16px; font-weight: 640; }
+.venue::after { display: none; }
+.venue picture { display: block; border-radius: 16px; overflow: hidden; outline: 3px solid transparent; outline-offset: 3px; transition: outline-color .25s; }
+.venue img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.venue:hover img { transform: scale(1.04); }
+.venue span { display: block; padding: 10px 2px 0; }
+.venue[aria-checked="true"] { padding-left: 0; }
+.venue[aria-checked="true"] picture { outline-color: #ff4a2e; }
+.result { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 72px); align-items: start; animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
+.money { border-top: 0; padding-top: 0; }
+.money-big { margin: 0 0 6px; font-size: clamp(76px, 9.5vw, 156px); font-weight: 780; letter-spacing: -0.055em; line-height: .88; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.bars { display: grid; gap: 12px; margin: 20px 0 22px; }
+.bar { display: grid; grid-template-columns: 104px minmax(0, 1fr) 64px; align-items: center; gap: 12px; font-size: 14px; color: var(--ink-2); }
+.bar-t { position: relative; height: 14px; border-radius: 7px; background: #e8e8ed; overflow: hidden; }
+.bar-f { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 7px; transition: width 1.2s cubic-bezier(.2,.8,.2,1) .15s; }
+.bar-f.rent { background: var(--ink); }
+.bar-f.take { background: var(--grad); }
+.bar-v { font-family: var(--mono); font-size: 13px; text-align: right; color: var(--ink); }
+
+@media (max-width: 980px) {
+  .result { grid-template-columns: minmax(0, 1fr); }
+  .venues { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 42%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+  .venue { scroll-snap-align: start; }
+}
+@media (max-width: 700px) {
+  .venues { grid-auto-columns: 62%; }
+  .halo { width: 250px; height: 250px; }
+  .scene { left: -12px; right: -12px; border-radius: 24px; bottom: 0; }
+}

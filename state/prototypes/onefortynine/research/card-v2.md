@@ -101,3 +101,23 @@ behind it is `deep-needs-2026-11-06.md`, `call-analysis-2026-11-05.md`, `rebrand
 - **The film is stock.** Owen's own film of people playing (NEC stand, the trial) should replace it.
 - **The inside photo** is still his phone shot of grey plastic. It reads true, a better one would lift the moment most.
 - **The hero band at 1440 x 900** is the film over 56% of the screen with the headline and buttons below, all on screen.
+
+## v3.1, the wow layer (Raka 6 Nov, "Is this the best design we can do? Animations, pictures graphs features ... The wow effect!!")
+
+Measured against Apple's AirPods Pro page (product huge on white, one iridescent ring as the signature, giant single numbers,
+16 films) and Lusion (a line drawn through the page as you scroll), both rendered and scrolled 6 Nov. Awwwards answered 502,
+Active Theory refuses headless browsers.
+
+- **The hero arrives.** The film tile opens from a smaller frame, the headline lines rise in turn.
+- **The thread.** A line in his gradient draws itself down from the hero into the box as you scroll.
+- **The box as a product shot.** Centred and big on the light sweep, tilting a few degrees with the pointer until it opens.
+- **The halo.** His gradient as a ring behind the lock, it turns a notch with every wheel click, and bursts outward over the box
+  when 1 4 9 lands. Each wheel snaps with a small bounce, phones get a 6 ms vibration.
+- **Pictures to choose with.** "Who's opening it?" is five photo tiles (pub, cafe, park, training room, lodge), stills cut from
+  the same four Mixkit Free clips plus Nice night between friends with a campfire 42754 (Free, read on its page 6 Nov). The cafe
+  mug carries a geometric pattern, zoomed and checked, no wordmark.
+- **The box lands on their table.** The chosen venue's photo fills a rounded scene behind his open box.
+- **The graph and the number.** The multiple of the rent set huge in the gradient (2.9×, 4.3×, 3.6×, 3×, or "8 months" to pay
+  back for lodges), with two bars, the £60 rent against their takings, growing on choose. No count ups, the numbers are set, the
+  bars grow.
+- check-build PASS, 0 page errors at 1440 and 390, frames in `first-look-v8/`.
