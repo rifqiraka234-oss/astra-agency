@@ -193,7 +193,7 @@ window.__cb = (function () {
       if (t === 'svg' || t === 'SVG') { const r = e.getBoundingClientRect(); if (r.width * r.height >= 0.08 * vw() * vh()) return true; }
       const s = getComputedStyle(e);
       if (/url\\(/.test(s.backgroundImage) && !/repeat(?!-)/.test(s.backgroundRepeat.replace('no-repeat', ''))) { const r = e.getBoundingClientRect(); if (r.width * r.height >= 0.08 * vw() * vh()) return true; }
-      if (/url\\(/.test(s.maskImage || s.webkitMaskImage || '') && e.querySelector('img, video, canvas')) return true;
+      if (/url\\(/.test(s.maskImage || s.webkitMaskImage || '') && [...e.querySelectorAll('img, video, canvas')].some(m => getComputedStyle(m).visibility !== 'hidden' && opac(m) >= 0.2)) return true;
       if (alpha(s.backgroundColor) >= 0.95 && opac(e) >= 0.95) return false;
     }
     return false;
