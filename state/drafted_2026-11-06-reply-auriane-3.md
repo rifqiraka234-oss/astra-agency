@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-06 on Raka's "send", act_QvBg7dkkLXzT7Nnf5, one copy, 389 chars. Thread 5 items before, 6 after. Do not send again.
+
 # Reply, Auriane Rezé-Duclos, LOCA, 6 Nov 2026. NOT SENT, needs Raka's word.
 
 ### Auriane Rezé-Duclos, LOCA, ctc_cnzfXKz94xdeD5sMv
@@ -17,12 +20,13 @@
 > "end of year drinks" is the season, November, an inference worded as what it would spot.
 
 > Raka 6 Nov edit, "outbound so they get more sales. is this something maybe beneficial for you?". Redrafted, not sent.
+> Raka 6 Nov second edit, "we have a french sales rep as well. and just cut it to For LOCA it'd spot ... before they book someone else." French rep is Raka's own fact. Redrafted, not sent.
 
 REPLY
 ```
-I run Astra, we build AI powered signal engines and run the outbound for small businesses so they get more sales.
+I run Astra, we build AI powered signal engines and run the outbound for small businesses so they get more sales. We've got a French sales rep as well.
 
-For LOCA it'd spot Sarthe companies planning a seminar, a team day or their end of year drinks, and get your buffet pro in front of whoever organises it before they book someone else. The Surfonds seminar and that event for several hundred people on your site are the kind of orders it would go after.
+For LOCA it'd spot Sarthe companies planning a seminar, a team day or their end of year drinks, and get your buffet pro in front of whoever organises it before they book someone else.
 
 Is this something that could be beneficial for you?
 ```
