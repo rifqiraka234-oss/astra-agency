@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-06 on Raka's "send", act_oYngTtgutaotHhKw6, one copy. Do not send again.
+
 # Replies, 6 Nov 2026. NOT SENT, each needs Raka's word.
 
 ### Auriane Rezé-Duclos, En Route, Mauvaise Troupe, ctc_cnzfXKz94xdeD5sMv
@@ -17,3 +20,4 @@ REPLY
 ```
 Ha, the travel blog! I liked the Edinburgh roadbook, the stories behind each place plus the walks you've tested yourself. What's the other one?
 ```
+
