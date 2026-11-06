@@ -377,6 +377,12 @@ async function acceptEvents(campaignId: string, opts: { since?: string } = {}): 
   return out;
 }
 
+/** Campaign stats over all time. invitationAccepted is the number accept events must reconcile with. */
+async function campaignStats(campaignId: string): Promise<{ invitationAccepted?: number; [key: string]: unknown }> {
+  const end = new Date(Date.now() + 86_400_000).toISOString().slice(0, 10);
+  return request(`/v2/campaigns/${encodeURIComponent(campaignId)}/stats?startDate=2020-01-01&endDate=${end}`);
+}
+
 async function contact(contactId: string): Promise<LemlistContact> {
   const d = await request<LemlistContact>(`/contacts/${encodeURIComponent(contactId)}`);
   if (!d || typeof d !== 'object' || !('_id' in d)) throw new LemlistError('Unexpected shape for a contact', 200, contactId);
@@ -412,4 +418,4 @@ async function thread(contactId: string): Promise<LemlistThread> {
   return { contactId, items, totalItems, pages, complete: problem === null, problem };
 }
 
-export const lemlist = { request, campaigns, campaignLeadIds, campaignLeadsExport, acceptEvents, contact, thread };
+export const lemlist = { request, campaigns, campaignStats, campaignLeadIds, campaignLeadsExport, acceptEvents, contact, thread };

@@ -33,6 +33,15 @@ export const VAT_TREATMENT_OPTIONS: Option[] = [
   { value: 'outside_scope', label: 'Outside the scope of VAT' },
 ];
 
+const EU = new Set(['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE']);
+
+/** A starting treatment from the customer's country: NL 21%, another EU country reverse charge, elsewhere export. */
+export function suggestTreatment(country: string | null | undefined): VatTreatment {
+  const c = (country ?? '').trim().toUpperCase();
+  if (!c || c === 'NL') return 'nl_21';
+  return EU.has(c) ? 'reverse_charge' : 'export';
+}
+
 /** Rates a line may carry under a Dutch treatment. */
 export const NL_LINE_RATES: Option[] = [
   { value: '21', label: '21%' },

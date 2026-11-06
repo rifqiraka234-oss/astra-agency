@@ -139,7 +139,7 @@ export function ListEditor({
           <input
             id={inputId}
             name={input.name}
-            className="input"
+            className={`input ${styles.grow}`}
             type={input.type ?? 'text'}
             inputMode={input.inputMode}
             placeholder={input.placeholder ?? input.label}

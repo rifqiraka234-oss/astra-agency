@@ -88,7 +88,7 @@ export async function scanDuplicates(db: Db = sql, limit = 200): Promise<DupePai
     select o.id, o.name, o.city, o.source, o.created_at,
            (select d.domain_normalised from organization_domains d where d.organization_id = o.id order by d.is_primary desc, d.created_at limit 1) as domain
       from organizations o where o.deleted_at is null`;
-  const byName = new Map<string, typeof orgs>();
+  const byName = new Map<string, (typeof orgs)[number][]>();
   for (const o of orgs) {
     const n = normCompanyName(o.name);
     if (n.length < 2) continue;

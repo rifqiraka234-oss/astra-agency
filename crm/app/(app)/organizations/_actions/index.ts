@@ -13,6 +13,7 @@ import { can } from '@/lib/permissions';
 import { fail, str, strs, bool, zodFieldErrors, type ActionState } from '@/lib/forms';
 import { getFieldDefinitions, parseCustomForm, validateCustom } from '@/lib/fields';
 import { logActivity } from '@/lib/activities';
+import { emit } from '@/lib/events';
 import { createTask, type TaskType } from '@/lib/tasks';
 import { amsterdamTime, fromDatetimeLocal, todayKey } from '@/lib/format';
 import { labelOf, LIFECYCLE_STAGES } from '@/lib/options';
@@ -350,6 +351,7 @@ export async function addRoleAction(_prev: ActionState, fd: FormData): Promise<A
         async (t) => {
           const id = await createContactAt(t, { ...base, firstName: first, lastName: str(fd, 'last_name'), email: str(fd, 'email'), linkedin: null, ownerUserId: user.id });
           await logActivity({ kind: 'system', title: `Contact created by ${user.name}`, actorUserId: user.id, source: 'system', links: [{ contactId: id }, { organizationId: org.id }], autoLink: false }, t);
+          await emit(t, 'record.created', { type: 'contact', id, organizationId: org.id }, { aggregateType: 'contact', aggregateId: id, actorUserId: user.id });
           return id;
         },
         { userId: user.id },

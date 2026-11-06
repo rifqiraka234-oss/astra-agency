@@ -566,6 +566,13 @@ export async function listLeads(f: LeadListFilters, limit = 500): Promise<{ rows
   return { rows, total: rows[0]?.total ?? 0 };
 }
 
+/** Open stages of a pipeline by key, for create forms. */
+export async function openStagesOf(pipelineKey: string) {
+  return sql<{ id: string; name: string }[]>`
+    select s.id, s.name from pipeline_stages s join pipelines p on p.id = s.pipeline_id
+     where p.key = ${pipelineKey} and s.state = 'open' and s.archived_at is null order by s.position`;
+}
+
 export async function leadFilterOptions() {
   const [stages, sources] = await Promise.all([
     sql<{ id: string; key: string; name: string }[]>`

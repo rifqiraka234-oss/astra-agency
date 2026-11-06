@@ -264,6 +264,11 @@ export async function issueInvoice(
 ): Promise<IssueResult> {
   const inv = await lockDraft(t, id);
   if (!inv.organization_id) throw new InvoiceError('Pick the organization the invoice is for before issuing it');
+  if (inv.vat_treatment === 'reverse_charge') {
+    // Art. 226 needs the customer's VAT number on a reverse charge invoice.
+    const [org] = await t<{ vat_number: string | null; name: string }[]>`select vat_number, name from organizations where id = ${inv.organization_id}`;
+    if (!org?.vat_number) throw new InvoiceError(`Add the VAT number of ${org?.name ?? 'the organization'} first, a reverse charge invoice must show it`);
+  }
   const lines = await getInvoiceLines(t, id);
   if (lines.length === 0) throw new InvoiceError('Add at least one line before issuing');
   const totals = invoiceTotals(lines, inv.vat_treatment);

@@ -25,6 +25,7 @@
 
 .listCard {
   overflow: hidden;
+  position: relative;
 }
 .listFoot {
   display: flex;
@@ -104,6 +105,7 @@
   min-height: 32px;
   padding: 0 4px;
   font-family: inherit;
+  white-space: nowrap;
 }
 .linkBtn:disabled {
   color: var(--text-faint);
@@ -119,8 +121,9 @@
   gap: 8px;
   align-items: flex-start;
 }
-.inlineForm > :first-child {
-  flex: 1 1 160px;
+.grow {
+  flex: 1 1 140px;
+  width: auto;
   min-width: 0;
 }
 .inlineError {
@@ -141,6 +144,7 @@
 
 .tabCard {
   overflow: hidden;
+  position: relative;
 }
 .tabHead {
   display: flex;
