@@ -1,0 +1,500 @@
+<title>GTM Engine Check</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout. One question per screen on a navy field, then a long results report built like a diagnosis, summary first. */
+:root{
+  --bg:#f3efec; --surface:#ffffff; --ink:#14203a; --muted:#5b6478; --line:#ddd6d0;
+  --navy:#0d1b38; --slate:#405b8d; --sand:#e6ddd8; --accent:#405b8d; --accent-ink:#ffffff;
+  --good:#2f7d5b; --warn:#b7791f; --bad:#b4413a; --track:#e9e3de;
+  --display:"Gloock", Georgia, "Times New Roman", serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0b1428; --surface:#13203d; --ink:#eef0f5; --muted:#a7b0c4; --line:#26355a;
+  --navy:#060d1d; --slate:#8fa6d4; --sand:#e6ddd8; --accent:#8fa6d4; --accent-ink:#0b1428;
+  --good:#5cc29a; --warn:#e2b35a; --bad:#ec8077; --track:#1e2c4d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b1428; --surface:#13203d; --ink:#eef0f5; --muted:#a7b0c4; --line:#26355a;
+  --navy:#060d1d; --slate:#8fa6d4; --sand:#e6ddd8; --accent:#8fa6d4; --accent-ink:#0b1428;
+  --good:#5cc29a; --warn:#e2b35a; --bad:#ec8077; --track:#1e2c4d; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,5vw,56px)}
+h2{font-size:clamp(26px,3.4vw,36px)}
+h3{font-size:22px}
+p{margin:0}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.brand{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:28px}
+.brand b{font-size:13px;letter-spacing:.14em}
+.brand span{font-size:13px;color:var(--muted)}
+button{font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn{border:0;border-radius:999px;padding:14px 26px;font-weight:600;background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn:disabled{opacity:.4;cursor:default}
+
+/* intro */
+.intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:start}
+.intro .lede{color:var(--muted);margin-top:16px;max-width:52ch}
+.doors{display:grid;gap:14px;margin-top:28px}
+.door{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:20px;color:var(--ink);transition:border-color .15s,transform .15s}
+.door:hover{border-color:var(--accent);transform:translateY(-2px)}
+.door .ico{width:52px;height:52px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+.door strong{display:block;font-size:19px}
+.door small{color:var(--muted);font-size:15px}
+.door .go{font-size:22px;color:var(--accent)}
+.preview{background:var(--navy);color:#eef0f5;border-radius:22px;padding:28px;display:grid;gap:18px}
+.preview .eyebrow{color:#a7b0c4}
+.preview ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.preview li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start}
+.preview li i{font-style:normal;width:28px;height:28px;border-radius:50%;border:1.5px solid #8fa6d4;display:grid;place-items:center;font-size:13px;color:#e6ddd8}
+.preview .meta{font-size:14px;color:#a7b0c4;border-top:1px solid #26355a;padding-top:14px}
+
+/* quiz */
+.quiz{max-width:760px;margin:0 auto}
+.bar{height:6px;background:var(--track);border-radius:9px;overflow:hidden;margin-bottom:10px}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:9px;transition:width .3s}
+.qmeta{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:28px}
+.qcard{display:grid;gap:22px}
+.qcard .hint{color:var(--muted)}
+.opts{display:grid;gap:10px}
+.opt{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;align-items:center;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;color:var(--ink)}
+.opt:hover{border-color:var(--accent)}
+.opt .k{width:28px;height:28px;border-radius:8px;border:1.5px solid var(--line);display:grid;place-items:center;font-size:13px;color:var(--muted);font-weight:600}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
+.opt[aria-pressed="true"] .k{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.field{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:6px}
+.field label{font-size:15px;font-weight:600}
+.field small{color:var(--muted);font-size:13px}
+.field input{font:inherit;font-size:22px;font-variant-numeric:tabular-nums;border:0;background:transparent;color:var(--ink);width:100%;padding:0}
+.field .row{display:flex;align-items:baseline;gap:6px}
+.field .row span{color:var(--muted)}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:8px}
+
+/* results */
+.res{display:grid;gap:28px}
+.hero{background:var(--navy);color:#eef0f5;border-radius:24px;padding:32px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:28px;align-items:center}
+.hero .eyebrow{color:#a7b0c4}
+.hero p.sum{color:#cfd6e4;margin-top:14px;max-width:56ch}
+.gauge text{font-family:var(--body)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;gap:18px;align-content:start;min-width:0}
+.panel header{display:grid;gap:6px}
+.big{font-family:var(--display);font-size:clamp(36px,4.6vw,52px);line-height:1;font-variant-numeric:tabular-nums}
+.risk-row,.opp-row{display:grid;gap:8px;padding-top:14px;border-top:1px solid var(--line)}
+.risk-row:first-of-type,.opp-row:first-of-type{border-top:0;padding-top:0}
+.rr-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.rr-top b{font-variant-numeric:tabular-nums;font-size:20px}
+.rr-bar{height:10px;border-radius:9px;background:var(--track);overflow:hidden}
+.rr-bar i{display:block;height:100%;border-radius:9px}
+.how{font-size:14px;color:var(--muted)}
+details.math summary{cursor:pointer;font-size:14px;color:var(--accent);font-weight:600}
+details.math p{font-size:14px;color:var(--muted);margin-top:8px}
+.slider{display:grid;gap:6px;font-size:14px;color:var(--muted)}
+.slider input{width:100%;accent-color:var(--accent)}
+.dims{display:grid;gap:10px}
+.dim{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr) 72px;gap:12px;align-items:center;font-size:15px}
+.dim .pill{font-size:12px;font-weight:600;text-align:center;border-radius:999px;padding:3px 8px}
+.p0{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+.p1{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.p2{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.radarwrap{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:24px;align-items:center}
+.list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.list li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start}
+.list .tag{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:12px;font-weight:700;background:var(--navy);color:#e6ddd8}
+.list .tag.l{background:var(--sand);color:#14203a}
+.list b{display:block}
+.list span{color:var(--muted);font-size:15px}
+.pack{background:var(--navy);color:#eef0f5;border-radius:24px;padding:32px;display:grid;gap:22px}
+.pack .eyebrow{color:#a7b0c4}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.step{border:1px solid #2c3d66;border-radius:16px;padding:18px;display:grid;gap:8px;align-content:start}
+.step .n{font-size:13px;color:#a7b0c4;letter-spacing:.1em;text-transform:uppercase}
+.step .price{font-family:var(--display);font-size:28px;color:#e6ddd8}
+.step p{font-size:15px;color:#cfd6e4}
+.total{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:baseline;border-top:1px solid #2c3d66;padding-top:18px}
+.total b{font-family:var(--display);font-size:30px;color:#e6ddd8}
+.alt{font-size:15px;color:#cfd6e4}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cta .btn{background:#e6ddd8;color:#14203a}
+.cta .btn.ghost{background:transparent;color:#eef0f5;border-color:#3a4d7a}
+.contact{font-size:15px;color:#cfd6e4;user-select:all}
+.note{font-size:13px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-size:14px}
+
+@media (max-width:820px){
+  .intro,.hero,.grid2,.radarwrap{grid-template-columns:minmax(0,1fr)}
+  .hero{padding:24px}
+  .hero .gauge{max-width:220px}
+  .fields{grid-template-columns:minmax(0,1fr)}
+  .dim{grid-template-columns:minmax(0,1fr) 70px}
+  .dim .rr-bar{grid-column:1/-1;grid-row:2}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap" id="app"></div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+const EUR=new Intl.NumberFormat('en-IE',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+const NUM=new Intl.NumberFormat('en-IE',{maximumFractionDigits:0});
+const eur=v=>EUR.format(Math.round(v/10)*10);
+const app=document.getElementById('app');
+
+const DIMS=[
+ ['target','Who to target'],['data','Lists and data'],['signals','Timing signals'],
+ ['message','The message'],['speed','Follow up speed'],['measure','Measuring'],['loyalty','Keeping customers']];
+const LABEL=Object.fromEntries(DIMS);
+
+/* What to build and what to learn for each weak area */
+const FIX={
+ target:{build:['An ICP and scoring model','Tiers and disqualifiers from your won deals, scored on every account'],learn:['Level 1, Module 1','Your ICP, built from real deal numbers']},
+ data:{build:['An enrichment waterfall','Lists filled, verified and deduplicated without copy and paste'],learn:['Level 1, Modules 2 and 3','Data, lists, enrichment and scoring in Clay']},
+ signals:{build:['Signal alerts routed to the right person','Hiring, funding and intent signals that tell you who to call this week'],learn:['Level 3, Module 3','Signal systems scored by results']},
+ message:{build:['An outbound AI agent','Researches each account and drafts the message, a person checks before it sends'],learn:['Level 1, Modules 4 and 5','AI research that cites sources, and messages built on one problem']},
+ speed:{build:['Lead routing and follow up flows','Every lead gets an owner and a reply time, follow ups go out on their own'],learn:['Level 2, Modules 1 and 2','Safe sending, lemlist and n8n automations']},
+ measure:{build:['A dashboard and forecast','One view of pipeline, reply rates and a forecast you can defend'],learn:['Level 2, Module 5','Scorecards, dashboards and forecasting']},
+ loyalty:{build:['Lead to loyalty flows','Onboarding, health scores, renewals and reactivation, run on autopilot'],learn:['Level 2, Module 4','Allbound and loyalty flows']}
+};
+
+/* Questions */
+const S=(...a)=>a.map((t,i)=>({t,v:i}));
+const TEAM=[
+ {id:'nums',type:'nums',q:'Your numbers',hint:'Rough is fine. These drive every euro figure in your report, and you can change them later.',fields:[
+  {k:'reps',l:'People who sell',s:'Founders included',d:5,u:''},
+  {k:'cost',l:'Yearly cost per seller',s:'Salary plus costs',d:60000,u:'€'},
+  {k:'deal',l:'Average deal value',s:'First year',d:8000,u:'€'},
+  {k:'deals',l:'New deals won per month',s:'Across the team',d:4,u:''},
+  {k:'growth',l:'Growth target next year',s:'More new revenue than this year',d:40,u:'%'},
+  {k:'inbound',l:'Inbound leads per month',s:'Demo requests, forms, replies',d:30,u:''}]},
+ {id:'target',dim:'target',q:'How does your team decide who to contact?',opts:S('Whoever we come across','A rough idea of our ideal customer','A written ideal customer profile','A profile with tiers and disqualifiers, based on won deals','Accounts scored automatically and refreshed')},
+ {id:'data',dim:'data',q:'Where do your lists come from?',opts:S('Copied by hand from wherever we can','LinkedIn searches, by hand','A tool export, cleaned by hand','Enriched and verified automatically','Enriched, scored and pushed into the CRM on their own')},
+ {id:'signals',dim:'signals',q:'How do you know when an account is ready to talk?',opts:S('We don’t, we just reach out','Gut feeling','Alerts we check now and then','Signals tracked every week','Signals routed to the right person automatically')},
+ {id:'message',dim:'message',q:'How are first messages written?',opts:S('One template for everyone','A template plus their name and company','Researched by hand, one by one','Researched with AI and checked by a person','An AI agent at scale, with a human check before sending')},
+ {id:'speed',dim:'speed',q:'How fast does a new inbound lead hear back?',opts:S('Days later, sometimes never','Within the week','Within a day','Within the hour','In minutes, routed automatically')},
+ {id:'nofollow',q:'Of your inbound leads, how many never get a proper follow up?',opts:[{t:'Almost none',v:0.02},{t:'About 1 in 10',v:0.1},{t:'About 1 in 4',v:0.25},{t:'Half or more',v:0.5}]},
+ {id:'conv',q:'How many inbound leads become customers?',opts:[{t:'About 1 in 5',v:0.2},{t:'About 1 in 10',v:0.1},{t:'About 1 in 20',v:0.05},{t:'About 1 in 50',v:0.02}]},
+ {id:'measure',dim:'measure',q:'How do you know what is working?',opts:S('We don’t really know','Gut feeling and a few wins','A spreadsheet, updated now and then','A dashboard we check every week','A dashboard, a forecast and a loop that feeds results back in')},
+ {id:'loyalty',dim:'loyalty',q:'What happens after a deal closes?',opts:S('Nothing planned','We check in when we remember','Set onboarding steps','Onboarding plus renewals tracked','Onboarding, renewals, upsell and referrals run automatically')},
+ {id:'admin',q:'How much of a seller’s week goes on research, data entry and admin?',hint:'Salesforce found reps spend about 70% of their time on work that isn’t selling.',opts:[{t:'About 15%',v:0.15},{t:'About 30%',v:0.3},{t:'About 50%',v:0.5},{t:'70% or more',v:0.7}]},
+ {id:'owner',q:'Who would own a system like this day to day?',opts:[{t:'Nobody, we’re stretched',v:0},{t:'A sales lead with little time',v:1},{t:'An ops person',v:2},{t:'An ops person who likes building',v:3}]},
+ {id:'when',q:'When does this need to work?',opts:[{t:'This quarter',v:3},{t:'Next quarter',v:2},{t:'This year',v:1},{t:'Just exploring',v:0}]},
+ {id:'how',q:'How would you rather get there?',opts:[{t:'Build it for us',v:'build'},{t:'Teach us to build and run it',v:'learn'},{t:'A mix, build the core and teach the team',v:'mix'}]}
+];
+const ME=[
+ {id:'role',q:'Which sounds most like you?',opts:[{t:'I sell, as an AE, SDR or founder',v:'seller'},{t:'I want a career in GTM engineering or RevOps',v:'career'},{t:'I lead a sales team',v:'leader'}]},
+ {id:'nums',type:'nums',q:'Your numbers',hint:'Rough is fine. These drive the euro figures in your report.',fields:[
+  {k:'income',l:'Your yearly pay',s:'Base plus bonus',d:55000,u:'€'},
+  {k:'adminh',l:'Hours a week on admin and research',s:'Lists, data entry, digging',d:12,u:'h'},
+  {k:'meet',l:'Meetings you book per month',s:'With the right people',d:6,u:''},
+  {k:'deal',l:'Average deal value',s:'Use your company’s',d:8000,u:'€'},
+  {k:'mpd',l:'Meetings it takes to win one deal',s:'Roughly',d:5,u:''}]},
+ {id:'target',dim:'target',q:'How do you decide who to contact?',opts:S('Whoever I come across','A rough idea of who buys','A written ideal customer profile','Tiers and disqualifiers, based on won deals','Accounts scored for me automatically')},
+ {id:'data',dim:'data',q:'How do you build your lists?',opts:S('Copy and paste, by hand','LinkedIn searches, by hand','A tool export I clean myself','I enrich and verify with a tool like Clay','I run a waterfall that feeds my CRM')},
+ {id:'signals',dim:'signals',q:'How do you know when to reach out?',opts:S('I don’t, I just reach out','Gut feeling','A few alerts I check now and then','I track signals every week','Signals reach me automatically')},
+ {id:'message',dim:'message',q:'How do you write first messages?',opts:S('One template for everyone','A template plus their name','I research each one by hand','I research with AI and check it','I run an AI agent with my own check')},
+ {id:'speed',dim:'speed',q:'How do your follow ups go out?',opts:S('When I remember','From reminders I set','A sequence for some people','A sequence for everyone','Sequences triggered by replies and signals')},
+ {id:'measure',dim:'measure',q:'How do you know what is working?',opts:S('I don’t really know','Gut feeling','I check now and then','A weekly scorecard','A scorecard plus A/B tests')},
+ {id:'loyalty',dim:'loyalty',q:'What happens with customers after they buy?',opts:S('Nothing from me','I check in sometimes','A set onboarding routine','Renewals and upsell tracked','Flows that run on their own')},
+ {id:'tools',type:'multi',q:'Which have you used yourself?',hint:'Pick all that apply.',opts:['A CRM like HubSpot or Salesforce','LinkedIn Sales Navigator','Clay or another enrichment tool','lemlist, Apollo or another sequencer','n8n, Make or Zapier','An AI assistant like Claude or ChatGPT','APIs, SQL or code']},
+ {id:'pace',q:'How do you learn best?',opts:[{t:'On my own, at my own pace',v:'self'},{t:'With someone who checks my work',v:'one'}]},
+ {id:'quota',q:'Where are you against your target this year?',opts:[{t:'Ahead',v:0},{t:'On track',v:1},{t:'Behind',v:2},{t:'Well behind, or no target yet',v:3}]}
+];
+
+let st={path:null,i:0,a:{},recover:50};
+try{const s=JSON.parse(localStorage.getItem('gtmcheck')||'null');if(s&&s.path)st=Object.assign(st,s)}catch(e){}
+const save=()=>{try{localStorage.setItem('gtmcheck',JSON.stringify(st))}catch(e){}};
+const Q=()=>st.path==='team'?TEAM:ME;
+
+function intro(){
+ app.innerHTML=`
+ <div class="brand"><b>ASTRA AGENCY</b><span>GTM automation</span></div>
+ <section class="intro">
+  <div>
+   <p class="eyebrow">GTM Engine Check</p>
+   <h1>Find out what your sales engine is costing you next year</h1>
+   <p class="lede">About 4 minutes, 12 to 14 quick questions. You get your maturity level, the money at risk, the upside, what to build or learn, and the package we would pick for you.</p>
+   <div class="doors">
+    <button class="door" data-path="me"><span class="ico">${svgPerson()}</span><span><strong>For me</strong><small>You sell, or you want a career in GTM engineering</small></span><span class="go" aria-hidden="true">→</span></button>
+    <button class="door" data-path="team"><span class="ico">${svgTeam()}</span><span><strong>For my team</strong><small>You run a company or lead the people who sell</small></span><span class="go" aria-hidden="true">→</span></button>
+   </div>
+  </div>
+  <aside class="preview" aria-label="What your report shows">
+   <p class="eyebrow">Your report</p>
+   <ul>
+    <li><i>1</i><span>Your GTM maturity, from Starter to Architect, across seven parts of the engine</span></li>
+    <li><i>2</i><span>The money at risk over the next 12 months, worked out from your own numbers</span></li>
+    <li><i>3</i><span>The opportunities, in hours, meetings and revenue</span></li>
+    <li><i>4</i><span>What to build and what to learn first</span></li>
+    <li><i>5</i><span>The package we recommend, with real prices</span></li>
+   </ul>
+   <p class="meta">Every sum is shown, so you can check it. Your answers stay in this browser.</p>
+  </aside>
+ </section>`;
+ app.querySelectorAll('[data-path]').forEach(b=>b.onclick=()=>{st={path:b.dataset.path,i:0,a:{},recover:50};save();quiz()});
+}
+
+function quiz(){
+ const qs=Q(),q=qs[st.i],n=qs.length;
+ let body='';
+ if(q.type==='nums'){
+  const cur=st.a.nums||{};
+  body=`<div class="fields">${q.fields.map(f=>`<div class="field"><label for="f_${f.k}">${f.l}</label><div class="row">${f.u==='€'?'<span>€</span>':''}<input id="f_${f.k}" inputmode="numeric" value="${NUM.format(cur[f.k]??f.d)}">${f.u&&f.u!=='€'?`<span>${f.u}</span>`:''}</div><small>${f.s}</small></div>`).join('')}</div>`;
+ }else if(q.type==='multi'){
+  const cur=st.a[q.id]||[];
+  body=`<div class="opts">${q.opts.map((t,j)=>`<button class="opt" data-j="${j}" aria-pressed="${cur.includes(j)}"><span class="k">${cur.includes(j)?'✓':String.fromCharCode(65+j)}</span><span>${t}</span></button>`).join('')}</div>`;
+ }else{
+  const cur=st.a[q.id];
+  body=`<div class="opts">${q.opts.map((o,j)=>`<button class="opt" data-j="${j}" aria-pressed="${cur&&cur.j===j}"><span class="k">${String.fromCharCode(65+j)}</span><span>${o.t}</span></button>`).join('')}</div>`;
+ }
+ const needNext=q.type==='nums'||q.type==='multi';
+ app.innerHTML=`
+ <div class="brand"><b>ASTRA AGENCY</b><span>${st.path==='team'?'For my team':'For me'}</span></div>
+ <div class="quiz">
+  <div class="bar"><i style="width:${(st.i/n*100).toFixed(1)}%"></i></div>
+  <div class="qmeta"><span>Question ${st.i+1} of ${n}</span><span>${q.dim?LABEL[q.dim]:''}</span></div>
+  <div class="qcard">
+   <h2>${q.q}</h2>
+   ${q.hint?`<p class="hint">${q.hint}</p>`:''}
+   ${body}
+   <div class="nav"><button class="btn ghost" id="back">Back</button>${needNext?`<button class="btn" id="next">${st.i===n-1?'See my report':'Next'}</button>`:''}</div>
+  </div>
+ </div>`;
+ document.getElementById('back').onclick=()=>{if(st.i===0){st.path=null;save();intro()}else{st.i--;save();quiz()}};
+ if(q.type==='nums'){
+  q.fields.forEach(f=>{const el=document.getElementById('f_'+f.k);el.onfocus=()=>el.select()});
+  document.getElementById('next').onclick=()=>{const o={};q.fields.forEach(f=>{const v=parseFloat(document.getElementById('f_'+f.k).value.replace(/[^0-9.]/g,''));o[f.k]=isFinite(v)&&v>=0?v:f.d});st.a.nums=o;adv()};
+ }else if(q.type==='multi'){
+  app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const j=+b.dataset.j;let c=st.a[q.id]||[];c=c.includes(j)?c.filter(x=>x!==j):c.concat(j);st.a[q.id]=c;save();quiz()});
+  document.getElementById('next').onclick=()=>{st.a[q.id]=st.a[q.id]||[];adv()};
+ }else{
+  app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const j=+b.dataset.j;st.a[q.id]={j,v:q.opts[j].v};save();setTimeout(adv,160);b.setAttribute('aria-pressed','true')});
+ }
+ window.scrollTo(0,0);
+}
+function adv(){if(st.i<Q().length-1){st.i++;save();quiz()}else{st.done=true;save();report()}}
+
+/* ---------- maths ---------- */
+function compute(){
+ const a=st.a,team=st.path==='team',N=a.nums||{};
+ const dims={};DIMS.forEach(([k])=>dims[k]=a[k]?a[k].v:0);
+ const avg=Object.values(dims).reduce((s,v)=>s+v,0)/DIMS.length;
+ let score=avg*25;
+ if(!team){const t=(a.tools||[]).length;score=avg*25*0.85+t/7*15}
+ score=Math.round(Math.min(100,score));
+ const level=score<30?0:score<55?1:score<80?2:3;
+ const LV=team?['Manual','Repeatable','Systemised','Compounding']:['Starter','Operator','Builder','Architect'];
+ const rec=st.recover/100;
+ const r={team,dims,score,level,levelName:LV[level],levels:LV,rec};
+ if(team){
+  const reps=N.reps||1,cost=N.cost||0,deal=N.deal||0,deals=N.deals||0,g=(N.growth||0)/100,inbound=N.inbound||0;
+  const admin=a.admin?a.admin.v:0.3,nf=a.nofollow?a.nofollow.v:0.1,conv=a.conv?a.conv.v:0.1;
+  const timeCost=reps*cost*admin;
+  const lostLeads=inbound*12*nf, leak=lostLeads*conv*deal;
+  const dealsYr=deals*12, perRep=reps?dealsYr/reps:0, extraDeals=dealsYr*g;
+  const extraReps=perRep?extraDeals/perRep:0, hire=extraReps*cost;
+  const freedShare=admin*rec, hoursFreed=reps*freedShare*40*46;
+  const moreDeals=perRep*reps*(freedShare/Math.max(0.05,1-admin));
+  const oppRev=moreDeals*deal, oppLeak=leak*0.8;
+  r.m={reps,cost,deal,deals,g,inbound,admin,nf,conv,timeCost,lostLeads,leak,dealsYr,perRep,extraDeals,extraReps,hire,hoursFreed,moreDeals,oppRev,oppLeak};
+  r.risk=timeCost+leak+hire; r.opp=timeCost*rec+oppRev+oppLeak;
+ }else{
+  const inc=N.income||0,h=Math.min(40,N.adminh||0),meet=N.meet||0,deal=N.deal||0,mpd=Math.max(1,N.mpd||5);
+  const hourly=inc/1840, timeCost=h*46*hourly;
+  const selling=Math.max(1,40-h), perHour=meet/(selling*4.33);
+  const hFree=h*rec, moreMeet=hFree*4.33*perHour, moreDealsYr=moreMeet*12/mpd, oppRev=moreDealsYr*deal;
+  r.m={inc,h,meet,deal,mpd,hourly,timeCost,selling,perHour,hFree,moreMeet,moreDealsYr,oppRev};
+  r.risk=timeCost; r.opp=oppRev;
+ }
+ r.weak=DIMS.map(([k])=>k).sort((x,y)=>dims[x]-dims[y]).slice(0,3);
+ r.pack=team?packTeam(r):packMe(r);
+ return r;
+}
+
+/* ---------- recommendations, from the 6 Nov 2026 price list ---------- */
+function packTeam(r){
+ const a=st.a,how=a.how?a.how.v:'mix',owner=a.owner?a.owner.v:1,reps=r.m.reps;
+ const steps=[{n:'Step 1',t:'Free Health Check',p:0,d:'A call and a first look at your funnel, stack and data. Where your revenue leaks.'}];
+ let why='';
+ if(how==='build'||owner===0){
+  steps.push({n:'Step 2',t:'Strategy',p:750,d:'The deep analysis and a session that names the first thing to build.'});
+  if(r.level<=1){
+   steps.push({n:'Step 3',t:'Starter build',p:650,d:'5 campaigns and 2 signals, set up and live.',from:true});
+   steps.push({n:'Step 4',t:'2 automations',p:300,d:'Your CRM connected to lemlist, with replies and outcomes fed back.'});
+   if(r.dims.message<=2)steps.push({n:'Step 5',t:'Outbound AI agent',p:1000,d:'Researches accounts and drafts messages, checked before anything sends.'});
+  }else steps.push({n:'Step 3',t:'Full engine',p:4000,d:'Campaigns, signals, automations, AI agents, lead to loyalty flows and dashboards.',approx:true});
+  steps.push({n:'Then',t:'Run',p:750,mo:true,d:'Monitoring, updates and a monthly review, so nobody on your side has to babysit it.'});
+  why=owner===0?'Nobody on your team has time to own this, so we build it and keep it running.':'You asked for it built, so we build the engine and hand it over.';
+ }else if(how==='learn'){
+  const seats=Math.max(4,reps);
+  steps.push({n:'Step 2',t:'GTM Leader course',p:500,d:'For whoever leads the team. The operating model, sales bible, routing, dashboard and a 90 day plan. €2,000 with Raka.'});
+  steps.push({n:'Step 3',t:'Group package, Seller Level 1',p:600*seats,d:`${seats} people take Level 1 Find together over 4 to 5 weeks, every assignment marked. €600 per person.`});
+  why='You want the team to own the skill, so the leader learns to run the system and the sellers learn to work it.';
+ }else{
+  const hrs=3,sem=125*reps*hrs;
+  steps.push({n:'Step 2',t:'Strategy',p:750,d:'The deep analysis and a session that names the first thing to build.'});
+  steps.push({n:'Step 3',t:r.level<=1?'Starter build':'Full engine',p:r.level<=1?650:4000,d:r.level<=1?'5 campaigns and 2 signals, set up and live.':'The whole engine, built and handed over.',from:r.level<=1,approx:r.level>1});
+  steps.push({n:'Step 4',t:`${hrs} hour team seminar`,p:sem,d:`${reps} people, on your own CRM, so the team runs what we build. €125 per person per hour.`});
+  why='We build the core, then train the team in one session so they run it themselves.';
+ }
+ const once=steps.filter(s=>!s.mo).reduce((t,s)=>t+s.p,0), mo=steps.filter(s=>s.mo).reduce((t,s)=>t+s.p,0);
+ const alt=how==='learn'?'Want it done for you instead? The Strategy session plus a Starter build starts at €1,400.':'Rather have someone lead it part time? Raka works as a Fractional RevOps Director at €120 an hour, about €1,920 a month for half a day a week.';
+ return {steps,once,mo,why,alt};
+}
+function packMe(r){
+ const role=st.a.role?st.a.role.v:'seller',pace=st.a.pace?st.a.pace.v:'self',one=pace==='one';
+ const price=one?1000:125, fmt=one?'with Raka, 1:1':'self learn';
+ const steps=[];let why='',alt='';
+ if(role==='leader'){
+  steps.push({n:'Course',t:'GTM Leader',p:one?2000:500,d:'The operating model, a sales bible your team writes with you, routing, dashboards, a forecast and a 90 day plan.'});
+  why='You lead a team, so the fastest win is the system they all work in. Try the team version of this check too.';
+  alt='Want it built for your team instead? Start with a free Health Check.';
+ }else if(role==='career'){
+  const start=r.level<=1?1:r.level===2?2:3, names=['','Operator','Builder','Architect'];
+  for(let l=start;l<=3;l++)steps.push({n:'Level '+l,t:names[l],p:price,d:['','ICP, lists, enrichment, scoring, AI research and the message. About 4 weeks.','Sending, n8n automations, CRM, loyalty flows and dashboards. About 5 weeks.','Revenue architecture, AI agents in production, signals, and running builds for clients. About 5 weeks.'][l]});
+  why=`Your score puts you at ${r.levelName}, so you start at Level ${start}. GTM engineering and RevOps postings rose 205% in 2025 (Bloomberry), and each level ends in a build you can show an employer.`;
+  if(steps.length===3)alt=`All three levels together are ${one?'€2,500':'€299'} instead of ${one?'€3,000':'€375'}.`;
+ }else{
+  const start=r.level<=1?1:2, names=['','Find','Reach','Scale'];
+  for(let l=start;l<=2;l++)steps.push({n:'Seller Level '+l,t:names[l],p:price,d:l===1?'Your ICP, a ranked list, alerts that tell you who to contact now, and AI research you check.':'Messages about their problem, a live sequence, calls that end with a next step.'});
+  why=`You sell, so the Seller track gives you back time every week. Your weakest area is ${LABEL[r.weak[0]].toLowerCase()}, which Level ${start} covers first.`;
+  alt='Level 3 Scale, with an AI research assistant on your own list, is coming soon.';
+ }
+ steps.forEach(s=>s.fmt=fmt);
+ let once=steps.reduce((t,s)=>t+s.p,0);
+ if(role==='career'&&steps.length===3)once=one?2500:299;
+ return {steps,once,mo:0,why,alt};
+}
+
+/* ---------- report ---------- */
+function report(){
+ const r=compute(),m=r.m;
+ const maxRisk=Math.max(1,...(r.team?[m.timeCost,m.leak,m.hire]:[m.timeCost]));
+ const riskRows=r.team?[
+  ['Paying for work that isn’t selling',m.timeCost,`${m.reps} sellers × ${eur(m.cost)} × ${Math.round(m.admin*100)}% of their week on admin.`],
+  ['Inbound leads that go cold',m.leak,`${NUM.format(m.inbound*12)} leads a year × ${Math.round(m.nf*100)}% with no follow up × 1 in ${Math.round(1/m.conv)} that would buy × ${eur(m.deal)}.`],
+  ['Hiring to hit next year by hand',m.hire,`${Math.round(m.g*100)}% growth means ${NUM.format(m.extraDeals)} more deals. At ${NUM.format(m.perRep)} deals per seller a year that is ${m.extraReps.toFixed(1)} more sellers at ${eur(m.cost)} each.`]
+ ]:[
+  ['Your hours spent not selling',m.timeCost,`${m.h} hours a week × 46 weeks × ${eur(m.hourly)} an hour, from ${eur(m.inc)} a year.`]
+ ];
+ const quota=!r.team&&st.a.quota?st.a.quota.v:0;
+ const oppRows=r.team?[
+  ['Selling time back',`${NUM.format(m.hoursFreed)} hours a year`,`If a system takes over ${st.recover}% of the admin.`],
+  ['Extra deals from that time',`${eur(m.oppRev)}`,`About ${NUM.format(m.moreDeals)} more deals a year, at your current rate of ${NUM.format(m.perRep)} per seller.`],
+  ['Leads saved by fast follow up',`${eur(m.oppLeak)}`,`If routing and automatic follow ups catch 8 in 10 of the leads that go cold now.`]
+ ]:[
+  ['Hours back every week',`${m.hFree.toFixed(1)} hours`,`If ${st.recover}% of your admin runs on its own.`],
+  ['More meetings',`${m.moreMeet.toFixed(1)} a month`,`At your rate of ${m.perHour.toFixed(2)} meetings per selling hour.`],
+  ['More pipeline a year',`${eur(m.oppRev)}`,`${NUM.format(m.moreDealsYr)} more deals, at ${m.mpd} meetings per deal and ${eur(m.deal)} each.`]
+ ];
+ const sumLine=r.team
+  ?`Run the way it runs today, your sales engine puts about ${eur(r.risk)} at risk over the next 12 months. A working system could unlock about ${eur(r.opp)} in time, deals and saved leads.`
+  :`Admin costs you about ${eur(m.timeCost)} of paid time a year. Giving ${st.recover}% of it to a system could add about ${eur(m.oppRev)} of pipeline.`;
+ const build=r.weak.map(k=>FIX[k].build), learn=r.weak.map(k=>FIX[k].learn);
+ const p=r.pack;
+ app.innerHTML=`
+ <div class="brand"><b>ASTRA AGENCY</b><span>Your GTM Engine Check</span></div>
+ <div class="res">
+  <section class="hero">
+   <div>
+    <p class="eyebrow">${r.team?'Company':'Individual'} GTM maturity</p>
+    <h1>${r.levelName}</h1>
+    <p class="sum">${sumLine}${!r.team&&quota>=2?' You told us you’re behind target, so every hour counts this year.':''}</p>
+   </div>
+   ${gauge(r)}
+  </section>
+
+  <div class="grid2">
+   <section class="panel">
+    <header><p class="eyebrow">Money at risk, next 12 months</p><div class="big" style="color:var(--bad)">${eur(r.risk)}</div></header>
+    ${riskRows.map(([t,v,h])=>`<div class="risk-row"><div class="rr-top"><span>${t}</span><b>${eur(v)}</b></div><div class="rr-bar"><i style="width:${(v/maxRisk*100).toFixed(1)}%;background:var(--bad)"></i></div><p class="how">${h}</p></div>`).join('')}
+    ${r.team?'':`<p class="how">Salesforce’s State of Sales found 84% of reps missed quota last year.</p>`}
+   </section>
+   <section class="panel">
+    <header><p class="eyebrow">Opportunity</p><div class="big" style="color:var(--good)">${eur(r.opp)}</div></header>
+    ${oppRows.map(([t,v,h])=>`<div class="opp-row"><div class="rr-top"><span>${t}</span><b>${v}</b></div><p class="how">${h}</p></div>`).join('')}
+    <div class="slider"><label for="rec">How much admin a system takes over, ${st.recover}%</label><input id="rec" type="range" min="20" max="80" step="5" value="${st.recover}"><span>Our working assumption is 50%. Move it to see your own case.</span></div>
+   </section>
+  </div>
+
+  <section class="panel">
+   <header><p class="eyebrow">Your engine, part by part</p><h2>Score ${r.score} of 100</h2></header>
+   <div class="radarwrap">${radar(r)}<div class="dims">${DIMS.map(([k,l])=>{const v=r.dims[k],c=v<=1?0:v<=2?1:2;return `<div class="dim"><span>${l}</span><div class="rr-bar"><i style="width:${v/4*100}%;background:var(--accent)"></i></div><span class="pill p${c}">${['Weak','Weak','Basic','Strong','Strong'][v]}</span></div>`}).join('')}</div></div>
+   <p class="note">${r.levels.map((n,i)=>`${n} ${['0 to 29','30 to 54','55 to 79','80 to 100'][i]}`).join(' · ')}</p>
+  </section>
+
+  <div class="grid2">
+   <section class="panel">
+    <header><p class="eyebrow">What to build</p><h3>Fix your three weakest parts</h3></header>
+    <ul class="list">${build.map((b,i)=>`<li><span class="tag">${i+1}</span><div><b>${b[0]}</b><span>${b[1]}</span></div></li>`).join('')}</ul>
+   </section>
+   <section class="panel">
+    <header><p class="eyebrow">What to learn</p><h3>The lessons that cover them</h3></header>
+    <ul class="list">${learn.map((b,i)=>`<li><span class="tag l">${i+1}</span><div><b>${b[0]}</b><span>${b[1]}</span></div></li>`).join('')}</ul>
+   </section>
+  </div>
+
+  <section class="pack">
+   <div><p class="eyebrow">Our recommendation</p><h2>${p.why}</h2></div>
+   <div class="steps">${p.steps.map(s=>`<div class="step"><span class="n">${s.n}</span><b>${s.t}</b><span class="price">${s.p===0?'Free':(s.approx?'Around ':s.from?'From ':'')+eur(s.p)+(s.mo?' a month':'')}</span>${s.fmt?`<span class="alt">${s.fmt}</span>`:''}<p>${s.d}</p></div>`).join('')}</div>
+   <div class="total"><span>Total to start</span><b>${eur(p.once)}${p.mo?` then ${eur(p.mo)} a month`:''}</b></div>
+   ${p.alt?`<p class="alt">${p.alt}</p>`:''}
+   <div class="cta"><button class="btn" id="copy">Copy my results</button><button class="btn ghost" id="redo">Change my answers</button><button class="btn ghost" id="other">Try the ${r.team?'personal':'team'} check</button></div>
+   <p class="contact">Book your free Health Check with Raka Mulya at raka@astraagency.nl or linkedin.com/in/raka-mulya-b92885196. Paste your results in the message.</p>
+  </section>
+  <p class="note">Figures are estimates from your own answers, rounded to the nearest €10. Benchmarks are from Salesforce State of Sales 2024 and Bloomberry 2025. Your answers stay in this browser.</p>
+ </div>`;
+ document.getElementById('rec').oninput=e=>{st.recover=+e.target.value;save();const y=window.scrollY;report();window.scrollTo(0,y)};
+ document.getElementById('redo').onclick=()=>{st.i=0;st.done=false;save();quiz()};
+ document.getElementById('other').onclick=()=>{st={path:r.team?'me':'team',i:0,a:{},recover:50};save();quiz()};
+ document.getElementById('copy').onclick=()=>copy(text(r));
+}
+
+function text(r){
+ const p=r.pack;
+ return [`GTM Engine Check, ${r.team?'my team':'me'}`,
+  `Maturity ${r.levelName}, score ${r.score} of 100`,
+  `Money at risk next 12 months ${eur(r.risk)}`,
+  `Opportunity ${eur(r.opp)}`,
+  `Weakest parts ${r.weak.map(k=>LABEL[k]).join(', ')}`,
+  `Recommended ${p.steps.map(s=>s.t).join(', then ')}`,
+  `Total to start ${eur(p.once)}${p.mo?` then ${eur(p.mo)} a month`:''}`].join('\n');
+}
+function copy(t){
+ const done=()=>toast('Copied. Paste it into your message to Raka.');
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,()=>fallback(t))}else fallback(t);
+}
+function fallback(t){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Copied. Paste it into your message to Raka.')}catch(e){toast('Select the text and copy it yourself.')}ta.remove()}
+function toast(m){const el=document.getElementById('toast');el.textContent=m;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,2600)}
+
+/* ---------- charts ---------- */
+function gauge(r){
+ const R=90,cx=110,cy=110,a0=Math.PI*0.75,a1=Math.PI*2.25,ang=a0+(a1-a0)*r.score/100;
+ const pt=a=>[cx+R*Math.cos(a),cy+R*Math.sin(a)];
+ const arc=(s,e)=>{const[x1,y1]=pt(s),[x2,y2]=pt(e);return `M${x1.toFixed(1)} ${y1.toFixed(1)} A${R} ${R} 0 ${e-s>Math.PI?1:0} 1 ${x2.toFixed(1)} ${y2.toFixed(1)}`};
+ const ticks=[0,30,55,80,100].map(v=>{const a=a0+(a1-a0)*v/100,[x,y]=[cx+(R+16)*Math.cos(a),cy+(R+16)*Math.sin(a)];return `<text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="middle" font-size="11" fill="#a7b0c4">${v}</text>`}).join('');
+ return `<svg class="gauge" viewBox="-14 0 248 210" role="img" aria-label="Score ${r.score} of 100"><path d="${arc(a0,a1)}" stroke="#26355a" stroke-width="16" fill="none" stroke-linecap="round"/><path d="${arc(a0,Math.max(a0+0.01,ang))}" stroke="#e6ddd8" stroke-width="16" fill="none" stroke-linecap="round"/>${ticks}<text x="110" y="112" text-anchor="middle" font-size="54" fill="#eef0f5" style="font-family:Gloock,Georgia,serif">${r.score}</text><text x="110" y="138" text-anchor="middle" font-size="13" fill="#a7b0c4">out of 100</text></svg>`;
+}
+function radar(r){
+ const n=DIMS.length,cx=160,cy=150,R=105;
+ const P=(i,v)=>{const a=-Math.PI/2+i*2*Math.PI/n;return [cx+R*v*Math.cos(a),cy+R*v*Math.sin(a)]};
+ let rings='';for(let k=1;k<=4;k++){rings+=`<polygon points="${DIMS.map((_,i)=>P(i,k/4).map(x=>x.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="var(--line)" stroke-width="1"/>`}
+ const axes=DIMS.map((_,i)=>{const[x,y]=P(i,1);return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/>`}).join('');
+ const shape=DIMS.map(([k],i)=>P(i,Math.max(0.04,r.dims[k]/4)).map(x=>x.toFixed(1)).join(',')).join(' ');
+ const labels=DIMS.map(([,l],i)=>{const[x,y]=P(i,1.2);const anc=Math.abs(x-cx)<10?'middle':x>cx?'start':'end';return `<text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="${anc}" font-size="11.5" fill="var(--muted)">${l}</text>`}).join('');
+ return `<svg viewBox="-70 0 460 300" role="img" aria-label="Scores for each part of the engine" style="width:100%;max-width:400px">${rings}${axes}<polygon points="${shape}" fill="color-mix(in srgb,var(--accent) 28%,transparent)" stroke="var(--accent)" stroke-width="2"/>${labels}</svg>`;
+}
+function svgPerson(){return `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e6ddd8" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>`}
+function svgTeam(){return `<svg width="26" height="24" viewBox="0 0 26 24" fill="none" stroke="#e6ddd8" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><circle cx="18" cy="9" r="3"/><path d="M2 21c1.2-3.6 3.8-5.5 7-5.5s5.8 1.9 7 5.5"/><path d="M16 15.6c3 0 5.4 1.7 6.6 5"/></svg>`}
+
+if(st.path&&st.done)report();else if(st.path)quiz();else intro();
+})();
+</script>

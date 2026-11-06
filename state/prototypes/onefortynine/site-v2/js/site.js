@@ -67,18 +67,24 @@
       ['Who plays', 'Families and friends staying with you, no screens needed.'] ] }
   ];
   var RENT = 60, OWN = 350;
+  window.BB = { VENUES: VENUES, RENT: RENT, OWN: OWN };
 
   /* ---------- the lock, three wheels, the code is 1 4 9 ---------- */
   var CODE = [1, 4, 9];
   var stage = $('[data-stage]'), lock = $('[data-lock]'), wheels = $$('[data-wheel]');
-  var vals = [0, 0, 0], opened = false;
+  var vals = [0, 0, 0], opened = false, halo = $('[data-halo]'), haloA = 0;
+  function feel(w, dir) {
+    w.classList.remove('tick'); void w.offsetWidth; w.classList.add('tick');
+    haloA += 36 * (dir || 1); halo.style.setProperty('--a', haloA + 'deg');
+    if (navigator.vibrate && !RM) { try { navigator.vibrate(6); } catch (e) {} }
+  }
   wheels.forEach(function (w, i) {
     var strip = $('[data-strip]', w), html = '';
     for (var n = 0; n < 10; n++) html += '<span>' + n + '</span>';
     strip.innerHTML = html;
     function stepH() { var s = $('span', strip); return s ? s.getBoundingClientRect().height : 74; }
     function draw() { strip.style.transform = 'translateY(' + (-vals[i] * stepH()) + 'px)'; w.setAttribute('aria-valuenow', vals[i]); }
-    w._set = function (v) { vals[i] = (v + 10) % 10; draw(); check(); };
+    w._set = function (v) { var dir = v > vals[i] ? 1 : -1; vals[i] = (v + 10) % 10; draw(); feel(w, dir); check(); };
     w._draw = draw;
     $$('.w-btn', w).forEach(function (b) { b.addEventListener('click', function () { w._set(vals[i] + (+b.getAttribute('data-step'))); w.focus({ preventScroll: true }); }); });
     w.addEventListener('keydown', function (e) {
@@ -90,7 +96,7 @@
     w.addEventListener('wheel', function (e) { e.preventDefault(); acc += e.deltaY; if (Math.abs(acc) > 40) { w._set(vals[i] + (acc > 0 ? 1 : -1)); acc = 0; } }, { passive: false });
     var startY = null, startV = 0;
     w.addEventListener('pointerdown', function (e) { if (e.target.closest('.w-btn')) return; startY = e.clientY; startV = vals[i]; w.setPointerCapture(e.pointerId); });
-    w.addEventListener('pointermove', function (e) { if (startY === null) return; var d = Math.round((e.clientY - startY) / 26); if (startV + d !== vals[i]) { vals[i] = ((startV + d) % 10 + 10) % 10; draw(); } });
+    w.addEventListener('pointermove', function (e) { if (startY === null) return; var d = Math.round((e.clientY - startY) / 26); if (((startV + d) % 10 + 10) % 10 !== vals[i]) { vals[i] = ((startV + d) % 10 + 10) % 10; draw(); feel(w, 1); } });
     w.addEventListener('pointerup', function () { if (startY === null) return; startY = null; check(); });
     draw();
   });
@@ -112,18 +118,40 @@
   }
   $('[data-just-open]').addEventListener('click', function () {
     var t = 0;
-    wheels.forEach(function (w, i) { setTimeout(function () { vals[i] = CODE[i]; w._draw(); if (i === 2) check(); }, RM ? 0 : (t += 260)); });
+    wheels.forEach(function (w, i) { setTimeout(function () { vals[i] = CODE[i]; w._draw(); feel(w, 1); if (i === 2) check(); }, RM ? 0 : (t += 260)); });
   });
 
   /* ---------- who is opening it, and what is inside for them ---------- */
-  var vbox = $('[data-venues]'), items = $('[data-items]'), money = $('[data-money]');
+  var vbox = $('[data-venues]'), items = $('[data-items]'), money = $('[data-money]'), scene = $('[data-scene]'), result = $('[data-result]');
   VENUES.forEach(function (v, i) {
     var b = document.createElement('button');
     b.type = 'button'; b.className = 'venue'; b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', 'false');
-    b.textContent = v.name; b.dataset.v = i;
+    b.innerHTML = '<picture><source srcset="media/venues/' + v.id + '-t.webp" type="image/webp"><img src="media/venues/' + v.id + '-t.jpg" width="640" height="360" alt="" loading="lazy"></picture><span>' + v.name + '</span>';
+    b.dataset.v = i;
     b.addEventListener('click', function () { choose(i); });
     vbox.appendChild(b);
+    var im = document.createElement('img');
+    im.src = 'media/venues/' + v.id + '.webp'; im.alt = ''; im.loading = 'lazy'; im.dataset.v = i;
+    scene.appendChild(im);
   });
+  // the box tilts with the pointer until it is open
+  if (!RM && window.matchMedia('(pointer: fine)').matches) {
+    var box = $('[data-box]');
+    stage.addEventListener('pointermove', function (e) {
+      if (opened) return;
+      var r = box.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      box.style.setProperty('--ry', (x * 9).toFixed(2) + 'deg'); box.style.setProperty('--rx', (-y * 7).toFixed(2) + 'deg');
+    });
+    stage.addEventListener('pointerleave', function () { box.style.setProperty('--ry', '0deg'); box.style.setProperty('--rx', '0deg'); });
+  }
+  // the thread draws itself as the box comes into view
+  var thread = $('[data-thread]'), crackEl = $('#crack');
+  function drawThread() {
+    var r = crackEl.getBoundingClientRect(), vh = window.innerHeight;
+    var p = Math.max(0, Math.min(1, (vh - r.top) / (vh * 0.55)));
+    thread.style.setProperty('--p', RM ? 1 : p.toFixed(3));
+  }
+  window.addEventListener('scroll', drawThread, { passive: true }); drawThread();
   function fmt(n) { return '£' + Math.round(n).toLocaleString('en-GB'); }
   function choose(i) {
     var v = VENUES[i];
@@ -143,6 +171,17 @@
     }
     $('[data-money-line]').innerHTML = line;
     $('[data-money-small]').textContent = small;
+    $('[data-money-big]').textContent = v.own ? Math.ceil(OWN / month) + ' months' : (month / RENT).toFixed(1).replace('.0', '') + '×';
+    $('[data-money-big]').setAttribute('aria-label', v.own ? 'Pays back in about ' + Math.ceil(OWN / month) + ' months' : (month / RENT).toFixed(1) + ' times the rent');
+    var max = Math.max(month, RENT) * 1.06;
+    var fr = $('[data-bar-rent]'), ft = $('[data-bar-take]');
+    fr.style.width = '0'; ft.style.width = '0'; void ft.offsetWidth;
+    requestAnimationFrame(function () { fr.style.width = (RENT / max * 100).toFixed(1) + '%'; ft.style.width = (month / max * 100).toFixed(1) + '%'; });
+    $('[data-bar-take-v]').textContent = fmt(month);
+    $$('img', scene).forEach(function (im) { im.classList.toggle('on', +im.dataset.v === i); });
+    stage.classList.add('has-scene');
+    window.dispatchEvent(new CustomEvent('bb:venue', { detail: i }));
+    result.hidden = false;
     money.hidden = false;
     money.style.animation = 'none'; void money.offsetWidth; money.style.animation = '';
     $$('.item', items).forEach(function (li) {

@@ -62,14 +62,14 @@ behind it is `deep-needs-2026-11-06.md`, `call-analysis-2026-11-05.md`, `rebrand
     Sans** (SIL OFL, licence in `site-v2/fonts`) for everything, heavy and tight for headlines like Puttshack and Soho
     House's grotesks, and **Fragment Mono** (SIL OFL) only for prices and the wheel digits. **No italics anywhere**
     (Raka, 6 Nov).
-11. **Colour (v2.1, Raka 6 Nov, "I just don't like flat colors ... feels tacky ... choose whatever you think ... exclusive and
-    nice and professional and modern", and he expects Owen to be open to a rebrand).** The games table. Deep green baize
-    `#0f3a2b` to `#05130e`, lit from above like a pendant lamp over a card table, so the gradient is the light on the table
-    where the money sits, not decoration. Brass `#d8b46a` (his locks, case clasps and hinges) for the one accent, the place
-    word, the buttons, the markers, the money. Warm cream `#f4ecdd` for type instead of stark white. A faint felt grain only
-    in the box chapter. A cream to sand close for get your box with green type. It sets him apart from the dark padlock
-    look of escape room brands (rebrand analysis section 4) and reads members' club, not template. His navy and orange
-    retire for this build, a brand decision for Owen at the refinement session.
+11. **Colour (v3, Raka 6 Nov on v2.1's green, "Dark. It's not really inviting ... lighter ... white also on the back ...
+    Apple ... Nike ... check like all the big ass brands").** Daylight, from the 104 brand scan (`brand-scan-2026-11-06.md`,
+    60 of 65 loaded pages are white, colour carried by photos and film). White `#ffffff` and Apple's light grey `#f5f5f7`,
+    near black type `#1d1d1f`, black buttons at 10 to 12px. One signature gradient from his own orange and red, `#ffa646`
+    to `#ff6a3d` to `#ff2f4e` to `#d81b72`, the warm light of a lock clicking open, used for the place word, the markers, the
+    money figure and one full colour band for get your box (run berry to orange there, so the white words sit on 5 to 7.5
+    to 1). The box sits on a soft white to grey studio sweep with a contact shadow. The navy and orange of his site, and the
+    green of v2.1, retire for this build, a brand decision for Owen.
 12. **New design language.** His site is centred text over AI images under a navy overlay. This is a film band with no
     text on it, an editorial headline on solid night beside the pitch, and his real product you can open.
 13. **Every photo and film.**
@@ -81,7 +81,7 @@ behind it is `deep-needs-2026-11-06.md`, `call-analysis-2026-11-05.md`, `rebrand
       game, so not used.
     - His own photos, `lid.png` and `inside.jpg`, from his LinkedIn, as in v1 (media.json).
 14. **No section 5 tells.** check-build PASS, 0 italic, 0 kickers, 0 pills, 0 chips, 0 arrow glyphs, 0 cards, no marquee,
-    no count ups, 3 sections, 1 turn, hero 63% film at desktop and 44% on a phone, walk 0, first screen action at both
+    no count ups, 3 sections, 1 turn, hero 38% film at desktop and 40% on a phone (v3 layout, headline left on white, film tile right, film first on a phone), walk 0, first screen action at both
     sizes, 0 page errors.
 
 ## D. Before Raka sees it
@@ -101,3 +101,60 @@ behind it is `deep-needs-2026-11-06.md`, `call-analysis-2026-11-05.md`, `rebrand
 - **The film is stock.** Owen's own film of people playing (NEC stand, the trial) should replace it.
 - **The inside photo** is still his phone shot of grey plastic. It reads true, a better one would lift the moment most.
 - **The hero band at 1440 x 900** is the film over 56% of the screen with the headline and buttons below, all on screen.
+
+## v3.1, the wow layer (Raka 6 Nov, "Is this the best design we can do? Animations, pictures graphs features ... The wow effect!!")
+
+Measured against Apple's AirPods Pro page (product huge on white, one iridescent ring as the signature, giant single numbers,
+16 films) and Lusion (a line drawn through the page as you scroll), both rendered and scrolled 6 Nov. Awwwards answered 502,
+Active Theory refuses headless browsers.
+
+- **The hero arrives.** The film tile opens from a smaller frame, the headline lines rise in turn.
+- **The thread.** A line in his gradient draws itself down from the hero into the box as you scroll.
+- **The box as a product shot.** Centred and big on the light sweep, tilting a few degrees with the pointer until it opens.
+- **The halo.** His gradient as a ring behind the lock, it turns a notch with every wheel click, and bursts outward over the box
+  when 1 4 9 lands. Each wheel snaps with a small bounce, phones get a 6 ms vibration.
+- **Pictures to choose with.** "Who's opening it?" is five photo tiles (pub, cafe, park, training room, lodge), stills cut from
+  the same four Mixkit Free clips plus Nice night between friends with a campfire 42754 (Free, read on its page 6 Nov). The cafe
+  mug carries a geometric pattern, zoomed and checked, no wordmark.
+- **The box lands on their table.** The chosen venue's photo fills a rounded scene behind his open box.
+- **The graph and the number.** The multiple of the rent set huge in the gradient (2.9×, 4.3×, 3.6×, 3×, or "8 months" to pay
+  back for lodges), with two bars, the £60 rent against their takings, growing on choose. No count ups, the numbers are set, the
+  bars grow.
+- check-build PASS, 0 page errors at 1440 and 390, frames in `first-look-v8/`.
+
+## v3.2, the full build (Raka 6 Nov, "Use stock videos and animations. Go for it")
+
+Nine sections on the home page plus the hidden hints page. check-build PASS on both pages (home with `[data-order]`, hints with
+`.hints-venue a`), 0 page errors, 0 failed requests, sections at 1440 and 390 in `final-look-v3/`.
+
+1. **Hero**, film band and "There's money on the table", unchanged.
+2. **Crack the box**, the wow layer, unchanged.
+3. **How it works.** Four square tiles, his strapped lid (s2), a film of friends working a puzzle together (Mixkit 5328, Free,
+   cropped to hands, a printed T shirt kept out of frame), a film of a parent and child at a puzzle (Mixkit 40418, Free), his
+   closed box (s1). Facts from his /breakoutbox page and the call (70 litre, under a metre, under 10 minutes, 60 to 90 minutes,
+   teams of up to six, online hints).
+4. **The numbers.** What you run, games a week a box, price a game, extra sold with each game, rent or own, boxes. A 12 month
+   profit after the box chart, and dragging the chart up or down changes games a week (graph as a control, keyboard arrows
+   too). Checked by hand, park 3 a week at £20 is £260, plus £10 extra is £390, five a week is £650, owned that's £7,450 in year
+   one and pays back in month 1.
+5. **Your proposal.** A document built live from the numbers, venue, plan, games, takings, cost, first year, payback, how it
+   works at their venue, what's included (his /breakoutbox list). Print or save as PDF (print shows the proposal alone), copy a
+   share link that reopens the same proposal for whoever signs it off (tested), send it to Owen.
+6. **What's the catch.** Six questions, space, who runs it, cost and cut, coming back, breakages, digital and VR. Answers only
+   from his pages and the call, no promise he hasn't made (breakages answered with his "additional supplies" line).
+7. **Games.** The Heist (his case photo s4) and "New games on the way" from his "new game releases".
+8. **Who.** "The code is our name." Company facts from Companies House, no photo of Owen until he says yes.
+9. **Get your box.** Two tabs, one to ten boxes, or a group of sites (how many sites, who else decides, call back tick box). The
+   numbers arrive filled in. Validation tested, sends nothing, says so.
+- **Hidden hints, `/play/the-heist/`.** noindex, nofollow, not linked from the site. All six puzzles built from his live /hints
+  page text (fetched 6 Nov), one hint at a time, then the walkthrough, then "Sure?", then the code. His photo across the top,
+  and "Run a pub, park or café? Get your own box" for venue owners who play it.
+
+### Must not ship as is
+
+- The money examples and the calculator defaults are ours. Owen's trial numbers should replace them.
+- All film and venue photos are Mixkit stock, decorative, never captioned as his. His own footage and photos replace them.
+- If his printed QR codes point at onefortyninegames.com/hints, that exact address must keep working or redirect.
+- The proposal says "Prices from OneFortyNine Games", check the volume pricing with Owen before a group sees it.
+- Copy checks, no dashes or colons in our words, the NO-AI-SLOP section 8 scan clean. Its sentence length score is low because
+  button and label text counts as short sentences.
