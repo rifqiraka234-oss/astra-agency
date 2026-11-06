@@ -177,3 +177,111 @@ All 15 thumbnails checked after the last edit, and a full text pull showed no da
 Still open for Raka. "RAKA TO ADD a photo of you" sits on the photo band on Who teaches it. "RAKA TO CONFIRM these
 prices" sits under the price table, together with the efficy line on the bio. The Canva copies DAHaJAXOLEs and
 DAHaJIb3fbg can be deleted in Canva, the API has no delete.
+
+## The academy deck, final shape: two doors in Canva (6 Nov, current version)
+
+Raka, 6 Nov, "I prefer the Canva one, but ... free license pictures ... tell the whole story ... I teach you or I build
+you ... full offerings." This supersedes the Slides version above. Canva design DAHaJAXOLEs, 18 pages, edited in place
+on his choice, saved after he approved the preview.
+
+Order. Cover (learn it, or have it built), Why now, The chain, Who teaches it, Our own engine, Two ways in (I teach
+you, I build it for you), then the teach door (Score, Three levels, What you build, Role courses with team seats, How
+every course works, Self learn or 1:1, Prices), then the build door (Rather have it built, Everything we build, How a
+build runs), Which door is yours, Start here (free score, Health Check, or a call).
+
+The part time RevOps lead is on the slides at €2,500 to €5,000 a month, Raka's call on 6 Nov. The efficy contract
+question in "Things Raka has to decide" still stands.
+
+Every photo is CC0, found through Openverse. Burst photos come from burst.shopifycdn.com at 2400 px. The rawpixel ones
+use the editor_1024 size, because rawpixel's image_1300 size carries a faint tiled watermark (checked 6 Nov). The page
+7 and page 8 Architect picture is "Illuminated Night Sky with Stars over Mount Erciyes" (Wikimedia, CC0). A first
+batch of uploads with the watermark sits unused in Raka's Canva uploads and can be deleted there.
+
+| Slot | Photo | Licence | Source |
+|---|---|---|---|
+| p1 | View woman working laptop desk | cc0 | https://www.rawpixel.com/image/8809250/photo-image-books-hands-social-media |
+| p2 | Free winter snow trees photo | cc0 | https://www.rawpixel.com/image/5912015/image-cloud-public-domain-leaf |
+| p3 | Free networking cables image | cc0 | https://www.rawpixel.com/image/5927852/photo-image-background-public-domain-technology |
+| p4 | Rose shadow wall | cc0 | https://www.rawpixel.com/image/6037632/photo-image-flower-public-domain-shadow |
+| p5 | Free networking cables image | cc0 | https://www.rawpixel.com/image/5918994/image-background-public-domain-technology |
+| p6 | Free forest path image | cc0 | https://www.rawpixel.com/image/5928071/photo-image-background-public-domain-trees |
+| p7a | Skye, United Kingdom | cc0 | https://www.rawpixel.com/image/3301336/free-photo-image-cottage-building-cabin |
+| p7b | Salento Quindio - Valle del | cc0 | https://www.rawpixel.com/image/6077773/salento-quindio-valle-del-cocora |
+| p7c | Steep slopes rocky mountains Ollantaytambo | cc0 | https://www.rawpixel.com/image/3304206/free-photo-image-painting-cloudy-adventure |
+| p7d | Misty fog wraps snowy mountain | cc0 | https://www.rawpixel.com/image/3296422/free-photo-image-nature-adelboden-alp |
+| p8a | Free afterglow sky image | cc0 | https://www.rawpixel.com/image/5908179/photo-image-cloud-public-domain-sky |
+| p8b | Night Sky Stars Over Lake | cc0 | https://www.rawpixel.com/image/5970221/night-sky-stars-over-lake |
+| p8c | An aircraft in the sky | cc0 | https://www.rawpixel.com/image/431934/free-photo-image-sky-clouds-flying-above |
+| p9 | untitled | cc0 | https://www.rawpixel.com/image/5938597/free-public-domain-cc0-photo |
+| p10 | High clouds forming sky | cc0 | https://www.rawpixel.com/image/444767/white-cloud-blue-sky |
+| p12 | blue night sky star light | cc0 | https://www.rawpixel.com/image/3283556/free-photo-image-usa-countryside-forest-america |
+| p15 | NRCS snow survey shop at the headquarters | cc0 | https://www.rawpixel.com/image/3334995/free-photo-image-garage-bozeman-cc0 |
+| p16 | untitled | cc0 | https://www.rawpixel.com/image/5907674/free-public-domain-cc0-photo |
+| p18 | Shadow window frame plants pots | cc0 | https://www.rawpixel.com/image/3282454/free-photo-image-shadow-window-tablecloth |
+
+Canva API notes. merge-designs takes one operation per call. A copy of a page comes from inserting the same design's
+pages and moving them. crop_media takes the image box (top, left, width, height) relative to the element.
+find_and_replace_text "For " style patterns hit every run in the element, so keep finds specific.
+
+## GTM automation, the flow rebuilt (6 Nov, current version)
+
+Raka, 6 Nov. Call it GTM automation, make the problem bigger (you're winning now, what about next quarter and next
+year), add group packages and team seminars, show the curriculum in full, list everything we build, use Eten Maar,
+Betty Blocks and efficy as proof, then "I don't feel like the flow of it ... reanalyze it". Our Own Engine is dropped.
+Same Canva design DAHaJAXOLEs, saved after he approved the preview and the page moves. 22 pages.
+
+| # | Page | Job in the story |
+|---|---|---|
+| 1 | Cover | GTM automation, taught or built |
+| 2 | Why GTM automation now | The pain, this quarter is fine, next year the manual way hits its limit |
+| 3 | What GTM automation runs | What it is, the six links |
+| 4 | Who's behind it | Raka |
+| 5 | Proof from real work | Eten Maar, Betty Blocks, efficy |
+| 6 | Two ways in | I teach you, or I build it for you |
+| 7 | I teach you, pick your path | Sell better, a GTM career, train your team |
+| 8 | Every course, step by step | The format |
+| 9 | The score | Find your level |
+| 10 | Three levels, one ladder | The career path |
+| 11 to 13 | Level 1, 2, 3 | Curriculum module by module, from docs/academy |
+| 14 | Want to sell better? | GTM Seller and GTM Leader modules |
+| 15 | For your team | Seminar and group package, €3,000 to €8,000 per team |
+| 16 | Two ways to learn | Self learn or 1:1 |
+| 17 | The ladder in prices | Teaching prices |
+| 18 | I build it for you | Health Check, Engine Build, Run or Direct |
+| 19 | Everything we build | Campaigns, AI agents, lead to loyalty, forecasting, feedback loops |
+| 20 | How a build runs | Health Check, seminar, build, hand over, run, Fractional RevOps Director |
+| 21 | Which door is yours? | Self select |
+| 22 | Start here | Score, Health Check, or a call |
+
+Facts and where they come from. "€0 to €100K revenue in a year" for Eten Maar is Raka's own statement on 6 Nov, not
+recorded anywhere else in the repo. "GTM engineering and RevOps job postings rose 205% in 2025" is Bloomberry
+(https://bloomberry.com/blog/i-analyzed-1000-gtm-engineering-jobs-here-is-what-i-learned/), January to September 2025
+against the same months of 2024, checked on the page 6 Nov. Team pricing €3,000 to €8,000 is Raka's pick from the
+earlier suggestion. The efficy contract question still stands for the Fractional RevOps Director offer.
+
+Canva API lesson. replace_text on a text box with mixed bold and normal runs drops the brand font to Canva's default,
+and format_text cannot set a font back. For those boxes, change each run with find_and_replace_text instead.
+
+## New prices in the deck, and a costs page (6 Nov, later the same day)
+
+Raka set the prices on 6 Nov, and they're saved in Canva design DAHaJAXOLEs, which now has 25 pages. The full sheet with
+the course pitches is `docs/gtm-automation-prices-draft.md`, and the preview is `docs/gtm-deck-preview-v3.png`.
+
+| Page | What changed |
+|---|---|
+| 2 | New. What Is GTM Automation, five plain lines and "In one line" |
+| 3 | New. Why Now, 67% (Gartner, 9 Mar 2026), 70% and 84% (Salesforce State of Sales), 205% (Bloomberry) |
+| 4 | Problem page retitled What Breaks Next Year |
+| 9 | Seller and Engineer tracks from €125 a level, Train your team from €500 |
+| 12 | Ladder page renamed The Engineer Track |
+| 16 | Seller Track, Levels 1 Find, 2 Reach, 3 Scale at €125 or €1,000. GTM Leader €500 or €2,000 |
+| 17 | Seminar €125 per person per hour, one topic. Group package €600 per person per level, from 4 people |
+| 19 | Every level €125 or €1,000 with Raka, all three €299 or €2,500, same on both tracks |
+| 20 | Health Check free, Strategy €750, builds from €650, automations €150, AI agent €1,000, full engine around €4,000, Run €750 a month, directing €120 an hour |
+| 21 | New. What It Costs, three example builds at €800, €2,700 and €4,750 then €750 a month. Illustrations, not client jobs |
+| 23 | How a build runs. Health Check free, then Strategy, Build, Hand over with a seminar, Run, Direct |
+| 25 | Start Here says the Health Check is free |
+
+Still open. Seller Level 3 (the AI research assistant) has no lessons written yet, because `docs/academy/gtm-seller.md`
+is one course of five modules that splits cleanly only into Levels 1 and 2. The academy files still carry the old prices
+(€149, €199, €249 and so on), and the deck is now the current source until they're updated.

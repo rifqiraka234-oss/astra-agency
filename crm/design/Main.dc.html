@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Astra CRM, home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F4F1}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+a.nav:hover{background:#20242A !important;color:#FFFFFF !important}
+button{font-family:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</helmet>
+<div style="font-family: Geist, Inter, system-ui, sans-serif; color: #15171A; background: #F4F4F1; display: flex; flex-wrap: wrap; align-items: stretch; min-height: 1180px; position: relative">
+
+<nav aria-label="Main" style="flex: 1 1 220px; max-width: 100%; background: #15171A; color: #C9CCD1; padding: 20px 14px; display: flex; flex-direction: column; gap: 22px; box-sizing: border-box">
+<div style="display: flex; align-items: center; gap: 10px; padding: 0 8px">
+<div style="width: 30px; height: 30px; border-radius: 8px; background: #C2410C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px">A</div>
+<div style="color: #FFFFFF; font-weight: 600; font-size: 16px; letter-spacing: -0.01em">Astra CRM</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Work</div>
+<a class="nav" href="Main.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #FFFFFF; background: #262A31; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"></path></svg>Home</a>
+<a class="nav" href="Tasks.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="m8 12 3 3 5-6"></path></svg><span style="flex: 1">Tasks</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; background: #C2410C; color: #FFFFFF; border-radius: 10px; padding: 1px 7px">4</span></a>
+<a class="nav" href="Pipeline.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="5" height="16" rx="1"></rect><rect x="10" y="4" width="5" height="11" rx="1"></rect><rect x="17" y="4" width="4" height="7" rx="1"></rect></svg>Pipelines</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Records</div>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M15 9h4a1 1 0 0 1 1 1v11M3 21h18M8 8h3M8 12h3M8 16h3"></path></svg>Organizations</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>Contacts</a>
+<a class="nav" href="Deal.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M17 7.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 2.2 2.6 5 3 5 1.3 5 3.2-2.2 3.1-5 3.1-5-1.2-5-3.1"></path></svg>Deals</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3zM8 7V4h8v3"></path></svg>Projects</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z"></path></svg>Tickets</a>
+<a class="nav" href="Organization.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"></path></svg>Invoices</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #8F95A0; padding: 0 10px 6px">Admin</div>
+<a class="nav" href="Settings.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 10px; min-height: 44px; border-radius: 8px; text-decoration: none; color: #C9CCD1; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"></path></svg>Settings</a>
+</div>
+<div style="margin-top: auto; border-top: 1px solid #2A2E35; padding: 14px 10px 0; display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: #A3A8B1">
+<div style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 4px; background: #4ADE80"></span>lemlist synced 3 min ago</div>
+<div style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 4px; background: #4ADE80"></span>Gmail synced 1 min ago</div>
+<div style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 4px; background: #4ADE80"></span>Moneybird connected</div>
+</div>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<header style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 14px 28px; background: #FFFFFF; border-bottom: 1px solid #E2E2DC">
+<label for="search" class="sr">Search records</label>
+<input id="search" type="search" placeholder="Search organizations, contacts, deals, emails" style="flex: 1 1 280px; min-width: 0; height: 44px; border: 1px solid #D6D6CF; border-radius: 10px; padding: 0 14px; font-family: inherit; font-size: 14px; background: #F8F8F6; color: #15171A">
+<span style="font-size: 12px; font-weight: 500; color: #92400E; background: #FDF3E1; border-radius: 6px; padding: 5px 9px">Sample data</span>
+<div style="position: relative">
+<button type="button" onClick="{{toggleNew}}" aria-expanded="{{newOpen}}" style="height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: #15171A; color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>New</button>
+<sc-if value="{{newOpen}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; right: 0; top: 52px; z-index: 5; width: 230px; background: #FFFFFF; border: 1px solid #D6D6CF; border-radius: 12px; box-shadow: 0 12px 32px rgba(21,23,26,0.14); padding: 6px; display: flex; flex-direction: column">
+<sc-for list="{{newKinds}}" as="k" hint-placeholder-count="6">
+<button type="button" onClick="{{k.pick}}" style="text-align: left; min-height: 44px; padding: 0 12px; border: 0; background: #FFFFFF; border-radius: 8px; font-size: 14px; color: #15171A; cursor: pointer; display: flex; justify-content: space-between; align-items: center">{{k.label}}<span style="font-size: 12px; color: #5B6068">{{k.hint}}</span></button>
+</sc-for>
+</div>
+</sc-if>
+</div>
+<div aria-label="Signed in as Raka Mulya" style="width: 36px; height: 36px; border-radius: 18px; background: #E8EEFD; color: #1E40AF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600">RM</div>
+</header>
+
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 24px; max-width: 1240px; width: 100%; box-sizing: border-box">
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div>
+<div style="font-size: 13px; color: #5B6068">Friday 6 November</div>
+<h1 style="margin: 4px 0 0; font-size: 30px; font-weight: 600; letter-spacing: -0.02em">{{headline}}</h1>
+</div>
+<div role="group" aria-label="Whose day" style="display: flex; gap: 4px; background: #E9E9E4; padding: 4px; border-radius: 10px">
+<sc-for list="{{users}}" as="u" hint-placeholder-count="3">
+<button type="button" onClick="{{u.pick}}" aria-pressed="{{u.active}}" style="{{u.style}}">{{u.label}}</button>
+</sc-for>
+</div>
+</div>
+
+<section aria-label="Key numbers" style="display: flex; flex-wrap: wrap; gap: 12px">
+<sc-for list="{{kpis}}" as="m" hint-placeholder-count="5">
+<div style="flex: 1 1 180px; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 13px; color: #5B6068">{{m.label}}</div>
+<div style="font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">{{m.value}}</div>
+<div style="font-size: 12px; color: #5B6068">{{m.sub}}</div>
+</div>
+</sc-for>
+</section>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+
+<section aria-labelledby="tasks-h" style="flex: 2 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px">
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #ECECE7">
+<h2 id="tasks-h" style="margin: 0; font-size: 16px; font-weight: 600">{{tasksTitle}}</h2>
+<a href="Tasks.dc.html" style="font-size: 13px; text-decoration: none">All tasks</a>
+</div>
+<div style="display: flex; flex-direction: column">
+<sc-for list="{{tasks}}" as="t" hint-placeholder-count="4">
+<div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 20px; border-bottom: 1px solid #F0F0EB">
+<button type="button" onClick="{{t.toggle}}" aria-label="{{t.checkLabel}}" style="{{t.checkStyle}}"><sc-if value="{{t.done}}" hint-placeholder-val="{{false}}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg></sc-if></button>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 5px">
+<div style="{{t.titleStyle}}">{{t.title}}</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 12px; color: #5B6068">
+<span style="background: #F1F1EC; border-radius: 5px; padding: 2px 7px; color: #3A3E45">{{t.type}}</span>
+<a href="{{t.href}}" style="text-decoration: none">{{t.related}}</a>
+<sc-if value="{{t.recurring}}" hint-placeholder-val="{{false}}"><span>Repeats {{t.recurring}}</span></sc-if>
+</div>
+</div>
+<div style="text-align: right; display: flex; flex-direction: column; gap: 5px; align-items: flex-end">
+<span style="{{t.dueStyle}}">{{t.due}}</span>
+<span style="font-size: 12px; color: #5B6068">{{t.priority}}</span>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+
+<section aria-labelledby="appr-h" style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px">
+<div style="padding: 16px 20px; border-bottom: 1px solid #ECECE7; display: flex; justify-content: space-between; align-items: baseline; gap: 8px">
+<h2 id="appr-h" style="margin: 0; font-size: 16px; font-weight: 600">Waiting for your go</h2>
+<span style="font-size: 12px; color: #5B6068">Nothing sends without it</span>
+</div>
+<sc-for list="{{approvals}}" as="a" hint-placeholder-count="3">
+<div style="padding: 14px 20px; border-bottom: 1px solid #F0F0EB; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: #5B6068"><span>{{a.channel}}</span><span>{{a.fresh}}</span></div>
+<div style="font-size: 14px; font-weight: 500">{{a.to}}</div>
+<div style="font-size: 13px; color: #3A3E45; line-height: 1.45">{{a.preview}}</div>
+<sc-if value="{{a.sent}}" hint-placeholder-val="{{false}}">
+<div style="font-size: 13px; color: #166534; background: #E7F5EC; border-radius: 8px; padding: 8px 10px">Approved by Raka, sent and logged on the timeline</div>
+</sc-if>
+<sc-if value="{{a.pending}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; gap: 8px">
+<a href="Organization.dc.html" style="flex: 1; min-height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid #D6D6CF; border-radius: 9px; font-size: 13px; color: #15171A; text-decoration: none">Read thread</a>
+<button type="button" onClick="{{a.approve}}" style="flex: 1; min-height: 40px; border: 0; border-radius: 9px; background: #C2410C; color: #FFFFFF; font-size: 13px; font-weight: 600; cursor: pointer">Approve and send</button>
+</div>
+</sc-if>
+</div>
+</sc-for>
+</section>
+
+<section aria-labelledby="rem-h" style="background: #FFFFFF; border: 1px solid #E2E2DC; border-radius: 14px">
+<div style="padding: 16px 20px; border-bottom: 1px solid #ECECE7"><h2 id="rem-h" style="margin: 0; font-size: 16px; font-weight: 600">Reminders</h2></div>
+<sc-for list="{{reminders}}" as="r" hint-placeholder-count="4">
+<div style="padding: 12px 20px; border-bottom: 1px solid #F0F0EB; display: flex; gap: 12px; align-items: center">
+<span style="{{r.dotStyle}}"></span>
+<div style="flex: 1; min-width: 0">
+<div style="font-size: 14px">{{r.title}}</div>
+<div style="font-size: 12px; color: #5B6068">{{r.sub}}</div>
+</div>
+</div>
+</sc-for>
+</section>
+
+</div>
+</div>
+</div>
+</main>
+
+<sc-if value="{{modalOpen}}" hint-placeholder-val="{{false}}">
+<div style="position: absolute; inset: 0; background: rgba(21,23,26,0.45); display: flex; align-items: flex-start; justify-content: center; padding: 120px 16px; z-index: 10">
+<div role="dialog" aria-labelledby="new-h" style="width: 100%; max-width: 520px; background: #FFFFFF; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 24px 60px rgba(0,0,0,0.25)">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<h2 id="new-h" style="margin: 0; font-size: 18px; font-weight: 600">{{modalTitle}}</h2>
+<button type="button" onClick="{{closeModal}}" aria-label="Close" style="width: 40px; height: 40px; border: 0; background: #F1F1EC; border-radius: 10px; cursor: pointer; font-size: 18px; color: #15171A">×</button>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: #3A3E45">{{fieldA}}<input type="text" value="{{valueA}}" style="height: 44px; border: 1px solid #D6D6CF; border-radius: 10px; padding: 0 12px; font-family: inherit; font-size: 14px"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: #3A3E45">{{fieldB}}<input type="text" value="{{valueB}}" style="height: 44px; border: 2px solid #B45309; border-radius: 10px; padding: 0 12px; font-family: inherit; font-size: 14px"></label>
+<div style="background: #FDF3E1; border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 14px; font-weight: 600; color: #7C2D12">{{dupTitle}}</div>
+<div style="font-size: 13px; color: #3A3E45; line-height: 1.45">{{dupBody}}</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<a href="Organization.dc.html" style="min-height: 40px; padding: 0 14px; display: flex; align-items: center; background: #15171A; color: #FFFFFF; border-radius: 9px; font-size: 13px; font-weight: 600; text-decoration: none">Open existing record</a>
+<button type="button" onClick="{{closeModal}}" style="min-height: 40px; padding: 0 14px; border: 1px solid #D6D6CF; background: #FFFFFF; border-radius: 9px; font-size: 13px; cursor: pointer; color: #15171A">Cancel</button>
+</div>
+</div>
+<div style="font-size: 12px; color: #5B6068">{{dupRule}}</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1180}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { user: 'raka', done: {}, sent: {}, newOpen: false, modal: null };
+  }
+  renderVals() {
+    const s = this.state;
+    const people = [
+      { id: 'raka', label: 'Raka' },
+      { id: 'luna', label: 'Luna' },
+      { id: 'josh', label: 'Josh' }
+    ];
+    const users = people.map((p) => ({
+      label: p.label,
+      active: s.user === p.id ? 'true' : 'false',
+      pick: () => this.setState({ user: p.id }),
+      style: 'min-height: 40px; padding: 0 16px; border: 0; border-radius: 8px; font-size: 14px; cursor: pointer; ' + (s.user === p.id ? 'background: #FFFFFF; color: #15171A; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.12)' : 'background: transparent; color: #3A3E45')
+    }));
+    const allTasks = [
+      { id: 1, owner: 'raka', title: 'Nudge Harbor Physio about the prototype', type: 'LinkedIn', related: 'Harbor Physio, Prototype sent', href: 'Deal.dc.html', due: 'Yesterday', overdue: true, priority: 'High' },
+      { id: 2, owner: 'raka', title: 'Approve opener for Martin Kessler', type: 'Approval', related: 'Kessler Werkzeugbau, Lead', href: 'Pipeline.dc.html', due: 'Today 10:00', priority: 'High' },
+      { id: 3, owner: 'raka', title: 'Follow up on the proposal with Eva Jansen', type: 'Email', related: 'Brouwerij De Kade, Taproom booking app', href: 'Deal.dc.html', due: 'Today 14:00', priority: 'Medium' },
+      { id: 4, owner: 'raka', title: 'Prep the discovery call', type: 'Meeting prep', related: 'Maison Orée, Discovery booked', href: 'Deal.dc.html', due: 'Today 16:30', priority: 'Medium' },
+      { id: 5, owner: 'luna', title: 'Reply on ticket 118, booking confirmations', type: 'Ticket', related: 'Brouwerij De Kade', href: 'Organization.dc.html', due: 'Yesterday', overdue: true, priority: 'High' },
+      { id: 6, owner: 'luna', title: 'Quarterly check in with Eva Jansen', type: 'Check in', related: 'Brouwerij De Kade', href: 'Organization.dc.html', due: 'Today 11:00', priority: 'Medium', recurring: 'every quarter' },
+      { id: 7, owner: 'luna', title: 'Chase invoice AST-2026-049, 8 days late', type: 'Invoice', related: 'Atlas Freight BV', href: 'Organization.dc.html', due: 'Today', priority: 'High' },
+      { id: 8, owner: 'luna', title: 'Renewal call for the support retainer', type: 'Renewal', related: 'Lumen Dental Group', href: 'Organization.dc.html', due: 'Mon 9 Nov', priority: 'Medium' },
+      { id: 9, owner: 'josh', title: 'Review scope for the taproom booking app', type: 'To do', related: 'Brouwerij De Kade, Taproom booking app', href: 'Deal.dc.html', due: 'Today 13:00', priority: 'Medium' },
+      { id: 10, owner: 'josh', title: 'Hand Pellegrino Ceramics over to delivery', type: 'To do', related: 'Pellegrino Ceramics, Won', href: 'Deal.dc.html', due: 'Today', priority: 'Low' },
+      { id: 11, owner: 'josh', title: 'Kickoff for the Studio Fjell build', type: 'Meeting', related: 'Studio Fjell, Project', href: 'Organization.dc.html', due: 'Tue 10 Nov', priority: 'Medium' }
+    ];
+    const tasks = allTasks.filter((t) => t.owner === s.user).map((t) => {
+      const done = !!s.done[t.id];
+      return {
+        ...t,
+        done,
+        recurring: t.recurring || '',
+        checkLabel: done ? 'Mark as not done' : 'Mark as done',
+        toggle: () => this.setState({ done: { ...s.done, [t.id]: !done } }),
+        checkStyle: 'width: 24px; height: 24px; margin-top: 1px; flex: none; border-radius: 7px; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; ' + (done ? 'background: #166534; border: 2px solid #166534' : 'background: #FFFFFF; border: 2px solid #A9ADB4'),
+        titleStyle: 'font-size: 14px; font-weight: 500; ' + (done ? 'text-decoration: line-through; color: #8A8F97' : 'color: #15171A'),
+        dueStyle: 'font-size: 13px; font-weight: 500; white-space: nowrap; ' + (t.overdue && !done ? 'color: #B91C1C' : 'color: #15171A')
+      };
+    });
+    const names = { raka: 'Raka', luna: 'Luna', josh: 'Josh' };
+    const open = tasks.filter((t) => !t.done).length;
+    const approvalsData = [
+      { id: 'a1', channel: 'LinkedIn opener, via lemlist', fresh: 'Thread pulled 2 min ago', to: 'Martin Kessler, Kessler Werkzeugbau', preview: 'Hi Martin, I saw Kessler Werkzeugbau and the press line you built for...' },
+      { id: 'a2', channel: 'LinkedIn nudge, via lemlist', fresh: 'Thread pulled 2 min ago', to: 'Noor Haddad, Harbor Physio', preview: 'Noor, did the booking flow make sense on your phone? The bit I...' },
+      { id: 'a3', channel: 'Email reply, via Gmail', fresh: 'Thread pulled 1 min ago', to: 'Eva Jansen, Brouwerij De Kade', preview: 'Eva, good question on the deposit. Yes, guests can pay it upfront and...' }
+    ];
+    const approvals = approvalsData.map((a) => ({
+      ...a,
+      sent: !!s.sent[a.id],
+      pending: !s.sent[a.id],
+      approve: () => this.setState({ sent: { ...s.sent, [a.id]: true } })
+    }));
+    const dot = (c) => 'width: 10px; height: 10px; border-radius: 5px; flex: none; background: ' + c;
+    const reminders = [
+      { title: 'Ticket 118 first reply due in 2h 10m', sub: 'Brouwerij De Kade, SLA high priority', dotStyle: dot('#B91C1C') },
+      { title: 'Invoice AST-2026-049 is 8 days late', sub: 'Atlas Freight BV, €2,150, in Moneybird', dotStyle: dot('#B45309') },
+      { title: 'Support retainer renews 30 Nov', sub: 'Lumen Dental Group, account manager Luna', dotStyle: dot('#1D4ED8') },
+      { title: 'Quarterly check in, Brouwerij De Kade', sub: 'Today 11:00, repeats every quarter', dotStyle: dot('#1D4ED8') }
+    ];
+    const kinds = [
+      { id: 'org', label: 'Organization', hint: 'checks domain' },
+      { id: 'contact', label: 'Contact', hint: 'checks email' },
+      { id: 'lead', label: 'Lead', hint: '' },
+      { id: 'deal', label: 'Deal', hint: '' },
+      { id: 'task', label: 'Task', hint: '' },
+      { id: 'ticket', label: 'Ticket', hint: '' }
+    ];
+    const newKinds = kinds.map((k) => ({
+      ...k,
+      pick: () => this.setState({ newOpen: false, modal: (k.id === 'org' || k.id === 'contact') ? k.id : null })
+    }));
+    const m = s.modal;
+    const modal = m === 'contact'
+      ? { modalTitle: 'New contact', fieldA: 'Full name', valueA: 'Eva Jansen', fieldB: 'Email', valueB: 'EVA@dekade.nl', dupTitle: 'This email already belongs to Eva Jansen', dupBody: 'Eva Jansen, Owner at Brouwerij De Kade, added 2 Sep from lemlist. Emails are matched without case, so EVA@dekade.nl and eva@dekade.nl are the same person.', dupRule: 'Contacts are unique on email. A second email can be added to the existing record instead.' }
+      : { modalTitle: 'New organization', fieldA: 'Name', valueA: 'De Kade Brewery', fieldB: 'Website or domain', valueB: 'https://www.dekade.nl/taproom', dupTitle: 'dekade.nl is already Brouwerij De Kade', dupBody: 'Matched on domain after stripping https, www and the path. Account manager Luna, 4 contacts, 1 open deal, 1 project.', dupRule: 'Organizations are unique on every domain they own. Free mail domains like gmail.com never match.' };
+    return {
+      users,
+      tasks,
+      tasksTitle: names[s.user] + "'s tasks, " + open + ' open',
+      headline: s.user === 'raka' ? 'Your day' : names[s.user] + "'s day",
+      kpis: [
+        { label: 'Open pipeline', value: '€86,400', sub: '12 deals in sales' },
+        { label: 'Weighted pipeline', value: '€39,240', sub: 'Q4 goal €50,000' },
+        { label: 'Win rate, 90 days', value: '31%', sub: '5 won, 11 lost' },
+        { label: 'Leads in play', value: '148', sub: '30 waiting on a reply' },
+        { label: 'Overdue tasks', value: '4', sub: 'Across the team' }
+      ],
+      approvals,
+      reminders,
+      newOpen: s.newOpen,
+      newKinds,
+      toggleNew: () => this.setState({ newOpen: !s.newOpen }),
+      modalOpen: !!m,
+      closeModal: () => this.setState({ modal: null }),
+      ...modal
+    };
+  }
+}
+</script>
+</body>
+</html>

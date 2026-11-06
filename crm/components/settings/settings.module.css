@@ -1,0 +1,423 @@
+/* Settings shell and panels, from design/Settings.dc.html. Tokens come from app/globals.css. */
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px 28px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.side {
+  flex: 1 1 200px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sideTitle {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.navItem {
+  display: block;
+  text-align: left;
+  min-height: 52px;
+  padding: 8px 12px;
+  border-radius: var(--radius-control);
+  color: var(--ink);
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--ink);
+}
+.navItem[aria-current='page'] {
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.navLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+.navSub {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.panel {
+  flex: 4 1 620px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-end;
+}
+.headText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.headTitle {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+.headSub {
+  font-size: 13px;
+  color: var(--text-muted);
+  max-width: 640px;
+  line-height: 1.5;
+}
+.headActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.objects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.typeChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.typeChip {
+  font-size: 13px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+.typeChipLater {
+  composes: typeChip;
+  color: var(--text-faint);
+  border-style: dashed;
+}
+
+.src {
+  font-size: 12px;
+  border-radius: var(--radius-chip);
+  padding: 2px 7px;
+  background: var(--tone-grey-bg);
+  color: var(--tone-grey-fg);
+  white-space: nowrap;
+}
+.srcCustom {
+  composes: src;
+  background: var(--tone-amber-bg);
+  color: var(--tone-amber-fg);
+}
+
+.key {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+.wide {
+  min-width: 720px;
+}
+.medium {
+  min-width: 640px;
+}
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+.splitMain {
+  flex: 1 1 360px;
+  min-width: 0;
+}
+.splitSide {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.mapRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+.mapCol {
+  flex: 1 1 140px;
+  min-width: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--tone-grey-bg);
+  border-radius: var(--radius-chip);
+  padding: 7px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mapTo {
+  color: var(--text-muted);
+}
+.mapField {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+.mapSample {
+  flex: 1 1 100%;
+  font-size: 12px;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.listRow {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--divider-soft);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.listRow:last-child {
+  border-bottom: 0;
+}
+.listMain {
+  min-width: 0;
+  flex: 1 1 200px;
+}
+.listTitle {
+  font-size: 14px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.listMeta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.rules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.rule {
+  flex: 1 1 240px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-panel);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ruleTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.ruleBody {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.pair {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--divider-soft);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.pair:last-child {
+  border-bottom: 0;
+}
+.pairSide {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+.why {
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--tone-grey-bg);
+  border-radius: var(--radius-chip);
+  padding: 3px 8px;
+}
+
+.reqChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.reqChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  background: var(--tone-grey-bg);
+  color: var(--tone-grey-fg);
+  border-radius: var(--radius-chip);
+  padding: 2px 4px 2px 8px;
+}
+.reqRemove {
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1;
+}
+.reqRemove:hover {
+  background: #e4e4de;
+  color: var(--ink);
+}
+
+.diff {
+  display: grid;
+  grid-template-columns: minmax(90px, 160px) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4px 12px;
+  font-size: 12px;
+  align-items: start;
+}
+.diffHead {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.diffKey {
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+.diffOld,
+.diffNew {
+  font-family: var(--font-mono);
+  border-radius: 4px;
+  padding: 1px 6px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.diffOld {
+  background: var(--tone-red-bg);
+  color: var(--tone-red-fg);
+}
+.diffNew {
+  background: var(--tone-green-bg);
+  color: var(--tone-green-fg);
+}
+.diffEmpty {
+  color: var(--text-faint);
+}
+
+.secret {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  background: var(--tone-grey-bg);
+  border-radius: var(--radius-control);
+  padding: 12px 14px;
+  user-select: all;
+  overflow-wrap: anywhere;
+}
+
+.optionRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.mergeGrid {
+  display: grid;
+  grid-template-columns: minmax(90px, 140px) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px 12px;
+  align-items: center;
+  font-size: 13px;
+}
+.mergePick {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.mergePick:has(input:checked) {
+  border-color: var(--ink);
+  background: var(--surface-sunken);
+}
+
+.stageName {
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .layout {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+  .sideTitle {
+    font-size: 24px;
+  }
+  .side {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .sideTitle {
+    flex: 1 1 100%;
+  }
+  .navItem {
+    min-height: 44px;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .navSub {
+    display: none;
+  }
+  .mergeGrid,
+  .diff {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .mergeGrid > .mergeLabel,
+  .diff > .diffKey {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Keeps visually hidden headers inside the scrolling table, so phones get no page wide scroll. */
+.tableCard {
+  position: relative;
+}

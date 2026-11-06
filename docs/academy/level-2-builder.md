@@ -139,11 +139,11 @@ assignment says "launch", practice pack learners build everything, run the tests
 | Build project | Self marked for Completed. Raka's review for Certified (€149) | Reviewed by Raka in a 6th call of 45 minutes, included |
 | Questions | Questions form, answered within 3 working days. Optional single 1:1 hours (€150) | Async channel or email, answered within 1 working day |
 | Certificate | Completed. Certified if you buy the project review and pass | Certified, when the project and exam pass |
-| Suggested price | €249 | €1,200 |
+| Price | €125 | €1,000 |
 
-**The ladder bundle.** All three levels (Operator, Builder, Architect) for €599 self learn, or €3,500 1:1.
+**The ladder bundle.** All three levels (Operator, Builder, Architect) for €299 self learn, or €2,500 1:1.
 
-Prices are suggestions for Raka to set. Tool costs are separate and mostly free plans or trials.
+Prices set by Raka on 6 Nov 2026. Tool costs are separate and mostly free plans or trials.
 
 ## Self learn plan, week by week
 

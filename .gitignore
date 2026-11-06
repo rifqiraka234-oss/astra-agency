@@ -14,3 +14,13 @@ state/inbox_signal_log.html
 # Python bytecode written when tools run
 __pycache__/
 *.pyc
+
+# Astra CRM (crm/) local build output, dependencies and secrets
+crm/node_modules
+crm/.next
+crm/.env*
+!crm/.env.example
+crm/test-results
+crm/playwright-report
+crm/next-env.d.ts
+crm/tsconfig.tsbuildinfo
