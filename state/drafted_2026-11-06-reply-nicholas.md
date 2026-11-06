@@ -32,15 +32,31 @@
 > INFERENCES, worded likely: guest pieces for a 2027 opening get chosen in the coming months, a 2028 resort picks its makers
 > early.
 
+> REWORKED 6 Nov on Raka's "is it really who they're targeting? check again". Their own pages, refetched 6 Nov ~10.40 UTC
+> (home, collaboration, collections, faqs, about, voices, stories, all 200, control 200). Home "Handwoven Objects for Considered
+> Hospitality", collaboration "small-batch making", collections "Selected by leading resorts, wellness retreats and boutique
+> hospitality brands across Thailand", FAQ "resorts, spas, villas, hospitality brands and selected retail partners". Named
+> work, Vikasa Phuket (wellness, opening, 1,500 pieces), TreeHouse Villas Koh Yao (50 bags), The Bell Pool Villa (30 bags plus a
+> guest app retail pilot), Six Senses Samui (retail partnership, then a branded concept study). So Club Med, a 303 room
+> all inclusive, is out of their world, dropped.
+> The buyer, confirmed. thaipr.net/?p=3767184, 8 Oct 2026, Banyan Tree Samui partnership, bags sold at "Banyan Tree Gallery
+> Samui", "Spa & Gallery Manager Naphasawan Badklang", "We chose T.A.I Studio bags because they closely align with 'Banyan Tree's
+> founding ethos of 'Embracing the Environment, Empowering Communities''". So persona 1 is the spa and gallery manager.
+> Prospect 1, Banyan Tree Phuket and Banyan Tree Krabi, same group, same shop. banyantree.com/thailand/phuket "Banyan Tree Spa
+> and Gallery", banyantree.com/thailand/krabi "Banyan Tree Gallery", both 200 on 6 Nov. Not known whether T.A.I already
+> stocks them, worded "if they don't stock you yet".
+> Prospect 2, Nivata Koh Samui kept for the openings line he named, Hilton release 23 Oct 2025, 78 rooms, est. 2027. Weaker fit
+> (chain soft brand), flagged to Raka.
+
 REPLY
 ```
 Fair, and that's why every message would go out as you, in your own words. Two I'd go after now.
 
-Nivata Koh Samui, a 78 room Hilton resort on the southwest tip, which Hilton has opening in 2027. Its guest pieces and villa retail likely get chosen in the coming months, and your Banyan Tree partnership is on the same island. The moment Hilton names its general manager, you'd send a short note with the Vikasa pieces and an offer to bring samples.
+Banyan Tree Phuket and Banyan Tree Krabi, if they don't stock you yet. Both run a Banyan Tree Gallery like Samui's, and Naphasawan at Samui already said your bags fit the group's own ethos. You'd reach the spa and gallery manager at each, with the Samui launch and her words as the reason to talk now.
 
-Club Med's first Exclusive Collection resort in Thailand, 303 rooms on Samui's north coast, announced in April for late 2028. A resort that size likely picks its makers early, and 1,500 pieces for Vikasa shows you can handle the volume. You'd reach their development team with the Vikasa story while the design is still being set.
+Nivata Koh Samui, a 78 room Hilton resort on the southwest tip that Hilton has opening in 2027. Its guest bags and villa retail likely get chosen in the coming months. The moment Hilton names its general manager, you'd send a short note with the Vikasa pieces and an offer to bring samples.
 
-Both came from signals, an opening list and a partnership announcement. The flow watches those every week, tells you who to contact and why that week, and gets every reply answered fast.
+Both came from signals, a partnership announcement and an opening list. The flow watches those every week, tells you who to contact and why that week, and gets every reply answered fast.
 
 Shall I show you what the AI powered signal for T.A.I looks like, with who to contact this week?
 ```
