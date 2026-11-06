@@ -109,5 +109,5 @@ export const TICKET_SOURCES: Option[] = [o('portal', 'Portal'), o('email', 'Emai
 
 export const INVOICE_STATES: Option[] = [o('draft', 'Draft'), o('open', 'Open'), o('paid', 'Paid'), o('late', 'Late'), o('void', 'Void')];
 export const INVOICE_TONES: Record<string, Tone> = { draft: 'grey', open: 'blue', paid: 'green', late: 'red', void: 'grey' };
-export const VAT_TREATMENTS: Option[] = [o('nl_21', 'NL 21%'), o('reverse_charge', 'Reverse charge'), o('export', 'Export, outside the EU'), o('outside_scope', 'Outside scope')];
-export const VAT_RATES: Record<string, number> = { nl_21: 21, reverse_charge: 0, export: 0, outside_scope: 0 };
+export const VAT_TREATMENTS: Option[] = [o('nl_21', 'NL 21%'), o('nl_9', 'NL 9%'), o('reverse_charge', 'Reverse charge'), o('export', 'Export, outside the EU'), o('outside_scope', 'Outside scope')];
+export const VAT_RATES: Record<string, number> = { nl_21: 21, nl_9: 9, reverse_charge: 0, export: 0, outside_scope: 0 };

@@ -184,7 +184,7 @@ export function Board({
   const lostStage = data.closedStages.find((s) => s.state === 'lost');
 
   return (
-    <DndContext sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd} onDragCancel={() => setDragging(null)}>
+    <DndContext id={`board-${data.objectType}`} sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd} onDragCancel={() => setDragging(null)}>
       <div role="region" aria-label="Board" tabIndex={0} className={styles.board}>
         <div className={styles.columns}>
           {data.columns.map((col) => {

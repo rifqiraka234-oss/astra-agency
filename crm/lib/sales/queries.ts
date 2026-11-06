@@ -348,8 +348,11 @@ async function leadBoard(pipeline: PipelineOption, open: StageWithGate[], closed
     sent: ['Opener sent', 'grey'],
   };
   const cards: BoardCard[] = [];
+  const shownPer = new Map<string, number>();
   for (const r of rows) {
-    if (cards.filter((c) => c.stageId === r.stage_id).length >= CARD_CAP) continue;
+    const shown = shownPer.get(r.stage_id) ?? 0;
+    if (shown >= CARD_CAP) continue;
+    shownPer.set(r.stage_id, shown + 1);
     const rotting = r.rot_days !== null && r.idle_days > r.rot_days;
     const early = r.stage_key === 'new' || r.stage_key === 'researching';
     const [rLabel, rTone] = RESEARCH[r.research_status] ?? [r.research_status, 'grey'];
@@ -489,6 +492,14 @@ export function formatEur(v: string | null | undefined, decimals?: 0): string {
 
 // ---------------------------------------------------------------- lists
 
+/** 'a|b' + 'desc' -> 'a desc nulls last, b desc nulls last'. Expressions come from the whitelists below only. */
+function orderBy(expr: string, dir: 'asc' | 'desc'): string {
+  return expr
+    .split('|')
+    .map((e) => `${e.trim()} ${dir} nulls last`)
+    .join(', ');
+}
+
 export type LeadListFilters = {
   stage?: string;
   research?: string;
@@ -561,7 +572,7 @@ export async function listLeads(f: LeadListFilters, limit = 500): Promise<{ rows
        and ${ownerClause(f.owner, 'l.owner_user_id')}
        and ${f.source ? sql`l.source = ${f.source}` : sql`true`}
        and ${like ? sql`(c.full_name ilike ${like} or o.name ilike ${like} or l.name ilike ${like} or l.campaign ilike ${like})` : sql`true`}
-     order by ${sql.unsafe(`${sortExpr} ${dir} nulls last`)}, l.id
+     order by ${sql.unsafe(orderBy(sortExpr, dir))}, l.id
      limit ${limit}`;
   return { rows, total: rows[0]?.total ?? 0 };
 }
@@ -596,7 +607,7 @@ export type DealListFilters = {
 const DEAL_SORTS: Record<string, string> = {
   name: 'lower(d.name)',
   organization: 'lower(o.name)',
-  stage: 'p.position, v.stage_position',
+  stage: 'p.position|v.stage_position',
   amount: 'd.amount',
   weighted: 'v.weighted_amount',
   probability: 'v.probability',
@@ -651,7 +662,7 @@ export async function listDeals(f: DealListFilters, limit = 500): Promise<{ rows
      where ${stateCond} and ${stageCond} and ${pipeCond}
        and ${ownerClause(f.owner, 'd.owner_user_id')}
        and ${like ? sql`(d.name ilike ${like} or o.name ilike ${like})` : sql`true`}
-     order by ${sql.unsafe(`${sortExpr} ${dir} nulls last`)}, d.id
+     order by ${sql.unsafe(orderBy(sortExpr, dir))}, d.id
      limit ${limit}`;
   return {
     rows,

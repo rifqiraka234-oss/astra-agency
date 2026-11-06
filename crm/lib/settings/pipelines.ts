@@ -17,12 +17,7 @@ import { SettingsError } from './errors';
 
 export const STAGE_TABLES: Record<StageObjectType, string> = { lead: 'leads', deal: 'deals', project: 'projects', ticket: 'tickets' };
 
-export const STAGE_STATES = [
-  { value: 'open', label: 'Open' },
-  { value: 'won', label: 'Closed won' },
-  { value: 'lost', label: 'Closed lost' },
-  { value: 'closed', label: 'Closed' },
-];
+export { STAGE_STATES } from './pipeline-options';
 
 export type PipelineRow = { id: string; key: string; name: string; object_type: StageObjectType; description: string | null; is_default: boolean };
 

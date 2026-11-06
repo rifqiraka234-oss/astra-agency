@@ -51,8 +51,8 @@ export default async function ProjectsPage({ searchParams }: { searchParams: Pro
                 intro={<p className="muted text-13" style={{ margin: 0 }}>It starts in Kickoff on the Project delivery pipeline.</p>}
                 fields={[
                   { name: 'name', label: 'Name', required: true, placeholder: 'Website rebuild' },
-                  { name: 'organization_id', label: 'Organization', type: 'select', options: lk.orgs, width: 'half' },
-                  { name: 'deal_id', label: 'Deal', type: 'select', options: lk.deals, width: 'half', hint: 'Fills the organization when left empty' },
+                  { name: 'organization_id', label: 'Organization', type: 'select', options: lk.orgs, defaultValue: one(sp.organization) ?? undefined, width: 'half' },
+                  { name: 'deal_id', label: 'Deal', type: 'select', options: lk.deals, defaultValue: one(sp.deal) ?? undefined, width: 'half', hint: 'Fills the organization when left empty' },
                   { name: 'kind', label: 'Kind', type: 'select', options: PROJECT_KINDS, defaultValue: 'delivery', width: 'half' },
                   { name: 'owner_user_id', label: 'Project lead', type: 'select', options: lk.users, defaultValue: user.id, width: 'half' },
                   { name: 'budget_amount', label: 'Budget', placeholder: '3400', width: 'half' },

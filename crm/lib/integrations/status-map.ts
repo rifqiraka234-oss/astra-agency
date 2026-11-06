@@ -50,12 +50,12 @@ const RULES: Rule[] = [
   },
   {
     name: 'sent, waiting',
-    test: /^SENT|NUDGE|BUMP|CORRECTION|CLOSER|CLOSE_DRAFTED|DRAFTED_CLOSE|FINAL_CLOSE|ALREADY_MESSAGED/,
+    test: /^SENT|NUDGE|BUMP|CORRECTION|CLOSER|CLOSE_DRAFTED|DRAFTED_CLOSE|FINAL_CLOSE|ALREADY_MESSAGED|STALLED/,
     map: { stage: 'attempting', researchStatus: 'sent', disqualifyReason: null },
   },
-  { name: 'drafted', test: /^DRAFTED|HOLD_WEAK|STALLED|SEND_FAILED|^HOLD/, map: { stage: 'researching', researchStatus: 'drafted', disqualifyReason: null } },
-  { name: 'researching', test: /RESEARCH_QUEUED|NEEDS_RECHECK|RESEARCH/, map: { stage: 'researching', researchStatus: 'researching', disqualifyReason: null } },
+  { name: 'drafted', test: /^DRAFTED|HOLD_WEAK|SEND_FAILED|^HOLD/, map: { stage: 'researching', researchStatus: 'drafted', disqualifyReason: null } },
   { name: 'not started', test: /UNRESEARCHED|THREAD_VERIFIED_CLEAN/, map: { stage: 'new', researchStatus: 'unresearched', disqualifyReason: null } },
+  { name: 'researching', test: /RESEARCH_QUEUED|NEEDS_RECHECK|RESEARCH/, map: { stage: 'researching', researchStatus: 'researching', disqualifyReason: null } },
 ];
 
 const FALLBACK: StatusMapping = { stage: 'new', researchStatus: 'unresearched', disqualifyReason: null, closeReason: null, rule: 'unmapped, left in New' };

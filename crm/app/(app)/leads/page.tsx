@@ -26,7 +26,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
     owner: one(sp.owner),
     source: one(sp.source),
     q: one(sp.q),
-    state: one(sp.state) ?? 'open',
+    state: one(sp.state) ?? (one(sp.stage) ? 'all' : 'open'),
     sort: one(sp.sort) ?? 'accepted',
     dir: one(sp.dir) ?? 'desc',
   };
@@ -35,8 +35,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
   const { new: _new, ...rest } = sp;
   const qs = new URLSearchParams(Object.entries(rest).flatMap(([k, v]) => (typeof v === 'string' ? [[k, v]] : []))).toString();
   const closeHref = `/leads${qs ? `?${qs}` : ''}`;
-  const openStages = opts.stages;
-
+  
   return (
     <div className="page page-wide">
       <PageHeader
@@ -60,7 +59,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
           <Input id="lf-q" name="q" type="search" defaultValue={f.q} placeholder="Name, organization, campaign" />
         </Field>
         <Field label="Stage" htmlFor="lf-stage">
-          <Select id="lf-stage" name="stage" options={openStages.map((s) => ({ value: s.id, label: s.name }))} placeholder="Any stage" defaultValue={f.stage ?? ''} />
+          <Select id="lf-stage" name="stage" options={opts.stages.map((s) => ({ value: s.id, label: s.name }))} placeholder="Any stage" defaultValue={f.stage ?? ''} />
         </Field>
         <Field label="Open or closed" htmlFor="lf-state">
           <Select
@@ -174,6 +173,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
       />
 
       <CreateLeadDialog
+        key={sp.new === '1' ? 'open' : 'closed'}
         open={sp.new === '1' && can(user, 'create', 'lead')}
         closeHref={closeHref}
         stages={await openStagesOf('lead')}
