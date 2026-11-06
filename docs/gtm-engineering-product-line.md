@@ -127,3 +127,18 @@ https://docs.google.com/presentation/d/12EGOK5OpWevHEMVFIiIKWJu1zmtJ861KIHznGSzM
 15 slides. The generator is `tools/gtm-deck-slides.py` and the image crops are in `assets/gtm-deck/`, served to Slides from
 this public repo by commit SHA. Prices on slides 10, 11 and 12 are the suggestions above and still need Raka's numbers.
 To confirm with Raka: "Leexi" as the call tool, raka@astraagency.nl as the contact, and naming efficy while he works there.
+
+## The academy pitch deck, built 6 Nov
+
+Raka, 6 Nov, "make the deck ... really pitch winning and sales winning ... tell the whole story of what we can do."
+Google Slides, same style as the base deck:
+https://docs.google.com/presentation/d/1M3L_h7B8XYm7RVROspqOejHmEKbkHZd4xmUuYL1XeW0/edit
+
+15 slides. Cover, why now, the chain of nine steps every sale runs on, who teaches it, Astra's own engine as the proof
+(330 researched first messages 14 Jul to 25 Oct, 15% yes in October against 4% in September, 7 meetings by 25 Oct),
+the GTM Engineering Score and its four bands, the three levels, what you build at each level, the two role courses, how
+every course works, the two formats, prices, the done for you tiers (Health Check €1,500 to €3,500, Engine Build from
+€4,000, Run and RevOps from €750 a month), who it's for and who it isn't, and where to start.
+
+The generator is `tools/gtm-academy-deck-slides.py`. Every slide was checked as a thumbnail after the build, and three
+were fixed by hand (noted in the generator's docstring). Every price on it matches the course files in `docs/academy/`.

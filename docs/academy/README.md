@@ -9,21 +9,36 @@ suggestions for Raka to set.
 | File | What it is |
 |---|---|
 | `README.md` (this file) | The rulebook every track follows. Formats, how lessons work, assignments, tests, grading, certificates, the glossary, tool setup, the 1:1 session template, policies |
-| `track-1-become-a-gtm-engineer.md` | Track 1, every lesson, assignment, quiz, the final exam and the capstone |
-| `track-2-sell-more.md` | Track 2, the same for individual sellers |
-| `track-3-lead-the-team.md` | Track 3, the same for sales managers |
+| `gtm-score.md` | The free GTM Engineering Score. 25 questions, a score out of 100, the level it puts you on and the emails after |
+| `level-1-operator.md` | Track 1, Level 1, GTM Operator. Every lesson, assignment, quiz, the practical test and the final exam |
+| `level-2-builder.md` | Track 1, Level 2, GTM Builder. The same, with a two week live build project in place of the practical test |
+| `level-3-architect.md` | Track 1, Level 3, GTM Architect. The same, ending in a capstone presented to Raka |
+| `gtm-seller.md` | Track 2, the GTM Seller role course for individual sellers |
+| `gtm-leader.md` | Track 3, the GTM Leader role course for sales managers |
+
+The older single file tracks were replaced on 6 Nov 2026, when Raka asked for the course to be shorter and set into
+skill levels ("foundations to advanced to godly"). Track 1 became a ladder of three levels you can buy one at a time.
 
 ---
 
-## 1. The six products in one table
+## 1. The products in one table
 
-| | Self learn online | 1:1 with Raka |
-|---|---|---|
-| **Track 1, Become a GTM Engineer.** For people who want this as their job | 1S | 1P |
-| **Track 2, Sell More with GTM Engineering.** For sellers who want more meetings with less manual work | 2S | 2P |
-| **Track 3, Lead a GTM Engineered Team.** For sales managers who want their team working this way | 3S | 3P |
+The free GTM Engineering Score puts everyone on a band. Starter (0 to 29) and Operator (30 to 54) start at Level 1,
+Builder (55 to 79) at Level 2, Architect (80 to 100) at Level 3. Sellers and managers get pointed to their role course.
 
-Each track has one curriculum. Self learn and 1:1 use the same lessons, assignments and tests. The difference is who
+| Course | Who it's for | Length | Self learn | 1:1 with Raka |
+|---|---|---|---|---|
+| **Level 1, GTM Operator** | New to the systems behind pipeline. Runs an engine someone else built by the end | About 4 weeks | €199 | €1,200, 6 sessions |
+| **Level 2, GTM Builder** | Builds the engine end to end, sending, automation, CRM, dashboards | About 5 weeks | €249 | €1,200, 5 sessions and a project review |
+| **Level 3, GTM Architect** | Designs the whole revenue system, AI agents in production, signals, leads the build | About 5 weeks | €299 | €1,500, 5 sessions and the capstone |
+| **All three levels** | The full ladder | About 14 weeks | €599 | €3,500 |
+| **GTM Seller** | AEs, SDRs and founders who sell and want more meetings | 3 weeks plus a 30 day capstone | €149 | €790, 4 sessions |
+| **GTM Leader** | Sales managers and heads of sales | 3 to 4 weeks plus a team workshop | €249 | €2,200, 5 sessions and a team workshop |
+
+Extras. A single 1:1 hour €150, a marked assignment €49, the Level 1 practical test review €49, a capstone or build
+project review for Certified €149, team seats of GTM Seller €99 each. All prices are suggestions for Raka to set.
+
+Each course has one curriculum. Self learn and 1:1 use the same lessons, assignments and tests. The difference is who
 marks the work, how fast you go and whether Raka builds alongside you.
 
 ---
@@ -119,7 +134,8 @@ question to make the retake pool.
 
 ### 5.2 Practical test
 
-Track 1 has one at the halfway point and Tracks 2 and 3 have one before the final exam. It's timed and hands-on: "here's
+Level 1, GTM Seller and GTM Leader each have one before the final exam. Level 2 replaces it with a two week live build
+project and Level 3 with the capstone. It's timed and hands-on: "here's
 a broken table, fix it in 45 minutes", "here's a messy CRM export, clean it". It's marked with a rubric like an
 assignment.
 
@@ -128,14 +144,14 @@ assignment.
 | | |
 |---|---|
 | When | After all modules are passed |
-| Length | Track 1, 30 questions in 40 minutes. Tracks 2 and 3, 25 questions in 30 minutes. Timed |
+| Length | Levels 1 and 2, GTM Seller and GTM Leader, 20 questions in 30 minutes. Level 3, 25 questions in 40 minutes. Timed |
 | Mix | About 60% knowledge questions, 40% scenarios |
 | Pass mark | 80% |
 | Retakes | Two, at least 48 hours apart, from a different question pool |
 
 ### 5.4 Capstone
 
-A project that uses everything in the track on the learner's own market, team or patch. It has its own brief and rubric
+Level 3 and both role courses end in one. A project that uses everything in the course on the learner's own market, team or patch. It has its own brief and rubric
 in each track file. In 1:1 it's presented to Raka in the last session.
 
 ---
@@ -148,7 +164,8 @@ in each track file. In 1:1 it's presented to Raka in the last session.
 | **Certified** | The above, plus the final exam passed, plus the capstone passed **when marked by Raka** | 1:1 learners automatically. Self learn learners by buying the capstone review (€149) |
 
 The certificate names the track, the date, the capstone title and a link to a public one page summary of the capstone,
-if the learner agrees to it. For Track 1 job seekers, Certified is the one that means something to an employer.
+if the learner agrees to it. For people on the ladder looking for work, Certified is the one that means something to an employer. Each course
+file has its own certificate table with the exact rule for that course.
 
 ---
 
@@ -363,15 +380,15 @@ and tells the learner to check their own country and company.
 
 | Step | What | Done when |
 |---|---|---|
-| 1 | Raka reads the three track files and cuts or changes anything | Approved per track |
+| 1 | Raka reads the five course files and the score, and cuts or changes anything | Approved per course |
 | 2 | Build the practice data pack and every template named in the track files | All templates in one shared Drive folder |
-| 3 | Run 1P with the first learner (Raka's friend), recording every session | 12 sessions done, feedback written up |
-| 4 | Run 2P with 2 or 3 sellers, then 3P with 1 or 2 managers, recorded | Same |
+| 3 | Run Level 1 1:1 with the first learner (Raka's friend), then Level 2, recording every session | 11 sessions done, feedback written up |
+| 4 | Run GTM Seller 1:1 with 2 or 3 sellers, then GTM Leader with 1 or 2 managers, recorded | Same |
 | 5 | Fix lessons where 1:1 learners got stuck | Every "stuck" moment either fixed in a lesson or added to a "stuck?" box |
 | 6 | Record the self learn lessons from the lesson scripts, using the 1:1 recordings for examples | All videos under 12 minutes |
 | 7 | Load quizzes into the platform with a second question per item for the retake pool | Quizzes live |
 | 8 | Test the whole self learn course with one person who knows nothing about sales | They finish Module 1 without asking a question |
-| 9 | Launch, track by track | Sales page, LinkedIn posts, deck updated |
+| 9 | Launch, course by course, with the free score as the front door | Sales page, LinkedIn posts, deck updated |
 
 ---
 
@@ -384,7 +401,9 @@ The track files name templates and practice pack contents that don't exist yet. 
 
 | Track | Templates (Google Sheets, Docs or Slides in a view only shared folder, learners make a copy) |
 |---|---|
-| 1 | T1 Setup sheet, T1 Capstone brief, T1 ICP sheet, T1 Data source map, Legitimate interest note, T1 Enrichment report, T1 Scoring model, Signal library, T1 Research log, Prompt library, T1 Sequence, A/B plan, CRM field map, n8n starter workflows, Dashboard and scorecard, Capstone plan, Evidence log, Portfolio page |
+| Level 1 | T1 Setup sheet, T1 Capstone brief, T1 ICP sheet, T1 Data source map, Legitimate interest note, T1 Enrichment report, T1 Scoring model, Signal library, T1 Research log, Prompt library, T1 Sequence, A/B plan, Quick win prompt (Lesson 1.1), Spreadsheet warm up, Practical test pack, Portfolio page |
+| Level 2 | CRM field map, n8n starter workflows, Dashboard and scorecard (with the Looker Studio template), Level 2 run report (one page Google Doc) |
+| Level 3 | L3 Revenue map, L3 Unit economics, L3 Data model, L3 GTM brain diagram, L3 Bible to spec, L3 Agent spec and log, L3 Eval set, L3 Signal library (with its forecast tab), L3 Service pack (scope, spec, sprint plan, runbook tabs), L3 Capstone plan, L3 Evidence log |
 | 2 | Time and Source Audit, ICP and Tier List, Signal Tracker, Research Card, Prompt Library, Sequence Template, Legitimate Interest Note, Reply Playbook, Call Prep, Follow Up, Personal Scorecard, Capstone One Pager, Practical Test tab, "Ask your company to pay" email |
 | 3 | T3-00 Team current state, T3-01 Operating model, T3-02 Sales bible, T3-03 ICP territory routing, T3-04 Hygiene rules, T3-05 Dashboard spec and forecast, T3-06 Win loss and coaching, T3-07 90 day plan, T3-PT Practical test, T3-CAP Capstone deck, Build buy or hire calculator |
 
@@ -395,11 +414,13 @@ The track files name templates and practice pack contents that don't exist yet. 
 | 50 accounts sheet | IDs RF-001 to RF-050. The lessons use RF-007, RF-012, RF-021, RF-031 (Kanaalweg Transport, contact "Sanne") and RF-044 with specific facts; read those lessons and make the rows match |
 | Messy CRM export | 400 contacts with duplicates, missing emails, mixed job titles and country spellings ("NL", "Netherlands", "Holland") |
 | 10 call transcripts | 6 won, 4 lost. Track 1 uses W1, W2, W3 and W5 with quotes about Monday replanning and sick drivers, and a proof line "cut Monday replanning to under an hour" from W3. Track 2 uses transcript 3 (won) and 8 (lost). The 4 losses are 2 too small, 1 new TMS already being installed, 1 price |
-| Pipeline | 60 deals across New, Meeting booked, Discovery done, Demo done, Proposal sent, Won, Lost. Track 3's good examples use illustrative figures (9 won, 21 lost, €37k commit, median speed to lead 19 hours). Either make the pipeline produce them or update the examples |
+| Pipeline | 60 deals across New, Meeting booked, Discovery done, Demo done, Proposal sent, Won, Lost, with a "Furthest stage" column so lost deals still show how far they got. Track 3's good examples use illustrative figures (9 won, 21 lost, €37k commit, median speed to lead 19 hours). Either make the pipeline produce them or update the examples |
+| Signals at first touch | A tab on the pipeline recording which signal was live when each deal was first contacted. Level 3's signal backtest reads it, so its figures have to come out the way the Level 3 lessons say, or the lessons change |
+| Routeful unit economics | The price, margin and cost figures Level 3 uses. Labelled illustrative in the lesson and in the sheet |
 | Sales team | Eva (manager), Sanne and Joris (SDRs), Lotte, Daan and Mira (AEs) |
-| Research snippets, fake web pages and job ads | As referenced in Track 1 Module 6 and Track 2 Module 2 and 3 |
-| Track 1 practical test set | 20 accounts RF-101 to RF-120 on `.example` domains with the planted traps listed in the marker's key (duplicate, existing customer, broker, wrong size or country, RF-108 contradiction, RF-117 wrong company news, RF-111 signal outside 30 days, catch all and invalid emails), three made up provider tabs, and a second version for retakes |
-| Track 3 practical test files | test-pipeline.csv, test-crm-export.csv, test-call-A.txt, test-call-B.txt, with the leaks the marker's guide expects |
+| Research snippets, fake web pages and job ads | As referenced in Level 1 Module 4 and GTM Seller Modules 2 and 3 |
+| Level 1 practical test set | 20 accounts RF-101 to RF-120 on `.example` domains with the planted traps listed in the marker's key (duplicate, existing customer, broker, wrong size or country, RF-108 contradiction, RF-117 wrong company news, RF-111 signal outside 30 days, catch all and invalid emails), three made up provider tabs, and a second version for retakes |
+| GTM Leader practical test files | test-pipeline.csv, test-crm-export.csv, test-call-A.txt, test-call-B.txt, with the leaks the marker's guide expects |
 
 Every invented company and person name must be checked against real companies before recording, and changed if one
 matches.
