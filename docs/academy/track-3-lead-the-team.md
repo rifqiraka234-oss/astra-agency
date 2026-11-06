@@ -566,8 +566,11 @@ model.
 3. True or false. It's fine for two people to both be responsible for the SDR to AE handoff, so there's a backup.
    **Answer.** False. **Why.** Two owners usually means nobody does it. One R, one A. **Rewatch.** 1.2
 4. What three things should you write down for every handoff?
-   **Answer.** The trigger, the information passed on, and the time limit. **Why.** Without these, information drops and
-   nobody acts fast. **Rewatch.** 1.3
+   A. The rep's name, the deal value, and the close date
+   B. The lead source, the industry, and the company size
+   C. The trigger, the information passed on, and the time limit
+   D. The meeting notes, the email thread, and the call recording
+   **Answer.** C. **Why.** Without these, information drops and nobody acts fast. **Rewatch.** 1.3
 5. Scenario. At Routeful, AEs walk into first meetings knowing only the company name. What's the best fix?
    A. Tell the AE to do more research
    B. Require the SDR to fill four fields before a meeting counts as booked
@@ -587,7 +590,11 @@ model.
    D. They refer a friend
    **Answer.** B. **Why.** The person who chose you is gone, and the new one may not know you. **Rewatch.** 1.4
 8. 40 deals reached Demo done and 12 reached Proposal sent. What's the conversion?
-   **Answer.** 30%. **Why.** 12 divided by 40. **Rewatch.** 1.5
+   A. 30%
+   B. 70%
+   C. 333%
+   D. 52%
+   **Answer.** A. **Why.** 12 divided by 40. **Rewatch.** 1.5
 9. True or false. You should find leaks by asking the team first, then check the numbers.
    **Answer.** False. **Why.** Numbers first, because people remember dramatic deals and miss quiet leaks. **Rewatch.** 1.5
 
@@ -828,8 +835,11 @@ routine so yours stays true. An owner per section, one way to suggest changes, a
    D. Ask a fourth rep
    **Answer.** B. **Why.** A decided definition beats an endless argument. **Rewatch.** 2.2
 5. Where should field definitions live so reps see them while working?
-   **Answer.** In the CRM field's description (and in the bible). **Why.** It shows when they hover over the field.
-   **Rewatch.** 2.2
+   A. In the CRM field's description (and in the bible)
+   B. In a shared folder on the drive
+   C. In the onboarding slides
+   D. In a pinned message in the team chat
+   **Answer.** A. **Why.** It shows when they hover over the field. **Rewatch.** 2.2
 6. What is a segment?
    A. A group of companies in your ICP that you treat the same way
    B. A part of a sales call
@@ -1108,7 +1118,11 @@ rows.
 7. True or false. A signal is proof the company wants to buy, so act without checking.
    **Answer.** False. **Why.** A signal is a reason to look. Check it before you act. **Rewatch.** 3.3
 8. Why do routing rules need a catch all?
-   **Answer.** So leads that match no rule still get an owner. **Why.** Otherwise odd leads are lost. **Rewatch.** 3.4
+   A. To send every lead to the manager first
+   B. So leads that match no rule still get an owner
+   C. To spread leads evenly across all reps
+   D. To override the other rules when they conflict
+   **Answer.** B. **Why.** Otherwise odd leads are lost. **Rewatch.** 3.4
 9. Why use the median for speed to lead?
    A. It's always lower
    B. One very slow lead doesn't distort it
@@ -1337,8 +1351,11 @@ deals with a past close date and lost deals with no reason. Write the counts.
    D. They don't know the password
    **Answer.** D. **Why.** The three are slow, no payoff, used against them. **Rewatch.** 4.1
 2. A field is filled by nobody and appears in no report. What do you do?
-   **Answer.** Stop requiring it (or remove it). **Why.** The minimum data test asks which report or decision uses it.
-   **Rewatch.** 4.1
+   A. Keep it required so reps learn to fill it
+   B. Send the team a reminder to fill it
+   C. Add it to the weekly hygiene check
+   D. Stop requiring it (or remove it)
+   **Answer.** D. **Why.** The minimum data test asks which report or decision uses it. **Rewatch.** 4.1
 3. True or false. Asking for all fields when a deal is created gives the cleanest data.
    **Answer.** False. **Why.** Ask for each field at the stage where it matters. **Rewatch.** 4.2
 4. Why use a dropdown for Country instead of free text?
@@ -1361,7 +1378,11 @@ deals with a past close date and lost deals with no reason. Write the counts.
    D. Set the owner from territory
    **Answer.** C. **Why.** Only the rep knows what was agreed. **Rewatch.** 4.4
 7. What is enrichment?
-   **Answer.** Adding missing facts to a record from a data source. **Why.** Like company size or industry. **Rewatch.** 4.4
+   A. Deleting duplicate records
+   B. Moving a lead to the next stage
+   C. Adding missing facts to a record from a data source
+   D. Giving a new lead an owner
+   **Answer.** C. **Why.** Like company size or industry. **Rewatch.** 4.4
 8. How long should the weekly hygiene check take?
    A. 10 minutes
    B. 1 hour
@@ -1371,7 +1392,11 @@ deals with a past close date and lost deals with no reason. Write the counts.
 9. True or false. Any rep may change the owner on a won deal if they think they should get the commission.
    **Answer.** False. **Why.** Only the manager changes owner on won deals, because pay depends on it. **Rewatch.** 4.5
 10. Where should you discuss a rep's hygiene score?
-    **Answer.** In their 1:1. **Why.** It's a habit to fix privately. **Rewatch.** 4.5
+    A. In their 1:1
+    B. In the weekly pipeline review, in front of the team
+    C. In the team chat
+    D. In a company wide email
+    **Answer.** A. **Why.** It's a habit to fix privately. **Rewatch.** 4.5
 
 #### Assignment 4. Hygiene rules with owners, plus your first hygiene audit
 
@@ -1611,8 +1636,11 @@ invite.
 3. True or false. Meetings booked this week is a leading number.
    **Answer.** True. **Why.** It tells you about future pipeline. **Rewatch.** 5.1
 4. What is stage aging?
-   **Answer.** The number of days a deal has been in its current stage. **Why.** It flags deals quietly going dead.
-   **Rewatch.** 5.2
+   A. How long the buyer's company has existed
+   B. The number of days a deal has been in its current stage
+   C. The number of days since the deal was created
+   D. The number of days since the last email to the buyer
+   **Answer.** B. **Why.** It flags deals quietly going dead. **Rewatch.** 5.2
 5. Normal time in Proposal sent is 10 days. A deal has been there 25 days. What do you do?
    A. Nothing
    B. Flag it as stuck and ask about it in the review
@@ -1626,8 +1654,11 @@ invite.
    D. New lead from a big company
    **Answer.** C. **Why.** All the commit conditions are true. **Rewatch.** 5.3
 7. How do you calculate a weighted forecast?
-   **Answer.** Each deal's value times its stage win chance, added up. **Why.** It uses your historical conversion.
-   **Rewatch.** 5.3
+   A. Add up the value of every open deal
+   B. Add up only the deals reps call commit
+   C. Average deal value times the number of open deals
+   D. Each deal's value times its stage win chance, added up
+   **Answer.** D. **Why.** It uses your historical conversion. **Rewatch.** 5.3
 8. In Looker Studio, which element shows a single number?
    A. Table
    B. Scorecard
@@ -1871,8 +1902,11 @@ the eavesdrop loop, listening to what buyers say and feeding it back into the sy
    D. Buyers fill them in
    **Answer.** B. **Why.** The real reason is often in what the buyer said. **Rewatch.** 6.1
 2. Which two calls per deal does the lesson suggest reviewing?
-   **Answer.** The discovery call and the last call before the decision. **Why.** They show the problem and the deciding
-   moment. **Rewatch.** 6.1
+   A. The discovery call and the last call before the decision
+   B. The first two calls
+   C. The two longest calls
+   D. The demo and the onboarding call
+   **Answer.** A. **Why.** They show the problem and the deciding moment. **Rewatch.** 6.1
 3. True or false. Letting each reviewer invent their own tags gives richer data.
    **Answer.** False. **Why.** You can't count tags that mean the same thing under different names. **Rewatch.** 6.2
 4. What does the Claude prompt require for every point?
@@ -1895,7 +1929,11 @@ the eavesdrop loop, listening to what buyers say and feeding it back into the sy
    D. All of them
    **Answer.** A. **Why.** One skill at a time actually changes. **Rewatch.** 6.4
 7. Where should coaching happen?
-   **Answer.** One to one, not in the pipeline review. **Why.** It needs time and privacy. **Rewatch.** 6.4
+   A. In the weekly pipeline review
+   B. In the team chat
+   C. One to one, not in the pipeline review
+   D. In the monthly all hands
+   **Answer.** C. **Why.** It needs time and privacy. **Rewatch.** 6.4
 8. What is the eavesdrop loop?
    A. Listening in on reps' calls without telling them
    B. Feeding what buyers say back into the ICP, messages and lists
@@ -2130,8 +2168,11 @@ who owns them and how you'll know it worked. This is the plan you'll present in 
    D. Wait a year
    **Answer.** B. **Why.** Fast, and a team of 4 may not keep a full time hire busy. **Rewatch.** 7.3
 7. Where should salary figures in your cost comparison come from?
-   **Answer.** Current figures you look up and date (job sites, recruiter reports). **Why.** Never guess numbers.
-   **Rewatch.** 7.3
+   A. Last year's hiring budget
+   B. Current figures you look up and date (job sites, recruiter reports)
+   C. A best guess from the team
+   D. What your last hire was paid
+   **Answer.** B. **Why.** Never guess numbers. **Rewatch.** 7.3
 8. Total cost €12,000, monthly gain €2,000. What's the payback?
    A. 2 months
    B. 6 months
@@ -2141,7 +2182,11 @@ who owns them and how you'll know it worked. This is the plan you'll present in 
 9. True or false. When reporting payback, you should separate what you measured from what you estimate.
    **Answer.** True. **Why.** Other things change at the same time, so be honest about cause. **Rewatch.** 7.4
 10. How many sprints are in the 90 day plan?
-    **Answer.** Six. **Why.** Two weeks each over about 90 days. **Rewatch.** 7.5
+    A. Three
+    B. Four
+    C. Twelve
+    D. Six
+    **Answer.** D. **Why.** Two weeks each over about 90 days. **Rewatch.** 7.5
 
 #### Assignment 7. 90 day rollout plan
 
@@ -2336,8 +2381,11 @@ with a date, measured as share of his deals with a future next step date.
     D. Is it free text?
     **Answer.** B. **Why.** If nothing uses it, don't require it. **Module.** 4
 12. Why must commission data fields be treated differently?
-    **Answer.** Pay depends on them, so owner, amount and close date must be right and protected. **Why.** One wrong payment
-    costs a lot of trust. **Module.** 4
+    A. They're private to each rep
+    B. They change more often than other fields
+    C. Pay depends on them, so owner, amount and close date must be right and protected
+    D. Finance doesn't use the CRM
+    **Answer.** C. **Why.** One wrong payment costs a lot of trust. **Module.** 4
 13. Your win rate is 20%. Roughly what pipeline coverage do you need?
     A. 2
     B. 3
