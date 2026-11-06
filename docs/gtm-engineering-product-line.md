@@ -142,3 +142,17 @@ every course works, the two formats, prices, the done for you tiers (Health Chec
 
 The generator is `tools/gtm-academy-deck-slides.py`. Every slide was checked as a thumbnail after the build, and three
 were fixed by hand (noted in the generator's docstring). Every price on it matches the course files in `docs/academy/`.
+
+## The academy deck rebuilt in Canva, in the brand fonts (6 Nov)
+
+Raka, 6 Nov, "so hard to read still ... use the right fonts ... be creative with the shapes ... the use of images
+is going to be really strong." The brand deck's fonts (The Seasons, Solomon Sans, Cerebri Sans, Open Sauce One) are
+licensed Canva fonts that Google Slides can't load, so the deck was rebuilt inside a copy of the brand deck in Canva:
+https://www.canva.com/d/7D6fXoMiAz6BSh6 (design DAHaJAXOLEs, 15 slides). Working copy with the unused brand pages
+at the end is DAHaJIb3fbg. The original brand deck DAG8WBvhY7s was not touched.
+
+How it was built, for the next session. Text added through the Canva API gets Canva's default font, so every line
+on the slides reuses an existing brand text box (replace or find and replace keeps its font). replace_text on a box
+that was a bullet list can add a bullet to a heading; format_text list_level 0 removes it. Some stock photos in the
+brand deck render with a Canva watermark in API previews (MAGgACgERsk was swapped for MAG9YVoETeY); check the
+exported PDF before sending.
