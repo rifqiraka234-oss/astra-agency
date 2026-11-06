@@ -1,3 +1,6 @@
+<!-- GATE ARCHIVED -->
+> SENT 2026-11-06 on Raka's "send", act_ekXsMnWTvgyygkTzc, one copy, 345 chars. Thread 6 items before, 7 after. Do not send again.
+
 # Second message, Nicholas Rawling, 6 Nov 2026. NOT SENT, needs Raka's word.
 
 ### Nicholas Rawling, T.A.I Studio, ctc_KjcqsmYtMGWuWonZf
