@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GTM Engine Check</title>
+<meta name="description" content="Four minutes. Find out what your sales engine costs you next year, where it leaks, and what to build or learn first.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d1b38'/%3E%3Cpath d='M16 6l2.6 7.4L26 16l-7.4 2.6L16 26l-2.6-7.4L6 16l7.4-2.6z' fill='%23e6ddd8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Mona+Sans:wdth,wght@75..125,300..800&display=swap">
+<style>
+/* One app, three views. Intro is a split screen with a full bleed photo. Questions keep the chapter photo on the left and
+   a live ledger of what we heard. The report reads like a diagnosis, headline first, money second, then the plan. */
+:root{
+  --paper:#f5f4f1; --ink:#0e1525; --muted:#5d6475; --rule:#d9d6d0; --navy:#0d1b38; --navy2:#16264a;
+  --sand:#e6ddd8; --slate:#405b8d; --risk:#c4432c; --gain:#2b7a52; --tint:#ebe8e3;
+  --sans:"Mona Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:"Fragment Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);overflow-x:clip}
+body{font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+img{max-width:100%;display:block}
+h1,h2,h3{font-weight:560;letter-spacing:-0.025em;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-offset:3px}
+.mono{font-family:var(--mono);font-size:13px;letter-spacing:.02em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:2px;padding:16px 24px;background:var(--navy);color:#fff;font-weight:600;font-size:16px}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.light{background:var(--sand);color:var(--navy)}
+.btn.lineLight{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5)}
+.btn:disabled{opacity:.35;cursor:default}
+
+/* intro */
+.intro{min-height:100svh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.intro .photo{position:relative;background:#1a1a1a;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr) auto}
+.intro .photo img{width:100%;height:100%;object-fit:cover;min-height:0}
+.flowbox{background:var(--navy);padding:14px 20px 16px;display:grid;gap:8px}
+.flowbox canvas{width:100%;height:160px;display:block}
+.flowkey{display:flex;justify-content:space-between;color:#aab4cc}
+.flowkey .lk{color:#ff8a72}
+.qphoto img{width:100%;height:100%;object-fit:cover}
+.intro .side{padding:48px max(24px,env(safe-area-inset-right,0px)) 40px 56px;display:flex;flex-direction:column;gap:36px;justify-content:center}
+.wordmark{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.16em;font-size:13px}
+.intro h1{font-size:clamp(40px,5.2vw,76px);font-stretch:88%}
+.intro .lede{color:var(--muted);max-width:44ch;font-size:18px}
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.door{display:grid;grid-template-rows:150px auto;text-align:left;background:#fff;border:0;padding:0;box-shadow:inset 0 0 0 1px var(--rule);transition:box-shadow .15s}
+.door:hover{box-shadow:inset 0 0 0 2px var(--navy)}
+.door .im{background:center/cover}
+.door .tx{padding:16px 18px 18px;display:grid;gap:4px}
+.door strong{font-size:20px;font-weight:620;letter-spacing:-.01em}
+.door span{color:var(--muted);font-size:15px}
+.gets{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--rule)}
+.gets div{padding:12px 12px 0 0;font-size:14px;color:var(--muted)}
+.gets b{display:block;font-family:var(--mono);font-weight:400;color:var(--ink);font-size:12px;margin-bottom:4px}
+
+/* quiz */
+.quiz{min-height:100svh;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.35fr)}
+.qphoto{position:sticky;top:0;height:100svh;background:#111 center/cover;transition:background-image .4s}
+.qphoto .chap{position:absolute;left:0;right:0;bottom:0;background:var(--navy);color:#fff;padding:22px 28px;display:grid;gap:6px}
+.qphoto .chap .mono{color:#aab4cc}
+.qphoto .chap strong{font-size:26px;font-weight:560;letter-spacing:-.02em}
+.qmain{display:grid;grid-template-rows:auto 1fr auto;min-height:100svh;padding:28px max(24px,env(safe-area-inset-right,0px)) 28px 48px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.segs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:18px}
+.seg{height:3px;background:var(--rule);position:relative;overflow:hidden}
+.seg i{position:absolute;inset:0;width:0;background:var(--navy);transition:width .35s}
+.qbody{display:grid;align-content:center;gap:26px;max-width:720px;padding-block:40px}
+.qbody h2{font-size:clamp(28px,3.3vw,44px);font-stretch:92%}
+.qbody .hint{color:var(--muted);max-width:56ch}
+.opts{display:grid;gap:8px}
+.opt{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;align-items:center;text-align:left;background:#fff;border:0;border-radius:2px;padding:16px 18px;box-shadow:inset 0 0 0 1px var(--rule);transition:box-shadow .12s,background .12s;font-size:17px}
+.opt:hover{box-shadow:inset 0 0 0 1.5px var(--navy)}
+.opt .k{font-family:var(--mono);font-size:12px;width:34px;height:34px;display:grid;place-items:center;box-shadow:inset 0 0 0 1px var(--rule);color:var(--muted)}
+.opt[aria-pressed="true"]{background:var(--navy);color:#fff;box-shadow:none}
+.opt[aria-pressed="true"] .k{background:var(--sand);color:var(--navy);box-shadow:none}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.field{background:#fff;box-shadow:inset 0 0 0 1px var(--rule);padding:14px 16px;display:grid;gap:4px}
+.field label{font-size:14px;color:var(--muted)}
+.field .row{display:flex;align-items:baseline;gap:6px;font-size:28px;font-weight:560;font-stretch:90%}
+.field input{font:inherit;border:0;background:transparent;color:var(--ink);width:100%;padding:0;min-width:0}
+.field .u{color:var(--muted);font-size:20px}
+.qfoot{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.ledger{display:grid;gap:4px;min-width:0}
+.ledger .amt{font-size:30px;font-weight:600;font-stretch:85%;color:var(--risk);letter-spacing:-.02em}
+.ledger .heard{color:var(--muted);font-size:15px;max-width:52ch;min-height:1.5em}
+.qnav{display:flex;gap:10px}
+
+/* report */
+.rep{background:var(--paper)}
+.bar0{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px max(24px,env(safe-area-inset-right,0px)) 22px max(24px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--rule)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.diag{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:56px;padding-block:64px 56px;align-items:end}
+.diag h1{font-size:clamp(38px,5vw,72px);font-stretch:86%}
+.diag .sub{color:var(--muted);font-size:19px;margin-top:22px;max-width:52ch}
+.level{display:grid;gap:14px}
+.ladder{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+.ladder div{padding:12px 10px;background:var(--tint);font-size:14px;display:grid;gap:2px}
+.ladder div b{font-weight:600}
+.ladder div .mono{color:var(--muted);font-size:11px}
+.ladder .on{background:var(--navy);color:#fff}
+.ladder .on .mono{color:#aab4cc}
+.scoreRow{display:flex;align-items:baseline;gap:12px}
+.scoreRow .n{font-size:84px;font-weight:620;font-stretch:80%;letter-spacing:-.04em;line-height:.9}
+.money{background:var(--navy);color:#fff}
+.money .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
+.col{padding:48px 40px 52px 0;display:grid;gap:22px;align-content:start;min-width:0}
+.col+.col{padding-left:40px;padding-right:0;border-left:1px solid #2b3b62}
+.col .mono{color:#aab4cc}
+.huge{font-size:clamp(54px,7vw,96px);font-weight:640;font-stretch:78%;letter-spacing:-.04em;line-height:.9}
+.r{color:#ff8a72}.g{color:#7fd4a5}
+.line{display:grid;gap:8px;padding-top:16px;border-top:1px solid #2b3b62}
+.line .t{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.line .t b{font-size:22px;font-weight:600;font-stretch:90%}
+.line .how{font-size:14px;color:#aab4cc}
+.meter{height:8px;background:#22325a}
+.meter i{display:block;height:100%}
+.slider{display:grid;gap:8px;font-size:14px;color:#aab4cc;padding-top:6px}
+.slider input{width:100%;accent-color:var(--sand)}
+.band{height:42vh;min-height:260px;background:center/cover}
+.sec{padding-block:64px;display:grid;gap:32px}
+.sec>header{display:grid;gap:10px;max-width:62ch}
+.sec h2{font-size:clamp(30px,3.4vw,46px);font-stretch:90%}
+.sec header p{color:var(--muted)}
+.engine{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:48px;align-items:center}
+.dims{display:grid;gap:0}
+.dim{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr) 64px;gap:16px;align-items:center;padding:12px 0;border-top:1px solid var(--rule);font-size:16px}
+.dim .meter{background:var(--tint)}
+.dim .meter i{background:var(--navy)}
+.dim .st{font-family:var(--mono);font-size:12px;text-align:right}
+.st.w{color:var(--risk)}.st.b{color:#9a6a12}.st.s{color:var(--gain)}
+.told{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.told div{padding:20px 24px 22px 0;border-top:1px solid var(--rule);display:grid;gap:6px}
+.told div:nth-child(2n){padding-left:24px;border-left:1px solid var(--rule)}
+.told b{font-weight:600;font-size:18px}
+.told span{color:var(--muted);font-size:15px}
+.plan{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px}
+.plan ol{list-style:none;margin:0;padding:0;display:grid}
+.plan li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0;border-top:1px solid var(--rule)}
+.plan li .mono{color:var(--muted);padding-top:3px}
+.plan li b{display:block;font-weight:600;font-size:18px}
+.plan li span{color:var(--muted);font-size:15px}
+.pack{background:var(--navy);color:#fff}
+.pack .wrap{display:grid;gap:36px;padding-block:64px}
+.pack h2{font-size:clamp(30px,3.4vw,48px);font-stretch:90%;max-width:24ch}
+.pack .why{color:#c8cfdf;max-width:60ch;font-size:18px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border-top:1px solid #2b3b62}
+.step{padding:22px 22px 24px 0;display:grid;gap:8px;align-content:start}
+.step+.step{padding-left:22px;border-left:1px solid #2b3b62}
+.step .mono{color:#aab4cc}
+.step b{font-weight:600;font-size:19px}
+.step .price{font-size:34px;font-weight:620;font-stretch:80%;color:var(--sand);letter-spacing:-.02em}
+.step p{font-size:15px;color:#c8cfdf}
+.total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-top:1px solid #2b3b62;padding-top:22px}
+.total .huge{font-size:clamp(44px,5vw,68px);color:var(--sand)}
+.alt{color:#c8cfdf;font-size:15px}
+.raka{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:center;border-top:1px solid #2b3b62;padding-top:28px}
+.raka img{width:120px;height:120px;object-fit:cover;border-radius:50%}
+.raka .who{display:grid;gap:6px}
+.raka .who b{font-size:20px;font-weight:600}
+.raka .who span{color:#c8cfdf;font-size:15px}
+.contact{font-family:var(--mono);font-size:14px;color:var(--sand);user-select:all;overflow-wrap:anywhere}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.foot{padding-block:28px 48px;color:var(--muted);font-size:13px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;font-size:14px;z-index:9}
+.fade{animation:fade .35s ease both}
+@keyframes fade{from{transform:translateY(10px)}to{transform:none}}
+
+@media (max-width:900px){
+  .intro,.quiz{grid-template-columns:minmax(0,1fr)}
+  .intro{min-height:0}
+  .intro .photo img{height:17svh}
+  .flowbox{padding:8px 16px 10px;gap:4px}
+  .flowbox canvas{height:150px}
+  .intro .side{padding:20px max(18px,env(safe-area-inset-right,0px)) 36px max(18px,env(safe-area-inset-left,0px));gap:18px}
+  .intro .side .wordmark{display:none}
+  .intro h1{font-size:32px}
+  .intro .lede{font-size:15px}
+  .gets{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .qphoto{position:relative;height:26svh}
+  .qphoto .chap{padding:12px 18px}
+  .qphoto .chap strong{font-size:20px}
+  .qmain{min-height:auto;padding:20px max(18px,env(safe-area-inset-right,0px)) 28px max(18px,env(safe-area-inset-left,0px))}
+  .qbody{padding-block:24px}
+  .diag,.money .wrap,.engine,.plan,.told{grid-template-columns:minmax(0,1fr)}
+  .diag{gap:32px;padding-block:40px}
+  .col,.col+.col{padding:36px 0;border-left:0}
+  .col+.col{border-top:1px solid #2b3b62}
+  .told div:nth-child(2n){padding-left:0;border-left:0}
+  .step,.step+.step{padding:18px 0;border-left:0;border-top:1px solid #2b3b62}
+  .steps{border-top:0}
+  .dim{grid-template-columns:minmax(0,1fr) 64px}
+  .dim .meter{grid-column:1/-1;grid-row:2}
+  .raka{grid-template-columns:84px minmax(0,1fr)}
+  .raka img{width:84px;height:84px}
+}
+@media (max-width:520px){.fields{grid-template-columns:minmax(0,1fr)}.door{grid-template-rows:80px auto}.door .tx{padding:12px 12px 14px}.door strong{font-size:17px}.door span{font-size:13px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<div class="toast" id="toast" hidden></div>
+<script>
+(function(){
+const EUR=new Intl.NumberFormat('en-IE',{style:'currency',currency:'EUR',maximumFractionDigits:0});
+const NUM=new Intl.NumberFormat('en-IE',{maximumFractionDigits:0});
+const eur=v=>EUR.format(Math.round(v/10)*10);
+const app=document.getElementById('app');
+const STAR='<svg width="16" height="16" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" fill="currentColor"/></svg>';
+
+const DIMS=[['target','Who to target'],['data','Lists and data'],['signals','Timing'],['message','The message'],['speed','Follow up'],['measure','Measuring'],['loyalty','Keeping customers']];
+const LABEL=Object.fromEntries(DIMS);
+const FIX={
+ target:{build:['An ICP and scoring model','Tiers and disqualifiers from your won deals, scored on every account.'],learn:['Level 1, Module 1','Your ICP, built from real deal numbers.'],line:'Your team is spending its week on people who were never going to buy.',me:'You\u2019re spending your best hours on people who were never going to buy.'},
+ data:{build:['An enrichment waterfall','Lists filled, verified and deduplicated, with no copy and paste.'],learn:['Level 1, Modules 2 and 3','Data, lists, enrichment and scoring in Clay.'],line:'Your sellers are working as data entry clerks.',me:'You\u2019re doing a data entry job on top of your real one.'},
+ signals:{build:['Signal alerts routed to the right person','Funding, hiring and intent signals that say who to call this week.'],learn:['Level 3, Module 3','Signal systems scored by results.'],line:'Accounts get ready to buy and you hear about it last.',me:'Your accounts get ready to buy and you hear about it last.'},
+ message:{build:['An outbound AI agent','Researches each account and drafts the message. A person checks it before it sends.'],learn:['Level 1, Modules 4 and 5','AI research that cites its sources, and messages built on one problem.'],line:'Your messages look like everyone else’s, so they get treated like everyone else’s.',me:'Your messages look like everyone else\u2019s, so they get treated like everyone else\u2019s.'},
+ speed:{build:['Lead routing and follow up flows','Every lead gets an owner and a reply time. Follow ups go out on their own.'],learn:['Level 2, Modules 1 and 2','Safe sending, lemlist and n8n automations.'],line:'Your warmest leads are going cold in an inbox.',me:'Your warmest conversations are slipping through the cracks.'},
+ measure:{build:['A dashboard and forecast','One view of pipeline and reply rates, and a forecast you can defend.'],learn:['Level 2, Module 5','Scorecards, dashboards and forecasting.'],line:'You can’t see which part of your engine is actually working.',me:'You can\u2019t tell which of your efforts actually works.'},
+ loyalty:{build:['Lead to loyalty flows','Onboarding, health scores, renewals and win backs that run on their own.'],learn:['Level 2, Module 4','Allbound and loyalty flows.'],line:'Customers leave quietly and nobody sees it coming.',me:'Your customers drift off after they buy, and nobody notices.'}
+};
+const S=(...a)=>a.map((t,i)=>({t,v:i}));
+
+/* chapters, each with its own photo */
+const CH={team:[['Your week','img/team.jpg'],['The leaks','img/leaks.jpg'],['The engine','img/engine.jpg'],['Next year','img/city.jpg']],
+          me:[['Your week','img/seller.jpg'],['Your craft','img/desk.jpg'],['Your tools','img/screens.jpg'],['What’s next','img/career.jpg']]};
+
+const TEAM=[
+ {id:'admin',c:0,q:'It’s Monday morning. Where does your sellers’ first hour go?',hint:'Pick the one that sounds most like your team.',opts:[{t:'Calls and meetings with buyers',v:0.15},{t:'The inbox and updating the CRM',v:0.3},{t:'Working out who to contact this week',v:0.5},{t:'Building lists and chasing data in spreadsheets',v:0.7}],heard:o=>`About ${Math.round(o.v*100)}% of the week goes on work that isn’t selling.`},
+ {id:'nums',c:0,type:'nums',q:'Put some numbers on it',hint:'Rough is fine. Every euro in your report comes from these, and you can change them later.',fields:[
+  {k:'reps',l:'People who sell, founders included',d:5,u:''},{k:'cost',l:'Yearly cost per seller',d:60000,u:'€'},
+  {k:'deal',l:'Average deal value',d:8000,u:'€'},{k:'deals',l:'New deals won per month',d:4,u:''},
+  {k:'growth',l:'Growth you need next year',d:40,u:'%'},{k:'inbound',l:'Inbound leads per month',d:30,u:''}]},
+ {id:'speed',c:1,dim:'speed',q:'A lead fills in your form on Friday at 4pm. When do they hear from you?',opts:S('Monday, if someone spots it','Sometime next week','Within a day','Within the hour','Within minutes, automatically'),heard:o=>['Friday leads wait for the weekend, or longer.','Friday leads wait over a week.','Leads hear back within a day.','Leads hear back within the hour.','Leads hear back within minutes.'][o.v]},
+ {id:'nofollow',c:1,q:'Be honest. How many inbound leads never get a real follow up?',opts:[{t:'Almost none',v:0.02},{t:'About 1 in 10',v:0.1},{t:'About 1 in 4',v:0.25},{t:'Half or more',v:0.5}],heard:o=>`${o.t} of your leads never get a real follow up.`},
+ {id:'conv',c:1,q:'Of the leads you do follow up, how many become customers?',opts:[{t:'About 1 in 5',v:0.2},{t:'About 1 in 10',v:0.1},{t:'About 1 in 20',v:0.05},{t:'About 1 in 50',v:0.02}],heard:o=>`${o.t} leads becomes a customer.`},
+ {id:'pains',c:1,type:'multi',q:'Which of these happened in the last six months?',hint:'Pick all that are true. This is where the report gets specific.',opts:[
+  'A good lead went cold because nobody followed up','A seller left and their pipeline left with them','We missed a quarter and didn’t see it coming','We couldn’t say which campaign brought in a deal','A customer left without warning','The founder is still our best seller','Nobody trusts what’s in the CRM'],heard:o=>o.length?`${o.length} of these happened to you.`:'None of these happened. Good.'},
+ {id:'key',c:1,q:'How much of this year’s new revenue came through one person?',hint:'Your best seller, or the founder.',when:a=>(a.pains||[]).some(j=>j===1||j===5),opts:[{t:'About a fifth',v:0.2},{t:'About a third',v:0.35},{t:'About half',v:0.5},{t:'Most of it',v:0.7}],heard:o=>`${o.t} of new revenue rides on one person.`},
+ {id:'target',c:2,dim:'target',q:'A new seller starts tomorrow. How do they know who to call?',opts:S('They ask around','We describe our best customers','There’s a written profile','A profile with tiers, built from won deals','Accounts are already scored for them')},
+ {id:'data',c:2,dim:'data',q:'How does a contact end up on one of your lists?',opts:S('Someone copies it in by hand','LinkedIn searches, one by one','A tool export, cleaned by hand','Enriched and verified automatically','Enriched, scored and pushed into the CRM on its own')},
+ {id:'signals',c:2,dim:'signals',q:'A target account just raised money and is hiring salespeople. When would you know?',opts:S('Probably never','If someone happens to see it','Within a few weeks','Within days, we check signals weekly','The same day, sent to the right person')},
+ {id:'message',c:2,dim:'message',q:'Look at the last ten first messages your team sent. How many were written for that one person?',opts:S('None, it’s one template','Name and company swapped in','A few were researched','Most, researched with AI and checked','All of them, an AI agent researches and a person checks')},
+ {id:'measure',c:2,dim:'measure',q:'Someone asks which channel brought in last quarter’s deals. How long until you can answer?',opts:S('We couldn’t','A few days of digging','A few hours in a spreadsheet','Minutes, it’s on a dashboard','Right away, with next quarter’s forecast')},
+ {id:'loyalty',c:2,dim:'loyalty',q:'A customer goes quiet for two months. What happens?',opts:S('Nothing, until they cancel','Someone notices, sometimes','A check in, if we remember','A health score flags it','A flow reaches out and wins them back')},
+ {id:'owner',c:3,q:'If you had this engine tomorrow, who would look after it?',opts:[{t:'Nobody, we’re stretched',v:0},{t:'A sales lead with little time',v:1},{t:'An ops person',v:2},{t:'An ops person who likes building',v:3}],heard:o=>o.v===0?'Nobody has time to look after it.':`${o.t} would look after it.`},
+ {id:'how',c:3,q:'How would you rather get there?',opts:[{t:'Build it for us',v:'build'},{t:'Teach us to build and run it',v:'learn'},{t:'Build the core, then train the team',v:'mix'}]}
+];
+const ME=[
+ {id:'role',c:0,q:'Which sounds most like you?',opts:[{t:'I sell, as an AE, an SDR or a founder',v:'seller'},{t:'I want a career in GTM engineering or RevOps',v:'career'},{t:'I lead a sales team',v:'leader'}]},
+ {id:'mypains',c:0,type:'multi',q:'Which of these sound like your week?',hint:'Pick all that are true.',opts:['I build lists in the evenings','I don’t know who to call first','My messages get ignored','Follow ups slip through the cracks','I can’t tell what’s working','I want a better paid, more technical role'],heard:o=>o.length?`${o.length} of these sound like your week.`:'None of these. Good.'},
+ {id:'nums',c:0,type:'nums',q:'Put some numbers on it',hint:'Rough is fine. These drive the euro figures in your report.',fields:[
+  {k:'income',l:'Your yearly pay, bonus included',d:55000,u:'€'},{k:'adminh',l:'Hours a week on lists, research and admin',d:12,u:'h'},
+  {k:'meet',l:'Meetings you book per month',d:6,u:''},{k:'deal',l:'Average deal value',d:8000,u:'€'},{k:'mpd',l:'Meetings it takes to win one deal',d:5,u:''}]},
+ {id:'quota',c:0,q:'Where are you against your target this year?',opts:[{t:'Ahead',v:0},{t:'On track',v:1},{t:'Behind',v:2},{t:'Well behind, or no target yet',v:3}],heard:o=>`You’re ${o.t.toLowerCase()}.`},
+ {id:'target',c:1,dim:'target',q:'It’s 9am and you have one hour to prospect. How do you pick who?',opts:S('Whoever I come across','People who look roughly right','I check a written profile','I work down a tiered list','My accounts are already scored and ranked')},
+ {id:'data',c:1,dim:'data',q:'How do you build a list of 50 people?',opts:S('Copy and paste, by hand','LinkedIn searches, one by one','A tool export I clean myself','Clay or similar, enriched and verified','A waterfall that feeds my CRM')},
+ {id:'signals',c:1,dim:'signals',q:'One of your accounts just hired a new head of sales. When would you know?',opts:S('Probably never','If it shows up in my feed','Within a few weeks','Within days, I check signals weekly','The same day, an alert tells me')},
+ {id:'message',c:1,dim:'message',q:'How long does a good first message take you?',opts:S('Seconds, it’s a template','A minute, I swap the name in','Twenty minutes of research','Ten minutes with AI, then I check it','My agent drafts it, I approve it')},
+ {id:'speed',c:2,dim:'speed',q:'Someone replies "maybe next month". What happens next?',opts:S('I hope I remember','I set a reminder','It goes into a sequence, sometimes','It always goes into a sequence','A sequence starts from the reply, on its own')},
+ {id:'measure',c:2,dim:'measure',q:'Which of your openers works best?',opts:S('No idea','I have a feeling','I could work it out','I check a weekly scorecard','I A/B test and know the numbers')},
+ {id:'loyalty',c:2,dim:'loyalty',q:'What happens with customers after they buy?',opts:S('Nothing from me','I check in sometimes','A set onboarding routine','Renewals and upsell tracked','Flows that run on their own')},
+ {id:'tools',c:2,type:'multi',q:'Which of these have you used yourself?',hint:'Pick all that apply.',opts:['A CRM like HubSpot or Salesforce','LinkedIn Sales Navigator','Clay or another enrichment tool','lemlist, Apollo or another sequencer','n8n, Make or Zapier','An AI assistant like Claude or ChatGPT','APIs, SQL or code'],heard:o=>`You’ve used ${o.length} of 7 tools.`},
+ {id:'pace',c:3,q:'How do you learn best?',opts:[{t:'On my own, at my own pace',v:'self'},{t:'With someone who checks my work',v:'one'}]}
+];
+
+let st={path:null,i:0,a:{},recover:50};
+try{const s=JSON.parse(localStorage.getItem('gtmcheck2')||'null');if(s&&s.path)st=Object.assign(st,s)}catch(e){}
+const save=()=>{try{localStorage.setItem('gtmcheck2',JSON.stringify(st))}catch(e){}};
+const allQ=()=>st.path==='team'?TEAM:ME;
+const Qs=()=>allQ().filter(q=>!q.when||q.when(st.a));
+
+function intro(){
+ app.innerHTML=`<section class="intro">
+  <div class="photo"><img src="img/team.jpg" alt="A sales team at work around a table"><div class="flowbox"><canvas id="flow" aria-hidden="true"></canvas><div class="flowkey mono"><span>Leads in</span><span class="lk">Leads lost</span><span>Deals won</span></div></div></div>
+  <div class="side fade">
+   <div class="wordmark">${STAR} ASTRA AGENCY</div>
+   <h1>What will your sales engine cost you next year?</h1>
+   <p class="lede">Four minutes of questions about your real week. You get the money at risk, the upside, your maturity level and the first thing to fix.</p>
+   <div class="doors">
+    <button class="door" data-path="me"><span class="im" style="background-image:url(img/seller.jpg)"></span><span class="tx"><strong>For me</strong><span>You sell, or want a career in GTM engineering</span></span></button>
+    <button class="door" data-path="team"><span class="im" style="background-image:url(img/desk.jpg)"></span><span class="tx"><strong>For my team</strong><span>You run a company or lead the people who sell</span></span></button>
+   </div>
+   <div class="gets"><div><b>01</b>Money at risk</div><div><b>02</b>The upside</div><div><b>03</b>Your level</div><div><b>04</b>Build or learn</div><div><b>05</b>Your package</div></div>
+  </div></section>`;
+ app.querySelectorAll('[data-path]').forEach(b=>b.onclick=()=>{st={path:b.dataset.path,i:0,a:{},recover:50};save();quiz()});
+ flow();
+}
+
+/* The signature moment. Leads stream across the photo, some leak out and fall, the rest reach the deal line. */
+function flow(){
+ const c=document.getElementById('flow');if(!c)return;const x=c.getContext('2d');
+ const still=matchMedia('(prefers-reduced-motion: reduce)').matches;let W,H,dpr,parts=[],t=0;
+ function size(){dpr=Math.min(2,devicePixelRatio||1);W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+ size();addEventListener('resize',size);
+ const spawn=()=>({p:0,s:0.0016+Math.random()*0.0018,o:(Math.random()-.5)*26,leak:Math.random()<0.38?0.25+Math.random()*0.5:2,vy:0,y:0,r:2+Math.random()*1.6});
+ for(let k=0;k<70;k++){const q=spawn();q.p=Math.random();parts.push(q)}
+ function yAt(p,o){return H*0.5+Math.sin(p*Math.PI*2.2+t*0.6)*H*0.16+o*(1-p*0.85)}
+ function frame(){
+  x.clearRect(0,0,W,H);
+  x.strokeStyle='rgba(230,221,216,.18)';x.lineWidth=1;x.beginPath();for(let i=0;i<=60;i++){const p=i/60;x.lineTo(p*W,yAt(p,0))}x.stroke();
+  x.fillStyle='rgba(230,221,216,.55)';x.fillRect(W-2,H*0.18,2,H*0.64);
+  for(const q of parts){
+   if(!still)q.p+=q.s;
+   const fell=q.p>q.leak;
+   if(fell){q.vy+=0.18;q.y+=q.vy}
+   const px=q.p*W,py=fell?yAt(q.leak,q.o)+q.y:yAt(q.p,q.o);
+   x.fillStyle=fell?'#ff8a72':'#e6ddd8';x.globalAlpha=fell?Math.max(0,1-q.y/H):1;
+   x.beginPath();x.arc(px,py,q.r,0,7);x.fill();x.globalAlpha=1;
+   if(q.p>1||py>H+10)Object.assign(q,spawn());
+  }
+  t+=still?0:0.016;
+  if(!still&&document.getElementById('flow'))requestAnimationFrame(frame);
+ }
+ frame();
+}
+
+function heardLine(){
+ const qs=Qs();for(let k=st.i-1;k>=0;k--){const q=qs[k];if(q.heard&&st.a[q.id]!==undefined){const v=st.a[q.id];return q.heard(q.type==='multi'?v:(v.j!==undefined?{...q.opts[v.j],v:v.v}:v))}}
+ return st.path==='team'?'Nothing yet. Your first answer starts the tally.':'Nothing yet. Your first answer starts the tally.';
+}
+function quiz(){
+ const qs=Qs();if(st.i>=qs.length)st.i=qs.length-1;
+ const q=qs[st.i],ch=CH[st.path][q.c],nCh=qs.filter(x=>x.c===q.c),posInCh=nCh.indexOf(q);
+ const live=compute(true);
+ let body='';
+ if(q.type==='nums'){const cur=st.a.nums||{};
+  body=`<div class="fields">${q.fields.map(f=>`<div class="field"><label for="f_${f.k}">${f.l}</label><div class="row">${f.u==='€'?'<span class="u">€</span>':''}<input id="f_${f.k}" inputmode="decimal" value="${NUM.format(cur[f.k]??f.d)}">${f.u&&f.u!=='€'?`<span class="u">${f.u}</span>`:''}</div></div>`).join('')}</div>`;
+ }else if(q.type==='multi'){const cur=st.a[q.id]||[];
+  body=`<div class="opts">${q.opts.map((t,j)=>`<button class="opt" data-j="${j}" aria-pressed="${cur.includes(j)}"><span class="k">${cur.includes(j)?'✓':String.fromCharCode(65+j)}</span><span>${t}</span></button>`).join('')}</div>`;
+ }else{const cur=st.a[q.id];
+  body=`<div class="opts">${q.opts.map((o,j)=>`<button class="opt" data-j="${j}" aria-pressed="${!!cur&&cur.j===j}"><span class="k">${String.fromCharCode(65+j)}</span><span>${o.t}</span></button>`).join('')}</div>`;}
+ const needNext=q.type==='nums'||q.type==='multi';
+ const segs=CH[st.path].map((_,c)=>{const inC=qs.filter(x=>x.c===c),done=inC.filter(x=>qs.indexOf(x)<st.i).length;return `<div class="seg"><i style="width:${(done/inC.length*100).toFixed(0)}%"></i></div>`}).join('');
+ app.innerHTML=`<section class="quiz">
+  <div class="qphoto"><img src="${ch[1]}" alt=""><div class="chap"><span class="mono">Chapter ${q.c+1} of 4 · question ${posInCh+1} of ${nCh.length}</span><strong>${ch[0]}</strong></div></div>
+  <div class="qmain">
+   <div><div class="top"><div class="wordmark">${STAR} ASTRA AGENCY</div><span class="mono">${st.i+1} / ${qs.length}</span></div><div class="segs">${segs}</div></div>
+   <div class="qbody fade" key="${q.id}">
+    <h2>${q.q}</h2>${q.hint?`<p class="hint">${q.hint}</p>`:''}${body}
+   </div>
+   <div class="qfoot">
+    <div class="ledger" aria-live="polite"><span class="mono" style="color:var(--muted)">${st.path==='team'?'At risk next year, so far':'Paid time lost a year, so far'}</span><span class="amt">${eur(live.risk)}</span><span class="heard">${heardLine()}</span></div>
+    <div class="qnav"><button class="btn line" id="back">Back</button>${needNext?`<button class="btn" id="next">${st.i===qs.length-1?'See my report':'Next'}</button>`:''}</div>
+   </div>
+  </div></section>`;
+ document.getElementById('back').onclick=()=>{if(st.i===0){st.path=null;save();intro()}else{st.i--;save();quiz()}};
+ if(q.type==='nums'){
+  q.fields.forEach(f=>{const el=document.getElementById('f_'+f.k);el.onfocus=()=>el.select();el.oninput=()=>{collect(q);const l=compute(true);app.querySelector('.amt').textContent=eur(l.risk)}});
+  document.getElementById('next').onclick=()=>{collect(q);adv()};
+ }else if(q.type==='multi'){
+  app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const j=+b.dataset.j;let c=st.a[q.id]||[];c=c.includes(j)?c.filter(x=>x!==j):c.concat(j);st.a[q.id]=c;save();quiz()});
+  document.getElementById('next').onclick=()=>{st.a[q.id]=st.a[q.id]||[];adv()};
+ }else{
+  app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const j=+b.dataset.j;st.a[q.id]={j,v:q.opts[j].v};save();app.querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed',x===b));setTimeout(adv,220)});
+ }
+ window.scrollTo(0,0);
+}
+function collect(q){const o={};q.fields.forEach(f=>{const v=parseFloat(document.getElementById('f_'+f.k).value.replace(/[^0-9.]/g,''));o[f.k]=isFinite(v)&&v>=0?v:f.d});st.a.nums=o;save()}
+function adv(){const qs=Qs();if(st.i<qs.length-1){st.i++;save();quiz()}else{st.done=true;save();report()}}
+document.addEventListener('keydown',e=>{if(!app.querySelector('.quiz')||/INPUT/.test(document.activeElement.tagName))return;const k=e.key.toUpperCase().charCodeAt(0)-65;const o=app.querySelectorAll('.opt');if(e.key.length===1&&k>=0&&k<o.length)o[k].click();if(e.key==='Enter'){const n=document.getElementById('next');if(n)n.click()}});
+
+/* maths. Everything comes from the visitor's answers, with the defaults shown in the fields */
+function compute(partial){
+ const a=st.a,team=st.path==='team';
+ const qs=team?TEAM:ME;const nq=qs.find(q=>q.type==='nums');const N={};nq.fields.forEach(f=>N[f.k]=(a.nums&&a.nums[f.k]!==undefined)?a.nums[f.k]:f.d);
+ const dims={};DIMS.forEach(([k])=>dims[k]=a[k]?a[k].v:0);
+ const avg=Object.values(dims).reduce((s,v)=>s+v,0)/DIMS.length;
+ let score=team?avg*25:avg*25*0.85+((a.tools||[]).length/7)*15;
+ score=Math.round(Math.min(100,score));
+ const level=score<30?0:score<55?1:score<80?2:3;
+ const LV=team?['Manual','Repeatable','Systemised','Compounding']:['Starter','Operator','Builder','Architect'];
+ const rec=st.recover/100,r={team,dims,score,level,LV,rec,N};
+ if(team){
+  const reps=N.reps||1,cost=N.cost,deal=N.deal,deals=N.deals,g=N.growth/100,inbound=N.inbound;
+  const admin=a.admin?a.admin.v:(partial?0:0.3),nf=a.nofollow?a.nofollow.v:(partial?0:0.1),conv=a.conv?a.conv.v:0.1,key=a.key?a.key.v:0;
+  const timeCost=reps*cost*admin, lost=inbound*12*nf, leak=lost*conv*deal;
+  const dealsYr=deals*12, perRep=reps?dealsYr/reps:0, extraDeals=dealsYr*g, extraReps=perRep?extraDeals/perRep:0, hire=(partial&&!a.speed)?0:extraReps*cost;
+  const keyRisk=key*dealsYr*deal/4;
+  const freed=admin*rec, hoursFreed=reps*freed*40*46, moreDeals=perRep*reps*(freed/Math.max(0.05,1-admin)), oppRev=moreDeals*deal, oppLeak=leak*0.8;
+  Object.assign(r,{m:{reps,cost,deal,deals,g,inbound,admin,nf,conv,key,timeCost,lost,leak,dealsYr,perRep,extraDeals,extraReps,hire,keyRisk,hoursFreed,moreDeals,oppRev,oppLeak},risk:timeCost+leak+hire+keyRisk,opp:timeCost*rec+oppRev+oppLeak});
+ }else{
+  const inc=N.income,h=Math.min(40,N.adminh),meet=N.meet,deal=N.deal,mpd=Math.max(1,N.mpd);
+  const hourly=inc/1840, timeCost=(partial&&!a.nums)?0:h*46*hourly, selling=Math.max(1,40-h), perHour=meet/(selling*4.33);
+  const hFree=h*rec, moreMeet=hFree*4.33*perHour, moreDealsYr=moreMeet*12/mpd, oppRev=moreDealsYr*deal;
+  Object.assign(r,{m:{inc,h,meet,deal,mpd,hourly,timeCost,selling,perHour,hFree,moreMeet,moreDealsYr,oppRev},risk:timeCost,opp:oppRev});
+ }
+ if(partial)return r;
+ r.weak=DIMS.map(([k])=>k).sort((x,y)=>dims[x]-dims[y]).slice(0,3);
+ r.pack=team?packTeam(r):packMe(r);
+ return r;
+}
+
+/* recommendations, priced from the Astra list of 6 Nov 2026 */
+function packTeam(r){
+ const a=st.a,how=a.how?a.how.v:'mix',owner=a.owner?a.owner.v:1,reps=r.m.reps,steps=[{n:'First',t:'Health Check',p:0,d:'A call and a first look at your funnel, stack and data. Where your revenue leaks.'}];
+ let why,head;
+ if(how==='build'||owner===0){
+  head='We build it, then keep it running.';
+  steps.push({n:'Then',t:'Strategy',p:750,d:'The deep analysis and a session that names the first thing to build.'});
+  if(r.level<=1){steps.push({n:'Build',t:'Starter build',p:650,from:1,d:'5 campaigns and 2 signals, set up and live.'});steps.push({n:'Build',t:'Two automations',p:300,d:'Your CRM connected to lemlist, with replies and outcomes fed back.'});if(r.dims.message<=2)steps.push({n:'Build',t:'Outbound AI agent',p:1000,d:'Researches accounts and drafts messages. Checked before anything sends.'})}
+  else steps.push({n:'Build',t:'Full engine',p:4000,approx:1,d:'Campaigns, signals, automations, AI agents, loyalty flows and dashboards.'});
+  steps.push({n:'Ongoing',t:'Run',p:750,mo:1,d:'Monitoring, updates and a monthly review.'});
+  why=owner===0?'Nobody on your team has time to look after this, so we build the engine and run it for you.':'You asked for it built, so we build the engine and hand it over working.';
+ }else if(how==='learn'){
+  const seats=Math.max(4,reps);head='Your team learns to run it themselves.';
+  steps.push({n:'Lead',t:'GTM Leader course',p:500,d:'For whoever leads the team. The operating model, routing, a dashboard and a 90 day plan. €2,000 with Raka.'});
+  steps.push({n:'Team',t:'Group package',p:600*seats,d:`${seats} people take Seller Level 1 together over 4 to 5 weeks. Every assignment marked. €600 each.`});
+  why='You want the skill to stay in the team, so the leader learns to run the system and the sellers learn to work it.';
+ }else{
+  const hrs=3;head='We build the core, your team runs it.';
+  steps.push({n:'Then',t:'Strategy',p:750,d:'The deep analysis and a session that names the first thing to build.'});
+  steps.push(r.level<=1?{n:'Build',t:'Starter build',p:650,from:1,d:'5 campaigns and 2 signals, set up and live.'}:{n:'Build',t:'Full engine',p:4000,approx:1,d:'The whole engine, built and handed over.'});
+  steps.push({n:'Team',t:`${hrs} hour seminar`,p:125*reps*hrs,d:`${reps} people, on your own CRM, so the team can run what we build. €125 per person per hour.`});
+  why='We build the part that takes skill, then train the team in one session so they run it from day one.';
+ }
+ const once=steps.filter(s=>!s.mo).reduce((t,s)=>t+s.p,0),mo=steps.filter(s=>s.mo).reduce((t,s)=>t+s.p,0);
+ const alt=how==='learn'?'Rather have it done for you? Strategy plus a Starter build starts at €1,400.':'Want someone to lead it part time? Raka works as a Fractional RevOps Director at €120 an hour, about €1,920 a month for half a day a week.';
+ return {head,steps,once,mo,why,alt};
+}
+function packMe(r){
+ const role=st.a.role?st.a.role.v:'seller',one=(st.a.pace&&st.a.pace.v==='one'),price=one?1000:125,fmt=one?'1:1 with Raka':'Self learn',steps=[];let why,alt='',head;
+ if(role==='leader'){head='Start with the GTM Leader course.';steps.push({n:'Course',t:'GTM Leader',p:one?2000:500,d:'The operating model, a sales bible your team writes with you, routing, dashboards, a forecast and a 90 day plan.'});why='You lead a team, so the fastest win is the system they all work in. Run the team version of this check as well.';alt='Want it built for your team instead? Start with a free Health Check.'}
+ else if(role==='career'){const s=r.level<=1?1:r.level===2?2:3,nm=['','Operator','Builder','Architect'],ds=['','ICP, lists, enrichment, scoring, AI research and the message. About 4 weeks.','Sending, n8n automations, CRM, loyalty flows and dashboards. About 5 weeks.','Revenue architecture, AI agents in production, signals and client work. About 5 weeks.'];
+  for(let l=s;l<=3;l++)steps.push({n:'Level '+l,t:nm[l],p:price,d:ds[l]});head=`Start the Engineer track at Level ${s}.`;
+  why=`Your score puts you at ${r.LV[r.level]}. GTM engineering and RevOps job postings rose 205% in 2025 (Bloomberry), and every level ends in a build you can show an employer.`;
+  if(steps.length===3)alt=`All three levels together are ${one?'€2,500':'€299'} instead of ${one?'€3,000':'€375'}.`}
+ else{const s=r.level<=1?1:2,nm=['','Find','Reach'];for(let l=s;l<=2;l++)steps.push({n:'Seller Level '+l,t:nm[l],p:price,d:l===1?'Your ICP, a ranked list, alerts that say who to contact now, and AI research you check.':'Messages about their problem, a live sequence, calls that end with a next step.'});
+  head=`Start the Seller track at Level ${s}.`;why=`Your weakest area is ${LABEL[r.weak[0]].toLowerCase()}, and Level ${s} covers it first. Most people get the first result in the first lesson.`;alt='Level 3 Scale, with an AI research assistant on your own list, is coming soon.'}
+ steps.forEach(x=>x.fmt=fmt);let once=steps.reduce((t,x)=>t+x.p,0);if(role==='career'&&steps.length===3)once=one?2500:299;
+ return {head,steps,once,mo:0,why,alt};
+}
+
+function report(){
+ const r=compute(false),m=r.m;
+ const head=r.team?FIX[r.weak[0]].line:FIX[r.weak[0]].me;
+ const maxR=Math.max(1,...(r.team?[m.timeCost,m.leak,m.hire,m.keyRisk]:[m.timeCost]));
+ const risks=r.team?[['Paying sellers for work that isn’t selling',m.timeCost,`${m.reps} sellers × ${eur(m.cost)} × ${Math.round(m.admin*100)}% of the week.`],
+  ['Inbound leads that go cold',m.leak,`${NUM.format(m.inbound*12)} leads a year × ${Math.round(m.nf*100)}% never followed up × 1 in ${Math.round(1/m.conv)} that buys × ${eur(m.deal)}.`],
+  ['Hiring to hit next year by hand',m.hire,`${Math.round(m.g*100)}% growth is ${NUM.format(m.extraDeals)} more deals. At ${NUM.format(m.perRep)} deals per seller that’s ${m.extraReps.toFixed(1)} more sellers at ${eur(m.cost)}.`]]
+  .concat(m.key?[['One person out for three months',m.keyRisk,`${Math.round(m.key*100)}% of ${eur(m.dealsYr*m.deal)} new revenue a year, for one quarter.`]]:[])
+  :[['Paid hours spent not selling',m.timeCost,`${m.h} hours a week × 46 weeks × ${eur(m.hourly)} an hour.`]];
+ const opps=r.team?[['Selling time back',`${NUM.format(m.hoursFreed)} h`,`A year, if a system takes over ${st.recover}% of the admin.`],['Extra deals from that time',eur(m.oppRev),`About ${NUM.format(m.moreDeals)} more deals at your rate of ${NUM.format(m.perRep)} per seller a year.`],['Leads saved by fast follow up',eur(m.oppLeak),'If routing and automatic follow ups catch 8 in 10 of the leads that go cold now.']]
+  :[['Hours back every week',`${m.hFree.toFixed(1)} h`,`If ${st.recover}% of your admin runs on its own.`],['More meetings a month',m.moreMeet.toFixed(1),`At your rate of ${m.perHour.toFixed(2)} meetings per selling hour.`],['More pipeline a year',eur(m.oppRev),`${NUM.format(m.moreDealsYr)} more deals, at ${m.mpd} meetings a deal and ${eur(m.deal)} each.`]];
+ const painList=r.team?(st.a.pains||[]).map(j=>TEAM.find(q=>q.id==='pains').opts[j]):(st.a.mypains||[]).map(j=>ME.find(q=>q.id==='mypains').opts[j]);
+ const PAINFIX=r.team?['Lead routing with a reply time on every lead','Signals and sequences that live in the system, not in one person','A dashboard and a forecast built from stages with exit criteria','Attribution in the CRM, so every deal shows where it came from','Health scores and win back flows','An engine that books meetings without the founder','CRM rules with owners, checked in ten minutes a week']
+  :['An enrichment waterfall, so lists build themselves','A tiered list and alerts that rank who to call','Messages built on one researched problem','A sequence that starts from the reply','A weekly scorecard','The Engineer track, from Operator to Architect'];
+ const painIdx=r.team?(st.a.pains||[]):(st.a.mypains||[]);
+ const p=r.pack,bandImg=r.team?'img/city.jpg':'img/career.jpg';
+ const sub=r.team?`Run the way it runs today, your sales engine puts about ${eur(r.risk)} at risk over the next 12 months. A working system could unlock about ${eur(r.opp)} in time, deals and saved leads.`:`Admin costs you about ${eur(m.timeCost)} of paid time a year. Hand ${st.recover}% of it to a system and you could add about ${eur(m.oppRev)} of pipeline.${st.a.quota&&st.a.quota.v>=2?' You told us you’re behind target, so this year every hour counts.':''}`;
+ app.innerHTML=`<div class="rep fade">
+ <div class="bar0"><div class="wordmark">${STAR} ASTRA AGENCY</div><span class="mono">Your GTM Engine Check</span></div>
+ <div class="wrap"><section class="diag">
+  <div><h1>${head}</h1><p class="sub">${sub}</p></div>
+  <div class="level"><span class="mono" style="color:var(--muted)">${r.team?'Company':'Individual'} GTM maturity</span><div class="scoreRow"><span class="n">${r.score}</span><span class="mono">of 100 · ${r.LV[r.level]}</span></div>
+   <div class="ladder">${r.LV.map((n,i)=>`<div class="${i===r.level?'on':''}"><b>${n}</b><span class="mono">${['0 to 29','30 to 54','55 to 79','80 to 100'][i]}</span></div>`).join('')}</div></div>
+ </section></div>
+
+ <section class="money"><div class="wrap">
+  <div class="col"><span class="mono">Money at risk, next 12 months</span><div class="huge r">${eur(r.risk)}</div>
+   ${risks.map(([t,v,h])=>`<div class="line"><div class="t"><span>${t}</span><b>${eur(v)}</b></div><div class="meter"><i style="width:${(v/maxR*100).toFixed(1)}%;background:#ff8a72"></i></div><p class="how">${h}</p></div>`).join('')}
+  </div>
+  <div class="col"><span class="mono">What a working system unlocks</span><div class="huge g">${eur(r.opp)}</div>
+   ${opps.map(([t,v,h])=>`<div class="line"><div class="t"><span>${t}</span><b>${v}</b></div><p class="how">${h}</p></div>`).join('')}
+   <div class="slider"><label for="rec">Share of admin a system takes over, ${st.recover}%</label><input id="rec" type="range" min="20" max="80" step="5" value="${st.recover}"><span>We assume 50%. Move it to test your own case.</span></div>
+  </div>
+ </div></section>
+
+ <div class="wrap"><section class="sec">
+  <header><h2>Your engine, part by part</h2><p>Each part scored from your answers. The weakest three drive the plan below.</p></header>
+  <div class="engine">${radar(r)}<div class="dims">${DIMS.map(([k,l])=>{const v=r.dims[k],c=v<=1?'w':v<=2?'b':'s';return `<div class="dim"><span>${l}</span><div class="meter"><i style="width:${Math.max(4,v/4*100)}%"></i></div><span class="st ${c}">${c==='w'?'Weak':c==='b'?'Basic':'Strong'}</span></div>`}).join('')}</div></div>
+ </section>
+ ${painList.length?`<section class="sec" style="padding-top:0"><header><h2>What you told us, and what fixes it</h2></header><div class="told">${painList.map((t,i)=>`<div><b>${t}</b><span>${PAINFIX[painIdx[i]]}</span></div>`).join('')}</div></section>`:''}
+ </div>
+
+ <div class="band" style="background-image:url(${bandImg})" role="img" aria-label="${r.team?'A city skyline at night':'A learner at a laptop by a window'}"></div>
+
+ <div class="wrap"><section class="sec"><div class="plan">
+  <div><header style="display:grid;gap:10px;margin-bottom:18px"><h2>What to build</h2><p style="color:var(--muted)">Your three weakest parts, fixed in this order.</p></header><ol>${r.weak.map((k,i)=>`<li><span class="mono">0${i+1}</span><div><b>${FIX[k].build[0]}</b><span>${FIX[k].build[1]}</span></div></li>`).join('')}</ol></div>
+  <div><header style="display:grid;gap:10px;margin-bottom:18px"><h2>What to learn</h2><p style="color:var(--muted)">The lessons that cover the same three parts.</p></header><ol>${r.weak.map((k,i)=>`<li><span class="mono">0${i+1}</span><div><b>${FIX[k].learn[0]}</b><span>${FIX[k].learn[1]}</span></div></li>`).join('')}</ol></div>
+ </div></section></div>
+
+ <section class="pack"><div class="wrap">
+  <div style="display:grid;gap:16px"><span class="mono" style="color:#aab4cc">Our recommendation</span><h2>${p.head}</h2><p class="why">${p.why}</p></div>
+  <div class="steps">${p.steps.map(s=>`<div class="step"><span class="mono">${s.n}${s.fmt?' · '+s.fmt:''}</span><b>${s.t}</b><span class="price">${s.p===0?'Free':(s.approx?'About ':s.from?'From ':'')+eur(s.p)+(s.mo?' a month':'')}</span><p>${s.d}</p></div>`).join('')}</div>
+  <div class="total"><span class="mono" style="color:#aab4cc">Total to start</span><span class="huge">${eur(p.once)}${p.mo?`<span style="font-size:.45em"> then ${eur(p.mo)} a month</span>`:''}</span></div>
+  ${p.alt?`<p class="alt">${p.alt}</p>`:''}
+  <div class="raka"><img src="img/raka.jpg" alt="Raka Mulya"><div class="who"><b>Raka Mulya, Astra Agency</b><span>Seven years in revenue, GTM and data. Builds the engines and teaches them. Book a free Health Check and paste your results in the message.</span><span class="contact">raka@astraagency.nl · linkedin.com/in/raka-mulya-b92885196</span></div></div>
+  <div class="ctas"><button class="btn light" id="copy">Copy my results</button><button class="btn lineLight" id="mail">Copy Raka’s email</button><button class="btn lineLight" id="redo">Change my answers</button><button class="btn lineLight" id="other">Run the ${r.team?'personal':'team'} check</button></div>
+ </div></section>
+ <div class="wrap foot">Estimates from your own answers, rounded to the nearest €10. Benchmarks from Salesforce State of Sales 2024 and Bloomberry 2025. Photos are public domain. Your answers stay in this browser.</div>
+ </div>`;
+ document.getElementById('rec').oninput=e=>{st.recover=+e.target.value;save();const y=scrollY;report();scrollTo(0,y)};
+ document.getElementById('redo').onclick=()=>{st.i=0;st.done=false;save();quiz()};
+ document.getElementById('other').onclick=()=>{st={path:r.team?'me':'team',i:0,a:{},recover:50};save();quiz()};
+ document.getElementById('copy').onclick=()=>copy(summary(r),'Copied. Paste it into your message to Raka.');
+ document.getElementById('mail').onclick=()=>copy('raka@astraagency.nl','Email copied.');
+ scrollTo(0,0);
+}
+function summary(r){const p=r.pack;return [`GTM Engine Check, ${r.team?'my team':'me'}`,`Maturity ${r.LV[r.level]}, ${r.score} of 100`,`Money at risk next 12 months ${eur(r.risk)}`,`Opportunity ${eur(r.opp)}`,`Weakest parts ${r.weak.map(k=>LABEL[k]).join(', ')}`,`Recommended ${p.steps.map(s=>s.t).join(', then ')}`,`Total to start ${eur(p.once)}${p.mo?` then ${eur(p.mo)} a month`:''}`].join('\n')}
+function copy(t,msg){const ok=()=>toast(msg);if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,()=>fb(t,msg));else fb(t,msg)}
+function fb(t,msg){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast(msg)}catch(e){toast('Select the text and copy it yourself.')}ta.remove()}
+function toast(m){const el=document.getElementById('toast');el.textContent=m;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,2600)}
+function radar(r){
+ const n=DIMS.length,cx=230,cy=170,R=120,P=(i,v)=>{const a=-Math.PI/2+i*2*Math.PI/n;return[cx+R*v*Math.cos(a),cy+R*v*Math.sin(a)]};
+ let g='';for(let k=1;k<=4;k++)g+=`<polygon points="${DIMS.map((_,i)=>P(i,k/4).map(x=>x.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#d9d6d0"/>`;
+ g+=DIMS.map((_,i)=>{const[x,y]=P(i,1);return`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#d9d6d0"/>`}).join('');
+ const shape=DIMS.map(([k],i)=>P(i,Math.max(.05,r.dims[k]/4)).map(x=>x.toFixed(1)).join(',')).join(' ');
+ const lab=DIMS.map(([,l],i)=>{const[x,y]=P(i,1.17);const an=Math.abs(x-cx)<12?'middle':x>cx?'start':'end';return`<text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="${an}" font-size="13" fill="#5d6475" font-family="Mona Sans,Helvetica,Arial,sans-serif">${l}</text>`}).join('');
+ return `<svg viewBox="0 0 460 340" role="img" aria-label="Scores for each part of the engine" style="width:100%">${g}<polygon points="${shape}" fill="rgba(13,27,56,.16)" stroke="#0d1b38" stroke-width="2"/>${DIMS.map(([k],i)=>{const[x,y]=P(i,Math.max(.05,r.dims[k]/4));return`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="#0d1b38"/>`}).join('')}${lab}</svg>`;
+}
+['team','leaks','engine','city','seller','desk','screens','career'].forEach(n=>{const i=new Image();i.src='img/'+n+'.jpg'});
+if(st.path&&st.done)report();else if(st.path)quiz();else intro();
+})();
+</script>
+</body>
+</html>
