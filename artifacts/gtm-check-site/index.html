@@ -223,6 +223,8 @@ const FIX={
  measure:{build:['A dashboard and forecast','One view of pipeline and reply rates, and a forecast you can defend.'],learn:['Level 2, Module 5','Scorecards, dashboards and forecasting.'],line:'You can’t see which part of your engine is actually working.',me:'You can\u2019t tell which of your efforts actually works.'},
  loyalty:{build:['Lead to loyalty flows','Onboarding, health scores, renewals and win backs that run on their own.'],learn:['Level 2, Module 4','Allbound and loyalty flows.'],line:'Customers leave quietly and nobody sees it coming.',me:'Your customers drift off after they buy, and nobody notices.'}
 };
+const MIR={team:{goal:['to hit a bigger target without hiring','pipeline that doesn\u2019t depend on the founder','to know which deals will close, and when','a team that runs the system itself'],fear:['missing the target','losing a key seller','hiring people who never ramp up','a competitor getting there first']},me:{goal:['more meetings with less grind','to hit your target every quarter','a more technical, better paid role','to lead a team that runs on a system'],fear:['missing your target again','your role being automated away','being stuck in the same job','burning out']}};
+const mir=(k,j)=>MIR[st.path][k][j];
 const S=(...a)=>a.map((t,i)=>({t,v:i}));
 
 /* chapters, each with its own photo */
@@ -230,6 +232,7 @@ const CH={team:[['Your week','img/team.jpg'],['The leaks','img/leaks.jpg'],['The
           me:[['Your week','img/seller.jpg'],['Your craft','img/desk.jpg'],['Your tools','img/screens.jpg'],['What’s next','img/career.jpg']]};
 
 const TEAM=[
+ {id:'goal',c:0,q:'Start with the good part. What would make next year a great year for the team?',opts:[{t:'Hitting a bigger target without hiring',v:0},{t:'Pipeline that doesn\u2019t depend on the founder',v:1},{t:'Knowing which deals will close, and when',v:2},{t:'A team that runs the system themselves',v:3}],heard:o=>`You want ${mir('goal',o.v)}.`},
  {id:'admin',c:0,q:'It’s Monday morning. Where does your sellers’ first hour go?',hint:'Pick the one that sounds most like your team.',opts:[{t:'Calls and meetings with buyers',v:0.15},{t:'The inbox and updating the CRM',v:0.3},{t:'Working out who to contact this week',v:0.5},{t:'Building lists and chasing data in spreadsheets',v:0.7}],heard:o=>`About ${Math.round(o.v*100)}% of the week goes on work that isn’t selling.`},
  {id:'nums',c:0,type:'nums',q:'Put some numbers on it',hint:'Rough is fine. Every euro in your report comes from these, and you can change them later.',fields:[
   {k:'reps',l:'People who sell, founders included',d:5,u:''},{k:'cost',l:'Yearly cost per seller',d:60000,u:'€'},
@@ -241,23 +244,26 @@ const TEAM=[
  {id:'pains',c:1,type:'multi',q:'Which of these happened in the last six months?',hint:'Pick all that are true. This is where the report gets specific.',opts:[
   'A good lead went cold because nobody followed up','A seller left and their pipeline left with them','We missed a quarter and didn’t see it coming','We couldn’t say which campaign brought in a deal','A customer left without warning','The founder is still our best seller','Nobody trusts what’s in the CRM'],heard:o=>o.length?`${o.length} of these happened to you.`:'None of these happened. Good.'},
  {id:'key',c:1,q:'How much of this year’s new revenue came through one person?',hint:'Your best seller, or the founder.',when:a=>(a.pains||[]).some(j=>j===1||j===5),opts:[{t:'About a fifth',v:0.2},{t:'About a third',v:0.35},{t:'About half',v:0.5},{t:'Most of it',v:0.7}],heard:o=>`${o.t} of new revenue rides on one person.`},
- {id:'target',c:2,dim:'target',q:'A new seller starts tomorrow. How do they know who to call?',opts:S('They ask around','We describe our best customers','There’s a written profile','A profile with tiers, built from won deals','Accounts are already scored for them')},
+ {id:'target',c:2,dim:'target',q:'A new seller starts tomorrow. How do they know who to call?',hint:'No wrong answers here. Nobody sees this but you, so pick what really happens.',opts:S('They ask around','We describe our best customers','There’s a written profile','A profile with tiers, built from won deals','Accounts are already scored for them')},
  {id:'data',c:2,dim:'data',q:'How does a contact end up on one of your lists?',opts:S('Someone copies it in by hand','LinkedIn searches, one by one','A tool export, cleaned by hand','Enriched and verified automatically','Enriched, scored and pushed into the CRM on its own')},
  {id:'signals',c:2,dim:'signals',q:'A target account just raised money and is hiring salespeople. When would you know?',opts:S('Probably never','If someone happens to see it','Within a few weeks','Within days, we check signals weekly','The same day, sent to the right person')},
  {id:'message',c:2,dim:'message',q:'Look at the last ten first messages your team sent. How many were written for that one person?',opts:S('None, it’s one template','Name and company swapped in','A few were researched','Most, researched with AI and checked','All of them, an AI agent researches and a person checks')},
  {id:'measure',c:2,dim:'measure',q:'Someone asks which channel brought in last quarter’s deals. How long until you can answer?',opts:S('We couldn’t','A few days of digging','A few hours in a spreadsheet','Minutes, it’s on a dashboard','Right away, with next quarter’s forecast')},
  {id:'loyalty',c:2,dim:'loyalty',q:'A customer goes quiet for two months. What happens?',opts:S('Nothing, until they cancel','Someone notices, sometimes','A check in, if we remember','A health score flags it','A flow reaches out and wins them back')},
+ {id:'fear',c:3,q:'Now the honest part. What worries you most about next year?',opts:[{t:'Missing the target',v:0},{t:'Losing a key seller',v:1},{t:'Hiring people who never ramp up',v:2},{t:'A competitor getting there first',v:3}],heard:o=>`What worries you most is ${mir('fear',o.v)}.`},
+ {id:'worth',c:3,q:'If one of these got fixed next quarter, what would it be worth to you?',hint:'Your own gut number. We hold the plan up against it.',opts:[{t:'About \u20ac5,000',v:5000},{t:'About \u20ac20,000',v:20000},{t:'About \u20ac50,000',v:50000},{t:'\u20ac100,000 or more',v:100000}],heard:o=>`One fix is worth ${o.t.toLowerCase()} to you.`},
  {id:'owner',c:3,q:'If you had this engine tomorrow, who would look after it?',opts:[{t:'Nobody, we’re stretched',v:0},{t:'A sales lead with little time',v:1},{t:'An ops person',v:2},{t:'An ops person who likes building',v:3}],heard:o=>o.v===0?'Nobody has time to look after it.':`${o.t} would look after it.`},
  {id:'how',c:3,q:'How would you rather get there?',opts:[{t:'Build it for us',v:'build'},{t:'Teach us to build and run it',v:'learn'},{t:'Build the core, then train the team',v:'mix'}]}
 ];
 const ME=[
+ {id:'goal',c:0,q:'Start with the good part. What would make next year a great year for you?',opts:[{t:'More meetings with less grind',v:0},{t:'Hitting my target every quarter',v:1},{t:'A more technical, better paid role',v:2},{t:'Leading a team that runs on a system',v:3}],heard:o=>`You want ${mir('goal',o.v)}.`},
  {id:'role',c:0,q:'Which sounds most like you?',opts:[{t:'I sell, as an AE, an SDR or a founder',v:'seller'},{t:'I want a career in GTM engineering or RevOps',v:'career'},{t:'I lead a sales team',v:'leader'}]},
  {id:'mypains',c:0,type:'multi',q:'Which of these sound like your week?',hint:'Pick all that are true.',opts:['I build lists in the evenings','I don’t know who to call first','My messages get ignored','Follow ups slip through the cracks','I can’t tell what’s working','I want a better paid, more technical role'],heard:o=>o.length?`${o.length} of these sound like your week.`:'None of these. Good.'},
  {id:'nums',c:0,type:'nums',q:'Put some numbers on it',hint:'Rough is fine. These drive the euro figures in your report.',fields:[
   {k:'income',l:'Your yearly pay, bonus included',d:55000,u:'€'},{k:'adminh',l:'Hours a week on lists, research and admin',d:12,u:'h'},
   {k:'meet',l:'Meetings you book per month',d:6,u:''},{k:'deal',l:'Average deal value',d:8000,u:'€'},{k:'mpd',l:'Meetings it takes to win one deal',d:5,u:''}]},
  {id:'quota',c:0,q:'Where are you against your target this year?',opts:[{t:'Ahead',v:0},{t:'On track',v:1},{t:'Behind',v:2},{t:'Well behind, or no target yet',v:3}],heard:o=>`You’re ${o.t.toLowerCase()}.`},
- {id:'target',c:1,dim:'target',q:'It’s 9am and you have one hour to prospect. How do you pick who?',opts:S('Whoever I come across','People who look roughly right','I check a written profile','I work down a tiered list','My accounts are already scored and ranked')},
+ {id:'target',c:1,dim:'target',q:'It’s 9am and you have one hour to prospect. How do you pick who?',hint:'No wrong answers here. Nobody sees this but you, so pick what really happens.',opts:S('Whoever I come across','People who look roughly right','I check a written profile','I work down a tiered list','My accounts are already scored and ranked')},
  {id:'data',c:1,dim:'data',q:'How do you build a list of 50 people?',opts:S('Copy and paste, by hand','LinkedIn searches, one by one','A tool export I clean myself','Clay or similar, enriched and verified','A waterfall that feeds my CRM')},
  {id:'signals',c:1,dim:'signals',q:'One of your accounts just hired a new head of sales. When would you know?',opts:S('Probably never','If it shows up in my feed','Within a few weeks','Within days, I check signals weekly','The same day, an alert tells me')},
  {id:'message',c:1,dim:'message',q:'How long does a good first message take you?',opts:S('Seconds, it’s a template','A minute, I swap the name in','Twenty minutes of research','Ten minutes with AI, then I check it','My agent drafts it, I approve it')},
@@ -265,6 +271,8 @@ const ME=[
  {id:'measure',c:2,dim:'measure',q:'Which of your openers works best?',opts:S('No idea','I have a feeling','I could work it out','I check a weekly scorecard','I A/B test and know the numbers')},
  {id:'loyalty',c:2,dim:'loyalty',q:'What happens with customers after they buy?',opts:S('Nothing from me','I check in sometimes','A set onboarding routine','Renewals and upsell tracked','Flows that run on their own')},
  {id:'tools',c:2,type:'multi',q:'Which of these have you used yourself?',hint:'Pick all that apply.',opts:['A CRM like HubSpot or Salesforce','LinkedIn Sales Navigator','Clay or another enrichment tool','lemlist, Apollo or another sequencer','n8n, Make or Zapier','An AI assistant like Claude or ChatGPT','APIs, SQL or code'],heard:o=>`You’ve used ${o.length} of 7 tools.`},
+ {id:'fear',c:3,q:'Now the honest part. What worries you most about next year?',opts:[{t:'Missing my target again',v:0},{t:'My role being automated away',v:1},{t:'Being stuck in the same job',v:2},{t:'Burning out',v:3}],heard:o=>`What worries you most is ${mir('fear',o.v)}.`},
+ {id:'worth',c:3,q:'If you had five hours a week back, what would that be worth to you this year?',hint:'Your own gut number. We hold the plan up against it.',opts:[{t:'About \u20ac1,000',v:1000},{t:'About \u20ac5,000',v:5000},{t:'About \u20ac10,000',v:10000},{t:'\u20ac25,000 or more',v:25000}],heard:o=>`Five hours a week is worth ${o.t.toLowerCase()} to you.`},
  {id:'pace',c:3,q:'How do you learn best?',opts:[{t:'On my own, at my own pace',v:'self'},{t:'With someone who checks my work',v:'one'}]}
 ];
 
@@ -323,6 +331,7 @@ function heardLine(){
  const qs=Qs();for(let k=st.i-1;k>=0;k--){const q=qs[k];if(q.heard&&st.a[q.id]!==undefined){const v=st.a[q.id];return q.heard(q.type==='multi'?v:(v.j!==undefined?{...q.opts[v.j],v:v.v}:v))}}
  return st.path==='team'?'Nothing yet. Your first answer starts the tally.':'Nothing yet. Your first answer starts the tally.';
 }
+function findings(){const a=st.a;let n=DIMS.filter(([k])=>a[k]&&a[k].v<=2).length+((st.path==='team'?a.pains:a.mypains)||[]).length;if(a.admin||a.nums)n++;if(a.nofollow&&a.nofollow.v>=.1)n++;if(a.key)n++;return n}
 function quiz(){
  const qs=Qs();if(st.i>=qs.length)st.i=qs.length-1;
  const q=qs[st.i],ch=CH[st.path][q.c],nCh=qs.filter(x=>x.c===q.c),posInCh=nCh.indexOf(q);
@@ -344,7 +353,7 @@ function quiz(){
     <h2>${q.q}</h2>${q.hint?`<p class="hint">${q.hint}</p>`:''}${body}
    </div>
    <div class="qfoot">
-    <div class="ledger" aria-live="polite"><span class="mono" style="color:var(--muted)">${st.path==='team'?'At risk next year, so far':'Paid time lost a year, so far'}</span><span class="amt">${eur(live.risk)}</span><span class="heard">${heardLine()}</span></div>
+    <div class="ledger" aria-live="polite"><span class="mono" style="color:var(--muted)">${st.path==='team'?'At risk next year, so far':'Paid time lost a year, so far'}</span><span class="amt">${eur(live.risk)}</span><span class="heard">${heardLine()}</span><span class="mono" style="color:var(--muted)">${findings()} findings in your report so far</span></div>
     <div class="qnav"><button class="btn line" id="back">Back</button>${needNext?`<button class="btn" id="next">${st.i===qs.length-1?'See my report':'Next'}</button>`:''}</div>
    </div>
   </div></section>`;
@@ -450,12 +459,15 @@ function report(){
  const PAINFIX=r.team?['Lead routing with a reply time on every lead','Signals and sequences that live in the system, not in one person','A dashboard and a forecast built from stages with exit criteria','Attribution in the CRM, so every deal shows where it came from','Health scores and win back flows','An engine that books meetings without the founder','CRM rules with owners, checked in ten minutes a week']
   :['An enrichment waterfall, so lists build themselves','A tiered list and alerts that rank who to call','Messages built on one researched problem','A sequence that starts from the reply','A weekly scorecard','The Engineer track, from Operator to Architect'];
  const painIdx=r.team?(st.a.pains||[]):(st.a.mypains||[]);
+ const gq=(r.team?TEAM:ME).find(q=>q.id==='goal'),fq=(r.team?TEAM:ME).find(q=>q.id==='fear');
+ const mirror=[st.a.goal?'You want '+mir('goal',st.a.goal.j):'',st.a.fear?'you worry about '+mir('fear',st.a.fear.j):''].filter(Boolean).join(', ');
+ const worth=st.a.worth?st.a.worth.v:0;
  const p=r.pack,bandImg=r.team?'img/city.jpg':'img/career.jpg';
  const sub=r.team?`Run the way it runs today, your sales engine puts about ${eur(r.risk)} at risk over the next 12 months. A working system could unlock about ${eur(r.opp)} in time, deals and saved leads.`:`Admin costs you about ${eur(m.timeCost)} of paid time a year. Hand ${st.recover}% of it to a system and you could add about ${eur(m.oppRev)} of pipeline.${st.a.quota&&st.a.quota.v>=2?' You told us you’re behind target, so this year every hour counts.':''}`;
  app.innerHTML=`<div class="rep fade">
  <div class="bar0"><div class="wordmark">${STAR} ASTRA AGENCY</div><span class="mono">Your GTM Engine Check</span></div>
  <div class="wrap"><section class="diag">
-  <div><h1>${head}</h1><p class="sub">${sub}</p></div>
+  <div><p class="mono" style="color:var(--muted);margin-bottom:18px">${['Running on hustle','Running on heroes','Running on a system','Running like a machine'][r.level]}${mirror?' \u00b7 '+mirror:''}</p><h1>${head}</h1><p class="sub">${sub}</p></div>
   <div class="level"><span class="mono" style="color:var(--muted)">${r.team?'Company':'Individual'} GTM maturity</span><div class="scoreRow"><span class="n">${r.score}</span><span class="mono">of 100 · ${r.LV[r.level]}</span></div>
    <div class="ladder">${r.LV.map((n,i)=>`<div class="${i===r.level?'on':''}"><b>${n}</b><span class="mono">${['0 to 29','30 to 54','55 to 79','80 to 100'][i]}</span></div>`).join('')}</div></div>
  </section></div>
@@ -489,6 +501,7 @@ function report(){
   <div class="steps">${p.steps.map(s=>`<div class="step"><span class="mono">${s.n}${s.fmt?' · '+s.fmt:''}</span><b>${s.t}</b><span class="price">${s.p===0?'Free':(s.approx?'About ':s.from?'From ':'')+eur(s.p)+(s.mo?' a month':'')}</span><p>${s.d}</p></div>`).join('')}</div>
   <div class="total"><span class="mono" style="color:#aab4cc">Total to start</span><span class="huge">${eur(p.once)}${p.mo?`<span style="font-size:.45em"> then ${eur(p.mo)} a month</span>`:''}</span></div>
   ${p.alt?`<p class="alt">${p.alt}</p>`:''}
+  ${anchor(p,r,worth)}
   <div class="raka"><img src="img/raka.jpg" alt="Raka Mulya"><div class="who"><b>Raka Mulya, Astra Agency</b><span>Seven years in revenue, GTM and data. Builds the engines and teaches them. Book a free Health Check and paste your results in the message.</span><span class="contact">raka@astraagency.nl · linkedin.com/in/raka-mulya-b92885196</span></div></div>
   <div class="ctas"><button class="btn light" id="copy">Copy my results</button><button class="btn lineLight" id="mail">Copy Raka’s email</button><button class="btn lineLight" id="redo">Change my answers</button><button class="btn lineLight" id="other">Run the ${r.team?'personal':'team'} check</button></div>
  </div></section>
@@ -501,6 +514,7 @@ function report(){
  document.getElementById('mail').onclick=()=>copy('raka@astraagency.nl','Email copied.');
  scrollTo(0,0);
 }
+function anchor(p,r,worth){const bits=[];if(r.risk>0)bits.push(`That\u2019s ${Math.max(1,Math.round(p.once/r.risk*100))}% of the ${eur(r.risk)} at risk you just measured`);if(worth)bits.push(p.once<=worth?`and less than the ${eur(worth)} you said one fix is worth`:`and you said one fix is worth ${eur(worth)}`);return bits.length?`<p class="why" style="color:var(--sand)">${bits.join(' ')}.</p>`:''}
 function summary(r){const p=r.pack;return [`GTM Engine Check, ${r.team?'my team':'me'}`,`Maturity ${r.LV[r.level]}, ${r.score} of 100`,`Money at risk next 12 months ${eur(r.risk)}`,`Opportunity ${eur(r.opp)}`,`Weakest parts ${r.weak.map(k=>LABEL[k]).join(', ')}`,`Recommended ${p.steps.map(s=>s.t).join(', then ')}`,`Total to start ${eur(p.once)}${p.mo?` then ${eur(p.mo)} a month`:''}`].join('\n')}
 function copy(t,msg){const ok=()=>toast(msg);if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,()=>fb(t,msg));else fb(t,msg)}
 function fb(t,msg){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast(msg)}catch(e){toast('Select the text and copy it yourself.')}ta.remove()}
