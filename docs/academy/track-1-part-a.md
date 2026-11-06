@@ -164,7 +164,7 @@ ground.
 
 ---
 
-## Module 0. What a GTM engineer actually does
+### Module 0. What a GTM engineer actually does
 
 **Goal.** Understand the job you're training for, set up every account and folder you'll need, and choose the market your
 capstone will run on.
@@ -454,7 +454,7 @@ and on LinkedIn, decision makers have public profiles."
 
 ---
 
-## Module 1. ICP and the revenue model
+### Module 1. ICP and the revenue model
 
 **Goal.** Define who your best customers are, why they pay, and who you should leave alone, written as a tiered ICP
 sheet.
@@ -569,8 +569,8 @@ Raka shows the numbers.
    already being installed, one on price. Losses are ICP data too.
 4. The Astra lesson. Astra sent 330 researched cold first messages between 14 July and 25 October 2026. 26 people said
    yes, 7.9%. Many of the early yeses were consumer businesses (shops and brands selling to the public). They said yes and
-   then couldn't pay. B2B companies (businesses that sell to other businesses) with a budget converted.
-5. Raka shows what changed. In October Astra changed who it targeted and how messages opened. Of 119 first pitches, 30%
+   then couldn't pay. B2B companies (businesses that sell to other businesses) with a budget were the ones worth meeting.
+5. Raka shows the October numbers. Of 119 first pitches, 30%
    replied and 15% said yes, against 4% saying yes in September. By 25 October that engine had booked 7 meetings. He's
    clear that no paid project has closed yet, so these are reply and meeting numbers, not revenue.
 6. The lesson in one line. Someone saying yes is not the same as someone who can pay. Your ICP filters for both.
@@ -707,7 +707,7 @@ tier 1. It fails because nothing is testable, the formulas don't exist, and the 
 
 ---
 
-## Module 2. Data foundations
+### Module 2. Data foundations
 
 **Goal.** Know where B2B data comes from, how to judge whether it's any good, and what GDPR asks of you before you
 collect a single contact.
@@ -939,7 +939,7 @@ dates checked. It fails because sources are vague, nothing was checked, and it s
 
 ---
 
-## Module 3. Lists and lookalikes
+### Module 3. Lists and lookalikes
 
 **Goal.** Build a list of 200 accounts that match your ICP in two different ways, and compare them honestly.
 **Time.** 46 minutes of video, about 2 hours for the assignment.
@@ -1205,7 +1205,7 @@ It fails because there's only one method, nothing was checked, and the conclusio
 
 ---
 
-## Module 4. Enrichment and waterfalls
+### Module 4. Enrichment and waterfalls
 
 **Goal.** Fill the gaps in your list by trying data sources in a smart order, verify what you find, and know exactly
 what each found email costs.
@@ -1451,7 +1451,7 @@ fails because nothing is measured, unverified emails would cause bounces, and th
 
 ---
 
-## Module 5. Scoring and signals
+### Module 5. Scoring and signals
 
 **Goal.** Rank your accounts by how well they fit and how ready they are now, using a points model and live signals that
 keep arriving by themselves.
@@ -1708,7 +1708,7 @@ model can't update, ignores timing, and nobody knows whether it ranks winners hi
 
 ---
 
-## Module 6. AI research and writing
+### Module 6. AI research and writing
 
 **Goal.** Use Claude to research accounts with every claim tied to a source, and check the output so nothing false
 reaches a prospect.
@@ -1975,7 +1975,7 @@ could benefit from optimisation". It fails because nothing is sourced or checked
 
 ---
 
-## Module 7. The message
+### Module 7. The message
 
 **Goal.** Write a short sequence built around one problem, true in every line, with follow ups that add something and an
 A/B test plan you can trust.
@@ -2100,7 +2100,7 @@ handful of replies.
 6. Three ways to fool yourself on screen. Stopping as soon as one looks ahead. Changing the list while the test runs.
    Counting all replies, including "no thanks" and "unsubscribe", as success.
 7. The honest Astra example. Astra's yes rate went from 4% in September to 15% in October. Raka points out that in October
-   they changed two things at once, who they targeted and how messages opened. So they know the October engine works
+   several things changed over those weeks, from the lists to the openers to the research. So they know October went
    better, and they can't say which change did it. That's fine to say out loud.
 8. The plan template on screen. Hypothesis, variable, version A, version B, groups, size, measure, decision date,
    decision rule.
@@ -2124,8 +2124,8 @@ through what changed the results, using only the numbers Astra actually measured
    15% said yes, against 4% saying yes in September. 7 meetings booked by 25 October. No paid project has closed yet, so
    Raka says plainly these are reply and meeting numbers.
 2. Lesson 1. Who you target beats how clever the message is. Consumer businesses said yes and couldn't pay. B2B companies
-   with budget converted.
-3. Lesson 2. How the message opens. The October messages opened on a specific, checked observation and one problem.
+   with a budget were the ones worth meeting.
+3. Lesson 2. How the message opens. The messages that got yeses opened on a specific, checked observation and one problem.
 4. Lesson 3. The research gate and the falsification pass. Messages only went out when every claim had passed, and the
    pass caught wrong claims before they were sent.
 5. Lesson 4. Per thread checks before every send. Before any message, the whole conversation with that person was opened
@@ -2173,11 +2173,11 @@ A. Opens B. All replies C. Positive reply rate D. Words per message
 **Answer.** C. **Why.** "No thanks" isn't success, interest is. **Rewatch.** 7.4
 
 **Q8.** True or false. Astra can say exactly which single change raised its October yes rate.
-**Answer.** False. **Why.** Two things changed at once, so they can't separate them. **Rewatch.** 7.4
+**Answer.** False. **Why.** Several things changed at once, so they can't separate them. **Rewatch.** 7.4
 
 **Q9.** What did Astra learn about consumer businesses?
 A. They never reply B. They said yes and couldn't pay C. They're the best fit D. They want long messages
-**Answer.** B. **Why.** B2B with budget converted, consumer businesses didn't pay. **Rewatch.** 7.5
+**Answer.** B. **Why.** B2B with a budget were worth meeting, consumer businesses couldn't pay. **Rewatch.** 7.5
 
 **Q10.** Which is on Astra's weekly scorecard?
 A. Website visitors B. First messages sent within 2 days of accepting C. Social media followers D. Email opens
@@ -2246,3 +2246,203 @@ test that will tell you nothing.
 
 ---
 
+## Track 1 practical test (midpoint, after Module 7)
+
+**What it is.** A timed, hands on test of everything in Modules 1 to 7. You get 20 practice pack accounts with gaps, and
+in 60 minutes you tier them, fill gaps with a small waterfall, score them, research the top 3 and write an opener for the
+best one. It works like a real take home interview task, on purpose.
+
+**When.** After you've passed Quiz 7 and handed in Assignment 7. Self learn, in week 6. 1:1, briefed in S6 and taken
+alone at least 48 hours before S7, then gone through in S7.
+
+**Pass.** At least 70% of the rubric points (9 of 12) and no 0 on a criterion marked **must**. If you don't pass, read
+the feedback, wait at least 48 hours, and take the second version of the test (same shape, different accounts). Self
+learn learners can retake as often as they like. 1:1 learners get two reviewed retakes.
+
+### Before you start
+
+1. Open the course platform, Track 1, "Practical test". Click **Make a copy** on the "Practical test pack" sheet. It
+   lands in your Drive. Move it to your "Practical test" folder.
+2. Don't open the copy's tabs yet beyond the "Start here" tab. Read the brief below in full first. Reading time doesn't
+   count.
+3. Have Claude open in another tab. Have your own ICP sheet, scoring model and sequence template open for reference. Notes
+   and earlier assignments are allowed. Help from another person isn't.
+4. You don't need Clay credits. The waterfall runs in Sheets on the provider tabs we give you. If you prefer to rebuild
+   the logic in Clay, you can, but it doesn't earn extra points.
+5. When you're ready, write the start time in cell B2 of "Start here". Write the end time in B3 when you stop. You have 60
+   minutes. Work handed in after 70 minutes scores 0 on the "time and handover" criterion.
+
+### The pack (what's in your copy)
+
+| Tab | What's in it |
+|---|---|
+| Start here | The brief, start and end time cells |
+| Accounts | 20 Routeful practice accounts (made up, domains end in `.example`), with gaps marked `?` |
+| Provider A, Provider B, Provider C | Three made up data providers. Each has lookup results for some accounts (staff, trucks, planning tool, head of planning's work email and its verification result). Each lookup costs test credits. A costs 1, B costs 2, C costs 4 |
+| Research snippets | For each account, 2 to 4 dated text snippets with a source label (website, careers page, LinkedIn post, news). Treat these as the pages you'd open |
+| ICP and points | Routeful's ICP, disqualifiers and points table for this test (below) |
+| Answers | Empty tabs for your work, already laid out |
+
+**Treat today as 1 December 2026** for every "last 30 days" or "last 12 months" rule.
+
+### The 20 accounts (as given, gaps marked ?)
+
+| ID | Company | Domain | Country | Staff | Trucks | Planning tool | Status |
+|---|---|---|---|---|---|---|---|
+| RF-101 | Lingedal Transport | lingedal-transport.example | NL | 140 | 42 | Excel | Prospect |
+| RF-102 | Brabo Vracht | brabo-vracht.example | BE | 65 | ? | ? | Prospect |
+| RF-103 | Polderline Logistics | polderline.example | NL | 18 | 9 | Excel | Prospect |
+| RF-104 | Rheinkiesel Spedition | rheinkiesel.example | DE | 230 | 70 | Old TMS | Prospect |
+| RF-105 | Duinroute Transport | duinroute.example | NL | ? | 30 | Excel | Prospect |
+| RF-106 | Maasbocht Haulage | maasbocht.example | NL | 95 | 28 | ? | Customer |
+| RF-107 | Schelde Freight Brokers | scheldebrokers.example | BE | 40 | 0 | None | Prospect |
+| RF-108 | Veluwe Koeltransport | veluwe-koel.example | NL | 310 | ? | Excel | Prospect |
+| RF-109 | Lingedal Transport B.V. | www.lingedal-transport.example/ | Netherlands | 140 | ? | ? | Prospect |
+| RF-110 | Eifel Logistik | eifel-logistik.example | DE | 55 | 17 | ? | Prospect |
+| RF-111 | Kempen Cargo | kempen-cargo.example | BE | 120 | 35 | Old TMS | Prospect |
+| RF-112 | Lauwers Transport | lauwers.example | NL | 28 | 15 | Excel | Prospect |
+| RF-113 | Westhoek Distributie | westhoek.example | BE | ? | ? | ? | Prospect |
+| RF-114 | Sauerland Fracht | sauerland-fracht.example | DE | 480 | 120 | Modern planning platform | Prospect |
+| RF-115 | IJssel Express | ijssel-express.example | NL | 75 | 22 | Excel | Prospect |
+| RF-116 | Hageland Trucking | hageland.example | BE | 610 | 150 | Old TMS | Prospect |
+| RF-117 | Twente Bulk | twente-bulk.example | NL | 160 | 48 | Excel | Prospect |
+| RF-118 | Mosel Kühllogistik | mosel-kuehl.example | DE | 85 | 26 | Excel | Prospect |
+| RF-119 | Zeeland Tank | zeeland-tank.example | NL | 210 | 55 | Old TMS | Prospect |
+| RF-120 | Liège Transports Rapides | liege-rapides.example | FR | 90 | 30 | Excel | Prospect |
+
+### ICP, disqualifiers and points for this test
+
+**ICP.** Transport and logistics companies in NL, BE or DE, 20 to 500 staff, own fleet of 15 or more trucks, planning in
+Excel or an old TMS.
+
+**Disqualifiers.** Staff under 20 or over 500. No own fleet (fewer than 15 trucks, or a broker). Already a customer.
+Installed a new TMS or planning platform in the last 12 months. Outside NL, BE and DE. Duplicate of another row (keep
+one).
+
+**Tiers.** Tier 1 means 50 to 500 staff and 25+ trucks and Excel or old TMS. Tier 2 means it passes the ICP and one of
+those three is missing or unknown. Tier 3 means it passes the ICP on firmographics only.
+
+**Points.**
+
+| Item | Type | Points |
+|---|---|---|
+| Staff 50 to 500 | Fit | 20 |
+| Staff 20 to 49 | Fit | 10 |
+| Trucks 25+ | Fit | 20 |
+| Trucks 15 to 24 | Fit | 10 |
+| Plans in Excel | Fit | 25 |
+| Plans in an old TMS | Fit | 15 |
+| Planner job post in the last 30 days | Intent | 20 |
+| New operations director in the last 90 days | Intent | 15 |
+| New depot or site announced in the last 90 days | Intent | 15 |
+| Disqualified | | Total is 0 |
+
+### The brief (what you do, in order)
+
+Suggested timing is in brackets. You can move time between tasks.
+
+**Task 1. Clean and tier (10 min).**
+1. On "Answers 1 Tiers", add a "Disqualified" column and a "Reason" column. Mark every disqualified account with the
+   rule it breaks.
+2. Find duplicates by domain. Clean the domain first (remove `www.`, `https://` and a trailing `/`). Keep the more
+   complete row.
+3. Add a "Tier" column with 1, 2, 3 or DQ, using the tier rules. You may type tiers, but a formula is better and you'll
+   need it in Task 3.
+
+**Task 2. A small waterfall (15 min).**
+1. On "Answers 2 Waterfall", for every account that isn't disqualified and has a gap (staff, trucks or planning tool) or
+   needs the head of planning's email, look the gap up in Provider A first, then B only if A is empty, then C only if B
+   is empty.
+2. Build it with formulas, for example `=IF(A2<>"", A2, IF(B2<>"", B2, IF(C2<>"", C2, "Not found")))`, where A2, B2 and
+   C2 are the lookups from each provider tab (use `=XLOOKUP()` on the account ID).
+3. Add a "Found by" column and a "Credits used" column. A lookup counts only if that provider was actually needed (A
+   always costs 1 for a looked up row, B costs 2 only if A was empty, C costs 4 only if A and B were empty).
+4. For emails, copy the verification result. Mark "Send OK" only for valid. Catch all and invalid are not OK.
+5. At the top, write total credits used, cost per row looked up, and cost per valid email.
+6. Update the tiers on "Answers 1 Tiers" with what you found.
+
+**Task 3. Score (10 min).**
+1. On "Answers 3 Score", build Fit, Intent and Total with formulas using the points table.
+2. Intent comes from the "Research snippets" tab. Only count a signal if its date falls in the window and it's about
+   this company. Log each signal you count in the "Signals used" column with the snippet ID.
+3. Sort by Total, highest first. Write your top 3.
+
+**Task 4. Research the top 3 (15 min).**
+1. On "Answers 4 Research", for each of your top 3, list the claims you'd use, with the snippet ID and the exact quote.
+2. Run a falsification pass on each claim. Look through all snippets for that account for anything that contradicts it.
+   Write what you looked for and the result (passed, failed, unknown).
+3. If a claim fails in a way that changes the tier or disqualifies the account, go back and fix Tasks 1 and 3. Then
+   your top 3 may change. Write a note saying what changed and why.
+4. Write a one line "best angle" for each of the final top 3, using passed claims only.
+
+**Task 5. One opener (10 min).**
+1. On "Answers 5 Opener", pick the best account and its persona (operations director, head of planning, or managing
+   director). Say why in one sentence.
+2. Choose the channel. If the account is in Germany, the course rule applies (email is risky without consent, so LinkedIn
+   first). Write the channel.
+3. Write the opener in the six parts, under 100 words. Under each part, write the snippet ID it comes from. For part 5
+   (proof), use the Routeful proof line given on the "ICP and points" tab, or leave it out. Don't invent one.
+4. Run the one thread test and write "one thread, yes" or fix it.
+
+**Before you stop.** Write the end time in B3. Click **Share**, **Anyone with the link**, **Viewer**, **Copy link**.
+
+### Hand in
+
+1. The view link to your completed copy of "Practical test pack", with start and end time filled.
+2. Nothing else. Don't tidy after the end time. The version history shows when cells were edited, and markers check it.
+
+### Marking rubric
+
+| Criterion | 0 | 1 | 2 | Must? |
+|---|---|---|---|---|
+| 1. Clean and tier | Fewer than 4 of the 6 Task 1 disqualified rows caught, or tiers missing | 4 or 5 caught, or tiers with errors | All 6 caught with the right reason (including the duplicate), tiers correct for the data | Must |
+| 2. Waterfall logic and cost | No order, or every provider called for every row | Right order, but credits or cost per valid email wrong | A then B then C with formulas, credits counted only when needed, cost per row and per valid email correct, only valid emails marked Send OK | Must |
+| 3. Scoring applied | No score or typed totals | Formulas with errors, or signals counted outside their window | Formulas match the points table, DQ at 0, only in window signals about the right company counted, signals logged by snippet ID | |
+| 4. Research with sources and a falsification pass | Claims without quotes or snippet IDs | Quotes given, falsification missing or not written down | Every claim quoted with snippet ID, falsification written for each, the contradicted claim caught and the account moved, top 3 updated with a note | Must |
+| 5. The opener | Generic, invented facts, or several problems | Six parts but drifts, or over 100 words, or a weak claim | Six parts, one problem, under 100 words, every part traced to a passed snippet, honest proof or none, right channel for the country | Must |
+| 6. Time and handover | Handed in after 70 minutes, or tabs missing | Within 70 minutes but over 60, or some tabs incomplete | Within 60 minutes, all five answer tabs filled, link shared correctly | |
+
+### Marker's key (hidden from learners until they submit)
+
+The test pack has these planted on purpose. The marker checks each one.
+
+| Planted item | Where | What a passing learner does |
+|---|---|---|
+| Too small | RF-103, 18 staff, 9 trucks | DQ, under 20 staff and under 15 trucks |
+| Existing customer | RF-106, status Customer | DQ, already a customer |
+| Broker with no fleet | RF-107, 0 trucks | DQ, no own fleet |
+| Duplicate | RF-109 is RF-101 with a messy domain and "Netherlands" spelled out | DQ RF-109 as a duplicate after cleaning the domain, keep RF-101 |
+| Too big | RF-116, 610 staff | DQ, over 500 |
+| Outside the countries | RF-120, FR | DQ, outside NL, BE and DE |
+| Modern tool | RF-114, modern planning platform | Not tier 1. DQ only if a snippet shows it was installed in the last 12 months (snippet says 2022, so tier 3, low score) |
+| Contradiction | RF-108. Careers page snippet (dated 14 Nov) asks for "Excel planning experience". LinkedIn snippet (dated 6 Nov) says "proud to go live with our new TMS this month" | The Excel claim fails the falsification pass. RF-108 is DQ under the new TMS rule and drops out of the top 3 |
+| Wrong company | RF-117. News snippet about "Twente Bulkhandel", a grain trader, "opening a new site" | Not counted. Logged as wrong company. No new site points for RF-117 |
+| Out of window signal | RF-111. Planner job post dated 2 September | Not counted, outside 30 days |
+| Email results | Provider tabs include catch all and invalid results for some contacts | Only valid marked Send OK |
+| German account in the top 3 | RF-104 and RF-118 can score high | If chosen for the opener, channel is LinkedIn first, not email |
+
+**Expected outcome.** Six rows disqualified at Task 1 (RF-103, 106, 107, 109, 116, 120), and a seventh (RF-108) once the
+falsification in Task 4 sends the learner back. RF-108 is marked under criterion 4. A strong top 3 usually includes RF-101 (planner job post on 20 Nov, new
+depot announced 12 Oct, Excel). Accept any top 3 that follows correctly from the learner's own applied formulas, as long
+as RF-108 is out and the RF-117 news signal isn't counted.
+
+**Good submission, in short.** Tiers tab with seven DQ rows and reasons. Waterfall tab with nested `IF` formulas, a
+"Found by" column, credits counted only where needed, and two catch all emails marked not OK. Score tab sorted with
+signals logged by snippet ID. Research tab showing the RF-108 contradiction caught and a note "RF-108 moved to DQ, new TMS
+6 Nov, top 3 now RF-101, RF-104, RF-119". Opener to the head of planning at Lingedal Transport, 88 words, six parts on
+Monday replanning with two planner vacancies and a new depot, each part tagged with a snippet ID. Start 10:02, end 10:58.
+
+**Failing submission, in short.** All 20 accounts tiered, no DQ column. Every provider looked up for every row. RF-108
+ranked first because of its Excel job post. Opener says "I saw you're growing fast and probably struggling with
+planning". Fails criteria 1, 2, 4 and 5, all musts.
+
+### Stuck during the test?
+
+1. *"My XLOOKUP returns #N/A."* The account isn't on that provider tab, which means that provider found nothing. Wrap it
+   in `=IFERROR(XLOOKUP(...), "")` so the waterfall moves on to the next provider.
+2. *"I'm running out of time."* Do Task 5 before you polish Task 3. A typed score with a note beats no opener. Criterion 5
+   is a must, criterion 3 isn't.
+3. *"Two snippets disagree."* That's the point. The newer, more direct source usually wins (a company announcing its own
+   new tool beats a job post that might be old copy). Write down which one you trusted and why.
+
+---

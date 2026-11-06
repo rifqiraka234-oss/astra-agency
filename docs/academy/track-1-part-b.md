@@ -1778,3 +1778,123 @@ Start lesson 8.1 at least 14 days before you want to send anything. Warm up take
 **Answer key at a glance.** 1 A, 2 B, 3 D, 4 C, 5 B, 6 B, 7 D, 8 C, 9 A, 10 C, 11 A, 12 D, 13 D, 14 A, 15 B, 16 B, 17 B, 18 D, 19 C, 20 A, 21 C, 22 C, 23 D, 24 D, 25 B, 26 C, 27 B, 28 D, 29 A, 30 A.
 
 **Note for building the pool.** Shuffle the option order again for the second variant of each question, so the right answer moves between A and D.
+
+---
+
+## Track 1 capstone. Build the whole engine on your market
+
+**Goal.** Build, run and write up a complete GTM engine on a market you choose, end to end, so you can show an employer or client one working system with real numbers.
+**Time.** 15 to 20 hours over 3 to 4 weeks (1 build week, 2 live weeks, 1 write up week), following your Module 13 plan.
+**When.** After your Module 13 capstone plan is passed. The final exam can be taken before or during the capstone.
+**You need.** Everything from Modules 0 to 13, a warmed sending domain (Module 8), the tools from Module 0 on free plans or trials (check each tool's pricing page for what's included, and plan around trial end dates), the capstone plan and evidence log.
+
+### The brief
+
+Build the whole engine on your own market (or, if you truly have none, on the Routeful practice market with your own fresh research, and say so in the case study). It must contain all eleven parts below, and run live for two weeks.
+
+| # | Part | What it must have | Built in |
+|---|---|---|---|
+| 1 | **ICP** | Tiers, disqualifiers, personas, and the reasoning for each, including ability to pay | Module 1 |
+| 2 | **Account list** | At least 100 accounts that pass the ICP, with source noted per row, and the legal basis note | Modules 2 and 3 |
+| 3 | **Waterfall** | At least two providers in order, verification, find rate and cost per found email | Module 4 |
+| 4 | **Scoring** | Fit and intent scored separately, weights written down, top tier listed | Module 5 |
+| 5 | **Signals** | At least three live signal sources feeding the intent score | Module 5 |
+| 6 | **Research prompt** | A prompt that cites sources, plus a checking step, with at least 10 checked examples and any claims you threw out | Module 6 |
+| 7 | **Sequence** | At least 3 steps, email and LinkedIn, one problem per message, live for 2 weeks on a warmed domain, safe caps, country rules applied | Modules 7 and 8 |
+| 8 | **CRM** | Field map, pipeline with exit criteria, dedup rule applied, routing rule with fallback | Module 10 |
+| 9 | **Automation** | At least one n8n flow connecting three tools, with error handling and a log | Module 9 |
+| 10 | **Dashboard** | Looker Studio dashboard plus the weekly scorecard for both live weeks | Module 12 |
+| 11 | **Case study** | 1 to 2 pages, with numbers, counts and sources, including what failed | Module 13 |
+
+**Rules for the run.**
+- Send from the warmed sending domain only, never your main domain, starting with a safe first send of 20 to 30 people (Module 8).
+- Keep send caps and LinkedIn limits as written in your plan. Check LinkedIn's terms and each country's rules. This is not legal advice.
+- Read every thread in full before every manual reply. Honour opt outs the same day.
+- Change one thing at a time, on a set day, and log it.
+- Stop and fix when a kill criterion fires, and write it up.
+- Never put real prospects' names or emails in anything you hand in. Blur or anonymise.
+
+### Hand in
+
+Put everything in your capstone Drive folder and share it with view access. The folder must contain, with these exact names:
+
+1. `01 Case study` (Google Doc, 1 to 2 pages, with a three sentence summary at the top)
+2. `02 ICP` (sheet, tiers, disqualifiers, personas, reasoning)
+3. `03 Account list` (sheet, 100 or more accounts, source column, tier, fit and intent scores, anonymised if shared publicly)
+4. `04 Waterfall` (screenshot of the Clay table setup plus a short note with find rate and cost per found email)
+5. `05 Scoring and signals` (sheet or doc with weights, the three signal sources and how each feeds the score)
+6. `06 Research prompt` (the prompt text, 10 checked examples, a list of claims you threw out and why)
+7. `07 Sequence` (every message version, lemlist sequence and settings screenshots, DNS check screenshots, send log by day)
+8. `08 CRM` (field map sheet with stages, exit criteria and dedup tab, HubSpot screenshots, routing table)
+9. `09 Automation` (n8n JSON export, canvas screenshot, executions screenshot, log sheet link, one page note)
+10. `10 Dashboard` (Looker Studio link with Viewer access, PDF export, the scorecard sheet with both weeks)
+11. `11 Evidence log` (the dated log from Module 13)
+12. `12 Presentation` (the slides or doc you'll present, 15 minutes)
+
+### Marking rubric
+
+Scored 0, 1 or 2 per criterion, as in every assignment. **Pass.** At least 70% of the points (14 of 20) and no 0 on a criterion marked **must**. A fail can be resubmitted once for 1:1 learners and those who bought the capstone review, after fixing what scored low.
+
+| # | Criterion | 0 | 1 | 2 | Must? |
+|---|---|---|---|---|---|
+| 1 | ICP and list quality | No ICP, or list under 100 or mostly off ICP | ICP present, reasoning thin or some list rows off ICP | Tiers, disqualifiers and reasoning, 100 or more accounts that fit, source per row | Must |
+| 2 | Data and enrichment | No waterfall or no verification | Waterfall or verification missing a piece, no cost figure | Two or more providers in order, verification, find rate and cost per found email | |
+| 3 | Scoring and signals | No scoring | Single blended score, or fewer than three signals | Fit and intent separate, weights written, three live signals feeding intent | |
+| 4 | Research checked before use | No checking | Checking described but no examples of thrown out claims | Prompt cites sources, 10 checked examples, thrown out claims listed with reasons | Must |
+| 5 | Sequence quality and honesty | Generic, multi problem or misleading messages | One problem per message but weak on cost, timing or proof | Clear structure, one problem start to finish, low effort question, no fake personalisation | |
+| 6 | Safe, legal sending for 2 weeks | Main domain, no warm up, or no country rules | Ran but with gaps (short warm up, caps not kept, opt outs late) | Warmed domain with SPF, DKIM and DMARC passing, safe first send, caps kept, country rules, opt outs same day, 2 full weeks | Must |
+| 7 | CRM architecture | No CRM structure | Some of field map, exit criteria, dedup, routing | All four, routing with fallback, dedup traceable | |
+| 8 | Automation works | None, or doesn't run | Runs but no error handling or log | Three tools, triggered, error handling proven, log on every branch | |
+| 9 | Measurement and honest numbers | No dashboard or numbers don't add up | Dashboard and scorecard but traps ignored | Dashboard, both weeks of scorecard, counts next to rates, numbers add up to source | Must |
+| 10 | Case study and what failed | Missing, or only successes | Numbers present, failures vague | Question, build, run, full funnel with counts, at least three failures in the three part format, what's next | Must |
+
+**Results don't decide the pass.** A capstone with few replies and an honest, well measured write up can score full marks. A capstone with great replies, a broken process and unsourced numbers can fail.
+
+### Good example, in short
+
+Marco targeted Dutch and Belgian cold storage firms with 30 to 150 staff. His ICP excludes firms without their own fleet and notes ability to pay. His list has 128 accounts from two sources. His waterfall found emails for 61% of contacts with a cost per found email noted. Three signals (hiring planners, new depot, new operations lead) fed intent. His research tab shows 10 checked accounts and 4 claims thrown out, one because the "new depot" was a competitor with a similar name. His sequence ran from a domain warmed for 17 days, first send 25 people, German leads on LinkedIn only. Over two weeks he reached 104 people, with 6 positive replies (5.8%) and 2 meetings held with decision makers. His failures section covers a 9% bounce rate on the first batch from one provider (he dropped it), a LinkedIn condition that sent two messages to one person (fixed and apologised), and Belgian replies that were mostly "not my job" (titles mapped wrongly). His dashboard numbers match the lemlist and HubSpot exports.
+
+### Bad example, in short
+
+Julia's case study says "great results, lots of interest" with a 40% reply rate that counts out of office replies, covers three days instead of two weeks, and was sent from her employer's main domain. The research has no checked examples. No failures are listed. It fails the musts on sending, research, measurement and the case study, even though her automation works well.
+
+### The 1:1 final session, presenting the capstone
+
+**Format.** 30 minutes on video with Raka, the last 1:1 session (self learn learners who bought the capstone review book the same session). The learner shares their screen.
+
+| Minutes | Part |
+|---|---|
+| 0 to 15 | The learner presents. Suggested order, the question and the market (1 minute), the engine part by part with live screens, not only slides (8 minutes), the numbers and the dashboard (3 minutes), what failed and what's next (3 minutes) |
+| 15 to 30 | Raka asks questions, marks the rubric live, and gives the result and feedback at the end |
+
+Within 24 hours the learner gets the written rubric with a comment per criterion, and, on a pass, the Certified certificate (README section 6).
+
+**Questions Raka will ask (a sample, he picks from these).**
+1. Why this market? What in your ICP would make you drop an account?
+2. Show me one account from your list and walk me from the raw row to the message that was sent.
+3. Which claim from your research did you throw out, and how did you find it was wrong?
+4. What's your find rate and cost per found email, and what would you change in the waterfall order?
+5. Show me your DNS checks. What would you do if tomorrow's spam test failed?
+6. How did you decide your send caps and LinkedIn limits? What did you do about Germany (or the strictest country in your market)?
+7. Open your n8n flow. Break it for me. What happens, and how would you know?
+8. What does your dedup rule say, and where can I see a merge you made?
+9. Your positive reply rate is X. How many people is that based on, and what would you need to see before calling it a result?
+10. If you had to change one thing next week, which one, and how would you measure it?
+11. What would you do differently if a company hired you to build this for a team of six?
+12. Which part would you not automate, and why?
+
+**How to prepare.** Rehearse with a timer. Open every tool in a browser tab before the session, logged in. Have one account ready to trace end to end. Expect to be asked to show a number's source live.
+
+---
+
+## What's next
+
+**Keep building.** Run your engine for another month and update the case study. A capstone with six weeks of numbers says more than one with two.
+
+**Track 2, Sell More with GTM Engineering.** If you'll sit close to sellers, this shows how one seller runs the engine day to day. Track 1 graduates can skip the overlapping lessons and go straight to calls, follow up and the personal scorecard.
+
+**Track 3, Lead a GTM Engineered Team.** If you're heading towards leading a team or working with sales managers, this covers the sales bible, operating model, coaching from calls and a 90 day rollout.
+
+**Astra Revenue Engine work.** Astra builds these engines for B2B companies. Strong Track 1 graduates may be asked to help on builds when there's a fit. It isn't promised, and it depends on the work available and on your capstone.
+
+**The community.** Join the graduates' group to share builds, ask questions, swap take home tasks for practice and hear about roles. Post your capstone there first, others will tell you what's unclear before an employer does.

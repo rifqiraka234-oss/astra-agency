@@ -185,8 +185,7 @@ and less time searching, typing and guessing.
 3. The systems answer, drawn next to it. The same SDR gets a ready list of good fit companies every Monday, a research
    summary per account, a message template that's been tested, and a CRM that fills in half the fields by itself.
 4. Astra's own example. Raka's engine sent 330 researched first messages between 14 July and 25 October 2026, and 26
-   people said yes (7.9%). In October 30% replied and 15% said yes, against 4% in September. The tools stayed the same.
-   What changed was the research, the message and who got it.
+   people said yes (7.9%). In October 30% replied and 15% said yes, against 4% in September.
 5. The lesson that came with it. Consumer businesses said yes most often and then couldn't pay. The B2B companies with a
    budget were the ones worth a meeting. Deciding who to target is a management call more than a technical one.
 6. Screen demo. Open the practice pipeline in Google Sheets. Click Data, then Create a filter. Filter the Stage column to
@@ -301,12 +300,12 @@ and use the practice pack until it arrives.
 2. True or false. If one SDR books 10 meetings a month, hiring two more always gives you 30.
    **Answer.** False. **Why.** Without shared lists, tested messages and clean data, each new hire repeats the same manual
    work and results vary. **Rewatch.** 0.1
-3. In Astra's own engine, what changed between September and October to lift the yes rate from 4% to 15%?
-   A. More people were hired
-   B. Who was targeted and how messages opened
-   C. A new CRM
-   D. More messages per day
-   **Answer.** B. **Why.** Same sender. The targeting and the opener changed. **Rewatch.** 0.1
+3. In Astra's own outreach, which leads said yes most often and then couldn't pay?
+   A. B2B software firms
+   B. Consumer businesses
+   C. Engineering firms
+   D. Logistics companies
+   **Answer.** B. **Why.** Who you target is a management decision, and a yes from someone who can't buy is worth little. **Rewatch.** 0.1
 4. Which of these is the best request to a GTM engineer?
    A. "Make the CRM better"
    B. "Fix our data"
@@ -940,7 +939,7 @@ with the ones you lost.
 **What's shown.**
 1. **ICP**, **persona** (the type of person you talk to inside those companies) and **firmographics** (facts about a
    company like size, industry and location), each in one sentence.
-2. Astra's own lesson. Consumer businesses said yes to meetings and couldn't pay. B2B companies with budget converted.
+2. Astra's own lesson. Consumer businesses said yes to meetings and couldn't pay. B2B companies with a budget were the ones worth meeting.
    The ICP decided the result more than the message did.
 3. Screen demo. Open the Routeful pipeline in Sheets. Add columns for employees, fleet size, country and current planning
    tool (from the accounts sheet). Use Data, then Create a filter, and filter Stage to Won. Note the pattern. Then filter to
@@ -1086,7 +1085,7 @@ rows.
 2. What is a disqualifier?
    **Answer.** A fact that rules a company out of your ICP. **Why.** For Routeful, already using a modern TMS. **Rewatch.** 3.1
 3. True or false. Astra's own numbers showed consumer businesses said yes to meetings and then couldn't pay.
-   **Answer.** True. **Why.** B2B companies with budget converted, which reshaped the ICP. **Rewatch.** 3.1
+   **Answer.** True. **Why.** B2B companies with a budget were the ones worth meeting, which reshaped the ICP. **Rewatch.** 3.1
 4. Territories are fair when
    A. Every seller has the same number of accounts
    B. Every seller has a similar chance, for example a similar number of Tier 1 accounts
@@ -1855,8 +1854,8 @@ the eavesdrop loop, listening to what buyers say and feeding it back into the sy
 3. A message change, shown with the six part structure. Old line two, "Your planners lose hours in Excel." New line two,
    "Your drivers are getting routes that don't match the roads they actually drive." Same structure, different problem,
    because the buyers told you.
-4. Astra's example. The ICP changed after seeing who said yes and couldn't pay. The yes rate went from 4% in September to
-   15% in October. The data came from the conversations.
+4. Astra's example. The ICP changed after seeing who said yes and then couldn't pay. That evidence came straight out of
+   the conversations.
 5. Monthly rhythm. First Monday of the month, update the tag counts, pick one change, write it into the bible, tell the
    team in two lines.
 6. Track the change. Note the date, so in the next month's dashboard you can see whether that stage's conversion moved.

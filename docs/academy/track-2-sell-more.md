@@ -1237,10 +1237,11 @@ message. This lesson draws that line, and shows what Raka's own outreach learned
    inbox, from the first message. Have they replied? Did a colleague already talk to them? Did you promise anything? Raka's
    outreach runs this check before every send, because a cold opener on top of a reply can't be undone.
 5. Astra's lesson, with real numbers. Between 14 July and 25 October 2026, Raka's engine sent 330 researched first
-   messages and 26 people said yes, 7.9%. In October, after changing who was targeted and how messages opened, 119 first
-   messages got replies from 30% and yeses from 15%, against 4% in September. By 25 October that had led to 7 meetings.
-6. What changed. Who it went to (B2B companies with a budget, the person who decides), and the first lines (one researched
-   problem, checked before sending). Not more volume.
+   messages and 26 people said yes, 7.9%. In October, 119 first messages got replies from 30% and yeses from 15%, against
+   4% in September. By 25 October that had led to 7 meetings.
+6. What the yeses taught. Consumer businesses said yes most often and then couldn't pay. The yeses worth having came from
+   B2B companies with a budget, reached through one researched problem that was checked before sending. More volume
+   wouldn't have fixed that.
 7. What it doesn't show yet. No paid project had closed by then. Meetings come first, sales take longer. Be wary of anyone
    who promises you revenue from messages alone.
 8. Your numbers will differ. Your market, offer and channel aren't Raka's. Module 7 shows you how to measure your own.
@@ -1283,9 +1284,9 @@ message. This lesson draws that line, and shows what Raka's own outreach learned
    herself. C) Turn off all personalisation. D) Send 200 the same day.
    **Answer.** B. **Why.** Unchecked AI lines invent things. **Rewatch.** 4.4
 
-9. What changed Astra's yes rate in October?
-   A) Sending three times more messages. B) Who was targeted and how messages opened. C) A new tool. D) Longer messages.
-   **Answer.** B. **Why.** Targeting and first lines changed, not volume. **Rewatch.** 4.4
+9. In Astra's own outreach, which group said yes most often but couldn't pay?
+   A) B2B software firms. B) Consumer businesses like shops and cafes. C) Engineering firms. D) Logistics companies.
+   **Answer.** B. **Why.** A yes only counts if the person can buy. That's why the ICP comes first. **Rewatch.** 4.4
 
 10. Before sending a manual message, what do you check?
     A) Only their name. B) The whole thread with that person from the first message, and whether a colleague is talking
@@ -1673,7 +1674,7 @@ sheet with AI and checks it.
    ```
 
 4. Read the questions and rewrite them in your own voice. Delete any that assume a fact you haven't checked.
-5. The person who decides. Raka's lost proposals had one thing in common. The person who decides wasn't on the call. Ask
+5. The person who decides. In two of Raka's three lost proposals, the person who decides wasn't on the call. Ask
    before the call, in the confirmation. "Will anyone else be part of this decision? Happy to include them."
 6. What you'll show. One thing, linked to their problem. The video you offered, a sample plan, a short screen share.
 7. The next step you want, written as a date. "Demo with the operations director and head of planning, next week."
@@ -1755,7 +1756,7 @@ minutes.
 2. Why ask "Will anyone else be part of this decision?" before the call?
    A) To sound important. B) Because proposals stall when the person who decides wasn't on the call. C) To make the call
    longer. D) It's a legal requirement.
-   **Answer.** B. **Why.** Raka's lost proposals had that in common. **Rewatch.** 6.1
+   **Answer.** B. **Why.** Two of Raka's three lost proposals stalled that way. **Rewatch.** 6.1
 
 3. True or false. You can record a call without asking if it's only for your notes.
    **Answer.** False. **Why.** Ask first, follow your company's policy and country rules. **Rewatch.** 6.2
