@@ -1,0 +1,713 @@
+/* Pipelines, leads and deals (agent B). Tokens come from app/globals.css. */
+
+/* ---------------------------------------------------------------- board */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.totals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.total {
+  flex: 1 1 170px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.totalLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.totalValue {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.board {
+  overflow-x: auto;
+  padding-bottom: 8px;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.board:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: var(--radius-panel);
+}
+
+.columns {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  min-width: min-content;
+}
+
+.column {
+  flex: 0 0 252px;
+  background: #ecece7;
+  border-radius: var(--radius-panel);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  min-height: 120px;
+  border: 2px solid transparent;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+
+.columnOver {
+  border-color: var(--accent);
+  background: #e6e5df;
+}
+
+.columnHead {
+  padding: 4px 6px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.columnTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.columnTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.columnCount {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.columnMeta {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.more {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 2px 6px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid #deded7;
+  border-radius: var(--radius-control);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  touch-action: manipulation;
+  cursor: grab;
+  position: relative;
+}
+
+.card:hover {
+  border-color: #a9adb4;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.cardDragging {
+  opacity: 0.35;
+}
+
+.cardOverlay {
+  box-shadow: var(--shadow-menu);
+  cursor: grabbing;
+  transform: rotate(1.5deg);
+}
+
+.cardPending {
+  opacity: 0.6;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.cardTitle:hover {
+  color: var(--link);
+}
+
+.cardSub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.cardAmount {
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.cardAge {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.warn {
+  font-size: 12px;
+  color: var(--danger);
+  font-weight: 500;
+}
+
+.chipText {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.qualifyBtn {
+  min-height: 36px;
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--ink);
+  font-family: inherit;
+}
+
+.qualifyBtn:hover {
+  background: var(--surface-muted);
+}
+
+.closedRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.closedZone {
+  flex: 1 1 320px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+
+.closedZoneActive {
+  border-style: dashed;
+  border-color: var(--border-strong);
+}
+
+.closedZoneWonOver {
+  border: 2px solid var(--success);
+  background: var(--tone-green-bg);
+}
+
+.closedZoneLostOver {
+  border: 2px solid var(--danger);
+  background: var(--tone-red-bg);
+}
+
+.closedHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.closedTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.closedValue {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.closedDetail {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 60;
+  max-width: calc(100vw - 32px);
+  background: var(--ink);
+  color: #ffffff;
+  border-radius: var(--radius-control);
+  padding: 12px 16px;
+  font-size: 14px;
+  box-shadow: var(--shadow-menu);
+}
+
+.toastError {
+  background: var(--danger);
+}
+
+/* ---------------------------------------------------------------- stage path and gate */
+
+.pathWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+.path {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pathItem {
+  flex: 1 1 110px;
+}
+
+.step {
+  width: 100%;
+  min-height: 52px;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: var(--radius-control);
+  cursor: pointer;
+  background: var(--tone-grey-bg);
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  font-family: inherit;
+}
+
+.step:hover {
+  border-color: var(--border-strong);
+}
+
+.stepPassed {
+  background: #e4e7ec;
+  color: var(--ink);
+}
+
+.stepCurrent {
+  background: var(--ink);
+  color: #ffffff;
+  cursor: default;
+}
+
+.stepWon {
+  background: var(--success);
+  color: #ffffff;
+}
+
+.stepLost {
+  background: var(--danger);
+  color: #ffffff;
+}
+
+.stepTarget {
+  border: 2px solid var(--accent);
+}
+
+.stepName {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stepSub {
+  display: block;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.gate {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-panel);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface-muted);
+}
+
+.gateHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.gateTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.gateHint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.gateFields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gateFields > * {
+  flex: 1 1 220px;
+}
+
+.effects {
+  font-size: 13px;
+  color: var(--success);
+  background: var(--tone-green-bg);
+  border-radius: 9px;
+  padding: 10px 12px;
+  line-height: 1.5;
+}
+
+.effects ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+
+/* ---------------------------------------------------------------- record pages */
+
+.headerFacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  align-items: baseline;
+}
+
+.headerAmount {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  color: var(--ink);
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+}
+
+.panelHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--divider);
+  align-items: center;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.panelBody {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lines {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 640px;
+}
+
+.lines th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 10px 12px;
+  background: var(--surface-muted);
+  white-space: nowrap;
+}
+
+.lines td {
+  padding: 10px 12px;
+  border-top: 1px solid var(--divider-soft);
+  vertical-align: top;
+}
+
+.lines .num {
+  text-align: right;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.lines th.num {
+  font-family: var(--font-sans);
+}
+
+.sumRow td {
+  border-top: 1px solid var(--border);
+}
+
+.sumLabel {
+  text-align: right;
+  color: var(--text-muted);
+}
+
+.lineNote {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.lineForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+  padding: 14px 16px;
+  border-top: 1px solid var(--divider);
+  background: var(--surface-muted);
+}
+
+.lineForm > :global(.field) {
+  flex: 1 1 120px;
+}
+
+.lineFormWide {
+  flex: 3 1 220px !important;
+}
+
+.iconBtn {
+  min-height: 36px;
+  min-width: 36px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 13px;
+  padding: 0 10px;
+  font-family: inherit;
+}
+
+.iconBtn:hover {
+  color: var(--ink);
+  border-color: var(--text-faint);
+}
+
+.railCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-panel);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.railEntry {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.railName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.railSub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.dashedBtn {
+  min-height: 40px;
+  border: 1px dashed #a9adb4;
+  background: var(--surface);
+  border-radius: 9px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-family: inherit;
+}
+
+.dashedBtn:hover {
+  color: var(--ink);
+  border-color: var(--text-secondary);
+}
+
+.dueLate {
+  color: var(--danger);
+}
+
+.dueToday {
+  color: var(--warning);
+}
+
+/* ---------------------------------------------------------------- pickers and lists */
+
+.picker {
+  position: relative;
+}
+
+.pickerList {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);
+  z-index: 50;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  box-shadow: var(--shadow-menu);
+  padding: 6px;
+  max-height: 280px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+}
+
+.pickerOption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  min-height: 44px;
+  justify-content: center;
+}
+
+.pickerOption[aria-selected='true'],
+.pickerOption:hover {
+  background: var(--surface-muted);
+}
+
+.pickerChosen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-control);
+  padding: 0 6px 0 12px;
+  background: var(--surface);
+  font-size: 14px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.filters > :global(.field) {
+  flex: 1 1 160px;
+  max-width: 260px;
+}
+
+.totalsRow td {
+  font-weight: 600;
+  background: var(--surface-muted);
+  border-top: 1px solid var(--border);
+}
+
+.ownerCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.factList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+
+.factList dt {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.factList dd {
+  margin: 0;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.angle {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 640px) {
+  .column {
+    flex-basis: 236px;
+  }
+  .filters > :global(.field) {
+    max-width: none;
+  }
+}

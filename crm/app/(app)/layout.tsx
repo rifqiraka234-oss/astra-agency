@@ -12,6 +12,7 @@ import { Sidebar, type SyncLine } from '@/components/shell/Sidebar';
 import { GlobalSearch } from '@/components/shell/GlobalSearch';
 import { NewMenu } from '@/components/shell/NewMenu';
 import { UserMenu } from '@/components/shell/UserMenu';
+import { NotificationsBell } from '@/components/work/NotificationsBell';
 
 export const dynamic = 'force-dynamic';
 
@@ -55,6 +56,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
         <header className="app-header">
           <GlobalSearch />
           {sample ? <span className="sample-badge">Sample data</span> : null}
+          <NotificationsBell userId={user.id} />
           <NewMenu />
           <UserMenu name={user.name} initials={user.initials} bg={user.avatarBg} fg={user.avatarFg} roleLabel={ROLE_LABELS[user.role]} />
         </header>

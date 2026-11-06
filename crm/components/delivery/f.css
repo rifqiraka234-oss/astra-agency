@@ -1,0 +1,353 @@
+/*
+ * Agent F styles for projects, tickets and invoices. Tokens come from app/globals.css.
+ * Imported by the F pages only. Prefix f- so nothing collides with the shared classes.
+ */
+
+/* Stage path, as the Deal design */
+.f-stage-path {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.f-stage-path > li {
+  flex: 1 1 110px;
+}
+.f-stage {
+  width: 100%;
+  min-height: 52px;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: var(--radius-control);
+  border: 1px solid transparent;
+  background: var(--tone-grey-bg);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font: inherit;
+}
+.f-stage:disabled {
+  cursor: default;
+}
+.f-stage.is-passed {
+  background: #e4e7ec;
+  color: var(--ink);
+}
+.f-stage.is-current {
+  background: var(--ink);
+  color: #ffffff;
+}
+.f-stage.is-current.is-closed {
+  background: var(--success);
+}
+.f-stage.is-target {
+  border: 2px solid var(--accent);
+}
+.f-stage:not(:disabled):hover {
+  border-color: var(--border-strong);
+}
+.f-stage-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+.f-stage-sub {
+  display: block;
+  font-size: 11px;
+  margin-top: 2px;
+  min-height: 13px;
+}
+.f-gate {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-panel);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface-muted);
+}
+.f-gate-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.f-stage-wrap {
+  margin-top: 4px;
+}
+
+/* Filters and list toolbars */
+.f-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.f-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.f-filter .select {
+  min-width: 150px;
+}
+
+/* Forms inside cards */
+.f-inline-form {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.f-form-actions {
+  justify-content: flex-end;
+}
+.f-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 16px;
+  border-top: 1px solid var(--divider);
+  background: var(--surface-muted);
+}
+.f-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.f-fields > .field {
+  flex: 1 1 140px;
+  min-width: 0;
+}
+.f-fields > .field.f-wide {
+  flex: 3 1 240px;
+}
+.f-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Lists inside cards */
+.f-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.f-list > li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  border-top: 1px solid var(--divider-soft);
+}
+.f-list > li:first-child {
+  border-top: 0;
+}
+.f-list-main {
+  min-width: 0;
+  flex: 1 1 200px;
+}
+.f-done {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+/* Budget */
+.f-budget {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  align-items: baseline;
+}
+.f-budget-big {
+  font-family: var(--font-mono);
+  font-size: 22px;
+}
+.f-progress-amber > span {
+  background: var(--warning);
+}
+.f-progress-red > span {
+  background: var(--danger);
+}
+
+/* SLA clocks */
+.f-sla {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.f-sla-clock {
+  flex: 1 1 220px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--surface);
+}
+.f-sla-red {
+  color: var(--danger);
+  font-weight: 500;
+}
+.f-sla-amber {
+  color: var(--warning);
+}
+.f-sla-green {
+  color: var(--success);
+}
+.f-sla-blue {
+  color: var(--link);
+}
+.f-sla-grey {
+  color: var(--text-muted);
+}
+
+/* Composer tabs */
+.f-composer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+/* Ageing tiles */
+.f-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.f-tiles > .stat {
+  text-decoration: none;
+  color: inherit;
+}
+.f-tiles > a.stat:hover {
+  border-color: var(--border-strong);
+}
+.f-tiles > .stat[aria-current='true'] {
+  border-color: var(--ink);
+}
+
+/* Invoice totals */
+.f-totals td {
+  border-top: 0;
+}
+.f-total-row td {
+  font-weight: 600;
+  border-top: 1px solid var(--border);
+}
+.f-note-box {
+  border-radius: 9px;
+  padding: 10px 12px;
+  font-size: 13px;
+  background: var(--tone-blue-bg);
+  color: var(--tone-blue-fg);
+}
+.f-lock-box {
+  border-radius: 9px;
+  padding: 10px 12px;
+  font-size: 13px;
+  background: var(--tone-grey-bg);
+  color: var(--text-secondary);
+}
+
+/* The printable invoice, hidden on screen */
+.f-print-doc {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .f-filter .select {
+    min-width: 0;
+    width: 100%;
+  }
+  .f-filters > .f-filter {
+    flex: 1 1 140px;
+  }
+  .f-stage-path > li {
+    flex: 1 1 45%;
+  }
+}
+
+@media print {
+  body:has(.f-print-doc) .sidebar,
+  body:has(.f-print-doc) .app-header,
+  body:has(.f-print-doc) .record-header,
+  body:has(.f-print-doc) .record-body {
+    display: none !important;
+  }
+  body:has(.f-print-doc) {
+    background: #ffffff;
+  }
+  body:has(.f-print-doc) .app,
+  body:has(.f-print-doc) .app-main,
+  body:has(.f-print-doc) .app-content {
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: #ffffff;
+  }
+  .f-print-doc {
+    display: block;
+    color: #000000;
+    font-size: 12px;
+    padding: 0;
+  }
+  .f-print-doc h1 {
+    font-size: 22px;
+    margin: 0 0 4px;
+  }
+  .f-print-doc table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+  }
+  .f-print-doc th,
+  .f-print-doc td {
+    text-align: left;
+    padding: 6px 4px;
+    border-bottom: 1px solid #cccccc;
+  }
+  .f-print-doc .num {
+    text-align: right;
+    font-family: var(--font-mono);
+  }
+  .f-print-parties {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 18px;
+  }
+  @page {
+    margin: 18mm;
+  }
+}
+
+.f-header-path {
+  padding-bottom: 18px;
+}
+.f-card-head-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--divider);
+}
+.f-card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.f-card-pad {
+  padding: 14px 16px;
+}
