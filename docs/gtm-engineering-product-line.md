@@ -261,3 +261,27 @@ earlier suggestion. The efficy contract question still stands for the Fractional
 
 Canva API lesson. replace_text on a text box with mixed bold and normal runs drops the brand font to Canva's default,
 and format_text cannot set a font back. For those boxes, change each run with find_and_replace_text instead.
+
+## New prices in the deck, and a costs page (6 Nov, later the same day)
+
+Raka set the prices on 6 Nov, and they're saved in Canva design DAHaJAXOLEs, which now has 25 pages. The full sheet with
+the course pitches is `docs/gtm-automation-prices-draft.md`, and the preview is `docs/gtm-deck-preview-v3.png`.
+
+| Page | What changed |
+|---|---|
+| 2 | New. What Is GTM Automation, five plain lines and "In one line" |
+| 3 | New. Why Now, 67% (Gartner, 9 Mar 2026), 70% and 84% (Salesforce State of Sales), 205% (Bloomberry) |
+| 4 | Problem page retitled What Breaks Next Year |
+| 9 | Seller and Engineer tracks from €125 a level, Train your team from €500 |
+| 12 | Ladder page renamed The Engineer Track |
+| 16 | Seller Track, Levels 1 Find, 2 Reach, 3 Scale at €125 or €1,000. GTM Leader €500 or €2,000 |
+| 17 | Seminar €125 per person per hour, one topic. Group package €600 per person per level, from 4 people |
+| 19 | Every level €125 or €1,000 with Raka, all three €299 or €2,500, same on both tracks |
+| 20 | Health Check free, Strategy €750, builds from €650, automations €150, AI agent €1,000, full engine around €4,000, Run €750 a month, directing €120 an hour |
+| 21 | New. What It Costs, three example builds at €800, €2,700 and €4,750 then €750 a month. Illustrations, not client jobs |
+| 23 | How a build runs. Health Check free, then Strategy, Build, Hand over with a seminar, Run, Direct |
+| 25 | Start Here says the Health Check is free |
+
+Still open. Seller Level 3 (the AI research assistant) has no lessons written yet, because `docs/academy/gtm-seller.md`
+is one course of five modules that splits cleanly only into Levels 1 and 2. The academy files still carry the old prices
+(€149, €199, €249 and so on), and the deck is now the current source until they're updated.
