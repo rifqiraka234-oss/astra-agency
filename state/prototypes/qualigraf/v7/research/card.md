@@ -21,6 +21,14 @@ carries a picture, a film or a live piece of product, never a text block on its 
 - Canva's image generator was tried first (a paper decision file over a dawn lake). It only hands back a 200 pixel preview and
   the full file stays inside Canva, so it isn't used. Code art is also licence clean and moves.
 
+## Gradients on the big pieces (Raka, 6 Nov, "Use gradients for block big pieces is fine ... Like APPLE!")
+
+Wide, smooth gradients from their own colours on the large blocks only. The hero and the invitation (a navy and plum glow on deep
+navy), the platform tiles (navy, coral, teal, mustard and plum blocks with the film and screens inside), the three proof blocks,
+the stage behind their screens on the track, the trust panel, the people, the form and the front door tiles. Never on buttons,
+text or small parts, and no purple to blue. Text contrast was worked out against both ends of every gradient, the lowest is
+the coral sentence pick on the brightest hero glow, 3.6 to 1, which passes as large text. Everything else is 5 to 1 or more.
+
 ## The pictures
 
 - **Their product**, Qualigraf's own demo screens, the hero window and the eight track screens, labelled sample.
