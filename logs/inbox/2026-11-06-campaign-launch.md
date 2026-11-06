@@ -20,3 +20,10 @@ Law and accounting (W5), the AI workflow "did you know" shape. Research gate as 
 
 Next. 8 Nov, check invites by campaign and rebalance. Around 18 Nov, the next batch. The plan for the month is
 `state/november-10k-plan.md`.
+
+**Later, 6 Nov.** Raka asked to check the connect note. The real invites sent this morning (activities, type
+linkedinInviteDone, W1b) read "Hi <name>, saw your business and thought it was cool 😀 I'm a business owner too! Would love
+to connect and share ideas! ☺️", the same text in the altMessage field of every sequence, v0.1 included. 266 queued first
+names checked, none empty, a title, an initial or all caps. 16 of W1b's last 57 were France, Brussels or Luxembourg, paused
+with POST /api/leads/pause/<leadId>?campaignId=cam_7gnHSf6GvvGy8gH3n (reversible, ids in
+state/lemlist-backups/w1b-french-paused-2026-11-06.json).
