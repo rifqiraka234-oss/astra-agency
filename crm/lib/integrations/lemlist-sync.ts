@@ -568,8 +568,8 @@ export async function lemlistStatus() {
       from sync_cursors where connector = ${CONNECTOR} and account = ${ACCOUNT} order by stream`;
   const [counts] = await sql<{ contacts: number; leads: number; activities: number; orgs: number }[]>`
     select (select count(*)::int from external_ids where system = 'lemlist_contact') as contacts,
-           (select count(*)::int from leads where source = 'lemlist' and deleted_at is null) as leads,
+           (select count(*)::int from leads where source = 'lemlist' and deleted_at is null and coalesce(custom ->> 'sample', '') <> 'true') as leads,
            (select count(*)::int from activities where source = 'lemlist' and deleted_at is null) as activities,
-           (select count(*)::int from organizations where source = 'lemlist' and deleted_at is null) as orgs`;
+           (select count(*)::int from organizations where source = 'lemlist' and deleted_at is null and coalesce(custom ->> 'sample', '') <> 'true') as orgs`;
   return { streams: rows, counts };
 }
