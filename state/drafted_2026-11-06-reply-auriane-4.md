@@ -11,5 +11,5 @@
 
 REPLY
 ```
-Ha, ours too! What kind of agents have you built for LOCA so far?
+Ha, he's ours too! What kind of agents have you built for LOCA so far?
 ```
