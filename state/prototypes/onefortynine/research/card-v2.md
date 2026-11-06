@@ -158,3 +158,18 @@ Nine sections on the home page plus the hidden hints page. check-build PASS on b
 - The proposal says "Prices from OneFortyNine Games", check the volume pricing with Owen before a group sees it.
 - Copy checks, no dashes or colons in our words, the NO-AI-SLOP section 8 scan clean. Its sentence length score is low because
   button and label text counts as short sentences.
+
+## Live, 6 Nov (Raka "Final!")
+
+Full QA once. Overflow at 1920, 1440, 1280, 1024, 820, 768, 600, 390 and 320 on both pages, document never wider than the
+screen (the only element past the edge is the skip link, off screen by design until focused). axe at 1440 and 390 on both pages
+after opening the box and choosing a venue, two findings fixed (the prototype note now an aside, the form tab panels moved onto
+wrapping divs), then 0 violations on all four runs. Films play only in view and never under reduced motion. Keyboard, 1 4 9 typed
+on the wheels opens the box, Enter picks a venue, arrows move the chart. End to end test passing.
+
+Deployed once to the existing site astra-onefortynine-prototype (2db65fea-f829-4f78-a8d7-cddb66ee42c3), deploy
+6aee14d80b157afa71f0ca38, over the v1 sketch at the same URL, so the link Owen already has shows v2. 53 of 53 files byte matched
+live, X-Robots-Tag noindex and robots.txt Disallow live, title right, no login wall, cold loads at 1440 and 390 with 0 page
+errors, 15 of 15 images decoded, films playing (the phone gets its own cut). The only failed requests were film downloads the
+browser cancels when a film pauses out of view, expected. Delivery drafted in `state/drafted_2026-11-06-owen-v2-delivery.md`,
+not sent.
