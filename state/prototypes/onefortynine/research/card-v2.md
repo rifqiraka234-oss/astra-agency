@@ -62,9 +62,14 @@ behind it is `deep-needs-2026-11-06.md`, `call-analysis-2026-11-05.md`, `rebrand
     Sans** (SIL OFL, licence in `site-v2/fonts`) for everything, heavy and tight for headlines like Puttshack and Soho
     House's grotesks, and **Fragment Mono** (SIL OFL) only for prices and the wheel digits. **No italics anywhere**
     (Raka, 6 Nov).
-11. **Colour.** His navy `#09004a` for the box chapter, a night `#07031f` for the film chapter, his orange `#ff914d` as the
-    one accent (the place word, the buttons, the markers, the money), a warm paper `#f6f3ee` only for the closing get your
-    box section. One lamp pool of orange under the box, the light over a games table.
+11. **Colour (v2.1, Raka 6 Nov, "I just don't like flat colors ... feels tacky ... choose whatever you think ... exclusive and
+    nice and professional and modern", and he expects Owen to be open to a rebrand).** The games table. Deep green baize
+    `#0f3a2b` to `#05130e`, lit from above like a pendant lamp over a card table, so the gradient is the light on the table
+    where the money sits, not decoration. Brass `#d8b46a` (his locks, case clasps and hinges) for the one accent, the place
+    word, the buttons, the markers, the money. Warm cream `#f4ecdd` for type instead of stark white. A faint felt grain only
+    in the box chapter. A cream to sand close for get your box with green type. It sets him apart from the dark padlock
+    look of escape room brands (rebrand analysis section 4) and reads members' club, not template. His navy and orange
+    retire for this build, a brand decision for Owen at the refinement session.
 12. **New design language.** His site is centred text over AI images under a navy overlay. This is a film band with no
     text on it, an editorial headline on solid night beside the pitch, and his real product you can open.
 13. **Every photo and film.**

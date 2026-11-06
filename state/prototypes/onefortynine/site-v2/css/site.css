@@ -3,15 +3,17 @@
 @font-face { font-family: "Fragment Mono"; src: url("../fonts/fragment-mono-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 
 :root {
-  --navy: #09004a;
-  --night: #07031f;
-  --ink: #120d2e;
-  --white: #ffffff;
-  --paper: #f6f3ee;
-  --orange: #ff914d;
-  --red: #ff2e1f;
-  --muted: rgba(255,255,255,.72);
-  --line: rgba(255,255,255,.18);
+  /* the games table, green baize under a pendant lamp, brass from his locks and clasps, warm cream type */
+  --navy: #0f3a2b;
+  --night: #05130e;
+  --ink: #0b2a1f;
+  --white: #f4ecdd;
+  --paper: #efe5d1;
+  --orange: #d8b46a;
+  --brass-hi: #ecd29a;
+  --red: #c8442c;
+  --muted: rgba(244,236,221,.72);
+  --line: rgba(244,236,221,.16);
   --sans: "Mona Sans", "Helvetica Neue", Arial, sans-serif;
   --mono: "Fragment Mono", ui-monospace, Menlo, monospace;
   --pad: clamp(20px, 4.4vw, 72px);
@@ -42,7 +44,7 @@ button { font: inherit; color: inherit; }
 .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-weight: 600; font-size: 15px; padding: 12px 20px; border-radius: 2px; border: 1px solid transparent; transition: background .2s, color .2s, border-color .2s; white-space: nowrap; cursor: pointer; }
 .btn-lg { font-size: 17px; padding: 16px 26px; }
 .btn-solid { background: var(--orange); color: var(--night); }
-.btn-solid:hover { background: #ffa66d; }
+.btn-solid:hover { background: var(--brass-hi); }
 .btn-line { border-color: rgba(255,255,255,.55); color: var(--white); background: transparent; }
 .btn-line:hover { border-color: var(--white); }
 
@@ -59,7 +61,7 @@ h1 { margin: 0; font-weight: 680; font-size: clamp(44px, 5.4vw, 92px); line-heig
 .lede { margin: 0 0 24px; max-width: 30em; font-size: clamp(17px, 1.3vw, 19px); color: rgba(255,255,255,.86); }
 .hero-act { display: flex; gap: 12px; flex-wrap: wrap; }
 .price { margin: 16px 0 0; font-family: var(--mono); font-size: 13px; color: rgba(255,255,255,.72); }
-.film-toggle { position: absolute; right: var(--pad); top: calc(84px + 56svh - 40px); z-index: 3; background: rgba(7,3,31,.6); border: 0; padding: 6px 10px; color: rgba(255,255,255,.85); font-size: 13px; cursor: pointer; }
+.film-toggle { position: absolute; right: var(--pad); top: calc(84px + 56svh - 40px); z-index: 3; background: rgba(5,19,14,.7); border: 0; padding: 6px 10px; color: rgba(255,255,255,.85); font-size: 13px; cursor: pointer; }
 
 /* the box */
 .crack { position: relative; background: var(--navy); padding: clamp(80px, 12vh, 140px) var(--pad) clamp(80px, 12vh, 140px); overflow: hidden; }
@@ -163,3 +165,22 @@ h2 { margin: 0 0 18px; font-weight: 660; font-size: clamp(34px, 4.4vw, 70px); li
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; transition-delay: 0s !important; animation-delay: 0s !important; }
 }
+
+/* the light, the felt, the brass */
+.hdr { background: rgba(5,19,14,.84); -webkit-backdrop-filter: blur(14px) saturate(1.15); backdrop-filter: blur(14px) saturate(1.15); border-bottom: 1px solid rgba(216,180,106,.14); }
+.hero { background: radial-gradient(90% 140% at 10% 100%, #15412f 0%, #0b281c 42%, #05130e 100%); }
+.crack { background: radial-gradient(52% 62% at 32% 60%, #2b6d51 0%, #1c5039 26%, #113a2a 50%, #08201a 78%, #05130e 100%); isolation: isolate; }
+.crack::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .28; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E"); }
+.crack-head, .crack-grid { position: relative; z-index: 1; }
+.table-light { background: radial-gradient(50% 44% at 50% 50%, rgba(255,226,170,.26), rgba(255,226,170,0) 72%); }
+.box-inside img { box-shadow: 0 40px 80px -30px rgba(0,0,0,.65); }
+.lock-body { background: linear-gradient(180deg, #23211f, #121110); border-color: #3a362f; }
+.shackle { border-color: #c9c3b6; }
+.w-win { background: #f1e9d8; }
+.get { background: linear-gradient(180deg, #f4ecdd 0%, #e8dbc1 100%); color: #0b2a1f; }
+.get h2 { color: #0b2a1f; }
+.get .btn-solid { background: #0b2a1f; color: #f4ecdd; }
+.get .btn-solid:hover { background: #154533; }
+.foot { background: #05130e; }
+.proto { background: #020906; }
