@@ -50,7 +50,7 @@ export default async function PipelinesSettingsPage({ searchParams }: { searchPa
       </div>
       {current.description ? <p className="small muted" style={{ margin: 0 }}>{current.description}. Holds {OBJECT_NAMES[current.object_type]}.</p> : null}
 
-      <div className="card table-wrap">
+      <div className={`card table-wrap ${s.tableCard}`}>
         <table className={`table ${s.wide}`}>
           <thead>
             <tr>

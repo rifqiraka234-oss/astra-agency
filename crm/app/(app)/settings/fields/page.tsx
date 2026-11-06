@@ -65,7 +65,7 @@ export default async function FieldsPage({ searchParams }: { searchParams: Promi
         ))}
       </div>
 
-      <div className="card table-wrap">
+      <div className={`card table-wrap ${s.tableCard}`}>
         <table className={`table ${s.wide}`}>
           <caption className="sr-only">{objectLabel} fields</caption>
           <thead>

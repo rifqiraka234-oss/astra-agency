@@ -416,3 +416,8 @@
     grid-column: 1 / -1;
   }
 }
+
+/* Keeps visually hidden headers inside the scrolling table, so phones get no page wide scroll. */
+.tableCard {
+  position: relative;
+}

@@ -63,7 +63,7 @@ describe('CSV import (rolled back)', () => {
       const [anna2] = await t<{ job_title: string; city: string }[]>`select job_title, city from contacts where id = ${anna.id}`;
       expect(anna2).toEqual({ job_title: 'Owner', city: 'Groningen' });
 
-      // A person edits Piet after the import. Revert keeps that edit.
+      // Piet got a job title from the second file.
       const [piet] = await t<{ id: string }[]>`select contact_id as id from contact_emails where email = 'piet@testnoord-import.nl'`;
 
       // Revert the second import: Anna's city goes back to empty, Piet's title back to empty.

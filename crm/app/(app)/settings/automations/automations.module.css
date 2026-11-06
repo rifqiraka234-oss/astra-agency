@@ -1,0 +1,153 @@
+/* /settings/automations, the list and the When / If / Then detail of the Settings design. */
+
+.list {
+  flex: 1 1 320px;
+  min-width: 0;
+  overflow: hidden;
+  align-self: flex-start;
+}
+
+.item {
+  display: block;
+  padding: 14px 16px;
+  min-height: 44px;
+  border-bottom: 1px solid var(--divider-soft);
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--surface);
+}
+.item:last-child {
+  border-bottom: 0;
+}
+.item:hover {
+  background: var(--ground);
+  color: var(--ink);
+}
+.item[aria-current='true'] {
+  background: var(--ground);
+}
+.itemTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: flex-start;
+}
+.itemName {
+  font-size: 14px;
+  font-weight: 500;
+}
+.itemMeta {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.detail {
+  flex: 1.3 1 380px;
+  min-width: 0;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.detailHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+.detailTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.detailSub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+.step {
+  display: flex;
+  gap: 12px;
+}
+.rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: none;
+  width: 28px;
+}
+.dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  color: var(--accent-ink);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+}
+.dotWhen {
+  background: var(--tone-blue-fg);
+}
+.dotIf {
+  background: var(--tone-amber-fg);
+}
+.dotThen {
+  background: var(--ink);
+}
+.dotWait {
+  background: var(--text-muted);
+}
+.line {
+  flex: 1;
+  width: 2px;
+  background: var(--border);
+  min-height: 14px;
+}
+.stepBody {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: 14px;
+}
+.stepKind {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+.stepText {
+  font-size: 14px;
+  margin-top: 3px;
+  line-height: 1.45;
+}
+
+.foot {
+  font-size: 12px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--divider-soft);
+  padding-top: 12px;
+}
+
+.changes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+.when {
+  white-space: nowrap;
+}

@@ -25,7 +25,7 @@ export default async function UsersPage() {
         actions={<InviteUserButton teams={teams} />}
       />
 
-      <div className="card table-wrap">
+      <div className={`card table-wrap ${s.tableCard}`}>
         <table className={`table ${s.wide}`}>
           <thead>
             <tr>
@@ -87,7 +87,7 @@ export default async function UsersPage() {
         </table>
       </div>
 
-      <div className="card table-wrap">
+      <div className={`card table-wrap ${s.tableCard}`}>
         <table className={`table ${s.medium}`}>
           <caption style={{ textAlign: 'left', padding: '14px 16px 6px', fontSize: 15, fontWeight: 600 }}>What each role can do</caption>
           <thead>
