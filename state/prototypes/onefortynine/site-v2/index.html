@@ -30,14 +30,6 @@
 
 <main id="top">
   <section class="hero" aria-labelledby="hero-h">
-    <div class="hero-film" aria-hidden="true">
-      <video class="film" data-film muted playsinline loop preload="metadata" poster="media/film/hero-poster.jpg">
-        <source src="media/film/hero-phone.webm" type='video/webm; codecs="vp9"' media="(max-width: 700px)">
-        <source src="media/film/hero-phone.mp4" type='video/mp4; codecs="avc1.64001F"' media="(max-width: 700px)">
-        <source src="media/film/hero-1280.webm" type='video/webm; codecs="vp9"'>
-        <source src="media/film/hero-1280.mp4" type='video/mp4; codecs="avc1.64001F"'>
-      </video>
-    </div>
     <div class="hero-in">
       <h1 id="hero-h"><span class="h1-a">There's money <span class="nw">on the table.</span></span>
         <span class="h1-b" data-where aria-live="off">In your pub.</span></h1>
@@ -50,7 +42,15 @@
         <p class="price">From £60 a month, or £350 to own</p>
       </div>
     </div>
-    <button class="film-toggle" type="button" data-film-toggle aria-pressed="false">Pause film</button>
+    <div class="hero-film">
+      <video class="film" data-film muted playsinline loop preload="metadata" aria-hidden="true" poster="media/film/hero-poster.jpg">
+        <source src="media/film/hero-phone.webm" type='video/webm; codecs="vp9"' media="(max-width: 700px)">
+        <source src="media/film/hero-phone.mp4" type='video/mp4; codecs="avc1.64001F"' media="(max-width: 700px)">
+        <source src="media/film/hero-1280.webm" type='video/webm; codecs="vp9"'>
+        <source src="media/film/hero-1280.mp4" type='video/mp4; codecs="avc1.64001F"'>
+      </video>
+      <button class="film-toggle" type="button" data-film-toggle aria-pressed="false">Pause film</button>
+    </div>
   </section>
 
   <section class="crack" id="crack" aria-labelledby="crack-h">

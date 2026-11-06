@@ -62,14 +62,14 @@ behind it is `deep-needs-2026-11-06.md`, `call-analysis-2026-11-05.md`, `rebrand
     Sans** (SIL OFL, licence in `site-v2/fonts`) for everything, heavy and tight for headlines like Puttshack and Soho
     House's grotesks, and **Fragment Mono** (SIL OFL) only for prices and the wheel digits. **No italics anywhere**
     (Raka, 6 Nov).
-11. **Colour (v2.1, Raka 6 Nov, "I just don't like flat colors ... feels tacky ... choose whatever you think ... exclusive and
-    nice and professional and modern", and he expects Owen to be open to a rebrand).** The games table. Deep green baize
-    `#0f3a2b` to `#05130e`, lit from above like a pendant lamp over a card table, so the gradient is the light on the table
-    where the money sits, not decoration. Brass `#d8b46a` (his locks, case clasps and hinges) for the one accent, the place
-    word, the buttons, the markers, the money. Warm cream `#f4ecdd` for type instead of stark white. A faint felt grain only
-    in the box chapter. A cream to sand close for get your box with green type. It sets him apart from the dark padlock
-    look of escape room brands (rebrand analysis section 4) and reads members' club, not template. His navy and orange
-    retire for this build, a brand decision for Owen at the refinement session.
+11. **Colour (v3, Raka 6 Nov on v2.1's green, "Dark. It's not really inviting ... lighter ... white also on the back ...
+    Apple ... Nike ... check like all the big ass brands").** Daylight, from the 104 brand scan (`brand-scan-2026-11-06.md`,
+    60 of 65 loaded pages are white, colour carried by photos and film). White `#ffffff` and Apple's light grey `#f5f5f7`,
+    near black type `#1d1d1f`, black buttons at 10 to 12px. One signature gradient from his own orange and red, `#ffa646`
+    to `#ff6a3d` to `#ff2f4e` to `#d81b72`, the warm light of a lock clicking open, used for the place word, the markers, the
+    money figure and one full colour band for get your box (run berry to orange there, so the white words sit on 5 to 7.5
+    to 1). The box sits on a soft white to grey studio sweep with a contact shadow. The navy and orange of his site, and the
+    green of v2.1, retire for this build, a brand decision for Owen.
 12. **New design language.** His site is centred text over AI images under a navy overlay. This is a film band with no
     text on it, an editorial headline on solid night beside the pitch, and his real product you can open.
 13. **Every photo and film.**
@@ -81,7 +81,7 @@ behind it is `deep-needs-2026-11-06.md`, `call-analysis-2026-11-05.md`, `rebrand
       game, so not used.
     - His own photos, `lid.png` and `inside.jpg`, from his LinkedIn, as in v1 (media.json).
 14. **No section 5 tells.** check-build PASS, 0 italic, 0 kickers, 0 pills, 0 chips, 0 arrow glyphs, 0 cards, no marquee,
-    no count ups, 3 sections, 1 turn, hero 63% film at desktop and 44% on a phone, walk 0, first screen action at both
+    no count ups, 3 sections, 1 turn, hero 38% film at desktop and 40% on a phone (v3 layout, headline left on white, film tile right, film first on a phone), walk 0, first screen action at both
     sizes, 0 page errors.
 
 ## D. Before Raka sees it
