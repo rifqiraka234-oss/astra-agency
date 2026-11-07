@@ -18,11 +18,16 @@
 /* One app, three views. Intro is a split screen with a full bleed photo. Questions keep the chapter photo on the left and
    a live ledger of what we heard. The report reads like a diagnosis, headline first, money second, then the plan. */
 :root{
-  --paper:#f5f4f1; --ink:#0e1525; --muted:#5d6475; --rule:#d9d6d0; --navy:#0d1b38; --navy2:#16264a;
-  --sand:#e6ddd8; --slate:#405b8d; --risk:#c4432c; --gain:#2b7a52; --tint:#ebe8e3;
-  --sans:"Open Sauce One","Helvetica Neue",Helvetica,Arial,sans-serif;
-  --serif:"Gloock",Georgia,"Times New Roman",serif;
-  --mono:"Open Sauce One","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /* Astra brand palette, read from the brand deck DAG8WBvhY7s on 7 Nov 2026 */
+  --paper:#fdfdfd; --ink:#1d1d1e; --muted:#405b8d; --rule:#d8d7d7; --navy:#0d1b38; --navy2:#0d1b38;
+  --sand:#e6ddd8; --slate:#405b8d; --tint:#e6ddd8;
+  /* semantic money colours, kept small: loss and gain */
+  --risk:#405b8d; --gain:#0d1b38;
+  /* Astra brand faces first. Solomon Sans and The Seasons need a web licence (see README), Open Sauce One is the
+     deck's own open licensed sans, Gloock the open stand in for The Seasons until the licence is in */
+  --sans:"Solomon Sans","Open Sauce One","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"The Seasons","Gloock",Georgia,"Times New Roman",serif;
+  --mono:"Solomon Sans","Open Sauce One","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--paper);color:var(--ink);overflow-x:clip}
@@ -42,12 +47,12 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 
 /* intro */
 .intro{min-height:100svh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
-.intro .photo{position:relative;background:#1a1a1a;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr) auto}
+.intro .photo{position:relative;background:#0d1b38;overflow:hidden;display:grid;grid-template-rows:minmax(0,1fr) auto}
 .intro .photo img{width:100%;height:100%;object-fit:cover;min-height:0}
 .flowbox{background:var(--navy);padding:14px 20px 16px;display:grid;gap:8px}
 .flowbox canvas{width:100%;height:160px;display:block}
-.flowkey{display:flex;justify-content:space-between;color:#aab4cc}
-.flowkey .lk{color:#ff8a72}
+.flowkey{display:flex;justify-content:space-between;color:#d8d7d7}
+.flowkey .lk{color:#e6ddd8}
 .qphoto img{width:100%;height:100%;object-fit:cover}
 .intro .side{padding:48px max(24px,env(safe-area-inset-right,0px)) 40px 56px;display:flex;flex-direction:column;gap:36px;justify-content:center}
 .wordmark{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.16em;font-size:13px}
@@ -68,7 +73,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .quiz{min-height:100svh;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.35fr)}
 .qphoto{position:sticky;top:0;height:100svh;background:#111 center/cover;transition:background-image .4s}
 .qphoto .chap{position:absolute;left:0;right:0;bottom:0;background:var(--navy);color:#fff;padding:22px 28px;display:grid;gap:6px}
-.qphoto .chap .mono{color:#aab4cc}
+.qphoto .chap .mono{color:#d8d7d7}
 .qphoto .chap strong{font-size:26px;font-weight:560;letter-spacing:-.02em}
 .qmain{display:grid;grid-template-rows:auto 1fr auto;min-height:100svh;padding:28px max(24px,env(safe-area-inset-right,0px)) 28px 48px}
 .top{display:flex;justify-content:space-between;align-items:center;gap:16px}
@@ -109,23 +114,23 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .ladder div b{font-weight:600}
 .ladder div .mono{color:var(--muted);font-size:11px}
 .ladder .on{background:var(--navy);color:#fff}
-.ladder .on .mono{color:#aab4cc}
+.ladder .on .mono{color:#d8d7d7}
 .scoreRow{display:flex;align-items:baseline;gap:12px}
 .scoreRow .n{font-size:84px;font-weight:620;letter-spacing:-.04em;line-height:.9}
 .money{background:var(--navy);color:#fff}
 .money .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
 .col{padding:48px 40px 52px 0;display:grid;gap:22px;align-content:start;min-width:0}
-.col+.col{padding-left:40px;padding-right:0;border-left:1px solid #2b3b62}
-.col .mono{color:#aab4cc}
+.col+.col{padding-left:40px;padding-right:0;border-left:1px solid #405b8d}
+.col .mono{color:#d8d7d7}
 .huge{font-size:clamp(54px,7vw,96px);font-weight:640;letter-spacing:-.04em;line-height:.9}
-.r{color:#ff8a72}.g{color:#7fd4a5}
-.line{display:grid;gap:8px;padding-top:16px;border-top:1px solid #2b3b62}
+.r{color:#e6ddd8}.g{color:#fdfdfd}
+.line{display:grid;gap:8px;padding-top:16px;border-top:1px solid #405b8d}
 .line .t{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
 .line .t b{font-size:22px;font-weight:600;}
-.line .how{font-size:14px;color:#aab4cc}
-.meter{height:8px;background:#22325a}
+.line .how{font-size:14px;color:#d8d7d7}
+.meter{height:8px;background:#405b8d}
 .meter i{display:block;height:100%}
-.slider{display:grid;gap:8px;font-size:14px;color:#aab4cc;padding-top:6px}
+.slider{display:grid;gap:8px;font-size:14px;color:#d8d7d7;padding-top:6px}
 .slider input{width:100%;accent-color:var(--sand)}
 .band{height:42vh;min-height:260px;background:center/cover}
 .sec{padding-block:64px;display:grid;gap:32px}
@@ -138,7 +143,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .dim .meter{background:var(--tint)}
 .dim .meter i{background:var(--navy)}
 .dim .st{font-family:var(--mono);font-size:12px;text-align:right}
-.st.w{color:var(--risk)}.st.b{color:#9a6a12}.st.s{color:var(--gain)}
+.st.w{color:var(--risk)}.st.b{color:var(--muted)}.st.s{color:var(--gain)}
 .told{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
 .told div{padding:20px 24px 22px 0;border-top:1px solid var(--rule);display:grid;gap:6px}
 .told div:nth-child(2n){padding-left:24px;border-left:1px solid var(--rule)}
@@ -153,22 +158,22 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .pack{background:var(--navy);color:#fff}
 .pack .wrap{display:grid;gap:36px;padding-block:64px}
 .pack h2{font-size:clamp(30px,3.4vw,48px);max-width:24ch}
-.pack .why{color:#c8cfdf;max-width:60ch;font-size:18px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border-top:1px solid #2b3b62}
+.pack .why{color:#e6ddd8;max-width:60ch;font-size:18px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border-top:1px solid #405b8d}
 .step{padding:22px 22px 24px 0;display:grid;gap:8px;align-content:start}
-.step+.step{padding-left:22px;border-left:1px solid #2b3b62}
-.step .mono{color:#aab4cc}
+.step+.step{padding-left:22px;border-left:1px solid #405b8d}
+.step .mono{color:#d8d7d7}
 .step b{font-weight:600;font-size:19px}
 .step .price{font-size:34px;font-weight:620;color:var(--sand);letter-spacing:-.02em}
-.step p{font-size:15px;color:#c8cfdf}
-.total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-top:1px solid #2b3b62;padding-top:22px}
+.step p{font-size:15px;color:#e6ddd8}
+.total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-top:1px solid #405b8d;padding-top:22px}
 .total .huge{font-size:clamp(44px,5vw,68px);color:var(--sand)}
-.alt{color:#c8cfdf;font-size:15px}
-.raka{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:center;border-top:1px solid #2b3b62;padding-top:28px}
+.alt{color:#e6ddd8;font-size:15px}
+.raka{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;align-items:center;border-top:1px solid #405b8d;padding-top:28px}
 .raka img{width:120px;height:120px;object-fit:cover;border-radius:50%}
 .raka .who{display:grid;gap:6px}
 .raka .who b{font-size:20px;font-weight:600}
-.raka .who span{color:#c8cfdf;font-size:15px}
+.raka .who span{color:#e6ddd8;font-size:15px}
 .contact{font-family:var(--mono);font-size:14px;color:var(--sand);user-select:all;overflow-wrap:anywhere}
 .ctas{display:flex;flex-wrap:wrap;gap:10px}
 .foot{padding-block:28px 48px;color:var(--muted);font-size:13px}
@@ -195,9 +200,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
   .diag,.money .wrap,.engine,.plan,.told{grid-template-columns:minmax(0,1fr)}
   .diag{gap:32px;padding-block:40px}
   .col,.col+.col{padding:36px 0;border-left:0}
-  .col+.col{border-top:1px solid #2b3b62}
+  .col+.col{border-top:1px solid #405b8d}
   .told div:nth-child(2n){padding-left:0;border-left:0}
-  .step,.step+.step{padding:18px 0;border-left:0;border-top:1px solid #2b3b62}
+  .step,.step+.step{padding:18px 0;border-left:0;border-top:1px solid #405b8d}
   .steps{border-top:0}
   .dim{grid-template-columns:minmax(0,1fr) 64px}
   .dim .meter{grid-column:1/-1;grid-row:2}
@@ -324,8 +329,7 @@ function flow(){
    const fell=q.p>q.leak;
    if(fell){q.vy+=0.18;q.y+=q.vy}
    const px=q.p*W,py=fell?yAt(q.leak,q.o)+q.y:yAt(q.p,q.o);
-   x.fillStyle=fell?'#ff8a72':'#e6ddd8';x.globalAlpha=fell?Math.max(0,1-q.y/H):1;
-   x.beginPath();x.arc(px,py,q.r,0,7);x.fill();x.globalAlpha=1;
+   x.globalAlpha=fell?Math.max(0,1-q.y/H):1;x.beginPath();x.arc(px,py,fell?q.r+1.5:q.r,0,7);if(fell){x.strokeStyle='#e6ddd8';x.lineWidth=1.5;x.stroke()}else{x.fillStyle='#fdfdfd';x.fill()}x.globalAlpha=1;
    if(q.p>1||py>H+10)Object.assign(q,spawn());
   }
   t+=still?0:0.016;
@@ -484,7 +488,7 @@ function report(){
 
  <section class="money"><div class="wrap">
   <div class="col"><span class="mono">Money at risk, next 12 months</span><div class="huge r">${eur(r.risk)}</div>
-   ${risks.map(([t,v,h])=>`<div class="line"><div class="t"><span>${t}</span><b>${eur(v)}</b></div><div class="meter"><i style="width:${(v/maxR*100).toFixed(1)}%;background:#ff8a72"></i></div><p class="how">${h}</p></div>`).join('')}
+   ${risks.map(([t,v,h])=>`<div class="line"><div class="t"><span>${t}</span><b>${eur(v)}</b></div><div class="meter"><i style="width:${(v/maxR*100).toFixed(1)}%;background:#e6ddd8"></i></div><p class="how">${h}</p></div>`).join('')}
   </div>
   <div class="col"><span class="mono">What a working system unlocks</span><div class="huge g">${eur(r.opp)}</div>
    ${opps.map(([t,v,h])=>`<div class="line"><div class="t"><span>${t}</span><b>${v}</b></div><p class="how">${h}</p></div>`).join('')}
@@ -507,9 +511,9 @@ function report(){
  </div></section></div>
 
  <section class="pack"><div class="wrap">
-  <div style="display:grid;gap:16px"><span class="mono" style="color:#aab4cc">Our recommendation</span><h2>${p.head}</h2><p class="why">${p.why}</p></div>
+  <div style="display:grid;gap:16px"><span class="mono" style="color:#d8d7d7">Our recommendation</span><h2>${p.head}</h2><p class="why">${p.why}</p></div>
   <div class="steps">${p.steps.map(s=>`<div class="step"><span class="mono">${s.n}${s.fmt?' · '+s.fmt:''}</span><b>${s.t}</b><span class="price">${s.p===0?'Free':(s.approx?'About ':s.from?'From ':'')+eur(s.p)+(s.mo?' a month':'')}</span><p>${s.d}</p></div>`).join('')}</div>
-  <div class="total"><span class="mono" style="color:#aab4cc">Total to start</span><span class="huge">${eur(p.once)}${p.mo?`<span style="font-size:.45em"> then ${eur(p.mo)} a month</span>`:''}</span></div>
+  <div class="total"><span class="mono" style="color:#d8d7d7">Total to start</span><span class="huge">${eur(p.once)}${p.mo?`<span style="font-size:.45em"> then ${eur(p.mo)} a month</span>`:''}</span></div>
   ${p.alt?`<p class="alt">${p.alt}</p>`:''}
   ${anchor(p,r,worth)}
   <div class="raka"><img src="img/raka.jpg" alt="Raka Mulya"><div class="who"><b>Raka Mulya, Astra Agency</b><span>Seven years in revenue, GTM and data. Builds the engines and teaches them. Book a free Health Check and paste your results in the message.</span><span class="contact">raka@astraagency.nl · linkedin.com/in/raka-mulya-b92885196</span></div></div>
@@ -531,10 +535,10 @@ function fb(t,msg){const ta=document.createElement('textarea');ta.value=t;docume
 function toast(m){const el=document.getElementById('toast');el.textContent=m;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,2600)}
 function radar(r){
  const n=DIMS.length,cx=230,cy=170,R=120,P=(i,v)=>{const a=-Math.PI/2+i*2*Math.PI/n;return[cx+R*v*Math.cos(a),cy+R*v*Math.sin(a)]};
- let g='';for(let k=1;k<=4;k++)g+=`<polygon points="${DIMS.map((_,i)=>P(i,k/4).map(x=>x.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#d9d6d0"/>`;
- g+=DIMS.map((_,i)=>{const[x,y]=P(i,1);return`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#d9d6d0"/>`}).join('');
+ let g='';for(let k=1;k<=4;k++)g+=`<polygon points="${DIMS.map((_,i)=>P(i,k/4).map(x=>x.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#d8d7d7"/>`;
+ g+=DIMS.map((_,i)=>{const[x,y]=P(i,1);return`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#d8d7d7"/>`}).join('');
  const shape=DIMS.map(([k],i)=>P(i,Math.max(.05,r.dims[k]/4)).map(x=>x.toFixed(1)).join(',')).join(' ');
- const lab=DIMS.map(([,l],i)=>{const[x,y]=P(i,1.17);const an=Math.abs(x-cx)<12?'middle':x>cx?'start':'end';return`<text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="${an}" font-size="13" fill="#5d6475" font-family="Mona Sans,Helvetica,Arial,sans-serif">${l}</text>`}).join('');
+ const lab=DIMS.map(([,l],i)=>{const[x,y]=P(i,1.17);const an=Math.abs(x-cx)<12?'middle':x>cx?'start':'end';return`<text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="${an}" font-size="13" fill="#405b8d" font-family="Mona Sans,Helvetica,Arial,sans-serif">${l}</text>`}).join('');
  return `<svg viewBox="0 0 460 340" role="img" aria-label="Scores for each part of the engine" style="width:100%">${g}<polygon points="${shape}" fill="rgba(13,27,56,.16)" stroke="#0d1b38" stroke-width="2"/>${DIMS.map(([k],i)=>{const[x,y]=P(i,Math.max(.05,r.dims[k]/4));return`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="#0d1b38"/>`}).join('')}${lab}</svg>`;
 }
 ['team','leaks','engine','city','seller','desk','screens','career'].forEach(n=>{const i=new Image();i.src='img/'+n+'.jpg'});
