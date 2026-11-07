@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breakout Box | There's money on the table</title>
+<meta name="description" content="Breakout Box is an escape room in a cool box for pubs, cafés, holiday parks and training teams. No staff, no screens, and you keep what your guests pay.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2309004a'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='22' fill='%23ff914d' text-anchor='middle'%3E149%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/mona-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/added.css">
+</head>
+<body>
+<a class="skip" href="#crack">Skip to the box</a>
+<aside class="proto" aria-label="Prototype note"><p>Preview in the Astra studio for OneFortyNine Games. Nothing is ordered or sent.</p></aside>
+
+<header class="hdr" data-hdr>
+  <a class="brand" href="#top" aria-label="Breakout Box by OneFortyNine Games, home">
+    <span class="brand-name">Breakout Box</span>
+    <span class="brand-by">by OneFortyNine Games</span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#crack">What's inside</a>
+    <a href="#how">How it works</a>
+    <a href="#numbers">The numbers</a>
+    <a href="#games">Games</a>
+  </nav>
+  <a class="btn btn-solid" href="#get" data-order>Get your box</a>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero-in">
+      <h1 id="hero-h"><span class="h1-a">There's money <span class="nw">on the table.</span></span>
+        <span class="h1-b" data-where aria-live="off">In your pub.</span></h1>
+      <div class="hero-side">
+        <p class="lede">Breakout Box is an escape room in a cool box. Your guests crack the codes, the snacks and drinks inside are the prize, and you keep every penny they pay. No staff. No screens.</p>
+        <div class="hero-act">
+          <a class="btn btn-solid btn-lg" href="#get" data-order>Get your box</a>
+          <a class="btn btn-line btn-lg" href="#crack">Crack it open</a>
+        </div>
+        <p class="price">From £60 a month, or £350 to own</p>
+      </div>
+    </div>
+    <div class="hero-film">
+      <video class="film" data-film muted playsinline loop preload="metadata" aria-hidden="true" poster="media/film/hero-poster.jpg">
+        <source src="media/film/hero-phone.webm" type='video/webm; codecs="vp9"' media="(max-width: 700px)">
+        <source src="media/film/hero-phone.mp4" type='video/mp4; codecs="avc1.64001F"' media="(max-width: 700px)">
+        <source src="media/film/hero-1280.webm" type='video/webm; codecs="vp9"'>
+        <source src="media/film/hero-1280.mp4" type='video/mp4; codecs="avc1.64001F"'>
+      </video>
+      <button class="film-toggle" type="button" data-film-toggle aria-pressed="false">Pause film</button>
+    </div>
+  </section>
+
+  <section class="crack" id="crack" aria-labelledby="crack-h">
+    <div class="thread" data-thread aria-hidden="true"><i></i></div>
+    <div class="crack-head">
+      <h2 id="crack-h">Every game starts the same way. The first puzzle opens the box.</h2>
+      <p class="crack-sub" data-crack-sub>Crack this one and see what's inside for your venue. Three digits. They're on every cup, and they're our name.</p>
+    </div>
+
+    <div class="crack-grid">
+      <div class="stage" data-stage>
+        <div class="scene" data-scene aria-hidden="true"></div>
+        <div class="table-light" aria-hidden="true"></div>
+        <div class="box" data-box>
+          <picture class="box-inside">
+            <source srcset="media/inside.webp" type="image/webp">
+            <img src="media/inside.jpg" width="1070" height="820" alt="The Breakout Box open from above. A clear lock box with the Breakout Box logo, a black lock box, an aluminium case with two combination locks, and a bottle lock.">
+          </picture>
+          <button class="spot" type="button" data-spot="0" style="--x:20%;--y:37%" aria-label="The clear lock box"><span>1</span></button>
+          <button class="spot" type="button" data-spot="1" style="--x:44%;--y:40%" aria-label="The black lock box"><span>2</span></button>
+          <button class="spot" type="button" data-spot="2" style="--x:41%;--y:69%" aria-label="The aluminium case"><span>3</span></button>
+          <button class="spot" type="button" data-spot="3" style="--x:84%;--y:71%" aria-label="The bottle lock"><span>4</span></button>
+          <div class="lid" data-lid aria-hidden="true">
+            <picture>
+              <source srcset="media/lid.webp" type="image/webp">
+              <img src="media/lid.png" width="769" height="564" alt="">
+            </picture>
+          </div>
+        </div>
+
+        <div class="lock" data-lock role="group" aria-label="Combination lock, three wheels">
+          <div class="halo" data-halo aria-hidden="true"></div>
+          <div class="shackle" aria-hidden="true"></div>
+          <div class="lock-body">
+            <div class="wheel" data-wheel="0" tabindex="0" role="spinbutton" aria-label="First digit" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
+              <button class="w-btn up" type="button" tabindex="-1" aria-hidden="true" data-step="-1"></button>
+              <div class="w-win"><div class="w-strip" data-strip></div></div>
+              <button class="w-btn down" type="button" tabindex="-1" aria-hidden="true" data-step="1"></button>
+            </div>
+            <div class="wheel" data-wheel="1" tabindex="0" role="spinbutton" aria-label="Second digit" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
+              <button class="w-btn up" type="button" tabindex="-1" aria-hidden="true" data-step="-1"></button>
+              <div class="w-win"><div class="w-strip" data-strip></div></div>
+              <button class="w-btn down" type="button" tabindex="-1" aria-hidden="true" data-step="1"></button>
+            </div>
+            <div class="wheel" data-wheel="2" tabindex="0" role="spinbutton" aria-label="Third digit" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0">
+              <button class="w-btn up" type="button" tabindex="-1" aria-hidden="true" data-step="-1"></button>
+              <div class="w-win"><div class="w-strip" data-strip></div></div>
+              <button class="w-btn down" type="button" tabindex="-1" aria-hidden="true" data-step="1"></button>
+            </div>
+          </div>
+        </div>
+        <button class="just-open" type="button" data-just-open>Stuck? Open it for me</button>
+      </div>
+
+      <div class="panel" data-panel>
+        <div class="panel-closed" data-closed>
+          <p class="panel-big">Spin the wheels.</p>
+          <p class="panel-note">Tap the arrows, scroll a wheel or drag it. That click is the feeling your guests get, six times a game.</p>
+        </div>
+        <div class="panel-open" data-open hidden>
+          <h3 class="panel-q" id="venue-q">Who's opening it?</h3>
+          <div class="venues" role="radiogroup" aria-labelledby="venue-q" data-venues></div>
+          <div class="result" data-result hidden>
+          <ol class="items" data-items></ol>
+          <div class="money" data-money hidden>
+            <p class="money-big" data-money-big></p>
+            <p class="money-line" data-money-line></p>
+            <div class="bars" data-bars aria-hidden="true">
+              <div class="bar"><span class="bar-l">Rent</span><span class="bar-t"><i class="bar-f rent" data-bar-rent></i></span><span class="bar-v">£60</span></div>
+              <div class="bar"><span class="bar-l">Your takings</span><span class="bar-t"><i class="bar-f take" data-bar-take></i></span><span class="bar-v" data-bar-take-v></span></div>
+            </div>
+            <p class="money-ask">So why isn't it on your tables yet?</p>
+            <div class="money-act">
+              <a class="btn btn-solid" href="#get" data-order>Get your box</a>
+              <a class="btn btn-line" href="#numbers">Work out your own numbers</a>
+            </div>
+            <p class="money-small" data-money-small></p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-h">
+    <div class="sec-head">
+      <h2 id="how-h">No staff. No screens. Just a table that doesn't want to leave.</h2>
+      <p class="sec-sub">More people through the door, staying longer, spending more. That's the job it does, and nobody on your team has to run it.</p>
+    </div>
+    <div class="tiles">
+      <figure class="tile">
+        <div class="tile-m"><picture><source srcset="media/s2.webp" type="image/webp"><img src="media/s2.jpg" width="1440" height="864" alt="The Breakout Box lid strapped shut with a combination lock, a Breakout Box notepad, pencils and The Heist card." loading="lazy"></picture></div>
+        <figcaption><b>Set up in under 10 minutes.</b> Fill the cases and bottle locks with snacks, drinks or treats, strap it shut and hand it over.</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="tile-m"><video data-loop muted playsinline loop preload="none" poster="media/film/tile-team.jpg" aria-hidden="true"><source src="media/film/tile-team.webm" type='video/webm; codecs="vp9"'><source src="media/film/tile-team.mp4" type='video/mp4; codecs="avc1.64001F"'></video></div>
+        <figcaption><b>They play for 60 to 90 minutes.</b> Teams of up to six crack six puzzles. If they get stuck, the online hints help, not your staff.</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="tile-m"><video data-loop muted playsinline loop preload="none" poster="media/film/tile-family.jpg" aria-hidden="true"><source src="media/film/tile-family.webm" type='video/webm; codecs="vp9"'><source src="media/film/tile-family.mp4" type='video/mp4; codecs="avc1.64001F"'></video></div>
+        <figcaption><b>Families, friends and teams.</b> A rainy afternoon, a birthday table, a quiz night with a twist or a team day.</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="tile-m"><picture><source srcset="media/s1.webp" type="image/webp"><img src="media/s1.jpg" width="1500" height="1464" alt="The closed Breakout Box, a slate blue cool box with the Breakout Box label, on a wooden floor by a stone wall." loading="lazy"></picture></div>
+        <figcaption><b>Then it packs away.</b> A 70 litre cool box, under a metre long. No permanent spot, and it fits in a car boot.</figcaption>
+      </figure>
+    </div>
+    <div class="sec-act"><a class="btn btn-solid btn-lg" href="#get" data-order>Get your box</a></div>
+  </section>
+
+  <section class="numbers" id="numbers" aria-labelledby="num-h">
+    <div class="sec-head">
+      <h2 id="num-h">Work out your own numbers.</h2>
+      <p class="sec-sub">Every number here is yours to change. Drag the chart up or down to run more or fewer games.</p>
+    </div>
+    <div class="num-grid">
+      <form class="controls" data-controls onsubmit="return false">
+        <label class="ctl-sel"><span>What you run</span><select data-c="venue"></select></label>
+        <div class="ctl"><div class="ctl-top"><label for="c-gpw">Games a week, per box</label><output data-o="gpw"></output></div><input id="c-gpw" type="range" min="0.25" max="14" step="0.25" data-c="gpw"></div>
+        <div class="ctl"><div class="ctl-top"><label for="c-price">Your price a game</label><output data-o="price"></output></div><input id="c-price" type="range" min="5" max="80" step="1" data-c="price"></div>
+        <div class="ctl"><div class="ctl-top"><label for="c-extra">Extra sold with each game</label><output data-o="extra"></output></div><input id="c-extra" type="range" min="0" max="60" step="1" data-c="extra"><p class="ctl-note">Drinks, snacks or a food package. Leave it at £0 if you don't sell one.</p></div>
+        <div class="ctl"><div class="ctl-top"><span id="plan-l">Rent or own</span></div>
+          <div class="seg" role="radiogroup" aria-labelledby="plan-l" data-plan>
+            <button type="button" role="radio" aria-checked="true" data-plan-v="rent">Rent, £60 a month</button>
+            <button type="button" role="radio" aria-checked="false" data-plan-v="own">Own, £350 once</button>
+          </div></div>
+        <div class="ctl"><div class="ctl-top"><label for="c-boxes">Boxes</label><output data-o="boxes"></output></div><input id="c-boxes" type="range" min="1" max="10" step="1" data-c="boxes"></div>
+      </form>
+      <div class="chart-card">
+        <p class="kpi"><span class="kpi-n" data-o="month"></span><span class="kpi-l">a month from your boxes</span></p>
+        <p class="kpi-2" data-o="lead"></p>
+        <svg class="chart" data-chart viewBox="0 0 640 300" role="img" aria-label="Twelve months of profit after the box cost, as bars. Drag up or down to change games a week."></svg>
+        <p class="chart-hint">Drag the chart up or down</p>
+        <div class="num-act">
+          <a class="btn btn-solid btn-lg" href="#proposal" data-make-proposal>Make my proposal</a>
+        </div>
+        <p class="money-small">Estimates from the numbers you set, before what goes in the box. Owning has no ongoing cost, renting is £60 a box a month.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="proposal" id="proposal" aria-labelledby="prop-h">
+    <div class="sec-head">
+      <h2 id="prop-h">Your Breakout Box proposal.</h2>
+      <p class="sec-sub">Made from your numbers. Print it, save it as a PDF, or send the link to whoever signs it off.</p>
+    </div>
+    <article class="doc" data-doc>
+      <header class="doc-h">
+        <div><p class="doc-brand">Breakout Box</p><p class="doc-by">by OneFortyNine Games</p></div>
+        <div class="doc-meta"><p>Proposal for <b data-p="venue"></b></p><p data-p="date"></p></div>
+      </header>
+      <p class="doc-big" data-p="headline"></p>
+      <dl class="doc-rows">
+        <div><dt>The plan</dt><dd data-p="plan"></dd></div>
+        <div><dt>Games</dt><dd data-p="games"></dd></div>
+        <div><dt>Takings a month</dt><dd data-p="month"></dd></div>
+        <div><dt>Box cost</dt><dd data-p="cost"></dd></div>
+        <div><dt>First year, after the box</dt><dd data-p="year"></dd></div>
+        <div><dt>Pays for itself</dt><dd data-p="payback"></dd></div>
+      </dl>
+      <div class="doc-cols">
+        <div><h3>How it works at your venue</h3><ul data-p="how"></ul></div>
+        <div><h3>What you get</h3><ul>
+          <li>Two sets of the latest game in every box, six puzzles each</li>
+          <li>Boxes, cases and bottle top locks to fill</li>
+          <li>Branded notepads, pencils and six reusable cups with every order</li>
+          <li>The online hints portal for your guests</li>
+          <li>A 30 minute online training session</li>
+          <li>Product and marketing support, extra supplies and new games</li>
+          <li>Guests book with you, you set the price, no revenue share</li>
+        </ul></div>
+      </div>
+      <p class="doc-next"><b>Next step.</b> Reply to Owen at owen@onefortyninegames.com, or use the form on the Breakout Box site.</p>
+      <p class="doc-small">Estimates from the numbers set on the page, before what goes in the box. Prices from OneFortyNine Games, from £60 a month to rent or £350 to own.</p>
+    </article>
+    <div class="doc-act">
+      <button class="btn btn-solid btn-lg" type="button" data-print>Print or save as PDF</button>
+      <button class="btn btn-line btn-lg" type="button" data-share>Copy the link</button>
+      <a class="btn btn-line btn-lg" href="#get" data-order>Send it to Owen</a>
+      <p class="share-note" data-share-note aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="catch" id="catch" aria-labelledby="catch-h">
+    <div class="sec-head"><h2 id="catch-h">What's the catch?</h2><p class="sec-sub">The questions every venue asks first.</p></div>
+    <div class="qa">
+      <details><summary>How much space does it take?</summary><p>It's a 70 litre cool box, under a metre long. It doesn't need a permanent spot, and it fits in the boot of a car.</p></details>
+      <details><summary>Who has to run it?</summary><p>Nobody. Set up takes under 10 minutes, then your guests play on their own for 60 to 90 minutes. If they get stuck, the online hints help them.</p></details>
+      <details><summary>What does it cost, and what's your cut?</summary><p>From £60 a month to rent, or £350 to own outright with no ongoing cost or subscription. Guests book with you, you set the price and the contents, and there's no revenue share.</p></details>
+      <details><summary>Will people come back to play again?</summary><p>Every box comes with two sets of the latest game, and new games are on the way, so your regulars get something new to crack.</p></details>
+      <details><summary>What if something breaks or goes missing?</summary><p>Extra supplies are there to order whenever you need them, and you get product support from the people who make it.</p></details>
+      <details><summary>Why not a digital game or VR?</summary><p>No screens, no headsets and no tech to break. Your guests talk to each other, and the reaction is what they tell their friends about.</p></details>
+    </div>
+    <div class="sec-act"><a class="btn btn-solid btn-lg" href="#get" data-order>Get your box</a></div>
+  </section>
+
+  <section class="games" id="games" aria-labelledby="games-h">
+    <div class="sec-head"><h2 id="games-h">The Heist is the first game. It won't be the last.</h2></div>
+    <div class="game-row">
+      <article class="game game-heist">
+        <picture><source srcset="media/s4.webp" type="image/webp"><img src="media/s4.jpg" width="1500" height="1094" alt="The open aluminium case with egg crate foam, two black bottle locks and two frosted Breakout Box cups." loading="lazy"></picture>
+        <div class="game-t"><h3>The Heist</h3><p>Six puzzles, from Entry Point to The Vault. Teams of up to six, 60 to 90 minutes. Two sets in every box.</p></div>
+      </article>
+      <article class="game game-next" aria-label="More games on the way">
+        <div class="next-lock" aria-hidden="true"><span>?</span><span>?</span><span>?</span></div>
+        <div class="game-t"><h3>New games on the way</h3><p>Each new game plays in the same box, so the box you buy today keeps earning when your regulars have cracked The Heist.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="who" id="who" aria-labelledby="who-h">
+    <div class="who-in">
+      <div class="who-lock" aria-hidden="true"><span>1</span><span>4</span><span>9</span></div>
+      <div>
+        <h2 id="who-h">The code is our name.</h2>
+        <p>OneFortyNine Games is a games company from Swindon. The lock on every Breakout Box reads 1 4 9, and so does our name. We make games that get people off their screens and round a table together, and every one is built so the venue never has to run it.</p>
+        <p class="who-small">OneFortyNine Games Ltd, 149 High Street, Swindon, SN4 7AB. Company 17293756.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="get" id="get" aria-labelledby="get-h">
+    <div class="get-in">
+      <div class="get-copy">
+        <h2 id="get-h">Get your box.</h2>
+        <p>Tell us what you run and Owen will come back with a plan for your venue. Your numbers come with it, so there's nothing to type twice.</p>
+      </div>
+      <div class="get-form">
+        <div class="tabs" role="tablist" aria-label="How many boxes">
+          <button type="button" role="tab" aria-selected="true" aria-controls="f-one" id="t-one" data-tab="one">One to ten boxes</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="f-group" id="t-group" data-tab="group">A group of sites</button>
+        </div>
+        <div id="f-one" role="tabpanel" aria-labelledby="t-one" data-form="one"><form class="form" novalidate>
+          <p class="form-sum" data-sum></p>
+          <div class="fgrid">
+            <label>Your name<input name="name" autocomplete="name" required></label>
+            <label>Business<input name="business" autocomplete="organization" required></label>
+            <label>Email<input name="email" type="email" autocomplete="email" required></label>
+            <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+            <label>What you run<input name="venue" data-fill="venue"></label>
+            <label>Boxes and plan<input name="plan" data-fill="plan"></label>
+          </div>
+          <label class="full">Anything else<textarea name="note" rows="3"></textarea></label>
+          <button class="btn btn-solid btn-lg" type="submit" data-order>Send to Owen</button>
+          <p class="form-small">A prototype, nothing is sent or charged.</p>
+        </form></div>
+        <div id="f-group" role="tabpanel" aria-labelledby="t-group" data-form="group" hidden><form class="form" novalidate>
+          <p class="form-sum" data-sum></p>
+          <div class="fgrid">
+            <label>Your name<input name="name" autocomplete="name" required></label>
+            <label>Company<input name="company" autocomplete="organization" required></label>
+            <label>Email<input name="email" type="email" autocomplete="email" required></label>
+            <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+            <label>How many sites<input name="sites" inputmode="numeric"></label>
+            <label>Who else decides<input name="decides" placeholder="Area manager, ops director"></label>
+          </div>
+          <label class="check"><input type="checkbox" name="callback"> Prefer a call back? Owen will ring you.</label>
+          <button class="btn btn-solid btn-lg" type="submit" data-order>Send to Owen</button>
+          <p class="form-small">A prototype, nothing is sent or charged.</p>
+        </form></div>
+        <div class="sent" data-sent hidden tabindex="-1">
+          <div class="sent-lock" aria-hidden="true"><span>1</span><span>4</span><span>9</span></div>
+          <p class="sent-big">Locked in.</p>
+          <p>Owen will be in touch with a plan for your venue. This is a prototype, so nothing was sent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>OneFortyNine Games Ltd, 149 High Street, Swindon, SN4 7AB. Registered in England and Wales, company 17293756.</p>
+  <p>Film and venue photos from Mixkit, free licence. Not OneFortyNine Games' customers or venues. Product photos from OneFortyNine Games.</p>
+</footer>
+
+<script src="js/site.js" defer></script>
+<script src="js/page.js" defer></script>
+<script src="../catalogue.js" defer></script>
+<script src="js/added.js" defer></script>
+<script src="js/theme.js" defer></script>
+</body>
+</html>

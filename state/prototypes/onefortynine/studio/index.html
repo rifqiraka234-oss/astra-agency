@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breakout Box studio | Build your site</title>
+<meta name="description" content="Pick the colours, type, first screen, headline, sections and pages for the Breakout Box site, and see it change as you go.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d1d1f'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='22' fill='%23ff6a3d' text-anchor='middle'%3E149%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/mona-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="studio.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-brand">
+    <p class="top-name">Breakout Box studio</p>
+    <p class="top-for">For Owen at OneFortyNine Games, made by Astra</p>
+  </div>
+  <div class="views" role="tablist" aria-label="Studio view">
+    <button type="button" role="tab" aria-selected="true" data-view="design">Design</button>
+    <button type="button" role="tab" aria-selected="false" data-view="catalogue">Catalogue <span class="count" data-plan-count></span></button>
+  </div>
+  <div class="device" role="radiogroup" aria-label="Preview size">
+    <button type="button" role="radio" aria-checked="true" data-device="desk">Desktop</button>
+    <button type="button" role="radio" aria-checked="false" data-device="phone">Phone</button>
+  </div>
+  <a class="btn btn-solid" href="#send" data-send-jump>Send my choices</a>
+</header>
+
+<main class="studio">
+  <section class="side" aria-labelledby="side-h">
+    <div class="intro">
+      <h1 id="side-h">Build your site.</h1>
+      <p>Pick a look, a first screen and the sections you want, then choose pages and tools from the catalogue. Your site changes as you go. Astra's pick is marked in every group, with the reason. When it feels right, send your choices to Raka.</p>
+      <a class="btn btn-line" href="#send" data-send-jump>Done? Send my choices</a>
+    </div>
+
+    <fieldset class="group" data-group="palette">
+      <legend>Colours</legend>
+      <p class="group-note">Start from one of these, then make it yours below.</p>
+      <div class="opts" role="radiogroup" aria-label="Colours" data-opts="palette"></div>
+      <div class="mix" data-mix>
+        <p class="mix-h">Make it yours</p>
+        <p class="group-note">Change any colour and the site follows. Keep your own navy and red, or try something new.</p>
+        <div class="mix-rows" data-mix-rows></div>
+        <p class="read" data-read aria-live="polite"></p>
+      </div>
+    </fieldset>
+
+    <fieldset class="group" data-group="fonts">
+      <legend>Fonts</legend>
+      <p class="sub-h" id="fh-l">Headlines</p>
+      <div class="fonts" role="radiogroup" aria-labelledby="fh-l" data-fonts="h"></div>
+      <p class="sub-h" id="fb-l">Body text</p>
+      <div class="fonts fonts-b" role="radiogroup" aria-labelledby="fb-l" data-fonts="b"></div>
+    </fieldset>
+
+    <fieldset class="group" data-group="hero">
+      <legend>First screen</legend>
+      <div class="opts" role="radiogroup" aria-label="First screen" data-opts="hero"></div>
+    </fieldset>
+
+    <fieldset class="group" data-group="headline">
+      <legend>Headline</legend>
+      <div class="opts" role="radiogroup" aria-label="Headline" data-opts="headline"></div>
+    </fieldset>
+
+    <fieldset class="group" data-group="sections">
+      <legend>Sections, and their order</legend>
+      <p class="group-note">Your first screen and the Get your box form always stay. Untick a section to hide it, and move it up or down.</p>
+      <ol class="secs" data-secs></ol>
+    </fieldset>
+
+    <section class="group plan" aria-labelledby="plan-h">
+      <h2 id="plan-h">Your plan.</h2>
+      <p class="group-note">Pages, tools and ideas you've picked from the catalogue. Each one comes from the call, your site or your market.</p>
+      <div data-plan></div>
+      <button class="btn btn-line" type="button" data-open-catalogue>Open the catalogue</button>
+    </section>
+
+    <section class="group send" id="send" aria-labelledby="send-h">
+      <h2 id="send-h">Send your choices.</h2>
+      <p class="group-note" data-summary></p>
+      <form name="studio-choices" method="POST" data-netlify="true" netlify-honeypot="website" data-form novalidate>
+        <input type="hidden" name="form-name" value="studio-choices">
+        <input type="hidden" name="choices" data-choices>
+        <p class="hp"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></p>
+        <label>Your name<input name="name" autocomplete="name" value="Owen Warne"></label>
+        <label>Ideas, likes and dislikes<textarea name="note" rows="4" placeholder="Anything you'd change, add or take out"></textarea></label>
+        <div class="send-act">
+          <button class="btn btn-solid btn-lg" type="submit" data-send>Send my choices</button>
+          <button class="btn btn-line btn-lg" type="button" data-copy-link>Copy a link to these choices</button>
+        </div>
+        <p class="send-note" data-send-note aria-live="polite"></p>
+      </form>
+    </section>
+  </section>
+
+  <section class="catalogue" aria-labelledby="cat-h" data-catalogue hidden>
+    <div class="cat-head">
+      <h2 id="cat-h">Everything we can build for Breakout Box.</h2>
+      <p>Every idea here comes from what you told us on the call, your site and your market. Tick what you want and it goes into your plan. Our picks are marked, and the things already in your site have a link to see them.</p>
+    </div>
+    <div class="cat-tools">
+      <label class="search"><span>Search</span><input type="search" placeholder="Pubs, booking, film" data-cat-search></label>
+      <div class="filter" role="group" aria-label="Show" data-cat-when>
+        <button type="button" aria-pressed="true" data-when="all">All</button>
+        <button type="button" aria-pressed="false" data-when="built">In your site</button>
+        <button type="button" aria-pressed="false" data-when="next">Next</button>
+        <button type="button" aria-pressed="false" data-when="later">Later</button>
+      </div>
+      <div class="filter" role="group" aria-label="What it does for you" data-cat-goal></div>
+    </div>
+    <div data-cat-list></div>
+  </section>
+
+  <section class="stage" aria-label="Your site, live preview">
+    <div class="frame" data-frame>
+      <iframe src="preview/index.html" title="Your Breakout Box site, live preview" data-preview></iframe>
+    </div>
+  </section>
+</main>
+
+<div class="toast" data-toast hidden role="status" aria-live="polite">
+  <p data-toast-text></p>
+  <button type="button" class="btn btn-solid" data-toast-see>See it</button>
+</div>
+<script src="catalogue.js" defer></script>
+<script src="studio.js" defer></script>
+</body>
+</html>

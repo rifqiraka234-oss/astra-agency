@@ -1,0 +1,131 @@
+/* The studio's switches. The preview is his v2 site, these rules restyle it live from the choices on the studio page. */
+@font-face { font-family: "Fraunces"; src: url("../fonts/fraunces-latin-full-normal.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+
+/* ---------- palettes ---------- */
+/* his brand today, navy, red and orange on white */
+html[data-palette="brand"] {
+  --ink: #09004a; --ink-2: #2d2a63; --muted: #5d5a85; --line: #d9d8e8; --soft: #f2f1f8; --hot: #ff0000;
+  --grad: linear-gradient(100deg, #ff914d 0%, #ff4d2e 55%, #ff0000 100%);
+}
+html[data-palette="brand"] .get { background: linear-gradient(110deg, #09004a 0%, #1d0f86 70%, #2c18a8 100%); }
+html[data-palette="brand"] .get .btn-solid { background: #fff; color: #09004a; }
+html[data-palette="brand"] .get .get-form .btn-solid { background: #09004a; color: #fff; }
+
+/* the two dark palettes share one set of rules */
+html.dark body { background: var(--bg); color: var(--ink); }
+html.dark .hdr { background: var(--hdr-bg); border-bottom-color: var(--line); }
+html.dark .proto { background: var(--deep); color: var(--muted); }
+html.dark .hero, html.dark .how, html.dark .proposal, html.dark .games, html.dark .who { background: var(--bg); }
+html.dark .numbers, html.dark .catch { background: var(--soft); }
+html.dark .crack { background: var(--crack); }
+html.dark .controls, html.dark .chart-card, html.dark .doc, html.dark .get-form, html.dark .tile-m, html.dark .pz-b { background: var(--card); color: var(--ink); }
+html.dark .doc { border-color: var(--line); }
+html.dark .btn-solid { background: var(--accent); color: var(--on-accent); }
+html.dark .btn-solid:hover { background: var(--accent-hi); }
+html.dark .btn-line { background: transparent; color: var(--ink); border-color: var(--line); }
+html.dark .btn-line:hover { border-color: var(--ink); }
+html.dark .seg, html.dark .tabs, html.dark .form-sum { background: var(--bg); }
+html.dark .seg button[aria-checked="true"], html.dark .tabs button[aria-selected="true"] { background: var(--card-hi); color: var(--ink); }
+html.dark .ctl-sel select, html.dark .form input:not([type="checkbox"]), html.dark .form textarea { background: var(--bg); color: var(--ink); border-color: var(--line); }
+html.dark .w-strip span { color: #1d1d1f; }
+html.dark .spot, html.dark .item-n, html.dark .who-lock span:nth-child(2) { color: var(--on-accent); }
+html.dark .who-lock span { background: var(--card); color: var(--ink); }
+html.dark .bar-t { background: rgba(255,255,255,.12); }
+html.dark .bar-f.rent { background: var(--ink); }
+html.dark .game-heist .game-t { background: var(--card); }
+html.dark .game-next { background: var(--card-hi); }
+html.dark .get { background: var(--band); }
+html.dark .get .btn-solid { background: var(--accent); color: var(--on-accent); }
+html.dark .get .get-form .btn-solid { background: var(--accent); color: var(--on-accent); }
+html.dark .get .get-form p { color: var(--ink-2); }
+html.dark .foot { background: var(--deep); }
+html.dark .film-toggle { background: var(--card); color: var(--ink); }
+html.dark .thread { background: var(--line); }
+html.dark .chart .zero { stroke: var(--ink); }
+html.dark .chart .pay { fill: var(--ink); }
+html.dark .chart .bar-n { fill: rgba(255,255,255,.18); }
+html.dark input[type="range"] { background: linear-gradient(90deg, var(--accent) var(--f, 50%), rgba(255,255,255,.18) var(--f, 50%)); }
+
+/* the games table, green baize under a lamp, brass and cream */
+html[data-palette="baize"] {
+  --bg: #0b2a1f; --soft: #0f3427; --deep: #06170f; --card: #123d2e; --card-hi: #1a4c39;
+  --ink: #f4ecdd; --ink-2: rgba(244,236,221,.84); --muted: rgba(244,236,221,.64); --line: rgba(244,236,221,.16); --hot: #d8b46a;
+  --grad: linear-gradient(100deg, #f1dba6 0%, #d8b46a 50%, #b8893e 100%);
+  --accent: #d8b46a; --accent-hi: #ecd29a; --on-accent: #0b2a1f;
+  --hdr-bg: rgba(11,42,31,.88);
+  --crack: radial-gradient(60% 60% at 50% 45%, #2b6d51 0%, #1c5039 30%, #0f3427 62%, #0b2a1f 100%);
+  --band: linear-gradient(110deg, #123d2e 0%, #1f5a43 60%, #2b6d51 100%);
+}
+/* ink and ember, near black with a hot orange */
+html[data-palette="ember"] {
+  --bg: #0e0e10; --soft: #151518; --deep: #08080a; --card: #1c1c20; --card-hi: #26262b;
+  --ink: #f5f5f7; --ink-2: rgba(245,245,247,.82); --muted: rgba(245,245,247,.6); --line: rgba(255,255,255,.14); --hot: #ff6a1a;
+  --grad: linear-gradient(100deg, #ffb347 0%, #ff6a1a 50%, #ff3d00 100%);
+  --accent: #ff6a1a; --accent-hi: #ff8a45; --on-accent: #0e0e10;
+  --hdr-bg: rgba(14,14,16,.88);
+  --crack: radial-gradient(60% 60% at 50% 45%, #2a1a12 0%, #1a1412 40%, #0e0e10 100%);
+  --band: linear-gradient(110deg, #3d1404 0%, #b33a00 60%, #ff6a1a 100%);
+}
+
+/* ---------- type ---------- */
+/* a chunky soft serif, the closest open licence face to the Cooper Black on his site today */
+html[data-type="soft"] h1, html[data-type="soft"] h2, html[data-type="soft"] .panel-q, html[data-type="soft"] .panel-big,
+html[data-type="soft"] .money-big, html[data-type="soft"] .kpi-n, html[data-type="soft"] .doc-big, html[data-type="soft"] .brand-name,
+html[data-type="soft"] .game-t h3, html[data-type="soft"] .sent-big, html[data-type="soft"] .doc-brand {
+  font-family: "Fraunces", Georgia, serif; font-weight: 820; font-variation-settings: "SOFT" 100, "WONK" 0, "opsz" 144; letter-spacing: -0.025em;
+}
+
+/* ---------- hero layouts ---------- */
+/* centred, the headline over the middle, the film as a wide tile below */
+html[data-hero="centred"] .hero { grid-template-columns: minmax(0, 1fr); }
+html[data-hero="centred"] .hero-in { text-align: center; max-width: 1080px; margin: 0 auto; padding-top: 20px; }
+html[data-hero="centred"] .lede { margin-left: auto; margin-right: auto; }
+html[data-hero="centred"] .hero-act { justify-content: center; }
+html[data-hero="centred"] .hero-film { height: 62svh; min-height: 340px; }
+/* the film band, full width on top, the words under it */
+html[data-hero="band"] .hero { grid-template-columns: minmax(0, 1fr); padding-left: 0; padding-right: 0; }
+html[data-hero="band"] .hero-film { order: -1; border-radius: 0; height: 58svh; min-height: 320px; max-height: none; animation: none; }
+html[data-hero="band"] .hero-in { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: end; padding: 0 var(--pad) 40px; }
+@media (max-width: 700px) {
+  html[data-hero="band"] .hero-in { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* hidden always wins, the changing line and any section Owen switches off */
+.h1-b[hidden], main > section[hidden] { display: none !important; }
+
+/* ---------- the builder, any palette and any of the curated fonts (all SIL OFL, licences in fonts/) ---------- */
+@font-face { font-family: "Bricolage Grotesque"; src: url("../fonts/bricolage-grotesque-latin-wght-normal.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("../fonts/instrument-serif-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Instrument Sans"; src: url("../fonts/instrument-sans-latin-wght-normal.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Schibsted Grotesk"; src: url("../fonts/schibsted-grotesk-latin-wght-normal.woff2") format("woff2"); font-weight: 400 900; font-display: swap; }
+@font-face { font-family: "Unbounded"; src: url("../fonts/unbounded-latin-wght-normal.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Young Serif"; src: url("../fonts/young-serif-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
+html[data-fonts] body { font-family: var(--font-b); }
+html[data-fonts] h1, html[data-fonts] h2, html[data-fonts] .panel-q, html[data-fonts] .panel-big, html[data-fonts] .money-big,
+html[data-fonts] .kpi-n, html[data-fonts] .doc-big, html[data-fonts] .brand-name, html[data-fonts] .game-t h3, html[data-fonts] .sent-big,
+html[data-fonts] .doc-brand {
+  font-family: var(--font-h); font-weight: var(--font-h-w); font-variation-settings: var(--font-h-var); letter-spacing: var(--font-h-ls);
+}
+/* Unbounded is very wide, so its headlines step down a size */
+html[data-fh="unbounded"] h1 { font-size: clamp(34px, 4.1vw, 70px); }
+html[data-fh="unbounded"] h2 { font-size: clamp(28px, 3.4vw, 54px); }
+html[data-fh="unbounded"] .money-big { font-size: clamp(60px, 7vw, 116px); }
+
+/* a palette he makes himself, on a light background, the dark one uses the shared dark rules above */
+html[data-palette="custom"] .btn-solid { background: var(--accent); color: var(--on-accent); }
+html[data-palette="custom"] .btn-solid:hover { background: var(--accent-hi); }
+html[data-palette="custom"] .crack { background: var(--crack); }
+html[data-palette="custom"] .get { background: var(--band); color: var(--on-band); }
+html[data-palette="custom"] .get h2, html[data-palette="custom"] .get .get-copy p { color: var(--on-band); }
+html[data-palette="custom"] .get .get-copy p { opacity: .92; }
+html[data-palette="custom"] .get .get-form .btn-solid { background: var(--accent); color: var(--on-accent); }
+html[data-palette="custom"] .spot, html[data-palette="custom"] .item-n { color: var(--on-band); }
+html[data-palette="custom"] input[type="range"] { background: linear-gradient(90deg, var(--accent) var(--f, 50%), var(--line) var(--f, 50%)); }
+
+/* inputs fit their column whatever the font width */
+.form label { min-width: 0; }
+.form input:not([type="checkbox"]), .form textarea { width: 100%; min-width: 0; box-sizing: border-box; }
+
+/* sections the catalogue jumps to clear the fixed header */
+main > section { scroll-margin-top: 96px; }
