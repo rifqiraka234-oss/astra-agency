@@ -126,3 +126,6 @@ html[data-palette="custom"] input[type="range"] { background: linear-gradient(90
 /* inputs fit their column whatever the font width */
 .form label { min-width: 0; }
 .form input:not([type="checkbox"]), .form textarea { width: 100%; min-width: 0; box-sizing: border-box; }
+
+/* sections the catalogue jumps to clear the fixed header */
+main > section { scroll-margin-top: 96px; }

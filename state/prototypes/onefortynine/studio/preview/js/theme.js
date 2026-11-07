@@ -77,6 +77,7 @@
   window.addEventListener('message', function (e) {
     if (e.origin !== location.origin) return;
     if (e.data && e.data.type === 'studio') apply(e.data.state);
+    if (e.data && e.data.type === 'scrollTo') { var el = document.getElementById(e.data.id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
   try { var q = new URLSearchParams(location.search).get('s'); if (q) apply(JSON.parse(decodeURIComponent(escape(atob(q))))); } catch (e) {}
   if (window.parent !== window) window.parent.postMessage({ type: 'preview-ready' }, location.origin);

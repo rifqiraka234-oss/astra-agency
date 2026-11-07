@@ -62,3 +62,18 @@ deploy and send one test submission. No email address is printed on the page.
   (17.6 to 1, buttons 5.0 to 1), a plum and gold dark palette with Young Serif and Instrument Sans (dark mode on, button text
   black on gold), a bad pair warns (1.4 to 1), Unbounded doesn't spill, the link round trip keeps colours and fonts, 0 page
   errors. A wide body font pushed form inputs past their card, fixed (inputs shrink to their column).
+
+## v3, the catalogue (Raka 7 Nov, "a way also to choose the different webpages? Like a catalogue ... all the things we can build
+for him. Based on his needs and call")
+
+`studio/catalogue.js`, 70 ideas in nine groups, pages for each buyer (9), tools that sell for you (11), proof and trust (7), games
+and products (7), for the players (6), your customers' account (7), tools that give you time back (7), getting found and growing
+(10), brand and look (6). Each card says what it is, why it's there (a quote from the 3 Nov call where there is one, otherwise the
+research reason), what it does for him (more enquiries, look established, save your time, bring people back, grow next year) and
+when (6 in his site now with a See it link, 24 next, 40 later, our picks marked). He searches, filters by when and by goal, adds
+to his plan, and the plan sits in the design panel with Remove links, goes into the summary he sends and into the share link.
+The old "Pages to add" list is replaced by it. No prices anywhere, quoting stays Raka's.
+
+Tested, 70 cards in 9 groups, Next filter 24, Next plus Save your time 5, search "seasonal" 2, adding and removing updates the
+count, plan and summary, See it switches to Design and scrolls the preview to the section clear of its header, the link reopens
+the same plan, phone with the filters scrolling in one row, no sideways scroll, 0 page errors. The builder test still passes.

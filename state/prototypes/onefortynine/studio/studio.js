@@ -58,18 +58,8 @@
     { id: 'proposal', name: 'Your proposal' }, { id: 'catch', name: 'What’s the catch' }, { id: 'games', name: 'Games' },
     { id: 'who', name: 'Who we are' }
   ];
-  var PAGES = [
-    { id: 'parks', name: 'A page for holiday parks', why: 'Their own story, numbers and questions.', when: 'Our pick for now' },
-    { id: 'pubs', name: 'A page for pubs and bars', why: 'Quiet nights, quiz nights, longer stays.', when: 'Our pick for now' },
-    { id: 'cafes', name: 'A page for cafés', why: 'Quiet mornings, the gap after lunch, coffee mornings.', when: 'Next' },
-    { id: 'training', name: 'A page for training and team days', why: 'Watch who leads, who listens and who falls apart.', when: 'Next' },
-    { id: 'lets', name: 'A page for holiday lets and lodges', why: 'A premium extra on the stay.', when: 'Next' },
-    { id: 'games', name: 'A games page that grows', why: 'Every new game and seasonal edition gets its own spot.', when: 'When the next game is ready' },
-    { id: 'stories', name: 'Customer stories', why: 'Your first venues, in their words, so the next ones can see it works.', when: 'When the first trial ends' },
-    { id: 'reorder', name: 'Log in to reorder', why: 'Venues reorder boxes and supplies without an email.', when: 'Later' }
-  ];
   var DEFAULT = { palette: 'daylight', custom: Object.assign({}, PRESETS.daylight), fonts: { h: 'mona', b: 'mona' }, hero: 'split', headline: 'money',
-    sections: SECTIONS.map(function (s) { return { id: s.id, on: true }; }), pages: ['parks', 'pubs'] };
+    sections: SECTIONS.map(function (s) { return { id: s.id, on: true }; }), cat: ['p-parks', 'p-pubs'] };
   var S = JSON.parse(JSON.stringify(DEFAULT));
   try {
     var q = new URLSearchParams(location.search).get('s');
@@ -78,7 +68,7 @@
       ['palette', 'hero', 'headline'].forEach(function (k) { if (typeof o[k] === 'string') S[k] = o[k]; });
       if (o.custom) MIX.forEach(function (m) { if (/^#[0-9a-f]{6}$/i.test(o.custom[m.k] || '')) S.custom[m.k] = o.custom[m.k]; });
       if (o.fonts) { if (o.fonts.h) S.fonts.h = o.fonts.h; if (o.fonts.b) S.fonts.b = o.fonts.b; }
-      if (Array.isArray(o.sections)) S.sections = o.sections; if (Array.isArray(o.pages)) S.pages = o.pages;
+      if (Array.isArray(o.sections)) S.sections = o.sections; if (Array.isArray(o.cat)) S.cat = o.cat;
     }
   } catch (e) {}
 
@@ -159,18 +149,80 @@
     var t = S.sections[i]; S.sections[i] = S.sections[j]; S.sections[j] = t; update();
     var btn = secList.children[j] && secList.children[j].querySelector(cls); if (btn && !btn.disabled) btn.focus(); else if (secList.children[j]) secList.children[j].querySelector('input').focus();
   }
-  var pageList = $('[data-pages]');
-  PAGES.forEach(function (pg) {
-    var li = document.createElement('li');
-    li.innerHTML = '<label><input type="checkbox" value="' + pg.id + '"' + (S.pages.indexOf(pg.id) > -1 ? ' checked' : '') + '><span><span class="pg-name">' + pg.name + '</span><span class="pg-why">' + pg.why + '</span><span class="pg-when">' + pg.when + '</span></span></label>';
-    li.querySelector('input').addEventListener('change', function (e) {
-      var k = S.pages.indexOf(pg.id); if (e.target.checked && k < 0) S.pages.push(pg.id); if (!e.target.checked && k > -1) S.pages.splice(k, 1); update();
-    });
-    pageList.appendChild(li);
+  var frame = $('[data-preview]');
+
+  /* ---------- the catalogue, everything we could build, and his plan ---------- */
+  var CAT = window.CATALOGUE || { cats: [], goals: [], items: [] };
+  var WHEN = { built: 'In your site now', next: 'Next', later: 'Later' };
+  var F = { when: 'all', goal: null, q: '' };
+  var catList = $('[data-cat-list]'), goalBox = $('[data-cat-goal]');
+  function item(id) { return CAT.items.filter(function (i) { return i.id === id; })[0]; }
+  function goalName(id) { var g = CAT.goals.filter(function (x) { return x.id === id; })[0]; return g ? g.name : id; }
+  CAT.goals.forEach(function (g) {
+    var b = document.createElement('button'); b.type = 'button'; b.dataset.goal = g.id; b.textContent = g.name; b.setAttribute('aria-pressed', 'false');
+    b.addEventListener('click', function () { F.goal = F.goal === g.id ? null : g.id; drawCat(); });
+    goalBox.appendChild(b);
   });
+  $$('[data-when]').forEach(function (b) { b.addEventListener('click', function () { F.when = b.dataset.when; drawCat(); }); });
+  $('[data-cat-search]').addEventListener('input', function (e) { F.q = e.target.value; drawCat(); });
+  function card(i) {
+    var picked = S.cat.indexOf(i.id) > -1, built = i.when === 'built';
+    var act = built
+      ? '<button type="button" class="btn btn-line" data-see="' + i.see + '">See it</button>'
+      : '<button type="button" class="btn ' + (picked ? 'btn-solid' : 'btn-line') + '" aria-pressed="' + picked + '" data-pick="' + i.id + '">' + (picked ? 'In your plan' : 'Add to my plan') + '</button>';
+    return '<article class="card' + (picked ? ' picked' : '') + (built ? ' built' : '') + '">' +
+      '<p class="when when-' + i.when + '">' + WHEN[i.when] + (i.pick ? ', our pick' : '') + '</p>' +
+      '<h4>' + i.n + '</h4><p class="card-w">' + i.w + '</p><p class="card-y">' + i.y + '</p>' +
+      '<p class="card-g">' + i.g.map(goalName).join(', ') + '</p><div class="card-act">' + act + '</div></article>';
+  }
+  function drawCat() {
+    $$('[data-when]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.when === F.when)); });
+    $$('[data-goal]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.goal === F.goal)); });
+    var q = F.q.toLowerCase().trim(), shown = 0;
+    var html = CAT.cats.map(function (c) {
+      var its = CAT.items.filter(function (i) {
+        return i.c === c.id && (F.when === 'all' || i.when === F.when) && (!F.goal || i.g.indexOf(F.goal) > -1) && (!q || (i.n + ' ' + i.w + ' ' + i.y).toLowerCase().indexOf(q) > -1);
+      });
+      shown += its.length;
+      return its.length ? '<section class="cat-sec"><h3>' + c.name + ' <span>' + its.length + '</span></h3><div class="cards">' + its.map(card).join('') + '</div></section>' : '';
+    }).join('');
+    catList.innerHTML = html || '<p class="cat-empty">Nothing matches that. Try another word, or show all.</p>';
+    $$('[data-pick]', catList).forEach(function (b) { b.addEventListener('click', function () { togglePick(b.dataset.pick); var nb = $('[data-pick="' + b.dataset.pick + '"]', catList); if (nb) nb.focus(); }); });
+    $$('[data-see]', catList).forEach(function (b) { b.addEventListener('click', function () { see(b.dataset.see); }); });
+  }
+  function togglePick(id) { var k = S.cat.indexOf(id); if (k > -1) S.cat.splice(k, 1); else S.cat.push(id); update(); }
+  function see(id) {
+    if (id === 'hints') { window.open('preview/play/the-heist/', '_blank', 'noopener'); return; }
+    setView('design');
+    setTimeout(function () { try { frame.contentWindow.postMessage({ type: 'scrollTo', id: id }, location.origin); } catch (e) {} }, 60);
+  }
+  function drawPlan() {
+    var box = $('[data-plan]'), picked = S.cat.map(item).filter(Boolean);
+    $('[data-plan-count]').textContent = picked.length ? String(picked.length) : '';
+    if (!picked.length) { box.innerHTML = '<p class="plan-empty">Nothing yet. Open the catalogue and add what you want.</p>'; return; }
+    box.innerHTML = ['next', 'later'].map(function (w) {
+      var its = picked.filter(function (i) { return i.when === w; });
+      return its.length ? '<p class="plan-h">' + (w === 'next' ? 'Next' : 'Later') + '</p><ul class="plan-list">' + its.map(function (i) { return '<li><span>' + i.n + '</span><button type="button" class="plan-x" data-unpick="' + i.id + '" aria-label="Remove ' + i.n + '">Remove</button></li>'; }).join('') + '</ul>' : '';
+    }).join('');
+    $$('[data-unpick]', box).forEach(function (b) { b.addEventListener('click', function () { togglePick(b.dataset.unpick); }); });
+  }
+  function planText() {
+    var picked = S.cat.map(item).filter(Boolean);
+    if (!picked.length) return 'Plan, nothing picked yet.';
+    var nx = picked.filter(function (i) { return i.when === 'next'; }).map(function (i) { return i.n; });
+    var lt = picked.filter(function (i) { return i.when === 'later'; }).map(function (i) { return i.n; });
+    return 'Plan, next, ' + (nx.length ? nx.join(', ') : 'nothing') + '. Later, ' + (lt.length ? lt.join(', ') : 'nothing') + '.';
+  }
+  function setView(v) {
+    document.body.dataset.view = v;
+    $$('[data-view]').forEach(function (b) { b.setAttribute('aria-selected', String(b.dataset.view === v)); });
+    $('[data-catalogue]').hidden = v !== 'catalogue';
+    if (v === 'catalogue') { var pl = $('.plan'); if (pl && window.innerWidth > 980) $('.side').scrollTo({ top: pl.offsetTop - 20, behavior: 'smooth' }); }
+  }
+  $$('[data-view]').forEach(function (b) { b.addEventListener('click', function () { setView(b.dataset.view); }); });
+  $('[data-open-catalogue]').addEventListener('click', function () { setView('catalogue'); window.scrollTo({ top: 0 }); });
 
   /* ---------- keep the preview, the summary and the form in step ---------- */
-  var frame = $('[data-preview]');
   function send() { try { frame.contentWindow.postMessage({ type: 'studio', state: S }, location.origin); } catch (e) {} }
   window.addEventListener('message', function (e) { if (e.origin === location.origin && e.data && e.data.type === 'preview-ready') send(); });
   frame.addEventListener('load', send);
@@ -178,10 +230,9 @@
   function fontName(k, v) { var f = FONTS[k].filter(function (x) { return x.v === v; })[0]; return f ? f.name : v; }
   function summary() {
     var on = S.sections.filter(function (s) { return s.on; }).map(function (s) { return SECTIONS.filter(function (x) { return x.id === s.id; })[0].name; });
-    var pages = PAGES.filter(function (p) { return S.pages.indexOf(p.id) > -1; }).map(function (p) { return p.name.replace(/^A page for /, ''); });
     var colours = S.palette === 'custom' ? 'Colours, my own, background ' + S.custom.bg + ', text ' + S.custom.ink + ', buttons ' + S.custom.accent + ', highlight ' + S.custom.g1 + ' to ' + S.custom.g2 : 'Colours, ' + nameOf('palette', S.palette);
     return colours + '. Fonts, ' + fontName('h', S.fonts.h) + ' for headlines, ' + fontName('b', S.fonts.b) + ' for text. First screen, ' + nameOf('hero', S.hero) + '. Headline, ' + nameOf('headline', S.headline) +
-      '\nSections, in order, ' + (on.length ? on.join(', ') : 'none') + '.\nPages to add, ' + (pages.length ? pages.join(', ') : 'none') + '.';
+      '\nSections, in order, ' + (on.length ? on.join(', ') : 'none') + '.\n' + planText();
   }
   function readability() {
     var c = S.custom, t = contrast(c.ink, c.bg), b = contrast(c.accent, '#ffffff') >= contrast(c.accent, '#111111') ? contrast(c.accent, '#ffffff') : contrast(c.accent, '#111111');
@@ -199,6 +250,8 @@
     $('[data-mix]').classList.toggle('on', S.palette === 'custom');
     readability();
     drawSecs();
+    drawPlan();
+    drawCat();
     $('[data-summary]').textContent = summary();
     $('[data-choices]').value = summary();
     send();
@@ -231,5 +284,6 @@
   });
   $$('[data-send-jump]').forEach(function (j) { j.addEventListener('click', function (e) { e.preventDefault(); $('#send').scrollIntoView({ behavior: 'smooth', block: 'start' }); }); });
 
+  setView('design');
   update();
 })();
