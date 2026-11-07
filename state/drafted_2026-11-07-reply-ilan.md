@@ -8,7 +8,9 @@
 > in lemlist, so the school isn't named yet. Warm, wrote first, reply in kind and ask about the school so we learn what it is
 > before any pitch. Not in the queue before today.
 
+> Accept event 7 Nov 12.16 UTC names the company, Aerials Amsterdam, aerials.amsterdam, so the reply names it.
+
 REPLY
 ```
-Hi Ilan, doing well, thanks! A busy week here building AI outreach flows for small businesses. How about you, how's the school going?
+Hi Ilan, doing well, thanks! A busy week here building AI outreach flows for small businesses. How about you, how's Aerials Amsterdam going?
 ```
