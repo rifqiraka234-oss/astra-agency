@@ -1,6 +1,4 @@
-NOT READY, the approved block two says trade buyers "only reach you through a form on the wholesale page", and that is false three ways on the live site (7 Nov 07.32 UTC). The wholesale page's "Also available on Rekki" links to a live Rekki supplier listing with a full kitchen catalogue and a new customer sample box, the footer of every page carries "Wholesale & General Enquiries: thedairy@ampersanddairy.com", and the Ampersand Case (40 X 200g) sits in the shop with Add to cart. A second fact is off too, the case's own page sells it to "delis, farm shops, and independent retailers", while kitchens buy logs, sheets and portions. And the checker fails the text on two counts that can only be fixed by changing words, block two's sentence is 31 words against the SKETCHB cap of 30, and ctc_pjQ8taLCbmyw4PtzQ is assigned variant A by its contactId (the text says "outreach plan", not "AI powered outreach flow", so it stays inside the A/B test). Not rewritten, per the brief. Raka's call on new wording. Ownership is confirmed.
-
-# NOT SENT. Approved by Raka 7 Nov, 'Send all at 07.28', scheduled Sun 8 Nov 07.28 Amsterdam.
+# NOT SENT. REWORDED after the first version failed falsification (Rekki, the trade email). New text approved by Raka 7 Nov ~07.45 UTC, "Send tomorrow at 07.28?", scheduled Sun 8 Nov 07.28 Amsterdam.
 
 Approved text from state/drafted_2026-11-07-openers-review.md, Grant section. One mechanical change for the SKETCHB tag, "looks cool!" to "looks cool.". Nothing else touched.
 
@@ -34,33 +32,32 @@ sources:
 11. https://oxinabox.co.uk/the-man-making-gold-out-of-butter-right-here-in-oxfordshire-and-his-michelin-starred-fans/
 12. https://news.google.com/rss (tools/news.py)
 pains: 4 judged. (1) the site leads with home delivery while restaurants and trade are the bigger buyers, and new kitchens outside London have no self serve route (Rekki delivers London only), the sales side Raka picked. (2) apps, a made to order dairy churning in seven day batches with trade orders split over a form, an email and Rekki, a real but unproven order handling pain. (3) social, Instagram 7,947 followers, 322 posts, latest 29 Oct, healthy. (4) GDPR, the Shopify banner is set to GB only, so from Stockholm 11 cookies including _ga and _fbp fired before a click, checked, never the angle
-chosen: (1), biggest, a restaurant account buys every week where a home order is one £6 butter, and it's the website plus outreach angle Raka picked. The approved wording of it fails falsification, see the top
-owner reply: "Chefs already order us on Rekki" | true, and that's exactly what makes the approved block two false | https://rekki.com/gb/food-wholesalers/ampersand-dairy "Sample Box (New Customers Only)"
-worth: €5,000+, a Shopify site rebuilt trade first with a self serve trade order and sample request, plus an outreach plan that tracks UK restaurant and bakery openings and gets samples to their head chefs
+chosen: (1) reworded, biggest, new restaurant and bakery openings choose suppliers before they open, a weekly trade account against a £6 home order. The website half is dropped, the homepage already has a 'For kitchens, shops and counters' section and a Wholesale Enquiries button (homepage text read 7 Nov), so the site angle is weak
+owner reply: "Chefs already order us on Rekki" | good, the flow reaches the new openings that have never heard of Ampersand | Rekki only serves chefs who already know it and delivers London only, https://rekki.com/gb/food-wholesalers/ampersand-dairy
+worth: €4,000+, an AI powered outreach flow that tracks UK restaurant and bakery openings and gets samples to their head chefs, plus the sample and follow up handling
 still there: Companies House lists Grant Harrington as sole active director and PSC, read 2026-11-07, and the about page names him founder | https://find-and-update.company-information.service.gov.uk/company/11904432/officers
 budget: Michelin kitchens as customers, four named stockists, a paid photographer credited and a Shopify store with paid analytics | https://ampersanddairy.com/pages/delivery-order-information
-variant: B as approved, but the contactId assigns A and the checker fails it, see the top
+variant: outside the A/B test, the text carries 'AI powered outreach flow' (RULES section 1, from 4 Nov)
 sweep website: crawled twice, 43 URLs each, render-via-curl screenshots opened with 0 curl errors, a calm modern Shopify theme whose hero sells home delivery, chosen family
 sweep gdpr: site-audit.js GEO VOID, tools/eu-view.py --shopify from Stockholm 11 cookies before a click including _ga and _fbp, Shopify regionVisibility ["GB"] so EU visitors get no banner, checked, never the angle (RULES 0E)
 sweep apps: trade orders arrive by form, email and Rekki for a made to order dairy, no proof of order pain in their own words, not chosen, read on https://ampersanddairy.com/pages/delivery-order-information
 sweep social: tools/social-audit.js, Instagram https://www.instagram.com/ampersanddairy 7,947 followers 322 posts latest 29 Oct 2026, the only account linked in the HTML, healthy, not chosen
 sweep squad: a one director dairy with no tech team or job posts on the site (crawl of 43 URLs), nothing to staff, not chosen
-thread: problem the homepage leads with home delivery while kitchens, bakeries and counters buy the volume | cost trade buyers have to dig for the wholesale route | offer a site that puts the trade side first plus an outreach plan that finds new restaurant and bakery openings and gets samples to their head chefs | link bakeries
-lead read: Grant reads that his homepage sells home delivery while trade buys the volume and can only use a form, then gets offered a trade first site and an outreach plan for new openings, one thread, but he knows Rekki and his email exist, so the form line reads as wrong
-claims:
-your homepage leads with home delivery, https://ampersanddairy.com/ hero button "PLACE AN ORDER FOR HOME DELIVERY", HOLDS
-kitchens, bakeries and counters are where a case of 40 sells, https://ampersanddairy.com/products/ampersand-case-40-x-200g "The perfect format for delis, farm shops, and independent retailers", kitchens buy logs, sheets and portions per https://ampersanddairy.com/pages/wholesale, PARTLY FALSE
-they only reach you through a form on the wholesale page, https://ampersanddairy.com/pages/wholesale "Also available on Rekki" linking https://rekki.com/gb/food-wholesalers/ampersand-dairy, and the footer "Wholesale & General Enquiries: thedairy@ampersanddairy.com", FALSE
-recheck: every claim reopened 2026-11-07 07.32 UTC with a live fetch, plus the Rekki listing read and the wholesale page rendered through render-via-curl. Disproof tried and succeeded, Rekki, the email and the shop's Add to cart all reach Ampersand without the form. The thesis that the site undersells trade holds, the wording does not. Not shown as ready, confidence MEDIUM on the angle, the approved text FAILS
+thread: problem new restaurants and bakeries pick their suppliers before they open | cost most of them likely never hear of Ampersand in time | offer an AI powered outreach flow that spots those openings and gets samples to their head chefs | link Ampersand
+lead read: Grant reads that his butter is in Michelin kitchens but new openings choose suppliers before they open and may never hear of Ampersand, then gets offered a flow that spots those openings and gets samples to their chefs, one thread
+claims: your butter has been served in restaurants holding more than 80 Michelin stars, https://ampersanddairy.com/pages/about "has been served in restaurants holding more than 80 Michelin stars collectively", also on https://ampersanddairy.com/pages/wholesale
+INFERENCE, new restaurants and bakeries pick their suppliers before they open, the pre opening order of any kitchen, worded as general, rests on https://ampersanddairy.com/pages/wholesale "supplies kitchens, shops, counters, bakeries"
+INFERENCE, most of them likely never hear of Ampersand in time, worded likely, rests on Rekki delivering London only https://rekki.com/gb/food-wholesalers/ampersand-dairy
+recheck: 2026-11-07 ~07.50 UTC, the Michelin line reopened on the about and wholesale pages, holds. Disproof tried, searched the site for an openings or new accounts programme and found only the wholesale form, the trade email and Rekki, none of which reaches a kitchen that hasn't heard of Ampersand. Facts hold, the two inferences are worded likely and general, confidence MEDIUM
 ```
 
 SKETCHB
 ```
 Hi Grant, Ampersand looks cool.
 
-However, your homepage leads with home delivery, while kitchens, bakeries and counters are where a case of 40 sells, and they only reach you through a form on the wholesale page.
+However, your butter has been served in restaurants holding more than 80 Michelin stars, yet new restaurants and bakeries pick their suppliers before they open. Most of them likely never hear of Ampersand in time.
 
-I'd suggest a site that puts the trade side first, plus an outreach plan that finds new restaurant and bakery openings across the UK and gets samples to their head chefs.
+I'd suggest an AI powered outreach flow that spots those openings and gets samples to their head chefs, so the trade orders keep growing.
 
-Shall I send you a sketch of both for Ampersand?
+Shall I send you a sketch of the flow for Ampersand?
 ```
