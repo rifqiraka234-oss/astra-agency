@@ -96,3 +96,47 @@ button { font: inherit; color: inherit; }
 }
 .opt.opt-solo { grid-template-columns: minmax(0, 1fr); }
 .intro .btn { margin: -10px 0 26px; }
+
+/* ---------- the builder (v2) ---------- */
+@font-face { font-family: "Bricolage Grotesque"; src: url("preview/fonts/bricolage-grotesque-latin-wght-normal.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("preview/fonts/instrument-serif-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Instrument Sans"; src: url("preview/fonts/instrument-sans-latin-wght-normal.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Schibsted Grotesk"; src: url("preview/fonts/schibsted-grotesk-latin-wght-normal.woff2") format("woff2"); font-weight: 400 900; font-display: swap; }
+@font-face { font-family: "Unbounded"; src: url("preview/fonts/unbounded-latin-wght-normal.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Young Serif"; src: url("preview/fonts/young-serif-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
+/* layout sketches */
+.sk .k1 { left: 6px; top: 10px; width: 22px; height: 5px; }
+.sk .k2 { left: 6px; top: 18px; width: 16px; height: 5px; }
+.sk .k3 { left: 6px; top: 28px; width: 20px; height: 3px; }
+.sk .k4 { right: 6px; top: 6px; width: 26px; height: 32px; }
+.sk-c .k1 { left: 16px; top: 6px; width: 32px; }
+.sk-c .k3 { left: 22px; top: 14px; }
+.sk-c .k4 { left: 6px; right: auto; top: 21px; width: 52px; height: 18px; }
+.sk-b .k4 { left: 0; right: auto; top: 0; width: 64px; height: 24px; }
+.sk-b .k1 { left: 6px; top: 28px; width: 24px; }
+.sk-b .k3 { left: auto; right: 6px; top: 29px; }
+
+/* make it yours */
+.mix { margin-top: 12px; border: 1px solid var(--line); border-radius: 14px; padding: 14px; background: #fafafa; transition: border-color .2s, box-shadow .2s; }
+.mix.on { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink) inset; background: #fff; }
+.mix-h { margin: 0 0 4px; font-weight: 720; font-size: 15px; }
+.mix-rows { display: grid; gap: 8px; }
+.mix-row { display: grid; grid-template-columns: minmax(0, 1fr) 44px 92px; gap: 8px; align-items: center; }
+.mix-row label { font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.mix-row input[type="color"] { width: 44px; height: 34px; padding: 2px; border: 1px solid var(--line); border-radius: 8px; background: #fff; cursor: pointer; }
+.mix-row .hex { font-family: var(--mono); font-size: 13px; padding: 7px 8px; border: 1px solid var(--line); border-radius: 8px; width: 100%; }
+.read { margin: 10px 0 0; font-size: 13px; color: #1d6b38; }
+.read.warn { color: #b3261e; }
+
+/* fonts */
+.sub-h { margin: 6px 0 8px; font-size: 14px; font-weight: 680; color: var(--ink-2); }
+.fonts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; margin-bottom: 14px; }
+.font { text-align: left; border: 1px solid var(--line); background: #fff; border-radius: 12px; padding: 10px 12px; cursor: pointer; display: grid; gap: 2px; transition: border-color .2s; }
+.font:hover { border-color: #a1a1a6; }
+.font[aria-checked="true"] { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink) inset; }
+.font-s { font-size: 22px; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); }
+.fonts-b .font-s { font-size: 15px; letter-spacing: 0; }
+.font-n { font-size: 12px; font-weight: 640; color: var(--ink-2); margin-top: 4px; }
+.font-d { font-size: 12px; color: var(--muted); }
+.font .opt-pick { margin-top: 2px; }

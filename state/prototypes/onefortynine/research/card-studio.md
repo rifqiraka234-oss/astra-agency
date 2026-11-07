@@ -46,3 +46,19 @@ deploy and send one test submission. No email address is printed on the page.
 - check-build on the studio shell fails `hero` and `art` only, because the checker can't see inside the preview iframe, where the
   film and motion are. The first screen action check was a real miss and is fixed (send button in the intro). Not deployed until
   Raka says final and accepts those two.
+
+## v2, a real builder (Raka 7 Nov, "colours so we can choose HIS palette and fonts. Like a website builder with them")
+
+- **Make it yours.** Background, text, buttons and a two colour highlight, each a colour picker and a hex field. Choosing a preset
+  loads its colours into the pickers (Your colours loads his own #09004a, #ff914d and #ff0000), so he tunes from a start. Any edit
+  switches to his own palette. The preview works out the rest from his five colours with CSS color-mix (secondary text, lines,
+  tints, cards, header, the band), turns dark mode on when the background is dark, and picks white or near black button text by
+  contrast. A readability line reports text on background and button labels as a contrast ratio and warns under 4.5 to 1.
+- **Fonts.** Headlines from seven, Mona Sans (pick), Fraunces Soft (closest to his Cooper Black), Young Serif, Bricolage
+  Grotesque, Instrument Serif, Unbounded (steps down a size, it's wide) and Schibsted Grotesk. Body text from four, Mona Sans
+  (pick), Instrument Sans, Schibsted Grotesk, Bricolage Grotesque. Each tile is set in its own face. All SIL OFL 1.1, from the
+  Fontsource npm packages 5.3.0, licence files in `studio/preview/fonts/OFL-*.txt`.
+- The share link and the sent summary carry his own hex codes and fonts. Tested, his navy on a warm off white with red buttons
+  (17.6 to 1, buttons 5.0 to 1), a plum and gold dark palette with Young Serif and Instrument Sans (dark mode on, button text
+  black on gold), a bad pair warns (1.4 to 1), Unbounded doesn't spill, the link round trip keeps colours and fonts, 0 page
+  errors. A wide body font pushed form inputs past their card, fixed (inputs shrink to their column).
