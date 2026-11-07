@@ -338,10 +338,14 @@ export async function moveStage(t: Tx, input: MoveStageInput): Promise<MoveStage
   // Time spent in the stage being left.
   let daysInFrom: number | null = null;
   if (fromStage) {
-    const [entered] = await t<{ changed_at: Date }[]>`
-      select changed_at from stage_transitions
+    // The start of the current visit (a repeated transition into the same stage does not restart it).
+    const [entered] = await t<{ changed_at: Date | null }[]>`
+      select min(changed_at) as changed_at from stage_transitions
        where object_type = ${objectType} and record_id = ${recordId} and to_stage_id = ${fromStage.id}
-       order by changed_at desc, id desc limit 1`;
+         and id <> ${transition.id}
+         and changed_at > coalesce((select max(x.changed_at) from stage_transitions x
+                                     where x.object_type = ${objectType} and x.record_id = ${recordId}
+                                       and x.to_stage_id <> ${fromStage.id} and x.id <> ${transition.id}), '-infinity')`;
     daysInFrom = daysBetween(entered?.changed_at ?? (record.created_at as Date), now);
   }
 

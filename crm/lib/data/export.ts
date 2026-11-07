@@ -102,7 +102,7 @@ const SPECS: Record<ExportObject, Spec> = {
     columns: [
       ['CRM id', 'id'], ['Name', 'name'], ['Contact', 'contact_name'], ['Company', 'org_name'], ['Pipeline', 'pipeline_name'], ['Stage', 'stage_name'],
       ['Label', 'label'], ['Research status', 'research_status'], ['Angle', 'angle'], ['Worth', 'angle_worth_eur'], ['Next step', 'next_step'],
-      ['Disqualify reason', 'disqualify_reason'], ['Source', 'source'], ['Campaign', 'campaign'], ['Owner', 'owner_email'], ['Created', 'created_at'],
+      ['Disqualify reason', 'disqualify_reason'], ['Disqualify note', 'disqualify_note'], ['Source', 'source'], ['Campaign', 'campaign'], ['Owner', 'owner_email'], ['Created', 'created_at'],
     ],
   },
   deals: {
@@ -118,7 +118,7 @@ const SPECS: Record<ExportObject, Spec> = {
     columns: [
       ['CRM id', 'id'], ['Deal name', 'name'], ['Company', 'org_name'], ['Website', 'org_domain'], ['Pipeline', 'pipeline_name'], ['Stage', 'stage_name'],
       ['Amount', 'amount'], ['Currency', 'currency'], ['Probability', 'probability'], ['Weighted amount', 'weighted_amount'], ['Close date', 'close_date'],
-      ['Deal type', 'deal_type'], ['Next step', 'next_step'], ['Owner email', 'owner_email'], ['Won reason', 'won_reason'], ['Lost reason', 'lost_reason'],
+      ['Deal type', 'deal_type'], ['Next step', 'next_step'], ['Owner email', 'owner_email'], ['Won reason', 'won_reason'], ['Lost reason', 'lost_reason'], ['Lost note', 'lost_note'],
       ['Source', 'source'], ['Created', 'created_at'],
     ],
   },

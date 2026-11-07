@@ -28,6 +28,7 @@ Sign in as `raka@astra.local`, `josh@astra.local` (admins) or `luna@astra.local`
 | `npm run db:reset` | drops and recreates `public`, migrates, seeds. Refuses unless `DATABASE_URL` is localhost |
 | `npm run worker` | the automation worker. Runs forever: processes `domain_events` as they arrive and the schedule rules every minute. `-- --once` does one pass over due events and schedules, then exits |
 | `npm run sync:lemlist` | read only pull from lemlist (GET only, the client refuses any other method) into contacts, leads and activities. Flags `-- --dry-run` (everything rolled back), `--limit N` (contacts per campaign), `--campaign cam_...` (one campaign), `--all-leads` (every lead in the campaign, not only accepted ones). Prints counts, never a contact list |
+| `npm run backfill:sales` | one off repair of imported data, safe to rerun. Sets the disqualify reason of imported disqualified leads from `custom.close_reason`, lists leads and lost deals still without a reason, and rebuilds lead stage history from stored dates (transitions with source `backfill`, actor `system`). Prints counts. `-- --dry-run` rolls everything back |
 | `npm run import:jsonl` | one off import of `../state/silent_accepted_queue.jsonl`, `prototypes.jsonl` and `meetings.jsonl`. Safe to rerun, it matches what is already there. Flags `-- --dry-run` (one rolled back transaction, real counts), `--state-dir <path>` |
 
 Environment: `DATABASE_URL`, `SESSION_SECRET`, `SAMPLE_DATA` (shows the header badge and
@@ -94,7 +95,8 @@ changes only through `moveStage`; nothing sends a message (`SEND_ENABLED=false`)
 | `lib/audit.ts` | `recordHistory(table, id)`, `listAudit(query)`, `logSecurityEvent(db, event, details, actorId)` |
 | `lib/format.ts` | `formatMoney`, `formatPercent`, `formatDate` ("6 Nov"), `formatDay` ("Fri 6 Nov"), `formatDateTime`, `formatRelativeDay` ("Yesterday", "Today 14:00"), `formatDue`, `formatAgo`, `formatMinutes`, `formatDays`, `initials`, exact money maths `toCents`, `sumMoney`, `multiplyMoney`, `vatAmount`, Amsterdam time `todayKey`, `amsterdamTime`, `toDatetimeLocal`, `fromDatetimeLocal` |
 | `lib/forms.ts` | `ActionState` (what every server action returns), `initialActionState`, `fail`, `str`, `strs`, `bool`, `zodFieldErrors` |
-| `lib/options.ts` | every enum with labels and badge tones (`INDUSTRIES`, `TASK_TYPES`, `LOST_REASONS`, `DISQUALIFY_REASONS`, `INVOICE_STATES`...), `labelOf`, `toneOf` |
+| `lib/options.ts` | every enum with labels and badge tones (`INDUSTRIES`, `TASK_TYPES`, `INVOICE_STATES`...), `labelOf`, `toneOf`. Reasons are not here, they are the managed list in `lib/reasons.ts` |
+| `lib/reasons.ts` | `listReasons(type)`, `reasonSelectOptions`, `reasonLabel`, `assertActiveReason`, `REASON_FIELDS` (the reason and note columns per object) |
 | `lib/routes.ts` | `recordHref(type, id)`, `listHref(type)`, `OBJECT_LABELS` |
 
 Components: `components/ui` (`Button`, `ButtonLink`, `Input`, `Field`, `Checkbox`, `Select`,
@@ -105,8 +107,22 @@ Components: `components/ui` (`Button`, `ButtonLink`, `Input`, `Field`, `Checkbox
 
 Database views: `v_open_tasks` (bucket, is_overdue), `v_deal_weighted` (probability,
 weighted_amount, days_in_stage, is_rotting, has_open_task), `v_lead_stage`,
-`v_stage_entered`, `v_last_activity_org`, `v_last_activity_contact`, `v_org_summary`.
+`v_stage_entered`, `v_stage_visits`, `v_stage_time`, `v_last_activity_org`, `v_last_activity_contact`, `v_org_summary`.
 SQL helpers: `crm_today()`, `crm_attach_triggers('table')` for new tables.
+
+### Reasons and stage dates (migrations 700 and 701)
+
+- **Reasons.** `reason_options` holds two managed lists, `lead_disqualify` and `deal_lost` (key,
+  label, position, is_archived), edited in `/settings/reasons`. `leads.disqualify_reason` and
+  `deals.lost_reason` store a key; a trigger refuses any key that is not active (archiving keeps it
+  on the records that have it). Disqualifying a lead or losing a deal always needs a reason, in
+  `moveStage` too, so the board, the stage path, the gate dialog and automations all ask. The optional
+  note goes in `disqualify_note` / `lost_note`. Read the lists with `lib/reasons.ts`.
+- **Stage dates.** `v_stage_visits` (one row per visit) and `v_stage_time` (per record and stage:
+  first entered, last entered, last exited, times entered, total seconds, current) come from
+  `stage_transitions`. A second transition into the stage a record is already in is the same visit.
+  `lib/sales/stage-times.ts` has the same rules in TypeScript (`computeStageTimes`), the record page
+  Stage timeline, the "Entered <stage>" list columns (`?dates=1`) and the CSV columns.
 
 ### Gotchas worth knowing
 

@@ -97,6 +97,8 @@ export type TransitionBackfillReport = {
   leadsChanged: number;
   created: Record<string, number>;
   dropped: { afterRecordedHistory: number; outOfOrder: number; pastFirstStage: number };
+  /** Import time rows removed because the backfill already dated that stage. */
+  collapsed?: number;
 };
 
 export type PlannedTransition = { stageId: string; fromStageId: string | null; at: Date; evidence: string };
@@ -200,6 +202,9 @@ export async function backfillLeadTransitions(t: Tx, opts: { leadIds?: string[] 
   const now = new Date();
   const nameOf = new Map(stages.map((s) => [s.id, s.name]));
   for (const r of rows) {
+    // A lead the backfill already dated is done; its import anchor may since have been
+    // collapsed, so planning it again would read a different anchor.
+    if (r.backfilled.length) continue;
     const plan = planLeadTransitions(stages, r, now, report.dropped);
     if (!plan.length) continue;
     report.leadsChanged++;
@@ -212,5 +217,47 @@ export async function backfillLeadTransitions(t: Tx, opts: { leadIds?: string[] 
       report.created[name] = (report.created[name] ?? 0) + 1;
     }
   }
+  report.collapsed = await collapseImportAnchors(t, only);
   return report;
+}
+
+/**
+ * The JSONL import and the lemlist sync write one transition at import time into the
+ * stage the lead already had. Once the backfill has dated that stage from real evidence,
+ * the import time row is a second entry into the same stage and makes the stage look
+ * re-entered on the import day. Remove those rows (they were written by our own import,
+ * not by a person) and date qualified_at / disqualified_at from the backfilled entry.
+ * Idempotent.
+ */
+export async function collapseImportAnchors(t: Tx, only: string[] | null = null): Promise<number> {
+  const removed = await t<{ record_id: string }[]>`
+    with ordered as (
+      select st.id, st.record_id, st.to_stage_id, st.source,
+             lag(st.to_stage_id) over w as prev_to, lag(st.source) over w as prev_source
+        from stage_transitions st
+       where st.object_type = 'lead'
+         and (${only}::uuid[] is null or st.record_id = any(${only}::uuid[]))
+      window w as (partition by st.record_id order by st.changed_at, st.id)
+    )
+    delete from stage_transitions d using ordered o
+     where d.id = o.id and o.prev_to = o.to_stage_id and o.prev_source = 'backfill'
+       and o.source in ('jsonl', 'lemlist', 'import')
+    returning d.record_id::text`;
+  const ids = [...new Set(removed.map((r) => r.record_id))];
+  if (ids.length) {
+    await t`
+      with e as (
+        select l.id, s.state, max(st.changed_at) as entered_at
+          from leads l
+          join pipeline_stages s on s.id = l.stage_id and s.state in ('won', 'lost')
+          join stage_transitions st on st.object_type = 'lead' and st.record_id = l.id and st.to_stage_id = l.stage_id
+         where l.id = any(${ids}::uuid[])
+         group by l.id, s.state
+      )
+      update leads l set
+        disqualified_at = case when e.state = 'lost' then e.entered_at else l.disqualified_at end,
+        qualified_at = case when e.state = 'won' then e.entered_at else l.qualified_at end
+        from e where e.id = l.id`;
+  }
+  return removed.length;
 }

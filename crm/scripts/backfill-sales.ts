@@ -45,6 +45,7 @@ async function main() {
           `  evidence not used  after the first recorded move ${history.dropped.afterRecordedHistory}, ` +
             `out of date order ${history.dropped.outOfOrder}, past the stage the import recorded ${history.dropped.pastFirstStage}`,
         );
+        console.log(`  import time rows folded into the backfilled stage entry  ${history.collapsed ?? 0}`);
         if (dryRun) throw new Rollback();
       },
       { source: 'backfill' },
