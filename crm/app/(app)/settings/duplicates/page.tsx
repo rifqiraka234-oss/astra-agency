@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { sql } from '@/lib/db';
 import { formatDateTime } from '@/lib/format';
-import { scanDuplicates } from '@/lib/data/dupes-scan';
+import { scanDuplicates, type DupePair } from '@/lib/data/dupes-scan';
+import { CONFIDENCE_LABELS, type MatchConfidence } from '@/lib/dedupe';
 import { listMerges } from '@/lib/data/merge';
 import { PanelHeader } from '@/components/settings/PanelHeader';
 import { ActionButton } from '@/components/settings/ActionButton';
@@ -14,9 +15,25 @@ import s from '@/components/settings/settings.module.css';
 export const metadata = { title: 'Duplicates, Settings' };
 
 const RULES = [
-  { n: 'Contacts, exact', d: 'Email, ignoring case and spaces. LinkedIn URL, cleaned to the profile slug. A match blocks creating a second record.' },
-  { n: 'Organizations, exact', d: 'Every domain they own, without https, www or path. Subdomains roll up to the main domain. Free mail like gmail.com never matches.' },
-  { n: 'Fuzzy, for review', d: 'Same name and city, or a similar name with the same phone or at the same organization. These never merge on their own.' },
+  {
+    n: 'Contacts, name first',
+    d: 'Names compare without case, accents, punctuation, titles like Dr or Mr and letters like PhD, MBA or Jr. Andy Tidd Fbcs is Andy Tidd. First and last name are never swapped.',
+  },
+  {
+    n: 'Then LinkedIn, then email',
+    d: 'The same name and the same LinkedIn profile is the same person. Different profiles are different people. With no LinkedIn on one side, the same email confirms it.',
+  },
+  {
+    n: 'For review',
+    d: 'The same name with nothing to confirm it, or the same LinkedIn or email under another name. Organizations with the same name and city. These never merge on their own.',
+  },
+  { n: 'Hard guard', d: 'One email, one LinkedIn profile and one domain belong to one record. Creating a second is blocked, whatever the name.' },
+];
+
+const GROUPS: { confidence: MatchConfidence; short: string; sub: string }[] = [
+  { confidence: 'linkedin', short: 'confirmed by LinkedIn', sub: 'Same name and the same LinkedIn profile. Safe to merge.' },
+  { confidence: 'email', short: 'confirmed by email', sub: 'Same name and the same email, LinkedIn missing on one side. Safe to merge.' },
+  { confidence: 'review', short: 'to review', sub: 'Possible duplicates. Open both and decide.' },
 ];
 
 export default async function DuplicatesPage() {
@@ -27,7 +44,7 @@ export default async function DuplicatesPage() {
     <>
       <PanelHeader
         title="Duplicates"
-        sub="Exact rules block duplicates on create. Fuzzy matches land here for a person to decide."
+        sub="Contacts match on name first, then LinkedIn, then email. Confirmed pairs come first, the rest wait for a person to decide."
         actions={
           <ButtonLink href={`/settings/duplicates?scan=${Date.now()}`} variant="primary">
             Run a scan
@@ -47,10 +64,11 @@ export default async function DuplicatesPage() {
       <div className="card">
         <div className="card-head">
           <h3 className="card-title" style={{ fontSize: 15 }}>
-            Possible duplicates to review
+            Duplicates found
           </h3>
           <span className="card-sub">
             Scanned {formatDateTime(new Date())}, {pairs.length} {pairs.length === 1 ? 'pair' : 'pairs'}
+            {GROUPS.map((g) => `, ${pairs.filter((p) => p.confidence === g.confidence).length} ${g.short}`).join('')}
           </span>
         </div>
         {pairs.length === 0 ? (
@@ -58,26 +76,27 @@ export default async function DuplicatesPage() {
             <span className="small muted">Nothing to review. Pairs marked Not the same stay hidden.</span>
           </div>
         ) : null}
-        {pairs.map((p) => (
-          <div key={p.key} className={s.pair}>
-            {[p.a, p.b].map((x) => (
-              <div key={x.id} className={s.pairSide}>
-                <Link href={href(p.type, x.id)} className="strong" style={{ color: 'var(--ink)' }}>
-                  {x.name}
-                </Link>
-                <div className="small muted">{x.sub}</div>
-              </div>
-            ))}
-            <span className={s.why}>{p.why}</span>
-            <div className="row" style={{ gap: 8 }}>
-              <MergeButton type={p.type} a={p.a} b={p.b} />
-              <ActionButton action={rejectPairAction} fields={{ type: p.type, a: p.a.id, b: p.b.id }}>
-                Not the same
-              </ActionButton>
-            </div>
-          </div>
-        ))}
       </div>
+
+      {GROUPS.map((g) => {
+        const group = pairs.filter((p) => p.confidence === g.confidence);
+        if (!group.length) return null;
+        return (
+          <div key={g.confidence} className="card">
+            <div className="card-head">
+              <h3 className="card-title" style={{ fontSize: 15 }}>
+                {CONFIDENCE_LABELS[g.confidence]}
+              </h3>
+              <span className="card-sub">
+                {group.length} {group.length === 1 ? 'pair' : 'pairs'}. {g.sub}
+              </span>
+            </div>
+            {group.map((p) => (
+              <PairRow key={p.key} p={p} href={href} />
+            ))}
+          </div>
+        );
+      })}
 
       <div className="card">
         <div className="card-head">
@@ -118,5 +137,32 @@ export default async function DuplicatesPage() {
         ))}
       </div>
     </>
+  );
+}
+
+function PairRow({ p, href }: { p: DupePair; href: (type: string, id: string) => string }) {
+  return (
+    <div className={s.pair}>
+      {[p.a, p.b].map((x) => (
+        <div key={x.id} className={s.pairSide}>
+          <Link href={href(p.type, x.id)} className="strong" style={{ color: 'var(--ink)' }}>
+            {x.name}
+          </Link>
+          <div className="small muted" style={{ overflowWrap: 'anywhere' }}>
+            {x.sub}
+          </div>
+        </div>
+      ))}
+      <span className={s.why}>
+        {p.type === 'organization' ? 'Organization. ' : ''}
+        {p.why}
+      </span>
+      <div className="row" style={{ gap: 8 }}>
+        <MergeButton type={p.type} a={p.a} b={p.b} />
+        <ActionButton action={rejectPairAction} fields={{ type: p.type, a: p.a.id, b: p.b.id }}>
+          Not the same
+        </ActionButton>
+      </div>
+    </div>
   );
 }

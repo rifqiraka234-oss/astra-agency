@@ -13,8 +13,13 @@
  *
  * Rules
  *   * Blank cells never wipe a value. Only non blank cells are written.
- *   * Contacts match on CRM id, then email, then LinkedIn. Organizations on CRM
- *     id, then domain. Deals on CRM id only.
+ *   * Contacts match on CRM id, then Raka's rule (lib/dedupe.ts): name first, then
+ *     LinkedIn, then email. Only a match confirmed by LinkedIn or email updates a
+ *     contact. A name match with nothing to confirm it is created new with a warning
+ *     and waits on /settings/duplicates. The same email or LinkedIn under a different
+ *     name skips the line for review (add the CRM id column to update that contact).
+ *     A line with only a first name is matched on LinkedIn and email alone.
+ *     Organizations on CRM id, then domain. Deals on CRM id only.
  *   * A contacts import never overwrites an existing organization's values, it
  *     only fills the empty ones.
  *   * Each line runs in its own savepoint, so one bad line is skipped with a
@@ -29,6 +34,8 @@ import { getFieldDefinitions, validateCustom, type CustomObjectType } from '@/li
 import { normDomain, normEmail, normLinkedin, normPhone, isFreeMail, emailDomain, normCompanyName } from '@/lib/normalize';
 import { INDUSTRIES, EMPLOYEE_BANDS, DEAL_TYPES } from '@/lib/options';
 import { SettingsError } from '@/lib/settings/errors';
+import { findContactCandidates } from '@/lib/dupes';
+import { decideContactMatch } from '@/lib/dedupe';
 import type { ImportObject } from './import-fields';
 
 export const MAX_IMPORT_ROWS = 5000;
@@ -353,7 +360,7 @@ async function importContact(ctx: Ctx, rec: Recorder, v: Record<string, string>)
   if (v['contact.country']) patch.country = parseCountry(v['contact.country']);
   if (v['contact.language']) patch.language = v['contact.language'].trim().slice(0, 20);
 
-  // Match: id, then email, then LinkedIn.
+  // Match: CRM id, then Raka's rule, name first, then LinkedIn, then email.
   let contactId: string | null = null;
   const id = v['id']?.trim();
   if (id) {
@@ -363,14 +370,22 @@ async function importContact(ctx: Ctx, rec: Recorder, v: Record<string, string>)
     contactId = row.id;
   }
   if (!contactId && email) {
-    const [row] = await t<{ contact_id: string; deleted_at: Date | null }[]>`
-      select e.contact_id, c.deleted_at from contact_emails e join contacts c on c.id = e.contact_id where lower(trim(e.email)) = ${email}`;
+    const [row] = await t<{ deleted_at: Date | null }[]>`
+      select c.deleted_at from contact_emails e join contacts c on c.id = e.contact_id where lower(trim(e.email)) = ${email}`;
     if (row?.deleted_at) throw new Skip(`${email} belongs to a deleted contact`);
-    if (row) contactId = row.contact_id;
   }
-  if (!contactId && li) {
-    const [row] = await t<{ id: string }[]>`select id from contacts where linkedin_url_normalised = ${li} and deleted_at is null`;
-    if (row) contactId = row.id;
+  if (!contactId) {
+    const fullName = v['contact.full_name']?.trim() || (first && last ? `${first} ${last}` : null);
+    const d = decideContactMatch(await findContactCandidates({ name: fullName, linkedin: li, emails: [email] }, t, { includeDistinct: true }));
+    if (d.kind === 'match') contactId = d.id;
+    else if (d.kind === 'conflict') throw new Skip(d.reason);
+    else if (d.kind === 'held') throw new Skip(`${d.reason}. Review it, or add the CRM id column to update ${d.name}`);
+    else {
+      if (d.review.length) {
+        rec.warnings.push(`Possible duplicate of ${d.review.map((c) => c.name).join(', ')} (${d.review[0].verdict.reason.charAt(0).toLowerCase()}${d.review[0].verdict.reason.slice(1)}), review it in Settings, Duplicates`);
+      }
+      if (d.distinct.length) rec.warnings.push(`Same name as ${d.distinct[0].name}, but a different LinkedIn profile, kept apart`);
+    }
   }
 
   const orgId = await resolveOrg(ctx, rec, v, email);

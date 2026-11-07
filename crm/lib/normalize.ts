@@ -180,3 +180,69 @@ export function normCompanyName(input: string | null | undefined): string {
   }
   return v;
 }
+
+/**
+ * Honorifics stripped from the front of a person's name and suffixes stripped from the end,
+ * by normPersonName. db/migrations/400_contact_name_normalised.sql holds the same two lists
+ * for the contacts.name_normalised column, keep them in step (tests/dedupe checks they agree).
+ * Words that are also real names or surnames (Don, Ma, Ba, KC) are left out on purpose.
+ */
+export const NAME_HONORIFICS: readonly string[] = [
+  'mr', 'mrs', 'ms', 'miss', 'mx', 'dr', 'drs', 'dra', 'prof', 'professor', 'sir', 'dame', 'lord', 'lady',
+  'rev', 'revd', 'ir', 'ing', 'dipl', 'mag', 'herr', 'frau', 'dhr', 'mevr', 'mevrouw', 'mme', 'mlle',
+  'sig', 'sigra', 'dott', 'sr', 'sra', 'srta',
+];
+export const NAME_SUFFIXES: readonly string[] = [
+  'jr', 'jnr', 'sr', 'snr', 'ii', 'iii', 'iv', 'phd', 'dphil', 'mphil', 'mba', 'emba', 'msc', 'bsc', 'meng', 'beng',
+  'ceng', 'md', 'mbbs', 'dds', 'esq', 'cpa', 'cfa', 'pmp', 'fbcs', 'mbcs', 'citp', 'frsa', 'fca', 'aca', 'acca',
+  'fcca', 'cima', 'mcips', 'fcips', 'frics', 'mrics', 'llm', 'llb', 'dba', 'obe', 'mbe', 'cbe', 'kbe', 'frcs',
+  'mrcs', 'frcp', 'mrcp', 'fcipd', 'mcipd', 'cmgr', 'fcmi', 'mcmi', 'fiod', 'miod', 'cdir', 'cissp',
+];
+const HONORIFIC_SET = new Set(NAME_HONORIFICS);
+const SUFFIX_SET = new Set(NAME_SUFFIXES);
+/** Letters NFKD leaves alone, folded the way Postgres unaccent folds them. */
+/** The combining accent blocks, the same ranges the database function removes. */
+const COMBINING_ACCENTS = /[\u0300-\u036f\u1ab0-\u1aff\u1dc0-\u1dff\u20d0-\u20ff\ufe20-\ufe2f]/g;
+const LETTER_FOLD: Record<string, string> = { ß: 'ss', æ: 'ae', œ: 'oe', ø: 'o', ł: 'l', đ: 'd', ð: 'd', þ: 'th', ı: 'i', ħ: 'h', ŧ: 't' };
+
+/**
+ * A person's full name for matching: lower case, accents folded, punctuation and extra
+ * spaces gone, honorifics in front and suffixes at the end removed. The order of the
+ * words is kept, so "Tidd Andy" is not "Andy Tidd". Null when nothing is left.
+ *
+ *   normPersonName('Andy Tidd Fbcs')     -> 'andy tidd'
+ *   normPersonName('Dr. Ashish Rajput')  -> 'ashish rajput'
+ *   normPersonName('José  Müller-Lüdenscheidt, PhD') -> 'jose muller ludenscheidt'
+ *
+ * At least one word always stays, so "Dr. Ph.D." is 'dr', never empty. A suffix written
+ * with dots ("Ph.D.", "M.B.A.") is found by joining up to three of the last words.
+ * Mirrors crm_norm_person_name() in the database.
+ */
+export function normPersonName(input: string | null | undefined): string | null {
+  if (!input) return null;
+  const folded = input
+    .normalize('NFKD')
+    .replace(COMBINING_ACCENTS, '')
+    .normalize('NFC')
+    .toLowerCase()
+    .replace(/[ßæœøłđðþıħŧ]/g, (ch) => LETTER_FOLD[ch] ?? ch)
+    .replace(/[^\p{L}\p{N} ]+/gu, ' ')
+    .replace(/ +/g, ' ')
+    .trim();
+  if (!folded) return null;
+  let toks = folded.split(' ');
+  for (;;) {
+    const n = toks.length;
+    let cut = 0;
+    for (let k = 1; k <= 3 && n > k; k++) {
+      if (SUFFIX_SET.has(toks.slice(n - k).join(''))) {
+        cut = k;
+        break;
+      }
+    }
+    if (!cut) break;
+    toks = toks.slice(0, n - cut);
+  }
+  while (toks.length > 1 && HONORIFIC_SET.has(toks[0])) toks = toks.slice(1);
+  return toks.join(' ');
+}

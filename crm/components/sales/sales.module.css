@@ -273,6 +273,41 @@
   line-height: 1.5;
 }
 
+.closedBreakdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 2px 16px;
+  font-size: 13px;
+}
+
+.closedBreakdown li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Stage timeline on lead and deal pages. */
+.stageSkipped td {
+  color: var(--text-muted);
+}
+
+.stageCurrent td:first-child {
+  font-weight: 600;
+}
+
+.stageTag {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
 .toast {
   position: fixed;
   left: 50%;

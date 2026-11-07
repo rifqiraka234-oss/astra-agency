@@ -2,7 +2,9 @@
  * /deals/[id], the Deal design: header with amount, close date, owner,
  * probability and weighted value; the clickable stage path with its gate;
  * deal details with inline edit and custom fields; line items, quote and VAT;
- * stage history; timeline; contacts with roles, next tasks and linked records.
+ * the stage timeline (entered, exited and time per stage) and stage moves;
+ * timeline; contacts with roles, next tasks and linked records. Lost needs a
+ * reason from the managed list (lib/reasons.ts) and takes a note.
  */
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -13,9 +15,12 @@ import { stageGate } from '@/lib/stages';
 import { customPropertyGroups, getFieldDefinitions, mergePropertyGroups, type PropertyGroup } from '@/lib/fields';
 import { formatDate, formatDateLong, formatDateTime, formatDays, formatDue, formatMoney } from '@/lib/format';
 import {
-  BUYING_ROLES, DEAL_TYPES, FORECAST_CATEGORIES, LIFECYCLE_STAGES, LOST_REASONS, PRICING_MODELS, PRIORITIES, labelOf,
+  BUYING_ROLES, DEAL_TYPES, FORECAST_CATEGORIES, LIFECYCLE_STAGES, PRICING_MODELS, PRIORITIES, labelOf,
 } from '@/lib/options';
 import { automationEffects, getDeal, listUsers } from '@/lib/sales/queries';
+import { listReasons, reasonLabel, reasonSelectOptions } from '@/lib/reasons';
+import { stageTimeline } from '@/lib/sales/stage-times';
+import { StageTimeline } from '@/components/sales/StageTimeline';
 import { RecordHeader, PropertiesPanel, Timeline } from '@/components/records';
 import { ButtonLink } from '@/components/ui';
 import { StagePath, type PathStage } from '@/components/sales/StagePath';
@@ -32,13 +37,20 @@ export default async function DealPage({ params }: { params: Promise<{ id: strin
   const record = await getDeal(id);
   if (!record) notFound();
   const { deal, stages, lines, quotes, contacts, history, tasks, products, projects } = record;
-  const [users, timeline, defs, wonEffects, lostEffects] = await Promise.all([
+  const [users, timeline, defs, wonEffects, lostEffects, reasons, stageRows] = await Promise.all([
     listUsers(),
     getTimeline('deal', id),
     getFieldDefinitions('deal'),
     automationEffects(['deal.won']),
     automationEffects(['deal.lost']),
+    listReasons('deal_lost', { includeArchived: true }),
+    stageTimeline('deal', id, stages, deal.stage_id),
   ]);
+  const lostText = reasonLabel(reasons, deal.lost_reason);
+  const lostOptions = (() => {
+    const active = reasonSelectOptions(reasons);
+    return deal.lost_reason && !active.some((o) => o.value === deal.lost_reason) ? [...active, { value: deal.lost_reason, label: `${lostText}, archived` }] : active;
+  })();
   const canEdit = can(user, 'edit', 'deal', deal);
   const current = stages.find((s) => s.id === deal.stage_id)!;
   const userOpts = users.map((u) => ({ value: u.id, label: u.name }));
@@ -94,7 +106,8 @@ export default async function DealPage({ params }: { params: Promise<{ id: strin
         { key: 'signer', label: 'Signer', type: 'text', value: deal.signer, display: deal.signer ?? '' },
         { key: 'start_date', label: 'Start date', type: 'date', value: deal.start_date, display: deal.start_date ? formatDateLong(deal.start_date) : '' },
         { key: 'won_reason', label: 'Won reason', type: 'text', value: deal.won_reason, display: deal.won_reason ?? '' },
-        sel('lost_reason', 'Lost reason', deal.lost_reason, LOST_REASONS),
+        { ...sel('lost_reason', 'Lost reason', deal.lost_reason, lostOptions), display: lostText, help: 'Reasons are managed in Settings, Reasons' },
+        { key: 'lost_note', label: 'Lost note', type: 'textarea', value: deal.lost_note, display: deal.lost_note ?? '' },
         { key: 'lost_competitor', label: 'Competitor or alternative', type: 'text', value: deal.lost_competitor, display: deal.lost_competitor ?? '' },
       ],
     },
@@ -121,6 +134,12 @@ export default async function DealPage({ params }: { params: Promise<{ id: strin
             <span>Owner {deal.owner_name?.split(' ')[0] ?? 'nobody'}</span>
             <span>{probLine}</span>
             {deal.is_rotting ? <span className="danger">Rotting, {formatDays(deal.days_in_stage)} in stage</span> : null}
+            {current.state === 'lost' ? (
+              <span className="danger">
+                {lostText ? `Lost, ${lostText.charAt(0).toLowerCase()}${lostText.slice(1)}` : 'Lost, no reason recorded'}
+                {deal.lost_note ? `. ${deal.lost_note}` : ''}
+              </span>
+            ) : null}
           </span>
         }
         sample={isSample}
@@ -159,10 +178,12 @@ export default async function DealPage({ params }: { params: Promise<{ id: strin
             canEdit={canEdit}
           />
 
+          <StageTimeline rows={stageRows} />
+
           <section aria-labelledby="sh-h" className={styles.panel}>
             <div className={styles.panelHead}>
               <h2 id="sh-h" className={styles.panelTitle}>
-                Stage history
+                Stage moves
               </h2>
             </div>
             <div style={{ overflowX: 'auto' }}>
@@ -187,7 +208,7 @@ export default async function DealPage({ params }: { params: Promise<{ id: strin
                       <tr key={h.id}>
                         <td>
                           {h.stage_name}
-                          {h.reason ? <div className={styles.lineNote}>Moved back. {h.reason}</div> : null}
+                          {h.reason ? <div className={styles.lineNote}>{h.moved_back ? `Moved back. ${h.reason}` : h.reason}</div> : null}
                         </td>
                         <td>{formatDate(h.changed_at)}</td>
                         <td>{h.left_at ? formatDays(h.days) : `${formatDays(h.days)} so far`}</td>

@@ -1133,6 +1133,25 @@ dd {
   font-size: 12px;
   color: var(--text-muted);
 }
+.dupe-people {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dupe-person {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(124, 45, 18, 0.15);
+  overflow-wrap: anywhere;
+}
+.dupe-person a {
+  color: var(--ink);
+}
 
 /* ------------------------------------------------------------ avatar, empty */
 

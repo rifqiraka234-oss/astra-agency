@@ -26,8 +26,8 @@ export const ORG_CREATE_FIELDS: CreateField[] = [
 ];
 
 export const CONTACT_CREATE_FIELDS: CreateField[] = [
-  { name: 'first_name', label: 'First name', required: true, width: 'half' },
-  { name: 'last_name', label: 'Last name', width: 'half' },
+  { name: 'first_name', label: 'First name', required: true, width: 'half', dupeCheck: 'contact-name' },
+  { name: 'last_name', label: 'Last name', width: 'half', dupeCheck: 'contact-name' },
   { name: 'email', label: 'Email', type: 'email', dupeCheck: 'contact-email', hint: 'Links them to the organization that owns the email domain' },
   { name: 'linkedin', label: 'LinkedIn URL', type: 'url', dupeCheck: 'contact-linkedin', placeholder: 'linkedin.com/in/name' },
   { name: 'job_title', label: 'Job title' },

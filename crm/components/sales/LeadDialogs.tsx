@@ -4,12 +4,14 @@
  *
  *   <QualifyDialog open lead={{ id, title, orgName }} firstStage={{ name, required }} users={users}
  *                  onClose={close} onDone={(res) => ...} />
- *   <DisqualifyDialog open lead={{ id, title }} onClose={close} onDone={(res) => ...} />
+ *   <DisqualifyDialog open lead={{ id, title }} reasons={reasons} onClose={close} onDone={(res) => ...} />
+ *
+ * reasons are the active disqualify reasons (lib/reasons.ts, reasonSelectOptions), managed in /settings/reasons.
  */
 import { useId, useState, useTransition } from 'react';
 import type { RequiredField } from '@/lib/stages';
 import type { SalesResult } from '@/lib/sales/fields';
-import { DISQUALIFY_REASONS } from '@/lib/options';
+export type ReasonChoice = { value: string; label: string };
 import { Button, Field, Input, Modal, Select, Textarea } from '@/components/ui';
 import { qualifyLeadAction, disqualifyLeadAction } from '@/app/(app)/leads/actions';
 import { GateFields, readGateValues, type GateUser } from './GateFields';
@@ -130,11 +132,13 @@ export function QualifyDialog({
 export function DisqualifyDialog({
   open,
   lead,
+  reasons,
   onClose,
   onDone,
 }: {
   open: boolean;
   lead: { id: string; title: string } | null;
+  reasons: ReasonChoice[];
   onClose: () => void;
   onDone: (res: SalesResult) => void;
 }) {
@@ -160,7 +164,7 @@ export function DisqualifyDialog({
               return;
             }
             start(async () => {
-              const res = await disqualifyLeadAction({ leadId: lead.id, reason: reason as never, note: String(fd.get('note') ?? '') });
+              const res = await disqualifyLeadAction({ leadId: lead.id, reason, note: String(fd.get('note') ?? '') });
               if (res.ok) {
                 close();
                 onDone(res);
@@ -174,7 +178,7 @@ export function DisqualifyDialog({
             <Select
               id={`${uid}-reason`}
               name="reason"
-              options={DISQUALIFY_REASONS}
+              options={reasons}
               placeholder="Pick a reason"
               value={reason}
               onChange={(e) => setReason(e.target.value)}
@@ -187,7 +191,8 @@ export function DisqualifyDialog({
               Do not contact also adds them to the suppression list, by contact, LinkedIn URL and email. Nobody here can message them again.
             </div>
           ) : null}
-          <Field label="Note" htmlFor={`${uid}-note`} hint="Optional, goes on the timeline">
+          {reasons.length === 0 ? <div className="form-note">No active reasons. An admin adds them under Settings, Reasons.</div> : null}
+          <Field label="Note" htmlFor={`${uid}-note`} hint="Optional, stored with the reason and on the timeline">
             <Textarea id={`${uid}-note`} name="note" rows={3} maxLength={2000} />
           </Field>
           {error && reason ? (

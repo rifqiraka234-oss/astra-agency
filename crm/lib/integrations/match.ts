@@ -1,8 +1,13 @@
 /**
  * lib/integrations/match.ts, how the lemlist sync and the JSONL import find an
- * organization that already exists before they make one (agent E, fixed by Q).
+ * organization or a contact that already exists before they make one (agent E, fixed by Q).
  *
  *   const id = await findExistingOrg(t, { domain, name });   // null means create it
+ *   const m = await findExistingContact(t, { name, linkedin, email });  // ContactMatch, see below
+ *
+ * Contacts follow Raka's rule (lib/dedupe.ts): name first, then LinkedIn, then email.
+ * Only a match confirmed by LinkedIn or email is used on its own. A name match with
+ * nothing to confirm it makes a new contact, and the pair waits on /settings/duplicates.
  *
  * 1. The registrable domain wins (organization_domains is unique on it).
  * 2. A domain we have not seen, plus a name: the one organization with that name and
@@ -12,7 +17,9 @@
  * Names compare with legal forms, accents and case set aside (normCompanyName).
  */
 import type { Tx } from '../db';
-import { normCompanyName } from '../normalize';
+import { normCompanyName, normPersonName } from '../normalize';
+import { findContactCandidates } from '../dupes';
+import { decideContactMatch } from '../dedupe';
 
 export async function orgsByName(t: Tx, name: string): Promise<{ id: string; has_domain: boolean }[]> {
   const want = normCompanyName(name);
@@ -49,9 +56,34 @@ export async function findExistingOrg(t: Tx, input: { domain: string | null; nam
   return (same.find((o) => o.has_domain) ?? same[0])?.id ?? null;
 }
 
-/** Lower case, accents and punctuation out, single spaces. For matching a person's name. */
+/** A person's name for matching, normPersonName (honorifics and suffixes out). Null when blank. */
 export function personKey(v: string | null | undefined): string | null {
-  const t = (v ?? '').trim();
-  if (!t) return null;
-  return t.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim() || null;
+  return normPersonName(v);
+}
+
+export type ContactMatch = {
+  /** The contact to use, or null to make a new one. */
+  id: string | null;
+  /**
+   * linkedin, email: confirmed. held: another record already holds this LinkedIn profile or
+   * email under a different name; the unique index allows one record, so it is used and
+   * counted for review. new: no confirmed match. review: name matches a person should check.
+   */
+  how: 'linkedin' | 'email' | 'held' | 'new';
+  review: number;
+  reason: string | null;
+};
+
+/** Raka's rule for an incoming person from lemlist or the JSONL files. */
+export async function findExistingContact(
+  t: Tx,
+  input: { name: string | null | undefined; linkedin?: string | null; email?: string | null },
+): Promise<ContactMatch> {
+  const candidates = await findContactCandidates({ name: input.name, linkedin: input.linkedin, emails: [input.email] }, t, { includeDistinct: true });
+  const d = decideContactMatch(candidates);
+  if (d.kind === 'match') return { id: d.id, how: d.confidence, review: 0, reason: d.reason };
+  // Confirmed against two records: LinkedIn comes before email in the rule, and both wait for review.
+  if (d.kind === 'conflict') return { id: d.ids[0], how: 'held', review: 1, reason: d.reason };
+  if (d.kind === 'held') return { id: d.id, how: 'held', review: 1, reason: d.reason };
+  return { id: null, how: 'new', review: d.review.length, reason: null };
 }

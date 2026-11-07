@@ -13,7 +13,8 @@
     "db:reset": "tsx scripts/reset.ts",
     "worker": "tsx scripts/worker.ts",
     "sync:lemlist": "tsx scripts/sync-lemlist.ts",
-    "import:jsonl": "tsx scripts/import-jsonl.ts"
+    "import:jsonl": "tsx scripts/import-jsonl.ts",
+    "backfill:sales": "tsx scripts/backfill-sales.ts"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

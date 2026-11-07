@@ -107,7 +107,7 @@ export function guessMapping(headers: string[], targets: ImportTarget[]): Record
 
 /** The match keys of an object, for the preview wording. */
 export const MATCH_WORDING: Record<ImportObject, string> = {
-  contacts: 'by email',
+  contacts: 'by name, confirmed by LinkedIn or email',
   organizations: 'by domain',
   deals: 'by id',
 };

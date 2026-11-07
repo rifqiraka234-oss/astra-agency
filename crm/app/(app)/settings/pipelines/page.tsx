@@ -134,6 +134,12 @@ export default async function PipelinesSettingsPage({ searchParams }: { searchPa
 
       <div className="card card-pad text-13 secondary" style={{ lineHeight: 1.5 }}>
         Skipping stages is allowed, moving back needs a reason and is logged. Required fields can be core fields or custom fields of {OBJECT_NAMES[current.object_type]}, add new ones under Fields.
+        {current.object_type === 'lead' || current.object_type === 'deal' ? (
+          <>
+            {' '}
+            A lost stage always asks for a {current.object_type === 'lead' ? 'disqualify' : 'lost'} reason, the list is under <Link href="/settings/reasons">Reasons</Link>.
+          </>
+        ) : null}
       </div>
     </>
   );

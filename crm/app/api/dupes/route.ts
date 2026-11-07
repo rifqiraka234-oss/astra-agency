@@ -3,11 +3,17 @@
  * GET /api/dupes?type=contact&email=EVA@dekade.nl
  * GET /api/dupes?type=contact&linkedin=https://linkedin.com/in/eva-jansen
  * -> { normalised, freeMail, match: DupeMatch | null, rule, note? }
+ *
+ * GET /api/dupes?type=person&name=Dr Eva Jansen&email=eva@dekade.nl&linkedin=linkedin.com/in/eva-jansen
+ * -> PersonDupeResponse, Raka's rule (lib/dedupe.ts): name first, then LinkedIn, then email.
+ *    Every candidate with its LinkedIn, emails, confidence and reason. block is true only for a
+ *    confirmed duplicate or a taken email or LinkedIn profile (the unique indexes).
  */
 import { NextResponse, type NextRequest } from 'next/server';
 import { getCurrentUser } from '@/lib/auth';
-import { DUPE_RULES, findContactByEmail, findContactByLinkedin, findOrgByDomain } from '@/lib/dupes';
-import { isFreeMail, normDomain, normEmail, normLinkedin } from '@/lib/normalize';
+import { DUPE_RULES, blocksSave, findContactByEmail, findContactByLinkedin, findContactCandidates, findOrgByDomain } from '@/lib/dupes';
+import type { PersonDupeResponse } from '@/lib/dedupe';
+import { isFreeMail, normDomain, normEmail, normLinkedin, normPersonName } from '@/lib/normalize';
 
 export async function GET(req: NextRequest) {
   const user = await getCurrentUser();
@@ -37,6 +43,19 @@ export async function GET(req: NextRequest) {
     });
   }
 
+  if (type === 'person') {
+    const name = p.get('name') ?? '';
+    const email = (p.get('email') ?? '').trim();
+    const linkedin = (p.get('linkedin') ?? '').trim();
+    const normalised = { name: normPersonName(name), email: normEmail(email), linkedin: normLinkedin(linkedin) };
+    const notes: PersonDupeResponse['notes'] = {};
+    if (email && !normalised.email) notes.email = 'Enter an email address';
+    if (linkedin && !normalised.linkedin) notes.linkedin = 'Paste a profile link like linkedin.com/in/name';
+    const candidates = await findContactCandidates({ name, linkedin: normalised.linkedin, emails: [normalised.email] }, undefined, { includeDistinct: true, limit: 20 });
+    const body: PersonDupeResponse = { normalised, candidates, block: candidates.some(blocksSave), rule: DUPE_RULES.contactName, notes };
+    return NextResponse.json(body);
+  }
+
   if (type === 'contact') {
     const email = p.get('email');
     const linkedin = p.get('linkedin');
@@ -55,5 +74,5 @@ export async function GET(req: NextRequest) {
       });
     }
   }
-  return NextResponse.json({ error: 'Use type=org&domain=, type=contact&email= or type=contact&linkedin=' }, { status: 400 });
+  return NextResponse.json({ error: 'Use type=org&domain=, type=person&name=&email=&linkedin=, type=contact&email= or type=contact&linkedin=' }, { status: 400 });
 }

@@ -16,7 +16,7 @@ import { tx, isUniqueViolation } from '@/lib/db';
 import { emit } from '@/lib/events';
 import { logActivity } from '@/lib/activities';
 import { emailDomain, isFreeMail, normDomain, normEmail, normLinkedin } from '@/lib/normalize';
-import { findContactByEmail, findContactByLinkedin, findOrgByDomain } from '@/lib/dupes';
+import { blocksSave, candidateToDupeMatch, findContactByEmail, findContactByLinkedin, findContactCandidates, findOrgByDomain, type ContactCandidate } from '@/lib/dupes';
 import { fail, str, zodFieldErrors, type ActionState } from '@/lib/forms';
 
 const orgSchema = z.object({
@@ -92,6 +92,12 @@ const contactSchema = z.object({
   job_title: z.string().trim().max(200).nullable(),
 });
 
+function dupeField(c: ContactCandidate, email: string | null, linkedin: string | null): string {
+  if (linkedin && c.linkedin === linkedin) return 'linkedin';
+  if (email && c.emails.some((e) => e.trim().toLowerCase() === email)) return 'email';
+  return 'first_name';
+}
+
 export async function createContact(_prev: ActionState, fd: FormData): Promise<ActionState> {
   const user = await requireUser();
   if (!can(user, 'create', 'contact')) return fail("You can't create contacts");
@@ -112,8 +118,16 @@ export async function createContact(_prev: ActionState, fd: FormData): Promise<A
   if (input.linkedin && !linkedin) errors.linkedin = 'Paste a profile link like linkedin.com/in/name';
   if (Object.keys(errors).length) return fail('Check the highlighted fields', errors);
 
-  const dupe = (email ? await findContactByEmail(input.email) : null) ?? (linkedin ? await findContactByLinkedin(linkedin) : null);
-  if (dupe) return fail(dupe.title, { [email && dupe.title.includes('email') ? 'email' : 'linkedin']: dupe.title }, { duplicate: dupe });
+  // Raka's rule (lib/dedupe.ts): name first, then LinkedIn, then email. Only a confirmed
+  // duplicate, or an email or LinkedIn profile another contact holds, stops the save. A name
+  // match with nothing to confirm it was shown in the form and is the person's call.
+  const name = [input.first_name, input.last_name].filter(Boolean).join(' ');
+  const candidates = await findContactCandidates({ name, linkedin, emails: [email] });
+  const blocking = candidates.find(blocksSave);
+  if (blocking) {
+    const dupe = candidateToDupeMatch(blocking);
+    return fail(dupe.title, { [dupeField(blocking, email, linkedin)]: dupe.title }, { duplicate: dupe });
+  }
 
   // Link to the organization that owns the email domain, never on free mail.
   const domain = email && !isFreeMail(email) ? emailDomain(email) : null;

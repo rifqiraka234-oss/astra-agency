@@ -7,8 +7,8 @@
  *   2. per accepted contact, newest acceptance first: the lemlist contact record
  *      and the WHOLE inbox thread, every page, checked against totalItems;
  *   3. in one transaction per contact: organization by domain (free mail never
- *      makes one), contact (matched by lemlist contactId, then LinkedIn URL,
- *      then email), a lead in the Lead pipeline, every thread item and the
+ *      makes one), contact (matched by lemlist contactId, then Raka's rule,
+ *      name first, then LinkedIn URL, then email, see lib/dedupe.ts), a lead in the Lead pipeline, every thread item and the
  *      acceptance as activities (source lemlist, external id the lemlist
  *      activity id, so a rerun adds nothing twice);
  *   4. lead.replied when a new reply is the newest item in the thread, so the
@@ -17,7 +17,7 @@
  * Nothing is ever written to lemlist, the client refuses anything but GET.
  * --dry-run does all of the above and rolls every transaction back.
  */
-import { companyNameOf, findExistingOrg, personKey } from './match';
+import { companyNameOf, findExistingContact, findExistingOrg } from './match';
 import { sql, tx, type Tx } from '../db';
 import { logActivity, type ActivityKind, type ActivityDirection } from '../activities';
 import { emit } from '../events';
@@ -54,6 +54,10 @@ export type SyncReport = {
   contactsSynced: number;
   contactsCreated: number;
   contactsMatched: number;
+  /** Matched only because another record holds the same LinkedIn or email under another name. */
+  contactsHeldForReview: number;
+  /** Made new beside a contact with the same name and nothing to confirm it, see /settings/duplicates. */
+  contactsToReview: number;
   organizationsCreated: number;
   leadsCreated: number;
   leadsUpdated: number;
@@ -162,30 +166,14 @@ async function upsertContact(
   const [byExt] = await t<{ entity_id: string }[]>`
     select entity_id from external_ids where system = 'lemlist_contact' and external_id = ${cid} and entity_type = 'contact'`;
   if (byExt) contactId = byExt.entity_id;
-  if (!contactId && linkedin) {
-    const [hit] = await t<{ id: string }[]>`select id from contacts where linkedin_url_normalised = ${linkedin} and deleted_at is null`;
-    contactId = hit?.id ?? null;
-  }
-  if (!contactId && email) {
-    const [hit] = await t<{ contact_id: string }[]>`select contact_id from contact_emails where lower(trim(email)) = ${email}`;
-    contactId = hit?.contact_id ?? null;
-  }
-  if (!contactId && orgId) {
-    // Same name at the same organization with no other lemlist id: the person the JSONL import
-    // made from a leadId only row. One match only, else a new contact.
+  if (!contactId) {
+    // Raka's rule (lib/dedupe.ts): name first, then LinkedIn, then email. A name match with
+    // nothing to confirm it makes a new contact and waits for review on /settings/duplicates.
     const full = [(f.firstName as string) || exp?.firstName, (f.lastName as string) || exp?.lastName].filter(Boolean).join(' ') || rec?.fullName || '';
-    const want = personKey(full);
-    if (want) {
-      const cands = await t<{ id: string; full_name: string; other_lemlist: boolean }[]>`
-        select c.id, c.full_name,
-               exists (select 1 from external_ids x where x.entity_type = 'contact' and x.entity_id = c.id
-                         and x.system = 'lemlist_contact' and x.external_id <> ${cid}) as other_lemlist
-          from contacts c
-         where c.deleted_at is null
-           and (c.primary_org_id = ${orgId} or exists (select 1 from contact_org_roles r where r.contact_id = c.id and r.organization_id = ${orgId}))`;
-      const same = cands.filter((c) => personKey(c.full_name) === want);
-      if (same.length === 1 && !same[0].other_lemlist) contactId = same[0].id;
-    }
+    const m = await findExistingContact(t, { name: full, linkedin, email });
+    contactId = m.id;
+    if (m.how === 'held') ctx.report.contactsHeldForReview++;
+    if (m.how === 'new' && m.review) ctx.report.contactsToReview++;
   }
 
   if (contactId) {
@@ -445,6 +433,8 @@ function emptyReport(dryRun: boolean): SyncReport {
     contactsSynced: 0,
     contactsCreated: 0,
     contactsMatched: 0,
+    contactsHeldForReview: 0,
+    contactsToReview: 0,
     organizationsCreated: 0,
     leadsCreated: 0,
     leadsUpdated: 0,

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui';
-import { DisqualifyDialog, QualifyDialog, type FirstStage, type QualifyLead } from './LeadDialogs';
+import { DisqualifyDialog, QualifyDialog, type FirstStage, type QualifyLead, type ReasonChoice } from './LeadDialogs';
 import type { GateUser } from './GateFields';
 
 export function LeadActions({
@@ -12,7 +12,9 @@ export function LeadActions({
   users,
   canQualify,
   canDisqualify,
+  disqualifyReasons,
 }: {
+  disqualifyReasons: ReasonChoice[];
   lead: QualifyLead;
   firstSalesStage: FirstStage | null;
   users: GateUser[];
@@ -37,7 +39,7 @@ export function LeadActions({
         onClose={() => setOpen(null)}
         onDone={(res) => (res.ok && res.href ? router.push(res.href) : router.refresh())}
       />
-      <DisqualifyDialog open={open === 'disqualify'} lead={{ id: lead.id, title: lead.title }} onClose={() => setOpen(null)} onDone={() => router.refresh()} />
+      <DisqualifyDialog open={open === 'disqualify'} lead={{ id: lead.id, title: lead.title }} reasons={disqualifyReasons} onClose={() => setOpen(null)} onDone={() => router.refresh()} />
     </>
   );
 }

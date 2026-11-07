@@ -24,7 +24,7 @@ import { formatMoney } from '@/lib/format';
 import { Avatar, Badge } from '@/components/ui';
 import { moveStageAction, stageGateAction } from '@/app/(app)/pipelines/actions';
 import { GateDialog } from './GateDialog';
-import { DisqualifyDialog, QualifyDialog, type FirstStage } from './LeadDialogs';
+import { DisqualifyDialog, QualifyDialog, type FirstStage, type ReasonChoice } from './LeadDialogs';
 import type { GateUser } from './GateFields';
 import styles from './sales.module.css';
 
@@ -39,6 +39,7 @@ type Gate = {
   effects: string[];
   cta: string;
   variant: 'accent' | 'danger' | 'primary';
+  lost: boolean;
 };
 
 type Toast = { text: string; error?: boolean; href?: string };
@@ -50,7 +51,10 @@ export function Board({
   users,
   firstSalesStage,
   canEdit,
+  disqualifyReasons = [],
 }: {
+  /** Active disqualify reasons, for the lead board's Disqualified drop. */
+  disqualifyReasons?: ReasonChoice[];
   data: Pick<BoardData, 'objectType' | 'columns' | 'closedStages' | 'cards' | 'closed'>;
   users: GateUser[];
   firstSalesStage: FirstStage | null;
@@ -122,6 +126,7 @@ export function Board({
       effects: info.effects,
       cta: lost ? `Mark as lost` : info.state === 'won' ? 'Mark as won' : `Move to ${stage.name}`,
       variant: lost ? 'danger' : 'accent',
+      lost,
     });
   }
 
@@ -235,6 +240,7 @@ export function Board({
         effectsLead="On save, the automations do this"
         cta={gate?.cta ?? ''}
         ctaVariant={gate?.variant}
+        note={gate?.lost && data.objectType === 'deal' ? { name: 'lost_note', label: 'Note' } : undefined}
         users={users}
         key={gate ? `${gate.card.id}-${gate.stageId}` : 'none'}
         onCancel={() => setGate(null)}
@@ -264,6 +270,7 @@ export function Board({
           <DisqualifyDialog
             open={Boolean(disqualify)}
             lead={disqualify ? { id: disqualify.id, title: disqualify.title } : null}
+            reasons={disqualifyReasons}
             onClose={() => setDisqualify(null)}
             onDone={afterLeadDialog(disqualify, lostStage?.id)}
           />
@@ -323,6 +330,16 @@ function ClosedZone({ zone, dragging }: { zone: BoardData['closed'][number]; dra
         <h2 className={styles.closedTitle}>{zone.name}</h2>
         <span className={styles.closedValue}>{zone.value}</span>
       </div>
+      {zone.breakdown?.length ? (
+        <ul className={styles.closedBreakdown} aria-label={zone.state === 'lost' ? 'By reason' : 'Breakdown'}>
+          {zone.breakdown.map((b) => (
+            <li key={b.key ?? 'none'}>
+              <span>{b.label}</span>
+              <span className="mono">{b.count}</span>
+            </li>
+          ))}
+        </ul>
+      ) : null}
       <div className={styles.closedDetail}>{zone.detail}</div>
     </section>
   );

@@ -36,6 +36,7 @@ async function main() {
   console.log(`  by stage  ${Object.entries(q.stageCounts).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(', ')}`);
   console.log(`  leads created ${q.leadsCreated}, updated ${q.leadsUpdated} (kept a stage set by hand or automation ${q.leadsKeptUserStage}), without a contact ${q.leadsWithoutContact}`);
   console.log(`  contacts created ${q.contactsCreated}, matched ${q.contactsMatched}, organizations created ${q.organizationsCreated}`);
+  console.log(`  contacts to review ${q.contactsToReview} (same name, nothing to confirm), held ${q.contactsHeldForReview} (same LinkedIn or email, other name)`);
   console.log(`  research notes ${q.notesCreated}, added to the suppression list ${q.suppressed}`);
   console.log(`prototypes.jsonl  ${r.prototypes.rows} rows, ${r.prototypes.distinct} distinct, activities created ${r.prototypes.created}, already there ${r.prototypes.existing}, no matching person ${r.prototypes.unlinked}`);
   console.log(`meetings.jsonl    ${r.meetings.rows} rows, ${r.meetings.distinct} distinct, activities created ${r.meetings.created}, already there ${r.meetings.existing}, no matching person ${r.meetings.unlinked}`);

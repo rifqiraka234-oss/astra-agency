@@ -63,14 +63,21 @@ export const RESEARCH_STATUSES: Option[] = [
 ];
 export const RESEARCH_TONES: Record<string, Tone> = { unresearched: 'grey', researching: 'grey', drafted: 'blue', awaiting_approval: 'amber', sent: 'green' };
 
+/**
+ * The default reason lists. The live lists are the reason_options table, edited in
+ * /settings/reasons; read them with lib/reasons.ts. These only mirror the seed.
+ */
 export const DISQUALIFY_REASONS: Option[] = [
-  o('no_strong_angle', 'No strong angle'), o('blocked_needs_info', 'Blocked, needs info'), o('do_not_contact', 'Do not contact'),
-  o('not_icp', 'Not a fit'), o('former_owner', 'Former owner'), o('wrong_company', 'Wrong company'),
+  o('no_reply', 'No reply'), o('went_quiet', 'Went quiet after replying'), o('declined', 'Declined'), o('not_now', 'Not now'),
+  o('no_strong_angle', 'No strong angle'), o('not_icp', 'Not our ideal client'), o('do_not_contact', 'Do not contact'),
+  o('blocked_needs_info', 'Blocked, needs info'), o('former_owner', 'Former owner'), o('wrong_company', 'Wrong company'),
+  o('business_closed', 'Business closed'), o('has_agency', 'Already has an agency'),
 ];
 
 export const LOST_REASONS: Option[] = [
-  o('cheaper', 'Went with someone cheaper'), o('not_now', 'Not now'), o('in_house', 'Built it in house'),
-  o('no_budget', 'No budget'), o('no_response', 'Went quiet'), o('other', 'Other'),
+  o('cheaper', 'Went with someone cheaper'), o('other_agency', 'Chose another agency'), o('in_house', 'Building it in house'),
+  o('no_budget', 'No budget'), o('not_now', 'Not now'), o('no_response', 'Went quiet'), o('scope_fit', 'Scope not a fit'),
+  o('no_decision_maker', 'Decision maker not on board'),
 ];
 
 export const DEAL_TYPES: Option[] = [o('new_business', 'New business'), o('upsell', 'Upsell'), o('renewal', 'Renewal'), o('expansion', 'Expansion')];

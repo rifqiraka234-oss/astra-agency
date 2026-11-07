@@ -1,7 +1,8 @@
 /**
  * /leads/[id]: the contact and organization, the lead stage path, research
- * status, angle and worth, LinkedIn accepted date, stage history, timeline and
- * tasks. Qualify creates the deal, disqualify needs a reason.
+ * status, angle and worth, LinkedIn accepted date, the stage timeline (entered,
+ * exited and time per stage), stage moves, timeline and tasks. Qualify creates the
+ * deal, disqualify needs a reason from the managed list (lib/reasons.ts).
  */
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -11,8 +12,11 @@ import { getTimeline } from '@/lib/activities';
 import { stageGate } from '@/lib/stages';
 import { customPropertyGroups, getFieldDefinitions, mergePropertyGroups, type PropertyGroup } from '@/lib/fields';
 import { formatDate, formatDateTime, formatDays, formatDue, formatMoney } from '@/lib/format';
-import { DISQUALIFY_REASONS, LEAD_LABELS, RESEARCH_STATUSES, RESEARCH_TONES, labelOf, toneOf } from '@/lib/options';
+import { LEAD_LABELS, RESEARCH_STATUSES, RESEARCH_TONES, labelOf, toneOf } from '@/lib/options';
 import { getLead, listUsers, salesPipelines, stagesOf } from '@/lib/sales/queries';
+import { listReasons, reasonLabel, reasonSelectOptions } from '@/lib/reasons';
+import { stageTimeline } from '@/lib/sales/stage-times';
+import { StageTimeline } from '@/components/sales/StageTimeline';
 import { RecordHeader, PropertiesPanel, Timeline, type HeaderBadge } from '@/components/records';
 import { StagePath, type PathStage } from '@/components/sales/StagePath';
 import { LeadActions } from '@/components/sales/LeadActions';
@@ -27,7 +31,16 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
   const record = await getLead(id);
   if (!record) notFound();
   const { lead, stages, history, tasks } = record;
-  const [users, timeline, defs, pipelines] = await Promise.all([listUsers(), getTimeline('lead', id), getFieldDefinitions('lead'), salesPipelines()]);
+  const [users, timeline, defs, pipelines, reasons, stageRows] = await Promise.all([
+    listUsers(),
+    getTimeline('lead', id),
+    getFieldDefinitions('lead'),
+    salesPipelines(),
+    listReasons('lead_disqualify', { includeArchived: true }),
+    stageTimeline('lead', id, stages, lead.stage_id),
+  ]);
+  const disqualifyReasons = reasonSelectOptions(reasons);
+  const reasonText = reasonLabel(reasons, lead.disqualify_reason);
   const salesPipe = pipelines.find((p) => p.key === 'sales');
   const firstSales = salesPipe ? (await stagesOf(salesPipe.id)).find((s) => s.state === 'open') ?? null : null;
   const canEdit = can(user, 'edit', 'lead', lead);
@@ -75,6 +88,20 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
       ],
     },
   ];
+  if (current.state === 'lost') {
+    // An archived reason the lead still holds stays readable; picking again offers the active ones.
+    const reasonOpts = lead.disqualify_reason && !disqualifyReasons.some((o) => o.value === lead.disqualify_reason)
+      ? [...disqualifyReasons, { value: lead.disqualify_reason, label: `${reasonText}, archived` }]
+      : disqualifyReasons;
+    core.unshift({
+      name: 'Disqualified',
+      fields: [
+        { key: 'disqualify_reason', label: 'Reason', type: 'select', value: lead.disqualify_reason, display: reasonText || 'No reason yet, pick one', options: reasonOpts, help: 'Reasons are managed in Settings, Reasons' },
+        { key: 'disqualify_note', label: 'Note', type: 'textarea', value: lead.disqualify_note, display: lead.disqualify_note ?? '' },
+        { key: 'disqualified_at', label: 'Disqualified', type: 'readonly', value: null, display: lead.disqualified_at ? formatDateTime(lead.disqualified_at) : '', editable: false },
+      ],
+    });
+  }
   const groups = mergePropertyGroups(core, customPropertyGroups(defs, lead.custom, { users, editable: canEdit })).map((g) => ({
     ...g,
     fields: g.fields.map((f) => ({ ...f, editable: canEdit && f.editable !== false && f.type !== 'readonly' })),
@@ -85,7 +112,7 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
     { label: labelOf(RESEARCH_STATUSES, lead.research_status), tone: toneOf(RESEARCH_TONES, lead.research_status) },
   ];
   if (lead.label) badges.push({ label: labelOf(LEAD_LABELS, lead.label), tone: lead.label === 'hot' ? 'red' : lead.label === 'warm' ? 'amber' : 'grey' });
-  if (lead.disqualify_reason && current.state === 'lost') badges.push({ label: labelOf(DISQUALIFY_REASONS, lead.disqualify_reason), tone: 'red' });
+  if (current.state === 'lost') badges.push({ label: reasonText ? `Reason, ${reasonText}` : 'No reason recorded', tone: 'red' });
   if (lead.contact_dnc) badges.push({ label: 'Do not contact', tone: 'red', strong: true });
   if (lead.is_rotting) badges.push({ label: `${formatDays(lead.days_in_stage)} in ${current.name}, stalled`, tone: 'red' });
 
@@ -110,6 +137,7 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
               users={gateUsers}
               canQualify={current.state !== 'won' && !lead.converted_deal_id && !lead.contact_dnc}
               canDisqualify={current.state !== 'lost'}
+              disqualifyReasons={disqualifyReasons}
             />
           ) : null
         }
@@ -123,6 +151,7 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
             canEdit={canEdit}
             lead={{ ...qualifyLead, converted: Boolean(lead.converted_deal_id) }}
             firstSalesStage={firstStage}
+            disqualifyReasons={disqualifyReasons}
           />
         }
       />
@@ -156,6 +185,15 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
                   <dt>Time in {current.name}</dt>
                   <dd>{formatDays(lead.days_in_stage)}</dd>
                 </div>
+                {current.state === 'lost' ? (
+                  <div>
+                    <dt>Disqualify reason</dt>
+                    <dd>
+                      {reasonText || 'Not recorded'}
+                      {lead.disqualify_note ? <div className={styles.lineNote}>{lead.disqualify_note}</div> : null}
+                    </dd>
+                  </div>
+                ) : null}
               </dl>
             </div>
           </section>
@@ -167,10 +205,12 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
             <Timeline items={timeline} composer={{ action: addLeadNoteAction, hidden: { leadId: lead.id }, placeholder: 'Add a research note to this lead' }} />
           </section>
 
+          <StageTimeline rows={stageRows} />
+
           <section aria-labelledby="sh-h" className={styles.panel}>
             <div className={styles.panelHead}>
               <h2 id="sh-h" className={styles.panelTitle}>
-                Stage history
+                Stage moves
               </h2>
             </div>
             <div style={{ overflowX: 'auto' }}>
@@ -195,7 +235,7 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
                       <tr key={h.id}>
                         <td>
                           {h.stage_name}
-                          {h.reason ? <div className={styles.lineNote}>Moved back. {h.reason}</div> : null}
+                          {h.reason ? <div className={styles.lineNote}>{h.moved_back ? `Moved back. ${h.reason}` : h.reason}</div> : null}
                         </td>
                         <td>{formatDate(h.changed_at)}</td>
                         <td>{h.left_at ? formatDays(h.days) : `${formatDays(h.days)} so far`}</td>

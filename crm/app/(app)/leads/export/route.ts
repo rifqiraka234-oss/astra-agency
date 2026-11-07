@@ -6,6 +6,7 @@ import { logSecurityEvent } from '@/lib/audit';
 import { sql } from '@/lib/db';
 import { listLeads } from '@/lib/sales/queries';
 import { csvResponse, leadsCsv } from '@/lib/sales/csv';
+import { stageColumns, stageDatesFor } from '@/lib/sales/stage-times';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,9 +17,10 @@ export async function GET(req: NextRequest) {
   const p = req.nextUrl.searchParams;
   const get = (k: string) => p.get(k) || undefined;
   const { rows } = await listLeads(
-    { stage: get('stage'), research: get('research'), owner: get('owner'), source: get('source'), q: get('q'), state: get('state') ?? (get('stage') ? 'all' : 'open'), sort: get('sort'), dir: get('dir') },
+    { stage: get('stage'), research: get('research'), reason: get('reason'), owner: get('owner'), source: get('source'), q: get('q'), state: get('state') ?? (get('stage') || get('reason') ? 'all' : 'open'), sort: get('sort'), dir: get('dir') },
     100000,
   );
   await logSecurityEvent(sql, 'export', { object: 'lead', rows: rows.length, filters: Object.fromEntries(p) }, user.id).catch(() => {});
-  return csvResponse(leadsCsv(rows), 'leads');
+  const [cols, dates] = await Promise.all([stageColumns('lead'), stageDatesFor('lead', rows.map((r) => r.id))]);
+  return csvResponse(leadsCsv(rows, cols, dates), 'leads');
 }

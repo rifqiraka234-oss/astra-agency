@@ -7,6 +7,7 @@ import s from './settings.module.css';
 export const SETTINGS_SECTIONS = [
   { href: '/settings/fields', label: 'Fields', sub: 'Custom fields per object' },
   { href: '/settings/pipelines', label: 'Pipelines and stages', sub: 'Probability, required fields' },
+  { href: '/settings/reasons', label: 'Reasons', sub: 'Why leads and deals close' },
   { href: '/settings/automations', label: 'Automations', sub: 'Triggers, conditions, actions' },
   { href: '/settings/users', label: 'Users and roles', sub: 'Who sees and edits what' },
   { href: '/settings/integrations', label: 'Integrations and API', sub: 'lemlist, Gmail, Moneybird' },

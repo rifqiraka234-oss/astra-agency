@@ -1,67 +1,27 @@
 /**
- * lib/data/dupes-scan.ts, the fuzzy duplicate scan behind /settings/duplicates.
- * Exact duplicates (email, domain, LinkedIn) cannot exist, the unique indexes
- * block them. This finds the ones a person has to judge:
+ * lib/data/dupes-scan.ts, the duplicate scan behind /settings/duplicates.
  *
- *   organizations  the same normalised name (legal suffixes and accents removed) and the same city
- *   contacts       similar names with the same phone, or at the same organization
+ *   contacts       Raka's rule (lib/dedupe.ts): the same normalised name first, then the
+ *                  same LinkedIn profile confirms it, then the same email when LinkedIn is
+ *                  missing. Different LinkedIn profiles are different people and never show.
+ *                  A name match with nothing to confirm it, or the same LinkedIn or email
+ *                  under another name, is for review.
+ *   organizations  the same normalised name (legal suffixes and accents removed) and the same
+ *                  city, or no city on one or both. Always for review.
  *
+ * Pairs come back confirmed first (LinkedIn, then email), then the ones to review.
  * Pairs someone marked "Not the same" (duplicate_pairs_rejected) never come back.
  *
  *   const pairs = await scanDuplicates();                 // DupePair[]
  *   await rejectPair(t, 'contact', aId, bId, user.id);
  */
 import { sql, type Db, type Tx } from '@/lib/db';
-import { normCompanyName } from '@/lib/normalize';
+import { normCompanyName, normEmail, normLinkedin } from '@/lib/normalize';
+import { CONFIDENCE_LABELS, CONFIDENCE_ORDER, compareContacts, type MatchConfidence } from '@/lib/dedupe';
 import type { MergeType } from './merge';
 
 export type DupeSide = { id: string; name: string; sub: string; createdAt: Date };
-export type DupePair = { type: MergeType; key: string; a: DupeSide; b: DupeSide; why: string };
-
-/** Lower case, accents gone, single spaces. */
-export function normPersonName(s: string | null | undefined): string {
-  return (s ?? '')
-    .normalize('NFKD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z ]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-function levenshtein(a: string, b: string): number {
-  if (a === b) return 0;
-  const prev = Array.from({ length: b.length + 1 }, (_, i) => i);
-  for (let i = 1; i <= a.length; i++) {
-    let diag = prev[0];
-    prev[0] = i;
-    for (let j = 1; j <= b.length; j++) {
-      const tmp = prev[j];
-      prev[j] = Math.min(prev[j] + 1, prev[j - 1] + 1, diag + (a[i - 1] === b[j - 1] ? 0 : 1));
-      diag = tmp;
-    }
-  }
-  return prev[b.length];
-}
-
-/**
- * Similar enough to show a person: the same full name, or the same last name
- * with first names starting alike (Tom and Thomas), or at most a small typo.
- */
-export function similarNames(a: { first: string; last: string | null }, b: { first: string; last: string | null }): boolean {
-  const fa = normPersonName(a.first);
-  const fb = normPersonName(b.first);
-  const la = normPersonName(a.last);
-  const lb = normPersonName(b.last);
-  const full = (f: string, l: string) => `${f} ${l}`.trim();
-  if (!fa || !fb) return false;
-  if (full(fa, la) === full(fb, lb)) return true;
-  if (la && la === lb && fa[0] === fb[0]) return true;
-  const x = full(fa, la);
-  const y = full(fb, lb);
-  const d = levenshtein(x, y);
-  return d <= 2 && Math.max(x.length, y.length) >= 6 && d / Math.max(x.length, y.length) <= 0.2;
-}
+export type DupePair = { type: MergeType; key: string; a: DupeSide; b: DupeSide; why: string; confidence: MatchConfidence; label: string };
 
 const pairKey = (type: string, a: string, b: string) => (a < b ? `${type}:${a}:${b}` : `${type}:${b}:${a}`);
 
@@ -113,64 +73,79 @@ export async function scanDuplicates(db: Db = sql, limit = 200): Promise<DupePai
         else if (!ca || !cb) why = 'Same name, city missing on one';
         if (!why) continue;
         const [first, second] = a.created_at <= b.created_at ? [a, b] : [b, a];
-        add({ type: 'organization', key: pairKey('organization', a.id, b.id), a: orgSide(first), b: orgSide(second), why });
+        add({ type: 'organization', key: pairKey('organization', a.id, b.id), a: orgSide(first), b: orgSide(second), why, confidence: 'review', label: CONFIDENCE_LABELS.review });
       }
     }
   }
 
-  // Contacts.
+  // Contacts, Raka's rule. Buckets on the normalised name, the LinkedIn profile and every
+  // email, then every pair in a bucket is judged by compareContacts.
   const contacts = await db<{
     id: string;
-    first_name: string;
-    last_name: string | null;
     full_name: string;
-    primary_org_id: string | null;
+    name_normalised: string | null;
+    linkedin_url: string | null;
+    linkedin_url_normalised: string | null;
     org_name: string | null;
-    email: string | null;
-    phones: string[] | null;
-    orgs: string[] | null;
+    emails: string[] | null;
     created_at: Date;
   }[]>`
-    select c.id, c.first_name, c.last_name, c.full_name, c.primary_org_id, o.name as org_name, c.created_at,
-           (select e.email from contact_emails e where e.contact_id = c.id order by e.is_primary desc, e.created_at limit 1) as email,
-           (select array_agg(distinct p.phone_normalised) from contact_phones p where p.contact_id = c.id and p.phone_normalised is not null) as phones,
-           (select array_agg(distinct r.organization_id) from contact_org_roles r where r.contact_id = c.id and r.is_current) as orgs
+    select c.id, c.full_name, c.name_normalised, c.linkedin_url, c.linkedin_url_normalised, o.name as org_name, c.created_at,
+           (select array_agg(e.email order by e.is_primary desc, e.created_at) from contact_emails e where e.contact_id = c.id) as emails
       from contacts c left join organizations o on o.id = c.primary_org_id
      where c.deleted_at is null`;
   const byId = new Map(contacts.map((c) => [c.id, c]));
-  const contactSide = (c: (typeof contacts)[number]): DupeSide => {
-    const phone = c.phones?.[0] ?? null;
-    return { id: c.id, name: c.full_name, sub: [c.email ?? phone ?? 'no email', c.org_name ?? 'no organization'].join(', '), createdAt: c.created_at };
-  };
+  const linkedinOf = (c: (typeof contacts)[number]) => normLinkedin(c.linkedin_url_normalised ?? c.linkedin_url);
+  const contactSide = (c: (typeof contacts)[number]): DupeSide => ({
+    id: c.id,
+    name: c.full_name,
+    sub: [linkedinOf(c) ?? 'no LinkedIn', c.emails?.length ? c.emails.join(', ') : 'no email', c.org_name ?? 'no organization'].join(', '),
+    createdAt: c.created_at,
+  });
   const buckets = new Map<string, Set<string>>();
   const put = (k: string, id: string) => buckets.set(k, (buckets.get(k) ?? new Set()).add(id));
   for (const c of contacts) {
-    for (const p of c.phones ?? []) put(`phone:${p}`, c.id);
-    const orgIds = new Set([...(c.orgs ?? []), ...(c.primary_org_id ? [c.primary_org_id] : [])]);
-    for (const o of orgIds) put(`org:${o}`, c.id);
+    if (c.name_normalised) put(`name:${c.name_normalised}`, c.id);
+    const li = linkedinOf(c);
+    if (li) put(`li:${li}`, c.id);
+    for (const e of c.emails ?? []) {
+      const n = normEmail(e);
+      if (n) put(`email:${n}`, c.id);
+    }
   }
-  for (const [bucket, ids] of buckets) {
-    if (ids.size < 2) continue;
+  for (const ids of buckets.values()) {
+    if (ids.size < 2 || ids.size > 200) continue; // a name shared by hundreds is noise, not a duplicate
     const list = [...ids];
-    if (list.length > 200) continue; // a huge organization, names would match by chance
-    const why = bucket.startsWith('phone:') ? 'Similar name, same phone' : 'Similar name, same organization';
     for (let i = 0; i < list.length; i++) {
       for (let j = i + 1; j < list.length; j++) {
         const a = byId.get(list[i])!;
         const b = byId.get(list[j])!;
-        if (!similarNames({ first: a.first_name, last: a.last_name }, { first: b.first_name, last: b.last_name })) continue;
         const key = pairKey('contact', a.id, b.id);
-        const existing = out.get(key);
-        if (existing) {
-          if (!existing.why.includes('phone') && why.includes('phone')) existing.why = why;
-          continue;
-        }
+        if (out.has(key)) continue;
+        const verdict = compareContacts(
+          { name: a.full_name, linkedin: linkedinOf(a), emails: a.emails ?? [] },
+          { name: b.full_name, linkedin: linkedinOf(b), emails: b.emails ?? [] },
+        );
+        if (!verdict || verdict.confidence === 'distinct') continue;
         const [first, second] = a.created_at <= b.created_at ? [a, b] : [b, a];
-        add({ type: 'contact', key, a: contactSide(first), b: contactSide(second), why });
+        add({
+          type: 'contact',
+          key,
+          a: contactSide(first),
+          b: contactSide(second),
+          why: verdict.reason,
+          confidence: verdict.confidence,
+          label: CONFIDENCE_LABELS[verdict.confidence],
+        });
       }
     }
   }
-  return [...out.values()].slice(0, limit);
+  const typeOrder = (t: MergeType) => (t === 'contact' ? 0 : 1);
+  const sorted = [...out.values()].sort(
+    (p, q) => CONFIDENCE_ORDER[p.confidence] - CONFIDENCE_ORDER[q.confidence] || typeOrder(p.type) - typeOrder(q.type) || p.a.name.localeCompare(q.a.name),
+  );
+  return sorted.slice(0, limit);
+
 }
 
 /** "Not the same". The pair never shows again. */

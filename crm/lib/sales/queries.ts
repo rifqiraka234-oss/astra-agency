@@ -110,7 +110,15 @@ export type BoardData = {
   closedStages: StageWithGate[];
   cards: BoardCard[];
   totals: { label: string; value: string; mono?: boolean }[];
-  closed: { stageId: string; name: string; value: string; detail: string; state: 'won' | 'lost' }[];
+  closed: {
+    stageId: string;
+    name: string;
+    value: string;
+    detail: string;
+    state: 'won' | 'lost';
+    /** For the lost box, how many by reason, most first. */
+    breakdown?: { key: string | null; label: string; count: number }[];
+  }[];
 };
 
 const CARD_CAP = 40;
@@ -242,14 +250,12 @@ async function dealBoard(pipeline: PipelineOption, open: StageWithGate[], closed
      where d.pipeline_id = ${pipeline.id} and s.state = 'won' and d.deleted_at is null
        and d.won_at >= now() - interval '90 days' and ${ownerClause(owner, 'd.owner_user_id')}`;
   const lostReasons = await sql<{ reason: string | null; label: string | null; n: number }[]>`
-    select d.lost_reason as reason,
-           (select o->>'label' from stage_required_fields r, jsonb_array_elements(r.options) o
-             where r.field_key = 'lost_reason' and o->>'value' = d.lost_reason limit 1) as label,
-           count(*)::int as n
+    select d.lost_reason as reason, ro.label, count(*)::int as n
       from deals d join pipeline_stages s on s.id = d.stage_id
+      left join reason_options ro on ro.object_type = 'deal_lost' and ro.key = d.lost_reason
      where d.pipeline_id = ${pipeline.id} and s.state = 'lost' and d.deleted_at is null
        and d.lost_at >= now() - interval '90 days' and ${ownerClause(owner, 'd.owner_user_id')}
-     group by d.lost_reason order by n desc`;
+     group by d.lost_reason, ro.label order by n desc, ro.label`;
   const lostCount = lostReasons.reduce((a, r) => a + r.n, 0);
   const wonEffects = await automationEffects(['deal.won']);
 
@@ -279,12 +285,8 @@ async function dealBoard(pipeline: PipelineOption, open: StageWithGate[], closed
       state: 'lost',
       name: 'Lost, last 90 days',
       value: `${lostCount} ${lostCount === 1 ? 'deal' : 'deals'}`,
-      detail:
-        'Lost reason is required on the way in.' +
-        (lostReasons.length
-          ? ` ${lostReasons.map((r) => `${(r.label ?? r.reason ?? 'No reason').replace(/^./, (c) => (lostReasons[0] === r ? c : c.toLowerCase()))} ${r.n}`).join(', ')}.`
-          : '') +
-        ' Drop a card here to mark it lost.',
+      detail: 'A lost reason from the list is required on the way in. Drop a card here to mark it lost.',
+      breakdown: lostReasons.map((r) => ({ key: r.reason, label: r.label ?? (r.reason ? r.reason.replace(/_/g, ' ') : 'No reason'), count: r.n })),
     });
   }
 
@@ -416,21 +418,17 @@ async function leadBoard(pipeline: PipelineOption, open: StageWithGate[], closed
         where l.pipeline_id = ${pipeline.id} and l.deleted_at is null
           and l.qualified_at >= date_trunc('month', crm_today()::timestamp) at time zone 'Europe/Amsterdam'
           and ${ownerClause(owner, 'l.owner_user_id')}) as qualified`;
-  const disq = await sql<{ reason: string | null; n: number }[]>`
-    select l.disqualify_reason as reason, count(*)::int as n from leads l
+  const disq = await sql<{ reason: string | null; label: string | null; n: number }[]>`
+    select l.disqualify_reason as reason, ro.label, count(*)::int as n from leads l
+      left join reason_options ro on ro.object_type = 'lead_disqualify' and ro.key = l.disqualify_reason
      where l.pipeline_id = ${pipeline.id} and l.deleted_at is null
        and l.disqualified_at >= date_trunc('month', crm_today()::timestamp) at time zone 'Europe/Amsterdam'
        and ${ownerClause(owner, 'l.owner_user_id')}
-     group by l.disqualify_reason order by n desc`;
+     group by l.disqualify_reason, ro.label order by n desc, ro.label`;
   const disqCount = disq.reduce((a, r) => a + r.n, 0);
-  const REASONS: Record<string, string> = {
-    no_strong_angle: 'no strong angle', blocked_needs_info: 'blocked, needs info', do_not_contact: 'do not contact',
-    not_icp: 'not a fit', former_owner: 'former owner', wrong_company: 'wrong company',
-  };
   const attempting = open.find((s) => s.key === 'attempting');
   const qualifiedStage = closedStages.find((s) => s.state === 'won');
   const disqStage = closedStages.find((s) => s.state === 'lost');
-  const reasonText = disq.map((r) => `${REASONS[r.reason ?? ''] ?? 'no reason'} ${r.n}`).join(', ');
   const closed: BoardData['closed'] = [];
   if (qualifiedStage) {
     closed.push({
@@ -447,9 +445,8 @@ async function leadBoard(pipeline: PipelineOption, open: StageWithGate[], closed
       state: 'lost',
       name: 'Disqualified this month',
       value: String(disqCount),
-      detail:
-        (reasonText ? `${reasonText.replace(/^./, (c) => c.toUpperCase())}. ` : '') +
-        'A reason is required and do not contact also adds them to the suppression list.',
+      detail: 'A reason from the list is required. Do not contact also adds them to the suppression list.',
+      breakdown: disq.map((r) => ({ key: r.reason, label: r.label ?? (r.reason ? r.reason.replace(/_/g, ' ') : 'No reason'), count: r.n })),
     });
   }
   return {
@@ -503,6 +500,8 @@ function orderBy(expr: string, dir: 'asc' | 'desc'): string {
 export type LeadListFilters = {
   stage?: string;
   research?: string;
+  /** A disqualify reason key, or 'none' for disqualified leads without one. */
+  reason?: string;
   owner?: string;
   source?: string;
   q?: string;
@@ -522,6 +521,7 @@ const LEAD_SORTS: Record<string, string> = {
   worth: 'l.angle_worth_eur',
   days: 'v.days_in_stage',
   created: 'l.created_at',
+  reason: 'lower(dr.label)',
 };
 
 export type LeadListRow = {
@@ -536,6 +536,8 @@ export type LeadListRow = {
   stage_state: string;
   research_status: string;
   disqualify_reason: string | null;
+  disqualify_reason_label: string | null;
+  disqualify_note: string | null;
   owner_name: string | null;
   owner_initials: string | null;
   owner_bg: string | null;
@@ -559,7 +561,7 @@ export async function listLeads(f: LeadListFilters, limit = 500): Promise<{ rows
   const rows = await sql<(LeadListRow & { total: number })[]>`
     select l.id, coalesce(c.full_name, l.name, o.name, 'Untitled lead') as title, l.contact_id, l.organization_id,
            o.name as org_name, c.job_title, v.stage_name, v.stage_key, v.stage_state, l.research_status, l.disqualify_reason,
-           u.name as owner_name, u.initials as owner_initials, u.avatar_bg as owner_bg, l.source, l.campaign, l.angle,
+           dr.label as disqualify_reason_label, l.disqualify_note, u.name as owner_name, u.initials as owner_initials, u.avatar_bg as owner_bg, l.source, l.campaign, l.angle,
            l.angle_worth_eur, l.linkedin_accepted_at, v.days_in_stage, v.is_rotting, l.converted_deal_id, l.created_at,
            count(*) over ()::int as total
       from v_lead_stage v
@@ -567,8 +569,10 @@ export async function listLeads(f: LeadListFilters, limit = 500): Promise<{ rows
       left join contacts c on c.id = l.contact_id
       left join organizations o on o.id = l.organization_id
       left join users u on u.id = l.owner_user_id
+      left join reason_options dr on dr.object_type = 'lead_disqualify' and dr.key = l.disqualify_reason
      where ${stageCond} and ${stateCond}
        and ${f.research ? sql`l.research_status = ${f.research}` : sql`true`}
+       and ${f.reason === 'none' ? sql`(v.stage_state = 'lost' and l.disqualify_reason is null)` : f.reason ? sql`(v.stage_state = 'lost' and l.disqualify_reason = ${f.reason})` : sql`true`}
        and ${ownerClause(f.owner, 'l.owner_user_id')}
        and ${f.source ? sql`l.source = ${f.source}` : sql`true`}
        and ${like ? sql`(c.full_name ilike ${like} or o.name ilike ${like} or l.name ilike ${like} or l.campaign ilike ${like})` : sql`true`}
@@ -597,6 +601,8 @@ export async function leadFilterOptions() {
 export type DealListFilters = {
   pipeline?: string;
   stage?: string;
+  /** A lost reason key, or 'none' for lost deals without one. */
+  reason?: string;
   state?: string;
   owner?: string;
   q?: string;
@@ -615,6 +621,7 @@ const DEAL_SORTS: Record<string, string> = {
   owner: 'u.name',
   days: 'v.days_in_stage',
   created: 'd.created_at',
+  reason: 'lower(lr.label)',
 };
 
 export type DealListRow = {
@@ -638,6 +645,10 @@ export type DealListRow = {
   is_rotting: boolean;
   has_open_task: boolean;
   lost_reason: string | null;
+  lost_reason_label: string | null;
+  lost_note: string | null;
+  pipeline_id: string;
+  stage_id: string;
   created_at: Date;
 };
 
@@ -653,13 +664,15 @@ export async function listDeals(f: DealListFilters, limit = 500): Promise<{ rows
     select d.id, d.name, d.organization_id, o.name as org_name, p.name as pipeline_name, v.stage_name, v.stage_state,
            d.amount, d.currency, v.probability, v.weighted_amount, d.close_date, u.name as owner_name,
            u.initials as owner_initials, u.avatar_bg as owner_bg, d.next_step, v.days_in_stage, v.is_rotting,
-           v.has_open_task, d.lost_reason, d.created_at
+           v.has_open_task, d.lost_reason, lr.label as lost_reason_label, d.lost_note, d.pipeline_id, d.stage_id, d.created_at
       from v_deal_weighted v
       join deals d on d.id = v.deal_id
       join pipelines p on p.id = d.pipeline_id
       left join organizations o on o.id = d.organization_id
       left join users u on u.id = d.owner_user_id
+      left join reason_options lr on lr.object_type = 'deal_lost' and lr.key = d.lost_reason
      where ${stateCond} and ${stageCond} and ${pipeCond}
+       and ${f.reason === 'none' ? sql`(v.stage_state = 'lost' and d.lost_reason is null)` : f.reason ? sql`(v.stage_state = 'lost' and d.lost_reason = ${f.reason})` : sql`true`}
        and ${ownerClause(f.owner, 'd.owner_user_id')}
        and ${like ? sql`(d.name ilike ${like} or o.name ilike ${like})` : sql`true`}
      order by ${sql.unsafe(orderBy(sortExpr, dir))}, d.id
@@ -689,7 +702,10 @@ export type StageHistoryRow = {
   days: number;
   actor_name: string | null;
   actor_type: string;
+  source: string | null;
   reason: string | null;
+  /** True for a move back to an earlier open stage or a reopen, where the reason is required. */
+  moved_back: boolean;
 };
 
 /** Stage history oldest first, with time in each stage (to the next move, or now). */
@@ -701,7 +717,8 @@ export async function stageHistory(objectType: 'lead' | 'deal', recordId: string
              - (st.changed_at at time zone 'Europe/Amsterdam')::date) as days,
            coalesce(u.name, case st.actor_type when 'automation' then 'Automation' when 'sync' then 'lemlist sync'
                                                when 'import' then 'Import' else null end) as actor_name,
-           st.actor_type, st.reason
+           st.actor_type, st.source, st.reason,
+           coalesce(s.state = 'open' and fs.id is not null and (fs.state <> 'open' or (fs.pipeline_id = s.pipeline_id and s.position < fs.position)), false) as moved_back
       from stage_transitions st
       join pipeline_stages s on s.id = st.to_stage_id
       left join pipeline_stages fs on fs.id = st.from_stage_id
@@ -733,7 +750,7 @@ export async function getDeal(id: string) {
       forecast_probability: number | null; pricing_model: string | null; next_step: string | null; angle: string | null;
       source: string | null; meeting_at: Date | null; build_card_url: string | null; prototype_url: string | null;
       quote_ref: string | null; decision_date: string | null; signer: string | null; start_date: string | null;
-      won_reason: string | null; lost_reason: string | null; lost_competitor: string | null; won_at: Date | null; lost_at: Date | null;
+      won_reason: string | null; lost_reason: string | null; lost_note: string | null; lost_competitor: string | null; won_at: Date | null; lost_at: Date | null;
       custom: Record<string, unknown>; created_at: Date; probability: number; weighted_amount: string; days_in_stage: number;
       is_rotting: boolean;
     }[]
@@ -780,7 +797,7 @@ export async function getLead(id: string) {
     {
       id: string; name: string | null; contact_id: string | null; organization_id: string | null; pipeline_id: string; stage_id: string;
       owner_user_id: string | null; owner_name: string | null; label: string | null; source: string | null; campaign: string | null;
-      research_status: string; disqualify_reason: string | null; angle: string | null; angle_worth_eur: string | null;
+      research_status: string; disqualify_reason: string | null; disqualify_note: string | null; angle: string | null; angle_worth_eur: string | null;
       status_note: string | null; next_step: string | null; auto_progress_enabled: boolean; linkedin_accepted_at: Date | null;
       opener_sent_at: Date | null; qualified_at: Date | null; disqualified_at: Date | null; converted_deal_id: string | null;
       custom: Record<string, unknown>; created_at: Date;
@@ -832,4 +849,37 @@ export async function pickedContact(id: string | undefined): Promise<{ id: strin
            (select e.email from contact_emails e where e.contact_id = c.id order by e.is_primary desc limit 1) as email
       from contacts c where c.id = ${id} and c.deleted_at is null`;
   return r ? { id: r.id, title: r.full_name, subtitle: r.email ?? undefined } : null;
+}
+
+export type ContactLeadRow = {
+  id: string;
+  title: string;
+  org_name: string | null;
+  organization_id: string | null;
+  pipeline_name: string;
+  stage_name: string;
+  stage_state: string;
+  disqualify_reason_label: string | null;
+  days_in_stage: number;
+  campaign: string | null;
+  source: string | null;
+  converted_deal_id: string | null;
+  created_at: Date;
+};
+
+/** Every lead of a contact, newest first. A contact can have several (one open at a time). */
+export async function contactLeads(contactId: string): Promise<ContactLeadRow[]> {
+  if (!isUuid(contactId)) return [];
+  return sql<ContactLeadRow[]>`
+    select l.id, coalesce(l.name, c.full_name, o.name, 'Untitled lead') as title, o.name as org_name, l.organization_id,
+           p.name as pipeline_name, v.stage_name, v.stage_state, dr.label as disqualify_reason_label, v.days_in_stage,
+           l.campaign, l.source, l.converted_deal_id, l.created_at
+      from leads l
+      join v_lead_stage v on v.lead_id = l.id
+      join pipelines p on p.id = l.pipeline_id
+      left join contacts c on c.id = l.contact_id
+      left join organizations o on o.id = l.organization_id
+      left join reason_options dr on dr.object_type = 'lead_disqualify' and dr.key = l.disqualify_reason
+     where l.contact_id = ${contactId} and l.deleted_at is null
+     order by (v.stage_state = 'open') desc, l.created_at desc`;
 }

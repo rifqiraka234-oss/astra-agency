@@ -1,12 +1,15 @@
 /**
- * /leads, every lead with filters (stage, research status, owner, source,
- * search), sortable columns and CSV export. ?new=1 opens the create form.
+ * /leads, every lead with filters (stage, research status, disqualify reason,
+ * owner, source, search), sortable columns and CSV export. ?dates=1 adds an
+ * "Entered <stage>" column per stage. ?new=1 opens the create form.
  */
 import Link from 'next/link';
 import { requireUser } from '@/lib/auth';
 import { can } from '@/lib/permissions';
-import { formatDate, formatDays, formatMoney } from '@/lib/format';
-import { DISQUALIFY_REASONS, RESEARCH_STATUSES, RESEARCH_TONES, labelOf, toneOf } from '@/lib/options';
+import { formatDate, formatDateTime, formatDays, formatMoney } from '@/lib/format';
+import { RESEARCH_STATUSES, RESEARCH_TONES, labelOf, toneOf } from '@/lib/options';
+import { listReasons } from '@/lib/reasons';
+import { stageColumns, stageDatesFor } from '@/lib/sales/stage-times';
 import { leadFilterOptions, listLeads, listUsers, openStagesOf, type LeadListRow } from '@/lib/sales/queries';
 import { Avatar, Badge, Button, ButtonLink, EmptyState, Field, Input, PageHeader, Select, Table, sortHrefFor } from '@/components/ui';
 import { CreateLeadDialog } from '@/components/sales/CreateForms';
@@ -23,19 +26,32 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
   const f = {
     stage: one(sp.stage),
     research: one(sp.research),
+    reason: one(sp.reason),
     owner: one(sp.owner),
     source: one(sp.source),
     q: one(sp.q),
-    state: one(sp.state) ?? (one(sp.stage) ? 'all' : 'open'),
+    state: one(sp.state) ?? (one(sp.stage) || one(sp.reason) ? 'all' : 'open'),
     sort: one(sp.sort) ?? 'accepted',
     dir: one(sp.dir) ?? 'desc',
   };
-  const [{ rows, total }, opts, users] = await Promise.all([listLeads(f), leadFilterOptions(), listUsers()]);
+  const showDates = one(sp.dates) === '1';
+  const [{ rows, total }, opts, users, reasons, stageCols] = await Promise.all([
+    listLeads(f),
+    leadFilterOptions(),
+    listUsers(),
+    listReasons('lead_disqualify', { includeArchived: true }),
+    showDates ? stageColumns('lead') : Promise.resolve([]),
+  ]);
+  const dates = showDates ? await stageDatesFor('lead', rows.map((r) => r.id)) : new Map();
   const canExport = can(user, 'export', 'lead');
   const { new: _new, ...rest } = sp;
   const qs = new URLSearchParams(Object.entries(rest).flatMap(([k, v]) => (typeof v === 'string' ? [[k, v]] : []))).toString();
   const closeHref = `/leads${qs ? `?${qs}` : ''}`;
-  
+  const datesParams = new URLSearchParams(qs);
+  if (showDates) datesParams.delete('dates');
+  else datesParams.set('dates', '1');
+  const datesHref = `/leads${datesParams.toString() ? `?${datesParams.toString()}` : ''}`;
+
   return (
     <div className="page page-wide">
       <PageHeader
@@ -44,6 +60,9 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
         actions={
           <>
             <ButtonLink href="/pipelines?p=lead">Board</ButtonLink>
+            <ButtonLink href={datesHref}>
+              {showDates ? 'Hide stage dates' : 'Show stage dates'}
+            </ButtonLink>
             {canExport ? <ButtonLink href={`/leads/export${qs ? `?${qs}` : ''}`}>Export CSV</ButtonLink> : null}
             {can(user, 'create', 'lead') ? (
               <ButtonLink href={`/leads?${new URLSearchParams({ ...Object.fromEntries(new URLSearchParams(qs)), new: '1' }).toString()}`} variant="primary">
@@ -76,6 +95,15 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
         <Field label="Research" htmlFor="lf-research">
           <Select id="lf-research" name="research" options={RESEARCH_STATUSES} placeholder="Any status" defaultValue={f.research ?? ''} />
         </Field>
+        <Field label="Disqualify reason" htmlFor="lf-reason">
+          <Select
+            id="lf-reason"
+            name="reason"
+            options={[...reasons.map((r) => ({ value: r.key, label: r.is_archived ? `${r.label}, archived` : r.label })), { value: 'none', label: 'No reason recorded' }]}
+            placeholder="Any reason"
+            defaultValue={f.reason ?? ''}
+          />
+        </Field>
         <Field label="Owner" htmlFor="lf-owner">
           <Select
             id="lf-owner"
@@ -90,6 +118,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
         </Field>
         <input type="hidden" name="sort" value={f.sort} />
         <input type="hidden" name="dir" value={f.dir} />
+        {showDates ? <input type="hidden" name="dates" value="1" /> : null}
         <div className="row" style={{ gap: 8 }}>
           <Button type="submit" variant="primary">
             Apply
@@ -102,7 +131,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
 
       <Table<LeadListRow>
         caption="Leads"
-        minWidth={980}
+        minWidth={showDates ? 1100 + stageCols.length * 130 : 1100}
         rows={rows}
         rowKey={(r) => r.id}
         sort={{ key: f.sort, dir: f.dir === 'asc' ? 'asc' : 'desc' }}
@@ -140,7 +169,6 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
             render: (r) => (
               <div className="stack-sm" style={{ gap: 2 }}>
                 <span>{r.stage_name}</span>
-                {r.disqualify_reason && r.stage_state === 'lost' ? <span className="small muted">{labelOf(DISQUALIFY_REASONS, r.disqualify_reason)}</span> : null}
                 {r.is_rotting ? <span className="small danger">Stalled</span> : null}
               </div>
             ),
@@ -169,6 +197,26 @@ export default async function LeadsPage({ searchParams }: { searchParams: Promis
           { key: 'accepted', label: 'Accepted', sortable: true, render: (r) => (r.linkedin_accepted_at ? formatDate(r.linkedin_accepted_at) : '') },
           { key: 'days', label: 'In stage', sortable: true, num: true, render: (r) => formatDays(r.days_in_stage) },
           { key: 'worth', label: 'Worth', sortable: true, num: true, render: (r) => formatMoney(r.angle_worth_eur) },
+          {
+            key: 'reason',
+            label: 'Disqualify reason',
+            sortable: true,
+            render: (r) =>
+              r.stage_state === 'lost' ? (
+                <div className="stack-sm" style={{ gap: 2 }}>
+                  <span>{r.disqualify_reason_label ?? (r.disqualify_reason ? r.disqualify_reason : <span className="muted">Not recorded</span>)}</span>
+                  {r.disqualify_note ? <span className="small muted">{r.disqualify_note.length > 80 ? `${r.disqualify_note.slice(0, 80)}...` : r.disqualify_note}</span> : null}
+                </div>
+              ) : null,
+          },
+          ...stageCols.map((c) => ({
+            key: `entered_${c.id}`,
+            label: `Entered ${c.label}`,
+            render: (r: LeadListRow) => {
+              const d = dates.get(r.id)?.get(c.id)?.entered;
+              return d ? <span className="nowrap">{formatDateTime(d)}</span> : <span className="muted">None</span>;
+            },
+          })),
         ]}
       />
 

@@ -5,6 +5,7 @@
 import { requireUser } from '@/lib/auth';
 import { can } from '@/lib/permissions';
 import { boardData, listUsers, salesPipelines, stagesOf } from '@/lib/sales/queries';
+import { listReasons, reasonSelectOptions } from '@/lib/reasons';
 import { ButtonLink, EmptyState, PageHeader, Segmented } from '@/components/ui';
 import { Board } from '@/components/sales/Board';
 import styles from '@/components/sales/sales.module.css';
@@ -33,6 +34,7 @@ export default async function PipelinesPage({ searchParams }: { searchParams: Pr
   }
   const salesPipe = pipelines.find((x) => x.key === 'sales') ?? pipelines.find((x) => x.object_type === 'deal');
   const firstSales = data.objectType === 'lead' && salesPipe ? (await stagesOf(salesPipe.id)).find((s) => s.state === 'open') ?? null : null;
+  const disqualifyReasons = data.objectType === 'lead' ? reasonSelectOptions(await listReasons('lead_disqualify')) : [];
   const key = data.pipeline.key;
   const ownerHref = (o: string) => `/pipelines?p=${key}${o === 'all' ? '' : `&owner=${o}`}`;
   const canEdit = can(user, 'edit', data.objectType);
@@ -73,6 +75,7 @@ export default async function PipelinesPage({ searchParams }: { searchParams: Pr
         users={users.map((u) => ({ id: u.id, name: u.name }))}
         firstSalesStage={firstSales ? { name: firstSales.name, required: firstSales.required } : null}
         canEdit={canEdit}
+        disqualifyReasons={disqualifyReasons}
       />
     </div>
   );

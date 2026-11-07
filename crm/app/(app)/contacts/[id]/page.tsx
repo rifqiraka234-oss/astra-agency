@@ -1,8 +1,9 @@
 /**
  * /contacts/[id] (agent A). Same layout as the Organization design: properties
  * (with LinkedIn and privacy), emails and phones on the left; tabs Timeline,
- * Organizations (dated roles), Deals (through deal_contacts), Tasks; the rail
- * with current organizations and open deals.
+ * Organizations (dated roles), Leads (every lead of the person, one open at a
+ * time), Deals (through deal_contacts), Tasks; the rail with current
+ * organizations, the open lead and open deals.
  */
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -20,6 +21,7 @@ import {
   type ContactRecord, type DealRow, type RoleRow,
 } from '@/lib/orgs/queries';
 import { nextStepStatus, roleText } from '@/lib/orgs/display';
+import { contactLeads, type ContactLeadRow } from '@/lib/sales/queries';
 import { RecordHeader, PropertiesPanel, Timeline, LinkedRecords } from '@/components/records';
 import { Tabs } from '@/components/ui/Tabs';
 import { Table, type Column } from '@/components/ui/Table';
@@ -36,7 +38,7 @@ import {
   setPrimaryPhoneAction, updateContactProperties,
 } from '../_actions';
 
-const TABS = ['timeline', 'organizations', 'deals', 'tasks'] as const;
+const TABS = ['timeline', 'organizations', 'leads', 'deals', 'tasks'] as const;
 type Tab = (typeof TABS)[number];
 
 const EMAIL_TYPE_OPTIONS: Option[] = [
@@ -122,7 +124,7 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
   if (!c) notFound();
   const tab: Tab = (TABS as readonly string[]).includes(String(sp.tab)) ? (sp.tab as Tab) : 'timeline';
 
-  const [emails, phones, roles, deals, timeline, tasks, defs, users, orgs] = await Promise.all([
+  const [emails, phones, roles, deals, timeline, tasks, defs, users, orgs, leads] = await Promise.all([
     contactEmails(c.id),
     contactPhones(c.id),
     contactRoles(c.id),
@@ -132,7 +134,9 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
     getFieldDefinitions('contact'),
     userOptions(),
     orgPickList(c.id),
+    contactLeads(c.id),
   ]);
+  const openLeads = leads.filter((l) => l.stage_state === 'open');
   const userOpts = users.map((u) => ({ value: u.value, label: u.label }));
   const canEdit = can(user, 'edit', 'contact', c);
   const sample = c.custom?.sample === true || c.custom?.sample === 'true';
@@ -160,6 +164,7 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
   const tabItems = [
     { id: 'timeline', label: 'Timeline', count: timeline.length },
     { id: 'organizations', label: 'Organizations', count: roles.length },
+    { id: 'leads', label: 'Leads', count: leads.length },
     { id: 'deals', label: 'Deals', count: deals.length },
     { id: 'tasks', label: 'Tasks', count: openTasks.length },
   ].map((t) => ({ ...t, href: t.id === 'timeline' ? base : `${base}?tab=${t.id}` }));
@@ -228,6 +233,7 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
         <section aria-label={tabItems.find((t) => t.id === tab)?.label} className="record-main">
           {tab === 'timeline' ? <Timeline items={timeline} composer={{ action: addContactNote, hidden: { contactId: c.id } }} /> : null}
           {tab === 'organizations' ? <RolesTab contact={c} roles={roles} orgs={orgs} canEdit={canEdit} /> : null}
+          {tab === 'leads' ? <LeadsTab contact={c} leads={leads} /> : null}
           {tab === 'deals' ? <DealsTab contact={c} deals={deals} /> : null}
           {tab === 'tasks' ? <TasksTable tasks={openTasks} skipType="contact" /> : null}
         </section>
@@ -243,6 +249,14 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
               avatar: { name: r.org_name, initials: orgInitials(r.org_name) },
             }))}
           />
+          {openLeads.map((l) => (
+            <LinkedRecords
+              key={l.id}
+              title="Open lead"
+              href={`/leads/${l.id}`}
+              items={[{ title: l.title, meta: [l.stage_name, l.campaign].filter(Boolean).join(' · ') }]}
+            />
+          ))}
           {openDeals.slice(0, 3).map((d) => (
             <LinkedRecords
               key={d.id}
@@ -315,6 +329,36 @@ function DealsTab({ contact, deals }: { contact: ContactRecord; deals: DealRow[]
   return (
     <TabCard title="Deals" action={<ButtonLink size="sm" href={`/deals?new=1&contact=${contact.id}${contact.primary_org_id ? `&organization=${contact.primary_org_id}` : ''}`}>New deal</ButtonLink>} note="Deals this person is on, with their role. Add or change roles on the deal page.">
       <Table columns={columns} rows={deals} rowKey={(d) => d.id} rowClassName={(d) => (d.stage_state === 'lost' ? 'is-muted' : undefined)} minWidth={720} caption="Deals" empty={<EmptyState title="Not on any deal yet" />} />
+    </TabCard>
+  );
+}
+
+function LeadsTab({ contact, leads }: { contact: ContactRecord; leads: ContactLeadRow[] }) {
+  const columns: Column<ContactLeadRow>[] = [
+    { key: 'lead', label: 'Lead', render: (l) => <Link className="cell-link" href={`/leads/${l.id}`}>{l.title}</Link> },
+    { key: 'org', label: 'Organization', render: (l) => (l.organization_id ? <Link href={`/organizations/${l.organization_id}`}>{l.org_name}</Link> : '') },
+    {
+      key: 'stage',
+      label: 'Stage',
+      render: (l) => (
+        <div className="stack-sm" style={{ gap: 2 }}>
+          {l.stage_state === 'open' ? <span>{l.stage_name}</span> : <Badge tone={toneOf(STAGE_STATE_TONES, l.stage_state)}>{l.stage_name}</Badge>}
+          {l.stage_state === 'lost' && l.disqualify_reason_label ? <span className="small muted">{l.disqualify_reason_label}</span> : null}
+        </div>
+      ),
+    },
+    { key: 'days', label: 'In stage', num: true, render: (l) => `${l.days_in_stage} ${l.days_in_stage === 1 ? 'day' : 'days'}` },
+    { key: 'source', label: 'Source', render: (l) => [l.source, l.campaign].filter(Boolean).join(', ') },
+    { key: 'created', label: 'Created', render: (l) => formatDate(l.created_at) },
+    { key: 'deal', label: 'Deal', render: (l) => (l.converted_deal_id ? <Link href={`/deals/${l.converted_deal_id}`}>Open deal</Link> : '') },
+  ];
+  return (
+    <TabCard
+      title="Leads"
+      action={<ButtonLink size="sm" href={`/leads?new=1`}>New lead</ButtonLink>}
+      note={`Every lead for ${contact.first_name}, newest first. A person can have several leads over time, one open at a time.`}
+    >
+      <Table columns={columns} rows={leads} rowKey={(l) => l.id} rowClassName={(l) => (l.stage_state === 'open' ? undefined : 'is-muted')} minWidth={760} caption="Leads" empty={<EmptyState title="No leads yet" />} />
     </TabCard>
   );
 }

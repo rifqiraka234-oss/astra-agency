@@ -8,7 +8,7 @@
 import { fromDatetimeLocal } from '../format';
 import type { RequiredField } from '../stages';
 import {
-  DEAL_TYPES, FORECAST_CATEGORIES, LEAD_LABELS, LOST_REASONS, PRICING_MODELS, PRIORITIES, RESEARCH_STATUSES,
+  DEAL_TYPES, FORECAST_CATEGORIES, LEAD_LABELS, PRICING_MODELS, PRIORITIES, RESEARCH_STATUSES,
 } from '../options';
 
 export type FieldSpec =
@@ -45,7 +45,9 @@ export const DEAL_FIELD_SPECS: Record<string, FieldSpec> = {
   signer: { type: 'text', label: 'Signer', max: 200 },
   start_date: { type: 'date', label: 'Start date' },
   won_reason: { type: 'text', label: 'Won reason', max: 500 },
-  lost_reason: { type: 'select', label: 'Lost reason', options: LOST_REASONS },
+  // Reasons are a managed list (lib/reasons.ts), checked against it on save.
+  lost_reason: { type: 'text', label: 'Lost reason', max: 60 },
+  lost_note: { type: 'text', label: 'Lost note', max: 2000 },
   lost_competitor: { type: 'text', label: 'Competitor or alternative', max: 200 },
 };
 
@@ -63,6 +65,8 @@ export const LEAD_FIELD_SPECS: Record<string, FieldSpec> = {
   linkedin_accepted_at: { type: 'datetime', label: 'LinkedIn accepted' },
   opener_sent_at: { type: 'datetime', label: 'Opener sent' },
   auto_progress_enabled: { type: 'bool', label: 'Auto progress' },
+  disqualify_reason: { type: 'text', label: 'Disqualify reason', max: 60 },
+  disqualify_note: { type: 'text', label: 'Disqualify note', max: 2000 },
 };
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;

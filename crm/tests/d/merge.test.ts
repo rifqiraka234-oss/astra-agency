@@ -1,7 +1,7 @@
 import { afterAll, describe, expect, it } from 'vitest';
 import { closeDb, type Tx } from '../../lib/db';
 import { mergeRecords, undoMerge, mergeFields } from '../../lib/data/merge';
-import { rejectPair, scanDuplicates, similarNames } from '../../lib/data/dupes-scan';
+import { rejectPair, scanDuplicates } from '../../lib/data/dupes-scan';
 import { logActivity } from '../../lib/activities';
 import { createTask } from '../../lib/tasks';
 import { stageId, withRollback } from '../helpers';
@@ -65,7 +65,7 @@ describe('merge and undo (rolled back)', () => {
       await createTask({ title: 'Call Kessler', links: [{ organizationId: b.id }] } as never, t);
 
       // The scan finds them.
-      const pairs = await scanDuplicates(t);
+      const pairs = await scanDuplicates(t, 5000);
       const pair = pairs.find((p) => [p.a.id, p.b.id].sort().join() === [a.id, b.id].sort().join());
       expect(pair?.why).toBe('Same name and city');
 
@@ -101,12 +101,12 @@ describe('merge and undo (rolled back)', () => {
     });
   });
 
-  it('merges two contacts with the same phone, moves emails, and undo restores both exactly', async () => {
+  it('merges two contacts with the same name, moves emails, and undo restores both exactly', async () => {
     await withRollback(async (t) => {
       const uid = await user(t);
       const [org] = await t<{ id: string }[]>`insert into organizations (name) values ('Merge Contact Org') returning id`;
       const [tom] = await t<{ id: string }[]>`
-        insert into contacts (first_name, last_name, primary_org_id, linkedin_url, linkedin_url_normalised) values ('Tom', 'Bakker', ${org.id}, null, null) returning id`;
+        insert into contacts (first_name, last_name, primary_org_id, linkedin_url, linkedin_url_normalised) values ('Thomas', 'Bakker', ${org.id}, null, null) returning id`;
       const [thomas] = await t<{ id: string }[]>`
         insert into contacts (first_name, last_name, job_title, linkedin_url, linkedin_url_normalised)
         values ('Thomas', 'Bakker', 'Head brewer', 'https://linkedin.com/in/thomas-bakker-merge', 'linkedin.com/in/thomas-bakker-merge') returning id`;
@@ -117,10 +117,11 @@ describe('merge and undo (rolled back)', () => {
       await t`insert into leads (contact_id, pipeline_id, stage_id) select ${thomas.id}, pipeline_id, id from pipeline_stages where id = ${leadStage}`;
       await logActivity({ kind: 'note', title: 'Thomas note', source: 'test', links: [{ contactId: thomas.id }], autoLink: false }, t);
 
-      expect(similarNames({ first: 'Tom', last: 'Bakker' }, { first: 'Thomas', last: 'Bakker' })).toBe(true);
-      expect(similarNames({ first: 'Tom', last: 'Bakker' }, { first: 'Eva', last: 'Jansen' })).toBe(false);
-      const pairs = await scanDuplicates(t);
-      expect(pairs.find((p) => p.type === 'contact' && [p.a.id, p.b.id].includes(tom.id) && [p.a.id, p.b.id].includes(thomas.id))?.why).toBe('Similar name, same phone');
+      // Same name, LinkedIn on one only, two different emails: for review, never confirmed.
+      const pairs = await scanDuplicates(t, 5000);
+      const pair = pairs.find((p) => p.type === 'contact' && [p.a.id, p.b.id].includes(tom.id) && [p.a.id, p.b.id].includes(thomas.id));
+      expect(pair?.confidence).toBe('review');
+      expect(pair?.why).toBe('Same name, different emails and LinkedIn on one record only');
 
       const before = await state(t, [tom.id, thomas.id]);
       const logId = await mergeRecords(t, { type: 'contact', winnerId: tom.id, loserId: thomas.id, userId: uid, choices: { first_name: 'other' } });
@@ -138,7 +139,7 @@ describe('merge and undo (rolled back)', () => {
 
       // Not the same: the pair stays out of the scan.
       await rejectPair(t, 'contact', thomas.id, tom.id, uid);
-      const again = await scanDuplicates(t);
+      const again = await scanDuplicates(t, 5000);
       expect(again.some((p) => p.type === 'contact' && [p.a.id, p.b.id].includes(tom.id) && [p.a.id, p.b.id].includes(thomas.id))).toBe(false);
     });
   });

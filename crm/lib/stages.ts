@@ -27,11 +27,17 @@
  *   6. Logs a stage_change activity on the record and its organization.
  *   7. Emits <object>.stage_changed, plus deal.won / deal.lost.
  *   8. Moves the organization lifecycle forward (open deal: opportunity, won: customer).
+ *
+ * A lead entering a lost stage (Disqualified) needs disqualify_reason, a deal
+ * entering a lost stage needs lost_reason, always, from the active reasons of
+ * lib/reasons.ts (even when the stage's required fields leave it out). An optional
+ * note goes in values.disqualify_note or values.lost_note.
  */
 import { sql, type Db, type Tx } from './db';
 import { emit, type DomainEventType } from './events';
 import { logActivity, daysInStageTag } from './activities';
 import { daysBetween, formatMoney } from './format';
+import { REASON_FIELDS } from './reasons';
 
 export type StageObjectType = 'lead' | 'deal' | 'project' | 'ticket';
 
@@ -182,10 +188,23 @@ export async function stageGate(objectType: StageObjectType, recordId: string, t
   const required = await db<{ field_key: string; label: string; input_type: RequiredField['input_type']; options: RequiredField['options'] }[]>`
     select field_key, label, input_type, options from stage_required_fields where stage_id = ${toStageId} order by position`;
   const custom = (record?.custom ?? {}) as Record<string, unknown>;
-  return required.map((r) => ({
+  const fields: RequiredField[] = required.map((r) => ({
     ...r,
     value: asInputString(record && r.field_key in record ? record[r.field_key] : custom[r.field_key]),
   }));
+  // Lost stages of leads and deals always ask for a reason from the active list.
+  const stage = objectType === 'lead' || objectType === 'deal' ? await getStage(toStageId, db) : null;
+  if (stage?.state === 'lost' && (objectType === 'lead' || objectType === 'deal')) {
+    const cfg = REASON_FIELDS[objectType];
+    const opts = await db<{ value: string; label: string }[]>`
+      select key as value, label from reason_options where object_type = ${cfg.type} and not is_archived order by position, label`;
+    const current = asInputString(record?.[cfg.field]);
+    const value = current && opts.some((o) => o.value === current) ? current : null;
+    const existing = fields.find((f) => f.field_key === cfg.field);
+    if (existing) Object.assign(existing, { input_type: 'select', options: opts, value });
+    else fields.unshift({ field_key: cfg.field, label: cfg.label, input_type: 'select', options: opts, value });
+  }
+  return fields;
 }
 
 /** Move a record to a stage. Run it inside tx(). Throws StageMoveError on a gate. */
@@ -220,6 +239,18 @@ export async function moveStage(t: Tx, input: MoveStageInput): Promise<MoveStage
   // Required fields gate.
   const required = await t<{ field_key: string; label: string; input_type: RequiredField['input_type']; options: RequiredField['options'] }[]>`
     select field_key, label, input_type, options from stage_required_fields where stage_id = ${toStage.id} order by position`;
+  // A lost stage of a lead or deal always needs a reason from the active list.
+  const reasonCfg = toStage.state === 'lost' && (objectType === 'lead' || objectType === 'deal') ? REASON_FIELDS[objectType] : null;
+  let activeReasons: Set<string> | null = null;
+  if (reasonCfg) {
+    const opts = await t<{ value: string; label: string }[]>`
+      select key as value, label from reason_options where object_type = ${reasonCfg.type} and not is_archived order by position, label`;
+    activeReasons = new Set(opts.map((o) => o.value));
+    const existing = required.find((r) => r.field_key === reasonCfg.field);
+    if (existing) Object.assign(existing, { input_type: 'select', options: opts });
+    else required.unshift({ field_key: reasonCfg.field, label: reasonCfg.label, input_type: 'select', options: opts });
+  }
+  let archivedReason = false;
   const custom = { ...((record.custom ?? {}) as Record<string, unknown>) };
   const columns = await columnsOf(t, table);
   const fields: RequiredField[] = [];
@@ -239,6 +270,11 @@ export async function moveStage(t: Tx, input: MoveStageInput): Promise<MoveStage
       missing.push(field);
       continue;
     }
+    if (reasonCfg && activeReasons && r.field_key === reasonCfg.field && !activeReasons.has(String(effective))) {
+      archivedReason = true;
+      missing.push({ ...field, value: null });
+      continue;
+    }
     if (provided !== undefined && !isBlank(provided)) {
       if (isColumn) columnUpdates[r.field_key] = provided;
       else customUpdates[r.field_key] = provided;
@@ -247,10 +283,17 @@ export async function moveStage(t: Tx, input: MoveStageInput): Promise<MoveStage
   if (missing.length) {
     throw new StageMoveError(
       'required_fields',
-      `To enter ${toStage.name}, fill in ${missing.map((m) => m.label.toLowerCase()).join(' and ')}`,
+      archivedReason && missing.length === 1
+        ? 'That reason is archived or unknown, pick one from the list'
+        : `To enter ${toStage.name}, fill in ${missing.map((m) => m.label.toLowerCase()).join(' and ')}`,
       missing,
-      fields,
+      fields.map((f) => (archivedReason && reasonCfg && f.field_key === reasonCfg.field ? { ...f, value: null } : f)),
     );
+  }
+  // The optional note next to the reason.
+  if (reasonCfg && Object.prototype.hasOwnProperty.call(values, reasonCfg.note)) {
+    const note = values[reasonCfg.note];
+    columnUpdates[reasonCfg.note] = typeof note === 'string' ? note.trim().slice(0, 2000) || null : null;
   }
 
   // Stage state timestamps.

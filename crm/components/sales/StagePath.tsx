@@ -6,13 +6,15 @@
  * Qualified opens the qualify dialog and Disqualified the disqualify dialog.
  *
  *   <StagePath objectType="deal" recordId={deal.id} currentStageId={deal.stage_id} stages={pathStages} users={users} />
+ *
+ * Lost needs a reason from the active list (the gate field) and takes an optional note.
  */
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { RequiredField } from '@/lib/stages';
 import { moveStageAction } from '@/app/(app)/pipelines/actions';
 import { GateForm } from './GateDialog';
-import { DisqualifyDialog, QualifyDialog, type FirstStage, type QualifyLead } from './LeadDialogs';
+import { DisqualifyDialog, QualifyDialog, type FirstStage, type QualifyLead, type ReasonChoice } from './LeadDialogs';
 import type { GateUser } from './GateFields';
 import styles from './sales.module.css';
 
@@ -36,7 +38,9 @@ export function StagePath({
   canEdit,
   lead,
   firstSalesStage,
+  disqualifyReasons = [],
 }: {
+  disqualifyReasons?: ReasonChoice[];
   objectType: 'deal' | 'lead';
   recordId: string;
   currentStageId: string;
@@ -119,6 +123,7 @@ export function StagePath({
           effectsLead={t.state === 'won' ? 'On save, the automations do this' : undefined}
           cta={t.state === 'lost' ? 'Mark as lost' : t.state === 'won' ? 'Mark as won' : `Move to ${t.name}`}
           ctaVariant={t.state === 'lost' ? 'danger' : 'accent'}
+          note={t.state === 'lost' && objectType === 'deal' ? { name: 'lost_note', label: 'Note' } : undefined}
           users={users}
           onCancel={() => setTarget(null)}
           onSubmit={(values, reason) => moveStageAction({ objectType, recordId, toStageId: t.id, values, reason, source: 'record' })}
@@ -145,6 +150,7 @@ export function StagePath({
           <DisqualifyDialog
             open={dialog === 'disqualify'}
             lead={{ id: lead.id, title: lead.title }}
+            reasons={disqualifyReasons}
             onClose={() => setDialog(null)}
             onDone={(res) => {
               setNotice(res.ok ? res.message ?? 'Disqualified' : null);

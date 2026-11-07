@@ -46,6 +46,13 @@ lets the seed add sample records), `SEND_ENABLED` (false in V1, nothing is ever 
   compare without legal forms, accents or case. A person with no shared lemlist id is matched by
   name at the same organization only when exactly one contact fits. Placeholder ids such as
   `ctc_N/A` and placeholder company names such as `.` are ignored.
+- **Contact dedupe, Raka's rule.** "Look first at name, and then LI link, and then email." `lib/dedupe.ts`
+  holds the rule: the same normalised name (`contacts.name_normalised`, migration 400, case, accents,
+  punctuation, honorifics and suffixes like Dr, PhD, FBCS set aside, word order kept), then the same
+  LinkedIn confirms, different LinkedIn profiles are different people, then the same email confirms
+  when LinkedIn is missing. Anything else is for review and never merges on its own. It runs in the
+  create forms (`/api/dupes?type=person`), the CSV import, the lemlist sync and the JSONL import
+  (`findExistingContact`), and the scan on `/settings/duplicates` (confirmed pairs first).
 
 ## Architecture in one screen
 
@@ -76,8 +83,9 @@ changes only through `moveStage`; nothing sends a message (`SEND_ENABLED=false`)
 | `lib/auth.ts` | `getSession()`, `getCurrentUser()` (null when signed out), `requireUser()` (redirects), `signIn(email, pw)`, `signOut()`, `hashPassword()`. `CurrentUser` has `id, name, role, initials, avatarBg, teamMemberIds` |
 | `lib/session.ts` | edge safe JWT helpers used by middleware |
 | `lib/permissions.ts` | `can(user, action, objectType, record?)`, `assertCan`, `scopeFor`, `isAdmin`, `ROLE_LABELS`, `PERMISSION_TABLE` (the Settings roles grid) |
-| `lib/normalize.ts` | `normEmail`, `normDomain` (registrable domain), `normLinkedin` (`linkedin.com/in/<slug>`), `isFreeMail`, `emailDomain`, `normPhone`, `normCompanyName` |
-| `lib/dupes.ts` | `findOrgByDomain`, `findContactByEmail`, `findContactByLinkedin` return `DupeMatch` with the design wording, `DUPE_RULES` |
+| `lib/normalize.ts` | `normEmail`, `normDomain` (registrable domain), `normLinkedin` (`linkedin.com/in/<slug>`), `isFreeMail`, `emailDomain`, `normPhone`, `normCompanyName`, `normPersonName` (mirrors the SQL `crm_norm_person_name`) |
+| `lib/dedupe.ts` | the contact dedupe rule, `compareContacts(a, b)` (confidence `linkedin`, `email`, `review` or `distinct`, with the reason), `decideContactMatch`, `CONFIDENCE_LABELS` |
+| `lib/dupes.ts` | `findOrgByDomain`, `findContactByEmail`, `findContactByLinkedin` return `DupeMatch` with the design wording, `findContactCandidates` (the rule against the database), `blocksSave`, `candidateToDupeMatch`, `DUPE_RULES` |
 | `lib/activities.ts` | `logActivity(input, t?)` idempotent on `(source, externalId)`, auto links contact to primary org and its open deals; `getTimeline(type, id)` returns `TimelineItem[]` |
 | `lib/tasks.ts` | `createTask(input, t?)`, `completeTask(id, userId, t?)` (creates the next repeat), `reopenTask`, `taskBuckets({ owner, linked })`, `RECURRENCE_PRESETS`, `describeRecurrence`, `nextOccurrence` |
 | `lib/stages.ts` | `moveStage(t, { objectType, recordId, toStageId, values, reason, actor })`, `StageMoveError` (`required_fields`, `reason_required`), `stageGate()`, `stageByKey()`, `pipelineStages()`, `listPipelines()`, `bumpLifecycle()` |

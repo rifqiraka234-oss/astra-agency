@@ -6,15 +6,27 @@
  * ordered patterns, first match wins, so a new status lands somewhere sensible
  * and the dry run prints exactly where each one went.
  *
- * disqualify_reason only has six values. Closed threads that fit none of them
- * (went quiet after the last message, said no, not now) are Disqualified with no
- * reason and carry custom.close_reason instead.
+ * disqualify_reason is a key of the managed reason list (reason_options,
+ * lib/reasons.ts). Closed threads carry custom.close_reason as before, and their
+ * disqualify reason follows from it (CLOSE_TO_DISQUALIFY): no_response is No reply,
+ * declined is Declined, closed_warm is Went quiet after replying, not_now is Not now.
  */
 
 export type LeadStageKey = 'new' | 'researching' | 'attempting' | 'connected' | 'qualified' | 'disqualified';
 export type ResearchStatus = 'unresearched' | 'researching' | 'drafted' | 'awaiting_approval' | 'sent';
-export type DisqualifyReason = 'no_strong_angle' | 'blocked_needs_info' | 'do_not_contact' | 'not_icp' | 'former_owner' | 'wrong_company';
+export type DisqualifyReason =
+  | 'no_strong_angle' | 'blocked_needs_info' | 'do_not_contact' | 'not_icp' | 'former_owner' | 'wrong_company'
+  | 'no_reply' | 'went_quiet' | 'declined' | 'not_now';
 export type CloseReason = 'no_response' | 'not_interested' | 'declined' | 'not_now' | 'closed_warm';
+
+/** The disqualify reason a closed thread's close reason stands for. Also used by the backfill. */
+export const CLOSE_TO_DISQUALIFY: Record<CloseReason, DisqualifyReason> = {
+  no_response: 'no_reply',
+  not_interested: 'declined',
+  declined: 'declined',
+  closed_warm: 'went_quiet',
+  not_now: 'not_now',
+};
 
 export type StatusMapping = {
   stage: LeadStageKey;
@@ -39,10 +51,10 @@ const RULES: Rule[] = [
   { name: 'blocked', test: /BLOCKED|^NOT_CONNECTED/, map: d('blocked_needs_info', 'researching') },
   { name: 'meeting or proposal', test: /MEETING|PROPOSAL|LIVE_DEAL|CALL_HELD/, map: { stage: 'qualified', researchStatus: 'sent', disqualifyReason: null } },
   { name: 'Raka handling offline', test: /RAKA_HANDLING_OFFLINE/, map: { stage: 'connected', researchStatus: 'sent', disqualifyReason: null } },
-  { name: 'closed, not interested', test: /^CLOSED_(NOT_INTERESTED|DECLINED|SOFT_DECLINE$)|^DECLINED_(CLOSED|ANSWERED)/, map: { ...d(null), closeReason: 'declined' } },
-  { name: 'closed, not now', test: /^CLOSED_(NOT_NOW|LOST_REVISIT)/, map: { ...d(null), closeReason: 'not_now' } },
-  { name: 'closed, warm', test: /^CLOSED_(WARM|SOFT_DECLINE_WARM|CONGRATULATED|CORRECTED)/, map: { ...d(null), closeReason: 'closed_warm' } },
-  { name: 'closed, went quiet', test: /^CLOSED|^LEFT_ALONE/, map: { ...d(null), closeReason: 'no_response' } },
+  { name: 'closed, not interested', test: /^CLOSED_(NOT_INTERESTED|DECLINED|SOFT_DECLINE$)|^DECLINED_(CLOSED|ANSWERED)/, map: { ...d('declined'), closeReason: 'declined' } },
+  { name: 'closed, not now', test: /^CLOSED_(NOT_NOW|LOST_REVISIT)/, map: { ...d('not_now'), closeReason: 'not_now' } },
+  { name: 'closed, warm', test: /^CLOSED_(WARM|SOFT_DECLINE_WARM|CONGRATULATED|CORRECTED)/, map: { ...d('went_quiet'), closeReason: 'closed_warm' } },
+  { name: 'closed, went quiet', test: /^CLOSED|^LEFT_ALONE/, map: { ...d('no_reply'), closeReason: 'no_response' } },
   {
     name: 'replied',
     test: /REPL|SAID_YES|PROTOTYPE|DELIVER|CHAT_ONLY|RELATIONSHIP|LIKED|CALL_BEING|HOLD_RAKA_CALL|HOLD_CO_FOUNDER|HOLD_REBUILD|PARKED|RAKA_HANDLING|RAKA_TO_DECIDE|DECLINED/,

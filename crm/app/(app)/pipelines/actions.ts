@@ -10,6 +10,8 @@
  * A lead dropped on Qualified needs the qualify flow (it creates the deal), so
  * that returns code 'invalid' and the board opens the qualify dialog instead.
  * A lead dropped on Disqualified runs disqualifyLead, which handles suppression.
+ * Lost and Disqualified need a reason from the active list (lib/reasons.ts); the
+ * optional note comes as values.lost_note or values.disqualify_note.
  */
 import { revalidatePath } from 'next/cache';
 import { z } from 'zod';
@@ -56,7 +58,8 @@ export async function moveStageAction(input: MoveStageActionInput): Promise<Sale
         const fields = await stageGate('lead', recordId, toStageId);
         throw new StageMoveError('required_fields', 'Pick a reason to disqualify', fields.filter((f) => f.field_key === 'disqualify_reason'), fields);
       }
-      await tx((t) => disqualifyLead(t, { leadId: recordId, reason: why, note: values.note ?? null, actor: { id: user.id, name: user.name } }), {
+      const note = values.disqualify_note ?? values.note ?? null;
+      await tx((t) => disqualifyLead(t, { leadId: recordId, reason: why, note, actor: { id: user.id, name: user.name } }), {
         userId: user.id,
       });
     } else {

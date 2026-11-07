@@ -82,9 +82,8 @@ export async function qualifyLeadAction(input: z.input<typeof qualifySchema>): P
 
 const disqualifySchema = z.object({
   leadId: z.string().uuid(),
-  reason: z.enum(['no_strong_angle', 'blocked_needs_info', 'do_not_contact', 'not_icp', 'former_owner', 'wrong_company'], {
-    message: 'Pick a reason',
-  }),
+  // Checked against the active reasons (reason_options) in disqualifyLead.
+  reason: z.string({ message: 'Pick a reason' }).trim().min(1, 'Pick a reason').max(60),
   note: z.string().trim().max(2000).optional(),
 });
 

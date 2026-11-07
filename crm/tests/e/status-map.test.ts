@@ -36,13 +36,13 @@ describe('queue status mapping', () => {
     ['CLOSED_NOT_ICP', 'disqualified', 'researching', 'not_icp', null],
     ['NOT_A_LEAD_WRONG_JOBTITLE', 'disqualified', 'researching', 'not_icp', null],
     ['WRONG_COMPANY_PITCHED', 'disqualified', 'sent', 'wrong_company', null],
-    ['CLOSED', 'disqualified', 'sent', null, 'no_response'],
-    ['CLOSED_FINAL_MESSAGE', 'disqualified', 'sent', null, 'no_response'],
-    ['LEFT_ALONE', 'disqualified', 'sent', null, 'no_response'],
-    ['CLOSED_NOT_INTERESTED', 'disqualified', 'sent', null, 'declined'],
-    ['CLOSED_SOFT_DECLINE', 'disqualified', 'sent', null, 'declined'],
-    ['CLOSED_SOFT_DECLINE_WARM', 'disqualified', 'sent', null, 'closed_warm'],
-    ['CLOSED_NOT_NOW', 'disqualified', 'sent', null, 'not_now'],
+    ['CLOSED', 'disqualified', 'sent', 'no_reply', 'no_response'],
+    ['CLOSED_FINAL_MESSAGE', 'disqualified', 'sent', 'no_reply', 'no_response'],
+    ['LEFT_ALONE', 'disqualified', 'sent', 'no_reply', 'no_response'],
+    ['CLOSED_NOT_INTERESTED', 'disqualified', 'sent', 'declined', 'declined'],
+    ['CLOSED_SOFT_DECLINE', 'disqualified', 'sent', 'declined', 'declined'],
+    ['CLOSED_SOFT_DECLINE_WARM', 'disqualified', 'sent', 'went_quiet', 'closed_warm'],
+    ['CLOSED_NOT_NOW', 'disqualified', 'sent', 'not_now', 'not_now'],
   ];
   it.each(cases)('%s', (status, stage, research, reason, close) => {
     const m = mapQueueStatus(status);

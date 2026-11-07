@@ -8,6 +8,7 @@
  *     title="To enter Negotiation, fill these in" hint="Required fields are set per stage in Settings"
  *     fields={fields} missing={missing} needsReason={false} effects={[]}
  *     cta="Move to Negotiation" users={users}
+ *     note={{ name: 'lost_note', label: 'Note' }}   // optional free text sent with the values (lost deals)
  *     onSubmit={async (values, reason) => moveStageAction({ ... })}   // returns SalesResult
  *     onCancel={close} onDone={afterSave}
  *   />
@@ -30,6 +31,8 @@ export type GateFormProps = {
   effectsLead?: string;
   cta: string;
   ctaVariant?: 'accent' | 'primary' | 'danger';
+  /** An optional note field, posted in values under its name (for example lost_note). */
+  note?: { name: string; label: string; hint?: string; defaultValue?: string | null };
   users?: GateUser[];
   onSubmit: (values: Record<string, string>, reason: string | null) => Promise<SalesResult>;
   onCancel: () => void;
@@ -53,6 +56,10 @@ export function GateForm(props: GateFormProps) {
         e.preventDefault();
         const form = e.currentTarget;
         const values = readGateValues(form, fields, 'gate.');
+        if (props.note) {
+          const n = new FormData(form).get(`note.${props.note.name}`);
+          values[props.note.name] = typeof n === 'string' ? n : '';
+        }
         const reasonRaw = new FormData(form).get('reason');
         const reason = typeof reasonRaw === 'string' && reasonRaw.trim() ? reasonRaw.trim() : null;
         if (needsReason && !reason) {
@@ -95,6 +102,11 @@ export function GateForm(props: GateFormProps) {
         <div className={styles.gateFields}>
           <GateFields fields={fields} missing={missing} users={props.users} prefix="gate." idPrefix={`${uid}-gate`} />
         </div>
+      ) : null}
+      {props.note ? (
+        <Field label={props.note.label} htmlFor={`${uid}-note`} hint={props.note.hint ?? 'Optional, stored with the reason'}>
+          <Textarea id={`${uid}-note`} name={`note.${props.note.name}`} rows={2} maxLength={2000} defaultValue={props.note.defaultValue ?? ''} />
+        </Field>
       ) : null}
       {needsReason ? (
         <Field label={props.reasonLabel ?? 'Reason for moving back'} htmlFor={`${uid}-reason`} required error={reasonError ?? undefined}>

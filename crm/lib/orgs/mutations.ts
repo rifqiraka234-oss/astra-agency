@@ -16,7 +16,7 @@
 import type { Tx } from '../db';
 import { isUniqueViolation } from '../db';
 import { emailDomain, isFreeMail, normDomain, normEmail, normLinkedin, normPhone } from '../normalize';
-import { findContactByEmail, findContactByLinkedin, findOrgByDomain } from '../dupes';
+import { blocksSave, candidateToDupeMatch, findContactByEmail, findContactByLinkedin, findContactCandidates, findOrgByDomain } from '../dupes';
 import { logActivity, type ActivityKind, type ActivityLink } from '../activities';
 import type { DupeMatch } from '../forms';
 
@@ -410,15 +410,16 @@ export async function createContactAt(
 ): Promise<string> {
   const email = input.email ? normEmail(input.email) : null;
   if (input.email && !email) throw new InputError('Enter an email address', 'email');
-  if (email) {
-    const dupe = await findContactByEmail(email, t);
-    if (dupe) throw new InputError(dupe.title, 'email', dupe);
-  }
   const li = input.linkedin ? normLinkedin(input.linkedin) : null;
   if (input.linkedin && !li) throw new InputError('Paste a profile link like linkedin.com/in/name', 'linkedin');
-  if (li) {
-    const dupe = await findContactByLinkedin(li, t);
-    if (dupe) throw new InputError(dupe.title, 'linkedin', dupe);
+  // Raka's rule (lib/dedupe.ts): name, then LinkedIn, then email. A confirmed duplicate or a
+  // taken email or LinkedIn profile stops it; a name match with nothing to confirm it does not.
+  const name = [input.firstName, input.lastName].filter(Boolean).join(' ');
+  const blocking = (await findContactCandidates({ name, linkedin: li, emails: [email] }, t)).find(blocksSave);
+  if (blocking) {
+    const field = li && blocking.linkedin === li ? 'linkedin' : email && blocking.emails.some((e) => e.trim().toLowerCase() === email) ? 'email' : 'first_name';
+    const dupe = candidateToDupeMatch(blocking);
+    throw new InputError(dupe.title, field, dupe);
   }
   const [c] = await t<{ id: string }[]>`
     insert into contacts (first_name, last_name, job_title, linkedin_url, linkedin_url_normalised, owner_user_id, source)

@@ -29,6 +29,7 @@ async function main() {
   console.log(dryRun ? 'DRY RUN, everything rolled back' : 'Sync written to the local database');
   console.log(`campaigns          ${report.campaigns.map((c) => `${c.name} (${c.synced} of ${c.accepts} accepted)`).join('; ') || 'none'}`);
   console.log(`contacts synced    ${report.contactsSynced} (created ${report.contactsCreated}, matched ${report.contactsMatched})`);
+  console.log(`contacts to review ${report.contactsToReview} (same name, nothing to confirm), held ${report.contactsHeldForReview} (same LinkedIn or email, other name)`);
   console.log(`organizations new  ${report.organizationsCreated}`);
   console.log(`leads              created ${report.leadsCreated}, updated ${report.leadsUpdated}`);
   console.log(`threads pulled     ${report.threadsPulled}, ${report.threadItems} items`);

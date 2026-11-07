@@ -21,7 +21,7 @@ import crypto from 'node:crypto';
 import { sql, tx, type Tx } from '../db';
 import { logActivity } from '../activities';
 import { normCompanyName, normDomain, normLinkedin, isFreeMail } from '../normalize';
-import { companyNameOf, findExistingOrg, personKey } from './match';
+import { companyNameOf, findExistingContact, findExistingOrg, personKey } from './match';
 import { mapQueueStatus, researchStatusFor, type StatusMapping } from './status-map';
 
 type Row = Record<string, unknown>;
@@ -42,6 +42,10 @@ export type ImportReport = {
     leadsKeptUserStage: number;
     contactsCreated: number;
     contactsMatched: number;
+    /** Matched only because another record holds the same LinkedIn or email under another name. */
+    contactsHeldForReview: number;
+    /** Made new beside a contact with the same name and nothing to confirm it, see /settings/duplicates. */
+    contactsToReview: number;
     leadsWithoutContact: number;
     organizationsCreated: number;
     notesCreated: number;
@@ -199,23 +203,13 @@ async function upsertContact(t: Tx, key: string, row: Row, orgId: string | null,
        where x.system = 'jsonl' and x.external_id = ${`queue:${key}`} and x.entity_type = 'lead'`;
     id = prev?.contact_id ?? null;
   }
-  if (!id && linkedin) {
-    const [hit] = await t<{ id: string }[]>`select id from contacts where linkedin_url_normalised = ${linkedin} and deleted_at is null`;
-    id = hit?.id ?? null;
-  }
-  if (!id && orgId && s(row.name)) {
-    // Same name at the same organization, the person an earlier row (keyed by another id) made.
-    // Only when exactly one matches and it has no other lemlist id, else it stays a new contact.
-    const want = personKey(s(row.name));
-    const cands = await t<{ id: string; full_name: string; other_lemlist: boolean }[]>`
-      select c.id, c.full_name,
-             exists (select 1 from external_ids x where x.entity_type = 'contact' and x.entity_id = c.id and x.system = 'lemlist_contact'
-                       and x.external_id is distinct from ${cid}) as other_lemlist
-        from contacts c
-       where c.deleted_at is null
-         and (c.primary_org_id = ${orgId} or exists (select 1 from contact_org_roles r where r.contact_id = c.id and r.organization_id = ${orgId}))`;
-    const same = cands.filter((c) => personKey(c.full_name) === want);
-    if (same.length === 1 && !(cid && same[0].other_lemlist)) id = same[0].id;
+  if (!id) {
+    // Raka's rule (lib/dedupe.ts): name first, then LinkedIn, then email. A name match with
+    // nothing to confirm it makes a new contact and waits for review on /settings/duplicates.
+    const m = await findExistingContact(t, { name: s(row.name), linkedin, email: s(row.email) });
+    id = m.id;
+    if (m.how === 'held') report.queue.contactsHeldForReview++;
+    if (m.how === 'new' && m.review) report.queue.contactsToReview++;
   }
   if (id) {
     report.queue.contactsMatched++;
@@ -480,7 +474,7 @@ export async function importJsonl(opts: ImportOptions): Promise<ImportReport> {
     dryRun,
     queue: {
       rows: 0, withoutId: 0, withoutIdSamples: [], people: 0, mapping: [], stageCounts: {}, leadsCreated: 0, leadsUpdated: 0,
-      leadsKeptUserStage: 0, contactsCreated: 0, contactsMatched: 0, leadsWithoutContact: 0, organizationsCreated: 0, notesCreated: 0, suppressed: 0,
+      leadsKeptUserStage: 0, contactsCreated: 0, contactsMatched: 0, contactsHeldForReview: 0, contactsToReview: 0, leadsWithoutContact: 0, organizationsCreated: 0, notesCreated: 0, suppressed: 0,
     },
     prototypes: { rows: 0, distinct: 0, created: 0, existing: 0, unlinked: 0 },
     meetings: { rows: 0, distinct: 0, created: 0, existing: 0, unlinked: 0 },

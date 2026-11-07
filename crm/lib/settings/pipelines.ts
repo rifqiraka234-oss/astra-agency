@@ -11,7 +11,7 @@
 import { z } from 'zod';
 import type { Db, Tx } from '@/lib/db';
 import { moveStage, StageMoveError, type StageObjectType } from '@/lib/stages';
-import { DISQUALIFY_REASONS, LOST_REASONS } from '@/lib/options';
+import { listReasons, reasonSelectOptions } from '@/lib/reasons';
 import { gateCandidates, slugKey } from './core-fields';
 import { SettingsError } from './errors';
 
@@ -204,7 +204,12 @@ export async function restoreStage(t: Tx, stageId: string): Promise<void> {
   await renumber(t, s.pipeline_id, live.map((r) => r.id));
 }
 
-const CORE_OPTIONS: Record<string, { value: string; label: string }[]> = { lost_reason: LOST_REASONS, disqualify_reason: DISQUALIFY_REASONS };
+/** Dropdown options of a core field. Reasons come from the managed lists in /settings/reasons. */
+async function coreOptions(t: Tx, key: string): Promise<{ value: string; label: string }[]> {
+  if (key === 'lost_reason') return reasonSelectOptions(await listReasons('deal_lost', {}, t));
+  if (key === 'disqualify_reason') return reasonSelectOptions(await listReasons('lead_disqualify', {}, t));
+  return [];
+}
 
 /** Require a core or custom field before a record enters the stage. */
 export async function addRequiredField(t: Tx, stageId: string, fieldKey: string): Promise<void> {
@@ -213,7 +218,7 @@ export async function addRequiredField(t: Tx, stageId: string, fieldKey: string)
     select internal_name, label, field_type, options from field_definitions where object_type = ${s.object_type} and archived_at is null`;
   const cand = gateCandidates(s.object_type, customs).find((c) => c.key === fieldKey);
   if (!cand) throw new SettingsError('That field cannot be required for a stage', { fieldKey: 'Pick a field from the list' });
-  const options = cand.input === 'select' ? (cand.custom ? cand.options ?? [] : CORE_OPTIONS[cand.key] ?? []) : null;
+  const options = cand.input === 'select' ? (cand.custom ? cand.options ?? [] : await coreOptions(t, cand.key)) : null;
   if (cand.input === 'select' && !options?.length) throw new SettingsError('That dropdown has no options yet');
   const [exists] = await t<{ n: number }[]>`select count(*)::int as n from stage_required_fields where stage_id = ${stageId} and field_key = ${fieldKey}`;
   if (exists.n) throw new SettingsError(`${s.name} already requires ${cand.label.toLowerCase()}`);

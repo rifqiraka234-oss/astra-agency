@@ -17,7 +17,7 @@ import { logActivity } from '../activities';
 import { bumpLifecycle, getStage, moveStage, StageMoveError, type RequiredField, type StageInfo } from '../stages';
 import { formatMoney } from '../format';
 import { normEmail } from '../normalize';
-import { DISQUALIFY_REASONS, labelOf } from '../options';
+import { assertActiveReason, listReasons, reasonLabel, ReasonError } from '../reasons';
 import { lineTotals } from './totals';
 
 export type SalesActor = { id: string; name: string };
@@ -37,9 +37,9 @@ export class SalesError extends Error {
 
 const DEAL_GATE_COLUMNS = new Set([
   'amount', 'meeting_at', 'build_card_url', 'prototype_url', 'quote_ref', 'next_step', 'decision_date', 'signer',
-  'start_date', 'won_reason', 'lost_reason', 'lost_competitor', 'close_date', 'angle',
+  'start_date', 'won_reason', 'lost_reason', 'lost_note', 'lost_competitor', 'close_date', 'angle',
 ]);
-const LEAD_GATE_COLUMNS = new Set(['disqualify_reason', 'angle', 'angle_worth_eur', 'next_step', 'status_note']);
+const LEAD_GATE_COLUMNS = new Set(['disqualify_reason', 'disqualify_note', 'angle', 'angle_worth_eur', 'next_step', 'status_note']);
 
 function clean(inputType: string, v: unknown): unknown {
   if (typeof v !== 'string') return v ?? null;
@@ -309,37 +309,49 @@ export async function qualifyLead(t: Tx, input: QualifyInput): Promise<{ dealId:
 export type DisqualifyInput = { leadId: string; reason: string; note?: string | null; actor: SalesActor };
 
 /**
- * Disqualify a lead with a required reason. "do_not_contact" also marks the
- * contact and adds their id, LinkedIn URL and emails to suppression_list.
+ * Disqualify a lead with a required reason from the active list (reason_options),
+ * and an optional note stored on the lead (disqualify_note) and the timeline.
+ * "do_not_contact" also marks the contact and adds their id, LinkedIn URL and
+ * emails to suppression_list. Disqualifying a disqualified lead changes its reason.
  */
 export async function disqualifyLead(t: Tx, input: DisqualifyInput): Promise<{ suppressed: number }> {
-  if (!DISQUALIFY_REASONS.some((r) => r.value === input.reason)) {
-    throw new StageMoveError('required_fields', 'Pick a reason to disqualify', [], []);
+  let reason: string;
+  try {
+    reason = await assertActiveReason(t, 'lead_disqualify', input.reason);
+  } catch (err) {
+    if (err instanceof ReasonError) {
+      throw new StageMoveError('required_fields', err.message, [
+        { field_key: 'disqualify_reason', label: 'Disqualify reason', input_type: 'select', options: null, value: null },
+      ]);
+    }
+    throw err;
   }
+  const note = input.note?.trim() ? input.note.trim().slice(0, 2000) : null;
   const lead = await lockLead(t, input.leadId);
   const lost = await stageOfState(t, lead.pipeline_id, 'lost');
   await moveStage(t, {
     objectType: 'lead',
     recordId: lead.id,
     toStageId: lost.id,
-    values: { disqualify_reason: input.reason },
+    values: { disqualify_reason: reason, disqualify_note: note ?? '' },
     actor: { type: 'user', id: input.actor.id },
     source: 'disqualify',
   });
   // Already disqualified means moveStage changed nothing, so store the new reason here too.
-  await t`update leads set disqualify_reason = ${input.reason} where id = ${lead.id}`;
+  await t`update leads set disqualify_reason = ${reason}, disqualify_note = ${note} where id = ${lead.id}`;
   let suppressed = 0;
-  if (input.reason === 'do_not_contact' && lead.contact_id) {
-    suppressed = await suppressContact(t, lead.contact_id, `Disqualified, do not contact${input.note ? `. ${input.note}` : ''}`, input.actor.id);
+  if (reason === 'do_not_contact' && lead.contact_id) {
+    suppressed = await suppressContact(t, lead.contact_id, `Disqualified, do not contact${note ? `. ${note}` : ''}`, input.actor.id);
   }
+  const label = reasonLabel(await listReasons('lead_disqualify', { includeArchived: true }, t), reason);
   await logActivity(
     {
       kind: 'note',
       direction: 'internal',
       actorUserId: input.actor.id,
-      title: `Disqualified, ${labelOf(DISQUALIFY_REASONS, input.reason).toLowerCase()}`,
-      body: [input.note?.trim() || null, suppressed ? 'Added to the suppression list, never contacted again.' : null].filter(Boolean).join(' ') || null,
-      meta: { tags: [input.actor.name], disqualify_reason: input.reason },
+      title: `Disqualified, ${label.toLowerCase()}`,
+      body: [note, suppressed ? 'Added to the suppression list, never contacted again.' : null].filter(Boolean).join(' ') || null,
+      meta: { tags: [input.actor.name], disqualify_reason: reason },
       source: 'system',
       links: [{ leadId: lead.id, isPrimary: true }, { contactId: lead.contact_id }, { organizationId: lead.organization_id }],
       autoLink: false,
@@ -740,12 +752,12 @@ export async function removeDealContact(t: Tx, id: string): Promise<{ dealId: st
 export const DEAL_EDITABLE = [
   'name', 'amount', 'currency', 'close_date', 'owner_user_id', 'deal_type', 'priority', 'forecast_category',
   'forecast_probability', 'pricing_model', 'next_step', 'angle', 'source', 'meeting_at', 'build_card_url',
-  'prototype_url', 'quote_ref', 'decision_date', 'signer', 'start_date', 'won_reason', 'lost_reason', 'lost_competitor',
+  'prototype_url', 'quote_ref', 'decision_date', 'signer', 'start_date', 'won_reason', 'lost_reason', 'lost_note', 'lost_competitor',
 ] as const;
 
 export const LEAD_EDITABLE = [
   'name', 'owner_user_id', 'label', 'source', 'campaign', 'research_status', 'angle', 'angle_worth_eur', 'status_note',
-  'next_step', 'linkedin_accepted_at', 'opener_sent_at', 'auto_progress_enabled',
+  'next_step', 'linkedin_accepted_at', 'opener_sent_at', 'auto_progress_enabled', 'disqualify_reason', 'disqualify_note',
 ] as const;
 
 /** Write a validated patch and custom values to a deal or lead. */
@@ -759,6 +771,24 @@ export async function updateRecordFields(
   const allowed = new Set<string>(objectType === 'deal' ? DEAL_EDITABLE : LEAD_EDITABLE);
   const table = objectType === 'deal' ? 'deals' : 'leads';
   const clean = Object.fromEntries(Object.entries(patch).filter(([k]) => allowed.has(k)));
+  // A reason is checked against the active list, and a lost record cannot lose its reason.
+  const reasonKey = objectType === 'deal' ? 'lost_reason' : 'disqualify_reason';
+  if (Object.prototype.hasOwnProperty.call(clean, reasonKey)) {
+    const [cur] = await t<{ reason: string | null; state: string }[]>`
+      select r.${t(reasonKey)} as reason, s.state from ${t(table)} r join pipeline_stages s on s.id = r.stage_id where r.id = ${id}`;
+    const next = (clean[reasonKey] as string | null) ?? null;
+    if (!next && cur?.state === 'lost') {
+      throw new SalesError('invalid', objectType === 'deal' ? 'A lost deal needs a lost reason' : 'A disqualified lead needs a reason');
+    }
+    if (next && next !== cur?.reason) {
+      try {
+        await assertActiveReason(t, objectType === 'deal' ? 'deal_lost' : 'lead_disqualify', next);
+      } catch (err) {
+        if (err instanceof ReasonError) throw new SalesError('invalid', err.message);
+        throw err;
+      }
+    }
+  }
   if (Object.keys(clean).length) await t`update ${t(table)} set ${t(clean as Record<string, any>)} where id = ${id}`;
   if (Object.keys(custom).length) await t`update ${t(table)} set custom = custom || ${t.json(custom as never)} where id = ${id}`;
 }

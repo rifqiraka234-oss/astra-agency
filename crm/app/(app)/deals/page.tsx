@@ -1,13 +1,14 @@
 /**
- * /deals, every deal with filters (open, won, lost, pipeline, stage, owner,
- * search), sortable columns, a totals row and CSV export. ?new=1 opens the
- * create form.
+ * /deals, every deal with filters (open, won, lost, pipeline, stage, lost
+ * reason, owner, search), sortable columns, a totals row and CSV export.
+ * ?dates=1 adds an "Entered <stage>" column per stage. ?new=1 opens the create form.
  */
 import Link from 'next/link';
 import { requireUser } from '@/lib/auth';
 import { can } from '@/lib/permissions';
-import { formatDate, formatDays, formatMoney } from '@/lib/format';
-import { LOST_REASONS, labelOf } from '@/lib/options';
+import { formatDate, formatDateTime, formatDays, formatMoney } from '@/lib/format';
+import { listReasons } from '@/lib/reasons';
+import { stageColumns, stageDatesFor } from '@/lib/sales/stage-times';
 import { dealStageOptions, listDeals, listUsers, pickedContact, pickedOrganization, salesPipelines, stagesOf, type DealListRow } from '@/lib/sales/queries';
 import { Avatar, Button, ButtonLink, EmptyState, Field, Input, PageHeader, Select, sortHrefFor } from '@/components/ui';
 import { CreateDealDialog, type DealStageOption } from '@/components/sales/CreateForms';
@@ -18,7 +19,7 @@ export const dynamic = 'force-dynamic';
 type SP = Record<string, string | string[] | undefined>;
 const one = (v: string | string[] | undefined) => (typeof v === 'string' && v ? v : undefined);
 
-const COLUMNS: { key: string; label: string; num?: boolean }[] = [
+const COLUMNS: { key: string; label: string; num?: boolean; nosort?: boolean }[] = [
   { key: 'name', label: 'Deal' },
   { key: 'organization', label: 'Organization' },
   { key: 'stage', label: 'Stage' },
@@ -28,6 +29,7 @@ const COLUMNS: { key: string; label: string; num?: boolean }[] = [
   { key: 'close', label: 'Close' },
   { key: 'owner', label: 'Owner' },
   { key: 'days', label: 'In stage', num: true },
+  { key: 'reason', label: 'Lost reason' },
 ];
 
 export default async function DealsPage({ searchParams }: { searchParams: Promise<SP> }) {
@@ -36,18 +38,32 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
   const f = {
     pipeline: one(sp.pipeline),
     stage: one(sp.stage),
-    state: one(sp.state) ?? 'open',
+    reason: one(sp.reason),
+    state: one(sp.state) ?? (one(sp.reason) ? 'lost' : 'open'),
     owner: one(sp.owner),
     q: one(sp.q),
     sort: one(sp.sort) ?? 'close',
     dir: one(sp.dir) ?? 'asc',
   };
-  const [{ rows, totals }, stageOpts, users, pipelines] = await Promise.all([listDeals(f), dealStageOptions(), listUsers(), salesPipelines()]);
+  const showDates = one(sp.dates) === '1';
+  const [{ rows, totals }, stageOpts, users, pipelines, reasons, stageCols] = await Promise.all([
+    listDeals(f),
+    dealStageOptions(),
+    listUsers(),
+    salesPipelines(),
+    listReasons('deal_lost', { includeArchived: true }),
+    showDates ? stageColumns('deal', f.pipeline) : Promise.resolve([]),
+  ]);
+  const dates = showDates ? await stageDatesFor('deal', rows.map((r) => r.id)) : new Map();
   const canExport = can(user, 'export', 'deal');
   const canCreate = can(user, 'create', 'deal');
   const { new: _new, organization: _org, contact: _contact, ...rest } = sp;
   const qs = new URLSearchParams(Object.entries(rest).flatMap(([k, v]) => (typeof v === 'string' ? [[k, v]] : []))).toString();
   const closeHref = `/deals${qs ? `?${qs}` : ''}`;
+  const datesParams = new URLSearchParams(qs);
+  if (showDates) datesParams.delete('dates');
+  else datesParams.set('dates', '1');
+  const datesHref = `/deals${datesParams.toString() ? `?${datesParams.toString()}` : ''}`;
   const sortHref = sortHrefFor('/deals', rest);
   const dir = f.dir === 'desc' ? 'desc' : 'asc';
 
@@ -71,6 +87,7 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
         actions={
           <>
             <ButtonLink href="/pipelines?p=sales">Board</ButtonLink>
+            <ButtonLink href={datesHref}>{showDates ? 'Hide stage dates' : 'Show stage dates'}</ButtonLink>
             {canExport ? <ButtonLink href={`/deals/export${qs ? `?${qs}` : ''}`}>Export CSV</ButtonLink> : null}
             {canCreate ? (
               <ButtonLink href={`/deals?${new URLSearchParams({ ...Object.fromEntries(new URLSearchParams(qs)), new: '1' }).toString()}`} variant="primary">
@@ -110,6 +127,15 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
         <Field label="Stage" htmlFor="df-stage">
           <Select id="df-stage" name="stage" options={stageOpts.map((s) => ({ value: s.id, label: `${s.pipeline_name}, ${s.name}` }))} placeholder="Any stage" defaultValue={f.stage ?? ''} />
         </Field>
+        <Field label="Lost reason" htmlFor="df-reason">
+          <Select
+            id="df-reason"
+            name="reason"
+            options={[...reasons.map((r) => ({ value: r.key, label: r.is_archived ? `${r.label}, archived` : r.label })), { value: 'none', label: 'No reason recorded' }]}
+            placeholder="Any reason"
+            defaultValue={f.reason ?? ''}
+          />
+        </Field>
         <Field label="Owner" htmlFor="df-owner">
           <Select
             id="df-owner"
@@ -121,6 +147,7 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
         </Field>
         <input type="hidden" name="sort" value={f.sort} />
         <input type="hidden" name="dir" value={f.dir} />
+        {showDates ? <input type="hidden" name="dates" value="1" /> : null}
         <div className="row" style={{ gap: 8 }}>
           <Button type="submit" variant="primary">
             Apply
@@ -137,7 +164,7 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
         </div>
       ) : (
         <div className="table-wrap">
-          <table className="table" style={{ minWidth: 1040 }}>
+          <table className="table" style={{ minWidth: 1180 + stageCols.length * 130 }}>
             <caption className="sr-only">Deals</caption>
             <thead>
               <tr>
@@ -153,6 +180,11 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
                     </th>
                   );
                 })}
+                {stageCols.map((c) => (
+                  <th key={c.id} scope="col">
+                    Entered {c.label}
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody>
@@ -171,7 +203,6 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
                     <div className="stack-sm" style={{ gap: 2 }}>
                       <span>{r.stage_name}</span>
                       {pipelines.filter((p) => p.object_type === 'deal').length > 1 ? <span className="small muted">{r.pipeline_name}</span> : null}
-                      {r.stage_state === 'lost' && r.lost_reason ? <span className="small muted">{labelOf(LOST_REASONS, r.lost_reason)}</span> : null}
                       {r.is_rotting ? <span className="small danger">Rotting</span> : null}
                     </div>
                   </td>
@@ -190,6 +221,22 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
                     )}
                   </td>
                   <td className="num">{formatDays(r.days_in_stage)}</td>
+                  <td>
+                    {r.stage_state === 'lost' ? (
+                      <div className="stack-sm" style={{ gap: 2 }}>
+                        <span>{r.lost_reason_label ?? (r.lost_reason ? r.lost_reason : <span className="muted">Not recorded</span>)}</span>
+                        {r.lost_note ? <span className="small muted">{r.lost_note.length > 80 ? `${r.lost_note.slice(0, 80)}...` : r.lost_note}</span> : null}
+                      </div>
+                    ) : null}
+                  </td>
+                  {stageCols.map((c) => {
+                    const d = dates.get(r.id)?.get(c.id)?.entered;
+                    return (
+                      <td key={c.id} className="nowrap">
+                        {d ? formatDateTime(d) : <span className="muted">None</span>}
+                      </td>
+                    );
+                  })}
                 </tr>
               ))}
               <tr className={styles.totalsRow}>
@@ -199,7 +246,7 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
                 <td className="num">{formatMoney(totals.amount)}</td>
                 <td />
                 <td className="num">{formatMoney(totals.weighted, 'EUR', 0)}</td>
-                <td colSpan={3} />
+                <td colSpan={4 + stageCols.length} />
               </tr>
             </tbody>
           </table>
