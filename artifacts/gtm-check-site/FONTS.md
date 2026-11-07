@@ -9,9 +9,7 @@ Fonts in the deck, by amount of text. Solomon Sans (body and bold heads), The Se
 italic), Cerebri Sans and Open Sauce One (a few lines each).
 
 On this site
-- Open Sauce One is open licensed (OFL) and self hosted in fonts/, licence included.
-- Solomon Sans needs a webfont licence from Fontfabric (MyFonts or Fontspring). Once bought, put the woff2 files in
-  fonts/ and add @font-face rules named "Solomon Sans". The CSS already asks for it first.
-- The Seasons is on Adobe Fonts, which allows website use through a web project on Raka's Creative Cloud account.
-  Add the project's <link> tag to the head, or buy the webfont and self host it as "The Seasons". The CSS asks for it
-  first, and Gloock (OFL, self hosted) stands in until then.
+- Open Sauce One for everything, Raka's call on 7 Nov 2026. It is in the brand deck and open licensed (OFL), self hosted
+  in fonts/ with its licence.
+- Solomon Sans and The Seasons stay in Canva only. Using them online needs a Fontfabric webfont licence and an Adobe
+  Fonts web project or a bought webfont.
