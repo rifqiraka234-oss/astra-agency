@@ -1,4 +1,4 @@
-# Bumps for Sat 7 Nov 2026. NOT SENT, NOT APPROVED
+# Bumps for Sat 7 Nov 2026. NOT SENT, NOT APPROVED. 11 with Cameron, threads re pulled 7 Nov 06.36 UTC, control 9, all unchanged
 
 Daily pipeline 6 Nov. The 10 group B openers of 2 Nov 07.30 UTC, no reply, no follow up yet, so the one plain bump is due (RULES 1B, two pitches then close). Today already has 18 bumps (state/send_log_2026-11-06.txt), so these go Sat 7 Nov to stay under 20 a day. Plain 👀 shape, so we can compare it with the dots shape sent today. Audit 6 Nov 08.0x UTC, control 8, each thread 1 item from us, nothing from them. Re pull right before sending.
 
@@ -90,4 +90,13 @@ NUDGE
 NUDGE
 ```
 👀 Mersedeh, have you seen this?
+```
+
+### Cameron Young, Cheeky Charging, ctc_jFXCMdHuM4mXHr6t2
+
+> Opener 4 Nov 08.30 UTC (SKETCHB on Raka's call), 1 item, nothing from him, due 7 Nov 08.30 UTC. One bump, then a silent close.
+
+NUDGE
+```
+👀 Cameron, have you seen this?
 ```

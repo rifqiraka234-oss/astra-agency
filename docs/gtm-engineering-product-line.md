@@ -285,3 +285,21 @@ the course pitches is `docs/gtm-automation-prices-draft.md`, and the preview is 
 Still open. Seller Level 3 (the AI research assistant) has no lessons written yet, because `docs/academy/gtm-seller.md`
 is one course of five modules that splits cleanly only into Levels 1 and 2. The academy files still carry the old prices
 (€149, €199, €249 and so on), and the deck is now the current source until they're updated.
+
+## The GTM Engine Check, live (7 Nov)
+
+https://astra-gtm-check.netlify.app, Netlify site id 60f7b7d5-f6dd-4e49-8c05-d51c0637285d, deploy 6aeec88062875d0b80ef14df,
+team login switched off. Source is `artifacts/gtm-check-site/`, deployed from a clean folder of index.html, img, fonts
+and netlify.toml. Live check on 7 Nov: index.html byte identical to the deployed file (sha256 35f0e197...dd04d), all
+17 images and fonts 200 and byte identical, title right, Open Sauce One loaded in Chromium, no page errors.
+
+Two paths, For me and For my team, four chapters each. Psychology built in on purpose: goal first, honesty prompts,
+a live tally and findings count, a worry question, a self set value used as the price anchor, an engine label.
+Money figures come from the visitor's answers. Assumptions are a system takes over 50% of admin (slider), fast
+follow up saves 8 in 10 cold leads, 46 working weeks. Maturity weights target and speed 1.3, message and measure 1.1,
+data and loyalty 1, signals 0.9, our judgement, not calibrated yet. Prices are the 6 Nov list.
+
+Brand. The six deck colours only. Open Sauce One for every face, Raka's call on 7 Nov, because Solomon Sans and The
+Seasons are licensed for Canva use only (see `artifacts/gtm-check-site/FONTS.md`).
+
+Open. No lead capture yet. Not yet tested with real prospects, so the scoring is uncalibrated.
