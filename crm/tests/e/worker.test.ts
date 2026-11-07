@@ -78,6 +78,20 @@ describe('deal won automation', () => {
     });
   });
 
+  it('still starts a delivery project when a prototype project already hangs off the deal', async () => {
+    await withRollback(async (t) => {
+      const raka = await userId(t, 'raka@astra.local');
+      const [pipe] = await t<{ id: string }[]>`select id from pipelines where key = 'sales'`;
+      const [deal] = await t<{ id: string }[]>`
+        insert into deals (name, pipeline_id, stage_id, owner_user_id, amount) values ('Website rebuild with proto', ${pipe.id}, ${await stageId(t, 'sales', 'won')}, ${raka}, '1000.00') returning id`;
+      await t`insert into projects (name, kind, deal_id, status) values ('Prototype first', 'prototype', ${deal.id}, 'completed')`;
+      const evId = await emit(t, 'deal.won', { id: deal.id }, { aggregateType: 'deal', aggregateId: deal.id });
+      await processEvent(t, evId, new Date('2026-11-06T09:00:00Z'));
+      const kinds = await t<{ kind: string }[]>`select kind from projects where deal_id = ${deal.id} order by created_at`;
+      expect(kinds.map((k) => k.kind)).toEqual(['prototype', 'delivery']);
+    });
+  });
+
   it('skips the deposit when the deal has no amount', async () => {
     await withRollback(async (t) => {
       const raka = await userId(t, 'raka@astra.local');
@@ -149,6 +163,31 @@ describe('scheduled rules', () => {
         select tk.owner_user_id from tasks tk join task_links tl on tl.task_id = tk.id where tl.invoice_id = ${inv.id}`;
       expect(tasks).toHaveLength(1);
       expect(tasks[0].owner_user_id).toBe(luna);
+    });
+  });
+
+  it('waits 2 days after the due date before the late rule chases', async () => {
+    await withRollback(async (t) => {
+      const [org] = await t<{ id: string }[]>`insert into organizations (name) values ('Late Payer Wait') returning id`;
+      const [inv] = await t<{ id: string }[]>`
+        insert into invoices (organization_id, title, state, total) values (${org.id}, 'Test wait', 'draft', '100.00') returning id`;
+      await t`update invoices set state = 'open', external_number = 'TEST-E-2', issue_date = '2031-02-01', due_date = '2031-03-02' where id = ${inv.id}`;
+      const [rule] = await t<RuleRow[]>`select * from automation_rules where key = 'invoice_mark_late'`;
+      await runScheduleRule(t, rule, new Date('2031-03-03T09:00:00Z'));
+      const [ev] = await t<{ id: string }[]>`select id::text as id from domain_events where type = 'invoice.late' and aggregate_id = ${inv.id}`;
+      const early = await processEvent(t, ev.id, new Date('2031-03-03T09:05:00Z'));
+      expect(early?.runs[0].status).toBe('deferred');
+      expect(early?.processed).toBe(false);
+      const [pending] = await t<{ next_attempt_at: Date; processed_at: Date | null }[]>`select next_attempt_at, processed_at from domain_events where id = ${ev.id}`;
+      expect(pending.processed_at).toBeNull();
+      expect(new Date(pending.next_attempt_at).toISOString()).toBe('2031-03-04T07:00:00.000Z');
+      const count = async () =>
+        (await t<{ n: number }[]>`select count(*)::int as n from tasks tk join task_links tl on tl.task_id = tk.id where tl.invoice_id = ${inv.id}`)[0].n;
+      expect(await count()).toBe(0);
+      const later = await processEvent(t, ev.id, new Date('2031-03-04T08:00:00Z'));
+      expect(later?.runs[0].status).toBe('success');
+      expect(later?.processed).toBe(true);
+      expect(await count()).toBe(1);
     });
   });
 

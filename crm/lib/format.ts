@@ -296,6 +296,32 @@ export function initials(name: string | null | undefined): string {
   return (words[0][0] + words[words.length - 1][0]).toUpperCase();
 }
 
+// Legal forms and filler words that say nothing about which company it is.
+const ORG_SKIP_WORDS = new Set([
+  'bv', 'nv', 'vof', 'cv', 'gmbh', 'ag', 'ug', 'kg', 'ltd', 'limited', 'llc', 'llp', 'inc', 'corp', 'co', 'plc',
+  'sarl', 'sas', 'sa', 'srl', 'spa', 'bvba', 'oy', 'ab', 'as', 'aps', 'the', 'and', 'of', 'de', 'het',
+]);
+
+/**
+ * Organization avatar initials: the first letters of the first two words that are not
+ * a legal form or filler ("Atlas Freight BV" -> "AF", "Brouwerij De Kade" -> "BK",
+ * "Maison Orée" -> "MO"), the first two letters of a one word name ("Snorly" -> "SN").
+ */
+export function orgInitials(name: string | null | undefined): string {
+  if (!name) return '?';
+  const words = name
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .split(/[\s&+/,]+/)
+    .map((w) => w.replace(/[^A-Za-z0-9]/g, ''))
+    .filter(Boolean);
+  const kept = words.filter((w) => !ORG_SKIP_WORDS.has(w.toLowerCase()));
+  const use = kept.length ? kept : words;
+  if (use.length === 0) return '?';
+  if (use.length === 1) return use[0].slice(0, 2).toUpperCase();
+  return (use[0][0] + use[1][0]).toUpperCase();
+}
+
 /** 'deal_won' -> 'Deal won'. For enum values without a label in lib/options.ts. */
 export function humanize(value: string | null | undefined): string {
   if (!value) return '';

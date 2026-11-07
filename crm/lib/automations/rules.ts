@@ -15,7 +15,8 @@ import { logActivity } from '../activities';
 import { createTask } from '../tasks';
 import { bumpLifecycle, moveStage } from '../stages';
 import { emit } from '../events';
-import { amsterdamTime, formatMoney, multiplyMoney, sumMoney, toCents, todayKey, vatAmount } from '../format';
+import { addDaysKey, amsterdamTime, formatMoney, multiplyMoney, sumMoney, toCents, todayKey, vatAmount } from '../format';
+import { markLateInvoices } from '../money/invoices';
 import { VAT_RATES } from '../options';
 import { addWorkingDays, dayDiff, nextQuarterFirstMonday } from './calendar';
 
@@ -28,7 +29,12 @@ export type Change = {
   label: string;
 };
 
-export type RuleOutcome = { status: 'success' | 'skipped'; changes: Change[]; note?: string };
+export type RuleOutcome =
+  | { status: 'success' | 'skipped'; changes: Change[]; note?: string }
+  /** Not yet: the engine leaves the event pending until `until` and runs the rule again then. */
+  | { status: 'deferred'; until: Date; changes: Change[]; note?: string };
+/** What a schedule rule returns, it never defers. */
+export type DoneOutcome = Exclude<RuleOutcome, { status: 'deferred' }>;
 
 export type RuleRow = {
   id: string;
@@ -59,7 +65,7 @@ export type EventHandler = (t: Tx, ctx: EventContext) => Promise<RuleOutcome>;
 export type ScheduleHandler = {
   /** The run key when the rule should run at `now`, else null. One run per key, ever. */
   due: (rule: RuleRow, now: Date) => string | null;
-  run: (t: Tx, ctx: ScheduleContext) => Promise<RuleOutcome>;
+  run: (t: Tx, ctx: ScheduleContext) => Promise<DoneOutcome>;
 };
 
 const AUTOMATION_ACTOR = { type: 'automation' as const, id: null };
@@ -69,7 +75,7 @@ function cfg<T>(rule: RuleRow, key: string, fallback: T): T {
   return (v === undefined || v === null ? fallback : v) as T;
 }
 
-function skipped(note: string): RuleOutcome {
+function skipped(note: string): DoneOutcome {
   return { status: 'skipped', changes: [], note };
 }
 
@@ -191,9 +197,13 @@ const dealWon: EventHandler = async (t, { rule, event, now }) => {
   const templates = cfg<Template[]>(rule, 'templates', DEFAULT_TEMPLATES);
   const template = pickTemplate(templates, deal.name, deal.pricing_model);
 
-  // 1. Project.
+  // 1. Project. A prototype project built before the deal was won is pre sale work, not the
+  // delivery project, so only a project of the template's kind (or one this rule made) counts.
   let [project] = await t<{ id: string; name: string }[]>`
-    select id, name from projects where deal_id = ${dealId} and deleted_at is null order by created_at limit 1`;
+    select id, name from projects
+     where deal_id = ${dealId} and deleted_at is null
+       and (kind = ${template.kind} or custom ->> 'created_by_rule' = ${rule.key})
+     order by created_at limit 1`;
   if (!project) {
     const kickoff = await stageIdByKey(t, 'delivery', 'kickoff');
     const [pipe] = await t<{ id: string }[]>`select id from pipelines where key = 'delivery'`;
@@ -365,6 +375,15 @@ const invoiceLate: EventHandler = async (t, { rule, event, now }) => {
   if (!inv) return skipped('The invoice no longer exists');
   if (inv.state !== 'late') return skipped(`The invoice is ${inv.state} now, not late`);
 
+  // The design's "Wait 2 days, if still not paid": chase only once the due date is wait_days behind us.
+  const waitDays = Number(cfg(rule, 'wait_days', 2));
+  if (inv.due_date) {
+    const readyDay = addDaysKey(inv.due_date, waitDays);
+    if (todayKey(now) < readyDay) {
+      return { status: 'deferred', until: amsterdamTime(readyDay, '08:00'), changes: [], note: `Waiting until ${readyDay}, ${waitDays} days after the due date` };
+    }
+  }
+
   const label = inv.external_number ?? inv.title ?? 'invoice';
   const changes: Change[] = [];
   const existing = await openRuleTask(t, rule.key, 'invoice_id', inv.id);
@@ -523,17 +542,14 @@ const quarterlyCheckin: ScheduleHandler = {
 
 const markInvoicesLate: ScheduleHandler = {
   due: hourDue,
-  run: async (t) => {
+  // lib/money/invoices.ts owns the state change: it logs the activity and emits invoice.late.
+  run: async (t, { now }) => {
+    const ids = await markLateInvoices(t, todayKey(now));
+    if (!ids.length) return skipped('No open invoice is past its due date');
     const rows = await t<{ id: string; label: string }[]>`
-      update invoices set state = 'late'
-       where state = 'open' and due_date < crm_today() and deleted_at is null
-      returning id, coalesce(external_number, title, 'Invoice') as label`;
-    const changes: Change[] = [];
-    for (const r of rows) {
-      await emit(t, 'invoice.late', { id: r.id }, { aggregateType: 'invoice', aggregateId: r.id });
-      changes.push({ action: 'updated', entity: 'invoice', id: r.id, label: `${r.label} marked late` });
-    }
-    return changes.length ? { status: 'success', changes } : skipped('No open invoice is past its due date');
+      select id, coalesce(external_number, title, 'Invoice') as label from invoices where id = any(${ids}::uuid[])`;
+    const changes: Change[] = rows.map((r) => ({ action: 'updated', entity: 'invoice', id: r.id, label: `${r.label} marked late` }));
+    return { status: 'success', changes };
   },
 };
 

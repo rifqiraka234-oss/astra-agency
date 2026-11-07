@@ -39,7 +39,9 @@ const MOVES: Record<MergeType, MoveSpec[]> = {
   contact: [
     { table: 'contact_emails', column: 'contact_id', primary: 'is_primary' },
     { table: 'contact_phones', column: 'contact_id', primary: 'is_primary' },
-    { table: 'contact_org_roles', column: 'contact_id', primary: 'is_primary and is_current' },
+    // A role at an organization the winner already has (same relationship, both current or both ended) is the
+    // same role twice. It is deleted and kept in the snapshot, so undo puts it back.
+    { table: 'contact_org_roles', column: 'contact_id', uniqueWith: ['organization_id', 'is_current', 'relationship'], onConflict: 'delete', primary: 'is_primary and is_current' },
     { table: 'activity_links', column: 'contact_id', uniqueWith: ['activity_id'], onConflict: 'delete' },
     { table: 'task_links', column: 'contact_id', uniqueWith: ['task_id'], onConflict: 'delete' },
     { table: 'deal_contacts', column: 'contact_id', uniqueWith: ['deal_id'], onConflict: 'delete' },
@@ -52,7 +54,7 @@ const MOVES: Record<MergeType, MoveSpec[]> = {
   ],
   organization: [
     { table: 'organization_domains', column: 'organization_id', primary: 'is_primary' },
-    { table: 'contact_org_roles', column: 'organization_id' },
+    { table: 'contact_org_roles', column: 'organization_id', uniqueWith: ['contact_id', 'is_current', 'relationship'], onConflict: 'delete' },
     { table: 'contacts', column: 'primary_org_id' },
     { table: 'activity_links', column: 'organization_id', uniqueWith: ['activity_id'], onConflict: 'delete' },
     { table: 'task_links', column: 'organization_id', uniqueWith: ['task_id'], onConflict: 'delete' },

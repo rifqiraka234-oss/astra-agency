@@ -20,7 +20,8 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { sql, tx, type Tx } from '../db';
 import { logActivity } from '../activities';
-import { normDomain, normLinkedin, isFreeMail } from '../normalize';
+import { normCompanyName, normDomain, normLinkedin, isFreeMail } from '../normalize';
+import { companyNameOf, findExistingOrg, personKey } from './match';
 import { mapQueueStatus, researchStatusFor, type StatusMapping } from './status-map';
 
 type Row = Record<string, unknown>;
@@ -69,6 +70,19 @@ function readJsonl(file: string): Row[] {
 
 const s = (v: unknown): string | null => (typeof v === 'string' && v.trim() ? v.trim() : null);
 
+/**
+ * A lemlist id, or null for a placeholder. The queue holds 12 rows with contactId
+ * "ctc_N/A"; read as an id it made those 12 people one person.
+ */
+const contactIdOf = (v: unknown): string | null => {
+  const t = s(v);
+  return t && /^ctc_[A-Za-z0-9]+$/.test(t) ? t : null;
+};
+const leadIdOf = (v: unknown): string | null => {
+  const t = s(v);
+  return t && /^lea_[A-Za-z0-9]+$/.test(t) ? t : null;
+};
+
 /** Lenient date reader for the hand written timestamps in the state files. */
 export function parseLooseDate(v: unknown): Date | null {
   const str = s(v);
@@ -94,20 +108,43 @@ function hash(text: string): string {
   return crypto.createHash('sha1').update(text).digest('hex').slice(0, 12);
 }
 
-/** Latest row per person. A leadId seen with a contactId elsewhere resolves to that contactId. */
+/**
+ * Latest row per person. A leadId seen with a contactId elsewhere resolves to that contactId.
+ * The early queue rows carry only a leadId and later rows for the same person only a
+ * contactId, with nothing linking the two. A leadId only key whose rows name exactly one
+ * contactId person with the same name and company resolves to that contactId, so one
+ * person never becomes two contacts and two leads. An ambiguous name stays separate.
+ */
 export function latestPerPerson(rows: Row[]): { latest: Map<string, Row>; withoutId: number[] } {
   const leadToContact = new Map<string, string>();
   for (const r of rows) {
-    const c = s(r.contactId);
-    const l = s(r.leadId);
+    const c = contactIdOf(r.contactId);
+    const l = leadIdOf(r.leadId);
     if (c && l) leadToContact.set(l, c);
   }
+  // name + company -> the contactIds seen with it.
+  const nameCo = (r: Row) => {
+    const n = personKey(s(r.name));
+    const co = normCompanyName(companyNameOf(r.companyName));
+    return n && co ? `${n}|${co}` : null;
+  };
+  const contactsByNameCo = new Map<string, Set<string>>();
+  for (const r of rows) {
+    const c = contactIdOf(r.contactId);
+    const k = nameCo(r);
+    if (c && k) contactsByNameCo.set(k, (contactsByNameCo.get(k) ?? new Set()).add(c));
+  }
+  const aliasByNameCo = (r: Row): string | null => {
+    const k = nameCo(r);
+    const set = k ? contactsByNameCo.get(k) : undefined;
+    return set && set.size === 1 ? [...set][0] : null;
+  };
   const latest = new Map<string, Row>();
   const withoutId: number[] = [];
   rows.forEach((r, i) => {
-    const c = s(r.contactId);
-    const l = s(r.leadId);
-    const key = c ?? (l ? leadToContact.get(l) ?? l : null);
+    const c = contactIdOf(r.contactId);
+    const l = leadIdOf(r.leadId);
+    const key = c ?? (l ? leadToContact.get(l) ?? aliasByNameCo(r) ?? l : null);
     if (!key) {
       withoutId.push(i + 1);
       return;
@@ -136,30 +173,23 @@ async function findContactByLemlist(t: Tx, cid: string | null): Promise<string |
 }
 
 async function upsertOrg(t: Tx, row: Row, ids: Ids, report: ImportReport): Promise<string | null> {
-  const domain = normDomain(s(row.companyDomain) ?? s(row.domain) ?? s(row.website) ?? '');
-  const name = s(row.companyName);
-  if (domain && !isFreeMail(domain)) {
-    const [hit] = await t<{ organization_id: string }[]>`select organization_id from organization_domains where domain_normalised = ${domain}`;
-    if (hit) return hit.organization_id;
-    const [org] = await t<{ id: string }[]>`
-      insert into organizations (name, owner_user_id, source, custom) values (${name ?? domain}, ${ids.defaultOwner}, 'import', '{"imported_from":"jsonl"}')
-      returning id`;
-    await t`insert into organization_domains (organization_id, domain_normalised, is_primary) values (${org.id}, ${domain}, true)`;
-    report.queue.organizationsCreated++;
-    return org.id;
-  }
-  if (!name) return null;
-  const [byName] = await t<{ id: string }[]>`select id from organizations where lower(name) = lower(${name}) and deleted_at is null order by created_at limit 1`;
-  if (byName) return byName.id;
+  const raw = normDomain(s(row.companyDomain) ?? s(row.domain) ?? s(row.website) ?? '');
+  const domain = raw && !isFreeMail(raw) ? raw : null;
+  const name = companyNameOf(row.companyName);
+  if (!domain && !name) return null;
+  const existing = await findExistingOrg(t, { domain, name });
+  if (existing) return existing;
   const [org] = await t<{ id: string }[]>`
-    insert into organizations (name, owner_user_id, source, custom) values (${name}, ${ids.defaultOwner}, 'import', '{"imported_from":"jsonl","no_domain":true}')
+    insert into organizations (name, owner_user_id, source, custom)
+    values (${name ?? domain}, ${ids.defaultOwner}, 'import', ${t.json((domain ? { imported_from: 'jsonl' } : { imported_from: 'jsonl', no_domain: true }) as never)})
     returning id`;
+  if (domain) await t`insert into organization_domains (organization_id, domain_normalised, is_primary) values (${org.id}, ${domain}, true)`;
   report.queue.organizationsCreated++;
   return org.id;
 }
 
 async function upsertContact(t: Tx, key: string, row: Row, orgId: string | null, ids: Ids, report: ImportReport): Promise<string | null> {
-  const cid = s(row.contactId);
+  const cid = contactIdOf(row.contactId);
   const linkedin = normLinkedin(s(row.linkedinUrl));
   let id = await findContactByLemlist(t, cid);
   if (!id) {
@@ -172,6 +202,20 @@ async function upsertContact(t: Tx, key: string, row: Row, orgId: string | null,
   if (!id && linkedin) {
     const [hit] = await t<{ id: string }[]>`select id from contacts where linkedin_url_normalised = ${linkedin} and deleted_at is null`;
     id = hit?.id ?? null;
+  }
+  if (!id && orgId && s(row.name)) {
+    // Same name at the same organization, the person an earlier row (keyed by another id) made.
+    // Only when exactly one matches and it has no other lemlist id, else it stays a new contact.
+    const want = personKey(s(row.name));
+    const cands = await t<{ id: string; full_name: string; other_lemlist: boolean }[]>`
+      select c.id, c.full_name,
+             exists (select 1 from external_ids x where x.entity_type = 'contact' and x.entity_id = c.id and x.system = 'lemlist_contact'
+                       and x.external_id is distinct from ${cid}) as other_lemlist
+        from contacts c
+       where c.deleted_at is null
+         and (c.primary_org_id = ${orgId} or exists (select 1 from contact_org_roles r where r.contact_id = c.id and r.organization_id = ${orgId}))`;
+    const same = cands.filter((c) => personKey(c.full_name) === want);
+    if (same.length === 1 && !(cid && same[0].other_lemlist)) id = same[0].id;
   }
   if (id) {
     report.queue.contactsMatched++;
@@ -210,7 +254,7 @@ async function importQueueEntry(t: Tx, key: string, row: Row, mapped: StatusMapp
   const orgId = await upsertOrg(t, row, ids, report);
   const contactId = await upsertContact(t, key, row, orgId, ids, report);
   if (!contactId) report.queue.leadsWithoutContact++;
-  const cid = s(row.contactId);
+  const cid = contactIdOf(row.contactId);
 
   let leadId: string | null = null;
   const [byExt] = await t<{ entity_id: string }[]>`
@@ -234,7 +278,7 @@ async function importQueueEntry(t: Tx, key: string, row: Row, mapped: StatusMapp
     queue_status: s(row.status),
     queue_key: key,
     lemlist_contact_id: cid,
-    lemlist_lead_id: s(row.leadId),
+    lemlist_lead_id: leadIdOf(row.leadId),
     lemlist_campaign_id: s(row.campaignId),
     company_name: s(row.companyName),
     close_reason: mapped.closeReason,
@@ -340,11 +384,11 @@ async function linksFor(t: Tx, cid: string | null): Promise<{ contactId: string 
 }
 
 function prototypeKey(row: Row): string {
-  return `prototype:${s(row.contactId)}:${s(row.date)}:${row.angleNumber ?? ''}:${s(row.netlifyUrl) ?? s(row.deckUrl) ?? ''}`;
+  return `prototype:${contactIdOf(row.contactId)}:${s(row.date)}:${row.angleNumber ?? ''}:${s(row.netlifyUrl) ?? s(row.deckUrl) ?? ''}`;
 }
 
 function meetingKey(row: Row): string {
-  return `meeting:${s(row.calendarEventId) ?? `${s(row.contactId)}:${s(row.meetingDateTime)}`}`;
+  return `meeting:${s(row.calendarEventId) ?? `${contactIdOf(row.contactId)}:${s(row.meetingDateTime)}`}`;
 }
 
 /** The files are append only, a later row for the same prototype or meeting updates it. Merge, latest wins. */
@@ -359,7 +403,7 @@ export function latestBy(rows: Row[], keyOf: (r: Row) => string): Row[] {
 }
 
 async function importPrototype(t: Tx, row: Row, report: ImportReport): Promise<void> {
-  const cid = s(row.contactId);
+  const cid = contactIdOf(row.contactId);
   const { contactId, leadId } = await linksFor(t, cid);
   if (!contactId && !leadId) {
     report.prototypes.unlinked++;
@@ -395,7 +439,7 @@ async function importPrototype(t: Tx, row: Row, report: ImportReport): Promise<v
 }
 
 async function importMeeting(t: Tx, row: Row, report: ImportReport): Promise<void> {
-  const cid = s(row.contactId);
+  const cid = contactIdOf(row.contactId);
   const { contactId, leadId } = await linksFor(t, cid);
   if (!contactId && !leadId) {
     report.meetings.unlinked++;
@@ -496,7 +540,7 @@ export async function importJsonl(opts: ImportOptions): Promise<ImportReport> {
           report.prototypes.distinct = protos.length;
           for (const row of protos) {
             await t.savepoint((sp) => importPrototype(sp as unknown as Tx, row, report)).catch((err) =>
-              report.errors.push({ file: 'prototypes', key: s(row.contactId) ?? '', error: err instanceof Error ? err.message : String(err) }),
+              report.errors.push({ file: 'prototypes', key: contactIdOf(row.contactId) ?? '', error: err instanceof Error ? err.message : String(err) }),
             );
           }
           const meetsRaw = readJsonl(`${opts.stateDir}/meetings.jsonl`);
@@ -505,7 +549,7 @@ export async function importJsonl(opts: ImportOptions): Promise<ImportReport> {
           report.meetings.distinct = meets.length;
           for (const row of meets) {
             await t.savepoint((sp) => importMeeting(sp as unknown as Tx, row, report)).catch((err) =>
-              report.errors.push({ file: 'meetings', key: s(row.contactId) ?? '', error: err instanceof Error ? err.message : String(err) }),
+              report.errors.push({ file: 'meetings', key: contactIdOf(row.contactId) ?? '', error: err instanceof Error ? err.message : String(err) }),
             );
           }
           throw new Rollback();
@@ -527,11 +571,11 @@ export async function importJsonl(opts: ImportOptions): Promise<ImportReport> {
   const protos = latestBy(protosRaw, prototypeKey);
   report.prototypes.rows = protosRaw.length;
   report.prototypes.distinct = protos.length;
-  for (const row of protos) await runOne('prototypes', s(row.contactId) ?? '', (t) => importPrototype(t, row, report));
+  for (const row of protos) await runOne('prototypes', contactIdOf(row.contactId) ?? '', (t) => importPrototype(t, row, report));
   const meetsRaw = readJsonl(`${opts.stateDir}/meetings.jsonl`);
   const meets = latestBy(meetsRaw, meetingKey);
   report.meetings.rows = meetsRaw.length;
   report.meetings.distinct = meets.length;
-  for (const row of meets) await runOne('meetings', s(row.contactId) ?? '', (t) => importMeeting(t, row, report));
+  for (const row of meets) await runOne('meetings', contactIdOf(row.contactId) ?? '', (t) => importMeeting(t, row, report));
   return report;
 }

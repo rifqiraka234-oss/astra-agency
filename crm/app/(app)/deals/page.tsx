@@ -8,7 +8,7 @@ import { requireUser } from '@/lib/auth';
 import { can } from '@/lib/permissions';
 import { formatDate, formatDays, formatMoney } from '@/lib/format';
 import { LOST_REASONS, labelOf } from '@/lib/options';
-import { dealStageOptions, listDeals, listUsers, salesPipelines, stagesOf, type DealListRow } from '@/lib/sales/queries';
+import { dealStageOptions, listDeals, listUsers, pickedContact, pickedOrganization, salesPipelines, stagesOf, type DealListRow } from '@/lib/sales/queries';
 import { Avatar, Button, ButtonLink, EmptyState, Field, Input, PageHeader, Select, sortHrefFor } from '@/components/ui';
 import { CreateDealDialog, type DealStageOption } from '@/components/sales/CreateForms';
 import styles from '@/components/sales/sales.module.css';
@@ -45,14 +45,17 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
   const [{ rows, totals }, stageOpts, users, pipelines] = await Promise.all([listDeals(f), dealStageOptions(), listUsers(), salesPipelines()]);
   const canExport = can(user, 'export', 'deal');
   const canCreate = can(user, 'create', 'deal');
-  const { new: _new, ...rest } = sp;
+  const { new: _new, organization: _org, contact: _contact, ...rest } = sp;
   const qs = new URLSearchParams(Object.entries(rest).flatMap(([k, v]) => (typeof v === 'string' ? [[k, v]] : []))).toString();
   const closeHref = `/deals${qs ? `?${qs}` : ''}`;
   const sortHref = sortHrefFor('/deals', rest);
   const dir = f.dir === 'desc' ? 'desc' : 'asc';
 
   let createStages: DealStageOption[] = [];
+  let initialOrganization: { id: string; title: string } | null = null;
+  let initialContact: { id: string; title: string } | null = null;
   if (sp.new === '1' && canCreate) {
+    [initialOrganization, initialContact] = await Promise.all([pickedOrganization(one(sp.organization)), pickedContact(one(sp.contact))]);
     const dealPipes = pipelines.filter((p) => p.object_type === 'deal');
     const all = await Promise.all(dealPipes.map((p) => stagesOf(p.id)));
     createStages = all.flat().filter((s) => s.state === 'open').map((s) => ({ id: s.id, name: s.name, pipeline_key: s.pipeline_key, pipeline_name: s.pipeline_name, required: s.required }));
@@ -212,6 +215,8 @@ export default async function DealsPage({ searchParams }: { searchParams: Promis
           users={users.map((u) => ({ id: u.id, name: u.name }))}
           currentUserId={user.id}
           defaultPipeline={f.pipeline ?? one(sp.pipeline)}
+          initialOrganization={initialOrganization}
+          initialContact={initialContact}
         />
       ) : null}
     </div>

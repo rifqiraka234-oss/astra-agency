@@ -25,7 +25,7 @@ export const MAX_ATTEMPTS = 6;
 export type EventResult = {
   eventId: string;
   type: string;
-  runs: { rule: string; status: 'success' | 'skipped' | 'failed' | 'already'; note?: string; error?: string }[];
+  runs: { rule: string; status: 'success' | 'skipped' | 'failed' | 'already' | 'deferred'; note?: string; error?: string }[];
   processed: boolean;
 };
 
@@ -83,6 +83,7 @@ export async function processEvent(t: Tx, eventId: string, now: Date = new Date(
   if (!event) return null;
   const result: EventResult = { eventId: event.id, type: event.type, runs: [], processed: false };
   let failed: string | null = null;
+  let deferUntil: Date | null = null;
 
   for (const rule of await enabledEventRules(t, event.type)) {
     const handler = EVENT_HANDLERS[rule.key];
@@ -96,6 +97,12 @@ export async function processEvent(t: Tx, eventId: string, now: Date = new Date(
     const startedAt = new Date();
     try {
       const outcome: RuleOutcome = await t.savepoint((sp) => handler(sp as unknown as Tx, { rule, event, now }));
+      if (outcome.status === 'deferred') {
+        // No run is recorded, so the rule runs again when the event comes due.
+        if (!deferUntil || outcome.until < deferUntil) deferUntil = outcome.until;
+        result.runs.push({ rule: rule.key, status: 'deferred', note: outcome.note });
+        continue;
+      }
       await recordRun(t, rule, { eventId: event.id }, startedAt, outcome);
       result.runs.push({ rule: rule.key, status: outcome.status, note: outcome.note });
     } catch (err) {
@@ -115,6 +122,9 @@ export async function processEvent(t: Tx, eventId: string, now: Date = new Date(
              processed_at = ${giveUp ? now : null}
        where id = ${event.id}`;
     result.processed = giveUp;
+  } else if (deferUntil) {
+    await t`update domain_events set next_attempt_at = ${deferUntil}, last_error = null where id = ${event.id}`;
+    result.processed = false;
   } else {
     await t`update domain_events set processed_at = ${now}, last_error = null, next_attempt_at = null where id = ${event.id}`;
     result.processed = true;

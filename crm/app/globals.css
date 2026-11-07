@@ -180,8 +180,14 @@ dd {
 }
 .sr-only {
   position: absolute;
+  /* Pinned to the containing block, so a caption inside a wide scrolling table never widens the page. */
+  top: 0;
+  left: 0;
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
@@ -886,6 +892,7 @@ dd {
 /* ------------------------------------------------------------ tables */
 
 .table-wrap {
+  position: relative;
   overflow-x: auto;
 }
 .table {

@@ -3,8 +3,7 @@
  * and contact pages. Pure.
  */
 import { BUYING_ROLES, CONTACT_RELATIONSHIPS, labelOf } from '../options';
-import { formatDate, formatMinutes, formatRelativeDay, initials, todayKey, dayKey } from '../format';
-import { normCompanyName } from '../normalize';
+import { formatDate, formatMinutes, formatRelativeDay, todayKey, dayKey } from '../format';
 import type { Tone } from '../options';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -28,11 +27,8 @@ export function cadenceText(days: number | null | undefined): string {
   return `every ${days} days`;
 }
 
-/** Org avatar initials with legal suffixes left out ("Atlas Freight BV" -> "AF"). */
-export function orgInitials(name: string): string {
-  const cleaned = normCompanyName(name);
-  return initials(cleaned || name);
-}
+/** Org avatar initials, one rule for the whole app (lib/format.ts). */
+export { orgInitials } from '../format';
 
 /** "Decision maker" or "Owner" for a current role, "Former owner, until Mar 2025" for an ended one. */
 export function roleText(r: { relationship: string; buying_roles: string[]; is_current: boolean; end_date: string | null }): string {

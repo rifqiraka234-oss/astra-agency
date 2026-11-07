@@ -32,6 +32,23 @@ async function state(t: Tx, ids: string[]) {
 }
 
 describe('merge and undo (rolled back)', () => {
+  it('drops the second copy of the same role when two contacts at one organization merge, undo restores it', async () => {
+    await withRollback(async (t) => {
+      const uid = await user(t);
+      const [org] = await t<{ id: string }[]>`insert into organizations (name) values ('Role Dupe Test') returning id`;
+      const [a] = await t<{ id: string }[]>`insert into contacts (first_name, last_name, primary_org_id) values ('Rae', 'Dupe', ${org.id}) returning id`;
+      const [b] = await t<{ id: string }[]>`insert into contacts (first_name, last_name, primary_org_id) values ('Rae', 'Dupe', ${org.id}) returning id`;
+      await t`insert into contact_org_roles (contact_id, organization_id, is_primary, is_current) values (${a.id}, ${org.id}, true, true), (${b.id}, ${org.id}, true, true)`;
+      const before = await state(t, [a.id, b.id, org.id]);
+      const logId = await mergeRecords(t, { type: 'contact', winnerId: a.id, loserId: b.id, userId: uid });
+      const roles = await t`select contact_id from contact_org_roles where organization_id = ${org.id}`;
+      expect(roles).toHaveLength(1);
+      expect(roles[0].contact_id).toBe(a.id);
+      await undoMerge(t, logId, uid);
+      expect(await state(t, [a.id, b.id, org.id])).toEqual(before);
+    });
+  });
+
   it('merges two organizations, moves every link, and undo puts it all back', async () => {
     await withRollback(async (t) => {
       const uid = await user(t);

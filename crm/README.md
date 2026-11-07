@@ -26,10 +26,26 @@ Sign in as `raka@astra.local`, `josh@astra.local` (admins) or `luna@astra.local`
 | `npm run db:migrate` | applies new migration files, records them in `schema_migrations` |
 | `npm run db:seed` | idempotent seed (stable ids, upserts) |
 | `npm run db:reset` | drops and recreates `public`, migrates, seeds. Refuses unless `DATABASE_URL` is localhost |
-| `npm run worker` / `sync:lemlist` / `import:jsonl` | agent E (placeholders print "built by agent E") |
+| `npm run worker` | the automation worker. Runs forever: processes `domain_events` as they arrive and the schedule rules every minute. `-- --once` does one pass over due events and schedules, then exits |
+| `npm run sync:lemlist` | read only pull from lemlist (GET only, the client refuses any other method) into contacts, leads and activities. Flags `-- --dry-run` (everything rolled back), `--limit N` (contacts per campaign), `--campaign cam_...` (one campaign), `--all-leads` (every lead in the campaign, not only accepted ones). Prints counts, never a contact list |
+| `npm run import:jsonl` | one off import of `../state/silent_accepted_queue.jsonl`, `prototypes.jsonl` and `meetings.jsonl`. Safe to rerun, it matches what is already there. Flags `-- --dry-run` (one rolled back transaction, real counts), `--state-dir <path>` |
 
 Environment: `DATABASE_URL`, `SESSION_SECRET`, `SAMPLE_DATA` (shows the header badge and
-lets the seed add sample records), `SEND_ENABLED` (false in V1, nothing is ever sent).
+lets the seed add sample records), `SEND_ENABLED` (false in V1, nothing is ever sent),
+`LEMLIST_API_KEY` (only where no agent proxy injects the key).
+
+### Automations and imports
+
+- **Worker.** `lib/automations/engine.ts` claims events with `FOR UPDATE SKIP LOCKED`, runs each
+  enabled rule in a savepoint and logs `automation_runs` (unique per rule and event, so a rule
+  never runs twice). Failures retry with backoff. A rule can defer an event (the Invoice late rule
+  waits until 2 days after the due date); the event stays pending until then. Rules are switched
+  on and off in `/settings/automations`, with their run history.
+- **Matching on import and sync.** `lib/integrations/match.ts`: the registrable domain wins; a new
+  domain with a name attaches to the one same named organization that has no domain yet; names
+  compare without legal forms, accents or case. A person with no shared lemlist id is matched by
+  name at the same organization only when exactly one contact fits. Placeholder ids such as
+  `ctc_N/A` and placeholder company names such as `.` are ignored.
 
 ## Architecture in one screen
 
@@ -44,7 +60,7 @@ lib/                    the shared contracts below, no ORM, snake_case rows
 db/migrations/          hand written SQL, 000 to 009 foundation, then one range per agent
 Postgres                unique indexes do dedup, triggers write audit_log and updated_at,
                         views compute overdue, weighted, time in stage, last activity
-domain_events (outbox)  written in the same transaction, read by scripts/worker.ts (agent E)
+domain_events (outbox)  written in the same transaction, read by scripts/worker.ts (npm run worker)
 ```
 
 Rules that hold everywhere: every write in `tx(fn, { userId })` so the audit trigger knows
@@ -148,6 +164,6 @@ Bloem Florists has no next step and no open task (the red card).
 | Projects, tickets, invoices | F | `/projects`, `/tickets`, `/invoices` and record pages | 6xx |
 | QA | Q | build, typecheck, tests, Playwright walk through | none |
 
-Each route has a placeholder `page.tsx` that says which agent builds it. Feature agents put
-area code in `app/(app)/<route>/`, `components/<area>/`, `lib/<area>/` and `tests/<area>/`,
-and add tables with `select crm_attach_triggers('<table>')` in their own migration range.
+Every route in the table is built. Area code lives in `app/(app)/<route>/`, `components/<area>/`,
+`lib/<area>/` and `tests/<area>/`. New tables go in that area's migration range with
+`select crm_attach_triggers('<table>')`.

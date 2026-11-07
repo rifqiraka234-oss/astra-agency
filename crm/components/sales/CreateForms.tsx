@@ -139,6 +139,8 @@ export function CreateDealDialog({
   users,
   currentUserId,
   defaultPipeline,
+  initialOrganization = null,
+  initialContact = null,
 }: {
   open: boolean;
   closeHref: string;
@@ -146,13 +148,16 @@ export function CreateDealDialog({
   users: UserOpt[];
   currentUserId: string;
   defaultPipeline?: string;
+  /** Prefill from /deals?new=1&organization=<id>&contact=<id> (record pages). */
+  initialOrganization?: Picked | null;
+  initialContact?: Picked | null;
 }) {
   const uid = useId();
   const close = useCloser(closeHref);
   const [state, action, pending] = useActionState(createDealAction, initialActionState);
   const initialStage = stages.find((s) => s.pipeline_key === (defaultPipeline ?? 'sales')) ?? stages[0];
   const [stageId, setStageId] = useState(initialStage?.id ?? '');
-  const [contact, setContact] = useState<Picked | null>(null);
+  const [contact, setContact] = useState<Picked | null>(initialContact);
   useNavigateOnSuccess(state);
   const err = state.fieldErrors ?? {};
   const stage = stages.find((s) => s.id === stageId);
@@ -176,8 +181,8 @@ export function CreateDealDialog({
           <Field label="Deal name" htmlFor={`${uid}-name`} required error={err.name} className="field-full" hint="What they would buy, for example Taproom booking app">
             <Input id={`${uid}-name`} name="name" required maxLength={200} invalid={Boolean(err.name)} />
           </Field>
-          <RecordPicker type="organization" label="Organization" error={err.organization_id} />
-          <RecordPicker type="contact" label="Contact" error={err.contact_id} onPick={setContact} />
+          <RecordPicker type="organization" label="Organization" error={err.organization_id} initial={initialOrganization} />
+          <RecordPicker type="contact" label="Contact" error={err.contact_id} onPick={setContact} initial={initialContact} />
           {contact ? (
             <Field label="Their role" htmlFor={`${uid}-role`}>
               <Select id={`${uid}-role`} name="contact_role" options={BUYING_ROLES} defaultValue="decision_maker" />

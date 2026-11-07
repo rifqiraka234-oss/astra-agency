@@ -359,3 +359,47 @@ export async function searchRecords(type: LinkType, q: string, db: Db = sql): Pr
   }
   return rows.map((r) => ({ type, id: r.id, label: r.label, sub: r.sub ?? '' }));
 }
+
+/**
+ * Links for a new task opened from a record page, /tasks?new=1&deal=<id> (also lead,
+ * organization, contact, project, ticket, invoice). Unknown or deleted ids are dropped.
+ */
+export async function prefillLinks(
+  params: Partial<Record<LinkType, string | undefined>>,
+  db: Db = sql,
+): Promise<{ type: LinkType; id: string; label: string }[]> {
+  const out: { type: LinkType; id: string; label: string }[] = [];
+  const ok = (v: string | undefined): v is string => !!v && uuid.safeParse(v).success;
+  if (ok(params.organization)) {
+    const [r] = await db<{ label: string }[]>`select name as label from organizations where id = ${params.organization} and deleted_at is null`;
+    if (r) out.push({ type: 'organization', id: params.organization, label: r.label });
+  }
+  if (ok(params.contact)) {
+    const [r] = await db<{ label: string }[]>`select full_name as label from contacts where id = ${params.contact} and deleted_at is null`;
+    if (r) out.push({ type: 'contact', id: params.contact, label: r.label });
+  }
+  if (ok(params.lead)) {
+    const [r] = await db<{ label: string }[]>`
+      select 'Lead · ' || coalesce(ld.name, lc.full_name, lo.name, 'Untitled') as label
+        from leads ld left join contacts lc on lc.id = ld.contact_id left join organizations lo on lo.id = ld.organization_id
+       where ld.id = ${params.lead} and ld.deleted_at is null`;
+    if (r) out.push({ type: 'lead', id: params.lead, label: r.label });
+  }
+  if (ok(params.deal)) {
+    const [r] = await db<{ label: string }[]>`select name as label from deals where id = ${params.deal} and deleted_at is null`;
+    if (r) out.push({ type: 'deal', id: params.deal, label: r.label });
+  }
+  if (ok(params.project)) {
+    const [r] = await db<{ label: string }[]>`select 'Project · ' || name as label from projects where id = ${params.project} and deleted_at is null`;
+    if (r) out.push({ type: 'project', id: params.project, label: r.label });
+  }
+  if (ok(params.ticket)) {
+    const [r] = await db<{ label: string }[]>`select 'Ticket ' || number as label from tickets where id = ${params.ticket} and deleted_at is null`;
+    if (r) out.push({ type: 'ticket', id: params.ticket, label: r.label });
+  }
+  if (ok(params.invoice)) {
+    const [r] = await db<{ label: string }[]>`select coalesce(external_number, 'Draft invoice') as label from invoices where id = ${params.invoice} and deleted_at is null`;
+    if (r) out.push({ type: 'invoice', id: params.invoice, label: r.label });
+  }
+  return out;
+}

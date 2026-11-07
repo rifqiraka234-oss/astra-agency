@@ -11,8 +11,10 @@
  * page loads at the same moment still make one notification.
  */
 import { sql, tx, type Db, type Tx } from '../db';
-import { addDaysKey, daysBetween, formatDate, formatDue, formatMinutes, formatMoney, todayKey, zonedParts, fromAmsterdamWallClock } from '../format';
+import { addDaysKey, daysBetween, formatDate, formatDue, formatMinutes, formatMoney, todayKey } from '../format';
 import { recordHref, type RecordType } from '../routes';
+import { addBusinessMinutes as slaAddBusinessMinutes, DEFAULT_BUSINESS_HOURS, type BusinessHours } from '../service/sla';
+import { ticketSlas } from '../service/tickets';
 
 // ---------------------------------------------------------------- notifications
 
@@ -100,45 +102,16 @@ export async function markRead(db: Db, userId: string, id: string | null): Promi
 
 // ---------------------------------------------------------------- business hours
 
-export type BusinessHours = { tz?: string; days: number[]; start: string; end: string };
-export const DEFAULT_HOURS: BusinessHours = { tz: 'Europe/Amsterdam', days: [1, 2, 3, 4, 5], start: '09:00', end: '17:30' };
-
-const hm = (s: string) => {
-  const [h, m] = s.split(':').map(Number);
-  return h * 60 + m;
-};
-const WEEKDAY_NUM: Record<string, number> = { Sun: 7, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+// One SLA clock for the whole app: lib/service/sla.ts (agent F) owns the maths.
+export type { BusinessHours } from '../service/sla';
+export const DEFAULT_HOURS: BusinessHours = DEFAULT_BUSINESS_HOURS;
 
 /**
  * The moment `minutes` business minutes after `start`, counting only the open
- * hours of the given days (ISO weekday 1 Monday to 7 Sunday) in Amsterdam time.
+ * hours of the given days in Amsterdam time. Thin wrapper over lib/service/sla.ts.
  */
 export function addBusinessMinutes(start: Date, minutes: number, hours: BusinessHours = DEFAULT_HOURS): Date {
-  const open = hm(hours.start);
-  const close = hm(hours.end);
-  let remaining = Math.max(0, minutes);
-  let cursor = new Date(start);
-  for (let guard = 0; guard < 400; guard++) {
-    const p = zonedParts(cursor);
-    const key = `${p.year}-${String(p.month).padStart(2, '0')}-${String(p.day).padStart(2, '0')}`;
-    const weekday = WEEKDAY_NUM[p.weekday.slice(0, 3)] ?? 0;
-    const nowMin = p.hour * 60 + p.minute;
-    const isOpenDay = hours.days.includes(weekday);
-    if (isOpenDay && nowMin < close) {
-      const from = Math.max(nowMin, open);
-      const available = close - from;
-      if (remaining <= available) {
-        const target = from + remaining;
-        const [y, m, d] = key.split('-').map(Number);
-        return fromAmsterdamWallClock(y, m, d, Math.floor(target / 60), target % 60);
-      }
-      remaining -= available;
-    }
-    const next = addDaysKey(key, 1);
-    const [y, m, d] = next.split('-').map(Number);
-    cursor = fromAmsterdamWallClock(y, m, d, 0, 0);
-  }
-  return cursor;
+  return slaAddBusinessMinutes(start, minutes, hours) ?? new Date(start);
 }
 
 // ---------------------------------------------------------------- the home panel
@@ -162,15 +135,12 @@ export async function upcomingReminders(opts: { now?: Date; horizonDays?: number
 
   const [tickets, invoices, renewals, checkinTasks, checkinOrgs, loose] = await Promise.all([
     // Open tickets still waiting for a first reply. Waiting on client pauses the clock, so they are left out.
-    db<{ id: string; number: number; subject: string; priority: string; opened_at: Date; org: string | null; first_reply_minutes: number | null; business_hours: BusinessHours | null; stage_key: string }[]>`
-      select tk.id, tk.number, tk.subject, tk.priority, tk.opened_at, o.name as org, s.key as stage_key,
-             coalesce(sp.first_reply_minutes, dp.first_reply_minutes) as first_reply_minutes,
-             coalesce(sp.business_hours, dp.business_hours) as business_hours
+    // The clock itself (business hours, pauses) comes from lib/service/sla.ts below.
+    db<{ id: string; number: number; priority: string; org: string | null }[]>`
+      select tk.id, tk.number, tk.priority, o.name as org
         from tickets tk
         join pipeline_stages s on s.id = tk.stage_id
         left join organizations o on o.id = tk.organization_id
-        left join sla_policies sp on sp.id = tk.sla_policy_id
-        left join sla_policies dp on dp.priority = tk.priority and dp.is_default
        where tk.deleted_at is null and tk.closed_at is null and tk.first_replied_at is null
          and s.state = 'open' and not s.pauses_sla`,
     db<{ id: string; number: string | null; title: string | null; total: string | null; currency: string; due_date: string; org: string | null; external_system: string | null }[]>`
@@ -207,11 +177,12 @@ export async function upcomingReminders(opts: { now?: Date; horizonDays?: number
 
   const items: ReminderItem[] = [];
 
+  const slas = await ticketSlas(db, tickets.map((tk) => tk.id), now);
   for (const tk of tickets) {
-    if (!tk.first_reply_minutes) continue;
-    const due = addBusinessMinutes(new Date(tk.opened_at), tk.first_reply_minutes, tk.business_hours ?? DEFAULT_HOURS);
-    const mins = Math.round((due.getTime() - now.getTime()) / 60_000);
-    const when = mins >= 0 ? `due in ${formatMinutes(mins)}` : `overdue by ${formatMinutes(-mins)}`;
+    const clock = slas.get(tk.id)?.firstReply;
+    if (!clock || !clock.dueAt || clock.status === 'paused') continue;
+    const mins = clock.remainingMinutes;
+    const when = mins > 0 ? `due in ${formatMinutes(mins)}` : `overdue by ${formatMinutes(Math.max(1, -mins))}`;
     items.push({
       key: `sla:${tk.id}`,
       kind: 'sla',
@@ -219,7 +190,7 @@ export async function upcomingReminders(opts: { now?: Date; horizonDays?: number
       title: `Ticket ${tk.number} first reply ${when}`,
       sub: [tk.org, `SLA ${tk.priority} priority`].filter(Boolean).join(', '),
       href: recordHref('ticket', tk.id),
-      at: due.getTime(),
+      at: clock.dueAt.getTime(),
     });
   }
 

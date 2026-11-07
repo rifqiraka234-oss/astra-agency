@@ -11,7 +11,7 @@ import { can } from '@/lib/permissions';
 import { getTimeline } from '@/lib/activities';
 import { taskBuckets } from '@/lib/tasks';
 import { customPropertyGroups, getFieldDefinitions, mergePropertyGroups, type PropertyGroup } from '@/lib/fields';
-import { formatDate, formatDateTime, formatMoney } from '@/lib/format';
+import { formatDate, formatDateTime, formatMoney, orgInitials } from '@/lib/format';
 import {
   BUYING_ROLES, LAWFUL_BASES, LIFECYCLE_STAGES, LIFECYCLE_TONES, STAGE_STATE_TONES, labelOf, toneOf, type Option,
 } from '@/lib/options';
@@ -240,7 +240,7 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
               title: r.org_name,
               sub: [r.title ?? c.job_title, roleText(r).toLowerCase(), r.is_primary && current.length > 1 ? 'primary' : null].filter(Boolean).join(' · '),
               href: `/organizations/${r.organization_id}`,
-              avatar: { name: r.org_name },
+              avatar: { name: r.org_name, initials: orgInitials(r.org_name) },
             }))}
           />
           {openDeals.slice(0, 3).map((d) => (

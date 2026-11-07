@@ -79,6 +79,30 @@ describe('queue rows', () => {
     expect(latest.get('ctc_B')?.status).toBe('CLOSED');
   });
 
+  it('resolves a leadId only row to the one contactId with the same name and company', () => {
+    const rows = [
+      { leadId: 'lea_M', status: 'SENT', name: 'Mark Preston', companyName: 'Hypergility' },
+      { contactId: 'ctc_M', status: 'DRAFTED', name: 'Mark Preston', companyName: 'Hypergility BV' },
+      { contactId: 'ctc_M', status: 'CLOSED', name: 'Mark Preston', companyName: null },
+      // Two different contactIds share this name and company, so it stays separate.
+      { leadId: 'lea_X', status: 'SENT', name: 'Sam Lee', companyName: 'Acme' },
+      { contactId: 'ctc_X1', status: 'SENT', name: 'Sam Lee', companyName: 'Acme' },
+      { contactId: 'ctc_X2', status: 'SENT', name: 'Sam Lee', companyName: 'Acme' },
+    ];
+    const { latest } = latestPerPerson(rows);
+    expect([...latest.keys()].sort()).toEqual(['ctc_M', 'ctc_X1', 'ctc_X2', 'lea_X']);
+    expect(latest.get('ctc_M')).toMatchObject({ status: 'CLOSED', companyName: 'Hypergility BV' });
+  });
+
+  it('treats a placeholder id like ctc_N/A as no id, so it never joins different people', () => {
+    const rows = [
+      { contactId: 'ctc_N/A', leadId: 'lea_P', status: 'SENT', name: 'P One', companyName: 'Pco' },
+      { contactId: 'ctc_N/A', leadId: 'lea_Q', status: 'SENT', name: 'Q Two', companyName: 'Qco' },
+    ];
+    const { latest } = latestPerPerson(rows);
+    expect([...latest.keys()].sort()).toEqual(['lea_P', 'lea_Q']);
+  });
+
   it('merges repeated prototype rows, latest wins', () => {
     const merged = latestBy(
       [

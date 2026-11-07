@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/Button';
 import { Field, Input, Checkbox } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';
 import { Textarea } from '@/components/ui/Textarea';
-import { FIELD_TYPE_LABELS, type CustomObjectType, type FieldType } from '@/lib/fields';
+import { FIELD_TYPE_LABELS, type CustomObjectType, type FieldType } from '@/lib/field-types';
 import { ADDABLE_TYPES, NUMERIC_TYPES, ROLLUP_FNS, ROLLUP_RELATIONS, TYPES_WITH_OPTIONS, UNIQUE_CAPABLE } from '@/lib/settings/field-config';
 import { CUSTOM_OBJECTS, slugKey } from '@/lib/settings/core-fields';
 import { parseExpression } from '@/lib/settings/calc';

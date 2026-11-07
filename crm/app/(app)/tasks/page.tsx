@@ -10,13 +10,16 @@ import { ButtonLink, EmptyState, PageHeader, Segmented } from '@/components/ui';
 import { TaskList } from '@/components/work/TaskList';
 import { TaskDrawer } from '@/components/work/TaskDrawer';
 import { dayPeople, findPerson, orderPeople } from '@/lib/work/home';
-import { doneTasks, loadTask } from '@/lib/work/tasks';
+import { doneTasks, loadTask, prefillLinks } from '@/lib/work/tasks';
 import { bucketGroups } from '@/lib/work/view';
 import '@/components/work/work.css';
 
 export const dynamic = 'force-dynamic';
 
-type Search = { owner?: string; new?: string; task?: string };
+type Search = {
+  owner?: string; new?: string; task?: string;
+  deal?: string; lead?: string; organization?: string; contact?: string; project?: string; ticket?: string; invoice?: string;
+};
 
 export default async function TasksPage({ searchParams }: { searchParams: Promise<Search> }) {
   const me = await requireUser();
@@ -30,10 +33,16 @@ export default async function TasksPage({ searchParams }: { searchParams: Promis
   const owner: string | null | 'all' = view === 'all' ? 'all' : view === 'queue' ? null : person?.id ?? me.id;
 
   const now = new Date();
-  const [buckets, done, editing] = await Promise.all([
+  const [buckets, done, editing, initialLinks] = await Promise.all([
     taskBuckets({ owner }),
     doneTasks({ owner, days: 14 }),
     sp.task ? loadTask(sp.task) : Promise.resolve(null),
+    sp.new === '1'
+      ? prefillLinks({
+          deal: sp.deal, lead: sp.lead, organization: sp.organization, contact: sp.contact,
+          project: sp.project, ticket: sp.ticket, invoice: sp.invoice,
+        })
+      : Promise.resolve([]),
   ]);
 
   const base = view === meSlug ? '/tasks' : `/tasks?owner=${view}`;
@@ -86,6 +95,7 @@ export default async function TasksPage({ searchParams }: { searchParams: Promis
         people={people.map((p) => ({ id: p.id, label: p.label }))}
         defaultOwner={defaultOwner}
         closeHref={base}
+        initialLinks={initialLinks}
       />
     </div>
   );

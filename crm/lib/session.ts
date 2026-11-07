@@ -2,7 +2,8 @@
  * lib/session.ts, the signed session cookie (HS256 JWT via jose). Edge safe, so
  * middleware.ts can verify it without the database. App code uses lib/auth.ts.
  */
-import { SignJWT, jwtVerify } from 'jose';
+import { SignJWT } from 'jose/jwt/sign';
+import { jwtVerify } from 'jose/jwt/verify';
 
 export const SESSION_COOKIE = 'astra_session';
 export const SESSION_MAX_AGE = 60 * 60 * 24 * 30; // 30 days

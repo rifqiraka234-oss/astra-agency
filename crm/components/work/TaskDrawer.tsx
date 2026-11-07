@@ -120,28 +120,33 @@ export function TaskDrawer({
   people,
   defaultOwner,
   closeHref,
+  initialLinks = [],
 }: {
   open: boolean;
   task: TaskDetail | null;
   people: { id: string; label: string }[];
   defaultOwner: string | null;
   closeHref: string;
+  /** Links a new task starts with, from /tasks?new=1&deal=<id> and the like. */
+  initialLinks?: Picked[];
 }) {
   const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
   const [state, action, pending] = useActionState(saveTaskAction, initialActionState);
   const [, startTransition] = useTransition();
-  const [links, setLinks] = useState<Picked[]>(task?.links ?? []);
+  const startLinks = (): Picked[] =>
+    task ? task.links : initialLinks.map((l) => ({ ...l, label: linkPillLabel(l.type, l.label) }));
+  const [links, setLinks] = useState<Picked[]>(startLinks);
   const [repeat, setRepeat] = useState(task?.recurrenceRule ?? '');
   // The state object at submit time. Close only once a newer, successful state arrives.
   const submittedFrom = useRef<typeof state | null>(null);
 
   // Opening the drawer on a different task (or a fresh new one) resets the links and hides old errors.
-  const key = task?.id ?? 'new';
+  const key = task?.id ?? `new:${initialLinks.map((l) => l.id).join(',')}`;
   const [shown, setShown] = useState({ key: `${open}:${key}`, stale: state as typeof state | null });
   if (shown.key !== `${open}:${key}`) {
     setShown({ key: `${open}:${key}`, stale: state });
-    setLinks(task?.links ?? []);
+    setLinks(startLinks());
     setRepeat(task?.recurrenceRule ?? '');
   }
   const fresh = state !== shown.stale;

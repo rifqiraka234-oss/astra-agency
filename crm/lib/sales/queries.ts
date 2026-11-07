@@ -814,3 +814,22 @@ export type LeadRecord = NonNullable<Awaited<ReturnType<typeof getLead>>>;
 export async function stageForGate(stageId: string) {
   return getStage(stageId);
 }
+
+/** The organization a new deal starts with, from /deals?new=1&organization=<id>. */
+export async function pickedOrganization(id: string | undefined): Promise<{ id: string; title: string; subtitle?: string } | null> {
+  if (!isUuid(id)) return null;
+  const [r] = await sql<{ id: string; name: string; domain: string | null }[]>`
+    select o.id, o.name, (select d.domain_normalised from organization_domains d where d.organization_id = o.id order by d.is_primary desc limit 1) as domain
+      from organizations o where o.id = ${id} and o.deleted_at is null`;
+  return r ? { id: r.id, title: r.name, subtitle: r.domain ?? undefined } : null;
+}
+
+/** The contact a new deal starts with, from /deals?new=1&contact=<id>. */
+export async function pickedContact(id: string | undefined): Promise<{ id: string; title: string; subtitle?: string } | null> {
+  if (!isUuid(id)) return null;
+  const [r] = await sql<{ id: string; full_name: string; email: string | null }[]>`
+    select c.id, c.full_name,
+           (select e.email from contact_emails e where e.contact_id = c.id order by e.is_primary desc limit 1) as email
+      from contacts c where c.id = ${id} and c.deleted_at is null`;
+  return r ? { id: r.id, title: r.full_name, subtitle: r.email ?? undefined } : null;
+}

@@ -17,6 +17,7 @@
  * Nothing is ever written to lemlist, the client refuses anything but GET.
  * --dry-run does all of the above and rolls every transaction back.
  */
+import { companyNameOf, findExistingOrg, personKey } from './match';
 import { sql, tx, type Tx } from '../db';
 import { logActivity, type ActivityKind, type ActivityDirection } from '../activities';
 import { emit } from '../events';
@@ -122,30 +123,22 @@ function relationshipFor(jobTitle: string | null | undefined): 'owner' | 'founde
 async function upsertOrganization(t: Tx, exp: LemlistLeadExport | undefined, ctx: Ctx): Promise<string | null> {
   if (!exp) return null;
   const domain = normDomain(String(exp.companyDomain || exp.companyWebsite || exp.companyWebsiteUrl || ''));
-  const name = (exp.companyName ?? '').toString().trim();
+  const name = companyNameOf(exp.companyName) ?? '';
   const custom = {
     lemlist_industry: exp.companyIndustry ?? null,
     lemlist_company_size: exp.companySize ?? null,
     lemlist_linkedin: exp.companyLinkedinUrl ?? null,
   };
-  if (domain && !isFreeMail(domain)) {
-    const [hit] = await t<{ organization_id: string }[]>`select organization_id from organization_domains where domain_normalised = ${domain}`;
-    if (hit) return hit.organization_id;
-    const [org] = await t<{ id: string }[]>`
-      insert into organizations (name, owner_user_id, source, linkedin_url, custom)
-      values (${name || domain}, ${ctx.defaultOwner}, 'lemlist', ${(exp.companyLinkedinUrl as string) ?? null}, ${t.json(custom as never)})
-      returning id`;
-    await t`insert into organization_domains (organization_id, domain_normalised, is_primary) values (${org.id}, ${domain}, true)`;
-    ctx.report.organizationsCreated++;
-    return org.id;
-  }
-  if (!name) return null;
-  const [byName] = await t<{ id: string }[]>`
-    select id from organizations where lower(name) = lower(${name}) and deleted_at is null order by created_at limit 1`;
-  if (byName) return byName.id;
+  const useDomain = domain && !isFreeMail(domain) ? domain : null;
+  if (!useDomain && !name) return null;
+  const existing = await findExistingOrg(t, { domain: useDomain, name: name || null });
+  if (existing) return existing;
   const [org] = await t<{ id: string }[]>`
-    insert into organizations (name, owner_user_id, source, custom)
-    values (${name}, ${ctx.defaultOwner}, 'lemlist', ${t.json({ ...custom, no_domain: true } as never)}) returning id`;
+    insert into organizations (name, owner_user_id, source, linkedin_url, custom)
+    values (${name || useDomain}, ${ctx.defaultOwner}, 'lemlist', ${(exp.companyLinkedinUrl as string) ?? null},
+            ${t.json((useDomain ? custom : { ...custom, no_domain: true }) as never)})
+    returning id`;
+  if (useDomain) await t`insert into organization_domains (organization_id, domain_normalised, is_primary) values (${org.id}, ${useDomain}, true)`;
   ctx.report.organizationsCreated++;
   return org.id;
 }
@@ -176,6 +169,23 @@ async function upsertContact(
   if (!contactId && email) {
     const [hit] = await t<{ contact_id: string }[]>`select contact_id from contact_emails where lower(trim(email)) = ${email}`;
     contactId = hit?.contact_id ?? null;
+  }
+  if (!contactId && orgId) {
+    // Same name at the same organization with no other lemlist id: the person the JSONL import
+    // made from a leadId only row. One match only, else a new contact.
+    const full = [(f.firstName as string) || exp?.firstName, (f.lastName as string) || exp?.lastName].filter(Boolean).join(' ') || rec?.fullName || '';
+    const want = personKey(full);
+    if (want) {
+      const cands = await t<{ id: string; full_name: string; other_lemlist: boolean }[]>`
+        select c.id, c.full_name,
+               exists (select 1 from external_ids x where x.entity_type = 'contact' and x.entity_id = c.id
+                         and x.system = 'lemlist_contact' and x.external_id <> ${cid}) as other_lemlist
+          from contacts c
+         where c.deleted_at is null
+           and (c.primary_org_id = ${orgId} or exists (select 1 from contact_org_roles r where r.contact_id = c.id and r.organization_id = ${orgId}))`;
+      const same = cands.filter((c) => personKey(c.full_name) === want);
+      if (same.length === 1 && !same[0].other_lemlist) contactId = same[0].id;
+    }
   }
 
   if (contactId) {

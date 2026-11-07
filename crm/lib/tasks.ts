@@ -17,15 +17,11 @@
  * never stored. Recurrence is an RRULE body (FREQ=WEEKLY;BYDAY=FR) evaluated in
  * Amsterdam wall clock time, so 11:00 stays 11:00 across daylight saving.
  */
-import * as rrulePkg from 'rrule';
+import { RRule } from 'rrule';
 import { sql, tx, type Db, type Tx } from './db';
 import { amsterdamTime, fromAmsterdamWallClock, zonedParts } from './format';
 import { recordHref, type RecordType } from './routes';
 
-// rrule ships ESM (bundlers) and a UMD build (node). Find the class in either shape.
-const RRule: typeof import('rrule').RRule =
-  (rrulePkg as unknown as { RRule?: typeof import('rrule').RRule }).RRule ??
-  (rrulePkg as unknown as { default: { RRule: typeof import('rrule').RRule } }).default.RRule;
 
 export type TaskType =
   | 'todo' | 'call' | 'email' | 'linkedin' | 'meeting' | 'meeting_prep' | 'approval' | 'ticket'
