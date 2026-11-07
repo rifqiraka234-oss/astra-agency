@@ -95,3 +95,17 @@ yeah its added to the whole website")
 - Tested, all 64 added at once draw with height, 47 on the site and 17 behind the scenes, no sideways scroll on desktop or phone,
   light and dark palettes, the toast and See it (lands 97px from the top, clear of the header, flashes), the menu, and the
   earlier catalogue, builder and studio tests still pass, 0 page errors. Fixed, the header wrapped with three added links.
+
+## Live, 7 Nov (Raka "Deploy")
+
+New Netlify site astra-onefortynine-studio (3a0ee9cc-6598-4746-abf1-0bd61e24a898), created with team login on, switched off
+before the deploy, forms enabled. Deploy 6aeed3bcb7acc94ff4e5a46a. Raka's "Deploy" taken as accepting the two shell check-build
+fails (hero and art), which come from the checker not seeing inside the preview iframe, the preview passes alone.
+
+78 of 79 files byte matched live. index.html differs only on the form tag, which Netlify Forms rewrites when it registers the form.
+X-Robots-Tag noindex live, no login wall, preview 200, cold loads at 1440 and 390 with 0 page errors and no 4xx, adding the group
+quote builder from the catalogue shows the toast and draws its sketch into the live site. Form studio-choices registered (fields
+choices, website honeypot, name, note). One test submission sent from the live page, the page said Sent, Netlify logged it at
+07.32 UTC as last_submission_at but submission_count stayed 0, so its spam filter held it. Real submissions may land in the Forms
+spam tab too, and form notifications to Raka's email have to be switched on in the Netlify dashboard (Forms, Form notifications),
+there's no tool for that here. Message to Owen drafted, not sent.
