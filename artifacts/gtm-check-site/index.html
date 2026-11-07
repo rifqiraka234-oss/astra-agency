@@ -27,7 +27,7 @@
   --mono:var(--sans);
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--paper);color:var(--ink);overflow-x:clip}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
 body{font-family:var(--sans);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
 img{max-width:100%;display:block}
 h1,h2,h3{font-weight:700;letter-spacing:-0.025em;line-height:1.05;margin:0;text-wrap:balance}
@@ -48,7 +48,8 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 .intro .photo img{width:100%;height:100%;object-fit:cover;min-height:0}
 .flowbox{background:var(--navy);padding:14px 20px 16px;display:grid;gap:8px}
 .flowbox canvas{width:100%;height:160px;display:block}
-.flowkey{display:flex;justify-content:space-between;color:#d8d7d7}
+.flowkey{display:flex;justify-content:space-between;gap:14px;color:#d8d7d7}
+@media (max-width:520px){.flowkey{font-size:10px;letter-spacing:.06em;gap:10px}}
 .flowkey .lk{color:#e6ddd8}
 .qphoto img{width:100%;height:100%;object-fit:cover}
 .intro .side{padding:48px max(24px,env(safe-area-inset-right,0px)) 40px 56px;display:flex;flex-direction:column;gap:36px;justify-content:center}
@@ -189,7 +190,7 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
   .intro h1{font-size:32px}
   .intro .lede{font-size:15px}
   .gets{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .qphoto{position:relative;height:26svh}
+  .qphoto{position:relative;height:18svh}
   .qphoto .chap{padding:12px 18px}
   .qphoto .chap strong{font-size:20px}
   .qmain{min-height:auto;padding:20px max(18px,env(safe-area-inset-right,0px)) 28px max(18px,env(safe-area-inset-left,0px))}
@@ -208,338 +209,384 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--slate);outline-
 }
 @media (max-width:520px){.fields{grid-template-columns:minmax(0,1fr)}.door{grid-template-rows:80px auto}.door .tx{padding:12px 12px 14px}.door strong{font-size:17px}.door span{font-size:13px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* language switch and the send form */
+.langs{display:flex;gap:2px}
+.langs button{border:0;background:transparent;padding:6px 7px;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--muted)}
+.langs button[aria-pressed="true"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--ink)}
+.on-dark .langs button{color:#d8d7d7}.on-dark .langs button[aria-pressed="true"]{color:#fdfdfd;box-shadow:inset 0 -2px 0 #fdfdfd}
+.send{display:grid;gap:14px;border-top:1px solid #405b8d;padding-top:28px}
+.send h3{font-size:24px}
+.send p{color:#e6ddd8;font-size:15px;max-width:60ch}
+.sendgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.sendgrid label{display:grid;gap:6px;font-size:13px;color:#d8d7d7}
+.sendgrid input{font:inherit;font-size:16px;padding:12px 14px;border:0;border-radius:2px;background:#fdfdfd;color:#1d1d1e;min-width:0}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#e6ddd8}
+.consent input{margin-top:3px;width:18px;height:18px;accent-color:#e6ddd8;flex:none}
+.sendrow{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.sendmsg{font-size:15px;color:#e6ddd8}
+@media (max-width:900px){.sendgrid{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
+<form name="gtm-check" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+<input type="hidden" name="kind"><input type="hidden" name="lang"><input type="hidden" name="path"><input type="hidden" name="score"><input type="hidden" name="level"><input type="hidden" name="risk"><input type="hidden" name="opportunity"><input type="hidden" name="weakest"><input type="hidden" name="recommendation"><input type="hidden" name="total"><input type="hidden" name="goal"><input type="hidden" name="fear"><input type="hidden" name="worth"><input type="hidden" name="answers"><input type="hidden" name="summary"><input type="hidden" name="name"><input type="hidden" name="email"><input type="hidden" name="company"><input type="hidden" name="consent"><input name="bot-field">
+</form>
 <main id="app"></main>
 <div class="toast" id="toast" hidden></div>
+<script src="i18n.js"></script>
 <script>
 (function(){
-const EUR=new Intl.NumberFormat('en-IE',{style:'currency',currency:'EUR',maximumFractionDigits:0});
-const NUM=new Intl.NumberFormat('en-IE',{maximumFractionDigits:0});
-const eur=v=>EUR.format(Math.round(v/10)*10);
+const I=window.I18N, LANGS=['en','nl','fr','de','it'];
 const app=document.getElementById('app');
 const STAR='<svg width="16" height="16" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" fill="currentColor"/></svg>';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const DIMK=['target','data','signals','message','speed','measure','loyalty'];
+const W={target:1.3,data:1,signals:.9,message:1.1,speed:1.3,measure:1.1,loyalty:1};
+const MAX=1e9;
 
-const DIMS=[['target','Who to target'],['data','Lists and data'],['signals','Timing'],['message','The message'],['speed','Follow up'],['measure','Measuring'],['loyalty','Keeping customers']];
-const LABEL=Object.fromEntries(DIMS);
-const FIX={
- target:{build:['An ICP and scoring model','Tiers and disqualifiers from your won deals, scored on every account.'],learn:['Level 1, Module 1','Your ICP, built from real deal numbers.'],line:'Your team is spending its week on people who were never going to buy.',me:'You\u2019re spending your best hours on people who were never going to buy.'},
- data:{build:['An enrichment waterfall','Lists filled, verified and deduplicated, with no copy and paste.'],learn:['Level 1, Modules 2 and 3','Data, lists, enrichment and scoring in Clay.'],line:'Your sellers are working as data entry clerks.',me:'You\u2019re doing a data entry job on top of your real one.'},
- signals:{build:['Signal alerts routed to the right person','Funding, hiring and intent signals that say who to call this week.'],learn:['Level 3, Module 3','Signal systems scored by results.'],line:'Accounts get ready to buy and you hear about it last.',me:'Your accounts get ready to buy and you hear about it last.'},
- message:{build:['An outbound AI agent','Researches each account and drafts the message. A person checks it before it sends.'],learn:['Level 1, Modules 4 and 5','AI research that cites its sources, and messages built on one problem.'],line:'Your messages look like everyone else’s, so they get treated like everyone else’s.',me:'Your messages look like everyone else\u2019s, so they get treated like everyone else\u2019s.'},
- speed:{build:['Lead routing and follow up flows','Every lead gets an owner and a reply time. Follow ups go out on their own.'],learn:['Level 2, Modules 1 and 2','Safe sending, lemlist and n8n automations.'],line:'Your warmest leads are going cold in an inbox.',me:'Your warmest conversations are slipping through the cracks.'},
- measure:{build:['A dashboard and forecast','One view of pipeline and reply rates, and a forecast you can defend.'],learn:['Level 2, Module 5','Scorecards, dashboards and forecasting.'],line:'You can’t see which part of your engine is actually working.',me:'You can\u2019t tell which of your efforts actually works.'},
- loyalty:{build:['Lead to loyalty flows','Onboarding, health scores, renewals and win backs that run on their own.'],learn:['Level 2, Module 4','Allbound and loyalty flows.'],line:'Customers leave quietly and nobody sees it coming.',me:'Your customers drift off after they buy, and nobody notices.'}
-};
-const MIR={team:{goal:['to hit a bigger target without hiring','pipeline that doesn\u2019t depend on the founder','to know which deals will close, and when','a team that runs the system itself'],fear:['missing the target','losing a key seller','hiring people who never ramp up','a competitor getting there first']},me:{goal:['more meetings with less grind','to hit your target every quarter','a more technical, better paid role','to lead a team that runs on a system'],fear:['missing your target again','your role being automated away','being stuck in the same job','burning out']}};
-const mir=(k,j)=>MIR[st.path][k][j];
-const S=(...a)=>a.map((t,i)=>({t,v:i}));
-
-/* chapters, each with its own photo */
-const CH={team:[['Your week','img/team.jpg'],['The leaks','img/leaks.jpg'],['The engine','img/engine.jpg'],['Next year','img/city.jpg']],
-          me:[['Your week','img/seller.jpg'],['Your craft','img/desk.jpg'],['Your tools','img/screens.jpg'],['What’s next','img/career.jpg']]};
-
+/* the questions, structure only. Words come from i18n.js */
 const TEAM=[
- {id:'goal',c:0,q:'Start with the good part. What would make next year a great year for the team?',opts:[{t:'Hitting a bigger target without hiring',v:0},{t:'Pipeline that doesn\u2019t depend on the founder',v:1},{t:'Knowing which deals will close, and when',v:2},{t:'A team that runs the system themselves',v:3}],heard:o=>`You want ${mir('goal',o.v)}.`},
- {id:'admin',c:0,q:'It’s Monday morning. Where does your sellers’ first hour go?',hint:'Pick the one that sounds most like your team.',opts:[{t:'Calls and meetings with buyers',v:0.15},{t:'The inbox and updating the CRM',v:0.3},{t:'Working out who to contact this week',v:0.5},{t:'Building lists and chasing data in spreadsheets',v:0.7}],heard:o=>`About ${Math.round(o.v*100)}% of the week goes on work that isn’t selling.`},
- {id:'nums',c:0,type:'nums',q:'Put some numbers on it',hint:'Rough is fine. Every euro in your report comes from these, and you can change them later.',fields:[
-  {k:'reps',l:'People who sell, founders included',d:5,u:''},{k:'cost',l:'Yearly cost per seller',d:60000,u:'€'},
-  {k:'deal',l:'Average deal value',d:8000,u:'€'},{k:'deals',l:'New deals won per month',d:4,u:''},
-  {k:'growth',l:'Growth you need next year',d:40,u:'%'},{k:'inbound',l:'Inbound leads per month',d:30,u:''}]},
- {id:'speed',c:1,dim:'speed',q:'A lead fills in your form on Friday at 4pm. When do they hear from you?',opts:S('Monday, if someone spots it','Sometime next week','Within a day','Within the hour','Within minutes, automatically'),heard:o=>['Friday leads wait for the weekend, or longer.','Friday leads wait over a week.','Leads hear back within a day.','Leads hear back within the hour.','Leads hear back within minutes.'][o.v]},
- {id:'nofollow',c:1,q:'Be honest. How many inbound leads never get a real follow up?',opts:[{t:'Almost none',v:0.02},{t:'About 1 in 10',v:0.1},{t:'About 1 in 4',v:0.25},{t:'Half or more',v:0.5}],heard:o=>`${o.t} of your leads never get a real follow up.`},
- {id:'conv',c:1,q:'Of the leads you do follow up, how many become customers?',opts:[{t:'About 1 in 5',v:0.2},{t:'About 1 in 10',v:0.1},{t:'About 1 in 20',v:0.05},{t:'About 1 in 50',v:0.02}],heard:o=>`${o.t} leads becomes a customer.`},
- {id:'pains',c:1,type:'multi',q:'Which of these happened in the last six months?',hint:'Pick all that are true. This is where the report gets specific.',opts:[
-  'A good lead went cold because nobody followed up','A seller left and their pipeline left with them','We missed a quarter and didn’t see it coming','We couldn’t say which campaign brought in a deal','A customer left without warning','The founder is still our best seller','Nobody trusts what’s in the CRM'],heard:o=>o.length?`${o.length} of these happened to you.`:'None of these happened. Good.'},
- {id:'key',c:1,q:'How much of this year’s new revenue came through one person?',hint:'Your best seller, or the founder.',when:a=>(a.pains||[]).some(j=>j===1||j===5),opts:[{t:'About a fifth',v:0.2},{t:'About a third',v:0.35},{t:'About half',v:0.5},{t:'Most of it',v:0.7}],heard:o=>`${o.t} of new revenue rides on one person.`},
- {id:'target',c:2,dim:'target',q:'A new seller starts tomorrow. How do they know who to call?',hint:'No wrong answers here. Nobody sees this but you, so pick what really happens.',opts:S('They ask around','We describe our best customers','There’s a written profile','A profile with tiers, built from won deals','Accounts are already scored for them')},
- {id:'data',c:2,dim:'data',q:'How does a contact end up on one of your lists?',opts:S('Someone copies it in by hand','LinkedIn searches, one by one','A tool export, cleaned by hand','Enriched and verified automatically','Enriched, scored and pushed into the CRM on its own')},
- {id:'signals',c:2,dim:'signals',q:'A target account just raised money and is hiring salespeople. When would you know?',opts:S('Probably never','If someone happens to see it','Within a few weeks','Within days, we check signals weekly','The same day, sent to the right person')},
- {id:'message',c:2,dim:'message',q:'Look at the last ten first messages your team sent. How many were written for that one person?',opts:S('None, it’s one template','Name and company swapped in','A few were researched','Most, researched with AI and checked','All of them, an AI agent researches and a person checks')},
- {id:'measure',c:2,dim:'measure',q:'Someone asks which channel brought in last quarter’s deals. How long until you can answer?',opts:S('We couldn’t','A few days of digging','A few hours in a spreadsheet','Minutes, it’s on a dashboard','Right away, with next quarter’s forecast')},
- {id:'loyalty',c:2,dim:'loyalty',q:'A customer goes quiet for two months. What happens?',opts:S('Nothing, until they cancel','Someone notices, sometimes','A check in, if we remember','A health score flags it','A flow reaches out and wins them back')},
- {id:'fear',c:3,q:'Now the honest part. What worries you most about next year?',opts:[{t:'Missing the target',v:0},{t:'Losing a key seller',v:1},{t:'Hiring people who never ramp up',v:2},{t:'A competitor getting there first',v:3}],heard:o=>`What worries you most is ${mir('fear',o.v)}.`},
- {id:'worth',c:3,q:'If one of these got fixed next quarter, what would it be worth to you?',hint:'Your own gut number. We hold the plan up against it.',opts:[{t:'About \u20ac5,000',v:5000},{t:'About \u20ac20,000',v:20000},{t:'About \u20ac50,000',v:50000},{t:'\u20ac100,000 or more',v:100000}],heard:o=>`One fix is worth ${o.t.toLowerCase()} to you.`},
- {id:'owner',c:3,q:'If you had this engine tomorrow, who would look after it?',opts:[{t:'Nobody, we’re stretched',v:0},{t:'A sales lead with little time',v:1},{t:'An ops person',v:2},{t:'An ops person who likes building',v:3}],heard:o=>o.v===0?'Nobody has time to look after it.':`${o.t} would look after it.`},
- {id:'how',c:3,q:'How would you rather get there?',opts:[{t:'Build it for us',v:'build'},{t:'Teach us to build and run it',v:'learn'},{t:'Build the core, then train the team',v:'mix'}]}
+ {id:'goal',c:0,vals:[0,1,2,3]},
+ {id:'admin',c:0,vals:[.15,.3,.5,.7]},
+ {id:'nums',c:0,type:'nums',fields:[['reps',5,''],['cost',60000,'€'],['deal',8000,'€'],['deals',4,''],['growth',40,'%'],['inbound',30,'']]},
+ {id:'speed',c:1,dim:1},
+ {id:'nofollow',c:1,vals:[.02,.1,.25,.5]},
+ {id:'conv',c:1,vals:[.2,.1,.05,.02]},
+ {id:'pains',c:1,type:'multi'},
+ {id:'key',c:1,vals:[.2,.35,.5,.7],when:a=>(a.pains||[]).some(j=>j===1||j===5)},
+ {id:'target',c:2,dim:1,honest:1},{id:'data',c:2,dim:1},{id:'signals',c:2,dim:1},{id:'message',c:2,dim:1},{id:'measure',c:2,dim:1},{id:'loyalty',c:2,dim:1},
+ {id:'fear',c:3,vals:[0,1,2,3]},
+ {id:'worth',c:3,vals:[5000,20000,50000,100000]},
+ {id:'owner',c:3,vals:[0,1,2,3]},
+ {id:'how',c:3,vals:['build','learn','mix']}
 ];
 const ME=[
- {id:'goal',c:0,q:'Start with the good part. What would make next year a great year for you?',opts:[{t:'More meetings with less grind',v:0},{t:'Hitting my target every quarter',v:1},{t:'A more technical, better paid role',v:2},{t:'Leading a team that runs on a system',v:3}],heard:o=>`You want ${mir('goal',o.v)}.`},
- {id:'role',c:0,q:'Which sounds most like you?',opts:[{t:'I sell, as an AE, an SDR or a founder',v:'seller'},{t:'I want a career in GTM engineering or RevOps',v:'career'},{t:'I lead a sales team',v:'leader'}]},
- {id:'mypains',c:0,type:'multi',q:'Which of these sound like your week?',hint:'Pick all that are true.',opts:['I build lists in the evenings','I don’t know who to call first','My messages get ignored','Follow ups slip through the cracks','I can’t tell what’s working','I want a better paid, more technical role'],heard:o=>o.length?`${o.length} of these sound like your week.`:'None of these. Good.'},
- {id:'nums',c:0,type:'nums',q:'Put some numbers on it',hint:'Rough is fine. These drive the euro figures in your report.',fields:[
-  {k:'income',l:'Your yearly pay, bonus included',d:55000,u:'€'},{k:'adminh',l:'Hours a week on lists, research and admin',d:12,u:'h'},
-  {k:'meet',l:'Meetings you book per month',d:6,u:''},{k:'deal',l:'Average deal value',d:8000,u:'€'},{k:'mpd',l:'Meetings it takes to win one deal',d:5,u:''}]},
- {id:'quota',c:0,q:'Where are you against your target this year?',opts:[{t:'Ahead',v:0},{t:'On track',v:1},{t:'Behind',v:2},{t:'Well behind, or no target yet',v:3}],heard:o=>`You’re ${o.t.toLowerCase()}.`},
- {id:'target',c:1,dim:'target',q:'It’s 9am and you have one hour to prospect. How do you pick who?',hint:'No wrong answers here. Nobody sees this but you, so pick what really happens.',opts:S('Whoever I come across','People who look roughly right','I check a written profile','I work down a tiered list','My accounts are already scored and ranked')},
- {id:'data',c:1,dim:'data',q:'How do you build a list of 50 people?',opts:S('Copy and paste, by hand','LinkedIn searches, one by one','A tool export I clean myself','Clay or similar, enriched and verified','A waterfall that feeds my CRM')},
- {id:'signals',c:1,dim:'signals',q:'One of your accounts just hired a new head of sales. When would you know?',opts:S('Probably never','If it shows up in my feed','Within a few weeks','Within days, I check signals weekly','The same day, an alert tells me')},
- {id:'message',c:1,dim:'message',q:'How long does a good first message take you?',opts:S('Seconds, it’s a template','A minute, I swap the name in','Twenty minutes of research','Ten minutes with AI, then I check it','My agent drafts it, I approve it')},
- {id:'speed',c:2,dim:'speed',q:'Someone replies "maybe next month". What happens next?',opts:S('I hope I remember','I set a reminder','It goes into a sequence, sometimes','It always goes into a sequence','A sequence starts from the reply, on its own')},
- {id:'measure',c:2,dim:'measure',q:'Which of your openers works best?',opts:S('No idea','I have a feeling','I could work it out','I check a weekly scorecard','I A/B test and know the numbers')},
- {id:'loyalty',c:2,dim:'loyalty',q:'What happens with customers after they buy?',opts:S('Nothing from me','I check in sometimes','A set onboarding routine','Renewals and upsell tracked','Flows that run on their own')},
- {id:'tools',c:2,type:'multi',q:'Which of these have you used yourself?',hint:'Pick all that apply.',opts:['A CRM like HubSpot or Salesforce','LinkedIn Sales Navigator','Clay or another enrichment tool','lemlist, Apollo or another sequencer','n8n, Make or Zapier','An AI assistant like Claude or ChatGPT','APIs, SQL or code'],heard:o=>`You’ve used ${o.length} of 7 tools.`},
- {id:'fear',c:3,q:'Now the honest part. What worries you most about next year?',opts:[{t:'Missing my target again',v:0},{t:'My role being automated away',v:1},{t:'Being stuck in the same job',v:2},{t:'Burning out',v:3}],heard:o=>`What worries you most is ${mir('fear',o.v)}.`},
- {id:'worth',c:3,q:'If you had five hours a week back, what would that be worth to you this year?',hint:'Your own gut number. We hold the plan up against it.',opts:[{t:'About \u20ac1,000',v:1000},{t:'About \u20ac5,000',v:5000},{t:'About \u20ac10,000',v:10000},{t:'\u20ac25,000 or more',v:25000}],heard:o=>`Five hours a week is worth ${o.t.toLowerCase()} to you.`},
- {id:'pace',c:3,q:'How do you learn best?',opts:[{t:'On my own, at my own pace',v:'self'},{t:'With someone who checks my work',v:'one'}]}
+ {id:'goal',c:0,vals:[0,1,2,3]},
+ {id:'role',c:0,vals:['seller','career','leader']},
+ {id:'mypains',c:0,type:'multi'},
+ {id:'nums',c:0,type:'nums',fields:[['income',55000,'€'],['adminh',12,'h'],['meet',6,''],['deal',8000,'€'],['mpd',5,'']]},
+ {id:'quota',c:0,vals:[0,1,2,3]},
+ {id:'target',c:1,dim:1,honest:1},{id:'data',c:1,dim:1},{id:'signals',c:1,dim:1},{id:'message',c:1,dim:1},
+ {id:'speed',c:2,dim:1},{id:'measure',c:2,dim:1},{id:'loyalty',c:2,dim:1},
+ {id:'tools',c:2,type:'multi'},
+ {id:'fear',c:3,vals:[0,1,2,3]},
+ {id:'worth',c:3,vals:[1000,5000,10000,25000]},
+ {id:'pace',c:3,vals:['self','one']}
 ];
+const PHOTOS={team:['team','leaks','engine','city'],me:['seller','desk','screens','career']};
 
-let st={path:null,i:0,a:{},recover:50};
-try{const s=JSON.parse(localStorage.getItem('gtmcheck2')||'null');if(s&&s.path)st=Object.assign(st,s)}catch(e){}
-const save=()=>{try{localStorage.setItem('gtmcheck2',JSON.stringify(st))}catch(e){}};
+/* language. Saved choice, then ?lang=, then the browser's languages, then English */
+let lang='en';
+function pickLang(){
+ try{const q=new URLSearchParams(location.search).get('lang');if(q&&I[q])return q}catch(e){}
+ try{const s=localStorage.getItem('gtmlang');if(s&&I[s])return s}catch(e){}
+ const list=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'en']);
+ for(const l of list){const k=String(l).slice(0,2).toLowerCase();if(I[k])return k}
+ return 'en';
+}
+lang=pickLang();
+let L=I[lang],EUR,NUM;
+function setLang(k){lang=k;L=I[k];document.documentElement.lang=k;document.title=L.ui.title;
+ EUR=new Intl.NumberFormat(L.locale,{style:'currency',currency:'EUR',maximumFractionDigits:0});NUM=new Intl.NumberFormat(L.locale,{maximumFractionDigits:0});
+ try{localStorage.setItem('gtmlang',k)}catch(e){}}
+setLang(lang);
+const eur=v=>EUR.format(Math.round((isFinite(v)?v:0)/10)*10);
+const num=v=>NUM.format(isFinite(v)?v:0);
+const pct=v=>Math.round((isFinite(v)?v:0)*100);
+function parseNum(str){let s=String(str).replace(/[\s  €%h]/g,'');
+ if(lang==='en'){s=s.replace(/,/g,'')}else{s=s.replace(/\.(?=\d{3}(\D|$))/g,'').replace(',','.')}
+ const v=parseFloat(s);return isFinite(v)&&v>=0?Math.min(v,MAX):null}
+function langBar(dark){return `<div class="langs${dark?' on-dark':''}" role="group" aria-label="Language">${LANGS.map(k=>`<button type="button" data-lang="${k}" aria-pressed="${k===lang}">${I[k].name}</button>`).join('')}</div>`}
+function wireLangs(){app.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{setLang(b.dataset.lang);render()})}
+
+/* state */
+let st={path:null,i:0,a:{},recover:50,done:false,sent:false};
+try{const s=JSON.parse(localStorage.getItem('gtmcheck3')||'null');if(s&&s.path)st=Object.assign(st,s)}catch(e){}
+const save=()=>{try{localStorage.setItem('gtmcheck3',JSON.stringify(st))}catch(e){}};
 const allQ=()=>st.path==='team'?TEAM:ME;
 const Qs=()=>allQ().filter(q=>!q.when||q.when(st.a));
+const T=id=>L.q[st.path][id];
+function render(){if(st.path&&st.done)report();else if(st.path)quiz();else intro()}
 
 function intro(){
  app.innerHTML=`<section class="intro">
-  <div class="photo"><img src="img/team.jpg" alt="A sales team at work around a table"><div class="flowbox"><canvas id="flow" aria-hidden="true"></canvas><div class="flowkey mono"><span>Leads in</span><span class="lk">Leads lost</span><span>Deals won</span></div></div></div>
+  <div class="photo"><img src="img/team.jpg" alt=""><div class="flowbox"><canvas id="flow" aria-hidden="true"></canvas><div class="flowkey mono"><span>${L.ui.flow[0]}</span><span class="lk">${L.ui.flow[1]}</span><span>${L.ui.flow[2]}</span></div></div></div>
   <div class="side fade">
-   <div class="wordmark">${STAR} ASTRA AGENCY</div>
-   <h1>What will your sales engine cost you next year?</h1>
-   <p class="lede">Four minutes of questions about your real week. You get the money at risk, the upside, your maturity level and the first thing to fix.</p>
+   <div class="top"><div class="wordmark">${STAR} ASTRA AGENCY</div>${langBar()}</div>
+   <h1>${L.ui.h1}</h1>
+   <p class="lede">${L.ui.lede}</p>
    <div class="doors">
-    <button class="door" data-path="me"><span class="im" style="background-image:url(img/seller.jpg)"></span><span class="tx"><strong>For me</strong><span>You sell, or want a career in GTM engineering</span></span></button>
-    <button class="door" data-path="team"><span class="im" style="background-image:url(img/desk.jpg)"></span><span class="tx"><strong>For my team</strong><span>You run a company or lead the people who sell</span></span></button>
+    <button class="door" data-path="me"><span class="im" style="background-image:url(img/seller.jpg)"></span><span class="tx"><strong>${L.ui.me}</strong><span>${L.ui.meSub}</span></span></button>
+    <button class="door" data-path="team"><span class="im" style="background-image:url(img/desk.jpg)"></span><span class="tx"><strong>${L.ui.team}</strong><span>${L.ui.teamSub}</span></span></button>
    </div>
-   <div class="gets"><div><b>01</b>Money at risk</div><div><b>02</b>The upside</div><div><b>03</b>Your level</div><div><b>04</b>Build or learn</div><div><b>05</b>Your package</div></div>
+   <div class="gets">${L.ui.gets.map((g,i)=>`<div><b>0${i+1}</b>${g}</div>`).join('')}</div>
   </div></section>`;
- app.querySelectorAll('[data-path]').forEach(b=>b.onclick=()=>{st={path:b.dataset.path,i:0,a:{},recover:50};save();quiz()});
- flow();
+ app.querySelectorAll('[data-path]').forEach(b=>b.onclick=()=>{st={path:b.dataset.path,i:0,a:{},recover:50,done:false,sent:false};save();quiz()});
+ wireLangs();flow();
 }
 
-/* The signature moment. Leads stream across the photo, some leak out and fall, the rest reach the deal line. */
-function flow(){
- const c=document.getElementById('flow');if(!c)return;const x=c.getContext('2d');
- const still=matchMedia('(prefers-reduced-motion: reduce)').matches;let W,H,dpr,parts=[],t=0;
- function size(){dpr=Math.min(2,devicePixelRatio||1);W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
- size();addEventListener('resize',size);
- const spawn=()=>({p:0,s:0.0016+Math.random()*0.0018,o:(Math.random()-.5)*26,leak:Math.random()<0.38?0.25+Math.random()*0.5:2,vy:0,y:0,r:2+Math.random()*1.6});
- for(let k=0;k<70;k++){const q=spawn();q.p=Math.random();parts.push(q)}
- function yAt(p,o){return H*0.5+Math.sin(p*Math.PI*2.2+t*0.6)*H*0.16+o*(1-p*0.85)}
- function frame(){
-  x.clearRect(0,0,W,H);
-  x.strokeStyle='rgba(230,221,216,.18)';x.lineWidth=1;x.beginPath();for(let i=0;i<=60;i++){const p=i/60;x.lineTo(p*W,yAt(p,0))}x.stroke();
-  x.fillStyle='rgba(230,221,216,.55)';x.fillRect(W-2,H*0.18,2,H*0.64);
-  for(const q of parts){
-   if(!still)q.p+=q.s;
-   const fell=q.p>q.leak;
-   if(fell){q.vy+=0.18;q.y+=q.vy}
-   const px=q.p*W,py=fell?yAt(q.leak,q.o)+q.y:yAt(q.p,q.o);
-   x.globalAlpha=fell?Math.max(0,1-q.y/H):1;x.beginPath();x.arc(px,py,fell?q.r+1.5:q.r,0,7);if(fell){x.strokeStyle='#e6ddd8';x.lineWidth=1.5;x.stroke()}else{x.fillStyle='#fdfdfd';x.fill()}x.globalAlpha=1;
-   if(q.p>1||py>H+10)Object.assign(q,spawn());
-  }
-  t+=still?0:0.016;
-  if(!still&&document.getElementById('flow'))requestAnimationFrame(frame);
- }
- frame();
-}
-
+function optText(q,j){return T(q.id)[1][j]}
 function heardLine(){
- const qs=Qs();for(let k=st.i-1;k>=0;k--){const q=qs[k];if(q.heard&&st.a[q.id]!==undefined){const v=st.a[q.id];return q.heard(q.type==='multi'?v:(v.j!==undefined?{...q.opts[v.j],v:v.v}:v))}}
- return st.path==='team'?'Nothing yet. Your first answer starts the tally.':'Nothing yet. Your first answer starts the tally.';
+ const qs=Qs(),H=L.heard;
+ for(let k=st.i-1;k>=0;k--){const q=qs[k],a=st.a[q.id];if(a===undefined)continue;
+  if(q.id==='goal')return H.goal(L.mir[st.path].goal[a.j]);
+  if(q.id==='fear')return H.fear(L.mir[st.path].fear[a.j]);
+  if(q.id==='admin')return H.admin(pct(a.v));
+  if(q.id==='speed')return H.speed[a.j];
+  if(q.id==='nofollow')return H.nofollow(optText(q,a.j));
+  if(q.id==='conv')return H.conv(optText(q,a.j));
+  if(q.id==='pains')return H.pains(a.length);
+  if(q.id==='mypains')return H.mypains(a.length);
+  if(q.id==='key')return H.key(optText(q,a.j));
+  if(q.id==='worth')return st.path==='team'?H.worth(optText(q,a.j)):H.worthMe(optText(q,a.j));
+  if(q.id==='owner')return H.owner(a.v,optText(q,a.j));
+  if(q.id==='quota')return H.quota(optText(q,a.j));
+  if(q.id==='tools')return H.tools(a.length);
+ }
+ return L.ui.nothingYet;
 }
-function findings(){const a=st.a;let n=DIMS.filter(([k])=>a[k]&&a[k].v<=2).length+((st.path==='team'?a.pains:a.mypains)||[]).length;if(a.admin||a.nums)n++;if(a.nofollow&&a.nofollow.v>=.1)n++;if(a.key)n++;return n}
+function findings(){const a=st.a;let n=DIMK.filter(k=>a[k]&&a[k].v<=2).length+((st.path==='team'?a.pains:a.mypains)||[]).length;if(a.admin||a.nums)n++;if(a.nofollow&&a.nofollow.v>=.1)n++;if(a.key&&TEAM[7].when(a))n++;return n}
+
 function quiz(){
- const qs=Qs();if(st.i>=qs.length)st.i=qs.length-1;
- const q=qs[st.i],ch=CH[st.path][q.c],nCh=qs.filter(x=>x.c===q.c),posInCh=nCh.indexOf(q);
- const live=compute(true);
- let body='';
- if(q.type==='nums'){const cur=st.a.nums||{};
-  body=`<div class="fields">${q.fields.map(f=>`<div class="field"><label for="f_${f.k}">${f.l}</label><div class="row">${f.u==='€'?'<span class="u">€</span>':''}<input id="f_${f.k}" inputmode="decimal" value="${NUM.format(cur[f.k]??f.d)}">${f.u&&f.u!=='€'?`<span class="u">${f.u}</span>`:''}</div></div>`).join('')}</div>`;
- }else if(q.type==='multi'){const cur=st.a[q.id]||[];
-  body=`<div class="opts">${q.opts.map((t,j)=>`<button class="opt" data-j="${j}" aria-pressed="${cur.includes(j)}"><span class="k">${cur.includes(j)?'✓':String.fromCharCode(65+j)}</span><span>${t}</span></button>`).join('')}</div>`;
- }else{const cur=st.a[q.id];
-  body=`<div class="opts">${q.opts.map((o,j)=>`<button class="opt" data-j="${j}" aria-pressed="${!!cur&&cur.j===j}"><span class="k">${String.fromCharCode(65+j)}</span><span>${o.t}</span></button>`).join('')}</div>`;}
+ const qs=Qs();if(st.i>=qs.length)st.i=qs.length-1;if(st.i<0)st.i=0;
+ const q=qs[st.i],chName=L.chapters[st.path][q.c],inCh=qs.filter(x=>x.c===q.c),pos=inCh.indexOf(q);
+ const live=compute(true),tx=q.type==='nums'?null:T(q.id);
+ let title,hint='',body='';
+ if(q.type==='nums'){title=L.numsQ;hint=L.numsHint;const cur=st.a.nums||{};
+  body=`<div class="fields">${q.fields.map(([k,d,u])=>`<div class="field"><label for="f_${k}">${L.fields[k]}</label><div class="row">${u==='€'?'<span class="u">€</span>':''}<input id="f_${k}" inputmode="decimal" autocomplete="off" value="${num(cur[k]??d)}">${u&&u!=='€'?`<span class="u">${u}</span>`:''}</div></div>`).join('')}</div>`;
+ }else{title=tx[0];hint=tx[2]||(q.type==='multi'?L.multiHint:'')||(q.honest?L.honest:'');
+  if(q.honest&&tx[2])hint=tx[2];
+  const cur=st.a[q.id];
+  body=`<div class="opts">${tx[1].map((t,j)=>{const on=q.type==='multi'?(cur||[]).includes(j):(!!cur&&cur.j===j);return `<button type="button" class="opt" data-j="${j}" aria-pressed="${on}"><span class="k">${q.type==='multi'&&on?'✓':String.fromCharCode(65+j)}</span><span>${t}</span></button>`}).join('')}</div>`;}
+ if(q.honest&&!tx[2])hint=L.honest;
  const needNext=q.type==='nums'||q.type==='multi';
- const segs=CH[st.path].map((_,c)=>{const inC=qs.filter(x=>x.c===c),done=inC.filter(x=>qs.indexOf(x)<st.i).length;return `<div class="seg"><i style="width:${(done/inC.length*100).toFixed(0)}%"></i></div>`}).join('');
+ const segs=[0,1,2,3].map(c=>{const ic=qs.filter(x=>x.c===c),done=ic.filter(x=>qs.indexOf(x)<st.i).length;return `<div class="seg"><i style="width:${ic.length?(done/ic.length*100).toFixed(0):0}%"></i></div>`}).join('');
  app.innerHTML=`<section class="quiz">
-  <div class="qphoto"><img src="${ch[1]}" alt=""><div class="chap"><span class="mono">Chapter ${q.c+1} of 4 · question ${posInCh+1} of ${nCh.length}</span><strong>${ch[0]}</strong></div></div>
+  <div class="qphoto"><img src="img/${PHOTOS[st.path][q.c]}.jpg" alt=""><div class="chap"><span class="mono">${L.ui.chapter(q.c+1,pos+1,inCh.length)}</span><strong>${chName}</strong></div></div>
   <div class="qmain">
    <div><div class="top"><div class="wordmark">${STAR} ASTRA AGENCY</div><span class="mono">${st.i+1} / ${qs.length}</span></div><div class="segs">${segs}</div></div>
-   <div class="qbody fade" key="${q.id}">
-    <h2>${q.q}</h2>${q.hint?`<p class="hint">${q.hint}</p>`:''}${body}
-   </div>
+   <div class="qbody fade"><h2>${title}</h2>${hint?`<p class="hint">${hint}</p>`:''}${body}</div>
    <div class="qfoot">
-    <div class="ledger" aria-live="polite"><span class="mono" style="color:var(--muted)">${st.path==='team'?'At risk next year, so far':'Paid time lost a year, so far'}</span><span class="amt">${eur(live.risk)}</span><span class="heard">${heardLine()}</span><span class="mono" style="color:var(--muted)">${findings()} ${findings()===1?'finding':'findings'} in your report so far</span></div>
-    <div class="qnav"><button class="btn line" id="back">Back</button>${needNext?`<button class="btn" id="next">${st.i===qs.length-1?'See my report':'Next'}</button>`:''}</div>
+    <div class="ledger" aria-live="polite"><span class="mono" style="color:var(--muted)">${st.path==='team'?L.ui.riskSoFarTeam:L.ui.riskSoFarMe}</span><span class="amt">${eur(live.risk)}</span><span class="heard">${esc(heardLine())}</span><span class="mono" style="color:var(--muted)">${L.ui.findings(findings())}</span></div>
+    <div class="qnav"><button type="button" class="btn line" id="back">${L.ui.back}</button>${needNext?`<button type="button" class="btn" id="next">${st.i===qs.length-1?L.ui.seeReport:L.ui.next}</button>`:''}</div>
    </div>
   </div></section>`;
  document.getElementById('back').onclick=()=>{if(st.i===0){st.path=null;save();intro()}else{st.i--;save();quiz()}};
  if(q.type==='nums'){
-  q.fields.forEach(f=>{const el=document.getElementById('f_'+f.k);el.onfocus=()=>el.select();el.oninput=()=>{collect(q);const l=compute(true);app.querySelector('.amt').textContent=eur(l.risk)}});
+  q.fields.forEach(([k])=>{const el=document.getElementById('f_'+k);el.onfocus=()=>el.select();el.oninput=()=>{collect(q);app.querySelector('.amt').textContent=eur(compute(true).risk)}});
   document.getElementById('next').onclick=()=>{collect(q);adv()};
  }else if(q.type==='multi'){
   app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const j=+b.dataset.j;let c=st.a[q.id]||[];c=c.includes(j)?c.filter(x=>x!==j):c.concat(j);st.a[q.id]=c;save();quiz()});
   document.getElementById('next').onclick=()=>{st.a[q.id]=st.a[q.id]||[];adv()};
  }else{
-  app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const j=+b.dataset.j;st.a[q.id]={j,v:q.opts[j].v};save();app.querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed',x===b));setTimeout(adv,220)});
+  const vals=q.dim?[0,1,2,3,4]:q.vals;
+  app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{if(app.dataset.busy)return;app.dataset.busy='1';const j=+b.dataset.j;st.a[q.id]={j,v:vals[j]};save();app.querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed',x===b));setTimeout(()=>{delete app.dataset.busy;adv()},220)});
  }
  window.scrollTo(0,0);
 }
-function collect(q){const o={};q.fields.forEach(f=>{const v=parseFloat(document.getElementById('f_'+f.k).value.replace(/[^0-9.]/g,''));o[f.k]=isFinite(v)&&v>=0?v:f.d});st.a.nums=o;save()}
+function collect(q){const o={};q.fields.forEach(([k,d])=>{const v=parseNum(document.getElementById('f_'+k).value);o[k]=v===null?d:v});st.a.nums=o;save()}
 function adv(){const qs=Qs();if(st.i<qs.length-1){st.i++;save();quiz()}else{st.done=true;save();report()}}
-document.addEventListener('keydown',e=>{if(!app.querySelector('.quiz')||/INPUT/.test(document.activeElement.tagName))return;const k=e.key.toUpperCase().charCodeAt(0)-65;const o=app.querySelectorAll('.opt');if(e.key.length===1&&k>=0&&k<o.length)o[k].click();if(e.key==='Enter'){const n=document.getElementById('next');if(n)n.click()}});
+document.addEventListener('keydown',e=>{if(!app.querySelector('.quiz')||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;const k=e.key.toUpperCase().charCodeAt(0)-65;const o=app.querySelectorAll('.opt');if(e.key.length===1&&k>=0&&k<o.length)o[k].click();if(e.key==='Enter'){const n=document.getElementById('next');if(n)n.click()}});
 
-/* maths. Everything comes from the visitor's answers, with the defaults shown in the fields */
+/* the maths. Every money figure comes from the answers, defaults are the values shown in the fields */
 function compute(partial){
- const a=st.a,team=st.path==='team';
- const qs=team?TEAM:ME;const nq=qs.find(q=>q.type==='nums');const N={};nq.fields.forEach(f=>N[f.k]=(a.nums&&a.nums[f.k]!==undefined)?a.nums[f.k]:f.d);
- const dims={};DIMS.forEach(([k])=>dims[k]=a[k]?a[k].v:0);
- const W={target:1.3,data:1,signals:.9,message:1.1,speed:1.3,measure:1.1,loyalty:1};
- const wsum=DIMS.reduce((t,[k])=>t+W[k],0),wavg=DIMS.reduce((t,[k])=>t+W[k]*dims[k],0)/wsum;
+ const a=st.a,team=st.path==='team',nq=(team?TEAM:ME).find(q=>q.type==='nums'),N={};
+ nq.fields.forEach(([k,d])=>{const v=a.nums?a.nums[k]:undefined;N[k]=isFinite(v)&&v>=0?v:d});
+ const dims={};DIMK.forEach(k=>dims[k]=a[k]?a[k].v:0);
+ const wsum=DIMK.reduce((t,k)=>t+W[k],0),wavg=DIMK.reduce((t,k)=>t+W[k]*dims[k],0)/wsum;
  let score=team?wavg*25:wavg*25*0.85+((a.tools||[]).length/7)*15;
- score=Math.round(Math.min(100,score));
- const level=score<30?0:score<55?1:score<80?2:3;
- const LV=team?['Manual','Repeatable','Systemised','Compounding']:['Starter','Operator','Builder','Architect'];
- const rec=st.recover/100,r={team,dims,score,level,LV,rec,N};
+ score=Math.max(0,Math.min(100,Math.round(score)));
+ const level=score<30?0:score<55?1:score<80?2:3,rec=st.recover/100;
+ const r={team,dims,score,level,rec,N};
  if(team){
-  const reps=N.reps||1,cost=N.cost,deal=N.deal,deals=N.deals,g=N.growth/100,inbound=N.inbound;
-  const admin=a.admin?a.admin.v:(partial?0:0.3),nf=a.nofollow?a.nofollow.v:(partial?0:0.1),conv=a.conv?a.conv.v:0.1,key=a.key?a.key.v:0;
-  const timeCost=reps*cost*admin, lost=inbound*12*nf, leak=lost*conv*deal;
-  const dealsYr=deals*12, perRep=reps?dealsYr/reps:0, extraDeals=dealsYr*g, extraReps=perRep?extraDeals/perRep:0, hire=(partial&&!a.speed)?0:extraReps*cost;
+  const reps=Math.max(1,N.reps),cost=N.cost,deal=N.deal,deals=N.deals,g=N.growth/100,inbound=N.inbound;
+  const admin=a.admin?a.admin.v:(partial?0:0.3),nf=a.nofollow?a.nofollow.v:(partial?0:0.1),conv=a.conv?a.conv.v:0.1;
+  const key=(a.key&&TEAM[7].when(a))?a.key.v:0;
+  const timeCost=reps*cost*admin,lost=inbound*12*nf,leak=lost*conv*deal;
+  const dealsYr=deals*12,perRep=dealsYr/reps,extraDeals=dealsYr*g,extraReps=perRep>0?extraDeals/perRep:0,hire=(partial&&!a.speed)?0:extraReps*cost;
   const keyRisk=key*dealsYr*deal/4;
-  const freed=admin*rec, hoursFreed=reps*freed*40*46, moreDeals=perRep*reps*(freed/Math.max(0.05,1-admin)), oppRev=moreDeals*deal, oppLeak=leak*0.8;
+  const freed=admin*rec,hoursFreed=reps*freed*40*46,moreDeals=perRep*reps*(freed/Math.max(0.05,1-admin)),oppRev=moreDeals*deal,oppLeak=leak*0.8;
   Object.assign(r,{m:{reps,cost,deal,deals,g,inbound,admin,nf,conv,key,timeCost,lost,leak,dealsYr,perRep,extraDeals,extraReps,hire,keyRisk,hoursFreed,moreDeals,oppRev,oppLeak},risk:timeCost+leak+hire+keyRisk,opp:oppRev+oppLeak});
  }else{
   const inc=N.income,h=Math.min(40,N.adminh),meet=N.meet,deal=N.deal,mpd=Math.max(1,N.mpd);
-  const hourly=inc/1840, timeCost=(partial&&!a.nums)?0:h*46*hourly, selling=Math.max(1,40-h), perHour=meet/(selling*4.33);
-  const hFree=h*rec, moreMeet=hFree*4.33*perHour, moreDealsYr=moreMeet*12/mpd, oppRev=moreDealsYr*deal;
+  const hourly=inc/1840,timeCost=(partial&&!a.nums)?0:h*46*hourly,selling=Math.max(1,40-h),perHour=meet/(selling*4.33);
+  const hFree=h*rec,moreMeet=hFree*4.33*perHour,moreDealsYr=moreMeet*12/mpd,oppRev=moreDealsYr*deal;
   Object.assign(r,{m:{inc,h,meet,deal,mpd,hourly,timeCost,selling,perHour,hFree,moreMeet,moreDealsYr,oppRev},risk:timeCost,opp:oppRev});
  }
  if(partial)return r;
  const PAINDIM=team?['speed','data','measure','measure','loyalty','target','data']:['data','target','message','speed','measure',null];
  const pull={};((team?a.pains:a.mypains)||[]).forEach(j=>{const d=PAINDIM[j];if(d)pull[d]=(pull[d]||0)+0.75});
- r.weak=DIMS.map(([k])=>k).sort((x,y)=>(dims[x]-(pull[x]||0))/W[x]-(dims[y]-(pull[y]||0))/W[y]).slice(0,3);
+ r.weak=DIMK.slice().sort((x,y)=>(dims[x]-(pull[x]||0))/W[x]-(dims[y]-(pull[y]||0))/W[y]).slice(0,3);
  r.pack=team?packTeam(r):packMe(r);
  return r;
 }
 
 /* recommendations, priced from the Astra list of 6 Nov 2026 */
 function packTeam(r){
- const a=st.a,how=a.how?a.how.v:'mix',owner=a.owner?a.owner.v:1,reps=r.m.reps,steps=[{n:'First',t:'Health Check',p:0,d:'A call and a first look at your funnel, stack and data. Where your revenue leaks.'}];
+ const a=st.a,P=L.p,how=a.how?a.how.v:'mix',owner=a.owner?a.owner.v:1,reps=r.m.reps,steps=[{n:P.first,t:'Health Check',p:0,d:P.hcD}];
  let why,head;
  if(how==='build'||owner===0){
-  head='We build it, then keep it running.';
-  steps.push({n:'Then',t:'Strategy',p:750,d:'The deep analysis and a session that names the first thing to build.'});
-  if(r.level<=1){steps.push({n:'Build',t:'Starter build',p:650,from:1,d:'5 campaigns and 2 signals, set up and live.'});steps.push({n:'Build',t:'Two automations',p:300,d:'Your CRM connected to lemlist, with replies and outcomes fed back.'});if(r.dims.message<=2)steps.push({n:'Build',t:'Outbound AI agent',p:1000,d:'Researches accounts and drafts messages. Checked before anything sends.'})}
-  else steps.push({n:'Build',t:'Full engine',p:4000,approx:1,d:'Campaigns, signals, automations, AI agents, loyalty flows and dashboards.'});
-  steps.push({n:'Ongoing',t:'Run',p:750,mo:1,d:'Monitoring, updates and a monthly review.'});
-  why=owner===0?'Nobody on your team has time to look after this, so we build the engine and run it for you.':'You asked for it built, so we build the engine and hand it over working.';
+  head=P.headBuild;steps.push({n:P.then,t:'Strategy',p:750,d:P.stratD});
+  if(r.level<=1){steps.push({n:P.build,t:'Starter build',p:650,from:1,d:P.starterD});steps.push({n:P.build,t:P.autoT,p:300,d:P.autoD});if(r.dims.message<=2)steps.push({n:P.build,t:P.agentT,p:1000,d:P.agentD})}
+  else steps.push({n:P.build,t:P.fullT,p:4000,approx:1,d:P.fullD});
+  steps.push({n:P.ongoing,t:'Run',p:750,mo:1,d:P.runD});
+  why=owner===0?P.whyNoOwner:P.whyBuild;
  }else if(how==='learn'){
-  const seats=Math.max(4,reps);head='Your team learns to run it themselves.';
-  steps.push({n:'Lead',t:'GTM Leader course',p:500,d:'For whoever leads the team. The operating model, routing, a dashboard and a 90 day plan. €2,000 with Raka.'});
-  steps.push({n:'Team',t:'Group package',p:600*seats,d:`${seats} people take Seller Level 1 together over 4 to 5 weeks. Every assignment marked. €600 each.`});
-  why='You want the skill to stay in the team, so the leader learns to run the system and the sellers learn to work it.';
+  const seats=Math.max(4,Math.round(reps));head=P.headLearn;
+  steps.push({n:P.lead,t:'GTM Leader',p:500,d:P.leaderD});
+  steps.push({n:P.team,t:P.groupT,p:600*seats,d:P.groupD(seats)});
+  why=P.whyLearn;
  }else{
-  const hrs=3;head='We build the core, your team runs it.';
-  steps.push({n:'Then',t:'Strategy',p:750,d:'The deep analysis and a session that names the first thing to build.'});
-  steps.push(r.level<=1?{n:'Build',t:'Starter build',p:650,from:1,d:'5 campaigns and 2 signals, set up and live.'}:{n:'Build',t:'Full engine',p:4000,approx:1,d:'The whole engine, built and handed over.'});
-  steps.push({n:'Team',t:`${hrs} hour seminar`,p:125*reps*hrs,d:`${reps} people, on your own CRM, so the team can run what we build. €125 per person per hour.`});
-  why='We build the part that takes skill, then train the team in one session so they run it from day one.';
+  const hrs=3,people=Math.max(1,Math.round(reps));head=P.headMix;
+  steps.push({n:P.then,t:'Strategy',p:750,d:P.stratD});
+  steps.push(r.level<=1?{n:P.build,t:'Starter build',p:650,from:1,d:P.starterD}:{n:P.build,t:P.fullT,p:4000,approx:1,d:P.fullD2});
+  steps.push({n:P.team,t:P.semT(hrs),p:125*people*hrs,d:P.semD(people)});
+  why=P.whyMix;
  }
  const once=steps.filter(s=>!s.mo).reduce((t,s)=>t+s.p,0),mo=steps.filter(s=>s.mo).reduce((t,s)=>t+s.p,0);
- const alt=how==='learn'?'Rather have it done for you? Strategy plus a Starter build starts at €1,400.':'Want someone to lead it part time? Raka works as a Fractional RevOps Director at €120 an hour, about €1,920 a month for half a day a week.';
- return {head,steps,once,mo,why,alt};
+ return {head,steps,once,mo,why,alt:how==='learn'?P.altLearn:P.altBuild};
 }
 function packMe(r){
- const role=st.a.role?st.a.role.v:'seller',one=(st.a.pace&&st.a.pace.v==='one'),price=one?1000:125,fmt=one?'1:1 with Raka':'Self learn',steps=[];let why,alt='',head;
- if(role==='leader'){head='Start with the GTM Leader course.';steps.push({n:'Course',t:'GTM Leader',p:one?2000:500,d:'The operating model, a sales bible your team writes with you, routing, dashboards, a forecast and a 90 day plan.'});why='You lead a team, so the fastest win is the system they all work in. Run the team version of this check as well.';alt='Want it built for your team instead? Start with a free Health Check.'}
- else if(role==='career'){const s=r.level<=1?1:r.level===2?2:3,nm=['','Operator','Builder','Architect'],ds=['','ICP, lists, enrichment, scoring, AI research and the message. About 4 weeks.','Sending, n8n automations, CRM, loyalty flows and dashboards. About 5 weeks.','Revenue architecture, AI agents in production, signals and client work. About 5 weeks.'];
-  for(let l=s;l<=3;l++)steps.push({n:'Level '+l,t:nm[l],p:price,d:ds[l]});head=`Start the Engineer track at Level ${s}.`;
-  why=`Your score puts you at ${r.LV[r.level]}. GTM engineering and RevOps job postings rose 205% in 2025 (Bloomberry), and every level ends in a build you can show an employer.`;
-  if(steps.length===3)alt=`All three levels together are ${one?'€2,500':'€299'} instead of ${one?'€3,000':'€375'}.`}
- else{const s=r.level<=1?1:2,nm=['','Find','Reach'];for(let l=s;l<=2;l++)steps.push({n:'Seller Level '+l,t:nm[l],p:price,d:l===1?'Your ICP, a ranked list, alerts that say who to contact now, and AI research you check.':'Messages about their problem, a live sequence, calls that end with a next step.'});
-  head=`Start the Seller track at Level ${s}.`;why=`Your weakest area is ${LABEL[r.weak[0]].toLowerCase()}, and Level ${s} covers it first. Most people get the first result in the first lesson.`;alt='Level 3 Scale, with an AI research assistant on your own list, is coming soon.'}
+ const P=L.p,role=st.a.role?st.a.role.v:'seller',one=!!(st.a.pace&&st.a.pace.v==='one'),price=one?1000:125,fmt=one?P.one:P.self,steps=[];let why,alt='',head;
+ if(role==='leader'){head=P.leaderHead;steps.push({n:P.course,t:'GTM Leader',p:one?2000:500,d:P.leaderPD});why=P.leaderWhy;alt=P.leaderAlt}
+ else if(role==='career'){const s=r.level<=1?1:r.level===2?2:3,nm=['','Operator','Builder','Architect'];
+  for(let l=s;l<=3;l++)steps.push({n:P.level+' '+l,t:nm[l],p:price,d:P.careerD[l-1]});
+  head=P.careerHead(s);why=P.careerWhy((lang==='en'?L.ui.levelsMe:L.ui.levelsMe)[r.level]);
+  if(steps.length===3)alt=P.bundle(eur(one?2500:299),eur(one?3000:375))}
+ else{const s=r.level<=1?1:2,nm=['','Find','Reach'];for(let l=s;l<=2;l++)steps.push({n:P.sellerLevel+' '+l,t:nm[l],p:price,d:P.sellerD[l-1]});
+  head=P.sellerHead(s);why=P.sellerWhy(L.dims[DIMK.indexOf(r.weak[0])].toLowerCase(),s);alt=P.sellerAlt}
  steps.forEach(x=>x.fmt=fmt);let once=steps.reduce((t,x)=>t+x.p,0);if(role==='career'&&steps.length===3)once=one?2500:299;
  return {head,steps,once,mo:0,why,alt};
 }
 
 function report(){
- const r=compute(false),m=r.m;
- const head=r.team?FIX[r.weak[0]].line:FIX[r.weak[0]].me;
- const maxR=Math.max(1,...(r.team?[m.timeCost,m.leak,m.hire,m.keyRisk]:[m.timeCost]));
- const risks=r.team?[['Paying sellers for work that isn’t selling',m.timeCost,`${m.reps} sellers × ${eur(m.cost)} × ${Math.round(m.admin*100)}% of the week.`],
-  ['Inbound leads that go cold',m.leak,`${NUM.format(m.inbound*12)} leads a year × ${Math.round(m.nf*100)}% never followed up × 1 in ${Math.round(1/m.conv)} that buys × ${eur(m.deal)}.`],
-  ['Hiring to hit next year by hand',m.hire,`${Math.round(m.g*100)}% growth is ${NUM.format(m.extraDeals)} more deals. At ${NUM.format(m.perRep)} deals per seller that’s ${m.extraReps.toFixed(1)} more sellers at ${eur(m.cost)}.`]]
-  .concat(m.key?[['One person out for three months',m.keyRisk,`${Math.round(m.key*100)}% of ${eur(m.dealsYr*m.deal)} new revenue a year, for one quarter.`]]:[])
-  :[['Paid hours spent not selling',m.timeCost,`${m.h} hours a week × 46 weeks × ${eur(m.hourly)} an hour.`]];
- const opps=r.team?[['Selling time back',`${NUM.format(m.hoursFreed)} h`,`A year, if a system takes over ${st.recover}% of the admin.`],['Extra deals from that time',eur(m.oppRev),`About ${NUM.format(m.moreDeals)} more deals at your rate of ${NUM.format(m.perRep)} per seller a year.`],['Leads saved by fast follow up',eur(m.oppLeak),'If routing and automatic follow ups catch 8 in 10 of the leads that go cold now.']]
-  :[['Hours back every week',`${m.hFree.toFixed(1)} h`,`If ${st.recover}% of your admin runs on its own.`],['More meetings a month',m.moreMeet.toFixed(1),`At your rate of ${m.perHour.toFixed(2)} meetings per selling hour.`],['More pipeline a year',eur(m.oppRev),`${NUM.format(m.moreDealsYr)} more deals, at ${m.mpd} meetings a deal and ${eur(m.deal)} each.`]];
- const painList=r.team?(st.a.pains||[]).map(j=>TEAM.find(q=>q.id==='pains').opts[j]):(st.a.mypains||[]).map(j=>ME.find(q=>q.id==='mypains').opts[j]);
- const PAINFIX=r.team?['Lead routing with a reply time on every lead','Signals and sequences that live in the system, not in one person','A dashboard and a forecast built from stages with exit criteria','Attribution in the CRM, so every deal shows where it came from','Health scores and win back flows','An engine that books meetings without the founder','CRM rules with owners, checked in ten minutes a week']
-  :['An enrichment waterfall, so lists build themselves','A tiered list and alerts that rank who to call','Messages built on one researched problem','A sequence that starts from the reply','A weekly scorecard','The Engineer track, from Operator to Architect'];
- const painIdx=r.team?(st.a.pains||[]):(st.a.mypains||[]);
- const gq=(r.team?TEAM:ME).find(q=>q.id==='goal'),fq=(r.team?TEAM:ME).find(q=>q.id==='fear');
- const mirror=[st.a.goal?'You want '+mir('goal',st.a.goal.j):'',st.a.fear?'you worry about '+mir('fear',st.a.fear.j):''].filter(Boolean).join(', ');
+ const r=compute(false),m=r.m,U=L.ui,RK=L.rk,OP=L.op;
+ const lv=r.team?U.levelsTeam:U.levelsMe;
+ const head=L.fix[r.weak[0]][r.team?4:5];
+ const risks=r.team?[[RK.paying[0],m.timeCost,RK.paying[1](num(m.reps),eur(m.cost),pct(m.admin))],
+  [RK.leak[0],m.leak,RK.leak[1](num(m.inbound*12),pct(m.nf),Math.round(1/m.conv),eur(m.deal))],
+  [RK.hire[0],m.hire,RK.hire[1](pct(m.g),num(m.extraDeals),num(m.perRep),m.extraReps.toLocaleString(L.locale,{maximumFractionDigits:1}),eur(m.cost))]]
+  .concat(m.key?[[RK.key[0],m.keyRisk,RK.key[1](pct(m.key),eur(m.dealsYr*m.deal))]]:[])
+  :[[RK.hours[0],m.timeCost,RK.hours[1](num(m.h),eur(m.hourly))]];
+ const maxR=Math.max(1,...risks.map(x=>x[1]));
+ const opps=r.team?[[OP.time[0],`${num(m.hoursFreed)} h`,OP.time[1](st.recover)],[OP.deals[0],eur(m.oppRev),OP.deals[1](num(m.moreDeals),num(m.perRep))],[OP.leads[0],eur(m.oppLeak),OP.leads[1]]]
+  :[[OP.hrs[0],`${m.hFree.toLocaleString(L.locale,{maximumFractionDigits:1})} h`,OP.hrs[1](st.recover)],[OP.meet[0],m.moreMeet.toLocaleString(L.locale,{maximumFractionDigits:1}),OP.meet[1](m.perHour.toLocaleString(L.locale,{maximumFractionDigits:2}))],[OP.pipe[0],eur(m.oppRev),OP.pipe[1](num(m.moreDealsYr),num(m.mpd),eur(m.deal))]];
+ const painIdx=(r.team?st.a.pains:st.a.mypains)||[],painQ=L.q[st.path][r.team?'pains':'mypains'][1],painFix=r.team?L.painfixTeam:L.painfixMe;
+ const p=r.pack,mir=L.mir[st.path];
+ const mirror=(st.a.goal||st.a.fear)?U.mirror(st.a.goal?mir.goal[st.a.goal.j]:'',st.a.fear?mir.fear[st.a.fear.j]:''):'';
+ const sub=r.team?U.sumTeam(eur(r.risk),eur(r.opp)):U.sumMe(eur(m.timeCost),st.recover,eur(m.oppRev))+(st.a.quota&&st.a.quota.v>=2?U.behind:'');
  const worth=st.a.worth?st.a.worth.v:0;
- const p=r.pack,bandImg=r.team?'img/city.jpg':'img/career.jpg';
- const sub=r.team?`Run the way it runs today, your sales engine puts about ${eur(r.risk)} at risk over the next 12 months. A working system could add about ${eur(r.opp)} in extra deals and saved leads.`:`Admin costs you about ${eur(m.timeCost)} of paid time a year. Hand ${st.recover}% of it to a system and you could add about ${eur(m.oppRev)} of pipeline.${st.a.quota&&st.a.quota.v>=2?' You told us you’re behind target, so this year every hour counts.':''}`;
+ const priceTxt=s=>s.p===0?U.free:(s.approx?U.about+' ':s.from?U.from+' ':'')+eur(s.p)+(s.mo?' '+U.aMonth:'');
+ const ranges=['0','30','55','80'].map((x,i)=>`${x} ${U.to} ${['29','54','79','100'][i]}`);
  app.innerHTML=`<div class="rep fade">
- <div class="bar0"><div class="wordmark">${STAR} ASTRA AGENCY</div><span class="mono">Your GTM Engine Check</span></div>
+ <div class="bar0"><div class="wordmark">${STAR} ASTRA AGENCY</div>${langBar()}</div>
  <div class="wrap"><section class="diag">
-  <div><p style="color:var(--muted);margin-bottom:18px;font-size:16px"><b style="color:var(--ink);font-weight:700;font-size:20px;display:block;margin-bottom:6px">${['Running on hustle','Running on heroes','Running on a system','Running like a machine'][r.level]}</b>${mirror?mirror+'.':''}</p><h1>${head}</h1><p class="sub">${sub}</p></div>
-  <div class="level"><span class="mono" style="color:var(--muted)">${r.team?'Company':'Individual'} GTM maturity</span><div class="scoreRow"><span class="n">${r.score}</span><span class="mono">of 100 · ${r.LV[r.level]}</span></div>
-   <div class="ladder">${r.LV.map((n,i)=>`<div class="${i===r.level?'on':''}"><b>${n}</b><span class="mono">${['0 to 29','30 to 54','55 to 79','80 to 100'][i]}</span></div>`).join('')}</div></div>
+  <div><p style="color:var(--muted);margin-bottom:18px;font-size:16px"><b style="color:var(--ink);font-weight:700;font-size:20px;display:block;margin-bottom:6px">${U.labels[r.level]}</b>${esc(mirror)}</p><h1>${head}</h1><p class="sub">${sub}</p></div>
+  <div class="level"><span class="mono" style="color:var(--muted)">${r.team?U.matTeam:U.matMe}</span><div class="scoreRow"><span class="n">${r.score}</span><span class="mono">${U.of100} · ${lv[r.level]}</span></div>
+   <div class="ladder">${lv.map((n,i)=>`<div class="${i===r.level?'on':''}"><b>${n}</b><span class="mono">${ranges[i]}</span></div>`).join('')}</div></div>
  </section></div>
-
  <section class="money"><div class="wrap">
-  <div class="col"><span class="mono">Money at risk, next 12 months</span><div class="huge r">${eur(r.risk)}</div>
+  <div class="col"><span class="mono">${U.moneyRisk}</span><div class="huge r" data-k="risk">${eur(r.risk)}</div>
    ${risks.map(([t,v,h])=>`<div class="line"><div class="t"><span>${t}</span><b>${eur(v)}</b></div><div class="meter"><i style="width:${(v/maxR*100).toFixed(1)}%;background:#e6ddd8"></i></div><p class="how">${h}</p></div>`).join('')}
   </div>
-  <div class="col"><span class="mono">What a working system adds</span><div class="huge g">${eur(r.opp)}</div>
+  <div class="col"><span class="mono">${U.systemAdds}</span><div class="huge g" data-k="opp">${eur(r.opp)}</div>
    ${opps.map(([t,v,h])=>`<div class="line"><div class="t"><span>${t}</span><b>${v}</b></div><p class="how">${h}</p></div>`).join('')}
-   <div class="slider"><label for="rec">Share of admin a system takes over, ${st.recover}%</label><input id="rec" type="range" min="20" max="80" step="5" value="${st.recover}"><span>We assume 50%. Move it to test your own case.</span></div>
+   <div class="slider"><label for="rec">${U.slider(st.recover)}</label><input id="rec" type="range" min="20" max="80" step="5" value="${st.recover}"><span>${U.sliderNote}</span></div>
   </div>
  </div></section>
-
  <div class="wrap"><section class="sec">
-  <header><h2>Your engine, part by part</h2><p>Each part scored from your answers. The weakest three drive the plan below.</p></header>
-  <div class="engine">${radar(r)}<div class="dims">${DIMS.map(([k,l])=>{const v=r.dims[k],c=v<=1?'w':v<=2?'b':'s';return `<div class="dim"><span>${l}</span><div class="meter"><i style="width:${Math.max(4,v/4*100)}%"></i></div><span class="st ${c}">${c==='w'?'Weak':c==='b'?'Basic':'Strong'}</span></div>`}).join('')}</div></div>
+  <header><h2>${U.engineH}</h2><p>${U.engineP}</p></header>
+  <div class="engine">${radar(r)}<div class="dims">${DIMK.map((k,i)=>{const v=r.dims[k],c=v<=1?'w':v<=2?'b':'s';return `<div class="dim"><span>${L.dims[i]}</span><div class="meter"><i style="width:${Math.max(4,v/4*100)}%"></i></div><span class="st ${c}">${c==='w'?U.weak:c==='b'?U.basic:U.strong}</span></div>`}).join('')}</div></div>
  </section>
- ${painList.length?`<section class="sec" style="padding-top:0"><header><h2>What you told us, and what fixes it</h2></header><div class="told">${painList.map((t,i)=>`<div><b>${t}</b><span>${PAINFIX[painIdx[i]]}</span></div>`).join('')}</div></section>`:''}
+ ${painIdx.length?`<section class="sec" style="padding-top:0"><header><h2>${U.toldH}</h2></header><div class="told">${painIdx.map(j=>`<div><b>${painQ[j]}</b><span>${painFix[j]}</span></div>`).join('')}</div></section>`:''}
  </div>
-
- <div class="band" style="background-image:url(${bandImg})" role="img" aria-label="${r.team?'A city skyline at night':'A learner at a laptop by a window'}"></div>
-
+ <div class="band" style="background-image:url(img/${r.team?'city':'career'}.jpg)" role="img" aria-label=""></div>
  <div class="wrap"><section class="sec"><div class="plan">
-  <div><header style="display:grid;gap:10px;margin-bottom:18px"><h2>What to build</h2><p style="color:var(--muted)">Your three weakest parts, fixed in this order.</p></header><ol>${r.weak.map((k,i)=>`<li><span class="mono">0${i+1}</span><div><b>${FIX[k].build[0]}</b><span>${FIX[k].build[1]}</span></div></li>`).join('')}</ol></div>
-  <div><header style="display:grid;gap:10px;margin-bottom:18px"><h2>What to learn</h2><p style="color:var(--muted)">The lessons that cover the same three parts.</p></header><ol>${r.weak.map((k,i)=>`<li><span class="mono">0${i+1}</span><div><b>${FIX[k].learn[0]}</b><span>${FIX[k].learn[1]}</span></div></li>`).join('')}</ol></div>
+  <div><header style="display:grid;gap:10px;margin-bottom:18px"><h2>${U.buildH}</h2><p style="color:var(--muted)">${U.buildP}</p></header><ol>${r.weak.map((k,i)=>`<li><span class="mono">0${i+1}</span><div><b>${L.fix[k][0]}</b><span>${L.fix[k][1]}</span></div></li>`).join('')}</ol></div>
+  <div><header style="display:grid;gap:10px;margin-bottom:18px"><h2>${U.learnH}</h2><p style="color:var(--muted)">${U.learnP}</p></header><ol>${r.weak.map((k,i)=>`<li><span class="mono">0${i+1}</span><div><b>${L.fix[k][2]}</b><span>${L.fix[k][3]}</span></div></li>`).join('')}</ol></div>
  </div></section></div>
-
  <section class="pack"><div class="wrap">
-  <div style="display:grid;gap:16px"><span class="mono" style="color:#d8d7d7">Our recommendation</span><h2>${p.head}</h2><p class="why">${p.why}</p></div>
-  <div class="steps">${p.steps.map(s=>`<div class="step"><span class="mono">${s.n}${s.fmt?' · '+s.fmt:''}</span><b>${s.t}</b><span class="price">${s.p===0?'Free':(s.approx?'About ':s.from?'From ':'')+eur(s.p)+(s.mo?' a month':'')}</span><p>${s.d}</p></div>`).join('')}</div>
-  <div class="total"><span class="mono" style="color:#d8d7d7">Total to start</span><span class="huge">${eur(p.once)}${p.mo?`<span style="font-size:.45em"> then ${eur(p.mo)} a month</span>`:''}</span></div>
+  <div style="display:grid;gap:16px"><span class="mono" style="color:#d8d7d7">${U.ourRec}</span><h2>${p.head}</h2><p class="why">${p.why}</p></div>
+  <div class="steps">${p.steps.map(s=>`<div class="step"><span class="mono">${s.n}${s.fmt?' · '+s.fmt:''}</span><b>${s.t}</b><span class="price">${priceTxt(s)}</span><p>${s.d}</p></div>`).join('')}</div>
+  <div class="total"><span class="mono" style="color:#d8d7d7">${U.total}</span><span class="huge" data-k="total">${eur(p.once)}${p.mo?`<span style="font-size:.45em"> ${U.then} ${eur(p.mo)} ${U.aMonth}</span>`:''}</span></div>
   ${p.alt?`<p class="alt">${p.alt}</p>`:''}
   ${anchor(p,r,worth)}
-  <div class="raka"><img src="img/raka.jpg" alt="Raka Mulya"><div class="who"><b>Raka Mulya, Astra Agency</b><span>Seven years in revenue, GTM and data. Builds the engines and teaches them. Book a free Health Check and paste your results in the message.</span><span class="contact">raka@astraagency.nl · linkedin.com/in/raka-mulya-b92885196</span></div></div>
-  <div class="ctas"><button class="btn light" id="copy">Copy my results</button><button class="btn lineLight" id="mail">Copy Raka’s email</button><button class="btn lineLight" id="redo">Change my answers</button><button class="btn lineLight" id="other">Run the ${r.team?'personal':'team'} check</button></div>
+  <form class="send" id="sendForm" novalidate>
+   <h3>${U.sendH}</h3><p>${U.sendP}</p>
+   <div class="sendgrid"><label>${U.name}<input id="s_name" name="name" autocomplete="name"></label><label>${U.email}<input id="s_email" name="email" type="email" autocomplete="email" required></label><label>${U.company}<input id="s_company" name="company" autocomplete="organization"></label></div>
+   <label class="consent"><input type="checkbox" id="s_consent"> <span>${U.consent}</span></label>
+   <div class="sendrow"><button class="btn light" id="s_btn" type="submit">${U.sendBtn}</button><span class="sendmsg" id="s_msg" aria-live="polite">${st.contactSent?U.sent:''}</span></div>
+  </form>
+  <div class="raka"><img src="img/raka.jpg" alt="Raka Mulya"><div class="who"><b>Raka Mulya, Astra Agency</b><span>${U.rakaBio}</span><span class="contact">raka@astraagency.nl · linkedin.com/in/raka-mulya-b92885196</span></div></div>
+  <div class="ctas"><button type="button" class="btn lineLight" id="copy">${U.copy}</button><button type="button" class="btn lineLight" id="mail">${U.copyEmail}</button><button type="button" class="btn lineLight" id="redo">${U.change}</button><button type="button" class="btn lineLight" id="other">${U.other(r.team)}</button></div>
  </div></section>
- <div class="wrap foot">Estimates from your own answers, rounded to the nearest €10. Benchmarks from Salesforce State of Sales 2024 and Bloomberry 2025. Photos are public domain. Your answers stay in this browser.</div>
+ <div class="wrap foot">${U.foot}</div>
  </div>`;
  document.getElementById('rec').oninput=e=>{st.recover=+e.target.value;save();const y=scrollY;report();scrollTo(0,y)};
- document.getElementById('redo').onclick=()=>{st.i=0;st.done=false;save();quiz()};
- document.getElementById('other').onclick=()=>{st={path:r.team?'me':'team',i:0,a:{},recover:50};save();quiz()};
- document.getElementById('copy').onclick=()=>copy(summary(r),'Copied. Paste it into your message to Raka.');
- document.getElementById('mail').onclick=()=>copy('raka@astraagency.nl','Email copied.');
- scrollTo(0,0);
+ document.getElementById('redo').onclick=()=>{st.i=0;st.done=false;st.sent=false;save();quiz()};
+ document.getElementById('other').onclick=()=>{st={path:r.team?'me':'team',i:0,a:{},recover:50,done:false,sent:false};save();quiz()};
+ document.getElementById('copy').onclick=()=>copy(summary(r),U.copied);
+ document.getElementById('mail').onclick=()=>copy('raka@astraagency.nl',U.copied);
+ document.getElementById('sendForm').onsubmit=e=>{e.preventDefault();contact(r)};
+ wireLangs();
+ if(!st.sent){st.sent=true;save();submit(payload(r,'completed'))}
+ if(!report.y)scrollTo(0,0);
 }
-function anchor(p,r,worth){const bits=[];if(r.risk>0)bits.push(`That\u2019s ${Math.max(1,Math.round(p.once/r.risk*100))}% of the ${eur(r.risk)} at risk you just measured`);if(worth)bits.push(p.once<=worth?`and less than the ${eur(worth)} you said one fix is worth`:`and you said one fix is worth ${eur(worth)}`);if(worth&&p.once>worth)bits.push(r.team?'. If that\u2019s more than you want to spend now, start with the free Health Check and a Strategy session at \u20ac750':'. If that\u2019s more than you want to spend now, start with one level at \u20ac125 self learn');return bits.length?`<p class="why" style="color:var(--sand)">${bits.join(' ').replace(' .','.')}.</p>`:''}
-function summary(r){const p=r.pack;return [`GTM Engine Check, ${r.team?'my team':'me'}`,`Maturity ${r.LV[r.level]}, ${r.score} of 100`,`Money at risk next 12 months ${eur(r.risk)}`,`Opportunity ${eur(r.opp)}`,`Weakest parts ${r.weak.map(k=>LABEL[k]).join(', ')}`,`Recommended ${p.steps.map(s=>s.t).join(', then ')}`,`Total to start ${eur(p.once)}${p.mo?` then ${eur(p.mo)} a month`:''}`].join('\n')}
+function anchor(p,r,worth){const U=L.ui;let s='';if(r.risk>0)s+=U.anchor(Math.max(1,Math.round(p.once/r.risk*100)),eur(r.risk));if(worth)s+=p.once<=worth?U.lessWorth(eur(worth)):U.moreWorth(eur(worth));if(worth&&p.once>worth)s+=r.team?U.smallerTeam:U.smallerMe;return s?`<p class="why" style="color:var(--sand)">${s}.</p>`:''}
+function summary(r){const p=r.pack,S=L.ui.summary,lv=r.team?L.ui.levelsTeam:L.ui.levelsMe;
+ return [`${S[0]}, ${r.team?S[1]:S[2]}`,`${S[3]} ${lv[r.level]}, ${r.score} ${L.ui.of100}`,`${S[4]} ${eur(r.risk)}`,`${S[5]} ${eur(r.opp)}`,`${S[6]} ${r.weak.map(k=>L.dims[DIMK.indexOf(k)]).join(', ')}`,`${S[7]} ${p.steps.map(s=>s.t).join(', ')}`,`${S[8]} ${eur(p.once)}${p.mo?` ${L.ui.then} ${eur(p.mo)} ${L.ui.aMonth}`:''}`].join('\n')}
+
+/* sending to Astra through Netlify Forms. The form named gtm-check is declared in the page for Netlify to find */
+function payload(r,kind){const p=r.pack,E=I.en,lvE=r.team?E.ui.levelsTeam:E.ui.levelsMe;
+ return {'form-name':'gtm-check',kind,lang,path:st.path,score:String(r.score),level:lvE[r.level],risk:String(Math.round(r.risk)),opportunity:String(Math.round(r.opp)),
+  weakest:r.weak.join(', '),recommendation:p.steps.map(s=>s.t).join(' > '),total:String(p.once)+(p.mo?` + ${p.mo}/month`:''),
+  goal:st.a.goal?E.mir[st.path].goal[st.a.goal.j]:'',fear:st.a.fear?E.mir[st.path].fear[st.a.fear.j]:'',worth:st.a.worth?String(st.a.worth.v):'',
+  answers:JSON.stringify(st.a),summary:summary(r),name:'',email:'',company:'',consent:'no','bot-field':''}}
+function submit(data){const body=new URLSearchParams(data).toString();
+ return fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body}).then(res=>{if(!res.ok)throw new Error(res.status);return true})}
+function contact(r){const U=L.ui,msg=document.getElementById('s_msg'),btn=document.getElementById('s_btn');
+ const email=document.getElementById('s_email').value.trim(),ok=document.getElementById('s_consent').checked;
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||!ok){msg.textContent=U.needEmail;return}
+ const d=payload(r,'contact');d.name=document.getElementById('s_name').value.trim().slice(0,200);d.email=email.slice(0,200);d.company=document.getElementById('s_company').value.trim().slice(0,200);d.consent='yes';
+ btn.disabled=true;msg.textContent=U.sending;
+ submit(d).then(()=>{st.contactSent=true;save();msg.textContent=U.sent}).catch(()=>{btn.disabled=false;msg.textContent=U.sendFail})}
+
 function copy(t,msg){const ok=()=>toast(msg);if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,()=>fb(t,msg));else fb(t,msg)}
-function fb(t,msg){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast(msg)}catch(e){toast('Select the text and copy it yourself.')}ta.remove()}
+function fb(t,msg){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast(msg)}catch(e){toast(L.ui.copyFail)}ta.remove()}
 function toast(m){const el=document.getElementById('toast');el.textContent=m;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,2600)}
+
 function radar(r){
- const n=DIMS.length,cx=230,cy=170,R=120,P=(i,v)=>{const a=-Math.PI/2+i*2*Math.PI/n;return[cx+R*v*Math.cos(a),cy+R*v*Math.sin(a)]};
- let g='';for(let k=1;k<=4;k++)g+=`<polygon points="${DIMS.map((_,i)=>P(i,k/4).map(x=>x.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#d8d7d7"/>`;
- g+=DIMS.map((_,i)=>{const[x,y]=P(i,1);return`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#d8d7d7"/>`}).join('');
- const shape=DIMS.map(([k],i)=>P(i,Math.max(.05,r.dims[k]/4)).map(x=>x.toFixed(1)).join(',')).join(' ');
- const lab=DIMS.map(([,l],i)=>{const[x,y]=P(i,1.17);const an=Math.abs(x-cx)<12?'middle':x>cx?'start':'end';return`<text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="${an}" font-size="13" fill="#405b8d" font-family="Open Sauce One,Helvetica,Arial,sans-serif">${l}</text>`}).join('');
- return `<svg viewBox="0 0 460 340" role="img" aria-label="Scores for each part of the engine" style="width:100%">${g}<polygon points="${shape}" fill="rgba(13,27,56,.16)" stroke="#0d1b38" stroke-width="2"/>${DIMS.map(([k],i)=>{const[x,y]=P(i,Math.max(.05,r.dims[k]/4));return`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="#0d1b38"/>`}).join('')}${lab}</svg>`;
+ const n=DIMK.length,cx=230,cy=170,R=120,P=(i,v)=>{const a=-Math.PI/2+i*2*Math.PI/n;return[cx+R*v*Math.cos(a),cy+R*v*Math.sin(a)]};
+ let g='';for(let k=1;k<=4;k++)g+=`<polygon points="${DIMK.map((_,i)=>P(i,k/4).map(x=>x.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#d8d7d7"/>`;
+ g+=DIMK.map((_,i)=>{const[x,y]=P(i,1);return`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#d8d7d7"/>`}).join('');
+ const shape=DIMK.map((k,i)=>P(i,Math.max(.05,r.dims[k]/4)).map(x=>x.toFixed(1)).join(',')).join(' ');
+ const lab=DIMK.map((_,i)=>{const[x,y]=P(i,1.17);const an=Math.abs(x-cx)<12?'middle':x>cx?'start':'end';return`<text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="${an}" font-size="13" fill="#405b8d" font-family="Open Sauce One,Helvetica,Arial,sans-serif">${L.dims[i]}</text>`}).join('');
+ return `<svg viewBox="-40 0 540 340" role="img" aria-label="${esc(L.ui.engineH)}" style="width:100%">${g}<polygon points="${shape}" fill="rgba(13,27,56,.16)" stroke="#0d1b38" stroke-width="2"/>${DIMK.map((k,i)=>{const[x,y]=P(i,Math.max(.05,r.dims[k]/4));return`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="#0d1b38"/>`}).join('')}${lab}</svg>`;
+}
+
+/* the signature moment. Leads stream across the photo, some leak out and fall */
+function flow(){
+ const c=document.getElementById('flow');if(!c)return;const x=c.getContext('2d');
+ const still=matchMedia('(prefers-reduced-motion: reduce)').matches;let W2,H,parts=[],t=0;
+ function size(){const d=Math.min(2,devicePixelRatio||1);W2=c.clientWidth;H=c.clientHeight;c.width=W2*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
+ size();addEventListener('resize',size);
+ const spawn=()=>({p:0,s:0.0016+Math.random()*0.0018,o:(Math.random()-.5)*26,leak:Math.random()<0.38?0.25+Math.random()*0.5:2,vy:0,y:0,r:2+Math.random()*1.6});
+ for(let k=0;k<70;k++){const q=spawn();q.p=Math.random();parts.push(q)}
+ const yAt=(p,o)=>H*0.5+Math.sin(p*Math.PI*2.2+t*0.6)*H*0.16+o*(1-p*0.85);
+ function frame(){
+  if(!document.body.contains(c))return;
+  x.clearRect(0,0,W2,H);x.strokeStyle='rgba(230,221,216,.18)';x.lineWidth=1;x.beginPath();for(let i=0;i<=60;i++){const p=i/60;x.lineTo(p*W2,yAt(p,0))}x.stroke();
+  x.fillStyle='rgba(230,221,216,.55)';x.fillRect(W2-2,H*0.18,2,H*0.64);
+  for(const q of parts){if(!still)q.p+=q.s;const fell=q.p>q.leak;if(fell){q.vy+=0.18;q.y+=q.vy}
+   const px=q.p*W2,py=fell?yAt(q.leak,q.o)+q.y:yAt(q.p,q.o);
+   x.globalAlpha=fell?Math.max(0,1-q.y/H):1;x.beginPath();x.arc(px,py,fell?q.r+1.5:q.r,0,7);if(fell){x.strokeStyle='#e6ddd8';x.lineWidth=1.5;x.stroke()}else{x.fillStyle='#fdfdfd';x.fill()}x.globalAlpha=1;
+   if(q.p>1||py>H+10)Object.assign(q,spawn())}
+  t+=still?0:0.016;if(!still)requestAnimationFrame(frame)}
+ frame();
 }
 ['team','leaks','engine','city','seller','desk','screens','career'].forEach(n=>{const i=new Image();i.src='img/'+n+'.jpg'});
-if(st.path&&st.done)report();else if(st.path)quiz();else intro();
+render();
 })();
 </script>
 </body>
