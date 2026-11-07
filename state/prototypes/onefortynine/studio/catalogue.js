@@ -109,3 +109,80 @@ window.CATALOGUE = {
     { id: 'b-sheet2', c: 'brand', n: 'One page sales sheet', w: 'The offer, the numbers and the next step on one printed page.', y: 'For shows, meetings and attachments.', g: ['enquiries'], when: 'later' }
   ]
 };
+
+/* What each idea looks like on his site, as a rough sketch. where, site (on the public site) or office (behind the scenes).
+   t is the sketch template, the rest is its content. Nothing here claims a result, numbers and names are placeholders. */
+window.CATALOGUE.sketch = {
+  "p-parks": { where: "site", t: "page", nav: "Parks", img: "media/venues/park.jpg", h: "Breakout Box for holiday parks.", pts: ["Played on site, in the clubhouse or the bar", "More than one game a day from one box", "Drinks and food packages sold around it"], cta: "Get a plan for your park" },
+  "p-pubs": { where: "site", t: "page", nav: "Pubs", img: "media/venues/pub.jpg", h: "Breakout Box for pubs and bars.", pts: ["Quiet nights filled", "A quiz night with a twist", "Teams stay for another round"], cta: "Get a plan for your pub" },
+  "p-cafes": { where: "site", t: "page", nav: "Cafés", img: "media/venues/cafe.jpg", h: "Breakout Box for cafés.", pts: ["Busy in the quiet mornings", "A game and cake deal for the table", "Coffee mornings with a twist"], cta: "Get a plan for your café" },
+  "p-training": { where: "site", t: "page", nav: "Training", img: "media/venues/training.jpg", h: "Breakout Box for leadership training.", pts: ["Watch leadership happen live", "Six puzzles in any order", "Team against team"], cta: "Talk to Owen" },
+  "p-teamdays": { where: "site", t: "page", nav: "Team days", img: "media/venues/training.jpg", h: "Breakout Box for team days.", pts: ["Away days and office parties", "Timed games and competitions", "No staff needed to run it"], cta: "Plan a team day" },
+  "p-lets": { where: "site", t: "page", nav: "Lodges", img: "media/venues/lets.jpg", h: "Breakout Box for holiday lets.", pts: ["A premium extra on the stay", "Filled with local treats", "Ready for a rainy evening"], cta: "Get a plan for your lets" },
+  "p-glamping": { where: "site", t: "page", nav: "Glamping", img: "media/venues/park.jpg", h: "Breakout Box for glamping and campsites.", pts: ["A rainy evening sorted", "Shared from reception", "Packs into a car boot"], cta: "Get a plan for your site" },
+  "p-attractions": { where: "site", t: "page", nav: "Attractions", img: "media/s1.jpg", h: "Breakout Box for attractions and trails.", pts: ["Puzzles inside a visitor trail", "A day out with a finale", "Built around your story"], cta: "Talk to Owen" },
+  "p-family": { where: "site", t: "page", nav: "Families", img: "media/film/tile-family.jpg", h: "Breakout Box for families and kids’ parties.", pts: ["A version made for kids", "Birthday tables sorted", "Family friendly puzzles"], cta: "Register interest" },
+
+  "s-group": { where: "site", t: "form", h: "Get a quote for your group.", fields: ["How many sites", "Boxes per site", "Games a week"], out: "Your group total, worked out as you type", btn: "Send to head office" },
+  "s-onepager": { where: "site", t: "doc", h: "Send this to your boss.", rows: ["Your venue and plan", "Your numbers", "What you get", "Next step"], btn: "Download the PDF" },
+  "s-vr": { where: "site", t: "table", h: "Breakout Box against digital and VR.", cols: ["", "Breakout Box", "Digital or VR"], rows: [["Cost to start", "From £60 a month", "Thousands"], ["Screens", "None", "Yes"], ["Staff to run it", "None", "Varies"]] },
+  "s-call": { where: "site", t: "cal", h: "Book a 15 minute call with Owen." },
+  "s-autoreply": { where: "site", t: "mail", h: "Every enquiry gets this, straight away.", subj: "Your Breakout Box plan", lines: ["Thanks for getting in touch.", "Here are your numbers and your proposal.", "Owen will be in touch to talk it through."] },
+  "s-assistant": { where: "site", t: "chat", h: "Ask about Breakout Box.", msgs: [["them", "How much space does it take?"], ["us", "It’s a 70 litre cool box, under a metre long. It doesn’t need a permanent spot."], ["them", "Who runs it?"], ["us", "Nobody. Set up takes under 10 minutes, then guests play on their own."]] },
+
+  "t-stories": { where: "site", t: "quotes", h: "What venues say.", note: "Your first venues’ words go here once the trial ends." },
+  "t-trial": { where: "site", t: "stats", h: "The first season, in numbers.", items: ["Games played", "What guests paid", "Staff time"], note: "Filled in from your trial." },
+  "t-film": { where: "site", t: "film", h: "See a table crack it.", img: "media/film/tile-team.jpg" },
+  "t-photos": { where: "site", t: "gallery", h: "The box, every piece.", imgs: ["media/s1.jpg", "media/s2.jpg", "media/s4.jpg", "media/inside.jpg"] },
+  "t-about": { where: "site", t: "about", h: "The people behind the box.", line: "OneFortyNine Games, Swindon. Owen’s story and photo go here." },
+  "t-wall": { where: "site", t: "list", h: "Where you can play it.", items: ["Venue name, town", "Venue name, town", "Venue name, town"], note: "Venues appear here once they say yes to being named." },
+  "t-press": { where: "site", t: "cards", h: "News and shows.", items: [["Land Leisure and Tourism Show", "NEC Birmingham, November 2026"], ["Next show", "Date to come"], ["In the press", "Coming soon"]] },
+
+  "g-library": { where: "site", t: "cards", h: "Every game.", items: [["The Heist", "Six puzzles, 60 to 90 minutes"], ["Next game", "Coming soon"], ["After that", "Coming soon"]] },
+  "g-heist": { where: "site", t: "page", nav: "The Heist", img: "media/s4.jpg", h: "The Heist.", pts: ["Break into a highly secure facility", "Six puzzles, from Entry Point to The Vault", "Teams of up to six, 60 to 90 minutes"], cta: "Get The Heist" },
+  "g-seasonal": { where: "site", t: "cards", h: "A game for every season.", items: [["Christmas", "Edition coming"], ["Easter", "Edition coming"], ["Halloween", "Edition coming"]] },
+  "g-kids": { where: "site", t: "page", nav: "Kids", img: "media/film/tile-family.jpg", h: "Breakout Box for kids.", pts: ["Puzzles made for younger players", "Birthday parties sorted", "The same box, a new game"], cta: "Register interest" },
+  "g-hamper": { where: "site", t: "page", nav: "Hamper", img: "media/venues/lets.jpg", h: "The whodunit hamper.", pts: ["A mystery to solve over dinner", "Made for premium stays", "Treats to unlock as you go"], cta: "Register interest" },
+  "g-waitlist": { where: "site", t: "form", h: "Hear first when the next game drops.", fields: ["Your email"], btn: "Join the list" },
+  "g-360": { where: "site", t: "spin", h: "Turn the box around.", img: "media/lid.png" },
+
+  "u-cracked": { where: "site", t: "phone", h: "We cracked it.", lines: ["The Heist", "Cracked in 52 minutes", "At your venue"] },
+  "u-leader": { where: "site", t: "table", h: "Fastest teams this month.", cols: ["", "Team", "Time"], rows: [["1", "Team name", "00.00"], ["2", "Team name", "00.00"], ["3", "Team name", "00.00"]] },
+  "u-feedback": { where: "site", t: "stars", h: "How was the game?" },
+  "u-booking": { where: "site", t: "cal", h: "Book a game at your venue." },
+  "u-kit": { where: "site", t: "kit", h: "Posters and table cards for your venue.", items: ["Poster", "Table card", "Social post"] },
+
+  "a-reorder": { where: "site", t: "dash", h: "Welcome back.", rows: ["Your boxes", "Reorder supplies", "Order another box"] },
+  "a-checkout": { where: "site", t: "checkout", h: "Buy online.", rows: ["Breakout Box, to own", "£350"] },
+  "a-rental": { where: "site", t: "checkout", h: "Rent by the month.", rows: ["Breakout Box, rental", "£60 a month"] },
+  "a-supplies": { where: "site", t: "cards", h: "Supplies.", items: [["Cups", "Six reusable cups"], ["Notepads and pencils", "For every game"], ["Spare parts", "When you need them"]] },
+  "a-training": { where: "site", t: "cards", h: "Training videos.", items: [["Setting up", "Under 10 minutes"], ["Hosting a game", "What to tell guests"], ["Packing away", "Ready for the next one"]] },
+  "a-dashboard": { where: "site", t: "stats", h: "Your group, at a glance.", items: ["Boxes per site", "Games played", "Orders"], note: "Live from your sites." },
+  "a-repair": { where: "site", t: "form", h: "Report a problem.", fields: ["Your venue", "What happened", "Add a photo"], btn: "Send" },
+
+  "o-crm": { where: "office", t: "board", h: "Lead tracker.", cols: ["New", "Talking", "Proposal sent", "Won"] },
+  "o-follow": { where: "office", t: "mail", h: "Follow ups, sent for you.", subj: "Still thinking about Breakout Box?", lines: ["A short friendly nudge.", "Sent when a lead goes quiet.", "It stops when they reply."] },
+  "o-quote": { where: "office", t: "doc", h: "A quote in two minutes.", rows: ["Venue", "Boxes and plan", "Price", "Send"], btn: "Make the quote" },
+  "o-stock": { where: "office", t: "table", h: "Stock and dispatch.", cols: ["", "Boxes"], rows: [["In stock", "0"], ["Out on rent", "0"], ["Due back", "0"], ["On order", "0"]] },
+  "o-billing": { where: "office", t: "table", h: "Rental billing.", cols: ["", "This month"], rows: [["Venue name", "Paid"], ["Venue name", "Due"], ["Venue name", "Paid"]] },
+  "o-show": { where: "office", t: "phone", h: "Scan at the stand.", lines: ["Scan a badge", "Name and venue saved", "Follow up sent tonight"] },
+  "o-report": { where: "office", t: "stats", h: "This month.", items: ["Enquiries", "Proposals", "Boxes out", "Money in"] },
+
+  "m-outreach": { where: "office", t: "stats", h: "Outreach, this week.", items: ["Venues contacted", "Replies", "Calls booked"], note: "Done for you." },
+  "m-seo": { where: "site", t: "serp", h: "Found on Google.", q: "escape game for pubs", title: "Breakout Box for pubs and bars", url: "onefortyninegames.com/pubs" },
+  "m-linkedin": { where: "office", t: "cards", h: "Your LinkedIn, planned.", items: [["Monday", "A game in action"], ["Wednesday", "A venue story"], ["Friday", "A puzzle to try"]] },
+  "m-newsletter": { where: "site", t: "form", h: "News for venues.", fields: ["Your email"], btn: "Sign up" },
+  "m-referral": { where: "site", t: "band", h: "Know a venue that would love it?", line: "Refer them, and you both get a reward.", btn: "Refer a venue" },
+  "m-ads": { where: "site", t: "page", img: "media/venues/pub.jpg", h: "Fill your quiet nights.", pts: ["A landing page for one audience", "Made for LinkedIn and Google ads", "One button, one action"], cta: "Get a plan" },
+  "m-report": { where: "site", t: "doc", h: "What a games box earns.", rows: ["The market", "Trial numbers", "What venues charge", "What it earns"], btn: "Download the report" },
+  "m-awards": { where: "office", t: "list", h: "Award entries.", items: ["Holiday park awards, supplier categories", "Hospitality awards", "Startup awards"] },
+  "m-resell": { where: "site", t: "page", nav: "Partners", img: "media/inside.jpg", h: "Sell Breakout Box to your customers.", pts: ["For hospitality suppliers", "Your customers, our games", "Terms to suit you"], cta: "Become a partner" },
+  "m-showkit": { where: "office", t: "kit", h: "Trade show kit.", items: ["Stand banner", "Flyer", "QR to the calculator"] },
+
+  "b-sheet": { where: "office", t: "brand", h: "Your brand sheet." },
+  "b-name": { where: "office", t: "list", h: "Name check.", items: ["Breakout Box, UK trade marks", "OneFortyNine, UK trade marks", "Domains and social names"], note: "What we check." },
+  "b-logo": { where: "office", t: "logo", h: "Your 1 4 9 mark." },
+  "b-pack": { where: "office", t: "gallery", h: "Packaging refresh.", imgs: ["media/lid.png", "media/s2.jpg"] },
+  "b-deck": { where: "office", t: "deck", h: "Sales deck for park groups.", slides: ["The problem", "Breakout Box", "The numbers", "Next step"] },
+  "b-sheet2": { where: "office", t: "doc", h: "One page sales sheet.", rows: ["The offer", "The numbers", "What you get", "Get in touch"], btn: "Print" }
+};

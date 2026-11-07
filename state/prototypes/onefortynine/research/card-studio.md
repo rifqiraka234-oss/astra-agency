@@ -77,3 +77,21 @@ The old "Pages to add" list is replaced by it. No prices anywhere, quoting stays
 Tested, 70 cards in 9 groups, Next filter 24, Next plus Save your time 5, search "seasonal" 2, adding and removing updates the
 count, plan and summary, See it switches to Design and scrolls the preview to the section clear of its header, the link reopens
 the same plan, phone with the filters scrolling in one row, no sideways scroll, 0 page errors. The builder test still passes.
+
+## v4, every idea sketched into his site (Raka 7 Nov, "a sketch of roughly how it looks also?? So like when click add he can see oh
+yeah its added to the whole website")
+
+- `catalogue.js` now carries a sketch for each of the 64 ideas not yet built, 26 templates (a page, a form, a document, a table,
+  a calendar, an email, a chat, quotes, numbers, film, a gallery, about, a list, cards, a turning box, a phone, stars, a print kit,
+  an account dashboard, a checkout, a lead board, a Google result, a band, the brand sheet, the logo, a deck).
+- `preview/js/added.js` and `css/added.css` draw what he picks into his site in his own colours and fonts. 47 site ideas go into
+  "Added from your plan" before the form, 17 back office tools and services into "Behind the scenes, only you see these" after
+  it. Pages he adds join the menu with a dot (two inline, the rest under More). Every block says "Sketch, from your plan."
+- No sketch claims a result. Customer quotes are grey lines with "Venue name, town", numbers read "Soon", names and times are
+  placeholders. The Land Leisure and Tourism Show card is the one real fact, he exhibited there.
+- In the catalogue each card has a small wireframe of its template and says "On your site" or "Behind the scenes". Adding shows
+  a toast, "Added to your site", with See it, which opens the design view, scrolls the preview to the new block and flashes it.
+  Cards in his plan and plan items open their sketch too.
+- Tested, all 64 added at once draw with height, 47 on the site and 17 behind the scenes, no sideways scroll on desktop or phone,
+  light and dark palettes, the toast and See it (lands 97px from the top, clear of the header, flashes), the menu, and the
+  earlier catalogue, builder and studio tests still pass, 0 page errors. Fixed, the header wrapped with three added links.
