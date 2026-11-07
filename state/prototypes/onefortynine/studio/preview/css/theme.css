@@ -92,3 +92,37 @@ html[data-hero="band"] .hero-in { display: grid; grid-template-columns: minmax(0
 
 /* hidden always wins, the changing line and any section Owen switches off */
 .h1-b[hidden], main > section[hidden] { display: none !important; }
+
+/* ---------- the builder, any palette and any of the curated fonts (all SIL OFL, licences in fonts/) ---------- */
+@font-face { font-family: "Bricolage Grotesque"; src: url("../fonts/bricolage-grotesque-latin-wght-normal.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("../fonts/instrument-serif-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Instrument Sans"; src: url("../fonts/instrument-sans-latin-wght-normal.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Schibsted Grotesk"; src: url("../fonts/schibsted-grotesk-latin-wght-normal.woff2") format("woff2"); font-weight: 400 900; font-display: swap; }
+@font-face { font-family: "Unbounded"; src: url("../fonts/unbounded-latin-wght-normal.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
+@font-face { font-family: "Young Serif"; src: url("../fonts/young-serif-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+
+html[data-fonts] body { font-family: var(--font-b); }
+html[data-fonts] h1, html[data-fonts] h2, html[data-fonts] .panel-q, html[data-fonts] .panel-big, html[data-fonts] .money-big,
+html[data-fonts] .kpi-n, html[data-fonts] .doc-big, html[data-fonts] .brand-name, html[data-fonts] .game-t h3, html[data-fonts] .sent-big,
+html[data-fonts] .doc-brand {
+  font-family: var(--font-h); font-weight: var(--font-h-w); font-variation-settings: var(--font-h-var); letter-spacing: var(--font-h-ls);
+}
+/* Unbounded is very wide, so its headlines step down a size */
+html[data-fh="unbounded"] h1 { font-size: clamp(34px, 4.1vw, 70px); }
+html[data-fh="unbounded"] h2 { font-size: clamp(28px, 3.4vw, 54px); }
+html[data-fh="unbounded"] .money-big { font-size: clamp(60px, 7vw, 116px); }
+
+/* a palette he makes himself, on a light background, the dark one uses the shared dark rules above */
+html[data-palette="custom"] .btn-solid { background: var(--accent); color: var(--on-accent); }
+html[data-palette="custom"] .btn-solid:hover { background: var(--accent-hi); }
+html[data-palette="custom"] .crack { background: var(--crack); }
+html[data-palette="custom"] .get { background: var(--band); color: var(--on-band); }
+html[data-palette="custom"] .get h2, html[data-palette="custom"] .get .get-copy p { color: var(--on-band); }
+html[data-palette="custom"] .get .get-copy p { opacity: .92; }
+html[data-palette="custom"] .get .get-form .btn-solid { background: var(--accent); color: var(--on-accent); }
+html[data-palette="custom"] .spot, html[data-palette="custom"] .item-n { color: var(--on-band); }
+html[data-palette="custom"] input[type="range"] { background: linear-gradient(90deg, var(--accent) var(--f, 50%), var(--line) var(--f, 50%)); }
+
+/* inputs fit their column whatever the font width */
+.form label { min-width: 0; }
+.form input:not([type="checkbox"]), .form textarea { width: 100%; min-width: 0; box-sizing: border-box; }

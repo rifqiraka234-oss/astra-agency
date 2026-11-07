@@ -33,12 +33,22 @@
 
     <fieldset class="group" data-group="palette">
       <legend>Colours</legend>
+      <p class="group-note">Start from one of these, then make it yours below.</p>
       <div class="opts" role="radiogroup" aria-label="Colours" data-opts="palette"></div>
+      <div class="mix" data-mix>
+        <p class="mix-h">Make it yours</p>
+        <p class="group-note">Change any colour and the site follows. Keep your own navy and red, or try something new.</p>
+        <div class="mix-rows" data-mix-rows></div>
+        <p class="read" data-read aria-live="polite"></p>
+      </div>
     </fieldset>
 
-    <fieldset class="group" data-group="type">
-      <legend>Type</legend>
-      <div class="opts" role="radiogroup" aria-label="Type" data-opts="type"></div>
+    <fieldset class="group" data-group="fonts">
+      <legend>Fonts</legend>
+      <p class="sub-h" id="fh-l">Headlines</p>
+      <div class="fonts" role="radiogroup" aria-labelledby="fh-l" data-fonts="h"></div>
+      <p class="sub-h" id="fb-l">Body text</p>
+      <div class="fonts fonts-b" role="radiogroup" aria-labelledby="fb-l" data-fonts="b"></div>
     </fieldset>
 
     <fieldset class="group" data-group="hero">
