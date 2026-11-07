@@ -303,3 +303,31 @@ Brand. The six deck colours only. Open Sauce One for every face, Raka's call on 
 Seasons are licensed for Canva use only (see `artifacts/gtm-check-site/FONTS.md`).
 
 Open. No lead capture yet. Not yet tested with real prospects, so the scoring is uncalibrated.
+
+## GTM Engine Check v3, five languages and results sent to Raka (7 Nov)
+
+Deploy 6aeed9b5ebda28e1872ff73a on https://astra-gtm-check.netlify.app.
+- Languages. English, Dutch, French, German, Italian in `i18n.js`. Picked from ?lang=, then the visitor's last choice,
+  then the browser's languages, else English, with a switcher on every screen. Numbers and euros in the local format,
+  number fields read 1.234,5 the local way. Product names stay English as in the deck.
+- Sent to Raka. Netlify Forms, form `gtm-check` (id 6aeed9baf6cbe219d8351988), forms enabled on the site. Every
+  finished check posts once, kind "completed", without a name. The report has an optional "Send my report to Raka"
+  form, kind "contact", with name, email, company and a consent tick it won't send without. The footer says answers go
+  to Astra without a name.
+- Phone scroll. The overflow clip on html and body is gone (the likely iPhone cause, not reproducible in Chromium),
+  the 1px overflow it hid no longer exists, the question photo is shorter on phones.
+- Fixes found while testing. A hidden follow up answer (key person share) no longer counts once its trigger is unticked.
+  Inputs capped at a billion, hostile inputs fall back to the shown default.
+- Tests. `tests/check.js` walks every path in every language, half on an emulated iPhone, with hostile number inputs,
+  intercepts the posts and fails on NaN, undefined, null, Infinity, empty money figures, dashes, colons, a missing or
+  empty post, a contact sent without consent, a language switch that posts again, a phone swipe that doesn't scroll,
+  sideways scroll, and page errors. Last run 50 runs, 100 posts, 0 problems. Both planted faults (NaN money, no post)
+  were caught. check-build.js passes.
+- Live check. 18 of 18 files byte identical except index.html, where Netlify rewrote the form tag (expected). Netlify
+  detected the form with all fields and the honeypot. A test from the live page returned 200 twice and moved the
+  form's last_submission_at, but the verified count stayed 0, so Netlify's spam filter held the two test entries
+  (data centre IP, example.com address). Real submissions may also land in Spam now and then.
+
+For Raka to do in Netlify (no API for it). Forms, gtm-check, Form notifications, add an email notification to
+rifqiraka234@gmail.com. Check the Spam tab now and then and mark real ones as verified. The two test entries there can
+be deleted.
