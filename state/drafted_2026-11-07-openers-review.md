@@ -14,7 +14,7 @@ Inh. Enrique Fernandez", shop of 3 coffees plus the Origins Kit, menu Home Shop 
 
     However, the shop is set up for home brewers, while office managers and HR teams in Berlin buy coffee every week and gifts every Christmas, and there's no page for them to order from.
 
-    I'd suggest an automated GTM flow that finds those office managers and HR leads in Berlin and gets Tinto in front of them, so the B2B orders come in steadily.
+    I'd suggest an AI powered outreach flow that finds those office managers and HR leads in Berlin and gets Tinto in front of them, so the company orders come in steadily.
 
     Shall I send you a sketch of the flow for Tinto?
 
@@ -28,7 +28,7 @@ found at /mentions-legales (404), to confirm on a register before sending.
 
     However, Saint-Tropez gets a lot quieter in winter, and the site only shows the menu and a gallery, with nothing for a company dinner or a private evening. Companies and planners on the coast booking their end of year dinners likely go somewhere that shows a group offer.
 
-    I'd suggest a new site with a page for groups and private hire, plus an automated GTM flow that gets it in front of those companies and planners.
+    I'd suggest a new site with a page for groups and private hire, plus an AI powered outreach flow that gets it in front of those companies and planners.
 
     Shall I send you a sketch of both for Alegría?
 
@@ -42,7 +42,7 @@ de leurs biens", one flat price, contact form.
 
     However, your clients are holiday home owners on Oléron, and the ones still renting their house themselves on Airbnb likely don't know you yet. Every one of them is a client you could be managing next season.
 
-    I'd suggest an automated GTM flow that spots those owners on the island and gets your offer in front of them before the season starts.
+    I'd suggest an AI powered outreach flow that spots those owners on the island and gets your offer in front of them before the season starts.
 
     Shall I send you a sketch of the flow?
 
@@ -55,7 +55,7 @@ Touraine. Site speaks to "un investisseur aguerri, un propriétaire résidant ou
 
     However, your best clients are investors and second home owners around Amboise and Tours, and your revenue estimate only reaches the ones who've already found your site.
 
-    I'd suggest an automated GTM flow that finds owners buying or listing in Touraine and sends them your revenue estimate first, so more of them hand you the keys.
+    I'd suggest an AI powered outreach flow that finds owners buying or listing in Touraine and sends them your revenue estimate first, so more of them hand you the keys.
 
     Shall I send you a sketch of the flow for Royal Stay?
 
@@ -69,7 +69,7 @@ and foodservice customers across the UK", "served in restaurants holding more th
 
     However, your homepage leads with home delivery, while kitchens, bakeries and counters are where a case of 40 sells, and they only reach you through a form on the wholesale page.
 
-    I'd suggest a site that puts the trade side first, plus a GTM strategy that finds new restaurant and bakery openings across the UK and gets samples to their head chefs.
+    I'd suggest a site that puts the trade side first, plus an outreach plan that finds new restaurant and bakery openings across the UK and gets samples to their head chefs.
 
     Shall I send you a sketch of both for Ampersand?
 
@@ -82,9 +82,9 @@ agencies planning team lunches and cocktails.
 
     Hi Andre, Panda Panda looks cool!
 
-    However, your events page shows serious B2B work, 250 guests at Musée Guimet and 9,000 at Solidays, yet it waits for companies to find the contact button. Paris office managers and event agencies planning team lunches and cocktails are likely booking someone else right now.
+    However, your events page shows serious work for companies, 250 guests at Musée Guimet and 9,000 at Solidays, yet it waits for companies to find the contact button. Paris office managers and event agencies planning team lunches and cocktails are likely booking someone else right now.
 
-    I'd suggest an automated GTM flow that finds those companies and agencies and gets your bao cocktails and lunchboxes in front of them.
+    I'd suggest an AI powered outreach flow that finds those companies and agencies and gets your bao cocktails and lunchboxes in front of them.
 
     Shall I send you a sketch of the flow for Panda Panda?
 
