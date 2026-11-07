@@ -16,6 +16,10 @@
     <p class="top-name">Breakout Box studio</p>
     <p class="top-for">For Owen at OneFortyNine Games, made by Astra</p>
   </div>
+  <div class="views" role="tablist" aria-label="Studio view">
+    <button type="button" role="tab" aria-selected="true" data-view="design">Design</button>
+    <button type="button" role="tab" aria-selected="false" data-view="catalogue">Catalogue <span class="count" data-plan-count></span></button>
+  </div>
   <div class="device" role="radiogroup" aria-label="Preview size">
     <button type="button" role="radio" aria-checked="true" data-device="desk">Desktop</button>
     <button type="button" role="radio" aria-checked="false" data-device="phone">Phone</button>
@@ -27,7 +31,7 @@
   <section class="side" aria-labelledby="side-h">
     <div class="intro">
       <h1 id="side-h">Build your site.</h1>
-      <p>Pick a look, a first screen and the sections you want. Your site changes as you go. Astra's pick is marked in every group, with the reason. When it feels right, send your choices to Raka.</p>
+      <p>Pick a look, a first screen and the sections you want, then choose pages and tools from the catalogue. Your site changes as you go. Astra's pick is marked in every group, with the reason. When it feels right, send your choices to Raka.</p>
       <a class="btn btn-line" href="#send" data-send-jump>Done? Send my choices</a>
     </div>
 
@@ -67,11 +71,12 @@
       <ol class="secs" data-secs></ol>
     </fieldset>
 
-    <fieldset class="group" data-group="pages">
-      <legend>Pages to add</legend>
-      <p class="group-note">These aren't in the preview yet. Tick the ones you want, and we'll build them next.</p>
-      <ul class="pages" data-pages></ul>
-    </fieldset>
+    <section class="group plan" aria-labelledby="plan-h">
+      <h2 id="plan-h">Your plan.</h2>
+      <p class="group-note">Pages, tools and ideas you've picked from the catalogue. Each one comes from the call, your site or your market.</p>
+      <div data-plan></div>
+      <button class="btn btn-line" type="button" data-open-catalogue>Open the catalogue</button>
+    </section>
 
     <section class="group send" id="send" aria-labelledby="send-h">
       <h2 id="send-h">Send your choices.</h2>
@@ -91,6 +96,24 @@
     </section>
   </section>
 
+  <section class="catalogue" aria-labelledby="cat-h" data-catalogue hidden>
+    <div class="cat-head">
+      <h2 id="cat-h">Everything we can build for Breakout Box.</h2>
+      <p>Every idea here comes from what you told us on the call, your site and your market. Tick what you want and it goes into your plan. Our picks are marked, and the things already in your site have a link to see them.</p>
+    </div>
+    <div class="cat-tools">
+      <label class="search"><span>Search</span><input type="search" placeholder="Pubs, booking, film" data-cat-search></label>
+      <div class="filter" role="group" aria-label="Show" data-cat-when>
+        <button type="button" aria-pressed="true" data-when="all">All</button>
+        <button type="button" aria-pressed="false" data-when="built">In your site</button>
+        <button type="button" aria-pressed="false" data-when="next">Next</button>
+        <button type="button" aria-pressed="false" data-when="later">Later</button>
+      </div>
+      <div class="filter" role="group" aria-label="What it does for you" data-cat-goal></div>
+    </div>
+    <div data-cat-list></div>
+  </section>
+
   <section class="stage" aria-label="Your site, live preview">
     <div class="frame" data-frame>
       <iframe src="preview/index.html" title="Your Breakout Box site, live preview" data-preview></iframe>
@@ -98,6 +121,7 @@
   </section>
 </main>
 
+<script src="catalogue.js" defer></script>
 <script src="studio.js" defer></script>
 </body>
 </html>
