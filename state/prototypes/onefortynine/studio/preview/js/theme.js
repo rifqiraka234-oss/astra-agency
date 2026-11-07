@@ -64,6 +64,8 @@
     var a = document.querySelector('.h1-a'), b = document.querySelector('.h1-b');
     if (a && original === null) original = a.innerHTML;
     if (a) { var h = HEADLINES[s.headline]; a.innerHTML = h ? h : original; if (b) b.hidden = !!h; }
+    // what he added from the catalogue
+    if (window.renderAdded) window.renderAdded(s.cat || []);
     // sections
     var main = document.querySelector('main');
     if (main && Array.isArray(s.sections)) {
@@ -77,7 +79,7 @@
   window.addEventListener('message', function (e) {
     if (e.origin !== location.origin) return;
     if (e.data && e.data.type === 'studio') apply(e.data.state);
-    if (e.data && e.data.type === 'scrollTo') { var el = document.getElementById(e.data.id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    if (e.data && e.data.type === 'scrollTo') { var el = document.getElementById(e.data.id); if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); if (el.classList.contains('sk-block')) { el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); } } }
   });
   try { var q = new URLSearchParams(location.search).get('s'); if (q) apply(JSON.parse(decodeURIComponent(escape(atob(q))))); } catch (e) {}
   if (window.parent !== window) window.parent.postMessage({ type: 'preview-ready' }, location.origin);

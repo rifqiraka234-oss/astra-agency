@@ -165,12 +165,22 @@
   });
   $$('[data-when]').forEach(function (b) { b.addEventListener('click', function () { F.when = b.dataset.when; drawCat(); }); });
   $('[data-cat-search]').addEventListener('input', function (e) { F.q = e.target.value; drawCat(); });
+  var FAM = { page: 'page', about: 'page', band: 'page', brand: 'page', dash: 'page', form: 'form', checkout: 'form', stars: 'form', doc: 'doc', table: 'table', board: 'table',
+    cal: 'cal', mail: 'chat', chat: 'chat', quotes: 'cards', cards: 'cards', kit: 'cards', deck: 'cards', logo: 'cards', stats: 'stats', film: 'media', gallery: 'media', spin: 'media',
+    phone: 'phone', list: 'list', serp: 'list' };
+  var BUILT_FAM = { crack: 'media', numbers: 'stats', proposal: 'doc', 'catch': 'list', get: 'form', hints: 'phone' };
+  function thumb(i) {
+    var sk = CAT.sketch && CAT.sketch[i.id], fam = sk ? FAM[sk.t] : BUILT_FAM[i.see] || 'page';
+    var where = sk && sk.where === 'office' ? 'Behind the scenes' : 'On your site';
+    return '<div class="th th-' + fam + '" aria-hidden="true"><i></i><i></i><i></i><i></i><b>' + where + '</b></div>';
+  }
   function card(i) {
     var picked = S.cat.indexOf(i.id) > -1, built = i.when === 'built';
     var act = built
       ? '<button type="button" class="btn btn-line" data-see="' + i.see + '">See it</button>'
-      : '<button type="button" class="btn ' + (picked ? 'btn-solid' : 'btn-line') + '" aria-pressed="' + picked + '" data-pick="' + i.id + '">' + (picked ? 'In your plan' : 'Add to my plan') + '</button>';
-    return '<article class="card' + (picked ? ' picked' : '') + (built ? ' built' : '') + '">' +
+      : '<button type="button" class="btn ' + (picked ? 'btn-solid' : 'btn-line') + '" aria-pressed="' + picked + '" data-pick="' + i.id + '">' + (picked ? 'In your plan' : 'Add to my plan') + '</button>' +
+        (picked ? '<button type="button" class="see-link" data-see="x-' + i.id + '">See it on your site</button>' : '');
+    return '<article class="card' + (picked ? ' picked' : '') + (built ? ' built' : '') + '">' + thumb(i) +
       '<p class="when when-' + i.when + '">' + WHEN[i.when] + (i.pick ? ', our pick' : '') + '</p>' +
       '<h4>' + i.n + '</h4><p class="card-w">' + i.w + '</p><p class="card-y">' + i.y + '</p>' +
       '<p class="card-g">' + i.g.map(goalName).join(', ') + '</p><div class="card-act">' + act + '</div></article>';
@@ -190,7 +200,16 @@
     $$('[data-pick]', catList).forEach(function (b) { b.addEventListener('click', function () { togglePick(b.dataset.pick); var nb = $('[data-pick="' + b.dataset.pick + '"]', catList); if (nb) nb.focus(); }); });
     $$('[data-see]', catList).forEach(function (b) { b.addEventListener('click', function () { see(b.dataset.see); }); });
   }
-  function togglePick(id) { var k = S.cat.indexOf(id); if (k > -1) S.cat.splice(k, 1); else S.cat.push(id); update(); }
+  var toastT = null;
+  function toast(id) {
+    var t = $('[data-toast]'), it = item(id), sk = CAT.sketch && CAT.sketch[id];
+    if (!t || !it) return;
+    $('[data-toast-text]').textContent = (sk && sk.where === 'office' ? 'Added behind the scenes. ' : 'Added to your site. ') + it.n + '.';
+    $('[data-toast-see]').dataset.target = 'x-' + id;
+    t.hidden = false; t.classList.remove('in'); void t.offsetWidth; t.classList.add('in');
+    clearTimeout(toastT); toastT = setTimeout(function () { t.classList.remove('in'); setTimeout(function () { t.hidden = true; }, 300); }, 5000);
+  }
+  function togglePick(id) { var k = S.cat.indexOf(id); if (k > -1) S.cat.splice(k, 1); else { S.cat.push(id); toast(id); } update(); }
   function see(id) {
     if (id === 'hints') { window.open('preview/play/the-heist/', '_blank', 'noopener'); return; }
     setView('design');
@@ -202,9 +221,10 @@
     if (!picked.length) { box.innerHTML = '<p class="plan-empty">Nothing yet. Open the catalogue and add what you want.</p>'; return; }
     box.innerHTML = ['next', 'later'].map(function (w) {
       var its = picked.filter(function (i) { return i.when === w; });
-      return its.length ? '<p class="plan-h">' + (w === 'next' ? 'Next' : 'Later') + '</p><ul class="plan-list">' + its.map(function (i) { return '<li><span>' + i.n + '</span><button type="button" class="plan-x" data-unpick="' + i.id + '" aria-label="Remove ' + i.n + '">Remove</button></li>'; }).join('') + '</ul>' : '';
+      return its.length ? '<p class="plan-h">' + (w === 'next' ? 'Next' : 'Later') + '</p><ul class="plan-list">' + its.map(function (i) { return '<li><button type="button" class="plan-see" data-see-plan="x-' + i.id + '">' + i.n + '</button><button type="button" class="plan-x" data-unpick="' + i.id + '" aria-label="Remove ' + i.n + '">Remove</button></li>'; }).join('') + '</ul>' : '';
     }).join('');
     $$('[data-unpick]', box).forEach(function (b) { b.addEventListener('click', function () { togglePick(b.dataset.unpick); }); });
+    $$('[data-see-plan]', box).forEach(function (b) { b.addEventListener('click', function () { see(b.dataset.seePlan); }); });
   }
   function planText() {
     var picked = S.cat.map(item).filter(Boolean);
@@ -220,6 +240,7 @@
     if (v === 'catalogue') { var pl = $('.plan'); if (pl && window.innerWidth > 980) $('.side').scrollTo({ top: pl.offsetTop - 20, behavior: 'smooth' }); }
   }
   $$('[data-view]').forEach(function (b) { b.addEventListener('click', function () { setView(b.dataset.view); }); });
+  $('[data-toast-see]').addEventListener('click', function (e) { var t = $('[data-toast]'); t.classList.remove('in'); t.hidden = true; see(e.currentTarget.dataset.target); });
   $('[data-open-catalogue]').addEventListener('click', function () { setView('catalogue'); window.scrollTo({ top: 0 }); });
 
   /* ---------- keep the preview, the summary and the form in step ---------- */
