@@ -199,6 +199,9 @@ export function LineItems({
   const [error, setError] = useState<string | null>(null);
   const [pending, start] = useTransition();
   const totals = lineTotals(lines);
+  // The Discount column only shows when a line has one, so the table fits the record column.
+  const showDiscount = lines.some((l) => Number(l.discount_pct) !== 0);
+  const cols = (showDiscount ? 6 : 5) + (canEdit ? 1 : 0);
   const quote = quotes[0] ?? null;
   const currency = lines[0]?.currency ?? 'EUR';
   const money = (v: string) => formatMoney(v, currency);
@@ -235,7 +238,7 @@ export function LineItems({
         </div>
       </div>
 
-      <div style={{ overflowX: 'auto' }}>
+      <div style={{ overflowX: 'auto', position: 'relative' }}>
         <table className={styles.lines}>
           <thead>
             <tr>
@@ -246,9 +249,11 @@ export function LineItems({
               <th scope="col" className={styles.num}>
                 Price
               </th>
-              <th scope="col" className={styles.num}>
-                Discount
-              </th>
+              {showDiscount ? (
+                <th scope="col" className={styles.num}>
+                  Discount
+                </th>
+              ) : null}
               <th scope="col" className={styles.num}>
                 VAT
               </th>
@@ -265,7 +270,7 @@ export function LineItems({
           <tbody>
             {lines.length === 0 ? (
               <tr>
-                <td colSpan={canEdit ? 7 : 6} className="muted">
+                <td colSpan={cols} className="muted">
                   No line items yet. Add what they would buy, the amount follows the subtotal.
                 </td>
               </tr>
@@ -273,7 +278,7 @@ export function LineItems({
             {lines.map((l) =>
               editing === l.id ? (
                 <tr key={l.id}>
-                  <td colSpan={canEdit ? 7 : 6} style={{ padding: 0 }}>
+                  <td colSpan={cols} style={{ padding: 0 }}>
                     <LineForm
                       initial={l}
                       products={products}
@@ -300,7 +305,7 @@ export function LineItems({
                   </td>
                   <td className={styles.num}>{trimNum(l.quantity)}</td>
                   <td className={styles.num}>{money(l.unit_price)}</td>
-                  <td className={styles.num}>{Number(l.discount_pct) ? `${trimNum(l.discount_pct)}%` : ''}</td>
+                  {showDiscount ? <td className={styles.num}>{Number(l.discount_pct) ? `${trimNum(l.discount_pct)}%` : ''}</td> : null}
                   <td className={styles.num}>{rateLabel(l.tax_rate)}</td>
                   <td className={styles.num}>{money(lineNet(l))}</td>
                   {canEdit ? (
@@ -327,7 +332,7 @@ export function LineItems({
               ),
             )}
             <tr className={styles.sumRow}>
-              <td colSpan={5} className={styles.sumLabel}>
+              <td colSpan={cols - (canEdit ? 2 : 1)} className={styles.sumLabel}>
                 Subtotal excl. VAT
               </td>
               <td className={styles.num} style={{ fontWeight: 500 }}>
@@ -337,7 +342,7 @@ export function LineItems({
             </tr>
             {totals.byRate.length === 0 ? (
               <tr>
-                <td colSpan={5} className={styles.sumLabel} style={{ borderTop: 0 }}>
+                <td colSpan={cols - (canEdit ? 2 : 1)} className={styles.sumLabel} style={{ borderTop: 0 }}>
                   VAT 21%, NL
                 </td>
                 <td className={styles.num} style={{ borderTop: 0 }}>
@@ -348,7 +353,7 @@ export function LineItems({
             ) : (
               totals.byRate.map((r) => (
                 <tr key={r.rate}>
-                  <td colSpan={5} className={styles.sumLabel} style={{ borderTop: 0 }}>
+                  <td colSpan={cols - (canEdit ? 2 : 1)} className={styles.sumLabel} style={{ borderTop: 0 }}>
                     VAT {rateLabel(r.rate)}
                     {Number(r.rate) === 21 ? ', NL' : ''}
                   </td>
@@ -360,7 +365,7 @@ export function LineItems({
               ))
             )}
             <tr>
-              <td colSpan={5} className={styles.sumLabel} style={{ borderTop: 0 }}>
+              <td colSpan={cols - (canEdit ? 2 : 1)} className={styles.sumLabel} style={{ borderTop: 0 }}>
                 Total incl. VAT
               </td>
               <td className={styles.num} style={{ borderTop: 0, fontWeight: 600 }}>

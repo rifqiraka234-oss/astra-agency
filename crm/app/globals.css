@@ -1484,8 +1484,34 @@ a.rail-entry:hover .rail-item-title {
   .page-title {
     font-size: 24px;
   }
+  /* On a phone the sidebar is one scrolling row of links above the page, not a full screen of navigation. */
   .sidebar {
-    gap: 14px;
+    flex: 1 1 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .sidebar-brand .brand-name,
+  .sidebar .nav-label,
+  .sidebar-footer {
+    display: none;
+  }
+  .sidebar-brand {
+    padding: 0 6px 0 0;
+    flex: none;
+  }
+  .nav-section {
+    flex-direction: row;
+    flex: none;
+    gap: 2px;
+  }
+  .nav-link {
+    white-space: nowrap;
+    gap: 6px;
   }
 }
 

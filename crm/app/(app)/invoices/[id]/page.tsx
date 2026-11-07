@@ -75,6 +75,9 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
   const canEdit = can(user, 'edit', 'invoice', inv);
   const canCredit = can(user, 'create', 'invoice') && inv.kind === 'invoice' && ['open', 'late', 'paid'].includes(inv.state);
   const totals = invoiceTotals(lines, inv.vat_treatment);
+  // Discount only shows when a line has one, so the lines fit the middle column.
+  const showDiscount = lines.some((l) => Number(l.discount_pct) !== 0);
+  const labelSpan = showDiscount ? 5 : 4;
   const cur = inv.currency || 'EUR';
   const isCredit = inv.kind === 'credit_note';
   const label = inv.external_number ?? (isCredit ? 'Draft credit note' : 'Draft invoice');
@@ -209,7 +212,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
               <span className="muted small">{labelOf(VAT_TREATMENT_OPTIONS, inv.vat_treatment)}</span>
             </div>
             <div className="table-wrap">
-              <table className="table" style={{ minWidth: 640 }}>
+              <table className="table" style={{ minWidth: 540 }}>
                 <caption className="sr-only">Invoice lines</caption>
                 <thead>
                   <tr>
@@ -220,9 +223,11 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
                     <th scope="col" className="num">
                       Price
                     </th>
-                    <th scope="col" className="num">
-                      Discount
-                    </th>
+                    {showDiscount ? (
+                      <th scope="col" className="num">
+                        Discount
+                      </th>
+                    ) : null}
                     <th scope="col" className="num">
                       VAT
                     </th>
@@ -239,7 +244,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
                 <tbody>
                   {lines.length === 0 ? (
                     <tr>
-                      <td colSpan={editDraft ? 7 : 6} className="muted">
+                      <td colSpan={labelSpan + 1 + (editDraft ? 1 : 0)} className="muted">
                         No lines yet. Add one below.
                       </td>
                     </tr>
@@ -252,7 +257,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
                       </td>
                       <td className="num">{Number(l.quantity)}</td>
                       <td className="num">{formatMoney(l.unit_price, cur, 2)}</td>
-                      <td className="num">{Number(l.discount_pct) ? formatPercent(Number(l.discount_pct)) : ''}</td>
+                      {showDiscount ? <td className="num">{Number(l.discount_pct) ? formatPercent(Number(l.discount_pct)) : ''}</td> : null}
                       <td className="num">{formatPercent(totals.lines[i].rate)}</td>
                       <td className="num">{formatMoney(totals.lines[i].net, cur, 2)}</td>
                       {editDraft ? (
@@ -265,7 +270,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
                 </tbody>
                 <tbody className="f-totals">
                   <tr className="f-total-row">
-                    <td colSpan={5} className="num muted" style={{ fontFamily: 'inherit' }}>
+                    <td colSpan={labelSpan} className="num muted" style={{ fontFamily: 'inherit' }}>
                       Subtotal excl. VAT
                     </td>
                     <td className="num">{formatMoney(totals.subtotal, cur, 2)}</td>
@@ -273,7 +278,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
                   </tr>
                   {totals.vatByRate.map((r) => (
                     <tr key={r.rate}>
-                      <td colSpan={5} className="num muted" style={{ fontFamily: 'inherit' }}>
+                      <td colSpan={labelSpan} className="num muted" style={{ fontFamily: 'inherit' }}>
                         {r.label} on {formatMoney(r.base, cur, 2)}
                       </td>
                       <td className="num">{formatMoney(r.vat, cur, 2)}</td>
@@ -281,7 +286,7 @@ export default async function InvoicePage({ params }: { params: Promise<{ id: st
                     </tr>
                   ))}
                   <tr className="f-total-row">
-                    <td colSpan={5} className="num" style={{ fontFamily: 'inherit' }}>
+                    <td colSpan={labelSpan} className="num" style={{ fontFamily: 'inherit' }}>
                       Total
                     </td>
                     <td className="num">{formatMoney(totals.total, cur, 2)}</td>
