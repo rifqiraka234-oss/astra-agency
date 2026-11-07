@@ -624,6 +624,13 @@ def check(path, replies=False):
         # is allowed ONLY when it quantifies what the lead is forgoing, losing or being
         # hurt by. Never as context, never as scene setting, and never off filed accounts.
         money = re.findall(r"[\u00a3\u20ac$]\s?[\d,]+(?:\.\d+)?", m)
+        # OUR OWN STARTING PRICE. Raka 2026-11-07, "for the ones that asked price can just say starting
+        # \u20ac500 or pounds". The deals review found "it depends on your budget" lost every lead who asked.
+        # A lead's own price question may get our floor, "starts from \u20ac500" or "from \u00a3500", when the file
+        # carries a PRICE QUOTE line. That one figure is ours, not a claim about their business.
+        if money and "PRICE QUOTE" in open(path, encoding="utf-8").read():
+            ours = re.findall(r"(?:starts? from|starting (?:from|at)|from) ([\u00a3\u20ac]\s?500)\b", m)
+            money = [x for x in money if x.replace(" ", "") not in {o.replace(" ", "") for o in ours}]
         if money and shapes[i] not in EXEMPT_MONEY:
             src = open(path, encoding="utf-8").read()
             if "LOSS FIGURE" not in src:
