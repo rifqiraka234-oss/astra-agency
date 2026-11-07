@@ -1,4 +1,4 @@
-# Polite closers, Sun 8 Nov 2026. NOT SENT, NOT APPROVED.
+# Polite closers, Sun 8 Nov 2026. NOT SENT. APPROVED by Raka 7 Nov, "Schedule send tomorrow yes", scheduled Sun 8 Nov 07.32 Amsterdam, trig_01S6uL2yqJXSbdgedqgpMyrM.
 
 Raka 7 Nov, "Nudge tomorrow morning to close? Politely… And for the ones that asked price can just say starting €500 or pounds. Check their threads so we can make smth that aligns with our thread with them". All 10 threads pulled whole 7 Nov ~08.10 UTC, control 9, last item ours in every one. PRICE QUOTE, Raka 7 Nov, 'for the ones that asked price can just say starting €500 or pounds', our floor (RULES section 1), Chris Hale, Laurens and Ulrich asked. Prices, from £500 for UK, from €500 for NL and DE (RULES section 1 floor). Re pull right before sending, verify every prototype URL still loads (200) for the 'stay live' lines.
 
